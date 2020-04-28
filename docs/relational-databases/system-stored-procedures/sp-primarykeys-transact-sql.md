@@ -18,10 +18,10 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056307"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys(Transact-SQL)
@@ -46,18 +46,16 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 `[ @table_name = ] 'table_name'`기본 키 정보를 제공할 테이블의 이름입니다. *table_name*는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @table_schema = ] 'table_schema'`테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다.  
+`[ @table_schema = ] 'table_schema'`테이블 스키마입니다. *table_schema* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 테이블 소유자에 해당합니다.  
   
-`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 있는 카탈로그의 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 데이터베이스 이름에 해당합니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @table_catalog = ] 'table_catalog'`지정 된 *table_name* 있는 카탈로그의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경에서는 데이터베이스 이름에 해당합니다. *table_catalog* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|테이블 카탈로그입니다.|  
 |**TABLE_SCHEM**|**sysname**|테이블 스키마입니다.|  
@@ -75,7 +73,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `LONDON1` 데이터베이스의 `HumanResources.JobCandidate` 테이블에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 서버에서 기본 키 열을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `LONDON1` 테이블에 대해 `HumanResources.JobCandidate` 서버에서 기본 키 열을 반환합니다.  
   
 ```  
 EXEC sp_primarykeys @table_server = N'LONDON1',   

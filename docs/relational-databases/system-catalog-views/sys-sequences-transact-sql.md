@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060551"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences(Transact-SQL)
@@ -46,21 +46,20 @@ ms.locfileid: "68060551"
 |**system_type_id**|**tinyint NOT NULL**|시퀀스 개체의 데이터 형식에 대 한 시스템 유형의 ID입니다.|  
 |**user_type_id**|**int NOT NULL**|사용자가 정의한 시퀀스 개체에 대한 데이터 형식의 ID입니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|데이터 형식의 최대 전체 자릿수입니다.|  
-|**배율을**|**tinyint NOT NULL**|형식의 최대 소수 자릿수입니다. 소수 자릿수는 전체 자릿수와 함께 반환되어 사용자에게 전체 메타데이터를 제공합니다. 정수 형식만 허용되기 때문에 시퀀스 개체의 소수 자릿수는 항상 0입니다.|  
+|**scale**|**tinyint NOT NULL**|형식의 최대 소수 자릿수입니다. 소수 자릿수는 전체 자릿수와 함께 반환되어 사용자에게 전체 메타데이터를 제공합니다. 정수 형식만 허용되기 때문에 시퀀스 개체의 소수 자릿수는 항상 0입니다.|  
 |**current_value**|**NULL이 아님 sql_variant**|강제된 마지막 값입니다. 즉, NEXT VALUE FOR 함수를 가장 최근에 실행 하 여 반환 된 값 또는 **sp_sequence_get_range** 프로시저 실행의 마지막 값이 반환 됩니다. 시퀀스가 사용되지 않은 경우 START WITH 값을 반환합니다.|  
 |**is_exhausted**|**비트 NOT NULL**|0은 시퀀스에서 값을 더 생성할 수 있다는 의미이며, 1은 시퀀스 개체가 MAXVALUE 매개 변수에 도달했고 시퀀스가 CYCLE로 설정되지 않았다는 의미입니다. ALTER SEQUENCE를 사용하여 시퀀스가 다시 시작될 때까지 NEXT VALUE FOR 함수가 오류를 반환합니다.|  
 |**last_used_value**|**NULL sql_variant**|[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) 함수에 의해 생성 된 마지막 값을 반환 합니다. SQL Server 2017 이상에 적용 됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체의 경우에만 카탈로그 뷰의 메타데이터를 볼 수 있도록 제한됩니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체의 경우에만 카탈로그 뷰의 메타데이터를 볼 수 있도록 제한됩니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [Transact-sql&#41;시퀀스 &#40;만들기](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [&#40;Transact-sql&#41;의 다음 값](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

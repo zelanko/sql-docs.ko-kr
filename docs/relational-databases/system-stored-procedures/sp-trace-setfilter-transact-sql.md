@@ -18,10 +18,10 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095944"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
@@ -63,7 +63,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**4**|>= (크거나 같음)|  
 |**5**|<= (작거나 같음)|  
 |**6**|LIKE|  
-|**일**|유사하지 않음|  
+|**7**|유사하지 않음|  
   
 `[ @value = ] value`필터링 할 값을 지정 합니다. *값* 의 데이터 형식은 필터링 할 열의 데이터 형식과 일치 해야 합니다. 예를 들어, 필터가 **int** 데이터 유형인 개체 ID 열에 대해 설정 된 경우 *값* 은 **int**여야 합니다. *Value* 가 **nvarchar** 또는 **varbinary**이면 최대 길이가 8000 일 수 있습니다.  
   
@@ -102,9 +102,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
  사용자는 ALTER TRACE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 추적 `1`에 필터 3개를 설정합니다. 
-  `N'SQLT%'` 및 `N'MS%'` 필터는 한 열(`AppName`, 값 `10`)에서 "`LIKE`" 비교 연산자를 사용하여 실행됩니다. 
-  `N'joe'` 필터는 다른 열(`UserName`, 값 `11`)에서 "`EQUAL`" 비교 연산자를 사용하여 실행됩니다.  
+ 다음 예에서는 추적 `1`에 필터 3개를 설정합니다. `N'SQLT%'` 및 `N'MS%'` 필터는 한 열(`AppName`, 값 `10`)에서 "`LIKE`" 비교 연산자를 사용하여 실행됩니다. `N'joe'` 필터는 다른 열(`UserName`, 값 `11`)에서 "`EQUAL`" 비교 연산자를 사용하여 실행됩니다.  
   
 ```  
 sp_trace_setfilter  1, 10, 0, 6, N'SQLT%';  
@@ -113,8 +111,8 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sys.fn_trace_getfilterinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_getinfo&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [fn_trace_getfilterinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [fn_trace_getinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   

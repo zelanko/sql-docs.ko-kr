@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094823"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68094823"
 |**pubid**|**uniqueidentifier**|현재 아티클이 속한 게시의 ID입니다.|  
 |**애칭**|**int**|아티클 ID에 대한 애칭 매핑입니다.|  
 |**column_tracking**|**int**|아티클에 대한 열 추적이 구현되는지 여부를 나타냅니다.|  
-|**업무**|**tinyint**|아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 동기화 됨-테이블을 게시 하는 초기 처리 스크립트가 다음에 스냅숏 에이전트 실행 될 때 실행 됩니다.<br /><br /> **2** = 활성-테이블을 게시 하는 초기 처리 스크립트가 실행 되었습니다.|  
+|**status**|**tinyint**|아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 동기화 됨-테이블을 게시 하는 초기 처리 스크립트가 다음에 스냅숏 에이전트 실행 될 때 실행 됩니다.<br /><br /> **2** = 활성-테이블을 게시 하는 초기 처리 스크립트가 실행 되었습니다.|  
 |**conflict_table**|**sysname**|현재 아티클에 대한 충돌 기록이 들어 있는 로컬 테이블의 이름입니다. 이 테이블은 정보 제공의 목적으로만 제공되며 사용자 지정 충돌 해결 루틴에 의해서나 직접 관리자에 의해서 수정되거나 삭제될 수 있습니다.|  
 |**creation_script**|**nvarchar(255)**|해당 아티클에 대한 생성 스크립트입니다.|  
 |**conflict_script**|**nvarchar(255)**|해당 아티클에 대한 충돌 스크립트입니다.|  
@@ -57,13 +57,13 @@ ms.locfileid: "68094823"
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**destination_owner**|**sysname**|대상 개체의 소유자 이름입니다.|  
 |**resolver_clsid**|**nvarchar(50)**|사용자 지정 충돌 해결 프로그램의 ID입니다. 비즈니스 논리 처리기의 경우 이 값은 NULL입니다.|  
-|**subset_filterclause**|**nvarchar (1000)**|해당 아티클에 대한 필터 절입니다.|  
+|**subset_filterclause**|**nvarchar(1000)**|해당 아티클에 대한 필터 절입니다.|  
 |**missing_col_count**|**int**|아티클에 없는 게시된 열의 수입니다.|  
-|**missing_cols**|**varbinary (128)**|아티클에 없는 열을 설명하는 비트맵입니다.|  
-|**excluded_cols**|**varbinary (128)**|아티클에서 제외된 열의 비트맵입니다.|  
+|**missing_cols**|**varbinary(128)**|아티클에 없는 열을 설명하는 비트맵입니다.|  
+|**excluded_cols**|**varbinary(128)**|아티클에서 제외된 열의 비트맵입니다.|  
 |**excluded_col_count**|**int**|아티클에서 제외된 열의 수입니다.|  
-|**세로**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|아티클에서 삭제된 열을 설명하는 비트맵입니다.|  
+|**세로**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|아티클에서 삭제된 열을 설명하는 비트맵입니다.|  
 |**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 스토리지입니다.|  
 |**view_sel_proc**|**nvarchar (가 나)**|병합 에이전트가 동적으로 필터링된 게시에서 아티클의 초기 채우기를 하기 위해, 그리고 필터링된 게시에서 변경된 행을 열거하기 위해 사용하는 저장 프로시저의 이름입니다.|  
 |**gen_cur**|**bigint**|아티클의 기본 테이블에 대한 로컬 변경 내용의 번호를 생성합니다.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68094823"
 |**upload_options**|**tinyint**|구독자에서 변경이 수행되거나 업로드될 수 있는지 여부를 정의하며 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 구독자에서 수행 되는 업데이트에 대 한 제한은 없습니다. 모든 변경 내용이 게시자로 업로드 됩니다.<br /><br /> **1** = 구독자에서 변경이 허용 되지만 게시자로 업로드 되지 않습니다.<br /><br /> **2** = 구독자에서 변경이 허용 되지 않습니다.|  
 |**published_in_tran_pub**|**bit**|병합 게시의 아티클이 트랜잭션 게시에도 게시됨을 나타냅니다.<br /><br /> **0** = 아티클이 트랜잭션 아티클에서 게시 되지 않습니다.<br /><br /> **1** = 아티클이 트랜잭션 문서에도 게시 됩니다.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**procname_postfix**|**nchar (32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|업데이트 전 테이블의 뷰 ID입니다.|  
 |**delete_tracking**|**bit**|삭제 내용을 복제할지 여부를 나타냅니다.<br /><br /> **0** = 삭제가 복제 되지 않습니다.<br /><br /> **1** = 병합 복제에 대 한 기본 동작인 삭제가 복제 됩니다.<br /><br /> *Delete_tracking* 값이 **0**이면 구독자에서 삭제 된 행을 게시자에서 수동으로 제거 하 고 게시자에서 삭제 된 행을 구독자에서 수동으로 제거 해야 합니다.<br /><br /> 참고: 값 **0** 은 일치 하지 않습니다.|  

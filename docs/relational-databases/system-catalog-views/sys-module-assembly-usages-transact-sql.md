@@ -20,10 +20,10 @@ ms.assetid: b0f9ffab-6ac7-49d5-8369-477fa6b1c02b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bd525cc13b3716bf8173dcdd9350fdb9b2412c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102426"
 ---
 # <a name="sysmodule_assembly_usages-transact-sql"></a>sys.module_assembly_usages(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68102426"
 
   모듈에서 어셈블리로의 각 참조에 대해 하나의 행을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|SQL 개체의 식별 번호입니다. 데이터베이스 내에서 고유합니다.|  
 |**assembly_id**|**int**|이 모듈이 생성된 어셈블리의 ID입니다.|  

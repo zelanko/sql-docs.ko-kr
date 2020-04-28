@@ -20,10 +20,10 @@ ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061411"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints(Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68061411"
 |**name**|**sysname**|엔드포인트의 이름입니다. 서버 내에서 고유합니다. Null을 허용하지 않습니다.|  
 |**endpoint_id**|**int**|엔드포인트의 ID입니다. 서버 내에서 고유합니다. ID가 65536보다 작은 엔드포인트는 시스템 엔드포인트입니다. Null을 허용하지 않습니다.|  
 |**principal_id**|**int**|이 엔드포인트를 만들고 소유하는 서버 보안 주체의 ID입니다. Null을 허용합니다.|  
-|**프로토콜만**|**tinyint**|엔드포인트 프로토콜입니다.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 명명된 파이프<br /><br /> 4 = 공유 메모리<br /><br /> 5 = VIA(Virtual Interface Adapter)<br /><br /> Null을 허용하지 않습니다.|  
-|**protocol_desc**|**nvarchar (60)**|엔드포인트 프로토콜에 대한 설명입니다. NULL을 허용합니다. 해당 값은<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA** 참고: VIA 프로토콜은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**protocol**|**tinyint**|엔드포인트 프로토콜입니다.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = 명명된 파이프<br /><br /> 4 = 공유 메모리<br /><br /> 5 = VIA(Virtual Interface Adapter)<br /><br /> Null을 허용하지 않습니다.|  
+|**protocol_desc**|**nvarchar(60)**|엔드포인트 프로토콜에 대한 설명입니다. NULL을 허용합니다. 다음 값 중 하나입니다.<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **VIA** 참고: VIA 프로토콜은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|엔드포인트 페이로드 유형입니다.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> Null을 허용하지 않습니다.|  
-|**type_desc**|**nvarchar (60)**|엔드포인트 페이로드 유형에 대한 설명입니다. Null을 허용합니다. 해당 값은<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**상태일**|**tinyint**|엔드포인트 상태입니다.<br /><br /> 0 = STARTED, 요청을 수신 대기 및 처리 중입니다.<br /><br /> 1 = STOPPED, 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> 2 = DISABLED, 수신 대기하지 않습니다.<br /><br /> 기본 상태는 1입니다. Null을 허용합니다.|  
-|**state_desc**|**nvarchar (60)**|엔드포인트 상태에 대한 설명입니다.<br /><br /> STARTED = 요청을 수신 대기 및 처리 중입니다.<br /><br /> STOPPED = 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> DISABLED = 수신 대기하지 않습니다.<br /><br /> 기본 상태는 STOPPED입니다.<br /><br /> Null을 허용합니다.|  
+|**type_desc**|**nvarchar(60)**|엔드포인트 페이로드 유형에 대한 설명입니다. Null을 허용합니다. 다음 값 중 하나입니다.<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**state**|**tinyint**|엔드포인트 상태입니다.<br /><br /> 0 = STARTED, 요청을 수신 대기 및 처리 중입니다.<br /><br /> 1 = STOPPED, 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> 2 = DISABLED, 수신 대기하지 않습니다.<br /><br /> 기본 상태는 1입니다. Null을 허용합니다.|  
+|**state_desc**|**nvarchar(60)**|엔드포인트 상태에 대한 설명입니다.<br /><br /> STARTED = 요청을 수신 대기 및 처리 중입니다.<br /><br /> STOPPED = 요청을 수신 대기 중이지만 처리하고 있지 않습니다.<br /><br /> DISABLED = 수신 대기하지 않습니다.<br /><br /> 기본 상태는 STOPPED입니다.<br /><br /> Null을 허용합니다.|  
 |**is_admin_endpoint**|**bit**|엔드포인트가 관리자용인지 여부를 나타냅니다.<br /><br /> 0 = 비관리 엔드포인트입니다.<br /><br /> 1 = 엔드포인트가 관리 엔드포인트입니다.<br /><br /> Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  

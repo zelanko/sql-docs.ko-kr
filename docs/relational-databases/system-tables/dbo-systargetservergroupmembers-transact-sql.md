@@ -20,10 +20,10 @@ ms.assetid: ee1b2ebd-03cb-4b91-a5d2-98d4d38f82ec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee6aba8417570c9d75f683efdbfcf10c54b82792
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095872"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68095872"
 
   해당 다중 서버 그룹에 현재 참여하는 대상 서버를 기록합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|서버 그룹 ID입니다.|  
 |**server_id**|**int**|서버 ID입니다.|  

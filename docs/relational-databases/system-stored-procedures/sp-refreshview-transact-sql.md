@@ -18,10 +18,10 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075769"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
@@ -62,8 +62,7 @@ EXECUTE sp_refreshview N'Sales.vIndividualCustomer';
 ```  
   
 ### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>B. 변경한 개체에 대해 종속성이 있는 뷰를 모두 업데이트하는 스크립트 만들기  
- 
-  `Person.Person` 테이블이 해당 테이블에서 생성된 모든 뷰의 정의에 영향을 주는 방식으로 변경되었다고 가정합니다. 다음 예에서는 `Person.Person` 테이블에 대해 종속성이 있는 모든 뷰의 메타데이터를 새로 고치는 스크립트를 만듭니다.  
+ `Person.Person` 테이블이 해당 테이블에서 생성된 모든 뷰의 정의에 영향을 주는 방식으로 변경되었다고 가정합니다. 다음 예에서는 `Person.Person` 테이블에 대해 종속성이 있는 모든 뷰의 메타데이터를 새로 고치는 스크립트를 만듭니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -77,7 +76,7 @@ WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [Transact-sql&#41;sp_refreshsqlmodule &#40;](../../relational-databases/system-stored-procedures/sp-refreshsqlmodule-transact-sql.md)  
   

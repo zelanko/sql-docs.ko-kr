@@ -21,10 +21,10 @@ ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089199"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures(Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "68089199"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**기본값**|**int**|사용자 수정이 가능한 변수 값입니다. RECONFIGURE가 실행된 경우에만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용합니다.|  
+|**value**|**int**|사용자 수정이 가능한 변수 값입니다. RECONFIGURE가 실행된 경우에만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용합니다.|  
 |**config**|**int**|구성 변수 번호입니다.|  
 |**주석의**|**nvarchar(255)**|구성 옵션에 대한 설명입니다.|  
-|**업무**|**smallint**|옵션의 상태를 표시하는 비트맵입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정적. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 1 = 동적. RECONFIGURE 문이 실행될 때 변수가 적용됩니다.<br /><br /> 2 = 고급. **Show advanced options** 가 설정 된 경우에만 변수가 표시 됩니다. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 3 = 동적 및 고급입니다.|  
+|**status**|**smallint**|옵션의 상태를 표시하는 비트맵입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정적. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 1 = 동적. RECONFIGURE 문이 실행될 때 변수가 적용됩니다.<br /><br /> 2 = 고급. **Show advanced options** 가 설정 된 경우에만 변수가 표시 됩니다. 서버가 다시 시작될 때 설정이 적용됩니다.<br /><br /> 3 = 동적 및 고급입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

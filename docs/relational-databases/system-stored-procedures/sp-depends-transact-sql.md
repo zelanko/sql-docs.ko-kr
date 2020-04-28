@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053107"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends(Transact-SQL)
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar (16)**|항목의 유형입니다.|  
 |**updated**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
-|**선택**|**nvarchar (8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
+|**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
 |**열의**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
  다음 결과 집합은 * \<개체>* 에 종속 된 개체를 표시 합니다.  
@@ -86,7 +86,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="examples"></a>예  
   
 ### <a name="a-listing-dependencies-on-a-table"></a>A. 테이블에 대한 종속성 나열  
- 다음 예에서는 `Sales.Customer` 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 종속된 데이터베이스 개체를 나열합니다. 스키마 이름 및 테이블 이름 모두를 지정합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Sales.Customer` 테이블에 종속된 데이터베이스 개체를 나열합니다. 스키마 이름 및 테이블 이름 모두를 지정합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -105,7 +105,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sql_dependencies &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

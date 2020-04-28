@@ -12,10 +12,10 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086822"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>MySQL용 SSMA 클라이언트 설치(MySQLToSQL)
@@ -69,8 +69,7 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 [SQL 
   
 4.  설치 유형 선택 페이지에서 **일반**을 클릭 합니다.  
   
-5.  
-  **설치**를 클릭합니다.  
+5.  **Install**을 클릭합니다.  
   
 > [!IMPORTANT]  
 > 1.  새 버전을 설치 하기 전에 먼저 MySQL 용 SSMA의 모든 이전 버전을 제거 하세요.  

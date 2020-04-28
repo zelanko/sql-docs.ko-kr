@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68065391"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
@@ -55,9 +55,7 @@ StructureColumn('structure column name')
  현재 컨텍스트(줄 %{line/}, 열 %{column/})의 '%{structure/}' 부모 마이닝 구조에서 '%{structure-column-name/}' 마이닝 구조 열을 찾을 수 없습니다.  
   
 ## <a name="examples"></a>예  
- 여기에 나오는 예에서는 다음 마이닝 구조를 사용합니다. 이 마이닝 구조에는 두 개의 중첩 테이블 열, `Products`와 `Hobbies`가 있습니다. 
-  `Hobbies` 열의 중첩 테이블에는 중첩 테이블의 키로 사용되는 단일 열이 있습니다. 
-  `Products` 열의 중첩 테이블은 키 열과 입력에 사용되는 다른 열이 둘 다 있는 복잡한 중첩 테이블입니다. 다음 예에서는 모델에서 모든 열을 사용할 수는 없더라도 다양한 열을 포함하도록 데이터 마이닝 구조를 디자인하는 방법을 보여 줍니다. 이러한 열 중 일부는 패턴을 일반화하는 모델 수준에서는 유용하지 않을 수 있지만 드릴스루 시 매우 유용할 수 있습니다.  
+ 여기에 나오는 예에서는 다음 마이닝 구조를 사용합니다. 이 마이닝 구조에는 두 개의 중첩 테이블 열, `Products`와 `Hobbies`가 있습니다. `Hobbies` 열의 중첩 테이블에는 중첩 테이블의 키로 사용되는 단일 열이 있습니다. `Products` 열의 중첩 테이블은 키 열과 입력에 사용되는 다른 열이 둘 다 있는 복잡한 중첩 테이블입니다. 다음 예에서는 모델에서 모든 열을 사용할 수는 없더라도 다양한 열을 포함하도록 데이터 마이닝 구조를 디자인하는 방법을 보여 줍니다. 이러한 열 중 일부는 패턴을 일반화하는 모델 수준에서는 유용하지 않을 수 있지만 드릴스루 시 매우 유용할 수 있습니다.  
   
 ```  
 CREATE MINING STRUCTURE [MyStructure]   

@@ -21,18 +21,18 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079470"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  각 데이터베이스 역할의 각 멤버에 대해 행을 반환합니다.  데이터베이스 사용자, 응용 프로그램 역할 및 기타 데이터베이스 역할은 데이터베이스 역할의 멤버일 수 있습니다. 역할에 멤버를 추가 하려면 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 문을 `ADD MEMBER` 옵션과 함께 사용 합니다. 값의 이름을 반환 하려면 database_principals와 조인 합니다. [](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) `principal_id`
+  각 데이터베이스 역할의 각 멤버에 대해 행을 반환합니다.  데이터베이스 사용자, 응용 프로그램 역할 및 기타 데이터베이스 역할은 데이터베이스 역할의 멤버일 수 있습니다. 역할에 멤버를 추가 하려면 [ALTER role](../../t-sql/statements/alter-role-transact-sql.md) 문을 `ADD MEMBER` 옵션과 함께 사용 합니다. 값의 이름을 반환 하려면 database_principals와 조인 합니다. [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) `principal_id`
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|역할의 데이터베이스 보안 주체 ID입니다.|  
 |**member_principal_id**|**int**|멤버의 데이터베이스 보안 주체 ID입니다.|  

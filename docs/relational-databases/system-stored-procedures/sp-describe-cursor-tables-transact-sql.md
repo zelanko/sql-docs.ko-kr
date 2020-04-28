@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053092"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables(Transact-SQL)
@@ -74,10 +74,9 @@ sp_describe_cursor_tables
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|테이블 소유자의 사용자 ID입니다.|  
-|Table_name|**sysname**|개체 또는 기본 테이블의 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버 커서는 항상 기본 테이블이 아닌 사용자 지정 개체를 반환합니다.|  
+|Table_name|**sysname**|개체 또는 기본 테이블의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버 커서는 항상 기본 테이블이 아닌 사용자 지정 개체를 반환합니다.|  
 |Optimizer_hints|**smallint**|다음 중 하나 이상으로 구성된 비트맵입니다.<br /><br /> 1 = 행 수준 잠금(ROWLOCK)<br /><br /> 4 = 페이지 수준 잠금(PAGELOCK)<br /><br /> 8 = 테이블 잠금(TABLOCK)<br /><br /> 16 = 배타적 테이블 잠금(TABLOCKX)<br /><br /> 32 = 업데이트 잠금(UPDLOCK)<br /><br /> 64 = 잠금 없음(NOLOCK)<br /><br /> 128 = 빠른 첫째 행 옵션(FASTFIRST)<br /><br /> 4096 = DECLARE CURSOR(HOLDLOCK)와 함께 사용된 경우 반복적인 의미 체계를 읽습니다.<br /><br /> 여러 가지 옵션이 제공되는 경우 시스템은 가장 제한적인 것을 사용합니다. 단, sp_describe_cursor_tables는 쿼리에서 지정된 플래그를 표시합니다.|  
-|lock_type|**smallint**|해당 커서의 기초가 되는 각 기본 테이블에 대해 명시적 또는 암시적으로 요청된 스크롤 잠금 유형입니다. 값은 다음 중 하나일 수 있습니다.<br /><br /> 0 = 없음<br /><br /> 1 = 공유<br /><br /> 3 = 업데이트|  
+|lock_type|**smallint**|해당 커서의 기초가 되는 각 기본 테이블에 대해 명시적 또는 암시적으로 요청된 스크롤 잠금 유형입니다. 이 값은<br /><br /> 0 = 없음<br /><br /> 1 = 공유<br /><br /> 3 = 업데이트|  
 |server_name|**sysname, nullable**|테이블이 있는 연결된 서버의 이름입니다. OPENQUERY 또는 OPENROWSET가 사용된 경우에는 NULL입니다.|  
 |Objectid|**int**|테이블의 개체 ID입니다. OPENQUERY 또는 OPENROWSET가 사용된 경우에는 0입니다.|  
 |dbid|**int**|테이블이 있는 데이터베이스의 ID입니다. OPENQUERY 또는 OPENROWSET가 사용된 경우에는 0입니다.|  
@@ -131,9 +130,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [커서](../../relational-databases/cursors.md)   
+ [커서로](../../relational-databases/cursors.md)   
  [Transact-sql&#41;CURSOR_STATUS &#40;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [Transact-sql&#41;&#40;커서를 선언 합니다.](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursor_list &#40;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor_columns &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

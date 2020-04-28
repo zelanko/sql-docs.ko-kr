@@ -18,10 +18,10 @@ ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68062999"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68062999"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|내부적으로만 사용됩니다.|  
-|**기본값**|**bit**|내부적으로만 사용됩니다.|  
+|**value**|**bit**|내부적으로만 사용됩니다.|  
 |**major_version**|**int**|내부적으로만 사용됩니다.|  
 |**minor_version**|**int**|내부적으로만 사용됩니다.|  
 |**revision**|**int**|내부적으로만 사용됩니다.|  

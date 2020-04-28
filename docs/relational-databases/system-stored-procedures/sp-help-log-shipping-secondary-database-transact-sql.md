@@ -18,10 +18,10 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 65c4cd3f6ca07f2c3cb35dc7dcbaad373930ecc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066807"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database(Transact-SQL)
@@ -71,8 +71,7 @@ sp_help_log_shipping_secondary_database
 |**disconnect_users**|1로 설정될 경우 복원 작업 수행 시 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값 = 0|  
 |**block_size**|백업 디바이스의 블록 크기로 사용되는 크기(바이트)입니다.|  
 |**buffer_count**|백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다.|  
-|**max_transfer_size**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 디바이스로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다.|  
+|**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 디바이스로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다.|  
 |**restore_threshold**|복원 작업 간 허용되는 시간(분)입니다. 이 시간이 지나면 경고가 발생합니다.|  
 |**threshold_alert**|복원 임계값을 초과할 경우 발생하는 경고입니다.|  
 |**threshold_alert_enabled**|복원 임계값 경고를 설정할지 여부를 결정합니다.<br /><br /> 1 = 사용.<br /><br /> 0 = 사용 안 함.|  
@@ -95,7 +94,7 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_help_log_shipping_secondary_primary &#40;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

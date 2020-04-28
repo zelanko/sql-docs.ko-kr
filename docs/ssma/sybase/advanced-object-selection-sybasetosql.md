@@ -10,10 +10,10 @@ ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3745a7599f986073d1b759b46fe33dd741d62b09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083549"
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>고급 개체 선택 영역(SybaseToSQL)

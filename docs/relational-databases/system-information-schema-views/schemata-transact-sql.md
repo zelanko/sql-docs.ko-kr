@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 16b2a23c696b4da405e4983689217abb15074f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078427"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68078427"
 
   현재 데이터베이스 내의 각 스키마당 한 개의 행을 반환합니다. 이러한 뷰에서 정보를 검색 하려면 INFORMATION_SCHEMA의 정규화 된 이름을 지정 합니다 **.** _view_name_. 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]모든 데이터베이스에 대 한 정보를 검색 하려면 [SQL server &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|현재 데이터베이스의 이름입니다.|  
 |**SCHEMA_NAME**|**nvarchar (** 128 **)**|스키마 이름을 반환합니다.|  

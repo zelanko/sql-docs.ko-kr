@@ -18,10 +18,10 @@ ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054303"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
@@ -48,7 +48,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  **Sp_dropextendedproc** 를 실행 하면 사용자 정의 확장 저장 프로시저 이름이 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에서 삭제 되 고 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에서 항목이 제거 됩니다. 이 저장 프로시저는 **master** 데이터베이스 에서만 실행할 수 있습니다.  

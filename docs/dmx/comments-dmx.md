@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 26a529d6eb15997ccb48ad25d8d4fcb11cd2ddfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071049"
 ---
 # <a name="comments-dmx"></a>주석(DMX)
@@ -24,19 +24,15 @@ ms.locfileid: "68071049"
   
  다음은 기본적인 주석 작성 지침입니다.  
   
--   주석에 영숫자나 기호를 사용할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 주석 안에 있는 모든 문자를 무시합니다.  
+-   주석에 영숫자나 기호를 사용할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 주석 안에 있는 모든 문자를 무시합니다.  
   
 -   문 또는 스크립트 내에서 주석의 길이는 제한이 없습니다. 주석은 한 개 이상의 줄을 포함할 수 있습니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 유형의 주석 문자를 지원합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 유형의 주석 문자를 지원합니다.  
   
--   **(이중 슬래시).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 이중 슬래시부터 해당 줄의 끝 사이에 있는 모든 내용을 주석으로 처리합니다. 여러 줄에 걸쳐 주석을 기록하려면 각 주석 줄 앞에 이중 슬래시를 입력합니다. 이 주석 문자에 대 한 자세한 내용은 [이중 슬래시 &#40;설명&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)를 참조 하세요.  
+-   **(이중 슬래시).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 이중 슬래시부터 해당 줄의 끝 사이에 있는 모든 내용을 주석으로 처리합니다. 여러 줄에 걸쳐 주석을 기록하려면 각 주석 줄 앞에 이중 슬래시를 입력합니다. 이 주석 문자에 대 한 자세한 내용은 [이중 슬래시 &#40;설명&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)를 참조 하세요.  
   
--   **--(이중 하이픈)** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 이중 하이픈부터 해당 줄의 끝 사이에 있는 모든 내용을 주석으로 처리합니다. 여러 줄에 걸쳐 주석을 기록하려면 각 주석 줄 앞에 이중 하이픈을 입력합니다. 이 주석 문자에 대 한 자세한 내용은 [--&#40;설명&#41; &#40;DMX&#41; 요약](../dmx/comment-dmx-summary.md)을 참조 하세요.  
+-   **--(이중 하이픈)** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 이중 하이픈부터 해당 줄의 끝 사이에 있는 모든 내용을 주석으로 처리합니다. 여러 줄에 걸쳐 주석을 기록하려면 각 주석 줄 앞에 이중 하이픈을 입력합니다. 이 주석 문자에 대 한 자세한 내용은 [--&#40;설명&#41; &#40;DMX&#41; 요약](../dmx/comment-dmx-summary.md)을 참조 하세요.  
   
 -   **/\*... \*/(슬래시-별표 문자 쌍).** 이 주석 문자를 사용하여 실행 코드와 동일한 줄에 주석을 기록하거나 별도의 줄 전체에 주석을 기록할 수 있고 실행 코드 안에도 주석을 기록할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]주석의 일부로 열린 주석 쌍 (/*)에서 닫는 주석 쌍 (\*/) 까지의 모든 항목을 평가 합니다. 여러 줄로 된 주석을 만들려면 여는 주석 문자 쌍 (/\*)으로 주석을 시작 하 고 닫는 주석 문자 쌍 (\*/)으로 주석을 종료 합니다. 이 주석 줄에는 다른 주석 문자를 삽입해서는 안 됩니다. 이 주석 문자에 대 한 자세한 내용은 [&#41; &#40;DMX&#41;&#40;주석 ](../dmx/slash-star-comment-dmx.md)을 참조 하세요.  
   

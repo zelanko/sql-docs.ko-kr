@@ -19,10 +19,10 @@ ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061258"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate(Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "68061258"
   각 미러된 데이터베이스에 대한 새 테이블 행을 삽입하여 데이터베이스 미러링 모니터 상태 테이블을 업데이트하고 현재 보존 기간보다 오래된 행을 자릅니다. 기본 보존 기간은 7일(168시간)입니다. 테이블을 업데이트할 때 **sp_dbmmonitorupdate** 는 성능 메트릭을 계산 합니다.  
   
 > [!NOTE]  
->  
-  **sp_dbmmonitorupdate** 는 처음 실행될 때 msdb 데이터베이스에 **데이터베이스 미러링 상태** 테이블과 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다.  
+>  **sp_dbmmonitorupdate** 는 처음 실행될 때 msdb 데이터베이스에 **데이터베이스 미러링 상태** 테이블과 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084682"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts(Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084682"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|경고 ID입니다.|  
+|**id**|**int**|경고 ID입니다.|  
 |**name**|**sysname**|경고 이름입니다.|  
 |**event_source**|**nvarchar (100)**|이벤트의 원본: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**event_category_id**|**int**|향후 사용을 위해 예약되어 있습니다.|  
-|**event_id**|**int**|향후 사용을 위해 예약되어 있습니다.|  
+|**event_category_id**|**int**|다음에 사용하도록 예약됩니다.|  
+|**event_id**|**int**|다음에 사용하도록 예약됩니다.|  
 |**message_id**|**int**|이 경고를 트리거하는 사용자 정의 메시지 ID 또는 **sysmessages** 메시지에 대 한 참조입니다.|  
-|**등급**|**int**|경고를 트리거한 심각도입니다.|  
+|**severity**|**int**|경고를 트리거한 심각도입니다.|  
 |**사용**|**tinyint**|경고의 상태입니다.<br /><br /> **0** = 사용 안 함<br /><br /> **1** = 사용|  
 |**delay_between_responses**|**int**|경고에 대한 알림 사이의 대기 시간을 초로 표시한 것입니다.|  
 |**last_occurrence_date**|**int**|경고가 마지막으로 발생한 날짜입니다.|  
@@ -66,8 +66,8 @@ ms.locfileid: "68084682"
 |decimal | binary | 의미 |
 |------|------|------|
 |0 |0000 |메시지 없음 |
-|1 |기 |이메일 |
-|2 |mylnxcn-0006 mylnxcn-0010 |pager |
+|1 |0001 |이메일 |
+|2 |0010 |pager |
 |3 |0011 |호출기 및 전자 메일 |
 |4 |0100 |Net Send |
 |5 |0101 |Net send 및 email |

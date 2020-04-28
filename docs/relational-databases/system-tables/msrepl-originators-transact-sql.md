@@ -18,10 +18,10 @@ ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079176"
 ---
 # <a name="msrepl_originators-transact-sql"></a>MSrepl_originators(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68079176"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|업데이트 구독자를 식별합니다.|  
+|**id**|**int**|업데이트 구독자를 식별합니다.|  
 |**publisher_database_id**|**int**|게시 데이터베이스를 식별합니다.|  
 |**srvname**|**sysname**|업데이트 서버의 이름입니다.|  
 |**dbname**|**sysname**|업데이트 데이터베이스의 이름입니다.|  

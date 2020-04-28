@@ -18,10 +18,10 @@ ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079149"
 ---
 # <a name="msrepl_version-transact-sql"></a>MSrepl_version(Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "68079149"
 
   **MSrepl_version** 테이블에는 현재 버전의 복제를 설치 하는 행이 하나 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|배포 데이터베이스의 주 버전 번호입니다.|  
 |**minor_version**|**int**|배포 데이터베이스의 부 버전 번호입니다.|  
-|**revision**|**int**|수정 버전 번호입니다.|  
+|**수정**|**int**|수정 버전 번호입니다.|  
 |**db_existed**|**bit**|**Sp_adddistributiondb** 를 호출 하기 전에 배포 데이터베이스가 있는지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  

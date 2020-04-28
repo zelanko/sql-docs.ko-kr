@@ -18,10 +18,10 @@ ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a94163e2fe4a1ed5be77dd4ae99f43d03cc35121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079172"
 ---
 # <a name="msrepl_queuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68079172"
 
   **MSreplication_queuedtraninfo** 테이블은 복제 프로세스에서 SQL 기반 지연 업데이트를 사용 하는 지연 업데이트 구독에 의해 실행 되는 대기 중인 명령에 대 한 정보를 저장 하는 데 사용 됩니다. 이 테이블은 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**발행자**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  

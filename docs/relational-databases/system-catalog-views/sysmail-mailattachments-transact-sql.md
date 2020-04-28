@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060198"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060198"
 |**mailitem_id**|**int**|첨부 파일을 포함하는 메일 항목의 식별자입니다.|  
 |**이름도**|**nvarchar (520)**|첨부 파일의 파일 이름입니다. **Attach_query_result** 1이 고 **query_attachment_filename** 가 NULL 이면 데이터베이스 메일는 임의의 파일 이름을 만듭니다.|  
 |**filesize**|**int**|첨부 파일의 크기(바이트)입니다.|  
-|**attachment**|**varbinary(max)**|첨부 파일의 콘텐츠입니다.|  
+|**파일로**|**varbinary(max)**|첨부 파일의 내용입니다.|  
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   

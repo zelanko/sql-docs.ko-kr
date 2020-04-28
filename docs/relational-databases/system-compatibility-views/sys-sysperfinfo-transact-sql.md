@@ -21,10 +21,10 @@ ms.assetid: e22a81cd-27de-4690-9443-6aad6393bd3c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e6ce86e7be7d54e95c2336691b53ea12ff0d8575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076502"
 ---
 # <a name="syssysperfinfo-transact-sql"></a>sys.sysperfinfo(Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68076502"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar (128)**|**Sqlserver: lockmanager** 또는 **Sqlserver: buffermanager**와 같은 성능 개체 이름입니다.|  
-|**counter_name**|**nchar (128)**|**페이지 요청** 또는 **요청 된 잠금과**같은 개체 내에 있는 성능 카운터의 이름입니다.|  
-|**instance_name**|**nchar (128)**|카운터의 명명된 인스턴스입니다. 예를 들어 각 잠금 유형 (예: **테이블**, **페이지**, **키**등)에 대해 유지 되는 카운터가 있습니다. 유사한 카운터는 인스턴스 이름을 통해 구분합니다.|  
+|**object_name**|**nchar(128)**|**Sqlserver: lockmanager** 또는 **Sqlserver: buffermanager**와 같은 성능 개체 이름입니다.|  
+|**counter_name**|**nchar(128)**|**페이지 요청** 또는 **요청 된 잠금과**같은 개체 내에 있는 성능 카운터의 이름입니다.|  
+|**instance_name**|**nchar(128)**|카운터의 명명된 인스턴스입니다. 예를 들어 각 잠금 유형 (예: **테이블**, **페이지**, **키**등)에 대해 유지 되는 카운터가 있습니다. 유사한 카운터는 인스턴스 이름을 통해 구분합니다.|  
 |**cntr_value**|**bigint**|실제 카운터 값입니다. 많은 경우 이는 인스턴스 이벤트의 발생 수를 세는 수준 또는 단순히 수가 증가하는 카운터에 해당합니다.|  
 |**cntr_type**|**int**|Windows 성능 아키텍처가 정의한 카운터의 유형입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

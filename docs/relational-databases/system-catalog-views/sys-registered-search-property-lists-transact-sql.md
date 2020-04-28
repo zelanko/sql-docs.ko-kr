@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067847"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68067847"
 
   현재 데이터베이스에 각 검색 속성 목록당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|속성 목록의 ID입니다.|  
 |**name**|**sysname**|속성 목록의 이름입니다.|  
@@ -61,7 +61,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
+ [Transact-sql&#41;&#40;ALTER 전체 텍스트 인덱스](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   
   

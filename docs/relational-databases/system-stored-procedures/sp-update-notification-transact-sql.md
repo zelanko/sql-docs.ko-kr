@@ -18,10 +18,10 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084860"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification(Transact-SQL)
@@ -54,7 +54,7 @@ sp_update_notification
 |**1**|전자 메일|  
 |**2**|호출기|  
 |**4**|**net send**|  
-|**일**|모든 방법|  
+|**7**|모든 방법|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

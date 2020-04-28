@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056419"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys(Transact-SQL)
@@ -48,12 +48,10 @@ sp_pkeys [ @table_name = ] 'name'
  [ @table_owner= ] '*owner*'  
  지정된 테이블의 소유자를 지정합니다. *owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
  [ @table_qualifier= ] '*한정자*'  
- 테이블 식별자입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+ 테이블 식별자입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  None  
@@ -64,10 +62,8 @@ sp_pkeys [ @table_name = ] 'name'
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|테이블 한정자의 이름입니다. 이 필드는 NULL이 될 수 있습니다.|  
 |TABLE_OWNER|**sysname**|테이블 소유자의 이름입니다. 이 필드는 항상 값을 반환합니다.|  
-|TABLE_NAME|**sysname**|테이블 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 sysobjects 테이블에 나열된 테이블 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
-|COLUMN_NAME|**sysname**|반환된 TABLE_NAME의 각 열에 대한 열의 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 sys.columns 테이블에 나열된 열 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
+|TABLE_NAME|**sysname**|테이블 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 sysobjects 테이블에 나열된 테이블 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
+|COLUMN_NAME|**sysname**|반환된 TABLE_NAME의 각 열에 대한 열의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 sys.columns 테이블에 나열된 열 이름을 나타냅니다. 이 필드는 항상 값을 반환합니다.|  
 |KEY_SEQ|**smallint**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다.|  
 |PK_NAME|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없을 경우에는 NULL을 반환합니다.|  
   
@@ -89,7 +85,7 @@ EXEC sp_pkeys @table_name = N'Department'
     ,@table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `DimAccount` 데이터베이스에 있는 `AdventureWorksPDW2012` 테이블의 기본 키를 검색합니다. 테이블에 기본 키가 없음을 나타내는 0 행을 반환 합니다.  
   
 ```  

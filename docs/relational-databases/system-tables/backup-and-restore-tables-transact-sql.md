@@ -18,10 +18,10 @@ ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091889"
 ---
 # <a name="backup-and-restore-tables-transact-sql"></a>테이블 백업 및 복원(Transact-SQL)

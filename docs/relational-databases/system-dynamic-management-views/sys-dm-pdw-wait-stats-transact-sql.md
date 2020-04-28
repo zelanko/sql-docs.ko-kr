@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 2d5815783528b89716cc8bfb426ea7c1b274802e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088729"
 ---
 # <a name="sysdm_pdw_wait_stats-transact-sql"></a>sys. dm_pdw_wait_stats (Transact-sql)
@@ -24,10 +24,10 @@ ms.locfileid: "68088729"
 
   서로 다른 노드에서 실행 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 인스턴스와 관련 된 OS 상태와 관련 된 정보를 보유 합니다. 대기 유형 및 해당 설명의 목록은 [sys. dm_os_wait_stats](https://msdn.microsoft.com/library/ms179984\(v=sql.120\).aspx)를 참조 하세요.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**pdw_node_id**|**int**|이 항목이 참조 하는 노드의 ID입니다.||  
-|**wait_name**|**nvarchar(255)**|대기 형식 이름||  
+|**wait_name**|**nvarchar(255)**|대기 유형의 이름입니다.||  
 |**max_wait_time**|**bigint**|이 대기 유형의 최대 대기 시간입니다.||  
 |**request_count**|**bigint**|처리 중인이 대기 유형의 대기 수입니다.||  
 |**signal_time**|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.||  

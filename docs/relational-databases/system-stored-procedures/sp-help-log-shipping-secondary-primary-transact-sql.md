@@ -18,10 +18,10 @@ ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066765"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary(Transact-SQL)
@@ -49,7 +49,7 @@ sp_help_log_shipping_secondary_primary
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 결과 집합은 **backup_destination_directory**에서 **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, **file_retention_period**, copy_job_id ****, restore_job_id **, monitor_server**, monitor_server_security_mode **, log_shipping_secondary**열을 포함 합니다. **** ****  
+ 결과 집합은 **backup_destination_directory**에서 **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, **file_retention_period**, copy_job_id **file_retention_period**, restore_job_id **, monitor_server**, monitor_server_security_mode **, log_shipping_secondary**열을 포함 합니다. **restore_job_id** **monitor_server_security_mode**  
   
 ## <a name="remarks"></a>설명  
  **sp_help_log_shipping_secondary_primary** 는 보조 서버의 **master** 데이터베이스에서 실행 해야 합니다.  
@@ -58,7 +58,7 @@ sp_help_log_shipping_secondary_primary
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067828"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68067828"
 |**begin_lsn**|**nvarchar (64)**|트랜잭션에 대한 시작 로그 레코드의 LSN(로그 시퀀스 번호)입니다.|  
 |**commit_lsn**|**nvarchar (64)**|트랜잭션에 대한 커밋 로그 레코드의 LSN입니다.|  
 |**dbid**|**smallint**|데이터베이스 ID입니다.|  
-|**rows**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
+|**열**|**int**|트랜잭션 내 복제된 명령의 ID입니다.|  
 |**xdesid**|**nvarchar (64)**|트랜잭션 ID입니다.|  
 |**artcache_table_address**|**varbinary(8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
 |**서버인**|**nvarchar (514)**|서버 이름입니다.|  
 |**server_len_in_bytes**|**smallint**|서버 이름의 문자 길이(바이트)입니다.|  
-|**데이터**|**nvarchar (514)**|데이터베이스 이름|  
+|**database**|**nvarchar (514)**|데이터베이스 이름|  
 |**db_len_in_bytes**|**smallint**|데이터베이스 이름의 문자 길이(바이트)입니다.|  
 |**송신자**|**nvarchar (514)**|트랜잭션이 시작된 서버의 이름입니다.|  
 |**originator_len_in_bytes**|**smallint**|트랜잭션이 시작된 서버의 문자 길이(바이트)입니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067828"
  현재 아티클 캐시에 로드되어 있는 변경 데이터 캡처에 설정된 테이블이나 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [복제 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [변경 데이터 캡처 관련 동적 관리 뷰&#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090266"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68090266"
 |description|**nvarchar (3072)**|패키지 설명입니다. 설명은 패키지 작성자가 설정 하며 null을 허용 하지 않습니다.|  
 |capabilities|**int**|해당 패키지의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
 |capabilities_desc|**nvarchar(256)**|이 패키지에 사용할 수 있는 모든 기능 목록입니다. Null을 허용합니다.|  
-|module_guid|**nvarchar (60)**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
+|module_guid|**nvarchar(60)**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
 |module_address|**varbinary(8)**|패키지를 포함하는 모듈이 로드된 기준 주소입니다. 한 개의 모듈이 여러 개의 패키지를 표시할 수 있습니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -54,7 +54,7 @@ ms.locfileid: "68090266"
   
 ||||  
 |-|-|-|  
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   
 ## <a name="see-also"></a>참고 항목  

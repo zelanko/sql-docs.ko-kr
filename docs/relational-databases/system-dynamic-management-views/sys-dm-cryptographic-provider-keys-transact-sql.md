@@ -19,10 +19,10 @@ ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086223"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys(Transact-SQL)
@@ -45,14 +45,14 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|공급자에서 키의 ID 번호입니다.|  
 |**key_name**|**nvarchar(512)**|공급자에서 키의 이름입니다.|  
-|**key_thumbprint**|**varbinary (32)**|키의 공급자 손도장입니다|  
+|**key_thumbprint**|**varbinary(32)**|키의 공급자 손도장입니다|  
 |**algorithm_id**|**int**|공급자에서 알고리즘의 ID 번호입니다.|  
 |**algorithm_tag**|**int**|공급자에서 알고리즘의 태그입니다.|  
-|**key_type**|**nchar (256)**|공급자에서 키의 유형입니다.|  
+|**key_type**|**nchar(256)**|공급자에서 키의 유형입니다.|  
 |**key_length**|**int**|공급자에서 키의 길이입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

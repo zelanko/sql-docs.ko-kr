@@ -23,10 +23,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078557"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68078557"
   
  **문서 속성과 관련된 속성 수준 내용에 대한 정보를 보려면**  
   
--   [sys.dm_fts_index_keywords_by_property&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
+-   [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,8 +56,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="arguments"></a>인수  
  db_id ('*database_name*')  
- [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 받아서 데이터베이스 ID를 반환합니다. 이 ID는 지정된 데이터베이스를 찾기 위해 sys.dm_fts_index_keywords_by_document에 사용됩니다. 
-  *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
+ [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 데이터베이스 이름을 받아서 데이터베이스 ID를 반환합니다. 이 ID는 지정된 데이터베이스를 찾기 위해 sys.dm_fts_index_keywords_by_document에 사용됩니다. *database_name*을 생략하면 현재 데이터베이스 ID가 반환됩니다.  
   
  object_id ('*table_name*')  
  [OBJECT_ID ()](../../t-sql/functions/object-id-transact-sql.md) 함수에 대 한 호출입니다. 이 함수는 테이블 이름을 받아서 검사할 전체 텍스트 인덱스가 들어 있는 테이블의 테이블 ID를 반환합니다.  
@@ -132,7 +131,7 @@ GO
  [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)   
  [dm_fts_index_keywords &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [dm_fts_index_keywords_by_property &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Transact-sql&#41;sp_fulltext_keymappings &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [전체 텍스트 인덱스 성능 향상](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)  
   

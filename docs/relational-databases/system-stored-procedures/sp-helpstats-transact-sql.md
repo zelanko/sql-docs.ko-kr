@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048398"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats(Transact-SQL)
@@ -66,7 +66,7 @@ sp_helpstats[ @objname = ] 'object_name'
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 실행하여 `sp_createstats` 데이터베이스에 있는 모든 사용자 테이블에 대해 모든 해당 열에 관한 단일 열 통계를 만듭니다. 그 다음 `sp_helpstats`를 실행하여 `Customer` 테이블에서 생성된 통계 결과를 찾습니다.  
+ 다음 예에서는 `sp_createstats`를 실행하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 사용자 테이블에 대해 모든 해당 열에 관한 단일 열 통계를 만듭니다. 그 다음 `sp_helpstats`를 실행하여 `Customer` 테이블에서 생성된 통계 결과를 찾습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,7 +99,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

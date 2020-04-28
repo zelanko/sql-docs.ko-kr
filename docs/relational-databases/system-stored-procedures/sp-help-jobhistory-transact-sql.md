@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054934"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
@@ -78,11 +78,11 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |값|Description|  
 |-----------|-----------------|  
 |**0**|Failed|  
-|**1**|Succeeded|  
+|**1**|성공|  
 |**2**|다시 시도(단계에만 적용됨)|  
 |**3**|취소됨|  
 |**4**|메시지 처리 중|  
-|**5**|알 수 없음|  
+|**5**|Unknown|  
   
 `[ @minimum_retries = ] minimum_retries`작업 실행을 다시 시도해 야 하는 최소 횟수입니다. *minimum_retries* 은 **int**이며 기본값은 NULL입니다.  
   
@@ -105,11 +105,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**job_name**|**sysname**|작업 이름입니다.|  
 |**step_id**|**int**|단계 id 번호입니다 (작업 기록의 경우 **0** 이 됨).|  
 |**step_name**|**sysname**|단계 이름입니다. 작업 기록의 경우 NULL입니다.|  
-|**sql_message_id**|**int**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 최근의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 번호입니다.|  
-|**sql_severity**|**int**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 높은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 심각도입니다.|  
-|**메시지**|**nvarchar(1024)**|작업 또는 단계 기록 메시지입니다.|  
+|**sql_message_id**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 최근의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 번호입니다.|  
+|**sql_severity**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계의 경우 명령 실행 중에 발생한 오류 중 가장 높은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류 심각도입니다.|  
+|**message**|**nvarchar(1024)**|작업 또는 단계 기록 메시지입니다.|  
 |**run_status**|**int**|작업 또는 단계의 결과입니다.|  
 |**run_date**|**int**|작업 또는 단계가 실행을 시작한 날짜입니다.|  
 |**run_time**|**int**|작업 또는 단계가 실행을 시작한 시간입니다.|  
@@ -118,13 +116,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|해당 작업에 관한 네트워크 메시지를 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
 |**operator_paged**|**nvarchar (20)**|해당 작업에 관한 호출을 받는 운영자입니다. 단계 기록의 경우에는 NULL입니다.|  
 |**retries_attempted**|**int**|단계를 다시 시도하는 횟수입니다. 작업 기록의 경우에는 항상 0입니다.|  
-|**서버인**|**nvarchar (30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**local**)입니다.|  
+|**서버인**|**nvarchar(30)**|단계 또는 작업을 실행하는 서버입니다. 항상 (**local**)입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_help_jobhistory** 는 지정 된 예약 된 작업의 기록이 포함 된 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   

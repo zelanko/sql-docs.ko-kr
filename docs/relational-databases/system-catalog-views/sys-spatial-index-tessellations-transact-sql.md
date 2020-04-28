@@ -20,10 +20,10 @@ ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078655"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations(Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "68078655"
 |bounding_box_xmax|**float (53)**|경계 상자의 오른쪽 위 모퉁이에 대 한 X 좌표입니다. 다음 중 하나는 지정 된 공간 분할 (tessellation) 구성표에 적용할 수 없습니다 (예: GEOGRAPHY_GRID) *n* = tessellation_scheme GEOMETRY_GRID 경우 x 최대값 좌표 값|  
 |bounding_box_ymax|**float (53)**|경계 상자의 오른쪽 위 모퉁이에 대 한 Y 좌표 이며 지정 된 공간 분할 (tessellation) 구성표에 적용할 수 없는 NULL = (예: GEOGRAPHY_GRID) *n* = tessellation_scheme GEOMETRY_GRID 경우 y-최대 좌표 값|  
 |level_1_grid|**smallint**|최상위 표의 밀도입니다. Tessellation_scheme GEOMETRY_GRID 또는 GEOGRAPHY_GRID 인 경우 16 = 4 x 4 그리드 (낮음) 64 = 8 x 8 그리드 (중간) 256 = 16 x 16 그리드 (높음) NULL = 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
-|level_1_grid_desc|**nvarchar (60)**|최상위 표에 대 한 표 밀도, 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없음: 낮음 MEDIUM HIGH NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
+|level_1_grid_desc|**nvarchar(60)**|최상위 표에 대 한 표 밀도, 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없음: 낮음 MEDIUM HIGH NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
 |level_2_grid|**smallint**|둘째 수준 표의 밀도입니다. Tessellation_scheme GEOMETRY_GRID 또는 GEOGRAPHY_GRID 인 경우 16 = 4 x 4 그리드 (낮음) 64 = 8 x 8 그리드 (중간) 256 = 16 x 16 그리드 (높음) NULL = 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
-|level_2_grid_desc|**nvarchar (60)**|둘째 수준 표의 밀도입니다. 다음 중 하나는 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
+|level_2_grid_desc|**nvarchar(60)**|둘째 수준 표의 밀도입니다. 다음 중 하나는 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
 |level_3_grid|**smallint**|셋째 수준 표의 밀도입니다.   Tessellation_scheme GEOMETRY_GRID 또는 GEOGRAPHY_GRID 인 경우 16 = 4 x 4 그리드 (낮음) 64 = 8 x 8 그리드 (중간) 256 = 16 x 16 그리드 (높음) NULL = 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
-|level_3_grid_desc|**nvarchar (60)**|세 번째 수준 표에 대 한 표 밀도 이며 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없음: 낮은 MEDIUM 높음 NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
+|level_3_grid_desc|**nvarchar(60)**|세 번째 수준 표에 대 한 표 밀도 이며 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없음: 낮은 MEDIUM 높음 NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
 |level_4_grid|**smallint**|넷째 수준 표의 밀도입니다. Tessellation_scheme GEOMETRY_GRID 또는 GEOGRAPHY_GRID 인 경우 16 = 4 x 4 그리드 (낮음) 64 = 8 x 8 그리드 (MEDIUM) 256 = 16 x 16 그리드 (높음) NULL = 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
-|level_4_grid_desc|**nvarchar (60)**|네 번째 수준 표의 밀도입니다. 다음 중 하나는 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다. < LOW MEDIUM HIGH NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
+|level_4_grid_desc|**nvarchar(60)**|네 번째 수준 표의 밀도입니다. 다음 중 하나는 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다. < LOW MEDIUM HIGH NULL =  새 SQL Server 11 공간 분할(tessellation)이 사용되면 Null이 반환됩니다.|  
 |cells_per_object|**int**|공간 개체당 셀 수 이며 다음 중 하나입니다. tessellation_scheme GEOMETRY_GRID 또는 GEOGRAPHY_GRID 경우 *n* = 개체당 셀 수 = 지정 된 공간 인덱스 유형 또는 공간 분할 (tessellation) 구성표에 적용할 수 없습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -62,7 +62,7 @@ ms.locfileid: "68078655"
  [공간 인덱스 개요](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [spatial_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

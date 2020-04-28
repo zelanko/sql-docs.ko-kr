@@ -18,10 +18,10 @@ ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e46fe3243f39f8783743bf11e08b6368d67116eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091898"
 ---
 # <a name="xp_sscanf-transact-sql"></a>xp_sscanf(Transact-SQL)
@@ -39,16 +39,16 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>인수  
- **문자열**  
+ **string**  
  인수 값을 읽을 문자열입니다.  
   
  OUTPUT  
  지정 된 경우 output 매개 변수에 *인수* 값을 넣습니다.  
   
- *형식과*  
+ *format*  
  는 C 언어 **sscanf** 함수에서 지원 되는 것과 비슷한 형식의 문자열입니다. 현재 % 포맷 인수만 지원됩니다.  
   
- *t*  
+ *argument*  
  해당 *형식* 인수 값으로 설정 된 **varchar** 변수입니다.  
   
  *n*  
@@ -83,7 +83,7 @@ products10.tmp        random
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_sprintf &#40;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   

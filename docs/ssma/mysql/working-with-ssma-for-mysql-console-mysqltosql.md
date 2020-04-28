@@ -10,10 +10,10 @@ ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090838"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>MySQL용 SSMA 콘솔 작업(MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68090838"
   
 |||  
 |-|-|  
-|**에서는**|**설명**|  
+|**토픽**|**설명**|  
 |[MySQL 용 SSMA 콘솔 시작 &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[MySQLToSQL&#41;&#40;스크립트 파일 만들기](../../ssma/mysql/creating-script-files-mysqltosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  

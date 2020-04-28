@@ -21,10 +21,10 @@ ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ead3e8b7df6eb563ce87fa6d6abbffa4a5d2b413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053413"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys(Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68053413"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|테이블 ID입니다.|  
+|**id**|**int**|테이블 ID입니다.|  
 |**indid**|**smallint**|인덱스의 ID입니다.|  
-|**id**|**smallint**|열의 ID입니다.|  
+|**colid**|**smallint**|열의 ID입니다.|  
 |**keyno**|**smallint**|인덱스에 있는 열의 위치입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

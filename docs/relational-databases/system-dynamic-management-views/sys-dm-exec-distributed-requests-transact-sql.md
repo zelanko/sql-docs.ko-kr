@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097802"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-sql)
@@ -38,7 +38,7 @@ ms.locfileid: "68097802"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|이 보기의 키입니다. 요청과 연결 된 고유 숫자 id입니다.|시스템의 모든 요청에 대해 고유 합니다.|  
+|sql_handle|**varbinary(64)**|이 보기의 키입니다. 요청과 연결 된 고유 숫자 id입니다.|시스템의 모든 요청에 대해 고유 합니다.|  
 |execution_id|**nvarchar (32**|이 쿼리가 실행 된 세션과 연결 된 고유 숫자 id입니다.||  
 |상태|**nvarchar (32**|요청의 현재 상태입니다.|' Pending ', ' 권한 부여 ', ' AcquireSystemResources ', ' 초기화 중 ', ' Plan ', ' 구문 분석 ', ' AquireResources ', ' 실행 중 ', ' 취소 ', ' 완료 ', ' 실패 ', ' 취소 됨 '.|  
 |error_id|**nvarchar (36)**|요청과 관련 된 오류의 고유 id입니다 (있는 경우).|오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68097802"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

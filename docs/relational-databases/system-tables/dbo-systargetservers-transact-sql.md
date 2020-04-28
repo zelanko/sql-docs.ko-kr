@@ -20,10 +20,10 @@ ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095838"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers(Transact-SQL)
@@ -31,15 +31,15 @@ ms.locfileid: "68095838"
 
   해당 다중 서버 작업 도메인에 현재 참여하는 대상 서버를 기록합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|서버 ID입니다.|  
 |**server_name**|**sysname**|서버 이름입니다.|  
-|**위치도**|**nvarchar(200)**|지정된 대상 서버의 위치입니다.|  
+|**location**|**nvarchar(200)**|지정된 대상 서버의 위치입니다.|  
 |**time_zone_adjustment**|**int**|GMT(그리니치 표준시)를 적용한 시간 조정 간격(시)입니다.|  
 |**enlist_date**|**datetime**|지정한 대상 서버가 참여한 날짜와 시간입니다.|  
 |**last_poll_date**|**datetime**|지정 된 대상 서버가 실행할 작업에 대 한 다중 서버 **sysdownloadlist** 시스템 테이블을 마지막으로 폴링한 날짜와 시간입니다.|  
-|**업무**|**int**|대상 서버의 상태입니다.<br /><br /> **1** = 보통<br /><br /> **2** = 다시 동기화 보류 중<br /><br /> **4** = 오프 라인 상태로 의심 됨|  
+|**status**|**int**|대상 서버의 상태입니다.<br /><br /> **1** = 보통<br /><br /> **2** = 다시 동기화 보류 중<br /><br /> **4** = 오프 라인 상태로 의심 됨|  
 |**local_time_at_last_poll**|**datetime**|작업 운영에 대해 대상 서버가 마지막으로 폴링된 날짜와 시간입니다.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|대상 서버에서 **sp_msx_enlist** 를 실행 하는 사용자의 사용자 이름입니다.|  
 |**poll_internal**|**int**|대상 서버가 새 다운로드 명령에 대해 마스터 서버를 폴링하기 전의 경과 시간(초)을 표시한 것입니다.|  

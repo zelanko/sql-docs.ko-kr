@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085086"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver(Transact-SQL)
@@ -48,15 +48,15 @@ sp_help_targetserver
 ## <a name="result-sets"></a>결과 집합  
  *Server_name* 지정 하지 않으면 **sp_help_targetserver** 이 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|서버 ID입니다.|  
-|**server_name**|**nvarchar (30)**|서버 이름입니다.|  
-|**위치도**|**nvarchar(200)**|지정된 서버의 위치입니다.|  
+|**server_name**|**nvarchar(30)**|서버 이름입니다.|  
+|**location**|**nvarchar(200)**|지정된 서버의 위치입니다.|  
 |**time_zone_adjustment**|**int**|GMT(그리니치 표준시)를 적용한 표준 시간대 조정입니다.|  
 |**enlist_date**|**datetime**|지정된 서버의 포함 목록 날짜입니다.|  
 |**last_poll_date**|**datetime**|서버가 작업에 대해 마지막으로 폴링된 날짜입니다.|  
-|**업무**|**int**|지정된 서버의 상태입니다.|  
+|**status**|**int**|지정된 서버의 상태입니다.|  
 |**unread_instructions**|**int**|서버가 명령을 읽지 않았는지의 여부를 결정합니다. 모든 행을 다운로드 한 경우이 열은 **0**입니다.|  
 |**local_time**|**datetime**|마스터 서버가 마지막으로 폴링한 대상 서버의 로컬 시간을 기준으로 하는 대상 서버의 로컬 날짜 및 시간입니다.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|대상 서버에 참여하는 Microsoft Windows 사용자입니다.|  

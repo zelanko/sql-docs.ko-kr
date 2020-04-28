@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68071086"
 ---
 # <a name="cluster-dmx"></a>Cluster(DMX)
@@ -36,7 +36,7 @@ Cluster()
  **클러스터** 함수는 클러스터 이름의 스칼라 값을 반환 합니다. 그러나이 함수를 다른 함수의 인수로 사용 하는 경우에는 \<> 클러스터 열 참조로 간주 해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- **클러스터** 를 PredictHistogram 함수에 대 한 `<`클러스터 열 참조`>` 로 사용할 **** 수도 있습니다.  
+ **클러스터** 를 PredictHistogram 함수에 대 한 `<`클러스터 열 참조`>` 로 사용할 **PredictHistogram** 수도 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) 및 클러스터 함수에서 단일 쿼리를 사용 하 여 TM 클러스터링 마이닝 모델의 각 클러스터에서 개별 사례의 거리와 개별 사례가 각 클러스터에 존재 하는 확률을 반환 합니다.  

@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090849"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`지정 된 속성의 새 값입니다. *value*는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||기본 위치가 아니거나 기본 위치에 추가된 위치일 경우 스냅샷 폴더가 저장되는 위치입니다.|  
 |**한**||해당 병합 끌어오기 구독에 관한 설명입니다.|  
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
 |**ftp_password**||이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스에 연결할 때 사용되는 사용자 암호입니다.|  
 |**ftp_port**||이전 버전과의 호환성을 위해서만 사용 가능합니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
-|**n**||조인 필터 또는 논리적 레코드 관계의 WHERE 절에서 HOST_NAME() 함수를 사용할 때 함수에 필요한 값을 지정합니다.|  
+|**hostname**||조인 필터 또는 논리적 레코드 관계의 WHERE 절에서 HOST_NAME() 함수를 사용할 때 함수에 필요한 값을 지정합니다.|  
 |**internet_login**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**||기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인 암호입니다.|  
 |**internet_security_mode**|**1**|웹 동기화를 호스팅하는 웹 서버에 연결할 때 Windows 인증을 사용합니다.|  
@@ -74,20 +74,20 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**merge_job_login**||에이전트가 실행되는 Windows 계정의 로그인입니다.|  
 |**merge_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  
-|**우선 순위**||이전 버전과의 호환성을 위해서만 사용할 수 있습니다. 대신 게시자에서 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) 를 실행 하 여 구독의 우선 순위를 수정 합니다.|  
+|**priority**||이전 버전과의 호환성을 위해서만 사용할 수 있습니다. 대신 게시자에서 [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) 를 실행 하 여 구독의 우선 순위를 수정 합니다.|  
 |**publisher_login**||게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**publisher_password**||게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
 |**publisher_security_mode**|**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
 ||**1**|게시자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**2**|동기화 트리거는 정적 **sysservers** 항목을 사용 하 여 RPC (원격 프로시저 호출)를 수행 하며, 게시자는 **sysservers** 테이블에서 원격 서버 또는 연결 된 서버로 정의 되어야 합니다.|  
 |**sync_type**|**자동 번역**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
-||**없음을**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
+||**없음**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
 |**use_ftp**|**true**|스냅샷을 검색하는 일반적인 프로토콜 대신 FTP를 사용합니다.|  
-||**허위**|스냅샷을 검색하는 일반적인 프로토콜을 사용합니다.|  
+||**false**|스냅샷을 검색하는 일반적인 프로토콜을 사용합니다.|  
 |**use_web_sync**|**true**|HTTP를 통해 구독을 동기화할 수 있습니다.|  
-||**허위**|HTTP를 통해 구독을 동기화할 수 없습니다.|  
+||**false**|HTTP를 통해 구독을 동기화할 수 없습니다.|  
 |**use_interactive_resolver**|**true**|조정 과정에 대화형 해결 프로그램을 사용합니다.|  
-||**허위**|대화형 해결 프로그램을 사용하지 않습니다.|  
+||**false**|대화형 해결 프로그램을 사용하지 않습니다.|  
 |**working_directory**||해당 옵션이 지정된 경우 FTP를 사용하여 스냅샷 파일이 전송될 디렉터리의 정규화된 경로입니다.|  
 |NULL(기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
   

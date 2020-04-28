@@ -21,10 +21,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079321"
 ---
 # <a name="sysedge_constraints-transact-sql"></a>sys. edge_constraints (Transact-sql)
@@ -32,13 +32,13 @@ ms.locfileid: "68079321"
 
 에 지 제약 조건에 해당 하는 각 개체에 대해 하나의 행을 포함 합니다. 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**is_disabled**|**bit**|1 = 가장자리 제약 조건이 disbled입니다.<br /><br /> 0 = 가장자리 제약 조건을 사용 합니다.|  
 |**is_not_trusted**|**bit**|1 = 시스템에서 가장자리 제약 조건을 확인 하지 않았습니다.<br /><br /> 0 = 시스템에서에 지 제약 조건을 확인 했습니다.|  
 |**delete_referential_action**|**tinyint**|이에 지 제약 조건에 정의 된 참조 동작입니다.<br /><br />0 = 작업 없음|  
-|**delete_referential_action_desc**|**nvarchar (60)**|이에 지 제약 조건에 정의 된 참조 동작에 대 한 설명입니다.<br /><br />NO_ACTION|  
+|**delete_referential_action_desc**|**nvarchar(60)**|이에 지 제약 조건에 정의 된 참조 동작에 대 한 설명입니다.<br /><br />NO_ACTION|  
 |**is_system_named**|**bit**|1 = 시스템에서 가장자리 제약 조건 이름을 생성 했습니다.<br /><br />0 = 사용자가 가장자리 제약 조건 이름을 제공 했습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -46,7 +46,7 @@ ms.locfileid: "68079321"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

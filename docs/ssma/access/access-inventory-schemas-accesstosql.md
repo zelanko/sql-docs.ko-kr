@@ -37,10 +37,10 @@ ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068952"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>AccessToSQL (액세스 인벤토리 스키마)
@@ -49,7 +49,7 @@ ms.locfileid: "68068952"
 ## <a name="databases"></a>데이터베이스  
 데이터베이스 메타 데이터를 **SSMA_Access_InventoryDatabases** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|각 데이터베이스를 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블의 기본 키 이기도 합니다.|  
 |**DatabaseName**|**nvarchar(4000)**|액세스 데이터베이스의 이름입니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68068952"
 ## <a name="tables"></a>테이블  
 테이블 메타 데이터를 **SSMA_Access_InventoryTables** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 테이블을 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|테이블을 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블의 기본 키 이기도 합니다.|  
@@ -87,7 +87,7 @@ ms.locfileid: "68068952"
 ## <a name="columns"></a>열  
 열 메타 데이터를 **SSMA_Access_InventoryColumns** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 열을 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 열이 포함 된 테이블을 식별 합니다.|  
@@ -103,7 +103,7 @@ ms.locfileid: "68068952"
 ## <a name="indexes"></a>인덱스  
 인덱스 메타 데이터를 **SSMA_Access_InventoryIndexes** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 인덱스를 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 인덱스를 포함 하는 테이블을 식별 합니다.|  
@@ -117,7 +117,7 @@ ms.locfileid: "68068952"
 ## <a name="foreign-keys"></a>외래 키  
 외래 키 메타 데이터를 **SSMA_Access_InventoryForeignKeys** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 외래 키를 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 외래 키가 포함 된 테이블을 식별 합니다.|  
@@ -133,7 +133,7 @@ ms.locfileid: "68068952"
 ## <a name="queries"></a>쿼리  
 쿼리 메타 데이터를 **SSMA_Access_InventoryQueries** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 쿼리를 포함 하는 데이터베이스를 식별 합니다.|  
 |**QueryId**|**int**|쿼리를 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  
@@ -143,10 +143,10 @@ ms.locfileid: "68068952"
 |**QueryType**|**nvarchar(4000)**|**Select** 또는 **SetOperation**와 같은 쿼리 유형을 지정 합니다.|  
 |**ExternalSource**|**nvarchar(4000)**|쿼리가 외부 데이터 원본을 참조 하는 경우이는 쿼리에서 사용 하는 연결 문자열입니다.|  
   
-## <a name="forms"></a>양식에  
+## <a name="forms"></a>양식  
 양식 메타 데이터를 **SSMA_Access_InventoryForms** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|이 폼을 포함 하는 데이터베이스를 식별 합니다.|  
 |**FormId**|**int**|폼을 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "68068952"
 ## <a name="macros"></a>Macros  
 매크로 메타 데이터를 **SSMA_Access_InventoryMacros** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|매크로를 포함 하는 데이터베이스를 식별 합니다.|  
 |**MacroId**|**int**|매크로를 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  
@@ -164,7 +164,7 @@ ms.locfileid: "68068952"
 ## <a name="reports"></a>보고서  
 보고서 메타 데이터를 **SSMA_Access_InventoryReports** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|보고서가 포함 된 데이터베이스를 식별 합니다.|  
 |**보고서 id**|**int**|보고서를 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  
@@ -173,7 +173,7 @@ ms.locfileid: "68068952"
 ## <a name="modules"></a>모듈  
 모듈 메타 데이터를 **SSMA_Access_InventoryModules** 테이블로 내보냅니다. 이 테이블에는 다음 열이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**다르게**|**uniqueidentifier**|모듈을 포함 하는 데이터베이스를 식별 합니다.|  
 |**ModuleId**|**int**|모듈을 식별 하는 증분 정수입니다. 이 열은 테이블의 기본 키입니다.|  

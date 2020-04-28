@@ -19,10 +19,10 @@ ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060362"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full(Transact-SQL)
@@ -41,17 +41,16 @@ ms.locfileid: "68060362"
 |last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅샷을 캡처한 시간입니다. Null을 허용합니다.|  
 |finish_time|**datetime**|종료된 패키지 및 컬렉션 집합의 실행 완료 시간입니다. Null을 허용합니다.|  
 |duration|**int**|패키지 또는 컬렉션 집합이 시작된 이후부터의 실행 시간(초)입니다. Null을 허용합니다.|  
-|failure_message|**nvarchar (2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 얻으려면 [fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수를 사용 합니다.|  
+|failure_message|**nvarchar(2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 얻으려면 [fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수를 사용 합니다.|  
 |operator|**nvarchar(128)**|컬렉션 집합 또는 패키지를 시작한 사용자를 식별합니다. Null을 허용합니다.|  
-|package_execution_id|**uniqueidentifier**|
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
+|package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
 |collection_set_id|**int**|msdb의 데이터 컬렉션 구성 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  **Dc_operator**에 대 한 SELECT가 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   

@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080012"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68080012"
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
 |**id**|**sysname**|대기 중인 명령이 실행된 트랜잭션 ID입니다.|  
-|**데이터로**|**varbinary (8000)**|대기 중인 명령에 대한 정보를 저장한 압축된 바이트 스트림입니다.|  
+|**데이터**|**varbinary(8000)**|대기 중인 명령에 대한 정보를 저장한 압축된 바이트 스트림입니다.|  
 |**datalen**|**int**|데이터의 길이(바이트)입니다.|  
 |**commandtype**|**int**|대기 중인 명령의 유형입니다.<br /><br /> 1 = 트랜잭션의 사용자 명령<br /><br /> 2 = 구독 동기화 명령|  
 |**insertdate**|**datetime**|삽입한 날짜입니다.|  

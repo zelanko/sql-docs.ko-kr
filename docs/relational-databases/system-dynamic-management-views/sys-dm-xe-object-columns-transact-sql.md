@@ -20,10 +20,10 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090282"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68090282"
 |object_package_guid|**uniqueidentifier**|개체가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
 |type_name|**nvarchar(256)**|해당 열의 유형 이름입니다. Null을 허용하지 않습니다.|  
 |type_package_guid|**uniqueidentifier**|열 데이터 형식이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
-|column_type|**nvarchar (60)**|해당 열이 사용되는 방식을 나타냅니다. Null을 허용하지 않습니다. column_type 다음 중 하나일 수 있습니다.<br /><br /> 읽기 전용. 열이 변경할 수 없는 정적 값을 포함합니다.<br /><br /> 있습니다. 열이 개체에 의해 표시되는 런타임 데이터를 포함합니다.<br /><br /> 사용자 지정 가능. 열이 변경 가능한 값을 포함합니다.<br /><br /> 참고:이 값을 변경 하면 개체의 동작을 수정할 수 있습니다.|  
+|column_type|**nvarchar(60)**|해당 열이 사용되는 방식을 나타냅니다. Null을 허용하지 않습니다. column_type 다음 중 하나일 수 있습니다.<br /><br /> 읽기 전용. 열이 변경할 수 없는 정적 값을 포함합니다.<br /><br /> 데이터. 열이 개체에 의해 표시되는 런타임 데이터를 포함합니다.<br /><br /> 사용자 지정 가능. 열이 변경 가능한 값을 포함합니다.<br /><br /> 참고:이 값을 변경 하면 개체의 동작을 수정할 수 있습니다.|  
 |column_value|**nvarchar(256)**|개체 열과 연관된 정적 값을 표시합니다. Null을 허용합니다.|  
 |capabilities|**int**|열의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
 |capabilities_desc|**nvarchar(256)**|해당 개체 열의 기능에 대한 설명입니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 필수. 부모 개체를 이벤트 세션에 바인딩하는 경우 값을 설정해야 합니다.<br /><br /> Null을 허용합니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68090282"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|다 대 일|  

@@ -20,16 +20,15 @@ ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084667"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 작업, 경고 및 연산자를 구성하는 데 사용되는 범주를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
 |열 이름|데이터 형식|Description|  

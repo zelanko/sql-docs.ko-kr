@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054903"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule(Transact-SQL)
@@ -51,15 +51,15 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
-|**originating_server**|**nvarchar (30)**|작업을 가져온 서버의 이름입니다.|  
+|**originating_server**|**nvarchar(30)**|작업을 가져온 서버의 이름입니다.|  
 |**name**|**sysname**|작업의 이름입니다.|  
 |**사용**|**tinyint**|작업을 실행할 수 있는지를 표시합니다.|  
-|**한**|**nvarchar(512)**|작업에 대한 설명입니다.|  
+|**한**|**nvarchar(512)**|작업 설명입니다.|  
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
-|**범주**|**sysname**|작업 범주입니다.|  
+|**category**|**sysname**|작업 범주입니다.|  
 |**소유자도**|**sysname**|작업 소유자입니다.|  
 |**notify_level_eventlog**|**int**|Microsoft Windows 애플리케이션 로그에 알림 이벤트를 기록해야 하는 상황을 나타내는 비트 마스크입니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공 하는 경우<br /><br /> **2** = 작업이 실패 하는 경우<br /><br /> **3** = 작업이 완료 될 때마다 (작업 결과에 관계 없음)|  
 |**notify_level_email**|**int**|작업을 완료했을 때, 어떤 상황에서 알림 전자 메일을 전달해야 할지를 지정하는 비트 마스크입니다. 가능한 값은 **notify_level_eventlog**와 동일 합니다.|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|작업을 완료했을 때, 어떤 상황에서 작업을 삭제해야 할지를 지정하는 비트 마스크입니다. 가능한 값은 **notify_level_eventlog**와 동일 합니다.|  
 |**date_created**|**datetime**|작업을 만든 날짜입니다.|  
 |**date_modified**|**datetime**|작업을 마지막으로 수정한 날짜입니다.|  
-|**version_number**|**int**|작업 버전입니다(작업이 수정될 때마다 자동으로 업데이트됨).|  
+|**version_number**|**int**|작업의 버전입니다. 작업이 수정될 때마다 자동으로 업데이트됩니다.|  
 |**last_run_date**|**int**|작업이 마지막으로 실행을 시작한 날짜입니다.|  
 |**last_run_time**|**int**|작업이 마지막으로 실행을 시작한 시간입니다.|  
 |**last_run_outcome**|**int**|작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
@@ -90,7 +90,7 @@ sp_help_jobs_in_schedule
  이 프로시저는 지정한 일정에 연결된 작업에 대한 정보를 나열합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   

@@ -21,17 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096249"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)의 통계 히스토그램을 반환 합니다. 
-  `DBCC SHOW_STATISTICS WITH HISTOGRAM`와 유사합니다.
+현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)의 통계 히스토그램을 반환 합니다. `DBCC SHOW_STATISTICS WITH HISTOGRAM`와 유사합니다.
 
 > [!NOTE] 
 > 이 DMF는 [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2부터 사용할 수 있습니다.
@@ -44,23 +43,23 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="arguments"></a>인수  
  *object_id*  
- 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 은 **int**입니다.  
+ 해당 통계 중 하나의 속성이 요청되는 현재 데이터베이스에 포함된 개체의 ID입니다. *object_id* 는 **int**입니다.  
   
  *stats_id*  
- 지정된 *object_id*통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 은 **int**입니다.  
+ 지정된 *object_id*통계의 ID입니다. 통계 ID는 [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) 동적 관리 뷰에서 얻을 수 있습니다. *stats_id* 는 **int**입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|통계 개체의 속성을 반환하는 개체(테이블 또는 인덱싱된 뷰)의 ID입니다.|  
 |stats_id |**int**|통계 개체의 ID입니다. 테이블 또는 인덱싱된 뷰 내에서 고유합니다. 자세한 내용은 [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)를 참조하세요.|  
 |step_number |**int** |히스토그램의 단계 수입니다. |
 |range_high_key |**sql_variant** |히스토그램 단계의 상한 열 값입니다. 열 값은 키 값이라고도 합니다.|
-|range_rows |**실제로** |상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다. |
-|equal_rows |**실제로** |히스토그램 단계에서 상한과 열 값이 동일한 예상 행 수입니다. |
+|range_rows |**real** |상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다. |
+|equal_rows |**real** |히스토그램 단계에서 상한과 열 값이 동일한 예상 행 수입니다. |
 |distinct_range_rows |**bigint** |상한을 제외한 히스토그램 단계 내에 고유한 열 값이 있는 예상 행 수입니다. |
-|average_range_rows |**실제로** |상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수입니다 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` 의 경우 `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수입니다 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` 의 경우 `DISTINCT_RANGE_ROWS > 0`). |
   
  ## <a name="remarks"></a>설명  
  
@@ -82,8 +81,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 -   굵은 선은 상한 값(*range_high_key*)과 발생한 횟수(*equal_rows*)를 나타냅니다.  
   
--   
-  *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows*는 항상 0입니다.  
+-   *range_high_key* 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(*average_range_rows*)를 나타냅니다. 첫 번째 히스토그램 단계의 *average_range_rows*는 항상 0입니다.  
   
 -   점선은 범위 (*distinct_range_rows*)의 전체 고유 값 수와 범위 (*range_rows*)의 총 값 수를 예상 하는 데 사용 되는 샘플링 된 값을 나타냅니다. 쿼리 최적화 프로그램은 *range_rows* 및 *distinct_range_rows*를 사용하여 *average_range_rows*를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.  
   

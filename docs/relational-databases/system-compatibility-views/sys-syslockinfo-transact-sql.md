@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053342"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo(Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68053342"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**rsc_text**|**nchar (32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
-|**rsc_bin**|**binary (16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 이 열은 고유한 형식의 잠금 리소스를 생성 하 고 **syslockinfo**에서 자체 조인을 수행 하는 데 필요한 잠금 리소스 형식에 대해 알고 있는 도구에 포함 됩니다.|  
-|**rsc_valblk**|**binary (16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
+|**rsc_text**|**nchar(32)**|잠금 리소스에 관한 문자 설명입니다. 리소스 이름의 일부를 포함합니다.|  
+|**rsc_bin**|**binary(16)**|이진 잠금 리소스입니다. 잠금 관리자에 있는 실제 잠금 리소스를 포함합니다. 이 열은 고유한 형식의 잠금 리소스를 생성 하 고 **syslockinfo**에서 자체 조인을 수행 하는 데 필요한 잠금 리소스 형식에 대해 알고 있는 도구에 포함 됩니다.|  
+|**rsc_valblk**|**binary(16)**|잠금 값 블록입니다. 일부 리소스 유형은 잠금 관리자가 해시하지 않은 잠금 리소스에 추가 데이터를 포함하여 특정 잠금 리소스의 소유권을 결정할 수 있습니다. 예를 들어 특정 개체 ID가 잠금 에스컬레이션 및 기타 목적을 위해 페이지 잠금을 소유할 수 없습니다. 그러나 페이지 잠금의 개체 ID를 잠금 값 블록에 포함할 수는 있습니다.|  
 |**rsc_dbid**|**smallint**|리소스와 연관된 데이터베이스 ID입니다.|  
 |**rsc_indid**|**smallint**|필요한 경우 사용할 수 있는 리소스와 연관된 인덱스 ID입니다.|  
 |**rsc_objid**|**int**|리소스와 연관된 개체 ID입니다. 해당되는 경우에 한합니다.|  
@@ -64,6 +64,6 @@ ms.locfileid: "68053342"
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

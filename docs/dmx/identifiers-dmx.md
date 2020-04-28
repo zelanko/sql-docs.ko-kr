@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074812"
 ---
 # <a name="identifiers-dmx"></a>식별자(DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074812"
   
  개체 식별자는 개체를 정의할 때 생성됩니다. 그런 다음 이 식별자를 사용하여 개체를 참조할 수 있습니다. 식별자 길이는 100자로 제한됩니다.  
   
-##  <a name="RegularIdentifiers"></a>일반 식별자  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>일반 식별자  
  DMX의 일반 식별자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 식별자 형식 규칙을 따릅니다. DMX의 일반 식별자에는 구분 기호가 필요하지 않습니다. 다음은 구분 기호를 사용하지 않는 일반 식별자를 사용하는 DMX 문의 예입니다.  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  DMX 문에서 이러한 규칙을 따르지 않는 식별자를 사용하려면 대괄호로 구분해야 합니다.  
   
-##  <a name="DelimitedIdentifiers"></a>구분 식별자  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>구분 식별자  
  구분 식별자는 대괄호([ ])로 묶입니다.  다음은 이 규칙을 따르는 구분 식별자가 있는 DMX 문의 예입니다.  
   
 ```  
@@ -79,8 +79,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   정규화된 식별자가 아닌 문자를 사용하는 경우  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 현재 코드 페이지에 있는 문자를 구분 식별자로 사용할 수 있지만 개체 이름에 특수 문자를 무분별하게 사용하면 DMX 문을 읽고 유지 관리하기 어려워집니다.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 현재 코드 페이지에 있는 문자를 구분 식별자로 사용할 수 있지만 개체 이름에 특수 문자를 무분별하게 사용하면 DMX 문을 읽고 유지 관리하기 어려워집니다.  
   
 ### <a name="rules-for-delimited-identifiers"></a>구분 식별자 규칙  
  다음은 구분 식별자 형식에 대한 규칙입니다.  

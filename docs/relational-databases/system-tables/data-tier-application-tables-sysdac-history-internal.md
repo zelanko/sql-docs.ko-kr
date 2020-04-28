@@ -18,10 +18,10 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084759"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
@@ -35,18 +35,17 @@ ms.locfileid: "68084759"
 |**sequence_id**|**int**|동작 내의 단계를 식별합니다.|  
 |**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열은 [&#40;transact-sql&#41;sysdac_instances ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md) **instance_id** 열에 조인할 수 있습니다.|  
 |**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = 배포<br /><br /> **1** = 만들기<br /><br /> **2** = 이름 바꾸기<br /><br /> **3** = 분리<br /><br /> **4** = 삭제|  
-|**action_type_name**|**varchar (19)**|동작 유형의 이름입니다.<br /><br /> **배치할**<br /><br /> **만드십시오**<br /><br /> **바꾸면**<br /><br /> **분리**<br /><br /> **제거**|  
+|**action_type_name**|**varchar (19)**|동작 유형의 이름입니다.<br /><br /> **배치할**<br /><br /> **만드십시오**<br /><br /> **rename**<br /><br /> **분리**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** = dacpac<br /><br /> **1** = 로그인<br /><br /> **2** = 데이터베이스|  
-|**dac_object_type_name**|**varchar (8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **로그인**<br /><br /> **데이터**|  
+|**dac_object_type_name**|**varchar (8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **로그인**<br /><br /> **database**|  
 |**action_status**|**tinyint**|동작의 현재 상태를 식별하는 코드입니다.<br /><br /> **0** = 보류 중<br /><br /> **1** = 성공<br /><br /> **2** = 실패|  
 |**action_status_name**|**varchar (11)**|동작의 현재 상태입니다.<br /><br /> **작업이**<br /><br /> **성공할**<br /><br /> **통과**|  
-|**필수**|**bit**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
+|**필수**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
 |**dac_object_name_pretran**|**sysname**|동작이 포함된 트랜잭션이 커밋되기 전의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
 |**dac_object_name_posttran**|**sysname**|동작이 포함된 트랜잭션이 커밋된 후의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  
 |**sqlscript**|**nvarchar(max)**|데이터베이스 또는 로그인에서 동작을 구현하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트입니다.|  
-|**페이로드와**|**varbinary(max)**|인코딩된 이진 문자열에 저장된 DAC 패키지 정의입니다.|  
-|**주석**|**varchar(max)**|DAC 업그레이드 시 잠재적인 데이터 손실을 허용한 사용자의 로그인을 기록합니다.|  
+|**payload**|**varbinary(max)**|인코딩된 이진 문자열에 저장된 DAC 패키지 정의입니다.|  
+|**설명**|**varchar(max)**|DAC 업그레이드 시 잠재적인 데이터 손실을 허용한 사용자의 로그인을 기록합니다.|  
 |**error_string**|**nvarchar(max)**|동작에 오류가 발생한 경우 생성되는 오류 메시지입니다.|  
 |**created_by**|**sysname**|이 항목을 만든 동작을 시작한 로그인입니다.|  
 |**date_created**|**datetime**|이 항목을 만든 날짜와 시간입니다.|  

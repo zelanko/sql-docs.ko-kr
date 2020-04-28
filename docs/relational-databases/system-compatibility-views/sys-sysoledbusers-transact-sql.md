@@ -21,10 +21,10 @@ ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076531"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers(Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68076531"
 |**rmtloginame**|**nvarchar (** 128 **)**|연결 된 **rmtservid**에 대해 **loginsid** 가 매핑되는 원격 로그인의 이름입니다.|  
 |**rmtpassword**|**nvarchar (** 128 **)**|NULL을 반환합니다.|  
 |**loginsid**|**varbinary (** 85 **)**|매핑될 로컬 로그인의 SID입니다.|  
-|**업무**|**smallint**|1인 경우 매핑에 사용자의 자격 증명을 사용해야 합니다.|  
+|**status**|**smallint**|1인 경우 매핑에 사용자의 자격 증명을 사용해야 합니다.|  
 |**changedate**|**datetime**|매핑 정보가 마지막으로 변경된 날짜입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

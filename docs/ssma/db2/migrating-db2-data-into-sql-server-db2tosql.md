@@ -10,10 +10,10 @@ ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074101"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>DB2 데이터를 SQL Server로 마이그레이션 (DB2ToSQL)
@@ -55,7 +55,7 @@ ms.locfileid: "68074101"
   
 **데이터를 마이그레이션하려면**  
   
-1.  다음 사항을 확인합니다.  
+1.  다음을 확인합니다.  
   
     -   DB2 공급자는 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

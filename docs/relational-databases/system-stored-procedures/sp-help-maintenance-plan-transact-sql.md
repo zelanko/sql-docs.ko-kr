@@ -18,10 +18,10 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096201"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan(Transact-SQL)
@@ -47,14 +47,14 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 `[ @plan_id = ] 'plan\_id'`유지 관리 계획의 계획 ID를 지정 합니다. **UNIQUEIDENTIFIER** *plan_id* 입니다. 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  *Plan_id* 지정 하면 **sp_help_maintenance_plan** 는 계획, 데이터베이스 및 작업의 세 가지 테이블을 반환 합니다.  
   
 ### <a name="plan-table"></a>계획 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|유지 관리 계획 ID입니다.|  
 |**plan_name**|**sysname**|유지 관리 계획 이름입니다.|  
@@ -70,13 +70,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>데이터베이스 테이블  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
-|**database_name**|유지 관리 계획과 연관된 모든 데이터베이스의 이름입니다. *database_name* 는 **sysname**입니다.|  
+|**database_name**|유지 관리 계획과 연관된 모든 데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.|  
   
 ### <a name="job-table"></a>작업 테이블  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**job_id**|유지 관리 계획과 연관된 모든 작업의 ID입니다. **uniqueidentifier** *job_id* 입니다.|  
   

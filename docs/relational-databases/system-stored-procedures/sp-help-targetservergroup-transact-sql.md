@@ -18,10 +18,10 @@ ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085069"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_targetservergroup
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|서버 그룹의 ID 번호입니다.|  
 |**name**|**sysname**|서버 그룹의 이름입니다.|  

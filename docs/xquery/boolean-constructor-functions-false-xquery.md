@@ -16,17 +16,16 @@ ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68093205"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>부울 생성자 함수 - false(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  xs:boolean 값 False를 반환합니다. 
-  `xs:boolean("0")`와 같습니다.  
+  xs:boolean 값 False를 반환합니다. `xs:boolean("0")`와 같습니다.  
   
 ## <a name="syntax"></a>구문  
   

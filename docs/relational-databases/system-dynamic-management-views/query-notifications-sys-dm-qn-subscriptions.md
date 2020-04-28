@@ -19,10 +19,10 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061917"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys. dm_qn_subscriptions
@@ -32,17 +32,17 @@ ms.locfileid: "68061917"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|구독의 ID입니다.|  
+|**id**|**int**|구독의 ID입니다.|  
 |**database_id**|**int**|알림 쿼리가 실행된 데이터베이스의 ID입니다. 이 데이터베이스에 이 구독과 관련된 정보가 저장됩니다.|  
-|**s**|**varbinary (85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
+|**sid**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
 |**object_id**|**int**|구독 매개 변수에 관한 정보를 저장하는 내부 테이블의 ID입니다.|  
-|**만들어지며**|**datetime**|구독을 만든 날짜와 시간입니다.|  
-|**초과가**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정 된 시간 제한 보다 클 수 있습니다. 그러나 구독을 무효화 하는 변경 내용이 지정 된 제한 시간 이후에 발생 하지만 구독이 실행 되기 전에 발생 하는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 변경이 수행 된 시간에 발생 합니다.|  
-|**업무**|**int**|구독의 상태를 나타냅니다. 코드 목록은 설명 아래의 표를 참조하십시오.|  
+|**created**|**datetime**|구독을 만든 날짜와 시간입니다.|  
+|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정 된 시간 제한 보다 클 수 있습니다. 그러나 구독을 무효화 하는 변경 내용이 지정 된 제한 시간 이후에 발생 하지만 구독이 실행 되기 전에 발생 하는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 변경이 수행 된 시간에 발생 합니다.|  
+|**status**|**int**|구독의 상태를 나타냅니다. 코드 목록은 설명 아래의 표를 참조하십시오.|  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|설정|Type|  
+|시작|대상|설정|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
@@ -131,7 +131,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [쿼리 알림 관련 동적 관리 뷰 &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   

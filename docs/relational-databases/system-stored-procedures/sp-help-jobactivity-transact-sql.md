@@ -18,16 +18,15 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054981"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 런타임 상태에 대한 정보를 표시합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -56,7 +55,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|에이전트 세션 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
@@ -70,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|작업 실행이 중지된 시간입니다.|  
 |**next_scheduled_run_date**|**datetime**|작업을 실행하도록 예약된 날짜입니다.|  
 |**job_history_id**|**int**|작업 기록 테이블에서 작업 기록의 ID입니다.|  
-|**메시지**|**nvarchar(1024)**|작업을 마지막으로 실행하는 동안 생성되는 메시지입니다.|  
+|**message**|**nvarchar(1024)**|작업을 마지막으로 실행하는 동안 생성되는 메시지입니다.|  
 |**run_status**|**int**|작업을 마지막으로 실행했을 때 반환되는 상태입니다. 다음 중 하나입니다.<br /><br /> **0** = 오류가 실패 했습니다.<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 상태 알 수 없음|  
 |**operator_id_emailed**|**int**|작업이 완료되었을 때 전자 메일을 통해 알림을 받는 운영자의 ID입니다.|  
 |**operator_id_netsent**|**int**|작업 완료 시 **net send** 를 통해 알리는 운영자의 ID 번호입니다.|  
@@ -79,8 +78,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  이 프로시저는 작업의 현재 상태에 대한 스냅샷을 제공합니다. 반환된 결과는 요청을 처리하는 당시의 정보를 나타냅니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id는 테이블 **msdb**. i d.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id는 테이블 **msdb**. i d.  
   
  *Session_id* 제공 되지 않으면 가장 최근의 세션에 대 한 정보가 나열 됩니다.  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070859"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>DMX(Data Mining Extensions) 문
@@ -58,9 +58,9 @@ ms.locfileid: "68070859"
   
  이러한 태스크는 데이터 정의 문과 데이터 조작 문이라는 두 가지 범주로 나누어집니다. 이 두 범주에 대해서는 다음 표에서 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)|DDL(데이터 정의 언어)의 일부입니다. 학습을 포함하여 새 마이닝 모델을 정의하거나 데이터베이스에서 기존 마이닝 모델을 삭제하는 데 사용합니다.|  
+|[DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)|DDL(데이터 정의 언어)의 일부입니다. 학습을 포함하여 새 마이닝 모델을 정의하거나 데이터베이스에서 기존 마이닝 모델을 삭제하는 데 사용합니다.|  
 |[데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)|DML(데이터 조작 언어)의 일부입니다. 모델을 검색하거나 예측을 만드는 등 기존 마이닝 모델로 작업하는 데 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

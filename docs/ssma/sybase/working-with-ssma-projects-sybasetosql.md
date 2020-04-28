@@ -10,10 +10,10 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072473"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 작업(SybaseToSQL)
@@ -54,24 +54,21 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
   
 **프로젝트를 만들려면**  
   
-1.  
-  **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
+1.  **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
   
-    
-  **새 프로젝트** 대화 상자가 나타납니다.  
+    **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  
-  **이름** 입력란에 프로젝트 이름을  
+2.  **이름** 입력란에 프로젝트 이름을  
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
 4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택 합니다. 제공되는 옵션은 다음과 같습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -99,8 +96,7 @@ ASE 데이터베이스에서 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../in
   
         메타 데이터를 저장 하는 데 몇 분 정도 걸릴 수 있습니다. 이때 메타 데이터를 저장 하지 않으려면 확인란을 선택 하지 마십시오.  
   
-    2.  
-  **저장** 단추를 클릭합니다.  
+    2.  **저장** 단추를 클릭합니다.  
   
         SSMA는 Sybase ASE 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   

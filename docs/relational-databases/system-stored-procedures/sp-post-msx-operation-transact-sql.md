@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056374"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
@@ -47,7 +47,7 @@ sp_post_msx_operation
 ## <a name="arguments"></a>인수  
 `[ @operation = ] 'operation'`게시 된 작업에 대 한 작업의 유형입니다. *연산은* **varchar (64)** 이며 기본값은 없습니다. 유효한 작업은 *object_type*에 따라 달라 집니다.  
   
-|개체 형식|작업(Operation)|  
+|개체 유형|작업(Operation)|  
 |-----------------|---------------|  
 |**직함**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
 |**서버인**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  

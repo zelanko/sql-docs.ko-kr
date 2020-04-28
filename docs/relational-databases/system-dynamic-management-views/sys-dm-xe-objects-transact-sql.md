@@ -20,10 +20,10 @@ ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090268"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects(Transact-SQL)
@@ -43,13 +43,13 @@ ms.locfileid: "68090268"
 
  |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar (60)**|개체 이름입니다. 이름은 특정 개체 유형에 대 한 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
-|object_type|**nvarchar (60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> 이벤트<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Null을 허용하지 않습니다.|  
+|name|**nvarchar(60)**|개체 이름입니다. 이름은 특정 개체 유형에 대 한 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
+|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> event<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|해당 동작을 표시하는 패키지의 GUID입니다. sys.dm_xe_packages.package_id와의 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(256)**|동작에 대한 설명입니다. 설명은 패키지 작성자가 설정 합니다. Null을 허용하지 않습니다.|  
 |capabilities|**int**|개체의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
 |capabilities_desc|**nvarchar(256)**|개체의 기능을 모두 나열합니다. Null을 허용합니다.<br /><br /> **모든 개체 유형에 적용되는 기능**<br /><br /> -<br />                                **개인**. 내부용으로 사용할 수 있는 유일한 개체로, CREATE/ALTER EVENT SESSION DDL을 통해 액세스할 수 없습니다. 내부에서 사용되는 소수의 개체 외에도 감사 이벤트 및 대상이 이 범주에 속합니다.<br /><br /> ===============<br /><br /> **이벤트 기능**<br /><br /> -<br />                                **No_block**. 이벤트는 어떤 이유로도 차단할 수 없는 중요한 코드 경로에 있습니다. 이 기능이 있는 이벤트는 NO_EVENT_LOSS를 지정하는 이벤트 세션에 추가될 수 없습니다.<br /><br /> ===============<br /><br /> **모든 개체 유형에 적용되는 기능**<br /><br /> -<br />                                **Process_whole_buffers**. 대상에서는 이벤트를 하나씩 사용하지 않고 이벤트 버퍼를 한꺼번에 사용합니다.<br /><br /> -<br />                        **Singleton**. 한 프로세스에 하나의 대상 인스턴스만 존재할 수 있습니다. 여러 이벤트 세션에서 동일한 단일 대상을 참조하는 경우에도 실제로 인스턴스는 하나뿐이며 이 인스턴스는 고유한 각 이벤트를 한 번씩만 표시합니다. 이는 대상이 동일한 이벤트를 수집하는 여러 세션에 추가된 경우에 중요합니다.<br /><br /> -<br />                                **동기**. 컨트롤이 호출 코드 줄에 반환되기 전에 이벤트를 생성하는 스레드에서 대상이 실행됩니다.|  
-|type_name|**nvarchar (60)**|pred_source 및 pred_compare 개체의 이름입니다. Null을 허용합니다.|  
+|type_name|**nvarchar(60)**|pred_source 및 pred_compare 개체의 이름입니다. Null을 허용합니다.|  
 |type_package_guid|**uniqueidentifier**|해당 개체가 작동하는 유형을 표시하는 패키지의 GUID입니다. Null을 허용합니다.|  
 |type_size|**int**|데이터 형식의 크기(바이트)이며 유효한 개체 유형에만 사용됩니다. Null을 허용합니다.|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68090268"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|다 대 일|  
   

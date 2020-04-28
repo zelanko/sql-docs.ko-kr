@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085284"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_proxy
   
  다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
@@ -72,14 +72,14 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**name**|**sysname**|프록시 이름입니다.|  
 |**credential_identity**|**sysname**|프록시와 연관된 자격 증명의 Microsoft Windows 도메인 이름 및 사용자 이름입니다.|  
 |**사용**|**tinyint**|이 프록시가 사용되는지 여부입니다. { **0** = 사용 안 함, **1** = 사용}|  
 |**한**|**nvarchar(1024)**|이 프록시에 대한 설명입니다.|  
-|**user_sid**|**varbinary (85)**|이 프록시에 대한 Windows 사용자의 Windows 보안 ID입니다.|  
+|**user_sid**|**varbinary(85)**|이 프록시에 대한 Windows 사용자의 Windows 보안 ID입니다.|  
 |**credential_id**|**int**|이 프록시와 연관된 자격 증명의 식별자입니다.|  
 |**credential_identity_exists**|**int**|credential_identity가 있는지 여부입니다. { 0 = 없음, 1 = 있음 }|  
   
@@ -89,7 +89,7 @@ sp_help_proxy
  지정 된 하위 시스템에 대해 로그인에서 사용할 수 있는 프록시를 확인 하려면 *이름* 및 *subsystem_name*를 지정 합니다. 이러한 인수를 제공 하면 **sp_help_proxy** 는 지정 된 로그인이 액세스할 수 있고 지정 된 하위 시스템에 사용할 수 있는 프록시를 나열 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
  **SQLAgentOperatorRole**에 대 한 자세한 내용은 [고정 데이터베이스 역할 SQL Server 에이전트](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  
   

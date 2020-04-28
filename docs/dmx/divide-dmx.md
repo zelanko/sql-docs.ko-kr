@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070745"
 ---
 # <a name="divide-dmx"></a>(나누기)(DMX)
@@ -31,7 +31,7 @@ Dividend / Divisor
  *배당*  
  숫자 값을 반환하는 유효한 DMX(Data Mining Extensions) 식입니다.  
   
- *나누기*  
+ *Divisor*  
  숫자 값을 반환하는 유효한 DMX 식입니다.  
   
 ## <a name="return-value"></a>Return Value  

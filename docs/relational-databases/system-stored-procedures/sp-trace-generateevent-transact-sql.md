@@ -18,16 +18,15 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096020"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용자 정의 이벤트를 만듭니다.  
   
 >**참고:**  이 저장 프로시저는 더 이상 사용 되지 **않습니다** . 모든 다른 추적 관련 저장 프로시저는 더 이상 사용되지 않습니다.  
@@ -59,13 +58,12 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**0**|오류가 없습니다.|  
 |**1**|알 수 없는 오류입니다.|  
 |**3**|지정한 이벤트가 유효하지 않습니다. 이벤트가 존재하지 않거나 저장 프로시저에 적합하지 않습니다.|  
-|**/10**|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
+|**13**|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_trace_generateevent** 은 **xp_trace_\* ** 확장 저장 프로시저에 의해 이전에 실행 된 많은 동작을 수행 합니다. **Xp_trace_generate_event**대신 **sp_trace_generateevent** 를 사용 합니다.  
   
- 사용자 정의 이벤트의 ID 번호만 **sp_trace_generateevent**와 함께 사용할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다른 이벤트 ID가 사용되면 오류를 반환합니다.  
+ 사용자 정의 이벤트의 ID 번호만 **sp_trace_generateevent**와 함께 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다른 이벤트 ID가 사용되면 오류를 반환합니다.  
   
  모든 SQL 추적 저장 프로시저 (**sp_trace_xx**)의 매개 변수는 엄격 하 게 형식화 됩니다. 이러한 매개 변수가 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 인수 설명에서 지정한 대로 저장 프로시저는 오류를 반환합니다.  
   
@@ -98,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
   
 ## <a name="see-also"></a>참고 항목  
  [fn_trace_geteventinfo &#40;Transact-sql&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   

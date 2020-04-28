@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 0bc6c97f4d41023b822f42a6bbe4c5b193d42e45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088754"
 ---
 # <a name="sysdm_pdw_sys_info-transact-sql"></a>sys. dm_pdw_sys_info (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "68088754"
 
   기기의 전체 작업을 반영 하는 일련의 어플라이언스 수준 카운터를 제공 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |total_sessions|**int**|현재 시스템에 있는 세션 수입니다.|0 max_active_sessions (아래 참조)|  
 |idle_sessions|**int**|현재 유휴 상태인 세션 수입니다.||  

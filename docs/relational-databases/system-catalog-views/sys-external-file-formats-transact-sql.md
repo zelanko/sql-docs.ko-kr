@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048392"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>sys. external_file_formats (Transact-sql)
@@ -38,11 +38,11 @@ ms.locfileid: "68048392"
 |use_type_default|**bit**|Format_type = 구분 된 텍스트의 경우 PolyBase가 HDFS 텍스트 파일에서로 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]데이터를 가져올 때 누락 값을 처리 하는 방법을 지정 합니다.|0-누락 된 값을 ' NULL ' 문자열로 저장 합니다.<br /><br /> 1-누락 된 값을 열 기본값으로 저장 합니다.|  
 |serde_method|**nvarchar(255)**|Format_type = RCFILE의 경우이는 serialization/deserialization 메서드입니다.||  
 |row_terminator|**nvarchar (10)**|Format_type = DELIMITEDTEXT의 경우 외부 Hadoop 파일의 각 행을 종료 하는 문자열입니다.|항상 ' \n '입니다.|  
-|인코딩|**nvarchar (10)**|Format_type = DELIMITEDTEXT의 경우이는 외부 Hadoop 파일의 인코딩 방법입니다.|항상 ' UTF8 '입니다.|  
+|encoding|**nvarchar (10)**|Format_type = DELIMITEDTEXT의 경우이는 외부 Hadoop 파일의 인코딩 방법입니다.|항상 ' UTF8 '입니다.|  
 |data_compression|**nvarchar(255)**|외부 데이터에 대 한 데이터 압축 방법입니다.|Format_type = DELIMITEDTEXT:<br /><br /> -' org. f i n.<br />-' GzipCodec '가 있습니다.<br /><br /> Format_type = RCFILE:<br /><br /> -' org. f i n.<br /><br /> Format_type = ORC:<br /><br /> -' org. f i n.<br />-' Org.apache.io.compress.snappycodec '가 있습니다.<br /><br /> Format_type = PARQUET:<br /><br /> -' GzipCodec '가 있습니다.<br />-' Org.apache.io.compress.snappycodec '가 있습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ 사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [external_data_sources &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   

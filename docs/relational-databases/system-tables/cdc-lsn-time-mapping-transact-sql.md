@@ -18,10 +18,10 @@ ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e89e67b49498320e4500b99332fc5584d5f38d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066668"
 ---
 # <a name="cdclsn_time_mapping-transact-sql"></a>cdc.lsn_time_mapping(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68066668"
     
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**start_lsn**|**binary (10)**|커밋된 트랜잭션의 LSN입니다.|  
+|**start_lsn**|**binary(10)**|커밋된 트랜잭션의 LSN입니다.|  
 |**tran_begin_time**|**datetime**|LSN과 연관된 트랜잭션이 시작된 시간입니다.|  
 |**tran_end_time**|**datetime**|트랜잭션이 종료된 시간입니다.|  
 |**tran_id**|**varbinary (10)**|트랜잭션 ID입니다.|  

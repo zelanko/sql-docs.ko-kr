@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078533"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS(Transact-SQL)
@@ -33,12 +33,12 @@ ms.locfileid: "68078533"
   
  이 뷰에서 정보를 검색 하려면 INFORMATION_SCHEMA의 정규화 된 이름을 지정 합니다 **.** _view_name_.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|테이블 반환 함수의 카탈로그 이름 또는 데이터베이스 이름입니다.|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|테이블 반환 함수가 포함된 스키마의 이름입니다.<br /><br /> <strong> \* 중요 \* \* </strong> INFORMATION_SCHEMA 뷰를 사용 하 여 개체의 스키마를 확인 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|테이블 반환 함수의 이름입니다.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|열 이름.|  
+|**COLUMN_NAME**|**nvarchar (** 128 **)**|열 이름입니다.|  
 |**ORDINAL_POSITION**|**int**|열 ID입니다.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|열의 기본값입니다.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|이 열이 NULL을 허용하는 경우 YES를 반환합니다. 그렇지 않은 경우에는 NO를 반환합니다.|  
@@ -63,6 +63,6 @@ ms.locfileid: "68078533"
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   

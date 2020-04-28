@@ -21,10 +21,10 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4843eb9de8badced7e446f20a997a530478c2756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056525"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db(Transact-SQL)
@@ -50,7 +50,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>인수  
 `[ @plan_id = ] 'plan\_id'`유지 관리 계획 ID를 지정 합니다. **uniqueidentifier** *plan_id* 입니다.  
   
-`[ @db_name = ] 'database\_name'`유지 관리 계획에서 삭제할 데이터베이스 이름을 지정 합니다. *database_name* 는 **sysname**입니다.  
+`[ @db_name = ] 'database\_name'`유지 관리 계획에서 삭제할 데이터베이스 이름을 지정 합니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

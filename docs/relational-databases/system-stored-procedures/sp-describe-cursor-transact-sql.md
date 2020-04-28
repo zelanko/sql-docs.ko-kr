@@ -18,10 +18,10 @@ ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053070"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
@@ -75,8 +75,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|커서를 지칭할 때 사용하는 이름입니다. DECLARE CURSOR 문에서 지정한 이름으로 커서를 참조하는 경우 참조 이름과 커서 이름이 동일합니다. 변수로 커서를 참조하는 경우 변수 이름이 참조 이름이 됩니다.|  
-|cursor_name|**sysname**|DECLARE CURSOR 문에서 지정된 커서 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 커서 변수를 커서로 설정하여 커서를 만든 경우 cursor_name은 커서 변수의 이름을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 출력 열은 시스템 생성 이름을 반환합니다.|  
+|cursor_name|**sysname**|DECLARE CURSOR 문에서 지정된 커서 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 커서 변수를 커서로 설정하여 커서를 만든 경우 cursor_name은 커서 변수의 이름을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 출력 열은 시스템 생성 이름을 반환합니다.|  
 |cursor_scope|**tinyint**|1 = 로컬<br /><br /> 2 = 전역|  
 |상태|**int**|CURSOR_STATUS 시스템 함수가 보고한 것과 동일한 값입니다.<br /><br /> 1 = 커서 이름 또는 변수에 의해 참조되는 커서가 열려 있습니다. 커서가 변경 내용을 감지하지 않거나 정적이거나 키 집합인 경우 적어도 한 개 이상의 행이 있습니다. 커서가 동적인 경우 결과 집합에는 0개 이상의 행이 있습니다.<br /><br /> 0 = 커서 이름 또는 변수에 의해 참조되는 커서가 열려 있으나 행이 없습니다. 동적 커서는 이 값을 반환하지 않습니다.<br /><br /> -1 = 커서 이름 또는 변수에 의해 참조되는 커서가 닫혀 있습니다.<br /><br /> -2 = 커서 변수에만 적용됩니다. 변수에 할당된 커서가 없습니다. OUTPUT 매개 변수가 커서를 변수에 할당했으나 저장 프로시저가 반환 전에 커서를 닫았을 수 있습니다.<br /><br /> -3 = 지정된 이름의 커서 또는 커서 변수가 없거나 커서 변수에 할당된 커서가 없습니다.|  
 |model|**tinyint**|1 = 변경 내용 미감지(또는 정적)<br /><br /> 2 = 키 집합<br /><br /> 3 = 동적<br /><br /> 4 = 빠른 전진|  
@@ -93,8 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="remarks"></a>설명  
  sp_describe_cursor는 스크롤 및 업데이트 허용 여부 등과 같은 서버 커서에 대한 전역 특성을 설명합니다. 커서가 반환한 결과 집합의 특성 설명을 보려면 sp_describe_cursor_columns를 사용하십시오. 커서가 참조하는 기본 테이블의 보고서를 보려면 sp_describe_cursor_tables를 사용하십시오. 연결 시 표시될 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 보고서를 얻으려면 sp_cursor_list를 사용하십시오.  
   
- DECLARE CURSOR 문에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 DECLARE CURSOR에 포함된 SELECT 문으로 지원할 수 없는 커서 유형을 요청하는 경우가 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SELECT 문을 사용하여 커서를 지원할 수 있는 형식으로 암시적으로 변환합니다. DECLARE CURSOR 문에 TYPE_WARNING이 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 애플리케이션에 변환이 완료되었다는 정보 메시지를 전송합니다. 그런 다음 sp_describe_cursor를 호출 하 여 구현 된 커서 유형을 확인할 수 있습니다.  
+ DECLARE CURSOR 문에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 DECLARE CURSOR에 포함된 SELECT 문으로 지원할 수 없는 커서 유형을 요청하는 경우가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SELECT 문을 사용하여 커서를 지원할 수 있는 형식으로 암시적으로 변환합니다. DECLARE CURSOR 문에 TYPE_WARNING이 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 애플리케이션에 변환이 완료되었다는 정보 메시지를 전송합니다. 그런 다음 sp_describe_cursor를 호출 하 여 구현 된 커서 유형을 확인할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  
@@ -139,9 +137,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [커서](../../relational-databases/cursors.md)   
+ [커서로](../../relational-databases/cursors.md)   
  [Transact-sql&#41;CURSOR_STATUS &#40;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [Transact-sql&#41;&#40;커서를 선언 합니다.](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursor_list &#40;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor_columns &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor_tables &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  

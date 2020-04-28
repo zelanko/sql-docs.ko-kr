@@ -18,10 +18,10 @@ ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095819"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary(Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "68095819"
  지정 된 주 데이터베이스에 대 한 동일한 보조 서버의 여러 보조 데이터베이스가 **log_shipping_secondary** 테이블의 일부 설정을 공유 합니다. 이러한 보조 데이터베이스 중 하나에서 공유된 설정이 변경되면 해당 설정은 모든 데이터베이스에서도 변경됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_add_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_change_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   

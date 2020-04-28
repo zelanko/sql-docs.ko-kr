@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097763"
 ---
 # <a name="sysdm_exec_external_operations-transact-sql"></a>sys. dm_exec_external_operations (Transact-sql)
@@ -34,9 +34,9 @@ ms.locfileid: "68097763"
 
   외부 PolyBase 작업에 대 한 정보를 캡처합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar (32)**|PolyBase 쿼리와 연결 된 고유 쿼리 식별자|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 을 참조 하십시오.|  
+|execution_id|**nvarchar(32)**|PolyBase 쿼리와 연결 된 고유 쿼리 식별자|[Dm_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 을 참조 하십시오.|  
 |step_index|**int**|쿼리 단계의 인덱스|[Dm_exec_distributed_request_steps &#40;&#41;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md) step_index를 참조 하세요.|  
 |operation_ 형식|**nvarchar(128)**|Hadoop 작업 또는 기타 외부 작업을 설명 합니다.|' 외부 Hadoop 작업 '|  
 |operation_ 이름|**nvarchar(4000)**|작업의 상태를 백분율로 나타냅니다 (사용 된 입력의 양).|0-1-계수 100 (완료 됨)|  
@@ -44,7 +44,7 @@ ms.locfileid: "68097763"
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

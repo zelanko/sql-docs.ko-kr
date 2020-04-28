@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089153"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-sql)
@@ -26,11 +26,11 @@ ms.locfileid: "68089153"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|이 SQL 쿼리 배포가 속한 쿼리의 고유 식별자입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 distribution_id 구성 합니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
+|request_id|**nvarchar(32)**|이 SQL 쿼리 배포가 속한 쿼리의 고유 식별자입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 distribution_id 구성 합니다.|[Dm_pdw_exec_requests &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)에서 request_id를 참조 하세요.|  
 |step_index|**int**|이 배포가 속한 쿼리 단계의 인덱스입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 distribution_id 구성 합니다.|[Dm_pdw_request_steps &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)에서 step_index를 참조 하세요.|  
 |pdw_node_id|**int**|이 쿼리 배포가 실행 되는 노드의 고유 식별자입니다.|[Dm_pdw_nodes &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)에서 node_id를 참조 하세요.|  
 |distribution_id|**int**|이 쿼리 배포가 실행 되는 배포의 고유 식별자입니다.<br /><br /> 이 보기의 키를 request_id, step_index 및 distribution_id 구성 합니다.|[Pdw_distributions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md)에서 distribution_id를 참조 하세요. 배포 범위가 아니라 노드 범위에서 실행 되는 요청에 대해-1로 설정 합니다.|  
-|상태|**nvarchar (32)**|쿼리 분포의 현재 상태입니다.|보류 중, 실행 중, 실패, 취소 됨, 완료 됨, 중단 됨, CancelSubmitted 됨|  
+|상태|**nvarchar(32)**|쿼리 분포의 현재 상태입니다.|보류 중, 실행 중, 실패, 취소 됨, 완료 됨, 중단 됨, CancelSubmitted 됨|  
 |error_id|**nvarchar (36)**|이 쿼리 배포와 연결 된 오류의 고유 식별자입니다 (있는 경우).|[Dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)에서 error_id를 참조 하세요. 오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
 |start_time|**datetime**|쿼리 배포에서 실행을 시작한 시간입니다.|현재 시간 보다 작거나 같고이 쿼리 배포가 속한 쿼리 단계의 start_time 보다 크거나 같습니다.|  
 |end_time|**datetime**|이 쿼리 배포가 실행을 완료 하거나 취소 했거나 실패 한 시간입니다.|시작 시간 보다 크거나 같거나 쿼리 배포가 진행 중이거나 큐에 대기 중인 경우 NULL로 설정 합니다.|  

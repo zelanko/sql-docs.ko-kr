@@ -10,10 +10,10 @@ ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084537"
 ---
 # <a name="project-settings-gui-db2tosql"></a>프로젝트 설정 (GUI) (DB2ToSQL)

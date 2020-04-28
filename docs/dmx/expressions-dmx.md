@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0e1bd5fa1ba4d4ff8b97436ac6e44b901f578187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074845"
 ---
 # <a name="expressions-dmx"></a>식(DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68074845"
   
  DMX 식은 간단하거나 복잡할 수 있습니다. 간단한 식으로는 다음과 같은 것이 있습니다.  
   
- 지속적임  
+ 상수  
  상수는 특정한 단일 값을 나타내는 기호입니다. 상수에는 문자열 또는 숫자 값이나 날짜 값이 있습니다. 작은따옴표(')를 사용하여 문자열 및 날짜 상수를 구분해야 합니다.  
   
  스칼라 함수  

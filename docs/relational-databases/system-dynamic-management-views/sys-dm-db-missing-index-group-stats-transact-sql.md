@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051563"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats(Transact-SQL)
@@ -33,10 +33,9 @@ ms.locfileid: "68051563"
 
   공간 인덱스를 제외한 누락된 인덱스 그룹에 대한 요약 정보를 반환합니다.  
   
- 
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
     
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|누락된 인덱스 그룹을 식별합니다. 이 식별자는 서버에서 고유합니다.<br /><br /> 다른 열은 그룹의 인덱스가 누락된 것으로 간주되는 모든 쿼리에 대한 정보를 제공합니다.<br /><br /> 인덱스 그룹에는 인덱스가 하나만 포함되어 있습니다.|  
 |**unique_compiles**|**bigint**|이 누락된 인덱스 그룹에 적합한 컴파일 및 다시 컴파일 수입니다. 서로 다른 많은 쿼리의 컴파일 및 다시 컴파일이 이 열 값에 영향을 줄 수 있습니다.|  
@@ -54,8 +53,7 @@ ms.locfileid: "68051563"
 |**avg_system_impact**|**float**|누락된 인덱스 그룹을 구현할 경우 시스템 쿼리에서 얻을 수 있는 적합한 평균 백분율입니다. 즉, 이 누락된 인덱스 그룹을 구현할 경우 쿼리 비용이 평균적으로 이 백분율만큼 감소합니다.|  
   
 ## <a name="remarks"></a>설명  
- 
-  **sys.dm_db_missing_index_group_stats**에서 반환되는 정보는 쿼리 컴파일 또는 다시 컴파일 시가 아니라 쿼리 실행 시마다 업데이트됩니다. 사용 통계는 지속되지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 사용 통계를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
+ **sys.dm_db_missing_index_group_stats**에서 반환되는 정보는 쿼리 컴파일 또는 다시 컴파일 시가 아니라 쿼리 실행 시마다 업데이트됩니다. 사용 통계는 지속되지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 사용 통계를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
 
   >[!NOTE]
   >이 DMV의 결과 집합은 600 개 행으로 제한 됩니다. 각 행에는 누락 된 인덱스가 하나 있습니다. 인덱스가 600 개를 초과 하는 경우 기존 누락 된 인덱스를 처리 하 여 최신 인덱스를 볼 수 있도록 해야 합니다.
@@ -67,7 +65,7 @@ ms.locfileid: "68051563"
  다음 예에서는 **sys.dm_db_missing_index_group_stats** 동적 관리 뷰를 사용하는 방법을 보여 줍니다.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. 사용자 쿼리 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개 찾기  
- 다음 쿼리는 사용자 쿼리에 대해 가장 예상되는 누적 개선 사항이 발생하는 10개의 누락 인덱스를 내림차순으로 결정합니다.  
+ 다음 쿼리에서는 사용자 쿼리의 누적 성능이 가장 많이 향상될 것으로 예상되는 누락된 인덱스 10개를 내림차순으로 확인합니다.  
   
 ```  
 SELECT TOP 10 *  

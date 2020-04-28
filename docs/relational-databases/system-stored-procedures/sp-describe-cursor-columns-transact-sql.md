@@ -18,10 +18,10 @@ ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053117"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns(Transact-SQL)
@@ -85,7 +85,7 @@ sp_describe_cursor_columns
 |order_direction|**varchar (1)**(nullable)|A = 열이 순서 키에 있으며 오름차순입니다.<br /><br /> D = 열이 순서 키에 있으며 내림차순입니다.<br /><br /> NULL = 열이 순서 지정에 참여하지 않습니다.|  
 |hidden_column|**smallint**|0 = 이 열이 선택 목록에 표시됩니다.<br /><br /> 1 = 나중에 사용하도록 예약되었습니다.|  
 |columnid|**int**|기본 열의 열 ID입니다. 결과 집합 열이 식에서 작성된 경우 columnid는 -1입니다.|  
-|objectId|**int**|열을 제공하는 개체 또는 주 테이블의 개체 ID입니다. 결과 집합 열이 식에서 작성된 경우 objectid는 -1입니다.|  
+|objectid|**int**|열을 제공하는 개체 또는 주 테이블의 개체 ID입니다. 결과 집합 열이 식에서 작성된 경우 objectid는 -1입니다.|  
 |dbid|**int**|열을 제공하는 기본 테이블을 포함한 데이터베이스의 ID입니다. 결과 집합 열이 식에서 작성된 경우 dbid는 -1입니다.|  
 |dbname|**sysname**<br /><br /> (Null 허용)|열을 제공하는 기본 테이블을 포함한 데이터베이스의 이름입니다. 결과 집합 열이 식에서 작성된 경우 dbname은 NULL입니다.|  
   
@@ -136,9 +136,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [커서](../../relational-databases/cursors.md)   
+ [커서로](../../relational-databases/cursors.md)   
  [Transact-sql&#41;CURSOR_STATUS &#40;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [Transact-sql&#41;&#40;커서를 선언 합니다.](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursor_list &#40;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [Transact-sql&#41;sp_describe_cursor_tables &#40;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   

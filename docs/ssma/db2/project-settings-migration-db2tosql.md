@@ -10,10 +10,10 @@ ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060150"
 ---
 # <a name="project-settings-migration-db2tosql"></a>프로젝트 설정 (마이그레이션) (DB2ToSQL)
@@ -38,11 +38,11 @@ ms.locfileid: "68060150"
   
 |용어|정의|  
 |--------|--------------|  
-|**일괄 처리 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1만<br /><br />**낙관적 모드**: 1만<br /><br />**전체 모드**: 1만|  
+|**Batch 크기**|데이터 마이그레이션 중에 사용 되는 일괄 처리 크기를 지정 합니다.<br /><br />**기본 모드**: 1만<br /><br />**낙관적 모드**: 1만<br /><br />**전체 모드**: 1만|  
 |**CHECK 제약 조건**|SQL Server 테이블에 데이터를 삽입할 때 SSMA에서 제약 조건을 확인할 지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
 |**데이터 마이그레이션 시간 제한**|데이터 마이그레이션 중에 사용 되는 시간 제한을 지정 합니다.<br /><br />**기본 모드**: 15<br /><br />**낙관적 모드**: 15<br /><br />**전체 모드**: 15|  
 |**확장 데이터 마이그레이션 옵션**|별도의 세부 정보 탭에 있는 각 테이블에 대 한 추가 데이터 마이그레이션 옵션을 표시 합니다.<br /><br />**기본 모드**: 숨기기<br /><br />**낙관적 모드**: 숨기기<br /><br />**전체 모드**: 숨기기|  
-|**트리거 발생**|SQL Server 테이블에 데이터를 추가할 때 SSMA에서 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
+|**트리거 실행**|SQL Server 테이블에 데이터를 추가할 때 SSMA에서 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.<br /><br />**기본 모드**: False<br /><br />**낙관적 모드**: False<br /><br />**전체 모드**: False|  
 |**ID 유지**|SQL Server에 지정 된 기본값과 관계 없이 SSMA가 SQL Server에 데이터를 추가할 때 원본 데이터에서 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**: True<br /><br />**낙관적 모드**: True<br /><br />**전체 모드**: False|  
 |**Null 유지**|SQL Server에 지정 된 기본값과 관계 없이 SSMA가 SQL Server에 데이터를 추가할 때 원본 데이터에서 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**: True<br /><br />**낙관적 모드**: True<br /><br />**전체 모드**: True|  
 |**문자열 트리밍 작업을 오류로 표시**|대상 열 크기가 원본 문자열 길이 보다 작은 경우에는 값이 잘려 오류로 표시 됩니다.<br /><br />**기본 모드**: 예<br /><br />**낙관적 모드**: 예<br /><br />**전체 모드**: 예|  

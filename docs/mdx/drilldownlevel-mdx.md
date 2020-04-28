@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b9c623a1e99053e796609dc82f27519f27c07a9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049296"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel(MDX)
@@ -35,7 +35,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (선택 사항). 드릴다운할 수준을 명시적으로 식별하는 MDX 식입니다. 수준 식을 지정하는 경우 아래의 인덱스 인수를 건너뛰세요.  
   
- *인덱싱할*  
+ *인덱스*  
  (선택 사항). 집합 내에서 드릴다운할 대상 계층 번호를 지정하는 유효한 숫자 식입니다. Level_Expression 대신 인덱스 수준을 사용하여 드릴다운할 수준을 명시적으로 식별할 수 있습니다.  
   
  *Include_Calc_Members*  
@@ -117,6 +117,6 @@ FROM [Adventure Works]
  플래그를 제거하고 쿼리를 다시 실행하는 경우, 계산된 구성원 [West Coast]를 제외하고 같은 결과를 얻습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

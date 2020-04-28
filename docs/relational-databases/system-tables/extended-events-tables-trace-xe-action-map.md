@@ -19,10 +19,10 @@ ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056267"
 ---
 # <a name="extended-events-tables---trace_xe_action_map"></a>확장 이벤트 테이블 - trace_xe_action_map
@@ -31,11 +31,11 @@ ms.locfileid: "68056267"
   SQL 추적 열 ID에 매핑된 Extended Events 동작마다 하나의 행을 포함합니다. 이 테이블은 sys 스키마의 master 데이터베이스에 저장 됩니다.  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|매핑될 SQL 추적 열의 ID입니다.|  
-|package_name|**nvarchar (60)**|매핑된 동작이 있는 Extended Events 패키지의 이름입니다.|  
-|xe_action_name|**nvarchar (60)**|SQL 추적 열에 매핑된 Extended Events 동작의 이름입니다.|  
+|package_name|**nvarchar(60)**|매핑된 동작이 있는 Extended Events 패키지의 이름입니다.|  
+|xe_action_name|**nvarchar(60)**|SQL 추적 열에 매핑된 Extended Events 동작의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 쿼리를 사용하여 SQL 추적 열에 해당하는 Extended Events 동작을 식별할 수 있습니다.  

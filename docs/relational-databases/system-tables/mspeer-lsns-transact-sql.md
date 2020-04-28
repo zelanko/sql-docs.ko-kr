@@ -18,10 +18,10 @@ ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085769"
 ---
 # <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68085769"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|피어 투 피어 LSN을 식별합니다.|  
+|**id**|**int**|피어 투 피어 LSN을 식별합니다.|  
 |**last_updated**|**datetime**|마지막 행을 업데이트 한 **날짜/시간** 입니다.|  
 |**송신자**|**sysname**|트랜잭션을 시작한 게시자의 이름입니다.|  
 |**originator_db**|**sysname**|트랜잭션이 시작된 데이터베이스의 이름입니다.|  

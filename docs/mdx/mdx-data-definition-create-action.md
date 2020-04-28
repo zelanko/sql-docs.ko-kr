@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098548"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX 데이터 정의 - CREATE ACTION
@@ -80,10 +80,10 @@ FOR
 ## <a name="action-types"></a>동작 유형  
  다음 표에서는에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]사용할 수 있는 다양 한 유형의 동작에 대해 설명 합니다.  
   
-|작업 유형|Description|  
+|동작 유형|Description|  
 |-----------------|-----------------|  
-|**URL**|인터넷 브라우저를 사용하여 열 수 있는 URL이 동작 문자열로 반환됩니다.<br /><br /> 참고:이 `https://` 작업이 또는 `https://`로 시작 하지 않는 경우에는 작업을 브라우저에서 사용할 수 없습니다. (예: **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**로 설정 된 경우) ****|  
-|**.HTML**|HTML 스크립트가 동작 문자열로 반환됩니다. 이 문자열은 파일로 저장되며, 인터넷 브라우저를 사용하여 파일을 렌더링해야 합니다. 이 경우 생성된 HTML의 일부로 전체 스크립트가 실행될 수 있습니다.|  
+|**URL**|인터넷 브라우저를 사용하여 열 수 있는 URL이 동작 문자열로 반환됩니다.<br /><br /> 참고:이 `https://` 작업이 또는 `https://`로 시작 하지 않는 경우에는 작업을 브라우저에서 사용할 수 없습니다. (예: **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**로 설정 된 경우) **SafetyOptions**|  
+|**HTML**|HTML 스크립트가 동작 문자열로 반환됩니다. 이 문자열은 파일로 저장되며, 인터넷 브라우저를 사용하여 파일을 렌더링해야 합니다. 이 경우 생성된 HTML의 일부로 전체 스크립트가 실행될 수 있습니다.|  
 |**선언문**|반환 된 작업 문자열은 명령 개체의 **ICommand:: SetText** 메서드를 문자열로 설정 하 고 **ICommand:: Execute**메서드를 호출 하 여 실행 해야 하는 문입니다. 명령이 성공하지 않으면 오류가 반환됩니다.|  
 |**집합**|반환 된 작업 문자열은 명령 개체의 **ICommand:: SetText** 메서드를 문자열로 설정 하 고 **ICommand:: Execute** 메서드를 호출 하 여 실행 해야 하는 MDX 문입니다. 요청 된 IID (인터페이스 ID)는 **Idataset**이어야 합니다. 데이터 집합이 생성된 경우 명령이 성공한 것입니다. 클라이언트 애플리케이션에서는 사용자가 반환된 데이터 세트을 검색할 수 있어야 합니다.|  
 |**집합**|**데이터 집합과**비슷하지만 **IDATASET**의 iid를 요청 하는 대신 클라이언트 응용 프로그램에서 **IRowset**의 iid를 요청 해야 합니다. 행 집합이 생성된 경우 명령이 성공한 것입니다. 클라이언트 애플리케이션에서는 사용자가 반환된 행 집합을 검색할 수 있어야 합니다.|  

@@ -18,10 +18,10 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079084"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68079084"
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
 |**object_name**|**sysname**|개체 이름입니다.|  
-|**object_type**|**char (2)**|개체 형식입니다.<br /><br /> **u** = 테이블<br /><br /> **t** = 트리거입니다.<br /><br /> **p** = 저장 프로시저|  
+|**object_type**|**char(2)**|개체 형식입니다.<br /><br /> **u** = 테이블<br /><br /> **t** = 트리거입니다.<br /><br /> **p** = 저장 프로시저|  
 |**자료**|**sysname**|개체가 연결된 아티클의 이름입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

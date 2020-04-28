@@ -12,10 +12,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056453"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
@@ -24,7 +24,7 @@ ms.locfileid: "68056453"
   **Sp_pdw_log_user_data_masking** 를 사용 하 여 활동 로그에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 사용자 데이터 마스킹을 사용 하도록 설정 합니다. 사용자 데이터 마스킹은 어플라이언스의 모든 데이터베이스에 대 한 문에 영향을 줍니다.  
   
 > [!IMPORTANT]  
->  Sp_pdw_log_user_data_masking [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 의 영향을 받는 **** 활동 로그는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 특정 활동 로그입니다. **sp_pdw_log_user_data_masking** 는 데이터베이스 트랜잭션 로그 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 영향을 주지 않습니다.  
+>  Sp_pdw_log_user_data_masking [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 의 영향을 받는 **sp_pdw_log_user_data_masking** 활동 로그는 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 특정 활동 로그입니다. **sp_pdw_log_user_data_masking** 는 데이터베이스 트랜잭션 로그 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 영향을 주지 않습니다.  
   
  **배경:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 기본 구성 활동 로그에는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 포함 되어 있으며 **INSERT**, **UPDATE**및 **SELECT** 문과 같은 작업에 포함 된 사용자 데이터를 포함 하는 경우도 있습니다. 어플라이언스에서 문제가 발생 하는 경우 문제를 재현할 필요 없이 문제를 일으킨 조건을 분석할 수 있습니다. 사용자 데이터가 활동 로그에 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 기록 되는 것을 방지 하기 위해 고객은이 저장 프로시저를 사용 하 여 사용자 데이터 마스킹을 설정 하도록 선택할 수 있습니다. 문은 활동 로그에 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 계속 기록 되지만 사용자 데이터를 포함할 수 있는 문의 모든 리터럴은 마스킹 됩니다. 미리 정의 된 상수 값으로 대체 되었습니다.  
   
@@ -60,7 +60,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   TDE를 사용 하지 않도록 설정 해도 활동 로그 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 의 사용자 데이터 마스킹에는 영향을 주지 않습니다.  
   
--   Sp_pdw_log_user_data_masking 절차를 사용 하 여 활동 로그 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 에서 사용자 데이터 마스킹을 명시적 **** 으로 사용 하도록 설정할 수 있습니다.  
+-   Sp_pdw_log_user_data_masking 절차를 사용 하 여 활동 로그 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 에서 사용자 데이터 마스킹을 명시적 **sp_pdw_log_user_data_masking** 으로 사용 하도록 설정할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 데이터베이스 역할의 멤버 자격 또는 **CONTROL SERVER** 권한이 필요 합니다.  

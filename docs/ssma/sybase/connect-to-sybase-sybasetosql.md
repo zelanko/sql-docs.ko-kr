@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083388"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase에 연결(SybaseToSQL)
@@ -38,7 +38,7 @@ ASE에 대 한 연결에 기본 포트가 아닌 포트를 사용 하는 경우 
 ASE에 연결 하는 데 사용 되는 사용자 이름을 입력 합니다. 표준 모드 옵션입니다.  
   
 **암호**  
-사용자 이름 암호를 입력합니다. 표준 모드 옵션입니다.  
+사용자 이름에 대한 암호를 입력합니다. 표준 모드 옵션입니다.  
   
 **연결 문자열**  
 ASE에 대 한 연결에 대 한 전체 연결 문자열을 입력 합니다.  
@@ -49,9 +49,9 @@ ASE에 대 한 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
 1.  **OLE DB 공급자** 에 대 한 연결 매개 변수  
   
-    |설정|Sybase 12.5 매개 변수|Sybase 15 매개 변수|  
+    |Setting|Sybase 12.5 매개 변수|Sybase 15 매개 변수|  
     |-----------|-------------------------|-----------------------|  
-    |서버 이름|서버 이름|서버|  
+    |서버 이름|서버 이름|Server (서버)|  
     |포트|서버 포트 주소|포트|  
     |사용자 이름|사용자 ID|사용자 ID|  
     |암호|암호|암호|  
@@ -67,10 +67,10 @@ ASE에 대 한 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
 2.  **ODBC 공급자** 에 대 한 연결 매개 변수  
   
-    |설정|Sybase 12.5/15 매개 변수|  
+    |Setting|Sybase 12.5/15 매개 변수|  
     |-----------|-----------------------------|  
     |드라이버 이름|요소|  
-    |서버 이름|서버|  
+    |서버 이름|Server (서버)|  
     |사용자 이름|Uid|  
     |암호|Pwd|  
     |포트 번호|포트|  
@@ -81,9 +81,9 @@ ASE에 대 한 연결에 대 한 전체 연결 문자열을 입력 합니다.
   
 3.  **ADO.NET Provider** 에 대 한 연결 매개 변수  
   
-    |설정|Sybase 12.5/15 매개 변수|  
+    |Setting|Sybase 12.5/15 매개 변수|  
     |-----------|-----------------------------|  
-    |서버 이름|서버|  
+    |서버 이름|Server (서버)|  
     |사용자 이름|Uid|  
     |암호|Pwd|  
     |포트 번호|포트|  

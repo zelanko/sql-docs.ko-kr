@@ -10,10 +10,10 @@ ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7c0866a753bb61cb688ffe491e1de77431ddcb22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060158"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>프로젝트 설정 (형식 매핑) (DB2ToSQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68060158"
 ## <a name="options"></a>옵션  
 다음 표에서는 **형식 매핑** 탭 옵션을 보여 줍니다.  
   
-**원본 형식**  
+**원본 유형**  
 매핑된 DB2 데이터 형식입니다.  
   
 **대상 유형**  
@@ -62,7 +62,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -96,7 +96,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
-|문자열|varchar(max)|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대를 사용 하는 타임 스탬프|datetimeoffset|  
 |표준 시간대가 있는 타임 스탬프|datetimeoffset|  
@@ -117,7 +117,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |목록은|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |char|char|  
 |문자 변경 [\*.. \*]|varchar [\*]|  
 |char [\*.. \*]|char [\*]|  
@@ -187,7 +187,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |binary_float|float [53]|  
 |binary_interger|int|  
 |Blob|varbinary(max)|  
-|부울|bit|  
+|Boolean|bit|  
 |Char|char|  
 |문자 변경 [\*.. 8000]|varchar [\*]|  
 |문자 변경 [8001\*]|varchar(max)|  
@@ -233,7 +233,7 @@ D b 2 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사용
 |nchar 변경 [\*.. 4000]|nvarchar [\*]|  
 |nchar 변경 [4001..\*]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
+|번호|float [53]|  
 |숫자 [\*.. \*]|numeric [\*]|  
 |숫자 [\*.. \*][\*.. \*]|숫자 [\*] [\*]|  
 |숫자|숫자 [38] [0]|  

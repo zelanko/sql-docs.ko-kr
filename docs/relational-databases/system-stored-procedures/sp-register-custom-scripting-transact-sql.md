@@ -16,16 +16,16 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075756"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. 이러한 저장 프로시저는 복제된 테이블에서 스키마 변경이 발생하면 다시 생성됩니다. **** 새 사용자 정의 사용자 지정 저장 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에 대 한 정의를 스크립팅 하기 위해 스키마 변경이 발생할 때 실행 되는 저장 프로시저 또는 스크립트 파일을 sp_register_custom_scripting 등록 합니다. 새 사용자 정의 사용자 지정 저장 프로시저는 테이블에 대한 새 스키마를 반영해야 합니다. **sp_register_custom_scripting** 는 게시 데이터베이스의 게시자에서 실행 되 고 스키마 변경이 발생할 때 등록 된 스크립트 파일 또는 저장 프로시저가 구독자에서 실행 됩니다.  
+  복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. 이러한 저장 프로시저는 복제된 테이블에서 스키마 변경이 발생하면 다시 생성됩니다. **sp_register_custom_scripting** 새 사용자 정의 사용자 지정 저장 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에 대 한 정의를 스크립팅 하기 위해 스키마 변경이 발생할 때 실행 되는 저장 프로시저 또는 스크립트 파일을 sp_register_custom_scripting 등록 합니다. 새 사용자 정의 사용자 지정 저장 프로시저는 테이블에 대한 새 스키마를 반영해야 합니다. **sp_register_custom_scripting** 는 게시 데이터베이스의 게시자에서 실행 되 고 스키마 변경이 발생할 때 등록 된 스크립트 파일 또는 저장 프로시저가 구독자에서 실행 됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |-----------|-----------------|  
 |**넣거나**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**고침**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
-|**제거**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
+|**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거의 끝에 실행되는 스크립트입니다.|  
   
 `[ @value = ] 'value'`등록 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 저장 프로시저 또는 이름 및 정규화 된 경로 이름입니다. *value* 는 **nvarchar (1024)** 이며 기본값은 없습니다.  

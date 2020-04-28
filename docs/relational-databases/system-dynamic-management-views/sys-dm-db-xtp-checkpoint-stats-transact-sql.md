@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026861"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
@@ -41,11 +41,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
   
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>
-  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
+## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
  다음 표에서는부터 시작 하 여 `sys.dm_db_xtp_checkpoint_stats`의 열에 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 대해 설명 합니다.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|컨트롤러에서 표시 한 마지막 LSN입니다.|  
 |end_of_log_lsn|**numeric (38)**|로그 끝의 LSN입니다.|  
@@ -84,10 +83,10 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |internal_error_code|**bigint**|컨트롤러, serializer, 닫기 및 병합 스레드에 의해 오류가 발생 했습니다.|
 |bytes_of_large_data_serialized|**bigint**|Serialize 된 데이터의 양입니다. |  
   
-##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  다음 표에서는의 열 `sys.dm_db_xtp_checkpoint_stats`에 대해 설명 합니다 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
   
-|열 이름|Type|Description|  
+|열 이름|유형|설명|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|스레드의 현재 LSN(로그 시퀀스 번호) 및 로그 끝 사이의 로그 바이트 수입니다.|  
 |total_log_blocks_processed|**bigint**|서버 시작 후 처리된 총 로그 블록 수입니다.|  
@@ -109,6 +108,6 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
  서버에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

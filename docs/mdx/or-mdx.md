@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055713"
 ---
 # <a name="or-mdx"></a>OR(MDX)
@@ -43,9 +43,9 @@ Expression1 OR Expression2
 |*Expression1*|*Expression2*|Return Value|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**허위**|**true**|  
-|**허위**|**true**|**true**|  
-|**허위**|**허위**|**허위**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>예제  
  다음 쿼리는 Customer 차원의 성별 계층에 있는 현재 멤버가 남성 이거나 Customer 차원의 결혼 상태 계층에 있는 현재 멤버가 결혼 된 경우 "결혼 또는 남성" 문자열을 반환 하는 계산 측정값을 포함 합니다. 그렇지 않으면 "UNMARRIED 또는 여성" 문자열을 반환 합니다.  

@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084556"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>프로젝트 설정 (변환) (DB2ToSQL)
@@ -232,7 +232,7 @@ SSMA는 다음과 같은 두 가지 방법으로 PL/SQL 하위 유형을 변환�
   
 -   저장 프로시저 및 함수  
   
--   구체화 된 뷰  
+-   구체화된 보기  
   
 다음 DB2 개체에 대 한 동의어는 개체에 대 한 직접 참조로 대체 될 수 있습니다.  
   
@@ -371,7 +371,7 @@ D b [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2는 문자열 연
 ### <a name="use-isnull-in-replace-function-calls"></a>REPLACE 함수 호출에서 ISNULL 사용  
 ISNULL 문은 DB2 동작을 에뮬레이트하는 함수 호출 바꾸기에 사용 됩니다. 이 설정에 대해 제공 되는 옵션은 다음과 같습니다.  
   
--   예  
+-   YES  
   
 -   아니요  
   
@@ -384,7 +384,7 @@ ISNULL 문은 DB2 동작을 에뮬레이트하는 함수 호출 바꾸기에 사
 ### <a name="use-isnull-in-concat-function-calls"></a>CONCAT 함수 호출에서 ISNULL 사용  
 ISNULL 문은 DB2 동작을 에뮬레이트하는 함수 호출에 사용 됩니다. 이 설정에 대해 제공 되는 옵션은 다음과 같습니다.  
   
--   예  
+-   YES  
   
 -   아니요  
   

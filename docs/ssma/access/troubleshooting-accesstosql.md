@@ -10,10 +10,10 @@ ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051467"
 ---
 # <a name="troubleshooting-accesstosql"></a>문제 해결 (AccessToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68051467"
   
 수정할 수 오류는 다음과 관련이 있을 수 있습니다.  
   
-1.  함수  
+1.  기능  
   
 2.  절차  
   

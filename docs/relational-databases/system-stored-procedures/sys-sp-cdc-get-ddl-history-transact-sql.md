@@ -22,16 +22,16 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083732"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정한 캡처 인스턴스에 대해 변경 데이터 캡처를 사용하도록 설정한 시점부터의 캡처 인스턴스 관련 DDL(데이터 정의 언어) 변경 기록을 반환합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+  지정한 캡처 인스턴스에 대해 변경 데이터 캡처를 사용하도록 설정한 시점부터의 캡처 인스턴스 관련 DDL(데이터 정의 언어) 변경 기록을 반환합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |capture_instance|**sysname**|캡처 인스턴스의 이름입니다.|  
 |required_column_update|**bit**|DDL 변경 시에 원본 열에서 변경된 데이터 형식이 반영되도록 변경 테이블의 열을 변경했음을 나타냅니다.|  
 |ddl_command|**nvarchar(max)**|원본 테이블에 적용된 DDL 문입니다.|  
-|ddl_lsn|**binary (10)**|DDL 변경과 관련된 LSN(로그 시퀀스 번호)입니다.|  
+|ddl_lsn|**binary(10)**|DDL 변경과 관련된 LSN(로그 시퀀스 번호)입니다.|  
 |ddl_time|**datetime**|DDL 변경과 관련된 시간입니다.|  
   
 ## <a name="remarks"></a>설명  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070350"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns(Transact-SQL)
@@ -51,8 +51,7 @@ sp_columns [ @table_name = ] object
   
  현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. *Owner* 를 지정 하지 않고 현재 사용자가 지정 된 *개체*의 개체를 소유 하 고 있지 않은 경우 **sp_columns** 는 데이터베이스 소유자가 소유한 지정 된 *개체* 를 사용 하 여 개체를 찾습니다. 개체가 있으면 개체의 열이 반환됩니다.  
   
-`[ \@table_qualifier = ] qualifier`개체 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 개체 (_한정자_)에 대해 세 부분으로 구성 되는 이름을 지원**합니다.** _소유자_**.** _이름_). 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ \@table_qualifier = ] qualifier`개체 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 개체 (_한정자_)에 대해 세 부분으로 구성 되는 이름을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ \@column_name = ] column`단일 열 이며 카탈로그 정보의 열이 한 개만 필요한 경우에 사용 됩니다. *열* 은 **nvarchar (384)** 이며 기본값은 NULL입니다. *열* 을 지정 하지 않으면 모든 열이 반환 됩니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *열* 은 **syscolumns** 테이블에 나열 된 열 이름을 나타냅니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
   
@@ -73,7 +72,7 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|ODBC 데이터 형식을 나타내는 정수 코드입니다. ODBC 형식에 매핑될 수 없는 데이터 형식인 경우에는 NULL이 됩니다. Native data 형식 이름은 **TYPE_NAME** 열에 반환 됩니다.|  
 |**TYPE_NAME**|**sysname**|데이터 형식을 나타내는 문자열입니다. 이 이름은 기본 DBMS에서 제공합니다.|  
 |**소수**|**int**|유효 자릿수입니다. **전체 자릿수** 열의 반환 값은 밑수 10에 있습니다.|  
-|**길이**|**int**|데이터의 전송 크기입니다. <sup>1</sup>|  
+|**LENGTH**|**int**|데이터의 전송 크기입니다. <sup>1</sup>|  
 |**배율을**|**smallint**|소수점 오른쪽 자릿수입니다.|  
 |**RADIX**|**smallint**|숫자 데이터 형식의 기수입니다.|  
 |**않는**|**smallint**|NULL 허용 여부를 지정합니다.<br /><br /> 1 = NULL을 사용할 수 있습니다.<br /><br /> 0 = NULL을 사용할 수 없습니다.|  
@@ -104,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 지정된 테이블의 열 정보를 반환합니다.  
   
 ```  

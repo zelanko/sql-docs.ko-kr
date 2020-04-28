@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061381"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log(Azure SQL Database)
@@ -36,38 +36,36 @@ ms.locfileid: "68061381"
 > [!CAUTION]  
 > 다 수의 데이터베이스 또는 많은 로그인을 포함 하는 설치의 경우에는 event_log의 작업으로 인해 성능 제한, 높은 CPU 사용량 및 로그인 실패가 발생할 수 있습니다. Event_log 쿼리는 문제에 기여할 수 있습니다. Microsoft에서이 문제를 해결 하기 위해 노력 하 고 있습니다. 그 동안에는이 문제의 영향을 줄이기 위해 event_log의 쿼리를 제한 합니다. NewRelic SQL Server 플러그인의 사용자는 추가 구성 정보에 대 한 [성능 조정 & Microsoft Azure SQL Database 플러그 인 튜닝](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) 을 방문 해야 합니다.  
   
- 
-  `sys.event_log` 뷰는 다음 열을 포함합니다.  
+ `sys.event_log` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|데이터베이스 이름 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
-|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 다음은 그 예입니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**database_name**|**sysname**|데이터베이스의 이름입니다. 연결이 실패하고 사용자가 데이터베이스 이름을 지정하지 않은 경우 이 열은 비어 있습니다.|  
+|**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 집계 이벤트에 대해 시간은 항상 5분의 배수입니다. 예를 들면 다음과 같습니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|집계 간격 끝의 UTC 날짜 및 시간입니다. 집계 된 이벤트의 경우 **End_time** 은 항상 같은 행의 해당 **start_time** 보다 정확히 5 분 후입니다. 집계 되지 않은 이벤트의 경우 **start_time** 및 **end_time** 이벤트의 실제 UTC 날짜 및 시간과 같습니다.|  
 |**event_category**|**nvarchar (64)**|이 이벤트를 생성한 높은 수준의 구성 요소입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_type**|**nvarchar (64)**|이벤트의 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_subtype**|**int**|발생 이벤트의 하위 유형입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**event_subtype_desc**|**nvarchar (64)**|이벤트 하위 유형에 대한 설명입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
-|**등급**|**int**|오류의 심각도입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
+|**severity**|**int**|오류의 심각도입니다. 가능한 값은 다음과 같습니다.<br /><br /> 0 = 정보<br />1 = 경고<br />2 = 오류|  
 |**event_count**|**int**|지정 된 시간 간격 (**start_time** 및 **end_time**) 내에 지정 된 데이터베이스에 대해이 이벤트가 발생 한 횟수입니다.|  
 |**한**|**nvarchar(max)**|이벤트에 대한 상세한 설명입니다.<br /><br /> 가능한 값 목록은 [이벤트 유형](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) 을 참조 하세요.|  
 |**additional_data**|**XML**|*참고: Azure SQL Database V12의 경우이 값은 항상 NULL입니다. V12에 대 한 교착 상태 이벤트를 검색 하는 방법에 대 한 [예제](#Deadlock) 섹션을 참조 하세요.*<br /><br /> **교착 상태** 이벤트의 경우이 열에는 교착 상태 그래프가 포함 됩니다. 이 열은 다른 이벤트 유형에 대해서는 NULL을 반환합니다. |  
   
-##  <a name="EventTypes"></a>이벤트 유형
+##  <a name="event-types"></a><a name="EventTypes"></a>이벤트 유형
 
  이 뷰의 각 행에서 기록 하는 이벤트는 범주 (**event_category**), 이벤트 유형 (**event_type**) 및 하위 유형 (**event_subtype**)으로 식별 됩니다. 다음 테이블에서는 이 뷰에 수집된 이벤트 유형을 나열합니다.  
   
  **연결** 범주의 이벤트의 경우에는 database_connection_stats 뷰에서 요약 정보를 사용할 수 있습니다.  
   
 > [!NOTE]  
-> 이 뷰에는 여기에 나와 있는 것 외에 발생할 수 있는 다른 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 이벤트가 포함되어 있지 않습니다. 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 후속 릴리스에 범주, 이벤트 유형 및 하위 유형이 추가될 수 있습니다.  
+> 이 뷰에는 여기에 나와 있는 것 외에 발생할 수 있는 다른 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 이벤트가 포함되어 있지 않습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 후속 릴리스에 범주, 이벤트 유형 및 하위 유형이 추가될 수 있습니다.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**등급**|**한**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**한**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**connectivity**|**connection_successful**|0|**connection_successful**|0|데이터베이스에 연결되었습니다.|  
 |**connectivity**|**connection_failed**|0|**invalid_login_name**|2|이 SQL Server 버전에서 로그인 이름이 잘못되었습니다.|  
-|**connectivity**|**connection_failed**|1|**windows_auth_not_supported**|2|Windows 로그인은 해당 버전의 SQL Server에서 지원되지 않습니다.|  
+|**connectivity**|**connection_failed**|1|**windows_auth_not_supported**|2|이 버전의 SQL Server에서는 Windows 로그인이 지원되지 않습니다.|  
 |**connectivity**|**connection_failed**|2|**attach_db_not_supported**|2|사용자가 지원되지 않는 데이터베이스 파일 첨부를 요청했습니다.|  
 |**connectivity**|**connection_failed**|3|**change_password_not_supported**|2|사용자가 지원되지 않는 사용자 로그인 암호 변경을 요청했습니다.|  
 |**connectivity**|**connection_failed**|4|**login_failed_for_user**|2|로그인에 실패했습니다.|  
@@ -79,11 +77,11 @@ ms.locfileid: "68061381"
 |**connectivity**|**connection_terminated**|0|**idle_connection_timeout**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 연결이 시스템에 정의된 임계값보다 오랫동안 유휴 상태였습니다.|  
 |**connectivity**|**connection_terminated**|1|**다시**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 세션이 데이터베이스 재구성으로 인해 종료되었습니다.|  
 |**connectivity**|**조절은**|*\<이유 코드>*|**reason_code**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 요청이 정체되었습니다.  제한 이유 코드: * \<이유 코드>* 입니다. 자세한 내용은 [엔진 제한](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 실행 시간이 긴 트랜잭션이 있으므로 세션이 종료됩니다. 트랜잭션 실행 시간을 줄이십시오. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 너무 많은 잠금을 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽기 또는 수정 행 수를 줄이십시오. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 임시 테이블 공간 사용량을 줄이도록 쿼리를 수정하세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 과도한 트랜잭션 로그 공간 사용으로 인해 세션이 종료되었습니다. 단일 트랜잭션에서 행 수를 줄이세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
-|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 과도한 메모리 사용으로 인해 세션이 종료되었습니다. 처리할 행 수를 줄이도록 쿼리를 수정하세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40549|**long_transaction**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션을 오래 실행하여 세션이 종료됩니다. 트랜잭션을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 잠금을 너무 많이 획득하여 세션이 종료되었습니다. 단일 트랜잭션에서 읽거나 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> TEMPDB 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 임시 테이블 공간 사용량을 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 트랜잭션 로그 공간 사용량이 너무 많아 세션이 종료되었습니다. 단일 트랜잭션에서 수정하는 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
+|**connectivity**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*참고: Azure SQL Database V11 적용 됩니다.*<br /><br /> 메모리 사용량이 너무 많아 세션이 종료되었습니다. 쿼리를 수정하여 처리할 행 수를 줄여 보세요. 자세한 내용은 [리소스 제한](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)을 참조 하세요.|  
 |**엔진**|**교착 상태**|0|**교착 상태**|2|교착 상태가 발생했습니다.|  
   
 ## <a name="permissions"></a>사용 권한
@@ -101,7 +99,7 @@ ms.locfileid: "68061381"
   
  예를 들어, 사용자가 잘못된 로그인 이름으로 인해 2012년 2월 5일 오전 11시와 11시 5분(UTC) 사이에 데이터베이스 Database1에 대한 연결을 7회 실패한 경우 이 정보는 이 뷰의 단일 행에서 확인할 수 있습니다.  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**등급**|**event_count**|**한**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**한**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -232,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>참고 항목
 
- [Azure SQL Database의 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database 확장 이벤트](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

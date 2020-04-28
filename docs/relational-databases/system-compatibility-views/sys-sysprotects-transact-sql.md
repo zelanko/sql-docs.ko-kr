@@ -21,10 +21,10 @@ ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079245"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects(Transact-SQL)
@@ -37,15 +37,15 @@ ms.locfileid: "68079245"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|권한이 적용되는 개체의 ID입니다.|  
+|**id**|**int**|권한이 적용되는 개체의 ID입니다.|  
 |**uid**|**smallint**|권한이 적용되는 사용자 또는 그룹의 ID입니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**조치**|**tinyint**|다음 권한 중 하나일 수 있습니다.<br /><br /> 26 = REFERENCES<br /><br /> 178 = CREATE FUNCTION<br /><br /> 193 = SELECT<br /><br /> 195 = INSERT<br /><br /> 196 = 삭제<br /><br /> 197 = 업데이트<br /><br /> 198 = CREATE TABLE<br /><br /> 203 = CREATE DATABASE<br /><br /> 207 = CREATE VIEW<br /><br /> 222 = CREATE PROCEDURE<br /><br /> 224 = EXECUTE<br /><br /> 228 = BACKUP DATABASE<br /><br /> 233 = CREATE DEFAULT<br /><br /> 235 = BACKUP LOG<br /><br /> 236 = CREATE RULE|  
+|**action**|**tinyint**|다음 권한 중 하나일 수 있습니다.<br /><br /> 26 = REFERENCES<br /><br /> 178 = CREATE FUNCTION<br /><br /> 193 = SELECT<br /><br /> 195 = INSERT<br /><br /> 196 = 삭제<br /><br /> 197 = 업데이트<br /><br /> 198 = CREATE TABLE<br /><br /> 203 = CREATE DATABASE<br /><br /> 207 = CREATE VIEW<br /><br /> 222 = CREATE PROCEDURE<br /><br /> 224 = EXECUTE<br /><br /> 228 = BACKUP DATABASE<br /><br /> 233 = CREATE DEFAULT<br /><br /> 235 = BACKUP LOG<br /><br /> 236 = CREATE RULE|  
 |**protecttype**|**tinyint**|다음과 같은 값을 가질 수 있습니다.<br /><br /> 204 = GRANT_W_GRANT<br /><br /> 205 = GRANT<br /><br /> 206 = DENY|  
-|**세로**|**varbinary (8000)**|이러한 SELECT 또는 UPDATE 권한이 적용되는 열의 비트맵입니다.<br /><br /> Bit 0 = 모든 열입니다.<br /><br /> Bit 1 = 권한이 해당 열에 적용됩니다.<br /><br /> NULL = 정보가 없습니다.|  
+|**세로**|**varbinary(8000)**|이러한 SELECT 또는 UPDATE 권한이 적용되는 열의 비트맵입니다.<br /><br /> Bit 0 = 모든 열입니다.<br /><br /> Bit 1 = 권한이 해당 열에 적용됩니다.<br /><br /> NULL = 정보가 없습니다.|  
 |**grantor**|**smallint**|GRANT 또는 DENY 권한을 발급한 사용자의 ID입니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

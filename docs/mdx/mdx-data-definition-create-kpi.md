@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098411"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX 데이터 정의 - CREATE KPI
@@ -66,8 +66,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  STATUS_GRAPHIC 및 TREND_GRAPHIC은 클라이언트 애플리케이션이 표시할 올바른 이미지 집합을 식별할 때 사용하는 문자열 값입니다. 이 문자열은 표시 함수의 동작도 정의합니다. 이 동작에는 표시할 상태 수(일반적으로 홀수)와 각 상태에 사용할 이미지가 포함됩니다.  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>SQL Server Data Tools의 KPI 그래픽  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 KPI 그래픽은 세 가지 또는 다섯 가지 상태로 나타낼 수 있습니다. 다음 표에서는 각 상태의 값을 정의합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 KPI 그래픽은 세 가지 또는 다섯 가지 상태로 나타낼 수 있습니다. 다음 표에서는 각 상태의 값을 정의합니다.  
   
 |KPI 그래픽의 상태 수|상태 값|  
 |--------------------------------------|---------------------------|  
@@ -77,12 +76,11 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  역방향 계기 또는 역방향 상태 화살표와 같은 일부 그래픽에서는 범위가 반대로 됩니다. 즉, -1이 양호가 되고 1이 불량이 됩니다.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서는 KPI 그래픽의 이름으로 해당 그래픽의 상태가 3개인지 또는 5개인지 알 수 있습니다. 다음 표에서는 KPI 그래픽과 연결 되는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 사용 현황, 이름 및 상태 수를 나열 합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서는 KPI 그래픽의 이름으로 해당 그래픽의 상태가 3개인지 또는 5개인지 알 수 있습니다. 다음 표에서는 KPI 그래픽과 연결 되는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 사용 현황, 이름 및 상태 수를 나열 합니다.  
   
 |그래픽 사용|KPI 그래픽 이름|상태 수|  
 |--------------------|-------------------------|----------------------|  
-|상태|셰이프|3|  
+|상태|도형|3|  
 |상태|신호등|3|  
 |상태|도로 표지|3|  
 |상태|계기|3|  

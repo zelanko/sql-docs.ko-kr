@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049317"
 ---
 # <a name="divide---mdx-operator-reference"></a>분할-MDX 연산자 참조
@@ -31,7 +31,7 @@ Dividend / Divisor
  *배당*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
- *나누기*  
+ *Divisor*  
  숫자 값을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="return-value"></a>Return Value  

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090872"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
@@ -33,9 +33,9 @@ ms.locfileid: "68090872"
   
  쿼리 실행 중에 특정 유형의 대기 시간이 쿼리 내의 병목 또는 대기 지점을 나타낼 수 있습니다. 마찬가지로 높은 대기 시간이나 서버 전체의 대기 횟수가 서버 인스턴스 내의 쿼리 상호 작용에서 병목 또는 핫 스폿을 나타낼 수 있습니다. 예를 들어 잠금 대기는 쿼리의 데이터 경합을, 페이지 IO 래치 대기는 느린 IO 응답 시간을, 페이지 래치 업데이트 대기는 잘못된 파일 레이아웃을 나타냅니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|대기 형식 이름 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
+|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 대기 유형의 총 대기 시간(밀리초)입니다. 이 시간은 signal_wait_time_ms를 포함합니다.|  
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68090872"
 ## <a name="permissions"></a>사용 권한  
  서버에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-##  <a name="WaitTypes"></a>대기 유형  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>대기 유형  
  리소스 대기  
  리소스 대기는 다른 작업자가 사용하고 있거나 아직 제공되지 않아서 사용할 수 없는 리소스에 대한 액세스를 요청하는 경우에 발생합니다. 리소스 대기의 예로는 잠금, 래치, 네트워크 및 디스크 I/O 대기가 있습니다. 잠금 및 래치 대기는 동기화 개체에 대한 대기입니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68090872"
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
   
-|대기 유형|Description|  
+|대기 유형|설명|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|어셈블리 로드에 대한 단독 액세스 중에 발생합니다.|  
@@ -104,12 +104,9 @@ ms.locfileid: "68090872"
 |BROKER_REGISTERALLENDPOINTS|ph x="1" /&gt; 연결 엔드포인트의 초기화 중에 발생합니다. 매우 짧게 발생해야 합니다.|  
 |BROKER_SERVICE|대상 서비스와 연결된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대상 목록이 업데이트되거나 우선 순위가 다시 매겨지는 경우에 발생합니다.|  
 |BROKER_SHUTDOWN|계획된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 종료 시 발생합니다. 가능하면 매우 짧게 발생해야 합니다.|  
-|BROKER_TASK_STOP|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐 태스크 처리기가 태스크를 종료하려고 하는 경우에 발생합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.|  
-|BROKER_TO_FLUSH|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 지연 플러셔가 메모리 내 전송 개체를 작업 테이블에 플러시하는 경우에 발생합니다.|  
-|BROKER_TRANSMITTER|
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송기가 작동될 때까지 대기하는 경우에 발생합니다.|  
+|BROKER_TASK_STOP|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐 태스크 처리기가 태스크를 종료하려고 하는 경우에 발생합니다. 상태 검사가 직렬화되고 먼저 실행 상태에 있어야 합니다.|  
+|BROKER_TO_FLUSH|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 지연 플러셔가 메모리 내 전송 개체를 작업 테이블에 플러시하는 경우에 발생합니다.|  
+|BROKER_TRANSMITTER|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송기가 작동될 때까지 대기하는 경우에 발생합니다.|  
 |BUILTIN_HASHKEY_MUTEX|내부 데이터 구조를 초기화하는 동안 인스턴스 시작 후 발생할 수 있습니다. 데이터 구조가 초기화되면 되풀이되지 않습니다.|  
 |CHECK_PRINT_RECORD|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |CHECKPOINT_QUEUE|검사점 태스크가 다음 검사점 요청을 대기하는 동안 발생합니다.|  
@@ -139,8 +136,7 @@ ms.locfileid: "68090872"
 |DEADLOCK_ENUM_MUTEX|교착 상태 모니터와 sys.dm_os_waiting_tasks가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 동시에 여러 개의 교착 상태 검색을 실행하고 있지 않도록 하려고 하는 경우에 발생합니다.|  
 |DEADLOCK_TASK_SEARCH|이 리소스의 대기 시간이 길면 서버가 sys.dm_os_waiting_tasks 위에서 쿼리를 실행하고 있으며 이러한 쿼리가 교착 상태 모니터의 교착 상태 검색을 차단하고 있음을 나타냅니다. 이 대기 유형은 교착 상태 모니터에만 사용됩니다. sys.dm_os_waiting_tasks 위의 쿼리는 DEADLOCK_ENUM_MUTEX를 사용합니다.|  
 |DEBUG|내부 동기화에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR 디버깅 작업 중에 발생합니다.|  
-|DISABLE_VERSIONING|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
+|DISABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
 |DISKIO_SUSPEND|외부 백업이 활성 상태일 때 태스크가 파일에 액세스하려고 대기하는 경우에 발생합니다. 대기 중인 모든 사용자 프로세스에 대해 보고됩니다. 사용자 프로세스당 값이 5보다 크면 외부 백업을 완료하는 데 걸리는 시간이 너무 긴 것일 수 있습니다.|  
 |DISPATCHER_QUEUE_SEMAPHORE|디스패처 풀의 스레드가 처리할 추가 작업을 기다리는 경우에 발생합니다. 이 대기 유형의 대기 시간은 디스패처가 유휴 상태일 때 증가됩니다.|  
 |DLL_LOADING_MUTEX|XML 파서 DLL이 로드될 때까지 대기하는 동안 한 번 발생합니다.|  
@@ -149,16 +145,14 @@ ms.locfileid: "68090872"
 |DTC_ABORT_REQUEST|MS DTC 작업자 세션이 MS DTC 트랜잭션의 소유권을 획득하려고 대기하는 경우에 MS DTC 작업자 세션에서 발생합니다. MS DTC가 트랜잭션의 소유권을 획득한 후에는 세션이 트랜잭션을 롤백할 수 있습니다. 일반적으로 세션은 트랜잭션을 사용하고 있는 다른 세션을 기다립니다.|  
 |DTC_RESOLVE|복구 태스크가 트랜잭션의 결과물을 쿼리할 수 있도록 데이터베이스 간 트랜잭션에서 master 데이터베이스를 대기하는 경우에 발생합니다.|  
 |DTC_STATE|태스크가 내부 MS DTC 전역 상태 개체의 변경을 방지하는 이벤트를 기다리는 경우에 발생합니다. 이 상태는 매우 짧은 시간 동안 유지되어야 합니다.|  
-|DTC_TMDOWN_REQUEST|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MS DTC 서비스가 사용할 수 없게 되었다는 알림을 받는 경우에 MS DTC 작업자 세션에서 발생합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.|  
+|DTC_TMDOWN_REQUEST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MS DTC 서비스가 사용할 수 없게 되었다는 알림을 받는 경우에 MS DTC 작업자 세션에서 발생합니다. 먼저 작업자는 MS DTC 복구 프로세스가 시작될 때까지 기다렸다가 작업자가 작업하고 있는 분산 트랜잭션의 결과물을 획득하기 위해 대기합니다. 이것은 MS DTC 서비스와의 연결이 다시 설정될 때까지 계속될 수 있습니다.|  
 |DTC_WAITFOR_OUTCOME|복구 태스크가 MS DTC가 활성화되어 준비된 트랜잭션을 해결할 수 있을 때까지 대기하는 경우에 발생합니다.|  
 |DUMP_LOG_COORDINATOR|주 태스크가 하위 작업이 데이터를 생성할 때까지 대기하는 경우에 발생합니다. 일반적으로 이 상태는 발생하지 않습니다. 대기 시간이 길면 예상하지 못했던 차단이 발생한 것일 수 있으므로 하위 태스크를 조사해야 합니다.|  
 |DUMPTRIGGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|문 실행 중 특정 유형의 메모리 할당을 동기화하는 경우에 발생합니다.|  
 |EE_SPECPROC_MAP_INIT|내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작된 후 해시 테이블에 처음 액세스하는 경우에만 발생합니다.|  
-|ENABLE_VERSIONING|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅샷 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅샷 격리를 설정하는 경우에 사용됩니다.|  
+|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅샷 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅샷 격리를 설정하는 경우에 사용됩니다.|  
 |ERROR_REPORTING_MANAGER|여러 개의 동시 오류 로그 초기화를 동기화하는 경우에 발생합니다.|  
 |EXCHANGE|병렬 쿼리 중 쿼리 프로세서 교환 반복기에서 동기화 중에 발생합니다.|  
 |EXECSYNC|병렬 쿼리 중 쿼리 프로세서 교환 반복기와 관련되지 않은 영역에서 동기화 중에 발생합니다. 이러한 영역의 예에는 비트맵, LOB(Large Binary Object) 및 스풀 반복기가 있습니다. LOB는 이 대기 상태를 자주 사용할 수 있습니다.|  
@@ -174,19 +168,17 @@ ms.locfileid: "68090872"
 |FSAGENT|FILESTREAM 파일 I/O 작업이 다른 파일 I/O 작업에 사용되는 FILESTREAM 에이전트 리소스를 기다리는 경우에 발생합니다.|  
 |FSTR_CONFIG_MUTEX|다른 FILESTREAM 기능 다시 구성 작업이 완료될 때까지 대기하는 경우에 발생합니다.|  
 |FSTR_CONFIG_RWLOCK|FILESTREAM 구성 매개 변수에 대한 액세스 직렬화를 대기하는 경우에 발생합니다.|  
-|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
 |FT_RESTART_CRAWL|임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.|  
 |FULLTEXT GATHERER|전체 텍스트 작업을 동기화하는 경우에 발생합니다.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |HTTP_ENUMERATION|시스템 시작 시에 HTTP를 시작할 HTTP 엔드포인트를 열거하기 위해 발생합니다.|  
 |HTTP_START|연결이 HTTP 초기화가 완료될 때까지 대기하는 경우에 발생합니다.|  
-|IMPPROV_IOWAIT|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
+|IMPPROV_IOWAIT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 대량 로드 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |INTERNAL_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |IO_AUDIT_MUTEX|추적 이벤트 버퍼 동기화 중에 발생합니다.|  
 |IO_COMPLETION|I/O 작업이 완료될 때까지 대기하는 동안 발생합니다. 이 대기 유형은 일반적으로 비데이터 페이지 I/O를 나타냅니다. 데이터 페이지 I/O 완료 대기는 PAGEIOLATCH_* 대기로 표시됩니다.|  
-|IO_QUEUE_LIMIT|
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 비동기 IO 큐에 보류 중인 IO가 너무 많은 경우에 발생합니다. 보류 중인 IO 수가 임계값 아래로 떨어질 때까지 다른 IO를 실행하려는 작업은 이 대기 유형에서 차단됩니다. 임계값은 데이터베이스에 할당된 DTU에 비례합니다.|  
+|IO_QUEUE_LIMIT|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 비동기 IO 큐에 보류 중인 IO가 너무 많은 경우에 발생합니다. 보류 중인 IO 수가 임계값 아래로 떨어질 때까지 다른 IO를 실행하려는 작업은 이 대기 유형에서 차단됩니다. 임계값은 데이터베이스에 할당된 DTU에 비례합니다.|  
 |IO_RETRY|리소스 부족으로 인해 읽기 또는 쓰기와 같은 디스크 I/O 작업이 실패하여 다시 시도되는 경우에 발생합니다.|  
 |IOAFF_RANGE_QUEUE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KSOURCE_WAKEUP|서비스 제어 관리자의 요청을 대기하는 동안 서비스 제어 태스크에 사용됩니다. 긴 대기가 예상되며 문제가 있는 것은 아닙니다.|  
@@ -232,12 +224,10 @@ ms.locfileid: "68090872"
 |MSQL_DQ|분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 애플리케이션 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.|  
 |MSQL_XACT_MGR_MUTEX|태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.|  
 |MSQL_XACT_MUTEX|트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.|  
-|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 애플리케이션 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
+|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 애플리케이션 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
 |MSSEARCH|전체 텍스트 검색 호출 중에 발생합니다. 이 대기는 전체 텍스트 작업이 완료될 때 끝나며 경합이 아니라 전체 텍스트 작업 기간을 나타냅니다.|  
 |NET_WAITFOR_PACKET|네트워크 읽기 중 연결이 네트워크 패킷을 대기하는 경우에 발생합니다.|  
-|OLEDB|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 호출할 때 발생합니다. 이 대기 유형은 동기화에 사용되지 않습니다. 대신 OLE DB Provider에 대한 호출 기간을 나타냅니다.|  
+|OLEDB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 호출할 때 발생합니다. 이 대기 유형은 동기화에 사용되지 않습니다. 대신 OLE DB Provider에 대한 호출 기간을 나타냅니다.|  
 |ONDEMAND_TASK_QUEUE|백그라운드 태스크가 우선 순위가 높은 시스템 작업 요청을 대기하는 동안 발생합니다. 대기 시간이 길면 우선 순위가 높은 처리할 요청이 없는 것이므로 염려할 필요가 없습니다.|  
 |PAGEIOLATCH_DT|태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 삭제 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.|  
 |PAGEIOLATCH_EX|태스크가 I/O 요청에 있는 버퍼를 래치에서 기다리는 경우에 발생합니다. 래치 요청이 배타 모드에 있습니다. 대기 수가 많으면 디스크 하위 시스템에 문제가 있을 수 있습니다.|  
@@ -318,8 +308,7 @@ ms.locfileid: "68090872"
 |SLEEP_SYSTEMTASK|tempdb 시작이 완료될 때까지 대기하는 동안 백그라운드 태스크 시작 중에 발생합니다.|  
 |SLEEP_TASK|일반 이벤트가 발생할 때까지 대기하는 동안 태스크가 중지되는 경우에 발생합니다.|  
 |SLEEP_TEMPDBSTARTUP|태스크가 tempdb 시작이 완료될 때까지 대기하는 동안 발생합니다.|  
-|SNI_CRITICAL_SECTION|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워킹 구성 요소의 내부 동기화 중에 발생합니다.|  
+|SNI_CRITICAL_SECTION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워킹 구성 요소의 내부 동기화 중에 발생합니다.|  
 |SNI_HTTP_WAITFOR_0_DISCON|처리 중인 HTTP 연결이 종료될 때까지 대기하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 중에 발생합니다.|  
 |SNI_LISTENER_ACCESS|NUMA(비균일 메모리 액세스) 노드의 상태 변경 업데이트 작업을 대기하는 동안 발생합니다. 상태 변경에 대한 액세스는 직렬화됩니다.|  
 |SNI_TASK_COMPLETION|NUMA 노드 상태 변경 동안 모든 태스크가 완료될 때까지 대기하는 중에 발생합니다.|  
@@ -327,18 +316,15 @@ ms.locfileid: "68090872"
 |SOAP_WRITE|HTTP 네트워크 쓰기가 완료될 때까지 대기하는 동안 발생합니다.|  
 |SOS_CALLBACK_REMOVAL|콜백을 제거하기 위해 콜백 목록에 대한 동기화를 수행하는 동안 발생합니다. 서버 초기화가 완료된 후에는 이 카운터가 변경되지 않습니다.|  
 |SOS_DISPATCHER_MUTEX|디스패처 풀의 내부 동기화 중에 발생합니다. 풀이 조정되는 경우도 포함됩니다.|  
-|SOS_LOCALALLOCATORLIST|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
+|SOS_LOCALALLOCATORLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
 |SOS_MEMORY_USAGE_ADJUSTMENT|메모리 사용량이 풀 사이에서 조절될 경우 발생합니다.|  
 |SOS_OBJECT_STORE_DESTROY_MUTEX|풀에서 개체를 삭제하는 경우 메모리 풀의 내부 동기화 중에 발생합니다.|  
 |SOS_PROCESS_AFFINITY_MUTEX|프로세스 선호도 설정에 대한 액세스 동기화 중에 발생합니다.|  
-|SOS_RESERVEDMEMBLOCKLIST|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
+|SOS_RESERVEDMEMBLOCKLIST|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다.|  
 |SOS_SCHEDULER_YIELD|다른 작업이 실행될 수 있도록 태스크가 자발적으로 스케줄러를 양보하는 경우에 발생합니다. 이 대기 중에 태스크는 해당 퀀텀이 갱신될 때까지 대기합니다.|  
 |SOS_SMALL_PAGE_ALLOC|일부 메모리 개체에 의해 관리되는 메모리의 할당 및 해제 중에 발생합니다.|  
 |SOS_STACKSTORE_INIT_MUTEX|내부 저장소 초기화 동기화 중에 발생합니다.|  
-|SOS_SYNC_TASK_ENQUEUE_EVENT|태스크가 동기 방식으로 시작되는 경우에 발생합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크는 대부분 비동기 방식으로 시작되므로 작업 요청이 작업 큐에 배치된 후 제어가 즉시 시작으로 돌아갑니다.|  
+|SOS_SYNC_TASK_ENQUEUE_EVENT|태스크가 동기 방식으로 시작되는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크는 대부분 비동기 방식으로 시작되므로 작업 요청이 작업 큐에 배치된 후 제어가 즉시 시작으로 돌아갑니다.|  
 |SOS_VIRTUALMEMORY_LOW|메모리 할당이 리소스 관리자가 가상 메모리를 해제할 때까지 대기하는 경우에 발생합니다.|  
 |SOSHOST_EVENT|CLR과 같은 호스팅된 구성 요소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트 동기화 개체를 대기하는 경우에 발생합니다.|  
 |SOSHOST_INTERNAL|CLR과 같은 호스팅된 구성 요소에 사용되는 메모리 관리자 콜백 동기화 중에 발생합니다.|  
@@ -393,11 +379,11 @@ ms.locfileid: "68090872"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|전체 텍스트 스케줄러 중지 대기 유형입니다. 스케줄러가 유휴 상태입니다.|  
-|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
-|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
   
   

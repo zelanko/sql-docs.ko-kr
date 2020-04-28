@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053053"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
@@ -57,8 +57,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   2로 설정되면 쿼리에 커서 준비 또는 실행에 사용되는 것처럼 각 쿼리가 분석됩니다. 그러면 원본 열 정보로 보기 이름을 반환합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- **sp_describe_first_result_set** 은 성공 시 항상 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 유형으로 반환 상태가 채워집니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
+ **sp_describe_first_result_set** 은 성공 시 항상 상태 0을 반환 합니다. 프로시저에서 오류가 발생 하 고 프로시저가 RPC로 호출 된 경우에는 dm_exec_describe_first_result_set의 error_type 열에 설명 된 오류 유형으로 반환 상태가 채워집니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 프로시저를 호출한 경우 반환 값은 오류가 발생한 경우에도 항상 0입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
@@ -73,7 +72,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**system_type_name**|**nvarchar (256) NULL**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
 |**max_length**|**NULL이 아닌 smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우 **max_length** 값은 16 이거나 **' text in row ' sp_tableoption**값으로 설정 됩니다.|  
 |**전체 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
-|**배율을**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
+|**scale**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname NULL**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
 |**user_type_id**|**int NULL**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
 |**user_type_database**|**sysname NULL**|CLR 및 별칭 형식의 경우 해당 형식이 정의된 데이터베이스의 이름을 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -100,10 +99,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY 목록에서 이 열의 위치입니다. 열이 ORDER BY 목록에 없거나 ORDER BY 목록을 고유하게 확인할 수 없을 경우 NULL을 반환합니다.|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY 목록의 길이입니다. ORDER BY 목록이 없거나 ORDER BY 목록을 고유하게 확인할 수 없는 경우 NULL을 반환합니다. 이 값은 sp_describe_first_result_set에서 반환 된 모든 행에 대해 동일 합니다 **.**|  
 |**order_by_is_descending**|**smallint NULL**|ordinal_in_order_by_list가 NULL이 아닐 경우 **order_by_is_descending** 열에서 이 열에 대한 ORDER BY 절의 방향을 보고합니다. 그렇지 않으면 NULL을 보고합니다.|  
-|**tds_type_id**|**int NOT NULL**|내부에 사용합니다.|  
-|**tds_length**|**int NOT NULL**|내부에 사용합니다.|  
-|**tds_collation_id**|**int NULL**|내부에 사용합니다.|  
-|**tds_collation_sort_id**|**tinyint NULL**|내부에 사용합니다.|  
+|**tds_type_id**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
+|**tds_length**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
+|**tds_collation_id**|**int NULL**|내부적으로만 사용할 수 있습니다.|  
+|**tds_collation_sort_id**|**tinyint NULL**|내부적으로만 사용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_describe_first_result_set** 프로시저에서 (가상) 일괄 처리에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하 고 해당 일괄 처리 (a)를 나중에 실행 하는 경우 일괄 처리는 (1) 최적화 시간 오류를 발생 시킵니다. (2) 런타임 오류가 발생 하거나 (3) 결과 집합을 반환 하지 않거나 (4) **sp_describe_first_result_set**에서 설명 하는 동일한 메타 데이터가 포함 된 첫 번째 결과 집합을 반환 합니다.  

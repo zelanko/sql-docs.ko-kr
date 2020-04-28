@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048292"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext(Transact-SQL)
@@ -51,7 +51,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**본문**|**nvarchar(255)**|개체 정의|  
+|**텍스트**|**nvarchar(255)**|개체 정의|  
   
 ## <a name="remarks"></a>설명  
  sp_helptext는 여러 행에 개체를 만드는 데 사용하는 정의를 표시합니다. 각 행은 255자의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 정의를 포함합니다. 정의는 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 **정의** 열에 있습니다.  
@@ -62,7 +62,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. 트리거의 정의 표시  
- 다음 예에서는 `dEmployee` 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 트리거 정의를 표시합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `dEmployee` 트리거 정의를 표시합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. 계산 열의 정의 표시  
- 다음 예에서는 `TotalDue` 데이터베이스의 `SalesOrderHeader` 테이블에 있는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 계산 열의 정의를 표시하는 방법을 보여 줍니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `TotalDue` 테이블에 있는 `SalesOrderHeader` 계산 열의 정의를 표시하는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -93,7 +93,7 @@ GO
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;OBJECT_DEFINITION &#40;](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [sql_modules &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
+ [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

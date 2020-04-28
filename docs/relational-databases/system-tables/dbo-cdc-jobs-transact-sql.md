@@ -18,10 +18,10 @@ ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084697"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68084697"
   
  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|작업이 실행되고 있는 데이터베이스의 ID입니다.|  
 |**job_type**|**nvarchar (20)**|작업 유형으로 ‘캡처' 또는 '정리'입니다.|  

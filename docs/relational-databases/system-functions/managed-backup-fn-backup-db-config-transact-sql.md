@@ -21,16 +21,15 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067785"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정으로 0개, 1개 또는 그 이상의 행을 반환합니다. 지정된 데이터베이스에 대한 1개 행을 반환하거나 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스에 대한 정보를 반환합니다.  
   
  이 저장 프로시저를 사용하면 SQL Server 인스턴스에 있는 하나의 데이터베이스 또는 모든 데이터베이스에 대해 현재 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정을 검토 또는 확인할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "68067785"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @db_name  
  데이터베이스의 이름입니다. 매개 @db_name 변수는 **SYSNAME**입니다. 빈 문자열 또는 NULL 값이 이 매개 변수에 전달되면 SQL Server 인스턴스의 모든 데이터베이스에 대한 정보가 반환됩니다.  
   

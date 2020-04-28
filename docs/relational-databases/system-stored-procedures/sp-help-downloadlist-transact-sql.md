@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055196"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
@@ -58,7 +58,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |값|Description|  
 |-----------|-----------------|  
 |**제거**|마스터 **SQLServerAgent** 서비스에서 오류를 제거 하도록 대상 서버를 요청 하는 서버 작업입니다.|  
-|**DELETE**|전체 작업을 제거하는 작업의 수행입니다.|  
+|**제거**|전체 작업을 제거하는 작업의 수행입니다.|  
 |**INSERT**|전체 작업을 추가하거나 기존 작업을 새로 고치는 작업의 수행입니다. 여기에는 적용되는 모든 작업 단계 및 일정이 포함됩니다.|  
 |**RE-ENLIST**|서버 작업이 대상 서버로 하여금 폴링 간격 및 다중 서버 도메인에 대한 표준 시간대를 포함하여 포함 정보를 다시 전달하도록 합니다. 또한 대상 서버는 **MSXOperator** 세부 정보를 다시 다운로드 합니다.|  
 |**SET-POLL**|대상 서버가 다중 서버 도메인을 폴링하는 간격(초)을 설정하는 서버 작업입니다. 지정 된 경우 *값* 은 필수 간격 값으로 해석 되 고 **10** 에서 **28800**사이의 값이 될 수 있습니다.|  
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|명령의 고유한 정수 ID입니다.|  
-|**source_server**|**nvarchar (30)**|명령을 발생시킨 서버의 컴퓨터 이름입니다. 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서이는 항상 마스터 (MSX) 서버의 컴퓨터 이름입니다.|  
+|**source_server**|**nvarchar(30)**|명령을 발생시킨 서버의 컴퓨터 이름입니다. 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서이는 항상 마스터 (MSX) 서버의 컴퓨터 이름입니다.|  
 |**operation_code**|**nvarchar(4000)**|명령의 작업 코드입니다.|  
 |**object_name**|**sysname**|명령이 적용되는 개체입니다.|  
 |**object_id**|**uniqueidentifier**|명령의 영향을 받는 개체의 id 번호 (작업 개체에 대 한**job_id** 또는 서버 개체의 경우 0x00) 또는 **operation_code**특정 한 데이터 값입니다.|  
-|**target_server**|**nvarchar (30)**|해당 명령이 다운로드될 대상 서버입니다.|  
+|**target_server**|**nvarchar(30)**|해당 명령이 다운로드될 대상 서버입니다.|  
 |**error_message**|**nvarchar(1024)**|명령을 처리하는 동안 문제가 발생하는 경우 대상 서버에서 발행되는 오류 메시지입니다.<br /><br /> 참고: 모든 오류 메시지는 대상 서버에의 한 모든 추가 다운로드를 차단 합니다.|  
 |**date_posted**|**datetime**|명령이 테이블에 게시된 날짜입니다.|  
 |**date_downloaded**|**datetime**|대상 서버가 명령을 다운로드한 날짜입니다.|  
-|**업무**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드 되지 않음<br /><br /> **1** = 성공적으로 다운로드 되었습니다.|  
+|**status**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드 되지 않음<br /><br /> **1** = 성공적으로 다운로드 되었습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  

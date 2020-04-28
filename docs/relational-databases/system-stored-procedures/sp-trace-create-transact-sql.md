@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096027"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create(Transact-SQL)
@@ -59,7 +59,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|어떤 이유에서건 추적을 파일에 쓸 수 없으면 SQL Server가 시스템을 종료하도록 지정합니다. 이 옵션은 보안 감사 추적을 수행할 때 유용합니다.|  
 |TRACE_PRODUCE_BLACKBOX|**20cm(8**|서버가 만든 마지막 5MB 추적 정보의 기록은 서버에 의해 저장됨을 지정합니다. TRACE_PRODUCE_BLACKBOX는 다른 모든 옵션과 호환되지 않습니다.|  
   
-`[ @tracefile = ] 'trace_file'`추적을 기록할 위치와 파일 이름을 지정 합니다. *trace_file* 은 **nvarchar (** 가 수) 이며 기본값은 없습니다. *trace_file* 은 로컬 디렉터리 (예:\\\\*n ' C:\MSSQL\Trace\trace.trc*\\**\\**') 이거나 공유 또는 경로에 대 한 UNC 일 수 있습니다  
+`[ @tracefile = ] 'trace_file'`추적을 기록할 위치와 파일 이름을 지정 합니다. *trace_file* 은 **nvarchar (** 가 수) 이며 기본값은 없습니다. *trace_file* 은 로컬 디렉터리 (예:\\\\*n ' C:\MSSQL\Trace\trace.trc*\\*Sharename*\\*Directory*') 이거나 공유 또는 경로에 대 한 UNC 일 수 있습니다  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 추적 파일 이름에 **.trc** 확장명을 추가 합니다. TRACE_FILE_ROLLOVER 옵션 및 *max_file_size* 지정 된 경우는 원본 추적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일이 최대 크기로 확장 될 때 새 추적 파일을 만듭니다. 새 파일의 이름은 원본 파일과 동일 하지만 _ n은 **1**부터 시작 하 여 시퀀스를 나타내는 _*n* 이 추가 됩니다. 예를 들어 첫 번째 추적 파일의 이름이 **filename .trc**인 경우 두 번째 추적 파일의 이름은 **filename_1 .trc**입니다.  
   
@@ -82,13 +82,11 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *Stop_time* 와 *max_file_size* 를 모두 지정 하 고 TRACE_FILE_ROLLOVER 지정 하지 않으면 지정 된 중지 시간이 나 최대 파일 크기에 도달할 때 추적이 가장 됩니다. *Stop_time*, *max_file_size*및 TRACE_FILE_ROLLOVER 지정 된 경우 추적이 드라이브를 채우지 않는다고 가정 하 고 지정 된 중지 시간에 추적이 중지 됩니다.  
   
-`[ @filecount = ] 'max_rollover_files'`동일한 기본 파일 이름으로 유지할 최대 추적 파일 수를 지정 합니다. *max_rollover_files* 는 **int**이며 1 보다 큽니다. 이 매개 변수는 TRACE_FILE_ROLLOVER 옵션을 지정한 경우에만 유효합니다. *Max_rollover_files* 지정 된 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 추적 파일을 열기 전에 가장 오래 된 추적 파일을 삭제 하 여 *max_rollover_files* 추적 파일 수 이하로 유지 하려고 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본 파일 이름에 숫자를 추가하여 추적 파일의 보존 기간을 추적합니다.  
+`[ @filecount = ] 'max_rollover_files'`동일한 기본 파일 이름으로 유지할 최대 추적 파일 수를 지정 합니다. *max_rollover_files* 는 **int**이며 1 보다 큽니다. 이 매개 변수는 TRACE_FILE_ROLLOVER 옵션을 지정한 경우에만 유효합니다. *Max_rollover_files* 지정 된 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 추적 파일을 열기 전에 가장 오래 된 추적 파일을 삭제 하 여 *max_rollover_files* 추적 파일 수 이하로 유지 하려고 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본 파일 이름에 숫자를 추가하여 추적 파일의 보존 기간을 추적합니다.  
   
  예를 들어 *trace_file* 매개 변수가 "c:\mytrace"로 지정 된 경우 이름이 "c:\ mytrace_123" 인 파일은 이름이 "c:\ mytrace_124 .trc" 인 파일 보다 오래 된 것입니다. *Max_rollover_files* 를 2로 설정 하면 추적 파일 "c:\ mytrace_125 .trc"를 만들기 전에 "c:\ mytrace_123 .trc" 파일을 SQL Server 삭제 합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 파일을 한 번만 삭제하려고 시도하며 다른 프로세스에서 사용 중인 파일은 삭제할 수 없습니다. 그러므로 추적을 실행하는 동안 다른 애플리케이션에서 추적 파일을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 추적 파일을 파일 시스템에 유지합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 파일을 한 번만 삭제하려고 시도하며 다른 프로세스에서 사용 중인 파일은 삭제할 수 없습니다. 그러므로 추적을 실행하는 동안 다른 애플리케이션에서 추적 파일을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 추적 파일을 파일 시스템에 유지합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
@@ -137,7 +135,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **Batch starting**  
   
-    -   **예외**  
+    -   **Exception**  
   
     -   **주의**  
   
@@ -150,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_trace_generateevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setevent &#40;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setfilter &#40;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [Transact-sql&#41;sp_trace_setstatus &#40;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  
   
   
