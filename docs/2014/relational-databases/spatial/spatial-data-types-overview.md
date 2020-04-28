@@ -15,36 +15,30 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 340e250fde61f8c246099eadafc148278288dee0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176653"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
-  공간 데이터 형식은 두 가지가 있습니다. 
-  `geometry` 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. 
-  `geometry` 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준)과 호환됩니다.
+  공간 데이터 형식은 두 가지가 있습니다. `geometry` 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. `geometry` 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준)과 호환됩니다.
 
  또한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장하는 `geography` 데이터 형식을 지원합니다.
 
 > [!IMPORTANT]
 >  향상된 공간 데이터 형식을 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 코드 이름 "Denali"의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.
 
-##  <a name="objects"></a>공간 데이터 개체
- 
-  `geometry` 및 `geography` 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. `Points`이러한 인스턴스는, **linestrings, circularstring**, `CompoundCurves`, `Polygons` `CurvePolygons` 또는에서 여러 `geometry` 또는 `geography` 인스턴스로 구분 하는 부모 데이터 형식에서 특정 속성을 파생 시킵니다. `GeometryCollection` 
-  `Geography` 형식에는 `FullGlobe`라는 추가 인스턴스 유형이 있습니다.
+##  <a name="spatial-data-objects"></a><a name="objects"></a>공간 데이터 개체
+ `geometry` 및 `geography` 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. `Points`이러한 인스턴스는, **linestrings, circularstring**, `CompoundCurves`, `Polygons` `CurvePolygons` 또는에서 여러 `geometry` 또는 `geography` 인스턴스로 구분 하는 부모 데이터 형식에서 특정 속성을 파생 시킵니다. `GeometryCollection` `Geography` 형식에는 `FullGlobe`라는 추가 인스턴스 유형이 있습니다.
 
  아래 그림에서는 `geometry` 및 `geometry` 데이터 형식의 기반인 `geography` 계층을 보여 줍니다. 및 `geometry` `geography` 의 인스턴스화할 수 있는 형식은 파란색으로 표시 됩니다.
 
  ![geometry 유형의 계층](../../database-engine/media/geom-hierarchy.gif "geometry 유형의 계층")
 
- 그림에서 `geometry` 알 수 있듯이 및 `geography` 데이터 형식의 인스턴스화할 수 `Point`있는 10 개의 형식은, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon`,,,, 및 `GeometryCollection`입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( `FullGlobe`) 있습니다. `geometry` 및 `geography` 형식은 인스턴스가 명시적으로 정의 되지 않은 경우에도 올바른 형식의 인스턴스인 경우 특정 인스턴스를 인식할 수 있습니다. 예를 들어, STPointFromText () `Point` 메서드를 사용 하 여 인스턴스를 명시적으로 `geometry` 정의 `geography` 하 고, 메서드 입력 `Point`의 형식이 올바른 경우에는 인스턴스를으로 인식 합니다. 
-  `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 `geometry` 및 `geography` 데이터 형식은 해당 인스턴스를 `Point`로 인식합니다.
+ 그림에서 `geometry` 알 수 있듯이 및 `geography` 데이터 형식의 인스턴스화할 수 `Point`있는 10 개의 형식은, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString` `CompoundCurve` `Polygon` `CurvePolygon` `MultiPolygon`,,,, 및 `GeometryCollection`입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( `FullGlobe`) 있습니다. `geometry` 및 `geography` 형식은 인스턴스가 명시적으로 정의 되지 않은 경우에도 올바른 형식의 인스턴스인 경우 특정 인스턴스를 인식할 수 있습니다. 예를 들어, STPointFromText () `Point` 메서드를 사용 하 여 인스턴스를 명시적으로 `geometry` 정의 `geography` 하 고, 메서드 입력 `Point`의 형식이 올바른 경우에는 인스턴스를으로 인식 합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 `geometry` 및 `geography` 데이터 형식은 해당 인스턴스를 `Point`로 인식합니다.
 
- geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  
-  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.
+ geometry 및 geography 형식의 하위 형식은 단순 형식과 컬렉션 형식으로 나뉩니다.  `STNumCurves()` 와 같은 일부 메서드는 단순 형식에서만 작동합니다.
 
  단순 형식에는 다음이 포함됩니다.
 
@@ -71,27 +65,24 @@ ms.locfileid: "78176653"
 -   [GeometryCollection](../spatial/geometrycollection.md)
 
 
-##  <a name="differences"></a>Geometry 및 geography 데이터 형식의 차이점
+##  <a name="differences-between-the-geometry-and-geography-data-types"></a><a name="differences"></a> geometry 데이터 형식과 geography 데이터 형식의 차이점
  공간 데이터의 두 가지 형식은 종종 매우 비슷하게 작동하지만 데이터가 저장되고 조작되는 방식에서 몇 가지 주요 차이점이 있습니다.
 
 ### <a name="how-connecting-edges-are-defined"></a>연결 가장자리가 정의되는 방식
- 
-  `LineString` 및 `Polygon` 형식을 정의하는 데이터는 꼭지점뿐입니다.  geometry 형식에서 두 꼭지점을 잇는 연결 가장자리는 직선입니다.  그러나 geography 형식에서는 두 꼭지점을 잇는 연결 가장자리가 두 꼭지점 사이의 짧고 큰 타원 호입니다.  큰 타원은 타원면과 타원면의 중심을 관통하는 평면이 교차하는 지점이고 큰 타원 호는 큰 타원의 호 세그먼트입니다.
+ `LineString` 및 `Polygon` 형식을 정의하는 데이터는 꼭지점뿐입니다.  geometry 형식에서 두 꼭지점을 잇는 연결 가장자리는 직선입니다.  그러나 geography 형식에서는 두 꼭지점을 잇는 연결 가장자리가 두 꼭지점 사이의 짧고 큰 타원 호입니다.  큰 타원은 타원면과 타원면의 중심을 관통하는 평면이 교차하는 지점이고 큰 타원 호는 큰 타원의 호 세그먼트입니다.
 
 ### <a name="how-circular-arc-segments-are-defined"></a>원호 세그먼트가 정의되는 방식
  geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은 무시됨)에 정의됩니다. geography 형식의 원호 세그먼트는 참조 구의 곡선 세그먼트로 정의됩니다. 참조 구의 위도선은 두 호의 점이 일정한 위도를 갖는 두 개의 보완 원호로 정의될 수 있습니다.
 
 ### <a name="measurements-in-spatial-data-types"></a>공간 데이터 형식의 측정
- 평면(또는 평평한 표면) 시스템에서 거리와 영역의 측정은 좌표와 동일한 측정 단위로 지정됩니다. 
-  `geometry` 데이터 형식을 이용하면 사용한 단위에 상관없이 (2, 2)와 (5, 6) 사이의 거리는 5단위입니다.
+ 평면(또는 평평한 표면) 시스템에서 거리와 영역의 측정은 좌표와 동일한 측정 단위로 지정됩니다. `geometry` 데이터 형식을 이용하면 사용한 단위에 상관없이 (2, 2)와 (5, 6) 사이의 거리는 5단위입니다.
 
  타원 또는 둥근 지구 시스템에서 좌표는 위도와 경도의 도 단위로 지정됩니다. 그러나 `geography` 인스턴스의 SRID(spatial reference identifier)에 따라 측정이 달라지더라도 길이 및 영역은 일반적으로 미터와 제곱미터로 측정됩니다. 가장 일반적인 `geography` 데이터 형식의 측정 단위는 미터입니다.
 
 ### <a name="orientation-of-spatial-data"></a>공간 데이터의 방향
  평면 시스템에서 다각형의 링 방향은 중요한 요소가 아닙니다. 예를 들어 ((0, 0), (10, 0), (0, 20), (0, 0))로 나타내는 다각형은 ((0, 0), (0, 20), (10, 0), (0, 0))로 나타내는 다각형과 동일합니다. OGC Simple Features for SQL Specification에서는 링 순서를 지정하지 않으며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 링 순서를 강제로 지정하지 않습니다.
 
- 타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. 
-  `geography` 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다. 타원 시스템의 다각형 내부는 왼쪽 규칙으로 정의됩니다.
+ 타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. `geography` 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다. 타원 시스템의 다각형 내부는 왼쪽 규칙으로 정의됩니다.
 
  호환성 수준이 100 이하인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 경우 `geography` 데이터 형식에는 다음과 같은 제한 사항이 있습니다.
 
@@ -101,21 +92,19 @@ ms.locfileid: "78176653"
 
 -   STIntersection (), Stintersection (), `geography` stintersection () 및 Stsym차집합을 ()와 같이 두 개의 인스턴스를 입력 해야 하는 `geography` 데이터 형식 메서드는 메서드의 결과가 단일 반구 내에 포함 되지 않는 경우 null을 반환 합니다. STBuffer()도 결과가 단일 반구를 초과할 경우 null을 반환합니다.
 
- 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 `FullGlobe`는 전체 구형을 포함하는 특수한 유형의 다각형입니다. 
-  `FullGlobe`에는 영역이 있지만 테두리나 꼭지점은 없습니다.
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 `FullGlobe`는 전체 구형을 포함하는 특수한 유형의 다각형입니다. `FullGlobe`에는 영역이 있지만 테두리나 꼭지점은 없습니다.
 
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>geography 데이터 형식에서 중요하지 않은 외부 및 내부 링
  OGC Simple Features for SQL Specification에서는 외부 링 및 내부 링에 대해 설명 하지만 이러한 구분은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` 데이터 형식에 대해 거의 의미가 없습니다. 다각형의 링은 외부 링으로 사용 될 수 있습니다.
 
  OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.
 
--   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)
+-   [OGC 사양, 단순 기능 액세스 1부 - 공통 아키텍처](https://go.microsoft.com/fwlink/?LinkId=93627)
 
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)
 
 
-##  <a name="circular"></a>원호 세그먼트
+##  <a name="circular-arc-segments"></a><a name="circular"></a>원호 세그먼트
  인스턴스화할 수 있는 세 가지 형식은 원호 세그먼트 `CircularString`, `CompoundCurve` 및 `CurvePolygon`을 취할 수 있습니다.  원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되며 세 번째 점은 첫 번째 점과 같을 수 없습니다.
 
  그림 A와 B에서는 일반적인 원호 세그먼트를 보여 줍니다. 세 개의 각 점이 원의 둘레에 어떻게 놓이는지 확인하십시오.
@@ -167,9 +156,7 @@ LS LengthCS Length
 
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")
 
- 위의 그림과 같이 `CircularString` 인스턴스는 보다 적은 수의 점을 사용하여 `LineString` 인스턴스보다 정확도가 높은 곡선 경계를 저장합니다. 
-  `CircularString` 인스턴스는 특정 지점에서 반경 32km 이내 검색과 같이 원 경계를 저장하는 데 유용합니다. 
-  `LineString` 인스턴스는 사각형 도시 블록과 같이 선형인 경계를 저장하는 데 유용합니다.
+ 위의 그림과 같이 `CircularString` 인스턴스는 보다 적은 수의 점을 사용하여 `LineString` 인스턴스보다 정확도가 높은 곡선 경계를 저장합니다. `CircularString` 인스턴스는 특정 지점에서 반경 32km 이내 검색과 같이 원 경계를 저장하는 데 유용합니다. `LineString` 인스턴스는 사각형 도시 블록과 같이 선형인 경계를 저장하는 데 유용합니다.
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 및 CompoundCurve 비교
  다음 코드 예제에서는 `LineString` 및 `CompoundCurve` 인스턴스를 사용하여 동일한 그림을 저장하는 방법을 보여 줍니다.
@@ -188,8 +175,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');
 ```
 
- 
-  `CompoundCurve` 인스턴스는 원호 세그먼트(2 2, 1 3, 0 2)를 직접 저장할 수 있지만 `LineString` 인스턴스는 곡선을 몇 개의 작은 선 세그먼트로 변환해야 합니다.
+ `CompoundCurve` 인스턴스는 원호 세그먼트(2 2, 1 3, 0 2)를 직접 저장할 수 있지만 `LineString` 인스턴스는 곡선을 몇 개의 작은 선 세그먼트로 변환해야 합니다.
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>CircularString 및 CompoundCurve 비교
  다음 코드 예제에서는 `CircularString` 인스턴스에 원형 조각을 저장하는 방법을 보여 줍니다.
@@ -200,8 +186,7 @@ SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.324
 SELECT @g.ToString(), @g.STLength();
 ```
 
- 
-  `CircularString` 인스턴스를 사용하여 원형 조각을 저장하려면 각 선 세그먼트에 세 개의 점을 사용해야 합니다.  중간 점을 알 수 없으면 다음 조각과 같이 선 세그먼트의 엔드포인트를 계산하거나 따옴표로 묶어야 합니다.
+ `CircularString` 인스턴스를 사용하여 원형 조각을 저장하려면 각 선 세그먼트에 세 개의 점을 사용해야 합니다.  중간 점을 알 수 없으면 다음 조각과 같이 선 세그먼트의 엔드포인트를 계산하거나 따옴표로 묶어야 합니다.
 
 ```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
@@ -216,9 +201,7 @@ SELECT @g.ToString(), @g.STLength();
 ```
 
 ### <a name="polygon-and-curvepolygon-comparison"></a>Polygon 및 CurvePolygon 비교
- 
-  `CurvePolygon` 인스턴스는 외부 및 내부 링을 정의할 때 `CircularString` 및 `CompoundCurve` 인스턴스를 사용할 수 있습니다.  
-  `Polygon` 인스턴스는 원호 세그먼트 형식인 `CircularString` 및 `CompoundCurve`를 사용합니다.
+ `CurvePolygon` 인스턴스는 외부 및 내부 링을 정의할 때 `CircularString` 및 `CompoundCurve` 인스턴스를 사용할 수 있습니다.  `Polygon` 인스턴스는 원호 세그먼트 형식인 `CircularString` 및 `CompoundCurve`를 사용합니다.
 
 
 ## <a name="see-also"></a>참고 항목

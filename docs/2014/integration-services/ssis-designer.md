@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176112"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
@@ -41,7 +41,7 @@ ms.locfileid: "78176112"
 
  다음 다이어그램은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너와 **도구 상자** 창을 보여 줍니다.
 
- ![SSIS 디자이너 및 도구 상자의 스크린샷](media/denali-designerandtoolbox.gif "SSIS 디자이너 및 도구 상자의 스크린 샷")
+ ![SSIS 디자이너 및 도구 상자의 스크린샷](media/denali-designerandtoolbox.gif "SSIS 디자이너 및 도구 상자의 스크린샷")
 
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 패키지에 대한 추가 기능을 제공하는 추가 대화 상자 및 창이 있으며, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에는 개발 환경 구성 및 패키지 사용을 위한 창 및 대화 상자가 제공됩니다. 자세한 내용은 [Integration Services 사용자 인터페이스](integration-services-user-interface.md)를 참조하세요.
 
@@ -96,8 +96,7 @@ ms.locfileid: "78176112"
 >  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다.
 
 ##### <a name="connection-managers-area"></a>연결 관리자 영역
- 
-  **연결 관리자** 영역에서는 패키지에서 사용되는 연결 관리자를 추가하고 수정합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 텍스트 파일, OLE DB 데이터베이스 및 .NET 공급자와 같은 다양 한 데이터 원본에 연결 하기 위한 연결 관리자가 포함 되어 있습니다.
+ **연결 관리자** 영역에서는 패키지에서 사용되는 연결 관리자를 추가하고 수정합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 텍스트 파일, OLE DB 데이터베이스 및 .NET 공급자와 같은 다양한 데이터 원본에 연결하기 위한 연결 관리자가 포함됩니다.
 
  자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](../../2014/integration-services/create-connection-managers.md)를 참조하세요.
 

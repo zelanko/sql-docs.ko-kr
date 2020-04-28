@@ -17,10 +17,10 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d351db8ca696263f294f5a52f364d42ac48bad24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320780"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds(Transact-SQL)
@@ -59,11 +59,11 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|복제 성능 메트릭의 ID이며 다음 중 하나가 될 수 있습니다.<br /><br /> **1 만료** -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **2 대기 시간** -트랜잭션 게시에 대 한 구독의 성능을 모니터링 합니다.<br /><br /> **4mergeexpiration** -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **5mergeslowrunduration** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **6mergefastrunduration** -고대역폭 (LAN) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **7mergefastrunspeed** -고대역폭 (LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.<br /><br /> **8mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.|  
-|**제목과**|**sysname**|복제 성능 메트릭의 이름입니다.|  
-|**기본값**|**int**|복제 성능 메트릭의 임계값입니다.|  
+|**title**|**sysname**|복제 성능 메트릭의 이름입니다.|  
+|**value**|**int**|복제 성능 메트릭의 임계값입니다.|  
 |**shouldalert**|**bit**|메트릭이이 게시에 대해 정의 된 임계값을 초과할 때 경고를 생성 해야 하는지 여부입니다. 값 **1** 은 경고가 발생 해야 함을 나타냅니다.|  
 |**isenabled**|**bit**|이 게시에 대 한이 복제 성능 메트릭에 대해 모니터링을 사용할 수 있는지 여부입니다. 값이 **1** 이면 모니터링이 사용 하도록 설정 되어 있음을 나타냅니다.|  
   

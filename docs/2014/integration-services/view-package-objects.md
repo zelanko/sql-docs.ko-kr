@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec6d819d48ba5307e4c5c9e61ef8f7c375d6d96c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176092"
 ---
 # <a name="view-package-objects"></a>패키지 개체 보기
@@ -37,7 +37,7 @@ ms.locfileid: "78176092"
 
  다음 다이어그램에서는 예제 패키지의 트리 뷰를 보여 줍니다.
 
- ![패키지 탐색기 탭의 스크린샷](media/packageexplorer.gif "패키지 탐색기 탭의 스크린 샷")
+ ![패키지 탐색기 탭의 스크린샷](media/packageexplorer.gif "패키지 탐색기 탭의 스크린샷")
 
 ### <a name="to-view-package-content"></a>패키지 내용을 보려면
 

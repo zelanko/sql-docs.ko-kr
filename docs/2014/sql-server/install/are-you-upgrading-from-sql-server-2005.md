@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2005에서 업그레이드하나요? | Microsoft Docs
+title: SQL Server 2005에서 업그레이드하나요? | Microsoft 문서
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656580"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
@@ -39,8 +39,8 @@ ms.locfileid: "75656580"
 |관계형 스토리지 옵션|이점|고려할 기타 요소|  
 |-------------------------------|--------------|-------------------------------|  
 |**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 애플리케이션의 경우 이 옵션을 고려합니다.<br /><br /> 자세한 내용은 [SQL Server 2014](https://www.microsoft.com/EN-US/server-cloud/products/sql-server/)을 참조 하세요.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server 2005에서 업그레이드 하는 경우 가장 유사한 환경입니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.|  
-|**Azure virtual machines에서 호스트 되는 SQL Server**<br /><br /> 다음을 원하는 경우 이 옵션을 고려합니다.<br />-호스팅된 환경으로 마이그레이션하는 이점<br />-운영 환경을 제어 합니다.<br />-SQL Server의 친숙 한 기능 집합<br /><br /> 자세한 내용은 [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.|  
-|**Azure SQL Database 호스팅된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.<br /><br /> 자세한 내용은 [SQL Database](https://azure.microsoft.com/services/sql-database/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)을 참조하세요.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 스토리지뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL 데이터베이스의 최대 데이터베이스 크기는 500GB이고 SQL Server의 경우에는 524PB입니다.|  
+|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음을 원하는 경우 이 옵션을 고려합니다.<br />-호스팅된 환경으로 마이그레이션하는 이점<br />-운영 환경을 제어 합니다.<br />-SQL Server의 친숙 한 기능 집합<br /><br /> 자세한 내용은 [Azure Virtual Machines의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.|  
+|**Azure SQL Database에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.<br /><br /> 자세한 내용은 [SQL Database](https://azure.microsoft.com/services/sql-database/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [SQL Server 데이터베이스를 Azure SQL Database로 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)을 참조하세요.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 스토리지뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL Database Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL 데이터베이스의 최대 데이터베이스 크기는 500GB이고 SQL Server의 경우에는 524PB입니다.|  
   
  특정 데이터 및 애플리케이션의 경우 비관계형 또는 NoSQL 솔루션을 고려할 수도 있습니다.  
   
@@ -57,18 +57,17 @@ ms.locfileid: "75656580"
   
 -   SQL Server 팀에서 올린 다음 일련의 블로그 게시물을 통해 업그레이드를 계획 하는 방법에 대해 알아봅니다.  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 1/3 단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 1/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 2/3 단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 2/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 3/3 단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 3/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
   
 -   [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항을](hardware-and-software-requirements-for-installing-sql-server.md)비롯 하 여 [SQL Server 설치 계획](../../../2014/sql-server/install/planning-a-sql-server-installation.md)에서 요구 사항 및 고려 사항을 검토 합니다.  
   
 -   업그레이드 하는 방법에 대해 알아봅니다.  
   
-    -   
-  [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)항목에서 사용 가능한 업그레이드 방법을 검토하고 계획 및 테스트 방법을 알아봅니다.  
+    -   [Upgrade Database Engine](../../database-engine/install-windows/upgrade-database-engine.md)항목에서 사용 가능한 업그레이드 방법을 검토하고 계획 및 테스트 방법을 알아봅니다.  
   
         > [!IMPORTANT]  
         >  SQL Server 2005 서버를 SQL Server 2014 서버로 직접 업그레이드할 수 없습니다. SQL Server 2014를 설치한 다음 SQL Server 2005 데이터베이스를 새 설치로 마이그레이션해야 합니다.  

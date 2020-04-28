@@ -15,14 +15,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85e2c4a1fda84a8575509a863de6e5f2e6fd5dce
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176052"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층은 지정한 방법으로 단일 엔터티의 멤버를 구성합니다. 구조는 비정형일 수 있으며 파생 계층과 달리 명시적 계층은 도메인 기반 특성 관계를 기반으로 하지 않습니다.
 
 ## <a name="consolidated-members-group-other-members"></a>통합 멤버가 다른 멤버를 그룹화함
@@ -83,15 +82,15 @@ ms.locfileid: "78176052"
 |태스크 설명|항목|
 |----------------------|-----------|
 |명시적 계층 및 컬렉션에 엔터티를 사용합니다.|[명시적 계층 및 컬렉션에 대해 엔터티를 사용 하도록 설정 &#40;MDS(Master Data Services)&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|
-|새 명시적 계층을 만듭니다.|[명시적 계층 &#40;MDS(Master Data Services)를 만듭니다&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 &#40;MDS(Master Data Services)&#41;변경](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
-|기존 명시적 계층을 삭제합니다.|[&#40;MDS(Master Data Services) 명시적 계층을 삭제&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|
+|새 명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
+|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 변경&#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
+|기존 명시적 계층을 삭제합니다.|[명시적 계층 삭제&#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|
 |||
 
 ## <a name="related-content"></a>관련 내용
 
--   [파생 계층 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
+-   [파생 계층&#40;Master Data Services&#41;](../../2014/master-data-services/derived-hierarchies-master-data-services.md)
 
--   [컬렉션 &#40;MDS(Master Data Services)&#41;](../../2014/master-data-services/collections-master-data-services.md)
+-   [컬렉션&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)
 
 

@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ff8490824c6a0ccb45b383535e830cabff83407
-ms.sourcegitcommit: cebf41506a28abfa159a5dd871b220630c4c4504
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77479351"
 ---
 # <a name="sequences-transact-sql"></a>시퀀스 (Transact-sql)
@@ -32,7 +32,7 @@ ms.locfileid: "77479351"
 
 이러한 뷰에서 정보를 검색 하려면 **INFORMATION_SCHEMA**의 정규화 된 이름을 지정_view_name_합니다.
 
-|열 이름|데이터 형식|Description|
+|열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|
 |**SEQUENCE_CATALOG**|**nvarchar(128)**|시퀀스 한정자|
 |**SEQUENCE_SCHEMA**|**nvarchar (** 128) * *|시퀀스를 포함 하는 스키마의 이름입니다.|
@@ -59,4 +59,4 @@ SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ## <a name="see-also"></a>참고 항목
 
 - [Transact-sql&#41;&#40;정보 스키마 뷰](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
-- [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)
+- [sys.sequences&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

@@ -11,16 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175312"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>알 수 없는 멤버 및 Null 처리 속성 정의
-  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.
 
  차원 마법사와 큐브 마법사는 차원의 키 특성이 Null을 허용하는지 또는 눈송이 차원의 루트 특성이 Null 허용 열을 기반으로 하는지 여부에 따라서 이러한 속성을 설정합니다. 이러한 경우에 키 특성의 **NullProcessing** 속성은 **UnknownMember** 로 설정되고 **UnknownMember** 속성은 **Visible**로 설정됩니다.
 
@@ -33,8 +31,7 @@ ms.locfileid: "78175312"
 
 ## <a name="reviewing-error-handling-and-unknown-member-properties-in-the-product-dimension"></a>Product 차원의 오류 처리 및 알 수 없는 멤버 속성 검토
 
-1.  
-  **Product** 차원의 차원 디자이너로 전환하고 **차원 구조** 탭을 클릭한 후 **특성** 창의 **Product** 를 선택합니다.
+1.  **Product** 차원의 차원 디자이너로 전환하고 **차원 구조** 탭을 클릭한 후 **특성** 창의 **Product** 를 선택합니다.
 
      이렇게 하면 차원 자체의 속성을 보고 수정할 수 있습니다.
 
@@ -44,8 +41,7 @@ ms.locfileid: "78175312"
 
 3.  속성 창의 **ErrorConfiguration** 속성 셀에서 **(사용자 지정)** 을 선택한 후 **ErrorConfiguration** 속성 컬렉션을 확장합니다.
 
-     
-  **ErrorConfiguration** 속성을 **(사용자 지정)** 으로 설정하면 기본 오류 구성 설정을 볼 수 있습니다. 이로 인해 설정이 변경되지는 않습니다.
+     **ErrorConfiguration** 속성을 **(사용자 지정)** 으로 설정하면 기본 오류 구성 설정을 볼 수 있습니다. 이로 인해 설정이 변경되지는 않습니다.
 
 4.  키 및 Null 키 오류 구성 속성을 검토만 하고 변경하지 마십시오.
 
@@ -59,8 +55,7 @@ ms.locfileid: "78175312"
 
      Product Line 수준의 5개 멤버가 표시됩니다.
 
-6.  
-  **Components**를 확장한 후 레이블이 없는 **Model Name** 수준의 멤버를 확장합니다.
+6.  **Components**를 확장한 후 레이블이 없는 **Model Name** 수준의 멤버를 확장합니다.
 
      이 수준에는 다음 이미지에 표시된 것처럼 다른 구성 요소를 작업할 때 사용되는 어셈블리 구성 요소가 들어 있으며 **Adjustable Race** 제품으로 시작합니다.
 
@@ -68,58 +63,43 @@ ms.locfileid: "78175312"
 
 ## <a name="defining-attributes-from-snowflaked-tables-and-a-product-category-user-defined-hierarchy"></a>눈송이 테이블 및 제품 범주 사용자 정의 계층의 특성 정의
 
-1.  
-  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 데이터 원본 뷰의 데이터 원본 뷰 디자이너를 열고 **다이어그램 구성 도우미** 창에서 **Reseller Sales** 를 선택한 후 **의** 데이터 원본 뷰 **메뉴에서** 개체 추가/제거 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 클릭합니다.
+1.  [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 데이터 원본 뷰의 데이터 원본 뷰 디자이너를 열고 **다이어그램 구성 도우미** 창에서 **Reseller Sales** 를 선택한 후 **의** 데이터 원본 뷰 **메뉴에서** 개체 추가/제거 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 클릭합니다.
 
-     
-  **테이블 추가/제거** 대화 상자가 열립니다.
+     **테이블 추가/제거** 대화 상자가 열립니다.
 
-2.  
-  **포함된 개체** 목록에서 **DimProduct (dbo)** 를 선택한 후 **관련 테이블 추가**를 클릭합니다.
+2.  **포함된 개체** 목록에서 **DimProduct (dbo)** 를 선택한 후 **관련 테이블 추가**를 클릭합니다.
 
-     
-  **DimProductSubcategory (dbo)** 및 **FactProductInventory (dbo)** 가 둘 다 추가됩니다. 
-  **DimProductSubcategory (dbo)** 테이블만 **포함된 개체** 목록에 추가되도록 **FactProductInventory (dbo)** 를 제거합니다.
+     **DimProductSubcategory (dbo)** 및 **FactProductInventory (dbo)** 가 둘 다 추가됩니다. **DimProductSubcategory (dbo)** 테이블만 **포함된 개체** 목록에 추가되도록 **FactProductInventory (dbo)** 를 제거합니다.
 
-3.  
-  **DimProductSubcategory (dbo)** 테이블이 가장 최근에 추가된 테이블로 기본적으로 선택된 상태에서 **관련 테이블 추가** 를 다시 클릭합니다.
+3.  **DimProductSubcategory (dbo)** 테이블이 가장 최근에 추가된 테이블로 기본적으로 선택된 상태에서 **관련 테이블 추가** 를 다시 클릭합니다.
 
-     
-  **DimProductCategory (dbo)** 테이블이 **포함된 개체** 목록에 추가됩니다.
+     **DimProductCategory (dbo)** 테이블이 **포함된 개체** 목록에 추가됩니다.
 
 4.  **확인**을 클릭합니다.
 
-5.  
-  **의** 서식 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]메뉴에서 **자동 레이아웃**을 가리킨 후 **다이어그램**을 클릭합니다.
+5.  **의** 서식 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]메뉴에서 **자동 레이아웃**을 가리킨 후 **다이어그램**을 클릭합니다.
 
-     
-  **DimProductSubcategory (dbo)** 테이블 및 **DimProductCategory (dbo)** 테이블은 서로 연결되어 있으며 **Product** 테이블을 통해 **ResellerSales** 테이블과도 연결되어 있습니다.
+     **DimProductSubcategory (dbo)** 테이블 및 **DimProductCategory (dbo)** 테이블은 서로 연결되어 있으며 **Product** 테이블을 통해 **ResellerSales** 테이블과도 연결되어 있습니다.
 
-6.  
-  **Product** 차원의 차원 디자이너로 전환한 다음 **차원 구조** 탭을 클릭합니다.
+6.  **Product** 차원의 차원 디자이너로 전환한 다음 **차원 구조** 탭을 클릭합니다.
 
-7.  
-  **데이터 원본 뷰** 창의 어느 곳이든 마우스 오른쪽 단추로 클릭한 다음 **모든 테이블 표시**를 클릭합니다.
+7.  **데이터 원본 뷰** 창의 어느 곳이든 마우스 오른쪽 단추로 클릭한 다음 **모든 테이블 표시**를 클릭합니다.
 
-8.  
-  **데이터 원본 뷰** 창에서 **DimProductCategory** 테이블을 찾아 해당 테이블의 **ProductCategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.
+8.  **데이터 원본 뷰** 창에서 **DimProductCategory** 테이블을 찾아 해당 테이블의 **ProductCategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.
 
 9. **특성** 창에서이 새 특성의 이름을로 `Category`변경 합니다.
 
 10. 속성 창에서 **NameColumn** 속성 필드를 클릭 한 다음 찾아보기 (**...**) 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다.
 
-11. 
-  **원본 열** 목록에서 **EnglishProductCategoryName** 을 선택하고 **확인**을 클릭합니다.
+11. **원본 열** 목록에서 **EnglishProductCategoryName** 을 선택하고 **확인**을 클릭합니다.
 
-12. 
-  **데이터 원본 뷰** 창에서 **DimProductSubcategory** 테이블을 찾아 해당 테이블의 **ProductSubcategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.
+12. **데이터 원본 뷰** 창에서 **DimProductSubcategory** 테이블을 찾아 해당 테이블의 **ProductSubcategoryKey** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.
 
 13. **특성** 창에서이 새 특성의 이름을로 `Subcategory`변경 합니다.
 
 14. 속성 창에서 **NameColumn** 속성 필드를 클릭 한 다음 찾아보기 **(...)** 단추를 클릭 하 여 **이름 열** 대화 상자를 엽니다.
 
-15. 
-  **원본 열** 목록에서 **EnglishProductSubcategoryName** 을 선택하고 **확인**을 클릭합니다.
+15. **원본 열** 목록에서 **EnglishProductSubcategoryName** 을 선택하고 **확인**을 클릭합니다.
 
 16. 위쪽에서 아래쪽으로 `Category`, `Subcategory`및 **제품 이름**에서 다음 수준으로 **product Categories** 라는 새 사용자 정의 계층을 만듭니다.
 
@@ -127,8 +107,7 @@ ms.locfileid: "78175312"
 
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>Product 차원에서 사용자 정의 계층 찾아보기
 
-1.  
-  **Product** 차원에 대한 **차원 디자이너** 의 **차원 구조** 탭에 있는 도구 모음에서 **처리**를 클릭합니다.
+1.  **Product** 차원에 대한 **차원 디자이너** 의 **차원 구조** 탭에 있는 도구 모음에서 **처리**를 클릭합니다.
 
 2.  해당 프로젝트를 작성 및 배포하려면 **예** 를 클릭한 후 **실행** 을 클릭하여 **Product** 차원을 처리합니다.
 
@@ -140,11 +119,9 @@ ms.locfileid: "78175312"
 
      ![WHERE 절을 보여 주는 SELECT DISTINCT 절](../../2014/tutorials/media/l4-productnametraceline-1.gif "WHERE 절을 보여 주는 SELECT DISTINCT 절")
 
-5.  
-  **닫기** 를 3번 클릭하여 처리 중인 대화 상자를 모두 닫습니다.
+5.  **닫기** 를 3번 클릭하여 처리 중인 대화 상자를 모두 닫습니다.
 
-6.  
-  **Product** 차원의 차원 디자이너에서 **브라우저** 탭을 클릭한 후 **다시 연결**을 클릭합니다.
+6.  **Product** 차원의 차원 디자이너에서 **브라우저** 탭을 클릭한 후 **다시 연결**을 클릭합니다.
 
 7.  **계층** 목록에 **Product Model Lines** 가 표시 되는지 확인 하 고 `All Products`, **구성 요소**를 확장 합니다.
 
@@ -156,16 +133,13 @@ ms.locfileid: "78175312"
 
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>알 수 없는 멤버 활성화, 특성 관계 정의 및 Null에 대한 사용자 지정 프로세싱 속성 지정
 
-1.  
-  **Product** 차원의 차원 디자이너에서 **차원 구조** 탭을 클릭한 후 **특성** 창의 **Product** 를 선택합니다.
+1.  **Product** 차원의 차원 디자이너에서 **차원 구조** 탭을 클릭한 후 **특성** 창의 **Product** 를 선택합니다.
 
 2.  **속성** 창에서 **UnknownMember** 속성을 **Visible**로 변경한 다음 **UnknownMemberName** 속성의 값을로 `Assembly Components`변경 합니다.
 
-     
-  **UnknownMember** 속성을 **Visible** 또는 **Hidden** 으로 변경하면 차원에 대한 **UnknownMember** 속성이 활성화됩니다.
+     **UnknownMember** 속성을 **Visible** 또는 **Hidden** 으로 변경하면 차원에 대한 **UnknownMember** 속성이 활성화됩니다.
 
-3.  
-  **특성 관계** 탭을 클릭합니다.
+3.  **특성 관계** 탭을 클릭합니다.
 
 4.  다이어그램에서 `Subcategory` 특성을 마우스 오른쪽 단추로 클릭 한 다음 **새 특성 관계**를 선택 합니다.
 
@@ -173,28 +147,23 @@ ms.locfileid: "78175312"
 
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-7.  
-  **특성** 창에서 **Subcategory**를 선택합니다.
+7.  **특성** 창에서 **Subcategory**를 선택합니다.
 
 8.  속성 창에서 **KeyColumns** 속성을 확장한 후 **DimProductSubcategory.ProductSubcategoryKey (Integer)** 속성을 확장합니다.
 
-9. 
-  **NullProcessing** 속성을 **UnknownMember**로 변경합니다.
+9. **NullProcessing** 속성을 **UnknownMember**로 변경합니다.
 
-10. 
-  **특성** 창에서 **Model Name**을 선택합니다.
+10. **특성** 창에서 **Model Name**을 선택합니다.
 
 11. 속성 창에서 **KeyColumns** 속성을 확장한 후 **Product.ModelName (WChar)** 속성을 확장합니다.
 
-12. 
-  **NullProcessing** 속성을 **UnknownMember**로 변경합니다.
+12. **NullProcessing** 속성을 **UnknownMember**로 변경합니다.
 
      이러한 변경으로 인해 처리 중 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에 `Subcategory` 특성 또는 **Model Name** 특성에 대해 null 값이 발견 되는 경우 알 수 없는 멤버 값이 키 값으로 대체 되 고 사용자 정의 계층이 올바르게 생성 됩니다.
 
 ## <a name="browsing-the-product-dimension-again"></a>Product 차원 다시 찾아보기
 
-1.  
-  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.
+1.  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.
 
 2.  배포가 성공적으로 완료되면 **Product** 차원에 대한 차원 디자이너에서 **브라우저** 탭을 클릭한 후 **다시 연결**을 클릭합니다.
 

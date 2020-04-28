@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176544"
 ---
 # <a name="working-with-variables-programmatically"></a>프로그래밍 방식으로 변수 사용
@@ -158,7 +158,7 @@ End Module
  범위가 **System** 네임스페이스인 모든 변수는 패키지에서 사용할 수 있습니다. 자세한 내용은 [System Variables](../system-variables.md)을 참조하세요.
 
 ## <a name="namespaces"></a>네임스페이스
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 변수가 있는 두 개의 기본 네임 스페이스 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 제공 합니다. **사용자** 및 **시스템** 네임 스페이스 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])에서는 변수가 존재하는 두 개의 기본 네임스페이스인 **User** 및 **System** 네임스페이스를 제공합니다. 기본적으로 개발자가 만드는 모든 사용자 지정 변수는 **User** 네임스페이스에 추가됩니다. 시스템 변수는 **System** 네임스페이스에 있습니다. **User** 네임스페이스 외의 추가 네임스페이스를 만들어 사용자 지정 변수를 저장하거나, **User** 네임스페이스의 이름을 변경할 수는 있지만 **System** 네임스페이스의 변수를 추가 또는 수정하거나, 시스템 변수를 다른 네임스페이스에 할당할 수는 없습니다.
 
  사용할 수 있는 시스템 변수는 컨테이너 유형에 따라 달라집니다. 패키지, 컨테이너, 태스크 및 이벤트 처리기에서 사용할 수 있는 시스템 변수의 목록은 [시스템 변수](../system-variables.md)를 참조하세요.
 
@@ -228,7 +228,7 @@ End Module
 ## <a name="configuration-files"></a>구성 파일
  구성 파일에 사용자 지정 변수가 포함된 경우 런타임에 해당 변수를 업데이트할 수 있습니다. 즉, 패키지를 실행할 때 패키지의 원래 변수 값을 구성 파일의 새 값으로 바꿀 수 있습니다. 이 기술은 패키지가 각기 다른 변수 값이 필요한 여러 서버에 배포된 경우에 유용합니다. 예를 들어 변수는 **Foreach 루프** 컨테이너가 워크플로를 반복하는 횟수를 지정하거나, 오류가 발생할 경우 이벤트 처리기에서 보내는 전자 메일의 받는 사람을 나열하거나, 패키지가 실패한 것으로 처리되기 전에 발생할 수 있는 오류 횟수를 변경할 수 있습니다. 이러한 변수는 각 환경의 구성 파일에서 동적으로 제공됩니다. 따라서 구성 파일에는 읽기/쓰기가 가능한 변수만 포함될 수 있습니다. 자세한 내용은 [패키지 구성 만들기](../create-package-configurations.md)를 참조하세요.
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [Integration Services &#40;SSIS&#41; 변수가](../integration-services-ssis-variables.md) [패키지에서 변수를 사용](../use-variables-in-packages.md) 합니다.

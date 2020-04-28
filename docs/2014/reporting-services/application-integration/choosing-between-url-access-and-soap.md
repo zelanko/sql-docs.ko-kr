@@ -16,21 +16,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e44b53baff0cd55c6a8016408fd2af685bbc26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173960"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
-  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 애플리케이션에 통합하는 데 있어서 중요한 결정이 필요합니다.
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 애플리케이션에 통합하는 데 있어서 중요한 결정이 필요합니다.
 
  ![Reporting Services 프로그래밍 시나리오](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 프로그래밍 시나리오") Reporting Services 프로그래밍에서는 다양 한 시나리오를 지원 합니다.
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 방법에는 URL 액세스와 Reporting Services SOAP API 두 가지가 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 방법에는 URL 액세스와 Reporting Services SOAP API 두 가지가 있습니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.
 
 -   자신 또는 최종 사용자에게 어떤 유형의 엔터프라이즈 보고 기능이 필요합니까? 보고서를 간단하게 시작하고 탐색할 수 있는 방법이 필요합니까 아니면 사용자 지정 비즈니스 솔루션에서 고급 보고서 서버 관리 기능이 필요합니까?
 

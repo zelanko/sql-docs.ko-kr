@@ -18,10 +18,10 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75831762"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf(Transact-SQL)
@@ -40,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>인수  
- *문자열*  
+ *string*  
  는 출력을 받는 **varchar** 변수입니다.  
   
  OUTPUT  
  지정한 경우 변수의 값을 출력 매개 변수에 넣습니다.  
   
- *형식과*  
+ *format*  
  는 C 언어 **sprintf** 함수에서 지원 되는 것과 비슷한 *인수* 값에 대 한 자리 표시 자가 포함 된 서식 문자열입니다. 현재 % 포맷 인수만 지원됩니다.  
   
- *t*  
+ *argument*  
  해당되는 포맷 인수의 값을 표시하는 문자열입니다.  
   
  *n*  
@@ -67,7 +67,7 @@ xp_sprintf { string OUTPUT , format }
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_sscanf &#40;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   

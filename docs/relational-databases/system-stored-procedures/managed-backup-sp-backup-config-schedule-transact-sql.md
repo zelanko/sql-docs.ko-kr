@@ -21,10 +21,10 @@ ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e7bb477901dee22c70bb47cd0eaf7da5eb163b7f
-ms.sourcegitcommit: 87b932dc4b603a35a19f16e2c681b6a8d4df1fec
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77507538"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-sql)
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @database_name  
  특정 데이터베이스에서 관리 되는 백업을 사용 하도록 설정 하기 위한 데이터베이스 이름입니다. NULL 또는 * 인 경우이 관리 되는 백업은 서버의 모든 데이터베이스에 적용 됩니다.  
   
@@ -82,6 +82,6 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ## <a name="see-also"></a>참고 항목  
  [managed_backup. sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
+ [managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   
   

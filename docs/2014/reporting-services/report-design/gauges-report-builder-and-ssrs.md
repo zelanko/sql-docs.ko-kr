@@ -159,10 +159,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a639fa3dcdc6f87f1b7f81cb724ec04020a8f51e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172642"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
@@ -188,7 +188,7 @@ ms.locfileid: "78172642"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="GaugeTypes"></a> 계기 유형
+##  <a name="gauge-types"></a><a name="GaugeTypes"></a>계기 유형
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서는 방사형 및 선형이라는 두 가지 계기 유형을 제공합니다. 방사형 계기는 일반적으로 데이터를 속도로 표시하려는 경우 사용하고, 선형 계기는 데이터를 온도나 눈금 값으로 표시하려는 경우 사용합니다.
 
  이 두 유형 간의 가장 큰 차이는 계기의 전체적인 모양과 사용 가능한 계기 포인터입니다. 방사형 계기는 전체 또는 부분적으로 원형이며 자동차의 주행 기록기와 비슷한 모양입니다. 계기 포인터는 대개 니들이지만 표식이나 막대인 경우도 있습니다.
@@ -209,10 +209,10 @@ ms.locfileid: "78172642"
 
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")
 
- 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 글머리 기호 그래프
+ 선형 계기 옵션: 가로, 세로, 여러 막대 포인터, 두 개의 눈금, 세 개의 색 범위, 로그, 온도계, 온도계 화씨/섭씨 및 블릿(Bullet) 그래프
 
 
-##  <a name="AddingData"></a> 계기에 데이터 추가
+##  <a name="adding-data-to-a-gauge"></a><a name="AddingData"></a>계기에 데이터 추가
  디자인 화면에 계기를 추가한 후에 데이터 세트 필드를 계기 데이터 창으로 끕니다. 기본적으로 계기에서는 필드 값을 하나의 값으로 집계하여 계기에 표시합니다. Value 속성을 사용하여 이 값을 포인터에 연결합니다. 필드의 데이터 형식에 따라 계기에서는 SUM 또는 COUNT 집계를 사용합니다. 덧셈이 가능한 숫자 데이터를 사용할 때는 계기에서 SUM 함수를 사용하고 그렇지 않은 경우에는 COUNT 집계를 사용합니다. 포인터 값은 다른 집계를 사용하거나 집계를 사용하지 않을 수도 있습니다.
 
  그룹화를 계기에 추가하면 계기에 개별 그룹 또는 개별 행을 표시할 수 있습니다. 계기에서는 그룹화와 필터링을 적용할 때 포인터 값을 사용해 반환된 데이터 세트의 마지막 그룹이나 행을 표시합니다.
@@ -252,10 +252,10 @@ ms.locfileid: "78172642"
 ### <a name="defining-a-group-on-a-gauge"></a>계기에서 그룹 정의
  계기에 필드를 추가한 후에는 하나의 데이터 그룹을 추가할 수 있습니다. 계기는 하나의 데이터 영역에 여러 그룹을 표시할 수 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 다른 모든 데이터 영역과 다릅니다. 계기에서 그룹 식을 정의하여 그룹을 추가하는 것은 테이블릭스 데이터 영역에 행 그룹을 추가하는 것과 같습니다. 하지만 그룹이 추가되면 마지막 그룹의 값만이 계기에서 포인터 값으로 표시됩니다. 예를 들어 연도에 대한 그룹화 식을 추가하면 포인터는 데이터 세트의 마지막 연도에 대한 집계 판매 값을 나타내는 값을 가리킵니다. 그룹에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)를 참조하세요.
 
- 예를 들어 여러 계기가 표시되는 테이블이나 목록에서 그룹별로 집계된 데이터를 표시하려는 경우 계기에 그룹을 추가할 수 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.
+ 예를 들어 여러 계기가 표시되는 테이블이나 목록에서 그룹별로 집계된 데이터를 표시하려는 경우 계기에 그룹을 추가할 수 있습니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제 &#40;보고서 작성기 및 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조 하세요.
 
 
-##  <a name="PositioningData"></a> 계기에 요소 배치
+##  <a name="positioning-elements-in-a-gauge"></a><a name="PositioningData"></a>계기의 요소 위치 지정
  계기 패널은 하나 이상의 계기가 포함되는 최상위 컨테이너입니다. 계기 바깥쪽을 클릭하면 **계기 패널 속성** 대화 상자를 표시할 수 있습니다. 각 계기에는 계기 눈금, 계기 범위 및 계기 포인터와 같은 여러 가지 계기 요소가 포함됩니다. 계기를 사용할 때 이러한 요소의 크기와 위치를 수정하려면 계기 패널에서 요소를 측정하는 방식을 이해해야 합니다.
 
 ### <a name="understanding-size-and-position-measurements"></a>크기 및 위치 측정 방식 이해
@@ -283,7 +283,7 @@ ms.locfileid: "78172642"
  방사형 계기는 원형으로 간주되므로 이 계기 유형에서는 일반적으로 너비 값과 높이 값이 동일하게 유지됩니다. 하지만 사각형으로 간주되는 선형 계기에서는 너비와 높이 간 비율이 일반적으로 균등하지 않습니다. 계기의 가로 세로 비율은 계기의 크기를 조정할 때 유지해야 하는 너비 대 높이의 비율입니다. 예를 들어 이 값을 2로 설정하면 계기의 크기를 조정할 때 계기의 너비는 항상 계기 높이의 두 배가 됩니다. 가로 세로 비율을 설정하려면 **선형 계기 속성** 대화 상자에서 AspectRatio 속성을 설정합니다.
 
 
-##  <a name="HowTo"></a> 방법 도움말 항목
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목
  이 섹션에는 보고서에서 계기를 사용하여 작업하는 방법, 데이터를 가져와 계기에서 효율적으로 표시하는 방법 및 계기와 해당 요소를 추가/구성하는 방법을 단계별로 보여 주는 절차가 나열되어 있습니다.
 
 -   [보고서에 계기 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)
@@ -295,7 +295,7 @@ ms.locfileid: "78172642"
 -   [이미지를 계기 &#40;보고서 작성기 및 SSRS의 포인터로 지정&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)
 
 
-##  <a name="InThisSection"></a> 섹션 내용
+##  <a name="in-this-section"></a><a name="InThisSection"></a>섹션 항목
  다음 항목에서는 계기 작업에 대한 추가 정보를 제공합니다.
 
 |||

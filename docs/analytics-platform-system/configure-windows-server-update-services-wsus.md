@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761907"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Windows Server Update Services (WSUS) 구성
@@ -35,7 +35,7 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 -   어플라이언스에서 프록시 서버를 사용 하 여 업스트림 서버 또는 Microsoft 업데이트에 액세스 하는 경우 프록시 서버의 IP 주소를 알고 있어야 합니다.  
   
--   대부분의 경우 WSUS는 어플라이언스 외부의 서버에 액세스 해야 합니다. 이 사용 시나리오를 지원 하기 위해 분석 플랫폼 시스템 DNS는 외부 DNS 서버를 사용 하 여 외부 DNS 서버를 사용 하 여 외부 DNS 서버를 사용할 수 있도록 Virtual Machines 허용 하는 외부 이름 전달자를 지원 하도록 구성할 수 있습니다. 기기가. 자세한 내용은 [Dns 전달자를 사용 하 여 비 어플라이언스 DNS 이름 확인 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)을 참조 하세요.  
+-   대부분의 경우 WSUS는 어플라이언스 외부의 서버에 액세스 해야 합니다. 이 사용 시나리오를 지원 하기 위해 분석 플랫폼 시스템 DNS는 외부 DNS 서버를 사용 하 여 어플라이언스 외부에서 이름을 확인할 수 있도록 하 Virtual Machines는 외부 이름 전달자를 지원 하도록 구성 될 수 있습니다. 자세한 내용은 [Dns 전달자를 사용 하 여 비 어플라이언스 DNS 이름 확인 &#40;분석 플랫폼 시스템&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)을 참조 하세요.  
   
 ## <a name="to-configure-windows-server-update-services-wsus"></a>WSUS (Windows Server Update Services를 구성 하려면  
   
@@ -109,16 +109,15 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
     ![WSUS 프록시](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5a.png "WSUS_Wiz5a")  
   
-    #### <a name="to-configure-proxy-server-settings"></a>프록시 서버 설정을 구성 하려면  
+    #### <a name="to-configure-proxy-server-settings"></a>프록시 서버 설정을 구성하려면  
   
     1.  구성 마법사의 **프록시 서버 지정** 페이지에서 **동기화 할 때 프록시 서버 사용** 확인란을 선택한 다음 해당 상자에 프록시 서버 IP 주소 (이름 없음) 및 포트 번호 (기본적으로 포트 80)를 입력 합니다.  
   
-    2.  특정 사용자의 자격 증명을 사용해 프록시 서버에 연결할 경우 **사용자 자격 증명을 사용하여 프록시 서버에 연결** 확인란을 선택한 다음 해당 상자에 사용자 이름, 도메인 및 사용자 암호를 입력합니다. 프록시 서버에 연결 하는 사용자에 대해 기본 인증을 사용 하도록 설정 하려면 **기본 인증 허용 (일반 텍스트로 암호 보냄)** 확인란을 선택 합니다.  
+    2.  특정 사용자의 자격 증명을 사용해 프록시 서버에 연결할 경우 **사용자 자격 증명을 사용하여 프록시 서버에 연결** 확인란을 선택한 다음 해당 상자에 사용자 이름, 도메인 및 사용자 암호를 입력합니다. 프록시 서버에 연결 하는 사용자에 대 한 기본 인증을 사용 하도록 설정 하려는 경우는 **기본 인증 허용 (암호는 일반 텍스트로 보내짐)** 확인란입니다.  
   
         ![WSUS 프록시 자격 증명](./media/configure-windows-server-update-services-wsus/WSUS_Wiz5b.png "WSUS_Wiz5b")  
   
-    3.  이 시점에서 프록시 서버 구성을 완료 했습니다. 
-  **다음**을 클릭해 동기화 프로세스의 설정을 시작할 수 있는 그 다음 페이지로 이동합니다.  
+    3.  이 시점에서 프록시 서버 구성을 완료 했습니다. **다음**을 클릭해 동기화 프로세스의 설정을 시작할 수 있는 그 다음 페이지로 이동합니다.  
   
 6.  연결을 시작 합니다.  
   
@@ -171,9 +170,9 @@ WSUS를 구성 하려면 다음을 수행 해야 합니다.
   
 12. 마치고.  
   
-    **Finish**를 클릭합니다.  
+    **마침**을 클릭합니다.  
   
-## <a name="bkmk_WSUSGroup"></a>WSUS에서 어플라이언스 서버 그룹화  
+## <a name="group-the-appliance-servers-in-wsus"></a><a name="bkmk_WSUSGroup"></a>WSUS에서 어플라이언스 서버 그룹화  
 분석 플랫폼 시스템에 대해 WSUS를 구성한 후 다음 단계는 어플라이언스 서버를 그룹화 하는 것입니다. 모든 어플라이언스 서버를 그룹에 추가 하면 WSUS는 기기의 모든 서버에 소프트웨어 업데이트를 적용할 수 있습니다.  
   
 > [!NOTE]  

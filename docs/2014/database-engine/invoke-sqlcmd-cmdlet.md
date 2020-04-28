@@ -16,19 +16,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928031"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
-  **호출-sqlcmd** 는 언어 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ([!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery)의 문과 **Sqlcmd** 유틸리티에서 지 원하는 명령을 포함 하는 스크립트를 실행 하는 cmdlet입니다.  
+  **Invoke-Sqlcmd**는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 XQuery 언어로 된 문과 **sqlcmd** 유틸리티에서 지원되는 명령이 포함된 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cmdlet입니다.  
   
 ## <a name="using-invoke-sqlcmd"></a>Invoke-Sqlcmd 사용  
- 
-  **Invoke-Sqlcmd** cmdlet을 사용하여 **sqlcmd** 스크립트 파일을 Windows PowerShell 환경에서 실행할 수 있습니다. 
-  **sqlcmd** 를 사용하여 수행할 수 있는 대부분의 작업은 **Invoke-Sqlcmd**로도 수행할 수 있습니다.  
+ **Invoke-Sqlcmd** cmdlet을 사용하여 **sqlcmd** 스크립트 파일을 Windows PowerShell 환경에서 실행할 수 있습니다. **sqlcmd** 를 사용하여 수행할 수 있는 대부분의 작업은 **Invoke-Sqlcmd**로도 수행할 수 있습니다.  
   
  다음은 Invoke-Sqlcmd를 호출하여 간단한 쿼리를 실행하는 예제입니다. 이 예제는 **sqlcmd** 에 **-Q** 및 **-S** 옵션을 지정하는 것과 유사합니다.  
   
@@ -56,8 +54,7 @@ Set-Location SQLSERVER:\SQL\MyComputer\MyInstance
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance (Get-Item .)  
 ```  
   
- -Query 매개 변수는 위치 매개 변수이며 이름을 지정할 필요가 없습니다. 
-  **Invoke-Sqlcmd**에 전달된 첫 번째 문자열은 명명되지 않은 경우 -Query 매개 변수로 취급됩니다.  
+ -Query 매개 변수는 위치 매개 변수이며 이름을 지정할 필요가 없습니다. **Invoke-Sqlcmd**에 전달된 첫 번째 문자열은 명명되지 않은 경우 -Query 매개 변수로 취급됩니다.  
   
 ```powershell
 Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance"  
@@ -92,14 +89,13 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  Invoke-Sqlcmd에서 경로 데이터베이스 컨텍스트를 사용하는 경우 경고를 제공합니다. -SuppressProviderContextWarning 매개 변수를 사용하여 경고 메시지를 해제할 수 있습니다. -IgnoreProviderContext 매개 변수를 사용하여 Invoke-Sqlcmd에서 로그인에 대한 기본 데이터베이스를 항상 사용하도록 지정할 수 있습니다.  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Invoke-Sqlcmd와 sqlcmd 유틸리티 비교  
- **호출-** **sqlcmd 유틸리티를 사용 하 여 실행할** 수 있는 많은 스크립트를 실행 하는 데 sqlcmd를 사용할 수 있습니다. 하지만 **Invoke-Sqlcmd** 는 **sqlcmd** 가 실행되는 명령 프롬프트 환경과는 다른 Windows PowerShell 환경에서 실행됩니다. 
-  **Invoke-Sqlcmd** 의 동작은 Windows PowerShell 환경에서 작동하도록 수정되었습니다.  
+ **Invoke-Sqlcmd** 를 사용하면 **sqlcmd** 유틸리티로 실행할 수 있는 대부분의 스크립트를 실행할 수 있습니다. 하지만 **Invoke-Sqlcmd** 는 **sqlcmd** 가 실행되는 명령 프롬프트 환경과는 다른 Windows PowerShell 환경에서 실행됩니다. **Invoke-Sqlcmd** 의 동작은 Windows PowerShell 환경에서 작동하도록 수정되었습니다.  
   
  모든 **sqlcmd** 명령이 **Invoke-Sqlcmd**에서 구현되는 것은 아닙니다. 구현되지 않는 명령으로는 **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, **:serverlist**등이 있습니다.  
   
- SQLCMDDBNAME 또는 SQLCMDWORKSTATION와 같은 스크립팅 변수나 **sqlcmd** 환경이 초기화 **되지 않습니다.**  
+ **Invoke-Sqlcmd** 는 **sqlcmd** 환경 변수 또는 스크립팅 변수(예: SQLCMDDBNAME, SQLCMDWORKSTATION)를 초기화하지 않습니다.  
   
- Windows PowerShell **-Verbose** 일반 매개 변수를 지정 하지 않는 한, **Sqlcmd 호출은** PRINT 문의 출력과 같은 메시지를 표시 하지 않습니다. 다음은 그 예입니다.  
+ **Invoke-Sqlcmd** 는 Windows PowerShell **-Verbose** 공통 매개 변수를 지정해야 PRINT 문 출력과 같은 메시지를 표시합니다. 다음은 그 예입니다.  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -110,16 +106,15 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Description|sqlcmd 옵션|Invoke-Sqlcmd 매개 변수|  
 |-----------------|-------------------|------------------------------|  
 |서버 및 인스턴스 이름|-S|-ServerInstance|  
-|사용할 초기 데이터베이스|일시 중지되고|-Database|  
+|사용할 초기 데이터베이스|-d|-Database|  
 |지정된 쿼리 실행 후 종료|-Q|-Query|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인 ID|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인증 암호입니다.|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인 ID|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 암호|-P|-Password|  
 |변수 정의|-v|-Variable|  
 |쿼리 제한 시간 간격|-t|-QueryTimeout|  
 |오류 발생 시 실행 중지|-b|-AbortOnError|  
 |관리자 전용 연결|-A|-DedicatedAdministratorConnection|  
-|대화형 명령, 시작 스크립트 및 환경 변수를 사용하지 않음|-x|-DisableCommands|  
+|대화형 명령, 시작 스크립트 및 환경 변수를 사용하지 않음|-X|-DisableCommands|  
 |변수 대체를 사용하지 않음|-X|-DisableVariables|  
 |보고할 최소 심각도 수준|-v|-SeverityLevel|  
 |보고할 최소 오류 수준|-M|-ErrorLevel|  
@@ -133,23 +128,23 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |오류 표시|매개 변수 없음|-OutputSqlErrors|  
 |메시지를 stderr로 출력|-r|매개 변수 없음|  
 |클라이언트의 국가별 설정 사용|-R|매개 변수 없음|  
-|지정된 쿼리 실행 후 실행 중인 상태로 유지|-q|매개 변수 없음|  
+|지정된 쿼리 실행 후 실행 중인 상태로 유지|-Q|매개 변수 없음|  
 |출력 데이터에 사용할 코드 페이지|-f|매개 변수 없음|  
 |암호 변경 후 실행 중인 상태로 유지|-Z|매개 변수 없음|  
 |패킷 크기|지정하지 않을 경우|매개 변수 없음|  
-|열 구분 기호|-s|매개 변수 없음|  
-|출력 헤더 제어|-h|매개 변수 없음|  
+|열 구분 기호|-S|매개 변수 없음|  
+|출력 헤더 제어|-H|매개 변수 없음|  
 |제어 문자 지정|-k|매개 변수 없음|  
 |고정 길이 표시 너비|-y|매개 변수 없음|  
 |변수 길이 표시 너비|-y|매개 변수 없음|  
 |입력 에코|-E|매개 변수 없음|  
 |따옴표 붙은 식별자 사용|-I|매개 변수 없음|  
-|후행 공백 제거|-W|매개 변수 없음|  
+|후행 공백 제거|-w|매개 변수 없음|  
 |인스턴스 나열|-l|매개 변수 없음|  
-|출력을 유니코드 형식으로 지정|-u|매개 변수 없음|  
+|출력을 유니코드 형식으로 지정|-U|매개 변수 없음|  
 |통계 인쇄|-p|매개 변수 없음|  
 |명령 종료|-c|매개 변수 없음|  
-|Windows 인증을 사용하여 연결|-e|매개 변수 없음|  
+|Windows 인증을 사용하여 연결|-E|매개 변수 없음|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진 cmdlet 사용](../../2014/database-engine/use-the-database-engine-cmdlets.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176186"
 ---
 # <a name="extending-packages-with-scripting"></a>스크립팅을 사용한 패키지 확장
@@ -42,13 +42,12 @@ ms.locfileid: "78176186"
 ## <a name="reference"></a>참조
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md) 미리 정의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 된 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
  [사용자 지정 개체를 사용 하 여 패키지 확장](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) 여러 패키지에서 사용할 프로그램 사용자 지정 태스크, 데이터 흐름 구성 요소 및 기타 패키지 개체를 만드는 방법에 대해 설명 합니다.
 
  [프로그래밍 방식으로 패키지 작성](../building-packages-programmatically/building-packages-programmatically.md) 프로그래밍 방식으로 패키지를 만들고, 구성 하 고, 실행, 로드, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 저장 및 관리 하는 방법을 설명 합니다.
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [SQL Server Integration Services](../sql-server-integration-services.md)

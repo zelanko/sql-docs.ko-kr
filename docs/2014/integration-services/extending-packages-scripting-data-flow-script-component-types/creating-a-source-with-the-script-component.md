@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176273"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
@@ -57,8 +57,7 @@ ms.locfileid: "78176273"
 
 -   각 출력에 대해 수동으로 출력 열을 추가하고 구성해야 합니다. 각 출력에 대한 출력 열 폴더를 선택하고 **열 추가** 및 **열 제거** 단추를 사용하여 원본 구성 요소의 각 출력에 대한 출력 열을 관리합니다. 나중에 스크립트에서는 자동 생성 코드에서 만들어진 형식화된 접근자 속성을 사용하여 출력을 여기에서 할당한 이름으로 참조합니다.
 
--   예기치 않은 값이 포함된 행에 대한 시뮬레이션된 오류 출력과 같은 추가 출력을 하나 이상 만들 수 있습니다. 원본 구성 요소의 출력을 관리하려면 **출력 추가** 및 **출력 제거** 단추를 사용합니다. 각 행을 동일한 `ExclusionGroup` 값을 공유하는 출력 중 하나로만 전송하려는 경우 사용 가능한 모든 출력의 `ExclusionGroup` 속성에 0이 아닌 동일한 값을 지정하지 않으면 모든 입력 행이 사용 가능한 모든 출력으로 전송됩니다. 
-  `ExclusionGroup`을 식별하기 위해 선택한 특정 정수 값은 중요하지 않습니다.
+-   예기치 않은 값이 포함된 행에 대한 시뮬레이션된 오류 출력과 같은 추가 출력을 하나 이상 만들 수 있습니다. 원본 구성 요소의 출력을 관리하려면 **출력 추가** 및 **출력 제거** 단추를 사용합니다. 각 행을 동일한 `ExclusionGroup` 값을 공유하는 출력 중 하나로만 전송하려는 경우 사용 가능한 모든 출력의 `ExclusionGroup` 속성에 0이 아닌 동일한 값을 지정하지 않으면 모든 입력 행이 사용 가능한 모든 출력으로 전송됩니다. `ExclusionGroup`을 식별하기 위해 선택한 특정 정수 값은 중요하지 않습니다.
 
     > [!NOTE]
     >  모든 행을 출력하지 않으려는 경우 단일 출력과 함께 0이 아닌 `ExclusionGroup` 속성 값을 사용할 수도 있습니다. 그러나 이 경우 출력으로 보낼 각 행에 대해 **DirectRowTo\<outputbuffer>** 메서드를 명시적으로 호출해야 합니다.
@@ -86,35 +85,28 @@ ms.locfileid: "78176273"
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
  원본 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 코드 편집기에 나타납니다. 이 `ScriptMain` 클래스에서 사용자 지정 코드를 작성합니다.
 
- 
-  `ScriptMain` 클래스에는 `CreateNewOutputRows` 메서드에 대한 스텁이 포함되어 있습니다. 
-  `CreateNewOutputRows`는 원본 구성 요소에서 가장 중요한 메서드입니다.
+ `ScriptMain` 클래스에는 `CreateNewOutputRows` 메서드에 대한 스텁이 포함되어 있습니다. `CreateNewOutputRows`는 원본 구성 요소에서 가장 중요한 메서드입니다.
 
- VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. 
-  `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
+ VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
 
- 런타임에 데이터 흐름 엔진은 `PrimeOutput` 부모 클래스의 `UserComponent` 메서드를 재정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.
+ 런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `PrimeOutput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.
 
-1.  
-  `CreateNewOutputRows` 메서드: 처음에는 비어 있는 출력 버퍼에 데이터 원본의 행을 추가하려면 `ScriptMain`에서 이 메서드를 재정의합니다.
+1.  `CreateNewOutputRows` 메서드: 처음에는 비어 있는 출력 버퍼에 데이터 원본의 행을 추가하려면 `ScriptMain`에서 이 메서드를 재정의합니다.
 
-2.  
-  `FinishOutputs` 메서드: 이 메서드는 기본적으로 비어 있습니다. 출력을 완료하는 데 필요한 처리를 수행하려면 `ScriptMain`에서 이 메서드를 재정의합니다.
+2.  `FinishOutputs` 메서드: 이 메서드는 기본적으로 비어 있습니다. 출력을 완료하는 데 필요한 처리를 수행하려면 `ScriptMain`에서 이 메서드를 재정의합니다.
 
 3.  프라이빗 `MarkOutputsAsFinished` 메서드: 이 메서드는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer.SetEndOfRowset%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> 메서드를 호출하여 출력이 끝났음을 데이터 흐름 엔진에 알립니다. 따라서 개발자가 작성하는 코드에서 `SetEndOfRowset`을 명시적으로 호출할 필요가 없습니다.
 
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성
  사용자 지정 원본 구성 요소 만들기를 마치기 위해 `ScriptMain` 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.
 
-1.  
-  `AcquireConnections` 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.
+1.  `AcquireConnections` 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.
 
-2.  모든 원본 데이터를 동시에 로드할 수 있는 경우 `PreExecute` 메서드를 재정의하여 데이터를 로드합니다. 예를 들어 `SqlCommand` 데이터베이스에 대한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 모든 원본 데이터를 동시에 `SqlDataReader`로 로드할 수 있습니다. 텍스트 파일을 읽는 경우와 같이 원본 데이터를 한 번에 한 행씩 로드해야 하는 경우에는 `CreateNewOutputRows`에서 행을 반복할 때 데이터를 로드할 수 있습니다.
+2.  모든 원본 데이터를 동시에 로드할 수 있는 경우 `PreExecute` 메서드를 재정의하여 데이터를 로드합니다. 예를 들어 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대해 `SqlCommand`를 실행하고 모든 원본 데이터를 동시에 `SqlDataReader`로 로드할 수 있습니다. 텍스트 파일을 읽는 경우와 같이 원본 데이터를 한 번에 한 행씩 로드해야 하는 경우에는 `CreateNewOutputRows`에서 행을 반복할 때 데이터를 로드할 수 있습니다.
 
 3.  재정의된 `CreateNewOutputRows` 메서드를 사용하여 빈 출력 버퍼에 새 행을 추가하고 새 출력 행의 각 열 값을 채웁니다. 각 출력 버퍼의 `AddRow` 메서드를 사용하여 비어 있는 새 행을 추가한 다음 각 열의 값을 설정합니다. 일반적으로는 외부 원본에서 로드된 열의 값을 복사합니다.
 
-4.  
-  `PostExecute` 메서드를 재정의하여 데이터 처리를 마칩니다. 예를 들어 데이터를 로드하는 데 사용한 `SqlDataReader`를 닫을 수 있습니다.
+4.  `PostExecute` 메서드를 재정의하여 데이터 처리를 마칩니다. 예를 들어 데이터를 로드하는 데 사용한 `SqlDataReader`를 닫을 수 있습니다.
 
 5.  필요한 경우 `ReleaseConnections` 메서드를 재정의하여 외부 데이터 원본과의 연결을 끊습니다.
 
@@ -129,8 +121,7 @@ ms.locfileid: "78176273"
 
  이 예제 코드를 실행하려면 다음과 같이 패키지와 구성 요소를 구성해야 합니다.
 
-1.  
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 사용하여 `SqlClient` 데이터베이스에 연결하는 `AdventureWorks` 연결 관리자를 만듭니다.
+1.  `SqlClient` 공급자를 사용하여 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 연결하는 `AdventureWorks` 연결 관리자를 만듭니다.
 
 2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 원본으로 구성합니다.
 
@@ -395,7 +386,7 @@ ms.locfileid: "78176273"
     }
     ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 구성 요소를 사용 하 여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) [사용자 지정 원본 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)

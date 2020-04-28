@@ -15,14 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173332"
 ---
 # <a name="report-data-pane-report-builder"></a>보고서 데이터 창(보고서 작성기)
-  
   **보고서 데이터** 창을 사용하여 보고서의 현재 정의된 매개 변수, 데이터 원본, 데이터 세트, 필드 컬렉션 및 이미지를 볼 수 있습니다. 보고서 데이터는 보고서의 데이터를 나타내는 항목의 계층 뷰를 표시합니다. 최상위 노드는 기본 제공 필드, 매개 변수, 이미지 및 데이터 원본 참조를 나타냅니다. 각 노드를 확장하여 데이터 항목을 볼 수 있습니다. 예를 들어 데이터 원본 노드를 확장하면 해당 데이터 원본에 대해 정의된 데이터 세트가 표시됩니다. 데이터 세트를 확장하면 필드 컬렉션이 표시됩니다. 항목을 보고서 디자인 화면이나 그룹화 창으로 끌어 데이터를 보고서 페이지의 선택된 보고서 항목에 연결합니다. 자세한 내용은 [보고서 디자인 뷰&#40;보고서 작성기&#41;](report-builder/report-design-view-report-builder.md)를 참조하세요.
 
 ## <a name="options"></a>옵션
@@ -30,7 +29,7 @@ ms.locfileid: "78173332"
 
  **매개 변수** 각각 단일 값 또는 다중값 일 수 있는 보고서 매개 변수의 컬렉션을 나타냅니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.
 
- **이미지** 보고서에 사용 되는 이미지 집합을 나타냅니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)를 참조하세요.
+ **이미지** 보고서에 사용되는 이미지 집합을 나타냅니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)를 참조하세요.
 
  **데이터 원본** 포함 된 데이터 원본 또는 공유 데이터 원본에 대 한 참조를 나타냅니다. 데이터 원본은 보고서의 데이터 원본을 나타냅니다. 데이터 원본은 이를 사용하는 데이터 세트 컬렉션의 부모 노드입니다. 자세한 내용은 보고서 작성기의 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md) 및 [데이터 연결, 데이터 원본 및 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조 하세요.
 

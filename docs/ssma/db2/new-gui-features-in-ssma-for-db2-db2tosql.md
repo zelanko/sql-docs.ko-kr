@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909713"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 GUI 기능 (DB2ToSQL)

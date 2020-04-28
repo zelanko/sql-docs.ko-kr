@@ -15,10 +15,10 @@ ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76911097"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 속성 예제(VC++)
@@ -109,4 +109,4 @@ int main() {
   
 ## <a name="see-also"></a>참고 항목  
  [DeleteRule 속성 (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

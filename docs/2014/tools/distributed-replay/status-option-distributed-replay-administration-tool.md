@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171952"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>상태 옵션(Distributed Replay Administration Tool)
-  Distributed Replay 관리 도구인 `DReplay.exe`는 Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 문서에서는 **status** 명령줄 옵션과 해당 구문에 대해 설명합니다.
+  Distributed Replay 관리 도구인 `DReplay.exe`는 Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 항목에서는 **status** 명령줄 옵션과 해당 구문에 대해 설명합니다.
 
  **status** 옵션은 컨트롤러를 쿼리하여 현재 상태를 표시합니다.
 
@@ -34,17 +34,14 @@ dreplay status [-mcontroller] [-fstatus_interval]
 #### <a name="parameters"></a>매개 변수
  **-m** *컨트롤러* 컨트롤러의 컴퓨터 이름을 지정 합니다. "`localhost`" 또는 "`.`"을 사용하여 로컬 컴퓨터를 참조할 수 있습니다.
 
- 
-  **-m** 매개 변수를 지정하지 않으면 로컬 컴퓨터가 사용됩니다.
+ **-m** 매개 변수를 지정하지 않으면 로컬 컴퓨터가 사용됩니다.
 
  **-f** *status_interval* 상태를 표시할 빈도 (초)를 지정 합니다.
 
- 
-  **-f** 매개 변수를 지정하지 않을 경우 기본 간격은 30초입니다.
+ **-f** 매개 변수를 지정하지 않을 경우 기본 간격은 30초입니다.
 
 ## <a name="examples"></a>예
- 다음 예에서는 현재 상태가 60초 간격으로 표시됩니다. 
-  `localhost` 값은 컨트롤러 서비스가 관리 도구와 동일한 컴퓨터에서 실행 중임을 나타냅니다.
+ 다음 예에서는 현재 상태가 60초 간격으로 표시됩니다. `localhost` 값은 컨트롤러 서비스가 관리 도구와 동일한 컴퓨터에서 실행 중임을 나타냅니다.
 
 ```
 dreplay status -m localhost -f 60

@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176423"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
@@ -106,12 +106,9 @@ ms.locfileid: "78176423"
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>Foreach 루프에 속성 식 사용
  Foreach 루프 컨테이너 내에서 사용되는 연결 관리자의 `ConnectionString` 속성 값을 설정하도록 속성 식을 구현하는 것이 유용한 경우가 종종 있습니다. 루프가 반복될 때마다 열거자가 현재 값을 변수에 매핑한 후 속성 식에서 이 변수 값을 사용하여 `ConnectionString` 속성 값을 동적으로 업데이트할 수 있습니다.
 
- Foreach 루프에서 사용하는 파일, 다중 파일, 플랫 파일 및 다중 플랫 파일 연결 관리자의 `ConnectionString` 속성과 함께 속성 식을 사용하려는 경우 몇 가지 사항을 고려해야 합니다. 
-  `MaxConcurrentExecutables` 속성을 1보다 큰 값이나 -1 값으로 설정하여 여러 실행 파일을 동시에 실행하도록 패키지를 구성할 수 있습니다. 값 -1은 동시에 실행되는 최대 실행 파일 수가 프로세서 수 +2가 되도록 합니다. 실행 파일의 병렬 실행에서 부정적인 결과가 발생하지 않도록 하려면 `MaxConcurrentExecutables` 값을 1로 설정해야 합니다. 
-  `MaxConcurrentExecutables`를 1로 설정하지 않으면 `ConnectionString` 속성 값을 보장할 수 없으므로 결과를 예측할 수 없습니다.
+ Foreach 루프에서 사용하는 파일, 다중 파일, 플랫 파일 및 다중 플랫 파일 연결 관리자의 `ConnectionString` 속성과 함께 속성 식을 사용하려는 경우 몇 가지 사항을 고려해야 합니다. `MaxConcurrentExecutables` 속성을 1보다 큰 값이나 -1 값으로 설정하여 여러 실행 파일을 동시에 실행하도록 패키지를 구성할 수 있습니다. 값 -1은 동시에 실행되는 최대 실행 파일 수가 프로세서 수 +2가 되도록 합니다. 실행 파일의 병렬 실행에서 부정적인 결과가 발생하지 않도록 하려면 `MaxConcurrentExecutables` 값을 1로 설정해야 합니다. `MaxConcurrentExecutables`를 1로 설정하지 않으면 `ConnectionString` 속성 값을 보장할 수 없으므로 결과를 예측할 수 없습니다.
 
- 예를 들어 Foreach 루프가 폴더에 있는 파일을 열거하고 파일 이름을 검색한 다음 SQL 실행 태스크를 사용하여 각 파일 이름을 테이블에 삽입한다고 가정합니다. 
-  `MaxConcurrentExecutables`가 1로 설정되지 않은 경우 SQL 실행 태스크의 인스턴스 두 개가 동시에 테이블에 쓰기를 시도하면 쓰기 충돌이 발생할 수 있습니다.
+ 예를 들어 Foreach 루프가 폴더에 있는 파일을 열거하고 파일 이름을 검색한 다음 SQL 실행 태스크를 사용하여 각 파일 이름을 테이블에 삽입한다고 가정합니다. `MaxConcurrentExecutables`가 1로 설정되지 않은 경우 SQL 실행 태스크의 인스턴스 두 개가 동시에 테이블에 쓰기를 시도하면 쓰기 충돌이 발생할 수 있습니다.
 
 ## <a name="sample-property-expressions"></a>예제 속성 식
  다음 예제 식에서는 속성 식에서 시스템 변수, 연산자, 함수 및 문자열 리터럴을 사용하는 방법을 보여 줍니다.

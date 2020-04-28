@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: 2a6d027c1fb1834e4033a11a498bfc8cdad4561f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76977604"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>데이터베이스 실험 도우미 분석 보고서 보기

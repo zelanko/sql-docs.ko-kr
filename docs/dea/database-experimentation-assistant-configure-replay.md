@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761537"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>데이터베이스 실험 도우미에 대 한 Distributed Replay 구성
@@ -62,8 +62,7 @@ Distributed Replay 컴퓨터 간에 공통 계정을 사용 해야 합니다. �
 1. Dcomcnfg.exe를 엽니다.
 2. **구성 요소 서비스** > **컴퓨터** > **내 컴퓨터** > **DCOM 구성**을 확장 합니다.
 3. **DCOM 구성**에서 **DReplayController**을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 선택 합니다.
-4. 
-  **보안** 탭을 선택합니다.
+4. **보안** 탭을 선택합니다.
 5. **시작 및 활성화 권한**에서 **사용자 지정**을 선택 하 고 **편집**을 선택 합니다.
 6. 재생을 시작할 사용자를 추가 합니다. 사용자 로컬 시작 및 로컬 활성화 권한을 부여 합니다. 사용자가 원격으로 시작 하거나 활성화할 계획인 경우 사용자 원격 시작 및 원격 활성화 권한을 부여 합니다.
 7. **확인** 을 선택 하 여 변경 내용을 커밋하고 **보안** 탭으로 돌아갑니다.

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175986"
 ---
 # <a name="data-collection"></a>데이터 수집
@@ -36,8 +36,7 @@ ms.locfileid: "78175986"
 ## <a name="data-collector-concepts"></a>데이터 수집기 개념
  데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]와 통합되며 둘 다 광범위하게 사용됩니다. 따라서 데이터 수집기를 사용하려면 먼저 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 각각과 관련된 특정 개념을 이해해야 합니다.
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 컬렉션 작업을 예약하고 실행하는 데 사용됩니다. 다음 개념을 이해해야 합니다.
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 컬렉션 작업을 예약하고 실행하는 데 사용됩니다. 다음 개념을 이해해야 합니다.
 
 -   작업
 
@@ -51,22 +50,18 @@ ms.locfileid: "78175986"
 
  자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/sql-server-agent.md)를 참조하세요.
 
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]패키지
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지
 
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 구성
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 구성
 
  자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)를 참조하세요.
 
 ## <a name="data-collector-terminology"></a>데이터 수집기 용어
  데이터 컬렉션을 지 원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 대상으로 합니다. 지원 되는 버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)의 "관리 효율성" 섹션을 참조 하세요.
 
- 
-  *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. 
-  *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.
+ *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.
 
  대상 형식 특정 특성 및 동작을 포함 하는 대상의 유형입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 대상의 특징은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 대상의 특징과 다릅니다.
 

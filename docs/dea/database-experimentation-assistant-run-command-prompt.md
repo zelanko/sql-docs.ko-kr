@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77600123"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>명령 프롬프트에서 데이터베이스 실험 도우미 실행
@@ -44,7 +44,7 @@ ms.locfileid: "77600123"
 
 `Deacmd.exe` 명령을 사용 하 여 새 워크 로드 캡처를 시작할 때 다음과 같은 추가 옵션을 사용할 수 있습니다.
 
-| 옵션| Description |  
+| 옵션| 설명 |  
 | --- | --- |
 | -n, --name | 하다 추적 파일 이름 |
 | -x,--형식 | 하다 추적 형식 (Trace = 0, Xevent = 1) |
@@ -76,7 +76,7 @@ Distributed Replay를 사용 하는 경우 다음 단계를 수행 합니다.
 
     b.  지정 `Set @durationInMins=0` 된 시간이 지나면 추적 캡처가 자동으로 중지 되지 않도록를 실행 합니다.
 
-    다.  추적 파일당 최대 파일 크기를 설정 하려면를 실행 `Set @maxfilesize`합니다. 권장 크기는 200 (MB)입니다.
+    c.  추적 파일당 최대 파일 크기를 설정 하려면를 실행 `Set @maxfilesize`합니다. 권장 크기는 200 (MB)입니다.
 
     d.  추적 `@Tracefile` 파일에 대 한 고유한 이름을 설정 하려면 편집 합니다.
 
@@ -115,7 +115,7 @@ Distributed Replay를 사용 하는 경우 다음 단계를 수행 합니다.
 
 DEA 명령을 사용 하 여 추적을 분석 하는 경우 다음과 같은 추가 옵션을 사용할 수 있습니다.
 
-| 옵션| Description |  
+| 옵션| 설명 |  
 | --- | --- |
 | -a,--traceA | 하다 인스턴스에 대 한 이벤트 파일의 파일 경로입니다. 예 C:\traces\Sql2008trace.trc.  파일이 배치 되어 있으면 첫 번째 파일을 선택 하 고 DEA 롤오버 파일을 자동으로 확인 합니다. 파일이 blob에 있는 경우 이벤트 파일을 로컬에 저장 하려는 폴더 경로를 제공 합니다.  예 C:\traces\ |
 | -b,--traceB | 하다 B 인스턴스에 대 한 이벤트 파일의 파일 경로입니다. 예 C:\traces\Sql2014trace.trc. 파일이 배치 되어 있으면 첫 번째 파일을 선택 하 고 DEA 롤오버 파일을 자동으로 확인 합니다. 파일이 blob에 있는 경우 이벤트 파일을 로컬에 저장 하려는 폴더 경로를 제공 합니다.  예 C:\traces\ |

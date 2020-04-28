@@ -11,20 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177231"
 ---
 # <a name="task-6-setting-synonyms"></a>태스크 6: 동의어 설정
-  이 작업에서는 **Country** 도메인의 **USA**및 **United States** 두 도메인 값을 동의어로 설정하고 **United States** 를 선행 값으로 설정합니다. 
-  **Country** 도메인을 만들 때 **선행 값 사용** 옵션을 선택했기 때문에 **Country** 도메인의 모든 **USA** 값은 United States가 선행 값이므로 **United States** 로 출력됩니다. 자세한 내용은 [도메인 값 변경](https://msdn.microsoft.com/library/hh510408.aspx) 을 참조하십시오.
+  이 작업에서는 **Country** 도메인의 **USA**및 **United States** 두 도메인 값을 동의어로 설정하고 **United States** 를 선행 값으로 설정합니다. **Country** 도메인을 만들 때 **선행 값 사용** 옵션을 선택했기 때문에 **Country** 도메인의 모든 **USA** 값은 United States가 선행 값이므로 **United States** 로 출력됩니다. 자세한 내용은 [도메인 값 변경](https://msdn.microsoft.com/library/hh510408.aspx) 을 참조하십시오.
 
 1.  도메인 목록에서 **Country** 를 선택합니다.
 
-2.  
-  **도메인 값** 탭으로 전환합니다.
+2.  **도메인 값** 탭으로 전환합니다.
 
 3.  도구 모음에서 **새 도메인 값 추가** 단추를 클릭합니다.
 
@@ -34,8 +32,7 @@ ms.locfileid: "78177231"
 
      ![동의어로 설정 메뉴](../../2014/tutorials/media/et-settingsynonyms-01.jpg "동의어로 설정 메뉴")
 
-6.  
-  **United States** 가 선행 값으로 설정되었습니다. USA를 선행 값으로 지정하려면 USA를 마우스 오른쪽 단추로 클릭하고 **선행 값으로 설정** 옵션을 선택합니다. 이 자습서에서는 **United States** 를 선행 값으로 사용합니다.
+6.  **United States** 가 선행 값으로 설정되었습니다. USA를 선행 값으로 지정하려면 USA를 마우스 오른쪽 단추로 클릭하고 **선행 값으로 설정** 옵션을 선택합니다. 이 자습서에서는 **United States** 를 선행 값으로 사용합니다.
 
      ![미국과 USA를 동의어로 설정](../../2014/tutorials/media/et-settingsynonyms-02.jpg "미국과 USA를 동의어로 설정")
 

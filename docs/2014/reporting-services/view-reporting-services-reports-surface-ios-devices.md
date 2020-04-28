@@ -17,18 +17,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5ca879d51f947ec078b3c1b7e14842ea926f0240
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174852"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Microsoft Surface 디바이스 및 Apple iOS 디바이스에서 Reporting Services 보고서 보기
   이 문서에서는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 디바이스에서 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능 및 워크플로를 설명합니다.
 
 ## <a name="view-and-interact-with-reports"></a>보고서 보기 및 상호 작용
- 
-  [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]부터 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 브라우저 디바이스에서 보고서 보기 및 기본 상호 작용을 지원합니다. Microsoft Surface 디바이스를 사용하는 보고서를 게시할 수도 있습니다.
+ [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]부터 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 Microsoft Surface 디바이스 및 iPad와 같은 Apple iOS 6 및 Apple Safari 브라우저 디바이스에서 보고서 보기 및 기본 상호 작용을 지원합니다. Microsoft Surface 디바이스를 사용하는 보고서를 게시할 수도 있습니다.
 
  ![IPad 데스크톱](media/videothumbnail.jpg "IPad 바탕 화면") IPad에서 보고서를 보는 방법에 대 한 데모를 시청 하세요.
 
@@ -48,19 +47,18 @@ ms.locfileid: "78174852"
 
 2.  다음 중 하나를 수행하여 보고서를 엽니다.
 
-    -   **전자 메일에서 시작:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독으로 만들어진 전자 메일에서 보고서의 URL을 누릅니다. 보고서가 브라우저에서 열립니다.
+    -   **전자 메일에서 시작:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독으로 만들어진 전자 메일에서 보고서의 URL을 탭합니다. 보고서가 브라우저에서 열립니다.
 
-    -   **보고서 서버에서 시작:** 보고서 서버에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 디렉터리를 찾은 다음 보고서 이름을 탭 하 여 보고서를 엽니다.
+    -   **보고서 서버에서 시작:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에 있는 디렉터리를 찾은 다음 보고서 이름을 탭하여 보고서를 엽니다.
 
-    -   **SharePoint 문서 라이브러리에서 시작:** 보고서가 포함 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 된 SharePoint 문서 라이브러리를 찾은 다음 보고서 이름을 탭 합니다. 보고서를 보고 상호 작용할 수 있습니다.
+    -   **SharePoint 문서 라이브러리에서 시작:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서가 포함된 SharePoint 문서 라이브러리를 찾은 다음 보고서 이름을 탭합니다. 보고서를 보고 상호 작용할 수 있습니다.
 
         > [!IMPORTANT]
         >  iPad의 경우 Safari의 **Private 브라우징** 속성이 해제되어 있는지 확인합니다.
 
-    -   **SharePoint 웹 파트:** SharePoint 페이지에 웹 파트가 추가 된 경우 보고서를 볼 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 수 있습니다.
+    -   **SharePoint 웹 파트:** SharePoint 페이지에 웹 파트가 추가된 경우 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서를 볼 수 있습니다.
 
-3.  Microsoft Surface 디바이스에서 보고서 관리자를 사용하여 보고서를 열 수도 있습니다. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 있는 디렉터리를 찾은 다음 보고서 이름을 눌러 보고서를 엽니다.
+3.  Microsoft Surface 디바이스에서 보고서 관리자를 사용하여 보고서를 열 수도 있습니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자에 있는 디렉터리를 찾은 다음 보고서 이름을 눌러 보고서를 엽니다.
 
     > [!IMPORTANT]
     >  보고서 관리자에서 보고서 보기는 iPad에서 지원되지 않습니다.
@@ -79,18 +77,15 @@ ms.locfileid: "78174852"
 
     -   보고서 위쪽의 화살표 단추를 눌러 매개 변수 창을 확장하고 축소합니다.
 
-    -   매개 변수 옆에 있는 상자 또는 컨트롤을 눌러 매개 변수 값을 선택합니다. 
-  **보고서 보기** 를 눌러 보고서에 매개 변수 값을 적용합니다.
+    -   매개 변수 옆에 있는 상자 또는 컨트롤을 눌러 매개 변수 값을 선택합니다. **보고서 보기** 를 눌러 보고서에 매개 변수 값을 적용합니다.
 
-    -   
-  **찾기** 옆에 있는 상자를 눌러 검색 용어를 입력한 다음 **찾기**를 눌러 보고서 내용을 검색합니다.
+    -   **찾기** 옆에 있는 상자를 눌러 검색 용어를 입력한 다음 **찾기**를 눌러 보고서 내용을 검색합니다.
 
     -   탐색 단추를 누르거나 단추 옆 입력란을 누르고 페이지 번호를 입력하여 보고서 페이지를 탐색합니다.
 
     -   텍스트 상자, 이미지, 차트 및 계기와 같은 보고서 항목에 추가된 하이퍼링크를 눌러 URL로 이동합니다.
 
-    -   
-  **드롭다운 메뉴 내보내기** 아이콘을 누른 다음 파일 형식을 눌러서 보고서를 내보냅니다.
+    -   **드롭다운 메뉴 내보내기** 아이콘을 누른 다음 파일 형식을 눌러서 보고서를 내보냅니다.
 
         -   Microsoft Surface 장치에서 보고서를 보는 경우 다음 형식 중 하나로 보고서를 내보낼 수 있습니다.
 
@@ -128,8 +123,7 @@ ms.locfileid: "78174852"
 -   보고서 관리자를 열고 **파일 업로드**를 눌러 보고서 서버 데이터베이스에 보고서 정의 파일을 업로드합니다.
 
 ## <a name="additional-information"></a>추가 정보
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 지원되는 브라우저에 대한 자세한 내용은 다음을 참조하세요.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 지원되는 브라우저에 대한 자세한 내용은 다음을 참조하세요.
 
 -   [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
 

@@ -18,10 +18,10 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180118"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission(Transact-SQL)
@@ -49,7 +49,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|고정 데이터베이스 역할의 이름입니다.|  
 |**사용 권한**|**nvarchar (70)**|**Dbfixedrole** 과 관련 된 사용 권한|  

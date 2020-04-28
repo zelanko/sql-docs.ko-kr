@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd17110b5a5f2abf8f64662221f334ebf769b258
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77114569"
 ---
 # <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
@@ -153,9 +153,7 @@ SELECT
   
 ```  
   
- 
-  `@range_size` 인수를 75와 같이 큰 수로 변경하면 시퀀스 개체가 순환합니다. 
-  `@range_cycle_count` 인수를 검사하여 시퀀스 개체 순환 여부와 순환 횟수를 확인하십시오.  
+ `@range_size` 인수를 75와 같이 큰 수로 변경하면 시퀀스 개체가 순환합니다. `@range_cycle_count` 인수를 검사하여 시퀀스 개체 순환 여부와 순환 횟수를 확인하십시오.  
   
 ### <a name="c-example-using-adonet"></a>C. ADO.NET 사용 예  
  다음 예제에서는 ADO.NET를 사용 하 여 RangeSeq에서 범위를 가져옵니다.  
@@ -182,10 +180,10 @@ Console.WriteLine(firstValueInRange.Value);
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [Transact-sql&#41;시퀀스 &#40;만들기](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [DROP SEQUENCE &#40;Transact-sql&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [&#40;Transact-sql&#41;의 다음 값](../../t-sql/functions/next-value-for-transact-sql.md)   
  [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

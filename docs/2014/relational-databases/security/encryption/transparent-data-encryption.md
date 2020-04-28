@@ -19,14 +19,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176763"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
-  Tde ( *투명한 데이터 암호화* )는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 미사용 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 암호화 라고 하는 및 데이터 파일을 암호화 합니다. 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)가 도난되는 시나리오에서는 악의적인 사용자가 데이터베이스를 단순히 복원하거나 연결하여 데이터를 찾아 볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.
+  *투명한 데이터 암호화* (TDE)는 사용하지 않는 데이터 암호화라고 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 파일을 암호화합니다. 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)가 도난되는 시나리오에서는 악의적인 사용자가 데이터베이스를 단순히 복원하거나 연결하여 데이터를 찾아 볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.
 
  TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 master 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다. TDE는 데이터 및 로그 파일을 의미하는 "유휴" 데이터를 보호하고 다양한 업계에서 확립된 법, 규정 및 지침에 부합하는 기능을 제공합니다. 이를 통해 소프트웨어 개발자는 AES 및 3DES 암호화 알고리즘을 사용하여 기존의 애플리케이션을 변경하지 않고 데이터를 암호화할 수 있습니다.
 
@@ -42,16 +42,11 @@ ms.locfileid: "78176763"
 ## <a name="about-tde"></a>TDE 정보
  데이터베이스 파일의 암호화는 페이지 수준에서 수행됩니다. 암호화된 데이터베이스의 페이지는 암호화된 후 디스크에 작성되고 메모리로 읽어 들일 때 암호가 해독됩니다. TDE로 암호화된 데이터베이스의 크기가 증가되지는 않습니다.
 
- **적용 되는 정보[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
+ **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 적용되는 정보**
 
- 
-  [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([일부 지역에서는 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))에서 TDE를 사용하는 경우, master 데이터베이스에 저장된 서버 수준 인증서가 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 자동으로 생성됩니다. 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 TDE 데이터베이스를 이동하려면 데이터베이스 암호를 해독하고, 데이터베이스를 이동한 후, 대상 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 다시 사용하도록 해야 합니다. 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 TDE에 대한 단계별 지침은 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)를 참조하십시오.
+ [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([일부 지역에서는 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))에서 TDE를 사용하는 경우, master 데이터베이스에 저장된 서버 수준 인증서가 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 TDE 데이터베이스를 이동하려면 데이터베이스 암호를 해독하고, 데이터베이스를 이동한 후, 대상 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 다시 사용하도록 해야 합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 TDE에 대한 단계별 지침은 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)를 참조하십시오.
 
- TDE 상태 미리보기는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. 
-  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL 데이터베이스의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.
+ TDE 상태 미리보기는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL Database의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.
 
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되는 정보**
 
@@ -63,7 +58,7 @@ ms.locfileid: "78176763"
 
  다음 그림에서는 TDE 암호화의 아키텍처를 보여 줍니다. 데이터베이스 수준 항목만(데이터베이스 암호화 키 및 ALTER DATABASE 부분은 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 사용하는 경우 사용자가 구성활 수 있습니다.
 
- ![이 항목에서 설명하는 계층 구조를 표시합니다.](../../../database-engine/media/tde-architecture.gif "이 항목에서 설명하는 계층 표시")
+ ![이 항목에서 설명하는 계층 구조를 표시합니다.](../../../database-engine/media/tde-architecture.gif "이 항목에서 설명하는 계층 구조를 표시합니다.")
 
 ## <a name="using-transparent-data-encryption"></a>투명한 데이터 암호화 사용
  TDE를 사용하려면 다음 단계를 수행합니다.
@@ -213,19 +208,17 @@ WHERE encryption_state = 3;
 GO
 ```
 
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그 파일 아키텍처에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../logs/the-transaction-log-sql-server.md)를 참조하세요.
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그 파일 아키텍처에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../logs/the-transaction-log-sql-server.md)를 참조하세요.
 
  데이터베이스 암호화 키를 변경하기 전에 트랜잭션 로그에 작성된 모든 데이터는 이전 데이터베이스 암호화 키를 사용하여 암호화됩니다.
 
  데이터베이스 암호화 키를 두 번 수정한 후 다시 데이터베이스 암호화 키를 수정하려면 먼저 로그 백업을 수행해야 합니다.
 
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>투명한 데이터 암호화 및 tempdb 시스템 데이터베이스
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 TDE를 사용하여 암호화된 다른 데이터베이스가 있으면 tempdb 시스템 데이터베이스가 암호화됩니다. 이로 인해 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 암호화되지 않은 데이터베이스의 성능에 영향을 미칠 수 있습니다. tempdb 시스템 데이터베이스에 대한 자세한 내용은 [tempdb 데이터베이스](../../databases/tempdb-database.md)를 참조하세요.
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 TDE를 사용하여 암호화된 다른 데이터베이스가 있으면 tempdb 시스템 데이터베이스가 암호화됩니다. 이로 인해 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 암호화되지 않은 데이터베이스의 성능에 영향을 미칠 수 있습니다. tempdb 시스템 데이터베이스에 대한 자세한 내용은 [tempdb 데이터베이스](../../databases/tempdb-database.md)를 참조하세요.
 
 ### <a name="transparent-data-encryption-and-replication"></a>투명한 데이터 암호화 및 복제
- 복제를 수행해도 암호화된 형식의 TDE 설정 데이터베이스에 있는 데이터는 자동으로 복제되지 않습니다. 배포 및 구독자 데이터베이스를 보호하려면 TDE를 개별적으로 설정해야 합니다. 트랜잭션 및 병합 복제를 위한 데이터의 초기 배포뿐만 아니라 스냅샷 복제도 암호화되지 않은 중간 파일(예: bcp 파일)에 데이터를 저장할 수 있습니다.  트랜잭션 또는 병합 복제 중에 통신 채널을 보호하도록 암호화를 설정할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.
+ 복제를 수행해도 암호화된 형식의 TDE 설정 데이터베이스에 있는 데이터는 자동으로 복제되지 않습니다. 배포 및 구독자 데이터베이스를 보호하려면 TDE를 개별적으로 설정해야 합니다. 트랜잭션 및 병합 복제를 위한 데이터의 초기 배포뿐만 아니라 스냅샷 복제도 암호화되지 않은 중간 파일(예: bcp 파일)에 데이터를 저장할 수 있습니다.  트랜잭션 또는 병합 복제 중에 통신 채널을 보호하도록 암호화를 설정할 수 있습니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.
 
 ### <a name="transparent-data-encryption-and-filestream-data"></a>투명한 데이터 암호화 및 FILESTREAM 데이터
  TDE를 사용하는 경우에도 FILESTREAM 데이터는 암호화되지 않습니다.

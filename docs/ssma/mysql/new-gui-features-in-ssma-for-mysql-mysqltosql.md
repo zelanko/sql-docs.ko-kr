@@ -10,10 +10,10 @@ ms.assetid: 0e59e2dc-1e4a-47c0-a5c3-ae7b5f5e469c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4fd1316850a064a8d1aed3d2994642d44111f421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909683"
 ---
 # <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 GUI 기능(MySQLToSQL)

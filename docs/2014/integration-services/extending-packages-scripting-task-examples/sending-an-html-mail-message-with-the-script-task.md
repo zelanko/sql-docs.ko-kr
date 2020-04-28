@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 537308a0486308ce3cb26227f415f487d69e6f54
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176218"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>스크립트 태스크를 사용하여 HTML 메일 메시지 보내기
@@ -46,15 +46,13 @@ ms.locfileid: "78176218"
 
 4.  이러한 다섯 개의 변수를 모두 새 스크립트 태스크의 **ReadOnlyVariables** 속성에 할당합니다.
 
-5.  
-  `System.Net` 및 `System.Net.Mail` 네임스페이스를 코드로 가져옵니다.
+5.  `System.Net` 및 `System.Net.Mail` 네임스페이스를 코드로 가져옵니다.
 
  이 항목의 예제 코드는 패키지 변수에서 SMTP 서버 이름을 가져옵니다. 그러나 SMTP 연결 관리자를 사용하여 연결 정보를 캡슐화하고 코드를 통해 연결 관리자에서 서버 이름을 추출할 수도 있습니다. SMTP 연결 관리자의 <xref:Microsoft.SqlServer.Dts.ManagedConnections.SMTPConn.AcquireConnection%2A> 메서드는 문자열을 다음과 같은 형식으로 반환합니다.
 
  `SmtpServer=smtphost;UseWindowsAuthentication=False;EnableSsl=False;`
 
- 
-  `String.Split` 메서드를 사용하여 이 인수 목록을 각 세미콜론(;) 또는 등호(=) 위치에서 구분하여 개별 문자열의 배열로 만든 다음 해당 배열에서 두 번째 인수(subscript 1)를 서버 이름으로 추출할 수 있습니다.
+ `String.Split` 메서드를 사용하여 이 인수 목록을 각 세미콜론(;) 또는 등호(=) 위치에서 구분하여 개별 문자열의 배열로 만든 다음 해당 배열에서 두 번째 인수(subscript 1)를 서버 이름으로 추출할 수 있습니다.
 
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하도록 구성하려면
 
@@ -152,7 +150,7 @@ public void Main()
         }
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [메일 보내기 태스크](../control-flow/send-mail-task.md)

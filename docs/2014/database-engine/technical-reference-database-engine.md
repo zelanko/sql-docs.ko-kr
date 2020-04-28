@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175382"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
-  
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.
 
  ![작은 파일 폴더 아이콘](../../2014/integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **기능 참조** [등록 된 서버 F1 도움말](../ssms/register-servers/registered-servers-f1-help.md)

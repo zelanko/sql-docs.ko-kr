@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176228"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성
@@ -77,11 +77,9 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  오류 행의 자동 처리를 위해 스크립트 구성 요소의 출력을 오류 출력으로 직접 구성할 수는 없지만 적절할 때 추가 출력을 만들고 스크립트를 사용하여 행을 이 출력으로 전송하는 방식으로 오류 출력의 기능을 재현할 수 있습니다. 자세한 내용은 [스크립트 구성 요소의 오류 출력 시뮬레이션](../../data-flow/transformations/script-component.md)을 참조하세요.
 
 #### <a name="exclusiongroup-and-synchronousinputid-properties-of-outputs"></a>출력의 ExclusionGroup 및 SynchronousInputID 속성
- 
-  `ExclusionGroup` 속성 값은 동기 출력을 사용하는 변환에서만 0이 아니며, 이러한 변환에서 코드는 필터링 또는 분기를 수행하고 0이 아닌 동일한 `ExclusionGroup` 값을 공유하는 출력 중 하나로 각 행을 전송합니다. 예를 들어 변환에서는 행을 기본 출력이나 오류 출력 중 하나로 전송할 수 있습니다. 이 경우 추가 출력을 만들 때는 `SynchronousInputID` 속성의 값을 구성 요소의 입력에 대한 `ID`와 일치하는 정수로 설정해야 합니다.
+ `ExclusionGroup` 속성 값은 동기 출력을 사용하는 변환에서만 0이 아니며, 이러한 변환에서 코드는 필터링 또는 분기를 수행하고 0이 아닌 동일한 `ExclusionGroup` 값을 공유하는 출력 중 하나로 각 행을 전송합니다. 예를 들어 변환에서는 행을 기본 출력이나 오류 출력 중 하나로 전송할 수 있습니다. 이 경우 추가 출력을 만들 때는 `SynchronousInputID` 속성의 값을 구성 요소의 입력에 대한 `ID`와 일치하는 정수로 설정해야 합니다.
 
- 
-  `SynchronousInputID` 속성 값은 동기 출력을 사용하는 변환에서만 0이 아닙니다. 이 속성 값이 0이면 해당 출력이 비동기적임을 나타냅니다. 행이 선택한 출력으로 전달되며 이때 새 행이 추가되지는 않는 동기 출력의 경우 이 속성에는 구성 요소의 입력에 대한 `ID`가 들어 있어야 합니다.
+ `SynchronousInputID` 속성 값은 동기 출력을 사용하는 변환에서만 0이 아닙니다. 이 속성 값이 0이면 해당 출력이 비동기적임을 나타냅니다. 행이 선택한 출력으로 전달되며 이때 새 행이 추가되지는 않는 동기 출력의 경우 이 속성에는 구성 요소의 입력에 대한 `ID`가 들어 있어야 합니다.
 
 > [!NOTE]
 >  **스크립트 변환 편집기** 에서 첫 번째 출력을 만드는 경우 편집기는 출력의 `SynchronousInputID` 속성을 구성 요소의 입력에 `ID` 대 한로 설정 합니다. 그러나 이후 출력을 만들 때는 이러한 출력의 `SynchronousInputID` 속성을 0으로 설정합니다.
@@ -102,8 +100,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 >  [!INCLUDE[ssISversion10](../../../includes/ssisversion10-md.md)] 와 그 이후 버전에서는 모든 스크립트가 미리 컴파일됩니다. 이전 버전에서는 개발자가 태스크의 `Precompile` 속성을 설정하여 스크립트가 미리 컴파일되었는지 여부를 지정했습니다.
 
 #### <a name="validateexternalmetadata-property"></a>ValidateExternalMetadata 속성
- 
-  `ValidateExternalMetadata` 속성의 부울 값은 구성 요소에서 디자인 타임에 외부 데이터 원본에 대한 유효성 검사를 수행해야 하는지 아니면 런타임까지 유효성 검사를 연기해야 하는지를 지정합니다. 기본적으로 이 속성의 값은 `True`입니다. 즉, 디자인 타임과 런타임 모두에 외부 메타데이터의 유효성이 검사됩니다. 디자인 타임에 외부 데이터 원본을 사용할 수 없는 경우 이 속성의 값을 `False`로 설정할 수 있습니다. 예를 들어 패키지가 원본을 다운로드하거나 런타임에만 대상을 만드는 경우가 이러한 경우에 해당합니다.
+ `ValidateExternalMetadata` 속성의 부울 값은 구성 요소에서 디자인 타임에 외부 데이터 원본에 대한 유효성 검사를 수행해야 하는지 아니면 런타임까지 유효성 검사를 연기해야 하는지를 지정합니다. 기본적으로 이 속성의 값은 `True`입니다. 즉, 디자인 타임과 런타임 모두에 외부 메타데이터의 유효성이 검사됩니다. 디자인 타임에 외부 데이터 원본을 사용할 수 없는 경우 이 속성의 값을 `False`로 설정할 수 있습니다. 예를 들어 패키지가 원본을 다운로드하거나 런타임에만 대상을 만드는 경우가 이러한 경우에 해당합니다.
 
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 및 ReadWriteVariables 속성
  쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 구성 요소 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 변수는 코드에서 자동으로 생성된 기본 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 구성 요소에서 변수 사용](using-variables-in-the-script-component.md)을 참조하세요.
@@ -120,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>스크립트 변환 편집기의 연결 관리자 페이지
  **스크립트 변환 편집기**의 **연결 관리자** 페이지에서는 사용자 지정 스크립트에 사용할 연결 관리자를 추가하거나 제거합니다. 일반적으로 원본 또는 대상 구성 요소를 만들 때는 연결 관리자를 참조해야 합니다.
 
- 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 `ComponentWrapper` 프로젝트 항목에는 선택된 각 연결 관리자에 대한 형식화된 접근자 속성이 있는 `Connections` 컬렉션 클래스가 포함됩니다. 형식화된 각 접근자 속성은 연결 관리자와 동일한 이름을 가지며 연결 관리자에 대한 참조를 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>의 인스턴스로 반환합니다. 예를 들어 편집기의 **연결 관리자** 페이지에서 `MyADONETConnection`이라는 연결 관리자를 추가한 경우 다음 코드를 사용하여 스크립트에서 해당 연결 관리자에 대한 참조를 가져올 수 있습니다.
+ 이 메타데이터를 기반으로 생성되는 코드 프로젝트에서 `ComponentWrapper` 프로젝트 항목에는 선택된 각 연결 관리자에 대한 형식화된 접근자 속성이 있는 `Connections` 컬렉션 클래스가 포함됩니다. 형식화된 각 접근자 속성은 연결 관리자와 동일한 이름을 가지며 연결 관리자에 대한 참조를 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100>의 인스턴스로 반환합니다. 예를 들어 편집기의 `MyADONETConnection`연결 관리자**페이지에서**이라는 연결 관리자를 추가한 경우 다음 코드를 사용하여 스크립트에서 해당 연결 관리자에 대한 참조를 가져올 수 있습니다.
 
 ```vb
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _
@@ -129,7 +126,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
 
  자세한 내용은 [스크립트 구성 요소에서 데이터 원본에 연결](connecting-to-data-sources-in-the-script-component.md)을 참조하세요.
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 구성 요소 코딩 및 디버깅](coding-and-debugging-the-script-component.md)

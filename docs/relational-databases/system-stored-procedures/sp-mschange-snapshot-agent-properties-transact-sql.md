@@ -17,10 +17,10 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321807"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties(Transact-SQL)
@@ -71,10 +71,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**2**|주문형|  
 |**4**|매일|  
 |**20cm(8**|매주|  
-|**5-10**|매월|  
-|**20**|매월(frequency_interval에 상대적임)|  
-|**40**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
+|**10**|매월|  
+|**720**|매월(frequency_interval에 상대적임)|  
+|**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
   
 `[ @frequency_interval = ] frequency_interval`*Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다. *frequency_interval* 는 **int**이며 기본값은 없습니다.  
   
@@ -83,8 +82,8 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 는 **int**이며 기본값은 없습니다.  
@@ -121,10 +120,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
+|**MSSQLSERVER**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
 |**ORACLE GATEWAY**|Oracle Gateway 게시자를 지정합니다.|  
   
@@ -144,6 +142,6 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_MSchange_snapshot_agent_properties**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_addpublication_snapshot &#40;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
+ [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

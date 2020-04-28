@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175977"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "78175977"
 >  Azure Blob storage 서비스에 대 한 SQL Server 백업에 대 한 자세한 내용은을 참조 하세요. [Azure Blob Storage 서비스로 백업 및 복원을 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).
 
 
-##  <a name="TermsAndDefinitions"></a>용어 및 정의
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>용어 및 정의
  미디어 세트(미디어 세트(media set)) 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 백업 미디어, 테이프 또는 디스크 파일의 모음입니다.
 
  미디어 패밀리(미디어 패밀리(media family)) 미디어 세트의 미러되지 않은 단일 디바이스나 일련의 미러된 디바이스에 생성된 백업입니다.
@@ -45,9 +45,8 @@ ms.locfileid: "78175977"
  백업 세트(백업 세트(backup set)) 백업 작업이 성공할 때 미디어 세트에 추가되는 백업 내용입니다.
 
 
-##  <a name="OvMediaSetsFamiliesBackupSets"></a>미디어 세트, 미디어 패밀리 및 백업 세트 개요
- 백업 미디어가 하나 이상인 세트의 백업이 미디어 세트 하나를 구성합니다. 
-  *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 *백업 미디어*, 테이프 또는 디스크 파일, 또는 Windows Azure Blob을 정렬하여 모아 놓은 것입니다. 지정된 미디어 세트에서는 테이프 드라이브, 디스크 드라이브 또는 Azure Blob을 사용하지만 둘 이상을 조합하여 사용하지는 않습니다. 예를 들어 미디어 세트와 연결된 백업 디바이스는 `\\.\TAPE0`, `\\.\TAPE1`및 `\\.\TAPE2`라는 3개의 테이프 드라이브일 수 있습니다. 이 미디어 세트에는 드라이브마다 최소한 3개로 시작되는 테이프만 포함됩니다. 미디어 세트가 만들어질 때 백업 디바이스 유형과 개수가 설정되며 이 값은 변경할 수 없습니다. 그러나 필요할 경우 백업 작업과 복원 작업 중간에 지정된 디바이스를 같은 유형의 디바이스로 바꿀 수 있습니다.
+##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a>미디어 세트, 미디어 패밀리 및 백업 세트 개요
+ 백업 미디어가 하나 이상인 세트의 백업이 미디어 세트 하나를 구성합니다. *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 *백업 미디어*, 테이프 또는 디스크 파일, 또는 Windows Azure Blob을 정렬하여 모아 놓은 것입니다. 지정된 미디어 세트에서는 테이프 드라이브, 디스크 드라이브 또는 Azure Blob을 사용하지만 둘 이상을 조합하여 사용하지는 않습니다. 예를 들어 미디어 세트와 연결된 백업 디바이스는 `\\.\TAPE0`, `\\.\TAPE1`및 `\\.\TAPE2`라는 3개의 테이프 드라이브일 수 있습니다. 이 미디어 세트에는 드라이브마다 최소한 3개로 시작되는 테이프만 포함됩니다. 미디어 세트가 만들어질 때 백업 디바이스 유형과 개수가 설정되며 이 값은 변경할 수 없습니다. 그러나 필요할 경우 백업 작업과 복원 작업 중간에 지정된 디바이스를 같은 유형의 디바이스로 바꿀 수 있습니다.
 
  백업 미디어를 포맷하여 백업 작업을 수행하는 동안 백업 미디어에 미디어 세트가 생성됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [새 미디어 세트 만들기](#CreatingMediaSet)를 참조하십시오. 포맷 후에는 각 파일이나 테이프에 미디어 세트의 미디어 헤더가 포함되어 파일이나 테이프가 백업 내용을 수신할 수 있는 준비가 됩니다. 헤더가 있으면 백업 작업에서 작업에 지정된 모든 백업 디바이스에 있는 백업 미디어에 지정된 데이터를 백업합니다.
 
@@ -58,8 +57,7 @@ ms.locfileid: "78175977"
 
 
 ### <a name="media-families"></a>미디어 패밀리
- 
-  *미디어 패밀리*는 미디어 세트의 미러되지 않은 단일 디바이스나 일련의 미러된 디바이스에 생성된 백업으로 구성됩니다. 미디어 세트에 사용된 백업 디바이스 수에 따라 미디어 세트의 미디어 패밀리 수가 결정됩니다. 예를 들어 미디어 세트에 미러되지 않은 백업 디바이스 두 개가 사용되면 미디어 세트에는 두 개의 미디어 패밀리가 포함됩니다.
+ *미디어 패밀리*는 미디어 세트의 미러되지 않은 단일 디바이스나 일련의 미러된 디바이스에 생성된 백업으로 구성됩니다. 미디어 세트에 사용된 백업 디바이스 수에 따라 미디어 세트의 미디어 패밀리 수가 결정됩니다. 예를 들어 미디어 세트에 미러되지 않은 백업 디바이스 두 개가 사용되면 미디어 세트에는 두 개의 미디어 패밀리가 포함됩니다.
 
 > [!NOTE]
 >  미러된 미디어 세트의 각 미디어 패밀리가 미러됩니다. 예를 들어 미러 두 개가 사용되는 미디어 세트 포맷에 백업 디바이스 6개가 사용되면 백업 데이터의 해당 복사본 두 개를 각각 포함하는 미디어 패밀리가 3개가 됩니다. 미러된 미디어 세트에 대한 자세한 내용은 [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.
@@ -90,8 +88,7 @@ ms.locfileid: "78175977"
     > [!NOTE]
     >  백업 또는 복원 작업에 사용 되는 모든 미디어는 다른 응용 프로그램에서 작성 한 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블은 쓰지 않는 표준 백업 형식을 사용 합니다.
 
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 미디어 레이블 또는 자유형 텍스트로 된 미디어 설명
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 미디어 레이블 또는 자유형 텍스트로 된 미디어 설명
 
 -   레이블을 기록한 백업 소프트웨어의 이름
 
@@ -101,8 +98,7 @@ ms.locfileid: "78175977"
 
 -   세트의 미러 개수(1-4). 1은 미러되지 않은 디바이스를 나타냅니다.
 
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 포맷된 미디어를 처리할 수 있습니다.
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 포맷된 미디어를 처리할 수 있습니다.
 
 ### <a name="backup-sets"></a>백업 세트
  백업 작업에 성공하면 미디어 세트에 *백업 세트* 하나가 추가됩니다. 백업 세트는 백업이 속해 있는 미디어 세트와 관련해서 설명됩니다. 백업 미디어에 미디어 패밀리가 하나뿐이면 해당 패밀리에 전체 백업 세트가 포함됩니다. 백업 미디어에 미디어 패밀리가 여러 개 있으면 백업 세트가 여러 패밀리에 분산됩니다. 각 미디어에서 백업 세트를 설명하는 헤더가 백업 세트에 포함됩니다.
@@ -119,7 +115,7 @@ WITH
 
  이 백업 작업이 성공하면 새로운 미디어 헤더와 백업 세트 하나가 포함된 새 미디어 세트가 테이프 3개에 분산됩니다. 다음 그림에서는 이러한 결과를 보여 줍니다.
 
- ![3개의 테이프의 미디어 헤더 및 첫 번째 백업 세트](../../database-engine/media/bnr-mediaset-new.gif "3개의 테이프의 미디어 헤더 및 첫 번째 백업 세트")
+ ![3개 테이프의 미디어 헤더 및 첫 번째 백업 세트](../../database-engine/media/bnr-mediaset-new.gif "3개 테이프의 미디어 헤더 및 첫 번째 백업 세트")
 
  일반적으로 미디어 세트가 만들어지면 다음 백업 작업에서 해당 백업 세트를 미디어 세트에 차례로 추가합니다. 백업 세트에 사용된 모든 미디어는 포함된 미디어나 백업 디바이스 수에 관계없이 미디어 세트를 구성합니다. 미디어 세트에서의 위치에 따라 백업 세트에 순차적으로 번호가 지정되어 복원할 백업 세트를 지정할 수 있습니다.
 
@@ -139,7 +135,7 @@ WITH
 
  두 번째 백업 작업이 성공하면 백업 내용을 다음과 같이 분산하여 두 번째 백업 세트를 미디어 세트에 씁니다.
 
- ![3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트](../../database-engine/media/bnr-mediaset-appendedto.gif "3개의 미디어 세트 테이프에 분산되어 있는 두 번째 백업 세트")
+ ![3개 미디어 세트 테이프에 분산된 두 번째 백업 세트](../../database-engine/media/bnr-mediaset-appendedto.gif "3개 미디어 세트 테이프에 분산된 두 번째 백업 세트")
 
  백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 전체 데이터베이스 백업을 **=** 복원한 다음 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원할 때 파일 _backup_set_file_number_ 절을 사용 하는 방법을 보여 줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.
 
@@ -167,12 +163,12 @@ GO
 
 -   백업 세트 개수
 
-##  <a name="ConsiderationsForMediaSetFamilies"></a>미디어 세트 및 패밀리 사용
+##  <a name="using-media-sets-and-families"></a><a name="ConsiderationsForMediaSetFamilies"></a>미디어 세트 및 패밀리 사용
  이 섹션에서는 미디어 세트와 미디어 패밀리를 사용할 때의 몇 가지 고려 사항에 대해 설명합니다.
 
 
 
-###  <a name="CreatingMediaSet"></a>새 미디어 세트 만들기
+###  <a name="creating-a-new-media-set"></a><a name="CreatingMediaSet"></a>새 미디어 세트 만들기
  새 미디어 세트를 만들려면 백업 미디어(하나 이상의 테이프 또는 디스크 파일)를 포맷해야 합니다. 포맷 프로세스 동안 다음과 같이 백업 미디어가 변경됩니다.
 
 1.  오래된 헤더(있는 경우)를 삭제하여 백업 미디어의 이전 내용을 효율적으로 삭제합니다.
@@ -182,7 +178,7 @@ GO
 2.  각 백업 디바이스에서 백업 미디어(테이프 또는 디스크 파일)에 새 미디어 헤더를 작성합니다.
 
 
-###  <a name="UseExistingMediaSet"></a>기존 미디어 세트에 백업
+###  <a name="backing-up-to-an-existing-media-set"></a><a name="UseExistingMediaSet"></a>기존 미디어 세트에 백업
  기존 미디어 세트에 백업하는 경우 다음 두 가지 옵션이 제공됩니다.
 
 -   기존 백업 세트에 추가합니다.
@@ -194,36 +190,33 @@ GO
 
 -   현재 미디어 헤더를 그대로 유지하면서 현재 백업으로 기존 백업 세트를 덮어씁니다.
 
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 실수로 미디어를 덮어쓰지 않도록 하는 보호 장치가 있습니다. 그러나 백업을 사용하면 미리 정의한 만료 날짜에 이른 백업 세트를 자동으로 덮어쓸 수 있습니다.
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 실수로 미디어를 덮어쓰지 않도록 하는 보호 장치가 있습니다. 그러나 백업을 사용하면 미리 정의한 만료 날짜에 이른 백업 세트를 자동으로 덮어쓸 수 있습니다.
 
      테이프 헤더는 현재 위치에 두어도 됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [백업 세트 덮어쓰기](#Overwriting)를 참조하십시오.
 
     > [!NOTE]
     >  기존 백업 세트를 덮어쓰는 작업은 BACKUP 문의 INIT 옵션을 사용하여 지정됩니다.
 
-####  <a name="Appending"></a>기존 백업 세트에 추가
+####  <a name="appending-to-existing-backup-sets"></a><a name="Appending"></a>기존 백업 세트에 추가
  같거나 다른 데이터베이스에 대해 서로 다른 시간에 수행한 백업은 같은 미디어에 저장할 수 있습니다. 다른 백업 세트를 기존의 미디어에 추가하면 미디어의 이전 내용은 그대로 남아 있고 새 백업은 미디어에서 마지막 백업의 끝에 이어서 기록됩니다.
 
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 항상 새 백업을 미디어에 추가합니다. 추가는 미디어의 끝에서만 발생합니다. 예를 들어 미디어 볼륨에 백업 세트가 5개 있을 때 첫 번째 3개의 백업 세트를 건너 뛰고 네 번째 백업 세트를 새 백업 세트로 덮어쓸 수는 없습니다.
 
  테이프 백업 시 BACKUP WITH NOREWIND를 사용하면 테이프는 작업이 끝날 때 열린 채로 남아 있습니다. 따라서 테이프를 되감은 다음 마지막 백업 세트를 찾기 위해 앞으로 검색하지 않고 그대로 다른 백업을 테이프에 추가할 수 있습니다. 열려 있는 테이프 드라이브 목록은 **sys.dm_io_backup_tapes** 동적 관리 뷰에 있습니다. 자세한 내용은 [sys.dm_io_backup_tapes&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)를 참조하세요.
 
- Microsoft Windows 백업 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 같은 미디어를 공유할 수 있지만 상호 운용되지는 않습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Windows 데이터를 백업할 수 없습니다.
+ Microsoft Windows 백업 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업은 같은 미디어를 공유할 수 있지만 상호 운용되지는 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Windows 데이터를 백업할 수 없습니다.
 
 > [!IMPORTANT]
 >  [!INCLUDE[ssEnterpriseEd10](../../includes/sskatmai-md.md)]이상 버전에서는 압축 된 백업을 읽을 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.
 
 
-####  <a name="Overwriting"></a>백업 세트 덮어쓰기
+####  <a name="overwriting-backup-sets"></a><a name="Overwriting"></a>백업 세트 덮어쓰기
  기존 백업 세트를 덮어쓰는 작업은 BACKUP 문의 INIT 옵션을 사용하여 지정됩니다. 이 옵션은 미디어에 있는 모든 백업 세트를 덮어쓰고 미디어 헤더를 보관합니다(있는 경우). 미디어 헤더가 없다면 하나 만듭니다.
 
  테이프 헤더는 현재 위치에 두어도 됩니다. 디스크 백업 미디어의 경우 백업 작업에서 지정하여 백업 디바이스에서 사용하는 파일만 덮어쓰므로 디스크의 다른 파일에는 영향을 주지 않습니다. 백업을 덮어쓸 때 기존의 미디어 헤더는 모두 보존되며 새 백업은 백업 디바이스의 첫 번째 백업으로 생성됩니다. 기존에 미디어 헤더가 없으면 관련된 미디어 이름과 미디어 설명이 있는 유효한 미디어 헤더가 자동으로 작성됩니다. 기존의 미디어 헤더가 잘못되었으면 백업 작업이 종료됩니다. 미디어가 비어 있으면 지정된 MEDIANAME, MEDIAPASSWORD 및 MEDIADESCRIPTION(있는 경우)으로 새 미디어 헤더가 생성됩니다.
 
 > [!IMPORTANT]
->  
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 MEDIAPASSWORD 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 MEDIAPASSWORD 옵션은 백업을 만드는 데 더 이상 사용되지 않습니다. 하지만 암호를 사용하여 만든 백업은 계속 복원할 수 있습니다.
 
  백업 미디어가 다음 조건 중 하나를 만족하면 덮어쓰지 않습니다.
 
@@ -240,7 +233,7 @@ GO
  백업 미디어가 Microsoft Windows에 의해 암호로 보호되는 경우 Microsoft SQL Server는 해당 미디어에 기록하지 않습니다. 암호가 설정된 미디어를 덮어쓰려면 미디어를 다시 초기화해야 합니다.
 
 
-###  <a name="SequenceNumbers"></a>시퀀스 번호
+###  <a name="sequence-numbers"></a><a name="SequenceNumbers"></a>시퀀스 번호
  미디어 세트에 미디어 패밀리가 여러 개 있거나 미디어 패밀리 안에 백업 미디어가 여러 개 있을 경우 올바른 순서가 중요합니다. 따라서 백업은 다음과 같은 방법으로 시퀀스 번호를 할당합니다.
 
 -   미디어 세트 안의 순차적 미디어 패밀리
@@ -251,7 +244,7 @@ GO
 
      미디어 시퀀스 번호는 미디어 패밀리 안의 실제 미디어 순서를 나타냅니다. 초기 백업 미디어의 시퀀스 번호는 1로 지정되어 1로 태그를 붙이고 두 번째 미디어(첫 번째 연속 미디어)는 2로 태그를 붙이며 나머지 미디어도 이와 같은 순서로 태그를 붙입니다. 백업을 복원하는 운영자는 백업 세트를 복원할 때 미디어 시퀀스 번호를 사용하여 올바른 순서로 정확하게 미디어를 탑재할 수 있습니다.
 
-###  <a name="MultipleDevices"></a>여러 장치
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>여러 장치
  테이프 드라이브나 디스크 파일을 여러 개 사용할 때는 다음 사항을 고려해야 합니다.
 
 -   백업의 경우
@@ -262,26 +255,26 @@ GO
 
      디스크 백업에서 복원하는 경우와 온라인 복원의 경우 모든 미디어 패밀리를 동시에 탑재해야 합니다. 테이프 백업에서 오프라인으로 복원하는 경우 더 적은 백업 디바이스의 미디어 패밀리를 처리할 수 있습니다. 각 미디어 패밀리를 완전히 처리한 후에 다른 미디어 패밀리의 처리를 시작할 수 있습니다. 단일 디바이스를 사용하여 복원하는 경우가 아니면 미디어 패밀리는 항상 병렬로 처리됩니다.
 
-##  <a name="RelatedTasks"></a> 관련 작업
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업
  **새 미디어 세트를 만들려면**
 
--   [SQL Server&#41;&#40;전체 데이터베이스 백업 만들기](create-a-full-database-backup-sql-server.md) (**새 미디어 세트에 백업 하 고 기존 백업 세트 모두 지우기** 옵션)
+-   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)(**새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기** 옵션)
 
--   [BACKUP &#40;transact-sql&#41;](/sql/t-sql/statements/backup-transact-sql) (FORMAT 옵션)
+-   [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (FORMAT 옵션)
 
 -   <xref:Microsoft.SqlServer.Management.Smo.Backup.FormatMedia%2A>
 
  **기존 미디어에 새 백업을 추가하려면**
 
--   [SQL Server&#41;&#40;전체 데이터베이스 백업 만들기](create-a-full-database-backup-sql-server.md) (**기존 백업 세트에 추가** 옵션)
+-   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)(**기존 백업 세트에 추가** 옵션)
 
--   [BACKUP &#40;transact-sql&#41;](/sql/t-sql/statements/backup-transact-sql) (noinit 옵션)
+-   [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (NOINIT 옵션)
 
  **기존 백업 세트를 덮어쓰려면**
 
--   [SQL Server&#41;&#40;전체 데이터베이스 백업 만들기](create-a-full-database-backup-sql-server.md) (**기존 백업 세트 모두 덮어쓰기** 옵션)
+-   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)(**기존 백업 세트 모두 덮어쓰기** 옵션)
 
--   [Transact-sql &#40;&#41;백업](/sql/t-sql/statements/backup-transact-sql) (INIT 옵션)
+-   [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT 옵션)
 
  **만료 날짜를 설정하려면**
 
@@ -291,7 +284,7 @@ GO
 
 -   [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)
 
--   [backupmediafamily &#40;transact-sql&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql) (**family_sequence_number** 열)
+-   [backupmediafamily&#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupmediafamily-transact-sql)(**family_sequence_number** 열)
 
  **특정 백업 디바이스에 있는 백업 세트를 보려면**
 

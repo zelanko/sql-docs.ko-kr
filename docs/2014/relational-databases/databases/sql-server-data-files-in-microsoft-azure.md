@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939597"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure의 SQL Server 데이터 파일
@@ -30,21 +30,20 @@ ms.locfileid: "76939597"
   
 ## <a name="benefits-of-using-sql-server-data-files-in-azure"></a>Azure에서 SQL Server 데이터 파일 사용의 이점  
   
--   **쉽고 빠른 마이그레이션 이점:** 이 기능은 응용 프로그램을 변경 하지 않고 온-프레미스의 컴퓨터와 온-프레미스 및 클라우드 환경 사이에서 한 번에 하나의 데이터베이스만 이동 하 여 마이그레이션 프로세스를 간소화 합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 스토리지에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 이 새로운 향상 된 기능을 사용 하 여 데이터를 한 위치에서 다른 위치로 이동 하는 대신 많은 데이터베이스를 Azure blob으로 저장 한 다음 Transact-sql 스크립트를 실행 하 여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
+-   **쉽고 빠른 마이그레이션 이점:** 이 기능은 애플리케이션 변경 없이 온-프레미스 내 컴퓨터 간에 또는 온-프레미스와 클라우드 환경 간에 데이터베이스를 한 번에 하나씩 이동하여 마이그레이션 프로세스를 간소화합니다. 따라서 기존 온-프레미스 인프라를 현재 위치에 유지하면서 증분 마이그레이션을 지원합니다. 또한 온-프레미스 환경의 여러 위치에서 애플리케이션을 실행해야 할 경우 중앙 집중식 데이터 스토리지에 액세스하여 애플리케이션 논리를 간소화합니다. 경우에 따라 지리적으로 분산된 위치에 컴퓨터 센터를 신속하게 설치하여 여러 소스에서 데이터를 수집해야 할 수도 있습니다. 이 새로운 향상 된 기능을 사용 하 여 데이터를 한 위치에서 다른 위치로 이동 하는 대신 많은 데이터베이스를 Azure blob으로 저장 한 다음 Transact-sql 스크립트를 실행 하 여 로컬 컴퓨터 또는 가상 컴퓨터에 데이터베이스를 만들 수 있습니다.  
   
 -   **비용 및 무제한 저장소 이점:** 이 기능을 사용 하면 온-프레미스 계산 리소스를 활용 하면서 Azure에서 무제한 오프 사이트 저장소를 사용할 수 있습니다. Azure를 저장소 위치로 사용 하면 하드웨어 관리의 오버 헤드 없이 응용 프로그램 논리에 쉽게 집중할 수 있습니다. 온-프레미스에서 계산 노드가 손실되더라도 데이터를 이동하지 않고 새 계산 노드를 설정할 수 있습니다.  
   
 -   고가용성 **및 재해 복구 이점:** Azure의 SQL Server 데이터 파일 기능을 사용 하면 고가용성 및 재해 복구 솔루션을 간소화할 수 있습니다. 예를 들어 Azure의 가상 컴퓨터 또는 SQL Server 인스턴스의 작동이 중단 되는 경우 Azure Blob에 대 한 링크를 다시 설정 하 여 새 컴퓨터에서 데이터베이스를 다시 만들 수 있습니다.  
   
--   **보안 이점:** 이 새로운 향상 된 기능을 사용 하면 계산 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 퍼블릭 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용 하 여 Azure Storage에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
+-   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 스토리지 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 퍼블릭 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용 하 여 Azure Storage에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
 ## <a name="concepts-and-requirements"></a>개념 및 요구 사항  
   
 ### <a name="azure-storage-concepts"></a>Azure Storage 개념  
  Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Azure에서 스토리지 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
   
- Azure에서 저장소 계정은 Blob에 액세스 하기 위한 가장 높은 수준의 네임 스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 500TB 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)(영문)을 참조하세요. 컨테이너는 BLOB 집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 한 계정에 포함될 수 있는 컨테이너 수에는 제한이 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에 저장할 수 있는 Blob 유형에는 블록과 페이지 Blob 두 가지가 있습니다. 이 새로운 기능은 최대 1TB 이하의 페이지 BLOB을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. 
-  `http://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
+ Azure에서 저장소 계정은 Blob에 액세스 하기 위한 가장 높은 수준의 네임 스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 500TB 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)(영문)을 참조하세요. 컨테이너는 BLOB 집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Azure Blob Storage 서비스에 저장할 수 있는 Blob 유형에는 블록과 페이지 Blob 두 가지가 있습니다. 이 새로운 기능은 최대 1TB 이하의 페이지 BLOB을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
   
 ### <a name="azure-billing-considerations"></a>Azure 청구 고려 사항  
  의사 결정 및 계획 과정에서 Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Azure Storage에 SQL Server 데이터 파일을 저장할 경우 스토리지 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. 현재 가격 모델에 따라 두 데이터베이스 파일(.mdf 및 .ldf)의 임대를 갱신하는 비용은 1개월에 약 2센트로 예상됩니다. Azure Storage 및 Azure 가상 컴퓨터의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격](https://azure.microsoft.com/pricing/) 페이지의 정보를 참조하세요.  
@@ -91,14 +90,13 @@ ON
 ### <a name="installation-prerequisites"></a>설치 필수 구성 요소  
  Azuree에 SQL Server 데이터 파일을 저장할 때 설치 해야 하는 필수 구성 요소는 다음과 같습니다.  
   
--   **온-프레미스 SQL Server:** SQL Server 2014 버전에는이 기능이 포함 되어 있습니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
+-   **SQL Server 온-프레미스:** SQL Server 2014 버전에 이 기능이 포함됩니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
   
 -   Azure 가상 머신에서 실행 중인 SQL Server: Azure 가상 머신에 SQL Server를 설치하는 경우 SQL Server 2014를 설치하거나 기존 인스턴스를 업데이트하세요. 마찬가지로 SQL Server 2014 플랫폼 이미지를 사용 하 여 Azure에서 새 가상 컴퓨터를 만들 수도 있습니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
   
-###  <a name="bkmk_Limitations"></a>제한을  
+###  <a name="limitations"></a><a name="bkmk_Limitations"></a> 제한 사항  
   
--   이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 `FileStream` 하는 것이 지원 되지 않습니다. Azure Storage 통합 로컬 `Filestream` 데이터베이스에 데이터를 저장할 수 있지만 Azure Storage를 사용 하 여 컴퓨터 간에 Filestream 데이터를 이동할 수는 없습니다. 
-  `FileStream` 데이터의 경우 컴퓨터 간에 Filestream과 연관된 파일(.mdf, .ldf)을 이동하는 데 기존 기술을 계속 사용하는 것이 좋습니다.  
+-   이 기능의 현재 릴리스에서는 Azure Storage 데이터를 저장 `FileStream` 하는 것이 지원 되지 않습니다. Azure Storage 통합 로컬 `Filestream` 데이터베이스에 데이터를 저장할 수 있지만 Azure Storage를 사용 하 여 컴퓨터 간에 Filestream 데이터를 이동할 수는 없습니다. `FileStream` 데이터의 경우 컴퓨터 간에 Filestream과 연관된 파일(.mdf, .ldf)을 이동하는 데 기존 기술을 계속 사용하는 것이 좋습니다.  
   
 -   현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 **없습니다.\* 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"**.  
   
@@ -112,8 +110,7 @@ ON
   
 -   Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 SQL Server는 `master` 데이터베이스에 설정 된 데이터 정렬을 사용 하 여 모든 URL 또는 파일 경로를 비교 합니다.  
   
--   
-  `AlwaysOn Availability Groups`은 기본 데이터베이스에 새 데이터베이스 파일을 추가하지 않는 한 지원됩니다. 데이터베이스 작업 중에 기본 데이터베이스에서 새 파일을 만들어야 하는 경우 먼저 보조 노드에서 AlwaysOn 가용성 그룹을 사용하지 않도록 설정합니다. 그런 다음 기본 데이터베이스에서 데이터베이스 작업을 수행하고 기본 노드에 데이터베이스를 백업합니다. 그런 다음 데이터베이스를 보조 노드에 복원하고 보조 노드에서 AlwaysOn 가용성 그룹을 사용하도록 설정합니다. Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 AlwaysOn 장애 조치 (Failover) 클러스터 인스턴스는 지원 되지 않습니다.  
+-   `AlwaysOn Availability Groups`은 기본 데이터베이스에 새 데이터베이스 파일을 추가하지 않는 한 지원됩니다. 데이터베이스 작업 중에 기본 데이터베이스에서 새 파일을 만들어야 하는 경우 먼저 보조 노드에서 AlwaysOn 가용성 그룹을 사용하지 않도록 설정합니다. 그런 다음 기본 데이터베이스에서 데이터베이스 작업을 수행하고 기본 노드에 데이터베이스를 백업합니다. 그런 다음 데이터베이스를 보조 노드에 복원하고 보조 노드에서 AlwaysOn 가용성 그룹을 사용하도록 설정합니다. Azure의 SQL Server 데이터 파일 기능을 사용 하는 경우 AlwaysOn 장애 조치 (Failover) 클러스터 인스턴스는 지원 되지 않습니다.  
   
 -   정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 스토리지에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
   
@@ -135,11 +132,9 @@ ON
 ### <a name="transact-sql-support"></a>Transact-SQL 지원  
  이 새로운 기능에서는 Transact-SQL 노출 영역을 다음과 같이 변경했습니다.  
   
--   
-  **sys.master_files** 시스템 뷰의 새로운 **int**열 **credential_id** . 
-  **credential_id** 열은 Azure Storage 사용 데이터 파일이 생성된 자격 증명에 대한 sys.credentials를 다시 상호 참조하도록 설정하는 데 사용됩니다. 이 열을 문제 해결에 사용할 수 있습니다. 예를 들어 이 열을 사용하는 데이터베이스 파일이 있는 경우 자격 증명을 삭제할 수 없습니다.  
+-   **sys.master_files** 시스템 뷰의 새로운 **int**열 **credential_id** . **credential_id** 열은 Azure Storage 사용 데이터 파일이 생성된 자격 증명에 대한 sys.credentials를 다시 상호 참조하도록 설정하는 데 사용됩니다. 이 열을 문제 해결에 사용할 수 있습니다. 예를 들어 이 열을 사용하는 데이터베이스 파일이 있는 경우 자격 증명을 삭제할 수 없습니다.  
   
-##  <a name="bkmk_Troubleshooting"></a>Azure의 SQL Server 데이터 파일에 대 한 문제 해결  
+##  <a name="troubleshooting-for-sql-server-data-files-in-azure"></a><a name="bkmk_Troubleshooting"></a>Azure의 SQL Server 데이터 파일에 대 한 문제 해결  
  지원되지 않는 기능 또는 제한 때문에 발생하는 오류를 방지하려면 먼저 [Limitations](sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)을 검토하세요.  
   
  Azure Storage의 SQL Server 데이터 파일 기능을 사용할 때 발생할 수 있는 오류 목록은 다음과 같습니다.  
@@ -155,7 +150,7 @@ ON
 -   *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*   
     해결 방법: **Identity** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. [자습서: Azure Storage 서비스에서 데이터 파일 SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 3 단원에 제공 된 지침을 검토 합니다.  
   
- **임대 blob 오류:**  
+ **임대 BLOB 오류:**  
   
 -   동일한 BLOB 파일을 사용하는 다른 인스턴스가 충돌한 후 SQL Server를 시작하려고 하면 오류가 발생합니다. 해결 방법: 정상적인 작업 중에 SQL Server는 임시 임대를 사용하여 스토리지에 대한 BLOB을 예약하고 45-60초마다 각 BLOB 임대를 갱신합니다. 서버가 충돌하는 상태에서 동일한 BLOB을 사용하도록 구성된 SQL Server의 다른 인스턴스가 시작될 경우 새 인스턴스는 BLOB의 기존 임대가 만료될 때까지 최대 60초 동안 기다립니다. 데이터베이스를 다른 인스턴스에 첨부하고 60초 내에 임대가 만료되도록 기다릴 수 없는 경우 BLOB에서 임대를 명시적으로 해제하여 첨부 작업의 오류를 방지할 수 있습니다.  
   
@@ -170,7 +165,7 @@ ON
 3.  *오류 코드 5120 물리적 파일 "%"을 (를) 열 수 없습니다. \*ls ". 운영 체제 오류% d: "% ls"*   
     해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일을 사용 하 여 서버 a가 온라인 상태이 고 ServerB가 실수로 시작 되었으며 동일한 데이터 파일을 가리키는 데이터베이스가 있는 경우 두 번째 서버는 데이터베이스를 시작할 수 *없습니다\* . 오류 코드 5120 ls ". 운영 체제 오류% d: "% ls"*.  
   
-     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거하면 됩니다. 이렇게 하려면 다음 단계를 수행하세요.  
+     이 문제를 해결하려면 먼저 Azure Storage의 데이터베이스 파일에 액세스하려면 서버 A가 필요한지 여부를 확인해야 합니다. 서버 A가 필요하지 않은 경우 서버 A와 Azure Storage에 있는 데이터베이스 파일 사이의 연결을 제거하면 됩니다. 이렇게 하려면 다음 단계를 따르십시오.  
   
     1.  ALTER Database 문을 사용하여 서버 A의 파일 경로를 로컬 폴더로 설정합니다.  
   
@@ -181,4 +176,4 @@ ON
     4.  데이터베이스를 온라인으로 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [자습서: Azure Storage 서비스의 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [자습서: Azure Storage의 SQL Server 데이터 파일 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

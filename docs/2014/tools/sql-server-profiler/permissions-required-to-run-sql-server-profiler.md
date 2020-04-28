@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6155f01b055f123277222a8c3a9359f907ca18cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171842"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server 프로파일러 실행에 필요한 권한
@@ -65,6 +65,6 @@ ms.locfileid: "78171842"
  ![SQL Server Profiler 추적 재생 권한](../../database-engine/media/replaytracedecisiontree.gif "SQL Server Profiler 추적 재생 권한")
 
 ## <a name="see-also"></a>참고 항목
- [Transact-sql&#41;재생 추적 &#40;SQL Server Profiler 저장 프로시저](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql) [](replay-traces.md) 는 추적 [&#40;](create-a-trace-sql-server-profiler.md) SQL Server Profiler&#41;추적 &#40;[재생](replay-a-trace-table-sql-server-profiler.md) SQL Server Profiler 추적 [파일&#41;재생](replay-a-trace-file-sql-server-profiler.md) &#40;SQL Server Profiler&#41;
+ [Transact-sql&#41;재생 추적 &#40;SQL Server Profiler 저장 프로시저](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql) [Replay Traces](replay-traces.md) 는 추적 [&#40;](create-a-trace-sql-server-profiler.md) SQL Server Profiler&#41;추적 &#40;[재생](replay-a-trace-table-sql-server-profiler.md) SQL Server Profiler 추적 [파일&#41;재생](replay-a-trace-file-sql-server-profiler.md) &#40;SQL Server Profiler&#41;
 
 

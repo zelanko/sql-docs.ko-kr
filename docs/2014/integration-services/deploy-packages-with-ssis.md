@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176463"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 자습서: 패키지 배포
@@ -66,14 +66,13 @@ ms.locfileid: "78176463"
 
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
--   
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 패키지를 실행하려면 AdventureWorks에 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 패키지를 실행하려면 AdventureWorks에 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
 
 -   Msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 시스템 데이터베이스의 sysssispackages 테이블에 대 한 읽기 및 쓰기 권한이 있어야 합니다.
 
  배포 번들을 만든 컴퓨터에 패키지를 배포하려면 해당 컴퓨터는 원본 및 대상 컴퓨터에 대한 요구 사항을 모두 충족해야 합니다.
 
- **이 자습서를 완료 하는 데 소요 되는 예상 시간:** 2 시간
+ **이 자습서에 소요되는 예상 시간:** 2시간
 
 ## <a name="lessons-in-this-tutorial"></a>이 자습서의 단원
  [1 단원: 배포 번들 만들기 준비](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md) 이 단원에서는 새 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 만들고 패키지 및 기타 필요한 파일을 프로젝트에 추가 하 여 ETL 솔루션을 배포할 준비를 합니다.
@@ -82,5 +81,5 @@ ms.locfileid: "78176463"
 
  [3 단원: 패키지 설치](../integration-services/lesson-3-install-ssis-package.md) 이 단원에서는 배포 번들을 대상 컴퓨터에 복사 하 고 패키지를 설치한 다음 패키지를 실행 합니다.
 
-![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 

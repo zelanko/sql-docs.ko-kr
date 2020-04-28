@@ -16,10 +16,10 @@ ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce3541843bc0eb82aa035864cd5c2490c4399ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918402"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey 및 Unique 속성 예제(VC++)

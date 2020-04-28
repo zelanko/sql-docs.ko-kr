@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176185"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
@@ -49,8 +49,7 @@ ms.locfileid: "78176185"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 프로젝트 항목 및 클래스
  기본적으로 VSTA 프로젝트 탐색기 창에 표시되는 스크립트 태스크 프로젝트에는 `ScriptMain`이라는 단일 항목이 포함되어 있으며, 이 `ScriptMain` 항목에는 역시 `ScriptMain`이라는 단일 클래스가 포함되어 있습니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.
 
--   스크립트 태스크가 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어에 대해 구성 된 경우 `ScriptMain` 클래스에는 공용 서브루틴가 `Main`있습니다. 
-  `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.
+-   스크립트 태스크가 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어에 대해 구성 된 경우 `ScriptMain` 클래스에는 공용 서브루틴가 `Main`있습니다. `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.
 
      기본적으로 새 스크립트의 `Main` 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄뿐입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. 속성 `Dts.TaskResult` 은 [스크립트 태스크에서 결과 반환](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)에 설명 되어 있습니다.
 
@@ -58,8 +57,7 @@ ms.locfileid: "78176185"
 
      기본적으로 `Main` 메서드에는 `Dts.TaskResult = (int)ScriptResults.Success` 줄이 포함되어 있습니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다.
 
- 
-  `ScriptMain` 항목에는 `ScriptMain` 이외의 클래스가 포함될 수 있습니다. 클래스는 해당 클래스가 있는 스크립트 태스크에서만 사용할 수 있습니다.
+ `ScriptMain` 항목에는 `ScriptMain` 이외의 클래스가 포함될 수 있습니다. 클래스는 해당 클래스가 있는 스크립트 태스크에서만 사용할 수 있습니다.
 
  기본적으로 `ScriptMain` 프로젝트 항목에는 다음과 같은 자동 생성 코드가 포함됩니다. 코드 템플릿은 또한 스크립트 태스크에 대한 개요와 SSIS 개체(예: 변수, 이벤트 및 연결)를 검색 및 조작하는 방법에 대한 추가 정보를 제공합니다.
 
@@ -208,16 +206,15 @@ To open Help, press F1.
 >  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. **보기** 메뉴에서 이러한 창 중 하나를 엽니다. **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.
 
 ## <a name="interacting-with-the-package-in-the-script-task"></a>스크립트 태스크에서 패키지와 상호 작용
- 스크립트 태스크에서는 `Dts` 클래스의 인스턴스인 전역 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 개체와 해당 멤버를 사용하여 포함하는 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.
+ 스크립트 태스크에서는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 인스턴스인 전역 `Dts` 개체와 해당 멤버를 사용하여 포함하는 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.
 
- 다음 표에서는 전역 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 개체를 통해 스크립트 태스크 코드에 제공되는 `Dts` 클래스의 주요 공용 멤버를 보여 줍니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.
+ 다음 표에서는 전역 `Dts` 개체를 통해 스크립트 태스크 코드에 제공되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버를 보여 줍니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.
 
 |멤버|목적|
 |------------|-------------|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|패키지에 정의된 연결 관리자에 액세스할 수 있게 해 줍니다.|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|스크립트 태스크에서 오류, 경고 및 정보 메시지를 발생시킬 수 있게 해 주는 이벤트 인터페이스를 제공합니다.|
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|
-  `TaskResult` 외에도 간단한 방법으로 런타임에 단일 개체를 반환할 수 있게 해 줍니다. 반환된 단일 개체는 워크플로 분기에도 사용할 수 있습니다.|
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|`TaskResult` 외에도 간단한 방법으로 런타임에 단일 개체를 반환할 수 있게 해 줍니다. 반환된 단일 개체는 워크플로 분기에도 사용할 수 있습니다.|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|사용하도록 설정된 로그 공급자에 태스크 진행률 및 결과 등의 정보를 로깅합니다.|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|태스크의 성공 또는 실패를 보고합니다.|
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|태스크의 컨테이너가 실행 중인 트랜잭션을 제공합니다.|
@@ -248,8 +245,7 @@ To open Help, press F1.
 
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](https://go.microsoft.com/fwlink/?LinkId=215661)
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립팅 솔루션에서 다른 어셈블리 참조](../referencing-other-assemblies-in-scripting-solutions.md) [스크립트 태스크 편집기에서 스크립트 태스크 구성](configuring-the-script-task-in-the-script-task-editor.md)

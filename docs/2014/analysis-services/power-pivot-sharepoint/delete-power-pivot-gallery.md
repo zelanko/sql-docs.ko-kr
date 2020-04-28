@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1236a9cdffc4dd06764da1f2988df80d568798c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175652"
 ---
 # <a name="delete-powerpivot-gallery"></a>PowerPivot 갤러리 삭제
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 삭제하면 예약된 데이터 새로 고침에 대해 구성된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터 새로 고침 기록을 비롯하여 해당 항목이 모두 삭제됩니다.
 
 > [!NOTE]
@@ -30,7 +29,7 @@ ms.locfileid: "78175652"
 
 1.  설정 ![SharePoint 설정](../media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 클릭 한 다음 **사이트 설정**을 클릭 합니다.
 
-2.  **사이트 설정**을 클릭 합니다.
+2.  **사이트 설정**을 클릭합니다.
 
 3.  사이트 관리에서 **사이트 라이브러리 및 목록**을 클릭합니다.
 
@@ -40,10 +39,9 @@ ms.locfileid: "78175652"
 
 ### <a name="delete-powerpivot-gallery-sharepoint-2010"></a>PowerPivot 갤러리 SharePoint 2010 삭제
 
-1.  
-  **사이트 작업**을 클릭합니다.
+1.  **사이트 작업**을 클릭합니다.
 
-2.  **사이트 설정**을 클릭 합니다.
+2.  **사이트 설정**을 클릭합니다.
 
 3.  사이트 관리에서 **사이트 라이브러리 및 목록**을 클릭합니다.
 

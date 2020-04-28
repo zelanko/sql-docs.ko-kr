@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176683"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
-  
   `CompoundCurve`는 geometry 또는 geography 유형의 연속적인 `CircularString` 또는 `LineString` 인스턴스가 하나 이상 포함된 컬렉션입니다.
 
 > [!IMPORTANT]
@@ -28,12 +27,9 @@ ms.locfileid: "78176683"
 
 1.  적어도 하나의 `CircularString` 또는 `LineString` 인스턴스를 포함해야 합니다.
 
-2.  
-  `CircularString` 또는 `LineString` 인스턴스의 시퀀스는 연속적이어야 합니다.
+2.  `CircularString` 또는 `LineString` 인스턴스의 시퀀스는 연속적이어야 합니다.
 
- 에 `CompoundCurve` 여러 `CircularString` 및 `LineString` 인스턴스의 시퀀스가 포함 된 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 끝점은 시퀀스에서 다음 인스턴스의 시작 끝점 이어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. 
-  `CircularString`의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. 
-  `CompoundCurve` 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.
+ 에 `CompoundCurve` 여러 `CircularString` 및 `LineString` 인스턴스의 시퀀스가 포함 된 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 끝점은 시퀀스에서 다음 인스턴스의 시작 끝점 이어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. `CircularString`의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. `CompoundCurve` 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.
 
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스
  다음 그림에서는 유효한 `CompoundCurve` 형식을 보여 줍니다.
@@ -41,14 +37,11 @@ ms.locfileid: "78176683"
  ![](../../database-engine/media/f278742e-b861-4555-8b51-3d972b7602bf.png "f278742e-b861-4555-8b51-3d972b7602bf")
 
 ### <a name="accepted-instances"></a>허용되는 인스턴스
- 
-  `CompoundCurve` 인스턴스는 빈 인스턴스이거나 다음 조건을 충족하는 경우 허용됩니다.
+ `CompoundCurve` 인스턴스는 빈 인스턴스이거나 다음 조건을 충족하는 경우 허용됩니다.
 
-1.  
-  `CompoundCurve` 인스턴스에 포함된 모든 인스턴스가 허용되는 원호 세그먼트 인스턴스인 경우. 허용되는 원호 세그먼트 인스턴스에 대한 자세한 내용은 [LineString](linestring.md) 및 [CircularString](circularstring.md)을 참조하세요.
+1.  `CompoundCurve` 인스턴스에 포함된 모든 인스턴스가 허용되는 원호 세그먼트 인스턴스인 경우. 허용되는 원호 세그먼트 인스턴스에 대한 자세한 내용은 [LineString](linestring.md) 및 [CircularString](circularstring.md)을 참조하세요.
 
-2.  
-  `CompoundCurve` 인스턴스의 모든 원호 세그먼트가 연결되어 있는 경우. 각 후속 원호 세그먼트에 대 한 첫 번째 점은 이전 원호 세그먼트의 마지막 지점과 동일 합니다.
+2.  `CompoundCurve` 인스턴스의 모든 원호 세그먼트가 연결되어 있는 경우. 즉, 이어지는 각 원호 세그먼트의 첫 번째 점이 앞에 있는 원호 세그먼트의 마지막 점과 같아야 합니다.
 
     > [!NOTE]
     >  여기에는 Z와 M 좌표가 포함됩니다. 따라서 네 후보 X, Y, Z 및 M이 모두 같아야 합니다.
@@ -70,14 +63,11 @@ DECLARE @g2 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 0, 0 1, -1 0), (1 0, 2 0)
 ```
 
 ### <a name="valid-instances"></a>유효한 인스턴스
- 
-  `CompoundCurve` 인스턴스는 다음 조건을 충족하는 경우 유효합니다.
+ `CompoundCurve` 인스턴스는 다음 조건을 충족하는 경우 유효합니다.
 
-1.  
-  `CompoundCurve` 인스턴스가 허용되는 경우
+1.  `CompoundCurve` 인스턴스가 허용되는 경우
 
-2.  
-  `CompoundCurve` 인스턴스에 포함된 모든 원호 세그먼트 인스턴스가 유효한 인스턴스인 경우
+2.  `CompoundCurve` 인스턴스에 포함된 모든 원호 세그먼트 인스턴스가 유효한 인스턴스인 경우
 
  다음 예에서는 유효한 `CompoundCurve` 인스턴스를 보여 줍니다.
 
@@ -89,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` 인스턴스가 유효하므로 `CircularString`은 유효합니다. `CircularString` 인스턴스의 유효성에 대 한 자세한 내용은 [CircularString](circularstring.md)를 참조 하세요.
+ `CircularString` 인스턴스가 유효하므로 `@g3`은 유효합니다. `CircularString` 인스턴스의 유효성에 대 한 자세한 내용은 [CircularString](circularstring.md)를 참조 하세요.
 
  다음 예에서는 유효하지 않은 `CompoundCurve` 인스턴스를 보여 줍니다.
 
@@ -101,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` 은 잘못되었습니다. 
-  `@g2` 인스턴스가 잘못되었기 때문에 `LineString`은 잘못되었습니다. 
-  `@g3` 인스턴스가 잘못되었기 때문에 `CircularString`은 잘못되었습니다. 유효한 `CircularString` 및 `LineString` 인스턴스에 대 한 자세한 내용은 [CircularString](circularstring.md) 및 [LineString](linestring.md)를 참조 하세요.
+ `@g1` 은 잘못되었습니다. `LineString` 인스턴스가 잘못되었기 때문에 `@g2`은 잘못되었습니다. `CircularString` 인스턴스가 잘못되었기 때문에 `@g3`은 잘못되었습니다. 유효한 `CircularString` 및 `LineString` 인스턴스에 대 한 자세한 내용은 [CircularString](circularstring.md) 및 [LineString](linestring.md)를 참조 하세요.
 
 ## <a name="examples"></a>예
 
@@ -124,7 +110,7 @@ DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 
 ```
 
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>C. CompoundCurve를 사용하여 지리 인스턴스 인스턴스화
- 다음 예에서는 `geography`를 사용하여 `CompoundCurve` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.
+ 다음 예에서는 `CompoundCurve`를 사용하여 `geography` 인스턴스를 선언하고 초기화하는 방법을 보여 줍니다.
 
 ```sql
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';
@@ -140,8 +126,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');
 SELECT @g1.STLength(), @g2.STLength();
 ```
 
- 
-  `@g1` 및 `@g2` 의 길이는 같습니다. 이 예에서는 `CompoundCurve` 인스턴스가 하나 이상의 `LineString` 인스턴스를 저장할 수 있음을 알 수 있습니다.
+ `@g1` 및 `@g2` 의 길이는 같습니다. 이 예에서는 `CompoundCurve` 인스턴스가 하나 이상의 `LineString` 인스턴스를 저장할 수 있음을 알 수 있습니다.
 
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>E. 여러 CircularString을 포함하는 CompoundCurve를 사용하여 기하 도형 인스턴스 인스턴스화
  다음 예에서는 서로 다른 두 `CircularString` 인스턴스를 사용하여 `CompoundCurve`를 초기화하는 방법을 보여 줍니다.

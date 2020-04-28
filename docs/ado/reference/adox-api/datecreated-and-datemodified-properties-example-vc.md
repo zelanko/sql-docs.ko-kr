@@ -16,10 +16,10 @@ ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939589"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated 및 DateModified 속성 예제(VC++)
@@ -118,4 +118,4 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
  [Column 개체 (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated 속성 (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified 속성 (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

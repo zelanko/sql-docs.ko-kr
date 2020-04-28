@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 9a8ca5c7dfdda98e1c005c3851d061957cf67449
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762827"
 ---
 # <a name="emulating-oracle-package-variables"></a>Oracle 패키지 변수 에뮬레이트
@@ -19,7 +19,7 @@ ms.locfileid: "76762827"
 Oracle은 패키지에 변수, 형식, 저장 프로시저 및 함수를 캡슐화 하는 것을 지원 합니다. Oracle 패키지를 변환 하는 경우 다음을 변환 해야 합니다.
 
 * 프로시저 및 함수-공용 및 개인
-* variables
+* 변수
 * 커서
 * 초기화 루틴
 

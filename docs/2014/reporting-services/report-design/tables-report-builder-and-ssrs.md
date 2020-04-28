@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172622"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
@@ -25,13 +25,12 @@ ms.locfileid: "78172622"
 
  테이블을 빠르게 시작하려면 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) 또는 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../create-a-basic-table-report-ssrs-tutorial.md)를 참조하세요.
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 테이블을 사용하는 다양한 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하면 테이블에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 예제 보고서에는 테이블을 사용하는 다양한 보고서가 포함되어 있습니다. 보고서 작성기 또는 보고서 디자이너에서 예제 보고서의 보고서 정의를 탐색하거나 보고서 작성기 또는 보고서 디자이너에서 렌더링된 보고서를 검토하면 테이블에 대해 알 수 있습니다. 예제 보고서를 다운로드하는 방법은 [(SSRS) Reporting Services 예제](https://go.microsoft.com/fwlink/?LinkID=198283)를 참조하십시오.
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>테이블을 추가 하 여 세부 데이터 표시
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> 테이블을 추가하여 세부 데이터 표시
  리본 메뉴의 삽입 탭에서 디자인 화면에 테이블을 추가합니다. 테이블 또는 행렬 마법사를 사용하여 테이블을 추가할 수 있습니다. 이 마법사에서는 데이터 원본 연결 및 데이터 세트를 만들고 테이블을 구성하거나 수동으로 구성할 수 있는 테이블 템플릿을 기준으로 테이블을 만들 수 있습니다.
 
 > [!NOTE]
@@ -47,7 +46,7 @@ ms.locfileid: "78172622"
 
  ![디자인 화면에서 테이블 템플릿이 선택됨](../media/rs-tabletemplatenewselected.gif "디자인 화면에서 테이블 템플릿이 선택됨")
 
- 데이터 행에 대 한 행 핸들은 세부 정보 기호 (![정보 행에 대해 3 개의 병렬 줄이 있는 행 핸들](../media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들"))를 표시 합니다. 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에서는 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.
+ 데이터 행에 대한 행 핸들은 세부 정보 기호를 표시합니다(![세부 정보 행에 3개의 평행선이 있는 행 핸들](../media/rs-icontablix-detailsrow.gif "3개의 평행선이 있는 정보 행에 대한 행 핸들")). 이러한 행에서 데이터를 표시하려면 보고서 데이터 창의 필드를 머리글 행 또는 정보 행의 테이블 셀로 끌어옵니다. 두 행이 동시에 채워집니다. 열을 더 추가하려면 삽입 지점이 보일 때까지 해당 필드를 테이블로 끌어옵니다. 데이터 세트 필드를 테이블에 추가한 후에는 날짜 및 통화에 대한 기본 서식을 변경하여 보고서에 표시되는 방법을 제어할 수 있습니다. 다음 다이어그램에서는 Date, Order, Product, Qty 및 Line Total 필드가 있는 테이블 데이터 영역을 보여 줍니다.
 
  ![디자인, 열 머리글이 굵게 설정된 테이블](../media/rs-basictabledetailsformatteddesign.gif "디자인, 열 머리글이 굵게 설정된 테이블")
 
@@ -68,7 +67,7 @@ ms.locfileid: "78172622"
 
  자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.
 
-##  <a name="AddingRowGroups"></a>테이블에 행 그룹 추가
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> 테이블에 행 그룹 추가
  필드를 보고서 데이터 창에서 셀로 끌어 와서 정보 데이터를 표시하는 것처럼 그룹화 창으로 필드를 끌어 그룹을 추가할 수 있습니다. 테이블의 경우 필드를 행 그룹 창으로 끌어옵니다. 그룹을 추가하면 테이블에서 그룹 값을 표시할 행 그룹 영역의 새 열로 셀이 자동으로 추가됩니다. 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.
 
  다음 그림에서는 두 개의 중첩된 행 그룹을 포함하는 테이블을 디자인 뷰에서 보여 줍니다. Order 필드와 Date 필드를 차례로 행 그룹 창으로 끌어 오고 각 그룹을 기존 그룹의 부모로 삽입하여 행 그룹을 만듭니다. 이 그림에서는 날짜 기반의 부모 그룹과 주문 번호 기반의 자식 그룹 및 기본값으로 정의된 세부 정보 그룹을 보여 줍니다.
@@ -92,12 +91,12 @@ ms.locfileid: "78172622"
 
  자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.
 
-##  <a name="RemovingHidingRows"></a>정보 행 제거 또는 숨기기
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> 정보 행 제거 또는 숨기기
  보고서에서 테이블을 미리 본 후 기존 정보 행을 제거할 수 있습니다. 또는 드릴다운 보고서처럼 기본적으로 정보 행을 숨기고 사용자가 정보 행 표시를 자세히 보기 또는 간략히 보기 간에 전환하도록 할 수 있습니다.
 
  테이블에서 정보 행을 제거하려면 그룹화 창을 사용합니다. 세부 정보 그룹을 선택하고 바로 가기 메뉴를 사용하여 그룹 및 정보 데이터를 표시하는 행을 삭제합니다. 다음 그림에서는 날짜 및 주문 번호를 기준으로 그룹화되었지만 정보 행은 포함하지 않는 테이블의 디자인 뷰를 보여 줍니다. 이 테이블에는 합계 행이 추가되지 않았습니다.
 
- ![디자인 뷰, 2개의 그룹이 있고 정보가 없는 테이블](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "디자인 뷰, 2개의 그룹이 있고 정보가 없는 테이블")
+ ![디자인 뷰, 2개의 그룹이 있고 세부 정보가 없는 테이블](../media/rs-basictablegroupsdrilldownnodetailsdesign.gif "디자인 뷰, 2개의 그룹이 있고 세부 정보가 없는 테이블")
 
  정보 행을 삭제한 후에는 행 그룹으로 값의 범위가 한정됩니다. 정보 데이터가 더 이상 표시되지 않습니다.
 
@@ -106,7 +105,7 @@ ms.locfileid: "78172622"
 
  다음 그림에서는 이러한 보고서를 미리 보기로 보여 줍니다.
 
- ![미리 보기, 그룹은 있고 정보 행이 없는 테이블](../media/rs-basictablegroupsnodetailspreview.gif "미리 보기, 그룹은 있고 정보 행이 없는 테이블")
+ ![미리 보기, 그룹은 있고 세부 정보 행이 없는 테이블](../media/rs-basictablegroupsnodetailspreview.gif "미리 보기, 그룹은 있고 세부 정보 행이 없는 테이블")
 
  테이블에서 행을 추가하거나 제거하려면 [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](insert-or-delete-a-row-report-builder-and-ssrs.md)를 참조하세요.
 

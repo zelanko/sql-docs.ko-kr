@@ -10,20 +10,18 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925782"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)
-  
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 웹 브라우저를 사용하여 보고서를 보고 보고서 관리자를 실행합니다. 모든 브라우저에서 모든 보고서 기능을 지원하는 것은 아닙니다. 이 항목에서는 보고서 관리자 관리 기능, 보고서 보기 및 Visual Studio의 보고서 뷰어 컨트롤에 대한 지원 및 요구 사항에 대해 설명합니다. 또한 이 항목에는 지원되는 브라우저, 인증 요구 사항 및 스크립트 요구 사항에 대한 기능 가용성이 요약되어 있습니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서는 웹 브라우저를 사용하여 보고서를 보고 보고서 관리자를 실행합니다. 모든 브라우저에서 모든 보고서 기능을 지원하는 것은 아닙니다. 이 항목에서는 보고서 관리자 관리 기능, 보고서 보기 및 Visual Studio의 보고서 뷰어 컨트롤에 대한 지원 및 요구 사항에 대해 설명합니다. 또한 이 항목에는 지원되는 브라우저, 인증 요구 사항 및 스크립트 요구 사항에 대한 기능 가용성이 요약되어 있습니다.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 모드 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드  
   
- **항목 내용**  
+ **항목 내용:**  
   
 - [Power View 브라우저 시나리오](#bkmk_powerview)  
   
@@ -33,18 +31,18 @@ ms.locfileid: "76925782"
   
 - [인증 요구 사항](#bkmk_authentication)  
   
-- [Visual Studio의 ReportViewer 웹 서버 컨트롤에 대 한 브라우저 지원](#bkmk_controls)  
+- [Visual Studio의 ReportViewer 웹 서버 컨트롤에 대한 브라우저 지원](#bkmk_controls)  
   
-##  <a name="bkmk_powerview"></a>파워 뷰 브라우저 시나리오
+##  <a name="power-view-browser-scenarios"></a><a name="bkmk_powerview"></a>파워 뷰 브라우저 시나리오
 
  지원되는 브라우저 및 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 에서 지원하는 브라우저 버전 목록은 여는 문서의 유형에 따라 다릅니다. Excel 2013 통합 문서와 "**rdlx**" 파일은 서로 다른 구성 요소를 활용 합니다.  
   
-|문서 유형|Environment|브라우저 지원|  
+|문서 유형|환경|브라우저 지원|  
 |-------------------|-----------------|---------------------|  
-|Power View 보고서(.RDLX)|**Sharepoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] sharepoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합 모드와 파워 뷰 웹 응용 프로그램에서|[Sharepoint Server의 파워 뷰 및 Reporting Services Sharepoint 통합 모드](#bkmk_powerview_on_SSRS)를 참조 하세요.|  
+|Power View 보고서(.RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 및 파워 뷰 웹 애플리케이션.|[Sharepoint Server의 파워 뷰 및 Reporting Services Sharepoint 통합 모드](#bkmk_powerview_on_SSRS)를 참조 하세요.|  
 |Power View 시트가 있는 Excel 2013 통합 문서|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel 서비스에서<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web App|[Excel Services 또는 SharePoint Online의 Excel Web App의 파워 뷰을](#bkmk_powerview_on_ExcelServices)참조 하세요.|  
   
-###  <a name="bkmk_powerview_on_SSRS"></a>SharePoint Server에 파워 뷰 및 Reporting Services SharePoint 통합 모드  
+###  <a name="power-view-on-sharepoint-server-and-reporting-services-sharepoint-integrated-mode"></a><a name="bkmk_powerview_on_SSRS"></a>SharePoint Server에 파워 뷰 및 Reporting Services SharePoint 통합 모드  
  다음 표에는 사용자가 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 서비스 애플리케이션 및 설치 및 구성된 SharePoint의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 있는 SharePoint 팜에서 Power View 보고서(.RDLX)를 여는 경우 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 브라우저 버전이 요약되어 있습니다.  
   
 - 표는 SharePoint 2010 및 SharePoint 2013에 적용됩니다.  
@@ -67,10 +65,9 @@ ms.locfileid: "76925782"
   
 #### <a name="inprivate-browsing-feature-in-internet-explorer"></a>Internet Explorer의 InPrivate 브라우징 기능
 
- 
-  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 및 Internet Explorer 9의 InPrivate 브라우징 기능을 지원하지 않습니다. InPrivate 브라우징에 대 한 자세한 내용은 [Inprivate 브라우징 이란?](https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) 을 참조 하세요. (https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
+ [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 및 Internet Explorer 9의 InPrivate 브라우징 기능을 지원하지 않습니다. InPrivate 브라우징에 대 한 자세한 내용은 [Inprivate 브라우징 이란?](https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) 을 참조 하세요. (https://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
-###  <a name="bkmk_powerview_on_ExcelServices"></a>Excel Services 또는 SharePoint Online의 Excel Web App에서 파워 뷰
+###  <a name="power-view-on-excel-services-or-the-excel-web-app-on-sharepoint-online"></a><a name="bkmk_powerview_on_ExcelServices"></a>Excel Services 또는 SharePoint Online의 Excel Web App에서 파워 뷰
 
  다음 표에는 사용자가 Excel Services를 실행 중인 SharePoint Server에서 Power View 시트가 포함된 Excel 2013 통합 문서를 열 때 지원되는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 의 브라우저 버전이 요약되어 있습니다.  
   
@@ -86,9 +83,9 @@ ms.locfileid: "76925782"
 |**Apple Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|32비트, 64비트|  
 |**Google Chrome (공개적으로 릴리스된 최신 버전)**|제한 된 시간 동안 32 비트 **(\*)**|제한 된 시간 동안 32 비트 **(\*)**|제한 된 시간 동안 32 비트 **(\*)**|제한 된 시간 동안 32 비트 **(\*)**|제한 된 시간 동안 32 비트 **(\*)**|지원되지 않음|  
   
- **(\*)** Chrome은 Silverlight에서 사용 되는 Netscape 플러그 인 API (NPAPI)를 지원 하지 않습니다. 파워 뷰는 Silverlight에 종속됩니다.  자세한 내용은 [NPAPI에 대한 최종 카운트다운](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)을 참조하세요.  
+ **(\*)** Chrome은 Silverlight에서 사용 되는 Netscape 플러그 인 API (NPAPI)를 지원 하지 않습니다. 파워 뷰는 Silverlight에 종속됩니다.  자세한 내용은 [NPAPI 지원 종료 최종 알림](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html)을 참조하세요.  
   
-##  <a name="bkmk_reportmanager"></a>보고서 관리자 브라우저 요구 사항 (기본 모드)
+##  <a name="report-manager-browser-requirements-native-mode"></a><a name="bkmk_reportmanager"></a>보고서 관리자 브라우저 요구 사항 (기본 모드)
 
  다음은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 보고서 관리자를 실행해서 보고서 및 보고서 서버를 관리하는 데 사용할 수 있는 현재 지원되는 브라우저 목록입니다.  
   
@@ -99,7 +96,7 @@ ms.locfileid: "76925782"
 |Apple Safari (최신 공개 릴리스 버전)|  
 |Google Chrome (공개적으로 릴리스된 최신 버전)|  
   
-##  <a name="bkmk_reportviewer"></a>보고서를 보기 위한 브라우저 요구 사항
+##  <a name="browser-requirements-for-viewing-reports"></a><a name="bkmk_reportviewer"></a>보고서를 보기 위한 브라우저 요구 사항
 
  다음은 보고서 뷰어에서 지원되는 기능 및 브라우저에 대한 현재 목록입니다. 보고서 뷰어는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 관리자 및 SharePoint 라이브러리에서 보고서를 볼 수 있도록 지원합니다.  
   
@@ -114,7 +111,7 @@ ms.locfileid: "76925782"
 |**Apple Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|32비트, 64비트|제한 된 기능으로 지원 됨 <sup>(1)</sup>|  
 |**Google Chrome (공개적으로 릴리스된 최신 버전)**|32비트|32비트|32비트|32비트|32비트|지원되지 않음|지원되지 않음|  
   
- **<sup>(1)</sup>** 다음 기능이 지원 됩니다.  
+ **<sup>(1)</sup>**  다음 기능이 지원됩니다.  
   
 - PDF 및 TIFF 형식으로 내보내기.  
   
@@ -122,7 +119,7 @@ ms.locfileid: "76925782"
   
 - 자세한 내용은 [Microsoft Surface 장치 및 Apple IOS 장치에서 Reporting Services 보고서 보기](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md)를 참조 하세요.  
   
- **참고** Macintosh 컴퓨터에서 보고서 서버에 액세스 하는 경우 Safari를 사용 하는 것이 좋습니다. 와 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]통합 된 SharePoint 제품을 사용 하는 경우 [브라우저 지원 계획 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583)을 참조 하세요.  
+ **참고** Macintosh 컴퓨터에서 보고서 서버에 액세스하는 경우 Safari를 사용하는 것이 좋습니다. 와 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]통합 된 SharePoint 제품을 사용 하는 경우 [브라우저 지원 계획 (Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkId=183583)을 참조 하세요.  
   
 ### <a name="url-access-for-viewing-reports"></a>보고서 보기에 대한 URL 액세스
 
@@ -132,16 +129,16 @@ ms.locfileid: "76925782"
   
 - [URL 액세스 매개 변수 참조](url-access-parameter-reference.md)  
   
-###  <a name="bkmk_authentication"></a>인증 요구 사항
+###  <a name="authentication-requirements"></a><a name="bkmk_authentication"></a>인증 요구 사항
 
  브라우저는 클라이언트 요청이 성공하기 위해 보고서 서버에서 처리되어야 하는 특정 인증 체계를 지원합니다. 다음 표에는 Windows 운영 체제에서 실행되는 브라우저가 지원하는 기본 인증 형식이 나와 있습니다.  
   
-|**브라우저 종류**|**지원함**|**브라우저 기본값**|**서버 기본값**|  
+|**브라우저 종류**|**지원**|**브라우저 기본값**|**서버 기본값**|  
 |----------------------|------------------|-------------------------|------------------------|  
-|**Internet Explorer**|Negotiated, Kerberos, NTLM, 기본|협상|예. 기본 인증 설정이 Internet Explorer에서 작동합니다.|  
+|**Internet Explorer**|Negotiated, Kerberos, NTLM, 기본|Negotiate|예. 기본 인증 설정이 Internet Explorer에서 작동합니다.|  
 |**Firefox**|NTLM, 기본|NTLM|예. 기본 인증 설정이 Firefox에서 작동합니다.|  
-|**Safari**|기본|기본|예. 기본 인증 설정이 Safari에서 작동합니다.|  
-|**크롬**|Negotiated, NTLM, 기본|Negotiated|예. 기본 인증 설정이 Chrome에서 작동합니다.|  
+|**Safari**|Basic|Basic|예. 기본 인증 설정이 Safari에서 작동합니다.|  
+|**Chrome**|Negotiated, NTLM, 기본|Negotiated|예. 기본 인증 설정이 Chrome에서 작동합니다.|  
   
 ### <a name="script-requirements"></a>스크립트 요구 사항
 
@@ -149,14 +146,14 @@ ms.locfileid: "76925782"
   
  스크립팅을 설정하지 않으면 보고서를 열 때 다음과 비슷한 오류 메시지가 나타납니다.  
   
-- **브라우저가 스크립트를 지원 하지 않거나 스크립트를 허용 하지 않도록 구성 되어 있습니다. 스크립트 없이이 보고서를 보려면 여기를 클릭**하십시오.  
+- **브라우저가 스크립트를 지원하지 않거나 스크립트를 허용하지 않도록 구성되어 있습니다. 스크립트 없이 이 보고서를 보려면 여기를 클릭하세요**.  
   
  스크립트 지원 없이 보고서를 보도록 선택하면 보고서는 보고서 도구 모음과 문서 구조와 같은 보고서 뷰어 기능 없이 HTML로 렌더링됩니다.  
   
 > [!NOTE]  
 > 보고서 도구 모음은 HTML 뷰어 구성 요소의 일부입니다. 기본적으로 브라우저 창에서 렌더링되는 모든 보고서의 상단에 도구 모음이 표시됩니다. 보고서 뷰어는 보고서에서 정보를 검색하는 기능, 특정 페이지로 스크롤하는 기능, 보기 편하게 페이지 크기를 조정하는 기능 등을 제공합니다. 보고서 도구 모음 또는 HTML 뷰어에 대한 자세한 내용은 [HTML Viewer and the Report Toolbar](html-viewer-and-the-report-toolbar.md)을 참조하세요.  
   
-##  <a name="bkmk_controls"></a>Visual Studio의 ReportViewer 웹 서버 컨트롤에 대 한 브라우저 지원
+##  <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a><a name="bkmk_controls"></a>Visual Studio의 ReportViewer 웹 서버 컨트롤에 대 한 브라우저 지원
 
  ReportViewer 웹 서버 컨트롤은 ASP.NET 웹 애플리케이션에 보고 기능을 포함시키는 데 사용됩니다. 컨트롤은 Visual Studio에 포함되어 있으며 이 항목에서 설명하는 기타 구성 요소와 다른 브라우저 및 브라우저 버전을 지원합니다. 애플리케이션을 보는 데 사용되는 브라우저의 유형은 애플리케이션에서 사용자가 어떤 종류의 ReportViewer 기능을 제공할 수 있는지를 결정합니다. 이 항목에 제공된 표를 사용하여 지원되는 브라우저 중 어떤 것이 보고 기능 제한 사항의 영향을 받고 어떤 플랫폼이 지원되는지 알아보세요.  
   
@@ -172,15 +169,15 @@ ms.locfileid: "76925782"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**메모**|  
-|**Internet Explorer 11 (데스크톱용)**|yes|yes|yes|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 10(데스크톱용)**|yes|yes|yes|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 9**|지원되지 않음|yes|지원되지 않음|yes|yes|yes|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
-|**Internet Explorer 8.0**|지원되지 않음|yes|지원되지 않음|yes|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
-|**Internet Explorer 7.0**|지원되지 않음|yes|지원되지 않음|yes|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
-|**Firefox (공개적으로 릴리스된 최신 버전)**|yes|yes|yes|yes|yes|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
-|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|yes|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
-|**Chrome (공개적으로 릴리스된 최신 버전)**|yes|yes|yes|yes|yes|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**브라우저**|**Windows 8** 및 **Windows 8.1**|**Windows 7**|**Windows Server 2012** 및 **2012 R2**|**Windows Server 2008** 및 **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6-10.9**|**참고 사항**|  
+|**Internet Explorer 11 (데스크톱용)**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 10(데스크톱용)**|예|예|예|지원되지 않음|지원되지 않음|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 9**|지원되지 않음|예|지원되지 않음|예|예|예|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다.|  
+|**Internet Explorer 8.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
+|**Internet Explorer 7.0**|지원되지 않음|예|지원되지 않음|예|예<sup>1</sup>|지원되지 않음|Internet Explorer는 ReportViewer의 모든 기능을 지원합니다. <sup>1</sup>|  
+|**Firefox (공개적으로 릴리스된 최신 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
+|**Safari (최신 공개 릴리스 버전)**|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|지원되지 않음|예|인쇄 및 확대/축소는 지원되지 않습니다.<br /><br /> 매개 변수가 있는 보고서에서 날짜를 선택하는 데 사용되는 달력 컨트롤은 이 브라우저에서 사용되지 않습니다. 사용자는 사용하려는 날짜를 수동으로 매개 변수 프롬프트 영역에 입력해야 합니다.|  
+|**Chrome (공개적으로 릴리스된 최신 버전)**|예|예|예|예|예|지원되지 않음|인쇄 및 확대/축소는 지원되지 않습니다.|  
   
  <sup>1</sup> 표준 모드에서 Internet Explorer 7.0 및 8.0은 보고서에 기울어진 선을 표시 하지 않습니다. 보고서에서 사선을 사용하는 경우 ASP.NET 페이지가 Internet Explorer의 쿼크 모드에서 실행되도록 설정하세요. 이렇게 하려면 \<! ASP.NET 페이지의 DOCTYPE> 태그입니다. 또는 마스터 페이지를 사용하는 경우 .master 파일에서 태그를 찾을 수 있습니다. 이 태그는 다음과 같습니다.  
   

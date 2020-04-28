@@ -18,10 +18,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75656995"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-sql)
@@ -45,7 +45,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
   
 -   [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+-   [sys.dm_exec_requests&#40;Transact-SQL&#41](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
 -   [dm_exec_procedure_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
@@ -64,10 +64,9 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="remarks"></a>설명
 이 시스템 함수는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4부터 사용할 수 있습니다.
 
-이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다. 
-  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 LAST_QUERY_PLAN_STATS 옵션을 참조하세요.
+이는 옵트인 기능이며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451을 사용하도록 설정해야 합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터 데이터베이스 수준에서 이를 수행하려면 [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 LAST_QUERY_PLAN_STATS 옵션을 참조하세요.
 
-이 시스템 함수는 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.  
+이 시스템 함수는 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
 
 Sys. dm_exec_query_plan_stats의 실행 계획 출력은 다음 정보를 포함 합니다.
 -  캐시 된 계획에 있는 모든 컴파일 시간 정보
@@ -76,13 +75,13 @@ Sys. dm_exec_query_plan_stats의 실행 계획 출력은 다음 정보를 포함
 다음 조건에서 **실제 실행 계획에 해당** 하는 실행 계획 출력은 **sys. dm_exec_query_plan_stats**에 대해 반환 된 테이블의 **query_plan** 열에 반환 됩니다.  
 
 -   이 계획은 [dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)에서 찾을 수 있습니다.     
-    **AND**    
+    **하거나**    
 -   실행 되는 쿼리는 복잡 하거나 리소스를 사용 합니다.
 
 다음 조건에서는 dm_exec_query_plan_stats에 대해 반환 된 테이블의 **query_plan** 열에서 **간소화 된 <sup>1</sup> ** 실행 계획 출력이 반환 됩니다 **.**  
 
 -   이 계획은 [dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)에서 찾을 수 있습니다.     
-    **AND**    
+    **하거나**    
 -   이 쿼리는 일반적으로 OLTP 워크 로드의 일부로 분류 되어 충분히 간단 합니다.
 
 <sup>1</sup> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5부터이는 루트 노드 연산자 (SELECT)만 포함 하는 실행 계획을 나타냅니다. CTP [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.4의 경우이는를 통해 `sys.dm_exec_cached_plans`사용 가능한 캐시 된 계획을 나타냅니다.
@@ -90,7 +89,7 @@ Sys. dm_exec_query_plan_stats의 실행 계획 출력은 다음 정보를 포함
 다음 조건에서는 **sys. dm_exec_query_plan_stats**에서 **출력이 반환 되지 않습니다** .
 
 -   *Plan_handle* 를 사용 하 여 지정한 쿼리 계획이 계획 캐시에서 제거 되었습니다.     
-    **또는**    
+    **디스크나**    
 -   첫 번째 장소에서 쿼리 계획을 캐시할 수 없습니다. 자세한 내용은 [실행 계획 캐싱 및 다시 사용 ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)을 참조 하세요.
   
 > [!NOTE] 
@@ -149,6 +148,6 @@ GO
 
 ## <a name="see-also"></a>참고 항목
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;실행 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176503"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,10 +25,9 @@ ms.locfileid: "78176503"
 
  다음 스크린샷에는 다양한 오류 출력을 제공하는 XML 유효성 검사에 필요한 설정이 포함된 **XML 태스크 편집기** 가 나와 있습니다.
 
- ![XML 태스크 편집기의 XML 태스크 속성](../media/xmltaskproperties.jpg "Xml 태스크 편집기의 XML 태스크 속성")
+ ![XML 태스크 편집기의 XML 태스크 속성](../media/xmltaskproperties.jpg "XML 태스크 편집기의 XML 태스크 속성")
 
- 
-  `ValidationDetails` 속성을 사용할 수 있게 되기 전에 먼저 XML 태스크에 의해 수행된 XML 유효성 검사가 오류 또는 해당 위치에 대한 정보 없이 true 또는 false 결과만 반환했습니다. 이제 `ValidationDetails`를 true로 설정할 경우 출력 파일에는 줄 번호 및 위치를 포함하여 모든 오류에 대한 자세한 정보가 포함됩니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다.
+ `ValidationDetails` 속성을 사용할 수 있게 되기 전에 먼저 XML 태스크에 의해 수행된 XML 유효성 검사가 오류 또는 해당 위치에 대한 정보 없이 true 또는 false 결과만 반환했습니다. 이제 `ValidationDetails`를 true로 설정할 경우 출력 파일에는 줄 번호 및 위치를 포함하여 모든 오류에 대한 자세한 정보가 포함됩니다. 이 정보를 사용하여 XML 문서의 오류를 이해하고, 찾고, 수정할 수 있습니다.
 
  대형 XML 문서 및 많은 수의 오류에 사용할 수 있도록 XML 유효성 검사 기능을 쉽게 확장할 수 있습니다. 출력 파일 자체가 XML 형식이므로 출력을 쿼리하고 분석할 수 있습니다. 예를 들어 출력에 오류가 많이 포함되어 있으면 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하여 오류를 그룹화할 수 있습니다.
 
@@ -117,7 +116,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
 
  위 텍스트에 나와 있는 두 번째 샘플 쿼리를 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 표시한 결과는 다음과 같습니다.
 
- ![Management Studio에서 XML 오류를 그룹화하는 쿼리](../media/queryforxmlerrors.jpg "Management Studio에서 XML 오류를 그룹화 하는 쿼리")
+ ![Management Studio에서 XML 오류를 그룹화하는 쿼리](../media/queryforxmlerrors.jpg "Management Studio에서 XML 오류를 그룹화하는 쿼리")
 
 ## <a name="see-also"></a>참고 항목
  [Xml 태스크](xml-task.md) [xml 태스크 편집기 &#40;일반 페이지&#41;](../xml-task-editor-general-page.md)

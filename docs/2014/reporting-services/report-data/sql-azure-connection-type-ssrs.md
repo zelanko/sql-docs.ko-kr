@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2c3d3e75117996f088cff96b2b7a8d4cd504127
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176906"
 ---
 # <a name="sql-azure-connection-type-ssrs"></a>SQL Azure 연결 형식(SSRS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술을 기반으로 작성된 클라우드 기반의 호스트되는 관계형 데이터베이스입니다. 보고서에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 데이터를 포함하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하고 데이터를 검색할 수 있습니다.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술을 기반으로 작성 된 클라우드 기반의 호스팅되는 관계형 데이터베이스입니다. 보고서에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 데이터를 포함하려면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터 확장 프로그램을 기반으로 합니다. 이 데이터 원본 유형을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하고 데이터를 검색할 수 있습니다.
 
  이 데이터 확장 프로그램은 다중값 매개 변수, 서버 집계 및 연결 문자열과 별개로 관리되는 자격 증명을 지원합니다.
 
@@ -31,9 +31,8 @@ ms.locfileid: "78176906"
 
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 &#40;추가 및 확인 보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)를 참조 하세요.
 
-##  <a name="Connection"></a> 연결 문자열
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하면 클라우드의 데이터베이스 개체에 연결하게 됩니다. 온사이트 데이터베이스와 마찬가지로 호스팅되는 데이터베이스에는 여러 테이블, 뷰 및 저장 프로시저가 있는 스키마가 여러 개 있을 수 있으므로 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다.
+##  <a name="connection-string"></a><a name="Connection"></a>연결 문자열
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결하면 클라우드의 데이터베이스 개체에 연결하게 됩니다. 온사이트 데이터베이스와 마찬가지로 호스팅되는 데이터베이스에는 여러 테이블, 뷰 및 저장 프로시저가 있는 스키마가 여러 개 있을 수 있으므로 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다.
 
  데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 AdventureWorks라는 호스팅되는 예제 데이터베이스를 지정합니다.
 
@@ -45,8 +44,8 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  자세한 내용 및 연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.
 
-##  <a name="Credentials"></a> 자격 증명
- Windows 인증(통합 보안)은 지원하지 않습니다. Windows 인증을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결하려고 하면 오류가 발생합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서는 SQL Server 인증(사용자 이름 및 암호)만 지원하므로 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결할 때마다 자격 증명(로그인 및 암호)을 제공해야 합니다.
+##  <a name="credentials"></a><a name="Credentials"></a>자격 증명
+ Windows 인증(통합 보안)이 지원되지 않기 때문에 Windows 인증을 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결하려고 하면 오류가 발생합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서는 SQL Server 인증(사용자 이름 및 암호)만 지원하므로 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 연결할 때마다 자격 증명(로그인 및 암호)을 제공해야 합니다.
 
  자격 증명에는 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 쿼리에 따라 저장 프로시저를 실행하고 테이블 및 뷰에 액세스할 수 있는 권한과 같은 다른 사용 권한이 필요할 수 있습니다. 외부 데이터 원본의 소유자는 사용자에게 필요한 데이터베이스 개체에 대한 읽기 전용 권한을 제공할 수 있는 자격 증명을 구성해야 합니다.
 
@@ -54,13 +53,13 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
 -   저장된 사용자 이름 및 암호 사용. 보고서 데이터를 포함하는 데이터베이스가 보고서 서버와 다른 경우 발생하는 이중 홉을 협상하려면 Windows 자격 증명을 자격 증명으로 사용하도록 옵션을 선택합니다. 데이터 원본에 연결한 후 인증된 사용자를 가장하도록 선택할 수도 있습니다.
 
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](https://go.microsoft.com/fwlink/?linkid=121312)을 참조하세요.
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.
 
  자세한 내용은 [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 을 참조 하거나 [보고서 작성기에서 자격 증명을 지정](../specify-credentials-in-report-builder.md)하세요.
 
  
 
-##  <a name="Query"></a> 쿼리
+##  <a name="queries"></a><a name="Query"></a>쿼리
  쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다. 쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 쿼리가 여러 결과 집합을 반환할 경우 보고서는 쿼리가 검색한 첫 번째 결과 집합만 처리합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 과(와) [!INCLUDE[ssSDS](../../includes/sssds-md.md)]은(는) 지원되는 데이터베이스 크기 등이 다를 수 있지만 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 쿼리를 작성하는 방법과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 쿼리를 작성하는 방법은 비슷합니다. BACKUP과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 지원되지 않지만 이러한 문은 보고서 쿼리에 사용하는 문이 아닙니다. 자세한 내용은 [SQL Server 연결 형식&#40;SSRS&#41;](sql-server-connection-type-ssrs.md)을 참조하세요.
 
  기본적으로 그래픽 쿼리 디자이너에 나타낼 수 있는 새 쿼리를 만들거나 기존 쿼리를 열 경우 관계형 쿼리 디자이너를 사용할 수 있습니다. 다음과 같은 방법으로 쿼리를 지정할 수 있습니다.
@@ -79,10 +78,9 @@ Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True;
 
  자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](relational-query-designer-user-interface-report-builder.md) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](text-based-query-designer-user-interface-report-builder.md)를 참조하세요.
 
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어를 완벽하게 지원합니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [](/sql/t-sql/language-reference)온라인 설명서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](https://go.microsoft.com/fwlink/?LinkId=141687)를 참조하세요.
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어를 완벽하게 지원합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.
 
-###  <a name="QueryText"></a> Text 쿼리 유형 사용
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용
  텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.
 
 ```
@@ -110,7 +108,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-###  <a name="QueryStoredProcedure"></a> StoredProcedure 쿼리 유형 사용
+###  <a name="using-query-type-storedprocedure"></a><a name="QueryStoredProcedure"></a>StoredProcedure 쿼리 유형 사용
  다음 중 한 가지 방법으로 데이터 세트 쿼리에 대해 저장 프로시저를 지정할 수 있습니다.
 
 -   **데이터 세트 속성** 대화 상자에서 **저장 프로시저** 옵션을 설정합니다. 저장 프로시저 및 테이블 반환 함수 드롭다운 목록에서 원하는 항목을 선택합니다.
@@ -129,7 +127,7 @@ WHERE HumanResources.Employee.JobTitle = (@JobTitle)
 
 
 
-##  <a name="Parameters"></a> 매개 변수
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수
  쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.
 
  예를 들어 다음 SQL 쿼리는 `EmpID`라는 보고서 매개 변수를 만듭니다.
@@ -144,7 +142,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Remarks"></a> 주의
+##  <a name="remarks"></a><a name="Remarks"></a> 주의 사항
 
 ###### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램
  OLE DB 데이터 원본 유형을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색할 수도 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다.
@@ -152,11 +150,11 @@ WHERE EmployeeID = (@EmpID)
  자세한 내용은 [ODBC 연결 형식&#40;SSRS&#41;](odbc-connection-type-ssrs.md)을 참조하세요.
 
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [](../create-deploy-and-manage-mobile-and-paginated-reports.md)온라인 설명서[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의  설명서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](https://go.microsoft.com/fwlink/?linkid=121312).
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).
 
 
 
-##  <a name="HowTo"></a> 방법 도움말 항목
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.
 
  [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS를 추가 하 고 확인&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -167,7 +165,7 @@ WHERE EmployeeID = (@EmpID)
 
 
 
-##  <a name="Related"></a> 관련 단원
+##  <a name="related-sections"></a><a name="Related"></a> 관련 섹션
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.
 
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다](report-datasets-ssrs.md) . 보고서의 데이터에 액세스 하는 방법에 대 한 개요를 제공 합니다.
@@ -178,7 +176,7 @@ WHERE EmployeeID = (@EmpID)
 
  [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md) 쿼리에 의해 생성 되는 데이터 집합 필드 컬렉션에 대 한 정보를 제공 합니다.
 
- [Reporting Services &#40;SSRS에서 지 원하는 데이터 원본은](../create-deploy-and-manage-mobile-and-paginated-reports.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 의 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?linkid=121312)에서&#41;.
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).
 각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.
 
 

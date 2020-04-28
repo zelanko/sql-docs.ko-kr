@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176230"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>스크립트 구성 요소 코딩 및 디버깅
@@ -49,20 +49,15 @@ ms.locfileid: "78176230"
  스크립트 구성 요소의 장점은, 개발자가 작성해야 할 코드 분량을 줄여주는 인프라 코드를 생성할 수 있다는 것입니다. 이 기능은 입/출력 및 해당 열과 속성이 고정되어 있고 미리 알려져 있다는 사실을 기반으로 합니다. 따라서 그 이후에 구성 요소의 메타데이터 내용을 변경하면 작성한 코드가 무효화될 수 있습니다. 그러면 패키지 실행 중 컴파일 오류가 발생합니다.
 
 #### <a name="project-items-and-classes-in-the-script-component-project"></a>스크립트 구성 요소 프로젝트의 프로젝트 항목 및 클래스
- 코드 디자인 모드로 전환하면 VSTA IDE에서 `ScriptMain` 프로젝트 항목을 열어 표시합니다. 
-  `ScriptMain` 프로젝트 항목은 스크립트의 진입점으로 사용되어 코드 작성 위치를 나타내는 편집 가능한 `ScriptMain` 클래스를 포함합니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.
+ 코드 디자인 모드로 전환하면 VSTA IDE에서 `ScriptMain` 프로젝트 항목을 열어 표시합니다. `ScriptMain` 프로젝트 항목은 스크립트의 진입점으로 사용되어 코드 작성 위치를 나타내는 편집 가능한 `ScriptMain` 클래스를 포함합니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.
 
  스크립트 프로젝트는 다음과 같은 두 가지 추가 자동 생성 읽기 전용 프로젝트 항목을 포함합니다.
 
--   
-  `ComponentWrapper` 프로젝트 항목은 다음의 세 클래스를 포함합니다.
+-   `ComponentWrapper` 프로젝트 항목은 다음의 세 클래스를 포함합니다.
 
-    -   
-  `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. 
-  `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.
+    -   `UserComponent` 클래스 - <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>에서 상속되며, 데이터를 처리하고 패키지와 상호 작용하는 데 사용할 메서드와 속성을 포함합니다. `ScriptMain` 클래스는 `UserComponent` 클래스에서 상속됩니다.
 
-    -   
-  `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.
+    -   `Connections` 컬렉션 클래스 - 스크립트 변환 편집기의 연결 관리자 페이지에서 선택한 연결에 대한 참조를 포함합니다.
 
     -   `Variables` **스크립트 변환 편집기**의 **스크립트** 페이지에서 `ReadOnlyVariable` 및 `ReadWriteVariables` 속성에 입력 한 변수에 대 한 참조를 포함 하는 컬렉션 클래스입니다.
 
@@ -173,15 +168,10 @@ public class ScriptMain : UserComponent
 
 |패키지 기능|액세스 방법|
 |---------------------|-------------------|
-|variables|
-  `Variables` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Variables` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.<br /><br /> 
-  `PreExecute` 메서드는 읽기 전용 변수만 액세스할 수 있습니다. 
-  `PostExecute` 메서드는 읽기 전용 변수와 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|
-|Connections|
-  `Connections` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Connections` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.|
+|variables|`Variables` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Variables` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.<br /><br /> `PreExecute` 메서드는 읽기 전용 변수만 액세스할 수 있습니다. `PostExecute` 메서드는 읽기 전용 변수와 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|
+|Connections|`Connections` 클래스의 `ComponentWrapper` 속성을 통해 표시되는, `Connections` 프로젝트 항목의 `ScriptMain` 컬렉션 클래스에 있는 명명된 접근자 및 형식화된 접근자 속성을 사용합니다.|
 |이벤트|클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **\<Fire X>** 메서드를 사용 하 여 이벤트를 발생 시킵니다. `ScriptMain`|
-|로깅|
-  <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 클래스의 `ScriptMain` 메서드를 사용하여 로깅을 수행합니다.|
+|로깅|`ScriptMain` 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|
 
 ## <a name="debugging-the-script-component"></a>스크립트 구성 요소 디버깅
  스크립트 구성 요소의 코드를 디버깅하려면 코드에 하나 이상의 중단점을 설정한 다음 VSTA IDE를 닫고 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행합니다. 패키지 실행 중 스크립트 구성 요소 실행이 시작되면 VSTA IDE가 다시 열리고 코드가 읽기 전용 모드에서 열립니다. 중단점에 도달한 후에는 변수 값을 검사하고 나머지 코드를 단계별로 실행할 수 있습니다.
@@ -196,7 +186,7 @@ public class ScriptMain : UserComponent
 
 -   실행을 중단 하 고 **system.object** 네임 스페이스의 메서드 `MessageBox.Show` 를 사용 하 여 모달 메시지를 표시 합니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)
 
--   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 **진행률** 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.
+-   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 **디자이너의**진행률[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../data-flow/transformations/script-component.md)을 참조하세요.
 
 -   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 [스크립트 구성 요소의 로깅](logging-in-the-script-component.md)을 참조하세요.
 
@@ -215,7 +205,7 @@ public class ScriptMain : UserComponent
 
 -   blogs.msdn.com의 블로그 항목 - [SSIS 2008 및 R2 설치의 VSTA 설치 및 구성 문제](https://go.microsoft.com/fwlink/?LinkId=215661)
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](configuring-the-script-component-in-the-script-component-editor.md)

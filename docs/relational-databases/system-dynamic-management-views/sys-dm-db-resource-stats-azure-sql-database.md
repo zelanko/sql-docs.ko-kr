@@ -20,19 +20,18 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175158"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats(Azure SQL 데이터베이스)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
+  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에서 활동이 없더라도 15초 간격으로 한 행이 있습니다. 기록 데이터는 약 1 시간 동안 유지 관리 됩니다.  
   
-  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스에 대해 CPU, I/O 및 메모리 사용을 반환합니다. 데이터베이스에 작업이 없는 경우에도 한 행은 15초 간격으로 존재합니다. 기록 데이터는 약 1 시간 동안 유지 관리 됩니다.  
-  
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|현재 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
 |avg_cpu_percent|**decimal (5, 2)**|서비스 계층 한도의 비율로 계산된 평균 계산 활용률입니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "78175158"
 |cpu_limit|**decimal (5, 2)**|이 간격 동안의이 데이터베이스에 대 한 vCores 수입니다. DTU 기반 모델을 사용 하는 데이터베이스의 경우이 열은 NULL입니다.|
 |avg_instance_cpu_percent|**decimal (5, 2)**|운영 체제에 따라 측정 된 데이터베이스를 호스팅하는 SQL Server 인스턴스의 평균 CPU 사용량입니다. 사용자 및 내부 작업에의 한 CPU 사용률을 포함 합니다.|
 |avg_instance_memory_percent|**decimal (5, 2)**|운영 체제에 따라 측정 된 데이터베이스를 호스팅하는 SQL Server 인스턴스의 평균 메모리 사용량입니다. 에는 사용자 및 내부 워크 로드의 메모리 사용률이 포함 됩니다.|
-|avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|
 |replica_role|**int**|기본, 1을 보조로, 2를 전달자 (지역 보조의 기본)로 사용 하는 현재 복제본의 역할을 나타냅니다. 읽기 가능한 모든 보조 데이터베이스에 ReadOnly 의도를 사용 하 여 연결 된 경우 "1"이 표시 됩니다. 읽기 전용 의도를 지정 하지 않고 지역 보조 데이터베이스에 연결 하는 경우 "2" (전달자에 연결)가 표시 되어야 합니다.|
 |||
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7ad456034902c2d3793100e93e370453348a1451
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176533"
 ---
 # <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
@@ -40,7 +40,7 @@ ms.locfileid: "78176533"
 
  위의 다이어그램에서 볼 수 있듯이 변경된 데이터를 증분 로드하는 패키지를 만드는 단계는 다음과 같습니다.
 
- **1 단계: 제어 흐름 디자인** 패키지의 제어 흐름에서 다음 태스크를 정의 해야 합니다.
+ **1단계: 제어 흐름 디자인** 패키지의 제어 흐름에서 다음 태스크를 정의해야 합니다.
 
 -   검색하려는 원본 데이터에 대한 변경 간격의 시작 및 종료 `datetime` 값을 계산합니다.
 
@@ -58,16 +58,15 @@ ms.locfileid: "78176533"
 
      스크립트 태스크나 SQL 실행 태스크를 사용하여 변경 내용을 쿼리하는 데 사용할 SQL 문을 조합합니다.
 
-     **자세한 내용:**  [변경 데이터에 대 한 쿼리 준비](prepare-to-query-for-the-change-data.md)
+     **자세한 내용:**  [변경 데이터에 대한 쿼리 준비](prepare-to-query-for-the-change-data.md)
 
  **2 단계: 변경 데이터에 대 한 쿼리 설정** 데이터를 쿼리 하는 테이블 반환 함수를 만듭니다.
 
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 쿼리를 개발하고 저장합니다.
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 쿼리를 개발하고 저장합니다.
 
  **자세한 내용:**  [변경 데이터 검색 및 이해](retrieve-and-understand-the-change-data.md)
 
- **3 단계: 데이터 흐름 디자인** 패키지의 데이터 흐름에서 다음 태스크를 정의 해야 합니다.
+ **3단계: 데이터 흐름 디자인** 패키지의 데이터 흐름에서 다음 태스크를 정의해야 합니다.
 
 -   변경 테이블에서 변경 데이터를 검색합니다.
 
@@ -91,12 +90,11 @@ ms.locfileid: "78176533"
  위 다이어그램에 설명된 프로세스 및 단계는 단일 테이블에서 증분 로드를 수행합니다. 여러 테이블에서 증분 로드를 수행하는 경우 전반적인 프로세스는 같습니다. 그러나 여러 테이블 처리에 맞게 패키지의 디자인을 변경해야 합니다. 여러 테이블에서 증분 로드를 수행하는 패키지를 만드는 방법은 [여러 테이블의 증분 로드 수행](perform-an-incremental-load-of-multiple-tables.md)을 참조하세요.
 
 ## <a name="samples-of-change-data-capture-packages"></a>패키지 변경 데이터 캡처 예제
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 아래 항목을 참조하세요.
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 아래 항목을 참조하세요.
 
--   [지정 된 간격 패키지 샘플에 대 한 Readme_Change 데이터 캡처](https://go.microsoft.com/fwlink/?LinkId=133507)
+-   [지정된 간격 동안 변경 데이터 캡처 패키지 예제 추가 정보](https://go.microsoft.com/fwlink/?LinkId=133507)
 
--   [마지막 요청 이후 데이터 캡처 패키지 샘플 Readme_Change](https://go.microsoft.com/fwlink/?LinkId=133508)
+-   [마지막 요청 이후 변경 데이터 캡처 패키지 예제 추가 정보](https://go.microsoft.com/fwlink/?LinkId=133508)
 
 ## <a name="related-tasks"></a>관련 작업
 

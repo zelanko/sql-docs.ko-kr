@@ -15,19 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176488"
 ---
 # <a name="connect-components-with-paths"></a>경로에 구성 요소 연결
-  
   **디자이너의** 데이터 흐름 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭의 디자인 화면에서 패키지의 데이터 흐름을 구성합니다. 데이터 흐름에 데이터 흐름 구성 요소가 두 개 있으면 원본 또는 변환의 출력을 변환 또는 대상의 입력에 연결하여 두 구성 요소를 연결할 수 있습니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다.
 
  다음 다이어그램에서는 하나의 원본 구성 요소, 두 개의 변환, 하나의 대상 구성 요소 및 이를 연결하는 경로가 포함된 간단한 데이터 흐름을 보여 줍니다.
 
- ![데이터 흐름](media/mw-dts-08.gif "데이터 흐름")
+ ![데이터 흐름](media/mw-dts-08.gif "디자이너의")
 
  두 구성 요소를 연결한 다음에는 **데이터 흐름 경로 편집기**에서 경로를 통해 이동하는 데이터의 메타데이터와 경로의 속성을 볼 수 있습니다. 자세한 내용은 [Integration Services Paths](data-flow/integration-services-paths.md)을(를) 참조하세요.
 

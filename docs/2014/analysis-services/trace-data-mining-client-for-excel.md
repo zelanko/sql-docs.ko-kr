@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175572"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>추적(Excel용 데이터 마이닝 클라이언트)
@@ -48,8 +48,7 @@ ms.locfileid: "78175572"
  테이블 분석 도구 중 하나를 사용할 때 작업을 유지 하려면 **세션 모델 사용**옵션의 선택을 취소 하 여 모델이 서버에 영구적으로 저장 되도록 할 수 있습니다. 나중에 작업을 다시 만들 수 있도록 **추적** 프로그램 창의 문을 파일로 복사할 수도 있습니다.
 
 ## <a name="understanding-sessions"></a>세션 이해
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결하면 데이터 마이닝 추가 기능이 세션을 시작합니다. 각 세션은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 기존 세션을 식별하는 세션 식별자를 받습니다. 그러나 세션 식별자는 세션이 유효한 상태임을 보장하는 것은 아닙니다. 세션의 제한 시간이 초과되거나 세션과 관련된 연결이 해제되면 해당 세션이 만료될 수 있습니다. 세션이 만료되어 더 이상 유효하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 세션을 종료하고 처리 중인 모든 트랜잭션을 롤백합니다. 더 이상 유효하지 않은 세션 식별자로 전송된 메시지는 지정된 세션을 찾을 수 없다는 오류 메시지와 함께 실패합니다.
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 연결하면 데이터 마이닝 추가 기능이 세션을 시작합니다. 각 세션은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 기존 세션을 식별하는 세션 식별자를 받습니다. 그러나 세션 식별자는 세션이 유효한 상태임을 보장하는 것은 아닙니다. 세션의 제한 시간이 초과되거나 세션과 관련된 연결이 해제되면 해당 세션이 만료될 수 있습니다. 세션이 만료되어 더 이상 유효하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 세션을 종료하고 처리 중인 모든 트랜잭션을 롤백합니다. 더 이상 유효하지 않은 세션 식별자로 전송된 메시지는 지정된 세션을 찾을 수 없다는 오류 메시지와 함께 실패합니다.
 
  몇몇 데이터 마이닝 모델은 서버에 명시적으로 저장되지만 세션 마이닝 모델 및 구조는 그렇지 않으며 세션 데이터 마이닝 작업의 레코드는 지속되지 않습니다. 임시 마이닝 모델 및 구조는 세션을 종료하는 즉시 삭제되므로 Excel 통합 문서를 닫기 전에 보존하려는 모든 작업 내용을 저장해야 합니다.
 

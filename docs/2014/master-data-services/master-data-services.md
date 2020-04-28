@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: db2e2fb2a174e73cfbe139c3ee15529af72e5b7b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176042"
 ---
 # <a name="master-data-services"></a>Master  Data  Services
@@ -26,16 +26,13 @@ ms.locfileid: "78176042"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 다음 구성 요소와 도구가 포함 되어 있습니다.
 
--   
-  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 웹 애플리케이션을 만들고 구성하는 데 사용하는 도구입니다.
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 웹 애플리케이션을 만들고 구성하는 데 사용하는 도구입니다.
 
--   
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] - 모델 또는 비즈니스 규칙 만들기와 같은 관리 작업을 수행하는 데 사용하며 데이터를 업데이트하기 위해 액세스하는 웹 애플리케이션입니다.
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] - 모델 또는 비즈니스 규칙 만들기와 같은 관리 작업을 수행하는 데 사용하며 데이터를 업데이트하기 위해 액세스하는 웹 애플리케이션입니다.
 
 -   MDSModelDeploy.exe - 다른 환경에 배포할 모델 개체와 데이터 패키지를 만드는 데 사용하는 도구입니다.
 
--   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스 - 개발자가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대한 사용자 지정 솔루션을 확장하거나 개발하는 데 사용할 수 있습니다.
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스 - 개발자가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대한 사용자 지정 솔루션을 확장하거나 개발하는 데 사용할 수 있습니다.
 
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]-데이터를 관리 하 고 새 엔터티 및 특성을 만드는 데 사용 합니다.
 

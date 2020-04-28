@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d705a02df8e133b5deb8242b1120a6ddd9f9cac9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177221"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>태스크 7: Excel에서 마스터 데이터 관리자를 사용하여 수행된 업데이트 보기

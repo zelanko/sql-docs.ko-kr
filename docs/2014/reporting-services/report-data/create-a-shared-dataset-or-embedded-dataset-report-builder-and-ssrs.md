@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173202"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>공유 데이터 세트 또는 포함된 데이터 세트 만들기(보고서 작성기 및 SSRS)
@@ -28,8 +28,7 @@ ms.locfileid: "78173202"
 
 -   데이터 세트를 보고서 서버 또는 SharePoint 사이트에 직접 저장합니다.
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서 작성기를 사용하여 다음 태스크를 수행합니다.
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서 작성기를 사용하여 다음 태스크를 수행합니다.
 
 1.  솔루션 탐색기에서 공유 데이터 세트를 만듭니다. 공유 데이터 세트는 솔루션 탐색기의 공유 데이터 원본 폴더에 있는 데이터 원본을 사용해야 합니다.
 
@@ -49,7 +48,7 @@ ms.locfileid: "78173202"
      ![rs_NewSharedDataset](../media/rs-newshareddataset.gif "rs_NewSharedDataset")
 
     > [!NOTE]
-    >  **새 보고서 또는 데이터 세트 창**이 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.
+    >  **새 보고서 또는 데이터 세트** 창이 나타나지 않으면 보고서 작성기 단추에서 **새로 만들기**를 클릭합니다.
 
 2.  왼쪽 창의 **데이터 세트 만들기**에서 **공유 데이터 세트**를 클릭합니다.
 
@@ -57,7 +56,7 @@ ms.locfileid: "78173202"
 
 4.  쿼리 디자이너에서 데이터 세트에 포함할 필드를 지정합니다.
 
-5.  **실행** (**!**)을 클릭하여 쿼리를 실행합니다.
+5.  **실행** (**!**)을 클릭 하 여 쿼리를 실행 합니다.
 
 6.  **보고서 작성기** 단추에서 **저장** 또는 **다른 이름으로 저장**을 클릭하여 공유 데이터 세트를 보고서 서버에 저장합니다.
 

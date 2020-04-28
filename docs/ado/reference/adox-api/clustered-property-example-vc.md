@@ -15,10 +15,10 @@ ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925490"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered 속성 예제(VC++)
@@ -89,4 +89,4 @@ void ClusteredX() {
   
 ## <a name="see-also"></a>참고 항목  
  [Clustered 속성 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175872"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
@@ -27,23 +27,20 @@ ms.locfileid: "78175872"
 > [!IMPORTANT]
 >  현재 미리 보기 기능입니다. 쿼리 저장소를 사용하려면 쿼리 저장소 구현에는 사용권 계약(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)의 미리 보기 약관과 해당 [Microsoft Azure 미리 보기 추가 사용 약관](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의해야 합니다.
 
-##  <a name="Enabling"></a>쿼리 저장소 사용
+##  <a name="enabling-the-query-store"></a><a name="Enabling"></a> 쿼리 저장소 사용
  새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.
 
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Management Studio에서 쿼리 저장소 페이지 사용
 
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]2016 버전이 필요합니다.)
 
-2.  
-  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.
+2.  **데이터베이스 속성** 대화 상자에서 **쿼리 저장소** 페이지를 선택합니다.
 
-3.  
-  **사용** 상자에서 **True**를 선택합니다.
+3.  **사용** 상자에서 **True**를 선택합니다.
 
 #### <a name="by-using-transact-sql-statements"></a>Transact-SQL 문 사용
 
-1.  
-  `ALTER DATABASE` 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 다음은 그 예입니다. 
+1.  `ALTER DATABASE` 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들면 다음과 같습니다.
 
     ```
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
@@ -56,7 +53,7 @@ ms.locfileid: "78175872"
 
 
 
-##  <a name="About"></a> 쿼리 저장소에 있는 정보
+##  <a name="information-in-the-query-store"></a><a name="About"></a> 쿼리 저장소에 있는 정보
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 특정 쿼리에 대한 실행 계획은 일반적으로 통계 변경, 스키마 변경, 인덱스 생성/삭제 등과 같은 여러 이유로 인해 시간에 따라 변경됩니다. 프로시저 캐시(캐시된 쿼리 계획이 저장되는 위치)에는 최신 실행 계획만 저장됩니다. 또한 메모리 부족으로 인해 계획 캐시에서 계획이 제거됩니다. 따라서 실행 계획 변경으로 인한 쿼리 성능 저하는 간단한 문제가 아니며 해결하는 데 시간이 걸릴 수 있습니다.
 
  쿼리 저장소에서는 쿼리당 여러 실행 계획을 유지하므로 쿼리 프로세서가 쿼리에 대해 특정 실행 계획을 사용하도록 하는 정책을 적용할 수 있습니다. 이를 계획 강제 적용이라고 합니다. 쿼리 저장소의 계획 강제 적용은 [USE PLAN](/sql/t-sql/queries/hints-transact-sql-query) 쿼리 힌트와 유사한 메커니즘을 사용하여 제공되지만 사용자 애플리케이션을 변경할 필요는 없습니다. 계획 강제 적용은 계획 변경으로 인한 쿼리 성능 저하를 짧은 시간 내에 해결할 수 있습니다.
@@ -93,8 +90,7 @@ JOIN sys.query_store_query_text AS Txt
 
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")
 
- 
-  **재발된 쿼리**를 선택하면 **에서** 재발된 쿼리 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]창이 열립니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 선택할 수 있습니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
+ **재발된 쿼리**를 선택하면 **에서** 재발된 쿼리 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]창이 열립니다. 재발된 쿼리 창에는 쿼리 저장소의 쿼리 및 계획이 표시됩니다. 위쪽의 드롭다운 상자를 사용하여 다양한 기준에 따라 쿼리를 선택할 수 있습니다. 계획을 선택하면 그래픽 쿼리 계획이 표시됩니다. 단추를 사용하여 원본 쿼리를 보고, 쿼리 계획을 강제 적용 및 적용 취소하고 표시를 새로 고칠 수 있습니다.
 
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")
 
@@ -102,7 +98,7 @@ JOIN sys.query_store_query_text AS Txt
 
 
 
-##  <a name="Options"></a>구성 옵션
+##  <a name="configuration-options"></a><a name="Options"></a> 구성 옵션
  OPERATION_MODE READ_WRITE 또는 READ_ONLY 수 있습니다.
 
  CLEANUP_POLICY STALE_QUERY_THRESHOLD_DAYS 인수를 구성 하 여 쿼리 저장소에 데이터를 보존할 일 수를 지정 합니다.
@@ -113,59 +109,57 @@ JOIN sys.query_store_query_text AS Txt
 
  INTERVAL_LENGTH_MINUTES 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 INTERVAL_LENGTH_MINUTES를 통해 구성됩니다.
 
- 
-  `sys.database_query_store_options` 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다.
+ `sys.database_query_store_options` 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다.
 
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.
 
  
 
-##  <a name="Related"></a>관련 된 뷰, 함수 및 프로시저
+##  <a name="related-views-functions-and-procedures"></a><a name="Related"></a> 관련된 뷰, 함수 및 프로시저
  쿼리 저장소는 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 를 통해 또는 다음과 같은 뷰 및 프로시저를 사용하여 보고 관리할 수 있습니다.
 
--   [fn_stmt_sql_handle_from_sql_stmt &#40;Transact-sql&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
+-   [sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)
 
 ### <a name="query-store-catalog-views"></a>쿼리 저장소 카탈로그 뷰
  7개의 카탈로그 뷰에 쿼리 저장소에 대한 정보가 표시됩니다.
 
--   [database_query_store_options &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
+-   [sys.database_query_store_options&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql)
 
--   [query_context_settings &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
+-   [sys.query_context_settings&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-context-settings-transact-sql)
 
--   [query_store_plan &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
+-   [sys.query_store_plan&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-plan-transact-sql)
 
--   [query_store_query &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
+-   [sys.query_store_query&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-transact-sql)
 
--   [query_store_query_text &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
+-   [sys.query_store_query_text&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql)
 
--   [query_store_runtime_stats &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
+-   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql)
 
--   [query_store_runtime_stats_interval &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
+-   [sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql)
 
 ### <a name="query-store-stored-procedures"></a>쿼리 저장소 저장 프로시저
  6개의 저장 프로시저로 쿼리 저장소를 구성합니다.
 
--   [Transact-sql&#41;sp_query_store_flush_db &#40;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
+-   [sp_query_store_flush_db&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql)
 
--   [Transact-sql&#41;sp_query_store_reset_exec_stats &#40;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
+-   [sp_query_store_reset_exec_stats&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql)
 
--   [Transact-sql&#41;sp_query_store_force_plan &#40;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
+-   [sp_query_store_force_plan&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql)
 
--   [Transact-sql&#41;sp_query_store_unforce_plan &#40;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
+-   [sp_query_store_unforce_plan&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql)
 
--   [sp_query_store_remove_plan &#40;Transct-sql&-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
+-   [sp_query_store_remove_plan&#40;Transct-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql)
 
--   [Transact-sql&#41;sp_query_store_remove_query &#40;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
+-   [sp_query_store_remove_query&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql)
 
 
 
-##  <a name="Scenarios"></a>주요 사용 시나리오
+##  <a name="key-usage-scenarios"></a><a name="Scenarios"></a> 주요 사용 시나리오
 
-###  <a name="OptionMgmt"></a>옵션 관리
+###  <a name="option-management"></a><a name="OptionMgmt"></a> 옵션 관리
  이 섹션에서는 쿼리 저장소 기능 자체를 관리하는 데 대한 지침을 제공합니다.
 
- **쿼리 저장소 현재 활성 상태 인가요?**
+ **쿼리 저장소가 현재 활성 상태인가요?**
 
  쿼리 저장소는 데이터를 사용자 데이터베이스 내에 저장하며 이 때문에 쿼리 저장소에는 크기 제한(`MAX_STORAGE_SIZE_MB`로 구성)이 있습니다. 쿼리 저장소의 데이터가 이 제한에 도달하면 쿼리 저장소는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.
 
@@ -243,7 +237,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
 
  또는 임시 쿼리 데이터는 쿼리 최적화 및 계획 분석과 관련성이 적고 공간만 많이 차지하므로 임시 쿼리 데이터만 지울 수도 있습니다.
 
- **임시 쿼리 삭제** 이렇게 하면 한 번만 실행 되 고 24 시간 이상 지난 쿼리가 삭제 됩니다.
+ **임시 쿼리 삭제** 한번만 실행되고 24시간 이상 지난 쿼리를 삭제합니다.
 
 ```
 DECLARE @id int
@@ -284,7 +278,7 @@ DEALLOCATE adhoc_queries_cursor;
 
 
 
-###  <a name="Peformance"></a>성능 감사 및 문제 해결
+###  <a name="performance-auditing-and-troubleshooting"></a><a name="Peformance"></a> 성능 감사 및 문제해결
  쿼리 저장소에서는 전체 쿼리 실행 중에 컴파일 및 런타임 메트릭에 대한 기록을 유지하므로 작업과 관련된 다양한 질문에 쉽게 답할 수 있습니다.
 
  **데이터베이스에서 실행 된 마지막 *n* 개의 쿼리**
@@ -499,19 +493,18 @@ OPTION (MERGE JOIN);
 
 
 
-###  <a name="Stability"></a>쿼리 성능 안정성 유지 관리
+###  <a name="maintaining-query-performance-stability"></a><a name="Stability"></a>쿼리 성능 안정성 유지 관리
  여러 번 실행되는 쿼리의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 다른 계획을 사용하여 리소스 사용률 및 기간이 달라짐을 알 수 있습니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 쉽게 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.
 
  또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.
 
- **쿼리에 대 한 계획을 적용 합니다 (강제 적용 정책 적용).** 특정 쿼리에 계획을 ;강제 적용하는 경우 쿼리를 실행할 때마다 강제 적용된 계획이 실행됩니다.
+ **쿼리에 대 한 계획 강제 적용(강제 적용 정책 적용)** 특정 쿼리에 계획을 ;강제 적용하는 경우 쿼리를 실행할 때마다 강제 적용된 계획이 실행됩니다.
 
 ```
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```
 
- 
-  `sp_query_store_force_plan`을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 Q1을 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.
+ `sp_query_store_force_plan`을 사용할 경우 쿼리 저장소에서 해당 쿼리에 대한 계획으로 기록된 계획만 강제로 적용할 수 있습니다. 즉, 쿼리 저장소가 활성 상태일 때 Q1을 실행하는 데 이미 사용된 계획만 쿼리에 사용할 수 있습니다.
 
  **쿼리에 대 한 계획 강제 적용을 제거 합니다.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램을 다시 사용 하 여 최적의 쿼리 계획을 계산 하려면를 `sp_query_store_unforce_plan` 사용 하 여 쿼리에 대해 선택한 계획의 강제 적용을 해제 합니다.
 

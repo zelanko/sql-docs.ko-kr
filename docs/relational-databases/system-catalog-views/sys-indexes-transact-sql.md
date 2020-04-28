@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77179294"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
@@ -32,13 +32,13 @@ ms.locfileid: "77179294"
 
   테이블, 뷰 또는 테이블 반환 함수와 같은 테이블 형식 개체의 인덱스 또는 힙당 하나의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 인덱스가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|인덱스의 이름입니다. **이름은** 개체 내 에서만 고유 합니다.<br /><br /> NULL = 힙|  
 |**index_id**|**int**|인덱스의 ID입니다. **index_id** 는 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**type**|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 3 = XML<br /><br /> 4 = 공간<br /><br /> 5 = 클러스터형 columnstore 인덱스 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 6 = 비클러스터형 columnstore 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 7 = 비클러스터형 해시 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
-|**type_desc**|**nvarchar (60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터형 COLUMNSTORE-다음 **에 적용 됩니다**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에 적용 됩니다.<br /><br /> 비클러스터형 COLUMNSTORE-이상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **에 적용 됩니다**.<br /><br /> 비클러스터형 해시: 비클러스터형 해시 인덱스는 메모리 최적화 테이블 에서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)을 참조 하십시오. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
+|**type_desc**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터형 COLUMNSTORE-다음 **에 적용 됩니다**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에 적용 됩니다.<br /><br /> 비클러스터형 COLUMNSTORE-이상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **에 적용 됩니다**.<br /><br /> 비클러스터형 해시: 비클러스터형 해시 인덱스는 메모리 최적화 테이블 에서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)을 참조 하십시오. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
 |**is_unique**|**bit**|1 = 인덱스가 고유합니다.<br /><br /> 0 = 인덱스가 고유하지 않습니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**data_space_id**|**int**|이 인덱스에 대한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹 또는 파티션 구성표입니다.<br /><br /> 0 = **object_id** 테이블 반환 함수 또는 메모리 내 인덱스입니다.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY가 ON입니다.<br /><br /> 0 = IGNORE_DUP_KEY가 OFF입니다.|  
@@ -89,8 +89,8 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [xml_indexes &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [key_constraints &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   

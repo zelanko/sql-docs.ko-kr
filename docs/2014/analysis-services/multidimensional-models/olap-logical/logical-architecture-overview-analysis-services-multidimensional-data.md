@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175722"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
@@ -26,8 +26,7 @@ ms.locfileid: "78175722"
  이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 [테이블 형식 모델링 &#40;Ssas 테이블 형식&#41;](../../tabular-models/tabular-models-ssas.md) 및 [Ssas&#41;&#40;테이블 형식 및 다차원 솔루션 비교 ](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)를 참조 하세요.
 
 ## <a name="basic-architecture"></a>기본 아키텍처
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 애플리케이션은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 "\<ServerName>\\<InstanceName\>"으로 이름이 지정 됩니다. 다음 그림에서는 개체 간에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언급 된 모든 관계를 보여 줍니다.
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 애플리케이션은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 "\<ServerName>\\<InstanceName\>"으로 이름이 지정 됩니다. 다음 그림에서는 개체 간에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언급 된 모든 관계를 보여 줍니다.
 
  ![AMO 실행 개체 관계](../../dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")
 
@@ -44,8 +43,7 @@ ms.locfileid: "78175722"
  큐브 개체 각 데이터베이스 개체에는 하나 이상의 큐브 개체가 포함 되어 있습니다. 큐브는 해당 측정값과 차원에 의해 정의됩니다. 큐브의 측정값과 차원은 큐브의 기반이 되고 측정값과 차원 정의에서 생성된 데이터 원본 뷰에 있는 테이블과 뷰에서 파생됩니다.
 
 ## <a name="object-inheritance"></a>개체 상속
- ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 "`Dimensions` 포함 `Hierarchies`"은 요소의 차원 계층 구조를 정의 합니다. 
-  `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.
+ ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 "`Dimensions` 포함 `Hierarchies`"은 요소의 차원 계층 구조를 정의 합니다. `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.
 
  명시적으로 재정의되지 않는 한 요소는 상위 수준에서 이러한 반복 요소 그룹의 정보를 상속합니다. 예를 들어 `Translations`의 `CubeDimension`는 해당 상위 항목 요소인 `Translations`의 `Cube`과 같습니다.
 
@@ -71,8 +69,7 @@ ms.locfileid: "78175722"
  Route 차원은 수입품이 목적지에 도착하는 방법을 나타냅니다. 이 차원의 멤버에는 ground, nonground, air, sea, road 또는 rail이 있습니다. Source 차원은 수입품이 생산되는 Africa 또는 Asia 등의 지역을 나타냅니다. Time 차원은 단일 연도의 분기와 반기를 나타냅니다.
 
 ### <a name="aggregates"></a>집계
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 나와 있는 것 처럼 Time 차원의 Calendar Time 계층을 사용 하 여 이전 그림의 측정값을 표준 달력 계층 구조에 따라 집계할 수 있습니다.
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 나와 있는 것 처럼 Time 차원의 Calendar Time 계층을 사용 하 여 이전 그림의 측정값을 표준 달력 계층 구조에 따라 집계할 수 있습니다.
 
  ![시간 차원에 따라 구성된 측정값 다이어그램](../../dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성된 측정값 다이어그램")
 
@@ -94,14 +91,14 @@ ms.locfileid: "78175722"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>측정값, 특성 및 계층 매핑
  이 예제 큐브의 측정값, 특성 및 계층은 큐브의 팩트 및 차원 테이블의 다음 열에서 파생됩니다.
 
-|측정값 또는 특성(수준)|구성원|원본 테이블|원본 열|열 값의 예|
+|측정값 또는 특성(수준)|멤버|원본 테이블|원본 열|열 값의 예|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
 |Packages 측정값|해당 없음|ImportsFactTable|패키지|12|
 |Last 측정값|해당 없음|ImportsFactTable|마지막|May-03-99|
 |Route 차원의 Route Category 수준|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
 |Route 차원의 Route 특성|air,sea,road,rail|RouteDimensionTable|라우팅|Sea|
 |Source 차원의 Hemisphere 특성|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Source 차원의 Continent 특성|Africa,Asia,AustraliaEurope,N. America,S. 아메리카|SourceDimensionTable|Continent|유럽|
+|Source 차원의 Continent 특성|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continent|유럽|
 |Time 차원의 Half 특성|1st half,2nd half|TimeDimensionTable|Half|2nd half|
 |Time 차원의 Quarter 특성|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -124,6 +121,6 @@ ms.locfileid: "78175722"
  여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련 항목:**[차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).
 
 ## <a name="see-also"></a>참고 항목
- [SSAS&#41;&#40;다차원 모델 데이터베이스](../multidimensional-model-databases-ssas.md)
+ [다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
 
 

@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176242"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
@@ -39,8 +39,7 @@ ms.locfileid: "78176242"
 
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면
 
-1.  
-  `PrinterList` 유형의 `Object`라는 변수를 만듭니다.
+1.  `Object` 유형의 `PrinterList`라는 변수를 만듭니다.
 
 2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 ReadWriteVariables 속성에 이 변수를 추가합니다.
 
@@ -142,7 +141,7 @@ public void Main()
         }
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 태스크 예](../extending-packages-scripting-task-examples/script-task-examples.md)

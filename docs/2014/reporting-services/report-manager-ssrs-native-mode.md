@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 5cefc88469ac3c98f3bb944c0e490f1ce7e88472
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172406"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>보고서 관리자(SSRS 기본 모드)
@@ -25,7 +25,7 @@ ms.locfileid: "78172406"
 
 -   [아이콘 설명](#bkmk_icon_descriptions)
 
-##  <a name="bkmk_whatis_report_manager"></a>보고서 관리자 이란?
+##  <a name="what-is-report-manager"></a><a name="bkmk_whatis_report_manager"></a>보고서 관리자 이란?
  보고서 관리자를 사용하여 다음 태스크를 수행할 수 있습니다.
 
 -   보고서 보기, 검색, 인쇄 및 구독
@@ -59,10 +59,9 @@ ms.locfileid: "78172406"
 
  새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 애플리케이션 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에 게 보고서 서버에 대 한 액세스 권한 부여 &#40;보고서 관리자&#41;](security/grant-user-access-to-a-report-server.md)를 참조 하세요.
 
- 
-  [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 로컬 관리용으로 보고서 관리자를 구성해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.
+ [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] 또는 Windows Server 2008을 사용하는 경우 로컬 관리용으로 보고서 관리자를 구성해야 합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.
 
-##  <a name="bkmk_start_report_manager"></a>보고서 관리자 시작 및 사용
+##  <a name="start-and-use-report-manager"></a><a name="bkmk_start_report_manager"></a>보고서 관리자 시작 및 사용
  보고서 관리자는 브라우저 창의 주소 표시줄에 보고서 관리자 URL을 입력하면 열리는 웹 애플리케이션입니다. 보고서 서버에 대해 가지고 있는 권한에 따라 보고서 관리자를 시작할 때 표시되는 페이지, 링크 및 옵션이 달라집니다. 특정 태스크를 수행하기 위해서는 해당 태스크를 포함하는 역할이 할당되어야 합니다. 모든 권한이 있는 역할이 할당된 사용자는 보고서 서버를 관리하는 데 사용할 수 있는 애플리케이션의 모든 메뉴와 페이지에 액세스할 수 있습니다. 그러나 보고서를 보고 실행할 수 있는 권한이 있는 역할이 할당된 사용자는 이러한 작업을 지원하는 메뉴와 페이지만 볼 수 있습니다. 각 사용자는 각 보고서 서버에 대해 다른 역할을 할당 받을 수 있으며, 단일 보고서 서버에 저장된 여러 보고서 및 폴더에 대해서도 각기 다른 역할을 할당 받을 수 있습니다.
 
  역할에 대해 자세히 알아보려면 [기본 모드 보고서 서버에 대한 사용 권한 부여](security/granting-permissions-on-a-native-mode-report-server.md)를 참조하십시오.
@@ -74,24 +73,23 @@ ms.locfileid: "78172406"
 
 #### <a name="to-start-report-manager-from-a-browser"></a>브라우저에서 보고서 관리자를 시작하려면
 
-1.  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 이상을 엽니다.
+1.  [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 7.0 이상을 엽니다.
 
 2.  웹 브라우저의 주소 표시줄에 보고서 관리자 URL을 입력합니다.
 
     -   기본적으로 이 URL은 `http://[ComputerName]/reports`사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다.
 
-    -   특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예를 들면 `http:// [ComputerName]:80/reports` 또는 `http:// [ComputerName]:8080/reports`과 같습니다.
+    -   특정 포트를 사용하도록 보고서 서버를 구성할 수 있습니다. 예를 들어 `http:// [ComputerName]:80/reports` 또는 `http:// [ComputerName]:8080/reports`입니다.
 
 ## <a name="configuring-report-manager"></a>보고서 관리자 구성
  보고서 관리자 구성은 애플리케이션 URL을 정의하는 작업으로 구성됩니다. 별도의 컴퓨터에서 배포가 실행 중인 보고서 관리자를 포함하는 경우에는 추가 구성이 필요합니다.
 
  보고서 관리자의 사용자 지정 범위는 상당히 제한되어 있습니다. 예를 들면 사이트 설정 페이지에서 애플리케이션 제목을 수정할 수 있습니다. 웹 개발자인 경우 보고서 관리자에 사용되는 스타일 정보가 들어 있는 스타일시트를 수정할 수 있습니다. 보고서 관리자는 사용자 지정을 지원하도록 특수하게 디자인되지 않았으므로 수정한 사항을 철저히 테스트해야 합니다. 보고서 관리자로 원하는 작업을 수행할 수 없으면 사용자 지정 보고서 뷰어를 개발하거나 SharePoint 사이트에서 보고서를 찾고 확인할 수 있도록 SharePoint 웹 파트를 구성할 수 있습니다. 자세한 내용은 [보고서 관리자 구성&#40;기본 모드&#41;](report-server/configure-web-portal.md)을 참조하세요.
 
-##  <a name="bkmk_icon_descriptions"></a>아이콘 설명
+##  <a name="icon-descriptions"></a><a name="bkmk_icon_descriptions"></a>아이콘 설명
  다음 표에서는 보고서 관리자에 사용되는 아이콘에 대해 설명합니다. 보고서 도구 모음에 나타나는 아이콘에 대 한 자세한 내용은 [HTML 뷰어 및 보고서 도구 모음](html-viewer-and-the-report-toolbar.md)을 참조 하십시오.
 
-|아이콘|Description|작업|
+|아이콘|설명|작업|
 |----------|-----------------|------------|
 |![보고서 아이콘](media/hlp-16doc.gif "보고서 아이콘")|보고서|보고서 아이콘 또는 이름을 클릭하여 보고서를 엽니다. 보고서가 별도의 창으로 열립니다.|
 |![모델 아이콘](media/model-icon.gif "모델 아이콘")|보고서 모델|모델 속성 페이지를 열려면 보고서 모델 아이콘을 클릭합니다.|

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c5198b614047d36c53cf41a1d82a44f612c62be6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177110"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
@@ -31,7 +31,7 @@ ms.locfileid: "78177110"
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 스크립트를 보고서 서버에서 실행되는 스크립트 호스트인 RS.exe 유틸리티에서 처리할 수 있는 스크립트 언어로 지원합니다.
 
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Reporting Services SharePoint 모드 PowerShell cmdlet 및 샘플
- ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 내용")
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")
 
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 보고서 서버 관리를 위한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cmdlet이 포함되어 있습니다.
 
@@ -56,11 +56,11 @@ ms.locfileid: "78177110"
 
 -   [Reporting Services WMI 공급자 액세스](access-the-reporting-services-wmi-provider.md)에서 "PowerShell을 사용하여 WMI 클래스 액세스" 섹션을 참조하세요.
 
--   [PowerShell을 사용 하 여 SSRS를 관리 하는 방법](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/)
+-   [PowerShell을 사용하여 SSRS를 관리하는 방법](https://www.sqlshack.com/how-to-administer-sql-server-reporting-services-ssrs-subscriptions-using-powershell/).scriptin
 
 ## <a name="rsexe-scripting-samples"></a>RS.exe 스크립팅 샘플
 
--   [예제 Reporting Services rs .Exe 스크립트를 실행 하 여 보고서 서버 간에 콘텐츠를 마이그레이션합니다](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).
+-   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)입니다.
 
 -   추가 스크립트, 애플리케이션 및 확장 예에 대해서는 [SQL Server Reporting Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=177889)을 참조하세요.
 

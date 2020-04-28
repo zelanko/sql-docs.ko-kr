@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175438"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
@@ -25,7 +25,7 @@ ms.locfileid: "78175438"
 
  데이터 및 인덱스 페이지는 디스크에서 버퍼 풀로 읽히고 수정된 페이지(더티 페이지라고도 함)는 디스크에 다시 쓰여집니다. 서버 및 데이터베이스 검사점에서 메모리가 부족하면 버퍼 캐시에 있는 핫(활성) 더티 페이지가 캐시에서 제거되고 기계식 디스크에 쓰여진 다음 다시 캐시에서 읽힙니다. 일반적으로 이러한 I/O 작업은 4KB 데이터에서 16KB 데이터 정도의 작은 임의 읽기 및 쓰기입니다. 작은 임의 I/O 패턴은 잦은 검색을 유발하기 때문에 기계식 디스크 충돌 경합이 발생하고, I/O 대기 시간이 증가하며, 시스템의 총 I/O 처리량이 감소합니다.
 
- 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 옵션은 유용하지만 중요한 단점이 있습니다. DRAM은 데이터 스토리지 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.
+ 이러한 I/O 병목 상태를 해결하는 일반적인 방법은 DRAM이나 고성능 SAS 스핀들을 추가하는 것입니다. 이러한 방법은 도움이 되지만 중요한 단점이 있습니다. DRAM은 데이터 스토리지 드라이브보다 더 비싸며, 스핀들 추가는 하드웨어 구입 비용을 증가시킵니다. 또한 전력 소비가 많고 구성 요소의 오류 발생 가능성이 높아 운영 비용이 증가합니다.
 
  버퍼 풀 확장 기능은 비휘발성 스토리지(일반적으로 SSD)로 버퍼 풀 캐시를 확장합니다. 이 확장 덕분에 버퍼 풀은 더 큰 데이터베이스 작업 집합을 수용할 수 있고, 그에 따라 RAM과 SSD 간의 I/O 페이징이 강제로 수행됩니다. 따라서 작은 임의 I/O가 기계식 디스크에서 SSD로 효과적으로 오프로드됩니다. SSD의 더 낮은 대기 시간과 향상된 임의 I/O 성능 덕분에 버퍼 풀 확장은 I/O 처리량을 크게 향상합니다.
 
@@ -57,7 +57,7 @@ ms.locfileid: "78175438"
 
  다음 그림에서는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 기준으로 버퍼 풀에 대한 대략적인 아키텍처 개요를 보여 줍니다.
 
- ![SSD 버퍼 풀 확장 프로그램 아키텍처](../media/ssdbufferpoolextensionarchitecture.gif "SSD 버퍼 풀 확장 프로그램 아키텍처")
+ ![SSD 버퍼 풀 확장 아키텍처](../media/ssdbufferpoolextensionarchitecture.gif "SSD 버퍼 풀 확장 아키텍처")
 
  사용하도록 설정된 경우 버퍼 풀 확장은 SSD에 있는 버퍼 풀 캐싱 파일의 크기와 파일 경로를 지정합니다. 이 파일은 SSD에 있는 스토리지의 인접 익스텐트이며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작하는 동안 정적으로 구성됩니다. 파일 구성 매개 변수의 변경은 버퍼 풀 확장 기능이 사용하지 않도록 설정된 경우에만 수행할 수 있습니다. 버퍼 풀 확장이 사용하지 않도록 설정된 경우 관련된 모든 구성 설정이 레지스트리에서 제거됩니다. 버퍼 풀 확장 파일은 SQL Server 인스턴스를 종료하면 즉시 삭제됩니다.
 
@@ -73,15 +73,15 @@ ms.locfileid: "78175438"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>버퍼 풀 확장에 대한 정보 반환
  다음과 같은 동적 관리 뷰를 사용하여 버퍼 풀 확장의 구성을 표시하고 확장에 있는 데이터 페이지에 대한 정보를 반환할 수 있습니다.
 
--   [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  성능 카운터는 SQL Server, Buffer Manager 개체에서 버퍼 풀 확장 파일에 있는 데이터 페이지를 추적하기 위해 사용할 수 있습니다. 자세한 내용은 [버퍼 풀 확장 성능 카운터](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)를 참조하십시오.
 
  다음과 같은 Xevent를 사용할 수 있습니다.
 
-|XEvent|Description|매개 변수|
+|XEvent|설명|매개 변수|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|페이지 또는 페이지 그룹을 버퍼 풀에서 제거하여 버퍼 풀 확장 파일에 쓸 때 발생합니다.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|페이지를 버퍼 풀 확장 파일에서 가져와서 버퍼 풀에 쓸 때 발생합니다.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
@@ -95,7 +95,7 @@ ms.locfileid: "78175438"
 |**태스크 설명**|**항목**|
 |버퍼 풀 확장을 사용하도록 설정하고 구성합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |버퍼 풀 확장 구성을 수정합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|버퍼 풀 확장 구성을 봅니다.|[dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|버퍼 풀 확장을 모니터링합니다.|[dm_os_buffer_descriptors &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [성능 카운터](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|버퍼 풀 확장 구성을 봅니다.|[sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|버퍼 풀 확장을 모니터링합니다.|[sys.dm_os_buffer_descriptors&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [성능 카운터](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

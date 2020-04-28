@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176253"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비동기 변환 만들기
@@ -77,19 +77,18 @@ ms.locfileid: "78176253"
  **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../script-transformation-editor-script-page.md)를 참조하세요.
 
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>코드 디자인 모드에서 비동기 변환 구성 요소 스크립팅
- 구성 요소에 대한 메타데이터를 모두 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.
+ 구성 요소에 대한 메타데이터를 모두 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]스크립트[!INCLUDE[msCoName](../../includes/msconame-md.md)] 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 **Visual Basic 또는** Visual C# 중에서 선택한 언어에 따라 달라집니다.
 
  스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 중요한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.
 
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
- 변환 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 ProcessInputRow 및 CreateNewOutputRows 메서드에 대 한 스텁을 사용 하 여 코드 편집기에 표시 됩니다. 이 ScriptMain 클래스에서 사용자 지정 코드를 작성해야 하며 ProcessInputRow는 변환 구성 요소에서 가장 중요한 메서드입니다. 
-  `CreateNewOutputRows` 메서드는 원본 구성 요소에서 보다 일반적으로 사용되는데 이는 두 구성 요소가 모두 개별적인 출력 행을 만들어야 한다는 점에서 비동기 변환과 비슷합니다.
+ 변환 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 ProcessInputRow 및 CreateNewOutputRows 메서드에 대 한 스텁을 사용 하 여 코드 편집기에 표시 됩니다. 이 ScriptMain 클래스에서 사용자 지정 코드를 작성해야 하며 ProcessInputRow는 변환 구성 요소에서 가장 중요한 메서드입니다. `CreateNewOutputRows` 메서드는 원본 구성 요소에서 보다 일반적으로 사용되는데 이는 두 구성 요소가 모두 개별적인 출력 행을 만들어야 한다는 점에서 비동기 변환과 비슷합니다.
 
  VSTA **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. ScriptMain 클래스는 `ComponentWrapper` 프로젝트 항목의 usercomponent 클래스에서 상속 됩니다.
 
  런타임에 데이터 흐름 엔진은 `UserComponent` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 부모 클래스의 메서드를 재정의 하는 클래스의 PrimeOutput 메서드를 호출 합니다. PrimeOutput 메서드는 차례로 CreateNewOutputRows 메서드를 호출합니다.
 
- 다음으로, 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 메서드를 재정의하는 UserComponent 클래스의 ProcessInput 메서드를 호출합니다. 그러면 ProcessInput 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 ProcessInputRow 메서드를 한 번씩 호출합니다.
+ 다음으로, 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 UserComponent 클래스의 ProcessInput 메서드를 호출합니다. 그러면 ProcessInput 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 ProcessInputRow 메서드를 한 번씩 호출합니다.
 
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성
  사용자 지정 비동기 변환 구성 요소 만들기를 마치려면 재정의된 ProcessInputRow 메서드를 사용하여 입력 버퍼의 각 행에 있는 데이터를 처리해야 합니다. 출력은 입력과 동기적으로 이루어지지 않으므로 데이터 행을 출력에 명시적으로 써야 합니다.
@@ -117,21 +116,15 @@ ms.locfileid: "78176253"
 
 2.  디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력은 **AdventureWorks** 샘플 데이터베이스에 있는 **Person.Address** 테이블의 데이터를 제공해야 하며, 이 데이터에는 적어도 **AddressID** 및 **City** 열이 포함됩니다.
 
-3.  
-  **스크립트 변환 편집기**를 엽니다. 
-  **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.
+3.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.
 
-4.  
-  **입/출력** 페이지에서 첫 번째 출력에 **AddressID** 및 **City** 출력 열을 추가하고 구성합니다. 두 번째 출력을 추가하고 이 두 번째 출력에 요약 값에 대한 출력 열을 추가합니다. 이 예에서는 각 입력 행을 첫 번째 출력에 명시적으로 복사하므로 첫 번째 출력의 SynchronousInputID 속성은 0으로 설정합니다. 새로 만든 출력의 SynchronousInputID 속성은 이미 0으로 설정되어 있습니다.
+4.  **입/출력** 페이지에서 첫 번째 출력에 **AddressID** 및 **City** 출력 열을 추가하고 구성합니다. 두 번째 출력을 추가하고 이 두 번째 출력에 요약 값에 대한 출력 열을 추가합니다. 이 예에서는 각 입력 행을 첫 번째 출력에 명시적으로 복사하므로 첫 번째 출력의 SynchronousInputID 속성은 0으로 설정합니다. 새로 만든 출력의 SynchronousInputID 속성은 이미 0으로 설정되어 있습니다.
 
 5.  입력, 출력 및 새 출력 열의 이름을 보다 알기 쉬운 이름으로 바꿉니다. 이 예에서는 입력 이름으로 **MyAddressInput**을 사용하고, 출력 이름으로 **MyAddressOutput** 및 **MySummaryOutput**을 사용하며, 두 번째 출력의 출력 열 이름으로는 **MyRedmondCount**를 사용합니다.
 
-6.  
-  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음과 같이 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
+6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
 
-7.  
-  ** 대상이나 **스크립트 구성 요소를 사용하여 대상 만들기**에서 보여 준 예제 대상 구성 요소와 같이 **AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [City](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 열을 필요로 하는 대상 구성 요소를 첫 번째 출력에 대해 만들고 구성합니다. 그런 다음 변환의 첫 번째 출력인 **MyAddressOutput**을 대상 구성 요소에 연결합니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks** 데이터베이스에서 다음 ** 명령을 실행하여 대상 테이블을 만들 수 있습니다.
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 첫 번째 출력에 대해 만들고 구성합니다. 그런 다음 변환의 첫 번째 출력인 **MyAddressOutput**을 대상 구성 요소에 연결합니다. **AdventureWorks** 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -140,7 +133,7 @@ ms.locfileid: "78176253"
 
 8.  두 번째 출력에 대한 다른 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 두 번째 출력인 **MySummaryOutput**을 대상 구성 요소에 연결합니다. 두 번째 출력은 단일 값이 있는 단일 행을 쓰므로 단일 열이 있는 새 파일에 연결하는 플랫 파일 연결 관리자를 사용하여 대상을 쉽게 구성할 수 있습니다. 이 예에서 이 대상 열의 이름은 **MyRedmondCount**입니다.
 
-9. 샘플을 실행합니다.
+9. 예제를 실행합니다.
 
 ```vb
 Public Class ScriptMain
@@ -236,7 +229,7 @@ public class ScriptMain:
 
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md) [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) [비동기 출력을 사용 하 여 사용자 지정 변환 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177303"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>태스크 1: 데이터 품질 프로젝트 만들기
@@ -33,6 +33,6 @@ ms.locfileid: "78177303"
      ![새 데이터 품질 프로젝트 페이지 - 선택한 항목 정리](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "새 데이터 품질 프로젝트 페이지 - 선택한 항목 정리")
 
 ## <a name="next-step"></a>다음 단계
- [태스크 2: Excel 열을 DQS 도메인에 매핑](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
+ [태스크 2: Excel 열을 DQS 도메인으로 매핑](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
 
 

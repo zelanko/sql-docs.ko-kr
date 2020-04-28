@@ -14,18 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d3ee53add852917cdd234c9306c9ddaf46da0818
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939616"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하는 ODBC 형식에 대한 정보를 제공합니다.  
   
 ## <a name="data-type-mapping-in-parameters-and-resultsets"></a>매개 변수 및 결과 집합의 데이터 형식 매핑  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에는 ODBC 데이터 형식(SQL_TYPE_TIMESTAMP 및 SQL_TIMESTAMP) 외에 새 서버 유형을 노출하기 위한 두 개의 새로운 데이터 형식이 추가되었습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에는 ODBC 데이터 형식(SQL_TYPE_TIMESTAMP 및 SQL_TIMESTAMP) 외에 새 서버 유형을 노출하기 위한 두 개의 새로운 데이터 형식이 추가되었습니다.  
   
 -   SQL_SS_TIME2  
   
@@ -38,7 +37,7 @@ ms.locfileid: "76939616"
 |DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (sql .h)<br /><br /> 9 (sqlext .h)|  
-|Time|SQL_SS_TIME2|-154 (SQLNCLI)|  
+|시간|SQL_SS_TIME2|-154 (SQLNCLI)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155(SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93(sql.h)<br /><br /> 11(sqlext.h)|  
   
@@ -58,11 +57,10 @@ ms.locfileid: "76939616"
   
 |SQL Server 데이터 형식|ODBC 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |--------------------------|--------------------|------------------------------------------|  
-|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|DateTime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
-|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
+|시간|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: ss [. 9999999] '<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
   
@@ -91,8 +89,7 @@ ms.locfileid: "76939616"
   
 -   초 범위는 0에서 61.9까지입니다. 이는 항성시와의 동기화를 유지하기 위한 최대 2초의 윤초를 허용합니다.  
   
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 윤초가 허용되지 않으므로 초 값이 59보다 클 경우 서버 오류가 발생합니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 윤초가 허용되지 않으므로 초 값이 59보다 클 경우 서버 오류가 발생합니다.  
   
  다음과 같은 기존 ODBC 구조체 구현은 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 및 시간 데이터 형식을 지원하도록 수정되었습니다. 단, 정의는 변경되지 않았습니다.  
   
@@ -136,10 +133,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 
-  `timezone_hour`가 음수인 경우 `timezone_minute`는 음수 또는 0이어야 합니다. 
-  `timezone_hour`가 양수인 경우 `timezone_minute`는 양수 또는 0이어야 합니다. 
-  `timezone_hour`가 0인 경우 `timezone_minute`는 -59에서 +59까지의 어떤 수라도 될 수 있습니다.  
+ `timezone_hour`가 음수인 경우 `timezone_minute`는 음수 또는 0이어야 합니다. `timezone_hour`가 양수인 경우 `timezone_minute`는 양수 또는 0이어야 합니다. `timezone_hour`가 0인 경우 `timezone_minute`는 -59에서 +59까지의 어떤 수라도 될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;날짜 및 시간 기능 향상](date-and-time-improvements-odbc.md)  

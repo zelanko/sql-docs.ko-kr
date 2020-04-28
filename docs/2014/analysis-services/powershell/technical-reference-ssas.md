@@ -15,14 +15,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175622"
 ---
 # <a name="technical-reference-ssas"></a>기술 참조(SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하고 관리하는 데 대한 도구, 언어 및 PowerShell 참조 설명서를 찾습니다.
 
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **저장 프로시저 참조** [데이터 마이닝 저장 프로시저 &#40;Analysis Services 데이터 마이닝&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)
@@ -37,7 +36,7 @@ ms.locfileid: "78175622"
 
  [DAX&#41; 참조 &#40;데이터 분석 식](/dax/data-analysis-expressions-dax-reference)
 
- [DMX&#41; 참조 &#40;데이터 마이닝 확장](/sql/dmx/data-mining-extensions-dmx-reference)
+ [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)
 
  ![작은 파일 폴더 아이콘](../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **사용자 인터페이스 참조** [사용자 인터페이스 참조 &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)
 

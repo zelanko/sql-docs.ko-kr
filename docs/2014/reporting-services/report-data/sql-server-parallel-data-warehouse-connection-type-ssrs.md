@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4777d3536f739ae1bfb3c79f321a6906c01807fc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176873"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 병렬 데이터 웨어하우스 연결 형식(SSRS)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 분산 처리 및 데이터 저장을 위해 데이터베이스를 사용 합니다.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]는 방대한 병렬 처리를 통해 성능 및 확장성을 제공하는 확장 가능한 데이터 웨어하우스 어플라이언스입니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 분산 처리 및 데이터 스토리지를 위해 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 데이터베이스를 사용합니다.
 
  이 어플라이언스는 고유한 인스턴스의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 실행하는 각 노드로 구성된 여러 물리적 노드에서 큰 데이터베이스 테이블을 분할합니다. 보고서는 보고서 데이터를 검색하기 위해 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에 연결될 때 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스에서 쿼리 처리를 관리하는 제어 노드에 연결됩니다. 연결이 설정되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 환경이 아니더라도 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 인스턴스를 사용할 때와 아무런 차이가 없습니다.
 
@@ -30,7 +30,7 @@ ms.locfileid: "78176873"
 
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 &#40;추가 및 확인 보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)를 참조 하세요.
 
-##  <a name="Connection"></a> 연결 문자열
+##  <a name="connection-string"></a><a name="Connection"></a>연결 문자열
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]에 연결할 때 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스 내의 데이터베이스 개체에 연결됩니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다. 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 어플라이언스에 있는 **CustomerSales** 예제 데이터베이스를 지정합니다.
 
 ```
@@ -41,7 +41,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)을 참조하세요.
 
-##  <a name="Credentials"></a> 자격 증명
+##  <a name="credentials"></a><a name="Credentials"></a>자격 증명
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 는 사용자 이름과 암호를 구현 및 저장하기 위한 고유한 보안 기술을 제공합니다. Windows 인증은 사용할 수 없습니다. Windows 인증을 사용하여 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에 연결하려고 하면 오류가 발생합니다.
 
  자격 증명에는 데이터베이스에 액세스할 수 있는 권한이 있어야 합니다. 쿼리에 따라 테이블 및 뷰에 액세스할 수 있는 권한과 같은 다른 사용 권한이 필요할 수 있습니다. 외부 데이터 원본의 소유자는 사용자에게 필요한 데이터베이스 개체에 대한 읽기 전용 권한을 제공할 수 있는 자격 증명을 구성해야 합니다.
@@ -50,11 +50,11 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
 -   저장된 사용자 이름 및 암호 사용. 보고서 데이터를 포함하는 데이터베이스가 보고서 서버와 다른 경우 발생하는 이중 홉을 협상하려면 Windows 자격 증명을 자격 증명으로 사용하도록 옵션을 선택합니다. 데이터 원본에 연결한 후 인증된 사용자를 가장하도록 선택할 수도 있습니다.
 
--   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](https://go.microsoft.com/fwlink/?linkid=121312)을 참조하세요.
+-   자격 증명 필요 없음. 이 옵션을 사용하려면 보고서 서버에서 무인 실행 계정을 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [Reporting Services 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에서 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.
 
  자세한 내용은 [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 을 참조 하거나 [보고서 작성기에서 자격 증명을 지정](../specify-credentials-in-report-builder.md)하세요.
 
-##  <a name="Query"></a> 쿼리
+##  <a name="queries"></a><a name="Query"></a>쿼리
  쿼리는 보고서 데이터 세트에 대해 검색할 데이터를 지정합니다.
 
  쿼리 결과 집합의 열은 데이터 세트의 필드 컬렉션을 채웁니다. 쿼리가 여러 결과 집합을 반환할 경우 보고서는 쿼리가 검색한 첫 번째 결과 집합만 처리합니다. 기본적으로 그래픽 쿼리 디자이너에 나타낼 수 있는 새 쿼리를 만들거나 기존 쿼리를 열 경우 관계형 쿼리 디자이너를 사용할 수 있습니다. 다음과 같은 방법으로 쿼리를 지정할 수 있습니다.
@@ -71,8 +71,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
 -   [텍스트](#QueryText)
 
- 
-  [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 을 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 와 함께 사용하고 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]와 함께 사용합니다. 두 개의 SQL 언어는 매우 비슷합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 원본 연결 형식에 맞게 작성된 쿼리는 일반적으로 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 데이터 원본 연결 형식에 사용할 수 있습니다.
+ [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 을 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 와 함께 사용하고 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]와 함께 사용합니다. 두 개의 SQL 언어는 매우 비슷합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 원본 연결 형식에 맞게 작성된 쿼리는 일반적으로 [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 데이터 원본 연결 형식에 사용할 수 있습니다.
 
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]등과 같은 데이터 웨어하우스를 비롯한 큰 데이터베이스에서 보고서 데이터를 검색하는 쿼리는 쿼리가 반환하는 행 수를 줄이기 위해 데이터를 집계 및 요약하지 않을 경우 매우 많은 수의 행을 가진 결과 집합을 생성할 수 있습니다. 그래픽 또는 텍스트 기반 쿼리 디자이너를 사용하여 집계 및 그룹화를 포함하는 쿼리를 작성할 수 있습니다.
 
@@ -80,10 +79,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
 
  [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에서 사용하는 그래픽 쿼리 디자이너는 요약 데이터만 검색하는 쿼리를 작성하는 데 도움이 되는 그룹화 및 집계를 기본적으로 지원합니다. [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 언어 기능은 GROUP BY 절, DISTINCT 키워드 및 SUM, COUNT 등과 같은 집계입니다. 텍스트 기반 쿼리 디자이너는 그룹화 및 집계를 비롯한 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 언어를 완벽하게 지원합니다.
 
- 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [](/sql/t-sql/language-reference)온라인 설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](https://go.microsoft.com/fwlink/?LinkId=141687)를 참조하세요.
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.
 
-###  <a name="QueryText"></a> Text 쿼리 유형 사용
+###  <a name="using-query-type-text"></a><a name="QueryText"></a> Text 쿼리 유형 사용
  텍스트 기반 쿼리 디자이너에서는 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 명령을 입력하여 데이터 세트의 데이터를 정의합니다. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 에서 데이터를 검색하기 위해 사용하는 쿼리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 애플리케이션 내에서 실행되지 않는 [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] 의 인스턴스에서 데이터를 검색하기 위해 사용하는 쿼리와 동일합니다. 예를 들어 다음 [!INCLUDE[DWsql](../../../includes/dwsql-md.md)] 쿼리는 마케팅 지원을 담당하는 모든 직원의 이름을 선택합니다.
 
 ```
@@ -107,7 +105,7 @@ WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'
 
  쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [쿼리 매개 변수](#Parameters) 를 참조하십시오.
 
-##  <a name="Parameters"></a> 매개 변수
+##  <a name="parameters"></a><a name="Parameters"></a> 매개 변수
  쿼리 텍스트에 입력 매개 변수가 있는 쿼리 변수 또는 저장 프로시저가 포함된 경우 데이터 세트에 대한 해당 쿼리 매개 변수와 보고서에 대한 해당 보고서 매개 변수가 자동으로 생성됩니다. 쿼리 텍스트는 각 쿼리 변수에 대한 DECLARE 문을 포함하지 않아야 합니다.
 
  예를 들어 다음 SQL 쿼리는 `EmpID`라는 보고서 매개 변수를 만듭니다.
@@ -120,12 +118,12 @@ WHERE EmployeeID = (@EmpID)
 
  기본적으로 각 보고서 매개 변수는 데이터 형식이 Text이며 사용 가능한 값의 드롭다운 목록을 제공하기 위해 자동으로 작성된 데이터 세트를 가집니다. 보고서 매개 변수가 만들어진 후에는 기본값을 변경해야 할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)에 대해 자세히 알아봅니다.
 
-##  <a name="Remarks"></a> 주의
+##  <a name="remarks"></a><a name="Remarks"></a> 주의 사항
 
 ###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [](../create-deploy-and-manage-mobile-and-paginated-reports.md)온라인 설명서[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의  설명서에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](https://go.microsoft.com/fwlink/?linkid=121312).
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).
 
-##  <a name="HowTo"></a> 방법 도움말 항목
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.
 
  [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS를 추가 하 고 확인&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)
@@ -134,7 +132,7 @@ WHERE EmployeeID = (@EmpID)
 
  [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)
 
-##  <a name="Related"></a> 관련 단원
+##  <a name="related-sections"></a><a name="Related"></a> 관련 섹션
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.
 
  [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다](report-datasets-ssrs.md) . 보고서의 데이터에 액세스 하는 방법에 대 한 개요를 제공 합니다.
@@ -145,7 +143,7 @@ WHERE EmployeeID = (@EmpID)
 
  [데이터 집합 필드 컬렉션 &#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md) 쿼리에 의해 생성 되는 데이터 집합 필드 컬렉션에 대 한 정보를 제공 합니다.
 
- [Reporting Services &#40;SSRS에서 지 원하는 데이터 원본은](../create-deploy-and-manage-mobile-and-paginated-reports.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 의 설명서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [](https://go.microsoft.com/fwlink/?linkid=121312)에서&#41;.
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../create-deploy-and-manage-mobile-and-paginated-reports.md).
 각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.
 
 ## <a name="see-also"></a>참고 항목

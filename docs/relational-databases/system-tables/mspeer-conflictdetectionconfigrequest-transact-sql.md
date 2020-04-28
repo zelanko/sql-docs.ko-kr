@@ -19,10 +19,10 @@ ms.assetid: 83afa0ca-707e-4468-a888-228268ed4e10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 090236bd5e0bd0429985ff9c54039a576950ec84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322100"
 ---
 # <a name="mspeer_conflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest(Transact-SQL)
@@ -30,14 +30,14 @@ ms.locfileid: "75322100"
 
   피어 투 피어 복제에서 게시에 대한 토폴로지 차원 구성 요청을 추적하기 위해 사용됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |id|**int**|충돌 구성 요청을 식별합니다. [MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md) 의 request_id 열은이 값을 사용 합니다.|  
 |publication|**sysname**|충돌 구성 요청이 시작된 게시의 이름입니다.|  
 |sent_date|**datetime**|충돌 구성 요청이 시작된 날짜와 시간입니다.|  
 |시간 제한|**int**|모든 피어가 충돌 정보를 반환할 때까지 프로시저가 기다려야 하는 시간입니다.|  
 |modified_date|**datetime**|단계가 완료된 날짜와 시간입니다.|  
-|progress_phase|**nvarchar (32)**|다음 값 중 하나를 사용하여 현재 처리 단계를 식별합니다.<br /><br /> Started<br /><br /> Exploring topology<br /><br /> Collecting status<br /><br /> Status collected|  
+|progress_phase|**nvarchar(32)**|다음 값 중 하나를 사용하여 현재 처리 단계를 식별합니다.<br /><br /> 시작됨<br /><br /> Exploring topology<br /><br /> Collecting status<br /><br /> Status collected|  
 |phase_timed_out|**bit**|현재 단계가 시간 초과되었는지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  

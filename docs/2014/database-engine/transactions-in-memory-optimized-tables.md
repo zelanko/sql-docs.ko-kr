@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175416"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션
@@ -50,8 +50,7 @@ ms.locfileid: "78175416"
  또한 커밋 중인 다른 트랜잭션(TxB)이 삽입하거나 수정한 행을 트랜잭션(TxA)이 읽는 경우 커밋이 발생하기를 기다리는 대신 다른 트랜잭션이 커밋한다고 낙관적으로 가정합니다. 이 경우 트랜잭션 TxA는 트랜잭션 TxB에서 커밋 종속성을 수행합니다.
 
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>충돌 검색, 유효성 검사 및 커밋 종속성 확인
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 동시 트랜잭션 사이의 충돌, 격리 수준 위반을 감지하고 충돌하는 트랜잭션 중 하나를 종료시킵니다. 이 트랜잭션은 다시 시도해야 합니다. (자세한 내용은 메모리 액세스에 [최적화 된 테이블의 트랜잭션에 대 한 재시도 논리에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조 하세요.)
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 동시 트랜잭션 사이의 충돌, 격리 수준 위반을 감지하고 충돌하는 트랜잭션 중 하나를 종료시킵니다. 이 트랜잭션은 다시 시도해야 합니다. (자세한 내용은 메모리 액세스에 [최적화 된 테이블의 트랜잭션에 대 한 재시도 논리에 대 한 지침](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조 하세요.)
 
  시스템은 아무 충돌도 없고 트랜잭션 격리의 위반이 없다고 낙관적으로 가정합니다. 충돌이 있어 데이터베이스에 불일치가 발생하거나 트랜잭션 격리를 위반할 수 있는 경우 이러한 충돌은 감지되고 트랜잭션이 종료됩니다.
 
@@ -61,7 +60,7 @@ ms.locfileid: "78175416"
 
 ### <a name="error-conditions-for-transactions-accessing-memory-optimized-tables"></a>메모리 최적화 테이블에 액세스하는 트랜잭션에 대한 오류 조건.
 
-|Error|시나리오|
+|오류|시나리오|
 |-----------|--------------|
 |쓰기 충돌. 트랜잭션이 시작된 이후 업데이트된 레코드를 업데이트 하려고 시도.|동시 트랜잭션에 의해 업데이트 또는 삭제된 행을 업데이트하거나 삭제합니다.|
 |반복 가능한 읽기 유효성 검사 오류.|트랜잭션이 시작된 이후 트랜잭션에서 읽은 행이 변경되었습니다(업데이트 또는 삭제). 반복 읽기 유효성 검사는 대개 REPEATABLE READ 및 SERIALIZABLE 트랜잭션 격리 수준을 사용할 때 발생합니다.|
@@ -83,7 +82,7 @@ ms.locfileid: "78175416"
 
  이 오류는 XACT_ABORT가 OFF로 설정되어 있어도 트랜잭션을 종료시킵니다. 즉, 사용자 세션이 종료되면 트랜잭션이 롤백됩니다. 종료된 트랜잭션을 커밋할 수 없으며 로그에 쓰지 않는 읽기 작업을 지원하고 메모리 최적화 테이블에 액세스하지 않습니다.
 
-#####  <a name="cd"></a>커밋 종속성
+#####  <a name="commit-dependencies"></a><a name="cd"></a>커밋 종속성
  정상적인 처리 중에 트랜잭션은 유효성 검사 또는 커밋 단계에 있지만 아직 커밋되지 않은 다른 트랜잭션에서 기록한 행을 읽을 수 있습니다. 유효성 검사 단계를 시작할 때 트랜잭션의 논리적 종료 시간이 할당되었기 때문에 행을 볼 수 있습니다.
 
  트랜잭션이 이런 커밋되지 않은 행을 읽는 경우 해당 트랜잭션에서 커밋 종속성을 수행합니다. 여기에는 두 가지 주요 문제점이 있습니다.

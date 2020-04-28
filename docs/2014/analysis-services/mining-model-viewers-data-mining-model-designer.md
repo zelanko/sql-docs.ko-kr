@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175808"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
-  
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.
 
  먼저 마이닝 모델을 선택한 다음 뷰어를 선택합니다. 항상 각 모델에는 여러 탭을 포함할 수 있는 사용자 지정 뷰어와 일반 뷰어라는 두 개의 뷰어가 있습니다.
@@ -28,11 +27,11 @@ ms.locfileid: "78175808"
  각 뷰어를 사용하는 방법을 보여 주는 연습은 [데이터 마이닝 모델 뷰어](data-mining/data-mining-model-viewers.md)를 참조하세요.
 
 ## <a name="common-options"></a>일반 옵션
- **뷰어 내용 새로 고침** 뷰어에서 마이닝 모델을 다시 로드 합니다.
+ **뷰어 내용 새로 고침** 뷰어에서 마이닝 모델을 다시 로드합니다.
 
- **마이닝 모델** 현재 마이닝 구조에 포함 되어 있는 볼 마이닝 모델을 선택 합니다. 마이닝 모델은 연결된 사용자 지정 뷰어에서 먼저 열립니다.
+ **마이닝 모델** 현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 마이닝 모델은 연결된 사용자 지정 뷰어에서 먼저 열립니다.
 
- **뷰어** 선택한 마이닝 모델을 탐색 하는 데 사용할 뷰어를 선택 합니다. 이 목록에는 각 마이닝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델에 대해 제공 하는 뷰어 [!INCLUDE[msCoName](../includes/msconame-md.md)] , 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함 되어 있습니다.
+ **뷰어** 선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록에는 각 마이닝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델에 대해 제공 하는 뷰어 [!INCLUDE[msCoName](../includes/msconame-md.md)] , 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함 되어 있습니다.
 
  다음 다이어그램에서는 같은 모델에 대해 사용자 지정 뷰어와 일반 뷰어를 보여 줍니다.
 

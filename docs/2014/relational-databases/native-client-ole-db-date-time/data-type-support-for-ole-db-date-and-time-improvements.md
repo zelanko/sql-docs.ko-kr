@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929535"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
@@ -26,7 +26,7 @@ ms.locfileid: "76929535"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑  
  OLE DB는 새 서버 유형 DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET를 지원 하기 위한 두 가지 새 데이터 형식을 제공 합니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식|OLE DB 데이터 형식|값|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|값|  
 |-----------------------------------------|----------------------|-----------|  
 |Datetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135(oledb.h)|  
@@ -37,10 +37,9 @@ ms.locfileid: "76929535"
   
 ## <a name="data-formats-strings-and-literals"></a>데이터 형식: 문자열 및 리터럴  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식|OLE DB 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|클라이언트 변환을 위한 문자열 형식|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|Datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
+|Datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 Datetime에 대해 최대 3자리의 소수 자릿수 초를 지원합니다.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 이 데이터 형식의 정확도는 1분 단위입니다. 초 구성 요소 부분은 출력 시 0이 되고, 입력 시 서버에 의해 반올림됩니다.|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 필요한 경우 소수 자릿수 초를 일곱 자리까지 지정할 수 있습니다.|  
@@ -110,10 +109,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- 
-  `timezone_hour`가 음수인 경우 `timezone_minute`는 음수 또는 0이어야 합니다. 
-  `timezone_hour`가 양수인 경우 `timezone minute`는 양수 또는 0이어야 합니다. 
-  `timezone_hour`가 0인 경우 `timezone minute`의 값 범위는 -59에서 +59까지입니다.  
+ `timezone_hour`가 음수인 경우 `timezone_minute`는 음수 또는 0이어야 합니다. `timezone_hour`가 양수인 경우 `timezone minute`는 양수 또는 0이어야 합니다. `timezone_hour`가 0인 경우 `timezone minute`의 값 범위는 -59에서 +59까지입니다.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  이 구조체는 이제 새로운 구조인 DBTYPE_DBTIME2와 DBTYPE_DBTIMESTAMPOFFSET을 포함하고 적절한 형식에 소수 자릿수 초의 자릿수를 추가합니다.  
@@ -160,8 +156,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하고 `sql_variant`의 제한된 정밀도에 의존하는 애플리케이션을 `datetime` Native Client로 마이그레이션하는 경우 `datetime2` 대신 `datetime`를 사용하도록 기본 스키마가 업데이트되면 해당 애플리케이션도 이에 맞게 업데이트되어야 합니다.  
+ `sql_variant`를 사용하고 `datetime`의 제한된 정밀도에 의존하는 애플리케이션을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client로 마이그레이션하는 경우 `datetime2` 대신 `datetime`를 사용하도록 기본 스키마가 업데이트되면 해당 애플리케이션도 이에 맞게 업데이트되어야 합니다.  
   
  SSVARIANT의 액세스 매크로도 다음과 같은 추가를 통해 확장되었습니다.  
   
@@ -173,18 +168,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
- 다음 형식 매핑은 ITableDefinition:: CreateTable에서 사용 되는 DBCOLUMNDESC 구조체와 함께 사용 됩니다.  
+ 다음 형식 매핑은 ITableDefinition::CreateTable에서 사용되는 DBCOLUMNDESC 구조체와 함께 사용됩니다.  
   
-|OLE DB 데이터 형식 (*Wtype*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식|메모|  
+|OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`®|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIME2|`time`®|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`®|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIME2|`time`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
  응용 프로그램에서 *Wtype*에 DBTYPE_DBTIMESTAMP를 지정 하는 경우 *pwszTypeName*에서 형식 `datetime2` 이름을 제공 하 여에 대 한 매핑을 재정의할 수 있습니다. 을 `datetime` 지정 하는 경우 *bscale* 은 3 이어야 합니다. 을 `smalldatetime` 지정 하면 *bscale* 은 0 이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않는 경우 DB_E_BADSCALE 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [OLE DB &#40;날짜 및 시간 기능 향상&#41;](date-and-time-improvements-ole-db.md)  
+ [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

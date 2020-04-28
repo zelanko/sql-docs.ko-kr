@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a40d8b72dbac45e4546281198e4af000032a94c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173842"
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
@@ -53,7 +53,7 @@ ms.locfileid: "78173842"
 ## <a name="data-extension-process-flow"></a>데이터 확장 프로세스 흐름
  사용자 지정 데이터 확장 프로그램을 개발하기 전에 보고서 서버에서 데이터 확장 프로그램을 사용하여 어떻게 데이터를 처리하는지 이해해야 합니다. 또한 보고서 서버에서 호출되는 생성자와 메서드에 대해서도 잘 알고 있어야 합니다.
 
- ![데이터 처리 확장 프로그램에 대 한 프로세스 흐름](../../media/bk-ext-01.gif "데이터 처리 확장 프로그램에 대 한 프로세스 흐름") 보고서 서버에서 호출 하는 데이터 확장 프로그램의 단계별 프로세스 흐름
+ ![데이터 처리 확장 프로그램에 대 한 프로세스 흐름](../../media/bk-ext-01.gif "데이터 처리 확장 프로그램의 프로세스 흐름") 보고서 서버에서 호출 하는 데이터 확장 프로그램의 단계별 프로세스 흐름
 
  이 그림은 다음과 같은 이벤트 시퀀스를 나타냅니다.
 
@@ -64,15 +64,13 @@ ms.locfileid: "78173842"
 3.  명령 개체와 매개 변수가 처리되면 데이터 판독기가 생성되어 결과 집합이 반환되고 보고서 서버에서 보고서 데이터를 보고서 레이아웃과 연결할 수 있습니다.
 
 ## <a name="developer-requirements"></a>개발자 요구 사항
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 개발하려면 다음이 필요합니다.
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 개발하려면 다음이 필요합니다.
 
 -   보고서 디자이너 또는 보고서 서버가 설치된 배포 컴퓨터가 있어야 합니다.
 
 -   이상 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK ( [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] 소프트웨어 개발 키트)가 설치 된 개발 컴퓨터
 
--   
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.
 
 -   아키텍처, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 데이터 공급자, ADO.NET [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 데이터 집합 개체 및 공통 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 인터페이스에 대해 자세히 알고 있어야 합니다. [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]
 

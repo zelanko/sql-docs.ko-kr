@@ -21,17 +21,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: 9b8b71cab6e340f2cb171397f66796d7a76c497e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77213965"
 ---
 # <a name="clr-stored-procedures"></a>CLR 저장 프로시저
   저장 프로시저는 스칼라 식에서 사용할 수 없는 루틴입니다. 스칼라 함수와 달리 저장 프로시저는 테이블 형식의 결과와 메시지를 클라이언트에 반환하고 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문을 호출하고 출력 매개 변수를 반환할 수 있습니다. CLR 통합의 장점 및 관리 코드와 [!INCLUDE[tsql](../../includes/tsql-md.md)]관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [clr 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)를 참조 하세요.  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR 저장 프로시저에 대한 요구 사항  
- CLR (공용 언어 런타임)에서 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 클래스에 대 한 공용 정적 메서드로 구현 됩니다. 정적 메서드는 void로 선언되거나 정수 값을 반환할 수 있습니다. 정적 메서드가 정수 값을 반환하는 경우 반환되는 정수는 프로시저의 반환 코드로 취급됩니다. 다음은 그 예입니다.  
+ CLR (공용 언어 런타임)에서 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 클래스에 대 한 공용 정적 메서드로 구현 됩니다. 정적 메서드는 void로 선언되거나 정수 값을 반환할 수 있습니다. 정적 메서드가 정수 값을 반환하는 경우 반환되는 정수는 프로시저의 반환 코드로 취급됩니다. 예를 들면 다음과 같습니다.  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -39,8 +39,7 @@ ms.locfileid: "77213965"
   
  메서드가 매개 변수를 사용하는 경우 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 구현의 매개 변수 수가 저장 프로시저의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 선언에 사용된 매개 변수 수와 같아야 합니다.  
   
- 관리 코드에 해당 형식이 있는 모든 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 매개 변수를 CLR 저장 프로시저에 전달할 수 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 프로시저를 만들려면 이러한 형식을 지정할 때 가장 가까운 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 사용해야 합니다. 형식 변환에 대 한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
+ 관리 코드에 해당 형식이 있는 모든 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 매개 변수를 CLR 저장 프로시저에 전달할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 프로시저를 만들려면 이러한 형식을 지정할 때 가장 가까운 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 사용해야 합니다. 형식 변환에 대 한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
   
 ### <a name="table-valued-parameters"></a>테이블 반환 매개 변수  
  프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식인 TVP(테이블 반환 매개 변수)를 사용하면 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. TVP는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. TVP는 또한 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 TVP로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. Tvp에 대 한 자세한 내용은 [데이터베이스 엔진&#41;&#40;테이블 반환 매개 변수 사용 ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)을 참조 하세요.  
@@ -49,9 +48,7 @@ ms.locfileid: "77213965"
  출력 매개 변수, 테이블 형식 결과 및 메시지 등의 여러 가지 방법으로 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 저장 프로시저에서 정보를 반환할 수 있습니다.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 매개 변수 및 CLR 저장 프로시저  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저와 마찬가지로 OUTPUT 매개 변수를 사용하여 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 저장 프로시저에서 정보를 반환할 수 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 데 사용하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 작성된 저장 프로시저를 만드는 데 사용하는 구문과 같습니다. 구현 코드의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic는 c #에서와 동일한 방식으로 출력 매개 변수를 지원 하지 않습니다. 다음과 같이 참조로 매개 변수를 지정 하 고 \<Out () > 특성을 적용 하 여 출력 매개 변수를 나타내야 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저와 마찬가지로 OUTPUT 매개 변수를 사용하여 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 저장 프로시저에서 정보를 반환할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 데 사용하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 구문은 [!INCLUDE[tsql](../../includes/tsql-md.md)]로 작성된 저장 프로시저를 만드는 데 사용하는 구문과 같습니다. 구현 코드의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스에 있는 해당 매개 변수는 참조 전달(pass-by-reference) 매개 변수를 인수로 사용해야 합니다. Visual Basic는 c #에서와 동일한 방식으로 출력 매개 변수를 지원 하지 않습니다. 다음과 같이 참조로 매개 변수를 지정 하 고 \<Out () > 특성을 적용 하 여 출력 매개 변수를 나타내야 합니다.  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -138,19 +135,15 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  *Sum* 은 `int` SQL Server 데이터 형식으로 선언 되 고, clr 저장 프로시저에 정의 된 *값* 매개 변수는 `SqlInt32` clr 데이터 형식으로 지정 됩니다. 호출 프로그램에서 clr 저장 프로시저를 실행 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SqlInt32` clr 데이터 형식을 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자동으로 데이터 형식으로 변환 합니다.  변환할 수 있는 CLR 데이터 형식에 대 한 자세한 내용은 [Clr 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
   
 ### <a name="returning-tabular-results-and-messages"></a>테이블 형식 결과 및 메시지 반환  
- 테이블 형식 결과 및 메시지를 클라이언트에 반환하려면 `SqlPipe` 개체를 사용합니다. 이 개체는 `Pipe` 클래스의 `SqlContext` 속성을 사용하여 가져옵니다. 
-  `SqlPipe` 개체에는 `Send` 메서드가 있습니다. 
-  `Send` 메서드를 호출하여 데이터를 파이프를 통해 호출 애플리케이션으로 전송할 수 있습니다.  
+ 테이블 형식 결과 및 메시지를 클라이언트에 반환하려면 `SqlPipe` 개체를 사용합니다. 이 개체는 `Pipe` 클래스의 `SqlContext` 속성을 사용하여 가져옵니다. `SqlPipe` 개체에는 `Send` 메서드가 있습니다. `Send` 메서드를 호출하여 데이터를 파이프를 통해 호출 애플리케이션으로 전송할 수 있습니다.  
   
- 
-  `SqlPipe.Send`를 보내는 메서드와 단순히 텍스트 문자열을 보내는 다른 메서드를 포함하여 `SqlDataReader` 메서드의 오버로드가 여러 개 있습니다.  
+ `SqlPipe.Send`를 보내는 메서드와 단순히 텍스트 문자열을 보내는 다른 메서드를 포함하여 `SqlDataReader` 메서드의 오버로드가 여러 개 있습니다.  
   
 ###### <a name="returning-messages"></a>메시지 반환  
- 
-  `SqlPipe.Send(string)`를 사용하여 메시지를 클라이언트 애플리케이션에 보낼 수 있습니다. 메시지 텍스트는 8000자로 제한되며 8000자를 초과하면 잘립니다.  
+ `SqlPipe.Send(string)`를 사용하여 메시지를 클라이언트 애플리케이션에 보낼 수 있습니다. 메시지 텍스트는 8000자로 제한되며 8000자를 초과하면 잘립니다.  
   
 ###### <a name="returning-tabular-results"></a>테이블 형식 결과 반환  
- 쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 다음은 그 예입니다.  
+ 쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 예를 들면 다음과 같습니다.  
   
 ```csharp  
 using System;  
@@ -388,8 +381,7 @@ vbc /t:library /out:MyFirstUdp.dll MyFirstUdp.vb
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 `/clr:pure`로 컴파일된 Visual C++ 데이터베이스 개체(예: 저장 프로시저)의 실행은 지원되지 않습니다.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 `/clr:pure`로 컴파일된 Visual C++ 데이터베이스 개체(예: 저장 프로시저)의 실행은 지원되지 않습니다.  
   
  결과 어셈블리를 등록한 후 다음 DDL을 사용하여 진입점을 호출할 수 있습니다.  
   

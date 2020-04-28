@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a2f9cf4d404f4ef577e446d0c4284ef7024742
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176401"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 디자인 타임 메서드
@@ -64,11 +64,9 @@ End Sub
  구성 요소 개발자는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 메서드가 호출될 때 구성 요소에 사용자 지정 속성(<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>)을 추가해야 합니다. 사용자 지정 속성에는 데이터 형식 속성이 없습니다. 사용자 지정 속성의 데이터 형식은 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.Value%2A> 속성에 할당한 값의 데이터 형식에 따라 설정됩니다. 그러나 사용자 지정 속성에 초기 값을 할당한 후에는 데이터 형식이 다른 값을 할당할 수 없습니다.
 
 > [!NOTE]
->  
-  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 인터페이스는 `Object` 유형의 속성 값을 제한적으로 지원합니다. 사용자 지정 속성의 값으로는 문자열 또는 정수와 같은 단순 형식의 배열만 저장할 수 있습니다.
+>  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 인터페이스는 `Object` 유형의 속성 값을 제한적으로 지원합니다. 사용자 지정 속성의 값으로는 문자열 또는 정수와 같은 단순 형식의 배열만 저장할 수 있습니다.
 
- 
-  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 속성을 `CPET_NOTIFY` 열거형의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>로 설정하여 사용자 지정 속성이 속성 식을 지원하도록 지정할 수 있습니다. 사용자가 입력한 속성 식을 처리하거나 유효성을 검사하기 위한 코드를 추가할 필요는 없습니다. 속성의 기본값을 설정하고 해당 값의 유효성을 검사한 다음 값을 정상적으로 읽고 사용할 수 있습니다.
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 열거형의 `CPET_NOTIFY`로 설정하여 사용자 지정 속성이 속성 식을 지원하도록 지정할 수 있습니다. 사용자가 입력한 속성 식을 처리하거나 유효성을 검사하기 위한 코드를 추가할 필요는 없습니다. 속성의 기본값을 설정하고 해당 값의 유효성을 검사한 다음 값을 정상적으로 읽고 사용할 수 있습니다.
 
 ```csharp
 IDTSCustomProperty100 myCustomProperty;
@@ -138,7 +136,7 @@ customProperty.UITypeEditor = GetType(MyCustomTypeEditor).AssemblyQualifiedName
 
  자세한 내용은 [MSDN Library](https://go.microsoft.com/fwlink/?LinkId=7022)의 "방법: UI 형식 편집기 구현"을 참조하세요.
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [데이터 흐름 구성 요소의 런타임 메서드](run-time-methods-of-a-data-flow-component.md)

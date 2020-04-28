@@ -11,17 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b13e3d30ac0afce5293cc0e104aa2b291112647f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177283"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>태스크 3: 공급자 기술 자료에 대한 데이터 정리
   이 작업에서는 컴퓨터 기반 정리 프로세스를 실행합니다. DQS에서는 지정된 임계값을 기반으로 고급 알고리즘 및 신뢰도 수준을 사용하여 선택한 기술 자료에 대해 데이터를 분석한 다음 데이터를 정리합니다. 자세한 내용은 [DQS(내부) 기술 자료를 사용하여 데이터 정리](https://msdn.microsoft.com/library/hh213061.aspx) 를 참조하십시오.
 
-1.  
-  **시작** 을 클릭하여 컴퓨터 기반 정리 프로세스를 시작합니다.
+1.  **시작** 을 클릭하여 컴퓨터 기반 정리 프로세스를 시작합니다.
 
      ![정리 프로세스의 페이지 정리](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-01.jpg "정리 프로세스의 페이지 정리")
 
@@ -29,8 +28,7 @@ ms.locfileid: "78177283"
 
      ![결과 정리](../../2014/tutorials/media/et-cleansingdataagainstthesupplierkb-02.jpg "결과 정리")
 
-3.  
-  **다음** 을 클릭하여 **결과 관리 및 보기** 페이지로 전환합니다.
+3.  **다음** 을 클릭하여 **결과 관리 및 보기** 페이지로 전환합니다.
 
 ## <a name="next-step"></a>다음 단계
  [태스크 4: 결과 관리 및 보기](../../2014/tutorials/task-4-manaing-and-viewing-results.md)

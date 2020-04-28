@@ -18,10 +18,10 @@ ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a98b92b4aaad14ec507b10a345bb8200b1169f0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918079"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups 및 Users Append, ChangePassword 메서드 예제(VC++)

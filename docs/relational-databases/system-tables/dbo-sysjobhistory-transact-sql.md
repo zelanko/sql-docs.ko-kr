@@ -20,34 +20,31 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761837"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 예약된 작업 실행에 대한 정보를 포함합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 예약된 작업 실행에 대한 정보를 포함합니다.
   
 > [!NOTE]
 > 대부분의 경우 데이터는 작업 단계가 완료 된 후에만 업데이트 되 고 테이블에는 현재 진행 중인 작업 단계에 대 한 레코드가 포함 되어 있지 않지만 경우에 따라 기본 프로세스에서 진행 중인 작업 단계에 대 한 정보 *를 제공 합니다* .
 
 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|행의 고유한 식별자입니다.|  
 |**job_id**|**uniqueidentifier**|작업 ID입니다.|  
 |**step_id**|**int**|작업 단계의 ID입니다.|  
 |**step_name**|**sysname**|단계의 이름입니다.|  
 |**sql_message_id**|**int**|작업이 실패한 경우 반환된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지의 ID입니다.|  
-|**sql_severity**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 심각도입니다.|  
-|**메시지**|**nvarchar(4000)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 텍스트(있는 경우)입니다.|  
+|**sql_severity**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 심각도입니다.|  
+|**message**|**nvarchar(4000)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 텍스트(있는 경우)입니다.|  
 |**run_status**|**int**|작업의 실행 상태입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소 됨<br /><br />**4** = 진행 중|  
 |**run_date**|**int**|작업 또는 단계가 실행을 시작한 날짜입니다. 진행 기록에서는 기록이 작성된 날짜 및 시간입니다.|  
 |**run_time**|**int**|작업 또는 단계가 **HHMMSS** 형식으로 시작 된 시간입니다.|  

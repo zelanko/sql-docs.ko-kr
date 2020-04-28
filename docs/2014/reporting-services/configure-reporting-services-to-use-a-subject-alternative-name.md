@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5bbbf363c8d6ebb452f6628676de1b8918e6f245
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173939"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
@@ -22,17 +22,15 @@ ms.locfileid: "78173939"
 
 ||
 |-|
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드|
+|**[!INCLUDE[applies](../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드|
 
  이 지침은 보고 서비스 URL과 웹 서비스 URL에 적용됩니다.
 
  SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 프라이빗 키를 가지고 있어야 합니다. 자체 서명된 인증서를 사용할 수 없습니다.
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com과 같습니다.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 의 URL은 SSL 인증서를 사용하도록 구성할 수 있습니다. 인증서에는 일반적으로 SSL(Secure Sockets Layer) 세션에 대해 하나의 URL만 허용하는 주체 이름만 있습니다. SAN은 SSL 서비스에서 여러 URL을 수신하고 여러 URL에 대해 유효하도록 허용하며 다른 애플리케이션과 SSL 포트를 공유하도록 허용하는 인증서의 추가 필드입니다. SAN은 www.s2.com과 같습니다.
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.
 
 ### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성
 

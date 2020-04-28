@@ -13,14 +13,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cfd50b6641f8806bcab2ec460f030e9b84b7ae26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176017"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>사용 권한이 결정되는 방식(Master Data Services)
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 구성하는 가장 손쉬운 방법은 사용자가 멤버로 속한 그룹에 모델 개체 사용 권한을 할당하는 것입니다.
 
  다음과 같은 경우에는 보안 구성이 복잡해집니다.

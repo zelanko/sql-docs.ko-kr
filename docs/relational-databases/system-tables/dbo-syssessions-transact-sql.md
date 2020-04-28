@@ -19,26 +19,23 @@ ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75548290"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시작할 때마다 새 세션을 만듭니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 세션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 다시 시작되거나 갑자기 중지될 경우 작업 상태를 보존할 수 있습니다. **Syssessions** 테이블의 각 행에는 한 세션에 대 한 정보가 포함 되어 있습니다. **Sysjobactivity** 테이블을 사용 하 여 각 세션이 끝날 때 작업 상태를 볼 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시작할 때마다 새 세션을 만듭니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 세션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 다시 시작되거나 갑자기 중지될 경우 작업 상태를 보존할 수 있습니다. **Syssessions** 테이블의 각 행에는 한 세션에 대 한 정보가 포함 되어 있습니다. **Sysjobactivity** 테이블을 사용 하 여 각 세션이 끝날 때 작업 상태를 볼 수 있습니다.  
   
  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 세션의 ID입니다. 이 session_id는 세션에 대 한 SPID가 아니라이 시스템 테이블의 ID 값입니다.|  
+|**session_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 세션의 ID입니다. 이 session_id는 세션에 대 한 SPID가 아니라이 시스템 테이블의 ID 값입니다.|  
 |**agent_start_date**|**datetime**|이 세션에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작된 날짜 및 시간입니다.|  
   
 ## <a name="remarks"></a>설명  

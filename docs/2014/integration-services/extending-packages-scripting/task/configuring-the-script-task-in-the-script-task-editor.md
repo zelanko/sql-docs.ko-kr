@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7060990b409773abd4f574e46dd0671c71f1374f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176152"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>스크립트 태스크 편집기에서 스크립트 태스크 구성
@@ -41,13 +41,12 @@ ms.locfileid: "78176152"
  스크립트 태스크 및 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에 있는 **ScriptLanguage** 속성을 사용합니다. 자세한 내용은 [General Page](../../general-page-of-integration-services-designers-options.md)을 참조하세요.
 
 ### <a name="entrypoint-property"></a>EntryPoint 속성
- 
-  `EntryPoint` 속성은 `ScriptMain` 런타임이 VSTA 프로젝트의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. `ScriptMain` 클래스는 스크립트 템플릿이 생성 하는 기본 클래스입니다.
+ `EntryPoint` 속성은 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임이 VSTA 프로젝트의 `ScriptMain` 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. `ScriptMain` 클래스는 스크립트 템플릿이 생성 하는 기본 클래스입니다.
 
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 `EntryPoint` 속성의 값을 변경해야 합니다.
 
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 및 ReadWriteVariables 속성
- 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 태스크 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 두 유형의 변수 모두 코드에서 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 개체의 `Dts` 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [Using Variables in the Script Task](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)을 참조하세요.
+ 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 태스크 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 두 유형의 변수 모두 코드에서 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [Using Variables in the Script Task](../../extending-packages-scripting/task/using-variables-in-the-script-task.md)을 참조하세요.
 
 > [!NOTE]
 >  변수 이름은 대소문자를 구분합니다.
@@ -60,8 +59,7 @@ ms.locfileid: "78176152"
 ## <a name="expressions-page-of-the-script-task-editor"></a>스크립트 태스크 편집기의 식 페이지
  **스크립트 태스크 편집기**의 **식**에서 식을 사용하여 위에 나열된 스크립트 태스크의 속성과 그 밖의 여러 태스크 속성에 대한 값을 제공할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](../../expressions/integration-services-ssis-expressions.md)가 될 때까지 워크플로를 반복합니다.
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> [!INCLUDE[msCoName](../../../includes/msconame-md.md)]의 최신 다운로드, 아티클, 예제 및 비디오와 커뮤니티의 정선된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하십시오.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)

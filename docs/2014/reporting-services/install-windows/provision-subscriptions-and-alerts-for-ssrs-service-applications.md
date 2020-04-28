@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1dbe2fbd89042ceed1dbe17a2e5e68ce74bba72d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176953"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전
@@ -59,7 +59,7 @@ ms.locfileid: "78176953"
 
 5.  **확인** 단추를 클릭합니다.
 
-##  <a name="bkmk_download"></a> Transact-SQL 스크립트를 다운로드하려면
+##  <a name="to-download-the-transact-sql-script"></a><a name="bkmk_download"></a> Transact-SQL 스크립트를 다운로드하려면
 
 1.  SharePoint 중앙 관리의 **애플리케이션 관리** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.
 
@@ -77,8 +77,7 @@ ms.locfileid: "78176953"
 
 2.  **시작** 메뉴에서 **모든 프로그램**을 클릭합니다.
 
-3.  
-  **Microsoft SharePoint 2010 제품** 을 확장하고 **Microsoft SharePoint 2010 관리 셸**을 클릭합니다.
+3.  **Microsoft SharePoint 2010 제품** 을 확장하고 **Microsoft SharePoint 2010 관리 셸**을 클릭합니다.
 
 4.  보고서 서버 데이터베이스, 애플리케이션 풀 계정 및 문 경로의 이름을 바꾸어 다음 PowerShell cmdlet을 업데이트합니다.
 

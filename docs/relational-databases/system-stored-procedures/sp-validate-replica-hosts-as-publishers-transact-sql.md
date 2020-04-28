@@ -17,10 +17,10 @@ ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75320011"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers(Transact-SQL)
@@ -61,7 +61,7 @@ sp_validate_replica_hosts_as_publishers
  유효성 검사에 실패한 경우에는 해당 오류가 발생합니다.  **sp_validate_redirected_publisher** 는 처음에 발생 한 것이 아니라 모든 문제를 발생 시키기 위한 최상의 노력을 합니다.  
   
 > [!NOTE]  
->  읽기 액세스를 허용 하지 않거나 읽기 전용을 지정 해야 하는 보조 복제본 호스트의 유효성을 검사할 때 다음 오류가 발생 하 여 **sp_validate_replica_hosts_as_publishers** 실패 합니다.  
+>  읽기 권한을 허용하지 않거나 읽기 전용으로 지정해야 하는 보조 복제본 호스트의 유효성을 검사할 경우에는 다음 오류와 함께**sp_validate_replica_hosts_as_publishers** 가 실패합니다.  
 >   
 >  메시지 21899, 수준 11, 상태 1, 프로시저 **sp_hadr_verify_subscribers_at_publisher**, 줄 109  
 >   
@@ -73,7 +73,7 @@ sp_validate_replica_hosts_as_publishers
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_get_redirected_publisher &#40;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_redirect_publisher &#40;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   
  [Transact-sql&#41;sp_validate_redirected_publisher &#40;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)  

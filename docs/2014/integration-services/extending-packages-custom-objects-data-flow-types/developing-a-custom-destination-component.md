@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176413"
 ---
 # <a name="developing-a-custom-destination-component"></a>사용자 지정 대상 구성 요소 개발
@@ -38,7 +38,7 @@ ms.locfileid: "78176413"
  대상 구성 요소의 디자인 타임 기능을 구현하려면 외부 데이터 원본에 대한 연결을 지정하고 구성 요소가 올바르게 구성되었는지 확인해야 합니다. 정의에 따라 대상 구성 요소에는 하나의 입력이 있으며 하나의 오류 출력이 있을 수 있습니다.
 
 ### <a name="creating-the-component"></a>구성 요소 만들기
- 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.
+ 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.
 
  다음 코드 예제에서는 입력을 추가한 다음 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 개체를 추가하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>의 구현을 보여 줍니다.
 
@@ -481,7 +481,7 @@ Namespace BlobDst
 End Namespace
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [사용자 지정 원본 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) [스크립트 구성 요소를 사용 하 여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)

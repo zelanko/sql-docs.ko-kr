@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176443"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
@@ -40,8 +40,7 @@ ms.locfileid: "78176443"
  *식* 유효한 식입니다.
 
 ## <a name="result-types"></a>결과 형식
- 
-  *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조 하세요.
+ *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services 데이터 형식](../data-flow/integration-services-data-types.md)을 참조 하세요.
 
 ## <a name="remarks"></a>설명
  다음 다이어그램에서는 유효한 캐스트 연산을 보여 줍니다.

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176884"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176884"
     > [!NOTE]
     >  전체 테이블 또는 행렬 데이터 영역을 선택하려면 데이터 영역을 클릭하여 선택하고 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.
 
-2.  **표시 유형**을 클릭합니다.
+2.  **표시 유형을 클릭 합니다.**
 
 3.  **보고서를 처음 실행할 때**에서 보고서를 처음으로 볼 때 항목을 숨길지 여부를 지정합니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176884"
         >  표시 유형에 대한 식을 지정할 때는 다음 이미지와 같이 보고서 항목의 Hidden 속성을 설정하게 됩니다. 평가 식은 값이 False일 때 보고서 항목을 표시하고 값이 True일 때 보고서 항목을 숨깁니다. 
         > ![Properties_Visibility 대화 상자 및 Hidden 속성](../media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 대화 상자 및 Hidden 속성")
 
-4.  **확인** 을 두 번 클릭합니다.
+4.  **확인**을 두 번 클릭합니다.
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>테이블, 행렬 또는 목록에서 정적 행을 숨기려면
 

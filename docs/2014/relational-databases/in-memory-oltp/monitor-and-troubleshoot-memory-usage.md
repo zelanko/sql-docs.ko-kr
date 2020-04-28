@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175917"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
@@ -23,16 +23,14 @@ ms.locfileid: "78175917"
  이 항목에서는 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 메모리 사용 모니터링에 대해 다룹니다.
 
 
-##  <a name="bkmk_CreateDB"></a>메모리 최적화 테이블이 포함 된 샘플 데이터베이스 만들기
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>메모리 최적화 테이블이 포함 된 샘플 데이터베이스 만들기
  메모리 최적화 테이블이 있는 데이터베이스를 이미 만든 경우에는 이 섹션을 건너뛸 수 있습니다.
 
  다음 단계에서는 이 항목의 나머지 부분에서 사용할 수 있는 메모리 최적화 테이블이 3개 있는 데이터베이스를 만듭니다. 이 예제에서는 데이터베이스를 리소스 풀에 매핑하여 메모리 최적화 테이블에서 가져올 수 있는 메모리의 양을 제어할 수 있습니다.
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 시작합니다.
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 시작합니다.
 
-2.  
-  **새 쿼리**를 클릭합니다.
+2.  **새 쿼리**를 클릭합니다.
 
 3.  새 쿼리 창에 이 코드를 붙여 넣고 각 섹션을 실행합니다.
 
@@ -114,16 +112,13 @@ ms.locfileid: "78175917"
 
 ##  <a name="monitoring-memory-usage"></a>메모리 사용 모니터링
 
-###  <a name="using-ssmanstudiofull"></a>
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.
+###  <a name="using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.
 
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.
 
-1.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 시작하고 서버에 연결합니다.
+1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 를 시작하고 서버에 연결합니다.
 
 2.  개체 탐색기에서 보고하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.
 
@@ -238,8 +233,7 @@ memory_object_address pages_ in_bytes bytes_used type
  자세한 내용은 [dm_os_memory_objects (transact-sql)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql)를 참조 하세요.
 
 #### <a name="memory-consumed-by-hek_2-engine-across-the-instance"></a>인스턴스 전반의 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 메모리
- 
-  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진 및 메모리 최적화 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진 및 메모리 최적화 개체에 할당된 메모리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 다른 메모리 소비자와 동일한 방식으로 관리됩니다. MEMORYCLERK_XTP 유형의 계정 클럭은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에 할당된 모든 메모리를 처리합니다. 다음 쿼리를 사용하여 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진에서 사용하는 모든 메모리를 찾을 수 있습니다.
 
 ```sql
 -- this DMV accounts for all memory used by the hek_2 engine

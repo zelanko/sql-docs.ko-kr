@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322240"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold(Transact-SQL)
@@ -65,12 +65,12 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 |값|메트릭 이름|  
 |-----------|-----------------|  
-|**1**|**만료** -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
-|**2**|**latency** -트랜잭션 게시에 대 한 구독의 성능을 모니터링 합니다.|  
-|**4**|**mergeexpiration** -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.|  
+|**1**|**expiration** - 트랜잭션 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
+|**2**|**latency** - 트랜잭션 게시에 대한 구독의 성능을 모니터링합니다.|  
+|**4**|**mergeexpiration** - 병합 게시에 대한 구독의 만료가 임박했는지 모니터링합니다.|  
 |**5**|**mergeslowrunduration** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
 |**6**|**mergefastrunduration** -고대역폭 lan (local area network) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.|  
-|**일**|**mergefastrunspeed** -고대역폭 (LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.|  
+|**7**|**mergefastrunspeed** - 고대역폭(LAN) 연결을 통한 병합 동기화의 동기화 속도를 모니터링합니다.|  
 |**20cm(8**|**mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도를 모니터링 합니다.|  
   
  *Metric_id* 또는 *thresholdmetricname*중 하나를 지정 해야 합니다. *Thresholdmetricname* 를 지정 하는 경우 *metric_id* 은 NULL 이어야 합니다.  

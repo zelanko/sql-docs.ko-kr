@@ -17,10 +17,10 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2bd7a4ce174d547d0cb8d0f9bcb89d23e6543db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180096"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-sql)
@@ -50,14 +50,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|세션의 ID입니다. Null을 허용하지 않습니다.|
 |request_id|**int**|요청의 ID입니다. Null을 허용하지 않습니다.|
-|sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|
-|plan_handle|**varbinary (64)**|현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|
+|sql_handle|**varbinary(64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|
+|plan_handle|**varbinary(64)**|현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|
 |query_plan|**xml**|부분 통계를 포함 하 *plan_handle* 로 지정 된 쿼리 실행 계획의 런타임 실행 계획 표현을 포함 합니다. 실행 계획은 XML 형식입니다. 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 저장 프로시저 호출, 사용자 정의 함수 호출 등이 포함된 각 일괄 처리에 대해 계획 하나가 생성됩니다. Null을 허용합니다.|
 
 ## <a name="remarks"></a>설명
 이 시스템 함수는 s p 1 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 사용할 수 있습니다. KB [3190871](https://support.microsoft.com/help/3190871) 을 참조 하세요.
 
-이 시스템 함수는 **표준** 및 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.  
+이 시스템 함수는 **표준** 및 **경량** 쿼리 실행 통계 프로 파일링 인프라에서 작동 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.  
 
 다음 조건에서는 **sys. dm_exec_query_statistics_xml**에 대해 반환 된 테이블의 **query_plan** 열에 실행 계획 출력이 반환 되지 않습니다.  
   
@@ -98,6 +98,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목
   [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

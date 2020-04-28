@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76934806"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
-##  <a name="BasicsCreate"></a>FileTable 만들기  
+##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> FileTable 만들기  
  FileTable은 미리 정의된 고정 스키마가 있는 특수한 사용자 테이블입니다. 이 스키마는 FILESTREAM 데이터, 파일/디렉터리 정보 및 파일 특성을 저장합니다. FileTable 스키마에 대한 자세한 내용은 [FileTable Schema](filetable-schema.md)를 참조하세요.  
   
  Transact-SQL 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 새 FileTable을 만들 수 있습니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. FileTable을 만드는 간단한 구문에서 다음을 지정할 수 있습니다.  
@@ -35,10 +35,9 @@ ms.locfileid: "76934806"
   
 -   자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름  
   
-###  <a name="HowToCreate"></a>방법: FileTable 만들기  
- **Transact-sql을 사용 하 여 FileTable 만들기**  
- 
-  [AS FileTable](/sql/t-sql/statements/create-table-transact-sql) 옵션이 포함된 **CREATE TABLE&#40;Transact-SQL&#41;** 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 방법: FileTable 만들기  
+ **Transact-SQL을 사용하여 FileTable 만들기**  
+ [AS FileTable](/sql/t-sql/statements/create-table-transact-sql) 옵션이 포함된 **CREATE TABLE&#40;Transact-SQL&#41;** 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
 1.  **FILETABLE_DIRECTORY**. FileTable에 저장된 모든 파일 및 디렉터리에 대한 루트 디렉터리 역할을 하는 디렉터리를 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성 비교는 현재 데이터 정렬 설정과 관계없이 대/소문자를 구분하지 않습니다.  
   
@@ -54,8 +53,7 @@ ms.locfileid: "76934806"
   
     1.  지정한 데이터 정렬은 Windows 파일 이름 의미 체계를 따르도록 **대/소문자를 구분하지 않아야** 합니다.  
   
-    2.  
-  **FILETABLE_COLLATE_FILENAME**값을 제공하지 않거나 **database_default**를 지정한 경우 열은 현재 데이터베이스의 데이터 정렬을 상속합니다. 현재 데이터베이스 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 **CREATE TABLE** 작업이 실패합니다.  
+    2.  **FILETABLE_COLLATE_FILENAME**값을 제공하지 않거나 **database_default**를 지정한 경우 열은 현재 데이터베이스의 데이터 정렬을 상속합니다. 현재 데이터베이스 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 **CREATE TABLE** 작업이 실패합니다.  
   
 3.  자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름도 지정할 수 있습니다. 이름을 입력하지 않으면 시스템이 이 항목의 뒷부분에 나와 있는 이름을 생성합니다.  
   
@@ -85,13 +83,12 @@ CREATE TABLE DocumentStore AS FileTable;
 GO  
 ```  
   
- **SQL Server Management Studio를 사용 하 여 FileTable 만들기**  
+ **SQL Server Management Studio를 사용하여 FileTable 만들기**  
  개체 탐색기에서 선택한 데이터베이스의 개체를 확장하고 **테이블** 폴더에서 마우스 오른쪽 단추를 클릭한 다음 **새 FileTable**을 선택합니다.  
   
- 이 옵션은 Transact-SQL 스크립트 템플릿이 포함된 새 스크립트 창을 엽니다. 이 템플릿을 사용자 지정하여 FileTable을 만드는 데 사용할 수 있습니다. 
-  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 옵션을 사용하여 스크립트를 쉽게 사용자 지정할 수 있습니다.  
+ 이 옵션은 Transact-SQL 스크립트 템플릿이 포함된 새 스크립트 창을 엽니다. 이 템플릿을 사용자 지정하여 FileTable을 만드는 데 사용할 수 있습니다. **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 옵션을 사용하여 스크립트를 쉽게 사용자 지정할 수 있습니다.  
   
-###  <a name="ReqCreate"></a>FileTable 만들기에 대 한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-creating-a-filetable"></a><a name="ReqCreate"></a> FileTable 만들기에 대한 요구 사항 및 제한 사항  
   
 -   기존 테이블을 변경하여 FileTable로 변환할 수 없습니다.  
   
@@ -99,21 +96,19 @@ GO
   
 -   FileTable에는 FILESTREAM 열이 포함되어 있으므로 FileTable에는 유효한 FILESTREAM 파일 그룹이 있어야 합니다. 필요에 따라 **CREATE TABLE** 명령의 일부로 유효한 FILESTREAM 파일 그룹을 지정하여 FileTable을 만들 수 있습니다. 파일 그룹을 지정하지 않으면 FileTable에는 데이터베이스의 기본 FILESTREAM 파일 그룹이 사용됩니다. 데이터베이스에 FILESTREAM 파일 그룹이 없으면 오류가 발생합니다.  
   
--   
-  **CREATE TABLE...AS FILETABLE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
+-   **CREATE TABLE...AS FILETABLE** 문의 일부로 테이블 제약 조건을 만들 수 없습니다. 그러나 **ALTER TABLE** 문을 사용하여 나중에 제약 조건을 추가할 수 있습니다.  
   
--   
-  **tempdb** 데이터베이스나 다른 시스템 데이터베이스에는 FileTable을 만들 수 없습니다.  
+-   **tempdb** 데이터베이스나 다른 시스템 데이터베이스에는 FileTable을 만들 수 없습니다.  
   
 -   FileTable을 임시 테이블로 만들 수 없습니다.  
   
-##  <a name="BasicsAlter"></a>FileTable 변경  
+##  <a name="altering-a-filetable"></a><a name="BasicsAlter"></a> FileTable 변경  
  FileTable에는 미리 정의된 고정 스키마가 있으므로 해당 열을 추가하거나 변경할 수 없습니다. 그러나 FileTable에 사용자 지정 인덱스, 트리거, 제약 조건 및 다른 옵션을 추가할 수 있습니다.  
   
  시스템 정의 제약 조건을 포함하여 ALTER TABLE 문을 사용하여 FileTable 네임스페이스를 사용하거나 사용하지 않도록 설정하는 방법은 [FileTable 관리](manage-filetables.md)를 참조하세요.  
   
-###  <a name="HowToChange"></a>방법: FileTable의 디렉터리 변경  
- **Transact-sql을 사용 하 여 FileTable의 디렉터리 변경**  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> 방법: FileTable의 디렉터리 변경  
+ **Transact-SQL을 사용하여 FileTable의 디렉터리 변경**  
  ALTER TABLE 문을 호출하고 **FILETABLE_DIRECTORY** SET 옵션에 유효한 새 값을 제공합니다.  
   
  **예제**  
@@ -124,22 +119,19 @@ ALTER TABLE filetable_name
 GO  
 ```  
   
- **SQL Server Management Studio를 사용 하 여 FileTable의 디렉터리 변경**  
- 개체 탐색기에서 FileTable을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **테이블 속성** 대화 상자를 엽니다. 
-  **FileTable** 페이지에서 **FileTable 디렉터리 이름**의 새 값을 입력합니다.  
+ **SQL Server Management Studio를 사용하여 FileTable의 디렉터리 변경**  
+ 개체 탐색기에서 FileTable을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **테이블 속성** 대화 상자를 엽니다. **FileTable** 페이지에서 **FileTable 디렉터리 이름**의 새 값을 입력합니다.  
   
-###  <a name="ReqAlter"></a>FileTable 변경에 대 한 요구 사항 및 제한 사항  
+###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> FileTable 변경에 대한 요구 사항 및 제한 사항  
   
--   
-  **FILETABLE_COLLATE_FILENAME**값은 변경할 수 없습니다.  
+-   **FILETABLE_COLLATE_FILENAME**값은 변경할 수 없습니다.  
   
 -   FileTable의 시스템 정의 열은 변경, 삭제하거나 사용하지 않도록 설정할 수 없습니다.  
   
 -   FileTable에 새 사용자 열, 계산 열 또는 지속형 계산 열을 추가할 수 없습니다.  
   
-##  <a name="BasicsDrop"></a>FileTable 삭제  
- 
-  [DROP TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql) 문의 일반 구문을 사용하여 FileTable을 삭제할 수 있습니다.  
+##  <a name="dropping-a-filetable"></a><a name="BasicsDrop"></a> FileTable 삭제  
+ [DROP TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql) 문의 일반 구문을 사용하여 FileTable을 삭제할 수 있습니다.  
   
  Filetable를 삭제하면 다음 개체도 삭제됩니다.  
   
@@ -149,7 +141,7 @@ GO
   
  FileTable의 파일 네임스페이스에 열려 있는 파일 핸들이 있는 경우 DROP TABLE 명령이 실패합니다. 열려 있는 핸들을 닫는 방법에 대한 자세한 내용은 [FileTable 관리](manage-filetables.md)를 참조하세요.  
   
-##  <a name="BasicsOtherObjects"></a>FileTable을 만들 때 생성 되는 다른 데이터베이스 개체  
+##  <a name="other-database-objects-are-created-when-you-create-a-filetable"></a><a name="BasicsOtherObjects"></a> FileTable을 만들 때 생성되는 다른 데이터베이스 개체  
  새 FileTable을 만들면 일부 시스템 정의 인덱스 및 제약 조건도 만들어집니다. 이러한 개체는 변경하거나 삭제할 수 없으며, FileTable 자체가 삭제된 경우에만 사라집니다. 이러한 개체의 목록을 보려면 카탈로그 뷰 [sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql)를 쿼리합니다.  
   
 ```sql  
@@ -164,7 +156,7 @@ SELECT OBJECT_NAME(parent_object_id) AS 'FileTable', OBJECT_NAME(object_id) AS '
 GO  
 ```  
   
- **새 FileTable을 만들 때 생성 되는 인덱스**  
+ **새 FileTable을 만들 때 생성되는 인덱스**  
  새 FileTable을 만들면 다음과 같은 시스템 정의 인덱스도 만들어집니다.  
   
 |||  
@@ -174,7 +166,7 @@ GO
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|고유, 비클러스터형|  
 |[stream_id] ASC|고유, 비클러스터형|  
   
- **새 FileTable을 만들 때 생성 되는 제약 조건**  
+ **새 FileTable을 만들 때 생성되는 제약 조건**  
  새 FileTable을 만들면 다음과 같은 시스템 정의 제약 조건도 만들어집니다.  
   
 |제약 조건|적용|  
@@ -182,12 +174,12 @@ GO
 |다음 열에 대한 기본 제약 조건:<br /><br /> **creation_time** <br /> **is_archive** <br /> **is_directory** <br /> **is_hidden** <br /> **is_offline** <br /> **is_readonly** <br /> **is_system** <br /> **is_temporary** <br /> **last_access_time** <br /> **last_write_time** <br /> **path_locator** <br /> **stream_id**|시스템 정의 기본 제약 조건이 지정된 열에 기본값을 적용합니다.|  
 |CHECK 제약 조건|시스템 정의 CHECK 제약 조건이 다음 요구 사항을 적용합니다.<br /><br /> 유효한 파일 이름<br /><br /> 유효한 파일 특성<br /><br /> 부모 개체는 디렉터리여야 합니다.<br /><br /> 파일 조작 중에는 네임스페이스 계층 구조가 잠깁니다.|  
   
- **시스템 정의 제약 조건에 대 한 명명 규칙**  
- 위에서 설명한 시스템 정의 제약 조건은 ** \<constraintType>_\<tablename>\_\<[columnname>]\_\<uniquifier>** 형식으로 이름이 지정 됩니다.  
+ **시스템 정의 제약 조건에 대한 명명 규칙**  
+ 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서 각 항목은 다음을 나타냅니다.  
   
--   *<constraint_type>* 는 접시 헤드 (check 제약 조건), DF (기본 제약 조건), FK (외래 키), PK (기본 키) 또는 uq (unique 제약 조건)입니다.  
+-   *<constraint_type>* 은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
   
--   uniquifier>는 이름을 고유 하 게 만드는 시스템 생성 문자열입니다. * \<* 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
+-   *\<uniquifier>* 는 이름을 고유하게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FileTable 관리](manage-filetables.md)  

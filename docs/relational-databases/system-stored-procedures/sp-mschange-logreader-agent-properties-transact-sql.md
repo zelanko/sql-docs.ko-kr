@@ -17,10 +17,10 @@ ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 37a36218b4e9e93a761c776e76a6596f40a6c0eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322290"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties(Transact-SQL)
@@ -65,10 +65,9 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
+|**MSSQLSERVER**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정합니다.|  
 |**ORACLE**|표준 Oracle 게시자를 지정합니다.|  
 |**ORACLE GATEWAY**|Oracle Gateway 게시자를 지정합니다.|  
   
@@ -87,6 +86,6 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_MSchange_logreader_agent_properties**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql&#41;sp_addlogreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

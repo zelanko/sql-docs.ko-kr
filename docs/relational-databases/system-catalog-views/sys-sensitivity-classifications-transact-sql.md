@@ -24,10 +24,10 @@ helpviewer_keywords:
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: 6ee40a2411a635daeec83fa473d8a19e5ae64662
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77903912"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications(Transact-SQL)
@@ -35,9 +35,9 @@ ms.locfileid: "77903912"
 
 데이터베이스의 각 분류 된 항목에 대해 행을 반환 합니다.
 
-|열 이름|데이터 형식|Description|
+|열 이름|데이터 형식|설명|
 |-----------------|---------------|-----------------|  
-|**클래스**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
+|**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
 |**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다. 에는 항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*|  
 |**major_id**|**int**|All_objects에 해당 하는 분류 된 열을 포함 하는 테이블의 ID를 나타냅니다 object_id|  
 |**minor_id**|**int**|All_columns에 해당 하는 분류가 있는 열의 ID를 나타냅니다 column_id|   

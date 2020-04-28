@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176298"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
@@ -82,24 +82,20 @@ ms.locfileid: "78176298"
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
  대상 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 `ProcessInputRow` 메서드에 대한 스텁과 함께 코드 편집기에 나타납니다. 이 `ScriptMain` 클래스에서 사용자 지정 코드를 작성해야 하며 `ProcessInputRow`는 대상 구성 요소에서 가장 중요한 메서드입니다.
 
- VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. 
-  `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
+ VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
 
- 런타임에 데이터 흐름 엔진은 `ProcessInput` 부모 클래스의 `UserComponent` 메서드를 재정의하는 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.
+ 런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.
 
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성
  사용자 지정 대상 구성 요소 만들기를 마치기 위해 `ScriptMain` 클래스에서 사용할 수 있는 다음 메서드에서 스크립트를 작성할 수 있습니다.
 
-1.  
-  `AcquireConnections` 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.
+1.  `AcquireConnections` 메서드를 재정의하여 외부 데이터 원본에 연결합니다. 연결 관리자에서 연결 개체나 필요한 연결 정보를 추출합니다.
 
-2.  
-  `PreExecute` 메서드를 재정의하여 데이터를 저장하기 위한 준비를 합니다. 예를 들어 이 메서드에서 `SqlCommand`와 해당 매개 변수를 만들고 구성할 수 있습니다.
+2.  `PreExecute` 메서드를 재정의하여 데이터를 저장하기 위한 준비를 합니다. 예를 들어 이 메서드에서 `SqlCommand`와 해당 매개 변수를 만들고 구성할 수 있습니다.
 
 3.  재정의된 `ProcessInputRow` 메서드를 사용하여 각 입력 행을 외부 데이터 원본에 복사합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상의 경우 열 값을 `SqlCommand`의 매개 변수에 복사하고 각 행에 대해 이 명령을 한 번씩 실행할 수 있습니다. 플랫 파일 대상의 경우 각 열의 값을 열 구분 기호로 구분하여 `StreamWriter`에 쓸 수 있습니다.
 
-4.  
-  `PostExecute` 메서드를 재정의하여 필요할 경우 외부 데이터 원본과의 연결을 끊고 그 밖에 필요한 정리 작업을 수행합니다.
+4.  `PostExecute` 메서드를 재정의하여 필요할 경우 외부 데이터 원본과의 연결을 끊고 그 밖에 필요한 정리 작업을 수행합니다.
 
 ## <a name="examples"></a>예
  다음 예에서는 `ScriptMain` 클래스에서 대상 구성 요소를 만드는 데 필요한 코드를 보여 줍니다.
@@ -112,11 +108,9 @@ ms.locfileid: "78176298"
 
  이 예제 코드를 실행하려면 다음과 같이 패키지와 구성 요소를 구성해야 합니다.
 
-1.  
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 공급자를 사용하여 `SqlClient` 데이터베이스에 연결하는 `AdventureWorks` 연결 관리자를 만듭니다.
+1.  `SqlClient` 공급자를 사용하여 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 연결하는 `AdventureWorks` 연결 관리자를 만듭니다.
 
-2.  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만듭니다.
+2.  `AdventureWorks` 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만듭니다.
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -355,7 +349,7 @@ public class ScriptMain:
 }
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [스크립트 구성 요소를 사용 하 여 원본 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) [사용자 지정 대상 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)

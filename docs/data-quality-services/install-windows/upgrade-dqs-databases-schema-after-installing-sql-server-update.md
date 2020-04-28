@@ -12,10 +12,10 @@ ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: db5009ef7f5c9ff2a57022d30b2eb9f009fb6ab8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75558070"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 업데이트를 설치한 후 DQS 데이터베이스 스키마 업그레이드
@@ -33,7 +33,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 > [!NOTE]  
 >  대부분의 경우 SQL Server를 업데이트하려면 DQS 데이터베이스 스키마로 업그레이드해야 합니다. DQS 데이터베이스 스키마로 업그레이드해야 하는 SQL Server 업데이트에 대한 자세한 내용은 [DQS 업그레이드: Data Quality Services에서 누적 업데이트 또는 핫픽스 패치 설치](https://go.microsoft.com/fwlink/?LinkID=251565)의 1.A 단계를 참조하세요.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
   
 -   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   

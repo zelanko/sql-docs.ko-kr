@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423cbb00f8c28cc1abca309c5a2d518da4511f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175846"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화

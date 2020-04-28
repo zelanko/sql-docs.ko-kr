@@ -11,14 +11,13 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176723"
 ---
 # <a name="circularstring"></a>CircularString
-  
   `CircularString`은 0개 이상의 연속 원호 세그먼트 컬렉션입니다. 원호 세그먼트는 2차원 평면에서 3개의 점으로 정의되는 곡선 세그먼트입니다. 첫 번째 점은 세 번째 점과 같을 수 없습니다. 원호 세그먼트의 세 점 모두가 공선상에 있는 경우 원호 세그먼트가 선분으로 처리됩니다.
 
 > [!IMPORTANT]
@@ -38,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3`에서는 `CircularString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다. 다음 CircularString 인스턴스 선언은 허용되지 않습니다. 이 선언에서는 `System.FormatException`이 발생합니다.
+ `@g3`에서는 `CircularString` 인스턴스를 허용할 수 있지만 유효하지 않음을 보여 줍니다. 다음 CircularString 인스턴스 선언은 허용되지 않습니다. 이 선언에서는 `System.FormatException`이 발생합니다.
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -56,8 +54,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
 
 -   이 인스턴스는 일정 간격으로 겹치면 안 됩니다.
 
--   
-  `CircularString` 인스턴스에 선분이 포함될 수 있지만 이러한 선분은 3개의 공선점으로 정의되어야 합니다.
+-   `CircularString` 인스턴스에 선분이 포함될 수 있지만 이러한 선분은 3개의 공선점으로 정의되어야 합니다.
 
  다음 예에서는 유효한 `CircularString` 인스턴스를 보여 줍니다.
 
@@ -69,9 +66,7 @@ DECLARE @g4 geometry = 'CIRCULARSTRING(1 1, 2 2, 2 2)';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
 ```
 
- 
-  `CircularString` 인스턴스는 하나의 완전한 원을 정의하기 위해 두 개 이상의 원호 세그먼트를 포함해야 합니다. 
-  `CircularString` 인스턴스는 (1 1, 3 1, 1 1)과 같은 하나의 원호 세그먼트를 사용하여 하나의 완전한 원을 정의할 수 없습니다. (1 1, 2 2, 3 1, 2 0, 1 1)을 사용하여 원을 정의합니다.
+ `CircularString` 인스턴스는 하나의 완전한 원을 정의하기 위해 두 개 이상의 원호 세그먼트를 포함해야 합니다. `CircularString` 인스턴스는 (1 1, 3 1, 1 1)과 같은 하나의 원호 세그먼트를 사용하여 하나의 완전한 원을 정의할 수 없습니다. (1 1, 2 2, 3 1, 2 0, 1 1)을 사용하여 원을 정의합니다.
 
  다음 예에서는 유효하지 않은 CircularString 인스턴스를 보여 줍니다.
 
@@ -124,8 +119,7 @@ SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Circumference = 6.28319
 ```
 
- 
-  `LineString` 대신 `CircularString`을 사용하는 경우의 출력과 비교합니다.
+ `LineString` 대신 `CircularString`을 사용하는 경우의 출력과 비교합니다.
 
 ```sql
 DECLARE @g geometry;
@@ -164,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>참고 항목
- [공간 데이터 형식 개요](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [makevalid &#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [makevalid &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [stisvalid](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) &#40;geometry 데이터 [형식&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [stisvalid](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) &#40;geometry 데이터 형식&#41;stisvalid &#40;[geometry 데이터 형식](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)&#41;stpointn &#40;geometry 데이터 형식&#41;[stisvalid &#40;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) geometry 데이터 형식&#41;[stpointn &#40;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) geometry 데이터 형식&#41;[stnumpoints &#40;geometry 데이터](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [형식&#41;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;Geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [stpointonsurface &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [공간 데이터 형식 개요](spatial-data-types-overview.md) [CompoundCurve](compoundcurve.md) [makevalid &#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [makevalid &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) [stisvalid &#40;geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) 데이터 형식&#41;[stisvalid &#40;geography](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) 데이터 형식&#41;[stisvalid](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) &#40;Geometry 데이터 형식&#41;stisvalid [&#40;geometry 데이터](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) 형식&#41;[endpoint &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [stpointn &#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) [stnumpoints](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) &#40;geometry 데이터 형식&#41;[stisring &#40;geometry](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) 데이터 형식&#41;[STIsClosed &#40;geometry 데이터 형식](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)&#41;[stpointonsurface &#40;geometry 데이터 형식](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type)&#41;[LineString](linestring.md)
 
 

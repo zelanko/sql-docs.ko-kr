@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 73a7bdc282a2e8797c1f157dbd1e9cc3c21ce485
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176400"
 ---
 # <a name="developing-a-custom-source-component"></a>사용자 지정 원본 구성 요소 개발
@@ -178,7 +178,7 @@ End Sub
 |DT_STR|0보다 크고 8000보다 작습니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|
 |DT_WSTR|0보다 크고 4000보다 작습니다.|0|0|0|
 
- 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스는 관리되는 구성 요소 개발자가 관리되는 형식이 지정된 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드(<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>)를 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.
+ 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스는 관리되는 구성 요소 개발자가 관리되는 형식이 지정된 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드(<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)])를 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.
 
  다음 코드 예에서는 테이블의 스키마를 기반으로 구성 요소의 출력 열 컬렉션을 채우는 방법을 보여 줍니다. 기본 클래스의 도우미 메서드는 열의 데이터 형식을 설정하는 데 사용되며 종속 속성은 해당 데이터 형식에 따라 설정됩니다.
 
@@ -361,8 +361,7 @@ End Sub
 ### <a name="validating-the-component"></a>구성 요소 유효성 검사
  원본 구성 요소의 유효성을 검사하고 해당 출력 열 컬렉션에 정의된 열과 외부 데이터 원본에 있는 열이 일치하는지 확인해야 합니다. 때로는 연결이 끊어진 상태이거나 오랜 서버 왕복을 피하는 것이 바람직할 때와 같이 외부 데이터 원본을 기준으로 출력 열의 유효성을 검사하는 것이 불가능한 경우가 있습니다. 이러한 경우에도 출력 개체의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExternalMetadataColumnCollection%2A>을 사용하여 출력의 열에 대한 유효성을 검사할 수 있습니다. 자세한 내용은 [데이터 흐름 구성 요소에 대한 유효성 검사](../extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)를 참조하세요.
 
- 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나 구성 요소의 연결이 끊어져 있거나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 `false`인 경우 이 컬렉션을 사용하여 출력 열의 유효성을 검사할 수 있습니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.
+ 이 컬렉션은 입력 개체와 출력 개체 모두에 있으며 외부 데이터 원본의 열로 이 컬렉션을 채울 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너가 오프라인 상태이거나 구성 요소의 연결이 끊어져 있거나 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 속성이 `false`인 경우 이 컬렉션을 사용하여 출력 열의 유효성을 검사할 수 있습니다. 먼저 출력 열이 만들어짐과 동시에 컬렉션이 채워져 있어야 합니다. 외부 메타데이터 열은 처음에는 출력 열과 일치하므로 컬렉션에 외부 메타데이터 열을 추가하는 것은 비교적 쉽습니다. 열의 데이터 형식 속성은 이미 올바르게 설정되어 있어야 하며 이 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100> 개체에 직접 복사할 수 있습니다.
 
  다음 예제 코드에서는 새로 만들어진 출력 열을 기반으로 외부 메타데이터 열을 추가합니다. 출력 열은 이미 만들어진 것으로 가정합니다.
 
@@ -667,7 +666,7 @@ Namespace BlobSrc
 End Namespace
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [사용자 지정 대상 구성 요소 개발](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) [스크립트 구성 요소를 사용 하 여 원본 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)

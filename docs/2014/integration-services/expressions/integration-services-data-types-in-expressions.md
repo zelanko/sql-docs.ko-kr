@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176433"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
@@ -38,7 +38,7 @@ ms.locfileid: "78176433"
 
  다음 다이어그램에서는 BINARY 연산의 암시적 변환의 결과 유형을 보여 줍니다. 이 테이블에서 열과 행의 교집합은 왼쪽(원본) 및 오른쪽(대상) 유형의 피연산자가 있는 이진 연산의 결과 유형입니다.
 
- ![데이터 형식 간 암시적 데이터 형식 변환](../media/mw-dts-impl-conver-02.gif "데이터 형식 간 암시적 데이터 형식 변환")
+ ![데이터 형식 간 암시적 데이터 형식 전환](../media/mw-dts-impl-conver-02.gif "데이터 형식 간 암시적 데이터 형식 전환")
 
  부호 있는 정수와 부호 없는 정수의 교집합은 두 인수 중 하나보다 클 수도 있는 부호 있는 정수입니다.
 
@@ -47,8 +47,7 @@ ms.locfileid: "78176433"
 > [!NOTE]
 >  부울 값은 숫자가 아니라 논리 값입니다. 일부 환경에서는 부울 값이 숫자로 표시될 수 있지만 숫자로 저장되지는 않으며, 다양한 프로그래밍 언어에서는 부울 값을 .NET Framework 메서드와는 다른 숫자 값으로 표시합니다.
 > 
->  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어는 `True`를 -1로 변환합니다.
+>  예를 들어 Visual Basic에서 사용할 수 있는 변환 함수는 `True`를 -1로 변환하지만 .NET Framework의 `System.Convert.ToInt32` 메서드는 `True`를 +1로 변환합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 식 언어는 `True`를 -1로 변환합니다.
 > 
 >  오류나 예기치 않은 결과를 방지하려면 `True` 및 `False`에 특정 숫자 값을 사용하는 코드를 작성하지 말아야 합니다. 가능하면 부울 변수는 부울 변수용으로 설계된 논리 값으로만 사용해야 합니다.
 
@@ -79,11 +78,9 @@ ms.locfileid: "78176433"
 ## <a name="requirements-for-data-used-in-expressions"></a>식에 사용되는 데이터에 대한 요구 사항
  식 계산기는 모든 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 데이터 형식을 지원합니다. 그러나 연산이나 함수에 따라 피연산자와 인수에 특정 데이터 형식이 필요합니다. 식 계산기는 식에 사용된 데이터에 대해 다음 데이터 형식 요구 사항을 설정합니다.
 
--   
-  **논리** 연산에 사용된 피연산자는 부울 값이어야 합니다. 예를 들어 ColumnA > 1&&ColumnB < 2가 있습니다.
+-   **논리** 연산에 사용된 피연산자는 부울 값이어야 합니다. 예를 들어 ColumnA > 1&&ColumnB < 2가 있습니다.
 
--   
-  **수치** 연산에 사용된 피연산자는 숫자 값이어야 합니다. 예를 들어 23.75 * 4와 같습니다.
+-   **수치** 연산에 사용된 피연산자는 숫자 값이어야 합니다. 예를 들어 23.75 * 4와 같습니다.
 
 -   논리 및 등가 연산과 같은 비교 연산에 사용된 피연산자는 호환 가능한 데이터 형식이어야 합니다.
 

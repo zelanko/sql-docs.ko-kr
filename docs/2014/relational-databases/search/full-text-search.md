@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176843"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
@@ -27,12 +27,12 @@ ms.locfileid: "78176843"
 > [!NOTE]
 >  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 선택적 구성 요소입니다. 자세한 내용은 [Install SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)을 참조 하세요.
 
-##  <a name="benefits"></a>전체 텍스트 검색으로 수행할 수 있는 작업은 무엇 인가요?
+##  <a name="what-can-i-do-with-full-text-search"></a><a name="benefits"></a>전체 텍스트 검색으로 수행할 수 있는 작업은 무엇 인가요?
  전체 텍스트 검색은 e-비즈니스-웹 사이트에서 항목을 검색 하는 등의 다양 한 비즈니스 시나리오에 적용할 수 있습니다. 법률 회사-법적 데이터 리포지토리에서 사례 기록 검색 또는 인적 자원 부서-저장 된 이력서와 일치 하는 작업 설명입니다. 전체 텍스트 검색의 기본적인 관리 및 개발 태스크는 비즈니스 시나리오에 관계없이 동일합니다. 그러나 특정 비즈니스 시나리오에서는 비즈니스 목표를 충족시키기 위해 전체 텍스트 인덱스 및 쿼리를 조정할 수 있습니다. 예를 들어 e-비즈니스의 경우 결과 순위 지정, 회수 정확성(전체 텍스트 쿼리에서 실제로 반환하는 기존 일치 항목 수) 또는 여러 언어 지원보다 성능 최대화가 더 중요할 수 있고 법률 회사의 경우 일치하는 모든 항목 반환(정보의*전체 회수* )이 가장 중요한 고려 사항일 수 있습니다.
 
  [항목 내용](#top)
 
-###  <a name="queries"></a>전체 텍스트 검색 쿼리
+###  <a name="full-text-search-queries"></a><a name="queries"></a>전체 텍스트 검색 쿼리
  전체 텍스트 인덱스에 열을 추가한 후에는 사용자와 애플리케이션이 해당 열의 텍스트에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 이러한 쿼리는 다음 중 하나를 검색할 수 있습니다.
 
 -   하나 이상의 특정 단어 또는 구(*단순 단어*)
@@ -49,7 +49,7 @@ ms.locfileid: "78176843"
 
  전체 텍스트 쿼리는 대/소문자를 구분하지 않습니다. 예를 들어 "Aluminum" 또는 "aluminum"을 검색하면 동일한 결과가 반환됩니다.
 
- 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 다음은 그 예입니다. 
+ 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들면 다음과 같습니다.
 
 -   e-비즈니스 - 웹 사이트에서 제품 검색
 
@@ -70,20 +70,19 @@ ms.locfileid: "78176843"
     WHERE CONTAINS(candidate_resume,"SQL Server") AND candidate_division = 'DBA';
     ```
 
- 자세한 내용은 [Query with Full-Text Search](query-with-full-text-search.md)을 참조하세요.
+ 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](query-with-full-text-search.md)를 참조하세요.
 
  [항목 내용](#top)
 
-###  <a name="like"></a>LIKE와 전체 텍스트 검색 비교
- 전체 텍스트 검색과 달리 [LIKE](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자는 문자 패턴에 대해서만 작동 합니다. 또한 LIKE 조건자는 서식 있는 이진 데이터를 쿼리하는 데 사용할 수도 없습니다. 특히 구조화되지 않은 많은 텍스트 데이터에 대한 LIKE 쿼리는 동일한 데이터에 대한 전체 텍스트 쿼리보다 훨씬 느립니다. 수백만 개의 텍스트 데이터 행에 대해 LIKE 쿼리를 실행하면 결과가 반환되기까지 몇 분이 걸릴 수 있지만 같은 데이터에 대해 전체 텍스트 쿼리를 실행하면 반환되는 행 수에 따라 몇 초 내에 완료됩니다.
+###  <a name="comparing-like-to-full-text-search"></a><a name="like"></a>LIKE와 전체 텍스트 검색 비교
+ 전체 텍스트 검색과 달리 [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자는 문자 패턴에 대해서만 적용됩니다. 또한 LIKE 조건자는 서식 있는 이진 데이터를 쿼리하는 데 사용할 수도 없습니다. 특히 구조화되지 않은 많은 텍스트 데이터에 대한 LIKE 쿼리는 동일한 데이터에 대한 전체 텍스트 쿼리보다 훨씬 느립니다. 수백만 개의 텍스트 데이터 행에 대해 LIKE 쿼리를 실행하면 결과가 반환되기까지 몇 분이 걸릴 수 있지만 같은 데이터에 대해 전체 텍스트 쿼리를 실행하면 반환되는 행 수에 따라 몇 초 내에 완료됩니다.
 
  [항목 내용](#top)
 
-##  <a name="architecture"></a>전체 텍스트 검색의 구성 요소 및 아키텍처
+##  <a name="components-and-architecture-of-full-text-search"></a><a name="architecture"></a>전체 텍스트 검색의 구성 요소 및 아키텍처
  전체 텍스트 검색 아키텍처는 다음과 같은 프로세스로 구성됩니다.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스(sqlservr.exe).
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스(sqlservr.exe).
 
 -   필터 데몬 호스트 프로세스(fdhost.exe).
 
@@ -95,13 +94,12 @@ ms.locfileid: "78176843"
 
  [항목 내용](#top)
 
-###  <a name="sqlprocess"></a>SQL Server 프로세스
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스는 전체 텍스트 검색에 다음 구성 요소를 사용합니다.
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a>SQL Server 프로세스
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스는 전체 텍스트 검색에 다음 구성 요소를 사용합니다.
 
 -   **사용자 테이블.** 이 테이블은 전체 텍스트 인덱싱할 데이터를 포함합니다.
 
--   **전체 텍스트 gatherer.** 전체 텍스트 Gatherer는 전체 텍스트 탐색 스레드와 함께 작동합니다. 이 구성 요소는 전체 텍스트 카탈로그를 모니터링하고 전체 텍스트 인덱스 채우기를 예약 및 수행합니다.
+-   **전체 텍스트 Gatherer.** 전체 텍스트 Gatherer는 전체 텍스트 탐색 스레드와 함께 작동합니다. 이 구성 요소는 전체 텍스트 카탈로그를 모니터링하고 전체 텍스트 인덱스 채우기를 예약 및 수행합니다.
 
 -   **동의어 사전 파일.** 이 파일은 검색어의 동의어를 포함합니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
 
@@ -109,8 +107,7 @@ ms.locfileid: "78176843"
 
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]쿼리 프로세서.** 쿼리 프로세서는 SQL 쿼리를 컴파일하고 실행합니다. SQL 쿼리에 전체 텍스트 검색 쿼리가 포함된 경우 해당 쿼리는 컴파일 및 실행 중에 전체 텍스트 엔진으로 전송됩니다. 쿼리 결과는 전체 텍스트 인덱스와 일치합니다.
 
--   **전체 텍스트 엔진.** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 전체 텍스트 엔진은 쿼리 프로세서와 완전히 통합됩니다. 전체 텍스트 엔진은 전체 텍스트 쿼리를 컴파일하고 실행합니다. 쿼리 실행의 일부로 전체 텍스트 엔진은 동의어 사전 및 중지 목록에서 입력을 받을 수 있습니다.
+-   **전체 텍스트 엔진.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 전체 텍스트 엔진은 쿼리 프로세서와 완전히 통합됩니다. 전체 텍스트 엔진은 전체 텍스트 쿼리를 컴파일하고 실행합니다. 쿼리 실행의 일부로 전체 텍스트 엔진은 동의어 사전 및 중지 목록에서 입력을 받을 수 있습니다.
 
 -   **인덱스 기록기(인덱서).** 인덱스 기록기는 인덱싱된 토큰을 저장하는 데 사용되는 구조를 만듭니다.
 
@@ -118,7 +115,7 @@ ms.locfileid: "78176843"
 
  [항목 내용](#top)
 
-###  <a name="fdhostprocess"></a>필터 데몬 호스트 프로세스
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a>필터 데몬 호스트 프로세스
  필터 데몬 호스트는 전체 텍스트 엔진에 의해 시작되는 프로세스로, 테이블 데이터의 액세스, 필터링 및 단어 분리, 그리고 쿼리 입력의 단어 분리 및 형태소 분석을 담당하는 다음과 같은 전체 텍스트 검색 구성 요소를 실행합니다.
 
  필터 데몬 호스트의 구성 요소는 다음과 같습니다.
@@ -131,10 +128,10 @@ ms.locfileid: "78176843"
 
  [항목 내용](#top)
 
-##  <a name="processing"></a>전체 텍스트 검색 처리
+##  <a name="full-text-search-processing"></a><a name="processing"></a>전체 텍스트 검색 처리
  전체 텍스트 검색은 전체 텍스트 엔진을 통해 수행됩니다. 전체 텍스트 엔진은 인덱싱 지원과 쿼리 지원의 두 가지 역할을 수행합니다.
 
-###  <a name="indexing"></a>전체 텍스트 인덱싱 프로세스
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a>전체 텍스트 인덱싱 프로세스
  탐색이라고도 하는 전체 텍스트 채우기가 시작되면 전체 텍스트 엔진은 대용량 데이터 일괄 처리를 메모리에 밀어 넣고 필터 데몬 호스트에 알립니다. 호스트가 데이터를 필터링하고 데이터의 단어를 분리하며 변환된 데이터를 반전된 단어 목록으로 변환합니다. 그런 다음 전체 텍스트 검색은 변환된 데이터를 단어 목록에서 끌어오고 데이터를 처리하여 중지 단어를 제거하며 하나의 일괄 처리에 대한 단어 목록을 하나 이상의 반전된 인덱스를 통해 유지합니다.
 
  `varbinary(max)` 또는 `image` 열에 저장 된 데이터를 인덱싱할 때 **IFilter** 인터페이스를 구현 하는 필터는 해당 데이터의 지정 된 파일 형식 (예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출 합니다. 경우에 따라 필터 구성 요소에는 `varbinary(max)`, 또는 `image` 데이터를 메모리에 밀어 넣는 대신 filterdata 폴더에 써야 합니다.
@@ -147,32 +144,29 @@ ms.locfileid: "78176843"
 
  [항목 내용](#top)
 
-###  <a name="querying"></a>전체 텍스트 쿼리 프로세스
+###  <a name="full-text-querying-process"></a><a name="querying"></a>전체 텍스트 쿼리 프로세스
  쿼리 프로세서는 쿼리의 전체 텍스트 부분을 처리하기 위해 전체 텍스트 엔진에 전달합니다. 전체 텍스트 엔진은 단어 분리를 수행하고 필요에 따라 동의어 사전 확장, 형태소 분석 및 중지 단어(의미 없는 단어) 처리도 수행합니다. 그러면 쿼리의 전체 텍스트 부분은 SQL 연산자 형식, 주로 STVF(스트리밍 테이블 반환 함수)로 표시됩니다. 쿼리를 실행하는 동안 이러한 STVF는 반전된 인덱스에 액세스하여 올바른 결과를 검색합니다. 결과는 이 시점에서 클라이언트에 반환되거나 추가로 처리된 후 클라이언트에 반환됩니다.
 
  [항목 내용](#top)
 
-##  <a name="components"></a>전체 텍스트 검색의 언어 구성 요소 및 언어 지원
+##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>전체 텍스트 검색의 언어 구성 요소 및 언어 지원
  전체 텍스트 검색에서 영어, 스페인어, 중국어, 일본어, 아랍어, 벵골어 및 힌디어를 포함하여 거의 50개의 언어를 지원합니다. 지원되는 전체 텍스트 언어의 전체 목록은 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)를 참조하세요. 전체 텍스트 인덱스에 있는 각 열은 전체 텍스트 검색에서 지원하는 언어에 해당하는 Windows LCID(로캘 ID)와 연결됩니다. 예를 들어 LCID 1033은 영어(미국)에 해당하고 LCID 2057은 영어(영국)에 해당합니다. 지원되는 각 전체 텍스트 언어에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 해당 언어로 저장되는 전체 텍스트 데이터의 인덱싱 및 쿼리를 지원하는 언어 구성 요소를 제공합니다.
 
  다음과 같은 언어별 구성 요소가 있습니다.
 
 -   **단어 분리기 및 형태소 분석기.** 단어 분리기는 지정된 언어의 어휘 규칙을 기준으로 단어 경계(*단어 분리*)를 찾습니다. 각 단어 분리기는 동일한 언어의 동사를 변화시키는 형태소 분석기와 연결됩니다. 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.
 
--   **중지 목록.** 중지 단어(의미 없는 단어라고도 함)의 기본 집합이 포함된 시스템 중지 목록이 제공됩니다. 
-  *중지 단어* 는 검색에 도움이 되지 않고 전체 텍스트 쿼리에서 무시되는 단어입니다. 예를 들어 영어 로캘의 경우 "a", "and", "is" 및 "the"와 같은 단어는 중지 단어로 간주됩니다. 일반적으로 하나 이상의 동의어 사전 파일과 중지 목록을 구성해야 합니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.
+-   **중지 목록.** 중지 단어(의미 없는 단어라고도 함)의 기본 집합이 포함된 시스템 중지 목록이 제공됩니다. *중지 단어* 는 검색에 도움이 되지 않고 전체 텍스트 쿼리에서 무시되는 단어입니다. 예를 들어 영어 로캘의 경우 "a", "and", "is" 및 "the"와 같은 단어는 중지 단어로 간주됩니다. 일반적으로 하나 이상의 동의어 사전 파일과 중지 목록을 구성해야 합니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)를 참조하세요.
 
--   **동의어 사전 파일.** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 또한 각 전체 텍스트 언어에 대한 동의어 사전 파일뿐 아니라 전역 동의어 사전 파일도 설치합니다. 설치된 동의어 사전 파일은 기본적으로 비어 있지만 이러한 동의어 사전 파일을 편집하여 특정 언어 또는 비즈니스 시나리오에 대한 동의어를 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
+-   **동의어 사전 파일.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 또한 각 전체 텍스트 언어에 대한 동의어 사전 파일뿐 아니라 전역 동의어 사전 파일도 설치합니다. 설치된 동의어 사전 파일은 기본적으로 비어 있지만 이러한 동의어 사전 파일을 편집하여 특정 언어 또는 비즈니스 시나리오에 대한 동의어를 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 자세한 내용은 [전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리](configure-and-manage-thesaurus-files-for-full-text-search.md)를 참조하세요.
 
--   **필터 (Ifilter).**  
-  `varbinary(max)`, `image` 또는 `xml` 데이터 형식의 문서를 인덱싱하려면 추가 처리를 수행하는 필터가 필요합니다. 필터는 문서 유형(.doc, .pdf, .xls, .xml 등)에 따라 달라야 합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](configure-and-manage-filters-for-search.md)를 참조하세요.
+-   **필터(iFilters).**  `varbinary(max)`, `image` 또는 `xml` 데이터 형식의 문서를 인덱싱하려면 추가 처리를 수행하는 필터가 필요합니다. 필터는 문서 유형(.doc, .pdf, .xls, .xml 등)에 따라 달라야 합니다. 자세한 내용은 [고급 분석 확장 구성 및 관리](configure-and-manage-filters-for-search.md)를 참조하세요.
 
  단어 분리기(및 형태소 분석기)와 필터는 필터 데몬 호스트 프로세스(fdhost.exe)에서 실행됩니다.
 
  [항목 내용](#top)
 
-##  <a name="reltasks"></a> 관련 작업
+##  <a name="related-tasks"></a><a name="reltasks"></a> 관련 작업
 
 -   [전체 텍스트 검색 시작](get-started-with-full-text-search.md)
 
@@ -236,7 +230,7 @@ ms.locfileid: "78176843"
 
  [항목 내용](#top)
 
-##  <a name="relcontent"></a> 관련 내용
+##  <a name="related-content"></a><a name="relcontent"></a> 관련 내용
 
 -   [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../views/views.md)
 

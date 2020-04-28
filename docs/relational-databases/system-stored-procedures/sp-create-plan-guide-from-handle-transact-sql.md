@@ -18,10 +18,10 @@ ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688252"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
@@ -72,9 +72,7 @@ JOIN sys.dm_exec_query_stats AS qs ON cp.plan_handle = qs.plan_handle
 CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;  
 ```  
   
- 계획 지침을 만들 문이 포함된 행에서 결과 집합의 `objtype` 열을 검사하십시오. 
-  `Proc` 값은 계획 지침이 OBJECT 유형임을 나타냅니다. 
-  `AdHoc` 또는 `Prepared`와 같은 다른 값은 결과 지침이 SQL 유형임을 나타냅니다.  
+ 계획 지침을 만들 문이 포함된 행에서 결과 집합의 `objtype` 열을 검사하십시오. `Proc` 값은 계획 지침이 OBJECT 유형임을 나타냅니다. `AdHoc` 또는 `Prepared`와 같은 다른 값은 결과 지침이 SQL 유형임을 나타냅니다.  
   
 ## <a name="examples"></a>예  
   
@@ -128,6 +126,6 @@ GO
  [Transact-sql&#41;sp_create_plan_guide &#40;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [Transact-sql&#41;sp_control_plan_guide &#40;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

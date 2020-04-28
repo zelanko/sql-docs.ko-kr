@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27667eececc3905b927b7e888e692a8261d14d30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177062"
 ---
 # <a name="create-a-linked-report"></a>링크된 보고서 만들기
@@ -34,11 +34,9 @@ ms.locfileid: "78177062"
 
 2.  새 링크된 보고서의 이름을 입력합니다. 설명을 입력합니다(옵션).
 
-3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. 
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택하지 않으면 현재 폴더(기반이 되는 보고서가 저장되어 있는 폴더)에 링크된 보고서가 만들어집니다.
+3.  보고서를 다른 폴더에 만들려면 **위치 변경**을 클릭합니다. 사용할 폴더를 클릭하거나 **위치** 상자에 폴더 이름을 입력합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 다른 폴더를 선택하지 않으면 현재 폴더(기반이 되는 보고서가 저장되어 있는 폴더)에 링크된 보고서가 만들어집니다.
 
-4.  
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크된 보고서가 열립니다.
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] 링크된 보고서가 열립니다.
 
      링크된 보고서의 아이콘은 보고서 서버가 관리하는 다른 항목의 아이콘과 다릅니다. 다음 아이콘은 링크된 보고서를 나타냅니다.
 

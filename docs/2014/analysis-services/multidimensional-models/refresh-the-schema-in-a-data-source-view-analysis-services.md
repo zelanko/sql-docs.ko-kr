@@ -15,25 +15,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175712"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 스키마 새로 고침(Analysis Services)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.
 
  외부 데이터 원본과 일치하도록 DSV를 업데이트하려면 BIDS(Business Intelligence Development Studio)에서 DSV를 새로 고치면 됩니다. DSV를 새로 고치면 DSV가 기반으로 하는 외부 데이터 원본에 대한 변경 내용이 검색되어 외부 데이터 원본의 추가 및 삭제를 열거하는 변경 목록이 작성됩니다. 이 변경 내용 집합을 기본 데이터 원본과 맞게 다시 조정할 DSV에 적용하면 됩니다. 추가 작업 시 프로젝트에서 해당 DSV를 사용하는 큐브와 차원을 추가로 업데이트해야 하는 경우가 많습니다.
 
  이 항목에는 다음 섹션이 포함되어 있습니다.
 
- [새로 고칠 때 지원 되는 변경 내용](#bkmk_changlist)
+ [새로 고침에서 지원 변경](#bkmk_changlist)
 
  [SQL Server Data Tools에서 DSV 새로 고침](#bkmk_DSVrefresh)
 
-##  <a name="bkmk_changlist"></a>새로 고칠 때 지원 되는 변경 내용
+##  <a name="changes-supported-in-refresh"></a><a name="bkmk_changlist"></a>새로 고칠 때 지원 되는 변경 내용
  DSV 새로 고침에는 다음과 같은 동작이 포함됩니다.
 
 -   테이블, 열 및 관계 삭제
@@ -44,7 +43,7 @@ ms.locfileid: "78175712"
 
  새로 고침은 DSV에 새 테이블을 추가하지 않습니다. 새 테이블을 추가하려면 수동으로 추가해야 합니다. 자세한 내용은 [데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)의 서버 탐색기에서 데이터 원본 뷰 마법사를 실행합니다.
 
-##  <a name="bkmk_DSVrefresh"></a>SQL Server Data Tools에서 DSV 새로 고침
+##  <a name="refresh-a-dsv-in-sql-server-data-tools"></a><a name="bkmk_DSVrefresh"></a>SQL Server Data Tools에서 DSV 새로 고침
  DSV를 새로 고치려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 DSV를 두 번 클릭한 다음 데이터 원본 뷰 새로 고침 단추를 클릭하거나 데이터 원본 뷰 메뉴에서 **새로 고침** 을 클릭합니다.
 
  새로 고침 작업을 수행하는 동안 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 기본 관계형 데이터 원본을 모두 쿼리하여 DSV에 포함된 테이블/뷰에 변경 내용이 있었는지 여부를 확인합니다. 모든 기본 데이터 원본에 연결할 수 있으며 변경 내용이 있는 경우 **데이터 원본 뷰 새로 고침** 대화 상자에 해당 내용이 표시됩니다.

@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76516274"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증된 세션당 행 하나를 반환합니다. sys.dm_exec_sessions는 모든 활성 사용자 연결 및 내부 태스크에 대한 정보를 표시하는 서버 범위 뷰입니다. 이 정보에는 클라이언트 버전, 클라이언트 프로그램 이름, 클라이언트 로그인 시간, 로그인 사용자, 현재 세션 설정 등이 포함됩니다. sys.dm_exec_sessions를 사용하여 우선 현재 시스템 로드를 보고 원하는 세션을 확인한 다음 다른 동적 관리 뷰 또는 동적 관리 함수를 사용하여 해당 세션에 대한 자세한 내용을 볼 수 있습니다.  
   
  Dm_exec_connections, dm_exec_sessions 및 sys. dm_exec_requests 동적 관리 뷰는 [sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
@@ -45,13 +44,13 @@ ms.locfileid: "76516274"
 |program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|client_interface_name|**nvarchar (32)**|클라이언트에서 서버와 통신 하는 데 사용 하는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|security_id|**varbinary (85)**|로그인과 연결된 Microsoft Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
+|client_interface_name|**nvarchar(32)**|클라이언트에서 서버와 통신 하는 데 사용 하는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
+|security_id|**varbinary(85)**|로그인과 연결된 Microsoft Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
 |login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 인증 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름 또는 Windows 인증 된 도메인 사용자 이름일 수 있습니다. Null을 허용하지 않습니다.|  
 |nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
-|상태|**nvarchar (30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행** 중-현재 하나 이상의 요청을 실행 중입니다.<br /><br /> **중지** 중-현재 실행 중인 요청이 없습니다.<br /><br /> 연결 풀링은 현재 사전 로그인 상태 이므로 **유휴** 상태에서 세션이 다시 설정 되었습니다.<br /><br /> **Preconnect** -세션이 Resource Governor 분류자에 있습니다.<br /><br /> Null을 허용하지 않습니다.|  
-|context_info|**varbinary (128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보는 [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문을 사용 하 여 사용자가 설정 합니다. Null을 허용합니다.|  
+|상태|**nvarchar(30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행 중** - 현재 하나 이상의 요청을 실행 중입니다.<br /><br /> **중지 중** - 현재 실행 중인 요청이 없습니다.<br /><br /> 연결 풀링은 현재 사전 로그인 상태 이므로 **유휴** 상태에서 세션이 다시 설정 되었습니다.<br /><br /> **Preconnect** - 세션은 리소스 관리자의 분류자에 있습니다.<br /><br /> Null을 허용하지 않습니다.|  
+|context_info|**varbinary(128)**|세션의 CONTEXT_INFO 값입니다. 컨텍스트 정보는 [set CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) 문을 사용 하 여 사용자가 설정 합니다. Null을 허용합니다.|  
 |cpu_time|**int**|이 세션에서 사용한 CPU 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |memory_usage|**int**|이 세션에서 사용한 8KB 메모리 페이지 수입니다. Null을 허용하지 않습니다.|  
 |total_scheduled_time|**int**|세션(세션 내 요청)이 실행되도록 예약된 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
@@ -80,9 +79,8 @@ ms.locfileid: "76516274"
 |deadlock_priority|**int**|세션에 대한 DEADLOCK_PRIORITY 설정입니다. Null을 허용하지 않습니다.|  
 |row_count|**bigint**|세션에서 지금까지 반환된 행 수입니다. Null을 허용하지 않습니다.|  
 |prev_error|**int**|세션에서 반환된 마지막 오류의 ID입니다. Null을 허용하지 않습니다.|  
-|original_security_id|**varbinary (85)**|original_login_name과 연결된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
-|original_login_name|**nvarchar(128)**|클라이언트가 이 세션을 만드는 데 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름, Windows 인증 도메인 사용자 이름 또는 포함된 데이터베이스 사용자일 수 있습니다. 초기 연결 이후 세션에서 암시적 또는 명시적인 많은 컨텍스트 전환이 수행되었을 수 있습니다. 예를 들어 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 를 사용 하는 경우입니다. Null을 허용하지 않습니다.|  
+|original_security_id|**varbinary(85)**|original_login_name과 연결된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
+|original_login_name|**nvarchar(128)**|클라이언트가 이 세션을 만드는 데 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름, Windows 인증 도메인 사용자 이름 또는 포함된 데이터베이스 사용자일 수 있습니다. 초기 연결 이후 세션에서 암시적 또는 명시적인 많은 컨텍스트 전환이 수행되었을 수 있습니다. 예를 들어 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 를 사용 하는 경우입니다. Null을 허용하지 않습니다.|  
 |last_successful_logon|**datetime**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 현재 세션이 시작되기 전에 original_login_name에 대해 마지막으로 성공한 로그온 시간입니다.|  
 |last_unsuccessful_logon|**datetime**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 현재 세션이 시작되기 전에 original_login_name에 대해 마지막으로 실패한 로그온 시간입니다.|  
 |unsuccessful_logons|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> original_login_name에 대해 last_successful_logon과 login_time 사이에 실패한 로그온 시도 횟수입니다.|  
@@ -116,13 +114,13 @@ ms.locfileid: "76516274"
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|열 이름/APPLY|관계|  
+|시작|대상|열 이름/APPLY|관계|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[sys.dm_tran_session_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)|session_id|일 대 영 또는 일 대 다|  
 |sys.dm_exec_sessions|[dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)(session_id &#124; 0)|session_id CROSS APPLY<br /><br /> OUTER APPLY|일 대 영 또는 일 대 다|  
-|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일대일|  
+|sys.dm_exec_sessions|[sys.dm_db_session_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|session_id|일 대 일|  
   
 ## <a name="examples"></a>예  
   
@@ -186,8 +184,8 @@ WHERE c.session_id = @@SPID;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

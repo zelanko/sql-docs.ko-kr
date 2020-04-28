@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3908c39fc6deba57bf8f0e277918e5b8167f4a77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177189"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Reporting Services 로그 파일 및 소스
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보고서 서버 및 보고서 서버 환경은 서버 작업 및 상태에 대한 정보를 기록하는 데 여러 가지 로그 대상을 지원합니다. 로깅에는 실행 로깅 및 추적 로깅의 두 가지 기본 범주가 있습니다. 실행 로깅에는 보고서 실행 통계, 감사, 성능 진단 및 최적화에 대한 정보가 포함됩니다. 추적 로깅은 오류 메시지 및 일반 진단에 대한 정보입니다.
 
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 모드 | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드
@@ -42,8 +41,7 @@ ms.locfileid: "78177189"
 |Windows 성능 로그|Windows 성능 로그에는 보고서 서버 성능 데이터가 들어 있습니다. 성능 로그를 만든 다음 수집할 데이터를 결정하는 카운터를 선택할 수 있습니다. 자세한 내용은 [보고서 서버 성능을 모니터링](monitoring-report-server-performance.md)을 참조하세요.|
 |설치 로그 파일|설치 중에도 로그 파일이 만들어집니다. 설치에 실패하거나 성공했지만 경고 또는 기타 메시지가 있을 경우 문제 해결을 위해 로그 파일을 검사할 수 있습니다. 자세한 내용은 [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)을 참조하세요.|
 |IIS 로그|Microsoft IIS(인터넷 정보 서비스)에 의해 생성되는 로그 파일입니다. 자세한 내용은 [IIS(인터넷 정보 서비스)에서 로깅을 사용하도록 설정하는 방법](https://support.microsoft.com/kb/313437)을 참조하십시오.|
-|비디오|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 로그 파일은 Microsoft 파워 쿼리의 사용을 보여 주는 짧은 비디오에서 볼 수 있습니다.<br /><br /> ![파워 쿼리 및 SSRS 로그에 대한 비디오 보기](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대한 비디오 보기")|
+|비디오|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 로그 파일은 Microsoft 파워 쿼리의 사용을 보여 주는 짧은 비디오에서 볼 수 있습니다.<br /><br /> ![파워 쿼리 및 SSRS 로그에 대한 비디오 보기](../media/generic-video-thumbnail.png "파워 쿼리 및 SSRS 로그에 대한 비디오 보기")|
 
 ## <a name="see-also"></a>참고 항목
  [보고서 서버 &#40;기본 모드&#41;](reporting-services-report-server-native-mode.md) [오류 및 이벤트 참조 &#40;Reporting Services를 Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)

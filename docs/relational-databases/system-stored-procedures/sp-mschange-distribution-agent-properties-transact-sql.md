@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322279"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties(Transact-SQL)
@@ -60,7 +60,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  이 표에서는 변경할 수 있는 배포 에이전트 작업의 속성 및 그 속성 값의 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**distrib_job_password**||에이전트 작업 실행에 사용된 Windows 계정의 암호입니다.|  
@@ -69,11 +69,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_location**||OLE DB 공급자가 이해하는 데이터베이스의 위치입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
 |**subscriber_login**||구독을 동기화하기 위해 구독자에 연결할 때 사용하는 로그인입니다.|  
 |**subscriber_password**||구독자 암호입니다.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
-|**subscriber_provider**||
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
+|**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
 |**subscriber_providerstring**||데이터 원본을 식별하는 OLE DB 공급자별 연결 문자열입니다. *이 속성은 SQL Server 이외 구독자에만 유효합니다.*|  
 |**subscriber_security_mode**|**1**|Windows 인증<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인증은.|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증입니다.|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구독자|  
 ||**1**|ODBC 데이터 원본 서버|  
 ||**3**|OLE DB 공급자|  

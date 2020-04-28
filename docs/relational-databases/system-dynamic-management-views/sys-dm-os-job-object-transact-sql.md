@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b7674e3e7696d91170f9bf955808923d713479a1
-ms.sourcegitcommit: 9bdecafd1aefd388137ff27dfef532a8cb0980be
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77147406"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object(Azure SQL Database)
@@ -33,7 +33,7 @@ ms.locfileid: "77147406"
 
 작업 개체는 운영 체제 수준에서 CPU, 메모리 및 IO 리소스 관리를 구현 하는 Windows 구문입니다. 작업 개체에 대 한 자세한 내용은 [작업 개체](/windows/desktop/ProcThread/job-objects)를 참조 하세요.
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|각 일정 간격 동안 SQL Server 스레드가 사용할 수 있는 프로세서 주기 부분을 지정 합니다. 값은 1만-주기 예약 간격 내에서 사용 가능한 주기의 백분율로 보고 됩니다. 예를 들어 값 100은 스레드가 CPU 코어를 사용할 수 있음을 의미 합니다.|
 |cpu_affinity_mask|**bigint**|SQL Server 프로세스가 프로세서 그룹 내에서 사용할 수 있는 논리 프로세서를 설명 하는 비트 마스크입니다. 예를 들어 cpu_affinity_mask 255 (이진의 1111 1111)는 처음 8 개의 논리적 프로세서를 사용할 수 있음을 의미 합니다. <br /><br />이 열은 이전 버전과의 호환성을 위해 제공 됩니다. 프로세서 그룹을 보고 하지 않으며 프로세서 그룹이 64 개 이상의 논리 프로세서를 포함 하는 경우 보고 된 값이 잘못 될 수 있습니다. 대신이 `process_physical_affinity` 열을 사용 하 여 프로세서 선호도를 확인 합니다.|

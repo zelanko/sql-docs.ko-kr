@@ -15,23 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175405"
 ---
-# <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparent Data Encryption with Azure SQL Database
-  
+# <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화
   [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 투명한 데이터 암호화(미리 보기)는 애플리케이션을 변경할 필요 없이 사용하지 않는 데이터베이스, 연결된 백업 및 트랜잭션 로그 파일에 대한 실시간 암호화 및 암호 해독을 수행하여 악의적인 활동의 위협으로부터 보호하도록 도와줍니다.
 
- TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 스토리지를 암호화합니다. 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에서 데이터베이스 암호화 키는 기본 제공 서버 인증서로 보호됩니다. 기본 제공 서버 인증서는 각 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 서버에 대해 고유합니다. 데이터베이스가 GeoDR 관계에 있는 경우 각 서버에서 서로 다른 키로 보호됩니다. 두 개의 데이터베이스가 동일한 서버에 연결된 경우에는 동일한 기본 제공 인증서를 공유합니다. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 적어도 90일마다 이러한 인증서를 자동으로 회전시킵니다. TDE에 대한 일반적인 설명은 [투명한 데이터 암호화&#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
+ TDE는 데이터베이스 암호화 키라는 대칭 키를 사용하여 전체 데이터베이스의 스토리지를 암호화합니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에서 데이터베이스 암호화 키는 기본 제공 서버 인증서로 보호됩니다. 기본 제공 서버 인증서는 각 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 서버에 대해 고유합니다. GeoDR 관계에 있는 데이터베이스는 각 서버에서 다른 키로 보호됩니다. 두 개의 데이터베이스가 동일한 서버에 연결된 경우에는 동일한 기본 제공 인증서를 공유합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 적어도 90일마다 이러한 인증서를 자동으로 회전시킵니다. TDE에 대한 일반적인 설명은 [투명한 데이터 암호화&#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.
 
- 
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)를 참조하세요.
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 는 TDE와의 Azure 주요 자격 증명 모음 통합을 지원하지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 주요 자격 증명 모음의 비대칭 키를 사용할 수 있습니다. 자세한 내용은 [Example A: Transparent Data Encryption by Using an Asymmetric Key from the Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)를 참조하세요.
 
 ||
 |-|
@@ -40,15 +35,12 @@ ms.locfileid: "78175405"
 > [!IMPORTANT]
 >  현재 미리 보기 기능입니다. 내 데이터베이스에서의 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 투명한 데이터 암호화 구현에는 사용권 계약의 미리 보기 약관(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)과 해당 [Microsoft Azure Preview 추가 사용 약관](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의합니다.
 
- TDE 상태 미리보기는 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. 
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL 데이터베이스의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.
+ TDE 상태 미리보기는 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL Database의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.
 
-##  <a name="Permissions"></a> 권한
+##  <a name="permissions"></a><a name="Permissions"></a> 권한
  미리 보기에 등록하고 REST API나 PowerShell을 사용하여 Azure 포털을 통해 TDE를 구성하려면 Azure 소유자, 참가자 또는 SQL 보안 관리자로 연결되어 있어야 합니다.
 
- 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] 을 사용하여 TDE를 구성하려면 다음 요구 사항이 충족되어야 합니다.
+ [!INCLUDE[tsql](../includes/tsql-md.md)] 을 사용하여 TDE를 구성하려면 다음 요구 사항이 충족되어야 합니다.
 
 -   이미 TDE 미리 보기에 등록되어 있어야 합니다.
 
@@ -56,7 +48,7 @@ ms.locfileid: "78175405"
 
 -   SET 옵션을 사용하여 ALTER DATABASE 문을 실행하려면 **dbmanager** 역할에서 구성원 자격만 있으면 됩니다.
 
-##  <a name="Preview"></a>TDE 미리 보기에 등록 하 고 데이터베이스에서 TDE를 사용 하도록 설정 합니다.
+##  <a name="sign-up-for-the-preview-of-tde-and-enable-tde-on-a-database"></a><a name="Preview"></a>TDE 미리 보기에 등록 하 고 데이터베이스에서 TDE를 사용 하도록 설정 합니다.
 
 1.  에서 [https://portal.azure.com](https://portal.azure.com) azure Portal을 방문 하 고 azure 관리자 또는 참가자 계정으로 로그인 합니다.
 
@@ -64,25 +56,21 @@ ms.locfileid: "78175405"
 
 3.  왼쪽 창에서 **SQL 데이터베이스**를 선택한 상태로 사용자 데이터베이스를 클릭합니다.
 
-4.  데이터베이스 블레이드에서 **모든 설정**을 클릭 합니다.
+4.  데이터베이스 블레이드에서 **모든 설정**을 클릭합니다.
 
-5.  
-  **설정** 블레이드에서 **투명한 데이터 암호화(미리 보기)** 부분을 클릭하여 **투명한 데이터 암호화 미리 보기** 블레이드를 엽니다. TDE 미리 보기에 아직 등록하지 않은 경우 등록을 완료할 때까지 데이터 암호화가 사용되지 않도록 설정됩니다.
+5.  **설정** 블레이드에서 **투명한 데이터 암호화(미리 보기)** 부분을 클릭하여 **투명한 데이터 암호화 미리 보기** 블레이드를 엽니다. TDE 미리 보기에 아직 등록하지 않은 경우 등록을 완료할 때까지 데이터 암호화가 사용되지 않도록 설정됩니다.
 
-6.  
-  **미리 보기 조건**을 클릭합니다.
+6.  **미리 보기 조건**을 클릭합니다.
 
 7.  미리 보기의 조건을 읽고 조건에 동의 하는 경우 **투명 한 데이터 및 미리 보기 약관** 확인란을 선택 하 고 페이지 아래쪽에서 **확인** 을 클릭 합니다. 이제 데이터 **암호화** 단추를 사용 하도록 설정 해야 하는 **데이터 \ 미리 보기** 블레이드로 돌아갑니다.
 
-8.  
-  **데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **켬**으로 이동한 다음 페이지 위쪽의 **저장** 을 클릭하여 설정을 적용합니다. **암호화 상태** 는 투명 한 데이터 암호화의 진행률과 비슷합니다.
+8.  **데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **켬**으로 이동한 다음 페이지 위쪽의 **저장** 을 클릭하여 설정을 적용합니다. **암호화 상태** 는 투명한 데이터 암호화의 진행률과 비슷합니다.
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 합니다.
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호화 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 합니다.
 
-##  <a name="Encrypt"></a>Transact-sql을 사용 하 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 여에서 tde 사용 설정
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Transact-sql을 사용 하 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 여에서 tde 사용 설정
  다음 단계에서는 미리 보기에 이미 등록된 상태인 것으로 가정합니다.
 
 ###  <a name="TsqlProcedure"></a>
@@ -124,7 +112,7 @@ ms.locfileid: "78175405"
     Switch-AzureMode -Name AzureServiceManagement
     ```
 
-##  <a name="Decrypt"></a>에서 TDE로 보호 되는 데이터베이스 암호 해독[!INCLUDE[ssSDS](../includes/sssds-md.md)]
+##  <a name="decrypting-a-tde-protected-database-on-sssds"></a><a name="Decrypt"></a>에서 TDE로 보호 되는 데이터베이스 암호 해독[!INCLUDE[ssSDS](../includes/sssds-md.md)]
 
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>Azure 포털을 사용하여 TDE를 사용하지 않도록 설정하려면
 
@@ -134,17 +122,13 @@ ms.locfileid: "78175405"
 
 3.  왼쪽 창에서 **SQL 데이터베이스**를 선택한 상태로 사용자 데이터베이스를 클릭합니다.
 
-4.  데이터베이스 블레이드에서 **모든 설정**을 클릭 합니다.
+4.  데이터베이스 블레이드에서 **모든 설정**을 클릭합니다.
 
-5.  
-  **설정** 블레이드에서 **투명한 데이터 암호화(미리 보기)** 부분을 클릭하여 **투명한 데이터 암호화 미리 보기** 블레이드를 엽니다.
+5.  **설정** 블레이드에서 **투명한 데이터 암호화(미리 보기)** 부분을 클릭하여 **투명한 데이터 암호화 미리 보기** 블레이드를 엽니다.
 
-6.  
-  **투명한 데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **끔**으로 이동한 다음 페이지 상단의 **저장** 을 클릭하여 설정을 적용합니다. 
-  **암호화 상태** 는 투명한 데이터 암호 해독의 진행률과 비슷합니다.
+6.  **투명한 데이터 암호화 미리 보기** 블레이드에서 **데이터 암호화** 단추를 **끔**으로 이동한 다음 페이지 상단의 **저장** 을 클릭하여 설정을 적용합니다. **암호화 상태** 는 투명한 데이터 암호 해독의 진행률과 비슷합니다.
 
-     
-  [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)합니다.
+     [!INCLUDE[ssSDS](../includes/sssds-md.md)] VIEW DATABASE STATE [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 권한이 있는 데이터베이스 사용자로 **와 같은 쿼리 도구를 사용하여** 에 연결하는 방법으로도 암호 해독의 진행률을 모니터링할 수 있습니다. Dm_database_encryption_keys 뷰의 `encryption_state` 열을 쿼리 [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)합니다.
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Transact-SQL을 사용하여 TDE를 사용하지 않도록 설정하려면
 
@@ -160,10 +144,10 @@ ms.locfileid: "78175405"
 
 3.  에서 [!INCLUDE[ssSDS](../includes/sssds-md.md)]암호화 진행률을 모니터링 하기 위해 **view database STATE** 권한이 있는 데이터베이스 사용자는 `encryption_state` [dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) 뷰의 열을 쿼리할 수 있습니다.
 
-##  <a name="Working"></a>에서 TDE로 보호 되는 데이터베이스 작업[!INCLUDE[ssSDS](../includes/sssds-md.md)]
+##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>에서 TDE로 보호 되는 데이터베이스 작업[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Azure 내에서의 작업을 위해 데이터베이스 암호를 해독할 필요는 없습니다. 원본 데이터베이스 또는 주 데이터베이스의 TDE 설정은 대상에서 투명하게 상속됩니다. 여기에는 다음과 관련된 작업이 포함됩니다.
 
--   지역 복원
+-   지리적 복원
 
 -   셀프 서비스 특정 시점 복원
 
@@ -173,9 +157,8 @@ ms.locfileid: "78175405"
 
 -   데이터베이스 복사본 만들기
 
-##  <a name="Moving"></a>을 사용 하 여 TDE로 보호 되는 데이터베이스 이동 Bacpac 파일
- 
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 포털 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 데이터베이스 내보내기 함수를 사용하여 TDE로 보호되는 데이터베이스를 내보내는 경우 데이터베이스의 내용이 암호화되지 않습니다. 암호화되지 않은.bacpac 파일에 내용이 저장됩니다.  새 데이터베이스 가져오기가 완료되면 .bacpac 파일을 적절하게 보호하고 TDE를 사용하도록 설정해야 합니다.
+##  <a name="moving-a-tde-protected-database-on-using-bacpac-files"></a><a name="Moving"></a>을 사용 하 여 TDE로 보호 되는 데이터베이스 이동 Bacpac 파일
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 포털 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 데이터베이스 내보내기 함수를 사용하여 TDE로 보호되는 데이터베이스를 내보내는 경우 데이터베이스의 내용이 암호화되지 않습니다. 암호화되지 않은.bacpac 파일에 내용이 저장됩니다.  새 데이터베이스 가져오기가 완료되면 .bacpac 파일을 적절하게 보호하고 TDE를 사용하도록 설정해야 합니다.
 
 ## <a name="related-sql-server-topic"></a>관련 SQL Server 항목
  [EKM을 사용 하 여 TDE 사용](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)

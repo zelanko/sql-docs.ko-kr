@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41a6ae9c6462beecaa244694bd8679df88aefc47
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176136"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
@@ -71,9 +71,9 @@ ms.locfileid: "78176136"
 ## <a name="run-time-events"></a>런타임 이벤트
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 이벤트 처리기를 나열하고 이벤트 처리기를 실행하는 런타임 이벤트에 대해 설명합니다.
 
-|이벤트 처리기|행사|
+|이벤트 처리기|이벤트|
 |-------------------|-----------|
-|`OnError`|`OnError` 이벤트에 대 한 이벤트 처리기입니다. 이 이벤트는 오류가 발생할 때 실행 개체에 의해 발생합니다.|
+|`OnError`|`OnError` 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 오류가 발생할 때 실행 개체에 의해 발생합니다.|
 |**OnExecStatusChanged**|**OnExecStatusChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행 상태가 변경될 때 실행 개체에 의해 발생합니다.|
 |**OnInformation**|**OnInformation** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 정보 보고를 위한 실행 개체의 유효성 검사 및 실행 중에 발생합니다. 이 이벤트에는 오류 또는 경고를 제외한 정보만 포함됩니다.|
 |**OnPostExecute**|**OnPostExecute** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 실행을 마친 바로 다음 실행 개체에 의해 발생합니다.|
@@ -87,10 +87,9 @@ ms.locfileid: "78176136"
 |**OnWarning**|**OnWarning** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 경고가 발생할 때 실행 개체에 의해 발생합니다.|
 
 ## <a name="configuration-of-an-event-handler"></a>이벤트 처리기 구성
- **의**속성[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.
 
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)을 참조하세요.
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)을 참조하세요.
 
  이러한 속성을 프로그래밍 방식으로 설정하는 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>을 참조하세요.
 

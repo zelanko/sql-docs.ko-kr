@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176558"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
@@ -65,7 +65,7 @@ ms.locfileid: "78176558"
 ## <a name="reference"></a>참조
  [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md) 미리 정의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 된 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
 
-## <a name="related-sections"></a>관련 섹션
+## <a name="related-sections"></a>관련 단원
  [스크립팅을 사용 하 여 패키지 확장](../extending-packages-scripting/extending-packages-with-scripting.md) 스크립트 태스크를 사용 하 여 제어 흐름을 확장 하는 방법 및 스크립트 구성 요소를 사용 하 여 데이터 흐름을 확장 하는 방법을 설명 합니다.
 
  [사용자 지정 개체를 사용 하 여 패키지 확장](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) 여러 패키지에서 사용할 프로그램 사용자 지정 태스크, 데이터 흐름 구성 요소 및 기타 패키지 개체를 만드는 방법에 대해 설명 합니다.
@@ -78,7 +78,7 @@ ms.locfileid: "78176558"
 
 -   blogs.msdn.com의 블로그 항목 - [사용자 지정 확장 프로그램 성능 프로파일링](https://go.microsoft.com/fwlink/?LinkId=238831)
 
-![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [SQL Server Integration Services](../sql-server-integration-services.md)

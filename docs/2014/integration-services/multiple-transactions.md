@@ -14,14 +14,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c922fb612faca72e9f9381990dc777301185cb1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176583"
 ---
 # <a name="multiple-transactions"></a>여러 트랜잭션
-  
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지 내의 관련 없는 트랜잭션을 한 개의 패키지가 포함하는 것이 가능합니다. 중첩 컨테이너 계층 중간의 컨테이너가 트랜잭션을 지원하지 않으면 위 또는 아래에 위치한 컨테이너에서 별도의 트랜잭션을 시작합니다(트랜잭션을 지원하도록 구성된 경우). 트랜잭션은 중첩 컨테이너 계층의 가장 안쪽 태스크부터 순서대로 패키지에 커밋 또는 롤백합니다. 그러나 내부 트랜잭션이 커밋한 후에는 외부 트랜잭션이 중단되더라도 롤백하지 않습니다.
 
 ## <a name="illustration-of-multiple-transactions"></a>다중 트랜잭션의 그림

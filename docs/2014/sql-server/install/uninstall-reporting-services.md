@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4ef45498efdd86f5abe885108e4b140ba930cc58
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172234"
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
@@ -33,9 +33,9 @@ ms.locfileid: "78172234"
 
  다음은 제거되지 않는 세 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스의 이름 예입니다.
 
--   **보고서 서버 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e
+-   **보고서 서버 데이터베이스:** eportingService_7f616e2d253040e8ab5653b3c09a065e
 
--   **보고서 서버 임시 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065eTempDB
+-   **보고서 서버 임시 데이터베이스:** portingService_7f616e2d253040e8ab5653b3c09a065eTempDB
 
 -   **보고서 서버 경고 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
 
@@ -49,8 +49,7 @@ ms.locfileid: "78172234"
 
 1.  Windows 제어판에서 **프로그램 및 기능**을 클릭합니다.
 
-2.  
-  **프로그램 및 기능** 에서 **Microsoft SQL Server 2012**를 선택합니다.
+2.  **프로그램 및 기능** 에서 **Microsoft SQL Server 2012**를 선택합니다.
 
 3.  제거 마법사에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스 기능 **RS**를 포함하는 인스턴스를 선택합니다.
 

@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 760e4c00401e42b6d6ccca8bd7c7acd7ec0d5b86
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176336"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>데이터 흐름 구성 요소의 사용자 인터페이스 개발
@@ -87,8 +87,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> 메서드의 반환 값은 구성 요소의 변경 내용이 지속되는지 삭제되는지를 결정합니다. 이 메서드가 `false`를 반환하면 모든 변경 내용이 삭제되고, `true`를 반환하면 구성 요소의 변경 내용이 유지되고 패키지가 저장되어야 하는 것으로 표시됩니다.
 
 ### <a name="using-the-services-of-the-ssis-designer"></a>SSIS 디자이너의 서비스 사용
- 
-  `IServiceProvider` 메서드의 <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> 메서드의 `IServiceProvider` 매개 변수는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 다음 서비스에 액세스할 수 있도록 합니다.
 
 |서비스|Description|
 |-------------|-----------------|
@@ -282,7 +281,7 @@ Namespace Microsoft.Samples.SqlServer.Dts
 End Namespace
 ```
 
-![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지 방문](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하십시오.
+![Integration Services 아이콘 (작은 아이콘)](../../media/dts-16.gif "Integration Services 아이콘(작은 아이콘)")  **은 최신 상태로 유지 Integration Services**<br /> Microsoft의 최신 다운로드, 문서, 예제 및 비디오와 커뮤니티에서 선택된 솔루션을 보려면 MSDN의 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 페이지를 방문하세요.<br /><br /> [MSDN의 Integration Services 페이지를 방문하세요.](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 이러한 업데이트에 대한 자동 알림을 받으려면 해당 페이지에서 제공하는 RSS 피드를 구독하세요.
 
 ## <a name="see-also"></a>참고 항목
  [사용자 지정 데이터 흐름 구성 요소 만들기](creating-a-custom-data-flow-component.md)

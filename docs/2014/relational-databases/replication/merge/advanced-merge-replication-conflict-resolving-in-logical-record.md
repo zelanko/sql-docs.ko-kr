@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175865"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>논리적 레코드에서 충돌 감지 및 해결
@@ -105,6 +105,6 @@ ms.locfileid: "78175865"
  ![관련 행의 변경 내용을 보여 주는 일련의 테이블](../media/logical-records-08.gif "관련 행의 변경 내용을 보여 주는 일련의 테이블")
 
 ## <a name="see-also"></a>참고 항목
- [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)
+ [논리적 레코드를 사용 하 여 관련 된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)
 
 

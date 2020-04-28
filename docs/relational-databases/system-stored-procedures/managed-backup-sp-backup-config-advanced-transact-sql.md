@@ -21,10 +21,10 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77652952"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-sql)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @database_name  
  특정 데이터베이스에서 관리 되는 백업을 사용 하도록 설정 하기 위한 데이터베이스 이름입니다. NULL 또는 * 인 경우이 관리 되는 백업은 서버의 모든 데이터베이스에 적용 됩니다.  
   
@@ -70,7 +70,7 @@ EXEC managed_backup.sp_backup_config_advanced
  @encryptor_name  
  백업 암호화에 사용되는 비대칭 키 또는 기존 인증서의 이름입니다. 는 @encryptor_name **SYSNAME**입니다. 비대칭 키를 사용하는 경우 EKM(확장 키 관리)와 함께 구성해야 합니다. @encryption_algorithm 매개 변수에 대 한 NO_ENCRYPTION 지정 하는 경우이 매개 변수는 선택 사항입니다.  
   
- 자세한 내용은 [EKM&#41;&#40;확장 가능 키 관리 ](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조 하세요.  
+ 자세한 내용은 [EKM&#40;확장 가능 키 관리&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)을 참조하세요.  
   
  @local_cache_path  
  이 매개 변수는 아직 지원 되지 않습니다.  
@@ -98,6 +98,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [managed_backup. sp_backup_config_basic (Transact-sql)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

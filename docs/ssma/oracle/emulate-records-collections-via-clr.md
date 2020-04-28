@@ -8,10 +8,10 @@ ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
 ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76762817"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>CLR UDT를 통해 레코드 및 컬렉션 에뮬레이트
@@ -36,7 +36,7 @@ declare @Collection$TYPE varchar(max) = '<type definition>'
 
 다음 `<type definition>` 은 원본 PL/SQL 유형을 고유 하 게 식별 하는 설명 텍스트입니다.
 
-다음과 같은 예제를 참조하세요.
+다음 예제를 참조하세요.
 
 ```sql
 DECLARE
