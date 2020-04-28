@@ -22,10 +22,10 @@ ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102433"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token(Transact-SQL)
@@ -36,14 +36,14 @@ ms.locfileid: "68102433"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|보안 주체의 ID입니다. 이 값은 서버 내에서 고유합니다.|  
-|**s**|**varbinary (85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체 인 경우 **sid** = windows sid입니다. 로그인이 인증서에 매핑된 경우 인증서의 **sid** = GUID입니다.|  
+|**sid**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체 인 경우 **sid** = windows sid입니다. 로그인이 인증서에 매핑된 경우 인증서의 **sid** = GUID입니다.|  
 |**name**|**nvarchar(128)**|보안 주체의 이름입니다. 이 값은 서버 내에서 고유합니다.|  
-|**type**|**nvarchar(128)**|보안 주체 유형에 대한 설명입니다. 모든 유형은 **sid**로 매핑됩니다. 값은 다음 중 하나일 수 있습니다.<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> 인증서<br /><br /> ASYMMETRIC KEY|  
+|**type**|**nvarchar(128)**|보안 주체 유형에 대한 설명입니다. 모든 유형은 **sid**로 매핑됩니다. 이 값은<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> 인증서<br /><br /> ASYMMETRIC KEY|  
 |**보려면**|**nvarchar(128)**|보안 주체가 GRANT 또는 DENY 권한 평가에 참여하도록 지정하거나 인증자의 역할을 하도록 지정합니다.<br /><br /> 이 값은 다음 중 하나일 수 있습니다.<br /><br /> GRANT 또는 DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>참고 항목  
  [user_token &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-user-token-transact-sql.md)   
- [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [database_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

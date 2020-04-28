@@ -10,10 +10,10 @@ ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8dc64c84a8d14ea86893d52044894e0af2b1a3bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103210"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)

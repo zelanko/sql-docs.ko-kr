@@ -10,10 +10,10 @@ ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103241"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB에 연결(MySQLToSQL)
@@ -39,9 +39,9 @@ SQL Azure 데이터베이스에 연결 하는 데 사용할 사용자 이름을 
   
 **암호**  
   
-사용자 이름 암호를 입력합니다.  
+사용자 이름에 대한 암호를 입력합니다.  
   
-**#A0**  
+**Encrypt**  
   
 SSMA는 SQL Azure에 대 한 암호화 된 연결을 권장 합니다.  
   

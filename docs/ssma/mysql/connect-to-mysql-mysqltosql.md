@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103229"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>MySQL에 연결(MySQLToSQL)
@@ -44,7 +44,7 @@ SSMA에서 MySQL 데이터베이스에 연결 하는 데 사용할 사용자 이
   
 **암호**  
   
-사용자 이름 암호를 입력합니다.  
+사용자 이름에 대한 암호를 입력합니다.  
   
 **SSL**  
   

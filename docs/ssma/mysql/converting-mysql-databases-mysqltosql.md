@@ -10,10 +10,10 @@ ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103065"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 변환(MySQLToSQL)
@@ -35,7 +35,7 @@ MySQL에 연결 하 고,에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 |**MySQL 개체**|**결과 SQL Server 개체**|  
 |인덱스와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다. 테이블은 모든 인덱스 및 제약 조건으로 변환 됩니다. 인덱스는 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체로 변환 됩니다.<br /><br />**공간 데이터 형식 매핑은** 테이블 노드 수준 에서만 수행할 수 있습니다.<br /><br />테이블 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
 |Functions|함수를 Transact-sql로 직접 변환할 수 있는 경우 SSMA는 함수를 만듭니다. 경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 프로젝트 설정에서 **함수 변환을** 사용 하 여이 작업을 수행할 수 있습니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.<br /><br />**지정 된 항목:**<br /><br />프로젝트 설정에 따라 변환<br /><br />함수로 변환<br /><br />저장 프로시저로 변환<br /><br />함수 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
-|프로시저|프로시저를 Transact-sql로 직접 변환할 수 있으면 SSMA에서 저장 프로시저를 만듭니다. 경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
+|절차|프로시저를 Transact-sql로 직접 변환할 수 있으면 SSMA에서 저장 프로시저를 만듭니다. 경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
 |데이터베이스 변환|MySQL 개체인 데이터베이스는 MySQL 용 SSMA에서 직접 변환 되지 않습니다. MySQL 데이터베이스는 스키마 이름과 유사 하 게 처리 되며, 모든 물리적 매개 변수는 변환 중에 손실 됩니다. MySQL 용 SSMA는 mysql 데이터베이스 매핑을 사용 하 여 [MySQLToSQL&#41;&#40;SQL Server 스키마를](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) 사용 하 여 mysql 데이터베이스의 개체를 적절 한 SQL Server 데이터베이스/스키마 쌍에 매핑합니다.|  
 |트리거 변환|**SSMA는 다음 규칙에 따라 트리거를 만듭니다.**<br /><br />Instead of 트리거는 T-sql 트리거 대신로 변환 됩니다.<br /><br />AFTER 트리거는 행 마다 반복을 사용 하거나 사용 하지 않고 T-sql 트리거 후에로 변환 됩니다.|  
 |변환 보기|SSMA가 종속 개체를 포함 하는 뷰를 만듭니다.|  

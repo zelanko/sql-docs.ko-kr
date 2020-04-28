@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103006"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>형식 매핑 편집(MySQLToSQL)
@@ -29,18 +29,18 @@ ms.locfileid: "68103006"
   
 ## <a name="options"></a>옵션  
   
-##### <a name="source-type"></a>원본 유형  
+##### <a name="source-type"></a>소스 형식  
 SQL Server 데이터 형식에 매핑할 원본 데이터 형식을 선택 합니다.  
   
 데이터 형식이 가변 길이인 경우에는 **Sourcetype**아래에 다음 필드가 표시 됩니다.  
   
-##### <a name="from"></a>원본  
+##### <a name="from"></a>시작  
 이 매핑의 최소 길이를 지정 합니다. 예를 들어 **nchar** 데이터 형식의 경우 10을 입력 하 여이 매핑이 **nchar (10)** 에서 시작 하는 범위에 대해 지정 되도록 지정할 수 있습니다.  
   
-##### <a name="to"></a>수행할 작업  
+##### <a name="to"></a>대상  
 이 매핑의 최대 길이를 지정 합니다. 예를 들어 **nchar** 데이터 형식의 경우 20을 입력 하 여이 매핑이 **nchar (20)** 로 끝나는 범위에 대해 지정할 수 있습니다.  
   
-##### <a name="target-type"></a>대상 유형  
+##### <a name="target-type"></a>대상 형식  
 원본 데이터 형식이 매핑되는 SQL Server 데이터 형식을 선택 합니다. SSMA가 테이블 또는 SQL Server를 만들 때 원본 데이터 형식이이 데이터 형식으로 변경 됩니다.  
   
 데이터 형식이 가변 길이인 경우 **대상 유형**아래에 다음 필드가 표시 됩니다.  

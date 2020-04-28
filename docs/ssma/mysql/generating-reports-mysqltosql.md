@@ -12,10 +12,10 @@ ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103008"
 ---
 # <a name="generating-reports-mysqltosql"></a>보고서 생성(MySQLToSQL)
