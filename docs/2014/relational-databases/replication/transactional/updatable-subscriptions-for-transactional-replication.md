@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655500"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655500"
  **업데이트 모드를 전환하려면**  
   
  업데이트 모드를 전환하려면 이 두 업데이트 모드에 대한 게시와 구독을 설정한 다음 필요에 따라 모드를 전환합니다. 자세한 내용은 다음을 참조하세요.  
-[업데이터 블 트랜잭션 구독에 대한 업데이트 모드 간 전환](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[업데이트 가능한 트랜잭션 구독에 대 한 업데이트 모드를 전환](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)합니다.  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>업데이트할 수 있는 구독 사용 시 고려 사항  
   
@@ -126,6 +126,6 @@ ms.locfileid: "62655500"
  [피어 투 피어 트랜잭션 복제](peer-to-peer-transactional-replication.md)   
  [트랜잭션 복제](transactional-replication.md)   
  [데이터 및 데이터베이스 개체 게시](../publish/publish-data-and-database-objects.md)   
- [게시 구독](../subscribe-to-publications.md)  
+ [Subscribe to Publications](../subscribe-to-publications.md)  
   
   

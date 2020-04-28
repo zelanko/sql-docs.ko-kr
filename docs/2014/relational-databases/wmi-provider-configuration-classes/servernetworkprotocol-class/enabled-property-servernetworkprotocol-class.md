@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62654883"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled 속성(ServerNetworkProtocol 클래스)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  인스턴스에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용 하는 네트워크 프로토콜을 나타내는 [servernetworkprotocol 클래스](servernetworkprotocol-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663648"
 ---
 # <a name="clr-event-category"></a>CLR 이벤트 범주
@@ -28,7 +28,7 @@ ms.locfileid: "62663648"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청이 실행되었음을 나타냅니다.|  
 |[Assembly Load 이벤트 클래스](../../database-engine/assembly-load-event-class.md)|어셈블리 로드 요청을 실행할 때 발생합니다.|  

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62701992"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
@@ -41,7 +41,7 @@ ms.locfileid: "62701992"
   
  W3C(World Wide Web Consortium) SOAP(Simple Object Access Protocol) 사양에서는 SOAP 헤더를 사용하여 SOAP 메시지 위에 새 프로토콜을 작성할 것을 권장합니다. 다음 표에서는 세션 시작, 유지 관리 및 닫기를 위해 XMLA에 정의된 SOAP 헤더 요소 및 특성을 설명합니다.  
   
-|SOAP 헤더|Description|  
+|SOAP 헤더|설명|  
 |-----------------|-----------------|  
 |BeginSession|이 헤더는 공급자에게 새 세션을 만들도록 요청합니다. 공급자는 새 세션을 생성한 후 SOAP 응답에 있는 세션 헤더의 일부로 세션 ID를 반환하여 응답해야 합니다.|  
 |SessionId|값 영역에는 세션의 나머지 부분에서 각 메서드 호출에 사용해야 하는 세션 ID가 포함됩니다. SOAP 응답에 있는 공급자가 이 태그를 보내며 클라이언트도 이 특성을 각 세션 헤더 요소와 함께 보내야 합니다.|  

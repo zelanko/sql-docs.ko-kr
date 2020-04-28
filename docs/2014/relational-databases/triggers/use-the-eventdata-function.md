@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524268"
 ---
 # <a name="use-the-eventdata-function"></a>EVENTDATA 함수 사용
@@ -125,8 +125,7 @@ GO
 ```  
   
 > [!NOTE]  
->  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. 
-  `query()` 메서드는 출력에서 XML 및 앰퍼샌드로 이스케이프 처리된 CRLF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하며 `value()` 메서드는 출력에서 보이지 않는 CRLF 인스턴스를 렌더링합니다.  
+>  이벤트 데이터를 반환하려면 `value()` 메서드보다 XQuery `query()` 메서드를 사용하는 것이 좋습니다. `query()` 메서드는 출력에서 XML 및 앰퍼샌드로 이스케이프 처리된 CRLF(캐리지 리턴 및 줄 바꿈) 인스턴스를 반환하며 `value()` 메서드는 출력에서 보이지 않는 CRLF 인스턴스를 렌더링합니다.  
   
  이와 유사한 DDL 트리거 예가 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스와 함께 제공됩니다. 이 예를 사용하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 데이터베이스 트리거 폴더를 찾으십시오. 이 폴더는 **데이터베이스의** 프로그래밍 기능 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 폴더 아래에 있습니다. **ddlDatabaseTriggerLog**를 마우스 오른쪽 단추로 클릭한 다음 **데이터베이스 트리거 스크립팅**을 선택합니다. DDL 트리거 **ddlDatabaseTriggerLog**는 기본적으로 해제되어 있습니다.  
   

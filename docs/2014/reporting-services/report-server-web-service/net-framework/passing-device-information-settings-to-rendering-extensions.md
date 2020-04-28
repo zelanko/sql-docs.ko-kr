@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea50de3955ab152cbd92d5fd50ef8b2281a67eb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62518653"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>디바이스 정보 설정을 렌더링 확장 프로그램에 전달
@@ -54,8 +54,8 @@ http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=R
  자세한 내용은 [URL에 디바이스 정보 설정 지정](../../specify-device-information-settings-in-a-url.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [렌더링 확장 프로그램에 대한 디바이스 정보 설정&#40;Reporting Services&#41;](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Reporting Services&#41;&#40;렌더링 확장 프로그램에 대 한 장치 정보 설정](../../device-information-settings-for-rendering-extensions-reporting-services.md)   
+ [Rsreportserver.config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

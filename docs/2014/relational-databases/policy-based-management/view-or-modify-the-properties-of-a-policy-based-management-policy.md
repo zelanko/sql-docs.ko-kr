@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676938"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>정책 기반 관리 정책의 속성 보기 또는 수정
@@ -35,18 +35,18 @@ ms.locfileid: "62676938"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>개체에 있는 모든 정책의 속성을 보려면  
   
-1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책** 을 가리킨 다음 **보기**를 선택합니다. **정책 보기 –** _object_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](view-policies-dialog-box.md)를 참조하세요.  
+1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책** 을 가리킨 다음 **보기**를 선택합니다. **정책 보기 –**_object_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](view-policies-dialog-box.md)를 참조하세요.  
   
 2.  완료되면 **닫기**를 클릭합니다.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62676938"
   
 4.  더하기 기호를 클릭하여 **정책** 폴더를 확장합니다.  
   
-5.  보거나 수정하려는 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **정책 열기 –** _policy_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../integration-services/general-page-of-integration-services-designers-options.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하세요.  
+5.  보거나 수정하려는 정책을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **정책 열기 –**_policy_name_ 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [새 정책 만들기 또는 정책 열기 대화 상자, 일반 페이지](../../integration-services/general-page-of-integration-services-designers-options.md) 또는 [새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지](create-new-policy-or-open-policy-dialog-box-description-page.md)를 참조하세요.  
   
-6.  완료되었으면 **확인**을 클릭합니다.  
+6.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-a-policys-properties"></a>정책의 속성을 보려면  
   

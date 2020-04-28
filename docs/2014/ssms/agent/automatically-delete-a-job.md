@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c5e165380c0f920ebf1366855e7801b6bb9089a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472997"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
@@ -47,32 +47,28 @@ ms.locfileid: "62472997"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 작업 응답을 지정 하려면**  
+-   **작업 응답을 지정하려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-automatically-delete-a-job"></a>자동으로 작업을 삭제하려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  
-  **알림** 페이지를 선택합니다.  
+3.  **알림** 페이지를 선택합니다.  
   
-4.  
-  **자동으로 작업 삭제**를 선택하고 다음 중 하나를 선택합니다.  
+4.  **자동으로 작업 삭제**를 선택하고 다음 중 하나를 선택합니다.  
   
     -   작업이 성공적으로 완료되었을 때 작업 상태를 삭제하려면 **작업 성공 시** 를 클릭합니다.  
   
@@ -80,8 +76,8 @@ ms.locfileid: "62472997"
   
     -   완료 상태에 관계없이 작업을 삭제하려면 **작업 완료 시** 를 클릭합니다.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **작업을 자동으로 삭제 하려면**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
+ **자동으로 작업을 삭제하려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `DeleteLevel` 클래스의 `Job` 속성을 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  
   

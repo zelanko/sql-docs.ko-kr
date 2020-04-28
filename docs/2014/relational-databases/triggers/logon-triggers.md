@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473234"
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
@@ -50,7 +50,7 @@ ms.locfileid: "62473234"
 -   심각도가 20 이상인 오류가 트리거 본문 내에 발생합니다.  
   
 ## <a name="disabling-a-logon-trigger"></a>로그온 트리거 비활성화  
- 로그온 트리거를 사용하면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 고정 서버 역할의 멤버를 비롯한 모든 사용자에 대해 `sysadmin`에 성공적으로 연결하지 못하도록 효과적으로 차단할 수 있습니다. 로그온 트리거가 연결을 차단 중인 경우 `sysadmin` 고정 서버 역할의 멤버는 관리자 전용 연결을 사용하거나 최소 구성 모드(-f)로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하여 연결할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
+ 로그온 트리거를 사용하면 `sysadmin` 고정 서버 역할의 멤버를 비롯한 모든 사용자에 대해 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 성공적으로 연결하지 못하도록 효과적으로 차단할 수 있습니다. 로그온 트리거가 연결을 차단 중인 경우 `sysadmin` 고정 서버 역할의 멤버는 관리자 전용 연결을 사용하거나 최소 구성 모드(-f)로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하여 연결할 수 있습니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
   

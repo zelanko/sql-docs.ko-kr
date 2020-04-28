@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629393"
 ---
 # <a name="subscribers"></a>게시자 속성
@@ -26,21 +26,17 @@ ms.locfileid: "62629393"
   
 ## <a name="options"></a>옵션  
  **게시자 속성**  
- 표의 확인란을 선택 하 여 **게시** 페이지에서 선택한 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해당 데이터 원본이 나 비 데이터 원본을 구독자로 설정할 수 있습니다. 구독자가 나열되어 있지 않은 경우 **구독자 추가** 또는 **SQL Server 구독자 추가**를 클릭합니다.  
+ 표에서 확인란을 선택하여 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본을 **게시** 페이지에서 선택한 게시에 대한 구독자로 설정할 수 있습니다. 구독자가 나열되어 있지 않은 경우 **구독자 추가** 또는 **SQL Server 구독자 추가**를 클릭합니다.  
   
  **구독 데이터베이스**  
  이 열에 표시되는 정보 및 사용 가능한 동작은 **구독자** 열에 나열된 구독자 유형에 따라 달라집니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자의 경우 **구독 데이터베이스** 목록에서 구독 데이터베이스를 선택하거나 동일한 목록에서 **새 데이터베이스** 명령을 선택하여 새 데이터베이스를 만듭니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자의 경우 **구독 데이터베이스** 목록에서 구독 데이터베이스를 선택하거나 동일한 목록에서 **새 데이터베이스** 명령을 선택하여 새 데이터베이스를 만듭니다.  
   
     > [!NOTE]  
     >  게시자를 구독자로 설정하는 경우 구독 데이터베이스가 게시 데이터베이스와 달라야 합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우 구독 데이터베이스가 표시되지 않습니다. 
-  **SQL Server 이외 구독자 추가** 대화 상자의 **데이터 원본 이름** 필드에 데이터베이스 및 기타 연결 정보를 지정합니다. 
-  **구독자 추가** 를 클릭한 다음 **SQL Server 이외 구독자 추가**를 클릭하여 이 대화 상자를 사용할 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우 구독 데이터베이스가 표시되지 않습니다. **SQL Server 이외 구독자 추가** 대화 상자의 **데이터 원본 이름** 필드에 데이터베이스 및 기타 연결 정보를 지정합니다. **구독자 추가** 를 클릭한 다음 **SQL Server 이외 구독자 추가**를 클릭하여 이 대화 상자를 사용할 수 있습니다.  
   
  **구독자 추가**  
  구독자로 설정할 수 있는 서버 목록에 서버를 추가합니다. 이 단추는 다음 조건이 모두 충족되는 경우 표시됩니다.  
@@ -54,8 +50,7 @@ ms.locfileid: "62629393"
   
 -   선택한 게시의 게시자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전입니다.  
   
- 
-  **구독자 추가** 를 클릭하면 **SQL Server 구독자 추가** 및 **SQL Server 이외 구독자 추가**의 두 선택 사항으로 메뉴가 표시됩니다. Oracle 또는 IBM DB2 구독자를 추가하려면 **SQL Server 이외 구독자 추가** 를 클릭합니다.  
+ **구독자 추가** 를 클릭하면 **SQL Server 구독자 추가** 및 **SQL Server 이외 구독자 추가**의 두 선택 사항으로 메뉴가 표시됩니다. Oracle 또는 IBM DB2 구독자를 추가하려면 **SQL Server 이외 구독자 추가** 를 클릭합니다.  
   
  **SQL Server 구독자 추가**  
  구독자로 설정할 수 있는 서버 목록에 서버를 추가합니다. 이 단추는 다음 조건 중 하나 이상이 충족되는 경우 표시됩니다.  
@@ -68,8 +63,7 @@ ms.locfileid: "62629393"
   
     -   사용자가 게시자에서 **sysadmin** 고정 서버 역할의 멤버입니다.  
   
-    -   
-  **게시자 속성** 대화 상자의 **구독자** 페이지에서 구독자가 추가되었습니다.  
+    -   **게시자 속성** 대화 상자의 **구독자** 페이지에서 구독자가 추가되었습니다.  
   
     -   게시에서 익명 구독을 허용합니다.  
   

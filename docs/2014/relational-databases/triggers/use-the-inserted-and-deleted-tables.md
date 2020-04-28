@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524379"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
@@ -49,8 +49,7 @@ ms.locfileid: "62524379"
 > [!NOTE]  
 >  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 `text`, `ntext` 또는 `image` 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 `text`, `ntext` 또는 `image` 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 `varchar(max)`, `nvarchar(max)` 및 `varbinary(max)` 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)를 참조하세요.  
   
  **비즈니스 규칙을 적용하기 위해 트리거의 inserted 테이블을 사용하는 예**  
   
@@ -88,7 +87,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 이 뷰의 결과 집합에는 `int` 열 하나와 `nvarchar` 열 두 개가 있습니다. 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블에는 또한 `int`라는 `BusinessEntityID` 열, `nvarchar`이라는 `LName` 열 및 `nvarchar`이라는 `FName` 열이 있습니다.  
+ 이 뷰의 결과 집합에는 `int` 열 하나와 `nvarchar` 열 두 개가 있습니다. 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블에는 또한 `BusinessEntityID`라는 `int` 열, `LName`이라는 `nvarchar` 열 및 `FName`이라는 `nvarchar` 열이 있습니다.  
   
  뷰의 선택 목록에는 단일 기본 테이블 열에 직접 매핑되지 않는 식이 포함될 수도 있습니다. 상수 또는 함수 호출과 같은 일부 뷰 식은 열을 참조하지 않으므로 무시될 수 있습니다. 복합 식은 여러 개의 열을 참조할 수 있지만 inserted 및 deleted 테이블에는 삽입된 각 행에 대해 하나의 값만 있습니다. 뷰의 단순 식에서 복합 식이 있는 계산 열을 참조하는 경우에도 마찬가지입니다. 뷰의 INSTEAD OF 트리거는 이러한 유형의 식을 처리해야 합니다.  
   

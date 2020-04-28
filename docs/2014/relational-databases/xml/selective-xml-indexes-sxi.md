@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679824"
 ---
 # <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
@@ -32,7 +32,7 @@ ms.locfileid: "62679824"
   
  또한 선택적 XML 인덱스 기능은 선택적 XML 인덱스에 의해 이미 인덱싱된 노드에 대해 보조 선택적 XML 인덱스를 지원합니다. 이러한 보조 선택적 인덱스는 효율적이며, 쿼리 성능을 한층 더 향상시킵니다.  
   
-##  <a name="benefits"></a> 선택적 XML 인덱스의 이점  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> 선택적 XML 인덱스의 이점  
  선택적 XML 인덱스는 다음과 같은 이점을 제공합니다.  
   
 1.  일반 쿼리 부하에 비해 XML 데이터 형식에 대한 쿼리 성능이 크게 향상됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "62679824"
   
 
   
-##  <a name="compare"></a> 선택적 XML 인덱스 및 보조 XML 인덱스  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> 선택적 XML 인덱스 및 보조 XML 인덱스  
   
 > [!IMPORTANT]  
 >  대부분의 경우 더 나은 성능과 더 효율적인 스토리지를 위해 일반 XML 인덱스 대신 선택적 XML 인덱스를 만듭니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "62679824"
   
 
   
-##  <a name="example"></a> 선택적 XML 인덱스의 간단한 예  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> 선택적 XML 인덱스의 간단한 예  
  테이블에 약 500,000개의 행이 있는 XML 문서인 다음 XML 조각을 살펴보십시오.  
   
 ```xml  
@@ -103,7 +103,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>지원되는 기능, 사전 요구 사항 및 제한 사항  
   
-###  <a name="features"></a> 지원되는 XML 기능  
+###  <a name="supported-xml-features"></a><a name="features"></a> 지원되는 XML 기능  
  선택적 XML 인덱스는 exist(), value() 및 nodes() 메서드 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지원하는 XQuery를 지원합니다.  
   
 -   exist(), value() 및 nodes() 메서드의 경우 선택적 XML 인덱스는 전체 식을 변환할 수 있는 충분한 정보를 포함합니다.  
@@ -116,7 +116,7 @@ FOR
   
 
   
-###  <a name="unsupported"></a> 지원되지 않는 XML 기능  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> 지원되지 않는 XML 기능  
  선택적 XML 인덱스는 XML의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구현에서 지원되는 다음 기능을 지원하지 않습니다.  
   
 -   공용 구조체 유형, 시퀀스 유형 및 목록 유형과 같은 복잡한 XS 유형이 있는 노드의 인덱싱  
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
  사용자 테이블의 XML 열에 대해 선택적 XML 인덱스를 만들려면 먼저 다음 사전 요구 사항을 충족해야 합니다.  
   
 -   클러스터형 인덱스는 사용자 테이블의 기본 키에 있어야 합니다.  
@@ -144,7 +144,7 @@ FOR
   
 
   
-###  <a name="limits"></a> 제한 사항  
+###  <a name="limitations"></a><a name="limits"></a> 제한 사항  
  **일반 요구 사항 및 제한 사항**  
   
 -   하나의 XML 열에 대해 하나의 선택적 XML 인덱스만 만들 수 있습니다.  
@@ -197,7 +197,7 @@ FOR
   
 
   
-##  <a name="reltasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="reltasks"></a> 관련 작업  
   
 |||  
 |-|-|  

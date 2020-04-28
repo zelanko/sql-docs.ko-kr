@@ -19,24 +19,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b577fd9a78dbb5f12af79e190709065931ec463a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520569"
 ---
 # <a name="report-server-web-service"></a>보고서 서버 웹 서비스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 웹 서비스를 통해 보고서 서버의 전체 기능에 대 한 액세스를 제공 합니다. 보고서 서버 웹 서비스는 SOAP API를 사용하는 XML 웹 서비스입니다. HTTP를 통한 SOAP을 사용하고 클라이언트 프로그램과 보고서 서버 간의 통신 인터페이스로 작동합니다. 웹 서비스는 보고서 실행용과 보고서 관리용으로 엔드포인트를 두 개 제공하며, 여기에는 보고서 서버의 기능을 표시하고 보고서 수명 주기 중 임의의 부분에 대해 사용자 지정 도구를 만들 수 있는 메서드가 사용됩니다.  
   
- 웹 서비스를 기반으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 개발하는 데 기본적인 세 가지 방법이 있습니다. 다음을 수행할 수 있습니다.  
+ 웹 서비스를 기반으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 애플리케이션을 개발하는 데 기본적인 세 가지 방법이 있습니다. 다음과 같습니다.  
   
--   및 SDK를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용 하 여 응용 프로그램을 개발 합니다. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]을(를) 사용하여 웹 서비스 애플리케이션 작성에 자세한 내용은 [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)을 참조하세요.  
+-   및 SDK를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용 하 여 응용 프로그램을 개발 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]을(를) 사용하여 웹 서비스 애플리케이션 작성에 자세한 내용은 [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)을 참조하세요.  
   
--   
-  ** 스크립트 환경인 **rs[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 유틸리티(RS.exe)를 사용하여 애플리케이션을 개발합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 사용하여 모든 보고서 서버 웹 서비스 작업을 실행할 수 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 스크립팅에 대한 자세한 내용은 [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)을 참조하세요.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립트 환경인 **rs** 유틸리티(RS.exe)를 사용하여 애플리케이션을 개발합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 스크립트를 사용하여 모든 보고서 서버 웹 서비스 작업을 실행할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 스크립팅에 대한 자세한 내용은 [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)을 참조하세요.  
   
 -   SOAP 사용 개발 도구를 사용하여 애플리케이션을 개발합니다. 자세한 내용은 [Reporting Services에서 SOAP의 역할](../report-server-web-service/the-role-of-soap-in-reporting-services.md)을 참조하세요.  
   
@@ -54,12 +50,11 @@ Reporting Services 사용 가능한 웹 서비스 개발 옵션
  [SOAP API 액세스](../report-server-web-service/accessing-the-soap-api.md)  
  WSDL(Web Service Description Language)에 대해 설명하고 Reporting Services WSDL 파일 액세스를 위한 URL을 제공합니다.  
   
- [웹 서비스 및 .NET Framework를 사용하여 애플리케이션 빌드](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [웹 서비스와 .NET Framework를 사용하여 애플리케이션 빌드](../report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
  Reporting Services SOAP API를 호출하는 애플리케이션 및 웹 서비스 개발에 대한 정보를 포함합니다.  
   
  [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립팅 환경에 대해 개략적으로 설명합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 스크립팅 환경에 대해 개략적으로 설명합니다.  
   
  [기술 참조&#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)  
  보고서 서버 웹 서비스 메서드 및 해당하는 복합 형식에 대한 특정 참조 자료를 포함합니다.  
@@ -67,13 +62,11 @@ Reporting Services 사용 가능한 웹 서비스 개발 옵션
 ## <a name="user-requirements-for-web-service-development"></a>웹 서비스 개발을 위한 사용자 요구 사항  
  보고서 서버 웹 서비스를 사용하여 애플리케이션을 개발하려면 다음이 필요합니다.  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 이상이 설치되어 있고 인터넷으로 보고서 서버에 연결하여 액세스할 수 있어야 합니다.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 5.5 이상이 설치되어 있고 인터넷으로 보고서 서버에 연결하여 액세스할 수 있어야 합니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 또는를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]사용 하 여 응용 프로그램을 개발 하 고 배포 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 하려는 경우 컴퓨터에 SDK가 설치 되어 있어야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다.  
   
--   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능을 자세히 알고 있어야 합니다.  
+-   기능 및 기능에 대해 자세히 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 알고 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 -   SOAP 및 [!INCLUDE[vstecwebservices](../../includes/vstecwebservices-md.md)]를 잘 알고 있어야 합니다.  
   

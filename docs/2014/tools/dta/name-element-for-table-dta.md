@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16e5145ff3338cb597813e26e480d92aa899a1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657248"
 ---
 # <a name="name-element-for-table-dta"></a>Table의 Name 요소(DTA)
@@ -37,7 +37,7 @@ ms.locfileid: "62657248"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`1에서 255 자 사이입니다.|  
+|**데이터 형식 및 길이**|`string`, 1에서 255자 사이|  
 |**기본값**|없음|  
 |**발생 빈도**|필수 사항입니다. 각 `Table` 요소에 한 번만 지정해야 합니다.|  
   

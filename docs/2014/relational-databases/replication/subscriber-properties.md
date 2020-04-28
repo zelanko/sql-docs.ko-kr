@@ -15,28 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3142a78fcf3a2413e43b1a7598b5d3b282aba1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629442"
 ---
 # <a name="subscriber-properties"></a>구독자 속성
-  **구독자 속성** 대화 상자에는 이전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]버전의를 실행 하는 구독자와 관련 된 정보가 포함 되어 있습니다.  
+  **구독자 속성** 대화 상자에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]를 실행 중인 구독자와 관련된 정보가 포함되어 있습니다.  
   
 ## <a name="options"></a>옵션  
  **에이전트에서 구독자 연결**  
  배포 에이전트 및 병합 에이전트가 배포자에서 구독자로 연결하는 컨텍스트로서, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이전 버전에만 적용됩니다.  
   
- 
-  **에이전트 프로세스 계정 가장** 을 선택하여 배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정의 컨텍스트를 사용하여 구독자에 연결하거나 **SQL Server 인증**을 지정한 다음 **로그인** 및 **암호**에 값을 입력합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]**에이전트 프로세스 계정 가장**을 선택 하는 것이 좋습니다.  
+ **에이전트 프로세스 계정 가장** 을 선택하여 배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정의 컨텍스트를 사용하여 구독자에 연결하거나 **SQL Server 인증**을 지정한 다음 **로그인** 및 **암호**에 값을 입력합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 **에이전트 프로세스 계정 가장**을 선택할 것을 권장합니다.  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 경우 연결 정보는 새 구독 마법사에서 각 구독에 대해 지정되며 **구독 속성** 대화 상자에서 변경할 수 있습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 경우 연결 정보는 새 구독 마법사에서 각 구독에 대해 지정되며 **구독 속성** 대화 상자에서 변경할 수 있습니다.  
   
  **기본 에이전트 일정**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 실행 중인 구독자에 대해 새 구독 마법사에서 사용하는 기본 일정입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 실행 중인 구독자에 대해 새 구독 마법사에서 사용하는 기본 일정입니다.  
   
  **기타**  
  구독자 및 구독자 유형에 대한 정보를 포함합니다.  

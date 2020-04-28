@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4346b7752c9d4ace22a50cb1b4768c0c7d5df1fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676518"
 ---
 # <a name="snapshot-folder"></a>스냅샷 폴더
@@ -29,8 +29,7 @@ ms.locfileid: "62676518"
  스냅샷 파일을 저장할 폴더의 경로를 입력합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은(는) 네트워크 공유를 스냅샷 폴더 위치로 사용하는 것을 권장합니다. 다른 컴퓨터의 에이전트는 로컬 경로(C:\\와 같이 드라이브 문자로 시작하는 경로)에 액세스할 수 없습니다.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은(는) 네트워크 공유를 스냅샷 폴더 위치로 사용하는 것을 권장합니다. 다른 컴퓨터의 에이전트는 로컬 경로(C:\\와 같이 드라이브 문자로 시작하는 경로)에 액세스할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [대체 스냅숏 폴더 위치](alternate-snapshot-folder-locations.md)   

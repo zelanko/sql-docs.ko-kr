@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637853"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>보조 선택적 XML 인덱스 만들기, 변경 및 삭제
   새 보조 선택적 XML 인덱스를 만들거나 기존 보조 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
-##  <a name="create"></a> 보조 선택적 XML 인덱스 만들기  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> 보조 선택적 XML 인덱스 만들기  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>방법: 보조 선택적 XML 인덱스 만들기  
  **Transact-SQL을 사용하여 보조 선택적 XML 인덱스 만들기**  
@@ -41,7 +41,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> 보조 선택적 XML 인덱스 변경  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> 보조 선택적 XML 인덱스 변경  
  보조 선택적 XML 인덱스에 대해서는 ALTER 문이 지원되지 않습니다. 보조 선택적 XML 인덱스를 변경하려면 기존 인덱스를 삭제하고 다시 만드십시오.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>방법: 보조 선택적 XML 인덱스 변경  
@@ -67,7 +67,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> 보조 선택적 XML 인덱스 삭제  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> 보조 선택적 XML 인덱스 삭제  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>방법: 보조 선택적 XML 인덱스 삭제  
  **Transact-SQL을 사용하여 보조 선택적 XML 인덱스 삭제**  

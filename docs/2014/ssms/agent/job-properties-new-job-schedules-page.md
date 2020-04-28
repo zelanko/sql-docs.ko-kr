@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695680"
 ---
 # <a name="job-properties-new-job-schedules-page"></a>작업 속성: 새 작업(일정 페이지)
@@ -26,10 +26,10 @@ ms.locfileid: "62695680"
  **일정 목록**  
  이 작업의 일정을 나열합니다.  
   
- **새로 만들기**  
+ **신규**  
  새 일정을 만듭니다. 일정을 만들면 해당 작업에 일정이 추가됩니다.  
   
- **울**  
+ **선택**  
  기존 일정 중에서 일정을 선택합니다. 작업과 일정은 소유자가 동일해야 하므로 사용자 본인이 소유하고 있는 일정 중에서만 선택할 수 있습니다.  
   
  **편집**  

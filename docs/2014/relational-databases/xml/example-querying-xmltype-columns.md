@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637733"
 ---
 # <a name="example-querying-xmltype-columns"></a>예: XMLType 열 쿼리
-  다음 쿼리에는 `xml` 유형의 열이 포함됩니다. 이 쿼리는 `Instructions` 유형의 `xml` 열로부터 첫 번째 위치에서 제품 모델 ID, 이름 및 제조 단계를 검색합니다.  
+  다음 쿼리에는 `xml` 유형의 열이 포함됩니다. 이 쿼리는 `xml` 유형의 `Instructions` 열로부터 첫 번째 위치에서 제품 모델 ID, 이름 및 제조 단계를 검색합니다.  
   
 ## <a name="example"></a>예제  
   

@@ -15,23 +15,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676637"
 ---
 # <a name="snapshot-agent-security"></a>스냅샷 에이전트 보안
-  **스냅숏 에이전트 보안** 대화 상자를 사용 하 여 다음을 지정할 수 있습니다.  
+  **스냅샷 에이전트 보안** 대화 상자를 사용하여 다음을 지정할 수 있습니다.  
   
--   배포자에서 스냅샷 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정. 이 계정으로 에이전트 프로세스가 실행 되기 때문에 Windows 계정을 *프로세스 계정*이 라고도 합니다.  
+-   배포자에서 스냅샷 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정. Windows 계정으로 에이전트 프로세스가 실행되기 때문에 이 계정을 *프로세스 계정*이라고도 합니다.  
   
--   스냅숏 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 연결할 때 사용 하는 컨텍스트입니다. Windows 계정을 가장하거나 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
+-   스냅샷 에이전트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 연결하는 컨텍스트. Windows 계정을 가장하거나 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정의 컨텍스트에서 연결을 설정할 수 있습니다.  
   
     > [!NOTE]  
     >  게시자 및 배포자가 동일한 컴퓨터에 있는 경우에도 스냅샷 에이전트를 게시자에 연결합니다. 또한 스냅샷 에이전트를 배포자에 연결하며 이러한 연결은 항상 에이전트를 실행하는 Windows 계정을 가장하여 설정됩니다.  
   
-     Oracle 게시자의 경우 **배포자 속성** 대화 상자에서 사용할 수 있는 **게시자 속성** 대화 상자에서 스냅샷 에이전트를 게시자에 연결하는 컨텍스트를 지정합니다. 자세한 내용은 [복제 보안 설정 보기 및 수정](security/view-and-modify-replication-security-settings.md)을 참조 하세요.  
+     Oracle 게시자의 경우 **배포자 속성** 대화 상자에서 사용할 수 있는 **게시자 속성** 대화 상자에서 스냅샷 에이전트를 게시자에 연결하는 컨텍스트를 지정합니다. 자세한 내용은 [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)을(를) 참조하세요.  
   
  모든 계정이 유효해야 하며 각 계정에 대해 올바른 암호를 지정해야 합니다. 계정 및 암호의 유효성은 에이전트를 실행할 때 검사합니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62676637"
  **프로세스 계정**  
  배포자에서 스냅샷 에이전트를 실행하는 Windows 계정을 입력합니다. 지정하는 Windows 계정은 다음과 같은 조건을 갖추어야 합니다.  
   
--   적어도 배포 데이터베이스에 있는 **db_owner** 고정 데이터베이스 역할의 멤버 여야 합니다.  
+-   적어도 배포 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 -   스냅샷 공유에 대해 쓰기 권한이 있어야 합니다.  
   
@@ -47,12 +47,10 @@ ms.locfileid: "62676637"
  Windows 계정의 암호를 입력합니다.  
   
  **게시자에 연결**  
- 스냅샷 에이전트를 게시자에 연결할 때 **프로세스 계정** 입력란에 지정한 계정을 가장할지, 아니면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용할지를 선택합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 입력합니다.  
+ 스냅샷 에이전트를 게시자에 연결할 때 **프로세스 계정** 입력란에 지정한 계정을 가장할지, 아니면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용할지를 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 암호를 입력합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용하는 것보다 Windows 계정을 가장하도록 선택하는 것이 좋습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정을 사용하는 것보다 Windows 계정을 가장하도록 선택하는 것이 좋습니다.  
   
  연결에 사용되는 Windows 계정이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정은 적어도 게시 데이터베이스에 포함된 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   

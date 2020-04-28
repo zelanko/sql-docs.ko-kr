@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659586"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 요소(DTA)
@@ -50,7 +50,7 @@ ms.locfileid: "62659586"
 |관계|요소|  
 |------------------|--------------|  
 |**부모 요소**|[Schema의 Table 요소&#40;DTA&#41;](table-element-for-schema-dta.md)|  
-|**자식 요소**|[Create 요소&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop`요소인. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조하십시오.|  
+|**자식 요소**|[Create 요소&#40;DTA&#41;](create-element-dta.md)<br /><br /> `Drop` 요소입니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조하십시오.|  
   
 ## <a name="remarks"></a>설명  
  데이터베이스 엔진 튜닝 관리자 XML 스키마에서 이 요소의 이름은 **RecommendationTypecomplexType** 입니다. 이 요소는 가상 구성에 대한 인덱스를 지정하는 데 사용됩니다. 이 `Recommendation` 요소를 분할(`RecommendationPType`) 또는 뷰(`RecommendationViewType`)를 지정하는 데 사용할 수 있는 다른 유형과 혼동하지 마십시오. 이러한 다른 `Recommendation` 요소 형식에 대 한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자 XML 스키마](https://go.microsoft.com/fwlink/?linkid=43100)를 참조 하세요.  

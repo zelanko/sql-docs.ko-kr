@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704913"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>패싯 속성 대화 상자, 종속 정책 페이지
@@ -26,13 +26,13 @@ ms.locfileid: "62704913"
  **이름**  
  현재 패싯을 참조하는 각 정책의 이름을 나열합니다.  
   
- **Enabled**  
+ **사용**  
  확인 표시는 정책이 현재 사용됨을 나타냅니다. 정책이 사용되지 않는 경우 비어 있습니다.  
   
  **History**  
- 실행 기록 보고서를 표시하려면 **기록 보기** 하이퍼링크를 클릭합니다.  
+ 실행 기록 보고서를 표시 하려면 **기록 보기** 하이퍼링크를 클릭 합니다.  
   
- **만든 날짜**  
+ **만들어지며**  
  정책을 만든 날짜입니다.  
   
 ## <a name="see-also"></a>참고 항목  

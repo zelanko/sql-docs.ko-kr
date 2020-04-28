@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688912"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>병합 복제 백업 및 복원 전략
@@ -56,7 +56,7 @@ ms.locfileid: "62688912"
 > [!IMPORTANT]  
 >  게시 데이터베이스를 구독 데이터베이스와 동기화하면 게시된 테이블이 백업에서 복원된 게시되지 않은 다른 테이블보다 더 최신 시점으로 복원될 수 있습니다.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화하는 경우에는 구독이 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독이어야 합니다(이전 릴리스에서는 로컬 구독과 전역 구독이라고 함).  
+ 이전 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전의를 실행 하는 구독자와 동기화 할 경우에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]는 해당 구독은 익명 일 수 없습니다. 클라이언트 구독 또는 서버 구독 (이전 버전에서는 로컬 구독 및 전역 구독) 이어야 합니다.  
   
  밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md)를 참조하십시오.  
   

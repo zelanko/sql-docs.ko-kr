@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: decf503b7da6fb4e3f3a3846a714b1062255f1a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520383"
 ---
 # <a name="creating-the-web-service-proxy"></a>웹 서비스 프록시 만들기
@@ -29,10 +29,9 @@ ms.locfileid: "62520383"
  에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]WSDL 도구 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]를 사용 하 고에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]웹 참조를 추가 하 여를 사용 하 여 개발 프로젝트에 프록시 클래스를 추가 하는 방법에는 두 가지가 있습니다. 다음 섹션에서는 이 두 가지 방법에 대해 자세히 설명합니다.  
   
 ## <a name="adding-the-proxy-using-the-wsdl-tool"></a>WSDL 도구를 사용하여 프록시 추가  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발 환경에서 사용할 웹 서비스 프록시를 생성할 수 있는 WSDL(웹 서비스 기술 언어) 도구(Wsdl.exe)가 포함되어 있습니다. 웹 서비스를 지 원하는 언어 (현재 c # 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])로 클라이언트 프록시를 만드는 가장 일반적인 방법은 WSDL 도구를 사용 하는 것입니다.  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK에는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발 환경에서 사용할 웹 서비스 프록시를 생성할 수 있는 WSDL(웹 서비스 기술 언어) 도구(Wsdl.exe)가 포함되어 있습니다. 웹 서비스를 지 원하는 언어 (현재 c # 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)])로 클라이언트 프록시를 만드는 가장 일반적인 방법은 WSDL 도구를 사용 하는 것입니다.  
   
- **Wsdl.exe를 사용 하 여 프로젝트에 프록시 클래스를 추가 하려면**  
+ **Wsdl.exe를 사용하여 프록시 클래스를 프로젝트에 추가하려면**  
   
 1.  명령 프롬프트에서 Wsdl.exe를 사용하여 (최소한) URL을 보고서 서버 웹 서비스에 지정함으로써 프록시 클래스를 만듭니다.  
   
@@ -67,22 +66,17 @@ ReportingService2010 service = new ReportingService2010();
  전체 구문을 포함하여 Wsdl.exe 도구에 대한 자세한 내용은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 "WDSL 도구(Web Services Description Language Tool)"를 참조하십시오. 웹 서비스 프록시에 대한 자세한 내용은 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK 설명서의 "XML 웹 서비스 프록시 만들기(Creating an XML Web Service Proxy)"를 참조하십시오.  
   
 ## <a name="adding-the-proxy-using-a-web-reference-in-visual-studio"></a>Visual Studio에서 웹 참조를 사용하여 프록시 추가  
- 웹 참조를 통해 프로젝트에서 웹 서비스를 하나 이상 사용할 수 있습니다. 
-  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서는 사용자가 다음의 간단한 단계를 수행하여 웹 서비스 참조를 프로젝트에 추가할 수 있습니다.  
+ 웹 참조를 통해 프로젝트에서 웹 서비스를 하나 이상 사용할 수 있습니다. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]에서는 사용자가 다음의 간단한 단계를 수행하여 웹 서비스 참조를 프로젝트에 추가할 수 있습니다.  
   
- **프로젝트에 웹 참조를 추가 하려면**  
+ **프로젝트에 웹 참조를 추가하려면**  
   
-1.  
-  **솔루션 탐색기**에서 웹 서비스가 사용될 프로젝트를 선택합니다.  
+1.  **솔루션 탐색기**에서 웹 서비스가 사용될 프로젝트를 선택합니다.  
   
-2.  
-  **프로젝트** 메뉴에서 **웹 참조 추가**를 클릭합니다.  
+2.  **프로젝트** 메뉴에서 **웹 참조 추가**를 클릭합니다.  
   
-     
-  **웹 참조 추가** 대화 상자가 열립니다.  
+     **웹 참조 추가** 대화 상자가 열립니다.  
   
-3.  
-  **URL** 필드에 보고서 서버 웹 서비스에 대한 전체 경로를 입력합니다.  
+3.  **URL** 필드에 보고서 서버 웹 서비스에 대한 전체 경로를 입력합니다.  
   
      보고서 서버 웹 서비스의 보고서 실행 엔드포인트에 대한 간단한 URL은 다음과 같습니다.  
   
@@ -101,13 +95,11 @@ ReportingService2010 service = new ReportingService2010();
   
 5.  보고서 서버 웹 서비스에 프로그래밍 방식으로 액세스하기 위해 코드에 사용할 이름을 **웹 참조 이름** 필드에 입력합니다.  
   
-6.  
-  **참조 추가** 단추를 선택하여 웹 서비스에 대한 애플리케이션의 참조를 만듭니다.  
+6.  **참조 추가** 단추를 선택하여 웹 서비스에 대한 애플리케이션의 참조를 만듭니다.  
   
      새 참조가 **솔루션 탐색기**에서 활성 프로젝트에 대한 Web References 노드 아래에 **웹 참조 이름** 필드에 지정한 이름으로 나타납니다.  
   
-7.  
-  **솔루션 탐색기**에서 Web References 폴더를 확장하여 프로젝트의 항목에서 사용 가능한 웹 참조 클래스에 대한 네임스페이스를 확인합니다.  
+7.  **솔루션 탐색기**에서 Web References 폴더를 확장하여 프로젝트의 항목에서 사용 가능한 웹 참조 클래스에 대한 네임스페이스를 확인합니다.  
   
      프로젝트에 웹 참조를 추가하면 연결된 파일이 **솔루션 탐색기** Web References 폴더 내의 폴더에 표시됩니다.  
   
@@ -126,8 +118,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials
   
 ```  
   
- 
-  **using**(**의 경우 **Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
+ **using**([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 **Import**) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
   
 ```vb  
 Import myNamespace.myReferenceName  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f6da8b7376e03ff5c0ab516aeaef0e6ac538b48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62523630"
 ---
 # <a name="delete-an-alert"></a>Delete an Alert
@@ -36,28 +36,27 @@ ms.locfileid: "62523630"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 경고를 삭제 합니다.**  
+-   **다음을 사용하여 경고를 삭제합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  경고를 제거하면 해당 경고와 연관된 모든 알림도 함께 제거됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 경고를 삭제할 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-delete-an-alert"></a>경고를 삭제하려면  
   
-1.  
-  **개체 탐색기** 에서 더하기 기호를 클릭하여 삭제하려는 SQL Server 에이전트 경고가 포함된 서버를 확장합니다.  
+1.  **개체 탐색기** 에서 더하기 기호를 클릭하여 삭제하려는 SQL Server 에이전트 경고가 포함된 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -65,10 +64,9 @@ ms.locfileid: "62523630"
   
 4.  삭제할 경고를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
-5.  
-  **개체 삭제** 대화 상자에서 올바른 경고를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
+5.  **개체 삭제** 대화 상자에서 올바른 경고를 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-delete-an-alert"></a>경고를 삭제하려면  
   

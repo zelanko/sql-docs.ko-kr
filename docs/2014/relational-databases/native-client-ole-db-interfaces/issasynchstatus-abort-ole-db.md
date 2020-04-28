@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: Abort (OLE DB) | Microsoft Docs'
+title: ISSAsynchStatus::Abort(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b61f5e3e44f9584fc3f93efb521585e3173b6c1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638725"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
@@ -36,10 +36,10 @@ HRESULT Abort(
 ```  
   
 ## <a name="arguments"></a>인수  
- *Hchapter*[in]  
+ *hChapter*[in]  
  작업을 중단할 장의 처리기입니다. 호출되는 개체가 행 집합 개체가 아니거나 작업이 장에 적용되지 않는 경우 호출자가 *hChapter* 를 DB_NULL_HCHAPTER로 설정해야 합니다.  
   
- *Eoperation*[in]  
+ *eOperation*[in]  
  중단할 작업입니다. 값은 다음과 같아야 합니다.  
   
  DBASYNCHOP_OPEN - 취소 요청이 행 세트의 비동기 열기 또는 채우기나 데이터 원본 개체의 비동기 초기화에 적용됩니다.  
@@ -58,23 +58,21 @@ HRESULT Abort(
  공급자 관련 오류가 발생했습니다.  
   
  E_INVALIDARG  
- 
-  *hChapter* 매개 변수가 DB_NULL_HCHAPTER가 아니거나 *eOperation* 이 DBASYNCH_OPEN이 아닙니다.  
+ *hChapter* 매개 변수가 DB_NULL_HCHAPTER가 아니거나 *eOperation* 이 DBASYNCH_OPEN이 아닙니다.  
   
  E_UNEXPECTED  
- **IDBInitialize:: Initialize** 가 호출 되지 않았거나 완료 되지 않은 데이터 원본 개체에 대해 **ISSAsynchStatus:: Abort** 가 호출 되었습니다.  
+ **IDBInitialize::Initialize** 가 취소되지 않은 데이터 원본 개체에서 **ISSAsynchStatus::Abort** 가 호출되었거나 호출이 완료되지 않았습니다.  
   
  **IDBInitialize:: Initialize** 가 호출 되었지만 이후에 초기화 되기 전에 취소 되었거나 시간이 초과 된 데이터 원본 개체에 대해 **ISSAsynchStatus:: Abort** 가 호출 되었습니다. 데이터 원본 개체가 아직 초기화 되지 않았습니다.  
   
- **ITransaction:: Commit** 또는 **ITransaction:: abort** 가 이전에 호출 된 행 집합에 대해 **ISSAsynchStatus:: abort** 가 호출 되었으며 행 집합이 커밋 또는 중단에 남아 있지 않고 좀비 상태에 있습니다.  
+ 이전에**ITransaction::Ab가 호출된 행 집합에서t** 또는 **ITransaction::Ab가 호출된 행 집합에서t** 가 호출된 행 집합에서 **ITransaction::Ab가 호출된 행 집합에서t** was previously called, and the rowset did not survive the commit 가 호출된 행 집합에서 ab가 호출된 행 집합에서t and is in a zombie state.  
   
- 초기화 단계에서 비동기적으로 취소 된 행 집합에 대해 **ISSAsynchStatus:: Abort** 가 호출 되었습니다. 행 집합이 좀비 상태에 있습니다.  
+ 초기화 단계에서 비동기적으로 취소된 행 집합에서**ISSAsynchStatus::Abort** 가 취소되었습니다. 행 집합이 좀비 상태에 있습니다.  
   
 ## <a name="remarks"></a>설명  
  행 집합이나 데이터 원본 개체의 초기화를 중단하면 행 집합이나 데이터 원본 개체가 좀비 상태로 유지되어 **IUnknown** 메서드가 아닌 모든 메서드에서 E_UNEXPECTED를 반환할 수 있습니다. 이 경우 소비자가 사용할 수 있는 유일한 동작은 행 집합이나 데이터 원본 개체를 해제하는 것입니다.  
   
- 
-  **ISSAsynchStatus::Abort** 를 호출하고 DBASYNCHOP_OPEN이 아닌 *eOperation* 값을 전달하면 S_OK가 반환됩니다. 작업이 완료 또는 취소된 것은 아닙니다.  
+ **ISSAsynchStatus::Abort** 를 호출하고 DBASYNCHOP_OPEN이 아닌 *eOperation* 값을 전달하면 S_OK가 반환됩니다. 작업이 완료 또는 취소된 것은 아닙니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [비동기 작업 수행](../native-client/features/performing-asynchronous-operations.md)  

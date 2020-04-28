@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666604"
 ---
 # <a name="delete-operator"></a>운영자 삭제
@@ -26,7 +26,7 @@ ms.locfileid: "62666604"
  **삭제할 개체**  
  삭제할 운영자를 보여 줍니다.  
   
- **다시 할당 대상**  
+ **재할당 대상**  
  삭제할 운영자에 대한 알림을 재할당합니다.  
   
  **속성**  

@@ -26,19 +26,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637621"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
-  
   `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 `xml` 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이 경우 `xml` 데이터 형식 인스턴스를 *형식화*됨 이라고 합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>올바른 형식의 XML 및 xml 데이터 형식  
- 
-  `xml` 데이터 형식은 ISO 표준 `xml` 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
+ `xml` 데이터 형식은 ISO 표준 `xml` 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
   
 ## <a name="xml-schemas"></a>XML 스키마  
  XML 스키마는 다음을 제공합니다.  
@@ -131,16 +129,14 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- 
-  `xml` 유형(형식화된 xml)을 정의할 때 항상 선택 항목인 DOCUMENT/CONTENT 패싯을 지정할 수 있습니다. 예를 들어 형식화된 `xml` 변수를 만들 때 다음과 같이 DOCUMENT/CONTENT 패싯을 추가할 수 있습니다.  
+ `xml` 유형(형식화된 xml)을 정의할 때 항상 선택 항목인 DOCUMENT/CONTENT 패싯을 지정할 수 있습니다. 예를 들어 형식화된 `xml` 변수를 만들 때 다음과 같이 DOCUMENT/CONTENT 패싯을 추가할 수 있습니다.  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
 ```  
   
 ## <a name="document-type-definition-dtd"></a>DTD(문서 유형 정의)  
- 
-  `xml` 데이터 형식의 열, 변수 및 매개 변수는 DTD가 아닌 XML 스키마를 사용하여 형식화될 수 있습니다. 하지만 인라인 DTD는 형식화되지 않은 XML 및 형식화된 XML에 모두 사용하여 기본값을 제공하고 엔터티 참조를 해당 확장 형식으로 바꿀 수 있습니다.  
+ `xml` 데이터 형식의 열, 변수 및 매개 변수는 DTD가 아닌 XML 스키마를 사용하여 형식화될 수 있습니다. 하지만 인라인 DTD는 형식화되지 않은 XML 및 형식화된 XML에 모두 사용하여 기본값을 제공하고 엔터티 참조를 해당 확장 형식으로 바꿀 수 있습니다.  
   
  타사 도구를 사용하여 DTD를 XML 스키마 문서로 변환하고 XML 스키마를 데이터베이스에 로드할 수 있습니다.  
   

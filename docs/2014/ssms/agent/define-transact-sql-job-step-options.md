@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62523886"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Define Transact-SQL Job Step Options
@@ -30,57 +30,47 @@ ms.locfileid: "62523886"
   
      [보안](#Security)  
   
--   **Transact-sql 작업 단계 옵션을 정의 하려면:을 사용 합니다.**  
+-   **다음을 사용하여 Transact-SQL 작업 단계 옵션 정의**  
   
      [SQL Server Management Studio](#SSMS)  
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>Transact-SQL 작업 단계 옵션을 정의하려면  
   
-1.  
-  **개체 탐색기**에서 **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
+1.  **개체 탐색기**에서 **SQL Server 에이전트**, **작업**을 차례로 확장한 다음 편집할 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-2.  
-  **단계** 페이지를 클릭하고 작업 단계를 클릭한 다음 **편집**을 클릭합니다.  
+2.  **단계** 페이지를 클릭하고 작업 단계를 클릭한 다음 **편집**을 클릭합니다.  
   
-3.  
-  **작업 단계 속성** 대화 상자에서 작업 유형이 **T-SQL(Transact-SQL) 스크립트**임을 확인한 다음 **고급** 페이지를 선택합니다.  
+3.  **작업 단계 속성** 대화 상자에서 작업 유형이 **T-SQL(Transact-SQL) 스크립트**임을 확인한 다음 **고급** 페이지를 선택합니다.  
   
-4.  
-  **성공한 경우 동작** 목록에서 작업이 성공한 경우에 수행할 동작을 선택합니다.  
+4.  **성공한 경우 동작** 목록에서 작업이 성공한 경우에 수행할 동작을 선택합니다.  
   
-5.  
-  **다시 시도 횟수** 입력란에 0~9999 사이의 값을 입력하여 다시 시도 횟수를 지정합니다.  
+5.  **다시 시도 횟수** 입력란에 0~9999 사이의 값을 입력하여 다시 시도 횟수를 지정합니다.  
   
-6.  
-  **다시 시도 간격(분)** 입력란에 0~9999 사이의 시간(분)을 입력하여 다시 시도 간격을 지정합니다.  
+6.  **다시 시도 간격(분)** 입력란에 0~9999 사이의 시간(분)을 입력하여 다시 시도 간격을 지정합니다.  
   
-7.  
-  **실패한 경우 동작** 목록에서 작업이 실패한 경우에 수행할 동작을 선택합니다.  
+7.  **실패한 경우 동작** 목록에서 작업이 실패한 경우에 수행할 동작을 선택합니다.  
   
 8.  작업이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트인 경우 다음 옵션을 선택할 수 있습니다.  
   
-    -   
-  **출력 파일**이름을 입력합니다. 기본적으로 작업 단계가 실행될 때마다 파일을 덮어씁니다. 출력 파일을 덮어쓰지 않으려면 **기존 파일에 출력 추가**를 선택합니다. 이 옵션은 **sysadmin** 고정 서버 역할의 멤버만 사용할 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 사용자가 파일 시스템의 임의 파일을 볼 수 없으므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 파일 시스템에 기록된 작업 단계 로그를 볼 수 없습니다.  
+    -   **출력 파일**이름을 입력합니다. 기본적으로 작업 단계가 실행될 때마다 파일을 덮어씁니다. 출력 파일을 덮어쓰지 않으려면 **기존 파일에 출력 추가**를 선택합니다. 이 옵션은 **sysadmin** 고정 서버 역할의 멤버만 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 사용자가 파일 시스템의 임의 파일을 볼 수 없으므로 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 파일 시스템에 기록된 작업 단계 로그를 볼 수 없습니다.  
   
     -   작업 단계를 데이터베이스 테이블에 기록하려면 **테이블에 기록** 을 선택합니다. 기본적으로 작업 단계가 실행될 때마다 테이블 내용을 덮어씁니다. 테이블 내용을 덮어쓰지 않으려면 **테이블의 기존 항목에 출력 추가**를 선택합니다. 작업 단계가 실행된 다음에는 **뷰**를 클릭하여 이 테이블의 내용을 볼 수 있습니다.  
   
     -   출력을 단계 기록에 포함하려면 **기록에 단계 출력 포함** 을 선택합니다. 출력은 오류가 없을 때만 표시됩니다. 또한 출력이 잘릴 수도 있습니다.  
   
-9. 
-  **sysadmin** 고정 서버 역할의 멤버이면서 이 작업 단계를 다른 SQL 로그인으로 실행하려는 경우 **다음 사용자 이름으로 실행** 목록에서 해당 SQL 로그인을 선택합니다.  
+9. **sysadmin** 고정 서버 역할의 멤버이면서 이 작업 단계를 다른 SQL 로그인으로 실행하려는 경우 **다음 사용자 이름으로 실행** 목록에서 해당 SQL 로그인을 선택합니다.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **Transact-sql 작업 단계 옵션을 정의 하려면**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
+ **Transact-SQL 작업 단계 옵션을 정의하려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobStep` 클래스를 사용합니다.  
   

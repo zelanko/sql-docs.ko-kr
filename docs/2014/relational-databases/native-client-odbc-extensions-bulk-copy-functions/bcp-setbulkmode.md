@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688792"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -52,7 +52,7 @@ cbRow
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *속성*  
+ *property*  
  BYTE 유형의 상수입니다. 상수 목록은 주의 섹션의 표를 참조하십시오.  
   
  *pField*  
@@ -77,7 +77,7 @@ cbRow
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE를 사용 하 고 속성 `BCP_FMT_TYPE` 을로 설정 `SQLCHARACTER`하 여 bcp_setcolfmt 합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 속성이로 `BCP_FMT_TYPE` 설정 `SQLNCHAR`된 bcp_setcolfmt|  

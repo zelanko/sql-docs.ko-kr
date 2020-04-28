@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688666"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -59,7 +59,7 @@ szFormatFile
   
  또는**bcp**(대량 복사 유틸리티)는에서 `bcp_readfmt`참조할 수 있는 파일에 사용자 정의 데이터 형식을 저장할 수 있습니다. **Bcp 유틸리티와** **bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
   
- Bcp_control `BCPDELAYREADFMT` *eoption* 매개 변수의 값은 bcp_readfmt [](bcp-control.md) 동작을 수정 합니다.  
+ Bcp_control `BCPDELAYREADFMT` *eoption* 매개 변수의 값은 bcp_readfmt [bcp_control](bcp-control.md) 동작을 수정 합니다.  
   
 > [!NOTE]  
 >  형식 파일은 **bcp** 유틸리티 4.2 이상 버전에서 생성된 파일이어야 합니다.  

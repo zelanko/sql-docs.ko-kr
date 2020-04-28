@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472848"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>연결 예측(중급 데이터 마이닝 자습서)
@@ -136,8 +136,7 @@ ms.locfileid: "62472848"
   
      표가 열린 창으로 변경됩니다. 이 창에서는 예측 쿼리 작성기에서 만든 DMX 문을 보고 수정할 수 있습니다.  
   
-2.  
-  `SELECT` 키워드 다음에 `FLATTENED`를 입력합니다.  
+2.  `SELECT` 키워드 다음에 `FLATTENED`를 입력합니다.  
   
      쿼리의 전체 텍스트가 다음과 같아야 합니다.  
   

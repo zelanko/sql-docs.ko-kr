@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 행 집합 (OLE DB) | Microsoft Docs
+title: LINKEDSERVERS 행 집합(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667338"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS 행 집합(OLE DB)
-  
   **LINKEDSERVERS** 행 집합은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 쿼리에 참여할 수 있는 조직 데이터 원본을 열거합니다.  
   
- 
-  **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
+ **LINKEDSERVERS** 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|Description|  
+|열 이름|유형 표시기|설명|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|연결된 서버의 이름입니다.|  
 |SVR_PRODUCT|DBTYPE_WSTR|연결된 서버 이름이 나타내는 데이터 저장소 유형을 식별하는 제조업체 또는 기타 이름입니다.|  
@@ -39,6 +37,6 @@ ms.locfileid: "62667338"
  행 집합은 SRV_NAME을 기준으로 정렬되며 SRV_NAME에서 하나의 제한이 지원됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [스키마 행 집합 지원 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [스키마 행 집합 지원&#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
   
   

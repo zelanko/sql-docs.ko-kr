@@ -17,24 +17,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703086"
 ---
 # <a name="creating-stored-procedures"></a>저장 프로시저 만들기
   모든 저장 프로시저는 CLR(공용 언어 런타임) 또는 COM(구성 요소 개체 모델) 클래스와 연결되어야 사용할 수 있습니다. 이 클래스는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ACTIVEX® DLL (동적 연결 라이브러리) 형식으로 서버에 설치 되 고 서버나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 어셈블리로 등록 되어야 합니다.  
   
- 저장 프로시저는 서버나 데이터베이스에 등록됩니다. 서버 저장 프로시저는 모든 쿼리 컨텍스트에서 호출할 수 있지만 데이터베이스 저장 프로시저는 데이터베이스 컨텍스트가 저장 프로시저가 정의되어 있는 데이터베이스인 경우에만 액세스할 수 있습니다. 한 어셈블리의 함수에서 다른 어셈블리의 함수를 호출하는 경우 두 어셈블리를 모두 동일한 컨텍스트(서버 또는 데이터베이스)에 등록해야 합니다. 서버 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 배포 된 데이터베이스의 경우를 사용 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 여 어셈블리를 등록할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 디자이너를 사용하여 프로젝트에 어셈블리를 등록할 수 있습니다.  
+ 저장 프로시저는 서버나 데이터베이스에 등록됩니다. 서버 저장 프로시저는 모든 쿼리 컨텍스트에서 호출할 수 있지만 데이터베이스 저장 프로시저는 데이터베이스 컨텍스트가 저장 프로시저가 정의되어 있는 데이터베이스인 경우에만 액세스할 수 있습니다. 한 어셈블리의 함수에서 다른 어셈블리의 함수를 호출하는 경우 두 어셈블리를 모두 동일한 컨텍스트(서버 또는 데이터베이스)에 등록해야 합니다. 서버 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 배포 된 데이터베이스의 경우를 사용 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 여 어셈블리를 등록할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 디자이너를 사용하여 프로젝트에 어셈블리를 등록할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  
   
 ## <a name="registering-a-server-assembly"></a>서버 어셈블리 등록  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 서버 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 아래의 어셈블리 폴더에 나열됩니다. 서버 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 서버 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 아래의 어셈블리 폴더에 나열됩니다. 서버 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
   
 ### <a name="to-create-a-server-assembly"></a>서버 어셈블리를 만들려면  
   
@@ -57,8 +55,7 @@ ms.locfileid: "62703086"
  서버 어셈블리를 등록 한 후 개체 탐색기에서 어셈블리를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 하 여 서버 어셈블리를 구성할 수 있습니다.  
   
 ## <a name="registering-a-database-assembly-on-the-server"></a>서버에서 데이터베이스 어셈블리 등록  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 데이터베이스 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 아래의 어셈블리 폴더에 나열됩니다. 데이터베이스 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 데이터베이스 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 아래의 어셈블리 폴더에 나열됩니다. 데이터베이스 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>서버에서 데이터베이스 어셈블리를 등록하려면  
   
@@ -81,8 +78,7 @@ ms.locfileid: "62703086"
  데이터베이스 어셈블리를 등록 한 후 개체 탐색기에서 어셈블리를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 하 여 데이터베이스 어셈블리를 구성할 수 있습니다.  
   
 ## <a name="registering-a-database-assembly-in-a-project"></a>프로젝트에 데이터베이스 어셈블리 등록  
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 데이터베이스 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 아래의 어셈블리 폴더에 나열됩니다. 데이터베이스 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 데이터베이스 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 아래의 어셈블리 폴더에 나열됩니다. 데이터베이스 어셈블리는 .NET(CLR) 어셈블리와 COM 라이브러리를 모두 포함할 수 있습니다.  
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>Analysis Service 프로젝트에서 데이터베이스 어셈블리를 만들려면  
   

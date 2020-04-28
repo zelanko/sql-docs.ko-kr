@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704566"
 ---
 # <a name="creating-a-table-tutorial"></a>테이블 만들기(자습서)
@@ -57,7 +57,7 @@ ms.locfileid: "62704566"
     GO  
     ```  
   
-### <a name="to-create-a-table"></a>테이블 만들기  
+### <a name="to-create-a-table"></a>테이블 형식 보고서를 만들려면  
   
 -   쿼리 편집기 창에서 다음 코드를 입력하고 실행하여 `Products`라는 간단한 테이블을 만듭니다. 이 테이블에 있는 열의 이름은 `ProductID`, `ProductName`, `Price`및 `ProductDescription`입니다. `ProductID` 열은 테이블의 기본 키입니다. `int`, `varchar(25)`, `money`및 `text` 는 모두 데이터 형식입니다. 행을 삽입하거나 변경할 경우 `Price` 및 `ProductionDescription` 열만 데이터를 가질 수 없습니다. 이 문에는 스키마라고 하는 선택적 요소(`dbo.`)가 포함되어 있습니다. 스키마는 테이블을 소유하는 데이터베이스 개체입니다. 관리자의 경우에 기본 스키마는 `dbo` 입니다. `dbo` 는 데이터베이스 소유자를 나타냅니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62704566"
     ```  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [테이블에서 데이터 삽입 및 업데이트 &#40;자습서&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
+ [테이블에서 데이터 삽입 및 업데이트&#40;자습서&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  

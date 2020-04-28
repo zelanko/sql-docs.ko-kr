@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702040"
 ---
 # <a name="merging-partitions-xmla"></a>파티션 병합(XMLA)
@@ -37,19 +37,15 @@ ms.locfileid: "62702040"
  `MergePartitions` 명령이 실행 되 면 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) 속성에 지정 된 원본 파티션에 저장 된 집계 데이터가 [대상](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) 속성에 지정 된 대상 파티션에 추가 됩니다.  
   
 > [!NOTE]  
->  
-  `Source` 속성은 둘 이상의 파티션 개체 참조를 가질 수 있지만 
-  `Target` 속성은 그럴 수 없습니다.  
+>  `Source` 속성은 둘 이상의 파티션 개체 참조를 가질 수 있지만 `Target` 속성은 그럴 수 없습니다.  
   
- 
-  `Source` 및 `Target`에 모두 지정된 파티션을 성공적으로 병합하려면 두 속성이 같은 측정값 그룹에 포함되어야 하고 같은 집계 디자인을 사용해야 합니다. 그렇지 않은 경우 오류가 발생합니다.  
+ `Source` 및 `Target`에 모두 지정된 파티션을 성공적으로 병합하려면 두 속성이 같은 측정값 그룹에 포함되어야 하고 같은 집계 디자인을 사용해야 합니다. 그렇지 않은 경우 오류가 발생합니다.  
   
- 
-  `Source`에 지정된 파티션은 `MergePartitions` 명령이 완료된 후 삭제됩니다.  
+ `Source`에 지정된 파티션은 `MergePartitions` 명령이 완료된 후 삭제됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  다음 예에서는 **놀이 works DW** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예제 데이터베이스에 있는 **어드벤처 works** 큐브의 **Customer 개수** 측정값 그룹에 있는 모든 파티션을 **Customers_2004** 파티션에 병합 합니다.  
   
 ### <a name="code"></a>코드  

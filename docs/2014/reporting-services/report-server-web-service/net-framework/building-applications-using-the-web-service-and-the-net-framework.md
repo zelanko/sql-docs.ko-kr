@@ -21,19 +21,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5136c67077ff90e7bbbd66ae72fed891267ba7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520350"
 ---
 # <a name="building-applications-using-the-web-service-and-the-net-framework"></a>웹 서비스 및 .NET Framework를 사용하여 애플리케이션 작성
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용 하면 메서드, 기본 형식 및 사용자 정의 복합 형식과 같은 익숙한 프로그래밍 구문을 사용 하 여 웹 서비스 작업을 수행할 수 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]있습니다. 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에는 모든 W3C(World Wide Web 컨소시엄) 표준 호환 웹 서비스를 호출할 수 있는 웹 서비스 클라이언트를 만드는 데 사용할 수 있는 인프라와 도구가 포함되어 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용 하면 메서드, 기본 형식 및 사용자 정의 복합 형식과 같은 익숙한 프로그래밍 구문을 사용 하 여 웹 서비스 작업을 수행할 수 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]있습니다. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에는 모든 W3C(World Wide Web 컨소시엄) 표준 호환 웹 서비스를 호출할 수 있는 웹 서비스 클라이언트를 만드는 데 사용할 수 있는 인프라와 도구가 포함되어 있습니다.  
   
  보고서 서버 웹 서비스 클라이언트는 SOAP(Simple Object Access Protocol) 메시지를 사용하여 보고서 서버와 통신하는 구성 요소 또는 애플리케이션입니다.  
   
- **.NET Framework를 사용 하 여 보고서 서버 웹 서비스 클라이언트를 만들려면 다음 기본 단계를 수행 합니다.**  
+ **.NET Framework를 사용하여 보고서 서버 웹 서비스 클라이언트를 만들려면 다음 기본 단계를 수행하십시오.**  
   
 1.  웹 서비스에 대한 프록시 클래스를 만듭니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62520350"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[웹 서비스 프록시 만들기](creating-the-web-service-proxy.md)|를 사용 하 여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]프로젝트에 프록시 클래스를 추가 하는 방법을 설명 합니다.|  
 |[웹 서비스 인증](web-service-authentication.md)|보고서 서버 웹 서비스에 대한 호출의 인증 방법을 설명합니다.|  
@@ -57,14 +56,11 @@ ms.locfileid: "62520350"
 |[웹 서비스의 URL 속성 설정](setting-the-url-property-of-the-web-service.md)|웹 참조를 만든 다음 프로그래밍 방식으로 웹 서비스 프록시를 새 서버 URL에 지정하는 방법을 설명합니다.|  
 |[웹 서비스 메서드 인수 제공](supplying-web-service-method-arguments.md)|웹 서비스 메서드를 호출하고 메서드 인수를 제공하는 방법을 설명합니다.|  
 |[선택적 웹 서비스 개체에 대한 값 생략](omitting-values-for-optional-web-service-objects.md)|선택적 웹 서비스 개체에 대한 값을 생략하는 방법을 설명합니다.|  
-|[보안 웹 서비스 메서드 사용](using-secure-web-service-methods.md)|
-  **SecureConnectionLevel** 설정 및 이러한 설정이 Reporting Services SOAP API의 사용에 영향을 미치는 방식에 대해 설명합니다.|  
+|[보안 웹 서비스 메서드 사용](using-secure-web-service-methods.md)|**SecureConnectionLevel** 설정 및 이러한 설정이 Reporting Services SOAP API의 사용에 영향을 미치는 방식에 대해 설명합니다.|  
 |[디바이스 정보 설정을 렌더링 확장 프로그램에 전달](passing-device-information-settings-to-rendering-extensions.md)|보고서를 다양한 형식으로 렌더링하는 데 사용되는 디바이스 정보 설정을 설명합니다.|  
 |[Reporting Services 배달 확장 프로그램 설정](reporting-services-delivery-extension-settings.md)|보고서 서버 전자 메일을 사용하여 보고서를 배달하는 데 사용되는 설정을 설명합니다.|  
-|[Reporting Services SOAP 헤더 사용](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더의 사용에 대해 설명합니다.|  
-|[Reporting Services의 예외 처리 소개](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 오류를 처리하는 방법에 대해 설명합니다.|  
+|[Reporting Services SOAP 헤더 사용](../../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 SOAP 헤더의 사용에 대해 설명합니다.|  
+|[Reporting Services의 예외 처리 소개](../../report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 오류를 처리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 웹 서비스](../report-server-web-service.md)   

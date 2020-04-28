@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653865"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>3단원: Market Basket 마이닝 구조 처리
@@ -33,8 +33,7 @@ ms.locfileid: "62653865"
   
 -   마이닝 구조의 열 나열  
   
--   
-  `SHAPE`을 사용하여 학습 데이터 정의  
+-   `SHAPE`을 사용하여 학습 데이터 정의  
   
  다음은 `INSERT INTO` 문의 일반적인 예입니다.  
   
@@ -61,8 +60,7 @@ RELATE [<case key>] TO [<foreign key>]
 INSERT INTO MINING STRUCTURE [<mining structure name>]  
 ```  
   
- 코드의 다음 줄에서는 마이닝 구조에서 정의한 열을 지정합니다. 마이닝 구조의 각 열을 나열해야 하며 각 열을 원본 쿼리 데이터 내에 포함된 열에 매핑해야 합니다. 
-  `SKIP`을 사용하여 원본 데이터에는 있지만 마이닝 구조에는 없는 열을 무시할 수 있습니다. 를 사용 `SKIP`하는 방법에 대 한 자세한 내용은 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)를 참조 하세요.  
+ 코드의 다음 줄에서는 마이닝 구조에서 정의한 열을 지정합니다. 마이닝 구조의 각 열을 나열해야 하며 각 열을 원본 쿼리 데이터 내에 포함된 열에 매핑해야 합니다. `SKIP`을 사용하여 원본 데이터에는 있지만 마이닝 구조에는 없는 열을 무시할 수 있습니다. 를 사용 `SKIP`하는 방법에 대 한 자세한 내용은 [INSERT INTO &#40;DMX&#41;](/sql/dmx/insert-into-dmx)를 참조 하세요.  
   
 ```  
 (  
@@ -96,8 +94,7 @@ RELATE [<case key>] TO [<foreign key>]
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>INSERT INTO를 사용하여 마이닝 구조를 처리하려면  
   
-1.  
-  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 가리킨 다음 **DMX**를 클릭합니다.  
   
      비어 있는 새 쿼리가 포함된 쿼리 편집기가 열립니다.  
   
@@ -109,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     Market Basket  
@@ -123,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     [OrderNumber],  
@@ -131,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     구문 중 `Products`는 SHAPE 문에 의해 정의된 Products 테이블을 참조합니다. 
-  `SKIP`은 원본 데이터에 키로 존재하는 Model 열을 무시하는 데 사용되지만 마이닝 구조에서는 사용되지 않습니다.  
+     구문 중 `Products`는 SHAPE 문에 의해 정의된 Products 테이블을 참조합니다. `SKIP`은 원본 데이터에 키로 존재하는 Model 열을 무시하는 데 사용되지만 마이닝 구조에서는 사용되지 않습니다.  
   
 5.  다음 내용을  
   
@@ -147,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     다음으로 바꿀 수 있습니다.  
+     다음으로 바꿉니다.  
   
     ```  
     SHAPE {  
@@ -164,8 +160,7 @@ RELATE [<case key>] TO [<foreign key>]
   
      원본 쿼리는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 샘플 프로젝트 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 정의 된 데이터 원본을 참조 합니다. 이 쿼리는 이 데이터 원본을 사용하여 vAssocSeqLineItems 및 vAssocSeqOrders 뷰에 액세스합니다. 이러한 뷰에는 마이닝 모델의 학습에 사용할 원본 데이터가 포함되어 있습니다. 이 프로젝트 또는 이러한 뷰를 만들지 않은 경우 [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)를 참조 하세요.  
   
-     
-  `SHAPE` 명령 내에서 `OPENQUERY`를 사용하여 두 개의 쿼리를 정의합니다. 첫 번째 쿼리는 부모 테이블을 정의하고 두 번째 쿼리는 중첩 테이블을 정의합니다. 이 두 개의 테이블은 두 테이블 모두에 있는 OrderNumber 열을 사용하여 연결됩니다.  
+     `SHAPE` 명령 내에서 `OPENQUERY`를 사용하여 두 개의 쿼리를 정의합니다. 첫 번째 쿼리는 부모 테이블을 정의하고 두 번째 쿼리는 중첩 테이블을 정의합니다. 이 두 개의 테이블은 두 테이블 모두에 있는 OrderNumber 열을 사용하여 연결됩니다.  
   
      이제 전체 문이 다음과 같아야 합니다.  
   
@@ -186,8 +181,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [Products]  
     ```  
   
-6.  
-  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
+6.  **파일** 메뉴에서 **다른 이름으로 DMXQuery1.dmx 저장**을 클릭합니다.  
   
 7.  다른 이름 **으로 저장** 대화 상자에서 해당 폴더로 이동한 다음 파일 `Process Market Basket.dmx`이름을로 합니다.  
   

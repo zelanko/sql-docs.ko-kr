@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637874"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 절의 기본 구문
@@ -29,7 +29,7 @@ ms.locfileid: "62637874"
 > [!IMPORTANT]  
 >  XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 다음은 [FOR 절 (transact-sql)](/sql/t-sql/queries/select-for-clause-transact-sql)에 설명 된 기본 구문입니다.  
+ 다음은 [FOR 절(Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql)에 설명된 기본 구문입니다.  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01b536c24661ce223e91cbe791c70529558388ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657277"
 ---
 # <a name="name-element-for-schema-dta"></a>Schema의 Name 요소(DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62657277"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `string`, 1에서 255자 사이|  
+|**데이터 형식 및 길이**|`string`, 1에서 255자 사이|  
 |**기본값**|없음|  
 |**발생 빈도**|각 **Schema** 요소에 한 번만 지정해야 합니다.|  
   

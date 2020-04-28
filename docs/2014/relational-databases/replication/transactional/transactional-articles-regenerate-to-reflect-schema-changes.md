@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655508"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성
@@ -43,7 +43,7 @@ ms.locfileid: "62655508"
      다음에 관련 스키마를 변경하면 이 스크립트는 동일한 트랜잭션 내 각 구독자에서 DDL 명령으로 실행됩니다. 스키마를 변경한 다음에는 스크립트 등록이 취소됩니다. 후속 스키마 변경 이후에 스크립트를 실행하려면 해당 스크립트를 다시 등록해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](transactional-articles-specify-how-changes-are-propagated.md)   
+ [트랜잭션 아티클에 대 한 변경 내용을 전파 하는 방법 지정](transactional-articles-specify-how-changes-are-propagated.md)   
  [게시 데이터베이스의 스키마 변경](../publish/make-schema-changes-on-publication-databases.md)  
   
   

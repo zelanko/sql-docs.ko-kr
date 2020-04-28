@@ -17,18 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62509985"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML 입력 파일 참조(데이터베이스 엔진 튜닝 관리자)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]튜닝 관리자는 XML 입력 파일을 사용 하 여 데이터베이스를 튜닝할 수 있습니다. 이 XML 파일은 튜닝 세션에 사용할 데이터베이스, 테이블, 작업 파일 또는 테이블 및 튜닝 옵션을 지정합니다. 또한 이 파일을 사용하면 "가정(what-if)" 분석을 수행하기 위한 사용자 지정 구성을 지정할 수 있습니다.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자는 XML 입력 파일을 사용하여 데이터베이스를 튜닝할 수 있습니다. 이 XML 파일은 튜닝 세션에 사용할 데이터베이스, 테이블, 작업 파일 또는 테이블 및 튜닝 옵션을 지정합니다. 또한 이 파일을 사용하면 "가정(what-if)" 분석을 수행하기 위한 사용자 지정 구성을 지정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 입력 파일은 튜닝 세션 설정을 지정하는 텍스트 또는 기타 요소가 각각 포함되어 있는 XML 요소의 계층을 포함합니다. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 입력 파일은 올바른 형식의 XML에 대한 표준을 따라야 하므로 모든 요소 이름이 대/소문자를 구분합니다. 요소는 파스칼 대/소문자를 사용하여 지정하는 데 이는 첫 글자가 대문자이고 이후의 모든 연결 단어의 첫 글자가 대문자라는 것을 의미합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 입력 파일은 튜닝 세션 설정을 지정하는 텍스트 또는 기타 요소가 각각 포함되어 있는 XML 요소의 계층을 포함합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 XML 입력 파일은 올바른 형식의 XML에 대한 표준을 따라야 하므로 모든 요소 이름이 대/소문자를 구분합니다. 요소는 파스칼 대/소문자를 사용하여 지정하는 데 이는 첫 글자가 대문자이고 이후의 모든 연결 단어의 첫 글자가 대문자라는 것을 의미합니다.  
   
  모든 요소 값은 XML 명명 규칙을 따라야 합니다. 이러한 규칙에 대한 자세한 내용은 MSDN Library에서 [XML 텍스트 콘텐츠(XML Textual Content)](https://go.microsoft.com/fwlink/?LinkId=7614) 를 참조하십시오.  
   
@@ -40,73 +38,73 @@ ms.locfileid: "62509985"
   
 ## <a name="dtaxml-root-element"></a>DTAXML 루트 요소  
   
--   [DTA&#41;&#40;하는 DTAXML 요소](dtaxml-element-dta.md)  
+-   [DTAXML 요소&#40;DTA&#41;](dtaxml-element-dta.md)  
   
 ## <a name="dtainput-elements"></a>DTAInput 요소  
   
--   [DTAInput 요소 &#40;DTA&#41;](dtainput-element-dta.md)  
+-   [DTAInput 요소&#40;DTA&#41;](dtainput-element-dta.md)  
   
 -   [Server 요소&#40;DTA&#41;](server-element-dta.md)  
   
--   [DTA&#41;&#40;작업 요소](workload-element-dta.md)  
+-   [Workload 요소&#40;DTA&#41;](workload-element-dta.md)  
   
--   [TuningOptions 요소 &#40;DTA&#41;](tuningoptions-element-dta.md)  
+-   [TuningOptions 요소&#40;DTA&#41;](tuningoptions-element-dta.md)  
   
--   [구성 요소 &#40;DTA&#41;](configuration-element-dta.md)  
+-   [Configuration 요소&#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Server 요소  
   
--   [서버 &#40;DTA&#41;에 대 한 Name 요소](name-element-for-server-dta.md)  
+-   [Server의 Name 요소&#40;DTA&#41;](name-element-for-server-dta.md)  
   
--   [서버 &#40;DTA&#41;에 대 한 Database 요소](database-element-for-server-dta.md)  
+-   [Server의 Database 요소&#40;DTA&#41;](database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Workload 요소  
   
--   [DTA&#41;&#40;File 요소](file-element-dta.md)  
+-   [File 요소&#40;DTA&#41;](file-element-dta.md)  
   
--   [DTA&#41;&#40;작업에 대 한 Database 요소](database-element-for-workload-dta.md)  
+-   [Workload의 Database 요소&#40;DTA&#41;](database-element-for-workload-dta.md)  
   
--   [EventString 요소 &#40;DTA&#41;](eventstring-element-dta.md)  
+-   [EventString 요소&#40;DTA&#41;](eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>튜닝 옵션 요소  
   
--   [TuningTimeInMin 요소 &#40;DTA&#41;](tuningtimeinmin-element-dta.md)  
+-   [TuningTimeInMin 요소&#40;DTA&#41;](tuningtimeinmin-element-dta.md)  
   
--   [StorageBoundInMB 요소 &#40;DTA&#41;](storageboundinmb-element-dta.md)  
+-   [StorageBoundInMB 요소&#40;DTA&#41;](storageboundinmb-element-dta.md)  
   
--   [TestServer 요소 &#40;DTA&#41;](testserver-element-dta.md)  
+-   [TestServer 요소&#40;DTA&#41;](testserver-element-dta.md)  
   
--   [FeatureSet 요소 &#40;DTA&#41;](featureset-element-dta.md)  
+-   [FeatureSet 요소&#40;DTA&#41;](featureset-element-dta.md)  
   
--   [DTA&#41;&#40;분할 요소](partitioning-element-dta.md)  
+-   [Partitioning 요소&#40;DTA&#41;](partitioning-element-dta.md)  
   
--   [Droponly 모드 요소 &#40;DTA&#41;](droponlymode-element-dta.md)  
+-   [DropOnlyMode 요소&#40;DTA&#41;](droponlymode-element-dta.md)  
   
--   [KeepExisting 요소 &#40;DTA&#41;](keepexisting-element-dta.md)  
+-   [KeepExisting 요소&#40;DTA&#41;](keepexisting-element-dta.md)  
   
--   [OnlineIndexOperation 요소 &#40;DTA&#41;](onlineindexoperation-element-dta.md)  
+-   [OnlineIndexOperation 요소&#40;DTA&#41;](onlineindexoperation-element-dta.md)  
   
--   [DatabaseToConnect 요소 &#40;DTA&#41;](databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect 요소&#40;DTA&#41;](databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>Configuration 요소  
   
--   [Configuration &#40;DTA&#41;에 대 한 Server 요소](server-element-for-configuration-dta.md)  
+-   [Configuration의 Server 요소&#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [DTA&#41;구성 &#40;에 대 한 Database 요소](database-element-for-configuration-dta.md)  
+-   [Configuration의 Database 요소&#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
--   [DTA&#41;&#40;권장 사항 요소](recommendation-element-dta.md)  
+-   [Recommendation 요소&#40;DTA&#41;](recommendation-element-dta.md)  
   
--   [DTA&#41;&#40;요소 만들기](create-element-dta.md)  
+-   [Create 요소&#40;DTA&#41;](create-element-dta.md)  
   
--   [DTA&#41;&#40;Index 요소](index-element-dta.md)  
+-   [Index 요소&#40;DTA&#41;](index-element-dta.md)  
   
--   [DTA&#41;인덱스 &#40;에 대 한 Name 요소](name-element-for-index-dta.md)  
+-   [Index의 Name 요소&#40;DTA&#41;](name-element-for-index-dta.md)  
   
--   [DTA&#41;인덱스 &#40;에 대 한 Column 요소](column-element-for-index-dta.md)  
+-   [Index의 Column 요소&#40;DTA&#41;](column-element-for-index-dta.md)  
   
--   [DTA&#41;열 &#40;에 대 한 Name 요소](name-element-for-column-dta.md)  
+-   [Column의 Name 요소&#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [DTA&#41;인덱스 &#40;파일 그룹 요소](filegroup-element-for-index-dta.md)  
+-   [Index의 Filegroup 요소&#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Database 요소  
   
@@ -114,11 +112,11 @@ ms.locfileid: "62509985"
   
 -   [Database의 Schema 요소&#40;DTA&#41;](schema-element-for-database-dta.md)  
   
--   [DTA&#41;스키마 &#40;에 대 한 Name 요소](name-element-for-schema-dta.md)  
+-   [Schema의 Name 요소&#40;DTA&#41;](name-element-for-schema-dta.md)  
   
--   [DTA&#41;스키마 &#40;에 대 한 Table 요소](table-element-for-schema-dta.md)  
+-   [Schema의 Table 요소&#40;DTA&#41;](table-element-for-schema-dta.md)  
   
--   [DTA&#41;테이블 &#40;에 대 한 Name 요소](name-element-for-table-dta.md)  
+-   [Table의 Name 요소&#40;DTA&#41;](name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  

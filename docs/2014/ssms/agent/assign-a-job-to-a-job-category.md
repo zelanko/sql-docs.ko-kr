@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473204"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>작업 범주에 작업 할당
@@ -30,19 +30,18 @@ ms.locfileid: "62473204"
  작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 작업을 기본 제공 작업 범주에 할당하거나 사용자 정의 작업 범주를 만든 다음 여기에 작업을 할당할 수 있습니다.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
   
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>작업 범주에 작업을 할당하려면  
   
-1.  
-  **개체 탐색기**에서 더하기 기호를 클릭하여 작업을 작업 범주에 할당하려는 서버를 확장합니다.  
+1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업을 작업 범주에 할당하려는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62473204"
 6.  **확인**을 클릭합니다.  
   
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>작업 범주에 작업을 할당하려면  
   
@@ -79,8 +78,8 @@ ms.locfileid: "62473204"
   
   
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **작업 범주에 작업을 할당 하려면**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
+ **작업 범주에 작업을 할당하려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobCategory` 클래스를 사용합니다.  
   

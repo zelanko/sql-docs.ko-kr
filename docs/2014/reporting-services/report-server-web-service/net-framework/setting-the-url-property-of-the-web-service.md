@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520289"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>웹 서비스의 URL 속성 설정
-  응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언제 든 지 응용 프로그램이 현재 지정 된 보고서 서버 웹 서비스의 기본 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 다음은 그 예입니다.  
+  응용 프로그램에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 언제 든 지 응용 프로그램이 현재 지정 된 보고서 서버 웹 서비스의 기본 URL을 수정할 수 있습니다. 그러려면 서비스 개체의 **Url** 속성을 설정하기만 됩니다. 예를 들어:  
   
 ```vb  
 Dim rs As New ReportingService2010()  

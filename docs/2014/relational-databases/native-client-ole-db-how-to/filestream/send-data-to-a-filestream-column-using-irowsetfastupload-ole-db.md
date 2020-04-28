@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f24786c95cde089c159945ecd58075139163e3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643331"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
@@ -23,12 +23,11 @@ ms.locfileid: "62643331"
  Filestream 기능에 대 한 자세한 내용은 [Filestream Support &#40;OLE DB&#41;](../../native-client/ole-db/filestream-support-ole-db.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
- 이 샘플을 컴파일하고 실행 하기 전에 FILESTREAM 지원 ([Filestream 설정 및 구성](../../blob/enable-and-configure-filestream.md))을 사용 하도록 설정 합니다.  
+ 이 샘플을 컴파일하고 실행하기 전에 FILESTREAM 지원을 설정합니다([FILESTREAM 사용 및 구성](../../blob/enable-and-configure-filestream.md)).  
   
  INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
+ 서버에는 C:\DBFsa라는 디렉터리가 있어야 합니다. 예제에서는 이 디렉터리에 데이터베이스를 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에는 이 위치에 대한 쓰기 권한이 있어야 합니다(예: 로컬 시스템 계정으로 로그온).  
   
  첫 번째 코드 목록을 복사하고 ISSHelper.h라는 파일로 붙여 넣습니다.  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702688"
 ---
 # <a name="calculations"></a>새 명명된 집합
@@ -31,8 +31,7 @@ ms.locfileid: "62702688"
   
  측정값 차원을 비롯하여 모든 차원에서 계산 멤버를 정의할 수 있습니다. 측정값 차원에서 생성한 계산 멤버를 계산 측정값이라고 합니다.  
   
- 대개 계산 멤버는 큐브에 이미 있는 데이터를 기반으로 하지만 데이터를 산술 연산자, 숫자 및 함수와 결합하여 복잡한 식을 만들 수 있습니다. 또한 LookupCube와 같은 MDX 함수를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 다른 큐브에 있는 데이터에 액세스할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 표준 Visual Studio 함수 라이브러리도 제공하므로 저장 프로시저를 사용하여 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 이외의 원본에서 데이터를 검색할 수 있습니다. 저장 프로시저에 대 한 자세한 내용은 [저장 프로시저 정의](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)를 참조 하세요.  
+ 대개 계산 멤버는 큐브에 이미 있는 데이터를 기반으로 하지만 데이터를 산술 연산자, 숫자 및 함수와 결합하여 복잡한 식을 만들 수 있습니다. 또한 LookupCube와 같은 MDX 함수를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 다른 큐브에 있는 데이터에 액세스할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 표준 Visual Studio 함수 라이브러리도 제공하므로 저장 프로시저를 사용하여 현재 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 이외의 원본에서 데이터를 검색할 수 있습니다. 저장 프로시저에 대 한 자세한 내용은 [저장 프로시저 정의](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)를 참조 하세요.  
   
  예를 들어 해운 회사의 중역이 분량 단위당 수익을 기준으로 수익성이 더 좋은 수송 화물 유형을 결정하려는 경우에는 Cargo, Fleet 및 Time 차원과 Price_to_Ship, Cost_to_Ship, Volume_in_Cubic_Meters 측정값이 포함된 Shipments 큐브를 사용합니다. 그러나 이 큐브에는 수익성에 대한 측정값이 없습니다. 다음 식에서 기존 측정값을 결합하여 큐브에 Profit_per_Cubic_Meter라는 측정값으로 계산 멤버를 만들 수 있습니다.  
   

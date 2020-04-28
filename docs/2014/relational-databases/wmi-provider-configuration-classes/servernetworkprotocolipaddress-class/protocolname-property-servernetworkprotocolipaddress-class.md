@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6b750e435ab31fae25877cd6c53702aeeec2670d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643136"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>ProtocolName 속성(ServerNetworkProtocolIPAddress 클래스)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]네트워크 프로토콜에 대 한 IP 주소를 나타내는 [ServerNetworkProtocolIPAdress 클래스](servernetworkprotocolipaddress-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

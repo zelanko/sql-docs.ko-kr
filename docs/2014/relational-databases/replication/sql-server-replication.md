@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626156"
 ---
 # <a name="sql-server-replication"></a>SQL Server 복제
@@ -48,14 +48,14 @@ ms.locfileid: "62626156"
   
 ## <a name="publications-and-articles"></a>게시 및 문서 
   
--   [게시 만들기](publish/create-a-publication.md)    
+-   [Create a Publication](publish/create-a-publication.md)    
 -   [아티클 정의](publish/define-an-article.md)   
 -   [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)   
 -   [아티클 속성 보기 및 수정](publish/view-and-modify-article-properties.md)    
 -   [게시 삭제](publish/delete-a-publication.md)   
 -   [아티클 삭제](publish/delete-an-article.md)    
--   [Oracle Database에서 게시 만들기](publish/create-a-publication-from-an-oracle-database.md)   
--   [구독에 대 한 만료 기간 설정](publish/set-the-expiration-period-for-subscriptions.md)  
+-   [Oracle 데이터베이스에서 게시 만들기](publish/create-a-publication-from-an-oracle-database.md)   
+-   [구독에 대한 만료 기간 설정](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [스키마 옵션 지정](publish/specify-schema-options.md)  
 -   [스키마 변경 내용 복제](publish/replicate-schema-changes.md)    
 -   [Id 열 관리](publish/manage-identity-columns.md)   
@@ -77,11 +77,11 @@ ms.locfileid: "62626156"
 ### <a name="transactional-replication-options"></a>트랜잭션 복제 옵션  
   
 -   [트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [트랜잭션 게시에 대 한 구독 업데이트 설정](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>병합 복제 옵션  
   
--   [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [병합 테이블 아티클 간의 논리적 레코드 관계 정의](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
 -   [병합 복제 속성 지정](publish/specify-merge-replication-properties.md)    
 -   [병합 아티클 해결 프로그램 지정](publish/specify-a-merge-article-resolver.md)    
 
@@ -101,17 +101,17 @@ ms.locfileid: "62626156"
 ## <a name="synchronize-subscriptions"></a>구독 동기화  
   
 -   [초기 스냅샷 만들기 및 적용](create-and-apply-the-initial-snapshot.md)   
--   [매개 변수가 있는 필터를 사용 하 여 병합 게시에 대 한 스냅숏 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
+-   [매개 변수가 있는 필터로 병합 게시에 대한 스냅샷 만들기](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [트랜잭션 구독을 백업에서 초기화](initialize-a-transactional-subscription-from-a-backup.md)    
--   [수동으로 구독 초기화](initialize-a-subscription-manually.md)    
+-   [수동 구독 초기화](initialize-a-subscription-manually.md)    
 -   [끌어오기 구독 동기화](synchronize-a-pull-subscription.md)    
 -   [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)   
 -   [구독 다시 초기화](reinitialize-a-subscription.md)    
 -   [동기화 중 스크립트 실행](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
--   [병합 아티클에 대 한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)  
--   [비즈니스 논리 처리기를 디버그 하 &#40;복제 프로그래밍&#41;](debug-a-business-logic-handler-replication-programming.md)    
+-   [병합 아티클에 대한 비즈니스 논리 처리기 구현](implement-a-business-logic-handler-for-a-merge-article.md)  
+-   [비즈니스 논리 처리기 디버깅&#40;복제 프로그래밍&#41;](debug-a-business-logic-handler-replication-programming.md)    
 -   [동기화 하는 동안 트리거 및 제약 조건의 동작 제어](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
--   [병합 아티클에 대 한 사용자 지정 충돌 해결 프로그램 구현](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
+-   [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
 ## <a name="administeration"></a>Administeration 
   

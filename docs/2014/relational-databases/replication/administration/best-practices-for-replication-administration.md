@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629635"
 ---
 # <a name="best-practices-for-replication-administration"></a>최선의 복제 관리 방법
@@ -58,13 +58,12 @@ ms.locfileid: "62629635"
   
 -   구독 데이터베이스  
   
--   게시자, 배포자 및 모든 구독자의 **msdb** 데이터베이스 및 **master** 데이터베이스  
+-   게시자, 배포자 및 모든 구독자의**msdb** 데이터베이스 및 **master** 데이터베이스  
   
  복제된 데이터베이스의 경우 데이터를 백업 및 복원할 때 특별히 주의를 기울여야 합니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
 ## <a name="script-the-replication-topology"></a>복제 토폴로지 스크립팅  
- 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 스크립트는 마법사 (예: 새 게시 마법사) 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 구성 요소를 만든 후에 만들 수 있습니다. 
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 **sqlcmd**를 사용하여 스크립트를 확인, 수정 및 실행할 수 있습니다. 백업 파일과 함께 스크립트를 저장하여 복제 토폴로지를 다시 구성할 때 사용할 수 있습니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
+ 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 구성 요소를 만든 후에 마법사(예: 새 게시 마법사) 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스크립트를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 **sqlcmd**를 사용하여 스크립트를 확인, 수정 및 실행할 수 있습니다. 백업 파일과 함께 스크립트를 저장하여 복제 토폴로지를 다시 구성할 때 사용할 수 있습니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
  속성이 변경된 경우 구성 요소를 다시 스크립팅해야 합니다. 트랜잭션 복제에서 사용자 지정 저장 프로시저를 사용할 경우 각 프로시저의 복사본을 스크립트와 함께 저장해야 합니다. 프로시저가 변경되면 복사본도 업데이트해야 합니다. 일반적으로 프로시저는 스키마가 변경되거나 애플리케이션 요구 사항이 변경될 때 업데이트됩니다. 사용자 지정 프로시저에 대한 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
@@ -115,8 +114,7 @@ ms.locfileid: "62629635"
   
 -   복제 모니터는 복제를 모니터링하는 가장 중요한 도구로 이를 사용하여 복제 토폴로지의 전체적 상태를 모니터링할 수 있습니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 RMO(복제 관리 개체)는 복제 모니터링을 위한 인터페이스를 제공합니다. 자세한 내용은 [Monitoring Replication](../monitoring-replication.md)을 참조하세요.  
   
 -   복제 성능을 모니터링하는 데에는 시스템 모니터도 유용할 수 있습니다. 자세한 내용은 [Monitoring Replication with System Monitor](../monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.  
   

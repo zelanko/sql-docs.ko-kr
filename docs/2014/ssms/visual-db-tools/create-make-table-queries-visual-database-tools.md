@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676312"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>테이블 만들기 쿼리 만들기(Visual Database Tools)
@@ -59,11 +59,9 @@ WHERE country = 'UK'
   
 1.  하나 이상의 원본 테이블을 다이어그램 창에 추가합니다.  
   
-2.  
-  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
+2.  **쿼리 디자이너** 메뉴에서 **형식 변경**을 가리킨 다음 **테이블 만들기**를 클릭합니다.  
   
-3.  
-  **테이블 만들기** 대화 상자에서 대상 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지와 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
+3.  **테이블 만들기** 대화 상자에서 대상 테이블의 이름을 입력합니다. 쿼리 및 뷰 디자이너는 이 이름이 이미 사용되고 있는지와 사용자에게 테이블을 만들 수 있는 권한이 있는지를 확인하지 않습니다.  
   
      다른 데이터베이스에 대상 테이블을 만들려면 대상 데이터베이스의 이름, 소유자(필요한 경우) 및 테이블의 이름을 포함하는 정규화된 테이블 이름을 지정합니다.  
   

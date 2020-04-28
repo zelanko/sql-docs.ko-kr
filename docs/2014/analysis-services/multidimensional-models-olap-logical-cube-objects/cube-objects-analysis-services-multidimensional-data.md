@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702638"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>큐브 개체(Analysis Services - 다차원 데이터)
@@ -33,7 +33,7 @@ ms.locfileid: "62702638"
 |||  
 |-|-|  
 |항목||  
-|[작업 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
+|[동작&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)||  
 |[새 명명된 집합](calculations.md)||  
 |[큐브 셀 Analysis Services 다차원 데이터를 &#40;&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
@@ -41,9 +41,9 @@ ms.locfileid: "62702638"
 |[큐브 저장소 &#40;Analysis Services 다차원 데이터&#41;](cube-storage-analysis-services-multidimensional-data.md)||  
 |[큐브 번역](cube-translations.md)||  
 |[차원 관계](dimension-relationships.md)||  
-|[다차원 모델의 Kpi&#41; &#40;핵심 성과 지표](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
+|[다차원 모델의 KPI&#40;핵심 성과 지표&#41;](../multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)||  
 |[측정값 및 측정값 그룹](../multidimensional-models/measures-and-measure-groups.md)||  
-|[파티션 &#40;Analysis Services 다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)||  
+|[파티션&#40;Analysis Services - 다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)||  
 |[큐브 뷰](perspectives.md)||  
   
   

@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637929"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
   다음 쿼리는 문서 구조를 설명하는 XMLDATA 스키마를 반환합니다.  
   
 ## <a name="example"></a>예제  

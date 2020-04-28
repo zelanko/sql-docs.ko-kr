@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a6813371e7641af1369f94f875ca0d9f96ad3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470060"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport 속성(ServerNetworkProtocol 클래스)
@@ -37,7 +37,7 @@ object
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 [Protocolname 속성 (ServerNetworkProtocol 클래스)](servernetworkprotocol-class.md) 개체입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

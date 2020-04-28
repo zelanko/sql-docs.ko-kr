@@ -11,26 +11,25 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653786"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>3단원: 웹 서비스에 액세스
+# <a name="lesson-3-accessing-the-web-service"></a>3단원: Web Service에 액세스
   보고서 서버 웹 서비스에 대한 참조를 프로젝트에 추가한 후에는 웹 서비스의 프록시 클래스 인스턴스를 만듭니다. 그런 다음 프록시 클래스에서 메서드를 호출하여 웹 서비스의 메서드에 액세스할 수 있습니다. 애플리케이션에서 이러한 메서드를 호출하면 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 에 의해 생성된 프록시 클래스 코드가 사용자 애플리케이션과 웹 서비스간의 통신을 처리합니다.  
   
  먼저 웹 서비스의 프록시 클래스 인스턴스인 <xref:ReportService2010.ReportingService2010>를 만듭니다. 그런 다음 프록시 클래스를 사용하여 웹 서비스의 <xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드를 호출합니다. 이 호출로 예제 보고서인 Company Sales에 대한 이름 및 설명을 검색할 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 다음은 그 예입니다.  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services에서 실행되고 있는 웹 서비스에 액세스할 경우 "ReportServer" 경로에 "$SQLExpress"를 추가해야 합니다. 예를 들어:  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
 ### <a name="to-access-the-web-service"></a>웹 서비스에 액세스하려면  
   
-1.  먼저 코드 파일에 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)](`using`의 경우 `Imports`) 지시문을 추가하여 Program.cs 파일([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)에 네임스페이스를 추가해야 합니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다.  
+1.  먼저 코드 파일에 `using`([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 `Imports`) 지시문을 추가하여 Program.cs 파일([!INCLUDE[vbprvb](../includes/vbprvb-md.md)]의 경우 Module1.vb)에 네임스페이스를 추가해야 합니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다.  
   
 2.  이를 위해 코드 파일 시작 위치에 다음 코드를 추가합니다.  
   

@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62634277"
 ---
 # <a name="change-the-environment-layout"></a>환경 레이아웃 변경
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 구성 요소는 서로 화면 공간을 차지하려고 합니다. 공간을 더 확보하려는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소를 닫거나 숨기거나 이동할 수 있습니다. 이 페이지의 연습에서는 구성 요소를 다른 위치로 이동합니다.  
   
 ## <a name="closing-and-hiding-components"></a>구성 요소 닫기 및 숨기기  
@@ -33,12 +32,10 @@ ms.locfileid: "62634277"
   
 4.  압정을 다시 클릭하여 개체 탐색기를 열린 위치에 고정합니다.  
   
-5.  
-  **보기** 메뉴에서 **등록된 서버** 를 클릭하여 등록된 서버를 복원합니다.  
+5.  **보기** 메뉴에서 **등록된 서버** 를 클릭하여 등록된 서버를 복원합니다.  
   
 ## <a name="moving-components"></a>구성 요소 이동  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 호스팅하는 환경에서는 구성 요소를 이동하여 다양한 구성에서 도킹할 수 있습니다.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 호스팅하는 환경에서는 구성 요소를 이동하여 다양한 구성에서 도킹할 수 있습니다.  
   
 #### <a name="to-practice-moving-components"></a>구성 요소 이동을 연습하려면  
   
@@ -47,8 +44,7 @@ ms.locfileid: "62634277"
 2.  등록된 서버를 화면의 여러 위치로 끕니다. 화면의 여러 영역에서 파랑 도킹 정보가 나타납니다. 화살표는 해당 위치에서 구성 요소를 놓을 경우 창이 프레임 상단, 하단 또는 측면에 도킹됨을 나타냅니다. 구성 요소를 화살표로 이동하면 대상 위치에서 기본 화면이 어두워집니다. 가운데 원은 구성 요소가 다른 구성 요소와 공간을 공유함을 나타냅니다. 가운데에서 놓으면 사용 가능한 구성 요소가 프레임 내에 탭으로 나타납니다.  
   
 ## <a name="undocking-components"></a>구성 요소 도킹 해제  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소의 표시를 사용자 지정할 수 있습니다.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소의 표시를 사용자 지정할 수 있습니다.  
   
 #### <a name="to-dock-and-undock-components"></a>구성 요소를 도킹 및 도킹 해제하려면  
   
@@ -76,8 +72,7 @@ ms.locfileid: "62634277"
   
 6.  개체 탐색기의 제목 표시줄을 마우스 오른쪽 단추로 클릭한 다음 **숨기기**를 클릭합니다.  
   
-7.  
-  **보기** 메뉴에서 **개체 탐색기** 를 클릭하여 창을 복원합니다.  
+7.  **보기** 메뉴에서 **개체 탐색기** 를 클릭하여 창을 복원합니다.  
   
 8.  개체 탐색기의 제목 표시줄을 마우스 오른쪽 단추로 클릭한 다음 **부동** 을 클릭하여 개체 탐색기의 도킹을 해제합니다.  
   

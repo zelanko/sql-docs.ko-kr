@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 69daca3a13cf5318e102002f0edfcb98b80ff9d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702765"
 ---
 # <a name="defining-stored-procedures"></a>저장 프로시저 정의
@@ -27,19 +27,14 @@ ms.locfileid: "62702765"
   
  이 섹션에서는 저장 프로시저를 이해하고 디자인하고 구현하는 데 필요한 정보를 제공합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[저장 프로시저 디자인](../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md)|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용할 어셈블리를 디자인하는 방법을 설명합니다.|  
-|[저장 프로시저 만들기](creating-stored-procedures.md)|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 어셈블리를 만드는 방법을 설명합니다.|  
-|[저장 프로시저 호출](calling-stored-procedures.md)|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리를 사용하는 방법에 대한 정보를 제공합니다.|  
+|[저장 프로시저 디자인](../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용할 어셈블리를 디자인하는 방법을 설명합니다.|  
+|[저장 프로시저 만들기](creating-stored-procedures.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 어셈블리를 만드는 방법을 설명합니다.|  
+|[저장 프로시저 호출](calling-stored-procedures.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리를 사용하는 방법에 대한 정보를 제공합니다.|  
 |[저장 프로시저의 쿼리 컨텍스트 액세스](accessing-query-context-in-stored-procedures.md)|어셈블리를 사용하여 범위 및 컨텍스트 정보에 액세스하는 방법을 설명합니다.|  
-|[저장 프로시저의 보안 설정](setting-security-for-stored-procedures.md)|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리의 보안을 구성하는 방법을 설명합니다.|  
-|[저장 프로시저 디버깅](debugging-stored-procedures.md)|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리를 디버깅하는 방법을 설명합니다.|  
+|[저장 프로시저의 보안 설정](setting-security-for-stored-procedures.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리의 보안을 구성하는 방법을 설명합니다.|  
+|[저장 프로시저 디버깅](debugging-stored-procedures.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 어셈블리를 디버깅하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델 어셈블리 관리](../multidimensional-models/multidimensional-model-assemblies-management.md)  

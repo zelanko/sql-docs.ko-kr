@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62663914"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack 이벤트 클래스
@@ -35,7 +35,7 @@ ms.locfileid: "62663914"
 |**DatabaseID**|**int**|USE *database* 문에서 지정된 데이터베이스의 ID입니다. 지정된 인스턴스에 대해 USE *database* 문이 실행되지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|yes|  
 |**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Broker:Message Ack** 의 경우 항상 **149**입니다.|27|예|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|예|  
-|**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **승인이 전송 된 메시지**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 보냈습니다.<br /><br /> **승인 전송**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 외부로 승인을 보냈습니다.<br /><br /> **승인 포함 메시지 수신**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 받았습니다.<br /><br /> **승인 수신**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 시퀀스 메시지의 외부로 승인을 받았습니다.|21|yes|  
+|**EventSubClass**|**nvarchar**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 이 열에는 다음 값이 포함될 수 있습니다.<br /><br /> **승인이 전송 된 메시지**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 보냈습니다.<br /><br /> **승인 전송**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 외부로 승인을 보냈습니다.<br /><br /> **승인을 받은 메시지**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 일반 시퀀스 메시지의 일부로 승인을 받았습니다.<br /><br /> **승인 수신**<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 가 시퀀스 메시지의 외부로 승인을 받았습니다.|21|yes|  
 |**GUID**|**uniqueidentifier**|대화 상자의 대화 ID입니다. 이 식별자는 메시지의 일부로 전송되며 양쪽 대화 상대 간에 공유합니다.|54|예|  
 |**HonorBrokerPriority**|**정수**|데이터베이스 HONOR_BROKER_PRIORITY 옵션의 현재 값은 0 = OFF, 1 = ON입니다.|32|yes|  
 |**HostName**|**nvarchar**|클라이언트를 실행 중인 컴퓨터의 이름입니다. 클라이언트가 호스트 이름을 제공하면 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|yes|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 750911c19224ff088fee5c27272bf13c14875975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657267"
 ---
 # <a name="name-element-for-server-dta"></a>Server의 Name 요소(DTA)
@@ -37,7 +37,7 @@ ms.locfileid: "62657267"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|`string`1에서 255 자 사이입니다.|  
+|**데이터 형식 및 길이**|`string`, 1에서 255자 사이|  
 |**기본값**|없음|  
 |**발생 빈도**|**Server** 요소마다 한 번만 지정해야 함|  
   

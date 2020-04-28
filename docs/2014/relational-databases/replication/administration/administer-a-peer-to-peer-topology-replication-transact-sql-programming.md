@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629716"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>피어 투 피어 토폴로지 관리(복제 Transact-SQL 프로그래밍)
@@ -64,6 +64,6 @@ ms.locfileid: "62629716"
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](frequently-asked-questions-for-replication-administrators.md)   
  [SQL Server 데이터베이스 백업 및 복원](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [@loopback_detection](../transactional/peer-to-peer-transactional-replication.md)  
+ [피어 투 피어 트랜잭션 복제](../transactional/peer-to-peer-transactional-replication.md)  
   
   

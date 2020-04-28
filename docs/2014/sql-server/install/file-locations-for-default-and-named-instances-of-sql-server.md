@@ -11,18 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505149"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server 기본 인스턴스 및 명명된 인스턴스의 파일 위치
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 하나 이상의 개별 인스턴스로 구성됩니다. 기본 인스턴스인지 또는 명명된 인스턴스인지에 관계없이 인스턴스에는 컴퓨터의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 공유되는 공용 파일 집합 외에 고유의 프로그램과 데이터 파일 집합이 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssDE](../../includes/ssde-md.md)]및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 포함하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스의 경우 각 구성 요소는 데이터와 실행 파일, 그리고 컴퓨터에서 공유하는 공통 파일을 모두 가지고 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssDE](../../includes/ssde-md.md)]및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 포함하는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스의 경우 각 구성 요소는 데이터와 실행 파일, 그리고 컴퓨터에서 공유하는 공통 파일을 모두 가지고 있습니다.  
   
  각 구성 요소의 설치 위치를 분리하기 위해 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내의 각 구성 요소에 대해 고유한 인스턴스 ID가 생성됩니다.  
   
@@ -33,31 +31,25 @@ ms.locfileid: "62505149"
 >   
 >  Binn, Data, Ftdata, HTML 또는 1033 디렉터리나 포함된 내용을 삭제하지 마세요. 필요한 경우 다른 디렉터리는 삭제할 수 있지만 삭제된 기능이나 데이터를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 제거했다가 다시 설치해야 합니다. HTML 디렉터리의 .htm 파일을 삭제하거나 수정하지 마십시오. 이 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 올바르게 동작하는 데 필요합니다.  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- 단일 컴퓨터의 모든 인스턴스에 사용되는 공용 파일은 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] 폴더에 설치됩니다. 여기서 \<*drive*>는 구성 요소가 설치된 드라이브 문자입니다. 기본값은 일반적으로 C 드라이브입니다.  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 단일 컴퓨터의 모든 인스턴스에 사용 되는 공용 파일은 폴더 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]에 설치 됩니다. 여기서 \< *drive*>는 구성 요소가 설치 된 드라이브 문자입니다. 기본값은 일반적으로 C 드라이브입니다.  
   
 ## <a name="file-locations-and-registry-mapping"></a>파일 위치 및 레지스트리 매핑  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 각 서버 구성 요소에 대한 인스턴스 ID가 생성됩니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스의 서버 구성 요소는 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 각 서버 구성 요소에 대한 인스턴스 ID가 생성됩니다. 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스의 서버 구성 요소는 [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다.  
   
  기본 인스턴스 ID는 다음 형식을 사용하여 구성됩니다.  
   
--   
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]인 경우 MSSQL이 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)]인 경우 MSSQL이 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인 경우 MSAS가 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인 경우 MSAS가 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인 경우 MSRS가 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인 경우 MSRS가 제일 먼저 나오고 다음에 주 버전 번호, 밑줄과 부 버전(해당되는 경우), 마침표, 인스턴스 이름이 차례로 나옵니다.  
   
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 사용되는 기본 인스턴스 ID의 예는 다음과 같습니다.  
   
--   
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기본 인스턴스인 경우 MSSQL12.MSSQLSERVER  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기본 인스턴스인 경우 MSSQL12.MSSQLSERVER  
   
--   
-  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]의 기본 인스턴스인 경우 MSAS12.MSSQLSERVER  
+-   [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]의 기본 인스턴스인 경우 MSAS12.MSSQLSERVER  
   
 -   "MyInstance"로 명명된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스인 경우 MSSQL12.MyInstance  
   
@@ -69,17 +61,14 @@ ms.locfileid: "62505149"
   
  인스턴스 ID에는 어떤 값이든 자유롭게 지정할 수 있지만 특수 문자와 예약 키워드는 사용하지 마십시오.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 기본 인스턴스 ID가 아닌 인스턴스 ID를 지정할 수 있습니다. 사용자가 기본 설치 디렉터리를 변경하도록 선택하는 경우에는 \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대신 \<사용자 지정 경로>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용됩니다. 밑줄(_)로 시작되거나 숫자 기호(#) 또는 달러 기호($)가 들어 있는 인스턴스 ID는 지원되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 기본 인스턴스 ID가 아닌 인스턴스 ID를 지정할 수 있습니다. 사용자가 기본 설치 디렉터리를 변경하도록 선택하는 경우에는 \<Program Files>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대신 \<사용자 지정 경로>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 사용됩니다. 밑줄(_)로 시작되거나 숫자 기호(#) 또는 달러 기호($)가 들어 있는 인스턴스 ID는 지원되지 않습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 클라이언트 구성 요소는 인스턴스 인식형이 아니므로 인스턴스 ID가 할당되지 않습니다. 기본적으로 인스턴스 비인식형 구성 요소는 단일 디렉터리 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]에 설치됩니다. 한 공유 구성 요소의 설치 경로를 변경하면 다른 공유 구성 요소의 설치 경로도 변경됩니다. 후속 설치 시 원래 설치와 동일한 디렉터리에 인스턴스 비인식형 구성 요소가 설치됩니다.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 클라이언트 구성 요소는 인스턴스 인식형이 아니므로 인스턴스 ID가 할당되지 않습니다. 기본적으로 인스턴스 비인식형 구성 요소는 단일 디렉터리 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]에 설치됩니다. 한 공유 구성 요소의 설치 경로를 변경하면 다른 공유 구성 요소의 설치 경로도 변경됩니다. 후속 설치 시 원래 설치와 동일한 디렉터리에 인스턴스 비인식형 구성 요소가 설치됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 바꾸기를 지 원하는 유일한 구성 요소입니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 바꾸어도 인스턴스 ID는 변경되지 않습니다. 인스턴스 이름을 바꾼 후에도 디렉터리 및 레지스트리 키는 설치 중에 만든 인스턴스 ID를 계속 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 설치 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 바꾸기를 지 원하는 유일한 구성 요소입니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 바꾸어도 인스턴스 ID는 변경되지 않습니다. 인스턴스 이름을 바꾼 후에도 디렉터리 및 레지스트리 키는 설치 중에 만든 인스턴스 ID를 계속 사용합니다.  
   
- 인스턴스 인식형 구성 요소인 경우 레지스트리 하이브는 HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instance_ID*> 아래에 생성됩니다. 예를 들면 다음과 같습니다.  
+ 레지스트리 하이브는 인스턴스 인식 구성 요소\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<에 대 한 HKLM\Software*Instance_ID*>에 생성 됩니다. 예를 들면 다음과 같습니다.  
   
 -   \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] MyInstance  
   
@@ -102,25 +91,20 @@ ms.locfileid: "62505149"
   
 |구성 요소|기본 경로<sup>1, 2</sup>|구성 가능<sup>3</sup> 또는 고정 경로|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]서버 구성 요소|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSSQL12. \<InstanceID>\|구성 가능|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]데이터 파일|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSSQL12. \<InstanceID>\|구성 가능|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서버인|웹 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \msas12. \<InstanceID>\|구성 가능|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]데이터 파일|웹 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \msas12. \<InstanceID>\|구성 가능|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 서버|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSRS12. \<InstanceID> \Reporting Services\ReportServer\Bin\|구성 가능|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 관리자|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSRS12. \<InstanceID> \Reporting Services\ReportManager\|고정 경로|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서버 구성 요소|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSSQL12. \<InstanceID>\|구성 가능|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터 파일|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSSQL12. \<InstanceID>\|구성 가능|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버|웹 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \msas12. \<InstanceID>\|구성 가능|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 파일|웹 파일\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \msas12. \<InstanceID>\|구성 가능|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSRS12. \<InstanceID> \Reporting Services\ReportServer\Bin\|구성 가능|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리자|파일 \\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]파일 \MSRS12. \<InstanceID> \Reporting Services\ReportManager\|고정 경로|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<설치 디렉터리> \120\DTS\|구성 가능<sup>4</sup>|  
 |클라이언트 구성 요소(bcp.exe 및 sqlcmd.exe 제외)|\<설치 디렉터리> \120\Tools\|구성 가능<sup>4</sup>|  
-|클라이언트 구성 요소(bcp.exe 및 sqlcmd.exe 제외)|
-  \<설치 디렉터리>\Client SDK\ODBC\110\Tools\Binn|고정 경로|  
+|클라이언트 구성 요소(bcp.exe 및 sqlcmd.exe 제외)|\<설치 디렉터리>\Client SDK\ODBC\110\Tools\Binn|고정 경로|  
 |복제 및 서버 쪽 COM 개체|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\<sup>5</sup>|고정 경로|  
-|데이터 변환 런타임 엔진, 데이터 변환 파이프라인 엔진 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티에 대한 `dtexec` 구성 요소 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|고정 경로|  
-|에 대해 관리되는 연결을 지원하는 DLL(!!) [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|고정 경로|  
-|
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 지원하는 각 열거자 유형에 대한 DLL|
-  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|고정 경로|  
-|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스, WMI 공급자|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]공유\|고정 경로|  
+|데이터 변환 런타임 엔진, 데이터 변환 파이프라인 엔진 및 `dtexec` 명령 프롬프트 유틸리티에 대한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|고정 경로|  
+|에 대해 관리되는 연결을 지원하는 DLL(!!) [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Connections|고정 경로|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 지원하는 각 열거자 유형에 대한 DLL|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEachEnumerators|고정 경로|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스, WMI 공급자|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]공유\|고정 경로|  
 |의 모든 인스턴스 간에 공유되는 구성 요소(!!) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]공유\|고정 경로|  
   
  <sup>1</sup> \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]파일[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ 폴더 \ 폴더가 제한 된 권한으로 보호 되는지 확인 합니다.  
@@ -138,11 +122,9 @@ ms.locfileid: "62505149"
   
  설치 중에 서버 구성 요소나 데이터 파일의 설치 경로를 지정하면 설치 프로그램은 프로그램 및 데이터 파일에 대해 지정된 위치 외에 인스턴스 ID를 사용합니다. 설치 프로그램은 도구 및 기타 공유 파일에 대해 인스턴스 ID를 사용하지 않습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 리포지토리에 대해서는 인스턴스 ID를 사용하지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로그램 및 데이터 파일에 대해서는 인스턴스 ID를 사용하지 않습니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기능에 대한 설치 경로를 설정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 해당 경로를 해당 설치(SQL 데이터 파일 포함)의 모든 인스턴스별 폴더에 대한 루트 디렉터리로 사용합니다. 이 경우 루트를 "C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.로 설정 하는 경우 \<InstanceName> \mssql\\", 인스턴스별 디렉터리가이 경로 끝에 추가 됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기능에 대한 설치 경로를 설정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 해당 경로를 해당 설치(SQL 데이터 파일 포함)의 모든 인스턴스별 폴더에 대한 루트 디렉터리로 사용합니다. 이 경우 루트를 "C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.로 설정 하는 경우 \<InstanceName> \mssql\\", 인스턴스별 디렉터리가이 경로 끝에 추가 됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사(설치 UI 모드)에서 USESYSDB 업그레이드 기능을 사용하는 경우에는 하위 폴더가 반복 포함된 구조로 제품이 설치될 수 있습니다. 예를 \<들어 *SQLProgramFiles*> \mssql12\mssql\ MSSQL10_50 \mssql\data\\입니다. USESYSDB 기능을 사용하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기능 대신 SQL 데이터 파일 기능에 대한 설치 경로를 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사(설치 UI 모드)에서 USESYSDB 업그레이드 기능을 사용하는 경우에는 하위 폴더가 반복 포함된 구조로 제품이 설치될 수 있습니다. 예를 \<들어 *SQLProgramFiles*> \mssql12\mssql\ MSSQL10_50 \mssql\data\\입니다. USESYSDB 기능을 사용하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기능 대신 SQL 데이터 파일 기능에 대한 설치 경로를 설정합니다.  
   
 > [!NOTE]
 >  데이터 파일은 항상 Data라는 하위 디렉터리에 위치합니다. 예를 들어 C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12.를 지정 합니다. \<InstanceName> \-데이터 파일이 C:\Program files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL12. 아래에 있는 경우 업그레이드 하는 동안 시스템 데이터베이스의 데이터 디렉터리에 대 한 루트 경로를 지정 합니다. \<InstanceName> \mssql\data  

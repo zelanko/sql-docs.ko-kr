@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670931"
 ---
 # <a name="about-change-tracking-sql-server"></a>변경 내용 추적 정보(SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670931"
  각 행에 대해 수행된 변경에 대한 정보도 변경 내용 추적을 사용하여 얻을 수 있습니다. 예를 들어 변경을 일으킨 DML 작업의 유형(삽입, 업데이트 또는 삭제) 또는 업데이트 작업의 일부로 변경된 열이 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [변경 내용 추적 사용&#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [변경 내용 추적 관리&#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server 사용 및 사용 안 함&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server 사용 하 여 작업&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [변경 내용 추적 &#40;SQL Server 관리&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

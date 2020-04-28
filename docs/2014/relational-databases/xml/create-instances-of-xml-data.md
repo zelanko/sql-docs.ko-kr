@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637611"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  기본적으로 XML 파서는 문자열 데이터를 XML로 변환할 때 다음 중 하나에 해당하면 불필요한 공백을 무시합니다.  
   
--   
-  `The xml:space` 특성이 한 요소 또는 한 요소의 상위 항목 요소에 정의되어 있지 않습니다.  
+-   `The xml:space` 특성이 한 요소 또는 한 요소의 상위 항목 요소에 정의되어 있지 않습니다.  
   
 -   한 요소 또는 한 요소의 상위 항목 요소 중 하나에 적용된 `xml:space` 특성에 기본값이 있습니다.  
   
@@ -181,8 +180,7 @@ go
  FOR XML에 대한 자세한 내용은 [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 `xml` 데이터 형식 인스턴스를 반환합니다. 또는 `xml` 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자는 이 `xml` 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 TYPE 지시어를 사용하는 FOR XML 쿼리와 같은 여러 서버 생성 결과로 클라이언트에 `xml` 데이터 형식 인스턴스를 반환합니다. 또는 `xml` 데이터 형식을 사용하여 SQL 열, 변수 및 출력 매개 변수로부터 XML을 반환합니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자는 이 `xml` 데이터 형식 정보가 서버로부터 이진 인코딩으로 전송되도록 요청합니다. 하지만 TYPE 지시어 없이 FOR XML을 사용하는 경우 XML 데이터는 문자열 형식으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다.  
   
 ## <a name="using-constant-assignments"></a>상수 할당 사용  
  문자열 상수는 `xml` 데이터 형식의 인스턴스가 예상 되는 위치에 사용할 수 있습니다. 이것은 문자열을 XML로 암시적 캐스팅하는 것과 같습니다. 다음은 그 예입니다.  

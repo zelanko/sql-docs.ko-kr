@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62661835"
 ---
 # <a name="database-element-for-server-dta"></a>Server의 Database 요소(DTA)
@@ -39,8 +39,7 @@ ms.locfileid: "62661835"
 |--------------------|-----------------|  
 |데이터 형식 및 길이|없음|  
 |기본값|없음|  
-|발생 빈도|
-  `Server` 요소마다 한 번 이상 지정해야 합니다.|  
+|발생 빈도|`Server` 요소마다 한 번 이상 지정해야 합니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

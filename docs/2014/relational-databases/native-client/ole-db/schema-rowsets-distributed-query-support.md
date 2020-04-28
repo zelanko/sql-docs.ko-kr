@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667599"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>스키마 행 집합에서 분산 쿼리 지원
@@ -47,6 +47,6 @@ ms.locfileid: "62667599"
   
 ## <a name="see-also"></a>참고 항목  
  [스키마 행 집합 지원 &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
- [LINKEDSERVERS 행 집합 &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 행 집합&#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

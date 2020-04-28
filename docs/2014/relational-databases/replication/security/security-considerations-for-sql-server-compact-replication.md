@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666868"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact 복제의 보안 고려 사항
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 간에 보안 연결을 제공하려면 Microsoft IIS(인터넷 정보 서비스)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 보안을 모두 제대로 구성해야 합니다.  
+  데이터베이스 엔진 인스턴스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 간의 보안 연결에 보안을 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 설정 하려면 Microsoft 인터넷 정보 서비스 (IIS)와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]모두에 대 한 보안을 적절히 구성 해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 복제 보안](view-and-modify-replication-security-settings.md)   

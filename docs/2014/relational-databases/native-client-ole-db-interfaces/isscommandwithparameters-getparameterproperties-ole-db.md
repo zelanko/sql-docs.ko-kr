@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) | Microsoft Docs'
+title: ISSCommandWithParameters::GetParameterProperties(OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638085"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties(OLE DB)
@@ -36,11 +36,10 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>인수  
- *Pcparams*[out] [in]  
- 
-  *prgParamProperties*에 반환된 SSPARAMPROPS 구조의 개수를 포함하는 메모리에 대한 포인터입니다.  
+ *pcParams*[out][in]  
+ *prgParamProperties*에 반환된 SSPARAMPROPS 구조의 개수를 포함하는 메모리에 대한 포인터입니다.  
   
- *Prgparamproperties*[out]  
+ *prgParamProperties*[out]  
  SSPARAMPROPS 구조의 배열이 반환될 메모리에 대한 포인터입니다. 공급자는 구조에 대 한 메모리를 할당 하 고이 메모리에 주소를 반환 합니다. 소비자는 더 이상 구조가 필요 하지 않을 때 **IMalloc:: Free** 를 사용 하 여이 메모리를 해제 합니다. *Prgparamproperties*에 대해 **IMalloc:: Free** 를 호출 하기 전에, 소비자는 변형에 참조 형식 (예: BSTR)이 포함 된 경우 메모리 누수가 발생 하지 않도록 하기 위해 각 Dbprop 구조의 *Vvalue* 속성에 대해 **VariantClear** 를 호출 해야 합니다. *Pcparams* 가 output에서 0 이거나 DB_E_ERRORSOCCURRED 이외의 오류가 발생 한 경우 공급자는 메모리를 할당 하지 않고 *Prgparamproperties* 가 출력에서 null 포인터 임을 확인 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -61,14 +60,13 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |*iOrdinal*|전달된 매개 변수의 서수입니다.|  
-|*cPropertySets*|
-  *rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  
+|*cPropertySets*|*rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  
 |*rgPropertySets*|DBPROPSET 구조의 배열을 반환할 메모리에 대한 포인터입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters&#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

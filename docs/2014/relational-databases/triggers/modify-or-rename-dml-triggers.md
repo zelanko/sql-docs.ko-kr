@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473224"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>DML 트리거 수정 또는 이름 바꾸기
@@ -40,13 +40,13 @@ ms.locfileid: "62473224"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   트리거의 이름을 바꿀 때 트리거가 현재 데이터베이스에 있어야 하고 새 이름이 [식별자](../databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   트리거의 이름을 바꿀 때 [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) 저장 프로시저를 사용하지 않는 것이 좋습니다. 개체 이름의 일부를 변경하면 스크립트나 저장 프로시저가 작동되지 않을 수 있습니다. 트리거의 이름을 변경해도 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) 카탈로그 뷰의 definition 열에 있는 해당 개체 이름은 변경되지 않습니다. 대신 트리거를 삭제하고 다시 만드는 것이 좋습니다.  
   
@@ -62,12 +62,12 @@ ms.locfileid: "62473224"
   
     -   [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  DML 트리거를 변경하려면 트리거가 정의된 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-modify-a-dml-trigger"></a>DML 트리거를 수정하려면  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62473224"
   
 2.  새 이름을 지정하여[트리거를 다시 만듭니다](../triggers/create-dml-triggers.md).  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>ALTER TRIGGER를 사용하여 트리거를 수정하려면  
   

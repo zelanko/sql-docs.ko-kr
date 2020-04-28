@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524096"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
@@ -48,7 +48,7 @@ ms.locfileid: "62524096"
  이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.  
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
- 예제의 초기 컨텍스트를 설정하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 새 쿼리를 열고 다음 코드를 실행하여 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스를 엽니다. 이 코드는 데이터베이스 컨텍스트를 `AdventureWorks2012`로 변경하고 암호를 사용하여 새 서버 로그인 및 데이터베이스 사용자 계정(`TestCreditRatingUser`)을 만듭니다.  
+ 예제의 초기 컨텍스트를 설정하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 새 쿼리를 열고 다음 코드를 실행하여 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스를 엽니다. 이 코드는 데이터베이스 컨텍스트를 `AdventureWorks2012` 로 변경하고 암호를 사용하여 새 서버 로그인 및 데이터베이스 사용자 계정(`TestCreditRatingUser`)을 만듭니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -78,7 +78,7 @@ GO
 ```  
   
 ## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. 저장 프로시저를 만들고 여기에 인증서로 서명  
- 다음 코드를 사용하여 `Vendor` 데이터베이스 스키마의 `Purchasing`테이블에서 데이터를 선택하는 저장 프로시저를 만들어 신용 등급이 1인 회사만 여기에 액세스할 수 있도록 제한할 수 있습니다. 저장 프로시저의 첫 번째 섹션은 저장 프로시저를 실행하는 사용자 계정의 컨텍스트를 표시합니다. 이 섹션은 개념을 보여 주기 위한 것으로, 요구 사항을 만족할 필요는 없습니다.  
+ 다음 코드를 사용하여 `Vendor` 데이터베이스 스키마의 `Purchasing` 테이블에서 데이터를 선택하는 저장 프로시저를 만들어 신용 등급이 1인 회사만 여기에 액세스할 수 있도록 제한할 수 있습니다. 저장 프로시저의 첫 번째 섹션은 저장 프로시저를 실행하는 사용자 계정의 컨텍스트를 표시합니다. 이 섹션은 개념을 보여 주기 위한 것으로, 요구 사항을 만족할 필요는 없습니다.  
   
 ```  
 CREATE PROCEDURE TestCreditRatingSP  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="5-grant-the-certificate-account-database-rights"></a>5. 인증서 계정에 데이터베이스 권한 부여  
- 다음 코드를 실행하여 기본 테이블 및 저장 프로시저에 대한 권한을 `TestCreditRatingcertificateAccount`에 부여합니다.  
+ 다음 코드를 실행하여 기본 테이블 및 저장 프로시저에 대한 권한을 `TestCreditRatingcertificateAccount` 에 부여합니다.  
   
 ```  
 GRANT SELECT   
@@ -192,7 +192,7 @@ GO
   
  REVERT 문에 대한 자세한 내용은 [REVERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql)를 참조하세요.  
   
-##  <a name="CompleteExample"></a>전체 예제  
+##  <a name="complete-example"></a><a name="CompleteExample"></a>전체 예제  
  이 섹션에서는 전체 예제 코드를 보여 줍니다.  
   
 ```  
