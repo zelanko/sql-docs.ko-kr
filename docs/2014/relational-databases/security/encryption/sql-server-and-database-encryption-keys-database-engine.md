@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957127"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 및 데이터베이스 암호화 키(데이터베이스 엔진)
@@ -33,8 +33,7 @@ ms.locfileid: "74957127"
   
  마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다. 마스터 키의 자동 암호 해독을 설정하려면 SMK를 사용하여 이 키의 복사본을 암호화합니다. 이 복사본이 사용되는 데이터베이스와 `master` 시스템 데이터베이스 모두에 암호화된 복사본이 저장됩니다.  
   
- 
-  `master` 시스템 데이터베이스에 저장된 DMK 복사본은 DMK가 변경될 때마다 자동으로 업데이트됩니다. 그러나 `DROP ENCRYPTION BY SERVICE MASTER KEY` 문의 `ALTER MASTER KEY` 옵션을 사용하여 이 기본값을 변경할 수 있습니다. 서비스 마스터 키로 암호화되지 않은 DMK는 `OPEN MASTER KEY` 문과 암호를 사용하여 열어야 합니다.  
+ `master` 시스템 데이터베이스에 저장된 DMK 복사본은 DMK가 변경될 때마다 자동으로 업데이트됩니다. 그러나 `DROP ENCRYPTION BY SERVICE MASTER KEY` 문의 `ALTER MASTER KEY` 옵션을 사용하여 이 기본값을 변경할 수 있습니다. 서비스 마스터 키로 암호화되지 않은 DMK는 `OPEN MASTER KEY` 문과 암호를 사용하여 열어야 합니다.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>SQL Server 및 데이터베이스 키 관리  
  암호화 키 관리에는 새 데이터베이스 키 생성과 서버와 데이터베이스 키의 백업 생성뿐만 아니라 키 복원, 삭제 또는 변경 시기와 방법에 대한 이해가 포함됩니다.  
@@ -94,8 +93,8 @@ ms.locfileid: "74957127"
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [SSRS Configuration Manager &#40;암호화 키를 삭제 하 고 다시 만듭니다&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [SSRS Configuration Manager &#40;스케일 아웃 배포의 암호화 키 추가 및 제거&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [투명한 데이터 암호화&#40;TDE&#41;](transparent-data-encryption.md)  
   
   

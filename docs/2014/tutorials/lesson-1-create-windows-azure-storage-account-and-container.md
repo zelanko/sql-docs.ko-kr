@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253496"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>1단원: Azure Storage 계정 및 컨테이너 만들기
@@ -30,7 +30,7 @@ ms.locfileid: "75253496"
   
  자세한 내용은 [Azure Storage 리소스에 대 한 액세스 관리](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx)를 참조 하세요.  
   
-## <a name="create-storage-account"></a>Storage 계정 만들기  
+## <a name="create-storage-account"></a>스토리지 계정 만들기  
  Azure 관리 포털에서 저장소 계정을 만들려면 다음 단계를 수행 합니다.  
   
 1.  계정을 사용 하 여 [Azure 관리 포털](https://manage.windowsazure.com) 에 로그인 합니다. Azure 계정이 없는 경우 [Azure 평가판](https://www.windowsazure.com/pricing/free-trial/)을 방문하십시오.  
@@ -46,8 +46,7 @@ ms.locfileid: "75253496"
   
  Azure에서 컨테이너를 만들려면 다음 단계를 수행 합니다.  
   
-1.  
-  [Azure 관리 포털](https://manage.windowsazure.com)에 로그인합니다.  
+1.  [Azure 관리 포털](https://manage.windowsazure.com)에 로그인합니다.  
   
 2.  저장소 계정을 선택 하 고 **컨테이너** 탭을 클릭 한 다음 화면 맨 아래에서 **컨테이너 추가** 를 클릭 하면 새 대화 상자가 열립니다.  
   

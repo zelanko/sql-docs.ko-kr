@@ -20,13 +20,13 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247007"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식과 서버 쪽 XML 서식(SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75247007"
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
  서버 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 i8 XDR 형식 (쿼리에서 XMLDATA 옵션이 지정 된 경우)에 매핑됩니다.  
   
- 클라이언트 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 **uri** 또는 **bin. base64** XDR 형식에 매핑됩니다 (binary base64 옵션이 쿼리에 지정 되어 있는지 여부에 따라 다름). Updategram **** 및 bulkload 기능을 사용 하는 경우이 형식이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 형식으로 변환 되기 때문에 bin을 사용 하면 유용 합니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
+ 클라이언트 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 **uri** 또는 **bin. base64** XDR 형식에 매핑됩니다 (binary base64 옵션이 쿼리에 지정 되어 있는지 여부에 따라 다름). Updategram **bin.base64** 및 bulkload 기능을 사용 하는 경우이 형식이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 형식으로 변환 되기 때문에 bin을 사용 하면 유용 합니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>서버 쪽 서식에는 중첩이 많은 VARIANT가 사용됨  
  서버 쪽 XML 서식에는 중첩이 많은 VARIANT 형식이 사용됩니다. 클라이언트 쪽 XML 서식을 사용하는 경우 변형은 유니코드 문자열로 변환되고 VARIANT의 하위 유형은 사용되지 않습니다.  

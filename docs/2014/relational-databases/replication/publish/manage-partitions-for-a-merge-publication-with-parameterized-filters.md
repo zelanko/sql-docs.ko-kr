@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479309"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
@@ -38,20 +38,20 @@ ms.locfileid: "74479309"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   권장하는 복제 토폴로지를 스크립팅할 경우 게시 스크립트는 데이터 파티션을 만드는 저장 프로시저 호출을 포함합니다. 스크립트는 생성된 파티션에 대한 참조와 하나 이상의 파티션을 다시 만드는 방법(필요한 경우)을 제공합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
 -   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../scripting-replication.md)을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 -** Publication> **대화 상자의 \<데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅샷을 생성하고, 스냅샷을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
   
 2.  **데이터 파티션 추가** 대화 상자에서 만들려는 파티션에 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74479309"
   
 2.  **기존 스냅샷 정리**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 복제 저장 프로시저를 사용하여 기존 파티션을 프로그래밍 방식으로 열거합니다. 파티션을 만들거나 기존 파티션을 삭제할 수도 있습니다. 기존 파티션의 다음 정보를 가져올 수 있습니다.  
   
 -   파티션이 필터링되는 방법([SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 또는 [HOST_NAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) 사용)  
@@ -122,7 +122,7 @@ ms.locfileid: "74479309"
   
      이 경우 파티션에 대한 스냅샷 작업과 스냅샷 파일도 제거됩니다.  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 RMO(복제 관리 개체)를 사용하여 새 구독자 파티션을 프로그래밍 방식으로 만들고, 기존 구독자 파티션을 열거하고, 프로그래밍 방식으로 열거합니다. 구독자 파티션을 만드는 방법은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 기존 파티션에 대한 다음 정보를 가져올 수 있습니다.  
   
 -   파티션에서 기반으로 사용하는 값 및 필터링 기능  
@@ -161,6 +161,6 @@ ms.locfileid: "74479309"
   
 ## <a name="see-also"></a>참고 항목  
  [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)   
- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [매개 변수가 있는 필터를 사용 하는 병합 게시에 대 한 스냅숏](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683584"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>SharePoint용 PowerPivot(SSAS)
@@ -53,7 +53,7 @@ ms.locfileid: "74683584"
   
  SharePoint 통합 모드의 Analysis Service 서비스 인스턴스는 배포를 완료합니다. 이 인스턴스는 데이터를 로드, 쿼리 및 언로드합니다. 또한 이 인스턴스는 통합 문서가 PowerPivot 데이터 새로 고침에 대해 구성된 경우 데이터도 처리합니다.  각 인스턴스는 동일한 설치에 속하는 로컬 PowerPivot 시스템 서비스와 긴밀하게 결합됩니다.  
   
-##  <a name="bkmk_RelatedContent"></a> 섹션 내용  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>섹션 항목  
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Windows PowerShell을 사용하여 PowerPivot 구성](power-pivot-configuration-using-windows-powershell.md)  
@@ -81,7 +81,7 @@ ms.locfileid: "74683584"
 ## <a name="additional-topics"></a>추가 항목  
  [SharePoint용 PowerPivot 업그레이드](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [SharePoint 2013용 PowerPivot 설치](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [SharePoint용 PowerPivot에 대한 PowerShell 참조](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

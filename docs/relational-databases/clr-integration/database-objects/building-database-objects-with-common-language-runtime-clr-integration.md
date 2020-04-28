@@ -18,15 +18,14 @@ ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 902685dcf1f8c743453285820faa67bb70830614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258350"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합을 사용하여 데이터베이스 개체 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 .NET Framework CLR(공용 언어 런타임)을 통합하여 데이터베이스 개체를 작성할 수 있습니다. 내 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 실행 되는 관리 코드를 "CLR 루틴" 이라고 합니다. 이러한 루틴에는 다음과 같은 항목이 포함됩니다.  
   
 -   스칼라 반환 사용자 정의 함수(스칼라 UDF)  
@@ -42,8 +41,7 @@ ms.locfileid: "75258350"
  각 .NET Framework 루틴 형식은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 선언을 포함하며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]과 동등한 항목이 허용되는 모든 위치에서 사용할 수 있습니다. 예를 들어 스칼라 UDF는 모든 스칼라 식에 사용할 수 있고, TVF는 모든 FROM 절에 사용할 수 있습니다. 프로시저는 EXEC 문에서 호출되거나 클라이언트 애플리케이션에서 호출될 수 있습니다.  
   
 > [!NOTE]  
->  쿼리 최적화 프로그램에서 적절하다고 판단할 경우 공용 언어 런타임에서 CLR 개체(사용자 정의 함수, 사용자 정의 형식 또는 트리거)의 실행은 여러 스레드(병렬 계획)에서 발생할 수 있습니다. 그러나 사용자 정의 함수는 데이터에 액세스하므로 직렬 계획에서 실행됩니다. 
-  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 서버 버전에서 LOB 매개 변수나 반환 값을 포함하는 사용자 정의 함수를 실행할 경우 직렬 계획에서도 해당 함수를 실행해야 합니다.  
+>  쿼리 최적화 프로그램에서 적절하다고 판단할 경우 공용 언어 런타임에서 CLR 개체(사용자 정의 함수, 사용자 정의 형식 또는 트리거)의 실행은 여러 스레드(병렬 계획)에서 발생할 수 있습니다. 그러나 사용자 정의 함수는 데이터에 액세스하므로 직렬 계획에서 실행됩니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 서버 버전에서 LOB 매개 변수나 반환 값을 포함하는 사용자 정의 함수를 실행할 경우 직렬 계획에서도 해당 함수를 실행해야 합니다.  
   
  다음 표에는 이 섹션에서 다루는 항목이 나와 있습니다.  
   
@@ -57,8 +55,7 @@ ms.locfileid: "75258350"
  CLR 통합 프로그래밍의 모델 제한 사항에 대한 정보를 제공합니다.  
   
  [.NET Framework의 SQL Server 데이터 형식](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 해당되는 .NET Framework 데이터 형식에 대해 간략하게 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식과 해당되는 .NET Framework 데이터 형식에 대해 간략하게 설명합니다.  
   
  [CLR 통합 사용자 지정 특성 개요](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
  CLR 통합 사용자 지정 특성에 대한 정보를 제공합니다.  

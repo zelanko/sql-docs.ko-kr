@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401442"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 어플라이언스 설치 및 구성
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. 하드웨어 설치  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. 하드웨어 설치  
 새 어플라이언스는 pallets에서 데이터 센터의 도크로 배달 됩니다.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ IHV가 하드웨어 설치를 수행 하지 않는 경우 다음 단계를 사�
 |설명서 확인|독립 하드웨어 공급 업체 (IHV)에서 필요한 모든 문서와 정보를 받았는지 확인 합니다. [IHV &#40;분석 플랫폼 시스템&#41;에서 얻을 수 있는 정보 ](information-to-obtain-from-your-ihv.md)를 참조 하세요.|  
 |하드웨어 설치|데이터 센터가 어플라이언스를 수용할 수 있는지 확인 합니다. 어플라이언스 구성 요소를 데이터 센터로 이동 합니다. 네트워크 스위치, Pdu 및 케이블을 랙에 연결 합니다. [하드웨어 설치 &#40;분석 플랫폼 시스템&#41;](hardware-installation.md)을 참조 하세요.|  
   
-## <a name="PowerOnAppliance"></a>2. 어플라이언스 전원 켜기  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. 어플라이언스 전원 켜기  
   
 |||  
 |-|-|  
 |**Task**|**설명**|  
 |어플라이언스의 전원 켜기|필요한 순서로 각 어플라이언스 구성 요소 노드의 전원을 켜고 오류가 발생 하지 않았는지 확인 하기 위해 필요에 따라 대기 합니다.|  
   
-## <a name="ConfigureAppliance"></a>3. 어플라이언스 구성  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. 어플라이언스 구성  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ IHV가 하드웨어 설치를 수행 하지 않는 경우 다음 단계를 사�
 > [!WARNING]  
 > 구성 변경은 SQL Server PDW**Configuration Manager**사용 해야만 이루어져야 합니다. **Configuration Manager** 를 통해 노출 되지 않는 변경은 지원 되지 않습니다. 예를 들어 SQL Server PDW 어플라이언스는 미국 영어 설정만 지원 합니다.  
   
-## <a name="SoftwareServicing"></a>4. 소프트웨어 서비스 설정  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. 소프트웨어 서비스 설정  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ IHV가 하드웨어 설치를 수행 하지 않는 경우 다음 단계를 사�
 |SQL Server PDW 업데이트 적용|필드 SQL Server PDW 소프트웨어를 최신 버전으로 업데이트 하려면 하나 이상의 SQL Server PDW 업데이트를 적용 해야 할 수 있습니다. Analytics [Platform System 핫픽스 &#40;Analytics Platform system&#41;적용 ](apply-analytics-platform-system-hotfixes.md)을 참조 하세요.|  
 |Windows Server Update Services 구성|지원 소프트웨어에 대 한 Windows Server Update Services의 업데이트를 받도록 어플라이언스를 구성 합니다. [Microsoft 업데이트 다운로드 및 적용 &#40;분석 플랫폼 시스템&#41;](download-and-apply-microsoft-updates.md)을 참조 하세요.|  
   
-## <a name="NextSteps"></a>다음 단계  
+## <a name="next-steps"></a><a name="NextSteps"></a>다음 단계  
 위의 단계를 모두 완료 한 후에는 어플라이언스를 사용할 준비가 된 것입니다. 사용자 또는 해당 위치에 있는 다른 직원은 다음 작업을 진행할 수 있습니다.  
   
 |||  

@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401187"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Dwloader-병렬 데이터 웨어하우스의 데이터 형식 변환 규칙
 이 항목에서는 데이터를 PDW로 로드할 때 [dwloader 명령줄 로더가](dwloader.md) 지 원하는 입력 데이터 형식 및 암시적 데이터 형식 변환에 대해 설명 합니다. 암시적 데이터 변환은 입력 데이터가 SQL Server PDW 대상 테이블의 데이터 형식과 일치 하지 않는 경우에 발생 합니다. 로드 프로세스를 설계할 때이 정보를 사용 하 여 데이터가 성공적으로 SQL Server PDW 로드 되는지 확인 합니다.  
    
   
-## <a name="InsertBinaryTypes"></a>이진 형식에 리터럴 삽입  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>이진 형식에 리터럴 삽입  
 다음 표에서는 리터럴 값을 **binary** (*n*) 또는 **varbinary**(*n*) 형식의 SQL Server PDW 열로 로드 하기 위한 허용 되는 리터럴 형식, 형식 및 변환 규칙을 정의 합니다.  
   
 |입력 데이터 형식|입력 데이터 예제|Binary 또는 varbinary 데이터 형식으로 변환|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |이진 리터럴|0x *hexidecimal_string*<br /><br />예: 12Ef 또는 0x12Ef|0x 접두사는 선택 사항입니다.<br /><br />데이터 원본 길이가 데이터 형식에 대해 지정 된 바이트 수를 초과할 수 없습니다.<br /><br />데이터 원본 길이가 **이진** 데이터 형식의 크기 보다 작은 경우 데이터를 데이터 형식 크기에 도달 하는 0으로 오른쪽으로 채웁니다.|  
   
-## <a name="InsertDateTimeTypes"></a>날짜 및 시간 형식에 리터럴 삽입  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>날짜 및 시간 형식에 리터럴 삽입  
 날짜 및 시간 리터럴은 작은따옴표로 묶인 특정 형식의 문자열 리터럴을 사용 하 여 표현 됩니다. 다음 표에서는 날짜 또는 시간 리터럴을 **datetime**, **smalldatetime**, **date**, **time**, **datetimeoffset**또는 **datetime2**형식의 열로 로드 하는 데 사용할 수 있는 리터럴 형식, 형식 및 변환 규칙을 정의 합니다. 테이블은 지정 된 데이터 형식에 대 한 기본 형식을 정의 합니다. 지정할 수 있는 다른 형식은 [날짜/시간 형식](#DateFormats)섹션에서 정의 됩니다. 날짜 및 시간 리터럴은 선행 또는 후행 공백을 포함할 수 없습니다. **date**, **smalldatetime**및 null 값은 고정 너비 모드로 로드할 수 없습니다.  
   
 ### <a name="datetime-data-type"></a>datetime 데이터 형식  
@@ -83,7 +83,7 @@ ms.locfileid: "74401187"
 |**날짜** 형식의 문자열 리터럴|' yyyy-MM-dd '<br /><br />예: ' 2007-05-08 '|값이 삽입 될 때 시간 값 (시, 분, 초 및 소수 자릿수)은 0으로 설정 됩니다. 예를 들어 ' 2007-05-08 ' 리터럴은 ' 2007-05-08 12:00:00.0000000 '로 삽입 됩니다.|  
 |**Datetime2** 형식의 문자열 리터럴|' yyyy-MM-dd hh: MM: ss: fffffff '<br /><br />예: ' 2007-05-08 12:35:29.1234567 '|데이터 원본에 **datetime2**(*n*)에 지정 된 값 보다 작거나 같은 데이터 및 시간 구성 요소가 포함 된 경우 데이터가 삽입 됩니다. 그렇지 않으면 오류가 생성 됩니다.|  
   
-### <a name="DateFormats"></a>Datetime 형식  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Datetime 형식  
 Dwloader는 SQL Server PDW 로드 되는 입력 데이터에 대해 다음과 같은 데이터 형식을 지원 합니다. 자세한 내용은 표 다음에 나열 되어 있습니다.  
   
 |Datetime|smalldatetime|date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Dwloader는 SQL Server PDW 로드 되는 입력 데이터에 대해 다음과 �
   
 -   'zzz' 문자는 {+|-}HH:ss] 형식으로 시스템의 현재 시간대에 대한 시간대 오프셋을 지정합니다.  
   
-## <a name="InsertNumerictypes"></a>숫자 형식에 리터럴 삽입  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>숫자 형식에 리터럴 삽입  
 다음 표에서는 숫자 형식을 사용 하는 SQL Server PDW 열에 리터럴 값을 로드 하기 위한 기본 형식 및 변환 규칙을 정의 합니다.  
   
 ### <a name="bit-data-type"></a>bit 데이터 형식  
@@ -162,7 +162,7 @@ Money 리터럴 값은 선택적 소수점이 있는 숫자의 문자열로 표�
 |10 진 리터럴|123344.34455|소수점이 하 자릿수가 4를 초과 하는 경우 값은 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123344.34455는 123344.3446으로 삽입 됩니다.|  
 |Money 리터럴|$123456.7890|통화 기호는 값으로 삽입 되지 않습니다.<br /><br />소수점이 하 자릿수가 4를 초과 하는 경우 값은 가장 가까운 값으로 반올림 됩니다.|  
   
-## <a name="InsertStringTypes"></a>문자열 형식에 리터럴 삽입  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>문자열 형식에 리터럴 삽입  
 다음 표에서는 문자열 형식을 사용 하는 SQL Server PDW 열에 리터럴 값을 로드 하기 위한 기본 형식 및 변환 규칙을 정의 합니다.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char, varchar, nchar 및 nvarchar 데이터 형식  

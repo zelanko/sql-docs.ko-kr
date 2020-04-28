@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228067"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
@@ -39,7 +39,7 @@ ms.locfileid: "75228067"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>SQL Server 및 Microsoft Azure에 대 한 하이브리드 클라우드 시나리오 
  
-#### <a name="backup"></a>Azure Storage에서 데이터베이스 백업 및 복원 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>Azure Storage에서 데이터베이스 백업 및 복원 
  가장 기본적인 관리자 작업 중 하나는 데이터베이스 백업 및 복원입니다. SQL Server 및 Azure를 사용 하 여 클라우드에서 데이터베이스를 안전 하 게 백업할 수 있습니다. 
  
  Azure Storage를 백업 대상으로 사용 하는 SQL Server의 백업 및 복원 기능을 사용 하는 경우의 주요 이점은 다음과 같습니다. 
@@ -64,7 +64,7 @@ ms.locfileid: "75228067"
  
 -  [Azure에 백업 SQL Server 도구](https://www.microsoft.com/download/details.aspx?id=40740) 를 사용 하 여 백업이 로컬 또는 클라우드에 저장 된 SQL Server 백업을 Azure Blob Storage 하 고 암호화 하 고 압축할 수 있습니다. 이 도구를 통해 SQL Server 2005, 2008, 2008 R2 및 2014와 같은 SQL Server의 여러 버전에 대한 단일 클라우드 백업 전략을 수립할 수 있습니다. 
  
-#### <a name="replica"></a>Azure Virtual Machines에서 데이터베이스 복제본 유지 관리 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>Azure Virtual Machines에서 데이터베이스 복제본 유지 관리 
  데이터베이스에 대 한 안정적인 재해 복구 솔루션을 보유 하는 것은 비즈니스의 성공에 필수적입니다. 대부분의 고객은 재해 복구 사이트를 구성하고 데이터베이스 복제본을 위한 추가 하드웨어를 구입해야 합니다. SQL Server 및 Azure를 사용 하면 클라우드에서 데이터베이스의 복제본을 하나 이상 유지 관리할 수 있습니다. 
  
  Azure에서 보조 복제본을 유지 관리 하는 경우의 주요 이점은 다음과 같습니다. 
@@ -81,7 +81,7 @@ ms.locfileid: "75228067"
  
 -  AlwaysOn 가용성 그룹, 데이터베이스 미러링 및 로그 전달은 응용 프로그램의 고가용성 및 재해 복구 요구 사항을 해결 하는 데 사용할 수 있는 가장 일반적인 기술입니다. 자세한 내용은 [Azure Virtual Machines에서 SQL Server에 대 한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/azure/jj870962.aspx)를 참조 하세요. 
  
-#### <a name="store"></a>Azure Storage에 SQL Server 데이터 파일 저장 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>Azure Storage에 SQL Server 데이터 파일 저장 
  온-프레미스 SQL Server 데이터 파일을 Azure Storage에 저장 하면 데이터베이스에 대해 유연 하 고 안정적 이며 무제한 오프 사이트 저장소를 제공 합니다. SQL Server 2014부터 [Miceosoft Azure의 SQL Server 데이터 파일](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) 을 사용 하 여 Azure Storage에 SQL Server 데이터베이스 파일을 저장할 수 있습니다. 이 기능을 사용 하 여 온-프레미스에서 실행 되는 SQL Server의 계산 노드를 유지 하면서 데이터와 로그 파일을 온-프레미스 데이터베이스에서 Azure Storage로 이동할 수 있습니다. 이 기능을 사용 하면 Azure Storage의 저장소 용량을 무제한으로 사용할 수 있습니다. 
  
  SQL Server 데이터 Azure Storage 파일을 저장 하는 경우의 주요 이점은 다음과 같습니다. 
@@ -92,7 +92,7 @@ ms.locfileid: "75228067"
  
 -  컴퓨팅 인스턴스(SQL Server 인스턴스)와 데이터(SQL Server 데이터 파일)를 분리하여 재해 복구 촉진. 이렇게 하면 재해 발생 시 온-프레미스 환경이 나 Azure 가상 컴퓨터의 다른 SQL Server 인스턴스에 데이터베이스를 쉽게 연결할 수 있습니다. 
  
-#### <a name="migrate"></a>기존 SQL Server 데이터베이스를 Azure Virtual Machines로 마이그레이션 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>기존 SQL Server 데이터베이스를 Azure Virtual Machines로 마이그레이션 
  클라우드 컴퓨팅은 기업에 몇 가지 주요 혜택을 제공합니다. 예를 들어 무제한의 가상화된 리소스를 종량제 기준으로 사용할 수 있으며, 자체적으로 데이터 센터를 구축하여 관리하는 대신 공용으로 사용 가능한 클라우드 데이터 센터를 활용할 수 있으므로 IT 및 하드웨어 비용을 낮출 수 있습니다. 
  
  [Azure Virtual Machines에서 SQL Server](https://msdn.microsoft.com/library/azure/jj823132.aspx)를 사용 하면 코드를 최소한으로 변경 하거나 변경 하지 않고 기존 온-프레미스 응용 프로그램을 azure로 이동할 수 있습니다. 관리자와 개발자는 온-프레미스에서 사용 가능한 동일한 개발 및 관리 도구를 계속해서 사용할 수 있습니다. 

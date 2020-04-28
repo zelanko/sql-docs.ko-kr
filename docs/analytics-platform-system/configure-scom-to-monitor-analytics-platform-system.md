@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401306"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>분석 플랫폼 시스템을 모니터링 하는 System Center Operations Manager (SCOM) 구성
 분석 플랫폼 시스템용 SCOM (System Center Operations Manager) 관리 팩을 구성 하려면 다음 단계를 수행 합니다. 관리 팩은 SCOM에서 분석 플랫폼 시스템을 모니터링 하는 데 필요 합니다.  
   
-## <a name="BeforeBegin"></a>시작하기 전 주의 사항  
-**필수 구성 요소**  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>시작 하기 전에  
+**전제 조건**  
   
 System Center Operations Manager 2007 r 2를 설치 하 고 실행 해야 합니다.  
   
 관리 팩을 설치 하 고 구성 해야 합니다. [&#40;분석 플랫폼 시스템&#41;Scom 관리 팩 설치](install-the-scom-management-packs.md) 를 참조 하 고 [PDW &#40;분석 플랫폼 시스템&#41;용 scom 관리 팩을 가져옵니다 ](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>System Center에서 실행 프로필 구성  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>System Center에서 실행 프로필 구성  
 System Center를 구성 하려면 다음 단계를 수행 해야 합니다.  
   
 -   **APS 감시자** 도메인 사용자에 대 한 실행 계정을 만들어 **Microsoft aps 감시자 계정** 에 매핑합니다.  
@@ -41,8 +41,7 @@ System Center를 구성 하려면 다음 단계를 수행 해야 합니다.
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  **실행 계정 만들기 마법사** 대화 상자가 열립니다. 
-  **소개** 페이지에서 **다음**을 클릭합니다.  
+    2.  **실행 계정 만들기 마법사** 대화 상자가 열립니다. **소개** 페이지에서 **다음**을 클릭합니다.  
   
     3.  **일반 속성** 페이지의 **실행 계정 유형** 에서 **Windows** 를 선택 하 고 "ap 감시자"를 **표시 이름**으로 지정 합니다.  
   
@@ -72,7 +71,7 @@ System Center를 구성 하려면 다음 단계를 수행 해야 합니다.
   
     3.  **실행 프로필 마법사** 대화 상자가 열립니다. **다음**을 클릭 하 여 **소개** 페이지를 건너뜁니다.  
   
-    4.  **일반 속성** 페이지에서 **다음**을 클릭 합니다.  
+    4.  **일반 속성** 페이지에서 **다음**을 클릭합니다.  
   
     5.  **실행 계정** 페이지에서 **추가 ...** 단추를 클릭 하 고 이전에 만든 **ap 감시자** 실행 계정을 선택 합니다.  
   

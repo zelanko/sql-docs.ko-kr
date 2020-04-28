@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228178"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결
@@ -50,5 +50,5 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
  메모리 액세스에 [최적화 된 테이블이 있는 데이터베이스의 검사점 파일에 대 한 블로그 상태 전환은](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) 개시에서 가비지 수집으로의 데이터 및 델타 파일 쌍의 상태 전환에 대해 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 개체에 대한 스토리지 만들기 및 관리](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

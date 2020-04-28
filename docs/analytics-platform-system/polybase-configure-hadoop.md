@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245388"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
 이 문서에서는 APS 어플라이언스에서 PolyBase를 사용 하 여 Hadoop의 외부 데이터를 쿼리 하는 방법을 설명 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
  - Linux/Windows Server에서 Hortonworks HDP 1.3  
@@ -49,7 +49,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
 
 2. [어플라이언스 Configuration Manager](launch-the-configuration-manager.md)의 서비스 상태 페이지를 사용 하 여 APS 영역을 다시 시작 합니다.
   
-## <a id="pushdown"></a>푸시 다운 계산 사용  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> 푸시다운 계산 사용  
 
 쿼리 성능을 향상하려면 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
   
@@ -227,7 +227,7 @@ Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리�
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
+3. [CREATE EXTERNAL DATA source](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용 하 여 외부 데이터 원본을 만듭니다.
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

@@ -24,25 +24,22 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246915"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0 .NET Framework 지원 - 관리되는 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에서 XML 데이터에 액세스하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 환경으로 데이터를 가져와서 처리한 후 업데이트를 다시 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 보내는 애플리케이션을 작성하는 데 사용할 수 있는 기능을 지원합니다. 
-  
   
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 관리되는 클래스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 4.0의 기능을 공개합니다. SQLXML 관리되는 클래스를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 XML 데이터에 액세스하고, .NET Framework 환경으로 데이터를 가져오며, 데이터를 처리하고, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 업데이트를 DiffGram으로 다시 보내 적용하는 C# 애플리케이션을 작성할 수 있습니다. SQLXML 관리되는 클래스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스로 업데이트를 적용할 때는 매핑 스키마를 사용해야 합니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
  SQLXML 4.0에서 SQLXML 관리되는 클래스를 사용하려면 Microsoft Visual Studio를 설치해야 합니다.  
   
 > [!NOTE]  
->  .NET Framework에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET 데이터 공급자가 포함되어 있습니다. 이 공급자는 .NET 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하는 데 사용할 수 있지만 기존 SQL 쿼리(FOR XML 쿼리를 제외한 관계형 데이터베이스 쿼리)만 처리할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 XML 템플릿 또는 서버 쪽 XPath 쿼리를 실행할 수 없습니다.  
+>  .NET Framework에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET 데이터 공급자가 포함되어 있습니다. 이 공급자는 .NET 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 액세스하는 데 사용할 수 있지만 기존 SQL 쿼리(FOR XML 쿼리를 제외한 관계형 데이터베이스 쿼리)만 처리할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 XML 템플릿 또는 서버 쪽 XPath 쿼리를 실행할 수 없습니다.  
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework 내에서 데이터에 액세스 하 고 수정 하 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 방법 및 diffgram를 사용 하 여 테이블의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터를 업데이트 하는 방법에 대 한 자세한 내용은 [.net 환경에서 SQLXML 기능에 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   

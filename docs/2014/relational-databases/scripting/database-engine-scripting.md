@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244958"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
@@ -34,7 +34,7 @@ ms.locfileid: "75244958"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 PowerShell을 실행하기 위한 다음과 같은 기능을 제공합니다.  
   
--   PowerShell 세션으로 가져올 수 있는 **sqlps** powershell 모듈은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅인을 로드 합니다. 임시 PowerShell 명령을 대화형으로 실행할 수 있습니다. .\MyFolder\MyScript.ps1과 같은 명령을 사용하여 스크립트 파일을 실행할 수 있습니다.  
+-   PowerShell 세션으로 가져올 수 있는 **sqlps** PowerShell 모듈. 이 모듈은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅인을 로드합니다. 임시 PowerShell 명령을 대화형으로 실행할 수 있습니다. .\MyFolder\MyScript.ps1과 같은 명령을 사용하여 스크립트 파일을 실행할 수 있습니다.  
   
 -   PowerShell 스크립트 파일은 예약된 간격이나 시스템 이벤트에 대한 응답으로 스크립트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 PowerShell 작업 단계에 대한 입력으로 사용할 수 있습니다.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "75244958"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일은 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 대화형으로 코딩됩니다. 이 파일은 나중에 다음 환경 중 하나에서 열 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **** 파일/**열기** 메뉴를 사용 하 여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 파일을 엽니다.  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 파일을 열 수 있습니다.  
   
--   유틸리티를 사용 하 여 파일을 실행 하려면 **-i**input_file 매개 변수를 사용 합니다.__ `sqlcmd`  
+-   유틸리티를 사용 하 여 파일을 실행 하려면 **-i**input_file 매개 변수를 사용 합니다._input_file_ `sqlcmd`  
   
 -   **-QueryFromFile** 매개 변수를 사용하여 **PowerShell 스크립트에서** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet으로 파일을 실행할 수 있습니다.  
   

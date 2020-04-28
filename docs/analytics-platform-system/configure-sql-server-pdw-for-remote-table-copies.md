@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401261"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>원격 테이블 복사본에 대 한 병렬 데이터 웨어하우스 구성
@@ -28,7 +28,7 @@ ms.locfileid: "74401261"
   
 -   대상 서버의 호스트 이름 또는 IP 이름을 파악 합니다.  
   
-## <a name="HowToPDW"></a>원격 테이블 복사에 대 한 SQL Server PDW 구성: DNS에서 호스트 이름 업데이트  
+## <a name="configure-sql-server-pdw-for-remote-table-copy-update-host-names-in-dns"></a><a name="HowToPDW"></a>원격 테이블 복사에 대 한 SQL Server PDW 구성: DNS에서 호스트 이름 업데이트  
 원격 테이블 복사에 사용 되는 **CREATE REMOTE table** 문은 SMP Windows 시스템의 ip 주소 또는 ip 이름 중 하나를 사용 하 여 대상 서버를 지정 합니다. IP 이름을 사용 하려면 성공적인 이름 확인을 위해 DNS 서버에 항목을 추가 해야 합니다.  
   
 다음 단계에서는 DNS 서버를 업데이트 하는 방법을 간략하게 설명 합니다.  

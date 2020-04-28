@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232734"
 ---
 # <a name="xml-task"></a>XML 태스크
@@ -46,7 +46,7 @@ ms.locfileid: "75232734"
   
  원본이 변수인 경우 지정된 변수에는 XML 문서의 경로가 포함됩니다.  
   
- 원본이 파일 연결 관리자인 경우 지정된 파일 연결 관리자는 원본 정보를 제공합니다. 파일 연결 관리자는 XML 태스크와 별도로 구성되며 XML 태스크에서 참조됩니다. 파일 연결 관리자의 연결 문자열은 XML 파일의 경로를 지정합니다. 자세한 내용은 [파일 연결 관리자](../connection-manager/file-connection-manager.md)를 참조 하세요.  
+ 원본이 파일 연결 관리자인 경우 지정된 파일 연결 관리자는 원본 정보를 제공합니다. 파일 연결 관리자는 XML 태스크와 별도로 구성되며 XML 태스크에서 참조됩니다. 파일 연결 관리자의 연결 문자열은 XML 파일의 경로를 지정합니다. 자세한 내용은 [File Connection Manager](../connection-manager/file-connection-manager.md)를 참조하세요.  
   
  XML 태스크는 작업 결과를 변수나 파일로 저장하도록 구성될 수 있습니다. 파일로 저장하는 경우 XML 태스크는 파일 연결 관리자를 사용하여 파일에 액세스합니다. 또한 비교 작업으로 생성된 Diffgram의 결과를 파일 및 변수로 저장할 수 있습니다.  
   
@@ -93,8 +93,7 @@ ms.locfileid: "75232734"
 ### <a name="validation-operation"></a>유효성 검사 작업  
  유효성 검사 작업은 DTD(문서 유형 정의) 또는 XSD(XML 스키마 정의) 스키마를 사용하도록 구성될 수 있습니다.  
   
- 
-  `ValidationDetails`를 사용하도록 설정하여 자세한 오류 출력을 가져옵니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
+ `ValidationDetails`를 사용하도록 설정하여 자세한 오류 출력을 가져옵니다. 자세한 내용은 [Validate XML with the XML Task](xml-task.md)를 참조하십시오.  
   
 ## <a name="xml-document-encoding"></a>XML 문서 인코딩  
  XML 태스크는 유니코드 문서의 병합만 지원합니다. 즉, 태스크에서 유니코드 인코딩이 포함된 문서로만 병합 작업을 적용할 수 있습니다. 다른 인코딩을 사용하면 XML 태스크가 실패합니다.  
@@ -118,17 +117,15 @@ ms.locfileid: "75232734"
 ## <a name="configuration-of-the-xml-task"></a>XML 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [XML 태스크 편집기 &#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 태스크 편집기&#40;일반 페이지&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Validate XML with the XML Task](xml-task.md)  
+-   [XML 태스크를 사용하여 XML 유효성 검사](xml-task.md)  
   
 -   [식 페이지](../expressions/expressions-page.md)  
   
- 
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](../set-the-properties-of-a-task-or-container.md)  
   

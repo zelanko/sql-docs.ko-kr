@@ -13,16 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d9fb152507979232d27308d107278d4b6d3bccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243202"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행
-  
-  `sqlcmd`를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행할 수 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, `sqlcmd` 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
+  `sqlcmd`를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, `sqlcmd` 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
   
  메모장을 사용하여 간단한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 만들려면 다음 단계를 따르십시오.  
   
@@ -68,7 +66,7 @@ ms.locfileid: "75243202"
  출력이 명령 프롬프트 창에 반환되는 대신 EmpAdds.txt 파일에 보내집니다. EmpAdds.txt 파일을 열어서 이 출력을 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
+ [Sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)  
   
   

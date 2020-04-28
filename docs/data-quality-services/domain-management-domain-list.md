@@ -12,18 +12,17 @@ ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251661"
 ---
 # <a name="domain-management-domain-list"></a>도메인 관리: 도메인 목록
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. 
-  **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
+  이 항목에서는 DQS( **)에서** 도메인 관리 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 페이지의 도메인 목록에 있는 각 컨트롤을 설명합니다. 이 창에서 관리 작업을 수행할 도메인을 선택할 수 있습니다. **도메인 관리** 페이지의 모든 탭 페이지에도 동일한 창이 사용됩니다.  
   
 ## <a name="options"></a>옵션  
   
@@ -44,8 +43,7 @@ ms.locfileid: "75251661"
  .dqs 파일에서 도메인을 가져옵니다. 이 명령은 파일 시스템을 찾아보고 단일 도메인 또는 복합 도메인의 .dqs 파일을 선택하는 데 사용되는 **데이터 파일에서 가져오기** 대화 상자를 표시합니다. 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다. 자세한 내용은 [.dqs 파일에서 도메인을 가져옵니다](../data-quality-services/import-a-domain-from-a-dqs-file.md)을 참조하세요.  
   
  **도메인 삭제**  
- 기술 자료에서 선택한 도메인을 삭제합니다. 이 명령은 **SQL Server Data Quality Services** 대화 상자를 표시합니다. 
-  **예**를 클릭하면 도메인과 모든 데이터가 영구적으로 삭제됩니다. 도메인을 마우스 오른쪽 단추로 클릭하거나 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다.  
+ 기술 자료에서 선택한 도메인을 삭제합니다. 이 명령은 **SQL Server Data Quality Services** 대화 상자를 표시합니다. **예**를 클릭하면 도메인과 모든 데이터가 영구적으로 삭제됩니다. 도메인을 마우스 오른쪽 단추로 클릭하거나 도메인 목록 위의 아이콘을 클릭하면 이 명령을 사용할 수 있습니다.  
   
  **연결된 도메인 만들기**  
  선택한 도메인에 연결된 도메인을 만듭니다. 이 명령은 **도메인 만들기** 대화 상자를 표시합니다. 도메인을 마우스 오른쪽 단추로 클릭한 후 선택한 도메인에 연결되어 있는 **연결된 도메인 만들기** 를 클릭하면 이 명령을 사용할 수 있습니다. 연결을 설정할 도메인이 도메인 만들기 대화 상자에 표시됩니다. 이 명령은 복합 도메인에 대해 사용할 수 없습니다. 두 도메인의 연결을 해제하는 데 사용할 수 있는 명령은 없습니다. 그렇게 하려면 연결된 도메인을 삭제하십시오. 연결된 도메인은 연결된 도메인으로 만들 수 없습니다. 자세한 내용은 [연결된 도메인 만들기](../data-quality-services/create-a-linked-domain.md)을 참조하세요.  

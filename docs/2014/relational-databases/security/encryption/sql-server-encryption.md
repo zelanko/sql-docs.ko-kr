@@ -15,10 +15,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f2aa6c25f8e8741308ff8f8b5df93cb2af67ad91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957099"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
@@ -55,7 +55,7 @@ ms.locfileid: "74957099"
  [ENCRYPTBYKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbykey-transact-sql)  
  데이터를 암호화하기 위해 대칭 키를 사용하는 방법에 대한 정보입니다.  
   
- [ENCRYPTBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbyasymkey-transact-sql)  
  데이터를 암호화하기 위해 비대칭 키를 사용하는 방법에 대한 정보입니다.  
   
  [ENCRYPTBYCERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/encryptbycert-transact-sql)  
@@ -66,8 +66,8 @@ ms.locfileid: "74957099"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sys.key_encryptions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
- [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [key_encryptions &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-key-encryptions-transact-sql)   
+ [SQL Server 및 데이터베이스 암호화 키 &#40;데이터베이스 엔진&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6707dc2e3c317c8b573eada62b2db07adbfa9d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243097"
 ---
 # <a name="call-stack-window"></a>호출 스택 창
@@ -66,6 +66,6 @@ ms.locfileid: "75243097"
  **의 경우** Transact-SQL [!INCLUDE[tsql](../../includes/tsql-md.md)]을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-SQL 디버거](transact-sql-debugger.md)   
- [Transact-SQL 디버거 정보](transact-sql-debugger-information.md)   
+ [Transact-sql 디버거](transact-sql-debugger.md)   
+ [Transact-sql 디버거 정보](transact-sql-debugger-information.md)   
  [Transact-SQL 코드 단계별 실행](step-through-transact-sql-code.md)  

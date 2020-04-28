@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229425"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>패스 순서 및 계산 순서 이해(MDX)
@@ -39,8 +39,7 @@ ms.locfileid: "75229425"
   
 -   에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 차원, 멤버, 계산 멤버, 사용자 지정 롤업 및 계산 셀을 계산 하는 순서입니다.  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 사용자 지정 멤버, 계산 멤버, 사용자 지정 롤업 및 계산 셀을 계산하는 순서  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 사용자 지정 멤버, 계산 멤버, 사용자 지정 롤업 및 계산 셀을 계산하는 순서  
   
  계산 순서가 가장 높은 멤버가 우선 순위가 가장 높습니다.  
   
@@ -93,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**연도 차이**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>쿼리 2-지출 후 수입 비율  
  두 번째 쿼리에서는 다음 MDX 쿼리를 사용하여 각 해의 비용에 따른 수입 백분율을 계산합니다.  
@@ -126,12 +125,9 @@ FROM [Adventure Works]
 ### <a name="query-3-combined-year-difference-and-net-income-calculations"></a>쿼리 3-결합 된 연도 차이 및 순 수입 계산  
  이 마지막 쿼리에서는 이전 예에서의 두 쿼리를 단일 MDX 쿼리로 조합하며 열과 행 모두에 대한 계산 때문에 계산 순서가 중요해집니다. 올바른 순서로 계산되도록 보장하기 위해 `SOLVE_ORDER` 키워드를 사용하여 계산이 발생하는 순서를 정의합니다.  
   
- 
-  `SOLVE_ORDER` 키워드는 MDX 쿼리 또는 `CREATE MEMBER` 명령의 계산 멤버에 대한 계산 순서를 지정합니다. 
-  `SOLVE_ORDER` 키워드에 사용된 정수 값은 상대적이며 0부터 시작할 필요가 없으며 연속적일 필요도 없습니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산 멤버가 `SOLVE_ORDER` 키워드 없이 정의된 경우 해당 계산 멤버의 기본값은 0입니다.  
+ `SOLVE_ORDER` 키워드는 MDX 쿼리 또는 `CREATE MEMBER` 명령의 계산 멤버에 대한 계산 순서를 지정합니다. `SOLVE_ORDER` 키워드에 사용된 정수 값은 상대적이며 0부터 시작할 필요가 없으며 연속적일 필요도 없습니다. 이 값은 MDX에서 단순히 더 큰 값의 멤버 계산으로부터 파생된 값에 따라 멤버를 계산하도록 지정합니다. 계산 멤버가 `SOLVE_ORDER` 키워드 없이 정의된 경우 해당 계산 멤버의 기본값은 0입니다.  
   
- 예를 들어 처음 두 쿼리 예에서 사용된 값을 조합할 경우 두 계산 멤버인 `Year Difference` 및 `Profit Margin`은 MDX 쿼리 예의 결과 데이터 세트에 있는 단일 셀에서 교차합니다. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 이 셀을 계산하는 방법은 계산 순서에 의해서만 결정할 수 있습니다. 이 셀을 구성하는 데 사용된 수식은 두 계산 멤버의 계산 순서에 따라 서로 다른 결과를 생성합니다.  
+ 예를 들어 처음 두 쿼리 예에서 사용된 값을 조합할 경우 두 계산 멤버인 `Year Difference` 및 `Profit Margin`은 MDX 쿼리 예의 결과 데이터 세트에 있는 단일 셀에서 교차합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 이 셀을 계산하는 방법은 계산 순서에 의해서만 결정할 수 있습니다. 이 셀을 구성하는 데 사용된 수식은 두 계산 멤버의 계산 순서에 따라 서로 다른 결과를 생성합니다.  
   
  먼저 처음 두 쿼리에 사용된 계산을 다음 MDX 쿼리에서 조합해 보십시오.  
   
@@ -153,13 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- 이 조합된 MDX 쿼리 예에서 `Profit Margin` 은 계산 순서가 가장 높기 때문에 두 식이 교차할 때 우선 순위를 갖습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]`Profit Margin` 수식을 사용 하 여 문제의 셀을 계산 합니다. 이 중첩된 계산의 결과는 다음 표에 표시된 것과 같습니다.  
+ 이 조합된 MDX 쿼리 예에서 `Profit Margin` 은 계산 순서가 가장 높기 때문에 두 식이 교차할 때 우선 순위를 갖습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 `Profit Margin` 수식을 사용하여 문제의 셀을 계산합니다. 이 중첩된 계산의 결과는 다음 표에 표시된 것과 같습니다.  
   
 ||Internet Sales Amount|Internet Total Product Cost|이익률|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**연도 차이**|($20,160.56)|$2,878.06|114.28%|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28%|  
   
  공유 셀의 결과는 `Profit Margin`에 대한 수식을 기반으로 합니다. 즉, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 `Year Difference` 데이터로 공유 셀의 결과를 계산하여 다음 수식을 만듭니다(쉽게 구분할 수 있도록 결과가 반올림됨).  
   
@@ -199,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60%|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45%|  
-|**연도 차이**|($20,160.56)|$2,878.06|(0.15%)|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15%)|  
   
  이 쿼리에는 `Year Difference` 데이터와 함께 `Profit Margin` 수식이 사용되기 때문에 공유 셀에 대한 수식은 다음 계산과 비슷합니다.  
   
@@ -213,13 +209,12 @@ FROM [Adventure Works]
 0.4145 - 0.4160= -0.15  
 ```  
   
-## <a name="additional-considerations"></a>추가 고려 사항  
- 계산 멤버, 사용자 지정 롤업 수식 또는 계산 셀이 포함된 차원 수가 높은 큐브에서는 특히 계산 순서를 다루기가 매우 복잡할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 MDX 쿼리를 계산할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MDX 쿼리에 지정된 큐브의 차원을 비롯하여 지정된 패스 내에 관련된 모든 사항에 대한 계산 순서 값을 고려합니다.  
+## <a name="additional-considerations"></a>기타 고려 사항  
+ 계산 멤버, 사용자 지정 롤업 수식 또는 계산 셀이 포함된 차원 수가 높은 큐브에서는 특히 계산 순서를 다루기가 매우 복잡할 수 있습니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 MDX 쿼리를 계산할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 MDX 쿼리에 지정된 큐브의 차원을 비롯하여 지정된 패스 내에 관련된 모든 사항에 대한 계산 순서 값을 고려합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CalculationCurrentPass &#40;MDX&#41;](/sql/mdx/calculationcurrentpass-mdx)   
  [CalculationPassValue &#40;MDX&#41;](/sql/mdx/calculationpassvalue-mdx)   
  [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [MDX&#41;데이터 &#40;조작](mdx-data-manipulation-manipulating-data.md)  
+ [데이터 조작&#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   

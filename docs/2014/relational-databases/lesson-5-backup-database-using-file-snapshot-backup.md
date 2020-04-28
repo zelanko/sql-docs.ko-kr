@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231802"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>6단원: 온-프레미스의 원본 머신에서 Azure의 대상 머신으로 데이터베이스 마이그레이션
@@ -126,19 +126,15 @@ ms.locfileid: "75231802"
   
  SQL Server Management Studio 사용자 인터페이스를 사용 하 여 Azure Storage에 있는 기존 파일을 가리키는 데이터 및 로그 파일이 포함 된 데이터베이스를 만들려면 다음 단계를 수행 합니다.  
   
-1.  
-  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 클릭합니다. TestDB1을 마우스 오른쪽 단추로 클릭합니다. 태스크를 클릭한 다음 분리를 클릭합니다. 분리 대화 상자에서 연결 삭제를 선택합니다. **확인**을 클릭합니다.  
   
 3.  SQL Server 2014 CTP2 이상이 설치된 대상 컴퓨터에 연결합니다. 대상 컴퓨터를 준비하려면 TestDB1을 배치한 동일한 컨테이너를 가리키도록 대상 컴퓨터에서 SQL Server 자격 증명을 만들어야 합니다. 동일한 컴퓨터에서 다시 연결할 경우 다른 자격 증명을 만들 필요가 없습니다.  
   
-4.  
-  **개체 탐색기**에서 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **연결**을 클릭합니다.  
+4.  **개체 탐색기**에서 **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **연결**을 클릭합니다.  
   
-5.  
-  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. 
-  **데이터베이스 파일 찾기** 대화 상자에서 다음을 수행합니다.  
+5.  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. **데이터베이스 파일 찾기** 대화 상자에서 다음을 수행합니다.  
   
      데이터베이스 데이터 파일 위치에 대해를 입력 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`합니다.  
   

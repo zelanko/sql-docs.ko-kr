@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255838"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates(Transact-SQL)
@@ -37,17 +37,17 @@ ms.locfileid: "75255838"
 |**name**|**sysname**|인증서의 이름입니다. 데이터베이스 내에서 고유합니다.|  
 |**certificate_id**|**int**|인증서의 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**principal_id**|**int**|이 인증서를 소유하는 데이터베이스 보안 주체의 ID입니다.|  
-|**pvt_key_encryption_type**|**char (2)**|프라이빗 키가 암호화된 방법입니다.<br /><br /> NA = 인증서에 프라이빗 키가 없음<br /><br /> MK = 프라이빗 키가 마스터 키로 암호화됨<br /><br /> PW = 프라이빗 키가 사용자 정의 암호로 암호화됨<br /><br /> SK = 프라이빗 키가 서비스 마스터 키로 암호화됨|  
-|**pvt_key_encryption_type_desc**|**nvarchar (60)**|프라이빗 키를 암호화하는 방법에 대한 설명입니다.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
+|**pvt_key_encryption_type**|**char(2)**|프라이빗 키가 암호화된 방법입니다.<br /><br /> NA = 인증서에 프라이빗 키가 없음<br /><br /> MK = 프라이빗 키가 마스터 키로 암호화됨<br /><br /> PW = 프라이빗 키가 사용자 정의 암호로 암호화됨<br /><br /> SK = 프라이빗 키가 서비스 마스터 키로 암호화됨|  
+|**pvt_key_encryption_type_desc**|**nvarchar(60)**|프라이빗 키를 암호화하는 방법에 대한 설명입니다.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|1인 경우 이 인증서는 암호화된 서비스 대화 상자를 초기화하는 데 사용됩니다.|  
 |**issuer_name**|**nvarchar (442)**|인증서 발급자의 이름입니다.|  
 |**cert_serial_number**|**nvarchar (64)**|인증서의 일련 번호입니다.|  
-|**s**|**varbinary (85)**|이 인증서의 로그인 SID입니다.|  
+|**sid**|**varbinary(85)**|이 인증서의 로그인 SID입니다.|  
 |**string_sid**|**nvarchar(128)**|이 인증서의 로그인 SID를 나타내는 문자열입니다.|  
 |**제목**|**nvarchar(4000)**|이 인증서의 주체입니다.|  
 |**expiry_date**|**datetime**|인증서 만료 날짜입니다.|  
 |**start_date**|**datetime**|인증서가 유효하게 되는 날짜입니다.|  
-|**thumbprint**|**varbinary (32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
+|**지문**|**varbinary(32)**|인증서의 SHA-1 해시입니다. SHA-1 해시는 전역적으로 고유합니다.|  
 |**attested_by**|**nvarchar(260)**|시스템에서만 사용됩니다.|  
 |**pvt_key_last_backup_date**|**datetime**|인증서의 개인 키를 마지막으로 내보낸 날짜와 시간입니다.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75255838"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
   

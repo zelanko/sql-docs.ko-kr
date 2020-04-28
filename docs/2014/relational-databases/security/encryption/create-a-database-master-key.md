@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957247"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
@@ -29,17 +29,17 @@ ms.locfileid: "74957247"
 
   [보안](#Security)
 
-- [Transact-sql을 사용 하 여 데이터베이스 마스터 키를 만들려면](#TsqlProcedure)
+- [Transact-SQL을 사용하여 데이터베이스 마스터 키를 만들려면](#TsqlProcedure)
 
-## <a name="BeforeYouBegin"></a> 시작하기 전에
+## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 
-### <a name="Security"></a> 보안
+### <a name="security"></a><a name="Security"></a> 보안
 
-#### <a name="Permissions"></a> 권한
+#### <a name="permissions"></a><a name="Permissions"></a> 권한
 
 데이터베이스에 대한 CONTROL 권한이 필요합니다.
 
-## <a name="TsqlProcedure"></a> Transact-SQL 사용
+## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용
 
 ### <a name="to-create-a-database-master-key"></a>데이터베이스 마스터 키를 만들려면
 

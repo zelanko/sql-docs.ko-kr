@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243114"
 ---
 # <a name="breakpoints-window"></a>중단점 창
@@ -34,18 +34,15 @@ ms.locfileid: "75243114"
  중단점의 이름을 표시합니다. 중단점 이름은 디버거에서 지정됩니다. 이 이름에는 중단점을 포함하는 데이터베이스 엔진 쿼리 편집기 창의 이름과 중단점이 설정된 쿼리 편집기의 줄 번호가 포함됩니다.  
   
  **Condition**  
- **(조건 없음)** 을 표시합니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.  
+ **(조건 없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 조건 설정을 지원하지 않습니다.  
   
  **적중 횟수**  
- 
-  **항상 중단**을 표시합니다.  
+ **항상 중단**을 표시합니다.  
   
  **열** 목록에서 다음 열을 선택하여 해당 열을 추가하거나 제거할 수 있습니다.  
   
  **Filter**  
- **(없음)** 을 표시합니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.  
+ **(없음)** 을 표시합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 중단점 필터 설정을 지원하지 않습니다.  
   
  **적중될 때**  
  **중단**을 표시합니다.  
@@ -60,8 +57,7 @@ ms.locfileid: "75243114"
  중단점을 포함하는 원본 파일 이름과 중단점이 설정된 줄의 번호를 표시합니다.  
   
  **주소**  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 이 기능을 지원하지 않습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 이 기능을 지원하지 않습니다.  
   
  **처리**  
  **[SQL]** 을 표시하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 프로세스임을 나타냅니다. 코드를 실행하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 이름 뒤에 나옵니다.  

@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: adb411df9f1a67b3c8963382f0c907e04c395b5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241343"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>연결된 서버 등록(SQL Server Management Studio)
@@ -27,19 +27,18 @@ ms.locfileid: "75241343"
   
  **항목 내용**  
   
--   **다음을 사용 하 여 서버를 등록 합니다.**  
+-   **다음을 사용하여 서버를 등록합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-register-a-connected-server"></a>연결된 서버를 등록하려면  
   
 1.  개체 탐색기에서 이미 연결된 서버를 마우스 오른쪽 단추로 클릭한 후에 **등록**을 클릭합니다.  
   
      **서버 이름**  
-     등록된 서버에 사용할 이름을 입력합니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 로컬 서버 또는 원격 서버를 등록하면 다음에 연결할 때 사용하도록 서버 연결 정보를 저장할 수 있습니다. 이 필드의 값은 서버에 연결할 때 사용자가 입력한 서버 이름으로 기본 설정되어 있습니다. 이 서버 이름을 그대로 사용하거나 사용하기 쉬운 다른 서버 이름을 입력할 수 있습니다.  
+     등록된 서버에 사용할 이름을 입력합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 로컬 서버 또는 원격 서버를 등록하면 다음에 연결할 때 사용하도록 서버 연결 정보를 저장할 수 있습니다. 이 필드의 값은 서버에 연결할 때 사용자가 입력한 서버 이름으로 기본 설정되어 있습니다. 이 서버 이름을 그대로 사용하거나 사용하기 쉬운 다른 서버 이름을 입력할 수 있습니다.  
   
      **서버 설명**  
      서버에 대한 선택적 설명을 입력합니다. 250자까지 입력할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "75241343"
      **새 그룹**  
      등록된 서버를 저장할 새 서버 그룹을 만드는 **새 그룹** 대화 상자를 시작하려면 클릭합니다.  
   
-     **Save**  
+     **저장**  
      입력한 정보를 저장하고 등록된 서버를 만들려면 클릭합니다.  
   
   

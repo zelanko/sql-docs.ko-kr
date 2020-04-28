@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253509"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
@@ -39,8 +39,7 @@ Azure 구독에 새 Azure Migrate 프로젝트를 설정 하 고 도구를 추�
 Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경에서 수집 된 검색, 평가 및 마이그레이션 메타 데이터를 저장 하는 데 사용 됩니다. 또한 프로젝트를 사용 하 여 검색 된 자산을 추적 하 고 평가 및 마이그레이션을 오케스트레이션 합니다.
 
 1. Azure Portal에 로그인 하 고 **모든 서비스**를 선택한 다음 Azure Migrate를 검색 합니다.
-2. 
-  **서비스** 아래에서 **Azure Migrate**를 선택합니다.
+2. **서비스** 아래에서 **Azure Migrate**를 선택합니다.
 
    ![Azure Migrate 서비스 선택](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
@@ -59,11 +58,11 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
     Azure Migrate 프로젝트는 다음 지역 중 하나에서 만들 수 있습니다.
 
-    | **요인**  | **저장소 위치 영역** |
+    | **지리**  | **저장소 위치 영역** |
     | ------------- | ------------- |
     | 아시아 | 동남 아시아 또는 동아시아 |
     | 유럽 | 남부 유럽 또는 유럽 서부 |
-    | 영국 | 영국 남부 또는 영국 서부 |
+    | United Kingdom | 영국 남부 또는 영국 서부 |
     | 미국 | 미국 중부 또는 미국 서 부 2 |
 
     프로젝트에 대해 지정된 지리는 온-프레미스 VM에서 수집된 메타데이터를 저장하는 데 사용됩니다. 실제 마이그레이션에 대한 대상 지역을 선택할 수 있습니다.
@@ -94,7 +93,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
    ![Azure Migrate-평가 도구가 추가 됨](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 
 1. 제공 된 링크를 사용 하 여 Data Migration Assistant를 다운로드 한 다음 원본 SQL Server 인스턴스에 액세스할 수 있는 컴퓨터에 설치 합니다.
-2. Data Migration Assistant를 시작 합니다.
+2. Data Migration Assistant를 시작합니다.
 
 ### <a name="create-an-assessment"></a>평가 만들기
 
@@ -136,7 +135,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
 
    ![Azure Migrate-Data Migration Assistant-결과 검토 화면](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Azure 포털에 로그인합니다.
+6. Azure Portal에 로그인합니다.
 
    ![Azure Migrate-Data Migration Assistant-결과 검토 화면](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

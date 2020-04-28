@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957176"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원
@@ -34,11 +34,11 @@ ms.locfileid: "74957176"
   
      [보안](#Security)  
   
--   [Transact-sql을 사용 하 여 서비스 마스터 키를 복원 하려면](#SSMSProcedure)  
+-   [Transact-SQL을 사용하여 서비스 마스터 키를 복원하려면](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   서비스 마스터 키가 복원되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 현재 서비스 마스터 키로 암호화된 모든 키 및 암호를 해독한 다음 백업 파일에서 로드된 서비스 마스터 키로 암호화합니다.  
   
@@ -49,12 +49,12 @@ ms.locfileid: "74957176"
 > [!CAUTION]  
 >  서비스 마스터 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 계층의 루트입니다. 서비스 마스터 키는 트리에 있는 모든 다른 키를 직접 또는 간접적으로 보호합니다. 강제 복원 중에 종속 키의 암호를 해독할 수 없으면 해당 키로 보호되는 데이터가 손실됩니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="SSMSProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-restore-the-service-master-key"></a>서비스 마스터 키를 복원하려면  
   

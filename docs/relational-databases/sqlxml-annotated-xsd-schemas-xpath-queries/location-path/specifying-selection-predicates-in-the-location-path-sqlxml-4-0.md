@@ -19,10 +19,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75256003"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "75256003"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer``Customer` 는 노드 테스트 (는 요소가 `child` 축에 대 한 주 노드 유형 ** \<>** 이므로가 ** \<>요소 노드인 **경우 TRUE)입니다. 
-  `attribute::CustomerID="ALFKI"`는 조건자입니다. `attribute` 조건자에서 `CustomerID` 는 축이 고는 노드 테스트 (특성 ** \<>** 는 **특성** 축의 주 노드 유형 이므로 **CustomerID** 가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
+ 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer``Customer` 는 노드 테스트 (는 요소가 `child` 축에 대 한 주 노드 유형 ** \<>** 이므로가 ** \<>요소 노드인 **경우 TRUE)입니다. `attribute::CustomerID="ALFKI"`는 조건자입니다. `attribute` 조건자에서 `CustomerID` 는 축이 고는 노드 테스트 (특성 ** \<>** 는 **특성** 축의 주 노드 유형 이므로 **CustomerID** 가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -57,9 +56,7 @@ ms.locfileid: "75256003"
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- 이 XPath 식에서 `child` 및 `attribute`는 축 이름입니다. 
-  `Customer`, `Order` 및 `SalesOrderID`는 노드 테스트이고, 
-  `attribute::OrderID="1"`는 조건자입니다.  
+ 이 XPath 식에서 `child` 및 `attribute`는 축 이름입니다. `Customer`, `Order` 및 `SalesOrderID`는 노드 테스트이고, `attribute::OrderID="1"`는 조건자입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -76,8 +73,7 @@ child::Customer[child::ContactName]
   
  이 예에서는 ** \<ContactName>** 가 주석이 추가 된 XSD 스키마에서 *요소 중심 매핑* 이라고 하는 XML 문서의 ** \<Customer>** 요소에 대 한 자식 요소인 것으로 가정 합니다.  
   
- 이 XPath 식에서 `child`는 축 이름이고, `Customer`는 노드 테스트 `Customer` (가 `child` ** \<요소>** 노드인 경우 TRUE)입니다. ** \<요소>** 는 축에 대 한 주 노드 형식 이기 때문입니다. 
-  `child::ContactName`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 ** \<요소>** 노드) `ContactName` 인 경우 TRUE입니다.  
+ 이 XPath 식에서 `child`는 축 이름이고, `Customer`는 노드 테스트 `Customer` (가 `child` ** \<요소>** 노드인 경우 TRUE)입니다. ** \<요소>** 는 축에 대 한 주 노드 형식 이기 때문입니다. `child::ContactName`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 ** \<요소>** 노드) `ContactName` 인 경우 TRUE입니다.  
   
  이 **식은 \<ContactName>** 요소 자식이 있는 컨텍스트 노드의 ** \<Customer>** 요소 자식만 반환 합니다.  
   
@@ -96,8 +92,7 @@ child::Customer[not(child::ContactName)]
   
  이 예에서는 ** \<ContactName>** 이 XML 문서에서 ** \<Customer>** 요소의 자식 요소이 고 데이터베이스에 ContactName 필드가 필요 하지 않다고 가정 합니다.  
   
- 이 예에서 `child`는 축이고, `Customer`노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. 
-  `not(child::ContactName)`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 `ContactName` \<요소> 노드) 인 경우 TRUE입니다.  
+ 이 예에서 `child`는 축이고, `Customer`노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. `not(child::ContactName)`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 `ContactName` \<요소> 노드) 인 경우 TRUE입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -112,8 +107,7 @@ Customer[not(ContactName)]
 child::Customer[attribute::CustomerID]  
 ```  
   
- 이 예제 `child` 에서는 축과 `Customer` 노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. 
-  `attribute::CustomerID`는 조건자입니다. 조건자에서는 축 `attribute` 이 고 `CustomerID` 는 조건자 (가 ** \<특성>** 노드) `CustomerID` 인 경우 TRUE입니다.  
+ 이 예제 `child` 에서는 축과 `Customer` 노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. `attribute::CustomerID`는 조건자입니다. 조건자에서는 축 `attribute` 이 고 `CustomerID` 는 조건자 (가 ** \<특성>** 노드) `CustomerID` 인 경우 TRUE입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   

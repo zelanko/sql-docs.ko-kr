@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fcfafc014fe9a9b494c79c879caa7d272fbc7903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247095"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>SQLXML 4.0의 XPath 쿼리 사용
@@ -41,8 +41,7 @@ ms.locfileid: "75247095"
  SQLXML 4.0용 Xpath 쿼리 예제를 제공합니다.  
   
  [&#40;SQLXML 4.0&#41;XPath 데이터 형식](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 XSD의 데이터 형식과는 많이 다른 XPath 데이터 형식에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 XSD의 데이터 형식과는 많이 다른 XPath 데이터 형식에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  

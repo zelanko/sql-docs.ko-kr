@@ -10,16 +10,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238646"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SMO(SQL Server 공유 관리 개체) 사용 조건
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>MICROSOFT 소프트웨어 사용 조건
+## <a name="microsoft-software-license-terms"></a>Microsoft 소프트웨어 사용 조건
 **MICROSOFT SQL SERVER 2017 공유 관리 개체**
 
 ---

@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253060"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>축 지정(SQLXML 4.0)
@@ -41,8 +41,7 @@ ms.locfileid: "75253060"
     child::Customer  
     ```  
   
-     다음 XPath 쿼리에서`child`는 축이고 
-  `Customer`는 노드 테스트입니다.  
+     다음 XPath 쿼리에서`child`는 축이고 `Customer`는 노드 테스트입니다.  
   
 -   **부모**  
   
@@ -54,8 +53,7 @@ ms.locfileid: "75253060"
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
     ```  
   
-     이것은 `child::Customer`를 지정하는 것과 같습니다. 이 XPath 쿼리에서 `child`와 `parent`는 축이고 
-  `Customer`와 `Order`는 노드 테스트입니다.  
+     이것은 `child::Customer`를 지정하는 것과 같습니다. 이 XPath 쿼리에서 `child`와 `parent`는 축이고 `Customer`와 `Order`는 노드 테스트입니다.  
   
 -   **특성도**  
   

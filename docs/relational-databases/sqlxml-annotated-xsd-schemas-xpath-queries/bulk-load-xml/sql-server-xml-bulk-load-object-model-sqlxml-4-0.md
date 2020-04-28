@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75246705"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 대량 로드 개체 모델(SQLXML 4.0)
@@ -59,7 +59,7 @@ ms.locfileid: "75246705"
  이 속성이 TRUE로 설정된 경우 XML 대량 로드에서 삽입되는 각 값에 대해 제약 조건을 검사하며 제약 조건이 위반된 경우 오류를 반환합니다.  
   
 > [!NOTE]  
->  이 속성을 FALSE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조 하세요.  
+>  이 속성을 FALSE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
  기본값은 FALSE입니다. 이 속성이 FALSE로 설정된 경우 XML 대량 로드에서 삽입 작업 중 제약 조건을 무시합니다. 현재 구현에서는 매핑 스키마에서 기본 키 및 외래 키 관계의 순서로 테이블을 정의해야 합니다. 즉, 외래 키가 있는 대응되는 테이블을 정의하기 전에 기본 키가 있는 테이블을 정의해야 합니다. 그렇지 않으면 XML 대량 로드가 실패합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75246705"
  TRUE로 설정된 경우 삽입 작업 중 트리거가 실행됩니다.  
   
 > [!NOTE]  
->  이 속성을 FALSE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조 하세요.  
+>  이 속성을 FALSE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
  ID 전파가 수행 중인 경우에는 이 옵션이 적용되지 않고 트리거가 설정된 상태로 유지됩니다. 이는 `KeepIdentity=False`이며, 부모가 ID 필드이고 자식이 생성될 때 자식에 값이 지정되는 관계가 정의된 경우에 발생합니다.  
   
@@ -105,13 +105,12 @@ ms.locfileid: "75246705"
  KeepIdentity  
  원본 파일의 ID 유형 열에 대한 값을 처리하는 방법을 지정합니다. 이 속성은 부울 속성입니다. 이 속성이 TRUE로 설정된 경우 XML 대량 로드에서 원본 파일에 지정된 값을 ID 열에 할당합니다. 이 속성이 FALSE로 설정된 경우에는 대량 로드 작업에서 원본에 지정된 ID 열 값을 무시합니다. 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 ID 열에 값을 할당합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성한 값이 저장된 ID 열을 참조하는 외래 키 열이 대량 로드에 포함될 경우 대량 로드에서는 이러한 ID 값을 해당 외래 키 열에 적절하게 전파합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성한 값이 저장된 ID 열을 참조하는 외래 키 열이 대량 로드에 포함될 경우 대량 로드에서는 이러한 ID 값을 해당 외래 키 열에 적절하게 전파합니다.  
   
  이 속성 값은 대량 로드에 포함된 모든 열에 적용됩니다. 기본값은 TRUE입니다.  
   
 > [!NOTE]  
->  이 속성을 TRUE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 그렇지 않은 경우에는 값을 FALSE로 설정해야 합니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조 하세요.  
+>  이 속성을 TRUE로 유지 하려면 대상 테이블에 대 한 **ALTER TABLE** 권한이 있어야 합니다. 그렇지 않은 경우에는 값을 FALSE로 설정해야 합니다. 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
  KeepNulls  
  XML 문서에서 해당 특성이나 자식 요소가 없는 열에 사용할 값을 지정합니다. 이 속성은 부울 속성입니다. 이 속성이 TRUE로 설정된 경우 XML 대량 로드에서 서버에 설정된 열의 기본값(있는 경우)이 아닌 null 값을 열에 할당합니다. 이 속성 값은 대량 로드에 포함된 모든 열에 적용됩니다.  

@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75237710"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>SQL Server 2014의 새로운 기능
@@ -53,17 +53,16 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
   
 -   [새로운 기능 &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
-## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1(서비스 팩 1)
+## <a name="sssql14-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1(서비스 팩 1)
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)](SP1)에는 중요 한 새로운 기능이 도입 되지 않았습니다.
 -  [2014 서비스 팩 1 릴리스 정보를 SQL Server](https://support.microsoft.com/kb/3058865)합니다.
--  [Microsoft SQL Server 2014 서비스 팩 1 다운로드 Microsoft SQL Server 2014 서비스 팩 1을 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=46694) [](https://www.microsoft.com/download/details.aspx?id=46694)
+-  [Microsoft SQL Server 2014 서비스 팩 1 다운로드 Microsoft SQL Server 2014 서비스 팩 1을 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=46694) [Download Service Pack 1 for Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
-## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]서비스 팩 2 (SP2)
+## <a name="sssql14-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]서비스 팩 2 (SP2)
 - [2014 서비스 팩 2 릴리스 정보를 SQL Server](https://support.microsoft.com/kb/3171021)합니다.
--  [Microsoft SQL Server 2014에 대 한 서비스 팩 2 다운로드 Microsoft SQL Server 2014 서비스 팩 2를 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [](https://go.microsoft.com/fwlink/?LinkID=821558)
--  [다운로드 SQL Server 2014 sp2 기능 팩 SQL Server 2014 SP2 기능 팩을 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=53164) [](https://www.microsoft.com/download/details.aspx?id=53164)
+-  [Microsoft SQL Server 2014에 대 한 서비스 팩 2 다운로드 Microsoft SQL Server 2014 서비스 팩 2를 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [Download Service Pack 2 for Microsoft SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=821558)
+-  [다운로드 SQL Server 2014 sp2 기능 팩 SQL Server 2014 SP2 기능 팩을 다운로드 합니다. ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=53164) [Download the SQL Server 2014 SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=53164)
 
 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]2 에는 다음과 같은 향상 된 기능이 포함 되어 있습니다.
 
@@ -97,7 +96,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
 ## <a name="additional-information"></a>추가 정보  
  [SQL Server 2014 리소스](../2014-toc/index.yml)  
   
- [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
+ [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
  [SQL Server 2014 리소스 센터](https://msdn.microsoft.com/sqlserver/dn135309)  
   

@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244524"
 ---
 # <a name="link-to-programming-samples"></a>프로그래밍 예제 링크
@@ -38,21 +38,15 @@ ms.locfileid: "75244524"
 |ManageDatabases|데이터베이스 만들기, 변경 및 삭제하는 방법을 설명합니다. 새 파일 그룹 및 로그 파일 추가도 포함됩니다.|  
 |ManageDatabaseUsers|사용자를 추가, 수정 및 제거하는 방법을 설명합니다.|  
 |ManageTables|테이블 만들기, 변경 및 삭제하는 방법을 설명합니다.|  
-|ScriptJobs|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 삭제 및 만들기를 스크립팅하는 방법을 설명합니다.|  
+|ScriptJobs|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업의 삭제 및 만들기를 스크립팅하는 방법을 설명합니다.|  
 |ScriptTable|테이블 삭제 또는 만들기를 스크립팅하는 방법을 설명합니다.|  
-|ServerConnect|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 연결하는 방법을 설명합니다.|  
+|ServerConnect|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 연결하는 방법을 설명합니다.|  
 |ServerInfo|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 서버 및 연결 속성 목록을 표시합니다.|  
-|SMOPing|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하여 선택한 속성을 덤프하는 콘솔 애플리케이션입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 확인하는 데 사용할 수 있습니다.|  
+|SMOPing|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하여 선택한 속성을 덤프하는 콘솔 애플리케이션입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 확인하는 데 사용할 수 있습니다.|  
 |SQLServerList|사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 목록을 열거합니다.|  
 |SQLService|시작, 중지, 일시 중지 및 재개하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 표시합니다.|  
-|Tracer|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 추적 정보를 읽고 표시합니다.|  
+|Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 추적 정보를 읽고 표시합니다.|  
 |트리거|데이터베이스 트리거를 표시합니다.|  
-|UtilityConversion|
-  `LoadRegAssembly`를 사용합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 데모용 CLR(공용 언어 런타임) 함수를 포함합니다.|  
+|UtilityConversion|`LoadRegAssembly`를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 데모용 CLR(공용 언어 런타임) 함수를 포함합니다.|  
 |VerifyBackup|데이터베이스를 복원하는 데 데이터를 사용할 수 있도록 백업 디바이스에서 백업을 확인합니다.|  
   

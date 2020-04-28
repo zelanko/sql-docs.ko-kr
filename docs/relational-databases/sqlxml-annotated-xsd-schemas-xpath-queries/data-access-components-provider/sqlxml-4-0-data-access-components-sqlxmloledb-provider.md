@@ -19,15 +19,14 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16e7aead128623f41076034a0fd313fb384038c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257284"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 데이터 액세스 구성 요소 - SQLXMLOLEDB 공급자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 데이터베이스에 XML 데이터를 삽입하고 검색할 수 있는 다음 3개의 데이터 공급자가 포함되어 있습니다.  
   
 -   SQLXMLOLEDB 공급자  
@@ -36,8 +35,7 @@ ms.locfileid: "75257284"
   
 -   SQLXML 관리되는 클래스  
   
-     
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 기능을 노출합니다. 자세한 내용은 [SQLXML 관리 되는 클래스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)를 참조 하세요.  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 내에서 SQLXML 기능을 노출합니다. 자세한 내용은 [SQLXML 관리 되는 클래스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)를 참조 하세요.  
   
 -   SQL Server Native Client(SQLNCLI11)  
   

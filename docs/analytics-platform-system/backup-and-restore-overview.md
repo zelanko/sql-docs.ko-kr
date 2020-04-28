@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401357"
 ---
 # <a name="backup-and-restore"></a>백업 및 복원
 
 데이터 백업 및 복원이 PDW (병렬 데이터 웨어하우스)에서 작동 하는 방식을 설명 합니다. 백업 및 복원 작업은 재해 복구에 사용 됩니다. 백업 및 복원을 사용 하 여 한 어플라이언스에서 다른 어플라이언스로 데이터베이스를 복사할 수도 있습니다.  
     
-## <a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>백업 및 복원 기본 사항
 
 PDW *데이터베이스 백업은* 원본 데이터베이스를 어플라이언스로 복원 하는 데 사용할 수 있도록 형식으로 저장 된 어플라이언스 데이터베이스의 복사본입니다.  
   
@@ -36,7 +36,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 백업은 Windows 파일 시스템의 파일 집합으로 백업 서버에 저장 됩니다. PDW 데이터베이스 백업은 PDW로만 복원할 수 있습니다. 그러나 표준 Windows 파일 백업 프로세스를 사용 하 여 백업 서버에서 다른 위치로 데이터베이스 백업을 보관할 수 있습니다. 백업 서버에 대 한 자세한 내용은 [백업 서버 가져오기 및 구성](acquire-and-configure-backup-server.md)을 참조 하세요.  
   
-## <a name="BackupTypes"></a>데이터베이스 백업 유형
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>데이터베이스 백업 유형
 
 백업 해야 하는 데이터에는 사용자 데이터베이스와 시스템 데이터베이스 (예: master 데이터베이스)의 두 가지 유형이 있습니다. PDW는 트랜잭션 로그를 백업 하지 않습니다.  
   
@@ -50,7 +50,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 전체 어플라이언스를 백업 하려면 모든 사용자 데이터베이스의 백업과 master 데이터베이스의 백업을 수행 해야 합니다.  
   
-## <a name="BackupProc"></a>데이터베이스 백업 프로세스
+## <a name="database-backup-process"></a><a name="BackupProc"></a>데이터베이스 백업 프로세스
 
 다음 다이어그램에서는 데이터베이스 백업 중의 데이터 흐름을 보여 줍니다.  
   
@@ -84,7 +84,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
     -   복원을 수행 하기 전에 백업 이름을 변경할 수 없습니다. 백업 디렉터리의 이름은 백업의 원래 이름 이름과 일치 해야 합니다. 백업의 원래 이름은 백업 디렉터리 내의 백업 .xml 파일에 있습니다. 데이터베이스를 다른 이름으로 복원 하려면 restore 명령에 새 이름을 지정할 수 있습니다. 예: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`  
   
-## <a name="RestoreModes"></a>데이터베이스 복원 모드
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>데이터베이스 복원 모드
 
 전체 데이터베이스 복원은 데이터베이스 백업의 데이터를 사용 하 여 PDW 데이터베이스를 다시 만듭니다. 데이터베이스 복원은 먼저 전체 백업을 복원한 다음 필요에 따라 하나의 차등 백업을 복원 하는 방법으로 수행 됩니다. 데이터베이스 복원에는 데이터베이스 사용자 및 데이터베이스 역할이 포함 됩니다.  
   
@@ -92,7 +92,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 어플라이언스 복원은 전체 어플라이언스의 복원입니다. 여기에는 모든 사용자 데이터베이스 및 master 데이터베이스를 복원 하는 작업이 포함 됩니다.  
   
-## <a name="RestoreProc"></a>복원 프로세스
+## <a name="restore-process"></a><a name="RestoreProc"></a>복원 프로세스
 
 다음 다이어그램에서는 데이터베이스를 복원 하는 동안 발생 하는 데이터 흐름을 보여 줍니다.  
   
@@ -130,7 +130,7 @@ PDW는 SQL Server 백업 기술을 사용 하 여 어플라이언스 데이터�
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|백업 및 복원 태스크|Description|  
+|백업 및 복원 태스크|설명|  
 |---------------------------|---------------|  
 |서버를 백업 서버로 준비 합니다.|[백업 서버 획득 및 구성](acquire-and-configure-backup-server.md)|  
 |데이터베이스를 백업 합니다.|[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  

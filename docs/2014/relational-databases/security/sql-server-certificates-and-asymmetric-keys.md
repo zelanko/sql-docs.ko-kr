@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244510"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
-  PKI (공개 키 암호화)는 사용자가 *공개* 키와 *개인* 키를 만드는 메시지 보안 형식입니다. 프라이빗 키는 비밀을 유지하지만 퍼블릭 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 퍼블릭 키로 프라이빗 키를 쉽게 이끌어 낼 수 없습니다. 퍼블릭 키는 데이터를 암호화하는 데 사용되고 프라이빗 키는 데이터의 암호를 해독하는 데 사용됩니다. 퍼블릭 키를 사용하여 암호화된 메시지는 올바른 프라이빗 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  
+  PKI(퍼블릭 키 암호화)는 사용자가 *퍼블릭* 키 및 *프라이빗* 키를 만드는 메시지 비밀화의 형식입니다. 프라이빗 키는 비밀을 유지하지만 퍼블릭 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 퍼블릭 키로 프라이빗 키를 쉽게 이끌어 낼 수 없습니다. 퍼블릭 키는 데이터를 암호화하는 데 사용되고 프라이빗 키는 데이터의 암호를 해독하는 데 사용됩니다. 퍼블릭 키를 사용하여 암호화된 메시지는 올바른 프라이빗 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  
   
  인증서 및 비대칭 키의 두 가지 방법 모두 비대칭 암호화를 사용합니다. 인증서는 만료 날짜 및 발급자와 같은 자세한 정보를 포함할 수 있으므로 비대칭 키의 컨테이너로 종종 사용됩니다. 암호화 알고리즘에 있어서 두 가지 메커니즘 사이에 차이점이 없고 지정된 동일한 키 길이에 지정된 강도의 차이가 없습니다. 일반적으로 인증서를 사용하여 데이터베이스에서 다른 유형의 암호화 키를 암호화하거나 코드 모듈을 서명합니다.  
   
@@ -29,16 +29,13 @@ ms.locfileid: "75244510"
  공개 키에는 인증서에 있을 수 있는 특정한 형식이 없고 이 키를 파일로 내보낼 수 없습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 서버와 데이터베이스에 사용할 인증서와 키를 만들고 관리할 수 있는 기능이 들어 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용할 수 없습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 서버와 데이터베이스에 사용할 인증서와 키를 만들고 관리할 수 있는 기능이 들어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용할 수 없습니다.  
   
 ## <a name="certificates"></a>인증서  
  인증서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]퍼블릭 키(필요에 따라 프라이빗 키)가 포함된 디지털 서명된 보안 개체입니다. 외부에서 생성된 인증서를 사용할 수 있거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인증서를 생성할 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증서는 IETF X.509v3 인증서 표준을 따릅니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증서는 IETF X.509v3 인증서 표준을 따릅니다.  
   
  인증서는 X.509 인증서 파일로 내보내기와 가져오기 키 모두에 대한 옵션 때문에 유용합니다. 인증서 생성에 대한 구문을 통해 만료 날짜와 같이 인증서의 생성 옵션을 사용할 수 있습니다.  
   
@@ -65,8 +62,7 @@ ms.locfileid: "75244510"
 |[SIGNBYASYMKEY&#40;Transact-SQL&#41;](/sql/t-sql/functions/signbyasymkey-transact-sql)|개체를 서명하는 옵션을 표시합니다.|  
   
 ## <a name="tools"></a>도구  
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 인증서 및 강력한 이름 키 파일을 생성하는 도구 및 유틸리티를 제공합니다. 이러한 도구는 키 생성 프로세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문보다 더 많은 융통성을 제공합니다. 이러한 도구를 사용하여 보다 복잡한 키 길이가 있는 RSA 키를 만든 다음 이 키를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 다음 표에서는 이러한 도구를 찾을 수 있는 위치를 보여 줍니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 인증서 및 강력한 이름 키 파일을 생성하는 도구 및 유틸리티를 제공합니다. 이러한 도구는 키 생성 프로세스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문보다 더 많은 융통성을 제공합니다. 이러한 도구를 사용하여 보다 복잡한 키 길이가 있는 RSA 키를 만든 다음 이 키를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 다음 표에서는 이러한 도구를 찾을 수 있는 위치를 보여 줍니다.  
   
 |||  
 |-|-|  

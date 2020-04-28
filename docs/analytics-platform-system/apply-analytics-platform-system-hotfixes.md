@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401372"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System 핫픽스 적용
@@ -27,14 +27,14 @@ ms.locfileid: "74401372"
 > [!WARNING]  
 > 어플라이언스를 사용 하는 동안에는 분석 플랫폼 시스템 핫픽스를 적용 하지 마십시오. 핫픽스를 적용 하면 어플라이언스 노드가 재부팅 될 수 있습니다. 어플라이언스를 사용 하지 않는 경우 유지 관리 기간 중에 핫픽스를 적용 해야 합니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>전제 조건  
 이러한 단계를 수행 하려면 다음이 필요 합니다.  
   
 -   관리 콘솔에 액세스 하 여 어플라이언스 상태를 모니터링할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
 -   _<domain_name>_ **HST01** 노드에 연결 하는 패브릭 도메인 관리자 계정에 대 한 정보입니다.  
   
-## <a name="HowToInstallPDW"></a>분석 플랫폼 시스템 핫픽스를 적용 하려면  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>분석 플랫폼 시스템 핫픽스를 적용 하려면  
 Microsoft 업데이트와 달리 분석 플랫폼 시스템 소프트웨어에 대 한 핫픽스는 WSUS를 통해 처리 되지 않습니다. 다른 워크플로를 가지 며 핫픽스 패키지를 실행 하 여 설치 됩니다.  
   
 1.  **어플라이언스 상태 표시기를 확인 합니다.**  

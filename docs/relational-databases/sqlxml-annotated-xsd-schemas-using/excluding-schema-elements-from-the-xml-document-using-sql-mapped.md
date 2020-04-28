@@ -24,10 +24,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257437"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped를 사용하여 XML 문서에서 스키마 요소 제외
@@ -42,7 +42,7 @@ ms.locfileid: "75257437"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **** **** **** **** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **HomeAddress** **ContactID** **LastName** **FirstName** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
   
  이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 Employees 테이블에 직원의 홈 주소가 저장 되지 않으므로 **HomeAddress** 특성에 **sql: mapped** 이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   

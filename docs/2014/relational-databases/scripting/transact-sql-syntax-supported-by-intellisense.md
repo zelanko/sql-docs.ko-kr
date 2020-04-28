@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242999"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
@@ -47,22 +47,20 @@ ms.locfileid: "75242999"
   
 |Transact-SQL 문|지원되는 구문|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|
-  *execute_statement* 절을 제외한 모든 구문|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|*execute_statement* 절을 제외한 모든 구문|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|모든 구문|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
-|[선언 @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|모든 구문|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
-|[CREATE 문을 실행하기 전에](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
+|[제거](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
+|[있다고@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|모든 구문|  
+|[설정@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
+|[실행할](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|모든 구문|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
+|[뷰 만들기](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|모든 구문|  
+|[사용](/sql/t-sql/language-elements/use-transact-sql)|모든 구문|  
   
 ## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  
   
 -   APPLY를 비롯한 모든 조인 유형  
   
@@ -96,8 +94,7 @@ ms.locfileid: "75242999"
  앞에서 나열된 요소가 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용되는 경우에는 IntelliSense가 제공되지 않습니다. 예를 들어 SELECT 문에서 사용되는 열 이름에 대해서는 IntelliSense가 지원되지만 CREATE FUNCTION 문에서 사용되는 열에 대해서는 IntelliSense가 지원되지 않습니다.  
   
 ## <a name="examples"></a>예  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 예제에서는 IntelliSense에서 지원하는 문 및 구문을 보여 줍니다. 예를 들어 다음 일괄 처리에서 IntelliSense는 `SELECT` 가 `SELECT` 문에 포함되어 있지 않고 자체적으로 코딩된 경우 `CREATE FUNCTION` 문에 대해 사용할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 예제에서는 IntelliSense에서 지원하는 문 및 구문을 보여 줍니다. 예를 들어 다음 일괄 처리에서 IntelliSense는 `SELECT` 가 `SELECT` 문에 포함되어 있지 않고 자체적으로 코딩된 경우 `CREATE FUNCTION` 문에 대해 사용할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -120,8 +117,7 @@ RETURN
   
  이 기능은 CREATE PROCEDURE 또는 ALTER PROCEDURE 문의 AS 절에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 집합에도 적용됩니다.  
   
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 IntelliSense는 CREATE 또는 ALTER 문에서 지정했지만 문을 실행하지 않았기 때문에 데이터베이스에 없는 개체를 지원합니다. 예를 들어 쿼리 편집기에 다음과 같은 코드를 입력할 수 있습니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 IntelliSense는 CREATE 또는 ALTER 문에서 지정했지만 문을 실행하지 않았기 때문에 데이터베이스에 없는 개체를 지원합니다. 예를 들어 쿼리 편집기에 다음과 같은 코드를 입력할 수 있습니다.  
   
 ```  
 USE MyTestDB;  
@@ -134,7 +130,6 @@ GO
 SELECT   
 ```  
   
- 
-  `SELECT`를 입력하면 스크립트를 실행하지 않아 **이**에 아직 없더라도 IntelliSense는 SELECT 목록에 **PrimaryKeyCol**, **FirstNameCol** 및 `MyTable` LastNameCol `MyTestDB`을 사용 가능한 요소로 나열합니다.  
+ `SELECT`를 입력하면 스크립트를 실행하지 않아 **이**에 아직 없더라도 IntelliSense는 SELECT 목록에 **PrimaryKeyCol**, **FirstNameCol** 및 `MyTable` LastNameCol `MyTestDB`을 사용 가능한 요소로 나열합니다.  
   
   

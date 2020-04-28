@@ -9,10 +9,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1da16790d011a628bc2536de051eb1181f06b8cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401392"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>어플라이언스 표준 시간대 구성-분석 플랫폼 시스템
@@ -26,7 +26,7 @@ ms.locfileid: "74401392"
   
 3.  Configuration Manager 왼쪽 창에서 **표준 시간대**를 클릭 합니다. **표준 시간대** 드롭다운 메뉴에서 원하는 표준 시간대를 선택 합니다. 사용자의 위치에 따라 **일광 절약 시간제에 맞게 자동으로 시계를 조정**하는 옆의 상자를 선택 하도록 선택할 수도 있습니다.  
   
-4.  **적용** 을 클릭 하 여 변경 내용을 저장 합니다.  
+4.  클릭 **적용** 변경 내용을 저장 합니다.  
   
 5.  Configuration Manager의 **서비스 상태** 페이지를 사용 하 여 어플라이언스 서비스를 다시 시작 합니다. 권한을 변경 하려는 경우 어플라이언스를 다시 시작 하기 전에이 작업을 수행할 수 있습니다.  
   

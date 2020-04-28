@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243216"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
   중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 애플리케이션을 디버깅할 때 사용됩니다.  
   
-##  <a name="BKMK_ActionConsiderations"></a> 필터 고려 사항  
+##  <a name="filter-considerations"></a><a name="BKMK_ActionConsiderations"></a> 필터 고려 사항  
  중단점 필터는 일반적으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 사용되지 않는데 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 및 저장 프로시저는 병렬 애플리케이션이 아니기 때문입니다.  
   
 #### <a name="to-specify-a-breakpoint-filter"></a>중단점 필터를 지정하려면  
@@ -35,14 +35,11 @@ ms.locfileid: "75243216"
   
 2.  **중단점 필터** 대화 상자의 **필터** 상자에 컴퓨터 이름을 지정하거나 운영 체제 프로세스 및 스레드를 이름이나 ID 번호로 지정합니다.  
   
-    -   
-  `MachineName`은 데이터베이스 엔진 인스턴스를 실행 중인 컴퓨터입니다.  
+    -   `MachineName`은 데이터베이스 엔진 인스턴스를 실행 중인 컴퓨터입니다.  
   
-    -   
-  `ProcessID` 및 `ProcessName`은 데이터베이스 엔진 인스턴스를 실행 중인 운영 체제 프로세스입니다.  
+    -   `ProcessID` 및 `ProcessName`은 데이터베이스 엔진 인스턴스를 실행 중인 운영 체제 프로세스입니다.  
   
-    -   
-  `ThreadID` 및 `ThreadName`은 데이터베이스 엔진 인스턴스에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 함수를 실행 중인 운영 체제 스레드입니다.  
+    -   `ThreadID` 및 `ThreadName`은 데이터베이스 엔진 인스턴스에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 프로시저 또는 함수를 실행 중인 운영 체제 스레드입니다.  
   
 3.  **확인** 을 클릭하여 변경 내용을 구현하거나 **취소** 를 클릭하여 변경 내용을 적용하지 않고 종료합니다.  
   

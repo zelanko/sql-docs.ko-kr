@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479250"
 ---
 # <a name="replicate-identity-columns"></a>ID 열 복제
-  열에 identity 속성을 할당 하면는 id 열 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 포함 하는 테이블에 삽입 된 새 행에 대 한 일련 번호를 자동으로 생성 합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
+  열에 IDENTITY 속성을 할당하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 ID 열을 포함하는 테이블에 순차적 개수대로 삽입되는 새 행을 자동으로 생성합니다. 자세한 내용은 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요. ID 열은 기본 키의 일부분으로 포함될 수 있으므로 ID 열에 중복 값을 사용하지 않아야 합니다. 둘 이상의 노드에서 업데이트된 ID 열을 복제 토폴로지에서 사용하려면 복제 토폴로지의 각 노드가 다른 범위의 ID 값을 사용해야 중복이 발생하지 않습니다.  
   
  예를 들어 게시자에 1-100 범위, 구독자 A에 101-200 범위, 그리고 구독자 B에 201-300 범위를 할당할 수 있습니다. 예를 들어 게시자에 행이 삽입되고 ID 값이 65라면 이 값이 각 구독자에 복제됩니다. 복제가 각 구독자에 데이터를 삽입할 때 구독자 테이블의 ID 열 값을 증가시키지는 않습니다. 대신 리터럴 값 65가 삽입됩니다. 복제 에이전트 삽입이 아닌 사용자 삽입만 ID 열 값을 증가시킵니다.  
   
@@ -53,8 +53,7 @@ ms.locfileid: "74479250"
   
  ID 열을 복제하는 경우에는 두 가지 범위, 즉 게시자와 구독자에 할당된 범위와 열의 데이터 형식 범위를 고려해야 합니다. 다음 표에서는 일반적으로 ID 열에 사용되는 데이터 형식에 사용할 수 있는 범위를 보여 줍니다. 범위는 토폴로지의 모든 노드에서 사용됩니다. 예를 들어 1에서 `smallint` 시작 하 여 1 씩 증가 하는 경우 게시자 및 모든 구독자에 대 한 최대 삽입 수는 32767입니다. 실제 삽입 수는 사용된 값에 차이가 있는지 여부와 임계값이 사용되는지 여부에 따라 달라집니다. 임계값에 대한 자세한 내용은 이 항목의 뒷부분에 나올 "병합 복제" 및 "지연 업데이트 구독이 있는 트랜잭션 복제" 섹션을 참조하십시오.  
   
- 
-  **db_owner** 고정 데이터베이스 역할의 멤버가 삽입을 수행했으면 게시자가 삽입 후 ID 범위를 모두 사용한 경우 구독자가 자동으로 새 범위를 할당할 수 있습니다. 해당 역할의 사용자가 아닌 사용자가 삽입을 수행했으면 로그 판독기 에이전트, 병합 에이전트 또는 **db_owner** 역할의 멤버인 사용자가 [sp_adjustpublisheridentityrange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)를 실행해야 합니다. 트랜잭션 게시의 경우 새 범위를 자동으로 할당하려면 로그 판독기 에이전트가 실행되고 있어야 합니다. 기본적으로 에이전트는 계속 실행됩니다.  
+ **db_owner** 고정 데이터베이스 역할의 멤버가 삽입을 수행했으면 게시자가 삽입 후 ID 범위를 모두 사용한 경우 구독자가 자동으로 새 범위를 할당할 수 있습니다. 해당 역할의 사용자가 아닌 사용자가 삽입을 수행했으면 로그 판독기 에이전트, 병합 에이전트 또는 **db_owner** 역할의 멤버인 사용자가 [sp_adjustpublisheridentityrange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)를 실행해야 합니다. 트랜잭션 게시의 경우 새 범위를 자동으로 할당하려면 로그 판독기 에이전트가 실행되고 있어야 합니다. 기본적으로 에이전트는 계속 실행됩니다.  
   
 > [!WARNING]  
 >  큰 일괄 처리 동안 복제 트리거 삽입은 삽입의 각 행에 대해 한 번만 발생합니다. ID 범위가 큰 삽입 시 사용되는 경우 `INSERT INTO` 문과 같은 insert 문이 실패할 수 있습니다.  
@@ -82,11 +81,9 @@ ms.locfileid: "74479250"
   
 -   임계값 매개 변수-또는 이전 버전의 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대 한 구독에 새 id 범위가 필요한 시기를 결정 하는 데 사용 됩니다. ** \@**  
   
- 예를 들어 50만 ** \@identity_range** ** \@pub_identity_range**에 대해 1만을 지정할 수 있습니다. 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 게시자 및 모든 구독자(구독 유형이 서버 구독인 구독자 포함)에게 기본 범위 10000이 할당됩니다. 서버 구독이 있는 구독자에는 재게시 구독자와 동기화 하는 구독자가 사용할 수 있는 50만의 기본 범위가 할당 됩니다. 또한 재게시 구독자에서 게시의 아티클에 대 한 ** \@identity_range**, ** \@pub_identity_range**및 ** \@임계값** 을 지정 해야 합니다.  
+ 예를 들어 50만 ** \@identity_range** ** \@pub_identity_range**에 대해 1만을 지정할 수 있습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 게시자 및 모든 구독자(구독 유형이 서버 구독인 구독자 포함)에게 기본 범위 10000이 할당됩니다. 서버 구독이 있는 구독자에는 재게시 구독자와 동기화 하는 구독자가 사용할 수 있는 50만의 기본 범위가 할당 됩니다. 또한 재게시 구독자에서 게시의 아티클에 대 한 ** \@identity_range**, ** \@pub_identity_range**및 ** \@임계값** 을 지정 해야 합니다.  
   
- 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상을 실행하는 각 구독자는 보조 ID 범위도 받습니다. 보조 범위의 크기는 주 범위의 크기와 같습니다. 주 범위를 모두 사용하면 보조 범위가 사용되고 병합 에이전트가 구독자에 새 범위를 할당합니다. 새 범위는 보조 범위가 되고 구독자가 ID 값을 사용하는 한 프로세스는 계속 진행됩니다.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상을 실행하는 각 구독자는 보조 ID 범위도 받습니다. 보조 범위의 크기는 주 범위의 크기와 같습니다. 주 범위를 모두 사용하면 보조 범위가 사용되고 병합 에이전트가 구독자에 새 범위를 할당합니다. 새 범위는 보조 범위가 되고 구독자가 ID 값을 사용하는 한 프로세스는 계속 진행됩니다.  
   
   
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>지연 업데이트 구독이 있는 트랜잭션 복제  
@@ -127,9 +124,9 @@ ms.locfileid: "74479250"
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [DBCC CHECKIDENT&#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT&#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [Transact-sql&#41;DBCC CHECKIDENT &#40;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [Transact-sql&#41;IDENT_CURRENT &#40;](/sql/t-sql/functions/ident-current-transact-sql)   
  [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [Transact-sql&#41;sp_adjustpublisheridentityrange &#40;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [sp_adjustpublisheridentityrange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

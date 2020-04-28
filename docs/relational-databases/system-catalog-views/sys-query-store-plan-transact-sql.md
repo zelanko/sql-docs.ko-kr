@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d1137aab32a98a4699e95b7138bb333f63c65e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479462"
 ---
 # <a name="sysquery_store_plan-transact-sql"></a>sys.query_store_plan(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "74479462"
 |**plan_id**|**bigint**|기본 키입니다.|  
 |**query_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_store_query ](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)에 조인 합니다.|  
 |**plan_group_id**|**bigint**|계획 그룹의 ID입니다. 커서 쿼리에는 일반적으로 여러 (채우기 및 페치) 계획이 필요 합니다. 함께 컴파일되는 채우기 및 인출 계획은 동일한 그룹에 있습니다.<br /><br /> 0은 계획이 그룹에 없음을 의미 합니다.|  
-|**engine_version**|**nvarchar (32)**|**' 주. 부. 빌드. 수정 버전 '** 형식의 계획을 컴파일하는 데 사용 되는 엔진의 버전입니다.|  
+|**engine_version**|**nvarchar(32)**|**' 주. 부. 빌드. 수정 버전 '** 형식의 계획을 컴파일하는 데 사용 되는 엔진의 버전입니다.|  
 |**compatibility_level**|**smallint**|쿼리에서 참조 되는 데이터베이스의 데이터베이스 호환성 수준입니다.|  
 |**query_plan_hash**|**binary (8)**|개별 계획의 MD5 해시입니다.|  
 |**query_plan**|**nvarchar(max)**|쿼리 계획에 대 한 실행 계획 XML입니다.|  
@@ -57,7 +57,7 @@ ms.locfileid: "74479462"
 |**avg_compile_duration**|**float**|컴파일 통계를 계획 합니다. <br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
 |**last_compile_duration**|**bigint**|컴파일 통계를 계획 합니다. <br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
 |**plan_forcing_type**|**int**|계획 강제 적용 유형입니다.<br /><br />0: 없음<br /><br />1: 수동<br /><br />2: 자동|  
-|**plan_forcing_type_desc**|**nvarchar (60)**|Plan_forcing_type에 대 한 텍스트 설명입니다.<br /><br />없음: 계획을 강제 적용 하지 않습니다.<br /><br />수동: 사용자가 강제 계획<br /><br />AUTO: 자동 조정으로 강제 계획|  
+|**plan_forcing_type_desc**|**nvarchar(60)**|Plan_forcing_type에 대 한 텍스트 설명입니다.<br /><br />없음: 계획을 강제 적용 하지 않습니다.<br /><br />수동: 사용자가 강제 계획<br /><br />AUTO: 자동 조정으로 강제 계획|  
 
 ## <a name="plan-forcing-limitations"></a>계획 강제 적용 제한 사항
 쿼리 저장소에는 쿼리 최적화 프로그램이 특정 실행 계획을 사용하도록 적용하는 메커니즘이 있습니다. 그러나 계획이 적용되지 않도록 하는 몇 가지 제한 사항이 있습니다. 
@@ -91,10 +91,10 @@ ms.locfileid: "74479462"
  [query_store_query &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
  [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [query_store_wait_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+ [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

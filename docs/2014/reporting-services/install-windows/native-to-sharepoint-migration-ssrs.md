@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: adf6b91b1c83f490ffe6c85fecd374fca7c1a085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253180"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>기본 모드에서 SharePoint 모드로의 마이그레이션(SSRS)
   한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버 모드에서 다른 서버 모드로 업그레이드하거나 변환할 수 없습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 사용되는 데이터베이스 스키마가 다르기 때문에 모드 간에 보고서 서버 데이터베이스를 복사할 수 없습니다. 한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션할 수 있습니다. 사용하는 도구는 원본 서버 및 대상 서버에 맞게 구성된 보고서 서버 모드의 유형에 따라 달라집니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
   
-##  <a name="bkmk_native_to_sharepoint"></a> Reporting Services 마이그레이션 도구  
+##  <a name="reporting-services-migration-tool"></a><a name="bkmk_native_to_sharepoint"></a> Reporting Services 마이그레이션 도구  
  이 도구는 기본 모드 배포에서 SharePoint 모드 배포로의 콘텐츠 마이그레이션을 지원합니다. 이 도구는 SharePoint 모드에서 SharePoint 모드로 또는 SharePoint 모드에서 기본 모드로의 마이그레이션을 지원하지 않습니다.  
   
  자세한 내용은 [Reporting Services 마이그레이션 도구](https://www.microsoft.com/download/details.aspx?id=29560)(https://www.microsoft.com/download/details.aspx?id=29560) 를 참조하세요.  
@@ -34,7 +34,7 @@ ms.locfileid: "75253180"
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트:** 보고서 서버 웹 서비스 SOAP 메서드를 호출하여 데이터베이스 간에 데이터를 복사하는 Visual Basic 스크립트를 작성합니다. **RS.exe** 유틸리티를 사용하여 이 스크립트를 실행합니다. Rs.exe는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다.  
   
-    -   [예제 Reporting Services rs .Exe 스크립트를 실행 하 여 보고서 서버 간에 콘텐츠를 마이그레이션합니다](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). 이 항목에서는 CodePlex에서 다운로드할 수 있는 예제 스크립트를 사용하는 방법에 대해 설명합니다.  
+    -   [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)입니다. 이 항목에서는 CodePlex에서 다운로드할 수 있는 예제 스크립트를 사용하는 방법에 대해 설명합니다.  
   
     -   CodePlex의 예제 rss 스크립트, [한 보고서 서버에서 다른 보고서 서버로 콘텐츠를 마이그레이션하는 Reporting Services RS.exe 스크립트](https://azuresql.codeplex.com/releases/view/115207)  
   

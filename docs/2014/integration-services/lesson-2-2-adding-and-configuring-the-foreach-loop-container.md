@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07c5118c654faccea2d9bab01040ce17b1d5699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232468"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>2단계: Foreach 루프 컨테이너 추가 및 구성
@@ -24,7 +24,7 @@ ms.locfileid: "75232468"
   
  현재 1단원에서 만든 플랫 파일 연결 관리자는 특정 플랫 파일 하나에만 연결합니다. 폴더의 각 플랫 파일에 반복하여 연결하려면 다음과 같이 Foreach 루프 컨테이너와 플랫 파일 연결 관리자를 둘 다 구성해야 합니다.  
   
--   **Foreach 루프 컨테이너:** 컨테이너의 열거 된 값을 사용자 정의 패키지 변수에 매핑합니다. 그러면 컨테이너가 이 사용자 정의 변수를 사용하여 플랫 파일 연결 관리자의 `ConnectionString` 속성을 수정하고 폴더의 각 플랫 파일에 반복하여 연결합니다.  
+-   **Foreach 루프 컨테이너:** 컨테이너의 열거된 값을 사용자 정의 패키지 변수에 매핑합니다. 그러면 컨테이너가 이 사용자 정의 변수를 사용하여 플랫 파일 연결 관리자의 `ConnectionString` 속성을 수정하고 폴더의 각 플랫 파일에 반복하여 연결합니다.  
   
 -   **플랫 파일 연결 관리자:** 사용자 정의 변수를 사용 하 여 연결 관리자의 `ConnectionString` 속성을 채워 1 단원에서 만든 연결 관리자를 수정 합니다.  
   
@@ -33,14 +33,11 @@ ms.locfileid: "75232468"
  패키지를 수정한 후 패키지가 실행되면 Foreach 루프 컨테이너가 Sample Data 폴더의 파일 집합 전체에서 반복됩니다. Foreach 루프 컨테이너는 조건에 맞는 파일을 발견할 때마다 사용자 정의 변수를 파일 이름으로 채우고 Sample Currency Data 플랫 파일 연결 관리자의 `ConnectionString` 속성에 사용자 정의 변수를 매핑한 다음 해당 파일에 대해 데이터 흐름을 실행합니다. 따라서 Foreach 루프가 반복될 때마다 데이터 흐름 태스크에서 다른 플랫 파일을 사용합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 흐름 제어를 데이터 흐름과 분리하므로 제어 흐름에 추가한 루핑에서는 데이터 흐름을 수정할 필요가 없습니다. 따라서 1단원에서 만든 데이터 흐름을 변경하지 않아도 됩니다.  
+>  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 흐름 제어를 데이터 흐름과 분리하므로 제어 흐름에 추가한 루핑에서는 데이터 흐름을 수정할 필요가 없습니다. 따라서 1단원에서 만든 데이터 흐름을 변경하지 않아도 됩니다.  
   
 ### <a name="to-add-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 추가하려면  
   
-1.  
-  **SQL Server Data Tools**에서 **제어 흐름** 탭을 클릭합니다.  
+1.  **SQL Server Data Tools**에서 **제어 흐름** 탭을 클릭합니다.  
   
 2.  **SSIS 도구 상자**에서 **컨테이너**를 확장한 다음 **Foreach 루프 컨테이너** 를 **제어 흐름** 탭의 디자인 화면으로 끌어옵니다.  
   
@@ -52,39 +49,31 @@ ms.locfileid: "75232468"
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Foreach 루프 컨테이너의 열거자를 구성하려면  
   
-1.  
-  Foreach File in Folder를 두 번 클릭하여 **Foreach 루프 편집기**를 다시 엽니다.  
+1.  Foreach File in Folder를 두 번 클릭하여 **Foreach 루프 편집기**를 다시 엽니다.  
   
-2.  
-  **컬렉션**을 클릭합니다.  
+2.  **컬렉션**을 클릭합니다.  
   
 3.  **컬렉션** 페이지에서 **Foreach File 열거자**를 선택합니다.  
   
-4.  
-  **열거자 구성** 그룹에서 **찾아보기**를 클릭합니다.  
+4.  **열거자 구성** 그룹에서 **찾아보기**를 클릭합니다.  
   
-5.  
-  **폴더 찾아보기** 대화 상자에서 Currency_*.txt 파일이 들어 있는 컴퓨터의 폴더를 찾습니다.  
+5.  **폴더 찾아보기** 대화 상자에서 Currency_*.txt 파일이 들어 있는 컴퓨터의 폴더를 찾습니다.  
   
      이 예제 데이터는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 단원 패키지에 포함되어 있습니다. 예제 데이터 및 단원 패키지를 다운로드하려면 다음을 수행합니다.  
   
-    1.  [Integration Services 제품 샘플](https://go.microsoft.com/fwlink/?LinkId=275027) 로 이동 합니다.  
+    1.  [Integration Services 제품 예제](https://go.microsoft.com/fwlink/?LinkId=275027)로 이동합니다.  
   
-    2.  
-  **DOWNLOADS** 탭을 클릭합니다.  
+    2.  **다운로드** 탭을 클릭 합니다.  
   
     3.  "https://msftisprodsamples.codeplex.com/downloads/get/578097" SQL2012 하이퍼링크를 클릭 합니다. Integration_Services. Create_Simple_ETL_Tutorial. 샘플 .zip 파일입니다.  
   
-6.  
-  **파일** 상자에 **Currency_\*.txt**를 입력합니다.  
+6.  **파일** 상자에 **Currency_\*.txt**를 입력합니다.  
   
 ### <a name="to-map-the-enumerator-to-a-user-defined-variable"></a>사용자 정의 변수에 열거자를 매핑하려면  
   
-1.  
-  **변수 매핑**을 클릭합니다.  
+1.  **변수 매핑**을 클릭합니다.  
   
-2.  
-  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 클릭하고 **\<새 변수...>** 를 선택합니다.  
+2.  **변수 매핑** 페이지의 **변수** 열에서 빈 셀을 클릭 하 고 ** \<새 변수 ... >** 를 선택 합니다.  
   
 3.  **변수 추가** 대화 상자에서 **이름**에을 입력 `varFileName`합니다.  
   
@@ -93,8 +82,7 @@ ms.locfileid: "75232468"
   
 4.  **확인**을 클릭합니다.  
   
-5.  
-  **확인** 을 다시 클릭하여 **Foreach 루프 편집기** 대화 상자를 종료합니다.  
+5.  **확인** 을 다시 클릭하여 **Foreach 루프 편집기** 대화 상자를 종료합니다.  
   
 ### <a name="to-add-the-data-flow-task-to-the-loop"></a>루프에 데이터 흐름 태스크를 추가하려면  
   

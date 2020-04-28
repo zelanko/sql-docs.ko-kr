@@ -14,10 +14,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9eb717968b191bb7d80f5d68542178bf32734b00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75241304"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
@@ -46,8 +46,7 @@ ms.locfileid: "75241304"
   
 -   Updategrams은 업데이트 하는 동안 **이미지** 형식 데이터를 매개 변수로 전달 하는 것을 허용 하지 않습니다.  
   
--   Updategrams으로 작업할 때에 ** \<>** 는 **text/ntext** 및 images와 같은 BLOB (Binary large object) 형식을에서 사용 하면 안 됩니다 .이는 동시성 제어에 사용 하기 위해이를 포함 하기 때문입니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 BLOB 형식 비교에 대한 제한으로 인해 문제가 발생할 수 있습니다. 예를 들어 LIKE 키워드는 **text** 데이터 형식의 열을 비교 하기 위해 WHERE 절에 사용 됩니다. 그러나 데이터 크기가 8K 보다 큰 BLOB 유형의 경우에는 비교가 실패 합니다.  
+-   Updategrams으로 작업할 때에 ** \<>** 는 **text/ntext** 및 images와 같은 BLOB (Binary large object) 형식을에서 사용 하면 안 됩니다 .이는 동시성 제어에 사용 하기 위해이를 포함 하기 때문입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 BLOB 형식 비교에 대한 제한으로 인해 문제가 발생할 수 있습니다. 예를 들어 LIKE 키워드는 **text** 데이터 형식의 열을 비교 하기 위해 WHERE 절에 사용 됩니다. 그러나 데이터 크기가 8K 보다 큰 BLOB 유형의 경우에는 비교가 실패 합니다.  
   
 -   **Ntext** 데이터의 특수 문자는 BLOB 형식 비교에 대 한 제한 사항 때문에 SQLXML 4.0에 문제가 발생할 수 있습니다. 예를 들어 **ntext** 형식의 열에 대 한 동시성 검사에 사용 될 때 updategram의 ** \<before>** 블록에 "[Serializable]"을 사용 하면 다음과 같은 SQLOLEDB 오류 설명과 함께 실패 합니다.  
   

@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb81724c8feb5ca34736b16aeb8f8d65b1018300
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683496"
 ---
 # <a name="getting-started-sql-server-2014"></a>시작(SQL Server 2014)
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 정보, 시스템 요구 사항, 설치 지침 등의 원본을 살펴봅니다.  
   
  [SQL Server 2014 제품 사양](sql-server-2014-product-specifications.md)  
@@ -37,6 +36,6 @@ ms.locfileid: "74683496"
   
  [SQL Server 사용 조건 정보](about-the-sql-server-license-terms.md)  
   
- [Microsoft SQL Server 개인 정보 취급 방침](microsoft-sql-server-privacy-statement.md)  
+ [Microsoft SQL Server 개인정보처리방침](microsoft-sql-server-privacy-statement.md)  
   
   

@@ -13,14 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d826201f44bb666050f5229b4824b5c2198dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229002"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>가용성 그룹 관리(SQL Server)
-  
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 의 기존 AlwaysOn 가용성 그룹 관리에는 다음 태스크 중 하나 이상이 포함됩니다.  
   
 -   기존 가용성 그룹 복제본의 속성 변경(예: 읽기 가능한 보조 복제본 구성을 위한 클라이언트 연결 액세스 변경용), 장애 조치(failover) 모드, 가용성 모드 또는 세션 제한 시간 설정 변경  
@@ -44,7 +43,7 @@ ms.locfileid: "75229002"
 -   OS 업그레이드를 위한 AlwaysOn 가용성 그룹의 클러스터 간 마이그레이션  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **기존 가용성 그룹을 구성하려면**  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
@@ -59,7 +58,7 @@ ms.locfileid: "75229002"
   
 -   [유연한 장애 조치 (failover) 정책을 구성 하 여 자동 장애 조치 (Failover) &#40;AlwaysOn 가용성 그룹의 조건을 제어&#41;](configure-flexible-automatic-failover-policy.md)  
   
- **가용성 그룹을 관리 하려면**  
+ **가용성 그룹을 관리하려면**  
   
 -   [가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "75229002"
   
 -   [가용성 그룹 제거&#40;SQL Server&#41;](remove-an-availability-group-sql-server.md)  
   
- **가용성 복제본을 관리 하려면**  
+ **가용성 복제본을 관리하려면**  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
@@ -103,18 +102,18 @@ ms.locfileid: "75229002"
   
 -   [가용성 데이터베이스 재개&#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
- **가용성 그룹을 모니터링 하려면**  
+ **가용성 그룹을 모니터링하려면**  
   
 -   [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
- **새 WSFC 클러스터로 가용성 그룹 마이그레이션 (클러스터 간 마이그레이션)을 지원 하려면**  
+ **새 WSFC 클러스터로 가용성 그룹 마이그레이션(클러스터 간 마이그레이션)을 지원하려면**  
   
 -   [서버 인스턴스의 HADR 클러스터 컨텍스트 변경&#40;SQL Server&#41;](change-the-hadr-cluster-context-of-server-instance-sql-server.md)  
   
 -   [가용성 그룹을 오프라인 상태로 만들기&#40;SQL Server&#41;](../../take-an-availability-group-offline-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   **블로그:**  
   
@@ -130,7 +129,7 @@ ms.locfileid: "75229002"
   
 -   **백서:**  
   
-     [SQL Server 2012에 대 한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   

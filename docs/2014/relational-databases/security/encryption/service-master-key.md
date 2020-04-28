@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 6a802cfadfa48c7dbba7479ca169daedf70fe8b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957138"
 ---
 # <a name="service-master-key"></a>인스턴스에서 해당 인스턴스를 위해 생성되는 SMK(
@@ -31,7 +31,7 @@ ms.locfileid: "74957138"
  서비스 마스터 키를 백업하고 백업 복사본을 사이트 외부의 안전한 위치에 보관하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
+ [BACKUP SERVICE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-service-master-key-transact-sql)  
   
  [RESTORE SERVICE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-service-master-key-transact-sql)  
   

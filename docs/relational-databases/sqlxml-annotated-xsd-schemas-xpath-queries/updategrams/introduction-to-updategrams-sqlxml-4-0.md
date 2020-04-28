@@ -24,10 +24,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9e709a607d02273c0e2cb0208faf4e9799acf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252483"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
@@ -160,8 +160,7 @@ ms.locfileid: "75252483"
 ```  
   
 ## <a name="working-with-characters-valid-in-sql-server-but-not-valid-in-xml"></a>SQL Server에서는 유효하지만 XML에서는 유효하지 않은 문자 사용  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 테이블 이름에 공백이 포함될 수 있지만 이러한 형식의 테이블 이름은 XML에서는 유효하지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 테이블 이름에 공백이 포함될 수 있지만 이러한 형식의 테이블 이름은 XML에서는 유효하지 않습니다.  
   
  유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효한 XML 식별자가 아닌 문자를 인코딩하려면 ' __xHHHH\_\_'를 인코딩 값으로 사용 합니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다. 이 인코딩 체계를 사용 하면 공백 문자가 x0020 (공백 문자에 대 한 4 자리 16 진수 코드)로 바뀝니다. 따라서의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 이름 [Order Details]는 XML로 _x005B_Order_x0020_Details_x005D\_ 됩니다.  
   

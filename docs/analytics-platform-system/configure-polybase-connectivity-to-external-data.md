@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3b754fb2de33a230bc7d27f239b2778d2849fd5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401271"
 ---
 # <a name="what-is-polybase"></a>PolyBase란?
 PolyBase를 사용 하면 AP (분석 플랫폼 시스템)에서 데이터를 읽고 외부 데이터 원본에 데이터를 쓸 수 있는 Transact-sql 쿼리를 처리할 수 있습니다. 외부 데이터에 액세스 하는 동일한 쿼리는 AP에 관계 테이블을 포함할 수도 있습니다. 이를 통해 외부 원본의 데이터를 APS 데이터베이스의 상위 값 관계형 데이터와 결합할 수 있습니다.
 
-![PolyBase 논리적](media/polybase/polybase-logical.png)
+![PolyBase 논리](media/polybase/polybase-logical.png)
 
 APS의 PolyBase는 Hadoop (HDFS) 파일 시스템 및 Azure Blob Storage에 대 한 읽기 및 쓰기를 지원 합니다. 또한 PolyBase는 전체 쿼리 성능을 최적화 하기 위해 Hadoop 노드에 일부 계산을 mapreduce 작업으로 푸시할 수 있습니다. APS의 PolyBase는 분리 된 텍스트, ORC 및 Parquet 파일에 대해 작동할 수 있습니다. 전체 설명 및 해당 기능에 대 한 자세한 내용은 [PolyBase 란?](https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide) 을 참조 하세요.
 

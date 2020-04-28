@@ -15,15 +15,15 @@ author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 1652d5eec9d6419e7b39f96a8b854eef8651bf26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74687155"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server Integration Service 마이그레이션 평가 수행
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구성 요소를 Data Migration Assistant와 함께 설치 해야 합니다.
 
@@ -44,8 +44,7 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 
     **SQL Server**로 원본을 선택 하 고 대상 서버 유형을 **Azure SQL Database** 또는 **Azure SQL Database 관리 되는 인스턴스로**설정 합니다.
 
-1. 
-  **만들기**를 클릭합니다.
+1. **만들기**를 클릭합니다.
 
     ![평가 만들기](media/dma-assess-ssis/dma-assess-ssis-create.png)
 
@@ -63,9 +62,8 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 1. 평가할 SSIS 패키지 저장소 유형을 선택 하 고 **추가**를 선택 합니다.
 ![소스 추가](media/dma-assess-ssis/dma-assess-ssis-addsource-type.png)
 1. 여러 폴더를 평가 해야 하는 경우 **원본 추가** 를 선택 하 여 연결 플라이 아웃 메뉴를 엽니다.
-1. 
-    **Start Assessment**(평가 시작)를 클릭합니다.
-![평가 시작](media/dma-assess-ssis/dma-assess-ssis-assess.png)
+1. **Start Assessment**(평가 시작)를 클릭합니다.
+  ![평가 시작](media/dma-assess-ssis/dma-assess-ssis-assess.png)
 
 ## <a name="view-results"></a>결과 보기
 
@@ -76,5 +74,5 @@ SSIS (SQL Server Integration Service) 패키지를 평가 하려면 아래 구�
 ## <a name="next-steps"></a>다음 단계
 
 - [ADF에서 SSIS로 온-프레미스 SSIS 작업 마이그레이션 개요](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Azure SQL Database 관리 되는 인스턴스로 SQL Server Integration Services 패키지 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [SQL Server Integration Services 패키지를 Azure SQL Database  Managed Instance로 마이그레이션](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [SQL Server Integration Services 패키지를 Azure SQL Database에 다시 배포](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

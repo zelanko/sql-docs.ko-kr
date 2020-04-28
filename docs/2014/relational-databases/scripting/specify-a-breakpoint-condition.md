@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243226"
 ---
 # <a name="specify-a-breakpoint-condition"></a>중단점 조건 지정
@@ -37,7 +37,7 @@ ms.locfileid: "75243226"
   
 2.  **중단점 조건** 대화 상자에서 **조건** 상자에 올바른 부울 식을 입력합니다.  
   
-3.  식이 **** 로 `true`계산 될 때 중단 하려면 true를 선택 하 고, 식의 값이 변경 될 때 중단 하려면 **변경 된** 경우를 선택 합니다.  
+3.  식이 **Is true** 로 `true`계산 될 때 중단 하려면 true를 선택 하 고, 식의 값이 변경 될 때 중단 하려면 **변경 된** 경우를 선택 합니다.  
   
     > [!NOTE]  
     >  중단점에 처음 도달할 때까지 디버거는 부울 식을 평가하지 않습니다. **이(가) 변경된 경우**를 선택한 경우 디버거는 첫 번째 평가를 변경으로 간주하지 않으므로 첫 번째 평가 시에는 중단하지 않습니다.  

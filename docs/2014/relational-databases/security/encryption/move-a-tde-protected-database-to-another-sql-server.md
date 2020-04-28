@@ -14,14 +14,14 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957172"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
-  이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하는 방법을 설명합니다. TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 `master` 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
+  이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 이 데이터베이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 다른 인스턴스로 이동하는 방법을 설명합니다. TDE는 데이터 및 로그 파일에 대한 실시간 I/O 암호화 및 암호 해독을 수행합니다. 암호화에는 복구 중에 사용 가능하도록 데이터베이스 부트 레코드에 저장된 DEK(데이터베이스 암호화 키)가 사용됩니다. DEK는 서버의 `master` 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
   
  **항목 내용**  
   
@@ -31,21 +31,21 @@ ms.locfileid: "74957172"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 투명 한 데이터 암호화로 보호 되는 데이터베이스를 만듭니다.**  
+-   **다음을 사용하여 투명한 데이터 암호화로 보호되는 데이터베이스를 만듭니다.**  
   
      [SQL Server Management Studio](#SSMSCreate)  
   
      [Transact-SQL](#TsqlCreate)  
   
--   **다음을 사용 하 여 데이터베이스를 이동 합니다.**  
+-   **다음을 사용하여 데이터베이스를 이동합니다.**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 에서 데이터베이스 파일에 액세스할 `master` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 수 있도록 대상 서버의 데이터베이스에 인증서 또는 비대칭 키가 설치 되어 있어야 합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](transparent-data-encryption.md)를 참조하세요.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957172"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]여기에 생성 된 파일을 **C:\Program FILES\MICROSOFT SQL Server\MSSQL12.에 저장 합니다. **기본적으로 MSSQLSERVER\MSSQL\DATA입니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 -   데이터베이스 `CONTROL DATABASE` 마스터 키를 `master` 만들려면 데이터베이스에 대 한 권한이 필요 합니다.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957172"
   
 -   암호화된 데이터베이스에 대한 `CONTROL DATABASE` 권한과 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 `VIEW DEFINITION` 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a>투명 한 데이터 암호화로 보호 되는 데이터베이스를 만들려면  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>투명 한 데이터 암호화로 보호 되는 데이터베이스를 만들려면  
   
-###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
 1.  데이터베이스에 `master` 데이터베이스 마스터 키 및 인증서를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
@@ -73,24 +73,21 @@ ms.locfileid: "74957172"
   
 3.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.  
   
-4.  
-  **새 데이터베이스** 대화 상자의 **데이터베이스 이름** 상자에 새 데이터베이스의 이름을 입력합니다.  
+4.  **새 데이터베이스** 대화 상자의 **데이터베이스 이름** 상자에 새 데이터베이스의 이름을 입력합니다.  
   
-5.  
-  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../databases/create-a-database.md)를 참조하세요.  
+5.  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(...)** 를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../databases/create-a-database.md)를 참조하세요.  
   
 6.  개체 탐색기에서 더하기 기호를 클릭하여 **데이터베이스** 폴더를 확장합니다.  
   
 7.  만든 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **데이터베이스 암호화 관리**를 선택합니다.  
   
-     
-  **데이터베이스 암호화 관리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
+     **데이터베이스 암호화 관리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **암호화 알고리즘**  
      데이터베이스 암호화에 사용할 알고리즘을 표시하거나 설정합니다. 기본 알고리즘은 `AES128`입니다. 이 필드는 비워 둘 수 없습니다. 암호화 알고리즘에 대한 자세한 내용은 [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md)을 참조하세요.  
   
      **서버 인증서 사용**  
-     인증서로 암호화의 보안을 유지하도록 설정합니다. 목록에서 하나를 선택합니다. 서버 인증서에 대한 `VIEW DEFINITION` 권한이 없으면 이 목록은 비어 있습니다. 암호화의 인증서 방법을 선택한 경우에는 이 값을 비워 둘 수 없습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하세요.  
+     인증서로 암호화의 보안을 유지하도록 설정합니다. 목록에서 하나를 선택합니다. 서버 인증서에 대한 `VIEW DEFINITION` 권한이 없으면 이 목록은 비어 있습니다. 암호화의 인증서 방법을 선택한 경우에는 이 값을 비워 둘 수 없습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.  
   
      **서버 비대칭 키 사용**  
      비대칭 키로 암호화의 보안을 유지하도록 설정합니다. 사용 가능한 비대칭 키만 표시됩니다. EKM 모듈에서 보호하는 비대칭 키만 TDE를 사용하여 데이터베이스를 암호화할 수 있습니다.  
@@ -98,9 +95,9 @@ ms.locfileid: "74957172"
      **데이터베이스 암호화 설정**  
      데이터베이스의 TDE를 설정(선택) 또는 해제(선택 취소)로 변경합니다.  
   
-8.  완료되었으면 **확인**을 클릭합니다.  
+8.  작업을 완료한 후 **확인**을 클릭합니다.  
   
-###  <a name="TsqlCreate"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -156,18 +153,17 @@ ms.locfileid: "74957172"
   
 -   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
--   [CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>데이터베이스를 이동 하려면  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>데이터베이스를 이동 하려면  
   
-###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
 1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후, **분리...** 를 선택합니다.  
   
-     
-  **데이터베이스 분리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
+     **데이터베이스 분리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **분리할 데이터베이스**  
      분리할 데이터베이스를 나열합니다.  
@@ -188,8 +184,7 @@ ms.locfileid: "74957172"
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     
-  **준비** 또는 **준비 안 됨**상태 중 하나를 표시합니다.  
+     **준비** 또는 **준비 안 됨**상태 중 하나를 표시합니다.  
   
      **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  
@@ -206,28 +201,23 @@ ms.locfileid: "74957172"
   
 4.  Window 탐색기를 사용하여 서버 인증서 및 프라이빗 키 파일의 백업을 원본 서버에서 대상 서버의 동일한 위치로 이동 또는 복사합니다.  
   
-5.  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 대상 인스턴스에서 데이터베이스 마스터 키를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
+5.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 대상 인스턴스에서 데이터베이스 마스터 키를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
 6.  원본 서버 인증서 백업 파일을 사용하여 서버 인증서를 다시 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
-7.  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
+7.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...** 을 선택합니다.  
   
-8.  
-  **데이터베이스 연결** 대화 상자의 **연결할 데이터베이스**아래에서 **추가**를 클릭합니다.  
+8.  **데이터베이스 연결** 대화 상자의 **연결할 데이터베이스**아래에서 **추가**를 클릭합니다.  
   
 9. **데이터베이스 파일 찾기-**_server_name_ 대화 상자에서 새 서버에 연결할 데이터베이스 파일을 선택 하 고 **확인**을 클릭 합니다.  
   
-     
-  **데이터베이스 연결** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
+     **데이터베이스 연결** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **연결할 데이터베이스**  
      선택한 데이터베이스에 대한 정보를 표시합니다.  
   
-     
      \<열 머리글 없음>  
-  연결 작업의 상태를 나타내는 아이콘을 표시합니다. 가능한 아이콘은 아래의 **상태** 에 대한 설명에 설명되어 있습니다.  
+     연결 작업의 상태를 나타내는 아이콘을 표시합니다. 가능한 아이콘은 아래의 **상태** 에 대한 설명에 설명되어 있습니다.  
   
      **MDF 파일 위치**  
      선택한 MDF 파일의 경로와 파일 이름을 표시합니다.  
@@ -235,7 +225,7 @@ ms.locfileid: "74957172"
      **데이터베이스 이름**  
      데이터베이스 이름을 표시합니다.  
   
-     **연결 이름**  
+     **다른 이름으로 연결**  
      필요에 따라 연결할 데이터베이스의 이름을 다른 이름으로 지정합니다.  
   
      **소유자**  
@@ -244,12 +234,12 @@ ms.locfileid: "74957172"
      **상태**  
      다음 표에 설명된 내용과 같이 데이터베이스의 상태를 표시합니다.  
   
-    |아이콘|상태 텍스트|Description|  
+    |아이콘|상태 텍스트|설명|  
     |----------|-----------------|-----------------|  
     |(아이콘 없음)|(텍스트 없음)|연결 작업이 시작되지 않았거나 이 개체에 대해 보류 중입니다. 대화 상자가 열려 있는 경우에 표시되는 기본 설정입니다.|  
     |녹색, 오른쪽 방향 삼각형|진행 중|연결 작업이 시작되었지만 아직 완료되지 않았습니다.|  
-    |녹색 확인 표시|Success|개체가 성공적으로 연결되었습니다.|  
-    |흰색 십자 표시가 있는 빨강 원|Error|연결 작업을 수행하는 동안 오류가 발생하여 완료하지 못했습니다.|  
+    |녹색 확인 표시|성공|개체가 성공적으로 연결되었습니다.|  
+    |흰색 십자 표시가 있는 빨강 원|오류|연결 작업을 수행하는 동안 오류가 발생하여 완료하지 못했습니다.|  
     |오른쪽과 왼쪽에 두 개의 검정 사분면이 있고 위쪽과 아래쪽에 두 개의 흰색 사분면이 있는 원|중지됨|사용자가 작업을 중지하여 연결 작업이 완료되지 않았습니다.|  
     |시계 반대 방향을 가리키는 곡선 모양의 화살표가 있는 원|롤백됨|연결 작업이 성공적으로 완료되었지만 다른 개체를 연결하는 동안 발생한 오류로 인해 롤백되었습니다.|  
   
@@ -263,7 +253,7 @@ ms.locfileid: "74957172"
      선택한 파일을 **연결할 데이터베이스** 표에서 제거합니다.  
   
      **"** _<database_name>_ **" 데이터베이스 세부 정보**  
-     연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인하거나 변경하려면 **찾아보기** 단추(**...**)를 클릭합니다.  
+     연결할 파일의 이름을 표시합니다. 파일의 경로 이름을 확인 하거나 변경 하려면 **찾아보기** 단추 (**...**)를 클릭 합니다.  
   
     > [!NOTE]  
     >  파일이 없으면 **메시지** 열에 "찾을 수 없음"이 표시됩니다. 로그 파일을 찾을 수 없는 경우 다른 디렉터리에 있거나 삭제된 것입니다. 올바른 위치를 가리키도록 **데이터베이스 정보** 표의 파일 경로를 업데이트하거나 표에서 로그 파일을 제거해야 합니다. .ndf 데이터 파일을 찾을 수 없는 경우 올바른 위치를 가리키도록 표에서 해당 파일의 경로를 업데이트해야 합니다.  
@@ -271,16 +261,16 @@ ms.locfileid: "74957172"
      **원래 파일 이름**  
      데이터베이스에 속한 연결된 파일의 이름을 표시합니다.  
   
-     **파일 유형**  
+     **파일 형식**  
      파일의 형식( **데이터** 또는 **로그**)을 나타냅니다.  
   
      **현재 파일 경로**  
      선택한 데이터베이스 파일의 경로를 표시합니다. 이 경로는 직접 편집할 수 있습니다.  
   
      **메시지**  
-     빈 메시지 또는 "**파일을 찾을 수 없습니다**"라는 하이퍼링크를 표시합니다.  
+     빈 메시지 또는 "파일을 찾을 수**없습니다**" 라는 하이퍼링크를 표시 합니다.  
   
-###  <a name="TsqlMove"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Transact-SQL 사용  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

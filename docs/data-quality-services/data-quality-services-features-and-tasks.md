@@ -10,10 +10,10 @@ ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: f2775969aa22b580d40ecd6f8065deb2ed3472c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251695"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Data Quality Services 기능 및 태스크
@@ -27,7 +27,7 @@ ms.locfileid: "75251695"
   
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- [DQS&#41;&#40;데이터 품질 프로젝트](../data-quality-services/data-quality-projects-dqs.md)  
+ [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)  
   
  [Data Cleansing](../data-quality-services/data-cleansing.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401321"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>외부 SMP SQL Server 구성 하 여 원격 테이블 복사-병렬 데이터 웨어하우스를 수신 합니다.
@@ -30,7 +30,7 @@ ms.locfileid: "74401321"
   
 -   로그인을 만들고 대상 데이터베이스에 대 한 사용 권한을 부여할 수 있는 기능을 포함 하는 SQL Server 로그인 계정 (SQL Server 이미 설치 된 경우)  
   
-## <a name="HowToSQLServer"></a>원격 테이블 복사본을 받도록 외부 SMP SQL Server 구성  
+## <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a><a name="HowToSQLServer"></a>원격 테이블 복사본을 받도록 외부 SMP SQL Server 구성  
 원격 테이블 복사 기능은 SQL Server PDW 어플라이언스의 테이블을 Windows 시스템에서 실행 되는 외부 SMP SQL Server 데이터베이스로 복사 합니다. 원격 테이블 복사본을 받도록 외부 Windows 시스템을 구성한 후 다음 단계는 Windows 시스템에 SQL Server를 설치 하 고 구성 하는 것입니다.  
   
 SQL Server를 구성 하려면 다음 단계를 사용 합니다.  
@@ -45,7 +45,7 @@ SQL Server를 구성 하려면 다음 단계를 사용 합니다.
   
 5.  인증에 사용 될 SMP SQL Server의 SQL Server 계정을 결정 합니다. 병렬 데이터 내보내기 작업을 위해 대상 데이터베이스의 테이블에 데이터를 만들고, 삭제 하 고, 삽입할 권한을 해당 계정에 부여 합니다.  
   
-## <a name="BPSQLConfig"></a>원격 테이블 복사에 대 한 SMP SQL Server 구성 모범 사례  
+## <a name="best-practices-for-smp-sql-server-configuration-for-remote-table-copy"></a><a name="BPSQLConfig"></a>원격 테이블 복사에 대 한 SMP SQL Server 구성 모범 사례  
 원격 테이블 복사본을 받도록 SMP SQL Server를 구성 하는 경우 다음 모범 사례를 사용 하 여 성능을 향상 시킵니다.  
   
 1.  SQL Server 제품 설명서에 설명 된 대로 모범 사례를 따릅니다. 예를 들어 데이터 암호화를 사용 하도록 설정 합니다. SQL Server 보안에 대 한 자세한 내용은 MSDN의 [SQL Server 보안](../relational-databases/security/securing-sql-server.md) 을 참조 하세요.  

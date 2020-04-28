@@ -12,10 +12,10 @@ ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252250"
 ---
 # <a name="create-a-linked-domain"></a>연결된 도메인 만들기
@@ -35,42 +35,36 @@ ms.locfileid: "75252250"
   
  예를 들어 고객 이름, 고객 성 및 아버지의 이름 필드가 포함된 레코드가 여기에 해당합니다. 고객 이름과 아버지의 이름을 둘 다 이름 도메인에 매핑하고 이름 도메인과 성 도메인을 전체 이름 복합 도메인의 일부로 지정한 경우를 가정해 보겠습니다. 이 경우의 문제는 아버지의 이름이 성 없이 복합 도메인에 추가된다는 점입니다. 그러나 두 이름 필드를 각각 서로 다른 도메인에 연결하고 두 도메인을 연결한 경우 고객 이름 도메인은 전체 복합 도메인에 추가하고 아버지의 이름 필드는 복합 도메인에 추가하지 않을 수 있습니다. 이렇게 하면 아버지의 이름이 복합 도메인에 추가되지 않습니다.  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
  연결된 도메인을 만들려면 연결할 기존 도메인과 기술 자료가 있어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  연결된 도메인을 만들려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Create"></a>연결 된 도메인 만들기  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a>연결 된 도메인 만들기  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client 응용 프로그램을 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
   
-2.  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. 
-  **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
-3.  
-  **도메인 관리** 페이지의 **도메인 목록** 에서 새 도메인을 연결할 도메인을 마우스 오른쪽 단추로 클릭한 다음 **연결된 도메인 만들기**를 클릭합니다.  
+3.  **도메인 관리** 페이지의 **도메인 목록** 에서 새 도메인을 연결할 도메인을 마우스 오른쪽 단추로 클릭한 다음 **연결된 도메인 만들기**를 클릭합니다.  
   
     > [!NOTE]  
     >  연결된 도메인을 만드는 데에만 사용되는 아이콘은 없습니다. 이 작업을 수행하려면 상황에 맞는 메뉴의 명령을 사용해야 합니다.  
   
-4.  
-  **도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다. 연결된 도메인 이름이 올바른지 확인합니다.  
+4.  **도메인 만들기** 대화 상자에서 기술 자료에 고유한 이름과 설명(최대 256자)을 입력합니다. 연결된 도메인 이름이 올바른지 확인합니다.  
   
-5.  
-  **확인** 을 클릭하여 연결된 도메인 만들기를 완료합니다.  
+5.  **확인** 을 클릭하여 연결된 도메인 만들기를 완료합니다.  
   
 6.  필요한 경우 도메인 속성 탭에서 연결된 도메인의 이름 또는 설명을 변경할 수 있습니다.  
   
-7.  
-  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [도메인 관리 작업 종료](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
-##  <a name="Map"></a>연결 된 도메인에 두 필드 매핑  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Map two fields to linked domains  
   
 1.  기술 자료 검색 작업에 대한 기술 자료를 열어 데이터베이스와 테이블 또는 뷰에 매핑합니다.  
   
@@ -80,16 +74,15 @@ ms.locfileid: "75252250"
   
 4.  도메인 만들기 대화 상자에서 도메인 이름과 설명을 입력한 다음 확인을 클릭합니다.  
   
-##  <a name="FollowUp"></a>후속 작업: 연결 된 도메인을 만든 후  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> 후속 작업: 연결된 도메인을 만든 후  
  연결된 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="Behavior"></a>연결 된 도메인의 동작  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> 연결된 도메인의 동작  
  연결된 도메인에 대한 설정을 다음과 같이 변경할 수 있습니다.  
   
 -   연결된 도메인의 이름 및 설명을 변경할 수 있습니다.  
   
--   
-  **데이터 형식**, **선행 값 사용**또는 **출력 형식** 속성에 대한 도메인 속성을 변경하려면 연결한 도메인을 선택하고 해당 도메인에 대한 **도메인 속성** 탭에서 이러한 설정을 변경합니다. 연결된 도메인의 속성에서는 이러한 설정을 변경할 수 없습니다. 자세한 내용은 [도메인 만들기](../data-quality-services/create-a-domain.md)을 참조하세요.  
+-   **데이터 형식**, **선행 값 사용**또는 **출력 형식** 속성에 대한 도메인 속성을 변경하려면 연결한 도메인을 선택하고 해당 도메인에 대한 **도메인 속성** 탭에서 이러한 설정을 변경합니다. 연결된 도메인의 속성에서는 이러한 설정을 변경할 수 없습니다. 자세한 내용은 [도메인 만들기](../data-quality-services/create-a-domain.md)을 참조하세요.  
   
 -   도메인 관리 페이지의 **참조 데이터**, **도메인 규칙**, **도메인 값**및 **용어 기반 관계** 탭에 있는 설정은 연결된 도메인 또는 연결된 대상 도메인에 대해 변경할 수 있으며 이러한 변경 내용은 다른 도메인에 상속됩니다.  
   

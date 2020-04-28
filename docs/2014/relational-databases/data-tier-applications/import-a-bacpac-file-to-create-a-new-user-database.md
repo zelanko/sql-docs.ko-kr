@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232233"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
@@ -85,7 +85,7 @@ ms.locfileid: "75232233"
   
     -   [결과 페이지](#Results)  
   
-###  <a name="Introduction"></a> 소개 페이지  
+###  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 가져오기 마법사의 단계에 대해 설명합니다.  
   
  **옵션**  
@@ -96,19 +96,18 @@ ms.locfileid: "75232233"
   
 -   **취소** - 작업을 취소하고 마법사를 닫습니다.  
   
-###  <a name="Import_settings"></a> 가져오기 설정 페이지  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> 가져오기 설정 페이지  
  이 페이지에서 가져올 .bacpac 파일의 위치를 지정할 수 있습니다.  
   
 -   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
 -   **Azure에서 가져오기** -azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
-     Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. 
-  **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
+     Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
   
      계속하려면 가져올 .bacpac 파일을 지정하고 **열기**를 클릭합니다.  
   
-###  <a name="Database_settings"></a> 데이터베이스 설정 페이지  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> 데이터베이스 설정 페이지  
  이 페이지에서 만들려는 데이터베이스의 세부 정보를 지정할 수 있습니다.  
   
  **로컬 SQL Server 인스턴스의 경우**  
@@ -125,8 +124,7 @@ ms.locfileid: "75232233"
   
 -   **새 데이터베이스 이름** -가져온 데이터베이스의 이름을 제공 합니다.  
   
--   버전-비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹을 지정 합니다. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](https://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
+-   버전-비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹을 지정 합니다. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전에 대한 자세한 내용은 이 [SQL Database](https://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
   
 -   **최대 데이터베이스 크기 (GB)** -드롭다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
   
@@ -137,19 +135,18 @@ ms.locfileid: "75232233"
   
  계속하려면 **다음**을 클릭합니다.  
   
-###  <a name="Summary"></a>요약 페이지  
+###  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 가져오기 작업을 완료하려면 **마침**을 클릭합니다. 가져오기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-###  <a name="Progress"></a>진행률 페이지  
+###  <a name="progress-page"></a><a name="Progress"></a>진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
-###  <a name="Results"></a>결과 페이지  
+###  <a name="results-page"></a><a name="Results"></a>결과 페이지  
  이 페이지에는 데이터베이스 가져오기 및 만들기 작업의 결과가 성공 또는 실패로 보고됩니다. 오류가 발생한 동작에는 모두 **결과** 열에 링크가 있습니다. 링크를 클릭하면 해당 동작의 오류에 대한 보고서가 표시됩니다.  
   
- 
-  **닫기**를 클릭하여 마법사를 닫습니다.  
+ **닫기**를 클릭하여 마법사를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](data-tier-applications.md)   

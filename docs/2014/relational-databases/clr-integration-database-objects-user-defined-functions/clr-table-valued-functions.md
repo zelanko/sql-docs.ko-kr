@@ -19,30 +19,27 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232288"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 테이블 반환 함수
   테이블 반환 함수는 테이블을 반환하는 사용자 정의 함수입니다.  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 관리 언어에서 테이블 반환 함수를 정의할 수 있도록 하여 테이블 반환 함수의 기능을 확장하고 있습니다. 데이터는 `IEnumerable` 또는 `IEnumerator` 개체를 통해 테이블 반환 함수에서 반환됩니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 모든 관리 언어에서 테이블 반환 함수를 정의할 수 있도록 하여 테이블 반환 함수의 기능을 확장하고 있습니다. 데이터는 `IEnumerable` 또는 `IEnumerator` 개체를 통해 테이블 반환 함수에서 반환됩니다.  
   
 > [!NOTE]  
 >  테이블 반환 함수의 경우 반환 테이블 형식의 열은 타임스탬프 열 또는 비유니코드 문자열 데이터 형식 열(예: `char`, `varchar` 및 `text`)을 포함할 수 없습니다. NOT NULL 제약 조건은 지원되지 않습니다.  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL과 CLR 테이블 반환 함수의 차이  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수는 함수 호출의 결과를 중간 테이블로 구체화합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 테이블 반환 함수는 함수 호출의 결과를 중간 테이블로 구체화합니다. TVF는 중간 테이블을 사용하므로 결과에 대해 제약 조건 및 고유 인덱스를 지원할 수 있습니다. 이러한 기능은 대규모의 결과가 반환할 때 매우 유용합니다.  
   
  반면 CLR 테이블 반환 함수는 스트리밍 방식을 사용합니다. 전체 결과 집합을 단일 테이블로 구체화할 필요가 없습니다. 관리 함수에서 반환된 `IEnumerable` 개체는 테이블 반환 함수를 호출하는 쿼리의 실행 계획에 의해 직접 호출되며 결과는 증분 방식으로 사용됩니다. 이 스트리밍 모델은 전체 테이블이 채워질 때까지 기다리지 않고 첫 번째 행을 사용할 수 있게 된 직후부터 결과를 사용할 수 있도록 합니다. 반환되는 행의 수가 매우 많은 경우에도 이러한 행을 메모리에서 전체적으로 구체화할 필요가 없는 이 방법이 더 효율적입니다. 예를 들어 관리 테이블 반환 함수는 텍스트 파일을 구문 분석하고 각 줄을 하나의 행으로 반환하는 데 사용할 수 있습니다.  
   
 ## <a name="implementing-table-valued-functions"></a>테이블 반환 함수 구현  
- 테이블 반환 함수를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리 클래스의 메서드로 구현합니다. 테이블 반환 함수 코드는 `IEnumerable` 인터페이스를 구현해야 합니다. 
-  `IEnumerable` 인터페이스는 .NET Framework에서 정의됩니다. .NET Framework의 배열 및 컬렉션을 나타내는 형식은 이미 `IEnumerable` 인터페이스를 구현합니다. 따라서 컬렉션 또는 배열을 결과 집합으로 변환하는 테이블 반환 함수를 손쉽게 작성할 수 있습니다.  
+ 테이블 반환 함수를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 어셈블리 클래스의 메서드로 구현합니다. 테이블 반환 함수 코드는 `IEnumerable` 인터페이스를 구현해야 합니다. `IEnumerable` 인터페이스는 .NET Framework에서 정의됩니다. .NET Framework의 배열 및 컬렉션을 나타내는 형식은 이미 `IEnumerable` 인터페이스를 구현합니다. 따라서 컬렉션 또는 배열을 결과 집합으로 변환하는 테이블 반환 함수를 손쉽게 작성할 수 있습니다.  
   
 ## <a name="table-valued-parameters"></a>테이블 반환 매개 변수  
  테이블 반환 매개 변수는 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식이며 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. 테이블 반환 매개 변수는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. 또한 테이블 반환 매개 변수는 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 테이블 반환 매개 변수로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. 테이블 반환 매개 변수에 관한 자세한 내용은 [Use Table-Valued Parameters&#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md)를 참조하세요.  
@@ -79,8 +76,7 @@ select * from table t cross apply function(t.column);
   
 -   외부 데이터에서 생성되는 경우. 예: 이벤트 로그를 읽고 이를 테이블로 노출하는 테이블 반환 함수  
   
- **참고** 테이블 반환 함수는 메서드의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 `InitMethod` 를 통해서만 데이터 액세스를 수행할 수 있으며 메서드에서는 `FillRow` 수행할 수 없습니다. 
-  `InitMethod` 쿼리가 수행되는 경우 `SqlFunction.DataAccess.Read`는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 특성 속성으로 표시해야 합니다.  
+ **참고** 테이블 반환 함수는 메서드의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 `InitMethod` 를 통해서만 데이터 액세스를 수행할 수 있으며 메서드에서는 `FillRow` 수행할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리가 수행되는 경우 `InitMethod`는 `SqlFunction.DataAccess.Read` 특성 속성으로 표시해야 합니다.  
   
 ## <a name="a-sample-table-valued-function"></a>예제 테이블 반환 함수  
  다음 테이블 반환 함수는 시스템 이벤트 로그의 정보를 반환합니다. 함수는 읽을 이벤트 로그의 이름을 포함하는 단일 문자열 인수를 받습니다.  

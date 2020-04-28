@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243153"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>상태 표시줄(데이터베이스 엔진 쿼리 편집기)
@@ -26,12 +26,12 @@ ms.locfileid: "75243153"
   
 3.  **상태 색을 사용하려면:**  [서버 색을 사용하여 쿼리 편집기 열기](#OpenServerColor), [상태 색을 지정하여 쿼리 편집기 열기](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a> 상태 표시줄 색  
+##  <a name="status-bar-colors"></a><a name="StatusBarColors"></a> 상태 표시줄 색  
  **개체 탐색기** 또는 **등록된 서버**에서 상태 표시줄 색을 특정 서버 노드에 연결할 수 있습니다. 색은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결된 서버 노드에 대해서만 지정할 수 있고 다른 SQL Server 기술에 대한 서버 노드에 대해서는 지정할 수 없습니다. 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결할 때마다 사용자 지정 상태 표시줄 색을 지정할 수도 있습니다. 그런 다음 서버 노드에 대해 정의된 상태 색을 사용하거나 해당 편집기 창에 고유한 색을 지정하여 쿼리 편집기 창을 열 수 있습니다.  
   
  개체 탐색기에서 서버 노드에 대한 사용자 지정 상태 표시줄 색을 설정하려면 연결할 때 색을 지정해야 합니다. 기존 서버 노드에 연결된 색을 변경하려면 연결을 끊었다가 다시 연결하여 새 색을 지정해야 합니다.  
   
-##  <a name="SetOEServerColor"></a> 개체 탐색기에서 서버에 대한 상태 색 설정  
+##  <a name="set-the-status-color-for-a-server-in-object-explorer"></a><a name="SetOEServerColor"></a> 개체 탐색기에서 서버에 대한 상태 색 설정  
  **개체 탐색기에서 서버 상태 색을 설정하려면**  
   
 1.  **개체 탐색기**에서 **연결** 단추를 선택한 다음, **데이터베이스 엔진...** 을 선택합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "75243153"
   
 6.  나머지 연결 정보를 입력한 다음 **연결** 단추를 선택합니다.  
   
-##  <a name="SetRegServerColor"></a> 등록된 서버에 대한 상태 색 설정  
+##  <a name="set-the-status-color-for-a-registered-server"></a><a name="SetRegServerColor"></a> 등록된 서버에 대한 상태 색 설정  
  **등록된 서버에 대한 서버 색을 설정하려면**  
   
 1.  **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음, **속성...** 을 선택합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "75243153"
   
 6.  **서버 등록 속성 편집** 대화 상자에서 **저장** 단추를 선택합니다.  
   
-##  <a name="OpenServerColor"></a> 서버 색을 사용하여 편집기 열기  
+##  <a name="open-an-editor-using-a-server-color"></a><a name="OpenServerColor"></a> 서버 색을 사용하여 편집기 열기  
  **서버 색을 사용하여 편집기 창을 열려면**  
   
 -   **개체 탐색기** 또는 **등록된 서버**에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **새 쿼리**를 선택합니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "75243153"
   
 -   편집기 창의 상태 표시줄에서 연결된 서버에 대해 정의된 색을 사용합니다.  
   
-##  <a name="OpenSpecColor"></a> 상태 색을 지정하여 편집기 열기  
+##  <a name="open-an-editor-specifying-a-status-color"></a><a name="OpenSpecColor"></a> 상태 색을 지정하여 편집기 열기  
  **상태 색을 지정하여 편집기 창을 열려면**  
   
 -   **파일** 메뉴를 열고 **새로 만들기**를 선택한 다음 **데이터베이스 엔진 쿼리**를 선택합니다.  

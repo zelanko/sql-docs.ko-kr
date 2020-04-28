@@ -18,16 +18,15 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254137"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
+  SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
   
  또는 MDAC(Microsoft Data Access Components) 2.6 이상에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 이용하여 쿼리를 실행하고 COM 기반 애플리케이션에서 SQLXML 4.0을 사용할 수 있습니다.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "75254137"
   
     -   "`@@FILE_NAME@@`"을 찾아 해당 템플릿 파일 이름으로 바꿉니다.  
   
-    -   "`@@SERVER_NAME@@`"을 찾아 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름(예를 들어 `(local)`가 로컬로 실행되고 있는 경우 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]")으로 바꿉니다.  
+    -   "`@@SERVER_NAME@@`"을 찾아 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름(예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 로컬로 실행되고 있는 경우 "`(local)`")으로 바꿉니다.  
   
     -   "`@@DATABASE_NAME@@`"을 찾아 데이터베이스 이름(예를 들어 "`AdventureWorks2012`" 또는 "`tempdb`")으로 바꿉니다.  
   

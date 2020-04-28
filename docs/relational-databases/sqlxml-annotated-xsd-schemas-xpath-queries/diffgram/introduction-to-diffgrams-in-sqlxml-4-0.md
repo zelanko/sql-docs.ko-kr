@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3994a9d0bc863367edf5b1844772b94a63f19d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257247"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
@@ -61,7 +61,7 @@ ms.locfileid: "75257247"
 ## <a name="diffgram-annotations"></a>DiffGram 주석  
  이러한 주석은 DiffGram 네임 스페이스 **"urn: 스키마-microsoft-com: diffgram-01"** 에 정의 되어 있습니다.  
   
- **a-id**  
+ **id**  
  이 특성은 ** \<>** ** \<** 하기 전에의 요소를 쌍으로 연결 하는 데 사용 되며,>데이터 인스턴스는 블록을 사용 합니다.  
   
  **hasChanges**  

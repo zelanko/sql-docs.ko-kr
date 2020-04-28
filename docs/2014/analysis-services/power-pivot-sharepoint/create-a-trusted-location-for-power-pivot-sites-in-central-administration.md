@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684090"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
@@ -22,29 +22,27 @@ ms.locfileid: "74684090"
   
   
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  URL을 신뢰할 수 있는 위치로 지정하려면 팜이나 서비스 관리자여야 합니다.  
   
  PowerPivot 갤러리나 통합 문서를 저장하는 기타 라이브러리를 포함하는 SharePoint 사이트의 URL 주소를 알아야 합니다. 주소를 가져오려면 라이브러리가 포함 된 사이트를 열고 **PowerPivot 갤러리**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 서버 이름과 사이트 경로가 포함 된 주소 (URL)의 첫 부분을 복사 합니다.  
   
-##  <a name="overview"></a>설명은  
+##  <a name="overview"></a><a name="overview"></a> 개요  
  Excel 서비스의 초기 설치에서는 'http://'를 해당하는 신뢰할 수 있는 위치로 지정합니다. 이는 팜에 있는 모든 사이트의 통합 문서가 서버에서 열릴 수 있음을 의미합니다. 신뢰할 수 있는 위치를 더 엄격하게 제어해야 하는 경우 팜에서 특정 사이트에 매핑되는 신뢰할 수 있는 위치를 새로 만든 다음 각 위치에 대해 설정 및 권한을 구성할 수 있습니다.  
   
  PowerPivot 통합 문서를 호스팅하는 사이트에 대해 신뢰할 수 있는 위치를 새로 만들면 팜의 나머지 부분에는 기본값을 계속 사용하면서 PowerPivot 데이터 액세스에 가장 적합한 서로 다른 설정을 적용하려는 경우 특히 유용합니다. 예를 들어 PowerPivot 통합 문서에 대해 최적화된 신뢰할 수 있는 위치에는 50MB의 최대 통합 문서 크기를 사용하고, 팜의 나머지 부분에는 10MB의 기본값을 그대로 사용합니다.  
   
  PowerPivot 갤러리 라이브러리를 사용하여 게시된 통합 문서를 미리 볼 때 원하는 미리 보기 이미지가 표시되지 않고 데이터 새로 고침 경고가 표시되는 경우에는 신뢰할 수 있는 위치를 만드는 것이 좋습니다. PowerPivot 갤러리는 문서 내의 데이터와 표시 정보를 사용하여 보고서와 통합 문서의 축소판 이미지를 렌더링합니다. 신뢰할 수 있는 위치에 대해 새로 고칠 때 경고가 설정되어 있는 경우 PowerPivot 갤러리에 새로 고침을 수행할 권한이 충분하지 않아 축소판 이미지 대신 오류가 표시될 수 있습니다. PowerPivot 갤러리를 포함하는 사이트를 새 신뢰할 수 있는 위치로 추가하여 이 문제를 해결할 수 있습니다.  
   
-##  <a name="create"></a>PowerPivot 데이터 액세스를 위한 신뢰할 수 있는 위치 만들기  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>PowerPivot 데이터 액세스를 위한 신뢰할 수 있는 위치 만들기  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭 합니다.  
   
 2.  Excel Services 애플리케이션을 클릭합니다.  
   
-3.  
-  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
+3.  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
   
-4.  
-  **신뢰할 수 있는 파일 위치 추가**를 클릭합니다.  
+4.  **신뢰할 수 있는 파일 위치 추가**를 클릭합니다.  
   
 5.  PowerPivot 갤러리 라이브러리가 포함된 사이트의 URL을 입력합니다.  
   

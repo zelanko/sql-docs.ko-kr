@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228715"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>가용성 그룹의 생성 및 구성(SQL Server)
@@ -34,8 +34,8 @@ ms.locfileid: "75228715"
   
  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **에 대 한 서버 인스턴스를 구성 하려면[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **다음에 대한 서버 인스턴스를 구성하려면 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]**  
   
 -   [AlwaysOn 가용성 그룹 활성화 및 비활성화&#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
@@ -49,19 +49,19 @@ ms.locfileid: "75228715"
   
 -   [AlwaysOn 가용성 그룹 &#40;SQL Server 시작 하기&#41;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
- **새 가용성 그룹을 만들고 구성 하려면**  
+ **새 가용성 그룹을 만들고 구성하려면**  
   
 -   [가용성 그룹 마법사 사용&#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Transact-sql&#41;&#40;가용성 그룹 만들기](create-an-availability-group-transact-sql.md)  
+-   [가용성 그룹 만들기&#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
--   [가용성 그룹 &#40;SQL Server PowerShell를 만듭니다&#41;](../../../powershell/sql-server-powershell.md)  
+-   [가용성 그룹 만들기&#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
 -   [새 가용성 그룹 대화 상자 사용&#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [유연한 장애 조치(failover) 정책을 구성하여 자동 장애 조치의 상태 제어(AlwaysOn 가용성 그룹)](configure-flexible-automatic-failover-policy.md)  
   
@@ -75,11 +75,11 @@ ms.locfileid: "75228715"
   
 -   [AlwaysOn 보조 데이터베이스에서 데이터 이동을 시작 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)  
   
--   [가용성 그룹에 대한 보조 데이터베이스 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
 -   [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [가용성 그룹의 데이터베이스에 대 한 로그인 및 작업 관리 SQL Server &#40;&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
+-   [가용성 그룹의 데이터베이스에 대한 로그인 및 작업 관리&#40;SQL Server&#41;](../../logins-and-jobs-for-availability-group-databases.md)  
   
  **문제를 해결 하려면**  
   
@@ -87,9 +87,9 @@ ms.locfileid: "75228715"
   
 -   [실패 한 파일 추가 작업 문제 해결 AlwaysOn 가용성 그룹 &#40;&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   **블로그**  
+-   **블로그:**  
   
      [AlwaysON - HADRON 학습 시리즈: HADRON 지원 데이터베이스에 대한 작업자 풀 사용](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
@@ -103,17 +103,17 @@ ms.locfileid: "75228715"
   
      [Microsoft SQL Server 코드 이름 "Denali" AlwaysOn 시리즈, 파트 2: AlwaysOn을 사용하여 중요 환경 고가용성 솔루션 빌드](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **백서**  
+-   **백서:**  
   
      [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [SQL Server 2012에 대 한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [SQL Server 2012에 대한 Microsoft 백서](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [가용성 그룹 관리 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [AlwaysOn 가용성 그룹의 작업 문제에 대 한 AlwaysOn 정책 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹: 상호 운용성(SQL Server)](always-on-availability-groups-interoperability-sql-server.md)  

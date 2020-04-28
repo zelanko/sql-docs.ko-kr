@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957267"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
@@ -30,22 +30,22 @@ ms.locfileid: "74957267"
   
      [보안](#Security)  
   
--   [Transact-sql을 사용 하 여 데이터베이스 마스터 키를 백업 하려면](#Procedure)  
+-   [Transact-SQL을 사용하여 데이터베이스 마스터 키를 백업하려면](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   마스터 키를 열어야 하기 때문에 백업하기 전에 암호를 해독해야 합니다. 서비스 마스터 키를 사용하여 암호화된 경우 마스터 키를 명시적으로 열 필요가 없습니다. 하지만 마스터 키가 암호로만 암호화된 경우 명시적으로 열어야 합니다.  
   
 -   마스터 키는 만들자 마자 백업하고 외부의 안전한 위치에 보관하는 것이 좋습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
-##  <a name="Procedure"></a>Transact-sql과 함께 SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>Transact-sql과 함께 SQL Server Management Studio 사용  
   
 #### <a name="to-back-up-the-database-master-key"></a>데이터베이스 마스터 키를 백업하려면  
   

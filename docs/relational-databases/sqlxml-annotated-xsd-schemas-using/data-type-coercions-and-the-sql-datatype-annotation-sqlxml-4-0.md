@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257473"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 변환 및 sql: datatype 주석 (SQLXML 4.0)
@@ -42,49 +42,48 @@ ms.locfileid: "75257473"
   
 |XSD 데이터 형식|SQL Server 변환|  
 |-------------------|---------------------------|  
-|부울|CONVERT(bit, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|시간|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |나머지|추가 변환 없음|  
   
 > [!NOTE]  
 >  에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 하는 값 중 일부는 **xsd: type**을 사용 하 여 지정 된 XML 데이터 형식과 호환 되지 않을 수 있습니다. 예를 들어 "XYZ"를 **decimal** 데이터 형식으로 변환 하는 것과 같이 변환할 수 없거나 값이 해당 데이터 형식의 범위를 초과 하는 경우 (예:-10만을 **unsignedshort** 않는 xsd 형식으로 변환) 호환되지 않는 형식 변환은 XML 문서를 유효하지 않게 만들거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류를 발생시킬 수 있습니다.  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>SQL Server 데이터 형식에서 XSD 데이터 형식으로의 매핑  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에서 XSD 데이터 형식으로의 명확한 매핑을 보여 줍니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 아는 경우 이 표를 통해 XSD 스키마에 지정할 수 있는 해당 XSD 형식을 확인할 수 있습니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에서 XSD 데이터 형식으로의 명확한 매핑을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 아는 경우 이 표를 통해 XSD 스키마에 지정할 수 있는 해당 XSD 형식을 확인할 수 있습니다.  
   
 |SQL Server 데이터 형식|XSD 데이터 형식|  
 |--------------------------|-------------------|  
-|**bigint**|**시간과**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
-|**bit**|**부울**|  
-|**char**|**문자열**|  
+|**bit**|**boolean**|  
+|**char**|**string**|  
 |**datetime**|**날짜**|  
-|**진수가**|**진수가**|  
-|**float**|**차례로**|  
+|**decimal**|**decimal**|  
+|**float**|**double**|  
 |**image**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**진수가**|  
-|**nchar**|**문자열**|  
-|**ntext**|**문자열**|  
-|**nvarchar**|**문자열**|  
-|**번호**|**진수가**|  
-|**실제로**|**float**|  
+|**money**|**decimal**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**날짜**|  
 |**smallint**|**short**|  
-|**smallmoney**|**진수가**|  
-|**sql_variant**|**문자열**|  
-|**sysname**|**문자열**|  
-|**text**|**문자열**|  
-|**없으면**|**날짜**|  
-|**tinyint**|**Un바이트**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
+|**timestamp**|**날짜**|  
+|**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**문자열**|  
-|**uniqueidentifier**|**문자열**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>sql:datatype 주석  
  **Sql: datatype** 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정 하는 데 사용 됩니다. 다음 경우에는이 주석을 지정 해야 합니다.  

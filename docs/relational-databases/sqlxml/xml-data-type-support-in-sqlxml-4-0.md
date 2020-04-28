@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c56efd6c79b7ce7d74af621963f4b12e734d5f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252166"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
@@ -28,7 +28,7 @@ ms.locfileid: "75252166"
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  **Xml** 데이터 형식 열을 구현 하는 SQL 테이블을 사용 하는 방법에 대해 자세히 알아보려면 다음 예를 제공 합니다.  
   
-|Task|예제|항목|  
+|작업|예제|항목|  
 |----------|-------------|-----------|  
 |Xml 뷰에 **xml** 열을 매핑하고 포함 하는 방법|"XML 요소를 XML 데이터 형식 열에 매핑"|[SQLXML 4.0 &#40;테이블 및 열에 대 한 XSD 요소 및 특성의 기본 매핑&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |Updategram을 사용 하 여 **xml** 열에 데이터를 삽입 하는 방법|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
@@ -36,7 +36,7 @@ ms.locfileid: "75252166"
   
 ## <a name="guidelines-and-limitations"></a>지침 및 제한 사항  
   
--   **xsd: 모든>xml 데이터 형식을 포함 하는 열에 매핑할 수 없습니다. \<** **** SQLXML에서이 시나리오에 대 한 지원은 **sql: 오버플로 필드** 주석을 통해 제공 됩니다. 또 다른 해결 방법은 **xml** 데이터 형식 필드를 **xsd: anyType**의 요소로 매핑하는 것입니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
+-   **xsd: 모든>xml 데이터 형식을 포함 하는 열에 매핑할 수 없습니다. \<** **xml** SQLXML에서이 시나리오에 대 한 지원은 **sql: 오버플로 필드** 주석을 통해 제공 됩니다. 또 다른 해결 방법은 **xml** 데이터 형식 필드를 **xsd: anyType**의 요소로 매핑하는 것입니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
   
 -   **Xml** 데이터 형식 열의 내용에 대 한 XPath 쿼리는 지원 되지 않습니다.  
   

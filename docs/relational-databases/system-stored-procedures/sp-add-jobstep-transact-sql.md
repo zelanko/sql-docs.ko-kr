@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412851"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74412851"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -86,21 +86,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|복제 큐 판독기 에이전트 작업|  
 |'**ANALYSISQUERY**'|Analysis Services 쿼리(MDX, DMX)|  
 |'**ANALYSISCOMMAND**'|Analysis Services 명령(XMLA)|  
-|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]패키지 실행|  
+|'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 실행|  
 |'**PowerShell**'|PowerShell 스크립트|  
-|'**TSQL**' (기본값)|[!INCLUDE[tsql](../../includes/tsql-md.md)]선언문|  
+|'**TSQL**' (기본값)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문|  
   
 `[ @command = ] 'command'`*하위 시스템*을 통해 **SQLServerAgent** 서비스에서 실행할 명령입니다. *명령은* **nvarchar (max)** 이며 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
   
 > [!IMPORTANT]  
 >  작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 다음은 그 예입니다.  
 >   
->  `$(ESCAPE_`*매크로 이름*`(DATE))`  
+>  `$(ESCAPE_` *macro name* `(DATE))`  
   
  이러한 토큰에 대 한 자세한 내용과 새로운 토큰 구문을 사용 하도록 작업 단계를 업데이트 하는 방법에 대 한 자세한 내용은 [작업 단계에서 토큰 사용](../../ssms/agent/use-tokens-in-job-steps.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰에는 **a-dbn**, **a**- **ERR**, a- **심각도**, **-MSG**및 **WMI (**_속성_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -150,8 +150,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |-----------|-----------------|  
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
 |**2**|출력 파일에 추가합니다.|  
-|**4**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 출력을 단계 기록에 씁니다.|  
+|**4**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 출력을 단계 기록에 씁니다.|  
 |**20cm(8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
 |**x**|테이블에 로그를 씁니다(기존 기록에 추가).|  
 |**32**|모든 출력을 작업 기록에 씁니다.|  
@@ -177,7 +176,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  프록시는 *proxy_name* 또는 *proxy_id*로 식별할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   

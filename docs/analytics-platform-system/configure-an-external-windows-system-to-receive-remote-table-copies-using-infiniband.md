@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401310"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand 데이터 웨어하우스를 사용 하 여 원격 테이블 복사본을 받도록 외부 Windows 시스템 구성
@@ -33,7 +33,7 @@ SQL Server PDW의 원격 테이블 복사 기능과 함께 사용 하기 위해 
   
 3.  어플라이언스 하드웨어 공급 업체에서 InfiniBand 케이블과 InfiniBand 네트워크 어댑터를 구매 합니다. 내보낸 데이터를 받을 때 내결함성을 위해 두 개의 포트를 사용 하 여 네트워크 어댑터를 구매 하는 것이 좋습니다. 두 개의 포트 네트워크 어댑터를 권장 하지만 요구 사항은 아닙니다.  
   
-## <a name="HowToWindows"></a>원격 테이블 복사본을 받도록 외부 Windows 시스템 구성  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>원격 테이블 복사본을 받도록 외부 Windows 시스템 구성  
 외부 Windows 시스템을 구성 하려면 다음 단계를 사용 합니다.  
   
 1.  Windows 시스템에 InfiniBand 네트워크 어댑터를 설치 합니다.  
