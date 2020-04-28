@@ -16,10 +16,10 @@ ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771554"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication(Transact-SQL)
@@ -41,17 +41,15 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
+`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
 `[ @password = ] 'password'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *password* 는 **sysname**이며 기본값은 **' '** (빈 문자열)입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
 `[ @ver_old = ] 'old_version'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -62,8 +60,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 `[ @security_mode = ] 'security_mode'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 은 **bit** 이며 기본값은 **0**입니다. **0**인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 사용 됩니다. **1**인 경우 Windows 인증이 사용 됩니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -75,7 +72,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_vupgrade_replication**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

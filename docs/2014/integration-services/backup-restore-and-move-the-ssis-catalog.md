@@ -11,20 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670504"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
   
- 
-  **SSISDB** 카탈로그는 사용자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 저장합니다. 카탈로그에 대한 자세한 내용은 [SSIS 카탈로그](catalog/ssis-catalog.md)를 참조하세요.  
+ **SSISDB** 카탈로그는 사용자가 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 저장합니다. 카탈로그에 대한 자세한 내용은 [SSIS 카탈로그](catalog/ssis-catalog.md)를 참조하세요.  
   
-##  <a name="backup"></a>SSIS 데이터베이스를 백업 하려면  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a> SSIS 데이터베이스를 백업하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 열고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에 연결합니다.  
   
@@ -40,23 +38,19 @@ ms.locfileid: "68670504"
   
     ```  
   
-3.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 **데이터베이스 백업** 대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
+3.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 **데이터베이스 백업** 대화 상자를 사용하여 SSISDB 데이터베이스를 백업합니다. 자세한 내용은 [방법: 데이터베이스 백업(SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812)을 참조하세요.  
   
 4.  다음을 수행하여 ##MS_SSISServerCleanupJobLogin##에 대한 CREATE LOGIN 스크립트를 생성합니다. 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)을 참조하세요.  
   
-    1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **보안** 노드를 확장한 후 **로그인** 노드를 확장합니다.  
+    1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **보안** 노드를 확장한 후 **로그인** 노드를 확장합니다.  
   
-    2.  
-  **##MS_SSISServerCleanupJobLogin##** 을 마우스 오른쪽 단추로 클릭한 후 **로그인 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
+    2.  **##MS_SSISServerCleanupJobLogin##** 을 마우스 오른쪽 단추로 클릭한 후 **로그인 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
   
 5.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스로 SSISDB 데이터베이스를 복원할 경우 다음을 수행하여 sp_ssis_startup에 대한 CREATE PROCEDURE 스크립트를 생성합니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요.  
   
     1.  개체 탐색기에서 **데이터베이스** 노드를 확장 한 다음 **시스템 데이터베이스** > **마스터** > **프로그래밍 기능** > **저장 프로시저** 노드를 확장 합니다.  
   
-    2.  
-  **dbo.sp_ssis_startup**을 마우스 오른쪽 단추로 클릭한 후 **저장 프로시저 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
+    2.  **dbo.sp_ssis_startup**을 마우스 오른쪽 단추로 클릭한 후 **저장 프로시저 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
   
 6.  SQL Server 에이전트가 시작되었는지 확인합니다.  
   
@@ -85,8 +79,7 @@ ms.locfileid: "68670504"
   
     ```  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -96,17 +89,15 @@ ms.locfileid: "68670504"
   
     ```  
   
-3.  
-  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하십시오.  
+3.  **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 백업에서 SSISDB 데이터베이스를 복원합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
     -   [데이터베이스 복원&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [데이터베이스 &#40;파일 복원 페이지&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [데이터베이스 복원&#40;파일 페이지&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
     -   [데이터베이스 복원&#40;옵션 페이지&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   
-4.  
-  [SSIS 데이터베이스를 백업하려면](#backup) 에서 ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup 및 SSIS 서버 유지 관리 작업에 대해 만든 스크립트를 실행합니다. SQL Server 에이전트가 시작되었는지 확인합니다.  
+4.  [SSIS 데이터베이스를 백업하려면](#backup) 에서 ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup 및 SSIS 서버 유지 관리 작업에 대해 만든 스크립트를 실행합니다. SQL Server 에이전트가 시작되었는지 확인합니다.  
   
 5.  다음 문을 실행하여 sp_ssis_startup 프로시저가 자동 실행되도록 설정합니다. 자세한 내용은 [sp_procoption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql)을 참조하세요.  
   
@@ -114,12 +105,11 @@ ms.locfileid: "68670504"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  
-  **에서 **로그인 속성[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 SSISDB 사용자 ##MS_SSISServerCleanupJobUser##(SSISDB 데이터베이스)를 ##MS_SSISServerCleanupJobLogin##에 매핑합니다.  
+6.  **에서** 로그인 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 SSISDB 사용자 ##MS_SSISServerCleanupJobUser##(SSISDB 데이터베이스)를 ##MS_SSISServerCleanupJobLogin##에 매핑합니다.  
   
 7.  다음 방법 중 하나를 사용하여 마스터 키를 복원합니다. 암호화에 대한 자세한 내용은 [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하십시오.  
   
-    -   **방법 1**  
+    -   **메서드 1**  
   
          이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호가 있는 경우 이 방법을 사용합니다.  
   
@@ -132,8 +122,7 @@ ms.locfileid: "68670504"
         ```  
   
         > [!NOTE]  
-        >  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 계정에 백업 키 파일에 대한 읽기 권한이 있는지 확인합니다.  
+        >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 계정에 백업 키 파일에 대한 읽기 권한이 있는지 확인합니다.  
   
         > [!NOTE]  
         >  데이터베이스 마스터 키가 아직 서비스 마스터 키로 암호화되지 않은 경우 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에 다음과 같은 경고 메시지가 표시됩니다. 경고 메시지를 무시합니다.  
@@ -151,8 +140,7 @@ ms.locfileid: "68670504"
                Alter Master Key Add encryption by Service Master Key  
         ```  
   
-8.  
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog.check_schema_version [을 실행하여 SSISDB 카탈로그 스키마와](/sql/integration-services/system-stored-procedures/catalog-check-schema-version)바이너리 파일(ISServerExec 및 SQLCLR 어셈블리)이 호환되는지 여부를 결정합니다.  
+8.  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog.check_schema_version [을 실행하여 SSISDB 카탈로그 스키마와](/sql/integration-services/system-stored-procedures/catalog-check-schema-version)바이너리 파일(ISServerExec 및 SQLCLR 어셈블리)이 호환되는지 여부를 결정합니다.  
   
 9. SSISDB 데이터베이스가 성공적으로 복원되었는지 확인하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하는 등 SSISDB 카탈로그에 대해 작업을 수행합니다. 자세한 내용은 [SQL Server Management Studio를 사용하여 SSIS 서버에서 패키지 실행](run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)을 참조하세요.  
   

@@ -18,10 +18,10 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770675"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68770675"
   지연 업데이트 트랜잭션 복제와 관련된 스냅샷이나 트랜잭션 밀어넣기 구독 또는 끌어오기 구독의 속성을 변경합니다. 다른 모든 끌어오기 구독 유형의 속성을 변경 하려면 [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)를 사용 합니다. **sp_changesubscription** 는 게시 데이터베이스의 게시자에서 실행 됩니다.  
   
 > [!IMPORTANT]  
->  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+>  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,8 +71,7 @@ sp_changesubscription [ @publication = ] 'publication'
 |**subscriber_password**||제공된 로그인에 대한 강력한 암호입니다.|  
 |**subscriber_security_mode**|**1**|구독자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**0**|구독자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
-|**subscriber_provider**||
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
+|**subscriber_provider**||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
 |**subscriber_providerstring**||데이터 원본을 식별하는 OLE DB 공급자별 연결 문자열입니다. *이 속성은 이외* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에만 유효 *합니다.*|  
 |**subscriptionstreams**||_구독자에 변경 내용의 일괄 처리를 병렬로 적용하기 위해 배포 에이전트당 허용되는 연결의 수입니다. 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **1** 에서 **64** 사이의 값 범위가 지원 됩니다. 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자, Oracle 게시자 또는 피어 투 피어 구독의 경우이 속성은 **0** 이어야 합니다.|  
 |**subscriber_type**|**1**|ODBC 데이터 원본 서버|  
@@ -82,7 +81,7 @@ sp_changesubscription [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
+>  *publisher* 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255349"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램의 작업에 대한 자세한 통계를 반환합니다. 쿼리 최적화 문제 또는 개선점을 식별하는 작업을 튜닝할 때 이 뷰를 사용할 수 있습니다. 예를 들어 총 최적화 수, 경과된 시간 값 및 최종 비용 값을 사용하여 현재 작업의 쿼리 최적화와 튜닝 프로세스 동안 관찰된 모든 변경 내용을 비교할 수 있습니다. 일부 카운터에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 진단용으로만 사용되는 데이터를 제공합니다. 이러한 카운터는 "내부 전용"으로 표시됩니다.  
   
 > [!NOTE]  
@@ -39,8 +38,8 @@ ms.locfileid: "68255349"
 |속성|데이터 형식|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
-|**내용과**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
-|**기본값**|**float**|이벤트 발생당 평균 속성 값입니다.|  
+|**occurrence**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
+|**value**|**float**|이벤트 발생당 평균 속성 값입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -57,7 +56,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 |elapsed time|총 최적화 수입니다.|개별 문(쿼리)의 최적화당 평균 경과 시간(초)입니다.|  
 |final cost|총 최적화 수입니다.|최적화된 계획의 평균 예상 비용(내부 비용 단위)입니다.|  
 |trivial plan|내부 전용|내부 전용|  
-|태스크|내부 전용|내부 전용|  
+|tasks|내부 전용|내부 전용|  
 |no plan|내부 전용|내부 전용|  
 |search 0|내부 전용|내부 전용|  
 |search 0 time|내부 전용|내부 전용|  
@@ -129,8 +128,8 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

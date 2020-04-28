@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262699"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 이 동적 관리 뷰는 행 버전을 생성하거나 액세스할 수 있는 모든 활성 트랜잭션에 대한 가상 테이블을 반환합니다. 트랜잭션은 다음 중 하나 이상의 조건에서 포함됩니다.  
   
 -   ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 중 하나 또는 둘 다가 ON으로 설정된 경우  
@@ -59,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|트랜잭션에 할당된 고유 ID입니다. 트랜잭션 ID는 주로 잠금 작업에서 트랜잭션을 식별하는 데 사용됩니다.|  
 |**transaction_sequence_num**|**bigint**|트랜잭션 시퀀스 번호입니다. 트랜잭션 시작 시 해당 트랜잭션에 할당되는 고유 시퀀스 번호인 트랜잭션 시퀀스 번호입니다. 버전 레코드를 생성하지 않고 스냅샷 검색을 사용하지 않는 트랜잭션에는 트랜잭션 시퀀스 번호가 지정되지 않습니다.|  
@@ -68,7 +67,7 @@ sys.dm_tran_active_snapshot_database_transactions
 |**session_id**|**int**|트랜잭션을 시작한 세션의 ID입니다.|  
 |**first_snapshot_sequence_num**|**bigint**|스냅샷을 만들 때 활성 상태인 트랜잭션의 가장 낮은 트랜잭션 시퀀스 번호입니다. 실행 시 스냅샷 트랜잭션이 해당 시점에서 활성 상태인 모든 트랜잭션의 스냅샷을 만듭니다. 스냅샷 트랜잭션이 아닌 경우 이 열에 0이 표시됩니다.|  
 |**max_version_chain_traversed**|**int**|트랜잭션 측면에서 일관된 버전을 찾기 위해 이동한 버전 체인의 최대 길이입니다.|  
-|**average_version_chain_traversed**|**실제로**|이동한 버전 체인의 평균 행 버전 수입니다.|  
+|**average_version_chain_traversed**|**real**|이동한 버전 체인의 평균 행 버전 수입니다.|  
 |**elapsed_time_seconds**|**bigint**|트랜잭션이 트랜잭션 시퀀스 번호를 받은 이후 경과된 시간입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
@@ -156,7 +155,7 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;트랜잭션 격리 수준 설정](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

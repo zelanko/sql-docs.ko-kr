@@ -15,14 +15,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890362"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
-  
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **Analysis Services** 페이지를 사용하여 Analysis Services 연결 관리자를 지정하고, 처리할 분석 개체를 선택하고, 처리 및 오류 처리 옵션을 설정할 수 있습니다.  
   
  테이블 형식 모델을 처리할 때는 다음 사항에 유의해야 합니다.  
@@ -41,22 +40,21 @@ ms.locfileid: "68890362"
  **Analysis Services 연결 관리자**  
  목록에서 기존 Analysis Services 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **새로 만들기**  
+ **신규**  
  새 Analysis Services 연결 관리자를 만듭니다.  
   
- **관련 항목:** [연결 관리자 Analysis Services](connection-manager/analysis-services-connection-manager.md) [추가 ANALYSIS SERVICES 연결 관리자 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **관련 항목:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**개체 이름**|지정한 개체 이름을 나열합니다.|  
-|**형식**|지정한 개체의 유형을 나열합니다.|  
+|**Type**|지정한 개체의 유형을 나열합니다.|  
 |**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 개체 처리](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   
  **추가**  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체를 목록에 추가합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체를 목록에 추가합니다.  
   
  **제거**  
  개체를 선택한 다음 **삭제**를 클릭합니다.  
@@ -64,10 +62,10 @@ ms.locfileid: "68890362"
  **영향 분석**  
  선택한 개체에 대한 영향 분석을 수행합니다.  
   
- **관련 항목:** [영향 분석 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **일괄 처리 설정 요약**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**처리 순서**|개체가 순차적으로 또는 일괄 처리 방식으로 처리되는지 여부를 지정합니다. 병렬 처리가 사용되면 동시에 처리할 개체 수를 지정합니다.|  
 |**트랜잭션 모드**|순차적 처리를 위한 트랜잭션 모드를 지정합니다.|  
@@ -78,7 +76,7 @@ ms.locfileid: "68890362"
  **설정 변경**  
  처리 옵션 및 차원 키의 오류 처리를 변경합니다.  
   
- **관련 항목:** [설정 변경 대화 상자 &#40;Analysis Services 다차원 데이터&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   

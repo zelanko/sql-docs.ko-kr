@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811112"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
@@ -100,20 +100,20 @@ Edge 테이블은 그래프의 관계를 나타냅니다. 가장자리는 항상
 
 |열 이름    |데이터 형식  |is_hidden  |주석  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |내부 `graph_id` 열  |
+|graph_id_\<hex_string> |bigint |1  |내부 `graph_id` 열  |
 |$node _id_\<hex_string> |NVARCHAR   |0  |외부 노드 `node_id` 열  |
 
 Edge 테이블의 암시적 열
 
 |열 이름    |데이터 형식  |is_hidden  |주석  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |내부 `graph_id` 열  |
+|graph_id_\<hex_string> |bigint |1  |내부 `graph_id` 열  |
 |$edge _id_\<hex_string> |NVARCHAR   |0  |외부 `edge_id` 열  |
 |from_obj_id_\<hex_string>  |INT    |1  |노드의 내부`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |노드의 내부`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |노드의 내부`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |노드의 외부`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |내부 노드`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |내부 노드`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |내부 노드`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |노드 외부`node_id`  |
  
 ### <a name="system-functions"></a>시스템 함수
@@ -135,7 +135,7 @@ Edge 테이블의 암시적 열
  
 ### <a name="data-definition-language-ddl-statements"></a>데이터 정의 언어(DDL) 문
 
-|Task   |관련 문서  |메모
+|작업   |관련 문서  |메모
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`는 이제 노드 또는에 지로 테이블 만들기를 지원 하도록 확장 되었습니다. Edge 테이블에는 사용자 정의 특성이 있을 수도 있고 없을 수도 있습니다.  |
 |ALTER TABLE    |[ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|노드 및에 `ALTER TABLE`지 테이블은를 사용 하 여 관계형 테이블과 동일한 방식으로 변경할 수 있습니다. 사용자는 사용자 정의 열, 인덱스 또는 제약 조건을 추가 하거나 수정할 수 있습니다. 그러나 또는 `$node_id` `$edge_id`와 같은 내부 그래프 열을 변경 하면 오류가 발생 합니다.  |
@@ -146,7 +146,7 @@ Edge 테이블의 암시적 열
 
 ### <a name="data-manipulation-language-dml-statements"></a>데이터 조작 언어(DML) 문
 
-|Task   |관련 문서  |메모
+|작업   |관련 문서  |메모
 |---  |---  |---  |
 |INSERT |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|노드 테이블에 삽입 하는 것은 관계형 테이블에 삽입 하는 것과 다릅니다. `$node_id` 열 값이 자동으로 생성 됩니다. 또는 `$node_id` `$edge_id` 열에 값을 삽입 하려고 하면 오류가 발생 합니다. 사용자는에 지 테이블 `$from_id` 에 `$to_id` 삽입 하는 동안 및 열에 대 한 값을 제공 해야 합니다. `$from_id`및 `$to_id` 는 지정 `$node_id` 된에 지가 연결 하는 노드의 값입니다.  |
 |Delete | [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|노드 또는에 지 테이블의 데이터는 관계형 테이블에서 삭제 되는 것과 동일한 방식으로 삭제할 수 있습니다. 그러나이 릴리스에서는 노드 삭제가 지원 되지 않을 때 삭제 된 노드를 가리키는 가장자리가 없고 종속 된 가장자리를 삭제 하지 않도록 하는 제약 조건이 없습니다. 노드가 삭제 될 때마다 해당 노드에 대 한 모든 연결 가장자리가 삭제 되어 그래프의 무결성을 유지 하는 것이 좋습니다.  |
@@ -156,7 +156,7 @@ Edge 테이블의 암시적 열
 
 ### <a name="query-statements"></a>쿼리 문
 
-|Task   |관련 문서  |메모
+|작업   |관련 문서  |메모
 |---  |---  |---  |
 |SELECT |[SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|노드와 가장자리는 내부적으로 테이블로 저장 되므로 SQL Server 또는 Azure SQL Database의 테이블에서 지원 되는 대부분의 작업은 노드 및에 지 테이블에서 지원 됩니다.  |
 |MATCH  | [Transact-sql&#41;일치 &#40;](../../t-sql/queries/match-sql-graph.md)|기본 제공 일치는 그래프를 통과 하는 패턴 일치 및 트래버스를 지원 하기 위해 도입 되었습니다.  |

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893878"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
@@ -68,8 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  \< *테이블 식*>입니다.  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘은 PREDICTION JOIN 문을 사용하여 새 데이터를 추가하는 경우 기록 예측을 지원하지 않습니다.  
   
  PREDICTION JOIN에서 예측 프로세스는 항상 원래 학습 계열이 끝난 직후의 시간 단계에서 시작됩니다. 이는 새 데이터를 추가하는 경우에도 마찬가지입니다. 따라서 *n* 매개 변수 및 *n-시작* 매개 변수 값은 0 보다 큰 정수 여야 합니다.  
   
@@ -255,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [시계열 모델 쿼리 예제](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [&#40;DMX&#41;예측](../dmx/predict-dmx.md)  
+ [예측&#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

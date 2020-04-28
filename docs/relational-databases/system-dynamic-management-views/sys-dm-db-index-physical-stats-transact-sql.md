@@ -22,16 +22,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811521"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정한 테이블 또는 뷰의 데이터 및 인덱스에 대한 크기 및 조각화 정보를 반환합니다. 인덱스의 경우 각 파티션에 있는 B-트리의 각 수준에 대해 행이 반환됩니다. 힙의 경우 각 파티션의 IN_ROW_DATA 할당 단위에 대해 행이 반환됩니다. LOB(Large Object) 데이터의 경우 각 파티션의 LOB_DATA 할당 단위에 대해 행이 반환됩니다. 테이블에 행-오버플로 데이터가 있는 경우 각 파티션의 ROW_OVERFLOW_DATA 할당 단위에 대해 행이 반환됩니다. xVelocity  메모리 액세스에 최적화된 columnstore  인덱스에 대한 정보를 반환하지 않습니다.  
   
 > [!IMPORTANT]
@@ -59,21 +58,19 @@ sys.dm_db_index_physical_stats (
  *database_id* | NULL | 0 | 기본  
  데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
- 
-  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 지정하지 않고 DB_ID를 사용하는 경우 현재 데이터베이스의 호환성 수준은 90 이상이어야 합니다.  
+ [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 지정하지 않고 DB_ID를 사용하는 경우 현재 데이터베이스의 호환성 수준은 90 이상이어야 합니다.  
   
  *object_id* | NULL | 0 | 기본  
- 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 은 **int**입니다.  
+ 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 는 **int**입니다.  
   
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 유효한 입력은 service broker 큐 이름 또는 큐 내부 테이블 이름을 포함 합니다. 모든 개체, 모든 인덱스 등의 기본 매개 변수를 적용 하는 경우 모든 큐에 대 한 조각화 정보는 결과 집합에 포함 됩니다.  
   
  지정된 데이터베이스에 있는 모든 테이블 및 뷰에 대한 정보를 반환하려면 NULL을 지정합니다. *Object_id*에 대해 null을 지정 하는 경우 *index_id* 및 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
  *index_id* | 0 | NULL | -1 | 기본  
- 인덱스의 ID입니다. *index_id* 은 **int**입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은-1입니다. 이 컨텍스트에서 NULL,-1 및 DEFAULT는 동일한 값입니다.  
+ 인덱스의 ID입니다. *index_id* 은 **int**입니다. 유효한 입력은 인덱스의 ID 번호, *object_id* 가 힙, NULL,-1 또는 DEFAULT 인 경우 0입니다. 기본값은 -1입니다. 이 컨텍스트에서 NULL,-1 및 DEFAULT는 동일한 값입니다.  
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. *Index_id*에 대해 null을 지정 하는 경우 *partition_number*에 대해서도 null을 지정 해야 합니다.  
   
@@ -95,9 +92,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|인덱스가 있는 테이블 또는 뷰의 개체 ID입니다.|  
 |index_id|**int**|인덱스의 인덱스 ID입니다.<br /><br /> 0 = 힙|  
 |partition_number|**int**|테이블, 뷰 또는 인덱스 등의 소유하는 개체 내의 1부터 시작하는 파티션 번호입니다.<br /><br /> 1 = 분할되지 않은 인덱스 또는 힙|  
-|index_type_desc|**nvarchar (60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> 확장 인덱스<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBUFFER 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBITMAP 인덱스 (내부)|  
+|index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> 확장 인덱스<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBUFFER 인덱스 (내부)<br /><br /> COLUMNSTORE DELETEBITMAP 인덱스 (내부)|  
 |hobt_id|**bigint**|힙 또는 B-인덱스 또는 파티션의 ID입니다.<br /><br /> 사용자 정의 인덱스의 hobt_id 반환 하는 것 외에도 내부 columnstore 인덱스의 hobt_id 반환 합니다.|  
-|alloc_unit_type_desc|**nvarchar (60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 할당 단위에는 **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 **xml**형식의 열에 저장 되는 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위에는 **varchar (n)**, **nvarchar (n)**, **varbinary (n)** 및 **sql_variant** 행 외부로 푸시된 데이터 형식의 열에 저장 된 데이터가 포함 됩니다.|  
+|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA 할당 단위에는 **text**, **ntext**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 **xml**형식의 열에 저장 되는 데이터가 포함 됩니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위에는 **varchar (n)**, **nvarchar (n)**, **varbinary (n)** 및 **sql_variant** 행 외부로 푸시된 데이터 형식의 열에 저장 된 데이터가 포함 됩니다.|  
 |index_depth|**tinyint**|인덱스 수준의 수입니다.<br /><br /> 1 = 힙 또는 LOB_DATA나 ROW_OVERFLOW_DATA 할당 단위|  
 |index_level|**tinyint**|인덱스의 현재 수준입니다.<br /><br /> 인덱스 리프 수준, 힙 및 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 리프가 아닌 인덱스 수준의 경우 0보다 큽니다. *index_level* 은 인덱스의 루트 수준에서 가장 높습니다.<br /><br /> 리프가 아닌 인덱스 수준은 *mode* = DETAILED 인 경우에만 처리 됩니다.|  
 |avg_fragmentation_in_percent|**float**|인덱스의 논리적 조각화 또는 IN_ROW_DATA 할당 단위에서 힙의 익스텐트 조각화입니다.<br /><br /> 값은 여러 파일을 고려하여 백분율로 측정됩니다. 논리적 조각화 및 익스텐트 조각화에 대한 정의는 주의를 참조하세요.<br /><br /> LOB_DATA 및 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> *Mode* = 샘플링 된 경우 힙의 경우 NULL입니다.|  
@@ -268,7 +265,7 @@ GO
 ```  
   
 ### <a name="b-returning-information-about-a-heap"></a>B. 힙에 대한 정보 반환  
- 다음 예에서는 `dbo.DatabaseLog` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 힙에 대한 모든 통계를 반환합니다. 테이블에 LOB  데이터가 들어 있으므로 `LOB_DATA` 할당 단위에 대한 행이 반환되고 힙의 데이터 페이지를 저장하는 `IN_ROW_ALLOCATION_UNIT`에 대한 행도 반환됩니다. 이 쿼리를 실행하려면 최소한 `dbo.DatabaseLog` 테이블에 대한 CONTROL  권한이 필요합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `dbo.DatabaseLog` 힙에 대한 모든 통계를 반환합니다. 테이블에 LOB  데이터가 들어 있으므로 `LOB_DATA` 할당 단위에 대한 행이 반환되고 힙의 데이터 페이지를 저장하는 `IN_ROW_ALLOCATION_UNIT`에 대한 행도 반환됩니다. 이 쿼리를 실행하려면 최소한 `dbo.DatabaseLog` 테이블에 대한 CONTROL  권한이 필요합니다.  
   
 ```  
 DECLARE @db_id SMALLINT;  
@@ -288,7 +285,7 @@ GO
 ```  
   
 ### <a name="c-returning-information-for-all-databases"></a>C. 모든 데이터베이스에 대한 정보 반환  
- 다음 예에서는 모든 매개 변수에 와일드카드인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 지정하여 `NULL` 인스턴스 내의 모든 테이블과 인덱스에 대한 모든 통계를 반환합니다. 이 쿼리를 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
+ 다음 예에서는 모든 매개 변수에 와일드카드인 `NULL`을 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 테이블과 인덱스에 대한 모든 통계를 반환합니다. 이 쿼리를 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
   
 ```  
 SELECT * FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL);  
@@ -413,7 +410,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]까지|  
+|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]까지|  
   
  다음 예에서는 서버 broker 큐의 조각화를 쿼리 하는 방법을 보여 줍니다.  
   
@@ -427,7 +424,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [dm_db_index_operational_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [dm_db_index_usage_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   

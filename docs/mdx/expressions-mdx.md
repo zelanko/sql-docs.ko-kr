@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893593"
 ---
 # <a name="expressions-mdx"></a>식(MDX)
@@ -25,7 +25,7 @@ ms.locfileid: "68893593"
   
  단순 식에는 다음과 같은 식이 있습니다.  
   
- 지속적임  
+ 상수  
  상수는 MDX의 특정 단일 값을 나타내는 기호입니다. 문자열, 숫자 및 날짜 값을 상수로 나타낼 수 있습니다. 숫자 상수와 달리 문자열 및 날짜 상수는 작은따옴표(')로 구분해야 합니다.  
   
  스칼라 함수  
@@ -58,8 +58,7 @@ ms.locfileid: "68893593"
   
  `FROM [Adventure Works]`  
   
- 
-  `[Measures].[Discount Amount] * 1.5`와 같은 계산도 식으로 취급됩니다. 다음 예에서는 MDX SELECT 문에서 멤버를 정의하는 데 계산을 사용하는 방법을 설명합니다.  
+ `[Measures].[Discount Amount] * 1.5`와 같은 계산도 식으로 취급됩니다. 다음 예에서는 MDX SELECT 문에서 멤버를 정의하는 데 계산을 사용하는 방법을 설명합니다.  
   
 ```  
 WITH   
@@ -74,7 +73,7 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[큐브 및 하위 큐브 식 사용](../mdx/using-cube-and-subcube-expressions.md)|큐브 및 하위 큐브 식을 정의합니다.|  
 |[차원 식 사용](../mdx/using-dimension-expressions.md)|차원 식을 정의합니다.|  
@@ -86,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

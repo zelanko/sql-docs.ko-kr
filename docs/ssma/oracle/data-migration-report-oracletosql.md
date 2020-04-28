@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264249"
 ---
 # <a name="data-migration-report--oracletosql"></a>데이터 마이그레이션 보고서(OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "68264249"
 **상태**  
 원본 데이터베이스에서 대상 데이터베이스로 데이터 마이그레이션의 상태를 표시 합니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **받는 사람**  

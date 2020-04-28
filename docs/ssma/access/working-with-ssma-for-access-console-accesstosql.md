@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259779"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Access 용 SSMA 콘솔 작업 (AccessToSQL)
@@ -26,7 +26,7 @@ Access 용 SSMA (Microsoft SQL Server Migration Assistant)는 이제 명령줄�
   
 |||  
 |-|-|  
-|**에서는**|**설명**|  
+|**토픽**|**설명**|  
 |[Access 용 SSMA &#40;콘솔 시작 AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[AccessToSQL&#41;&#40;스크립트 파일 만들기](../../ssma/access/creating-script-files-accesstosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  
@@ -39,5 +39,5 @@ Access 용 SSMA (Microsoft SQL Server Migration Assistant)는 이제 명령줄�
 |[&#40;AccessToSQL&#41;문제 해결](../../ssma/access/troubleshooting-accesstosql.md)|마이그레이션 문제 해결에 대 한 간략 한 정보를 제공 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[Access용 SSMA 콘솔 시작](getting-started-with-ssma-for-access-console-accesstosql.md)  
+[Access 용 SSMA 콘솔 시작](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893535"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
@@ -73,6 +73,6 @@ ms.locfileid: "68893535"
  [Mdx &#40;mdx로 하위 큐브 작성&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [MDX&#41;&#40;CREATE 하위 큐브 문](../mdx/mdx-data-definition-create-subcube.md)   
  [MDX &#40;식&#41;](../mdx/expressions-mdx.md)   
- [SCOPE 문이 MDX를 &#40;&#41;](../mdx/mdx-scripting-scope.md)  
+ [SCOPE 문&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768955"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
@@ -68,7 +68,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
 |NULL(기본값)||  
   
 `[ @frequency_interval = ] frequency_interval`에이전트가 실행 되는 요일입니다. *frequency_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -81,10 +81,10 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**4**|수요일|  
 |**5**|목요일|  
 |**6**|금요일|  
-|**일**|토요일|  
+|**7**|토요일|  
 |**20cm(8**|일|  
-|**되었는지**|평일|  
-|**5-10**|주말|  
+|**9**|평일|  
+|**10**|주말|  
 |NULL(기본값)||  
   
 `[ @frequency_subday = ] frequency_subday`정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -92,8 +92,8 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
 |NULL(기본값)||  
   
@@ -104,7 +104,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -140,6 +140,6 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [매개 변수가 있는 필터를 사용 하는 병합 게시에 대 한 스냅숏](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

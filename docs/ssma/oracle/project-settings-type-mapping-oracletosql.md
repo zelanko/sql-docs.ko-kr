@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266579"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정(형식 매핑)(OracleToSQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68266579"
 ## <a name="options"></a>옵션  
 다음 표에서는 **형식 매핑** 탭 옵션을 보여 줍니다.  
   
-**원본 형식**  
+**원본 유형**  
 매핑된 Oracle 데이터 형식입니다.  
   
 **대상 유형**  
@@ -63,7 +63,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |binary_integer|int|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
 |char varying|varchar(max)|  
@@ -97,7 +97,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |rowid|uniqueidentifier|  
 |signtype|smallint|  
 |smallint|smallint|  
-|문자열|varchar(max)|  
+|string|varchar(max)|  
 |timestamp|datetime2|  
 |현지 표준 시간대를 사용 하는 타임 스탬프|datetimeoffset|  
 |표준 시간대가 있는 타임 스탬프|datetimeoffset|  
@@ -118,7 +118,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |목록은|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |char|char|  
 |문자 변경 [*.. \*]|varchar [*]|  
 |char [*.. \*]|char [*]|  
@@ -234,7 +234,7 @@ Oracle 용 SSMA에서 인수, 열, 지역 변수 및 반환 값에 대 한 사�
 |nchar 변경 [*.. 4000]|nvarchar [*]|  
 |nchar 변경 [4001.. *]|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
-|Number|float [53]|  
+|숫자|float [53]|  
 |숫자 [*.. \*]|숫자 [*]|  
 |숫자 [*.. \*][\*.. \*]|숫자 [*] [\*]|  
 |숫자|숫자 [38] [0]|  

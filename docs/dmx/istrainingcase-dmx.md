@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 23f36181d0ee4902f56aa4acb8163f7f43af8b31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889031"
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase(DMX)
@@ -33,8 +33,7 @@ IsTrainingCase()
 ## <a name="remarks"></a>설명  
  데이터 마이닝 마법사를 사용하여 마이닝 구조 및 관련된 마이닝 모델을 만들면 테스트 데이터 집합으로 사용할 수 있도록 기본적으로 사례의 30%가 따로 설정됩니다. 사용자가 지정하는 데이터 원본의 나머지 사례는 모델을 학습하는 데 사용됩니다. 그러나 DMX(Data Mining Extensions)를 사용하여 마이닝 모델을 만들면 기본적으로 모든 데이터가 모델을 학습하는 데 사용되며 테스트 집합이 만들어지지 않습니다. 테스트 데이터 집합이 만들어지도록 하려면 WITH HOLDOUT 절의 매개 변수를 설정해야 합니다.  
   
- 
-  <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 및 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 속성 값을 통해 특정 데이터 마이닝 구조의 데이터가 테스트 집합과 학습 집합으로 분할되었는지 여부를 확인할 수 있습니다.  
+ <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 및 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 속성 값을 통해 특정 데이터 마이닝 구조의 데이터가 테스트 집합과 학습 집합으로 분할되었는지 여부를 확인할 수 있습니다.  
   
 > [!NOTE]  
 >  IsTrainingCase 또는 IsTestCase 함수를 사용 하 여 모델의 사례에 대 한 세부 정보를 반환 하려면 모델에 드릴스루를 사용 하도록 설정 해야 합니다. 자세한 내용은 [마이닝 모델에 드릴스루 사용](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model)을 참조하세요.  

@@ -16,10 +16,10 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769033"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
@@ -90,9 +90,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] '*sync_type*'  
  구독 동기화 유형입니다. *sync_type* 는 **nvarchar (255)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|없음|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고:이 옵션은 더 이상 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
+|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고:이 옵션은 더 이상 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
 |automatic(기본값)|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 |replication support only|필요한 경우 구독자에서 업데이트 구독을 지원하는 아티클 사용자 지정 저장 프로시저 및 트리거의 자동 생성을 제공합니다. 이 옵션은 게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있다고 가정합니다. 피어 투 피어 트랜잭션 복제 토폴로지를 구성하는 경우 토폴로지의 모든 노드에 있는 데이터가 동일해야 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.<br /><br /> *SQL Server 이외 게시에 대한 구독에 대해서는 지원되지 않습니다.*|  
 |initialize with backup|게시된 테이블의 스키마 및 초기 데이터는 게시 데이터베이스의 백업에서 가져옵니다. 구독자에 게시 데이터베이스 백업에 대한 액세스 권한이 있다고 가정합니다. 백업에 대 한 백업 및 미디어 유형의 위치는 *backupdevicename* 이름 및 *backupdevicetype*에서 지정 합니다. 이 옵션을 사용하는 경우 구성 중에 피어 투 피어 트랜잭션 복제 토폴로지를 정지할 필요가 없습니다.<br /><br /> *SQL Server 이외 게시에 대한 구독에 대해서는 지원되지 않습니다.*|  
@@ -104,7 +104,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status=] '*상태*'  
  동기화 상태입니다. *status* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수를 명시적으로 설정하지 않으면 복제 시 자동으로 다음 값 중 하나로 설정됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |활성|구독이 초기화되고 변경 내용을 받아들일 준비가 되었습니다. 이 옵션은 *sync_type* 값이 none, initialize with backup 또는 replication support only 인 경우에 설정 됩니다.|  
 |subscribed|구독을 초기화해야 합니다. 이 옵션은 *sync_type* 값이 자동 인 경우에 설정 됩니다.|  
@@ -118,12 +118,12 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  업데이트의 유형입니다. *update_mode* 은 **nvarchar (30)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |read only(기본값)|구독이 읽기 전용입니다. 구독자의 변경 내용이 게시자에 전달되지 않습니다.|  
 |sync tran|즉시 업데이트 구독에 대한 지원을 설정합니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |queued tran|지연 업데이트 구독을 설정합니다. 구독자에서 데이터를 수정하고 큐에 저장한 후 게시자에 전파할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-|장애 조치|즉시 업데이트를 기본으로 사용하고 장애 조치(Failover)로 지연 업데이트를 사용합니다. 구독자에서 데이터를 수정하고 게시자에 즉시 전파할 수 있습니다. 게시자와 구독자가 연결되지 않은 경우 구독자와 게시자가 다시 연결될 때까지 구독자의 데이터 수정 내용이 큐에 저장되도록 업데이트 모드를 변경할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
+|failover|즉시 업데이트를 기본으로 사용하고 장애 조치(Failover)로 지연 업데이트를 사용합니다. 구독자에서 데이터를 수정하고 게시자에 즉시 전파할 수 있습니다. 게시자와 구독자가 연결되지 않은 경우 구독자와 게시자가 다시 연결될 때까지 구독자의 데이터 수정 내용이 큐에 저장되도록 업데이트 모드를 변경할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |queued failover|구독을 지연 업데이트 구독으로 설정하며 즉시 업데이트 모드로 변경할 수 있는 기능을 포함합니다. 구독자에서 데이터를 수정한 후 구독자와 게시자가 연결될 때까지 수정 내용을 큐에 저장할 수 있습니다. 지속적 연결이 설정되는 경우 업데이트 모드를 즉시 업데이트로 변경할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
   
  구독 중인 게시에서 DTS를 허용 하는 경우에는 synctran 및 큐에 대기 된 tran 값을 사용할 수 없습니다.  
@@ -131,17 +131,16 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection=] '*loopback_detection*'  
  배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 지정합니다. *loopback_detection* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |true|배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보내지 않습니다. 양방향 트랜잭션 복제에 사용됩니다. 자세한 내용은 [양방향 트랜잭션 복제](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조 하세요.|  
 |false|배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보냅니다.|  
-|NULL(기본값)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서는 자동으로 true로 설정되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해서는 자동으로 false로 설정됩니다.|  
+|NULL(기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서는 자동으로 true로 설정되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해서는 자동으로 false로 설정됩니다.|  
   
  [ @frequency_type=] *frequency_type*  
  배포 태스크를 예약하는 빈도입니다. *frequency_type* 은 int 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |1|한 번|  
 |2|주문형|  
@@ -150,7 +149,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |16|매월|  
 |32|매월 상대적|  
 |64 (기본값)|자동 시작|  
-|128|Recurring|  
+|128|되풀이|  
   
  [ @frequency_interval=] *frequency_interval*  
  *Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다. *frequency_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -158,10 +157,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval=] *frequency_relative_interval*  
  배포 에이전트의 날짜입니다. 이 매개 변수는 *frequency_type* 이 32 (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |1|처음|  
-|2|Second|  
+|2|초|  
 |4|셋째|  
 |8|넷째|  
 |16|마지막|  
@@ -173,11 +172,11 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday=] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도(분)입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |1|한 번|  
-|2|Second|  
-|4|분|  
+|2|초|  
+|4|Minute|  
 |8|Hour|  
 |NULL||  
   
@@ -233,12 +232,12 @@ sp_addsubscription [ @publication = ] 'publication'
  이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
+>  *publisher* 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
  백업에서 구독자를 초기화할 때 사용되는 백업 디바이스의 유형을 지정합니다. *backupdevicetype* 은 **nvarchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |logical(기본값)|백업 디바이스가 논리적 디바이스입니다.|  
 |disk|백업 디바이스가 디스크 드라이브입니다.|  
@@ -276,12 +275,11 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  구독자의 유형입니다. *subscriber_type* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0(기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구독자|  
 |1|ODBC 데이터 원본 서버|  
-|2|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
+|2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |3|OLE DB 공급자|  
   
  [ @memory_optimized=] *memory_optimized*  
@@ -309,9 +307,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  구독이 DTS 패키지를 사용 하지 않는 경우 *allow_transformable_subscriptions*설정 된 게시를 구독할 수 없습니다. 게시의 테이블을 DTS 구독과 DTS가 아닌 구독 양쪽 모두에 복제해야 할 경우 각 구독 유형당 하나씩 두 개의 게시를 만들어야 합니다.  
   
- 
-  **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. 
-  **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.  
+ **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버만 sp_addsubscription을 실행할 수 있습니다. 끌어오기 구독의 경우 게시 액세스 목록의 로그인이 있는 사용자는 sp_addsubscription을 실행할 수 있습니다.  
@@ -320,8 +316,8 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>참고 항목  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
+ [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
+ [SQL Server 이외 구독자에 대 한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [Transact-sql&#41;sp_addpushsubscription_agent &#40;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
  [Transact-sql&#41;sp_changesubstatus &#40;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

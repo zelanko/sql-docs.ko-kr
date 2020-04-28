@@ -16,10 +16,10 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771418"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|에이전트의 ID입니다.|  
+|**id**|**int**|에이전트의 ID입니다.|  
 |**name**|**nvarchar (100)**|에이전트의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|에이전트 작업의 고유한 ID입니다.|  
 |**job_login**|**nvarchar(512)**|배포 에이전트가 실행 되는 Windows 계정으로, *도메인*\\*사용자 이름*형식으로 반환 됩니다.|  
@@ -59,6 +59,6 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  *Frompublisher* 의 값이 **1**인 경우 게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다. 그렇지 않으면 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 게시에 대 한 구독 업데이트 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

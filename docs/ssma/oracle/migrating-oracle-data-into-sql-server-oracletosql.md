@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264683"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 데이터를 SQL Server로 마이그레이션(OracleToSQL)
@@ -59,7 +59,7 @@ ms.locfileid: "68264683"
   
 **데이터를 마이그레이션하려면**  
   
-1.  다음 사항을 확인합니다.  
+1.  다음을 확인합니다.  
   
     -   Oracle 공급자는 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

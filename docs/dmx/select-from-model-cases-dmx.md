@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892839"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>모델&gt;에서 &lt;선택 합니다. 사례 (DMX)
@@ -23,8 +23,7 @@ ms.locfileid: "68892839"
  마이닝 모델에 드릴스루가 사용되도록 설정되지 않은 경우에는 문이 실패합니다.  
   
 > [!NOTE]  
->  DMX(Data Mining Extensions)에서는 모델을 만들 때만 드릴스루를 사용할 수 있습니다. 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 기존 모델에 드릴스루를 추가할 수 있지만 사례를 보거나 쿼리하려면 먼저 모델을 다시 처리해야 합니다.  
+>  DMX(Data Mining Extensions)에서는 모델을 만들 때만 드릴스루를 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 기존 모델에 드릴스루를 추가할 수 있지만 사례를 보거나 쿼리하려면 먼저 모델을 다시 처리해야 합니다.  
   
  드릴스루를 사용 하는 방법에 대 한 자세한 내용은 DMX를 사용 하 여 [마이닝 모델 &#40;만들기&#41;](../dmx/create-mining-model-dmx.md), [&#40;Dmx&#41;](../dmx/select-into-dmx.md)및 [ALTER 마이닝 구조 &#40;dmx&#41;](../dmx/alter-mining-structure-dmx.md)을 참조 하세요.  
   
@@ -51,7 +50,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *조건 식*  
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *식*  
+ *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -91,6 +90,6 @@ AND IsInNode('002')
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

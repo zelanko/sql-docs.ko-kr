@@ -16,10 +16,10 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771518"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors(Transact-SQL)
@@ -55,14 +55,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|오류 ID입니다.|  
+|**id**|**int**|오류 ID입니다.|  
 |**time**|**datetime**|오류가 발생한 시간입니다.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|오류 원본 유형 ID입니다.|  
 |**source_name**|**nvarchar (100)**|오류 원본의 이름입니다.|  
-|**error_code**|**sysname**|오류 코드입니다.|  
+|**error_code**|**sysname**|오류 코드|  
 |**error_text**|**ntext**|오류 메시지입니다.|  
-|**xact_seqno**|**varbinary (16)**|실패한 실행 일괄 처리의 시작 트랜잭션 로그 시퀀스 번호입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 트랜잭션의 트랜잭션 로그 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|실패한 실행 일괄 처리의 시작 트랜잭션 로그 시퀀스 번호입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 트랜잭션의 트랜잭션 로그 시퀀스 번호입니다.|  
 |**command_id**|**int**|실패한 실행 일괄 처리의 명령 ID입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 명령의 명령 ID입니다.|  
 |**session_id**|**int**|오류가 발생한 에이전트 세션의 ID입니다.|  
   
@@ -77,6 +77,6 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_helpsubscription &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [Transact-sql&#41;sp_helpsubscription_properties &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

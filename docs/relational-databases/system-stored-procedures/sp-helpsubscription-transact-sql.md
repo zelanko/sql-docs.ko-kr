@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771568"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
@@ -75,7 +75,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**full subscription**|**bit**|구독이 게시 내의 모든 아티클에 관한 것인지 표시합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**구독 이름**|**nvarchar(255)**|구독의 이름입니다.|  
 |**업데이트 모드**|**int**|**0** = 읽기 전용<br /><br /> **1** = 즉시 업데이트 구독|  
-|**distribution job id**|**binary (16)**|배포 에이전트의 작업 ID입니다.|  
+|**distribution job id**|**binary(16)**|배포 에이전트의 작업 ID입니다.|  
 |**loopback_detection**|**bit**|루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **0** = 다시 보냅니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> 양방향 트랜잭션 복제에 사용됩니다. 자세한 내용은 [양방향 트랜잭션 복제](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)를 참조 하세요.|  
 |**offload_enabled**|**bit**|복제 에이전트의 오프로드 실행이 구독자에서 실행되도록 설정되었는지 여부를 지정합니다.<br /><br /> **0**인 경우 게시자에서 에이전트가 실행 됩니다.<br /><br /> **1**인 경우 에이전트가 구독자에서 실행 됩니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화를 위해 사용할 수 있는 서버의 이름입니다. NULL 인 경우 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) 테이블에 나열 된 현재 offload_server 사용 됩니다.|  

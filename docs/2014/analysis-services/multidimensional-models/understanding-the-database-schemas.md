@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811050"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
@@ -82,8 +82,7 @@ ms.locfileid: "68811050"
  마법사는 측정값 그룹에서 번역 열이 필요한 속성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>데이터 형식 변환 및 기본 길이  
- 스키마 생성 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 데이터 형식을 사용 하는 열을 제외 하 고 모든 경우에 데이터 형식을 무시 합니다. 
-  `wchar` 데이터 크기는 `nvarchar` 데이터 형식으로 직접 변환됩니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
+ 스키마 생성 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 데이터 형식을 사용 하는 열을 제외 하 고 모든 경우에 데이터 형식을 무시 합니다. `wchar` 데이터 크기는 `nvarchar` 데이터 형식으로 직접 변환됩니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
   
  특성에 대한 바인딩과 같은 데이터 항목에 대해 길이를 지정하지 않으면 해당 열에 다음 표의 기본 길이가 사용됩니다.  
   

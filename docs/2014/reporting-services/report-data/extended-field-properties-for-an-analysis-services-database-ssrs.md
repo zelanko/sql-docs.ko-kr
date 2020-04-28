@@ -11,35 +11,34 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892029"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
-  데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 처리 확장 프로그램은 확장 필드 속성을 지원 합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 세트에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 `Fields` 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 원본에서 사용할 수 있고 데이터 처리 확장 프로그램에서 지원되는 속성입니다. 확장 속성은 보고서 데이터 세트에 대한 필드 컬렉션의 일부로 보고서 데이터 창에 나타나지 않습니다. 기본 제공 `Fields` 컬렉션을 사용하여 이름으로 확장 필드 속성 값을 지정하는 식을 작성하면 보고서에 확장 필드 속성 값을 포함할 수 있습니다.  
   
  확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통되는 속성으로, 특정 필드 속성 이름에 매핑되고 기본 제공 `Fields` 컬렉션을 통해 이름으로 액세스될 수 있습니다. 사용자 지정 속성은 각 데이터 공급자별로 정의되며 확장 속성 이름을 문자열로 사용하는 구문에 의해서만 기본 제공 `Fields` 컬렉션을 통해 액세스될 수 있습니다.  
   
- 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에서 사용할 수 있는 확장 필드에 대한 자세한 내용은 [속성 값 만들기 및 사용&#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md)을 참조하세요.  
+ 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에서 사용할 수 있는 확장 필드에 대한 자세한 내용은 [속성 값 만들기 및 사용&#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md)을 참조하세요.  
   
 ## <a name="working-with-field-properties-in-a-report"></a>보고서에서 필드 속성 사용  
  확장 필드 속성에는 미리 정의된 속성과 데이터 공급자 관련 속성이 포함됩니다. 필드 속성은 데이터 세트에 대해 작성된 쿼리에 포함되어 있어도 **보고서 데이터** 창의 필드 목록에 나타나지 않습니다. 따라서 필드 속성을 보고서 디자인 화면으로 끌 수 없습니다. 대신 필드를 보고서로 끈 다음 필드의 `Value` 속성을 사용하려는 속성으로 변경해야 합니다. 예를 들어 큐브의 셀 데이터 형식이 이미 지정되어 있는 경우 `=Fields!FieldName.FormattedValue`식을 통해 FormattedValue 필드 속성을 사용할 수 있습니다.  
   
  미리 정의되지 않은 확장 속성을 참조하려면 식에 다음 구문을 사용하십시오.  
   
--   *필드인! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>미리 정의된 필드 속성  
  대부분의 경우 미리 정의된 필드 속성은 측정값, 수준 또는 차원에 적용됩니다. 미리 정의된 필드 속성의 해당 값은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 저장되어 있어야 합니다. 예를 들어 값이 없거나 수준에서 측정값 전용 필드 속성을 지정한 경우에는 Null 값이 반환됩니다.  
   
  다음 구문 중 하나를 사용하여 식에서 미리 정의된 속성을 참조할 수 있습니다.  
   
--   *필드인! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *필드인! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
  다음 표에서는 사용할 수 있는 미리 정의된 필드 속성 목록을 보여 줍니다.  
   
@@ -124,7 +123,7 @@ CELL PROPERTIES
 |-------------------|-----------------|  
 |January|2,481|  
 |February|2,684|  
-|March|2,749|  
+|3월|2,749|  
 |April|2,739|  
   
  속성은 MDX SELECT 문의 일부이지만 결과 집합 열에 나타나지 않습니다. 그러나 확장 속성 기능을 사용하여 이 데이터를 보고서에 사용할 수 있습니다. 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]MDX 쿼리 결과 창에서 셀을 두 번 클릭 하 고 해당 셀이 큐브에 설정 된 경우 셀 속성 값을 볼 수 있습니다. 1,379가 포함된 첫 번째 Order Count 셀을 두 번 클릭하면 다음 셀 속성이 있는 팝업 창이 표시됩니다.  
@@ -151,7 +150,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>참고 항목  
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [식의 기본 제공 컬렉션은 보고서 작성기 및 SSRS를 &#40;&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

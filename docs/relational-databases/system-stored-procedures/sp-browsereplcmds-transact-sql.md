@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769004"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
@@ -65,9 +65,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary (16)**|명령의 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|명령의 시퀀스 번호입니다.|  
 |**originator_srvname**|**sysname**|트랜잭션이 시작된 서버입니다.|  
 |**originator_db**|**sysname**|트랜잭션이 시작된 데이터베이스입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
@@ -76,8 +76,8 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**hashkey**|**int**|내부적으로만 사용됩니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
-|**originator_lsn**|**varbinary (16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
-|**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]명령.|  
+|**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
+|**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)명령의 ID입니다.|  
   
  긴 명령은 결과 집합에서 여러 행으로 분할될 수 있습니다.  
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  배포 데이터베이스에서 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_browsereplcmds**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [Transact-sql&#41;sp_replcmds &#40;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [Transact-sql&#41;sp_replshowcmds &#40;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

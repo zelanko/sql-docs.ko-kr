@@ -16,10 +16,10 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 9feddab12ea972ea4d7764fccfdd91a7f9b89cec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762248"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords(Transact-SQL)
@@ -44,7 +44,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = Windows 통합 인증  
   
- **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
+ **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
   
 `[ @login = ] 'login'`변경할 Windows 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login* 은 **nvarchar (257)** 이며 기본값은 없습니다.  
   

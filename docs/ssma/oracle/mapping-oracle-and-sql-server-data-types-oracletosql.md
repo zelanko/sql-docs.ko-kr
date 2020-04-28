@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262965"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Oracle 및 SQL Server 데이터 형식 매핑(OracleToSQL)
@@ -67,8 +67,7 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
   
 3.  데이터 형식 매핑을 수정 하려면 다음을 수행 합니다.  
   
-    1.  
-  **편집**을 클릭합니다.  
+    1.  **편집**을 클릭합니다.  
   
     2.  **원본 유형**에서 매핑할 Oracle 데이터 형식을 선택 합니다.  
   

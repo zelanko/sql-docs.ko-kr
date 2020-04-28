@@ -16,10 +16,10 @@ ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771047"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn(Transact-SQL)
@@ -28,8 +28,7 @@ ms.locfileid: "68771047"
   게시된 기존 테이블 아티클에 열을 추가합니다. 이 테이블을 게시하는 모든 게시자에 새 열을 추가하거나 이 테이블을 게시하는 특정 게시에 열을 추가할 수 있습니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]
->  이 저장 프로시저는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 지원됩니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 게시자 및 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 재게시 구독자 에서만 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해야 합니다. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 도입된 데이터 형식을 사용하는 열에는 이 절차를 사용하지 않아야 합니다.  
+>  이 저장 프로시저는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해 지원됩니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 게시자 및 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 재게시 구독자 에서만 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 도입된 데이터 형식을 사용하는 열에는 이 절차를 사용하지 않아야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

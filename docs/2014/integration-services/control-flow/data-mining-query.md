@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890323"
 ---
 # <a name="data-mining-query"></a>데이터 마이닝 쿼리
@@ -26,29 +26,26 @@ ms.locfileid: "68890323"
  뷰 전환 단추  
  디자인 창과 쿼리 창 사이를 전환하려면 아이콘을 클릭합니다. 기본적으로 디자인 창이 열립니다.  
   
- 디자인 창으로 전환 하려면 ![디자인 아이콘](../media/ssis-designicon.gif "디자인 아이콘") 아이콘을 클릭 합니다.  
+ 디자인 창으로 전환하려면 ![디자인 아이콘](../media/ssis-designicon.gif "디자인 아이콘") 아이콘을 클릭합니다.  
   
- 쿼리 창으로 전환 하려면 ![SQL 아이콘](../media/ssis-queryicon.gif "SQL 아이콘") 아이콘을 클릭 합니다.  
+ 쿼리 창으로 전환하려면 ![SQL 아이콘](../media/ssis-queryicon.gif "SQL 아이콘") 아이콘을 클릭합니다.  
   
  **마이닝 모델**  
  예측의 기반으로 하려고 선택한 마이닝 모델을 표시합니다.  
   
  **모델 선택**  
- 
-  **마이닝 모델 선택** 대화 상자를 엽니다.  
+ **마이닝 모델 선택** 대화 상자를 엽니다.  
   
  **입력 열**  
  예측 생성에 사용되는 선택한 입력 열을 표시합니다.  
   
  **원본**  
- 열에 사용할 필드를 포함하는 원본을 드롭다운 목록에서 선택합니다. 
-  **마이닝 모델** 테이블에서 선택한 마이닝 모델, **입력 테이블 선택** 테이블에서 선택한 입력 테이블, 예측 함수 또는 사용자 지정 식을 사용할 수 있습니다.  
+ 열에 사용할 필드를 포함하는 원본을 드롭다운 목록에서 선택합니다. **마이닝 모델** 테이블에서 선택한 마이닝 모델, **입력 테이블 선택** 테이블에서 선택한 입력 테이블, 예측 함수 또는 사용자 지정 식을 사용할 수 있습니다.  
   
  마이닝 모델과 입력 열이 포함된 테이블에서 셀로 열을 끌 수 있습니다.  
   
  **필드**  
- 원본 테이블에서 파생된 열 목록에서 열을 선택합니다. 
-  **원본** 에서 **예측 함수**를 선택한 경우 이 셀에는 선택한 마이닝 모델에 대해 사용할 수 있는 예측 함수의 드롭다운 목록이 포함됩니다.  
+ 원본 테이블에서 파생된 열 목록에서 열을 선택합니다. **원본** 에서 **예측 함수**를 선택한 경우 이 셀에는 선택한 마이닝 모델에 대해 사용할 수 있는 예측 함수의 드롭다운 목록이 포함됩니다.  
   
  **별칭**  
  서버에서 반환한 열의 이름입니다.  
@@ -57,8 +54,7 @@ ms.locfileid: "68890323"
  열을 반환하거나 WHERE 절에서만 열을 사용하려면 선택합니다.  
   
  **그룹**  
- 
-  **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. 예를 들어 (expr1 OR expr2) AND expr3과 같습니다.  
+ **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. 예를 들어 (expr1 OR expr2) AND expr3과 같습니다.  
   
  **및/또는**  
  논리적 쿼리를 만드는 데 사용합니다. 예를 들어 (expr1 OR expr2) AND expr3과 같습니다.  
@@ -68,6 +64,6 @@ ms.locfileid: "68890323"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 쿼리 인터페이스](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

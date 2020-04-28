@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770929"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb(Transact-SQL)
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|기록을 보존할 기간(시간)입니다.|  
 |**history_cleanup_agent**|**sysname**|기록 정리 에이전트의 이름입니다.|  
 |**distribution_cleanup_agent**|**sysname**|배포 정리 에이전트의 이름입니다.|  
-|**업무**|**int**|내부적으로만 사용됩니다.|  
+|**status**|**int**|내부적으로만 사용됩니다.|  
 |**data_folder**|**nvarchar(255)**|데이터베이스 파일을 저장하는 데 사용되는 디렉터리 이름입니다.|  
 |**data_file**|**nvarchar(255)**|데이터베이스 파일의 이름입니다.|  
 |**data_file_size**|**int**|초기 데이터 파일의 크기(MB)입니다.|  

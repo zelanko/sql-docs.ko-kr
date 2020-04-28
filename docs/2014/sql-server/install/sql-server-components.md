@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811093"
 ---
 # <a name="sql-server-components"></a>SQL Server 구성 요소
@@ -44,13 +44,11 @@ ms.locfileid: "68811093"
 -   클러스터의 노드에 설치 된 비클러스터형 구성 요소를 검색 하려면 장애 조치 (failover) 클러스터 노드의 컴퓨터 이름을 입력 합니다.  
   
     > [!IMPORTANT]  
-    >  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름은 포함하지 마십시오.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름은 포함하지 마십시오.  
   
  컴퓨터 이름 대신 IP 주소를 지정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 검색하는 경우 로컬 컴퓨터의 이름을 지정해야 합니다. 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 검색하는 경우 로컬 컴퓨터의 이름을 지정해야 합니다. 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
  **Detect**  
  **검색** 단추는 지정 된 컴퓨터에 액세스 하 여 분석할 구성 요소를 검색 합니다.  
@@ -63,7 +61,7 @@ ms.locfileid: "68811093"
   
 -   컴퓨터의 레지스트리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 발견되면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색됩니다. 그러나 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
- **구성 요소**  
+ **요소도**  
  분석할 구성 요소를 선택합니다. **검색** 단추를 클릭 하 여 컴퓨터에 설치 된 모든 구성 요소를 선택할 수 있습니다. 컴퓨터에 설치된 것으로 검색된 구성 요소 옆에는 확인 표시가 나타납니다. 각 구성 요소의 옆에 있는 확인란을 선택하거나 선택 취소하여 분석할 구성 요소를 수동으로 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

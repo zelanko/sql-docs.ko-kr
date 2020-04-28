@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154300"
 ---
 # <a name="connect-to-azure-storage"></a>Azure Storage에 연결
@@ -29,7 +29,7 @@ ms.locfileid: "70154300"
   
 2.  **계정 키** - 지정한 스토리지 계정의 계정 키를 지정합니다.  
   
-3.  **보안 엔드포인트 사용(HTTPS)** – 이 옵션은 암호화된 통신 및 네트워크 웹 서버의 보안 ID를 사용합니다.  
+3.  **보안 끝점 사용 (HTTPS)** -이 옵션은 암호화 된 통신 및 네트워크 웹 서버의 보안 id를 활용 합니다.  
   
 4.  **계정 키 저장** - 이 옵션은 암호화된 파일에 암호를 저장합니다.  
   

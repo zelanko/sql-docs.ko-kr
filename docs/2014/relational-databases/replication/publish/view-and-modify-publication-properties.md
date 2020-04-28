@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941062"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
@@ -44,17 +44,17 @@ ms.locfileid: "68941062"
   
      [RMO(복제 관리 개체)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   게시를 만든 다음 일부 속성은 수정할 수 없고, 게시에 대한 구독이 있는 경우에 수정할 수 없는 속성도 있습니다. 수정할 수 없는 속성은 읽기 전용으로 표시됩니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   게시가 생성되면 일부 속성 변경으로 인해 새 스냅샷이 필요합니다. 게시에 구독이 있는 경우에는 이러한 변경 내용으로 인해 모든 구독도 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터에서 사용할 수 있는 **게시 속성 - \<게시>** 대화 상자에서 게시 속성을 보고 수정합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
   
  **게시 속성 - \<게시>** 대화 상자에는 다음 페이지가 포함되어 있습니다.  
@@ -97,7 +97,7 @@ ms.locfileid: "68941062"
   
 3.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  게시는 수정할 수 있으며 게시 속성은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 반환할 수 있습니다. 사용하는 저장 프로시저는 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 확인하려면  
@@ -130,7 +130,7 @@ ms.locfileid: "68941062"
   
 1.  적절한 스냅샷 매개 변수에 하나 이상의 새 스냅샷 속성을 지정하여 [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)을 실행합니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 트랜잭션 복제 예에서는 게시 속성을 반환합니다.  
   
  [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
@@ -147,7 +147,7 @@ ms.locfileid: "68941062"
   
  [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 게시를 수정하고 해당 속성에 액세스할 수 있습니다. 게시 속성을 보거나 수정하는 데 사용되는 RMO 클래스는 게시의 유형에 따라 달라집니다.  
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 보거나 수정하려면  
@@ -160,8 +160,7 @@ ms.locfileid: "68941062"
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Microsoft Visual C#에서는 `&`, Microsoft Visual Basic에서는 `And`)를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (옵션) `true`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. 
-  `false`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `true` 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `false` 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>병합 게시의 속성을 보거나 수정하려면  
   
@@ -173,10 +172,9 @@ ms.locfileid: "68941062"
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 한 개 이상의 속성에 대해 새 값을 설정합니다. 논리 AND 연산자(Visual C#에서는 `&`, Visual Basic에서는 `And`)를 사용하여 지정된 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 값이 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성에 대해 설정되어 있는지 확인할 수 있습니다. 포함 논리 OR 연산자(Visual C#에서는 `|`, Visual Basic에서는 `Or`) 및 배타적 논리 OR 연산자(Visual C#에서는 `^`, Visual Basic에서는 `Xor`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 속성에 대한 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 값을 변경할 수 있습니다.  
   
-5.  (옵션) `true`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. 
-  `false`에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
+5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `true` 값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 `false` 값을 지정했으면(기본값) 변경 내용이 즉시 서버로 전송됩니다.  
   
-###  <a name="PShellExample"></a> 예(RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  이 예에서는 트랜잭션 게시에 대한 게시 특성을 설정합니다. 변경 내용은 명시적으로 서버로 전송될 때까지 캐시됩니다.  
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889328"
 ---
 # <a name="ragged-hierarchies"></a>비정형 계층 구조
@@ -34,51 +34,46 @@ ms.locfileid: "68889328"
   
 -   [HideMemberIf를 설정 하 여 일반 계층의 멤버를 숨깁니다.](#bkmk_Hide)  
   
--   [클라이언트 응용 프로그램에서 자리 표시 자가 표시 되는 방식을 결정 하기 위해 MDX 호환성 설정](#bkmk_Mdx)  
+-   [MDX Compatibility를 설정하여 자리 표시자가 클라이언트 애플리케이션에서 표현되는 방법 결정](#bkmk_Mdx)  
   
-##  <a name="bkmk_approach"></a>비정형 계층에서 드릴 다운 탐색을 수정 하기 위한 방법  
+##  <a name="approaches-for-modifying-drilldown-navigation-in-a-ragged-hierarchy"></a><a name="bkmk_approach"></a> 비정형 계층에서 드릴다운 탐색을 수정하기 위한 방법  
  비정형 계층의 존재는 드릴다운 탐색이 예상되는 값을 반환하지 않거나 사용하기에 비효율적인 것으로 인식될 때 문제가 됩니다. 비정형 계층으로 인해 발생하는 탐색 문제를 해결하려면 다음 옵션을 사용해 보십시오.  
   
--   일반 계층을 사용하지만 각 수준에 대해 `HideMemberIf` 속성을 설정하여 누락된 수준을 사용자에게 시각화할지 여부를 지정합니다. 
-  `HideMemberIf`를 설정하는 경우 연결 문자열에 대한 `MDXCompatibility`도 설정하여 기본 탐색 동작을 재정의해야 합니다. 이러한 속성을 설정하는 지침이 이 항목에 설명되어 있습니다.  
+-   일반 계층을 사용하지만 각 수준에 대해 `HideMemberIf` 속성을 설정하여 누락된 수준을 사용자에게 시각화할지 여부를 지정합니다. `HideMemberIf`를 설정하는 경우 연결 문자열에 대한 `MDXCompatibility`도 설정하여 기본 탐색 동작을 재정의해야 합니다. 이러한 속성을 설정하는 지침이 이 항목에 설명되어 있습니다.  
   
 -   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 온라인 설명서에 대 한 자세한 내용은 [부모-자식 계층](parent-child-dimension.md)을 참조 하세요. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
   
  차원에 둘 이상의 비정형 계층이 포함된 경우 첫 번째 방법인 `HideMemberIf`를 설정해야 합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 이 기술에 대 한 자세한 내용은 [Martin Mason 'S SSAS 금융 큐브-파트 1a-비정형 계층 (블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 을 참조 하세요.  
   
-##  <a name="bkmk_Hide"></a>HideMemberIf를 설정 하 여 일반 계층의 멤버를 숨깁니다.  
+##  <a name="set-hidememberif-to-hide-members-in-a-regular-hierarchy"></a><a name="bkmk_Hide"></a> 일반 계층에서 멤버를 숨기도록 HideMemberIf 설정  
  비정형 차원 테이블의 경우 논리적으로 누락된 멤버를 여러 방법으로 표시할 수 있습니다. 테이블 셀에는 Null 또는 빈 문자열을 포함할 수 있습니다. 또는 자리 표시자 역할을 하기 위해 부모와 같은 값을 포함할 수도 있습니다. 자리 표시자의 표현은 클라이언트 애플리케이션에 대한 `HideMemberIf` 연결 문자열 속성 및 `MDX Compatibility` 속성에 의해 결정되는 자식 멤버의 자리 표시자 상태에 의해 결정됩니다.  
   
  비정형 계층의 표시를 지원하는 클라이언트 애플리케이션의 경우 논리적으로 누락된 멤버를 숨기도록 이러한 속성을 사용할 수 있습니다.  
   
 1.  SSDT에서 차원을 두 번 클릭하여 차원 디자이너에서 차원을 엽니다. 계층 창에서 첫 번째 탭, 차원, 구조가 특성 계층을 나타냅니다.  
   
-2.  계층 내의 멤버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
-  `HideMemberIf`를 아래 설명된 값 중 하나로 설정합니다.  
+2.  계층 내의 멤버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. `HideMemberIf`를 아래 설명된 값 중 하나로 설정합니다.  
   
     |HideMemberIf 설정|Description|  
     |--------------------------|-----------------|  
-    |`Never`|수준 멤버를 숨기지 않습니다. 이것은 기본값입니다.|  
-    |**해당 Childwithnoname**|부모의 유일한 자식이고 이름이 Null 또는 빈 문자열인 수준 멤버를 숨깁니다.|  
-    |**이 부모 이름**|부모의 유일한 자식이고 이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
+    |`Never`|수준 멤버를 숨기지 않습니다. 기본값입니다.|  
+    |**OnlyChildWithNoName**|부모의 유일한 자식이고 이름이 Null 또는 빈 문자열인 수준 멤버를 숨깁니다.|  
+    |**OnlyChildWithParentName**|부모의 유일한 자식이고 이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
     |**NoName**|이름이 비어 있는 수준 멤버를 숨깁니다.|  
     |**ParentName**|이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
   
-##  <a name="bkmk_Mdx"></a>클라이언트 응용 프로그램에서 자리 표시 자가 표시 되는 방식을 결정 하기 위해 MDX 호환성 설정  
- 계층 수준에서 `HideMemberIf`를 설정한 후 클라이언트 애플리케이션에서 전송된 연결 문자열에 `MDX Compatibility` 속성도 설정해야 합니다. 
-  `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
+##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>클라이언트 응용 프로그램에서 자리 표시 자가 표시 되는 방식을 결정 하기 위해 MDX 호환성 설정  
+ 계층 수준에서 `HideMemberIf`를 설정한 후 클라이언트 애플리케이션에서 전송된 연결 문자열에 `MDX Compatibility` 속성도 설정해야 합니다. `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
   
-|MDX 호환성 설정|Description|사용|  
+|MDX 호환성 설정|Description|사용법|  
 |-------------------------------|-----------------|-----------|  
 |**1**|자리 표시자 값을 표시합니다.|이 값은 Excel, SSDT 및 SSMS에서 사용되는 기본값입니다. 비정형 계층에서 빈 수준을 드릴다운할 때 서버에서 자리 표시자 값을 반환하도록 지시합니다. 자리 표시자 값을 클릭하면 자식(리프) 노드로 계속 드릴다운할 수 있습니다.<br /><br /> Excel은 Analysis Services에 연결하는 데 사용되는 연결 문자열을 소유하고 각 새 연결에 대해 `MDX Compatibility`을 항상 1로 설정합니다. 이 동작은 이전 버전과의 호환성을 유지됩니다.|  
-|**2**|자리 표시자 값(부모 수준의 null 값 또는 중복)을 숨기지만 관련 값을 가진 다른 수준 및 노드는 표시합니다.|
-  `MDX Compatibility`=2는 일반적으로 비정형 계층의 개념으로 기본 설정으로 표시됩니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 일부 타사 클라이언트 애플리케이션에서는 이 설정을 유지할 수 있습니다.|  
+|**2**|자리 표시자 값(부모 수준의 null 값 또는 중복)을 숨기지만 관련 값을 가진 다른 수준 및 노드는 표시합니다.|`MDX Compatibility`=2는 일반적으로 비정형 계층의 개념으로 기본 설정으로 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 일부 타사 클라이언트 애플리케이션에서는 이 설정을 유지할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 정의 계층 만들기](user-defined-hierarchies-create.md)   
  [사용자 계층](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [부모-자식 계층](parent-child-dimension.md)   
- [연결 문자열 속성 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
+ [연결 문자열 속성&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

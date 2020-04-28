@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893856"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
@@ -28,8 +28,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ```  
   
 ## <a name="applies-to"></a>적용 대상  
- 스칼라 열 참조 또는 클러스터 열 참조. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 제외한 모든 알고리즘 유형에 사용할 수 있습니다.  
+ 스칼라 열 참조 또는 클러스터 열 참조. [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘을 제외한 모든 알고리즘 유형에 사용할 수 있습니다.  
   
 ## <a name="return-type"></a>반환 형식  
  테이블입니다.  

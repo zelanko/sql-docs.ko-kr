@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265695"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-sql)
@@ -41,7 +41,7 @@ ms.locfileid: "68265695"
 |name|**nvarchar(256)**|Spinlock 형식의 이름입니다.|  
 |발생|**bigint**|다른 스레드가 현재 spinlock을 보유 하 고 있으므로 스레드가 spinlock을 얻으려고 시도 하 고 차단 되는 횟수입니다.|  
 |밖|**bigint**|스레드가 spinlock을 획득 하려고 시도 하는 동안 루프를 실행 하는 횟수입니다.|  
-|spins_per_collision|**실제로**|충돌 당 회전 비율입니다.|  
+|spins_per_collision|**real**|충돌 당 회전 비율입니다.|  
 |sleep_time|**bigint**|백오프 이벤트에서 스레드가 절전 모드에 소요 된 시간 (밀리초)입니다.|  
 |배경|**int**|"회전" 하는 스레드가 spinlock을 획득 하 고 스케줄러를 생성 하는 데 실패 한 횟수입니다.|  
 
@@ -67,7 +67,7 @@ GO
 >  이러한 통계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 경우 지속되지 않습니다. 모든 데이터는 통계가 마지막으로 다시 설정된 이후나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 시작된 이후로 누적됩니다.  
   
 ## <a name="spinlocks"></a>Spinlock  
- Spinlock은 일반적으로 짧은 시간 동안 유지 되는 데이터 구조에 대 한 액세스를 serialize 하는 데 사용 되는 간단한 동기화 개체입니다. 스레드가 다른 스레드에서 보유 하 고 있는 spinlock에 의해 보호 되는 리소스에 액세스 하려고 할 때 스레드는 래치 또는 다른 리소스를 사용 하 여 스케줄러를 즉시 생성 하는 대신 루프 또는 "spin"를 실행 하 고 리소스에 대 한 액세스를 다시 시도 합니다. 대기한. 스레드는 리소스를 사용할 수 있을 때까지 계속 회전 하거나 루프가 완료 되 면 스레드가 스케줄러를 생성 하 고 실행 가능한 큐로 돌아갑니다. 이 방법은 과도 한 스레드 컨텍스트 전환을 줄이는 데 도움이 되지만 spinlock의 경합이 높으면 상당한 CPU 사용률이 관찰 될 수 있습니다.
+ Spinlock은 일반적으로 짧은 시간 동안 유지 되는 데이터 구조에 대 한 액세스를 serialize 하는 데 사용 되는 간단한 동기화 개체입니다. 스레드가 다른 스레드에서 보유 하 고 있는 spinlock에 의해 보호 되는 리소스에 액세스 하려고 할 때 스레드는 래치 또는 다른 리소스 대기를 사용 하 여 스케줄러를 즉시 생성 하는 대신 루프 또는 "spin"를 실행 하 고 리소스에 다시 액세스를 시도 합니다. 스레드는 리소스를 사용할 수 있을 때까지 계속 회전 하거나 루프가 완료 되 면 스레드가 스케줄러를 생성 하 고 실행 가능한 큐로 돌아갑니다. 이 방법은 과도 한 스레드 컨텍스트 전환을 줄이는 데 도움이 되지만 spinlock의 경합이 높으면 상당한 CPU 사용률이 관찰 될 수 있습니다.
    
  다음 표에는 가장 일반적인 spinlock 형식 중 일부에 대 한 간략 한 설명이 나와 있습니다.  
   
@@ -177,7 +177,7 @@ GO
 |HTTP|내부적으로만 사용됩니다.|
 |HTTP_CONNCACHE|내부적으로만 사용됩니다.|
 |HTTP_ENDPOINT|내부적으로만 사용됩니다.|
-|ID|내부적으로만 사용됩니다.|
+|IDENTITY|내부적으로만 사용됩니다.|
 |INDEX_CREATE|내부적으로만 사용됩니다.|
 |IO_DISPENSER_PAUSE|내부적으로만 사용됩니다.|
 |IO_RG_VOLUME_HASHTABLE|내부적으로만 사용됩니다.|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  
- [DBCC SQLPERF &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 

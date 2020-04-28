@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652432"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652432"
 
   제출된 커서 문이나 일괄 처리에 대한 실행 계획을 컴파일한 다음 커서를 만들고 채웁니다. sp_cursorprepexec sp_cursorprepare 및 sp_cursorexecute의 기능을 결합 합니다. 이 프로시저는 TDS (tabular data stream) 패킷에서 ID = 5를 지정 하 여 호출 합니다.  
   
- ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,9 +44,8 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *준비 된 핸들*  
  는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 된 준비 *핸들* 식별자입니다. *준비 된 핸들* 은 필수 이며 **int**를 반환 합니다.  
   
- *위치*  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 커서 식별자입니다. *커서* 는이 커서에 대해 작동 하는 모든 후속 프로시저에 제공 해야 하는 필수 매개 변수입니다 (예: sp_cursorfetch).  
+ *cursor*  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 커서 식별자입니다. *커서* 는이 커서에 대해 작동 하는 모든 후속 프로시저에 제공 해야 하는 필수 매개 변수입니다 (예: sp_cursorfetch).  
   
  *params*  
  매개 변수가 있는 문을 식별합니다. 변수의 매개 변수 정의는 문에서 매개 변수 표식을 *대체 합니다.* *params* 는 **ntext**, **nchar**또는 **nvarchar** 입력 값을 호출 하는 필수 매개 변수입니다.  
@@ -60,17 +59,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Stmt 값을 지정 하는 규칙은 sp_cursoropen의 경우와 동일 합니다. 단, *stmt* 문자열 데이터 형식은 **ntext**여야 합니다.  
   
- *옵션*  
+ *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. * 옵션에는 다음 **int** 입력 값이 필요 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -92,7 +91,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  

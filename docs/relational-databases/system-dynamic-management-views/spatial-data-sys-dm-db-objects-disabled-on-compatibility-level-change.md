@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809906"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>공간 데이터-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호환성 수준 변경의 결과로 비활성화되는 인덱스 및 제약 조건을 나열합니다. 식에서 공간 UDT를 사용하는 지속형 계산 열을 포함하는 인덱스 및 제약 조건은 호환성 수준을 업그레이드하거나 변경하면 비활성화됩니다. 이 동적 관리 함수를 사용하여 호환성 수준 변경의 결과를 확인할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -41,7 +40,7 @@ ms.locfileid: "68809906"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  *compatibility_level*  
  설정 하려는 호환성 수준을 식별 하는 **int** 입니다.  
   
@@ -49,11 +48,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**클래스**|**int**|1 = 제약 조건<br /><br /> 7 = 인덱스 및 힙|  
-|**class_desc**|**nvarchar (60)**|제약 조건의 경우 OBJECT 또는 COLUMN<br /><br /> 인덱스 및 힙의 경우 INDEX|  
+|**class**|**int**|1 = 제약 조건<br /><br /> 7 = 인덱스 및 힙|  
+|**class_desc**|**nvarchar(60)**|제약 조건의 경우 OBJECT 또는 COLUMN<br /><br /> 인덱스 및 힙의 경우 INDEX|  
 |**major_id**|**int**|제약 조건의 개체 ID<br /><br /> 인덱스 및 힙을 포함하는 테이블의 개체 ID|  
 |**minor_id**|**int**|제약 조건의 경우 NULL<br /><br /> 인덱스 및 힙의 경우 Index_id|  
-|**관계가**|**nvarchar (60)**|제약 조건 또는 인덱스의 비활성을 야기하는 종속성에 대한 설명입니다. 업그레이드 중 발생하는 경고에도 동일한 값이 사용됩니다. 이러한 데이터의 예는 다음과 같습니다.<br /><br /> 내장 함수의 경우 "space"<br /><br /> 시스템 UDT의 경우 "geometry"<br /><br /> 시스템 UDT의 메서드의 경우 "geography::Parse"|  
+|**관계가**|**nvarchar(60)**|제약 조건 또는 인덱스의 비활성을 야기하는 종속성에 대한 설명입니다. 업그레이드 중 발생하는 경고에도 동일한 값이 사용됩니다. 이러한 데이터의 예는 다음과 같습니다.<br /><br /> 내장 함수의 경우 "space"<br /><br /> 시스템 UDT의 경우 "geometry"<br /><br /> 시스템 UDT의 메서드의 경우 "geography::Parse"|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  호환성 수준을 변경하면 일부 내장 함수를 사용하는 지속형 계산 열이 비활성화됩니다. 또한 Geometry나 Geography 메서드를 사용하는 지속형 계산 열은 데이터베이스 업그레이드 시 비활성화됩니다.  

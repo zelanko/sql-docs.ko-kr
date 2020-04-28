@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771245"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
@@ -78,7 +78,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**DownloadedCommands**|**int**|에이전트 세션 중에 다운로드된 명령 수입니다.|  
 |**ErrorMessages**|**int**|에이전트 세션 중에 생성된 오류 메시지 수입니다.|  
 |**ErrorID**|**int**|발생한 오류의 ID입니다.|  
-|**PercentageDone**|**진수가**|활성 세션에서 이미 전달된 전체 변경 내용의 예상 비율(%)입니다.|  
+|**PercentageDone**|**decimal**|활성 세션에서 이미 전달된 전체 변경 내용의 예상 비율(%)입니다.|  
 |**TimeRemaining**|**int**|활성 세션에서 남은 예상 시간(초)입니다.|  
 |**CurrentPhase**|**int**|활성 세션의 현재 단계이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
 |**LastMessage**|**nvarchar (500)**|세션 중에 병합 에이전트에서 기록한 마지막 메시지입니다.|  

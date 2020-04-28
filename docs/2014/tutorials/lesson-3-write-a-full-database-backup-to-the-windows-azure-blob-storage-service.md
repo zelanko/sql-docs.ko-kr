@@ -11,23 +11,21 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153472"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>3단원: Azure Blob Storage 서비스로 전체 데이터베이스 백업 작성
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>3단원: Azure Blob Storage Service로 전체 데이터베이스 백업 작성
   이 단원에서는 tsql 문을 사용 하 여 Azure Blob storage 서비스에 대 한 전체 데이터베이스 백업을 수행 하는 방법을 보여 줍니다.  
   
 ## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Azure Blob Storage 서비스에 대 한 전체 데이터베이스 백업 수행  
  전체 데이터베이스 백업을 만들려면 다음 절차를 따르세요.  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 연결합니다.  
   
-2.  
-  **개체 탐색기**에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]인스턴스에 연결합니다.  
+2.  **개체 탐색기**에서 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]인스턴스에 연결합니다.  
   
 3.  표준 메뉴 모음에서 **새 쿼리**를 클릭합니다.  
   

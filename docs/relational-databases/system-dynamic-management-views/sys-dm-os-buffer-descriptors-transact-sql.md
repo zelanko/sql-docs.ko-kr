@@ -21,30 +21,29 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265861"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 있는 모든 데이터 페이지에 대한 정보를 반환합니다. 데이터베이스, 개체 또는 유형에 따라 버퍼 풀에서 데이터베이스 페이지를 배포하는 방식을 결정하는 데 이 뷰의 결과를 사용할 수 있습니다. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 이 동적 관리 뷰는 버퍼 풀 확장 파일에서 데이터 페이지에 대한 정보를 반환합니다. 자세한 내용은 [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조 하세요.  
+  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 있는 모든 데이터 페이지에 대한 정보를 반환합니다. 데이터베이스, 개체 또는 유형에 따라 버퍼 풀에서 데이터베이스 페이지를 배포하는 방식을 결정하는 데 이 뷰의 결과를 사용할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 이 동적 관리 뷰는 버퍼 풀 확장 파일에서 데이터 페이지에 대한 정보를 반환합니다. 자세한 내용은 [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md)을 참조 하세요.  
   
  데이터 페이지를 디스크에서 읽으면 해당 페이지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀에 복사되며 다시 사용할 수 있도록 캐싱됩니다. 각 캐시된 데이터 페이지에는 하나의 버퍼 설명자가 있습니다. 버퍼 설명자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 현재 캐시된 각 데이터 페이지를 고유하게 식별합니다. sys.dm_os_buffer_descriptors는 모든 사용자 및 시스템 데이터베이스에 대해 캐시된 페이지를 반환합니다. 여기에는 Resource 데이터베이스와 연결된 페이지가 포함됩니다.  
   
 > **참고:** 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_buffer_descriptors**을 사용 합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|버퍼 풀에 있는 페이지와 연결된 데이터베이스의 ID입니다. Null을 허용합니다.|  
 |file_id|**int**|페이지의 지속형 이미지를 저장하는 파일의 ID입니다. Null을 허용합니다.|  
 |page_id|**int**|파일 내 페이지의 ID입니다. Null을 허용합니다.|  
 |page_level|**int**|페이지의 인덱스 수준입니다. Null을 허용합니다.|  
 |allocation_unit_id|**bigint**|페이지 할당 단위의 ID입니다. 이 값은 sys.allocation_units를 조인하는 데 사용할 수 있습니다. Null을 허용합니다.|  
-|page_type|**nvarchar (60)**|페이지의 유형입니다 (예: 데이터 페이지 또는 인덱스 페이지). Null을 허용합니다.|  
+|page_type|**nvarchar(60)**|페이지의 유형입니다 (예: 데이터 페이지 또는 인덱스 페이지). Null을 허용합니다.|  
 |row_count|**int**|페이지의 행 수입니다. Null을 허용합니다.|  
 |free_space_in_bytes|**int**|페이지의 사용 가능한 공간(바이트)입니다. Null을 허용합니다.|  
 |is_modified|**bit**|1 = 디스크에서 읽은 후 페이지가 수정되었습니다. Null을 허용합니다.|  
@@ -61,7 +60,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 ## <a name="remarks"></a>설명  
  dm_os_buffer_descriptors는 리소스 데이터베이스에서 사용 중인 페이지를 반환 합니다. dm_os_buffer_descriptors은 사용 가능한 페이지 또는 도난당 한 페이지에 대 한 정보 또는 읽을 때 오류가 발생 한 페이지에 대 한 정보를 반환 하지 않습니다.  
   
-|원본|수행할 작업|설정|관계|  
+|시작|대상|설정|관계|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|다 대 일|  
 |sys.dm_os_buffer_descriptors|\<userdb> allocation_units|allocation_unit_id|다 대 일|  
@@ -114,11 +113,11 @@ ORDER BY cached_pages_count DESC;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [리소스 데이터베이스](../../relational-databases/databases/resource-database.md)   
- [dm_os_buffer_pool_extension_configuration &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

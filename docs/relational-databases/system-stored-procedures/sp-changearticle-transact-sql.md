@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771397"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
@@ -63,19 +63,19 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**destination_owner**||대상 개체 소유자의 이름입니다.|  
 |**필터가**||테이블을 필터링(행 필터링)하는 데 사용할 새 저장 프로시저입니다. 기본값은 NULL입니다. 피어 투 피어 복제 내의 게시에 대해서는 변경할 수 없습니다.|  
 |**fire_triggers_on_snapshot**|**true**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행합니다.<br /><br /> 참고: 복제할 트리거의 경우 *schema_option* 의 비트 마스크 값에 **0x100**값이 포함 되어야 합니다.|  
-||**허위**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행하지 않습니다.|  
+||**false**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행하지 않습니다.|  
 |**identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**ins_cmd**||실행할 INSERT 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
 |**pre_creation_cmd**||동기화를 적용하기 전에 대상 테이블을 제거, 삭제 또는 자를 수 있는 사전 작성 명령입니다.|  
-||**없음을**|명령을 사용하지 않습니다.|  
+||**없음**|명령을 사용하지 않습니다.|  
 ||**그림자**|대상 테이블을 삭제합니다.|  
-||**제거**|대상 테이블을 삭제합니다.|  
+||**delete**|대상 테이블을 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**pub_identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**schema_option**||지정한 아티클에 대한 스키마 생성 옵션의 비트맵을 지정합니다. *schema_option* **이진 (8)** 입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
 ||**0x00**|스냅샷 에이전트가 스크립팅을 사용하지 않습니다.|  
 ||**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등).|  
-||**0x02**|정의된 경우 아티클에 대한 변경 내용을 전파하는 저장 프로시저를 생성합니다.|  
+||**제외한**|정의된 경우 아티클에 대한 변경 내용을 전파하는 저장 프로시저를 생성합니다.|  
 ||**0x04**|IDENTITY 속성을 사용하여 ID 열이 스크립팅됩니다.|  
 ||**0x08**|**타임 스탬프** 열을 복제 합니다. 설정 하지 않으면 **timestamp** 열이 **binary**로 복제 됩니다.|  
 ||**10**|해당 클러스터형 인덱스를 생성합니다.|  
@@ -118,16 +118,16 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|열에 대한 SPARSE 특성을 복제합니다. 이 특성에 대 한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조 하세요.|  
 ||**0x40000000000으로 설정**|구독자에서 메모리 액세스에 최적화 된 테이블을 만들기 위해 스냅숏 에이전트에서 스크립팅을 사용 하도록 설정 합니다.|  
 ||**0x80000000000**|메모리 액세스에 최적화 된 아티클에 대해 클러스터형 인덱스를 비클러스터형 인덱스로 변환 합니다.|  
-|**업무**||속성의 새 상태를 지정합니다.|  
+|**status**||속성의 새 상태를 지정합니다.|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|복제된 INSERT 문에 열 이름이 포함됩니다.|  
 ||**no column names**|복제된 INSERT 문에 열 이름이 포함되지 않습니다.|  
 ||**no dts horizontal partitions**|아티클에 대한 수평 분할이 변환 가능한 구독에 의해 정의되지 않습니다.|  
-||**없음을**|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블에서 모든 상태 옵션을 지우고 아티클을 비활성으로 표시 합니다.|  
+||**없음**|[Sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블에서 모든 상태 옵션을 지우고 아티클을 비활성으로 표시 합니다.|  
 ||**변수의**|매개 변수가 있는 명령을 사용하여 변경 내용을 구독자에게 전파합니다. 이것은 새 아티클에 대한 기본 설정입니다.|  
 ||**문자열 리터럴**|문자열 리터럴 값을 사용하여 변경 내용을 구독자에게 전파합니다.|  
 |**sync_object**||동기화 출력 파일 생성에 사용하는 테이블 또는 뷰의 이름입니다. 기본값은 NULL입니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
-|**tablespace**||Oracle 데이터베이스에서 게시된 아티클에 대한 로깅 테이블에서 사용되는 테이블스페이스를 식별합니다. 자세한 내용은 [Oracle 테이블스페이스 관리](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요.|  
+|**스페이스가**||Oracle 데이터베이스에서 게시된 아티클에 대한 로깅 테이블에서 사용되는 테이블스페이스를 식별합니다. 자세한 내용은 [Oracle 테이블스페이스 관리](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요.|  
 |**고대비**||배포 에이전트가 새 ID 범위를 할당하는 시점을 제어하는 비율 값입니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**type**||Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**logbased**|로그 기반 아티클입니다.|  
@@ -160,7 +160,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -198,7 +198,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **ins_cmd**  
   
--   **업무**  
+-   **status**  
   
 -   **upd_cmd**  
   

@@ -16,10 +16,10 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769077"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
@@ -58,7 +58,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`업데이트의 유형입니다. *update_mode* 은 **nvarchar (30)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**읽기 전용** (기본값)|구독이 읽기 전용입니다. 구독자에서의 변경 내용이 게시자로 다시 전달되지 않습니다. 구독자에서 업데이트가 수행되지 않을 때 사용해야 합니다.|  
 |**synctran**|즉시 업데이트 구독에 대한 지원을 설정합니다.|  
@@ -75,7 +75,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  **sp_addpullsubscription** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
 > [!IMPORTANT]  
->  지연 업데이트 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 구독자에 연결하고 각 구독자로의 연결에는 다른 계정을 지정합니다. 지연 업데이트를 지원하는 끌어오기 구독을 만드는 경우 복제는 항상 Windows 인증을 사용하도록 연결을 설정합니다. 끌어오기 구독에서 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 데 필요한 메타데이터를 구독자에서 액세스할 수 없습니다. 이 경우 구독을 구성한 후에 [](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 인증을 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하도록 연결을 변경 하려면 sp_changesubscription를 실행 해야 합니다.  
+>  지연 업데이트 구독의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 구독자에 연결하고 각 구독자로의 연결에는 다른 계정을 지정합니다. 지연 업데이트를 지원하는 끌어오기 구독을 만드는 경우 복제는 항상 Windows 인증을 사용하도록 연결을 설정합니다. 끌어오기 구독에서 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 데 필요한 메타데이터를 구독자에서 액세스할 수 없습니다. 이 경우 구독을 구성한 후에 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 인증을 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하도록 연결을 변경 하려면 sp_changesubscription를 실행 해야 합니다.  
   
  [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블이 구독자에 없는 경우 **sp_addpullsubscription** 만듭니다. 또한 [MSreplication_subscriptions &#40;transact-sql&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블에 행을 추가 합니다. 끌어오기 구독의 경우 [sp_addsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 먼저 게시자에서 호출 해야 합니다.  
   

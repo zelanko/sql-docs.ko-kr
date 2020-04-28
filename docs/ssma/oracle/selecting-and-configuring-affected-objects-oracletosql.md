@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266500"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>영향을 받는 개체 선택 및 구성(OracleToSQL)
@@ -50,7 +50,7 @@ SSMA 테스터가 이러한 개체를 확인할 수 없는 경우 개체 트리 
 ## <a name="sql"></a>Sql  
 SQL 탭에는 선택한 테이블의 "테이블 만들기" SQL이 포함 됩니다.  
   
-## <a name="data"></a>data  
+## <a name="data"></a>데이터  
 데이터 탭 선택한 테이블에 있는 데이터를 표시 합니다.  
   
 ## <a name="properties"></a>속성  

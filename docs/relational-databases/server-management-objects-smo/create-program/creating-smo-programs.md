@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5b55c30746542a09a84f4b8eacde8e78f3dae8ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148742"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
@@ -31,11 +31,8 @@ ms.locfileid: "70148742"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[SQL Server 인스턴스에 연결](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결을 설정하는 가장 기본적인 SMO 프로그램입니다. Windows 인증과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 수행하는 방법을 보여 줍니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 및 원격 인스턴스에 연결하는 방법을 보여 주는 예제도 포함되어 있습니다.|  
-|[SQL Server 인스턴스에서 연결 끊기](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 끊는 방법을 보여 주는 프로그램입니다.|  
+|[SQL Server 인스턴스에 연결](../../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결을 설정하는 가장 기본적인 SMO 프로그램입니다. Windows 인증과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 수행하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 및 원격 인스턴스에 연결하는 방법을 보여 주는 예제도 포함되어 있습니다.|  
+|[SQL Server 인스턴스에서 연결 끊기](../../../relational-databases/server-management-objects-smo/create-program/disconnecting-from-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 끊는 방법을 보여 주는 프로그램입니다.|  
 |[메서드 호출](../../../relational-databases/server-management-objects-smo/create-program/calling-methods.md)|이 섹션에서는 일반적인 메서드 호출 방법을 설명합니다. 매개 변수를 사용하는 방법과 <xref:System.Data.DataTable> 개체에 반환된 데이터 테이블을 처리하는 방법을 보여 줍니다. 또한 개체 생성자를 호출 하는 방법 및 **Clone** 메서드를 호출 하는 방법에 대 한 예제를 제공 합니다.|  
 |[속성 설정 - SMO](../../../relational-databases/server-management-objects-smo/create-program/setting-properties-smo.md)|이 섹션에서는 여러 가지 유형의 속성을 설정하는 방법을 설명합니다. 개체 속성을 설정하고 얻는 방법을 보여 주며, 개체가 생성될 때 개체 속성을 설정하는 예와 개체의 모든 속성을 대상으로 반복을 수행하는 방법도 포함되어 있습니다.|  
 |[컬렉션 사용](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)|개체 컬렉션에 사용되는 기법에 대해 설명하는 여러 프로그램이 포함되어 있습니다. 컬렉션을 사용하여 개체를 참조하는 방법을 보여 줍니다. 컬렉션의 멤버를 대상으로 반복을 수행하는 방법에 대한 예도 포함되어 있습니다.|  

@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702779"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
@@ -47,8 +47,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 `[ @sp_owner = ] 'schema'`프로시저가 속한 스키마의 이름입니다. *schema* 는 **nvarchar (384)** 이며 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 프로시저 표시 유형 규칙이 적용 됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 스키마에 지정된 이름을 가진 프로시저가 포함된 경우 해당 프로시저가 반환됩니다. 불완전한 저장 프로시저가 지정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 현재 스키마에 지정된 이름을 가진 프로시저가 포함된 경우 해당 프로시저가 반환됩니다. 불완전한 저장 프로시저가 지정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
   
 -   현재 데이터베이스의 **sys** 스키마  
   
@@ -74,13 +73,11 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|프로시저 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**PROCEDURE_OWNER**|**sysname**|프로시저 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**PROCEDURE_NAME**|**nvarchar (134)**|프로시저 이름입니다. 이 열은 항상 값을 반환합니다.|  
-|**NUM_INPUT_PARAMS**|**int**|향후 사용을 위해 예약되어 있습니다.|  
-|**NUM_OUTPUT_PARAMS**|**int**|향후 사용을 위해 예약되어 있습니다.|  
-|**NUM_RESULT_SETS**|**int**|향후 사용을 위해 예약되어 있습니다.|  
-|**설명**|**varchar (254)**|프로시저에 대한 설명입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
-|**PROCEDURE_TYPE**|**smallint**|프로시저 유형입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 2.0을 반환합니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**NUM_INPUT_PARAMS**|**int**|다음에 사용하도록 예약됩니다.|  
+|**NUM_OUTPUT_PARAMS**|**int**|다음에 사용하도록 예약됩니다.|  
+|**NUM_RESULT_SETS**|**int**|다음에 사용하도록 예약됩니다.|  
+|**설명**|**varchar (254)**|프로시저에 대한 설명입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
+|**PROCEDURE_TYPE**|**smallint**|프로시저 유형입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 2.0을 반환합니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>설명  
  상호 운용성을 최대로 높이려면 게이트웨이 클라이언트가 퍼센트(%) 및 밑줄(_) 와일드카드 문자 등의 SQL 표준 패턴 일치만을 가정해야 합니다.  

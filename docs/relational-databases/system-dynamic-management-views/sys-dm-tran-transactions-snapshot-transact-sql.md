@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262695"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
@@ -52,9 +52,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 60                       3           60  
 ```  
   
- 
-  `transaction_sequence_num` 열은 현재 스냅샷 트랜잭션의 XSN(트랜잭션 시퀀스 번호)을 식별합니다. 이 출력은 `59`와 `60`의 두 번호를 표시합니다. 
-  `snapshot_sequence_num` 열은 각 스냅샷 트랜잭션이 시작될 때 활성 상태인 트랜잭션의 트랜잭션 시퀀스 번호를 식별합니다.  
+ `transaction_sequence_num` 열은 현재 스냅샷 트랜잭션의 XSN(트랜잭션 시퀀스 번호)을 식별합니다. 이 출력은 `59`와 `60`의 두 번호를 표시합니다. `snapshot_sequence_num` 열은 각 스냅샷 트랜잭션이 시작될 때 활성 상태인 트랜잭션의 트랜잭션 시퀀스 번호를 식별합니다.  
   
  이 출력은 두 개의 활성 트랜잭션인 XSN-57과 XSN-58이 실행되는 동안 스냅샷 트랜잭션 XSN-59가 시작됨을 보여 줍니다. XSN-57 또는 XSN-58에서 데이터를 수정할 경우 XSN-59는 이 변경 내용을 무시하고 행 버전 관리를 사용하여 트랜잭션이 일관된 데이터베이스 뷰를 유지 관리합니다.  
   
@@ -86,7 +84,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
  각 트랜잭션은 트랜잭션이 시작될 때 할당된 트랜잭션 시퀀스 번호로 식별됩니다. 트랜잭션은 BEGIN TRANSACTION 또는 BEGIN WORK 문이 실행될 때 시작됩니다. 그러나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 BEGIN TRANSACTION 또는 BEGIN WORK 문 이후 데이터에 액세스하는 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 트랜잭션 시퀀스 번호를 할당합니다. 트랜잭션 시퀀스 번호는 1씩 증가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

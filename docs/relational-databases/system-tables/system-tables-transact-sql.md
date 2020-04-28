@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69903604"
 ---
 # <a name="system-tables-transact-sql"></a>시스템 테이블(Transact-SQL)
@@ -40,24 +40,22 @@ ms.locfileid: "69903604"
   
 -   시스템 저장 프로시저  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 함수  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 함수  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO(Management Objects)(!!)  
   
 -   RMO(복제 관리 개체)  
   
 -   데이터베이스 API 카탈로그 함수  
   
- 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 정보를 가져오기 위해 게시된 API를 구성합니다. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 이러한 구성 요소의 릴리스 간 호환성을 유지합니다. 시스템 테이블의 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 아키텍처에 따라 달라지며 릴리스에 따라 변경될 수 있습니다. 따라서 시스템 테이블의 문서화되지 않은 열을 직접 액세스하는 애플리케이션은 상위 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 액세스하기 전에 변경되어야 할 수 있습니다.  
+ 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 정보를 가져오기 위해 게시된 API를 구성합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 이러한 구성 요소의 릴리스 간 호환성을 유지합니다. 시스템 테이블의 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 아키텍처에 따라 달라지며 릴리스에 따라 변경될 수 있습니다. 따라서 시스템 테이블의 문서화되지 않은 열을 직접 액세스하는 애플리케이션은 상위 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 액세스하기 전에 변경되어야 할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  시스템 테이블 항목은 다음 기능 영역에 의해 구성됩니다.  
   
 |||  
 |-|-|  
-|[Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[Transact-sql&#41;&#40;로그 전달 테이블](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
+|[Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)|[로그 전달 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)|  
 |[변경 데이터 캡처 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)|[복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)|  
 |[Transact-sql&#41;의 데이터베이스 유지 관리 계획 테이블 &#40;](../../relational-databases/system-tables/database-maintenance-plan-tables-transact-sql.md)|[Transact-sql&#41;&#40;테이블 SQL Server 에이전트](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)|  
 |[SQL Server 확장 이벤트 테이블&#40;Transact-SQL&#41;](../../relational-databases/extended-events/xevents-references-system-objects.md#system-tables)|[sysoledbusers &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  

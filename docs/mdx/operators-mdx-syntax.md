@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892110"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
@@ -32,7 +32,7 @@ ms.locfileid: "68892110"
   
 |원하는 연산|사용|  
 |---------------------------------------|---------|  
-|변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[대입 연산자](../mdx/assignment-operators.md)|  
+|변수에 값을 할당하거나 결과 집합 열을 별칭과 연결합니다.|[할당 연산자](../mdx/assignment-operators.md)|  
 |더하기, 빼기, 곱하기, 나누기 연산을 수행합니다.|[산술 연산자](../mdx/arithmetic-operators.md)|  
 |AND, OR, NOT, XOR와 같은 조건에서 진리를 검사합니다.|[비트 연산자](../mdx/bitwise-operators.md)|  
 |값을 다른 값이나 식에 대해 비교합니다.|[비교 연산자](../mdx/comparison-operators.md)|  
@@ -99,6 +99,6 @@ ms.locfileid: "68892110"
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 연산자 참조 &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Mdx 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 구문 요소&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

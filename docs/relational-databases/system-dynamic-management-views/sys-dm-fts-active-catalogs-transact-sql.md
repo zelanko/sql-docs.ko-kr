@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265973"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "68265973"
 |**memory_address**|**varbinary(8)**|이 전체 텍스트 카탈로그와 관련된 채우기 작업에 할당된 메모리 버퍼의 주소입니다.|  
 |**name**|**nvarchar(128)**|활성 전체 텍스트 카탈로그의 이름입니다.|  
 |**is_paused**|**bit**|활성 전체 텍스트 카탈로그 채우기가 일시 중지되었는지 나타냅니다.|  
-|**업무**|**int**|전체 텍스트 카탈로그의 현재 상태입니다. 다음 중 하나<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
-|**status_description**|**nvarchar (120)**|활성 전체 텍스트 카탈로그의 현재 상태에 대한 설명입니다.|  
+|**status**|**int**|전체 텍스트 카탈로그의 현재 상태입니다. 다음 중 하나<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
+|**status_description**|**nvarchar(120)**|활성 전체 텍스트 카탈로그의 현재 상태에 대한 설명입니다.|  
 |**previous_status**|**int**|전체 텍스트 카탈로그의 이전 상태입니다. 다음 중 하나<br /><br /> 0 = 초기화하는 중입니다.<br /><br /> 1 = 준비되었습니다.<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 임시 오류입니다.<br /><br /> 4 = 다시 탑재해야 합니다.<br /><br /> 5 = 종료<br /><br /> 6 = 백업을 위해 정지되었습니다.<br /><br /> 7 = 카탈로그를 통해 백업이 완료되었습니다.<br /><br /> 8 = 카탈로그가 손상되었습니다.|  
-|**previous_status_description**|**nvarchar (120)**|활성 전체 텍스트 카탈로그의 이전 상태에 대한 설명입니다.|  
+|**previous_status_description**|**nvarchar(120)**|활성 전체 텍스트 카탈로그의 이전 상태에 대한 설명입니다.|  
 |**worker_count**|**int**|이 전체 텍스트 카탈로그에서 현재 작동 중인 스레드 수입니다.|  
 |**active_fts_index_count**|**int**|채울 전체 텍스트 인덱스 수입니다.|  
 |**auto_population_count**|**int**|이 전체 텍스트 카탈로그에 대해 자동 채우기가 진행 중인 테이블 수입니다.|  
@@ -68,10 +68,10 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
-|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일대일|  
-|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일대일|  
+|dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|일 대 일|  
+|dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|일 대 일|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스의 활성 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  

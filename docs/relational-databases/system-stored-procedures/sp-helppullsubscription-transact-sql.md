@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771441"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription(Transact-SQL)
@@ -61,21 +61,20 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**publication description**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**last updating time**|**date**|구독 정보가 업데이트된 시각입니다. 이는 ISO 날짜(114) + ODBC 시간(121)의 유니코드 문자열입니다. 형식은 yyyymmdd hh:mi:sss.mmm이며 여기서 'yyyy'는 연도, 'mm'은 월, 'dd'는 날짜, 'hh'는 시간, 'mi'는 분, 'sss'는 초, 'mmm'은 밀리초에 해당합니다.|  
 |**구독 이름**|**varchar (386)**|구독의 이름입니다.|  
-|**마지막 트랜잭션 타임 스탬프**|**varbinary (16)**|마지막으로 복제된 트랜잭션의 타임스탬프입니다.|  
+|**마지막 트랜잭션 타임 스탬프**|**varbinary(16)**|마지막으로 복제된 트랜잭션의 타임스탬프입니다.|  
 |**업데이트 모드**|**tinyint**|허용되는 업데이트 유형입니다.|  
 |**distribution agent job_id**|**int**|배포 에이전트의 작업 ID입니다.|  
-|**enabled_for_synmgr**|**int**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부입니다.|  
-|**subscription guid**|**binary (16)**|게시에 대한 구독 버전의 전역 식별자입니다.|  
-|**subid**|**binary (16)**|익명 구독의 전역 식별자입니다.|  
+|**enabled_for_synmgr**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부입니다.|  
+|**subscription guid**|**binary(16)**|게시에 대한 구독 버전의 전역 식별자입니다.|  
+|**subid**|**binary(16)**|익명 구독의 전역 식별자입니다.|  
 |**immediate_sync**|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
 |**게시자 로그인**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**게시자 암호**|**nvarchar (524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
-|**publisher security_mode**|**int**|게시자에서 구현된 보안 모드입니다.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증<br /><br /> **2** = 동기화 트리거는 정적 **sysservers** 항목을 사용 하 여 RPC (원격 프로시저 호출)를 수행 하며, *게시자* 는 **sysservers** 테이블에서 원격 서버 또는 연결 된 서버로 정의 되어야 합니다.|  
+|**publisher security_mode**|**int**|게시자에서 구현된 보안 모드입니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증<br /><br /> **2** = 동기화 트리거는 정적 **sysservers** 항목을 사용 하 여 RPC (원격 프로시저 호출)를 수행 하며, *게시자* 는 **sysservers** 테이블에서 원격 서버 또는 연결 된 서버로 정의 되어야 합니다.|  
 |**총판**|**sysname**|배포자의 이름입니다.|  
 |**distributor_login**|**sysname**|배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**distributor_password**|**nvarchar (524)**|배포자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
-|**distributor_security_mode**|**int**|배포자에서 구현된 보안 모드입니다.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**distributor_security_mode**|**int**|배포자에서 구현된 보안 모드입니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**ftp_address**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다.|  

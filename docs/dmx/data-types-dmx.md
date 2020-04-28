@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3f1c43ad454f499429a151dc23177e380f4eac88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892861"
 ---
 # <a name="data-types-dmx"></a>데이터 형식(DMX)
@@ -22,11 +22,11 @@ ms.locfileid: "68892861"
   
  데이터 형식은 알고리즘에 따라 다릅니다. 각 알고리즘은 지원되는 데이터 형식 및 사용 방법을 결정합니다. Microsoft 알고리즘에서는 다음과 같은 데이터 형식을 지원합니다.  
   
--   텍스트  
+-   Text  
   
 -   long  
   
--   부울  
+-   Boolean  
   
 -   Double  
   

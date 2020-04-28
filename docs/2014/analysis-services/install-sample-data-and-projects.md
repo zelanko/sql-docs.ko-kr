@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530823"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
@@ -29,7 +29,7 @@ ms.locfileid: "69530823"
   
      Analysis Services는 Evaluation, Enterprise, Business Intelligence, Standard 버전에서만 사용할 수 있습니다.  
   
-     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면 [평가판 버전을 다운로드](https://go.microsoft.com/fwlink/?LinkId=392824) 하세요.  
+     SQL Server Express 버전에는 Analysis Services가 포함되어 있지 않습니다. 소프트웨어를 무료로 사용해 보려면[평가판 버전을 다운로드하세요](https://go.microsoft.com/fwlink/?LinkId=392824) .  
   
      기본적으로 Analysis Services는 다차원 인스턴스로 설치되며 설치 마법사의 서버 구성 페이지에서 테이블 형식 서버 모드를 선택하여 재정의할 수 있습니다. 두 서버 모드를 모두 실행하려는 경우 동일한 컴퓨터의 SQL Server 설치 프로그램을 다시 실행하여 다른 모드에서 Analysis Services의 두 번째 인스턴스를 실행하십시오.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "69530823"
 ## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>2 단계: Visual Studio 2012에 대 한 SQL Server Data Tools-Business Intelligence 다운로드  
  이 릴리스에서는 SQL Server Data Tools가 다른 SQL Server 기능과 별도로 다운로드 및 설치됩니다. 이제 BI 모델 및 보고서를 만드는 데 사용되는 디자이너 및 프로젝트 템플릿이 무료 웹 다운로드로 제공됩니다.  
   
--   [SQL Server Data Tools의 비즈니스 인텔리전스 버전을 다운로드](https://go.microsoft.com/fwlink/p/?LinkID=322038)합니다. 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
+-   [Business Intelligence 버전의 SQL Server Data Tools를 다운로드합니다](https://go.microsoft.com/fwlink/p/?LinkID=322038). 파일은 Downloads 폴더에 저장됩니다. 설치 프로그램을 실행하여 도구를 설치합니다.  
   
      컴퓨터를 다시 부팅하여 설치를 완료합니다.  
   
@@ -51,8 +51,7 @@ ms.locfileid: "69530823"
   
 -   **AdventureWorksDW2012** -데이터베이스 엔진 인스턴스에서 실행 되는 관계형 데이터 웨어하우스입니다. 이 데이터베이스는 자습서 전체에서 작성하고 배포하는 Analysis Services 데이터베이스 및 프로젝트에 사용할 원본 데이터를 제공합니다.  
   
-     
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 이 예제 데이터베이스를 사용할 수 있습니다.  
+     [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 이 예제 데이터베이스를 사용할 수 있습니다.  
   
  이 데이터베이스를 설치하려면 다음을 수행합니다.  
   
@@ -68,8 +67,7 @@ ms.locfileid: "69530823"
   
 5.  **추가**를 클릭합니다.  
   
-6.  
-  **AdventureWorksDW2012_Data.mdf** 데이터베이스 파일을 선택하고 **확인**을 클릭합니다. 이 파일이 목록에 없으면 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 폴더에 해당 파일이 있는지 확인합니다.  
+6.  **AdventureWorksDW2012_Data.mdf** 데이터베이스 파일을 선택하고 **확인**을 클릭합니다. 이 파일이 목록에 없으면 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 폴더에 해당 파일이 있는지 확인합니다.  
   
 7.  데이터베이스 정보에서 로그 파일 항목을 제거합니다. 예제에는 로그 파일이 없지만 설치 프로그램에서는 로그 파일이 있다고 가정합니다. 데이터베이스를 연결하면 자동으로 새 로그 파일이 만들어집니다. 로그 파일을 선택하고 **제거**를 클릭한 다음 **확인** 을 클릭하여 주 데이터베이스 파일만 연결합니다.  
   
@@ -87,12 +85,9 @@ ms.locfileid: "69530823"
   
 4.  일반 페이지의 로그인 이름에 **NT Service\MSSQLServerOLAPService** 또는 서비스를 실행할 계정을 입력합니다.  
   
-5.  
-  **사용자 매핑**을 클릭합니다.  
+5.  **사용자 매핑**을 클릭합니다.  
   
-6.  
-  **AdventureWorksDW2012** 데이터베이스 옆에 있는 확인란을 선택합니다. 역할 멤버 자격에 **db_datareader** 및 **public**이 자동으로 포함됩니다. 
-  **확인** 을 클릭하여 기본값을 적용합니다.  
+6.  **AdventureWorksDW2012** 데이터베이스 옆에 있는 확인란을 선택합니다. 역할 멤버 자격에 **db_datareader** 및 **public**이 자동으로 포함됩니다. **확인** 을 클릭하여 기본값을 적용합니다.  
   
 ## <a name="step-5-install-projects"></a>5단계: 프로젝트 설치  
  이 자습서에는 작업 결과를 완료된 프로젝트와 비교하거나 시퀀스에서 더 많이 진행된 단원을 시작할 수 있도록 예제 프로젝트가 포함되어 있습니다.  
@@ -155,6 +150,6 @@ ms.locfileid: "69530823"
 ## <a name="see-also"></a>참고 항목  
  [설치 마법사 &#40;설치 프로그램에서 SQL Server 2014을 설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

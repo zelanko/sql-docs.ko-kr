@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887432"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의 - CREATE SUBCUBE
@@ -42,11 +42,11 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
 |원래 기본 멤버|집계 가능|하위 SELECT|수정된 기본 멤버|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|yes|{Time.Year.2003}|변경 내용 없음|  
-|시간. 연도. [1997]|yes|{Time.Year.2003}|Time.Year.All|  
-|시간. 연도. [1997]|예|{Time.Year.2003}|시간. 연도. [2003]|  
-|시간. 연도. [1997]|yes|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
-|시간. 연도. [1997]|예|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 또는<br /><br /> Time.Year.[2004]|  
+|Time.Year.All|예|{Time.Year.2003}|변경 내용 없음|  
+|시간. 연도. [1997]|예|{Time.Year.2003}|Time.Year.All|  
+|시간. 연도. [1997]|아니요|{Time.Year.2003}|시간. 연도. [2003]|  
+|시간. 연도. [1997]|예|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|시간. 연도. [1997]|아니요|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 또는<br /><br /> Time.Year.[2004]|  
   
  [All] 멤버는 항상 하위 큐브에 존재합니다.  
   
@@ -131,6 +131,6 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [MDX의 주요 개념 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [Mdx 스크립팅 문 &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP 하위 큐브 문이 MDX를 &#40;&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT 문 &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+ [SELECT 문&#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

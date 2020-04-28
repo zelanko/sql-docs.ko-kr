@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888681"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>콜 센터 데이터의 데이터 원본 뷰 추가(중급 데이터 마이닝 자습서)
@@ -22,17 +22,15 @@ ms.locfileid: "68888681"
   
  또한 데이터 원본 뷰 디자이너를 사용하여 요일에 대한 열을 추가합니다. 이는 원본 데이터가 콜 센터 데이터를 날짜별로 추적하더라도 해당 요일이 평일 또는 주중인지 여부에 따라 호출량 및 서비스 품질 측면 모두에 경험적으로 되풀이되는 패턴이 있기 때문입니다.  
   
-## <a name="procedures"></a>프로시저  
+## <a name="procedures"></a>절차  
   
 #### <a name="to-add-a-data-source-view"></a>데이터 원본 뷰를 추가하려면  
   
-1.  
-  **솔루션 탐색기**에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본 뷰**를 선택합니다.  
+1.  **솔루션 탐색기**에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본 뷰**를 선택합니다.  
   
      데이터 원본 뷰 마법사가 열립니다.  
   
-2.  
-  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
+2.  **데이터 원본 뷰 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
 3.  **데이터 원본 선택** 페이지의 **관계형 데이터**원본에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] 데이터 원본을 선택 합니다. 이 데이터 원본이 없는 경우 [기본 데이터 마이닝 자습서](../../2014/tutorials/basic-data-mining-tutorial.md)를 참조 하세요. **다음**을 클릭합니다.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "68888681"
   
     -   **FactCallCenter(dbo)**  
   
-    -   **FactOnlineSales**  
+    -   **DimDate**  
   
 5.  **다음**을 클릭합니다.  
   
@@ -77,7 +75,7 @@ ms.locfileid: "68888681"
 |TotalOperators|교대조 동안 근무하는 총 전화 상담원 수입니다.|  
 |Calls|교대조 동안 받은 호출 수입니다.|  
 |AutomaticResponses|자동 호출 처리 시스템인 IVR(Interactive Voice Response)을 통해 완전히 처리된 호출 수입니다.|  
-|주문|호출 결과로 발생한 주문 수입니다.|  
+|Orders|호출 결과로 발생한 주문 수입니다.|  
 |IssuesRaised|호출로 인해 생성된 후속 작업이 필요한 문제 수입니다.|  
 |AverageTimePerIssue|들어오는 호출에 응답하는 데 필요한 평균 시간입니다.|  
 |ServiceGrade|전체 이동에 대 한 *중단 율* 로 측정 된 일반 서비스 품질을 나타내는 메트릭입니다. 중단율이 높을수록 고객이 불만을 느끼며 잠재 주문 기회를 놓칠 가능성이 높습니다.|  

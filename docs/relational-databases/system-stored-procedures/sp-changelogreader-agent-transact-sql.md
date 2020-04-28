@@ -16,10 +16,10 @@ ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768878"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68768878"
   로그 판독기 에이전트의 보안 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]  
->  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+>  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. **[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -80,6 +80,6 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="see-also"></a>참고 항목  
  [복제 보안 설정 보기 및 수정](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Transact-sql&#41;sp_helplogreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)   
- [Transact-sql&#41;sp_addlogreader_agent &#40;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
+ [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)  
   
   

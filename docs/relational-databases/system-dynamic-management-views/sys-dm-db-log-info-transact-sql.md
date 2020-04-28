@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262077"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-sql)
@@ -44,12 +44,11 @@ sys.dm_db_log_info ( database_id )
  
  현재 데이터베이스의 VLF 정보를 반환 하려면 NULL을 지정 합니다.
 
- 
-  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.  
+ [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.  
 
 ## <a name="table-returned"></a>반환된 테이블  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스 ID입니다.|
 |file_id|**smallint**|트랜잭션 로그의 파일 id입니다.|  
@@ -61,7 +60,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)의 패리티입니다. VLF 내에서 로그의 끝을 확인 하기 위해 내부적으로 사용 됩니다.|
 |vlf_first_lsn|**nvarchar (48)** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)에 있는 첫 번째 로그 레코드의 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|
 |vlf_create_lsn|**nvarchar (48)** |[가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)을 만든 로그 레코드의 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|
-|vlf_encryptor_thumbprint|**varbinary (20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용 하 여 vlf가 암호화 된 경우 vlf의 암호기 지문을 표시 합니다. 그렇지 않으면 NULL입니다. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용 하 여 vlf가 암호화 된 경우 vlf의 암호기 지문을 표시 합니다. 그렇지 않으면 NULL입니다. |
 
 ## <a name="remarks"></a>설명
 `sys.dm_db_log_info` 동적 관리 함수는 `DBCC LOGINFO` 문을 대체 합니다.    
@@ -111,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>참고 항목  
-[동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[dm_db_log_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[sys.dm_db_log_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

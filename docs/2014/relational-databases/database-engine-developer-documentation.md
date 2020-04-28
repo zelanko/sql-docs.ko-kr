@@ -14,27 +14,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530953"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;s 가이드 (데이터베이스 엔진)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 응용 프로그램 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 애플리케이션 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]에 통합된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows용 .NET Framework의 CLR(공용 언어 런타임) 구성 요소에 대해 설명합니다. 이를 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#을 포함한 모든 .NET Framework 언어를 사용하여 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수, 사용자 정의 집계 및 스트리밍 테이블 반환 함수를 작성할 수 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]에 통합된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows용 .NET Framework의 CLR(공용 언어 런타임) 구성 요소에 대해 설명합니다. 이를 통해 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#을 포함한 모든 .NET Framework 언어를 사용하여 저장 프로시저, 트리거, 사용자 정의 형식, 사용자 정의 함수, 사용자 정의 집계 및 스트리밍 테이블 반환 함수를 작성할 수 있습니다.  
   
  [SQL Server Native Client 프로그래밍](native-client/sql-server-native-client-programming.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client에서 MARS(Multiple Active Result Set), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리 및 XML 데이터 형식 지원과 같은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 활용하는 애플리케이션을 새로 작성하거나 기존 애플리케이션을 개선하는 방법에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client에서 MARS(Multiple Active Result Set), UDT(사용자 정의 데이터 형식), 쿼리 알림, 스냅샷 격리 및 XML 데이터 형식 지원과 같은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 활용하는 애플리케이션을 새로 작성하거나 기존 애플리케이션을 개선하는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 프로그래밍 개념](sqlxml/sqlxml-4-0-programming-concepts.md)  
- 
-  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 새로 추가된 기능(예: XML 데이터 형식)을 지원하는 추가 업데이트 및 SQLXML 3.0과 동일한 기능을 제공하는 최신 버전의 SQLXML에 대해 설명합니다.  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 새로 추가된 기능(예: XML 데이터 형식)을 지원하는 추가 업데이트 및 SQLXML 3.0과 동일한 기능을 제공하는 최신 버전의 SQLXML에 대해 설명합니다.  
   
  [구성 관리용 WMI 공급자 개념](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
  MMC (Microsoft Management Console) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에 대 한 Configuration Manager 스냅인과 함께 사용 되는 게시 된 계층에 대해 설명 합니다. 이 계층은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 요청하는 레지스트리 작업을 관리하는 통합 API 호출 상호 작용 방법과 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스에 대한 향상된 제어 및 조작을 제공합니다.  
@@ -43,8 +40,7 @@ ms.locfileid: "69530953"
  WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 모니터링하는 방법을 설명합니다.  
   
  [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리의 모든 측면을 프로그래밍하기 위해 설계된 개체 컬렉션인 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)에 대한 정보가 포함되어 있습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리의 모든 측면을 프로그래밍하기 위해 설계된 개체 컬렉션인 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)에 대한 정보가 포함되어 있습니다.  
   
  [데이터베이스 엔진 확장 저장 프로시저 프로그래밍](database-engine-extended-stored-procedure-programming.md)  
  확장 저장 프로시저를 사용하여 C와 같은 프로그래밍 언어로 고유한 외부 루틴을 만드는 방법을 설명합니다.  

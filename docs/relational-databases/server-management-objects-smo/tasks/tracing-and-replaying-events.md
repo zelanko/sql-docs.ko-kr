@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d83b716d9919bf322097b8ded8409950982d961c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70148354"
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
@@ -52,12 +52,11 @@ ms.locfileid: "70148354"
   
 -   추적 파일 또는 추적 테이블을 재생합니다.  
   
- 
-  **Trace** 및 **Replay** 개체의 추적 데이터는 SMO 애플리케이션에서 사용하거나 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)를 사용하여 수동으로 검사할 수 있습니다. 추적 데이터는 추적 기능을 제공하는 [SQL Trace](../../../relational-databases/sql-trace/sql-trace.md) 저장 프로시저에서도 사용할 수 있습니다.  
+ **Trace** 및 **Replay** 개체의 추적 데이터는 SMO 애플리케이션에서 사용하거나 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)를 사용하여 수동으로 검사할 수 있습니다. 추적 데이터는 추적 기능을 제공하는 [SQL Trace](../../../relational-databases/sql-trace/sql-trace.md) 저장 프로시저에서도 사용할 수 있습니다.  
   
  SMO 추적 개체는 Microsoft.SQLServer.ConnectionInfo.dll 파일에 대한 참조가 필요한 <xref:Microsoft.SqlServer.Management.Trace> 네임스페이스에 있습니다.  
   
- **추적** 및 **재생** 개체를 사용 하려면 [](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 인스턴스와의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결을 설정 하는 ServerConnection 개체가 필요 합니다. ServerConnection 개체는 ConnectionInfo 파일에 대 한 참조를 필요로 하는 [](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) 네임 스페이스에 상주 [합니다.](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)  
+ **추적** 및 **재생** 개체를 사용 하려면 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A> 인스턴스와의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결을 설정 하는 ServerConnection 개체가 필요 합니다. ServerConnection 개체는 ConnectionInfo 파일에 대 한 참조를 필요로 하는 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) 네임 스페이스에 상주 [합니다.](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common)  
   
 > [!NOTE]  
 >  64비트 플랫폼에서는 **Trace** 및 **Replay** 개체가 지원되지 않습니다.  

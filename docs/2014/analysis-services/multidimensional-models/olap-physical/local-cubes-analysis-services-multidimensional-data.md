@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889492"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>로컬 큐브(Analysis Services - 다차원 데이터)
@@ -24,15 +24,14 @@ ms.locfileid: "68889492"
   
  로컬 큐브와 로컬 마이닝 모델을 사용하면 네트워크에 연결되어 있지 않은 클라이언트 워크스테이션을 분석할 수 있습니다. 예를 들어 클라이언트 애플리케이션은 다음 그림과 같이 로컬 큐브 엔진을 로드하여 로컬 큐브를 만들고 쿼리하는 OLAP 9.0 공급자(MSOLAP.3)용 OLE DB를 호출할 수 있습니다.  
   
- ![로컬 큐브 및 모델에 대한 클라이언트 아키텍처](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "로컬 큐브 및 모델에 대한 클라이언트 아키텍처")  
+ ![로컬 큐브 및 모델에 대한 클라이언트 아키텍처](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "로컬 큐브 및 모델에 대한 클라이언트 아키텍처")  
   
  ADMOD.NET 및 AMO(Analysis Management Objects)도 로컬 큐브와 상호 작용할 때 로컬 큐브 엔진을 로드합니다. 로컬 큐브 엔진은 로컬 큐브에 연결할 때 로컬 큐브 파일을 배타적으로 잠그므로 단일 프로세스에서만 로컬 큐브 파일에 액세스할 수 있습니다. 단일 프로세스 내에서는 동시에 5개의 연결이 허용됩니다.  
   
  하나의 .cub 파일에는 두 개 이상의 큐브 또는 데이터 마이닝 모델이 있을 수 있습니다. 로컬 큐브 및 데이터 마이닝 모델에 대한 쿼리는 로컬 큐브 엔진에서 처리하므로 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 필요가 없습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]를 사용하여 로컬 큐브를 관리할 수는 없습니다.  
+>  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]를 사용하여 로컬 큐브를 관리할 수는 없습니다.  
   
 ## <a name="local-cubes"></a>로컬 큐브  
  로컬 큐브는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스의 기존 큐브나 관계형 데이터 원본의 생성 및 채워질 수 있습니다.  

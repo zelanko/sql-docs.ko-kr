@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262995"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>변환된 데이터베이스 개체를 SQL Server로 로드(OracleToSQL)
@@ -76,8 +76,7 @@ SQL Server 개체 정의를 하나 이상의 스크립트로 저장 한 후에�
   
 **스크립트를 수정 하려면**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
   
 2.  **열기** 대화 상자에서 스크립트 파일을 선택 하 고 확인을 클릭 합니다.
   
@@ -92,8 +91,7 @@ SQL Server 개체 정의를 하나 이상의 스크립트로 저장 한 후에�
   
 **스크립트를 실행하려면**  
   
-1.  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
   
 2.  **열기** 대화 상자에서 스크립트 파일을 선택 하 고 확인을 클릭 합니다.  
   

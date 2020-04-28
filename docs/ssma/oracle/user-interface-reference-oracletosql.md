@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266404"
 ---
 # <a name="user-interface-reference-oracletosql"></a>사용자 인터페이스 참조(OracleToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68266404"
   
 |||  
 |-|-|  
-|항목|Description|  
+|항목|설명|  
 |[고급 개체 선택 &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|평가 보고서를 사용 하 여 Oracle 개체를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 변환 하는 결과를 확인 하 고로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하는 시간과 복잡성을 예측할 수 있습니다.|  
 |[Oracle &#40;OracleToSQL&#41;에 연결](../../ssma/oracle/connect-to-oracle-oracletosql.md)|**Oracle에 연결** 대화 상자를 사용 하 여 마이그레이션하려는 oracle 데이터베이스에 연결 합니다.|  

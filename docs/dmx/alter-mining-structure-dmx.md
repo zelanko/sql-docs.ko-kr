@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889870"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
@@ -66,8 +66,7 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="remarks"></a>설명  
  마이닝 구조에 복합 키가 포함된 경우 이 구조에서 정의한 모든 키 열이 마이닝 모델에 포함되어야 합니다.  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성한 모델과 같이 모델에 예측 가능한 열이 필요하지 않을 경우에는 문에 열 정의를 포함하지 않아도 됩니다. 결과 모델의 모든 특성은 입력으로 처리됩니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성한 모델과 같이 모델에 예측 가능한 열이 필요하지 않을 경우에는 문에 열 정의를 포함하지 않아도 됩니다. 결과 모델의 모든 특성은 입력으로 처리됩니다.  
   
  사례 테이블에 적용 되는 **WITH** 절에서 필터링 및 드릴스루에 대 한 옵션을 지정할 수 있습니다.  
   
@@ -104,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  필터 조건 식을 중첩 테이블 열 정의 뒤에 추가하여 중첩 테이블에 적용되는 필터 식을 정의할 수 있습니다.  
   
 ### <a name="modeling-flags"></a>모델링 플래그  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 마이닝 모델 열에 사용할 수 있도록 다음 모델링 플래그를 지원합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 마이닝 모델 열에 사용할 수 있도록 다음 모델링 플래그를 지원합니다.  
   
 > [!NOTE]  
 >  NOT_NULL 모델링 플래그는 마이닝 구조 열에 적용됩니다. 자세한 내용은 [CREATE MINING STRUCTURE&#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)를 참조하세요.  
@@ -205,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

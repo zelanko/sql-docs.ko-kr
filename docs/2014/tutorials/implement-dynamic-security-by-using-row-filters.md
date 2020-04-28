@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530884"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>행 필터를 사용하여 동적 보안 구현
@@ -26,7 +26,7 @@ ms.locfileid: "69530884"
   
  이 추가 단원을 완료하기 위해 일련의 태스크를 완료합니다. 이러한 작업은 이 Adventure Works 테이블 형식 모델 시나리오에는 고유하지만 실제 시나리오에 반드시 적용되는 것은 아닙니다. 각 작업에는 작업의 목적을 설명하는 추가 정보가 포함됩니다.  
   
- 이 단원에 소요 되는 예상 시간: **30 분**  
+ 이 단원을 완료하기 위한 예상 시간: **30분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 추가 단원 항목은 테이블 형식 모델링 자습서에 포함되며 순서대로 완료해야 합니다. 이 추가 단원의 작업을 수행하기 전에 이전의 단원을 모두 완료해야 합니다.  
@@ -36,30 +36,23 @@ ms.locfileid: "69530884"
   
 #### <a name="to-add-the-dimsalesterritory-table"></a>dimSalesTerritory 테이블을 추가하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
   
-2.  
-  **기존 연결** 대화 상자에서 **Adventure Works DB from SQL** 데이터 원본 연결이 선택되어 있는지 확인한 다음 **열기**를 클릭합니다.  
+2.  **기존 연결** 대화 상자에서 **Adventure Works DB from SQL** 데이터 원본 연결이 선택되어 있는지 확인한 다음 **열기**를 클릭합니다.  
   
      [가장 자격 증명] 대화 상자가 나타나면 2단원: 데이터 추가에 사용된 가장 자격 증명을 입력합니다.  
   
-3.  
-  **데이터를 가져오는 방법 선택** 페이지에서 **데이터를 가져올 테이블 및 뷰를 목록에서 선택** 을 선택된 상태로 두고 **다음**을 클릭합니다.  
+3.  **데이터를 가져오는 방법 선택** 페이지에서 **데이터를 가져올 테이블 및 뷰를 목록에서 선택** 을 선택된 상태로 두고 **다음**을 클릭합니다.  
   
-4.  
-  **테이블 및 뷰 선택** 페이지에서 **DimSalesTerritory** 테이블을 선택합니다.  
+4.  **테이블 및 뷰 선택** 페이지에서 **DimSalesTerritory** 테이블을 선택합니다.  
   
 5.  이름 열에 **Sales Territory**를 입력합니다.  
   
-6.  
-  **미리 보기 및 필터**를 클릭합니다.  
+6.  **미리 보기 및 필터**를 클릭합니다.  
   
-7.  
-  **SalesTerritoryAlternateKey** 열을 선택 취소한 다음 **확인**을 클릭합니다.  
+7.  **SalesTerritoryAlternateKey** 열을 선택 취소한 다음 **확인**을 클릭합니다.  
   
-8.  
-  **테이블 및 뷰 선택** 페이지에서 **마침**을 클릭합니다.  
+8.  **테이블 및 뷰 선택** 페이지에서 **마침**을 클릭합니다.  
   
      새 테이블이 모델 작업 영역에 추가됩니다. 그런 다음 원본 dimSalesTerritory 테이블의 개체와 데이터를 AW Internet Sales Tabular Model의 새 Sales Territory 테이블에 가져옵니다.  
   
@@ -103,18 +96,15 @@ ms.locfileid: "69530884"
   
 5.  워크시트에서 머리글을 포함하여 직원 데이터가 있는 모든 셀을 선택하고 선택한 데이터를 마우스 오른쪽 단추로 클릭한 다음 **복사**를 클릭합니다.  
   
-6.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **편집** 메뉴를 클릭한 다음 **붙여넣기**를 클릭합니다.  
+6.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **편집** 메뉴를 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
      붙여넣기가 회색으로 나타나는 경우 모델 디자이너 창의 테이블에서 열을 클릭하고 **편집** 메뉴를 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
 7.  **붙여넣기 미리 보기** 대화 상자의 **테이블 이름**에을 입력 `Employee Security`합니다.  
   
-8.  
-  **붙여넣을 데이터**에서 Sample Employee 워크시트의 사용자 데이터와 머리글이 모두 포함되어 있는지 확인합니다.  
+8.  **붙여넣을 데이터**에서 Sample Employee 워크시트의 사용자 데이터와 머리글이 모두 포함되어 있는지 확인합니다.  
   
-9. 
-  **첫 행을 열 머리글로 사용**이 선택되어 있는지 확인한 후 **확인**을 클릭합니다.  
+9. **첫 행을 열 머리글로 사용**이 선택되어 있는지 확인한 후 **확인**을 클릭합니다.  
   
      Sample Employee 워크시트에서 복사된 직원 데이터를 포함하는 Employee Security라는 새 테이블이 만들어집니다.  
   
@@ -125,8 +115,7 @@ ms.locfileid: "69530884"
   
 1.  모델 디자이너의 다이어그램 뷰에 있는 **Geography** 테이블에서 **Sales Territory Id** 열을 클릭한 채로 커서를 **Sales Territory** 테이블의 **Sales Territory Id** 열로 끌어다 놓습니다.  
   
-2.  
-  **Internet Sales** 테이블에서 **Sales Territory Id** 열을 클릭한 채로 커서를 **Sales Territory** 테이블의 **Sales Territory Id** 열로 끌어다 놓습니다.  
+2.  **Internet Sales** 테이블에서 **Sales Territory Id** 열을 클릭한 채로 커서를 **Sales Territory** 테이블의 **Sales Territory Id** 열로 끌어다 놓습니다.  
   
      이 관계의 활성 속성은 False이므로 비활성입니다. Internet Sales 테이블에는 측정값에서 사용되는 다른 활성 관계가 이미 있기 때문입니다.  
   
@@ -141,35 +130,27 @@ ms.locfileid: "69530884"
  이 태스크에서는 새 사용자 역할을 만듭니다. 이 역할에는 Sales Territory 테이블에서 사용자에게 표시되지 않는 행을 정의하는 행 필터가 포함됩니다. 그러면 이 필터는 일대다 관계 방향으로 Sales Territory에 관련된 다른 모든 테이블에 적용됩니다. 역할의 멤버인 사용자가 전체 Employee Security 테이블을 쿼리할 수 없도록 보호하는 간단한 필터도 적용합니다.  
   
 > [!NOTE]  
->  이 단원에서 만든 Sales Employees by Territory(지역별 영업 직원) 역할은 멤버가 사용자가 속한 판매 지역에 대한 판매 데이터만 찾아보도록(또는 쿼리) 제한합니다. 
-  [12단원: 역할 만들기](../analysis-services/lesson-11-create-roles.md)에서 만든 역할의 멤버로도 존재하는 사용자를 Sales Employees by Territory 역할에 멤버로 추가하면 사용 권한의 조합을 얻을 수 있습니다. 사용자가 여러 역할, 권한 및 각 역할에 대해 정의 된 행 필터의 멤버인 경우 누적 됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
+>  이 단원에서 만든 Sales Employees by Territory(지역별 영업 직원) 역할은 멤버가 사용자가 속한 판매 지역에 대한 판매 데이터만 찾아보도록(또는 쿼리) 제한합니다. [12단원: 역할 만들기](../analysis-services/lesson-11-create-roles.md)에서 만든 역할의 멤버로도 존재하는 사용자를 Sales Employees by Territory 역할에 멤버로 추가하면 사용 권한의 조합을 얻을 수 있습니다. 사용자가 여러 역할, 권한 및 각 역할에 대해 정의 된 행 필터의 멤버인 경우 누적 됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory(지역별 영업 직원) 사용자 역할을 만들려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **역할**을 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **역할**을 클릭합니다.  
   
-2.  
-  **역할 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
+2.  **역할 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
      권한이 없는 새 역할이 목록에 추가됩니다.  
   
 3.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 `Sales Employees by Territory`바꿉니다.  
   
-4.  
-  **사용 권한** 열에서 드롭다운 목록을 클릭한 후 **읽기** 권한을 선택합니다.  
+4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 후 **읽기** 권한을 선택합니다.  
   
-5.  
-  **멤버** 탭을 클릭한 다음 **추가**를 클릭합니다.  
+5.  **멤버** 탭을 클릭한 다음 **추가**를 클릭합니다.  
   
-6.  
-  **사용자 또는 그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 Employee Security 테이블을 만들 때 사용한 첫 번째 예제 사용자 이름을 입력합니다. 
-  **이름 확인**을 클릭하여 사용자 이름이 올바른지 확인한 후 **확인**을 클릭합니다.  
+6.  **사용자 또는 그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 Employee Security 테이블을 만들 때 사용한 첫 번째 예제 사용자 이름을 입력합니다. **이름 확인**을 클릭하여 사용자 이름이 올바른지 확인한 후 **확인**을 클릭합니다.  
   
      이 단계를 반복하여 Employee Security 테이블을 만들 때 사용한 다른 예제 사용자 이름을 추가합니다.  
   
-7.  
-  **행 필터** 탭을 클릭합니다.  
+7.  **행 필터** 탭을 클릭합니다.  
   
 8.  `Employee Security` 테이블의 **DAX 필터** 열에서 다음 수식을 입력 합니다.  
   
@@ -179,8 +160,7 @@ ms.locfileid: "69530884"
   
      이 수식은 모든 열이 false 부울 조건으로 확인되도록 지정합니다. 따라서 Sales Employees by Territory 사용자 역할의 멤버가 Employee Security 테이블의 행을 쿼리할 수 없습니다.  
   
-9. 
-  **Sales Territory** 테이블에 대해 다음 수식을 입력합니다.  
+9. **Sales Territory** 테이블에 대해 다음 수식을 입력합니다.  
   
      `='Sales Territory'[Sales Territory Id]=LOOKUPVALUE('Employee Security'[Sales Territory Id], 'Employee Security'[Login Id], USERNAME(), 'Employee Security'[Sales Territory Id], 'Sales Territory'[Sales Territory Id])`  
   
@@ -197,27 +177,21 @@ ms.locfileid: "69530884"
   
 #### <a name="to-test-the-sales-employees-by-territory-user-role"></a>Sales Employees by Territory(지역별 영업 직원) 사용자 역할을 테스트하려면  
   
-1.  
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **Excel에서 분석**을 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **Excel에서 분석**을 클릭합니다.  
   
-2.  
-  **Excel에서 분석** 대화 상자의 **모델에 연결하기 위해 사용할 사용자 이름 또는 역할 지정**에서 **다른 Windows 사용자**를 선택한 후 **찾아보기**를 클릭합니다.  
+2.  **Excel에서 분석** 대화 상자의 **모델에 연결하기 위해 사용할 사용자 이름 또는 역할 지정**에서 **다른 Windows 사용자**를 선택한 후 **찾아보기**를 클릭합니다.  
   
-3.  
-  **사용자 또는 그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 Employee 테이블에 포함된 사용자 이름 중 하나를 입력한 다음 **이름 확인**을 클릭합니다.  
+3.  **사용자 또는 그룹 선택** 대화 상자의 **선택할 개체 이름 입력**에 Employee 테이블에 포함된 사용자 이름 중 하나를 입력한 다음 **이름 확인**을 클릭합니다.  
   
-4.  
-  **확인**을 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 닫은 후 **확인**을 클릭하여 **Excel에서 분석** 대화 상자를 닫습니다.  
+4.  **확인**을 클릭하여 **사용자 또는 그룹 선택** 대화 상자를 닫은 후 **확인**을 클릭하여 **Excel에서 분석** 대화 상자를 닫습니다.  
   
      Excel에 새 통합 문서가 열립니다. 피벗 테이블은 자동으로 만들어집니다. 피벗 테이블 필드 목록에는 새 모델에서 사용할 수 있는 대부분의 데이터 필드가 포함되어 있습니다.  
   
      Employee Security 테이블은 피벗 테이블 필드 목록에 표시되지 않습니다. 이전 태스크에서 이 테이블을 클라이언트 도구에서 숨기도록 선택했기 때문입니다.  
   
-5.  
-  **피벗 테이블 필드** 목록의 **∑ Internet Sales** (측정값)에서 **Internet Total Sales** 측정값을 선택합니다. 이 측정값은 **값** 필드에 입력됩니다.  
+5.  **피벗 테이블 필드** 목록의 **∑ Internet Sales** (측정값)에서 **Internet Total Sales** 측정값을 선택합니다. 이 측정값은 **값** 필드에 입력됩니다.  
   
-6.  
-  **피벗 테이블 필드** 목록의 **Sales Territory** 테이블에서 **Sales Territory Id** 열을 선택합니다. 이 열은 **행 레이블** 필드에 입력됩니다.  
+6.  **피벗 테이블 필드** 목록의 **Sales Territory** 테이블에서 **Sales Territory Id** 열을 선택합니다. 이 열은 **행 레이블** 필드에 입력됩니다.  
   
      인터넷 판매 수치는 사용한 유효 사용자 이름이 속하는 한 지역에 대해서만 표시됩니다. Geography table에서 다른 열(예: City)을 행 레이블 필드로 선택하면 유효 사용자가 속하는 영업 지역의 도시만 표시됩니다.  
   

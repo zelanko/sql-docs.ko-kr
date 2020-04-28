@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771334"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
@@ -74,7 +74,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |값|Description|  
 |-----------|-----------------|  
-|**directory**|구독자가 동기화되어 데이터를 받습니다.|  
+|**활성**|구독자가 동기화되어 데이터를 받습니다.|  
 |**라**|구독이 없는 구독자 항목이 있습니다.|  
 |**예약한**|구독자가 데이터를 요청하고 있으나 아직 동기화되지 않았습니다.|  
   
@@ -91,7 +91,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -104,8 +104,8 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
 |NULL(기본값)||  
   
@@ -151,7 +151,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

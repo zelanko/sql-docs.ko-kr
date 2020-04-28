@@ -10,10 +10,10 @@ ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
 ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266524"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Oracle 스키마를 Linux에서 SQL Server 2017로 마이그레이션
@@ -28,7 +28,7 @@ ms.locfileid: "68266524"
 > * 샘플 HR 스키마 변환
 > * 데이터 마이그레이션
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>전제 조건
 
 - **HR** 스키마가 설치 된 Oracle 12c (12.2.0.1.0)의 인스턴스
 - SQL Server on Linux의 작업 인스턴스입니다.

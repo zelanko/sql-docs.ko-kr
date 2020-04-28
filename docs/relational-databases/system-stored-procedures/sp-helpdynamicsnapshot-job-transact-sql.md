@@ -22,10 +22,10 @@ ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770984"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job(Transact-SQL)
@@ -59,7 +59,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|필터링된 데이터 스냅샷 작업을 식별합니다.|  
+|**id**|**int**|필터링된 데이터 스냅샷 작업을 식별합니다.|  
 |**job_name**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|배포자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 식별 합니다.|  
 |**dynamic_filter_login**|**sysname**|게시에 대해 정의 된 매개 변수가 있는 행 필터에서 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수를 계산 하는 데 사용 되는 값입니다.|  

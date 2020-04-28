@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266555"
 ---
 # <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
@@ -25,8 +25,7 @@ SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택�
 ## <a name="run-test-case"></a>테스트 사례 실행  
 준비 된 테스트 사례를 실행 하려면 다음을 수행 합니다.  
   
-1.  
-  **실행** 단추를 클릭합니다.  
+1.  **실행** 단추를 클릭합니다.  
   
 2.  **Oracle에 연결** 대화 상자에서 연결 정보를 입력 한 다음 **연결**을 클릭 합니다.  
   
@@ -34,7 +33,7 @@ SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택�
   
 ## <a name="test-case-execution-steps"></a>테스트 사례 실행 단계  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>전제 조건  
 SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 모든 필수 구성 요소가 충족 되는지 확인 합니다. 일부 조건이 충족 되지 않으면 오류 메시지가 나타납니다.  
   
 ### <a name="initialization"></a>초기화  
@@ -44,7 +43,7 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 �
   
 ||||  
 |-|-|-|  
-|속성|Type|Description|  
+|속성|유형|설명|  
 |USER_TABLE $ Trg|트리거|확인 된 테이블의 변경 내용에 대 한 감사를 트리거합니다.|  
 |USER_TABLE $ AUD|테이블|삭제 된 행과 덮어쓴 행을 저장 하는 테이블입니다.|  
 |USER_TABLE $|테이블|새 행과 변경 된 행이 저장 되는 테이블입니다.|  
@@ -57,14 +56,14 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대해 �
   
 ||||  
 |-|-|-|  
-|속성|Type|Description|  
+|속성|유형|설명|  
 |USER_TABLE $ Trg|트리거|확인 된 테이블의 변경 내용에 대 한 감사를 트리거합니다.|  
   
 Ssmatesterdb 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의에서 다음 개체가 만들어집니다.  
   
 ||||  
 |-|-|-|  
-|속성|Type|Description|  
+|속성|유형|설명|  
 |USER_TABLE $ Aud|테이블|삭제 된 행과 덮어쓴 행을 저장 하는 테이블입니다.|  
 |USER_TABLE $|테이블|새 행과 변경 된 행이 저장 되는 테이블입니다.|  
 |USER_TABLE|뷰|테이블 수정의 단순화 된 표현입니다.|  

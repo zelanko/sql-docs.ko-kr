@@ -1,5 +1,5 @@
 ---
-title: 관점 정의 및 탐색 | 마이크로 소프트 문서
+title: 큐브 뷰 정의 및 찾아보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493771"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
@@ -41,7 +41,7 @@ ms.locfileid: "69493771"
   
      ![큐브 뷰 이름 열의 새 큐브 뷰](../../2014/tutorials/media/l9-perspectives-2.gif "큐브 뷰 이름 열의 새 큐브 뷰")  
   
-3.  원근 이름을 `Internet Sales`로 변경합니다.  
+3.  큐브 뷰 이름을로 `Internet Sales`변경 합니다.  
   
 4.  다음 행에서 DefaultMeasure를 **Internet Sales-Sales Amount**로 설정합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69493771"
   
 5.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Reseller Sales`측정 그룹  
+    -   `Reseller Sales`측정값 그룹  
   
     -   **Sales Quotas** 측정값 그룹  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493771"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  새 큐브 뷰의 이름을 `Reseller Sales`로 변경합니다.  
+2.  새 큐브 뷰의 이름을로 `Reseller Sales`변경 합니다.  
   
 3.  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "69493771"
   
 4.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Internet Sales`측정 그룹  
+    -   `Internet Sales`측정값 그룹  
   
     -   **Internet Sales Reason** 측정값 그룹  
   
@@ -131,16 +131,16 @@ ms.locfileid: "69493771"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  새 큐브 뷰의 이름을 `Sales Summary`로 변경합니다.  
+2.  새 큐브 뷰의 이름을로 `Sales Summary`변경 합니다.  
   
     > [!NOTE]  
     >  계산 측정값은 기본 측정값으로 지정할 수 없습니다.  
   
 3.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Internet Sales`측정 그룹  
+    -   `Internet Sales`측정값 그룹  
   
-    -   `Reseller Sales`측정 그룹  
+    -   `Reseller Sales`측정값 그룹  
   
     -   **Internet Sales Reason** 측정값 그룹  
   
@@ -176,13 +176,13 @@ ms.locfileid: "69493771"
   
      ![Excel의 데이터 연결 마법사](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel의 데이터 연결 마법사")  
   
-6.  큐브 `Internet Sales` **뷰** 목록에서 선택한 다음 메타데이터 창에서 측정값 및 차원을 검토합니다.  
+6.  `Internet Sales` **큐브 뷰** 목록에서를 선택한 다음 메타 데이터 창에서 측정값과 차원을 검토 합니다.  
   
      Internet Sales 큐브 뷰에 대해 지정된 개체만 나타납니다.  
   
 7.  메타데이터 창에서 **Measures**를 확장합니다.  
   
-     `Internet Sales` 측정값 그룹만 **인터넷 GPM** 및 모든 제품 계산 된 **구성원에 대한 인터넷 판매 비율과** 함께 나타납니다.  
+     `Internet Sales` 측정값 그룹만 **internet Gpm** 및 **Internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다.  
   
 8.  모델에서 Excel을 다시 선택합니다. `Sales Summary`를 선택합니다.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "69493771"
  [번역 정의 및 찾아보기](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [관점](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
+ [전망을](multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [다차원 모델의 큐브 뷰](multidimensional-models/perspectives-in-multidimensional-models.md)  
   
   

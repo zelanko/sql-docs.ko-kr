@@ -16,10 +16,10 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771360"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
@@ -55,12 +55,12 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |속성|값|Description|  
 |--------------|------------|-----------------|  
-|**directory**|**true**|게시자를 활성화합니다.|  
-||**허위**|게시자를 비활성화합니다.|  
+|**활성**|**true**|게시자를 활성화합니다.|  
+||**false**|게시자를 비활성화합니다.|  
 |**distribution_db**||배포 데이터베이스의 이름입니다.|  
 |**로그인**||로그인 이름입니다.|  
-|**암호**||제공된 로그인에 대한 강력한 암호입니다.|  
-|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. **[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.|  
+|**password**||제공된 로그인에 대한 강력한 암호입니다.|  
+|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.|  
 ||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이외 게시자에 대해서는 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
 |**working_directory**||게시용 데이터 및 스키마 파일을 저장하는 데 사용되는 작업 디렉터리입니다.|  
 |NULL(기본값)||사용 가능한 모든 *속성* 옵션이 출력 됩니다.| 

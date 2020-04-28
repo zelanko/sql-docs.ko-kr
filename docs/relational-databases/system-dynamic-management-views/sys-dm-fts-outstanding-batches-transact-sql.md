@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f0e03483ab0e2470df24fa2a00e6b7965b2199f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265889"
 ---
 # <a name="sysdm_fts_outstanding_batches-transact-sql"></a>sys.dm_fts_outstanding_batches(Transact-SQL)
@@ -45,9 +45,9 @@ ms.locfileid: "68265889"
 |hr_batch|**int**|일괄 처리에 대한 가장 최근의 오류 코드입니다.|  
 |is_retry_batch|**bit**|다시 시도 일괄 처리인지 여부를 나타냅니다.<br /><br /> 0 = 아니요<br /><br /> 1 = 예|  
 |retry_hints|**int**|일괄 처리에 필요한 다시 시도 작업의 유형입니다.<br /><br /> 0 = 다시 시도 안 함<br /><br /> 1 = 다중 스레드 다시 시도<br /><br /> 2 = 단일 스레드 다시 시도<br /><br /> 3 = 단일 및 다중 스레드 다시 시도<br /><br /> 5 = 다중 스레드 마지막 다시 시도<br /><br /> 6 = 단일 스레드 마지막 다시 시도<br /><br /> 7 = 단일 및 다중 스레드 마지막 다시 시도|  
-|retry_hints_description|**nvarchar (120)**|필요한 다시 시도 작업의 유형에 대한 설명입니다.<br /><br /> 다시 시도 안 함<br /><br /> 다중 스레드 다시 시도<br /><br /> 단일 스레드 다시 시도<br /><br /> 단일 및 다중 스레드 다시 시도<br /><br /> 다중 스레드 마지막 다시 시도<br /><br /> 단일 스레드 마지막 다시 시도<br /><br /> 단일 및 다중 스레드 마지막 다시 시도|  
+|retry_hints_description|**nvarchar(120)**|필요한 다시 시도 작업의 유형에 대한 설명입니다.<br /><br /> 다시 시도 안 함<br /><br /> 다중 스레드 다시 시도<br /><br /> 단일 스레드 다시 시도<br /><br /> 단일 및 다중 스레드 다시 시도<br /><br /> 다중 스레드 마지막 다시 시도<br /><br /> 단일 스레드 마지막 다시 시도<br /><br /> 단일 및 다중 스레드 마지막 다시 시도|  
 |doc_failed|**bigint**|일괄 처리에서 실패한 문서의 수입니다.|  
-|batch_timestamp|**없으면**|일괄 처리 생성 시 얻은 타임스탬프 값입니다.|  
+|batch_timestamp|**timestamp**|일괄 처리 생성 시 얻은 타임스탬프 값입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e3fdb095ed869ba2e8f060bdba7a3dc9db81a405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70026255"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats(Transact-SQL)
@@ -66,11 +66,11 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  *Stats_flag* 지정 되지 않은 경우 **sp_autostats** 는 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**인덱스 이름**|**varchar(60)**|인덱스 또는 통계의 이름입니다.|  
 |**AUTOSTATS**|**varchar (3)**|AUTO_UPDATE_STATISTICS 옵션의 현재 값입니다.|  
-|**마지막 업데이트 날짜**|**datetime**|가장 최근의 통계 업데이트 날짜입니다.|  
+|**마지막으로 업데이트한 날짜**|**datetime**|가장 최근의 통계 업데이트 날짜입니다.|  
   
  테이블 또는 인덱싱된 뷰에 대 한 결과 집합에는 인덱스에 대해 생성 된 통계, AUTO_CREATE_STATISTICS 옵션으로 생성 된 단일 열 통계 및 [CREATE statistics](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 만든 통계가 포함 됩니다.  
   
@@ -116,13 +116,13 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [통계](../../relational-databases/statistics/statistics.md)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET 옵션 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;통계 만들기](../../t-sql/statements/create-statistics-transact-sql.md)   
- [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [Transact-sql&#41;sp_createstats &#40;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [Transact-sql&#41;&#40;통계 업데이트](../../t-sql/statements/update-statistics-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

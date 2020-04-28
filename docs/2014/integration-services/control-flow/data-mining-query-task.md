@@ -16,17 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890404"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 DDL(데이터 정의 언어) 문 실행과 분석 개체 처리 등의 기타 비즈니스 인텔리전스 작업을 수행하는 태스크를 제공합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 DDL(데이터 정의 언어) 문 실행과 분석 개체 처리 등의 기타 비즈니스 인텔리전스 작업을 수행하는 태스크를 제공합니다.  
   
  기타 비즈니스 인텔리전스 태스크에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
@@ -46,18 +45,17 @@ ms.locfileid: "68890404"
  중첩이 포함된 결과는 저장되기 전에 결합됩니다. 결과를 결합하면 중첩 결과 집합이 테이블로 바뀝니다. 예를 들어 **Customer** 열과 중첩된 **Product** 열이 포함된 중첩 결과를 결합하면 **Customer** 열에 행이 추가되어 각 고객의 제품 데이터가 포함된 테이블이 생성됩니다. 예를 들어 3가지 제품을 가진 고객은 행이 3개인 테이블이 되며 각 행에는 해당 고객이 반복되고 서로 다른 제품이 포함됩니다. FLATTENED 키워드를 생략하면 테이블에 **Customer** 열만 포함되고 고객당 하나의 행이 있습니다. 자세한 내용은 [SELECT&#40;DMX&#41;](/sql/dmx/select-dmx)를 참조하세요.  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>데이터 마이닝 쿼리 태스크 구성  
- 데이터 마이닝 쿼리 태스크에는 두 개의 연결이 필요합니다. 첫 번째 연결은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 하거나 마이닝 구조와 마이닝 모델이 포함 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결 하는 연결 관리자입니다. 두 번째 연결은 태스크에서 데이터를 쓰는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 OLE DB 연결 관리자입니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) 및 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)를 참조하세요.  
+ 데이터 마이닝 쿼리 태스크에는 두 개의 연결이 필요합니다. 첫 번째 연결은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 인스턴스 또는 마이닝 구조와 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 연결하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 관리자입니다. 두 번째 연결은 태스크에서 데이터를 쓰는 테이블이 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 OLE DB 연결 관리자입니다. 자세한 내용은 [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) 및 [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md)를 참조하세요.  
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- 
-  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;마이닝 모델 탭&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;쿼리 탭&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;쿼리 탭&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [데이터 마이닝 쿼리 태스크 편집기 &#40;출력 탭&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [데이터 마이닝 쿼리 태스크 편집기&#40;출력 탭&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  데이터 마이닝 쿼리 편집기에는 식 페이지가 없습니다. 대신 **속성** 창을 사용하여 데이터 마이닝 쿼리 태스크의 속성 식을 만들고 관리하는 도구에 액세스할 수 있습니다.  

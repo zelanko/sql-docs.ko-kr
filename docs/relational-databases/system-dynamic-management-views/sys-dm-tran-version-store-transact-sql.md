@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262599"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store(Transact-SQL)
@@ -51,12 +51,12 @@ sys.dm_tran_version_store
 |**version_sequence_num**|**bigint**|버전 레코드 시퀀스 번호입니다. 이 값은 버전 생성 트랜잭션 내에서 고유합니다.|  
 |**database_id**|**int**|버전 레코드의 데이터베이스 ID입니다.|  
 |**rowset_id**|**bigint**|레코드의 행 집합 ID입니다.|  
-|**업무**|**tinyint**|버전이 지정된 레코드가 두 개 레코드로 분할되었는지 여부를 나타냅니다. 값이 0이면 레코드가 한 페이지에 저장됩니다. 값이 1이면 레코드가 두 개 레코드로 분할되어 서로 다른 두 페이지에 저장됩니다.|  
+|**status**|**tinyint**|버전이 지정된 레코드가 두 개 레코드로 분할되었는지 여부를 나타냅니다. 값이 0이면 레코드가 한 페이지에 저장됩니다. 값이 1이면 레코드가 두 개 레코드로 분할되어 서로 다른 두 페이지에 저장됩니다.|  
 |**min_length_in_bytes**|**smallint**|레코드의 최소 길이(바이트)입니다.|  
 |**record_length_first_part_in_bytes**|**smallint**|버전 레코드에서 첫 번째 부분의 길이(바이트)입니다.|  
-|**record_image_first_part**|**varbinary (8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
+|**record_image_first_part**|**varbinary(8000)**|버전 레코드에서 첫 번째 부분의 이진 이미지입니다.|  
 |**record_length_second_part_in_bytes**|**smallint**|버전 레코드에서 두 번째 부분의 길이(바이트)입니다.|  
-|**record_image_second_part**|**varbinary (8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
+|**record_image_second_part**|**varbinary(8000)**|버전 레코드에서 두 번째 부분의 이진 이미지입니다.|  
   
 ## <a name="permissions"></a>사용 권한
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  출력은 XSN-57이 한 테이블에서 행 버전 3개를 만들었으며 XSN-58이 다른 테이블에서 행 버전 하나를 만들었음을 보여 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

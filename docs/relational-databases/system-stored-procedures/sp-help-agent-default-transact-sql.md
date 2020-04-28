@@ -16,10 +16,10 @@ ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762759"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default(Transact-SQL)
@@ -48,7 +48,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |**2**|로그 판독기 에이전트입니다.|  
 |**3**|배포 에이전트입니다.|  
 |**4**|병합 에이전트입니다.|  
-|**되었는지**|큐 판독기 에이전트|  
+|**9**|큐 판독기 에이전트|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

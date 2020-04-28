@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263018"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Oracle용 SSMA 설치(OracleToSQL)
@@ -27,7 +27,7 @@ ms.locfileid: "68263018"
   
 ## <a name="contents"></a>콘텐츠  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[Oracle 용 SSMA 클라이언트 &#40;설치 OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|SSMA 클라이언트를 설치 하는 방법에 대 한 정보와 지침을 제공 합니다.|  
 |[SQL Server &#40;OracleToSQL&#41;에 SSMA 구성 요소 설치](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|인스턴스에 확장 팩을 설치 하는 방법에 대 한 정보와 지침 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제공 합니다.|  

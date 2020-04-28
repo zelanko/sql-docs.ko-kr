@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493991"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
@@ -32,7 +32,7 @@ ms.locfileid: "69493991"
  이 태스크에서는 부모-자식 차원의 수준 이름을 정의하고 부모 멤버에 관련된 데이터의 표시 여부를 지정합니다. 자세한 내용은 부모-자식 [계층](multidimensional-models/parent-child-dimension.md) 및 부모 [-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)을 참조 하세요.  
   
  [자동으로 특성 멤버 그룹화](lesson-4-3-automatically-grouping-attribute-members.md)  
- 이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화 &#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조 하세요.  
+ 이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
  [특성 계층 숨기기 및 비활성화](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  이 태스크에서는 특성 계층을 해제하거나 숨기는 방법과 시기에 대해 알아봅니다.  

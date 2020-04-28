@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891988"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE DB 연결 형식(SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "68891988"
   
  OLE DB는 클라이언트가 다양한 데이터 공급자에 연결할 수 있도록 하는 데이터 액세스 기술입니다. 데이터 원본 유형 OLE DB를 선택한 후에는 특정 데이터 공급자를 선택해야 합니다. 매개 변수 및 자격 증명과 같은 기능에 대한 지원은 선택하는 데이터 공급자에 따라 달라집니다.  
   
- 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 데이터 연결 또는 데이터 원본 &#40;[보고서 작성기 및 SSRS&#41;추가 및 확인을 ](add-and-verify-a-data-connection-report-builder-and-ssrs.md)참조하십시오.  
+ 이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결이 나 데이터 원본 &#40;추가 및 확인 보고서 작성기 및 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)를 참조 하세요.  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
  OLE DB 데이터 처리 확장 프로그램의 연결 문자열은 원하는 데이터 공급자에 따라 달라집니다. 일반적인 연결 문자열에는 데이터 공급자가 지원하는 이름/값 쌍이 포함됩니다. 예를 들어 다음 연결 문자열은 OLE DB provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 AdventureWorks 데이터베이스를 지정합니다.  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [보고 서비스의 데이터 연결, 데이터 원본 및 연결 문자열을 참조하거나](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 보고서 [작성기의 자격 증명 지정을 참조하세요.](../specify-credentials-in-report-builder.md)  
+ 자세한 내용은 [Reporting Services의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) 을 참조 하거나 [보고서 작성기에서 자격 증명을 지정](../specify-credentials-in-report-builder.md)하세요.  
   
 ###### <a name="special-characters-in-a-password"></a>암호의 특수 문자  
  암호를 입력하라는 메시지를 표시하거나 연결 문자열에 암호를 포함하도록 OLE DB 데이터 원본을 구성한 경우 사용자가 문장 부호와 같은 특수 문자가 포함된 암호를 입력하면 일부 기본 데이터 원본 드라이버에서 해당 특수 문자의 유효성을 검사할 수 없습니다. 보고서 처리 시 "올바른 암호가 아닙니다" 메시지가 나타나면 이 문제 때문일 수 있습니다.  
@@ -72,10 +72,10 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
   
-##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 주제  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>방법 도움말 항목  
  이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
   
- [보고서 작성자 및 SSRS &#40;데이터 연결 또는 데이터 원본 추가 및 확인&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [데이터 연결이 나 데이터 원본 &#40;보고서 작성기 및 SSRS를 추가 하 고 확인&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,7 +86,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="related-sections"></a><a name="Related"></a> 관련 섹션  
  설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
   
- [보고서 작성기 및 SSRS&#41;&#40;보고서에 데이터 추가](report-datasets-ssrs.md)  
+ [보고서 &#40;보고서 작성기 및 SSRS&#41;에 데이터를 추가 합니다.](report-datasets-ssrs.md)  
  보고서의 데이터 액세스에 대한 개요를 제공합니다.  
   
  [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
@@ -104,8 +104,8 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 작성기 및 보고서 디자이너&#41;&#40;보고서 매개 변수](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [보고서 작성기 및 SSRS&#41;&#40;데이터 필터링, 그룹 화 및 정렬](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 &#40;보고서 작성기 및 보고서 디자이너&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [데이터 필터링, 그룹화 및 정렬 &#40;보고서 작성기 및 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

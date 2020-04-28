@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266149"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle 스키마 변환(OracleToSQL)
@@ -37,12 +37,12 @@ Oracle에 연결 하 고,에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
 |-|-|  
 |Oracle 개체|결과 SQL Server 개체|  
 |Functions|함수를로 [!INCLUDE[tsql](../../includes/tsql-md.md)]직접 변환할 수 있는 경우 ssma는 함수를 만듭니다.<br /><br />경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.|  
-|프로시저|프로시저를로 [!INCLUDE[tsql](../../includes/tsql-md.md)]직접 변환할 수 있으면 ssma에서 저장 프로시저를 만듭니다.<br /><br />경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
+|절차|프로시저를로 [!INCLUDE[tsql](../../includes/tsql-md.md)]직접 변환할 수 있으면 ssma에서 저장 프로시저를 만듭니다.<br /><br />경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
 |패키지|SSMA는 비슷한 개체 이름으로 통합 되는 저장 프로시저 및 함수 집합을 만듭니다.|  
 |시퀀스|SSMA는 시퀀스 개체 (SQL Server 2012 또는 SQL Server 2014)를 만들거나 Oracle 시퀀스를 에뮬레이트합니다.|  
 |인덱스 및 트리거와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다.|  
 |트리거와 같은 종속 개체를 사용 하 여 보기|SSMA는 종속 개체를 포함 하는 뷰를 만듭니다.|  
-|구체화 된 뷰|**SSMA는 일부 예외를 제외 하 고 SQL server에 인덱싱된 뷰를 만듭니다. 구체화 된 뷰에 다음 구문 중 하나 이상이 포함 되어 있으면 변환이 실패 합니다.**<br /><br />사용자 정의 함수<br /><br />SELECT, WHERE 또는 GROUP BY 절의 비 결정적인 필드/함수/식<br /><br />SELECT *, WHERE 또는 GROUP BY 절의 Float 열 사용 (이전 문제의 특수 한 경우)<br /><br />사용자 지정 데이터 형식 (포함 테이블)<br /><br />COUNT (고유 &lt;필드&gt;)<br /><br />FETCH<br /><br />OUTER 조인(LEFT, RIGHT 또는 FULL)<br /><br />하위 쿼리, 기타 뷰<br /><br />초과, 순위, 잠재 고객, 로그<br /><br />MIN, MAX<br /><br />UNION, 빼기, INTERSECT<br /><br />HAVING|  
+|구체화된 뷰|**SSMA는 일부 예외를 제외 하 고 SQL server에 인덱싱된 뷰를 만듭니다. 구체화 된 뷰에 다음 구문 중 하나 이상이 포함 되어 있으면 변환이 실패 합니다.**<br /><br />사용자 정의 함수<br /><br />SELECT, WHERE 또는 GROUP BY 절의 비 결정적인 필드/함수/식<br /><br />SELECT *, WHERE 또는 GROUP BY 절의 Float 열 사용 (이전 문제의 특수 한 경우)<br /><br />사용자 지정 데이터 형식 (포함 테이블)<br /><br />COUNT (고유 &lt;필드&gt;)<br /><br />FETCH<br /><br />OUTER 조인(LEFT, RIGHT 또는 FULL)<br /><br />하위 쿼리, 기타 뷰<br /><br />초과, 순위, 잠재 고객, 로그<br /><br />MIN, MAX<br /><br />UNION, 빼기, INTERSECT<br /><br />HAVING|  
 |트리거|**SSMA는 다음 규칙에 따라 트리거를 만듭니다.**<br /><br />Instead of 트리거는 INSTEAD OF 트리거로 변환 됩니다.<br /><br />AFTER 트리거는 AFTER 트리거로 변환 됩니다.<br /><br />Instead of 트리거는 instead of 트리거로 변환 됩니다. 동일한 작업에 정의 된 INSTEAD OF 트리거는 여러 개의 트리거로 결합 됩니다.<br /><br />행 수준 트리거는 커서를 사용 하 여 에뮬레이션 됩니다.<br /><br />연계 트리거는 여러 개별 트리거로 변환 됩니다.|  
 |동의어|**다음 개체 유형에 대해 동의어가 생성 됩니다.**<br /><br />테이블 및 개체 테이블<br /><br />뷰 및 개체 뷰<br /><br />저장 프로시저<br /><br />Functions<br /><br />**다음 개체의 동의어가 확인 되 고 직접 개체 참조로 대체 됩니다.**<br /><br />시퀀스<br /><br />패키지<br /><br />Java 클래스 스키마 개체<br /><br />사용자 정의 개체 유형<br /><br />다른 동의어에 대 한 동의어는 마이그레이션할 수 없으며 오류로 표시 됩니다.<br /><br />구체화 된 뷰에 대해서는 동의어가 생성 되지 않습니다.|  
 |사용자 정의 형식|**SSMA는 사용자 정의 형식 변환에 대 한 지원을 제공 하지 않습니다. PL/SQL 프로그램에서 사용 하는 사용자 정의 형식은 다음 규칙에 따라 특수 변환 오류로 표시 됩니다.**<br /><br />사용자 정의 형식의 테이블 열은 VARCHAR (8000)로 변환 됩니다.<br /><br />저장 프로시저나 함수에 대 한 사용자 정의 형식의 인수는 VARCHAR (8000)로 변환 됩니다.<br /><br />PL/SQL 블록에서 사용자 정의 형식의 변수가 VARCHAR (8000)로 변환 됩니다.<br /><br />개체 테이블은 표준 테이블로 변환 됩니다.<br /><br />개체 뷰가 표준 뷰로 변환 됩니다.|  

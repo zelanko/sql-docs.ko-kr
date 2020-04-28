@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771526"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
@@ -55,8 +55,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|데이터베이스 이름|  
-|**a-id**|**int**|데이터베이스 식별자입니다.|  
+|**name**|**sysname**|데이터베이스의 이름입니다.|  
+|**id**|**int**|데이터베이스 식별자입니다.|  
 |**transpublish**|**bit**|데이터베이스가 스냅숏 또는 트랜잭션 게시를 사용 하도록 설정 된 경우 값이 **1** 이면 스냅숏 또는 트랜잭션 게시를 사용할 수 있음을 의미 합니다.|  
 |**mergepublish**|**bit**|데이터베이스가 병합 게시를 사용 하도록 설정 된 경우 값 **1** 은 병합 게시를 사용할 수 있음을 의미 합니다.|  
 |**dbowner**|**bit**|사용자가 **db_owner** 고정 데이터베이스 역할의 멤버 이면이 고, 그렇지 않으면입니다. 값이 **1** 이면 사용자가이 역할의 구성원 임을 나타냅니다.|  

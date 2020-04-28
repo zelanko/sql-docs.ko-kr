@@ -22,10 +22,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 77bf96ee1cea4356e26d33fab9ab519e99ae0a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265959"
 ---
 # <a name="sysdm_fts_fdhosts-transact-sql"></a>sys.dm_fts_fdhosts(Transact-SQL)
@@ -37,9 +37,9 @@ ms.locfileid: "68265959"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**fdhost_id**|**int**|필터 데몬 호스트의 ID입니다.|  
-|**fdhost_name**|**nvarchar (120)**|필터 데몬 호스트의 이름입니다.|  
+|**fdhost_name**|**nvarchar(120)**|필터 데몬 호스트의 이름입니다.|  
 |**fdhost_process_id**|**int**|필터 데몬 호스트의 Windows 프로세스 ID입니다.|  
-|**fdhost_type**|**nvarchar (120)**|필터 데몬 호스트에서 처리 중인 문서 형식이며 다음 중 하나입니다.<br /><br /> 단일 스레드<br /><br /> 다중 스레드<br /><br /> 대용량 문서|  
+|**fdhost_type**|**nvarchar(120)**|필터 데몬 호스트에서 처리 중인 문서 형식이며 다음 중 하나입니다.<br /><br /> 단일 스레드<br /><br /> 다중 스레드<br /><br /> 대용량 문서|  
 |**max_thread**|**int**|필터 데몬 호스트의 최대 스레드 수입니다.|  
 |**batch_count**|**int**|필터 데몬 호스트에서 처리 중인 일괄 처리 수입니다.|  
   

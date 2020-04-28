@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771096"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
@@ -50,7 +50,7 @@ sp_helparticle [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자가 게시 한 아티클에 대 한 정보를 요청할 때 게시자를 지정 하면 안 됩니다. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+>  게시자가 게시 한 아티클에 대 한 정보를 요청할 때 게시자를 지정 하면 안 됩니다. *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 `[ @found = ] found OUTPUT`내부용 으로만 사용 됩니다.  
   
@@ -64,7 +64,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**대상 개체**|**sysname**|대상(구독) 테이블의 이름입니다.|  
 |**synchronization object**|**nvarchar (257)**|게시된 아티클을 정의하는 뷰의 이름입니다.|  
 |**type**|**smallint**|아티클의 유형입니다.<br /><br /> **1** = 로그를 기반으로 합니다.<br /><br /> **3** = 수동 필터를 사용 하 여 로그 기반<br /><br /> **5** = 수동 뷰를 사용 하 여 로그를 기반으로 합니다.<br /><br /> **7** = 수동 필터 및 수동 보기를 사용 하 여 로그를 기반으로 합니다.<br /><br /> **8** = 저장 프로시저 실행<br /><br /> **24** = serialize 할 수 있는 저장 프로시저 실행<br /><br /> **32** = 저장 프로시저 (스키마 전용)입니다.<br /><br /> **64** = 뷰 (스키마 전용)입니다.<br /><br /> **96** = 집계 함수 (스키마 전용)입니다.<br /><br /> **128** = 함수 (스키마 전용)입니다.<br /><br /> **257** = 로그 기반 인덱싱된 뷰입니다.<br /><br /> **259** = 수동 필터가 있는 로그 기반 인덱싱된 뷰입니다.<br /><br /> **261** = 수동 뷰가 있는 로그 기반 인덱싱된 뷰입니다.<br /><br /> **263** = 수동 필터 및 수동 뷰가 있는 로그 기반의 인덱싱된 뷰입니다.<br /><br /> **320** = 인덱싱된 뷰 (스키마 전용)입니다.<br /><br />|  
-|**업무**|**tinyint**|하나 이상의 아티클 속성의 [& (비트 and)](../../t-sql/language-elements/bitwise-and-transact-sql.md) 일 수 있습니다.<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 아티클이 활성 상태입니다.<br /><br /> **0x08** = insert 문에 열 이름을 포함 합니다.<br /><br /> **0x16** = 매개 변수가 있는 문을 사용 합니다.<br /><br /> **0x32** = 매개 변수가 있는 문을 사용 하 고 insert 문에 열 이름을 포함 합니다.|  
+|**status**|**tinyint**|하나 이상의 아티클 속성의 [& (비트 and)](../../t-sql/language-elements/bitwise-and-transact-sql.md) 일 수 있습니다.<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = 아티클이 활성 상태입니다.<br /><br /> **0x08** = insert 문에 열 이름을 포함 합니다.<br /><br /> **0x16** = 매개 변수가 있는 문을 사용 합니다.<br /><br /> **0x32** = 매개 변수가 있는 문을 사용 하 고 insert 문에 열 이름을 포함 합니다.|  
 |**필터가**|**nvarchar (257)**|테이블을 행 필터링하는 데 사용하는 저장 프로시저입니다. 이 저장 프로시저는 FOR REPLICATION 절을 사용하여 만들어야 합니다.|  
 |**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
 |**insert_command**|**nvarchar(255)**|삽입을 복제할 때 테이블 아티클에서 사용되는 복제 명령 유형입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.|  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893176"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>MDX(Multidimensional Expressions) 참조
@@ -23,8 +23,8 @@ ms.locfileid: "68893176"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[Mdx 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 식, 문 및 스크립트에 대해 MDX 언어에서 사용할 수 있는 다양한 구문 요소를 설명합니다.|  
-|[Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 언어를 정의하는 문, 연산자 및 함수를 설명합니다.|  
+|[MDX 구문 요소&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 식, 문 및 스크립트에 대해 MDX 언어에서 사용할 수 있는 다양한 구문 요소를 설명합니다.|  
+|[MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 언어를 정의하는 문, 연산자 및 함수를 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [MDX를 사용 하 여 다차원 데이터 쿼리](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   

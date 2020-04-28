@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769131"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
@@ -74,13 +74,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`구독자의 유형입니다. *subscriber_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**local** (기본값)|게시자에게만 알려진 구독자입니다.|  
-|**전역적**|모든 서버에 알려진 구독자입니다.|  
+|**global**|모든 서버에 알려진 구독자입니다.|  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 로컬 구독은 클라이언트 구독이라고 하며 전역 구독은 서버 구독이라고 합니다.  
   
 `[ @subscription_priority = ] subscription_priority`구독의 우선 순위를 나타내는 숫자입니다. *subscription_priority*은 **실제**이며 기본값은 NULL입니다. 로컬 및 익명 구독의 경우에는 우선 순위가 0.0입니다. 전역 구독의 경우에는 우선 순위가 100.0 미만이어야 합니다.  
   
@@ -96,10 +95,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|한 번|  
 |**4**|매일|  
 |**20cm(8**|매주|  
-|**5-10**|매월|  
-|**20**|매월(frequency_interval에 상대적임)|  
-|**40**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
+|**10**|매월|  
+|**720**|매월(frequency_interval에 상대적임)|  
+|**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
 |NULL(기본값)||  
   
 `[ @frequency_interval = ] frequency_interval`병합 에이전트 실행 되는 일 또는 날짜입니다. *frequency_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -112,10 +110,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**4**|수요일|  
 |**5**|목요일|  
 |**6**|금요일|  
-|**일**|토요일|  
+|**7**|토요일|  
 |**20cm(8**|일|  
-|**되었는지**|평일|  
-|**5-10**|주말|  
+|**9**|평일|  
+|**10**|주말|  
 |NULL(기본값)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`예약 된 병합 발생 빈도 간격 (월)입니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -123,7 +121,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -136,8 +134,8 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
 |NULL(기본값)||  
   
@@ -188,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [대화형 충돌 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

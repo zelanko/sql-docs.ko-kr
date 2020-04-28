@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fda2eb169985eb670614f611764fbf149c71a42d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892795"
 ---
 # <a name="distributions-dmx"></a>배포(DMX)
@@ -20,8 +20,7 @@ ms.locfileid: "68892795"
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]마이닝 구조의 열 내용을 정의 하 여 마이닝 모델을 만들 때 알고리즘이 이러한 열의 데이터를 처리 하는 방법에 영향을 줄 수 있습니다. 이렇게 하면 공통적인 값 배포가 열에 포함되어 있을 경우 모델을 처리하기 전에 몇몇 알고리즘에서 연속 열 배포를 정의하는 데 도움이 됩니다. 배포를 정의하지 않으면 알고리즘이 데이터를 해석하는 데 사용할 정보가 더 줄어듭니다. 따라서 마이닝 모델에서 얻는 예측의 정확도가 배포를 정의했을 경우보다 낮아질 수 있습니다.  
   
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘에서는 다음 배포 유형을 지원합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘에서는 다음 배포 유형을 지원합니다.  
   
  **일반적**  
  연속 열에 대한 값은 정규 가우스 분포로 된 히스토그램을 형성합니다.  

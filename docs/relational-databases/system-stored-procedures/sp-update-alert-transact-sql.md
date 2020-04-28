@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890842"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert(Transact-SQL)
@@ -84,12 +84,11 @@ sp_update_alert
 |**1**|전자 메일|  
 |**2**|호출기|  
 |**4**|**net send**|  
-|**일**|모두|  
+|**7**|모두|  
   
 `[ @database_name = ] 'database'`경고가 발생 하기 위해 오류가 발생 해야 하는 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname입니다.** 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'`오류 메시지 로그에서 오류에 대 한 설명에 있어야 하는 문자 시퀀스입니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword* 은 **nvarchar (100)** 이며 기본값은 NULL입니다. 이 매개 변수는 개체 이름 (예: **% customer_table%**)을 필터링 하는 데 유용 합니다.  
+`[ @event_description_keyword = ] 'event_description_keyword'`오류 메시지 로그에서 오류에 대 한 설명에 있어야 하는 문자 시퀀스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword* 은 **nvarchar (100)** 이며 기본값은 NULL입니다. 이 매개 변수는 개체 이름 (예: **% customer_table%**)을 필터링 하는 데 유용 합니다.  
   
 `[ @job_id = ] job_id`작업 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다. *Job_id* 지정 된 경우 *job_name* 생략 해야 합니다.  
   
@@ -129,7 +128,7 @@ sp_update_alert
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- Windows 응용 프로그램 로그에 기록 된 sysmessages만 경고를 발생 시킬 수 있습니다. **** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+ Windows 응용 프로그램 로그에 기록 된 sysmessages만 경고를 발생 시킬 수 있습니다. **sysmessages** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
  **sp_update_alert** 는 매개 변수 값이 제공 되는 경고 설정만 변경 합니다. 매개 변수가 생략되면 현재 설정이 보존됩니다.  
   
@@ -150,7 +149,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_add_alert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [Transact-sql&#41;sp_add_alert &#40;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [Transact-sql&#41;sp_help_alert &#40;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

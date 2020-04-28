@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68256650"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Oracle용 SSMA 콘솔 작업(OracleToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "68256650"
   
 |||  
 |-|-|  
-|**에서는**|**설명**|  
+|**토픽**|**설명**|  
 |[OracleToSQL&#41;&#40;Oracle 용 SSMA 콘솔 시작](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[OracleToSQL&#41;&#40;스크립트 파일 만들기](../../ssma/oracle/creating-script-files-oracletosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  

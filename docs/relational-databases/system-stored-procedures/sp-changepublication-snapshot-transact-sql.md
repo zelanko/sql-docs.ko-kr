@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762262"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68762262"
   지정된 게시에 대한 스냅샷 에이전트의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]  
->  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+>  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
 |NULL(기본값)||  
   
 `[ @frequency_interval = ] frequency_interval`에이전트가 실행 되는 날짜를 지정 합니다. *frequency_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -83,10 +83,10 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**4**|수요일|  
 |**5**|목요일|  
 |**6**|금요일|  
-|**일**|토요일|  
+|**7**|토요일|  
 |**20cm(8**|일|  
-|**되었는지**|평일|  
-|**5-10**|주말|  
+|**9**|평일|  
+|**10**|주말|  
 |NULL(기본값)||  
   
 `[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*단위입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
@@ -94,8 +94,8 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
 |NULL(기본값)||  
   
@@ -137,7 +137,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 에이전트를 만들 때 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 에이전트를 만들 때 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -15,10 +15,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264465"
 ---
 # <a name="generating-reports-oracletosql"></a>보고서 생성(OracleToSQL)
@@ -67,7 +67,7 @@ ms.locfileid: "68264465"
     > [!NOTE]  
     > 위에서 지정한 오류 보고 설정은 평가 보고서 생성, 변환-스키마, 마이그레이션 데이터, convert-sql 문 명령에 적용 됩니다.  
   
-**예:**  
+**예제:**  
   
 ```  
 <generate-assessment-report  

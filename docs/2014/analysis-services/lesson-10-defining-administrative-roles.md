@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530866"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>10단원: 관리자 역할 정의
   이 단원에서는 관리 태스크에 대한 보안 역할 정의 방법을 배웁니다.  
   
 > [!NOTE]  
->  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 사용 되는 샘플 프로젝트를 다운로드 하려면 [여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하세요.  
+>  이 자습서의 모든 단원에 대한 완료된 프로젝트를 온라인으로 사용할 수 있습니다. 이전 단원에서 완료된 프로젝트를 시작 지점으로 사용하여 어떠한 단원으로든 이동할 수 있습니다. 이 자습서와 함께 제공되는 샘플 프로젝트를 다운로드하려면[여기를 클릭](https://go.microsoft.com/fwlink/?LinkID=221866) 하십시오.  
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
@@ -30,6 +30,6 @@ ms.locfileid: "69530866"
   
 ## <a name="see-also"></a>참고 항목  
  [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
- [&#40;의 다차원 모델링은 놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764349"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription(Transact-SQL)
@@ -70,7 +70,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**4**|가장 많이 수행 되는 25 개의 가장 낮은 구독을 반환 합니다.|  
 |**5**|성능이 가장 낮은 50개의 구독을 반환합니다.|  
 |**6**|현재 동기화 중인 구독만 반환합니다.|  
-|**일**|현재 동기화 중이 아닌 구독만 반환합니다.|  
+|**7**|현재 동기화 중이 아닌 구독만 반환합니다.|  
   
 `[ @topnum = ] topnum`반환 된 데이터의 맨 위에 있는 지정 된 수의 구독으로 결과 집합을 제한 합니다. *topnum* 은 **int**이며 기본값은 없습니다.  
   
@@ -82,8 +82,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상태**|**int**|게시와 연결된 모든 복제 에이전트의 상태를 검사하고 다음 순서로 발견된 가장 높은 상태를 반환합니다.<br /><br /> **6** = 실패<br /><br /> **5** = 다시 시도 중<br /><br /> **2** = 중지 됨<br /><br /> **4** = 유휴 상태<br /><br /> **3** = 진행 중<br /><br /> **1** = 시작 됨|  
-|**내용의**|**int**|게시에 속한 구독에서 생성한 최대 임계값 경고로 다음 값 중 하나 이상의 논리 OR 결과일 수 있습니다.<br /><br /> **1** = 만료-트랜잭션 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **8** = mergefastrunduration-고속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **16** = mergeslowrunduration-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-고속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.<br /><br /> **64** = mergeslowrunspeed-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.|  
+|**status**|**int**|게시와 연결된 모든 복제 에이전트의 상태를 검사하고 다음 순서로 발견된 가장 높은 상태를 반환합니다.<br /><br /> **6** = 실패<br /><br /> **5** = 다시 시도 중<br /><br /> **2** = 중지 됨<br /><br /> **4** = 유휴 상태<br /><br /> **3** = 진행 중<br /><br /> **1** = 시작 됨|  
+|**warning**|**int**|게시에 속한 구독에서 생성한 최대 임계값 경고로 다음 값 중 하나 이상의 논리 OR 결과일 수 있습니다.<br /><br /> **1** = 만료-트랜잭션 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독이 보존 기간 임계값 내에서 동기화 되지 않았습니다.<br /><br /> **8** = mergefastrunduration-고속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **16** = mergeslowrunduration-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독의 동기화를 완료 하는 데 소요 된 시간이 임계값 (초)을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-고속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.<br /><br /> **64** = mergeslowrunspeed-저속 또는 전화 접속 네트워크 연결을 통해 병합 구독을 동기화 하는 동안 행의 배달 속도가 임계값 속도 (초당 행 수)를 유지 하지 못했습니다.|  
 |**구독자**|**sysname**|구독자의 이름입니다.|  
 |**subscriber_db**|**sysname**|구독에 사용되는 데이터베이스의 이름입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
@@ -106,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|구독에 대한 최근 동기화의 배달 속도입니다.|  
 |**mergerunduration**|**int**|구독의 최근 동기화를 완료하는 데 걸린 시간입니다.|  
 |**monitorranking**|**int**|결과 집합에서 구독을 정렬하는 데 사용하는 순위 값이며 다음 값 중 하나일 수 있습니다.<br /><br /> 트랜잭션 게시인 경우<br /><br /> **60** = 오류<br /><br /> **56** = 경고: 성능 심각<br /><br /> **52** = 경고: 곧 만료 됨 또는 만료 됨<br /><br /> **50** = 경고: 구독이 초기화 되지 않음<br /><br /> **40** = 실패 한 명령 다시 시도 중<br /><br /> **30** = 실행 중이 아님 (성공)<br /><br /> **20** = 실행 중 (시작 중, 실행 중 또는 유휴 상태)<br /><br /> 병합 게시인 경우<br /><br /> **60** = 오류<br /><br /> **56** = 경고: 성능 심각<br /><br /> **54** = 경고: 장기 실행 병합<br /><br /> **52** = 경고: 곧 만료 됨<br /><br /> **50** = 경고: 구독이 초기화 되지 않음<br /><br /> **40** = 실패 한 명령 다시 시도 중<br /><br /> **30** = 실행 중 (시작 중, 실행 중 또는 유휴 상태)<br /><br /> **20** = 실행 중이 아님 (성공)|  
-|**distributionagentjobid**|**binary (16)**|트랜잭션 게시 구독에 대한 배포 에이전트 작업의 ID입니다.|  
-|**mergeagentjobid**|**binary (16)**|병합 게시 구독에 대한 병합 에이전트 작업의 ID입니다.|  
+|**distributionagentjobid**|**binary(16)**|트랜잭션 게시 구독에 대한 배포 에이전트 작업의 ID입니다.|  
+|**mergeagentjobid**|**binary(16)**|병합 게시 구독에 대한 병합 에이전트 작업의 ID입니다.|  
 |**distributionagentid**|**int**|구독에 대한 배포 에이전트 작업의 ID입니다.|  
 |**distributionagentprofileid**|**int**|배포 에이전트에서 사용하는 에이전트 프로필의 ID입니다.|  
 |**mergeagentid**|**int**|구독에 대한 병합 에이전트 작업의 ID입니다.|  

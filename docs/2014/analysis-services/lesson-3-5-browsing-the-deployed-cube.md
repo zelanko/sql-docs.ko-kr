@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493983"
 ---
 # <a name="browsing-the-deployed-cube"></a>배포된 큐브 찾아보기
@@ -24,8 +24,7 @@ ms.locfileid: "69493983"
   
 1.  에서 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]큐브 디자이너로 전환 하려면 솔루션 탐색기의 **큐브** 폴더에서 ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** 큐브를 두 번 클릭 합니다.  
   
-2.  
-  **브라우저** 탭을 연 다음 디자이너 도구 모음에서 **다시 연결** 단추를 클릭합니다.  
+2.  **브라우저** 탭을 연 다음 디자이너 도구 모음에서 **다시 연결** 단추를 클릭합니다.  
   
 3.  Excel 아이콘을 클릭하여 작업 영역 데이터베이스를 데이터 원본으로 사용하여 Excel을 시작합니다. 데이터 연결을 사용하도록 설정할지를 묻는 메시지가 표시되면 **사용**을 클릭합니다.  
   
@@ -33,8 +32,7 @@ ms.locfileid: "69493983"
   
 5.  피벗 테이블 필드 목록에서 **Product**를 확장합니다.  
   
-6.  
-  **Product Model Lines** 사용자 계층을 **열** 영역으로 끌어옵니다.  
+6.  **Product Model Lines** 사용자 계층을 **열** 영역으로 끌어옵니다.  
   
 7.  피벗 테이블 필드 목록에서 **Customer**를 확장하고 **Location**을 확장한 다음 Customer 차원의 위치 표시 폴더에서 **Customer Geography** 계층을 **행** 영역으로 끌어옵니다.  
   

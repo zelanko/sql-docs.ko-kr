@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266060"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68266060"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|속성의 이름입니다.|  
-|**기본값**|**nvarchar(128)**|속성의 값입니다.|  
+|**value**|**nvarchar(128)**|속성의 값입니다.|  
   
 ## <a name="properties"></a>속성  
  **Directory** 속성은 서버에서 .NET Framework가 설치 된 디렉터리를 나타냅니다. 서버 컴퓨터에 여러 .NET Framework 설치가 있을 수 있으며 이 속성 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 설치를 식별합니다.  
   
  **Version** 속성은 서버에서 .NET Framework 및 호스팅된 CLR의 버전을 나타냅니다.  
   
- **Dm_clr_properties** 동적 관리 뷰는 호스트 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다. 아래에 이 계정과 키의 예제가 나와 있습니다.  
+ **Dm_clr_properties** 동적 관리 뷰는 호스트 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다. 다음 창이 여기에 포함됩니다.  
   
 -   Mscoree is not loaded.  
   
@@ -85,7 +85,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [공용 언어 런타임 관련 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811062"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
@@ -85,6 +85,6 @@ ms.locfileid: "68811062"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 원본 뷰 및 데이터 원본에 대 한 변경 내용 관리](manage-changes-to-data-source-views-and-data-sources.md)   
- [스키마 생성 마법사 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [스키마 생성 마법사&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771463"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**2**|로그 판독기 에이전트|  
 |**3**|배포 에이전트|  
 |**4**|병합 에이전트|  
-|**되었는지**|큐 판독기 에이전트|  
+|**9**|큐 판독기 에이전트|  
   
 `[ @profile_id = ] profile_id`표시할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 **MSagent_profiles** 테이블의 모든 프로필을 반환 하는 **-1**입니다.  
   
@@ -57,7 +57,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|에이전트 유형에 대해 고유합니다.|  
 |**agent_type**|**int**|**1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
-|**형식**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
+|**Type**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
 |**한**|**varchar (3000)**|프로필에 관한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264478"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle에 연결(OracleToSQL)
@@ -60,7 +60,7 @@ TNSNAME 모드 옵션입니다.
 SSMA가 Oracle 데이터베이스에 연결 하는 데 사용할 사용자 이름을 입력 합니다.  
   
 **암호**  
-사용자 이름 암호를 입력합니다.  
+사용자 이름에 대한 암호를 입력합니다.  
   
 **연결 문자열**  
 > [!IMPORTANT]  

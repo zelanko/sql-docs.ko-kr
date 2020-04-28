@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762776"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`구독자 유형입니다. *type* 은 **tinyint**이며 기본값은 NULL입니다. **0** 은 구독자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 나타냅니다. **1** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그렇지 않은 ODBC 데이터 원본 서버 구독자를 지정 합니다.  
   
-`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호입니다. *password* 는 **sysname**이며 기본값은 **%** 입니다. **%** 암호 속성이 변경 되지 않았음을 나타냅니다.  
   
@@ -81,7 +81,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64**|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
   
 `[ @frequency_interval = ] frequency_interval`*Frequency_type*에 대 한 간격입니다. *frequency_interval* 은 **int**이며 기본값은 NULL입니다.  
   
@@ -90,7 +90,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -102,8 +102,8 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4**|분|  
+|**2**|초|  
+|**4**|Minute|  
 |**20cm(8**|Hour|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -128,7 +128,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

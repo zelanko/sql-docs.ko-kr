@@ -16,10 +16,10 @@ ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 398e1eebbb269fa1f1507725fefff820c5174f58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771508"
 ---
 # <a name="sp_help_agent_parameter-transact-sql"></a>sp_help_agent_parameter(Transact-SQL)
@@ -45,7 +45,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|에이전트 프로필의 ID입니다.|  
 |**parameter_name**|**sysname**|매개 변수의 이름입니다.|  
-|**기본값**|**nvarchar(255)**|매개 변수의 값입니다.|  
+|**value**|**nvarchar(255)**|매개 변수의 값입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

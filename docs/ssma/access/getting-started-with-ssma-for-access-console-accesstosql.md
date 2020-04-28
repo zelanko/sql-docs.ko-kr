@@ -10,10 +10,10 @@ ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68222225"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Access 용 SSMA 콘솔 시작 (AccessToSQL)
@@ -57,7 +57,7 @@ SSMA 스크립트 명령 및 옵션을 실행 하면 콘솔 프로그램이 콘�
 |빨강|실행 하는 동안 심각한 오류가 발생 했습니다.|  
 |회색|날짜 및 시간 스탬프, 사용자에 대 한 메시지|  
 |흰색|스크립트 파일 명령, 메시지 유형|  
-|노랑|Warning|  
+|노란색|Warning|  
 |녹색|사용자 입력 확인|  
 |녹청|작업의 시작, 종료 및 결과|  
   

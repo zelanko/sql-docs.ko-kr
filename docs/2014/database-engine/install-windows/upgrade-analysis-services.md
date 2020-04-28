@@ -21,18 +21,17 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889189"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드할 수 있습니다. SharePoint 모드에서 업그레이드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 업그레이드](upgrade-power-pivot-for-sharepoint.md)를 참조 하세요. 기존 SQL Server 인스턴스를 업그레이드 하는 방법에 대 한 자세한 내용은 [설치 마법사를 사용 하 여 SQL Server 2014로 업그레이드 &#40;설치&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)를 참조 하세요.  
   
 ## <a name="known-upgrade-issues"></a>알려진 업그레이드 문제  
- 로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]업그레이드 하기 전에 다음을 검토 하십시오.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]으로 업그레이드하기 전에 다음을 검토하십시오.  
   
 -   [SQL Server 2014 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=296445)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "68889189"
   
 -   [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)  
   
--   [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [SQL Server 2014 설치에 대한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [시스템 구성 검사기의 검사 매개 변수](check-parameters-for-the-system-configuration-checker.md)  
   

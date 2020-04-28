@@ -16,10 +16,10 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9db4f3a40311e94d94d8910f4d1625f89f29926a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768956"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb(Transact-SQL)
@@ -43,7 +43,7 @@ sp_changedistributiondb [ @database= ] 'database'
   
 `[ @property = ] 'property'`지정 된 데이터베이스에 대해 변경할 속성입니다. *속성* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**history_retention**|기록 테이블의 보존 기간입니다.|  
 |**max_distretention**|최대 배포 보존 기간입니다.|  

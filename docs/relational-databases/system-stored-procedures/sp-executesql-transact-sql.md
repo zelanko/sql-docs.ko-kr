@@ -20,17 +20,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290351"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  여러 번 사용할 수 있거나 동적으로 빌드된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 일괄 처리를 실행합니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 포함 매개 변수를 포함할 수 있습니다.  
+  여러 번 사용할 수 있거나 동적으로 빌드된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 일괄 처리를 실행합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 포함 매개 변수를 포함할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  런타임 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 악의적인 공격에 애플리케이션을 노출시킬 수 있습니다.  
@@ -81,8 +80,7 @@ sp_executesql [ @stmt = ] statement
   
  sp_executesql은 일괄 처리, 이름의 범위 및 데이터베이스 컨텍스트 면에서 EXECUTE와 동작이 동일합니다. Sp_executesql [!INCLUDE[tsql](../../includes/tsql-md.md)] \@stmt 매개 변수의 문이나 일괄 처리는 sp_executesql 문을 실행할 때까지 컴파일되지 않습니다. 그러면 stmt의 \@내용이 컴파일된 후 sp_executesql를 호출한 일괄 처리의 실행 계획과 별도로 실행 계획으로 실행 됩니다. sp_executesql 일괄 처리는 sp_executesql을 호출하는 일괄 처리에서 선언된 변수를 참조할 수 없습니다. sp_executesql 일괄 처리의 로컬 커서 또는 변수는 sp_executesql을 호출하는 일괄 처리에 노출되지 않습니다. 데이터베이스 컨텍스트의 변경 내용은 sp_executesql 문이 종료될 때까지만 지속됩니다.  
   
- 문에 대한 매개 변수 값의 변경 내용이 변형뿐인 경우 저장 프로시저 대신 sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 여러 번 실행할 수 있습니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 자체는 달라지지 않고 매개 변수 값만 달라지므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 처음 실행할 때 생성되는 실행 계획을 다시 사용합니다.  
+ 문에 대한 매개 변수 값의 변경 내용이 변형뿐인 경우 저장 프로시저 대신 sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 여러 번 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 자체는 달라지지 않고 매개 변수 값만 달라지므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 처음 실행할 때 생성되는 실행 계획을 다시 사용합니다.  
   
 > [!NOTE]  
 >  문의 문자열에 정규화된 개체 이름을 사용하여 성능을 향상시킬 수 있습니다.  
@@ -132,8 +130,7 @@ SELECT @max_title;
   
 -   sp_executesql 문자열에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 실제 텍스트는 모든 실행에서 동일하기 때문에 쿼리 최적화 프로그램이 두 번째 실행의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 첫 번째 실행에서 생성된 실행 계획을 일치시킬 수 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 두 번째 문을 컴파일할 필요가 없습니다.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열이 한 번만 작성됩니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열이 한 번만 작성됩니다.  
   
 -   정수 매개 변수는 해당 네이티브 형식으로 지정됩니다. 유니코드로 캐스팅할 필요가 없습니다.  
   
@@ -237,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D. 단순 SELECT 문 실행  
  다음은 `SELECT`이라는 포함 매개 변수를 포함한 단순 `@level` 문을 만들고 실행하는 예입니다.  

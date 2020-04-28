@@ -21,26 +21,25 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d5a52fc7c614752cde43a1670f2fb299b35aa0ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265773"
 ---
 # <a name="sysdm_os_memory_cache_hash_tables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 활성 캐시에 대해 하나의 행을 반환합니다.  
   
 > [!NOTE]  
 >  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_memory_cache_hash_tables**을 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|캐시 항목의 주소(기본 키)입니다. Null을 허용하지 않습니다.|  
 |**name**|**nvarchar(256)**|캐시의 이름입니다. Null을 허용하지 않습니다.|  
-|**type**|**nvarchar (60)**|캐시 유형입니다. Null을 허용하지 않습니다.|  
+|**type**|**nvarchar(60)**|캐시 유형입니다. Null을 허용하지 않습니다.|  
 |**table_level**|**int**|해시 테이블 번호입니다. 특정 캐시에는 다양한 해시 함수에 해당하는 여러 개의 해시 테이블이 포함될 수도 있습니다. Null을 허용하지 않습니다.|  
 |**buckets_count**|**int**|해시 테이블의 버킷 수입니다. Null을 허용하지 않습니다.|  
 |**buckets_in_use_count**|**int**|현재 사용 중인 버킷 수입니다. Null을 허용하지 않습니다.|  

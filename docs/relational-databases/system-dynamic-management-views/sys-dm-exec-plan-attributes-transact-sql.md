@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255606"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
@@ -46,16 +46,16 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|attribute|**varchar (128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
-|값|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
+|attribute|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
+|value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
 위의 표에서 **특성** 에는 다음 값을 사용할 수 있습니다.
 
-|attribute|데이터 형식|Description|  
+|특성|데이터 형식|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
-|objectId|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. 이는 데이터베이스 개체 (프로시저, 뷰, 트리거 등)에 대해 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 에 저장 된 개체 ID입니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
+|objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. 이는 데이터베이스 개체 (프로시저, 뷰, 트리거 등)에 대해 [sys. 개체](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 에 저장 된 개체 ID입니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
 |dbid|**int**|계획이 참조하는 엔터티를 포함하는 데이터베이스의 ID입니다.<br /><br /> 임시 또는 준비된 계획의 경우 일괄 처리가 실행된 데이터베이스 ID입니다.|  
 |dbid_execute|**int**|**리소스** 데이터베이스에 저장 된 시스템 개체의 경우 캐시 된 계획이 실행 되는 데이터베이스 ID입니다. 다른 모든 경우에는 0입니다.|  
 |user_id|**int**|값 -2는 전송된 일괄 처리가 암시적 이름 확인에 의존하지 않으며 여러 사용자들 간에 공유될 수 있음을 의미합니다. 이는 선호되는 방법입니다. 기타 값은 모두 데이터베이스에 쿼리를 전송하는 사용자의 사용자 ID를 나타냅니다.| 
@@ -64,8 +64,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |date_first|**tinyint**|날짜의 첫 번째 값입니다. 자세한 내용은 [SET DATEFIRST&#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)를 참조하세요.|  
 |상태|**int**|캐시 조회 키의 일부인 내부 상태 비트입니다.|  
 |required_cursor_options|**int**|커서 유형과 같이 사용자가 지정한 커서 옵션입니다.|  
-|acceptable_cursor_options|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 문의 실행을 지원하도록 암시적으로 변환될 수 있는 커서 옵션입니다. 예를 들어 사용자는 동적 커서를 지정할 수 있지만 쿼리 최적화 프로그램을 통해 이 커서 유형을 정적 커서로 변환할 수 있습니다.|  
+|acceptable_cursor_options|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 문의 실행을 지원하도록 암시적으로 변환될 수 있는 커서 옵션입니다. 예를 들어 사용자는 동적 커서를 지정할 수 있지만 쿼리 최적화 프로그램을 통해 이 커서 유형을 정적 커서로 변환할 수 있습니다.|  
 |inuse_exec_context|**int**|쿼리 계획을 사용하고 있는 현재 실행 중인 일괄 처리의 수입니다.|  
 |free_exec_context|**int**|현재 사용되고 있지 않은 쿼리 계획에 대한 캐시된 실행 컨텍스트 수입니다.|  
 |hits_exec_context|**int**|계획 캐시에서 실행 컨텍스트를 얻어 다시 사용한 횟수로서 SQL 문을 다시 컴파일할 때 발생하는 오버헤드를 줄여 줍니다. 지금까지의 모든 일괄 처리 실행에 대한 집계 값입니다.|  
@@ -168,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [dm_exec_cached_plans &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

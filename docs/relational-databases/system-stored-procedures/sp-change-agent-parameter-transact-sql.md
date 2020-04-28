@@ -16,10 +16,10 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768939"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
@@ -238,7 +238,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- 지정 된 프로필에 대해 정의 된 매개 변수를 보려면 **sp_help_agent_profile** 를 실행 하 고 *profile_id*와 연결 된 *profile_name* 를 확인 합니다. 적절 한 *profile_id*를 사용 하 여 **** 다음 실행 sp_help_agent_parameters *profile_id* 사용 하 여 프로필에 연결 된 매개 변수를 확인 합니다. [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)를 실행 하 여 프로필에 매개 변수를 추가할 수 있습니다.  
+ 지정 된 프로필에 대해 정의 된 매개 변수를 보려면 **sp_help_agent_profile** 를 실행 하 고 *profile_id*와 연결 된 *profile_name* 를 확인 합니다. 적절 한 *profile_id*를 사용 하 여 **sp_help_agent_parameters** 다음 실행 sp_help_agent_parameters *profile_id* 사용 하 여 프로필에 연결 된 매개 변수를 확인 합니다. [Sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)를 실행 하 여 프로필에 매개 변수를 추가할 수 있습니다.  
   
 `[ @parameter_value = ] 'parameter_value'`매개 변수의 새 값입니다. *parameter_value* 은 **nvarchar (255)** 이며 기본값은 없습니다.  
   

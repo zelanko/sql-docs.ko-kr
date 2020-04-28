@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266514"
 ---
 # <a name="save-metadata--oracletosql"></a>메타데이터 저장(OracleToSQL)
@@ -34,10 +34,10 @@ SSMA는 필요에 따라 메타 데이터를 프로젝트에 로드 합니다. �
 **모두 선택**  
 나열 된 모든 데이터베이스를 선택 합니다.  
   
-**지우기**  
+**해제**  
 메타 데이터가 누락 된 모든 데이터베이스의 확인란을 선택 취소 합니다. 메타 데이터가 로드 된 경우에는이 확인란의 선택을 취소할 수 없습니다.  
   
-**Save**  
+**저장**  
 메타 데이터가 누락 된 선택한 데이터베이스에 대 한 메타 데이터를 로드 하 여 프로젝트를 저장 합니다.  
   
 **취소**  

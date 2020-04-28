@@ -16,10 +16,10 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768989"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview(Transact-SQL)
@@ -71,7 +71,7 @@ sp_articleview [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`복제를 동기화 하는 데 사용 되는 저장 프로시저가 자동으로 다시 생성 되는지 여부입니다. *refreshsynctranprocs* 는 **bit**이며 기본값은 1입니다.  
   
@@ -104,7 +104,7 @@ sp_articleview [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_articleview**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
  [정적 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_articlefilter &#40;](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md)   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892392"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance(DMX)
@@ -47,8 +47,7 @@ ClusterDistance([<ClusterID expression>])
  ClusterDistance (N) = 1-Clusterdistance (N))  
   
 ## <a name="related-prediction-functions"></a>관련 예측 함수  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 클러스터링 모델을 쿼리하는 다음과 같은 함수를 추가로 제공합니다.  
   
 -   [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md) 함수를 사용 하 여 가장 가능성이 높은 클러스터를 반환 합니다.  
   
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [클러스터 &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [DMX &#40;함수&#41;](../dmx/functions-dmx.md)   
- [클러스터링 모델에 대 한 마이닝 모델 콘텐츠 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

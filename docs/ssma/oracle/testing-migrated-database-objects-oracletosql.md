@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 858c564c965fe7105c86a3087923887097e4ddac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266476"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>마이그레이션된 데이터베이스 개체 테스트(OracleToSQL)
@@ -45,7 +45,7 @@ SSMA 테스터는 Oracle에서 테스트를 위해 선택한 개체와의 [!INCL
 > [!NOTE]  
 > 주의! 프로덕션 시스템에서는 SSMA 테스터를 사용 하지 마세요. 테스터를 실행 하는 동안 원본 스키마와 데이터가 수정 됩니다. 한편, 일부 형식의 테스트 된 코드에서는 원래 상태의 전체 복원을 수행할 수 없습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
 SSMA 테스터를 사용 하려는 경우에는 **테스터 데이터베이스 설치** 옵션이 설정 된 상태로 Ssma Oracle 확장 팩을 설치 합니다.  
   
 결과 테이블 데이터의 비교를 사용 하려면 스키마 변환이 시작 되기 전에 **ROWID 열 생성** 옵션을 **예** 로 설정 합니다. SSMA는 **스키마 변환** 명령을 실행 하는 동안 모든 테이블에 ROWID 열을 추가 합니다.  

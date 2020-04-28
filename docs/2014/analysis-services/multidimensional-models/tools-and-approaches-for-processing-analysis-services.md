@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530945"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
@@ -33,14 +33,11 @@ ms.locfileid: "69530945"
   
 -   영향 분석을 실행하여 현재 동작의 결과로 처리되지 않는 관련 개체의 목록 검토  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] XMLA 쿼리 창에서 스크립트를 생성하고 실행하여 개별 개체 또는 여러 개체 처리  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] XMLA 쿼리 창에서 스크립트를 생성하고 실행하여 개별 개체 또는 여러 개체 처리  
   
--   
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] PowerShell cmdlet 사용  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] PowerShell cmdlet 사용  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 제어 흐름 및 태스크 사용  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 제어 흐름 및 태스크 사용  
   
 -   SQL Server 프로파일러를 사용하여 처리 모니터링  
   
@@ -53,8 +50,7 @@ ms.locfileid: "69530945"
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
   
 2.  처리할 Analysis Services 개체를 마우스 오른쪽 단추로 클릭한 다음 **처리**를 클릭합니다. 다음과 같은 수준 모두에서 데이터를 처리할 수 있습니다.  
   
@@ -72,11 +68,9 @@ ms.locfileid: "69530945"
   
      Analysis Services 개체는 계층적입니다. 데이터베이스를 선택하면 데이터베이스에 포함된 모든 개체에 대해 처리가 발생할 수 있습니다. 처리가 실제로 발생하는지 여부는 선택한 처리 옵션과 개체 상태에 따라 달라집니다. 개체가 처리되지 않은 경우 해당 부모를 처리하면 해당 개체가 처리됩니다. 개체 종속성에 대한 자세한 내용은 [Processing Analysis Services Objects](processing-analysis-services-objects.md)를 참조하십시오.  
   
-3.  
-  **처리** 대화 상자의 **처리 옵션**에서 제공된 기본값을 사용하거나 목록에서 다른 옵션을 선택합니다. 각 옵션에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)을 참조하세요.  
+3.  **처리** 대화 상자의 **처리 옵션**에서 제공된 기본값을 사용하거나 목록에서 다른 옵션을 선택합니다. 각 옵션에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
-4.  
-  **영향 분석** 을 클릭하면 처리 대화 상자에 나열된 개체를 처리하는 경우 영향을 받는 종속 개체를 식별하고 선택적으로 처리할 수 있습니다.  
+4.  **영향 분석** 을 클릭하면 처리 대화 상자에 나열된 개체를 처리하는 경우 영향을 받는 종속 개체를 식별하고 선택적으로 처리할 수 있습니다.  
   
 5.  원하는 경우 **설정 변경** 을 클릭하여 처리 순서, 특정 오류 유형에 대한 처리 동작 및 기타 설정을 수정할 수 있습니다.  
   
@@ -86,43 +80,35 @@ ms.locfileid: "69530945"
   
 ### <a name="processing-objects-in-sql-server-data-tools"></a>SQL Server 데이터 도구에서 개체 처리  
   
-1.  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 시작하고 배포된 프로젝트를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 시작하고 배포된 프로젝트를 엽니다.  
   
 2.  솔루션 탐색기의 배포된 프로젝트에서 **차원** 폴더를 확장합니다.  
   
 3.  차원을 마우스 오른쪽 단추로 클릭한 다음 **처리**를 클릭합니다. 여러 차원을 마우스 오른쪽 단추로 클릭하여 여러 개체를 한 번에 처리할 수 있습니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](batch-processing-analysis-services.md)을 참조하세요.  
   
-4.  
-  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭한 다음 드롭다운 목록에서 **전체 처리** 를 선택합니다.  
+4.  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭한 다음 드롭다운 목록에서 **전체 처리** 를 선택합니다.  
   
 5.  **실행**을 클릭합니다.  
   
 6.  처리를 마치면 **닫기**를 클릭합니다.  
   
-##  <a name="bkmk_impactanalysis"></a>영향 분석을 실행 하 여 개체 종속성 및 작업 범위 식별  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>영향 분석을 실행 하 여 개체 종속성 및 작업 범위 식별  
   
-1.  
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]개체를 처리하기 전에 **개체 처리** 대화 상자 중 하나에서 **영향 분석** 을 클릭하여 관련 개체에 대한 영향을 분석할 수 있습니다.  
+1.  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]개체를 처리하기 전에 **개체 처리** 대화 상자 중 하나에서 **영향 분석** 을 클릭하여 관련 개체에 대한 영향을 분석할 수 있습니다.  
   
 2.  차원, 큐브, 측정값 그룹 또는 파티션을 마우스 오른쪽 단추로 클릭하여 **개체 처리** 대화 상자를 엽니다.  
   
-3.  
-  **영향 분석**을 클릭합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모델을 검색한 후 처리하기 위해 선택한 모델과 관련된 개체에 대한 다시 처리 요구 사항에 대해 보고합니다.  
+3.  **영향 분석**을 클릭합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모델을 검색한 후 처리하기 위해 선택한 모델과 관련된 개체에 대한 다시 처리 요구 사항에 대해 보고합니다.  
   
 ### <a name="processing-objects-using-xmla"></a>XMLA를 사용하여 개체 처리  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
   
 2.  처리할 개체를 마우스 오른쪽 단추로 클릭한 다음 **처리**를 클릭합니다.  
   
-3.  
-  **처리** 대화 상자에서 사용할 처리 옵션을 선택합니다. 기타 설정을 수정합니다. 영향 분석을 실행하여 변경해야 할 사항을 식별합니다.  
+3.  **처리** 대화 상자에서 사용할 처리 옵션을 선택합니다. 기타 설정을 수정합니다. 영향 분석을 실행하여 변경해야 할 사항을 식별합니다.  
   
-4.  
-  **개체 처리** 화면에서 **스크립트** 를 클릭합니다.  
+4.  **개체 처리** 화면에서 **스크립트** 를 클릭합니다.  
   
      이렇게 하면 XMLA 스크립트가 생성되고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA 쿼리 창이 열립니다.  
   
@@ -136,13 +122,13 @@ ms.locfileid: "69530945"
   
 1.  이 SQL Server 릴리스부터는 Analysis Services PowerShell cmdlet을 사용하여 개체를 처리할 수 있습니다. 다음 cmdlet은 대화형으로 실행하거나 스크립트로 실행할 수 있습니다.  
   
-    -   [Invoke-processcube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ascmd cmdlet-](/powershell/module/sqlserver/invoke-ascmd)처리 명령을 포함 하는 XMLA, MDX 또는 DMX 스크립트를 실행 하는 데 사용할 수 있습니다.  
+    -   [Invoke-ASCmd cmdlet](/powershell/module/sqlserver/invoke-ascmd)- 처리 명령을 포함하는 XMLA, MDX 또는 DMX 스크립트를 실행하는 데 사용할 수 있습니다.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>SQL Server 프로파일러를 사용하여 개체 처리 모니터링  
   
@@ -152,23 +138,21 @@ ms.locfileid: "69530945"
   
 3.  다음 이벤트를 선택합니다.  
   
-    -   처리가 시작 및 중지 되는 시점을 표시 하는 **명령 시작** 및 **명령 끝**  
+    -   처리가 시작되고 중지되는 때를 표시하려면**명령 시작** 및 **Comm및 End** to show when processing starts 및 stops  
   
-    -   오류를 캡처하는 **동안 오류가 발생 했습니다** .  
+    -   오류를 캡처하려면**오류** 를 선택합니다.  
   
-    -   **진행률 보고서 시작**, **진행률 보고서 현재**및 **진행률 보고서 끝** -프로세스 상태를 보고 하 고 데이터를 검색 하는 데 사용 되는 SQL 쿼리를 표시 합니다.  
+    -   처리 상태에 대해 보고하고 데이터를 검색하는 데 사용되는 SQL 쿼리를 표시하려면**진행률 보고서 시작**, **진행률 보고서 현재 부분**및 **진행률 보고서 끝** 을 선택합니다.  
   
-    -   **Mdx 스크립트 시작** 및 **Mdx 스크립트 실행 종료** 를 실행 하 여 큐브 계산 표시  
+    -   큐브 계산을 표시하려면**MDX 스크립트 실행의 시작** 및 **MDX 스크립트 실행의 끝** 을 선택합니다.  
   
     -   필요에 따라 처리와 관련된 성능 문제를 진단하려는 경우 잠금 이벤트를 추가합니다.  
   
 ### <a name="process-analysis-services-objects-using-integration-services"></a>Integration Services를 사용하여 Analysis Services 개체 처리  
   
-1.  
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 Analysis Services 처리 태스크를 사용하여 원본 관계형 데이터베이스를 정기적으로 업데이트할 때 자동으로 개체를 새 데이터로 채우는 패키지를 만듭니다.  
+1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 Analysis Services 처리 태스크를 사용하여 원본 관계형 데이터베이스를 정기적으로 업데이트할 때 자동으로 개체를 새 데이터로 채우는 패키지를 만듭니다.  
   
-2.  
-  **SSIS 도구 상자**에서 **Analysis Services 처리** 를 두 번 클릭하여 패키지에 추가합니다.  
+2.  **SSIS 도구 상자**에서 **Analysis Services 처리** 를 두 번 클릭하여 패키지에 추가합니다.  
   
 3.  태스크를 편집하여 데이터베이스에 대한 연결, 처리할 개체 및 처리 옵션을 지정합니다. 이 태스크의 구현 방법은 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)을 참조하십시오.  
   

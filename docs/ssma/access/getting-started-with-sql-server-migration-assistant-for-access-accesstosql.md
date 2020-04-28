@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259922"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>액세스를 위한 SQL Server Migration Assistant 시작 (AccessToSQL)
@@ -56,7 +56,7 @@ SSMA를 설치한 후에는 도구를 사용 하 여 Access 데이터베이스�
   
 이러한 작업 및 이러한 작업을 수행 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하십시오.  
   
--   [Access 데이터베이스에서 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
+-   [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
   
 -   [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
@@ -105,7 +105,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 #### <a name="the-migration-toolbar"></a>마이그레이션 도구 모음  
 마이그레이션 도구 모음에는 다음 명령이 포함 되어 있습니다.  
   
-|단추|함수|  
+|단추|기능|  
 |----------|------------|  
 |**변환, 로드 및 마이그레이션**|Access 데이터베이스를 변환 하 고, 변환 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 또는 AZURE sql db로 로드 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 또는 azure sql db로 마이그레이션합니다.|  
 |**보고서 만들기**|선택한 액세스 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL DB 구문으로 변환한 후 변환의 성공 여부를 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 Access Metadata Explorer에서 개체를 선택한 경우에만 사용할 수 있습니다.|  
@@ -116,9 +116,9 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 ### <a name="menus"></a>메뉴  
 SSMA에는 다음 메뉴가 포함 됩니다.  
   
-|메뉴|Description|  
+|메뉴|설명|  
 |--------|---------------|  
-|**파일**|마이그레이션 마법사, 프로젝트 작업, Access 데이터베이스 파일 추가 및 제거, 또는 Azure SQL DB에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대 한 명령이 포함 되어 있습니다.|  
+|**최근에 사용한 파일**|마이그레이션 마법사, 프로젝트 작업, Access 데이터베이스 파일 추가 및 제거, 또는 Azure SQL DB에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결에 대 한 명령이 포함 되어 있습니다.|  
 |**편집**|SQL 세부 정보 창에서 복사 [!INCLUDE[tsql](../../includes/tsql-md.md)] 와 같이 세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다. **책갈피 관리** 대화 상자를 열려면 편집 메뉴에서 책갈피 관리를 클릭 합니다. 대화 상자에 기존 책갈피의 목록이 표시 됩니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. 그러면 액세스 메타 데이터 탐색기와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AZURE SQL DB 메타 데이터 탐색기 간의 개체가 동기화 됩니다. 에는 **출력** 및 **오류 목록** 창과 레이아웃을 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 되어 있습니다.|  
 |**도구**|보고서를 만들고, 데이터를 내보내고, 개체 및 데이터를 마이그레이션하고, 테이블을 연결 하 고, 전역 및 프로젝트 설정 대화 상자에 대 한 액세스를 제공 하는 명령을 포함 합니다.|  

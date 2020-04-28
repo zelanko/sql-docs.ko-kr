@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265708"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters(Transact-SQL)
@@ -37,16 +37,15 @@ ms.locfileid: "68265708"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar (128)**|이 카운터가 속한 범주입니다.|  
-|**counter_name**|**nchar (128)**|카운터의 이름입니다. 카운터에 대 한 자세한 정보를 얻기 위해 사용 중인 카운터 목록에서 선택할 항목의 이름 [SQL Server 개체](../../relational-databases/performance-monitor/use-sql-server-objects.md)입니다. |  
-|**instance_name**|**nchar (128)**|카운터의 특정 항목 이름입니다. 대개 데이터베이스 이름이 포함됩니다.|  
+|**object_name**|**nchar(128)**|이 카운터가 속한 범주입니다.|  
+|**counter_name**|**nchar(128)**|카운터의 이름입니다. 카운터에 대 한 자세한 정보를 얻기 위해 사용 중인 카운터 목록에서 선택할 항목의 이름 [SQL Server 개체](../../relational-databases/performance-monitor/use-sql-server-objects.md)입니다. |  
+|**instance_name**|**nchar(128)**|카운터의 특정 항목 이름입니다. 대개 데이터베이스 이름이 포함됩니다.|  
 |**cntr_value**|**bigint**|카운터의 현재 값입니다.<br /><br /> **참고:** 초 단위 카운터의 경우이 값은 누적 됩니다. 따라서 특정한 시간 간격으로 값을 샘플링하여 비율 값을 계산해야 합니다. 임의의 연속된 두 샘플 값 간의 차이는 사용된 시간 간격에 대한 비율과 동일합니다.|  
 |**cntr_type**|**int**|Windows 성능 아키텍처가 정의한 카운터의 유형입니다. 성능 카운터 유형에 대 한 자세한 내용은 문서 또는 Windows Server 설명서의 [WMI 성능 카운터 형식](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) 을 참조 하세요.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치 인스턴스가 Windows 운영 체제의 성능 카운터를 표시하지 못하면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 성능 카운터가 사용할 수 없도록 설정되었는지 확인합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치 인스턴스가 Windows 운영 체제의 성능 카운터를 표시하지 못하면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 성능 카운터가 사용할 수 없도록 설정되었는지 확인합니다.  
   
 ```  
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  

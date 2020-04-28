@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769098"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication(Transact-SQL)
@@ -91,19 +91,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`동기화 모드입니다. *sync_method* 은 **nvarchar (13)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**전용**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.|  
-|**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자의_ 경우 **문자** _는 스냅숏 복제에만 사용할 수_있습니다.|  
+|**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.|  
+|**자의**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자의_ 경우 **문자** _는 스냅숏 복제에만 사용할 수_있습니다.|  
 |**노드당**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*.|  
 |**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다.|  
-|**데이터베이스 스냅숏**|데이터베이스 스냅샷에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 일부 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
-|**database snapshot character**|데이터베이스 스냅샷에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 일부 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
-|NULL(기본값)|기본값은 **** 게시자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본입니다. 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우에는 *Repl_freq* 값이 **스냅숏으로** **설정 되 고** 다른 모든 사례에 대해서는 **concurrent_c** 됩니다.|  
+|**데이터베이스 스냅숏**|데이터베이스 스냅샷에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 일부 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.|  
+|**database snapshot character**|데이터베이스 스냅샷에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은 일부 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.|  
+|NULL(기본값)|기본값은 **native** 게시자의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본입니다. 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우에는 *Repl_freq* 값이 **스냅숏으로** **설정 되 고** 다른 모든 사례에 대해서는 **concurrent_c** 됩니다.|  
   
 `[ \@repl_freq = ] 'repl_freq'`는 복제 빈도의 유형이 며 *repl_freq* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**연속** (기본값)|게시자가 모든 로그 기반 트랜잭션의 출력을 제공합니다. 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우에는 *sync_method* 를 **concurrent_c**으로 설정 해야 합니다.|  
 |**스냅숏에**|게시자가 예약된 동기화 이벤트만 생성합니다. 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우에는 *sync_method* 를 **character**로 설정 해야 합니다.|  
@@ -112,9 +112,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`게시 데이터를 사용할 수 있는지 여부를 지정 합니다. *status* 는 **nvarchar (8)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**directory**|구독자가 게시 데이터를 즉시 사용할 수 있습니다.|  
+|**활성**|구독자가 게시 데이터를 즉시 사용할 수 있습니다.|  
 |**비활성** (기본값)|게시가 처음 작성될 때 구독자가 게시 데이터를 사용할 수 없습니다. 구독할 수는 있으나 구독이 처리되지 않습니다.|  
   
  *Oracle 게시자에 대해서는 지원 되지 않습니다*.  
@@ -135,10 +135,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`구독 업데이트를 위한 동기화 저장 프로시저가 게시자에서 생성 되는지 여부를 지정 합니다. *autogen_sync_procs* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|업데이트 구독이 사용될 때 자동으로 설정됩니다.|  
-|**허위**|업데이트 구독이 사용되지 않을 때나 Oracle 게시자에 대해서 자동으로 설정됩니다.|  
+|**false**|업데이트 구독이 사용되지 않을 때나 Oracle 게시자에 대해서 자동으로 설정됩니다.|  
 |NULL(기본값)|구독 업데이트를 사용 하는 경우 기본값은 **true** 이 고, 구독 업데이트를 사용 하도록 설정 하지 않으면 **false** 입니다.|  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`지연 업데이트 구독자 옵션을 사용할 때 따라야 하는 충돌 해결 정책을 지정 합니다. *conflict_policy* 은 **nvarchar (100)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**pub wins**|충돌 시 게시자 내용을 적용합니다.|  
 |**sub reinit**|구독을 다시 초기화합니다.|  
@@ -191,11 +191,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`사용 되는 큐의 유형을 지정 합니다. *queue_type* 은 **nvarchar (10)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**sql**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다.|  
-|NULL(기본값)|는를 **** 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 트랜잭션을 저장 하도록 지정 하는 sql로 기본 설정 됩니다.|  
+|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다.|  
+|NULL(기본값)|는를 **sql**사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 트랜잭션을 저장 하도록 지정 하는 sql로 기본 설정 됩니다.|  
   
 > [!NOTE]  
 >  MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) 사용이 더 이상 지원되지 않습니다. **Msmq** 값을 지정 하면 경고가 발생 하 고 복제에서 자동으로 값을 **sql**로 설정 합니다.  
@@ -215,10 +214,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`구독자가 초기 스냅숏이 아닌 백업에서이 게시에 대 한 구독을 초기화할 수 있는지 여부를 나타냅니다. *allow_initialize_from_backup* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|백업으로부터 초기화할 수 있습니다.|  
-|**허위**|백업으로부터 초기화할 수 없습니다.|  
+|**false**|백업으로부터 초기화할 수 없습니다.|  
 |NULL(기본값)|피어 투 피어 복제 토폴로지의 게시의 경우 기본값은 **true** 이 고 다른 모든 게시의 경우 **false** 입니다.|  
   
  자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
@@ -226,7 +225,7 @@ sp_addpublication [ @publication = ] 'publication'
 > [!WARNING]  
 >  구독자 데이터가 누락되는 것을 방지하려면 **에서** sp_addpublication `@allow_initialize_from_backup = N'true'`을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하십시오.  
   
-`[ \@replicate_ddl = ] replicate_ddl`게시에 대해 스키마 복제가 지원 되는지 여부를 나타냅니다. *replicate_ddl* 는 **int**이며 기본값은 게시자의 **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 1이 고 **** 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우 0입니다. **1** 은 게시자에서 실행 된 ddl (데이터 정의 언어) 문이 복제 됨을 나타내고 **0** 은 ddl 문이 복제 되지 않음을 나타냅니다. *Oracle 게시자에 대해서는 스키마 복제가 지원되지 않습니다.* 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
+`[ \@replicate_ddl = ] replicate_ddl`게시에 대해 스키마 복제가 지원 되는지 여부를 나타냅니다. *replicate_ddl* 는 **int**이며 기본값은 게시자의 **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 1이 고 **0** 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우 0입니다. **1** 은 게시자에서 실행 된 ddl (데이터 정의 언어) 문이 복제 됨을 나타내고 **0** 은 ddl 문이 복제 되지 않음을 나타냅니다. *Oracle 게시자에 대해서는 스키마 복제가 지원되지 않습니다.* 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
  Replicate_ddl 매개 변수는 ddl 문이 열을 추가할 때 적용 됩니다. * \@* Ddl 문이 다음과 같은 이유로 열을 변경 하거나 삭제 하는 경우 * \@replicate_ddl* 매개 변수는 무시 됩니다.  
   

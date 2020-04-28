@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266958"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68266958"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[고급 개체 선택 &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|**평가 보고서** 대화 상자를 사용 하 여 Access 데이터베이스 개체의 변환을 분석 하 고 마이그레이션에 소요 되는 시간을 예측할 수 있습니다.|  
@@ -52,6 +52,6 @@ ms.locfileid: "68266958"
   
 ## <a name="see-also"></a>참고 항목  
 [Access &#40;AccessToSQL&#41;에 대 한 SQL Server Migration Assistant 시작](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[Access 데이터베이스에서 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
+[마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

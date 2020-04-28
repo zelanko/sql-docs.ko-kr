@@ -11,18 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494001"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>1단원: Analysis Services 데이터베이스 준비(기본 데이터 마이닝 자습서)
-  
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 에서 비즈니스 인텔리전스 애플리케이션을 디자인하는 태스크를 수행한 사용자가 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새 직원이라고 가정합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 환경을 활용 하 여 자전거를 구매한 사용자에 대 한 흥미롭고 조치 가능한 정보를 검색할 수 있습니다. 그런 다음 앞으로 자전거를 구매할 가능성이 높은 잠재 고객을 예측할 수 있습니다.  
   
- 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 응용 프로그램을 디자인 하는 것 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 은 다차원 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델링 및 데이터 마이닝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 을 위한 프로젝트 템플릿을 기반으로 프로젝트를 만드는 것으로 시작 합니다. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 하나 이상의 데이터 원본을 정의합니다. 그런 다음 데이터 원본에서 선택한 테이블과 뷰에서 *데이터 원본 뷰*라는 메타데이터 뷰를 정의합니다.  
+ 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이 응용 프로그램을 디자인 하는 것 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 은 다차원 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델링 및 데이터 마이닝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 을 위한 프로젝트 템플릿을 기반으로 프로젝트를 만드는 것으로 시작 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 하나 이상의 데이터 원본을 정의합니다. 그런 다음 데이터 원본에서 선택한 테이블과 뷰에서 *데이터 원본 뷰*라는 메타데이터 뷰를 정의합니다.  
   
  이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만들고 단일 데이터 원본을 정의한 다음 데이터 원본 뷰에 테이블의 하위 집합을 추가합니다. 이 단원에서는 다음 태스크를 다룹니다.  
   

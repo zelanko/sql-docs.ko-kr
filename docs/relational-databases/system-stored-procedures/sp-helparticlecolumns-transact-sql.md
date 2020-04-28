@@ -16,10 +16,10 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771088"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns(Transact-SQL)
@@ -46,7 +46,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자가 요청한 아티클을 게시할 때 게시자를 지정 하면 안 됩니다. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+>  게시자가 요청한 아티클을 게시할 때 게시자를 지정 하면 안 됩니다. *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (게시 되지 않은 열) 또는 **1** (게시 된 열)  
@@ -57,7 +57,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**열 id**|**int**|열의 식별자입니다.|  
 |**열의**|**sysname**|열의 이름입니다.|  
-|**게시할지**|**bit**|열이 게시되는지 여부입니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
+|**published**|**bit**|열이 게시되는지 여부입니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**게시자 유형**|**sysname**|게시자에 있는 열의 데이터 형식입니다.|  
 |**구독자 유형**|**sysname**|구독자에 있는 열의 데이터 형식입니다.|  
   

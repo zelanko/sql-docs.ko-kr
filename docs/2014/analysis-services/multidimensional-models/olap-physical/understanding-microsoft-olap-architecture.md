@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530902"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
@@ -39,9 +39,9 @@ ms.locfileid: "69530902"
  [자세히 ...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **프로그래밍 아키텍처**  
- [AMO(Analysis Management Object) &#40;AMO&#41;를 사용 하 여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- [Analysis Services 스크립팅 언어 &#40;를 사용 하 여 개발&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [ASSL&#40;Analysis Services Scripting Language&#41;을 사용하여 개발](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [ADOMD.NET를 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 148cab2122a907c138a2bd74c5f3403d231e2793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262666"
 ---
 # <a name="sysdm_tran_session_transactions-transact-sql"></a>sys.dm_tran_session_transactions(Transact-SQL)
@@ -39,8 +39,7 @@ ms.locfileid: "68262666"
 |-----------------|---------------|-----------------|  
 |session_id|**int**|트랜잭션을 실행하고 있는 세션의 ID입니다.|  
 |transaction_id|**bigint**|트랜잭션 ID입니다.|  
-|transaction_descriptor|**binary (8)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
+|transaction_descriptor|**binary (8)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트 드라이버와 통신할 때 사용하는 트랜잭션 식별자입니다.|  
 |enlist_count|**int**|트랜잭션에서 작동 중인 세션의 활성 요청 수입니다.|  
 |is_user_transaction|**bit**|1 = 사용자 요청에 의해 시작된 트랜잭션<br /><br /> 0 = 시스템 트랜잭션|  
 |is_local|**bit**|1 = 로컬 트랜잭션<br /><br /> 0 = 분산 트랜잭션 또는 참여한 바운드 세션 트랜잭션|  
@@ -60,7 +59,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
  MARS(Multiple Active Result Sets)를 사용하여 자동 커밋 모드에서 여러 개의 요청을 실행하면 단일 세션에 둘 이상의 활성 트랜잭션이 있을 수 있습니다. 이 경우 sys.dm_tran_session_transactions는 해당 세션에서 실행되고 있는 각 트랜잭션에 대해 하나씩 동일한 session_id에 대한 여러 개의 행을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

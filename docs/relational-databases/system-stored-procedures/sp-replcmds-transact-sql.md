@@ -16,10 +16,10 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771013"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
@@ -49,8 +49,8 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**문서 id**|**int**|아티클의 ID입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
 |**명령**|**varbinary (1024)**|명령 값입니다.|  
-|**xactid**|**binary (10)**|트랜잭션 ID입니다.|  
-|**xact_seqno**|**varbinary (16)**|트랜잭션 시퀀스 번호입니다.|  
+|**xactid**|**binary(10)**|트랜잭션 ID입니다.|  
+|**xact_seqno**|**varbinary(16)**|트랜잭션 시퀀스 번호입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
 |**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)명령의 ID입니다.|  
 |**command_type**|**int**|명령의 유형입니다.|  
@@ -59,7 +59,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**pkHash**|**int**|내부적으로만 사용됩니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
-|**originator_lsn**|**varbinary (16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
+|**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_replcmds** 은 트랜잭션 복제의 로그 판독기 프로세스에서 사용 됩니다.  
