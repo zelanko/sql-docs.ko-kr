@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 193805128ec3e557d219561bc29a93e9540fd5b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798245"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
@@ -28,7 +28,7 @@ ms.locfileid: "72798245"
   
      [보안](#Security)  
   
--   **Analysis Services 명령 및/또는 쿼리를 사용 하 여 SQL Server 작업 단계를 만들려면:**  
+-   **Analysis Services 명령 및/또는 쿼리를 사용하여 SQL Server 작업 단계를 만들려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -36,86 +36,67 @@ ms.locfileid: "72798245"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   작업 단계에서 Analysis Services 명령을 사용하는 경우 명령 문은 XML for Analysis Services **Execute** 메서드여야 합니다. 문에 전체 SOAP(Simple Object Access Protocol) Envelope 또는 XML for Analysis **Discover** 메서드를 포함할 수 없습니다. 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 전체 SOAP Envelope와 **Discover** 메서드를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서는 지원하지 않습니다. XML for Analysis Services에 대한 자세한 내용은 [XML for Analysis 개요(XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)를 참조하세요.  
+-   작업 단계에서 Analysis Services 명령을 사용하는 경우 명령 문은 XML for Analysis Services **Execute** 메서드여야 합니다. 문에 전체 SOAP(Simple Object Access Protocol) Envelope 또는 XML for Analysis **Discover** 메서드를 포함할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 전체 SOAP Envelope와 **Discover** 메서드를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서는 지원하지 않습니다. XML for Analysis Services에 대한 자세한 내용은 [XML for Analysis 개요(XMLA)](https://msdn.microsoft.com/library/ms187190.aspx)를 참조하세요.  
   
 -   작업 단계에서 Analysis Services 쿼리를 사용하는 경우 쿼리 문은 MDX(Multidimensional Expressions) 쿼리여야 합니다. MDX에 대 한 자세한 내용은 [Mdx 쿼리 기본 사항 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)를 참조 하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
 -   Analysis Services 하위 시스템을 사용하는 작업 단계를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버이거나 이 하위 시스템을 사용하도록 정의된 올바른 프록시 계정에 액세스할 수 있어야 합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정이나 프록시가 Analysis Services 관리자이고 올바른 Windows 도메인 계정이어야 합니다.  
   
--   
-  **sysadmin** 고정 서버 역할의 멤버만 작업 단계 출력을 파일에 쓸 수 있습니다. 
-  **msdb** 데이터베이스에서 **SQLAgentUserRole** 데이터베이스 역할 멤버인 사용자가 작업 단계를 실행하면 테이블에만 출력을 쓸 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트는 **msdb** 데이터베이스의 **sysjobstepslog** 테이블에 작업 단계 출력을 씁니다.  
+-   **sysadmin** 고정 서버 역할의 멤버만 작업 단계 출력을 파일에 쓸 수 있습니다. **msdb** 데이터베이스에서 **SQLAgentUserRole** 데이터베이스 역할 멤버인 사용자가 작업 단계를 실행하면 테이블에만 출력을 쓸 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 **msdb** 데이터베이스의 **sysjobstepslog** 테이블에 작업 단계 출력을 씁니다.  
   
 -   자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Analysis Services 명령 작업 단계를 만들려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
+2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
   
-3.  
-  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  
-  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
   
-5.  
-  **유형** 목록에서 **SQL Server Analysis Services 명령**을 클릭합니다.  
+5.  **유형** 목록에서 **SQL Server Analysis Services 명령**을 클릭합니다.  
   
-6.  
-  **다음 계정으로 실행** 목록에서 Analysis Services 명령 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. 
-  **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
+6.  **다음 계정으로 실행** 목록에서 Analysis Services 명령 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
   
 7.  작업 단계를 실행할 **서버** 를 선택하거나 서버 이름을 입력합니다.  
   
-8.  
-  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
+8.  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
   
-9. 작업 단계가 성공하거나 실패할 경우 ** 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 클릭합니다.  
+9. 작업 단계가 성공하거나 실패할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급** 페이지를 클릭합니다.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services 쿼리 작업 단계를 만들려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
+2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 작업을 만드는 방법은 [작업 만들기](create-jobs.md)를 참조하세요.  
   
-3.  
-  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  
-  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
   
-5.  
-  **유형** 목록에서 **SQL Server Analysis Services 쿼리**를 클릭합니다.  
+5.  **유형** 목록에서 **SQL Server Analysis Services 쿼리**를 클릭합니다.  
   
-6.  
-  **다음 계정으로 실행** 목록에서 Analysis Services 쿼리 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. 
-  **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
+6.  **다음 계정으로 실행** 목록에서 Analysis Services 쿼리 하위 시스템을 사용하도록 정의된 프록시를 선택합니다. **sysadmin** 고정 서버 역할의 멤버인 사용자는 **SQL 에이전트 서비스 계정** 을 선택하여 이 작업 단계를 실행할 수도 있습니다.  
   
 7.  작업 단계를 실행할 **서버** 와 **데이터베이스** 를 선택하거나 서버 또는 데이터베이스 이름을 입력합니다.  
   
-8.  
-  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
+8.  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
   
-9. 작업 단계가 성공하거나 실패할 경우 ** 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 클릭합니다.  
+9. 작업 단계가 성공하거나 실패할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급** 페이지를 클릭합니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-create-an-analysis-services-command-job-step"></a>Analysis Services 명령 작업 단계를 만들려면  
   
@@ -182,7 +163,7 @@ ms.locfileid: "72798245"
   
  자세한 내용은 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)를 참조 하세요.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
  **PowerShell 스크립트 작업 단계를 만들려면**  
   
  선택한 프로그래밍 언어(예: XMLA 또는 MDX)를 사용하여 `JobStep` 클래스를 사용합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  

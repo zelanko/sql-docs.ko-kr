@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637891"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
@@ -35,14 +35,14 @@ ms.locfileid: "73637891"
   
  이 항목에서는 사용 가능한 속성, 특히 Microsoft에서 정의한 속성에 대한 정보를 찾기 위해 일반적으로 사용되는 방법에 대해 설명합니다. 타사에서 정의한 속성에 대한 자세한 내용은 타사 설명서를 참조하거나 해당 공급업체에 문의하십시오.  
   
-##  <a name="wellknown"></a> 널리 사용되고 잘 알려진 Microsoft 속성에 대한 정보 찾기  
+##  <a name="finding-information-about-widely-used-well-known-microsoft-properties"></a><a name="wellknown"></a> 널리 사용되고 잘 알려진 Microsoft 속성에 대한 정보 찾기  
  Microsoft에서는 여러 컨텍스트에서 사용할 수 있도록 수백 개의 문서 속성을 정의하지만 각 파일 형식에서는 사용 가능한 속성 중 일부만 사용합니다. 자주 사용되는 Windows 속성 중에는 작은 일반 속성 집합이 있습니다. 다음 표에서는 잘 알려진 일반 속성의 몇 가지 예를 보여 줍니다. 이 표에는 잘 알려진 이름, Windows 정식 이름(Microsoft에서 게시한 속성 설명에 포함됨), 속성 집합 GUID, 속성 정수 식별자 및 간단한 설명이 들어 있습니다.  
   
 |잘 알려진 이름|Windows 정식 이름|속성 집합 GUID|정수 ID|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|지정된 항목의 작성자입니다.|  
-|태그들|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
-|Type|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
+|Tags|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|항목에 할당된 키워드(태그라고도 함) 집합입니다.|  
+|유형|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |제목|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
  파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](https://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "73637891"
   
 -   소프트웨어 공급업체에서 정의한 애플리케이션별 사용자 지정 속성  
   
-##  <a name="filtdump"></a> FILTDUMP.EXE를 사용하여 사용 가능한 속성에 대한 정보 찾기  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a> FILTDUMP.EXE를 사용하여 사용 가능한 속성에 대한 정보 찾기  
  설치된 IFilter를 통해 검색되고 추출된 속성을 알아 보려면 **Windows SDK의 일부인** filtdump.exe [!INCLUDE[msCoName](../../includes/msconame-md.md)] 유틸리티를 설치하고 실행할 수 있습니다.  
   
  명령 프롬프트에서 **filtdump.exe** 를 실행하고 단일 인수를 제공합니다. 이 인수는 IFilter가 설치된 파일 형식을 사용하는 개별 파일의 이름입니다. 이 유틸리티는 문서에서 IFilter를 통해 검색된 모든 속성의 목록을 속성 집합 GUID, 정수 ID 및 추가 정보와 함께 표시합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "73637891"
   
 -   32비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`을 찾아봅니다.  
   
-##  <a name="propdesc"></a> Windows 속성 설명에서 검색 속성 값 찾기  
+##  <a name="finding-values-for-a-search-property-from-a-windows-property-description"></a><a name="propdesc"></a>Windows 속성 설명에서 검색 속성 값 찾기  
  잘 알려진 Windows 검색 속성의 경우 속성 설명(`formatID`)의 `propID` 및 `propertyDescription` 특성에서 필요한 정보를 가져올 수 있습니다.  
   
  다음 예에서는 일반적인 Microsoft 속성(이 경우 `System.Author` 속성) 설명의 관련 부분을 보여 줍니다. `formatID` 특성은 속성 집합 GUID로 `F29F85E0-4FF9-1068-AB91-08002B27B3D9`를 지정하고, `propID` 특성은 속성 정수 ID로 `4.` 를 지정합니다. `name` 특성은 Windows 정식 속성 이름으로 `System.Author`를 지정합니다. 이 예에서는 관련되지 않은 속성 설명의 부분을 생략합니다.  
@@ -81,11 +81,11 @@ propID = 4
 ...  
 ```  
   
- 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337) 를 참조하십시오.  
+ 이 속성의 전체 설명은 Windows 검색 설명서에서 [System.Author](https://go.microsoft.com/fwlink/?LinkId=144337)를 참조하십시오.  
   
  Windows 속성의 전체 목록을 보려면 Windows 검색 설명서에서 [Windows 속성](https://go.microsoft.com/fwlink/?LinkId=215013)을 참조하십시오.  
   
-##  <a name="examples"></a> 검색 속성 목록에 속성 추가  
+##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a>검색 속성 목록에 속성 추가  
  다음 예에서는 속성을 검색 속성 목록에 추가하는 방법을 보여 줍니다. 이 예에서는 [ALTER SEARCH PROPERTY LIST](/sql/t-sql/statements/alter-search-property-list-transact-sql) 문을 사용하여 `System.Author` 속성을 `PropertyList1`이라는 검색 속성 목록에 추가하고 속성에 `Author`라는 이름을 제공합니다.  
   
 ```  
@@ -102,7 +102,7 @@ GO
  검색 속성 목록을 만들어 전체 텍스트 인덱스와 연결하는 방법은 [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [검색 속성 목록을 사용하여 문서 속성 검색](search-document-properties-with-search-property-lists.md)   
+ [검색 속성 목록을 사용 하 여 문서 속성 검색](search-document-properties-with-search-property-lists.md)   
  [검색 필터 구성 및 관리](configure-and-manage-filters-for-search.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1de02f0042dce3b22a3da721d1ea9f31afb0620a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659451"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore 속성(SecurityCertificate 클래스)
@@ -36,7 +36,7 @@ object.SystemStore [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  보안 인증서를 나타내는 [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

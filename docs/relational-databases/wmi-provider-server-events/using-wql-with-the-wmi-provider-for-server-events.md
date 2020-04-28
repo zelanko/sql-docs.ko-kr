@@ -17,10 +17,10 @@ ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 57f7e07de49b2591e9ab0ef74603d674543282e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660486"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
@@ -49,8 +49,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. 
-  `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성 목록은 [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)을 참조 하세요.  
+ WQL 쿼리(`FROM`)의 `DDL_DATABASE_LEVEL_EVENTS` 절에 있는 인수는 이벤트 알림을 만들 수 있는 유효한 모든 이벤트일 수 있습니다. `SELECT` 및 `WHERE` 절의 인수는 이벤트 또는 해당 부모 이벤트와 연결된 이벤트 속성을 지정할 수 있습니다. 유효한 이벤트 및 이벤트 속성 목록은 [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)을 참조 하세요.  
   
  서버 이벤트용 WMI 공급자가 명시적으로 지원하는 WQL 구문은 다음과 같습니다. 추가 WQL 구문을 지정할 수도 있지만 해당 구문은 이 공급자와 관련이 없으며 대신 WMI 호스트 서비스에 의해 구문 분석됩니다. WMI 쿼리 언어에 대한 자세한 내용은 MSDN(Microsoft Developer Network)의 WQL 설명서를 참조하십시오.  
   
@@ -93,8 +92,7 @@ WHERE where_condition
   
  서버 이벤트용 WMI 공급자는 아래에서 위로, 첫 번째 일치 알고리즘을 사용하여 기본 EVENT NOTIFICATION에 대한 가능한 가장 좁은 범위를 생성합니다. 이 알고리즘은 서버의 내부 활동과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 WMI 호스트 프로세스 인스턴스 간의 네트워크 트래픽을 최소화합니다. 공급자는 FROM 절에 지정 된 *event_type* 와 where 절의 조건을 검사 하 고 가능한 가장 좁은 범위를 사용 하 여 기본 이벤트 알림을 등록 하려고 합니다. 공급자는 가장 좁은 범위를 등록할 수 없는 경우 등록에 성공할 때까지 연속적으로 더 높은 범위에 등록을 시도합니다. 가장 높은 범위인 서버 수준에 도달했지만 실패하는 경우 소비자에게 오류를 반환합니다.  
   
- 예를 들어 WHERE 절에 DatabaseName =**'** AdventureWorks **'** 를 지정 하면 공급자는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 이벤트 알림을 등록 하려고 합니다. 
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 있고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 이벤트 알림을 만드는 데 필요한 권한이 호출 클라이언트에 있으면 등록이 성공합니다. 그렇지 않으면 서버 수준에서 이벤트 알림이 등록됩니다. WMI 클라이언트에 필요한 사용 권한이 있으면 등록이 성공합니다. 하지만 이 시나리오에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 만들 때까지 이벤트가 클라이언트에 반환되지 않습니다.  
+ 예를 들어 WHERE 절에 DatabaseName =**'** AdventureWorks **'** 를 지정 하면 공급자는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 이벤트 알림을 등록 하려고 합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 있고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 이벤트 알림을 만드는 데 필요한 권한이 호출 클라이언트에 있으면 등록이 성공합니다. 그렇지 않으면 서버 수준에서 이벤트 알림이 등록됩니다. WMI 클라이언트에 필요한 사용 권한이 있으면 등록이 성공합니다. 하지만 이 시나리오에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 만들 때까지 이벤트가 클라이언트에 반환되지 않습니다.  
   
  또한 *where_condition* 는 필터 역할을 하 여 쿼리를 특정 데이터베이스, 스키마 또는 개체로 추가로 제한할 수 있습니다. 예를 들어 다음 WQL 쿼리를 살펴보십시오.  
   
@@ -106,8 +104,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  등록 프로세스의 결과에 따라 이 WOL 쿼리를 데이터베이스 또는 서버 수준에서 등록할 수 있습니다. 하지만 서버 수준에서 등록된 경우에도 공급자는 궁극적으로 `ALTER_TABLE` 테이블에 적용되지 않는 모든 `AdventureWorks.Sales.SalesOrderDetail` 이벤트를 필터링합니다. 즉, 공급자는 특정 테이블에서 발생하는 `ALTER_TABLE` 이벤트의 속성만 반환합니다.  
   
- 
-  `DatabaseName='AW1'` OR `DatabaseName='AW2'`와 같은 복합 식을 지정하면 두 개의 개별 이벤트 알림 대신 서버 범위에서 단일 이벤트 알림이 등록됩니다. 호출 클라이언트에 사용 권한이 있으면 등록이 성공합니다.  
+ `DatabaseName='AW1'` OR `DatabaseName='AW2'`와 같은 복합 식을 지정하면 두 개의 개별 이벤트 알림 대신 서버 범위에서 단일 이벤트 알림이 등록됩니다. 호출 클라이언트에 사용 권한이 있으면 등록이 성공합니다.  
   
  절에이 모두 지정 된 경우 `SchemaName='X' AND ObjectType='Y' AND ObjectName='Z'` 스키마 `Z` `X`의 개체에 직접 이벤트 알림을 등록 하려고 시도 합니다. `WHERE` 클라이언트에 사용 권한이 있으면 등록이 성공합니다. 현재 개체 수준 이벤트는 큐 에서만 지원 되 고 QUEUE_ACTIVATION *event_type*에 대해서만 지원 됩니다.  
   
@@ -120,7 +117,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ## <a name="examples"></a>예  
   
 ### <a name="a-querying-for-events-at-the-server-scope"></a>A. 서버 범위에서 이벤트 쿼리  
- 다음 WQL 쿼리는 `SERVER_MEMORY_CHANGE` 인스턴스에서 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
+ 다음 WQL 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 발생하는 `SERVER_MEMORY_CHANGE` 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  

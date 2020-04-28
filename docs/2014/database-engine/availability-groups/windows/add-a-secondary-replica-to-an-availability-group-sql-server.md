@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00cf7a7fab52640cc3fc19a3d9da051d281be7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783008"
 ---
 # <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "72783008"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 복제본을 추가 합니다.**  
+-   **복제본을 추가하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -37,29 +37,28 @@ ms.locfileid: "72783008"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **후속 작업:**  [보조 복제본을 추가한 후](#FollowUp)  
+-   **후속 작업:**  [복제본을 추가한 후](#FollowUp)  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
  가용성 그룹을 처음 만들어 보는 경우 이 섹션을 먼저 읽는 것이 좋습니다.  
   
-##  <a name="PrerequisitesRestrictions"></a> 사전 요구 사항 및 제한 사항  
+##  <a name="prerequisites-and-restrictions"></a><a name="PrerequisitesRestrictions"></a>사전 요구 사항 및 제한 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
- 자세한 내용은 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;에 대 한 필수 조건, 제한 사항 및 권장 사항 ](prereqs-restrictions-recommendations-always-on-availability.md)을 참조 하세요.  
+ 자세한 내용은 [AlwaysOn 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
-##  <a name="Security"></a> 보안  
+##  <a name="security"></a><a name="Security"></a> 보안  
   
-###  <a name="Permissions"></a> 권한  
+###  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **복제본을 추가 하려면**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ **복제본을 추가하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 그룹을 마우스 오른쪽 단추로 클릭하고 다음 명령 중 하나를 선택합니다.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "72783008"
   
          다른 복제본을 추가하려면 위의 단계를 반복합니다. 복제본 지정을 마치면 **확인** 을 클릭하여 작업을 완료합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **복제본을 추가하려면**  
   
 1.  주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
@@ -91,13 +90,12 @@ ms.locfileid: "72783008"
              );  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **복제본을 추가 하려면**  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
+ **복제본을 추가하려면**  
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  
-  **New-SqlAvailabilityReplica** cmdlet을 사용합니다.  
+2.  **New-SqlAvailabilityReplica** cmdlet을 사용합니다.  
   
      예를 들어 다음 명령은 `MyAg`라는 기존 가용성 그룹에 가용성 복제본을 추가합니다. 이 복제본은 수동 장애 조치(Failover) 및 비동기 커밋 가용성 모드를 지원합니다. 이 복제본은 이 보조 역할에서 읽기 액세스 연결을 지원하므로 읽기 전용 프로세싱을 이 복제본으로 오프로드할 수 있습니다.  
   
@@ -123,19 +121,19 @@ ms.locfileid: "72783008"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a>후속 작업: 보조 복제본을 추가한 후  
+##  <a name="follow-up-after-adding-a-secondary-replica"></a><a name="FollowUp"></a>후속 작업: 보조 복제본을 추가한 후  
  기존 가용성 그룹에 대한 복제본을 추가하려면 다음 단계를 수행해야 합니다.  
   
 1.  새 보조 복제본을 호스팅할 서버 인스턴스에 연결합니다.  
   
-2.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
+2.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
 3.  가용성 그룹의 각 데이터베이스에 대해 보조 복제본을 호스팅하는 서버 인스턴스에 보조 데이터베이스를 만듭니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 Always On 가용성 그룹에 보조 데이터베이스를 조인하는 방법에 대해 설명합니다.  
   
 4.  각각의 새로운 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **가용성 복제본을 관리 하려면**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **가용성 복제본을 관리하려면**  
   
 -   [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   

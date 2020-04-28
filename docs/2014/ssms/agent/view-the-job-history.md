@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783384"
 ---
 # <a name="view-the-job-history"></a>View the Job History
@@ -30,7 +30,7 @@ ms.locfileid: "72783384"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 작업 기록 로그를 봅니다.**  
+-   **작업 기록 로그를 보려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -38,20 +38,18 @@ ms.locfileid: "72783384"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-the-job-history-log"></a>작업 기록 로그를 보려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장한 다음 **작업**을 확장합니다.  
+2.  **SQL Server 에이전트**를 확장한 다음 **작업**을 확장합니다.  
   
 3.  작업을 마우스 오른쪽 단추로 클릭한 다음 **기록 보기**를 클릭합니다.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "72783384"
   
 5.  작업 기록을 업데이트하려면 **새로 고침**을 클릭합니다. 행을 적게 표시하려면 **필터** 단추를 클릭하고 필터 매개 변수를 입력합니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-view-the-job-history-log"></a>작업 기록 로그를 보려면  
   
@@ -81,7 +79,7 @@ ms.locfileid: "72783384"
   
  자세한 내용은 [sp_help_jobhistory &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)를 참조 하세요.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
  **작업 기록 로그를 보려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `EnumHistory` 클래스의 `Job` 메서드를 호출합니다. 자세한 내용은 [SMO(SQL Server 관리 개체)](https://msdn.microsoft.com/library/ms162169.aspx)를 참조하세요.  

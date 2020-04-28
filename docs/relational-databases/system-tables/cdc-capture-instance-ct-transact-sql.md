@@ -18,10 +18,10 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72908402"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc. &lt;capture_instance&gt;_CT (transact-sql)
@@ -33,14 +33,13 @@ ms.locfileid: "72908402"
   
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**__ $ start_lsn**|**binary (10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN(로그 시퀀스 번호)입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블에 대 한 삭제 작업이 두 행을 제거 하는 경우 변경 테이블에는 두 개의 행이 포함 되 고 각 행에는 동일한 **__ $ start_lsn** 값이 포함 됩니다.|  
-|**__ $ end_lsn**|**binary (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
-|**__ $ seqval**|**binary (10)**|트랜잭션 내 행 변경을 정렬하는 데 사용되는 시퀀스 값입니다.|  
+|**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN(로그 시퀀스 번호)입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블에 대 한 삭제 작업이 두 행을 제거 하는 경우 변경 테이블에는 두 개의 행이 포함 되 고 각 행에는 동일한 **__ $ start_lsn** 값이 포함 됩니다.|  
+|**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
+|**__$seqval**|**binary(10)**|트랜잭션 내 행 변경을 정렬하는 데 사용되는 시퀀스 값입니다.|  
 |**__ $ 연산**|**int**|변경과 연관된 DML(데이터 조작 언어) 작업을 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 3 = 업데이트(이전 값)<br /><br /> 열 데이터는 update 문을 실행하기 전의 행 값을 가집니다.<br /><br /> 4 = 업데이트(새 값)<br /><br /> 열 데이터는 update 문을 실행한 후의 행 값을 가집니다.|  
-|**__ $ update_mask**|**varbinary (128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다.|  
+|**__$update_mask**|**varbinary(128)**|변경된 열을 식별하는 변경 테이블의 열 서수를 기준으로 하는 비트 마스크입니다.|  
 |*\<캡처된 원본 테이블 열>*|다름|변경 테이블의 나머지 열은 캡처 인스턴스가 생성될 때 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 이 테이블에 포함됩니다.|  
 |**__ $ command_id** |**int** |트랜잭션 내에서 작업 순서를 추적 합니다. |  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb392991afbb3707fafdb18a28cc3de53f97c78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783196"
 ---
 # <a name="delete-a-job-category"></a>작업 범주 삭제
@@ -28,36 +28,33 @@ ms.locfileid: "72783196"
   
  작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다.  
 
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
  사용자가 정의한 작업 범주를 삭제할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 이 작업 범주에 할당된 작업을 다른 작업 범주에 재할당할 것인지 묻습니다. 사용자가 정의한 작업 범주만 삭제할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
 
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 ### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
-1.  
-  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
+1.  **개체 탐색기**에서 더하기 기호를 클릭하여 작업 범주를 삭제하려는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **SQL Server 에이전트**를 확장합니다.  
   
-3.  
-  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
+3.  **작업** 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 범주 관리**를 선택합니다.  
   
 4.  **작업 범주 관리**_server_name_ 대화 상자에서 삭제할 작업 범주를 선택 합니다.  
   
 5.  **삭제**를 클릭합니다.  
   
-6.  
-  **작업 범주** 대화 상자에서 **예**를 클릭합니다.  
+6.  **작업 범주** 대화 상자에서 **예**를 클릭합니다.  
   
 7.  **작업 범주 관리**_server_name_ 대화 상자를 닫습니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 ### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면  
   
@@ -80,7 +77,7 @@ ms.locfileid: "72783196"
  자세한 내용은 [sp_delete_category &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-category-transact-sql)를 참조 하세요.  
 
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 
 ### <a name="to-delete-a-job-category"></a>작업 범주를 삭제하려면
   

@@ -14,10 +14,10 @@ ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728487"
 ---
 # <a name="create-a-model-master-data-services"></a>모델 만들기(Master Data Services)
@@ -31,7 +31,7 @@ ms.locfileid: "73728487"
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;마스터 데이터 서비스&#41;](../master-data-services/administrators-master-data-services.md)을 참조하십시오.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-create-a-model"></a>모델을 만들려면  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73728487"
   
  생성되는 각 모델에 대해 열이 8개 포함된 행이 표에 추가됩니다. 이러한 8개 열은 다음과 같습니다.  
   
--   **상태**: 모델 상태입니다. **모델 저장** 단추를 클릭하면 모델이 업데이트 중임을 나타내는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "업데이트하는 중") 이미지가 표시됩니다. 모델을 만들거나 편집할 때 오류가 있으면 ![오류](../master-data-services/media/mds-model-status-error.png "Error") 이미지가 표시됩니다. 오류가 발생하지 않는 경우 모델은 정상 상태가 되며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
+-   **상태**: 모델 상태입니다. **모델 저장** 단추를 클릭 하면 모델이 업데이트 중임을 나타내는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "업데이트하는 중") 이미지가 표시 됩니다. 모델을 만들거나 편집할 때 오류가 발생 하면 ![오류](../master-data-services/media/mds-model-status-error.png "Error") 이미지가 표시 됩니다. 오류가 발생하지 않는 경우 모델은 정상 상태가 되며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
   
 -   **이름**: 모델 이름입니다.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "73728487"
 -   [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [마스터 데이터 서비스&#41;&#40;모델](../master-data-services/models-master-data-services.md)   
- [마스터 데이터 서비스&#41;&#40;엔터티](../master-data-services/entities-master-data-services.md)   
- [마스터 데이터 서비스&#41;&#40;모델 삭제](../master-data-services/delete-a-model-master-data-services.md)   
- [마스터 데이터 서비스&#41;&#40;모델 편집](../master-data-services/edit-model-master-data-services.md)   
+ [모델 &#40;MDS(Master Data Services)&#41;](../master-data-services/models-master-data-services.md)   
+ [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)   
+ [모델 &#40;MDS(Master Data Services) 삭제&#41;](../master-data-services/delete-a-model-master-data-services.md)   
+ [모델 &#40;MDS(Master Data Services) 편집&#41;](../master-data-services/edit-model-master-data-services.md)   
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

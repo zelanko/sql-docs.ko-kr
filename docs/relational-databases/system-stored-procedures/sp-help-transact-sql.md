@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909088"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help(Transact-SQL)
@@ -56,14 +56,14 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar (** 128 **)**|개체 이름|  
     |**소유자**|**nvarchar (** 128 **)**|개체 소유자. 개체를 소유한 데이터베이스 보안 주체로, 기본적으로 개체가 포함된 스키마의 소유자로 설정됩니다.|  
-    |**Object_type**|**nvarchar (** 31 **)**|개체 형식|  
+    |**Object_type**|**nvarchar (** 31 **)**|개체 유형|  
   
 2.  *Name* 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 또는 사용자 정의 데이터 형식인 경우 **sp_help** 는이 결과 집합을 반환 합니다.  
   
     |열 이름|데이터 형식|Description|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar (** 128 **)**|데이터 형식의 이름입니다.|  
-    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유형 이름입니다.|  
+    |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 이름입니다.|  
     |**길이**|**smallint**|데이터 형식의 물리적 길이(바이트)입니다.|  
     |**Prec**|**int**|전체 자릿수(총 자릿수)입니다.|  
     |**규모**|**int**|소수점 이하 자릿수입니다.|  
@@ -78,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar (** 128 **)**|테이블 이름|  
     |**소유자**|**nvarchar (** 128 **)**|테이블 소유자입니다.|  
-    |**형식**|**nvarchar (** 31 **)**|테이블 형식|  
+    |**Type**|**nvarchar (** 31 **)**|테이블 유형입니다.|  
     |**Created_datetime**|**datetime**|테이블을 만든 날짜입니다.|  
   
      지정 된 데이터베이스 개체에 따라 **sp_help** 는 추가 결과 집합을 반환 합니다.  
@@ -89,8 +89,8 @@ sp_help [ [ @objname = ] 'name' ]
   
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
-        |**Column_name**|**nvarchar (** 128 **)**|열 이름.|  
-        |**형식**|**nvarchar (** 128 **)**|열의 데이터 형식입니다.|  
+        |**Column_name**|**nvarchar (** 128 **)**|열 이름입니다.|  
+        |**Type**|**nvarchar (** 128 **)**|열의 데이터 형식입니다.|  
         |**더한**|**varchar (** 35 **)**|열의 값이 계산 되는지 여부를 나타냅니다 (예 또는 아니요).|  
         |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식이 많은 값 형식 (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**) 이면 값이-1로 표시 됩니다.|  
         |**Prec**|**char (** 5 **)**|열의 전체 자릿수입니다.|  
@@ -104,9 +104,9 @@ sp_help [ [ @objname = ] 'name' ]
   
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
-        |**신분을**|**nvarchar (** 128 **)**|데이터 형식이 ID로 선언되는 열의 이름입니다.|  
-        |**시드는**|**번호**|ID 열의 시작 값입니다.|  
-        |**씩**|**번호**|해당 열의 값에 대해 사용하는 증가값입니다.|  
+        |**ID**|**nvarchar (** 128 **)**|데이터 형식이 ID로 선언되는 열의 이름입니다.|  
+        |**시드는**|**numeric**|ID 열의 시작 값입니다.|  
+        |**씩**|**numeric**|해당 열의 값에 대해 사용하는 증가값입니다.|  
         |**복제용 아님**|**int**|**Sqlrepl**과 같은 복제 로그인이 테이블에 데이터를 삽입 하는 경우 IDENTITY 속성이 적용 되지 않습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   열에 대해 반환된 추가 결과 집합입니다.  
@@ -125,7 +125,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
-        |**index_name**|**sysname**|인덱스 이름.|  
+        |**index_name**|**sysname**|인덱스 이름입니다.|  
         |**Index_description**|**varchar (** 210 **)**|인덱스에 대한 설명입니다.|  
         |**index_keys**|**nvarchar (** 2078 **)**|인덱스가 작성된 열의 이름입니다. xVelocity 메모리 최적화 columnstore 인덱스에 대해서는 NULL을 반환합니다.|  
   
@@ -152,7 +152,7 @@ sp_help [ [ @objname = ] 'name' ]
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 이름입니다.|  
-        |**형식**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
+        |**Type**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
         |**길이**|**smallint**|물리적 스토리지의 최대 길이(바이트)입니다.|  
         |**Prec**|**int**|전체 자릿수 또는 총 자릿수입니다.|  
         |**규모**|**int**|소수점 오른쪽 자릿수입니다.|  
@@ -195,9 +195,9 @@ GO
  [Transact-sql&#41;sp_helpindex &#40;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Transact-sql&#41;sp_helprotect &#40;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
  [Transact-sql&#41;sp_helpserver &#40;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Transact-sql&#41;sp_helptrigger &#40;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
+ [sp_helptrigger&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [Transact-sql&#41;sp_helpuser &#40;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

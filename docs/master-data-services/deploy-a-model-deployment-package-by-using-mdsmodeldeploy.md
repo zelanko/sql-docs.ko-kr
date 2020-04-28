@@ -11,17 +11,16 @@ ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 3ae40a50eb9866b452efb8d387df62f8bed8fa24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728303"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
   
 -   모델 개체만  
@@ -40,7 +39,7 @@ ms.locfileid: "73728303"
   
 -   모델 배포 패키지가 있어야 합니다. 자세한 내용은  [Create a Model Deployment Package by Using MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
--   모델을 배포하는 환경에서 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델을 배포하는 환경에서 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   데이터로 모델을 업데이트하려는 경우 배포하려는 버전을 **잠금** 또는 **커밋됨** 상태로 만들 수 없습니다.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "73728303"
   
 6.  패키지가 성공적으로 배포되면 "MDSModelDeploy 작업이 성공적으로 완료되었습니다."라는 메시지가 표시됩니다.  
   
- **메모란**  
+ **참고:**  
   
 -   패키지의 구독 뷰 이름이 기존 모델의 구독 뷰 이름과 동일한 경우 **배포자 구독 보기의 이름이 바뀌었습니다.** 라는 경고가 표시되고 뷰가 *modelname.subscriptionviewname*으로 만들어집니다. 이 이름이 이미 사용 중이면 구독 뷰가 만들어지지 않습니다.  
   
@@ -116,9 +115,9 @@ ms.locfileid: "73728303"
 ## <a name="next-steps"></a>다음 단계  
  파일 특성, 사용자 및 그룹 권한은 모델 배포 패키지에 포함되지 않습니다. 모델을 배포한 후에 이러한 항목을 수동으로 업데이트해야 합니다. 자세한 내용은 다음을 참조하세요.  
   
--   [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [모델 &#40;MDS(Master Data Services)&#41;배포](../master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

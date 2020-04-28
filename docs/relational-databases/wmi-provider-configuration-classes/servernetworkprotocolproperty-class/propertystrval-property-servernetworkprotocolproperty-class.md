@@ -18,10 +18,10 @@ ms.assetid: 7df3cf21-15b7-4813-93e7-c2bae1209f5a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 907f264e49def46982535ba41c51f9900884a4d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659350"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal 속성(ServerNetworkProtocolProperty 클래스)
@@ -36,9 +36,8 @@ object.PropertyStrVal [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [인스턴스의 네트워크 프로토콜 특성을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) ServerNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *object*  
+ [인스턴스의 네트워크 프로토콜 특성을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) ServerNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  속성의 값을 지정하는 문자열 값입니다.  

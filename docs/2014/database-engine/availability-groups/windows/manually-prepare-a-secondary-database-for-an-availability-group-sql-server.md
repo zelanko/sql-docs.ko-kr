@@ -19,13 +19,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797645"
 ---
-# <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Manually Prepare a Secondary Database for an Availability Group (SQL Server)
+# <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 보조 데이터베이스 수동 준비(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 AlwaysOn 가용성 그룹에 대한 보조 데이터베이스를 준비하는 방법에 대해 설명합니다. 보조 데이터베이스를 준비하려면 (1) RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업과 후속 로그 백업을 보조 복제본을 호스트하는 각 서버 인스턴스로 복원하고 (2) 복원된 데이터베이스를 가용성 그룹에 조인하는 두 단계를 수행해야 합니다.  
   
 > [!TIP]  
@@ -39,7 +39,7 @@ ms.locfileid: "72797645"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 보조 데이터베이스를 준비 합니다.**  
+-   **보조 데이터베이스를 준비하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,13 +47,13 @@ ms.locfileid: "72797645"
   
      [PowerShell](#PowerShellProcedure)  
   
--   [관련 된 백업 및 복원 태스크](#RelatedTasks)  
+-   [관련된 백업 및 복원 태스크](#RelatedTasks)  
   
 -   **후속 작업:** [보조 데이터베이스를 준비한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>사전 요구 사항 및 제한 사항  
   
 -   데이터베이스를 배치할 시스템에 보조 데이터베이스를 위한 충분한 공간을 가진 디스크 드라이브가 있는지 확인합니다.  
   
@@ -67,27 +67,26 @@ ms.locfileid: "72797645"
   
 -   데이터베이스를 복원한 후 마지막으로 복원한 데이터 백업 이후에 만든 모든 로그 백업을 복원(WITH NORECOVERY)해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스의 경우 지정된 보조 데이터베이스의 드라이브 문자를 포함한 파일 경로는 가급적 해당 주 데이터베이스의 경로와 동일한 것이 좋습니다. 보조 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 이후의 파일 추가 작업이 보조 데이터베이스에서 실패하고 보조 데이터베이스가 일시 중지될 수 있기 때문입니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스의 경우 지정된 보조 데이터베이스의 드라이브 문자를 포함한 파일 경로는 가급적 해당 주 데이터베이스의 경로와 동일한 것이 좋습니다. 보조 데이터베이스를 만들 때 데이터베이스 파일을 이동하면 이후의 파일 추가 작업이 보조 데이터베이스에서 실패하고 보조 데이터베이스가 일시 중지될 수 있기 때문입니다.  
   
 -   보조 데이터베이스를 준비하기 전에 보조 복제본의 초기화가 완료될 때까지 가용성 그룹에서 데이터베이스에 대한 예약된 로그 백업을 일시 중지하는 것이 좋습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  데이터베이스가 백업 되 면 신뢰할 수 있는 [데이터베이스 속성이](../../../relational-databases/security/trustworthy-database-property.md) OFF로 설정 됩니다. 따라서 새로 복원된 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.  
   
  복원할 데이터베이스가 서버 인스턴스에 없으면 RESTORE 문에 CREATE DATABASE 권한이 있어야 합니다. 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)를 통해 복원할 수 없습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 > [!NOTE]  
->  주 복제본을 호스트하는 서버 인스턴스와 보조 복제본을 호스트하는 모든 인스턴스 간에 백업 및 복원 파일 경로가 동일한 경우 [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md), [복제본을 가용성 그룹에 추가 마법사](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)또는 [가용성 그룹에 데이터베이스 추가 마법사](availability-group-add-database-to-group-wizard.md)를 사용하여 보조 데이터베이스를 만들 수 있어야 합니다.  
+>   주 복제본을 호스팅하는 서버 인스턴스와 보조 복제본을 호스팅하는 모든 인스턴스 간에 백업 및 복원 파일 경로가 동일한 경우 [새 가용성 그룹 마법사](use-the-availability-group-wizard-sql-server-management-studio.md), [복제본을 가용성 그룹에 추가 마법사](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)또는 [가용성 그룹에 데이터베이스 추가 마법사](availability-group-add-database-to-group-wizard.md)를 사용하여 보조 데이터베이스를 만들 수 있어야 합니다.  
   
- **보조 데이터베이스를 준비 하려면**  
+ **보조 데이터베이스를 준비하려면**  
   
 1.  주 데이터베이스의 최근 데이터베이스 백업이 아직 없는 경우 전체 데이터베이스 백업 또는 차등 데이터베이스 백업을 새로 만듭니다. 이 백업과 모든 후속 로그 백업을 권장 네트워크 공유에 배치하는 것이 좋습니다.  
   
@@ -95,8 +94,7 @@ ms.locfileid: "72797645"
   
 3.  보조 복제본을 호스팅하는 서버 인스턴스에서 주 데이터베이스의 전체 데이터베이스 백업과 원하는 차등 백업을 복원한 다음 모든 후속 로그 백업을 복원합니다.  
   
-     
-  **RESTORE WITH NORECOVERY 옵션** 페이지에서 다음을 선택합니다. **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).** 를 선택합니다.  
+     **RESTORE WITH NORECOVERY 옵션** 페이지에서 다음을 선택합니다. **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).** 를 선택합니다.  
   
      주 데이터베이스와 보조 데이터베이스의 파일 경로가 다른 경우(예: 주 데이터베이스는 'F:' 드라이브에 있지만 보조 복제본을 호스트하는 서버 인스턴스에 F: 드라이브가 없는 경우) WITH 절에 MOVE 옵션을 포함합니다.  
   
@@ -105,7 +103,7 @@ ms.locfileid: "72797645"
 > [!NOTE]  
 >  이러한 백업 및 복원 작업 수행 방법에 대한 자세한 내용은 이 섹션의 뒷부분에 나오는 [관련 백업 및 복원 태스크](#RelatedTasks)를 참조하세요.  
   
-###  <a name="RelatedTasks"></a>관련 된 백업 및 복원 태스크  
+###  <a name="related-backup-and-restore-tasks"></a><a name="RelatedTasks"></a>관련 된 백업 및 복원 태스크  
  **데이터베이스 백업을 만들려면**  
   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
@@ -116,7 +114,7 @@ ms.locfileid: "72797645"
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
- **백업을 복원 하려면**  
+ **백업을 복원하려면**  
   
 -   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
@@ -126,8 +124,8 @@ ms.locfileid: "72797645"
   
 -   [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **보조 데이터베이스를 준비 하려면**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
+ **보조 데이터베이스를 준비하려면**  
   
 > [!NOTE]  
 >  이 절차에 대한 예는 이 항목의 앞부분에 나오는 [예(Transact-SQL)](#ExampleTsql)를 참조하세요.  
@@ -148,11 +146,10 @@ ms.locfileid: "72797645"
 > [!NOTE]  
 >  이러한 백업 및 복원 작업 수행 방법에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [관련 백업 및 복원 태스크](#RelatedTasks)를 참조하세요.  
   
-###  <a name="ExampleTsql"></a>Transact-sql 예제  
+###  <a name="transact-sql-example"></a><a name="ExampleTsql"></a>Transact-sql 예제  
  다음 예에서는 보조 데이터베이스를 준비합니다. 이 예에서는 기본적으로 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다.  
   
-1.  
-  [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스를 사용하려면 전체 복구 모델을 사용하도록 수정합니다.  
+1.  [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스를 사용하려면 전체 복구 모델을 사용하도록 수정합니다.  
   
     ```sql
     USE master;  
@@ -180,7 +177,7 @@ ms.locfileid: "72797645"
   
 4.  RESTORE WITH NORECOVERY를 사용하여 보조 복제본을 호스팅하는 서버 인스턴스에 전체 백업을 복원합니다. 복원 명령은 주 데이터베이스와 보조 데이터베이스의 경로가 동일한지 여부에 따라 달라집니다.  
   
-    -   **경로가 동일한 경우:**  
+    -   **경로가 동일한 경우**  
   
          보조 복제본을 호스팅하는 컴퓨터에서 다음과 같이 전체 백업을 복원합니다.  
   
@@ -191,7 +188,7 @@ ms.locfileid: "72797645"
         GO  
         ```  
   
-    -   **경로가 다른 경우:**  
+    -   **경로가 다른 경우**  
   
          보조 데이터베이스의 경로와 주 데이터베이스의 경로가 다른 경우(예: 드라이브 문자가 다른 경우) 보조 데이터베이스를 만들 때 복원 작업에 MOVE 절을 포함해야 합니다.  
   
@@ -245,13 +242,12 @@ ms.locfileid: "72797645"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **보조 데이터베이스를 준비 하려면**  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
+ **보조 데이터베이스를 준비하려면**  
   
 1.  주 데이터베이스의 최근 백업을 만들어야 하는 경우 주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  
-  `Backup-SqlDatabase` cmdlet을 사용하여 각 백업을 만듭니다.  
+2.  `Backup-SqlDatabase` cmdlet을 사용하여 각 백업을 만듭니다.  
   
 3.  보조 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
@@ -266,7 +262,7 @@ ms.locfileid: "72797645"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-###  <a name="ExamplePSscript"></a>예제 백업 및 복원 스크립트 및 명령  
+###  <a name="sample-backup-and-restore-script-and-command"></a><a name="ExamplePSscript"></a>예제 백업 및 복원 스크립트 및 명령  
  다음 PowerShell 명령은 전체 데이터베이스 백업과 트랜잭션 로그를 네트워크 공유에 백업하고 해당 공유에서 백업을 복원합니다. 이 예에서는 데이터베이스를 복원할 파일 경로가 데이터베이스를 백업한 파일 경로와 동일한 것으로 가정합니다.  
   
 ```powershell
@@ -280,12 +276,12 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.bak" -N
 Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -RestoreAction "Log" -NoRecovery -ServerInstance "DestinationMachine\Instance"
 ```  
   
-##  <a name="FollowUp"></a>후속 작업: 보조 데이터베이스를 준비한 후  
+##  <a name="follow-up-after-preparing-a-secondary-database"></a><a name="FollowUp"></a>후속 작업: 보조 데이터베이스를 준비한 후  
  보조 데이터베이스 구성을 완료하려면 새로 복원한 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [RESTORE 인수&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [RESTORE 인수 &#40;Transact-sql&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [실패 한 파일 추가 작업 문제 해결 AlwaysOn 가용성 그룹 &#40;&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

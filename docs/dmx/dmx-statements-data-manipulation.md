@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 14464ec054826cd9072d059a8ad308da51e50b03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72890497"
 ---
 # <a name="dmx-statements---data-manipulation"></a>DMX 문 - 데이터 조작
@@ -20,7 +20,7 @@ ms.locfileid: "72890497"
 
   다음 표에서는 DMX(Data Mining Extensions)에서 데이터 마이닝 DML(데이터 조작 언어)의 일부분인 문을 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[DMX&#41;&#40;삭제](../dmx/delete-dmx.md)|마이닝 모델에서 학습한 내용을 지웁니다.|  
 |[&#40;DMX&#41;에 삽입](../dmx/insert-into-dmx.md)|마이닝 모델을 학습합니다.|  
@@ -30,6 +30,6 @@ ms.locfileid: "72890497"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

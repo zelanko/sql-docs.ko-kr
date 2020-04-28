@@ -14,10 +14,10 @@ ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728475"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
@@ -29,46 +29,36 @@ ms.locfileid: "73728475"
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
+-   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-create-and-edit-a-subscription-view"></a>구독 뷰를 만들고 편집하려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **통합 관리**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **통합 관리**를 클릭합니다.  
   
 2.  메뉴 모음에서 **뷰 만들기**를 클릭합니다.  
   
-3.  
-  **구독 뷰** 페이지에서 보기를 만들려면 **추가** 를 클릭하고 보기를 편집하려면 **편집** 을 클릭합니다. 그러면 오른쪽에 패널이 표시됩니다.  
+3.  **구독 뷰** 페이지에서 보기를 만들려면 **추가** 를 클릭하고 보기를 편집하려면 **편집** 을 클릭합니다. 그러면 오른쪽에 패널이 표시됩니다.  
   
-4.  
-  **구독 뷰 만들기** 창의 **이름** 상자에 뷰의 이름을 입력합니다.  
+4.  **구독 뷰 만들기** 창의 **이름** 상자에 뷰의 이름을 입력합니다.  
   
-     
-  **구독 뷰 편집** 창의 **이름** 상자에 업데이트된 뷰의 이름을 입력합니다.  
+     **구독 뷰 편집** 창의 **이름** 상자에 업데이트된 뷰의 이름을 입력합니다.  
   
-5.  
-  **모델** 목록에서 모델을 선택합니다.  
+5.  **모델** 목록에서 모델을 선택합니다.  
   
 6.  일시 삭제된 멤버를 뷰에 포함하려면 **일시 삭제된 멤버 포함**을 선택합니다.  
   
-7.  
-  **버전 옵션** 에서 **버전** 또는 **버전 플래그**를 선택하고 해당하는 목록에서 옵션을 선택합니다.  
+7.  **버전 옵션** 에서 **버전** 또는 **버전 플래그**를 선택하고 해당하는 목록에서 옵션을 선택합니다.  
   
     > [!TIP]  
     >  버전 플래그를 기반으로 구독 뷰를 만듭니다. 버전을 잠그는 경우에는 구독 뷰를 업데이트하지 않고 플래그를 열린 버전에 다시 할당할 수 있습니다.  
   
-8.  
-  **데이터 원본** 옵션에서 **엔터티** 또는 **파생 계층** 을 선택하고 해당하는 목록에서 옵션을 선택합니다.  
+8.  **데이터 원본** 옵션에서 **엔터티** 또는 **파생 계층** 을 선택하고 해당하는 목록에서 옵션을 선택합니다.  
   
-9. 
-  **형식** 목록에서 구독 뷰 형식을 선택합니다.  
+9. **형식** 목록에서 구독 뷰 형식을 선택합니다.  
   
-10. 
-  **형식** 목록에서 **명시적 수준** 또는 **파생 수준** 을 선택한 경우에는 뷰에 포함할 계층의 수준 수를 입력합니다.  
+10. **형식** 목록에서 **명시적 수준** 또는 **파생 수준** 을 선택한 경우에는 뷰에 포함할 계층의 수준 수를 입력합니다.  
   
 11. **저장**을 클릭합니다.  
   
@@ -92,15 +82,15 @@ ms.locfileid: "73728475"
   
 -   **만든 사람**: 뷰를 만든 사용자의 이름입니다.  
   
--   날짜: 뷰를 만든 날짜와 시간 **입니다.**  
+-   **날짜**: 뷰를 만든 날짜와 시간입니다.  
   
--   **업데이트**한 사람: 뷰를 마지막으로 업데이트 한 사용자의 이름입니다.  
+-   **업데이트한 사람**: 뷰를 마지막으로 업데이트한 사용자의 이름입니다.  
   
--   날짜: 뷰를 마지막으로 업데이트 한 날짜와 시간 **입니다.**  
+-   **날짜**: 뷰를 마지막으로 업데이트한 날짜와 시간입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 데이터 &#40;MDS(Master Data Services)&#41;내보내기](../master-data-services/overview-exporting-data-master-data-services.md)   
  [구독 뷰를 삭제 &#40;MDS(Master Data Services)&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [MDS(Master Data Services) &#40;버전 플래그를 만듭니다&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

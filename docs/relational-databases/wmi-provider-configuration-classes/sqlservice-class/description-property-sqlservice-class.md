@@ -18,10 +18,10 @@ ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cbfd9a497e6ac4cec4f8a1ca69ba9e03dc1e3033
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659667"
 ---
 # <a name="description-property-sqlservice-class"></a>Description 속성(SqlService 클래스)
@@ -36,7 +36,7 @@ object.Description [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

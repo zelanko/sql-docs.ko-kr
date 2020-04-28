@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909035"
 ---
 # <a name="scripting"></a>스크립팅
@@ -26,8 +26,7 @@ ms.locfileid: "72909035"
 
   SMO의 스크립팅은 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체 또는 개별 개체의 **스크립트** 메서드를 통해 제어 됩니다. 개체 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 는 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체에 대 한 종속성 관계의 매핑을 제어 합니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체를 사용한 고급 스크립팅은 다음 3단계 프로세스를 거칩니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Scripter> 개체와 자식 개체를 사용한 고급 스크립팅은 다음 3단계 프로세스를 거칩니다.  
   
 1.  검색  
   

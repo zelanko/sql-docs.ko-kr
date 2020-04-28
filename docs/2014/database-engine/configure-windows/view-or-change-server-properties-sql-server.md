@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783132"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>서버 속성 보기 또는 변경(SQL Server)
@@ -43,9 +43,9 @@ ms.locfileid: "72783132"
   
 -   **후속 작업:**  [서버 속성을 변경한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   sp_configure를 사용할 때는 구성 옵션을 설정한 뒤에 RECONFIGURE 또는 RECONFIGURE WITH OVERRIDE를 실행해야 합니다. RECONFIGURE WITH OVERRIDE 문은 각별한 주의가 필요한 구성 옵션에 주로 사용되지만 모든 구성 옵션에 사용할 수 있으며 RECONFIGURE 대신 사용할 수 있습니다.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "72783132"
   
 -   일부 속성 페이지는 WMI(Windows Management Instrumentation)를 통해 얻은 정보를 표시합니다. 이러한 페이지를 표시하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행 중인 컴퓨터에 WMI가 설치되어 있어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  자세한 내용은 [서버 수준 역할](../../relational-databases/security/authentication-access/server-level-roles.md)을 참조하세요.  
   
  매개 변수 없이 `sp_configure` 또는 첫 번째 매개 변수만 사용 하 여에 대 한 실행 권한은 기본적으로 모든 사용자에 게 부여 됩니다. 구성 옵션 `sp_configure` 을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 실행 하려면 사용자에 게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-view-or-change-server-properties"></a>서버 속성을 보거나 변경하려면  
   
@@ -69,7 +69,7 @@ ms.locfileid: "72783132"
   
 2.  **서버 속성** 대화 상자에서 해당 페이지에 대한 서버 정보를 보거나 변경할 페이지를 클릭합니다. 일부 속성은 읽기 전용입니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>SERVERPROPERTY 기본 제공 함수를 사용하여 서버 속성을 보려면  
   
@@ -139,7 +139,7 @@ GO
   
  자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)서버 구성 옵션을 보거나 구성하는 방법에 대해 설명합니다.  
   
-##  <a name="PowerShellProcedure"></a> SQL Server 구성 관리자 사용  
+##  <a name="using-sql-server-configuration-manager"></a><a name="PowerShellProcedure"></a> SQL Server 구성 관리자 사용  
  일부 서버 속성은 SQL Server 구성 관리자를 사용하여 보거나 변경할 수 있습니다. 예를 들어 SQL Server 인스턴스의 버전 및 에디션을 보거나 오류 로그 파일이 저장된 위치를 변경할 수 있습니다. [서버 관련 동적 관리 뷰 및 함수](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)를 쿼리하여 이러한 속성을 볼 수도 있습니다.  
   
 #### <a name="to-view-or-change-server-properties"></a>서버 속성을 보거나 변경하려면  
@@ -150,10 +150,9 @@ GO
   
 3.  세부 정보 창에서 **SQL Server (\<***instancename***>)** 을 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
-4.  
-  **SQL Server(\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭합니다.  
+4.  **SQL Server (\<***instancename***>) 속성** 대화 상자에서 **서비스** 탭 또는 **고급** 탭의 서버 속성을 변경한 다음 **확인**을 클릭 합니다.  
   
-##  <a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
+##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> 후속 작업: 서버 속성을 변경한 후  
  일부 속성의 경우 변경 내용을 적용하려면 서버를 다시 시작해야 할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

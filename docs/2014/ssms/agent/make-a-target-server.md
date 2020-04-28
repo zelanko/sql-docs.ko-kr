@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 744ebc5411e626c083676440502489029e888a28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798189"
 ---
 # <a name="make-a-target-server"></a>대상 서버 만들기
@@ -35,7 +35,7 @@ ms.locfileid: "72798189"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 대상 서버를 만듭니다.**  
+-   **대상 서버를 만들려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,9 +43,9 @@ ms.locfileid: "72798189"
   
      [SMO](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  프록시와 연관된 단계가 있는 배포된 작업은 대상 서버의 프록시 계정 컨텍스트로 실행됩니다. 다음 조건이 만족되는지 또는 프록시와 연관된 작업 단계가 마스터 서버에서 대상으로 다운로드되지 않는지 확인하세요.  
   
 -   마스터 서버 레지스트리 하위 키 **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<*instance_name*> \sql server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD)는 1 (true)로 설정 됩니다. 기본적으로 이 하위 키는 0(false)으로 설정됩니다.  
@@ -62,36 +62,31 @@ ms.locfileid: "72798189"
   
      이 오류를 해결하려면 프록시 계정이 작업 단계가 실행되는 마스터 서버 프록시 계정과 동일한 이름을 가진 대상 서버에 있는지 확인합니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 `sysadmin` 고정 서버 역할의 멤버로 설정됩니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-make-a-target-server"></a>대상 서버를 만들려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상으로 만들기**를 클릭합니다. 
-  **대상 서버 만들기 마법사** 가 대상 서버를 만드는 프로세스를 안내합니다.  
+2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭하고 **다중 서버 관리**를 가리킨 다음 **대상으로 만들기**를 클릭합니다. **대상 서버 만들기 마법사** 가 대상 서버를 만드는 프로세스를 안내합니다.  
   
-3.  
-  **마스터 서버 선택** 페이지에서 이 대상 서버가 작업을 받는 마스터 서버를 선택합니다.  
+3.  **마스터 서버 선택** 페이지에서 이 대상 서버가 작업을 받는 마스터 서버를 선택합니다.  
   
      **서버 선택**  
      마스터 서버에 연결합니다.  
   
-     **이 서버에 대 한 설명**  
+     **이 서버에 대한 설명**  
      이 대상 서버에 대한 설명을 입력합니다. 대상 서버는 이 설명을 마스터 서버로 업로드합니다.  
   
-4.  
-  **마스터 서버 로그인 자격 증명** 페이지에서 필요한 경우 대상 서버에 새 로그인을 만듭니다.  
+4.  **마스터 서버 로그인 자격 증명** 페이지에서 필요한 경우 대상 서버에 새 로그인을 만듭니다.  
   
-     **필요한 경우 새 로그인을 만들고 MSX에 대 한 권한을 할당 합니다.**  
+     **필요한 경우 새 로그인을 만들고 MSX에 대한 권한을 할당합니다.**  
      지정한 로그인이 없으면 대상 서버에 새 로그인을 만듭니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-make-a-target-server"></a>대상 서버를 만들려면  
   
@@ -112,7 +107,7 @@ ms.locfileid: "72798189"
   
      자세한 내용은 [sp_msx_enlist &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)를 참조 하세요.  
   
-##  <a name="PowerShellProcedure"></a>SQL Server 관리 개체 사용 (SMO)  
+##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>SQL Server 관리 개체 사용 (SMO)  
   
 ## <a name="see-also"></a>참고 항목  
  [기업 내 관리 자동화](automated-administration-across-an-enterprise.md)  

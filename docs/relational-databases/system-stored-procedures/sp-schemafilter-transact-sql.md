@@ -16,10 +16,10 @@ ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633012"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
@@ -45,15 +45,15 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`이 스키마에 대해 수행할 작업입니다. *연산은* **nvarchar (4)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**추가**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
+|**add**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
 |**그림자**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
-|**도움말**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
+|**help**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**schemaname**|**sysname**|게시에 적합하지 않은 스키마의 이름입니다.|  
   

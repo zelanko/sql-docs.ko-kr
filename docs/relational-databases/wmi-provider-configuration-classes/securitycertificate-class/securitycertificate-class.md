@@ -18,19 +18,17 @@ ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660455"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 는 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유 하는 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]공개 키 값을 바인딩하는 디지털 서명 된 문입니다. 인증서는 인증 기관에서 발급합니다.  
   
- 
-  [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
+ [SecurityCertificate 클래스](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   보안 인증서의 속성을 봅니다.  
   

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632858"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
@@ -42,7 +42,7 @@ DMA를 설치 하려면 [Microsoft 다운로드 센터](https://www.microsoft.co
 
 - 온-프레미스 SQL Server로 업그레이드에 영향을 줄 수 있는 문제를 검색 합니다.이러한 항목은 호환성 문제로 설명 되며 다음 범주로 구성 됩니다.
 
-  - 주요 변경 내용
+  - 호환성이 손상되는 변경
   - 동작 변경
   - 사용되지 않는 기능
 
@@ -71,7 +71,7 @@ DMA를 설치 하려면 [Microsoft 다운로드 센터](https://www.microsoft.co
 
 평가를 실행 하려면 SQL Server **sysadmin** 역할의 멤버 여야 합니다.
 
-## <a name="supported-source-and-target-versions"></a>지원 되는 원본 및 대상 버전
+## <a name="supported-source-and-target-versions"></a>지원되는 원본 및 대상 버전
 
 DMA는 SQL Server 업그레이드 관리자의 모든 이전 버전을 대체 하며 대부분의 SQL Server 버전의 업그레이드에 사용 되어야 합니다. 지원 되는 원본 및 대상 버전:
 

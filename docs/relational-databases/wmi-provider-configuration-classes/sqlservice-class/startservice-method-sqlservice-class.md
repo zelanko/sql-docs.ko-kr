@@ -18,10 +18,10 @@ ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660836"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService 메서드(SqlService 클래스)
@@ -36,7 +36,7 @@ object.StartService()
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -46,7 +46,7 @@ object.StartService()
  성공했습니다. 요청이 수락되었습니다.  
   
  1  
- 지원되지 않습니다. 요청이 지원되지 않습니다.  
+ 지원되지 않음 요청이 지원되지 않습니다.  
   
  2  
  액세스가 거부되었습니다.)가 나타납니다. 사용자에게 적절한 액세스 권한이 없습니다.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 60a96db6a7568c2af22242f10f96e7a2abf13937
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637832"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>독립 실행형 버전의 보고서 작성기 설치(보고서 작성기)
@@ -63,8 +63,7 @@ ms.locfileid: "73637832"
         > [!NOTE]  
         >  볼륨에 디스크 여유 공간이 충분하지 않은 경우 해당 볼륨이 강조 표시됩니다.  
   
-10. 
-  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
+10. **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
     >  보고서 서버에 연결되었을 때 보고서 작성기로 작업할 계획이라면 이 단계에서 서버의 URL을 제공하는 것이 좋습니다. 그러나 보고서 작성기에서 작업할 때 **옵션** 대화 상자에서이 작업을 수행할 수도 있습니다.  
@@ -97,8 +96,7 @@ ms.locfileid: "73637832"
         > [!NOTE]  
         >  볼륨에 디스크 여유 공간이 충분하지 않은 경우 해당 볼륨이 강조 표시됩니다.  
   
-7.  
-  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
+7.  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
     >  보고서 서버에 연결되었을 때 보고서 작성기로 작업할 계획이라면 이 단계에서 서버의 URL을 제공하는 것이 좋습니다. 그러나 보고서 작성기에서 작업할 때 **옵션** 대화 상자에서이 작업을 수행할 수도 있습니다.  

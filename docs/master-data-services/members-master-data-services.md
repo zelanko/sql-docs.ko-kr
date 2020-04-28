@@ -1,5 +1,5 @@
 ---
-title: 구성원
+title: 멤버
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,17 +18,16 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728009"
 ---
 # <a name="members-master-data-services"></a>멤버(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버는 실제 마스터 데이터입니다. 예를 들어, 멤버는 Product 엔터티의 Road-150 bike이거나 Customer 엔터티의 특정 고객일 수 있습니다.  
   
 ## <a name="how-members-relate-to-other-model-objects"></a>다른 모델 개체와 멤버의 관계  
@@ -65,28 +64,28 @@ ms.locfileid: "73728009"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 리프 멤버를 만듭니다.|[MDS(Master Data Services) &#40;리프 멤버를 만듭니다&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|새 통합 멤버를 만듭니다.|[MDS(Master Data Services) &#40;통합 멤버를 만듭니다&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
-|기존 멤버 또는 컬렉션을 삭제합니다.|[MDS(Master Data Services) &#40;멤버 또는 컬렉션을 삭제&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|삭제된 멤버 또는 컬렉션을 다시 활성화합니다.|[MDS(Master Data Services) &#40;멤버 또는 컬렉션을 다시 활성화&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|멤버의 속성 값을 업데이트합니다.|[특성 유형 &#40;Excel용 MDS 추가 기능 변경&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|새 리프 멤버를 만듭니다.|[리프 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|새 통합 멤버를 만듭니다.|[통합 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|기존 멤버 또는 컬렉션을 삭제합니다.|[멤버 또는 컬렉션 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
+|삭제된 멤버 또는 컬렉션을 다시 활성화합니다.|[멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|멤버의 속성 값을 업데이트합니다.|[특성 유형 변경&#40;Excel용 MDS 추가 기능&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>관련 내용  
   
--   [MDS&#41;&#40;MDS(Master Data Services) 개요](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [계층&#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
   
--   [컬렉션 &#40;MDS(Master Data Services)&#41;](../master-data-services/collections-master-data-services.md)  
+-   [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [리프 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [리프 권한&#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
--   [필터 연산자 &#40;MDS(Master Data Services)&#41;](../master-data-services/filter-operators-master-data-services.md)  
+-   [필터 연산자&#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   

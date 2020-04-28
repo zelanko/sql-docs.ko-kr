@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783237"
 ---
 # <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
@@ -77,20 +77,15 @@ ms.locfileid: "72783237"
   
 7.  새 인덱스가 포함된 스크립트를 사용하여 새 테이블(`T`)을 만듭니다.  
   
-8.  
-  `T_copy`에서 `T`로 데이터를 복사합니다.  
+8.  `T_copy`에서 `T`로 데이터를 복사합니다.  
   
 9. 스키마 바운드 개체 참조를 다시 만들고 사용 권한을 적용합니다.  
   
-10. 
-  `T`에 대한 작업을 시작합니다.  
+10. `T`에 대한 작업을 시작합니다.  
   
- <sup>1</sup> `T_copy` 은이 예제에서 디스크에 유지 됩니다. 
-  `T`의 백업을 사용할 수 있는 경우 `T_copy`는 임시 또는 비 영속성 테이블일 수 있습니다.  
+ <sup>1</sup> `T_copy` 은이 예제에서 디스크에 유지 됩니다. `T`의 백업을 사용할 수 있는 경우 `T_copy`는 임시 또는 비 영속성 테이블일 수 있습니다.  
   
- <sup>2</sup> 에는 충분 한 `T_copy`메모리가 있어야 합니다. 메모리는 `DROP TABLE`에서 즉시 비워지지 않습니다. 
-  `T_copy`가 메모리 액세스에 최적화된 경우 `T`의 추가 복사본 두 개에 대한 충분한 메모리가 있어야 합니다. 
-  `T_copy`가 디스크 기반 테이블인 경우 기존 버전의 `T`를 삭제한 후 따라 잡아야 하는 가비지 수집기로 인해 `T`의 추가 복사본 하나에 대해 충분한 메모리만 있으면 됩니다.  
+ <sup>2</sup> 에는 충분 한 `T_copy`메모리가 있어야 합니다. 메모리는 `DROP TABLE`에서 즉시 비워지지 않습니다. `T_copy`가 메모리 액세스에 최적화된 경우 `T`의 추가 복사본 두 개에 대한 충분한 메모리가 있어야 합니다. `T_copy`가 디스크 기반 테이블인 경우 기존 버전의 `T`를 삭제한 후 따라 잡아야 하는 가비지 수집기로 인해 `T`의 추가 복사본 하나에 대해 충분한 메모리만 있으면 됩니다.  
   
 ## <a name="changing-schema-powershell"></a>스키마 변경(PowerShell)  
  다음 PowerShell 스크립트는 테이블 및 연결된 사용 권한을 스크립팅하여 스키마 변경을 준비하고 생성합니다.  
@@ -299,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 테이블](memory-optimized-tables.md)  
+ [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)  

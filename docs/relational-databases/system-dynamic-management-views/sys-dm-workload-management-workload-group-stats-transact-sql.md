@@ -13,10 +13,10 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73633437"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>sys. dm_workload_management_workload_groups_stats (Transact-sql)
@@ -24,7 +24,7 @@ ms.locfileid: "73633437"
 
 에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]작업 그룹 통계 및 작업 그룹의 유효 값을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |group_id|**int**|작업 그룹의 고유한 ID입니다.||
 |name|**sysname**|작업 그룹의 이름입니다.||

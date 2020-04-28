@@ -11,35 +11,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797773"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
   SQL Server 구분 식별자에 Windows PowerShell 경로 이름에서 지원되지 않는 문자가 사용되는 경우가 있습니다. 이러한 문자는 16진수 값을 인코딩하여 지정할 수 있습니다.  
   
-1.  **시작 하기 전 주의**  [사항: 제한 사항](#LimitationsRestrictions)  
+1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
   
-2.  **특수 문자를 처리 하려면:**  [식별자 인코딩](#EncodeIdent), [식별자 디코딩](#DecodeIdent)  
+2.  **특수 문자를 처리하려면:**  [식별자 인코딩](#EncodeIdent), [식별자 디코딩](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
- Windows PowerShell 경로 이름에 지원되지 않는 문자는 "%" 문자 뒤에 해당 문자를 나타내는 비트 패턴의 16진수 값(예: " **%** xx")을 사용하여 표현하거나 인코딩할 수 있습니다. 인코딩은 Windows PowerShell 경로에 지원되지 않는 모든 문자를 처리하는 데 사용할 수 있습니다.  
+ Windows PowerShell 경로 이름에서 지원 되지 않는 문자는 "%" 문자 뒤에 문자를 나타내는 비트 패턴의 16 진수 값 ("**%** xx")으로 표시 되거나 인코딩될 수 있습니다. 인코딩은 Windows PowerShell 경로에 지원되지 않는 모든 문자를 처리하는 데 사용할 수 있습니다.  
   
  **Encode-SqlName** cmdlet은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용합니다. Windows PowerShell 언어에서 지원하지 않는 모든 문자를 "%xx"로 인코딩하여 문자열을 출력합니다. **Decode-SqlName** cmdlet은 인코딩된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용하고 원래 식별자를 반환합니다.  
   
-###  <a name="LimitationsRestrictions"></a> 제한 사항  
- 
-  `Encode-Sqlname` 및 `Decode-Sqlname` cmdlet은 SQL Server 구분 식별자에서 허용되지만 PowerShell 경로에서 지원되지 않는 문자만 인코딩하거나 디코딩합니다. 
-  **Encode-SqlName** 으로 인코딩되고 **Decode-SqlName**으로 디코딩된 문자입니다.  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
+ `Encode-Sqlname` 및 `Decode-Sqlname` cmdlet은 SQL Server 구분 식별자에서 허용되지만 PowerShell 경로에서 지원되지 않는 문자만 인코딩하거나 디코딩합니다. **Encode-SqlName** 으로 인코딩되고 **Decode-SqlName**으로 디코딩된 문자입니다.  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  
 |**문자**|\ |/|:|%|\<|>|*|?|[|]|&#124;|  
 |**16진수 인코딩**|%5C|%2F|%3A|%25|%3C|%3E|%2A|%3F|%5B|%5D|%7C|  
   
-##  <a name="EncodeIdent"></a> 식별자 인코딩  
+##  <a name="encoding-an-identifier"></a><a name="EncodeIdent"></a> 식별자 인코딩  
  **PowerShell 경로에서 SQL Server 식별자를 인코딩하려면**  
   
 -   두 방법 중 하나를 사용하여 SQL Server 식별자를 인코딩합니다.  
@@ -61,11 +59,10 @@ Set-Location Table%3ATest
 Set-Location (Encode-SqlName "Table:Test")  
 ```  
   
-##  <a name="DecodeIdent"></a> 식별자 디코딩  
+##  <a name="decoding-an-identifier"></a><a name="DecodeIdent"></a> 식별자 디코딩  
  **PowerShell 경로에서 SQL Server 식별자를 디코딩하려면**  
   
- 
-  `Decode-Sqlname` cmdlet을 사용하여 16진수 인코딩을 인코딩에 의해 표시되는 문자로 바꿀 수 있습니다.  
+ `Decode-Sqlname` cmdlet을 사용하여 16진수 인코딩을 인코딩에 의해 표시되는 문자로 바꿀 수 있습니다.  
   
 ### <a name="examples-decoding"></a>예(디코딩)  
  이 예제에서는 "Table:Test"를 반환합니다.  
@@ -75,6 +72,6 @@ Decode-SqlName "Table%3ATest"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [PowerShell의 SQL Server 식별자](sql-server-identifiers-in-powershell.md)   
+ [PowerShell에서 SQL Server 식별자](sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

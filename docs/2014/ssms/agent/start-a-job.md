@@ -15,23 +15,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94adcf8242c6acaca7c28ff9a854e0aa87cb3ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798182"
 ---
 # <a name="start-a-job"></a>작업 시작
   이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 SQL Server 관리 개체를 사용 하 여에서 에이전트 작업 실행을 시작 하는 방법에 대해 설명 합니다.  
   
- 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 한 대의 로컬 서버나 다중 원격 서버에서 실행될 수 있습니다.  
+ 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 수행하도록 지정된 일련의 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 한 대의 로컬 서버나 다중 원격 서버에서 실행될 수 있습니다.  
   
 -   **시작하기 전 주의 사항:**  
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 작업을 시작 합니다.**  
+-   **작업을 시작하려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -39,20 +38,18 @@ ms.locfileid: "72798182"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 ### <a name="to-start-a-job"></a>작업을 시작하려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트** 를 확장한 다음 **작업**을 확장합니다. 원하는 작업 시작 방법에 따라 다음 중 하나를 수행합니다.  
+2.  **SQL Server 에이전트** 를 확장한 다음 **작업**을 확장합니다. 원하는 작업 시작 방법에 따라 다음 중 하나를 수행합니다.  
   
     -   단일 서버 또는 대상 서버에서 작업 중이거나 마스터 서버에서 로컬 서버 작업을 실행하고 있는 경우 시작하려는 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작**을 클릭합니다.  
   
@@ -60,10 +57,9 @@ ms.locfileid: "72798182"
   
     -   마스터 서버에서 작업 중이고 모든 대상 서버에서 동시에 작업을 실행하려는 경우에는 시작하려는 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작**, **모든 대상 서버에서 시작**을 차례로 클릭합니다.  
   
-    -   마스터 서버에서 작업 중이고 작업 대상 서버를 지정하려는 경우에는 시작하려는 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작**, **특정 대상 서버에서 시작**을 차례로 클릭합니다. 
-  **다운로드 명령 게시** 대화 상자에서 **대상 서버 지정** 확인란을 선택한 다음 작업을 실행할 각각의 대상 서버를 선택합니다.  
+    -   마스터 서버에서 작업 중이고 작업 대상 서버를 지정하려는 경우에는 시작하려는 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작**, **특정 대상 서버에서 시작**을 차례로 클릭합니다. **다운로드 명령 게시** 대화 상자에서 **대상 서버 지정** 확인란을 선택한 다음 작업을 실행할 각각의 대상 서버를 선택합니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 ### <a name="to-start-a-job"></a>작업을 시작하려면  
   
@@ -84,7 +80,7 @@ ms.locfileid: "72798182"
   
  자세한 내용은 [sp_start_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)을 참조하세요.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 
 ### <a name="to-start-a-job"></a>작업을 시작하려면
   

@@ -16,10 +16,10 @@ ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632980"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription(Transact-SQL)
@@ -64,7 +64,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_validatemergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제 된 데이터의 유효성 검사](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Transact-sql&#41;sp_validatemergepublication &#40;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md)  
   

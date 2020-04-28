@@ -11,17 +11,16 @@ ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0bef34cdd61393e8aaf8ad312428e51affba892c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728121"
 ---
 # <a name="create-a-master-data-services-database"></a>Master Data Services 데이터베이스 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 애플리케이션 및 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 서비스를 지원할 새 데이터베이스가 필요한 경우 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
@@ -34,11 +33,9 @@ ms.locfileid: "73728121"
   
 2.  왼쪽 창에서 **데이터베이스 구성**을 클릭합니다.  
   
-3.  
-  **데이터베이스 구성** 페이지에서 **데이터베이스 만들기**를 클릭합니다.  
+3.  **데이터베이스 구성** 페이지에서 **데이터베이스 만들기**를 클릭합니다.  
   
-4.  
-  **데이터베이스 만들기** 마법사를 완료하여 데이터베이스를 만들고 구성합니다. 마법사의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
+4.  **데이터베이스 만들기** 마법사를 완료하여 데이터베이스를 만들고 구성합니다. 마법사의 UI(사용자 인터페이스) 옵션에 대한 자세한 내용은 [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
   

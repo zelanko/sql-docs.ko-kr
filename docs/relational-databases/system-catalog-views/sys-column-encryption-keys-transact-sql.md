@@ -21,10 +21,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4cd6b4a4cb8eeed0dd0a2a78adc2d39c6a2e895d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593725"
 ---
 # <a name="syscolumn_encryption_keys--transact-sql"></a>sys. column_encryption_keys (Transact-sql)
@@ -54,7 +54,7 @@ ms.locfileid: "73593725"
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Secure enclaves를 사용 하는 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Always Encrypted 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
- [보안 Enclave를 사용한 Always Encrypted 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
+ [보안 enclave를 사용한 Always Encrypted용 키 관리](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)    
 
   
   

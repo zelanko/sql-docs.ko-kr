@@ -18,10 +18,10 @@ ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 414ff1ab9c5b9ba717af4010520dadcacc50fdd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660645"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName 속성(ServerNetworkProtocolIPAddress 클래스)
@@ -36,13 +36,11 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [ServerNetworkProtocolIPAdress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 개체입니다.  
+ *object*  
+ [ServerNetworkProtocolIPAdress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
   
 ## <a name="remarks"></a>설명  
   

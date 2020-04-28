@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17c8b67d29cb82956a37bc3f83867161486a4f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637860"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>자습서의 사전 요구 사항(보고서 작성기)
@@ -33,8 +33,7 @@ ms.locfileid: "73637860"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버와 통합된 SharePoint 사이트 또는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버의 URL. 보고서, 공유 데이터 원본, 공유 데이터 세트, 보고서 파트 및 모델을 저장하고 볼 수 있는 권한이 있어야 합니다. 기본적으로 보고서 서버의 URL은 http://\<servername>/reportserver입니다. 기본적으로 SharePoint 사이트의 URL은 http://\<sitename> 또는 http://\<server>/site..  
   
--   
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스의 이름과 모든 데이터베이스에 대한 읽기 전용 액세스에 필요한 자격 증명. 자습서의 데이터 세트 쿼리에서는 리터럴 데이터를 사용하지만 보고서 데이터 세트에 필요한 메타데이터가 반환되도록 하려면 각 쿼리를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 인스턴스에서 처리해야 합니다. 예를 들어 연결 문자열 `data source=<servername>`은 서버만 지정합니다. 서버에 액세스할 수 있는 권한을 부여하는 시스템 관리자가 할당한 기본 데이터베이스에 대한 읽기 권한이 있어야 합니다. 연결 문자열 `data source=<servername>;initial catalog=<database>`에 표시된 것처럼 데이터베이스를 지정할 수도 있습니다.  
   
 -   지도가 포함된 자습서의 경우 Bing Maps를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) 설명서에 있는 설명서에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [지도 보고서 지원 계획](plan-for-map-report-support.md) 을 참조 하세요.  
   

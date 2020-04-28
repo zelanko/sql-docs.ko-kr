@@ -14,42 +14,36 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728468"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 멤버와 해당 특성을 포함할 엔터티를 만듭니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
--   
-  **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
+-   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
--   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 -   모델이 있어야 합니다. 자세한 내용은 [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-create-an-entity"></a>엔터티를 만들려면  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  
-  **모델 관리** 페이지의 표에서 엔터티를 만들 모델을 선택하고 **엔터티**를 클릭합니다.  
+2.  **모델 관리** 페이지의 표에서 엔터티를 만들 모델을 선택하고 **엔터티**를 클릭합니다.  
   
-3.  
-  **엔터티 관리** 페이지에서 **추가**를 클릭합니다.  
+3.  **엔터티 관리** 페이지에서 **추가**를 클릭합니다.  
   
-4.  
-  **이름** 상자에 엔터티의 이름을 입력합니다.  
+4.  **이름** 상자에 엔터티의 이름을 입력합니다.  
   
 5.  필요에 따라 **설명** 필드에 엔터티 설명을 입력합니다.  
   
@@ -62,16 +56,13 @@ ms.locfileid: "73728468"
     > [!TIP]
     > 준비 테이블에 대해 기본 이름을 사용하는 경우 동일한 이름의 엔터티가 다른 모델에 존재하면 MDS는 준비 테이블 이름에 식별자(예: _1, _2)를 자동으로 추가합니다.
   
-7.  
-  **트랜잭션 로그 유형** 필드의 드롭다운 목록에서 트랜잭션 로그 유형을 선택합니다.  
+7.  **트랜잭션 로그 유형** 필드의 드롭다운 목록에서 트랜잭션 로그 유형을 선택합니다.  
   
      자세한 내용은 [엔터티 트랜잭션 로그 유형 변경&#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)을 참조하세요.  
   
-8.  (선택 사항) 
-  **코드 값 자동으로 만들기** 확인란을 선택합니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.  
+8.  (선택 사항) **코드 값 자동으로 만들기** 확인란을 선택합니다. 자세한 내용은 [MDS(Master Data Services)&#41;&#40;자동 코드 만들기 ](../master-data-services/automatic-code-creation-master-data-services.md)를 참조 하세요.  
   
-9. (선택 사항) 
-  **데이터 압축 사용** 확인란을 선택합니다. 행 압축 기능은 기본적으로 설정됩니다. 자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)을 참조하세요.  
+9. (선택 사항) **데이터 압축 사용** 확인란을 선택합니다. 행 압축 기능은 기본적으로 설정됩니다. 자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
 10. **저장**을 클릭합니다.  
   
@@ -80,8 +71,7 @@ ms.locfileid: "73728468"
   
 |속성|Description|  
 |----------|-----------------|  
-|상태|엔터티 상태입니다. 
-  **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
+|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
 |속성|엔터티 이름입니다.|  
 |Description|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
@@ -97,16 +87,16 @@ ms.locfileid: "73728468"
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [텍스트 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
--   [도메인 기반 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+-   [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [MDS(Master Data Services)&#41;&#40;파일 특성을 만듭니다.](../master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)   
  [명시적 계층 &#40;MDS(Master Data Services)&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [엔터티 &#40;MDS(Master Data Services) 편집&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
- [엔터티 &#40;MDS(Master Data Services) 삭제&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
+ [엔터티 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

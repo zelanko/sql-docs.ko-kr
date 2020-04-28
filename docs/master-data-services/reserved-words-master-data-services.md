@@ -14,17 +14,16 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727922"
 ---
 # <a name="reserved-words-master-data-services"></a>예약어(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 모델 개체 또는 멤버를 만들 때 일부 단어를 사용할 수 없습니다. 이러한 단어를 사용하면 오류가 발생할 수 있습니다.  
   
 > [!NOTE]  
@@ -32,30 +31,30 @@ ms.locfileid: "73727922"
   
 -   [모델](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [엔터티](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [Entities](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [명시적 계층](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
 -   [특성](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [구성원](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [멤버](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a>모델인  
+##  <a name="models"></a><a name="models"></a>모델인  
  이름이 **Name** 또는 **Code**로 설정된 모델을 만드는 경우 **Name** 또는 **Code** 를 엔터티 이름으로 사용할 수 없으므로 **모델과 이름이 같은 엔터티 만들기** 를 선택하지 마십시오.  
   
-##  <a name="entities"></a>엔터티  
+##  <a name="entities"></a><a name="entities"></a>엔터티  
  엔터티 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="exhierarchies"></a>명시적 계층  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>명시적 계층  
  명시적 계층 이름의 경우 **Name** 또는 **Code**를 사용할 수 없습니다.  
   
-##  <a name="attributes"></a>특성  
+##  <a name="attributes"></a><a name="attributes"></a>특성  
   
 -   **ID**  
   
--   **코드**  
+-   **Code**  
   
--   **사용자 이름**  
+-   **EnterUserName**  
   
 -   **LastChgUserName**  
   
@@ -63,9 +62,9 @@ ms.locfileid: "73727922"
   
 -   **EnterDTM**  
   
--   **사용자 Id**  
+-   **EnterUserID**  
   
--   **사용자 이름**  
+-   **EnterUserName**  
   
 -   **LastChgDTM**  
   
@@ -77,10 +76,10 @@ ms.locfileid: "73727922"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>멤버  
+##  <a name="members"></a><a name="members"></a>멤버  
  멤버의 경우 **코드**특성 값에 대해 **MDMMemberStatus**, **MDMUnused** 또는 **ROOT** 을 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDS&#41;&#40;MDS(Master Data Services) 개요](../master-data-services/master-data-services-overview-mds.md)  
+ [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

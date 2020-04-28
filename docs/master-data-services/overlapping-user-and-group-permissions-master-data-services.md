@@ -15,10 +15,10 @@ ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727940"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>겹치는 사용자 및 그룹 권한(Master Data Services)
@@ -33,15 +33,14 @@ ms.locfileid: "73727940"
   
  사용자가 여러 그룹의 멤버이며 이러한 그룹에 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]액세스 권한이 있는 경우 다음 규칙이 적용됩니다.  
   
--   **Deny** 는 다른 모든 사용 권한을 재정의 합니다. 그룹 중 하나에서 개체 권한이 **거부** 이면 유효 권한은 거부입니다.  
+-   **거부** 는 다른 모든 사용 권한을 무시합니다. 그룹 중 하나에서 개체 권한이 **거부** 이면 유효 권한은 거부입니다.  
   
 -   액세스 권한은 그룹 내 모든 유효 권한의 합집합입니다. 개체 권한이 한 그룹에서는 **만들기** 이고 다른 그룹에서는 **업데이트** 인 경우 유효 권한은 **만들기** 및 **업데이트**입니다.  
   
  이러한 규칙은 **모델** 탭과 **계층 멤버** 탭 모두에 적용됩니다. 각 탭의 사용 권한이 확인된 후 결합됩니다. 자세한 내용은 [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)을 참조하세요.  
   
 > [!NOTE]  
->  겹치는 사용자 및 그룹 권한은 사용자 인터페이스에서 확인할 수 있습니다. 
-  **모델** 탭과 **계층 멤버** 탭 둘 다에 **유효** 를 선택하여 유효 사용 권한을 볼 수 있는 드롭다운 목록이 있습니다.  
+>  겹치는 사용자 및 그룹 권한은 사용자 인터페이스에서 확인할 수 있습니다. **모델** 탭과 **계층 멤버** 탭 둘 다에 **유효** 를 선택하여 유효 사용 권한을 볼 수 있는 드롭다운 목록이 있습니다.  
   
 ## <a name="example-1"></a>예 1  
  ![mds_conc_user_group_ex_1](../master-data-services/media/mds-conc-user-group-ex-1.gif "mds_conc_user_group_ex_1")  
@@ -84,6 +83,6 @@ ms.locfileid: "73727940"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) &#40;사용 권한을 결정 하는 방법&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;겹치는 모델 및 멤버 권한](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: e6472fae-870d-4fb3-84d0-0c8f6599d1d2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c80c41a6ef0a9bd9b057effc0cae950584a3dfd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659148"
 ---
 # <a name="instancename-property-sinstance-class"></a>InstanceName 속성(SInstance 클래스)
@@ -36,12 +36,11 @@ object.InstanceName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서버 인스턴스를 나타내는 [Sinstance 클래스](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름을 지정하는 문자열 값입니다.  
   
 ## <a name="remarks"></a>설명  
   

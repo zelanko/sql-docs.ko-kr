@@ -18,10 +18,10 @@ ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659660"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
@@ -36,7 +36,7 @@ object.ErrorControl [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
@@ -51,10 +51,10 @@ object.ErrorControl [= value]
  심각  
  마지막으로 성공한 올바른 구성으로 시스템을 다시 시작합니다.  
   
- 위험  
+ 중요  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
- 알 수 없음  
+ Unknown  
  심각도를 알 수 없습니다.  
   
 ## <a name="remarks"></a>설명  

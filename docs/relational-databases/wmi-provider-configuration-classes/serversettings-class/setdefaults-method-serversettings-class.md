@@ -18,10 +18,10 @@ ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 86e15376bd56a439e0763e79a5c166d7023125ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660268"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults 메서드(ServerSettings 클래스)
@@ -36,7 +36,7 @@ object.SetDefaults(OverwriteAll)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  클라이언트 인스턴스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 나타내는 [serversettings 클래스](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  

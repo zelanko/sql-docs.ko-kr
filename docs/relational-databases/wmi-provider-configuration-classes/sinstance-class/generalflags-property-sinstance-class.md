@@ -18,10 +18,10 @@ ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3bc06575240777cbacccb675b5bec8a917558cfe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659730"
 ---
 # <a name="generalflags-property-sinstance-class"></a>GeneralFlags 속성(SInstance 클래스)
@@ -36,12 +36,11 @@ object.GeneralFlags [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서버 인스턴스를 나타내는 [Sinstance 클래스](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 지원하는 일반 플래그를 나타내는 개체의 배열입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 지원하는 일반 플래그를 나타내는 개체의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
   

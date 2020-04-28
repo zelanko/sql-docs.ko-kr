@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 650fe0fe02841c55caf0cfba864eb739386ca48a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783151"
 ---
 # <a name="use-my-subscriptions"></a>내 구독 사용
@@ -25,7 +25,7 @@ ms.locfileid: "72783151"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]기본 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 기본 모드|  
   
  내 구독에서 폴더, 보고서, 설명, 트리거, 마지막 실행 또는 상태를 기준으로 구독을 정렬할 수 있습니다. 시간순으로 정렬되는 마지막 실행을 제외하고 모든 값은 사전순으로 정렬됩니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "72783151"
  내 구독은 보고서 관리자에서 사용할 수 있습니다. 내 구독에 액세스하려면 보고서 관리자 일반 도구 모음에서 **내 구독** 을 클릭합니다.  
   
 ## <a name="use-windows-powershell-to-list-mysubscriptions"></a>Windows PowerShell을 사용하여 MySubscriptions 나열  
- ![PowerShell 관련 내용](../media/rs-powershellicon.jpg "PowerShell 관련 내용")  
+ ![PowerShell 관련 콘텐츠](../media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
  다음 PowerShell 스크립트는 현재 사용자의 구독 목록 및 구독 속성을 반환합니다. 자세한 내용은 [ReportingService2010.ListMySubscriptions 메서드](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listmysubscriptions.aspx)를 참조하십시오.  
   

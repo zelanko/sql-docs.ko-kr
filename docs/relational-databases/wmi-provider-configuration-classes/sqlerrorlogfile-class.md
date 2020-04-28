@@ -11,15 +11,14 @@ ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659049"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대한 정보를 보기 위한 속성을 제공합니다.  
   
 ## <a name="syntax"></a>구문  

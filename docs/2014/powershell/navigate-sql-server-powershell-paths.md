@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797805"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
@@ -23,17 +23,16 @@ ms.locfileid: "72797805"
 ## <a name="before-you-begin"></a>시작하기 전에  
  Windows PowerShell은 cmdlet을 구현하여 PowerShell 공급자가 지원하는 개체의 계층 구조를 보여주는 경로 구조를 탐색합니다. 경로의 노드를 탐색한 후 다른 cmdlet을 사용하여 현재 개체에 대한 기본 작업을 수행할 수 있습니다. cmdlet은 자주 사용되므로 간단한 정규 별칭을 가지고 있습니다. 또한 cmdlet을 유사한 명령 프롬프트 명령에 매핑하는 별칭 집합과 UNIX 셸 명령에 대한 별칭 집합도 있습니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
   
-|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|Description|  
+|Cmdlet|정규 별칭|cmd 별칭|UNIX 셸 별칭|설명|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|현재 노드를 가져옵니다.|  
 |`Set-Location`|**sl**|**cd, chdir**|**cd, chdir**|현재 노드를 변경합니다.|  
-|**Get-ChildItem**|**gci**|**dir**|**ls**|현재 노드에 저장된 개체를 나열합니다.|  
-|**Get-Item**|**gi**|||현재 항목의 속성을 반환합니다.|  
-|**Rename-Item**|**rni**|**rn**|**ren**|개체 이름을 바꿉니다.|  
-|**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|개체를 제거합니다.|  
+|**Get ChildItem**|**gci**|**dir**|**l**|현재 노드에 저장된 개체를 나열합니다.|  
+|**항목 가져오기**|**gi**|||현재 항목의 속성을 반환합니다.|  
+|**항목 이름 바꾸기**|**rni**|**수락**|**ren**|개체 이름을 바꿉니다.|  
+|**항목 제거**|**ri**|**del, rd**|**rm, rmdir**|개체를 제거합니다.|  
   
 > [!IMPORTANT]  
 >  일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자(개체 이름)의 경우 Windows PowerShell에서 지원하지 않는 문자가 경로 이름에 포함되어 있습니다. 이러한 문자가 포함된 이름을 사용하는 방법은 [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md)을 참조하십시오.  
@@ -45,7 +44,7 @@ ms.locfileid: "72797805"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|로컬 컴퓨터의 이름을 반환합니다. SMO 또는 WMI를 사용하여 다른 컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스에 연결한 경우에는 해당 컴퓨터도 나열됩니다.|  
 |SQLSERVER:\SQL\\*ComputerName*|컴퓨터에 있는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 목록입니다.|  
-|SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*|Endpoints, Certificates 및 Databases와 같은 인스턴스의 최상위 개체 유형 목록입니다.|  
+|SQLSERVER: \ SQL\\*ComputerName*\\*InstanceName*|Endpoints, Certificates 및 Databases와 같은 인스턴스의 최상위 개체 유형 목록입니다.|  
 |Databases와 같은 개체 클래스 노드|데이터베이스(예: master, model, AdventureWorks20008R2) 목록과 같은 해당 유형의 개체 목록입니다.|  
 |AdventureWorks2012와 같은 개체 이름 노드|개체 내에 포함된 개체 유형 목록입니다. 예를 들어 데이터베이스는 테이블 및 뷰와 같은 개체 유형을 나열합니다.|  
   
@@ -116,9 +115,7 @@ Get-ChildItem -force
 
 ### <a name="create-and-use-a-custom-drive"></a>사용자 지정 드라이브 만들기 및 사용
   
-1.  
-  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. 
-  `Root` 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
+1.  `New-PSDrive`를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. `Root` 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
   
 2.  경로 탐색 cmdlet(예: `Set-Location`)에서 사용자 지정 드라이브 이름을 참조합니다.  
   
@@ -136,5 +133,5 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](work-with-sql-server-powershell-paths.md)   
- [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Urn를 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

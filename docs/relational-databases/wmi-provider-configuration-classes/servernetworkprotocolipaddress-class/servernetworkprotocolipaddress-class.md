@@ -18,19 +18,17 @@ ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 502fde4cb50dda4588ee71486d938070101e80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660429"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [ServerNetworkProtocolIPAddress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 는 서버 네트워크 프로토콜에서 지원하는 IP 주소를 나타냅니다.  
   
- 
-  [ServerNetworkProtocolIPAddress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 를 사용하여 다음 태스크를 수행할 수 있습니다.  
+ [ServerNetworkProtocolIPAddress 클래스](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) 를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이름을 확인 합니다.  
   

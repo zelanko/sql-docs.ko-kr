@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797740"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
@@ -30,36 +30,34 @@ ms.locfileid: "72797740"
   
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
   
 -   다른 연결 액세스를 구성하려면 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
   
-|Task|사용 권한|  
+|작업|사용 권한|  
 |----------|-----------------|  
 |가용성 그룹을 만들 때 복제본을 구성하려면|CREATE AVAILABILITY GROUP 서버 권한, ALTER ANY AVAILABILITY GROUP 권한, CONTROL SERVER 권한 중 하나와 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.|  
 |가용성 복제본을 수정하려면|가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.|  
   
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **가용성 복제본에 대 한 액세스를 구성 하려면**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ **가용성 복제본에 대한 액세스를 구성하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  복제본을 변경할 가용성 그룹을 클릭합니다.  
   
 4.  가용성 복제본을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-5.  
-  **가용성 복제본 속성** 대화 상자에서 다음과 같이 주 역할 및 보조 역할에 대한 연결 액세스를 변경할 수 있습니다.  
+5.  **가용성 복제본 속성** 대화 상자에서 다음과 같이 주 역할 및 보조 역할에 대한 연결 액세스를 변경할 수 있습니다.  
   
     -   보조 역할의 경우 **읽기용 보조** 드롭 목록의 다음 값 중에서 새 값을 선택합니다.  
   
@@ -81,8 +79,8 @@ ms.locfileid: "72797740"
          응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 따라서 고객이 읽기 전용 작업을 실수로 주 복제본에 연결하는 것을 방지할 수 있습니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- **가용성 복제본에 대 한 액세스를 구성 하려면**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
+ **가용성 복제본에 대한 액세스를 구성하려면**  
   
 > [!NOTE]  
 >  이 절차에 대한 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
@@ -113,12 +111,12 @@ ms.locfileid: "72797740"
      각 항목이 나타내는 의미는 다음과 같습니다.  
   
      READ_WRITE  
-     애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+     응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정 된 연결은 허용 되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
      ALL  
      주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
  다음 예제에서는 *AG2*라는 가용성 그룹에 보조 복제본을 추가합니다. 독립 실행형 서버 인스턴스인 *COMPUTER03\HADR_INSTANCE*가 새 가용성 복제본을 호스트하도록 지정됩니다. 이 복제본은 주 역할에 대해 읽기/쓰기 연결만 허용하고 보조 역할에 대해 읽기 전용 연결만 허용하도록 구성되어 있습니다.  
   
 ```sql
@@ -134,7 +132,7 @@ GO
 ```  
   
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
 
 ### <a name="to-configure-access-on-an-availability-replica"></a>가용성 복제본에 대한 액세스를 구성하려면
   
@@ -181,8 +179,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 -InputObject $primaryReplica
 ```  
 
-##  <a name="FollowUp"></a>후속 작업: 가용성 복제본에 대 한 읽기 전용 액세스를 구성한 후  
- **읽을 수 있는 보조 복제본에 대 한 읽기 전용 액세스**  
+##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a>후속 작업: 가용성 복제본에 대 한 읽기 전용 액세스를 구성한 후  
+ **읽을 수 있는 보조 복제본에 대한 읽기 전용 액세스**  
   
 -   [Bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용 하는 경우 스위치를 `-K ReadOnly` 지정 하 여 읽기 전용 액세스를 사용 하도록 설정 된 보조 복제본에 대 한 읽기 전용 액세스를 지정할 수 있습니다.  
   
@@ -190,10 +188,10 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||필수 요소|링크|  
     |-|------------------|----------|  
-    |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
- **장애 조치 (failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
+ **장애 조치(Failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
   
  읽을 수 없는 보조 데이터베이스 또는 읽을 수 있는 보조 데이터베이스에서 실행할 때 실패하는 트리거 및 작업이 있는 경우 트리거와 작업을 스크립팅하여 지정된 복제본에서 데이터베이스가 주 데이터베이스인지 읽을 수 있는 보조 데이터베이스인지 확인해야 합니다. 이 정보를 얻으려면 [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) 함수를 사용하여 데이터베이스의 **Updatability** 속성을 반환합니다. 읽기 전용 데이터베이스를 식별하려면 다음과 같이 READ_ONLY를 값으로 지정합니다.  
   
@@ -204,14 +202,14 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
  쓰기 전용 데이터베이스를 식별하려면 READ_WRITE를 값으로 지정합니다.  
   
   
-##  <a name="RelatedTasks"></a> 관련 작업  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
   
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
 -   [AlwaysOn: 읽기용 보조 복제본의 가치 제안](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   

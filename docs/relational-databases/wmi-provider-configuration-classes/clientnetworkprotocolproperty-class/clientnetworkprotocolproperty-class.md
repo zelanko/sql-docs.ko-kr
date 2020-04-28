@@ -17,19 +17,17 @@ ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: dd96072358100583689cd00b218d578180940de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660200"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 클래스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 는 클라이언트 네트워크 프로토콜의 속성을 나타냅니다.  
   
- 
-  [ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
+ [ClientNetworkProtocolProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md)를 사용하여 다음 태스크를 수행할 수 있습니다.  
   
 -   속성 목록에서 클라이언트 네트워크 프로토콜 속성을 선택하는 데 사용할 인덱스 값을 설정합니다.  
   

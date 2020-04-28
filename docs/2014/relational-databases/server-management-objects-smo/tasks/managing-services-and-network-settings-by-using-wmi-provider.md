@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796632"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI 공급자를 사용하여 서비스 및 네트워크 설정 관리
   WMI 공급자는 MMC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Management Console)에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 및 네트워크 프로토콜을 관리하는 데 사용하는 게시된 인터페이스입니다. SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체가 WMI 공급자를 나타냅니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Server> 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체와 설정된 연결과 독립적으로 운영되며 Windows 자격 증명을 사용하여 WMI 서비스에 연결합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체와 설정된 연결과 독립적으로 운영되며 Windows 자격 증명을 사용하여 WMI 서비스에 연결합니다.  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

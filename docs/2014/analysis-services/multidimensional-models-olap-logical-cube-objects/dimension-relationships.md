@@ -21,15 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797623"
 ---
 # <a name="dimension-relationships"></a>차원 관계
-  차원 용도는 큐브 차원과 큐브에 있는 측정값 그룹 간의 관계를 정의합니다. 큐브 차원은 특정 큐브에 사용되는 데이터베이스 차원의 인스턴스입니다. 큐브에는 측정값 그룹에 직접 관련되어 있지 않지만 다른 차원 또는 측정값 그룹을 통해 측정값 그룹에 간접적으로 관련될 수 있는 큐브 차원이 있을 수 있습니다. 큐브에 데이터베이스 차원이 나 측정값 그룹을 추가 하면에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브의 데이터 원본 뷰에 있는 차원 테이블과 팩트 테이블 간 관계를 검토 하 고 차원의 특성 간 관계를 검토 하 여 차원 용도를 결정 하려고 합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 감지할 수 있는 관계에 대해 차원 용도 설정을 자동으로 지정합니다.  
+  차원 용도는 큐브 차원과 큐브에 있는 측정값 그룹 간의 관계를 정의합니다. 큐브 차원은 특정 큐브에 사용되는 데이터베이스 차원의 인스턴스입니다. 큐브에는 측정값 그룹에 직접 관련되어 있지 않지만 다른 차원 또는 측정값 그룹을 통해 측정값 그룹에 간접적으로 관련될 수 있는 큐브 차원이 있을 수 있습니다. 큐브에 데이터베이스 차원이 나 측정값 그룹을 추가 하면에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브의 데이터 원본 뷰에 있는 차원 테이블과 팩트 테이블 간 관계를 검토 하 고 차원의 특성 간 관계를 검토 하 여 차원 용도를 결정 하려고 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 감지할 수 있는 관계에 대해 차원 용도 설정을 자동으로 지정합니다.  
   
  차원과 측정값 그룹 간 관계는 관계에 참여하는 차원 및 팩트 테이블과 특정 측정값 그룹에서 차원 세분성을 지정하는 세분성 특성으로 구성됩니다.  
   
@@ -85,6 +84,6 @@ ms.locfileid: "72797623"
  다 대 다 관계에 대 한 자세한 내용은 [다 대 다 관계 정의 및 다 대 다 관계 속성](../multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [차원 &#40;Analysis Services 다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [차원&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

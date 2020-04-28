@@ -16,10 +16,10 @@ ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73632742"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
@@ -53,7 +53,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|변경 내용이 복제되는 대상 서버의 이름입니다.|  
 |pub_name|**sysname**|게시의 이름입니다.|  

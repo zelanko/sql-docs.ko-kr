@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783365"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태 쓰기
@@ -46,26 +46,22 @@ ms.locfileid: "72783365"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-write-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태를 쓰려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**, **작업**을 차례로 확장하고 편집할 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  
-  **알림** 페이지를 선택합니다.  
+3.  **알림** 페이지를 선택합니다.  
   
-4.  
-  **Windows 애플리케이션 이벤트 로그에 쓰기**를 선택하고 다음 중 하나를 선택합니다.  
+4.  **Windows 애플리케이션 이벤트 로그에 쓰기**를 선택하고 다음 중 하나를 선택합니다.  
   
     -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 성공 시**를 클릭합니다.  
   
@@ -73,7 +69,7 @@ ms.locfileid: "72783365"
   
     -   작업이 성공적으로 완료되었을 때 작업 상태를 기록하려면**작업 완료 시** 를 클릭합니다.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
 
 ### <a name="to-write-job-status-to-the-windows-application-log"></a>Windows 애플리케이션 로그에 작업 상태를 쓰려면
   

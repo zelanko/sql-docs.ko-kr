@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 96b499ea5bc38d2a4cf9c380116108009ea46086
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145638"
 ---
 # <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys. pdw_nodes_dm_exec_query_plan (Transact-sql)
@@ -40,7 +40,7 @@ ms.locfileid: "73145638"
 [Dm_exec_query_plan](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql?view=sql-server-ver15) 적용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 서버 **** 에 대 한 sysadmin `VIEW SERVER STATE` 서버 역할 또는 권한이 필요 합니다.  
+ 서버 **sysadmin** 에 대 한 sysadmin `VIEW SERVER STATE` 서버 역할 또는 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;SQL Data Warehouse 및 병렬 데이터 웨어하우스 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

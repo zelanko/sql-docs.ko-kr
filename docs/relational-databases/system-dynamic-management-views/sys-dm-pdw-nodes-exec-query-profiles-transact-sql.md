@@ -14,10 +14,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7237e7f7b49916e09f4a8c5cab0d7d49486cb971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73145658"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-sql)
@@ -33,8 +33,8 @@ ms.locfileid: "73145658"
 |pdw_node_id|**int**|노드와 연결 된 고유 숫자 ID입니다.|
 |session_id|**smallint**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
 |request_id|**int**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
-|sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
-|plan_handle|**varbinary (64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Plan_handle dm_exec_query_stats 참조 합니다.|  
+|sql_handle|**varbinary(64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
+|plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Plan_handle dm_exec_query_stats 참조 합니다.|  
 |physical_operator_name|**nvarchar(256)**|물리적 연산자 이름입니다.|  
 |node_id|**int**|쿼리 트리에서 연산자 노드를 식별합니다.|  
 |thread_id|**int**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  

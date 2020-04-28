@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798077"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>SQL Server 인스턴스 등록(SQL Server 유틸리티)
@@ -86,17 +86,17 @@ ms.locfileid: "72798077"
   
 -   [SQL Server 인스턴스 등록](#Enrolling)  
   
-##  <a name="Welcome"></a> 인스턴스 등록 마법사 소개  
+##  <a name="introduction-to-enroll-instance-wizard"></a><a name="Welcome"></a> 인스턴스 등록 마법사 소개  
  마법사를 시작하려면 유틸리티 제어 지점의 유틸리티 탐색기 트리를 확장하고 **관리형 인스턴스**를 마우스 오른쪽 단추로 클릭한 후 **관리형 인스턴스 추가...** 를 선택합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Instance_name"></a> SQL Server 인스턴스 지정  
+##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> SQL Server 인스턴스 지정  
  연결 대화 상자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 선택하려면 **연결...** 을 클릭합니다. 컴퓨터 이름과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 ComputerName\InstanceName 형식으로 입력합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Connection_dialog"></a> 연결 대화 상자  
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> 연결 대화 상자  
  서버로 연결 대화 상자에서 서버 유형, 컴퓨터 이름 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름 정보를 확인합니다. 자세한 내용은 [서버에 연결&#40;데이터베이스 엔진&#41;](../../ssms/f1-help/connect-to-server-database-engine.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ ms.locfileid: "72798077"
   
  계속하려면 **연결...** 을 클릭합니다.  
   
-##  <a name="Proxy_configuration"></a> 유틸리티 컬렉션 집합 계정  
+##  <a name="utility-collection-set-account"></a><a name="Proxy_configuration"></a> 유틸리티 컬렉션 집합 계정  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합을 실행할 Windows 도메인 계정을 지정합니다. 이 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 컬렉션 집합에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정으로 사용됩니다. 또는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정을 사용할 수 있습니다. 유효성 검사 요구 사항을 통과하려면 계정을 지정할 때 다음 지침을 따릅니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 옵션을 지정하는 경우  
@@ -113,7 +113,7 @@ ms.locfileid: "72798077"
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Validation_rules"></a> SQL Server 인스턴스 유효성 검사  
+##  <a name="sql-server-instance-validation"></a><a name="Validation_rules"></a> SQL Server 인스턴스 유효성 검사  
  이 릴리스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 다음 조건이 충족되어야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록할 수 있습니다.  
   
 |조건|수정 동작|  
@@ -140,7 +140,7 @@ ms.locfileid: "72798077"
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Summary"></a> 인스턴스 등록 요약  
+##  <a name="summary-of-instance-enrollment"></a><a name="Summary"></a> 인스턴스 등록 요약  
  요약 페이지에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 추가되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보가 나열됩니다.  
   
  관리되는 인스턴스 설정:  
@@ -151,7 +151,7 @@ ms.locfileid: "72798077"
   
  계속하려면 **다음**을 클릭합니다.  
   
-##  <a name="Enrolling"></a> SQL Server 인스턴스 등록  
+##  <a name="enrolling-the-instance-of-sql-server"></a><a name="Enrolling"></a> SQL Server 인스턴스 등록  
  등록 페이지는 작업 상태를 제공합니다.  
   
 -   인스턴스 등록을 준비합니다.  
@@ -182,7 +182,7 @@ ms.locfileid: "72798077"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 인스턴스를 제거하려면 **유틸리티 탐색기 탐색** 창에서 **관리되는 인스턴스** 를 선택하여 목록 뷰에 관리되는 인스턴스를 표시한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 탐색기 내용 **목록 뷰에서** 인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **관리되지 않는 인스턴스로 설정**을 선택합니다.  
   
-##  <a name="PowerShell_enroll"></a> PowerShell을 사용하여 SQL Server 인스턴스 등록  
+##  <a name="enroll-an-instance-of-sql-server-using-powershell"></a><a name="PowerShell_enroll"></a> PowerShell을 사용하여 SQL Server 인스턴스 등록  
  다음 예를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 등록할 수 있습니다.  
   
 ```powershell

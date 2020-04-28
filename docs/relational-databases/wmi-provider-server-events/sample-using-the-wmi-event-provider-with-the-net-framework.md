@@ -15,10 +15,10 @@ ms.assetid: 3d7aa7e9-0bb3-4a5b-9a3c-047f3240a6f8
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 8c942954d43c40dd4461237f2692afaa65ea87c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660586"
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>샘플: .NET Framework에서 WMI 이벤트 공급자 사용

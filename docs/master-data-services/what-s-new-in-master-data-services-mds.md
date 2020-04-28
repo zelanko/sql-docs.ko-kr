@@ -11,32 +11,29 @@ ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73727783"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]릴리스의 변경 내용 및 업데이트 내용을 요약합니다. 
   
- 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
+ [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
   
- **MDS(Master Data Services)를 설치 하 고, 데이터베이스 및 웹 사이트를 설정 하 고, 샘플 모델을 배포 하려면** [MDS(MASTER DATA SERVICES) 개요 (MDS)](../master-data-services/master-data-services-overview-mds.md)를 참조 하세요.  
+ **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면 ** [MDS(Master Data Services) 개요 ](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
- **다운로드할지**  
+ **다운로드**  
   
--   
-  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을(를) 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
 -   Azure 계정이 있으세요?  그런 다음 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동 하 여 이미 설치 된 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 가상 컴퓨터를 실행 합니다.  
   
-##  <a name="improved-performance"></a>성능 향상  
+##  <a name="improved-performance"></a>향상된 성능  
   
  성능 향상을 통해 더 큰 모델을 만들고, 데이터를 보다 효율적으로 로드하고, 전반적으로 더 나은 성능을 얻을 수 있습니다. 여기에는 데이터 로드 시간을 줄이고 추가 기능에서 더 큰 엔터티를 처리하도록 Microsoft Excel용 추가 기능의 성능이 향상된 개선 사항이 포함됩니다.  
   
@@ -77,15 +74,13 @@ ms.locfileid: "73727783"
   
 ##  <a name="improved-security"></a>보안 향상:  
   
- 새로운 슈퍼 사용자 기능 권한은 사용자 또는 그룹에 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]이전 릴리스의 서버 관리자와 동일한 권한을 제공합니다. 슈퍼 사용자 권한은 여러 사용자 및 그룹에 할당될 수 있습니다. 이전 릴리스에서는 원래 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 설치한 사용자가 서버 관리자였으므로 이 권한을 다른 사용자 또는 그룹에 이전하기 어려웠습니다. 자세한 내용은 [기능 영역 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/functional-area-permissions-master-data-services.md)를 참조 하세요.  
+ 새로운 슈퍼 사용자 기능 권한은 사용자 또는 그룹에 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]이전 릴리스의 서버 관리자와 동일한 권한을 제공합니다. 슈퍼 사용자 권한은 여러 사용자 및 그룹에 할당될 수 있습니다. 이전 릴리스에서는 원래 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 설치한 사용자가 서버 관리자였으므로 이 권한을 다른 사용자 또는 그룹에 이전하기 어려웠습니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
  이제 사용자에게 모델 수준에서 관리자 권한이 명시적으로 할당될 수 있습니다 . 따라서 나중에 모델 하위 트리(예: 엔터티 수준)에서 사용자에게 권한이 할당된 경우 이 관리자 권한이 상실되지 않습니다.  
   
  이 릴리스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 읽기, 만들기, 업데이트 및 삭제 권한을 도입하여 더 많은 수준의 권한을 제공합니다. 예를 들어 업데이트만 있는 사용자는 이제 데이터를 만들거나 삭제하지 않고 마스터 데이터를 업데이트할 수 있습니다. 사용자에게 만들기, 업데이트 또는 삭제 권한을 부여한 경우 해당 사용자에게는 읽기 권한이 자동으로 할당됩니다. 읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수도 있습니다.  
   
- 
-  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]로 업그레이드하는 경우 다음 표와 같이 이전 권한이 새 권한으로 변환됩니다.  
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]로 업그레이드하는 경우 다음 표와 같이 이전 권한이 새 권한으로 변환됩니다.  
   
 |이전 릴리스의 권한|새 권한|  
 |------------------------------------|--------------------|  
@@ -117,9 +112,7 @@ ms.locfileid: "73727783"
   
 ## <a name="improved-troubleshooting"></a>문제 해결 향상  
   
- 
-  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 디버깅을 개선하고 보다 쉽게 문제를 해결할 수 있도록 해주는 기능이 추가되었습니다. 자세한 내용은 [추적&#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md)을 참조하세요.  
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 디버깅을 개선하고 보다 쉽게 문제를 해결할 수 있도록 해주는 기능이 추가되었습니다. 자세한 내용은 [추적&#40;Master Data Services&#41;](../master-data-services/tracing-master-data-services.md)을 참조하세요.  
   
 ## <a name="improved-manageability"></a>관리 효율성 향상  
   
@@ -129,18 +122,18 @@ ms.locfileid: "73727783"
   
 -   Name 및 Code 특성 이름 바꾸기 및 숨기기  
   
- 자세한 내용은 다음 항목을 참조하십시오.  
+ 자세한 내용은 다음 항목을 참조하세요.  
   
--   [모델 &#40;MDS(Master Data Services)&#41;](../master-data-services/models-master-data-services.md)  
+-   [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)  
   
--   [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [트랜잭션 &#40;MDS(Master Data Services)&#41;](../master-data-services/transactions-master-data-services.md)  
+-   [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [보안 &#40;MDS(Master Data Services)&#41;](../master-data-services/security-master-data-services.md)  
+-   [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
 
 ## <a name="business-rule-improvements"></a>비즈니스 규칙 개선 사항
- **비즈니스 규칙 관리 (Excel용 MDS 추가 기능)**  
+ **비즈니스 규칙 관리(Excel용 MDS 추가 기능)**  
   
  Excel용 Master Data Services 추가 기능에서는 비즈니스 규칙 만들기 및 편집 등을 통해 비즈니스 규칙을 관리할 수 있습니다. 비즈니스 규칙은 데이터의 유효성을 검사하는 데 사용됩니다.  
  
@@ -152,13 +145,13 @@ ms.locfileid: "73727783"
   
  환경을 개선하기 위해 MDS의 비즈니스 규칙 관리 환경이 완전히 다시 디자인되었습니다. 이 기능에 대한 자세한 내용은 [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)을 참조하세요.  
   
- **Excel용 MDS 추가 기능에서 제거 된 비즈니스 규칙 관리 기능**  
+ **Excel용 MDS 추가 기능에서 제거된 비즈니스 규칙 관리 기능**  
   
  환경을 다시 디자인했기 때문에 Excel용 MDS 추가 기능에서 비즈니스 규칙 관리 기능이 제거되었습니다.    
 
- **새 비즈니스 규칙 조건**  
+ **새로운 비즈니스 규칙 조건**  
   
- 전체 조건 집합을 제공하기 위해 7개의 새로운 비즈니스 규칙 조건이 추가되었습니다. 자세한 내용은 [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)을 참조하세요.  
+ 전체 조건 집합을 제공하기 위해&7;개의 새로운 비즈니스 규칙 조건이 추가되었습니다. 자세한 내용은 [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)을 참조하세요.  
 
 ## <a name="derived-hierarchy-improvements"></a>파생 계층 개선 사항
 
@@ -172,7 +165,7 @@ ms.locfileid: "73727783"
  
  **파생 계층에서 다 대 다 관계 편집**  
   
- 매핑 엔터티 멤버를 수정하여 다 대 다 관계를 편집할 수 있습니다. 자세한 내용은 [파생 계층에서 다 대 다 관계 표시&#40;Master Data Services&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)를 참조하세요.  
+ 매핑 엔터티 멤버를 수정하여 다 대 다 관계를 편집할 수 있습니다. 자세한 내용은 [파생 계층에서 다 대 다 관계 표시 &#40;MDS(Master Data Services)&#41;](../master-data-services/show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md)를 참조 하세요.  
  
  **파생 계층 관리 환경 개선**  
   
@@ -196,7 +189,7 @@ ms.locfileid: "73727783"
   
  엔터티 동기화 관계를 만들어 서로 다른 모델 간의 엔터티 데이터를 공유할 수 있습니다. 자세한 내용은 [엔터티 동기화 관계&#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)를 참조하세요.  
   
- **일시 삭제 된 구성원 제거**  
+ **일시 삭제된 멤버 삭제**  
   
  이제 모델 버전에서 일시 삭제된 모든 멤버를 제거(영구적으로 삭제)할 수 있습니다. 멤버 삭제는 멤버를 비활성화하거나 일시적으로 삭제할 뿐입니다. 자세한 내용은 [버전 멤버 삭제&#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)를 참조하세요.  
  
@@ -204,8 +197,7 @@ ms.locfileid: "73727783"
   
  **멤버 수정 기록**  
   
- 멤버가 변경된 경우 멤버 수정 기록이 작성됩니다. 수정 기록을 롤백할 뿐만 아니라 수정 내용을 보고 주석을 추가할 수 있습니다. 
-  **Log Retention Days** 속성을 사용하여 기록 데이터를 보존할 기간을 지정할 수 있습니다. 자세한 내용은 [멤버 수정 기록&#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)을 참조하세요.  
+ 멤버가 변경된 경우 멤버 수정 기록이 작성됩니다. 수정 기록을 롤백할 뿐만 아니라 수정 내용을 보고 주석을 추가할 수 있습니다. **Log Retention Days** 속성을 사용하여 기록 데이터를 보존할 기간을 지정할 수 있습니다. 자세한 내용은 [멤버 수정 기록&#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)을 참조하세요.  
   
  **병합 충돌**  
   
@@ -231,7 +223,7 @@ ms.locfileid: "73727783"
   
  쿼리 파일에는 탐색기 페이지의 필터 및 계층 정보가 포함됩니다.  
    
- **샘플 모델 배포 패키지 업데이트 됨**  
+ **샘플 모델 배포 패키지 업데이트**  
   
  샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 예제: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
 
@@ -240,6 +232,6 @@ ms.locfileid: "73727783"
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 버전에서 지원 되는 MDS(Master Data Services) 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
- [사용 되지 않는 MDS(Master Data Services) 기능](../master-data-services/deprecated-master-data-services-features.md)  
- [지원 되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)
+ [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
+ [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)  
+ [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)

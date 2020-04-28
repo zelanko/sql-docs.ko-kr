@@ -18,10 +18,10 @@ ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 21cdfe10b918e474f3b2adcfe40d05e5c9eeb636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660736"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>PropertyType 속성(ClientNetworkProtocolProperty 클래스)
@@ -36,7 +36,7 @@ object.PropertyType [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜의 특성을 나타내는 [clientnetworkprotocolproperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

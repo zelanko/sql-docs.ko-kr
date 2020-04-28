@@ -18,10 +18,10 @@ ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bd79263e09f1b3eccb4a4efff0ed8ecd036fcc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659298"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags 속성(ServerSettings 클래스)
@@ -36,13 +36,11 @@ object.GeneralFlags [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [인스턴스의 서버 설정을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *object*  
+ [인스턴스의 서버 설정을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  [인스턴스와 연결된 일반 플래그를 지정하는](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체의 배열입니다.  
+ [인스턴스와 연결된 일반 플래그를 지정하는](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
   

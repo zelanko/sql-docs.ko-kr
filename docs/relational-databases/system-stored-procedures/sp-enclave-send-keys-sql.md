@@ -20,13 +20,13 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73593754"
 ---
-# <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys(Transact-SQL)
+# <a name="sp_enclave_send_keys-transact-sql"></a>sp_Enclave_send_keys (Transact-SQL)
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
 
 데이터베이스에 정의 된 열 암호화 키를 [secure enclaves와 Always Encrypted](../security/encryption/always-encrypted-enclaves.md)에 사용 되는 서버 쪽 secure enclave에 보냅니다.
@@ -70,8 +70,8 @@ EXEC sp_enclave_send_keys;
 ```
 
 ## <a name="see-also"></a>참고 항목
-- [보안 Enclave를 사용한 Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
+- [보안 enclave를 사용한 Always Encrypted](../security/encryption/always-encrypted-enclaves.md) 
  
-- [보안 Enclave를 사용한 Always Encrypted를 사용하여 열에 인덱스 만들기 및 사용](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
+- [보안 Enclave를 사용한 Always Encrypted를 이용하여 열에 인덱스 만들기 및 사용](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
-- [자습서: 임의 암호화를 사용하는 enclave 사용 열에 인덱스 만들기 및 사용](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [자습서: 임의 암호화를 사용 하 여 enclave 사용 열에서 인덱스 만들기 및 사용](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

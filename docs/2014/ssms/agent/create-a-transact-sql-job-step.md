@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 488e07e86ba5a7febcb0675611136a1e0d792007
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798263"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
@@ -32,7 +32,7 @@ ms.locfileid: "72798263"
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 Transact-sql 작업 단계를 만듭니다.**  
+-   **Transact-SQL 작업 단계를 만들려면:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,46 +40,36 @@ ms.locfileid: "72798263"
   
      [SQL Server 관리 개체](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
  자세한 내용은 [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)을 참조하세요.  
   
-##  <a name="SSMS"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> SQL Server Management Studio 사용  
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Transact-SQL 작업 단계를 만들려면  
   
-1.  
-  **개체 탐색기** 에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음, 해당 인스턴스를 확장합니다.  
   
-2.  
-  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
+2.  **SQL Server 에이전트**를 확장하고 새 작업을 만들거나 기존 작업을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  
-  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
+3.  **작업 속성** 대화 상자에서 **단계** 페이지를 클릭한 다음 **새로 만들기**를 클릭합니다.  
   
-4.  
-  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
+4.  **새 작업 단계** 대화 상자에서 작업 **단계 이름**을 입력합니다.  
   
-5.  
-  **유형** 목록에서 **T-SQL(Transact-SQL) 스크립트**를 클릭합니다.  
+5.  **유형** 목록에서 **T-SQL(Transact-SQL) 스크립트**를 클릭합니다.  
   
-6.  
-  **명령** 상자에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 일괄 처리를 입력하거나 **열기** 를 클릭하여 명령으로 사용할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 파일을 선택합니다.  
+6.  **명령** 상자에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 일괄 처리를 입력하거나 **열기** 를 클릭하여 명령으로 사용할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 파일을 선택합니다.  
   
-7.  
-  **구문 분석** 을 클릭하여 구문을 검사합니다.  
+7.  **구문 분석** 을 클릭하여 구문을 검사합니다.  
   
 8.  구문이 정확하면 “구문 분석이 성공했습니다”라는 메시지가 나타납니다. 오류가 발견되면 구문을 수정한 다음 작업을 계속 수행하세요.  
   
-9. 
-  **고급** 페이지를 클릭하여 작업 단계의 성공 또는 실패 여부에 따라 수행할 동작, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업 단계를 수행할 횟수, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업 단계 출력을 쓸 파일이나 테이블 등의 작업 단계 옵션을 설정합니다. 
-  **sysadmin** 고정 서버 역할의 멤버만 운영 체제 파일에 작업 단계 출력을 쓸 수 있습니다. 모든 SQL Server 에이전트 사용자는 테이블에 출력을 기록할 수 있습니다.  
+9. **고급** 페이지를 클릭하여 작업 단계의 성공 또는 실패 여부에 따라 수행할 동작, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업 단계를 수행할 횟수, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 작업 단계 출력을 쓸 파일이나 테이블 등의 작업 단계 옵션을 설정합니다. **sysadmin** 고정 서버 역할의 멤버만 운영 체제 파일에 작업 단계 출력을 쓸 수 있습니다. 모든 SQL Server 에이전트 사용자는 테이블에 출력을 기록할 수 있습니다.  
   
-10. 
-  **sysadmin** 고정 서버 역할의 멤버이면서 이 작업 단계를 다른 SQL 로그인으로 실행하려는 경우 **다음 사용자 이름으로 실행** 목록에서 해당 SQL 로그인을 선택합니다.  
+10. **sysadmin** 고정 서버 역할의 멤버이면서 이 작업 단계를 다른 SQL 로그인으로 실행하려는 경우 **다음 사용자 이름으로 실행** 목록에서 해당 SQL 로그인을 선택합니다.  
   
-##  <a name="TSQL"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Transact-SQL 사용  
   
 #### <a name="to-create-a-transact-sql-job-step"></a>Transact-SQL 작업 단계를 만들려면  
   
@@ -105,7 +95,7 @@ ms.locfileid: "72798263"
   
  자세한 내용은 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)를 참조 하세요.  
   
-##  <a name="SMO"></a>SQL Server 관리 개체 사용  
- **Transact-sql 작업 단계를 만들려면**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>SQL Server 관리 개체 사용  
+ **Transact-SQL 작업 단계를 만들려면**  
   
  Visual Basic, Visual C#, PowerShell 등 선택한 프로그래밍 언어를 사용하여 `JobStep` 클래스를 사용합니다.  

@@ -11,17 +11,16 @@ ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728508"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 만들기
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 패키지를 만들 수 있습니다. 지정한 명령에 따라 패키지는 다음 중 하나를 포함할 수 있습니다.  
   
 -   모델 개체만  
@@ -59,7 +58,7 @@ ms.locfileid: "73728508"
   
  패키지를 만들 모델이 있어야 합니다. 자세한 내용은 [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)를 참조하세요.  
   
- 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+ 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 ### <a name="to-create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지를 만들려면  
   
@@ -101,6 +100,6 @@ ms.locfileid: "73728508"
   
 ## <a name="see-also"></a>참고 항목  
  [모델 배포 옵션 &#40;MDS(Master Data Services)&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
- [모델 &#40;MDS(Master Data Services)&#41;배포](../master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

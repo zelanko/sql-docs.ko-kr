@@ -18,10 +18,10 @@ ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e60de9d569a9a471941e1b798b7147e968ede479
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73657391"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>RemoveCertificate 메서드(ServerSettings 클래스)
@@ -36,9 +36,8 @@ object.RemoveCertificate()
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [인스턴스의 서버 설정을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
+ *object*  
+ [인스턴스의 서버 설정을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/serversettings-class/serversettings-class.md) ServerSettings 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  U**int32** 값으로, 0은 서비스가 수정 되었음을 나타내고 1은 요청이 지원 되지 않음을 나타내며 다른 모든 숫자는 오류를 표시 합니다.  

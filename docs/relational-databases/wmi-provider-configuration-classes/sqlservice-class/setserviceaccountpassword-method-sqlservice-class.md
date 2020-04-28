@@ -18,10 +18,10 @@ ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: eb6a3649268455864148730ac4d4640a7dccc87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660922"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 메서드(SqlService 클래스)
@@ -36,7 +36,7 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  서비스를 나타내는 [SqlService 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -47,8 +47,7 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
  계정의 새 암호를 지정하는 문자열 값입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
+ **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
   

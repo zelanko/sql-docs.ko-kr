@@ -18,10 +18,10 @@ ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72909136"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db(Transact-SQL)
@@ -40,9 +40,8 @@ EXEC sp_fulltext_semantic_unregister_language_statistics_db;
 GO  
 ```  
   
-##  <a name="Arguments"></a> 인수  
- 이 프로시저에는 인수가 필요하지 않습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 하나의 의미 체계 언어 통계 데이터베이스만 있으므로 데이터베이스를 식별할 필요가 없습니다.  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
+ 이 프로시저에는 인수가 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에는 하나의 의미 체계 언어 통계 데이터베이스만 있으므로 데이터베이스를 식별할 필요가 없습니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

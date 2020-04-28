@@ -26,28 +26,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72811596"
 ---
 # <a name="user-hierarchies"></a>사용자 계층
   사용자 정의 계층은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원의 멤버를 계층 구조로 구성 하 고 큐브에서 탐색 경로를 제공 하는 데 사용 되는 특성의 사용자 정의 계층입니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
   
-|Year|Quarter|Month|  
+|Year|Quarter|월|  
 |----------|-------------|-----------|  
-|1999|1/4 1|Jan|  
-|1999|1/4 1|Feb|  
-|1999|1/4 1|Mar|  
-|1999|2 사분기|Apr|  
-|1999|2 사분기|May|  
-|1999|2 사분기|Jun|  
-|1999|3 사분기|Jul|  
-|1999|3 사분기|Aug|  
+|1999|1/4 1|1월|  
+|1999|1/4 1|2월|  
+|1999|1/4 1|3월|  
+|1999|2 사분기|4월|  
+|1999|2 사분기|5월|  
+|1999|2 사분기|6월|  
+|1999|3 사분기|7월|  
+|1999|3 사분기|8월|  
 |1999|3 사분기|9월|  
 |1999|4사분기|Oct|  
-|1999|4사분기|Nov|  
+|1999|4사분기|11월|  
 |1999|4사분기|Dec|  
   
  Year, Quarter 및 Month 특성은 시간 차원에서 Calendar라는 사용자 정의 계층을 구성하는 데 사용됩니다. Calendar 차원(일반 차원)의 수준과 멤버 간의 관계는 아래 다이어그램에 표시되어 있습니다.  
@@ -61,8 +61,7 @@ ms.locfileid: "72811596"
  부모-자식 계층은 제외하고 계층 구조 내에서 멤버 위치는 계층 정의의 특성 순서로 제어됩니다. 계층 정의에 포함된 각 특성이 계층의 수준이 됩니다. 수준 내에서 멤버의 위치는 수준을 만드는 데 사용된 특성의 순서에 따라 결정됩니다. 사용자 정의 계층의 멤버 구조는 멤버 간의 상호 관련 방식에 따라 다음과 같은 4가지 기본 형태 중 하나를 따릅니다.  
   
 ### <a name="balanced-hierarchies"></a>균형 계층 구조  
- 균형 계층 구조에서는 계층 구조의 모든 분기가 동일한 수준으로 이어지며 각 멤버의 바로 위에 있는 수준이 해당 멤버의 논리적 부모가 됩니다. 
-  [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Product 차원의 Product Categories 계층이 균형 계층 구조의 좋은 예입니다. Product Name 수준의 각 멤버에게는 Subcategory 수준의 부모 멤버가 있으며 이 부모 멤버에게는 Category 수준의 부모 멤버가 있습니다. 또한 이 계층 구조의 모든 분기에는 Product Name 수준의 리프 멤버가 있습니다.  
+ 균형 계층 구조에서는 계층 구조의 모든 분기가 동일한 수준으로 이어지며 각 멤버의 바로 위에 있는 수준이 해당 멤버의 논리적 부모가 됩니다. [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 있는 Product 차원의 Product Categories 계층이 균형 계층 구조의 좋은 예입니다. Product Name 수준의 각 멤버에게는 Subcategory 수준의 부모 멤버가 있으며 이 부모 멤버에게는 Category 수준의 부모 멤버가 있습니다. 또한 이 계층 구조의 모든 분기에는 Product Name 수준의 리프 멤버가 있습니다.  
   
 ### <a name="unbalanced-hierarchies"></a>불균형 계층 구조  
  불균형 계층 구조에서는 계층 구조의 분기들이 서로 다른 수준으로 이어집니다. 부모-자식 계층 구조는 불균형 계층 구조입니다. 예를 들어 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 예제 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 Organization 차원은 각 직원에 대한 멤버를 포함합니다. CEO가 계층 구조의 최상위 멤버이며 각 부서장과 비서 실장이 CEO 바로 아래 위치합니다. 부서장에게는 부하 멤버들이 있지만 비서 실장에게는 없습니다.  

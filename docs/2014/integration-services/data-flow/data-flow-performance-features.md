@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637828"
 ---
 # <a name="data-flow-performance-features"></a>데이터 흐름 성능 기능
@@ -75,17 +75,12 @@ ms.locfileid: "73637828"
  병렬 실행은 실제 프로세서나 논리적 프로세서가 여러 개 있는 컴퓨터에서 성능을 향상시킵니다. 패키지에 있는 다른 태스크의 병렬 실행을 지원하기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 `MaxConcurrentExecutables`와 `EngineThreads`라는 두 속성을 사용합니다.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 속성  
- 
-  `MaxConcurrentExecutables` 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
+ `MaxConcurrentExecutables` 속성은 패키지 자체의 속성입니다. 이 속성은 동시에 실행할 수 있는 태스크 수를 정의합니다. 기본값인 -1은 논리적 프로세서나 실제 프로세서 수에서 2를 더한 수를 의미합니다.  
   
- 이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 
-  `MaxConcurrentExecutables`를 3으로 설정하면 세 개의 데이터 흐름 태스크가 모두 동시에 실행될 수 있습니다. 그러나 각 데이터 흐름 태스크에 원본에서 대상으로의 실행 트리가 10개 있다고 가정할 때 
-  `MaxConcurrentExecutables`를 3으로 설정하면 각 데이터 흐름 태스크 내에서 실행 트리가 병렬로 실행되지 않을 수 있습니다.  
+ 이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. `MaxConcurrentExecutables`를 3으로 설정하면 세 개의 데이터 흐름 태스크가 모두 동시에 실행될 수 있습니다. 그러나 각 데이터 흐름 태스크에 원본에서 대상으로의 실행 트리가 10개 있다고 가정할 때 `MaxConcurrentExecutables`를 3으로 설정하면 각 데이터 흐름 태스크 내에서 실행 트리가 병렬로 실행되지 않을 수 있습니다.  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 속성  
- 
-  `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. 
-  `EngineThreads` 속성은 데이터 흐름 엔진에서 원본에 대해 만드는 원본 스레드와 해당 엔진에서 변환 및 대상에 대해 만드는 작업자 스레드 모두에 동일하게 적용됩니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
+ `EngineThreads` 속성은 각 데이터 흐름 태스크의 속성입니다. 이 속성은 데이터 흐름 엔진에서 만들어 병렬로 실행할 수 있는 스레드 수를 정의합니다. `EngineThreads` 속성은 데이터 흐름 엔진에서 원본에 대해 만드는 원본 스레드와 해당 엔진에서 변환 및 대상에 대해 만드는 작업자 스레드 모두에 동일하게 적용됩니다. 따라서 `EngineThreads`를 10으로 설정하면 엔진에서 원본 스레드와 작업자 스레드를 각각 10개까지 만들 수 있습니다.  
   
  이 속성이 작동하는 방식을 이해하기 위해 세 개의 데이터 흐름 태스크가 있는 샘플 패키지를 살펴 봅니다. 각 데이터 흐름 태스크에 10개의 원본에서 대상으로의 실행 트리가 포함되어 있을 때 각 데이터 흐름 태스크에서 EngineThreads를 10으로 설정하면 30개의 실행 트리가 모두 동시에 실행될 수 있습니다.  
   
@@ -104,8 +99,7 @@ ms.locfileid: "73637828"
  쿼리를 생성하려면 쿼리를 직접 입력하거나 쿼리 작성기를 사용합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. 
-  `RunInOptimizedMode` 속성을 사용하여 이러한 열을 자동으로 제거할 수 있습니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 진행률 탭에 경고가 나열됩니다. 이러한 경고에는 원본에서 데이터 흐름에 제공되지만 나중에 다운스트림 데이터 흐름 구성 요소에 사용되지 않는 데이터 열이 식별되어 포함됩니다. `RunInOptimizedMode` 속성을 사용하여 이러한 열을 자동으로 제거할 수 있습니다.  
   
 #### <a name="avoid-unnecessary-sorting"></a>불필요한 정렬 방지  
  정렬은 근본적으로 느린 작업이므로 불필요한 정렬을 방지하면 패키지 데이터 흐름의 성능을 향상시킬 수 있습니다.  
@@ -161,7 +155,7 @@ ms.locfileid: "73637828"
  대상에 데이터를 저장하는 데는 예상보다 많은 시간이 소모됩니다. 대상의 낮은 데이터 처리 능력으로 인해 속도 저하가 일어났는지 여부를 식별하려면 임시로 대상을 행 개수 변환으로 대체하십시오. 처리량이 크게 향상되면 데이터를 로드하는 대상에서 속도 저하가 일어난 것입니다.  
   
 ### <a name="review-the-information-on-the-progress-tab"></a>진행률 탭의 정보 검토  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 때 제어 흐름과 데이터 흐름 모두에 대한 정보를 제공합니다. **진행률** 탭에는 태스크와 컨테이너가 실행 순서대로 나열되며 패키지 자체를 포함하여 각 태스크 및 컨테이너에 대한 시작 및 종료 시간, 경고 및 오류 메시지가 표시됩니다. 또한 데이터 흐름 구성 요소가 실행 순서대로 표시되고, 진행률(완료율로 표시)과 처리된 행 개수에 대한 정보가 포함됩니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행할 때 제어 흐름과 데이터 흐름 모두에 대한 정보를 제공합니다. **진행률** 탭에는 태스크와 컨테이너가 실행 순서 대로 나열 되며 패키지 자체를 포함 하 여 각 태스크 및 컨테이너에 대 한 시작 및 종료 시간, 경고 및 오류 메시지가 포함 됩니다. 또한 데이터 흐름 구성 요소가 실행 순서대로 표시되고, 진행률(완료율로 표시)과 처리된 행 개수에 대한 정보가 포함됩니다.  
   
  **진행률** 탭에 메시지를 표시할지 여부는 **SSIS** 메뉴의 **디버그 진행률 보고** 옵션을 선택 또는 선택 취소하여 설정합니다. 진행률 보고를 사용하지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 복잡한 패키지를 실행하는 동안 성능을 높일 수 있습니다.  
   
@@ -203,7 +197,7 @@ ms.locfileid: "73637828"
 -   technet.microsoft.com의 비디오 - [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>참고 항목  
- [패키지 배포 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [패키지 개발용 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

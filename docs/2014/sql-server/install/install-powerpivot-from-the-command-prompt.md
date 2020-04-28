@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72798333"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>명령 프롬프트에서 PowerPivot 설치
@@ -27,7 +27,7 @@ ms.locfileid: "72798333"
   
  컴퓨터가 SharePoint 팜과 동일한 도메인에 가입되어 있어야 합니다.  
   
-##  <a name="Commands"></a>/ROLE 기반 설치 옵션  
+##  <a name="role-based-installation-options"></a><a name="Commands"></a>/ROLE 기반 설치 옵션  
  SharePoint용 PowerPivot 배포의 경우 `/ROLE` 매개 변수가 `/FEATURES` 매개 변수를 대신하여 사용됩니다. 유효한 값은 다음과 같습니다.  
   
 -   `SPI_AS_ExistingFarm`  
@@ -53,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_Existing
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/SQLSVCACCOUNT=<DomainName\UserName> /SQLSVCPASSWORD=<StrongPassword> /SQLSYSADMINACCOUNTS=<DomainName\UserName> /AGTSVCACCOUNT=<DomainName\UserName> /AGTSVCPASSWORD=<StrongPassword> /ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
-##  <a name="Join"></a>명령 구문 수정  
+##  <a name="modifying-the-command-syntax"></a><a name="Join"></a>명령 구문 수정  
  다음 단계를 사용하여 예제 명령 구문을 수정할 수 있습니다.  
   
 1.  다음 명령을 메모장에 복사합니다.  
@@ -62,26 +62,19 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
     ```  
   
-     
-  `/q` 매개 변수가 설치 프로그램을 자동 모드에서 실행하며 사용자 인터페이스를 숨깁니다.  
+     `/q` 매개 변수가 설치 프로그램을 자동 모드에서 실행하며 사용자 인터페이스를 숨깁니다.  
   
-     
-  `/IAcceptSQLServerLicenseTerms`는 무인 설치에 대해 `/q` 또는 `/qs` 매개 변수를 지정하는 경우 필요합니다.  
+     `/IAcceptSQLServerLicenseTerms`는 무인 설치에 대해 `/q` 또는 `/qs` 매개 변수를 지정하는 경우 필요합니다.  
   
-     
-  `/action` 매개 변수는 설치를 수행하도록 설치 프로그램에 지시합니다.  
+     `/action` 매개 변수는 설치를 수행하도록 설치 프로그램에 지시합니다.  
   
-     
-  `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
+     `/role` 매개 변수를 지정하면 SharePoint용 PowerPivot에 필요한 Analysis Services 프로그램 및 구성 파일이 설치됩니다. 이 역할 역시 기존 팜 연결 정보를 검색 및 사용하여 SharePoint 구성 데이터베이스에 액세스합니다. 이 매개 변수는 필수입니다. 설치할 구성 요소를 지정하려면 `/features` 매개 변수 대신 이 매개 변수를 사용합니다.  
   
-     
-  `/instancename` 매개 변수는 명명된 인스턴스로 'PowerPivot'을 지정합니다. 이 값은 하드 코딩되어 변경할 수 없으며, 교육용으로 명령에 지정되므로 서비스 설치 방법을 확인할 수 있습니다.  
+     `/instancename` 매개 변수는 명명된 인스턴스로 'PowerPivot'을 지정합니다. 이 값은 하드 코딩되어 변경할 수 없으며, 교육용으로 명령에 지정되므로 서비스 설치 방법을 확인할 수 있습니다.  
   
-     
-  `/indicateprogress` 매개 변수를 사용하면 명령 프롬프트 창에서 진행률을 모니터링할 수 있습니다.  
+     `/indicateprogress` 매개 변수를 사용하면 명령 프롬프트 창에서 진행률을 모니터링할 수 있습니다.  
   
-2.  
-  `PID` 매개 변수는 명령에서 생략되므로 Evaluation 버전이 설치됩니다. Enterprise 버전을 설치하려면 설치 명령에 PID를 추가하고 올바른 제품 키를 제공하십시오.  
+2.  `PID` 매개 변수는 명령에서 생략되므로 Evaluation 버전이 설치됩니다. Enterprise 버전을 설치하려면 설치 명령에 PID를 추가하고 올바른 제품 키를 제공하십시오.  
   
     ```  
     /PID=<product key for an Enterprise installation>  

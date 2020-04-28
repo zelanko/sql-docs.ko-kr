@@ -13,18 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796718"
 ---
 # <a name="implementing-full-text-search"></a>전체 텍스트 검색 구현
-  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 사용할 수 있으며 SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 개체로 표시됩니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 개체는 `Server` 개체 아래에 있으며, 
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 전체 텍스트 검색 서비스의 구성 옵션을 관리하는 데 사용됩니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체는 데이터베이스에 정의된 전체 텍스트 카탈로그를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 개체 모음입니다. 일반 인덱스와 달리 전체 텍스트 인덱스는 각 테이블에 하나만 정의할 수 있으며 
-  <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 개체에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다.  
+  전체 텍스트 검색은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 사용할 수 있으며 SMO에서 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.FullTextService> 개체는 `Server` 개체 아래에 있으며, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 전체 텍스트 검색 서비스의 구성 옵션을 관리하는 데 사용됩니다. <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체는 데이터베이스에 정의된 전체 텍스트 카탈로그를 나타내는 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 개체 모음입니다. 일반 인덱스와 달리 전체 텍스트 인덱스는 각 테이블에 하나만 정의할 수 있으며 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 개체에서 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체로 표시됩니다.  
   
  전체 텍스트 검색 서비스를 만들려면 데이터베이스에 전체 텍스트 카탈로그를 정의하고 데이터베이스의 테이블 중 하나에 전체 텍스트 검색 인덱스를 정의해야 합니다.  
   

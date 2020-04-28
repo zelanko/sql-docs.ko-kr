@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72796415"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
@@ -29,17 +29,17 @@ ms.locfileid: "72796415"
   
 -   **저장 프로시저를 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> 권한  
+##  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스의 CREATE PROCEDURE 권한과 프로시저를 만들 스키마에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="Procedures"></a> 저장 프로시저를 만드는 방법  
+##  <a name="how-to-create-a-stored-procedure"></a><a name="Procedures"></a> 저장 프로시저를 만드는 방법  
  다음 중 하나를 사용할 수 있습니다.  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **개체 탐색기에서 프로시저를 만들려면**  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "72796415"
 > [!WARNING]  
 >  모든 사용자 입력에 대해 유효성을 검사합니다. 유효성 검사를 수행하기 전에는 사용자 입력을 연결하지 마세요. 유효성 검사가 수행되지 않은 사용자 입력으로부터 생성된 명령은 실행하지 마세요.  
   
-###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **쿼리 편집기에서 프로시저를 만들려면**  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  

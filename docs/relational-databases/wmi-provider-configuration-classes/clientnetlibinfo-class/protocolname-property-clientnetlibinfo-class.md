@@ -18,10 +18,10 @@ ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 693a62cd76e479dc5afa036b207bf486d09c7726
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659369"
 ---
 # <a name="protocolname-property-clientnetlibinfo-class"></a>ProtocolName 속성(ClientNetLibInfo 클래스)
@@ -36,7 +36,7 @@ object.ProtocolName [= value]
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  클라이언트 네트워크 라이브러리에 대한 정보를 나타내는 [ClientNetLibInfo 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md) 개체입니다.  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  

@@ -16,10 +16,10 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0196993f863d973e14834f7eb3b93b797a825ac4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72907331"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
@@ -46,8 +46,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- 서비스 팩 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 버전을 실행 하는 서버가 포함 된 복제 토폴로지에서만 sp_mergecleanupmetadata을 사용 해야 합니다. **** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 
-  [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이상 버전만 포함하는 토폴로지는 자동 보존 기반 메타데이터 정리를 사용해야 합니다. 이 저장 프로시저를 실행할 때는 저장 프로시저가 실행되는 컴퓨터에서 로그 파일이 크게 증가할 가능성이 있다는 점에 주의해야 합니다.  
+ 서비스 팩 1 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 버전을 실행 하는 서버가 포함 된 복제 토폴로지에서만 sp_mergecleanupmetadata을 사용 해야 합니다. **sp_mergecleanupmetadata** [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이상 버전만 포함하는 토폴로지는 자동 보존 기반 메타데이터 정리를 사용해야 합니다. 이 저장 프로시저를 실행할 때는 저장 프로시저가 실행되는 컴퓨터에서 로그 파일이 크게 증가할 가능성이 있다는 점에 주의해야 합니다.  
   
 > [!CAUTION]
 >  **Sp_mergecleanupmetadata** 를 실행 한 후에는 기본적으로 **MSmerge_genhistory**, **MSmerge_contents** 및 **MSmerge_tombstone** 에 저장 된 메타 데이터를 포함 하는 게시 구독자의 모든 구독을 다시 초기화 하도록 표시 하 고, 구독자의 보류 중인 모든 변경 내용이 손실 되 고, 현재 스냅숏이 더 이상 사용 되지 않는 것으로 표시 됩니다.  

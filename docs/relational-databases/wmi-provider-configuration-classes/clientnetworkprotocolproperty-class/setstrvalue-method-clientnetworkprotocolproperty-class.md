@@ -18,15 +18,14 @@ ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 07cc2bfc18ebbb6d2ddafa94bc29b14144f27c01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73660704"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>SetStrValue 메서드(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  
   [PropertyIdx 속성(ClientNetworkProtocolProperty 클래스)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) 값에서 참조하는 현재 속성의 문자열 값을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -37,9 +36,8 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
- 
-  [클라이언트에서 사용하는 네트워크 프로토콜의 특성을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
+ *object*  
+ [클라이언트에서 사용하는 네트워크 프로토콜의 특성을 나타내는](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md) ClientNetworkProtocolProperty 클래스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
   

@@ -18,10 +18,10 @@ ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 88becd0d5a137d88b446e18fa0ef0798524bc0c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659458"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>SetProtocolsOrder 메서드(ClientNetworkProtocol 클래스)
@@ -36,7 +36,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜을 나타내는 [clientnetworkprotocol 클래스](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
@@ -46,8 +46,7 @@ object.SetProtocolsOrder(ProtocolOrderList)
 |*ProtocolOrderList*|클라이언트 네트워크 프로토콜을 새로운 순서로 나열하는 string[] 형식의 배열입니다.|  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 
-  **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
+ **uint32** 값으로, 0은 서비스가 수정되었음을 나타내고 1은 요청이 지원되지 않음을 나타내며 다른 모든 숫자는 오류를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
   

@@ -18,10 +18,10 @@ ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 02e0e825b52263acb819c4fedaa73efc6944741b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73659509"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>SetStrValue 메서드(SqlServiceAdvancedProperty 클래스)
@@ -36,12 +36,12 @@ object.SetStrValue(StrValue)
 ```  
   
 ## <a name="parts"></a>부분  
- *개체가*  
+ *object*  
  고급 속성을 나타내는 [SqlServiceAdvancedProperty 클래스](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) 개체입니다.  
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*StrValue*|고급 속성의 값을 지정하는 문자열 값입니다.|  
   

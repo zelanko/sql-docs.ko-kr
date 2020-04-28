@@ -13,19 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc29aa897674ae61d6bc5e8a53abe109661ebbc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72797163"
 ---
 # <a name="creating-altering-and-removing-defaults"></a>기본값 생성, 변경 및 제거
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 기본 제약 조건은 <xref:Microsoft.SqlServer.Management.Smo.Default> 개체로 표시됩니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Default> 속성은 삽입할 값을 설정하는 데 사용되며, 상수 또는 상수 값을 반환하는 GETDATE()와 같은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문일 수 있습니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드로 수정할 수 없습니다. 대신 <xref:Microsoft.SqlServer.Management.Smo.Default> 개체를 삭제하고 다시 만들어야 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Default> 속성은 삽입할 값을 설정하는 데 사용되며, 상수 또는 상수 값을 반환하는 GETDATE()와 같은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문일 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> 속성은 <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A> 메서드로 수정할 수 없습니다. 대신 <xref:Microsoft.SqlServer.Management.Smo.Default> 개체를 삭제하고 다시 만들어야 합니다.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 visual [studio .net에서 VISUAL BASIC SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [visual Studio .Net에서 VISUAL C&#35; smo 프로젝트 만들기](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
