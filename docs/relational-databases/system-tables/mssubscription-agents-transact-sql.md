@@ -18,10 +18,10 @@ ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139794"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68139794"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|행의 ID입니다.|  
+|**id**|**int**|행의 ID입니다.|  
 |**발행자**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68139794"
 |**login_time**|**datetime**|현재 실행 중이거나 방금 실행된 배포 에이전트 연결의 날짜 및 시간입니다.|  
 |**allow_subscription_copy**|**bit**|구독 데이터베이스 복사 기능의 허용 여부를 지정합니다.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**attach_version**|**binary (16)**|연결된 구독의 버전을 나타내는 고유한 식별자입니다.|  
+|**attach_version**|**binary(16)**|연결된 구독의 버전을 나타내는 고유한 식별자입니다.|  
 |**last_sync_status**|**int**|현재 실행 중이거나 방금 실행된 배포 에이전트의 마지막 실행 상태입니다. 상태는 다음과 같을 수 있습니다.<br /><br /> **1** = 시작 됨<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태입니다.<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**last_sync_summary**|**sysname**|현재 실행 중이거나 방금 실행된 배포 에이전트의 마지막 메시지입니다. 상태는 다음과 같을 수 있습니다.<br /><br /> **했어야.**<br /><br /> **열었습니다.**<br /><br /> **진행 중입니다.**<br /><br /> **유휴.**<br /><br /> **Retry.**<br /><br /> **통과.**|  
 |**last_sync_time**|**datetime**|*Last_sync_summary* 및 *last_sync_status* 열이 업데이트 된 날짜 및 시간입니다. SqlServer 에이전트 서비스 작업으로 실행되는 끌어오기 또는 익명 배포 에이전트는 이러한 열을 업데이트하지 않습니다. 이 경우에는 대신 기록 정보가 작업 기록 테이블에 기록됩니다.|  

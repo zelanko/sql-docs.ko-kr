@@ -18,10 +18,10 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122543"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup(Transact-SQL)
@@ -46,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|파일 그룹의 이름입니다.|  
 |**groupid**|**smallint**|파일 그룹의 숫자 ID입니다.|  
@@ -54,12 +54,12 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  *Name* 을 지정 하면 파일 그룹의 각 파일에 대해 한 개의 행이 반환 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|파일 그룹에 있는 파일의 논리적 이름입니다.|  
 |**fileid**|**smallint**|파일의 숫자 ID입니다.|  
 |**이름도**|**nchar (260)**|디렉터리 경로를 포함한 파일의 물리적 이름입니다.|  
-|**크기가**|**nvarchar (15)**|파일 크기(KB)입니다.|  
+|**size**|**nvarchar (15)**|파일 크기(KB)입니다.|  
 |**크기**|**nvarchar (15)**|파일의 최대 크기입니다.<br /><br /> 파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar (15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
   
@@ -79,7 +79,7 @@ GO
 ```  
   
 ### <a name="b-returning-all-files-in-a-filegroup"></a>B. 파일 그룹에 있는 모든 파일 반환  
- 다음 예에서는 `PRIMARY` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 파일 그룹에 있는 모든 파일에 대한 정보를 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `PRIMARY` 파일 그룹에 있는 모든 파일에 대한 정보를 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -91,10 +91,10 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_helpfile &#40;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
- [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys. 파일 그룹 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

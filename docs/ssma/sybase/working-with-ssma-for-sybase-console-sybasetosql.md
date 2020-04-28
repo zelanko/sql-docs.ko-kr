@@ -10,10 +10,10 @@ ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68112869"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>Sybase용 SSMA 콘솔 작업(SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "68112869"
   
 |||  
 |-|-|  
-|**에서는**|**설명**|  
+|**토픽**|**설명**|  
 |[Sybase 용 SSMA 콘솔 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-console-sybasetosql.md)|콘솔 응용 프로그램을 실행 하는 절차에 대해 설명 합니다.|  
 |[SSMA 콘솔의 명령줄 옵션 &#40;SybaseToSQL&#41;](../../ssma/sybase/command-line-options-in-ssma-console-sybasetosql.md)|SSMA 콘솔 응용 프로그램을 작동 하는 명령줄 옵션과 매개 변수를 설명 합니다.|  
 |[스크립트 파일 &#40;SybaseToSQL&#41;만들기](../../ssma/sybase/creating-script-files-sybasetosql.md)|스크립트 파일을 만드는 방법을 설명 합니다.|  

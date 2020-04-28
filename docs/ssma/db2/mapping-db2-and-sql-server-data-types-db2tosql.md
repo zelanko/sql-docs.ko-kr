@@ -10,10 +10,10 @@ ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1e9baab08f4295b2c51fd942f6153cc9425dd958
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141005"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>DB2 및 SQL Server 데이터 형식 매핑 (DB2ToSQL)
@@ -64,8 +64,7 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
   
 3.  데이터 형식 매핑을 수정 하려면 다음을 수행 합니다.  
   
-    1.  
-  **편집**을 클릭합니다.  
+    1.  **편집**을 클릭합니다.  
   
     2.  **원본 유형**에서 매핑할 DB2 데이터 형식을 선택 합니다.  
   

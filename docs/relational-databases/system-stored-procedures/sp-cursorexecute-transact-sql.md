@@ -18,10 +18,10 @@ ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108529"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute(Transact-SQL)
@@ -45,7 +45,7 @@ sp_cursorexecute prepared_handle, cursor
  *prepared_handle*  
  Sp_cursorprepare에서 반환 된 준비 된 문 *핸들* 값입니다. *prepared_handle* 은 **int** 입력 값에 대해를 호출 하는 필수 매개 변수입니다.  
   
- *위치*  
+ *cursor*  
  SQL Server에서 생성하는 커서 식별자입니다. *커서* 는 커서에 대해 작동 하는 모든 후속 프로시저에 제공 해야 하는 필수 매개 변수입니다 (예: sp_cursorfetch  
   
  *scrollopt*  
@@ -79,7 +79,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>코드 반환 값  
  *rowcount* 는 다음 값을 반환할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |-1|행 수를 알 수 없습니다.|  
 |-n|비동기 채우기가 적용됩니다.|  

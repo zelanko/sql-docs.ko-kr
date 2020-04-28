@@ -10,10 +10,10 @@ ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138334"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정(형식 매핑)(MySQLToSQL)
@@ -65,11 +65,11 @@ ms.locfileid: "68138334"
 |비트 [49 ... 56]|binary [7]|  
 |bit [57 ... 64]|이진 [8]|  
 |bit [9 ... 16]|이진 [2]|  
-|Blob|varbinary(max)|  
+|blob|varbinary(max)|  
 |blob [0 ..1]|varbinary [1]|  
 |blob [2.8000]|varbinary [*]|  
 |blob [8001 *]|varbinary(max)|  
-|부울|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char 바이트|이진 [1]|  

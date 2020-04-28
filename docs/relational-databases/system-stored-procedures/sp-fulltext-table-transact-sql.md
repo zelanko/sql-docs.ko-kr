@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124139"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68124139"
   테이블을 전체 텍스트 인덱싱에 표시하거나 표시하지 않습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [CREATE 전체 텍스트 인덱스](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER 전체 텍스트 인덱스](../../t-sql/statements/alter-fulltext-index-transact-sql.md)및 [전체 텍스트 인덱스 삭제](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 를 사용 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 를 사용하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_fulltext_table
   
 |값|Description|  
 |-----------|-----------------|  
-|**생성**|*Qualified_table_name* 에서 참조 하는 테이블의 전체 텍스트 인덱스에 대 한 메타 데이터를 만들고이 테이블의 전체 텍스트 인덱스 데이터가 *fulltext_catalog_name*에 있어야 함을 지정 합니다. 또한이 작업은 *unique_index_name* 를 전체 텍스트 키 열로 사용 하도록 지정 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
+|**만들기**|*Qualified_table_name* 에서 참조 하는 테이블의 전체 텍스트 인덱스에 대 한 메타 데이터를 만들고이 테이블의 전체 텍스트 인덱스 데이터가 *fulltext_catalog_name*에 있어야 함을 지정 합니다. 또한이 작업은 *unique_index_name* 를 전체 텍스트 키 열로 사용 하도록 지정 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
 |**그림자**|*Qualified_table_name*에 대 한 전체 텍스트 인덱스에 대 한 메타 데이터를 삭제 합니다. 전체 텍스트 인덱스가 활성화된 경우에는 삭제되기 전에 자동으로 비활성화됩니다. 전체 텍스트 인덱스를 삭제하기 전에 열을 제거할 필요는 없습니다.|  
 |**제품**|는 비활성화 된 후 *qualified_table_name*에 대해 전체 텍스트 인덱스 데이터를 수집 하는 기능을 활성화 합니다. 활성화되기 전에 전체 텍스트 인덱스에 참여하는 열이 적어도 하나 이상 있어야 합니다.<br /><br /> 전체 텍스트 인덱스는 인덱스에 첫 번째 열이 추가된 직후 채우기가 자동으로 활성화됩니다. 마지막 열이 인덱스에서 삭제되면 해당 인덱스는 비활성화됩니다. 변경 내용 추적이 진행 중인 경우 비활성화된 인덱스를 활성화하면 채우기가 새로 시작됩니다.<br /><br /> 이는 실제로 전체 텍스트 인덱스를 채우지는 않지만 파일 시스템의 전체 텍스트 카탈로그에 테이블을 등록 하기만 하면 다음 전체 텍스트 인덱스를 채울 때 *qualified_table_name* 의 행을 검색할 수 있습니다.|  
 |**Deactivate**|*Qualified_table_name*에 대해 전체 텍스트 인덱스 데이터를 더 이상 수집할 수 없도록 *qualified_table_name* 에 대 한 전체 텍스트 인덱스를 비활성화 합니다. 그러나 전체 텍스트 인덱스 메타데이터는 남아 있으며 테이블을 다시 활성화할 수 있습니다.<br /><br /> 변경 내용 추적이 진행 중인 경우 활성화된 인덱스를 비활성화하면 인덱스의 상태가 고정됩니다. 즉, 진행 중인 채우기가 모두 중지되고 변경 내용이 인덱스에 더 이상 전파되지 않습니다.|  
@@ -93,9 +93,7 @@ sp_fulltext_table
 ## <a name="examples"></a>예  
   
 ### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. 테이블을 전체 텍스트 인덱싱에 사용  
- 다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 만듭니다. 
-  `Cat_Desc`는 전체 텍스트 카탈로그이고, 
-  `PK_Document_DocumentID`는 `Document`의 고유한 단일 열 인덱스입니다.  
+ 다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 만듭니다. `Cat_Desc`는 전체 텍스트 카탈로그이고, `PK_Document_DocumentID`는 `Document`의 고유한 단일 열 인덱스입니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -130,12 +128,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_tables &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_tables_cursor &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_helpindex &#40;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 저장 프로시저](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

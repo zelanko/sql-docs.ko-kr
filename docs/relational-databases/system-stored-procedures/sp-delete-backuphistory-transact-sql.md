@@ -18,10 +18,10 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68120060"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
@@ -48,7 +48,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  **sp_delete_backuphistory** **msdb** 데이터베이스에서 실행 해야 하며 다음 테이블에 영향을 줍니다.  
@@ -85,6 +85,6 @@ EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_delete_database_backuphistory &#40;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
- [백업 기록 및 헤더 정보 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
+ [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: d9e230fb-d3ff-486f-86ef-44898f0a703e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 99e3a647c55380e1731b97c267eb754a1f3c6a32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122738"
 ---
 # <a name="syshash_indexes-transact-sql"></a>sys.hash_indexes(Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68122738"
   
  Hash_indexes 뷰에는 다른 열과 동일한 열과 **bucket_count**라는 열이 포함 되어 있습니다. Hash_indexes 뷰의 다른 열에 대 한 자세한 내용은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)을 참조 하십시오.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**||[Transact-sql&#41;&#40;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)에서 열을 상속 합니다.|  
 |**bucket_count**|**int**|해시 인덱스에 대한 해시 버킷 수입니다.<br /><br /> 값 설정에 대 한 지침을 포함 하 여 bucket_count 값에 대 한 자세한 내용은 [CREATE TABLE &#40;transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)를 참조 하세요.|  
   
 ## <a name="permissions"></a>사용 권한  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   

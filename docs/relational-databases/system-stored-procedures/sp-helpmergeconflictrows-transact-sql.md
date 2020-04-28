@@ -16,10 +16,10 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137767"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
@@ -56,7 +56,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**origin_datasource**|**varchar (255)**|충돌의 시작입니다.|  
+|**origin_datasource**|**varchar(255)**|충돌의 시작입니다.|  
 |**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** = 업데이트 충돌: 행 수준에서 충돌을 감지 합니다.<br /><br /> **2** = 열 업데이트 충돌: 열 수준에서 충돌이 검색 되었습니다.<br /><br /> **3** = 업데이트 삭제 wins 충돌: 삭제는 충돌을 적용 합니다.<br /><br /> **4** = 업데이트 Wins 삭제 충돌: 충돌을 손실 하는 삭제 된 rowguid가이 테이블에 기록 됩니다.<br /><br /> **5** = 업로드 삽입 실패: 게시자에서 구독자의 삽입을 적용할 수 없습니다.<br /><br /> **6** = 다운로드 삽입 실패: 게시자에서의 삽입을 구독자에서 적용할 수 없습니다.<br /><br /> **7** = 업로드를 삭제 하지 못했습니다. 구독자에서 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** = 다운로드 삭제 실패: 게시자에서 삭제를 구독자에 다운로드할 수 없습니다.<br /><br /> **9** = 업로드 업데이트 실패: 게시자에서 구독자의 업데이트를 적용할 수 없습니다.<br /><br /> **10** = 다운로드 업데이트 실패: 게시자의 업데이트를 구독자에 적용할 수 없습니다.<br /><br /> **12** = 논리적 레코드 업데이트 Wins 삭제: 충돌을 잃은 삭제 된 논리적 레코드가이 테이블에 기록 됩니다.<br /><br /> **13** = 논리적 레코드 충돌 삽입 업데이트: 논리 레코드에 삽입이 업데이트와 충돌 합니다.<br /><br /> **14** = 논리적 레코드 삭제 Wins 업데이트 충돌: 충돌을 잃은 업데이트 된 논리적 레코드가이 테이블에 기록 됩니다.|  
 |**reason_code**|**int**|상황에 맞는 오류 코드입니다.|  
 |**reason_text**|**varchar (720)**|상황에 맞는 오류 설명입니다.|  

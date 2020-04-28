@@ -16,10 +16,10 @@ ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104507"
 ---
 # <a name="sp_changemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
@@ -55,40 +55,40 @@ sp_changemergearticle [ @publication = ] 'publication'
 |속성|값|Description|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|아티클에 대해 대화형 해결 프로그램을 사용합니다.|  
-||**허위**|아티클에 대해 대화형 해결 프로그램을 사용하지 않습니다.|  
+||**false**|아티클에 대해 대화형 해결 프로그램을 사용하지 않습니다.|  
 |**article_resolver**||아티클에 대한 사용자 지정 해결 프로그램입니다. 테이블 아티클에만 적용됩니다.|  
 |**check_permissions** (비트맵)|**0x00**|테이블 수준 권한을 확인하지 않습니다.|  
 ||**10**|구독자에서 작성된 INSERT 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x20**|구독자에서 작성된 UPDATE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x40**|구독자에서 작성된 DELETE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 |**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246 개 이상의 열이 있는 테이블을 게시 하는 경우 열 수준 추적을 사용할 수 없습니다.|  
-||**허위**|열 수준 추적을 해제하고 행 수준에서 충돌 감지를 유지합니다. 테이블 아티클에만 적용됩니다.|  
+||**false**|열 수준 추적을 해제하고 행 수준에서 충돌 감지를 유지합니다. 테이블 아티클에만 적용됩니다.|  
 |**compensate_for_errors**|**true**|동기화 중 오류가 발생하면 보정 동작을 수행합니다. 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)를 참조 하세요.|  
-||**허위**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)를 참조 하세요.<br /><br /> ** \* 중요 \* \* ** 영향을 받는 행의 데이터는 오류를 해결 하는 즉시 적용 되지 않는 것 처럼 보일 수 있지만 변경 내용을 적용 하 고 데이터를 수렴 합니다. 아티클의 원본 테이블이 이미 다른 게시에 게시 된 경우 *compensate_for_errors* 의 값은 두 아티클에 대해 동일 해야 합니다.|  
+||**false**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)를 참조 하세요.<br /><br /> ** \* 중요 \* \* ** 영향을 받는 행의 데이터는 오류를 해결 하는 즉시 적용 되지 않는 것 처럼 보일 수 있지만 변경 내용을 적용 하 고 데이터를 수렴 합니다. 아티클의 원본 테이블이 이미 다른 게시에 게시 된 경우 *compensate_for_errors* 의 값은 두 아티클에 대해 동일 해야 합니다.|  
 |**creation_script**||구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**delete_tracking**|**true**|DELETE 문을 복제합니다(기본 동작).|  
-||**허위**|DELETE 문을 복제하지 않습니다.<br /><br /> ** \* 중요 \* \* ** **Delete_tracking** **false** 로 설정 하면 데이터가 일치 하지 않으므로 삭제 된 행을 수동으로 제거 해야 합니다.|  
+||**false**|DELETE 문을 복제하지 않습니다.<br /><br /> ** \* 중요 \* \* ** **Delete_tracking** **false** 로 설정 하면 데이터가 일치 하지 않으므로 삭제 된 행을 수동으로 제거 해야 합니다.|  
 |**한**||아티클에 대한 설명 항목입니다.|  
 |**destination_owner**||**Dbo**가 아닌 경우 구독 데이터베이스에 있는 개체 소유자의 이름입니다.|  
 |**identity_range**||아티클에 **identityrangemanagementoption** 가 **auto** 로 설정 되어 있거나 **auto_identity_range** **true**로 설정 된 경우 새 id 값을 할당할 때 사용할 범위 크기를 지정 하는 **bigint** 입니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**identityrangemanagementoption**|**수동**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
-||**없음을**|모든 ID 범위 관리를 사용하지 않습니다.|  
+||**없음**|모든 ID 범위 관리를 사용하지 않습니다.|  
 |**logical_record_level_conflict_detection**|**true**|논리적 레코드에 변경 사항이 발생하면 충돌이 감지됩니다. **Logical_record_level_conflict_resolution** **true**로 설정 해야 합니다.|  
-||**허위**|기본 충돌 검색은 **column_tracking**에 지정 된 대로 사용 됩니다.|  
+||**false**|기본 충돌 검색은 **column_tracking**에 지정 된 대로 사용 됩니다.|  
 |**logical_record_level_conflict_resolution**|**true**|전체 적용되는 논리적 레코드가 무시되는 논리적 레코드를 덮어씁니다.|  
-||**허위**|적용되는 행은 논리적 레코드로 제한되지 않습니다.|  
+||**false**|적용되는 행은 논리적 레코드로 제한되지 않습니다.|  
 |**partition_options**|**0**|아티클에 대한 필터링이 정적이거나 각 파티션에 대한 고유한 데이터 하위 집합을 생성하지 않습니다. 즉, "겹치는" 파티션입니다.|  
 ||**1**|파티션이 겹치며 구독자에서 DML 업데이트를 수행해도 행이 속한 파티션이 변경되지 않습니다.|  
 ||**2**|아티클을 필터링하면 겹치지 않는 파티션이 생성되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.|  
 ||**3**|아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.<br /><br /> 참고: **partition_options**에 값 **3** 을 지정 하면 해당 아티클의 각 데이터 파티션에 대해 구독이 하나만 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.|  
-|**pre_creation_command**|**없음을**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
-||**제거**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
+|**pre_creation_command**|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
+||**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
 ||**그림자**|테이블을 다시 만들기 전에 삭제합니다.|  
 ||**잘라내야**|대상 테이블을 자릅니다.|  
 |**processing_order**||병합 게시에서 아티클의 처리 순서를 나타내는 **int** 입니다.|  
 |**pub_identity_range**||아티클의 **identityrangemanagementoption** 가 **auto** 로 설정 되거나 **auto_identity_range** **true**로 설정 된 경우 서버 구독이 있는 구독자에 할당 된 범위 크기를 지정 하는 **bigint** 입니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**published_in_tran_pub**|**true**|아티클을 트랜잭션 게시에도 게시합니다.|  
-||**허위**|아티클을 트랜잭션 게시에 게시하지 않습니다.|  
+||**false**|아티클을 트랜잭션 게시에 게시하지 않습니다.|  
 |**resolver_info**||사용자 지정 해결 프로그램에 필요한 추가 정보를 지정하는 데 사용합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해결 프로그램에는 입력으로 제공되는 열이 필요합니다. **resolver_info** 는 **nvarchar (255)** 이며 기본값은 NULL입니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.|  
 |**schema_option** (비트맵)||자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
 ||**0x00**|스냅숏 에이전트에서 스크립팅을 사용 하지 않도록 설정 하 고 **creation_script**에 제공 된 스크립트를 사용 합니다.|  
@@ -131,10 +131,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x8000000000**|**Geography** 및 **geometry** 데이터 형식을 **varbinary (max)** 로 변환 하 여 이러한 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있습니다.|  
 ||**0x10000000000**|**Geography** 및 **geometry**형식의 열에 대 한 인덱스를 복제 합니다.|  
 ||NULL|시스템에서 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다.|  
-|**업무**|**directory**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
+|**status**|**활성**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 ||**unsynced**|스냅샷 에이전트가 다음에 실행될 때 테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 |**stream_blob_columns**|**true**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용합니다. 그러나 논리적 레코드와 같은 특정 병합 복제 기능은 스트림 최적화를 사용할 수 없도록 합니다. FILESTREAM을 사용 하는 경우 *stream_blob_columns* true로 설정 됩니다. 그러면 FILESTREAM 데이터 복제가 최적의 방식으로 수행되고 메모리 활용률이 낮아집니다. FILESTREAM 테이블 아티클에서 blob 스트리밍을 사용 하지 않도록 하려면 *stream_blob_columns* 을 false로 설정 합니다.<br /><br /> ** \* 중요 \* \* ** 이 메모리 최적화를 사용 하도록 설정 하면 동기화 하는 동안 병합 에이전트의 성능이 저하 될 수 있습니다. MB 단위의 데이터가 포함된 열을 복제할 때만 이 옵션을 사용해야 합니다.|  
-||**허위**|BLOB 열을 복제할 때 최적화를 사용하지 않습니다.|  
+||**false**|BLOB 열을 복제할 때 최적화를 사용하지 않습니다.|  
 |**subscriber_upload_options**|**0**|클라이언트 구독이 있는 구독자에서 수행되는 업데이트에 제한이 없으며 변경 내용이 게시자로 업로드됩니다. 이 속성을 변경하려면 기존 구독자를 다시 초기화해야 합니다.|  
 ||**1**|클라이언트 구독이 있는 구독자에서 변경이 허용되지만 변경 내용이 게시자로 업로드되지 않습니다.|  
 ||**2**|클라이언트 구독이 있는 구독자에서 변경이 허용되지 않습니다.|  

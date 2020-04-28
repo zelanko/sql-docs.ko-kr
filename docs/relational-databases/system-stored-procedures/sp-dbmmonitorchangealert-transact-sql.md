@@ -19,10 +19,10 @@ ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108144"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
@@ -91,11 +91,11 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|성능 메트릭|경고 임계값|경고 사용 여부|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|보내지 않은 가장 오래된 트랜잭션|30분|yes|  
-|2|보내지 않은 로그|1만 KB|yes|  
-|3|복원되지 않은 로그|1만 KB|yes|  
-|4|미러 커밋 오버헤드|1,000밀리초|예|  
-|5|보존 기간|8시간|yes|  
+|1|보내지 않은 가장 오래된 트랜잭션|30분|예|  
+|2|보내지 않은 로그|1만 KB|예|  
+|3|복원되지 않은 로그|1만 KB|예|  
+|4|미러 커밋 오버헤드|1,000밀리초|아니요|  
+|5|보존 기간|8시간|예|  
   
 ```  
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 1, 30, 1 ;  

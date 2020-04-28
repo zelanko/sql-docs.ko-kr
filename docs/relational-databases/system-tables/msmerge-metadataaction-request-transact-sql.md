@@ -18,10 +18,10 @@ ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 09f3fa61a1f79e98b8cd3330a03361b1b6a5c507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106375"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68106375"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  
 |**rowguid**|**uniqueidentifier**|지정된 행의 행 식별자입니다.|  
-|**조치**|**tinyint**|필요한 보정 동작을 식별합니다.|  
+|**action**|**tinyint**|필요한 보정 동작을 식별합니다.|  
 |**작성**|**bigint**|보정 동작이 필요한 생성의 값입니다.|  
 |**변경**|**int**|내부적으로만 사용됩니다.|  
   

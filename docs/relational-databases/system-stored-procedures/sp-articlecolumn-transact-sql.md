@@ -16,10 +16,10 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105086"
 ---
 # <a name="sp_articlecolumn-transact-sql"></a>sp_articlecolumn(Transact-SQL)
@@ -94,9 +94,9 @@ sp_articlecolumn [ @publication = ] 'publication'
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_articlecolumn**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)   
  [열 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
+ [게시 된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)   
  [Transact-sql&#41;sp_addarticle &#40;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [Transact-sql&#41;sp_articleview &#40;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [Transact-sql&#41;sp_changearticle &#40;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   

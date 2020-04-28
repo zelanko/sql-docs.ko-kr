@@ -18,10 +18,10 @@ ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139782"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68139782"
 
   **MSsubscription_articles** 테이블에는 대기 중인 구독의 아티클에 대 한 정보가 포함 되어 있습니다. 이 테이블은 지연 업데이트와 장애 조치로 지연 업데이트를 사용하는 즉시 업데이트의 복제 유형에 대해서만 채워집니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|이 아티클을 서비스하는 에이전트의 ID입니다.|  
 |**artid**|**int**|**Sysarticles** 테이블의 문서 ID입니다.|  

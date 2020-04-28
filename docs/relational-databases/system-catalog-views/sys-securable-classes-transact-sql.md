@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dffa82d659ab2f36f94d5fecbafeb5c65ba4f05a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135280"
 ---
 # <a name="syssecurable_classes-transact-sql"></a>sys.securable_classes(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68135280"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class_desc**|**sysname**|클래스의 이름입니다.|  
-|**클래스**|**int**|클래스의 숫자 지정입니다.|  
+|**class**|**int**|클래스의 숫자 지정입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

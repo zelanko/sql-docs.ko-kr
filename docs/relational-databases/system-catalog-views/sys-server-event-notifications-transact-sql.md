@@ -20,10 +20,10 @@ ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e3eaa1bdfa45e0c3e0b0412b8852e134c43c3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124987"
 ---
 # <a name="sysserver_event_notifications-transact-sql"></a>sys.server_event_notifications(Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "68124987"
 |**name**|**sysname**|서버 이벤트 알림의 이름이며 전체 서버 수준 이벤트 알림에 걸쳐 고유합니다.|  
 |**object_id**|**int**|개체 ID입니다. **Master** 데이터베이스 내에서 고유 합니다.|  
 |**parent_class**|**tinyint**|부모 클래스입니다. 항상 100 = Server입니다.|  
-|**parent_class_desc**|**nvarchar (60)**|부모 클래스에 대한 설명입니다. 항상 SERVER입니다.|  
+|**parent_class_desc**|**nvarchar(60)**|부모 클래스에 대한 설명입니다. 항상 SERVER입니다.|  
 |**parent_id**|**int**|항상 0입니다.|  
 |**create_date**|**datetime**|만든 날짜입니다.|  
 |**modify_date**|**datetime**|ALTER 문을 사용하여 개체를 마지막으로 수정한 날짜입니다.|  
 |**service_name**|**nvarchar(256)**|알림을 보낸 대상 서비스의 이름입니다.|  
 |**broker_instance**|**nvarchar(128)**|명명된 대상 서비스가 정의되는 Service Broker입니다.|  
-|**creator_sid**|**varbinary (85)**|이벤트 알림을 만드는 문을 실행하는 로그인의 SID입니다. 이벤트 알림 정의에서 WITH FAN_IN을 지정하지 않으면 NULL이 됩니다.|  
+|**creator_sid**|**varbinary(85)**|이벤트 알림을 만드는 문을 실행하는 로그인의 SID입니다. 이벤트 알림 정의에서 WITH FAN_IN을 지정하지 않으면 NULL이 됩니다.|  
 |**principal_id**|**int**|이를 소유하는 서버 보안 주체의 ID입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

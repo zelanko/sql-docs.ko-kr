@@ -10,10 +10,10 @@ ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4628f745f17a3a694d20fe27c134753bc108a6b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68141050"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA 설치 (DB2ToSQL)

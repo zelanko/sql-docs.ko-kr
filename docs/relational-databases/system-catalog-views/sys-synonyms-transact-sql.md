@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 83508e26864d2f7910e482c06f72ef5bebc7929c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108911"
 ---
 # <a name="syssynonyms-transact-sql"></a>sys.synonyms(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68108911"
 
   각 동의어 개체에 대 한 행을 포함 합니다. 여기에는 **sys.debug** = SN이 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**base_object_name**|**nvarchar (1035)**|이 동의어의 사용자가 리디렉션되는 개체의 따옴표 붙은 전체 이름입니다.|  

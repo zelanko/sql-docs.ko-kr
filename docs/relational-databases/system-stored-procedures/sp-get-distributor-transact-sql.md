@@ -16,10 +16,10 @@ ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124124"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor(Transact-SQL)
@@ -38,9 +38,9 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**설치됨**|**int**|**0** = 아니요; **1** = 예|  
+|**설치한**|**int**|**0** = 아니요; **1** = 예|  
 |**distribution server**|**sysname**|배포자 서버의 이름입니다.|  
 |**배포 db가 설치 됨**|**int**|**0** = 아니요; **1** = 예|  
 |**is distribution publisher**|**int**|**0** = 아니요; **1** = 예|  

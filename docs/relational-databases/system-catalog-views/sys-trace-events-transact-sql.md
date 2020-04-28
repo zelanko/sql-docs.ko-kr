@@ -20,10 +20,10 @@ ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106665"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events(Transact-SQL)
@@ -31,13 +31,12 @@ ms.locfileid: "68106665"
 
   **Sys. trace_events** 카탈로그 뷰에는 모든 SQL 추적 이벤트 목록이 포함 되어 있습니다. 이러한 추적 이벤트는 지정된 버전의 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대해 변경되지 않습니다.  
   
-> **중요 한!** 
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
+> **중요!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
   
  이러한 추적 이벤트에 대 한 자세한 내용은 [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조 하세요.  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|이벤트의 고유 ID입니다. 이 열은 또한 **sys. trace_event_bindings** 및 **trace_subclass_values** 카탈로그 뷰에 있습니다.|  
 |**category_id**|**smallint**|이벤트의 범주 ID입니다. 이 열은 **sys. trace_categories** 카탈로그 뷰에도 있습니다.|  

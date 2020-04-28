@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133797"
 ---
 # <a name="sysfulltext_indexes-transact-sql"></a>sys.fulltext_indexes(Transact-SQL)
@@ -40,10 +40,10 @@ ms.locfileid: "68133797"
 |**fulltext_catalog_id**|**int**|전체 텍스트 인덱스가 있는 전체 텍스트 카탈로그의 ID입니다.|  
 |**is_enabled**|**bit**|1 = 전체 텍스트 인덱스가 현재 활성화되었습니다.|  
 |**change_tracking_state**|**char (1)**|변경 내용 추적의 상태입니다.<br /><br /> M = 수동<br /><br /> A = 자동<br /><br /> O = 추적 안 함|  
-|**change_tracking_state_desc**|**nvarchar (60)**|변경 내용 추적 상태에 대한 설명입니다.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
+|**change_tracking_state_desc**|**nvarchar(60)**|변경 내용 추적 상태에 대한 설명입니다.<br /><br /> MANUAL<br /><br /> AUTO<br /><br /> OFF|  
 |**has_crawl_completed**|**bit**|전체 텍스트 인덱스가 완료한 마지막 탐색(채우기)입니다.|  
 |**crawl_type**|**char (1)**|현재 또는 마지막 탐색의 유형입니다.<br /><br /> F = 전체 탐색<br /><br /> I = 타임스탬프 기반 증분 탐색<br /><br /> U = 알림 기반 업데이트 탐색<br /><br /> P = 전체 탐색이 일시 중지됨|  
-|**crawl_type_desc**|**nvarchar (60)**|현재 또는 마지막 탐색 유형에 대한 설명입니다.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
+|**crawl_type_desc**|**nvarchar(60)**|현재 또는 마지막 탐색 유형에 대한 설명입니다.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|현재 또는 마지막 탐색의 시작 날짜와 시간입니다.<br /><br /> NULL = 없음|  
 |**crawl_end_date**|**datetime**|현재 또는 마지막 탐색의 종료 날짜와 시간입니다.<br /><br /> NULL = 없음|  
 |**incremental_timestamp**|**binary (8)**|다음 증분 탐색에 사용할 타임스탬프 값입니다.<br /><br /> NULL = 없음|  
@@ -70,12 +70,12 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [fulltext_index_fragments &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md)   
- [sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
+ [fulltext_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)   
  [fulltext_index_catalog_usages &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)   
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
- [DROP FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
+ [Transact-sql&#41;&#40;전체 텍스트 인덱스 삭제](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   

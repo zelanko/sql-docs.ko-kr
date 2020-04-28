@@ -20,10 +20,10 @@ ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1568e1ff8bd37f36fe22e4d25b4e76b5837f71d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127575"
 ---
 # <a name="sysassembly_references-transact-sql"></a>sys.assembly_references(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68127575"
 
   하나가 다른 하나를 직접 참조하는 각 쌍의 어셈블리당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|이 참조가 속한 어셈블리의 ID입니다.|  
 |**referenced_assembly_id**|**int**|참조되는 어셈블리의 ID입니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68127575"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;CLR 어셈블리 카탈로그 뷰](../../relational-databases/system-catalog-views/clr-assembly-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ASSEMBLYPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
   

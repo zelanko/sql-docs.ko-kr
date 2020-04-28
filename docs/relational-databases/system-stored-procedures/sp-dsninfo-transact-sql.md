@@ -16,10 +16,10 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124714"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`반환할 정보의 형식입니다. *Info_type* 지정 하지 않거나 NULL을 지정 하면 모든 정보 유형이 반환 됩니다. *info_type* 는 **varchar (128)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**DBMS_NAME**|데이터 원본의 공급업체 이름을 나타냅니다.|  
 |**DBMS_VERSION**|데이터 원본의 버전을 나타냅니다.|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`데이터 원본 유형입니다. *dso_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|ODBC 데이터 원본|  
 |**3**|OLE DB 데이터 원본|  
@@ -68,9 +68,9 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**Information Type**|**nvarchar (64)**|DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER 등의 정보 유형입니다.|  
+|**정보 유형**|**nvarchar (64)**|DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER 등의 정보 유형입니다.|  
 |**값**|**nvarchar(512)**|관련 정보 유형의 값입니다.|  
   
 ## <a name="remarks"></a>설명  

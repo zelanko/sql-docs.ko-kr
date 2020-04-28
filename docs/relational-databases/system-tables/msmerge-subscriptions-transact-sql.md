@@ -18,10 +18,10 @@ ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b00a2e83839724c2b6e5193e2ca08d5c6d3eced9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106312"
 ---
 # <a name="msmerge_subscriptions-transact-sql"></a>MSmerge_subscriptions(Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68106312"
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명|  
 |**sync_type**|**tinyint**|동기화 유형입니다.<br /><br /> 1 = 자동<br /><br /> 2 = 동기화 안 함|  
-|**업무**|**tinyint**|구독의 상태입니다.|  
+|**status**|**tinyint**|구독의 상태입니다.|  
 |**subscription_time**|**datetime**|구독이 추가된 시간입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

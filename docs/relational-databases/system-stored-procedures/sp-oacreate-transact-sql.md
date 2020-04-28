@@ -18,10 +18,10 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107929"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
@@ -42,12 +42,11 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *progid*  
  만들 OLE개체의 ProgID(프로그래밍 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 하 고 **'**_OLEComponent_' 형식을 갖습니다 **.** _개체_**'**  
   
- 
-  *OLEComponent*는 OLE Automation 서버의 구성 요소 이름이며 *Object*는 OLE 개체의 이름입니다. 지정 된 OLE 개체는 유효 해야 하 고 **IDispatch** 인터페이스를 지원 해야 합니다.  
+ *OLEComponent*는 OLE Automation 서버의 구성 요소 이름이며 *Object*는 OLE 개체의 이름입니다. 지정 된 OLE 개체는 유효 해야 하 고 **IDispatch** 인터페이스를 지원 해야 합니다.  
   
  예를 들면 SQLDMO입니다. SQLServer는 sql-dmo **sqlserver** 개체의 ProgID입니다. Sql-dmo의 구성 요소 이름은 SQLDMO이 고 **sqlserver** 개체는 올바르지만 (모든 sql-dmo 개체와 마찬가지로) **sqlserver** 개체가 **IDispatch**를 지원 합니다.  
   
- *clsid*  
+ *가*  
  만들 OLE 개체의 CLSID(클래스 식별자)입니다. 이 문자열은 OLE 개체의 클래스를 설명 하 고 **' {**_nnnnnnnn_-nnnn-nnnnnnnnnnnn **} '** 형식입니다. 지정 된 OLE 개체는 유효 해야 하 고 **IDispatch** 인터페이스를 지원 해야 합니다.  
   
  예를 들어 {00026BA1-0000-0000-C000-000000000046}은 SQL-DMO **SQLServer** 개체의 CLSID입니다.  
@@ -55,7 +54,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  _objecttoken_ **출력**  
  반환 된 개체 토큰이 며 **int**데이터 형식의 지역 변수 여야 합니다. 이 개체 토큰은 만들어진 OLE 개체를 식별 하 고 다른 OLE 자동화 저장 프로시저에 대 한 호출에 사용 됩니다.  
   
- *측면*  
+ *context*  
  새로 만든 OLE 개체가 실행되는 실행 컨텍스트를 지정합니다. 지정되는 경우 다음 값 중 하나여야 합니다.  
   
  **1** = in-process (.DLL) OLE 서버만 해당 됩니다.  

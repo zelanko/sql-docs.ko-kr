@@ -18,10 +18,10 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108569"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
@@ -44,13 +44,13 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>인수  
- *위치*  
+ *cursor*  
  커서 핸들입니다. *커서* 는 **int** 입력 값에 대해를 호출 하는 필수 매개 변수입니다. *커서* 는 SQL Server에서 생성 되 고 sp_cursoropen 프로시저에서 반환 하는 *핸들* 값입니다.  
   
  *optype*  
  커서가 수행할 작업을 지정하는 필수 매개 변수입니다. *optype* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|속성|Description|  
+|값|속성|설명|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|인출 버퍼에서 하나 이상의 행을 업데이트하는 데 사용됩니다.  *Rownum* 에 지정 된 행에 다시 액세스 하 여 업데이트 합니다.|  
 |0x0002|Delete|인출 버퍼에서 하나 이상의 행을 삭제하는 데 사용됩니다. *Rownum* 에 지정 된 행에 다시 액세스 하 여 삭제 합니다.|  
@@ -89,7 +89,7 @@ sp_cursor  cursor, optype, rownum, table
  *table*  
  커서 정의가 조인을 포함 하거나 모호한 열 이름이 *value* 매개 변수에 의해 반환 될 때 *optype* 이 적용 되는 테이블을 식별 하는 테이블 이름입니다. 특정 테이블을 지정하지 않으면 FROM 열의 첫 테이블이 기본적으로 사용됩니다. *테이블* 은 문자열 입력 값을 필요로 하는 선택적 매개 변수입니다. 문자열은 원하는 문자나 UNICODE 데이터 형식으로 지정할 수 있습니다. *테이블* 은 여러 부분으로 구성 된 테이블 이름일 수 있습니다.  
   
- *기본값*  
+ *value*  
  값을 삽입하거나 업데이트하는 데 사용됩니다. *Value* string 매개 변수는 UPDATE 및 INSERT *optype* 값에만 사용 됩니다. 문자열은 원하는 문자나 UNICODE 데이터 형식으로 지정할 수 있습니다.  
   
 > [!NOTE]  

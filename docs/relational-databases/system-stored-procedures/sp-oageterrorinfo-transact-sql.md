@@ -18,10 +18,10 @@ ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68107909"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo(Transact-SQL)
@@ -72,14 +72,13 @@ sp_OAGetErrorInfo [ objecttoken ]
 |열 이름|데이터 형식|Description|  
 |------------------|---------------|-----------------|  
 |**오류**|**binary (4)**|오류 번호의 이진 표시입니다.|  
-|**원본**|**nvarchar (nn)**|오류의 원본입니다.|  
+|**소스**|**nvarchar (nn)**|오류의 원본입니다.|  
 |**설명**|**nvarchar (nn)**|오류 설명입니다.|  
 |**Helpfile**|**nvarchar (nn)**|원본에 대한 도움말 파일입니다.|  
 |**HelpID**|**int**|도움말 원본 파일에 있는 도움말 컨텍스트 ID입니다.|  
   
 ## <a name="remarks"></a>설명  
- 
-  **sp_OAGetErrorInfo**를 제외한 각 OLE Automation 저장 프로시저 호출은 오류 정보를 다시 설정하므로 **sp_OAGetErrorInfo**는 가장 최근 OLE Automation 저장 프로시저 호출에 대한 오류 정보만을 얻습니다. **Sp_OAGetErrorInfo** 는 오류 정보를 다시 설정 하지 않으므로 동일한 오류 정보를 얻기 위해 여러 번 호출 될 수 있습니다.  
+ **sp_OAGetErrorInfo**를 제외한 각 OLE Automation 저장 프로시저 호출은 오류 정보를 다시 설정하므로 **sp_OAGetErrorInfo**는 가장 최근 OLE Automation 저장 프로시저 호출에 대한 오류 정보만을 얻습니다. **Sp_OAGetErrorInfo** 는 오류 정보를 다시 설정 하지 않으므로 동일한 오류 정보를 얻기 위해 여러 번 호출 될 수 있습니다.  
   
  다음은 OLE Automation 오류 및 일반적 원인을 나열한 표입니다.  
   

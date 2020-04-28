@@ -22,10 +22,10 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124510"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
@@ -34,8 +34,7 @@ ms.locfileid: "68124510"
   VarDecimal 스토리지 형식이 테이블에 설정되어 있는 경우 평균 행 크기의 감소를 추정합니다. 이 숫자를 사용하여 테이블 크기의 전체 감소를 추정합니다. 통계 샘플링을 사용하여 평균 행 크기의 감소를 계산하므로 이 값은 하나의 추정값으로만 간주해야 합니다. 드물긴 하지만 VarDecimal 스토리지 형식을 설정한 후 행 크기가 증가할 수도 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 ROW 및 PAGE 압축을 사용하십시오. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 테이블 및 인덱스의 크기에 대 한 압축 효과는 [sp_estimate_data_compression_savings &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)를 참조 하세요.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 ROW 및 PAGE 압축을 사용하십시오. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 테이블 및 인덱스의 크기에 대 한 압축 효과는 [sp_estimate_data_compression_savings &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)를 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,6 +82,6 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_db_vardecimal_storage_format &#40;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)   
- [Transact-sql&#41;sp_tableoption &#40;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
+ [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
   
   

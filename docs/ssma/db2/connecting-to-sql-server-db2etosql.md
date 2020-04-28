@@ -10,10 +10,10 @@ ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7ab4c1f691820fb19dde7a3e3166abc2ff065b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126644"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>SQL Server에 연결 (DB2eToSQL)
@@ -80,11 +80,11 @@ DB2 데이터베이스 개체를 구문으로 [!INCLUDE[ssNoVersion](../../inclu
   
 ||||||  
 |-|-|-|-|-|  
-|**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL DB|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|yes|yes|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||yes|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||yes||  
-|Azure SQL DB||||yes|  
+|**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|Azure SQL DB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||예||  
+|Azure SQL DB||||예|  
   
 > [!IMPORTANT]  
 > 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만 연결 된의 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 따라 수행 되지 않습니다. 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 또는 Azure SQL DB의 경우.  

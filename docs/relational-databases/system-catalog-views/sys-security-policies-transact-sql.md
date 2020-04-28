@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68135308"
 ---
 # <a name="syssecurity_policies-transact-sql"></a>sys. security_policies (Transact-sql)
@@ -41,7 +41,7 @@ ms.locfileid: "68135308"
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
 |parent_object_id|**int**|정책이 속하는 개체의 ID입니다. 0이어야 합니다.|  
 |type|**vachar (2)**|**SP**여야 합니다.|  
-|type_desc|**nvarchar (60)**|**SECURITY_POLICY**.|  
+|type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|보안 정책이 만들어진 UTC 날짜입니다.|  
 |modify_date|**datetime**|보안 정책이 마지막으로 수정된 UTC 날짜입니다.|  
 |is_ms_shipped|**bit**|항상 false입니다.|  
@@ -56,9 +56,9 @@ ms.locfileid: "68135308"
 ## <a name="see-also"></a>참고 항목  
  [행 수준 보안](../../relational-databases/security/row-level-security.md)   
  [security_predicates &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)   
- [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
+ [Transact-sql&#41;&#40;보안 정책 만들기](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

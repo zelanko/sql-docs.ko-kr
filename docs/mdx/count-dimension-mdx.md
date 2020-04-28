@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b84c5a1902e80f8abe3828f4be1b5d570ec026ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104807"
 ---
 # <a name="count-dimension-mdx"></a>Count(차원)(MDX)
@@ -28,8 +28,7 @@ Dimensions.Count
 ```  
   
 ## <a name="remarks"></a>설명  
- 
-  `[Measures].[Measures]` 계층을 포함하여 큐브의 계층 수를 반환합니다.  
+ `[Measures].[Measures]` 계층을 포함하여 큐브의 계층 수를 반환합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Adventure Works 큐브의 계층 수를 반환합니다.  
@@ -45,6 +44,6 @@ FROM [Adventure Works]
  [MDX&#41; &#40;&#40;수&#41;](../mdx/count-tuple-mdx.md)   
  [MDX&#41; &#40;&#40;계층 수준 수&#41;](../mdx/count-hierarchy-levels-mdx.md)   
  [MDX&#41; &#40;&#40;집합 수&#41;](../mdx/count-set-mdx.md)   
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

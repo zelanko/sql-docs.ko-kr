@@ -16,10 +16,10 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68137621"
 ---
 # <a name="sp_helppeerrequests-transact-sql"></a>sp_helppeerrequests(Transact-SQL)
@@ -46,7 +46,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|요청을 식별합니다.|  
+|**id**|**int**|요청을 식별합니다.|  
 |**게시물**|**sysname**|상태 요청이 전송된 게시의 이름입니다.|  
 |**sent_date**|**datetime**|상태 요청이 전송된 날짜와 시간입니다.|  
 |**한**|**nvarchar(4000)**|개별 상태 요청을 식별하기 위해 사용할 수 있는 사용자 정의 정보입니다.|  

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 61ad8e163eddb4875aad362c3090875bd450bc3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68104590"
 ---
 # <a name="syskey_encryptions-transact-sql"></a>sys.key_encryptions(Transact-SQL)
@@ -36,16 +36,16 @@ ms.locfileid: "68104590"
 |열 이름|데이터 형식|Description|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|암호화된 키의 ID입니다.|  
-|**thumbprint**|**varbinary (32)**|키 암호화에 사용되는 인증서의 SHA-1 해시이거나 대칭 키의 GUID입니다.|  
+|**지문**|**varbinary(32)**|키 암호화에 사용되는 인증서의 SHA-1 해시이거나 대칭 키의 GUID입니다.|  
 |**crypt_type**|**char (4)**|암호화 유형입니다.<br /><br /> ESKS = 대칭 키를 사용한 암호화<br /><br /> ESKP, ESP2 또는 ESP3 = 암호로 암호화<br /><br /> EPUC = 인증서를 사용한 암호화<br /><br /> EPUA = 비대칭 키를 사용한 암호화<br /><br /> ESKM = 마스터 키를 사용한 암호화|  
-|**crypt_type_desc**|**nvarchar (60)**|암호화 유형의 설명입니다.<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(부터 [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]는 CSS에서 사용할 버전 번호를 포함 합니다.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 참고: Windows DPAPI는 서비스 마스터 키를 보호 하는 데 사용 됩니다.|  
+|**crypt_type_desc**|**nvarchar(60)**|암호화 유형의 설명입니다.<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(부터 [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]는 CSS에서 사용할 버전 번호를 포함 합니다.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 참고: Windows DPAPI는 서비스 마스터 키를 보호 하는 데 사용 됩니다.|  
 |**crypt_property**|**varbinary(max)**|부호 있는 비트 또는 암호화된 비트입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  

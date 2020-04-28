@@ -18,10 +18,10 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124384"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
@@ -49,11 +49,9 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
 `[ @pktab_name = ] 'pktab_name'`기본 키가 있는 테이블의 이름입니다. *pktab_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @pktab_schema = ] 'pktab_schema'`기본 키가 있는 스키마의 이름입니다. *pktab_schema*는 **sysname**이며 기본값은 NULL입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
+`[ @pktab_schema = ] 'pktab_schema'`기본 키가 있는 스키마의 이름입니다. *pktab_schema*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 소유자 이름이 포함됩니다.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*는 **sysname**이며 기본값은 NULL입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
+`[ @pktab_catalog = ] 'pktab_catalog'`기본 키가 있는 카탈로그의 이름입니다. *pktab_catalog*는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 여기에 데이터베이스 이름이 포함됩니다.  
   
 `[ @fktab_name = ] 'fktab_name'`외래 키가 있는 테이블의 이름입니다. *fktab_name*는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -78,14 +76,10 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**FKTABLE_NAME**|**sysname**|외래 키가 있는 테이블의 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**FKCOLUMN_NAME**|**sysname**|반환되는 TABLE_NAME의 각 열에 대한 외래 키 열의 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |**KEY_SEQ**|**smallint**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다. 이 필드는 항상 값을 반환합니다.|  
-|**UPDATE_RULE**|**smallint**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 열에 대해 0, 1 또는 2를 반환합니다.<br /><br /> 0=CASCADE는 외래 키를 변경합니다.<br /><br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br /><br /> 2=SET_NULL. 외래 키를 NULL로 설정합니다.|  
-|**DELETE_RULE**|**smallint**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 열에 대해 0, 1 또는 2를 반환합니다.<br /><br /> 0=CASCADE는 외래 키를 변경합니다.<br /><br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br /><br /> 2=SET_NULL. 외래 키를 NULL로 설정합니다.|  
-|**FK_NAME**|**sysname**|외래 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FOREIGN KEY 제약 조건 이름을 반환합니다.|  
-|**PK_NAME**|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 PRIMARY KEY 제약 조건 이름을 반환합니다.|  
+|**UPDATE_RULE**|**smallint**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 열에 대해 0, 1 또는 2를 반환합니다.<br /><br /> 0=CASCADE는 외래 키를 변경합니다.<br /><br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br /><br /> 2=SET_NULL. 외래 키를 NULL로 설정합니다.|  
+|**DELETE_RULE**|**smallint**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음과 같은 열에 대해 0, 1 또는 2를 반환합니다.<br /><br /> 0=CASCADE는 외래 키를 변경합니다.<br /><br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br /><br /> 2=SET_NULL. 외래 키를 NULL로 설정합니다.|  
+|**FK_NAME**|**sysname**|외래 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FOREIGN KEY 제약 조건 이름을 반환합니다.|  
+|**PK_NAME**|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 PRIMARY KEY 제약 조건 이름을 반환합니다.|  
 |**DEFERRABILITY**|**smallint**|제약 조건 검사를 연기할 수 있는지 여부를 나타냅니다.|  
   
  결과 집합에서 FK_NAME 및 PK_NAME 열은 항상 NULL을 반환합니다.  

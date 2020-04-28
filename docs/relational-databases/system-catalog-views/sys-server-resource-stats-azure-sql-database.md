@@ -20,16 +20,16 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133067"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터를 반환 합니다. 데이터는 5분 미만 간격으로 수집되고 집계됩니다. 15 초 보고 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기, IO 사용률 및 관리 되는 인스턴스 SKU가 포함 됩니다. 기록 데이터는 약 14일 동안 보존됩니다.
+Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터를 반환 합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 15 초 보고 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기, IO 사용률 및 관리 되는 인스턴스 SKU가 포함 됩니다. 기록 데이터는 약 14일 동안 보존됩니다.
 
 **Server_resource_stats** 뷰는 데이터베이스가 연결 된 Azure SQL 관리 되는 인스턴스의 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.
  
@@ -40,9 +40,9 @@ Azure SQL Managed Instance에 대 한 CPU 사용량, IO 및 저장소 데이터�
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |end_time|**datetime**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|
-|resource_type|Nvarchar (128)|메트릭이 제공 되는 리소스의 유형입니다.|
+|resource_type|Nvarchar(128)|메트릭이 제공 되는 리소스의 유형입니다.|
 |resource_name|nvarchar(128)|리소스의 이름입니다.|
-|sku|nvarchar(128)|인스턴스의 서비스 계층을 Managed Instance 합니다. 가능한 값은 다음과 같습니다. <br><ul><li>범용</li></ul><ul><li>중요 비즈니스</li></ul>|
+|sku|nvarchar(128)|인스턴스의 서비스 계층을 Managed Instance 합니다. 가능한 값은 다음과 같습니다. <br><ul><li>범용</li></ul><ul><li>중요 비즈니스용</li></ul>|
 |hardware_generation|nvarchar(128)|하드웨어 생성 식별자 (예: Gen 4 또는 Gen 5)|
 |virtual_core_count|int|인스턴스당 가상 코어 수를 나타냅니다 (공개 미리 보기에서 8, 16 또는 24).|
 |avg_cpu_percent|decimal (5, 2)|인스턴스가 사용 하는 Managed Instance 서비스 계층 한도의 백분율로 나타낸 평균 계산 사용률입니다. 인스턴스의 모든 데이터베이스에 대 한 모든 리소스 풀의 CPU 시간 합계를 계산 하 고 지정 된 간격으로 해당 계층의 사용 가능한 CPU 시간으로 나눈 값을 계산 합니다.|

@@ -18,10 +18,10 @@ ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127428"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68127428"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
-|**xact_seqno**|**varbinary (16)**|트랜잭션 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|트랜잭션 시퀀스 번호입니다.|  
 |**type**|**int**|명령 유형입니다.|  
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**originator_id**|**int**|원게시자의 ID입니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "68127428"
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
 |**명령**|**varbinary (1024)**|명령 값입니다.|  
 |**hashkey**|**int**|내부적으로만 사용됩니다.|  
-|**originator_lsn**|**varbinary (16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
+|**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

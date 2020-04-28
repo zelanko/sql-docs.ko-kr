@@ -20,10 +20,10 @@ ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68109566"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
@@ -34,10 +34,10 @@ ms.locfileid: "68109566"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|구성 값에 대한 고유한 ID입니다.|  
-|**name**|**nvarchar (35)**|구성 옵션의 이름입니다.|  
-|**기본값**|**sql_variant**|이 옵션에 구성된 값입니다.|  
+|**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
+|**value**|**sql_variant**|이 옵션에 구성된 값입니다.|  
 |**최대**|**sql_variant**|구성 옵션의 최소값입니다.|  
-|**최대화**|**sql_variant**|구성 옵션의 최대값입니다.|  
+|**maximum**|**sql_variant**|구성 옵션의 최대값입니다.|  
 |**value_in_use**|**sql_variant**|이 옵션에 대해 현재 유효한 값을 실행하고 있습니다.|  
 |**한**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
 |**is_dynamic**|**bit**|1 = RECONFIGURE 문이 실행될 때 효력을 갖는 변수입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68109566"
 >  데이터베이스 수준 구성 옵션은 [ALTER DATABASE 범위 구성 &#40;transact-sql&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)를 참조 하세요. 소프트 NUMA를 구성 하려면 [소프트 numa &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)를 참조 하세요.  
   
 ## <a name="permissions"></a>사용 권한  
- **public** 역할의 멤버 자격이 필요합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+ **public** 역할의 멤버 자격이 필요합니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;서버 차원의 구성 카탈로그 뷰](../../relational-databases/system-catalog-views/server-wide-configuration-catalog-views-transact-sql.md)   

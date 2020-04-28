@@ -20,10 +20,10 @@ ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132882"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>sys.service_contract_usages(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68132882"
 
   이 카탈로그 뷰에는 각 서비스-계약 쌍에 대한 행이 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|계약을 사용하는 서비스의 식별자입니다. NULL을 허용하지 않습니다.|  
 |**service_contract_id**|**int**|서비스에서 사용하는 계약의 식별자입니다. NULL을 허용하지 않습니다.|  

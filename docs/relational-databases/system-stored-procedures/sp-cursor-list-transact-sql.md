@@ -18,10 +18,10 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108585"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list(Transact-SQL)
@@ -81,8 +81,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ## <a name="remarks"></a>설명  
  sp_cursor_list는 연결에 의해 열린 현재 서버 커서의 목록을 작성하고 커서의 스크롤 가능 여부 및 업데이트 가능성 등과 같은 각 커서의 전역 특성을 설명합니다. sp_cursor_list에 의해 나열되는 커서는 다음과 같습니다.  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서  
   
 -   ODBC 응용 프로그램에 의해 열린 다음 SQLSetCursorName 호출을 통해 명명된 API 서버 커서  
   

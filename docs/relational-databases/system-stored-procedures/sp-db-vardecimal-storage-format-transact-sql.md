@@ -23,17 +23,16 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108219"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스의 현재 VarDecimal 스토리지 형식 상태를 반환하거나 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정합니다.  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 사용자 데이터베이스가 항상 사용하도록 설정되어 있습니다. 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정하는 작업은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서만 필요합니다.  
+  데이터베이스의 현재 VarDecimal 스토리지 형식 상태를 반환하거나 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정합니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 사용자 데이터베이스가 항상 사용하도록 설정되어 있습니다. 데이터베이스에 VarDecimal 스토리지 형식을 사용하도록 설정하는 작업은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서만 필요합니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스의 VarDecimal 스토리지 형식 상태를 변경하면 백업 및 복구, 데이터베이스 미러링, sp_attach_db, 로그 전달 및 복제에 영향을 줄 수 있습니다.  
@@ -52,8 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  스토리지 형식을 변경할 데이터베이스의 이름입니다. *database_name* 는 **sysname**이며 기본값은 없습니다. 데이터베이스 이름을 생략하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 모든 데이터베이스의 VarDecimal 스토리지 형식 상태가 반환됩니다.  
   
  [ @vardecimal_storage_format= ] ' | '의 {' OFF '}  
- VarDecimal 스토리지 형식을 사용하도록 설정할지 여부를 지정합니다. 
-  @vardecimal_storage_format은 ON 또는 OFF가 될 수 있습니다. 매개 변수는 **varchar (3)** 이며 기본값은 없습니다. 데이터베이스 이름을 제공하지만 @vardecimal_storage_format을 생략하면 지정한 데이터베이스의 현재 설정이 반환됩니다. 이 인수는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에는 영향을 주지 않습니다.  
+ VarDecimal 스토리지 형식을 사용하도록 설정할지 여부를 지정합니다. @vardecimal_storage_format은 ON 또는 OFF가 될 수 있습니다. 매개 변수는 **varchar (3)** 이며 기본값은 없습니다. 데이터베이스 이름을 제공하지만 @vardecimal_storage_format을 생략하면 지정한 데이터베이스의 현재 설정이 반환됩니다. 이 인수는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에는 영향을 주지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,8 +70,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 -   데이터베이스를 미러링에 사용할 수 있는 경우  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 VarDecimal 스토리지 형식을 지원하지 않는 경우  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 VarDecimal 스토리지 형식을 지원하지 않는 경우  
   
  VarDecimal 스토리지 형식 상태를 OFF로 변경하려면 데이터베이스를 단순 복구 모드로 설정해야 합니다. 데이터베이스가 단순 복구 모드로 설정되면 로그 체인이 끊어집니다. VarDecimal 스토리지 형식 상태를 OFF로 설정한 후 전체 데이터베이스 백업을 수행합니다.  
   

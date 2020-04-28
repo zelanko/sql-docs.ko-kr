@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026845"
 ---
 # <a name="sysdm_db_xtp_hash_index_stats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats(Transact-SQL)
@@ -112,7 +112,7 @@ ms.locfileid: "68026845"
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-내부 테이블의 인덱스 BUCKET_COUNT를 변경할 수 없으므로이 쿼리의 출력은 정보 제공 용 으로만 고려 되어야 합니다. 추가적인 조치가 필요하지 않습니다.  
+내부 테이블의 인덱스 BUCKET_COUNT를 변경할 수 없으므로이 쿼리의 출력은 정보 제공 용 으로만 고려 되어야 합니다. 사용자가 조치할 필요는 없습니다.  
 
 내부 테이블에 해시 인덱스를 사용 하는 기능을 사용 하지 않는 한이 쿼리는 행을 반환 하지 않습니다. 다음 메모리 최적화 테이블에는 columnstore 인덱스가 포함 되어 있습니다. 이 테이블을 만든 후에는 내부 테이블에 대 한 해시 인덱스를 볼 수 있습니다.
 
@@ -125,6 +125,6 @@ ms.locfileid: "68026845"
 ```
 
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

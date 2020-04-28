@@ -16,10 +16,10 @@ ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da2eec998176dfd46ab261fa405ecaa4b6e90044
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126437"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>p_helpmergearticlecolumn(Transact-SQL)
@@ -44,11 +44,11 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|열을 식별합니다.|  
 |**column_name**|**sysname**|테이블 또는 뷰의 열 이름입니다.|  
-|**게시할지**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 은 열이 게시 되 고 있음을 지정 합니다.<br /><br /> **0** 은 게시 되지 않도록 지정 합니다.|  
+|**published**|**bit**|열 이름이 게시되는지 여부를 나타냅니다.<br /><br /> **1** 은 열이 게시 되 고 있음을 지정 합니다.<br /><br /> **0** 은 게시 되지 않도록 지정 합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

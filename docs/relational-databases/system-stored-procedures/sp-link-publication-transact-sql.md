@@ -16,10 +16,10 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139903"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication(Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68139903"
   즉시 업데이트 구독의 동기화 트리거가 게시자에 연결할 때 사용하는 구성 및 보안 정보를 설정합니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
 > [!IMPORTANT]
->  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+>  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
 > 
 > [!IMPORTANT]
 >  특정 상황에서는 구독자가 서비스 팩 1 이상을 실행 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 하 고 게시자가 이전 버전을 실행 하는 경우이 저장 프로시저가 실패할 수 있습니다. 이 시나리오에서 저장 프로시저가 실패하면 게시자를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 1 이상으로 업그레이드합니다.  
@@ -63,7 +63,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|구독자에서 변경하는 사용자의 보안 컨텍스트([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 또는 Windows 인증)를 사용합니다.<br /><br /> 참고:이 계정은 권한이 있는 게시자에도 있어야 합니다. Windows 인증을 사용할 때는 보안 계정 위임이 지원되어야 합니다.|  
 |**2**|**Sp_link_publication**를 사용 하 여 만든 기존의 사용자 정의 연결 된 서버 로그인을 사용 합니다.|  
   
-`[ @login = ] 'login'`로그인입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
+`[ @login = ] 'login'`로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
   
 `[ @password = ] 'password'`암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 **0**인 경우이 매개 변수를 지정 해야 합니다.  
   

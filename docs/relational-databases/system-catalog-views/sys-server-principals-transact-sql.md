@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133094"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals(Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68133094"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|보안 주체의 이름입니다. 서버 내에서 고유합니다.|  
 |**principal_id**|**int**|보안 주체의 ID 번호입니다. 서버 내에서 고유합니다.|  
-|**s**|**varbinary (85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
+|**sid**|**varbinary(85)**|보안 주체의 SID(보안 ID)입니다. Windows 보안 주체의 경우 Windows SID와 일치합니다.|  
 |**type**|**char (1)**|보안 주체 유형입니다.<br /><br /> S = SQL 로그인<br /><br /> U = Windows 로그인<br /><br /> G = Windows 그룹<br /><br /> R = 서버 역할<br /><br /> C = 인증서에 매핑된 로그인<br /><br /> K = 비대칭 키에 매핑된 로그인|  
-|**type_desc**|**nvarchar (60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = 로그인을 사용할 수 없습니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
 |**modify_date**|**datetime**|보안 주체 정의가 마지막으로 수정된 시간입니다.|  
@@ -69,7 +69,7 @@ JOIN sys.server_permissions AS pe
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [보안 주체&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
   

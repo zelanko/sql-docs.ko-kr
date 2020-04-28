@@ -20,23 +20,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133783"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 의미 체계 모델이 등록된 언어마다 하나의 행을 반환합니다. 언어 모델을 등록하면 의미 체계 인덱싱에 해당 언어를 사용하도록 설정됩니다.  
   
  이 카탈로그 뷰는 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)와 비슷합니다.  
     
 ||||  
 |-|-|-|  
-|**열 이름**|**형식**|**설명**|  
+|**열 이름**|**Type**|**설명**|  
 |lcid|int|언어의 Microsoft Windows LCID(로캘 ID)입니다.|  
 |name|sysname|Sys.syslanguages의 별칭 값으로, **lcid**값에 해당 하는 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 하거나 숫자 lcid의 문자열 표현입니다.|  
   

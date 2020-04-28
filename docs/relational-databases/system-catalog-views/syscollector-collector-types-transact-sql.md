@@ -19,10 +19,10 @@ ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124920"
 ---
 # <a name="syscollector_collector_types-transact-sql"></a>syscollector_collector_types(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124920"
 
   컬렉션 항목의 수집기 유형에 대한 정보를 제공합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|컬렉션 형식의 GUID입니다. Null을 허용하지 않습니다.|  
 |**name**|**sysname**|컬렉션 형식의 이름입니다. Null을 허용하지 않습니다.|  
@@ -51,14 +51,14 @@ ms.locfileid: "68124920"
   
 |업데이트된 내용|  
 |---------------------|  
-|Collector_type_uid **collection_type_uid** 열 이름을 업데이트 **** 했습니다.|  
+|Collector_type_uid **collection_type_uid** 열 이름을 업데이트 **collector_type_uid**했습니다.|  
 |값이 null을 허용 한다는 것을 나타내기 위해 **parameter_schema** 열에 대 한 설명을 수정 했습니다.|  
 |**Parameter_formatter** 열을 추가 했습니다.|  
 |**Collection_package_path** 열에 대 한 데이터 형식을 수정 하 고 값이 null을 허용 한다는 것을 나타내기 위해 설명을 업데이트 했습니다.|  
 |**Upload_package_path** 열에 대 한 데이터 형식을 수정 하 고 값이 null을 허용 한다는 것을 나타내기 위해 설명을 업데이트 했습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   

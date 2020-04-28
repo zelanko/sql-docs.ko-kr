@@ -18,10 +18,10 @@ ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108479"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
@@ -41,7 +41,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ```  
   
 ## <a name="arguments"></a>인수  
- *위치*  
+ *cursor*  
  SQL Server에서 생성하는 커서 식별자입니다. *커서* 는 sp_cursorfetch와 같이 커서와 관련 된 모든 후속 프로시저에 제공 해야 하는 *핸들* 값입니다. *커서* 는 **int** 반환 값을 포함 하는 필수 매개 변수입니다.  
   
  *커서* 를 사용 하면 단일 데이터베이스 연결에서 여러 커서를 활성화할 수 있습니다.  
@@ -145,9 +145,7 @@ sp_cursoropen cursor OUTPUT, stmt
  빠른 정방향 커서가 자동으로 닫혔습니다.  
   
 > [!NOTE]  
->  Sp_cursoropen 프로시저가 성공적으로 실행 되 면 TDS 열 형식 정보를 포함 하는 RPC 반환 매개 변수 및 결과 집합 (0xa0 & 0xa0 메시지)이 전송 됩니다. 프로시저가 실패하면 하나 이상의 RPC 오류 메시지가 전송됩니다. 두 경우 모두 행 데이터가 반환 되지 않으며 *done* 메시지 수가 0이 됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이전 버전을 사용 중인 경우 0xa0, 0xa1(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 버전을 사용 중인 경우에는 0x81(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다.  
+>  Sp_cursoropen 프로시저가 성공적으로 실행 되 면 TDS 열 형식 정보를 포함 하는 RPC 반환 매개 변수 및 결과 집합 (0xa0 & 0xa0 메시지)이 전송 됩니다. 프로시저가 실패하면 하나 이상의 RPC 오류 메시지가 전송됩니다. 두 경우 모두 행 데이터가 반환 되지 않으며 *done* 메시지 수가 0이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이전 버전을 사용 중인 경우 0xa0, 0xa1(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 버전을 사용 중인 경우에는 0x81(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
   

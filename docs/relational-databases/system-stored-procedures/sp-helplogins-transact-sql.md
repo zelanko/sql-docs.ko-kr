@@ -18,10 +18,10 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122447"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
@@ -39,7 +39,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @LoginNamePattern = ] 'login'`로그인 이름입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 있어야 합니다. *로그인* 을 지정 하지 않으면 모든 로그인에 대 한 정보가 반환 됩니다.  
+`[ @LoginNamePattern = ] 'login'`로그인 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 지정 된 경우 *로그인* 이 있어야 합니다. *로그인* 을 지정 하지 않으면 모든 로그인에 대 한 정보가 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -47,10 +47,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서 볼 수 있듯이 첫 번째 보고서에는 지정한 각 로그인에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
-|**SID**|**varbinary (85)**|로그인 SID(보안 ID)입니다.|  
+|**S**|**varbinary(85)**|로그인 SID(보안 ID)입니다.|  
 |**DefDBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|**LoginName**에서 사용 되는 기본 언어입니다.|  
 |**Auser**|**char (5)**|예 = **LoginName** 이 데이터베이스에 연결 된 사용자 이름을 갖습니다.<br /><br /> 아니요 = **LoginName** 에 연결 된 사용자 이름이 없습니다.|  
@@ -58,7 +58,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  두 번째 보고서에는 다음 표와 같이 각 로그인에 매핑된 사용자와 해당 로그인의 역할 멤버 자격에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**DBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

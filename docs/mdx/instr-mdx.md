@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68105297"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>인수  
- *시작*  
+ *start*  
  (선택 사항) 각 검색의 시작 위치를 설정하는 숫자 식입니다. 이 값을 생략하면 첫 번째 문자 위치에서 검색이 시작됩니다. start가 null인 경우에는 함수 반환 값이 정의되지 않습니다.  
   
  *searched_string*  
@@ -36,7 +36,7 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  검색할 문자열 식입니다.  
   
- *과*  
+ *비교*  
  (선택 사항) 정수 값입니다. 이 인수는 항상 무시되며, 다른 언어의 다른 **Instr** 함수와의 호환성을 위해 정의 됩니다.  
   
 ## <a name="return-value"></a>Return Value  

@@ -20,10 +20,10 @@ ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133008"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers(Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68133008"
 |**name**|**sysname**|트리거의 이름입니다.|  
 |**object_id**|**int**|개체의 ID입니다.|  
 |**parent_class**|**tinyint**|부모 클래스입니다. 항상 다음과 같습니다.<br /><br /> 100 = 서버|  
-|**parent_class_desc**|**nvarchar (60)**|부모 클래스에 대한 설명입니다. 항상 다음과 같습니다.<br /><br /> SERVER|  
+|**parent_class_desc**|**nvarchar(60)**|부모 클래스에 대한 설명입니다. 항상 다음과 같습니다.<br /><br /> SERVER|  
 |**parent_id**|**int**|SERVER 상의 트리거에 대해 항상 0입니다.|  
-|**type**|**char (2)**|개체 유형:<br /><br /> TA = 어셈블리(CLR) 트리거<br /><br /> TR = SQL 트리거|  
-|**type_desc**|**nvarchar (60)**|개체 유형의 클래스에 대한 설명입니다.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**type**|**char(2)**|개체 유형:<br /><br /> TA = 어셈블리(CLR) 트리거<br /><br /> TR = SQL 트리거|  
+|**type_desc**|**nvarchar(60)**|개체 유형의 클래스에 대한 설명입니다.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|트리거를 만든 날짜입니다.|  
 |**modify_date**|**datetime**|ALTER 문을 사용하여 마지막으로 트리거를 수정한 날짜입니다.|  
 |**is_ms_shipped**|**bit**|내부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용자 대신 만든 트리거입니다.|  

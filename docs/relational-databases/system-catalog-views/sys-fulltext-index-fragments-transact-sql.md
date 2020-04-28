@@ -24,10 +24,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68133816"
 ---
 # <a name="sysfulltext_index_fragments-transact-sql"></a>sys.fulltext_index_fragments(Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68133816"
 |table_id|**int**|전체 텍스트 인덱스 조각을 포함하는 테이블의 개체 ID입니다.|  
 |fragment_object_id|**int**|조각과 연결된 내부 테이블의 개체 ID입니다.|  
 |fragment_id|**int**|전체 텍스트 인덱스 조각의 논리적 ID입니다. 이는 이 테이블의 모든 조각에서 고유합니다.|  
-|timestamp|**없으면**|조각 생성과 연결된 타임스탬프입니다. 최신 세그먼트의 타임스탬프가 이전 세그먼트의 타임스탬프보다 큽니다.|  
+|timestamp|**timestamp**|조각 생성과 연결된 타임스탬프입니다. 최신 세그먼트의 타임스탬프가 이전 세그먼트의 타임스탬프보다 큽니다.|  
 |data_size|**int**|조각의 논리적 크기(바이트)입니다.|  
 |row_count|**int**|조각의 개별 행 수입니다.|  
 |상태|**int**|조각의 상태로, 다음 중 하나입니다.<br /><br /> 0 = 새로 만들었지만 아직 사용하지 않음<br /><br /> 1 = 전체 텍스트 인덱스 채우기 또는 병합 동안 삽입에 사용됨<br /><br /> 4 = 닫힘 쿼리를 준비함<br /><br /> 6 = 병합 입력에 사용되며 쿼리를 준비함<br /><br /> 8 = 삭제용으로 표시되며 쿼리 및 병합 원본에 사용되지 않음<br /><br /> 상태 4 또는 6은 조각이 논리적 전체 텍스트 인덱스의 일부 이며 쿼리할 수 있음을 의미 합니다. 즉, *쿼리* 가능한 조각입니다.|  

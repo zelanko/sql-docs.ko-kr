@@ -19,10 +19,10 @@ ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138408"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68138408"
 |**creation_time**|**datetime**|**AppDomain** 이 생성 된 시간입니다. **Appdomain** 은 성능 향상을 위해 캐시 되 고 다시 사용 되기 때문에 **creation_time** 는 코드를 실행 하는 데 반드시 필요한 것은 아닙니다.|  
 |**db_id**|**int**|이 **AppDomain** 이 생성 된 데이터베이스의 ID입니다. 서로 다른 두 데이터베이스에 저장 된 코드는 하나의 **AppDomain**을 공유할 수 없습니다.|  
 |**user_id**|**int**|이 **AppDomain**에서 개체를 실행할 수 있는 사용자의 ID입니다.|  
-|**상태일**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
+|**state**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
 |**strong_refcount**|**int**|이 **AppDomain**에 대 한 강력한 참조 수입니다. 이는이 **AppDomain**을 사용 하는 현재 실행 중인 일괄 처리의 수를 반영 합니다. 이 뷰를 실행 하면 **강력한 refcount**가 생성 됩니다. 가 현재 실행 중인 코드가 없는 경우에도 **strong_refcount** 값은 1입니다.|  
 |**weak_refcount**|**int**|이 **AppDomain**에 대 한 약한 참조 수입니다. 이는 **AppDomain** 내에서 캐시 되는 개체 수를 나타냅니다. 관리 되는 데이터베이스 개체를 실행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우는 나중에 다시 사용할 수 있도록 **AppDomain** 내부에 캐시 합니다. 이렇게 하면 성능이 향상됩니다.|  
-|**절감**|**int**|**AppDomain**의 비용입니다. 비용이 높을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높아집니다. 비용은 일반적으로이 **AppDomain**을 다시 만드는 데 필요한 메모리 양에 따라 달라 집니다.|  
-|**기본값**|**int**|**AppDomain**의 값입니다. 값이 낮을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높습니다. 값은 일반적으로이 **AppDomain**을 사용 하는 연결 또는 일괄 처리의 수에 따라 달라 집니다.|  
+|**cost**|**int**|**AppDomain**의 비용입니다. 비용이 높을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높아집니다. 비용은 일반적으로이 **AppDomain**을 다시 만드는 데 필요한 메모리 양에 따라 달라 집니다.|  
+|**value**|**int**|**AppDomain**의 값입니다. 값이 낮을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높습니다. 값은 일반적으로이 **AppDomain**을 사용 하는 연결 또는 일괄 처리의 수에 따라 달라 집니다.|  
 |**total_processor_time_ms**|**bigint**|프로세스가 시작된 후 현재 애플리케이션 도메인에서 실행되는 동안 모든 스레드에서 사용되는 총 프로세서 시간(밀리초)입니다. 이는 **MonitoringTotalProcessorTime**에 해당 합니다.|  
 |**total_allocated_memory_kb**|**bigint**|애플리케이션 도메인이 만들어진 후 수집된 메모리를 포함하여 해당 도메인에서 할당한 모든 메모리의 총 크기(KB)입니다. 이는 **MonitoringTotalAllocatedMemorySize**에 해당 합니다.|  
 |**survived_memory_kb**|**bigint**|마지막 전체 차단 수집 후에도 유지되고 현재 애플리케이션 도메인에서 참조하는 것으로 알려진 KB 수입니다. 이는 **MonitoringSurvivedMemorySize**에 해당 합니다.|  

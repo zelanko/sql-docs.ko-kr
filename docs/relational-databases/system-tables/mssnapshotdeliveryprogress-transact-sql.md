@@ -18,10 +18,10 @@ ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68139809"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68139809"
 
   **MSsnapshotdeliveryprogress** 테이블은 스냅숏이 적용 될 때 구독자에 성공적으로 배달 된 파일을 추적 하는 데 사용 됩니다. 이 데이터는 병합 에이전트가 세션 중에 파일을 모두 배달하지 못한 경우 파일 배달을 다시 시작하는 데 사용되어 다음에 병합 에이전트가 실행될 때 같은 파일을 다시 배달하지 않도록 합니다. 이 테이블은 구독 데이터베이스의 구독자에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|파일을 성공적으로 배달한 스냅샷 폴더의 경로를 식별합니다. 매개 변수가 있는 필터를 사용 하는 게시의 경우 문자열 **dynsnap** 이 값에 추가 됩니다.|  
 |**progress_token_hash**|**int**|지정 된 *progress_token* 값에 대 한 조회 효율성을 향상 시키는 데 사용 되는 *progress_token* 값을 기준으로 생성 된 해시 값입니다.|  

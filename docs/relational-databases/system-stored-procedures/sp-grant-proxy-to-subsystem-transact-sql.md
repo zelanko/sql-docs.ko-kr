@@ -18,10 +18,10 @@ ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68123818"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
@@ -47,31 +47,31 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`액세스 권한을 부여할 하위 시스템의 id 번호입니다. *Subsystem_id* 은 **int**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]ActiveX 스크립트<br /><br /> ** \* 중요 \* \* ** [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ActiveX 스크립팅 하위 시스템이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
-|**3**|운영 체제 (**CmdExec**)|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 스크립트<br /><br /> ** \* 중요 \* \* ** [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서는 에이전트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ActiveX 스크립팅 하위 시스템이 제거 됩니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
+|**3**|운영 체제(**CmdExec**)|  
 |**4**|Replication Snapshot Agent|  
 |**5**|복제 로그 판독기 에이전트|  
 |**6**|복제 배포 에이전트|  
-|**일**|Replication Merge Agent|  
+|**7**|Replication Merge Agent|  
 |**20cm(8**|복제 큐 판독기 에이전트|  
-|**되었는지**|Analysis Services 쿼리|  
-|**5-10**|Analysis Services 명령|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]패키지 실행|  
+|**9**|Analysis Services 쿼리|  
+|**10**|Analysis Services 명령|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
 | &nbsp; | &nbsp; |
   
 `[ @subsystem_name = ] 'subsystem_name'`액세스 권한을 부여할 하위 시스템의 이름입니다. **Subsystem_name** 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 스크립트|  
-|**CmdExec**|운영 체제 (**CmdExec**)|  
-|**스냅숏에**|Replication Snapshot Agent|  
-|**판독기**|복제 로그 판독기 에이전트|  
+|**CmdExec**|운영 체제(**CmdExec**)|  
+|**스냅샷**|Replication Snapshot Agent|  
+|**LogReader**|복제 로그 판독기 에이전트|  
 |**배포**|복제 배포 에이전트|  
-|**병합**|Replication Merge Agent|  
+|**결합**|Replication Merge Agent|  
 |**QueueReader**|복제 큐 판독기 에이전트|  
 |**ANALYSISQUERY**|Analysis Services 쿼리|  
 |**ANALYSISCOMMAND**|Analysis Services 명령|  

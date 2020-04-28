@@ -18,10 +18,10 @@ ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124678"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
@@ -58,7 +58,7 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**proxy_name**|**sysname**|프록시 이름입니다.|  
 |**name**|**sysname**|연결할 보안 주체의 이름입니다.|  
-|**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정 시스템 역할<br /><br /> **2** = **msdb** 의 데이터베이스 역할|  
+|**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정 시스템 역할<br /><br /> **2** = **msdb** 의 데이터베이스 역할|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>설명  

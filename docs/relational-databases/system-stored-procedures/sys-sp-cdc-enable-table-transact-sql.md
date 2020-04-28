@@ -22,10 +22,10 @@ ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106464"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68106464"
 
   현재 데이터베이스에서 지정된 원본 테이블에 대해 변경 데이터 캡처를 활성화합니다. 테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하면 해당 테이블에 적용된 각 DML(데이터 조작 언어) 작업의 레코드가 트랜잭션 로그에 기록됩니다. 변경 데이터 캡처 프로세스는 로그에서 이 정보를 검색하고 일련의 함수를 사용하여 액세스하는 변경 테이블에 이 정보를 기록합니다.  
   
- 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+ 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ sys.sp_cdc_enable_table
   
  원본 테이블은 최대 두 개의 캡처 인스턴스를 가질 수 있습니다. 자세한 내용은 [sp_cdc_help_change_data_capture &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)을 참조 하십시오.  
   
-`[ @supports_net_changes = ] supports_net_changes`이 캡처 인스턴스에서 순 변경 쿼리에 대 한 지원을 사용 하도록 설정할지 여부를 나타냅니다. 테이블에 **** 기본 키가 있거나 매개 변수를 @index_name 사용 하 여 식별 된 고유 인덱스가 테이블에 있는 경우 *supports_net_changes* 은 bit 이며 기본값은 1입니다. 그렇지 않으면 이 매개 변수의 기본값은 0입니다.  
+`[ @supports_net_changes = ] supports_net_changes`이 캡처 인스턴스에서 순 변경 쿼리에 대 한 지원을 사용 하도록 설정할지 여부를 나타냅니다. 테이블에 **bit** 기본 키가 있거나 매개 변수를 @index_name 사용 하 여 식별 된 고유 인덱스가 테이블에 있는 경우 *supports_net_changes* 은 bit 이며 기본값은 1입니다. 그렇지 않으면 이 매개 변수의 기본값은 0입니다.  
   
  0인 경우 모든 변경을 쿼리하는 지원 함수만 생성됩니다.  
   
@@ -138,8 +138,7 @@ GO
 ```  
   
 ### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>B. 선택적 추가 매개 변수를 지정하여 변경 데이터 캡처 활성화  
- 다음 예에서는 `HumanResources.Department` 테이블에 대해 변경 데이터 캡처를 활성화합니다. 
-  `@allow_partition_switch`를 제외한 모든 매개 변수가 지정됩니다.  
+ 다음 예에서는 `HumanResources.Department` 테이블에 대해 변경 데이터 캡처를 활성화합니다. `@allow_partition_switch`를 제외한 모든 매개 변수가 지정됩니다.  
   
 ```  
 USE AdventureWorks2012;  

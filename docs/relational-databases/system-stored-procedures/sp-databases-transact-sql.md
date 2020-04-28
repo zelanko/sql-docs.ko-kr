@@ -18,16 +18,15 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108331"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있거나 데이터베이스 게이트웨이를 통해 액세스할 수 있는 데이터베이스를 나열합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,10 +45,9 @@ sp_databases
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|데이터베이스 이름 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서이 열은 데이터베이스 이름을 **sys.** s a s. 카탈로그 뷰에 저장 된 것으로 나타냅니다.|  
+|**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서이 열은 데이터베이스 이름을 **sys.** s a s. 카탈로그 뷰에 저장 된 것으로 나타냅니다.|  
 |**DATABASE_SIZE**|**int**|데이터베이스 크기(KB)입니다.|  
-|**설명**|**varchar (254)**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
+|**설명**|**varchar (254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
  반환된 데이터베이스 이름은 현재 데이터베이스 컨텍스트를 변경하기 위해 USE 문에서 매개 변수로 사용할 수 있습니다.  

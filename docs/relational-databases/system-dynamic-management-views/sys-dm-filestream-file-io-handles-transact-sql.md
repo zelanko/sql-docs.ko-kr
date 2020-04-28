@@ -19,10 +19,10 @@ ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103305"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles(Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68103305"
 |**handle_id**|**int**|드라이버가 할당한 이 핸들의 고유한 ID를 표시합니다. Null을 허용하지 않습니다.|  
 |**creation_client_thread_id**|**varbinary(8)**|이 핸들을 만드는 데 사용된 REQ_PRE_CREATE I/O 요청의 필드를 표시합니다. Null을 허용합니다.|  
 |**creation_client_process_id**|**varbinary(8)**|이 핸들을 만드는 데 사용된 REQ_PRE_CREATE I/O 요청의 필드를 표시합니다. Null을 허용합니다.|  
-|**filestream_transaction_id**|**varbinary (128)**|지정된 핸들과 연결된 트랜잭션의 ID를 표시합니다. **Get_filestream_transaction_context** 함수에서 반환 하는 값입니다. 이 필드를 사용 하 여 **dm_filestream_file_io_requests** 뷰에 조인 합니다. Null을 허용합니다.|  
-|**access_type**|**nvarchar (60)**|Null을 허용하지 않습니다.|  
+|**filestream_transaction_id**|**varbinary(128)**|지정된 핸들과 연결된 트랜잭션의 ID를 표시합니다. **Get_filestream_transaction_context** 함수에서 반환 하는 값입니다. 이 필드를 사용 하 여 **dm_filestream_file_io_requests** 뷰에 조인 합니다. Null을 허용합니다.|  
+|**access_type**|**nvarchar(60)**|Null을 허용하지 않습니다.|  
 |**logical_path**|**nvarchar(256)**|이 핸들이 연 파일의 논리적 경로 이름을 표시합니다. 에서 반환 하는 것과 동일한 경로 이름입니다 **. ** **Varbinary**(**Max**) filestream의 PathName 메서드입니다. Null을 허용합니다.|  
 |**physical_path**|**nvarchar(256)**|파일의 실제 NTFS 경로 이름을 표시합니다. 에서 반환 하는 것과 동일한 경로 이름입니다 **. ** **Varbinary**(**max**) filestream의 실제 경로 이름 메서드 추적 플래그 5556에 의해 설정됩니다. Null을 허용합니다.|  
   

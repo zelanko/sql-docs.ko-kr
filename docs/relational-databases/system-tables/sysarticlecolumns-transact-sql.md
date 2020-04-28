@@ -18,10 +18,10 @@ ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68130524"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68130524"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클을 식별합니다.|  
-|**id**|**smallint**|아티클의 열을 식별합니다.|  
+|**colid**|**smallint**|아티클의 열을 식별합니다.|  
 |**is_udt**|**bit**|열이 UDT(사용자 정의 데이터 형식) 열인지 여부를 나타냅니다. 값 **1** 은 UDT 열을 나타냅니다.|  
 |**is_xml**|**bit**|열이 **xml** 열인지 여부를 나타냅니다. 값 **1** 은 xml 열을 나타냅니다.|  
 |**is_max**|**bit**|열이 Large Value 데이터 형식 열, **varchar (max)**, **nvarchar (max)** 및 **varbinary (max)** 인지 여부를 나타냅니다. 값 **1** 은 많은 값 열을 나타냅니다.|  

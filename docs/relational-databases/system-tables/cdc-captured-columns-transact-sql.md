@@ -18,10 +18,10 @@ ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68119263"
 ---
 # <a name="cdccaptured_columns-transact-sql"></a>cdc.captured_columns(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68119263"
   
  **시스템 테이블을 직접 쿼리하지**않는 것이 좋습니다. 대신, [sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 저장 프로시저를 실행 합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|캡처된 열이 속해 있는 원본 테이블의 ID입니다.|  
 |**column_name**|**sysname**|캡처된 열의 이름입니다.|  

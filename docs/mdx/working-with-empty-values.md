@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68125854"
 ---
 # <a name="working-with-empty-values"></a>빈 값 작업
@@ -123,7 +123,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |AND|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**EMPTY**|FALSE|EMPTY|FALSE|  
+|**비우려면**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  이 테이블에서는 두 개의 부울 피연산자에 OR 연산자를 적용한 결과를 보여 줍니다.  
@@ -131,7 +131,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |또는|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**EMPTY**|TRUE|TRUE|  
+|**비우려면**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  이 테이블에서는 NOT 연산자가 부정하거나 반대로 바꾼 부울 연산자의 결과를 보여 줍니다.  

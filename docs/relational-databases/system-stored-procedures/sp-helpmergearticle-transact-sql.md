@@ -16,10 +16,10 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68122342"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle(Transact-SQL)
@@ -46,18 +46,18 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|아티클 식별자입니다.|  
+|**id**|**int**|아티클 식별자입니다.|  
 |**name**|**sysname**|아티클의 이름입니다.|  
 |**source_owner**|**sysname**|원본 개체의 소유자 이름입니다.|  
 |**source_object**|**sysname**|아티클을 추가할 출처가 되는 원본 개체의 이름입니다.|  
 |**sync_object_owner**|**sysname**|게시된 아티클을 정의하는 뷰의 소유자 이름입니다.|  
 |**sync_object**|**sysname**|파티션에 대한 초기 데이터를 설정하는 데 사용하는 사용자 지정 개체의 이름입니다.|  
 |**한**|**nvarchar(255)**|아티클에 대한 설명입니다.|  
-|**업무**|**tinyint**|아티클의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 비활성<br /><br /> **2** = 활성<br /><br /> **5** = DDL (데이터 정의 언어) 작업 보류 중<br /><br /> **6** = 새로 생성 된 스냅숏을 사용 하는 DDL 작업<br /><br /> 참고: 아티클이 다시 초기화 되 면 **5** 와 **6** 의 값이 **2**로 변경 됩니다.|  
+|**status**|**tinyint**|아티클의 상태이며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 비활성<br /><br /> **2** = 활성<br /><br /> **5** = DDL (데이터 정의 언어) 작업 보류 중<br /><br /> **6** = 새로 생성 된 스냅숏을 사용 하는 DDL 작업<br /><br /> 참고: 아티클이 다시 초기화 되 면 **5** 와 **6** 의 값이 **2**로 변경 됩니다.|  
 |**creation_script**|**nvarchar(255)**|구독 데이터베이스에서 아티클을 만드는 데 사용된 선택적 아티클 스키마 스크립트의 경로 및 이름입니다.|  
 |**conflict_table**|**nvarchar (270)**|삽입 또는 업데이트 충돌을 저장하고 있는 테이블의 이름입니다.|  
 |**article_resolver**|**nvarchar(255)**|아티클에 대한 사용자 지정 해결 프로그램입니다.|  
-|**subset_filterclause**|**nvarchar (1000)**|행 필터링을 지정하는 WHERE 절입니다.|  
+|**subset_filterclause**|**nvarchar(1000)**|행 필터링을 지정하는 WHERE 절입니다.|  
 |**pre_creation_command**|**tinyint**|사전 생성 방법이며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 없음<br /><br /> **1** = 삭제<br /><br /> **2** = 삭제<br /><br /> **3** = 자름|  
 |**schema_option**|**binary (8)**|아티클에 대한 스키마 생성 옵션의 비트맵입니다. 이 비트맵 옵션에 대 한 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 또는 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)를 참조 하세요.|  
 |**type**|**smallint**|아티클의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **10** = 테이블<br /><br /> **32** = 저장 프로시저<br /><br /> **64** = 뷰 또는 인덱싱된 뷰<br /><br /> **128** = 사용자 정의 함수<br /><br /> **160** = 동의어 스키마만|  

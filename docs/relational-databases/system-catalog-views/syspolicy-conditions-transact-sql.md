@@ -18,16 +18,15 @@ ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68121165"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 조건에 대해 한 행을 표시합니다. syspolicy_ conditions는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서는 syspolicy_conditions 뷰의 열을 설명합니다.  
   
 |열 이름|데이터 형식|Description|  
@@ -40,7 +39,7 @@ ms.locfileid: "68121165"
 |modified_by|**sysname**|조건을 최근에 수정한 로그인입니다. 수정한 적이 없으면 NULL입니다.|  
 |date_modified|**datetime**|조건을 만든 날짜와 시간입니다. 수정한 적이 없으면 NULL입니다.|  
 |is_name_condition|**smallint**|조건이 명명 조건인지를 지정합니다.<br /><br /> 0 = 조건 식에 @Name 변수를 포함하지 않습니다.<br /><br /> 1 = 조건 식에 @Name 변수를 포함합니다.|  
-|패싯(facet)|**nvarchar(max)**|조건이 기반으로 하는 패싯의 이름입니다.|  
+|패싯|**nvarchar(max)**|조건이 기반으로 하는 패싯의 이름입니다.|  
 |식|**nvarchar(max)**|패싯 상태의 식입니다.|  
 |obj_name|**sysname**|조건 식에서 @Name 변수를 포함하는 경우 이 변수에 할당된 개체 이름입니다.|  
   
@@ -51,7 +50,7 @@ ms.locfileid: "68121165"
  msdb 데이터베이스에서 PolicyAdministratorRole 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Transact-sql&#41;&#40;정책 기반 관리 뷰](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [정책 기반 관리를 사용 하 여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

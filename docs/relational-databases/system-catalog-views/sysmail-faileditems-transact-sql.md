@@ -18,10 +18,10 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060209"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems(Transact-SQL)
@@ -31,17 +31,17 @@ ms.locfileid: "68060209"
   
  데이터베이스 메일에서 처리 되는 모든 메시지를 보려면 [transact-sql&#41;&#40;sysmail_allitems ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)를 사용 합니다. 보내지 않은 메시지만 보려면 [sysmail_unsentitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)를 사용 합니다. 전송 된 메시지만 보려면 [sysmail_sentitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)를 사용 합니다. 전자 메일 첨부 파일을 보려면 [sysmail_mailattachments &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)를 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지 전송에 사용된 프로필의 식별자입니다.|  
-|**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
+|**recipients**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
-|**본문**|**varchar(max)**|메시지의 본문|  
+|**body**|**varchar(max)**|메시지의 본문입니다.|  
 |**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 TEXT 및 HTML입니다.|  
-|**중요도**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  
+|**importance**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  
 |**우편물**|**varchar (12)**|메시지의 **민감도** 매개 변수입니다.|  
 |**file_attachments**|**varchar(max)**|전자 메일 메시지에 첨부되는 파일 이름 목록으로 각 파일 이름은 세미콜론으로 구분되어 있습니다.|  
 |**Attachment_encoding**|**varchar (20)**|메일 첨부 파일의 유형입니다.|  

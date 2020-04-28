@@ -19,10 +19,10 @@ ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68138663"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies(Transact-SQL)
@@ -30,11 +30,10 @@ ms.locfileid: "68138663"
 
   서버 주소 공간으로 로드되는 각각의 관리되는 사용자 어셈블리에 대해 행을 반환합니다. 이 뷰를 사용 하 여에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]실행 중인 CLR 통합 관리 되는 데이터베이스 개체를 이해 하 고 문제를 해결할 수 있습니다.  
   
- 어셈블리는 관리되는 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 정의 및 배포하는 데 사용되는 관리 코드 DLL 파일입니다. 사용자가 이러한 관리되는 데이터베이스 개체 중 하나를 실행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 CLR은 관리되는 데이터베이스 개체가 정의되는 어셈블리 및 해당 참조를 로드합니다. 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 상태로 유지되어 성능을 향상시키므로 어셈블리에 포함된 관리되는 데이터베이스 개체가 어셈블리를 다시 로드하지 않고 나중에 호출될 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메모리가 부족해질 때까지 어셈블리가 언로드되지 않습니다. 어셈블리 및 CLR 통합에 대 한 자세한 내용은 [Clr 호스팅 환경](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)을 참조 하세요. 관리 되는 데이터베이스 개체에 대 한 자세한 내용은 [CLR&#41; 통합 &#40;공용 언어 런타임을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)을 참조 하세요.  
+ 어셈블리는 관리되는 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 정의 및 배포하는 데 사용되는 관리 코드 DLL 파일입니다. 사용자가 이러한 관리되는 데이터베이스 개체 중 하나를 실행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 CLR은 관리되는 데이터베이스 개체가 정의되는 어셈블리 및 해당 참조를 로드합니다. 어셈블리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 상태로 유지되어 성능을 향상시키므로 어셈블리에 포함된 관리되는 데이터베이스 개체가 어셈블리를 다시 로드하지 않고 나중에 호출될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메모리가 부족해질 때까지 어셈블리가 언로드되지 않습니다. 어셈블리 및 CLR 통합에 대 한 자세한 내용은 [Clr 호스팅 환경](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md)을 참조 하세요. 관리 되는 데이터베이스 개체에 대 한 자세한 내용은 [CLR&#41; 통합 &#40;공용 언어 런타임을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)을 참조 하세요.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|로드된 어셈블리의 ID입니다. **Assembly_id** 를 사용 하 여 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) 카탈로그 뷰에서 어셈블리에 대 한 자세한 정보를 조회할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] [Sys.debug](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) 카탈로그는 현재 데이터베이스의 어셈블리만 표시 합니다. **Sqs. dm_clr_loaded_assemblies** 뷰는 서버에 로드 된 모든 어셈블리를 표시 합니다.|  
 |**appdomain_address**|**int**|어셈블리가 로드 되는 응용 프로그램 도메인 (**AppDomain**)의 주소입니다. 단일 사용자가 소유 하는 모든 어셈블리는 항상 동일한 **AppDomain**에 로드 됩니다. **Appdomain_address** 를 사용 하 여 [dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) 뷰에서 **appdomain** 에 대 한 추가 정보를 조회할 수 있습니다.|  

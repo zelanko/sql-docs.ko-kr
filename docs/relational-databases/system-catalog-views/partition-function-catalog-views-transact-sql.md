@@ -16,10 +16,10 @@ ms.assetid: 12400676-7f6b-4437-8fcb-ba9a33f35469
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 210a636943fca647539a840dbc394f4c91e6f28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127585"
 ---
 # <a name="partition-function-catalog-views-transact-sql"></a>파티션 함수 카탈로그 뷰(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68127585"
 |[sys.partition_parameters](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)||  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

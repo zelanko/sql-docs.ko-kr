@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68132946"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68132946"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|연결된 서버의 로컬 ID입니다.|  
 |**name**|**sysname**|**Server_id** = 0 인 경우 반환 되는 값은 서버 이름입니다.<br /><br /> **Server_id** > 0 인 경우 반환 되는 값은 연결 된 서버의 로컬 이름입니다.|  
-|**제품은**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 인스턴스를 나타냅니다.|  
+|**product**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 인스턴스를 나타냅니다.|  
 |**공급자별**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
-|**위치도**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
+|**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**provider_string**|**nvarchar(4000)**|OLE DB 공급자 문자열 연결 속성입니다.<br /><br /> 호출자에게 ALTER ANY LINKED SERVER 권한이 없으면 NULL이 됩니다.|  
-|**catalog**|**sysname**|OLEDB 카탈로그 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
+|**카탈로그용**|**sysname**|OLEDB 카탈로그 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
 |**connect_timeout**|**int**|연결 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**query_timeout**|**int**|쿼리 제한 시간(초)이며 제한 시간이 없으면 0입니다.|  
 |**is_linked**|**bit**|0 = 다른 RPC 및 분산 트랜잭션 동작을 통해 **sp_addserver**를 사용 하 여 추가 된 이전 스타일의 서버입니다.<br /><br /> 1 = 표준 연결된 서버입니다.|  
@@ -69,13 +69,13 @@ ms.locfileid: "68132946"
   
  기본 로그인 매핑이 삭제되면 연결된 로그인 또는 원격 로그인으로 명시적으로 추가된 사용자만 로그인 권한이 있으며 연결된 서버 또는 원격 서버를 볼 수 있습니다.  기본 로그인 매핑 후에 모든 연결 된 서버 및 원격 서버를 보려면 다음 권한이 필요 합니다.  
   
-- `ALTER ANY LINKED SERVER`디스크나`ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` 또는 `ALTER ANY LOGIN ON SERVER`  
 - **Setupadmin** 또는 **sysadmin** 고정 서버 역할의 멤버 자격  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [연결 된 서버 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [Transact-sql&#41;sp_addlinkedsrvlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
- [Transact-sql&#41;sp_addremotelogin &#40;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
+ [sp_addremotelogin&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

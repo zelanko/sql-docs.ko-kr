@@ -20,10 +20,10 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68106541"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
@@ -82,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  정리 작업은 데이터베이스의 첫 번째 테이블에 변경 데이터 캡처가 활성화된 경우 기본값을 사용하여 만들어집니다. 캡처 작업은 데이터베이스의 첫 번째 테이블에 변경 데이터 캡처가 활성화되고 데이터베이스에 대한 트랜잭션 게시가 없는 경우 기본값을 사용하여 만들어집니다. 트랜잭션 게시가 있는 경우 트랜잭션 로그 판독기를 사용하여 캡처 메커니즘을 구동하므로 별개의 캡처 작업이 필요 없고 허용되지도 않습니다.  
   
  정리 및 캡처 작업은 기본적으로 만들어지므로 이 저장 프로시저는 작업이 명시적으로 삭제되어 다시 만들어야 하는 경우에만 필요합니다.  
   
- 작업 이름이 **cdc입니다.** _\_데이터베이스 이름\>정리 또는 \<_ **cdc.** **\_** ** _\_데이터베이스 이름\>캡처, 여기서<database_name>는 현재 데이터베이스 \<_ 의 이름입니다.**\_** 이름이 같은 작업이 이미 있으면 이름에 마침표 (**.**)와 고유 식별자 (예: cdc)가 추가 됩니다. ** AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52)**.  
+ 작업 이름이 **cdc입니다.** _\_데이터베이스 이름\>정리 또는 \<_ **cdc.** **\_** *<database_name>* _\_데이터베이스 이름\>캡처, 여기서<database_name>는 현재 데이터베이스 \<_ 의 이름입니다.**\_** 이름이 같은 작업이 이미 있으면 이름에 마침표 (**.**)와 고유 식별자 (예: cdc)가 추가 됩니다. ** AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52)**.  
   
  정리 또는 캡처 작업의 현재 구성을 보려면 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)를 사용 합니다. 작업의 구성을 변경 하려면 [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)을 사용 합니다.  
   

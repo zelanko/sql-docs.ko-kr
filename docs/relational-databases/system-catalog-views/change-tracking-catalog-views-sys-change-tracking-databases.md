@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68136535"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>변경 내용 추적 카탈로그 뷰-sys. change_tracking_databases
@@ -33,13 +33,12 @@ ms.locfileid: "68136535"
 
   변경 내용 추적이 설정된 각 데이터베이스에 대해 한 개의 행을 반환합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|데이터베이스의 ID입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유합니다.|  
+|database_id|**int**|데이터베이스의 ID입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유합니다.|  
 |is_auto_cleanup_on|**bit**|구성된 보존 기간 후에 변경 내용 추적 데이터가 자동으로 제거되는지 여부를 나타냅니다.<br /><br /> 0 = Off<br /><br /> 1 = On|  
 |retention_period|**int**|자동 정리가 사용되고 있으면 보존 기간은 변경 내용 추적 데이터가 데이터베이스에서 보관되는 기간을 지정합니다.|  
-|retention_period_units_desc|**nvarchar (60)**|보존 기간에 대한 설명을 지정합니다.<br /><br /> 분<br /><br /> 시간<br /><br /> 일|  
+|retention_period_units_desc|**nvarchar(60)**|보존 기간에 대한 설명을 지정합니다.<br /><br /> 분<br /><br /> 시간<br /><br /> 일|  
 |retention_period_units|**tinyint**|보존 기간의 시간 단위:<br /><br /> 1 = 분<br /><br /> 2 = 시간<br /><br /> 3 = 일|  
   
 ## <a name="permissions"></a>사용 권한  

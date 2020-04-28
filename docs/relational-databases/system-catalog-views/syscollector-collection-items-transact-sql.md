@@ -19,10 +19,10 @@ ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060408"
 ---
 # <a name="syscollector_collection_items-transact-sql"></a>syscollector_collection_items(Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68060408"
  **Dc_operator**, **dc_proxy**에 대 한 SELECT가 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;데이터 수집기 뷰](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   

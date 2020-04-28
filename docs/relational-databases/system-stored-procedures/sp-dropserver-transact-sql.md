@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124830"
 ---
 # <a name="sp_dropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68124830"
 
   로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 알려진 원격 서버 및 연결된 서버 목록에서 서버를 제거합니다.  
   
- ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-sql 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +41,7 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>인수  
  *서버인*  
- 제거할 서버입니다. *서버* 는 **sysname**이며 기본값은 없습니다. *서버* 가 있어야 합니다.  
+ 제거할 서버입니다. *server* 은 **sysname**이며 기본값은 없습니다. *서버* 가 있어야 합니다.  
   
  *droplogins*  
  **Droplogins** 가 지정 된 경우 *서버* 에 대 한 관련 원격 및 연결 된 서버 로그인도 제거 해야 함을 나타냅니다. **`@droplogins`** 는 **char (10)** 이며 기본값은 NULL입니다.  
@@ -58,7 +58,7 @@ sp_dropserver [ @server = ] 'server'
  서버에 대한 ALTER ANY LINKED SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 로컬 `ACCOUNTS` 인스턴스에서 원격 서버 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 모든 연관된 원격 로그인을 제거합니다.  
+ 다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 원격 서버 `ACCOUNTS`와 모든 연관된 원격 로그인을 제거합니다.  
   
 ```  
 sp_dropserver 'ACCOUNTS', 'droplogins';  

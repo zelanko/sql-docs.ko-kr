@@ -20,10 +20,10 @@ ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126684"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces(Transact-SQL)
@@ -34,14 +34,13 @@ ms.locfileid: "68126684"
  지원 되는 추적 이벤트의 전체 목록은 [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|추적 ID입니다.|  
-|**업무**|**int**|추적 상태입니다.<br /><br /> 0 = 중지됨<br /><br /> 1 = 실행 중|  
-|**경로**|**nvarchar(260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
+|**id**|**int**|추적 ID입니다.|  
+|**status**|**int**|추적 상태입니다.<br /><br /> 0 = 중지됨<br /><br /> 1 = 실행 중|  
+|**path**|**nvarchar(260)**|추적 파일의 경로입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**max_size**|**bigint**|최대 추적 파일 크기 한도(MB)입니다. 이 값은 행 집합 추적의 경우 Null입니다.|  
 |**stop_time**|**datetime**|실행 중인 추적을 중지할 시간입니다.|  
 |**max_files**|**int**|최대 롤오버 파일 수입니다. 최대값을 설정하지 않으면 이 값은 Null입니다.|  

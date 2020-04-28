@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5205c1ac6248f5aadee01410b4ba5e8f00332a73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68127494"
 ---
 # <a name="syspdw_health_components-transact-sql"></a>sys. pdw_health_components (Transact-sql)
@@ -22,13 +22,13 @@ ms.locfileid: "68127494"
 
   시스템에 존재 하는 모든 구성 요소 및 장치에 대 한 정보를 저장 합니다. 여기에는 하드웨어, 저장 장치 및 네트워크 장치가 포함 됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |component_id|**int**|구성 요소 또는 장치의 고유 식별자입니다.<br /><br /> 이 보기의 키입니다.|NOT NULL|  
-|group_id|**Int**|이 구성 요소가 속한 논리적 구성 요소 그룹입니다. [Pdw_health_components (병렬 데이터 웨어하우스)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)를 참조 하세요.|NOT NULL|  
+|group_id|**정수**|이 구성 요소가 속한 논리적 구성 요소 그룹입니다. [Pdw_health_components (병렬 데이터 웨어하우스)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)를 참조 하세요.|NOT NULL|  
 |component_name|**nvarchar(255)**|구성 요소의 이름입니다.|NOT NULL|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68117899"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser(Transact-SQL)
@@ -79,21 +79,21 @@ GO
 ## <a name="examples"></a>예  
   
 ### <a name="a-adding-a-database-user"></a>A. 데이터베이스 사용자 추가  
- 다음 예에서는 `Vidur`라는 기존 `Recruiting` 로그인을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자를 현재 데이터베이스의 기존 `Vidur` 역할에 추가합니다.  
+ 다음 예에서는 `Vidur`라는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 `Recruiting` 데이터베이스 사용자를 현재 데이터베이스의 기존 `Vidur` 역할에 추가합니다.  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
 ### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. 동일한 로그인 ID로 데이터베이스 사용자 추가  
- 다음 예에서는 `Arvind` 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `Arvind` 로그인에 대한 현재 데이터베이스에 추가합니다. 이 사용자는 기본 **public** 역할에 속합니다.  
+ 다음 예에서는 `Arvind` 사용자를 `Arvind`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 현재 데이터베이스에 추가합니다. 이 사용자는 기본 **public** 역할에 속합니다.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
 ### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. 서버 수준 로그인과는 다른 이름으로 데이터베이스 사용자 추가  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `BjornR` 로그인을 `Bjorn`이라는 사용자 이름의 현재 데이터베이스에 추가하고 `Bjorn` 데이터베이스 사용자를 `Production` 데이터베이스 역할에 추가합니다.  
+ 다음 예에서는 `BjornR`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `Bjorn`이라는 사용자 이름의 현재 데이터베이스에 추가하고 `Bjorn` 데이터베이스 사용자를 `Production` 데이터베이스 역할에 추가합니다.  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
@@ -101,7 +101,7 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sys.server_principals&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [server_principals &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Transact-sql&#41;sp_addrole &#40;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [Transact-sql&#41;사용자 &#40;만들기](../../t-sql/statements/create-user-transact-sql.md)   
  [Transact-sql&#41;sp_dropuser &#40;](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   

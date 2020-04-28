@@ -21,21 +21,20 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026824"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스 엔진에서 데이터베이스 수준 메모리 소비자를 보고합니다. 뷰는 데이터베이스 엔진에 사용되는 각 메모리 소비자에 대한 행을 반환합니다. 이 DMV를 사용 하 여 여러 내부 개체에서 메모리를 분산 하는 방법을 확인 합니다.  
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 ID(내부)입니다.|  
 |memory_consumer_type|**int**|메모리 소비자 유형입니다.<br /><br /> 0=Aggregation. (둘 이상 소비자의 메모리 사용량을 집계합니다. 표시되어서는 안 됩니다.)<br /><br /> 2=VARHEAP(가변 길이 힙에 대한 메모리 소비량을 추적합니다.)<br /><br /> 3=HASH(인덱스에 대한 메모리 소비를 추적합니다.)<br /><br /> 5=DB 페이지 풀(런타임 작업에 사용되는 데이터베이스 페이지 풀에 대한 메모리 소비량을 추적합니다. 예를 들어 테이블 변수 및 일부 순차 가능 검색입니다. 데이터베이스당 이 유형의 메모리 소비자는 하나뿐입니다.)|  
@@ -125,6 +124,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

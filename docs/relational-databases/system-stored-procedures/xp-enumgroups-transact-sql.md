@@ -18,10 +18,10 @@ ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68116767"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups(Transact-SQL)
@@ -47,15 +47,15 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**그룹**|**sysname**|Windows 그룹의 이름입니다.|  
+|**group**|**sysname**|Windows 그룹의 이름입니다.|  
 |**주석의**|**sysname**|Windows에서 제공한 Windows 그룹에 대한 설명입니다.|  
   
 ## <a name="remarks"></a>설명  
  *Domain_name* 가 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 되는 Windows 기반 컴퓨터의 이름 이거나 도메인 이름을 지정 하지 않은 경우 **xp_enumgroups** 를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 컴퓨터에서 로컬 그룹을 열거 합니다.  
   
- **** 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 98에서 실행 중인 경우에는 xp_enumgroups 사용할 수 없습니다.  
+ **xp_enumgroups** 인스턴스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 98에서 실행 중인 경우에는 xp_enumgroups 사용할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Master** 데이터베이스에서 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
@@ -70,7 +70,7 @@ EXEC xp_enumgroups 'sales';
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_grantlogin &#40;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Transact-sql&#41;sp_revokelogin &#40;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;일반 확장 저장 프로시저 &#40;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;xp_loginconfig &#40;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
  [Transact-sql&#41;xp_logininfo &#40;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  

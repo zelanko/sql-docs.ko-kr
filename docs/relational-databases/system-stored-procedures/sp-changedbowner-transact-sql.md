@@ -18,10 +18,10 @@ ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68126458"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner(Transact-SQL)
@@ -47,7 +47,7 @@ sp_changedbowner [ @loginame = ] 'login'
  현재 데이터베이스의 새 소유자의 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 없습니다. *로그인* 은 이미 존재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 로그인 또는 Windows 사용자 여야 합니다. *로그인* 은 데이터베이스 내의 기존 사용자 보안 계정을 통해 데이터베이스에 이미 액세스할 수 있는 경우 현재 데이터베이스의 소유자가 될 수 없습니다. 이 문제를 방지하려면 먼저 현재 데이터베이스에서 사용자를 삭제해야 합니다.  
   
  [ @map= ] *remap_alias_flag*  
- 로그인 ** 별칭이에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제거 되었으므로 remap_alias_flag 매개 변수는 더 이상 사용 되지 않습니다. *Remap_alias_flag* 매개 변수를 사용 해도 오류가 발생 하지는 않지만 아무런 영향을 주지 않습니다.  
+ 로그인 *remap_alias_flag* 별칭이에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제거 되었으므로 remap_alias_flag 매개 변수는 더 이상 사용 되지 않습니다. *Remap_alias_flag* 매개 변수를 사용 해도 오류가 발생 하지는 않지만 아무런 영향을 주지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

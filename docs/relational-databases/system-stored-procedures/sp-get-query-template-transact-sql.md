@@ -18,10 +18,10 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124076"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template(Transact-SQL)
@@ -85,8 +85,7 @@ SELECT @my_templatetext;
 SELECT @my_parameters;  
 ```  
   
- 
-  `@my_templatetext``OUTPUT` 매개 변수의 매개 변수가 있는 결과는 다음과 같습니다.  
+ `@my_templatetext``OUTPUT` 매개 변수의 매개 변수가 있는 결과는 다음과 같습니다.  
   
  `select pi . ProductID , SUM ( pi . Quantity ) as Total`  
   
@@ -104,8 +103,7 @@ SELECT @my_parameters;
   
  첫 번째 상수 리터럴 `2`는 매개 변수로 변환됩니다. 두 번째 리터럴 `400`은 `HAVING` 절 안에 있으므로 매개 변수로 변환되지 않습니다. sp_get_query_template에 의해 반환된 결과는 ALTER DATABASE의 PARAMETERIZATION 옵션이 FORCED로 설정된 경우의 매개 변수가 있는 쿼리 형식과 유사합니다.  
   
- 
-  `@my_parameters OUTPUT` 매개 변수의 매개 변수가 있는 결과는 다음과 같습니다.  
+ `@my_parameters OUTPUT` 매개 변수의 매개 변수가 있는 결과는 다음과 같습니다.  
   
 ```  
 @0 int  
@@ -115,7 +113,7 @@ SELECT @my_parameters;
 >  sp_get_query_template의 출력에서 매개 변수의 순서와 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 QFE(Quick-Fix Engineering), 서비스 팩 및 버전 업그레이드에 따라 변경될 수 있습니다. 또한 업그레이드를 수행하면 다른 상수 리터럴 집합은 같은 쿼리에 대한 매개 변수가 있을 수 있고 두 출력 매개 변수의 결과에 다른 간격이 적용될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [계획 지침을 사용하여 쿼리 매개 변수화 동작 지정](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

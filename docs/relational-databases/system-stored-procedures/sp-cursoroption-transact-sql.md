@@ -18,10 +18,10 @@ ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68108452"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
@@ -39,8 +39,8 @@ sp_cursoroption cursor, code, value
 ```  
   
 ## <a name="arguments"></a>인수  
- *위치*  
- 는에서 ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 되 고 sp_cursoropen 저장 프로시저에서 반환 하는 핸들 값입니다. *커서* 를 실행 하려면 **int** 입력 값이 필요 합니다.  
+ *cursor*  
+ 는에서 *handle* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 되 고 sp_cursoropen 저장 프로시저에서 반환 하는 핸들 값입니다. *커서* 를 실행 하려면 **int** 입력 값이 필요 합니다.  
   
  *code*  
  커서 반환 값의 여러 요인을 규정하는 데 사용됩니다. *코드* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
@@ -54,7 +54,7 @@ sp_cursoroption cursor, code, value
 |0x0005|CCOPT|동시성 제어 옵션입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "반환 코드 값"을 참조하십시오.|  
 |0x0006|ROWCOUNT|현재 결과 집합에 있는 행의 수입니다.<br /><br /> 참고: 비동기 채우기를 사용 하는 경우 sp_cursoropen에서 반환 된 값 이후에 ROWCOUNT가 변경 되었을 수 있습니다. 행 수를 알 수 없는 경우-1 값이 반환 됩니다.|  
   
- *기본값*  
+ *value*  
  *코드*에서 반환 되는 값을 지정 합니다. *값* 은 0x0001, 0x0002 또는 0x0003 *코드* 입력 값을 호출 하는 필수 매개 변수입니다.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ sp_cursoroption cursor, code, value
 |0x0004 또는 0x0008|OPTIMISTIC|  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_cursor &#40;](../../relational-databases/system-stored-procedures/sp-cursor-transact-sql.md)   
  [Transact-sql&#41;sp_cursoropen &#40;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)  
   
