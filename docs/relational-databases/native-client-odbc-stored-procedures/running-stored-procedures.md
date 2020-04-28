@@ -1,5 +1,5 @@
 ---
-title: 저장 프로시저 실행 | 마이크로 소프트 문서
+title: 저장 프로시저 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304554"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
@@ -58,7 +58,7 @@ ms.locfileid: "81304554"
   
      확장 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 제공되지 않는 C 및 C++ 기능을 사용할 수 있습니다.  
   
-     저장 프로시저를 호출하는 방법에 대한 예는 ODBC&#41;&#40;[프로세스 반환 코드 및 출력 매개 변수를 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)참조하십시오.  
+     저장 프로시저를 호출 하는 방법에 대 한 예제는 [ODBC&#41;&#40;반환 코드 및 출력 매개 변수 처리 ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81304554"
 -   [저장 프로시저 결과 처리](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [ODBC&#41;&#40;저장 프로시저 실행 방법 항목](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [ODBC&#41;SQL Server Native Client &#40;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [저장 프로시저 실행 방법 항목 ODBC&#41;&#40;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

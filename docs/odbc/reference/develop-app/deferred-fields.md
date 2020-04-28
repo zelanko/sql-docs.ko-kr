@@ -1,5 +1,5 @@
 ---
-title: 이연 필드 | 마이크로 소프트 문서
+title: 지연 필드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 094aba353e10ed568e1959b1d655109296507dee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305974"
 ---
 # <a name="deferred-fields"></a>지연 필드
-*지연된 필드의* 값은 설정될 때 사용되지 않지만 드라이버는 지연된 효과에 대한 변수의 주소를 저장합니다. 응용 프로그램 매개 변수 설명자의 경우 드라이버는 **SQLExecDirect** 또는 **SQLExecute**에 대한 호출 시 변수의 내용을 사용합니다. 응용 프로그램 행 설명자의 경우 드라이버는 가져오기 시 변수의 내용을 사용합니다.  
+*지연 된 필드* 값은 설정 될 때 사용 되지 않지만 드라이버는 지연 된 효과에 대 한 변수 주소를 저장 합니다. 응용 프로그램 매개 변수 설명자의 경우, 드라이버는 **Sqlexecdirect** 또는 **sqlexecute**를 호출할 때 변수의 내용을 사용 합니다. 응용 프로그램 행 설명자의 경우 드라이버는 인출 시 변수의 내용을 사용 합니다.  
   
- 다음은 지연된 필드입니다.  
+ 연기 된 필드는 다음과 같습니다.  
   
 -   설명자 레코드의 SQL_DESC_DATA_PTR 및 SQL_DESC_INDICATOR_PTR 필드입니다.  
   
 -   응용 프로그램 설명자 레코드의 SQL_DESC_OCTET_LENGTH_PTR 필드입니다.  
   
--   다중 행 가져오기의 경우 설명자 헤더의 SQL_DESC_ARRAY_STATUS_PTR 및 SQL_DESC_ROWS_PROCESSED_PTR 필드입니다.  
+-   다중 행 페치의 경우 설명자 헤더의 SQL_DESC_ARRAY_STATUS_PTR 및 SQL_DESC_ROWS_PROCESSED_PTR 필드가 있습니다.  
   
- 설명자가 할당되면 각 설명자 레코드의 지연된 필드에는 처음에 null 값이 있습니다. null 값의 의미는 다음과 같습니다.  
+ 설명자가 할당 될 때 각 설명자 레코드의 지연 된 필드는 처음에 null 값을 갖습니다. Null 값의 의미는 다음과 같습니다.  
   
--   SQL_DESC_ARRAY_STATUS_PTR null 값이 있는 경우 multirow fetch는 행별 진단 정보의 이 구성 요소를 반환하지 못합니다.  
+-   SQL_DESC_ARRAY_STATUS_PTR에 null 값이 있는 경우 다중 행 페치에서 행 단위 진단 정보의이 구성 요소를 반환 하지 못합니다.  
   
--   SQL_DESC_DATA_PTR null 값이 있으면 레코드가 언바운드됩니다.  
+-   SQL_DESC_DATA_PTR에 null 값이 있으면 해당 레코드는 바인딩되지 않습니다.  
   
--   ARD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 값이 있는 경우 드라이버는 해당 열에 대한 길이 정보를 반환하지 않습니다.  
+-   SQL_DESC_OCTET_LENGTH_PTR 필드의 값이 null 이면 드라이버는 해당 열에 대 한 길이 정보를 반환 하지 않습니다.  
   
--   APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 값이 있고 매개 변수가 문자 문자열인 경우 드라이버는 해당 문자열이 null-terminated라고 가정합니다. 출력 동적 매개 변수의 경우 이 필드의 null 값은 드라이버가 길이 정보를 반환하지 못하도록 합니다. SQL_DESC_TYPE 필드가 character-string 매개 변수를 나타내지 않으면 SQL_DESC_OCTET_LENGTH_PTR 필드는 무시됩니다.  
+-   APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 값이 있고 매개 변수가 문자열이 면 드라이버는 문자열이 null로 종료 된 것으로 가정 합니다. 출력 동적 매개 변수의 경우이 필드에 null 값이 있으면 드라이버가 길이 정보를 반환 하지 않습니다. SQL_DESC_TYPE 필드가 문자 문자열 매개 변수를 나타내지 않는 경우에는 SQL_DESC_OCTET_LENGTH_PTR 필드가 무시 됩니다.)  
   
- 응용 프로그램은 지연된 필드에 사용되는 변수를 필드와 연결하는 시간과 드라이버가 읽거나 쓰는 시간 사이에 변수를 할당 하거나 삭제해서는 안 됩니다.
+ 응용 프로그램은 필드에 연결 하는 시간과 드라이버가 읽거나 쓰는 시간 사이에 지연 된 필드에 사용 되는 변수를 할당 취소 하거나 취소 하지 않아야 합니다.

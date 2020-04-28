@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr | 마이크로 소프트 문서
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302157"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -26,7 +26,7 @@ ms.locfileid: "81302157"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 드라이버별 연결 특성을 정의합니다. 일부 특성은 **SQLGetConnectAttr**에서 사용할 수 있으며, 이 함수를 사용하여 현재 설정을 보고합니다. 이러한 특성에 대해 보고되는 값은 연결을 설정하거나 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 사용하여 특성을 설정할 때까지 보장되지 않습니다.  
   
- 이 항목에서는 읽기 전용 특성을 나열합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버별 연결 특성에 대한 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)을 참조하십시오.  
+ 이 항목에서는 읽기 전용 특성을 나열합니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버별 연결 특성에 대 한 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 참조 하세요.  
   
 ## <a name="sql_copt_ss_connection_dead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  SQL_COPT_SS_CONNECTION_DEAD 특성은 서버에 대한 연결 상태를 보고합니다. 드라이버는 현재 연결 상태에 대해 네트워크를 쿼리합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "81302157"
   
 -   설정할 경우 데이터 액세스 추적 로그의 진단 정보  
   
- 자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스하는 것을](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)참조하십시오.  
+ 자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ ms.locfileid: "81302157"
 ## <a name="sql_copt_ss_perf_data"></a>SQL_COPT_SS_PERF_DATA  
  SQL_COPT_SS_PERF_DATA 특성은 현재 드라이버 성능 통계가 포함된 SQLPERF 구조에 대한 포인터를 반환합니다. 성능 로깅이 사용되지 않는 경우**SQLGetConnectAttr** 에서 NULL을 반환합니다. SQLPERF 구조의 통계는 드라이버에서 동적으로 업데이트되지 않습니다. 성능 통계를 새로 고쳐야 할 때마다 **SQLGetConnectAttr** 을 호출합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |NULL|성능 로깅이 사용되지 않습니다.|  
 |다른 모든 값|SQLPERF 구조에 대한 포인터입니다.|  
@@ -75,20 +75,20 @@ ms.locfileid: "81302157"
 |다른 모든 값|사용자 데이터에 대한 포인터입니다.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>SPN(서비스 사용자 이름)에 대한 SQLGetConnectAttr 지원  
- SQLGetConnectAttr는 SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 새 연결 특성의 값을 쿼리하는 데 사용할 수 있습니다. (SQLGetConnectOption은 이러한 값을 쿼리하는 데 사용할 수도 있습니다.)  
+ SQLGetConnectAttr SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED 및 SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD 새 연결 특성의 값을 쿼리 하는 데 사용할 수 있습니다. (SQLGetConnectOption를 사용 하 여 이러한 값을 쿼리할 수도 있습니다.)  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD는 Windows 인증을 사용하는 열린 연결에만 사용할 수 있습니다.  
   
  SQL_COPT_SS_SERVER_SPN 또는 SQL_COPT_SS_FAILOVER_PARTNER가 설정되지 않은 경우 기본값(빈 문자열)이 반환됩니다.  
   
- SP에 대한 자세한 내용은 [ODBC&#41;클라이언트 &#40;연결에서&#41; &#40;서비스 주체 이름을 ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)참조하십시오.  
+ Spn에 대 한 자세한 내용은 [클라이언트 연결 &#40;ODBC&#41;에서 spn&#41; &#40;서비스 사용자 이름 ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLGetConnectAttr 함수](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [ODBC API 구현 세부 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [&#40;거래 SQL&#41;QUOTED_IDENTIFIER 설정](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [&#40;거래 SQL&#41;ANSI_NULLS 설정](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [&#40;거래 SQL&#41;ANSI_PADDING 설정](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [Transact-sql&#41;&#40;QUOTED_IDENTIFIER 설정](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [Transact-sql&#41;&#40;ANSI_NULLS 설정](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [Transact-sql&#41;&#40;ANSI_PADDING 설정](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

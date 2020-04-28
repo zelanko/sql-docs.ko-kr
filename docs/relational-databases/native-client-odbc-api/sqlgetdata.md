@@ -1,5 +1,5 @@
 ---
-title: SQLGetData | 마이크로 소프트 문서
+title: SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5ebda3de96cbd9a4a1ceadd62093420cc372a169
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302164"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
@@ -36,12 +36,12 @@ ms.locfileid: "81302164"
 >  큰 값 형식에 대해 *StrLen_or_IndPtr* 은 데이터 잘림이 발생할 경우 SQL_NO_TOTAL을 반환합니다.  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLGetData 지원  
- 날짜/시간 형식의 결과 열 값은 [SQL에서 C로의 변환에](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)설명된 대로 변환됩니다.  
+ 날짜/시간 형식의 결과 열 값은 [SQL에서 C로 변환](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)에 설명 된 대로 변환 됩니다.  
   
- 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 개선 을 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)참조하십시오.  
+ 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetData 지원  
- **SQLGetData** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [큰 CLR 사용자 정의 형식 &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조하십시오.  
+ **SQLGetData** 는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
   

@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305344"
 ---
 # <a name="stored-procedures---calling"></a>저장 프로시저 - 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. 네이티브 클라이언트 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자를 사용하는 경우 저장 프로시저에 대한 매개 변수를 다음을 통해 전달할 수 있습니다.  
+  저장 프로시저는 0개 이상의 매개 변수를 가질 수 있으며 값을 반환할 수도 있습니다. Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공급자를 사용 하는 경우 저장 프로시저에 대 한 매개 변수를 다음으로 전달할 수 있습니다.  
   
 -   데이터 값을 하드 코딩합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305344"
 5.  **ICommand::Execute**를 사용하여 명령을 실행합니다.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>저장 프로시저 호출 방법  
- 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]저장 프로시저를 실행하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 다음을 지원합니다.  
+ 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]저장 프로시저를 실행할 때 Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB 공급자는 다음을 지원 합니다.  
   
 -   ODBC CALL 이스케이프 시퀀스  
   
@@ -94,9 +94,9 @@ ms.locfileid: "81305344"
   
  ODBC CALL 이스케이프 시퀀스를 사용한 프로시저 호출의 일반적인 구문은 다음과 같습니다.  
   
- {[**?=**]**호출**_procedure_name_**[[ [**[ 매개*변수*] [**[***매개 변수*]... **)**]}  
+ {[**? =**]**call**_procedure_name_[**(**[*parameter*] [**,**[*parameter*]] ... **)**]}  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -120,7 +120,7 @@ ms.locfileid: "81305344"
  RPC 이스케이프 시퀀스를 보여주는 샘플 애플리케이션은 [&#40;RPC 구문을 사용하여&#41; 저장 프로시저를 실행하고 반환 코드 및 출력 매개 변수를 처리&#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)를 참조하세요.  
   
 ### <a name="transact-sql-execute-statement"></a>Transact-SQL EXECUTE 문  
- 저장 프로시저를 호출할 때는 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문보다 ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스가 더 일반적으로 사용됩니다. 네이티브 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 RPC 메커니즘을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용하여 명령 처리를 최적화합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
+ 저장 프로시저를 호출할 때는 [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) 문보다 ODBC CALL 이스케이프 시퀀스와 RPC 이스케이프 시퀀스가 더 일반적으로 사용됩니다. Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC 메커니즘을 사용 하 여 명령 처리를 최적화 합니다. 이 RPC 프로토콜은 서버에서 수행되는 매개 변수 처리와 문 구문 분석의 대부분을 제거하여 성능을 향상시킵니다.  
   
  다음은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE** 문의 예입니다.  
   
@@ -129,6 +129,6 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [저장 절차](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+ [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
   

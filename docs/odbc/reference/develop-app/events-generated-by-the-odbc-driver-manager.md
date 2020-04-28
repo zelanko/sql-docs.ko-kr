@@ -1,5 +1,5 @@
 ---
-title: ODBC 드라이버 관리자에 의해 생성 된 이벤트 | 마이크로 소프트 문서
+title: ODBC 드라이버 관리자에 의해 생성 된 이벤트 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305754"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 드라이버 관리자에 의해 생성된 이벤트
 > [!IMPORTANT]  
->  비주얼 스튜디오 분석기지원은 Windows 8부터 제거되었습니다(Visual Studio 분석기는 이전 버전의 Visual Studio에만 포함되었습니다.) 대체 문제 해결 메커니즘을 보려면 BID 추적을 사용합니다.  
+>  Visual Studio 분석기에 대 한 지원은 Windows 8부터 제거 되었습니다 (Visual Studio 분석기 이전 버전의 Visual Studio에만 포함 됨). 다른 문제 해결 메커니즘을 사용 하려면 입찰 추적을 사용 합니다.  
   
- ODBC 드라이버 관리자에서 생성한 이벤트는 시각적 스튜디오 분석기 시작 단추를 클릭하면 등록됩니다. 도구 자체는 시스템 정의 이벤트와 사용자 지정 이벤트를 만드는 기능을 제공합니다. 이벤트에 대한 자세한 내용은 Visual Studio 설명서 제품군 내의 *Visual Studio 분석기 참조 가이드를* 참조하십시오.  
+ ODBC 드라이버 관리자에 의해 생성 된 이벤트는 Visual Studio 분석기 시작 단추를 클릭할 때 등록 됩니다. 도구 자체는 시스템 정의 이벤트 및 사용자 지정 이벤트를 만들 수 있는 기능을 제공 합니다. 이벤트에 대 한 자세한 내용은 Visual Studio 설명서에서 *Visual Studio 분석기 참조 가이드* 를 참조 하세요.  
   
-|비주얼 스튜디오 분석기 이벤트|설명|  
+|Visual Studio 분석기 이벤트|설명|  
 |----------------------------------|-----------------|  
-|**호출**|모든 ODBC API 항목에서 생성됩니다.|  
-|**반환 예외**|반환 코드가 SQL_ERROR 경우 모든 ODBC API 반환에서 생성됩니다.|  
-|**리턴 노멀**|반환 코드가 SQL_ERROR 않은 경우 모든 ODBC API 반환에서 생성됩니다.|  
-|**연결 시작**|연결이 시작했음을 나타냅니다. ODBC 드라이버 관리자가 드라이버의 연결 API를 호출할 때 생성됩니다.|  
-|**연결 완료**|연결이 완료됨을 나타냅니다. 드라이버의 연결 API가 ODBC 드라이버 관리자로 돌아올 때 생성됩니다.|  
-|**시작 해제**|ODBC 드라이버 관리자가 드라이버의 **SQLDisconnect** 함수를 호출할 때 생성됩니다.|  
-|**연결 해제 완료**|드라이버의 **SQLDisconnect** 함수가 ODBC 드라이버 관리자로 돌아올 때 생성됩니다.|  
-|**쿼리 보내기**|ODBC 드라이버 관리자가 드라이버의 **SQLPrepare,** **SQLExecute,** **SQLExecDirect** 함수뿐만 아니라 **SQLTable** 및 **SQLColumns와**같은 카탈로그 함수를 호출할 때 생성됩니다.|  
-|**쿼리결과**|드라이버가 쿼리와 관련된 함수에 대해 ODBC 드라이버 관리자로 결과 집합을 반환할 때 생성됩니다.|  
-|**트랜잭션 시작**|응용 프로그램이 SQL_AUTOCOMMIT_OFF SQL_ATTR_AUTOCOMMIT 값을 설정하거나 응용 프로그램이 **SQLEndTran**을 성공적으로 호출한 후에 생성됩니다.|  
-|**트랜잭션 커밋**|응용 프로그램이 로컬 트랜잭션을 커밋하기 위해 **SQLEndTran을** 호출할 때 생성됩니다.|  
-|**트랜잭션 롤백**|응용 프로그램이 로컬 트랜잭션을 롤백하기 위해 **SQLEndTran을** 호출할 때 생성됩니다.|  
-|**조인DTC**|응용 프로그램이 DTC(분산 트랜잭션 코디네이터)에 참여할 때 생성됩니다.|  
-|**리브DTC**|응용 프로그램이 DTC(분산 트랜잭션 코디네이터)를 떠날 때 생성됩니다.|
+|**전화할**|모든 ODBC API 항목에서 생성 됩니다.|  
+|**ReturnException**|반환 코드가 SQL_ERROR 경우 모든 ODBC API 반환에 생성 됩니다.|  
+|**ReturnNormal**|반환 코드가 SQL_ERROR 되지 않은 경우 모든 ODBC API 반환에 생성 됩니다.|  
+|**연결 시작**|연결이 시작 되었음을 나타냅니다. ODBC 드라이버 관리자가 드라이버의 연결 Api를 호출할 때 생성 됩니다.|  
+|**연결 완료**|연결이 완료 되었음을 나타냅니다. 드라이버의 연결 Api가 ODBC 드라이버 관리자에 반환 될 때 생성 됩니다.|  
+|**연결 끊기 시작**|ODBC 드라이버 관리자가 드라이버의 **Sqldisconnect** 함수를 호출할 때 생성 됩니다.|  
+|**연결 끊기 완료**|드라이버의 **Sqldisconnect** 함수가 ODBC 드라이버 관리자로 반환 될 때 생성 됩니다.|  
+|**QuerySend**|ODBC 드라이버 관리자가 **Sqlprepare** 및 **sqlprepare**와 같은 카탈로그 함수 뿐만 아니라 드라이버의 **sqlprepare**, **sqlprepare**, **sqlexecdirect** 함수를 호출할 때 생성 됩니다.|  
+|**QueryResult**|드라이버가 쿼리와 관련 된 함수에 대 한 결과 집합을 ODBC 드라이버 관리자에 반환할 때 생성 됩니다.|  
+|**TransactionStart**|응용 프로그램에서 SQL_ATTR_AUTOCOMMIT 값을 SQL_AUTOCOMMIT_OFF로 설정 하거나 응용 프로그램이 **Sqlendtran**을 성공적으로 호출한 후에 생성 됩니다.|  
+|**TransactionCommit**|응용 프로그램이 **Sqlendtran** 을 호출 하 여 로컬 트랜잭션을 커밋하는 경우 생성 됩니다.|  
+|**TransactionRollback**|응용 프로그램이 **Sqlendtran** 을 호출 하 여 로컬 트랜잭션을 롤백할 때 생성 됩니다.|  
+|**JoinDTC**|응용 프로그램이 DTC (DTC(Distributed Transaction Coordinator))에 조인할 때 생성 됩니다.|  
+|**LeaveDTC**|응용 프로그램이 DTC (DTC(Distributed Transaction Coordinator))를 떠날 때 생성 됩니다.|

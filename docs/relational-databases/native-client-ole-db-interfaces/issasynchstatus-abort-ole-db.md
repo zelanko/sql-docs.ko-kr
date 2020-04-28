@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303922"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort(OLE DB)
@@ -65,7 +65,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **IDBInitialize::Initialize** 가 취소되지 않은 데이터 원본 개체에서 **ISSAsynchStatus::Abort** 가 호출되었거나 호출이 완료되지 않았습니다.  
   
- **ISSAsynchStatus::Abort는** **IDB초기화::초기화가** 호출되었지만 초기화 전에 취소되거나 시간이 만료된 데이터 원본 개체에 대해 호출되었습니다. 데이터 원본 개체는 아직 초기화되지 않았습니다.  
+ **IDBInitialize:: Initialize** 가 호출 되었지만 이후에 초기화 되기 전에 취소 되었거나 시간이 초과 된 데이터 원본 개체에 대해 **ISSAsynchStatus:: Abort** 가 호출 되었습니다. 데이터 원본 개체가 아직 초기화 되지 않았습니다.  
   
  이전에**ITransaction::Ab가 호출된 행 집합에서t** 또는 **ITransaction::Ab가 호출된 행 집합에서t** 가 호출된 행 집합에서 **ITransaction::Ab가 호출된 행 집합에서t** was previously called, and the rowset did not survive the commit 가 호출된 행 집합에서 ab가 호출된 행 집합에서t and is in a zombie state.  
   

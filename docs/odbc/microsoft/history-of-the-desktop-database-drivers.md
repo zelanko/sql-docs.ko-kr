@@ -1,5 +1,5 @@
 ---
-title: 데스크톱 데이터베이스 드라이버의 기록 | 마이크로 소프트 문서
+title: 데스크톱 데이터베이스 드라이버의 기록 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 89434b397c07fdee751ca4272b65ac2eada94cf3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304984"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버의 기록
-다음 표에서는 데스크톱 데이터베이스 드라이버 버전 기록을 보여 주며,  
+다음 표에서는 데스크톱 데이터베이스 드라이버 버전 기록을 보여 줍니다.  
   
 |버전|출시 날짜|설명|  
 |-------------|------------------|-----------------|  
-|1.0|1993년 8월|PageAhead 소프트웨어에서 생성한 SIMBA 쿼리 프로세서를 사용했습니다. SIMBA는 ODBC 호출 및 SQL 문을 수신하여 Microsoft Jet 설치 가능한 ISAM 호출로 처리한 다음 Microsoft Jet ISAM 디스패치 계층을 호출하여 적절한 설치 가능한 ISAM 드라이버를 로드하고 호출했습니다.|  
-|2.0|1994년 12월|ODBC 2.0과 함께 사용되어 ODBC 기능을 크게 확장했습니다. 버전 2.0의 주요 변경 사항은 Microsoft Jet 데이터베이스 엔진이 SIMBA 쿼리 프로세서를 대체했다는 것입니다. 마이크로소프트 제트 데이터베이스 엔진, 데스크톱 데이터베이스 드라이버 는 마이크로소프트 제트 설치 ISAM 드라이버와 마이크로소프트 액세스 기술 훨씬 더 밀접 하 게 통합. 크게 향상된 기능은 다음과 같은 사항입니다.<br /><br /> - 스크롤 가능한 커서에 대한 기본 지원.<br />- 외부 조인, 업데이트 및 이기종 조인 및 트랜잭션에 대한 기본 지원입니다.<br />- 마이크로 소프트 윈도우 NT에 대한 드라이버의 32 비트 버전.|  
-|3.0|1995년 10월|Windows 95 및 Windows NT 워크스테이션 또는 NT 서버 3.51에 대한 지원을 제공했습니다. 이 릴리스에는 32비트 드라이버만 포함되었습니다. Windows 버전 3.1의 16비트 드라이버가 제거되었습니다.|  
-|3.5|1996년 10월|이러한 드라이버는 DBCS(이중 바이트 문자 집합)를 사용했으며 이전 버전보다 인터넷 응용 프로그램에 더 적합했으며 파일 데이터 원본 이름(DSN)의 사용을 수용했습니다. Microsoft Access 드라이버는 Windows 95/98 및 Windows NT 3.51 및 이후 운영 체제용 알파 플랫폼에서 사용하기 위해 RISC 버전으로 릴리스되었습니다.|  
-|4.0|1998년 말|이전 버전의 ANSI 형식에 대한 호환성과 함께 Microsoft Jet Engine 유니코드 형식에 대한 지원을 제공합니다.|  
+|1.0|8 월 1993|PageAhead 소프트웨어에 의해 생성 된 SIMBA 쿼리 프로세서를 사용 했습니다. SIMBA는 ODBC 호출 및 SQL 문을 수신 하 고, Microsoft Jet 설치 가능 ISAM 호출로 처리 한 다음, Microsoft Jet ISAM 디스패치 계층을 호출 하 여 설치 가능한 적절 한 ISAM 드라이버를 로드 하 고 호출 합니다.|  
+|2.0|12 월 1994|Odbc 기능이 크게 확장 된 ODBC 2.0와 함께 사용 됩니다. 버전 2.0의 주요 변경 내용은 Microsoft Jet 데이터베이스 엔진이 SIMBA 쿼리 프로세서를 대체 한 것입니다. Microsoft Jet 데이터베이스 엔진을 사용 하면 데스크톱 데이터베이스 드라이버가 Microsoft Jet 설치 가능 ISAM 드라이버 및 Microsoft 액세스 기술과 훨씬 더 긴밀 하 게 통합 되었습니다. 크게 향상 된 기능은 다음과 같습니다.<br /><br /> -스크롤 가능 커서를 기본적으로 지원 합니다.<br />-외부 조인, 업데이트 가능 하 고 유형이 다른 조인 및 트랜잭션에 대 한 기본 지원입니다.<br />-32 비트 버전의 Microsoft Windows NT 용 드라이버.|  
+|3.0|10 월 1995|Windows 95 및 Windows NT 워크스테이션 또는 NT Server 3.51에 대 한 지원이 제공 됩니다. 이 릴리스에는 32 비트 드라이버만 포함 되어 있습니다. Windows 버전 3.1에 대 한 16 비트 드라이버가 제거 되었습니다.|  
+|3.5|10 월 1996|이러한 드라이버는 DBCS (더블 바이트 문자 집합)를 사용 하며, 이전 버전 보다 인터넷 응용 프로그램에서 사용 하기에 더 적합 하 고, 파일 Dsn (데이터 원본 이름)의 사용을 수용 했습니다. Microsoft Access driver는 Windows 95/98 및 Windows NT 3.51 이상의 운영 체제에 대 한 알파 플랫폼에서 사용할 RISC 버전으로 출시 되었습니다.|  
+|4.0|늦은 1998|에서는 이전 버전의 ANSI 형식에 대 한 호환성과 함께 Microsoft Jet 엔진 유니코드 형식을 지원 합니다.|  
   
 > [!NOTE]  
->  버전3.5 드라이버는 ODBC2와 함께 작동하도록 설계되었습니다. *x*. ODBC 3.0에서도 작동하지만 모든 ODBC 3.0 기능을 지원하지는 않습니다. 이러한 드라이버가 ODBC 3.0에서 작동하는 방식에 대한 자세한 내용은 [이전 버전과의 호환성 및 표준 준수를](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)참조하십시오.
+>  버전 3.5 드라이버는 ODBC2에서 작동 하도록 설계 되었습니다. *x*. ODBC 3.0 에서도 작동 하지만 일부 ODBC 3.0 기능은 지원 하지 않습니다. 이러한 드라이버가 ODBC 3.0에서 작동 하는 방식에 대 한 자세한 내용은 [이전 버전과의 호환성 및 표준 준수](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)를 참조 하세요.

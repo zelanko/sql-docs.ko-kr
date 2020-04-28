@@ -1,5 +1,5 @@
 ---
-title: 저장 절차 결과 처리 | 마이크로 소프트 문서
+title: 저장 프로시저 결과 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304547"
 ---
 # <a name="processing-stored-procedure-results"></a>저장 프로시저 결과 처리
@@ -35,7 +35,7 @@ ms.locfileid: "81304547"
   
 -   프로시저에는 정수 반환 코드가 있을 수 있습니다.  
   
- 애플리케이션은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다. CALL 또는 EXECUTE 문에는 반환 코드 및 출력 매개 변수에 대한 매개 변수 표식이 포함되어야 합니다. [SQLBindParameter를](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 사용하여 모두 출력 매개 변수로 바인딩하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 출력 값을 바인딩된 변수로 전송합니다. 출력 매개 변수 및 반환 코드는 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의해 클라이언트에 반환되는 마지막 항목입니다. [SQLMoreResults가](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA 반환할 때까지 응용 프로그램에 반환되지 않습니다.  
+ 애플리케이션은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다. CALL 또는 EXECUTE 문에는 반환 코드 및 출력 매개 변수에 대한 매개 변수 표식이 포함되어야 합니다. [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 사용 하 여 모두 출력 매개 변수로 바인딩하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 Native Client ODBC 드라이버는 출력 값을 바인딩된 변수에 전송 합니다. 출력 매개 변수 및 반환 코드는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]클라이언트로 반환 되는 마지막 항목입니다. [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 가 SQL_NO_DATA 반환 될 때까지 응용 프로그램에 반환 되지 않습니다.  
   
  ODBC는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 매개 변수를 바인딩하는 기능을 제공하지 않습니다. 출력 커서 매개 변수가 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 실행하기 전에 모든 출력 매개 변수를 바인딩해야 하므로 ODBC 애플리케이션은 이를 호출할 수 없습니다.  
   

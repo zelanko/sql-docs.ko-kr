@@ -1,5 +1,5 @@
 ---
-title: 파일스트림 지원 (올레 DB) | 마이크로 소프트 문서
+title: FILESTREAM 지원 (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: da09fc65de4be75798730fd0cc9785204a0c6917
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303709"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 지원(OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  OLE [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] DB는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 10.0부터 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조하십시오. 샘플은 [Filestream 및 OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)를 참조하세요.  
+  [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 OLE DB는 향상 된 FILESTREAM 기능을 지원 합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../../../relational-databases/native-client/features/filestream-support.md)을 참조 하세요. 샘플은 [Filestream 및 OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)를 참조하세요.  
   
  2GB보다 큰 **varbinary(max)** 값을 보내고 받기 위해 애플리케이션에서는 매개 변수와 결과 바인딩에 **DBTYPE_IUNKNOWN**을 사용합니다. 매개 변수의 경우 공급자는 ISequentialStream 및 ISequentialStream을 반환하는 결과에 대해 IUnknown::QueryInterface를 호출해야 합니다.  
   

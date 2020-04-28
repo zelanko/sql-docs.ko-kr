@@ -1,5 +1,5 @@
 ---
-title: ODBC 소프트웨어 설치 및 구성 | 마이크로 소프트 문서
+title: ODBC 소프트웨어 설치 및 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: e2580f7d-d614-4e14-a9a3-804e8061b00e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a71d021f7ff9d1ef73a3a64c1b5bb27dea1caeba
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301928"
 ---
 # <a name="installing-and-configuring-the-odbc-software"></a>ODBC 소프트웨어 설치 및 구성
 > [!NOTE]  
->  Windows XP 및 Windows 서버 2003을 시작으로 ODBC는 Windows 운영 체제에 포함되어 있습니다. 이전 버전의 Windows에서는 ODBC만 명시적으로 설치해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC는 Windows 운영 체제에 포함 되어 있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

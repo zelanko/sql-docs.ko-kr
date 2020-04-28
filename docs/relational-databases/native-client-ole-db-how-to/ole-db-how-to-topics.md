@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 773d00c14953e14d680c75d06c11701bc654c06f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302217"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 방법 도움말 항목
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  네이티브 클라이언트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자를 사용 하려면 서버에 연결 하 고 명령을 실행 하 고 결과 처리 하는 방법을 이해 해야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하려면 서버에 연결 하 고 명령을 실행 하 고 결과를 처리 하는 방법을 이해 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

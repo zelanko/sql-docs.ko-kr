@@ -1,5 +1,5 @@
 ---
-title: SQL_NO_DATA | 마이크로 소프트 문서
+title: SQL_NO_DATA 반환 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3e2c806edd5d5647e09c00975ad7207ee5c2c876
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305114"
 ---
 # <a name="returning-sql_no_data"></a>SQL_NO_DATA 반환
-ODBC *3.x* 드라이버로 작업하는 ODBC *2.x* 응용 프로그램이 **SQLExecDirect,** **SQLExecute**또는 **SQLParamData를**호출하고 검색된 업데이트 또는 삭제 문이 실행되었지만 데이터 원본의 행에 영향을 주지 않는 경우 ODBC *3.x* 드라이버는 SQL_SUCCESS 반환해야 합니다. ODBC *3.x* 드라이버로 작업하는 ODBC *3.x* 응용 프로그램이 **SQLExecDirect,** **SQLExecute**또는 **SQLParamData를** 호출하는 경우 와 같은 결과를 가진 경우 ODBC *3.x* 드라이버는 SQL_NO_DATA 반환해야 합니다.  
+*Odbc 2.x 응용 프로그램* 에서 odbc 셸을 사용 때는 드라이버가 **sqlexecdirect**, **Sqlexecute**또는 **sqlexecdirect**를 호출 하 고 검색 된 update 또는 delete 문이 실행 되었지만 데이터 원본의 어떤 행에도 영향을 주지 않은 경우 odbc *3.x 드라이버는* SQL_SUCCESS을 반환 해야 *합니다.* *Odbc 3.x 드라이버를* 사용 하 여 작업 하는 odbc *3(sp3)* 응용 프로그램에서 동일한 결과를 사용 하 여 **sqlexecdirect**, **sqlexecute**또는 **sqlexecdirect** 를 호출 하는 *경우 odbc 3.x* 드라이버는 SQL_NO_DATA을 반환 해야 합니다.  
   
- 문 일괄 처리에서 검색된 업데이트 또는 delete 문이 데이터 원본의 행에 영향을 주지 않는 경우 **SQLMoreResults는** SQL_SUCCESS 반환합니다. SQL_NO_DATA 반환할 수 없습니다.
+ 문 일괄 처리에서 검색 된 update 또는 delete 문이 데이터 원본의 어떤 행에도 영향을 주지 않으면 **SQLMoreResults** 는 SQL_SUCCESS을 반환 합니다. 결과를 SQL_NO_DATA 반환할 수 없습니다 .이는 더 이상 결과가 없다는 것을 의미 하기 때문입니다. 행에 영향을 미치지 않는 검색 된 업데이트/삭제의 결과가 없다는 것은 아닙니다.

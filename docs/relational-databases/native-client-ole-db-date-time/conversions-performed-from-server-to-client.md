@@ -14,10 +14,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ed1216a0afd9091af7a0597592310eb457a4cbe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304426"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
@@ -26,23 +26,23 @@ ms.locfileid: "81304426"
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 애플리케이션 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
- 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType*에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 이로 인해 서버의 변환 규칙이 이 항목에서 설명한 것과 다른 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
+ 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters::SetParameterInfo가 호출된 후 *pwszDataSourceType*에 지정된 형식이 서버의 실제 형식과 일치하지 않으면 서버에 의해 암시적 변환이 수행되며 클라이언트로 반환되는 형식은 ICommandWithParameters::SetParameterInfo를 통해 지정된 형식과 일치하게 됩니다. 따라서 서버의 변환 규칙이이 항목에 설명 된 것과 다를 경우 예기치 않은 변환 결과가 발생할 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
-|대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|대상 -><br /><br /> 시작|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1,7|확인|-|-|1|1,3|1,7|-|OK(VT_BSTR)|확인|확인|4|4|  
-|Time|5,6,7|-|9|확인|6|3,6|5,6|-|OK(VT_BSTR)|확인|확인|4|4|  
+|시간|5, 6, 7|-|9|확인|6|3, 6|5, 6|-|OK(VT_BSTR)|확인|확인|4|4|  
 |Smalldatetime|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|DateTime|5,7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|OK(VT_BSTR)|확인|확인|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|OK(VT_BSTR)|확인|확인|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
+|DateTime|5, 7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
+|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK(VT_BSTR)|확인|확인|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|OK(VT_BSTR)|확인|확인|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|확인|2|2|1|1,3|1,7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (time)|5,6,7|2|6|확인|6|3,6|5,6|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|확인|3|5,7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|확인|6|3, 6|5, 6|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|확인|3|5, 7|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|가능(VT_BSTR)|확인|확인|4|4|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   

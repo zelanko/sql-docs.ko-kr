@@ -1,5 +1,5 @@
 ---
-title: SQL테이블 (dBASE 드라이버) | 마이크로 소프트 문서
+title: SQLTables (dBASE 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 242be06eafc7657f37f55ce266af471cbc72597f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306074"
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables(dBASE 드라이버)
 > [!NOTE]  
->  이 항목에서는 dBASE 드라이버 관련 정보를 제공합니다. 이 함수에 대한 일반적인 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
+>  이 항목에서는 dBASE 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
 |인수|주석|  
 |--------------|--------------|  
-|*szTable소유자*|*szTableOwner에* 대 한 유일한 유효한 인수는 NULL 드라이버 중 어느 것도 소유자 이름을 지원 하지 않기 때문에 NULL입니다. *szTableOwner를* NULL로 설정하면 모든 테이블이 반환됩니다. null은 TABLE_OWNER 열에서 반환됩니다.|  
-|*szTable한정자*|TABLE_QUALIFIER 열에서 **SQLTable** 디렉터리로 경로를 반환합니다.|  
-|*스즈테이블 타입*|dBASE 파일의 경우 "TABLE"이 지원되는 유일한 테이블 형식입니다.|
+|*szTableOwner*|모든 드라이버가 소유자 이름을 지원 하지 않으므로 *Sztableowner* 에 대해 올바른 인수는 NULL입니다. *Sztableowner* 를 NULL로 설정 하면 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
+|*szTableQualifier*|TABLE_QUALIFIER 열에서 **Sqltables** 는 디렉터리에 대 한 경로를 반환 합니다.|  
+|*SzTableType*|DBASE 파일의 경우 "TABLE"은 유일 하 게 지원 되는 테이블 형식입니다.|

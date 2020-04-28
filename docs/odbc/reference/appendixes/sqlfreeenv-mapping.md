@@ -1,5 +1,5 @@
 ---
-title: SQLFreeEnv 매핑 | 마이크로 소프트 문서
+title: SQLFreeEnv 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,23 +14,23 @@ ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1f56bfeaee32e83ded6d8269873c9c4c33ed434e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302034"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 매핑
-응용 프로그램이 ODBC *3.x* 드라이버를 통해 **SQLFreeEnv를** 호출하면  
+응용 *프로그램이 ODBC 3.x* 드라이버를 통해 **sqlfreeenv** 를 호출 하는 경우에 대 한 호출이  
   
 ```  
 SQLFreeEnv(henv)   
 ```  
   
- 매핑됩니다.  
+ 매핑 대상  
   
 ```  
 SQLFreeHandle(SQL_HANDLE_ENV,Handle)  
 ```  
   
- *핸들* 인수를 *henv의*값으로 설정합니다.
+ *Handle* 인수가 *henv*의 값으로 설정 된입니다.

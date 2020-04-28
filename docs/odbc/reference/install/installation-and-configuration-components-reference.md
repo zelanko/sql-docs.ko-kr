@@ -1,5 +1,5 @@
 ---
-title: 설치 및 구성 구성 요소 참조 | 마이크로 소프트 문서
+title: 설치 및 구성 구성 요소 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b7a9c62df89318b32a431146511b9404c2802ded
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301952"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  
->  Windows XP 및 Windows 서버 2003을 시작으로 ODBC는 Windows 운영 체제에 포함되어 있습니다. 이전 버전의 Windows에서는 ODBC만 명시적으로 설치해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC는 Windows 운영 체제에 포함 되어 있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  
   
- 다음 섹션에서는 ODBC를 설치하고 구성하는 데 사용되는 구성 요소에 대한 정보를 제공합니다.  
+ 다음 섹션에서는 ODBC를 설치 및 구성 하는 데 사용 되는 구성 요소에 대 한 정보를 제공 합니다.  
   
 -   [관리 프로그램](../../../odbc/reference/install/administration-program.md)  
   
