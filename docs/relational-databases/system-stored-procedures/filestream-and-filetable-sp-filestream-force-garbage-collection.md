@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942282"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
@@ -49,8 +49,7 @@ sp_filestream_force_garbage_collection
 > `@dbname`는 **sysname**입니다. 지정하지 않으면 현재 데이터베이스로 가정합니다.  
   
  `[ @filename = ] 'logical_file_name'`  
- 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. 
-  `@filename` 는 선택 사항입니다. 논리적 파일 이름이 지정 되지 않은 경우에는 가비지 수집기가 지정 된 데이터베이스의 모든 FILESTREAM 컨테이너를 정리 합니다.  
+ 가비지 수집기를 실행할 FILESTREAM 컨테이너의 논리적 이름을 지정합니다. `@filename`는 선택 사항입니다. 논리적 파일 이름이 지정 되지 않은 경우에는 가비지 수집기가 지정 된 데이터베이스의 모든 FILESTREAM 컨테이너를 정리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
   

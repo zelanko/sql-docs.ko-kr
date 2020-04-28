@@ -17,10 +17,10 @@ ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967329"
 ---
 # <a name="append-method-adox-columns"></a>Append 메서드(ADOX 열)
@@ -34,14 +34,14 @@ Columns.Append Column [,Type] [,DefinedSize]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *열*  
+ *열의*  
  추가할 **열** 개체 또는 만들고 추가할 열 이름입니다.  
   
- *형식*  
- (선택 사항) 열의 데이터 형식을 지정 하는 **Long** 값입니다. *Type* 매개 변수는 **Column** 개체의 [type](../../../ado/reference/adox-api/type-property-column-adox.md) 속성에 해당 합니다.  
+ *Type*  
+ 선택 사항입니다. 열의 데이터 형식을 지정 하는 **Long** 값입니다. *Type* 매개 변수는 **Column** 개체의 [type](../../../ado/reference/adox-api/type-property-column-adox.md) 속성에 해당 합니다.  
   
  *DefinedSize*  
- (선택 사항) 열의 크기를 지정 하는 **Long** 값입니다. *DefinedSize* 매개 변수는 **Column** 개체의 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성에 해당 합니다.  
+ 선택 사항입니다. 열의 크기를 지정 하는 **Long** 값입니다. *DefinedSize* 매개 변수는 **Column** 개체의 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성에 해당 합니다.  
   
 > [!NOTE]
 >  [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션에 이미 추가 된 [테이블](../../../ado/reference/adox-api/table-object-adox.md) **에 열이** 없는 경우 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 의 **Columns** 컬렉션에 **열** 을 추가할 때 오류가 발생 합니다.  
@@ -59,4 +59,4 @@ Columns.Append Column [,Type] [,DefinedSize]
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX 보기)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

@@ -14,10 +14,10 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984541"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA 시작(MySQLToSQL)
@@ -37,7 +37,7 @@ SSMA가 설치 되 고 사용이 허가 된 후 SSMA를 사용 하 여 MySQL 데
   
 마이그레이션을 시작 하려면 다음을 수행 해야 합니다.  
   
-1.  새 프로젝트 만들기  
+1.  새 프로젝트를 만듭니다.  
   
 2.  MySQL 데이터베이스에 연결 합니다.  
   
@@ -96,7 +96,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
   
 |||  
 |-|-|  
-|**단추**|**칩셋용으로**|  
+|**단추**|**기능**|  
 |**보고서 만들기**|선택한 MySQL 개체를 SQL Server 또는 Azure SQL DB 개체로 변환한 후 변환의 성공 여부를 보여 주는 보고서를 만듭니다.<br /><br />MySQL 메타 데이터 탐색기에서 개체를 선택 하지 않은 경우에는이 명령을 사용할 수 없습니다.|  
 |**스키마 변환**|선택한 MySQL 개체를 SQL Server 또는 Azure SQL DB 개체로 변환 합니다.<br /><br />MySQL 메타 데이터 탐색기에서 개체를 선택 하지 않은 경우에는이 명령을 사용할 수 없습니다.|  
 |**데이터 마이그레이션**|MySQL 데이터베이스에서 SQL Server 또는 Azure SQL DB로 데이터를 마이그레이션합니다. 이 명령을 실행 하기 전에 MySQL 스키마를 SQL Server 또는 Azure SQL DB 스키마로 변환한 다음 개체를 SQL Server 또는 Azure SQL DB로 로드 해야 합니다.<br /><br />MySQL 메타 데이터 탐색기에서 개체를 선택 하지 않은 경우에는이 명령을 사용할 수 없습니다.|  
@@ -108,7 +108,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 |||  
 |-|-|  
 |**메뉴**|**설명**|  
-|**파일**|프로젝트 작업, MySQL에 연결, SQL Server 또는 Azure SQL DB에 연결에 대 한 명령이 포함 되어 있습니다.|  
+|**최근에 사용한 파일**|프로젝트 작업, MySQL에 연결, SQL Server 또는 Azure SQL DB에 연결에 대 한 명령이 포함 되어 있습니다.|  
 |**편집**|세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다. **책갈피 관리** 대화 상자를 열려면 편집 메뉴에서 책갈피 관리를 클릭 합니다. 대화 상자에서 기존 책갈피의 목록이 표시 됩니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. MySQL 메타 데이터 탐색기와 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기 간에 개체를 동기화 합니다. 에는 **출력과** **오류 목록** 창 및 레이아웃을 사용 하 여 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 됩니다.|  
 |**도구**|보고서를 만들고, 스키마를 변환 하 고, 데이터베이스에서 새로 고치고, 개체 및 데이터를 마이그레이션하고, 스크립트로 저장 하는 명령을 포함 합니다. 또한 **전역 설정, 기본 프로젝트 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  

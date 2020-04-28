@@ -16,10 +16,10 @@ ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946103"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery

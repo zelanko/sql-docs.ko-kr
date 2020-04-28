@@ -19,21 +19,21 @@ ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966846"
 ---
 # <a name="columns-collection-adox"></a>Columns 컬렉션(ADOX)
 테이블, 인덱스 또는 키의 모든 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Columns** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-columns.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **Columns** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-columns.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 열을 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 열에 액세스 합니다.  
   
@@ -56,4 +56,4 @@ ms.locfileid: "67966846"
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog 속성 예제 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [SortOrder 속성 예제 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

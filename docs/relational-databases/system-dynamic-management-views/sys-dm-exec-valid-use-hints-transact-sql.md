@@ -19,10 +19,10 @@ ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936799"
 ---
 # <a name="sysdm_exec_valid_use_hints-transact-sql"></a>sys. dm_exec_valid_use_hints (Transact-sql)
@@ -42,6 +42,6 @@ S p [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 1에서 도입 되었�
   
 ## <a name="see-also"></a>참고 항목  
     
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

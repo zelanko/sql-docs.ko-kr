@@ -10,10 +10,10 @@ ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1e7880d0bd7bc6de821e4a7ac8bef68ec1e7e7fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989525"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>전역 설정 (출력 창) (DB2ToSQL)

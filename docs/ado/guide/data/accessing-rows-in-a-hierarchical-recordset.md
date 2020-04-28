@@ -14,10 +14,10 @@ ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926351"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>계층적 레코드 집합의 행 액세스 (예제)
@@ -68,4 +68,4 @@ End Sub
 ```
 
 ## <a name="see-also"></a>참고 항목
- [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md) [필드 개체](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ado)](../../../ado/reference/ado-api/fields-collection-ado.md) [공식 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md) [OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ado 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [필요한 공급자 데이터 셰이핑](../../../ado/guide/data/required-providers-for-data-shaping.md) [셰이프 추가 절](../../../ado/guide/data/shape-append-clause.md) [셰이프 명령](../../../ado/guide/data/shape-commands-in-general.md) [](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [데이터 셰이핑 개요](../../../ado/guide/data/data-shaping-overview.md) [필드 개체](../../../ado/reference/ado-api/field-object.md) [필드 컬렉션 (ado)](../../../ado/reference/ado-api/fields-collection-ado.md) [공식 셰이프 문법](../../../ado/guide/data/formal-shape-grammar.md) [OLE DB 용 Microsoft 데이터 셰이핑 서비스 (ado 서비스 공급자)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [레코드 집합 개체 (ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [필요한 공급자 데이터 셰이핑](../../../ado/guide/data/required-providers-for-data-shaping.md) [셰이프 추가 절](../../../ado/guide/data/shape-append-clause.md) [셰이프 명령](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE Clause](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md)

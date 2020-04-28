@@ -16,10 +16,10 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967307"
 ---
 # <a name="append-method-adox-indexes"></a>Append 메서드(ADOX 인덱스)
@@ -33,7 +33,7 @@ Indexes.Append Index [,Columns]
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱싱할*  
+ *인덱스*  
  추가할 **인덱스** 개체 또는 만들고 추가할 인덱스의 이름입니다.  
   
  *열*  
@@ -55,4 +55,4 @@ Indexes.Append Index [,Columns]
  [Append 메서드 (ADOX 프로시저)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append 메서드 (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append 메서드(ADOX 보기)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)

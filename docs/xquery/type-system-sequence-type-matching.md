@@ -16,16 +16,16 @@ ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946221"
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템 - 시퀀스 형식 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 식 값은 항상 0개 이상의 항목에 대한 시퀀스입니다. 항목은 원자 값이거나 노드일 수 있습니다. 시퀀스 유형은 쿼리 식에 의해 반환된 시퀀스 유형을 특정 유형과 일치하는지 검색하는 기능을 참조합니다. 다음은 그 예입니다.  
+  XQuery 식 값은 항상 0개 이상의 항목에 대한 시퀀스입니다. 항목은 원자 값이거나 노드일 수 있습니다. 시퀀스 유형은 쿼리 식에 의해 반환된 시퀀스 유형을 특정 유형과 일치하는지 검색하는 기능을 참조합니다. 예를 들면 다음과 같습니다.  
   
 -   식의 값이 원자 값인 경우 값이 integer, decimal 또는 string 유형인지 여부를 확인할 수 있습니다.  
   

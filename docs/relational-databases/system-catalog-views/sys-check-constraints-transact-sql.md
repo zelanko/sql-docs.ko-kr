@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2212ebe8551f27c880ebf0c674f4b8d134617b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942500"
 ---
 # <a name="syscheck_constraints-transact-sql"></a>sys.check_constraints(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "67942500"
 
   CHECK 제약 조건에 해당 하는 각 개체에 대 한 행을 포함 합니다. 여기에는 **sys. type** = ' C '가 포함 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**is_disabled**|**bit**|CHECK 제약 조건이 비활성화되었습니다.|  

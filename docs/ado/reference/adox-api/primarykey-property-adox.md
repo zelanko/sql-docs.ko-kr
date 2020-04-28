@@ -20,10 +20,10 @@ ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965549"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 속성(ADOX)
@@ -38,8 +38,8 @@ ms.locfileid: "67965549"
  이 속성은 이미 컬렉션에 추가 된 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체에서 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [PrimaryKey 및 Unique 속성 예제 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

@@ -18,10 +18,10 @@ ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946289"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
@@ -39,9 +39,9 @@ ms.locfileid: "67946289"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- `instance of` 연산자 `Occurrence indicator`는 결과 시퀀스의 카디널리티, 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]물음표 (**?)** 발생 표시만 지원 됩니다. **?** 발생 표시기는가 `Expression` 0 개 또는 1 개 항목을 반환할 수 있음을 나타냅니다. 그렇다면 **** 발생 표시기가 지정 된 `instance of` 경우에는가 `Expression` singleton을 반환 하는지 `SequenceType`또는 빈 시퀀스를 `Expression` 반환 하는지 여부에 관계 없이 형식이 지정 된와 일치 하는 경우 True를 반환 합니다.  
+ `instance of` 연산자 `Occurrence indicator`는 결과 시퀀스의 카디널리티, 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]물음표 (**?)** 발생 표시만 지원 됩니다. **?** 발생 표시기는가 `Expression` 0 개 또는 1 개 항목을 반환할 수 있음을 나타냅니다. 그렇다면 **?** 발생 표시기가 지정 된 `instance of` 경우에는가 `Expression` singleton을 반환 하는지 `SequenceType`또는 빈 시퀀스를 `Expression` 반환 하는지 여부에 관계 없이 형식이 지정 된와 일치 하는 경우 True를 반환 합니다.  
   
- 그렇다면 **** 발생 표시기가 지정 되지 않은 `sequence of` 경우 `Expression` 형식이 `Type` 지정 된와 일치 하 고 `Expression` 단일 항목을 반환 하는 경우에만 True를 반환 합니다.  
+ 그렇다면 **?** 발생 표시기가 지정 되지 않은 `sequence of` 경우 `Expression` 형식이 `Type` 지정 된와 일치 하 고 `Expression` 단일 항목을 반환 하는 경우에만 True를 반환 합니다.  
   
  **참고** 더하기 기호 (**+**)와 별표 (**&#42;**) 발생 지표는에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]지원 되지 않습니다.  
   
@@ -163,8 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- 
-  `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, <`TestElement`>의 값은 정수 형식입니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
+ `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, <`TestElement`>의 값은 정수 형식입니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -311,8 +310,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   **스키마 요소 ()** 및 **스키마 특성 ()** 시퀀스 형식은 `instance of` 연산자와 비교할 때 지원 되지 않습니다.  
   
--   
-  `(1,2) instance of xs:integer*`와 같은 전체 시퀀스는 지원되지 않습니다.  
+-   `(1,2) instance of xs:integer*`와 같은 전체 시퀀스는 지원되지 않습니다.  
   
 -   와 `element(ElementName, TypeName)`같이 형식 이름을 지정 하는 **요소 ()** 시퀀스 형식의 폼을 사용 하는 경우에는 물음표 (?)로 형식을 정규화 해야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는를 사용 `instance of`하 여 **xsi: nil** 속성의 런타임 검색을 지원 하지 않습니다.  
   
@@ -334,8 +332,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `AtomicType` 뒤에 물음표(?)가 필요합니다. 예를 들어 다음 쿼리와 같이 문자열 값을 정수로 `"2" cast as xs:integer?` 변환 합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `AtomicType` 뒤에 물음표(?)가 필요합니다. 예를 들어 다음 쿼리와 같이 문자열 값을 정수로 `"2" cast as xs:integer?` 변환 합니다.  
   
 ```  
 declare @x xml  
@@ -354,8 +351,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 이 쿼리에서는 명시적으로 **data ()** 를 사용 하지 않아도 됩니다. 
-  `cast as` 식은 입력 식에 암시적 원자화를 수행합니다.  
+ 이 쿼리에서는 명시적으로 **data ()** 를 사용 하지 않아도 됩니다. `cast as` 식은 입력 식에 암시적 원자화를 수행합니다.  
   
 ### <a name="constructor-functions"></a>생성자 함수  
  원자성 유형 생성자 함수를 사용할 수 있습니다. 예를 들어, `cast as` 연산자 `"2" cast as xs:integer?`를 사용 하는 대신 다음 예제와 같이 **xs: integer ()** 생성자 함수를 사용할 수 있습니다.  

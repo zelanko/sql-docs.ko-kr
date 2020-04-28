@@ -13,10 +13,10 @@ ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949749"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies 컬렉션 속성, 메서드 및 이벤트

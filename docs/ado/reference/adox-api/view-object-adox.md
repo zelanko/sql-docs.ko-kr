@@ -16,10 +16,10 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964842"
 ---
 # <a name="view-object-adox"></a>보기 개체(ADOX)
@@ -38,7 +38,7 @@ ms.locfileid: "67964842"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [보기 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
+-   [View 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Views 및 Fields 컬렉션 예제 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   

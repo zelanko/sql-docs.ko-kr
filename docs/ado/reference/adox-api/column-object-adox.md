@@ -16,10 +16,10 @@ ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966915"
 ---
 # <a name="column-object-adox"></a>열 개체(ADOX)
@@ -59,7 +59,7 @@ ms.locfileid: "67966915"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [열 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
+-   [Column 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/column-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Columns 및 Tables Append 메서드, Name 속성 예제 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   

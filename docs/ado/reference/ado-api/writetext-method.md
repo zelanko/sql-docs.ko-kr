@@ -17,10 +17,10 @@ ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947493"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
@@ -34,11 +34,11 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *데이터*  
+ *Data*  
  쓸 문자 텍스트를 포함 하는 **문자열** 값입니다.  
   
  *옵션*  
- (선택 사항) 지정 된 문자열의 끝에 줄 구분 기호 문자를 써야 하는지 여부를 지정 하는 [Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md) 값입니다.  
+ 선택 사항입니다. 지정 된 문자열의 끝에 줄 구분 기호 문자를 써야 하는지 여부를 지정 하는 [Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명  
  지정 된 문자열은 각 문자열 사이에 공백이 나 문자를 넣지 않고 **Stream** 개체에 기록 됩니다.  

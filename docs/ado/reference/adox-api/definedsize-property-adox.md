@@ -20,10 +20,10 @@ ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966441"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 속성(ADOX)
@@ -38,7 +38,7 @@ ms.locfileid: "67966441"
  컬렉션에 이미 추가 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [DefinedSize 속성 예제(VB)](../../../ado/reference/adox-api/definedsize-property-example-vb.md)

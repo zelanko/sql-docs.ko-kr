@@ -18,10 +18,10 @@ ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fccf3e82fbf5958e0293c462961d8aa9b459e594
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947771"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "67947771"
 
   **MSpublication_access** 테이블은 특정 게시 또는 게시자에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 액세스 권한이 있는 각 로그인에 대 한 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|게시의 ID입니다.|  
 |**로그인**|**sysname**|게시자와 배포자 양쪽에 모두 존재하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정입니다.|  

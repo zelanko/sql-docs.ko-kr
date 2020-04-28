@@ -18,10 +18,10 @@ ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990083"
 ---
 # <a name="log_shipping_monitor_alert-transact-sql"></a>log_shipping_monitor_alert(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67990083"
 |**alert_job_id**|**uniqueidentifier**|로그 전달 경고 작업의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 ID입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_add_log_shipping_alert_job &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_alert_job &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-alert-job-transact-sql.md)   
  [Transact-sql&#41;sp_help_log_shipping_alert_job &#40;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-alert-job-transact-sql.md)   

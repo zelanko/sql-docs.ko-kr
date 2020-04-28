@@ -18,10 +18,10 @@ ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966577"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 속성(ADOX)
@@ -37,7 +37,7 @@ ms.locfileid: "67966577"
   
 ||||  
 |-|-|-|  
-|[프로시저 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[보기 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [DateCreated 및 DateModified 속성 예제 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   

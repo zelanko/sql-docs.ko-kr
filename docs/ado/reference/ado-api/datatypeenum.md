@@ -16,16 +16,16 @@ ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933222"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md)또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)의 데이터 형식을 지정 합니다. 해당 OLE DB 형식 표시기는 다음 표의 설명 열에 괄호 안에 표시 됩니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|다른 데이터 형식의 배열을 나타내는 플래그 값으로, 항상 다른 데이터 형식 상수와 결합 됩니다. ADOX에는 적용 되지 않습니다.|  
 |**adBigInt**|20|부호 있는 8 바이트 정수 (DBTYPE_I8)를 나타냅니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "67933222"
 |**adDBTime**|134|시간 값 (hhmmss) (DBTYPE_DBTIME)을 나타냅니다.|  
 |**adDBTimeStamp**|135|날짜/시간 스탬프 (yyyymmddhhmmss + billionths의 분수)를 나타냅니다 (DBTYPE_DBTIMESTAMP).|  
 |**adDecimal**|14|고정 전체 자릿수와 소수 자릿수가 있는 정확한 숫자 값 (DBTYPE_DECIMAL)을 나타냅니다.|  
-|**Addououa**|5|배정밀도 부동 소수점 값 (DBTYPE_R8)을 나타냅니다.|  
+|**adDouble**|5|배정밀도 부동 소수점 값 (DBTYPE_R8)을 나타냅니다.|  
 |**adEmpty**|0|값 (DBTYPE_EMPTY)을 지정 하지 않습니다.|  
 |**adError**|10|32 비트 오류 코드 (DBTYPE_ERROR)를 나타냅니다.|  
 |**adFileTime**|64|1601 (DBTYPE_FILETIME) 1 월 1 일 이후 100 나노초 간격의 수를 나타내는 64 비트 값을 나타냅니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67933222"
 |**adIDispatch**|9|COM 개체 (DBTYPE_IDISPATCH)의 **IDispatch** 인터페이스에 대 한 포인터를 나타냅니다.<br /><br /> **참고** 이 데이터 형식은 현재 ADO에서 지원 되지 않습니다. 사용 하면 예기치 않은 결과가 발생할 수 있습니다.|  
 |**adInteger**|3|부호 있는 4 바이트 정수 (DBTYPE_I4)를 나타냅니다.|  
 |**adIUnknown**|13|COM 개체 (DBTYPE_IUNKNOWN)의 **IUnknown** 인터페이스에 대 한 포인터를 나타냅니다.<br /><br /> **참고** 이 데이터 형식은 현재 ADO에서 지원 되지 않습니다. 사용 하면 예기치 않은 결과가 발생할 수 있습니다.|  
-|**Ad이상 Varbinary**|205|긴 이진 값을 나타냅니다.|  
+|**adLongVarBinary**|205|긴 이진 값을 나타냅니다.|  
 |**adLongVarChar**|201|긴 문자열 값을 나타냅니다.|  
 |**adLongVarWChar**|203|Long null로 끝나는 유니코드 문자열 값을 나타냅니다.|  
 |**adNumeric**|131|고정 전체 자릿수와 소수 자릿수가 있는 정확한 숫자 값 (DBTYPE_NUMERIC)을 나타냅니다.|  
@@ -60,7 +60,7 @@ ms.locfileid: "67933222"
 |**adUnsignedInt**|19|부호 없는 4 바이트 정수 (DBTYPE_UI4)를 나타냅니다.|  
 |**adUnsignedSmallInt**|18|부호 없는 2 바이트 정수 (DBTYPE_UI2)를 나타냅니다.|  
 |**adUnsignedTinyInt**|17|부호 없는 1 바이트 정수 (DBTYPE_UI1)를 나타냅니다.|  
-|**adUserDefined 여**|132|사용자 정의 변수 (DBTYPE_UDT)를 나타냅니다.|  
+|**adUserDefined**|132|사용자 정의 변수 (DBTYPE_UDT)를 나타냅니다.|  
 |**adVarBinary**|204|이진 값을 나타냅니다.|  
 |**adVarChar**|200|문자열 값을 나타냅니다.|  
 |**adVariant**|12|Automation **Variant** (DBTYPE_VARIANT)를 나타냅니다.<br /><br /> **참고** 이 데이터 형식은 현재 ADO에서 지원 되지 않습니다. 사용 하면 예기치 않은 결과가 발생할 수 있습니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "67933222"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums|  

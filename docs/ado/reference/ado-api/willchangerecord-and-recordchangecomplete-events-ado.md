@@ -19,10 +19,10 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938675"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
@@ -38,7 +38,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>매개 변수  
  *adReason*  
- 이 이벤트의 이유를 지정 하는 [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) 값입니다. 해당 값은 **Adrsnaddnew**, **adrsnaddnew**, **adrsnaddnew**, adRsnUndoUpdate, **adrsnaddnew**, **** **adrsnaddnew 삭제**하거나 **adrsnfirstchange**일 수 있습니다.  
+ 이 이벤트의 이유를 지정 하는 [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) 값입니다. 해당 값은 **Adrsnaddnew**, **adrsnaddnew**, **adrsnaddnew**, adRsnUndoUpdate, **adrsnaddnew**, **adRsnUndoUpdate** **adrsnaddnew 삭제**하거나 **adrsnfirstchange**일 수 있습니다.  
   
  *cRecords*  
  변경 된 레코드 수 (영향을 받음)를 나타내는 **Long** 값입니다.  

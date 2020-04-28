@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946487"
 ---
 # <a name="path-expressions---specifying-axis"></a>경로 식 - 축 지정
@@ -41,17 +41,16 @@ ms.locfileid: "67946487"
   
  자세한 내용은 [XQuery&#41;&#40;경로 식 ](../xquery/path-expressions-xquery.md)을 참조 하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 XQuery 구현은 다음 축 단계를 지원합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 XQuery 구현은 다음 축 단계를 지원합니다.  
   
 |축|Description|  
 |----------|-----------------|  
-|**자식**|컨텍스트 노드의 자식을 반환합니다.|  
-|**자식**|컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
+|**child**|컨텍스트 노드의 자식을 반환합니다.|  
+|**descendant**|컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
 |**부모**|컨텍스트 노드의 부모를 반환합니다.|  
 |**특성도**|컨텍스트 노드의 특성을 반환합니다.|  
 |**자체**|컨텍스트 노드 자신을 반환합니다.|  
-|**하위 항목 또는-self**|컨텍스트 노드와 해당 컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
+|**descendant-or-self**|컨텍스트 노드와 해당 컨텍스트 노드의 모든 하위 노드를 반환합니다.|  
   
  **부모** 축을 제외한 모든 축은 전방 축입니다. **부모** 축은 문서 계층 구조에서 뒤로 검색 되기 때문에 역방향 축입니다. 예를 들어 상대 경로 식 `child::ProductDescription/child::Summary`에는 두 단계가 있는데 각 단계는 하나의 `child` 축을 지정합니다. 첫 번째 단계에서는 컨텍스트 \<노드의 제품 설명> 요소 자식을 검색 합니다. 각 \<제품 설명> 요소 노드에 대해 두 번째 단계는 \<요약> 요소 노드 자식을 검색 합니다.  
   
@@ -73,7 +72,7 @@ WHERE ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   Xml `query()` 데이터 형식의 메서드 **** 는 경로 식을 지정 합니다.  
+-   Xml `query()` 데이터 형식의 메서드 **xml** 는 경로 식을 지정 합니다.  
   
 -   경로 식의 단계는 모두 `child` 축과 노드 이름, `ProductDescription`과 `Features`를 노드 테스트로서 지정합니다. 노드 테스트에 대 한 자세한 내용은 [경로 식에서 노드 테스트 지정 단계](../xquery/path-expressions-specifying-node-test.md)를 참조 하세요.  
   
@@ -187,8 +186,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- 쿼리는 FLWOR 문에서 반복기 변수 `$f`를 설정하여 `<Features>` 요소의 요소 자식을 반환합니다. 자세한 내용은 [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)를 참조 하세요. 
-  `return` 절은 각 기능에 대해 다음 형식으로 XML을 작성합니다.  
+ 쿼리는 FLWOR 문에서 반복기 변수 `$f`를 설정하여 `<Features>` 요소의 요소 자식을 반환합니다. 자세한 내용은 [FLWOR 문 및 반복 &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)를 참조 하세요. `return` 절은 각 기능에 대해 다음 형식으로 XML을 작성합니다.  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

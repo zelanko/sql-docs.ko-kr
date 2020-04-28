@@ -15,10 +15,10 @@ ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67941982"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>개체 계층 구조 구문(Transact-SQL)
@@ -63,8 +63,7 @@ ms.locfileid: "67941982"
   
  *TraversedObject* 목록의 항목이 OLE 개체를 반환 하지 않는 경우 오류가 발생 합니다.  
   
- 
-  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE 개체 구문에 대한 자세한 내용은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 설명서를 참조하십시오.  
+ [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] OLE 개체 구문에 대한 자세한 내용은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 설명서를 참조하십시오.  
   
  HRESULT 반환 코드에 대 한 자세한 내용은 [sp_OACreate &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md)를 참조 하세요.  
   

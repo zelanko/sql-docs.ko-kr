@@ -24,10 +24,10 @@ ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946208"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
@@ -72,9 +72,7 @@ WHERE ProductModelID=7
   
 -   **Xdt: dayTimeDuration** 및 **xdt: yearMonthDuration** 형식은 지원 되지 않습니다.  
   
- 다음 예에서는 형식화되지 않은 XML 변수에 대해 쿼리가 지정됩니다. 
-  `data(/a[1]`) 식은 원자 값의 시퀀스를 반환합니다. 
-  `data()` 함수는 `<a>` 요소의 형식화된 값을 반환합니다. 쿼리 중인 XML이 형식화되지 않았기 때문에 반환된 값의 유형은 `xdt:untypedAtomic`입니다. 따라서 `instance of`는 True를 반환합니다.  
+ 다음 예에서는 형식화되지 않은 XML 변수에 대해 쿼리가 지정됩니다. `data(/a[1]`) 식은 원자 값의 시퀀스를 반환합니다. `data()` 함수는 `<a>` 요소의 형식화된 값을 반환합니다. 쿼리 중인 XML이 형식화되지 않았기 때문에 반환된 값의 유형은 `xdt:untypedAtomic`입니다. 따라서 `instance of`는 True를 반환합니다.  
   
 ```  
 DECLARE @x xml  
@@ -82,8 +80,7 @@ SET @x='<a>20</a>'
 SELECT @x.query( 'data(/a[1]) instance of xdt:untypedAtomic' )  
 ```  
   
- 형식화된 값을 검색하는 대신 다음 예의 식(`/a[1]`)은 `<a>` 요소의 시퀀스를 반환합니다. 
-  `instance of` 식은 요소 테스트를 사용하여 식에 의해 반환된 값이 `xdt:untyped type`의 요소 노드인지 확인합니다.  
+ 형식화된 값을 검색하는 대신 다음 예의 식(`/a[1]`)은 `<a>` 요소의 시퀀스를 반환합니다. `instance of` 식은 요소 테스트를 사용하여 식에 의해 반환된 값이 `xdt:untyped type`의 요소 노드인지 확인합니다.  
   
 ```  
 DECLARE @x xml  

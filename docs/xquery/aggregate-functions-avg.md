@@ -16,10 +16,10 @@ ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985998"
 ---
 # <a name="aggregate-functions---avg"></a>집계 함수 - avg
@@ -43,9 +43,9 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
   
- **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 다음은 그 예입니다.  
+ **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 예를 들면 다음과 같습니다.  
   
- **합계 (** *$arg* **) div 수 (** *$arg* **)**  
+ **sum(** *$arg* **) div count(** *$arg* **)**  
   
  *$Arg* 빈 시퀀스인 경우 빈 시퀀스가 반환 됩니다.  
   

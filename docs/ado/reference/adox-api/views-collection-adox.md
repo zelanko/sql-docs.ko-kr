@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964774"
 ---
 # <a name="views-collection-adox"></a>Views 컬렉션(ADOX)
 카탈로그의 모든 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Views** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **Views** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 뷰를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 뷰에 액세스 합니다.  
   
@@ -52,4 +52,4 @@ ms.locfileid: "67964774"
  [Views Delete 메서드 예제 (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views Refresh 메서드 예제 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [보기 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

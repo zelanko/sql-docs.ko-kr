@@ -17,10 +17,10 @@ ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945992"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 함수
@@ -32,7 +32,7 @@ ms.locfileid: "67945992"
   
  다음 표에서는 **xml**데이터 형식에 대해 지원 되는 XQuery 함수를 보여 줍니다.  
   
-|Category|함수 이름|  
+|범주|함수 이름|  
 |--------------|-------------------|  
 |[숫자 값에 대 한 함수](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
 ||[평면](../xquery/numeric-values-functions-floor.md)|  
@@ -55,11 +55,11 @@ ms.locfileid: "67945992"
 |[집계 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[매출](../xquery/aggregate-functions-avg.md)|  
 ||[일별](../xquery/aggregate-functions-min.md)|  
-||[최대값](../xquery/aggregate-functions-max.md)|  
+||[max](../xquery/aggregate-functions-max.md)|  
 ||[총합](../xquery/aggregate-functions-sum.md)|  
 |[생성자 함수는 XQuery를 &#40;&#41;](../xquery/constructor-functions-xquery.md)|[생성자 함수](../xquery/constructor-functions-xquery.md)|  
-|[데이터 접근자 함수](../xquery/data-accessor-functions.md)|[문자열](../xquery/data-accessor-functions-string-xquery.md)|  
-||[데이터로](../xquery/data-accessor-functions-data-xquery.md)|  
+|[데이터 접근자 함수](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+||[데이터](../xquery/data-accessor-functions-data-xquery.md)|  
 |[부울 생성자 함수는 XQuery를 &#40;&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)|[true 함수(XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[false 함수(XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  
 |[Qname &#40;XQuery&#41;와 관련 된 함수](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)|[expanded-QName(XQuery)](../xquery/functions-related-to-qnames-expanded-qname.md)|  
@@ -70,7 +70,7 @@ ms.locfileid: "67945992"
   
 ## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md)   
- [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [XQuery 언어 참조 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   
   

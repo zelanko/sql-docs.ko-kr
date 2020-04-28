@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946421"
 ---
 # <a name="path-expressions---specifying-node-test"></a>경로 식 - 노드 테스트 지정
@@ -92,16 +92,12 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>노드 테스트로서의 노드 유형  
  요소 노드가 아닌 노드 유형을 쿼리하려면 노드 유형 테스트를 사용합니다. 다음 표에 표시된 것처럼 사용 가능한 노드 유형 테스트는 네 가지입니다.  
   
-|노드 유형|반환|예제|  
+|노드 형식|반환|예제|  
 |---------------|-------------|-------------|  
-|`comment()`|주석 노드에 대해 True|
-  `following::comment()`는 컨텍스트 노드 다음에 나타나는 모든 주석 노드를 선택합니다.|  
-|`node()`|모든 종류의 노드에 대해 True|
-  `preceding::node()`는 컨텍스트 노드 이전에 나타나는 모든 노드를 선택합니다.|  
-|`processing-instruction()`|처리 명령 노드에 대해 True|
-  `self::processing instruction()`은 컨텍스트 노드 내의 모든 처리 명령 노드를 선택합니다.|  
-|`text()`|텍스트 노드에 대해 True|
-  `child::text()`는 컨텍스트 노드의 자식인 텍스트 노드를 선택합니다.|  
+|`comment()`|주석 노드에 대해 True|`following::comment()`는 컨텍스트 노드 다음에 나타나는 모든 주석 노드를 선택합니다.|  
+|`node()`|모든 종류의 노드에 대해 True|`preceding::node()`는 컨텍스트 노드 이전에 나타나는 모든 노드를 선택합니다.|  
+|`processing-instruction()`|처리 명령 노드에 대해 True|`self::processing instruction()`은 컨텍스트 노드 내의 모든 처리 명령 노드를 선택합니다.|  
+|`text()`|텍스트 노드에 대해 True|`child::text()`는 컨텍스트 노드의 자식인 텍스트 노드를 선택합니다.|  
   
  text() 또는 comment()와 같은 노드 유형이 노드 테스트로 지정되어 있는 경우 이 단계에서는 축의 주 노드 종류에 관계없이 지정된 종류의 노드만 반환합니다. 예를 들어 다음 경로 식은 컨텍스트 노드의 주석 노드 자식만 반환합니다.  
   

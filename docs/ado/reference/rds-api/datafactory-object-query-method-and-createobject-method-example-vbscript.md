@@ -17,10 +17,10 @@ ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964361"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>DataFactory 개체, Query 메서드 및 CreateObject 메서드 예제(VBScript)

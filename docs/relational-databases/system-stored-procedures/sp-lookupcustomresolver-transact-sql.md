@@ -16,10 +16,10 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937902"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
@@ -68,7 +68,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_lookupcustomresolver**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [병합 동기화 중 비즈니스 논리 실행](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [병합 아티클에 대 한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [병합 아티클 해결 프로그램 지정](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

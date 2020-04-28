@@ -17,21 +17,21 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965139"
 ---
 # <a name="tables-collection-adox"></a>Tables 컬렉션(ADOX)
 카탈로그의 모든 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Tables** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-tables.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **Tables** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-tables.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 테이블을 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 테이블에 액세스 합니다.  
   
@@ -53,4 +53,4 @@ ms.locfileid: "67965139"
  [Connection Close 메서드, Table Type 속성 예제 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Catalog 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

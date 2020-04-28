@@ -21,20 +21,18 @@ ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942060"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하거나 다시 시작합니다.  
   
- 이 저장 프로시저를 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하고 다시 시작할 수 있습니다. 이는 작업이 다시 시작될 때 모든 구성 설정이 그대로 보존되도록 합니다. 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 일시 중지되면 보존 기간이 적용되지 않습니다. 이는 파일이 스토리지에서 삭제되었는지 여부 또는 백업 파일이 손상되었거나 로그 체인이 끊어졌는지를 확인하기 위한 점검이 없음을 의미합니다.  
+ 이 저장 프로시저를 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하고 다시 시작할 수 있습니다. 이는 작업이 다시 시작될 때 모든 구성 설정이 그대로 보존되도록 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 일시 중지되면 보존 기간이 적용되지 않습니다. 이는 파일이 스토리지에서 삭제되었는지 여부 또는 백업 파일이 손상되었거나 로그 체인이 끊어졌는지를 확인하기 위한 점검이 없음을 의미합니다.  
   
 
   
@@ -47,10 +45,9 @@ EXEC managed_backup.sp_backup_master_switch
                      [@new_state = ] { 0 | 1}  
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @state  
- 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state 매개 변수가 **비트**입니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state 매개 변수가 **비트**입니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,8 +69,7 @@ Go
   
 ```  
   
- 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 다시 시작하는 데 다음 예를 사용할 수 있습니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 다시 시작하는 데 다음 예를 사용할 수 있습니다.  
   
 ```  
 Use msdb;  
@@ -84,6 +80,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure에 대 한 관리 되는 백업 SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

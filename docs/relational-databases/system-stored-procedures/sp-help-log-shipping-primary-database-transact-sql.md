@@ -18,10 +18,10 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937912"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database(Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|주 서버의 트랜잭션 로그 백업 파일이 저장되는 디렉터리입니다.|  
 |**backup_share**|백업 디렉터리의 네트워크 또는 UNC 경로입니다.|  
 |**backup_retention_period**|백업 디렉터리에서 로그 백업 파일이 삭제되기까지 보관되는 기간(분)입니다.|  
-|**backup_compression**|로그 전달 구성에서 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 사용 하는지 여부를 나타냅니다.<br /><br /> **0** = 사용 안 함 로그 백업을 압축하지 않습니다.<br /><br /> **1** = 사용 항상 로그 백업을 압축합니다.<br /><br /> **2** = [백업 압축 기본값 서버 구성 옵션](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)의 설정을 사용 합니다. 이것은 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다. 다른 버전의 경우 값은 항상 2입니다.|  
+|**backup_compression**|로그 전달 구성에서 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 사용 하는지 여부를 나타냅니다.<br /><br /> **0** = 사용 안 함 로그 백업을 압축하지 않습니다.<br /><br /> **1** = 사용 항상 로그 백업을 압축합니다.<br /><br /> **2** = [백업 압축 기본값 서버 구성 옵션](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)의 설정을 사용 합니다. 기본값입니다.<br /><br /> 백업 압축은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서만 지원됩니다. 다른 버전의 경우 값은 항상 2입니다.|  
 |**backup_job_id**|주 서버의 백업 작업과 연관된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 작업 ID입니다.|  
 |**monitor_server**|로그 전달 구성에서 모니터 서버로 사용되는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 이름입니다.|  
 |**monitor_server_security_mode**|모니터 서버 연결에 사용되는 보안 모드입니다.<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증|  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

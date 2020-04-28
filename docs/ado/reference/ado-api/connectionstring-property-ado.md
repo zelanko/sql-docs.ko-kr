@@ -16,10 +16,10 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933493"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
@@ -33,7 +33,7 @@ ms.locfileid: "67933493"
   
  ADO는 **ConnectionString** 속성에 대해 5 개의 인수를 지원 합니다. 다른 모든 인수는 ADO에서 처리 하지 않고 공급자에 게 직접 전달 됩니다. ADO에서 지 원하는 인수는 다음과 같습니다.  
   
-|인수|Description|  
+|인수|설명|  
 |--------------|-----------------|  
 |*공급자 =*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름 =*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예: 지속형 데이터 원본 개체)의 이름을 지정 합니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "67933493"
   
 |기본 ADO 공급자|Windows 운영 체제|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> 소스 코드의 가독성을 높이기 위해 연결 문자열에서 공급자 이름을 명시적으로 지정 합니다.|Windows 2000 (32 비트)<br /><br /> Windows XP (32 비트)<br /><br /> Windows 2003 서버 (32 비트)<br /><br /> Windows Vista (32 비트)<br /><br /> Windows Vista 서비스 팩 1 이상 (32 비트 및 64 비트)<br /><br /> Windows Vista 이후 windows 버전 (32 비트 및 64 비트)|  
+|MSDASQL<br /><br /> 소스 코드의 가독성을 높이기 위해 연결 문자열에서 공급자 이름을 명시적으로 지정 합니다.|Windows 2000 (32 비트)<br /><br /> Windows XP(32비트)<br /><br /> Windows 2003 서버 (32 비트)<br /><br /> Windows Vista(32비트)<br /><br /> Windows Vista 서비스 팩 1 이상 (32 비트 및 64 비트)<br /><br /> Windows Vista 이후 windows 버전 (32 비트 및 64 비트)|  
 |기본값은 없습니다.<br /><br /> ADO 응용 프로그램이 다음 운영 체제에서 실행 되 고 공급자를 명시적으로 지정 하지 않은 경우 ADO에서 다음 오류를 반환 합니다. "ADODB. 연결: 공급자가 지정 되지 않았고 지정 된 기본 공급자가 없습니다. "|Windows 2000 (64 비트)<br /><br /> Windows XP(64비트)<br /><br /> Windows 2003 서버 (64 비트)<br /><br /> Windows Vista(64비트)|  
   
 ## <a name="applies-to"></a>적용 대상  

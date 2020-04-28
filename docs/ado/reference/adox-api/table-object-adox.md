@@ -16,10 +16,10 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965165"
 ---
 # <a name="table-object-adox"></a>테이블 개체(ADOX)
@@ -57,7 +57,7 @@ Dim obj As New Table
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [테이블 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
+-   [Table 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Catalog ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   

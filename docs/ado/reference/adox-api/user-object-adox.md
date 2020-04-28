@@ -16,10 +16,10 @@ ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964973"
 ---
 # <a name="user-object-adox"></a>사용자 개체(ADOX)
@@ -44,7 +44,7 @@ ms.locfileid: "67964973"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [사용자 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
+-   [User 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   

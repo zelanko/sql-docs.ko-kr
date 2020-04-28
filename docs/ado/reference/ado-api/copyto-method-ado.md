@@ -17,14 +17,14 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933379"
 ---
 # <a name="copyto-method-ado"></a>CopyTo 메서드(ADO)
-[스트림에](../../../ado/reference/ado-api/stream-object-ado.md) 따라 지정 된 문자 또는 바이트 수를 다른 **스트림** 개체에 복사 합니다. [](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+[스트림에](../../../ado/reference/ado-api/stream-object-ado.md) 따라 지정 된 문자 또는 바이트 수를 다른 **스트림** 개체에 복사 합니다. [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="syntax"></a>구문  
   

@@ -30,10 +30,10 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986315"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>변환 된 데이터베이스 개체를 SQL Server (AccessToSQL)로 로드 하는 중
@@ -106,8 +106,7 @@ SSMA를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 **스크립트를 수정 하려면**  
   
-1.  
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 클릭합니다.  
   
 2.  **열기** 대화 상자에서 스크립트 파일을 찾아 선택한 다음 **확인**을 클릭 합니다.  
   

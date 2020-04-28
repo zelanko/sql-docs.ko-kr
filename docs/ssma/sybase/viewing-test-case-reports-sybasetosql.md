@@ -12,10 +12,10 @@ ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944604"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>테스트 사례 보고서 보기(SybaseToSQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67944604"
 **필수 조건 오류**  
 **필수 조건** 단계에서 발생 한 모든 오류를 표시 합니다. 일반적으로 건너뜁니다.  
   
-**초기**  
+**초기화**  
 실행 상태를 **성공** 또는 **실패로**표시 합니다.  
   
 **테스트 개체 결과**  

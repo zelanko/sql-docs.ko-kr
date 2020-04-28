@@ -18,10 +18,10 @@ ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990048"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "67990048"
 |**sequence_number**|**int**|여러 개의 레코드에 걸친 오류 정보의 올바른 순서를 나타내는 증분값입니다.|  
 |**log_time**|**datetime**|레코드가 생성된 날짜와 시간입니다.|  
 |**log_time_utc**|**datetime**|레코드가 생성된 날짜와 시간(UTC)입니다.|  
-|**메시지**|**nvarchar**|메시지 내용입니다.|  
+|**message**|**nvarchar**|메시지 내용입니다.|  
 |**원본**|**nvarchar**|오류 메시지 또는 이벤트의 원본입니다.|  
 |**help_url**|**nvarchar**|오류에 대한 자세한 내용을 참조할 수 있는 URL(사용 가능한 경우)입니다.|  
   
@@ -52,7 +52,7 @@ ms.locfileid: "67990048"
  에이전트 세션을 식별 하려면 **agent_id**, **agent_type**및 **session_id**열을 사용 합니다. **Log_time** 기준으로 정렬 하 여 기록 된 순서 대로 오류를 확인 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;log_shipping_monitor_history_detail &#40;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
  [Transact-sql&#41;sp_cleanup_log_shipping_history &#40;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

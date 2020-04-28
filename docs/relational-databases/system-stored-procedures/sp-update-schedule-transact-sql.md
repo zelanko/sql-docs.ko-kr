@@ -18,16 +18,15 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946648"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정에 대한 설정을 변경합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -104,7 +103,7 @@ sp_update_schedule
 |값|설명(단위)|  
 |-----------|--------------------------|  
 |**1**|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -132,7 +131,7 @@ sp_update_schedule
  일정을 즉시 사용하는 모든 작업은 새 설정을 사용합니다. 그러나 일정을 변경해도 현재 실행 중인 작업은 중지되지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -167,6 +166,6 @@ GO
  [Transact-sql&#41;sp_add_jobschedule &#40;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [Transact-sql&#41;sp_delete_schedule &#40;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [Transact-sql&#41;sp_help_schedule &#40;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [Transact-sql&#41;sp_attach_schedule &#40;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

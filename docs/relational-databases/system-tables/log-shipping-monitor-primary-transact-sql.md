@@ -18,10 +18,10 @@ ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989979"
 ---
 # <a name="log_shipping_monitor_primary-transact-sql"></a>log_shipping_monitor_primary(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67989979"
   
  기록 및 모니터링과 연관된 테이블은 주 서버와 보조 서버에서도 사용됩니다.   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|로그 전달 구성의 주 데이터베이스의 ID입니다.|  
 |**primary_server**|**sysname**|로그 전달 구성의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 주 인스턴스 이름입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "67989979"
  주 서버와 관련 된 정보는 원격 모니터 서버에 저장 되는 것 외에도 주 서버에 **log_shipping_monitor_primary** 테이블에 저장 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_add_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [Transact-sql&#41;sp_change_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   
  [Transact-sql&#41;sp_delete_log_shipping_primary_database &#40;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   

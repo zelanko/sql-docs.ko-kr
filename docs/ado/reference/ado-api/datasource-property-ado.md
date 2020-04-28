@@ -16,10 +16,10 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933243"
 ---
 # <a name="datasource-property-ado"></a>DataSource 속성(ADO)
@@ -32,7 +32,7 @@ ms.locfileid: "67933243"
   
  참조 되는 개체는 **IDataSource** 인터페이스를 구현 해야 하며 **IRowset** 인터페이스를 포함 해야 합니다.  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용법  
   
 ```  
 Dim rs as New ADODB.Recordset  

@@ -18,10 +18,10 @@ ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 92f0c507b15e5a582fbcc1a12b1bccd77d08f7de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990164"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers(Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "67990164"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|SQL Server 이외 게시자를 식별합니다.|  
-|**업체인**|**sysname**|SQL Server 이외 데이터베이스 공급업체의 이름입니다.|  
+|**공급업체**|**sysname**|SQL Server 이외 데이터베이스 공급업체의 이름입니다.|  
 |**publisher_guid**|**uniqueidentifier**|SQL Server 이외 게시자를 식별하는 GUID입니다.|  
 |**flush_request_time**|**datetime**|로그 판독기 에이전트가 해당 메타데이터 캐시를 업데이트해야 하는 아티클 메타데이터의 마지막 변경 날짜 및 시간을 표시합니다.|  
-|**버전**|**sysname**|SQL Server 이외 게시자의 버전을 나타내는 텍스트 문자열입니다.|  
+|**version**|**sysname**|SQL Server 이외 게시자의 버전을 나타내는 텍스트 문자열입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
@@ -45,6 +45,6 @@ ms.locfileid: "67990164"
  [Transact-sql&#41;&#40;복제 뷰](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [Transact-sql&#41;sp_adddistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [Transact-sql&#41;sp_changedistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [Transact-sql&#41;sp_helpdistpublisher &#40;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  
+ [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)  
   
   

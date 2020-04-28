@@ -14,10 +14,10 @@ ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963841"
 ---
 # <a name="onerror-event-rds"></a>onError 이벤트(RDS)
@@ -40,7 +40,7 @@ onError SCode, Description, Source, CancelDisplay
  *설명*  
  오류에 대 한 설명을 나타내는 **문자열** 입니다.  
   
- *원본*  
+ *소스*  
  오류를 발생 시킨 쿼리 또는 명령을 나타내는 **문자열** 입니다.  
   
  *CancelDisplay*  

@@ -17,10 +17,10 @@ ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933252"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType 및 EditMode 속성 예제 (VC + +)

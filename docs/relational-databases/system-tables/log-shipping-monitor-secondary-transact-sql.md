@@ -18,10 +18,10 @@ ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 838c810c28c03ae11237f449483789ed8dbbf740
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989953"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary(Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "67989953"
  원격 모니터 서버에 저장 하는 것 외에도 보조 서버와 관련 된 정보는 보조 서버에 **log_shipping_monitor_secondary** 테이블에 저장 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Transact-sql&#41;sp_refresh_log_shipping_monitor &#40;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [Transact-sql&#41;sp_add_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [Transact-sql&#41;sp_change_log_shipping_secondary_database &#40;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   

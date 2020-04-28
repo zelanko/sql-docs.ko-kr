@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964122"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions 속성(RDS)
@@ -29,11 +29,11 @@ ms.locfileid: "67964122"
 ## <a name="setting-and-return-values"></a>값 설정 및 반환  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|지속적임|Description|  
+|상수|Description|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|응용 프로그램에 컨트롤을 반환 하기 전에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 모든 레코드를 인출 합니다. 응용 프로그램에서 모든 작업을 수행할 수 있도록 하기 전에 전체 **레코드 집합** 을 인출 합니다.|  
 |**adcFetchBackground**|첫 번째 일괄 처리 레코드가 인출 되는 즉시 제어가 응용 프로그램으로 돌아갈 수 있습니다. 첫 번째 일괄 처리에서 인출 되지 않은 레코드에 대 한 액세스를 시도 하는 **레코드 집합** 의 후속 읽기는 검색 된 레코드가 실제로 인출 될 때까지 지연 되며,이 시점에서 컨트롤이 응용 프로그램으로 반환 됩니다.|  
-|**adcFetchAsync**|Default. 백그라운드에서 레코드를 인출 하는 동안 컨트롤은 응용 프로그램에 즉시 반환 됩니다. 응용 프로그램이 아직 인출 되지 않은 레코드를 읽으려고 하는 경우 검색 된 레코드에 가장 가까운 레코드를 읽고,이 레코드를 즉시 반환 하 여 **레코드 집합** 의 현재 끝에 도달 했음을 나타냅니다. 예를 들어, [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 를 호출 하면 더 많은 레코드에서 레코드 **집합**을 계속 채울 수 있는 경우에도 현재 레코드 위치가 실제로 인출 된 마지막 레코드로 이동 합니다.|  
+|**adcFetchAsync**|기본값 백그라운드에서 레코드를 인출 하는 동안 컨트롤은 응용 프로그램에 즉시 반환 됩니다. 응용 프로그램이 아직 인출 되지 않은 레코드를 읽으려고 하는 경우 검색 된 레코드에 가장 가까운 레코드를 읽고,이 레코드를 즉시 반환 하 여 **레코드 집합** 의 현재 끝에 도달 했음을 나타냅니다. 예를 들어, [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) 를 호출 하면 더 많은 레코드에서 레코드 **집합**을 계속 채울 수 있는 경우에도 현재 레코드 위치가 실제로 인출 된 마지막 레코드로 이동 합니다.|  
   
 > [!NOTE]
 >  이러한 상수를 사용 하는 각 클라이언트 쪽 실행 파일은 이러한 상수에 대 한 선언을 제공 해야 합니다. RDS 라이브러리의 기본 설치 폴더에 있는 Adcvbs. inc. 파일에서 원하는 상수 선언을 잘라내어 붙여 넣을 수 있습니다.  

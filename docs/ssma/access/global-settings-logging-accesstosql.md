@@ -10,10 +10,10 @@ ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986646"
 ---
 # <a name="global-settings-logging-accesstosql"></a>전역 설정 (로깅) (AccessToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "67986646"
 **메시지 수준**  
 **메시지 수준**에서 사용할 수 있는 옵션은 다음과 같습니다.  
   
-|옵션|Description|  
+|옵션|설명|  
 |----------|---------------|  
 |**[모든 범주]**|다음 옵션에 대 한 로깅 수준을 설정 하는 데 사용 됩니다.|  
 |**데이터 수집기**|소스 스키마에 대 한 메타 데이터를 수집 하 여 프로젝트에 저장 합니다.|  
@@ -45,8 +45,8 @@ ms.locfileid: "67986646"
 |-|-|  
 |**심각한 오류**|심각한 오류 메시지를 로그에 기록 합니다.|  
 |**오류**|로그에 오류 및 심각한 오류 메시지를 씁니다.|  
-|**경고**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
-|**나타납니다**|정보, 경고, 오류 및 심각한 오류 메시지를 로그에 기록 합니다.|  
+|**내용의**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
+|**정보**|정보, 경고, 오류 및 심각한 오류 메시지를 로그에 기록 합니다.|  
 |**디버그**|디버그 메시지를 포함 하 여 모든 메시지를 로그에 씁니다.|  
   
 **로그 파일 경로**  

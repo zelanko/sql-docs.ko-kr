@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985746"
 ---
 # <a name="aggregate-functions---sum"></a>집계 함수 - sum

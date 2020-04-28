@@ -10,10 +10,10 @@ ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ff4dc8e042dc27156d03935c1de39c9fbd67a69c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986378"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>전역 설정 (출력 창) (AccessToSQL)

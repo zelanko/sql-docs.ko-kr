@@ -18,10 +18,10 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943503"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc(Transact-SQL)
@@ -52,7 +52,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|확장 저장 프로시저의 이름입니다.|  
-|**dll**|**nvarchar(255)**|DLL의 이름입니다.|  
+|**gdiplus.dll**|**nvarchar(255)**|DLL의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
  *프로시저* 를 지정 하면 지정 된 확장 저장 프로시저에 대해 보고서를 **sp_helpextendedproc** 합니다. 이 매개 변수를 지정 하지 않으면 **sp_helpextendedproc** 는 확장 저장 프로시저의 모든 확장 저장 프로시저 이름 및 DLL 이름을 반환 합니다.  

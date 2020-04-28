@@ -16,16 +16,16 @@ ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933260"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 에서 [지원](../../../ado/reference/ado-api/supports-method.md) 되는 메서드가 테스트할 기능을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 메서드를 지원 하 여 새 레코드를 추가 합니다.|  
 |**adApproxPosition**|0x4000|[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 및 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성을 지원 합니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "67933260"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. CursorOption|  
 |AdoEnums. CursorOption|  

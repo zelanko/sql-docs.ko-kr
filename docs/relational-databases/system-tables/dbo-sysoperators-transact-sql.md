@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984911"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators(Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67984911"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|운영자의 ID입니다.|  
+|**id**|**int**|운영자의 ID입니다.|  
 |**name**|**sysname**|운영자의 이름입니다.|  
 |**사용**|**tinyint**|경고 알림(부울)의 상태입니다. **1**인 경우이 운영자는 경고가 발생할 때 알림을 받을 수 있습니다.|  
 |**email_address**|**nvarchar (100)**|해당 운영자의 전자 메일 주소입니다.|  

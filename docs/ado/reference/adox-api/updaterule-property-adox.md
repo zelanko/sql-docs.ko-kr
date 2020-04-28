@@ -20,10 +20,10 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965005"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성(ADOX)
@@ -36,7 +36,7 @@ ms.locfileid: "67965005"
  이 속성은 컬렉션에 이미 추가 된 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체에 대해 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제(VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

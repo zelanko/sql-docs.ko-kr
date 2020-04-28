@@ -17,10 +17,10 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937010"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database dm_db_rda_schema_update_status
@@ -30,7 +30,7 @@ ms.locfileid: "67937010"
   
  **dm_db_rda_schema_update_status** 은 현재 데이터베이스 컨텍스트로 범위가 지정 됩니다. 스키마 업데이트 상태를 보려는 스트레치 사용 테이블의 데이터베이스 컨텍스트에 있는지 확인 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|원격 데이터 보관 스키마가 업데이트 되 고 있는 로컬 스트레치 사용 테이블의 ID입니다.|  
 |**database_id**|**int**|로컬 스트레치 사용 테이블을 포함 하는 데이터베이스의 ID입니다.|  

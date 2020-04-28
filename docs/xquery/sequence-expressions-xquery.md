@@ -17,16 +17,15 @@ ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946303"
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항목의 시퀀스를 생성, 필터링 및 조합하는 데 사용되는 XQuery 연산자를 지원합니다. 항목은 원자 값이거나 노드일 수 있습니다.  
   
 ## <a name="constructing-sequences"></a>시퀀스 생성  
@@ -100,8 +99,7 @@ go
 ```  
   
 ### <a name="example-c"></a>예 3  
- 다음 쿼리는 Contact 테이블에 있는 **xml** 유형의 Additionalbooks.xml info 열에 대해 지정 됩니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. TelephoneNumber \<>, \<호출기> 및 기타 노드는 문서 어디에 나 나타날 수 있습니다. 이 쿼리는 컨텍스트 노드의 모든 \<telephoneNumber> 자식을 포함 하는 시퀀스를 생성 하 고 그 뒤에 \<페이저> 자식을 포함 합니다. 
-  `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
+ 다음 쿼리는 Contact 테이블에 있는 **xml** 유형의 Additionalbooks.xml info 열에 대해 지정 됩니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. TelephoneNumber \<>, \<호출기> 및 기타 노드는 문서 어디에 나 나타날 수 있습니다. 이 쿼리는 컨텍스트 노드의 모든 \<telephoneNumber> 자식을 포함 하는 시퀀스를 생성 하 고 그 뒤에 \<페이저> 자식을 포함 합니다. `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -189,8 +187,7 @@ set @x = '
 '  
 ```  
   
- 
-  `(/a, /b)`의 식은 하위 트리 `/a` 및 `/b`가 포함되어 있고 식이 `<c>` 요소를 필터링한 결과 시퀀스로부터 가져온 시퀀스를 생성합니다.  
+ `(/a, /b)`의 식은 하위 트리 `/a` 및 `/b`가 포함되어 있고 식이 `<c>` 요소를 필터링한 결과 시퀀스로부터 가져온 시퀀스를 생성합니다.  
   
 ```  
 SELECT @x.query('  

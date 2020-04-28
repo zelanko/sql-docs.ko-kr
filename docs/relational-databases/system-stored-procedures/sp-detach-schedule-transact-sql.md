@@ -18,10 +18,10 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aed989cc09922b7b480a7dd7b3ca6820d6b77ab2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936747"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule(Transact-SQL)
@@ -62,10 +62,10 @@ sp_detach_schedule
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   
@@ -77,8 +77,7 @@ sp_detach_schedule
   
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. **Sysadmin** 고정 서버 역할의 멤버만 다른 사용자가 소유한 작업의 일정을 분리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자가 일정을 소유하는지 여부를 확인합니다. **Sysadmin** 고정 서버 역할의 멤버만 다른 사용자가 소유한 작업의 일정을 분리할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `'NightlyJobs'` 일정과 `'BackupDatabase'` 작업 간 연결을 제거합니다.  

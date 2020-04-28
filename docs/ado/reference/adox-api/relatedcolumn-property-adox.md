@@ -20,10 +20,10 @@ ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965351"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn 속성(ADOX)
@@ -38,8 +38,8 @@ ms.locfileid: "67965351"
  컬렉션에 이미 추가 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Keys Append 메서드, Key Type, RelatedColumn, RelatedTable 및 UpdateRule 속성 예제 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

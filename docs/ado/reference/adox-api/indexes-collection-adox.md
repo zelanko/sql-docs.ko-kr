@@ -17,21 +17,21 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966040"
 ---
 # <a name="indexes-collection-adox"></a>Indexes 컬렉션(ADOX)
 테이블의 모든 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **인덱스** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-indexes.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
+ **인덱스** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-indexes.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 인덱스를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 인덱스에 액세스 합니다.  
   
@@ -47,4 +47,4 @@ ms.locfileid: "67966040"
   
 ## <a name="see-also"></a>참고 항목  
  [Indexes Append 메서드 예제 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

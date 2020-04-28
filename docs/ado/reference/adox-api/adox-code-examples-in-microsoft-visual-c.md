@@ -15,10 +15,10 @@ ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952124"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Microsoft Visual C++의 ADOX 코드 예제
@@ -29,7 +29,7 @@ ms.locfileid: "67952124"
   
 ## <a name="methods"></a>메서드  
   
--   [Columns 및 Tables Append 메서드, Name 속성 예제(VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
+-   [Columns 및 Tables Append 메서드, Name 속성 예제 (VC++)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vc.md)  
   
 -   [Connection Close 메서드, Table Type 속성 예제(VC++)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vc.md)  
   

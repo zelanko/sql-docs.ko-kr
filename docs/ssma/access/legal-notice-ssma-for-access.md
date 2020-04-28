@@ -14,10 +14,10 @@ ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947510"
 ---
 # <a name="legal-notice-ssma-for-access"></a>법적 고 지 사항 (Access 용 SSMA)

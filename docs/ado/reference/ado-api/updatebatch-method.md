@@ -17,10 +17,10 @@ ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937849"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
@@ -52,7 +52,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
  보류 중인 모든 일괄 처리 업데이트를 취소 하려면 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드를 사용 합니다.  
   
- [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 업데이트 다시 [동기화](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) 동적 속성을 설정 하 고 레코드 집합을 여러 테이블에 대해 조인 작업을 실행 한 결과 **레코드 집합** 은 [업데이트 다시 동기화](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) 속성의 설정에 따라 암시적으로 다시 [동기화](../../../ado/reference/ado-api/resync-method.md) 메서드를 실행 합니다. ****  
+ [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 업데이트 다시 [동기화](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) 동적 속성을 설정 하 고 레코드 집합을 여러 테이블에 대해 조인 작업을 실행 한 결과 **레코드 집합** 은 [업데이트 다시 동기화](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) 속성의 설정에 따라 암시적으로 다시 [동기화](../../../ado/reference/ado-api/resync-method.md) 메서드를 실행 합니다. **UpdateBatch**  
   
  일괄 처리의 개별 업데이트가 데이터 원본에서 수행 되는 순서는 로컬 **레코드 집합**에 대해 수행 된 순서와 동일할 필요는 없습니다. 업데이트 순서는 공급자에 따라 달라 집니다. 삽입 또는 업데이트에 대 한 foreign key 제약 조건과 같이 서로 관련 된 업데이트를 코딩 하는 경우이를 고려 합니다.  
   

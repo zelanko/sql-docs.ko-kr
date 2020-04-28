@@ -18,16 +18,15 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933860"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 지정한 사용자 정의 오류 메시지를 삭제합니다. 사용자 정의 메시지는 **sys. messages** 카탈로그 뷰를 사용 하 여 볼 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -133,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [Transact-sql&#41;sp_addmessage &#40;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Transact-sql&#41;sp_altermessage &#40;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FORMATMESSAGE &#40;Transact-sql&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

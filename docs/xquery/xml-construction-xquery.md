@@ -22,10 +22,10 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946175"
 ---
 # <a name="xml-construction-xquery"></a>XML 생성(XQuery)
@@ -632,8 +632,7 @@ text{"Some text "},
                } ')  
 ```  
   
- XQuery 사양에 정의된 대로 계산된 요소 및 특성 생성자를 사용하면 노드 이름을 계산할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 직접 생성자를 사용할 경우 요소 및 특성과 같은 노드 이름을 상수 리터럴로 지정해야 합니다. 따라서 요소와 특성에서는 직접 생성자와 계산된 생성자 간에 차이가 없습니다.  
+ XQuery 사양에 정의된 대로 계산된 요소 및 특성 생성자를 사용하면 노드 이름을 계산할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 직접 생성자를 사용할 경우 요소 및 특성과 같은 노드 이름을 상수 리터럴로 지정해야 합니다. 따라서 요소와 특성에서는 직접 생성자와 계산된 생성자 간에 차이가 없습니다.  
   
  다음 예에서는 생성 된 노드의 내용을 제품 모델 테이블에 있는 **xml** 데이터 형식의 명령 열에 저장 된 xml 제조 지침에서 가져옵니다.  
   

@@ -16,10 +16,10 @@ ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926260"
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드 추가

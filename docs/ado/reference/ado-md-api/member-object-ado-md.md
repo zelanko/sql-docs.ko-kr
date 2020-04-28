@@ -16,10 +16,10 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949493"
 ---
 # <a name="member-object-ado-md"></a>Member 개체(ADO MD)
@@ -68,12 +68,12 @@ ms.locfileid: "67949493"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |ChildrenCardinality|멤버의 자식 수입니다.|  
 |CubeName|큐브 이름입니다.|  
-|Description|멤버에 대 한 의미 있는 설명입니다.|  
+|설명|멤버에 대 한 의미 있는 설명입니다.|  
 |DimensionUniqueName|[차원의](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)명확 하지 않은 이름입니다.|  
 |HierarchyUniqueName|계층의 모호 하지 않은 이름입니다.|  
 |LevelNumber|계층의 수준과 루트 사이의 거리입니다.|  

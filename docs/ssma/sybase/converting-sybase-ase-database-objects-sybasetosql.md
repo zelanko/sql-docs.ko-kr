@@ -12,10 +12,10 @@ ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948517"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE 데이터베이스 개체 변환 (SybaseToSQL)

@@ -12,10 +12,10 @@ ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948543"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server에 연결(SybaseToSQL)
@@ -84,13 +84,13 @@ ASE 데이터베이스 개체를 구문으로 [!INCLUDE[ssNoVersion](../../inclu
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|SQL Azure|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|yes|yes|yes|yes|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||yes|yes|yes|yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||yes|yes|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||yes|yes|| 
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||yes||  
-|SQL Azure||||||yes|  
+|**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(버전: 12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(버전: 13.x)|SQL Azure|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||예|예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||예|예|| 
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||예||  
+|SQL Azure||||||예|  
   
 > [!IMPORTANT]
 > 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만 연결 된의 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 따라 수행 되지 않습니다. 2005 프로젝트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 더 높은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016)에 연결 된 경우에도 2005 당 변환이 수행 됩니다.  

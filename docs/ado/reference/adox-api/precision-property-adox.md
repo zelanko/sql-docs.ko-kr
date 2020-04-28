@@ -20,10 +20,10 @@ ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965568"
 ---
 # <a name="precision-property-adox"></a>Precision 속성(ADOX)
@@ -38,9 +38,9 @@ ms.locfileid: "67965568"
  컬렉션에 이미 추가 된 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체의 경우이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [ADOX 코드 예제: NumericScale 및 Precision 속성 예제 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type 속성 (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

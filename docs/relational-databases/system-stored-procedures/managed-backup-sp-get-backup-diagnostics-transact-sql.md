@@ -21,10 +21,10 @@ ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942042"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-sql)
@@ -42,7 +42,7 @@ ms.locfileid: "67942042"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="Arguments"></a> 인수  
+##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @xevent_channel  
  확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정 하거나 **' admin**', **' 분석 '**, **' 작동 '** 및 **' 디버그 '** 와 같은 부분 문자열을 지정할 수 있습니다. 는 @event_channel **VARCHAR (255)** 입니다.  
   
@@ -59,9 +59,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |event_type|NVARCHAR (512)|확장 이벤트 유형|  
-|행사|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
+|이벤트|NVARCHAR (512)|이벤트 로그의 요약입니다.|  
 |타임스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  

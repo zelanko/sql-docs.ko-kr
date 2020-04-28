@@ -20,10 +20,10 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945889"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 및 FieldChangeComplete 이벤트(ADO)
@@ -41,7 +41,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  *필드*의 **필드** 개체 수를 나타내는 **Long** 입니다.  
   
- *필드인*  
+ *필드*  
  **WillChangeField**의 경우 *Fields* 매개 변수는 원래 값이 포함 된 **필드** 개체를 포함 하는 **variant** 배열입니다. **FieldChangeComplete**의 경우 *Fields* 매개 변수는 변경 된 값이 있는 **필드** 개체를 포함 하는 **변형** 배열입니다.  
   
  *pError*  

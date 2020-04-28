@@ -13,10 +13,10 @@ ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ffd5987d79ce539baf536a3221ebc1bb5b470a15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966062"
 ---
 # <a name="index-object-properties-methods-and-events"></a>인덱스 개체 속성, 메서드 및 이벤트
@@ -42,4 +42,4 @@ ms.locfileid: "67966062"
  없음  
   
 ## <a name="see-also"></a>참고 항목  
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

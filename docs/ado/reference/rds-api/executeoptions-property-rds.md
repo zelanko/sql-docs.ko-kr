@@ -14,10 +14,10 @@ ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964181"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
@@ -29,10 +29,10 @@ ms.locfileid: "67964181"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|지속적임|Description|  
+|상수|Description|  
 |--------------|-----------------|  
 |**adcExecSync**|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
-|**adcExecAsync**|Default. **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  
+|**adcExecAsync**|기본값 **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  
   
 > [!NOTE]
 >  이러한 상수를 사용 하는 각 실행 파일은 이러한 상수에 대 한 선언을 제공 해야 합니다. RDS 라이브러리의 기본 설치 폴더에 있는 Adcvbs. i n c. i n t. i n t.  
@@ -42,7 +42,7 @@ ms.locfileid: "67964181"
   
  [다시 설정](../../../ado/reference/rds-api/reset-method-rds.md), [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)또는 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 을 호출 하려고 시도 하는 경우에는 다른 비동기 작업에서 RDS를 변경할 수 있습니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합이** 실행 중 이므로 오류가 발생 합니다.  
   
- 비동기 작업 중에 오류가 발생 하는 경우 **RDS. DataControl** 개체의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 값이 **Adcreadystateloaded** 에서 **** 로 변경 되 고 **레코드 집합** 속성 값은 *아무 것도*유지 되지 않습니다.  
+ 비동기 작업 중에 오류가 발생 하는 경우 **RDS. DataControl** 개체의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 값이 **Adcreadystateloaded** 에서 **adcReadyStateComplete**로 변경 되 고 **레코드 집합** 속성 값은 *아무 것도*유지 되지 않습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

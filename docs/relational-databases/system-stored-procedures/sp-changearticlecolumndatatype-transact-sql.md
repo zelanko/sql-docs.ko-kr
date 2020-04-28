@@ -16,10 +16,10 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995519"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype(Transact-SQL)
@@ -67,8 +67,7 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **Sp_changearticlecolumndatatype** 은 지원 되는 게시자 유형 (Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 간의 기본 데이터 형식 매핑을 재정의 하는 데 사용 됩니다. 이러한 기본 데이터 형식 매핑을 보려면 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)를 실행 합니다.  
   
- **sp_changearticlecolumndatatype** 은 Oracle 게시자에 대해서만 지원 됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에 대해 이 저장 프로시저를 실행하면 오류가 발생합니다.  
+ **sp_changearticlecolumndatatype** 은 Oracle 게시자에 대해서만 지원 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에 대해 이 저장 프로시저를 실행하면 오류가 발생합니다.  
   
  변경 해야 하는 각 아티클 열 매핑에 대해 **sp_changearticlecolumndatatype** 를 실행 해야 합니다.  
   

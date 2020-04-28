@@ -28,10 +28,10 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986350"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 액세스 기능 (AccessToSQL)
@@ -53,6 +53,6 @@ ms.locfileid: "67986350"
 |기본 또는 유효성 검사 규칙 식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 변환 하거나 SQL Azure 수 없는 액세스 함수가 포함 되어 있습니다.|기본 식 또는 유효성 검사 규칙 액세스에는 액세스 시스템 함수 또는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매핑되지 않거나 SQL Azure 않는 사용자 정의 함수가 포함 될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 매핑되지 않는 함수를 사용 하면 기본 식 또는 유효성 검사 규칙을에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로드 하거나 SQL Azure 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[Access 데이터베이스에서 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
+[마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

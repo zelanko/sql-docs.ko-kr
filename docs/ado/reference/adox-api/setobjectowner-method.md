@@ -17,10 +17,10 @@ ms.assetid: e5170a37-9d6e-43db-bfb6-9b6631fa3048
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a02898c1694fa43b8bf522a1a1bca65300efda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965235"
 ---
 # <a name="setobjectowner-method"></a>SetObjectOwner 메서드
@@ -50,7 +50,7 @@ Catalog.SetObjectOwner ObjectName, ObjectType, OwnerName [,ObjectTypeId]
  공급자가 개체 소유자 지정을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [카탈로그 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog 개체(ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [GetObjectOwner 및 SetObjectOwner 메서드 예제 (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   

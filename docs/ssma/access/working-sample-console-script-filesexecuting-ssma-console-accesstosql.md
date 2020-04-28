@@ -10,10 +10,10 @@ ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938381"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>SSMA 콘솔 FilesExecuting 샘플 콘솔 스크립트 사용 (AccessToSQL)
@@ -44,7 +44,7 @@ ms.locfileid: "67938381"
   
 -   **AssessmentReportGenerationSample:** 이 샘플을 사용 하면 사용자가 데이터 변환 및 마이그레이션을 시작 하기 전에 분석을 위해 사용자가 사용할 수 있는 xml 평가 보고서를 생성할 수 있습니다.  
   
-    명령에서 사용자가 `object-name` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **** `generate-assessment-report` 지정 된 개체의 종류에 따라 `object-type` 값도 변경 해야 합니다.  
+    명령에서 사용자가 `object-name` 특성의 변수 값 (VariableValueFileSample 참조)을 사용자가 사용 중인 데이터베이스 이름으로 mandatorily 변경 해야 합니다. **VariableValueFileSample.xml** `generate-assessment-report` 지정 된 개체의 종류에 따라 `object-type` 값도 변경 해야 합니다.  
   
     사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 `generate-assessment-report` 명령 예제 4에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67938381"
   
 -   **ConversionAndDataMigrationSample:** 이 샘플은 사용자가 데이터 마이그레이션에 대 한 변환에서 종단 간 마이그레이션을 수행할 수 있도록 합니다. 변경 해야 하는 필수 특성 값 목록은 아래에 나열 되어 있습니다.  
   
-    |명령 이름|Description|attribute|  
+    |명령 이름|설명|특성|  
     |----------------|---------------|-------------|  
     |`map-schema`|원본 데이터베이스와 대상 스키마의 스키마 매핑|`source-schema:`변환 해야 하는 원본 데이터베이스를 지정 합니다.<br /><br />`sql-server-schema`: 마이그레이션할 대상 데이터베이스를 지정 합니다.|  
     |`convert-schema`|원본에서 대상 스키마로의 스키마 변환을 수행 합니다.<br /><br />사용자가 여러 개체/데이터베이스를 평가 해야 하는 경우 샘플 콘솔 `metabase-object` 스크립트 파일의 `convert-schema` 명령 예제 4에 나와 있는 것 처럼 여러 노드를 지정할 수 있습니다.|`object-name`: 변환 해야 하는 원본 데이터베이스/개체 이름을 지정 합니다. 에 지정 된 개체 `object-type` 의 형식에 따라 해당이 변경 되었는지 확인 합니다.`object-name`|  

@@ -16,10 +16,10 @@ ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967058"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체(ADOX)
@@ -38,7 +38,7 @@ ms.locfileid: "67967058"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [카탈로그 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
+-   [Catalog 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Catalog ActiveConnection 속성 예제 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   

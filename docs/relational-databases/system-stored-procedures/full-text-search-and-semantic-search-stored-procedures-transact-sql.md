@@ -18,10 +18,10 @@ ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c0bf121cdb6007783cca682125dad04c01ab59ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942203"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>전체 텍스트 검색 및 의미 체계 검색 저장 프로시저(Transact-SQL)
@@ -41,8 +41,7 @@ ms.locfileid: "67942203"
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [ALTER 전체 인덱스](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 를 사용 해야 합니다.  
   
  [sp_fulltext_database](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  
   
  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
@@ -61,7 +60,7 @@ ms.locfileid: "67942203"
  [sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)  
  테이블을 전체 텍스트 인덱싱에 표시하거나 표시하지 않습니다.  
   
- [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 [CREATE 전체 텍스트 인덱스](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER 전체 텍스트 인덱스](../../t-sql/statements/alter-fulltext-index-transact-sql.md)및 [전체 텍스트 인덱스 삭제](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 를 사용 합니다.  
+ [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)및 [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) 를 사용하십시오.  
   
  [sp_help_fulltext_catalog_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalog-components-transact-sql.md)  
  현재 데이터베이스의 모든 전체 텍스트 카탈로그에 사용된 필터, 단어 분리기, 프로토콜 처리기 등 모든 구성 요소의 목록을 반환합니다.  
@@ -101,8 +100,7 @@ ms.locfileid: "67942203"
   
 ## <a name="semantic-search-stored-procedures"></a>의미 체계 검색 저장 프로시저  
  [sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에서 미리 채워진 의미 체계 언어 통계 데이터베이스를 등록합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에서 미리 채워진 의미 체계 언어 통계 데이터베이스를 등록합니다.  
   
  [sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)  
  현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 기존 의미 체계 언어 통계 데이터베이스의 등록을 취소하고 연결된 모든 메타데이터를 삭제합니다.  
@@ -110,7 +108,7 @@ ms.locfileid: "67942203"
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;전체 텍스트 검색 및 의미 체계 검색 카탈로그 뷰](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Transact-sql&#41;전체 텍스트 검색 및 의미 체계 검색 동적 관리 뷰 및 함수 &#40;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

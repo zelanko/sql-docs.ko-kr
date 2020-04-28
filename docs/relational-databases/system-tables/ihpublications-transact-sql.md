@@ -18,10 +18,10 @@ ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990338"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67990338"
 |**pubid**|**int**|게시에 고유한 ID를 제공하는 ID 열입니다.|  
 |**name**|**sysname**|게시에 연결된 고유한 이름입니다.|  
 |**repl_freq**|**tinyint**|복제 빈도<br /><br /> **0** = 트랜잭션 기반<br /><br /> **1** = 예약 된 테이블 새로 고침|  
-|**업무**|**tinyint**|게시의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 활성|  
+|**status**|**tinyint**|게시의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 활성|  
 |**sync_method**|**tinyint**|동기화 메서드<br /><br /> **1** = 문자 대량 복사<br /><br /> **4** = Concurrent_c. 문자 대량 복사를 사용 하지만 스냅숏 동안 테이블이 잠기지 않음을 의미 합니다.|  
 |**snapshot_jobid**|**binary**|예약된 태스크 ID입니다.|  
 |**enabled_for_internet**|**bit**|게시에 대 한 동기화 파일이 FTP 및 기타 서비스를 통해 인터넷에 노출 되는지 여부를 나타냅니다. 여기서 **1** 은 인터넷에서 액세스할 수 있음을 의미 합니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "67990338"
 |**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자가 충돌을 적용 합니다.<br /><br /> **2** = 구독자가 충돌을 적용 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq. 메시지 큐 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = sql-를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 트랜잭션을 저장 합니다.<br /><br /> 이 열은 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에서 사용 되지 않습니다.<br /><br /> 참고: 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐 사용은 더 이상 사용 되지 않으며 더 이상 지원 되지 않습니다.<br /><br /> *이 열은 SQL 이외 게시자에 대해서는 지원 되지 않습니다.*|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID (globally unique identifier)는 게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 게시 하 고 guid는 해당 하는 Active Directory 게시 개체 **objectGUID**임을 지정 합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**한**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
 |**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시에서 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 단일 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트 있습니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트 실행 될 때마다 동기화 파일을 만들지 아니면 다시 만들지를 나타냅니다. **1** 은 에이전트가 실행 될 때마다 생성 됨을 의미 합니다.|  
@@ -70,7 +70,7 @@ ms.locfileid: "67990338"
 |**allow_initialize_from_backup**|**bit**|구독자가 초기 스냅샷 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 은 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 은 사용할 수 없음을 의미 합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**min_autonosync_lsn**|**binary (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. **1** 은 게시자에서 실행 된 ddl 문이 복제 됨을 나타내고 **0** 은 ddl 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
-|**옵션**|**int**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용 됩니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -SQL Server 이외 구독자에 사용할 수 있습니다.|  
+|**options**|**int**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 사용 됩니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -SQL Server 이외 구독자에 사용할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

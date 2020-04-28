@@ -14,10 +14,10 @@ ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964001"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)

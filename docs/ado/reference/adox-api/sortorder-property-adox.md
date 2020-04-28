@@ -20,10 +20,10 @@ ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965212"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder 속성(ADOX)
@@ -36,9 +36,9 @@ ms.locfileid: "67965212"
  이 속성은 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션에 있는 [열](../../../ado/reference/adox-api/column-object-adox.md) 개체에만 적용 됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [SortOrder 속성 예제 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

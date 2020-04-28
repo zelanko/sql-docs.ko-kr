@@ -10,10 +10,10 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989703"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>형식 매핑 편집 (DB2ToSQL)
@@ -28,18 +28,18 @@ ms.locfileid: "67989703"
 테이블 관련 형식 매핑은 데이터베이스 및 프로젝트 형식 매핑을 재정의 합니다. 데이터베이스 관련 매핑은 프로젝트 매핑을 재정의 합니다.  
   
 ## <a name="options"></a>옵션  
-**원본 형식**  
+**원본 유형**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 매핑할 원본 데이터 형식을 선택 합니다.  
   
 데이터 형식이 가변 길이인 경우 **원본 유형**아래에 다음 필드가 표시 됩니다.  
   
-**보낸 사람**  
+**From**  
 이 매핑의 최소 길이를 지정 합니다. 예를 들어 **nchar** 데이터 형식의 경우 10을 입력 하 여이 매핑이 **nchar (10)** 에서 시작 하는 범위에 대해 지정 되도록 지정할 수 있습니다.  
   
 **받는 사람**  
 이 매핑의 최대 길이를 지정 합니다. 예를 들어 **nchar** 데이터 형식의 경우 20을 입력 하 여이 매핑이 **nchar (20)** 로 끝나는 범위에 대해 지정할 수 있습니다.  
   
-**대상 유형**  
+**대상 형식**  
 원본 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식이 매핑되는 데이터 형식을 선택 합니다. SSMA에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블이 나 저장 프로시저를 만들 때 원본 데이터 형식이이 데이터 형식으로 변경 됩니다.  
   
 데이터 형식이 가변 길이인 경우 **대상 유형**아래에 다음 필드가 표시 됩니다.  

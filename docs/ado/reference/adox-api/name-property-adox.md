@@ -42,10 +42,10 @@ ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 52808cf9e90c6779efb9f95e385f8df501bae870
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965769"
 ---
 # <a name="name-property-adox"></a>Name 속성(ADOX)
@@ -68,9 +68,9 @@ ms.locfileid: "67965769"
   
 ||||  
 |-|-|-|  
-|[열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[그룹 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[인덱스 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[키 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[프로시저 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[보기 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
+|[Key 개체(ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[속성 개체(ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [Columns 및 Tables Append 메서드, Name 속성 예제 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   

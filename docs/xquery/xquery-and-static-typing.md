@@ -18,16 +18,15 @@ ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946088"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 및 정적 형식 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 XQuery는 정적으로 형식화된 언어입니다. 즉 특정 함수나 연산자에서 허용하지 않는 형식이나 카디널리티가 있는 값을 식에서 반환하면 쿼리를 컴파일하는 동안 유형 오류가 발생합니다. 또한 정적 형식 확인을 통해 형식화된 XML 문서의 경로 식의 형식이 잘못 지정되었는지 여부도 검색할 수 있습니다. XQuery 컴파일러는 먼저 원자화와 같은 암시적 연산을 추가한 다음 정적 형식 유추와 정적 형식 확인을 수행하는 정규화 단계를 적용합니다.  
   
 ## <a name="static-type-inference"></a>정적 형식 유추  

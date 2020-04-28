@@ -18,10 +18,10 @@ ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948622"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions(Transact-SQL)
@@ -29,11 +29,11 @@ ms.locfileid: "67948622"
 
   **MSrepl_transactions** 테이블은 복제 된 각 트랜잭션에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
-|**xact_id**|**varbinary (16)**|트랜잭션의 ID입니다.|  
-|**xact_seqno**|**varbinary (16)**|트랜잭션의 시퀀스 번호입니다.|  
+|**xact_id**|**varbinary(16)**|트랜잭션의 ID입니다.|  
+|**xact_seqno**|**varbinary(16)**|트랜잭션의 시퀀스 번호입니다.|  
 |**entry_time**|**datetime**|트랜잭션이 배포 데이터베이스를 입력한 시간입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

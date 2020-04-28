@@ -18,10 +18,10 @@ ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70d737e8c73d3e5b6876c2669fbafbc71bea66e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986472"
 ---
 # <a name="msrepl_errors-transact-sql"></a>MSrepl_errors(Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "67986472"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|오류 ID입니다.|  
+|**id**|**int**|오류 ID입니다.|  
 |**time**|**datetime**|오류가 발생한 시간입니다.|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|오류 원본 유형 ID입니다.|  
 |**source_name**|**nvarchar (100)**|오류 출처의 이름입니다.|  
 |**error_code**|**sysname**|오류 코드입니다.|  
 |**error_text**|**ntext**|오류 메시지입니다.|  
-|**xact_seqno**|**varbinary (16)**|실패한 실행 일괄 처리의 시작 트랜잭션 로그 시퀀스 번호입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 트랜잭션의 트랜잭션 로그 시퀀스 번호입니다.|  
+|**xact_seqno**|**varbinary(16)**|실패한 실행 일괄 처리의 시작 트랜잭션 로그 시퀀스 번호입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 트랜잭션의 트랜잭션 로그 시퀀스 번호입니다.|  
 |**command_id**|**int**|실패한 실행 일괄 처리의 명령 ID입니다. 배포 에이전트에 의해서만 사용되며 실패한 실행 일괄 처리에 있는 첫 번째 명령의 명령 ID입니다.|  
 |**session_id**|**int**|오류가 발생한 에이전트 세션의 ID입니다.|  
   

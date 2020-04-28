@@ -19,10 +19,10 @@ ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966229"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 메서드(ADOX)
@@ -52,7 +52,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
   
 |||  
 |-|-|  
-|[그룹 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
+|[Group 개체(ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [GetPermissions 및 SetPermissions 메서드 예제 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   

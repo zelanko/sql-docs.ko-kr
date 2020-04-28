@@ -16,10 +16,10 @@ ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67941946"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>정책 기반 관리 저장 프로시저(Transact-SQL)
@@ -28,8 +28,7 @@ ms.locfileid: "67941946"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 정책 기반 관리에 사용 되는 다음과 같은 시스템 저장 프로시저를 지원 합니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에 문서화된 정책 기반 관리 저장 프로시저만 지원됩니다. 문서화되지 않은 저장 프로시저는 내부 정책 기반 관리 구성 요소에서만 사용하기 위한 것이므로 정책 기반 관리에 사용하면 안 됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에 문서화된 정책 기반 관리 저장 프로시저만 지원됩니다. 문서화되지 않은 저장 프로시저는 내부 정책 기반 관리 구성 요소에서만 사용하기 위한 것이므로 정책 기반 관리에 사용하면 안 됩니다.  
   
 |||  
 |-|-|  

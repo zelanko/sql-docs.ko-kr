@@ -16,10 +16,10 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965482"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
@@ -38,7 +38,7 @@ ms.locfileid: "67965482"
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [프로시저 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
+-   [Procedure 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Command 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   

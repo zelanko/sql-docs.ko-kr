@@ -16,10 +16,10 @@ ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985957"
 ---
 # <a name="aggregate-functions---max"></a>집계 함수 - max

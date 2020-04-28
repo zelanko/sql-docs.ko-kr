@@ -18,10 +18,10 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943494"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
@@ -51,8 +51,8 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**name**|**sysname**|논리적 파일 이름입니다.|  
 |**fileid**|**smallint**|파일의 숫자 식별자입니다. *Name* 이 지정 된 경우이 반환 되지 않습니다 *.*|  
 |**이름도**|**nchar (260)**|물리적 파일 이름입니다.|  
-|**그룹별로**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
-|**크기가**|**nvarchar (15)**|파일 크기(KB)입니다.|  
+|**filegroup**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
+|**size**|**nvarchar (15)**|파일 크기(KB)입니다.|  
 |**크기**|**nvarchar (15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar (15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  
 |**보려면**|**varchar (9)**|데이터 파일의 경우 값은 **' 데이터 전용 '** 이 고, 로그 파일의 경우 값은 **' 로그 전용 '** 입니다.|  
@@ -73,10 +73,10 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;sp_helpfilegroup &#40;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
- [sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [database_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [master_files &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys. 파일 그룹 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  
   
   

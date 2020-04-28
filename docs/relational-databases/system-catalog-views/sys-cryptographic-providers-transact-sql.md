@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940294"
 ---
 # <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers(Transact-SQL)
@@ -32,12 +32,12 @@ ms.locfileid: "67940294"
 
   등록된 각 암호화 공급자에 대해 하나의 행을 반환합니다.  
     
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|암호화 공급자의 ID 번호입니다.|  
 |**name**|**sysname**|암호화 공급자의 이름입니다.|  
-|**guid**|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
-|**버전**|**nvarchar(50)**|'*Aa.bb.cccc.dd*' 형식의 공급자 버전입니다.|  
+|**eid**|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
+|**version**|**nvarchar(50)**|'*Aa.bb.cccc.dd*' 형식의 공급자 버전입니다.|  
 |**dll_path**|**nvarchar(512)**|EKM(Extensible Key Management) API(애플리케이션 프로그래밍 인터페이스)를 구현하는 DLL의 경로입니다.|  
 |**is_enabled**|**bit**|공급자가 서버에서 설정되어 있는지 여부입니다.<br /><br /> 0 = 설정 안 함(기본값)<br /><br /> 1 = 사용|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67940294"
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [EKM&#41;&#40;확장 가능 키 관리](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)  
   
   

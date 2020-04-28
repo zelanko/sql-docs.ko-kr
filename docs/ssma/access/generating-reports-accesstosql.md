@@ -10,10 +10,10 @@ ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986426"
 ---
 # <a name="generating-reports-accesstosql"></a>보고서 생성 (AccessToSQL)
@@ -61,7 +61,7 @@ ms.locfileid: "67986426"
     > [!NOTE]  
     > 위에서 지정한 오류 보고 설정은 평가 보고서 생성, 변환-스키마, 마이그레이션 데이터 명령에 적용 됩니다.  
   
-**예:**  
+**예제:**  
   
 ```xml  
 <generate-assessment-report  

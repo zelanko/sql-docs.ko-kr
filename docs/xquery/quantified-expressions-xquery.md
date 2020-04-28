@@ -23,10 +23,10 @@ ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946370"
 ---
 # <a name="quantified-expressions-xquery"></a>정량화된 식(XQuery)
@@ -46,8 +46,7 @@ ms.locfileid: "67946370"
 ( some | every ) <variable> in <Expression> (,...) satisfies <Expression>  
 ```  
   
- 쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. **일부** 를 사용 하는 존재 정량화는 수량자에 의해 바인딩된 값 중 하나 이상이 만족 식에 true 결과가 있는 경우 true를 반환 합니다. **모든** 를 사용 하는 universal 정량화은 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  
+ 쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. **일부** 를 사용 하는 존재 정량화는 수량자에 의해 바인딩된 값 중 하나 이상이 만족 식에 true 결과가 있는 경우 true를 반환 합니다. **모든** 를 사용 하는 universal 정량화은 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  
   
  예를 들어 다음 쿼리는 모든 \<위치> 요소를 검사 하 여 locationid 특성이 있는지 여부를 확인 합니다.  
   

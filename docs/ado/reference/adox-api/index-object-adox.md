@@ -16,10 +16,10 @@ ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966085"
 ---
 # <a name="index-object-adox"></a>인덱스 개체(ADOX)
@@ -59,7 +59,7 @@ Dim obj As New Index
   
  이 섹션에는 다음 항목이 포함 되어 있습니다.  
   
--   [인덱스 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
+-   [Index 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Indexes Append 메서드 예제 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   

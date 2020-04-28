@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989643"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA 시작 (DB2ToSQL)
@@ -78,7 +78,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
 #### <a name="migration-toolbar"></a>마이그레이션 도구 모음  
 다음 표에서는 마이그레이션 도구 모음 명령을 보여 줍니다.  
   
-|단추|함수|  
+|단추|기능|  
 |------|--------|  
 |**보고서 만들기**|선택한 DB2 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환한 다음 변환의 성공 여부를 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 DB2 메타 데이터 탐색기에서 개체를 선택 하지 않으면 사용할 수 없습니다.|  
 |**스키마 변환**|선택한 DB2 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체로 변환 합니다.<br /><br />이 명령은 DB2 메타 데이터 탐색기에서 개체를 선택 하지 않으면 사용할 수 없습니다.|  
@@ -90,7 +90,7 @@ SSMA에는 프로젝트 도구 모음과 마이그레이션 도구 모음 이라
   
 |메뉴|Description|  
 |----|-----------|  
-|**파일**|에는 프로젝트 작업, d b 2에 연결 및 연결에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]한 명령이 포함 되어 있습니다.|  
+|**최근에 사용한 파일**|에는 프로젝트 작업, d b 2에 연결 및 연결에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]한 명령이 포함 되어 있습니다.|  
 |**편집**|SQL 세부 정보 창에서 복사 [!INCLUDE[tsql](../../includes/tsql-md.md)] 와 같이 세부 정보 페이지에서 텍스트를 찾고 사용 하는 명령이 포함 되어 있습니다. 또한에는 기존 책갈피 목록을 볼 수 있는 **책갈피 관리** 옵션도 포함 되어 있습니다. 대화 상자의 오른쪽에 있는 단추를 사용 하 여 책갈피를 관리할 수 있습니다.|  
 |**보기**|**메타 데이터 탐색기 동기화** 명령을 포함 합니다. DB2 메타 데이터 탐색기와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기 간에 개체를 동기화 합니다. 에는 **출력** 및 **오류 목록** 창 및 레이아웃을 관리 하는 옵션 **레이아웃** 을 표시 하 고 숨기는 명령도 포함 됩니다.|  
 |**도구**|보고서를 만들고 개체와 데이터를 마이그레이션하는 명령을 포함 합니다. 또한 **전역 설정** 및 **프로젝트 설정** 대화 상자에 대 한 액세스를 제공 합니다.|  

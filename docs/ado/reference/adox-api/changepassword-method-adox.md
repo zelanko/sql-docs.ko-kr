@@ -17,10 +17,10 @@ ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967031"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드(ADOX)
@@ -46,7 +46,7 @@ User.ChangePassword OldPassword, NewPassword
  공급자가 트러스티 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+ [User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [Groups 및 Users Append, ChangePassword 메서드 예제(VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)

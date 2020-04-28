@@ -16,19 +16,19 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965240"
 ---
 # <a name="ruleenum"></a>RuleEnum
 [키](../../../ado/reference/adox-api/key-object-adox.md) 를 삭제할 때 따라야 하는 규칙을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Cascade 변경|  
-|**adRINone**|0|Default. 아무 동작도 수행되지 않습니다.|  
+|**adRINone**|0|기본값 아무 동작도 수행되지 않습니다.|  
 |**adRISetDefault**|3|외래 키 값이 기본값으로 설정 됩니다.|  
 |**adRISetNull**|2|외래 키 값이 null로 설정 됩니다.|  
   

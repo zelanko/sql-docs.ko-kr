@@ -14,10 +14,10 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964208"
 ---
 # <a name="execute21-method-rds"></a>Execute21 메서드(RDS)
@@ -40,7 +40,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  문자열은이 실행에 사용할 처리기를 식별 합니다. 문자열에는 두 부분이 포함 됩니다. 첫 번째 부분에는 사용할 처리기의 이름 (ProgID)이 포함 되어 있습니다. 문자열의 두 번째 부분에는 처리기에 전달 될 인수가 들어 있습니다. 인수 문자열을 해석 하는 방법은 handler와 관련이 있습니다. 인수 문자열에 추가 쉼표를 포함할 수는 있지만 두 부분은 문자열에 있는 첫 번째 인스턴스의 쉼표로 구분 됩니다. 인수는 선택 사항입니다.  
   
- *문자열*  
+ *QueryString*  
  연결 문자열에서 식별 된 OLE DB 공급자가 지 원하는 명령 언어의 명령입니다. SQL 기반 공급자의 경우 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 명령 문이 포함 될 수 있지만 sql 이외의 공급자 (예: MSDataShape)의 경우 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리 문이 아닐 수 있습니다.  
   
  또한 처리기를 사용 하는 경우 처리기를 사용 하는 것이 좋습니다. 처리기는 여기에 지정 된 값을 변경 하거나 바꿀 수 있습니다. 예를 들어 처리기는 일반적으로 *QueryString* 파일의 쿼리 문자열로 QueryString을 대체 합니다. 기본적으로 Msdfmap .ini 파일이 사용 됩니다.  

@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936610"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
@@ -34,7 +34,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *원본*  
+ *소스*  
  SQL 명령이 나 저장 프로시저 이름이 포함 된 **문자열** 입니다.  
   
  *CursorType*  

@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933412"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
@@ -34,7 +34,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *원본*  
+ *소스*  
  (선택 사항) 복사할 엔터티 (예: 파일 또는 디렉터리)를 지정 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 파일이 나 디렉터리가 복사 됩니다.  
   
  *대상*  

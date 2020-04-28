@@ -18,10 +18,10 @@ ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950523"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
@@ -82,8 +82,7 @@ OUTPUT
 ## <a name="examples"></a>예  
   
 ### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>A. 올바른 형식의 XML 문서를 위한 내부 표현 준비  
- 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 
-  `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
+ 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
   
 ```  
 DECLARE @hdoc int;  
@@ -109,8 +108,7 @@ exec sp_xml_removedocument @hdoc;
 ```  
   
 ### <a name="b-preparing-an-internal-representation-for-a-well-formed-xml-document-with-a-dtd"></a>B. DTD가 있는 올바른 형식의 XML 문서를 위한 내부 표현 준비  
- 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 저장 프로시저는 문서에 포함된 DTD에 대해 로드된 문서의 유효성을 검사합니다. 
-  `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
+ 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 저장 프로시저는 문서에 포함된 DTD에 대해 로드된 문서의 유효성을 검사합니다. `sp_xml_preparedocument` 호출에서 기본 네임스페이스 접두사 매핑이 사용됩니다.  
   
 ```  
 DECLARE @hdoc int;  

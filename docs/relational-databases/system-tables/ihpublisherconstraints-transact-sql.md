@@ -18,10 +18,10 @@ ms.assetid: 537b1e1a-7228-4680-aa27-5ad7072ea01e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 44987e1b610483e6ce3cbca26c1efb8a1ef4c241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990255"
 ---
 # <a name="ihpublisherconstraints-transact-sql"></a>IHpublisherconstraints(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67990255"
 |**table_id**|**int**|제약 조건이 속한 [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) 에서 테이블을 식별 합니다.|  
 |**publisher_id**|**smallint**|열이 게시되는 SQL Server 이외 게시자를 식별합니다.|  
 |**이름**|**Sysname 이며**|게시된 제약 조건의 이름입니다.|  
-|**형식**|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) 시스템 테이블에서 지원 되는 제약 조건 유형입니다.|  
+|**Type**|**nvarchar(255)**|[IHconstrainttypes](../../relational-databases/system-tables/ihconstrainttypes-transact-sql.md) 시스템 테이블에서 지원 되는 제약 조건 유형입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

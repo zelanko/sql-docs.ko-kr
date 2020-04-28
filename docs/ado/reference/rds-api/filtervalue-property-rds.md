@@ -14,10 +14,10 @@ ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964058"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue 속성(RDS)
@@ -38,7 +38,7 @@ DataControl.FilterValue = String
  RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
  *String*  
- 레코드 **** 를 필터링 하는 데 사용할 데이터 값 (예: `'Programmer'` 또는 `125`)을 나타내는 문자열 값입니다.  
+ 레코드 **String** 를 필터링 하는 데 사용할 데이터 값 (예: `'Programmer'` 또는 `125`)을 나타내는 문자열 값입니다.  
   
 ## <a name="remarks"></a>설명  
  [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **filtervalue**, [filtervalue](../../../ado/reference/rds-api/filtercriterion-property-rds.md)및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. [Reset](../../../ado/reference/rds-api/reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  

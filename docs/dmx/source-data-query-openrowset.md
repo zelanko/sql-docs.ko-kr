@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938120"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;원본 데이터 쿼리&gt; -OPENROWSET
@@ -41,8 +41,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  데이터 마이닝 공급자는 *provider_name* 및 *provider_string를* 사용 하 여 데이터 원본 개체에 대 한 연결을 설정 하 고 *query_syntax* 에 지정 된 쿼리를 실행 하 여 원본 데이터에서 행 집합을 검색 합니다.  
   
 ## <a name="examples"></a>예  
- 
-  [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] SELECT 문을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스에서 데이터를 검색할 때 PREDICTION JOIN 문 내에서 다음 예를 사용할 수 있습니다.  
+ [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] SELECT 문을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스에서 데이터를 검색할 때 PREDICTION JOIN 문 내에서 다음 예를 사용할 수 있습니다.  
   
 ```  
 OPENROWSET  
@@ -56,6 +55,6 @@ OPENROWSET
 ## <a name="see-also"></a>참고 항목  
  [&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

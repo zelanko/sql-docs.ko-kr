@@ -41,10 +41,10 @@ ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8bc9527109aaa4a3a8063b26a594c9bdb978dcf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965589"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog 속성(ADOX)
@@ -62,8 +62,8 @@ ms.locfileid: "67965589"
   
 |||  
 |-|-|  
-|[열 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[테이블 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[사용자 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
+|[Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
+|[User 개체(ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
   
 ## <a name="see-also"></a>참고 항목  
  [ParentCatalog 속성 예제(VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

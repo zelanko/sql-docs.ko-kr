@@ -10,10 +10,10 @@ ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989842"
 ---
 # <a name="creating-script-files-db2tosql"></a>스크립트 파일 만들기 (DB2ToSQL)
@@ -44,7 +44,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   메시지 표시 안 함: 콘솔에서 메시지를 표시 하지 않습니다. 이는 기본적으로 ' f a l s e '입니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -61,7 +61,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <...All commands...>  
@@ -87,7 +87,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   대상별-last used = "true" (기본값) 또는 target-server = "target_servername"  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -98,7 +98,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <migrate-data>  
@@ -122,7 +122,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     기본 모드는 **오류**입니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -131,7 +131,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -153,7 +153,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     기본 모드는 **오류 생성**입니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -164,7 +164,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <!--synchronization-->  
@@ -175,7 +175,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </synchronize-target>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <!--data migration-->  
@@ -201,7 +201,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   ask-user: 사용자에 게 입력 하 라는 메시지를 표시 합니다 (' yes '/' no ').  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -210,7 +210,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -222,7 +222,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
 6.  **실패 한 필수 구성 요소 공급자:** 이를 통해 사용자는 명령을 처리 하는 데 필요한 모든 필수 구성 요소를 처리할 수 있습니다. 기본적으로 strict 모드는 ' f a l s e '입니다. ' T r u e '로 설정 된 경우 필수 조건에 맞지 않으면 예외가 생성 됩니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -250,7 +250,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     -   매-20%  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -263,7 +263,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <...All commands...>  
@@ -296,7 +296,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
     > [!NOTE]  
     > 필수 메시지는 모든 수준에서 기록 됩니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -305,7 +305,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     </output-providers>  
     ```  
-    *디스크나*  
+    *또는*  
   
     ```xml  
     <...All commands...>  
@@ -323,7 +323,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
     2.  Override 옵션이 **true**인 경우 검색 순서는 스크립트 파일-&gt;서버 연결 파일-&gt;프롬프트 사용자입니다.  
   
-    **예:**  
+    **예제:**  
   
     ```xml  
     <output-providers>  
@@ -347,7 +347,7 @@ SSMA 콘솔 응용 프로그램을 시작 하기 전의 첫 번째 단계는 스
   
 스크립트 파일의 모든 명령이 성공적으로 실행 되 면 SSMA 콘솔 응용 프로그램이 종료 되 고 사용자에 게 컨트롤이 반환 됩니다. 스크립트 파일의 내용은 변수 값 [파일 &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) 또는 변수 값에 대 한 스크립트 파일 내의 별도 섹션에 포함 된 변수 정보를 사용 하 여 정적입니다.  
   
-**예:**  
+**예제:**  
   
 ```xml  
 <!--Sample of script file commands -->  

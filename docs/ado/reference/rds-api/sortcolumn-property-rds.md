@@ -14,10 +14,10 @@ ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963404"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn 속성(RDS)
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
 ## <a name="remarks"></a>설명  
  **Sortcolumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtercriterion-property-rds.md)및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 찾기 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. [Reset](../../../ado/reference/rds-api/reset-method-rds.md) 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  
   
- **레코드 집합**을 정렬 하려면 먼저 보류 중인 변경 내용을 저장 해야 합니다. RDS를 사용 하는 경우 ** SubmitChanges 메서드를 사용할**수 있습니다 [](../../../ado/reference/rds-api/submitchanges-method-rds.md) . 예를 들어, RDS 인 경우 ** DataControl** 은 이름이 ADC1 이며 코드는 `ADC1.SubmitChanges`입니다. ADO **레코드 집합**을 사용 하는 경우 해당 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 사용할 수 있습니다. [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) 메서드를 사용 하 여 만든 **레코드 집합** 개체의 경우 **UpdateBatch** 를 사용 하는 것이 좋습니다. 예를 들어 코드는 또는 `myRS.UpdateBatch` `ADC1.Recordset.UpdateBatch`일 수 있습니다.  
+ **레코드 집합**을 정렬 하려면 먼저 보류 중인 변경 내용을 저장 해야 합니다. RDS를 사용 하는 경우 ** SubmitChanges 메서드를 사용할**수 있습니다 [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) . 예를 들어, RDS 인 경우 ** DataControl** 은 이름이 ADC1 이며 코드는 `ADC1.SubmitChanges`입니다. ADO **레코드 집합**을 사용 하는 경우 해당 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 사용할 수 있습니다. [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) 메서드를 사용 하 여 만든 **레코드 집합** 개체의 경우 **UpdateBatch** 를 사용 하는 것이 좋습니다. 예를 들어 코드는 또는 `myRS.UpdateBatch` `ADC1.Recordset.UpdateBatch`일 수 있습니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

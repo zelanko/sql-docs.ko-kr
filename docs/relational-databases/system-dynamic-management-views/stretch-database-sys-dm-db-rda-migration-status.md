@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937068"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database dm_db_rda_migration_status
@@ -34,7 +34,7 @@ ms.locfileid: "67937068"
   
  에서는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] **dm_db_rda_migration_status** 의 출력이 200 개 행으로 제한 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|행이 마이그레이션된 테이블의 ID입니다.|  
 |**database_id**|**int**|행이 마이그레이션되는 데이터베이스의 ID입니다.|  

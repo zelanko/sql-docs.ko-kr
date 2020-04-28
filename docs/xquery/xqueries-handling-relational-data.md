@@ -16,10 +16,10 @@ ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946163"
 ---
 # <a name="xqueries-handling-relational-data"></a>관계형 데이터에 대한 XQuery 처리
@@ -29,9 +29,9 @@ ms.locfileid: "67946163"
   
  XQuery 실행으로 생성된 XML에는 다른 Transact-SQL 변수 또는 행 집합 열로부터 검색된 값이 포함될 수 있습니다. 비-XML 관계형 데이터를 결과 XML에 바인딩하기 위해 SQL Server는 XQuery 확장으로 다음과 같은 의사 함수를 제공합니다.  
   
--   **sql: column ()** 함수  
+-   **sql:column()** function  
   
--   **sql: variable ()** 함수  
+-   **sql:variable()** function  
   
  **Xml** 데이터 형식의 **query ()** 메서드에서 xquery를 지정할 때 이러한 xquery 확장을 사용할 수 있습니다. 따라서 **query ()** 메서드는 xml 및 비-**xml** 데이터 형식의 데이터를 결합 하는 xml을 생성할 수 있습니다.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "67946163"
  자세한 내용은 [sql: column () 함수 (xquery)](../xquery/xquery-extension-functions-sql-column.md) 및 [sql: variable () 함수 (xquery)](../xquery/xquery-extension-functions-sql-variable.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [XML 데이터 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [XQuery 언어 참조 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
   
   

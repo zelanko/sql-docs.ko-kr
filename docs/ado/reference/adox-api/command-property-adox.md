@@ -17,10 +17,10 @@ ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966685"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
@@ -36,10 +36,10 @@ ms.locfileid: "67966685"
   
 |||  
 |-|-|  
-|[프로시저 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[보기 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [Command 및 CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters 컬렉션, Command 속성 예제 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Views 및 Fields 컬렉션 예제 (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [보기 컬렉션, CommandText 속성 예제(VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+ [Views 컬렉션, CommandText 속성 예제(VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)

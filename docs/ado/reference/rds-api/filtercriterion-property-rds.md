@@ -14,10 +14,10 @@ ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5b14e042c7566b6b6f8559e9dc371028a509979
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964063"
 ---
 # <a name="filtercriterion-property-rds"></a>FilterCriterion 속성(RDS)

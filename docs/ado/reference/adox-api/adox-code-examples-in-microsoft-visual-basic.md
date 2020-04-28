@@ -15,10 +15,10 @@ ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952131"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic의 ADOX 코드 예제
@@ -97,6 +97,6 @@ ms.locfileid: "67952131"
   
 -   [Parameters 컬렉션, Command 속성 예제(VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)  
   
--   [보기 및 필드 컬렉션 예제(VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
+-   [Views 및 Fields 컬렉션 예제(VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)  
   
--   [보기 컬렉션, CommandText 속성 예제(VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+-   [Views 컬렉션, CommandText 속성 예제(VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)

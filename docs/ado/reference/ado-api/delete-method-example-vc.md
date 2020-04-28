@@ -15,10 +15,10 @@ ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933101"
 ---
 # <a name="delete-method-example-vc"></a>Delete 메서드 예제(VC++)

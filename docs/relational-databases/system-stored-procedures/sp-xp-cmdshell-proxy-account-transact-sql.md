@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 59ea64e16f1469c12461a559c3f102094615fa12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950456"
 ---
 # <a name="sp_xp_cmdshell_proxy_account-transact-sql"></a>sp_xp_cmdshell_proxy_account(Transact-SQL)
@@ -50,7 +50,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
  *account_name*  
  프록시가 될 Windows 로그인을 지정합니다.  
   
- *암호*  
+ *password*  
  Windows 계정의 암호를 지정합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -84,9 +84,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;xp_cmdshell &#40;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
- [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sys.credentials&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
+ [Transact-sql&#41;자격 증명 &#40;만들기](../../t-sql/statements/create-credential-transact-sql.md)   
+ [sys. 자격 증명 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [보안 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)  
   
   

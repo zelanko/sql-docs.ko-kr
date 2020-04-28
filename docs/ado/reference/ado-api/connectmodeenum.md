@@ -16,16 +16,16 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933452"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 [연결](../../../ado/reference/ado-api/connection-object-ado.md)의 데이터를 수정 하거나 [레코드](../../../ado/reference/ado-api/record-object-ado.md)를 열거나 **Record** 및 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성 값을 지정 하는 데 사용할 수 있는 권한을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  
@@ -34,13 +34,13 @@ ms.locfileid: "67933452"
 |**adModeShareDenyRead**|4|다른 사용자가 읽기 권한을 가진 연결을 열 수 없도록 합니다.|  
 |**adModeShareDenyWrite**|8|다른 사용자가 쓰기 권한으로 연결을 열 수 없도록 합니다.|  
 |**adModeShareExclusive**|12|다른 사용자가 연결을 열 수 없도록 합니다.|  
-|**adModeUnknown**|0|Default. 사용 권한이 아직 설정 되지 않았거나 확인할 수 없음을 나타냅니다.|  
+|**adModeUnknown**|0|기본값 사용 권한이 아직 설정 되지 않았거나 확인할 수 없음을 나타냅니다.|  
 |**adModeWrite**|2|쓰기 전용 권한을 나타냅니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums. READWRITE|  

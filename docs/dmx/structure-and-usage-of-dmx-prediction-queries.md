@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938064"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 예측 쿼리의 구조 및 사용법
@@ -44,11 +44,11 @@ ms.locfileid: "67938064"
   
 -   **맨 위로 이동**  
   
--   *****\<모델>* **예측 조인** 에서      
+-   **FROM***\<모델>* **예측 조인** 에서      
   
--   **켜기**  
+-   **SIGN-ON**  
   
--   **WHERE**  
+-   **위치**  
   
 -   **ORDER BY**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938064"
   
 -   데이터 열을 반환하는 함수  
   
- **** *FROM \<model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
+ **FROM** *FROM \<model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
   
  **ON** 요소는 마이닝 모델에 정의 된 열을 외부 데이터 집합의 열에 매핑합니다. 빈 예측 조인 쿼리나 자연 예측 조인을 만드는 경우에는 이 요소를 포함하지 않아도 됩니다.  
   

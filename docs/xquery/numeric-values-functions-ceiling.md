@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946573"
 ---
 # <a name="numeric-values-functions---ceiling"></a>숫자 값 함수 - ceiling 

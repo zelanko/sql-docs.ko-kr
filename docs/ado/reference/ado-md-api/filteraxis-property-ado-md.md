@@ -17,10 +17,10 @@ ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938452"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 속성(ADO MD)
@@ -30,7 +30,7 @@ ms.locfileid: "67938452"
  는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 반환 하 고는 읽기 전용입니다.  
   
 ## <a name="remarks"></a>설명  
- **Filteraxis** 속성을 사용 하 여 데이터를 조각화 하는 데 사용 된 차원에 대 한 정보를 반환 합니다. 축의 [Dimensioncount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 속성은 슬라이서 **** 차원의 수를 반환 합니다. 이 축에는 일반적으로 하나의 행만 있습니다.  
+ **Filteraxis** 속성을 사용 하 여 데이터를 조각화 하는 데 사용 된 차원에 대 한 정보를 반환 합니다. 축의 [Dimensioncount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) 속성은 슬라이서 **Axis** 차원의 수를 반환 합니다. 이 축에는 일반적으로 하나의 행만 있습니다.  
   
  **Filteraxis** 에서 반환 된 **축은** [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체의 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션에 포함 되지 않습니다.  
   

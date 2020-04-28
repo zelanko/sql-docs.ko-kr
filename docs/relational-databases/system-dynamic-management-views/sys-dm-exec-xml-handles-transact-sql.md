@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936781"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles(Transact-SQL)
@@ -52,7 +52,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|이 XML 문서 핸들을 보유한 세션의 세션 ID입니다.|  
 |**document_id**|**int**|**Sp_xml_preparedocument**에서 반환 된 XML 문서 핸들 ID입니다.|  
 |**namespace_document_id**|**int**|**Sp_xml_preparedocument**에 대 한 세 번째 매개 변수로 전달 된 연결 된 네임 스페이스 문서에 사용 되는 내부 핸들 ID입니다. 네임스페이스 문서가 없으면 NULL이 됩니다.|  
-|**sql_handle**|**varbinary (64)**|해당 핸들이 정의된 SQL 코드 텍스트에 대한 핸들입니다.|  
+|**sql_handle**|**varbinary(64)**|해당 핸들이 정의된 SQL 코드 텍스트에 대한 핸들입니다.|  
 |**statement_start_offset**|**int**|**Sp_xml_preparedocument** 호출이 발생 하는 현재 실행 중인 일괄 처리 또는 저장 프로시저에 대 한 문자 수입니다. **Sql_handle**, **statement_end_offset**및 **dm_exec_sql_text** 동적 관리 함수와 함께 사용 하 여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다.|  
 |**statement_end_offset**|**int**|**Sp_xml_preparedocument** 호출이 발생 하는 현재 실행 중인 일괄 처리 또는 저장 프로시저에 대 한 문자 수입니다. **Sql_handle**, **statement_start_offset**및 **dm_exec_sql_text** 동적 관리 함수와 함께 사용 하 여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다.|  
 |**creation_time**|**datetime**|**Sp_xml_preparedocument** 가 호출 된 타임 스탬프입니다.|  

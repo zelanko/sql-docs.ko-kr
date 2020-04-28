@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989871"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 스키마 변환 (DB2ToSQL)
@@ -66,7 +66,7 @@ DB2에 연결 하 고,에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 |WHILE 문|가 매핑됩니다.|  
 |진단 문 가져오기|**SSMA 맵은 다음과 같은 예외를 사용 하 여 진단을 가져옵니다.**<br /><br />ROW_COUNT-매핑됩니다.<br /><br />DB2_RETURN_STATUS-매핑됩니다.<br /><br />MESSAGE_TEXT-매핑됩니다.<br /><br />DB2_SQL_NESTING_LEVEL-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />DB2_TOKEN_STRING-SQL Server 의미 체계에 매핑되지 않습니다.|  
 |커서|**SSMA는 다음과 같은 예외를 제외 하 고 커서를 매핑합니다.**<br /><br />CURSOR 문 할당-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />LOCATOR 문의 연결-SQL Server 의미 체계에 매핑되지 않습니다.<br /><br />DECLARE CURSOR 문-Returnability 절은 SQL server 의미 체계에 매핑되지 않습니다.<br /><br />FETCH 문-부분 매핑 변수는 target 으로만 지원 됩니다. SQLVAR 설명자가 SQL server 의미 체계에 매핑되지 않았습니다.|  
-|variables|매핑됩니다.|  
+|변수|매핑됩니다.|  
 |예외, 처리기 및 조건|**SSMA는 다음과 같은 예외를 제외 하 고 "예외 처리"를 매핑합니다.**<br /><br />종료 처리기-가 매핑됩니다.<br /><br />실행 취소 처리기-가 매핑됩니다.<br /><br />CONTINUE 처리기-매핑되지 않습니다.<br /><br />조건-SQL server 의미 체계에 매핑되지 않습니다.|  
 |동적 SQL|매핑되지 않았습니다.|  
 |별칭|매핑됩니다.|  

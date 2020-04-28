@@ -20,10 +20,10 @@ ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984932"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67984932"
 
   작업 단계 출력을 테이블에 쓰도록 구성되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에 대한 작업 단계 로그를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|작업 단계 로그의 ID입니다.|  
 |**로깅할**|**nvarchar(max)**|작업 단계 로그 내용입니다.|  

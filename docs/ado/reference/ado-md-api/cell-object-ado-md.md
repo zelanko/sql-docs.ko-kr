@@ -16,10 +16,10 @@ ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947745"
 ---
 # <a name="cell-object-ado-md"></a>Cell 개체(ADO MD)
@@ -42,7 +42,7 @@ ms.locfileid: "67947745"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |BackColor|셀을 표시할 때 사용 되는 배경색입니다.|  
 |FontFlags|글꼴 효과를 자세히 설명 하는 비트 마스크입니다.|  

@@ -10,10 +10,10 @@ ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989564"
 ---
 # <a name="global-settings-logging-db2tosql"></a>전역 설정 (로깅) (DB2ToSQL)
@@ -46,8 +46,8 @@ ms.locfileid: "67989564"
 |-|-|  
 |**심각한 오류**|심각한 오류 메시지를 로그에 기록 합니다.|  
 |**오류**|로그에 오류 및 심각한 오류 메시지를 씁니다.|  
-|**경고**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
-|**나타납니다**|정보, 경고, 오류 및 심각한 오류 메시지를 로그에 기록 합니다.|  
+|**내용의**|로그에 경고, 오류 및 심각한 오류 메시지를 기록 합니다.|  
+|**정보**|정보, 경고, 오류 및 심각한 오류 메시지를 로그에 기록 합니다.|  
 |**디버그**|디버그 메시지를 포함 하 여 모든 메시지를 로그에 씁니다.|  
   
 **로그 파일 경로**  

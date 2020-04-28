@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990392"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67990392"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|게시된 열을 식별합니다.|  
 |**publishercolumn_id**|**int**|게시 된 열을 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 시스템 테이블에 저장 된 열 메타 데이터와 연결 합니다.|  

@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995492"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver(Transact-SQL)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server'`다시 동기화 할 서버의 이름입니다. *서버* 는 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
+`[ @server_name = ] 'server'`다시 동기화 할 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다. **All** 을 지정 하면 모든 대상 서버가 다시 동기화 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

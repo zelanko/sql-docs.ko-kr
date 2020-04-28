@@ -16,10 +16,10 @@ ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937830"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update 및 CancelUpdate 메서드 예제(VB)
