@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bcd980bb7fe77e2d207e568802dfd7e69e9a1484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882123"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>아티클 유형 정의(복제 Transact-SQL 프로그래밍)
@@ -34,7 +34,7 @@ ms.locfileid: "73882123"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@유형** 에 대해 다음 값 중 하나를 지정 하 여 아티클 유형을 정의 합니다.  
   
-    -   **logbased** -로그 기반 테이블 아티클로, 트랜잭션 및 스냅숏 복제에 대 한 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
+    -   **logbased** - 로그 기반 테이블 아티클로, 트랜잭션 및 스냅샷 복제에 대해 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
   
     -   **logbased manualfilter** -행 필터링에 사용 되는 저장 프로시저를 사용자가 수동으로 작성 및 정의 하 고 ** \@필터로**지정 하는 로그 기반의 행 필터링 된 아티클입니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "73882123"
      게시에 대한 새 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [복제 시스템 저장 프로시저 개념](../concepts/replication-system-stored-procedures-concepts.md)   
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)  
   
   

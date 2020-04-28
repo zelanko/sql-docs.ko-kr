@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727579"
 ---
 # <a name="partition-storage-modes-and-processing"></a>파티션 스토리지 모드 및 처리
@@ -50,12 +50,9 @@ ms.locfileid: "62727579"
  ROLAP 스토리지 모드에서는 파티션의 집계가 파티션의 데이터 원본에 지정된 관계형 데이터베이스의 인덱싱된 뷰에 저장됩니다. MOLAP 스토리지 모드와는 달리 ROLAP에서는 원본 데이터의 복사본이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 폴더에 저장되지 않습니다. 대신 쿼리 캐시에서 결과를 얻을 수 없는 경우 쿼리에 응답하기 위해 데이터 원본의 인덱싱된 뷰가 액세스됩니다. ROLAP 스토리지 모드를 사용하는 경우 일반적으로 쿼리 응답 시간은 MOLAP 또는 HOLAP 스토리지 모드를 사용하는 경우에서보다 느립니다. ROLAP을 사용하면 처리 시간도 대체로 느립니다. 그러나 ROLAP을 사용하면 사용자가 실시간으로 데이터를 볼 수 있으며 기록 데이터와 같이 자주 쿼리되지 않는 대량의 데이터 세트 작업을 수행하는 경우 스토리지 공간을 절약할 수 있습니다.  
   
 > [!NOTE]  
->  ROLAP을 사용하는 경우 조인이 GROUP BY 절과 결합되어 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 알 수 없는 멤버와 관련된 부정확한 정보를 반환할 수 있습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이와 같은 알 수 없는 멤버 값을 반환하는 대신 관계 무결성 오류를 제거합니다.  
+>  ROLAP을 사용하는 경우 조인이 GROUP BY 절과 결합되어 있으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 알 수 없는 멤버와 관련된 부정확한 정보를 반환할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 이와 같은 알 수 없는 멤버 값을 반환하는 대신 관계 무결성 오류를 제거합니다.  
   
- 파티션에 ROLAP 스토리지 모드를 사용하고 해당 원본 데이터가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 파티션의 집계를 포함할 인덱싱된 뷰를 만듭니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 인덱싱된 뷰를 만들 수 없으면 집계 테이블을 생성하지 않습니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 인덱싱된 뷰를 만들기 위해 필요한 세션 요구 사항을 처리하지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 집계에 대해 인덱싱된 뷰를 만들려면 ROLAP 파티션과 해당 스키마의 테이블이 다음 조건을 만족해야 합니다.  
+ 파티션에 ROLAP 스토리지 모드를 사용하고 해당 원본 데이터가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되어 있는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 파티션의 집계를 포함할 인덱싱된 뷰를 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 인덱싱된 뷰를 만들 수 없으면 집계 테이블을 생성하지 않습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 인덱싱된 뷰를 만들기 위해 필요한 세션 요구 사항을 처리하지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 집계에 대해 인덱싱된 뷰를 만들려면 ROLAP 파티션과 해당 스키마의 테이블이 다음 조건을 만족해야 합니다.  
   
 -   집계 함수 `Min` 또는 `Max`를 사용하는 측정값은 파티션에 포함되면 안됩니다.  
   
@@ -75,21 +72,20 @@ ms.locfileid: "62727579"
   
     -   QUOTED_IDENTIFIER  
   
--   
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 인덱스 키의 전체 크기는 900바이트를 초과할 수 없습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]는 CREATE INDEX 문이 처리 될 때 고정 길이 키 열을 기반으로이 조건을 어설션 합니다. 그러나 인덱스 키에 가변 길이 열이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 기본 테이블에 대 한 모든 업데이트에 대해서도이 조건을 어설션 합니다. 여러 집계에는 서로 다른 뷰 정의를 사용하므로, 인덱싱된 뷰를 사용하는 ROLAP 처리는 집계 디자인에 따라 성공할 수도 있고 실패할 수도 있습니다.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 인덱스 키의 전체 크기는 900바이트를 초과할 수 없습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]는 CREATE INDEX 문이 처리 될 때 고정 길이 키 열을 기반으로이 조건을 어설션 합니다. 그러나 인덱스 키에 가변 길이 열이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 기본 테이블에 대 한 모든 업데이트에 대해서도이 조건을 어설션 합니다. 여러 집계에는 서로 다른 뷰 정의를 사용하므로, 인덱싱된 뷰를 사용하는 ROLAP 처리는 집계 디자인에 따라 성공할 수도 있고 실패할 수도 있습니다.  
   
 -   인덱싱된 뷰를 만드는 세션은 ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING 및 ANSI_WARNING 옵션을 ON으로 설정 해야 합니다. 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
 -   인덱싱된 뷰를 만드는 세션에는 다음 옵션을 OFF로 설정 해야 합니다. NUMERIC_ROUNDABORT 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 스토리지 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 HOLAP은 파티션의 집계가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 다차원 구조에 저장 되도록 합니다. HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 원본 데이터에 액세스 하는 쿼리 (예: 집계 데이터가 없는 원자 큐브 셀로 드릴 다운 하려는 경우) 관계형 데이터베이스에서 데이터를 검색 해야 하며 원본 데이터가 MOLAP structur 저장 되는 경우의 속도와는 차이가 없습니다. 우표. HOLAP 스토리지 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
+ HOLAP 스토리지 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 HOLAP은 파티션의 집계가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 다차원 구조에 저장 되도록 합니다. HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 원본 데이터에 액세스 하는 쿼리 (예: 집계 데이터가 없는 원자 큐브 셀로 드릴 다운 하려는 경우) 관계형 데이터베이스에서 데이터를 검색 해야 하며 원본 데이터가 MOLAP 구조로 저장 된 경우의 속도와는 차이가 없습니다. HOLAP 스토리지 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
   
  HOLAP으로 저장된 파티션은 원본 데이터를 포함하지 않으므로 동일한 MOLAP 파티션보다 크기가 작으며 요약 데이터를 사용하는 쿼리에 대해 ROLAP 파티션보다 응답 속도가 빠릅니다. HOLAP 스토리지 모드는 일반적으로 방대한 원본 데이터를 기반으로 하는 요약에 대해 신속한 쿼리 응답이 필요한 큐브의 파티션에 적합합니다. 그러나 중앙값 계산과 같이 리프 수준 데이터에 액세스해야 하는 쿼리를 생성하는 경우에는 대개 MOLAP을 사용하는 것이 더 낫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [자동 관리 캐싱 &#40;파티션&#41;](partitions-proactive-caching.md)   
  [Analysis Services 데이터베이스 동기화](../multidimensional-models/synchronize-analysis-services-databases.md)   
- [파티션 &#40;Analysis Services 다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)  
+ [파티션&#40;Analysis Services - 다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736396"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
@@ -135,13 +135,10 @@ ms.locfileid: "62736396"
   
 -   내부 공백이 유지됩니다.  
   
- 
-  `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 및 `ID` 규칙에 대 `Name` 한 자세한 내용은 [개체 및 개체 특성](assl-objects-and-object-characteristics.md)을 참조 하세요.  
+ `Name` 및 `ID` 속성에는 문자열 요소의 유효한 문자에 대한 특별한 제한이 있습니다. 및 `ID` 규칙에 대 `Name` 한 자세한 내용은 [개체 및 개체 특성](assl-objects-and-object-characteristics.md)을 참조 하세요.  
   
  `DateTime`  
- .NET Framework `DateTime` 구조체입니다. 
-  `DateTime` 값은 NULL일 수 없습니다. 
-  `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
+ .NET Framework `DateTime` 구조체입니다. `DateTime` 값은 NULL일 수 없습니다. `DataTime` 데이터 형식에서 지원되는 가장 이른 날짜는 1601년 1월 1일이며 프로그래머는 이 날짜를 `DateTime.MinValue`로 사용할 수 있습니다. 지원되는 가장 낮은 날짜는 `DateTime` 값이 누락되었음을 나타냅니다.  
   
  `Boolean`  
  {true, false} 또는 {0, 1}처럼 두 개의 값만 가지는 열거형입니다.  
@@ -153,7 +150,7 @@ ms.locfileid: "62736396"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|""(빈 문자열)|  
-|`Integer`디스크나`Long`|0(영)|  
+|`Integer` 또는 `Long`|0(영)|  
 |`Timestamp`|오전 12:00:00, 1/1/0001 (0 틱이 있는 .NET Framework `System.DateTime` 에 해당)|  
   
  존재하기는 하지만 비어 있는 요소는 기본값이 아닌 Null 문자열 값을 갖는 것으로 해석됩니다.  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400147"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 tempdb 데이터베이스
@@ -21,7 +21,7 @@ ms.locfileid: "74400147"
   
 시스템 데이터베이스에 대 한 자세한 내용은 [시스템 데이터베이스](system-databases.md)를 참조 하세요.  
   
-## <a name="Basics"></a>주요 용어 및 개념  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>주요 용어 및 개념  
 *로컬 임시 테이블*  
 *로컬 임시 테이블* 은 테이블 이름 앞에 # 접두사를 사용 하 고는 로컬 사용자 세션에서 만든 임시 테이블입니다. 각 세션은 자체 세션에 대해 로컬 임시 테이블의 데이터에만 액세스할 수 있습니다.  
   
@@ -51,7 +51,7 @@ SQL Server PDW은 다음과 같은 경우 **tempdb** 에서 테이블을 삭제 
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 명시적으로 다르게 지정 되지 않는 한 SQL Server PDW 임시 테이블 및 영구 테이블에 대해 동일한 작업을 수행 합니다. 예를 들어 영구 테이블과 마찬가지로 로컬 임시 테이블의 데이터는 계산 노드 간에 분산 또는 복제 됩니다.  
   
-## <a name="LimitationsRestrictions"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>제한 사항  
 SQL Server PDW**tempdb** 데이터베이스에 대 한 제한 사항입니다. 다음을 할 *수 없습니다.*  
   
 -   # #으로 시작 하는 전역 임시 테이블을 만듭니다.  
@@ -82,9 +82,9 @@ SQL Server PDW**tempdb** 데이터베이스에 대 한 제한 사항입니다. �
 ## <a name="permissions"></a>사용 권한  
 모든 사용자가 tempdb에 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. tempdb 연결 권한을 취소하여 사용자가 tempdb를 사용하지 못하도록 할 수 있지만 일부 일상적인 작업에서 tempdb를 사용해야 하므로 권장하지 않습니다.  
   
-## <a name="RelatedTasks"></a>관련 작업  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>관련 작업  
   
-|작업|Description|  
+|작업|설명|  
 |---------|---------------|  
 |**Tempdb**에 테이블을 만듭니다.|CREATE TABLE 및 CREATE TABLE SELECT 문으로 사용자 임시 테이블을 만들 수 있습니다. 자세한 내용은 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 및 [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)를 참조 하세요.|  
 |**Tempdb**의 기존 테이블 목록을 표시 합니다.|`SELECT * FROM tempdb.sys.tables;`|  

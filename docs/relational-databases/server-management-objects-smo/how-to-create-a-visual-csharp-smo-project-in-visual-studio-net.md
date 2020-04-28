@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095962"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>방법: Visual Studio .NET에서 Visual C# SMO 프로젝트 만들기
@@ -31,8 +31,7 @@ ms.locfileid: "74095962"
   
 1. Visual Studio를 시작합니다.
   
-2. **파일** 메뉴에서 **새로 만들기** , **프로젝트**를 차례로 클릭 합니다.  
-  **새 프로젝트** 대화 상자가 나타납니다.   
+2. **파일** 메뉴에서 **새로 만들기** , **프로젝트**를 차례로 클릭 합니다.  **새 프로젝트** 대화 상자가 나타납니다.   
   
 3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **설치 됨** 창에서 **템플릿**\\**Visual c #**\\**Windows** 로 이동 하 고 **콘솔 응용 프로그램**을 선택 합니다.  
   
@@ -42,8 +41,7 @@ ms.locfileid: "74095962"
 
 6. [SMO 설치](installing-smo.md) 의 지침에 따라 참조할 프로젝트에 대 한 패키지를 설치 합니다.
   
-7. 
-  **보기** 메뉴에서 **코드**를 클릭합니다.
+7. **보기** 메뉴에서 **코드**를 클릭합니다.
     
 8. 코드에서 네임 스페이스 문 앞에 다음 **using** 문을 입력 하 여 SMO 네임 스페이스의 형식을 한정 합니다.
   

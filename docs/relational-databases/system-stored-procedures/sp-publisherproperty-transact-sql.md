@@ -16,10 +16,10 @@ ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962386"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`설정 되는 속성의 이름입니다. *propertyname* 은 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**xactsetbatching**|후속 작업에 대해 게시자에서 트랜잭션을 일관성 있는 트랜잭션 세트(Xactset)로 그룹화할지 여부입니다. **Enabled** 값은 xactset (기본값)를 만들 수 있음을 의미 합니다. **Disabled** 값은 새 xactset 생성 되지 않은 경우에도 기존 xactset 처리 됨을 의미 합니다.|  
 |**xactsetjob**|Xactset를 만드는 데 Xactset 작업을 사용할지 여부입니다. **Enabled** 값은 Xactset 작업이 정기적으로 실행 되어 게시자에서 xactset를 만듭니다. **Disabled** 값은 변경 내용에 대해 게시자를 폴링할 때 로그 판독기 에이전트 xactset만 생성 됨을 의미 합니다.|  
@@ -56,7 +56,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|설정할 수 있는 다음 게시 속성을 반환합니다.<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|는 **propertyname** 열의 속성에 대 한 현재 설정입니다.|  

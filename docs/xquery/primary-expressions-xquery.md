@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200519"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
@@ -34,7 +34,7 @@ ms.locfileid: "74200519"
 ## <a name="literals"></a>리터럴  
  XQuery 리터럴은 숫자 또는 문자열 리터럴이 될 수 있습니다. 문자열 리터럴에는 미리 정의된 엔터티 참조를 포함할 수 있는데 엔터티 참조는 문자 시퀀스입니다. 이 시퀀스는 구문상의 의미를 내포할 수도 있는 단일 문자를 나타내는 앰퍼샌드로 시작됩니다. 다음은 XQuery에 대해 미리 정의된 엔터티 참조입니다.  
   
-|엔터티 참조|나타내는 대상|  
+|EntityReference|나타내는 대상|  
 |----------------------|----------------|  
 |`&lt;`|\<|  
 |`&gt;`|>|  
@@ -45,14 +45,12 @@ ms.locfileid: "74200519"
  문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 예를 들어 유로 기호는 문자 참조 "&\#8364;"으로 나타낼 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
   
 ### <a name="examples"></a>예  
  다음 예에서는 리터럴과 엔터티 및 문자 참조의 사용법을 보여 줍니다.  
   
- 
-  `<'` 및 `'>` 문자에 특별한 의미가 있기 때문에 이 코드는 오류를 반환합니다.  
+ `<'` 및 `'>` 문자에 특별한 의미가 있기 때문에 이 코드는 오류를 반환합니다.  
   
 ```  
 DECLARE @var XML  

@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785192"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
@@ -100,7 +100,7 @@ ms.locfileid: "73785192"
   
     -   DB-LIBRARY **dbconvert** 함수에서 지 원하는 모든 형식의 **datetime** 및 **smalldatetime** 문자열  
   
-    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY 옵션 탭에서 **국가별 설정 사용** 확인란을 선택 하면 db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다. **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY 옵션 탭에서 **국가별 설정 사용** 확인란을 선택 하면 db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다. **Options** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
      DB-LIBRARY 대량 복사 함수는 ODBC **datetime** 및 **smalldatetime** 형식을 허용 하지 않습니다.  
   

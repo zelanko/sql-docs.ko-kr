@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983126"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부의 할당은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자를 사용합니다. Dm_os_process_memory에서 프로세스 메모리 카운터 간의 차이를 추적 합니다 **.** 내부 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 공간의 외부 구성 요소에서 메모리 사용을 나타낼 수 있습니다.  
   
  노드는 물리적 NUMA 메모리 노드별로 생성됩니다. 이는 dm_os_nodes의 CPU 노드와 다를 수 있습니다 **.**  
@@ -45,11 +44,10 @@ ms.locfileid: "73983126"
 |**memory_node_id**|**smallint**|메모리 노드의 ID를 지정합니다. **Dm_os_memory_clerks** **memory_node_id** 와 관련 되어 있습니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_reserved_kb**|**bigint**|물리적 페이지에 커밋 또는 매핑되지 않은 가상 주소 예약의 크기(KB)를 나타냅니다. Null을 허용하지 않습니다.|  
 |**virtual_address_space_committed_kb**|**bigint**|물리적 페이지에 커밋 또는 매핑된 가상 주소 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
-|**locked_page_allocations_kb**|**bigint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 잠긴 물리적 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
-|**single_pages_kb**|**bigint**|**적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 노드에서 실행 중인 스레드별로 단일 페이지 할당자를 사용하여 할당된 커밋된 메모리 크기(KB)입니다. 이 메모리는 버퍼 풀에서 할당됩니다. 이 값은 할당 요청이 충족된 물리적 위치가 아닌 할당 요청이 발생한 지점의 노드를 나타냅니다.|  
+|**locked_page_allocations_kb**|**bigint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 잠긴 물리적 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
+|**single_pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 노드에서 실행 중인 스레드별로 단일 페이지 할당자를 사용하여 할당된 커밋된 메모리 크기(KB)입니다. 이 메모리는 버퍼 풀에서 할당됩니다. 이 값은 할당 요청이 충족된 물리적 위치가 아닌 할당 요청이 발생한 지점의 노드를 나타냅니다.|  
 |**pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> Memory Manager 페이지 할당자에 의해 이 NUMA 노드에서 할당되는 커밋된 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
-|**multi_pages_kb**|**bigint**|**적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 노드에서 실행 중인 스레드별로 다중 페이지 할당자를 사용하여 할당된 커밋된 메모리의 크기(KB)입니다. 이 메모리는 버퍼 풀 외부에 있습니다. 이 값은 할당 요청이 충족된 물리적 위치가 아닌 할당 요청이 발생한 지점의 노드를 나타냅니다.|  
+|**multi_pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 노드에서 실행 중인 스레드별로 다중 페이지 할당자를 사용하여 할당된 커밋된 메모리의 크기(KB)입니다. 이 메모리는 버퍼 풀 외부에 있습니다. 이 값은 할당 요청이 충족된 물리적 위치가 아닌 할당 요청이 발생한 지점의 노드를 나타냅니다.|  
 |**shared_memory_reserved_kb**|**bigint**|이 노드에서 예약된 공유 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**shared_memory_committed_kb**|**bigint**|이 노드에서 커밋된 공유 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**cpu_affinity_mask**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부적으로만 사용됩니다. Null을 허용하지 않습니다.|  

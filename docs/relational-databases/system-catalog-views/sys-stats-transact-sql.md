@@ -21,27 +21,25 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8d81d0447558f964839b8849fe141f127fe1e37c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982141"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블, 인덱스 및 인덱싱된 뷰에 대한 각 통계 개체의 행을 포함합니다. 모든 인덱스에는 동일한 이름 및 ID (**index_id** = **stats_id**)를 사용 하는 해당 통계 행이 있지만 모든 통계 행에 해당 하는 인덱스가 없습니다.  
   
- 카탈로그 뷰 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 는 데이터베이스의 각 열에 대 한 통계 정보를 제공 합니다. 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
+ 카탈로그 뷰 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 는 데이터베이스의 각 열에 대 한 통계 정보를 제공 합니다. 통계에 대 한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 통계가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|통계의 이름입니다. 개체 내에서 고유합니다.|  
 |**stats_id**|**int**|통계의 ID입니다. 개체 내에서 고유합니다.<br /><br />통계가 인덱스에 해당 하는 경우 *stats_id* 값은 [sys. 인덱스](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 동일 합니다.|  
-|**auto_created**|**bit**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계인지 여부를 나타냅니다.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계가 아닙니다.<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계입니다.|  
+|**auto_created**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계인지 여부를 나타냅니다.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계가 아닙니다.<br /><br /> 1 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 생성된 통계입니다.|  
 |**user_created**|**bit**|사용자가 만든 통계인지 여부를 나타냅니다.<br /><br /> 0 = 사용자가 만든 통계가 아닙니다.<br /><br /> 1 = 사용자가 만든 통계입니다.|  
 |**no_recompute**|**bit**|**NORECOMPUTE** 옵션을 사용 하 여 통계가 생성 되었는지 여부를 나타냅니다.<br /><br /> 0 = **NORECOMPUTE** 옵션을 사용 하 여 통계가 생성 되지 않았습니다.<br /><br /> 1 = **NORECOMPUTE** 옵션을 사용 하 여 통계를 만들었습니다.|  
 |**has_filter**|**bit**|0 = 통계에 필터가 없고 모든 행에서 통계가 계산됩니다.<br /><br /> 1 = 통계에 필터가 있고 필터 정의를 충족하는 행에서만 통계가 계산됩니다.|  
@@ -71,7 +69,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [통계](../../relational-databases/statistics/statistics.md)    
  [dm_db_stats_properties &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   

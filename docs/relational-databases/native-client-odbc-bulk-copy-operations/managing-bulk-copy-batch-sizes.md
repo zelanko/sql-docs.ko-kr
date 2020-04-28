@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785312"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>대량 복사 일괄 처리 크기 관리
@@ -34,8 +34,7 @@ ms.locfileid: "73785312"
   
  많은 행을 대량 복사하는 경우 일괄 처리를 구성하는 행 수가 성능에 큰 영향을 줄 수 있습니다. 권장되는 일괄 처리 크기는 수행하는 대량 복사 유형에 따라 달라집니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사하는 경우 TABLOCK 대량 복사 힌트를 지정하고 큰 일괄 처리 크기를 설정합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사하는 경우 TABLOCK 대량 복사 힌트를 지정하고 큰 일괄 처리 크기를 설정합니다.  
   
 -   TABLOCK이 지정되지 않은 경우 일괄 처리 크기를 1,000행 미만으로 제한합니다.  
   

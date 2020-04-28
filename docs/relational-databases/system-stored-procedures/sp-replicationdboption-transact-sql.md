@@ -16,10 +16,10 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056769"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
@@ -49,7 +49,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |-----------|-----------------|  
 |**merge publish**|병합 게시용으로 데이터베이스를 사용할 수 있습니다.|  
 |**게시**|다른 유형의 게시용으로 데이터베이스를 사용할 수 있습니다.|  
-|**구독**|데이터베이스는 구독 데이터베이스입니다.|  
+|**subscribe**|데이터베이스는 구독 데이터베이스입니다.|  
 |**sync with backup**|통합 백업용으로 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [트랜잭션 복제에 대해 통합 백업 사용 &#40;복제 Transact-sql 프로그래밍&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)을 참조 하세요.|  
   
 `[ @value = ] 'value'`지정 된 복제 데이터베이스 옵션을 사용 하거나 사용 하지 않도록 설정할지 여부입니다. *value* 는 **sysname**이며 **true** 또는 **false**일 수 있습니다. 이 값이 **false** 이 고 *optname* 가 **merge publish**이면 병합 게시 된 데이터베이스에 대 한 구독도 삭제 됩니다.  

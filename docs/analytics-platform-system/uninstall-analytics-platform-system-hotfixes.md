@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399760"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>분석 플랫폼 시스템 핫픽스 제거 
@@ -21,7 +21,7 @@ ms.locfileid: "74399760"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>전제 조건  
 이러한 단계를 수행 하려면 다음이 필요 합니다.  
   
 -   어플라이언스를 모니터링 하기 위해 관리 콘솔에 액세스할 수 있는 권한이 있는 분석 플랫폼 시스템 로그인입니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "74399760"
   
 -   제거할 핫픽스에 대 한 기술 자료 문서 번호입니다.  
   
-## <a name="HowToUninstallPDW"></a>SQL Server PDW 핫픽스를 제거 하려면  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>SQL Server PDW 핫픽스를 제거 하려면  
   
 1.  패브릭 도메인 관리자로 <em><appliance_domain></em> **HST01** 노드에 로그온 합니다.  
   

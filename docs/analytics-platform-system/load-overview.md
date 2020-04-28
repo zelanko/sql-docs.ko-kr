@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401044"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 데이터 로드
@@ -25,7 +25,7 @@ Integration Services, [Bcp 유틸리티](../tools/bcp-utility.md), **Dwloader** 
 ## <a name="load-with-dwloader"></a>Dwloader를 사용 하 여 로드  
 [Dwloader 명령줄 로더](dwloader.md) 를 사용 하는 것은 데이터를 PDW로 로드 하는 가장 빠른 방법입니다.  
   
-![프로세스 로드](media/loading-process.png "프로세스 로드")  
+![로드 프로세스](media/loading-process.png "프로세스 로드")  
   
 dwloader는 제어 노드를 통해 데이터를 전달 하지 않고 계산 노드에 직접 데이터를 로드 합니다. 데이터를 로드 하기 위해 dwloader는 먼저 제어 노드와 통신 하 여 계산 노드에 대 한 연락처 정보를 가져옵니다. dwloader는 각 계산 노드를 사용 하 여 통신 채널을 설정 하 고 라운드 로빈 방식으로 계산 노드에 256KB 데이터 청크를 보냅니다.  
   
@@ -43,7 +43,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|Task|Description|  
+|작업|설명|  
 |--------|---------------|  
 |준비 데이터베이스를 만듭니다.|[준비 데이터베이스 만들기](staging-database.md)|  
 |Integration Services를 사용 하 여 로드 합니다.|[Integration Services를 사용하여 로드](load-with-ssis.md)|  

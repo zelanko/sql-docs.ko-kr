@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165905"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
@@ -58,17 +58,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  *Stmt* 값을 지정 하는 규칙은 sp_cursoropen의 경우와 동일 합니다. 단, *stmt* 문자열 데이터 형식은 **ntext**여야 합니다.  
   
- *옵션*  
+ *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 에는 다음 **int** 입력 값이 필요 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
@@ -109,9 +109,9 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="remarks"></a>설명  
  RPC 상태 매개 변수는 다음 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|0|Success|  
+|0|성공|  
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   

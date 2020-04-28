@@ -20,19 +20,18 @@ ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981832"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일부 기능 중 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 파일의 정보를 저장하는 방법이 변경되었습니다. 이러한 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전으로 제한됩니다. 이러한 기능을 포함하는 데이터베이스는 이러한 기능이 지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동할 수 없습니다. 현재 데이터베이스에서 사용할 수 있는 버전별 기능을 나열 하려면 dm_db_persisted_sku_features 동적 관리 뷰를 사용 합니다.
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상).
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상).
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -51,7 +50,7 @@ ms.locfileid: "73981832"
   
 -   **Columnstoreindex**: 하나 이상의 테이블에 columnstore 인덱스가 있음을 나타냅니다. 이 기능을 지원 하지 않는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 데이터베이스를 이동할 수 있도록 하려면 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 또는 [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) 문을 사용 하 여 columnstore 인덱스를 제거 합니다. 자세한 내용은 [Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조 하세요.  
   
-    **적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
+    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
   
 -   **압축**: 하나 이상의 테이블 또는 인덱스에서 데이터 압축 또는 vardecimal 저장소 형식을 사용 함을 나타냅니다. 이 기능을 지원 하지 않는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 데이터베이스를 이동할 수 있도록 하려면 [Alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 문을 사용 하 여 데이터 압축을 제거 합니다. vardecimal 스토리지 형식을 제거하려면 sp_tableoption 문을 사용합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "73981832"
   
 -   **Inmemoryoltp**: 데이터베이스에서 메모리 내 oltp를 사용 함을 나타냅니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함됩니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-  **적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상). 
+  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상). 
   
 -   **파티션은.** 데이터베이스에 분할된 테이블, 분할된 인덱스, 파티션 구성표 또는 파티션 함수가 포함되도록 지정합니다. 데이터베이스가 Enterprise 또는 Developer 이외의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동하도록 설정하는 경우 테이블이 단일 파티션에 있도록 수정하는 것만으로는 충분하지 않습니다. 분할된 테이블을 제거해야 합니다. 테이블에 데이터가 포함된 경우 각 파티션을 분할되지 않은 테이블로 변환하려면 SWITCH PARTITION을 사용합니다. 그런 다음 분할된 테이블, 파티션 구성표 및 파티션 함수를 삭제합니다.  
   
@@ -76,8 +75,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [SQL Server 2016의 버전 및 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [버전 및 SQL Server 2017의 지원되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)  
+ [버전 및 SQL Server 2017 의 지원 되는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)  
   

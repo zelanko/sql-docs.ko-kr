@@ -21,25 +21,24 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164901"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 활성 상태인 각 태스크에 대해 하나의 행을 반환합니다. 작업은 SQL Server의 기본 실행 단위입니다. 작업의 예로는 쿼리, 로그인, 로그 아웃 및 삭제할 정리 작업, 검사점 작업, 로그 작성기, 병렬 다시 실행 작업 등의 시스템 태스크가 있습니다. 작업에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
   
 > [!NOTE]  
 > 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_tasks**을 사용 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|개체의 메모리 주소입니다.|  
-|**task_state**|**nvarchar (60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> 실행 가능: 실행 가능 하지만 퀀텀 수신을 대기 중입니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 중입니다.<br /><br /> SUSPENDED: 작업자를 포함 하지만 이벤트를 기다리고 있습니다.<br /><br /> 완료 됨: 완료 됨.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
+|**task_state**|**nvarchar(60)**|태스크의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 보류 중: 작업자 스레드를 기다리고 있습니다.<br /><br /> 실행 가능: 실행 가능 하지만 퀀텀 수신을 대기 중입니다.<br /><br /> 실행 중: 현재 스케줄러에서 실행 중입니다.<br /><br /> SUSPENDED: 작업자를 포함 하지만 이벤트를 기다리고 있습니다.<br /><br /> 완료 됨: 완료 됨.<br /><br /> SPINLOOP: spinlock에 걸려 있습니다.|  
 |**context_switches_count**|**int**|이 태스크로 완료된 스케줄러 컨텍스트 전환 수입니다.|  
 |**pending_io_count**|**int**|이 태스크로 수행된 실제 I/O 수입니다.|  
 |**pending_io_byte_count**|**bigint**|이 태스크로 수행된 I/O의 총 바이트 수입니다.|  

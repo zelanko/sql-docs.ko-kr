@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782402"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,7 +43,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *속성*  
+ *property*  
  BYTE 유형의 상수입니다. 상수 목록은 주의 섹션의 표를 참조하십시오.  
   
  *pField*  
@@ -68,7 +68,7 @@ RETCODE bcp_setbulkmode (
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 **BCP_FMT_TYPE** 속성이 **sqlcharacter**로 설정 된 bcp_setcolfmt 합니다.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 bcp_setcolfmt **BCP_FMT_TYPE** 속성이 **sqlnchar**로 설정 됩니다.|  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출을 사용 하 여 bcp_setbulkmode를 호출 하려고 하면 함수 호출 중 하나에서 시퀀스 오류 오류가 반환 됩니다. 오류를 해결 하도록 선택 하는 경우 bcp_init를 호출 하 여 모든 설정을 다시 설정 하 고 다시 시작 합니다.  
   
- 함수 시퀀스 오류를 발생 시키는 함수 호출의 몇 가지 예는 다음과 같습니다.  
+ 다음 표에서는 함수 시퀀스 오류를 발생시키는 몇 가지 함수 호출의 예를 제공합니다.  
   
 ```  
 bcp_init("table", DB_IN);  

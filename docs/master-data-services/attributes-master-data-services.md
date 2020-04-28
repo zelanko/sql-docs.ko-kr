@@ -18,10 +18,10 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728746"
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
@@ -81,24 +81,24 @@ ms.locfileid: "73728746"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)|  
-|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|새 자유 형식 링크 특성을 만듭니다.|[MDS(Master Data Services) &#40;링크 특성을 만듭니다&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
-|새 파일 특성을 만듭니다.|[MDS(Master Data Services)&#41;&#40;파일 특성을 만듭니다.](../master-data-services/create-a-file-attribute-master-data-services.md)|  
-|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|기존 특성의 이름을 변경합니다.|[특성 이름 및 데이터 형식 &#40;MDS(Master Data Services)을 변경&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|추적 그룹을 변경하는 기존 특성을 추가합니다.|[특성을 변경 내용 추적 그룹 &#40;MDS(Master Data Services)에 추가&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|기존 특성을 삭제합니다.|[MDS(Master Data Services) &#40;특성을 삭제&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
+|새 자유 형식 텍스트 특성을 만듭니다.|[텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)|  
+|새 자유 형식 숫자 특성을 만듭니다.|[숫자 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|새 자유 형식 링크 특성을 만듭니다.|[링크 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
+|새 파일 특성을 만듭니다.|[파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
+|새 도메인 기반 특성을 만듭니다.|[도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
+|기존 특성의 이름을 변경합니다.|[특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
+|추적 그룹을 변경하는 기존 특성을 추가합니다.|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|기존 특성을 삭제합니다.|[특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |특성 순서를 변경합니다.|[특성 순서 변경](../master-data-services/change-the-order-of-attributes.md)|  
-|날짜 특성을 만듭니다.|[날짜 특성 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
+|날짜 특성을 만듭니다.|[날짜 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [도메인 기반 특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [특성 그룹 &#40;MDS(Master Data Services)&#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
--   [멤버가 MDS(Master Data Services)를 &#40;&#41;](../master-data-services/members-master-data-services.md)  
+-   [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [리프 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+-   [리프 권한&#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

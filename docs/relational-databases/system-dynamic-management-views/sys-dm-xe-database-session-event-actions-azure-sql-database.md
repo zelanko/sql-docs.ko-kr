@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 322a54a4f3bbd5f4880df6f52a085f5d7141d335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844445"
 ---
 # <a name="sysdm_xe_database_session_event_actions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions(Azure SQL Database)
@@ -30,9 +30,9 @@ ms.locfileid: "73844445"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
-|action_name|**nvarchar (60)**|작업의 이름입니다. Null을 허용하지 않습니다.|  
+|action_name|**nvarchar(60)**|작업 이름입니다. Null을 허용하지 않습니다.|  
 |action_package_guid|**uniqueidentifier**|동작이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
-|event_name|**nvarchar (60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
+|event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -40,7 +40,7 @@ ms.locfileid: "73844445"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_database_session_event_actions. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
 |dm_xe_database_session_event_actions. action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> dm_xe_database_session_events. event_package_guid|다 대 일|  

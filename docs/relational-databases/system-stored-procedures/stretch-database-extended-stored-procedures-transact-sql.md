@@ -15,10 +15,10 @@ ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: d82b6cb9049bf5a41cfb987a55bb6d5a7147c9bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74119264"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database 확장 저장 프로시저 (Transact-sql)

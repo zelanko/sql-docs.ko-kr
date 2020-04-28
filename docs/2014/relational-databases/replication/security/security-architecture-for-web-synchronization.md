@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff0c6336bcbd3f9ad8c09f5a25f7317c0d2c4c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912811"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 웹 동기화 보안 구성을 세밀 하 게 제어할 수 있습니다. 이 항목에서는 웹 동기화 구성에 포함할 수 있는 포괄적인 구성 요소 목록과 구성 요소 간 연결에 대한 정보를 제공합니다. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하여 웹 동기화 보안 구성을 세밀하게 제어할 수 있습니다. 이 항목에서는 웹 동기화 구성에 포함할 수 있는 포괄적인 구성 요소 목록과 구성 요소 간 연결에 대한 정보를 제공합니다. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  다음 그림에서는 가능한 모든 연결을 보여 주지만 특정 토폴로지에서는 일부 연결이 필요하지 않을 수 있습니다. 예를 들어 FTP 서버 연결은 FTP를 사용하여 스냅샷을 배달하는 경우에만 필요합니다.  
   
@@ -34,8 +34,7 @@ ms.locfileid: "73912811"
 |계정 유형|계정 지정 위치|  
 |---------------------|------------------------------------|  
 |Windows 사용자|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@job_login** 및 ** \@job_password** 매개 변수입니다.<br /><br /> RMO(복제 관리 개체): <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 에 대한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>의 속성|  
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 Windows 서비스 계정|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자|  
 |독립 실행형 애플리케이션|애플리케이션을 실행하는 Windows 사용자의 컨텍스트에서 병합 에이전트가 실행됩니다.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. 구독자 연결  
@@ -70,8 +69,7 @@ ms.locfileid: "73912811"
 >  통합 인증을 사용하는 경우에는 위임이 필요합니다. 구독자에서 IIS로 연결하는 경우에는 기본 인증 및 SSL을 사용하는 것이 좋습니다.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. 게시자 연결  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자 구성 요소는 IIS를 실행하는 컴퓨터에 호스팅됩니다. 이러한 구성 요소는 다음 동작을 수행합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 및 병합 복제 조정자 구성 요소는 IIS를 실행하는 컴퓨터에 호스팅됩니다. 이러한 구성 요소는 다음 동작을 수행합니다.  
   
 -   "4. IIS 연결" 섹션에서 설명한 HTTPS 요청을 수신합니다.  
   
@@ -88,8 +86,7 @@ ms.locfileid: "73912811"
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
 |Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@publisher_security_mode** 매개 변수에 대 한 값 **1** 입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-PublisherSecurityMode**에 **1** 값을 갖습니다.|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 게시자에 연결합니다. 게시자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@publisher_security_mode** 매개 변수에 대해 **0** 값입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-PublisherSecurityMode**의 값은 **0** 입니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@publisher_login** 및 ** \@publisher_password** 매개 변수입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> 병합 에이전트 명령줄: **-PublisherLogin** 및 **-PublisherPassword**|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@publisher_security_mode** 매개 변수에 대해 **0** 값입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-PublisherSecurityMode**의 값은 **0** 입니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@publisher_login** 및 ** \@publisher_password** 매개 변수입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.PublisherPassword%2A><br /><br /> 병합 에이전트 명령줄: **-PublisherLogin** 및 **-PublisherPassword**|  
   
 ## <a name="f-connection-to-the-distributor"></a>F. 배포자 연결  
  IIS를 실행하는 컴퓨터에 호스팅되는 병합 복제 조정자는 배포자에도 연결합니다. 병합 복제 조정자는 Windows 인증 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 중 하나를 사용하여 배포자에 연결합니다. 사용자가 지정하는 Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인은 다음 사항을 따라야 합니다.  
@@ -103,8 +100,7 @@ ms.locfileid: "73912811"
 |인증 유형|인증 지정 위치|  
 |----------------------------|-------------------------------------------|  
 |Windows 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@distributor_security_mode** 매개 변수에 대 한 값 **1** 입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-DistributorSecurityMode**에 **1** 값을 갖습니다.|IIS 연결(D)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 배포자에 연결합니다. 배포자와 IIS가 서로 다른 컴퓨터에 있고 연결(D)에 통합 인증을 사용하는 경우 IIS를 실행하는 컴퓨터에서 Kerberos 위임을 사용해야 합니다. 자세한 내용은 Windows 설명서를 참조하십시오.|  
-|
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@distributor_security_mode** 매개 변수에 대해 **0** 값입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-DistributorSecurityMode**의 값은 **0** 입니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@distributor_login** 및 ** \@distributor_password** 매개 변수입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 병합 에이전트 명령줄: **-DistributorLogin** 및 **-DistributorPassword**|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증은 다음 중 하나가 지정된 경우 사용됩니다.<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@distributor_security_mode** 매개 변수에 대해 **0** 값입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>에 대한 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorSecurityMode%2A>의 값<br /><br /> 병합 에이전트 명령줄: **-DistributorSecurityMode**의 값은 **0** 입니다.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)의 ** \@distributor_login** 및 ** \@distributor_password** 매개 변수입니다.<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.DistributorPassword%2A><br /><br /> 병합 에이전트 명령줄: **-DistributorLogin** 및 **-DistributorPassword**|  
   
 ## <a name="g-connection-to-an-ftp-server"></a>G. FTP 서버 연결  
  구독자에 스냅샷을 적용하기 전에 UNC 위치가 아닌 FTP 서버에서 IIS를 실행하는 컴퓨터로 스냅샷 파일을 다운로드하려는 경우에만 이 연결에 대해 Windows 사용자를 지정합니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../transfer-snapshots-through-ftp.md)을 참조하세요.  
@@ -133,14 +129,14 @@ ms.locfileid: "73912811"
   
 -   Xmlsub  
   
- 또한 이 계정은 IIS_WPG 그룹의 일부여야 합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]웹 동기화를 위한 IIS 구성[의 "](../configure-iis-for-web-synchronization.md) 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
+ 또한 이 계정은 IIS_WPG 그룹의 일부여야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../configure-iis-for-web-synchronization.md)의 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
   
 |계정 유형|계정 지정 위치|  
 |---------------------|------------------------------------|  
 |필요한 사용 권한이 있는 모든 Windows 사용자|인터넷 정보 서비스(IIS) 관리자|  
   
 ## <a name="see-also"></a>참고 항목  
- [웹 동기화 구성](../configure-web-synchronization.md)   
+ [Configure Web Synchronization](../configure-web-synchronization.md)   
  [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

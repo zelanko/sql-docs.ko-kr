@@ -10,10 +10,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74318980"
 ---
 # <a name="sql-samples"></a>SQL 샘플
@@ -52,7 +52,7 @@ AdventureWorks 데이터베이스는 [설치](adventureworks-install-configure.m
 .NET, Java, Python, node.js, PHP 및 Ruby의 Github에서 사용할 수 있는 다양 한 Microsoft Azure 코드 샘플과 예제가 있습니다. 또한 Azure Resource Manager를 사용 하면 선언적 템플릿을 사용 하 여 응용 프로그램을 프로 비전 할 수 있습니다. 단일 템플릿에서 여러 서비스를 해당 종속성과 함께 배포할 수 있습니다. 동일한 템플릿을 사용하여 애플리케이션 수명 주기의 각 단계 중에 애플리케이션을 반복해서 배포합니다.
 
 - [Azure 샘플](https://github.com/Azure-Samples)
-- [Azure 빠른 시작 템플릿](https://azure.microsoft.com/resources/templates/)
+- [Azure Quickstart 템플릿](https://azure.microsoft.com/resources/templates/)
 
 
 

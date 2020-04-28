@@ -11,17 +11,16 @@ ms.assetid: 9adbd5e1-f28c-4fb5-afa7-082de2831f3e
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: abf900f8eea0e64ed8e541ee7cd94c63834fbb48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729749"
 ---
 # <a name="automatic-code-creation-master-data-services"></a>코드 자동 생성(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 코드 특성 또는 기타 숫자 특성에 대해 숫자 값을 자동으로 생성할 수 있습니다. 코드가 자동으로 생성될 때 코드에 다른 값을 입력할 수 없는 것은 아니지만 초기 값이 자동으로 설정됩니다.  
   
 ## <a name="generating-code-values"></a>코드 값 생성  
@@ -38,15 +37,15 @@ ms.locfileid: "73729749"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|코드 특성 값 자동 생성|[MDS(Master Data Services) &#40;코드 특성 값을 자동으로 생성&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
-|다른 특성 값 자동 생성|[코드 &#40;MDS(Master Data Services) 이외의 특성 값을 자동으로 생성&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
+|코드 특성 값 자동 생성|[코드 특성 값 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatically-generate-code-attribute-values-master-data-services.md)|  
+|다른 특성 값 자동 생성|[코드 외의 특성 값 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatically-generate-attribute-values-other-than-code-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [MDS&#41;&#40;MDS(Master Data Services) 개요](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [비즈니스 규칙 &#40;MDS(Master Data Services)&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [엔터티 &#40;MDS(Master Data Services)&#41;](../master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

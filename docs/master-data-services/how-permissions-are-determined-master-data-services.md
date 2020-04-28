@@ -13,17 +13,16 @@ ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d08d65d13aec3812003b8d7d70f700662a592d14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729189"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>사용 권한이 결정되는 방식(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 보안을 구성하는 가장 손쉬운 방법은 사용자가 멤버로 속한 그룹에 모델 개체 사용 권한을 할당하는 것입니다.  
   
  다음과 같은 경우에는 보안 구성이 복잡해집니다.  
@@ -81,6 +80,6 @@ ms.locfileid: "73729189"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services)&#41;&#40;겹치는 사용자 및 그룹 권한](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;겹치는 모델 및 멤버 권한](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [겹치는 모델 및 멤버 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

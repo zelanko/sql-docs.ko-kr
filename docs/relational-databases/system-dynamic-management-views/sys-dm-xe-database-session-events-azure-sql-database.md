@@ -12,10 +12,10 @@ ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 82018dc0aec7083df712e73bfb0a58c13c144f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844484"
 ---
 # <a name="sysdm_xe_database_session_events-azure-sql-database"></a>sys.dm_xe_database_session_events(Azure SQL Database)
@@ -30,16 +30,16 @@ ms.locfileid: "73844484"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. Null을 허용하지 않습니다.|  
-|event_name|**nvarchar (60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
+|event_name|**nvarchar(60)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
-|event_predicate|**nvarchar (2048)**|이벤트에 적용되는 조건자 트리의 XML 표현입니다. Null을 허용합니다.|  
+|event_predicate|**nvarchar(2048)**|이벤트에 적용되는 조건자 트리의 XML 표현입니다. Null을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_database_session_events. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
 |dm_xe_database_session_events. event_package_guid, dm_xe_database_session_events event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|다 대 일|  

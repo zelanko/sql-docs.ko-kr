@@ -20,10 +20,10 @@ ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b5ac732926ae544dbad2cc22006c45533702c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982599"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "73982599"
 
   데이터베이스에서 서비스 큐 인 각 개체에 대 한 행을 포함 합니다. 여기에는 **SQ =** 가 사용 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**max_readers**|**smallint**|큐에서 허용된 최대 동시 판독기 수입니다.|  

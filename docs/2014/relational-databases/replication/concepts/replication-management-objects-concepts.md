@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721795"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -154,8 +154,7 @@ ms.locfileid: "62721795"
   
 -   서버에 연결하고 성공적으로 로그인하기 위해 모든 인증 정보를 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 제공합니다.  
   
--   Windows 인증이 기본값입니다. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A>를 `false`로 설정하고 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>에 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 및 암호를 설정해야 합니다. 보안 자격 증명은 항상 안전하게 저장 및 처리되어야 하고 가능하면 런타임에 제공해야 합니다.  
+-   Windows 인증이 기본값입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.LoginSecure%2A>를 `false`로 설정하고 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Login%2A> 및 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.Password%2A>에 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 및 암호를 설정해야 합니다. 보안 자격 증명은 항상 안전하게 저장 및 처리되어야 하고 가능하면 런타임에 제공해야 합니다.  
   
 -   다중 스레드 애플리케이션의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
   
@@ -187,7 +186,7 @@ ms.locfileid: "62721795"
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
 ## <a name="see-also"></a>참고 항목  
- [Replication System Stored Procedures Concepts](replication-system-stored-procedures-concepts.md)   
+ [복제 시스템 저장 프로시저 개념](replication-system-stored-procedures-concepts.md)   
  [복제 프로그래밍 개념](replication-programming-concepts.md)  
   
   

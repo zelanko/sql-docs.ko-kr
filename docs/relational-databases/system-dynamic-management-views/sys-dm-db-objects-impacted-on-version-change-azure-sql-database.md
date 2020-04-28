@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843859"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change(Azure SQL Database)
@@ -35,10 +35,10 @@ ms.locfileid: "73843859"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |class|**int** NULL이 아님|영향을 받는 개체의 클래스:<br /><br /> **1** = 제약 조건<br /><br /> **7** = 인덱스 및 힙|  
-|class_desc|**nvarchar (60)** NULL이 아님|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class_desc|**nvarchar (60)** NULL이 아님|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **인덱싱할**|  
 |major_id|**int** NULL이 아님|제약 조건의 개체 ID 또는 인덱스나 힙을 포함하는 테이블의 개체 ID입니다.|  
-|minor_id|**int** N|제약 조건의 경우 **NULL**<br /><br /> 인덱스 및 힙의 경우 Index_id|  
-|dependency|**nvarchar (60)** NULL이 아님|제약 조건 또는 인덱스에게 영향을 미치는 종속성에 대한 설명입니다. 업그레이드 시 생성되는 경고에 대해서도 동일한 값이 사용됩니다.<br /><br /> 예제:<br /><br /> **space** (내장 함수)<br /><br /> **geometry** (시스템 UDT의 경우)<br /><br /> **geography::P arse** (시스템 UDT 메서드의 경우)|  
+|minor_id|**int** N|제약 조건의 경우 **NULL**입니다.<br /><br /> 인덱스 및 힙의 경우 Index_id|  
+|dependency|**nvarchar (60)** NULL이 아님|제약 조건 또는 인덱스에게 영향을 미치는 종속성에 대한 설명입니다. 업그레이드 시 생성되는 경고에 대해서도 동일한 값이 사용됩니다.<br /><br /> 예:<br /><br /> **space**(내장 함수의 경우)<br /><br /> **geometry**(시스템 UDT의 경우)<br /><br /> **geography::Parse**(시스템 UDT 메서드의 경우)|  
   
 ## <a name="permissions"></a>사용 권한  
  VIEW DATABASE STATE 권한이 필요합니다.  

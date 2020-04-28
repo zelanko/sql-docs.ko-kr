@@ -19,18 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3897c5e41e16af0a8162b63794760aa4d740353d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727699"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>Aggregations and Aggregation Designs
-  
   <xref:Microsoft.AnalysisServices.AggregationDesign>개체는 여러 파티션에서 공유할 수 있는 집계 정의의 집합을 정의합니다.  
   
- 
-  <xref:Microsoft.AnalysisServices.Aggregation> 개체는 차원의 특정 세분성으로 측정값 그룹의 요약을 나타냅니다.  
+ <xref:Microsoft.AnalysisServices.Aggregation> 개체는 차원의 특정 세분성으로 측정값 그룹의 요약을 나타냅니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Aggregation> 개체는 기본 정보와 차원으로 구성되어 있습니다. 기본 정보에는 집계의 이름, ID, 주석 및 설명이 포함됩니다. 차원은 차원 세분성 특성 목록을 포함하는 <xref:Microsoft.AnalysisServices.AggregationDimension> 개체의 컬렉션입니다.  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727759"
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
@@ -65,16 +65,13 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Call 문으로 저장 프로시저 호출  
  MDX `Call` 문을 사용하면 MDX 쿼리 컨텍스트 외부에서 저장 프로시저를 호출할 수 있습니다.  
   
- 이 방법을 사용하면 저장 쿼리의 파생 작업을 인스턴스화하거나 애플리케이션에서 저장 쿼리의 결과를 얻을 수 있습니다. 
-  `Call` 문은 주로 AMO(Analysis Management Object)를 통해 반환 결과 없이 관리 기능을 수행하는 데 사용됩니다. 예를 들어 다음 명령에서는 저장 프로시저를 호출합니다.  
+ 이 방법을 사용하면 저장 쿼리의 파생 작업을 인스턴스화하거나 애플리케이션에서 저장 쿼리의 결과를 얻을 수 있습니다. `Call` 문은 주로 AMO(Analysis Management Object)를 통해 반환 결과 없이 관리 기능을 수행하는 데 사용됩니다. 예를 들어 다음 명령에서는 저장 프로시저를 호출합니다.  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- 
-  `Call` 문의 저장 프로시저에서 유일하게 지원하는 반환 형식은 행 집합입니다. 행 집합 직렬화는 XML for Analysis에 의해 정의됩니다. 
-  `Call` 문의 저장 프로시저에서 다른 형식을 반환하는 경우에는 무시되고 호출 애플리케이션에 XML로 반환되지 않습니다. XML for Analysis 행 집합에 대한 자세한 내용은 XML for Analysis Schema Rowsets를 참조하십시오.  
+ `Call` 문의 저장 프로시저에서 유일하게 지원하는 반환 형식은 행 집합입니다. 행 집합 직렬화는 XML for Analysis에 의해 정의됩니다. `Call` 문의 저장 프로시저에서 다른 형식을 반환하는 경우에는 무시되고 호출 애플리케이션에 XML로 반환되지 않습니다. XML for Analysis 행 집합에 대한 자세한 내용은 XML for Analysis Schema Rowsets를 참조하십시오.  
   
  저장 프로시저에서 .NET 행 집합을 반환하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 서버의 결과를 XML for Analysis 행 집합으로 변환합니다. XML for Analysis 행 집합은 항상 `Call` 함수의 저장 프로시저에 의해 반환됩니다. 데이터 세트에 XML for Analysis 행 세트로 표현할 수 없는 기능이 있다면 실패합니다.  
   

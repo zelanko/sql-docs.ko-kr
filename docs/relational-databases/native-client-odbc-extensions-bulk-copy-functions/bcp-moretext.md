@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782618"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -48,8 +48,7 @@ RETCODE bcp_moretext (
  *.Pdata*에서 참조 하는 데이터 SQL Server에 복사 되는 데이터의 바이트 수입니다. SQL_NULL_DATA 값은 NULL을 나타냅니다.  
   
  *pData*  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 지원되는 긴 가변 길이 데이터 청크에 대한 포인터입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 지원되는 긴 가변 길이 데이터 청크에 대한 포인터입니다.  
   
 ## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  

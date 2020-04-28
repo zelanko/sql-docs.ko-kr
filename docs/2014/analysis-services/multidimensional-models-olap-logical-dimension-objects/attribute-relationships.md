@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728519"
 ---
 # <a name="attribute-relationships"></a>의 차원 디자이너에 있는 차원 구조 뷰의
@@ -56,7 +56,7 @@ ms.locfileid: "62728519"
   
 -   성별  
   
--   Email  
+-   메일  
   
 -   City  
   
@@ -70,9 +70,7 @@ ms.locfileid: "62728519"
   
 -   Age, Gender, Email, City, Region, Country  
   
- 자연 계층을 나타내는 관계는 수준에 대한 특성 및 아래 수준에 대한 특성 간의 특성 관계를 만들어 적용합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우 이를 통해 자연 관계와 잠재적인 집계가 지정됩니다. Customer 차원에 Country, Region, City 및 Customer 특성에 대한 자연 계층이 존재하게 됩니다. 
-  `{Country, Region, City, Customer}`에 대한 자연 계층은 다음과 같은 특성 관계를 추가하여 설명합니다.  
+ 자연 계층을 나타내는 관계는 수준에 대한 특성 및 아래 수준에 대한 특성 간의 특성 관계를 만들어 적용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 경우 이를 통해 자연 관계와 잠재적인 집계가 지정됩니다. Customer 차원에 Country, Region, City 및 Customer 특성에 대한 자연 계층이 존재하게 됩니다. `{Country, Region, City, Customer}`에 대한 자연 계층은 다음과 같은 특성 관계를 추가하여 설명합니다.  
   
 -   Region 특성에 대한 특성 관계로 Country 특성 추가  
   

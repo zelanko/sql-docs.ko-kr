@@ -12,10 +12,10 @@ ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 860faaa6c9e574feda8d5c28be17a265707fd72e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844429"
 ---
 # <a name="sysdm_xe_database_session_targets-azure-sql-database"></a>sys.dm_xe_database_session_targets(Azure SQL Database)
@@ -30,7 +30,7 @@ ms.locfileid: "73844429"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. 에는 dm_xe_database_sessions와 다 대 일 관계가 있습니다. Null을 허용하지 않습니다.|  
-|target_name|**nvarchar (60)**|세션 내에 있는 대상의 이름입니다. Null을 허용하지 않습니다.|  
+|target_name|**nvarchar(60)**|세션 내에 있는 대상의 이름입니다. Null을 허용하지 않습니다.|  
 |target_package_guid|**uniqueidentifier**|대상이 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
 |execution_count|**bigint**|세션에 대해 대상이 실행된 횟수입니다. Null을 허용하지 않습니다.|  
 |execution_duration_ms|**bigint**|대상이 실행된 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "73844429"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_database_session_targets. event_session_address|dm_xe_database_sessions. 주소|다 대 일|  
   

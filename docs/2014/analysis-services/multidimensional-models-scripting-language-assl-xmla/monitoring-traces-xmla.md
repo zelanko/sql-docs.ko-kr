@@ -16,27 +16,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62729076"
 ---
 # <a name="monitoring-traces-xmla"></a>추적 모니터링(XMLA)
-  XMLA (XML for Analysis)에서 [구독](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) 명령을 사용 하 여 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]정의 된 기존 추적을 모니터링할 수 있습니다. 
-  `Subscribe` 명령에서는 추적 결과를 행 집합으로 반환합니다.  
+  XMLA (XML for Analysis)에서 [구독](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) 명령을 사용 하 여 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]정의 된 기존 추적을 모니터링할 수 있습니다. `Subscribe` 명령에서는 추적 결과를 행 집합으로 반환합니다.  
   
 ## <a name="specifying-a-trace"></a>추적 지정  
- `Subscribe` 명령의 [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성은 인스턴스에 대 한 개체 참조 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 인스턴스에 대 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 한 추적을 포함 해야 합니다. 
-  `Object` 속성을 지정하지 않거나 `Object` 속성에 추적 식별자를 지정하지 않은 경우 `Subscribe` 명령에서는 명령의 SOAP 헤더에 지정된 명시적 세션에 대한 기본 세션 추적을 모니터링합니다.  
+ `Subscribe` 명령의 [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성은 인스턴스에 대 한 개체 참조 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 인스턴스에 대 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 한 추적을 포함 해야 합니다. `Object` 속성을 지정하지 않거나 `Object` 속성에 추적 식별자를 지정하지 않은 경우 `Subscribe` 명령에서는 명령의 SOAP 헤더에 지정된 명시적 세션에 대한 기본 세션 추적을 모니터링합니다.  
   
 ## <a name="returning-results"></a>결과 반환  
- 
-  `Subscribe` 명령에서는 지정된 추적에 의해 캡처된 추적 이벤트가 포함되어 있는 행 집합을 반환합니다. `Subscribe` 명령은 [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) 명령에 의해 명령이 취소 될 때까지 추적 결과를 반환 합니다.  
+ `Subscribe` 명령에서는 지정된 추적에 의해 캡처된 추적 이벤트가 포함되어 있는 행 집합을 반환합니다. `Subscribe` 명령은 [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) 명령에 의해 명령이 취소 될 때까지 추적 결과를 반환 합니다.  
   
  행 집합에는 다음 표에 나열된 열이 들어 있습니다.  
   
-|열|데이터 형식|Description|  
+|열|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |EventClass|정수|추적에 의해 수신된 이벤트의 이벤트 클래스입니다.|  
 |EventSubclass|정수(Long)|추적에 의해 수신된 이벤트의 이벤트 하위 클래스입니다.|  
@@ -58,7 +55,7 @@ ms.locfileid: "62729076"
 |NestLevel|정수|이벤트가 발생한 트랜잭션의 수준입니다.|  
 |NumSegments|정수(Long)|이벤트를 발생시킨 명령에서 영향을 받거나 액세스된 데이터 세그먼트의 수입니다.|  
 |심각도|정수|이벤트에 대한 예외의 심각도 수준입니다. 이 열 값은 다음 중 하나일 수 있습니다.<br /><br /> 값: 0 = 성공<br /><br /> 값: 1 = 정보<br /><br /> 값: 2 = 경고<br /><br /> 값: 3 = 오류|  
-|Success|부울|명령의 성공 여부를 나타냅니다.|  
+|성공|부울|명령의 성공 여부를 나타냅니다.|  
 |Error|정수(Long)|이벤트의 오류 번호입니다(해당되는 경우).|  
 |ConnectionID|String|이벤트가 발생한 연결의 식별자입니다.|  
 |DatabaseName|String|이벤트가 발생한 데이터베이스의 이름입니다.|  
@@ -66,8 +63,7 @@ ms.locfileid: "62729076"
 |NTDomainName|String|이벤트와 연결된 사용자의 Windows 도메인입니다.|  
 |ClientHostName|String|클라이언트 애플리케이션을 실행 중인 컴퓨터의 이름입니다. 이 열은 클라이언트 애플리케이션에서 전달한 값으로 채워집니다.|  
 |ClientProcessID|정수(Long)|클라이언트 애플리케이션의 프로세스 식별자입니다.|  
-|ApplicationName|String|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 애플리케이션에서 전달한 값으로 채워집니다.|  
+|ApplicationName|String|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 애플리케이션에서 전달한 값으로 채워집니다.|  
 |NTCanonicalUserName|String|이벤트와 연결된 사용자의 정식 Windows 사용자 이름입니다.|  
 |SPID|String|이벤트가 발생한 세션의 SPID(서버 프로세스 ID)입니다. 이 열의 값은 이벤트가 발생한 XMLA 메시지의 SOAP 헤더에 지정된 세션 ID에 직접 해당합니다.|  
 |TextData|String|이벤트와 연결된 텍스트 데이터입니다. 이 열의 내용은 이벤트의 이벤트 클래스 및 하위 클래스에 따라 달라집니다.|  

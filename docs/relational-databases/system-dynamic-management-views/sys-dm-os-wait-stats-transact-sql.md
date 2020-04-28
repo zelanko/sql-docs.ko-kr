@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f0abc089809e6b811f0ff64684bdaeed742ebcae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74190346"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "74190346"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|대기 형식 이름 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
+|wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
 |wait_time_ms|**bigint**|이 대기 유형의 총 대기 시간(밀리초)입니다. 이 시간은 signal_wait_time_ms를 포함합니다.|  
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "74190346"
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
-##  <a name="WaitTypes"></a>대기 유형  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>대기 유형  
  **리소스 대기** 리소스 대기는 다른 작업 자가 리소스를 사용 하 고 있거나 아직 사용할 수 없기 때문에 사용할 수 없는 리소스에 대 한 액세스를 요청 하는 경우에 발생 합니다. 리소스 대기의 예로는 잠금, 래치, 네트워크 및 디스크 I/O 대기가 있습니다. 잠금 및 래치 대기는 동기화 개체에 대한 대기입니다.  
   
 **큐 대기**  
@@ -58,8 +58,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
  **외부 대기**  
  외부 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업자가 확장 저장 프로시저 호출 또는 연결된 서버 쿼리 같은 외부 이벤트가 완료될 때까지 대기하는 경우에 발생합니다. 차단 문제를 진단할 때는 작업자가 외부 코드를 일부 실행하고 있을 수 있기 때문에 외부 대기가 항상 작업자가 유휴 상태임을 의미하지는 않는다는 점을 유념하세요.  
   
- 
-  `sys.dm_os_wait_stats`는 완료된 대기 시간을 보여 줍니다. 현재 대기는 이 동적 관리 뷰에 표시되지 않습니다.  
+ `sys.dm_os_wait_stats`는 완료된 대기 시간을 보여 줍니다. 현재 대기는 이 동적 관리 뷰에 표시되지 않습니다.  
   
  다음 중 하나라도 해당되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업자 스레드가 대기하는 것으로 간주되지 않습니다.  
   
@@ -669,7 +668,7 @@ GO
 |PREEMPTIVE_OS_SETFILEVALIDDATA |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_OS_SETNAMEDSECURITYINFO |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_OS_SQLCLROPS |내부적으로만 사용됩니다.| 
-|PREEMPTIVE_OS_SQMLAUNCH |내부적으로만 사용됩니다. <br /> **적용**대상: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 부터 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]까지 |  
+|PREEMPTIVE_OS_SQMLAUNCH |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 부터 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]까지 |  
 |PREEMPTIVE_OS_VERIFYSIGNATURE |내부적으로만 사용됩니다.| 
 |PREEMPTIVE_OS_VERIFYTRUST |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |PREEMPTIVE_OS_VSSOPS |내부적으로만 사용됩니다.| 
@@ -863,8 +862,7 @@ GO
 |SOCKETDUPLICATEQUEUE_CLEANUP |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상| 
 |SOS_CALLBACK_REMOVAL |콜백을 제거하기 위해 콜백 목록에 대한 동기화를 수행하는 동안 발생합니다. 서버 초기화가 완료된 후에는 이 카운터가 변경되지 않습니다.| 
 |SOS_DISPATCHER_MUTEX |디스패처 풀의 내부 동기화 중에 발생합니다. 풀이 조정되는 경우도 포함됩니다.| 
-|SOS_LOCALALLOCATORLIST |
-  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다. <br /> **적용**대상: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 에만 적용 됩니다. |  
+|SOS_LOCALALLOCATORLIST |[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 메모리 관리자의 내부 동기화 중에 발생합니다. <br /> **적용**대상: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 에만 적용 됩니다. |  
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 이상| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |메모리 사용량이 풀 사이에서 조절될 경우 발생합니다.| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |풀에서 개체를 삭제하는 경우 메모리 풀의 내부 동기화 중에 발생합니다.| 
@@ -937,7 +935,7 @@ GO
 |VIA_ACCEPT |시작하는 동안 VIA(Virtual Interface Adapter) 공급자 연결이 완료된 경우에 발생합니다.| 
 |VIEW_DEFINITION_MUTEX |캐시된 뷰 정의에 대한 액세스 동기화 중에 발생합니다.| 
 |WAIT_FOR_RESULTS |쿼리 알림이 트리거될 때까지 대기하는 경우에 발생합니다.| 
-|WAIT_ON_SYNC_STATISTICS_REFRESH |비동기 통계 업데이트가 완료 될 때까지 대기 하 여 쿼리 컴파일 및 실행을 다시 시작할 수 있는 경우에 발생 합니다.<br /> **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터|
+|WAIT_ON_SYNC_STATISTICS_REFRESH |비동기 통계 업데이트가 완료 될 때까지 대기 하 여 쿼리 컴파일 및 실행을 다시 시작할 수 있는 경우에 발생 합니다.<br /> **적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작|
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상| 
 |WAIT_XLOGREAD_SIGNAL |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 이상| 

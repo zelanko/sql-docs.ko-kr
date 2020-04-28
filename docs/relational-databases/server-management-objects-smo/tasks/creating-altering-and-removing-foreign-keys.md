@@ -14,16 +14,15 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c37f43e82bdad11909695d5a2799b5065c7cb5b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095549"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>외래 키 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 외래 키는 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체로 표시됩니다.  
   
  SMO에서 외래 키를 만들려면 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 개체의 생성자에 외래 키가 정의되는 테이블을 지정해야 합니다. 이 테이블에서 외래 키가 될 열을 적어도 하나 이상 선택해야 합니다. 이를 위해 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 개체 변수를 만들고 외래 키 열의 이름을 지정합니다. 그런 다음 참조되는 테이블과 참조되는 열을 지정합니다. 열을 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A> **Columns** 개체 속성에 추가 하려면 메서드를 사용 합니다.  

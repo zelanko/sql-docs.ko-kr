@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982348"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "73982348"
   
 -   서버 수준 DDL 트리거  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +80,7 @@ sys.dm_sql_referencing_entities (
 |referencing_entity_name|**sysname**|참조 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
 |referencing_id|**int**|참조 엔터티의 ID입니다. Null을 허용하지 않습니다.|  
 |referencing_class|**tinyint**|참조 엔터티의 클래스입니다. Null을 허용하지 않습니다.<br /><br /> 1 = 개체<br /><br /> 12 = 데이터베이스 수준 DDL 트리거<br /><br /> 13 = 서버 수준 DDL 트리거|  
-|referencing_class_desc|**nvarchar (60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
+|referencing_class_desc|**nvarchar(60)**|참조 엔터티 클래스에 대한 설명입니다.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|참조된 엔터티 ID 확인은 호출자의 스키마에 종속되기 때문에 런타임에 발생함을 나타냅니다.<br /><br /> 1 = 참조 엔터티는 엔터티를 참조할 수 있습니다. 그러나 참조된 엔터티 ID의 확인은 호출자에 종속되므로 확인할 수 없습니다. 이는 EXECUTE 문에서 호출되는 저장 프로시저, 확장 저장 프로시저 또는 사용자 정의 함수에 대한 비스키마 바운드 참조에서만 발생합니다.<br /><br /> 0 = 참조된 엔터티는 호출자에 종속되지 않습니다.|  
   
 ## <a name="exceptions"></a>예외  
@@ -99,27 +99,24 @@ sys.dm_sql_referencing_entities (
 ## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
-|엔터티 형식|참조 엔터티|참조된 엔터티|  
+|엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|테이블|예*|yes|  
-|보기|yes|yes|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]저장 프로시저 * *|yes|yes|  
-|CLR 저장 프로시저|예|yes|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]사용자 정의 함수|yes|yes|  
-|CLR 사용자 정의 함수|예|yes|  
-|CLR 트리거(DML 및 DDL)|예|예|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|yes|예|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|yes|예|  
-|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|yes|예|  
-|확장된 저장 프로시저|예|yes|  
-|큐|예|yes|  
-|동의어|예|yes|  
-|형식(별칭 및 CLR 사용자 정의 형식)|예|yes|  
-|XML 스키마 컬렉션|예|yes|  
-|파티션 함수|예|yes|  
+|테이블|예*|예|  
+|보기|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
+|CLR 저장 프로시저|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
+|CLR 사용자 정의 함수|예|예|  
+|CLR 트리거(DML 및 DDL)|아니요|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장된 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
   
  \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
@@ -127,13 +124,13 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="permissions"></a>사용 권한  
   
-### <a name="includesskatmaiincludessskatmai-mdmd---includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
 -   참조된 개체에 대한 CONTROL 권한이 필요합니다. 참조된 엔터티가 파티션 함수인 경우 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 -   Dm_sql_referencing_entities에 대 한 SELECT 권한이 필요 합니다. 기본적으로 SELECT 권한은 public에 부여됩니다.  
   
-### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+### <a name="sssql14---sscurrent"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 -   참조된 개체에 대해 필요한 권한이 없습니다. 사용자가 참조 엔터티 일부에 대해서만 VIEW DEFINITION이 있는 경우 결과 일부만 반환될 수 있습니다.  
   
@@ -178,7 +175,7 @@ GO
  ``` 
  
 ## <a name="see-also"></a>참고 항목  
- [dm_sql_referenced_entities &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

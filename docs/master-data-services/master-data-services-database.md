@@ -14,21 +14,19 @@ ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729043"
 ---
 # <a name="master-data-services-database"></a>Master Data Services 데이터베이스
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  Master Data Services 데이터베이스에는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 대한 모든 정보가 포함되어 있습니다. 이 데이터베이스는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 배포의 핵심입니다. 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 기능은 다음과 같습니다.  
+  Master Data Services 데이터베이스에는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 대한 모든 정보가 포함되어 있습니다. 이 데이터베이스는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 배포의 핵심입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 기능은 다음과 같습니다.  
   
--   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 필요한 설정, 데이터베이스 개체 및 데이터를 저장합니다.  
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 시스템에 필요한 설정, 데이터베이스 개체 및 데이터를 저장합니다.  
   
 -   원본 시스템의 데이터를 처리하는 데 사용되는 준비 테이블을 포함합니다.  
   
@@ -40,17 +38,17 @@ ms.locfileid: "73729043"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [리프 멤버 준비 테이블 &#40;MDS(Master Data Services)&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [통합 멤버 준비 테이블 &#40;MDS(Master Data Services)&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
--   [관계 준비 테이블 &#40;MDS(Master Data Services)&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
+-   [관계 준비 테이블&#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
--   [준비 프로세스 오류 &#40;MDS(Master Data Services)&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
+-   [준비 프로세스 오류&#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 데이터베이스 만들기](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [데이터베이스 개체 보안 &#40;MDS(Master Data Services)&#41;](../master-data-services/database-object-security-master-data-services.md)   
- [데이터베이스 로그인, 사용자 및 역할 &#40;MDS(Master Data Services)&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
+ [데이터베이스 로그인, 사용자 및 역할&#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  
   
   

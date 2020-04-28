@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401141"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>분석 플랫폼 시스템용 하드웨어 구성 요소
@@ -21,13 +21,13 @@ ms.locfileid: "74401141"
 분석 플랫폼 시스템 (APS)은 비즈니스 요구 사항에 따라 적절 한 크기의 처리 및 저장소를 구입할 수 있도록 확장 가능한 구성 요소를 사용 합니다. APS를 주문 하는 경우 이러한 핵심 하드웨어 구성 요소 조합이 필요 합니다. 특정 하드웨어 공급 업체에서 다른 명명 규칙을 사용 하거나 추가 구성 요소가 있을 수 있습니다.  
  
   
-## <a name="rackandnetwork"></a>랙 및 네트워크 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>랙 및 네트워크 
  
 APS 구성 요소는 모두 데이터 센터에 맞는 하나 이상의 랙에 저장 됩니다. 각 랙은 Pdu (전원 분배 장치), 2 개의 InfiniBand 스위치 및 두 개의 이더넷 스위치와 함께 제공 됩니다.  
   
 ![랙 및 네트워크](media/rack-and-network.png "APS 랙 및 네트워크")  
   
-## <a name="datascaleunit"></a>데이터 배율 단위
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>데이터 배율 단위
  
 데이터 배율 단위에는 사용자 데이터를 처리 하 고 저장 하기 위한 데이터 호스트 및 DAS (직접 연결 된 저장소)가 포함 됩니다. 용량을 추가 하려면 하드웨어 공급 업체에서 지 원하는 구성에 따라 데이터 배율 단위를 추가 합니다. 데이터 배율 단위 수가 증가 함에 따라 필요한 만큼 추가 랙 & 네트워크 구성 요소를 추가 하 여 더 많은 전원, 네트워크 및 랙 인프라를 제공 해야 합니다.  
   
@@ -65,7 +65,7 @@ DAS (직접 연결 된 저장소)는 데이터 호스트에 연결 된 디스크
   
 **디스크 크기의**경우 직접 연결 된 저장소에는 1, 2 또는 3tb 디스크 드라이브가 있을 수 있습니다. 모든 데이터 배율 단위의 디스크 크기는 동일 해야 합니다.  
   
-## <a name="basescaleunit"></a>기본 배율 단위 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>기본 배율 단위 
  
 기본 배율 단위에는 어플라이언스에 필요한 강력한 호스트, 데이터 호스트 및 직접 연결 된 저장소의 최소 수가 포함 됩니다. 여기에는 다음 구성 요소가 포함 됩니다. 
   

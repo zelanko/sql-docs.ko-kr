@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727277"
 ---
 # <a name="proactive-caching-partitions"></a>자동 관리 캐싱(파티션)
@@ -44,6 +44,6 @@ ms.locfileid: "62727277"
   
 ## <a name="see-also"></a>참고 항목  
  [차원 저장소](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [파티션 저장소 &#40;Analysis Services-다차원&#41;설정](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [파티션 스토리지 설정&#40;Analysis Services - 다차원&#41;](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

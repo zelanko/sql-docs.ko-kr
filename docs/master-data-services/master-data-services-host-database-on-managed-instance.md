@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729022"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>관리 되는 인스턴스에서 MDS 데이터베이스를 호스팅합니다.
@@ -94,8 +94,7 @@ ms.locfileid: "73729022"
 
 1. 을 `Setup.exe`열고 설치 마법사의 단계를 따릅니다.
 
-2. 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능 선택 **페이지의** 공유 기능 **에서**를 선택합니다.
+2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능 선택 **페이지의** 공유 기능 **에서**를 선택합니다.
 이 작업은 다음을 설치 합니다.
    - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
    - 어셈블리
@@ -125,8 +124,7 @@ ms.locfileid: "73729022"
 
    ![SQLServer2019-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "SQLServer2019-MI_CreateDBConnect")  
 
-1. 
-  **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택 하려면 **기본 데이터 정렬 SQL Server** 확인란의 선택을 취소 하 고 사용 가능한 옵션 중 하나 이상을 선택 합니다. 예를 들어 대 **/소문자를 구분**합니다. **다음**을 선택합니다.
+1. **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택 하려면 **기본 데이터 정렬 SQL Server** 확인란의 선택을 취소 하 고 사용 가능한 옵션 중 하나 이상을 선택 합니다. 예를 들어 대 **/소문자를 구분**합니다. **다음**을 선택합니다.
 
    ![SQLServer2019-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-MI_CreatedDBName")
 
@@ -172,8 +170,7 @@ ms.locfileid: "73729022"
 
    ![SQLServer2019-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "SQLServer2019-MI_WebConfigSelectDB")
 
-1. 
-  **적용**을 선택합니다. **구성 완료** 메시지가 표시 됩니다. 메시지 상자에서 **확인** 을 선택 하 여 웹 응용 프로그램을 시작 합니다. 웹 사이트 주소는 `http://server name/web application/`입니다.
+1. **적용**을 선택합니다. **구성 완료** 메시지가 표시 됩니다. 메시지 상자에서 **확인** 을 선택 하 여 웹 응용 프로그램을 시작 합니다. 웹 사이트 주소는 `http://server name/web application/`입니다.
 
 ## <a name="configure-authentication"></a>인증 구성
 
@@ -201,9 +198,9 @@ MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>업그레이드 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 SQL Database 버전
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>업그레이드 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 SQL Database 버전
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>업그레이드할[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>업그레이드할[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 **SQL Server 2019 누적 업데이트**를 설치 합니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]자동으로 업데이트 됩니다.
 
@@ -236,5 +233,5 @@ MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 
 
 - [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)
 - [마스터 데이터 관리자 웹 애플리케이션](../master-data-services/master-data-manager-web-application.md)
-- [데이터베이스 구성 페이지 &#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
-- [MDS&#41;MDS(Master Data Services) &#40;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)
+- [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)

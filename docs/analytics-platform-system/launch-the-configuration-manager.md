@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401050"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 Configuration Manager 시작
@@ -21,10 +21,10 @@ ms.locfileid: "74401050"
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-### <a name="prerequisites"></a>사전 요구 사항  
+### <a name="prerequisites"></a>전제 조건  
 분석 플랫폼 시스템**Configuration Manager** 는 어플라이언스 도메인 관리자만 실행할 수 있습니다. 이 도구를 실행 하려면 어플라이언스 도메인 관리자에 대 한 암호가 필요 합니다. 추가 AP 관리자를 만들려면 aps [도메인 관리자 &#40;ap&#41;만들기 ](create-an-aps-domain-administrator-aps.md)를 참조 하세요.  
   
-## <a name="Accessing"></a>Configuration Manager 도구 시작  
+## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Configuration Manager 도구 시작  
 Configuration Manager를 실행 하려면 원격 데스크톱을 사용 하 여 PDW 컨트롤 노드 (**_PDW_region_-CTL01**) 노드에 연결 하 고 _appliance_domain_**\administrator**로 로그인 합니다. **Configuration Manager** 프로그램을 시작할 때 관리자 권한 **으로 실행** 옵션을 사용 하 여 관리자 자격 증명이 사용 되는지 확인 합니다.  
   
 #### <a name="to-launch-from-a-browser-window"></a>브라우저 창에서 시작 하려면  
@@ -39,7 +39,7 @@ Configuration Manager를 실행 하려면 원격 데스크톱을 사용 하 여 
   
 2.  명령 프롬프트에서 다음 명령을 입력 하 여 디렉터리를 변경 `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`합니다.  
   
-3.  명령 프롬프트에서을 입력 `dwconfig.exe`합니다.  
+3.  명령 프롬프트에서 `dwconfig.exe`을 입력합니다.  
   
 **Configuration Manager** 시작 되 면 왼쪽 창에 나열 된 사용 가능한 모든 기능이 표시 됩니다. 이 섹션의 나머지 부분에서는 도구에서 사용 가능한 각 작업을 수행 하는 방법을 설명 합니다.  
   

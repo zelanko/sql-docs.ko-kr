@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400879"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>분석 플랫폼 시스템의 병렬 데이터 웨어하우스 방화벽 구성
@@ -28,7 +28,7 @@ SQL Server PDW Configuration Manager의 **방화벽** 페이지를 사용 하 �
   
 3.  구성 목록에서 업데이트할 포트 또는 방화벽 규칙을 찾은 다음 해당 항목 옆에 있는 확인란을 선택 하거나 선택 취소 합니다. 외부에 연결 된 노드에 대 한 열기 및 닫기를 비롯 하 여이 목록에는 SQL Server PDW 관리자 구성 가능 옵션만 표시 됩니다.  
   
-4.  **적용** 을 클릭 하 여 변경 내용을 저장 합니다.  
+4.  클릭 **적용** 변경 내용을 저장 합니다.  
   
 ![DWConfig 어플라이언스 PDW 방화벽](./media/pdw-firewall-configuration/SQL_Server_PDW_DWConfig_ApplPDWFirewall.png "SQL_Server_PDW_DWConfig_ApplPDWFirewall")  
   

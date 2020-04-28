@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400722"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Azure Blob storage에서 외부 데이터에 액세스 하도록 PolyBase 구성
@@ -66,7 +66,7 @@ Azure Blob 저장소에서 데이터를 쿼리하려면 Transact-sql 쿼리에 �
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. [외부 데이터 원본 만들기](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용 하 여 외부 데이터 원본을 만듭니다.
+1. [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)를 사용하여 외부 데이터 원본을 만듭니다.
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,8 +78,7 @@ Azure Blob 저장소에서 데이터를 쿼리하려면 Transact-sql 쿼리에 �
    );  
    ```
 
-1. 
-  [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)을 사용하여 외부 파일 형식을 만듭니다.
+1. [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)을 사용하여 외부 파일 형식을 만듭니다.
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -90,8 +89,7 @@ Azure Blob 저장소에서 데이터를 쿼리하려면 Transact-sql 쿼리에 �
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. 
-  [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 Azure Storage에 저장된 데이터를 가리키는 외부 테이블을 만듭니다. 이 예제에서 외부 데이터는 차량 센서 데이터를 포함합니다.
+1. [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md)을 사용하여 Azure Storage에 저장된 데이터를 가리키는 외부 테이블을 만듭니다. 이 예제에서 외부 데이터는 차량 센서 데이터를 포함합니다.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  

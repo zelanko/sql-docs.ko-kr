@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982260"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
@@ -31,8 +31,7 @@ ms.locfileid: "73982260"
   사용자 정의 테이블의 옵션 값을 설정합니다. sp_tableoption를 사용 하 여 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **text**, **ntext**, **image**또는 large 사용자 정의 형식 열이 있는 테이블의 행 내부 동작을 제어할 수 있습니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 text in row 기능이 제거됩니다. 대량 값 데이터를 저장 하려면 **varchar (max)**, **nvarchar (max)** 및 **varbinary (max)** 데이터 형식을 사용 하는 것이 좋습니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 text in row 기능이 제거됩니다. 대량 값 데이터를 저장 하려면 **varchar (max)**, **nvarchar (max)** 및 **varbinary (max)** 데이터 형식을 사용 하는 것이 좋습니다.  
   
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -84,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   데이터 행에 사용할 수 있는 충분한 공간이 있을 경우  
   
- BLOB 문자열이 데이터 행에 저장 된 경우 **text**, **ntext**또는 **image** 문자열을 읽고 쓰는 것은 문자와 이진 문자열을 읽거나 쓰는 것 만큼 빠를 수 있습니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 BLOB 문자열을 읽거나 쓰기 위해 별도의 페이지에 액세스할 필요가 없습니다.  
+ BLOB 문자열이 데이터 행에 저장 된 경우 **text**, **ntext**또는 **image** 문자열을 읽고 쓰는 것은 문자와 이진 문자열을 읽거나 쓰는 것 만큼 빠를 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 BLOB 문자열을 읽거나 쓰기 위해 별도의 페이지에 액세스할 필요가 없습니다.  
   
  **Text**, **ntext**또는 **image** 문자열이 행에서 지정 된 제한 또는 사용 가능한 공간 보다 큰 경우에는 포인터가 행에 대신 저장 됩니다. 하지만 이 경우에도 행에 BLOB 문자열을 저장하기 위한 조건이 적용됩니다. 포인터를 저장할 때도 데이터 행에 충분한 공간이 필요합니다.  
   
- 테이블 행에 저장된 BLOB 문자열 및 포인터는 가변 길이 문자열과 비슷하게 취급됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 문자열 또는 포인터를 저장하는 데 필요한 바이트 수만 사용됩니다.  
+ 테이블 행에 저장된 BLOB 문자열 및 포인터는 가변 길이 문자열과 비슷하게 취급됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 문자열 또는 포인터를 저장하는 데 필요한 바이트 수만 사용됩니다.  
   
  기존 BLOB 문자열은 text in row가 처음 설정될 때 즉시 변환되지 않고 업데이트될 때만 변환됩니다. 마찬가지로 text in row 옵션 제한을 늘리면 데이터 행에 이미 있는 **text**, **ntext**또는 **image** 문자열이 업데이트 될 때까지 새 제한을 따르도록 변환 되지 않습니다.  
   
@@ -139,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>참고 항목  
  [sys. Transact-sql &#40;&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

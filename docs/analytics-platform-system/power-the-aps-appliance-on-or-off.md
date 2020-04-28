@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400628"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대해 어플라이언스 기능 설정 또는 해제
@@ -23,9 +23,9 @@ ms.locfileid: "74400628"
   
 이러한 지침이 SQL Server PDW 노드에 대 한 연결을 지정 하는 경우 연결 된 장치 (KVM)를 사용 하 여 로컬 또는 원격 데스크톱을 사용 하는 원격 연결을 사용할 수 있습니다. 일부 작업은 물리적 이어야 하 고 (전원 스위치를 켜는 경우) 일부 작업 (예: 종료)은 물리적 이거나 Windows 명령을 사용 하 여 수행할 수 있습니다.  
   
-노드에 할당 된 IP 주소를 사용 하거나 **장애 조치(Failover) 클러스터 관리자** (**Cluadmin.msc**) 또는 **hyper-v 관리자** (**virtmgmt**) 응용 **** 프로그램을 사용 하 여 노드 이름을 마우스 오른쪽 단추로 클릭 하 여 SQL Server PDW 노드에 대 한 연결을 설정할 수 있습니다.  
+노드에 할당 된 IP 주소를 사용 하거나 **장애 조치(Failover) 클러스터 관리자** (**Cluadmin.msc**) 또는 **hyper-v 관리자** (**virtmgmt**) 응용 **HST01** 프로그램을 사용 하 여 노드 이름을 마우스 오른쪽 단추로 클릭 하 여 SQL Server PDW 노드에 대 한 연결을 설정할 수 있습니다.  
   
-## <a name="PowerOff"></a>어플라이언스 전원 끄기  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>어플라이언스 전원 끄기  
   
 ### <a name="before-you-begin"></a>시작하기 전에  
 어플라이언스의 전원을 끄기 전에 어플라이언스의 모든 작업을 종료 해야 합니다. 모든 작업을 종료 하려면:  
@@ -61,7 +61,7 @@ ms.locfileid: "74400628"
   
 9. Pdu (전원 분배 장치)를 종료 합니다.  
   
-## <a name="PowerOn"></a>어플라이언스의 전원 켜기  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>어플라이언스의 전원 켜기  
   
 ### <a name="to-power-on-the-appliance"></a>어플라이언스를 구동 하려면  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3d1d0d9428138da615fad7ff5745c758d9fcd3b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399428"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>분석 플랫폼 시스템에서 DNS 전달자를 사용 하 여 비 어플라이언스 DNS 이름 확인
 스크립트 및 소프트웨어 응용 프로그램이 외부 서버에 액세스할 수 있도록 분석 플랫폼 시스템 어플라이언스의 Active Directory Domain Services 노드 (**_어플라이언스\_도메인_-AD01** 및 ** _어플라이언스\__ AD02**)에서 DNS 전달자를 구성할 수 있습니다.  
   
-## <a name="ResolveDNS"></a>DNS 전달자 사용  
+## <a name="using-a-dns-forwarder"></a><a name="ResolveDNS"></a>DNS 전달자 사용  
 분석 플랫폼 시스템 어플라이언스는 어플라이언스에 없는 서버의 DNS 이름을 확인 하지 않도록 구성 되어 있습니다. WSUS (Windows Software Update Services)와 같은 일부 프로세스는 어플라이언스 외부의 서버에 액세스 해야 합니다. 이 사용 시나리오를 지원 하려면 분석 플랫폼 시스템 DNS가 외부 DNS 서버를 사용 하 여 어플라이언스 외부에서 이름을 확인할 수 있도록 하 Virtual Machines는 외부 이름 전달자를 지원 하도록 분석 플랫폼 시스템 DNS를 구성할 수 있습니다. DNS 접미사의 사용자 지정 구성은 지원 되지 않습니다. 즉, 정규화 된 도메인 이름을 사용 하 여 비-어플라이언스 서버 이름을 확인 해야 합니다.  
   
 **DNS GUI를 사용 하 여 DNS 전달자를 만들려면**  
@@ -66,8 +66,7 @@ Microsoft 공용 WSUS 리포지토리에서 업데이트를 찾도록 어플라�
   
 3.  연결 목록에서 **Vmsethernet**을 클릭 한 다음 **속성**을 클릭 합니다.  
   
-4.  
-  **인터넷 프로토콜 버전 4(TCP/IPv4)** 를 선택하고 **속성**을 클릭합니다.  
+4.  **인터넷 프로토콜 버전 4(TCP/IPv4)** 를 선택하고 **속성**을 클릭합니다.  
   
 5.  **대체 DNS 서버** 상자에 고객 네트워크 관리자가 제공한 IP 주소를 추가 합니다.  
   

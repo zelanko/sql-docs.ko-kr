@@ -14,17 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725487"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>논리적 아키텍처(Analysis Services - 다차원 데이터)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버 및 클라이언트 구성 요소를 모두 사용 하 여 비즈니스 인텔리전스 응용 프로그램에 대 한 OLAP (온라인 분석 처리) 및 데이터 마이닝 기능을 제공 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다.  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 Microsoft Windows 서비스로 구현됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 동일한 컴퓨터에서 여러 인스턴스를 지원 하며 각 인스턴스는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 별도의 Windows 서비스 인스턴스로 구현 됩니다.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 Microsoft Windows 서비스로 구현됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 동일한 컴퓨터에서 여러 인스턴스를 지원 하며 각 인스턴스는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 별도의 Windows 서비스 인스턴스로 구현 됩니다.  
   
 -   클라이언트는 웹 서비스로 노출되어 명령을 실행하고 응답을 수신하는 SOAP 기반 프로토콜인 공용 표준 XMLA(XML for Analysis)를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 와 통신합니다. 또한 XMLA를 통해 클라이언트 개체 모델이 제공되며 이는 ADOMD.NET과 같은 관리 공급자나 네이티브 OLE DB 공급자 중 하나를 사용하여 액세스할 수 있습니다.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62725487"
  [서버 개체 &#40;Analysis Services 다차원 데이터&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **데이터베이스 개체**  
- [데이터베이스 개체 &#40;Analysis Services 다차원 데이터&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](database-objects-analysis-services-multidimensional-data.md)  
   
  **차원 개체**  
  [차원 개체 &#40;Analysis Services 다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -53,6 +52,6 @@ ms.locfileid: "62725487"
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft OLAP 아키텍처 이해](../olap-physical/understanding-microsoft-olap-architecture.md)   
- [실제 아키텍처 &#40;Analysis Services 다차원 데이터&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
+ [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   
   

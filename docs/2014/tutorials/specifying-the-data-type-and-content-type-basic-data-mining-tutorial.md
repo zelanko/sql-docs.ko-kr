@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720050"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>데이터 형식 및 내용 유형 지정(기본 데이터 마이닝 마법사)
@@ -30,27 +30,27 @@ ms.locfileid: "62720050"
   
     |열|콘텐츠 형식|데이터 형식|  
     |------------|------------------|---------------|  
-    |**주소 줄 1**|**불연속**|**본문**|  
-    |**주소 Line2**|**불연속**|**본문**|  
-    |**발전할**|**연속**|**Long**|  
-    |**Bike Buyer**|**불연속**|**Long**|  
-    |**Commute 거리**|**불연속**|**본문**|  
-    |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**연속**|**Date**|  
-    |**전자 메일 주소**|**불연속**|**본문**|  
-    |**English Education**|**불연속**|**본문**|  
-    |**English Occupation**|**불연속**|**본문**|  
-    |**FirstName**|**불연속**|**본문**|  
-    |**구분**|**불연속**|**본문**|  
-    |**Geography Key**|**불연속**|**본문**|  
-    |**House Owner Flag**|**불연속**|**본문**|  
-    |**성**|**불연속**|**본문**|  
-    |**결혼 상태**|**불연속**|**본문**|  
-    |**Number Cars Owned**|**불연속**|**Long**|  
-    |**Number Children At Home**|**불연속**|**Long**|  
-    |**지역**|**불연속**|**본문**|  
-    |**Total Children**|**불연속**|**Long**|  
-    |**Yearly Income**|**연속**|**Double**|  
+    |**주소 줄 1**|**불연속**|**텍스트**|  
+    |**주소 Line2**|**불연속**|**텍스트**|  
+    |**발전할**|**주기가**|**시간과**|  
+    |**Bike Buyer**|**불연속**|**시간과**|  
+    |**Commute Distance**|**불연속**|**텍스트**|  
+    |**CustomerKey**|**키**|**시간과**|  
+    |**DateLastPurchase**|**주기가**|**날짜**|  
+    |**전자 메일 주소**|**불연속**|**텍스트**|  
+    |**English Education**|**불연속**|**텍스트**|  
+    |**English Occupation**|**불연속**|**텍스트**|  
+    |**FirstName**|**불연속**|**텍스트**|  
+    |**구분**|**불연속**|**텍스트**|  
+    |**Geography Key**|**불연속**|**텍스트**|  
+    |**House Owner Flag**|**불연속**|**텍스트**|  
+    |**성**|**불연속**|**텍스트**|  
+    |**Marital Status**|**불연속**|**텍스트**|  
+    |**Number Cars Owned**|**불연속**|**시간과**|  
+    |**Number Children At Home**|**불연속**|**시간과**|  
+    |**지역**|**불연속**|**텍스트**|  
+    |**Total Children**|**불연속**|**시간과**|  
+    |**Yearly Income**|**주기가**|**double**|  
   
 3.  **다음**을 클릭합니다.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62720050"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝&#41;&#40;내용 유형](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [데이터 마이닝 &#40;데이터 형식&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [데이터 형식&#40;데이터 마이닝&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

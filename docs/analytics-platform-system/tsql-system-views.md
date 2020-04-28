@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399806"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>분석 플랫폼 시스템 병렬 데이터 웨어하우스의 시스템 뷰
@@ -61,7 +61,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 다음 Dmv는 병렬 데이터 웨어하우스에 적용할 수 있지만 **master** 데이터베이스에 연결 하 여 실행 해야 합니다.
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [sys. dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
 * [sys. fn_helpcollations ()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>SQL Server 카탈로그 보기
@@ -105,7 +105,7 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 * [sys.partition_schemes](https://msdn.microsoft.com/library/ms189752.aspx)
 * [sys.partitions](https://msdn.microsoft.com/library/ms175012.aspx)
 * [sys.procedures](https://msdn.microsoft.com/library/ms188737.aspx)
-* [sys. 스키마](https://msdn.microsoft.com/library/ms176011.aspx)
+* [sys.schemas](https://msdn.microsoft.com/library/ms176011.aspx)
 * [sys.securable_classes](https://msdn.microsoft.com/library/ms408301.aspx)
 * [sys.sql_expression_dependencies](https://msdn.microsoft.com/library/bb677315.aspx)
 * [sys.sql_modules](https://msdn.microsoft.com/library/ms175081.aspx)
@@ -215,14 +215,14 @@ PDW (병렬 데이터 웨어하우스)를 SQL Server 하는 APS (분석 플랫�
 
 ## <a name="sql-server-information_schema-views"></a>SQL Server INFORMATION_SCHEMA 보기
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
-* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
-* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+* [세로](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [매개 변수](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
+* [표의](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [레이아웃](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>다음 단계
 자세한 참조 정보는 [t-sql 언어 요소](tsql-language-elements.md) 및 [t-sql 문](tsql-statements.md)을 참조 하세요.

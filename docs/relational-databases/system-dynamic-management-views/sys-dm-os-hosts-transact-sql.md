@@ -19,10 +19,10 @@ ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4ff3e25accf5c499afb5e306a0eec206f6b3f82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982548"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts(Transact-SQL)
@@ -36,8 +36,8 @@ ms.locfileid: "73982548"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|호스트 개체의 내부 메모리 주소입니다.|  
-|**type**|**nvarchar (60)**|호스팅된 구성 요소의 유형입니다. 예를 들면 다음과 같습니다.<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server 네이티브 인터페이스<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 공급자<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access 런타임|  
-|**name**|**nvarchar (32)**|호스트의 이름입니다.|  
+|**type**|**nvarchar(60)**|호스팅된 구성 요소의 유형입니다. 예를 들면 다음과 같습니다.<br /><br /> SOSHOST_CLIENTID_SERVERSNI= SQL Server 네이티브 인터페이스<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = SQL Server Native Client OLE DB 공급자<br /><br /> SOSHOST_CLIENTID_MSDART = Microsoft Data Access 런타임|  
+|**name**|**nvarchar(32)**|호스트의 이름입니다.|  
 |**enqueued_tasks_count**|**int**|이 호스트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 큐에 배치한 태스크의 총 개수입니다.|  
 |**active_tasks_count**|**int**|이 호스트가 큐에 배치한 현재 실행 중인 태스크의 수입니다.|  
 |**completed_ios_count**|**int**|이 호스트를 통해 실행되고 완료된 I/O의 총 개수입니다.|  
@@ -52,13 +52,11 @@ ms.locfileid: "73982548"
 Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 일부가 아닌 OLE DB 공급자와 같은 구성 요소가 메모리를 할당하고 비선점형 일정에 참여할 수 있습니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 호스팅되며 이러한 구성 요소에서 할당된 모든 리소스는 추적됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 외부 구성 요소에서 사용하는 리소스를 효과적으로 관리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 일부가 아닌 OLE DB 공급자와 같은 구성 요소가 메모리를 할당하고 비선점형 일정에 참여할 수 있습니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 호스팅되며 이러한 구성 요소에서 할당된 모든 리소스는 추적됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 외부 구성 요소에서 사용하는 리소스를 효과적으로 관리할 수 있습니다.  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|일 대 일|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|일 대 일|  

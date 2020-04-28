@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400958"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 부하 모니터링
@@ -58,7 +58,7 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 ### <a name="to-monitor-loads-by-using-system-views"></a>시스템 뷰를 사용 하 여 로드를 모니터링 하려면  
 SQL Server PDW 보기를 사용 하 여 활성 및 최근 로드를 모니터링 하려면 다음 단계를 수행 합니다. 사용 되는 각 시스템 뷰에 대해 뷰에서 반환 되는 열 및 잠재적 값에 대 한 자세한 내용은 해당 보기에 대 한 설명서를 참조 하십시오.  
   
-1.  이 보기의 `command` 열에서 로더 명령줄을 찾아 dm_pdw_exec_requests 뷰의 로드를 찾습니다. [](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) `request_id`  
+1.  이 보기의 `command` 열에서 로더 명령줄을 찾아 dm_pdw_exec_requests 뷰의 로드를 찾습니다. [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md) `request_id`  
   
     예를 들어 다음 명령은 명령 텍스트 및 현재 상태와을 반환 합니다 `request_id`.  
   

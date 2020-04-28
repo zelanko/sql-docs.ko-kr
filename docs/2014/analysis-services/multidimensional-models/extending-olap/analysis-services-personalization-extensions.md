@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726119"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
@@ -30,21 +30,18 @@ ms.locfileid: "62726119"
   
 -   **신속한 배포** 다른 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 소프트웨어 개발자와 개인 설정 확장 프로그램을 공유 하 여이 확장 기능을 찾을 수 있는 위치 또는 방법에 대 한 자세한 사양을 고려해 서는 안 됩니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 용도는 많습니다. 예를 들어 회사의 영업에 여러 통화가 관련된 경우가 있습니다. 큐브에 액세스하는 사람에 해당하는 지역 통화로 통합된 영업을 반환하는 계산 멤버를 만들 수 있습니다. 이 멤버를 개인 설정 확장 프로그램으로 만듭니다. 그런 다음 이 계산 멤버를 사용자 그룹과 공유합니다. 공유하면 이러한 사용자들은 서버에 연결한 즉시 계산 멤버에 액세스할 수 있게 됩니다. 사용자가 사용하는 인터페이스가 계산 멤버를 만들 때 사용된 인터페이스와 다른 경우에도 액세스할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 용도는 많습니다. 예를 들어 회사의 영업에 여러 통화가 관련된 경우가 있습니다. 큐브에 액세스하는 사람에 해당하는 지역 통화로 통합된 영업을 반환하는 계산 멤버를 만들 수 있습니다. 이 멤버를 개인 설정 확장 프로그램으로 만듭니다. 그런 다음 이 계산 멤버를 사용자 그룹과 공유합니다. 공유하면 이러한 사용자들은 서버에 연결한 즉시 계산 멤버에 액세스할 수 있게 됩니다. 사용자가 사용하는 인터페이스가 계산 멤버를 만들 때 사용된 인터페이스와 다른 경우에도 액세스할 수 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램은 기존 관리 되는 어셈블리 아키텍처를 간단 하 고 세련 되 게 수정 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 하 여 개체 모델, MDX (Multidimensional Expressions) 구문 및 스키마 행 집합 전체에 노출 됩니다.  
   
 ## <a name="logical-architecture"></a>논리 아키텍처  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 아키텍처는 관리 어셈블리 아키텍처와 다음 네 가지의 기본 요소를 기반으로 합니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 아키텍처는 관리 어셈블리 아키텍처와 다음 네 가지의 기본 요소를 기반으로 합니다.  
   
  [PlugInAttribute] 사용자 지정 특성  
  서비스를 시작할 때에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 필요한 어셈블리를 로드 하 고 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성이 있는 클래스를 확인 합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 MSDN의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발자 가이드에서 "[특성 개요](https://go.microsoft.com/fwlink/?LinkId=82929)" 항목을 참조 하십시오.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 MSDN의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발자 가이드에서 "[특성 개요](https://go.microsoft.com/fwlink/?LinkId=82929)" 항목을 참조 하십시오.  
   
  <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성이 있는 모든 클래스에 대해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은 해당 기본 생성자를 호출 합니다. 시작 시에 모든 생성자를 호출하면 새 개체를 만들 수 있는, 모든 사용자 동작으로부터 독립적인 공통된 장소가 제공됩니다.  
   
@@ -68,8 +65,7 @@ ms.locfileid: "62726119"
  모든 개체 제작 및 관리는 이 아키텍처와는 관계없으며 전적으로 개체 개발자의 책임입니다.  
   
 ## <a name="infrastructure-foundations"></a>인프라 기반  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 기존 구성 요소를 기반으로 합니다. 다음은 개인 설정 확장 프로그램 기능을 제공하는 향상 및 개선 사항의 요약입니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 기존 구성 요소를 기반으로 합니다. 다음은 개인 설정 확장 프로그램 기능을 제공하는 향상 및 개선 사항의 요약입니다.  
   
 ### <a name="assemblies"></a>어셈블리  
  사용자 지정 특성 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute>를 사용자 지정 어셈블리에 추가하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램 클래스를 식별할 수 있습니다.  
@@ -78,19 +74,15 @@ ms.locfileid: "62726119"
  향상되었거나 모델에 추가된 <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델의 개체는 다음과 같습니다.  
   
 #### <a name="new-adomdconnection-class"></a>새 AdomdConnection 클래스  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 클래스는 새로운 클래스이며 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 클래스는 새로운 클래스이며 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
   
  **속성**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> - 현재 연결의 세션 ID를 나타내는 읽기 전용 문자열 값입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A> - 현재 연결의 세션 ID를 나타내는 읽기 전용 문자열 값입니다.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> - 현재 세션에 연결된 클라이언트 culture에 대한 읽기 전용 참조입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A> - 현재 세션에 연결된 클라이언트 culture에 대한 읽기 전용 참조입니다.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> - 현재 사용자를 나타내는 ID 인터페이스의 읽기 전용 참조입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A> - 현재 사용자를 나타내는 ID 인터페이스의 읽기 전용 참조입니다.  
   
  **이벤트**  
   
@@ -99,26 +91,20 @@ ms.locfileid: "62726119"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing>  
   
 #### <a name="new-properties-in-the-context-class"></a>컨텍스트 클래스의 새 속성  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context> 클래스에는 두 개의 새로운 속성이 있습니다.  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Context> 클래스에는 두 개의 새로운 속성이 있습니다.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> - 새 서버 개체에 대한 읽기 전용 참조입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A> - 새 서버 개체에 대한 읽기 전용 참조입니다.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> - 새 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 개체에 대한 읽기 전용 참조입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A> - 새 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection> 개체에 대한 읽기 전용 참조입니다.  
   
 #### <a name="new-server-class"></a>새 서버 클래스  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server> 클래스는 새로운 클래스이며 클래스 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
+ <xref:Microsoft.AnalysisServices.AdomdServer.Server> 클래스는 새로운 클래스이며 클래스 속성과 이벤트를 통해 여러 개인 설정 확장 프로그램을 노출합니다.  
   
  **속성**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> - 서버 이름을 나타내는 읽기 전용 문자열 값입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A> - 서버 이름을 나타내는 읽기 전용 문자열 값입니다.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> - 서버에 연결된 전역 culture에 대한 읽기 전용 참조입니다.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A> - 서버에 연결된 전역 culture에 대한 읽기 전용 참조입니다.  
   
  **이벤트**  
   
@@ -127,16 +113,15 @@ ms.locfileid: "62726119"
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>  
   
 #### <a name="adomdcommand-class"></a>AdomdCommand 클래스  
- 
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 클래스는 이제 다음 MDX 명령을 지원합니다.  
+ <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> 클래스는 이제 다음 MDX 명령을 지원합니다.  
   
--   [CREATE MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [MDX &#40;업데이트 멤버 문&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [DROP MEMBER 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET 문 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [DROP SET 문이 MDX를 &#40;&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   

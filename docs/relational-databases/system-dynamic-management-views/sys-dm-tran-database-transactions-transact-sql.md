@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a01dc7df9a8269190ae1c1c3cf05de3adaecc662
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982310"
 ---
 # <a name="sysdm_tran_database_transactions-transact-sql"></a>sys.dm_tran_database_transactions(Transact-SQL)
@@ -50,12 +50,12 @@ ms.locfileid: "73982310"
 |database_transaction_log_bytes_reserved|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 트랜잭션의 데이터베이스 로그에 사용하도록 예약된 바이트 수입니다.|  
 |database_transaction_log_bytes_used_system|**int**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 지금까지 트랜잭션 대신 시스템 트랜잭션의 데이터베이스 로그에 사용된 바이트 수입니다.|  
 |database_transaction_log_bytes_reserved_system|**int**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 트랜잭션 대신 시스템 트랜잭션의 데이터베이스 로그에 사용하도록 예약된 바이트 수입니다.|  
-|database_transaction_begin_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 트랜잭션 시작 레코드의 LSN(로그 시퀀스 번호)입니다.|  
-|database_transaction_last_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 가장 최근에 기록된 트랜잭션 레코드의 LSN입니다.|  
-|database_transaction_most_recent_savepoint_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 가장 최근 트랜잭션 저장점의 LSN입니다.|  
-|database_transaction_commit_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 트랜잭션 커밋 로그 레코드의 LSN입니다.|  
-|database_transaction_last_rollback_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 가장 최근에 롤백된 LSN입니다. 롤백이 수행 되지 않은 경우 값은 MaxLSN입니다.|  
-|database_transaction_next_undo_lsn|**숫자 (25, 0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 실행 취소할 다음 레코드의 LSN입니다.|  
+|database_transaction_begin_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 트랜잭션 시작 레코드의 LSN(로그 시퀀스 번호)입니다.|  
+|database_transaction_last_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 가장 최근에 기록된 트랜잭션 레코드의 LSN입니다.|  
+|database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 가장 최근 트랜잭션 저장점의 LSN입니다.|  
+|database_transaction_commit_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 데이터베이스 로그에서 트랜잭션 커밋 로그 레코드의 LSN입니다.|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 가장 최근에 롤백된 LSN입니다. 롤백이 수행 되지 않은 경우 값은 MaxLSN입니다.|  
+|database_transaction_next_undo_lsn|**numeric(25,0)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 실행 취소할 다음 레코드의 LSN입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한
@@ -66,7 +66,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 ## <a name="see-also"></a>참고 항목  
  [dm_tran_active_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
  [dm_tran_session_transactions &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [트랜잭션 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

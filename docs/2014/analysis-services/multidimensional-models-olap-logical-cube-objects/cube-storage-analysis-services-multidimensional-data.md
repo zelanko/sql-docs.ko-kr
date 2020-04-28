@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727669"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>큐브 스토리지(Analysis Services - 다차원 데이터)
@@ -40,8 +40,7 @@ ms.locfileid: "62727669"
   
  파티션을 만들 때 이에 대한 데이터 원본을 지정합니다. 기존 파티션의 데이터 원본을 변경할 수도 있습니다. 측정값 그룹을 수직 또는 수평 분할할 수 있습니다. 수직 분할된 측정값 그룹의 각 파티션은 단일 원본 테이블의 필터링된 뷰를 기반으로 합니다. 예를 들어 측정값 그룹이 여러 해에 걸친 데이터를 포함하는 단일 테이블을 기반으로 하는 경우 각 연도의 데이터에 대해 별도의 파티션을 만들 수 있습니다. 이와 반대로 수평 분할된 측정값 그룹의 각 파티션은 별도의 테이블을 기반으로 합니다. 데이터 원본이 개별 테이블에 각 연도의 데이터를 저장하는 경우에는 수평 분할을 사용합니다.  
   
- 파티션이 생성되는 측정값 그룹과 동일한 스토리지 설정으로 파티션이 처음 생성됩니다. 세부 데이터와 집계 데이터는 스토리지 설정에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 다차원 형식으로 저장되거나, 원본 서버에 관계형 형식으로 저장되거나, 두 가지 방법을 모두 사용하여 저장됩니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 저장되는 다차원 데이터에 대한 원본 데이터 변경 내용을 자동으로 처리하기 위해 자동 관리 캐싱을 사용할지 여부도 스토리지 설정에 따라 결정됩니다.  
+ 파티션이 생성되는 측정값 그룹과 동일한 스토리지 설정으로 파티션이 처음 생성됩니다. 세부 데이터와 집계 데이터는 스토리지 설정에 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 다차원 형식으로 저장되거나, 원본 서버에 관계형 형식으로 저장되거나, 두 가지 방법을 모두 사용하여 저장됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 저장되는 다차원 데이터에 대한 원본 데이터 변경 내용을 자동으로 처리하기 위해 자동 관리 캐싱을 사용할지 여부도 스토리지 설정에 따라 결정됩니다.  
   
  큐브의 파티션은 사용자에게 표시되지 않습니다. 그러나 다른 파티션에 대한 스토리지 설정 선택 사항은 데이터의 즉시성, 사용되는 디스크 공간의 양 및 쿼리 성능에 영향을 미칠 수 있습니다. 파티션을 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 저장하여 큐브 스토리지에 대한 클러스터형 액세스를 제공할 수 있으며 작업을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 전체에 걸쳐 분산시킬 수 있습니다. 자세한 내용은 [파티션 저장소 모드 및 처리](partitions-partition-storage-modes-and-processing.md), [원격 파티션](partitions-remote-partitions.md)및 [파티션 &#40;Analysis Services 다차원 데이터&#41;](partitions-analysis-services-multidimensional-data.md)을 참조 하세요.  
   

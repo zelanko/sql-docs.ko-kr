@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729633"
 ---
 # <a name="collection-permissions-master-data-services"></a>컬렉션 권한(Master Data Services)
@@ -32,8 +32,8 @@ ms.locfileid: "73729633"
 |사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기**|사용자는 컬렉션 멤버 및 멤버 특성을 읽을 수 있습니다.|  
-|**만드십시오**|사용자는 컬렉션 멤버를 만들고 특성 값을 할당할 수 있습니다.|  
-|**고침**|사용자는 컬렉션 멤버, 특성 및 관계를 업데이트할 수 있습니다.|  
+|**만들기**|사용자는 컬렉션 멤버를 만들고 특성 값을 할당할 수 있습니다.|  
+|**업데이트**|사용자는 컬렉션 멤버, 특성 및 관계를 업데이트할 수 있습니다.|  
 |**Delete**|사용자는 컬렉션 멤버를 삭제할 수 있습니다.|  
 |**거부**|컬렉션 멤버에 대한 모든 액세스를 거부합니다.|  
   
@@ -42,6 +42,6 @@ ms.locfileid: "73729633"
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [컬렉션 &#40;MDS(Master Data Services)&#41;](../master-data-services/collections-master-data-services.md)   
- [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+ [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

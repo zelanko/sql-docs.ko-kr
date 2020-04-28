@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714768"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
@@ -80,10 +80,10 @@ ms.locfileid: "62714768"
   
  다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전의 단일 인스턴스에 대한 컴퓨팅 용량 제한을 보여 줍니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에디션이|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: 코어 기반 라이선스<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
-|Developer|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
+|개발자|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |평가|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|  
 |비즈니스 인텔리전스|소켓 4개 또는 코어 16개 미만으로 제한됨|운영 체제가 지원하는 최대 크기|  
 |Standard|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|  

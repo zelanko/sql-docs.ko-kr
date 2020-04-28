@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056621"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
@@ -259,7 +259,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 |`/SkuRecommendationCurrencyCode` | 가격 (예: "USD")을 표시할 통화입니다. | Y <br> (최신 가격)
 |`/SkuRecommendationOfferName` | 제품 이름 (예: "MS-AZR-0017P-0003P")입니다. 자세한 내용은 [Microsoft Azure 제품 세부 정보](https://azure.microsoft.com/support/legal/offer-details/) 페이지를 참조 하세요. | Y <br> (최신 가격)
 |`/SkuRecommendationRegionName` | 영역 이름 (예: "WestUS") | Y <br> (최신 가격)
-|`/SkuRecommendationSubscriptionId` | 구독 ID | Y <br> (최신 가격)
+|`/SkuRecommendationSubscriptionId` | 구독 ID입니다. | Y <br> (최신 가격)
 |`/SkuRecommendationDatabasesToRecommend` | 권장 되는 데이터베이스의 공백으로 구분 된 목록입니다 (예: "Database1" "Database2" "Database3"). 이름은 대/소문자를 구분 하며 큰따옴표로 묶어야 합니다. 생략 하는 경우 모든 데이터베이스에 대 한 권장 사항이 제공 됩니다. | N
 |`/AzureAuthenticationTenantId` | 인증 테 넌 트입니다. | Y <br> (최신 가격)
 |`/AzureAuthenticationClientId` | 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다. | Y <br> (최신 가격)

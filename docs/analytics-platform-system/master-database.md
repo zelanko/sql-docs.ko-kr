@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400983"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master 데이터베이스-병렬 데이터 웨어하우스
@@ -42,7 +42,7 @@ SQL Server PDW master 데이터베이스는 어플라이언스 수준 로그인 
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|Task|Description|  
+|작업|설명|  
 |--------|---------------|  
 |Master의 전체 백업을 만듭니다.|예제:<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />자세한 내용은 [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)를 참조 하세요.|  
 |master 데이터베이스 복원|Master 데이터베이스를 복원 하려면 Configuration Manager 도구의 [Master 데이터베이스 복원](restore-the-master-database.md) 페이지를 사용 합니다.|  

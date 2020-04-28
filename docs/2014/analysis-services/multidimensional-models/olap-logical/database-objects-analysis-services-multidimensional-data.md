@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725659"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
@@ -31,11 +31,9 @@ ms.locfileid: "62725659"
   
 -   어셈블리에는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 언어와 함께 제공된 기본 함수의 기능을 확장하는 사용자 정의 함수가 포함됩니다.  
   
- 
-  <xref:Microsoft.AnalysisServices.Database> 개체는 비즈니스 인텔리전스 프로젝트(예: OLAP 큐브, 차원 및 데이터 마이닝 구조) 및 해당 지원 개체(예: <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Account> 및 <xref:Microsoft.AnalysisServices.Role>)에 필요한 모든 데이터 개체의 컨테이너입니다.  
+ <xref:Microsoft.AnalysisServices.Database> 개체는 비즈니스 인텔리전스 프로젝트(예: OLAP 큐브, 차원 및 데이터 마이닝 구조) 및 해당 지원 개체(예: <xref:Microsoft.AnalysisServices.DataSource>, <xref:Microsoft.AnalysisServices.Account> 및 <xref:Microsoft.AnalysisServices.Role>)에 필요한 모든 데이터 개체의 컨테이너입니다.  
   
- 
-  <xref:Microsoft.AnalysisServices.Database> 개체는 다음을 포함하는 개체와 특성에 대한 액세스 권한을 제공합니다.  
+ <xref:Microsoft.AnalysisServices.Database> 개체는 다음을 포함하는 개체와 특성에 대한 액세스 권한을 제공합니다.  
   
 -   액세스할 수 있는 모든 큐브(컬렉션)  
   
@@ -58,19 +56,15 @@ ms.locfileid: "62725659"
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 OLAP 및 데이터 마이닝 기능이 공유하는 개체에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
-|[다차원 모델의 데이터 원본](../data-sources-in-multidimensional-models.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 데이터 원본에 대해 설명합니다.|  
-|[다차원 모델의 데이터 원본 뷰](../data-source-views-in-multidimensional-models.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 하나 이상의 데이터 원본을 기반으로 하는 논리 데이터 모델에 대해 설명합니다.|  
+|[다차원 모델의 데이터 원본](../data-sources-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 데이터 원본에 대해 설명합니다.|  
+|[다차원 모델의 데이터 원본 뷰](../data-source-views-in-multidimensional-models.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 하나 이상의 데이터 원본을 기반으로 하는 논리 데이터 모델에 대해 설명합니다.|  
 |[다차원 모델의 큐브](../cubes-in-multidimensional-models.md)|큐브에 대해 설명하고 측정값, 측정값 그룹, 차원 용도 관계, 계산, 핵심 성과 지표, 동작, 번역, 파티션, 큐브 뷰 등의 큐브 개체를 살펴봅니다.|  
-|[차원 &#40;Analysis Services 다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|차원에 대해 설명하고 특성, 특성 관계, 계층, 수준 및 멤버 등의 차원 개체를 살펴봅니다.|  
-|[마이닝 구조 &#40;Analysis Services 데이터 마이닝&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|마이닝 구조와 마이닝 모델을 포함하는 마이닝 개체에 대해 설명합니다.|  
-|[보안 역할 &#40;Analysis Services 다차원 데이터&#41;](security-roles-analysis-services-multidimensional-data.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 개체에 대한 액세스를 제어하는 데 사용되는 보안 메커니즘인 역할에 대해 설명합니다.|  
-|[다차원 모델 어셈블리 관리](../multidimensional-model-assemblies-management.md)|
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX 및 DMX 언어를 확장하는 데 사용되는 사용자 정의 함수 모음인 어셈블리에 대해 설명합니다.|  
+|[차원&#40;Analysis Services - 다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|차원에 대해 설명하고 특성, 특성 관계, 계층, 수준 및 멤버 등의 차원 개체를 살펴봅니다.|  
+|[마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|마이닝 구조와 마이닝 모델을 포함하는 마이닝 개체에 대해 설명합니다.|  
+|[보안 역할&#40;Analysis Services - 다차원 데이터&#41;](security-roles-analysis-services-multidimensional-data.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 개체에 대한 액세스를 제어하는 데 사용되는 보안 메커니즘인 역할에 대해 설명합니다.|  
+|[다차원 모델 어셈블리 관리](../multidimensional-model-assemblies-management.md)|[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 MDX 및 DMX 언어를 확장하는 데 사용되는 사용자 정의 함수 모음인 어셈블리에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SSAS 다차원&#41;&#40;지원 되는 데이터 원본](../supported-data-sources-ssas-multidimensional.md)   

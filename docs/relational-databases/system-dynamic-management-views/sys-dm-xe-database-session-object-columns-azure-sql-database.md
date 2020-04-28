@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 36dfed5d0c24082d01248d7e6e8e1e62e1725e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844416"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns(Azure SQL Database)
@@ -30,11 +30,11 @@ ms.locfileid: "73844416"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|이벤트 세션의 메모리 주소입니다. 에는 dm_xe_database_sessions와 다 대 일 관계가 있습니다. Null을 허용하지 않습니다.|  
-|column_name|**nvarchar (60)**|구성 값의 이름입니다. Null을 허용하지 않습니다.|  
+|column_name|**nvarchar(60)**|구성 값의 이름입니다. Null을 허용하지 않습니다.|  
 |column_id|**int**|열의 ID입니다. 개체 내에서 고유합니다. Null을 허용하지 않습니다.|  
-|column_value|**nvarchar (2048)**|열의 구성 값입니다. Null을 허용합니다.|  
-|object_type|**nvarchar (60)**|개체의 유형.  Null을 허용 하지 않습니다. object_type 다음 중 하나입니다.<br /><br /> 이벤트<br /><br /> 대상|  
-|object_name|**nvarchar (60)**|해당 열이 속한 개체의 이름입니다. Null을 허용하지 않습니다.|  
+|column_value|**nvarchar(2048)**|열의 구성 값입니다. Null을 허용합니다.|  
+|object_type|**nvarchar(60)**|개체의 유형.  Null을 허용 하지 않습니다. object_type 다음 중 하나입니다.<br /><br /> event<br /><br /> 대상|  
+|object_name|**nvarchar(60)**|해당 열이 속한 개체의 이름입니다. Null을 허용하지 않습니다.|  
 |object_package_guid|**uniqueidentifier**|개체가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
@@ -42,7 +42,7 @@ ms.locfileid: "73844416"
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|원본|수행할 작업|관계|  
+|시작|대상|관계|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns object_name<br /><br /> dm_xe_database_session_object_columns object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|다 대 일|  
 |dm_xe_database_session_object_columns column_name<br /><br /> dm_xe_database_session_object_columns column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|다 대 일|  

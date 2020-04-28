@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982733"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions(Transact-SQL)
@@ -37,16 +37,16 @@ ms.locfileid: "73982733"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**클래스**|**tinyint**|사용 권한이 있는 클래스를 식별합니다.<br /><br /> 0 = 데이터베이스<br />1 = 개체 또는 열<br />3 = 스키마<br />4 = 데이터베이스 보안 주체<br />5 = 어셈블리 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />6 = 형식<br />10 = XML 스키마 컬렉션- <br />                      **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />15 = 메시지 유형-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용 됩니다**.<br />16 = 서비스 계약-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용 됩니다**.<br />17 = 서비스 **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />18 = 원격 서비스 바인딩-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용**됩니다.<br />19 = 경로 **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />23 = 전체 텍스트 카탈로그- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **에 적용**됩니다.<br />24 = 대칭 키- **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />25 = 인증서- **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />26 = 비대칭 키-적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **에 적용 됩니다**.|  
-|**class_desc**|**nvarchar (60)**|사용 권한이 있는 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> 인증서<br /><br /> ASYMMETRIC_KEY|  
+|**class**|**tinyint**|사용 권한이 있는 클래스를 식별합니다.<br /><br /> 0 = 데이터베이스<br />1 = 개체 또는 열<br />3 = 스키마<br />4 = 데이터베이스 보안 주체<br />5 = 어셈블리 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />6 = 형식<br />10 = XML 스키마 컬렉션- <br />                      **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />15 = 메시지 유형-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용 됩니다**.<br />16 = 서비스 계약-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용 됩니다**.<br />17 = 서비스 **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />18 = 원격 서비스 바인딩-이상 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **에 적용**됩니다.<br />19 = 경로 **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />23 = 전체 텍스트 카탈로그- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **에 적용**됩니다.<br />24 = 대칭 키- **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br />25 = 인증서- **적용**대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상.<br />26 = 비대칭 키-적용 대상: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 **에 적용 됩니다**.|  
+|**class_desc**|**nvarchar(60)**|사용 권한이 있는 클래스에 대한 설명입니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> 인증서<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|사용 권한이 존재하는 항목의 ID입니다. 이는 클래스에 따라 해석됩니다. 일반적으로 **major_id** 는 클래스가 나타내는 항목에 적용 되는 id의 종류입니다. <br /><br /> 0 = 데이터베이스 자체 <br /><br /> >0 = 개체-사용자 개체의 Id <br /><br /> \<0 = 시스템 개체에 대 한 개체 Id |  
 |**minor_id**|**int**|사용 권한이 존재하는 항목의 보조 ID입니다. 이는 클래스에 따라 해석됩니다. 개체 클래스에 사용할 수 있는 하위 범주가 없기 때문에 **minor_id** 은 종종 0입니다. 그렇지 않으면 테이블의 열 ID입니다.|  
 |**grantee_principal_id**|**int**|사용 권한이 부여된 데이터베이스 보안 주체 ID입니다.|  
 |**grantor_principal_id**|**int**|사용 권한 부여자의 데이터베이스 보안 주체 ID입니다.|  
 |**type**|**char (4)**|데이터베이스 사용 권한의 유형입니다. 사용 권한 유형 목록은 다음 표를 참조하세요.|  
 |**permission_name**|**nvarchar(128)**|사용 권한 이름입니다.|  
-|**상태일**|**char (1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
-|**state_desc**|**nvarchar (60)**|사용 권한 상태에 대한 설명입니다.<br /><br /> 거부<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state**|**char (1)**|사용 권한 상태입니다.<br /><br /> D = 거부<br /><br /> R = 취소<br /><br /> G = 허용<br /><br /> W = Grant 옵션을 사용하여 허용|  
+|**state_desc**|**nvarchar(60)**|사용 권한 상태에 대한 설명입니다.<br /><br /> 거부<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>데이터베이스 권한   
 다음과 같은 유형의 사용 권한을 사용할 수 있습니다.
@@ -168,7 +168,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>참고 항목  
  [보안 개체](../../relational-databases/security/securables.md)   
- [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [데이터베이스 엔진&#41;&#40;사용 권한 계층](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

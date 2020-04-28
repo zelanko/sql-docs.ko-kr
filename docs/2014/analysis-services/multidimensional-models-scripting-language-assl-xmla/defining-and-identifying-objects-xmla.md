@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727560"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>개체 정의 및 식별(XMLA)
@@ -35,8 +35,7 @@ ms.locfileid: "62727560"
  [Delete](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/delete-element-xmla) 또는 [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla)와 같은 일부 XMLA 명령은 개체 참조를 사용 하 여 명확한 방식으로 개체를 참조 합니다. 개체 참조에는 명령이 실행되는 대상 개체에 대한 개체 식별자와 해당 개체의 상위 항목에 대한 개체 식별자가 포함됩니다. 예를 들어 파티션의 개체 참조에는 해당 파티션에 대한 개체 식별자와 해당 파티션의 부모 측정값 그룹, 큐브 및 데이터베이스에 대한 개체 식별자가 포함됩니다.  
   
 ## <a name="object-definitions"></a>개체 정의  
- XMLA의 [create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) 및 [alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) 명령은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 개체를 각각 생성 하거나 변경 합니다. 이러한 개체에 대 한 정의는 개체의 요소가 포함 된 [Objectdefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) 요소로 표시 됩니다. [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) 요소를 사용 하 여 모든 주요 개체와 많은 보조 개체에 대해 개체 식별자를 명시적으로 지정할 수 있습니다. 
-  `ID` 요소를 사용하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서는 식별할 개체에 따라 명명 규칙을 사용하여 고유 식별자를 제공합니다. 및 명령을 사용 하 여 개체를 정의 하는 방법에 대 한 자세한 내용은 [개체 만들기 및 변경 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)를 참조 하세요. `Alter` `Create`  
+ XMLA의 [create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) 및 [alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) 명령은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 개체를 각각 생성 하거나 변경 합니다. 이러한 개체에 대 한 정의는 개체의 요소가 포함 된 [Objectdefinition](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/objectdefinition-element-xmla) 요소로 표시 됩니다. [ID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) 요소를 사용 하 여 모든 주요 개체와 많은 보조 개체에 대해 개체 식별자를 명시적으로 지정할 수 있습니다. `ID` 요소를 사용하지 않으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서는 식별할 개체에 따라 명명 규칙을 사용하여 고유 식별자를 제공합니다. 및 명령을 사용 하 여 개체를 정의 하는 방법에 대 한 자세한 내용은 [개체 만들기 및 변경 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)를 참조 하세요. `Alter` `Create`  
   
 ## <a name="see-also"></a>참고 항목  
  [XMLA&#41;&#40;개체 요소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla)   

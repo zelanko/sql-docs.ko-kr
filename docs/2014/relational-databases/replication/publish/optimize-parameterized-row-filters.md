@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 216504cc6145a60e8b7d4996d29f46cb9d08458d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882143"
 ---
 # <a name="optimize-parameterized-row-filters"></a>매개 변수가 있는 행 필터 최적화
@@ -37,31 +37,31 @@ ms.locfileid: "73882143"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
      삭제가 올바르게 전파되도록 보장하려면 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 구독자에서 keep_partition_changes를 true로 설정해야 합니다. false로 설정한 경우 구독자에 예상한 것보다 많은 행이 포함될 수 있습니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 설정을 사용하여 매개 변수가 있는 행 필터를 최적화할 수 있습니다.  
   
  **Partition Options**  
- **아티클 속성 -** Article> **대화 상자 또는 \<필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대한 추가 값을 지정할 수 있습니다.  
+ **아티클 속성 - \<Article>** 대화 상자 또는 **필터 추가** 대화 상자의 **속성** 페이지에서 이 옵션을 설정합니다. 두 대화 상자는 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. **아티클 속성 - \<Article>** 대화 상자에서는 **필터 추가** 대화 상자에서 사용할 수 없는 이 옵션에 대한 추가 값을 지정할 수 있습니다.  
   
  **파티션 미리 계산**  
- 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 이 옵션을 수정합니다.  
+ 게시의 아티클이 일련의 요구 사항을 충족하는 경우 이 옵션은 기본적으로 **True** 로 설정됩니다. 이러한 요구 사항에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 수정합니다.  
   
  **동기화 최적화**  
- **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 이 옵션을 설정합니다.  
+ **파티션 미리 계산** 이 **False** 로 설정된 경우에만 이 옵션을 **True**로 설정해야 합니다. **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 이 옵션을 설정합니다.  
   
  새 게시 마법사 사용 및 **게시 속성 - \<게시>** 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-set-partition-options-in-the-add-filter-or-edit-filter-dialog-box"></a>필터 추가 또는 필터 편집 대화 상자에서 파티션 옵션을 설정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
 2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "73882143"
   
 2.  **선택한 테이블 아티클 속성 설정** 또는 **모든 테이블 아티클 속성 설정**을 클릭합니다.  
   
-3.  **아티클 속성 -** Article>**대화 상자의**속성 **탭에 있는 \<대상 개체** 섹션에서 **파티션 옵션**에 대해 다음 값 중 하나를 지정합니다.  
+3.  **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에 있는 **대상 개체** 섹션에서 **파티션 옵션**에 대해 다음 값 중 하나를 지정합니다.  
   
     -   **겹침**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "73882143"
   
 #### <a name="to-set-precompute-partitions"></a>파티션 미리 계산을 설정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **파티션 사전 계산** 옵션의 값을 선택합니다. 다음과 같은 경우 이 속성은 읽기 전용입니다.  
   
     -   게시가 사전 계산 파티션의 요구 사항을 충족시키지 못합니다.  
   
@@ -111,12 +111,11 @@ ms.locfileid: "73882143"
   
 #### <a name="to-set-optimize-synchronization"></a>동기화 최적화를 설정하려면  
   
-1.  
-  **게시 속성 - **게시>** 대화 상자의 \<구독 옵션** 페이지에서 **동기화 최적화**에 대해 **True** 값을 선택합니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **구독 옵션** 페이지에서 **동기화 최적화**에 대해 **True** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  ** \@Keep_partition_changes** 및 ** \@use_partition_groups**에 대 한 필터링 옵션의 정의는 [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)를 참조 하세요.  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>새 게시를 만들 때 병합 필터 최적화를 지정하려면  

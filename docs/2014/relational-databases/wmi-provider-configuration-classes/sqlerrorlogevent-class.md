@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 558e60a5638ab3af75c5450e3f6fc22c6f9d9601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721072"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent 클래스
@@ -42,11 +42,11 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|데이터 형식:`string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
-|InstanceName|데이터 형식:`string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
-|LogDate|데이터 형식:`datetime`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
-|메시지|데이터 형식:`string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
-|ProcessInfo|데이터 형식:`string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
+|FileName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 오류 로그 파일의 이름입니다.|  
+|InstanceName|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> 로그 파일이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  
+|LogDate|데이터 형식: `datetime`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> 한정자: Key<br /><br /> <br /><br /> 이벤트가 로그 파일에 기록된 날짜와 시간입니다.|  
+|메시지|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트 메시지입니다.|  
+|ProcessInfo|데이터 형식: `string`<br /><br /> 액세스 형식: 읽기 전용<br /><br /> <br /><br /> 이벤트의 SPID(원본 서버 프로세스 ID)에 대한 정보입니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -77,7 +77,7 @@ WScript.Echo "Instance Name: " & logEvent.InstanceName & vbNewLine _
 Next  
 ```  
   
-## <a name="comments"></a>주석  
+## <a name="comments"></a>설명  
  *InstanceName* 또는 *FileName* 이 WQL 문에 제공 되지 않은 경우 쿼리는 기본 인스턴스와 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일에 대 한 정보를 반환 합니다. 예를 들어 다음 WQL 문은 기본 인스턴스(MSSQLSERVER)의 현재 로그 파일(ERRORLOG)에서 모든 로그 이벤트를 반환합니다.  
   
 ```  

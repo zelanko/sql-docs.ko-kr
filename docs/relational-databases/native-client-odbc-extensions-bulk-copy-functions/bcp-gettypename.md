@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782650"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -56,8 +56,8 @@ RETCODE bcp_gettypename (
   
 |BCP 유형 이름|MaxType|출력|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|여기서는|**진수가**|  
-|**SQLNUMERIC**|여기서는|**번호**|  
+|**SQLDECIMAL**|여기서는|**decimal**|  
+|**SQLNUMERIC**|여기서는|**numeric**|  
 |**SQLINT1**|여기서는|**tinyint**|  
 |**SQLINT2**|여기서는|**smallint**|  
 |**SQLINT4**|여기서는|**int**|  
@@ -66,45 +66,45 @@ RETCODE bcp_gettypename (
 |**SQLDATETIME**|여기서는|**datetime**|  
 |**SQLBITN**|여기서는|**bit-null**|  
 |**SQLBIT**|여기서는|**bit**|  
-|**SQLBIGCHAR**|예|**char**|  
-|**SQLCHARACTER**|예|**char**|  
-|**SQLBIGVARCHAR**|예|**varchar**|  
-|**SQLVARCHAR**|예|**varchar**|  
+|**SQLBIGCHAR**|아니요|**char**|  
+|**SQLCHARACTER**|아니요|**char**|  
+|**SQLBIGVARCHAR**|아니요|**varchar**|  
+|**SQLVARCHAR**|아니요|**varchar**|  
 |**SQLTEXT**|여기서는|**text**|  
-|**SQLBIGBINARY**|예|**binary**|  
-|**SQLBINARY**|예|**바이너리**|  
-|**SQLBIGVARBINARY**|예|**Varbinary**|  
-|**SQLVARBINARY**|예|**Varbinary**|  
-|**SQLIMAGE**|여기서는|**이미지로**|  
+|**SQLBIGBINARY**|아니요|**binary**|  
+|**SQLBINARY**|아니요|**바이너리**|  
+|**SQLBIGVARBINARY**|아니요|**Varbinary**|  
+|**SQLVARBINARY**|아니요|**Varbinary**|  
+|**SQLIMAGE**|여기서는|**이미지**|  
 |**SQLINTN**|여기서는|**int-null**|  
 |**SQLDATETIMN**|여기서는|**datetime-null**|  
 |**SQLMONEYN**|여기서는|**money-null**|  
 |**SQLFLTN**|여기서는|**float-null**|  
 |**SQLAOPSUM**|여기서는|**총합**|  
 |**SQLAOPAVG**|여기서는|**매출**|  
-|**SQLAOPCNT**|여기서는|**수**|  
+|**SQLAOPCNT**|여기서는|**Count**|  
 |**SQLAOPMIN**|여기서는|**일별**|  
 |**SQLAOPMAX**|여기서는|**최대값**|  
 |**SQLDATETIM4**|여기서는|**smalldatetime**|  
 |**SQLMONEY4**|여기서는|**Smallmoney**|  
 |**SQLFLT4**|여기서는|**실제로**|  
 |**SQLUNIQUEID**|여기서는|**uniqueidentifier**|  
-|**SQLNCHAR**|예|**Nchar**|  
-|**SQLNVARCHAR**|예|**Varchar**|  
+|**SQLNCHAR**|아니요|**Nchar**|  
+|**SQLNVARCHAR**|아니요|**Varchar**|  
 |**SQLNTEXT**|여기서는|**N**|  
 |**SQLVARIANT**|여기서는|**sql_variant**|  
 |**SQLINT8**|여기서는|**Bigint**|  
-|**SQLCHARACTER**|yes|**varchar(max)**|  
-|**SQLBIGCHAR**|yes|**varchar(max)**|  
-|**SQLBIGVARCHAR**|yes|**varchar(max)**|  
-|**SQLVARCHAR**|yes|**varchar(max)**|  
-|**SQLBINARY**|yes|**varbinary(max)**|  
-|**SQLBIGBINARY**|yes|**varbinary(max)**|  
-|**SQLBIGVARBINARY**|yes|**varbinary(max)**|  
-|**SQLVARBINARY**|yes|**varbinary(max)**|  
-|**SQLNCHAR**|yes|**nvarchar(max)**|  
-|**SQLNVARCHAR**|yes|**nvarchar(max)**|  
-|**SQLXML**|yes|**Xml**|  
+|**SQLCHARACTER**|예|**varchar(max)**|  
+|**SQLBIGCHAR**|예|**varchar(max)**|  
+|**SQLBIGVARCHAR**|예|**varchar(max)**|  
+|**SQLVARCHAR**|예|**varchar(max)**|  
+|**SQLBINARY**|예|**varbinary(max)**|  
+|**SQLBIGBINARY**|예|**varbinary(max)**|  
+|**SQLBIGVARBINARY**|예|**varbinary(max)**|  
+|**SQLVARBINARY**|예|**varbinary(max)**|  
+|**SQLNCHAR**|예|**nvarchar(max)**|  
+|**SQLNVARCHAR**|예|**nvarchar(max)**|  
+|**SQLXML**|예|**Xml**|  
 |**SQLUDT**|여기서는|**Udt**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 bcp_gettypename 지원  

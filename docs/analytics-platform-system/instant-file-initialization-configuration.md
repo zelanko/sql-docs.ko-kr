@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401110"
 ---
 # <a name="instant-file-initialization-configuration"></a>즉시 파일 초기화 구성
@@ -33,11 +33,9 @@ TDE를 사용하도록 설정되어 있으면 즉시 파일 초기화를 사용�
   
 3.  오른쪽 창에서 **볼륨 유지 관리 작업 수행**을 두 번 클릭합니다.  
   
-4.  
-  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
+4.  **사용자 또는 그룹 추가** 를 클릭하고 백업에 사용되는 사용자 계정을 추가합니다.  
   
-5.  
-  **적용**을 클릭한 다음 모든 **로컬 보안 정책** 대화 상자를 닫습니다.  
+5.  **적용**을 클릭한 다음 모든 **로컬 보안 정책** 대화 상자를 닫습니다.  
   
 ## <a name="to-turn-instant-file-initialization-on-or-off"></a>즉시 파일 초기화를 설정 하거나 해제 하려면  
   

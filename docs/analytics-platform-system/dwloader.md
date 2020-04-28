@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401173"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 dwloader 명령줄 로더
@@ -138,7 +138,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 매개 변수 파일에는 한 줄에 **-** 접두사 없이 하나의 매개 변수가 포함 되어 있습니다.  
   
-예제:  
+예:  
   
 `rt=percentage`  
   
@@ -157,7 +157,7 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name입니다.* [*schema*]. *table_name*  
+**-T** *target_database_name.* [ *schema*].*table_name*  
 대상 테이블의 세 부분으로 구성 된 이름입니다.  
   
 **-I** *source_data_location*  
@@ -193,7 +193,7 @@ For more information about this install option, see [Install dwloader Command-Li
   
 -   모든 파일은 하나의 파일 처럼 연결 되 고 로드 되며 거부 된 행은 단일 거부 파일로 이동 합니다.  
   
-예제:  
+예:  
   
 -   -i \\\loadserver\loads\daily\\*. release.tar.gz  
   
@@ -222,7 +222,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
 **-t** *field_delimiter*  
 행의 각 필드 (열)에 대 한 구분 기호입니다. 필드 구분 기호는 이러한 ASCII 이스케이프 문자 또는 ASCII 16 진수 값 중 하나 이상입니다.  
   
-|속성|Escape Character|16 진수 문자|  
+|Name|이스케이프 문자|16 진수 문자|  
 |--------|--------------------|-----------------|  
 |탭|\t|0x09|  
 |CR (캐리지 리턴)|\r|0x0d|  
@@ -234,7 +234,7 @@ ASCII 파일의 경우에는 구분 기호를 연속으로 배치 하 여 Null�
   
 명령줄에서 파이프 문자를 지정 하려면 큰따옴표 ("|")로 묶습니다. 이렇게 하면 명령줄 파서에서 잘못 해석 하지 않습니다. 다른 문자는 작은따옴표로 묶여 있습니다.  
   
-예제:  
+예:  
   
 -t "|"  
   
@@ -274,7 +274,7 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 **-s** *string_delimiter*  
 텍스트 구분 입력 파일의 문자열 데이터 형식 필드에 대 한 구분 기호입니다. 문자열 구분 기호는 하나 이상의 ASCII 값입니다.  문자 (예:-s *) 또는 16 진수 값으로 지정할 수 있습니다 (예: 큰따옴표의 경우-s 0x22).  
   
-예제:  
+예:  
   
 삭제  
   
@@ -344,7 +344,7 @@ Unix에는 LF가 필요 합니다. Windows에는 CR이 필요 합니다.
 입력 파일의 모든 날짜/시간 필드에 대 한 월 (m), 일 (d) 및 연도 (y)의 순서를 지정 합니다. 기본 순서는 ymd입니다. 동일한 원본 파일에 대해 여러 주문 형식을 지정 하려면-dt 옵션을 사용 합니다.  
   
 ymd | dmy  
-ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate **** 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
+ydm 및 amy는 동일한 입력 형식을 허용 합니다. 모두 날짜의 시작 또는 끝에 연도를 사용할 수 있습니다. 예를 들어 **ydm** 및 adate **dmy** 형식의 경우 입력 파일에 2013-02-03 또는 02-03-2013이 있을 수 있습니다.  
   
 ydm  
 Datetime 및 smalldatetime 데이터 형식의 열에는 ydm 형식의 입력만 로드할 수 있습니다. 데이터 형식의 datetime2, date 또는 datetimeoffset 열에 ydm 값을 로드할 수 없습니다.  
@@ -380,7 +380,7 @@ dym
   
 각 줄에는 대상 테이블의 열 이름과 해당 날짜/시간 형식이 포함 됩니다.  
   
-예제:  
+예:  
   
 `LastReceiptDate=ymd`  
   
@@ -419,7 +419,7 @@ Microsoft 지원에서 사용 하는 경우에만 사용 하는 것이 좋습니
   
 SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한 일괄 처리 크기를 동적으로 계산 합니다. 이 자동 계산은 메모리 크기, 대상 테이블 형식, 대상 테이블 스키마, 로드 형식, 파일 크기 및 사용자의 리소스 클래스와 같은 여러 매개 변수를 기반으로 합니다.  
   
-예를 들어 로드 모드가 FASTAPPEND이 고 테이블에 클러스터형 columnstore SQL Server PDW 인덱스가 있는 경우에는 기본적으로 일괄 처리 크기 1048576를 사용 하 여 행 그룹이 닫히고 columnstore로 직접 로드 됩니다. 델타 저장소. 메모리에서 1048576의 일괄 처리 크기를 허용 하지 않는 경우 dwloader는 더 작은 batchsize를 선택 합니다.  
+예를 들어 로드 모드가 FASTAPPEND이 고 테이블에 클러스터형 columnstore SQL Server PDW 인덱스가 있는 경우에는 기본적으로 일괄 처리 크기 1048576를 사용 하 여 행 그룹을 닫고 델타 저장소를 통하지 않고 columnstore에 직접 로드 하 게 됩니다. 메모리에서 1048576의 일괄 처리 크기를 허용 하지 않는 경우 dwloader는 더 작은 batchsize를 선택 합니다.  
   
 로드 유형이 FASTAPPEND 이면 *batchsize* 가 테이블에 데이터를 로드 하는 데 적용 됩니다. 그렇지 않으면 *batchsize* 가 준비 테이블에 데이터를 로드 하는 데 적용 됩니다.  
   
@@ -448,7 +448,7 @@ SQL Server 2012 PDW부터 제어 노드는 기본적으로 각 로드에 대 한
 **-c**  
 Char, nchar, varchar 및 nvarchar 필드의 왼쪽과 오른쪽에서 공백 문자를 제거 합니다. 공백 문자만 포함 하는 각 필드를 빈 문자열로 변환 합니다.  
   
-예제:  
+예:  
   
 ' '이 ' ' (으)로 잘렸습니다.  
   
@@ -490,7 +490,7 @@ CU 7.4 update에서 사용할 수 있으며 로드할 수 있는 최대 행 길�
 ## <a name="return-code-values"></a>반환 코드 값  
 0 (성공) 또는 기타 정수 값 (오류)  
   
-명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 다음은 그 예입니다.  
+명령 창이 나 배치 파일에서를 사용 `errorlevel` 하 여 반환 코드를 표시 합니다. 예를 들면 다음과 같습니다.  
   
 ```  
 dwloader  
@@ -554,14 +554,14 @@ For the maximum number of loads per appliance, see [Minimum and Maximum Values](
   
 |테이블 형식|다중 트랜잭션<br />모드 (-m)|테이블이 비어 있음|동시성이 지원 됨|로깅|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|힙|yes|yes|yes|최소|  
-|힙|yes|예|yes|최소|  
-|힙|예|yes|예|최소|  
 |힙|예|예|예|최소|  
-|Cl.exe|yes|yes|예|최소|  
-|Cl.exe|yes|예|yes|전체|  
-|Cl.exe|예|yes|예|최소|  
-|Cl.exe|예|예|yes|전체|  
+|힙|예|예|예|최소|  
+|힙|예|예|아니요|최소|  
+|힙|아니요|아니요|아니요|최소|  
+|Cl.exe|예|예|아니요|최소|  
+|Cl.exe|예|예|예|전체|  
+|Cl.exe|예|예|아니요|최소|  
+|Cl.exe|아니요|예|예|전체|  
   
 위의 표에서는 추가 모드를 힙 또는 CI (클러스터형 인덱스) 테이블로 로드 하 여 다중 트랜잭션 플래그를 사용 하거나 사용 하지 않고 빈 테이블이 나 비어 있지 않은 테이블에 로드 하는 **dwloader** 를 보여 줍니다. 이러한 각 부하 조합의 잠금 및 로깅 동작이 표에 표시 됩니다. 예를 들어, 추가 모드를 사용 하 여 다중 트랜잭션 모드를 사용 하지 않는 클러스터형 인덱스에 추가 모드를 로드 하 고 빈 테이블로 로드 하는 경우 PDW는 테이블에 대 한 배타적 잠금을 만들고 로깅은 최소화 합니다. 즉, 고객은 두 번째 단계와 쿼리를 빈 테이블로 동시에 로드할 수 없습니다. 그러나 동일한 구성을 사용 하 여 비어 있지 않은 테이블에 로드 하는 경우 PDW는 테이블에 대해 배타 잠금을 실행 하지 않으며 동시성이 가능 합니다. 그러나 전체 로깅이 발생 하 여 프로세스가 느려집니다.  
   

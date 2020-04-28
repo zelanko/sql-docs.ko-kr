@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095342"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>데이터베이스 및 트랜잭션 로그 백업 및 복원
@@ -34,8 +34,7 @@ ms.locfileid: "74095342"
   
  데이터 손실이나 손상이 발생하면 완전히 또는 부분적으로 백업을 복원해야 합니다. 부분 복원에서는 복원할 데이터를 분할하기 위해 <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> 컬렉션을 사용합니다. 백업에 트랜잭션 로그가 있으면 <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Restore> 속성을 사용하여 특정 시점까지 데이터를 복원할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A> 메서드를 사용하여 데이터의 유효성을 확인할 수 있습니다. 권장되는 백업 절차는, 복원 작업을 수행하고 정기적으로 데이터베이스의 데이터를 검사하여 백업 무결성을 확인하는 것입니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체와 마찬가지로 개체는 <xref:Microsoft.SqlServer.Management.Smo.Restore> 인스턴스에서 개체를 나타내지 않으므로 **Create** 메서드를 사용 하 여 만들 필요가 없습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 
-  <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체는 데이터베이스 복원에 사용되는 일련의 속성과 메서드입니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Backup> 개체와 마찬가지로 개체는 <xref:Microsoft.SqlServer.Management.Smo.Restore> 인스턴스에서 개체를 나타내지 않으므로 **Create** 메서드를 사용 하 여 만들 필요가 없습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. <xref:Microsoft.SqlServer.Management.Smo.Restore> 개체는 데이터베이스 복원에 사용되는 일련의 속성과 메서드입니다.  
   
 ## <a name="examples"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
@@ -451,12 +450,10 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Visual Basic에서 데이터베이스 무결성 검사 실행  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
+>  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -483,12 +480,10 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Visual C#에서 데이터베이스 무결성 검사 실행  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
+>  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
   
 ```  
 using Microsoft.SqlServer.Management.Common;  
@@ -517,12 +512,10 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>PowerShell에서 데이터베이스 무결성 검사 실행  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 무결성 검사를 제공합니다. 이 코드 예제는 지정된 데이터베이스에서 데이터베이스 일관성 형식 검사를 실행합니다. 이 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A>가 사용되지만 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> 또는 <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A>를 같은 방식으로 사용할 수 있습니다.  
   
 > [!NOTE]  
->  
-  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
+>  <xref:System.Collections.Specialized.StringCollection> 개체에는 `imports System.Collections.Specialized` 문을 사용하여 네임스페이스에 대한 참조를 추가해야 합니다.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

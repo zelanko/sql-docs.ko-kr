@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727589"
 ---
 # <a name="managing-caches-xmla"></a>캐시 관리(XMLA)
@@ -34,7 +34,7 @@ ms.locfileid: "62727589"
  차원  
  지정된 차원에 대한 캐시를 지웁니다.  
   
- Perspective  
+ Cube  
  큐브의 측정값 그룹에 포함된 모든 파티션에 대한 캐시를 지웁니다.  
   
  측정값 그룹  

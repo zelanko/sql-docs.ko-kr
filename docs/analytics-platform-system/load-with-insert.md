@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401027"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스로 INSERT into를 사용 하 여 데이터 로드
@@ -21,14 +21,14 @@ ms.locfileid: "74401027"
 Tsql INSERT 문을 사용 하 여 데이터를 PDW (병렬 데이터 웨어하우스) 분산 또는 복제 된 테이블로 SQL Server 로드할 수 있습니다. 삽입에 대 한 자세한 내용은 [insert](../t-sql/statements/insert-transact-sql.md)를 참조 하세요. 분산 테이블의 복제 된 테이블과 모든 비 배포 열의 경우 PDW는 SQL Server을 사용 하 여 문에 지정 된 데이터 값을 대상 열의 데이터 형식으로 암시적으로 변환 합니다. SQL Server 데이터 변환 규칙에 대 한 자세한 내용은 [SQL의 데이터 형식 변환](../t-sql/data-types/data-type-conversion-database-engine.md)을 참조 하세요. 그러나 배포 열의 경우 PDW는 SQL Server에서 지 원하는 암시적 변환의 하위 집합만 지원 합니다. 따라서 INSERT 문을 사용 하 여 데이터를 배포 열로 로드 하는 경우 원본 데이터는 다음 표에 정의 된 형식 중 하나로 지정 해야 합니다.  
   
   
-## <a name="InsertingLiteralsBinary"></a>이진 형식에 리터럴 삽입  
+## <a name="insert-literals-into-binary-types"></a><a name="InsertingLiteralsBinary"></a>이진 형식에 리터럴 삽입  
 다음 표에서는 **binary** (*n*) 또는 **varbinary**(*n*) 형식의 배포 열에 리터럴 값을 삽입 하기 위한 허용 되는 리터럴 형식, 형식 및 변환 규칙을 정의 합니다.  
   
 |리터럴 형식|형식|변환 규칙|  
 |----------------|----------|--------------------|  
 |이진 리터럴|0x*hexidecimal_string*<br /><br />예: 0x12Ef|이진 리터럴에는 0x 접두사가와 야 합니다.<br /><br />데이터 원본 길이가 데이터 형식에 대해 지정 된 바이트 수를 초과할 수 없습니다.<br /><br />데이터 원본 길이가 **이진** 데이터 형식의 크기 보다 작은 경우 데이터를 데이터 형식 크기에 도달 하는 0으로 오른쪽으로 채웁니다.|  
   
-## <a name="InsertingLiteralsDateTime"></a>날짜 및 시간 형식에 리터럴 삽입  
+## <a name="insert-literals-into-date-and-time-types"></a><a name="InsertingLiteralsDateTime"></a>날짜 및 시간 형식에 리터럴 삽입  
 날짜 및 시간 리터럴은 작은따옴표로 묶인 특정 형식의 문자 값을 사용 하 여 표시 됩니다. 다음 표에서는 날짜 또는 시간 리터럴을 **datetime**, **smalldatetime**, **date**, **time**, **datetimeoffset**또는 **datetime2**형식의 SQL Server PDW 분포 열에 삽입 하는 데 사용할 수 있는 리터럴 형식, 형식 및 변환 규칙을 정의 합니다.  
   
 ### <a name="datetime-data-type"></a>datetime 데이터 형식  
@@ -84,7 +84,7 @@ Tsql INSERT 문을 사용 하 여 데이터를 PDW (병렬 데이터 웨어하�
 |**날짜** 형식의 문자열 리터럴|' YYYY-MM-DD '<br /><br />예: ' 2007-05-08 '|값이 삽입 될 때 시간 값 (시, 분, 초 및 소수 자릿수)은 0으로 설정 됩니다. 예를 들어 ' 2007-05-08 ' 리터럴은 ' 2007-05-08 12:00:00.0000000 '로 삽입 됩니다.|  
 |**Datetime2** 형식의 문자열 리터럴|' YYYY-MM-DD hh: MM: ss: nnnnnnn '<br /><br />예: ' 2007-05-08 12:35:29.1234567 '|데이터 원본에 **datetime2**(*n*)에 지정 된 값 보다 작거나 같은 데이터 및 시간 구성 요소가 포함 된 경우 데이터가 삽입 됩니다. 그렇지 않으면 오류가 생성 됩니다.|  
   
-## <a name="InsertLiteralsNumeric"></a>숫자 형식에 리터럴 삽입  
+## <a name="insert-literals-into-numeric-types"></a><a name="InsertLiteralsNumeric"></a>숫자 형식에 리터럴 삽입  
 다음 표에서는 숫자 유형을 사용 하는 SQL Server PDW 분포 열에 리터럴 값을 삽입 하기 위한 허용 되는 형식 및 변환 규칙을 정의 합니다.  
   
 ### <a name="bit-data-type"></a>bit 데이터 형식  
@@ -140,7 +140,7 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호를 접두사로 사
 |10 진 리터럴|nnnnnn. nnnnn<br /><br />예: 123344.34455|소수점이 하 자릿수가 4를 초과 하는 경우 값은 가장 가까운 값으로 반올림 됩니다. 예를 들어 값 123344.34455는 123344.3446으로 삽입 됩니다.|  
 |Money 리터럴|$nnnnnn. nnnn<br /><br />예: $123456.7890|선택적 통화 기호는 값으로 삽입 되지 않습니다.<br /><br />소수점이 하 자릿수가 4를 초과 하는 경우 값은 가장 가까운 값으로 반올림 됩니다.|  
   
-## <a name="InsertLiteralsString"></a>문자열 형식에 리터럴 삽입  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertLiteralsString"></a>문자열 형식에 리터럴 삽입  
 다음 표에서는 문자열 형식을 사용 하는 SQL Server PDW 열에 리터럴 값을 삽입 하기 위한 허용 되는 형식 및 변환 규칙을 정의 합니다.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>char, varchar, nchar 및 nvarchar 데이터 형식  
@@ -157,7 +157,7 @@ Money 리터럴 값은 선택적 소수점 및 통화 기호를 접두사로 사
   
 ## <a name="see-also"></a>참고 항목  
  
-[분산 데이터](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
+[분선 데이터](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS

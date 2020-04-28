@@ -16,17 +16,16 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3c84d15087c3cb6bb63380bc6cf0c75e773b883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055213"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  지정 된 게시에 대해 지연 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 구독 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 대 한 큐 또는 메시지 큐의 큐 메시지를 나열 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐를 사용하는 경우 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. Message Queuing을 사용하는 경우 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
+  지정 된 게시에 대해 지연 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 구독 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 대 한 큐 또는 메시지 큐의 큐 메시지를 나열 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐를 사용하는 경우 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다. Message Queuing을 사용하는 경우 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +55,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|모든 유형의 큐입니다.|  
 |**1**|메시지 큐|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]큐|  
+|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

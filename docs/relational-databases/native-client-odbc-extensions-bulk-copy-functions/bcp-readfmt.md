@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782521"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
@@ -52,8 +52,7 @@ RETCODE bcp_readfmt (
 ## <a name="remarks"></a>설명  
  **Bcp_readfmt** 형식 값을 읽은 후 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 및 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)에 대 한 적절 한 호출을 수행 합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
   
- 형식 파일을 저장하려면 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)를 호출합니다. 
-  **bcp_readfmt** 를 호출할 때 저장된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
+ 형식 파일을 저장하려면 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)를 호출합니다. **bcp_readfmt** 를 호출할 때 저장된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
   
  또는 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **bcp_readfmt**로 참조할 수 있는 파일에 저장할 수 있습니다. **Bcp 유틸리티와** **bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
   

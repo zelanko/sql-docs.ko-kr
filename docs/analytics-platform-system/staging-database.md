@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400279"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>PDW (병렬 데이터 웨어하우스)에서 준비 데이터베이스 사용
 SQL Server PDW (병렬 데이터 웨어하우스)는 준비 데이터베이스를 사용 하 여 로드 프로세스 중에 데이터를 일시적으로 저장 합니다. 기본적으로 SQL Server PDW는 대상 데이터베이스를 준비 데이터베이스로 사용 하 여 테이블 조각화를 발생 시킬 수 있습니다. 테이블 조각화를 줄이기 위해 사용자 정의 준비 데이터베이스를 만들 수 있습니다. 또는 로드 오류에서 롤백하는 것이 중요 하지 않은 경우에는 fastappend 로드 모드를 사용 하 여 임시 테이블을 건너뛰고 대상 테이블에 직접 로드 하 여 성능을 향상 시킬 수 있습니다.  
   
-## <a name="StagingDatabase"></a>준비 데이터베이스 기본 사항  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>준비 데이터베이스 기본 사항  
 *준비 데이터베이스* 는 데이터를 어플라이언스로 로드 하는 동안 일시적으로 저장 하는 사용자가 만든 PDW 데이터베이스입니다. 준비 데이터베이스를 로드 하도록 지정 하면 어플라이언스는 먼저 데이터를 준비 데이터베이스로 복사한 다음 준비 데이터베이스의 임시 테이블에서 대상 데이터베이스의 영구 테이블로 데이터를 복사 합니다.  
   
 준비 데이터베이스가 로드에 대해 지정 되지 않은 경우 SQL ServerPDW는 대상 데이터베이스에 임시 테이블을 만들고이를 사용 하 여 로드 된 데이터를 저장 한 후에 로드 된 데이터를 영구 대상 테이블에 삽입 합니다.  
@@ -38,7 +38,7 @@ SQL Server PDW (병렬 데이터 웨어하우스)는 준비 데이터베이스�
   
 -   Rowstore 클러스터형 인덱스에 대 한 로드의 경우 준비 테이블은 rowstore 클러스터형 인덱스입니다.  
   
-## <a name="Permissions"></a>권한  
+## <a name="permissions"></a><a name="Permissions"></a>권한에  
 준비 데이터베이스에 대 한 CREATE 권한 (임시 테이블을 만드는 경우)이 필요 합니다. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>준비 데이터베이스를 만드는 방법에 대 한 모범 사례  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>준비 데이터베이스를 만드는 방법에 대 한 모범 사례  
   
 1.  어플라이언스 당 하나의 준비 데이터베이스만 있어야 합니다. 모든 대상 데이터베이스에 대 한 모든 로드 작업에서 준비 데이터베이스를 공유할 수 있습니다.  
   
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   로그 크기는 일반적으로 복제 된 테이블 크기와 비슷합니다.  
   
-## <a name="Examples"></a>예  
+## <a name="examples"></a><a name="Examples"></a>예  
   
 ### <a name="a-create-a-staging-database"></a>A. 준비 데이터베이스 만들기 
 다음 예에서는 어플라이언스의 모든 로드에 사용할 준비 데이터베이스 Stagedb를 만듭니다. 크기가 5 GB 인 복제 된 테이블 5 개가 각각 동시에 로드 되는 것을 예상 합니다. 이 동시성으로 인해 복제 된 크기에 대해 최소 25gb가 할당 됩니다. 100, 200, 400, 500, 500 및 550 GB 크기의 분산 된 테이블이 동시에 로드 되는 것을 예상 하 고 있다고 가정 합니다. 이 동시성으로 인해 분산 테이블 크기에 대해 2250 GB 이상이 할당 됩니다.  

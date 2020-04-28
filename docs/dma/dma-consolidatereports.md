@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056656"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
@@ -64,7 +64,7 @@ Powershell 모듈을 PowerShell 모듈 디렉터리에 저장 하면 사용 하�
 
     이제 PowerShell은 새 PowerShell 세션이 시작 될 때 이러한 모듈을 자동으로 로드 해야 합니다.
 
-## <a name="create-inventory"></a>SQL Server 인벤토리 만들기
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>SQL Server 인벤토리 만들기
 
 PowerShell 스크립트를 실행 하 여 SQL Server를 평가 하기 전에 평가 하려는 SQL Server의 인벤토리를 작성 해야 합니다.
 
@@ -117,7 +117,7 @@ DmaDataCollector 함수와 연결 된 매개 변수는 다음 표에 설명 되�
 |---------|---------|
 |**getServerListFrom** | 사용자의 인벤토리에 있습니다. 가능한 값은 **SqlServer** 및 **CSV**입니다.<br/>자세한 내용은 [SQL server 인벤토리 만들기](#create-inventory)를 참조 하세요. |
 |**csvPath** | CSV 인벤토리 파일의 경로입니다.  **Getserverlistfrom** 이 **CSV**로 설정 된 경우에만 사용 됩니다. |
-|**serverName** | **Getserverlistfrom** 매개 변수에서 **SqlServer** 를 사용 하는 경우 인벤토리의 SQL Server 인스턴스 이름입니다. |
+|**서버** | **Getserverlistfrom** 매개 변수에서 **SqlServer** 를 사용 하는 경우 인벤토리의 SQL Server 인스턴스 이름입니다. |
 |**databaseName** | 인벤토리 테이블을 호스트 하는 데이터베이스입니다. |
 |**AssessmentName** | DMA 평가의 이름입니다. |
 |**TargetPlatform** | 수행 하려는 평가 대상 유형입니다.  가능한 값은 **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **Sqlserver2016-ssei-expr**, **SQLServerLinux2017**, **SQLServerWindows2017**및 **managedsqlserver**입니다. |
@@ -139,7 +139,7 @@ DmaProcessor 함수와 연결 된 매개 변수는 다음 표에 설명 되어 �
 |매개 변수  |Description |
 |---------|---------|
 |**processTo** | JSON 파일을 처리 하는 위치입니다. 가능한 값은 **SQLServer** 및 **AzureSQLDatabase**입니다. |
-|**serverName** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
+|**서버** | 데이터가 처리 될 SQL Server 인스턴스입니다.  **Processto** 매개 변수에 대해 **AzureSQLDatabase** 를 지정 하는 경우 SQL Server 이름만 포함 합니다 (database.windows.net는 포함 하지 않음). Azure SQL Database를 대상으로 지정 하는 경우 두 개의 로그인을 묻는 메시지가 표시 됩니다. 첫 번째는 Azure 테 넌 트 자격 증명 이며, 두 번째는 Azure SQL Server에 대 한 관리자 로그인입니다. |
 |**CreateDMAReporting** | JSON 파일을 처리 하기 위해 만들 준비 데이터베이스입니다.  지정한 데이터베이스가 이미 존재 하 고이 매개 변수를 1로 설정 하면 개체가 생성 되지 않습니다.  이 매개 변수는 삭제 된 단일 개체를 다시 만드는 데 유용 합니다. |
 |**CreateDataWarehouse** | Power BI 보고서에서 사용할 데이터 웨어하우스를 만듭니다. |
 |**databaseName** | DMAReporting 데이터베이스의 이름입니다. |

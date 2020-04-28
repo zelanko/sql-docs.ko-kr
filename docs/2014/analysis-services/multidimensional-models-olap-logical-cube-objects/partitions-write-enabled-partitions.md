@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727177"
 ---
 # <a name="write-enabled-partitions"></a>쓰기 가능 파티션
@@ -40,7 +40,7 @@ ms.locfileid: "62727177"
  리프 셀과 리프가 아닌 셀에 대한 변경 내용은 다르게 처리됩니다. 리프 셀은 측정값 그룹에서 참조하는 모든 차원의 측정값과 리프 멤버와의 교집합을 나타냅니다. 리프 셀의 값은 팩트 테이블에서 직접 가져오며 드릴다운으로 더 나눌 수 없습니다. 큐브나 파티션이 쓰기 가능이면 리프 셀을 변경할 수 있습니다. 리프가 아닌 셀은 리프가 아닌 셀을 구성하는 리프 셀 간에 변경 내용을 배포할 수 있는 방법을 클라이언트 애플리케이션에서 제공하는 경우에만 변경할 수 있습니다. 이러한 프로세스를 할당이라고 하며 MDX(Multidimensional Expressions)의 UPDATE CUBE 문을 통해 관리합니다. 비즈니스 인텔리전스 개발자는 UPDATE CUBE 문을 사용하여 할당 기능을 포함시킬 수 있습니다. 자세한 내용은 [UPDATE CUBE Statement &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-update-cube)를 참조 하세요.  
   
 > [!IMPORTANT]  
->  업데이트된 셀이 겹치지 않을 경우 `Update Isolation Level` 연결 문자열 속성을 사용하여 UPDATE CUBE의 성능을 향상시킬 수 있습니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>을 참조하세요.  
+>  업데이트된 셀이 겹치지 않을 경우 `Update Isolation Level` 연결 문자열 속성을 사용하여 UPDATE CUBE의 성능을 향상시킬 수 있습니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>를 참조하세요.  
   
  클라이언트 애플리케이션에서 리프가 아닌 셀에 변경 내용을 배포하는지 여부에 관계없이 쿼리를 평가할 때마다 쓰기 저장 테이블의 변경 내용이 리프 셀은 물론 리프가 아닌 셀에도 적용되므로 비즈니스 사용자가 큐브 전체에서 변경 결과를 볼 수 있습니다.  
   

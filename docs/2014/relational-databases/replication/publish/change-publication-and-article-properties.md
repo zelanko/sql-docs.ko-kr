@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882342"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
@@ -36,7 +36,7 @@ ms.locfileid: "73882342"
 |스냅샷 압축을 변경합니다.|**sp_changepublication**|**compress_snapshot**|새 스냅샷|  
 |모든 FTP(파일 전송 프로토콜) 스냅샷 옵션을 변경합니다.|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|새 스냅샷|  
 |프리 스냅샷 스크립트 또는 포스트 스냅샷 스크립트의 위치를 변경합니다.|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|새 스냅샷(스크립트 내용을 변경한 경우에도 필요)<br /><br /> 구독자에 새 스크립트를 적용하기 위해 재초기화가 필요합니다.|  
-|이외[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대 한 지원을 활성화 하거나 비활성화 합니다.|**sp_changepublication**|**is_enabled_for_het_sub**|새 스냅샷|  
+|비-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대한 지원을 설정 또는 해제합니다.|**sp_changepublication**|**is_enabled_for_het_sub**|새 스냅샷|  
 |지연 업데이트 구독에 대한 충돌 보고를 변경합니다.|**sp_changepublication**|**centralized_conflicts**|활성 구독이 없을 때만 변경될 수 있습니다.|  
 |지연 업데이트 구독에 대한 충돌 해결 정책을 변경합니다.|**sp_changepublication**|**conflict_policy**|활성 구독이 없을 때만 변경될 수 있습니다.|  
   
@@ -52,11 +52,11 @@ ms.locfileid: "73882342"
 |행 필터를 변경합니다.|**sp_changearticle**|**필터가**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |스키마 옵션을 변경합니다.|**sp_changearticle**|**schema_option**|새 스냅샷|  
 |스냅샷을 적용하기 전에 구독자에서 테이블이 처리되는 방식을 변경합니다.|**sp_changearticle**|**pre_creation_cmd**|새 스냅샷|  
-|아티클 상태를 변경합니다.|**sp_changearticle**|**업무**|새 스냅샷|  
+|아티클 상태를 변경합니다.|**sp_changearticle**|**status**|새 스냅샷|  
 |INSERT, UPDATE 또는 DELETE 명령을 변경합니다.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 이름을 변경합니다.|**sp_changearticle**|**dest_table**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 소유자(스키마)를 변경합니다.|**sp_changearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|**\@입력할**<br /><br /> **\@길이**<br /><br /> **\@소수**<br /><br /> **\@배율을**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|**\@입력할**<br /><br /> **\@길이**<br /><br /> **\@전체 자릿수**<br /><br /> **\@배율을**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
@@ -71,8 +71,7 @@ ms.locfileid: "73882342"
 |조인 필터 또는 논리적 레코드를 추가합니다.|**sp_addmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 삭제합니다.|**sp_dropmergefilter**|모든 매개 변수|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|**\@속성**<br /><br /> **\@기본값**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|
-  **false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |사전 계산 파티션 사용을 설정 또는 해제합니다.|**sp_changemergepublication**|**use_partition_groups**|새 스냅샷|  
 |파티션 최적화를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 사용 하거나 사용 하지 않도록 설정 합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
 |구독자 파티션 유효성 검사를 설정 또는 해제합니다.|**sp_changemergepublication**|**validate_subscriber_info**|구독을 다시 초기화합니다.|  
@@ -88,11 +87,9 @@ ms.locfileid: "73882342"
 |이전에 게시되지 않은 열 필터를 포함합니다.|**sp_mergearticlecolumn**|**\@열의**<br /><br /> **\@연산의**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |행 필터를 추가, 삭제 또는 변경합니다.|**sp_changemergearticle**|**subset_filterclause**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.<br /><br /> 매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.<br /><br /> 아티클이 조인 필터에 포함되지 않은 경우 아티클을 삭제하고 이를 다른 행 필터로 다시 추가할 수 있습니다. 이 경우 전체 구독을 다시 초기화할 필요가 없습니다. 아티클을 추가 및 삭제하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.|  
 |스키마 옵션을 변경합니다.|**sp_changemergearticle**|**schema_option**|새 스냅샷|  
-|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|
-  **false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|열 수준 추적을 행 수준 추적을 변경합니다. 행 수준 추적에서 열 수준 추적으로 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |구독자에서 작성된 문이 게시자에 적용되기 전에 사용 권한을 확인할지 여부를 변경합니다.|**sp_changemergearticle**|**check_permissions**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|
-  **2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
+|다운로드 전용 구독을 설정 또는 해제합니다. 다른 업로드 옵션 간에 변경할 때는 특별한 조치가 필요하지 않습니다.|**sp_changemergearticle**|**2** 에 대한 값 **2**를 변경|구독을 다시 초기화합니다.|  
 |대상 테이블 소유자를 변경합니다.|**sp_changemergearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
@@ -112,6 +109,6 @@ ms.locfileid: "73882342"
  [Transact-sql&#41;sp_droparticle &#40;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)   
  [Transact-sql&#41;sp_dropmergearticle &#40;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)   
  [Transact-sql&#41;sp_dropmergefilter &#40;](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)   
- [Transact-sql&#41;sp_mergearticlecolumn &#40;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
+ [sp_mergearticlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
   
   

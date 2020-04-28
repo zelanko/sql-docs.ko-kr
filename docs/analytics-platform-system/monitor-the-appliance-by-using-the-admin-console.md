@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400940"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>관리 콘솔-분석 플랫폼 시스템을 사용 하 여 어플라이언스 모니터링
 관리 콘솔은 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램입니다. 사용자는 Internet Explorer를 통해 관리 콘솔에 연결 합니다.  
   
-## <a name="About"></a>관리 콘솔 정보  
+## <a name="about-the-admin-console"></a><a name="About"></a>관리 콘솔 정보  
 ![어플라이언스 콘솔 홈](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **기기가**  
@@ -67,7 +67,7 @@ PDW 성능 모니터 그래프를 표시 합니다.
 > [!NOTE]  
 > 관리 콘솔에는 1024x768 화면 해상도가 있습니다. 관리 콘솔은 1280 X 1024 이상의 화면 해상도로 가장 잘 표시 됩니다.  
   
-## <a name="Connect"></a>관리 콘솔에 연결  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>관리 콘솔에 연결  
 관리 콘솔에 연결 하려면 다음이 필요 합니다.  
   
 -   Internet Explorer 버전 10 이상  
@@ -78,15 +78,14 @@ PDW 성능 모니터 그래프를 표시 합니다.
   
 관리 콘솔에 연결 하려면 Internet Explorer 및 https를 사용 하 여 제어 노드 클러스터의 IP 주소를 찾습니다. 예를 들어, 제어 노드 클러스터의 IP 주소가 인 `10.192.63.102`경우 브라우저 주소 표시줄 `https://10.192.63.102` 에를 입력 합니다. 첫 번째 화면에서는 **로그인** 과 **암호**를 요청 합니다. SQL Server 인증 로그인 및 암호, Windows 인증 로그인 및 Windows 암호를 제공 합니다. Windows 인증 로그인을 사용 하는 경우 관리 콘솔에서 가장을 사용 합니다.  
   
-## <a name="RelatedTasks"></a>관리 콘솔 작업  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>관리 콘솔 작업  
 관리 콘솔은 다음을 모니터링 하는 기능을 제공 합니다.  
   
 |||  
 |-|-|  
-|**Information Type**|**관리 콘솔에서 액세스 하는 방법**|  
+|**정보 유형**|**관리 콘솔에서 액세스 하는 방법**|  
 |기기의 전체 상태|위쪽 메뉴 또는 **홈**에서 **어플라이언스 상태** 를 클릭 합니다.|  
-|경고|
-  **경고**를 클릭합니다. 자세한 내용은 [분석 플랫폼 시스템&#41;&#40;관리 콘솔 경고 이해 ](understanding-admin-console-alerts.md)를 참조 하세요.|  
+|경고|**경고**를 클릭합니다. 자세한 내용은 [분석 플랫폼 시스템&#41;&#40;관리 콘솔 경고 이해 ](understanding-admin-console-alerts.md)를 참조 하세요.|  
 |어플라이언스 구성 요소 및 해당 상태|위쪽 메뉴 또는 **홈**에서 **어플라이언스 상태** 를 클릭 합니다.|  
 |요청 모니터링 (쿼리, 로드, 백업 및 복원 포함)|**세션** 을 클릭 하 여 현재 활성 또는 최근 세션을 확인 합니다.<br /><br />현재 활성 또는 최근 쿼리를 보려면 **쿼리** 를 클릭 합니다. 쿼리에 대해 표시 되는 정보에는 로드, 백업 및 복원이 포함 됩니다.<br /><br />**잠금** 을 클릭 하면 활성 잠금이 표시 됩니다.|  
 |로드, 백업 및 복원에 대 한 추가 정보를 모니터링 합니다.|**로드** 또는 **백업/복원**을 클릭 합니다.|  

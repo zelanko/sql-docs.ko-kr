@@ -16,10 +16,10 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056229"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation(Transact-SQL)
@@ -47,8 +47,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링 되 면 체크섬 작업 대신 행 개수 연산이 수행 됩니다.|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링 되 면 체크섬 작업 대신 행 개수 연산이 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
 |**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 구독자의 경우 행 개수 유효성 검사만 수행 됩니다.|  
   
@@ -65,7 +64,7 @@ sp_publication_validation [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에 대 한 유효성 검사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에 대 한 유효성 검사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

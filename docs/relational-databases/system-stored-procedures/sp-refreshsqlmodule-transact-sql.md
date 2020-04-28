@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982767"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
@@ -86,8 +86,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="examples"></a>예  
   
 ### <a name="a-refreshing-a-user-defined-function"></a>A. 사용자 정의 함수 새로 고침  
- 다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. 
-  `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
+ 다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
   
 ```  
 -- Create an alias type.  

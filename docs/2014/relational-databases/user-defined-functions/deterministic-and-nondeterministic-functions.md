@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714730"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
@@ -56,8 +56,7 @@ ms.locfileid: "62714730"
 |함수|주석|  
 |--------------|--------------|  
 |모든 집계 함수|모든 집계 함수는 OVER 및 ORDER BY 절로 지정되지 않는 한 결정적입니다. 이러한 함수 목록은 [집계 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)를 참조하세요.|  
-|CAST|
-  `datetime`, `smalldatetime` 또는 `sql_variant`와 함께 사용하지 않는 경우 결정적입니다.|  
+|CAST|`datetime`, `smalldatetime` 또는 `sql_variant`와 함께 사용하지 않는 경우 결정적입니다.|  
 |CONVERT|다음과 같은 경우를 제외하고 결정적입니다.<br /><br /> 원본 유형이 `sql_variant`인 경우<br /><br /> 대상 유형이 `sql_variant`이고 해당 원본 유형이 비결정적인 경우<br /><br /> 원본 또는 대상 유형이 `datetime`이거나 `smalldatetime`이고 다른 원본 또는 대상 유형이 문자열이며 비결정적 스타일을 지정한 경우 결정적이려면 스타일 매개 변수가 상수여야 합니다. 또한 100 이하의 스타일(스타일 20 및 21 제외)은 비결정적입니다. 100보다 큰 스타일(스타일 106, 107, 109, 113 제외)은 결정적입니다.|  
 |CHECKSUM|CHECKSUM(*)을 제외하고 모두 결정적입니다.|  
 |ISDATE|CONVERT 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
@@ -92,7 +91,7 @@ ms.locfileid: "62714730"
 ## <a name="calling-extended-stored-procedures-from-functions"></a>함수에서 확장 저장 프로시저 호출  
  확장 저장 프로시저는 데이터베이스에 의도하지 않은 영향을 줄 수 있기 때문에 확장 저장 프로시저를 호출하는 함수는 비결정적입니다. 의도하지 않은 영향으로는 테이블 업데이트와 같은 데이터베이스의 전역 상태 변경이나 파일 수정 또는 전자 메일 메시지 보내기와 같은 파일 또는 네트워크 등의 외부 리소스 변경이 있습니다. 사용자 정의 함수에서 확장 저장 프로시저를 실행할 때 일관된 결과 집합이 반환되지는 않습니다. 데이터베이스에 의도하지 않은 영향을 주는 사용자 정의 함수는 권장되지 않습니다.  
   
- 함수 내부에서 확장 저장 프로시저를 호출하면 확장 저장 프로시저가 클라이언트에 결과 집합을 반환할 수 없습니다. 클라이언트에 결과 집합을 반환하는 개방형 Data Services API에는 FAIL 반환 코드가 포함됩니다.  
+ 함수 내부에서 확장 저장 프로시저를 호출하면 확장 저장 프로시저가 클라이언트에 결과 집합을 반환할 수 없습니다. 클라이언트에 결과 집합을 반환하는 개방형 데이터 서비스 API에는 FAIL 반환 코드가 포함됩니다.  
   
  확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 다시 연결할 수 있지만 확장 저장 프로시저를 호출한 원래 함수와 동일한 트랜잭션을 조인할 수는 없습니다.  
   

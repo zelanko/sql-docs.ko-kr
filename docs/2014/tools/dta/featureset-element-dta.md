@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735756"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 요소(DTA)
@@ -38,13 +38,10 @@ ms.locfileid: "62735756"
   
 |특성|Description|  
 |--------------------|-----------------|  
-|**데이터 형식 및 길이**|
-  `string`, 최대 길이 없음|  
+|**데이터 형식 및 길이**|`string`, 최대 길이 없음|  
 |**허용된 값**|**IDX_IV**<br /> 인덱스와 인덱싱된 뷰<br /><br /> **IDX**<br /> 인덱스만<br /><br /> **IV**<br /> 인덱싱된 뷰만<br /><br /> **NCL_IDX**<br /> 비클러스터형 인덱스만<br /><br /> 이 요소에 이러한 값 중 하나를 사용합니다.|  
 |**기본값**|**IDX**|  
-|**발생 빈도**|
-  `TuningOptions` 요소가 사용되지 않을 경우 각 `DropOnlyMode` 요소에 한 번만 지정해야 합니다. 
-  `DropOnlyMode`를 사용하는 경우 `FeatureSet`는 사용할 수 없습니다. 이러한 요소는 함께 사용할 수 없습니다.|  
+|**발생 빈도**|`TuningOptions` 요소가 사용되지 않을 경우 각 `DropOnlyMode` 요소에 한 번만 지정해야 합니다. `DropOnlyMode`를 사용하는 경우 `FeatureSet`는 사용할 수 없습니다. 이러한 요소는 함께 사용할 수 없습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

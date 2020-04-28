@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 7aa82ee5c5a617c3564ac9246f2e42bebcab220e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844359"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL Data Warehouse 저장 프로시저
@@ -24,7 +24,7 @@ ms.locfileid: "73844359"
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 데이터베이스 역할과 관련 된 작업을 수행 하는 데 사용할 수 있는 기본 제공 프로시저를 제공 합니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]다음 시스템 프로시저를 포함 합니다.  
   
-##  <a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
+##  <a name="sp_datatype_info_90-40sql-data-warehouse41"></a><a name="AggregateFunctions"></a>[sp_datatype_info_90 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-datatype-info-90-sql-data-warehouse.md)  
   
  [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
   

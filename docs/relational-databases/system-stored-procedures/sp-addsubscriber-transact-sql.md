@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962408"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
@@ -68,11 +68,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**0** (기본값)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
 |**1**|ODBC 데이터 원본 서버|  
-|**2**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |**3**|OLE DB 공급자|  
   
-`[ @login = ] 'login'`인증에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'`인증에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
@@ -111,7 +110,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**x**|매월|  
 |**32**|매월 상대적|  
 |**64** (기본값)|자동 시작|  
-|**128**|Recurring|  
+|**128**|되풀이|  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
@@ -126,7 +125,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1** (기본값)|처음|  
-|**2**|Second|  
+|**2**|초|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -144,8 +143,8 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|Second|  
-|**4** (기본값)|분|  
+|**2**|초|  
+|**4** (기본값)|Minute|  
 |**20cm(8**|Hour|  
   
 > [!NOTE]  
@@ -188,7 +187,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -204,10 +203,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_addsubscriber**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
+ [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Transact-sql&#41;sp_changesubscriber &#40;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [Transact-sql&#41;sp_dropsubscriber &#40;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [Transact-sql&#41;sp_helpsubscriberinfo &#40;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [sp_helpsubscriberinfo&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

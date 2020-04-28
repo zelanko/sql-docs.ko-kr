@@ -20,16 +20,15 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982968"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 작업 그룹 구성을 반환합니다. 각 작업 그룹은 한 개의 리소스 풀만 구독할 수 있습니다.  
   
 |열 이름|데이터 형식|Description|  
@@ -41,7 +40,7 @@ ms.locfileid: "73982968"
 |request_max_cpu_time_sec|**int**|단일 요청에 대한 최대 CPU 사용 제한입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.<br /><br /> **참고:** 자세한 내용은 [CPU 임계값 초과 이벤트 클래스](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)를 참조 하세요.|  
 |request_memory_grant_timeout_sec|**int**|단일 요청에 대한 메모리 부여 시간 초과(초)입니다. 기본값은 0이며 쿼리 비용에 따라 내부 계산을 사용합니다. Null을 허용하지 않습니다.|  
 |max_dop|**int**|작업 그룹에 대한 최대 병렬 처리 수준입니다. 기본값은 0이며 글로벌 설정을 사용합니다. Null을 허용하지 않습니다.<br /><br /> **노드:** 이 설정은 **maxdop**쿼리 옵션을 재정의 합니다.|  
-|group_max_requests|**int**|최대 동시 요청 수입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.|  
+|group_max_requests|**int**|최대 동시 요처 수입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.|  
 |pool_id|**int**|이 작업 그룹이 사용하는 리소스 풀의 ID입니다.|  
 |external_pool_id|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상<br /><br /> 이 작업 그룹이 사용 하는 외부 리소스 풀의 ID입니다.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "73982968"
   
 ## <a name="see-also"></a>참고 항목  
  [dm_resource_governor_workload_groups &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e6826d28ec923de221e94b985b740a172bdaa7d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882161"
 ---
 # <a name="specify-schema-options"></a>스키마 옵션 지정
@@ -42,17 +42,17 @@ ms.locfileid: "73882161"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
 -   게시가 만들어진 후 스키마 옵션을 변경하면 새 스냅샷을 생성해야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   스키마 옵션의 전체 목록은 [transact-sql&#41;&#40;sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 의 ** \@schema_option** 매개 변수를 참조 하 고 sp_addmergearticle [&#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 참조 하십시오.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  제약 조건 및 트리거를 구독자에 복사할지 여부 등의 스키마 옵션을 **아티클 속성-** Article> **대화 상자의 \<속성** 탭에 지정합니다. 이 탭은 새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있습니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](create-a-publication.md) 및 [게시 속성 보기 및 수정](view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-specify-schema-options"></a>스키마 옵션을 지정하려면  
@@ -74,7 +74,7 @@ ms.locfileid: "73882161"
   
 5.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  스키마 옵션은 하나 이상의 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과인 16진수 값으로 지정됩니다. 자세한 내용은 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 및 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 참조하세요.  
   
 > [!NOTE]  

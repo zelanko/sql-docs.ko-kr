@@ -11,18 +11,17 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728703"
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 대한 비즈니스 규칙의 예를 보여 줍니다. 
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]설치에 포함된 샘플 모델에서 이러한 예를 찾을 수 있습니다.   
+이 문서에서는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 대한 비즈니스 규칙의 예를 보여 줍니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]설치에 포함된 샘플 모델에서 이러한 예를 찾을 수 있습니다.   
   
 샘플 모델을 배포하는 방법에 대한 지침은 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)을 참조하세요.  
   
@@ -136,8 +135,8 @@ Else
   
 샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
 ---------|---------|---------|------------  
-Product     | Product        |  기본 이름| Color 및 Class 특성 값에 따라 기본 제품 이름을 지정합니다. Color 특성 값이 YLO가 아니고 Class 특성이 NA가 아니면 기본 이름은 Yellow NA입니다.         
-다음 비즈니스 규칙에서 Color 및 Class 특성이 `is equal` 규칙 조건을 충족하지 않으면 `defaults to` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)이 Name 특성에 적용됩니다.  
+Product     | Product        |  Default Name| Color 및 Class 특성 값에 따라 기본 제품 이름을 지정합니다. Color 특성 값이 YLO가 아니고 Class 특성이 NA가 아니면 기본 이름은 Yellow NA입니다.         
+다음 비즈니스 규칙에서 Color 및 Class 특성이 `is equal`규칙 조건을 충족하지 않으면 `defaults to` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)이 Name 특성에 적용됩니다.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -150,7 +149,7 @@ Else
 **--------------------------------------------------**  
   
   
-**샘플 모델의 비즈니스 규칙 예제를 보려면**  
+**샘플 모델에 있는 비즈니스 규칙의 예를 보려면**  
 1. MDS를 설치한 후 설정한 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 사이트로 이동한 다음 **시스템 관리** 상자를 클릭합니다.   
 웹 사이트를 설정하는 방법에 대한 지침은 [Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md)을 참조하세요.  
 2. 위의 표에 나열된 비즈니스 규칙을 포함하는 샘플 모델을 클릭한 다음 **엔터티**를 클릭합니다.  

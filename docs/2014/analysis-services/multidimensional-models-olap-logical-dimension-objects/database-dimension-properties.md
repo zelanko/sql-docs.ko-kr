@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728505"
 ---
 # <a name="database-dimension-properties"></a>데이터베이스 차원 속성
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]차원의 특성은 다양 한 차원 속성의 설정 및 차원에 포함 된 특성이 나 계층에 따라 차원의 메타 데이터에 의해 정의 됩니다. 다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 속성을 설명합니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|차원의 특성에 대한 All 멤버의 이름을 지정합니다.|  
 |`Collation`|차원에 사용되는 데이터 정렬을 결정합니다.|  
@@ -39,8 +39,7 @@ ms.locfileid: "62728505"
 |`Name`|차원의 이름을 지정합니다.|  
 |`ProactiveCaching`|차원의 자동 관리 캐싱 설정을 정의합니다.|  
 |`ProcessingGroup`|처리 그룹을 지정합니다. ByAttribute 또는 ByTable 값을 지정할 수 있으며 기본값은 `ByAttribute`입니다.|  
-|`ProcessingMode`|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다.|  
+|`ProcessingMode`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다.|  
 |`ProcessingPriority`|지연 집계, 인덱싱 또는 클러스터링과 같은 백그라운드 작업을 수행하는 동안 차원의 처리 우선 순위를 결정합니다.|  
 |`Source`|차원이 바인딩되는 데이터 원본 뷰를 식별합니다.|  
 |`StorageMode`|차원의 스토리지 모드를 결정합니다.|  
@@ -56,6 +55,6 @@ ms.locfileid: "62728505"
  [특성 및 특성 계층](attributes-and-attribute-hierarchies.md)   
  [사용자 계층](user-hierarchies.md)   
  [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [차원 &#40;Analysis Services 다차원 데이터&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [차원&#40;Analysis Services - 다차원 데이터&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

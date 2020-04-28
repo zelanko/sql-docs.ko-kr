@@ -11,10 +11,10 @@ ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728894"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728894"
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
   
-|속성|Description|  
+|Name|설명|  
 |----------|-----------------|  
 |**리프 멤버**|리프 멤버 및 해당 특성 값을 포함합니다.|  
 |**리프 멤버 기록**|리프 멤버 기록 데이터 및 관련 특성 값을 포함합니다. 보기 형식은 느린 변경 차원 유형 4 스타일입니다.|  
@@ -39,11 +39,11 @@ ms.locfileid: "73728894"
 |**컬렉션 멤버 SCD 유형 2**|컬렉션 멤버 기록 데이터 및 현재 데이터, 관련 특성 값을 포함합니다. 보기 형식은 느린 변경 차원 유형 2 스타일입니다.|  
 |**명시적 부모 자식**|엔터티의 명시적 계층 구조를 부모 자식 형식으로 포함합니다.|  
 |**명시적 수준**|엔터티의 명시적 계층 구조를 수준 형식으로 포함합니다.|  
-|**파생 부모 자식 (파생 계층 뷰)**|파생 계층 구조를 부모 자식 형식으로 포함합니다.|  
-|**파생 수준 (파생 계층 뷰)**|파생 계층 구조를 수준 형식으로 포함합니다.|  
+|**파생 부모 자식(파생 계층 뷰)**|파생 계층 구조를 부모 자식 형식으로 포함합니다.|  
+|**파생 수준(파생 계층 뷰)**|파생 계층 구조를 수준 형식으로 포함합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [개요: 데이터 &#40;MDS(Master Data Services)&#41;내보내기](../master-data-services/overview-exporting-data-master-data-services.md)   
- [MDS(Master Data Services) &#40;데이터를 내보내는 구독 뷰를 만듭니다&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
+ [구독 뷰를 만들어 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

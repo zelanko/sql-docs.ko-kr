@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400926"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>어플라이언스 물리적 구성 요소-분석 플랫폼 시스템
@@ -21,7 +21,7 @@ PDW 및 어플라이언스 패브릭 물리적 구성 요소에 대 한 이름 �
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>구성 요소 다이어그램  
+## <a name="component-diagrams"></a><a name="diagrams"></a>구성 요소 다이어그램  
 이는 물리적 구성 요소의 이름과 6-계산 노드 어플라이언스의 첫 번째 랙에 있는 위치를 보여 줍니다.  
   
 ![PDW 영역 구성 요소 이름 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ PDW 구성 요소에 대 한 실제 이름은 PDW 지역 이름과 대시, 구�
   
 ![PDW 구성 요소 이름](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>PDW 구성 요소  
+## <a name="pdw-components"></a><a name="pdw"></a>PDW 구성 요소  
 PDW 가상 머신은 PDW 지역의 일부입니다.  
   
 *PDW_region*-CTL01  
@@ -46,7 +46,7 @@ PDW 가상 머신은 PDW 지역의 일부입니다.
 *PDW_region*- *PDW_Region*CMP01-CMP06  
 계산 노드를 실행 하는 가상 컴퓨터입니다. 이 6-계산 노드 다이어그램에서 HSA06 HSA01를 통해 호스트는 계산 노드 Vm CMP01를 통해 각각 CMP06를 실행 합니다.  
   
-## <a name="fabric"></a>어플라이언스 패브릭 구성 요소  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>어플라이언스 패브릭 구성 요소  
 이러한 구성 요소는 어플라이언스 패브릭의 일부입니다.  
   
 ### <a name="virtual-machines"></a>Virtual Machines  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2948b255f6b6cab85ae5dad71cc9b2f59e547b63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727664"
 ---
 # <a name="designing-stored-procedures"></a>저장 프로시저 디자인
@@ -31,8 +31,7 @@ ms.locfileid: "62727664"
  다른 MDX 함수와 마찬가지로 저장 프로시저가 먼저 해결되어야 MDX 세션이 계속될 수 있습니다. 저장 프로시저는 실행되는 동안 MDX 세션을 잠급니다. 사용자 상호 작용을 보류하는 MDX 세션을 중지해야 할 특별한 이유가 없다면 MDX 세션을 유지하여 대화 상자와 같은 사용자 상호 작용을 사용하지 않는 것이 좋습니다.  
   
 ## <a name="dependent-assemblies"></a>종속 어셈블리  
- 모든 종속 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 로드되어 CLR(공용 언어 런타임)에서 참조할 수 있어야 합니다. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 종속 어셈블리를 주 어셈블리와 같은 폴더에 저장하므로 CLR에서 이러한 어셈블리의 함수에 대한 모든 함수 참조가 자동으로 해결됩니다.  
+ 모든 종속 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 로드되어 CLR(공용 언어 런타임)에서 참조할 수 있어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 종속 어셈블리를 주 어셈블리와 같은 폴더에 저장하므로 CLR에서 이러한 어셈블리의 함수에 대한 모든 함수 참조가 자동으로 해결됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델 어셈블리 관리](../multidimensional-models/multidimensional-model-assemblies-management.md)   

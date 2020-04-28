@@ -16,17 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095381"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SMO(SQL Server 관리 개체) 프로그래밍 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects)는 관리 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 측면을 프로그래밍 하기 위해 디자인 된 개체의 컬렉션입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 관리를 캡슐화하는 개체 컬렉션입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects)는 관리 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 측면을 프로그래밍 하기 위해 디자인 된 개체의 컬렉션입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 관리를 캡슐화하는 개체 컬렉션입니다.  
   
 |항목|Description|  
 |-----------|-----------------|

@@ -21,16 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f39355222b491be27cc1b914401dcc459151e4bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62718060"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  데이터 행을 클라이언트로 전송합니다.  
   
@@ -52,11 +52,9 @@ srvproc
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 클라이언트로 보내는 각 행에 대해 한 번씩 **srv_sendrow** 함수를 호출합니다. 
-  **srv_sendmsg**, **srv_status**또는 **srv_senddone**을 사용하여 각각 메시지, 상태 값 또는 완료 상태를 보내기 전에 모든 행을 클라이언트로 보내야 합니다.  
+ 클라이언트로 보내는 각 행에 대해 한 번씩 **srv_sendrow** 함수를 호출합니다. **srv_sendmsg**, **srv_status**또는 **srv_senddone**을 사용하여 각각 메시지, 상태 값 또는 완료 상태를 보내기 전에 모든 행을 클라이언트로 보내야 합니다.  
   
- 
-  **srv_describe** 를 사용하여 정의되지 않은 열이 포함된 행을 보내면 확장 저장 프로시저 API 애플리케이션에서 정보 오류 메시지를 발생시키고 클라이언트에 FAIL을 반환합니다. 이 경우 행이 전송되지 않습니다.  
+ **srv_describe** 를 사용하여 정의되지 않은 열이 포함된 행을 보내면 확장 저장 프로시저 API 애플리케이션에서 정보 오류 메시지를 발생시키고 클라이언트에 FAIL을 반환합니다. 이 경우 행이 전송되지 않습니다.  
   
 > [!NOTE]  
 >  확장 저장 프로시저 API를 통해서는 컴퓨팅 행을 클라이언트로 보낼 수 없습니다. 또한 `ntext`, `text` 또는 `image` 데이터가 있는 행을 클라이언트로 보내는 경우 텍스트 포인터와 텍스트 타임스탬프는 제외됩니다.  

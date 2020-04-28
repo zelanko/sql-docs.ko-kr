@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165499"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
@@ -39,8 +39,8 @@ ms.locfileid: "74165499"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|이 쿼리가 실행되는 세션을 식별합니다. dm_exec_sessions.session_id를 참조합니다.|  
 |request_id|**int**|대상 요청을 식별합니다. dm_exec_sessions.request_id를 참조합니다.|  
-|sql_handle|**varbinary (64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
-|plan_handle|**varbinary (64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Plan_handle dm_exec_query_stats 참조 합니다.|  
+|sql_handle|**varbinary(64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. dm_exec_query_stats.sql_handle을 참조합니다.|  
+|plan_handle|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. Plan_handle dm_exec_query_stats 참조 합니다.|  
 |physical_operator_name|**nvarchar(256)**|물리적 연산자 이름입니다.|  
 |node_id|**int**|쿼리 트리에서 연산자 노드를 식별합니다.|  
 |thread_id|**int**|동일한 쿼리 연산자 노드에 속하는 (병렬 쿼리)에 대한 스레드를 구분합니다.|  
@@ -83,7 +83,7 @@ ms.locfileid: "74165499"
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] S p 1 부터는 *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON`및 `SET STATISTICS PROFILE ON` 는 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. `sys.dm_exec_query_profiles` 를 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.    
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] S p 1 부터는 *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON`및 `SET STATISTICS PROFILE ON` 는 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. `sys.dm_exec_query_profiles` 를 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
 
 >[!NOTE]
 > 조사 중인 쿼리는 쿼리 프로 파일링 인프라를 사용 하도록 설정한 **후** 시작 해야 합니다. 쿼리를 시작한 후에 사용 하도록 설정 하면에서 `sys.dm_exec_query_profiles`결과가 생성 되지 않습니다. 쿼리 프로 파일링 인프라를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.
@@ -124,6 +124,6 @@ ORDER BY node_id;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Transact-sql&#41;&#40;관련 동적 관리 뷰 및 함수 실행](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
  

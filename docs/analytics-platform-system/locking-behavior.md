@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401007"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 잠금 동작
 병렬 데이터 웨어하우스가 잠금을 사용 하 여 트랜잭션의 무결성을 확인 하 고 여러 사용자가 동시에 데이터에 액세스할 때 데이터베이스의 일관성을 유지 하는 방법을 알아봅니다.  
   
-## <a name="Basics"></a>잠금 기본 사항  
+## <a name="locking-basics"></a><a name="Basics"></a>잠금 기본 사항  
 **모드**  
   
 SQL Server PDW는 다음과 같은 네 가지 잠금 모드를 지원 합니다.  
@@ -27,7 +27,7 @@ SQL Server PDW는 다음과 같은 네 가지 잠금 모드를 지원 합니다.
 단독  
 배타적 잠금은 배타적 잠금을 보유 하 고 있는 트랜잭션이 완료 될 때까지 잠긴 개체를 읽거나 쓸 수 없습니다. 단독 잠금이 적용 되는 동안에는 모드의 다른 잠금을 사용할 수 없습니다. 예를 들어 DROP TABLE 및 CREATE DATABASE는 배타적 잠금을 사용 합니다.  
   
-공유됨  
+Shared  
 공유 잠금은 영향을 받는 개체에 대 한 배타적 잠금을 시작 하는 것을 금지 하지만 다른 모든 잠금 모드를 허용 합니다. 예를 들어 SELECT 문은 공유 잠금을 시작 하므로 여러 쿼리에서 선택 된 데이터에 동시에 액세스할 수 있지만 SELECT 문이 완료 될 때까지 읽을 레코드에 대 한 업데이트를 방지 합니다.  
   
 ExclusiveUpdate  
@@ -38,9 +38,9 @@ SharedUpdate 잠금은 배타적 및 ExclusiveUpdate 잠금 모드를 금지 하
   
 **리소스 클래스**  
   
-잠금은 데이터베이스, 스키마, 개체 (테이블, 뷰 또는 프로시저), 응용 프로그램 (내부적으로 사용 됨), EXTERNALDATASOURCE, EXTERNALFILEFORMAT 및 SCHEMARESOLUTION (개체를 만들거나 변경 하는 동안 수행 되는 데이터베이스 수준 잠금)의 개체 클래스에서 유지 됩니다. 스키마 개체 또는 데이터베이스 사용자를 삭제 합니다. 이러한 개체 클래스는 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)의 object_type 열에 표시 될 수 있습니다.  
+잠금은 데이터베이스, 스키마, 개체 (테이블, 뷰 또는 프로시저), 응용 프로그램 (내부적으로 사용 됨), EXTERNALDATASOURCE, EXTERNALFILEFORMAT 및 SCHEMARESOLUTION (스키마 개체 또는 데이터베이스 사용자를 생성, 변경 또는 삭제 하는 동안 수행 되는 데이터베이스 수준 잠금)의 개체 클래스에서 유지 됩니다. 이러한 개체 클래스는 [dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)의 object_type 열에 표시 될 수 있습니다.  
   
-## <a name="Remarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a><a name="Remarks"></a>일반적인 주의 사항  
 데이터베이스, 테이블 또는 뷰에 잠금을 적용할 수 있습니다.  
   
 SQL Server PDW는 구성 가능한 격리 수준을 구현 하지 않습니다. ANSI 표준에 정의 된 대로 READ_UNCOMMITTED 격리 수준을 지원 합니다. 그러나 읽기 작업은 READ_UNCOMMITTED에서 실행 되므로 실제로 차단 작업은 거의 발생 하지 않으며 시스템에서 경합이 발생할 수 있습니다.  

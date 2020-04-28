@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b99123f81fcdddd74dc72d485d97e428ca59ed84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400989"
 ---
 # <a name="monitor-appliance-health-state"></a>어플라이언스 상태 모니터링
@@ -73,9 +73,9 @@ Status 속성에 대해 반환 될 수 있는 값은 다음과 같습니다.
   
 -   않음  
   
--   위험  
+-   중요  
   
--   알 수 없음  
+-   Unknown  
   
 -   지원되지 않음  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401012"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 Integration Services를 사용 하 여 데이터 로드
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>기본 사항  
+## <a name="basics"></a><a name="Basics"></a>기본 사항  
 Integration Services은 고성능의 데이터 ETL (추출, 변환 및 로드)을 위한 SQL Server 구성 요소 이며 일반적으로 데이터 웨어하우스를 채우고 업데이트 하는 데 사용 됩니다.  
   
 PDW 대상 어댑터는 Integration Services package.dtsx 패키지를 사용 하 여 PDW로 데이터를 로드할 수 있도록 하는 Integration Services 구성 요소입니다. SQL ServerPDW에 대 한 패키지 워크플로에서 여러 원본의 데이터를 로드 및 병합 하 고 데이터를 여러 대상으로 로드할 수 있습니다. 로드는 한 패키지 내에서, 그리고 동시에 실행 중인 여러 패키지에 걸쳐 병렬로 실행되며 동일한 어플라이언스에서 병렬로 실행할 수 있는 최대 로드는 10개입니다.  
@@ -42,7 +42,7 @@ PDW 대상 어댑터는 Integration Services package.dtsx 패키지를 사용 �
   
 Integration Services에 대 한 전체 설명서는 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)를 참조 하세요.  
   
-## <a name="HowToDeployPackage"></a>Integration Services 패키지를 실행 하는 방법  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>Integration Services 패키지를 실행 하는 방법  
 이러한 방법 중 하나를 사용 하 여 Integration Services 패키지를 실행 합니다.  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>SQL Server 2008 R2 Business Intelligence Development Studio에서 실행 (BIDS)  
@@ -61,9 +61,9 @@ SQL Server Data Tools 내에서 패키지를 실행 하려면 패키지를 마�
 ### <a name="run-from-a-windows-command-prompt"></a>Windows 명령 프롬프트에서 실행 
 **Dtexec** 유틸리티를 사용 하 여 Windows 명령 프롬프트에서 패키지를 실행 하려면 다음을 수행 합니다.`dtexec /FILE <packagePath>`  
   
-예: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+`dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>데이터 형식  
+## <a name="data-types"></a><a name="DataTypes"></a>데이터 형식  
 Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데이터베이스로 데이터를 로드할 때 데이터는 먼저 원본 데이터에서 Integration Services 데이터 형식으로 매핑됩니다. 이를 통해 여러 데이터 원본의 데이터가 데이터 형식의 공통 집합에 매핑될 수 있습니다.  
   
 그런 다음 데이터는 Integration Services에서 SQL Server PDW 데이터 형식으로 매핑됩니다. 다음 표에서는 각 SQL Server PDW 데이터 형식에 대해 SQL Server PDW 데이터 형식으로 변환할 수 있는 Integration Services 데이터 형식을 보여 줍니다.  
@@ -71,7 +71,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
 |PDW 데이터 형식|PDW 데이터 형식에 매핑되는 Integration Services 데이터 형식|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
@@ -86,7 +86,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
 |NVARCHAR|DT_WSTR, DT_STR|  
 |real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
-|SmallInt|DT_I1, DT_I2, DT_UI1|  
+|SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
 |TIME|DT_WSTR|  
 |TINYINT|DT_I1|  
@@ -97,7 +97,7 @@ Integration Services를 사용 하 여 데이터 원본에서 SQL Server PDW 데
   
 DT_NUMERIC 또는 전체 자릿수가 28 보다 큰 값을 포함 하는 DT_DECIMAL 입력 열을 매핑하는 경우 PDW는 유효성 검사 오류를 생성 합니다.  
   
-**지원되지 않는 데이터 형식**  
+**지원 되지 않는 데이터 형식**  
   
 SQL Server PDW는 다음 Integration Services 데이터 형식을 지원 하지 않습니다.  
   
@@ -126,10 +126,10 @@ Integration Services 로드 패키지를 실행 하려면 다음이 필요 합�
   
 -   준비 데이터베이스를 사용 하지 않는 경우 대상 데이터베이스에 대 한 CREATE 권한이 필요 합니다. 임시 테이블을 만들기 위한 것입니다.  
   
-## <a name="GenRemarks"></a>일반적인 주의 사항  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>일반적인 주의 사항  
 Integration Services 패키지에 여러 SQL Server PDW 대상이 실행 되 고 있고 연결 중 하나가 종료 되 면 Integration Services 모든 SQL Server PDW 대상에 데이터를 푸시하는 것이 중지 됩니다.  
   
-## <a name="Limits"></a>제한 사항  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>제한 사항  
 Integration Services 패키지의 경우 동일한 데이터 원본에 대 한 SQL Server PDW 대상 수는 최대 활성 부하 수에 의해 제한 됩니다. 최대값은 미리 구성되며 사용자가 구성할 수 없습니다. 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ For the maximum number of loads and queued loads per appliance, see [Minimum and
 > 원본 테이블에 SQL 데이터 정렬을 사용 하는 char 및 varchar 열이 포함 되어 있으면 PDW 대상 어댑터를 사용 하 여 SSIS에서 OLE DB 데이터 원본을 사용 하면 데이터가 손상 될 수 있습니다. 원본 테이블에 SQL 데이터 정렬을 사용 하는 char 또는 varchar 열이 포함 된 경우에는 ADO.NET 원본을 사용 하는 것이 좋습니다. 
 
   
-## <a name="Locks"></a>잠금 동작  
+## <a name="locking-behavior"></a><a name="Locks"></a>잠금 동작  
 Integration Services를 사용 하 여 데이터를 로드 하는 경우 SQL ServerPDW는 행 수준 잠금을 사용 하 여 대상 테이블의 데이터를 업데이트 합니다. 따라서 각 행이 업데이트될 때는 각 행에 대한 읽기 및 쓰기가 잠깁니다. 데이터가 준비 테이블에 로드될 때는 대상 테이블의 행이 잠기지 않습니다.  
   
-## <a name="Examples"></a>예  
+## <a name="examples"></a><a name="Examples"></a>예  
   
-### <a name="Walkthrough"></a>A. 플랫 파일에서 간단히 로드  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. 플랫 파일에서 간단히 로드  
 다음 연습에서는 Integration Services를 사용 하 여 SQL Server PDW 어플라이언스로 플랫 파일 데이터를 로드 하는 간단한 데이터 로드를 보여 줍니다.  이 예에서는 Integration Services 이미 클라이언트 컴퓨터에 설치 되어 있고 SQL Server PDW 대상이 위에 설명 된 대로 설치 되어 있다고 가정 합니다.  
   
 이 예에서는 다음 DDL이 있는 `Orders` 테이블에 로드 합니다. `Orders` 테이블은 `LoadExampleDB` 데이터베이스의 일부입니다.  
@@ -236,7 +236,7 @@ id,city,lastUpdateDate,orderDate
   
 1.  **데이터 흐름** 창에서 **플랫 파일 원본** 상자의 녹색 화살표를 **SQL Server PDW 대상** 상자로 끌어 옵니다.  
   
-2.  **SQL Server PDW 대상 편집기** 를 다시 표시 하려면 **SQL Server PDW 대상** 상자를 두 번 클릭 합니다. **매핑되지 않은 입력 열**아래에 왼쪽에 있는 플랫 파일의 열 이름이 표시 됩니다. **매핑되지 않은 대상 열**아래의 오른쪽에 있는 대상 테이블의 열 이름이 표시 됩니다. **매핑되지 않은 입력 열** 및 **매핑되지 않은 대상 열** 목록에서 일치 하는 열 이름을 끌어서 두 번 클릭 하 여 열을 **매핑된 열** 상자에 매핑합니다. **확인** 을 클릭 하 여 설정을 저장 합니다.  
+2.  **SQL Server PDW 대상 편집기** 를 다시 표시 하려면 **SQL Server PDW 대상** 상자를 두 번 클릭 합니다. **매핑되지 않은 입력 열**아래에 왼쪽에 있는 플랫 파일의 열 이름이 표시 됩니다. **매핑되지 않은 대상 열**아래의 오른쪽에 있는 대상 테이블의 열 이름이 표시 됩니다. **매핑되지 않은 입력 열** 및 **매핑되지 않은 대상 열** 목록에서 일치 하는 열 이름을 끌어서 두 번 클릭 하 여 열을 **매핑된 열** 상자에 매핑합니다. **확인** 을 클릭하여 설정을 저장합니다.  
   
 3.  **파일** 메뉴에서 **저장** 을 클릭 하 여 패키지를 저장 합니다.  
   

@@ -19,10 +19,10 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095378"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services(Transact-SQL)

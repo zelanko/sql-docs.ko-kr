@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165924"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql)
@@ -33,7 +33,7 @@ ms.locfileid: "74165924"
 
 현재 데이터베이스 또는 탄력적 풀의 리소스 거 버 넌 스 메커니즘에서 사용 되는 실제 구성 및 용량 설정을 반환 합니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|Azure SQL Database 서버 내에서 고유한 데이터베이스의 ID입니다.|
 |**logical_database_guid**|uniqueidentifier|사용자 데이터베이스의 수명 동안 유지 되는 사용자 데이터베이스의 논리적 GUID입니다.  데이터베이스의 이름을 바꾸거나 서비스 수준 목표를 변경 해도이 값은 변경 되지 않습니다.|

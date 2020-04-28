@@ -14,17 +14,16 @@ ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729762"
 ---
 # <a name="attribute-groups-master-data-services"></a>특성 그룹(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹은 엔터티의 특성을 구성하는 데 유용합니다. 엔터티에 있는 특성이 여러 개인 경우 특성 그룹을 사용하면 엔터티가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에 표시되는 방식이 향상됩니다.  
   
 ## <a name="how-attribute-groups-change-the-display"></a>특성 그룹 표시를 변경하는 방법  
@@ -38,8 +37,7 @@ ms.locfileid: "73729762"
   
 -   모든 특성은 **탐색기** 의 **모든 특성**탭에 자동으로 포함됩니다.  
   
--   
-  **모든 특성** 탭을 숨길 수 있는 방법은 없습니다.  
+-   **모든 특성** 탭을 숨길 수 있는 방법은 없습니다.  
   
  특성 그룹은 **의** 시스템 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]기능 영역에서 관리됩니다.  
   
@@ -52,13 +50,13 @@ ms.locfileid: "73729762"
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 특성 그룹을 만들고 이 그룹에 특성을 추가합니다.|[특성 그룹 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
-|특성 그룹을 사용자가 볼 수 있도록 활성화합니다.|[특성 그룹을 사용자 &#40;MDS(Master Data Services)에 표시 되도록 설정&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
-|기존 특성 그룹의 이름을 변경합니다.|[특성 그룹 이름을 변경 &#40;MDS(Master Data Services)&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
-|기존 특성 그룹을 삭제합니다.|[특성 그룹 &#40;MDS(Master Data Services) 삭제&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
+|새 특성 그룹을 만들고 이 그룹에 특성을 추가합니다.|[특성 그룹 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)|  
+|특성 그룹을 사용자가 볼 수 있도록 활성화합니다.|[특성 그룹을 사용자에게 표시되도록 설정&#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)|  
+|기존 특성 그룹의 이름을 변경합니다.|[특성 그룹 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)|  
+|기존 특성 그룹을 삭제합니다.|[특성 그룹 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [특성 &#40;MDS(Master Data Services)&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

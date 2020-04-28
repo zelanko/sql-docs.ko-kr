@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74094381"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
@@ -27,20 +27,15 @@ ms.locfileid: "74094381"
 
   SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트는 다음 개체로 표시됩니다.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 개체에는 작업, 경고, 운영자의 세 가지 컬렉션이 있습니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobServer> 개체에는 작업, 경고, 운영자의 세 가지 컬렉션이 있습니다.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 개체는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트로부터 자동으로 이벤트 알림을 받을 수 있는 호출기, 전자 메일 주소 및 net send 운영자 목록을 나타냅니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.OperatorCollection> 개체는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트로부터 자동으로 이벤트 알림을 받을 수 있는 호출기, 전자 메일 주소 및 net send 운영자 목록을 나타냅니다.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모니터링되는 시스템 이벤트나 성능 조건과 같은 상황 목록을 나타냅니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.AlertCollection> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모니터링되는 시스템 이벤트나 성능 조건과 같은 상황 목록을 나타냅니다.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 개체는 약간 더 복잡합니다. 이 개체는 지정된 일정에서 실행되는 다단계 태스크 목록을 나타냅니다. 단계 및 일정 정보는 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 및 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 개체에 저장됩니다.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Agent.JobCollection> 개체는 약간 더 복잡합니다. 이 개체는 지정된 일정에서 실행되는 다단계 태스크 목록을 나타냅니다. 단계 및 일정 정보는 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobStep> 및 <xref:Microsoft.SqlServer.Management.Smo.Agent.JobSchedule> 개체에 저장됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

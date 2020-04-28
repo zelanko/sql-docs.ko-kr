@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400929"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>병렬 데이터 웨어하우스 구성 요소-분석 플랫폼 시스템
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![병렬 데이터 웨어하우스 소프트웨어](media/parallel-data-warehouse-software.png "병렬 데이터 웨어하우스 소프트웨어")  
   
-## <a name="sec1"></a>어플라이언스 소프트웨어-쿼리 처리 및 사용자 데이터 저장소  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>어플라이언스 소프트웨어-쿼리 처리 및 사용자 데이터 저장소  
   
 ### <a name="control-node"></a>제어 노드  
 MPP 엔진  
-MPP 엔진은 MPP (대규모 Parallel Processing) 시스템의 brains입니다. 이 에이전트는 다음을 수행합니다.  
+MPP 엔진은 MPP (대규모 Parallel Processing) 시스템의 brains입니다. 메서드는 다음 작업을 수행합니다.  
   
 -   병렬 쿼리 계획을 만들고 계산 노드에서 병렬 쿼리 실행을 조정 합니다.  
   
@@ -55,7 +55,7 @@ MPP 엔진은 MPP (대규모 Parallel Processing) 시스템의 brains입니다. 
 -   하드웨어 및 소프트웨어 상태를 추적 합니다.  
   
 ### <a name="data-movement-service-dms"></a>DMS (데이터 이동 서비스)  
-DMS (데이터 이동 서비스)는 PDW의 "secret 기술인"에 포함 되어 있습니다. 이 에이전트는 다음을 수행합니다.  
+DMS (데이터 이동 서비스)는 PDW의 "secret 기술인"에 포함 되어 있습니다. 메서드는 다음 작업을 수행합니다.  
   
 -   SQL Server PDW 노드와 데이터를 전송 합니다.  
   
@@ -66,7 +66,7 @@ DMS (데이터 이동 서비스)는 PDW의 "secret 기술인"에 포함 되어 �
 ### <a name="admin-console"></a>관리 사용자  
 관리 콘솔은 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 웹 응용 프로그램입니다.  
   
-### <a name="configuration-manager"></a>구성 관리자  
+### <a name="configuration-manager"></a>Configuration Manager  
 Configuration Manager (dwconfig .exe)는 어플라이언스 관리자가 분석 플랫폼 시스템을 구성 하는 데 사용 하는 도구입니다.  
   
 ### <a name="control-node-databases"></a>제어 노드 데이터베이스  
@@ -110,7 +110,7 @@ WDS (windows 배포 서비스)는 Windows Server 운영 체제를 어플라이�
   
 DHCP 서비스는 어플라이언스 도메인 내의 호스트가 미리 구성 된 IP 주소 없이 어플라이언스 네트워크에 연결할 수 있도록 IP 주소를 만듭니다.  
   
-### <a name="virtual-machine-manager"></a>Virtual  Machine  Manager  
+### <a name="virtual-machine-manager"></a>Virtual Machine Manager  
 분석 플랫폼 시스템은 가상화를 사용 하 여 고가용성을 구현 합니다. Virtual Machine Manager은 물리적 호스트에 운영 체제를 배포 하는 System Center를 호스팅합니다.  
   
 모든 호스트 및 가상 컴퓨터에서 Windows 업데이트를 적용 하거나 제거 하는 WSUS (Windows Server Update Services)  
@@ -118,7 +118,7 @@ DHCP 서비스는 어플라이언스 도메인 내의 호스트가 미리 구성
 ### <a name="windows-server"></a>Windows Server  
 기기의 모든 호스트 및 가상 컴퓨터는 Windows Server 운영 체제를 실행 합니다.  
   
-### <a name="failover-clustering"></a>장애 조치(Failover) 클러스터링  
+### <a name="failover-clustering"></a>장애 조치(failover) 클러스터링  
 Windows 장애 조치 (Failover) 클러스터링은 호스트에 오류가 발생 하는 경우 수동 호스트에서 프로세스를 다시 시작 하는 기능을 제공 합니다.  
   
 ### <a name="storage-spaces"></a>스토리지 공간  
@@ -127,7 +127,7 @@ Windows 저장소 공간은 작은 계산 노드 그룹의 저장소 풀로 사�
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server는 간단 하 고 신뢰할 수 있는 가상화 솔루션을 제공 합니다. 분석 플랫폼 시스템은 가상화를 사용 하 여 CPU 리소스의 균형을 조정 하 고 PDW 노드 및 어플라이언스 패브릭 구성 요소에 대 한 고가용성을 제공 합니다.  
   
-## <a name="sec2"></a>비관계형 데이터
+## <a name="non-relational-data"></a><a name="sec2"></a>비관계형 데이터
 PolyBase 기술은 SQL Server PDW 데이터를 외부 Hadoop 데이터와 통합 합니다. Hadoop 데이터는 다음 Hadoop 데이터 원본에 저장할 수 있습니다.  
   
 -   Hortonworks Hadoop 배포  

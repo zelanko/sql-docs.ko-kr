@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882336"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
@@ -33,11 +33,11 @@ ms.locfileid: "73882336"
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅샷을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
 > [!NOTE]
->  병합 게시에 아티클을 추가 하 고 기존 아티클이 새 아티클에 종속 된 경우 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)의 ** \@processing_order** 매개 변수를 사용 하 여 두 아티클에 대 한 처리 순서를 지정 해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle**의 **\@processing_order** 매개 변수에 값 **1**을 지정하고 **sp_changemergearticle**의 **\@processing_order** 매개 변수에 값 **2**를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+>  병합 게시에 아티클을 추가 하 고 기존 아티클이 새 아티클에 종속 된 경우 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)의 ** \@processing_order** 매개 변수를 사용 하 여 두 아티클에 대 한 처리 순서를 지정 해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가 하는 경우: **sp_addmergearticle**의 ** \@processing_order** 매개 변수에 값 **1** 을 지정 합니다. 매개 **변수 \@아티클의**테이블 이름을 지정 하 여 **sp_changemergearticle**의 ** \@processing_order** 매개 변수에 값 **2** 를 지정 합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  
   
-    -   [게시에 대 한 아티클 추가 및 삭제 &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [게시에 대한 아티클 추가 및 삭제&#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [아티클 정의](define-an-article.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882336"
   
 -   호환성 수준이 90RTM 이하인 병합 게시의 경우에는 구독의 초기 동기화 이전에 특별한 고려 사항 없이 아티클을 삭제할 수 있습니다. 하나 이상의 구독이 동기화된 후에 아티클을 삭제하면 해당 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다.  
   
--   스냅샷 또는 트랜잭션 게시의 경우에는 구독을 만들기 전에 특별한 고려 사항 없이 아티클을 삭제할 수 있습니다. 하나 이상의 구독이 생성된 후에 아티클을 삭제하면 해당 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다. 구독 삭제에 대한 자세한 내용은 [게시 구독](../subscribe-to-publications.md) 및 [sp_dropsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)을 참조하세요. **sp_dropsubscription** 를 사용 하면 전체 구독이 아닌 구독에서 단일 아티클을 삭제할 수 있습니다.  
+-   스냅샷 또는 트랜잭션 게시의 경우에는 구독을 만들기 전에 특별한 고려 사항 없이 아티클을 삭제할 수 있습니다. 하나 이상의 구독이 생성된 후에 아티클을 삭제하면 해당 구독을 삭제한 뒤 다시 만들고 동기화해야 합니다. 구독 삭제에 대한 자세한 내용은 [게시 구독](../subscribe-to-publications.md) 및 [sp_dropsubscription&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql)을 참조하세요. **sp_dropsubscription** 을 사용하면 전체 구독 대신 구독에서 단일 아티클을 삭제할 수 있습니다.  
   
 1.  게시에서 아티클을 삭제하려면 아티클을 삭제하고 게시에 대한 새 스냅샷을 만들어야 합니다. 아티클을 삭제하면 현재 스냅샷이 무효화되므로 새 스냅샷을 만들어야 합니다.  
   

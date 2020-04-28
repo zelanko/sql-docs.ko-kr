@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727649"
 ---
 # <a name="cube-properties"></a>큐브 속성
@@ -46,7 +46,7 @@ ms.locfileid: "62727649"
   
  큐브 속성을 설정 하는 방법에 대 한 자세한 내용은 [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](../cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |`AggregationPrefix`|집계 이름에 사용되는 공통 접두사를 지정합니다.|  
 |`Collation`|LCID(로캘 ID)와 비교 플래그를 밑줄로 구분하여 지정합니다(예: Latin1_General_C1_AS).|  

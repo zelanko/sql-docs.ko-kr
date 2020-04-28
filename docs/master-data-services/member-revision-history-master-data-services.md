@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729115"
 ---
 # <a name="member-revision-history-master-data-services"></a>멤버 수정 기록(Master Data Services)
@@ -36,13 +36,11 @@ ms.locfileid: "73729115"
 ## <a name="view-and-manage-revision-history-by-entity"></a>엔터티별 수정 기록 보기 및 관리  
  탐색기 기능 영역에서 엔터티의 모든 멤버에 대한 수정 내용을 확인할 수 있습니다. 업데이트 권한이 있는 경우 멤버를 이전 수정으로 롤백할 수 있습니다.  
   
- **수정 기록을 보고 관리 하려면**  
+ **수정 기록을 보고 관리하려면**  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
-2.  
-  **엔터티** 메뉴에서 엔터티를 선택합니다.  
+2.  **엔터티** 메뉴에서 엔터티를 선택합니다.  
   
 3.  엔터티의 모든 기록 데이터를 확인하려면 **기록 보기** 를 클릭합니다.  
   
@@ -55,28 +53,25 @@ ms.locfileid: "73729115"
 ## <a name="view-and-manage-revision-history-by-member"></a>멤버별 수정 기록 보기 및 관리  
  멤버에 대한 읽기 권한이 있으면 탐색기 기능 영역에서 멤버의 수정 내용을 확인할 수 있습니다. 업데이트 권한이 있는 경우 멤버를 이전 수정으로 롤백하거나 수정에 주석을 추가할 수 있습니다.  
   
-1.  
-  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
+1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
-2.  
-  **엔터티** 메뉴에서 엔터티를 선택합니다.  
+2.  **엔터티** 메뉴에서 엔터티를 선택합니다.  
   
 3.  멤버를 선택합니다.  
   
 4.  오른쪽 창에서 **기록 보기** 를 클릭합니다.  
   
 ## <a name="log-retention-setting"></a>로그 보존 설정  
- 
-  **데이터베이스에 대한 시스템 설정에서** 로그 보존 기간(일) [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 속성을 설정하고 모델을 만들거나 편집할 때 **로그 보존 기간(일)** 을 설정하면 기록 데이터를 보존할 기간을 구성할 수 있습니다.  
+ **데이터베이스에 대한 시스템 설정에서** 로그 보존 기간(일) [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 속성을 설정하고 모델을 만들거나 편집할 때 **로그 보존 기간(일)** 을 설정하면 기록 데이터를 보존할 기간을 구성할 수 있습니다.  
   
 ## <a name="related-task"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|멤버 수정 기록 롤백|[멤버 수정 기록 롤백 &#40;MDS(Master Data Services)&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+|멤버 수정 기록 롤백|[멤버 수정 기록 롤백&#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 &#40;MDS(Master Data Services)를 만듭니다&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [시스템 설정 &#40;MDS(Master Data Services)&#41;](../master-data-services/system-settings-master-data-services.md)  
+ [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

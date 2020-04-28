@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056609"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Azure Vm에서 온-프레미스 SQL Server 또는 SQL Server를 마이그레이션하여 Data Migration Assistant를 사용 하 여 Azure SQL Database
@@ -41,7 +41,7 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 1. 원본에 대해 원본 **서버에 연결**의 **서버 이름** 텍스트 상자에 원본 SQL Server 인스턴스 이름을 입력 합니다.
 
-2. 원본 SQL Server 인스턴스에서 지 원하는 **인증 유형을** 선택 합니다.
+2. 원본 SQL Server 인스턴스에서 지원하는 **인증 형식**을 선택합니다.
 
    > [!NOTE]
    > 연결 **암호화** 확인란을 선택 하 여 연결 상태에서 연결을 암호화 하는 것이 **좋습니다.**
@@ -72,7 +72,7 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 3. **연결**을 선택합니다.
 
-4. 마이그레이션할 단일 대상 데이터베이스를 선택 합니다.
+4. 원본 데이터베이스를 마이그레이션할 단일 대상 데이터베이스를 선택합니다.
 
    > [!NOTE]
    > Windows 사용자를 마이그레이션하려면 **대상 외부 사용자 도메인 이름** 텍스트 상자에서 목표가 외부 사용자 도메인 이름이 올바르게 지정 되어 있는지 확인 합니다.
@@ -83,7 +83,7 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 ## <a name="select-schema-objects"></a>스키마 개체 선택
 
-1. Azure SQL Database 마이그레이션할 원본 데이터베이스에서 스키마 개체를 선택 합니다.
+1. Azure SQL Database로 마이그레이션할 원본 데이터베이스에서 스키마 개체를 선택합니다.
 
     ![스키마 개체 선택](../dma/media/select-schema-objects.png)
 
@@ -102,19 +102,19 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 1. **스키마 배포**를 선택 합니다.
 
-2. 스키마 배포의 결과를 검토 합니다.
+2. 스키마 배포 결과를 검토합니다.
 
     ![스키마 배포 결과](../dma/media/schema-deployment-results.png)
 
 3. 데이터 **마이그레이션을 선택 하** 여 데이터 마이그레이션 프로세스를 시작 합니다.
 
-4. 마이그레이션할 데이터가 포함 된 테이블을 선택 합니다.
+4. 마이그레이션할 데이터가 포함된 테이블을 선택합니다.
 
     ![마이그레이션할 테이블 선택](../dma/media/select-tables-to-migrate.png) 
 
 5. **데이터 마이그레이션 시작**을 선택 합니다.
 
-최종 화면에는 전체 상태가 표시 됩니다.
+마지막 화면에 전체 상태가 표시됩니다.
 
    ![마이그레이션 상태](../dma/media/migration-status.png) 
 

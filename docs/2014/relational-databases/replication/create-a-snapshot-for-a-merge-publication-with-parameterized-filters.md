@@ -15,27 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a28bf1fc8960c9e34c4acdcbae5ae863d4595a3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882368"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Create a Snapshot for a Merge Publication with Parameterized Filters
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 스냅샷을 만드는 방법에 대해 설명합니다.  
   
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   매개 변수가 있는 필터를 사용하여 병합 게시에 대한 스냅샷을 만들 때는 게시된 데이터 및 구독에 대한 구독자 메타데이터를 모두 포함하는 표준(스키마) 스냅샷을 먼저 생성해야 합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)을 참조하세요. 스키마 스냅샷을 만든 다음에는 게시된 데이터의 구독자별 파티션을 포함하는 스냅샷을 만들 수 있습니다.  
   
 -   게시에 있는 여러 아티클에 대한 필터링 시 각 구독에 고유하면서도 겹치지 않는 파티션이 생성될 경우 메타데이터는 병합 에이전트가 실행될 때마다 정리됩니다. 따라서 분할된 스냅샷은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅샷 생성 및 배달을 시작하도록 허용하는 것을 고려해야 합니다. 필터링 옵션에 대한 자세한 내용은 [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](snapshots-for-merge-publications-with-parameterized-filters.md)에서 "'partition options' 설정" 섹션을 참조하세요.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 
-  **게시 속성 - **게시&gt;** 대화 상자의 \<데이터 파티션** 페이지에서 파티션에 대한 스냅샷을 생성합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅샷 생성 및 배달을 시작하고 스냅샷을 생성하도록 허용할 수 있습니다.  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+ **게시 속성 - \<게시&gt;** 대화 상자의 **데이터 파티션** 페이지에서 파티션에 대한 스냅샷을 생성합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅샷 생성 및 배달을 시작하고 스냅샷을 생성하도록 허용할 수 있습니다.  
   
  하나 이상의 파티션에 대한 스냅샷을 생성하기 전에 다음을 수행해야 합니다.  
   
@@ -47,26 +46,23 @@ ms.locfileid: "73882368"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
-2.  
-  **복제** 폴더를 확장한 다음 **게시** 폴더를 확장합니다.  
+2.  **복제** 폴더를 확장한 다음 **게시** 폴더를 확장합니다.  
   
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-4.  
-  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
+4.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
   
      스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅샷 생성 및 배달을 시작하도록 허용하려면  
   
-1.  
-  **게시 속성 - **게시&gt;** 대화 상자의 \<데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**을 선택합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 #### <a name="to-generate-and-refresh-snapshots"></a>스냅샷을 생성하고 새로 고치려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 **추가**를 클릭합니다.  
   
 2.  스냅샷을 만들 파티션과 연결된 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 값을 입력합니다.  
   
@@ -76,14 +72,13 @@ ms.locfileid: "73882368"
   
     2.  기본으로 제공되는 스냅샷 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
-4.  
-  **확인**을 클릭합니다. 그러면 **게시 속성 - \<게시>** 대화 상자로 돌아갑니다.  
+4.  **확인**을 클릭합니다. 그러면 **게시 속성 - \<게시>** 대화 상자로 돌아갑니다.  
   
 5.  속성 표에서 파티션을 선택한 다음 **선택한 스냅샷 지금 생성**을 클릭합니다.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  저장 프로시저 및 스냅샷 에이전트를 사용하여 다음을 수행할 수 있습니다.  
   
 -   구독자가 처음 동기화될 때 스냅샷 생성 및 적용을 요청하도록 허용합니다.  
@@ -108,10 +103,9 @@ ms.locfileid: "73882368"
 2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. ** \@게시** 에 1 단계에서 사용 된 게시 이름과 [복제 스냅숏 에이전트](agents/replication-snapshot-agent.md) 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 사용 하 여 게시자에 연결할 때 사용 되는 Windows 자격 증명을 지정 합니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** \@publisher_security_mode** 에 대해 값 **0** 을 지정 하 고 ** \@publisher_login** 및 ** \@publisher_password**에 대해 로그인 정보를 지정 해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
     > [!IMPORTANT]  
-    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-3.  
-  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+3.  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
@@ -119,25 +113,22 @@ ms.locfileid: "73882368"
   
 #### <a name="to-create-a-publication-and-pre-generate-or-automatically-refresh-snapshots"></a>게시를 만들고 스냅샷을 미리 생성하거나 자동으로 새로 고치려면  
   
-1.  
-  [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
+1.  [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
-2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. ** \@게시** 에 1 단계에서 사용 된 게시 이름을 지정 하 고 ** \@job_login** 및 ** \@암호**에 대해 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **** publisher_security_mode**에 대해 값 \@0**을 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**publisher_login\@ 및 ****publisher_password\@에 대해 ** 로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
+2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. ** \@게시** 에 1 단계에서 사용 된 게시 이름을 지정 하 고 ** \@job_login** 및 ** \@암호**에 대해 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 에이전트가 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우에도 **\@publisher_security_mode**에 대해 값 **0**을 지정하고 **\@publisher_login** 및 **\@publisher_password**에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
     > [!IMPORTANT]  
-    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-3.  
-  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+3.  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
-5.  게시 데이터베이스의 게시자에서 1단계의 [](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)publication** 값을 지정하여 \@sp_helpmergepublication&#40;Transact-SQL&#41;** 을 실행합니다. 결과 집합에서 **snapshot_jobid** 값을 확인합니다.  
+5.  게시 데이터베이스의 게시자에서 1단계의 **\@publication** 값을 지정하여 [sp_helpmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)을 실행합니다. 결과 집합에서 **snapshot_jobid** 값을 확인합니다.  
   
 6.  5단계에서 얻은 **snapshot_jobid** 의 값을 **uniqueidentifier**로 변환합니다.  
   
-7.  
-  **msdb** 데이터베이스의 게시자에서 [](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)job_id**에 6단계에서 얻은 변환된 값을 지정하고 \@sp_start_job &#40;Transact-SQL&#41;** 을 실행합니다.  
+7.  **msdb** 데이터베이스의 게시자에서 **\@job_id**에 6단계에서 얻은 변환된 값을 지정하고 [sp_start_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)을 실행합니다.  
   
 8.  게시 데이터베이스의 게시자에서 [sp_addmergepartition&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql)을 실행합니다. 필터 절에서 [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 를 사용 ** \@** 하는 경우 ** \@게시** 에 대해 1 단계에서 게시의 이름을 지정 하 고, host_name [HOST_NAME transact-sql &#40;](/sql/t-sql/functions/host-name-transact-sql) 을 사용 하는 경우에는 ** \@suser_sname** 에 대 한 파티션을 정의 하는 데 사용 되는 값을 지정 합니다.  
   
@@ -146,25 +137,22 @@ ms.locfileid: "73882368"
     > [!NOTE]  
     >  이 작업은 2단계에서 정의한 초기 스냅샷 작업과 동일한 Windows 계정을 사용하여 실행됩니다. 매개 변수가 있는 스냅샷 작업과 관련 데이터 파티션을 제거하려면 [sp_dropdynamicsnapshot_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql)을 실행합니다.  
   
-10. 게시 데이터베이스의 게시자에서 1단계의 [](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)publication** 값을 지정하고 8단계의 \@** suser_sname** 또는 \@** host_name** 값을 지정하여 \@sp_helpmergepartition &#40;Transact-SQL&#41;** 을 실행합니다. 결과 집합에서 **dynamic_snapshot_jobid** 값을 확인합니다.  
+10. 게시 데이터베이스의 게시자에서 1단계의 **\@publication** 값을 지정하고 8단계의 **\@suser_sname** 또는 **\@host_name** 값을 지정하여 [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql)을 실행합니다. 결과 집합에서 **dynamic_snapshot_jobid** 값을 확인합니다.  
   
-11. 
-  **msdb** 데이터베이스의 배포자에서 [](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)job_id**에 9단계에서 얻은 값을 지정하여 \@sp_start_job&#40;Transact-SQL&#41;** 을 실행합니다. 이렇게 하면 파티션에 대한 매개 변수가 있는 스냅샷 작업이 시작됩니다.  
+11. **msdb** 데이터베이스의 배포자에서 **\@job_id**에 9단계에서 얻은 값을 지정하여 [sp_start_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql)을 실행합니다. 이렇게 하면 파티션에 대한 매개 변수가 있는 스냅샷 작업이 시작됩니다.  
   
 12. 8-11단계를 반복하여 각 구독에 대해 분할된 스냅샷을 생성합니다.  
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>게시를 만들고 각 파티션에 대한 스냅샷을 수동으로 만들려면  
   
-1.  
-  [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
+1.  [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
-2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. ** \@게시** 에 1 단계에서 사용 된 게시 이름을 지정 하 고 ** \@job_login** 및 ** \@암호**에 대해 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 게시자에 연결할 때 에이전트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 **** publisher_security_mode**에 대해 값 \@0**을 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**publisher_login\@ 및 ****publisher_password\@에 대해 ** 로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
+2.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. ** \@게시** 에 1 단계에서 사용 된 게시 이름을 지정 하 고 ** \@job_login** 및 ** \@암호**에 대해 스냅숏 에이전트 실행 되는 Windows 자격 증명을 지정 합니다. 에이전트가 게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우에도 **\@publisher_security_mode**에 대해 값 **0**을 지정하고 **\@publisher_login** 및 **\@publisher_password**에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
     > [!IMPORTANT]  
-    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+    >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-3.  
-  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+3.  [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 아티클을 추가합니다. 이 저장 프로시저는 게시의 각 아티클에 대해 한 번씩만 실행해야 합니다. 매개 변수가 있는 필터를 사용 하는 경우 ** \@subset_filterclause** 매개 변수를 사용 하 여 하나 이상의 아티클에 대해 매개 변수가 있는 행 필터를 지정 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 4.  다른 아티클이 매개 변수가 있는 행 필터에 따라 필터링되면 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행하여 아티클 간의 조인 또는 논리 레코드 관계를 정의합니다. 이 저장 프로시저는 정의되는 각 관계에 대해 한 번씩만 실행해야 합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
@@ -172,22 +160,22 @@ ms.locfileid: "73882368"
   
 6.  명령 프롬프트에서 **-DynamicSnapshotLocation** 에 분할된 스냅샷의 위치를 지정하고 파티션을 정의하는 다음 속성을 하나 또는 모두 지정하고 복제 스냅샷 에이전트를 다시 실행하여 대량 복사(.bcp) 파일을 생성합니다.  
   
-    -   **-Dynamicfilterhostname** - [HOST_NAME &#40;transact-sql&#41;](/sql/t-sql/functions/host-name-transact-sql) 사용 되는 경우의 값입니다.  
+    -   **-DynamicFilterHostName** - [HOST_NAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)이 사용되는 경우의 값  
   
-    -   **-Dynamicfilterlogin** - [SUSER_SNAME &#40;transact-sql&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 사용 되는 경우의 값입니다.  
+    -   **-DynamicFilterLogin** - [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql)이 사용되는 경우의 값  
   
 7.  6단계를 반복하여 각 구독에 대해 분할된 스냅샷을 생성합니다.  
   
 8.  다음 속성을 지정하고 각 구독에 대해 병합 에이전트를 실행하여 구독자에서 초기 분할된 스냅샷을 적용합니다.  
   
-    -   **-Hostname** -HOST_NAME의 실제 값이 재정의 되는 경우 파티션을 정의 하는 데 사용 되는 값입니다.  
+    -   **-Hostname** - HOST_NAME의 실제 값이 재정의되는 경우 파티션을 정의하는 데 사용되는 값  
   
-    -   **-DynamicSnapshotLocation** -이 파티션에 대 한 동적 스냅숏의 위치입니다.  
+    -   **-DynamicSnapshotLocation** - 이 파티션에 대한 동적 스냅샷의 위치  
   
 > [!NOTE]  
 >  복제 에이전트를 프로그래밍하는 방법에 대한 자세한 내용은 [복제 에이전트 실행 파일 개념](concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
  이 예에서는 매개 변수가 있는 필터를 사용하여 구독자가 스냅샷 생성 프로세스를 시작하는 병합 게시를 만듭니다. ** \@Job_login** 및 ** \@job_password** 에 대 한 값은 스크립팅 변수를 사용 하 여 전달 됩니다.  
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
@@ -255,7 +243,7 @@ PAUSE
 ```
   
   
-##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  다음과 같이 RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 분할된 스냅샷을 만들 수 있습니다.  
   
 -   구독자가 처음 동기화될 때 스냅샷 생성 및 적용을 요청하도록 허용합니다.  
@@ -268,95 +256,75 @@ PAUSE
 >  병합 아티클을 만들 때 <xref:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription>에 <xref:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption%2A> 값을 지정하여 아티클을 필터링함으로써 구독별로 고유한 겹치지 않는 파티션을 생성하면 병합 에이전트를 실행할 때마다 메타데이터가 정리됩니다. 따라서 분할된 스냅샷은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅샷 생성을 요청하도록 허용하는 것을 고려해야 합니다. 자세한 내용은 [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)항목의 "적절한 필터링 옵션 사용" 섹션을 참조하세요.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 합니다.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅샷 생성 및 배달을 시작하도록 허용하는 게시를 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>에서 `false`를 반환하면 데이터베이스가 있는지 확인합니다.  
+2.  게시 데이터베이스에 대해 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 클래스의 인스턴스를 만들고, 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 인스턴스에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정한 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>에서 `false`를 반환하면 데이터베이스가 있는지 확인합니다.  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 `false`이면 `true`로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> 속성이 `false`이면 `true`로 설정한 후 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출합니다.  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만들고 이 개체에 대해 다음 속성을 설정합니다.  
   
-    -   
-  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에서 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>에 대해 실행할 최대 동적 스냅샷 작업 수. 구독자가 스냅샷 요청을 언제든지 시작할 수 있으므로 이 속성은 여러 구독자가 분할된 스냅샷을 동시에 요청할 경우 동시에 실행 가능한 스냅샷 에이전트 작업 수를 제한합니다. 최대 작업 수가 실행되고 있으면 새로 추가된 분할된 스냅샷 요청은 실행 중인 작업 중 하나가 완료될 때까지 지연됩니다.  
+    -   <xref:Microsoft.SqlServer.Replication.MergePublication.MaxConcurrentDynamicSnapshots%2A>에 대해 실행할 최대 동적 스냅샷 작업 수. 구독자가 스냅샷 요청을 언제든지 시작할 수 있으므로 이 속성은 여러 구독자가 분할된 스냅샷을 동시에 요청할 경우 동시에 실행 가능한 스냅샷 에이전트 작업 수를 제한합니다. 최대 작업 수가 실행되고 있으면 새로 추가된 분할된 스냅샷 요청은 실행 중인 작업 중 하나가 완료될 때까지 지연됩니다.  
   
     -   비트 논리 OR 연산자(Visual C#의 경우 `|`, Visual Basic의 경우 `Or`)를 사용하여 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowSubscriberInitiatedSnapshot>에 값 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>을 추가합니다.  
   
     -   스냅샷 에이전트가 실행되는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> Windows 계정에 대한 자격 증명을 제공하는 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 의 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드.  
   
         > [!NOTE]  
-        >  
-  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 고정 서버 역할의 멤버가 게시를 만들 때는 `sysadmin`를 설정하는 것이 좋습니다. 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조 하세요.  
+        >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 때는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정하는 것이 좋습니다. 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조 하세요.  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하여 게시를 만듭니다.  
+5.  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하여 게시를 만듭니다.  
   
     > [!IMPORTANT]  
-    >  원격 배포자로 게시자를 구성할 경우 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 포함하여 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 
-  <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용 &#40;SQL Server 구성 관리자&#41;을 ](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)참조 하세요.  
+    >  원격 배포자로 게시자를 구성할 경우 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 포함하여 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-6.  
-  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정합니다. 필요한 경우 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
+6.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정합니다. 필요한 경우 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
-7.  
-  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 초기 스냅샷 에이전트 작업을 만듭니다.  
+7.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A> 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 초기 스냅샷 에이전트 작업을 만듭니다.  
   
 8.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅샷을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
-9. (옵션) `true` 속성이 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
+9. (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 속성이 `true` 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
   
 10. 구독자가 병합 에이전트에 처음으로 연결하는 경우에는 분할된 스냅샷이 자동으로 생성됩니다.  
   
 #### <a name="to-create-a-publication-and-pregenerate-or-automatically-refresh-snapshots"></a>게시를 만들고 스냅샷을 미리 생성하거나 자동으로 새로 고치려면  
   
-1.  
-  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
+2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
-3.  
-  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
+3.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 `false`이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
 4.  4단계에서 만든 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 개체의 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 그러면 초기 스냅샷을 생성하는 에이전트 작업이 시작됩니다. 초기 스냅샷을 생성하고 스냅샷 에이전트에 대한 사용자 지정 일정을 정의하는 방법은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)를 참조하십시오.  
   
-5.  
-  `true` 속성이 <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 속성이 `true` 값인지 확인하여 초기 스냅샷을 사용할 준비가 되었는지 확인합니다.  
   
-6.  
-  <xref:Microsoft.SqlServer.Replication.MergePartition> 클래스의 인스턴스를 만들고 다음 두 속성 중 하나 또는 모두를 사용하여 구독자에 대한 매개 변수가 있는 필터링 조건을 설정합니다.  
+6.  <xref:Microsoft.SqlServer.Replication.MergePartition> 클래스의 인스턴스를 만들고 다음 두 속성 중 하나 또는 모두를 사용하여 구독자에 대한 매개 변수가 있는 필터링 조건을 설정합니다.  
   
     -   구독자의 파티션이 [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 결과로 정의되는 경우 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A>을 사용합니다.  
   
     -   구독자의 파티션이 [HOST_NAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) 결과 또는 이 함수의 오버로드 결과로 정의되는 경우 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A>을 사용합니다.  
   
-7.  
-  <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> 클래스의 인스턴스를 만들고 6단계와 동일한 속성을 설정합니다.  
+7.  <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> 클래스의 인스턴스를 만들고 6단계와 동일한 속성을 설정합니다.  
   
-8.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> 클래스를 사용하여 구독자 파티션에 대한 필터링된 스냅샷을 생성할 일정을 정의합니다.  
+8.  <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> 클래스를 사용하여 구독자 파티션에 대한 필터링된 스냅샷을 생성할 일정을 정의합니다.  
   
 9. 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePublication> 의 인스턴스를 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergePartition%2A>을 호출합니다. 6단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체를 전달합니다.  
   
 10. 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePublication> 의 인스턴스를 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication.AddMergeDynamicSnapshotJob%2A> 메서드를 호출합니다. 7단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> 개체 및 8단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule> 개체를 전달합니다.  
   
-11. 
-  <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A>를 호출하고 반환된 배열의 새로 추가된 분할된 스냅샷 작업에서 <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> 개체를 찾습니다.  
+11. <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergeDynamicSnapshotJobs%2A>를 호출하고 반환된 배열의 새로 추가된 분할된 스냅샷 작업에서 <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob> 개체를 찾습니다.  
   
 12. 작업의 <xref:Microsoft.SqlServer.Replication.MergeDynamicSnapshotJob.Name%2A> 속성을 가져옵니다.  
   
@@ -366,44 +334,33 @@ PAUSE
   
 15. 14단계에서 만든 <xref:Microsoft.SqlServer.Management.Smo.Agent.Job> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Server.JobServer%2A> 속성 및 12단계에서 가져온 작업 이름을 전달하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 클래스의 인스턴스를 만듭니다.  
   
-16. 
-  <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A> 메서드를 호출하여 분할된 스냅샷 작업을 시작합니다.  
+16. <xref:Microsoft.SqlServer.Management.Smo.Agent.Job.Start%2A> 메서드를 호출하여 분할된 스냅샷 작업을 시작합니다.  
   
 17. 구독자별로 6단계에서 16단계까지 반복합니다.  
   
 #### <a name="to-create-a-publication-and-manually-create-snapshots-for-each-partition"></a>게시를 만들고 각 파티션에 대한 스냅샷을 수동으로 만들려면  
   
-1.  
-  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조하세요.  
+1.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 사용하여 병합 게시를 정의합니다. 자세한 내용은 [게시 만들기](publish/create-a-publication.md)를 참조 하세요.  
   
-2.  
-  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
+2.  <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성을 사용하여 게시에 아티클을 추가합니다. 매개 변수가 있는 필터를 정의하는 하나 이상의 아티클에 대해 <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> 속성을 지정하고 아티클 간 조인 필터를 정의하는 <xref:Microsoft.SqlServer.Replication.MergeJoinFilter> 개체를 만듭니다. 자세한 내용은 [아티클을 정의](publish/define-an-article.md)을 참조하세요.  
   
 3.  초기 스냅샷을 만듭니다. 자세한 내용은 [Create and Apply the Initial Snapshot](create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
-4.  
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent> 클래스의 인스턴스를 만들고 다음 필수 속성을 설정합니다.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publisher%2A> - 게시자의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherDatabase%2A> - 게시 데이터베이스의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Publication%2A> - 게시의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.Distributor%2A> - 배포자의 이름  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - Windows 통합 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값 또는 SQL Server 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 값  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.PublisherSecurityMode%2A> - Windows 통합 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값 또는 SQL Server 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 값  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - Windows 통합 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값 또는 SQL Server 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 값  
+    -   <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.DistributorSecurityMode%2A> - Windows 통합 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> 값 또는 SQL Server 인증을 사용하는 경우 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> 값  
   
-5.  
-  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> 에 <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>값을 설정합니다.  
   
 6.  다음 속성 중 하나 이상을 설정하여 분할 매개 변수를 정의합니다.  
   
@@ -415,7 +372,7 @@ PAUSE
   
 8.  구독자별로 4단계에서 7단계까지 반복합니다.  
   
-###  <a name="PShellExample"></a>예 (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>예 (RMO)  
  이 예제에서는 구독자에게 스냅샷 생성 요청을 허용하는 병합 게시를 만듭니다.  
   
  [!code-csharp[HowTo#rmo_CreateMergePub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
@@ -436,7 +393,7 @@ PAUSE
   
 ## <a name="see-also"></a>참고 항목  
  [매개 변수가 있는 행 필터](merge/parameterized-filters-parameterized-row-filters.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [복제 시스템 저장 프로시저 개념](concepts/replication-system-stored-procedures-concepts.md)   
  [매개 변수가 있는 필터를 사용 하는 병합 게시에 대 한 스냅숏](snapshots-for-merge-publications-with-parameterized-filters.md)   
  [복제 보안을 위한 최선의 구현 방법](security/replication-security-best-practices.md)  
   

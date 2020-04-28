@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400361"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>분석 플랫폼 시스템에 대 한 원격 분석 피드백을 Microsoft에 보내기
@@ -22,10 +22,10 @@ ms.locfileid: "74400361"
 > [!NOTE]  
 > 이 릴리스에서 Microsoft는 원격 분석 데이터를 적극적으로 모니터링 하 고 있지 않습니다. 데이터는 분석 목적 으로만 수집 됩니다.  
   
-## <a name="privacy"></a>개인 정보 보호  
+## <a name="privacy"></a><a name="privacy"></a>개인 정보 보호  
 최대 개인 정보 보호를 제공 하기 위해 AP는 원격 분석을 사용 하지 않고 제공 됩니다. 이 기능을 사용 하도록 설정 하기 전에 먼저 [Microsoft Analytics Platform System 개인 정보 취급 방침](https://go.microsoft.com/fwlink/?LinkId=400902)을 검토 합니다. 옵트인 하려면 아래 설명 된 PowerShell 스크립트를 실행 합니다.  
   
-## <a name="enable"></a>원격 분석 사용  
+## <a name="enable-telemetry"></a><a name="enable"></a>원격 분석 사용  
 **DNS 전달:** Microsoft로 원격 분석 데이터를 전송 하려면 분석 플랫폼 시스템에서 DNS 전달자를 통해 인터넷에 연결 해야 합니다. 이 기능을 사용 하도록 설정 하려면 모든 호스트 및 워크 로드 Vm에서 DNS 전달을 사용 하도록 설정 해야 합니다. DNS 전달을 `Enable-RemoteMonitoring` 적절히 구성 하 `SetupDnsForwarder` 고 원격 분석을 사용 하도록 설정 하는 옵션을 사용 하 여 명령을 호출 합니다. DNS 전달 `Enable-RemoteMonitoring` 이 이미 구성 `SetupDnsForwarder` 되어 있고 하트 비트 모니터링만 사용 하도록 설정 하려는 경우 옵션을 사용 하지 않고 명령을 호출 합니다.  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "74400361"
     > [!NOTE]  
     > 가져오려면 명령에서 두 개의 마침표를 사용 해야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ ms.locfileid: "74400361"
   
 명령을 여러 번 실행 하 `Enable-RemoteMonitoring` 는 경우에는 나쁜 영향을 주지 않습니다. DNS 전달 자가 이미 설정 된 경우에 대 한 경고 메시지가 표시 됩니다.  
   
-## <a name="disable"></a>원격 분석 사용 안 함  
+## <a name="disable-telemetry"></a><a name="disable"></a>원격 분석 사용 안 함  
 원격 분석을 사용 하지 않도록 설정 하면 클라우드의 AP 모니터링 서비스에 대 한 어플라이언스 상태 정보를 전달 하는 모든 작업이 중지 됩니다.  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ ms.locfileid: "74400361"
     > [!NOTE]  
     > 가져오려면 명령에서 두 개의 마침표를 사용 해야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ ms.locfileid: "74400361"
   
 4.  매개 변수 `Disable-RemoteMonitoring` 없이 명령을 호출 합니다. 이 명령은 사용자 의견 전송을 중지 합니다. 로컬 모니터링에는 영향을 주지 않습니다. 그러나이 명령은 DNS 전달자를 사용 하지 않도록 설정 하거나 인터넷 연결을 사용 하지 않도록 설정 하지 않습니다. 사용자 의견을 사용 하지 않도록 설정한 후 수동으로 수행 해야 합니다.  
   
-    **예:**  
+    **예제:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

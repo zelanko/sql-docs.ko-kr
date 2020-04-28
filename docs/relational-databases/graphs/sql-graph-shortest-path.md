@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056398"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-sql)
@@ -211,6 +211,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>참고 항목  
  [MATCH (SQL 그래프)](../../t-sql/queries/match-sql-graph.md)    
  [SQL 그래프를 &#40;CREATE TABLE&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)     
  

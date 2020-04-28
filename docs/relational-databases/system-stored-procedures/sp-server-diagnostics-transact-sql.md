@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982114"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982114"
 
 잠재적 오류를 감지하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 진단 데이터 및 상태 정보를 캡처합니다. 이 프로시저는 반복 모드로 실행되며 주기적으로 결과를 보냅니다. 일반 연결 또는 DAC 연결에서 호출할 수 있습니다.  
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상).  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,11 +59,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
-|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<가용성 그룹의 이름>*|  
-|**상태일**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> 인스턴스<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> 리소스<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<가용성 그룹의 이름>*|  
+|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
-|**데이터로**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
+|**데이터**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
@@ -87,7 +87,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |구성 요소|정상(1)|경고(2)|오류(3)|알 수 없음(0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |시스템|x|x|x||  
-|resource|x|x|x||  
+|리소스|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |events||||x|  

@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721657"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
@@ -101,8 +101,7 @@ ms.locfileid: "62721657"
   
  게시자를 처음으로 사용하는 경우에는 배포자 및 스냅샷 공유도 구성해야 합니다. 각 구독자의 병합 에이전트에는 이 스냅샷 공유에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [배포 구성](configure-distribution.md) 및 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
   
- 
-  `gen`은 websync xml 파일의 예약어입니다. 이름이 `gen`인 열을 포함하는 테이블은 게시하지 마십시오.  
+ `gen`은 websync xml 파일의 예약어입니다. 이름이 `gen`인 열을 포함하는 테이블은 게시하지 마십시오.  
   
 ## <a name="configuring-the-subscription"></a>구독 구성  
  게시를 설정하고 IIS를 구성한 다음에는 끌어오기 구독을 만들고 이 구독에서 IIS를 사용하여 동기화를 수행하도록 지정합니다. 웹 동기화는 끌어오기 구독에 대해서만 지원됩니다.  

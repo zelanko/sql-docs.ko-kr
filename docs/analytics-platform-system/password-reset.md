@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 952dbda04b4f7132406e3a6de4479afea1be92e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400901"
 ---
 # <a name="password-reset---analytics-platform-system"></a>암호 재설정-분석 플랫폼 시스템
@@ -48,7 +48,7 @@ SQL Server의 **sa** 로그인입니다. **sa** 는 **sysadmin** 고정 서버 �
   
 2.  **Configuration Manager**의 왼쪽 창에서 **암호 재설정**을 클릭 합니다.  
   
-3.  **계정** 드롭다운 메뉴에서 관리자 유형을 선택 하 고 **암호** 및 **암호 확인** 상자에 새 암호를 입력 합니다. **적용** 을 클릭 하 여 변경 내용을 저장 합니다.  
+3.  **계정** 드롭다운 메뉴에서 관리자 유형을 선택 하 고 **암호** 및 **암호 확인** 상자에 새 암호를 입력 합니다. 클릭 **적용** 변경 내용을 저장 합니다.  
   
     이러한 계정에 대 한 변경 내용은 현재 활성화 된 세션에는 영향을 주지 않지만 각 사용자에 대해 다음 번에 로그온 할 때 적용 됩니다.  
   

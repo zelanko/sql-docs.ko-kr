@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d0bda2d1851d7ec7900a23ad6203d4f85beb73f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844498"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
@@ -52,7 +52,7 @@ SQL Database V12를 사용 하는 경우 V11에만 적용 *dm_continuous_copy_st
  데이터를 검색 하려면 **db_owner** 데이터베이스 역할의 멤버 자격이 필요 합니다. Dbo 사용자, **dbmanager** 데이터베이스 역할의 멤버 및 sa 로그인도 모두이 뷰를 쿼리할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- **Dm_continuous_copy_status** 뷰는 **리소스** 데이터베이스에서 만들어지며 논리적 master를 비롯 한 모든 데이터베이스에 표시 됩니다. 그러나 논리 마스터에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
+ **Dm_continuous_copy_status** 뷰는 **리소스** 데이터베이스에서 만들어지며 논리적 master를 비롯 한 모든 데이터베이스에 표시 됩니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
   
  데이터베이스에서 연속 복사 관계가 종료 되 면 **dm_continuous_copy_status** 보기에서 해당 데이터베이스의 행이 사라집니다.  
   

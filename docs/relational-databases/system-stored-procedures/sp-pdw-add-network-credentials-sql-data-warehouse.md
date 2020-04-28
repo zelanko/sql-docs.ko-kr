@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844406"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
@@ -62,7 +62,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  이 저장 프로시저는에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService 계정에 네트워크 자격 증명을 추가 합니다. NetworkService 계정은 제어 노드와 계산 노드에서 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 되는 경우 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 대 한 읽기 및 쓰기 권한을 얻게 됩니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. 데이터베이스 백업을 수행 하기 위한 자격 증명 추가  
  다음 예에서는 도메인 사용자 seattle\david의 사용자 이름 및 암호 자격 증명을 IP 주소가 10.172.63.255 인 대상 서버에 연결 합니다. 사용자 seattle\david에는 대상 서버에 대 한 읽기/쓰기 권한이 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 이러한 자격 증명을 저장 하 고 백업 및 복원 작업을 수행 하는 데 필요한 대로 대상 서버에서 읽고 쓰는 데 사용 합니다.  

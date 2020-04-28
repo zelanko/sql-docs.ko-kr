@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056530"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 업그레이드
@@ -41,7 +41,7 @@ Data Migration Assistant은 온-프레미스 SQL Server를 원활 하 게 평가
 
 1. 원본에 대해 **원본 서버 정보** 섹션의 **서버 이름** 필드에 SQL Server 인스턴스 이름을 입력 합니다. 
 
-2. 원본 SQL Server 인스턴스에서 지 원하는 **인증 유형을** 선택 합니다.
+2. 원본 SQL Server 인스턴스에서 지원하는 **인증 형식**을 선택합니다.
 
 3. 대상의 경우 **대상 서버 정보** 섹션의 **서버 이름** 필드에 SQL Server 인스턴스 이름을 입력 합니다. 
 

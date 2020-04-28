@@ -1,5 +1,5 @@
 ---
-title: bcp_init | 마이크로 소프트 문서
+title: bcp_init | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782691"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -44,24 +44,24 @@ RETCODE bcp_init (
 
 유니코드 및 ANSI 이름:
 - bcp_initA (ANSI)
-- bcp_initW(유니코드)
+- bcp_initW (유니코드)
 
 ## <a name="arguments"></a>인수  
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *szTable*  
- 복사의 원본 또는 대상이 될 데이터베이스 테이블의 이름입니다. 이 이름은 데이터베이스 이름 또는 소유자 이름도 포함할 수 있습니다. 예를 들어, **pubs.gracie.titles,** **술집.. 제목,** **gracie.titles**및 **제목은** 모두 법적 테이블 이름입니다.  
+ 복사의 원본 또는 대상이 될 데이터베이스 테이블의 이름입니다. 이 이름은 데이터베이스 이름 또는 소유자 이름도 포함할 수 있습니다. 예를 들어 **pubs. gracie**, **pubs.. 제목**, **gracie**및 **제목은** 모두 유효한 테이블 이름입니다.  
   
- *eDirection가* DB_OUT 경우 *szTable은* 데이터베이스 뷰의 이름이 될 수도 있습니다.  
+ *Edirection* 이 DB_OUT 이면 *sztable* 은 데이터베이스 뷰의 이름일 수도 있습니다.  
   
- *eDirection가* DB_OUT bcp_exec [호출되기](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 전에 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 사용하여 SELECT 문을 지정하면 *szTable을* null로 설정해야 **bcp_init.**  
+ *Edirection* 이 DB_OUT이 고 [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) 를 호출 하기 전에 [BCP_CONTROL](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 를 사용 하 여 SELECT 문을 지정한 경우에는 **bcp_init** *sztable* 을 NULL로 설정 해야 합니다.  
   
  *szDataFile*  
- 복사의 원본 또는 대상이 될 사용자 파일의 이름입니다. [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)사용하여 변수에서 직접 데이터를 복사하는 경우 *szDataFile을* NULL로 설정합니다.  
+ 복사의 원본 또는 대상이 될 사용자 파일의 이름입니다. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 변수에서 직접 데이터를 복사 하는 경우 *SZDATAFILE* 집합을 NULL로 설정 합니다.  
   
  *szErrorFile*  
- 진행 메시지, 오류 메시지, 그리고 어떤 이유로 인해 사용자 파일에서 테이블로 복사하지 못한 모든 행의 복사본으로 채워질 오류 파일의 이름입니다. NULL이 *szErrorFile으로*전달되면 오류 파일이 사용되지 않습니다.  
+ 진행 메시지, 오류 메시지, 그리고 어떤 이유로 인해 사용자 파일에서 테이블로 복사하지 못한 모든 행의 복사본으로 채워질 오류 파일의 이름입니다. NULL이 *Szerrorfile*로 전달 되 면 오류 파일이 사용 되지 않습니다.  
   
  *eDirection*  
  복사의 방향이며 DB_IN 또는 DB_OUT입니다. DB_IN은 프로그램 변수 또는 사용자 파일에서 테이블로의 복사를 나타냅니다. DB_OUT은 데이터베이스 테이블에서 사용자 파일로의 복사를 나타냅니다. DB_OUT에는 사용자 파일 이름을 지정해야 합니다.  
@@ -70,29 +70,29 @@ RETCODE bcp_init (
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 다른 대량 복사 함수를 호출하기 전에 **bcp_init** 호출합니다. **bcp_init** 워크스테이션과. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ 다른 대량 복사 함수를 호출 하기 전에 **bcp_init** 를 호출 합니다. **bcp_init** 는 워크스테이션과 간의 데이터 대량 복사에 필요한 초기화를 수행 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **bcp_init** 함수는 대량 복사 함수와 함께 사용할 수 있도록 ODBC 연결 핸들과 함께 제공되어야 합니다. 핸들을 사용하려면 할당되었지만 연결되지 않은 연결 핸들에서 SQL_BCP_ON SQL_COPT_SS_BCP 설정된 [SQLSetConnectAttr을](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 사용합니다. 연결된 핸들에 특성을 할당하려고 하면 오류가 발생합니다.  
+ 대량 복사 함수에서 사용 하도록 설정 된 ODBC 연결 핸들을 사용 하 여 **bcp_init** 함수를 제공 해야 합니다. 핸들을 사용 하도록 설정 하려면 SQL_COPT_SS_BCP 설정 된 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 를 사용 하 여 할당 되었지만 연결 되지 않은 연결 핸들을 SQL_BCP_ON 합니다. 연결된 핸들에 특성을 할당하려고 하면 오류가 발생합니다.  
   
- 데이터 파일을 지정하면 **bcp_init** 데이터 파일이 아닌 데이터베이스 원본 또는 대상 테이블의 구조를 검사합니다. **bcp_init** 데이터베이스 테이블, 보기 또는 SELECT 결과 집합의 각 열을 기반으로 데이터 파일에 대한 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. **bcp_init** 다음과 같이 이러한 값을 설정합니다.  
+ 데이터 파일이 지정 되 면 **bcp_init** 는 데이터 파일이 아닌 데이터베이스 원본 또는 대상 테이블의 구조를 검사 합니다. **bcp_init** 는 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합의 각 열을 기반으로 데이터 파일에 대 한 데이터 형식 값을 지정 합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. **bcp_init** 은 다음과 같이 이러한 값을 설정 합니다.  
   
--   지정되는 데이터 형식은 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 열의 데이터 형식입니다. 데이터 형식은 sqlncli.h에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식으로 열거됩니다. 데이터 자체는 해당 컴퓨터 형식으로 표현됩니다. 즉, **정수** 데이터 형식의 열의 데이터는 데이터 파일을 만든 컴퓨터를 기반으로 크거나 작은 엔디안인 4바이트 시퀀스로 표시됩니다.  
+-   지정되는 데이터 형식은 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 열의 데이터 형식입니다. 데이터 형식은 sqlncli.h에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식으로 열거됩니다. 데이터 자체는 해당 컴퓨터 형식으로 표현됩니다. 즉, **정수** 데이터 형식 열의 데이터는 데이터 파일을 만든 컴퓨터를 기반으로 하는 4 바이트 시퀀스로 표시 됩니다.  
   
--   데이터베이스 데이터 형식의 길이가 고정된 경우 데이터 파일 데이터의 길이도 고정됩니다. 데이터(예: [bcp_exec)를](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)처리하는 대량 복사 함수는 데이터 파일의 데이터 길이가 데이터베이스 테이블, 보기 또는 SELECT 열 목록에 지정된 데이터의 길이와 동일할 것으로 예상되는 데이터 행을 구문 분석합니다. 예를 들어 **char(13)로** 정의된 데이터베이스 열의 데이터는 파일의 각 데이터 행에 대해 13자로 표시되어야 합니다. 데이터베이스 열이 Null 값을 허용하는 경우에는 고정 길이 데이터 앞에 Null 표시자를 붙일 수 있습니다.  
+-   데이터베이스 데이터 형식의 길이가 고정된 경우 데이터 파일 데이터의 길이도 고정됩니다. 데이터를 처리 하는 대량 복사 함수 (예: [bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md))는 데이터 파일에 있는 데이터의 길이가 데이터베이스 테이블, 뷰 또는 SELECT 열 목록에 지정 된 데이터의 길이와 동일할 것으로 예상 되는 데이터 행을 구문 분석 합니다. 예를 들어 **char (13)** 로 정의 된 데이터베이스 열에 대 한 데이터는 파일의 각 데이터 행에 대해 13 자로 표시 되어야 합니다. 데이터베이스 열이 Null 값을 허용하는 경우에는 고정 길이 데이터 앞에 Null 표시자를 붙일 수 있습니다.  
   
 -   종결자 바이트 시퀀스가 정의된 경우 종결자 바이트 시퀀스의 길이는 0으로 설정됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일의 데이터베이스 테이블에 있는 각 열에 데이터가 있어야 하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 원본일 때는 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합의 모든 열에서 데이터 파일로 데이터가 복사됩니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **복사할** bcp_exec 데이터베이스 테이블에서 열의 서수 위치를 기반으로 데이터를 배치합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]복사 하는 경우 **bcp_exec** 는 데이터베이스 테이블에서 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
   
--   데이터베이스 데이터 형식의 길이가 가변적이거나(예: **varbinary(22))** 또는 데이터베이스 열에 null 값이 포함될 수 있는 경우 데이터 파일의 데이터는 길이/null 표시기로 접두사에 붙어 있습니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
+-   데이터베이스 데이터 형식의 길이가 가변적 (예: **varbinary (22)**) 이거나 데이터베이스 열에 null 값이 포함 될 수 있는 경우 데이터 파일의 데이터 앞에 길이/null 표시기가 표시 됩니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
   
- 데이터 파일에 대해 지정된 데이터 형식 값을 변경하려면 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 호출하고 [bcp_colfmt.](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)  
+ 데이터 파일에 대해 지정 된 데이터 형식 값을 변경 하려면 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 및 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)를 호출 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 대량 복사 작업을 인덱스가 없는 테이블에 맞게 최적화하려면 데이터베이스 복구 모델을 SIMPLE 또는 BULK_LOGGED로 설정하면 됩니다. 자세한 내용은 대량 가져오기 및 [ALTER 데이터베이스에서](../../t-sql/statements/alter-database-transact-sql.md) [최소 로깅에 대한 필수 구성 조건을](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 대량 복사 작업을 인덱스가 없는 테이블에 맞게 최적화하려면 데이터베이스 복구 모델을 SIMPLE 또는 BULK_LOGGED로 설정하면 됩니다. 자세한 내용은 대량 가져오기 및 [ALTER database](../../t-sql/statements/alter-database-transact-sql.md) [의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md) 을 참조 하세요.  
   
- 데이터 파일이 사용되지 않으면 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 호출하여 각 열에 대한 데이터 메모리의 형식과 위치를 지정한 다음 데이터 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용하여 [bcp_sendrow.](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)  
+ 데이터 파일을 사용 하지 않는 경우 [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출 하 여 각 열에 대 한 데이터의 메모리 내 형식 및 위치를 지정한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)를 사용 하 여 데이터 행을에 복사 합니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서는 ODBC bcp_init 함수를 서식 파일과 함께 사용하는 방법을 보여 줍니다.  

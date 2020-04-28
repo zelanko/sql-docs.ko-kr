@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982238"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
@@ -50,11 +50,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **첫 번째** 트리거와 **마지막** 트리거는 서로 다른 두 트리거 여야 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**기본**|트리거가 첫 번째로 실행됩니다.|  
 |**최신**|트리거가 마지막으로 실행됩니다.|  
-|**없음을**|트리거가 정의되지 않은 순서로 실행됩니다.|  
+|**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
 `[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
   
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. DML 트리거의 실행 순서 설정  
- 다음 예에서는 `ddlDatabaseTriggerLog` 트리거를 `ALTER_TABLE` 데이터베이스에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이벤트가 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  
+ 다음 예에서는 `ddlDatabaseTriggerLog` 트리거를 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 `ALTER_TABLE` 이벤트가 발생한 후 실행되는 첫 번째 트리거로 지정합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,7 +127,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

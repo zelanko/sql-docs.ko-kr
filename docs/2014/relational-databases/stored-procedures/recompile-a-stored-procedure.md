@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721040"
 ---
 # <a name="recompile-a-stored-procedure"></a>저장 프로시저 다시 컴파일
@@ -37,9 +37,9 @@ ms.locfileid: "62721040"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   프로시저가 처음 컴파일되거나 다시 컴파일될 때 프로시저의 쿼리 계획은 데이터베이스와 해당 개체의 현재 상태에 맞게 최적화됩니다. 데이터베이스의 데이터나 구조가 크게 변경되는 경우 프로시저를 다시 컴파일하면 해당 변경 내용에 대한 프로시저의 쿼리 계획이 업데이트되고 최적화됩니다. 이에 따라 프로시저의 처리 성능이 향상될 수 있습니다.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62721040"
   
 -   프로시저의 특정 쿼리에서 비정형 값이나 임시 값을 정기적으로 사용하는 경우 해당 쿼리 내에서 RECOMPILE 쿼리 힌트를 사용하여 프로시저 성능을 높일 수 있습니다. 전체 프로시저 대신 쿼리 힌트를 사용하는 쿼리만 다시 컴파일되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 문 수준 재컴파일 동작이 모방됩니다. 그러나 RECOMPILE 쿼리 힌트는 프로시저의 현재 매개 변수 값을 사용할 뿐만 아니라 문을 컴파일할 때 저장 프로시저에 있는 지역 변수의 값도 사용합니다. 자세한 내용은 [쿼리 힌트(Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  `WITH RECOMPILE`Option  
  프로시저 정의를 만들 때 이 옵션을 사용하는 경우 데이터베이스에서 CREATE PROCEDURE 권한과 프로시저를 만들고 있는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62721040"
  `sp_recompile`시스템 저장 프로시저  
  지정된 프로시저에 대한 ALTER 권한이 있어야 합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>WITH RECOMPILE 옵션을 사용하여 저장 프로시저를 다시 컴파일하려면  
   

@@ -15,20 +15,19 @@ ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5f2d15e2a98f04d7481200dfea17cfe5ca852a84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729205"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] UI(사용자 인터페이스)의 각 기능 영역에 사용 권한을 할당할 수 있습니다. 기능 영역은 다음과 같습니다.  
   
--   **Explorer**  
+-   **탐색기나**  
   
 -   **버전 관리**  
   
@@ -42,8 +41,7 @@ ms.locfileid: "73729205"
   
  기능 영역에 사용 권한을 할당하면 UI의 해당 영역이 사용자 또는 그룹에 표시됩니다.  
   
- 
-  **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
+ **탐색기** 기능 영역 내에서 모델 개체 및 계층 멤버에 할당된 추가 사용 권한에 따라 사용자가 액세스할 수 있는 데이터가 결정됩니다. 다른 모든 기능 영역 내에서 사용자가 모델을 보고 모델에 대한 작업을 수행하려면 모델 관리자여야 합니다. 자세한 내용은 [관리자 &#40;MDS(Master Data Services)&#41;](../master-data-services/administrators-master-data-services.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
 >  슈퍼 사용자 권한이 있는 사용자는 효과적으로 모든 모델에 대한 관리자 권한이 있으며 다른 모든 기능 권한을 갖습니다.  
@@ -54,6 +52,6 @@ ms.locfileid: "73729205"
  [MDS(Master Data Services)&#41;&#40;기능 영역 권한 할당](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [모델 개체 사용 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [계층 멤버 권한 &#40;MDS(Master Data Services)&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [MDS(Master Data Services) &#40;사용 권한을 결정 하는 방법&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

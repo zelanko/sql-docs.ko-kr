@@ -15,10 +15,10 @@ ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e12489cc490c5b8ee9f363e329da9a057fac8f3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728984"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>겹치는 모델 및 멤버 권한(Master Data Services)
@@ -29,9 +29,9 @@ ms.locfileid: "73728984"
   
  멤버의 사용 권한이 해당 모델 개체와 다른 경우 다음 규칙이 적용됩니다.  
   
--   **Deny** 는 다른 모든 사용 권한을 재정의 합니다.  
+-   **거부** 는 다른 모든 사용 권한을 무시합니다.  
   
--   모델 수준에 대 한 **관리자** 권한은 다른 모든 사용 권한을 재정의 하 고 하위 수준에 대 한 모든 (CRUD) 액세스 권한으로 변경 됩니다.  
+-   모델에 대한**관리** 권한은 기타 모든 권한을 재정의하며, 하위 수준에서는 모든 권한(CRUD)으로 변경됩니다.  
   
 -   유효한 액세스 권한은 멤버 및 특성에 대한 권한과 일정 부분 일치합니다.  
   
@@ -44,11 +44,9 @@ ms.locfileid: "73728984"
 ## <a name="example-1"></a>예 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
- 
-  **모델** 탭의 Product 엔터티에는 **업데이트** 권한이 할당되어 있습니다. 엔터티의 모든 특성은 해당 사용 권한을 상속합니다.  
+ **모델** 탭의 Product 엔터티에는 **업데이트** 권한이 할당되어 있습니다. 엔터티의 모든 특성은 해당 사용 권한을 상속합니다.  
   
- 
-  **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **업데이트** 권한이 할당되어 있습니다.  
+ **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **업데이트** 권한이 할당되어 있습니다.  
   
  결과: **탐색기**에서 사용자에게는 Mountain Bikes 노드에 있는 모든 멤버의 모든 특성 값에 대한 **업데이트** 권한이 있습니다. 모든 다른 멤버와 특성은 숨겨집니다.  
   
@@ -57,11 +55,9 @@ ms.locfileid: "73728984"
 ## <a name="example-2"></a>예제 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
- 
-  **모델** 탭의 하위 범주 특성에는 **업데이트** 권한이 할당되어 있습니다.  
+ **모델** 탭의 하위 범주 특성에는 **업데이트** 권한이 할당되어 있습니다.  
   
- 
-  **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **읽기** 권한이 명시적으로 할당됩니다.  
+ **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **읽기** 권한이 명시적으로 할당됩니다.  
   
  결과: **탐색기**에서 사용자에게는 Mountain Bikes 노드에 있는 멤버의 하위 범주 특성 값에 대한 **읽기** 권한이 있습니다. 모든 다른 멤버와 특성은 숨겨집니다.  
   
@@ -70,11 +66,9 @@ ms.locfileid: "73728984"
 ## <a name="example-3"></a>예제 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- 
-  **모델** 탭의 하위 범주 특성에는 **읽기** 권한이 할당되어 있습니다.  
+ **모델** 탭의 하위 범주 특성에는 **읽기** 권한이 할당되어 있습니다.  
   
- 
-  **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **업데이트** 권한이 명시적으로 할당됩니다.  
+ **계층 멤버** 탭의 파생 계층에 있는 Mountain Bikes 하위 범주 노드에는 **업데이트** 권한이 명시적으로 할당됩니다.  
   
  결과: **탐색기**에서 사용자에게는 특성 값에 대한 **읽기** 권한이 있습니다. 모든 다른 멤버와 특성은 숨겨집니다.  
   
@@ -82,6 +76,6 @@ ms.locfileid: "73728984"
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) &#40;사용 권한을 결정 하는 방법&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [MDS(Master Data Services)&#41;&#40;겹치는 사용자 및 그룹 권한](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [겹치는 사용자 및 그룹 권한&#40;Master Data Services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

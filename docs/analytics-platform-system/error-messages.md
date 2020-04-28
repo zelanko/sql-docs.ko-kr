@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401159"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스의 오류 메시지
 
 PDW (병렬 데이터 웨어하우스) 오류 메시지는 PDW 구성 요소에서 발생 하는 오류 및 문제를 보고 하 고 PDW를 통해 표시 되는 SQL Server 오류가 포함 될 수도 있습니다. 이러한 오류 메시지에는 정보를 표시 하기 위해 일관 된 구문이 사용 됩니다. 이 구문을 이해 하면 SQL Server PDW에 대 한 문제를 식별 하 고 해결할 수 있습니다.  
   
-## <a name="Basics"></a>오류 메시지의 기본 사항  
+## <a name="error-message-basics"></a><a name="Basics"></a>오류 메시지의 기본 사항  
 반환 되는 오류 메시지는 동일한 구문을 따릅니다.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  
   
 각 필드에 대 한 가능한 값은 다음과 같습니다.  
   
-|필드|Description|예제|  
+|필드|설명|예제|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|문제에 대해 사용자에 게 경고 하는 "오류" 또는 기타 텍스트입니다.|오류|  
 |*SQL_State_Code*|ODBC 사양에 따른 SQL 상태 코드입니다. 드라이버는 응용 프로그램에 메시지를 반환할 때마다 적절 한 SQL 상태 코드를 생성 합니다. "Microsoft" 텍스트는 오류의 원인을 나타냅니다.|42000|  
