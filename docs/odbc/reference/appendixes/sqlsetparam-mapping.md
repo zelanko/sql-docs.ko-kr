@@ -1,5 +1,5 @@
 ---
-title: SQLSetParam 매핑 | 마이크로 소프트 문서
+title: SQLSetParam 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4d8e632412965664e5cdd9c87dc1e26787dcdab2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300533"
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam 매핑
-**SQLSetParam은** ODBC 2에서와 같이 **SQLBindParameter** 위에 계속 매핑됩니다. *x*. **SQLBindParam과**개념적으로 유사하지만 드라이버 관리자는 **SQLSetParam을** **SQLBindParam에**매핑하지 않습니다. 이는 특정 기존 ODBC 2이기 때문입니다. *x* 드라이버는 드라이버 관리자가 **SQLBindParameter** 위에 **SQLSetParam을** 매핑할 때 생성되는 *BufferLength(SQL_SETPARAM_VALUE_MAX)의* 특수 값을 사용하여 1에 의해 호출되는 시기를 결정합니다. *x* ODBC 응용 프로그램.  
+**SQLSetParam** 는 ODBC 2와 마찬가지로 **SQLBindParameter** 를 기반으로 계속 매핑됩니다. *x*. **Sqlbindparam 함수와**와 개념적으로 유사 하지만 드라이버 관리자는 **SQLSetParam** 를 **sqlbindparam 함수와**에 매핑하지 않습니다. 이는 기존의 특정 ODBC 2가 있기 때문입니다. *x* 드라이버는 **SQLBindParameter** 를 **SQLSetParam** 매핑할 때 드라이버 관리자가 생성 하는 특수 한 값의 *bufferlength* (SQL_SETPARAM_VALUE_MAX)를 사용 하 여 1에 의해 호출 되는 시기를 결정 합니다. *x* ODBC 응용 프로그램.  
   
- 에 대한 호출  
+ 호출입니다.  
   
 ```  
 SQLSetParam(hstmt, ipar, fCType, fSqlType, cbColDef, ibScale, rgbValue, pcbValue)  
 ```  
   
- 다음과 같은 결과가 발생합니다.  
+ 그러면 다음과 같은 결과가 발생 합니다.  
   
 ```  
 SQLBindParameter(StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, ColumnSize, DecimalDigits, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr)  

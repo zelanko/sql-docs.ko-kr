@@ -1,5 +1,5 @@
 ---
-title: 커밋 모드 | 마이크로 소프트 문서
+title: 커밋 모드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299123"
 ---
 # <a name="commit-mode"></a>커밋 모드

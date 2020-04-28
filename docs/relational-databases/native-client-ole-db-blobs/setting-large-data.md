@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fde7a3fd5dadb59895c2edc643d7d482b89370ab
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297695"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자를 사용하면 소비자 저장소 개체에 포인터를 전달하여 BLOB 데이터를 설정할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하면 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
   
  소비자는 이 데이터가 포함된 스토리지 개체를 만들고 이 스토리지 개체에 대한 포인터를 공급자에게 전달합니다. 그러면 공급자는 소비자 스토리지 개체에서 데이터를 읽고 이를 BLOB 열에 씁니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81297695"
 ## <a name="how-to-set-large-data"></a>대규모 데이터를 설정하는 방법  
  자체의 스토리지 개체에 대한 포인터를 전달하기 위해 소비자는 BLOB 열의 값을 바인딩하는 접근자를 만든 다음 **IRowsetChange::SetData** 또는 **IRowsetChange::InsertRow** 메서드를 호출합니다. BLOB 데이터를 설정하려면 다음과 같이 하십시오.  
   
-1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 *dwFlag* 요소를 STGM_READ *iid* 요소를 IID_ISequentialStream(노출할 인터페이스)로 설정합니다.  
+1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 *Dwflag* 요소를 STGM_READ 설정 하 고 *iid* 요소를 IID_ISequentialStream (노출할 인터페이스)로 설정 합니다.  
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   
@@ -721,7 +721,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [BloB 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [Blob 및 OLE 개체](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [큰 값 형식 사용](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

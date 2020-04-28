@@ -1,5 +1,5 @@
 ---
-title: 설치 프로그램 DLL API 참조 기능 | 마이크로 소프트 문서
+title: 설치 관리자 DLL API 참조 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 47fcadc3-f102-4989-9ee7-a1c65233142a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3502dfe6cdf54214041e3654d20e1b6dd2ff6f21
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298783"
 ---
 # <a name="installer-dll-api-reference-function"></a>설치 관리자 DLL API 참조 함수
-이 섹션에서는 설치 관리자 DLL API의 함수 구문을 설명합니다. 설치 프로그램 DLL API는 20개의 기능으로 구성됩니다. 이러한 함수 중 세 가지, **SQLGetTranslator,** **SQLRemoveDSNFromIni**및 **SQLWriteDSNToIni는**설치 DLL에 의해서만 호출됩니다. 다른 함수는 설치 및 관리 프로그램에서 호출됩니다.  
+이 섹션에서는 설치 관리자 DLL API의 함수 구문에 대해 설명 합니다. 설치 관리자 DLL API는 20 개의 함수로 구성 됩니다. **SQLGetTranslator**, **SQLRemoveDSNFromIni**및 **Sqlwritedsntoini**의 세 가지 함수는 설치 dll에 의해서만 호출 됩니다. 다른 함수는 설치 프로그램 및 관리 프로그램에 의해 호출 됩니다.  
   
- 각 함수는 도입된 ODBC 버전으로 레이블이 지정됩니다.  
+ 각 함수에는 해당 함수가 도입 된 ODBC 버전으로 레이블이 지정 됩니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81298783"
   
 -   [SQLInstallTranslatorEx 함수](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)  
   
--   [SQLManageDataSource 기능](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
+-   [SQLManageDataSources 함수](../../../odbc/reference/syntax/sqlmanagedatasources.md)  
   
 -   [SQLPostInstallerError 함수](../../../odbc/reference/syntax/sqlpostinstallererror-function.md)  
   

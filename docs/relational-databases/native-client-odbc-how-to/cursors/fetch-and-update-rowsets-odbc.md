@@ -1,5 +1,5 @@
 ---
-title: 가져오기 및 업데이트 행 집합 (ODBC) | 마이크로 소프트 문서
+title: 행 집합 인출 및 업데이트 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cec50f99fe5f56c9ce613a8b12c0349823f6f461
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299578"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>행 집합 인출 및 업데이트(ODBC)
@@ -26,7 +26,7 @@ ms.locfileid: "81299578"
     
 ### <a name="to-fetch-and-update-rowsets"></a>행 집합을 인출하고 업데이트하려면  
   
-1.  선택적으로 [SQL_ROW_ARRAY_SIZE SQLSetStmtAttr을](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 호출하여 행 집합의 행 수(R)를 변경합니다.  
+1.  필요에 따라 SQL_ROW_ARRAY_SIZE를 사용 하 여 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 호출 하 여 행 집합의 행 수 (R)를 변경 합니다.  
   
 2.  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) 또는 [SQLFetchScroll](../../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) 을 호출하여 행 집합을 가져옵니다.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "81299578"
 6.  필요한 경우 커서 이름( [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md)에서 사용 가능)을 지정하고 같은 연결에서 다른 문 핸들을 사용하여 지정된 UPDATE 문이나 DELETE 문을 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용 방법 주제](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [커서 사용 방법 항목 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

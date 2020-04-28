@@ -1,5 +1,5 @@
 ---
-title: 상호 커베로스 인증 받기 | 마이크로 소프트 문서
+title: 상호 Kerberos 인증 가져오기 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d222f54b3c19d0deaeab4a370ded226856f2246
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301143"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
@@ -25,7 +25,7 @@ ms.locfileid: "81301143"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서는 이 예제를 사용할 수 없습니다.  
   
- 자세한 내용은 [클라이언트 연결에서 서비스 주체 이름 &#40;SPN&#41; 지원을](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)참조하십시오.  
+ 자세한 내용은 [클라이언트 연결에서 SPN&#41; 지원 &#40;서비스 사용자 이름](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  이 예제를 64비트 운영 체제에서 32비트 애플리케이션으로 작성하여 실행하려는 경우 %windir%\SysWOW64\odbcad32.exe에서 ODBC 관리자를 사용하여 ODBC 데이터 원본을 만들어야 합니다.  

@@ -19,18 +19,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: daf4f4c0c7c6c1d53c2ab899dd150756399d53a3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297000"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>스키마 행 집합 - 분산 쿼리 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  분산 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 쿼리를 지원하기 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 위해 네이티브 클라이언트 OLE DB 공급자 **IDBSchemaRowset** 인터페이스는 연결된 서버에서 메타데이터를 반환합니다.  
+  분산 쿼리 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** 인터페이스는 연결 된 서버에 대 한 메타 데이터를 반환 합니다.  
   
- DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. 카탈로그별로 스키마 행 집합 출력을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 제한할 때 네이티브 클라이언트 OLE DB 공급자는 연결된 서버 및 카탈로그 이름을 포함하는 두 부분으로 구성된 이름을 인식합니다. 아래 표의 스키마 행 집합의 경우 두 부분으로 구성된 카탈로그 이름을 _linked_server._**.** _카탈로그는_ 명명된 연결된 서버의 해당 카탈로그로 출력을 제한합니다.  
+ DBPROPSET_SQLSERVERSESSION 속성 SSPROP_QUOTEDCATALOGNAMES가 VARIANT_TRUE이면 카탈로그 이름에 따옴표 붙은 식별자(예: "my.catalog")를 지정할 수 있습니다. Catalog에서 스키마 행 집합 출력을 제한할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결 된 서버 및 카탈로그 이름을 포함 하는 두 부분으로 구성 된 이름을 인식 합니다. 아래 표의 스키마 행 집합에 대해 두 부분으로 구성 된 카탈로그 이름을 _linked_server_로 지정 합니다 **.** _catalog_ 는 지정 된 연결 된 서버의 해당 카탈로그로 출력을 제한 합니다.  
   
 |스키마 행 집합|카탈로그 제한|  
 |-------------------|-------------------------|  
@@ -46,10 +46,10 @@ ms.locfileid: "81297000"
 > [!NOTE]  
 >  스키마 행 집합을 연결된 서버의 모든 카탈로그로 제한하려면 구문 *linked_server*(여기서 마침표 구분 기호가 이름 사양에 포함됨)를 사용합니다. 이 구문은 카탈로그 이름 제한에 NULL을 지정하는 것과 같으며 연결된 서버가 카탈로그를 지원하지 않는 데이터 원본을 나타내는 경우에도 사용됩니다.  
   
- 네이티브 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 연결된 서버로 등록된 OLE DB 데이터 원본 목록을 반환하는 스키마 행 집합 LINKEDSERVERS를 정의합니다.  
+ Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 연결 된 서버로 등록 된 OLE DB 데이터 원본 목록을 반환 하는 스키마 행 집합 LINKEDSERVERS를 정의 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [레올 DB&#41;&#40;스키마 행셋 지원](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
+ [스키마 행 집합 지원 &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 행 집합&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

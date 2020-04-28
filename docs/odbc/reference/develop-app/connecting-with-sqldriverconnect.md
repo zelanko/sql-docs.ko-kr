@@ -1,5 +1,5 @@
 ---
-title: SQL드라이버커넥트연결 | 마이크로 소프트 문서
+title: SQLDriverConnect를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6cd95364d8a5316a50d9f55616236a8677bf99e4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299073"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect로 연결
-**SQLDriverConnect는** 연결 문자열을 사용하여 데이터 원본에 연결하는 데 사용됩니다. **SQLDriverConnect는** 다음과 같은 이유로 **SQLConnect** 대신 사용됩니다.  
+**SQLDriverConnect** 는 연결 문자열을 사용 하 여 데이터 원본에 연결 하는 데 사용 됩니다. **SQLDriverConnect** 는 다음과 같은 이유로 **SQLConnect** 대신 사용 됩니다.  
   
--   응용 프로그램에서 드라이버 관련 연결 정보를 사용하도록 합니다.  
+-   응용 프로그램에서 드라이버별 연결 정보를 사용할 수 있도록 합니다.  
   
 -   드라이버가 연결 정보를 묻는 메시지를 사용자에게 표시하도록 하려는 경우  
   
--   데이터 원본을 지정하지 않고 연결합니다.  
+-   데이터 원본을 지정 하지 않고 연결 하려면입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

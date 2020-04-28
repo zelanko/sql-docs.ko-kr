@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiag필드 | 마이크로 소프트 문서
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b0d704d76caa3f2a70744a3f2cb4358251f26e55
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299733"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -62,7 +62,7 @@ ms.locfileid: "81299733"
 |SQL_DIAG_DFC_SS_DROP_TRIGGER|DROP TRIGGER 문|  
 |SQL_DIAG_DFC_SS_DUMP_DATABASE|BACKUP 또는 DUMP DATABASE 문|  
 |SQL_DIAG_DFC_SS_DUMP_TABLE|DUMP TABLE 문|  
-|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. 또한 **trunc. chkpt에 로그인하는** 경우 CHECKPOINT 문을 반환합니다. 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
+|SQL_DIAG_DFC_SS_DUMP_TRANSACTION|BACKUP 또는 DUMP TRANSACTION 문. **Trunc가 chkpt** 인 경우에는 CHECKPOINT 문에 대해서도 반환 됩니다. 데이터베이스 옵션이 설정되어 있으면 CHECKPOINT 문에 대해서도 반환됩니다.|  
 |SQL_DIAG_DFC_SS_GOTO|GOTO 흐름 제어 문|  
 |SQL_DIAG_DFC_SS_INSERT_BULK|INSERT BULK 문|  
 |SQL_DIAG_DFC_SS_KILL|KILL 문|  
@@ -97,12 +97,12 @@ ms.locfileid: "81299733"
 |SQL_DIAG_DFC_SS_WRITETEXT|WRITETEXT 문|  
   
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField 및 테이블 반환 매개 변수  
- SQLGetDiagField는 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER 두 가지 진단 필드를 검색하는 데 사용할 수 있습니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
+ SQLGetDiagField를 사용 하 여 두 개의 진단 필드인 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER를 검색할 수 있습니다. 두 필드는 진단 레코드와 관련된 오류 또는 경고를 발생시킨 값을 확인하는 데 유용합니다.  
   
- 테이블 값 매개 변수에 대한 자세한 내용은 ODBC&#41;[&#40;테이블 값 매개 변수를 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)참조하십시오.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQLGetDiag필드 함수](https://go.microsoft.com/fwlink/?LinkId=59352)   
+ [SQLGetDiagField 함수](https://go.microsoft.com/fwlink/?LinkId=59352)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

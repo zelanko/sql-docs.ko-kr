@@ -1,5 +1,5 @@
 ---
-title: 로그된 대. 로깅되지 않은 수정 사항 | 마이크로 소프트 문서
+title: 기록 및 기록 되지 않는 수정 Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc7fb913bef4083b045a0c1c010bdedbc43135c5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297696"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>기록되는 수정 및 기록되지 않는 수정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  응용 프로그램은 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 ODBC 드라이버가 **텍스트,** **ntext**및 **이미지** 수정을 기록하지 않도록 요청할 수 있습니다. 하지만 이 옵션을 사용할 때는 주의해야 합니다. **텍스트,** **ntext**또는 **이미지** 데이터가 중요하지 않고 데이터 소유자가 더 높은 성능을 위해 데이터를 복구할 수 있는 기능을 기꺼이 사용하지 않는 경우에만 사용해야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에서는 NATIVE Client ODBC 드라이버가 **text**, **ntext**및 **image** 를 기록 하지 않도록 요청할 수 있습니다. 하지만 이 옵션을 사용할 때는 주의해야 합니다. **Text**, **ntext**또는 **image** 데이터가 중요 하지 않으며 데이터 소유자가 더 높은 성능을 위해 데이터를 복구 하는 기능을 절충 하는 경우에만 사용 해야 합니다.  
   
- **텍스트,** **ntext**및 **이미지** 수정의 로깅은 TEXTPTR_LOGGING SQL_SOPT_SS_ 설정된 *특성* 매개 변수를 사용하여 [SQLSetStmtAttr을](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 호출하여 제어하고 *ValuePtr은* SQL_TL_ON 또는 SQL_TL_OFF 설정합니다.  
+ **Text**, **ntext**및 **image** 수정의 로깅은 *특성* 매개 변수를 SQL_SOPT_SS_ TEXTPTR_LOGGING *로 설정 하 고 SQL_TL_OFF* SQL_TL_ON, [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 를 호출 하 여 제어 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [text 및 image 열 관리](../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  

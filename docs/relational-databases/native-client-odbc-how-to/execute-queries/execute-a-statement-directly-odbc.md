@@ -1,5 +1,5 @@
 ---
-title: 직접 성명서 실행 (ODBC) | 마이크로 소프트 문서
+title: 직접 문 실행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9a4516f25ee6d18ddb56bedab1e55a2924c03873
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294229"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>직접 문 실행(ODBC)
@@ -89,6 +89,6 @@ ms.locfileid: "81294229"
  **참고** 열 단위 및 행 단위 바인딩은 일반적으로 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=59360) 보다는 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=58400) 및 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58399)와 함께 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;쿼리 방법 항목 실행](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

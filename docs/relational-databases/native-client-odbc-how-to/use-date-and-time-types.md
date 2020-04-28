@@ -1,5 +1,5 @@
 ---
-title: 사용 날짜 및 시간 유형 | 마이크로 소프트 문서
+title: 날짜 및 시간 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 79ace76e1652cad35c3c04a78e767c0e9a6b4228
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298283"
 ---
 # <a name="use-date-and-time-types"></a>날짜 및 시간 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 형식 사용에 대한 자세한 내용은 [ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)&#41;&#40;날짜 및 시간 개선 사항을 참조하십시오.  
+  이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 유형을 사용 하는 방법에 대 한 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  DateTime이라는 ODBC 데이터 원본이 필요합니다. DateTime의 기본 데이터베이스는 tempdb입니다. 이 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에 대한 ODBC 드라이버를 기반으로 해야 합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "81298283"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 사용하는 테이블을 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 만듭니다.  
   
  odbc32.lib 및 user32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 세 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 사용하는 테이블을 삭제합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 테이블을 삭제 합니다.  
   
 ```sql
 use tempdb  

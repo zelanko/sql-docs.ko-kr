@@ -1,5 +1,5 @@
 ---
-title: 블록 크기 명령 설정 | 마이크로 소프트 문서
+title: 블록 크기 설정 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 3eb9fbe9df90f7ddafebc6baa029164a578a6da3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300903"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE 명령
-메모 필드 저장에 디스크 공간이 할당되는 방법을 지정합니다.  
+메모 필드의 저장소에 대해 디스크 공간을 할당 하는 방법을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -30,8 +30,8 @@ SET BLOCKSIZE TO nBytes
 ```  
   
 ## <a name="arguments"></a>인수  
- *n바이트*  
- 메모 필드에 대한 디스크 공간이 할당되는 블록 크기를 지정합니다. *n바이트가* 0이면 디스크 공간은 단일 바이트(1바이트 블록)로 할당됩니다. *nBytes가* 1에서 32 사이의 정수인 경우 디스크 공간은 *nBytes* 바이트 블록에 512를 곱한 값으로 할당됩니다. *nBytes가* 32보다 큰 경우 디스크 공간은 *nBytes* 바이트 블록에 할당됩니다. 블록 크기 값이 32보다 큰 경우 상당한 디스크 공간을 절약할 수 있습니다.  
+ *nBytes*  
+ 메모 필드에 대 한 디스크 공간이 할당 되는 블록 크기를 지정 합니다. *Nbytes* 가 0 인 경우 디스크 공간은 단일 바이트 (1 바이트 블록)로 할당 됩니다. *Nbytes* 가 1에서 32 사이의 정수 이면 디스크 공간은 *nbytes* 바이트의 블록에 512를 곱하여 할당 됩니다. *Nbytes* 가 32 보다 큰 경우 디스크 공간은 *nbytes* 바이트 블록으로 할당 됩니다. 32 보다 큰 블록 크기 값을 지정 하면 실제 디스크 공간을 절약할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- SET BLOCKSIZE의 기본값은 64입니다. 파일을 만든 후 블록 크기를 다른 값으로 재설정하려면 파일을 새 값으로 설정한 다음 COPY를 사용하여 새 테이블을 만듭니다. 새 테이블에 지정된 블록 크기가 있습니다.
+ 집합 블록 블록의 기본값은 64입니다. 파일이 만들어진 후 블록 크기를 다른 값으로 다시 설정 하려면 새 값으로 설정한 다음 복사를 사용 하 여 새 테이블을 만듭니다. 새 테이블에는 지정 된 블록 크기가 지정 됩니다.

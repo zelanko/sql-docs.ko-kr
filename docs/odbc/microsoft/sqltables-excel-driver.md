@@ -1,5 +1,5 @@
 ---
-title: SQL테이블 (엑셀 드라이버) | 마이크로 소프트 문서
+title: SQLTables (Excel 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c436a1f52a862cda753d8c043515f5584607d98c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299303"
 ---
 # <a name="sqltables-excel-driver"></a>SQLTables(Excel 드라이버)
 > [!NOTE]  
->  이 항목에서는 Excel 드라이버 관련 정보를 제공합니다. 이 함수에 대한 일반적인 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
+>  이 항목에서는 Excel 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
 |인수|주석|  
 |--------------|--------------|  
-|*szTable소유자*|*szTableOwner에* 대 한 유일한 유효한 인수는 NULL 드라이버 중 어느 것도 소유자 이름을 지원 하기 때문에 NULL입니다. *szTableOwner를* NULL로 설정하면 모든 테이블이 반환됩니다. null은 TABLE_OWNER 열에서 반환됩니다.|  
-|*szTable한정자*|Microsoft Excel 3.0 또는 4.0 드라이버를 사용하는 경우 기존 테이블의 이름이 아닌 *szTableQualifier* 값을 가진 **SQLTable을** 호출하면 드라이버가 해당 이름의 테이블을 만듭니다.<br /><br /> TABLE_QUALIFIER 열에서 **SQLTable** 디렉터리로 경로를 반환합니다.|  
-|*스즈테이블 타입*|Microsoft Excel 3.0 또는 4.0의 경우 "TABLE"이 지원되는 유일한 테이블 유형입니다.<br /><br /> 이후 버전의 Microsoft Excel 파일의 경우 시트 이름(끝에 "$"이 있는 테이블)에 대해 "SYSTEM TABLE"이 반환되고 워크시트 내의 테이블에 대해 "TABLE"이 반환됩니다.|
+|*szTableOwner*|모든 드라이버가 소유자 이름을 지원 하지 않으므로 *Sztableowner* 에 대해 올바른 인수는 NULL입니다. *Sztableowner* 를 NULL로 설정 하면 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
+|*szTableQualifier*|Microsoft Excel 3.0 또는 4.0 드라이버를 사용 하는 경우 기존 테이블의 이름이 아닌 *Sztablequalifier* 의 값을 사용 하 여 **sqltables** 를 호출 하면 드라이버에서 해당 이름의 테이블을 만듭니다.<br /><br /> TABLE_QUALIFIER 열에서 **Sqltables** 는 디렉터리에 대 한 경로를 반환 합니다.|  
+|*SzTableType*|Microsoft Excel 3.0 또는 4.0의 경우 "TABLE"은 유일 하 게 지원 되는 테이블 유형입니다.<br /><br /> 이후 버전의 Microsoft Excel 파일에서는 시트 이름 (끝에 "$"가 있는 테이블)에 대해 "시스템 테이블"이 반환 되 고 워크시트 내의 테이블에 대해 "TABLE"이 반환 됩니다.|

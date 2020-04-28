@@ -1,5 +1,5 @@
 ---
-title: 커서 사용 (ODBC) | 마이크로 소프트 문서
+title: 커서 사용 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45190660a75fed82f339ec845ee2b40faaf14c02
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294283"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
@@ -30,7 +30,7 @@ ms.locfileid: "81294283"
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY 특성을 설정합니다(기본 옵션).  
   
-     Or  
+     또는  
   
      SQL_CURSOR_SCROLLABLE 및 SQL_CURSOR_SENSITIVITY 특성을 설정합니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81294283"
   
      열 단위 바인딩을 사용합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      행 단위 바인딩을 사용합니다.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "81294283"
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY를 설정하거나 SQL_ATTR_CURSOR_SENSITIVITY 및 SQL_ATTR_CURSOR_SCROLLABLE을 설정하여 사용되는 커서 유형을 제어할 수 있습니다. 커서 동작을 지정할 때 이 두 방법을 함께 사용하면 안 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;커서 사용 방법 주제](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [커서 사용 방법 항목 ODBC&#41;&#40;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

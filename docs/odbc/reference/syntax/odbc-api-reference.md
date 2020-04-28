@@ -1,5 +1,5 @@
 ---
-title: ODBC API 참조 | 마이크로 소프트 문서
+title: ODBC API 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,20 +12,20 @@ ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298937"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 참조
-이 섹션의 항목은 각 ODBC 함수를 알파벳 순으로 설명합니다. 각 함수는 C 프로그래밍 언어 함수로 정의됩니다. 설명에는 다음이 포함됩니다.  
+이 섹션의 항목에서는 각 ODBC 함수를 알파벳 순서로 설명 합니다. 각 함수는 C 프로그래밍 언어 함수로 정의 됩니다. 설명에는 다음이 포함 됩니다.  
   
--   용도  
+-   목적  
   
 -   ODBC 버전  
   
--   표준 CLI 적합성 수준  
+-   표준 CLI 규칙 수준  
   
 -   구문  
   
@@ -35,20 +35,20 @@ ms.locfileid: "81298937"
   
 -   진단  
   
--   사용 및 구현에 대한 의견  
+-   사용 및 구현에 대 한 주석  
   
 -   코드 예제  
   
--   관련 기능에 대한 참조  
+-   관련 함수에 대 한 참조  
   
- 표준 CLI 적합성 수준은 ISO 92, 오픈 그룹, ODBC 또는 더 이상 사용되지 않는 수준 중 하나일 수 있습니다. 오픈 그룹은 ISO 92의 순수 한 슈퍼 집합이기 때문에 ISO 92 준수로 태그된 함수도 Open 그룹 버전 1에 나타납니다. Open 그룹 준수로 태그가 지정된 함수도 ODBC 3에 나타납니다. *X,* ODBC 3 때문에. *x는* 오픈 그룹 버전 1의 순수 한 슈퍼 세트입니다. ODBC 를 준수하는 것으로 태그가 지정된 함수는 표준에 나타나지 않습니다. 더 이상 사용되지 않은 것으로 태그가 지정된 함수는 ODBC 3에서 더 이상 사용되지 않습니다. *x*.  
+ 표준 CLI 규칙 수준은 ISO 92, Open Group, ODBC 또는 사용 되지 않는 중 하나일 수 있습니다. Open Group은 ISO 92의 순수 상위 집합 이므로 ISO 92 규격으로 태그가 지정 된 함수가 오픈 그룹 버전 1에도 나타납니다. 개방형 그룹 규격으로 태그가 지정 된 함수는 ODBC 3에도 표시 됩니다. ODBC 3 이기 때문에 *x*입니다. *x* 는 개방형 그룹 버전 1의 순수 상위 집합입니다. ODBC 규격으로 태그가 지정 된 함수가 두 표준 모두에 표시 되지 않습니다. 사용 되지 않는 것으로 태그가 지정 된 함수는 ODBC 3에서 더 이상 사용 되지 않습니다. *x*.  
   
- 진단 정보의 처리는 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명에 설명되어 있습니다. SQLSTATE 값과 연결된 텍스트는 조건에 대한 설명을 제공하기 위해 포함되어 있지만 특정 텍스트를 규정하기 위한 것은 아닙니다.  
+ 진단 정보 처리는 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명에 설명 되어 있습니다. SQLSTATE 값과 연결 된 텍스트는 조건에 대 한 설명을 제공 하기 위해 포함 되지만 특정 텍스트를 규정 하기 위한 것은 아닙니다.  
   
 > [!NOTE]  
->  ODBC 기능에 대한 드라이버 관련 정보는 드라이버 섹션을 참조하십시오.  
+>  ODBC 함수에 대 한 드라이버 관련 정보는 드라이버에 대 한 섹션을 참조 하세요.  
   
- 이 섹션에는 다음 기능에 대한 항목이 포함되어 있습니다.  
+ 이 섹션에는 다음 함수에 대 한 항목이 포함 되어 있습니다.  
   
 -   [SQLAllocConnect 함수](../../../odbc/reference/syntax/sqlallocconnect-function.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "81298937"
   
 -   [SQLExecDirect 함수](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
   
--   [SQL실행 함수](../../../odbc/reference/syntax/sqlexecute-function.md)  
+-   [SQLExecute 함수](../../../odbc/reference/syntax/sqlexecute-function.md)  
   
 -   [SQLExtendedFetch 함수](../../../odbc/reference/syntax/sqlextendedfetch-function.md)  
   
@@ -180,7 +180,7 @@ ms.locfileid: "81298937"
   
 -   [SQLSetCursorName 함수](../../../odbc/reference/syntax/sqlsetcursorname-function.md)  
   
--   [SQLSetDesc필드 함수](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
+-   [SQLSetDescField 함수](../../../odbc/reference/syntax/sqlsetdescfield-function.md)  
   
 -   [SQLSetDescRec 함수](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 성명서 준비 및 실행 (ODBC) | 마이크로 소프트 문서
+title: 문 준비 및 실행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: eaf7e3518f369639ba3d2eb854a103ff839276c7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294160"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>문 준비 및 실행(ODBC)
@@ -57,11 +57,11 @@ ms.locfileid: "81294160"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 매개 변수 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[S]을 가리키도록 설정합니다.  
   
-2.  SQLPrepare를 호출하여 문을 준비합니다.  
+2.  SQLPrepare를 호출 하 여 문을 준비 합니다.  
   
 3.  필요에 따라 [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) 를 호출하여 준비된 문의 매개 변수 수를 확인합니다.  
   
-4.  선택적으로 준비된 문의 각 매개 변수에 대해 SQLDescribeParam을 호출하여 매개 변수 정보를 가져옵니다.  
+4.  필요에 따라 준비 된 문의 각 매개 변수에 대해 SQLDescribeParam를 호출 하 여 매개 변수 정보를 가져옵니다.  
   
 5.  각 매개 변수 표식에 대해 다음 작업을 수행합니다.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "81294160"
   
     -   SQL_ATTR_PARAMS_STATUS_PTR을 매개 변수 상태 표시를 보유하는 SQLUSSMALLINT 변수의 배열[S]을 가리키도록 설정합니다.  
   
-3.  SQLPrepare를 호출하여 문을 준비합니다.  
+3.  SQLPrepare를 호출 하 여 문을 준비 합니다.  
   
-4.  각 매개 변수 마커에 대해 SQLBindParameter를 호출하여 매개 변수 데이터 값 및 데이터 길이 포인터를 1단계에서 할당된 구조 배열의 첫 번째 요소에서 해당 변수로 가리킵니다. 매개 변수가 실행 시 데이터 매개 변수인 경우 해당 매개 변수를 설정합니다.  
+4.  각 매개 변수 표식에 대해 SQLBindParameter를 호출 하 여 1 단계에서 할당 한 구조 배열의 첫 번째 요소에 있는 해당 변수에 대 한 매개 변수 데이터 값 및 데이터 길이 포인터를 가리킵니다. 매개 변수가 실행 시 데이터 매개 변수인 경우 해당 매개 변수를 설정합니다.  
   
 5.  준비된 문을 실행할 때마다 다음 작업을 수행합니다.  
   
@@ -114,6 +114,6 @@ ms.locfileid: "81294160"
     -   실행 시 데이터 입력 매개 변수를 사용하는 경우 SQLExecute는 SQL_NEED_DATA를 반환합니다. SQLParamData 및 SQLPutData를 사용하여 데이터를 청크로 보냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;쿼리 방법 항목 실행](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [쿼리 실행 방법 도움말 항목 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: '부록 C: SQL 문법 | 마이크로 소프트 문서'
+title: '부록 C: SQL 문법 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 0ee36f09-59e7-4b94-88ca-7ebc0952a3be
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: f783cd4cf65011d80a631eff191d246e1c83c569
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298403"
 ---
 # <a name="appendix-c-sql-grammar"></a>부록 C: SQL 문법
-이 부록에는 다음 항목이 포함되어 있습니다.  
+이 부록에는 다음 항목이 포함 되어 있습니다.  
   
 -   [SQL 최소 문법](../../../odbc/reference/appendixes/sql-minimum-grammar.md)  
   

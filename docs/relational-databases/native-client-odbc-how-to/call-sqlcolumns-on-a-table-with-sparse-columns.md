@@ -1,5 +1,5 @@
 ---
-title: 희소 한 열이있는 테이블에 SQLColumns 호출 | 마이크로 소프트 문서
+title: 스파스 열이 있는 테이블에 대해 SQLColumns 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 57dc76c3373623ac133b0911e37ac4298682fa92
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298322"
 ---
 # <a name="call-sqlcolumns-on-a-table-with-sparse-columns"></a>스파스 열이 있는 테이블에 대해 SQLColumns 호출
@@ -35,7 +35,7 @@ ms.locfileid: "81298322"
   
  /EHsc /D, "UNICODE" 및 odbc32.lib를 사용하여 컴파일합니다.  
   
- 두 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)]() 코드 목록은 이 샘플에서 만든 테이블을 삭제합니다.  
+ 두 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 만든 테이블을 삭제 합니다.  
   
 ```  
 // compile with: /EHsc /D "UNICODE" odbc32.lib  

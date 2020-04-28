@@ -1,5 +1,5 @@
 ---
-title: 테이블 값 매개 변수 진단 레코드 필드 | 마이크로 소프트 문서
+title: 테이블 반환 매개 변수 진단 레코드 필드 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ad2261dcf016fd484fb52151f043b3646df2450
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297783"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>테이블 반환 매개 변수 진단 레코드 필드
@@ -26,6 +26,6 @@ ms.locfileid: "81297783"
   두 개의 새 진단 필드인 SQL_DIAG_SS_TABLE_COLUMN_NUMBER 및 SQL_DIAG_SS_TABLE_ROW_NUMBER가 진단 레코드에 추가되었습니다. 두 필드는 오류 및 경고와 관련된 테이블 반환 매개 변수 열 값을 확인하는 데 유용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC&#41;&#40;테이블 값 매개 변수](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+ [ODBC&#41;&#40;테이블 반환 매개 변수](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

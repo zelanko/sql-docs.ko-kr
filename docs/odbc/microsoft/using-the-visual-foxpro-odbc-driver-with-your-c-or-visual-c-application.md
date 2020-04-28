@@ -1,5 +1,5 @@
 ---
-title: C 또는 비주얼 C ++ 응용 프로그램과 함께 시각적 FoxPro ODBC 드라이버를 사용 | 마이크로 소프트 문서
+title: C 또는 Visual C++ 응용 프로그램에서 Visual FoxPro ODBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,32 +17,32 @@ ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: e2f3a87503a94da75acc824a0937b92631c01bde
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292633"
 ---
-# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C 또는 비주얼 C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용
-C 또는 C++ 응용 프로그램은 시각적 FoxPro에 [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 또는 [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 문을 전송하여 시각적 FoxPro 데이터와 통신합니다. 이 명령문에는 다음이 포함될 수 있습니다.  
+# <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>C 또는 Visual C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용
+C 또는 c + + 응용 프로그램은 Visual foxpro에 [Sqlexecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) 또는 [sqlexecdirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) 문을 전송 하 여 visual foxpro 데이터와 통신 합니다. 이 문에는 다음이 포함 될 수 있습니다.  
   
--   [DROP TABLE](../../odbc/microsoft/drop-table-command.md) 명령과 같은 Visual FoxPro 언어에 기본되는 SQL 문입니다.  
+-   [DROP TABLE](../../odbc/microsoft/drop-table-command.md) 명령과 같은 Visual FoxPro 언어에 대 한 기본 SQL 문입니다.  
   
--   [지원되는 ODBC SQL 문법](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md).  
+-   [지원 되는 ODBC SQL 문법](../../odbc/microsoft/supported-odbc-sql-grammar-visual-foxpro-odbc-driver.md)입니다.  
   
--   [지원되는 SET 명령과](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)같은 SQL 이외 Visual FoxPro 언어.  
+-   [지원 되는 SET 명령과](../../odbc/microsoft/supported-set-commands-visual-foxpro-odbc-driver.md)같은 SQL Visual FoxPro 언어가 지원 되지 않습니다.  
   
- Visual FoxPro네이티브 SQL에 대한 자세한 내용은 Visual FoxPro 설명서를 참조하십시오.  
+ SQL native에서 Visual FoxPro에 대 한 자세한 내용은 Visual FoxPro 설명서를 참조 하세요.  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>예: C 또는 C++ 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용  
- 다음 예제에서는 ODBC C API를 사용하여 TasTrade라는 Microsoft® Visual FoxPro 샘플 데이터베이스의 직원 테이블의 last_name 필드에 저장된 데이터를 검색합니다. 이 데이터베이스는 Visual FoxPro와 함께 제공되며 기본적으로 다음 위치에 설치됩니다.  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>예제: C 또는 c + + 응용 프로그램과 함께 Visual FoxPro ODBC 드라이버 사용  
+ 다음 예에서는 ODBC C API를 사용 하 여 TasTrade 라는 Microsoft® Visual FoxPro 샘플 데이터베이스의 employee 테이블에서 last_name 필드에 저장 된 데이터를 검색 합니다. 이 데이터베이스는 Visual FoxPro와 함께 제공 되며 기본적으로 다음 위치에 설치 됩니다.  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  
   
- 이 예제에서는 한 번에 하나의 성을 표시하므로 메시지 상자에서 확인을 클릭하여 다음 성을 볼 수 있습니다. Tastrade라는 데이터 원본이 Tastrade.dbc 데이터베이스를 사용하도록 설정된 것으로 가정합니다.  
+ 이 예에서는 메시지 상자에서 확인을 클릭 하 여 다음 성을 볼 수 있도록 한 번에 성을 하나씩 표시 합니다. Tastrade 라는 데이터 원본이 tastrade 데이터베이스를 사용 하도록 설정 된 것으로 가정 합니다.  
   
 > [!NOTE]  
->  오류 검사는 모든 ODBC API 호출에서 수행해야 합니다. 이 예제는 간결성을 위해 오류 검사를 제외합니다.  
+>  모든 ODBC API 호출에 대해 오류 검사를 수행 해야 합니다. 이 예에서는 간결 하 게 하기 위해 오류 검사를 제외 합니다.  
   
 ```  
 // FoxPro_ODBC_Driver_with_C.cpp  

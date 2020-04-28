@@ -1,5 +1,5 @@
 ---
-title: 문 매개 변수 사용 | 마이크로 소프트 문서
+title: 문 매개 변수 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 74cd70bcd9107d68551dc3f82eb1e01f76a549b4
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297904"
 ---
 # <a name="using-statement-parameters"></a>문 매개 변수 사용
@@ -35,9 +35,9 @@ ms.locfileid: "81297904"
   
 -   쿼리 조건을 생성하여 사용자 상호 작용을 향상시킵니다.  
   
--   **텍스트,** **ntext**및 **이미지** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 및-특정 C 데이터 형식을 관리합니다.  
+-   **Text**, **ntext**및 **image** 데이터와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 C 데이터 형식을 관리 합니다.  
   
- 예를 들어 **부품** 테이블에는 **PartID,** **설명**및 **가격이라는**열이 있습니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
+ 예를 들어 **부품** 테이블에는 **PartID**, **설명**및 **가격**이라는 열이 있습니다. 매개 변수 없이 부품을 추가하려면 다음과 같이 SQL 문을 생성해야 합니다.  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  

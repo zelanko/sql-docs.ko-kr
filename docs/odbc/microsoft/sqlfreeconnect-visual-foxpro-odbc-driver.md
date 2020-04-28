@@ -1,5 +1,5 @@
 ---
-title: SQLFreeConnect (비주얼 폭스프로 ODBC 드라이버) | 마이크로 소프트 문서
+title: SQLFreeConnect (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 5ecfbbed-43f6-4875-a6a7-732f36431e91
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 06810ba9ac7086a6c9fdd59f8183cdca5f66db5b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81292853"
 ---
 # <a name="sqlfreeconnect-visual-foxpro-odbc-driver"></a>SQLFreeConnect(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함되어 있습니다. 이 함수에 대한 일반적인 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
- ODBC API 적합성: 코어 레벨  
+ ODBC API 규칙: 코어 수준  
   
- 연결 핸들을 해제하고 핸들에 할당된 모든 메모리를 해제합니다.  
+ 연결 핸들을 해제 하 고 핸들에 할당 된 모든 메모리를 해제 합니다.  
   
- 자세한 내용은 *ODBC 프로그래머의 참조에서* [SQLFreeConnect를](../../odbc/reference/syntax/sqlfreeconnect-function.md) 참조하십시오.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [SQLFreeConnect](../../odbc/reference/syntax/sqlfreeconnect-function.md) 를 참조 하세요.

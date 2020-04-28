@@ -1,5 +1,5 @@
 ---
-title: 테이블 값 매개 변수, 메모리의 값(ODBC)
+title: 테이블 반환 매개 변수, 메모리의 값 (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 042dd929e2000000042618d84dc0195ec57a3e9c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297806"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>모든 값을 메모리에 로드하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 값 매개 변수를 보여 주는 다른 샘플의 경우 [ODBC&#41;&#40;테이블 값 매개 변수 사용을 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)참조하십시오.  
+  이 항목에서는 모든 값이 메모리에 있을 때 데이터를 테이블 반환 매개 변수로 저장 프로시저에 보내는 방법에 대해 설명합니다. 테이블 반환 매개 변수를 보여 주는 다른 예제는 [ODBC&#41;&#40;테이블 반환 매개 변수 사용 ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md)을 참조 하세요.  
   
 ## <a name="prerequisite"></a>필수 요소  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
@@ -89,7 +89,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 테이블 값의 열은 저장된 프로시저의 매개 변수인 경우와 동일한 방식으로 SQLBindParameter를 사용하여 바인딩되지만 ParameterNumber에 대한 열 서수와 함께 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
+3.  매개 변수를 바인딩하는 두 번째 단계에서는 테이블 반환 매개 변수의 열이 바인딩됩니다. 먼저 매개 변수 포커스가 테이블 반환 매개 변수의 서수로 설정됩니다. 그런 다음 테이블 값의 열은 저장 프로시저의 매개 변수 이지만 ParameterNumber의 열 서 수를 사용 하는 경우와 동일한 방식으로 SQLBindParameter를 사용 하 여 바인딩됩니다. 테이블 값 매개 변수가 더 있으면 포커스를 각 매개 변수에 차례로 설정하고 해당 열을 바인딩합니다. 마지막으로 매개 변수 포커스가 0으로 다시 설정됩니다.  
   
     ```cpp
     // Bind columns for the table-valued parameter (param 2).  

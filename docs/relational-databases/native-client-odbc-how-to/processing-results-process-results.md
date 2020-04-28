@@ -1,5 +1,5 @@
 ---
-title: 공정 결과(ODBC) | 마이크로 소프트 문서
+title: 결과 처리 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81300407"
 ---
 # <a name="processing-results---process-results"></a>결과 처리 - 결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-ODBC 응용 프로그램의 처리 결과에는 먼저 결과 집합의 특성을 결정한 다음 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 또는 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 사용하여 데이터를 프로그램 변수로 검색하는 작업이 포함됩니다.  
+ODBC 응용 프로그램에서 결과를 처리 하려면 먼저 결과 집합의 특징을 확인 한 다음 [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) 또는 [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)를 사용 하 여 프로그램 변수로 데이터를 검색 해야 합니다.  
   
 ### <a name="to-process-results"></a>결과를 처리하려면  
   
@@ -49,7 +49,7 @@ ODBC 응용 프로그램의 처리 결과에는 먼저 결과 집합의 특성�
   
     -   SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR가 반환되면 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402)를 호출하여 사용할 수 있는 PRINT 또는 RAISERROR 문 출력이 있는지 확인합니다.  
   
-         바인딩된 문 매개 변수가 출력 매개 변수 또는 저장 프로시저의 반환 값으로 사용될 경우 바인딩된 매개 변수 버퍼에서 현재 사용할 수 있는 데이터를 사용합니다. 또한 바인딩된 매개 변수를 사용하면 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 또는 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 호출할 때마다 SQL 문이 *S*번 실행됩니다. 여기서 *S*는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 즉, 각 결과 *집합은* 일반적으로 SQL 문을 한 번 실행하여 반환되는 모든 결과 집합, 출력 매개 변수 및 반환 코드로 구성된 S 결과 집합이 처리됩니다.  
+         바인딩된 문 매개 변수가 출력 매개 변수 또는 저장 프로시저의 반환 값으로 사용될 경우 바인딩된 매개 변수 버퍼에서 현재 사용할 수 있는 데이터를 사용합니다. 또한 바인딩된 매개 변수를 사용하면 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) 또는 [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 호출할 때마다 SQL 문이 *S*번 실행됩니다. 여기서 *S*는 바인딩된 매개 변수 배열에 포함된 요소 수입니다. 즉, 각 결과 집합은 SQL 문을 한 번 실행 했을 때 일반적으로 반환 되는 모든 결과 집합, 출력 매개 변수 및 반환 코드를 구성 하는 결과 집합을 *처리할 수 있습니다* .  
   
     > [!NOTE]  
     >  결과 집합에 컴퓨팅 행이 포함된 경우 각 컴퓨팅 행은 별도의 결과 집합으로 사용할 수 있습니다. 이러한 컴퓨팅 결과 집합은 일반 행 내에 섞여 일반 행을 여러 개의 결과 집합으로 나눕니다.  
@@ -62,6 +62,6 @@ ODBC 응용 프로그램의 처리 결과에는 먼저 결과 집합의 특성�
 >  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401)에서 SQL_NO_DATA를 반환하기 전에 결과 집합 처리를 취소하려면 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)를 호출합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[ODBC&#41;결과 집합 정보 &#40;검색](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[ODBC&#41;&#40;결과 집합 정보를 검색 합니다.](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

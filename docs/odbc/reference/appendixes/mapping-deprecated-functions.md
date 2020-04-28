@@ -1,5 +1,5 @@
 ---
-title: 더 이상 사용되지 이상 함수 매핑 | 마이크로 소프트 문서
+title: 사용 되지 않는 함수 매핑 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,42 +18,42 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a4e89cd9281520e70ec5fb289c6050e77ec6194c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81299883"
 ---
 # <a name="mapping-deprecated-functions"></a>사용되지 않는 함수 매핑
-이 섹션에서는 ODBC 2.x *응용* 프로그램과 함께 사용되는 ODBC *3.x* 드라이버의 이전 버전과의 호환성을 보장하기 위해 ODBC *3.x* 드라이버 관리자에서 더 이상 사용되지 않는 함수를 매핑하는 방법을 설명합니다. 드라이버 관리자는 응용 프로그램의 버전에 관계없이 이 매핑을 수행합니다. 다음 목록의 각 ODBC *2.x* 함수는 ODBC *3.x* 드라이버에서 호출될 때 해당 ODBC *3.x* 함수에 매핑되므로 ODBC *3.x* 드라이버는 ODBC *2.x* 함수를 구현할 필요가 없습니다.  
+이 섹션 *에서는 odbc 2.X 드라이버 관리자* 가 사용 되지 않는 함수를 사용 하 여 odbc 2.x 응용 프로그램에서 사용 되는 odbc *3.x 드라이버의* 이전 버전과의 호환성을 보장 하는 방법을 설명 *합니다.* 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행 합니다. *Odbc 3.x 드라이버에서* 호출 하는 경우 다음 목록의 *각 odbc 2.x 함수는* 해당 odbc 2.x 함수에 *매핑되므로 odbc 2.x 드라이버는* *odbc 2.x 함수를* 구현할 필요가 없습니다. *x 함수는* 다음과 같습니다.  
   
- 드라이버가 ODBC *3.x* 드라이버이고 드라이버가 매핑되는 기능을 지원하지 않을 때 목록의 매핑이 트리거됩니다.  
+ 드라이버 *는 ODBC 3.x* 드라이버이 고 드라이버는 매핑되는 함수를 지원 하지 않는 경우 목록에 있는 매핑이 트리거됩니다.  
   
- 다음 표에는 ODBC *3.x에*도입된 모든 중복 된 기능이 나열됩니다.  
+ 다음 표에 *는 ODBC 3.x*에 도입 된 모든 중복 된 기능이 나열 되어 있습니다.  
   
-|ODBC *2.x* 기능|ODBC *3.x* 기능|  
+|ODBC *2.x* 함수|ODBC *3.x* 함수|  
 |-------------------------|-------------------------|  
-|**SQLAllocConnect**|**SQLAlloc핸들**|  
-|**SQLAllocEnv**|**SQLAlloc핸들**|  
-|**SQLAllocStmt**|**SQLAlloc핸들**|  
-|**SQLBindParam**[1]|**SQLBindParameter**|  
-|**SQLCol속성**|**SQLColAttribute**|  
-|**SQL오류**|**SQLGetDiagRec**|  
+|**SQLAllocConnect**|**SQLAllocHandle**|  
+|**SQLAllocEnv**|**SQLAllocHandle**|  
+|**SQLAllocStmt**|**SQLAllocHandle**|  
+|**Sqlbindparam 함수와**[1]|**SQLBindParameter**|  
+|**SQLColAttributes**|**SQLColAttribute**|  
+|**SQLError**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
-|**SQL프리엔프**|**SQLFreeHandle**|  
-|SQL_DROP *옵션이* 있는 **SQLFreeStmt**|**SQLFreeHandle**|  
-|**SQLGet연결 옵션**|**SQLGetConnectAttr**|  
-|**SQLGetStmt옵션**|**SQLGetStmtAttr**|  
-|**SQLParam옵션**|**SQLSetStmtAttr**|  
-|**SQLSet연결옵션**|**SQLSetConnectAttr**|  
+|**SQLFreeEnv**|**SQLFreeHandle**|  
+|**SQLFreeStmt** SQL_DROP *옵션* 을 사용 하는|**SQLFreeHandle**|  
+|**SQLGetConnectOption**|**SQLGetConnectAttr**|  
+|**SQLGetStmtOption**|**SQLGetStmtAttr**|  
+|**SQLParamOptions**|**SQLSetStmtAttr**|  
+|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**[2]|**SQLBindParameter**|  
-|**SQLSet스크롤 옵션**|**SQLSetStmtAttr**|  
-|**SQLSetStmt옵션**|**SQLSetStmtAttr**|  
+|**SQLSetScrollOption**|**SQLSetStmtAttr**|  
+|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1] 이 함수는 ODBC *2.x에*존재하지 않았지만 오픈 그룹 및 ISO 표준에 있습니다.  
+ [1]이 함수 *는 ODBC 2.x*에 존재 하지 않지만 오픈 그룹 및 ISO 표준에 포함 되어 있습니다.  
   
- [2] ODBC 1.0 기능입니다.  
+ [2] ODBC 1.0 함수입니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

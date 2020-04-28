@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo 엑셀에 대한 반환 값 | 마이크로 소프트 문서
+title: Excel에 대 한 SQLGetInfo 반환 값 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,24 +17,24 @@ ms.assetid: a0f4c3e4-5906-4ab3-ad34-c606f173169a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 5e285e8978ae357201458ca9289616df7d404811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298543"
 ---
 # <a name="sqlgetinfo-returned-values-for-excel"></a>Excel에 대한 SQLGetInfo 반환 값
-다음 표에는 *fInfoType* 인수에 대한 C 언어 #defines **및 SQLGetInfo에서**반환하는 해당 값이 나열됩니다. 이 정보는 *fInfoType* 인수에서 나열된 C 언어 #defines **SQLGetInfo에** 전달하여 검색할 수 있습니다. **SQLGetInfo에서**반환된 값에 대한 자세한 내용은 *ODBC 프로그래머의 참조를*참조하십시오.  
+다음 표에서는 *Finfotype* 인수의 C 언어 #defines와 **SQLGetInfo**에서 반환 된 해당 값을 보여 줍니다. 이 정보는 나열 된 C 언어 #defines을 *Finfotype* 인수의 **SQLGetInfo** 에 전달 하 여 검색할 수 있습니다. **SQLGetInfo**에서 반환 하는 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조*를 참조 하세요.  
   
 > [!NOTE]  
->  **SQLGetInfo가** 32비트 비트 마스크를 반환하는 경우 세로 막대(&#124;)는 약간 또는 을 나타냅니다.  
+>  **SQLGetInfo** 에서 32 비트 비트 마스크를 반환 하는 경우 세로 막대 (&#124;)는 비트 or를 나타냅니다.  
   
-|정보 입력|반환 값|  
+|InfoType|반환 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|모든 세트|  
+|SQL_AGGREGATE_FUNCTIONS|모든 집합|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|0|  
 |SQL_ASYNC_MODE|0|  
@@ -81,22 +81,22 @@ ms.locfileid: "81298543"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 Odbc.ini에서 DRIVER 키워드를 사용하는 경우 """|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini에서 DSN 또는 "" if DRIVER 키워드를 사용 하는 경우.|  
 |SQL_DATA_SOURCE_READ_ONLY|"Y"|  
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"엑셀"|  
+|SQL_DBMS_NAME|만들어집니다|  
 |SQL_DBMS_VER|다중 값|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|드라이버 관리자가 처리합니다.|  
-|SQL_DRIVER_HENV|드라이버 관리자가 처리합니다.|  
-|SQL_DRIVER_HLIB|드라이버 관리자가 처리합니다.|  
-|SQL_DRIVER_HSTMT|드라이버 관리자가 처리합니다.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_HDBC|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HENV|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HLIB|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
+|SQL_DRIVER_NAME|"OdbcJt32"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*"*(nnn은* 빌드 날짜를 지정합니다)|  
+|SQL_DRIVER_VER|"4.00-*nnnn*" (*nnnn* 은 빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,7 +111,7 @@ ms.locfileid: "81298543"
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (뒷견적)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (후방 따옴표)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -122,7 +122,7 @@ ms.locfileid: "81298543"
 |SQL_MAX_COLUMNS_IN_INDEX|0|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
-|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Microsoft Excel 드라이버를 사용하는 경우 CREATE TABLE 문은 256개의 열을 허용할 수 있지만 255열 제한은 여전히 유효하며 열 256에 삽입하면 실패합니다.|  
+|SQL_MAX_COLUMNS_IN_TABLE|255<br /><br /> Microsoft Excel 드라이버를 사용 하는 경우 CREATE TABLE 문은 256 열을 허용할 수 있지만 255 열 제한은 여전히 유효 하며 열에 삽입 256은 실패 합니다.|  
 |SQL_MAX_CONCURRENT_ACTIVITIES|0|  
 |SQL_MAX_CURSOR_NAME_LEN|64|  
 |SQL_MAX_DRIVER_CONNECTIONS|64|  
@@ -141,7 +141,7 @@ ms.locfileid: "81298543"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|다중 값|  
-|SQL_ODBC_SAG_CLI_ 적합성|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ 준수|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|드라이버 관리자에서|  
 |SQL_OJ_CAPABILITIES|다중 값|  
@@ -155,12 +155,12 @@ ms.locfileid: "81298543"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"엑셀"|  
-|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\\}{"';:?/><,.!'\_-+= []&#124;"|  
+|SQL_SERVER_NAME|만들어집니다|  
+|SQL_SPECIAL_CHARACTERS|"\`\@#$%^&~\*\_} {" ';:?/><,.! '-+=\\ [] &#124; "|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"테이블"|  
+|SQL_TABLE_TERM|테이블|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|다중 값|  

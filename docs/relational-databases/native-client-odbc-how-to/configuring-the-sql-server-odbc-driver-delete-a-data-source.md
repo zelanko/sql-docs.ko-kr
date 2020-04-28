@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 삭제(ODBC) | 마이크로 소프트 문서
+title: 데이터 원본 삭제 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81294543"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>SQL Server ODBC 드라이버 구성 - 데이터 원본 삭제
@@ -25,20 +25,20 @@ ms.locfileid: "81294543"
 
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 ODBC 애플리케이션을 사용하려면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 카탈로그 저장 프로시저의 버전을 업그레이드하는 방법과 데이터 원본을 추가, 삭제 및 테스트하는 방법을 알아 두어야 합니다.  
   
-  ODBC 관리자를 프로그래밍 [방식으로(SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)사용) 사용하거나 파일을 삭제하여(파일 데이터 원본 이름인 경우) 데이터 원본을 삭제할 수 있습니다.  
+  ODBC 관리자를 사용 하 여 프로그래밍 방식으로 ( [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)사용) 또는 파일 (파일 데이터 원본 이름)을 삭제 하 여 데이터 원본을 삭제할 수 있습니다.  
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>ODBC 관리자를 사용하여 데이터 원본을 삭제하려면  
   
-1.  **제어판에서** **관리 도구를**연 다음 **ODBC 데이터 원본(64비트)** 또는 **ODBC 데이터 원본(32비트)을**두 번 클릭합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
+1.  **제어판**에서 **관리 도구**를 연 다음 **odbc 데이터 원본 (64 비트)** 또는 **odbc 데이터 원본 (32 비트)** 중 하나를 두 번 클릭 합니다. 또는 명령 프롬프트에서 odbcad32.exe를 실행할 수도 있습니다.  
   
-2.  사용자 **DSN,** **시스템 DSN**또는 **파일 DSN 탭을** 클릭합니다.  
+2.  **사용자 dsn**, **시스템 DSN**또는 **파일 dsn** 탭을 클릭 합니다.  
   
-3.  삭제할 데이터 원본을 선택합니다.  
+3.  삭제할 데이터 원본을 선택 합니다.  
   
-4.  **을 제거를**클릭한 다음 삭제를 확인합니다.  
+4.  **제거**를 클릭 한 다음 삭제를 확인 합니다.  
 
 ## <a name="example"></a>예제  
- 데이터 원본을 프로그래밍 방식으로 삭제하려면 ODBC_REMOVE_DSN 또는 ODBC_REMOVE_SYS_DSN 두 번째 매개 변수로 사용하여 [SQLConfigDataSource를](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 호출합니다.  
+ 데이터 원본을 프로그래밍 방식으로 삭제 하려면 ODBC_REMOVE_DSN 또는 ODBC_REMOVE_SYS_DSN를 두 번째 매개 변수로 사용 하 여 [SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md) 를 호출 합니다.  
   
  다음 예에서는 데이터 원본을 프로그래밍 방식으로 삭제하는 방법을 보여 줍니다.  
   

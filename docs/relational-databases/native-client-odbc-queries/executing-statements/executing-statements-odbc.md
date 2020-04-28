@@ -1,5 +1,5 @@
 ---
-title: 실행 성명서 (ODBC) | 마이크로 소프트 문서
+title: 문 실행 (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,22 +17,22 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3489c26073da15fb41af6d1560cb48fe38897386
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81297961"
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 SQL 문을 실행하는 다양한 방법을 제공합니다.  
+  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 SQL 문을 실행 하는 다양 한 방법을 제공 합니다.  
   
 -   직접 실행  
   
 -   준비된 실행  
   
- 직접 실행에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 빌드하고 **SQLExecDirect** 함수를 사용하여 실행을 위해 제출해야 합니다. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서는 [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 사용하여 에서 명령문에 대한 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]실행 계획을 구문 분석하고 컴파일합니다. 두 번째 단계에서는 **SQLExecute** 함수를 사용하여 이전에 준비된 실행 계획을 실행합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
+ 직접 실행에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 포함 하는 문자열을 작성 하 고 **sqlexecdirect** 함수를 사용 하 여 실행을 위해 제출 해야 합니다. 준비된 실행에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함된 문자열을 작성한 다음 두 가지 단계로 실행합니다. 첫 번째 단계에서는 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 함수를 사용 하 여의 문에 대 한 실행 계획을 구문 분석 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]하 고 컴파일합니다. 두 번째 단계는 **Sqlexecute** 함수를 사용 하 여 이전에 준비 된 실행 계획을 실행 합니다. 이렇게 하면 각각의 실행에서 구문 분석 및 컴파일 오버헤드를 줄일 수 있습니다. 준비된 실행은 애플리케이션에서 매개 변수가 있는 동일한 SQL 문을 반복적으로 실행하는 데 많이 사용됩니다.  
   
  직접 실행과 준비된 실행에서 모두 단일 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이나 SQL 문의 일괄 처리를 실행하거나 저장 프로시저를 호출할 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81297961"
   
 -   [준비된 실행](../../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
--   [프로시저](../../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
+-   [절차](../../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   
 -   [문의 일괄 처리](../../../relational-databases/native-client-odbc-queries/executing-statements/batches-of-statements.md)  
   

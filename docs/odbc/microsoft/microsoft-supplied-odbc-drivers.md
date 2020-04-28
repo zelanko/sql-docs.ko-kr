@@ -1,5 +1,5 @@
 ---
-title: 마이크로소프트 제공 ODBC 드라이버 | 마이크로 소프트 문서
+title: Microsoft에서 제공 하는 ODBC 드라이버 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dadbc638219803562ef376a44abb37e9f85802cc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81298203"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 제공 ODBC 드라이버
-*드라이버는* ODBC API에서 함수를 구현하는 라이브러리입니다. 각 드라이버는 특정 DBMS(데이터베이스 관리 시스템)에 만 해당합니다. 대부분의 경우 드라이버는 기본 DBMS의 기능을 노출합니다. DBMS에서 지원하지 않는 기능을 구현할 필요는 없습니다. 드라이버는 특정 작업을 수행하며 파일 기반 및 DBMS 기반의 두 가지 범주로 분류할 수 있습니다. 드라이버 및 드라이버 아키텍처에 대한 자세한 내용은 [드라이버](../../odbc/reference/drivers.md)를 참조하십시오.  
+*드라이버* 는 ODBC API에서 함수를 구현 하는 라이브러리입니다. 각 드라이버는 특정 DBMS (데이터베이스 관리 시스템)에만 적용 됩니다. 대부분의 경우 드라이버는 기본 DBMS의 기능을 노출 합니다. DBMS에서 지원 하지 않는 기능을 구현 하는 데 필요 하지 않습니다. 드라이버는 특정 작업을 수행 하며 파일 기반 및 DBMS 기반의 두 가지 범주로 분류할 수 있습니다. 드라이버 및 드라이버 아키텍처에 대 한 자세한 내용은 [드라이버](../../odbc/reference/drivers.md)를 참조 하세요.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

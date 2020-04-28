@@ -1,5 +1,5 @@
 ---
-title: 데이터 파일스트림, IRowsetFastUpload (올레 DB)
+title: 데이터 FILESTREAM, IRowsetFastUpload (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d298d9c4677d6b50ad0234a85e3d51b4bb8478ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81295696"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>IRowsetFastUpload를 사용하여 FILESTREAM 열에 데이터 전송(OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81295696"
 
   이 예제에서는 IRowsetFastUpload 인터페이스를 사용하여 filestream 열에 4MB에서 4GB 사이의 데이터를 전송합니다.  
   
- 파일 스트림 기능에 대한 자세한 내용은 OLE DB&#41;[&#40;FILESTREAM 지원 ](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)기능을 참조하십시오.  
+ Filestream 기능에 대 한 자세한 내용은 [Filestream Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  이 샘플을 컴파일하고 실행하기 전에 FILESTREAM 지원을 설정합니다([FILESTREAM 사용 및 구성](../../../relational-databases/blob/enable-and-configure-filestream.md)).  
