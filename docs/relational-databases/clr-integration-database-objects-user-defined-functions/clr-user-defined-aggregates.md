@@ -1,6 +1,6 @@
 ---
-title: CLR 사용자 정의 집계 | 마이크로 소프트 문서
-description: SQL Server CLR 통합을 사용하면 관리 코드에서 사용자 지정 집계 함수를 만들 수 있으며, 이 함수는 값 집합에 대한 계산을 수행하고 값을 반환합니다.
+title: CLR 사용자 정의 집계 | Microsoft Docs
+description: SQL Server CLR 통합을 사용 하면 값 집합에 대 한 계산을 수행 하 고 값을 반환 하는 관리 코드로 사용자 지정 집계 함수를 만들 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488302"
 ---
 # <a name="clr-user-defined-aggregates"></a>CLR 사용자 정의 집계

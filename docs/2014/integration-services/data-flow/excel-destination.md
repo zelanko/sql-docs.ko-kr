@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f736d03a573f61ed31e0cb95c1768907f8a9560
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087163"
 ---
 # <a name="excel-destination"></a>Excel 대상
@@ -48,9 +48,9 @@ ms.locfileid: "82087163"
   
      작은따옴표가 포함되지 않도록 하는 방법에 대한 내용은 msdn.com의 블로그 게시물 중 [SSIS 패키지에서 Excel 대상 데이터 흐름 구성 요소를 사용하여 Excel로 데이터를 변환할 때 모든 문자열에 추가되는 작은따옴표](https://go.microsoft.com/fwlink/?LinkId=400876)(영문)를 참조하세요.  
   
--   **메모(ntext) 데이터 저장**. 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다. 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 값이 255자보다 긴 인스턴스가 하나 이상 들어 있어야 합니다. 대상 테이블이 패키지 디자인 중에 또는 런타임에 만들어지는 경우 CREATE TABLE 문은 LONGTEXT(또는 동의어 중 하나)를 메모 열의 데이터 유형으로 사용해야 합니다.  
+-   **메모(ntext) 데이터 저장**. 255자보다 긴 문자열을 Excel 열에 저장하려면 드라이버에서 대상 열의 데이터 형식을 **string** 이 아닌 **memo**로 인식해야 합니다. 대상 테이블에 이미 데이터 행이 포함된 경우 드라이버에서 샘플링하는 처음 몇 개 행의 메모 열에 값이 255자보다 긴 인스턴스가 하나 이상 들어 있어야 합니다. 패키지 디자인 또는 런타임에 대상 테이블을 만드는 경우 CREATE TABLE 문은 메모 열의 데이터 형식으로 LONGTEXT (또는 해당 동의어 중 하나)를 사용 해야 합니다.  
   
--   **데이터 형식입니다.** Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. 예를 들어 모든 숫자 열은 double(DT_R8)로 해석되고 모든 문자열 열(메모 열 제외)은 255자 유니코드 문자열(DT_WSTR)로 해석됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 Excel 데이터 형식을 다음과 같이 매핑합니다.  
+-   **데이터 형식**. Excel 드라이버는 제한된 데이터 형식 집합만 인식합니다. 예를 들어 모든 숫자 열은 double(DT_R8)로 해석되고 모든 문자열 열(메모 열 제외)은 255자 유니코드 문자열(DT_WSTR)로 해석됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 Excel 데이터 형식을 다음과 같이 매핑합니다.  
   
     -   숫자    배정밀도 부동 소수점 수(DT_R8)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "82087163"
   
     -   부울    Boolean(DT_BOOL)  
   
-    -   날짜/시간(DT_DATE) `datetime`  
+    -   날짜/시간 `datetime` (DT_DATE)  
   
     -   문자열    길이가 255인 유니코드 문자열(DT_WSTR)  
   
@@ -104,8 +104,8 @@ ms.locfileid: "82087163"
 -   [데이터 흐름 구성 요소의 속성 설정](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [엑셀 소스](excel-source.md)   
- [SSIS&#41; 변수를 &#40;통합 서비스](../integration-services-ssis-variables.md)   
+ [Excel 원본](excel-source.md)   
+ [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [데이터 흐름](data-flow.md)   
  [스크립트 태스크를 사용한 Excel 파일 작업](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

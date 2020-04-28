@@ -1,5 +1,5 @@
 ---
-title: 보안 카탈로그 보기(거래-SQL) | 마이크로 소프트 문서
+title: 보안 카탈로그 뷰 (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 4d5cf1bf-09a7-4ee0-9dbb-5c584750fc67
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 62be038f59d30ef427696190335e79946d46f285
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81635440"
 ---
 # <a name="security-catalog-views-transact-sql"></a>보안 카탈로그 뷰(Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "81635440"
 |[sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|[sys.key_encryptions](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)|  
 |[sys.column_encryption_key_values](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)|[sys.openkeys](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md)|  
 |[sys.column_encryption_keys](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)|[sys.security_policies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)|  
-|[sys.column_master_key_definitions](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)|[sys.security_predicates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)|  
+|[sys. column_master_key_definitions](../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md)|[sys.security_predicates&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)|  
 |[sys.crypt_properties](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)|[sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)|  
   
 ## <a name="sql-server-audit-views"></a>SQL Server 감사 뷰  
@@ -69,7 +69,7 @@ ms.locfileid: "81635440"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 Security Center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

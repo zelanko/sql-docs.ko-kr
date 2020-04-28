@@ -218,8 +218,10 @@
           items:
             - name: Kubernetes 문제 해결
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory 통합
+            - name: Active Directory 도메인 그룹 범위
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: Active Directory DNS
+              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: HDFS 관리자 권한
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: 참조

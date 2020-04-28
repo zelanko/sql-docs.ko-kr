@@ -1,6 +1,6 @@
 ---
-title: 시스템 사용.트랜잭션 | 마이크로 소프트 문서
-description: System.Transactions 네임스페이스는 ADO.NET 및 SQL Server CLR 통합과 완전히 통합된 트랜잭션 프레임워크를 제공합니다.
+title: 시스템 트랜잭션 사용 | Microsoft Docs
+description: ADO.NET 및 SQL Server CLR 통합과 완벽 하 게 통합 되는 트랜잭션 프레임 워크를 제공 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488502"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions 사용

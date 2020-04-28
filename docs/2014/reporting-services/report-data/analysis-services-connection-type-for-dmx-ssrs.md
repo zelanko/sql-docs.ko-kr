@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c6d2c689689cde5c6c5ef4ffa8ab5c0e8737078
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82086970"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "82086970"
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
- [보고서 디자이너 SQL 서버 데이터 도구의 쿼리 설계 도구 &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [SSRS&#41;&#40;보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구](query-design-tools-ssrs.md)   
  [보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

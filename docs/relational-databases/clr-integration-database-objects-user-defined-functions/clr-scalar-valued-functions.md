@@ -1,6 +1,6 @@
 ---
-title: CLR 스칼라 가치 기능 | 마이크로 소프트 문서
-description: 스칼라 값 함수는 단일 값을 반환합니다. SQL Server CLR 통합에서 관리 코드에서 스칼라 값의 사용자 정의 함수를 작성할 수 있습니다.
+title: CLR 스칼라 반환 함수 | Microsoft Docs
+description: 스칼라 반환 함수는 단일 값을 반환 합니다. SQL Server CLR 통합에서 관리 코드에 스칼라 반환 사용자 정의 함수를 작성할 수 있습니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488435"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용하여 관리 코드에서 스칼라 값의 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. CLR 통합 및 관리 코드 [!INCLUDE[tsql](../../includes/tsql-md.md)]중 에서 선택하는 이점에 대한 자세한 내용은 [CLR 통합 개요를](../../relational-databases/clr-integration/clr-integration-overview.md)참조하십시오.  
+  SVF(스칼라 반환 함수)는 문자열, 정수 또는 비트 값과 같은 단일 값을 반환합니다. .NET Framework 프로그래밍 언어를 사용 하 여 관리 코드에서 스칼라 반환 사용자 정의 함수를 만들 수 있습니다. 이러한 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이나 다른 관리 코드에서 액세스할 수 있습니다. CLR 통합의 장점 및 관리 코드와 [!INCLUDE[tsql](../../includes/tsql-md.md)]관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [clr 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)를 참조 하세요.  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수에 대한 요구 사항  
- .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. SVF에서 반환되는 입력 매개 변수 및 형식은 **varchar,** **char** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **rowversion,** **텍스트,** **ntext,** **이미지,** **타임스탬프,** **테이블**또는 **커서를**제외한 에서 지원하는 스칼라 데이터 형식 중 어느 정도일 수 있습니다. SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대한 자세한 내용은 [CLR 매개 변수 데이터 매핑을](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)참조하십시오.  
+ .NET Framework SVF는 .NET Framework 어셈블리 클래스의 메서드로 구현됩니다. SVF에서 반환 되는 입력 매개 변수 및 형식은 **varchar**, **char**, **rowversion**, **text**, **ntext**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **image**, **timestamp**, **table**또는 **cursor**를 제외 하 고에서 지원 되는 스칼라 데이터 형식 중 하나일 수 있습니다. SVF는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 구현 메서드의 반환 데이터 형식이 일치하는지 확인해야 합니다. 형식 변환에 대 한 자세한 내용은 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)을 참조 하세요.  
   
  .NET Framework 언어로 .NET Framework SVF를 구현하는 경우 **SqlFunction** 사용자 지정 특성을 지정하여 함수에 대한 추가 정보를 포함할 수 있습니다. **SqlFunction** 특성은 함수가 데이터를 액세스 또는 수정하는지, 결정적인지 여부 및 함수에 부동 소수점 연산이 포함되는지 여부를 나타냅니다.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81488435"
 >  함수가 동일한 입력 값과 동일한 데이터베이스 상태가 지정된 상태에서 항상 동일한 값을 출력하지 않을 경우에는 함수를 결정적인 함수로 표시하지 마십시오. 실제로는 결정적인 함수가 아닌 함수를 결정적인 함수로 표시하면 인덱싱된 뷰 및 계산 열이 손상될 수 있습니다. **IsDeterministic** 속성을 true로 설정하여 함수를 결정적인 함수로 표시합니다.  
   
 ### <a name="table-valued-parameters"></a>테이블 반환 매개 변수  
- 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식인 TVP(테이블 반환 매개 변수)를 사용하면 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. TVP는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. TVP는 또한 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 TVP로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. TVP에 대한 자세한 내용은 데이터베이스 엔진&#41;[&#40;테이블 값 매개 변수 사용을 ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)참조하십시오.  
+ 프로시저 또는 함수로 전달되는 사용자 정의 테이블 형식인 TVP(테이블 반환 매개 변수)를 사용하면 여러 개의 데이터 행을 서버로 편리하게 전달할 수 있습니다. TVP는 매개 변수 배열과 유사한 기능을 제공하지만 더 유연하며 [!INCLUDE[tsql](../../includes/tsql-md.md)]과 더 밀접하게 통합됩니다. 또한 성능도 향상될 수 있습니다. TVP는 또한 서버와의 왕복 횟수를 줄이는 데 도움이 될 수 있습니다. 스칼라 매개 변수 목록과 같이 서버로 여러 개의 요청을 보내는 대신 서버에 데이터를 TVP로 보낼 수 있습니다. 사용자 정의 테이블 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행 중인 관리되는 저장 프로시저 또는 함수에 테이블 반환 매개 변수로 전달되거나 이러한 저장 프로시저 또는 함수에서 테이블 반환 매개 변수로 반환될 수 없습니다. Tvp에 대 한 자세한 내용은 [데이터베이스 엔진&#41;&#40;테이블 반환 매개 변수 사용 ](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)을 참조 하세요.  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>CLR 스칼라 반환 함수 예  
  다음은 데이터를 액세스하고 정수 값을 반환하는 단순한 SVF입니다.  
@@ -132,7 +132,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library`는 실행 파일 대신 라이브러리를 생성해야 함을 나타냅니다. 실행 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 없습니다.  
   
 > [!NOTE]  
->  **/clr:pure로** 컴파일된 Visual C++ 데이터베이스 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행에 대해 지원되지 않습니다. 예를 들어 이러한 데이터베이스 개체에는 스칼라 반환 함수가 포함되어 있습니다.  
+>  **/Clr: pure** 로 컴파일된 Visual C++ 데이터베이스 개체는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]실행할 수 없습니다. 예를 들어 이러한 데이터베이스 개체에는 스칼라 반환 함수가 포함되어 있습니다.  
   
  어셈블리 및 UDF를 등록하는 예제 호출과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 다음과 같습니다.  
   

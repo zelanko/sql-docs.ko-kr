@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487732"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
@@ -48,7 +48,7 @@ ms.locfileid: "81487732"
  이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.  
   
 ## <a name="1-configure-the-environment"></a>1. 환경 구성  
- 다음 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 코드를 사용하여 `AdventureWorks2012` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용하여 dbo 사용자가 컨텍스트로 표시되는지 확인합니다.  
+ 및 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 다음 코드를 사용 하 여 `AdventureWorks2012` 데이터베이스를 열고 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용 하 여 dbo 사용자가 컨텍스트로 표시 되는지 확인 합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -95,7 +95,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 사용 권한의 포스터는 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)을 참조하십시오.  
+ GRANT 문에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [저장 프로시저&#40;데이터베이스 엔진&#41;](stored-procedures/stored-procedures-database-engine.md)를 참조하세요. 모든 [!INCLUDE[ssDE](../includes/ssde-md.md)] 사용 권한에 대 한 포스터는을 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)참조 하세요.  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. 데이터에 액세스하는 저장 프로시저 만들기  
  데이터베이스 내에서 컨텍스트를 전환 하려면 EXECUTE AS 문을 사용합니다. EXECUTE AS를 사용하려면 IMPERSONATE 권한이 있어야 합니다.  

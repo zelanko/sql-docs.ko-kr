@@ -1,5 +1,5 @@
 ---
-title: 표 형 모델링 (모험 작품 튜토리얼) | 마이크로 소프트 문서
+title: 테이블 형식 모델링 (어드벤처 Works 자습서) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487632"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>테이블 형식 모델링(Adventure Works 자습서)
@@ -51,14 +51,14 @@ ms.locfileid: "81487632"
 > [!NOTE]  
 >  이 자습서에서는 배포한 테이블 형식 모델 데이터베이스를 SQL Server Management Studio를 사용하여 관리하거나 보고 클라이언트 애플리케이션을 사용하여 배포된 모델에 연결하여 모델 데이터를 탐색하는 과정을 안내하는 단원이나 정보는 제공하지 않습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  이 자습서를 완료하려면 다음 필수 구성 요소가 설치되어 있어야 합니다.  
   
 -   테이블 형식 모드에서 실행 중인 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 인스턴스  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW 예제 데이터베이스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. 샘플 데이터베이스를 다운로드하려면 [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)을 참조하십시오.  
+-   AdventureWorksDW 예제 데이터베이스. 이 예제 데이터베이스에는 이 자습서를 완료하는 데 필요한 데이터가 포함되어 있습니다. 예제 데이터베이스를 다운로드 하려면를 참조 [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)하십시오.  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 이상(11단원의 Excel에서 분석 기능을 사용하는 데 필요)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "81487632"
 |단원|예상 완료 시간|  
 |------------|--------------------------------|  
 |[행 필터를 사용하여 동적 보안 구현](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30분|  
-|[전원 보기 보고서에 대한 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) 전원 보기 보고서에 대한 보고 속성 구성|30분|  
+|[파워 뷰 보고서의 보고 속성 구성](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md) 파워 뷰 보고서의 보고 속성 구성|30분|  
   
 ## <a name="next-step"></a>다음 단계  
  자습서를 시작하려면 첫 번째 단원인 [1단원: 새 테이블 형식 모델 프로젝트를 만들기](lesson-1-create-a-new-tabular-model-project.md)로 이동하세요.  

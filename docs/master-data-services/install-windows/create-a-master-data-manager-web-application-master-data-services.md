@@ -11,13 +11,13 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728512"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기(마스터 데이터 서비스)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기 (MDS(Master Data Services))
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "81728512"
   
 -   웹 애플리케이션을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결합니다. 자세한 내용은 [Master Data Services 데이터베이스와 웹 애플리케이션 연결](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)을 참조하세요.  
   
--   선택적으로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 이전에 SSL(보안 소켓 계층)이라고 하는 전송 계층 보안(TLS)을 사용하여 콘텐츠를 암호화하려는 경우 HTTPS 바인딩을 사용하도록 웹 응용 프로그램을 호스팅하는 웹 사이트를 구성합니다. IIS Manager와 같은 IIS(인터넷 정보 서비스) 도구를 사용하여 웹 서버에 대한 서버 인증서를 구성하고 사이트에 대한 HTTPS 바인딩 및 TLS 설정을 구성해야 합니다. 자세한 내용은 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)을 참조하세요.  
+-   또는 TLS (Transport Layer Security) SSL(Secure Sockets Layer) [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 사용 하 여 콘텐츠를 암호화 하려는 경우 HTTPS 바인딩을 사용 하도록 웹 응용 프로그램을 호스트 하는 웹 사이트를 구성할 수 있습니다 (SSL (Transport Layer Security)). IIS 관리자와 같은 인터넷 정보 서비스 (IIS) 도구를 사용 하 여 웹 서버에 대 한 서버 인증서를 구성 하 고 사이트에 대 한 HTTPS 바인딩과 TLS 설정을 구성 해야 합니다. 자세한 내용은 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  

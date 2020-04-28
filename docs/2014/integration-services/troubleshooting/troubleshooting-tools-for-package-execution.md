@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8293e8bb7cfcc941c952ddaed25907ef2eec7371
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087063"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
@@ -52,13 +52,13 @@ ms.locfileid: "82087063"
   
 -   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 설명 정보를 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다.  
   
-     **오류에 대한 설명을 추가합니다.** 스크립트 구성 요소를 사용하여 오류 설명을 쉽게 찾을 수 있습니다. 자세한 내용은 [스크립트 구성 요소에 대한 오류 출력 향상을](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)참조하십시오.  
+     **오류에 대 한 설명을 추가**합니다. 스크립트 구성 요소를 사용하여 오류 설명을 쉽게 찾을 수 있습니다. 자세한 내용은 [스크립트 구성 요소에 대 한 오류 출력 향상](../extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조 하세요.  
   
-     **오류 열의 이름을 추가합니다.** 스크립트 구성 요소에서는 오류 출력에 저장된 열 ID에 해당하는 열 이름을 쉽게 찾을 수 없으므로 추가 단계가 필요합니다. 데이터 흐름의 각 열 ID는 해당 데이터 흐름 태스크 내에서 고유하며 디자인 타임에 패키지에 보관됩니다. 다음은 오류 출력에 열 이름을 추가하는 데 적절한 방법입니다. 
+     **오류 열의 이름을 추가**합니다. 스크립트 구성 요소에서는 오류 출력에 저장된 열 ID에 해당하는 열 이름을 쉽게 찾을 수 없으므로 추가 단계가 필요합니다. 데이터 흐름의 각 열 ID는 해당 데이터 흐름 태스크 내에서 고유하며 디자인 타임에 패키지에 보관됩니다. 다음은 오류 출력에 열 이름을 추가하는 데 적절한 방법입니다. 
   
-    1.  **열 이름의 조회 테이블을 만듭니다.** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API를 사용하여 저장된 각 패키지, 패키지의 각 데이터 흐름, 데이터 흐름의 각 개체 및 데이터 흐름 개체의 각 입/출력에 대해 반복하는 별도의 애플리케이션을 만듭니다. 이 애플리케이션은 각 열의 열 ID 및 이름을 부모 데이터 흐름 태스크의 ID 및 패키지의 ID와 함께 조회 테이블에 보관해야 합니다.  
+    1.  **열 이름의 조회 테이블을 만듭니다**. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API를 사용하여 저장된 각 패키지, 패키지의 각 데이터 흐름, 데이터 흐름의 각 개체 및 데이터 흐름 개체의 각 입/출력에 대해 반복하는 별도의 애플리케이션을 만듭니다. 이 애플리케이션은 각 열의 열 ID 및 이름을 부모 데이터 흐름 태스크의 ID 및 패키지의 ID와 함께 조회 테이블에 보관해야 합니다.  
   
-    2.  **출력에 열 이름을 추가합니다.** 이전 단계에서 만든 조회 테이블에서 열 이름을 찾는 조회 변환을 오류 출력에 추가합니다. 조회할 때는 오류 출력의 열 ID, 시스템 변수 System::PackageID에서 사용할 수 있는 패키지 ID 및 시스템 변수 System::TaskID에서 사용할 수 있는 데이터 흐름 태스크의 ID를 사용할 수 있습니다.  
+    2.  **열 이름을 출력에 추가**합니다. 이전 단계에서 만든 조회 테이블에서 열 이름을 찾는 조회 변환을 오류 출력에 추가합니다. 조회할 때는 오류 출력의 열 ID, 시스템 변수 System::PackageID에서 사용할 수 있는 패키지 ID 및 시스템 변수 System::TaskID에서 사용할 수 있는 데이터 흐름 태스크의 ID를 사용할 수 있습니다.  
   
 ## <a name="troubleshoot-package-execution-by-using-operations-reports"></a>작업 보고서를 사용하여 패키지 실행 문제 해결  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 모니터링하는 데 도움이 되는 표준 작업 보고서가 제공됩니다. 이러한 패키지 보고서는 패키지 상태 및 기록을 보고 필요한 경우 실패 원인을 파악하는 데 도움이 됩니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "82087063"
  자세한 내용은 [패키지 실행 보고서 문제 해결](troubleshooting-reports-for-package-execution.md)을 참조하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-ssisdb-views"></a>SSISDB 뷰를 사용하여 패키지 실행 문제 해결  
- 패키지 실행 및 기타 작업 정보를 모니터링하기 위해 쿼리할 수 있는 다양한 SSISDB 데이터베이스 뷰가 제공됩니다. 자세한 내용은 [패키지 실행 및 기타 작업에 대한 모니터링을](../performance/monitor-running-packages-and-other-operations.md)참조하십시오.  
+ 패키지 실행 및 기타 작업 정보를 모니터링하기 위해 쿼리할 수 있는 다양한 SSISDB 데이터베이스 뷰가 제공됩니다. 자세한 내용은 [패키지 실행 및 기타 작업 모니터링](../performance/monitor-running-packages-and-other-operations.md)을 참조 하세요.  
   
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>로깅을 사용하여 패키지 실행 문제 해결  
  로깅을 설정하여 실행하는 패키지에서 발생하는 문제를 대부분 추적할 수 있습니다. 로그 공급자는 지정된 이벤트에 대한 정보를 나중에 분석할 수 있도록 캡처하고 해당 정보를 데이터베이스 테이블, 플랫 파일, XML 파일 또는 지원되는 다른 출력 형식으로 저장합니다.  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14f98d32ad1dd5ff4b5989d3331f24722d65593a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087013"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Analysis Services DMX 쿼리 디자이너 사용자 인터페이스

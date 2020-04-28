@@ -13,10 +13,10 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487890"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server Master Data Services에 대해 알아보기
@@ -26,14 +26,14 @@ ms.locfileid: "81487890"
   
   
 ## <a name="training"></a>학습  
-* 에 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도입 된 새로운 기능 및 기능을 탐색하려면 [자체 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs) 사용해 보십시오 (Microsoft 계정으로 로그인해야 합니다).  
-* 지리적 데이터의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 마스터 목록을 저장하고 관리하는 솔루션을 개발하려면 Excel용 추가 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]기능 및 에서 [자체 진행 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs)사용해 보십시오. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
+* 에 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도입 된 새로운 기능을 살펴보려면 [자체 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs) 사용해 보세요 (Microsoft 계정 로그인 해야 함).  
+* Excel 용 추가 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능 및를 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]사용 하 여 지리 데이터의 마스터 목록을 저장 하 고 관리 하는 솔루션을 개발 하려면 [자가 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs)사용해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
   
 ## <a name="videos"></a>동영상  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]릴리스에 포함된 새로운 기능에 대해 알아보려면 [**이 비디오를 시청**](https://www.youtube.com/watch?v=cKA72FpOVxI)하세요.  
   
 ## <a name="samples"></a>샘플  
-* [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 에서 모델, 엔터티 및 계층 구조를 사용하여 데이터를 구조화하는 방법을 자세히 알아보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치할 때 포함되는 샘플 모델을 확인해 보세요. 샘플 배포에 대한 지침은 [샘플 모델 및 데이터 배포를](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)참조하십시오.   
+* [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 에서 모델, 엔터티 및 계층 구조를 사용하여 데이터를 구조화하는 방법을 자세히 알아보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치할 때 포함되는 샘플 모델을 확인해 보세요. 샘플 배포에 대 한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조 하세요.   
   
     샘플 모델의 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 업데이트에 대한 자세한 내용은 [SQL Server 샘플: 모델 배포 패키지](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
