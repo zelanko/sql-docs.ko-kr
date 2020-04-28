@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174263"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert(Transact-SQL)
@@ -88,8 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'`경고가 발생 하기 위해 오류가 발생 해야 하는 데이터베이스입니다. *데이터베이스*를 제공 하지 않으면 오류가 발생 한 위치와 관계 없이 경고가 발생 합니다. *데이터베이스* 는 **sysname**입니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대 한 설명이 있어야 하는 문자 시퀀스입니다. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword_pattern* 은 **nvarchar (100)** 이며 기본값은 NULL입니다. 이 매개 변수는 개체 이름 (예: **% customer_table%**)을 필터링 하는 데 유용 합니다.  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대 한 설명이 있어야 하는 문자 시퀀스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword_pattern* 은 **nvarchar (100)** 이며 기본값은 NULL입니다. 이 매개 변수는 개체 이름 (예: **% customer_table%**)을 필터링 하는 데 유용 합니다.  
   
 `[ @job_id = ] job_id`이 경고에 대 한 응답으로 실행할 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다.  
   
@@ -123,8 +122,7 @@ sp_add_alert [ @name = ] 'name'
 ## <a name="remarks"></a>설명  
  **sp_add_alert** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 의해 생성된 오류 또는 메시지가 Windows 애플리케이션 로그로 전달되어 경고가 발생하는 상황입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 의해 생성된 오류 또는 메시지가 Windows 애플리케이션 로그로 전달되어 경고가 발생하는 상황입니다.  
   
 -   심각도 19 이상의 **sys. 메시지** 오류  
   
@@ -138,14 +136,13 @@ sp_add_alert [ @name = ] 'name'
   
  경고가 제대로 작동하지 않는 경우에는 다음 사항을 확인하세요.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 중인지 여부  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 중인지 여부  
   
 -   Windows 애플리케이션 로그에 표시된 이벤트  
   
 -   경고의 설정 여부  
   
--   master 데이터베이스에서 **xp_logevent** 로 생성된 이벤트가 발생합니다. 따라서 경고에 대한 **** database_name **이 \@'master'** 또는 NULL이 아닌 경우 **xp_logevent**는 경고를 트리거하지 않습니다.  
+-   master 데이터베이스에서 **xp_logevent** 로 생성된 이벤트가 발생합니다. 따라서 경고에 대한 **\@database_name** 이 **'master'** 또는 NULL이 아닌 경우 **xp_logevent**는 경고를 트리거하지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만 **sp_add_alert**를 실행할 수 있습니다.  

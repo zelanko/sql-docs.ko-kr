@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251954"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
@@ -47,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *\@option*  
  경로의 서버 구성 요소에 형식을 지정 하는 방법을 정의 하는 정수 [식](../../t-sql/language-elements/expressions-transact-sql.md) 입니다. 옵션은 다음 값 중 하나일 수 있습니다. * \@* 기본값은 0입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0|BIOS 형식으로 변환 된 서버 이름을 반환 합니다. 예를 들면 다음과 같습니다.`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|서버 이름을 변환 하지 않고 반환 합니다. 예를 들면 다음과 같습니다.`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  데이터베이스가 Always On 가용성 그룹에 속하는 경우 *use_replica_computer_name* 의 값은 **PathName** 함수의 출력에 다음과 같은 영향을 미칠 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
@@ -148,7 +148,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Binary Large Object &#40;Blob&#41; 데이터 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Blob&#41; Blob을 &#40;Blob (Binary Large Object &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [Transact-sql&#41;GET_FILESTREAM_TRANSACTION_CONTEXT &#40;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

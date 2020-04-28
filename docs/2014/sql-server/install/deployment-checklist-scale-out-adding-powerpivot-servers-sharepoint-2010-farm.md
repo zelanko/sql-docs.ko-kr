@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952180"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장
@@ -22,7 +22,7 @@ ms.locfileid: "71952180"
   
  새 인스턴스를 설치하면 PowerPivot 데이터 쿼리 또는 PowerPivot 데이터 새로 고침 작업 처리를 위한 추가 용량이 제공됩니다. 선택적으로 서버마다 쿼리 또는 데이터 새로 고침 등, 하나의 요청 유형을 처리하도록 구성할 수 있는 선택 항목이 있습니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
  SharePoint Server 2010을 설치하고 구성해야 합니다.  
   
  SharePoint Server 2010 SP1을 적용하고 팜을 업그레이드해야 합니다.  

@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586732"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 적합 한 Azure SQL Database/Managed Instance SKU 식별
@@ -29,7 +29,7 @@ ms.locfileid: "72586732"
 
 - 단일 데이터베이스
 - 탄력적 풀
-- Managed Instance
+- 관리되는 인스턴스
 
 SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는 컴퓨터에서 수집 된 성능 카운터를 기반으로 하는 최소 권장 Azure SQL Database 단일 데이터베이스 또는 관리 되는 인스턴스 SKU를 모두 식별할 수 있습니다. 이 기능은 가격 책정 계층, 계산 수준 및 최대 데이터 크기와 관련 된 권장 사항과 월별 예상 비용을 제공 합니다. 또한 모든 권장 데이터베이스에 대해 Azure에서 단일 데이터베이스 및 관리 되는 인스턴스를 대량 프로 비전 하는 기능을 제공 합니다.
 
@@ -46,7 +46,7 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 - 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript**이 DMA 폴더에 설치 되어 있는지 확인 합니다.
 - 이 프로세스를 수행할 컴퓨터에 데이터베이스를 호스트 하는 컴퓨터에 대 한 관리자 권한이 있는지 확인 합니다.
 
-## <a name="collect-performance-counters"></a>성능 카운터 수집
+## <a name="collect-performance-counters"></a>성능 카운터를 수집 합니다.
 
 이 프로세스의 첫 번째 단계는 데이터베이스에 대 한 성능 카운터를 수집 하는 것입니다. 데이터베이스를 호스트 하는 컴퓨터에서 PowerShell 명령을 실행 하 여 성능 카운터를 수집할 수 있습니다. DMA는이 PowerShell 파일의 복사본을 제공 하지만 사용자 고유의 메서드를 사용 하 여 컴퓨터에서 성능 카운터를 캡처할 수도 있습니다.
 
@@ -102,7 +102,7 @@ DMA CLI를 사용 하 여 SKU 권장 사항을 가져오려면 명령 프롬프�
     - **/Azureauthenticationtenantid**: 인증 테 넌 트입니다.
     - **/Azureauthenticationclientid**: 인증에 사용 되는 AAD 앱의 클라이언트 ID입니다.
     - 다음 인증 옵션 중 하나입니다.
-      - 대화형
+      - Interactive (대화형)
         - **AzureAuthenticationInteractiveAuthentication**: 인증 팝업 창에 대해 true로 설정 합니다.
       - 인증서 기반
         - **AzureAuthenticationCertificateStoreLocation**: 인증서 저장소 위치 (예: "CurrentUser")로 설정 합니다.

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305231"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-sql)
@@ -33,13 +33,13 @@ ms.locfileid: "72305231"
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID입니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수입니다. |  
 |data_compression|**int**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|각 파티션의 압축 상태를 나타냅니다. 가능한 값은 NONE, ROW 및 PAGE입니다.|  
+|data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. 가능한 값은 NONE, ROW 및 PAGE입니다.|  
 |pdw_node_id|**int**|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드의 고유 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  `CONTROL SERVER` 권한이 필요합니다.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>예 A: 각 배포 내의 각 파티션에 행 표시 
 
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810547"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70810547"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
- > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+ > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'`추가할 범주의 클래스입니다. *클래스* 는 기본값은 JOB이 고 다음 값 중 하나일 수 있는 **varchar (8)** 입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |JOB|작업 범주를 추가합니다.|  
 |ALERT|경고 범주를 추가합니다.|  
@@ -55,7 +55,7 @@ sp_add_category
   
 `[ @type = ] 'type'`추가할 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 **LOCAL**이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
@@ -67,7 +67,7 @@ sp_add_category
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  **sp_add_category** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952407"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>보고서 관리자 URL(SSRS 기본 모드)
@@ -35,14 +35,14 @@ ms.locfileid: "71952407"
  **가상 디렉터리**  
  보고서 관리자의 가상 디렉터리 이름을 지정합니다. 같은 컴퓨터의 각 보고서 관리자 인스턴스에 대해 가상 디렉터리 이름은 하나만 지정할 수 있습니다.  
   
- **Url**  
+ **URL**  
  현재 보고서 관리자 인스턴스에 정의된 URL을 표시합니다.  
   
  **고급**  
  현재 보고서 관리자 인스턴스에 대해 다른 URL을 추가합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;URL 구성&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [구성 파일의 Url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

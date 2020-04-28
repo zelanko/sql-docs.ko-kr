@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874477"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874477"
   
 -   케이블이 연결되어 있지 않은 경우  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows에 특정 포트를 차단하는 방화벽이 있는 경우  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows에 특정 포트를 차단하는 방화벽이 있는 경우  
   
 -   포트를 모니터링하는 애플리케이션에서 오류가 발생한 경우  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874477"
 -   Windows 기반 서버가 다시 부팅된 경우  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]은 서버에 액세스하는 클라이언트 관련 문제에 대해 보호하지 않습니다. 예를 들어 프라이빗 네트워크 인터페이스 카드가 가용성 그룹 복제본을 호스팅 중인 서버 인스턴스 간의 트래픽을 처리하는 동안 퍼블릭 네트워크 어댑터가 주 복제본에 대한 클라이언트 연결을 처리하는 경우 이 경우 공용 네트워크 어댑터의 오류로 인해 클라이언트가 데이터베이스에 액세스하지 못합니다.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]은 서버에 액세스하는 클라이언트 관련 문제에 대해 보호하지 않습니다. 예를 들어 프라이빗 네트워크 인터페이스 카드가 가용성 그룹 복제본을 호스팅 중인 서버 인스턴스 간의 트래픽을 처리하는 동안 퍼블릭 네트워크 어댑터가 주 복제본에 대한 클라이언트 연결을 처리하는 경우 이 경우 공용 네트워크 어댑터의 오류로 인해 클라이언트가 데이터베이스에 액세스하지 못합니다.  
   
 ## <a name="failures-due-to-soft-errors"></a>소프트 오류로 인한 오류  
  세션 제한 시간 초과가 발생할 수 있는 상황은 다음(여기에 한정되지 않음)과 같습니다.  
@@ -94,14 +92,13 @@ ms.locfileid: "70874477"
  오류 유형에 관계없이 오류를 감지하는 서버 인스턴스는 인스턴스의 역할, 세션의 가용성 모드 및 세션 내 다른 연결의 상태를 기반으로 적절하게 오류에 응답합니다. 파트너가 손실 될 때 발생 하는 상황에 대 한 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)를 참조 하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
- **제한 시간 값을 변경 하려면 (동기-커밋 가용성 모드에만 해당)**  
+ **제한 시간 값을 변경하려면(동기 커밋 가용성 모드 전용)**  
   
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
  **현재 제한 시간 값을 보려면**  
   
--   
-  **sys.availability_replicas&#40;Transact-SQL&#41;** 에서 [session_timeout](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)을 쿼리합니다.  
+-   [sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)에서 **session_timeout**을 쿼리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1408d970093fde0e2efea9662b56b9f099d6b0b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783025"
 ---
 # <a name="change-the-session-timeout-period-for-an-availability-replica-sql-server"></a>가용성 복제본에 대한 세션 제한 시간 변경(SQL Server)
@@ -26,13 +26,13 @@ ms.locfileid: "72783025"
   
 -   **시작하기 전 주의 사항:**  
   
-     [필수 구성 요소](#Prerequisites)  
+     [전제 조건](#Prerequisites)  
   
      [권장 사항](#Recommendations)  
   
      [보안](#Security)  
   
--   **세션 제한 시간을 변경 하려면 다음을 사용 합니다.**  
+-   **세션 제한 시간을 변경하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -40,27 +40,26 @@ ms.locfileid: "72783025"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-###  <a name="Recommendations"></a> 권장 사항  
+###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
  제한 시간을 10초 이상으로 유지하는 것이 좋습니다. 10초 미만의 값을 설정하면 로드가 많은 시스템에서 PING을 누락하여 잘못된 실패를 선언할 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  가용성 그룹에 대한 ALTER AVAILABILITY GROUP 권한, CONTROL AVAILABILITY GROUP 권한, ALTER ANY AVAILABILITY GROUP 권한 또는 CONTROL SERVER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 복제본에 대한 세션 제한 시간을 변경하려면**  
   
 1.  개체 탐색기에서 주 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 복제본을 구성할 가용성 그룹을 클릭합니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "72783025"
   
 5.  **가용성 복제본 속성** 대화 상자에서 **세션 제한 시간(초)** 필드를 사용하여 이 복제본에 대한 세션 제한 시간(초)을 변경합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 복제본에 대한 세션 제한 시간을 변경하려면**  
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
@@ -88,14 +87,13 @@ ms.locfileid: "72783025"
        MODIFY REPLICA ON 'INSTANCE09' WITH (SESSION_TIMEOUT = 15);  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
 
 ### <a name="to-change-the-session-timeout-period-for-an-availability-replica"></a>가용성 복제본에 대한 세션 제한 시간을 변경하려면
   
 1.  주 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  
-  `Set-SqlAvailabilityReplica` cmdlet을 `SessionTimeout` 매개 변수와 함께 사용하여 지정된 가용성 복제본에 대한 세션 제한 시간(초)을 변경할 수 있습니다.  
+2.  `Set-SqlAvailabilityReplica` cmdlet을 `SessionTimeout` 매개 변수와 함께 사용하여 지정된 가용성 복제본에 대한 세션 제한 시간(초)을 변경할 수 있습니다.  
   
      예를 들어 다음 명령은 세션 제한 시간을 15초로 설정합니다.  
   

@@ -17,16 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952120"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 구성 옵션(SSRS)
-  
-  **
-  ** 설치 마법사의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 보고서 서버의 설치 및 구성 방법을 지정할 수 있습니다. 사용 가능한 설치 옵션은 이전에 **기능 선택** 페이지에서 선택한 옵션과 보고서 서버 설치 시 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 로컬 인스턴스도 함께 설치하는지 여부에 따라 달라집니다.  
+  **** 설치 마법사의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 보고서 서버의 설치 및 구성 방법을 지정할 수 있습니다. 사용 가능한 설치 옵션은 이전에 **기능 선택** 페이지에서 선택한 옵션과 보고서 서버 설치 시 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 로컬 인스턴스도 함께 설치하는지 여부에 따라 달라집니다.  
   
  경우에 따라 컴퓨터에 SSL(Secure Sockets Layer) 인증서가 설치되어 강력한 와일드카드에 바인딩되어 있는 경우 설치 프로그램이 HTTPS 접두사를 사용하여 Reporting Services URL을 만듭니다. 인증서를 Reporting Services url에 매핑하는 방법에 대 한 자세한 내용은 SQL Server 온라인 설명서https://go.microsoft.com/fwlink/?LinkId=199089) 에서 [SSL(Secure Sockets Layer) (SSL) 연결에 대 한 보고서 서버 구성](https://go.microsoft.com/fwlink/?LinkId=199089) 을 참조 하세요.  
   
@@ -64,16 +62,13 @@ ms.locfileid: "71952120"
 -   [Reporting Services 보고서 서버 (SSRS)](https://go.microsoft.com/fwlink/?LinkID=207244) (https://go.microsoft.com/fwlink/?LinkID=207244))  
   
 ## <a name="installing-the-reporting-services-add-in-for-sharepoint-technologies"></a>SharePoint 기술용 Reporting Services 추가 기능 설치  
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 이 추가 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지에서 SQL Server 설치의 일부로 설치할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 릴리스부터 이 추가 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지에서 SQL Server 설치의 일부로 설치할 수 있습니다.  
   
  그러나 다음 방법 중 하나를 사용하여 SharePoint 2010용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 설치할 수 있습니다.  
   
 -   SharePoint 2010 제품 준비 도구인 **PreRequisiteInstaller.exe**를 실행합니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에서 설치합니다. 
-  **설치가 끝난 후** 설치 미디어의 Setup 폴더에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일을 클릭합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어에서 설치합니다. **설치가 끝난 후** 설치 미디어의 Setup 폴더에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일을 클릭합니다.  
   
 -   추가 기능을 다운로드하고 설치합니다. 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능을 찾을 수 있는 위치](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634)를 참조 하세요.  
   

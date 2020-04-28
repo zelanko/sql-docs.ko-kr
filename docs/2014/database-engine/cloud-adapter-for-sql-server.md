@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176012"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server에 대한 클라우드 어댑터
@@ -26,11 +26,9 @@ ms.locfileid: "70176012"
  클라우드 어댑터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 온-프레미스 인스턴스에서 메시지를 수신하는 상태 비저장 동기 서비스입니다. 클라우드 어댑터 서비스가 중지되면 원격 액세스 클라우드 어댑터가 중지되고 SSL 인증서가 바인딩 해제되며 Windows 방화벽 규칙이 사용되지 않습니다.  
   
 ## <a name="cloud-adapter-requirements"></a>클라우드 어댑터 요구 사항  
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 클라우드 어댑터를 설치, 사용 및 실행하려면 다음 요구 사항을 따라야 합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 클라우드 어댑터를 설치, 사용 및 실행하려면 다음 요구 사항을 따라야 합니다.  
   
--   클라우드 어댑터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 이상에서 지원됩니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 클라우드 어댑터를 사용하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012용 SQL Management Objects가 필요합니다.  
+-   클라우드 어댑터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012 이상에서 지원됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 대한 클라우드 어댑터를 사용하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2012용 SQL Management Objects가 필요합니다.  
   
 -   클라우드 어댑터 웹 서비스는 **로컬 시스템** 계정으로 실행되며 태스크를 실행하기 전에 클라이언트 자격 증명을 확인합니다. 클라이언트에서 제공 하는 자격 증명은 원격 컴퓨터에서 로컬 **관리자** 그룹의 멤버인 사용 계정에 속해야 합니다.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "70176012"
   
 -   **구성 파일 매개 변수** -  
   
-    -   \<구성>  
+    -   \<configuration>  
   
         -   \<appSettings>  
   

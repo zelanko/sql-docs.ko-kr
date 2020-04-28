@@ -11,14 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9282fce8e0004495ae8c10b0b3f75fec205d6b34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782812"
 ---
 # <a name="powerpivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 PowerPivot 구성
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]의 설치를 구성하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함되어 있습니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 PowerPivot cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
@@ -32,8 +31,7 @@ ms.locfileid: "72782812"
   
  PowerShell을 사용하여 PowerPivot cmdlet의 목록을 보려면  
   
-1.  
-  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.  
+1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.  
   
 2.  다음 명령을 입력합니다.  
   
@@ -64,8 +62,7 @@ ms.locfileid: "72782812"
 ## <a name="enable-powerpivot-cmdlets-on-a-server"></a>서버에서 PowerPivot Cmdlet 사용  
  SharePoint용 PowerPivot을 설치하고 팜 솔루션을 배포한 후 PowerPivot cmdlet을 사용할 수 있습니다. PowerPivot 구성 도구를 실행하면 솔루션이 배포됩니다. Cmdlet을 사용하려면 다음 단계를 수행합니다.  
   
-1.  
-  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.  
+1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.  
   
 2.  첫 번째 cmdlet을 실행합니다.  
   
@@ -81,8 +78,7 @@ ms.locfileid: "72782812"
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-4.  창을 닫습니다. 
-  **관리자 권한으로 실행** 옵션을 사용하여 창을 다시 엽니다.  
+4.  창을 닫습니다. **관리자 권한으로 실행** 옵션을 사용하여 창을 다시 엽니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [중앙 관리에서 PowerPivot 서버 관리 및 구성](power-pivot-server-administration-and-configuration-in-central-administration.md)  

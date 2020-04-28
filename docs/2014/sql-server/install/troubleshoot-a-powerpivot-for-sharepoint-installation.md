@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952001"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 문제 해결
@@ -33,14 +33,11 @@ ms.locfileid: "71952001"
   
 1.  PowerPivot 갤러리 라이브러리의 기어 아이콘 ![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") 또는 **홈** 목록에서 **사이트 설정** 을 클릭 합니다.  
   
-2.  
-  **사이트 모음 관리** 섹션에서 **사이트 모음 기능**을 클릭합니다.  
+2.  **사이트 모음 관리** 섹션에서 **사이트 모음 기능**을 클릭합니다.  
   
-3.  
-  **사이트 모음 기능**을 클릭합니다.  
+3.  **사이트 모음 기능**을 클릭합니다.  
   
-4.  
-  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
+4.  **사이트 모음에 대한 PowerPivot 기능 통합** 이 **활성**상태인지 확인합니다.  
   
  이 문제의 추가 원인은 [PowerPivot 갤러리의 아이콘에 빨간색 X가 표시](https://support.microsoft.com/kb/2361559) 되는 경우를https://support.microsoft.com/kb/2361559)참조 하세요.  
   

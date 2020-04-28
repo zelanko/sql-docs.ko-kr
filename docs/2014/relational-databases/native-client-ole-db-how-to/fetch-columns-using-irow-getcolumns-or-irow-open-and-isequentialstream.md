@@ -15,17 +15,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467586"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
   대형 데이터는 `ISequentialStream` 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
   
 > [!IMPORTANT]  
->  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지하려면 [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용하여 자격 증명을 암호화해야 합니다.  
+>  가능하면 Windows 인증을 사용하세요. Windows 인증을 사용할 수 없으면 런타임에 사용자에게 자격 증명을 입력하라는 메시지를 표시합니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지 해야 하는 경우에는 [Win32 CRYPTO API](https://go.microsoft.com/fwlink/?LinkId=64532)를 사용 하 여 자격 증명을 암호화 해야 합니다.  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열을 인출하려면  
   
@@ -33,15 +33,13 @@ ms.locfileid: "62467586"
   
 2.  명령을 실행합니다. 이 예에서는 `ICommandExecute::Execute()`를 IID_IRow로 호출합니다.  
   
-3.  
-  `IRow::Open()` 또는 `IRow::GetColumns()`를 사용하여 열 데이터를 인출합니다.  
+3.  `IRow::Open()` 또는 `IRow::GetColumns()`를 사용하여 열 데이터를 인출합니다.  
   
-    -   
-  `IRow::Open()`은 행에 대해 `ISequentialStream`을 여는 데 사용할 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음 `IStream` 또는 `ISequentialStream`을 사용하여 열에서 데이터를 읽을 수 있습니다.  
+    -   `IRow::Open()`은 행에 대해 `ISequentialStream`을 여는 데 사용할 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음 `IStream` 또는 `ISequentialStream`을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
     -   를 `IRow::GetColumns()` 사용 하면 DBCOLUMNACCESS 구조체의 **.pdata** 요소가 스트림 개체를 가리키도록 설정 됩니다.  
   
-4.  **ISequentialStream:: Read ()** 를 반복 해 서 사용 하 여 지정 된 바이트 수를 소비자 버퍼로 읽습니다.  
+4.  **ISequentialStream::Read()** 를 반복해서 사용하여 지정된 바이트 수를 소비자 버퍼로 읽습니다.  
   
 ## <a name="example"></a>예제  
  이 예에서는 IRow를 사용하여 단일 행을 인출하는 방법을 보여 줍니다. 이 예에서는 행에서 한 번에 한 개의 열이 검색됩니다. 이 예에서는 IRow::GetColumns()와 IRow::Open()을 사용하는 방법을 보여 줍니다. 이 예에서는 ISequentialStream::Read를 사용하여 열 데이터를 읽습니다.  

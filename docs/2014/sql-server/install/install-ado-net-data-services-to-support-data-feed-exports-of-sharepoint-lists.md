@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b9b3ec2d8b7459f9d66313c6a40b1cbc26450e0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952160"
 ---
 # <a name="install-adonet-data-services-to-support-data-feed-exports-of-sharepoint-lists"></a>ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원
@@ -28,8 +28,7 @@ ms.locfileid: "71952160"
   
 1.  SharePoint 2010의 하드웨어 및 소프트웨어 요구 사항 설명서를 보려면 [하드웨어 및 소프트웨어 요구 사항(SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=169734)으로 이동하십시오.  
   
-2.  
-  **적용 가능한 소프트웨어에 대한 액세스**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
+2.  **적용 가능한 소프트웨어에 대한 액세스**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   
 3.  링크를 클릭하여 서비스를 설치하는 설치 프로그램을 실행합니다.  
   

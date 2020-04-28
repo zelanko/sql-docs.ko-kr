@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952389"
 ---
 # <a name="service-account-ssrs-native-mode"></a>서비스 계정(SSRS 기본 모드)
@@ -33,8 +33,7 @@ ms.locfileid: "71952389"
   
 ## <a name="options"></a>옵션  
  **기본 제공 계정 사용**  
- 목록에서 **네트워크 서비스**, **로컬 시스템**또는 **로컬 서비스** 를 선택합니다. 
-  **네트워크 서비스** 만 사용하는 것이 좋지만 사용할 수 있는 계정을 사용하여 해당 계정을 구성할 수 있습니다.  
+ 목록에서 **네트워크 서비스**, **로컬 시스템**또는 **로컬 서비스** 를 선택합니다. **네트워크 서비스** 만 사용하는 것이 좋지만 사용할 수 있는 계정을 사용하여 해당 계정을 구성할 수 있습니다.  
   
  **다른 계정 사용**  
  Windows 사용자 계정을 지정하려면 이 옵션을 선택합니다. 로컬 Windows 사용자 계정 또는 도메인 사용자 계정을 입력할 수 있습니다. 도메인 * \< \\><사용자\>* 로 도메인 계정을 지정 합니다. 다음 형식으로 로컬 Windows 사용자 계정을 지정 합니다. * \<컴퓨터 이름>\\<사용자\>*. 기존 계정만 선택할 수 있으며 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성에 새 계정을 만들 수는 없습니다.  
@@ -46,24 +45,21 @@ ms.locfileid: "71952389"
  Windows 계정을 다른 계정으로 바꾸거나 기본 제공 계정을 Windows 도메인 계정으로 바꾸는 등 계정 유형을 전환하면 암호화 키의 백업 복사본을 만들라는 메시지가 표시됩니다. 새 계정을 선택하면 백업 복사본이 자동으로 복원됩니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 사용자가 서비스 계정을 수정할 때마다 암호화 키를 백업 및 복원하라는 메시지를 표시합니다. 이는 보고서 서버에서 계속 암호화된 데이터를 사용할 수 있도록 하기 위해 반드시 필요한 단계입니다. 이러한 작업에 대 한 자세한 내용은 [SSRS 기본 모드 &#40;암호화 키&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)를 참조 하세요.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 사용자가 서비스 계정을 수정할 때마다 암호화 키를 백업 및 복원하라는 메시지를 표시합니다. 이는 보고서 서버에서 계속 암호화된 데이터를 사용할 수 있도록 하기 위해 반드시 필요한 단계입니다. 이러한 작업에 대 한 자세한 내용은 [SSRS 기본 모드 &#40;암호화 키&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)를 참조 하세요.  
   
  또한 보고서 서버가 SharePoint 통합 모드로 실행되도록 구성되어 있고 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 서비스 계정을 변경하는 경우 SharePoint 중앙 관리를 열어 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **데이터베이스 액세스 권한 부여** 페이지에서 보고서 서버 및 인스턴스 설정을 다시 적용해야 합니다. 이 단계를 수행하면 새 서비스 계정에 SharePoint 데이터베이스에 대한 액세스 권한이 부여됩니다. 이 액세스 권한은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 SharePoint 제품 또는 기술과 통합하는 데 필요합니다. SharePoint 중앙 관리에서 데이터베이스 액세스 권한을 부여 하는 방법에 대 한 자세한 내용은 sharepoint [모드&#41;Reporting Services &#40;보고서 서버의 구성 및 관리](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) 를 참조 하 고 Sharepoint [모드 설치 &#40;SharePoint 2010 및 sharepoint 2013&#41;을 Reporting Services ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
   
 ## <a name="choosing-an-account"></a>계정 선택  
  최상의 결과를 얻으려면 네트워크 도메인 컨트롤러 및 회사 SMTP 서버나 게이트웨이에 액세스할 수 있는 네트워크 연결 권한이 있는 계정을 지정합니다. 다음 표에서는 계정을 간단히 보여 주고 계정 사용에 대한 권장 사항을 알려 줍니다.  
   
-|계좌|설명|  
+|계정|설명|  
 |-------------|-----------------|  
 |도메인 사용자 계정|보고서 서버 작업에 필요한 최소 권한이 있는 Windows 도메인 사용자 계정이 있으면 이러한 계정을 사용해야 합니다.<br /><br /> 다른 애플리케이션에서 보고서 서버 서비스가 격리되므로 도메인 사용자 계정을 사용하는 것이 좋습니다. 네트워크 서비스와 같은 공유 계정으로 여러 애플리케이션을 실행하는 경우 한 애플리케이션에 대한 보안 위협이 동일한 계정으로 실행되는 모든 애플리케이션으로 쉽게 확장될 수 있기 때문에 악의적인 사용자가 보고서 서버를 제어하는 데에 대한 위험이 증가됩니다.<br /><br /> 제한된 위임을 위해 보고서 서버를 구성할 경우 또는 기본 제공 컴퓨터 계정이 아닌 도메인 사용자 계정을 사용해야 하는 SharePoint 2010 제품의 SharePoint 통합 모드에서는 도메인 사용자 계정이 필요합니다.<br /><br /> 도메인 사용자 계정을 사용할 경우 조직에서 암호 만료 정책을 적용하면 정기적으로 암호를 변경해야 합니다. 이 사용자 계정으로 서비스를 등록해야 할 수도 있습니다. 자세한 내용은 [보고서 서버의 SPN&#40;서비스 사용자 이름&#41; 등록](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)을 참조하세요.<br /><br /> 로컬 Windows 사용자 계정을 사용하지 마십시오. 일반적으로 로컬 계정에는 다른 컴퓨터의 리소스에 액세스하기에 충분한 권한이 없습니다. 로컬 계정을 사용하여 보고서 서버 기능을 제한하는 방법에 대한 자세한 내용은 이 항목의 [로컬 계정 사용 시 고려 사항](#localaccounts) 을 참조하십시오.|  
-|**네트워크 서비스**|**네트워크 서비스** 는 네트워크 로그온 권한이 있는 기본 제공 최소 권한 계정입니다. 도메인 사용자 계정을 사용할 수 없거나 암호 만료 정책으로 인해 발생할 수 있는 서비스 장애를 방지하려면 이 계정을 사용하는 것이 좋습니다.<br /><br /> 
-  **네트워크 서비스**를 선택할 경우 동일한 계정으로 실행하는 다른 서비스의 수를 최소화하십시오. 한 애플리케이션에 대한 보안 위협으로 인해 동일한 계정으로 실행되는 다른 모든 애플리케이션의 보안이 손상됩니다.|  
-|**로컬 서비스**|**로컬 서비스** 는 인증 된 로컬 Windows 사용자 계정과 같은 기본 제공 계정입니다. 
-  **로컬 서비스** 계정으로 실행되는 서비스는 자격 증명이 없는 Null 세션으로 네트워크 리소스에 액세스합니다. 이 계정은 보고서 서버를 원격 보고서 서버 데이터베이스나 네트워크 도메인 컨트롤러에 연결하여 보고서를 열거나 구독을 처리하기 전에 사용자를 인증해야 하는 인트라넷 배포 시나리오에 적합하지 않습니다.|  
-|**로컬 시스템**|**로컬 시스템** 은 보고서 서버를 실행 하는 데 필요 하지 않은 높은 권한의 계정입니다. 보고서 서버 설치에는 이 계정을 사용하지 마십시오. 대신 도메인 계정 또는 **네트워크 서비스** 를 선택합니다.|  
+|**네트워크 서비스**|**네트워크 서비스** 는 네트워크 로그온 권한이 있는 기본 제공 최소 권한 계정입니다. 도메인 사용자 계정을 사용할 수 없거나 암호 만료 정책으로 인해 발생할 수 있는 서비스 장애를 방지하려면 이 계정을 사용하는 것이 좋습니다.<br /><br /> **네트워크 서비스**를 선택할 경우 동일한 계정으로 실행하는 다른 서비스의 수를 최소화하십시오. 한 애플리케이션에 대한 보안 위협으로 인해 동일한 계정으로 실행되는 다른 모든 애플리케이션의 보안이 손상됩니다.|  
+|**로컬 서비스**|**로컬 서비스** 는 인증된 로컬 Windows 사용자 계정과 같은 기본 제공 계정입니다. **로컬 서비스** 계정으로 실행되는 서비스는 자격 증명이 없는 Null 세션으로 네트워크 리소스에 액세스합니다. 이 계정은 보고서 서버를 원격 보고서 서버 데이터베이스나 네트워크 도메인 컨트롤러에 연결하여 보고서를 열거나 구독을 처리하기 전에 사용자를 인증해야 하는 인트라넷 배포 시나리오에 적합하지 않습니다.|  
+|**로컬 시스템**|**로컬 시스템** 은 높은 권한이 있는 계정이므로 보고서 서버를 실행하는 데 필요하지 않습니다. 보고서 서버 설치에는 이 계정을 사용하지 마십시오. 대신 도메인 계정 또는 **네트워크 서비스** 를 선택합니다.|  
   
-##  <a name="localaccounts"></a>로컬 계정 사용 시 고려 사항  
+##  <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a>로컬 계정 사용 시 고려 사항  
  로컬 계정 사용 시 기본적인 고려 사항은 보고서 서버가 원격 데이터베이스 서버, 메일 서버 및 도메인 컨트롤러에 액세스해야 하는지 여부입니다. 로컬 Windows 사용자 계정, 로컬 서비스 또는 로컬 시스템으로 보고서 서버를 실행하도록 구성할 경우 다른 구성 설정 방법과 구독 만들기 및 배달에 대해 검토해야 하는 고려 사항이 있습니다.  
   
 -   로컬 계정에서 서비스를 실행하면 나중에 원격 보고서 서버 데이터베이스에 대한 연결을 구성할 경우 옵션이 제한됩니다. 특히 원격 보고서 서버 데이터베이스를 사용 중일 경우 원격 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그온할 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 또는 도메인 사용자 계정을 사용하도록 연결을 구성해야 합니다.  
@@ -76,7 +72,7 @@ ms.locfileid: "71952389"
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;서비스 계정 구성&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

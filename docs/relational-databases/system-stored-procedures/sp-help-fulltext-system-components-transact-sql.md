@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304889"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components(Transact-SQL)
@@ -69,21 +69,20 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나<br /><br /> filter<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
-|**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
+|**가**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자가 **serveradmin** 고정 서버 역할의 멤버가 아닙니다.|  
-|**버전**|**nvarchar (30)**|구성 요소 버전입니다.|  
-|**manufacturer**|**sysname**|구성 요소 제조업체의 이름입니다.|  
+|**version**|**nvarchar(30)**|구성 요소 버전입니다.|  
+|**제조업체**|**sysname**|구성 요소 제조업체의 이름입니다.|  
   
  다음 결과 집합은 *component_type*를 사용 하는 하나 이상의 전체 텍스트 카탈로그가 있는 경우에만 반환 됩니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**int**|데이터베이스의 ID입니다.|  
-|**ftcatid 의해**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
+|**ftcatid**|**int**|전체 텍스트 카탈로그의 ID입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- **Public** 역할의 멤버 자격이 필요 합니다. 그러나 사용자는 VIEW DEFINITION 권한이 있는 전체 텍스트 카탈로그에 대 한 정보만 볼 수 있습니다. 
-  **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
+ **Public** 역할의 멤버 자격이 필요 합니다. 그러나 사용자는 VIEW DEFINITION 권한이 있는 전체 텍스트 카탈로그에 대 한 정보만 볼 수 있습니다. **serveradmin** 고정 서버 역할의 멤버만 **fullpath** 열의 값을 볼 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는 업그레이드를 준비할 때 특히 중요합니다. 특정 데이터베이스 내에서 저장 프로시저를 실행하고, 출력을 사용하여 특정 카탈로그가 업그레이드에 영향을 받는지 여부를 지정합니다.  

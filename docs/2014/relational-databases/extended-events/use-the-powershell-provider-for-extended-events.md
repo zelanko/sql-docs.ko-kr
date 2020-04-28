@@ -15,21 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782912"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트를 관리할 수 있습니다. XEvent 하위 폴더는 SQLSERVER 드라이브 아래에 있습니다. 다음 방법 중 하나를 사용하여 이 폴더에 액세스할 수 있습니다.  
   
--   명령 프롬프트에서 `sqlps`를 입력하고 Enter 키를 누릅니다. 
-  `cd xevent`를 입력한 다음 Enter 키를 누릅니다. 여기에서 **cd** 와 `dir` 명령 (또는 **Set-Location** 및 **Get-childitem** cmdlet)을 사용 하 여 서버 이름 및 인스턴스 이름으로 이동할 수 있습니다.  
+-   명령 프롬프트에서 `sqlps`를 입력하고 Enter 키를 누릅니다. `cd xevent`를 입력하고 Enter 키를 누릅니다. 여기에서 **cd** 와 `dir` 명령 (또는 **Set-Location** 및 **Get-childitem** cmdlet)을 사용 하 여 서버 이름 및 인스턴스 이름으로 이동할 수 있습니다.  
   
 -   개체 탐색기에서 인스턴스 이름, **관리**를 차례로 확장하고 **확장 이벤트**를 마우스 오른쪽 단추로 클릭한 다음 **PowerShell 시작**을 클릭합니다. 이렇게 하면 다음 경로의 PowerShell이 시작됩니다.  
   
-     PS SQLSERVER:\XEvent\\*ServerName*\\*InstanceName*>  
+     PS SQLSERVER: \ XEvent\\*ServerName*\\*InstanceName*>  
   
     > [!NOTE]  
     >  **확장 이벤트**아래의 모든 노드에서 PowerShell을 시작할 수 있습니다. 예를 들어 **세션**을 마우스 오른쪽 단추로 클릭한 다음 **PowerShell 시작**을 클릭하면 한 수준 아래인 세션 폴더에서 PowerShell이 시작됩니다.  
@@ -112,5 +111,5 @@ $session.Create()
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [system_health 세션 사용](use-the-ssms-xe-profiler.md)   
+ [System_health 세션 사용](use-the-ssms-xe-profiler.md)   
  [확장 이벤트 도구](extended-events-tools.md)  

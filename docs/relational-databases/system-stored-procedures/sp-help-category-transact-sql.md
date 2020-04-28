@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304809"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
@@ -56,7 +56,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------|-----------------|  
 |**로컬**|로컬 작업 범주입니다.|  
 |**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
-|**없음**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
+|**없음을**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
 `[ @name = ] 'name'`정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
@@ -66,13 +66,13 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 접미사가 0 이면 **** **sp_help_category** 는 다음 결과 집합을 반환 합니다. ** \@**  
+ 접미사가 0 이면 **0** **sp_help_category** 는 다음 결과 집합을 반환 합니다. ** \@**  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
 |**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
-|**name**|**sysname**|범주 이름|  
+|**name**|**sysname**|범주의 이름입니다.|  
   
  ** \@접미사** 가 **1**인 경우 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|범주 ID입니다.|  
 |**category_type**|**sysname**|범주의 유형입니다. **로컬**, **다중 서버**또는 **없음** 중 하나|  
-|**name**|**sysname**|범주 이름|  
+|**name**|**sysname**|범주의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sp_help_category** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  
@@ -88,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
  매개 변수가 지정되지 않은 경우에는 결과 집합이 모든 작업 범주에 관한 정보를 제공합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로 **sysadmin** 고정 서버 역할의 멤버는이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
   

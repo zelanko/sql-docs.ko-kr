@@ -1,5 +1,5 @@
 ---
-title: 서비스 계정 구성(SSRS 구성 관리자) | 마이크로 소프트 문서
+title: 서비스 계정 구성 (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952580"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>서비스 계정 구성(SSRS 구성 관리자)
@@ -32,13 +32,13 @@ ms.locfileid: "71952580"
 > [!NOTE]  
 >  도메인 컨트롤러인 컴퓨터에서는 기본 제공 Windows 서비스 계정(로컬 서비스 또는 네트워크 서비스)이 보고서 서버 서비스 계정으로 지원되지 않습니다.  
   
- 프로시저  
+ 절차  
   
 ### <a name="to-configure-the-report-server-service-account"></a>보고서 서버 서비스 계정을 구성하려면  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 후 보고서 서버에 연결합니다.  
   
-2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 지정할 계정 유형에 대한 권장 사항은 [보고서 서버 서비스 계정 &#40;SSRS 구성 관리자&#41;. ](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
+2.  서비스 계정 페이지에서 사용하려는 계정 유형에 해당하는 옵션을 선택합니다. 지정할 계정 유형에 대 한 권장 사항은 [보고서 서버 서비스 계정 구성 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조 하세요.  
   
 3.  Windows 사용자 계정을 선택한 경우 새 계정과 암호를 지정합니다. 계정은 20자를 초과할 수 없습니다.  
   
@@ -64,10 +64,10 @@ ms.locfileid: "71952580"
 -   서비스 계정을 업데이트할 때 URL 예약 오류가 발생할 수 있습니다. 각 URL 예약에는 서비스 계정에 URL 요청을 수락할 권한을 부여하는 DACL(임의 액세스 제어 목록)이 포함된 보안 설명자가 있습니다. 계정을 업데이트할 때 URL을 다시 만들어 새 계정 정보로 DACL을 업데이트해야 합니다. URL 예약을 다시 만들 수 없지만 올바른 계정임이 확실한 경우에는 컴퓨터를 다시 시작합니다. 그래도 오류가 계속되면 다른 계정을 사용해 보십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [보고 서비스 구성 관리자 &#40;네이티브 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [보고서 서버 서비스 계정 &#40;SSRS 구성 관리자 구성 관리자 구성&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스 연결 &#40;SSRS 구성 관리자&#41;구성](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [서비스 계정 &#40;SSRS 네이티브 모드&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [SSRS Configuration Manager &#40;보고서 서버 데이터베이스 연결 구성&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [서비스 계정은 SSRS 기본 모드 &#40;&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

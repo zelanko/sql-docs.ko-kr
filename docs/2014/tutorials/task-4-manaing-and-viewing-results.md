@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313649"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>태스크 4: 결과 관리 및 보기
@@ -84,8 +84,7 @@ ms.locfileid: "72313649"
   
      ![모든 용어 승인 도구 모음 단추](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "모든 용어 승인 도구 모음 단추")  
   
-25. 
-  **다음** 을 클릭하여 **내보내기** 페이지로 전환합니다.  
+25. **다음** 을 클릭하여 **내보내기** 페이지로 전환합니다.  
   
 ## <a name="next-step"></a>다음 단계  
  [태스크 5: 정리 결과를 Excel 파일로 내보내기](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  

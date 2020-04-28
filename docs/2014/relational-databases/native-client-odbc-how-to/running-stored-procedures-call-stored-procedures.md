@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688660"
 ---
 # <a name="call-stored-procedures-odbc"></a>저장 프로시저 호출(ODBC)
@@ -34,8 +34,7 @@ ms.locfileid: "72688660"
   
 2.  각 입력, 입/출력 및 출력 매개 변수와 프로시저 반환 값(있는 경우)에 대해 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 를 호출합니다.  
   
-3.  
-  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 사용하여 문을 실행합니다.  
+3.  [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399)를 사용하여 문을 실행합니다.  
   
 > [!NOTE]  
 >  애플리케이션이 ODBC CALL 이스케이프 시퀀스가 아닌 Transact-SQL EXECUTE 구문을 사용하여 프로시저를 제출하는 경우 SQL Server ODBC 드라이버는 프로시저 호출을 RPC 대신 SQL 문으로 SQL Server에 전달합니다. 또한 Transact-SQL EXECUTE 문을 사용하면 출력 매개 변수가 반환되지 않습니다.  
@@ -45,6 +44,6 @@ ms.locfileid: "72688660"
  [저장 프로시저 호출 일괄 처리](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [저장 프로시저 실행](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [저장 프로시저 호출](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [프로시저](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [절차](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

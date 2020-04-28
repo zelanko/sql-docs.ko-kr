@@ -20,34 +20,33 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911205"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
-|resource_type_desc|**nvarchar (2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
+|resource_type_desc|**nvarchar(2048)**|작업이 수행된 리소스 유형에 대한 설명입니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서만 수행된 작업을 추적합니다.|  
 |major_resource_id|**sql_variant**|작업이 수행된 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]의 이름입니다. Null이 아닙니다.|  
 |minor_resource_id|**sql_variant**|내부 전용입니다. Null이 아닙니다.|  
-|operation|**nvarchar (60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
+|operation(작업)|**nvarchar(60)**|CREATE 또는 ALTER와 같이 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업입니다.|  
 |state|**tinyint**|작업의 상태입니다.<br /><br /> 0 = 보류 중<br />1 = 진행 중<br />2 = 완료됨<br />3 = 실패<br />4 = 취소됨|  
-|state_desc|**nvarchar (120)**|PENDING = 작업이 리소스나 할당량을 사용할 수 있을 때까지 대기 중입니다.<br /><br /> IN_PROGRESS = 작업이 시작되었고 진행 중입니다.<br /><br /> COMPLETED = 작업이 성공적으로 완료되었습니다.<br /><br /> FAILED = 작업이 실패했습니다. 자세한 내용은 **error_desc** 열을 참조 하세요.<br /><br /> CANCELLED = 작업이 사용자 요청으로 중지되었습니다.|  
+|state_desc|**nvarchar(120)**|PENDING = 작업이 리소스나 할당량을 사용할 수 있을 때까지 대기 중입니다.<br /><br /> IN_PROGRESS = 작업이 시작되었고 진행 중입니다.<br /><br /> COMPLETED = 작업이 성공적으로 완료되었습니다.<br /><br /> FAILED = 작업이 실패했습니다. 자세한 내용은 **error_desc** 열을 참조 하세요.<br /><br /> CANCELLED = 작업이 사용자 요청으로 중지되었습니다.|  
 |percent_complete|**int**|완료된 작업의 백분율입니다. 값은 연속 되지 않으며 유효한 값은 아래에 나열 됩니다. NULL이 아닙니다.<br/><br/>0 = 작업이 시작 되지 않음<br/>50 = 작업 진행 중<br/>100 = 작업 완료|  
 |error_code|**int**|실패한 작업 중에 발생한 오류를 나타내는 코드입니다. 값이 0이면 작업이 성공적으로 완료되었음을 나타냅니다.|  
-|error_desc|**nvarchar (2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
+|error_desc|**nvarchar(2048)**|실패한 작업 중에 발생한 오류에 대한 설명입니다.|  
 |error_severity|**int**|실패한 작업 중에 발생한 오류의 심각도 수준입니다. 오류 심각도에 대 한 자세한 내용은 [데이터베이스 엔진 오류 심각도](https://go.microsoft.com/fwlink/?LinkId=251052)를 참조 하세요.|  
-|error_state|**int**|향후 사용을 위해 예약되어 있습니다. 향후 호환성은 보장되지 않습니다.|  
+|error_state|**int**|다음에 사용하도록 예약됩니다. 향후 호환성은 보장되지 않습니다.|  
 |start_time|**datetime**|작업이 시작된 타임스탬프입니다.|  
 |last_modify_time|**datetime**|장기 실행 작업에 대해 레코드가 마지막으로 수정된 타임스탬프입니다. 완료된 작업의 경우 이 필드에는 작업 완료 시간의 타임스탬프가 표시됩니다.|  
   
@@ -55,7 +54,7 @@ ms.locfileid: "70911205"
  이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. 서버의 master `sys.dm_operation_status` 데이터베이스에 있는 뷰를 사용 하 여에 대해 수행 된 다음 작업의 상태를 추적할 수 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]있습니다. **** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. 서버의 master `sys.dm_operation_status` 데이터베이스에 있는 뷰를 사용 하 여에 대해 수행 된 다음 작업의 상태를 추적할 수 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]있습니다. **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
 -   데이터베이스 만들기  
   

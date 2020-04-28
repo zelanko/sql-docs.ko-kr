@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: d3b9dca69afecc78a680459caf03d085ef17857e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251331"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>Oracle SQL Server Migration Assistant (OracleToSQL)
@@ -24,7 +24,7 @@ ms.locfileid: "72251331"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|Description|
+|단원|Description|
 |-----------|---------------|
 |[Oracle 용 SSMA의 새로운 기능](https://msdn.microsoft.com/f305ebb6-7393-4a43-abb3-6332b739d690)|이 버전의 Oracle 용 SSMA의 새로운 기능|  
 |[OracleToSQL&#41;&#40;Oracle 용 SSMA 설치](../../ssma/oracle/installing-ssma-for-oracle-oracletosql.md)|을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 컴퓨터에 ORACLE 용 ssma 클라이언트 및 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  

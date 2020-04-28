@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175431"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>8단원: Azure Storage에 데이터베이스 복원
@@ -77,8 +77,7 @@ ms.locfileid: "70175431"
   
 4.  **일반** 페이지의 **복원** 원본 섹션에서 **원본** 장치를 클릭 합니다.  
   
-5.  
-  **원본** 디바이스 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 디바이스 선택** 대화 상자가 열립니다.  
+5.  **원본** 디바이스 입력란에 대한 찾아보기 단추를 클릭합니다. **백업 디바이스 선택** 대화 상자가 열립니다.  
   
 6.  백업 미디어 입력란에서 **파일**을 선택하고 **추가** 단추를 클릭하여 백업 파일(.bak)을 찾습니다. **확인**을 클릭합니다.  
   

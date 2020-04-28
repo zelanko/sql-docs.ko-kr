@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71708217"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
@@ -44,13 +44,11 @@ ms.locfileid: "71708217"
 > [!NOTE]  
 >  bcp 유틸리티가 ODBC 대량 복사를 사용하여 작성됨  
   
- 
-  **bcp** 명령 구문에 대한 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하십시오.  
+ **bcp** 명령 구문에 대한 자세한 내용은 [bcp Utility](../../tools/bcp-utility.md)를 참조하십시오.  
   
 ## <a name="examples"></a>예
 
- 
-  **bcp** 예제는 다음을 참조하세요.  
+ **bcp** 예제는 다음을 참조하세요.  
   
 -   [bcp 유틸리티](../../tools/bcp-utility.md)  
   
@@ -58,21 +56,21 @@ ms.locfileid: "71708217"
   
 -   [XML 문서 대량 가져오기 및 내보내기 예제&#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [데이터를 대량으로 가져올 때 Id 값을 유지 &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [데이터 대량 가져오기 중 ID 값 유지&#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
--   [필드 및 행 종결자를 지정 하 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [필드 및 행 종결자 지정&#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
 -   [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](use-a-format-file-to-bulk-import-data-sql-server.md)  
   
--   [문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
+-   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [네이티브 형식을 사용 하 여 데이터 &#40;SQL Server 가져오거나 내보냅니다&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 원시 형식을 사용 하 여 데이터 &#40;SQL Server 가져오기 또는 내보내기&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
 
 ## <a name="see-also"></a>참고 항목
 

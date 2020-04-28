@@ -16,14 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 07ca904ab8f98dd4dcbdba3f18f4a6fc6469f26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952325"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>자격 증명 변경 마법사(SSRS 기본 모드)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 보고서 서버 데이터베이스에 연결할 때 보고서 서버에서 사용하는 계정을 다시 구성하는 단계를 안내하는 자격 증명 변경 마법사를 제공합니다. 자격 증명을 변경할 때 구성 관리자는 보고서 서버에서 현재 사용 중인 보고서 서버 데이터베이스의 데이터베이스 서버에 대한 모든 사용 권한과 데이터베이스 로그인 정보를 업데이트합니다.  
   
  마법사를 시작하려면 **구성 관리자의 데이터베이스 페이지에서** 자격 증명 변경 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 클릭합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager를 시작 하는 방법에 대 한 지침은 [Reporting Services 구성 관리자 &#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)를 참조 하세요.  
@@ -34,9 +33,7 @@ ms.locfileid: "71952325"
  **데이터베이스 서버**  
  보고서 서버 데이터베이스를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 하는 인스턴스의 이름을 지정 합니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 서버에 로그온하여 데이터베이스 정보를 업데이트할 권한이 있는 자격 증명을 사용해야 합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 사용자의 현재 Windows 자격 증명을 사용하지만 사용자에게 로그인 또는 데이터베이스 권한이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 지정할 수 있습니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 서버에 로그온하여 데이터베이스 정보를 업데이트할 권한이 있는 자격 증명을 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 사용자의 현재 Windows 자격 증명을 사용하지만 사용자에게 로그인 또는 데이터베이스 권한이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 지정할 수 있습니다.  
   
  다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 사용자로 연결하려면 해당 사용자로 로그인한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작합니다.  
   

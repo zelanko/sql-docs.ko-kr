@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72005965"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
@@ -54,7 +54,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 |값|Description|  
 |-----------|-----------------|  
-|**생성**|파일 시스템에 비어 있는 새 전체 텍스트 카탈로그를 만들고 *fulltext_catalog_name* 및 *root_directory*(있는 경우)와 관련 된 행을 **sysfulltextcatalogs** 에 추가 합니다. *fulltext_catalog_name* 은 데이터베이스 내에서 고유 해야 합니다.|  
+|**만들기**|파일 시스템에 비어 있는 새 전체 텍스트 카탈로그를 만들고 *fulltext_catalog_name* 및 *root_directory*(있는 경우)와 관련 된 행을 **sysfulltextcatalogs** 에 추가 합니다. *fulltext_catalog_name* 은 데이터베이스 내에서 고유 해야 합니다.|  
 |**그림자**|는 파일 시스템에서 제거 하 고 **sysfulltextcatalogs**에서 연결 된 행을 삭제 하 여 *fulltext_catalog_name* 을 삭제 합니다. 해당 카탈로그에 한 개 이상의 테이블에 대한 인덱스가 있는 경우에는 이 동작이 실패합니다. **sp_fulltext_table** 카탈로그에서 테이블을 삭제 하려면 '*table_name*', ' 삭제 '를 실행 해야 합니다.<br /><br /> 카탈로그가 없을 경우에는 오류가 표시됩니다.|  
 |**start_incremental**|*Fulltext_catalog_name*에 대 한 증분 채우기를 시작 합니다. 카탈로그가 없을 경우에는 오류가 표시됩니다. 전체 텍스트 인덱스 채우기가 이미 활성화된 경우에는 경고가 표시되고 채우기 동작은 수행되지 않습니다. 증분 채우기를 사용 하면 전체 텍스트 인덱싱에 대해 변경 된 행만 검색 되며 테이블에 전체 텍스트 인덱싱되는 **타임 스탬프** 열이 있는 것으로 나타납니다.|  
 |**start_full**|*Fulltext_catalog_name*에 대 한 전체 채우기를 시작 합니다. 전체 텍스트 인덱싱에 대해 전체 텍스트 카탈로그와 연결된 모든 테이블의 모든 행 및 이미 인덱스를 만든 행까지도 검색합니다.|  
@@ -138,7 +138,7 @@ GO
  [Transact-sql&#41;sp_fulltext_database &#40;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_catalogs &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [Transact-sql&#41;sp_help_fulltext_catalogs_cursor &#40;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [전체 텍스트 검색](../../relational-databases/search/full-text-search.md)  
   
   

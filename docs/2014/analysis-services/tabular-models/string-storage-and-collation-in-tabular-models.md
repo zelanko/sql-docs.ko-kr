@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874495"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 스토리지 및 데이터 정렬
@@ -70,8 +70,7 @@ ms.locfileid: "70874495"
   
 -   데이터 정렬은 문자 순서와 문자 일치성을 정의합니다.  
   
- 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요. 
-  [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
+ 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/collations)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)을 참조하세요. [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
   
  테이블 형식 model 데이터베이스를 만든 후 모델의 모든 새 개체는 데이터베이스 특성에서 언어 및 데이터 정렬 특성을 상속합니다. 이는 모든 개체에 대해 적용됩니다. 상속 경로는 개체에서 시작되어, 부모에서 상속할 언어 및 데이터 정렬 특성을 확인하고, 특성을 찾을 수 없는 경우 최상위 수준까지 계속 진행하여 데이터베이스 수준에서 언어 및 데이터 정렬 특성을 찾는 방식으로 진행됩니다. 즉, 개체의 언어 및 데이터 정렬 특성을 지정하지 않을 경우 기본적으로 개체는 가장 가까운 부모의 특성을 상속합니다.  
   

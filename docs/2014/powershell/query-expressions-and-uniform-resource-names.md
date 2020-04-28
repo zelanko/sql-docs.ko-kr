@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782758"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>쿼리 식 및 URN
@@ -63,15 +63,15 @@ ms.locfileid: "72782758"
  예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
   
  \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 \@Database**클래스 속성인**IsAnsiNull**에** IsAnsiNull을 지정합니다.  
+ *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 \@ **데이터베이스** 클래스 속성 **isansinull**에 대해 isansinull을 지정 합니다.  
   
- \@*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*= true ()  
  지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  
   
- \@*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*= false ()  
  지정된 부울 속성이 FALSE로 설정된 개체를 모두 열거합니다.  
   
- contains(\@*StringPropertyName*, '*PatternString*')  
+ contains (\@*stringpropertyname*, '*PatternString*')  
  지정된 문자열 속성에 '*PatternString*'에 지정된 문자열 집합이 하나 이상 포함되어 있는 개체를 모두 열거합니다.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -92,7 +92,7 @@ ms.locfileid: "72782758"
   
  이 형식으로 지정된 날짜를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 저장된 모든 날짜 형식에 대해 평가할 수 있습니다.  
   
- is_null(\@*PropertyName*)  
+ is_null (\@*PropertyName*)  
  지정된 속성 값이 NULL인 개체를 모두 열거합니다.  
   
  not(\<*PropertyExpression*>)  
@@ -103,7 +103,7 @@ ms.locfileid: "72782758"
   
  쿼리 식은 Server 개체에 대한 절대 참조로 시작해야 합니다. /로 시작하는 상대 식은 사용할 수 없습니다. 쿼리 식에 지정된 개체 시퀀스는 관련 개체 모델에 있는 컬렉션 개체의 계층 구조를 따라야 합니다. 예를 들어 Microsoft.SqlServer.Management.Smo 네임스페이스의 개체를 참조하는 쿼리 식은 Server 노드로 시작하고 그 다음에 Database 노드 등이 와야 합니다.  
   
- 개체에 대해 *\<FilterExpression>* 이 지정되지 않은 경우 해당 노드의 개체가 모두 열거됩니다.  
+ 개체에 대해 * \<FilterExpression>* 지정 되지 않은 경우 해당 노드의 모든 개체가 열거 됩니다.  
   
 ## <a name="uniform-resource-names-urn"></a>URN(Uniform Resource Name)  
  URN은 쿼리 식의 하위 집합입니다. 각 URN은 단일 개체에 대한 정규화된 참조를 형성합니다. 일반적인 URN에서는 Name 속성을 사용하여 각 노드의 단일 개체를 식별합니다. 예를 들어 이 URN은 특정 열을 참조합니다.  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Invoke-PolicyEvaluation cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [호출-Polic옛 평가 cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

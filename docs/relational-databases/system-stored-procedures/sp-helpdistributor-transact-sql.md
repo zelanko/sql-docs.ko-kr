@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745389"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**총판**|**sysname**|배포자의 이름입니다.|  
 |**배포 데이터베이스**|**sysname**|배포 데이터베이스의 이름입니다.|  
 |**디렉터리나**|**nvarchar(255)**|작업 디렉터리의 이름입니다.|  
-|**계정일**|**nvarchar(255)**|Windows 사용자 계정의 이름입니다.|  
+|**로그인**|**nvarchar(255)**|Windows 사용자 계정의 이름입니다.|  
 |**min distrib retention**|**int**|최소 배포 보존 기간입니다.|  
 |**max distrib retention**|**int**|최대 배포 보존 기간입니다.|  
 |**history retention**|**int**|기록 보존 기간입니다.|  
@@ -105,17 +105,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|계정|**\@계정일**|  
+|account|**\@계정일**|  
 |min distrib retention|**\@min_distretention**|  
 |max distrib retention|**\@max_distretention**|  
 |history retention|**\@history_retention**|  
 |history cleanup agent|**\@history_cleanupagent**|  
 |distribution cleanup agent|**\@distrib_cleanupagent**|  
-|rpc login name|없음|  
+|rpc login name|none|  
   
  다음 결과 집합 열은 배포자에서 게시가 허용된 게시 액세스 목록에 있는 사용자에게 반환됩니다.  
   
--   디렉터리  
+-   directory  
   
  다음 결과 집합 열은 모든 사용자에게 반환됩니다.  
   

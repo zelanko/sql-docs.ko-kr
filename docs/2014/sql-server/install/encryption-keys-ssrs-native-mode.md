@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 540cf25a150349c7b6399975d20d10bc202ed935
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952168"
 ---
 # <a name="encryption-keys-ssrs-native-mode"></a>암호화 키(SSRS 기본 모드)
@@ -24,8 +24,7 @@ ms.locfileid: "71952168"
   
 -   보고서 서버 서비스의 서비스 계정 변경  
   
--   
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 다른 컴퓨터로 마이그레이션  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 다른 컴퓨터로 마이그레이션  
   
 -   기존 보고서 서버 데이터베이스를 공유 또는 사용하도록 새 보고서 서버 인스턴스 구성  
   
@@ -46,7 +45,7 @@ ms.locfileid: "71952168"
  이 페이지를 열려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작한 다음 탐색 창에서 링크를 클릭합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  
- **백**  
+ **Backup**  
  대칭 키를 지정한 파일에 복사합니다. 대칭 키는 일반 텍스트로 저장되지 않습니다. 해당 파일을 보호하려면 암호를 입력해야 합니다.  
   
  **복원**  
@@ -54,7 +53,7 @@ ms.locfileid: "71952168"
   
  현재 연결된 보고서 서버 인스턴스에 대한 대칭 키의 이전 복사본은 복원된 버전으로 덮어쓰여집니다. 대칭 키를 복원한 다음에는 해당 보고서 서버 데이터베이스를 사용하는 모든 보고서 서버를 초기화해야 합니다. 보고서 서버를 초기화 하는 방법에 대 한 자세한 내용은 [보고서 서버 초기화 &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조 하세요.  
   
- **변경**  
+ **변화**  
  대칭 키를 다시 만들고 보고서 서버 데이터베이스에 암호화된 모든 값을 다시 암호화합니다. 대칭 키를 다시 만들기 전에 보고서 서버 서비스를 중지해야 합니다.  
   
  스케일 아웃 배포의 경우 대칭 키의 모든 복사본은 새 버전으로 바뀝니다. 대칭 키를 변경하기 전에 스케일 아웃 배포에 참가한 서버 목록을 검토하여 올바른 보고서 서버 인스턴스에만 새 키에 대한 액세스 권한이 부여되도록 합니다. 스케일 아웃 배포에 포함되는 서버는 **스케일 아웃 배포** 페이지에 나열되어 있습니다. 키를 다시 만들기 전에 배포의 각 보고서 서버에서 서비스를 중지하십시오.  
@@ -71,8 +70,8 @@ ms.locfileid: "71952168"
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 구성 관리자 F1 도움말 항목 &#40;SSRS 기본 모드&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [암호화 키 삭제 및 다시 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [SSRS Configuration Manager &#40;보고서 서버를 초기화&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [SSRS Configuration Manager &#40;암호화 된 보고서 서버 데이터 저장&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [SSRS Configuration Manager &#40;암호화 키를 삭제 하 고 다시 만듭니다&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

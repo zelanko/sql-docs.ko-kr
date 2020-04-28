@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 3913ae22155ca5e560db7fee946df0f8062a23b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252158"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase 용 SQL Server Migration Assistant (SybaseToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "72252158"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|Description|
+|단원|Description|
 |-----------|---------------|
 |[Sybase 용 SSMA의 새로운 기능 &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|SSMA 릴리스에 대 한 변경 내용을 나열 합니다.|  
 |[Sybase 용 SSMA &#40;SybaseToSQL&#41;설치](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|인스턴스를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 컴퓨터에 Sybase 클라이언트 및 필수 구성 요소에 대 한 ssma를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952014"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>가상 디렉터리에 지원되지 않는 인증 방법이 있음(업그레이드 관리자)
@@ -41,8 +41,7 @@ ms.locfileid: "71952014"
  계속하려면 인터넷 정보 서비스(IIS)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리에 지정된 인증 방법을 수정하거나 설치를 마이그레이션하면 됩니다. 설치를 마이그레이션하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 업그레이드를 계속하려면 ReportServer 및 Reports 가상 디렉터리에 대한 IIS의 인증 방법을 수정합니다. 인증 방법 수정은 IIS 설명서를 참조하십시오. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리의 인증 방법을 수정한 후에는 업그레이드 관리자를 다시 실행하여 다른 업그레이드 문제가 없는지 확인합니다.  
+ 업그레이드를 계속하려면 ReportServer 및 Reports 가상 디렉터리에 대한 IIS의 인증 방법을 수정합니다. 인증 방법 수정은 IIS 설명서를 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가상 디렉터리의 인증 방법을 수정한 후에는 업그레이드 관리자를 다시 실행하여 다른 업그레이드 문제가 없는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [업그레이드 관리자를 &#40;업그레이드 문제를 Reporting Services&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

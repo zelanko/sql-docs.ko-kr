@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713307"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server에 SSMA 구성 요소 설치 (OracleToSQL)
@@ -30,7 +30,7 @@ SSMA 확장 팩은 **sysdb** 및 **ssmatesterdb** 데이터베이스를 지정 �
   
 또한 데이터를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하는 경우 ssma는 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션에 서버 쪽 데이터 마이그레이션 엔진이 사용 될 때 에이전트 작업을 만듭니다.  
   
-### <a name="prerequisites"></a>사전 요구 사항
+### <a name="prerequisites"></a>전제 조건
 
 Oracle 용 SSMA 서버 구성 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치 하기 전에 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.  
   
@@ -62,14 +62,13 @@ Oracle 용 SSMA 서버 구성 요소 [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 3. **Oracle 용 Ssma 확장 팩을 두 번 클릭 합니다.* n*. Setup.exe를 설치**합니다.  
   
-4. 
-  **Welcome** 페이지에서 **다음**을 선택합니다.  
+4. **Welcome** 페이지에서 **다음**을 선택합니다.  
   
 5. **최종 사용자 사용권 계약** 페이지에서 사용권 계약을 읽습니다. 동의 **하면 동의 함 확인란을** 선택 하 고 **다음**을 선택 합니다.  
   
 6. **설치 유형 선택** 페이지에서 **일반**을 선택 합니다.  
   
-7. **설치 준비 완료** 페이지에서 **설치**를 선택 합니다.  
+7. **설치 준비** 페이지에서 **설치**를 선택합니다.  
   
 8. **설치의 첫 번째 단계 완료** 페이지에서 **다음**을 선택 합니다.  
   

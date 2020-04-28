@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782727"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
@@ -22,11 +22,10 @@ ms.locfileid: "72782727"
   
 1.  [시작하기 전에](#BeforeYouBegin)  
   
-2.  **경로 노드에서 작업 하려면**메서드 및[속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)    
+2.  **경로 노드에서 작업하려면**  [메서드 및 속성 나열](#ListPropMeth), [메서드 및 속성 사용](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 다음 두 가지 동작을 수행할 수 있습니다.  
   
 -   **Rename-Item**과 같이 노드에서 작동하는 Windows PowerShell cmdlet을 실행할 수 있습니다.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "72782727"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자는 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스의 개체를 관리하는 데 사용됩니다. 데이터베이스의 데이터 작업에는 사용되지 않습니다. 테이블 또는 뷰로 이동한 경우에는 공급자를 사용하여 데이터에 대한 선택, 삽입, 업데이트 또는 삭제 작업을 수행할 수 없습니다. Windows PowerShell 환경에서 테이블 및 뷰의 데이터를 쿼리하거나 변경하려면 **Invoke-Sqlcmd** cmdlet을 사용하세요. 자세한 내용은 [Invoke-Sqlcmd cmdlet](../database-engine/invoke-sqlcmd-cmdlet.md)을 참조하세요.  
   
-##  <a name="ListPropMeth"></a> 메서드 및 속성 나열
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a>메서드 및 속성 나열
   
  특정 개체 또는 개체 클래스에 사용할 수 있는 메서드 및 속성을 보려면 **Get-Member** cmdlet을 사용합니다.  
   
@@ -63,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>SMO 메서드 및 속성 사용  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>SMO 메서드 및 속성 사용  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로에서 개체에 대한 작업을 수행하려면 SMO 메서드 및 속성을 사용할 수 있습니다.  
   
@@ -97,7 +96,7 @@ $MyDBVar.State
 ## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 공급자](sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 탐색](navigate-sql-server-powershell-paths.md)   
- [URN을 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Urn를 SQL Server 공급자 경로로 변환](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

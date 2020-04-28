@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154608"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
@@ -50,7 +50,7 @@ ms.locfileid: "70154608"
  [자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  이 자습서에서는 Azure Blob Storage 서비스로 SQL Server를 백업하고 복원하는 방법에 대해 설명합니다.  
   
- [자습서: Azure Storage 서비스의 SQL Server 데이터 파일](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [자습서: Azure Storage의 SQL Server 데이터 파일 서비스](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  이 자습서는 Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 직접 저장하는 방법을 이해하는 데 도움이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

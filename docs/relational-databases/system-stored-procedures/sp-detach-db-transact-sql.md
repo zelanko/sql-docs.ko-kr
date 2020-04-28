@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278187"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
@@ -78,8 +78,7 @@ sp_detach_db [ @dbname= ] 'database_name'
      데이터베이스를 분리 하려면 먼저 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)를 실행 하 여 게시를 해제 해야 합니다.  
   
     > [!NOTE]  
-    >  
-  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거할 수 있습니다.  
+    >  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거할 수 있습니다.  
   
 -   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
@@ -136,7 +135,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)  

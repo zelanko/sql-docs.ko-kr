@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175634"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>4단원: Azure Storage에서 데이터베이스 만들기
@@ -73,8 +73,7 @@ ms.locfileid: "70175634"
   
 6.  이와 마찬가지로 스토리지 계정에서 새로 만든 데이터베이스를 보려면 SSMS(SQL Server Management Studio)를 통해 스토리지 계정에 연결합니다. SQL Server Management Studio를 사용 하 여 Azure storage에 연결 하는 방법에 대 한 자세한 내용은 다음 단계를 수행 합니다.  
   
-    1.  먼저 스토리지 계정 정보를 가져옵니다. 관리 포털에 로그인합니다. 
-  **스토리지**를 클릭하고 스토리지 계정을 선택합니다. 스토리지 계정이 선택되면 페이지 아래쪽에서 **액세스 키 관리** 를 클릭합니다. 다음과 유사한 대화 상자가 열립니다.  
+    1.  먼저 스토리지 계정 정보를 가져옵니다. 관리 포털에 로그인한 다음 **스토리지**를 클릭하고 스토리지 계정을 선택합니다. 스토리지 계정이 선택되면 페이지 아래쪽에서 **액세스 키 관리** 를 클릭합니다. 다음과 유사한 대화 상자가 열립니다.  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
@@ -86,7 +85,7 @@ ms.locfileid: "70175634"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **참고:** 컨테이너의 데이터 파일에 대 한 활성 참조가 있는 경우 연결 된 SQL Server 자격 증명을 삭제 하려고 하면 실패 합니다. 이와 마찬가지로 BLOB의 특정 데이터베이스 파일에 대한 임대가 이미 있는 경우 SQL Server 자격 증명을 삭제하려면 먼저 BLOB에서 임대를 해제해야 합니다. 임대를 중단하려면 [Blob 임대](https://msdn.microsoft.com/library/azure/ee691972.aspx)를 사용할 수 있습니다.  
+ **참고:** 컨테이너의 데이터 파일에 대한 활성 참조가 있는 경우 연결된 SQL Server 자격 증명을 삭제하려고 하면 실패합니다. 이와 마찬가지로 BLOB의 특정 데이터베이스 파일에 대한 임대가 이미 있는 경우 SQL Server 자격 증명을 삭제하려면 먼저 BLOB에서 임대를 해제해야 합니다. 임대를 중단하려면 [Blob 임대](https://msdn.microsoft.com/library/azure/ee691972.aspx)를 사용할 수 있습니다.  
   
  이 새로운 기능을 사용하면 CREATE DATABASE 문이 기본적으로 클라우드 사용 데이터베이스로 설정되도록 SQL Server를 구성할 수 있습니다. 즉, SQL Server Management Studio 서버 인스턴스 속성에서 기본 데이터 및 로그 위치를 설정 하 여 데이터베이스를 만들 때마다 모든 데이터베이스 파일 (.mdf, .ldf)이 Azure Storage에서 페이지 blob으로 만들어지도록 할 수 있습니다.  
   

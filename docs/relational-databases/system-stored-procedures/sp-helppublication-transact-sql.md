@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689047"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
@@ -46,11 +46,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 sysname 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에서 게시 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때 게시자를 지정 하면 안 됩니다.  
+>  *publisher* 게시자에서 게시 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때 게시자를 지정 하면 안 됩니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|게시에 대한 ID입니다.|  
 |name|**sysname**|게시의 이름입니다.|  
@@ -69,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|스냅샷 에이전트가 새 구독에서 사용할 수 있는 스냅샷을 생성했는지 여부를 나타냅니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 정의됩니다.|  
 |allow_sync_tran|**bit**|게시에서 즉시 업데이트 구독이 허용되는지 여부를 나타냅니다.|  
 |autogen_sync_procs|**bit**|즉시 업데이트 구독을 지원하는 저장 프로시저를 자동으로 생성하는지 여부를 나타냅니다.|  
-|snapshot_jobid|**binary (16)**|예약된 태스크 ID입니다.|  
+|snapshot_jobid|**binary(16)**|예약된 태스크 ID입니다.|  
 |retention|**int**|지정한 게시에 대해 저장할 변경 내용의 양을 시간으로 나타낸 것입니다.|  
 |has subscription|**bit**|게시에 활성 구독이 있는지 여부를 나타냅니다. **1** 은 게시에 활성 구독이 있음을 의미 하 고 **0** 은 게시에 구독이 없음을 의미 합니다.|  
 |allow_queued_tran|**bit**|활성화된 게시자에 변경 내용을 적용할 수 있을 때까지 구독자에서 변경 내용 지연을 비활성화할지 여부를 지정합니다. **0**인 경우 구독자의 변경 내용이 큐에 저장 되지 않습니다.|  
@@ -88,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|충돌 보존 기간(일)을 지정합니다.|  
 |conflict_policy|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자가 충돌을 적용 합니다.<br /><br /> **2** = 구독자가 충돌을 적용 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
 |queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **msmq** = 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **sql** = 트랜잭션을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 하는 데 사용 합니다.<br /><br /> 참고: 메시지 큐에 대 한 지원이 중단 되었습니다.|  
-|backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 값 **1** 은 게시 됨을 나타내고 값 **0** 은 게시 되지 않았음을 나타냅니다.|  
 |allow_initialize_from_backup|**bit**|구독자가 초기 스냅샷 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 은 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 은 사용할 수 없음을 의미 합니다. 자세한 내용은 스냅숏 없이 트랜잭션 구독자를 스냅숏 없이 트랜잭션 [구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 를 참조 하세요.|  
 |replicate_ddl|**int**|게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. **1** 은 게시자에서 실행 된 ddl (데이터 정의 언어) 문이 복제 됨을 나타내고 **0** 은 ddl 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  

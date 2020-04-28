@@ -18,10 +18,10 @@ ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745364"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems(Transact-SQL)
@@ -35,17 +35,17 @@ ms.locfileid: "70745364"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지를 보내는 데 사용되는 프로필의 식별자입니다.|  
-|**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
+|**recipients**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
-|**본문**|**varchar(max)**|메시지의 본문|  
+|**body**|**varchar(max)**|메시지의 본문입니다.|  
 |**body_format**|**varchar (20)**|메시지 본문의 형식입니다. 가능한 값은 **TEXT** 및 **HTML**입니다.|  
-|**중요도**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  
+|**importance**|**varchar (6)**|메시지의 **중요도** 매개 변수입니다.|  
 |**우편물**|**varchar (12)**|메시지의 **민감도** 매개 변수입니다.|  
 |**file_attachments**|**varchar(max)**|전자 메일 메시지에 첨부되는 파일 이름 목록으로 각 파일 이름은 세미콜론으로 구분되어 있습니다.|  
 |**attachment_encoding**|**varchar (20)**|메일 첨부 파일의 유형입니다.|  
-|**쿼리입니다**|**varchar(max)**|메일 프로그램이 실행하는 쿼리입니다.|  
+|**쿼리**|**varchar(max)**|메일 프로그램이 실행하는 쿼리입니다.|  
 |**execute_query_database**|**sysname**|메일 프로그램이 쿼리를 실행한 데이터베이스 컨텍스트입니다.|  
 |**attach_query_result_as_file**|**bit**|값이 0이면 쿼리 결과가 전자 메일 메시지 본문의 내용 뒤에 포함됩니다. 값이 1이면 결과가 첨부 파일로 반환됩니다.|  
 |**query_result_header**|**bit**|값이 1이면 쿼리 결과에 열 머리글이 포함됩니다. 값이 0이면 쿼리 결과에 열 머리글이 포함되지 않습니다.|  

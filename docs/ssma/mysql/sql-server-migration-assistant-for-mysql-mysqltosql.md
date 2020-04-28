@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252146"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL에 대 한 SQL Server Migration Assistant (MySQLToSQL)
@@ -25,7 +25,7 @@ ms.locfileid: "72252146"
   
 ## <a name="contents"></a>콘텐츠  
   
-|섹션|Description|
+|단원|Description|
 |-----------|---------------|
 |[MySQL용 SSMA의 새로운 기능](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|MySQL 용 SSMA 버전의 새로운 기능|  
 |[&#40;MySqlToSql&#41;에 대 한 MySQL 용 SSMA 설치](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|SQL Server를 실행 하는 컴퓨터에 MySQL 용 SSMA 클라이언트 및 필수 구성 요소를 설치 하기 위한 필수 구성 요소 및 지침을 제공 하는 문서가 포함 되어 있습니다.|  

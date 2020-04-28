@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782985"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기(SQL Server PowerShell)
@@ -26,29 +26,28 @@ ms.locfileid: "72782985"
   
  **항목 내용**  
   
--   **시작 하기 전 주의:**  [보안](#Security)  
+-   **시작하기 전에:**  [보안](#Security)  
   
--   **데이터베이스 미러링 끝점을 만들려면 다음을 사용 합니다.**  [PowerShell](#PowerShellProcedure)  
+-   **데이터베이스 미러링 엔드포인트를 만드는 데 사용되는 도구:**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
 > [!IMPORTANT]  
->  RC4 알고리즘은 더 이상 사용되지 않습니다. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
+>  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  CREATE ENDPOINT 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)을 참조하세요.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
- **데이터베이스 미러링 끝점을 만들려면**  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
+ **데이터베이스 미러링 엔드포인트를 만들려면**  
   
 1.  데이터베이스 미러링 엔드포인트를 만들 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
   
-2.  ph x="1" /&gt; cmdlet을 사용하여 엔드포인트를 만든 다음 `New-SqlHadrEndpoint`를 사용하여 엔드포인트를 시작합니다.  
+2.  ph x="1" /&gt; cmdlet을 사용하여 엔드포인트를 만든 다음 `Set-SqlHadrEndpoint`를 사용하여 엔드포인트를 시작합니다.  
   
-###  <a name="PShellExample"></a>예 (PowerShell)  
+###  <a name="example-powershell"></a><a name="PShellExample"></a> 예제(PowerShell)  
  다음 PowerShell 명령은 SQL Server 인스턴스 (*컴퓨터*\\*인스턴스*)에 데이터베이스 미러링 끝점을 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
   
 > [!IMPORTANT]  
@@ -62,8 +61,8 @@ $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\
 Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
-##  <a name="RelatedTasks"></a> 관련 작업  
- **데이터베이스 미러링 끝점을 구성 하려면**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
+ **데이터베이스 미러링 엔드포인트를 구성하려면**  
   
 -   [Windows 인증에 대한 데이터베이스 미러링 엔드포인트 만들기&#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
@@ -75,9 +74,9 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [가용성 복제본 &#40;SQL Server를 추가 하거나 수정할 때 끝점 URL을 지정&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정&#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
- **데이터베이스 미러링 끝점에 대 한 정보를 보려면**  
+ **데이터베이스 미러링 엔드포인트에 대한 정보를 보려면**  
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252025"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
@@ -97,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터로**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
@@ -109,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 에는 데이터 파일과 로그 파일이 모두 포함 됩니다.|  
 |**할당 되지 않은 공간**|**varchar (18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다.|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터로**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|  
   
@@ -118,9 +118,9 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|공간 사용 정보가 필요한 개체의 이름입니다.<br /><br /> 개체의 스키마 이름은 반환되지 않습니다. 스키마 이름이 필요한 경우 [dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) 또는 [dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 사용 하 여 해당 하는 크기 정보를 가져옵니다.|  
-|**rows**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
+|**열**|**char (20)**|테이블에 있는 행 수입니다. 지정된 개체가 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐일 경우 이 열은 큐에 있는 메시지 수를 나타냅니다.|  
 |**쓰이는**|**varchar (18)**|*Objname*에 대해 예약 된 공간의 전체 크기입니다.|  
-|**데이터로**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
+|**데이터**|**varchar (18)**|*Objname*의 데이터에 사용 되는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|*Objname*의 인덱스에서 사용 하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|*Objname* 에 대해 예약 되었지만 아직 사용 되지 않은 총 공간입니다.|  
  
@@ -137,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터로**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 
@@ -157,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|현재 데이터베이스의 크기(메가바이트)입니다. **database_size** 에는 데이터 파일과 로그 파일이 모두 포함 됩니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 경우 파일 그룹에 있는 모든 검사점 파일의 전체 디스크 크기를 포함 합니다.|
 |**할당 되지 않은 공간**|**varchar (18)**|데이터베이스 개체용으로 예약되지 않은 데이터베이스 공간입니다. 데이터베이스에 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 경우 파일 그룹에 사전 생성 된 검사점 파일의 전체 디스크 크기를 포함 합니다.|  
 |**쓰이는**|**varchar (18)**|데이터베이스의 개체에 의해 할당된 총 공간입니다.|  
-|**데이터로**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
+|**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
 |**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 = 1 인 @include_total_xtp_storage경우에만 포함 됩니다*.| 
@@ -250,8 +250,8 @@ GO
  [DBCC UPDATEUSAGE &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [allocation_units &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [index_columns &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. 개체 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

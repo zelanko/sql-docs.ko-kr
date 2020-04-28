@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782949"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>가용성 그룹에서 보조 데이터베이스 제거(SQL Server)
@@ -28,11 +28,11 @@ ms.locfileid: "72782949"
   
 -   **시작하기 전 주의 사항:**  
   
-     [필수 구성 요소](#Prerequisites)  
+     [전제 조건](#Prerequisites)  
   
      [보안](#Security)  
   
--   **다음을 사용 하 여 보조 데이터베이스를 제거 합니다.**  
+-   **보조 데이터베이스를 제거하려면:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,25 +42,24 @@ ms.locfileid: "72782949"
   
 -   **후속 작업:**  [가용성 그룹에서 보조 데이터베이스를 제거한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> 사전 요구 사항 및 제한 사항  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>사전 요구 사항 및 제한 사항  
   
 -   이 태스크는 보조 복제본에서만 지원됩니다. 데이터베이스를 제거할 보조 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  **가용성 그룹에서 보조 데이터베이스를 제거하려면**  
   
 1.  개체 탐색기에서 하나 이상의 보조 데이터베이스를 제거할 보조 복제본을 호스팅하는 서버 인스턴스에 연결하고 서버 트리를 확장합니다.  
   
-2.  
-  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
+2.  **AlwaysOn 고가용성** 및 **가용성 그룹** 노드를 확장합니다.  
   
 3.  가용성 그룹을 선택하고 **가용성 데이터베이스** 노드를 확장합니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "72782949"
   
 6.  **가용성 그룹에서 데이터베이스 제거** 대화 상자에서 나열된 데이터베이스를 모두 제거하려면 **확인**을 클릭합니다. 나열된 모든 데이터베이스를 제거하지 않으려면 **취소**를 클릭합니다.  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  **가용성 그룹에서 보조 데이터베이스를 제거하려면**  
   
 1.  보조 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "72782949"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **가용성 그룹에서 보조 데이터베이스를 제거하려면**  
   
 1.  보조 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경(`cd`)합니다.  
@@ -112,7 +111,7 @@ ms.locfileid: "72782949"
   
 -   [SQL Server PowerShell 공급자](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> 후속 작업: 가용성 그룹에서 보조 데이터베이스를 제거한 후  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a>후속 작업: 가용성 그룹에서 보조 데이터베이스를 제거한 후  
  보조 데이터베이스가 제거되면 이 보조 데이터베이스는 더 이상 가용성 그룹에 조인되지 않으며 제거된 보조 데이터베이스에 대한 모든 정보가 가용성 그룹에서 삭제됩니다. 제거된 보조 데이터베이스는 RESTORING 상태가 됩니다.  
   
 > [!TIP]  

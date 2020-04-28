@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952064"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Reporting Services 업그레이드 문제(업그레이드 관리자)
@@ -34,9 +34,7 @@ ms.locfileid: "71952064"
  다음 항목에서는 업그레이드 관리자가 보고하는 알려진 문제에 대해 설명하고 업그레이드를 성공적으로 수행하기 위해 기존 설치를 수정하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 분석하려면 보고서 서버에 업그레이드 관리자를 설치해야 합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 원격 분석을 지원하지 않습니다.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 분석하려면 보고서 서버에 업그레이드 관리자를 설치해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 원격 분석을 지원하지 않습니다.  
 >   
 >  자세한 내용은 [업그레이드 관리자 설치](../../../2014/sql-server/install/installing-upgrade-advisor.md)를 참조 하세요.  
   

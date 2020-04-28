@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911214"
 ---
 # <a name="using-user-defined-tables"></a>사용자 정의 테이블 사용
@@ -25,17 +25,13 @@ ms.locfileid: "70911214"
 
   사용자 정의 테이블은 테이블 형식의 정보를 나타냅니다. 이들은 테이블 형식 데이터를 저장 프로시저나 사용자 정의 함수로 전달할 때 매개 변수로 사용할 수 있습니다. 데이터베이스 테이블의 열 표시에는 사용자 정의 테이블을 사용할 수 없습니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 해당 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션의 각 개체에는 사용자 정의 테이블의 열을 나열 하 <xref:Microsoft.SqlServer.Management.Smo.Column> 는 개체의 컬렉션을 참조 하는 **Columns** 속성이 있습니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 개체를 참조하는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 속성이 있습니다. 해당 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 컬렉션의 각 개체에는 사용자 정의 테이블의 열을 나열 하 <xref:Microsoft.SqlServer.Management.Smo.Column> 는 개체의 컬렉션을 참조 하는 **Columns** 속성이 있습니다. 사용자 정의 테이블에 열을 추가하려면 Add 메서드를 사용합니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체를 사용하여 새 사용자 정의 테이블을 정의할 때 여러 열과 이 열들 중 하나를 기반으로 하는 기본 키를 제공해야 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 개체를 사용하여 새 사용자 정의 테이블을 정의할 때 여러 열과 이 열들 중 하나를 기반으로 하는 기본 키를 제공해야 합니다.  
   
- 사용자 정의 테이블 형식은 한번 만든 후 변경할 수 없습니다. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>은 Alter 메서드를 지원하지 않습니다. 사용자 정의 테이블 형식은 CHECK 제약 조건을 갖지만 형식을 수정할 수 없으므로 일부 확인 작업에서 예외가 발생합니다.  
+ 사용자 정의 테이블 형식은 한번 만든 후 변경할 수 없습니다. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>은 Alter 메서드를 지원하지 않습니다. 사용자 정의 테이블 형식은 CHECK 제약 조건을 갖지만 형식을 수정할 수 없으므로 일부 확인 작업에서 예외가 발생합니다.  
   
- 
-  <xref:Microsoft.SqlServer.Management.Smo.DataType> 클래스는 열 및 매개 변수와 연관된 데이터 형식을 지정하는 데 사용됩니다. 사용자 정의 테이블 형식을 사용자 정의 함수 및 저장 프로시저에 대한 매개 변수로 지정하려면 이 형식을 사용하십시오.  
+ <xref:Microsoft.SqlServer.Management.Smo.DataType> 클래스는 열 및 매개 변수와 연관된 데이터 형식을 지정하는 데 사용됩니다. 사용자 정의 테이블 형식을 사용자 정의 함수 및 저장 프로시저에 대한 매개 변수로 지정하려면 이 형식을 사용하십시오.  
   
 ## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  

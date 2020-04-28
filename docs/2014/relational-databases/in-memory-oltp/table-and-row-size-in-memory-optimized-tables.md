@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688897"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
@@ -34,7 +34,7 @@ ms.locfileid: "72688897"
   
  다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
   
- ![메모리 액세스에 최적화 된 테이블입니다.](../../database-engine/media/hekaton-guide-1.gif "메모리 액세스에 최적화된 테이블")  
+ ![메모리 최적화 테이블](../../database-engine/media/hekaton-guide-1.gif "메모리 최적화 테이블")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
   
  테이블의 메모리 내 크기(바이트)는 다음과 같이 계산됩니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "72688897"
   
  다음 표에서는 [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns]와 같이 행 본문 크기의 계산에 대해 설명합니다.  
   
-|섹션|크기|주석|  
+|단원|크기|주석|  
 |-------------|----------|--------------|  
 |단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 숫자 (전체 자릿수 <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> 숫자 (전체 자릿수>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |단순 열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
@@ -82,7 +82,7 @@ ms.locfileid: "72688897"
 |가변 길이 전체 형식 열 [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 [computed row body size]에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
 |가변 길이 전체 형식 열 [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 [actual row body size]에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|  
   
-##  <a name="bkmk_RowStructure"></a>행 구조  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a>행 구조  
  메모리 최적화 테이블의 행에는 다음과 같은 구성 요소가 있습니다.  
   
 -   행 머리글에는 행 버전 관리를 구현하는 데 필요한 타임스탬프가 포함됩니다. 행 머리글에는 위에서 설명한 해시 버킷의 행 체인을 구현하는 인덱스 포인터도 포함됩니다.  
@@ -91,7 +91,7 @@ ms.locfileid: "72688897"
   
  다음 그림에서는 두 개의 인덱스가 있는 테이블에 대한 행 구조를 보여 줍니다.  
   
- ![두 개의 인덱스가 있는 테이블에 대한 행 구조](../../database-engine/media/hekaton-tables-4.gif "두 개의 인덱스가 있는 테이블에 대한 행 구조")  
+ ![두 개의 인덱스가 있는 테이블의 행 구조](../../database-engine/media/hekaton-tables-4.gif "두 개의 인덱스가 있는 테이블의 행 구조")  
   
  시작 및 종료 타임스탬프는 특정 행 버전의 유효 기간을 나타냅니다. 이 기간에 시작되는 트랜잭션은 이 행 버전을 참조할 수 있습니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 트랜잭션](memory-optimized-tables.md)을 참조하세요.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "72688897"
 |Jane|프라하|  
 |Susan|보고타|  
   
-##  <a name="bkmk_ExampleComputation"></a>예: 테이블 및 행 크기 계산  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어, 지정된 bucket_count가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  
   
  다음 정의의 Orders 테이블을 살펴보십시오.  
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 최적화 테이블](memory-optimized-tables.md)  
+ [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)  
   
   

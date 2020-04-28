@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154580"
 ---
 # <a name="databases"></a>데이터베이스
@@ -41,7 +41,7 @@ ms.locfileid: "70154580"
 |||  
 |-|-|  
 |[시스템 데이터베이스](system-databases.md)|[데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)|  
-|[포함된 데이터베이스](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
+|[포함 된 데이터베이스](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
 |[Azure의 SQL Server 데이터 파일](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
 |[데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)|[데이터베이스 이름 바꾸기](rename-a-database.md)|  
 |[데이터베이스 상태](database-states.md)|[단일 사용자 모드로 데이터베이스 설정](set-a-database-to-single-user-mode.md)|  
@@ -57,8 +57,8 @@ ms.locfileid: "70154580"
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../indexes/indexes.md)  
   
- [뷰](../views/views.md)  
+ [보기](../views/views.md)  
   
- [저장 프로시저 &#40;데이터베이스 엔진&#41;](../stored-procedures/stored-procedures-database-engine.md)  
+ [저장 프로시저&#40;데이터베이스 엔진&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   
   

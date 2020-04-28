@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 43ff94bf10dee2bda0a61b573b87621fa5d3256b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781795"
 ---
 # <a name="using-messages"></a>메시지 사용
-  SMO에서 시스템 메시지는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 개체에 속하는 `Server` 개체로 표시됩니다. 시스템 메시지는 수정할 수 없으므로 `SystemMessage` 개체 속성은 읽기 전용입니다.  
+  SMO에서 시스템 메시지는 `Server` 개체에 속하는 <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> 개체로 표시됩니다. 시스템 메시지는 수정할 수 없으므로 `SystemMessage` 개체 속성은 읽기 전용입니다.  
   
  사용자 정의 메시지는 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 개체를 통해 SMO에서 프로그래밍 방식으로 표시됩니다. 전체 컬렉션을 반복하여 기존 사용자 정의 메시지를 검색할 수 있습니다. 새 사용자 정의 메시지는 새 `UserDefinedMessage` 개체를 인스턴스화하고 적절한 속성을 설정하여 만들 수 있습니다.  
   

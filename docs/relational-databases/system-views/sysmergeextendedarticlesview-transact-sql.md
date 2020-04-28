@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278174"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview(Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "72278174"
 |**pubid**|**uniqueidentifier**|현재 아티클이 속한 게시의 ID입니다.|  
 |**애칭**|**int**|아티클 ID에 대한 애칭 매핑입니다.|  
 |**column_tracking**|**int**|아티클에 대한 열 추적이 구현되는지 표시합니다.|  
-|**업무**|**tinyint**|아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 동기화 됨-테이블을 게시 하는 초기 처리 스크립트가 다음에 스냅숏 에이전트 실행 될 때 실행 됩니다.<br /><br /> **2** = 활성-테이블을 게시 하는 초기 처리 스크립트가 실행 되었습니다.<br /><br /> **5** = New_inactive를 추가 합니다.<br /><br /> **6** = New_active 추가할 수 있습니다.|  
+|**status**|**tinyint**|아티클의 상태를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **1** = 동기화 됨-테이블을 게시 하는 초기 처리 스크립트가 다음에 스냅숏 에이전트 실행 될 때 실행 됩니다.<br /><br /> **2** = 활성-테이블을 게시 하는 초기 처리 스크립트가 실행 되었습니다.<br /><br /> **5** = New_inactive를 추가 합니다.<br /><br /> **6** = New_active 추가할 수 있습니다.|  
 |**conflict_table**|**sysname**|현재 아티클에 대한 충돌 기록이 들어 있는 로컬 테이블의 이름입니다. 이 테이블은 정보 제공의 목적으로만 제공되며 사용자 지정 충돌 해결 루틴에 의해서나 직접 관리자에 의해서 수정되거나 삭제될 수 있습니다.|  
 |**creation_script**|**nvarchar(255)**|해당 아티클에 대한 생성 스크립트입니다.|  
 |**conflict_script**|**nvarchar(255)**|해당 아티클에 대한 충돌 스크립트입니다.|  
@@ -54,14 +54,14 @@ ms.locfileid: "72278174"
 |**schema_option**|**binary (8)**|*Schema_option*지원 되는 값은 [sp_addmergearticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)를 참조 하세요.|  
 |**destination_object**|**sysname**|구독자에서 생성되는 테이블의 이름입니다.|  
 |**resolver_clsid**|**nvarchar(50)**|사용자 지정 충돌 해결 프로그램의 ID입니다.|  
-|**subset_filterclause**|**nvarchar (1000)**|해당 아티클에 대한 필터 절입니다.|  
+|**subset_filterclause**|**nvarchar(1000)**|해당 아티클에 대한 필터 절입니다.|  
 |**missing_col_count**|**int**|누락된 열의 수입니다.|  
-|**missing_cols**|**varbinary (128)**|누락된 열의 비트맵입니다.|  
-|**세로**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**missing_cols**|**varbinary(128)**|누락된 열의 비트맵입니다.|  
+|**세로**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 스토리지입니다.|  
 |**view_sel_proc**|**nvarchar (가 나)**|병합 에이전트가 동적으로 필터링된 게시에 처음으로 아티클을 채우고 필터링된 모든 게시에 변경된 행을 열거하는 데 사용하는 저장 프로시저의 이름입니다.|  
 |**gen_cur**|**int**|아티클의 기본 테이블에 대한 로컬 변경 사항의 생성 번호입니다.|  
-|**excluded_cols**|**varbinary (128)**|구독자로 보낼 때 아티클에서 제외되는 열의 비트맵입니다.|  
+|**excluded_cols**|**varbinary(128)**|구독자로 보낼 때 아티클에서 제외되는 열의 비트맵입니다.|  
 |**excluded_col_count**|**int**|제외되는 열 수입니다.|  
 |**vertical_partition**|**int**|테이블 아티클에 열 필터링 사용 여부를 지정합니다. **0** 은 세로 필터링이 없으며 모든 열을 게시 함을 나타냅니다.|  
 |**identity_support**|**int**|자동 ID 범위 처리가 설정되었는지 여부를 지정합니다. **1** 은 id 범위 처리를 사용 하도록 설정 하 고 **0** 은 id 범위를 지원 하지 않음을 의미 합니다.|  

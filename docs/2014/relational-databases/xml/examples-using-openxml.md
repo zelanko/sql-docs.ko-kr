@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874695"
 ---
 # <a name="examples-using-openxml"></a>예제: OPENXML 사용
@@ -95,8 +95,7 @@ LILAS      Carlos Gonzlez
   
  <`Customer`> 요소에는 하위 요소가 없기 때문에 *flags*가 **2**로 설정되어 요소 중심 매핑을 나타내도록 같은 SELECT 문이 실행되는 경우 두 고객에 대한 **CustomerID** 및 **ContactName**의 값은 NULL로 반환됩니다.  
   
- 
-  @xmlDocument는 **xml** 유형 또는 **(n)varchar(max)** 유형일 수 있습니다.  
+ @xmlDocument는 **xml** 유형 또는 **(n)varchar(max)** 유형일 수 있습니다.  
   
  XML 문서에서 <`CustomerID`>와 <`ContactName`>이 하위 요소인 경우에는 요소 중심의 매핑이 값을 검색합니다.  
   

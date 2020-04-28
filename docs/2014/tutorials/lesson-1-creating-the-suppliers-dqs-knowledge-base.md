@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154971"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>1단원: 공급자 DQS 기술 자료 만들기
@@ -24,8 +24,7 @@ ms.locfileid: "70154971"
   
  이 단원에서는 다음 작업을 수행하여 **Suppliers** 기술 자료를 만듭니다.  
   
--   
-  **Suppliers**라는 DQS 기술 자료를 만듭니다. 기술 자료는 여러 가지 방법으로 만들 수 있습니다. 기술 자료는 처음부터 새로 만들거나, 기존 기술 자료를 기반으로 해서 만들거나, 미리 작성되어 내보낸 기술 자료가 포함된 DQS 파일(.dqs)을 가져와서 만들거나, 예제 데이터에 대해 기술 자료 검색 작업을 수행하여 만들 수 있습니다. 이 자습서에서는 기술 자료를 처음부터 새로 만듭니다.  
+-   **Suppliers**라는 DQS 기술 자료를 만듭니다. 기술 자료는 여러 가지 방법으로 만들 수 있습니다. 기술 자료는 처음부터 새로 만들거나, 기존 기술 자료를 기반으로 해서 만들거나, 미리 작성되어 내보낸 기술 자료가 포함된 DQS 파일(.dqs)을 가져와서 만들거나, 예제 데이터에 대해 기술 자료 검색 작업을 수행하여 만들 수 있습니다. 이 자습서에서는 기술 자료를 처음부터 새로 만듭니다.  
   
 -   중복 항목을 식별할 수 있도록 데이터 정리 및 데이터 일치 작업에 사용하는 도메인을 **Suppliers** 기술 자료에 만듭니다. 데이터의 모든 데이터 필드가 아니라 정리 및 일치 작업에 사용하려는 데이터 필드에 대해 도메인을 만듭니다.  
   

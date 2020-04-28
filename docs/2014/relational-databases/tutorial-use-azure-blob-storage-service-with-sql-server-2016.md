@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176091"
 ---
-# <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>자습서: Azure Storage 서비스의 SQL Server 데이터 파일
+# <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>자습서: Azure Storage의 SQL Server 데이터 파일 서비스
   Azure Storage Service의 SQL Server 데이터 파일 자습서를 시작 합니다. 이 자습서는 Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 직접 저장하는 방법을 이해하는 데 도움이 됩니다.  
   
  Azure Blob storage 서비스에 대 한 SQL Server 통합 지원은 SQL Server 2014 향상 된 기능입니다. 이 기능을 사용 하는 기능 및 이점에 대 한 개요는 [Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md)을 참조 하세요.  

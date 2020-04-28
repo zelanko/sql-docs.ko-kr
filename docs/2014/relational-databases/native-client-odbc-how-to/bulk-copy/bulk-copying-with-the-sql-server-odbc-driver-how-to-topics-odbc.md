@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688876"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC 드라이버를 사용한 대량 복사 방법 도움말 항목(ODBC)
@@ -38,6 +38,6 @@ ms.locfileid: "72688876"
 -   [ODBC&#41;&#40;프로그램 변수에서 대량 데이터 복사](bulk-copy-data-from-program-variables-odbc.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [ODBC How-to Topics](../odbc-how-to-topics.md)  
+ [ODBC 방법 도움말 항목](../odbc-how-to-topics.md)  
   
   

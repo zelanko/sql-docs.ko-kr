@@ -18,10 +18,10 @@ ms.assetid: 24da5cd2-1c45-475e-93db-5bdf660f1c2c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7629c25264f0b45d68e29e947b1d5c40d02707e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72041177"
 ---
 # <a name="sp_posttracertoken-transact-sql"></a>sp_posttracertoken(Transact-SQL)

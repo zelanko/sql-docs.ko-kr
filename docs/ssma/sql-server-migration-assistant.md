@@ -10,10 +10,10 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252129"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
@@ -50,11 +50,11 @@ SSMA에 대해 지원 되는 대상 버전은 다음과 같습니다.
 
 ## <a name="downloads"></a>다운로드
 
-- [Access 용 SSMA](https://aka.ms/ssmaforaccess)
-- [D b 2 용 SSMA](https://aka.ms/ssmafordb2)
-- [MySql 용 SSMA](https://aka.ms/ssmaformysql)
-- [Oracle 용 SSMA](https://aka.ms/ssmafororacle)
-- [SAP ASE 용 SSMA](https://aka.ms/ssmaforsybase)
+- [SSMA for Access](https://aka.ms/ssmaforaccess)
+- [SSMA for DB2](https://aka.ms/ssmafordb2)
+- [MySQL용 SSMA](https://aka.ms/ssmaformysql)
+- [SSMA for Oracle](https://aka.ms/ssmafororacle)
+- [SSMA for SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA 지원 받기  
 

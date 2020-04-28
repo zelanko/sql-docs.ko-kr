@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154835"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
@@ -38,12 +38,9 @@ ms.locfileid: "70154835"
 ## <a name="options"></a>옵션  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
- **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. 
-  `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [URL에 대한 SQL Server Backup](sql-server-backup-to-url.md)을 참조하세요.  
+ **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [URL에 대한 SQL Server Backup](sql-server-backup-to-url.md)을 참조하세요.  
   
- 
-  **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. 
-  **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
+ **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
   
 > [!NOTE]  
 >  미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)인스턴스를 실행하는 컴퓨터에 테이프 드라이브가 연결되어 있는 경우에만 사용할 수 있습니다.  
@@ -63,10 +60,9 @@ ms.locfileid: "70154835"
  상황에 따라 기존 미디어 세트로 백업할 경우 백업 세트의 만료 날짜 및 이름을 식별하기 위해 백업 작업이 필요할 수 있습니다.  
   
  **미디어 세트 이름**  
- 
-  **미디어 세트 이름 및 백업 세트 만료 확인** 을 선택한 경우 필요에 따라 이 백업 작업에 사용되는 미디어 세트 이름을 지정합니다.  
+ **미디어 세트 이름 및 백업 세트 만료 확인** 을 선택한 경우 필요에 따라 이 백업 작업에 사용되는 미디어 세트 이름을 지정합니다.  
   
- **새 미디어 세트에 백업 하 고 기존 백업 세트 모두 지우기**  
+ **새 미디어 세트에 백업하고 기존 백업 세트 모두 지우기**  
  이전 백업 세트를 지우고 새 미디어 세트를 사용합니다.  
   
  이 옵션을 클릭하면 다음 옵션이 활성화됩니다.  
@@ -78,8 +74,7 @@ ms.locfileid: "70154835"
  필요에 따라 새 미디어 세트에 대한 이해하기 쉬운 설명을 입력합니다. 이 설명은 내용을 정확하게 전달할 수 있을 만큼 구체적이어야 합니다.  
   
 ### <a name="reliability"></a>안정성  
- 
-  **트랜잭션 로그** 패널의 옵션은 백업 작업으로 오류 관리를 제어합니다.  
+ **트랜잭션 로그** 패널의 옵션은 백업 작업으로 오류 관리를 제어합니다.  
   
  **완료 시 백업 확인**  
  백업 세트가 올바른지 확인하고 모든 볼륨을 읽을 수 있는지 확인합니다.  
@@ -91,9 +86,7 @@ ms.locfileid: "70154835"
  하나 이상의 오류가 발생한 다음에도 백업 작업이 계속됩니다.  
   
 ### <a name="transaction-log"></a>트랜잭션 로그  
- 
-  **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. 
-  **트랜잭션 로그**가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
+ **트랜잭션 로그** 패널의 옵션은 트랜잭션 로그 백업의 동작을 제어합니다. 이러한 옵션은 전체 복구 모델 또는 대량 로그 복구 모델에서만 해당됩니다. **트랜잭션 로그**가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **백업 유형** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
 >  트랜잭션 로그 백업에 대한 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)을 참조하세요.  
@@ -101,15 +94,13 @@ ms.locfileid: "70154835"
  **트랜잭션 로그 잘라내기**  
  트랜잭션 로그를 백업한 다음 잘라 로그 공간을 확보합니다. 데이터베이스는 온라인 상태로 유지됩니다. 기본 옵션입니다.  
   
- **비상 로그를 백업 하 고 데이터베이스를 복원 중인 상태로 둡니다.**  
+ **비상 로그 백업을 수행하고 복원 중인 상태로 데이터베이스 유지**  
  비상 로그 백업을 수행하고 데이터베이스를 복원 상태로 둡니다. 이 옵션을 사용하여 일반적으로 데이터베이스 복원 준비 과정에서 백업되지 않은 로그(활성 로그)를 백업하는 *비상 로그 백업*을 만들 수 있습니다. 데이터베이스가 완전히 복원되기 전까지는 데이터베이스를 사용할 수 없습니다.  
   
  이 옵션을 선택하는 것은 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH NO_TRUNCATE, NORECOVERY를 지정하는 것과 같습니다. 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](tail-log-backups-sql-server.md)을 참조하세요.  
   
 ### <a name="tape-drive"></a>테이프 드라이브  
- 
-  **테이프 드라이브** 패널의 옵션은 백업 작업 동안 테이프 관리를 제어합니다. 
-  **테이프** 가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **대상** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
+ **테이프 드라이브** 패널의 옵션은 백업 작업 동안 테이프 관리를 제어합니다. **테이프** 가 **데이터베이스 백업** 대화 상자의 [일반](../../integration-services/general-page-of-integration-services-designers-options.md) 페이지에 있는 **대상** 필드에서 선택된 경우에만 이 옵션이 활성화됩니다.  
   
 > [!NOTE]  
 >  테이프 디바이스를 사용하는 방법은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.  
@@ -118,13 +109,12 @@ ms.locfileid: "70154835"
  백업이 완료된 후 테이프를 언로드합니다.  
   
  **언로드 전에 테이프 되감기**  
- 테이프를 언로드하기 전에 되감습니다. 
-  **백업 후 테이프 언로드** 를 선택한 경우에만 이 옵션을 사용할 수 있습니다.  
+ 테이프를 언로드하기 전에 되감습니다. **백업 후 테이프 언로드** 를 선택한 경우에만 이 옵션을 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [파일 및 파일 그룹 백업&#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
+ [트랜잭션 로그 &#40;SQL Server 백업&#41;](back-up-a-transaction-log-sql-server.md)   
+ [SQL Server&#41;&#40;파일 및 파일 그룹 백업](back-up-files-and-filegroups-sql-server.md)   
  [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
   

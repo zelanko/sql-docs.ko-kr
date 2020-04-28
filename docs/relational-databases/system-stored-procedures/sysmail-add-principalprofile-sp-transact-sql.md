@@ -18,10 +18,10 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305056"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
@@ -41,7 +41,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @principal_id = ] principal_id`연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. 0 *principal_id* 하면 **** 이 프로필은 공개 프로필이 되며 데이터베이스의 모든 보안 주체에 게 액세스 권한을 부여 합니다.  
+`[ @principal_id = ] principal_id`연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 ID입니다. *principal_id* 은 **int**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. 0 *principal_id* 하면 **0** 이 프로필은 공개 프로필이 되며 데이터베이스의 모든 보안 주체에 게 액세스 권한을 부여 합니다.  
   
 `[ @principal_name = ] 'principal_name'`연결에 대 한 **msdb** 데이터베이스에 있는 데이터베이스 사용자 또는 역할의 이름입니다. *principal_name* 는 **sysname**이며 기본값은 NULL입니다. *Principal_id* 또는 *principal_name* 를 지정 해야 합니다. **' Public '** *principal_name* 이 프로필을 공개 프로필로 만들어 데이터베이스의 모든 보안 주체에 대 한 액세스 권한을 부여 합니다.  
   

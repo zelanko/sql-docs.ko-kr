@@ -16,14 +16,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952658"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>데이터베이스 변경 마법사(SSRS 기본 모드)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에서는 새 보고서 서버 데이터베이스를 만들거나 현재 보고서 서버 인스턴스에 사용할 기존 보고서 서버 데이터베이스를 선택하는 단계를 안내하는 데이터베이스 변경 마법사를 제공합니다.  
   
  이전 버전에서 보고서 서버 데이터베이스를 선택하는 경우 이 데이터베이스는 연결된 보고서 서버 인스턴스의 버전과 일치하도록 업그레이드됩니다. 서비스를 시작하면 데이터베이스 버전이 검사되고 현재 스키마로 자동 업그레이드됩니다.  
@@ -39,27 +38,21 @@ ms.locfileid: "71952658"
  **데이터베이스 서버**  
  보고서 서버 데이터베이스를 호스팅하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 인스턴스의 이름을 지정 합니다. 로컬 컴퓨터나 원격 컴퓨터에서 기본 또는 명명된 인스턴스를 사용할 수 있습니다. 명명 된 인스턴스에 연결 하는 \< *경우 서버*>\\<*인스턴스*> 형식으로 서버 이름을 입력 합니다.  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 서버에 로그온하여 데이터베이스 정보를 업데이트할 권한이 있는 자격 증명을 사용해야 합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 사용자의 현재 Windows 자격 증명을 사용하지만 사용자에게 로그인 또는 데이터베이스 권한이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 지정해야 합니다. 다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 사용자로 연결하려면 해당 사용자로 로그인한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작합니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하려면 서버에 로그온하여 데이터베이스 정보를 업데이트할 권한이 있는 자격 증명을 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 사용자의 현재 Windows 자격 증명을 사용하지만 사용자에게 로그인 또는 데이터베이스 권한이 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 지정해야 합니다. 다른 Windows 자격 증명은 지정할 수 없습니다. 다른 Windows 사용자로 연결하려면 해당 사용자로 로그인한 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작합니다.  
   
- 원격 인스턴스에 연결하려면 먼저 원격 연결을 사용할 수 있도록 해당 인스턴스를 설정해야 합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 기본적으로 원격 연결을 허용하지 않습니다. 원격 연결의 허용 여부를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 및 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다. 원격 인스턴스도 명명된 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 대상 서버에서 활성화되어 실행되고 있는지 확인합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 명명된 인스턴스에서 사용되는 포트 번호를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에 제공합니다.  
+ 원격 인스턴스에 연결하려면 먼저 원격 연결을 사용할 수 있도록 해당 인스턴스를 설정해야 합니다. 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 기본적으로 원격 연결을 허용하지 않습니다. 원격 연결의 허용 여부를 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 TCP/IP 및 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다. 원격 인스턴스도 명명된 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스가 대상 서버에서 활성화되어 실행되고 있는지 확인합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 명명된 인스턴스에서 사용되는 포트 번호를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자에 제공합니다.  
   
  **Database**  
  서버 데이터를 저장하는 보고서 서버 데이터베이스의 이름을 지정합니다. 기존 데이터베이스를 지정하거나 새 데이터베이스를 만들 수 있습니다.  
   
- 동작 페이지에서 **새 데이터베이스 만들기** 를 선택하면 새 데이터베이스를 만드는 데 사용되는 속성이 마법사에 나타납니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 정적 데이터를 포함하는 데이터베이스와 세션 및 작업 데이터를 저장하기 위한 임시 데이터베이스를 이름별로 바인딩하여 만듭니다. 자세한 내용은 온라인 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) 를 참조 하세요.  
+ 동작 페이지에서 **새 데이터베이스 만들기** 를 선택하면 새 데이터베이스를 만드는 데 사용되는 속성이 마법사에 나타납니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 정적 데이터를 포함하는 데이터베이스와 세션 및 작업 데이터를 저장하기 위한 임시 데이터베이스를 이름별로 바인딩하여 만듭니다. 자세한 내용은 온라인 설명서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [보고서 서버 데이터베이스 &#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md) 를 참조 하세요.  
   
- 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 잘못된 데이터베이스를 필터링하지 않습니다. 올바른 데이터베이스는 보고서 서버 스키마를 기반으로 합니다(필수 테이블, 뷰 또는 저장 프로시저가 누락된 데이터베이스는 선택할 수는 없음). 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 만든 데이터베이스를 선택하면 데이터베이스가 현재 형식으로 업그레이드됩니다.  
+ 기존 보고서 서버 데이터베이스를 선택할 수도 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 잘못된 데이터베이스를 필터링하지 않습니다. 올바른 데이터베이스는 보고서 서버 스키마를 기반으로 합니다(필수 테이블, 뷰 또는 저장 프로시저가 누락된 데이터베이스는 선택할 수는 없음). 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 만든 데이터베이스를 선택하면 데이터베이스가 현재 형식으로 업그레이드됩니다.  
   
  **언어**  
  이 값은 새 보고서 서버 데이터베이스를 만드는 경우에만 설정합니다.  
   
- 이 값으로 역할 정의 및 설명을 작성하는 언어를 지정합니다. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 미리 정의된 역할 집합이 포함된 역할 기반 인증 모델을 제공합니다. 이러한 역할은 지정한 언어로 한 번 만들어집니다. 역할 이름 및 설명은 다른 언어로는 표시되지 않습니다. 서버에서 지원하는 culture 또는 언어가 설정된 브라우저를 사용하여 보고서 서버에 연결하더라도 마찬가지입니다. 지정하는 언어에 따라 내 보고서 기능의 일부인 내 보고서 폴더와 사용자 폴더의 이름을 만드는 데 사용되는 언어도 결정됩니다.  
+ 이 값으로 역할 정의 및 설명을 작성하는 언어를 지정합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 미리 정의된 역할 집합이 포함된 역할 기반 인증 모델을 제공합니다. 이러한 역할은 지정한 언어로 한 번 만들어집니다. 역할 이름 및 설명은 다른 언어로는 표시되지 않습니다. 서버에서 지원하는 culture 또는 언어가 설정된 브라우저를 사용하여 보고서 서버에 연결하더라도 마찬가지입니다. 지정하는 언어에 따라 내 보고서 기능의 일부인 내 보고서 폴더와 사용자 폴더의 이름을 만드는 데 사용되는 언어도 결정됩니다.  
   
  **서버 모드**  
  보고서 서버 데이터베이스는 기본 모드 또는 SharePoint 통합 모드를 지원합니다. 두 모드는 함께 사용할 수 없습니다.  

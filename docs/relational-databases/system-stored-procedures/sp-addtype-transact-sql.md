@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305132"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype(Transact-SQL)
@@ -51,10 +51,10 @@ sp_addtype [ @typename = ] type,
 ||||  
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**진수가**|  
+|**char(n)**|**datetime**|**decimal**|  
 |**float**|**image**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**번호**|**nvarchar(n)**|**실제로**|  
+|**money**|**nchar (n)**|**ntext**|  
+|**numeric**|**nvarchar (n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
@@ -64,7 +64,7 @@ sp_addtype [ @typename = ] type,
  *n*  
  선택된 데이터 형식의 길이를 표시하는 음이 아닌 정수입니다.  
   
- *®*  
+ *P*  
  소수점 왼쪽과 오른쪽에 저장할 수 있는 최대 총 십진 자릿수를 표시하는 음이 아닌 정수입니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
  *삭제*  
@@ -99,11 +99,9 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
- 다음 예에서는 제공 된 **varchar** 데이터 형식을 기반 `ssn` 으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. 
-  `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
+ 다음 예에서는 제공 된 **varchar** 데이터 형식을 기반 `ssn` 으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
- 
-  `varchar(11)`는 문장 부호(괄호)를 포함하고 있으므로 작은따옴표로 묶어야 합니다.  
+ `varchar(11)`는 문장 부호(괄호)를 포함하고 있으므로 작은따옴표로 묶어야 합니다.  
   
 ```  
 USE master;  
@@ -138,12 +136,12 @@ GO
  [CREATE TYPE &#40;Transact-sql&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [sp_bindefault&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
- [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
+ [Transact-sql&#41;sp_bindefault &#40;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
+ [Transact-sql&#41;sp_bindrule &#40;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [Transact-sql&#41;sp_droptype &#40;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
  [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [Transact-sql&#41;sp_unbindefault &#40;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
- [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [Transact-sql&#41;sp_unbindrule &#40;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

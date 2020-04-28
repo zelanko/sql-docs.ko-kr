@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782844"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>AlwaysOn 정책을 사용하여 가용성 그룹의 상태 보기(SQL Server)
@@ -27,22 +27,21 @@ ms.locfileid: "72782844"
   
 
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전에  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="Security"></a> 보안  
+###  <a name="security"></a><a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> 권한  
+####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  연결, 서버 상태 보기 및 모든 정의 보기 권한이 필요합니다.  
   
-##  <a name="SSMSProcedure"></a>AlwaysOn 대시보드 사용  
+##  <a name="using-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>AlwaysOn 대시보드 사용  
  **AlwaysOn 대시보드를 열려면**  
   
 1.  개체 탐색기에서 가용성 복제본 중 하나를 호스팅하는 서버 인스턴스에 연결합니다. 가용성 그룹의 모든 가용성 복제본에 대한 정보를 보려면 주 복제본을 호스팅하는 서버 인스턴스를 사용합니다.  
   
 2.  서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-3.  
-  **AlwaysOn 고가용성** 노드를 확장합니다.  
+3.  **AlwaysOn 고가용성** 노드를 확장합니다.  
   
      **가용성 그룹** 을 마우스 오른쪽 단추로 클릭하거나 이 노드를 확장하고 특정 가용성 그룹을 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "72782844"
   
  AlwaysOn 대시보드를 사용하는 방법에 대한 자세한 내용은 [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)을 참조하세요.  
   
-##  <a name="PowerShellProcedure"></a> PowerShell 사용  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **AlwaysOn 정책을 사용 하 여 가용성 그룹의 상태 보기**  
   
 1.  가용성 복제본 중 하나를 호스팅하는 서버 인스턴스로 기본값을 설정(`cd`)합니다. 가용성 그룹의 모든 가용성 복제본에 대한 정보를 보려면 주 복제본을 호스팅하는 서버 인스턴스를 사용합니다.  
@@ -112,7 +111,7 @@ ms.locfileid: "72782844"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> 관련 내용  
+##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
  **AlwaysOn 팀 블로그-PowerShell을 사용 하 여 AlwaysOn 상태 모니터링: SQL Server**  
   
 -   [1부: 기본 Cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
@@ -125,6 +124,6 @@ ms.locfileid: "72782844"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 관리&#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [가용성 그룹 관리 &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹의 운영 문제에 대한 AlwaysOn 정책(SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md) 

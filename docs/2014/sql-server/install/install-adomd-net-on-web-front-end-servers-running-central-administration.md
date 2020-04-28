@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952148"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치
@@ -26,11 +26,9 @@ ms.locfileid: "71952148"
   
 ### <a name="download-and-install-the-client-library"></a>클라이언트 라이브러리 다운로드 및 설치  
   
-1.  
-  [SQL Server 2014 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkID=296473)에서 Microsoft ADOMD.NET을 찾습니다.  
+1.  [SQL Server 2014 기능 팩 페이지](https://go.microsoft.com/fwlink/?LinkID=296473)에서 Microsoft ADOMD.NET을 찾습니다.  
   
-2.  
-  `SQL_AS_ADOMD.msi` 설치 프로그램의 x64 패키지를 다운로드합니다.  
+2.  `SQL_AS_ADOMD.msi` 설치 프로그램의 x64 패키지를 다운로드합니다.  
   
 3.  .msi를 실행하여 라이브러리를 설치합니다.  
   
@@ -42,8 +40,7 @@ ms.locfileid: "71952148"
   
 2.  Microsoft.AnalysisServices.AdomdClient를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  
-  **버전**을 클릭합니다.  
+3.  **버전**을 클릭합니다.  
   
 4.  버전에 12.00이 포함 되어 있는지 확인 합니다. \<빌드 번호> 고 설명은 AnalysisService. microsoft.analysisservices.adomdclient.cellset<입니다.  
   

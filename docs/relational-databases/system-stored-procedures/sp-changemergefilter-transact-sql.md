@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304943"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
@@ -64,7 +64,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_articlename**||조인 아티클의 이름입니다.|  
 |**join_filterclause**||필터 절입니다.|  
 |**join_unique_key**|**true**|조인이 고유 키에 있습니다.|  
-||**허위**|조인이 고유 키에 없습니다.|  
+||**false**|조인이 고유 키에 없습니다.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
   
