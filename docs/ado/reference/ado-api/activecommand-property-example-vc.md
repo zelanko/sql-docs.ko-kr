@@ -15,10 +15,10 @@ ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921644"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand 속성 예제(VC++)

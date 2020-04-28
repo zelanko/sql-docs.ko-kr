@@ -15,10 +15,10 @@ ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926763"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
@@ -36,7 +36,7 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../
 ## <a name="errors"></a>오류
  이 공급자가 발급 한 다음 오류는 응용 프로그램에서 검색할 수 있습니다.
 
-|지속적임|Description|
+|상수|Description|
 |--------------|-----------------|
 |E_BADSTREAM|열린 파일의 형식이 잘못 되었습니다 (즉, ADTG 또는 XML 형식이 아님).|
 |E_CANTPERSISTROWSET|저장 된 **레코드 집합** 개체에는 저장 되지 않도록 하는 특징이 있습니다.|

@@ -13,10 +13,10 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923137"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
@@ -30,7 +30,7 @@ ms.locfileid: "67923137"
   
  예를 들어 큐브에는 다음과 같은 6 개의 차원이 있습니다 .이 큐브 스키마는 [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)에 제공 된 예와 약간 다릅니다.  
   
--   일하고  
+-   영업 사원  
   
 -   지리 (자연 계층)-대륙, 국가, 주 등  
   

@@ -15,10 +15,10 @@ ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920811"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC 구문 인덱스

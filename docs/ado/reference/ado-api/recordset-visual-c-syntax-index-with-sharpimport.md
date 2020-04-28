@@ -16,10 +16,10 @@ ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931274"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>레코드 집합 (#import를 사용 하는 Visual C++ 구문 인덱스)

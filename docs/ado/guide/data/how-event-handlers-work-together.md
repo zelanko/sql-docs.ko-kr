@@ -18,10 +18,10 @@ ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925048"
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기가 함께 작동하는 방법

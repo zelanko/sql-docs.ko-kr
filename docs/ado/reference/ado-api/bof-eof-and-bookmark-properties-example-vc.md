@@ -17,10 +17,10 @@ ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920360"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF 및 Bookmark 속성 예제 (VC + +)

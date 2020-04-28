@@ -14,10 +14,10 @@ ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924173"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
@@ -25,13 +25,13 @@ ms.locfileid: "67924173"
   
  도형 **레코드 집합** 은 다음과 같은 유형의 열로 구성 될 수 있습니다.  
   
-|열 유형|Description|  
+|열 유형|설명|  
 |-----------------|-----------------|  
 |데이터|쿼리 명령에 의해 반환 되는 **레코드 집합** 의 필드를 데이터 공급자, 테이블 또는 이전에 만든 **레코드 집합**에 반환 합니다.|  
 |마치면|*장*이라는 다른 **레코드 집합**에 대 한 참조입니다. 장 열 *에서 부모* -자식 관계를 정의할 수 있습니다. 부모 *-자식* 관계는 chapter 열을 포함 하는 **레코드 집합이** 고 *자식은* 챕터가 나타내는 **레코드 집합** 입니다.|  
 |aggregate|열 값은 모든 행 또는 자식 **레코드 집합**의 모든 행에 있는 열에 대해 *집계 함수* 를 실행 하 여 파생 됩니다. 집계 함수, [CALC 함수 및 NEW 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)항목의 집계 함수를 참조 하세요.|  
 |계산 식|열의 값은 **레코드 집합**의 같은 행에 있는 열에서 Visual Basic for Applications 식을 계산 하 여 파생 됩니다. 식은 CALC 함수에 대 한 인수입니다. [집계 함수, CALC 함수 및 NEW 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) 와 [Visual Basic for Applications 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md)에서 계산 된 식을 참조 하세요.|  
-|신규|나중에 데이터로 채워질 수 있는 비어 있고 미리 구성한 필드입니다. 열은 NEW 키워드를 사용 하 여 정의 됩니다. [집계 함수, CALC 함수 및 New 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)항목의 new 키워드를 참조 하세요.|  
+|new|나중에 데이터로 채워질 수 있는 비어 있고 미리 구성한 필드입니다. 열은 NEW 키워드를 사용 하 여 정의 됩니다. [집계 함수, CALC 함수 및 New 키워드](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)항목의 new 키워드를 참조 하세요.|  
   
  셰이프 명령에는 **레코드 집합** 개체를 반환 하는 기본 데이터 공급자에 대 한 쿼리 명령을 지정 하는 절이 포함 될 수 있습니다. 쿼리의 구문은 기본 데이터 공급자의 요구 사항에 따라 달라 집니다. 이는 ADO에서 특정 쿼리 언어를 사용할 필요가 없더라도 일반적으로 SQL입니다.  
   

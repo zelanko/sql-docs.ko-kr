@@ -14,10 +14,10 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924732"
 ---
 # <a name="operation-of-parameterized-commands"></a>매개 변수화된 명령 작업
@@ -74,7 +74,7 @@ Rst1.MovePrevious  ' RstChild now holds cached rs, saving round trip.
   
  매개 변수가 없는 계층 구조를 사용 하는 경우 각 팀의 자식 **레코드 집합** 에 전체 일정이 포함 되도록 팀과 게임 테이블을 연결할 수 있는 방법이 없습니다. 집 일정 또는도로 일정이 포함 된 챕터를 만들 수 있습니다. 이는 RELATE 절이 폼의 부모-자식 관계 (pc1 = cc1) 및 (pc2 = pc2)를 제한 하기 때문입니다. 따라서 명령에 "team_id 관련 된 home_team team_id visiting_team"가 있는 경우 팀이 자신을 재생 하는 게임만 표시 됩니다. 원하는 것은 "(team_id = home_team) 또는 (team_id = visiting_team)" 이지만 셰이프 공급자는 또는 절을 지원 하지 않습니다.  
   
- 원하는 결과를 얻기 위해 매개 변수가 있는 명령을 사용할 수 있습니다. 다음은 그 예입니다.  
+ 원하는 결과를 얻기 위해 매개 변수가 있는 명령을 사용할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SHAPE {SELECT * FROM teams}   

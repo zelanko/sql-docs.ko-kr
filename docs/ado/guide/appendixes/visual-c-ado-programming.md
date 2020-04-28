@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926428"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
@@ -37,7 +37,7 @@ ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 A
 ## <a name="using-the-import-compiler-directive"></a>#Import 컴파일러 지시문 사용  
  **#Import** Visual C++ 컴파일러 지시문은 ADO 메서드 및 속성을 사용 하 여 작업을 간소화 합니다. 지시문은 Msado15.dll (예: ADO.NET)와 같은 형식 라이브러리를 포함 하는 파일의 이름을 사용 하 고, typedef 선언이 포함 된 헤더 파일, 인터페이스에 대 한 스마트 포인터 및 열거 된 상수를 생성 합니다. 각 인터페이스는 클래스에 캡슐화 되거나 래핑됩니다.  
   
- 클래스 내의 각 작업 (즉, 메서드 또는 속성 호출)에 대해 작업을 직접 호출 하는 선언 (즉, 작업의 "원시" 형식)과 원시 작업을 호출 하 고 작업을 실행 하지 못하는 경우 COM 오류를 throw 하는 선언이 있습니다. succ essfully. 작업이 속성 인 경우 일반적으로 Visual Basic와 같은 구문이 있는 작업에 대 한 대체 구문을 만드는 컴파일러 지시문이 있습니다.  
+ 클래스 내의 각 작업 (즉, 메서드 또는 속성 호출)에 대해 작업을 직접 호출 하는 선언 (즉, 작업의 "원시" 형식) 및 작업을 성공적으로 실행 하지 못한 경우에는 원시 작업을 호출 하 고 COM 오류를 throw 하는 선언이 있습니다. 작업이 속성 인 경우 일반적으로 Visual Basic와 같은 구문이 있는 작업에 대 한 대체 구문을 만드는 컴파일러 지시문이 있습니다.  
   
  속성의 값을 검색 하는 작업에는 **Get**_property_형식의 이름이 있습니다. 속성의 값을 설정 하는 작업에는 **Put**_속성_형식의 이름이 있습니다. ADO 개체에 대 한 포인터를 사용 하 여 속성 값을 설정 하는 작업에는 **Putref**_속성_형식의 이름이 있습니다.  
   
@@ -112,7 +112,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
  컬렉션을 반복 하는 예제는 "ADO 참조"의 "ADO 컬렉션" 섹션을 참조 하세요.  
   
 ## <a name="com-specific-data-types"></a>COM 특정 데이터 형식  
- 일반적으로 ADO API 참조에서 찾을 수 있는 모든 Visual Basic 데이터 형식에는 해당 하는 Visual C++ 있습니다. 여기에는 Visual Basic **바이트**에 대 한 **unsigned char** 와 같은 표준 데이터 형식, **정수**에 대 한 short **및 long의** **long** 이 포함 됩니다. **** 구문 Indexesto에서 지정 된 메서드 또는 속성의 피연산자에 필요한 것을 정확 하 게 확인 합니다.  
+ 일반적으로 ADO API 참조에서 찾을 수 있는 모든 Visual Basic 데이터 형식에는 해당 하는 Visual C++ 있습니다. 여기에는 Visual Basic **바이트**에 대 한 **unsigned char** 와 같은 표준 데이터 형식, **정수**에 대 한 short **및 long의** **long** 이 포함 됩니다. **short** 구문 Indexesto에서 지정 된 메서드 또는 속성의 피연산자에 필요한 것을 정확 하 게 확인 합니다.  
   
  이 규칙에 대 한 예외는 COM에 한정 된 **Variant**, **BSTR**및 **SafeArray**의 데이터 형식입니다.  
   
@@ -150,7 +150,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  인수 `ActiveConnection` 는 연결 문자열 또는 열린 **연결** 개체에 대 한 포인터로 코딩할 수 있는 **_variant_t**에 대 한 참조를 사용 합니다.  
   
- "" **** 와`DSN=pubs;uid=MyUserName;pwd=MyPassword;`같은 문자열 또는 "`(IDispatch *) pConn`"와 같은 포인터를 전달 하는 경우 올바른 _variant_t 생성 됩니다.  
+ "" **_variant_t** 와`DSN=pubs;uid=MyUserName;pwd=MyPassword;`같은 문자열 또는 "`(IDispatch *) pConn`"와 같은 포인터를 전달 하는 경우 올바른 _variant_t 생성 됩니다.  
   
 > [!NOTE]
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  

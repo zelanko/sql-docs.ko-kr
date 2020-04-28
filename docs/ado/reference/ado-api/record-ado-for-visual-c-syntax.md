@@ -16,10 +16,10 @@ ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df62de2c5c51680047270d320ecc7c461bc47c53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931433"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>레코드(Visual C++ 구문에 대한 ADO)

@@ -16,22 +16,22 @@ ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931420"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 [레코드](../../../ado/reference/ado-api/record-object-ado.md)를 열기 위한 옵션을 지정 합니다. 이러한 값은 또는을 사용 하 여 결합할 수 있습니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|공급자에 게 **레코드** 와 연결 된 필드를 처음에 검색 하지 않아도 되 고 처음에 필드에 액세스 하려고 할 때이를 검색할 수 있음을 나타냅니다. 이 플래그가 없음을 나타내는 기본 동작은 모든 **레코드** 개체 필드를 검색 하는 것입니다.|  
 |**adDelayFetchStream**|0x4000|**레코드** 와 연결 된 기본 스트림을 처음에 검색할 필요가 없음을 공급자에 게 나타냅니다. 이 플래그가 없음을 나타내는 기본 동작은 **Record** 개체와 연결 된 기본 스트림을 검색 하는 것입니다.|  
 |**adOpenAsync**|0x1000|**Record** 개체가 비동기 모드로 열려 있음을 나타냅니다.|  
 |**adOpenExecuteCommand**|0x10000|소스 문자열에 실행 해야 하는 명령 텍스트가 포함 되어 있음을 나타냅니다. 이 값은 레코드 집합의 **Adcmdtext** 옵션과 동일 합니다 **. Open**.|  
-|**adOpenRecordUnspecified 되지 않음**|-1|Default. 옵션이 지정 되지 않았음을 나타냅니다.|  
+|**adOpenRecordUnspecified 되지 않음**|-1|기본값 옵션이 지정 되지 않았음을 나타냅니다.|  
 |**adOpenOutput**|0x800000|소스가 실행 가능한 스크립트를 포함 하는 노드 (예:)를 가리키는지 여부를 나타냅니다. ASP 페이지)를 선택한 후에는 실행 된 스크립트의 결과를 포함 하는 **레코드가** 열립니다. 이 값은 컬렉션이 아닌 레코드에만 사용할 수 있습니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  

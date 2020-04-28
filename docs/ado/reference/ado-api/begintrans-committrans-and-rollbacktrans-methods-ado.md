@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920524"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드(ADO)
@@ -52,7 +52,7 @@ object.RollbackTrans
  **BeginTrans** 는 트랜잭션의 중첩 수준을 나타내는 **Long** 변수를 반환 하는 함수로 호출 될 수 있습니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *개체가*  
+ *object*  
  **Connection** 개체입니다.  
   
 ## <a name="connection"></a>연결  
@@ -63,7 +63,7 @@ object.RollbackTrans
   
  **BeginTrans** 메서드를 호출한 후에는 **CommitTrans** 또는 **RollbackTrans** 를 호출 하 여 트랜잭션을 종료할 때까지 공급자가 즉시 변경 내용을 커밋하지 않습니다.  
   
- 중첩 된 트랜잭션을 지 원하는 공급자의 경우 열린 트랜잭션 내에서 **BeginTrans** 메서드를 호출 하면 중첩 된 새 트랜잭션이 시작 됩니다. 반환 값은 중첩 수준을 나타냅니다. 반환 값이 "1" 이면 최상위 트랜잭션이 열려 있음을 나타냅니다. 즉, 트랜잭션이 다른 트랜잭션 내에 중첩 되지 않았음을 나타냅니다. "2"는 두 번째 수준 트랜잭션을 열었습니다 ( 최상위 트랜잭션 내에 중첩 된 트랜잭션) 등 **CommitTrans** 또는 **RollbackTrans** 를 호출 하면 가장 최근에 열린 트랜잭션만 영향을 받습니다. 상위 수준 트랜잭션을 해결 하려면 먼저 현재 트랜잭션을 닫거나 롤백해야 합니다.  
+ 중첩 된 트랜잭션을 지 원하는 공급자의 경우 열린 트랜잭션 내에서 **BeginTrans** 메서드를 호출 하면 중첩 된 새 트랜잭션이 시작 됩니다. 반환 값은 중첩 수준을 나타냅니다. 반환 값이 "1" 이면 최상위 트랜잭션을 열었습니다 (즉, 트랜잭션이 다른 트랜잭션 내에 중첩 되지 않음). "2"는 두 번째 수준 트랜잭션 (최상위 트랜잭션 내에 중첩 된 트랜잭션)을 열었는지 나타냅니다. **CommitTrans** 또는 **RollbackTrans** 를 호출 하면 가장 최근에 열린 트랜잭션만 영향을 받습니다. 상위 수준 트랜잭션을 해결 하려면 먼저 현재 트랜잭션을 닫거나 롤백해야 합니다.  
   
  **CommitTrans** 메서드를 호출 하면 연결에서 열린 트랜잭션 내에서 수행 된 변경 내용이 저장 되 고 트랜잭션이 종료 됩니다. **RollbackTrans** 메서드를 호출 하면 열린 트랜잭션 내에서 수행 된 모든 변경 내용이 취소 되 고 트랜잭션이 종료 됩니다. 열려 있는 트랜잭션이 없는 경우 두 메서드를 호출 하면 오류가 발생 합니다.  
   

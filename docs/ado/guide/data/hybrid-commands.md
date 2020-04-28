@@ -15,14 +15,14 @@ ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925036"
 ---
 # <a name="hybrid-commands"></a>하이브리드 명령
-하이브리드 명령은 부분적으로 매개 변수가 있는 명령입니다. 다음은 그 예입니다.  
+하이브리드 명령은 부분적으로 매개 변수가 있는 명령입니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SHAPE {select * from plants}   

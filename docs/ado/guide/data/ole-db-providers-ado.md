@@ -14,10 +14,10 @@ ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924753"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 공급자(ADO)
@@ -29,9 +29,9 @@ OLE DB은 다양 한 정보 소스에 저장 된 데이터에 대 한 일관 된
   
 -   데이터는 네이티브 OLE DB 공급자가 있는 Microsoft SQL Server에 있습니다. 응용 프로그램은 ADO를 사용 하 여 Microsoft SQL Server에 대 한 OLE DB 공급자와 직접 통신 합니다. 중개자가 필요 하지 않습니다.  
   
--   데이터는 Microsoft Exchange Server에 있으며,이는 OLE DB 공급자가 있지만 SQL 쿼리를 처리 하는 엔진을 노출 하지 않는 Microsoft Exchange Server입니다. 응용 프로그램은 ADO를 사용 하 여 Microsoft Exchange 용 OLE DB 공급자와 통신 하 고 OLE DB 쿼리 프로세서에 대 한 호출을 수행 합니다. 쿼리를 처리할 구성 요소입니다.  
+-   데이터는 Microsoft Exchange Server에 있으며,이는 OLE DB 공급자가 있지만 SQL 쿼리를 처리 하는 엔진을 노출 하지 않습니다. 응용 프로그램은 ADO를 사용 하 여 Microsoft Exchange 용 OLE DB 공급자와 통신 하 고 OLE DB 쿼리 프로세서 구성 요소를 호출 하 여 쿼리를 처리 합니다.  
   
--   데이터는 문서 형식으로 Microsoft NTFS 파일 시스템에 상주 합니다. Microsoft 인덱싱 서비스를 통해 네이티브 OLE DB 공급자를 사용 하 여 데이터에 액세스 합니다. 그러면 파일 시스템의 문서 내용과 속성을 인덱싱하고 효율적인 콘텐츠를 사용할 수 있습니다. find.  
+-   데이터는 문서 형식으로 Microsoft NTFS 파일 시스템에 상주 합니다. Microsoft 인덱싱 서비스를 통해 네이티브 OLE DB 공급자를 사용 하 여 데이터에 액세스 합니다. 그러면 파일 시스템의 문서 내용과 속성을 인덱싱하고 효율적인 콘텐츠 검색을 사용할 수 있습니다.  
   
  위의 모든 예제에서 응용 프로그램은 데이터를 쿼리할 수 있습니다. 최소한의 구성 요소를 사용 하 여 사용자의 요구 사항을 충족 해야 합니다. 각 경우에 필요한 경우에만 추가 구성 요소가 사용 되며, 필요한 구성 요소만 호출 됩니다. 재사용 가능 하 고 공유할 수 있는 구성 요소를 로드 하면 OLE DB를 사용할 때 성능이 크게 향상 됩니다.  
   

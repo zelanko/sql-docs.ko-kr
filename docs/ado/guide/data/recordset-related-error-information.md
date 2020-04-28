@@ -14,10 +14,10 @@ ms.assetid: 7e103574-59ad-4790-b5f9-fa8d715e711e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3f8e8d9802b5d0c73af73aff20d929c188b9292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924378"
 ---
 # <a name="recordset-related-error-information"></a>레코드 집합 관련 오류 정보

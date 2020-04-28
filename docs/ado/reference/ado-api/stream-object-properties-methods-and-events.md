@@ -13,10 +13,10 @@ ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930673"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream 개체 속성, 메서드 및 이벤트

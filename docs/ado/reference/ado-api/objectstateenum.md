@@ -16,16 +16,16 @@ ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931924"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 개체가 열려 있는지 또는 닫혀 있는지, 데이터 원본에 연결 하 고, 명령을 실행 하거나, 데이터를 검색할지를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|개체가 닫혀 있음을 나타냅니다.|  
 |**Adstateopen then**|1|개체가 열려 있음을 나타냅니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931924"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. ObjectState|  
 |AdoEnums|  

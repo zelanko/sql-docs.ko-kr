@@ -13,10 +13,10 @@ ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922951"
 ---
 # <a name="basic-rds-programming-model"></a>기본 RDS 프로그래밍 모델

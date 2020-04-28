@@ -14,10 +14,10 @@ ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925542"
 ---
 # <a name="determining-edit-mode"></a>편집 모드 확인
@@ -25,7 +25,7 @@ ADO는 현재 레코드와 연결 된 편집 버퍼를 유지 관리 합니다. 
   
  **EditMode** 는 다음 표에 나열 된 **editmodeenum** 상수 중 하나를 반환 합니다.  
   
-|지속적임|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adEditNone**|진행 중인 편집 작업이 없음을 나타냅니다.|  
 |**adEditInProgress**|현재 레코드의 데이터가 수정 되었지만 저장 되지 않았음을 나타냅니다.|  

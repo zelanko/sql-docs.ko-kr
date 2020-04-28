@@ -13,10 +13,10 @@ ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926873"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 C: 개발 환경에서 ADO를 사용한 프로그래밍

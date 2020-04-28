@@ -14,10 +14,10 @@ ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85851159f02c6d1fee02d1beac8bd71d04f36a6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922568"
 ---
 # <a name="rds-fundamentals"></a>RDS 기본 사항

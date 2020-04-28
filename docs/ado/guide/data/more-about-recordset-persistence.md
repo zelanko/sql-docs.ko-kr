@@ -16,10 +16,10 @@ ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924904"
 ---
 # <a name="more-about-recordset-persistence"></a>레코드 집합 지속성에 대한 자세한 정보

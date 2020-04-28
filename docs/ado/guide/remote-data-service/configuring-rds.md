@@ -13,10 +13,10 @@ ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922843"
 ---
 # <a name="configuring-rds"></a>RDS 구성

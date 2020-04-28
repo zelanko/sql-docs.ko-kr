@@ -13,10 +13,10 @@ ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3a5d6d1234cc294cc8e8cdd163ce8a9bd6ac3e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929382"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>MySQL용 SSMA 구성 요소 제거(MySQLToSql)
@@ -27,7 +27,7 @@ MySQL에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이�
   
 **SSMA를 제거 하려면**  
   
-1.  제어판에서 **프로그램 추가/제거**를 엽니다.  
+1.  제어판에서 **프로그램 추가 또는 제거**를 엽니다.  
   
 2.  **MySQL에 Microsoft SQL Server Migration Assistant**을 선택 하 고 **제거**를 클릭 합니다.  
   
@@ -38,7 +38,7 @@ MySQL에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이�
   
 **확장 팩을 제거 하려면**  
   
-1.  제어판에서 **프로그램 추가/제거**를 엽니다.  
+1.  제어판에서 **프로그램 추가 또는 제거**를 엽니다.  
   
 2.  **MySQL 확장 팩의 Microsoft SQL Server Migration Assistant**을 선택 하 고 **제거**를 클릭 합니다.  
   

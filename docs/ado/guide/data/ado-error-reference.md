@@ -15,16 +15,16 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926240"
 ---
 # <a name="ado-errors"></a>ADO 오류
 **Errorvalueenum** 상수는 ADO 오류 값을 설명 합니다. 값을 포함 하 여 이러한 열거 상수의 전체 목록은 [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)를 참조 하세요. 이 섹션에서는 더 흥미로운 오류 중 일부를 살펴보고이를 발생 시킬 수 있는 몇 가지 특정 상황 또는 문제를 해결 하는 해결 방법을 설명 합니다. **Errorvalueenum** 상수와 짧은 양의 10 진수가 모두 나열 됩니다.
 
-|Number|ErrorValueEnum 상수|설명/가능한 원인|
+|숫자|ErrorValueEnum 상수|설명/가능한 원인|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|공급자가 요청한 작업을 수행 하지 못했습니다.|
 |**3001**|**adErrInvalidArgument**|인수가 잘못 된 형식 이거나, 허용 범위를 벗어났습니다. 또는 서로 충돌 합니다. 이 오류는 종종 SQL SELECT 문에 입력 오류가 발생 한 경우에 발생 합니다. 예를 들어 철자가 잘못 된 필드 이름 또는 테이블 이름이 있으면이 오류가 발생할 수 있습니다. SELECT 문에 이름이 지정 된 필드 또는 테이블이 데이터 저장소에 없는 경우에도이 오류가 발생할 수 있습니다.|

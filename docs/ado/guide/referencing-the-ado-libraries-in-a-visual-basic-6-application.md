@@ -17,10 +17,10 @@ ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923056"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 애플리케이션에서 ADO 라이브러리 참조
@@ -36,7 +36,7 @@ Microsoft Visual Basic 6 응용 프로그램으로 ADO 라이브러리를 가져
   
 4.  ADO MD를 사용 하려는 경우 3 단계를 반복 하 여 **Microsoft ADO(ActiveX Data Objects) (다차원) *n. n* 라이브러리**를 선택 합니다. **Location** 필드는이 선택을 *$installDir \msadomd.dll*으로 식별 해야 합니다.  
   
-5.  ADOX를 사용 하려는 경우 3 단계를 반복 하 여 **DDL 및 보안에 대 ** 한 Microsoft ADO Ext.** n을 선택 합니다. **Location** 필드는이 선택을 *$installDir \msadox.dll*으로 식별 해야 합니다.  
+5.  ADOX를 사용 하려는 경우 3 단계를 반복 하 여 **DDL 및 보안에 대 *n.n* 한 Microsoft ADO Ext.** n을 선택 합니다. **Location** 필드는이 선택을 *$installDir \msadox.dll*으로 식별 해야 합니다.  
   
 6.  **확인** 을 클릭 하 여 참조 설정을 마칩니다.  
   

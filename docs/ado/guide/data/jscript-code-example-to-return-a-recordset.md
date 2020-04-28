@@ -15,10 +15,10 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924927"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>레코드 집합을 반환하는 JScript 코드 예제
@@ -79,7 +79,7 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>시도해 보세요.  
+#### <a name="try-it"></a>실습  
   
 1.  위의 코드를 텍스트 파일에 저장 합니다. 파일을 rs .js로 저장 합니다.  
   

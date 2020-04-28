@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928601"
 ---
 # <a name="adox-collections"></a>ADOX 컬렉션
@@ -27,14 +27,14 @@ ms.locfileid: "67928601"
 |[열](../../../ado/reference/adox-api/columns-collection-adox.md)|테이블, 인덱스 또는 키의 모든 **열** 개체를 포함 합니다.|  
 |[그룹](../../../ado/reference/adox-api/groups-collection-adox.md)|카탈로그나 사용자의 모든 저장 된 **그룹** 개체를 포함 합니다.|  
 |[인덱스](../../../ado/reference/adox-api/indexes-collection-adox.md)|테이블의 모든 **인덱스** 개체를 포함 합니다.|  
-|[구성](../../../ado/reference/adox-api/keys-collection-adox.md)|테이블의 모든 **키** 개체를 포함 합니다.|  
-|[프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md)|카탈로그의 모든 **프로시저** 개체를 포함 합니다.|  
+|[키](../../../ado/reference/adox-api/keys-collection-adox.md)|테이블의 모든 **키** 개체를 포함 합니다.|  
+|[절차](../../../ado/reference/adox-api/procedures-collection-adox.md)|카탈로그의 모든 **프로시저** 개체를 포함 합니다.|  
 |[테이블](../../../ado/reference/adox-api/tables-collection-adox.md)|카탈로그의 모든 **테이블** 개체를 포함 합니다.|  
-|[못하게](../../../ado/reference/adox-api/users-collection-adox.md)|카탈로그 또는 그룹의 모든 저장 된 **사용자** 개체를 포함 합니다.|  
-|[뷰](../../../ado/reference/adox-api/views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
+|[사용자](../../../ado/reference/adox-api/users-collection-adox.md)|카탈로그 또는 그룹의 모든 저장 된 **사용자** 개체를 포함 합니다.|  
+|[보기](../../../ado/reference/adox-api/views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX 개체 모델](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md)   
- [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

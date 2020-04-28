@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924140"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
@@ -61,7 +61,7 @@ SHAPE child-command [AS] child-alias
   
  BY 절을 생략 하면 전체 자식 **레코드 집합이** 단일 그룹으로 처리 되 고 부모 **레코드 집합** 에는 정확히 한 개의 행이 포함 됩니다. 해당 행은 전체 하위 **레코드 집합**을 참조 합니다. BY 절을 생략 하면 전체 하위 **레코드 집합**에 대 한 "총합계" 집계를 계산할 수 있습니다.  
   
- 다음은 그 예입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
@@ -78,10 +78,10 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
 |시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|WA|시애틀|70만|  
+|WA|Seattle|70만|  
 |또는|Medford|200,000|  
 |또는|Portland|400,000|  
-|CA|로스앤젤레스|80만|  
+|CA|Los Angeles|80만|  
 |CA|샌디에이고|60만|  
 |WA|Tacoma|500,000|  
 |또는|Corvallis|300,000|  
@@ -114,14 +114,14 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 |시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|CA|로스앤젤레스|80만|  
+|CA|Los Angeles|80만|  
 |CA|샌디에이고|60만|  
   
 ## <a name="child2"></a>Child2  
   
 |시스템 상태|City|모집단|  
 |-----------|----------|----------------|  
-|WA|시애틀|70만|  
+|WA|Seattle|70만|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  

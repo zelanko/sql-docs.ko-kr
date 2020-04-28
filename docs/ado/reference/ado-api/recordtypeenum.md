@@ -16,16 +16,16 @@ ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931263"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 유형을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|*단순* 레코드 (자식 노드를 포함 하지 않음)를 나타냅니다.|  
 |**adCollectionRecord**|1|*컬렉션* 레코드 (자식 노드 포함)를 나타냅니다.|  

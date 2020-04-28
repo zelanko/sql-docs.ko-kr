@@ -16,18 +16,18 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928639"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 줄 구분 기호가 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 쓰여진 문자열에 추가 되는지 여부를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
-|**adWriteChar**|0|Default. *데이터* 매개 변수에 의해 지정 된 지정 된 텍스트 문자열을 **스트림** 개체에 씁니다.|  
+|**adWriteChar**|0|기본값 *데이터* 매개 변수에 의해 지정 된 지정 된 텍스트 문자열을 **스트림** 개체에 씁니다.|  
 |**adWriteLine**|1|텍스트 문자열과 줄 구분선 문자를 **스트림** 개체에 씁니다. [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 속성이 정의 되지 않은 경우 런타임 오류가 반환 됩니다.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  

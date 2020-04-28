@@ -13,10 +13,10 @@ ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923185"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
@@ -68,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   건설`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>구성원  
+### <a name="members"></a>멤버  
  계층의 리프 수준에 있는 멤버에는 자식이 없고 루트 수준의 멤버에는 부모가 없습니다. 다른 모든 멤버는 하나 이상의 부모 및 하나 이상의 자식을 가집니다. 예를 들어 Geography 차원에서 계층 트리의 부분 순회는 다음과 같은 부모-자식 관계를 생성 합니다.  
   
 -   `{All} (parent of) {Europe, North America}`  

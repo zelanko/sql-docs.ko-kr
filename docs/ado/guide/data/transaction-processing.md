@@ -16,10 +16,10 @@ ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cab6638704856baf873274807c0e2eff9a1f92d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923867"
 ---
 # <a name="transaction-processing"></a>트랜잭션 처리
@@ -44,4 +44,4 @@ ms.locfileid: "67923867"
  **IsolationLevel** 속성을 사용 하 여 **연결** 개체에 대 한 트랜잭션의 격리 수준을 설정할 수 있습니다. 이 설정은 다음에 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) 메서드를 호출할 때까지 적용 되지 않습니다. 요청 하는 격리 수준을 사용할 수 없는 경우 공급자는 다음으로 높은 수준의 격리를 반환할 수 있습니다. 유효한 값에 대 한 자세한 내용은 ADO 프로그래머 참조에서 **IsolationLevel** 속성을 참조 하세요.  
   
 ## <a name="nested-transactions"></a>중첩 된 트랜잭션  
- 중첩 된 트랜잭션을 지 원하는 공급자의 경우 열린 트랜잭션 내에서 **BeginTrans** 메서드를 호출 하면 중첩 된 새 트랜잭션이 시작 됩니다. 반환 값은 중첩 수준을 나타냅니다. 반환 값이 "1" 이면 최상위 트랜잭션이 열려 있음을 나타냅니다. 즉, 트랜잭션이 다른 트랜잭션 내에 중첩 되지 않았음을 나타냅니다. "2"는 두 번째 수준 트랜잭션을 열었습니다 ( 최상위 트랜잭션 내에 중첩 된 트랜잭션) 등 **CommitTrans** 또는 **RollbackTrans** 를 호출 하면 가장 최근에 열린 트랜잭션만 영향을 받습니다. 상위 수준 트랜잭션을 해결 하려면 먼저 현재 트랜잭션을 닫거나 롤백해야 합니다.
+ 중첩 된 트랜잭션을 지 원하는 공급자의 경우 열린 트랜잭션 내에서 **BeginTrans** 메서드를 호출 하면 중첩 된 새 트랜잭션이 시작 됩니다. 반환 값은 중첩 수준을 나타냅니다. 반환 값이 "1" 이면 최상위 트랜잭션을 열었습니다 (즉, 트랜잭션이 다른 트랜잭션 내에 중첩 되지 않음). "2"는 두 번째 수준 트랜잭션 (최상위 트랜잭션 내에 중첩 된 트랜잭션)을 열었는지 나타냅니다. **CommitTrans** 또는 **RollbackTrans** 를 호출 하면 가장 최근에 열린 트랜잭션만 영향을 받습니다. 상위 수준 트랜잭션을 해결 하려면 먼저 현재 트랜잭션을 닫거나 롤백해야 합니다.

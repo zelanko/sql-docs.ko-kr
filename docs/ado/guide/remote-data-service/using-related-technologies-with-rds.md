@@ -13,10 +13,10 @@ ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921890"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS에서 관련 기술 사용

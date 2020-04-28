@@ -16,10 +16,10 @@ ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931360"
 ---
 # <a name="recordset-object-ado"></a>레코드 집합 개체(ADO)

@@ -15,14 +15,14 @@ ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 51bce52c7ec8355faa50b1c3be234c597f420a40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931593"
 ---
 # <a name="prepared-property-example-vb"></a>Prepared 속성 예제(VB)
-이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
+이 예제에서는 준비 [된 속성](../../../ado/reference/ado-api/prepared-property-ado.md) 중 하나를 [Command](../../../ado/reference/ado-api/command-object-ado.md) 열어 준비 된 속성을 보여 줍니다.  
   
 ```  
 'BeginPreparedVB  

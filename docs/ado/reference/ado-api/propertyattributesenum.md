@@ -16,16 +16,16 @@ ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931567"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체의 특성을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|공급자가 속성을 지원 하지 않음을 나타냅니다.|  
 |**adPropRequired**|1|사용자가 데이터 소스가 초기화 되기 전에이 속성의 값을 지정 해야 함을 나타냅니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67931567"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums가 지원 됩니다.|  
 |AdoEnums 특성이 필요 합니다.|  

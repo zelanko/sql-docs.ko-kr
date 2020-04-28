@@ -13,10 +13,10 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929390"
 ---
 # <a name="project-settings-migration-accesstosql"></a>프로젝트 설정 (마이그레이션) (AccessToSQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67929390"
   
 -   **전체 모드**: False  
   
-**트리거 발생**  
+**트리거 실행**  
 테이블에 데이터를 추가할 때 SSMA에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 삽입 트리거를 발생 시켜야 하는지 여부를 지정 합니다.  
   
 -   **기본 모드**: False  

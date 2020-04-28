@@ -16,10 +16,10 @@ ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921701"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition 및 CursorLocation 속성 예제 (VC + +)

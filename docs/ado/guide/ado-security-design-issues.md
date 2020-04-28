@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927032"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  앞의 메시지를 통해 사용자는 더 많은 정보를 확인 하 고 그에 따라 계속할 수 있습니다.
 
 > [!NOTE]
->  신뢰할 수 없는 사이트의 경우 (즉, 신뢰할 수 있는 사이트 영역 목록에 나열 되지 않은 사이트) 공급자가 신뢰할 수 없는 경우 (이 섹션의 앞부분에서 설명한 대로) 사용자에 게 한 행에 두 개의 보안 경고가 표시 될 수 있습니다. 즉, 안전 하지 않은 공급자에 대 한 경고와에 대 한 두 번째 경고가 표시 됩니다. 해당 id를 사용 하려고 합니다. 사용자가 첫 번째 경고에 대해 확인을 클릭 하면 위의 표에 설명 된 Internet Explorer 설정 및 응답 동작 코드가 실행 됩니다.
+>  신뢰할 수 없는 사이트의 경우 (즉, 신뢰할 수 있는 사이트 영역 목록에 나열 되지 않은 사이트) 공급자가 신뢰할 수 없는 경우 (이 섹션의 앞부분에서 설명한 대로) 사용자에 게 한 행에 두 개의 보안 경고가 표시 될 수 있습니다. 즉, 안전 하지 않은 공급자에 대 한 경고와 id 사용 시도에 대 한 두 번째 경고가 표시 될 수 있습니다. 사용자가 첫 번째 경고에 대해 확인을 클릭 하면 위의 표에 설명 된 Internet Explorer 설정 및 응답 동작 코드가 실행 됩니다.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>암호 텍스트가 ADO 연결 문자열에 반환 되는지 여부 제어
  ADO **연결** 개체의 [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 값을 가져오려고 하면 다음과 같은 이벤트가 발생 합니다.

@@ -13,10 +13,10 @@ ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923350"
 ---
 # <a name="xml-security-considerations"></a>XML 보안 고려 사항

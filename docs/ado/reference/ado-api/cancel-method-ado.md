@@ -20,10 +20,10 @@ ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920234"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드(ADO)
@@ -43,11 +43,11 @@ object.Cancel
   
 |*개체가* 인 경우|이 메서드에 대 한 마지막 비동기 호출이 종료 되었습니다.|  
 |----------------------|-------------------------------------------------------------|  
-|[명령](../../../ado/reference/ado-api/command-object-ado.md)|[실행할](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[명령](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-connection.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[기록은](../../../ado/reference/ado-api/record-object-ado.md)|[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)또는 [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
+|[스트림](../../../ado/reference/ado-api/stream-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>적용 대상  
   

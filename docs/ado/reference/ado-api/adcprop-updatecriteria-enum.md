@@ -16,10 +16,10 @@ ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921413"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
@@ -27,7 +27,7 @@ ms.locfileid: "67921413"
   
  이러한 상수는 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 에서 참조 되 고 [OLE DB 문서에 대 한 Microsoft Cursor Service](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 에 설명 된 **레코드 집합** "**업데이트 조건**" 동적 속성에 사용 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**Adcriteria Aallcols**|1|데이터 원본 행의 열이 변경 된 경우 충돌을 검색 합니다.|  
 |**Adcriteria Akey**|0|는 데이터 원본 행의 키 열이 변경 된 경우 충돌을 검색 합니다. 즉, 행이 삭제 된 것입니다.|  
@@ -37,7 +37,7 @@ ms.locfileid: "67921413"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums. AdcPropUpdateCriteria|  
 |AdoEnums. AdcPropUpdateCriteria|  

@@ -16,10 +16,10 @@ ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930370"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog 개체(ADO MD)

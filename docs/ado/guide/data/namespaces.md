@@ -13,10 +13,10 @@ ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924812"
 ---
 # <a name="namespaces"></a>네임스페이스
@@ -28,7 +28,7 @@ ADO의 XML 지 속성 형식은 다음 네 가지 네임 스페이스를 사용 
 |접두사|Description|  
 |------------|-----------------|  
 |s|현재 레코드 집합의 스키마를 정의 하는 요소와 특성을 포함 하는 "XML 데이터" 네임 스페이스를 참조 합니다.|  
-|제외한|데이터 형식 정의 사양을 참조 합니다.|  
+|DT|데이터 형식 정의 사양을 참조 합니다.|  
 |rs|ADO 레코드 집합 속성 및 특성과 관련 된 요소 및 특성을 포함 하는 네임 스페이스를 참조 합니다.|  
 |z|현재 행 집합의 스키마를 참조 합니다.|  
   

@@ -16,10 +16,10 @@ ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932692"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>Field (#import를 사용 하는 Visual C++ 구문 인덱스)

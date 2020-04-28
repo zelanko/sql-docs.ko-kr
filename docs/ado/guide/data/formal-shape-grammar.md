@@ -14,10 +14,10 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925344"
 ---
 # <a name="formal-shape-grammar"></a>공식적인 셰이프 문법
@@ -58,9 +58,9 @@ ms.locfileid: "67925344"
 |\<정규화 된 필드 이름>|\<별칭>입니다. [\<별칭> ...] \<필드 이름>|  
 |\<별칭>|\<따옴표 붙은-이름>|  
 |\<필드 이름>|\<따옴표 붙은-이름> [[AS \<] 별칭>]|  
-|\<따옴표 붙은-이름>|"\<string>" &#124;<br /><br /> '\<string> ' &#124;<br /><br /> [\<문자열>] &#124;<br /><br /> \<이름>|  
+|\<따옴표 붙은-이름>|"\<string>" &#124;<br /><br /> '\<string> ' &#124;<br /><br /> [\<문자열>] &#124;<br /><br /> \<name>|  
 |\<정규화 된 이름>|별칭 [. alias ...]|  
-|\<이름>|알파 [알파 &#124; 자릿수 &#124; _ &#124; # &#124;: &#124; ...]|  
+|\<name>|알파 [알파 &#124; 자릿수 &#124; _ &#124; # &#124;: &#124; ...]|  
 |\<숫자>|숫자 [digit ...]|  
 |\<새-exp>|새 \<필드 형식> [(\<number> [, \<number>])]|  
 |\<필드 형식>|OLE DB 또는 ADO 데이터 형식입니다.|  

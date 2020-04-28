@@ -16,10 +16,10 @@ ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923621"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>직접 실행 및 일괄 처리 모드에서 AddNew 사용

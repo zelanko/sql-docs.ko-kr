@@ -14,10 +14,10 @@ ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926791"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>OLE DB에 대 한 Microsoft 커서 서비스 개요
@@ -56,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  기본 데이터 공급자가 지 원하는 경우에도 커서 서비스에서 동적 속성 DBPROP_SERVERDATAONINSERT를 지원 하지 않습니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |자동 다시 계산 (DBPROP_ADC_AUTORECALC)|데이터 셰이핑 서비스를 사용 하 여 만든 레코드 집합의 경우이 값은 계산 열과 집계 열을 계산 하는 빈도를 나타냅니다. 기본값 (값 = 1)은 데이터 셰이핑 서비스에서 값이 변경 되었음을 결정할 때마다 다시 계산 하는 것입니다. 값이 0 이면 계층이 처음으로 빌드될 때만 계산 열 또는 집계 열이 계산 됩니다.|
 |일괄 처리 크기 (DBPROP_ADC_BATCHSIZE)|데이터 저장소로 전송 되기 전에 일괄 처리할 수 있는 update 문의 수를 나타냅니다. 일괄 처리에 문이 많을 수록 데이터 저장소의 라운드트립이 줄어듭니다.|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>기본 제공 속성 동작
  OLE DB에 대 한 Cursor Service는 특정 기본 제공 속성의 동작에도 영향을 줍니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|**레코드 집합**에 사용할 수 있는 커서 유형을 보완 합니다.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|**레코드 집합**에 사용할 수 있는 잠금 유형을 보완 합니다. 일괄 업데이트를 사용 하도록 설정 합니다.|

@@ -13,16 +13,16 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923853"
 ---
 # <a name="types-of-cursors-ado"></a>커서 형식(ADO)
 일반적으로 응용 프로그램은 필요한 데이터 액세스를 제공 하는 가장 간단한 커서를 사용 해야 합니다. 앞 으로만 이동 가능한 읽기 전용, 정적, 스크롤, 버퍼링 되지 않음 등의 추가 커서 특성에는 가격 책정 클라이언트 메모리, 네트워크 로드 또는 성능이 있습니다. 대부분의 경우 기본 커서 옵션은 응용 프로그램에 실제로 필요한 것 보다 더 복잡 한 커서를 생성 합니다.  
   
- 커서 유형 선택은 응용 프로그램에서 결과 집합을 사용 하는 방법 및 결과 집합의 크기, 사용 될 수 있는 데이터의 백분율, 데이터 변경 내용에 대 한 민감도 및 응용 프로그램 성능과 같은 여러 디자인 고려 사항에 따라 달라 집니다. 사항이.  
+ 커서 유형 선택은 응용 프로그램에서 결과 집합을 사용 하는 방법 및 결과 집합의 크기, 사용 될 수 있는 데이터의 백분율, 데이터 변경 내용에 대 한 민감도 및 응용 프로그램 성능 요구 사항 등의 몇 가지 디자인 고려 사항에 따라 달라 집니다.  
   
  가장 기본적인 커서 선택은 데이터를 변경 하거나 보기만 해야 하는지 여부에 따라 달라 집니다.  
   

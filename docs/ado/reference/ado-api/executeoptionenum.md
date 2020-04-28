@@ -16,16 +16,16 @@ ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932841"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 공급자가 명령을 실행 하는 방법을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|명령을 비동기적으로 실행 해야 함을 나타냅니다.<br /><br /> 이 값은 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) 값 **adCmdTableDirect**와 함께 사용할 수 없습니다.|  
 |**adAsyncFetch**|0x20|[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) 속성에 지정 된 초기 수량 이후의 나머지 행을 비동기식으로 검색 해야 함을 나타냅니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "67932841"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums 옵션. ASYNCEXECUTE|  
 |AdoEnums 인출|  

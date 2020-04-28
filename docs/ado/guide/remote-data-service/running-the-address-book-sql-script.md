@@ -14,10 +14,10 @@ ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922236"
 ---
 # <a name="running-the-address-book-sql-script"></a>주소록 SQL 스크립트 실행

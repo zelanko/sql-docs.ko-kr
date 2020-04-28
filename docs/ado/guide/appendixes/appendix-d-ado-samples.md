@@ -14,10 +14,10 @@ ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b4a1289755d04c2d9f861fbdcb704fad3d8707d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926862"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>부록 D: Windows SDK의 ADO 샘플
@@ -33,4 +33,4 @@ Windows SDK에는 ADO 및 RDS 코드를 사용 하는 방법을 보여 주는 �
  ADO 설명서에는이 온라인 도움말에 항목으로 포함 된 여러 언어의 코드 예제가 포함 되어 있습니다. 이러한 예제에 대 한 자세한 내용은 [ADO 코드 예제](../../../ado/reference/ado-api/ado-code-examples.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
- [Ado (Microsoft ADO(ActiveX Data Objects))](../../../ado/microsoft-activex-data-objects-ado.md) [ado API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ado 코드](../../../ado/reference/ado-api/ado-code-examples.md) 예제 ado 코드 예제 [Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ado 코드](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) 예제 [Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [구성](../../../ado/guide/remote-data-service/configuring-rds.md) : 공급자 RDS [부록 C 구성: ado ado 기록을 사용 하 여 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [](../../../ado/guide/ado-history.md)
+ [Ado (Microsoft ADO(ActiveX Data Objects))](../../../ado/microsoft-activex-data-objects-ado.md) [ado API 참조](../../../ado/reference/ado-api/ado-api-reference.md) [ado 코드](../../../ado/reference/ado-api/ado-code-examples.md) 예제 ado 코드 예제 [Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md) [ado 코드](../../../ado/reference/ado-api/ado-code-examples-vbscript.md) 예제 [Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md) [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md) [구성](../../../ado/guide/remote-data-service/configuring-rds.md) : 공급자 RDS [부록 C 구성: ado ado 기록을 사용 하 여 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md) [ADO History](../../../ado/guide/ado-history.md)

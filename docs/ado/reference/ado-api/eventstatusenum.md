@@ -16,16 +16,16 @@ ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932865"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 이벤트 실행의 현재 상태를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|이벤트를 발생 시킨 작업의 취소를 요청 합니다.|  
 |**adStatusCantDeny**|3|작업에서 보류 중인 작업의 취소를 요청할 수 없음을 나타냅니다.|  
@@ -36,7 +36,7 @@ ms.locfileid: "67932865"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums 상태입니다. 취소|  
 |AdoEnums CANTDENY|  

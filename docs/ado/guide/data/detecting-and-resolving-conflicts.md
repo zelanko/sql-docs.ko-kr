@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925560"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
@@ -30,7 +30,7 @@ ms.locfileid: "67925560"
   
  BatchUpdate를 호출 하는 경우 ADO와 공급자는 SQL 문을 생성 하 여 데이터 원본에 대 한 업데이트를 수행 합니다. 특정 데이터 원본에는 WHERE 절에 사용할 수 있는 열 유형에 대 한 제한이 있습니다.  
   
- 그런 다음 AffectRecords 인수가 adAffectGroup로 설정 되 고 ResyncValues 인수가 adResyncUnderlyingValues로 설정 된 레코드 집합에서 Resync 메서드를 호출 합니다. Resync 메서드는 기본 데이터베이스에서 현재 레코드 집합 개체의 데이터를 업데이트 합니다. AdAffectGroup를 사용 하 여 현재 필터 설정으로 표시 되는 레코드 (충돌 하는 레코드만)만 데이터베이스와 다시 동기화 되도록 합니다. 이렇게 하면 큰 레코드 집합을 처리 하는 경우 성능이 크게 향상 될 수 있습니다. Resync를 호출할 때 ResyncValues 인수를 adResyncUnderlyingValues로 설정 하면 UnderlyingValue 속성에 데이터베이스의 (충돌) 값이 포함 되 고, Value 속성은 사용자가 입력 한 값을 유지 관리 하 게 됩니다. OriginalValue 속성은 필드의 원래 값을 보유 하 게 됩니다 (마지막으로 성공한 UpdateBatch 호출이 수행 되기 전의 값). 그런 다음 이러한 값을 사용 하 여 프로그래밍 방식으로 충돌을 해결 하거나 사용자가 사용할 값을 선택 하도록 요구할 수 있습니다.  
+ 그런 다음 AffectRecords 인수가 adAffectGroup로 설정 되 고 ResyncValues 인수가 adResyncUnderlyingValues로 설정 된 레코드 집합에서 Resync 메서드를 호출 합니다. Resync 메서드는 기본 데이터베이스에서 현재 레코드 집합 개체의 데이터를 업데이트 합니다. AdAffectGroup를 사용 하 여 현재 필터 설정으로 표시 되는 레코드 (충돌 하는 레코드만)만 데이터베이스와 다시 동기화 되도록 합니다. 이렇게 하면 큰 레코드 집합을 처리 하는 경우 성능이 크게 향상 될 수 있습니다. Resync를 호출할 때 ResyncValues 인수를 adResyncUnderlyingValues로 설정 하면 UnderlyingValue 속성에 데이터베이스의 (충돌) 값이 포함 되 고, Value 속성은 사용자가 입력 한 값을 유지 하 고, OriginalValue 속성은 필드의 원래 값 (마지막으로 성공한 UpdateBatch 호출 이전의 값)을 보유 하 게 됩니다. 그런 다음 이러한 값을 사용 하 여 프로그래밍 방식으로 충돌을 해결 하거나 사용자가 사용할 값을 선택 하도록 요구할 수 있습니다.  
   
  이 기술은 다음 코드 예제에 나와 있습니다. 이 예에서는 UpdateBatch를 호출 하기 전에 별도의 레코드 집합을 사용 하 여 기본 테이블의 값을 변경 함으로써 충돌을 인위적으로 만듭니다.  
   

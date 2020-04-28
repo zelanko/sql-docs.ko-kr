@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924541"
 ---
 # <a name="provider-errors"></a>공급자 오류
@@ -69,8 +69,8 @@ End Function
 |**설명**|발생 한 오류에 대 한 텍스트 설명입니다.|  
 |**HelpContext, HelpFile**|발생 한 오류에 대 한 설명이 포함 된 도움말 항목 및 도움말 파일을 참조 하세요.|  
 |**NativeError**|공급자별 오류 번호입니다.|  
-|**수많은**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
-|**원본**|오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.|  
+|**번호**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
+|**소스**|오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.|  
 |**SQLState**|SQL 문 프로세스 중에 공급자가 반환 하는 다섯 문자 오류 코드입니다.|  
   
  ADO **Error** 개체는 표준 Visual Basic **Err** 개체와 매우 비슷합니다. 해당 속성은 발생 한 오류를 설명 합니다. 오류 수 외에도 관련 된 두 가지 정보를 받을 수 있습니다. **NativeError** 속성에는 사용 중인 공급자와 관련 된 오류 번호가 포함 되어 있습니다. 이전 예제에서 공급자는 SQL Server에 대 한 Microsoft OLE DB 공급자 이므로 **NativeError** 는 SQL Server 관련 된 오류를 포함 합니다. **SQLState** 속성에는 SQL 문의 오류를 설명 하는 5 자리 코드가 있습니다.  

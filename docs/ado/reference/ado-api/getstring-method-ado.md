@@ -17,10 +17,10 @@ ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932467"
 ---
 # <a name="getstring-method-ado"></a>GetString 메서드(ADO)
@@ -41,16 +41,16 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  **레코드 집합** 을 문자열로 변환 하는 방법을 지정 하는 [stringformatenum](../../../ado/reference/ado-api/stringformatenum.md) 값입니다. *Rowdelimiter*, *Columndelimiter*및 *Nullexpr* 매개 변수는 **adClipString**의 *StringFormat* 사용 됩니다.  
   
  *NumRows*  
- (선택 사항) **레코드 집합**에서 변환할 행의 수입니다. *Numrows* 를 지정 하지 않거나 **레코드 집합**에 있는 행의 총 수보다 큰 경우에는 **레코드 집합** 의 모든 행이 변환 됩니다.  
+ 선택 사항입니다. **레코드 집합**에서 변환할 행의 수입니다. *Numrows* 를 지정 하지 않거나 **레코드 집합**에 있는 행의 총 수보다 큰 경우에는 **레코드 집합** 의 모든 행이 변환 됩니다.  
   
  *ColumnDelimiter*  
- (선택 사항) 열 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 탭 문자입니다.  
+ 선택 사항입니다. 열 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 탭 문자입니다.  
   
  *RowDelimiter*  
- (선택 사항) 행 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 캐리지 리턴 문자가 사용 됩니다.  
+ 선택 사항입니다. 행 사이에 사용 되는 구분 기호입니다 (지정 된 경우). 그렇지 않으면 캐리지 리턴 문자가 사용 됩니다.  
   
  *NullExpr*  
- (선택 사항) Null 값 대신 사용 되는 식입니다 (지정 된 경우). 그렇지 않으면 빈 문자열입니다.  
+ 선택 사항입니다. Null 값 대신 사용 되는 식입니다 (지정 된 경우). 그렇지 않으면 빈 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
  행 데이터는 있지만 스키마 데이터는 문자열에 저장 되지 않습니다. 따라서이 문자열을 사용 하 여 **레코드 집합** 을 다시 열 수 없습니다.  

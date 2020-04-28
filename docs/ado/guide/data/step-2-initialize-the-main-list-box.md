@@ -11,10 +11,10 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924073"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화

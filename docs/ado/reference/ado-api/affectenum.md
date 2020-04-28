@@ -16,16 +16,16 @@ ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920752"
 ---
 # <a name="affectenum"></a>AffectEnum
 작업의 영향을 받는 레코드를 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|**레코드 집합**에 적용 된 [필터가](../../../ado/reference/ado-api/filter-property.md) 없는 경우는 모든 레코드에 영향을 줍니다.<br /><br /> **필터** 속성이 문자열 조건 (예: "Author = ' Smith '")으로 설정 된 경우이 작업은 현재 챕터의 표시 되는 레코드에 영향을 줍니다.<br /><br /> **Filter** 속성이 [filtergroupenum](../../../ado/reference/ado-api/filtergroupenum.md) 또는 책갈피 배열의 멤버로 설정 되 면 작업은 **레코드 집합**의 모든 행에 영향을 줍니다. **참고: adAffectAll** 는 Visual Basic 개체 브라우저에서 숨겨집니다.|  
 |**adAffectAllChapters**|4|현재 적용 되는 **필터** 를 통해 표시 되지 않는 레코드 집합을 포함 하 여 **레코드 집합**의 모든 형제 챕터에 있는 모든 레코드에 영향을 줍니다.|  
@@ -35,7 +35,7 @@ ms.locfileid: "67920752"
 ## <a name="adowfc-equivalent"></a>ADO/WFC 동급  
  Package: **com.ms.wfc.data**  
   
-|지속적임|  
+|상수|  
 |--------------|  
 |AdoEnums|  
 |AdoEnums.|  

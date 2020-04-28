@@ -16,17 +16,17 @@ ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919722"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 속성(ADO)
 공급자에 대해 실행할 명령의 텍스트를 나타냅니다.  
   
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
- SQL 문, 테이블 이름, 상대 URL 또는 저장 프로시저 호출과 같은 공급자 명령을 포함 하는 **문자열** 값을 가져오거나 설정 합니다. 기본값은 빈 문자열 ("")입니다.  
+ SQL 문, 테이블 이름, 상대 URL 또는 저장 프로시저 호출과 같은 공급자 명령을 포함 하는 **문자열** 값을 가져오거나 설정 합니다. 기본값은 빈 문자열("")입니다.  
   
 ## <a name="remarks"></a>설명  
  **CommandText** 속성을 사용 하 여 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체가 나타내는 명령의 텍스트를 설정 하거나 반환 합니다. 일반적으로이는 SQL 문이 되지만 저장 프로시저 호출과 같이 공급자가 인식 하는 다른 유형의 명령 문이 될 수도 있습니다. SQL 문은 공급자의 쿼리 프로세서에서 지 원하는 특정 언어 또는 버전 이어야 합니다.  

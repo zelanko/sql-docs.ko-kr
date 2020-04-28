@@ -16,10 +16,10 @@ ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929773"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 스키마(XML 유형 시스템) 카탈로그 뷰(Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "67929773"
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -13,10 +13,10 @@ ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922603"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>비즈니스 개체를 스크립팅하기에 안전하다고 표시
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  마지막 단계에서 응용 프로그램 설치 마법사는 .htm 및 .cab 파일을 만듭니다. 그런 다음이 두 파일을 대상 컴퓨터에 복사 하 고 .htm 파일을 두 번 클릭 하 여 페이지를 로드 하 고 서버를 올바르게 등록할 수 있습니다.  
   
- 비즈니스 개체는 기본적으로 Windows\System32\Occache 디렉터리에 설치 되므로 Windows\System32 디렉터리로 이동 하 고 **\\HKEY_CLASSES_ROOT \00myactivexguid****>\\\<**InprocServer32** 레지스트리 키를 올바른 경로와 일치 하도록 변경 합니다.
+ 비즈니스 개체는 기본적으로 Windows\System32\Occache 디렉터리에 설치 되므로 Windows\System32 디렉터리로 이동 하 고 **\\HKEY_CLASSES_ROOT \00myactivexguid***MyActiveXGUID*>\\\<**InprocServer32** 레지스트리 키를 올바른 경로와 일치 하도록 변경 합니다.
 
 

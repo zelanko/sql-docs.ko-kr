@@ -17,10 +17,10 @@ ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931171"
 ---
 # <a name="save-method"></a>Save 메서드
@@ -35,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>매개 변수  
  *대상*  
- (선택 사항) **레코드 집합** 을 저장할 파일의 전체 경로 이름을 나타내는 **Variant** 이거나 **스트림** 개체에 대 한 참조입니다.  
+ 선택 사항입니다. **레코드 집합** 을 저장할 파일의 전체 경로 이름을 나타내는 **Variant** 이거나 **스트림** 개체에 대 한 참조입니다.  
   
  *PersistFormat*  
- (선택 사항) **레코드 집합** 을 저장할 형식을 지정 하는 [persistformatenum](../../../ado/reference/ado-api/persistformatenum.md) 값 (XML 또는 ADTG)입니다. 기본값은 **adPersistADTG**입니다.  
+ 선택 사항입니다. **레코드 집합** 을 저장할 형식을 지정 하는 [persistformatenum](../../../ado/reference/ado-api/persistformatenum.md) 값 (XML 또는 ADTG)입니다. 기본값은 **adPersistADTG**입니다.  
   
 ## <a name="remarks"></a>설명  
  [Save Method](../../../ado/reference/ado-api/save-method.md) 메서드는 열린 **레코드 집합**에 대해서만 호출할 수 있습니다. [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 사용 하 여 나중에 *대상*에서 **레코드 집합** 을 복원할 수 있습니다.  

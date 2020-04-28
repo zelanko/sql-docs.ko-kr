@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927164"
 ---
 # <a name="ado-features-for-each-release"></a>각 릴리스에 대 한 ADO 기능
@@ -32,9 +32,9 @@ ms.locfileid: "67927164"
  ADO 2.8는 MDAC (Microsoft Data Access Components) 2.8의 일부로 Windows XP 및 Windows Server 2003에 포함 되었습니다. 재배포 가능 버전의 MDAC 2.8도 사용할 수 있습니다. 이 재배포 가능 버전은 Windows 2000에만 설치 해야 합니다. ADO 2.8은 몇 가지 보안 관련 문제를 해결 합니다.
 
  *신뢰할 수 있는 영역 외부에서는 하드 드라이브 액세스가 허용 되지 않습니다.*
-트러스트 되지 않은 **사이트와 관련**된 도메인 간 스크립팅에는 SaveToFile, LoadFromFile, ****, **** **, 및**작업을 사용할 수 없습니다. **Adcmdfile** 플래그와 함께 사용 되거나 mspersist (Microsoft OLE DB 지 속성 공급자)와 함께 사용 됩니다.
+트러스트 되지 않은 **사이트와 관련**된 도메인 간 스크립팅에는 SaveToFile, LoadFromFile, **Stream.SaveToFile**, **Stream.LoadFromFile** **, 및**작업을 사용할 수 없습니다. **Adcmdfile** 플래그와 함께 사용 되거나 mspersist (Microsoft OLE DB 지 속성 공급자)와 함께 사용 됩니다.
 
- **** __**** __**SaveToFile** , LoadFromFile _및_**stream**. 열_은 물리적 파일 에서만 작동 합니다_ .        
+ **Recordset.Open** _,_**Recordset.Save** _,_**SaveToFile** , LoadFromFile _및_**stream**. 열_은 물리적 파일 에서만 작동 합니다_ .        
 이러한 메서드는 이제 파일 핸들이 물리적 파일만 가리키도록 확인 합니다.
 
  **ActiveCommand**는_HTML/ASP 페이지에서 호출 될 때 오류를 반환 합니다._  

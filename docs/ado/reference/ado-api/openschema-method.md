@@ -17,10 +17,10 @@ ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931869"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  실행할 스키마 쿼리의 유형을 나타내는 [Schemaenum](../../../ado/reference/ado-api/schemaenum.md) 값입니다.  
   
  *조건*  
- (선택 사항) [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)에 나열 된 각 *QueryType* 옵션에 대 한 쿼리 제약 조건의 배열입니다.  
+ 선택 사항입니다. [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)에 나열 된 각 *QueryType* 옵션에 대 한 쿼리 제약 조건의 배열입니다.  
   
  *SchemaID*  
  OLE DB 사양에서 정의 하지 않은 공급자 스키마 쿼리의 GUID입니다. 이 매개 변수는 *QueryType* 이 **adschemaproviderspecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  

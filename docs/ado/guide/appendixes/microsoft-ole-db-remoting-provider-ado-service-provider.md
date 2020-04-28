@@ -15,10 +15,10 @@ ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926595"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB Remoting 공급자 개요
@@ -37,14 +37,14 @@ Microsoft OLE DB Remoting 공급자는 클라이언트 컴퓨터의 로컬 사�
 ## <a name="additional-keywords"></a>추가 키워드
  이 서비스 공급자를 호출 하면 다음과 같은 추가 키워드가 관련 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**데이터 원본**|원격 데이터 원본의 이름을 지정 합니다. 처리를 위해 OLE DB 원격 공급자로 전달 됩니다.<br /><br /> 이 키워드는 RDS와 동일 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.|
 
 ## <a name="dynamic-properties"></a>동적 속성
  이 서비스 공급자를 호출 하면 다음과 같은 동적 속성이 [Connection](../../../ado/reference/ado-api/connection-object-ado.md)개체의 [properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 됩니다.
 
-|동적 속성 이름|Description|
+|동적 속성 이름|설명|
 |---------------------------|-----------------|
 |**DFMode**|DataFactory 모드를 나타냅니다. 서버에서 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체의 원하는 버전을 지정 하는 문자열입니다. 특정 버전의 **DataFactory**를 요청 하려면 연결을 열기 전에이 속성을 설정 합니다. 요청 된 버전을 사용할 수 없는 경우 이전 버전을 사용 하려고 시도 합니다. 이전 버전이 없는 경우 오류가 발생 합니다. **DFMode** 가 사용 가능한 버전 보다 작은 경우 오류가 발생 합니다. 연결이 설정 된 후에는이 속성이 읽기 전용입니다.<br /><br /> 다음 유효한 문자열 값 중 하나일 수 있습니다.<br /><br /> -"25"-버전 2.5 (기본값)<br />-"21"-버전 2.1<br />-"20"-버전 2.0<br />-"15"-버전 1.5|
 |**명령 속성**|MS 원격 공급자에 의해 서버에 전송 되는 명령 (행 집합) 속성의 문자열에 추가 되는 값을 나타냅니다. 이 문자열의 기본값은 vt_empty입니다.|

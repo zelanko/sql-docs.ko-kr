@@ -14,10 +14,10 @@ ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923933"
 ---
 # <a name="the-fields-collection"></a>필드 컬렉션

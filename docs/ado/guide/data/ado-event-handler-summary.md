@@ -14,10 +14,10 @@ ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926192"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 연결 및 레코드 집합 이벤트
@@ -29,14 +29,14 @@ ms.locfileid: "67926192"
 
  다음 표에서는 이벤트와 그에 대 한 설명을 요약 합니다.
 
-|ConnectionEvent|Description|
+|ConnectionEvent|설명|
 |---------------------|-----------------|
 |[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**트랜잭션 관리** -연결의 현재 트랜잭션이 시작, 커밋 또는 롤백 되었다는 알림입니다.|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [Connectcomplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**연결 관리** -현재 연결이 시작, 시작 또는 종료 되었다는 알림입니다.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**명령 실행 관리** -연결에 대 한 현재 명령의 실행이 시작 되거나 종료 되었다는 알림입니다.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**정보** -현재 작업에 대 한 추가 정보가 있음을 알립니다.|
 
-|RecordsetEvent|Description|
+|RecordsetEvent|설명|
 |--------------------|-----------------|
 |[Fetchprogress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [fetchprogress](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**검색 상태** -데이터 검색 작업의 진행률에 대 한 알림 또는 검색 작업이 완료 되었습니다. 이러한 이벤트는 클라이언트 쪽 커서를 사용 하 여 **레코드 집합** 을 연 경우에만 사용할 수 있습니다.|
 |[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**필드 변경 관리** -현재 필드의 값이 변경 되거나 변경 되었음을 알립니다.|

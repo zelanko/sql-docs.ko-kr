@@ -15,10 +15,10 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926642"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 용 microsoft OLE DB 공급자 개요
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|모드|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|

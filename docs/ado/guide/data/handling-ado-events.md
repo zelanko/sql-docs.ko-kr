@@ -15,10 +15,10 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925220"
 ---
 # <a name="handling-ado-events"></a>ADO 이벤트 처리

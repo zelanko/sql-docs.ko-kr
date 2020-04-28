@@ -14,10 +14,10 @@ ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922794"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
@@ -45,7 +45,7 @@ SQL = " "
  **SQL =**   
  ***sqlString***  
   
-|부|Description|  
+|부분|Description|  
 |----------|-----------------|  
 |**SQL**|SQL 섹션 항목 임을 나타내는 리터럴 문자열입니다.|  
 |***sqlString***|클라이언트 문자열을 대체 하는 SQL 문자열입니다.|  

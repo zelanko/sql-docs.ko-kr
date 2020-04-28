@@ -13,10 +13,10 @@ ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922041"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>6단계: 서버에 변경 내용이 보내집니다(RDS 자습서).

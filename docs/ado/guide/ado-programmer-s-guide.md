@@ -13,10 +13,10 @@ ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91200b79a075f594968fd5700993d96219e35b40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927044"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Ado 개체 사용에 대 한 ADO 프로그래머 가이드
@@ -26,12 +26,12 @@ ms.locfileid: "67927044"
 
 -   [소개](../../ado/guide/ado-introduction.md)
 
--   [ADO(ActiveX Data Objects) (ADO)](../../ado/guide/data/activex-data-objects-ado.md)
+-   [ADO(ActiveX Data Objects)](../../ado/guide/data/activex-data-objects-ado.md)
 
 -   [RDS (원격 Data Services)](../../ado/guide/remote-data-service/remote-data-service-rds.md)
 
 -   [ADO(다차원)(ADO MD)](../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)
 
--   [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+-   [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
 -   [부록](../../ado/guide/appendixes/ado-appendixes.md)

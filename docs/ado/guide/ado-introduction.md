@@ -13,10 +13,10 @@ ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927134"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
@@ -28,7 +28,7 @@ ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급
 
 -   [ADO 기록](../../ado/guide/ado-history.md)
 
--   [ADO 설명서 사용을 위한 필수 구성 요소](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
+-   [ADO 문서 사용을 위한 필수 구성 요소](../../ado/guide/prerequisites-for-using-the-ado-documentation.md)
 
 -   [ADO 라이브러리 참조](../../ado/guide/referencing-the-ado-libraries.md)
 

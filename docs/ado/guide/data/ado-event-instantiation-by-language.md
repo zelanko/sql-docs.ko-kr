@@ -14,10 +14,10 @@ ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926173"
 ---
 # <a name="ado-event-instantiation-by-language"></a>언어별 ADO 이벤트 인스턴스
@@ -27,7 +27,7 @@ ms.locfileid: "67926173"
   
 -   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
--   [Vba](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
+-   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   
 -   [JScript](../../../ado/guide/data/ado-event-instantiation-jscript.md)  
   

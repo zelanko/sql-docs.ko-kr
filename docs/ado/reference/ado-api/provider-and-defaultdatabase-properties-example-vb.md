@@ -16,10 +16,10 @@ ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931514"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider 및 DefaultDatabase 속성 예제 (VB)

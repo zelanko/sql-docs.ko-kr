@@ -14,10 +14,10 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926817"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB에 대 한 Microsoft 데이터 셰이핑 서비스 개요
@@ -36,10 +36,10 @@ ms.locfileid: "67926817"
 ## <a name="dynamic-properties"></a>동적 속성
  이 서비스 공급자를 호출 하면[연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 다음과 같은 동적 속성이 추가 됩니다.
 
-|동적 속성 이름|Description|
+|동적 속성 이름|설명|
 |---------------------------|-----------------|
 |**고유한 이름 변경**|**변경 된 이름** 속성 값이 중복 되는 **레코드 집합** 개체가 허용 되는지 여부를 나타냅니다. 이 동적 속성이 **True** 이 고 새 레코드 **집합이** 기존 **레코드 집합과**동일한 사용자 지정 된 이름을 사용 하 여 만들어진 경우에는 새 **레코드 집합** 개체의 변형 된 이름이 고유 하 게 변경 됩니다. 이 속성이 **False** 이 고 기존 **레코드 집합과**동일한 사용자 지정 된 이름을 사용 하 여 새 **레코드 집합** 을 만든 경우에는 두 **레코드 집합** 개체의 모양 변경 이름이 동일 합니다. 따라서 두 레코드 집합 모두에 해당 하는 경우에는 **레코드 집합** 의 모양을 변경할 수 없습니다.<br /><br /> 속성의 기본값은 **False**입니다.|
-|**데이터 공급자**|셰이프를 지정 하는 데 사용할 공급자의 이름을 나타냅니다. 공급자를 사용 하 여 행을 제공 하지 않을 경우에는이 값을 사용할 수 없습니다.|
+|**Data Provider**|셰이프를 지정 하는 데 사용할 공급자의 이름을 나타냅니다. 공급자를 사용 하 여 행을 제공 하지 않을 경우에는이 값을 사용할 수 없습니다.|
 
  연결 문자열에서 해당 이름을 키워드로 지정 하 여 쓰기 가능한 동적 속성을 설정할 수도 있습니다. 예를 들어 Microsoft Visual Basic에서 다음을 지정 하 여 **Data Provider** 동적 속성을 "MSDASQL"로 설정 합니다.
 

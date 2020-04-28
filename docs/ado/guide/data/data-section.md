@@ -13,16 +13,16 @@ ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925649"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션은 보류 중인 모든 업데이트, 삽입 또는 삭제와 함께 행 집합의 데이터를 정의 합니다. 데이터 섹션에는 0 개 이상의 행이 포함 될 수 있습니다. 행이 스키마에 의해 정의 되는 한 행 집합의 데이터만 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터를 포함 하지 않는 열은 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소를 사용 하 고 해당 구문이 schema 섹션에서 정의 되지 않은 경우 자동으로 무시 됩니다.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>문자열  
  텍스트 데이터의 예약 된 XML 문자를 적절 한 문자 엔터티로 바꾸어야 합니다. 예를 들어 회사 이름 "Joe의 중고품"에서 작은따옴표는 엔터티로 바꾸어야 합니다. 실제 행은 다음과 유사 합니다.  
   
 ```  

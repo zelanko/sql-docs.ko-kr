@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920667"
 ---
 # <a name="append-method-ado"></a>Append 메서드(ADO)
@@ -37,16 +37,16 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *컬렉션*  
  컬렉션 개체입니다.  
   
- *필드인*  
+ *필드*  
  **Fields** 컬렉션입니다.  
   
- *개체가*  
+ *object*  
  추가할 개체를 나타내는 개체 변수입니다.  
   
  *이름*  
  새 **Field** 개체의 이름을 포함 하는 **문자열** 값으로, *필드*의 다른 개체와 이름이 달라 야 합니다.  
   
- *형식*  
+ *Type*  
  새 필드의 데이터 형식을 지정 하는 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값으로, 기본값은 **adEmpty**입니다. 다음 데이터 형식은 ADO에서 지원 되지 않으므로 [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)에 새 필드를 추가할 때 사용 하면 안 됩니다. **adIDispatch**, **adIUnknown**, **advariant**.  
   
  *DefinedSize*  

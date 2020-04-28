@@ -15,10 +15,10 @@ ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925673"
 ---
 # <a name="cursor-and-lock-characteristics"></a>커서 및 잠금 특성
@@ -28,7 +28,7 @@ ms.locfileid: "67925673"
 |-------------------------|----------------|-------------------|  
 |**adOpenForwardOnly**|-리소스 요구 사항 부족|-뒤로 스크롤할 수 없습니다.<br />-데이터 동시성 없음|  
 |**adOpenStatic**|-스크롤 가능|-데이터 동시성 없음|  
-|**adOpenKeyset 집합**|-일부 데이터 동시성<br />-스크롤 가능|-높은 리소스 요구 사항<br />-연결 되지 않은 시나리오에서 사용할 수 없음|  
+|**adOpenKeyset**|-일부 데이터 동시성<br />-스크롤 가능|-높은 리소스 요구 사항<br />-연결 되지 않은 시나리오에서 사용할 수 없음|  
 |**adOpenDynamic**|-높은 데이터 동시성<br />-스크롤 가능|-최고 리소스 요구 사항<br />-연결 되지 않은 시나리오에서 사용할 수 없음|  
 |**adLockReadOnly**|-리소스 요구 사항 부족<br />-확장성이 매우 뛰어납니다.|-커서를 통해 데이터를 업데이트할 수 없음|  
 |**adLockBatchOptimistic**|-Batch 업데이트<br />-연결 되지 않은 시나리오 허용<br />-데이터에 액세스할 수 있는 다른 사용자|-한 번에 여러 사용자가 데이터를 변경할 수 있습니다.|  

@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921087"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
@@ -56,7 +56,7 @@ ms.locfileid: "67921087"
 |최대 행 크기|DBPROP_MAXROWSIZE|  
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|  
-|모드|DBPROP_INIT_MODE|  
+|Mode|DBPROP_INIT_MODE|  
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|  
 |여러 결과|DBPROP_MULTIPLERESULTS|  
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|  

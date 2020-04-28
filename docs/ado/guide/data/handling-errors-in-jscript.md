@@ -16,10 +16,10 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925179"
 ---
 # <a name="handling-errors-in-jscript"></a>JScript로 오류 처리

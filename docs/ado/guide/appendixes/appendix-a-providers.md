@@ -17,10 +17,10 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926976"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>부록 A: 데이터 및 서비스 공급자
@@ -43,10 +43,10 @@ ms.locfileid: "67926976"
 |----------|-----------|
 |ODBC 데이터베이스|[ODBC용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Microsoft 인덱싱 서비스|[Microsoft 인덱싱 서비스용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Active Directory 서비스|[Microsoft Active Directory 서비스용 microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Active Directory Service|[Microsoft Active Directory 서비스용 microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Microsoft Jet 데이터베이스|[Microsoft Jet 용 OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[SQL Server용 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
-|Oracle 데이터베이스|[Oracle용 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|Oracle 데이터베이스|[Oracle용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |인터넷 게시|[인터넷 게시용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |단순 데이터 원본|[Microsoft OLE DB 단순 공급자](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
@@ -73,4 +73,4 @@ ms.locfileid: "67926976"
  여기에 나열 된 각 공급자에 대해 응용 프로그램이 사용자에 게 SQL 문을 공급자 명령으로 입력할 수 있도록 허용 하는 경우 항상 사용자 입력의 유효성을 검사 하 고 잠재적으로 `DROP TABLE t1`위험한 SQL 문 (예: 사용자 입력의 일부로)을 사용 하 여 가능한 해커 공격을 유의 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
- Microsoft Active Directory OLE DB 서비스에 대 한 ado ( [Command Object](../../../ado/reference/ado-api/command-object-ado.md) ) [연결 개체 (](../../../ado/reference/ado-api/connection-object-ado.md) Ado) [Microsoft OLE DB provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) Microsoft [OLE DB provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) for microsoft [인덱싱 서비스](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [microsoft OLE DB provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) for MICROSOFT Microsoft OLE DB Provider for Oracle provider for [OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) microsoft SQL Server provider for microsoft [Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (ado)](../../../ado/reference/ado-api/properties-collection-ado.md) [레코드 집합 Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh 메서드 (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ Microsoft Active Directory 서비스에 대 한 ado ( [Command Object](../../../ado/reference/ado-api/command-object-ado.md) [) 연결 개체 (](../../../ado/reference/ado-api/connection-object-ado.md) Ado) [Microsoft OLE DB provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) microsoft [OLE DB provider for microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [OLE DB service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) for microsoft Microsoft OLE DB Provider for Oracle provider For microsoft [OLE DB provider for](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ado) [레코드 집합 개체 (ado) ado (ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh 메서드 (](../../../ado/reference/rds-api/refresh-method-rds.md) ado)

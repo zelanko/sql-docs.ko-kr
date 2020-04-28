@@ -13,10 +13,10 @@ ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928551"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
@@ -39,4 +39,4 @@ ms.locfileid: "67928551"
   
 ## <a name="see-also"></a>참고 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   
- [데이터 정의 언어 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [DDL(데이터 정의 언어) 및 보안을 위한 ADO 확장(ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

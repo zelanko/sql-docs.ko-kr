@@ -17,10 +17,10 @@ ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cfb65adeab6f97faca44dc917396bc02fab2fa1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920451"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans, CommitTrans 및 RollbackTrans 메서드 예제 (VB)

@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920904"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
@@ -32,7 +32,7 @@ ms.locfileid: "67920904"
 |[ADORecordsetConstruction](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)|C/c + + 응용 프로그램의 OLE DB **Rowset** 개체에서 ADO **레코드 집합** 개체를 생성 합니다.|  
 |[ADOStreamConstruction 인터페이스](../../../ado/reference/ado-api/adostreamconstruction-interface.md)|C/c + + 응용 프로그램의 OLE DB **IStream** 개체에서 ADO **스트림** 개체를 생성 합니다.|  
 |[명령](../../../ado/reference/ado-api/command-object-ado.md)|데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.<br /><br /> **명령** 개체는 스크립팅에 안전 하지 않습니다.|  
-|[연결](../../../ado/reference/ado-api/connection-object-ado.md)|데이터 원본에 대 한 열린 연결을 나타냅니다.<br /><br /> **연결** 개체는 스크립팅에 안전 합니다.|  
+|[연결](../../../ado/reference/ado-api/connection-object-ado.md)|데이터 소스에 대해 열려 있는 연결을 나타냅니다.<br /><br /> **연결** 개체는 스크립팅에 안전 합니다.|  
 |[IDSOShapeExtensions 인터페이스](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|셰이프 공급자에 대 한 기본 OLEDB 데이터 원본 개체를 가져옵니다.|  
 |[오류](../../../ado/reference/ado-api/error-object.md)|공급자와 관련 된 단일 작업과 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.<br /><br /> **Error** 개체는 스크립팅에 안전 하지 않습니다.|  
 |[필드](../../../ado/reference/ado-api/field-object.md)|공통 데이터 형식으로 데이터의 열을 나타냅니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "67920904"
 |[속성](../../../ado/reference/ado-api/property-object-ado.md)|공급자에 의해 정의 된 ADO 개체의 동적 특성을 나타냅니다.|  
 |[기록은](../../../ado/reference/ado-api/record-object-ado.md)|**레코드 집합**의 행 또는 파일 시스템의 디렉터리 또는 파일을 나타냅니다. **Record** 개체는 스크립팅에 안전 합니다.|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|기본 테이블의 레코드 집합 또는 실행 된 명령의 결과를 나타냅니다. 언제 든 지 **레코드 집합** 개체는 집합 내의 단일 레코드만 현재 레코드로 참조 합니다.<br /><br /> **레코드 집합** 개체는 스크립팅에 안전 합니다.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|데이터의 이진 스트림을 나타냅니다.<br /><br /> **Stream** 개체는 스크립팅에 안전 합니다.|  
+|[스트림](../../../ado/reference/ado-api/stream-object-ado.md)|데이터의 이진 스트림을 나타냅니다.<br /><br /> **Stream** 개체는 스크립팅에 안전 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADO API 참조](../../../ado/reference/ado-api/ado-api-reference.md)   

@@ -16,10 +16,10 @@ ms.assetid: affc847c-a533-4c8a-bdff-3682fdb5df5f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8c377ee920122a18f6a848923605c7007c6f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931372"
 ---
 # <a name="recordset-ado-for-visual-c-syntax"></a>레코드 집합(Visual C++ 구문에 대한 ADO)

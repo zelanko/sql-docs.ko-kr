@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926632"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>ODBC 용 Microsoft OLE DB 공급자 개요
@@ -52,7 +52,7 @@ MSDASQL
 |키워드|Description|
 |-------------|-----------------|
 |**공급자**|ODBC에 대 한 OLE DB 공급자를 지정 합니다.|
-|**DNS**|데이터 원본 이름을 지정 합니다.|
+|**DSN**|데이터 원본 이름을 지정 합니다.|
 |**UID**|사용자 이름을 지정합니다.|
 |**PWD**|사용자 암호를 지정 합니다.|
 |**URL**|웹 폴더에 게시 된 파일 또는 디렉터리의 URL을 지정 합니다.|
@@ -190,36 +190,36 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
-|[원본](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
-|[시스템 상태](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
+|[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
 |[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 및 [ABSOLUTEPAGE](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성은 ADO가 MICROSOFT OLE DB Provider for ODBC의 1.0 버전에서 사용 되는 경우 쓰기 전용입니다.
 
  표준 ADO **레코드 집합** 메서드의 가용성:
 
-|방법|ForwardOnly|동적|Keyset|정적|
+|메서드|ForwardOnly|동적|Keyset|정적|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|yes|yes|yes|yes|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|yes|yes|yes|yes|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|yes|yes|yes|yes|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|yes|yes|yes|yes|
-|[원본과](../../../ado/reference/ado-api/clone-method-ado.md)|예|예|yes|yes|
-|[닫습니다](../../../ado/reference/ado-api/close-method-ado.md)|yes|yes|yes|yes|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|yes|yes|yes|yes|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|yes|yes|yes|yes|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|yes|yes|yes|yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|yes|yes|yes|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|yes|yes|yes|
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|yes|yes|yes|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|yes|yes|yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|yes|yes|yes|yes|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|yes|yes|yes|yes|
-|[매크로](../../../ado/reference/ado-api/requery-method.md)|yes|yes|yes|yes|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|예|yes|yes|
-|[지원함](../../../ado/reference/ado-api/supports-method.md)|yes|yes|yes|yes|
-|[고침](../../../ado/reference/ado-api/update-method.md)|yes|yes|yes|yes|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|yes|yes|yes|yes|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|예|예|예|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|예|예|예|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|예|예|예|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|예|예|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|예|예|예|예|
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|예|예|예|
+|[매크로](../../../ado/reference/ado-api/requery-method.md)|예|예|예|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|아니요|예|예|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|예|예|예|
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|예|예|예|예|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|예|예|예|
 
  * Microsoft Access 데이터베이스에 대해서는 지원 되지 않습니다.
 
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|모드|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|

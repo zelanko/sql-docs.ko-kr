@@ -14,10 +14,10 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926484"
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어로 ADO 사용
@@ -27,28 +27,28 @@ ms.locfileid: "67926484"
   
 |Object|스크립팅에 안전 합니까?|  
 |------------|-------------------------|  
-|ADO 연결|yes|  
-|ADO 명령|예|  
-|ADO 매개 변수|예|  
-|ADO 레코드 집합|yes|  
-|ADO 레코드|yes|  
-|ADO 스트림|yes|  
-|ADO 오류|예|  
-|ADOX 카탈로그|예|  
-|ADOX 셀 집합|예|  
-|RDS DataControl|yes|  
-|RDS 공간|yes|  
-|RDS DataFactory|예|  
+|ADO 연결|예|  
+|ADO 명령|아니요|  
+|ADO 매개 변수|아니요|  
+|ADO 레코드 집합|예|  
+|ADO 레코드|예|  
+|ADO 스트림|예|  
+|ADO 오류|아니요|  
+|ADOX 카탈로그|아니요|  
+|ADOX 셀 집합|아니요|  
+|RDS DataControl|예|  
+|RDS 공간|예|  
+|RDS DataFactory|아니요|  
   
  다음 표에서는 Windows DAC/MDAC에 포함 된 공급자를 나열 하 고 해당 공급자를 스크립팅에 안전 하 게 사용할 수 있는지 여부를 나타냅니다.  
   
 |공급자|스크립팅에 안전 합니까?|  
 |--------------|-------------------------|  
-|셰이프|yes|  
-|Persist|yes|  
-|원격|yes|  
-|SQL Server에 대 한 OLE DB 공급자 (SQLOLEDB)|예|  
-|ODBC 용 OLE DB 공급자 (MSDASQL)|예|  
+|셰이프|예|  
+|Persist|예|  
+|원격|예|  
+|SQL Server에 대 한 OLE DB 공급자 (SQLOLEDB)|아니요|  
+|ODBC 용 OLE DB 공급자 (MSDASQL)|아니요|  
   
 ## <a name="odbc-data-sources"></a>ODBC 데이터 원본  
  스크립팅 및 비 스크립팅 ADO 코드의 중요 한 차이점 중 하나는 ODBC 데이터 원본입니다 (사용 되는 경우). 비 스크립팅 응용 프로그램의 경우 ODBC 데이터 원본 관리자에서 사용자 DSN을 만들 수 있습니다. IIS에서 실행 되는 스크립트의 경우 시스템 DSN을 만들어야 합니다. 그렇지 않은 경우 스크립트는 사용자가 만든 데이터 원본을 인식 하지 못합니다. Microsoft IIS를 통해 Microsoft OLE DB Provider for ODBC를 사용 하는 모든 ADO 스크립팅 응용 프로그램에 적용 됩니다.  

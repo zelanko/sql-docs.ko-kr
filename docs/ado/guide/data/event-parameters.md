@@ -18,10 +18,10 @@ ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925362"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
@@ -51,7 +51,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  작업을 계속 해야 한다는 메시지가 표시 되 면 *상태* 매개 변수를 변경 되지 않은 상태로 둡니다. 그러나 들어오는 상태 매개 변수를 **adStatusCantDeny**로 설정 하지 않은 경우 *상태* 를 **adstatuscancel**로 변경 하 여 보류 중인 작업을 취소할 수 있습니다. 이렇게 하면 작업과 연결 된 Complete 이벤트의 *Status* 매개 변수는 **adStatusErrorsOccurred**로 설정 됩니다. Complete 이벤트에 전달 된 **Error** 개체에는 **adErrOperationCancelled**값이 포함 됩니다.  
   
- 더 이상 이벤트를 처리 하지 않으려면 *상태* 를 **adStatusUnwantedEvent** 로 설정 하면 응용 프로그램에서 해당 이벤트에 대 한 알림을 더 이상 받지 않게 됩니다. 그러나 일부 이벤트는 여러 가지 이유로 발생할 수 있습니다. 이 경우 가능한 각 원인에 대해 **adStatusUnwantedEvent** 를 지정 해야 합니다. 예를 들어 보류 중인 **Recordchange** 이벤트의 알림 수신을 중지 하려면 *상태* 매개 변수를 **adrsnaddnew**, **adrsnaddnew**, **Adrsnaddnew**, adRsnUndoUpdate, **Adrsnaddnew**, Adrsnaddnew **delete**및 **adrsnfirstchange** 에 대해 **** 로 설정 해야 합니다. ****  
+ 더 이상 이벤트를 처리 하지 않으려면 *상태* 를 **adStatusUnwantedEvent** 로 설정 하면 응용 프로그램에서 해당 이벤트에 대 한 알림을 더 이상 받지 않게 됩니다. 그러나 일부 이벤트는 여러 가지 이유로 발생할 수 있습니다. 이 경우 가능한 각 원인에 대해 **adStatusUnwantedEvent** 를 지정 해야 합니다. 예를 들어 보류 중인 **Recordchange** 이벤트의 알림 수신을 중지 하려면 *상태* 매개 변수를 **adrsnaddnew**, **adrsnaddnew**, **Adrsnaddnew**, adRsnUndoUpdate, **Adrsnaddnew**, Adrsnaddnew **delete**및 **adrsnfirstchange** 에 대해 **adStatusUnwantedEvent** 로 설정 해야 합니다. **adRsnUndoUpdate**  
   
 |값|Description|  
 |-----------|-----------------|  

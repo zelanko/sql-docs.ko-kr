@@ -13,10 +13,10 @@ ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922172"
 ---
 # <a name="solutions-for-remote-data-access"></a>원격 데이터 액세스에 대한 솔루션

@@ -16,10 +16,10 @@ ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926004"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
@@ -27,7 +27,7 @@ ms.locfileid: "67926004"
   
  장-별칭은 정규화 할 수 있습니다. 각 챕터 열 이름은 *열 이름을* 포함 하는 챕터로 구분 되며 모두 마침표로 구분 됩니다. 예를 들어, 부모 챕터 chap1에 amount 열인 amt가 있는 자식 장 chap2이 포함 된 경우 정규화 된 이름은 chap1입니다.  
   
-|집계 함수|Description|  
+|집계 함수|설명|  
 |-------------------------|-----------------|  
 |합계 (*장-별칭** ) 열 이름*)|지정 된 열에 있는 모든 값의 합계를 계산 합니다.|  
 |AVG (*장-별칭*).* 열 이름*)|지정 된 열에 있는 모든 값의 평균을 계산 합니다.|  
@@ -37,11 +37,11 @@ ms.locfileid: "67926004"
 |STDEV (*장-별칭** ) 열 이름*)|지정 된 열의 표준 편차를 계산 합니다.|  
 |모든 (*장-별칭** ) 열 이름*)|지정 된 열의 값입니다. 모든 행에 대해 열 값이 같은 경우에만 예측 가능한 값이 있습니다.<br /><br /> **참고** 열이 챕터의 모든 행에 대해 동일한 값을 포함 하지 않는 경우 SHAPE 명령은 임의 함수의 값으로 값 중 하나를 임의로 반환 합니다.|  
   
-|계산 식|Description|  
+|계산 식|설명|  
 |---------------------------|-----------------|  
 |CALC (*식*)|CALC 함수를 포함 하는 **레코드 집합** 의 행 에서만 임의의 식을 계산 합니다. 이러한 [Visual Basic for Applications (VBA) 함수](../../../ado/guide/data/visual-basic-for-applications-functions.md) 를 사용 하는 식은 허용 됩니다.|  
   
-|NEW 키워드|Description|  
+|NEW 키워드|설명|  
 |-----------------|-----------------|  
 |새 *필드 유형* [(*너비* &#124; *배율* &#124; *전체 자릿수* &#124; *오류* [, *크기 조정* &#124; *오류*])]|지정 된 형식의 빈 열을 **레코드 집합**에 추가 합니다.|  
   

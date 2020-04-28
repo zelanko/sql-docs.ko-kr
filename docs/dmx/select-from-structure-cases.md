@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928290"
 ---
 # <a name="select-from-ltstructuregtcases"></a>구조&gt;에서 &lt;선택 합니다. 경우
@@ -39,7 +39,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  쉼표로 구분된 식 목록입니다.  
@@ -52,8 +52,8 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *조건 식*  
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *식*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ *expression*  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  모델과 구조 모두에 드릴스루가 사용되도록 설정되어 있으면 마이닝 구조 및 모델에 대해 드릴스루 권한을 가지는 역할의 모든 멤버는 다음 구문을 사용하여 모델에 포함되지 않은 구조 열을 반환할 수 있습니다.  
@@ -92,6 +92,6 @@ WHERE IsTestCase();
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926660"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자 개요
@@ -48,7 +48,7 @@ MSIDXS
 |-------------|-----------------|
 |**공급자**|Microsoft 인덱싱 서비스용 OLE DB 공급자를 지정 합니다. 일반적으로이 키워드는 연결 문자열에 지정 된 유일한 키워드입니다.|
 |**데이터 원본**|인덱싱 서비스 카탈로그 이름을 지정 합니다. 이 키워드를 지정 하지 않으면 기본 시스템 카탈로그가 사용 됩니다.|
-|**로캘 식별자**|사용자 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자 (예: 1033)를 지정 합니다. 이 키워드를 지정 하지 않으면 기본 시스템 로캘 식별자가 사용 됩니다.|
+|**로캘 ID**|사용자 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자 (예: 1033)를 지정 합니다. 이 키워드를 지정 하지 않으면 기본 시스템 로캘 식별자가 사용 됩니다.|
 
 ## <a name="command-text"></a>명령 텍스트
  인덱싱 서비스 SQL 쿼리 구문은 SQL-92 **SELECT** 문과 **FROM** 및 **WHERE** 절에 대 한 확장으로 구성 됩니다. 쿼리 결과는 ADO에서 사용 하 고 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 조작 될 수 있는 OLE DB 행 집합을 통해 반환 됩니다.
@@ -85,33 +85,33 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기 전용|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기 전용|
-|[원본](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|
-|[시스템 상태](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|
+|[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|
 |[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|
 
  \*이 기능이 **레코드 집합**에 존재 하려면 공급자에서 책갈피를 사용 하도록 설정 해야 합니다.
 
  **표준 ADO 레코드 집합 메서드의 가용성:**
 
-|방법|있게?|
+|메서드|사용 가능 여부|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|yes|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|
-|[원본과](../../../ado/reference/ado-api/clone-method-ado.md)|yes|
-|[닫습니다](../../../ado/reference/ado-api/close-method-ado.md)|yes|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|yes|
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|yes|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|yes|
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|yes|
-|[매크로](../../../ado/reference/ado-api/requery-method.md)|yes|
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|yes|
-|[지원함](../../../ado/reference/ado-api/supports-method.md)|yes|
-|[고침](../../../ado/reference/ado-api/update-method.md)|예|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|
+|[매크로](../../../ado/reference/ado-api/requery-method.md)|예|
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|
 
  Microsoft 인덱싱 서비스용 Microsoft OLE DB 공급자에 대 한 특정 구현 세부 정보 및 기능 정보는 [OLE DB 프로그래머 가이드](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)를 참조 하거나 Windows NT Server 웹 사이트의 웹 서비스 페이지를 방문 하십시오.
 

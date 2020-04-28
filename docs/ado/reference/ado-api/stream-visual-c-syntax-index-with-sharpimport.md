@@ -16,10 +16,10 @@ ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930684"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (#import를 사용 하는 Visual C++ 구문 인덱스)

@@ -18,10 +18,10 @@ ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929953"
 ---
 # <a name="effective-boolean-value-xquery"></a>유효한 부울 값(XQuery)
@@ -45,8 +45,7 @@ ms.locfileid: "67929953"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 다음은 유효한 부울 값 예입니다. **If** 식이 처리 되 면 조건의 유효한 부울 값이 결정 됩니다. 
-  `/a[1]`은 빈 시퀀스를 반환하기 때문에 유효한 부울 값은 False입니다. 결과는 하나의 텍스트 노드(False)가 포함된 XML로 반환됩니다.  
+ 다음은 유효한 부울 값 예입니다. **If** 식이 처리 되 면 조건의 유효한 부울 값이 결정 됩니다. `/a[1]`은 빈 시퀀스를 반환하기 때문에 유효한 부울 값은 False입니다. 결과는 하나의 텍스트 노드(False)가 포함된 XML로 반환됩니다.  
   
 ```  
 value is false  
@@ -71,8 +70,7 @@ go
   
 -   형식화 된 **xml** 변수를 만들고 쿼리 합니다.  
   
--   
-  `data(/b[1])` 식은 부울 값 True를 반환합니다. 따라서 이 경우 유효한 부울 값은 True입니다.  
+-   `data(/b[1])` 식은 부울 값 True를 반환합니다. 따라서 이 경우 유효한 부울 값은 True입니다.  
   
 -   식 `data(/b[2])` 에서 부울 false 값을 반환 합니다. 따라서 이 경우 유효한 부울 값은 False입니다.  
   

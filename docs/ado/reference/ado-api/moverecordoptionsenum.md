@@ -16,18 +16,18 @@ ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932043"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드의 동작을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified 되지 않음**|-1|Default. 기본 이동 작업을 수행 합니다. 대상 파일이 나 디렉터리가 이미 있는 경우 작업이 실패 하 고 작업에서 하이퍼텍스트 링크를 업데이트 합니다.|  
+|**adMoveUnspecified 되지 않음**|-1|기본값 기본 이동 작업을 수행 합니다. 대상 파일이 나 디렉터리가 이미 있는 경우 작업이 실패 하 고 작업에서 하이퍼텍스트 링크를 업데이트 합니다.|  
 |**adMoveOverWrite**|1|이미 존재 하는 경우에도 대상 파일이 나 디렉터리를 덮어씁니다.|  
 |**adMoveDontUpdateLinks**|2|소스 **레코드**의 하이퍼텍스트 링크를 업데이트 하지 않고 **MoveRecord** 메서드의 기본 동작을 수정 합니다. 기본 동작은 공급자의 기능에 따라 달라 집니다. 공급자를 사용할 수 있는 경우 이동 작업은 링크를 업데이트 합니다. 공급자가 링크를 수정할 수 없거나이 값이 지정 되지 않은 경우 링크가 수정 되지 않은 경우에도 이동이 성공 합니다.|  
 |**adMoveAllowEmulation**|4|다운로드, 업로드 및 삭제 작업을 사용 하 여 공급자가 이동 시뮬레이션을 시도 하도록 요청 합니다. 대상 URL이 다른 서버에 있거나 원본과 다른 공급자가 서비스를 제공 하기 때문에 **레코드** 를 이동 하려는 시도가 실패 하는 경우 공급자 간에 리소스를 이동할 때 다른 공급자 기능으로 인해 대기 시간 또는 데이터 손실이 발생할 수 있습니다.|  

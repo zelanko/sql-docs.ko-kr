@@ -14,10 +14,10 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921103"
 ---
 # <a name="ado-collections"></a>ADO 컬렉션
@@ -28,7 +28,7 @@ ms.locfileid: "67921103"
 |||  
 |-|-|  
 |[오류](../../../ado/reference/ado-api/errors-collection-ado.md)|단일 공급자 관련 오류에 대 한 응답으로 생성 된 모든 **오류** 개체를 포함 합니다.|  
-|[필드인](../../../ado/reference/ado-api/fields-collection-ado.md)|**레코드 집합** 개체의 모든 **필드** 개체를 포함 합니다.|  
+|[필드](../../../ado/reference/ado-api/fields-collection-ado.md)|**레코드 집합** 개체의 모든 **필드** 개체를 포함 합니다.|  
 |[매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md)|**Command** 개체의 모든 **Parameter** 개체를 포함 합니다.|  
 |[속성](../../../ado/reference/ado-api/properties-collection-ado.md)|개체의 특정 인스턴스에 대 한 모든 **속성** 개체를 포함 합니다.|  
   

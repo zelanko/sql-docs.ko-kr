@@ -14,10 +14,10 @@ ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922761"
 ---
 # <a name="customization-file-userlist-section"></a>사용자 지정 파일 UserList 섹션
@@ -34,7 +34,7 @@ ms.locfileid: "67922761"
  _사용자 이름_**=**   
  **_accessRights_**  
   
-|부|Description|  
+|부분|Description|  
 |----------|-----------------|  
 |*이름*|이 연결을 사용 하는 *사용자의 사용자 이름* 입니다. 올바른 사용자 이름은 IIS **Service Manager** 대화 상자를 사용 하 여 설정 됩니다.|  
 |**_accessRights_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **NoAccess** -사용자가 데이터 원본에 액세스할 수 없습니다.<br />-   **ReadOnly** -사용자가 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자가 데이터 소스를 읽거나 쓸 수 있습니다.|  

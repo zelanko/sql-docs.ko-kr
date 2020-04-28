@@ -13,10 +13,10 @@ ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: deca1648d6ef4f9ba3a1dfd020dc5193c8cc0d25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932429"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 인터페이스

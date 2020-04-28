@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926629"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
@@ -47,7 +47,7 @@ MSDAORA
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|Oracle에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|
@@ -62,12 +62,12 @@ MSDAORA
 
  이러한 매개 변수는 [OLE DB 프로그래머 참조](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)에 자세히 설명 되어 있습니다. [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 는 이러한 매개 변수 이름과 해당 OLE DB 속성 간의 상호 참조를 제공 합니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |**창 핸들**|추가 정보를 확인 하는 데 사용할 창 핸들을 나타냅니다.|
-|**로캘 식별자**|사용자 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자 (예: 1033)를 나타냅니다. 이러한 기본 설정은 날짜 및 시간 형식을 지정 하는 방법, 항목을 사전순으로 정렬 하 고 문자열을 비교 하는 등의 방법을 지정 합니다.|
+|**로캘 ID**|사용자 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자 (예: 1033)를 나타냅니다. 이러한 기본 설정은 날짜 및 시간 형식을 지정 하는 방법, 항목을 사전순으로 정렬 하 고 문자열을 비교 하는 등의 방법을 지정 합니다.|
 |**OLE DB 서비스**|사용 하거나 사용 하지 않도록 설정할 OLE DB 서비스를 지정 하는 비트 마스크를 나타냅니다.|
-|**prompt**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
+|**Prompt**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
 |**확장 속성**|공급자별 확장 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자별 연결 정보에 대해서만이 속성을 사용 합니다.|
 
 ## <a name="see-also"></a>참고 항목

@@ -14,10 +14,10 @@ ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931857"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
@@ -33,7 +33,7 @@ ms.locfileid: "67931857"
   
  **Optimize** 는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [Field](../../../ado/reference/ado-api/field-object.md) object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
-## <a name="usage"></a>사용  
+## <a name="usage"></a>사용법  
   
 ```  
 Dim rs As New Recordset  

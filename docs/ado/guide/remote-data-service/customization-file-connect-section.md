@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922802"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
@@ -53,11 +53,11 @@ connectionString
   
 ## <a name="remarks"></a>설명  
   
-|부|Description|  
+|부분|Description|  
 |----------|-----------------|  
 |**연결**|연결 문자열 항목 임을 나타내는 리터럴 문자열입니다.|  
 |**_connectionString_**|전체 클라이언트 연결 문자열을 대체 하는 문자열입니다.|  
-|**Access**|이 항목이 액세스 항목 임을 나타내는 리터럴 문자열입니다.|  
+|**액세스**|이 항목이 액세스 항목 임을 나타내는 리터럴 문자열입니다.|  
 |**_accessRight_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **NoAccess** -사용자가 데이터 원본에 액세스할 수 없습니다.<br />-   **ReadOnly** -사용자가 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자가 데이터 소스를 읽거나 쓸 수 있습니다.|  
   
  기본 처리기 동작을 사용 하지 않도록 설정 하 여 모든 연결을 허용 하려는 경우 **기본값 연결** 섹션 `Access=ReadWrite`에서 액세스 항목을로 설정 하 고 다른 모든 **연결** _식별자_ 섹션을 삭제 하거나 주석으로 처리 합니다.  

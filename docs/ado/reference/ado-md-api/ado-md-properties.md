@@ -14,10 +14,10 @@ ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67930557"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
@@ -25,11 +25,11 @@ ms.locfileid: "67930557"
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|현재 셀 집합 또는 카탈로그가 현재 속해 있는 ADO **연결** 개체를 나타냅니다.|  
-|[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|**수준** 또는 **멤버** 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.|  
+|[캡션의](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|**수준** 또는 **멤버** 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.|  
 |[ChildCount](../../../ado/reference/ado-md-api/childcount-property-ado-md.md)|현재 **멤버** 개체가 계층의 부모인 멤버 수를 나타냅니다.|  
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|현재 **멤버가** 계층의 부모인 **멤버** 의 컬렉션을 반환 합니다.|  
-|[수](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
-|[크기](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|계층 수준 **수준 및 루트 간의 수준 수** 를 나타냅니다.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
+|[깊이](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|계층 수준 **수준 및 루트 간의 수준 수** 를 나타냅니다.|  
 |[설명](../../../ado/reference/ado-md-api/description-property-ado-md.md)|현재 개체의 텍스트 설명을 반환 합니다.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|축의 차원 수를 나타냅니다.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|축에서 멤버 바로 다음에 오는 자식이 없는지 여부를 나타냅니다.|  
@@ -44,9 +44,9 @@ ms.locfileid: "67930557"
 |[서 수 (위치)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|축을 따라 위치를 고유 하 게 식별 합니다.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|계층에서 현재 멤버의 부모인 멤버를 나타냅니다.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|이 위치 멤버의 부모가 바로 앞에 있는 멤버의 부모와 같은지 여부를 나타냅니다.|  
-|[원본](../../../ado/reference/ado-md-api/source-property-ado-md.md)|셀 집합의 데이터 원본을 나타냅니다.|  
-|[시스템 상태](../../../ado/reference/ado-md-api/state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  
-|[형식](../../../ado/reference/ado-md-api/type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
+|[소스](../../../ado/reference/ado-md-api/source-property-ado-md.md)|셀 집합의 데이터 원본을 나타냅니다.|  
+|[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  
+|[Type](../../../ado/reference/ado-md-api/type-property-ado-md.md)|현재 멤버의 형식을 나타냅니다.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|현재 개체의 모호 하지 않은 이름을 나타냅니다.|  
 |[값](../../../ado/reference/ado-md-api/value-property-ado-md.md)|현재 셀의 값을 나타냅니다.|  
   

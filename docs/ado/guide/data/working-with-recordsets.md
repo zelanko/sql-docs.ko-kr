@@ -13,10 +13,10 @@ ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923411"
 ---
 # <a name="working-with-recordsets"></a>레코드 집합 작업
@@ -33,7 +33,7 @@ ms.locfileid: "67923411"
   
  **Sort** 속성을 빈 문자열로 설정 하면 행을 원래 순서로 다시 설정 하 고 임시 인덱스를 삭제 합니다. 기존 인덱스는 삭제 되지 않습니다.  
   
- **레코드 집합** 에 *firstName*, *middleInitial*및 *lastName*이라는 세 개의 필드가 있다고 가정 합니다. **Sort** 속성을 문자열 "`lastName DESC, firstName ASC`"로 설정 합니다 .이 문자열은 성을 기준으로 내림차순으로 정렬 한 다음 이름을 기준으로 오름차순으로 정렬 합니다. **** 중간 이니셜은 무시 됩니다.  
+ **레코드 집합** 에 *firstName*, *middleInitial*및 *lastName*이라는 세 개의 필드가 있다고 가정 합니다. **Sort** 속성을 문자열 "`lastName DESC, firstName ASC`"로 설정 합니다 .이 문자열은 성을 기준으로 내림차순으로 정렬 한 다음 이름을 기준으로 오름차순으로 정렬 합니다. **Recordset** 중간 이니셜은 무시 됩니다.  
   
  정렬 조건 문자열에서 참조 되는 필드는 **asc** 및 **DESC**키워드와 충돌 하므로 "ASC" 또는 "DESC"로 명명할 수 없습니다. **레코드 집합**을 반환 하는 쿼리의 **AS** 키워드를 사용 하 여 이름이 충돌 하는 필드에 별칭을 지정 합니다.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "67923411"
   
 -   *FieldName* 은 **레코드 집합**의 올바른 필드 이름 이어야 합니다. 필드 이름에 공백이 포함 된 경우 이름을 대괄호로 묶어야 합니다.  
   
--   *연산자* **\<** 는 **>**,, ** \< **, **<>** ****,, 또는와 같은 중 하나 여야 합니다. **>=** **=**  
+-   *연산자* **\<** 는 **>**,, ** \< **, **<>** **LIKE**,, 또는와 같은 중 하나 여야 합니다. **>=** **=**  
   
 -   *Value* 는 필드 값을 비교 하는 데 사용할 값입니다 `'Smith'`(예: `#8/24/95#` `12.345`,, 또는 `$50.00`). 문자열이 있는 작은따옴표 (')와 날짜를 포함 하는 파운드`#`기호 ()를 사용 합니다. 숫자의 경우 소수점, 달러 기호 및 과학적 표기법을 사용할 수 있습니다. *연산자* 가 **LIKE**인 경우 *값* 은 와일드 카드 문자를 사용할 수 있습니다. 별표 (\*) 및 백분율 기호 (%)만 와일드 카드 문자를 사용할 수 있으며 문자열에서 마지막 문자 여야 합니다. *값* 은 null 일 수 없습니다.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "67923411"
 ### <a name="filtering-with-a-constant"></a>상수로 필터링  
  다음 상수는 **레코드 집합**을 필터링 하는 데 사용할 수 있습니다.  
   
-|지속적임|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|마지막 **삭제**, 다시 **동기화**, **UpdateBatch**또는 **CancelBatch** 호출의 영향을 받는 레코드만 볼 필터입니다.|  
 |**adFilterConflictingRecords**|마지막 일괄 업데이트에 실패 한 레코드를 보기 위한 필터입니다.|  

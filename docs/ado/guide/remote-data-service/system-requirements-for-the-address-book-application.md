@@ -14,10 +14,10 @@ ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922033"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 애플리케이션에 대한 시스템 요구 사항

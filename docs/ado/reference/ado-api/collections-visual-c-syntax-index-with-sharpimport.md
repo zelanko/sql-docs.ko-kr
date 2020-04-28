@@ -19,16 +19,16 @@ ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919893"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (#import를 사용 하는 Visual C++ 구문 인덱스)
 컬렉션이 특정 공용 메서드 및 속성을 상속 한다는 것을 알고 있으면 유용 합니다.  
   
- 모든 컬렉션은 **Count** 속성과 **Refresh** 메서드를 상속 하 고 모든 컬렉션은 **Item** 속성을 추가 합니다. **Errors** 컬렉션은 **Clear** 메서드를 추가 합니다. **Parameters** 컬렉션은 **append** 및 **delete** 메서드를 상속 하는 반면, **Fields** 컬렉션은 추가, **삭제**및 **업데이트** 메서드를 추가 합니다. ****  
+ 모든 컬렉션은 **Count** 속성과 **Refresh** 메서드를 상속 하 고 모든 컬렉션은 **Item** 속성을 추가 합니다. **Errors** 컬렉션은 **Clear** 메서드를 추가 합니다. **Parameters** 컬렉션은 **append** 및 **delete** 메서드를 상속 하는 반면, **Fields** 컬렉션은 추가, **삭제**및 **업데이트** 메서드를 추가 합니다. **Append**  
   
 ## <a name="properties-collection"></a>속성 컬렉션  
   

@@ -14,10 +14,10 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925133"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 간단한 ADO 애플리케이션
@@ -42,19 +42,19 @@ ms.locfileid: "67925133"
   
  ![HelloData VB 응용 프로그램의 From1 표시](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|컨트롤 형식|속성|값|  
+|컨트롤 종류|속성|값|  
 |------------------|--------------|-----------|  
-|양식|속성|Form1|  
+|Form|속성|Form1|  
 ||높이|6500|  
 ||너비|6500|  
 |MS DataGrid|속성|grdDisplay1|  
 |TextBox|속성|txtDisplay1|  
-||Multiline|true|  
+||여러 줄|true|  
 |명령 단추|속성|cmdGetData|  
-||Caption|데이터 가져오기|  
+||캡션|Get Data|  
 |명령 단추|속성|cmdExamineData|  
-||Caption|데이터 검사|  
+||캡션|데이터 검사|  
 |명령 단추|속성|cmdEditData|  
-||Caption|데이터 편집|  
+||캡션| 데이터 편집|  
 |명령 단추|속성|cmdUpdateData|  
-||Caption|업데이트 데이터|
+||캡션|업데이트 데이터|

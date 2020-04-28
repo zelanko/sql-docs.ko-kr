@@ -18,10 +18,10 @@ ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920383"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
@@ -33,7 +33,7 @@ ms.locfileid: "67920383"
  **BOF** 및 **EOF** 속성은 **부울** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- **BOF** 및 **EOF** 속성을 사용 하 여 레코드에서 레코드로 이동할 때 **레코드 집합 개체** 의 제한을 초과 했는지 여부를 확인할 수 **** 있습니다.  
+ **BOF** 및 **EOF** 속성을 사용 하 여 레코드에서 레코드로 이동할 때 **레코드 집합 개체** 의 제한을 초과 했는지 여부를 확인할 수 **Recordset** 있습니다.  
   
  현재 레코드 위치가 첫 번째 레코드 앞에 있으면 **BOF** 속성은 **True** (-1)를 반환 하 고 현재 레코드 위치가 첫 번째 레코드에 있거나 첫 번째 레코드 뒤에 있으면 **False** (0)를 반환 합니다.  
   

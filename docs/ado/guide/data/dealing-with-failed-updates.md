@@ -13,10 +13,10 @@ ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925633"
 ---
 # <a name="dealing-with-failed-updates"></a>실패한 업데이트 처리

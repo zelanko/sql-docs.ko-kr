@@ -16,16 +16,16 @@ ms.assetid: f948febd-c885-4621-823b-421e116fec4e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928628"
 ---
 # <a name="actionenum"></a>ActionEnum
 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 가 호출 될 때 수행할 동작의 유형을 지정 합니다.  
   
-|지속적임|값|Description|  
+|상수|값|Description|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|그룹이 나 사용자에 게 지정 된 사용 권한이 거부 됩니다.|  
 |**adAccessGrant**|1|그룹이 나 사용자에 게 적어도 요청 된 사용 권한이 있습니다.|  

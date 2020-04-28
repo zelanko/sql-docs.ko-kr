@@ -14,14 +14,14 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925762"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
-연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 다음은 그 예입니다.  
+연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 예를 들면 다음과 같습니다.  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -31,7 +31,7 @@ ms.locfileid: "67925762"
   
  ADO는 연결 문자열에서 다음과 같은 5 개의 인수를 인식 합니다.  
   
-|인수|Description|  
+|인수|설명|  
 |--------------|-----------------|  
 |*공급자*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예: 지속형 데이터 원본 개체)의 이름을 지정 합니다.|  

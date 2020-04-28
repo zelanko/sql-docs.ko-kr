@@ -13,10 +13,10 @@ ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922351"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM에서 사용할 클라이언트에서 비즈니스 개체 등록

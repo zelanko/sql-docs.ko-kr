@@ -13,10 +13,10 @@ ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b118feb24ab22346c8bb28c37eded49b1679df9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923732"
 ---
 # <a name="understanding-recordset-structure"></a>레코드 집합 구조 이해

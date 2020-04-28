@@ -13,16 +13,16 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926049"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 구성 됩니다.  
   
-|개체 또는 컬렉션|Description|  
+|개체 또는 컬렉션|설명|  
 |--------------------------|-----------------|  
 |**Connection** 개체|데이터 원본의 고유 세션을 나타냅니다. 클라이언트/서버 데이터베이스 시스템의 경우 서버에 대 한 실제 네트워크 연결에 해당 하는 것일 수 있습니다. 공급자가 지 원하는 기능에 따라 **연결** 개체의 일부 컬렉션, 메서드 또는 속성을 사용 하지 못할 수 있습니다.|  
 |**Command** 개체|데이터 원본에 대해 실행 하기 위한 SQL 쿼리와 같은 특정 명령을 정의 하는 데 사용 됩니다.|  

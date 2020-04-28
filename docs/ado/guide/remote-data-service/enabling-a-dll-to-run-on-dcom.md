@@ -15,10 +15,10 @@ ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922708"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM에서 실행하도록 DLL 사용

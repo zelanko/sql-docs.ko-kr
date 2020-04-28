@@ -16,10 +16,10 @@ ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926672"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스용 microsoft OLE DB 공급자
@@ -61,7 +61,7 @@ ADSDSOObject
   
 |값|Description|  
 |-----------|-----------------|  
-|*Root*|검색을 시작할 **ADsPath** 개체 (즉, 검색의 루트)를 나타냅니다.|  
+|*루트가*|검색을 시작할 **ADsPath** 개체 (즉, 검색의 루트)를 나타냅니다.|  
 |*Filter*|RFC 1960 형식의 검색 필터를 나타냅니다.|  
 |*특성*|반환할 특성의 쉼표로 구분 된 목록을 나타냅니다.|  
 |*범위*|(선택 사항) 검색 범위를 지정 하는 **문자열** 입니다. 다음 중 하나일 수 있습니다.<br /><br /> -Base-기준 개체 (검색의 루트)만 검색 합니다.<br />-OneLevel-한 수준만 검색 합니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
@@ -108,34 +108,34 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|읽기 전용|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|읽기/쓰기|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기 전용|  
-|[원본](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|  
-|[시스템 상태](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|  
+|[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|  
+|[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|  
 |[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|  
   
  **표준 ADO 레코드 집합 메서드의 가용성:**  
   
-|방법|있게?|  
+|메서드|사용 가능 여부|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|예|  
-|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|예|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|예|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|  
-|[원본과](../../../ado/reference/ado-api/clone-method-ado.md)|yes|  
-|[닫습니다](../../../ado/reference/ado-api/close-method-ado.md)|yes|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|yes|  
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|yes|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|yes|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|yes|  
-|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|yes|  
-|[매크로](../../../ado/reference/ado-api/requery-method.md)|yes|  
-|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|yes|  
-|[지원함](../../../ado/reference/ado-api/supports-method.md)|yes|  
-|[고침](../../../ado/reference/ado-api/update-method.md)|예|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|예|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|아니요|  
+|[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|아니요|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|  
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|  
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|  
+|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|  
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|  
+|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|  
+|[매크로](../../../ado/reference/ado-api/requery-method.md)|예|  
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
+|[업데이트](../../../ado/reference/ado-api/update-method.md)|아니요|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
   
  ADSI 및 공급자의 세부 사항에 대 한 자세한 내용은 Active Directory 서비스 인터페이스 설명서를 참조 하거나 ADSI 웹 페이지를 방문 하십시오.  
   

@@ -15,10 +15,10 @@ ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925651"
 ---
 # <a name="data-providers"></a>데이터 공급자
@@ -26,4 +26,4 @@ ms.locfileid: "67925651"
   
  ADO는 지정 된 공급자의 특정 기능에 관계 없이 여러 다른 데이터 공급자에 연결 하 고 동일한 프로그래밍 모델을 계속 표시할 수 있으므로 강력 하 고 유연 합니다. 그러나 각 데이터 공급자는 고유 하기 때문에 응용 프로그램이 ADO와 상호 작용 하는 방식은 데이터 공급자에 따라 달라 집니다.  
   
- 예를 들어 Microsoft SQL Server 데이터베이스에 액세스 하는 데 사용 되는 SQL Server에 대 한 OLE DB 공급자의 기능과 기능은 파일에 액세스 하는 데 사용 되는 Microsoft OLE DB Provider for Internet Publishing의 기능과 크게 다를 수 있습니다. 는 웹 서버에 저장 됩니다.
+ 예를 들어 Microsoft SQL Server 데이터베이스에 액세스 하는 데 사용 되는 SQL Server에 대 한 OLE DB 공급자의 기능과 기능은 웹 서버의 파일 저장소에 액세스 하는 데 사용 되는 Microsoft OLE DB Provider for Internet Publishing의 기능과 크게 다릅니다.

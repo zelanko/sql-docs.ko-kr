@@ -16,10 +16,10 @@ ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919706"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout 속성(ADO)

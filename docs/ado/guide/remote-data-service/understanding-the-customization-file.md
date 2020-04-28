@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921965"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
@@ -41,13 +41,13 @@ identifier
   
  섹션 헤더에는 다음과 같은 부분이 있습니다.  
   
-|부|Description|  
+|부분|Description|  
 |----------|-----------------|  
-|**연결할지**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
+|**connect**|연결 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**sql**|명령 문자열을 수정 하는 리터럴 문자열입니다.|  
 |**userlist**|특정 사용자의 액세스 권한을 수정 하는 리터럴 문자열입니다.|  
 |**로그온**|작업 오류를 기록 하는 로그 파일을 지정 하는 리터럴 문자열입니다.|  
-|**기본**|지정 된 식별자가 없거나 없는 경우 사용 되는 리터럴 문자열입니다.|  
+|**default**|지정 된 식별자가 없거나 없는 경우 사용 되는 리터럴 문자열입니다.|  
 |*한정자*|**Connect** 또는 **command** 문자열의 문자열과 일치 하는 문자열입니다.<br /><br /> -섹션 헤더에 **connect** 가 있고 식별자 문자열이 연결 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **sql** 이 포함 되어 있고 식별자 문자열이 명령 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **userlist** 가 포함 되어 있고 식별자 문자열이 **connect** 섹션 식별자와 일치 하는 경우이 섹션을 사용 합니다.|  
   
  **DataFactory** 는 클라이언트 매개 변수를 전달 하 여 처리기를 호출 합니다. 처리기는 해당 섹션 헤더의 식별자와 일치 하는 클라이언트 매개 변수에서 전체 문자열을 검색 합니다. 일치 하는 항목이 발견 되 면 해당 섹션의 내용이 클라이언트 매개 변수에 적용 됩니다.  

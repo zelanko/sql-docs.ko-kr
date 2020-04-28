@@ -18,10 +18,10 @@ ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919593"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 메서드(ADO)
@@ -38,10 +38,10 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  책갈피로 표시 되는 두 레코드의 상대 행 위치를 나타내는 [Compareenum](../../../ado/reference/ado-api/compareenum.md) 값을 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *않고 책갈피 2*  
+ *책갈피1*  
  첫 번째 행의 책갈피입니다.  
   
- *Bookmark2 등*  
+ *책갈피2*  
  두 번째 행의 책갈피입니다.  
   
 ## <a name="remarks"></a>설명  

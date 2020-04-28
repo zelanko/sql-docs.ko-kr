@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926363"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
@@ -38,7 +38,7 @@ URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상�
  *서버인*  
  *리소스가* 있는 컴퓨터의 이름을 지정 합니다.  
   
- *경로*  
+ *path*  
  대상으로 이어지는 디렉터리 시퀀스를 지정 합니다. *리소스* 를 생략 하면 대상은 *경로*에서 마지막 디렉터리입니다.  
   
  *리소스나*  

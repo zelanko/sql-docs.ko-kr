@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e0838c688b0518bf1fc7ed6c5d65c3ef03d0a7aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928314"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>모델&gt;에서 &lt;선택 합니다. SAMPLE_CASES (DMX)
@@ -32,19 +32,19 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
+ 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  쉼표로 구분된 관련 열 식별자 목록입니다.  
   
- *model*  
+ *모델링*  
  모델 식별자입니다.  
   
  *조건 목록*  
- (선택 사항) 열 목록에서 반환되는 값을 제한하는 조건입니다.  
+ 선택 사항입니다. 열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
- *식*  
- (선택 사항) 스칼라 값을 반환하는 식입니다.  
+ *expression*  
+ 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  샘플 사례가 생성되지만 실제로 학습 데이터에는 없을 수 있습니다. 반환된 사례는 지정된 내용 노드와 관련됩니다.  
@@ -63,6 +63,6 @@ WHERE IsInNode('000000003')
  [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
- [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
+ [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

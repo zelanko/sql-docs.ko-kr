@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920012"
 ---
 # <a name="clone-method-ado"></a>Clone 메서드(ADO)
@@ -67,19 +67,19 @@ rsNew.Filter = rsOriginal.Filter
   
  다음 표에서는 모든 **레코드 집합** 이벤트의 전체 목록을 제공 합니다. **Clone** 메서드를 사용 하 여 생성 된 모든 레코드 집합에 대해 유효 하 고 트리거되는 지 여부를 나타냅니다.  
   
-|행사|복제에서 트리거 되었습니까?|  
+|이벤트|복제에서 트리거 되었습니까?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|예|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|예|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|예|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|yes|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|예|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|yes|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|예|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|yes|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|yes|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|예|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|예|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|아니요|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|아니요|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|아니요|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|예|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|예|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|아니요|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|아니요|  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

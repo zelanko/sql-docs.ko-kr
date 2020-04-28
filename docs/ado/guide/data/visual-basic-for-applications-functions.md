@@ -16,10 +16,10 @@ ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923469"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic for Applications 기능
@@ -32,18 +32,18 @@ ms.locfileid: "67923469"
 |ChrB $|CInt|CLng|Cos|CSng|CStr|  
 |Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|일|DDB|  
-|Error|Error$|Exp|해결|형식|Format$|  
+|Error|Error$|Exp|Fix|형식|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
 |Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Left|  
-|LeftB|Left$|LeftB $|Len|로그|LTrim.|  
-|LTrim$|Mid|Mid$|분|MIRR|Month|  
-|Now|NPer|NPV|Oct|Oct$|Pmt|  
+|LeftB|Left$|LeftB $|Len|로그|LTrim|  
+|LTrim$|Mid|Mid$|Minute|MIRR|월|  
+|지금|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|비용|RGB|Right|  
 |는|Right$|는 $|Rnd|RTrim|RTrim $|  
-|Second|Sgn|Sin|SLN|공백|Space$|  
+|초|Sgn|Sin|SLN|Space|Space$|  
 |Sqr|Str|Str$|StrComp|StrConv|String|  
-|String$|SYD|Tan|Time|Time$|타이머|  
+|String$|SYD|Tan|시간|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|요일|Year||  
   

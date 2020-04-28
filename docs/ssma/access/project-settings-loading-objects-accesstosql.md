@@ -10,10 +10,10 @@ ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929422"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>프로젝트 설정 (개체 로드) (AccessToSQL)
