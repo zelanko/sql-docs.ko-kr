@@ -20,23 +20,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6df931b1d79d930aa7900e8fbc6980aec58b9171
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387753"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLNCLI(네이티브 클라이언트 OLE DB 공급자)는 데이터에 액세스하는 데 사용되는 하위 수준 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
+SQLNCLI [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Native Client OLE DB provider)는 데이터 액세스에 사용 되는 하위 수준 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 애플리케이션에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 수 있는 OLE DB 지원을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 OLE DB 버전 2.0 을 준수하는 공급자입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
  
 > [!IMPORTANT]
-> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLNCLI(네이티브 클라이언트 OLE DB)는 더 이상 사용되지 않으며 새 개발 작업에는 사용하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.
+> Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB (SQLNCLI)는 더 이상 사용 되지 않으며 새로운 개발 작업에 사용 하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트되는 새로운 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md)(MSOLEDBSQL)를 사용하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81387753"
   
 -   [행 집합](../../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
--   [저장 절차](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
+-   [저장 프로시저](../../../relational-databases/native-client/ole-db/stored-procedures.md)  
   
 -   [BLOB 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "81387753"
   
 -   [큰 CLR 사용자 정의 형식&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md)  
   
--   [올레 DB &#40;파일스트림 지원&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   
 -   [트랜잭션](../../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "81387753"
   
 -   [스파스 열 지원&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md)  
   
--   [OLE DB&#41; 참조를 &#40;SQL 서버 네이티브 클라이언트](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+-   [SQL Server Native Client &#40;OLE DB&#41; 참조](../../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
 -   [OLE DB 방법 도움말 항목](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 분석 서비스에 대한 MDX 쿼리 디자이너의 매개 변수 정의(보고서 작성기 및 SSRS) | 마이크로 소프트 문서
+title: Analysis Services에 대 한 MDX 쿼리 디자이너에서 매개 변수 정의 (보고서 작성기 및 SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388530"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의(보고서 작성기 및 SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388530"
      보고서 매개 변수에 대해 사용 가능한 값을 제공하는 데이터 세트를 보려면 보고서 데이터 창의 빈 영역을 마우스 오른쪽 단추로 클릭한 다음, **숨겨진 데이터 세트 표시**를 클릭합니다. 보고서 데이터 창에 보고서의 모든 데이터 세트가 표시됩니다.
 
 ## <a name="see-also"></a>참고 항목
- [MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [분석 서비스 MDX 쿼리 디자이너 사용자 인터페이스에](analysis-services-mdx-query-designer-user-interface.md) 대한 분석 서비스 연결 유형
+ MDX &#40;SSRS&#41;[ANALYSIS SERVICES Mdx 쿼리 디자이너 사용자 인터페이스](analysis-services-mdx-query-designer-user-interface.md) [에 대 한 Analysis Services 연결 유형](analysis-services-connection-type-for-mdx-ssrs.md)
 
 

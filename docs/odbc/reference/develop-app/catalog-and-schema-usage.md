@@ -1,5 +1,5 @@
 ---
-title: 카탈로그 및 스키마 사용 | 마이크로 소프트 문서
+title: 카탈로그 및 스키마 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ ms.assetid: 84f7ef61-1ef1-46f3-9678-b087aa8e8e34
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 245bd007f070a94689283830ba7a1362e31353e6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306254"
 ---
 # <a name="catalog-and-schema-usage"></a>카탈로그 및 스키마 사용
-데이터 원본이 카탈로그 및 스키마 이름을 모든 SQL 문에서 개체 이름 식별자로 반드시 지원하지는 않습니다. 데이터 원본은 DML(데이터 조작 언어) 명령문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 문 중 하나 이상의 SQL 문 클래스에서 카탈로그 및 스키마 이름을 지원할 수 있습니다. 카탈로그 및 스키마 이름을 사용할 수 있는 SQL 문의 클래스를 확인하려면 응용 프로그램에서 SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션을 사용하여 **SQLGetInfo를** 호출합니다.
+데이터 원본에서는 모든 SQL 문의 개체 이름 식별자로 카탈로그 및 스키마 이름을 지원 하지 않아도 됩니다. 데이터 소스는 DML (데이터 조작 언어) 문, 프로시저 호출, 테이블 정의 문, 인덱스 정의 문 및 권한 정의 문과 같은 SQL 문 클래스 중 하나 이상에서 카탈로그 및 스키마 이름을 지원할 수 있습니다. 카탈로그 및 스키마 이름을 사용할 수 있는 SQL 문의 클래스를 확인 하기 위해 응용 프로그램은 SQL_CATALOG_USAGE 및 SQL_SCHEMA_USAGE 옵션으로 **SQLGetInfo** 를 호출 합니다.

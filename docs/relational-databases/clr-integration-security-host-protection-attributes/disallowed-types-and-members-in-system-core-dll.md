@@ -1,6 +1,6 @@
 ---
-title: System.Core.dll에서 허용되지 않는 유형 및 멤버 | 마이크로 소프트 문서
-description: SQL Server CLR 프로그래밍은 HostProtectionResource 열거형에 대한 일부 값을 가진 형식 또는 멤버를 허용하지 않습니다. 이 문서에서는 System.Core.dll 허용되지 않는 값을 나열합니다.
+title: System.object에서 허용 되지 않는 형식 및 멤버 | Microsoft Docs
+description: SQL Server CLR 프로그래밍에서는 HostProtectionResource 열거형의 일부 값을 가진 형식 또는 멤버를 허용 하지 않습니다. 이 문서에서는 System.object를 사용할 때 허용 되지 않는 값을 나열 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e89af3c6f93fb6c8576a6e627eed8e984fb0f0ae
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486871"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll에 허용되지 않는 유형 및 멤버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]공통 언어 통합 (CLR) 프로그래밍은 **System.Security.Permission.HostProtectionResource** 열거형 **외부 프로세스Mgmt,** **외부 스레딩,** **MayLeakOnAbort,** **보안 인프라,** **Self비런싱 프로세스Mgmnt,** **Self비런싱스런싱, 공유** **상태,** **동기화,** 또는 **UI를**지정하는 **호스트 보호 특성이** 있는 형식 또는 멤버의 사용을 허용하지 않습니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.Core.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CLR (공용 언어 통합) 프로그래밍에서는 **Externalprocessmgmt**, **externalprocessor**, **MayLeakOnAbort**, **securityinfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **sharedstate**, **Synchronization**또는 **UI**값을 사용 하 여 **HostProtectionResource** 열거형을 지정 하는 **HostProtectionAttribute** 을 포함 하는 형식 또는 멤버를 사용할 때를 허용 하지 않습니다. 다음 표에는 HPA(호스트 보호 특성) 값이 허용되지 않는 System.Core.dll 어셈블리의 멤버 및 유형이 나열되어 있습니다.  
   
 > [!NOTE]  
 >  이 목록은 지원되는 어셈블리에서 생성되었습니다. 자세한 내용은 [Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.  
@@ -130,9 +130,9 @@ ms.locfileid: "81486871"
   
 ## <a name="see-also"></a>참고 항목  
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Microsoft.VisualBasic.dll에서 허용되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [mscorlib.dll에서 허용되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.dll에서 허용되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [Microsoft.visualbasic에 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Mscorlib.dll에 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System.object의 허용 되지 않는 형식 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
  [System.Data.dll에 허용되지 않는 유형 및 멤버](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
   
   

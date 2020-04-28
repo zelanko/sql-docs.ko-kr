@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b5aec5d77f7355b601644907034bce0996080ab
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388377"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client(ODBC)
@@ -41,11 +41,11 @@ ms.locfileid: "81388377"
   
 -   [SQL Server Native Client ODBC 드라이버 애플리케이션 만들기](../../../relational-databases/native-client/odbc/creating-a-driver-application.md)  
   
--   [SQL 서버와 통신 &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [SQL Server &#40;ODBC&#41;와 통신](../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
 -   [ODBC&#41;&#40;쿼리 실행](../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
--   [ODBC&#41;&#40;처리 결과](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+-   [ODBC&#41;&#40;결과 처리](../../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
 -   [ODBC&#41;&#40;커서 사용](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
@@ -63,24 +63,24 @@ ms.locfileid: "81388377"
   
 -   [ODBC 드라이버 성능 프로파일링](../../../relational-databases/native-client/odbc/profiling-odbc-driver-performance.md)  
   
--   [ODBC&#41;&#40;테이블 값 매개 변수](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [ODBC&#41;&#40;테이블 반환 매개 변수](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [ODBC&#41;&#40;날짜 및 시간 개선](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [ODBC&#41;&#40;날짜 및 시간 기능 향상](../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
--   [대형 CLR 사용자 정의 유형 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
+-   [ODBC&#41;&#40;많은 CLR 사용자 정의 형식](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)  
   
--   [파일 스트림 지원 &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
+-   [ODBC&#41;&#40;FILESTREAM 지원](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
 -   [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;ODBC&#41;](../../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)  
   
--   [희소 열 은 ODBC&#41;&#40;지원](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
+-   [스파스 열 &#40;ODBC&#41;지원](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)  
   
--   [ODBC&#41; 참조를 &#40;SQL 서버 네이티브 클라이언트](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
+-   [ODBC&#41; 참조 &#40;SQL Server Native Client](https://msdn.microsoft.com/library/06b7edee-8636-49d9-9b5c-2c710bf4fa2d)  
   
 -   [ODBC 방법 도움말 항목](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [SQL Server Native Client 설치](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

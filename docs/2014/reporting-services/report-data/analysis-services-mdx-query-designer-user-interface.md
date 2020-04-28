@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388701"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Analysis Services MDX 쿼리 디자이너 사용자 인터페이스
@@ -40,7 +40,7 @@ ms.locfileid: "81388701"
 
  다음 표에서는 이 모드의 창을 나열합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |큐브 선택 단추(**...**)|현재 선택한 큐브를 표시합니다.|
 |메타데이터 창|선택한 큐브에 정의된 측정값, KPI(핵심 성과 지표) 및 차원의 계층 목록을 표시합니다.|
@@ -61,7 +61,7 @@ ms.locfileid: "81388701"
 ### <a name="graphical-mdx-query-designer-toolbar-in-design-mode"></a>디자인 모드의 그래픽 MDX 쿼리 디자이너 도구 모음
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 MDX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 나열합니다.
 
-|단추|Description|
+|단추|설명|
 |------------|-----------------|
 |**텍스트로 편집**|이 데이터 원본 유형에 대해서는 사용할 수 없습니다.|
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|
@@ -72,7 +72,7 @@ ms.locfileid: "81388701"
 |![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
 |![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
 |![집계 표시 단추](../../analysis-services/media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|
-|![삭제](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|
+|![Delete](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|
 |![쿼리 매개 변수 대화 상자 아이콘](../../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 보고서 매개 변수가 자동으로 만들어집니다. 쿼리 매개 변수의 값은 보고서 매개 변수를 참조하는 식으로 설정됩니다.|
 |![쿼리 준비 단추](../../analysis-services/media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
@@ -88,7 +88,7 @@ ms.locfileid: "81388701"
 
  다음 표에서는 이 모드의 창을 나열합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |큐브 선택 단추(**...**)|현재 선택한 큐브를 표시합니다.|
 |메타데이터/함수/템플릿 창|선택한 큐브에 정의된 측정값, KPI 및 차원의 계층 목록을 표시합니다.|
@@ -115,6 +115,6 @@ ms.locfileid: "81388701"
 -   **집계 표시**(![집계 표시 단추](../../analysis-services/media/rsqdicon-showaggregations.gif "집계 표시 단추"))
 
 ## <a name="see-also"></a>참고 항목
- [보고서 작성기 및 SSRS를 &#40;분석 서비스에 대한 MDX 쿼리 설계자에서 매개 변수정의 보고서 작성기 및](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [임베디드 데이터 &#40;집합을 생성할&#41;DMX &#40;SSRS에 대한 공유 데이터 집합 또는 임베디드 데이터 집합 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 분석 서비스 연결 유형&#41;DMX &#40;SSRS&#41;대한 [SSRS](analysis-services-connection-type-for-dmx-ssrs.md) [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services Connection Type for MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)&#41;
+ [Analysis Services &#40;보고서 작성기 및 ssrs에 대 한 Mdx 쿼리 디자이너에서 매개 변수를 정의 하&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) &#40;[및](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Ssrs 보고서 작성기&#41;[연결 형식](analysis-services-connection-type-for-dmx-ssrs.md) Analysis Services &#40;Ssrs&#41;SSRS Analysis Services [rsreportdesigner.config 구성 파일](../report-server/rsreportdesigner-configuration-file.md) [&#40;mdx&#41;ssrs에](analysis-services-connection-type-for-mdx-ssrs.md) 대 한 연결 형식
 
 

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388320"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
@@ -50,13 +50,13 @@ ms.locfileid: "81388320"
 
  다음 표에서는 각 창의 기능을 설명합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |쿼리|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리 텍스트를 표시합니다. 이 창을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 작성하거나 편집할 수 있습니다.|
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|
 
 #### <a name="example"></a>예제
- 다음 쿼리는 스키마에 대한 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** `ContactType` 데이터베이스 테이블의 성 목록을 반환합니다. `Person`
+ 다음 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스 `ContactType` 테이블에서 `Person` 스키마에 대 한 마지막 이름 목록을 반환 합니다.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -73,13 +73,13 @@ SELECT Name FROM Person.ContactType
 
  다음 표에서는 각 창의 기능을 설명합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |쿼리|저장 프로시저의 이름 및 입력 매개 변수(있는 경우)를 표시합니다.|
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|
 
 #### <a name="example"></a>예제
- 다음 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 저장 `uspGetWhereUsedProductID`프로시저를 호출합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.
+ 다음 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 저장 프로시저 `uspGetWhereUsedProductID`를 호출 합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  **명령 typeTableDirect**를 선택하면 텍스트 기반 쿼리 디자이너에 쿼리 창 및 결과 창이 제공됩니다. 테이블을 입력하고 **실행** 단추를 클릭할 경우 해당 테이블의 모든 열이 반환됩니다.
 
 #### <a name="example"></a>예제
- 데이터 원본 형식 OLE DB의 경우 다음 데이터 집합 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스의 모든 연락처 형식에 대한 결과 집합을 반환합니다.
+ OLE DB 데이터 원본 유형의 경우 다음 데이터 집합 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스에 있는 모든 연락처 유형에 대 한 결과 집합을 반환 합니다.
 
  `Person.ContactType`
 
  테이블 이름 Person.ContactType을 입력하면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 `SELECT * FROM Person.ContactType`을 만드는 것과 동일합니다.
 
 ## <a name="see-also"></a>참고 항목
- [관계형 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](relational-query-designer-user-interface-report-builder.md) [쿼리 디자이너 &#40;보고서 작성기&#41;](../query-designers-report-builder.md)
+ [관계형 쿼리 디자이너 사용자 인터페이스 &#40;보고서 작성기&#41;](relational-query-designer-user-interface-report-builder.md) [쿼리 디자이너 &#40;보고서 작성기](../query-designers-report-builder.md)
 
 

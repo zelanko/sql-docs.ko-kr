@@ -1,5 +1,5 @@
 ---
-title: 비주얼 폭스프로 용어 | 마이크로 소프트 문서
+title: Visual FoxPro 용어 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 159314e3dddb946bceaeab5079ac81a685d087d6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307574"
 ---
 # <a name="visual-foxpro-terminology"></a>Visual FoxPro 용어
-**데이터베이스**  
- Visual FoxPro에서 데이터베이스 파일에는 .dbc 확장명이 있으며 하나 이상의 **테이블을**포함할 수 있습니다.  
+**database**  
+ Visual FoxPro에서 데이터베이스 파일의 확장명은 dbc이 고 하나 이상의 **테이블**을 포함할 수 있습니다.  
   
  **데이터베이스 테이블**  
- [Visual FoxPro]에서 데이터베이스와 연결된 테이블입니다. 대조 **무료 테이블**.  
+ Visual FoxPro에서 데이터베이스와 연결 된 테이블입니다. **사용 가능한 테이블**을 대조 합니다.  
   
- **무료 테이블**  
- [Visual FoxPro]에서 데이터베이스와 연결되지 않은 테이블입니다.  
+ **자유 테이블**  
+ Visual FoxPro에서 데이터베이스와 연결 되지 않은 테이블입니다.  
   
- FoxPro 버전 2.x에서 만든 .dbf 파일은 Visual FoxPro 테이블로 변환되어 Visual FoxPro 데이터베이스에 추가되지 않는 한 사용 가능한 테이블입니다. 대비 **데이터베이스 테이블**.  
+ FoxPro 버전 2.x에서 만든 .dbf 파일은 Visual FoxPro 테이블로 변환 되 고 Visual FoxPro 데이터베이스에 추가 되지 않는 한 빈 테이블입니다. **데이터베이스 테이블**을 대조 합니다.  
   
- **예비 SQL 문**  
- **SQLPrepare** 함수에서 아직 처리되지 않은 SQL 문입니다. 시각적 FoxPro ODBC 드라이버를 사용 하 여이 기능에 대 한 자세한 내용은 [SQLPrepare (시각적 FoxPro ODBC 드라이버)를](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)참조 하십시오.  
+ **preparable SQL 문**  
+ **Sqlprepare** 함수에서 아직 처리 되지 않은 SQL 문입니다. Visual FoxPro ODBC 드라이버를 사용 하는이 함수에 대 한 자세한 내용은 [Sqlprepare (Visual FOXPRO Odbc 드라이버)](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)를 참조 하세요.  
   
- **테이블**  
- Visual FoxPro에서 레코드는 테이블에 저장됩니다. 테이블의 각 행은 레코드를 나타내고 테이블의 열은 레코드 필드를 나타냅니다. 각 Visual FoxPro 테이블은 .dbf 확장이 있는 자체 파일에 저장됩니다. Visual FoxPro 테이블은 데이터베이스와 연결할 수 있습니다.  
+ **table**  
+ Visual FoxPro에서 레코드는 테이블에 저장 됩니다. 테이블의 각 행은 레코드를 나타내고, 테이블의 열은 레코드의 필드를 나타냅니다. 각 Visual FoxPro 테이블은 확장명이 .dbf 인 자체 파일에 저장 됩니다. Visual FoxPro 테이블을 데이터베이스에 연결할 수 있습니다.  
   
- 폭스 프로 버전 2. *x* 테이블은 데이터베이스와 연결되지 않습니다.
+ FoxPro 버전 2. *x* 테이블은 데이터베이스와 연결 되지 않습니다.

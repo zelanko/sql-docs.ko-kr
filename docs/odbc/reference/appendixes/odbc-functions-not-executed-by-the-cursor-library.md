@@ -1,5 +1,5 @@
 ---
-title: 커서 라이브러리에서 실행되지 않는 ODBC 함수 | 마이크로 소프트 문서
+title: 커서 라이브러리에 의해 실행 되지 않는 ODBC 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ff9d685cf4a509b84142d91f76d41eb7ca3508ee
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308044"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>커서 라이브러리에 의해 실행되지 않는 ODBC 함수
 > [!IMPORTANT]  
->  이 기능은 이후 버전의 Windows에서 제거됩니다. 새 개발 작업에서 이 기능을 사용하지 말고 현재 이 기능을 사용하는 응용 프로그램을 수정할 계획입니다. 드라이버의 커서 기능을 사용하는 것이 좋습니다.  
+>  이 기능은 이후 버전의 Windows에서 제거 될 예정입니다. 새 개발 작업에서는이 기능을 사용 하지 않도록 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하십시오. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
- 커서 라이브러리는 다음 기능을 실행하지 않습니다. 응용 프로그램이 이러한 함수 중 하나를 호출하면 드라이버 관리자는 커서 라이브러리가 아닌 드라이버를 호출합니다.  
+ 커서 라이브러리는 다음 함수를 실행 하지 않습니다. 응용 프로그램에서 이러한 함수 중 하나를 호출 하면 드라이버 관리자는 커서 라이브러리가 아니라 드라이버를 호출 합니다.  
   
 |||  
 |-|-|  

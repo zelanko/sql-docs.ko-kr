@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388334"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>SAP NetWeaver BI 쿼리 디자이너 사용자 인터페이스
@@ -61,7 +61,7 @@ ms.locfileid: "81388334"
 |![계산 멤버 추가](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다.|
 |![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
 |![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
-|![Delete](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|
+|![Delete](../../analysis-services/media/rsqdicon-delete.gif "삭제")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|
 |![쿼리 매개 변수 대화 상자 아이콘](../../analysis-services/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**변수** 대화 상자를 표시합니다. 쿼리 큐브만 변수를 지원하기 때문에 이 단추는 선택한 큐브가 쿼리 큐브인 경우에만 사용할 수 있습니다. 기본값을 변수에 할당할 경우 해당 보고서 매개 변수가 만들어집니다.|
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
 |![쿼리 취소](../../analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|
@@ -101,9 +101,9 @@ ms.locfileid: "81388334"
 
 -   **자동 실행**(![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))
 
--   **삭제**(![삭제](../../analysis-services/media/rsqdicon-delete.gif "DELETE"))
+-   **삭제**(![삭제](../../analysis-services/media/rsqdicon-delete.gif "삭제"))
 
 ## <a name="see-also"></a>참고 항목
- [RSReportDesigner 구성 파일을](../report-server/rsreportdesigner-configuration-file.md) [&#41;보고서 작성기 및 SSRS를 &#40;공유 데이터 집합 또는 포함된 데이터 집합](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 만들기
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 구성 파일](../report-server/rsreportdesigner-configuration-file.md) 을 만듭니다.
 
 

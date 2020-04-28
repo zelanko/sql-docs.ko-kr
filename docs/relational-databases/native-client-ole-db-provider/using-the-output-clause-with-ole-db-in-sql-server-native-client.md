@@ -1,5 +1,5 @@
 ---
-title: 출력 절, 올레 DB
+title: OUTPUT 절, OLE DB
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c25d8700e001f5757f514e630bca6fe815d7349a
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388552"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>SQL Server Native Client의 OLE DB에서 OUTPUT 절 사용

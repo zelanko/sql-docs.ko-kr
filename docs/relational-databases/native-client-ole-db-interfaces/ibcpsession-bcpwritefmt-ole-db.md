@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dfa3846cda58cdbc3e3ce673df87efde8b5844b
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307352"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt(OLE DB)
@@ -52,7 +52,7 @@ HRESULT BCPWriteFmt(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자별 오류가 발생했습니다. 자세한 내용은 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용합니다.  
+ 공급자별 오류가 발생 했습니다. 자세한 내용은 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용 합니다.  
   
  E_OUTOFMEMORY  
  메모리 부족 오류가 발생했습니다.  
@@ -61,7 +61,7 @@ HRESULT BCPWriteFmt(
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 메서드를 호출하기 전에 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCP세션 &#40;올레 DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

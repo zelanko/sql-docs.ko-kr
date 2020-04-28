@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 액세스 아키텍처 | 마이크로 소프트 문서
+title: 데이터베이스 액세스 아키텍처 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b0993dc9891d6ed74f6d149692dac2555346d3d1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306504"
 ---
 # <a name="database-access-architecture"></a>데이터베이스 액세스 아키텍처
-ODBC 개발의 질문 중 하나는 데이터베이스 액세스 아키텍처의 어느 부분을 표준화하는 것이었습니다. 이전 섹션에서 설명한 SQL 프로그래밍 인터페이스(임베디드 SQL, SQL 모듈 및 CLI)는 이 아키텍처의 한 부분일 뿐입니다. 실제로 ODBC는 주로 개인용 컴퓨터 기반 응용 프로그램을 미니 컴퓨터 및 메인프레임 DBMS에 연결하기 위한 것이었기 때문에 표준화될 수 있는 네트워크 구성 요소도 많이 있었습니다.  
+ODBC 개발의 질문 중 하나는 표준화를 위한 데이터베이스 액세스 아키텍처의 일부입니다. 이전 섹션인 embedded SQL, SQL 모듈 및 CLIs에 설명 된 SQL 프로그래밍 인터페이스는이 아키텍처의 한 부분에 불과합니다. 사실 ODBC는 주로 개인용 컴퓨터 기반 응용 프로그램을 minicomputer 및 메인프레임 Dbms에 연결 하기 위한 것 이기 때문에 많은 네트워크 구성 요소를 표준화 했을 수 있습니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

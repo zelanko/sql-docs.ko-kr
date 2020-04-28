@@ -1,6 +1,6 @@
 ---
-title: 일반 및 컨텍스트 연결 제한 | 마이크로 소프트 문서
-description: 이 문서에서는 컨텍스트 및 일반 연결을 통해 Microsoft SQL Server 프로세스에서 실행되는 코드와 관련된 제한 사항에 대해 설명합니다.
+title: 일반 및 컨텍스트 연결에 대 한 제한 사항 | Microsoft Docs
+description: 이 문서에서는 컨텍스트 및 일반 연결을 통해 Microsoft SQL Server 프로세스에서 실행 되는 코드와 관련 된 제한 사항을 설명 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485365"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>컨텍스트 연결 및 일반 연결 - 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 컨텍스트 및 일반 연결을 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행되는 코드와 관련된 제한 사항에 대해 설명합니다.  
+  이 항목에서는 컨텍스트 및 일반 연결을 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 실행 되는 코드와 관련 된 제한 사항을 설명 합니다.  
   
 ## <a name="restrictions-on-context-connections"></a>컨텍스트 연결에 대한 제한 사항  
  애플리케이션을 개발할 때는 컨텍스트 연결에 적용되는 다음과 같은 제한 사항을 고려해야 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "81485365"
   
 -   "context connection=true"를 사용하는 경우 다른 연결 문자열 키워드를 사용할 수 없습니다.  
   
--   **SqlConnection.DataSource** 속성은 **SqlConnection의** 연결 문자열이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름 대신 "컨텍스트 연결=true"인 경우 null을 반환합니다.  
+-   **SqlConnection** 속성은 인스턴스의 이름이 아니라 "context connection = true" 인 **SqlConnection** 에 대 한 연결 문자열이 있는 경우 null을 반환 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 -   명령이 컨텍스트 연결에 대해 실행되는 경우에는 **SqlCommand.CommandTimeout** 속성을 설정해도 아무 영향이 없습니다.  
   

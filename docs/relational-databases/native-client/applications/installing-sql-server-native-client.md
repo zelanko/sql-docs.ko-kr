@@ -22,10 +22,10 @@ helpviewer_keywords:
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388220"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
@@ -34,9 +34,9 @@ ms.locfileid: "81388220"
 
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0은 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]을(를) 설치할 때 설치됩니다. 
  
- SQL Server 2016 네이티브 클라이언트가 없습니다. 자세한 내용은 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)를 참조하세요. 
+ SQL Server 2016 Native Client가 없습니다. 자세한 내용은 [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md)를 참조하세요. 
  
-sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. SQL Server 네이티브 클라이언트의 최신 버전을 다운로드하려면 [Microsoft® SQL Server® 2012 기능 팩으로](https://www.microsoft.com/download/confirmation.aspx?id=29065)이동하십시오. SQL Server 2012 이전의 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트도 컴퓨터에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치되어 있는 경우 네이티브 클라이언트 11.0은 이전 버전과 나란히 설치됩니다.  
+sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. 최신 버전의 SQL Server Native Client을 다운로드 하려면 [Microsoft® SQL Server® 2012 기능 팩](https://www.microsoft.com/download/confirmation.aspx?id=29065)으로 이동 합니다. SQL Server 2012 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client가 컴퓨터에도 설치 되어 있는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client 11.0은 이전 버전과 나란히 설치 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 파일(sqlncli11.dll, sqlnclir11.rll 및 s11ch_sqlncli.chm)은 다음 위치에 설치됩니다.  
   
@@ -55,7 +55,7 @@ sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다
   
  x64 및 Itanium 버전의 sqlncli.msi가 32비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 설치합니다. 애플리케이션을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   
- sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 네이티브 클라이언트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발된 응용 프로그램 실행을 지원하는 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 다음은 그 예입니다.  
+ sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 Native Client를 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발 된 응용 프로그램을 실행할 수 있도록 지 원하는 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 다음은 그 예입니다.  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -63,14 +63,14 @@ sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다
  msiexec 명령에 /passive, /qn, /qb, or /qr 옵션을 사용할 경우 IACCEPTSQLNCLILICENSETERMS=YES를 지정하여 최종 사용자 사용권 약관에 동의함을 명시적으로 나타내야 합니다. 이 옵션은 모두 대문자로 지정해야 합니다.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>SQL Server Native Client 제거  
- 서버 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 도구와 같은 응용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로그램은 네이티브 클라이언트에 종속되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모든 종속 응용 프로그램이 제거될 때까지 네이티브 클라이언트를 제거하지 않는 것이 중요합니다. 응용 프로그램이 네이티브 클라이언트에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 종속되어 있다는 경고가 있는 공급자사용자에게는 다음과 같이 MSI에서 APPGUID 설치 옵션을 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 도구와 같은 응용 프로그램은 native client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 종속 되므로 모든 종속 응용 프로그램이 제거 될 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 때까지 native client를 제거 하지 않는 것이 중요 합니다. 응용 프로그램이 Native Client에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 종속 된다는 경고를 공급자에 게 제공 하려면 다음과 같이 MSI에서 appguid 설치 옵션을 사용 합니다.  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
  APPGUID에는 제품 코드를 전달해야 합니다. 제품 코드는 Microsoft 설치 관리자를 사용하여 애플리케이션 설치 프로그램 번들을 작성할 때 만들어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 네이티브 클라이언트로 응용 프로그램 빌드](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
+ [SQL Server Native Client를 사용 하 여 응용 프로그램 빌드](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [설치 방법 도움말 항목](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   
   

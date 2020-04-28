@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64e93ae57c89ec63627433a8ba29ba354074fb5f
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307446"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl(OLE DB)
@@ -50,10 +50,10 @@ HRESULT BCPControl(
 |BCP_OPTION_BATCH|일괄 처리당 행 수입니다. 기본값은 0으로, 데이터를 추출할 때 테이블에 있는 모든 행 수를 나타내거나 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사할 때 사용자 데이터 파일에 있는 모든 행 수를 나타냅니다. 1보다 작은 값을 지정하면 BCP_OPTION_BATCH는 기본값으로 다시 설정됩니다.|  
 |BCP_OPTION_DELAYREADFMT|부울 값이 true로 설정된 경우 [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md)에서 실행 시 읽습니다. 부울 값이 false(기본값)로 설정된 경우, IBCPSession::BCPReadFmt에서 즉시 형식 파일을 읽습니다. **BCP_OPTION_DELAYREADFMT**가 true이고 IBCPSession::BCPColumns 또는 IBCPSession::BCPColFmt를 호출하는 경우 시퀀스 오류가 발생합니다.<br /><br /> `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` 및 IBCPSession::BCPWriteFmt를 호출한 후 `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))`을 호출하는 경우에도 시퀀스 오류가 발생합니다.<br /><br /> 자세한 내용은 [메타데이터 검색](../../relational-databases/native-client/features/metadata-discovery.md)을 참조하세요.|  
 |BCP_OPTION_FILECP|*iValue* 인수는 데이터 파일의 코드 페이지 번호를 포함합니다. 1252나 850과 같은 코드 페이지 번호를 지정하거나 다음 값 중 하나를 지정할 수 있습니다.<br /><br /> BCP_FILECP_ACP: 파일의 데이터가 클라이언트의 Microsoft Windows® 코드 페이지에 있습니다.<br /><br /> BCP_FILECP_OEMCP: 파일의 데이터가 클라이언트의 OEM 코드 페이지에 있습니다(기본값).<br /><br /> BCP_FILECP_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.|  
-|BCP_OPTION_FILEFMT|데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 120이 기본값입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다.  예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 **varchar(max)** 열로 가져오려면 80을 지정해야 합니다. 마찬가지로 **varchar(max)** 열에서 데이터를 내보낼 때 80을 지정하면 해당 데이터가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 텍스트 열이 저장되는 것과 같이 저장되어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.|  
+|BCP_OPTION_FILEFMT|데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 기본값은 120입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다.  예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 **varchar(max)** 열로 가져오려면 80을 지정해야 합니다. 마찬가지로 **varchar(max)** 열에서 데이터를 내보낼 때 80을 지정하면 해당 데이터가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 텍스트 열이 저장되는 것과 같이 저장되어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.|  
 |BCP_OPTION_FIRST|복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.|  
 |BCP_OPTION_FIRSTEX|BCP out 작업의 경우 데이터 파일에 복사할 데이터베이스 테이블의 첫 번째 행을 지정합니다.<br /><br /> BCP in 작업의 경우 데이터베이스 테이블에 복사할 데이터 파일의 첫 번째 행을 지정합니다.<br /><br /> *iValue* 매개 변수는 값을 포함하는 부호 있는 64비트 정수 주소여야 합니다. BCPFIRSTEX에 전달할 수 있는 최대값은 2^63-1입니다.|  
-|BCP_OPTION_FMTXML|생성되는 서식 파일이 XML 형식이 되도록 지정하는 데 사용됩니다. 이 옵션은 기본적으로 해제되어 있으며 서식 파일은 텍스트 파일로 저장됩니다. XML 서식 파일은 더 높은 유연성을 제공하지만 몇 가지 제약 조건이 있습니다. 예를 들어 이전 서식 파일에서는 가능했던 작업인 필드의 접두사와 종결자를 동시에 지정할 수 없습니다.<br /><br /> 참고: XML 형식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구가 네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 함께 설치된 경우에만 지원됩니다.|  
+|BCP_OPTION_FMTXML|생성되는 서식 파일이 XML 형식이 되도록 지정하는 데 사용됩니다. 이 옵션은 기본적으로 해제되어 있으며 서식 파일은 텍스트 파일로 저장됩니다. XML 서식 파일은 더 높은 유연성을 제공하지만 몇 가지 제약 조건이 있습니다. 예를 들어 이전 서식 파일에서는 가능했던 작업인 필드의 접두사와 종결자를 동시에 지정할 수 없습니다.<br /><br /> 참고: XML 서식 파일은 도구를 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함께 설치한 경우에만 지원 됩니다.|  
 |BCP_OPTION_HINTS|*iValue* 인수는 와이드 문자열 포인터를 포함합니다. 주소가 지정된 문자열에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 처리 힌트나 결과 집합을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 지정합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 둘 이상의 결과 집합을 반환하도록 지정된 경우 첫 번째 결과 집합 다음에 오는 결과 집합은 모두 무시됩니다.|  
 |BCP_OPTION_KEEPIDENTITY|*iValue* 인수가 TRUE로 설정된 경우 이 옵션은 대량 복사 메서드에서 IDENTITY 제약 조건을 사용하여 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열에 제공된 데이터 값을 삽입하도록 지정합니다. 입력 파일은 ID 열에 해당하는 값을 제공해야 합니다. 설정되지 않은 경우 삽입된 행에 대해 새 ID 값이 생성됩니다. 파일에서 ID 열에 대한 데이터는 모두 무시됩니다.|  
 |BCP_OPTION_KEEPNULLS|파일의 빈 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL 값으로 변환할지 여부를 지정합니다. *iValue* 인수가 TRUE로 설정된 경우 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL로 변환됩니다. 기본적으로 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 열의 기본값(있는 경우)으로 변환됩니다.|  
@@ -76,7 +76,7 @@ HRESULT BCPControl(
  메서드가 성공했습니다.  
   
  E_FAIL  
- 공급자별 오류가 발생했습니다. 자세한 내용은 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용합니다.  
+ 공급자별 오류가 발생 했습니다. 자세한 내용은 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 인터페이스를 사용 합니다.  
   
  E_UNEXPECTED  
  예기치 않은 메서드가 호출되었습니다. 예를 들어 이 함수를 호출하기 전에 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하지 않았습니다.  
@@ -85,7 +85,7 @@ HRESULT BCPControl(
  메모리 부족 오류가 발생했습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [IBCP세션 &#40;올레 DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
+ [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [대량 복사 작업 수행](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   
   

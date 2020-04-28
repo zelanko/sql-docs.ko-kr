@@ -1,5 +1,5 @@
 ---
-title: SQLCancel (비주얼 폭스프로 ODBC 드라이버) | 마이크로 소프트 문서
+title: SQLCancel (Visual FoxPro ODBC 드라이버) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ ms.assetid: 4f7baa1d-37ef-4051-ae13-7dc38033af16
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31aeb0dd49261454035376b63bbff2ccf6f03de1
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307974"
 ---
 # <a name="sqlcancel-visual-foxpro-odbc-driver"></a>SQLCancel(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
->  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함되어 있습니다. 이 함수에 대한 일반적인 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절한 항목을 참조하십시오.  
+>  이 항목에는 Visual FoxPro ODBC 드라이버 관련 정보가 포함 되어 있습니다. 이 함수에 대 한 일반 정보는 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)에서 적절 한 항목을 참조 하세요.  
   
  지원: 전체  
   
- ODBC API 적합성: 코어 레벨  
+ ODBC API 규칙: 코어 수준  
   
- 명령문 핸들, *hstmt에서*처리를 취소합니다.  
+ 문 핸들 *hstmt*의 처리를 취소 합니다.  
   
- 자세한 내용은 *ODBC 프로그래머의 참조에서* [SQLCancel을](../../odbc/reference/syntax/sqlcancel-function.md) 참조하십시오.
+ 자세한 내용은 *ODBC 프로그래머 참조*에서 [sqlcancel](../../odbc/reference/syntax/sqlcancel-function.md) (영문)을 참조 하세요.

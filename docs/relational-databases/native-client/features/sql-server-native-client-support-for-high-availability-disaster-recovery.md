@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388439"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
@@ -30,9 +30,9 @@ ms.locfileid: "81388439"
 >  연결 제한 시간을 늘리고 연결 재시도 논리를 구현하면 애플리케이션이 가용성 그룹에 연결될 가능성이 증가합니다. 또한 가용성 그룹 장애 조치(failover)로 인해 연결이 실패할 수 있으므로 실패한 연결을 다시 연결할 때까지 다시 시도하는 연결 재시도 논리를 구현해야 합니다.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
- SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=Yes**를 지정하세요. **MultiSubnetFailover는** SQL Server 2012의 모든 가용성 그룹 및 장애 조치 클러스터 인스턴스에 대해 더 빠른 장애 조치(failover)를 가능하게 하며, 단일 및 다중 서브넷 Always On topologies에 대한 장애 조치 시간을 크게 줄입니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
+ SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=Yes**를 지정하세요. **MultiSubnetFailover** 는 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치 (failover) 클러스터 인스턴스에 대해 빠른 장애 조치 (failover)를 지원 하며, 단일 및 다중 서브넷 Always On 토폴로지의 장애 조치 시간을 크게 줄입니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
   
- **MultiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=Yes**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이렇게 하면 항상 사용 가능 그룹 또는 항상 사용 중 장애 조치 클러스터 인스턴스중 하나를 장애 조치 한 후 더 빠르게 다시 연결할 수 있으며 단일 서브넷 및 다중 서브넷 가용성 그룹 및 장애 조치 클러스터 인스턴스 모두에 적용할 수 있습니다.  
+ **MultiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=Yes**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이를 통해 Always On 가용성 그룹 또는 Always On 장애 조치 (Failover) 클러스터 인스턴스의 장애 조치 (failover) 후 더 빠르게 다시 연결할 수 있으며, 단일 및 다중 서브넷 가용성 그룹과 장애 조치 (Failover) 클러스터 인스턴스 모두에 적용할 수 있습니다.  
   
  연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "81388439"
   
  다음 지침에 따라 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결하십시오.  
   
--   단일 서브넷 또는 다중 서브넷에 연결할 때 **MultiSubnetFailover** 연결 속성을 사용합니다. 둘 다성능을 향상시킵니다.  
+-   단일 서브넷 또는 다중 서브넷에 연결할 때 **MultiSubnetFailover** connection 속성을 사용 합니다. 이를 통해 성능이 향상 됩니다.  
   
 -   가용성 그룹에 연결하려면 가용성 그룹에 대한 가용성 그룹 수신기를 연결 문자열의 서버로 지정합니다.  
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   **MultiSubnetFailover** 연결 속성을 사용하는 응용 프로그램의 동작은 인증, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos 인증 또는 Windows 인증과 같은 인증 유형에 따라 영향을 받지 않습니다.  
+-   **MultiSubnetFailover** 연결 속성을 사용 하는 응용 프로그램의 동작은 인증 유형 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따라 영향을 받지 않습니다.  
   
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81388439"
   
 1.  보조 복제본 위치가 연결을 허용하도록 구성되어 있지 않은 경우  
   
-2.  응용 프로그램에서 **ApplicationIntent=ReadWrite(아래에** 설명)를 사용하고 보조 복제본 위치가 읽기 전용 액세스를 위해 구성된 경우입니다.  
+2.  응용 프로그램에서 **Applicationintent = ReadWrite** 를 사용 하 고 (아래 설명 참조) 보조 복제본 위치가 읽기 전용 액세스용으로 구성 되어 있는 경우  
   
  주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly**가 포함되어 있으면 연결이 실패합니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "81388439"
 ## <a name="odbc"></a>ODBC  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Native Client에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 지원하기 위해 다음과 같은 두 개의 ODBC 연결 문자열 키워드가 추가되었습니다.  
   
--   **응용 프로그램 의도**  
+-   **ApplicationIntent**  
   
 -   **MultiSubnetFailover**  
   
@@ -134,7 +134,7 @@ ms.locfileid: "81388439"
  암시적 연결을 설정하면 암시적 연결이 부모 연결의 애플리케이션 의도 설정을 사용합니다. 마찬가지로 동일한 데이터 원본에서 만들어진 여러 개의 세션은 데이터 원본의 애플리케이션 의도 설정을 상속합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client 기능](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [SQL Server Native Client에서 연결 문자열 키워드 사용](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

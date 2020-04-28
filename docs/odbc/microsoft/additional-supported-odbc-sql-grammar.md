@@ -1,5 +1,5 @@
 ---
-title: 추가 지원 되는 ODBC SQL 문법 | 마이크로 소프트 문서
+title: 추가로 지원 되는 ODBC SQL 문법 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307134"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원되는 ODBC SQL 문법
-ODBC 드라이버는 최소 ODBC 2.5 문법과 코어 및 확장 ODBC 2.5 문법의 다음 절을 완전히 지원합니다. 다른 테이블 [문,](../../odbc/microsoft/alter-table-statement.md) [상관 관계 이름](../../odbc/microsoft/correlation-names.md)및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목으로 이동하여 추가 정보를 표시할 수 있습니다.  
+ODBC 드라이버는 최소 ODBC 2.5 문법과 핵심 및 확장 된 ODBC 2.5 문법에서 다음 절을 완벽 하 게 지원 합니다. [ALTER TABLE 문](../../odbc/microsoft/alter-table-statement.md), [상관 관계 이름](../../odbc/microsoft/correlation-names.md)및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목으로 이동 하 여 추가 정보를 표시할 수 있습니다.  
   
--   대략적인 숫자 리터럴(코어)  
+-   근사 숫자 리터럴 (코어)  
   
--   [테이블 문](../../odbc/microsoft/alter-table-statement.md) 변경(코어)  
+-   [ALTER TABLE 문](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
--   이진 리터럴(확장)  
+-   이진 리터럴 (확장)  
   
--   [상관 관계](../../odbc/microsoft/correlation-names.md) 이름(코어)  
+-   [상관 관계 이름](../../odbc/microsoft/correlation-names.md) (코어)  
   
--   [프로시저](../../odbc/microsoft/procedure-invocation.md) 호출(확장)  
+-   [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) (확장)  
   
--   [술어](../../odbc/microsoft/between-predicate.md) 사이(코어)  
+-   [BETWEEN 조건자](../../odbc/microsoft/between-predicate.md) (Core)  
   
 -   [CREATE INDEX 문](../../odbc/microsoft/create-index-statement.md)  
   
@@ -51,16 +51,16 @@ ODBC 드라이버는 최소 ODBC 2.5 문법과 코어 및 확장 ODBC 2.5 문법
   
 -   [ORDER BY와 GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   존재 조건자(코어)  
+-   EXISTS 조건자 (코어)  
   
--   IN *(가치 목록)*(코어)  
+-   IN (*valuelist*) (Core)  
   
--   [제트: 외부 조인(확장)](../../odbc/microsoft/jet-outer-joins.md)  
+-   [Jet: 외부 조인](../../odbc/microsoft/jet-outer-joins.md) (확장)  
   
--   select 문(확장) (그룹 BY, HAVING 및 UNION 절 포함)  
+-   SELECT 문 (확장) (GROUP BY, HAVING 및 UNION 절 포함)  
   
--   하위 쿼리(SUBSELECT) (코어)  
+-   하위 쿼리 (하위 select) (코어)  
   
--   [스칼라 기능](../../odbc/microsoft/scalar-functions.md)  
+-   [스칼라 함수](../../odbc/microsoft/scalar-functions.md)  
   
 -   [테이블 이름](../../odbc/microsoft/table-names.md)

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266109ccef7b6e88777b5a7e2d888d998ac8770d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307497"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>테이블 반환 매개 변수 사용(OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "81307497"
   
 -   SQLNCLI11 오류를 처리하는 방법을 보여 줍니다.  
   
- 테이블 값 매개 변수에 대한 자세한 내용은 SQL Server 네이티브 클라이언트&#41;[&#40;테이블 값 매개 변수를 ](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)참조하십시오.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  

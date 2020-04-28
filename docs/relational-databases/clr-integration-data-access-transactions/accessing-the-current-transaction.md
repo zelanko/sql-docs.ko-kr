@@ -1,6 +1,6 @@
 ---
-title: 현재 트랜잭션 액세스 | 마이크로 소프트 문서
-description: SQL Server CLR 통합에서 System.Transactions.Transaction 클래스의 현재 속성을 사용하면 현재 트랜잭션에 액세스할 수 있습니다.
+title: 현재 트랜잭션 액세스 | Microsoft Docs
+description: CLR 통합 SQL Server에서 current 속성을 사용 하면 현재 트랜잭션에 액세스할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487496"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
@@ -42,9 +42,9 @@ ms.locfileid: "81487496"
 ## <a name="canceling-an-external-transaction"></a>외부 트랜잭션 취소  
  관리되는 프로시저나 함수에서 다음과 같은 방법으로 외부 트랜잭션을 취소할 수 있습니다.  
   
--   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 반환된 값을 확인하고 적절한 경우 **ROLLBACK 트랜잭션을**실행할 수 있습니다.  
+-   관리되는 프로시저나 함수에서 출력 매개 변수를 사용하여 값을 반환할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하는 프로시저는 반환 된 값을 확인 하 고, 해당 하는 경우 **ROLLBACK TRANSACTION**을 실행할 수 있습니다.  
   
--   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저는 try/catch 블록에서 관리되는 프로시저 또는 함수에서 throw된 예외를 catch하고 **ROLLBACK 트랜잭션을**실행할 수 있습니다.  
+-   관리되는 프로시저나 함수에서 사용자 지정 예외를 throw할 수 있습니다. 호출 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하는 프로시저는 try/catch 블록의 관리 되는 프로시저 또는 함수에서 throw 된 예외를 catch 하 고 **ROLLBACK TRANSACTION**을 실행할 수 있습니다.  
   
 -   관리되는 프로시저나 함수에서 특정 조건에 맞는 경우 **Transaction.Rollback** 메서드를 호출하여 현재 트랜잭션을 취소할 수 있습니다.  
   

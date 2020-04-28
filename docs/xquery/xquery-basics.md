@@ -1,6 +1,6 @@
 ---
-title: X쿼리 기본 사항 | 마이크로 소프트 문서
-description: 시퀀스 및 QName, 표현컨텍스트, 원자화, 유형 시스템, 오류 처리 및 주석을 포함한 XQuery 언어의 기본 사항을 알아봅니다.
+title: XQuery 기본 사항 | Microsoft Docs
+description: 시퀀스 및 Qname, 식 컨텍스트, 원자화, 형식 시스템, 오류 처리 및 주석을 포함 하 여 XQuery 언어의 기본 사항에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 92882722baab0284f421989ba4906e60e777049e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388132"
 ---
 # <a name="xquery-basics"></a>XQuery 기초
@@ -28,22 +28,22 @@ ms.locfileid: "81388132"
   이 섹션에서는 XQuery의 기본 사항에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [시퀀스 및 Q네임 &#40;XQuery&#41;](../xquery/sequence-and-qnames-xquery.md)  
+ [XQuery&#41;&#40;Sequence 및 Qname](../xquery/sequence-and-qnames-xquery.md)  
  시퀀스와 QName 및 미리 정의된 네임스페이스에 대해 설명합니다.  
   
- [XQuery&#41;&#40;식 컨텍스트 및 쿼리 평가](../xquery/expression-context-and-query-evaluation-xquery.md)  
+ [식 컨텍스트 및 쿼리 평가 &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)  
  XQuery가 계산되는 두 가지 컨텍스트에 대해 설명합니다. 이 두 가지 컨텍스트는 정적 컨텍스트와 동적 컨텍스트입니다.  
   
  [원자화 &#40;XQuery&#41;](../xquery/atomization-xquery.md)  
  항목의 형식화된 값을 추출하는 프로세스인 원자화에 대해 설명합니다.  
   
- [XQuery &#40;효과적인 부울 값&#41;](../xquery/effective-boolean-value-xquery.md)  
+ [유효한 부울 값 &#40;XQuery&#41;](../xquery/effective-boolean-value-xquery.md)  
  효과적인 부울 값에 대해 설명합니다. 단일 부울 값, 노드 시퀀스 또는 빈 시퀀스를 반환하는 식에 대해 이 값을 계산할 수 있습니다.  
   
- [XQuery&#41;&#40;유형 시스템](../xquery/type-system-xquery.md)  
+ [Type System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
  여러 유형이 미리 정의된 XQuery 유형 시스템에 대해 설명합니다. XQuery는 스키마 유형에 대해 강력한 형식의 언어이며 형식화되지 않은 데이터에 대해 약한 형식의 언어입니다.  
   
- [오류 처리 &#40;XQuery&#41;](../xquery/error-handling-xquery.md)  
+ [XQuery&#41;&#40;오류 처리](../xquery/error-handling-xquery.md)  
  XQuery의 정적, 동적 및 유형 오류를 처리하는 방법에 대해 설명합니다.  
   
  [XQuery의 주석](../xquery/comments-in-xquery.md)  

@@ -1,6 +1,6 @@
 ---
-title: X쿼리의 문자열 검색 | 마이크로 소프트 문서
-description: XQuery에서 문자열 검색 예제를 보고 XML 문서에서 텍스트를 검색하는 방법을 알아봅니다.
+title: XQuery에서 문자열 검색 | Microsoft Docs
+description: XQuery에서 문자열 검색의 예제를 확인 하 여 XML 문서에서 텍스트를 검색 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388058"
 ---
 # <a name="string-search-in-xquery"></a>XQuery에서 문자열 검색
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 이전 `where` 쿼리에서 FLOWR 식은 `for` 식의 결과를 필터링하고 **contains()** 조건을 충족하는 요소만 반환합니다.  
+ 위의 쿼리에서 FLOWR 식의 `where` 는 `for` 식의 결과를 필터링 하 고 **contains ()** 조건을 만족 하는 요소만 반환 합니다.  
   
  다음은 결과입니다.  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버&#41;&#40;XML 데이터](../relational-databases/xml/xml-data-sql-server.md)   
+ [XML 데이터 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

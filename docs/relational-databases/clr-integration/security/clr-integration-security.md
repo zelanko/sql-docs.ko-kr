@@ -1,6 +1,6 @@
 ---
-title: CLR 통합 보안 | 마이크로 소프트 문서
-description: .NET Framework CLR 보안과 SQL Server 통합은 개체 간의 액세스를 관리합니다. 개체에 대해 수행되는 보안 검사는 관련된 호출에 따라 다릅니다.
+title: CLR 통합 보안 | Microsoft Docs
+description: .NET Framework CLR 보안과 SQL Server 통합 하면 개체 간의 액세스를 관리 합니다. 개체에 대해 수행 되는 보안 검사는 관련 된 호출에 따라 달라 집니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487127"
 ---
 # <a name="clr-integration-security"></a>CLR 통합 보안

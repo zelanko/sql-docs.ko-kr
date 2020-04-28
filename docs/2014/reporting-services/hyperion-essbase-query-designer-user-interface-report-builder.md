@@ -1,5 +1,5 @@
 ---
-title: 하이페리온 Essbase 쿼리 디자이너 사용자 인터페이스(보고서 작성기) | 마이크로 소프트 문서
+title: Hyperion Essbase 쿼리 디자이너 사용자 인터페이스 (보고서 작성기) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b0b620ec15bc160ddbbbd18a75c56737960745d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388509"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Hyperion Essbase 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
@@ -37,7 +37,7 @@ ms.locfileid: "81388509"
 
  다음 표에서는 이 모드의 창을 나열합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |큐브 선택 단추|현재 선택한 큐브를 표시합니다.|
 |메타데이터 창|큐브의 계층적 목록을 표시합니다.|
@@ -52,7 +52,7 @@ ms.locfileid: "81388509"
 ### <a name="toolbar-for-the-graphical-query-designer-in-design-mode-toolbar"></a>디자인 모드의 그래픽 쿼리 디자이너를 위한 도구 모음
  쿼리 디자이너 도구 모음은 그래픽 인터페이스를 사용하여 MDX 쿼리를 디자인하는 데 도움이 되는 단추를 제공합니다. 다음 표에서는 단추와 해당 기능을 보여 줍니다.
 
-|단추|Description|
+|단추|설명|
 |------------|-----------------|
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 이 데이터 원본 유형에는 사용할 수 없습니다.|
 |**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다.|
@@ -60,7 +60,7 @@ ms.locfileid: "81388509"
 |![계산 멤버 추가](../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다. 이 대화 상자를 사용하여 **계산 순서** 속성 설정을 비롯한 계산 멤버 식 생성 및 편집 작업을 수행할 수 있습니다.|
 |![빈 셀 표시 설정/해제](../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
 |![쿼리 자동 실행](../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
-|![삭제](../analysis-services/media/rsqdicon-delete.gif "DELETE")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
+|![Delete](../analysis-services/media/rsqdicon-delete.gif "삭제")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
 |![쿼리 실행](../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
 |![쿼리 취소](../analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|
 |![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다.|
@@ -72,7 +72,7 @@ ms.locfileid: "81388509"
 
  다음 표에서는 각 창의 기능을 설명합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |큐브 선택 단추|현재 선택한 큐브를 표시합니다.|
 |메타데이터/함수 창|쿼리 텍스트를 작성하는 데 사용할 수 있는 메타데이터 또는 함수의 목록을 보여 주는 탭 창을 표시합니다.|

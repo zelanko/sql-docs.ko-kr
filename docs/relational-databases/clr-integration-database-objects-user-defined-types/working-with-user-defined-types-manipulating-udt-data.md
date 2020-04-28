@@ -1,6 +1,6 @@
 ---
-title: UDT 데이터 조작 | 마이크로 소프트 문서
-description: 이 문서에서는 SQL Server 데이터베이스의 UDT 열에 데이터를 삽입, 선택 및 업데이트하는 방법에 대해 설명합니다.
+title: UDT 데이터 조작 | Microsoft Docs
+description: 이 문서에서는 SQL Server 데이터베이스의 UDT 열에 데이터를 삽입, 선택 및 업데이트 하는 방법을 설명 합니다.
 ms.custom: ''
 ms.date: 12/05/2019
 ms.prod: sql
@@ -30,10 +30,10 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4ff4b620f2f06243b23b4c540f4c99b3c3cafa41
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486935"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>사용자 정의 형식 작업 - UDT 데이터 조작
@@ -41,7 +41,7 @@ ms.locfileid: "81486935"
   [!INCLUDE[tsql](../../includes/tsql-md.md)]에서는 UDT(사용자 정의 형식) 열의 데이터를 수정할 때 INSERT, UPDATE 또는 DELETE 문에 대한 특별한 구문을 제공하지 않습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 또는 CONVERT 함수는 네이티브 데이터 형식을 UDT 형식으로 캐스트하는 데 사용됩니다.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>UDT 열에 데이터 삽입  
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 세 행의 샘플 데이터를 **포인트** 테이블에 삽입합니다. **점** 데이터 형식은 UDT의 속성으로 노출되는 X 및 Y 정수 값으로 구성됩니다. CAST 또는 CONVERT 함수를 사용하여 쉼표 구분 X 및 Y 값을 **포인트** 유형으로 캐스팅해야 합니다. 처음 두 문은 CONVERT 함수를 사용하여 문자열 값을 **Point** 유형으로 변환하고 세 번째 문은 CAST 함수를 사용합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 세 개의 샘플 데이터 행을 **Points** 테이블에 삽입 합니다. **Point** 데이터 형식은 UDT의 속성으로 노출 되는 X 및 Y 정수 값으로 구성 됩니다. CAST 또는 CONVERT 함수를 사용 하 여 쉼표로 구분 된 X 및 Y 값을 **Point** 형식으로 캐스팅 해야 합니다. 처음 두 문은 CONVERT 함수를 사용 하 여 문자열 값을 **Point** 형식으로 변환 하 고, 세 번째 문은 CAST 함수를 사용 합니다.  
   
 ```sql  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -56,7 +56,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- 읽을 수 있는 형식으로 표시되는 출력을 보려면 값을 문자열 표현으로 변환하는 **Point** UDT의 **ToString** 메서드를 호출합니다.  
+ 읽을 수 있는 형식으로 표시 된 출력을 보려면 값을 해당 문자열 표현으로 변환 하는 **Point** UDT의 **ToString** 메서드를 호출 합니다.  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -83,7 +83,7 @@ SELECT ID, CONVERT(varchar, PointValue)
 FROM dbo.Points;  
 ```  
   
- **점** UDT는 X 및 Y 좌표를 속성으로 노출하여 개별적으로 선택할 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
+ **Point** UDT는 X 및 Y 좌표를 속성으로 노출 하 여 개별적으로 선택할 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X 및 Y 좌표를 개별적으로 선택합니다.  
   
 ```sql  
 SELECT ID, PointValue.X AS xVal, PointValue.Y AS yVal   
@@ -101,7 +101,7 @@ ID xVal yVal
 ```  
   
 ## <a name="working-with-variables"></a>변수 작업  
- DECLARE 문에 변수를 사용하여 UDT 형식에 변수를 할당할 수 있습니다. 다음 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 문을 사용하여 값을 할당하고 변수에 UDT의 **ToString** 메서드를 호출하여 결과를 표시합니다.  
+ DECLARE 문에 변수를 사용하여 UDT 형식에 변수를 할당할 수 있습니다. 다음 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] SET 문을 사용 하 여 값을 할당 하 고 변수에서 UDT의 **ToString** 메서드를 호출 하 여 결과를 표시 합니다.  
   
 ```sql  
 DECLARE @PointValue Point;  
@@ -130,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  변수 할당에 SELECT 및 SET를 사용할 경우의 차이점은 SELECT를 사용하면 하나의 SELECT 문에서 여러 변수를 할당할 수 있는 반면 SET 구문에서는 각 변수 할당에 고유한 SET 문이 필요하다는 것입니다.  
   
 ## <a name="comparing-data"></a>데이터 비교  
- 클래스를 정의할 때 **IsByteOrdered** 속성을 **true로** 설정한 경우 비교 연산자에서 UDT의 값을 비교할 수 있습니다. 자세한 내용은 [사용자 정의 유형 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)를 참조하십시오.  
+ 클래스를 정의할 때 **IsByteOrdered** 속성을 **true** 로 설정한 경우 비교 연산자를 사용 하 여 UDT의 값을 비교할 수 있습니다. 자세한 내용은 [사용자 정의 형식 만들기](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md)를 참조 하세요.  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -138,7 +138,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- 값 자체가 비교되는 경우 **IsByteOrdered** 설정에 관계없이 UDT의 내부 값을 비교할 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X가 Y보다 큰 행을 선택합니다.  
+ 값 자체를 비교할 수 있는 경우 **IsByteOrdered** 설정에 관계 없이 UDT의 내부 값을 비교할 수 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 X가 Y보다 큰 행을 선택합니다.  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -157,9 +157,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>UDT 메서드 호출  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **포인트** 클래스에는 **거리,** **거리, 거리로부터의**세 가지 방법 및 **거리로부터XY가**포함되어 있습니다. 이러한 세 가지 방법을 정의하는 코드 목록은 [사용자 정의 형식 코딩을](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)참조하십시오.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UDT에 정의된 메서드를 호출할 수도 있습니다. **Point** 클래스에는 **Distance**, **distancefrom**및 **DistanceFromXY**의 세 가지 메서드가 포함 됩니다. 이 세 가지 메서드를 정의 하는 코드 목록은 [사용자 정의 형식 코딩](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)을 참조 하세요.  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **PointValue.Distance** 메서드를 호출합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 **Pointvalue. Distance** 메서드를 호출 합니다.  
   
 ```sql  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -168,7 +168,7 @@ SELECT ID, PointValue.X AS [Point.X],
 FROM dbo.Points;  
 ```  
   
- 결과는 **거리** 열에 표시됩니다.  
+ 결과는 **거리** 열에 표시 됩니다.  
   
 ```  
 ID X  Y  Distance  
@@ -178,7 +178,7 @@ ID X  Y  Distance
  3  1 99 99.0050503762308  
 ```  
   
- **DistanceFrom** 메서드는 **Point** 데이터 형식의 인수를 취하고 지정된 점에서 PointValue까지의 거리를 표시합니다.  
+ **Distancefrom** 메서드는 **point** 데이터 형식의 인수를 사용 하 고 지정 된 점에서 pointvalue 까지의 거리를 표시 합니다.  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -186,7 +186,7 @@ SELECT ID, PointValue.ToString() AS Pnt,
 FROM dbo.Points;  
 ```  
   
- 결과는 테이블의 각 행에 대한 **DistanceFrom** 메서드의 결과를 표시합니다.  
+ 결과에는 테이블의 각 행에 대 한 **Distancefrom** 메서드의 결과가 표시 됩니다.  
   
 ```  
 ID Pnt DistanceFromPoint  
@@ -196,7 +196,7 @@ ID Pnt DistanceFromPoint
  3 1,9                90  
 ```  
   
- **DistanceFromXY** 메서드는 점을 개별적으로 인수로 사용합니다.  
+ **DistanceFromXY** 메서드는 요소를 개별적으로 인수로 사용 합니다.  
   
 ```sql  
 SELECT ID, PointValue.X as X, PointValue.Y as Y,   
@@ -204,7 +204,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- 결과 집합은 **DistanceFrom** 메서드와 동일합니다.  
+ 결과 집합은 **Distancefrom** 메서드와 동일 합니다.  
   
 ## <a name="updating-data-in-a-udt-column"></a>UDT 열의 데이터 업데이트  
  UDT 열의 데이터를 업데이트하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE 문을 사용합니다. UDT의 메서드를 사용하여 개체 상태를 업데이트할 수도 있습니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 테이블의 행 하나를 업데이트합니다.  
@@ -223,7 +223,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- UDT가 **true로**설정된 바이트 순서로 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 경우 WHERE 절에서 UDT 열을 평가할 수 있습니다.  
+ 바이트 순서를 **true**로 설정 하 여 udt가 정의 된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 where 절에서 udt 열을 평가할 수 있습니다.  
   
 ```sql  
 UPDATE dbo.Points  

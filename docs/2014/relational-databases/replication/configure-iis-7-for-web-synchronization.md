@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486997"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
@@ -54,7 +54,7 @@ ms.locfileid: "81486997"
   
 4.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에서 을 `cmd`입력한 다음 **확인을**클릭합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "81486997"
   
     1.  **IIS(인터넷 정보 서비스) 관리자**의 **연결** 창에서 **기본 웹 사이트**를 마우스 오른쪽 단추로 클릭한 다음 **가상 디렉터리 추가**를 클릭합니다.  
   
-    2.  **별칭의**경우 `SQLReplication`를 입력합니다.  
+    2.  **별칭**에를 입력 `SQLReplication`합니다.  
   
-    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\**을 입력하고 **확인**을 클릭합니다.  
+    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\** 을 입력하고 **확인**을 클릭합니다.  
   
 7.  replisapi.dll이 실행될 수 있도록 IIS를 구성합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "81486997"
   
     3.  **동작** 창에서 **모듈 매핑 추가**를 클릭합니다.  
   
-    4.  **요청** 경로의 `replisapi.dll`경우 를 입력합니다.  
+    4.  **요청** 경로에를 입력 `replisapi.dll`합니다.  
   
     5.  **모듈** 드롭다운 목록에서 **IsapiModule**을 선택합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "81486997"
   
 ###### <a name="to-test-the-certificate"></a>인증서를 테스트하려면  
   
-1.  **인터넷 정보 서비스(IIS) 관리자에서**기본 웹 사이트를 클릭합니다. **Default Web Site.**  
+1.  **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
   
 2.  **동작** 창에서 **\*:443(https) 찾아보기**를 클릭합니다.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "81486997"
   
 1.  IIS를 실행하는 컴퓨터에 로컬 계정을 만듭니다.  
   
-    1.  **서버 관리자를**엽니다. 시작 메뉴에서 **컴퓨터**를 마우스 오른쪽 단추로 클릭한 다음 **관리**를 클릭합니다.  
+    1.  **서버 관리자**를 엽니다. 시작 메뉴에서 **컴퓨터**를 마우스 오른쪽 단추로 클릭한 다음 **관리**를 클릭합니다.  
   
     2.  **서버 관리자**에서 **구성**을 확장한 다음 **로컬 사용자 및 그룹**을 확장합니다.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "81486997"
   
 1.  구독자의 LAN(Local Area Network) 설정이 올바른지 확인합니다.  
   
-    1.  인터넷 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 익스플로러에서 **도구** 메뉴에서 **인터넷 옵션을 클릭합니다.**  
+    1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer의 **도구** 메뉴에서 **인터넷 옵션**을 클릭합니다.  
   
     2.  **연결** 탭에서 **LAN 설정**을 클릭합니다.  
   
@@ -318,7 +318,7 @@ ms.locfileid: "81486997"
     2.  진단 모드에서 서버에 연결합니다. 인증서가 제대로 설치된 경우 **보안 경고** 대화 상자가 나타나지 않습니다. 이 대화 상자가 나타나면 병합 에이전트가 IIS를 실행하는 컴퓨터에 연결할 수 없습니다. 액세스하는 서버에 대한 인증서가 구독자의 인증서 저장소에 신뢰할 수 있는 인증서로 추가되었는지 확인합니다. 인증서를 내보내는 방법은 IIS 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [병합 복제를 위한 웹 동기화](web-synchronization-for-merge-replication.md)   
+ [병합 복제에 대한 웹 동기화](web-synchronization-for-merge-replication.md)   
  [웹 동기화 구성](configure-web-synchronization.md)  
   
   

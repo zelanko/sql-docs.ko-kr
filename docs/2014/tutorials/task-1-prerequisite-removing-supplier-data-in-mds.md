@@ -1,5 +1,5 @@
 ---
-title: '작업 1(필수 조건): MDS에서 공급업체 데이터 제거 | 마이크로 소프트 문서'
+title: '작업 1 (필수 구성 요소): MDS에서 공급자 데이터 제거 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81484633"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>태스크 1(필수 구성 요소): MDS에서 공급자 데이터 제거
   이 작업에서는 MDS에 저장된 공급자 데이터를 제거합니다. 이전 단원에서는 **MDS Excel 추가 기능** 을 사용하여 데이터를 수동으로 업로드했습니다. 이 단원에서 만드는 SSIS 패키지는 데이터를 MDS에 자동으로 업로드합니다. 따라서 SSIS 패키지를 테스트하기 전에 MDS에서 공급자 데이터를 제거하고, 파생 계층을 제거하고, 공급자 및 상태 엔터티를 제거하고 포함된 데이터 없이 공급자 엔터티를 만들어야 합니다.  
   
-1.  MDS를 구성할 때 `http://localhost/MDS` 지정한 웹 사이트 및 응용 프로그램으로 이동하여 **마스터 데이터 관리자를** 시작합니다. **마스터 데이터 관리자** 가 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 **홈 페이지**로 전환합니다.  
+1.  또는 **Master Data Manager** MDS를 구성할 때 `http://localhost/MDS` 지정한 웹 사이트 및 응용 프로그램으로 이동 하 여 마스터 데이터 관리자를 시작 합니다. **마스터 데이터 관리자** 가 열려 있으면 상단에서 **SQL Server 2012 Master Data Services** 를 클릭하여 **홈 페이지**로 전환합니다.  
   
 2.  **관리 작업** 섹션에서 **시스템 관리** 를 클릭합니다.  
   
@@ -36,11 +36,11 @@ ms.locfileid: "81484633"
   
 8.  이전 단계를 반복하여 **State** 엔터티를 삭제합니다.  
   
-9. 마스터 데이터 **관리자를**닫지 마십시오.  
+9. **마스터 데이터 관리자**를 닫지 마세요.  
   
 10. **Cleansed and Matched Suppliers.xls** 파일이 열려 있는 Excel 창으로 전환합니다. 하단에서 **Sheet1** 탭으로 전환합니다.  
   
-11. **첫 번째 머리글 행**만 선택합니다. 다른 행을 선택하지 마십시오. Excel 열을 기반으로 엔터티를 만들려고 하지만 데이터를 업로드하지 않으려고 합니다. 따라서 첫 번째 머리글 행만 선택합니다.  
+11. **첫 번째 머리글 행**만 선택합니다. 다른 행은 선택 하지 마세요. Excel 열을 기반으로 엔터티를 만들려고 하지만 데이터를 업로드 하지 않으려는 경우 따라서 첫 번째 머리글 행만 선택합니다.  
   
 12. 메뉴 모음에서 **마스터 데이터** 를 클릭합니다.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "81484633"
   
     1.  **새 연결 만들기**를 선택하고 **새로 만들기** 단추를 클릭합니다.  
   
-    2.  새 연결 추가 대화 상자에서 **Local MDS Server** **설명** 및 **http:\/MDS 서버 주소에 대한 /localhost/MDS를** 입력하고 **확인을** 클릭하여 대화 상자를 닫습니다. **MDS server address**  
+    2.  새 연결 추가 대화 상자에서 **설명** 에 **Local MDS server** 를 입력 하 고/localhost/MDS **서버 주소**에는 **Http:\/** 를 입력 한 다음 **확인** 을 클릭 하 여 대화 상자를 닫습니다.  
   
-15. **연결 관리** 대화 상자에서 **로컬 MDS 서버** ()`http://localhost/MDS`)를 선택하여 **테스트를** 클릭하여 연결을 테스트합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
+15. **연결 관리** 대화 상자에서 **로컬 MDS 서버** (`http://localhost/MDS`)를 선택 하 고 **테스트** 를 클릭 하 여 연결을 테스트 합니다. 메시지 상자에서 **확인** 을 클릭합니다.  
   
 16. **연결** 을 클릭하여 MDS 서버에 대한 연결을 설정합니다.  
   
@@ -83,6 +83,6 @@ ms.locfileid: "81484633"
 22. **탐색기**를 클릭합니다. 모든 특성이 포함된 **Supplier** 엔터티가 **값 없음**으로 만들어졌는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- [작업 2 &#40;선택적&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 보기 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
+ [작업 2 &#40;선택적&#41;: 마스터 데이터 관리자를 사용 하 여 MDS 구독 뷰 만들기](../../2014/tutorials/task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md)  
   
   

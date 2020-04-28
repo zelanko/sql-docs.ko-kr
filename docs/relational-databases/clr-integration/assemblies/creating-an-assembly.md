@@ -1,6 +1,6 @@
 ---
-title: 어셈블리 만들기 | 마이크로 소프트 문서
-description: CREATE 어셈블리를 사용하여 SQL Server에 어셈블리를 등록하고 보안 설정을 지정합니다. 어셈블리를 등록하여 해당 기능을 사용합니다.
+title: 어셈블리 만들기 | Microsoft Docs
+description: 어셈블리 만들기를 사용 하 여 SQL Server에 어셈블리를 등록 하 고 해당 보안 설정을 지정 합니다. 어셈블리를 등록 하 여 해당 기능을 사용 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486843"
 ---
 # <a name="creating-an-assembly"></a>어셈블리 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  저장 프로시저나 트리거 같은 관리되는 데이터베이스 개체는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리가 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 제공하는 기능을 사용하려면 먼저 관리되는 DLL 어셈블리를 등록해야 합니다. CREATE ASSEMBLY 문을 사용하여 어셈블리를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 등록할 수 있습니다. 이 항목에서는 CREATE ASSEMBLY 문을 사용하여 어셈블리를 데이터베이스에 등록하는 방법과 어셈블리에 대한 보안 설정을 지정하는 방법에 대해 설명합니다.  
+  저장 프로시저나 트리거 같은 관리되는 데이터베이스 개체는 컴파일한 다음 어셈블리라는 단위로 배포합니다. 어셈블리에서 제공 하는 기능을 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 하려면 먼저 관리 되는 DLL 어셈블리를에 등록 해야 합니다. CREATE ASSEMBLY 문을 사용하여 어셈블리를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 등록할 수 있습니다. 이 항목에서는 CREATE ASSEMBLY 문을 사용하여 어셈블리를 데이터베이스에 등록하는 방법과 어셈블리에 대한 보안 설정을 지정하는 방법에 대해 설명합니다.  
   
 ## <a name="the-create-assembly-statement"></a>CREATE ASSEMBLY 문  
  CREATE ASSEMBLY 문은 데이터베이스에 어셈블리를 만드는 데 사용합니다. 다음은 예제입니다.  
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   호출되거나 참조되는 어셈블리가 동일한 데이터베이스에 만들어졌습니다.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>어셈블리 생성 시 보안 지정  
- 데이터베이스에 어셈블리를 만들 때 코드를 실행할 수 있는 세 가지 보안 수준 중 하나를 지정할 수 있습니다: **SAFE,** **EXTERNAL_ACCESS**또는 SAFE . **UNSAFE** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 어셈블리를 만들 때 코드를 실행할 수 있는 보안의 세 가지 보안 수준인 **SAFE**, **EXTERNAL_ACCESS**또는 **UNSAFE**중 하나를 지정할 수 있습니다. **CREATE ASSEMBLY** 문이 실행될 때 코드 어셈블리에 대해 특정 검사가 수행되어 어셈블리가 서버에 등록되지 않을 수 있습니다. 자세한 내용은 [CodePlex](https://msftengprodsamples.codeplex.com/)의 가장 예제를 참조하십시오.  
   
  **SAFE** 는 기본 권한 집합이며 대부분의 시나리오에서 작동합니다. 이 보안 수준을 지정하려면 다음과 같이 CREATE ASSEMBLY 문의 구문을 수정합니다.  
   
@@ -135,7 +135,7 @@ WITH PERMISSION_SET = UNSAFE;
  [어셈블리 변경](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [어셈블리 삭제](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [신뢰할 수 있는 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md)   
+ [TRUSTWORTHY 데이터베이스 속성](../../../relational-databases/security/trustworthy-database-property.md)   
  [부분적으로 신뢰할 수 있는 호출자 허용](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

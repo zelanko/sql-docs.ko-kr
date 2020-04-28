@@ -1,5 +1,5 @@
 ---
-title: 보고서 디자이너 SQL 서버 데이터 도구(SSRS)의 쿼리 디자인 도구 | 마이크로 소프트 문서
+title: 보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1179f4e5a6c8be90b5bc52b814ae49c96a3a39aa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388628"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구(SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "81388628"
  모든 쿼리 디자인 도구는 사용자가 보고서 서버 프로젝트 템플릿이나 보고서 서버 마법사 프로젝트 템플릿으로 작업할 경우 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 데이터 디자인 환경에서 실행됩니다. 쿼리 디자이너 작업에 대한 자세한 내용은 [Reporting Services Query Designers](../reporting-services-query-designers.md)를 참조하십시오.
 
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a>텍스트 기반 쿼리 디자이너
- 텍스트 기반 쿼리 디자이너는 오라클, 테라데이터, OLE DB, XML 및 ODBC를 포함하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대부분의 지원관계형 데이터 원본에 대한 기본 쿼리 빌드 도구입니다. 그래픽 쿼리 디자이너와 달리 이 쿼리 디자인 도구는 쿼리를 디자인하는 동안 쿼리 구문의 유효성을 검사하지 않습니다. 다음 이미지는 텍스트 기반 쿼리 디자이너를 보여 줍니다.
+ 텍스트 기반 쿼리 디자이너는, Oracle, Teradata, OLE DB, XML 및 ODBC를 비롯 하 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]여 지원 되는 대부분의 관계형 데이터 원본에 대 한 기본 쿼리 작성 도구입니다. 그래픽 쿼리 디자이너와 달리 이 쿼리 디자인 도구는 쿼리를 디자인하는 동안 쿼리 구문의 유효성을 검사하지 않습니다. 다음 이미지는 텍스트 기반 쿼리 디자이너를 보여 줍니다.
 
  ![관계형 데이터 쿼리를 위한 일반 쿼리 디자이너](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "관계형 데이터 쿼리를 위한 일반 쿼리 디자이너")
 
@@ -86,7 +86,7 @@ ms.locfileid: "81388628"
 
  ![디자인 모드의 MDX를 사용하는 쿼리 디자이너](../media/rsqd-dssapbw-mdx-designmode.gif "디자인 모드의 MDX를 사용하는 쿼리 디자이너")
 
-##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>하이페리온 Essbase 쿼리 디자이너
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Hyperion Essbase 쿼리 디자이너
  [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 쿼리 디자이너는 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 데이터베이스 및 애플리케이션에서 데이터를 검색하는 데 사용됩니다. 다음 이미지는 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 쿼리 디자이너를 보여줍니다.
 
  ![Hyperion Essbase 데이터 원본을 위한 쿼리 디자이너](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Hyperion Essbase 데이터 원본을 위한 쿼리 디자이너")
@@ -94,6 +94,6 @@ ms.locfileid: "81388628"
  이 쿼리 디자이너를 사용하려면 최소한 하나 이상의 데이터베이스가 있는 [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] 데이터 원본이 있어야 합니다. 자세한 내용은 [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
- [보고 서비스 도구](../tools/reporting-services-tools.md) [보고서 작성기 및 SSRS&#41;&#40;데이터](report-datasets-ssrs.md) [연결, 데이터 원본 및 연결 문자열보고 서비스](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) [자습서&#40;SS&#41;RS](../reporting-services-tutorials-ssrs.md) &#40;[SSRS에서 지원 되는 데이터 원본을](../create-deploy-and-manage-mobile-and-paginated-reports.md)&#41;[SSRS&#41;&#41;](../create-an-embedded-or-shared-data-source-ssrs.md) 데이터 &#40;원본을 생성 하는 보고서에 데이터를 추가 합니다.
+ [Reporting Services 도구](../tools/reporting-services-tools.md) [는 보고서 &#40;보고서 작성기 및 Ssrs&#41;](report-datasets-ssrs.md) [데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) [을 Reporting Services Reporting Services](../reporting-services-tutorials-ssrs.md) 에 대 한 데이터 원본에 추가 &#40;ssrs&#41;ssrs Reporting Services에서 [지원 되는 데이터](../create-deploy-and-manage-mobile-and-paginated-reports.md) 원본 &#40;포함 된 데이터 [원본 또는 공유 데이터 원본 만들기](../create-an-embedded-or-shared-data-source-ssrs.md)&#41;
 
 

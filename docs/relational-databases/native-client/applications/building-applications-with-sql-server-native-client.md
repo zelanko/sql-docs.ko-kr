@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fffae7ea51d75f54cb87a17c433df935de3139b7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388248"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client를 사용하여 애플리케이션 빌드
@@ -43,7 +43,7 @@ ms.locfileid: "81388248"
  [MDAC에서 SQL Server Native Client로 애플리케이션 업데이트](../../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)  
  MDAC에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client로 업그레이드할 때 고려해야 하는 문제 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 MDAC의 차이점에 대해 설명합니다.  
   
- [SQL Server 2005 네이티브 클라이언트에서 응용 프로그램 업데이트](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
+ [SQL Server 2005 Native Client에서 응용 프로그램 업데이트](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client로 업그레이드할 때 고려해야 하는 문제에 대해 설명합니다.  
   
  [SQL Server Native Client와 함께 ADO 사용](../../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)  
@@ -56,8 +56,8 @@ ms.locfileid: "81388248"
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC 방법 주제](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [SQL Server Native Client 프로그래밍](../../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [ODBC 방법 도움말 항목](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

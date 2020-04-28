@@ -1,5 +1,5 @@
 ---
-title: 쉐어포인트 2013 설치를 위한 파워피벗 | 마이크로 소프트 문서
+title: SharePoint용 PowerPivot 2013 설치 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487398"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   이 항목의 절차에서는 SharePoint 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버의 단일 서버 설치하는 단계를 안내합니다. 이 단계에는 SharePoint 2013 중앙 관리를 사용하는 SQL Server 설치 마법사 및 구성 태스크가 포합됩니다.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]** 쉐어포인트 2013 | 쉐어포인트 201  
+ **[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 201  
   
  **항목 내용**  
   
  [배경](#bkmk_background)  
   
- [필수 구성 요소](#bkmk_prereq)  
+ [전제 조건](#bkmk_prereq)  
   
  [1단계: SharePoint용 PowerPivot 설치](#InstallSQL)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81487398"
   
  [통합 문서 업그레이드 및 예약된 데이터 새로 고침](#bkmk_upgrade_workbook)  
   
- [단일 서버 설치 를 넘어 -마이크로소프트 쉐어포인트에 대 한 파워 피벗](#bkmk_multiple_servers)  
+ [단일 서버 설치 외-PowerPivot for Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="background"></a><a name="bkmk_background"></a> 배경  
  SharePoint용 PowerPivot은 SharePoint 2013 팜에서 PowerPivot 데이터 액세스를 제공하는 중간 계층 및 백 엔드 서비스의 모음입니다.  
@@ -49,9 +49,9 @@ ms.locfileid: "81487398"
   
 -   **중간 계층:** PowerPivot 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 PowerPivot 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
-    -   [공유점 추가 기능 &#40;SharePoint 2013&#41;위한 PowerPivot 설치 또는 제거](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+    -   [SharePoint 2013 &#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
-    -   [SharePoint 2013&#41;&#40;PowerPivot 및 배포 솔루션 구성](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+    -   [SharePoint 2013&#41;&#40;PowerPivot 구성 및 솔루션 배포](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
   
@@ -63,18 +63,18 @@ ms.locfileid: "81487398"
   
 4.  PowerPivot 인스턴스 이름을 사용할 수 있어야 합니다. SharePoint 모드에서 Analysis Services를 설치 중인 컴퓨터에 PowerPivot이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
   
-5.  [SQL Server 2014 ](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)&#41;&#40;SharePoint 모드에서 분석 서비스 서버에 대한 하드웨어 및 소프트웨어 요구 사항을 검토합니다.  
+5.  [SharePoint 모드의 Analysis Services Server에 대 한 하드웨어 및 소프트웨어 요구 사항을 검토 &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
-6.  [SQL Server 2012 서비스 팩 1 릴리스](https://go.microsoft.com/fwlink/?LinkID=248389) https://go.microsoft.com/fwlink/?LinkID=248389)정보(.  
+6.  [SQL Server 2012 서비스 팩 1 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=248389) ()https://go.microsoft.com/fwlink/?LinkID=248389)에서 릴리스 정보를 검토 합니다.  
   
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
- 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2012 버전에서 지원하는https://go.microsoft.com/fwlink/?linkid=232473) 기능(및 SQL Server 2014의](https://go.microsoft.com/fwlink/?linkid=232473) [버전 및 구성 요소)을](../../../sql-server/editions-and-components-of-sql-server-2016.md)참조하십시오.  
+ 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2012https://go.microsoft.com/fwlink/?linkid=232473) 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) , [SQL Server 2014의 버전 및 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
- 현재 릴리스 노트는 [SQL Server 2012 SP1 릴리스 노트(.](https://go.microsoft.com/fwlink/?LinkID=248389) https://go.microsoft.com/fwlink/?LinkID=248389)  
+ 현재 릴리스 정보는 [SQL Server 2012 SP1 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=248389) ()https://go.microsoft.com/fwlink/?LinkID=248389)에서 찾을 수 있습니다.  
   
- [마이크로소프트 SQL 서버 2012https://go.microsoft.com/fwlink/?LinkId=236893)릴리스 정보 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
+ [Microsoft SQL Server 2012 릴리스 정보 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
-##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>1단계: 공유점을 위한 파워피벗 설치  
+##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>1 단계: SharePoint용 PowerPivot 설치  
  이 단계에서는 SQL Server 설치 프로그램을 실행하여 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치합니다. 이후 단계에서는 통합 문서 데이터 모델에 이 서버를 사용하도록 Excel Services를 구성합니다.  
   
 1.  SQL Server 설치 마법사(Setup.exe)를 실행합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "81487398"
   
 10. **설치 역할** 페이지에서 **SQL Server SharePoint용 PowerPivot**을 선택합니다. 이 옵션을 선택하면 SharePoint 모드에서 Analysis Services를 설치합니다.  
   
-     또는 설치에 데이터베이스 엔진 인스턴스를 추가할 수 있습니다. 새 팜을 설정할 때 데이터베이스 엔진을 추가하고 팜의 구성 및 콘텐츠 데이터베이스를 실행하기 위해 데이터베이스 서버가 필요할 수 있습니다. 이 옵션을 선택해도 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]가 설치됩니다.  
+     또는 설치에 데이터베이스 엔진 인스턴스를 추가할 수 있습니다. 새 팜을 설정 하 고 팜의 구성 및 콘텐츠 데이터베이스를 실행 하기 위해 데이터베이스 서버가 필요한 경우 데이터베이스 엔진를 추가할 수 있습니다. 이 옵션을 선택해도 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]가 설치됩니다.  
   
      데이터베이스 엔진을 추가하는 경우 **PowerPivot** 이라는 인스턴스로 설치됩니다. 이 인스턴스에 대한 연결을 지정하려면 데이터베이스 이름을 [`servername`]\PowerPivot 형식으로 입력합니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "81487398"
   
 3.  Analysis Services 인스턴스(예: **[서버 이름]\POWERPIVOT**)에 연결합니다. 인스턴스에 연결할 수 있는 경우 서비스가 실행 중인 것입니다.  
   
-##  <a name="step-2-configure-basic-analysis-services-sharepoint-integration"></a><a name="bkmk_config"></a>2단계: 기본 분석 서비스 쉐어포인트 통합 구성  
+##  <a name="step-2-configure-basic-analysis-services-sharepoint-integration"></a><a name="bkmk_config"></a>2 단계: 기본 Analysis Services SharePoint 통합 구성  
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint Server 2013 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Analysis Services에 Excel Services 서버 관리 권한 부여  
@@ -187,7 +187,7 @@ ms.locfileid: "81487398"
   
      설명을 입력합니다.  
   
-6.  **Ok**를 클릭합니다.  
+6.  **확인**을 클릭합니다.  
   
 7.  변경 내용은 몇 분 후에 적용됩니다. 또는 **Excel 계산 서비스** 를 **중지** 하고 **시작**할 수 있습니다. 대상  
   
@@ -202,7 +202,7 @@ ms.locfileid: "81487398"
   
     ```  
   
-##  <a name="step-3-verify-the-integration"></a><a name="bkmk_verify"></a>3단계: 통합 확인  
+##  <a name="step-3-verify-the-integration"></a><a name="bkmk_verify"></a>3 단계: 통합 확인  
  다음 단계에서는 새 통합 문서를 만들고 업로드하여 Analysis Services 통합을 확인하는 방법을 단계별로 설명합니다. 이들 단계를 완료하려면 SQL Server 데이터베이스가 필요합니다.  
   
 1.  **참고:** 슬라이서 또는 필터가 포함된 고급 통합 문서가 이미 있는 경우 이 통합 문서를 SharePoint 문서 라이브러리에 업로드하고 문서 라이브러리 뷰에서 슬라이서 및 필터와 상호 작용할 수 있는지 확인할 수 있습니다.  
@@ -242,34 +242,34 @@ ms.locfileid: "81487398"
   
 18. 통합 문서 이름을 클릭하여 SharePoint에서 보고 슬라이서를 클릭하거나 이전에 추가한 필터를 변경합니다. 데이터 업데이트가 발생하면 Analysis Services가 설치되었고 Excel Services에 사용할 수 있음을 의미합니다. Excel에서 통합 문서를 여는 경우 Analysis Services 서버를 사용하지 않고 캐시된 복사본을 사용하게 됩니다.  
   
-##  <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a><a name="bkmk_firewall"></a>분석 서비스 액세스를 허용하도록 Windows 방화벽 구성  
+##  <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a><a name="bkmk_firewall"></a>Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성  
  [Configure the Windows Firewall to Allow Analysis Services Access](../configure-the-windows-firewall-to-allow-analysis-services-access.md) 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 Analysis Services 또는 SharePoint용 PowerPivot에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다. 실제로는 Analysis Services 서버에 대한 액세스를 허용하기 위해 이러한 단계를 함께 수행해야 합니다.  
   
-##  <a name="upgrade-workbooks-and-scheduled-data-refresh"></a><a name="bkmk_upgrade_workbook"></a>통합 문서 및 예약된 데이터 새로 고침 업그레이드  
+##  <a name="upgrade-workbooks-and-scheduled-data-refresh"></a><a name="bkmk_upgrade_workbook"></a>통합 문서 업그레이드 및 예약 된 데이터 새로 고침  
  이전 버전의 PowerPivot에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 PowerPivot의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)을 검토하세요.  
   
-##  <a name="beyond-the-single-server-installation--powerpivot-for-microsoft-sharepoint"></a><a name="bkmk_multiple_servers"></a>단일 서버 설치 를 넘어 -마이크로소프트 쉐어포인트에 대 한 파워 피벗  
+##  <a name="beyond-the-single-server-installation--powerpivot-for-microsoft-sharepoint"></a><a name="bkmk_multiple_servers"></a>단일 서버 설치 외-PowerPivot for Microsoft SharePoint  
  **WFE(웹 프런트 엔드)** or **중간 계층:** 더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 PowerPivot 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot.msi** 를 실행해야 합니다. Sppowerpivot.msi는 필요한 데이터 공급자와 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다.  
   
  중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [공유점 추가 기능 &#40;SharePoint 2013&#41;위한 PowerPivot 설치 또는 제거](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+-   [SharePoint 2013 &#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
 -   .msi를 다운로드하려면 [Microsoft SharePoint 2013용 Microsoft SQL Server 2014 PowerPivot](https://go.microsoft.com/fwlink/?LinkID=324854)을 참조하십시오.  
   
--   [SharePoint 2013&#41;&#40;PowerPivot 및 배포 솔루션 구성](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+-   [SharePoint 2013&#41;&#40;PowerPivot 구성 및 솔루션 배포](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
  **중복 및 서버 부하:** SharePoint 모드의 보조 또는 추가 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 설치하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능이 중복됩니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은  
   
--   [Excel 서비스에서 데이터 모델을 처리하기 위한 분석 서비스 구성](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Excel Services에서 데이터 모델 처리를 위한 Analysis Services 구성](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Excel 서비스 데이터 모델 설정 관리(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Excel Services 데이터 모델 설정 관리 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)))  
   
- ![공유점 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") Microsoft SQL Server 연결 (를 [통해 피드백 및 연락처 정보 제출)](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback)  
+ ![SharePoint 설정은](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") Microsoft SQL Server 연결 ()https://connect.microsoft.com/SQLServer/Feedback) [을 통해 사용자 의견 및 연락처 정보를 제출](https://connect.microsoft.com/SQLServer/Feedback) 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [2013년 공유점으로 파워피벗 마이그레이션](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   
- [공유점 추가 기능 &#40;SharePoint 2013&#41;위한 PowerPivot 설치 또는 제거](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [SharePoint 2013&#41;&#40;통합 문서 및 예약된 데이터 새로 고침 업그레이드](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
+ [PowerPivot을 SharePoint 2013로 마이그레이션](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   
+ [SharePoint 2013 &#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [SharePoint 2013&#41;&#40;통합 문서 업그레이드 및 예약 된 데이터 새로 고침](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
   
   

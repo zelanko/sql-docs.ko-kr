@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86e27f10e2cb56164b21c1488022df600bb87c59
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387745"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>SQL Server Native Client를 사용하는 경우
@@ -32,15 +32,15 @@ ms.locfileid: "81387745"
   
  COM 기반 애플리케이션을 개발하고 있고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 도입된 새 기능에 액세스해야 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능에 액세스할 필요가 없으면 WDAC(Windows Data Access Components)를 계속 사용할 수 있습니다.  
   
- 기존 OLE DB 및 ODBC 애플리케이션의 경우 주된 문제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능에 액세스해야 하는지 여부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능이 필요 없는 완성된 애플리케이션인 경우 계속 MDAC를 사용할 수 있습니다. 그러나 [xml 데이터 유형과](../../t-sql/xml/xml-transact-sql.md)같은 새로운 기능에 액세스해야 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트를 사용해야 합니다.  
+ 기존 OLE DB 및 ODBC 애플리케이션의 경우 주된 문제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능에 액세스해야 하는지 여부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능이 필요 없는 완성된 애플리케이션인 경우 계속 MDAC를 사용할 수 있습니다. 그러나 [xml 데이터 형식과](../../t-sql/xml/xml-transact-sql.md)같은 이러한 새 기능에 액세스 해야 하는 경우 Native Client를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 MDAC는 모두 행 버전 관리를 사용한 커밋된 읽기 트랜잭션 격리를 지원하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client만 스냅샷 트랜잭션 격리를 지원합니다. 프로그래밍 측면에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 격리는 커밋된 읽기 트랜잭션과 동일합니다.  
   
- 네이티브 클라이언트와 MDAC의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 차이점에 대한 자세한 내용은 [MDAC에서 SQL Server 네이티브 클라이언트로 응용 프로그램 업데이트를](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)참조하십시오.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT와 mdac의 차이점에 대 한 자세한 내용은 [Mdac에서 SQL Server Native Client 응용 프로그램 업데이트](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL 서버 네이티브 클라이언트 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [ODBC 방법 주제](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [ODBC 방법 도움말 항목](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 방법 도움말 항목](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

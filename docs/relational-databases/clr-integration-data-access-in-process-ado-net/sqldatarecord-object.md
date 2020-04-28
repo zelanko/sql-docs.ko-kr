@@ -1,6 +1,6 @@
 ---
-title: SqlDataRecord 개체 | 마이크로 소프트 문서
-description: SQL Server CLR 통합에서 저장 프로시저는 SqlDataRecord 클래스를 사용하여 사용자 지정 결과 집합을 클라이언트에 보낼 수 있습니다.
+title: SqlDataRecord 개체 | Microsoft Docs
+description: SQL Server CLR 통합에서 저장 프로시저는 SqlDataRecord 클래스를 사용 하 여 사용자 지정 결과 집합을 클라이언트에 보낼 수 있습니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4aa5ea4d06ac5b8da69eec246387007ba5d03606
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487512"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체

@@ -1,5 +1,5 @@
 ---
-title: 텍스트 기반 쿼리 디자이너 사용자 인터페이스 | 마이크로 소프트 문서
+title: 텍스트 기반 쿼리 디자이너 사용자 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340040a0806a87d55582356d085ab924e25b6a48
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388674"
 ---
 # <a name="text-based-query-designer-user-interface"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스
@@ -28,19 +28,19 @@ ms.locfileid: "81388674"
 
  텍스트 기반 쿼리 디자이너에서는 도구 모음과 다음과 같은 두 개의 창이 표시됩니다.
 
--   **쿼리** 쿼리 텍스트, 테이블 이름 또는 저장된 프로시저 이름을 표시합니다.
+-   **쿼리** 쿼리 텍스트, 테이블 이름 또는 저장 프로시저 이름을 표시 합니다.
 
 -   **결과** 디자인 타임에 쿼리 실행 결과를 표시합니다.
 
 ## <a name="text-based-query-designer-toolbar"></a>텍스트 기반 쿼리 디자이너 도구 모음
  텍스트 쿼리 디자이너는 모든 명령 유형을 위한 단일 도구 모음을 제공합니다. 다음 표에서는 도구 모음에 있는 각 단추와 해당 기능을 나열합니다.
 
-|단추|Description|
+|단추|설명|
 |------------|-----------------|
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 모든 데이터 원본 유형에서 그래픽 쿼리 디자이너를 지원하는 것은 아닙니다.|
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 sql 및 rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|
 |![쿼리 실행](../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 집합을 표시합니다.|
-|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다. 저장 프로시저가 두 개 이상의 결과 집합을 반환하는 경우 첫 번째 결과 집합만 데이터 집합을 채우는 데 사용됩니다.<br /><br /> 명령 유형에 대한 지원은 데이터 원본 유형에 따라 달라집니다. 예를 들어 OLE DB 및 ODBC의 경우에만 **TableDirect**를 지원합니다.|
+|**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다. 저장 프로시저에서 둘 이상의 결과 집합을 반환 하는 경우 첫 번째 결과 집합만 데이터 집합을 채우는 데 사용 됩니다.<br /><br /> 명령 유형에 대한 지원은 데이터 원본 유형에 따라 달라집니다. 예를 들어 OLE DB 및 ODBC의 경우에만 **TableDirect**를 지원합니다.|
 
 ### <a name="command-type-text"></a>Text 명령 유형
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 세트을 만들 때 기본적으로 보고서 디자이너에는 그래픽 쿼리 디자이너가 표시됩니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집** 토글 단추를 클릭합니다. 텍스트 기반 쿼리 디자이너에는 쿼리 창 및 결과 창이 제공됩니다. 다음 그림에서는 레이블과 함께 각 창을 보여 줍니다.
@@ -49,7 +49,7 @@ ms.locfileid: "81388674"
 
  다음 표에서는 각 창의 기능을 설명합니다.
 
-|창|함수|
+|창|기능|
 |----------|--------------|
 |쿼리|[!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 텍스트를 표시합니다. 이 창을 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리를 작성하거나 편집할 수 있습니다.|
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|
@@ -61,7 +61,7 @@ ms.locfileid: "81388674"
 SELECT LastName FROM Person.Person;
 ```
 
- `EXEC` 문을 비롯하여 Text 명령 유형에 대한 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용할 수 있습니다. 다음 쿼리는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 저장 `uspGetEmployeeManagers` 프로시저를 호출하고 식별 번호 1이 있는 직원에 대한 명령 체인을 반환합니다.
+ `EXEC` 문을 비롯하여 Text 명령 유형에 대한 모든 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 사용할 수 있습니다. 다음 쿼리는 저장 프로시저 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] `uspGetEmployeeManagers` 를 호출 하 고 id 번호가 1 인 직원에 대 한 명령 체인을 반환 합니다.
 
 ```
 EXEC uspGetEmployeeManagers 1;
@@ -87,9 +87,9 @@ uspGetEmployeeManagers;
 
  `Sales.Customer`
 
- 테이블 이름 Sales.Customer를 입력하면 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 `SELECT * FROM Sales.Customer;`만드는 것과 같습니다.
+ Sales. Customer 테이블 이름을 입력 하는 경우에는 [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 `SELECT * FROM Sales.Customer;`만드는 것과 동일 합니다.
 
 ## <a name="see-also"></a>참고 항목
- [보고서 디자이너 SQL Server 데이터 도구 &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md) [보고서 작성기 및 공유 데이터 &#40;집합을 보고서 작성기 및 SSRS&#41;SSRS&#41;보고서 작성기 및 SSRS](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)&#41;[SS&#41;RS](report-data/sql-server-connection-type-ssrs.md) 는 OLE DB 연결 &#40;유형 &#40;[SS&#41;RS&#41;SSRS&#41;SSRS&#41;SSRS](report-data/ole-db-connection-type-ssrs.md)&#41;[&#40;보고서](report-data/odbc-connection-type-ssrs.md) 작성기 및 SSRS &#40;&#41;[RSReportDesigner 구성 파일 에서](report-server/rsreportdesigner-configuration-file.md) 보고서 [작성자 및 SSRS를&#41;.](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)
+ [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구 &#40;ssrs&#41;](report-data/query-design-tools-ssrs.md) [보고서 포함 된 데이터 집합 및 공유 데이터 집합 &#40;보고서 작성기 및 ssrs&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [SQL Server 연결](report-data/sql-server-connection-type-ssrs.md) 형식 &#40;[ssrs&#41;](report-data/ole-db-connection-type-ssrs.md) [ODBC 연결](report-data/odbc-connection-type-ssrs.md) 형식 OLE DB Ssrs &#40;[보고서 포함 된 데이터 집합 및 공유 데이터 집합&#41;&#40;및 ssrs&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) [rsreportdesigner.config 구성 파일](report-server/rsreportdesigner-configuration-file.md)
 
 

@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487162"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
@@ -32,11 +32,11 @@ ms.locfileid: "81487162"
   
 -   [특정 보안 개체와 관련된 사용 권한](#_securables)  
   
--   [SQL 서버 권한](#_permissions)  
+-   [SQL Server 권한](#_permissions)  
   
 -   [사용 권한 검사 알고리즘](#_algorithm)  
   
--   [예](#_examples)  
+-   [예제](#_examples)  
   
 ##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>사용 권한 명명 규칙  
  다음은 사용 권한 이름 지정에 대한 일반적인 규칙 설명입니다.  
@@ -49,11 +49,11 @@ ms.locfileid: "81487162"
   
      특정 보안 개체의 소유권을 제외한 속성을 변경할 수 있는 사용 권한을 줍니다. 범위에 부여된 경우 ALTER는 또한 해당 범위 내에 포함된 임의의 보안 개체를 변경하고, 만들고, 삭제할 수 있는 기능을 부여합니다. 예를 들어 스키마의 ALTER 권한에는 스키마에서 개체를 만들고, 변경하고, 삭제할 수 있는 기능이 포함됩니다.  
   
--   \< *서버 분리 가능* 서버가 모든 서버 를 분리할 *수* 있는> 변경합니다.  
+-   서버 보안 \<개체는 임의의 서버 보안 개체 *일 수 있는* 모든 *서버* 보안 개체>를 변경 합니다.  
   
      *Server Securable*의 개별 항목을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY LOGIN은 인스턴스의 모든 로그인을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
--   \< *데이터베이스 분리 가능 데이터베이스 가* *Database Securable* 데이터베이스 수준에서 모든 증권화 가능 할 수있는 모든 데이터베이스 분리> 변경합니다.  
+-   데이터베이스 보안 개체는 데이터베이스 수준에서 임의의 보안 개체 *일 수 있는* *데이터베이스 보안* 개체>를 변경 합니다. \<  
   
      *Database Securable*의 개별 항목을 만들거나(CREATE) 변경하거나(ALTER) 삭제(DROP)할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY SCHEMA는 데이터베이스의 모든 스키마를 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "81487162"
   
      피부여자가 부여된 보안 개체의 소유권을 갖도록 합니다.  
   
--   \< *로그인* 을 가장>  
+-   \< *로그인* 가장>  
   
      피부여자가 로그인을 가장하도록 합니다.  
   
--   \< *사용자* 사칭>  
+-   \< *사용자* 가장>  
   
      피부여자가 사용자를 가장하도록 합니다.  
   
--   \< *서버 분리 가능* 만들기>  
+-   \< *서버 보안* 개체 만들기>  
   
      피부여자에게 *Server Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   \< *데이터베이스 분리 가능* 만들기>  
+-   \< *데이터베이스 보안* 개체 만들기>  
   
      피부여자에게 *Database Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   \< *스키마 포함 증권 화만들기*>  
+-   \< *스키마에 포함 된 보안* 개체 만들기>  
   
      스키마가 포함된 보안 개체를 만들 수 있는 기능을 제공합니다. 하지만 특정 스키마에 보안 개체를 만들려면 스키마에 대한 ALTER 권한이 필요합니다.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "81487162"
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- PDF 형식으로 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한의 포스터 크기 차트는 을 참조하십시오. [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)  
+ Pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용 권한에 대 한 포스터 크기 차트를 보려면을 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)참조 하십시오.  
   
-##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>특정 증권화에 적용되는 권한  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>특정 보안 개체에 적용 가능한 사용 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  
   
 |사용 권한|적용 대상|  
@@ -116,7 +116,7 @@ ms.locfileid: "81487162"
 > [!CAUTION]  
 >  설치 시 시스템 개체에 부여되는 기본 사용 권한은 발생할 수 있는 위협이 있는지 신중하게 평가되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 보안 강화의 일환으로 변경할 필요는 없습니다. 시스템 개체에 대한 사용 권한을 변경하면 기능이 제한 또는 중단될 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치가 지원되지 않는 상태가 될 수 있습니다.  
   
-##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL 서버 및 SQL 데이터베이스 사용 권한  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server 및 SQL Database 권한  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
   
 |기본 보안 개체|기본 보안 개체에 대한 세부적 사용 권한|사용 권한 유형 코드|기본 보안 개체를 포함하는 보안 개체|기본 보안 개체의 세부적 사용 권한을 나타내는 컨테이너 보안 개체의 사용 권한|  
@@ -157,7 +157,7 @@ ms.locfileid: "81487162"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "81487162"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "81487162"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -342,7 +342,7 @@ ms.locfileid: "81487162"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>권한 확인 알고리즘 요약  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>권한 검사 알고리즘 요약  
  사용 권한 검사는 복잡할 수 있습니다. 사용 권한 검사 알고리즘에는 겹치는 그룹 멤버 자격과 소유권 체인이 포함됩니다. 둘 다 명시적 및 암시적 사용 권한이며 보안 가능한 엔터티가 포함된 보안 개체 클래스에 대한 사용 권한의 영향을 받을 수 있습니다. 알고리즘의 일반적인 프로세스는 관련된 사용 권한을 모두 수집하는 것입니다. DENY 차단이 발견되지 않는 경우 알고리즘에서는 충분한 액세스 권한을 제공하는 GRANT를 검색합니다. 알고리즘에는 세 가지 필수 요소인 **보안 컨텍스트**, **사용 권한 공간**및 **필요한 사용 권한**이 포함되어 있습니다.  
   
 > [!NOTE]  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [사용 권한 계층 &#40;데이터베이스 엔진&#41;](permissions-hierarchy-database-engine.md)   
+ [데이터베이스 엔진&#41;&#40;사용 권한 계층](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

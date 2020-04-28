@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388542"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 디자이너의 보고서 데이터 세트에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요. 특정 데이터 원본 형식 작업에 대한 자세한 내용은 [보고서 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)데이터 추가를 참조하십시오.
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 보고서 디자이너의 보고서 데이터 세트에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요. 특정 데이터 원본 유형을 사용 하는 방법에 대 한 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)를 참조 하세요.
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>참고 항목
- [보고서 디자이너 SQL Server 데이터 도구&#40;SSRS&#41;SSRS](query-design-tools-ssrs.md) 보고서 [작성기 및 SSRS&#41;&#40;SSRS에 &#40;데이터를 추가](report-datasets-ssrs.md) 하려면 보고서 작성기 및 [SS&#41;RS](sql-server-connection-type-ssrs.md) 를 OLE DB 연결 유형 &#40;보고서 작성기 및 [SSRS](ole-db-connection-type-ssrs.md) 보고서 작성기 및 SSRS 에 데이터를 추가&#41;보고서 [작성기 및 SSRS 보고서 작성기 및 SSRS](report-datasets-ssrs.md) 에 &#40;데이터를 추가&#41;보고서 작성자 및 SS [&#40;&#41;RS](oracle-connection-type-ssrs.md)&#41;[RSReportDesigner 구성 파일 디자인](../report-server/rsreportdesigner-configuration-file.md) 쿼리 및 보기 &#40;시각적 데이터베이스 [도구에](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) 대 한 방법 항목 보기&#41;
+ [보고서 디자이너 SQL Server Data Tools의 쿼리 디자인 도구&#41;&#40;](query-design-tools-ssrs.md) ssrs &#40;보고서 작성기 [및](report-datasets-ssrs.md) [ssrs&#41;](sql-server-connection-type-ssrs.md) 연결 유형 SQL Server ssrs &#40;&#41;[연결](ole-db-connection-type-ssrs.md) 유형 OLE DB SSRS &#40;&#41;연결 유형 &#40;보고서 작성기 [및 Ssrs&#41;](report-datasets-ssrs.md) [Oracle 연결 유형 &#40;Ssrs](oracle-connection-type-ssrs.md)&#41;[rsreportdesigner.config 구성 파일](../report-server/rsreportdesigner-configuration-file.md) [디자인 쿼리 및 뷰 &#40;Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)&#41;
 
 

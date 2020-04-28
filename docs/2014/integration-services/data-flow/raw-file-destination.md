@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487015"
 ---
 # <a name="raw-file-destination"></a>Raw File Destination
@@ -113,7 +113,7 @@ ms.locfileid: "81487015"
   
 1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 다시 설정하여 에 대해 ValidateExternalMetadata `False`속성을 **부가합니다.**  
+2.  WriteOption 속성을 **Append** 로 다시 설정 하 고 ValidateExternalMetadata 속성을 `False`로 설정 합니다.  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81487015"
  sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)  
   
 ## <a name="see-also"></a>참고 항목  
- [원시 파일 소스](raw-file-source.md)   
+ [원시 파일 원본](raw-file-source.md)   
  [데이터 흐름](data-flow.md)  
   
   

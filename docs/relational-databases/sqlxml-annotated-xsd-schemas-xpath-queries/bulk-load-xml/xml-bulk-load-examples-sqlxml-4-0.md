@@ -1,6 +1,6 @@
 ---
-title: XML 대량 로드 예제(SQLXML)
-description: 각 예제에 대한 XSD 및 XDR 스키마를 통해 SQKXML 4.0의 XML 대량 로드 기능에 대한 자세한 예제를 봅니다.
+title: XML 대량 로드 예 (SQLXML)
+description: 각 예의 XSD 및 XDR 스키마를 사용 하 여 SQKXML 4.0에서 XML 대량 로드 기능의 자세한 예를 봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -34,10 +34,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e79be936942d9d66d52d5a1c1eb9fa2d94318bd3
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388342"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
@@ -45,7 +45,7 @@ ms.locfileid: "81388342"
   다음 예에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 XML 대량 로드 기능을 보여 줍니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>대량 로더 스크립트(ValidateAndBulkload.vbs)  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 시각적 기본 스크립팅 에디션(VBScript)으로 작성된 다음 스크립트는 XML 문서를 XML DOM에 로드합니다. 스키마에 대해 유효성을 검사합니다. 문서가 유효한 경우 XML 대량 로드를 실행하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML을 테이블에 로드합니다. 이 스크립트는 이 항목의 뒷부분에서 이 스크립트를 참조하는 각 개별 예와 함께 사용할 수 있습니다.  
+ VBScript ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition)로 작성 된 다음 스크립트는 xml 문서를 xml DOM에 로드 합니다. 스키마에 대해 유효성을 검사 합니다. 문서가 올바르면 XML 대량 로드를 실행 하 여 XML을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블로 로드 합니다. 이 스크립트는 이 항목의 뒷부분에서 이 스크립트를 참조하는 각 개별 예와 함께 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  데이터 파일에서 업로드되는 내용이 없을 경우 XML 대량 로드는 경고 또는 오류를 표시하지 않습니다. 따라서 대량 로드 작업을 실행하기 전에 XML 데이터 파일의 유효성을 검사하는 것이 좋습니다.  
@@ -114,7 +114,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. 테이블에 XML 대량 로드  
- 이 예제에서는 연결 String 속성(MyServer)에 지정된 인스턴스에 대한 연결을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설정합니다. 이 예제는 ErrorLogFile 속성을 지정합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. 또한 Execute 메서드는 매핑 스키마 파일(SampleSchema.xml)과 XML 데이터 파일(SampleXMLData.xml)의 매개 변수를 모두 사용합니다. 대량 로드가 실행되면 **tempdb** 데이터베이스에서 만든 Cust 테이블에는 XML 데이터 파일의 내용을 기반으로 하는 새 레코드가 포함됩니다.  
+ 이 예에서는 ConnectionString 속성 (MyServer)에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지정 된 인스턴스에 대 한 연결을 설정 합니다. 또한이 예제에서는 ErrorLogFile 속성을 지정 합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. 또한 Execute 메서드는 매핑 스키마 파일 (Sampleschema.xml)과 XML 데이터 파일 (Samplexmldata.xml로)의 매개 변수를 포함 합니다. 대량 로드를 실행 하면 **tempdb** 데이터베이스에서 만든 Cust 테이블에 XML 데이터 파일의 내용에 따라 새 레코드가 포함 됩니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
   
@@ -172,7 +172,7 @@ End Function
     </ROOT>  
     ```  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 항목의 시작 부분에 제공된 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 이름을 지정합니다. Execute 메서드에 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 항목의 시작 부분에 제공된 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
   
 5.  VBScript 코드를 실행합니다. XML 대량 로드가 Cust 테이블에 XML을 로드합니다.  
   
@@ -202,7 +202,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 여러 테이블에 XML 데이터 대량 로드  
- 이 예제에서 XML 문서는 ** \<고객>** 및 ** \<주문>** 요소로 구성됩니다.  
+ 이 예제에서 XML 문서는 ** \<Customer>** 및 ** \<Order>** 요소로 구성 됩니다.  
   
 ```xml  
 <ROOT>  
@@ -227,13 +227,13 @@ End Function
 </ROOT>  
 ```  
   
- 이 예제대량은 XML 데이터를 **Cust** 및 **CustOrder의**두 테이블로 로드합니다.  
+ 이 예에서는 XML 데이터를 **Cust** 및 **CustOrder**라는 두 테이블에 대량 로드 합니다.  
   
--   커스트(고객ID, 회사이름, 시티)  
+-   Cust (CustomerID, CompanyName, City)  
   
--   커스트오더(주문 ID, 고객 ID)  
+-   CustOrder (OrderID, CustomerID)  
   
- 다음 XSD 스키마는 이러한 테이블의 XML 뷰를 정의합니다. 스키마는 ** \<고객>** ** \<주문>** 요소 간의 부모-자식 관계를 지정합니다.  
+ 다음 XSD 스키마는 이러한 테이블의 XML 뷰를 정의합니다. 이 스키마는 ** \<Customer>** 와 ** \<Order>** 요소 간의 부모-자식 관계를 지정 합니다.  
   
 ```xml  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -272,11 +272,11 @@ End Function
 </xsd:schema>  
 ```  
   
- XML 벌크 로드는 ** \<Cust>** ** \<CustOrder>** 요소 사이에 위에 지정된 기본 키/외래 키 관계를 사용하여 데이터를 두 테이블에 대량 로드합니다.  
+ XML 대량 로드는 ** \<CustOrder>** 요소 ** \<>** 사이에 지정 된 기본 키/외래 키 관계를 사용 하 여 두 테이블에 데이터를 대량으로 로드 합니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
   
-1.  **tempdb** 데이터베이스에서 두 개의 테이블을 만듭니다.  
+1.  **Tempdb** 데이터베이스에 두 개의 테이블을 만듭니다.  
   
     ```sql  
     USE tempdb;  
@@ -292,7 +292,7 @@ End Function
   
 3.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleData.xml로 저장합니다. 이 예의 앞부분에 제공된 XML 문서를 이 파일에 추가합니다.  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 항목의 시작 부분에 제공된 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 항목의 시작 부분에 제공된 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
   
 5.  위의 VBScript 코드를 실행합니다. XML 대량 로드가 Cust 및 CustOrder 테이블에 XML 문서를 로드합니다.  
   
@@ -385,7 +385,7 @@ End Function
 </xsd:schema>  
 ```  
   
- 스키마는 ** \<제품>** 자식 요소가 있는 ** \<주문>** 요소를 지정합니다. Order>요소는 Ord 테이블에 매핑되고 ** \<제품>** 요소는 데이터베이스의 제품 테이블에 매핑됩니다. ** \<** 제품>요소에 지정된 체인 관계는 OrderDetail 테이블로 표시되는 M:N 관계를 식별합니다. ** \<** 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
+ 이 스키마는 ** \<Product>** 자식 요소와 함께 ** \<Order>** 요소를 지정 합니다. ** \<Order>** 요소는 Ord 테이블에 매핑되고 ** \<product>** 요소는 데이터베이스의 product 테이블에 매핑됩니다. Product>요소에 지정 된 체인 관계는 orderdetail 테이블로 표시 되는 m:n 관계를 식별 합니다. ** \<** 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
   
  이 스키마를 사용하여 XML 문서를 대량 로드하는 경우 Ord, Product 및 OrderDetail 테이블에 레코드가 추가됩니다.  
   
@@ -454,7 +454,7 @@ Product (ProductID, ProductName)
 OrderDetail (OrderID, ProductID)  
 ```  
   
- XML 대량 로드의 이 예에서 BulkLoad 개체 모델의 KeepIdentity 속성은 false로 설정됩니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 각각 Product 및 Ord 테이블의 ProductID 및 OrderID 열에 대한 ID 값을 생성합니다(이 문서에서 대량 로드되도록 제공된 모든 값은 무시됨).  
+ 이 XML 대량 로드 예제에서 BulkLoad 개체 모델의 KeepIdentity 속성은 false로 설정 됩니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 각각 Product 및 Ord 테이블의 ProductID 및 OrderID 열에 대한 ID 값을 생성합니다(이 문서에서 대량 로드되도록 제공된 모든 값은 무시됨).  
   
  여기에서 XML 대량 로드는 테이블 간의 기본 키/외래 키 관계를 식별합니다. 대량 로드는 먼저 기본 키가 있는 테이블에 레코드를 삽입한 후 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성한 ID 값을 외래 키 열이 있는 테이블로 전파합니다. 다음 예의 XML 대량 로드는 다음 순서에 따라 데이터를 테이블에 삽입합니다.  
   
@@ -543,7 +543,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. **Execute** 메서드에 매개 변수로 사용 되는 파일에 대 한 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. **Execute** 메서드에 대 한 매개 변수로 사용할 파일의 적절 한 경로를 지정 합니다.  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -560,13 +560,13 @@ OrderDetail (OrderID, ProductID)
 5.  VBScript 코드를 실행합니다. XML 대량 로드에서 해당 테이블에 데이터를 로드합니다.  
   
 ## <a name="e-generating-table-schemas-before-bulk-loading"></a>E. 대량 로드 전에 테이블 스키마 생성  
- XML 대량 로드는 대량 로드 전에 테이블이 존재하지 않는 경우 필요에 따라 이러한 테이블을 만들 수 있습니다. SQLXMLBulkLoad 개체의 스키마겐 속성을 TRUE로 설정하면 됩니다. SGDropTables 속성을 TRUE로 설정하여 XML 대량 로드를 선택적으로 요청하여 기존 테이블을 삭제하고 다시 만들 수 있습니다. 다음 VBScript 예에서는 이러한 속성의 사용 방법을 보여 줍니다.  
+ XML 대량 로드는 대량 로드 전에 테이블이 존재하지 않는 경우 필요에 따라 이러한 테이블을 만들 수 있습니다. SQLXMLBulkLoad 개체의 SchemaGen 속성을 TRUE로 설정 하면이를 수행 합니다. 또한 선택적으로 XML 대량 로드를 요청 하 여 기존 테이블을 삭제 하 고 SGDropTables 속성을 TRUE로 설정 하 여 다시 만들 수 있습니다. 다음 VBScript 예에서는 이러한 속성의 사용 방법을 보여 줍니다.  
   
  또한 이 예에서는 두 개의 추가 속성을 TRUE로 설정합니다.  
   
--   검사 제약 조건. 이 속성을 TRUE로 설정하면 테이블에 삽입되는 데이터가 테이블에 지정된 제약 조건을 위반하지 않도록 보장할 수 있습니다(이 예에서는 Cust와 CustOrder 테이블 간에 지정된 PRIMARY KEY/FOREIGN KEY 제약 조건). 제약 조건 위반이 발생하면 대량 로드는 실패합니다.  
+-   CheckConstraints. 이 속성을 TRUE로 설정하면 테이블에 삽입되는 데이터가 테이블에 지정된 제약 조건을 위반하지 않도록 보장할 수 있습니다(이 예에서는 Cust와 CustOrder 테이블 간에 지정된 PRIMARY KEY/FOREIGN KEY 제약 조건). 제약 조건 위반이 발생하면 대량 로드는 실패합니다.  
   
--   XML 프래그먼트. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
+-   XMLFragment. 예제 XML 문서(데이터 원본)에는 단일 최상위 요소가 없고 따라서 조각이므로 이 속성은 TRUE로 설정해야 합니다.  
   
  다음은 VBScript 코드입니다.  
   
@@ -589,14 +589,14 @@ Set objBL = Nothing
   
 1.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XSD 스키마를 파일에 추가합니다.  
   
-2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleXMLData.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XML 문서를 파일에 추가합니다. \<ROOT> 요소를 문서에서 제거합니다(조각만들기).  
+2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleXMLData.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XML 문서를 파일에 추가합니다. 문서에서 \<루트> 요소를 제거 하 여 조각으로 만듭니다.  
   
-3.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 예의 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
+3.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 예의 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
   
 4.  VBScript 코드를 실행합니다. XML 대량 로드에서 제공된 매핑 스키마를 기반으로 필요한 테이블을 만들고 이 테이블에 데이터를 대량 로드합니다.  
   
 ## <a name="f-bulk-loading-from-a-stream"></a>F. 스트림에서 대량 로드  
- XML 벌크 로드 개체 모델의 Execute 메서드는 두 개의 매개 변수를 사용합니다. 첫 번째 매개 변수는 매핑 스키마 파일입니다. 두 번째 매개 변수는 데이터베이스에 로드될 XML 데이터를 제공합니다. XML 데이터를 XML 대량 로드의 실행 메서드에 전달하는 방법에는 두 가지가 있습니다.  
+ XML 대량 로드 개체 모델의 Execute 메서드는 두 개의 매개 변수를 사용 합니다. 첫 번째 매개 변수는 매핑 스키마 파일입니다. 두 번째 매개 변수는 데이터베이스에 로드될 XML 데이터를 제공합니다. Xml 데이터를 XML 대량 로드의 Execute 메서드에 전달 하는 방법에는 두 가지가 있습니다.  
   
 -   파일 이름을 매개 변수로 지정합니다.  
   
@@ -615,9 +615,9 @@ Set objBL = Nothing
 ...  
 ```  
   
- 그런 다음 스크립트는 XML을 Execute 메서드에 스트림으로 두 번째 매개 변수로 전달합니다. Execute 메서드 대량 Cust 테이블에 데이터를 로드 합니다.  
+ 그런 다음 스크립트는 XML을 Execute 메서드에 대 한 스트림으로 두 번째 매개 변수로 전달 합니다. Execute 메서드는 데이터를 Cust 테이블에 대량 로드 합니다.  
   
- 이 스크립트는 스키마젠 속성을 TRUE 및 SGDropTables 속성을 TRUE로 설정하므로 XML 대량 로드는 지정된 데이터베이스에서 Cust 테이블을 만듭니다. 테이블이 이미 있는 경우 이 테이블을 먼저 삭제한 다음 다시 만듭니다.  
+ 이 스크립트는 SchemaGen 속성을 TRUE로 설정 하 고 SGDropTables 속성을 TRUE로 설정 하므로 XML 대량 로드는 지정 된 데이터베이스에 Cust 테이블을 만듭니다. 테이블이 이미 있는 경우 이 테이블을 먼저 삭제한 다음 다시 만듭니다.  
   
  다음은 VBScript 예입니다.  
   
@@ -708,7 +708,7 @@ Set objBL = Nothing
 ```  
   
 ### <a name="opening-a-stream-on-an-existing-file"></a>기존 파일에서 스트림 열기  
- 기존 XML 데이터 파일에서 스트림을 열고 파일 이름을 매개 변수로 전달하는 대신 Execute 메서드에 매개 변수로 스트림을 전달할 수도 있습니다.  
+ 기존 XML 데이터 파일에서 스트림을 열고 파일 이름을 매개 변수로 전달 하는 대신 Execute 메서드에 스트림으로 전달할 수도 있습니다.  
   
  다음은 스트림을 매개 변수로 전달하는 Visual Basic 예입니다.  
   
@@ -810,7 +810,7 @@ End Sub
 ```  
   
 ## <a name="g-bulk-loading-in-overflow-columns"></a>G. 오버플로 열에 대량 로드  
- 매핑 스키마가 **sql:오버플로 필드** 부호를 사용하여 오버플로 열을 지정하는 경우 XML 대량 로드는 원본 문서에서 사용되지 않은 모든 데이터를 이 열로 복사합니다.  
+ 매핑 스키마가 **sql: 오버플로-필드** 주석을 사용 하 여 오버플로 열을 지정 하는 경우 XML 대량 로드는 원본 문서에서 사용 되지 않은 모든 데이터를이 열에 복사 합니다.  
   
  다음 XSD 스키마를 고려해 보십시오.  
   
@@ -847,14 +847,14 @@ End Sub
 </xsd:schema>  
 ```  
   
- 스키마는 Cust 테이블에 대한 오버플로 열(OverflowColumn)을 식별합니다. 따라서 각 ** \<고객>** 요소에 대해 사용되지 않는 모든 XML 데이터가 이 열에 추가됩니다.  
+ 스키마는 Cust 테이블에 대한 오버플로 열(OverflowColumn)을 식별합니다. 따라서 각 ** \<Customer>** 요소에 대해 소비 되지 않은 모든 XML 데이터가이 열에 추가 됩니다.  
   
 > [!NOTE]  
->  모든 추상 **요소(abstract="true"가** 지정된 요소)와 금지된 모든 **특성(금지됨="true"가** 지정된 특성)은 XML 대량 부하에 의한 오버플로로 간주되며 지정된 경우 오버플로열에 추가됩니다. 지정되지 않은 경우에는 무시됩니다.  
+>  모든 추상 요소 ( **abstract = "true"** 가 지정 된 요소) 및 모든 금지 된 특성 ( **금지 = "true"** 가 지정 된 특성)은 XML 대량 로드에 의해 오버플로로 간주 되 고 지정 된 경우 오버플로 열에 추가 됩니다. 지정되지 않은 경우에는 무시됩니다.  
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
-1.  **tempdb** 데이터베이스에서 두 개의 테이블을 만듭니다.  
+1.  **Tempdb** 데이터베이스에 두 개의 테이블을 만듭니다.  
   
     ```  
     USE tempdb;  
@@ -901,7 +901,7 @@ End Sub
     </ROOT>  
     ```  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 Microsoft Visual Basic Scripting Edition(VBScript) 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 Microsoft Visual Basic Scripting Edition(VBScript) 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -954,13 +954,13 @@ End Sub
 ```  
   
 ## <a name="h-specifying-the-file-path-for-temp-files-in-transaction-mode"></a>H. 트랜잭션 모드에서 임시 파일에 대한 파일 경로 지정  
- 트랜잭션 모드에서 대량 로딩하는 경우(즉, 트랜잭션 속성이 TRUE로 설정된 경우) 다음 조건 중 하나가 true인 경우 TempFilePath 속성을 설정해야 합니다.  
+ 트랜잭션 모드에서 대량 로드 하는 경우, 즉 Transaction 속성이 TRUE로 설정 된 경우 다음 조건 중 하나에 해당 하는 경우에도 TempFilePath 속성을 설정 해야 합니다.  
   
 -   원격 서버에 대량 로드하는 경우  
   
 -   TEMP 환경 변수에 지정된 경로와 다른 대체 로컬 드라이브 또는 폴더를 사용하여 트랜잭션 모드에서 만들어진 임시 파일을 저장하려는 경우  
   
- 예를 들어 다음 VBScript 코드는 트랜잭션 모드에서 SampleXMLData.xml 파일의 데이터를 데이터베이스 테이블에 대량 로드합니다. TempFilePath 속성은 트랜잭션 모드에서 생성되는 임시 파일의 경로를 설정하도록 지정됩니다.  
+ 예를 들어 다음 VBScript 코드는 트랜잭션 모드에서 SampleXMLData.xml 파일의 데이터를 데이터베이스 테이블에 대량 로드합니다. TempFilePath 속성은 트랜잭션 모드에서 생성 된 임시 파일의 경로를 설정 하는 데 지정 됩니다.  
   
 ```  
 set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -974,11 +974,11 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 애플리케이션을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 로컬 서버에서 대량 로드하지 않는 한 임시 파일 경로는 UNC \\경로(예: \servername\sharename)여야 합니다.  
+>  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 애플리케이션을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 로컬 서버에서 대량 로드 하는 경우가 아니면 임시 파일 경로는 UNC 경로 (예: \\\servername\sharename) 여야 합니다.  
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
-1.  **tempdb** 데이터베이스에서 이 테이블을 만듭니다.  
+1.  **Tempdb** 데이터베이스에이 테이블을 만듭니다.  
   
     ```  
     USE tempdb;  
@@ -1018,7 +1018,7 @@ set objBL=Nothing
     </ROOT>  
     ```  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다. 또한 TempFilePath 속성에 대 한 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다. 또한 TempFilePath 속성에 대해 적절 한 경로를 지정 합니다.  
   
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -1033,7 +1033,7 @@ set objBL=Nothing
   
 5.  VBScript 코드를 실행합니다.  
   
-     스키마는 **CustomerID** 값이 다음과 같이 중괄호({및 })를 포함하는 GUID로 지정될 때 **CustomerID** 특성에 해당하는 **sql:datatype을** 지정해야 합니다.  
+     **Customerid** 의 값이 중괄호 ({및})를 포함 하는 GUID로 지정 된 경우 스키마는 **customerid** 특성에 해당 하는 **sql: datatype** 을 지정 해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <ROOT>  
@@ -1065,7 +1065,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     **sql:datatype이** 열 형식을 **고유 식별자로**식별하여 지정되면 대량 로드 작업은 열에 삽입하기 전에 **CustomerID** 값에서 중괄호({및 })를 제거합니다.  
+     **Sql: datatype** 이 열 유형을 **uniqueidentifier**로 식별 하도록 지정 된 경우 대량 로드 작업은 열에 삽입 하기 전에 **CustomerID** 값에서 중괄호 ({및})를 제거 합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   
@@ -1090,7 +1090,7 @@ set objBL=Nothing
 ## <a name="i-using-an-existing-database-connection-with-the-connectioncommand-property"></a>9\. ConnectionCommand 속성으로 기존 데이터베이스 연결 사용  
  기존 ADO 연결을 사용하여 XML을 대량 로드할 수 있습니다. 이 방법은 XML 대량 로드 외에도 많은 작업이 데이터 원본에 대해 수행되는 경우 유용합니다.  
   
- ConnectionCommand 속성을 사용하면 ADO 명령 개체를 사용하여 기존 ADO 연결을 사용할 수 있습니다. 다음 Visual Basic 예에서 확인할 수 있습니다.  
+ ConnectionCommand 속성을 사용 하면 ADO 명령 개체를 사용 하 여 기존 ADO 연결을 사용할 수 있습니다. 다음 Visual Basic 예에서 확인할 수 있습니다.  
   
 ```  
 Private Sub Form_Load()  
@@ -1116,7 +1116,7 @@ End Sub
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
-1.  **tempdb** 데이터베이스에서 두 개의 테이블을 만듭니다.  
+1.  **Tempdb** 데이터베이스에 두 개의 테이블을 만듭니다.  
   
     ```  
     USE tempdb;  
@@ -1245,9 +1245,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. xml 데이터 형식 열에 대량 로드  
- 매핑 스키마가 **sql:datatype="xml"** 추가를 사용하여 [xml 데이터 형식](../../../t-sql/xml/xml-transact-sql.md) 열을 지정하는 경우 XML 대량 로드는 원본 문서에서 매핑된 필드에 대한 XML 자식 요소를 이 열로 복사할 수 있습니다.  
+ 매핑 스키마가 **sql: datatype = "xml"** 주석을 사용 하 여 [xml 데이터 형식](../../../t-sql/xml/xml-transact-sql.md) 열을 지정 하는 경우 xml 대량 로드는 원본 문서에서 매핑된 필드의 xml 자식 요소를이 열로 복사할 수 있습니다.  
   
- AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 표에서 **xml** 데이터 형식의 CatalogDescription 필드는 sql:field 및 **sql:datatype="xml"** 주석을 사용하여 ** \<Desc>** 요소에 매핑됩니다. **sql:field**  
+ AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 테이블에서 **xml** 데이터 형식의 CatalogDescription 필드는 **sql: field** 및 **sql: datatype = "xml"** 주석을 사용 하 여 ** \<Desc>** 요소에 매핑됩니다.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

@@ -1,5 +1,5 @@
 ---
-title: For 루프 컨테이너 구성 | 마이크로 소프트 문서
+title: For 루프 컨테이너 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487001"
 ---
 # <a name="configure-a-for-loop-container"></a>For 루프 컨테이너 구성
@@ -43,8 +43,8 @@ ms.locfileid: "81487001"
 7.  **확인** 을 클릭하여 **For 루프 편집기**를 닫습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [루프 컨테이너용](control-flow/for-loop-container.md)   
- [SSIS&#41; 표현식을 &#40;통합 서비스](expressions/integration-services-ssis-expressions.md)   
+ [For 루프 컨테이너](control-flow/for-loop-container.md)   
+ [Integration Services &#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)   
  [패키지에서 속성 식 사용](expressions/use-property-expressions-in-packages.md)  
   
   

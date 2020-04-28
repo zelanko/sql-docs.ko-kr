@@ -1,5 +1,5 @@
 ---
-title: 올레 DB 레퍼런스
+title: OLE DB 참조
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388522"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client(OLE DB) 인터페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  네이티브 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 OLE DB 공급자는 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하나 이상의 컴퓨터에서 데이터에 액세스하려는 소비자에게 인터페이스를 노출합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 OLE DB 버전 2.0 을 준수하는 공급자입니다.  
+  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는를 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 하나 이상의 컴퓨터에서 데이터에 액세스 하려는 소비자에 게 인터페이스를 노출 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
   
- 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 프로그래밍 참조는 모든 OLE DB 인터페이스와 메서드를 문서화하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자를 사용할 때 공급자별 동작을 나타내는 인터페이스 및 메서드만 문서화합니다.  
+ 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자 프로그래밍 참조는 일부 OLE DB 인터페이스와 메서드를 문서화 하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자를 사용할 때 공급자별 동작을 나타내는 인터페이스와 메서드만 제공 합니다.  
   
  핵심 OLE DB 인터페이스 및 메서드에 대한 자세한 내용은 [OLE DB 프로그래머 참조(OLE DB Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45232)를 참조하십시오.  
   

@@ -1,5 +1,5 @@
 ---
-title: 예약된 키워드 | 마이크로 소프트 문서
+title: 예약 키워드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307994"
 ---
 # <a name="reserved-keywords"></a>예약 키워드
-다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어는 최소 SQL 문법을 제한하지 않습니다. 그러나 핵심 SQL 문법을 지원하는 드라이버와의 호환성을 보장하려면 응용 프로그램은 이러한 키워드를 사용하지 않아야 합니다. SQL_ODBC_KEYWORDS **#정의** 값에는 이러한 키워드의 쉼표로 구분된 목록이 포함되어 있습니다.  
+다음은 ODBC 함수 호출에 사용하기 위해 예약된 단어입니다. 이러한 단어는 최소 SQL 문법을 제한 하지 않습니다. 그러나 핵심 SQL 문법을 지 원하는 드라이버와의 호환성을 보장 하기 위해 응용 프로그램은 이러한 키워드를 사용 하지 않아야 합니다. #**Define** 값 SQL_ODBC_KEYWORDS은 쉼표로 구분 된 이러한 키워드 목록을 포함 합니다.  
   
 |||  
 |-|-|  

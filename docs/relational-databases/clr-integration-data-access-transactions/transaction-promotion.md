@@ -1,6 +1,6 @@
 ---
-title: 거래 프로모션 | 마이크로 소프트 문서
-description: SQL Server CLR 통합에서 간단한 로컬 트랜잭션을 트랜잭션 승격을 통해 완전히 배포 가능한 트랜잭션으로 승격할 수 있습니다.
+title: 트랜잭션 승격 | Microsoft Docs
+description: SQL Server CLR 통합에서는 트랜잭션 승격을 통해 경량 로컬 트랜잭션을 완전히 배포 가능한 트랜잭션으로 승격할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e77409f6bf6c71363e030f29f86f41205dd4a0f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487489"
 ---
 # <a name="transaction-promotion"></a>트랜잭션 승격
@@ -32,7 +32,7 @@ ms.locfileid: "81487489"
 ## <a name="distributed-transactions"></a>분산 트랜잭션  
  분산 트랜잭션은 일반적으로 많은 시스템 리소스를 사용합니다. MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)는 이러한 트랜잭션을 관리하고 해당 트랜잭션에서 액세스되는 모든 리소스 관리자를 통합합니다. 한편, 트랜잭션 승격은 실제로 작업을 단순한 **System.Transactions** 트랜잭션에 위임하는 특수한 형태의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션입니다. **System.Transactions**, **System.Data.SqlClient**및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 트랜잭션 처리와 관련된 작업을 조정하고 필요에 따라 완전한 분산 트랜잭션으로 승격합니다.  
   
- 트랜잭션 승격을 사용하면 활성 **TransactionScope** 트랜잭션을 사용하여 연결을 열고 다른 연결은 열지 않을 때 완전 분산 트랜잭션의 추가 오버헤드를 발생시키지 않고 트랜잭션이 경량 트랜잭션으로 커밋된다는 이점이 있습니다. **트랜잭션 스코프에**대한 자세한 내용은 [System.Transactions 을 사용하여](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)를 참조하십시오.  
+ 트랜잭션 승격을 사용하면 활성 **TransactionScope** 트랜잭션을 사용하여 연결을 열고 다른 연결은 열지 않을 때 완전 분산 트랜잭션의 추가 오버헤드를 발생시키지 않고 트랜잭션이 경량 트랜잭션으로 커밋된다는 이점이 있습니다. **TransactionScope**에 대 한 자세한 내용은 [system.object 사용](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [CLR 통합 및 트랜잭션](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

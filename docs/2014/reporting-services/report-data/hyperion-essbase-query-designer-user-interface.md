@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387967"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Hyperion Essbase 쿼리 디자이너 사용자 인터페이스
@@ -68,7 +68,7 @@ ms.locfileid: "81387967"
 |![계산 멤버 추가](../../analysis-services/media/rsqdicon-addcalculatedmember.gif "계산 멤버 추가")|**계산 멤버 작성기** 대화 상자를 표시합니다. 이 대화 상자를 사용하여 **계산 순서** 속성 설정을 비롯한 계산 멤버 식 생성 및 편집 작업을 수행할 수 있습니다.|
 |![빈 셀 표시 설정/해제](../../analysis-services/media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|
 |![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|데이터 창에서 열을 삭제하는 경우와 같이 변경 내용이 있을 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|
-|![Delete](../../analysis-services/media/rsqdicon-delete.gif "DELETE")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
+|![Delete](../../analysis-services/media/rsqdicon-delete.gif "삭제")|선택한 항목을 쿼리에서 삭제합니다. 이 단추를 사용하여 필터 창에서 선택한 행을 삭제할 수 있습니다.|
 |![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|
 |![쿼리 취소](../../analysis-services/media/rsqdicon-cancel.gif "쿼리 취소")|쿼리를 취소합니다.|
 |![디자인 모드로 전환](../../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환")|디자인 모드와 쿼리 모드 사이를 전환합니다.|
@@ -101,6 +101,6 @@ ms.locfileid: "81387967"
 -   **자동 실행**(![쿼리 자동 실행](../../analysis-services/media/rsqdicon-autoexecute.gif "쿼리 자동 실행"))
 
 ## <a name="see-also"></a>참고 항목
- [RSReportDesigner 구성 파일을](../report-server/rsreportdesigner-configuration-file.md) [&#41;보고서 작성기 및 SSRS를 &#40;공유 데이터 집합 또는 포함된 데이터 집합](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 만들기
+ [공유 데이터 집합 또는 포함 된 데이터 집합 &#40;보고서 작성기 및 SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [rsreportdesigner.config 구성 파일](../report-server/rsreportdesigner-configuration-file.md) 을 만듭니다.
 
 
