@@ -20,10 +20,10 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039011"
 ---
 # <a name="conditional-expressions-xquery"></a>조건 식(XQuery)
@@ -39,8 +39,7 @@ else
   <expression3>  
 ```  
   
- 
-  `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 다음은 그 예입니다.  
+ `expression1`의 유효한 부울 값에 따라 `expression2`나 `expression3`이 계산됩니다. 예를 들면 다음과 같습니다.  
   
 -   테스트 식 `expression1`이 빈 시퀀스가 될 경우 결과는 False입니다.  
   
@@ -50,7 +49,7 @@ else
   
 -   위의 경우 중 하나에 해당하지 않으면 정적 오류가 발생합니다.  
   
- 그리고 다음 사항도 참조하세요.  
+ 다음 사항도 유의해야 합니다.  
   
 -   테스트 식은 괄호로 묶어야 합니다.  
   

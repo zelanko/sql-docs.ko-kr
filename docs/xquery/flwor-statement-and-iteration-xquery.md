@@ -24,10 +24,10 @@ ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038898"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 문 및 반복(XQuery)
@@ -41,20 +41,15 @@ ms.locfileid: "68038898"
   
      입력 시퀀스는 XPath 식과 같은 다른 XQuery 식이 될 수 있으며 노드 시퀀스나 원자성 값의 시퀀스 중 하나입니다. 원자성 값 시퀀스는 리터럴이나 생성자 함수를 사용하여 생성할 수 있습니다. 생성되는 XML 노드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 입력 시퀀스로 허용되지 않습니다.  
   
--   
-  `let` 절(옵션) 이 절은 특정 반복에 대해 지정된 변수에 값을 할당합니다. 할당된 식은 XPath 식과 같은 XQuery 식일 수 있으며 노드 시퀀스나 원자성 값 시퀀스를 반환할 수 있습니다. 원자성 값 시퀀스는 리터럴이나 생성자 함수를 사용하여 생성할 수 있습니다. 생성되는 XML 노드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 입력 시퀀스로 허용되지 않습니다.  
+-   `let` 절(옵션) 이 절은 특정 반복에 대해 지정된 변수에 값을 할당합니다. 할당된 식은 XPath 식과 같은 XQuery 식일 수 있으며 노드 시퀀스나 원자성 값 시퀀스를 반환할 수 있습니다. 원자성 값 시퀀스는 리터럴이나 생성자 함수를 사용하여 생성할 수 있습니다. 생성되는 XML 노드는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 입력 시퀀스로 허용되지 않습니다.  
   
 -   반복기 변수. 이 변수는 `as` 키워드를 사용하여 옵션의 형식 어설션을 가질 수 있습니다.  
   
--   
-  `where` 절(옵션) 이 절은 반복에 필터 조건자를 적용합니다.  
+-   `where` 절(옵션) 이 절은 반복에 필터 조건자를 적용합니다.  
   
--   
-  `order by` 절(옵션)  
+-   `order by` 절(옵션)  
   
--   
-  `return` 식. 
-  `return` 절의 식은 FLWOR 문의 결과를 구성합니다.  
+-   `return` 식. `return` 절의 식은 FLWOR 문의 결과를 구성합니다.  
   
  예를 들어 다음 쿼리는 첫 번째 제조 위치 `Step` 에서 <> 요소를 반복 하 고 <`Step`> 노드의 문자열 값을 반환 합니다.  
   
@@ -99,8 +94,7 @@ where ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   
-  `$Step`은 반복기 변수입니다.  
+-   `$Step`은 반복기 변수입니다.  
   
 -   [경로 식](../xquery/path-expressions-xquery.md) `//AWMI:root/AWMI:Location[1]/AWMI:step`는 입력 시퀀스를 생성 합니다. 이 시퀀스는 첫 번째 <`step` `Location`> element 노드의 <> 요소 노드 자식의 시퀀스입니다.  
   
@@ -145,8 +139,7 @@ SELECT @x.query('
 -- result test 12 111  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 다른 유형의 시퀀스는 허용되지 않습니다. 특히 원자성 값과 노드가 혼합된 시퀀스는 허용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 다른 유형의 시퀀스는 허용되지 않습니다. 특히 원자성 값과 노드가 혼합된 시퀀스는 허용되지 않습니다.  
   
  반복은 다음 쿼리에 표시 된 것 처럼 XML 형식 변환에서 [Xml 생성](../xquery/xml-construction-xquery.md) 구문과 함께 사용 되는 경우가 많습니다.  
   
@@ -216,11 +209,9 @@ where ProductModelID=7
 ```  
   
 ## <a name="using-the-let-clause"></a>let 절 사용  
- 
-  `let` 절을 사용하여 변수를 통해 참조할 수 있는 반복 식의 이름을 지정할 수 있습니다. 쿼리에서 변수가 참조될 때마다 `let` 변수에 할당된 식이 쿼리에 삽입됩니다. 즉, 문이 식이 참조될 때마다 실행됩니다.  
+ `let` 절을 사용하여 변수를 통해 참조할 수 있는 반복 식의 이름을 지정할 수 있습니다. 쿼리에서 변수가 참조될 때마다 `let` 변수에 할당된 식이 쿼리에 삽입됩니다. 즉, 문이 식이 참조될 때마다 실행됩니다.  
   
- 
-  [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 제조 지침에는 필요한 도구와 이러한 도구가 사용되는 위치에 대한 정보가 포함됩니다. 다음 쿼리에서는 `let` 절을 사용하여 제품 모델을 빌드하는 데 필요한 도구와 각 도구가 필요한 위치를 나열합니다.  
+ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 제조 지침에는 필요한 도구와 이러한 도구가 사용되는 위치에 대한 정보가 포함됩니다. 다음 쿼리에서는 `let` 절을 사용하여 제품 모델을 빌드하는 데 필요한 도구와 각 도구가 필요한 위치를 나열합니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -257,8 +248,7 @@ where ProductModelID=7
   
 -   키워드 `where` 는 **count ()** 함수를 사용 하 여 각 작업 센터 위치의 `step` 자식 요소> <수를 계산 합니다.  
   
--   
-  `return` 식은 반복 결과로부터 원하는 XML을 생성합니다.  
+-   `return` 식은 반복 결과로부터 원하는 XML을 생성합니다.  
   
  다음은 결과입니다.  
   
@@ -266,17 +256,13 @@ where ProductModelID=7
 <Location LocationID="30"/>   
 ```  
   
- 
-  `where` 절에 있는 식의 결과는 지정된 순서대로 다음 규칙에 따라 부울 값으로 변환됩니다. 이러한 규칙은 정수가 허용되지 않는다는 점을 제외하고 경로 식의 조건자에 대한 규칙과 동일합니다.  
+ `where` 절에 있는 식의 결과는 지정된 순서대로 다음 규칙에 따라 부울 값으로 변환됩니다. 이러한 규칙은 정수가 허용되지 않는다는 점을 제외하고 경로 식의 조건자에 대한 규칙과 동일합니다.  
   
-1.  
-  `where` 식이 빈 시퀀스를 반환하는 경우 유효한 부울 값은 False입니다.  
+1.  `where` 식이 빈 시퀀스를 반환하는 경우 유효한 부울 값은 False입니다.  
   
-2.  
-  `where` 식이 하나의 단순 부울 형식 값을 반환하는 경우 이 값은 유효한 부울 값입니다.  
+2.  `where` 식이 하나의 단순 부울 형식 값을 반환하는 경우 이 값은 유효한 부울 값입니다.  
   
-3.  
-  `where` 식이 하나 이상의 노드가 포함된 시퀀스를 반환하는 경우 유효한 부울 값은 True입니다.  
+3.  `where` 식이 하나 이상의 노드가 포함된 시퀀스를 반환하는 경우 유효한 부울 값은 True입니다.  
   
 4.  그 밖의 경우에는 정적 오류가 발생합니다.  
   
@@ -309,13 +295,11 @@ SELECT @x.query('
   
 -   `for` 식이 및 $ `$Loc` `FirstStep` 변수를 정의 합니다.  
   
--   
-  `two`의 값이 `/ManuInstructions/Location`의 값에 종속되는 경우 `$FirstStep in $Loc/Step[1]` 식, `$FirstStep`과 `$Loc`은 상호 관련됩니다.  
+-   `two`의 값이 `/ManuInstructions/Location`의 값에 종속되는 경우 `$FirstStep in $Loc/Step[1]` 식, `$FirstStep`과 `$Loc`은 상호 관련됩니다.  
   
 -   와 `$Loc` 연결 된 식은 <`Location`> 요소의 시퀀스를 생성 합니다. 각 <`Location`> 요소에 대해 `$FirstStep` 은 단일 <`Step`> 요소의 시퀀스를 생성 합니다.  
   
--   
-  `$Loc`은 `$FirstStep` 변수와 관련된 식에서 지정됩니다.  
+-   `$Loc`은 `$FirstStep` 변수와 관련된 식에서 지정됩니다.  
   
  다음은 결과입니다.  
   
@@ -342,10 +326,7 @@ WHERE ProductModelID=7
   
  이전 쿼리에서 다음을 유의하십시오.  
   
--   
-  `for` 절은 두 개의 변수 `$WC`와 `$S`를 정의합니다. 
-  `$WC`와 관련된 식은 자전거 제품 모델을 제조하는 작업 센터 위치의 시퀀스를 생성합니다. 
-  `$S` 변수에 할당되는 경로 식은 `$WC`에 있는 각 작업 센터 위치 시퀀스에 대한 단계의 시퀀스를 생성합니다.  
+-   `for` 절은 두 개의 변수 `$WC`와 `$S`를 정의합니다. `$WC`와 관련된 식은 자전거 제품 모델을 제조하는 작업 센터 위치의 시퀀스를 생성합니다. `$S` 변수에 할당되는 경로 식은 `$WC`에 있는 각 작업 센터 위치 시퀀스에 대한 단계의 시퀀스를 생성합니다.  
   
 -   Return 문은 제조 단계를 포함 하는 <`Step`> 요소와 **locationid** 를 특성으로 포함 하는 XML을 생성 합니다.  
   
@@ -374,8 +355,7 @@ WHERE ProductModelID=7
  XQuery에서는 FLWOR 식의 `order by` 절을 사용하여 정렬이 수행됩니다. `order by` 절로 전달 되는 정렬 식은 해당 형식이 **gt** 연산자에 유효한 값을 반환 해야 합니다. 각 정렬 식의 결과는 한 항목의 단일 시퀀스여야 합니다. 기본적으로 정렬은 오름차순으로 수행됩니다. 각 정렬 식에 대해 선택적으로 오름차순이나 내림차순을 지정할 수 있습니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery를 구현하여 수행된 문자열 값을 정렬하는 비교는 항상 이진 유니코드 코드 포인트 데이터 정렬을 사용하여 수행됩니다.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery를 구현하여 수행된 문자열 값을 정렬하는 비교는 항상 이진 유니코드 코드 포인트 데이터 정렬을 사용하여 수행됩니다.  
   
  다음 쿼리는 AdditionalContactInfo 열에서 특정 고객에 대한 모든 전화 번호를 검색합니다. 결과는 전화 번호를 기준으로 정렬됩니다.  
   
@@ -472,8 +452,7 @@ where ProductModelID=19;
   
 -   `/p1:ProductDescription/p1:Specifications/*` 식은 <`Specifications`>의 요소 자식을 반환 합니다.  
   
--   
-  `order by (local-name($a))` 식은 요소 이름의 로컬 부분을 기준으로 시퀀스를 정렬합니다.  
+-   `order by (local-name($a))` 식은 요소 이름의 로컬 부분을 기준으로 시퀀스를 정렬합니다.  
   
  다음은 결과입니다.  
   
@@ -551,8 +530,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   빈 시퀀스를 정렬하는 작업은 제어할 수 없습니다.  
   
--   
-  `order by`에서는 빈 최소값, 빈 최대값 및 데이터 정렬 키워드가 지원되지 않습니다.  
+-   `order by`에서는 빈 최소값, 빈 최대값 및 데이터 정렬 키워드가 지원되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  

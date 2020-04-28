@@ -16,10 +16,10 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042701"
 ---
 # <a name="sp_vupgrade_mergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects(Transact-SQL)
@@ -45,7 +45,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
+`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
 `[ @password = ] 'password'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *password* 는 **sysname**이며 기본값은 **' '** (빈 문자열)입니다. 이 매개 변수는 Windows 인증용 *security_mode* **1**로 설정 된 경우에는 필요 하지 않습니다.  
   
@@ -61,7 +61,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;를 &#40;하는 복제 저장 프로시저](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

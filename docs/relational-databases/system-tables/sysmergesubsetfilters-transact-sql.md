@@ -18,10 +18,10 @@ ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029750"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters(Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68029750"
 |**join_nickname**|**int**|행이 속하는지 여부를 결정하기 위해 조인할 테이블의 애칭입니다.|  
 |**join_unique_key**|**int**|**Join_tablename**의 고유 키에 대 한 조인을 나타냅니다.<br /><br /> 0 = 고유 키가 아닙니다.<br /><br /> 1 = 고유 키입니다.|  
 |**expand_proc**|**sysname**|병합 에이전트가 구독자에서 보내지거나 제거될 필요가 있는 행을 식별하는 데 사용되는 저장 프로시저의 이름입니다.|  
-|**join_filterclause**|**nvarchar (1000)**|조인에 사용되는 필터 절입니다.|  
+|**join_filterclause**|**nvarchar(1000)**|조인에 사용되는 필터 절입니다.|  
 |**filter_type**|**tinyint**|필터 유형을 지정하며 다음 중 하나일 수 있습니다.<br /><br /> 1 = 조인 필터.<br /><br /> 2 = 논리적 레코드 링크.<br /><br /> 3 = 조인 필더 및 논리적 레코드 링크 모두.|  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,10 +18,10 @@ ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029632"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns(Transact-SQL)
@@ -32,14 +32,14 @@ ms.locfileid: "68029632"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|열 또는 프로시저 매개 변수의 이름입니다.|  
-|**a-id**|**int**|이 열이 속한 테이블의 개체 ID 또는 이 매개 변수와 연관된 저장 프로시저의 ID입니다.|  
+|**id**|**int**|이 열이 속한 테이블의 개체 ID 또는 이 매개 변수와 연관된 저장 프로시저의 ID입니다.|  
 |**xtype**|**tinyint**|Systypes의 실제 저장소 유형은 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**tinyint**|확장 사용자 정의 데이터 형식의 ID입니다.|  
-|**길이**|**bigint**|[Transact-sql&#41;&#40;systypes ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)의 최대 실제 저장소 길이입니다.|  
+|**length**|**bigint**|[Transact-sql&#41;&#40;systypes ](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)의 최대 실제 저장소 길이입니다.|  
 |**xprec**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xscale**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**id**|**int**|열 또는 매개 변수의 ID입니다.|  
+|**colid**|**int**|열 또는 매개 변수의 ID입니다.|  
 |**xoffset**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**쓰이는**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -49,16 +49,16 @@ ms.locfileid: "68029632"
 |**number**|**int**|프로시저가 그룹화 될 때의 하위 절차 번호입니다. 프로시저가 아닌 항목의 경우**0** 입니다.|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**이동**|**int**|이 열이 나타나는 행으로의 오프셋입니다.|  
+|**offset**|**int**|이 열이 나타나는 행으로의 오프셋입니다.|  
 |**collationid**|**int**|열의 데이터 정렬 ID입니다. 문자 기반이 아닌 열의 경우 NULL입니다.|  
 |**언어도**|**int**|열에 대한 언어 식별자입니다.|  
-|**업무**|**int**|열 또는 매개 변수의 속성을 설명하는 데 사용하는 비트맵입니다.<br /><br /> **0x08** = 열에 null 값을 사용할 수 있습니다.<br /><br /> **0x10** = **varchar** 또는 **varbinary** 열이 추가 될 때 ANSI 안쪽 여백이 적용 되었습니다. **Varchar** 열에 대 한 후행 공백은 유지 되 고 뒤에 오는 0은 **varbinary** 열에 대해 유지 됩니다.<br /><br /> **0x40** = 매개 변수가 OUTPUT 매개 변수입니다.<br /><br /> **0x80** = 열이 id 열입니다.|  
+|**status**|**int**|열 또는 매개 변수의 속성을 설명하는 데 사용하는 비트맵입니다.<br /><br /> **0x08** = 열에 null 값을 사용할 수 있습니다.<br /><br /> **0x10** = **varchar** 또는 **varbinary** 열이 추가 될 때 ANSI 안쪽 여백이 적용 되었습니다. **Varchar** 열에 대 한 후행 공백은 유지 되 고 뒤에 오는 0은 **varbinary** 열에 대해 유지 됩니다.<br /><br /> **0x40** = 매개 변수가 OUTPUT 매개 변수입니다.<br /><br /> **0x80** = 열이 id 열입니다.|  
 |**type**|**int**|Systypes의 실제 저장소 유형은 [transact-sql&#41;&#40;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|Systypes의 사용자 정의 데이터 형식 ID [&#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)입니다.|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**int**|이 열의 전체 자릿수 수준입니다.|  
-|**배율을**|**int**|이 열의 소수 자릿수입니다.|  
-|**iscomputed**|**int**|열이 계산되었는지 표시하는 플래그입니다.<br /><br /> **0** = 연결한 조합이.<br /><br /> **1** = 계산 됨|  
+|**scale**|**int**|이 열의 소수 자릿수입니다.|  
+|**iscomputed**|**int**|열이 계산되었는지 표시하는 플래그입니다.<br /><br /> **0** = 연결한 조합이.<br /><br /> **1** = 계산됨|  
 |**isoutparam**|**int**|프로시저 매개 변수가 출력 매개 변수인지 여부를 나타냅니다.<br /><br /> **1** = True입니다.<br /><br /> **0** = False.|  
 |**isnullable**|**int**|열에 Null 값이 허용되는지 여부를 나타냅니다.<br /><br /> **1** = True입니다.<br /><br /> **0** = False.|  
 |**부씩**|**int**|열의 데이터 정렬 이름입니다. 문자 기반이 아닌 열의 경우 NULL입니다.|  

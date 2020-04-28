@@ -20,17 +20,17 @@ ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 48ff48b18cc945754b91dc14294569040b1e73fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005530"
 ---
 # <a name="srv_rpcname-extended-stored-procedure-api"></a>srv_rpcname(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  현재 원격 저장 프로시저에 대한 프로시저 이름 구성 요소를 반환합니다.  
   
@@ -52,8 +52,7 @@ len
  특정 클라이언트 연결에 대한 핸들(이 경우 원격 저장 프로시저를 수신한 핸들)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 정보가 들어 있습니다.  
   
  *길이가*  
- 데이터베이스 이름의 길이를 받는 정수 변수에 대한 포인터입니다. 
-  *len* 이 NULL이면 원격 저장 프로시저 이름의 길이가 반환되지 않습니다.  
+ 데이터베이스 이름의 길이를 받는 정수 변수에 대한 포인터입니다. *len* 이 NULL이면 원격 저장 프로시저 이름의 길이가 반환되지 않습니다.  
   
 ## <a name="returns"></a>반환  
  현재 원격 저장 프로시저의 원격 저장 프로시저 이름 구성 요소의 null로 끝나는 문자열에 대한 DBCHAR 포인터입니다. 현재 원격 저장 프로시저가 없으면 NULL이 반환되고 *len* 이 -1로 설정됩니다.  

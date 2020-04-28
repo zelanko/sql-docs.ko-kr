@@ -16,10 +16,10 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002647"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription(Transact-SQL)
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**push** (기본값)|밀어넣기 구독|  
 |**서브스크립션을**|끌어오기 구독|  
@@ -65,7 +65,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|구독의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
@@ -73,18 +73,18 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
 |**구독자**|**sysname**|구독자의 이름입니다.|  
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
-|**업무**|**int**|다음은 구독의 상태입니다.<br /><br /> **0** = 모든 작업이 시작 되기를 기다리고 있습니다.<br /><br /> **1** = 하나 이상의 작업이 시작 됩니다.<br /><br /> **2** = 모든 작업이 성공적으로 실행 되었습니다.<br /><br /> **3** = 하나 이상의 작업이 실행 중입니다.<br /><br /> **4** = 모든 작업이 예약 되 고 유휴 상태입니다.<br /><br /> **5** = 이전 실패 후 하나 이상의 작업을 실행 하려고 합니다.<br /><br /> **6** = 하나 이상의 작업이 성공적으로 실행 되지 못했습니다.|  
+|**status**|**int**|다음은 구독의 상태입니다.<br /><br /> **0** = 모든 작업이 시작 되기를 기다리고 있습니다.<br /><br /> **1** = 하나 이상의 작업이 시작 됩니다.<br /><br /> **2** = 모든 작업이 성공적으로 실행 되었습니다.<br /><br /> **3** = 하나 이상의 작업이 실행 중입니다.<br /><br /> **4** = 모든 작업이 예약 되 고 유휴 상태입니다.<br /><br /> **5** = 이전 실패 후 하나 이상의 작업을 실행 하려고 합니다.<br /><br /> **6** = 하나 이상의 작업이 성공적으로 실행 되지 못했습니다.|  
 |**subscriber_type**|**int**|구독자의 유형입니다.|  
 |**subscription_type**|**int**|구독 유형:<br /><br /> **0** = 푸시<br /><br /> **1** = 끌어오기<br /><br /> **2** = 모두|  
-|**우선 순위**|**float (8)**|구독의 우선 순위를 표시하는 숫자입니다.|  
+|**priority**|**float (8)**|구독의 우선 순위를 표시하는 숫자입니다.|  
 |**sync_type**|**tinyint**|구독 동기화 유형입니다.|  
 |**한**|**nvarchar(255)**|해당 병합 구독에 대한 간단한 설명입니다.|  
-|**merge_jobid**|**binary (16)**|병합 에이전트의 작업 ID입니다.|  
+|**merge_jobid**|**binary(16)**|병합 에이전트의 작업 ID입니다.|  
 |**full_publication**|**tinyint**|구독이 전체 게시 또는 필터링된 게시를 위한 것인지 여부를 표시합니다.|  
 |**offload_enabled**|**bit**|복제 에이전트의 오프로드 실행이 구독자에서 실행되도록 설정되었는지 여부를 지정합니다. NULL인 경우 게시자에서 실행됩니다.|  
 |**offload_server**|**sysname**|에이전트가 실행되는 서버의 이름입니다.|  
 |**use_interactive_resolver**|**int**|조정 상태 동안 대화형 해결 프로그램의 사용 여부를 반환합니다. **0**인 경우 대화형 해결 프로그램을 사용 하지 않습니다.|  
-|**n**|**sysname**|구독이 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수의 값으로 필터링 될 때 제공 되는 값입니다.|  
+|**hostname**|**sysname**|구독이 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수의 값으로 필터링 될 때 제공 되는 값입니다.|  
 |**subscriber_security_mode**|**smallint**|구독자의 보안 모드입니다. **1** 은 Windows 인증을 의미 하 고 **0** 은 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 의미 합니다.|  
 |**subscriber_login**|**sysname**|구독자의 로그인 이름입니다.|  
 |**subscriber_password**|**sysname**|실제 구독자 암호는 반환되지 않습니다. 결과는**\*\*\*"\*" 문자열로 마스킹 됩니다.\***|  

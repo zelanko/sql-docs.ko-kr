@@ -18,10 +18,10 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044525"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
@@ -57,7 +57,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |**principal_id**|**int**|데이터베이스 사용자의 ID입니다.|  
 |**principal_name**|**sysname**|데이터베이스 사용자의 이름입니다.|  
 |**profile_id**|**int**|데이터베이스 메일 프로필의 ID입니다.|  

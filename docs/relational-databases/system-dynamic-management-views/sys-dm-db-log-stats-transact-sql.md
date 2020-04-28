@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004829"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats(Transact-SQL)   
@@ -43,10 +43,8 @@ ms.locfileid: "68004829"
 
 *database_id* | NULL | **기본값**
 
-데이터베이스의 ID입니다. 
-  `database_id`은 `int`입니다. 유효한 입력은 데이터베이스 `NULL`의 ID 번호, 또는 `DEFAULT`입니다. 기본값은 `NULL`입니다. `NULL`및 `DEFAULT` 는 현재 데이터베이스의 컨텍스트에서 동일한 값입니다.  
-
-  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.
+데이터베이스의 ID입니다. `database_id`은 `int`입니다. 유효한 입력은 데이터베이스 `NULL`의 ID 번호, 또는 `DEFAULT`입니다. 기본값은 `NULL`입니다. `NULL`및 `DEFAULT` 는 현재 데이터베이스의 컨텍스트에서 동일한 값입니다.  
+[DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다. 데이터베이스 이름을 `DB_ID` 지정 하지 않고를 사용 하는 경우 현재 데이터베이스의 호환성 수준은 90 이상 이어야 합니다.
 
   
 ## <a name="tables-returned"></a>반환된 테이블  
@@ -54,7 +52,7 @@ ms.locfileid: "68004829"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**int**    |데이터베이스 ID |  
-|recovery_model |**nvarchar (60)**   |   데이터베이스의 복구 모델입니다. 가능한 값은 다음과 같습니다. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
+|recovery_model |**nvarchar(60)**   |   데이터베이스의 복구 모델입니다. 가능한 값은 다음과 같습니다. <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
 |log_min_lsn    |**nvarchar(24)**   |   트랜잭션 로그의 현재 시작 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|  
 |log_end_lsn    |**nvarchar(24)**   |   트랜잭션 로그에 있는 마지막 로그 레코드의 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 입니다.|  
 |current_vlf_sequence_number    |**bigint** |   실행 시의 현재 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 시퀀스 번호입니다.|  
@@ -63,7 +61,7 @@ ms.locfileid: "68004829"
 |total_log_size_mb  |**float**  |   총 트랜잭션 로그 크기 (MB)입니다. |  
 |active_vlf_count   |**bigint** |   트랜잭션 로그에서 활성 [가상 로그 파일 (vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) 의 총 수입니다.|  
 |active_log_size_mb |**float**  |   총 활성 트랜잭션 로그 크기 (MB)입니다.|  
-|log_truncation_holdup_reason   |**nvarchar (60)**   |   로그 잘림 고정 이유. 값은의 `sys.databases`열과 `log_reuse_wait_desc` 같습니다.  이러한 값에 대 한 자세한 설명은 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조 하세요. <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />복제<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 임시 |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   로그 잘림 고정 이유. 값은의 `sys.databases`열과 `log_reuse_wait_desc` 같습니다.  이러한 값에 대 한 자세한 설명은 [트랜잭션 로그](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조 하세요. <br />가능한 값은 다음과 같습니다. <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />복제<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />기타 임시 |  
 |log_backup_time    |**datetime**   |   마지막 트랜잭션 로그 백업 시간입니다.|   
 |log_backup_lsn |**nvarchar(24)**   |   마지막 트랜잭션 로그 백업 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)입니다.|   
 |log_since_last_log_backup_mb   |**float**  |   마지막 트랜잭션 로그 백업 [LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)이후 로그 크기 (MB)입니다.|  
@@ -82,7 +80,7 @@ ms.locfileid: "68004829"
   
 ## <a name="examples"></a>예  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스 확인   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Vlf 수가 많은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스 확인   
 다음 쿼리는 로그 파일에 100 개를 초과 하는 Vlf 데이터베이스를 반환 합니다. Vlf이 많으면 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있습니다.
 
 ```sql  
@@ -92,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 트랜잭션 로그 백업이 4 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시간 보다 오래 된 인스턴스에서 데이터베이스 확인   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. 트랜잭션 로그 백업이 4 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시간 보다 오래 된 인스턴스에서 데이터베이스 확인   
 다음 쿼리는 인스턴스의 데이터베이스에 대 한 마지막 로그 백업 시간을 결정 합니다.
 
 ```sql  
@@ -102,8 +100,8 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id);
 ```
 
 ## <a name="see-also"></a>참고 항목  
-[동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Transact-sql&#41;&#40;동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Transact-sql&#41;&#40;데이터베이스 관련 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[dm_db_log_space_usage &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

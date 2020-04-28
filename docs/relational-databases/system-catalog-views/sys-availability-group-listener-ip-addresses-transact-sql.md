@@ -22,10 +22,10 @@ ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997590"
 ---
 # <a name="sysavailability_group_listener_ip_addresses-transact-sql"></a>sys.availability_group_listener_ip_addresses(Transact-SQL)
@@ -45,8 +45,8 @@ ms.locfileid: "67997590"
 |**network_subnet_ip**|**nvarchar (48)**|IP 주소가 속한 서브넷을 지정하는 네트워크 서브넷 IP 주소입니다.|  
 |**network_subnet_prefix_length**|**int**|IP 주소가 속한 서브넷의 네트워크 서브넷 접두사 길이입니다.|  
 |**network_subnet_ipv4_mask**|**nvarchar (45)**|IP 주소가 속한 서브넷의 네트워크 서브넷 마스크입니다. [CREATE availability group](../../t-sql/statements/create-availability-group-transact-sql.md) 또는 [ALTER availability group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 WITH dhcp 절에서 dhcp <network_subnet_option> 옵션을 지정 **network_subnet_ipv4_mask** 합니다.<br /><br /> NULL = IPv6 서브넷|  
-|**상태일**|**tinyint**|WSFC 클러스터의 IP 리소스 ONLINE/OFFLINE 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. IP 리소스가 온라인 상태입니다.<br /><br /> 0 = 오프라인. IP 리소스가 오프라인 상태입니다.<br /><br /> 2 = 온라인 보류 중. IP 리소스가 오프라인 상태이지만 온라인으로 전환되고 있습니다.<br /><br /> 3 = 실패. IP 리소스가 온라인 상태로 전환되었지만 실패했습니다.|  
-|**state_desc**|**nvarchar (60)**|**상태**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
+|**state**|**tinyint**|WSFC 클러스터의 IP 리소스 ONLINE/OFFLINE 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. IP 리소스가 온라인 상태입니다.<br /><br /> 0 = 오프라인. IP 리소스가 오프라인 상태입니다.<br /><br /> 2 = 온라인 보류 중. IP 리소스가 오프라인 상태이지만 온라인으로 전환되고 있습니다.<br /><br /> 3 = 실패. IP 리소스가 온라인 상태로 전환되었지만 실패했습니다.|  
+|**state_desc**|**nvarchar(60)**|**상태**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> ONLINE_PENDING<br /><br /> FAILED|  
   
 ## <a name="security"></a>보안  
   

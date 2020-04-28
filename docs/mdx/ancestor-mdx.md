@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017133"
 ---
 # <a name="ancestor-mdx"></a>Ancestor(MDX)
@@ -38,7 +38,7 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
- *거리*  
+ *Distance*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -99,6 +99,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68000811"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector(Transact-SQL)
@@ -40,7 +40,7 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>인수  
- None  
+ 없음  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -61,7 +61,7 @@ EXEC dbo.sp_syscollector_enable_collector;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   
   

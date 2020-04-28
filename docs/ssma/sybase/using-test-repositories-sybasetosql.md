@@ -12,10 +12,10 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020839"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>테스트 리포지토리 사용(SybaseToSQL)

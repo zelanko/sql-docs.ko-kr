@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042937"
 ---
 # <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
@@ -67,8 +67,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 -   개체 ID로 지정한 테이블에 대한 권한이 부족한 경우  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. 
-  `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
+ 다음 예에서는 지정한 버전이 유효한 버전인지 여부를 확인합니다. 예제에는 `dbo.Employees` 테이블의 유효한 최소 버전을 가져와 `@last_sync_version` 변수 값과 비교합니다. `@last_sync_version` 값이 `@min_valid_version` 값보다 작으면 변경된 행 목록이 유효하지 않습니다.  
   
 > [!NOTE]  
 >  일반적으로 데이터를 동기화하는 데 사용된 마지막 버전 번호를 저장한 다른 위치나 테이블에서 값을 가져옵니다.  
@@ -88,7 +87,7 @@ ELSE
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [변경 내용 추적 함수 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
   

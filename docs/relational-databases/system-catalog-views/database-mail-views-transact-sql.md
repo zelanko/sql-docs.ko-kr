@@ -20,10 +20,10 @@ ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033125"
 ---
 # <a name="database-mail-views-transact-sql"></a>데이터베이스 메일 뷰(Transact-SQL)

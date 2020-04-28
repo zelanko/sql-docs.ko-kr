@@ -19,10 +19,10 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018202"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database 카탈로그 뷰-sys. remote_data_archive_databases
@@ -30,7 +30,7 @@ ms.locfileid: "68018202"
 
   스트레치 사용 로컬 데이터베이스의 데이터를 저장 하는 각 원격 데이터베이스에 대해 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|원격 데이터베이스의 자동 생성 된 로컬 식별자입니다.|  
 |**remote_database_name**|**sysname**|원격 데이터베이스의 이름입니다.|  

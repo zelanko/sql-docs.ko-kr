@@ -18,10 +18,10 @@ ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b1b204024d65e72eb65eefc9f63f914eab6ace29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032605"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range(Transact-SQL)

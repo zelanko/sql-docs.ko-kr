@@ -13,10 +13,10 @@ ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 7168d2f9842c482ff7474e700d0d1a1aa7fd734f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043144"
 ---
 # <a name="always-on-availability-groups-functions-transact-sql"></a>Always On Availability Groups 함수 (Transact-sql)

@@ -18,10 +18,10 @@ ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009214"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db(Transact-SQL)
@@ -47,7 +47,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="arguments"></a>인수  
 `[ @plan_id = ] 'plan_id'`유지 관리 계획의 계획 ID를 지정 합니다. *plan_id* 은 **UNIQUEIDENTIFIER**이며 유효한 id 여야 합니다.  
   
-`[ @db_name = ] 'database_name'`유지 관리 계획에 추가할 데이터베이스의 이름을 지정 합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name* 는 **sysname**입니다.  
+`[ @db_name = ] 'database_name'`유지 관리 계획에 추가할 데이터베이스의 이름을 지정 합니다. 계획에 추가하기 전에 데이터베이스를 만들거나 데이터베이스가 이미 있어야 합니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

@@ -10,10 +10,10 @@ ms.assetid: 8d5a4ce6-b747-46e3-9184-645d56e8b35c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 91a4dfcf8add3900c51e33a6e40fa874ce9f9798
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028967"
 ---
 # <a name="installing-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA 설치 (SybaseToSQL)
@@ -28,7 +28,7 @@ SAP ASE 용 SSMA의 이후 버전으로 업그레이드 하려면 먼저 클라�
   
 ## <a name="contents"></a>콘텐츠  
   
-|아티클|Description|  
+|아티클|설명|  
 |---------|---------------|  
 |[SAP ASE 용 SSMA 클라이언트 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)|SAP ASE 클라이언트용 SSMA를 설치 하기 위한 정보와 지침을 제공 합니다.|  
 |[SQL Server &#40;SybaseToSQL&#41;에 SSMA 구성 요소 설치](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)|인스턴스에 확장 팩을 설치 하는 방법에 대 한 정보와 지침 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제공 합니다.|  

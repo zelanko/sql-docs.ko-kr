@@ -12,10 +12,10 @@ ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021025"
 ---
 # <a name="running-test-cases-sybasetosql"></a>테스트 사례 실행(SybaseToSQL)
@@ -26,8 +26,7 @@ SSMA 테스터는 테스트 사례를 실행할 때 테스트를 위해 선택�
 ## <a name="run-test-case"></a>테스트 사례 실행  
 준비 된 테스트 사례를 실행 하려면 다음을 수행 합니다.  
   
-1.  
-  **실행** 단추를 클릭합니다.  
+1.  **실행** 단추를 클릭합니다.  
   
 2.  **Sybase에 연결** 대화 상자에서 연결 정보를 입력 한 다음 **연결**을 클릭 합니다.  
   

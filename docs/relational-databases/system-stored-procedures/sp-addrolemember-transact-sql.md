@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030909"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember(Transact-SQL)
@@ -78,9 +78,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
  다음 예에서는 Windows 로그인 `Contoso\Mary5` 을 사용자 `AdventureWorks2012` `Mary5`로 데이터베이스에 추가 합니다. 그런 다음 `Mary5` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
->  
-  `Contoso\Mary5`는 `Mary5` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 사용자로 알려져 있기 때문에 `Mary5` 사용자 이름을 지정해야 합니다. 
-  `Contoso\Mary5`라는 로그인이 없으면 문이 실패합니다. 사용자 도메인의 로그인을 사용하여 테스트하세요.  
+>  `Contoso\Mary5`는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Mary5` 데이터베이스 사용자로 알려져 있기 때문에 `Mary5` 사용자 이름을 지정해야 합니다. `Contoso\Mary5`라는 로그인이 없으면 문이 실패합니다. 사용자 도메인의 로그인을 사용하여 테스트하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -96,14 +94,13 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sspdw"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Windows 로그인 추가  
  다음 예에서는 로그인 `LoginMary` 을 사용자 `AdventureWorks2008R2` `UserMary`로 데이터베이스에 추가 합니다. 그런 다음 `UserMary` 사용자를 `Production` 역할에 추가합니다.  
   
 > [!NOTE]  
->  로그인 `LoginMary` 은 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 데이터베이스 사용자로 알려져 있기 때문에 사용자 이름을 `UserMary` 지정 해야 합니다. 
-  `Mary5`라는 로그인이 없으면 문이 실패합니다. 로그인과 사용자는 일반적으로 동일한 이름을 갖습니다. 이 예에서는 다른 이름을 사용 하 여 로그인에 영향을 주는 작업과 사용자를 구분 합니다.  
+>  로그인 `LoginMary` 은 `UserMary` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 데이터베이스 사용자로 알려져 있기 때문에 사용자 이름을 `UserMary` 지정 해야 합니다. `Mary5`라는 로그인이 없으면 문이 실패합니다. 로그인과 사용자는 일반적으로 동일한 이름을 갖습니다. 이 예에서는 다른 이름을 사용 하 여 로그인에 영향을 주는 작업과 사용자를 구분 합니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -125,7 +122,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
  [Transact-sql&#41;sp_addsrvrolemember &#40;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [Transact-sql&#41;sp_droprolemember &#40;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [Transact-sql&#41;sp_grantdbaccess &#40;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)  
   
   

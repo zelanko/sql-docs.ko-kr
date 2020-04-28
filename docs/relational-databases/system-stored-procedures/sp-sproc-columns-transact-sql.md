@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032819"
 ---
 # <a name="sp_sproc_columns-transact-sql"></a>sp_sproc_columns(Transact-SQL)
@@ -52,8 +52,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
  지정한 이름의 프로시저를 현재 사용자가 갖고 있을 경우 해당 프로시저에 대한 정보가 반환됩니다. *Owner*를 지정 하지 않은 경우 현재 사용자가 지정 된 이름의 프로시저를 소유 하지 않은 경우 **sp_sproc_columns** 는 데이터베이스 소유자가 소유한 지정 된 이름의 프로시저를 찾습니다. 프로시저가 있으면 해당 열에 대한 정보가 반환됩니다.  
   
-`[ @procedure_qualifier = ] 'qualifier'`프로시저 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @procedure_qualifier = ] 'qualifier'`프로시저 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ @column_name = ] 'column_name'`단일 열 이며 카탈로그 정보의 열이 한 개만 필요한 경우에 사용 됩니다. *column_name* 은 **nvarchar (** 384 **)** 이며 기본값은 NULL입니다. *Column_name* 생략 하면 모든 열이 반환 됩니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트에서 ISO 표준 패턴 일치(% 및 _ 와일드카드 문자)만 사용해야 합니다.  
   
@@ -76,16 +75,14 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|ODBC 데이터 형식에 대한 정수 코드입니다. 이 데이터 형식을 ISO 형식에 매핑할 수 없는 경우 값은 NULL입니다. Native data 형식 이름은 **TYPE_NAME** 열에 반환 됩니다.|  
 |**TYPE_NAME**|**sysname**|데이터 형식의 문자열 표시입니다. 이것은 원본으로 사용되는 DBMS에 의해 제시된 데이터 형식 이름입니다.|  
 |**소수**|**int**|유효 자릿수입니다. **전체 자릿수** 열의 반환 값은 밑수 10에 있습니다.|  
-|**길이**|**int**|데이터의 전송 크기입니다.|  
+|**LENGTH**|**int**|데이터의 전송 크기입니다.|  
 |**배율을**|**smallint**|소수점 오른쪽 자릿수입니다.|  
 |**RADIX**|**smallint**|숫자 유형에 대한 기준입니다.|  
 |**않는**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.|  
-|**설명**|**varchar (** 254 **)**|프로시저 열에 대한 설명입니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
+|**설명**|**varchar (** 254 **)**|프로시저 열에 대한 설명입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
 |**COLUMN_DEF**|**nvarchar (** 4000 **)**|열의 기본값입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 **type** 필드에 표시 되는 SQL 데이터 형식의 값입니다. 이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외 하 고는 **DATA_TYPE** 열과 동일 합니다. 이 열은 항상 값을 반환합니다.|  
-|**SQL_DATETIME_SUB**|**smallint**|
-  **SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. **Datetime** 및 ISO **간격이**아닌 데이터 형식의 경우이 필드는 NULL입니다.|  
+|**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. **Datetime** 및 ISO **간격이**아닌 데이터 형식의 경우이 필드는 NULL입니다.|  
 |**CHAR_OCTET_LENGTH**|**int**|**문자** 또는 **이진** 데이터 형식 열의 최대 길이 (바이트)입니다. 다른 모든 데이터 형식의 경우에는 이 열이 NULL을 반환합니다.|  
 |**ORDINAL_POSITION**|**int**|테이블에 있는 열의 순서 위치입니다. 테이블의 첫 번째 열은 1입니다. 이 열은 항상 값을 반환합니다.|  
 |**IS_NULLABLE**|**varchar (254)**|테이블에 있는 열의 Null 허용 여부입니다. ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO 호환 DBMS에서는 빈 문자열을 반환할 수 없습니다.<br /><br /> 열이 NULL을 포함할 수 있으면 YES를 표시하고 NULL을 포함할 수 없으면 NO를 표시합니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> 이 열에 반환되는 값은 NULLABLE 열에 반환되는 값과 다릅니다.|  

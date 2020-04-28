@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033847"
 ---
 # <a name="median-mdx"></a>Median(MDX)
@@ -40,8 +40,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  중앙값은 정렬된 번호 집합의 가운데 값입니다. 중앙 값은 집합의 번호 개수로 나눈 번호 집합의 합계인 Mean 값과는 다릅니다. 중앙값은 집합에서 적어도 절반 이상의 값이 선택된 값보다 크지 않은 최소 값을 선택하여 결정됩니다. 집합 내 값의 개수가 홀수인 경우 중앙값은 단일 값을 따릅니다. 집합 내 값의 개수가 짝수인 경우 중앙값은 두 개의 중간 값의 합계를 2로 나눈 값을 따릅니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 정렬된 숫자 집합의 중앙값을 계산할 때 null을 무시합니다.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 정렬된 숫자 집합의 중앙값을 계산할 때 null을 무시합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 Adventure Works 큐브의 각 분기, 각 하위 범주 및 각 국가에 대한 월별 판매량의 중앙값을 반환합니다.  
@@ -61,6 +60,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

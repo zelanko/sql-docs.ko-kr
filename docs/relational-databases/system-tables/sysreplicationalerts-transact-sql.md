@@ -18,10 +18,10 @@ ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029741"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68029741"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|경고의 ID입니다.|  
-|**업무**|**int**|사용자 정의 값입니다.<br /><br /> **0** = 서비스 되지 않음<br /><br /> **1** = 서비스 됩니다.|  
+|**status**|**int**|사용자 정의 값입니다.<br /><br /> **0** = 서비스 되지 않음<br /><br /> **1** = 서비스 됩니다.|  
 |**agent_type**|**int**|에이전트의 유형입니다.<br /><br /> **1** = 스냅숏 에이전트.<br /><br /> **2** = 로그 판독기 에이전트.<br /><br /> **3** = 배포 에이전트.<br /><br /> **4** = 병합 에이전트.|  
 |**agent_id**|**int**|**MSsnapshot_agents**, **MSlogreader_agents**, **MSdistribution_agents**또는 **MSmerge_agents**테이블의 에이전트 ID입니다.|  
 |**error_id**|**int**|**MSrepl_errors**에 저장 된 오류의 ID입니다.|  

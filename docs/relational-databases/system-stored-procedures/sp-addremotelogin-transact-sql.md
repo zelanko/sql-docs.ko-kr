@@ -18,10 +18,10 @@ ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030963"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin(Transact-SQL)
@@ -48,7 +48,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
  원격 로그인을 적용할 원격 서버의 이름입니다. *remoteserver* 는 **sysname**이며 기본값은 없습니다. *Remoteserver* 만 지정 하면 *remoteserver* 의 모든 사용자가 로컬 서버에 있는 동일한 이름의 기존 로그인에 매핑됩니다. 서버는 로컬 서버에서 인식할 수 있어야 합니다. 서버는 sp_addserver를 사용하여 추가합니다. *Remoteserver* 의 사용자가 원격 저장 프로시저를 실행 하기 위해를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 하는 로컬 서버에 연결 하는 경우 *remoteserver*에서 자체 로그인과 일치 하는 로컬 로그인으로 연결 합니다. *remoteserver* 는 원격 프로시저 호출을 시작 하는 서버입니다.  
   
  [ @loginame **=** ] **'**_로그인_**'**  
- 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. *로그인*은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로컬 인스턴스에 이미 존재 해야 합니다. *Login* 을 지정 하면 *remoteserver* 의 모든 사용자가 해당 하는 특정 로컬 로그인에 매핑됩니다. *Remoteserver* 의 사용자가의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 연결 하 여 원격 저장 프로시저를 실행 하는 경우 *로그인*으로 연결 합니다.  
+ 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 있는 사용자의 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *로그인*은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로컬 인스턴스에 이미 존재 해야 합니다. *Login* 을 지정 하면 *remoteserver* 의 모든 사용자가 해당 하는 특정 로컬 로그인에 매핑됩니다. *Remoteserver* 의 사용자가의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에 연결 하 여 원격 저장 프로시저를 실행 하는 경우 *로그인*으로 연결 합니다.  
   
  [ @remotename **=** ] **'**_remote_name_**'**  
  원격 서버에 있는 사용자의 로그인 ID입니다. *remote_name* 는 **sysname**이며 기본값은 NULL입니다. *remoteserver*에 *remote_name* 있어야 합니다. *Remote_name* 지정 하면 특정 사용자 *remote_name* 로컬 서버의 *로그인* 에 매핑됩니다. *Remoteserver* 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *remote_name* 의 로컬 인스턴스에 연결 하 여 원격 저장 프로시저를 실행 하면 *로그인*으로 연결 됩니다. *Remote_name* 의 로그인 id는 원격 서버 *로그인*의 로그인 id와 다를 수 있습니다.  

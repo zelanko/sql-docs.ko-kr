@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036705"
 ---
 # <a name="subset-mdx"></a>Subset(MDX)
@@ -31,10 +31,10 @@ Subset(Set_Expression, Start [ ,Count ] )
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *시작*  
+ *Start*  
  반환할 첫 번째 튜플의 위치를 지정하는 유효한 숫자 식입니다.  
   
- *수*  
+ *Count*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -59,6 +59,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

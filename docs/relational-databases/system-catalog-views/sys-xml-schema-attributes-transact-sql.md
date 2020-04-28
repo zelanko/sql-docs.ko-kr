@@ -20,10 +20,10 @@ ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1d9c4ebe7b997ae9ba72249bd431b37ff0fee2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037414"
 ---
 # <a name="sysxml_schema_attributes-transact-sql"></a>sys.xml_schema_attributes(Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "68037414"
 
   **Symbol_space** 특성 인 XML 스키마 구성 요소별 **행을 반환 합니다.**  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**|--|[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 상속 됩니다.|  
 |**is_default_fixed**|**bit**|1 = 기본값이 고정 값입니다. XML 인스턴스에서 이 값을 무시할 수 없습니다.<br /><br /> 0 = 기본값이 특성에 대한 고정 값이 아닙니다. (기본값)|  

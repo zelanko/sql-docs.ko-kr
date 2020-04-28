@@ -19,10 +19,10 @@ ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006558"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>액세스 인벤토리 내보내기 (AccessToSQL)
@@ -55,14 +55,11 @@ SSMA는 Access 데이터베이스, 테이블, 열, 인덱스, 외래 키, 쿼리
   
 1.  Access 용 SSMA를 엽니다.  
   
-2.  
-  **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
+2.  **파일** 메뉴에서 **새 프로젝트**를 선택합니다.  
   
-    
-  **새 프로젝트** 대화 상자가 나타납니다.  
+    **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  
-  **이름** 입력란에 프로젝트 이름을  
+3.  **이름** 입력란에 프로젝트 이름을  
   
 4.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택 합니다.  
   
@@ -230,5 +227,5 @@ WHERE ColumnName LIKE '%salary%';
 열 이름을 모르는 경우 모든 열을 반환 하는 쿼리를 작성할 수 있습니다. 이렇게 하려면 이전 쿼리에서 WHERE 절을 제거 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[Access 데이터베이스에서 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
+[마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
   

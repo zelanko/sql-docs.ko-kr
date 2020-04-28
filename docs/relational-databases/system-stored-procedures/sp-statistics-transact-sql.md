@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032743"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
@@ -50,11 +50,9 @@ sp_statistics [ @table_name = ] 'table_name'
   
 `[ @table_owner = ] 'owner'`카탈로그 정보를 반환 하는 데 사용 되는 테이블의 소유자 이름입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 인덱스가 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 인덱스가 반환됩니다.  
   
-`[ @table_qualifier = ] 'qualifier'`테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ @table_qualifier = ] 'qualifier'`테이블 한정자의 이름입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 매개 변수는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 `[ @index_name = ] 'index_name'`인덱스 이름입니다. *index_name* 는 **sysname**이며 기본값 은%입니다. 와일드카드 패턴 일치가 지원됩니다.  
   
@@ -76,14 +74,13 @@ sp_statistics [ @table_name = ] 'table_name'
 |**NON_UNIQUE**|**smallint**|NOT NULL입니다.<br /><br /> 0 = 고유함<br /><br /> 1 = 고유하지 않음|  
 |**INDEX_QUALIFIER**|**sysname**|인덱스 소유자 이름입니다. 일부 DBMS 제품은 테이블 소유자 이외의 사용자가 인덱스를 만들 수 있도록 허용합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 열은 항상 **TABLE_NAME**와 동일 합니다.|  
 |**INDEX_NAME**|**sysname**|인덱스의 이름입니다. 이 열은 항상 값을 반환합니다.|  
-|**TYPE**|**smallint**|이 열은 항상 값을 반환합니다.<br /><br /> 0 = 테이블에 대한 통계<br /><br /> 1 = 클러스터형<br /><br /> 2 = 해시됨<br /><br /> 3 = 비클러스터형|  
+|**유형**|**smallint**|이 열은 항상 값을 반환합니다.<br /><br /> 0 = 테이블에 대한 통계<br /><br /> 1 = 클러스터형<br /><br /> 2 = 해시됨<br /><br /> 3 = 비클러스터형|  
 |**SEQ_IN_INDEX**|**smallint**|인덱스 내의 열 위치입니다.|  
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**부씩**|**char (1)**|데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음|  
 |**카디널리티**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
-|**마주보**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
-|**FILTER_CONDITION**|**varchar (128)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
+|**PAGES**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  None  
@@ -100,7 +97,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `DimEmployee` 테이블에 대 한 정보를 반환 합니다.  
   
 ```  

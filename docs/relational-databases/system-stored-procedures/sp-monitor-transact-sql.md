@@ -18,10 +18,10 @@ ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022320"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor(Transact-SQL)
@@ -43,31 +43,24 @@ sp_monitor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**last_run**|**Sp_monitor** 마지막으로 실행 된 시간입니다.|  
 |**current_run**|**Sp_monitor** 실행 되는 시간입니다.|  
-|**초**|**Sp_monitor** 실행 된 이후 경과 된 시간 (초)입니다.|  
+|**까지의**|**Sp_monitor** 실행 된 이후 경과 된 시간 (초)입니다.|  
 |**cpu_busy**|서버 컴퓨터의 CPU가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 수행한 시간(초)입니다.|  
-|**io_busy**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 입력 및 출력 작업을 수행하는 데 걸린 시간(초)입니다.|  
-|**유휴**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 유휴 상태에 있던 시간(초)입니다.|  
-|**packets_received**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 읽은 입력 패킷 수입니다.|  
-|**packets_sent**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쓰여진 출력 패킷 수입니다.|  
+|**io_busy**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 입력 및 출력 작업을 수행하는 데 걸린 시간(초)입니다.|  
+|**유휴**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 유휴 상태에 있던 시간(초)입니다.|  
+|**packets_received**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 읽은 입력 패킷 수입니다.|  
+|**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쓰여진 출력 패킷 수입니다.|  
 |**packet_errors**|패킷을 읽고 쓰면서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 오류 수입니다.|  
-|**total_read**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이루어진 읽기 작업 수입니다.|  
-|**total_write**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이루어진 쓰기 작업 수입니다.|  
+|**total_read**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이루어진 읽기 작업 수입니다.|  
+|**total_write**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이루어진 쓰기 작업 수입니다.|  
 |**total_errors**|읽고 쓰는 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 오류 수입니다.|  
 |**연결만**|로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 시도한 로그인 수입니다.|  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일련의 함수를 통해 수행한 작업량을 추적합니다. **Sp_monitor** 를 실행 하면 이러한 함수가 반환 하는 현재 값이 표시 되 고, 프로시저가 마지막으로 실행 된 이후 변경 된 값이 표시 됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일련의 함수를 통해 수행한 작업량을 추적합니다. **Sp_monitor** 를 실행 하면 이러한 함수가 반환 하는 현재 값이 표시 되 고, 프로시저가 마지막으로 실행 된 이후 변경 된 값이 표시 됩니다.  
   
  각 열에 대해 *숫자*(*number*)-*number*% 또는 *number*(*number*) 형식으로 통계가 출력 됩니다. 첫 번째 *숫자* 는가 다시 시작 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 이후 경과 된 시간 (초) ( **cpu_busy**, **io_busy**및 **유휴**)의 수 또는 다른 변수에 대 한 총 수를 나타냅니다. 괄호 안의 *숫자* 는 **sp_monitor** 가 마지막으로 실행 된 이후 경과 된 시간 (초) 또는 총 수를 나타냅니다. 백분율은 **sp_monitor** 마지막으로 실행 된 이후 경과 된 시간의 백분율입니다. 예를 들어 보고서가 4250 (215)-68%로 **cpu_busy** 표시 되는 경우, 마지막으로 시작 된 이후 215 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 초, **sp_monitor** 마지막으로 실행 된 이후 초, cpu가 마지막으로 실행 된 이후 총 **sp_monitor** 시간에 대 한 68%가 시작 된 이후 cpu가 4250 사용 되는 것입니다.  
   
@@ -86,7 +79,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**last_run**|**current_run**|**초**|  
+|**last_run**|**current_run**|**까지의**|  
 |Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
   
 ||||  
@@ -105,7 +98,7 @@ EXEC sp_monitor
 |141 (0)|54920 (127)|0 (0)|4 (0)|  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [Transact-sql&#41;sp_who &#40;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

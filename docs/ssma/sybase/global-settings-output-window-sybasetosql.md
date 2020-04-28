@@ -10,10 +10,10 @@ ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0289407dd24a64733ce0a1abf5182b2370e58a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029031"
 ---
 # <a name="global-settings-output-window--sybasetosql"></a>전역 설정 (출력 창) (SybaseToSQL)

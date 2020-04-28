@@ -19,10 +19,10 @@ ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010573"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
@@ -73,7 +73,7 @@ EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

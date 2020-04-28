@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018066"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers(Transact-SQL)
@@ -36,19 +36,19 @@ ms.locfileid: "68018066"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|해당 데이터베이스에서 고유한 사용자 ID입니다.<br /><br /> 1 = 데이터베이스 소유자<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**업무**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|해당 데이터베이스에서 고유한 사용자 이름 또는 그룹 이름입니다.|  
-|**s**|**varbinary (85)**|해당 항목에 대한 SID(보안 ID)입니다.|  
-|**역할**|**varbinary (2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sid**|**varbinary(85)**|해당 항목에 대한 SID(보안 ID)입니다.|  
+|**역할**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|계정이 추가된 날짜입니다.|  
 |**updatedate**|**datetime**|계정을 마지막으로 변경한 날짜입니다.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
-|**암호**|**varbinary (256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**gid**|**smallint**|해당 사용자가 속한 그룹의 ID입니다. **Uid** 가 **gid**와 같으면이 항목은 그룹을 정의 합니다. 그룹과 사용자를 합한 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
-|**environ**|**varchar (255)**|예약되어 있습니다.|  
+|**environ**|**varchar(255)**|예약되어 있습니다.|  
 |**hasdbaccess**|**int**|1 = 계정에 데이터베이스 액세스가 있습니다.|  
 |**islogin**|**int**|1 = 계정이 로그인 계정이 있는 Windows 그룹, Windows 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자입니다.|  
 |**isntname**|**int**|1 = 계정이 Windows 사용자 또는 Windows 그룹입니다.|  
@@ -61,6 +61,6 @@ ms.locfileid: "68018066"
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

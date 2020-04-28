@@ -10,10 +10,10 @@ ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028757"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>프로젝트 설정(변환)(SybaseToSQL)
@@ -421,7 +421,7 @@ PATINDEX 함수를 Sybase ASE 동작과 일치 하도록 변환할지 여부를 
 **SUBSTRING 함수**  
 ASE에서 함수 `SUBSTRING(expression, start, length)` 는 식의 문자 수보다 큰 시작 값이 지정 된 경우 NULL을 반환 하 고, 길이가 0 이면 NULL을 반환 합니다. / [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure에서 해당 하는 식은 빈 문자열을 반환 합니다.  
   
--   ASE 동작을 사용 하려면 **바꾸기 함수**를 선택 합니다. 부분 문자열 함수에 대 한 모든 호출은 전달 된 매개 변수 형식 (스키마 이름 2ss의 사용자 데이터베이스에서 만들어짐)에 따라 SUBSTRING_VARCHAR 또는 SUBSTRING_NVARCHAR 또는 SUBSTRING_VARBINARY 사용자 정의 함수에 대 한 호출로 대체 됩니다. Sybase ASE 동작입니다.  
+-   ASE 동작을 사용 하려면 **바꾸기 함수**를 선택 합니다. SUBSTRING 함수에 대 한 모든 호출은 Sybase ASE 동작을 에뮬레이트하는 전달 된 매개 변수 형식 (스키마 이름에 사용자 데이터베이스에서 생성 됨)을 기반으로 하는 SUBSTRING_VARCHAR 또는 SUBSTRING_NVARCHAR 또는 SUBSTRING_VARBINARY 사용자 정의 함수에 대 한 호출로 대체 됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure 동작을 사용 하려면 **현재 구문 유지**를 선택 합니다.  
   

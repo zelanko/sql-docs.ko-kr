@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046047"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
@@ -60,8 +60,7 @@ sp_bindefault [ @defname = ] 'default' ,
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 기본 제약 조건을 사용 하거나 기존 기본값의 바인딩을 해제 하지 않고 별칭 데이터 형식에 새 기본값을 바인딩하는 대신 **sp_bindefault** 를 사용 하 여 새 기본값을 열에 바인딩할 수 있습니다. 이전의 기본값은 무시됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식 또는 CLR 사용자 정의 형식에는 기본값을 바인딩할 수 없습니다. 기본값을 바인딩한 열과 기본값이 호환되지 않는 경우에는 바인딩할 때가 아니라 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 기본값을 삽입하려고 시도할 때 오류 메시지를 반환합니다.  
+ 기본 제약 조건을 사용 하거나 기존 기본값의 바인딩을 해제 하지 않고 별칭 데이터 형식에 새 기본값을 바인딩하는 대신 **sp_bindefault** 를 사용 하 여 새 기본값을 열에 바인딩할 수 있습니다. 이전의 기본값은 무시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식 또는 CLR 사용자 정의 형식에는 기본값을 바인딩할 수 없습니다. 기본값을 바인딩한 열과 기본값이 호환되지 않는 경우에는 바인딩할 때가 아니라 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 기본값을 삽입하려고 시도할 때 오류 메시지를 반환합니다.  
   
  별칭 데이터 형식의 기존 열은 기본값이 자신에 게 직접 바인딩되어 있거나 *futureonly_flag* **futureonly**로 지정 되지 않은 경우 새 기본값을 상속 합니다. 별칭 데이터 형식의 새 열은 항상 기본값을 상속합니다.  
   
@@ -73,9 +72,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="examples"></a>예  
   
 ### <a name="a-binding-a-default-to-a-column"></a>A. 열에 기본값 바인딩  
- 
-  `today`라는 기본값이 CREATE DEFAULT에 의해 현재 데이터베이스에 정의되었으며, 다음 예에서는 이 기본값을 `HireDate` 테이블의 `Employee` 열에 바인딩합니다. 
-  `Employee` 열의 데이터가 제공되지 않은 채로 `HireDate` 테이블에 행이 추가될 때마다 열은 `today`라는 기본값을 할당받게 됩니다.  
+ `today`라는 기본값이 CREATE DEFAULT에 의해 현재 데이터베이스에 정의되었으며, 다음 예에서는 이 기본값을 `HireDate` 테이블의 `Employee` 열에 바인딩합니다. `Employee` 열의 데이터가 제공되지 않은 채로 `HireDate` 테이블에 행이 추가될 때마다 열은 `today`라는 기본값을 할당받게 됩니다.  
   
 ```  
 USE master;  
@@ -84,8 +81,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. 별칭 데이터 형식에 기본값 바인딩  
- 
-  `def_ssn`이라는 이름의 기본값과 `ssn`이라는 이름의 별칭 데이터 형식이 이미 존재합니다. 다음 예에서는 기본값 `def_ssn`을 `ssn`에 바인딩합니다. 테이블을 작성할 때 별칭 데이터 형식인 `ssn`으로 할당된 모든 열은 기본값을 상속합니다. **Futureonly** 가 *futureonly_flag* 값에 대해 지정 되지 않은 경우 또는 열에 직접 바인딩된 기본값이 있는 경우가 아니면 **ssn** 형식의 기존 열도 기본 **def_ssn**를 상속 합니다. 열에 바인딩된 기본값은 데이터 형식에 바인딩된 값보다 항상 우선합니다.  
+ `def_ssn`이라는 이름의 기본값과 `ssn`이라는 이름의 별칭 데이터 형식이 이미 존재합니다. 다음 예에서는 기본값 `def_ssn`을 `ssn`에 바인딩합니다. 테이블을 작성할 때 별칭 데이터 형식인 `ssn`으로 할당된 모든 열은 기본값을 상속합니다. **Futureonly** 가 *futureonly_flag* 값에 대해 지정 되지 않은 경우 또는 열에 직접 바인딩된 기본값이 있는 경우가 아니면 **ssn** 형식의 기존 열도 기본 **def_ssn**를 상속 합니다. 열에 바인딩된 기본값은 데이터 형식에 바인딩된 값보다 항상 우선합니다.  
   
 ```  
 USE master;  
@@ -119,7 +115,7 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT&#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [DROP DEFAULT &#40;Transact-sql&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
  [Transact-sql&#41;sp_unbindefault &#40;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

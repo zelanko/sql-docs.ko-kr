@@ -12,10 +12,10 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029143"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>테스트 사례 준비 완료(SybaseToSQL)

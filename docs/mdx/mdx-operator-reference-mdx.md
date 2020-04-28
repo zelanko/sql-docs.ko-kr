@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033913"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 연산자 참조(MDX)
@@ -24,7 +24,7 @@ ms.locfileid: "68033913"
   
 |항목|Description|  
 |-----------|-----------------|  
-|[--&#40;주석&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
+|[-- &#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
 |[-&#40;&#41; &#40;MDX를 제외 하 고&#41;](../mdx/except-mdx-operator.md)|중복된 멤버를 제거하고 두 집합 간의 차집합을 반환하는 집합 연산을 수행합니다.|  
 |[-&#40;음수&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환하는 단항 연산을 수행합니다.|  
 |[-&#40;빼기&#41; &#40;MDX&#41;](../mdx/subtract-mdx.md)|한 수에서 다른 수를 빼는 산술 연산을 수행합니다.|  
@@ -32,8 +32,8 @@ ms.locfileid: "68033913"
 |[MDX&#41; &#40;&#42; &#40;곱하기&#41;](../mdx/multiply-mdx.md)|두 수를 곱하는 산술 연산을 수행합니다.|  
 |[&#40;&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|한 수를 다른 수로 나누는 산술 연산을 수행합니다.|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|한 수에 다른 수를 제곱하는 산술 연산을 수행합니다.|  
-|[MDX &#40;설명&#41;](../mdx/comment-mdx.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
-|[MDX&#41; &#40;&#40;설명&#41;](../mdx/comment-mdx-double-slash.md)|사용자가 제공하는 텍스트를 나타냅니다.|  
+|[설명&#40;MDX&#41;](../mdx/comment-mdx.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
+|[&#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|사용자가 제공하는 텍스트를 나타냅니다.|  
 |[: &#40;범위&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|지정한 두 멤버를 엔드포인트로 사용하고 지정한 두 멤버 사이의 모든 멤버를 집합의 멤버로 포함시켜 일반적인 순서로 정렬된 집합을 반환하는 집합 연산을 수행합니다.|  
 |[+ &#40;MDX&#41; &#40;추가&#41;](../mdx/add-mdx.md)|두 수를 더하는 산술 연산을 수행합니다.|  
 |[+ &#40;긍정&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환하는 단항 연산을 수행합니다.|  
@@ -52,6 +52,6 @@ ms.locfileid: "68033913"
 |[XOR &#40;MDX&#41;](../mdx/xor-mdx.md)|두 숫자 식에 대해 논리 제외를 수행합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

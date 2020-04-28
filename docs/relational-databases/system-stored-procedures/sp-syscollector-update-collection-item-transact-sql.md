@@ -19,10 +19,10 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010549"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
@@ -67,8 +67,7 @@ sp_syscollector_update_collection_item
  **0** (성공) 또는 1 (실패)  
   
 ## <a name="remarks"></a>설명  
- 컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도 변경이 무시됩니다. 컬렉션 집합의 상태를 보려면 다음 쿼리를 실행합니다. 
-  `<collection_item_id>`를 업데이트할 컬렉션 항목의 ID로 바꿉니다.  
+ 컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도 변경이 무시됩니다. 컬렉션 집합의 상태를 보려면 다음 쿼리를 실행합니다. `<collection_item_id>`를 업데이트할 컬렉션 항목의 ID로 바꿉니다.  
   
 ```  
 USE msdb;  
@@ -117,9 +116,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-parameters-of-a-collection-item"></a>C. 컬렉션 항목의 매개 변수 변경  
- 다음 예에서는 컬렉션 항목과 관련된 매개 변수를 변경합니다. 
-  `<Value>` 특성 내에 정의된 문이 변경되며 `UseSystemDatabases` 특성이 false로 설정됩니다. 이 항목의 현재 매개 변수를 보려면 syscollector_collection_items 시스템 뷰의 parameters 열을 쿼리합니다. 
-  `@collection_item_id`의 값을 수정해야 할 수 있습니다.  
+ 다음 예에서는 컬렉션 항목과 관련된 매개 변수를 변경합니다. `<Value>` 특성 내에 정의된 문이 변경되며 `UseSystemDatabases` 특성이 false로 설정됩니다. 이 항목의 현재 매개 변수를 보려면 syscollector_collection_items 시스템 뷰의 parameters 열을 쿼리합니다. `@collection_item_id`의 값을 수정해야 할 수 있습니다.  
   
 ```  
 USE msdb;  
@@ -141,9 +138,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql&#41;sp_syscollector_create_collection_item &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [Transact-sql&#41;syscollector_collection_items &#40;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [syscollector_collection_items&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

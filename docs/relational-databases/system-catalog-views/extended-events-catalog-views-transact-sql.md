@@ -16,10 +16,10 @@ ms.assetid: a8c2fb81-9644-4943-9391-fa62b37056de
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 5cfbdced0cae3188f8bfd50f2b0c12278f48a50b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68033013"
 ---
 # <a name="extended-events-catalog-views-transact-sql"></a>확장 이벤트 카탈로그 뷰(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68033013"
   
 |||  
 |-|-|  
-|[sys.server_event_sessions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|[sys.server_event_session_fields&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|  
+|[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|[sys.server_event_session_fields&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-fields-transact-sql.md)|  
 |[sys.server_event_session_actions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|[sys.server_event_session_targets&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-targets-transact-sql.md)|  
 |[sys.server_event_session_events&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-events-transact-sql.md)||  
   

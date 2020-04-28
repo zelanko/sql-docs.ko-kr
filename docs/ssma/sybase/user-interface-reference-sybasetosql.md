@@ -10,10 +10,10 @@ ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020866"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>사용자 인터페이스 참조(SybaseToSQL)
@@ -21,7 +21,7 @@ ms.locfileid: "68020866"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[고급 개체 선택 &#40;SybaseToSQL&#41;](../../ssma/sybase/advanced-object-selection-sybasetosql.md)|**고급 개체 선택** 대화 상자를 사용 하 여 필터 조건을 사용 하 여 데이터베이스 개체를 찾은 다음 해당 개체를 선택 하거나 선택 취소 합니다.|  
 |[평가 보고서 &#40;SybaseToSQL&#41;](../../ssma/sybase/assessment-report-sybasetosql.md)|평가 보고서를 사용 하 여 Sybase 서버 ASE (적응 서버 엔터프라이즈) 개체를 구문으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환한 결과를 확인 하 고 또는 SQL Azure로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 마이그레이션 시간 및 복잡성을 예측할 수 있습니다.|  

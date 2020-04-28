@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017016"
 ---
 # <a name="avg-mdx"></a>Avg(MDX)
@@ -40,8 +40,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  **Avg** 함수는 지정 된 집합의 셀에서 값의 합계를 계산한 다음 계산 된 합계를 지정 된 집합의 비어 있지 않은 셀 개수로 나누는 방법으로 지정 된 집합에서 비어 있지 않은 셀 값의 평균을 계산 합니다.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 숫자 집합의 평균값을 계산할 때 Null을 무시합니다.  
+>  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 숫자 집합의 평균값을 계산할 때 Null을 무시합니다.  
   
  특정 숫자 식 (일반적으로 측정값)을 지정 하지 않으면 **Avg** 함수는 현재 쿼리 컨텍스트 내에서 각 측정값의 평균을 계산 합니다. 특정 측정값이 제공 되는 경우 **Avg** 함수는 먼저 집합에 대해 측정값을 평가한 다음 함수는 지정 된 측정값을 기반으로 평균을 계산 합니다.  
   
@@ -146,6 +145,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

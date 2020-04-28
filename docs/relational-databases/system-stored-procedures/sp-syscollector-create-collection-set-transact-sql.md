@@ -19,10 +19,10 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032643"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
@@ -97,8 +97,7 @@ sp_syscollector_create_collection_set
   
 -   지속적으로 실행되는 컬렉션 프로세스  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
   
  2 - 수준 1 로깅 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 세부 이벤트 정보  
   
@@ -122,8 +121,7 @@ sp_syscollector_create_collection_set
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 기본값을 사용하여 컬렉션 집합 만들기  
- 다음 예에서는 필수 매개 변수만 지정하여 컬렉션 집합을 만듭니다. 
-  `@collection_mode`는 필수 사항은 아니지만 기본 컬렉션 모드(캐시된 모드)를 사용하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  
+ 다음 예에서는 필수 매개 변수만 지정하여 컬렉션 집합을 만듭니다. `@collection_mode`는 필수 사항은 아니지만 기본 컬렉션 모드(캐시된 모드)를 사용하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  
   
 ```  
 USE msdb;  
@@ -158,9 +156,9 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
- [일반 T-SQL 쿼리 수집기 유형을 사용하는 사용자 지정 컬렉션 집합 만들기&#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
- [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;syscollector_collection_sets &#40;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;일반 T-sql 쿼리 수집기 유형을 사용 하는 사용자 지정 컬렉션 집합을 만듭니다.](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
+ [Transact-sql&#41;&#40;데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [syscollector_collection_sets&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

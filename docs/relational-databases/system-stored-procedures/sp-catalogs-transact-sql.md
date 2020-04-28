@@ -18,10 +18,10 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045944"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs(Transact-SQL)
@@ -55,7 +55,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
  다음 예에서는 `OLE DB ODBC Linked Server #3`이라는 연결된 서버에 대한 카탈로그 정보를 반환합니다.  
   
 > [!NOTE]  
->  유용한 **** 정보를 제공 하려면가 이미 `OLE DB ODBC Linked Server #3` 있어야 합니다. sp_catalogs  
+>  유용한 **sp_catalogs** 정보를 제공 하려면가 이미 `OLE DB ODBC Linked Server #3` 있어야 합니다. sp_catalogs  
   
 ```  
 USE master;  
@@ -64,7 +64,7 @@ EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [sp_addlinkedserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
+ [Transact-sql&#41;sp_addlinkedserver &#40;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [Transact-sql&#41;sp_columns_ex &#40;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [Transact-sql&#41;sp_column_privileges &#40;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [Transact-sql&#41;sp_foreignkeys &#40;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   

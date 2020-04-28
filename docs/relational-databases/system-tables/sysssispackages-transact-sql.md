@@ -18,10 +18,10 @@ ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029645"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages(Transact-SQL)
@@ -33,11 +33,10 @@ ms.locfileid: "68029645"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|패키지의 고유 식별자입니다.|  
-|**a-id**|**uniqueidentifier**|패키지의 GUID입니다.|  
+|**id**|**uniqueidentifier**|패키지의 GUID입니다.|  
 |**한**|**nvarchar**|패키지에 대한 설명(옵션)입니다.|  
 |**createdate**|**datetime**|패키지를 만든 날짜입니다.|  
-|**folderid**|**uniqueidentifier**|
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
+|**folderid**|**uniqueidentifier**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 패키지를 나열하는 논리적 폴더의 GUID입니다.|  
 |**ownersid**|**varbinary**|패키지를 만든 사용자의 고유 보안 식별자입니다.|  
 |**packagedata**|**image**|패키지입니다.|  
 |**packageformat**|**int**|패키지가 저장되는 형식입니다.<br /><br /> 값 2는 패키지가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 형식으로 저장 됨을 나타냅니다.<br /><br /> 값 3은 패키지가 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]이상 형식으로 저장 됨을 나타냅니다.|  

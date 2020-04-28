@@ -19,10 +19,10 @@ ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010634"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
@@ -44,7 +44,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window = ] *cache_window*  
  데이터 손실이 없는 오류 발생 시에 관리 데이터 웨어하우스에 대한 데이터 업로드를 다시 시도하는 횟수입니다. *cache_window* 은 **int** 이며 기본값은 1입니다. *cache_window* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |-1|실패한 이전 업로드의 업로드 데이터를 모두 캐시합니다.|  
 |0|실패한 업로드의 데이터를 캐시하지 않습니다.|  
@@ -73,7 +73,7 @@ EXECUTE dbo.sp_syscollector_enable_collector;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_syscollector_set_cache_directory &#40;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sp_syscollector_set_cache_directory&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)  
   
   

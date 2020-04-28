@@ -30,10 +30,10 @@ ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006624"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 변환 (AccessToSQL)
@@ -59,11 +59,11 @@ Access 데이터베이스를 추가 하 고 SQL Azure 또는에 [!INCLUDE[ssNoVe
 |열|열|  
 |인덱스|인덱스|  
 |외래 키(foreign key)|외래 키(foreign key)|  
-|쿼리|뷰<br /><br />대부분의 SELECT 쿼리가 뷰로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />매개 변수를 사용 하는 SELECT 쿼리는 변환 되지 않으며 다중 탭 쿼리가 됩니다.|  
-|report|변환 되지 않음|  
-|form|변환 되지 않음|  
+|Query|뷰<br /><br />대부분의 SELECT 쿼리가 뷰로 변환 됩니다. 업데이트 쿼리와 같은 다른 쿼리는 마이그레이션되지 않습니다.<br /><br />매개 변수를 사용 하는 SELECT 쿼리는 변환 되지 않으며 다중 탭 쿼리가 됩니다.|  
+|보고서|변환 되지 않음|  
+|양식|변환 되지 않음|  
 |매크로|변환 되지 않음|  
-|module|변환 되지 않음|  
+|모듈(module)|변환 되지 않음|  
 |기본값|기본값|  
 |길이가 0 인 열 속성 허용|check 제약 조건|  
 |열 유효성 검사 규칙|check 제약 조건|  

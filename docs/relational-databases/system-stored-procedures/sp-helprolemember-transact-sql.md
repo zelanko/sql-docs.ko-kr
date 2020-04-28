@@ -18,10 +18,10 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997483"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember(Transact-SQL)
@@ -50,7 +50,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**MemberName**|**sysname**|DbRole의 멤버 이름입니다 **.**|  
-|**MemberSID**|**varbinary (85)**|MemberName의 보안 식별자 **입니다.**|  
+|**MemberSID**|**varbinary(85)**|MemberName의 보안 식별자 **입니다.**|  
   
 ## <a name="remarks"></a>설명  
  데이터베이스에 중첩 된 역할이 포함 된 경우 **MemberName** 는 역할의 이름일 수 있습니다. **sp_helprolemember** 에는 중첩 된 역할을 통해 얻은 멤버 자격이 표시 되지 않습니다. 예를 들어, User1이 Role1의 멤버이고 Role1이 Role2의 멤버인 경우 `EXEC sp_helprolemember 'Role2'`에서는 Role1을 반환하고 Role1의 멤버는 반환하지 않습니다(이 예제에서는 User1). 중첩 된 멤버 자격을 반환 하려면 중첩 된 각 역할에 대해 **sp_helprolemember** 를 반복적으로 실행 해야 합니다.  

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67999992"
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
@@ -48,7 +48,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  수준을 반환하는 유효한 MDX 식입니다.  
   
- *거리*  
+ *Distance*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
  *Desc_Flag*  
@@ -91,7 +91,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  설명 플래그 값을 변경하여 지정된 수준 또는 거리에서 하위 항목을 포함하거나 제외할 수 있습니다. 지정된 수준 또는 거리의 전/후에 있는 자식(리프 노드까지)은 물론, 지정한 수준이나 거리에 관계없이 리프 자식 항목을 포함 또는 제외할 수 있습니다. 다음 표에서는 *Desc_Flag* 인수에서 허용 되는 플래그에 대해 설명 합니다.  
   
-|플래그|Description|  
+|플래그|설명|  
 |----------|-----------------|  
 |SELF|지정된 수준 또는 지정된 거리에 있는 하위 멤버만 반환합니다. 이 함수는 지정된 수준이 지정된 멤버의 수준인 경우 지정된 멤버를 포함합니다.|  
 |AFTER|지정된 수준에 종속되거나 지정된 거리에 있는 모든 수준의 하위 멤버를 반환합니다.|  
@@ -162,6 +162,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

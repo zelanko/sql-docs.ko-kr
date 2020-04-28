@@ -12,10 +12,10 @@ ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 56d5426b0b05793106724b576f9f012938393d58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028988"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>테스트 사례 초기화(SybaseToSQL)

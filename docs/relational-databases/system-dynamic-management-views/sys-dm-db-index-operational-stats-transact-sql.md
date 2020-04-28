@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004890"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats(Transact-SQL)
@@ -55,14 +55,12 @@ sys.dm_db_index_operational_stats (
  *database_id* | NULL | 0 | 기본    
  데이터베이스의 ID입니다. *database_id* 은 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스에 대한 정보를 반환하려면 NULL을 지정합니다. *Database_id*에 대해 null을 지정 하는 경우 *object_id*, *index_id*및 *partition_number*에 대해서도 null을 지정 해야 합니다.    
     
- 
-  [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다.    
+ [DB_ID](../../t-sql/functions/db-id-transact-sql.md) 기본 제공 함수를 지정할 수 있습니다.    
     
  *object_id* | NULL | 0 | 기본    
- 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 은 **int**입니다.    
+ 인덱스가 있는 테이블 또는 뷰의 개체 ID입니다. *object_id* 는 **int**입니다.    
     
  올바른 입력은 테이블 및 뷰의 ID 번호, NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.    
     
@@ -82,7 +80,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>반환된 테이블    
     
-|열 이름|데이터 형식|Description|    
+|열 이름|데이터 형식|설명|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|데이터베이스 ID입니다.|    
 |**object_id**|**int**|테이블 또는 뷰의 ID입니다.|    
@@ -112,27 +110,17 @@ sys.dm_db_index_operational_stats (
 |**column_value_push_off_row_count**|**bigint**|삽입되거나 업데이트된 행을 페이지에 맞추기 위해 행 외부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다.|    
 |**column_value_pull_in_row_count**|**bigint**|행 내부로 밀어넣은 LOB 데이터 및 행 오버플로 데이터에 대한 열 값의 누적값입니다. 업데이트 작업이 레코드의 공간을 비울 때 발생하며 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에서 IN_ROW_DATA 할당 단위로 하나 이상의 행 외부 값을 밀어넣을 수 있게 됩니다.|    
 |**row_lock_count**|**bigint**|요청된 행 잠금의 누적 개수입니다.|    
-|**row_lock_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 행 잠금으로 인해 대기한 누적 횟수입니다.|    
-|**row_lock_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 행 잠금으로 인해 대기한 총 시간(밀리초)입니다.|    
+|**row_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 행 잠금으로 인해 대기한 누적 횟수입니다.|    
+|**row_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 행 잠금으로 인해 대기한 총 시간(밀리초)입니다.|    
 |**page_lock_count**|**bigint**|요청된 페이지 잠금의 누적 개수입니다.|    
-|**page_lock_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 잠금으로 인해 대기한 누적 횟수입니다.|    
-|**page_lock_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 잠금으로 인해 대기한 총 시간(밀리초)입니다.|    
-|**index_lock_promotion_attempt_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 잠금 에스컬레이션을 시도한 누적 횟수입니다.|    
-|**index_lock_promotion_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 잠금을 에스컬레이션한 누적 횟수입니다.|    
-|**page_latch_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 래치 경합으로 인해 대기한 누적 횟수입니다.|    
-|**page_latch_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 래치 경합으로 인해 대기한 누적 시간(밀리초)입니다.|    
-|**page_io_latch_wait_count**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 I/O 페이지 래치로 인해 대기한 누적 횟수입니다.|    
-|**page_io_latch_wait_in_ms**|**bigint**|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 I/O 래치로 인해 대기한 누적 시간(밀리초)입니다.|    
+|**page_lock_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 잠금으로 인해 대기한 누적 횟수입니다.|    
+|**page_lock_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 잠금으로 인해 대기한 총 시간(밀리초)입니다.|    
+|**index_lock_promotion_attempt_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 잠금 에스컬레이션을 시도한 누적 횟수입니다.|    
+|**index_lock_promotion_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 잠금을 에스컬레이션한 누적 횟수입니다.|    
+|**page_latch_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 래치 경합으로 인해 대기한 누적 횟수입니다.|    
+|**page_latch_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 래치 경합으로 인해 대기한 누적 시간(밀리초)입니다.|    
+|**page_io_latch_wait_count**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 I/O 페이지 래치로 인해 대기한 누적 횟수입니다.|    
+|**page_io_latch_wait_in_ms**|**bigint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]이 페이지 I/O 래치로 인해 대기한 누적 시간(밀리초)입니다.|    
 |**tree_page_latch_wait_count**|**bigint**|상위 수준 B-트리 페이지만 포함하는 **page_latch_wait_count**의 하위 집합입니다. 힙 또는 columnstore 인덱스의 경우 항상 0입니다.|    
 |**tree_page_latch_wait_in_ms**|**bigint**|상위 수준 B-트리 페이지만 포함하는 **page_latch_wait_in_ms**의 하위 집합입니다. 힙 또는 columnstore 인덱스의 경우 항상 0입니다.|    
 |**tree_page_io_latch_wait_count**|**bigint**|상위 수준 B-트리 페이지만 포함하는 **page_io_latch_wait_count**의 하위 집합입니다. 힙 또는 columnstore 인덱스의 경우 항상 0입니다.|    
@@ -143,12 +131,11 @@ sys.dm_db_index_operational_stats (
 ## <a name="remarks"></a>설명    
  이 동적 관리 개체는 CROSS APPLY 및 OUTER APPLY의 상호 관련된 매개 변수를 받지 않습니다.    
     
- 
-  **sys.dm_db_index_operational_stats**를 사용하여 사용자가 테이블, 인덱스 또는 파티션을 읽거나 쓰기 위해 대기해야 하는 시간을 추적하고 상당한 I/O 작업 또는 문제가 발생하고 있는 테이블이나 인덱스를 식별할 수 있습니다.    
+ **sys.dm_db_index_operational_stats**를 사용하여 사용자가 테이블, 인덱스 또는 파티션을 읽거나 쓰기 위해 대기해야 하는 시간을 추적하고 상당한 I/O 작업 또는 문제가 발생하고 있는 테이블이나 인덱스를 식별할 수 있습니다.    
     
  다음 열을 사용하여 경합 영역을 식별할 수 있습니다.    
     
- **테이블 또는 인덱스 파티션에 대 한 일반적인 액세스 패턴을 분석 하려면**다음 열을 사용 합니다.    
+ **테이블 또는 인덱스 파티션에 대한 일반적인 액세스 패턴을 분석하려면** 다음 열을 사용합니다.    
     
 -   **leaf_insert_count**    
     
@@ -183,15 +170,12 @@ sys.dm_db_index_operational_stats (
      이 두 열은 인덱스 또는 힙 페이지를 메모리로 가져가기 위한 물리적 I/O가 발생했는지 여부와 I/O 발생 횟수를 나타냅니다.    
     
 ## <a name="column-remarks"></a>열에 대한 주의    
- 
-  **lob_orphan_create_count** 및 **lob_orphan_insert_count**의 값은 항상 같아야 합니다.    
+ **lob_orphan_create_count** 및 **lob_orphan_insert_count**의 값은 항상 같아야 합니다.    
     
- 
-  **lob_fetch_in_pages** 및 **lob_fetch_in_bytes** 열의 값은 하나 이상의 LOB 열을 포괄 열로 포함하는 비클러스터형 인덱스의 경우 0보다 클 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요. 마찬가지로 **row_overflow_fetch_in_pages** 및 **row_overflow_fetch_in_bytes** 열의 값은 행 외부로 밀어넣을 수 있는 열을 포함하는 비클러스터형 인덱스의 경우 0보다 클 수 있습니다.    
+ **lob_fetch_in_pages** 및 **lob_fetch_in_bytes** 열의 값은 하나 이상의 LOB 열을 포괄 열로 포함하는 비클러스터형 인덱스의 경우 0보다 클 수 있습니다. 자세한 내용은 [포괄 열을 사용 하 여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조 하세요. 마찬가지로 **row_overflow_fetch_in_pages** 및 **row_overflow_fetch_in_bytes** 열의 값은 행 외부로 밀어넣을 수 있는 열을 포함하는 비클러스터형 인덱스의 경우 0보다 클 수 있습니다.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>메타데이터 캐시의 카운터를 다시 설정하는 방법    
- 
-  **sys.dm_db_index_operational_stats**에서 반환되는 데이터는 사용 가능한 힙 또는 인덱스를 나타내는 메타데이터 캐시 개체가 있는 경우에만 존재합니다. 이 데이터는 영구적이지도 않고 트랜잭션 측면에서 일관되지도 않습니다. 즉, 이러한 카운터로는 인덱스가 사용되었는지 여부나 인덱스가 마지막으로 사용된 시기를 확인할 수 없습니다. 이에 대 한 자세한 내용은 [dm_db_index_usage_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)을 참조 하십시오.    
+ **sys.dm_db_index_operational_stats**에서 반환되는 데이터는 사용 가능한 힙 또는 인덱스를 나타내는 메타데이터 캐시 개체가 있는 경우에만 존재합니다. 이 데이터는 영구적이지도 않고 트랜잭션 측면에서 일관되지도 않습니다. 즉, 이러한 카운터로는 인덱스가 사용되었는지 여부나 인덱스가 마지막으로 사용된 시기를 확인할 수 없습니다. 이에 대 한 자세한 내용은 [dm_db_index_usage_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)을 참조 하십시오.    
     
  힙 또는 인덱스에 대한 메타데이터를 메타데이터 캐시로 가져갈 때마다 각 열의 값이 0으로 설정되며 메타데이터 캐시에서 캐시 개체가 제거될 때까지 통계가 누적됩니다. 따라서 활성 힙 또는 인덱스의 메타데이터가 항상 캐시에 있으며 누적값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 작업을 반영합니다. 덜 활성화된 힙 또는 인덱스에 대한 메타데이터는 사용될 때 캐시에 들어왔다 나가기를 반복합니다. 따라서 사용 가능한 값이 있을 수도 있고 없을 수도 있습니다. 인덱스를 삭제하면 해당 통계가 메모리에서 제거되고 더 이상 보고되지 않습니다. 인덱스에 대한 다른 DDL 작업으로 인해 통계의 값이 0으로 다시 설정될 수도 있습니다.    
     
@@ -216,12 +200,10 @@ sys.dm_db_index_operational_stats (
 ## <a name="examples"></a>예    
     
 ### <a name="a-returning-information-for-a-specified-table"></a>A. 지정된 테이블에 대한 정보 반환    
- 다음 예에서는 `Person.Address` 데이터베이스에 있는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블의 모든 인덱스 및 파티션에 대한 정보를 반환합니다. 이 쿼리를 실행하려면 적어도 `Person.Address` 테이블에 대한 CONTROL 권한이 필요합니다.    
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 모든 인덱스 및 파티션에 대한 정보를 반환합니다. 이 쿼리를 실행하려면 적어도 `Person.Address` 테이블에 대한 CONTROL 권한이 필요합니다.    
     
 > [!IMPORTANT]    
->  
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 DB_ID 및 OBJECT_ID를 사용해 매개 변수 값이 반환된 경우 유효한 ID가 반환되는지 항상 확인합니다. 존재하지 않는 이름을 입력하거나 철자를 잘못 입력하는 등의 이유로 데이터베이스 또는 개체 이름을 찾을 수 없으면 두 함수 모두 NULL을 반환합니다. 
-  **sys.dm_db_index_operational_stats** 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정하는 와일드카드 값으로 해석합니다. 이는 의도하지 않은 결과일 수 있으므로 이 섹션의 예에서는 안전하게 데이터베이스 및 개체 ID를 확인하는 방법을 보여 줍니다.    
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 DB_ID 및 OBJECT_ID를 사용해 매개 변수 값이 반환된 경우 유효한 ID가 반환되는지 항상 확인합니다. 존재하지 않는 이름을 입력하거나 철자를 잘못 입력하는 등의 이유로 데이터베이스 또는 개체 이름을 찾을 수 없으면 두 함수 모두 NULL을 반환합니다. **sys.dm_db_index_operational_stats** 함수는 NULL을 모든 데이터베이스나 모든 개체를 지정하는 와일드카드 값으로 해석합니다. 이는 의도하지 않은 결과일 수 있으므로 이 섹션의 예에서는 안전하게 데이터베이스 및 개체 ID를 확인하는 방법을 보여 줍니다.    
     
 ```    
 DECLARE @db_id int;    
@@ -254,7 +236,7 @@ GO
 ```    
     
 ## <a name="see-also"></a>참고 항목    
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
  [Transact-sql&#41;&#40;인덱스 관련 동적 관리 뷰 및 함수](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)     
  [성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [sys.dm_db_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)     

@@ -20,10 +20,10 @@ ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017988"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>변경 데이터 캡처-sys. dm_cdc_log_scan_sessions
@@ -36,7 +36,7 @@ ms.locfileid: "68017988"
 |**session_id**|**int**|세션의 ID입니다.<br /><br /> 0일 경우 이 행에서 반환된 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 모든 세션에 대한 집계입니다.|  
 |**start_time**|**datetime**|세션의 시작 시간입니다.<br /><br /> **Session_id** = 0 인 경우 집계 된 데이터 수집이 시작 된 시간입니다.|  
 |**end_time**|**datetime**|세션의 종료 시간입니다.<br /><br /> NULL인 경우 세션이 활성 상태입니다.<br /><br /> **Session_id** = 0 인 경우 마지막 세션이 종료 된 시간입니다.|  
-|**작업**|**bigint**|세션의 기간(초)입니다.<br /><br /> 0인 경우 세션에 변경 데이터 캡처 트랜잭션이 포함되어 있지 않습니다.<br /><br /> **Session_id** = 0 일 경우 변경 데이터 캡처 트랜잭션이 있는 모든 세션의 기간 (초)의 합계입니다.|  
+|**duration**|**bigint**|세션의 기간(초)입니다.<br /><br /> 0인 경우 세션에 변경 데이터 캡처 트랜잭션이 포함되어 있지 않습니다.<br /><br /> **Session_id** = 0 일 경우 변경 데이터 캡처 트랜잭션이 있는 모든 세션의 기간 (초)의 합계입니다.|  
 |**scan_phase**|**nvarchar(200)**|세션의 현재 단계입니다. 다음은 가능한 값과 그에 대 한 설명입니다.<br /><br /> 1: 구성 읽기<br />2: 첫 번째 검색, 해시 테이블 작성<br />3: 두 번째 검사<br />4: 두 번째 검사<br />5: 두 번째 검색<br />6: 스키마 버전 관리<br />7: 마지막 검사<br />8: 완료<br /><br /> **Session_id** = 0 이면이 값은 항상 "Aggregate"입니다.|  
 |**error_count**|**int**|오류가 발생한 횟수입니다.<br /><br /> **Session_id** = 0 인 경우 모든 세션의 총 오류 수입니다.|  
 |**start_lsn**|**nvarchar (23)**|세션의 시작 LSN입니다.<br /><br /> **Session_id** = 0 인 경우 마지막 세션의 시작 LSN입니다.|  

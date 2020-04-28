@@ -18,10 +18,10 @@ ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029537"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68029537"
 
   **IHextendedArticleView** 뷰는 SQL Server 되지 않은 게시의 아티클에 대 한 정보를 제공 합니다. 이 뷰는 **배포** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자에 대한 고유 식별자입니다.|  
 |**publication_id**|**int**|게시에 대한 고유 식별자입니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "68029537"
 |**filter_clause**|**ntext**|아티클을 수평 분할하는 데 사용되는 WHERE 절입니다.|  
 |**ins_cmd**|**nvarchar(255)**|INSERT를 위해 실행되는 명령입니다.|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE, DELETE TABLE 또는 TRUNCATE에 대한 사전 생성 명령입니다.<br /><br /> **0** = 없음<br /><br /> **1** = 삭제<br /><br /> **2** = 삭제<br /><br /> **3** = 자름|  
-|**업무**|**tinyint**|아티클 옵션 및 상태의 비트 마스크이며 다음 값 중 하나 이상에 대한 논리 비트 OR 연산의 결과일 수 있습니다.<br /><br /> **1** = 아티클이 활성 상태입니다.<br /><br /> **8** = INSERT 문에 열 이름을 포함 합니다.<br /><br /> **16** = 매개 변수가 있는 문을 사용 합니다.<br /><br /> **24** = INSERT 문에 열 이름을 포함 하 고 매개 변수가 있는 문을 사용 합니다.<br /><br /> 예를 들어 매개 변수가 있는 문을 사용 하는 활성 아티클은이 열 값이 **17** 입니다. 값이 **0** 이면 아티클이 비활성 상태이 고 추가 속성이 정의 되지 않았음을 의미 합니다.|  
+|**status**|**tinyint**|아티클 옵션 및 상태의 비트 마스크이며 다음 값 중 하나 이상에 대한 논리 비트 OR 연산의 결과일 수 있습니다.<br /><br /> **1** = 아티클이 활성 상태입니다.<br /><br /> **8** = INSERT 문에 열 이름을 포함 합니다.<br /><br /> **16** = 매개 변수가 있는 문을 사용 합니다.<br /><br /> **24** = INSERT 문에 열 이름을 포함 하 고 매개 변수가 있는 문을 사용 합니다.<br /><br /> 예를 들어 매개 변수가 있는 문을 사용 하는 활성 아티클은이 열 값이 **17** 입니다. 값이 **0** 이면 아티클이 비활성 상태이 고 추가 속성이 정의 되지 않았음을 의미 합니다.|  
 |**type**|**tinyint**|아티클 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.|  
 |**upd_cmd**|**nvarchar(255)**|UPDATE를 위해 실행되는 명령입니다.|  
 |**schema_option**|**binary**|스크립팅할 항목을 나타냅니다. 지원 되는 스키마 옵션 목록은 [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 를 참조 하세요.|  

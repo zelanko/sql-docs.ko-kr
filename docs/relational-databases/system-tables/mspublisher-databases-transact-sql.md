@@ -18,10 +18,10 @@ ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032614"
 ---
 # <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases(Transact-SQL)
@@ -33,9 +33,8 @@ ms.locfileid: "68032614"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**a-id**|**int**|행의 ID입니다.|  
-|**publisher_engine_edition**|**int**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 버전을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **10** = 개인용 버전<br /><br /> **11** = 데스크톱 엔진 (MSDE)<br /><br /> **20** = 표준<br /><br /> **21** = 작업 그룹<br /><br /> **30** = Enterprise (Evaluation)<br /><br /> **31** = 개발자<br /><br /> **40** = Express (express는 게시자가 될 수 없습니다. 이 값은 완결성을 위해 존재합니다.)|  
+|**id**|**int**|행의 ID입니다.|  
+|**publisher_engine_edition**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 버전을 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **10** = 개인용 버전<br /><br /> **11** = 데스크톱 엔진 (MSDE)<br /><br /> **20** = 표준<br /><br /> **21** = 작업 그룹<br /><br /> **30** = Enterprise (Evaluation)<br /><br /> **31** = 개발자<br /><br /> **40** = Express (express는 게시자가 될 수 없습니다. 이 값은 완결성을 위해 존재합니다.)|  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

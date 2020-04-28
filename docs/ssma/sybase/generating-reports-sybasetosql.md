@@ -14,10 +14,10 @@ ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029127"
 ---
 # <a name="generating-reports-sybasetosql"></a>보고서 생성(SybaseToSQL)

@@ -18,10 +18,10 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68009123"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator(Transact-SQL)
@@ -48,7 +48,7 @@ sp_delete_operator [ @name = ] 'name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- None  
+ 없음  
   
 ## <a name="remarks"></a>설명  
  운영자가 제거되면 그 운영자와 연관된 알림도 모두 함께 제거됩니다.  

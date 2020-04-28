@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016802"
 ---
 # <a name="children-mdx"></a>Children(MDX)
@@ -58,6 +58,6 @@ FROM
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**변경된 내용**<br /> -명확성을 향상 시키기 위해 구문 및 인수가 업데이트 되었습니다.<br /><br /> -업데이트 된 예제를 추가 했습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

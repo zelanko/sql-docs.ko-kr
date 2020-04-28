@@ -18,10 +18,10 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044465"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp(Transact-SQL)
@@ -43,7 +43,7 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**상태**|**nvarchar (7)**|데이터베이스 메일의 상태입니다. 가능한 값은 **시작** 및 **중지**됨입니다.|  
   
@@ -69,6 +69,6 @@ STARTED
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일 외부 프로그램](../../relational-databases/database-mail/database-mail-external-program.md)   
  [Transact-sql&#41;sysmail_start_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [Transact-sql&#41;sysmail_stop_sp &#40;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+ [sysmail_stop_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

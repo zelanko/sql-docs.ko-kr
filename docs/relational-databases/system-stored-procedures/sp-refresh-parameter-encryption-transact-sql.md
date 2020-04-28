@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002466"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
@@ -48,8 +48,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 `nvarchar`이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. 
-  `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER`입니다.    
+`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER`입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 

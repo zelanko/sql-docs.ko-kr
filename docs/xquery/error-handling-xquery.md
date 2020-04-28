@@ -18,10 +18,10 @@ ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038957"
 ---
 # <a name="error-handling-xquery"></a>오류 처리(XQuery)
@@ -37,8 +37,7 @@ ms.locfileid: "68038957"
  올바른 유형으로 명시적으로 캐스팅하면 런타임 캐스트 오류가 빈 시퀀스로 전송되더라도 사용자가 정적 오류를 해결할 수 있습니다.  
   
 ## <a name="static-errors"></a>정적 오류  
- 정적 오류는 [!INCLUDE[tsql](../includes/tsql-md.md)] 오류 메커니즘을 사용하여 반환됩니다. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery 형식 지정 오류는 정적으로 반환됩니다. 자세한 내용은 [XQuery 및 정적 형식](../xquery/xquery-and-static-typing.md)지정을 참조 하세요.  
+ 정적 오류는 [!INCLUDE[tsql](../includes/tsql-md.md)] 오류 메커니즘을 사용하여 반환됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 XQuery 형식 지정 오류는 정적으로 반환됩니다. 자세한 내용은 [XQuery 및 정적 형식](../xquery/xquery-and-static-typing.md)지정을 참조 하세요.  
   
 ## <a name="dynamic-errors"></a>동적 오류  
  XQuery에서 대부분의 동적 오류는 빈 시퀀스("()")로 매핑됩니다. 그러나 XQuery 집계 함수 및 XML DML 유효성 검사 오류의 오버플로 조건 이라는 두 가지 예외가 있습니다. 대부분의 동적 오류는 빈 시퀀스로 매핑됩니다. 그렇지 않으면 XML 인덱스를 활용하는 쿼리 실행 시 오류가 발생할 수 있습니다. 따라서 오류를 발생시키지 않고 효율적으로 쿼리를 실행하기 위해 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 동적 오류를 ()로 매핑합니다.  
@@ -84,7 +83,7 @@ GO
  **Fn: error ()** 함수는 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+ [XQuery 언어 참조 &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [XQuery 기초](../xquery/xquery-basics.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032887"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
@@ -54,8 +54,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|행 버전 항목을 만든 데이터베이스를 호스팅하는 서버의 이름입니다.|  
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
-|**db_nickname**|**binary (6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
-|**버전**|**int**|항목의 버전입니다.|  
+|**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
+|**version**|**int**|항목의 버전입니다.|  
 |**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> n/a>-적용할 수 없습니다. ** \<**<br /><br /> 알 수 없는>-현재 상태를 확인할 수 없습니다. ** \<**|  
 |**rowversion_table**|**nchar (17)**|행 버전이 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블이 나 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에 저장 되는지 여부를 나타냅니다.|  
 |**주석의**|**nvarchar(255)**|현재 행 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
@@ -66,8 +66,8 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|열 버전 항목을 만든 데이터베이스를 호스팅하는 서버의 이름입니다.|  
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
-|**db_nickname**|**binary (6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
-|**버전**|**int**|항목의 버전입니다.|  
+|**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
+|**version**|**int**|항목의 버전입니다.|  
 |**colname**|**sysname**|열 버전 항목이 표시되는 아티클 열의 이름입니다.|  
 |**주석의**|**nvarchar(255)**|이 열 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
   

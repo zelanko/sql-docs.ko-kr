@@ -18,10 +18,10 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030917"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
@@ -29,8 +29,7 @@ ms.locfileid: "68030917"
 
   사용자 정의 클러스터형 및 비클러스터형 인덱스 또는 클러스터형 인덱스가 없는 테이블에 대한 잠금 옵션 값을 설정합니다.  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 자동으로 페이지, 행 또는 테이블 수준의 잠금을 선택합니다. 이러한 옵션을 수동으로 설정할 필요는 없습니다. 특정 유형의 잠금이 항상 적절 하다는 확신을 알고 있는 전문가 사용자를 위해 **sp_indexoption** 제공 됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 자동으로 페이지, 행 또는 테이블 수준의 잠금을 선택합니다. 이러한 옵션을 수동으로 설정할 필요는 없습니다. 특정 유형의 잠금이 항상 적절 하다는 확신을 알고 있는 전문가 사용자를 위해 **sp_indexoption** 제공 됩니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]대신 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용 합니다.  
@@ -140,8 +139,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [INDEXPROPERTY &#40;Transact-sql&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

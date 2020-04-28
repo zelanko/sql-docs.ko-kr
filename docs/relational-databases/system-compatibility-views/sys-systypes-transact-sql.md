@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018082"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes(Transact-SQL)
@@ -40,9 +40,9 @@ ms.locfileid: "68018082"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터 형식의 이름입니다.|  
 |**xtype**|**tinyint**|물리적 스토리지 유형입니다.|  
-|**업무**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|확장 사용자 유형입니다. 데이터 형식 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
-|**길이**|**smallint**|데이터 형식의 물리적 길이입니다.|  
+|**length**|**smallint**|데이터 형식의 물리적 길이입니다.|  
 |**xprec**|**tinyint**|서버에서 사용하는 내부적인 전체 자릿수입니다. 쿼리에서는 사용하지 않습니다.|  
 |**xscale**|**tinyint**|서버에서 사용하는 내부적인 소수 자릿수입니다. 쿼리에서는 사용하지 않습니다.|  
 |**tdefault**|**int**|해당 데이터 형식에 대한 무결성 검사를 포함하는 저장 프로시저의 ID입니다.|  
@@ -54,9 +54,9 @@ ms.locfileid: "68018082"
 |**변수**|**bit**|가변 길이 데이터 형식입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|해당 데이터 형식의 기본 NULL 허용 여부를 표시합니다. 이 기본값은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER table](../../t-sql/statements/alter-table-transact-sql.md)을 사용 하 여 null 허용 여부를 지정 하는 경우에 의해 재정의 됩니다.|  
 |**type**|**tinyint**|물리적인 스토리지 데이터 형식입니다.|  
-|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|해당 데이터 형식에 대한 전체 자릿수 수준입니다.<br /><br /> -1 = **xml** 또는 대량 값 형식입니다.|  
-|**배율을**|**tinyint**|해당 데이터 형식의 소수 자릿수이며 전체 자릿수를 기반으로 합니다.<br /><br /> NULL = 데이터 형식이 숫자가 아닙니다.|  
+|**scale**|**tinyint**|해당 데이터 형식의 소수 자릿수이며 전체 자릿수를 기반으로 합니다.<br /><br /> NULL = 데이터 형식이 숫자가 아닙니다.|  
 |**부씩**|**sysname**|Character based 인 경우 **데이터 정렬은** 현재 데이터베이스의 데이터 정렬입니다. 그렇지 않으면 NULL입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

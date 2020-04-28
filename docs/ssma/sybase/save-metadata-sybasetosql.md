@@ -10,10 +10,10 @@ ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3a8cde296fd0a47c407752977f5e41269a05354e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020973"
 ---
 # <a name="save-metadata--sybasetosql"></a>메타데이터 저장(SybaseToSQL)
@@ -33,10 +33,10 @@ SSMA는 필요에 따라 메타 데이터를 프로젝트에 로드 합니다. �
 **모두 선택**  
 나열 된 모든 데이터베이스를 선택 합니다.  
   
-**지우기**  
+**해제**  
 메타 데이터가 누락 된 모든 데이터베이스의 확인란을 선택 취소 합니다. 메타 데이터가 로드 된 경우에는이 확인란의 선택을 취소할 수 없습니다.  
   
-**Save**  
+**저장**  
 메타 데이터가 누락 된 선택한 데이터베이스에 대 한 메타 데이터를 로드 하 여 프로젝트를 저장 합니다.  
   
 **취소**  

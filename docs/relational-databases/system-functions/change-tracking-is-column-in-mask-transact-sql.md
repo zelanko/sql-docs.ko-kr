@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a6f7e9d8d9ab99ebe4a7c5749033eacf85b8feb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042996"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK(Transact-SQL)
@@ -53,7 +53,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>반환 값  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK는 다음 값을 반환합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |0|지정 된 열이 *change_columns* 목록에 없습니다.|  
 |1|지정 된 열이 *change_columns* 목록에 있습니다.|  
@@ -62,8 +62,7 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
  CHANGE_TRACKING_IS_COLUMN_IN_MASK는 *column_id* 값의 유효성을 검사 하거나 *column_id* 를 가져온 테이블에서 *change_columns* 매개 변수를 가져왔는지 검사를 수행 하지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. 함수 `COLUMNPROPERTY` 는 `Salary` 열의 열 ID를 반환 합니다. 
-  `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
+ 다음 예에서는 `Salary` 테이블의 `Employees` 열이 업데이트되었는지 여부를 확인합니다. 함수 `COLUMNPROPERTY` 는 `Salary` 열의 열 ID를 반환 합니다. `@change_columns` 지역 변수는 CHANGETABLE을 데이터 원본으로 사용하여 쿼리의 결과에 설정되어야 합니다.  
   
 ```sql  
 SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK  
@@ -72,8 +71,8 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [CHANGETABLE&#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
+ [변경 내용 추적 함수 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [CHANGETABLE &#40;Transact-sql&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   
   

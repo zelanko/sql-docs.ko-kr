@@ -14,10 +14,10 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006638"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>변환, 로드 및 마이그레이션 (AccessToSQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68006638"
 페이지의 **선택한 개체에 대 한 데이터 마이그레이션** 섹션에도 **보고서** 단추가 포함 됩니다. 이 단추를 클릭 하 여 데이터 마이그레이션 보고서를 볼 수 있습니다.  
   
 ## <a name="options"></a>옵션  
-**Report**  
+**보고서**  
 연결 된 변환 또는 마이그레이션 보고서를 표시 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

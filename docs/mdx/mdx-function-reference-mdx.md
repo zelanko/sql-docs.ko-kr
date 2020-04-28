@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003505"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 함수 참조(MDX)
@@ -76,7 +76,7 @@ ms.locfileid: "68003505"
 |[OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)|지정한 수준 또는 지정한 멤버의 하위 항목 중 첫 번째 형제를 반환합니다.|  
 |[ParallelPeriod &#40;MDX&#41;](../mdx/parallelperiod-mdx.md)|지정한 멤버와 상대적 위치가 같은 멤버를 이전 기간에서 반환합니다.|  
 |[부모 &#40;MDX&#41;](../mdx/parent-mdx.md)|멤버의 부모 항목을 반환합니다.|  
-|[PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)|지정한 멤버를 포함하고 있는 수준에서 이전 멤버를 반환합니다.|  
+|[PrevMember&#40;MDX&#41;](../mdx/prevmember-mdx.md)|지정한 멤버를 포함하고 있는 수준에서 이전 멤버를 반환합니다.|  
 |[StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)|MDX 형식 문자열에 의해 지정 된 멤버를 반환 합니다.|  
 |[UnknownMember &#40;MDX&#41;](../mdx/unknownmember-mdx.md)|수준 또는 멤버와 연결된 알 수 없는 멤버를 반환합니다.|  
 |[&#40;MDX&#41;의 유효한 측정값](../mdx/validmeasure-mdx.md)|적용할 수 없는 차원을 최상위 수준에 강제로 적용하여 가상 큐브에서 유효한 측정값을 반환합니다.|  
@@ -85,15 +85,15 @@ ms.locfileid: "68003505"
   
 |함수|Description|  
 |--------------|-----------------|  
-|[MDX &#40;집계&#41;](../mdx/aggregate-mdx.md)|측정값 또는 지정한 집합의 튜플에 대해 선택적으로 지정한 숫자 식을 집계하여 계산한 스칼라 값을 반환합니다.|  
+|[집계&#40;MDX&#41;](../mdx/aggregate-mdx.md)|측정값 또는 지정한 집합의 튜플에 대해 선택적으로 지정한 숫자 식을 집계하여 계산한 스칼라 값을 반환합니다.|  
 |[평균 &#40;MDX&#41;](../mdx/avg-mdx.md)|지정한 집합에 대해 계산된 측정값의 평균값 또는 숫자 식(옵션)의 평균값을 반환합니다.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|지정한 쿼리 컨텍스트에 대한 큐브의 현재 계산 패스를 반환합니다.|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
+|[CalculationCurrentPass&#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|지정한 쿼리 컨텍스트에 대한 큐브의 현재 계산 패스를 반환합니다.|  
+|[CalculationPassValue&#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|빈 셀 값을 숫자 또는 문자열에 결합하고 결합된 값을 반환합니다.|  
 |[&#40;MDX&#41;상관 관계](../mdx/correlation-mdx.md)|집합에 대해 계산된 두 변량의 상관 계수를 반환합니다.|  
 |[MDX&#41; &#40;&#40;차원 수&#41;](../mdx/count-dimension-mdx.md)|큐브의 차원 수를 반환합니다.|  
 |[MDX&#41; &#40;&#40;계층 수준 수&#41;](../mdx/count-hierarchy-levels-mdx.md)|차원 또는 계층의 수준 수를 반환합니다.|  
-|[MDX&#41; &#40;&#40;집합 수&#41;](../mdx/count-set-mdx.md)|집합의 셀 개수를 반환합니다.|  
+|[개수&#40;Set&#41;&#40;MDX&#41;](../mdx/count-set-mdx.md)|집합의 셀 개수를 반환합니다.|  
 |[MDX&#41; &#40;&#40;수&#41;](../mdx/count-tuple-mdx.md)|튜플의 차원 수를 반환합니다.|  
 |[공 분산 &#40;MDX&#41;](../mdx/covariance-mdx.md)|편향 모집단 수식을 사용하여 집합에 대해 계산된 두 변량의 모집단 공변성(covariance)을 반환합니다.|  
 |[&#40;MDX&#41;](../mdx/covariancen-mdx.md)|비편향 모집단 수식을 사용하여 집합에 대해 계산된 두 변량의 예제 공변성(covariance)을 반환합니다.|  
@@ -128,7 +128,7 @@ ms.locfileid: "68003505"
   
 |함수|Description|  
 |--------------|-----------------|  
-|[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|계산 멤버를 지정한 집합에 추가하여 생성된 집합을 반환합니다.|  
+|[AddCalculatedMembers&#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|계산 멤버를 지정한 집합에 추가하여 생성된 집합을 반환합니다.|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|계산 멤버를 비롯하여 지정한 차원, 계층 또는 수준의 모든 멤버가 포함된 집합을 반환합니다.|  
 |[상위 &#40;MDX&#41;](../mdx/ancestors-mdx.md)|지정한 수준 또는 거리에서 멤버의 모든 상위 항목 집합을 반환합니다.|  
 |[상위 항목 &#40;MDX&#41;](../mdx/ascendants-mdx.md)|멤버 자체를 포함하여 지정한 멤버의 상위 항목 집합을 반환합니다.|  
@@ -136,12 +136,12 @@ ms.locfileid: "68003505"
 |[BottomCount &#40;MDX&#41;](../mdx/bottomcount-mdx.md)|집합을 오름차순으로 정렬하고 가장 낮은 값을 갖는 튜플을 지정된 수만큼 반환합니다.|  
 |[BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)|집합을 오름차순으로 정렬하고 누적 합계가 지정한 백분율 이하인 하위 값 튜플 집합을 반환합니다.|  
 |[BottomSum &#40;MDX&#41;](../mdx/bottomsum-mdx.md)|집합을 오름차순으로 정렬하고 누적 합계가 지정한 백분율 이하인 하위 값 튜플 집합을 반환합니다.|  
-|[MDX &#40;자식&#41;](../mdx/children-mdx.md)|지정한 멤버의 자식을 반환합니다.|  
+|[Children&#40;MDX&#41;](../mdx/children-mdx.md)|지정한 멤버의 자식을 반환합니다.|  
 |[Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)|하나 이상의 집합에 대한 교차곱을 반환합니다.|  
 |[CurrentOrdinal &#40;MDX&#41;](../mdx/currentordinal-mdx.md)|반복하는 동안 집합 내의 현재 반복 번호를 반환합니다.|  
 |[MDX &#40;하위 항목&#41;](../mdx/descendants-mdx.md)|지정한 수준 또는 거리에서 멤버의 하위 항목 집합을 반환합니다. 다른 수준의 하위 항목은 포함하거나 제외할 수 있습니다.|  
 |[고유 &#40;MDX&#41;](../mdx/distinct-mdx.md)|지정한 집합에서 중복 튜플을 제거하고 집합을 반환합니다.|  
-|[DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|집합의 멤버를 집합에서 가장 낮게 표시되는 수준보다 한 수준 아래로 또는 집합에서 표시되는 멤버의 지정된 수준보다 한 수준 아래로 드릴다운합니다.|  
+|[DrilldownLevel&#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)|집합의 멤버를 집합에서 가장 낮게 표시되는 수준보다 한 수준 아래로 또는 집합에서 표시되는 멤버의 지정된 수준보다 한 수준 아래로 드릴다운합니다.|  
 |[DrilldownLevelBottom &#40;MDX&#41;](../mdx/drilldownlevelbottom-mdx.md)|집합의 가장 아래쪽 구성원을 지정한 수준에서 한 수준 아래로 드릴다운합니다.|  
 |[DrilldownLevelTop &#40;MDX&#41;](../mdx/drilldownleveltop-mdx.md)|집합의 최상위 구성원을 지정한 수준에서 한 수준 아래로 드릴다운합니다.|  
 |[DrilldownMember &#40;MDX&#41;](../mdx/drilldownmember-mdx.md)|지정된 집합의 멤버 중 두 번째 지정한 집합에 나타나는 멤버를 드릴다운합니다. 또는 튜플 집합을 드릴다운합니다.|  
@@ -152,10 +152,10 @@ ms.locfileid: "68003505"
 |[제외 &#40;MDX&#41;](../mdx/except-mdx-function.md)|두 집합의 차집합을 찾습니다. 중복 요소를 포함시킬 수도 있습니다.|  
 |[MDX &#40;있습니다&#41;](../mdx/exists-mdx.md)|하나 이상의 다른 집합의 여러 튜플에 존재하는 한 집합의 멤버 집합을 반환합니다.|  
 |[&#40;MDX&#41;추출](../mdx/extract-mdx.md)|추출된 차원 요소에서 튜플 집합을 반환합니다.|  
-|[MDX &#40;필터&#41;](../mdx/filter-mdx.md)|검색 조건을 기준으로 지정한 집합을 필터링한 결과 집합을 반환합니다.|  
+|[필터&#40;MDX&#41;](../mdx/filter-mdx.md)|검색 조건을 기준으로 지정한 집합을 필터링한 결과 집합을 반환합니다.|  
 |[&#40;MDX&#41;생성](../mdx/generate-mdx.md)|한 집합을 다른 집합의 각 멤버에 적용하고 결과 집합을 합집합으로 결합시킵니다. 또는 집합에 대해 문자열 식을 계산하여 생성된 연결 문자열을 반환합니다.|  
 |[&#40;MDX&#41;](../mdx/head-mdx.md)|집합에서 중복된 항목을 포함하여 처음 나오는 지정한 수만큼의 요소를 반환합니다.|  
-|[Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)|집합의 멤버를 계층 구조 형태로 정렬합니다.|  
+|[Hierarchize&#40;MDX&#41;](../mdx/hierarchize-mdx.md)|집합의 멤버를 계층 구조 형태로 정렬합니다.|  
 |[&#40;MDX&#41;교차](../mdx/intersect-mdx.md)|두 입력 집합의 교집합을 반환합니다. 중복 요소를 포함시킬 수도 있습니다.|  
 |[LastPeriods &#40;MDX&#41;](../mdx/lastperiods-mdx.md)|지정한 멤버까지 포함하는 멤버 집합을 반환합니다.|  
 |[&#41; &#40;MDX를 설정 &#40;멤버&#41;](../mdx/members-set-mdx.md)|차원, 수준 또는 계층의 멤버 집합을 반환합니다.|  
@@ -163,7 +163,7 @@ ms.locfileid: "68003505"
 |[NameToSet &#40;MDX&#41;](../mdx/nametoset-mdx.md)|MDX 형식 문자열에 의해 지정 된 멤버를 포함 하는 집합을 반환 합니다.|  
 |[NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)|하나 이상의 집합에 대한 교차곱을 한 개의 집합으로 반환합니다. 빈 튜플과 관련 팩트 테이블 데이터가 없는 튜플은 제외됩니다.|  
 |[MDX &#40;순서&#41;](../mdx/order-mdx.md)|지정한 집합의 멤버를 정렬합니다. 계층을 유지하거나 바꿀 수도 있습니다.|  
-|[PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)|지정한 멤버와 동일한 수준의 형제 멤버 집합을 반환합니다. 이 집합은 첫 번째 형제 멤버부터 시작하여 지정된 멤버에서 끝나며 Time 차원의 지정된 수준에 따라 제한됩니다.|  
+|[PeriodsToDate&#40;MDX&#41;](../mdx/periodstodate-mdx.md)|지정한 멤버와 동일한 수준의 형제 멤버 집합을 반환합니다. 이 집합은 첫 번째 형제 멤버부터 시작하여 지정된 멤버에서 끝나며 Time 차원의 지정된 수준에 따라 제한됩니다.|  
 |[Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)|지정 된 멤버와 동일한 수준의 형제 멤버 집합을 반환 합니다 .이 집합은 첫 번째 형제부터 시작 하 여 지정 된 멤버로 끝나는 시간 차원의 *Quarter* 수준에 따라 제한 됩니다.|  
 |[MDX &#40;MDX&#41;](../mdx/siblings-mdx.md)|멤버 자체를 포함하여 지정한 멤버의 형제 항목을 반환합니다.|  
 |[StripCalculatedMembers &#40;MDX&#41;](../mdx/stripcalculatedmembers-mdx.md)|지정한 집합에서 계산 멤버를 제거하여 생성된 집합을 반환합니다.|  
@@ -184,14 +184,14 @@ ms.locfileid: "68003505"
   
 |함수|Description|  
 |--------------|-----------------|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
+|[CalculationPassValue&#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|빈 셀 값을 숫자 또는 문자열에 결합하고 결합된 값을 반환합니다.|  
 |[&#40;MDX&#41;생성](../mdx/generate-mdx.md)|한 집합을 다른 집합의 각 멤버에 적용하고 결과 집합을 합집합으로 결합시킵니다. 또는 집합에 대해 문자열 식을 계산하여 생성된 연결 문자열을 반환합니다.|  
 |[IIf &#40;MDX&#41;](../mdx/iif-mdx.md)|논리 테스트로 확인된 두 값 중 하나를 반환합니다.|  
 |[LookupCube &#40;MDX&#41;](../mdx/lookupcube-mdx.md)|같은 데이터베이스에서 지정된 또 다른 큐브에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[MemberToStr &#40;MDX&#41;](../mdx/membertostr-mdx.md)|지정 된 멤버에 해당 하는 MDX 형식 문자열을 반환 합니다.|  
 |[이름 &#40;MDX&#41;](../mdx/name-mdx.md)|차원, 계층, 수준 또는 멤버의 이름을 반환합니다.|  
-|[MDX &#40;속성&#41;](../mdx/properties-mdx.md)|멤버 속성 값을 포함하는 문자열 또는 강력한 형식의 값을 반환합니다.|  
+|[속성&#40;MDX&#41;](../mdx/properties-mdx.md)|멤버 속성 값을 포함하는 문자열 또는 강력한 형식의 값을 반환합니다.|  
 |[SetToStr &#40;MDX&#41;](../mdx/settostr-mdx.md)|지정된 집합에 해당하는 MDX 형식 문자열을 반환합니다.|  
 |[&#40;MDX&#41;](../mdx/tupletostr-mdx.md)|지정 된 튜플에 해당 하는 MDX 형식 문자열을 반환 합니다.|  
 |[UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)|지정한 차원, 계층, 수준 또는 멤버의 고유 이름을 반환합니다.|  
@@ -201,7 +201,7 @@ ms.locfileid: "68003505"
   
 |함수|Description|  
 |--------------|-----------------|  
-|[이 &#40;MDX&#41;](../mdx/this-mdx.md)|현재 하위 큐브를 반환합니다.|  
+|[This&#40;MDX&#41;](../mdx/this-mdx.md)|현재 하위 큐브를 반환합니다.|  
 |[&#40;MDX&#41;남겨 둡니다.](../mdx/leaves-mdx.md)|지정한 차원, 멤버 또는 튜플의 리프 멤버 집합을 반환합니다.|  
   
 ## <a name="tuple-functions"></a>튜플 함수  
@@ -220,6 +220,6 @@ ms.locfileid: "68003505"
 |[MDX &#40;오류&#41;](../mdx/error-mdx.md)|오류를 발생시킵니다. 지정된 오류 메시지를 제공할 수도 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68025788"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events(Transact-SQL)
@@ -36,10 +36,10 @@ ms.locfileid: "68025788"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|트리거 또는 이벤트 알림의 ID입니다. 이 값은 **형식과**함께 행을 고유 하 게 식별 합니다.|  
 |**type**|**int**|트리거를 발생시키는 이벤트입니다.|  
-|**type_desc**|**nvarchar (60)**|트리거를 실행시키는 이벤트에 대한 설명입니다.|  
+|**type_desc**|**nvarchar(60)**|트리거를 실행시키는 이벤트에 대한 설명입니다.|  
 |**is_trigger_event**|**bit**|1 = 트리거 이벤트<br /><br /> 0 = 알림 이벤트|  
 |**event_group_type**|**int**|트리거나 이벤트 알림이 생성되는 이벤트 그룹 또는 Null(이벤트 그룹에 생성되지 않은 경우)입니다.|  
-|**event_group_type_desc**|**nvarchar (60)**|트리거나 이벤트 알림이 생성되는 이벤트 그룹에 대한 설명 또는 Null(이벤트 그룹에 생성되지 않은 경우)입니다.|  
+|**event_group_type_desc**|**nvarchar(60)**|트리거나 이벤트 알림이 생성되는 이벤트 그룹에 대한 설명 또는 Null(이벤트 그룹에 생성되지 않은 경우)입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

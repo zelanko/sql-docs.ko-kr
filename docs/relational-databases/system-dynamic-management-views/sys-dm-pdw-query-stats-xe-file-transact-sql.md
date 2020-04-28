@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6e1224db9ce74d214320231419301b1fbc1b84cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044515"
 ---
 # <a name="sysdm_pdw_query_stats_xe_file-transact-sql"></a>sys. dm_pdw_query_stats_xe_file (Transact-sql)
@@ -26,7 +26,7 @@ ms.locfileid: "68044515"
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|이벤트|**nvarchar (60)**|이 보기의 키입니다.||  
+|event|**nvarchar(60)**|이 보기의 키입니다.||  
 |데이터|**xml**|||  
 |pdw_node_id|**int**|이 Xevent 인스턴스가 실행 되는 노드입니다.||  
   

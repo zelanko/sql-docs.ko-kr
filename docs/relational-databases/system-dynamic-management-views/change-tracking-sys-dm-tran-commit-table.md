@@ -21,16 +21,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4bd5b497f1d96f813570282f785fe0cbfe73265d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017933"
 ---
 # <a name="change-tracking---sysdm_tran_commit_table"></a>변경 내용 추적 dm_tran_commit_table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용 추적에서 추적된 테이블에 대해 커밋한 각 트랜잭션을 한 행으로 표시합니다. 지원 가능성을 위해 제공 되는 sys. dm_tran_commit_table 관리 뷰는 sys. syscommittab 시스템 테이블에서 추적 저장소를 변경 하는 트랜잭션 관련 정보를 제공 합니다. sys.syscommittab 테이블에서는 데이터베이스별 트랜잭션 ID를 트랜잭션의 커밋 LSN(로그 시퀀스 번호) 및 커밋 타임스탬프에 지속적으로 매핑하는 효과적인 방법을 제공합니다. sys.syscommittab 테이블에 저장되고 이 관리 뷰에 표시되는 데이터는 변경 내용 추적을 구성할 때 지정한 보존 기간에 따라 정리될 수 있습니다.  
   
 > [!NOTE]  
@@ -46,7 +45,7 @@ ms.locfileid: "68017933"
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)  
   
   

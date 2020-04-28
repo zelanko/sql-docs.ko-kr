@@ -18,10 +18,10 @@ ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001806"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory(Transact-SQL)
@@ -36,12 +36,12 @@ ms.locfileid: "68001806"
 |**mark_name**|**nvarchar(128)**|표시된 트랜잭션에 대한 사용자 제공 이름입니다.|  
 |**한**|**nvarchar(255)**|표시된 트랜잭션의 사용자 제공 설명입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|표시된 트랜잭션을 실행하는 데이터베이스 사용자 이름입니다. NULL일 수 있습니다.|  
-|**lsn**|**숫자 (25, 0)**|표시되는 트랜잭션 레코드의 로그 시퀀스 번호입니다.|  
+|**lsn**|**numeric(25,0)**|표시되는 트랜잭션 레코드의 로그 시퀀스 번호입니다.|  
 |**mark_time**|**datetime**|표시된 트랜잭션의 커밋 시간입니다(현지 시간).|  
   
 ## <a name="see-also"></a>참고 항목  
  [표시 된 트랜잭션 &#40;SQL Server Management Studio 데이터베이스를 복원&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
- [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
+ [표시 된 트랜잭션을 사용 하 여 전체 복구 모델 &#40;관련 데이터베이스를 일관 되 게 복구&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

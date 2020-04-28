@@ -21,10 +21,10 @@ ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e08aa031af0bd8c9d5c5ad012d11c534281f92f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017910"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>데이터베이스 미러링-sys. dm_db_mirroring_auto_page_repair
@@ -32,7 +32,7 @@ ms.locfileid: "68017910"
 
   서버 인스턴스의 미러된 데이터베이스에 대한 각 자동 페이지 복구 시도당 하나의 행을 반환합니다. 이 뷰에는 미러된 해당 데이터베이스의 최신 자동 페이지 복구 시도에 대한 행이 포함됩니다(데이터베이스당 최대 100개 행). 데이터베이스가 최대값에 도달하는 즉시 다음 자동 페이지 복구 시도에 대한 행이 기존 항목 중 하나를 대체합니다. 다음 표에서는 다양한 열의 의미를 정의합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|이 행이 해당하는 데이터베이스의 ID입니다.|  
 |**file_id**|**int**|해당 페이지가 있는 파일의 ID입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68017910"
   
 ## <a name="see-also"></a>참고 항목  
  [자동 페이지 복구 &#40;가용성 그룹: 데이터베이스 미러링&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Transact-sql&#41;suspect_pages &#40;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)  
   

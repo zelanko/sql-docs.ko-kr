@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005899"
 ---
 # <a name="generate-mdx"></a>Generate(MDX)
@@ -41,7 +41,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  유효한 문자열 식으로서, 일반적으로 지정된 집합에 있는 각 튜플의 현재 멤버 이름(CurrentMember.Name)입니다.  
   
- *Delimiter*  
+ *구분 기호*  
  문자열 식으로 표현된 유효한 구분 기호입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -104,7 +104,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>문자열  
  다음 예에서는 **생성** 을 사용 하 여 문자열을 반환 하는 방법을 보여 줍니다.  
   
 ```  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 >  이러한 형태의 **생성** 함수는 계산을 디버깅할 때 유용할 수 있습니다 .이는 집합에 있는 모든 멤버의 이름을 표시 하는 문자열을 반환할 수 있기 때문입니다. 이는 [Settostr &#40;MDX&#41;](../mdx/settostr-mdx.md) 함수가 반환 하는 집합의 엄격한 MDX 표현 보다 읽기 쉬울 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 279492503ba8ce31e3c5d4027d8fd184c4a81587
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68045964"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied(Transact-SQL)
@@ -43,7 +43,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="arguments"></a>인수  
 `[ @backup_file_name = ] 'backup_file_name'`백업 파일의 이름입니다. *backup_file_name* 은 **nvarchar (128)** 입니다.  
   
-`[ @database_name = ] 'database_name'`데이터베이스의 이름입니다. *database_name* 는 **sysname**입니다.  
+`[ @database_name = ] 'database_name'`데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
   
 `[ @result = ] _result_ OUTPUT`트랜잭션 로그를 데이터베이스에 적용할 수 있는지 여부를 나타냅니다. *result* 는 **bit**입니다.  
   

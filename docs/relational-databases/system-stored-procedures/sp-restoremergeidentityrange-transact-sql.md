@@ -16,10 +16,10 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041050"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange(Transact-SQL)
@@ -56,6 +56,6 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_addmergearticle &#40;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [Transact-sql&#41;sp_changemergearticle &#40;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
+ [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
   

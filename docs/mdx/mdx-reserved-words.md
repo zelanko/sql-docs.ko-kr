@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68003462"
 ---
 # <a name="mdx-reserved-words"></a>MDX 예약어
@@ -40,7 +40,7 @@ ms.locfileid: "68003462"
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|최소|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|오류|이름|합계|  
+|BEFORE_AND_AFTER|오류|NAME|합계|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -56,13 +56,13 @@ ms.locfileid: "68003462"
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
-|CLEAR|HIDDEN|통과|USE|  
+|CLEAR|HIDDEN|PASS|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
 |COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|개수|INDEX|속성|값|  
+|개수|INDEX|PROPERTY|값|  
 |COUSIN|INTERSECT|QTD|VAR|  
 |COVARIANCE|IS|RANK|분산|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
@@ -79,6 +79,6 @@ ms.locfileid: "68003462"
   
 ## <a name="see-also"></a>참고 항목  
  [MDX 구문 &#40;예약 된 키워드&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Mdx 언어 참조 &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

@@ -12,10 +12,10 @@ ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020883"
 ---
 # <a name="troubleshooting-sybasetosql"></a>문제 해결(SybaseToSQL)
@@ -23,7 +23,7 @@ ms.locfileid: "68020883"
   
 수정할 수 오류는 다음과 관련이 있을 수 있습니다.  
   
-1.  함수  
+1.  기능  
   
 2.  절차  
   

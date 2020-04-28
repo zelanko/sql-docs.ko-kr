@@ -21,10 +21,10 @@ ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020012"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins(Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "68020012"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**s**|**varbinary (85)**|보안 ID입니다.|  
-|**업무**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sid**|**varbinary(85)**|보안 ID입니다.|  
+|**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|로그인이 추가된 날짜입니다.|  
 |**updatedate**|**datetime**|로그인이 업데이트된 날짜입니다.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -51,7 +51,7 @@ ms.locfileid: "68020012"
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|사용자의 로그인 이름입니다.|  
 |**dbname**|**sysname**|연결 시 사용자의 기본 데이터베이스 이름입니다.|  
-|**암호**|**nvarchar(128)**|NULL을 반환합니다.|  
+|**password**|**nvarchar(128)**|NULL을 반환합니다.|  
 |**언어도**|**sysname**|사용자의 기본 언어입니다.|  
 |**denylogin**|**int**|1 = 로그인이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 또는 그룹이며 액세스가 거부되었습니다.|  
 |**hasaccess**|**int**|1 = 로그인에 대한 서버 액세스가 허용되었습니다.|  
@@ -70,6 +70,6 @@ ms.locfileid: "68020012"
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

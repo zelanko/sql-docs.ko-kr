@@ -19,10 +19,10 @@ ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010535"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set(Transact-SQL)
@@ -60,8 +60,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
  이 프로시저를 실행 하려면 **dc_operator** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="example"></a>예제  
- 
-  `Simple Collection Set`이라는 컬렉션 집합의 요청 시 업로드를 수행합니다.  
+ `Simple Collection Set`이라는 컬렉션 집합의 요청 시 업로드를 수행합니다.  
   
 ```  
 USE msdb;  
@@ -70,7 +69,7 @@ EXEC sp_syscollector_upload_collection_set @name = 'Simple Collection Set' ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [데이터 수집](../../relational-databases/data-collection/data-collection.md)  
   
   

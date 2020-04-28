@@ -18,10 +18,10 @@ ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017726"
 ---
 # <a name="sysmail_configure_sp-transact-sql"></a>sysmail_configure_sp(Transact-SQL)
@@ -63,7 +63,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 |-|-|-|  
 |매개 변수 이름|Description|기본값|  
 |*AccountRetryAttempts*|외부 메일 프로세스에서 지정된 프로필의 각 계정을 사용하여 전자 메일 메시지를 보내려고 시도하는 횟수입니다.|**1**|  
-|*AccountRetryDelay*|외부 메일 프로세스가 메시지 보내기를 시도하는 사이에 대기하는 시간(초)입니다.|**5,000**|  
+|*AccountRetryDelay*|외부 메일 프로세스가 메시지 보내기를 시도하는 사이에 대기하는 시간(초)입니다.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|외부 메일 프로세스가 활성 상태로 유지되는 최소 시간(초)입니다. 데이터베이스 메일에서 많은 메시지를 보내려면 이 값을 늘려 데이터베이스 메일을 활성 상태로 유지하고 자주 시작하고 중지하는 오버헤드를 방지합니다.|**600**|  
 |*DefaultAttachmentEncoding*|전자 메일 첨부 파일의 기본 인코딩입니다.|MIME|  
 |*MaxFileSize*|첨부 파일의 최대 크기(바이트)입니다.|**100만**|  

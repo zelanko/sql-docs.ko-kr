@@ -22,10 +22,10 @@ ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006651"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server에 연결 (AccessToSQL)
@@ -97,12 +97,12 @@ Access 데이터베이스 개체를 구문으로 [!INCLUDE[ssNoVersion](../../in
 ||||||||
 |-|-|-|-|-|-|-|
 |**프로젝트 형식 Vs 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 (버전: 4.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008 (버전: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012 (버전: 11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 (버전: 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016 (버전: 13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005|yes|yes|yes|yes|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008||yes|yes|yes|yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012|||yes|yes|yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||yes|yes||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||yes||
-|SQL Azure||||||yes|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||예|예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||||예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||예||
+|SQL Azure||||||예|
   
 > [!IMPORTANT]  
 > 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만에 연결 된 SQL Server 버전에 따라 수행 되지 않습니다. SQL Server 2005 프로젝트의 경우 더 높은 버전의 SQL Server (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)에 연결 된 경우에도 SQL Server 2005 마다 변환이 수행 됩니다.  

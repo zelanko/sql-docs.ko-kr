@@ -19,10 +19,10 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010555"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
@@ -101,8 +101,7 @@ sp_syscollector_update_collection_set
   
 -   지속적으로 실행되는 컬렉션 프로세스  
   
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 경고 이벤트  
   
  2 - 수준 1 로깅 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 세부 이벤트 정보  
   
@@ -180,8 +179,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [데이터 수집](../../relational-databases/data-collection/data-collection.md)   
  [Transact-sql&#41;syscollector_collection_sets &#40;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [&#40;Transact-sql&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   

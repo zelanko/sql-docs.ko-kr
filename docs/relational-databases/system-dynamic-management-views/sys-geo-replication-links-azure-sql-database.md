@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 6e768f447cd53321861eae91bbe40e2e34ad12f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043165"
 ---
 # <a name="sysgeo_replication_links-azure-sql-database"></a>sys.geo_replication_links(Azure SQL Database)
@@ -43,7 +43,7 @@ ms.locfileid: "68043165"
 |역할(role)|**tinyint**|지역에서 복제 역할, 다음 중 하나입니다.<br /><br /> 0 = 기본 Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.<br /><br /> 1 = 보조  Database_id는 지역에서 복제 파트너 관계에서 주 데이터베이스를 참조 합니다.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|보조 유형이 며 다음 중 하나입니다.<br /><br /> 0 = 아니요 장애 조치 (failover) 될 때까지 보조 데이터베이스에 액세스할 수 없습니다.<br /><br /> 1 = 읽기 전용입니다. 보조 데이터베이스는 ApplicationIntent = ReadOnly 인 클라이언트 연결에만 액세스할 수 있습니다.<br /><br /> 2  =  모두. 보조 데이터베이스는 모든 클라이언트 연결에 액세스할 수 있습니다.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|예<br /><br /> 모두<br /><br /> 읽기 전용|  
+|secondary_allow_connections _desc|**nvarchar(256)**|아니요<br /><br /> 모두<br /><br /> 읽기 전용|  
   
 ## <a name="permissions"></a>사용 권한
 

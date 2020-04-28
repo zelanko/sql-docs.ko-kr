@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68036588"
 ---
 # <a name="toppercent-mdx"></a>TopPercent(MDX)
@@ -31,7 +31,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
- *나타낸*  
+ *백분율*  
  반환할 튜플의 백분율을 지정하는 유효한 숫자 식입니다.  
   
 > [!IMPORTANT]  
@@ -69,9 +69,9 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|토론토|$3508904.84|  
-|런던|$1521530.09|  
-|시애틀|$1209418.16|  
+|Toronto|$3508904.84|  
+|London|$1521530.09|  
+|Seattle|$1209418.16|  
 |파리|$1170425.18|  
   
  원래 데이터 집합은 다음 쿼리로 얻을 수 있으며 588개의 행을 반환합니다.  
@@ -127,6 +127,6 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157444.56|$163112.57|($5668.01)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Mdx 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

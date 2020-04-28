@@ -18,10 +18,10 @@ ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017705"
 ---
 # <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory(Transact-SQL)

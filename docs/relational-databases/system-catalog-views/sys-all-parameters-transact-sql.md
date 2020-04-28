@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 63231301109f83243b431244028fddffb8cc6fe7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68001329"
 ---
 # <a name="sysall_parameters-transact-sql"></a>sys.all_parameters(Transact-SQL)
@@ -41,11 +41,10 @@ ms.locfileid: "68001329"
 |**user_type_id**|**int**|매개 변수의 유형에 대한 사용자 정의 ID입니다.<br /><br /> 형식의 이름을 반환 하려면이 열에 대 한 [sys. types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 카탈로그 뷰에 조인 합니다.|  
 |**max_length**|**smallint**|매개 변수의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.|  
 |**전체 자릿수**|**tinyint**|매개 변수가 숫자 기반일 경우 매개 변수의 전체 자릿수이고, 그렇지 않으면 0입니다.|  
-|**배율을**|**tinyint**|매개 변수가 숫자 기반일 경우 매개 변수의 소수 자릿수이고, 그렇지 않으면 0입니다.|  
+|**scale**|**tinyint**|매개 변수가 숫자 기반일 경우 매개 변수의 소수 자릿수이고, 그렇지 않으면 0입니다.|  
 |**is_output**|**bit**|1 = 출력 매개 변수(또는 반환 값)입니다. 아닐 경우는 0입니다.|  
 |**is_cursor_ref**|**bit**|1 = 매개 변수가 커서 참조 매개 변수입니다.|  
-|**has_default_value**|**bit**|1 = 매개 변수에 기본값이 있습니다.<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 카탈로그 뷰의 CLR 개체에 대한 기본값만 유지하므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 개체의 경우 이 열 값은 항상 0입니다. 개체에서 매개 변수의 기본값을 보려면 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열을 쿼리하거나 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 시스템 함수를 사용 합니다. **** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|**has_default_value**|**bit**|1 = 매개 변수에 기본값이 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 카탈로그 뷰의 CLR 개체에 대한 기본값만 유지하므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 개체의 경우 이 열 값은 항상 0입니다. 개체에서 매개 변수의 기본값을 보려면 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열을 쿼리하거나 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 시스템 함수를 사용 합니다. **definition** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
 |**is_xml_document**|**bit**|1 = 내용이 완전한 XML 문서입니다.<br /><br /> 0 = 내용이 문서 조각 이거나 열의 데이터 형식이 **xml**이 아닙니다.|  
 |**default_value**|**sql_variant**|**Has_default_value** 1 인 경우이 열의 값은 매개 변수의 기본값입니다. 그렇지 않으면 NULL입니다.|  
 |**xml_collection_id**|**int**|매개 변수 유효성 검사에 사용되는 XML 스키마 컬렉션의 ID입니다.<br /><br /> 매개 변수의 데이터 형식이 **xml** 이 고 xml이 입력 된 경우 0이 아닌 값입니다.<br /><br /> 0 = XML 스키마 컬렉션이 없거나 매개 변수가 XML이 아닙니다.|  
@@ -55,7 +54,7 @@ ms.locfileid: "68001329"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;개체 카탈로그 뷰](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys. Transact-sql&#41;&#40;매개 변수](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)   
  [system_parameters &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-system-parameters-transact-sql.md)  

@@ -18,10 +18,10 @@ ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017694"
 ---
 # <a name="msmerge_history-transact-sql"></a>MSmerge_history(Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68017694"
 |**agent_id**|**int**|병합 에이전트의 ID입니다.|  
 |**주석만**|**nvarchar(255)**|메시지 텍스트입니다.|  
 |**error_id**|**int**|[MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) 시스템 테이블에 있는 오류의 ID입니다.|  
-|**없으면**|**없으면**|이 테이블의 타임스탬프 열입니다.|  
+|**timestamp**|**timestamp**|이 테이블의 타임스탬프 열입니다.|  
 |**updatable_row**|**bit**|기록 행을 덮어쓸 수 있는 경우 **1** 로 설정 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

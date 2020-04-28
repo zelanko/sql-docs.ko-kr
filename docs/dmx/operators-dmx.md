@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008169"
 ---
 # <a name="operators-dmx"></a>연산자(DMX)
@@ -20,8 +20,7 @@ ms.locfileid: "68008169"
 
   DMX (데이터 마이닝 확장) 연산자를 사용 하 여의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]쿼리에서 산술, 비교, 연결 및 논리적 연산을 수행할 수 있습니다.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 연산자를 사용하여 다음 동작을 수행할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 연산자를 사용하여 다음 동작을 수행할 수 있습니다.  
   
 -   특정 조건을 만족하는 값 또는 개체를 검색합니다.  
   
@@ -29,7 +28,7 @@ ms.locfileid: "68008169"
   
  DMX에서는 아래 섹션에 설명된 것처럼 다양한 범주의 연산자를 사용합니다. 개별 연산자에 대 한 자세한 내용은 [데이터 마이닝 확장 &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)를 참조 하세요.  
   
-|연산자 범주|작업의 유형|  
+|연산자 범주|연산 유형|  
 |-----------------------|-----------------------|  
 |[산술 연산자 &#40;DMX&#41;](../dmx/operators-arithmetic.md)|더하기, 빼기, 곱하기 또는 나누기를 수행합니다.|  
 |[DMX&#41;&#40;비교 연산자](../dmx/operators-comparison.md)|값을 다른 값 또는 식과 비교합니다.|  

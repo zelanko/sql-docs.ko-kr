@@ -16,10 +16,10 @@ ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b73a3de04b90a91cb66d060c6559088a7d0e8855
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018352"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>스칼라 유형 카탈로그 뷰(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68018352"
 |[sys.assembly_types](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 뷰](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

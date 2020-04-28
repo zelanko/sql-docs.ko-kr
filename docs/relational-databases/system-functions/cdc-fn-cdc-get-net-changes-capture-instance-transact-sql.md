@@ -17,10 +17,10 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68043037"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc. fn_cdc_get_net_changes_&lt;capture_instance&gt; (transact-sql)
@@ -65,7 +65,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* :: = {all | all | all with mask | all with merge}  
  결과 집합에 반환되는 행과 메타데이터 열의 내용을 제어하는 옵션입니다. 다음 옵션 중 하나를 사용할 수 있습니다.  
   
- 모두  
+ all  
  행에 대 한 최종 변경의 LSN과 메타 데이터 열 __ $ start_lsn 및 \_ \_$operation에 행을 적용 하는 데 필요한 작업을 반환 합니다. 열 \_ \_$update _mask는 항상 NULL입니다.  
   
  all with mask  
@@ -78,11 +78,11 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binary (10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블의 업데이트 작업에서 두 행의 두 열을 수정 하면 변경 테이블에는 각각 동일한 __ $ start_lsnvalue 있는 4 개의 행이 포함 됩니다.|  
+|__$start_lsn|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블의 업데이트 작업에서 두 행의 두 열을 수정 하면 변경 테이블에는 각각 동일한 __ $ start_lsnvalue 있는 4 개의 행이 포함 됩니다.|  
 |__$operation|**int**|변경 데이터의 행을 대상 데이터 원본에 적용하는 데 필요한 DML(데이터 조작 언어) 작업을 식별합니다.<br /><br /> row_filter_option 매개 변수의 값이 all 또는 all with mask일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 4 = 업데이트<br /><br /> row_filter_option 매개 변수의 값이 all with merge일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제|  
-|__$update_mask|**varbinary (128)**|캡처 인스턴스에 대해 식별된 각 캡처된 열에 해당하는 비트가 있는 비트 마스크입니다. 이 값에는 __$operation이 1 또는 2인 경우 모두 1로 설정되는 정의된 비트가 있습니다. $Operation \_ \_= 3 또는 4 인 경우에는 변경 된 열에 해당 하는 비트만 1로 설정 됩니다.|  
+|__$update_mask|**varbinary(128)**|캡처 인스턴스에 대해 식별된 각 캡처된 열에 해당하는 비트가 있는 비트 마스크입니다. 이 값에는 __$operation이 1 또는 2인 경우 모두 1로 설정되는 정의된 비트가 있습니다. $Operation \_ \_= 3 또는 4 인 경우에는 변경 된 열에 해당 하는 비트만 1로 설정 됩니다.|  
 |*\<캡처된 원본 테이블 열>*|다름|함수에서 반환되는 나머지 열은 캡처 인스턴스 생성 시 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 반환됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  

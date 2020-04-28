@@ -21,10 +21,10 @@ ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68018127"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins(Transact-SQL)
@@ -39,13 +39,12 @@ ms.locfileid: "68018127"
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|원격 서버 ID입니다.|  
 |**remoteusername**|**sysname**|원격 서버상에서 사용자의 로그인 이름입니다.|  
-|**업무**|**smallint**|0을 반환합니다.|  
-|**s**|**varbinary (85)**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 보안 ID입니다.|  
+|**status**|**smallint**|0을 반환합니다.|  
+|**sid**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 보안 ID입니다.|  
 |**changedate**|**datetime**|원격 사용자가 추가된 날짜 및 시간입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;Transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Transact-sql&#41;&#40;호환성 뷰](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

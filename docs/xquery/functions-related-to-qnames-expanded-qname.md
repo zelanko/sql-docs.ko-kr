@@ -16,10 +16,10 @@ ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004587"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
@@ -45,8 +45,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   지정 된 *$paramLocal* 값이 Xs: NCName 형식의 올바른 어휘 형식이 아닌 경우 빈 시퀀스가 반환 되 고 동적 오류를 나타냅니다.  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이로 인해 확장 된 **QName ()** 함수를 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(...) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이로 인해 확장 된 **QName ()** 함수를 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(...) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
   
 -   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 는> <`e` 요소의 값을 **확장 된 qname ()** 함수에서 반환 된 qname과 비교 합니다.  
   
@@ -133,7 +132,7 @@ go
 ```  
   
 ### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. expanded-QName() 함수 사용 시 제한 사항 해결  
- **확장 된 QName** 함수는 XML 생성에 사용할 수 없습니다. 다음 예제에서는 이것을 보여 줍니다. 이 제한 사항을 해결하기 위해 이 예에서는 먼저 노드를 삽입한 다음 해당 노드를 수정합니다.  
+ **확장 된 QName** 함수는 XML 생성에 사용할 수 없습니다. 다음은 이에 대한 예입니다. 이 제한 사항을 해결하기 위해 이 예에서는 먼저 노드를 삽입한 다음 해당 노드를 수정합니다.  
   
 ```  
 -- if exists drop the table T  

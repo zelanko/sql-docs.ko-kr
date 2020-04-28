@@ -18,16 +18,15 @@ ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022328"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 사용자를 암호를 포함하는 포함된 데이터베이스 사용자로 변환합니다. 포함된 데이터베이스에서는 이 프로시저를 사용하여 데이터베이스가 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 종속성을 제거하십시오. **sp_migrate_user_to_contained** 는 원래 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 사용자를 구분 하므로 포함 된 데이터베이스에 대해 암호 및 기본 언어와 같은 설정을 별도로 관리할 수 있습니다. 포함 된 데이터베이스를의 다른 인스턴스로 이동 하기 전에 **sp_migrate_user_to_contained** 를 사용 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 하 여 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 로그인에 대 한 종속성을 제거할 수 있습니다.  
   
 > [!NOTE]
@@ -44,8 +43,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="arguments"></a>인수  
  [**@username =** ] **N '***사용자***'**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑된 현재 포함된 데이터베이스의 사용자 이름입니다. 값은 **sysname**이며 기본값은 **NULL**입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑된 현재 포함된 데이터베이스의 사용자 이름입니다. 값은 **sysname**이며 기본값은 **NULL**입니다.  
   
  [**@rename =** ] **N '***copy_login_name***'** | **n '***keep_name***'**  
  로그인을 기반으로 하는 데이터베이스 사용자의 사용자 이름이 로그인 이름과 다른 경우 *keep_name* 를 사용 하 여 마이그레이션 중에 데이터베이스 사용자 이름을 유지 합니다. *Copy_login_name* 를 사용 하 여 사용자 대신 로그인 이름을 사용 하 여 새 포함 된 데이터베이스 사용자를 만듭니다. 로그인 기반 데이터베이스 사용자의 사용자 이름이 로그인 이름과 같으면 두 옵션 모두 이름을 변경하지 않고 포함된 데이터베이스 사용자를 만듭니다.  
@@ -77,13 +75,12 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  **BUILTIN\Administrators** 로그인이 있는 경우 관리자는 **관리자 권한으로 실행** 옵션을 사용 하 여 응용 프로그램을 시작 하 여 연결할 수 있습니다.  
   
 ### <a name="permissions"></a>사용 권한  
- 
-  **CONTROL SERVER** 권한이 필요합니다.  
+ **CONTROL SERVER** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-migrating-a-single-user"></a>A. 단일 사용자 마이그레이션  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `Barry` 로그인을 암호를 포함하는 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예제에서는 사용자 이름을 변경 하지 않고 로그인을 사용으로 유지 합니다.  
+ 다음 예에서는 `Barry`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 암호를 포함하는 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예제에서는 사용자 이름을 변경 하지 않고 로그인을 사용으로 유지 합니다.  
   
 ```sql  
 sp_migrate_user_to_contained   
@@ -121,6 +118,6 @@ DEALLOCATE user_cursor ;
   
 ## <a name="see-also"></a>참고 항목  
  [부분적으로 포함 된 데이터베이스로 마이그레이션](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)   
- [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
+ [포함 된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
   
   

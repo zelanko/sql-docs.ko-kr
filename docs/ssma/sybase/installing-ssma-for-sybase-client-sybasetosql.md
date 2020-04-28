@@ -10,10 +10,10 @@ ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029024"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Sybase용 SSMA 클라이언트 설치(SybaseToSQL)
@@ -21,7 +21,7 @@ SSMA 클라이언트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] �
   
 이 항목에서는 SSMA 설치를 위한 필수 구성 요소 및 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>사전 요구 사항  
+## <a name="prerequisites"></a>전제 조건  
 SSMA는 ASE 11.9.2 이상 버전 및 모든 버전에서 작동 하도록 설계 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 SSMA를 설치 하기 전에 컴퓨터가 다음 요구 사항을 충족 하는지 확인 합니다.  
@@ -55,8 +55,7 @@ SSMA는 웹 다운로드입니다. 최신 버전을 다운로드 하려면 [SQL 
   
 4.  설치 유형 선택 페이지에서 **일반**을 클릭 합니다.  
   
-5.  
-  **설치**를 클릭합니다.  
+5.  **설치**를 클릭합니다.  
   
 > [!IMPORTANT]  
 > 1.  새 버전을 설치 하기 전에 먼저 Sybase 용 SSMA의 모든 이전 버전을 제거 하세요.  

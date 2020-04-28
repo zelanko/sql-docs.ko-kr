@@ -18,16 +18,15 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006122"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정 서버 역할의 목록을 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,11 +45,11 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
-|serveradmin|서버 관리자|  
+|serveradmin|서버 관리자입니다.|  
 |setupadmin|설치 관리자입니다.|  
 |processadmin|프로세스 관리자입니다.|  
 |diskadmin|디스크 관리자입니다.|  
-|dbcreator|데이터베이스 작성자|  
+|dbcreator|데이터베이스 작성자입니다.|  
 |bulkadmin|BULK INSERT 문을 실행할 수 있습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

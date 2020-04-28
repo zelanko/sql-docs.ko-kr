@@ -18,10 +18,10 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68030925"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole(Transact-SQL)
@@ -50,8 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 이름에는 문자, 기호 및 숫자 등을 포함하여 1자에서 128자까지의 문자를 사용할 수 있습니다. 데이터베이스 역할의 이름은 백슬래시 문자 (\\), NULL 또는 빈 문자열 (**' '**)을 포함할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 이름에는 문자, 기호 및 숫자 등을 포함하여 1자에서 128자까지의 문자를 사용할 수 있습니다. 데이터베이스 역할의 이름은 백슬래시 문자 (\\), NULL 또는 빈 문자열 (**' '**)을 포함할 수 없습니다.  
   
  데이터베이스 역할을 추가한 후 [sp_addrolemember &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 를 사용 하 여 역할에 보안 주체를 추가 합니다. GRANT, DENY 또는 REVOKE 문을 사용하여 데이터베이스 역할에 사용 권한을 부여하는 경우 데이터베이스 역할의 멤버는 사용 권한이 자신의 계정에 직접 적용되는 것처럼 사용 권한을 상속합니다.  
   
@@ -71,8 +70,8 @@ EXEC sp_addrole 'Managers';
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;역할 &#40;만들기](../../t-sql/statements/create-role-transact-sql.md)  
+ [CREATE ROLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

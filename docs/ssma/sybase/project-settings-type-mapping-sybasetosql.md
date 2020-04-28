@@ -10,10 +10,10 @@ ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028665"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>프로젝트 설정(형식 매핑)(SybaseToSQL)
@@ -26,7 +26,7 @@ ms.locfileid: "68028665"
 -   현재 프로젝트에 대 한 설정을 지정 하려면 **도구** 메뉴에서 **프로젝트 설정**을 선택한 다음 왼쪽 창의 맨 아래에 있는 **형식 매핑** 을 선택 합니다.  
   
 ## <a name="options"></a>옵션  
-**원본 형식**  
+**원본 유형**  
 매핑된 ASE 데이터 형식입니다.  
   
 **대상 유형**  
@@ -57,26 +57,26 @@ Sybase 형식 매핑의 기본 SSMA에 대해서는 다음 섹션의 표를 참�
 |**binary [8001\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
-|**문자 변경**|**varchar**|  
+|**char varying**|**varchar**|  
 |**문자 변경 [\*.. 8000]**|**varchar [\*]**|  
 |**문자 변경 [8001\*]**|**varchar(max)**|  
 |**char [\*.. 8000]**|**char [\*]**|  
 |**char [8001 ...\*]**|**varchar(max)**|  
-|**character**|**char**|  
-|**문자 변경**|**varchar**|  
+|**자의**|**char**|  
+|**character varying**|**varchar**|  
 |**문자 변경 [\*.. 8000]**|**varchar [\*]**|  
 |**문자 변경 [8001\*]**|**varchar(max)**|  
 |**character [\*.. 8000]**|**char [\*]**|  
 |**문자 [8001\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
-|**dec**|**진수가**|  
+|**dec**|**decimal**|  
 |**dec [\*.. \*]**|**decimal [\*]**|  
 |**dec [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
-|**진수가**|**진수가**|  
+|**decimal**|**decimal**|  
 |**decimal [\*.. \*]**|**decimal [\*]**|  
 |**decimal [\*.. \*][\*.. \*]**|**decimal [\*] [\*]**|  
-|**double precision**|**float [53]**|  
+|**배정밀도**|**float [53]**|  
 |**float**|**float [53]**|  
 |**float [\*.. 15**|**float [24]**|  
 |**float [16 ...\*]**|**float [53]**|  
@@ -106,13 +106,13 @@ Sybase 형식 매핑의 기본 SSMA에 대해서는 다음 섹션의 표를 참�
 |**nchar 변경 [4001\*]**|**nvarchar(max)**|  
 |**nchar [\*.. 4000]**|**nchar [\*]**|  
 |**nchar [4001\*]**|**nvarchar(max)**|  
-|**번호**|**번호**|  
+|**numeric**|**numeric**|  
 |**숫자 [\*.. \*]**|**numeric [\*]**|  
 |**숫자 [\*.. \*][\*.. \*]**|**숫자 [\*] [\*]**|  
 |**nvarchar**|**nvarchar**|  
 |**nvarchar [\*.. 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001\*]**|**nvarchar(max)**|  
-|**실제로**|**float [24]**|  
+|**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
@@ -120,7 +120,7 @@ Sybase 형식 매핑의 기본 SSMA에 대해서는 다음 섹션의 표를 참�
 |**sysname [\*.. \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**시간 [3]**|  
-|**없으면**|**rowversion**|  
+|**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar 다양**|**nvarchar**|  

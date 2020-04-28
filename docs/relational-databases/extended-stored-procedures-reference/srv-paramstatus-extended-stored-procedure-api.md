@@ -20,17 +20,17 @@ ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005576"
 ---
 # <a name="srv_paramstatus-extended-stored-procedure-api"></a>srv_paramstatus(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]대신 CLR 통합을 사용 하세요.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
  특정 원격 저장 프로시저 호출 매개 변수의 상태를 반환합니다.  
   
@@ -55,8 +55,7 @@ n
  매개 변수의 번호를 나타냅니다. 첫 번째 매개 변수의 번호는 1입니다.  
   
 ## <a name="returns"></a>반환  
- 매개 변수의 상태 플래그가 들어 있는 **int** 입니다. 현재는 플래그가 하나만 있습니다. 비트 0을 1로 설정하면 매개 변수가 반환 매개 변수입니다. 
-  *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
+ 매개 변수의 상태 플래그가 들어 있는 **int** 입니다. 현재는 플래그가 하나만 있습니다. 비트 0을 1로 설정하면 매개 변수가 반환 매개 변수입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
  이 루틴은 원격 저장 프로시저 호출 매개 변수의 상태 플래그를 반환합니다.  
@@ -71,6 +70,6 @@ n
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [srv_rpcparams &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
+ [srv_rpcparams(확장 저장 프로시저 API)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

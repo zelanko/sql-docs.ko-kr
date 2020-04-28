@@ -18,16 +18,15 @@ ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021059"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 주체에 매핑되었지만 Windows 환경에 더 이상 존재하지 않는 Windows 사용자 및 그룹에 대한 정보를 보고합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,7 +45,7 @@ sp_validatelogins
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**SID**|**varbinary (85)**|Windows 사용자 또는 그룹의 Windows SID(보안 식별자)입니다.|  
+|**S**|**varbinary(85)**|Windows 사용자 또는 그룹의 Windows SID(보안 식별자)입니다.|  
 |**NT Login**|**sysname**|Windows 사용자 또는 그룹의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -66,7 +65,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-sql&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [DROP LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/drop-login-transact-sql.md)   

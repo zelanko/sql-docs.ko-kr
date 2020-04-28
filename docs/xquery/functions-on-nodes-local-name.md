@@ -16,10 +16,10 @@ ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68038875"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
@@ -50,8 +50,7 @@ fn:local-name($arg as node()?) as xs:string
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 특정 노드의 로컬 이름 검색  
- 다음은 형식화되지 않은 XML 인스턴스에 대해 지정된 쿼리입니다. 
-  `local-name(/ROOT[1])` 쿼리 식은 지정한 노드의 로컬 이름 부분을 검색합니다.  
+ 다음은 형식화되지 않은 XML 인스턴스에 대해 지정된 쿼리입니다. `local-name(/ROOT[1])` 쿼리 식은 지정한 노드의 로컬 이름 부분을 검색합니다.  
   
 ```  
 declare @x xml  
@@ -60,8 +59,7 @@ SELECT @x.query('local-name(/ROOT[1])')
 -- result = ROOT  
 ```  
   
- 다음은 ProductModel 테이블의 형식화된 xml 열인 Instructions 열에 대해 지정된 쿼리입니다. 
-  `local-name(/AWMI:root[1]/AWMI:Location[1])` 식은 지정된 노드의 로컬 이름 `Location`을 반환합니다.  
+ 다음은 ProductModel 테이블의 형식화된 xml 열인 Instructions 열에 대해 지정된 쿼리입니다. `local-name(/AWMI:root[1]/AWMI:Location[1])` 식은 지정된 노드의 로컬 이름 `Location`을 반환합니다.  
   
 ```  
 SELECT Instructions.query('  

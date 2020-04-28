@@ -18,10 +18,10 @@ ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7629bff37fb33080f8057fc1799437fff182882f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044798"
 ---
 # <a name="msmerge_conflicts_info-transact-sql"></a>MSmerge_conflicts_info(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68044798"
 
   **MSmerge_conflicts_info** 테이블은 병합 게시에 대 한 구독을 동기화 할 때 발생 하는 충돌을 추적 합니다. 충돌에 대 한 행 데이터 손실는 충돌이 발생 한 아티클의 [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) 테이블에 저장 됩니다. 이 테이블은 게시 데이터베이스의 게시자와 구독 데이터베이스의 구독자에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  
 |**rowguid**|**uniqueidentifier**|충돌 행의 식별자입니다.|  

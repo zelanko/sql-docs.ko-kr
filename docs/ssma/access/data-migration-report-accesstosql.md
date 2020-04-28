@@ -10,10 +10,10 @@ ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68006589"
 ---
 # <a name="data-migration-report-accesstosql"></a>데이터 마이그레이션 보고서 (AccessToSQL)
@@ -23,7 +23,7 @@ ms.locfileid: "68006589"
 **상태**  
 원본 데이터베이스에서 대상 데이터베이스로 데이터 마이그레이션의 상태를 표시 합니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **받는 사람**  

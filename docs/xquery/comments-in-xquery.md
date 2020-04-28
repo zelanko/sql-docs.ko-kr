@@ -16,16 +16,16 @@ ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68039023"
 ---
 # <a name="comments-in-xquery"></a>XQuery의 주석
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery에 주석을 추가할 수 있습니다. 주석 문자열은 "`(:`" 및 "`:)`" 구분 기호를 사용하여 추가됩니다. 다음은 그 예입니다.  
+  XQuery에 주석을 추가할 수 있습니다. 주석 문자열은 "`(:`" 및 "`:)`" 구분 기호를 사용하여 추가됩니다. 예를 들면 다음과 같습니다.  
   
 ```  
 declare @x xml  

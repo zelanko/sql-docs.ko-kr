@@ -18,10 +18,10 @@ ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68044763"
 ---
 # <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage(Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "68044763"
 
   **MSmerge_errorlineage** 테이블은 구독자에서 삭제 되었지만 해당 삭제가 게시자에 전파 되지 않은 행을 포함 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|병합 복제용으로 게시된 테이블에 할당된 정수 값입니다. **Sysmergearticles** 테이블의 애칭 필드에 해당 합니다.|  
 |**rowguid**|**uniqueidentifier**|행 식별자입니다.|  

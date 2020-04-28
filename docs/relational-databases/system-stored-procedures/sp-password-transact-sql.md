@@ -18,10 +18,10 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68008925"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password(Transact-SQL)
@@ -49,9 +49,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'`새 암호입니다. *new_password* 는 **sysname**이며 기본값은 없습니다. 명명 된 매개 변수가 사용 되지 않는 경우 *old_password* 를 지정 해야 합니다.  
   
 > [!IMPORTANT]  
->  NULL 암호를 사용하지 마십시오. 강력한 암호를 사용하세요. 자세한 내용은 [강력한 암호](../../relational-databases/security/strong-passwords.md)를 참조하십시오.  
+>  NULL 암호를 사용하지 마십시오. 강력한 암호를 사용하세요. 자세한 내용은 [Strong Passwords](../../relational-databases/security/strong-passwords.md)을 참조하세요.  
   
-`[ @loginame = ] 'login'`암호 변경의 영향을 받는 로그인의 이름입니다. *login* 은 **sysname**이며 기본값은 NULL입니다. *login* 은 이미 존재 해야 하며 **sysadmin** 또는 **securityadmin** 고정 서버 역할의 멤버만 지정할 수 있습니다.  
+`[ @loginame = ] 'login'`암호 변경의 영향을 받는 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *login* 은 이미 존재 해야 하며 **sysadmin** 또는 **securityadmin** 고정 서버 역할의 멤버만 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -77,8 +77,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-password"></a>B. 암호 변경  
- 다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`에서 `V1cteAmanti55imE`로 변경하는 방법을 보여 줍니다. 이는 선호되는 방법입니다. 
-  `Victoria` 사용자는 추가 사용 권한 없이도 이 명령을 실행할 수 있습니다. 다른 사용자는 ALTER ANY LOGIN 권한을 가져야 합니다.  
+ 다음 예에서는 `ALTER LOGIN`을 사용하여 `Victoria` 로그인의 암호를 `B3r1000d#2-36`에서 `V1cteAmanti55imE`로 변경하는 방법을 보여 줍니다. 이는 선호되는 방법입니다. `Victoria` 사용자는 추가 사용 권한 없이도 이 명령을 실행할 수 있습니다. 다른 사용자는 ALTER ANY LOGIN 권한을 가져야 합니다.  
   
 ```  
 ALTER LOGIN Victoria WITH   
@@ -89,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [ALTER LOGIN &#40;Transact-sql&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Transact-sql&#41;로그인 &#40;만들기](../../t-sql/statements/create-login-transact-sql.md)   
  [Transact-sql&#41;sp_addlogin &#40;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [Transact-sql&#41;sp_adduser &#40;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   

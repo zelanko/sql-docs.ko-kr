@@ -18,10 +18,10 @@ ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029775"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "68029775"
 |subscriber_server|**sysname**|서버의 ID입니다. 구독 데이터베이스의 사본을 다른 서버로 마이그레이션하는 경우 서버 지정 값에 srvid 필드를 매핑할 때 사용합니다.|  
 |db_name|**sysname**|구독 데이터베이스의 이름입니다.|  
 |pubid|**uniqueidentifier**|현재 구독을 만든 게시의 ID입니다.|  
-|datasource_type|**int**|데이터 원본의 유형입니다.<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB.|  
+|datasource_type|**int**|데이터 원본의 유형입니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB.|  
 |subid|**uniqueidentifier**|구독에 대한 고유한 ID입니다.|  
 |replnickname|**binary**|복제의 압축된 애칭입니다.|  
 |replicastate|**uniqueidentifier**|게시자의 값을 구독자의 값과 비교하여 이전 동기화가 성공했는지 확인하는 데 사용되는 고유한 식별자입니다.|  
@@ -43,7 +43,7 @@ ms.locfileid: "68029775"
 |subscription_type|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 푸시합니다.<br /><br /> **1** = 끌어오기<br /><br /> **2** = 익명.|  
 |sync_type|**tinyint**|동기화 유형입니다.<br /><br /> **1** = 자동<br /><br /> **2** = 동기화 하지 않습니다.|  
 |description|**nvarchar(255)**|구독에 대한 간단한 설명입니다.|  
-|우선 순위|**실제로**|구독 우선순위를 지정하고 우선순위를 기반으로 한 충돌 해결 구현을 허용합니다. 모든 로컬 또는 익명 구독에 대해 **0.00** 가 동일 합니다.|  
+|priority|**real**|구독 우선순위를 지정하고 우선순위를 기반으로 한 충돌 해결 구현을 허용합니다. 모든 로컬 또는 익명 구독에 대해 **0.00** 가 동일 합니다.|  
 |recgen|**bigint**|마지막으로 받은 generation 번호입니다.|  
 |recguid|**uniqueidentifier**|마지막으로 받은 generation의 고유한 ID입니다.|  
 |sentgen|**bigint**|마지막으로 보낸 generation의 번호입니다.|  

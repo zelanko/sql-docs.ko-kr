@@ -18,16 +18,15 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68010757"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정 서버 역할의 멤버에 대한 정보를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,11 +47,11 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
-|serveradmin|서버 관리자|  
+|serveradmin|서버 관리자입니다.|  
 |setupadmin|설치 관리자입니다.|  
 |processadmin|프로세스 관리자입니다.|  
 |diskadmin|디스크 관리자입니다.|  
-|dbcreator|데이터베이스 작성자|  
+|dbcreator|데이터베이스 작성자입니다.|  
 |bulkadmin|BULK INSERT 문을 실행할 수 있습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -64,7 +63,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|서버 역할의 이름입니다.|  
 |MemberName|**sysname**|ServerRole 멤버의 이름입니다.|  
-|MemberSID|**varbinary (85)**|MemberName의 보안 식별자입니다.|  
+|MemberSID|**varbinary(85)**|MemberName의 보안 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  데이터베이스 역할의 멤버를 표시하려면 sp_helprolemember를 사용합니다.  
@@ -88,7 +87,7 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_helprole &#40;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [Transact-sql&#41;sp_helprolemember &#40;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;보안 저장 프로시저](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

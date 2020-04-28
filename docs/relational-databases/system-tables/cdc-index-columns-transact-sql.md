@@ -18,10 +18,10 @@ ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68035341"
 ---
 # <a name="cdcindex_columns-transact-sql"></a>cdc.index_columns(Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68035341"
  시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신, [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저를 실행 합니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|변경 테이블의 ID입니다.|  
 |**column_name**|**sysname**|인덱스 열의 이름입니다.|  

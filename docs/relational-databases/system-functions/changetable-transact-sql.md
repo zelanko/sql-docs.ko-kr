@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042904"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE(Transact-SQL)
@@ -98,9 +98,9 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|행의 마지막 변경 내용과 연관된 버전 값입니다.|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|마지막 삽입 작업과 연관된 버전 값입니다.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|다음과 같은 변경 형식을 지정합니다.<br /><br /> **U** = 업데이트<br /><br /> **I** = 삽입<br /><br /> **D** = 삭제|  
-|SYS_CHANGE_COLUMNS|**varbinary (4100)**|last_sync_version(기준) 이후에 변경된 열을 나열합니다. 계산 열은 변경 된 것으로 표시 되지 않습니다.<br /><br /> 다음 조건 중 하나가 충족되는 경우 값은 NULL입니다.<br /><br /> 열 변경 내용 추적을 사용할 수 없는 경우<br /><br /> 작업이 삽입 또는 삭제 작업인 경우<br /><br /> 모든 비기본 키 열이 단일 작업에서 업데이트된 경우. 이 이진 값을 직접 해석하면 안 됩니다. 대신 [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)를 사용 합니다.|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용 하 여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경 합니다.|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|다음과 같은 변경 형식을 지정합니다.<br /><br /> **U** = 업데이트<br /><br /> **I** = 삽입<br /><br /> **D** = 삭제|  
+|SYS_CHANGE_COLUMNS|**varbinary(4100)**|last_sync_version(기준) 이후에 변경된 열을 나열합니다. 계산 열은 변경 된 것으로 표시 되지 않습니다.<br /><br /> 다음 조건 중 하나가 충족되는 경우 값은 NULL입니다.<br /><br /> 열 변경 내용 추적을 사용할 수 없는 경우<br /><br /> 작업이 삽입 또는 삭제 작업인 경우<br /><br /> 모든 비기본 키 열이 단일 작업에서 업데이트된 경우. 이 이진 값을 직접 해석하면 안 됩니다. 대신 [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)를 사용 합니다.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|[WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용 하 여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경 합니다.|  
 |\<기본 키 열 값>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
@@ -109,7 +109,7 @@ CHANGETABLE (
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|행과 연관된 현재 변경 버전 값입니다.<br /><br /> 변경 내용 추적 보존 기간보다 긴 기간 동안 변경된 내용이 없거나, 변경 내용 추적이 사용된 이후 변경된 행이 없을 경우 이 값은 NULL입니다.|  
-|SYS_CHANGE_CONTEXT|**varbinary (128)**|WITH 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용하여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경합니다.|  
+|SYS_CHANGE_CONTEXT|**varbinary(128)**|WITH 절을 INSERT, UPDATE 또는 DELETE 문의 일부로 사용하여 선택적으로 지정할 수 있는 컨텍스트 정보를 변경합니다.|  
 |\<기본 키 열 값>|사용자 테이블 열과 같음|추적된 테이블의 기본 키 값입니다. 이러한 값은 사용자 테이블의 각 행을 고유하게 식별합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -210,10 +210,10 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [변경 내용 추적 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
- [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
+ [변경 내용 추적 함수 &#40;Transact-sql&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [SQL Server&#41;&#40;데이터 변경 내용 추적](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Transact-sql&#41;CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   
- [CHANGE_TRACKING_CURRENT_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
+ [Transact-sql&#41;CHANGE_TRACKING_CURRENT_VERSION &#40;](../../relational-databases/system-functions/change-tracking-current-version-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION&#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)  
   
   

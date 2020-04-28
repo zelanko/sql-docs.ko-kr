@@ -21,10 +21,10 @@ ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be0f8e7b410abb2e9027ce0b773d1a1ad5a14465
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041004"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool(Transact-SQL)
@@ -65,13 +65,12 @@ sys.sp_xtp_unbind_db_resource_pool 'Hekaton_DB'
   
 ## <a name="requirements"></a>요구 사항  
   
--   
-  `database_name`에서 지정하는 데이터베이스에 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 리소스 풀에 대한 바인딩이 있어야 합니다.  
+-   `database_name`에서 지정하는 데이터베이스에 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 리소스 풀에 대한 바인딩이 있어야 합니다.  
   
 -   CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [메모리 액세스에 최적화 된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)  
   
   

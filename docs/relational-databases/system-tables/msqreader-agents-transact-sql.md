@@ -18,10 +18,10 @@ ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032568"
 ---
 # <a name="msqreader_agents-transact-sql"></a>MSqreader_agents(Transact-SQL)
@@ -31,9 +31,9 @@ ms.locfileid: "68032568"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**a-id**|**int**|큐 판독기 에이전트의 ID입니다.|  
+|**id**|**int**|큐 판독기 에이전트의 ID입니다.|  
 |**name**|**nvarchar (100)**|큐 판독기 에이전트의 이름입니다.|  
-|**job_id**|**binary (16)**|**Sysjobs** 테이블의 고유 작업 ID 번호입니다.|  
+|**job_id**|**binary(16)**|**Sysjobs** 테이블의 고유 작업 ID 번호입니다.|  
 |**profile_id**|**int**|**MSagent_profiles** 테이블의 프로필 ID입니다.|  
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 고유 ID입니다.|  
   

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68002656"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
@@ -50,15 +50,14 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|열의 ID입니다.|  
 |**column_name**|**sysname**|테이블 열의 이름입니다.|  
 |**column_usage**|**varchar (20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값과 그에 대 한 설명은 다음과 같습니다.<br /><br /> 같음: 열이 같음을 표현 하는 조건자에 적용 되는 형식은 다음과 같습니다. <br />                        *테이블. 열* = *constant_value*<br /><br /> 같지 않음: 열이 같지 않음을 나타내는 조건자에 기여 합니다. 예를 들어 *테이블. 열* > *constant_value*형식에 대 한 조건자를 나타냅니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> INCLUDE: 열은 조건자를 평가 하는 데 사용 되지 않지만, 예를 들어 쿼리를 포함 하는 다른 이유로 사용 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- 
-  **sys.dm_db_missing_index_columns**에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
+ **sys.dm_db_missing_index_columns**에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
   
 ## <a name="transaction-consistency"></a>트랜잭션 일관성  
  트랜잭션이 테이블을 만들거나 삭제하면 삭제된 개체에 대한 누락된 인덱스 정보가 포함된 행이 이 동적 관리 개체에서 제거되어 트랜잭션 일관성이 유지됩니다.  

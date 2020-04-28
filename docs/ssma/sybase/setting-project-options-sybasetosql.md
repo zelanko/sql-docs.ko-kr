@@ -12,10 +12,10 @@ ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2c8d074db2fc1e8a9d29ecf5fdc0405524e9bb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68020925"
 ---
 # <a name="setting-project-options-sybasetosql"></a>프로젝트 옵션 설정(SybaseToSQL)
@@ -77,8 +77,7 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
   
     -   사용자 지정 설정을 지정 하려면 새 설정 또는 값을 선택 하거나 입력 하면 됩니다.  
   
-3.  
-  **확인**을 클릭하여 설정을 저장합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 이러한 설정은 현재 프로젝트 파일에 저장 됩니다.  
   
@@ -92,8 +91,7 @@ SSMA에서 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습�
   
     -   사용자 지정 모드를 지정 하려면 **모드** 드롭다운 상자에서 **사용자 지정**을 선택 하 고 왼쪽 창에서 옵션을 선택한 다음 오른쪽 창에서 설정 또는 값을 클릭 하 고 새 설정 또는 값을 선택 하거나 입력 합니다.  
   
-3.  
-  **확인**을 클릭하여 설정을 저장합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 마이그레이션의 다음 단계는 프로젝트 요구 사항에 따라 달라 집니다.  

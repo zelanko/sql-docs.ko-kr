@@ -16,10 +16,10 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022454"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
@@ -53,7 +53,7 @@ sp_addscriptexec [ @publication = ] publication
 `[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  ** 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -72,7 +72,7 @@ sp_addscriptexec [ @publication = ] publication
 > [!NOTE]  
 >  오류 건너뛰기는 에이전트 기록에 참조로 계속 기록됩니다.  
   
- 스냅숏 **** 배달에 FTP를 사용 하는 게시에 대 한 스크립트 파일을 게시 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_addscriptexec를 사용 하는 것은 구독자 에서만 지원 됩니다.  
+ 스냅숏 **sp_addscriptexec** 배달에 FTP를 사용 하는 게시에 대 한 스크립트 파일을 게시 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_addscriptexec를 사용 하는 것은 구독자 에서만 지원 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addscriptexec**을 실행할 수 있습니다.  

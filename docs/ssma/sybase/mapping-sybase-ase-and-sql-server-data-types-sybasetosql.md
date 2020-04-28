@@ -13,10 +13,10 @@ ms.assetid: 784365d3-df4e-47ab-8ee0-d8392b52f510
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 79313d2344f6feb978a064f3fbd92e1f7bc7dce5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028895"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Sybase ASE 및 SQL Server 데이터 형식 매핑(SybaseToSQL)
@@ -67,8 +67,7 @@ SSMA에서 **형식 매핑** 탭을 보면 상속 된 형식 매핑을 보여 �
   
 3.  데이터 형식 매핑을 편집 하려면 다음을 수행 합니다.  
   
-    1.  
-  **편집**을 클릭합니다.  
+    1.  **편집**을 클릭합니다.  
   
     2.  **원본 유형**에서 매핑할 ASE 데이터 형식을 선택 합니다.  
   

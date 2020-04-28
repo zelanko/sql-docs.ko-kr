@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67997498"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
@@ -47,7 +47,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**RoleId**|**smallint**|**RoleName**의 ID입니다.|  

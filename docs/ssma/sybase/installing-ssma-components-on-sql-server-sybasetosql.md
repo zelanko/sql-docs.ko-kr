@@ -10,10 +10,10 @@ ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68029014"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server에 SSMA 구성 요소 설치(SybaseToSQL)
@@ -42,7 +42,7 @@ SSMA 확장 팩은 지정 된 인스턴스에 **sysdb** 및 **ssmatesterdb_syb**
   
 5.  설치 유형 선택 페이지에서 **일반**을 클릭 합니다.  
   
-6.  설치 준비 완료 페이지에서 **설치**를 클릭 합니다.  
+6.  설치 준비 페이지에서 **설치**를 클릭합니다.  
   
 7.  설치의 첫 번째 단계를 완료 했습니다. 페이지에서 **다음**을 클릭 합니다.  
   

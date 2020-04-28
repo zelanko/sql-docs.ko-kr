@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68026793"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
@@ -40,15 +40,15 @@ ms.locfileid: "68026793"
   
  메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 [메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 페이지 17을 SQL Server 참조 하십시오.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|개체의 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  
 |index_id|**int**|인덱스의 ID입니다.|  
 |delta_pages|**bigint**|트리의 이 인덱스에 대한 델타 페이지 수입니다.|  
-|internal_pages|**bigint**|내부에 사용합니다. 트리의 이 인덱스에 대한 내부 페이지 수입니다.|  
+|internal_pages|**bigint**|내부적으로만 사용할 수 있습니다. 트리의 이 인덱스에 대한 내부 페이지 수입니다.|  
 |leaf_pages|**bigint**|트리의 이 인덱스에 대한 리프 페이지 수입니다.|  
-|outstanding_retired_nodes|**bigint**|내부에 사용합니다. 내부 구조의 이 인덱스에 대한 전체 노드 수입니다.|  
+|outstanding_retired_nodes|**bigint**|내부적으로만 사용할 수 있습니다. 내부 구조의 이 인덱스에 대한 전체 노드 수입니다.|  
 |page_update_count|**bigint**|인덱스에서 페이지를 업데이트하는 누적 작업 수입니다.|  
 |page_update_retry_count|**bigint**|인덱스에서 페이지를 업데이트하는 작업의 누적된 다시 시도 횟수입니다.|  
 |page_consolidation_count|**bigint**|인덱스의 누적 페이지 통합 수입니다.|  
@@ -66,6 +66,6 @@ ms.locfileid: "68026793"
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블 동적 관리 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [메모리 최적화 테이블 동적 관리 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

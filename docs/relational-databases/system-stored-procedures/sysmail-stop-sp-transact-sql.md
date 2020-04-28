@@ -18,10 +18,10 @@ ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68037405"
 ---
 # <a name="sysmail_stop_sp-transact-sql"></a>sysmail_stop_sp(Transact-SQL)
@@ -39,7 +39,7 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>인수  
- None  
+ 없음  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -51,7 +51,7 @@ sysmail_stop_sp
   
  큐가 중지되면 데이터베이스 메일 외부 프로그램이 메시지를 처리할 수 없습니다. 이 저장 프로시저를 통해 문제 해결 또는 유지 관리 목적으로 데이터베이스 메일을 중지할 수 있습니다.  
   
- 데이터베이스 메일를 시작 하려면 **sysmail_start_sp**를 사용 합니다. 개체가 중지 될 때에도 sp_send_dbmail 메일을 수락 하는 것을 볼 수 있습니다. **** [!INCLUDE[ssSB](../../includes/sssb-md.md)]  
+ 데이터베이스 메일를 시작 하려면 **sysmail_start_sp**를 사용 합니다. 개체가 중지 될 때에도 sp_send_dbmail 메일을 수락 하는 것을 볼 수 있습니다. **sp_send_dbmail** [!INCLUDE[ssSB](../../includes/sssb-md.md)]  
   
 > [!NOTE]  
 >  이 저장 프로시저는 데이터베이스 메일의 큐만 중지합니다. 이 저장 프로시저는 데이터베이스에서 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 메시지 배달을 비활성화하지 않습니다. 이 저장 프로시저는 데이터베이스 메일 확장 저장 프로시저를 해제하여 노출 영역을 줄일 수 없습니다. 확장 저장 프로시저를 사용 하지 않도록 설정 하려면 **sp_configure** 시스템 저장 프로시저의 [데이터베이스 메일 XPs 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조 하십시오.  

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046032"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
@@ -47,7 +47,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="arguments"></a>인수  
 `[ @rulename = ] 'rule'`CREATE RULE 문에 의해 생성 된 규칙의 이름입니다. *rule* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
-`[ @objname = ] 'object_name'`규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+`[ @objname = ] 'object_name'`규칙을 바인딩할 테이블 및 열 또는 별칭 데이터 형식입니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다. *Object_name* 한 부분으로 구성 된 이름인 경우 별칭 데이터 형식으로 확인 됩니다. 두 부분이나 세 부분으로 된 이름이면 먼저 테이블 및 열로 확인된 다음 확인이 실패하면 별칭 데이터 형식으로 확인됩니다. 기본적으로 별칭 데이터 형식의 기존 열은 규칙이 열에 직접 바인딩된 경우를 제외 하 고 *규칙* 을 상속 합니다.  
   
@@ -63,8 +63,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- CHECK 제약 조건을 사용 하는 경우에도 열에 새 규칙을 바인딩하거나 기존 규칙의 바인딩을 해제 하지 않고 **sp_bindrule** 를 사용 하 여 별칭 데이터 형식에 바인딩할 수 있습니다. 이 경우 이전 규칙은 무시됩니다. 기존의 CHECK 제약 조건으로 규칙이 열에 바인딩된 경우에는 모든 제한이 평가됩니다. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 규칙을 바인딩할 수 없습니다.  
+ CHECK 제약 조건을 사용 하는 경우에도 열에 새 규칙을 바인딩하거나 기존 규칙의 바인딩을 해제 하지 않고 **sp_bindrule** 를 사용 하 여 별칭 데이터 형식에 바인딩할 수 있습니다. 이 경우 이전 규칙은 무시됩니다. 기존의 CHECK 제약 조건으로 규칙이 열에 바인딩된 경우에는 모든 제한이 평가됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 규칙을 바인딩할 수 없습니다.  
   
  규칙은 바인딩 시점이 아니라 INSERT 문을 시도할 때 적용되며 **숫자** 데이터 형식의 열에 문자 규칙을 바인딩할 수 있지만 이러한 삽입 작업은 유효 하지 않습니다.  
   
@@ -87,8 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 별칭 데이터 형식에 규칙 바인딩  
- 
-  `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. *Futureonly_flag* `ssn` 에 대해 **futureonly** 를 지정 하지 `rule_ssn` 않거나 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 `ssn` 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
+ `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. *Futureonly_flag* `ssn` 에 대해 **futureonly** 를 지정 하지 `rule_ssn` 않거나 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 `ssn` 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
   
 ```  
 USE master;  
@@ -97,8 +95,7 @@ EXEC sp_bindrule 'rule_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. futureonly_flag 사용  
- 다음 예에서는 `rule_ssn` 별칭 데이터 형식에 `ssn` 규칙을 바인딩하는 방법을 보여 줍니다. 
-  `futureonly`를 지정하였으므로 기존 `ssn` 형식의 열은 전혀 영향을 받지 않습니다.  
+ 다음 예에서는 `rule_ssn` 별칭 데이터 형식에 `ssn` 규칙을 바인딩하는 방법을 보여 줍니다. `futureonly`를 지정하였으므로 기존 `ssn` 형식의 열은 전혀 영향을 받지 않습니다.  
   
 ```  
 USE master;  
@@ -121,11 +118,11 @@ EXEC sp_bindrule rule1, '[t.2].c1' ;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE&#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
- [DROP RULE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
- [sp_unbindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
+ [DROP RULE &#40;Transact-sql&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
+ [Transact-sql&#41;sp_unbindrule &#40;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

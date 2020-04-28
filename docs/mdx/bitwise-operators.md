@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016968"
 ---
 # <a name="bitwise-operators"></a>비트 연산자
@@ -24,10 +24,10 @@ ms.locfileid: "68016968"
   
 |연산자|Description|  
 |--------------|-----------------|  
-|[AND](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
-|[IS](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
-|[NOT](../mdx/not-mdx.md)|숫자 식에 논리 부정을 수행합니다.|  
-|[또는](../mdx/or-mdx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
+|[하거나](../mdx/and-mdx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
+|[되었습니다](../mdx/is-mdx.md)|두 개체 식에 대해 논리 비교를 수행합니다.|  
+|[나타내지](../mdx/not-mdx.md)|숫자 식에 논리 부정을 수행합니다.|  
+|[디스크나](../mdx/or-mdx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
 |[XOR](../mdx/xor-mdx.md)|두 숫자 식에 대해 논리 제외를 수행합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

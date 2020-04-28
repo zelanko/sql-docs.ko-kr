@@ -18,10 +18,10 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68022273"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem(Transact-SQL)
@@ -56,11 +56,11 @@ sp_revoke_proxy_from_subsystem
 |**4**|Replication Snapshot Agent|  
 |**5**|복제 로그 판독기 에이전트|  
 |**6**|복제 배포 에이전트|  
-|**일**|Replication Merge Agent|  
+|**7**|Replication Merge Agent|  
 |**20cm(8**|복제 큐 판독기 에이전트|  
-|**되었는지**|Analysis Services 명령|  
-|**5-10**|Analysis Services 쿼리|  
-|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)]패키지 실행|  
+|**9**|Analysis Services 명령|  
+|**10**|Analysis Services 쿼리|  
+|**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |**12**|PowerShell 스크립트|  
   
 `[ @subsystem_name = ] 'subsystem_name'`액세스 권한을 취소할 하위 시스템의 이름입니다. *Subsystem_name* 는 **sysname**이며 기본값은 NULL입니다. *Subsystem_id* 또는 *subsystem_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. 다음 표에서는 각 하위 시스템에 대한 값을 나열합니다.  
@@ -76,7 +76,7 @@ sp_revoke_proxy_from_subsystem
 |QueueReader|복제 큐 판독기 에이전트|  
 |ANALYSISQUERY|Analysis Services 명령|  
 |ANALYSISCOMMAND|Analysis Services 쿼리|  
-|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)]패키지 실행|  
+|Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 실행|  
 |PowerShell|PowerShell 스크립트|  
   
 ## <a name="remarks"></a>설명  

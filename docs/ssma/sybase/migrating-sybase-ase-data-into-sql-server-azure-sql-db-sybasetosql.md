@@ -13,10 +13,10 @@ ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68028840"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 데이터를 SQL Server로 마이그레이션-Azure SQL DB (SybaseToSQL)
@@ -63,7 +63,7 @@ Sybase ASE (적응 서버 엔터프라이즈) 데이터베이스 개체를 또�
   
 **데이터를 마이그레이션하려면**  
   
-1.  다음 사항을 확인합니다.  
+1.  다음을 확인합니다.  
   
     -   ASE 공급자는 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

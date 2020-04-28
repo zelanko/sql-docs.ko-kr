@@ -16,10 +16,10 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68021077"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
@@ -55,8 +55,8 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary (16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
-|**UPDATED XACT_SEQNO**|**varbinary (16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 원래 LSN입니다.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|구독자에 적용될 다음 트랜잭션의 업데이트된 LSN입니다.|  
 |**SUBSCRIPTION STREAM COUNT**|**int**|마지막 동기화 중에 사용된 구독 스트림의 수입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

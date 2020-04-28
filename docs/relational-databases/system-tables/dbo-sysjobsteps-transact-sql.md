@@ -20,25 +20,23 @@ ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68004738"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 실행될 작업의 각 단계에 대한 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**step_id**|**int**|작업 단계의 ID입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
-|**하위**|**nvarchar (40)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 작업 단계를 실행하는 데 사용하는 하위 시스템의 이름입니다.|  
+|**하위**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 작업 단계를 실행하는 데 사용하는 하위 시스템의 이름입니다.|  
 |**명령**|**nvarchar(max)**|**하위 시스템**에서 실행할 명령입니다.|  
 |**flags**|**int**|예약되어 있습니다.|  
 |**additional_parameters**|**ntext**|예약되어 있습니다.|  

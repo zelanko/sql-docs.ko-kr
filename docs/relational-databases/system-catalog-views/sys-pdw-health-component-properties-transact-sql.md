@@ -11,10 +11,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68016555"
 ---
 # <a name="syspdw_health_component_properties-transact-sql"></a>sys. pdw_health_component_properties (Transact-sql)
@@ -22,15 +22,15 @@ ms.locfileid: "68016555"
 
   장치를 설명 하는 속성을 저장 합니다. 일부 속성은 장치 상태를 표시 하 고 일부 속성은 장치 자체를 설명 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|구성 요소의 속성에 대 한 고유 식별자입니다.<br /><br /> property_id 및 component_id이 보기의 키를 구성 합니다.|NOT NULL|  
 |component_id|**int**|구성 요소의 ID입니다. [Pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)을 참조 하십시오.<br /><br /> property_id 및 component_id이 보기의 키를 구성 합니다.|NOT NULL|  
 |property_name|**nvarchar(255)**|속성의 이름입니다.|NOT NULL|  
-|physical_name|**nvarchar (32)**|제조업체에서 정의한 속성 이름입니다.|NOT NULL|  
+|physical_name|**nvarchar(32)**|제조업체에서 정의한 속성 이름입니다.|NOT NULL|  
 |is_key|**bit**|장치 인스턴스가 고유 하거나 고유 하지 않은지 여부를 확인 합니다.|NOT NULL<br /><br /> 0-장치 인스턴스가 고유 합니다.<br /><br /> 1-장치 인스턴스가 고유 하지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

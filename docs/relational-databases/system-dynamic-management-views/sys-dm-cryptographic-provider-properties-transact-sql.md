@@ -19,10 +19,10 @@ ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68005107"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties(Transact-SQL)
@@ -31,13 +31,13 @@ ms.locfileid: "68005107"
   등록된 암호화 공급자에 대한 정보를 반환합니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|암호화 공급자의 ID 번호입니다.|  
 |guid|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
 |provider_version|**nvarchar(256)**|'*Aa.bb.cccc.dd*' 형식의 공급자 버전입니다.|  
-|sqlcrypt_version|**nvarchar(256)**|' Aa.bb.cccc.dd ' 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 된 암호화 API의 주** 버전입니다.|  
-|friendly_name|**nvarchar (2048)**|공급자가 제공한 이름입니다.|  
+|sqlcrypt_version|**nvarchar(256)**|' Aa.bb.cccc.dd ' 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 된 암호화 API의 주*aa.bb.cccc.dd*버전입니다.|  
+|friendly_name|**nvarchar(2048)**|공급자가 제공한 이름입니다.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC 또는 OTHER입니다.|  
 |symmetric_key_support|**tinyint**|0(지원되지 않음)<br /><br /> 1(지원됨)|  
 |symmetric_key_export|**tinyint**|0(지원되지 않음)<br /><br /> 1(지원됨)|  
@@ -54,8 +54,8 @@ ms.locfileid: "68005107"
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;보안 카탈로그 뷰](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [암호화 계층](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [EKM&#41;&#40;확장 가능 키 관리](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [Transact-sql&#41;&#40;암호화 공급자 만들기](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

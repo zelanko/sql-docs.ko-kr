@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68017090"
 ---
 # <a name="and-mdx"></a>AND(MDX)
@@ -43,9 +43,9 @@ Expression1 AND Expression2
 |*Expression1*|*Expression2*|Return Value|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**허위**|**허위**|  
-|**허위**|**true**|**허위**|  
-|**허위**|**허위**|**허위**|  
+|**true**|**false**|**false**|  
+|**false**|**true**|**false**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>예제  
   

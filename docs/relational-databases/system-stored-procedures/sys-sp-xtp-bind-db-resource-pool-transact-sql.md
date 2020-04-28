@@ -21,17 +21,16 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68041012"
 ---
 # <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  지정된 리소스 풀에 지정된 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 바인딩합니다. 
-  `sys.sp_xtp_bind_db_resource_pool` 실행 전에 데이터베이스와 리소스 풀 모두 있어야 합니다.  
+  지정된 리소스 풀에 지정된 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 데이터베이스를 바인딩합니다. `sys.sp_xtp_bind_db_resource_pool` 실행 전에 데이터베이스와 리소스 풀 모두 있어야 합니다.  
   
  이 시스템 프로시저는 resource_pool_name으로 식별되는 리소스 관리자와 database_name으로 식별되는 데이터베이스 사이의 바인딩을 만듭니다. 바인딩 시 메모리 최적화 개체가 데이터베이스에 있을 필요는 없습니다. 메모리 최적화 개체가 없을 경우 리소스 풀에서 메모리를 가져오지 않습니다. 이 바인딩은 아래에 설명된 바와 같이 리소스 관리자가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 할당자에 의해 할당된 메모리를 관리하는 데 사용됩니다.  
   
@@ -75,8 +74,7 @@ Binding to a resource pool is not supported for system database 'master'. This o
 ```  
   
 **리소스 풀이 없습니다.**  
- 
-  `sp_xtp_bind_db_resource_pool` 실행 전에 Resource_pool_name으로 식별되는 리소스 풀이 있어야 합니다.  지정된 ID의 풀이 없는 경우 다음 오류가 반환됩니다.  
+ `sp_xtp_bind_db_resource_pool` 실행 전에 Resource_pool_name으로 식별되는 리소스 풀이 있어야 합니다.  지정된 ID의 풀이 없는 경우 다음 오류가 반환됩니다.  
 *리소스 풀% s이 (가) 없습니다.  올바른 리소스 풀 이름을 입력 하십시오.*  
   
 ```  
@@ -149,13 +147,12 @@ END
   
 ## <a name="requirements"></a>요구 사항  
   
--   
-  `database_name`으로 지정된 데이터베이스와 `resource_pool_name`으로 지정된 리소스 풀 모두 바인딩하기 전에 있어야 합니다.  
+-   `database_name`으로 지정된 데이터베이스와 `resource_pool_name`으로 지정된 리소스 풀 모두 바인딩하기 전에 있어야 합니다.  
   
 -   CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [메모리 액세스에 최적화 된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [sys.sp_xtp_unbind_db_resource_pool&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

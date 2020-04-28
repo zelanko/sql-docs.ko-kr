@@ -18,10 +18,10 @@ ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68032813"
 ---
 # <a name="sp_srvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
@@ -48,11 +48,11 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |-----------|-----------------|  
 |**sysadmin**|시스템 관리자입니다.|  
 |**securityadmin**|보안 관리자입니다.|  
-|**serveradmin**|서버 관리자|  
+|**serveradmin**|서버 관리자입니다.|  
 |**setupadmin**|설치 관리자입니다.|  
 |**processadmin**|프로세스 관리자입니다.|  
 |**diskadmin**|디스크 관리자입니다.|  
-|**dbcreator**|데이터베이스 작성자|  
+|**dbcreator**|데이터베이스 작성자입니다.|  
 |**bulkadmin**|BULK INSERT 문을 실행할 수 있습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
