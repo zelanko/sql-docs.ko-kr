@@ -7029,7 +7029,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: SSAS(SQL Server Analysis Services) >
-      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: SSRS(SQL Server Reporting Services) >
       href: reporting-services/index.md
     - name: Master  Data  Services
@@ -7785,6 +7785,55 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: 백업 및 복원
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
+        - name: 개념
+          items:
+            - name: 확장
+              href: azure-data-studio/extensions.md
+              items:
+                - name: PostgreSQL 확장
+                  href: azure-data-studio/postgres-extension.md
+                - name: 데이터 가상화 확장
+                  href: azure-data-studio/data-virtualization-extension.md
+                - name: SQL Server 에이전트
+                  href: azure-data-studio/sql-server-agent-extension.md
+                - name: SQL Server 중앙 관리 서버 확장
+                  href: azure-data-studio/sql-server-cms-extension.md
+                - name: SQL Server dacpac 확장
+                  href: azure-data-studio/sql-server-dacpac-extension.md
+                - name: SQL Server 가져오기
+                  href: azure-data-studio/sql-server-import-extension.md
+                - name: SQL Server Profiler
+                  href: azure-data-studio/sql-server-profiler-extension.md
+                - name: 스키마 비교 확장
+                  href: azure-data-studio/schema-compare-extension.md
+                - name: PowerShell 확장
+                  href: azure-data-studio/powershell-extension.md
+                - name: Managed Instance 확장
+                  href: azure-data-studio/azure-sql-managed-instance-extension.md
+                - name: SandDance 확장
+                  href: azure-data-studio/sanddance-extension.md
+            - name: 확장 작성
+              items:
+                - name: 확장성 개요
+                  href: azure-data-studio/extensibility.md
+                - name: 확장 작성
+                  href: azure-data-studio/extension-authoring.md
+                - name: 확장 만들기
+                  href: azure-data-studio/tutorial-create-extension.md
+                - name: 확장성 API
+                  href: azure-data-studio/extensibility-apis.md
+            - name: Notebooks
+              items:
+                - name: Notebooks 개요
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: SQL 커널 사용
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Python 커널 사용
+                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
+                - name: Kqlmagic
+                  href: azure-data-studio/notebooks-kql-magic.md
+                - name: Notebook 관리
+                  href: azure-data-studio/notebooks-manage-sql-server.md
         - name: 방법 가이드
           items:
             - name: 대시보드 및 정보 위젯
@@ -7801,55 +7850,14 @@
               href: azure-data-studio/server-groups.md
             - name: 원본 제어
               href: azure-data-studio/source-control.md
+            - name: 사용량 현황 데이터 수집
+              href: azure-data-studio/usage-data-collection.md
             - name: 작업 영역 및 사용자 설정
               href: azure-data-studio/settings.md
             - name: Windows 인증(Kerberos)
               href: azure-data-studio/enable-kerberos.md
-            - name: Notebooks
-              items:
-                - name: Notebooks 개요
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: SQL 커널을 사용하는 방법
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Notebook을 관리하는 방법
-                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: 사용량 현황 데이터 수집
               href: azure-data-studio/usage-data-collection.md
-        - name: 확장
-          href: azure-data-studio/extensions.md
-          items:
-            - name: PostgreSQL 확장
-              href: azure-data-studio/postgres-extension.md
-            - name: 데이터 가상화 확장
-              href: azure-data-studio/data-virtualization-extension.md
-            - name: SQL Server 에이전트
-              href: azure-data-studio/sql-server-agent-extension.md
-            - name: SQL Server 중앙 관리 서버 확장
-              href: azure-data-studio/sql-server-cms-extension.md
-            - name: SQL Server dacpac 확장
-              href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server 가져오기
-              href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler
-              href: azure-data-studio/sql-server-profiler-extension.md
-            - name: 스키마 비교 확장
-              href: azure-data-studio/schema-compare-extension.md
-            - name: PowerShell 확장
-              href: azure-data-studio/powershell-extension.md
-            - name: Managed Instance 확장
-              href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: SandDance 확장
-              href: azure-data-studio/sanddance-extension.md
-        - name: 확장 작성
-          items:
-            - name: 확장성 개요
-              href: azure-data-studio/extensibility.md
-            - name: 확장 작성
-              href: azure-data-studio/extension-authoring.md
-            - name: 확장 만들기
-              href: azure-data-studio/tutorial-create-extension.md
-            - name: 확장성 API
-              href: azure-data-studio/extensibility-apis.md
         - name: 리소스
           items:
             - name: FAQ
