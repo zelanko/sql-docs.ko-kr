@@ -16,15 +16,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753f
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 81a9f0e52c061ec494143eb4f61158546f5e57f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 241df9557a141eb45933ced261a7b55f98a6ec8e
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256939"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087354"
 ---
 # <a name="execution-plans"></a>실행 계획
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 쿼리를 실행하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은(는) 필요한 데이터에 액세스하는 가장 효율적인 방법을 결정하는 명령문을 분석해야 합니다. 이 분석은 쿼리 최적화 프로그램이라는 구성 요소에 의해 처리됩니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 실행 계획이라고 합니다.   
 
@@ -45,9 +45,9 @@ ms.locfileid: "78256939"
 
 > [!NOTE]
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 실행 계획을 표시하는 세 가지 옵션이 있습니다.        
-> -  쿼리 최적화 프로그램에서 추정을 기반으로 생성한 컴파일된 계획인 ***[예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)***.        
-> -  컴파일된 계획 및 관련 [실행 컨텍스트](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)와 동일한 ***[실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)***. 여기에는 실행 경고와 같이 실행이 완료된 후에 사용할 수 있는 실제 런타임 정보가 포함되거나 최신 버전의 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서는 실행 중에 사용되는 경과 및 CPU 시간이 포함됩니다.        
-> -  컴파일된 계획 및 관련 실행 컨텍스트와 동일한 ***[활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)***. 여기에는 실행되는 동안 제공되는 런타임 정보가 포함되며 1초마다 업데이트됩니다. 예를 들어 런타임 정보에는 연산자를 통해 흐르는 실제 행 수가 포함됩니다.       
+> -  ******[예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)은 쿼리 최적화 프로그램에서 추정을 기반으로 생성한 컴파일된 계획입니다. 계획 캐시에 저장되는 쿼리 계획입니다.        
+> -  ******[실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)은 컴파일된 계획 및 관련 [실행 컨텍스트](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)입니다. **쿼리 실행이 완료된 후** 사용할 수 있게 됩니다. 여기에는 실행 경고 또는 최신 버전 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 경우 실행 중에 사용된 경과 및 CPU 시간 같은 실제 런타임 정보가 포함됩니다.         
+> -  ******[활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)는 컴파일된 계획 및 관련 실행 컨텍스트입니다. **진행 중인 쿼리 실행**에 사용할 수 있으며 매초 업데이트됩니다. 여기에는 [연산자](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 통과하는 실제 행 수, 경과된 시간, 예상 쿼리 진행률 같은 실제 런타임 정보가 포함됩니다.
 
 > [!TIP]
 > 쿼리 처리 및 쿼리 실행 계획에 대한 자세한 내용은 쿼리 처리 아키텍처 가이드의 [SELECT 문 최적화](../../relational-databases/query-processing-architecture-guide.md#optimizing-select-statements) 및 [실행 계획 캐싱 및 다시 사용](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse) 섹션을 참조하세요.

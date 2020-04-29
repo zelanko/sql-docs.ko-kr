@@ -32,14 +32,14 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 944db91150b932676c9caa1e291ac4f963328580
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80217140"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138151"
 ---
-# <a name="resolve-index-fragmentation-using-by-reorganizing-or-rebuilding-indexes"></a>인덱스를 다시 구성하거나 다시 빌드하여 인덱스 조각화 해결
+# <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>인덱스를 다시 구성하거나 다시 빌드하여 인덱스 조각화 해결
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -50,8 +50,8 @@ ms.locfileid: "80217140"
 인덱스 조각화 정의 및 인덱스 조각화가 중요한 이유는 다음과 같습니다.
 
 - 조각화는 인덱스의 키 값을 기준으로 하는 인덱스 내의 논리적 순서가 인덱스 페이지 내의 물리적 순서와 일치하지 않는 인덱스 페이지가 있는 경우에 발생합니다.
-- 기본 데이터에 대해 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 데이터베이스 엔진이 인덱스를 자동으로 수정합니다. 예를 들어 테이블에 행을 추가하는 경우 새로운 키 값의 삽입 공간을 확보하기 위해 rowstore 인덱스의 기존 페이지가 분할될 수 있습니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다.
-- 인덱스가 심하게 조각화된 경우 인덱스가 가리키는 데이터를 찾기 위해 추가 IO가 필요하므로 쿼리 성능이 저하될 수 있습니다. IO가 많을수록, 특히 검사 작업이 포함된 경우 애플리케이션이 느리게 응답합니다.
+- [!INCLUDE[ssde_md](../../includes/ssde_md.md)]에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 수정합니다. 예를 들어 테이블에 행을 추가하는 경우 새로운 키 값의 삽입 공간을 확보하기 위해 rowstore 인덱스의 기존 페이지가 분할될 수 있습니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다.
+- 인덱스가 심하게 조각화된 경우 인덱스가 가리키는 데이터를 찾기 위해 추가 I/O가 필요하므로 쿼리 성능이 저하될 수 있습니다. I/O가 많을수록, 특히 검사 작업이 포함된 경우 애플리케이션이 느리게 응답합니다.
 
 ## <a name="detecting-the-amount-of-fragmentation"></a>조각화의 양 검색
 
@@ -215,12 +215,12 @@ object_id   TableName                   index_id    IndexName                   
 
 인덱스 재구성은 최소한의 시스템 리소스를 사용하는 온라인 작업입니다. 즉, 장기간 차단 테이블 잠금이 유지되지 않으며 `ALTER INDEX REORGANIZE` 트랜잭션 중 기본 테이블에 대한 쿼리나 업데이트를 계속할 수 있습니다.
 
-- [rowstore 인덱스](clustered-and-nonclustered-indexes-described.md)의 경우 데이터베이스 엔진이 리프 노드의 논리적 순서(왼쪽에서 오른쪽)에 맞게 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블과 뷰에 대한 리프 수준의 클러스터형 및 비클러스터형 인덱스를 조각 모음합니다. 또한 재구성을 통해 인덱스 페이지가 인덱스의 채우기 비율 값에 따라 압축됩니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요. 구문 예제는 [예제: Rowstore 재구성](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)을 참조하세요.
+- [rowstore 인덱스](clustered-and-nonclustered-indexes-described.md)의 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 리프 노드의 논리적 순서(왼쪽에서 오른쪽)에 맞게 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블과 뷰에 대한 리프 수준의 클러스터형 및 비클러스터형 인덱스를 조각 모음합니다. 또한 재구성을 통해 인덱스 페이지가 인덱스의 채우기 비율 값에 따라 압축됩니다. 채우기 비율 설정을 보려면 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)를 사용하세요. 구문 예제는 [예제: Rowstore 재구성](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)을 참조하세요.
 - [columnstore 인덱스](columnstore-indexes-overview.md)를 사용하는 경우 시간 경과에 따라 데이터를 삽입, 업데이트 및 삭제함으로써 델타 저장소가 여러 개의 작은 행 그룹으로 분할될 수 있습니다. columnstore 인덱스를 재구성하면 모든 행 그룹이 columnstore에 강제로 포함되고, 행 그룹이 더 많은 행을 포함하는 소수의 행 그룹으로 결합됩니다. 또한 재구성 작업은 columnstore에서 삭제된 행을 제거합니다. 처음 재구성하는 경우 데이터 압축을 위해 추가 CPU 리소스가 필요하므로 전반적인 시스템 성능이 느려질 수 있습니다. 하지만 데이터가 압축되는 즉시 쿼리 성능이 향상됩니다. 구문 예제는 [예제: ColumnStore 재구성](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)을 참조하세요.
 
 ### <a name="rebuild-an-index"></a>인덱스 다시 작성
 
-인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 인덱스 및 데이터베이스 엔진 버전 유형에 따라 온라인이나 오프라인에서 다시 빌드 작업을 수행할 수 있습니다. T-SQL 구문에 대한 자세한 내용은 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)를 참조하세요.
+인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 인덱스 유형 및 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 버전에 따라 온라인이나 오프라인에서 다시 빌드 작업을 수행할 수 있습니다. T-SQL 구문에 대한 자세한 내용은 [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)를 참조하세요.
 
 - [rowstore 인덱스](clustered-and-nonclustered-indexes-described.md)의 경우 다시 빌드하면 조각화가 제거되고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간이 회수되며, 인덱스 행이 연속된 페이지로 다시 정렬됩니다. `ALL`을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다. 외래 키 제약 조건은 미리 삭제하지 않아도 됩니다. 익스텐트가 128개 이상인 인덱스를 다시 작성하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 실제 페이지 할당 취소와 해당 관련 잠금이 트랜잭션 커밋 후까지 지연됩니다. 구문 예제는 [예제: Rowstore 재구성](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes)을 참조하세요.
 - [columnstore 인덱스](columnstore-indexes-overview.md)의 경우 다시 빌드하면 조각화가 제거되고, 모든 행이 columnstore로 이동되며, 테이블에서 논리적으로 삭제된 행을 물리적으로 삭제하여 디스크 공간이 회수됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 온라인 작업과 같이 `REORGANIZE`가 백그라운드에서 필수 재빌드를 수행하므로 columnstore 인덱스를 다시 빌드할 필요가 없습니다. 구문 예제는 [예제: ColumnStore 재구성](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes)을 참조하세요.
@@ -342,13 +342,13 @@ ALTER INDEX ALL ON HumanResources.Employee
 > [!IMPORTANT]
 > 인덱스가 위치한 파일 그룹이 오프라인이거나 읽기 전용으로 설정되어 있으면 인덱스를 다시 구성할 수 없습니다. ALL 키워드를 지정하면 하나 이상의 인덱스가 오프라인 또는 읽기 전용 파일 그룹에 있을 경우 해당 문이 실패합니다.
 >
-> 인덱스를 다시 빌드하는 동안 물리적 미디어에는 인덱스의 두 복사본을 저장할 수 있는 충분한 공간이 있어야 합니다. 다시 빌드 작업이 끝나면 데이터베이스 엔진이 원래 인덱스를 삭제합니다.
+> 인덱스를 다시 빌드하는 동안 물리적 미디어에는 인덱스의 두 복사본을 저장할 수 있는 충분한 공간이 있어야 합니다. 다시 빌드 작업이 끝나면 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]이 원래 인덱스를 삭제합니다.
 
 `ALL`을 `ALTER INDEX` 문으로 지정하면 테이블에서 관계형 인덱스, 클러스터형 및 비클러스터형 인덱스 모두와 XML 인덱스가 다시 구성됩니다.
 
 ## <a name="considerations-specific-to-rebuilding-a-columnstore-index"></a>Columnstore 인덱스 다시 빌드 관련 고려 사항
 
-columnstore 인덱스를 다시 빌드하는 경우 데이터베이스 엔진은 델타 저장소를 포함하여 원래 columnstore 인덱스에서 모든 데이터를 읽습니다. 데이터를 새 행 그룹으로 결합하고 행 그룹을 columnstore로 압축합니다. 데이터베이스 엔진은 테이블에서 논리적으로 삭제된 행을 물리적으로 삭제하여 columnstore를 조각 모음합니다. 삭제된 바이트는 디스크에서 회수됩니다.
+Columnstore 인덱스를 다시 빌드하는 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 델타 저장소를 비롯하여 원래 columnstore 인덱스에서 모든 데이터를 읽습니다. 데이터를 새 행 그룹으로 결합하고 행 그룹을 columnstore로 압축합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 테이블에서 논리적으로 삭제된 행을 물리적으로 삭제하여 columnstore를 조각 모음합니다. 삭제된 바이트는 디스크에서 회수됩니다.
 
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>전체 테이블 대신 파티션 다시 빌드
 
@@ -365,11 +365,11 @@ columnstore 인덱스를 다시 빌드하는 경우 데이터베이스 엔진은
 
 ## <a name="considerations-specific-to-reorganizing-a-columnstore-index"></a>Columnstore 인덱스 다시 구성 관련 고려 사항
 
-columnstore 인덱스를 재구성하는 경우 데이터베이스 엔진은 각 CLOSED 델타 행 그룹을 압축된 행 그룹으로 columnstore에 압축합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 Azure SQL Database에서 `REORGANIZE` 명령은 다음과 같은 추가 조각 모음 최적화를 온라인으로 수행합니다.
+columnstore 인덱스를 다시 구성하는 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 압축된 행 그룹으로 CLOSED 각 델타 행 그룹을 columnstore로 압축합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 `REORGANIZE` 명령은 다음과 같은 추가 조각 모음 최적화를 온라인으로 수행합니다.
 
-- 행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, SQL Server는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 스토리지를 절약합니다.
-- 하나 이상의 압축된 rowgroup을 결합하여 rowgroup당 행 수를 최대 1,024,576개로 증가시킵니다. 예를 들어 행 102,400개의 대량 가져오기 5회를 수행하면 압축된 rowgroup 5개를 얻습니다. REORGANIZE를 실행하면 이러한 rowgroup이 크기 512,000행의 압축된 rowgroup 1개로 병합됩니다. 이때 사전 크기 또는 메모리 제한이 없는 것으로 가정합니다.
-- 10% 이상의 행이 논리적으로 삭제된 행 그룹에 대해, 데이터베이스 엔진은 하나 이상의 행 그룹과 이 행 그룹을 결합하려고 합니다. 예를 들어 rowgroup 1이 행 500,000개를 사용하여 압축된다면 rowgroup 21은 최대 1,048,576개의 행을 사용하여 압축됩니다. 즉, rowgroup 21은 삭제된 행 60%와 남은 행 409,830개를 포함합니다. 데이터베이스 엔진은 이러한 두 행 그룹을 결합하여 909,830개의 행을 포함하는 새로운 행 그룹을 압축하는 방식을 선호합니다.
+- 행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 스토리지를 절약합니다.
+- 하나 이상의 압축된 rowgroup을 결합하여 rowgroup당 행 수를 최대 1,048,576개로 증가시킵니다. 예를 들어 행 102,400개의 대량 가져오기 5회를 수행하면 압축된 rowgroup 5개를 얻습니다. REORGANIZE를 실행하면 이러한 rowgroup이 크기 512,000행의 압축된 rowgroup 1개로 병합됩니다. 이때 사전 크기 또는 메모리 제한이 없는 것으로 가정합니다.
+- 행의 10% 이상이 논리적으로 삭제된 행 그룹의 경우 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 이 행 그룹을 하나 이상의 행 그룹과 결합하려고 시도합니다. 예를 들어 rowgroup 1이 행 500,000개를 사용하여 압축된다면 rowgroup 21은 최대 1,048,576개의 행을 사용하여 압축됩니다. 즉, rowgroup 21은 삭제된 행 60%와 남은 행 409,830개를 포함합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]는 이러한 두 행 그룹을 결합하여 909,830개의 행을 포함한 새 행 그룹을 압축하는 방법을 선호합니다.
 
 데이터 로드를 수행하면 델타 저장소에 여러 개의 작은 행 그룹을 포함할 수 있습니다. `ALTER INDEX REORGANIZE`를 사용하여 모든 rowgroup을 columnstore로 강제한 후 rowgroup을 열이 더 많은 소수의 rowgroup으로 결합합니다. 또한, 재구성 작업은 columnstore에서 삭제된 행도 제거합니다.
 
@@ -401,8 +401,8 @@ columnstore 인덱스를 재구성하는 경우 데이터베이스 엔진은 각
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>INDEX REBUILD를 사용하여 하드웨어 오류 복구
 
-이전 버전의 SQL Server에서는 rowstore 비클러스터형 인덱스를 다시 빌드하여 하드웨어 오류로 인한 불일치를 해결할 수 있는 경우가 있었습니다.
-SQL Server 2008 이상에서도 비클러스터형 인덱스를 오프라인으로 다시 빌드하여 인덱스와 클러스터형 인덱스 간의 불일치를 복구할 수 있습니다. 그러나 인덱스를 온라인으로 다시 빌드하는 경우에는 비클러스터형 인덱스 간의 불일치를 해결할 수 없습니다. 온라인으로 다시 빌드하는 경우 기존의 비클러스터형 인덱스를 사용하므로 불일치가 계속 남아 있게 됩니다. 경우에 따라 오프라인으로 인덱스를 다시 작성하면 클러스터형 인덱스 검색 또는 힙 검색이 수행되어 불일치가 제거됩니다. 클러스터형된 인덱스에서 다시 빌드되도록 하려면 비클러스터형 인덱스를 삭제한 후 다시 만드세요. 이전 버전의 경우처럼 영향을 받은 데이터를 백업한 후 복원하여 불일치를 제거하는 것이 좋습니다. 비클러스터형 인덱스의 경우에는 오프라인으로 인덱스를 다시 작성하여 인덱스 간 불일치를 해결할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.
+이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 rowstore 비클러스터형 인덱스를 다시 빌드하여 하드웨어 오류로 인한 불일치를 해결할 수 있는 경우도 있습니다.
+[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 이상에서도 비클러스터형 인덱스를 오프라인으로 다시 빌드하여 인덱스와 클러스터형 인덱스 간의 불일치를 복구할 수 있습니다. 그러나 인덱스를 온라인으로 다시 빌드하는 경우에는 비클러스터형 인덱스 간의 불일치를 해결할 수 없습니다. 온라인으로 다시 빌드하는 경우 기존의 비클러스터형 인덱스를 사용하므로 불일치가 계속 남아 있게 됩니다. 경우에 따라 오프라인으로 인덱스를 다시 작성하면 클러스터형 인덱스 검색 또는 힙 검색이 수행되어 불일치가 제거됩니다. 클러스터형된 인덱스에서 다시 빌드되도록 하려면 비클러스터형 인덱스를 삭제한 후 다시 만드세요. 이전 버전의 경우처럼 영향을 받은 데이터를 백업한 후 복원하여 불일치를 제거하는 것이 좋습니다. 비클러스터형 인덱스의 경우에는 오프라인으로 인덱스를 다시 작성하여 인덱스 간 불일치를 해결할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

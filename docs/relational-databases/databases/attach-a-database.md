@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 연결 | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 데이터베이스를 연결하는 방법을 알아봅니다. 이 기능을 사용하여 데이터베이스를 복사, 이동 또는 업그레이드합니다.
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911037"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138181"
 ---
 # <a name="attach-a-database"></a>데이터베이스 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +129,7 @@ ms.locfileid: "76911037"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  [ 절이 포함된 ](../../t-sql/statements/create-database-sql-server-transact-sql.md)CREATE DATABASE`FOR ATTACH` 문을 사용합니다.  
+3.  `FOR ATTACH` 절이 포함된 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 사용합니다.  
   
      다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 파일을 연결하고 데이터베이스 이름을 `MyAdventureWorks`로 바꿉니다.  
   

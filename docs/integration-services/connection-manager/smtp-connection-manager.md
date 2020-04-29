@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40e6fc7d5156ebb56266977bf929242db232e3e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f36ab7571008b73d90cc337e3fe7f5e5fa8523
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298487"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087433"
 ---
 # <a name="smtp-connection-manager"></a>SMTP 연결 관리자
 
@@ -46,7 +46,7 @@ ms.locfileid: "71298487"
     > [!IMPORTANT]  
     >  SMTP 연결 관리자는 익명 인증과 Windows 인증만 지원하며 기본 인증은 지원하지 않습니다.  
   
--   전자 메일 메시지를 보낼 때 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화할지 여부를 지정합니다.  
+-   이메일 메시지를 보낼 때 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 통신 암호화 여부를 지정합니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -79,5 +79,5 @@ ms.locfileid: "71298487"
 >  Microsoft Exchange를 SMTP 서버로 사용하는 경우 **Windows 인증 사용** 을 **True**로 설정해야 할 수 있습니다. 인증되지 않은 SMTP 연결을 허용하지 않도록 Exchange Server를 구성할 수도 있습니다.  
   
  **SSL(Secure Sockets Layer) 사용**  
- 전자 메일 메시지를 보낼 때 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화하려면 선택합니다.  
+ 이메일 메시지를 보낼 때 TLS/SSL을 사용하여 통신을 암호화하려면 선택합니다.  
   

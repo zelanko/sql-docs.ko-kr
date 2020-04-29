@@ -1,5 +1,6 @@
 ---
 title: 백업 및 복원으로 데이터베이스 복사 | Microsoft 문서
+description: SQL Server에서 일부 이전 버전을 사용하여 만든 사용자 데이터베이스의 백업을 복원하여 새 데이터베이스를 만들 수 있습니다.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 828357399c1c63c046362c2b25cf3e71cc5def67
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137320"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138164"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

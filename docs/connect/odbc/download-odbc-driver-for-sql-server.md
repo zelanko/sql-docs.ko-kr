@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 ODBC 드라이버 다운로드
 description: Microsoft ODBC Driver for SQL Server를 다운로드하여 SQL Server 및 Azure SQL Database에 연결하는 네이티브 코드 애플리케이션을 개발합니다.
-ms.date: 04/01/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba443225baa1e84a56fd9ce114ec8ff6fa96ebb9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: c9a1b33348729aca9a0f77628e51f1c7d4c0e051
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488598"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153248"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버 다운로드
 
@@ -71,7 +71,9 @@ Microsoft ODBC Driver 17.5.2 for SQL Server(x86):
 
 ### <a name="alpine"></a>Alpine
 
-- [Alpine 패키지](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk)([PGP 서명](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [17.5.2.2 Alpine 패키지](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.apk)([PGP 서명](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.2-1_amd64.sig))
+- [17.5.2.1 Alpine 패키지](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk)([PGP 서명](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig))
+- [17.5.1.1 Alpine 패키지](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.apk)([PGP 서명](https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.1.1-1_amd64.sig))
 
 ### <a name="debian"></a>Debian
 

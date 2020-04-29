@@ -10,14 +10,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 25fae1036d3a07d3cdbfe92ef55fe92e0396497a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57ac5173fe17c3703a1fe9ee59c455bc25fe8131
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242628"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153136"
 ---
-# <a name="configure-polybase-to-access-external-data-in-oracle"></a>Oracle의 외부 데이터에 액세스하도록 PolyBase 구성
+# <a name="configure-polybase-to-access-external-data-in-oracled"></a>Oracle의 외부 데이터에 액세스하도록 PolyBase 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 

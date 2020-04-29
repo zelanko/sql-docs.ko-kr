@@ -1,7 +1,7 @@
 ---
 title: 테이블 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,20 +36,20 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981760"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087525"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  테이블 힌트는 잠금 메서드, 하나 이상의 인덱스, Table Scan 또는 Index Seek와 같은 쿼리 처리 연산이나 기타 옵션을 지정하여 DML(데이터 조작 언어) 문이 실행되는 동안 쿼리 최적화 프로그램의 기본 동작을 무시합니다. 테이블 힌트는 DML 문의 FROM 절에서 지정하며 해당 절에서 참조되는 테이블이나 뷰에만 영향을 줍니다.  
+  테이블 힌트는 잠금 메서드, 하나 이상의 인덱스, 테이블 검색 또는 Index Seek와 같은 쿼리 처리 연산이나 기타 옵션을 지정하여 DML(데이터 조작 언어) 문이 실행되는 동안 쿼리 최적화 프로그램의 기본 동작을 무시합니다. 테이블 힌트는 DML 문의 FROM 절에서 지정하며 해당 절에서 참조되는 테이블이나 뷰에만 영향을 줍니다.  
   
 > [!CAUTION]  
->  일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리에 대해 최상의 실행 계획을 선택하므로 숙련된 개발자 및 데이터베이스 관리자가 마지막 방법으로만 힌트를 사용하는 것이 좋습니다.  
+>  일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 쿼리에 대해 최상의 실행 계획을 선택하므로 숙련된 개발자 및 데이터베이스 관리자는 마지막 방법으로만 힌트를 사용하는 것이 좋습니다.  
   
  **적용 대상:**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "73981760"
   
 ## <a name="syntax"></a>구문  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]
 > [!IMPORTANT]  
 > WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 다음은 그 예입니다.  
+다음 테이블 힌트는 `WITH` 키워드를 포함하거나 포함하지 않고 사용할 수 있습니다. `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT`, `NOEXPAND` 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 다음은 그 예입니다.  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ READUNCOMMITTED와 동일합니다. 자세한 내용은 이 항목의 뒷부분�
 > UPDATE 또는 DELETE 문의 경우: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-테이블에 잠금이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 바로 메시지를 반환하도록 지정합니다. NOWAIT는 특정 테이블에 SET LOCK_TIMEOUT 0을 지정하는 것과 동일합니다. TABLOCK 힌트도 포함되어 있는 경우 NOWAIT 힌트가 작동하지 않습니다. TABLOCK 힌트를 사용할 때 기다리지 않고 쿼리를 종료하려면 쿼리 앞에 `SETLOCK_TIMEOUT 0;`을 대신 추가하세요.  
+테이블에 잠금이 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 바로 메시지를 반환하도록 지정합니다. NOWAIT는 특정 테이블에 `SET LOCK_TIMEOUT 0`을 지정하는 것과 같습니다. TABLOCK 힌트도 포함되어 있는 경우 NOWAIT 힌트가 작동하지 않습니다. TABLOCK 힌트를 사용할 때 기다리지 않고 쿼리를 종료하려면 쿼리 앞에 `SETLOCK_TIMEOUT 0;`을 대신 추가하세요.  
   
 PAGLOCK  
 일반적으로 행 또는 키에 개별 잠금이 사용되거나 일반적으로 단일 테이블 잠금이 사용되는 곳에서 페이지 잠금을 사용합니다. 기본적으로 작업에 적합한 잠금 모드를 사용합니다. SNAPSHOT 격리 수준에서 작동하는 트랜잭션에 지정하는 경우 UPDLOCK 및 HOLDLOCK과 같은 잠금이 필요한 다른 테이블 힌트와 함께 PAGLOCK을 사용하지 않으면 페이지 잠금이 수행되지 않습니다.  
@@ -339,7 +339,7 @@ geometry 또는 geography 개체의 공간 분할(tessellation)에 사용할 최
 TABLOCK  
 획득한 잠금이 테이블 수준에 적용되도록 지정합니다. 획득한 잠금 유형은 실행 중인 문에 따라 달라집니다. 예를 들어 SELECT 문에서는 공유 잠금을 획득할 수 있습니다. TABLOCK을 지정하여 공유 잠금을 행 또는 페이지 수준 대신 전체 테이블에 적용할 수 있습니다. HOLDLOCK도 함께 지정한 경우에는 트랜잭션이 끝날 때까지 테이블 잠금이 유지됩니다.  
   
-INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table> 문을 사용하여 힙으로 데이터를 가져오는 경우, 대상 테이블에 대해 TABLOCK 힌트를 지정하여 명령문에 최적화된 잠금과 로깅을 사용하도록 설정할 수 있습니다. 또한 데이터베이스의 복구 모델은 단순 또는 대량으로 지정해야 합니다. 자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.  
+`INSERT INTO <target_table> SELECT <columns> FROM <source_table>` 문을 사용하여 힙으로 데이터를 가져올 때 대상 테이블에 TABLOCK 힌트를 지정하여 문에 대해 최소 로깅과 최적화된 잠금을 사용하도록 설정할 수 있습니다. 또한 데이터베이스의 복구 모델은 단순 또는 대량으로 지정해야 합니다. TABLOCK 힌트로 힙 또는 클러스터형 columnstore 인덱스에 대한 병렬 삽입도 가능합니다. 자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.  
   
 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) 대량 행 집합 공급자와 함께 TABLOCK을 사용하여 테이블로 데이터를 가져오는 경우, 여러 클라이언트에서 로깅 및 잠금이 최적화된 상태에서 대상 테이블로 데이터를 동시에 로드할 수 있습니다. 자세한 내용은 [대량 가져오기의 최소 로깅을 위한 필수 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)을 참조하세요.  
   

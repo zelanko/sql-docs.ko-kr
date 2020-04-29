@@ -1,6 +1,6 @@
 ---
-title: SQL Server용 OLE DB 드라이버를 사용하는 경우 | Microsoft Docs
-description: SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
+title: OLE DB Driver를 사용하는 경우
+description: OLE DB Driver for SQL Server를 사용하는 경우와 다른 드라이버와 차별화되는 상위 수준 데이터 액세스 개념에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4f3ec9e3eee38b5ba6f2c0140a1f6eb316941a02
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68015194"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727953"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68015194"
  OLE DB Driver for SQL Server와 MDAC 간의 차이점에 대한 자세한 내용은 [애플리케이션을 MDAC에서 OLE DB Driver for SQL Server로 업데이트](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)     
- [OLE DB 방법 도움말 항목](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [SQL Server용 OLE DB 드라이버](oledb-driver-for-sql-server.md)  
+ [OLE DB 방법 도움말 항목](ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -17,12 +17,12 @@ ms.author: maghan
 ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b01a04dfc4dbf31c08d595de184cd64f635e2c7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 896b0a435eee20dbe8616e4610e1f51f70cbb4c0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245906"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087553"
 ---
 # <a name="create-a-multiserver-environment"></a>다중 서버 환경 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "75245906"
 
 다중 서버 관리를 위해서는 마스터 서버(MSX)와 하나 이상의 대상 서버(TSX)를 설치해야 합니다. 모든 대상 서버에서 처리되는 작업은 먼저 마스터 서버에서 정의된 다음 대상 서버로 다운로드됩니다.  
   
-마스터 서버와 대상 서버 간 연결은 기본적으로 전체 SSL(Secure Sockets Layer) 암호화 및 인증서 확인을 사용할 수 있도록 설정됩니다. 자세한 내용은 [대상 서버의 암호화 옵션 설정](../../ssms/agent/set-encryption-options-on-target-servers.md)을 참조하세요.  
+기본적으로 마스터 서버와 대상 서버 간의 연결에는 이전에 SSL(Secure Sockets Layer)이라고 알려진 TLS(전송 계층 보안) 암호화 및 인증서 유효성 검사가 사용하도록 설정됩니다. 자세한 내용은 [대상 서버의 암호화 옵션 설정](../../ssms/agent/set-encryption-options-on-target-servers.md)을 참조하세요.  
   
 대상 서버가 많으면 대상 서버 트래픽으로 인해 프로덕션 서버의 성능이 저하될 수 있으므로 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대한 성능 요구 사항이 중요한 프로덕션 서버에 마스터 서버를 정의하지 않는 것이 좋습니다. 또한 전용 마스터 서버로 이벤트를 전달하면 하나의 서버에서 집중 관리할 수 있습니다. 자세한 내용은 [이벤트 관리](../../ssms/agent/manage-events.md)를 참조하세요.  
   

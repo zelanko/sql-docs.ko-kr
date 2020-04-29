@@ -1,5 +1,6 @@
 ---
-title: 예제 애플리케이션(SQLSRV 드라이버) | Microsoft Docs
+title: 예제 애플리케이션(SQLSRV 드라이버)
+description: AdventureWorks 제품 검토 예제는 SQLSRV 드라이버를 사용하여 PHP에서 SQL Server 데이터베이스와 상호 작용하는 방법을 보여 주는 웹 애플리케이션입니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82f12dd1a5a50f05f6e831f269ed017e55e46e97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916654"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728352"
 ---
 # <a name="example-application-sqlsrv-driver"></a>예제 애플리케이션(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

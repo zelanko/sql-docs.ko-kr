@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aad9f7204073590927cdbecdf237038311bb686d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81627993"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138291"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,11 +287,11 @@ LOB_COMPACTION = OFF
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 columnstore 인덱스의 경우, REORGANIZE는 다음과 같은 추가 조각 모음 최적화를 온라인으로 수행합니다.  
   
--   행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, SQL Server는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 스토리지를 절약합니다.  
+-   행의 10% 이상이 논리적으로 삭제된 경우 rowgroup에서 행을 물리적으로 제거합니다. 삭제된 바이트는 물리적 미디어에서 회수됩니다. 예를 들어 행 1백만 개의 압축된 행 그룹이 삭제된 행 10만 개를 포함하는 경우, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 삭제된 행을 제거하고 행이 90만 개인 rowgroup을 다시 압축합니다. 즉, 삭제된 행을 제거하여 스토리지를 절약합니다.  
   
--   하나 이상의 압축된 rowgroup을 결합하여 rowgroup당 행 수를 최대 1,024,576개로 증가시킵니다. 예를 들어 행 102,400개의 대량 가져오기 5회를 수행하면 압축된 rowgroup 5개를 얻습니다. REORGANIZE를 실행하면 이러한 rowgroup이 크기 512,000행의 압축된 rowgroup 1개로 병합됩니다. 이때 사전 크기 또는 메모리 제한이 없는 것으로 가정합니다.  
+-   하나 이상의 압축된 rowgroup을 결합하여 rowgroup당 행 수를 최대 1,048,576개로 증가시킵니다. 예를 들어 행 102,400개의 대량 가져오기 5회를 수행하면 압축된 rowgroup 5개를 얻습니다. REORGANIZE를 실행하면 이러한 rowgroup이 크기 512,000행의 압축된 rowgroup 1개로 병합됩니다. 이때 사전 크기 또는 메모리 제한이 없는 것으로 가정합니다.  
   
--   행의 10% 이상이 논리적으로 삭제된 rowgroup의 경우 SQL Server는 이 rowgroup을 하나 이상의 rowgroup과 결합하려고 시도합니다. 예를 들어 rowgroup 1이 행 500,000개를 사용하여 압축된다면 rowgroup 21은 최대 1,048,576개의 행을 사용하여 압축됩니다.  즉, rowgroup 21은 삭제된 행 60%와 남은 행 409,830개를 포함합니다. SQL Server는 이러한 두 rowgroup을 결합하여 행 909,830개를 포함한 새 rowgroup을 압축하는 방법을 선호합니다.  
+-   행의 10% 이상이 논리적으로 삭제된 행 그룹의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 행 그룹을 하나 이상의 행 그룹과 결합하려고 시도합니다. 예를 들어 rowgroup 1이 행 500,000개를 사용하여 압축된다면 rowgroup 21은 최대 1,048,576개의 행을 사용하여 압축됩니다. 즉, rowgroup 21은 삭제된 행 60%와 남은 행 409,830개를 포함합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 두 행 그룹을 결합하여 909,830개의 행을 포함한 새 행 그룹을 압축하는 방법을 선호합니다.  
   
 REORGANIZE WITH ( COMPRESS_ALL_ROW_GROUPS = { ON | **OFF** } )  
  columnstore 인덱스에 적용됩니다. 

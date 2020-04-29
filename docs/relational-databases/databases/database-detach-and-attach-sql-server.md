@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 분리 및 연결(SQL Server) | Microsoft 문서
+description: SQL Server 데이터베이스의 데이터 및 트랜잭션 로그 파일을 분리했다 다시 연결하여 데이터베이스를 다른 인스턴스로 변경하거나 데이터베이스를 이동할 수 있습니다.
 ms.custom: ''
 ms.date: 11/26/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e13bab7b3a5b97195a1fd57e30cd2f5bf514b315
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809711"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138173"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

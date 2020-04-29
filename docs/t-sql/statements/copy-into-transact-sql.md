@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631976"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153234"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-이 문서에서는 외부 스토리지 계정에서 로드하기 위해 Azure SQL Data Warehouse의 COPY 문을 사용하는 방법을 설명합니다. COPY 문은 SQL Data Warehouse에 대한 처리량이 높은 데이터 수집을 위한 가장 뛰어난 유연성을 제공합니다.
+이 문서에서는 외부 스토리지 계정에서 로드하기 위해 Azure SQL Data Warehouse의 COPY 문을 사용하는 방법을 설명합니다. COPY 문은 SQL Data Warehouse에 대한 처리량이 높은 데이터 수집을 위한 가장 뛰어난 유연성을 제공합니다. 다음 기능에 COPY를 사용합니다.
+
+- 권한이 낮은 사용자를 사용하여 데이터 웨어하우스에 대한 엄격한 제어 권한 없이 로드
+- 추가 데이터베이스 개체를 만들 필요 없이 단일 T-SQL 문을 실행
+- **구분 기호**(문자열, 필드, 행)**가** **문자열로 구분된 열 내에서 이스케이프**되는 경우 CSV 파일을 올바르게 구문 분석하고 로드
+- SAS(공유 액세스 서명)를 사용하여 스토리지 계정 키를 노출하지 않고 보다 세부적인 사용 권한 모델을 지정
+- ERRORFILE 위치(REJECTED_ROW_LOCATION)에 대해 다른 스토리지 계정을 사용
+- 각 대상 열에 대한 기본값을 사용자 지정하고 원본 데이터 필드를 지정하여 특정 대상 열에 로드
+- CSV 파일에 대한 사용자 지정 행 종결자 지정
+- CSV 파일에 대한 SQL Server 날짜 형식 활용
+- 스토리지 위치 경로에 와일드카드 및 여러 파일 지정
 
 > [!NOTE]  
 > COPY 문은 현재 공개 미리 보기로 제공됩니다.
@@ -208,21 +218,20 @@ COPY 명령은 이 매개 변수가 지정되지 않은 경우 파일 확장명�
 - .deflate - **DefaultCodec**(Parquet 및 ORC만 해당)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE*는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 문자는 FIELDQUOTE의 UTF-8에서 지원되지 않습니다.
+*FIELDQUOTE*는 CSV에 적용되며 CSV 파일에서 따옴표 문자(문자열 구분 기호)로 사용될 단일 문자를 지정합니다. 지정하지 않으면 RFC 4180 표준에 정의한 대로 따옴표 문자(")가 따옴표 문자로 사용됩니다. 확장 ASCII 및 멀티바이트 문자는 FIELDQUOTE의 UTF-8에 지원되지 않습니다.
 
 > [!NOTE]  
 > FIELDQUOTE 문자는 이중 FIELDQUOTE(구분 기호)가 있는 문자열 열에서 이스케이프됩니다. 
 
 *FIELDTERMINATOR = 'field_terminator’*</br>
-*FIELDTERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 필드 종결자를 지정합니다. 16진수 표기법을 사용하여 필드 종결자를 지정할 수 있습니다. 필드 종결자는 여러 문자일 수 있습니다. 기본 필드 종결자는 (,)입니다.
-자세한 내용은 [필드 및 행 종결자 지정(SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017)을 참조하세요.
+*FIELDTERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 필드 종결자를 지정합니다. 16진수 표기법을 사용하여 필드 종결자를 지정할 수 있습니다. 필드 종결자는 여러 문자일 수 있습니다. 기본 필드 종결자는 (,)입니다. 확장 ASCII 및 멀티바이트 문자는 FIELDTERMINATOR의 UTF-8에 지원되지 않습니다.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* CSV에만 적용됩니다. CSV 파일에서 사용될 행 종결자를 지정합니다. 16진수 표기법을 사용하여 행 종결자를 지정할 수 있습니다. 행 종결자는 여러 문자일 수 있습니다. 기본적으로 행 종결자는 \r\n입니다. 
 
 COPY 명령은 \n(줄 바꿈)을 지정할 때 \r 문자를 접두사하여 \r\n을 생성합니다. \n 문자만 지정하려면 16진수 표기법(0x0A)을 사용합니다. 다중 문자 행 종결자를 16진수로 지정할 때 각 문자 사이에 0x를 지정하지 마세요.
 
-행 종결자를 지정하는 방법에 대한 추가 지침은 다음 [설명서](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators)를 검토하세요.
+확장 ASCII 및 멀티바이트 문자는 ROW TERMINATOR의 UTF-8에 지원되지 않습니다.
 
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW*는 CSV에 적용되며 COPY 명령의 모든 파일에서 먼저 읽을 행 번호를 지정합니다. 값은 1부터 시작되며 이것이 기본값입니다. 값이 2로 설정되면 데이터를 로드할 때 모든 파일의 첫 행(헤더 행)을 건너뜁니다. 행 종결자의 존재에 따라 행을 건너뜁니다.
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>FAQ
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>PolyBase 대비 COPY 명령의 성능은 어떤가요?
-기능이 출시될 시점에는 COPY 명령의 성능이 향상될 예정입니다. 퍼블릭 미리 보기 중에 최상의 로드 성능을 얻으려면 CSV를 로드할 때 입력을 여러 개의 파일로 분할하는 것이 좋습니다. 현재 COPY는 INSERT SELECT 사용 시 PolyBase와 성능이 같습니다. 
+COPY 명령은 워크로드에 따라 성능이 향상됩니다. 퍼블릭 미리 보기 중에 최상의 로드 성능을 얻으려면 CSV를 로드할 때 입력을 여러 개의 파일로 분할하는 것이 좋습니다. 미리 보기 기간 동안 Microsoft 팀과 성능 결과를 공유하세요! sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>CSV 파일을 로드하는 COPY 명령의 파일 분할 지침은 무엇인가요?
-파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. 
+파일 수에 대한 지침은 아래 표에 나와 있습니다. 권장 파일 수에 도달하면 파일이 클수록 성능이 향상됩니다. 간단한 파일 분할 환경을 보려면 다음 [설명서](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474)를 참조하세요. 
 
 | **DWU** | **#Files** |
 | :-----: | :--------: |

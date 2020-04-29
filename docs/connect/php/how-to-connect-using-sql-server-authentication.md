@@ -1,5 +1,6 @@
 ---
-title: '방법: SQL Server 인증을 사용하여 연결 | Microsoft Docs'
+title: '방법: SQL Server 인증을 사용하여 연결'
+description: SQL Server 인증을 사용하여 데이터베이스에 연결하는 경우 중요한 고려 사항을 알아봅니다.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916449"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728326"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>방법: SQL Server 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 SQL Server에 연결할 때 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 가 SQL Server 인증을 지원합니다.  
   
-Windows 인증이 불가능한 경우에만 SQL Server 인증을 사용해야 합니다. Windows 인증과 연결하는 방법에 대한 자세한 내용은 [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md)을 참조하세요.  
+Windows 인증이 불가능한 경우에만 SQL Server 인증을 사용해야 합니다. Windows 인증과 연결하는 방법에 대한 자세한 내용은 다음을 참조하세요. [방법: Windows 인증을 사용하여 연결](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 SQL Server 인증을 사용하여 SQL Server에 연결할 때 다음 사항을 고려해야 합니다.  
   

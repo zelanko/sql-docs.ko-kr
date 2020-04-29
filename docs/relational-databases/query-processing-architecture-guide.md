@@ -1,7 +1,7 @@
 ---
 title: 쿼리 처리 아키텍처 가이드 | Microsoft 문서
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510204"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108004"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ WHERE ProductID = 63;
 * 애플리케이션이 실행 계획이 만들어지고 재사용되는 시기를 제어할 수 있습니다.
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> 매개 변수 검색
-“매개 변수 검사”는 컴파일 또는 재컴파일을 수행하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 현재 매개 변수 값을 “검사”하고 쿼리 최적화 프로그램에 전달하여 해당 값이 더욱 효율적인 쿼리 실행 계획을 생성하는 데 사용될 수 있도록 하는 프로세스를 나타냅니다.
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> 매개 변수 민감도
+"매개 변수 스니핑"이 라고도 하는 매개 변수 민감도는 컴파일 또는 재컴파일을 수행하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 현재 매개 변수 값을 “검사”하고 쿼리 최적화 프로그램에 전달하여 해당 값이 더욱 효율적인 쿼리 실행 계획을 생성하는 데 사용될 수 있도록 하는 프로세스를 나타냅니다.
 
 컴파일 또는 재컴파일을 수행하는 동안 다음 유형의 일괄 처리에 대해 매개 변수 값을 검사합니다.
 
 -  저장 프로시저
--  sp_executesql을 통해 제출된 쿼리 
+-  `sp_executesql`을 통해 제출된 쿼리 
 -  준비된 쿼리
 
 잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](/azure/sql-database/sql-database-monitor-tune-overview)을 참조하세요.
@@ -929,11 +929,35 @@ WHERE ProductID = 63;
 -   **재귀 쿼리**        
     재귀에 대한 자세한 내용은 [재귀 공통 테이블 식 정의 및 사용 지침](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) 및 [T-SQL의 재귀](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)를 참조하세요.
 
--   **TVF(테이블 반환된 함수)**         
-    TVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
+-   **다중 문 테이블 반환 함수(MSTVF)**         
+    MSTVF에 대한 자세한 내용은 [사용자 정의 함수 만들기(데이터베이스 엔진)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)를 참조하세요.
     
 -   **TOP 키워드**        
     자세한 내용은 [TOP(Transact-SQL)](../t-sql/queries/top-transact-sql.md)을 참조하세요.
+
+쿼리 실행 계획은 병렬 처리를 사용하지 않는 이유를 설명하는 **QueryPlan** 요소의 **NonParallelPlanReason** 특성을 포함할 수 있습니다.  이 특성의 값은 다음과 같습니다.
+
+|NonParallelPlanReason Value|Description|
+|----|----|
+|MaxDOPSetToOne|최대 병렬 처리 수준이 1로 설정되어 있습니다.|
+|EstimatedDOPIsOne|예상 병렬 처리 수준이 1입니다.|
+|NoParallelWithRemoteQuery|원격 쿼리에는 병렬 처리가 지원되지 않습니다.|
+|NoParallelDynamicCursor|동적 커서에는 병렬 계획이 지원되지 않습니다.|
+|NoParallelFastForwardCursor|빠른 전방 커서에는 병렬 계획이 지원되지 않습니다.|
+|NoParallelCursorFetchByBookmark|책갈피에 의해 페치되는 커서에는 병렬 계획이 지원되지 않습니다.|
+|NoParallelCreateIndexInNonEnterpriseEdition|Enterprise 이외의 버전에는 병렬 인덱스 생성이 지원되지 않습니다.|
+|NoParallelPlansInDesktopOrExpressEdition|Desktop 및 Express 버전에는 병렬 계획이 지원되지 않습니다.|
+|NonParallelizableIntrinsicFunction|쿼리가 병렬 처리할 수 없는 내장 함수를 참조하고 있습니다.|
+|CLRUserDefinedFunctionRequiresDataAccess|데이터 액세스가 필요한 CLR UDF에는 병렬 처리가 지원되지 않습니다.|
+|TSQLUserDefinedFunctionsNotParallelizable|쿼리가 병렬 처리할 수 없는 T-SQL 사용자 정의 함수를 참조하고 있습니다.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|테이블 변수 트랜잭션은 병렬 중첩 트랜잭션을 지원하지 않습니다.|
+|DMLQueryReturnsOutputToClient|DML 쿼리는 출력을 클라이언트로 반환하며 병렬 처리할 수 없습니다.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|단일 온라인 인덱스 작성에 대해 지원되지 않는 직렬 및 병렬 계획의 조합입니다.|
+|CouldNotGenerateValidParallelPlan|병렬 계획을 확인하지 못했으며 직렬로 장애 복구(failback)됩니다.|
+|NoParallelForMemoryOptimizedTables|참조된 메모리 내 OLTP 테이블에는 병렬 처리가 지원되지 않습니다.|
+|NoParallelForDmlOnMemoryOptimizedTable|메모리 내 OLTP 테이블의 DML에는 병렬 처리가 지원되지 않습니다.|
+|NoParallelForNativelyCompiledModule|참조된 고유하게 컴파일된 모듈에는 병렬 처리가 지원되지 않습니다.|
+|NoRangesResumableCreate|다시 시작 가능한 만들기 작업에 대한 범위를 생성하지 못했습니다.|
 
 교환 연산자를 삽입하면 병렬 쿼리 실행 계획이 완성됩니다. 병렬 쿼리 실행 계획은 작업자 스레드를 여러 개 사용할 수 있습니다. 병렬이 아닌(직렬) 쿼리에서 사용하는 직렬 실행 계획은 해당 실행에 작업자 스레드 한 개만 사용합니다. 병렬 쿼리에서 사용하는 실제 작업자 스레드 수는 쿼리 계획 실행 초기화 시 결정되며 계획의 복잡성과 병렬 처리 수준에 따라 다릅니다. 
 
@@ -963,7 +987,13 @@ DOP(병렬 처리 수준)에 따라 사용되는 최대 CPU 수가 결정됩니�
  
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 실행 시 앞서 설명한 현재 시스템 작업과 구성 정보에서 병렬 실행이 가능한지 확인합니다. 병렬 실행이 보장되는 경우 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 최적의 작업자 스레드 수를 결정하고 이 작업자 스레드에 병렬 계획을 분산하여 실행합니다. 병렬 실행을 위해 쿼리 또는 인덱스 작업이 여러 작업자 스레드에서 실행되기 시작하면 해당 작업이 완료될 때까지 동일한 수의 작업자 스레드가 사용됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 계획 캐시에서 실행 계획을 가져올 때마다 최적의 작업자 스레드 수를 다시 검사합니다. 예를 들어 쿼리를 한 번 실행할 때는 직렬 계획을 사용할 수 있고 동일한 쿼리를 두 번째 실행할 때는 세 개의 작업자 스레드를 사용하는 병렬 계획을 사용할 수 있으며 이 쿼리를 세 번째로 실행할 때는 네 개의 작업자 스레드를 사용하는 병렬 계획을 사용할 수 있습니다.
 
-병렬 쿼리 실행 계획에서 삽입, 업데이트 및 삭제 작업은 직렬로 실행됩니다. 그러나 UPDATE 또는 DELETE 문의 WHERE 절이나 INSERT 문의 SELECT 부분은 병렬로 실행될 수 있습니다. 그런 다음 실제 데이터 변경 내용은 데이터베이스에 직렬로 적용됩니다.
+병렬 쿼리 실행 계획의 업데이트 및 삭제 연산자는 순차적으로 실행되지만 UPDATE 또는 DELETE 문의 WHERE 절은 병렬로 실행할 수 있습니다. 그런 다음 실제 데이터 변경 내용은 데이터베이스에 직렬로 적용됩니다.
+
+[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]까지는 삽입 연산자도 직렬로 실행됩니다. 그러나 INSERT 문의 SELECT 부분은 병렬로 실행할 수 있습니다. 그런 다음 실제 데이터 변경 내용은 데이터베이스에 직렬로 적용됩니다. 
+
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 및 데이터베이스 호환성 수준 110부터 `SELECT … INTO` 문을 병렬로 실행할 수 있습니다. 다른 형태의 삽입 연산자는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에 대해 설명한 것과 동일한 방식으로 작동합니다.
+
+[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 및 데이터베이스 호환성 수준 130부터 TABLOCK 힌트를 사용하면 힙 또는 CCI(클러스터형 columnstore 인덱스)에 삽입할 때 `INSERT … SELECT` 문을 병렬로 실행할 수 있습니다. 로컬 임시 테이블(# 접두사로 식별) 및 전역 임시 테이블(## 접두사로 식별)에 대한 삽입도 TABLOCK 힌트를 사용하여 병렬 처리에 사용할 수 있습니다. 자세한 내용은 [INSERT(Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices)를 참조하세요.
 
 정적 커서 및 키 집합 커서는 병렬 실행 계획에 따라 채워질 수 있습니다. 그러나 동적 커서의 동작은 직렬 실행에 의해서만 제공될 수 있습니다. 쿼리 최적화 프로그램은 동적 커서에 포함된 쿼리에 대해서는 항상 직렬 실행 계획을 생성합니다.
 

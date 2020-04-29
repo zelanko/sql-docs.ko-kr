@@ -11,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: aada983ac80116cce2001b5027b89b8824bd151f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307011"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087449"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
 
@@ -74,7 +74,7 @@ ms.locfileid: "75307011"
   
  컨트롤러 DCOM 권한을 구성하려면 다음 단계에 따르십시오.  
   
-1.  **구성 요소 서비스 스냅인 dcomcnfg.exe 열기**: 이 도구는 DCOM 권한을 구성하는 데 사용됩니다.  
+1.  **구성 요소 서비스 스냅인(dcomcnfg.exe) 열기**: 이 스냅인은 DCOM 권한을 구성하는 데 사용되는 도구입니다.  
   
     1.  컨트롤러 컴퓨터에서 **시작**을 클릭합니다.  
   
@@ -82,9 +82,9 @@ ms.locfileid: "75307011"
   
     3.  Enter 키를 누릅니다.  
   
-2.  **컴퓨터 전체 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+2.  **컴퓨터 차원 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 해당되는 컴퓨터 전체 DCOM 권한을 부여합니다. 컴퓨터 전체 권한을 설정하는 방법에 대한 자세한 내용은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
-3.  **애플리케이션별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 대해 해당하는 애플리케이션별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 애플리케이션별 권한을 설정하는 방법은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
+3.  **애플리케이션별 DCOM 권한 구성**: 다음 표에 나열된 각 계정에 해당되는 애플리케이션별 DCOM 권한을 부여합니다. 컨트롤러 서비스에 대한 DCOM 애플리케이션 이름은 **DReplayController**입니다. 애플리케이션별 권한을 설정하는 방법에 대한 자세한 내용은 [검사 목록: DCOM 애플리케이션 관리](https://go.microsoft.com/fwlink/?LinkId=185842)를 참조하세요.  
   
  다음 표에서는 관리 도구를 실행하는 데 사용되는 대화형 사용자 계정과 클라이언트 서비스 계정에 필요한 DCOM 권한에 대해 설명합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "75307011"
   
 -   Distributed Replay에서 생성하는 모든 중간 파일과 디스패치 파일에 적절한 ACL 및 보존 정책을 적용합니다.  
   
--   SSL(Secure Sockets Layer)을 사용하여 네트워크 전송에 대해 보안을 설정합니다.  
+-   이전에는 SSL(Secure Sockets Layer)이라고 알려진 TLS(전송 계층 보안)를 사용하여 네트워크 전송을 보호합니다.  
   
 ## <a name="important-removal-steps"></a>중요한 제거 단계  
  테스트 환경에서만 Distributed Replay를 사용하는 것이 좋습니다. 테스트를 완료한 후 다른 태스크를 위해 해당 컴퓨터를 프로비전하기 전에 다음 작업을 수행하십시오.  

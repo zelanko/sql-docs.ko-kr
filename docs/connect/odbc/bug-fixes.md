@@ -2,7 +2,7 @@
 title: 버그 수정 목록
 description: 이 페이지에는 Microsoft ODBC Driver 17 for SQL Server부터 각 릴리스에서 수정된 버그의 목록이 포함되어 있습니다.
 ms.custom: ''
-ms.date: 06/29/2018
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,20 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d839caa5bd89e2ae4db4ab797ab4d5ca1967c13a
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629723"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153220"
 ---
 # <a name="list-of-bugs-fixed"></a>버그 수정 목록
 
 이 페이지에는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터 각 릴리스에서 수정된 버그의 목록이 포함되어 있습니다.
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버그 수정(Alpine Linux만 해당)
+
+- Alpine Linux에서 보안 Enclave를 사용한 Always Encrypted를 사용할 때 크래시 해결
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1752-for-ssnoversion"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 버그 수정
 

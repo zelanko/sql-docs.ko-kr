@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 3667a8bffa62dbb4b297fc73ce2910048110468f
-ms.sourcegitcommit: 5c28603dd51d907544ebf8a50b678675d5414eaf
+ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80464383"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138283"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -68,7 +68,7 @@ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[s
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 SET
 {
@@ -328,11 +328,11 @@ AUTO_CLOSE 옵션을 사용하면 데이터베이스 파일을 일반 파일처�
 >
 > 데이터베이스 미러링을 위해서는 AUTO_CLOSE가 OFF로 설정되어 있어야 합니다.
 
-데이터베이스가 AUTOCLOSE = ON으로 설정되어 있으면 자동 데이터베이스 종료를 시작하는 작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시를 삭제합니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상에서는 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 “데이터베이스 유지 관리 또는 재구성 작업으로 인해 ‘%s’ 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다.”라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+데이터베이스가 AUTOCLOSE = ON으로 설정되어 있으면 자동 데이터베이스 종료를 시작하는 작업이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시를 삭제합니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상에서는 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 켜기     
-쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상합니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
+쿼리 최적화 프로그램은 쿼리 계획 및 쿼리 성능을 개선하기 위해 필요한 경우 쿼리 조건자의 단일 열에 대한 통계를 생성합니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
 
 기본 설정은 ON입니다. 대부분의 데이터베이스의 경우 기본 설정을 사용하는 것이 좋습니다.
 
@@ -1228,7 +1228,7 @@ NO_WAIT
 - 데이터베이스 백업을 복원합니다.
 - 데이터베이스를 분리합니다.
 
-계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 “데이터베이스 유지 관리 또는 재구성 작업으로 인해 ‘%s’ 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다.”라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 ## <a name="examples"></a>예
 
@@ -1420,7 +1420,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2214,7 +2214,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER DATABASE { database_name | Current }
 SET
 {
@@ -2909,7 +2909,7 @@ SET QUERY_STORE = ON
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 ALTER DATABASE { database_name }
 SET
 {
@@ -3034,10 +3034,10 @@ SELECT name, is_result_set_caching_on FROM sys.databases
 WHERE name = <'Your_Database_Name'>
 ```
 
-이 명령을 실행하여 캐시된 결과로 쿼리를 실행했는지 확인합니다.  result_set_cache 열은 캐시 적중 시 1을 반환하고, 캐시 누락 시 0을 반환하고, 결과 집합 캐싱이 사용되지 않은 이유에 대해 음수 값을 반환합니다.  자세한 내용은 [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7)를 참조하세요.  
+이 명령을 실행하여 캐시된 결과로 쿼리를 실행했는지 확인합니다.  result_cache_hit 열은 캐시 적중 시 1을 반환하고, 캐시 누락 시 0을 반환하고, 결과 집합 캐싱이 사용되지 않은 이유에 대해 음수 값을 반환합니다.  자세한 내용은 [sys.dm_pdw_exec_requests](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql?view=aps-pdw-2016-au7)를 참조하세요.  
 
 ```sql
-SELECT request_id, command, result_set_cache FROM sys.dm_pdw_exec_requests
+SELECT request_id, command, result_cache_hit FROM sys.dm_pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 ```
 

@@ -11,12 +11,12 @@ ms.assetid: 5f398470-c531-47b5-84d5-7c67c27df6e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe84e3a8a74f50ffb19efd3bfe62dbd6900be3f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7cd858693ed429fd7b776a20f9300657337fa0f8
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165707"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107974"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블의 데이터 수정
 
@@ -50,7 +50,7 @@ ms.locfileid: "74165707"
          ) ;
    ```
 
-- **INSERT** 문의 열 목록에 **PERIOD** 열을 지정하면 해당 값으로 **DEFAULT** 을 지정해야 합니다.
+- **INSERT** 문의 열 목록에 **PERIOD** 열을 지정하면 해당 값으로 **DEFAULT**를 지정해야 합니다.
 
   ```sql
   INSERT INTO [dbo].[Department]

@@ -1,7 +1,7 @@
 ---
 title: CREATE WORKLOAD GROUP(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/14/2020
+ms.date: 04/20/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: b217787d0cba0a1d62ab8393ef7fac76d7665bb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c61185c660e650a2052a2e5a6df1ad9ac3ad0af4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77568066"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087467"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP(Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "77568066"
 
 ## <a name="syntax"></a>구문
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
     ( [ IMPORTANCE = { LOW | MEDIUM | HIGH } ]
@@ -203,7 +203,7 @@ GO
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-```
+```syntaxsql
 CREATE WORKLOAD GROUP group_name
 [ WITH
  (  [ MIN_PERCENTAGE_RESOURCE = value ]
@@ -275,7 +275,7 @@ WITH
 
 `min_percentage_resource`, `cap_percentage_resource`, `request_min_resource_grant_percent` 및 `request_max_resource_grant_percent` 매개 변수에는 현재 서비스 수준의 컨텍스트에서 조정된 유효 값과 다른 작업 그룹의 구성이 포함됩니다.
 
-서비스 수준별로 지원되는 동시성은 리소스 클래스를 사용하여 쿼리당 리소스 허용을 정의할 때와 동일하게 유지됩니다. 따라서 request_min_resource_grant_percent에 대해 지원되는 값은 인스턴스가 설정된 서비스 수준에 따라 달라집니다. 가장 낮은 서비스 수준인 DW100c에서는 요청당 최소 25% 리소스가 필요합니다. DW100c에서 구성된 워크로드 그룹의 유효 request_min_resource_grant_percent는 25% 이상일 수 있습니다. 유효 값이 파생되는 방법에 대한 자세한 내용은 아래 표를 참조하세요.
+서비스 수준에 따라 쿼리당 최소 리소스가 필요하기 때문에 `request_min_resource_grant_percent` 매개 변수에는 유효한 값이 있습니다.  예를 들어 가장 낮은 서비스 수준인 DW100c에서는 요청당 최소 25% 리소스가 필요합니다.  작업 그룹이 3% `request_min_resource_grant_percent` 및 `request_max_resource_grant_percent`로 구성된 경우 인스턴스가 시작될 때 두 매개 변수의 유효 값이 25%로 조정됩니다.  인스턴스가 DW1000c로 확장되는 경우 두 매개 변수에 구성되는 유효 값은 3%입니다. 해당 서비스 수준에 지원되는 최소 값이 3%이기 때문입니다.  인스턴스가 DW1000c보다 높게 확장되는 경우 두 매개 변수에 대해 구성되는 유효 값은 3%로 유지됩니다.  각 서비스 수준의 유효 값에 대한 자세한 내용은 아래 표를 참조하세요.
 
 |서비스 수준|REQUEST_MIN_RESOURCE_GRANT_PERCENT에 대한 가장 낮은 유효 값|최대 동시 쿼리 수|
 |---|---|---|
@@ -297,9 +297,9 @@ WITH
 |DW30000c|0.75%|128|
 ||||
 
-마찬가지로 request_min_resource_grant_percent, min_percentage_resource는 유효 request_min_resource_grant_percent보다 크거나 같아야 합니다. `min_percentage_resource`가 유효 `min_percentage_resource`보다 작게 구성된 작업 그룹은 값이 런타임에 0으로 조정됩니다. 이 경우 `min_percentage_resource`에 대해 구성된 리소스를 모든 작업 그룹에서 공유할 수 있습니다. 예를 들어 DW1000c에서 10%의 `min_percentage_resource`가 실행되는 작업 그룹 `wgAdHoc`은 유효 `min_percentage_resource`가 10%입니다(3.25%는 DW1000c에서 지원되는 최솟값임). DW100c에서 `wgAdhoc`의 유효 min_percentage_resource는 0%입니다. `wgAdhoc`에 대해 구성된 10%는 모든 작업 그룹에서 공유됩니다.
+`min_percentage_resource` 매개 변수는 유효 `request_min_resource_grant_percent`보다 크거나 같아야 합니다. `min_percentage_resource`가 유효 `min_percentage_resource`보다 작게 구성된 작업 그룹은 값이 런타임에 0으로 조정됩니다. 이 경우 `min_percentage_resource`에 대해 구성된 리소스를 모든 작업 그룹에서 공유할 수 있습니다. 예를 들어 DW1000c에서 10%의 `min_percentage_resource`가 실행되는 작업 그룹 `wgAdHoc`은 유효 `min_percentage_resource`가 10%입니다(3%는 DW1000c에서 지원되는 최솟값임). DW100c에서 `wgAdhoc`의 유효 min_percentage_resource는 0%입니다. `wgAdhoc`에 대해 구성된 10%는 모든 작업 그룹에서 공유됩니다.
 
-`cap_percentage_resource`에도 유효 값이 있습니다. 작업 그룹 `wgAdhoc`이 100%의 `cap_percentage_resource`로 구성되고 다른 작업 그룹 `wgDashboards`가 25%의 `min_percentage_resource`로 생성된 경우 `wgAdhoc`의 유효 `cap_percentage_resource`는 75%가 됩니다.
+또한 `cap_percentage_resource` 매개 변수는 유효 값을 가집니다. 작업 그룹 `wgAdhoc`이 100%의 `cap_percentage_resource`로 구성되고 다른 작업 그룹 `wgDashboards`가 25%의 `min_percentage_resource`로 생성된 경우 `wgAdhoc`의 유효 `cap_percentage_resource`는 75%가 됩니다.
 
 워크로드 그룹에 대한 런타임 값을 이해하는 가장 쉬운 방법은 시스템 보기 [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)를 쿼리하는 것입니다.
 

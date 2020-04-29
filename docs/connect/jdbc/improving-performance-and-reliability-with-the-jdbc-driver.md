@@ -1,5 +1,6 @@
 ---
-title: JDBC 드라이버로 성능 및 안정성 개선 | Microsoft Docs
+title: JDBC 드라이버로 성능 및 안정성 개선
+description: Microsoft JDBC driver for SQL Server를 사용하는 경우 애플리케이션 성능 및 안정성을 향상시키는 다양한 기술에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e1592499-b87b-45ee-bab8-beaba8fde841
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b82c2758dbc796ec29dd7304ee821a1a018af0a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4d8dc1105443222ece454b4da5c434f688131d16
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920732"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728482"
 ---
 # <a name="improving-performance-and-reliability-with-the-jdbc-driver"></a>JDBC 드라이버로 성능 및 안정성 개선
 

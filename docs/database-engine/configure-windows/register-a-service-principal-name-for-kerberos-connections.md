@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257515"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087501"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Kerberos 연결의 서비스 사용자 이름 등록
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ```  
   
 > [!TIP]  
->  **[!INCLUDE[msCoName](../../includes/msconame-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Kerberos 구성 관리자**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]과의 Kerberos 관련 연결 문제를 해결하는 진단 도구입니다. 자세한 내용은 [SQL Server용 Microsoft Kerberos 구성 관리자](https://www.microsoft.com/download/details.aspx?id=39046)를 참조하십시오.  
   
 ##  <a name="the-role-of-the-spn-in-authentication"></a><a name="Role"></a> 인증에서 SPN의 역할  
  애플리케이션에서 연결을 열고 Windows 인증을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 이름, 인스턴스 이름 및 필요에 따라 SPN을 전달합니다. 연결이 SPN을 전달하면 변경 사항 없이 사용됩니다.  
@@ -142,9 +142,9 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
   
 서비스 계정을 SPN으로 사용할 수 있습니다. 서비스 계정은 Kerberos 인증에 대한 연결 특성을 통해 지정되며 다음 형식을 사용합니다.  
   
--   **username@domain** 또는 **domain\username** (도메인 사용자 계정의 경우)  
+-   **username\@domain** 또는 **domain\username**(도메인 사용자 계정의 경우)  
   
--   **machine$@domain** 또는 **host\FQDN**(로컬 시스템 또는 NETWORK SERVICES와 같은 컴퓨터 도메인 계정의 경우)  
+-   **machine$\@domain** 또는 **host\FQDN**(로컬 시스템 또는 NETWORK SERVICE와 같은 컴퓨터 도메인 계정의 경우)  
   
 연결 인증 방법을 확인하려면 다음 쿼리를 실행합니다.  
   

@@ -1,5 +1,6 @@
 ---
-title: 암호화에 대한 클라이언트 구성 | Microsoft Docs
+title: 암호화에 대한 클라이언트 구성
+description: Microsoft JDBC driver for SQL Server를 사용하여 클라이언트의 보안을 유지하기 위한 클라이언트 쪽 암호화 및 인증서 신뢰에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0327a4321b141f0433cd9c6c9554c5a48f7381fb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7265bfb8666d99b8676b4bd4ec221b0a55f47a07
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922486"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728484"
 ---
 # <a name="configuring-the-client-for-encryption"></a>암호화에 대한 클라이언트 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -48,7 +49,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 이 경우 이 JVM에서 실행 중인 모든 애플리케이션이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 **SQLServerDataSource** 클래스의 해당 setter 메서드에서 **trustStore** 및 [trustStorePassword](../../connect/jdbc/reference/sqlserverdatasource-class.md) 연결 속성을 설정해야 합니다.  
+ 이 경우 이 JVM에서 실행 중인 모든 애플리케이션이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
   
  또한 “\<java-home>/lib/security/jssecacerts” 및 “\<java-home>/lib/security/cacerts”와 같은 기본 트러스트 저장소 파일을 구성하고 관리할 수도 있습니다. 이를 위해서는 JRE(Java Runtime Environment)와 함께 설치되는 JAVA "keytool" 유틸리티를 사용하십시오. "keytool" 유틸리티에 대한 자세한 내용은 Sun Microsystems 웹 사이트에서 keytool 설명서를 참조하십시오.  
   
