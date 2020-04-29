@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 53ea3f9eb2704de6c6c2c1ba5237ba96aa10c011
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0f4ca1a9362abb1004829d34a3c7783850b1f3b0
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433830"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087393"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
 
@@ -241,9 +241,9 @@ ms.locfileid: "79433830"
 >|0xC0016005|-1073651707|DTS_E_LOGINFAILURE|"%1"에 로그인하지 못했습니다. 이 오류는 제공된 로그인 자격 증명이 올바르지 않을 때 발생합니다. 로그인 자격 증명을 확인하십시오.|  
 >|0xC0016006|-1073651706|DTS_E_INVALIDSERVERNAME|URL %1에 지정된 서버 이름을 확인할 수 없습니다.|  
 >|0xC0016007|-1073651705|DTS_E_PROXYAUTH|프록시 인증에 실패했습니다. 이 오류는 로그인 자격 증명이 제공되지 않았거나 자격 증명이 올바르지 않을 때 발생합니다.|  
->|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|서버에서 얻은 SSL 인증서 응답이 잘못되었습니다. 요청을 처리할 수 없습니다.|  
+>|0xC0016008|-1073651704|DTS_E_SECUREFAILURE|서버에서 얻은 TLS/SSL 인증서 응답이 잘못되었습니다. 요청을 처리할 수 없습니다.|  
 >|0xC0016009|-1073651703|DTS_E_TIMEOUT|요청 시간이 초과되었습니다. 이 오류는 지정된 제한 시간이 너무 짧거나 서버 또는 프록시에 대한 연결을 설정할 수 없을 때 발생할 수 있습니다. 서버 및 프록시 URL이 올바른지 확인합니다.|  
->|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|클라이언트 인증서가 없습니다. 이 오류는 SSL 클라이언트 인증서가 서버에 필요한데, 사용자가 잘못된 인증서를 제공했거나 인증서를 제공하지 않은 경우에 발생합니다. 이 연결에 대한 클라이언트 인증서를 구성해야 합니다.|  
+>|0xC001600A|-1073651702|DTS_E_CLIENTAUTH|클라이언트 인증서가 없습니다. 이 오류는 TLS/SSL 클라이언트 인증서가 서버에 필요한데, 사용자가 잘못된 인증서를 제공했거나 인증서를 제공하지 않은 경우에 발생합니다. 이 연결에 대한 클라이언트 인증서를 구성해야 합니다.|  
 >|0xC001600B|-1073651701|DTS_E_REDIRECTFAILURE|지정된 서버 URL %1에 리디렉션이 있지만 리디렉션을 요청하지 못했습니다.|  
 >|0xC001600C|-1073651700|DTS_E_SERVERAUTH|서버 인증에 실패했습니다. 이 오류는 로그인 자격 증명이 제공되지 않았거나 자격 증명이 올바르지 않을 때 발생합니다.|  
 >|0xC001600D|-1073651699|DTS_E_WINHTTPUNKNOWNERROR|요청을 처리할 수 없습니다. 나중에 다시 시도하십시오.|  

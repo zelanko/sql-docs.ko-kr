@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a4ed0e63c0a4502321a21f04f5b65e878fcca17
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3682858eb76b78069497c23364e1f9db12ade9f4
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118286"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087383"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 누적 업데이트를 위한 CAB 다운로드
 
@@ -81,7 +81,7 @@ CAB 파일은 시간의 역순으로 나열됩니다. CAB 파일을 다운로드
 
 |해제  |구성 요소 | 다운로드 링크  | 해결된 문제 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)** |  |  |  |
+|**[SQL Server 2017 CU19](https://support.microsoft.com/help/4535007/)-[CU20](https://support.microsoft.com/en-us/help/4541283/)** |  |  |  |
 | | Microsoft R Open | [SRO_3.3.3.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106367&clcid=1033) | R 스크립트를 실행하는 `sp_execute_external_script`에서 경고 메시지를 표시하는 버그를 수정합니다. |
 | | R Server| [SRS_9.2.0.1900_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2106460&clcid=1033) | 이전 버전과의 변경 사항이 없습니다. |
 | | Microsoft Python Open | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033) | 이전 버전과의 변경 사항이 없습니다. |
