@@ -145,7 +145,7 @@
             - name: HDFS 데이터
               items:
                 - name: CSV 데이터 가상화
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: HDFS 데이터 쿼리
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: HDFS 계층화
@@ -2564,7 +2564,7 @@
           items:
             - name: 확장성 프레임워크 API
               href: language-extensions/reference/extensibility-framework-api.md
-    - name: SQL Server Native Client
+    - name: 'SQL Server Native Client '
       href: relational-databases/native-client/sql-server-native-client.md
       items:
         - name: 개요
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: 스키마 수정
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: 파티션 관리 마법사 F1 도움말
+            - name: 파티션 관리 마법사
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: 계획 지침
           href: relational-databases/performance/plan-guides.md
@@ -9966,7 +9966,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: 장애 조치
+                    - name: '장애 조치 '
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md
