@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7da0d231300afd550f7f3e4c4d491a5109c57f00
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8681ab325f5c1583ab62604c0c1416f9c88152b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636222"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719415"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   문자 기반 데이터 형식이 포함된 전체 텍스트 인덱싱된 열에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 검색을 수행하기 위해 [ SELECT 문의 ](../../t-sql/queries/where-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)]WHERE 절[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 조건자입니다. 이 조건자는 검색 조건의 의미와 일치하지만 단어가 정확히 일치하지 않는 값을 검색합니다. FREETEXT를 사용하면 전체 텍스트 쿼리 엔진이 내부적으로 *freetext_string*에 대해 다음 동작을 수행하고 각 용어에 가중치를 할당한 다음, 일치 항목을 찾습니다.  
   

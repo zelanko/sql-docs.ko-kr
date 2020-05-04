@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227509"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588096"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 
@@ -64,7 +64,7 @@ SQL Server 2019의 주요 시나리오 중 하나는 데이터를 가상화하�
 
 다음 페이지에서 외부 보기를 만들 테이블을 선택합니다. 부모 데이터베이스를 선택하면 자식 테이블도 포함됩니다. 테이블을 선택하면 오른쪽에 매핑 테이블이 나타납니다. 여기서 형식을 변경할 수 있습니다. 선택한 외부 테이블 자체의 이름을 변경할 수도 있습니다.
 
-![외부 데이터 원본 자격 증명](media/data-virtualization/data-table-mapping.png)
+![외부 데이터 원본 자격 증명](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >매핑 보기를 변경하려면 선택한 다른 테이블을 두 번 클릭합니다.

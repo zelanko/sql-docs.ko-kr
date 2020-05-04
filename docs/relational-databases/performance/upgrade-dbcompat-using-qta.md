@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 958445b0f07dc9624e7d284f408210c386ecfa9e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3113caec4026547fcf2dca940a3908f64b6efa44
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165677"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598749"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 사용 가능한 최신 상태로 [데이터베이스 호환성 수준을 업그레이드](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)할 때는 워크로드가 성능 저하 위험에 노출될 수 있습니다. 또한 이는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]와 최신 버전 간에 업그레이드하는 경우에도 발생할 수 있습니다.
 
