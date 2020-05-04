@@ -9,16 +9,18 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 21a64ad49b0a40959b5327b209d088fe31738b7d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664396"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178624"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Azure Data Studio에서 SQL Server와 함께 Notebook 사용
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Jupyter Notebook은 라이브 코드, 수식, 시각화 및 내레이션 텍스트를 포함하는 문서를 만들고 공유할 수 있는 오픈 소스 웹 애플리케이션입니다. 사용에는 데이터 정리 및 변환, 숫자 시뮬레이션, 통계 모델링, 데이터 시각화 및 기계 학습이 포함됩니다.
 
 이 문서에서는 최신 버전의 [**Azure Data Studio**](../azure-data-studio/download.md)에서 Notebook 환경을 시작하는 방법 및 고유한 Notebook 작성을 시작하는 방법을 설명합니다. 또한 다양한 커널을 사용하여 Notebook을 작성하는 방법을 보여 줍니다.
 

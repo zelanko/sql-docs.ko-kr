@@ -18,12 +18,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075505"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220698"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68075505"
  트리거 조건을 설정할 때는 트리거를 실행한 동작에 적합한 inserted 및 deleted 테이블을 사용합니다. INSERT를 테스트할 때 deleted 테이블을 참조하거나 DELETE를 테스트할 때 inserted 테이블을 참조해도 오류가 발생하지는 않지만 이러한 경우 트리거 테스트 테이블에는 아무 행도 들어 있지 않습니다.  
   
 > [!NOTE]  
->  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
+>  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다. 자세한 내용은 [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)를 참조하세요.
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "68075505"
   
  CHECK 제약 조건은 열 수준 또는 테이블 수준 제약 조건이 정의된 열만 참조할 수 있으므로 모든 상호 테이블 제약 조건(이 경우 업무 규칙)을 트리거로 정의해야 합니다.  
   
- 다음 예에서는 DML 트리거를 만듭니다. 이 트리거는 `PurchaseOrderHeader` 테이블에 새 구매 주문을 삽입하려고 할 때 공급업체의 신용 등급이 양호한지 확인합니다. 방금 삽입된 구매 주문에 해당하는 공급업체의 신용 등급을 가져오려면 `Vendor` 테이블이 참조되어 inserted 테이블과 조인되어야 합니다. 신용 등급이 너무 낮으면 메시지가 표시되고 삽입이 실행되지 않습니다. 이 예에서는 다중 행 데이터 수정을 허용하지 않습니다. 자세한 내용은 [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md)를 참조하세요.  
+ 다음 예에서는 DML 트리거를 만듭니다. 이 트리거는 `PurchaseOrderHeader` 테이블에 새 구매 주문을 삽입하려고 할 때 공급업체의 신용 등급이 양호한지 확인합니다. 방금 삽입된 구매 주문에 해당하는 공급업체의 신용 등급을 가져오려면 `Vendor` 테이블이 참조되어 inserted 테이블과 조인되어야 합니다. 신용 등급이 너무 낮으면 메시지가 표시되고 삽입이 실행되지 않습니다.
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68075505"
   
  INSERT, UPDATE 또는 DELETE 문에서 INSTEAD OF 트리거가 있는 뷰를 참조할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 대해 직접 동작을 수행하는 대신 트리거를 호출합니다. 뷰에 대해 작성된 inserted 및 deleted 테이블의 정보 형식이 기본 테이블에 있는 데이터 형식과 다른 경우에도 트리거는 inserted 및 deleted 테이블에 있는 정보를 사용하여 기본 테이블에서 요청된 동작을 구현하는 데 필요한 문을 작성해야 합니다.  
   
- 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 다음은 그 예입니다.  
+ 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 다음은 그 예입니다.   
   
 ```  
 USE AdventureWorks2012;  

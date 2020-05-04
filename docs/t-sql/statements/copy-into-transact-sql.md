@@ -2,7 +2,7 @@
 title: COPY INTO(Transact-SQL)(미리 보기)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: 외부 스토리지 계정에서 로드하려면 Azure SQL Data Warehouse의 COPY 문을 사용합니다.
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153234"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619656"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY(Transact-SQL)(미리 보기)
 
@@ -140,24 +140,32 @@ WITH
 
 AAD 또는 퍼블릭 스토리지 계정을 사용하여 인증할 때는 자격 증명을 지정할 필요가 없습니다. 
 
-- SAS(공유 액세스 서명)를 사용하여 인증 *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
-  *SECRET: [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’*  
-  필요한 최소 권한: 읽기 및 목록
-
+- SAS(공유 액세스 서명)를 사용하여 인증
+  
+  - *IDENTITY: ‘공유 액세스 서명’의 값이 있는 상수*
+  - *SECRET:* [‘공유 액세스 서명’](/azure/storage/common/storage-sas-overview)은 ‘스토리지 계정의 리소스에 대한 위임된 액세스 권한을 제공합니다.’  
+  -  필요한 최소 권한: 읽기 및 목록
+  
 - [*서비스 사용자*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)로 인증
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET: AAD 애플리케이션 서비스 주체 키* 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자, Storage Blob 데이터 기여자, Storage Blob 데이터 소유자 또는 Storage Blob 데이터 reader
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: AAD 애플리케이션 서비스 주체 키*
+  -  필요한 최소 RBAC 역할: Storage Blob 데이터 기여자, Storage Blob 데이터 기여자, Storage Blob 데이터 소유자 또는 Storage Blob 데이터 reader
 
-  > [!NOTE]  
-  > OAuth 2.0 토큰 엔드포인트 **V1** 사용
-
-- Storage 계정 키를 사용하여 인증 *IDENTITY: ‘Storage 계정 키’의 값이 있는 상수*
-  *SECRET: 스토리지 계정 키*
+- Storage 계정 키를 사용하여 인증
   
-- [관리 ID](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)(VNet 서비스 엔드포인트)를 사용하여 인증 *IDENTITY: ‘관리 ID’의 값이 있는 상수* 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자, Storage Blob 데이터 소유자 또는 AAD 등록 SQL Database 서버용 Storage Blob 데이터 reader 
+  - *IDENTITY: ‘Storage 계정 키’의 값이 있는 상수*
+  - *SECRET: 스토리지 계정 키*
   
-- AAD 사용자 *자격 증명이 필요하지 않음*으로 인증이 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자, Storage Blob 데이터 소유자 또는 AAD 사용자용 Storage Blob 데이터 reader
+- [관리 ID](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional)(VNet 서비스 엔드포인트)를 사용하여 인증
+  
+  - *IDENTITY: ‘관리 ID’ 값이 있는 상수*
+  - 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자 또는 AAD 등록 SQL Database 서버용 Storage Blob 데이터 소유자
+  
+- AAD 사용자로 인증
+  
+  - *자격 증명이 필요하지 않음*
+  - 필요한 최소 RBAC 역할: Storage Blob 데이터 기여자 또는 AAD 사용자용 Storage Blob 데이터 소유자
 
 *ERRORFILE = 디렉터리 위치*</br>
 *ERRORFILE*는 CSV에만 적용됩니다. 거부된 행과 해당 오류 파일을 작성해야 하는 COPY 문 내의 디렉터리를 지정합니다. 스토리지 계정의 전체 경로를 지정하거나 컨테이너와 관련된 경로를 지정할 수 있습니다. 지정된 경로가 존재하지 않으면 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 

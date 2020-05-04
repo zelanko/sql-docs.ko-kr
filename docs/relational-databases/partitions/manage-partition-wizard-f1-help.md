@@ -1,5 +1,5 @@
 ---
-title: 파티션 관리 마법사 F1 도움말 | Microsoft 문서
+title: 파티션 관리 마법사
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: dc76237530ba47a513aba164260061ec6b20e7c3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d779af4f450fe444181df995a8dab26b102c3038
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892416"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220428"
 ---
-# <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
+# <a name="manage-partition-wizard"></a>파티션 관리 마법사 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **파티션 관리 마법사** 를 사용하여 파티션 전환이나 슬라이딩 윈도우(Sliding Window) 시나리오의 구현을 통해 기존 파티션 테이블을 관리하고 수정할 수 있습니다. 이 마법사는 파티션 관리를 용이하게 하고 테이블로 또는 테이블로부터의 정기적인 데이터 마이그레이션을 단순화합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68892416"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 선택하고 파티션을 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **스토리지**를 가리킨 후 **파티션 관리**를 클릭합니다.  
   
-     **Note** **파티션 관리** 를 사용할 수 없으면 선택한 테이블에 파티션이 포함되어 있지 않은 것입니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기**를 클릭하고 **파티션 작성 마법사**를 사용합니다.  
+     **Note** **파티션 관리** 를 사용할 수 없으면 선택한 테이블에 파티션이 포함되어 있지 않은 것입니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기** 를 클릭하고 **파티션 작성 마법사** 를 사용합니다.  
   
  파티션과 인덱스에 대한 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하십시오.  
   

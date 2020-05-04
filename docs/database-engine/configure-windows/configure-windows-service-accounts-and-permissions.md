@@ -50,12 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8e2c3b2fff8234e0e67ca50e2fe6f3d65eea5fe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 93bfa129267ed149ce4d52904a0d5c459b6e87db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434948"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178744"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 
@@ -252,7 +252,7 @@ ms.locfileid: "79434948"
 
 대부분의 구성 요소에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 서비스별 계정에 대한 ACL을 직접 구성하므로 리소스 ACL 프로세스를 반복할 필요 없이 서비스 계정 변경을 수행할 수 있습니다.
 
-[!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$** _computer_name_ **$** _instance_name** 형식의 이름으로 생성됩니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.
+[!INCLUDE[ssAS](../../includes/ssas-md.md)]를 설치하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스에 대한 서비스별 SID가 만들어집니다. 로컬 Windows 그룹은 **SQLServerMSASUser$** _computer_name_ **$** _instance_name_형식의 이름으로 만들어집니다. 서비스별 SID **NT SERVICE\MSSQLServerOLAPService** 에 로컬 Windows 그룹의 멤버 자격이 부여되고 로컬 Windows 그룹에는 ACL의 적합한 권한이 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스를 시작하는 데 사용된 계정이 변경된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자가 일부 Windows 사용 권한(예: 서비스로 로그온 권한 등)을 변경해야 하지만 로컬 Windows 그룹에 부여된 사용 권한은 서비스별 SID가 변경되지 않았기 때문에 업데이트 없이도 계속 사용할 수 있습니다. 이 방식에 따라 업그레이드 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 이름을 바꿀 수 있습니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스에 대한 로컬 Windows 그룹을 만듭니다. 이러한 서비스에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 로컬 Windows 그룹에 대한 ACL을 구성합니다.
 
@@ -266,7 +266,7 @@ ms.locfileid: "79434948"
 
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서 부여된 사용 권한|
 |---------------------------------------|------------------------------------------------------------|
-|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT SERVICE\MSSQL$** InstanceName.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|
+|**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\MSSQLSERVER**. 명명된 인스턴스: **NT Service\SQLAGENT$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> SQL 기록기를 시작할 수 있는 권한<br /><br /> 이벤트 로그 서비스를 읽을 수 있는 권한<br /><br /> 원격 프로시저 호출 서비스를 읽을 수 있는 권한|
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트:** \*<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT Service\SQLSERVERAGENT**. 명명된 인스턴스: **NT Service\SQLAGENT$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br /> **트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (로컬 Windows 그룹에는 모든 권한이 부여됩니다. 기본 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$MSSQLSERVER**. 명명된 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _InstanceName_. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스: **SQLServerMSASUser$** _ComputerName_ **$** _PowerPivot_.)|**서비스로 로그온** (SeServiceLogonRight)<br /><br /> 테이블 형식에만 해당:<br /><br /> **프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)<br /><br /> **프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)<br /><br /> **메모리의 페이지 잠금**(SeLockMemoryPrivilege) – 페이징이 전체적으로 해제된 경우에만 필요합니다.<br /><br /> 장애 조치(Failover) 클러스터 설치에만 해당:<br /><br /> **예약 우선 순위 증가** (SeIncreaseBasePriorityPrivilege)|
 |**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (서비스별 SID에는 모든 권한이 부여됩니다. 기본 인스턴스: **NT SERVICE\ReportServer**. 명명된 인스턴스: **NT SERVICE\\ReportServer$** _InstanceName_.)|**서비스로 로그온** (SeServiceLogonRight)|
