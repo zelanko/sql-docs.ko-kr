@@ -1,5 +1,6 @@
 ---
 title: SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델) | Microsoft 문서
+decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f4a4a91c4703bd4634f471e3d6bc0b9b4baf2305
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1bd7f80b91d077bfd53b1ac2bea929b2aa29e7cc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908887"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180794"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
