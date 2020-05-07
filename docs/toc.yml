@@ -10051,6 +10051,8 @@
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: 리소스
   items:
+    - name: SQL Server 설명서
+      href: sql-server/sql-server-offline-documentation.md
     - name: 배우기
       items:
         - name: 교육용 리소스
@@ -10101,13 +10103,8 @@
           href: sql-server/partner-management-sql-server.md
         - name: 개발
           href: sql-server/partner-dev-sql-server.md
-    - name: SQL Server 설명서
-      href: sql-server/sql-server-offline-documentation.md
 - name: 참조
   items:
-    - name: 보관된 콘텐츠(SQL 2005 - 2012) >
-      displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
-      href: 'https://docs.microsoft.com/previous-versions/sql/'
     - name: 데이터베이스 샘플
       items:
         - name: 샘플 개요
