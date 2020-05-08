@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스가 손상된 경우 트랜잭션 로그 백업(SQL Server) | Microsoft 문서
+description: 이 항목에서는 SQL Server에서 데이터베이스가 손상되었을 때 SQL Server Management Studio 또는 Transact-SQL을 사용하여 트랜잭션 로그를 복원하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b8873cc-df54-4336-ab9b-8f525132c2b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 66f12768a7fb739125022908d1decb4ef3327a77
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9db020c354212a492d4f41f78df3257a7b8e3fc5
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909187"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220581"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>데이터베이스가 손상된 경우 트랜잭션 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

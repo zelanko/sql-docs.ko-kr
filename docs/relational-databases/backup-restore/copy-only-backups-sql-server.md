@@ -1,5 +1,6 @@
 ---
 title: 복사 전용 백업 | Microsoft Docs
+description: 복사 전용 백업은 SQL Server 서버 백업의 시퀀스에 독립적인 SQL Server 백업입니다. 이는 이후 백업이 복원되는 방식에 영향을 주지 않습니다.
 ms.custom: ''
 ms.date: 01/30/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d95c1982d5809288b64f34cd1f6328b4ee00e4c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f343f8f4e2aa38e12144684f0ab5fe6ed8f1237
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76941038"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179298"
 ---
 # <a name="copy-only-backups"></a>복사 전용 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "76941038"
   
 - 복사 전용 로그 백업(전체 복구 모델 및 대량 로그 복구 모델 전용)  
 
-     복사 전용 로그 백업은 기존 로그 보관 지점을 유지하므로 정기적인 로그 백업 시퀀스에 영향을 주지 않습니다. 복사 전용 로그 백업은 일반적으로 불필요한 백업입니다. 대신 WITH NORECOVERY를 사용하여 새 정기 로그 백업을 만든 다음 해당 백업을 복원 시퀀스에 필요한 모든 이전 로그 백업과 함께 사용할 수 있습니다. 하지만 복사 전용 로그 백업은 온라인 복원에도 유용할 수 있습니다. 해당 예제를 보려면 [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)을 참조하세요.  
+     복사 전용 로그 백업은 기존 로그 보관 지점을 유지하므로 정기적인 로그 백업 시퀀스에 영향을 주지 않습니다. 복사 전용 로그 백업은 일반적으로 불필요한 백업입니다. 대신 WITH NORECOVERY를 사용하여 새 정기 로그 백업을 만든 다음 해당 백업을 복원 시퀀스에 필요한 모든 이전 로그 백업과 함께 사용할 수 있습니다. 하지만 복사 전용 로그 백업은 온라인 복원에도 유용할 수 있습니다. 이에 대한 예제는 [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)을 참조하세요.  
 
      복사 전용 백업 이후에는 트랜잭션 로그를 자를 수 없습니다.  
   

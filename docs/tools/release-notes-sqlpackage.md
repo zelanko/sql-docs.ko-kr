@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386192"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262133"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>18.5 sqlpackage
+
+|플랫폼|다운로드|릴리스 날짜|버전|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2128142)|2020년 4월 28일|18.5|15.0.4769.1|
+|macOS .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2128145)|2020년 4월 28일| 18.5|15.0.4769.1|
+|Linux .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2128144)|2020년 4월 28일| 18.5|15.0.4769.1|
+|Windows .NET Core |[zip 파일](https://go.microsoft.com/fwlink/?linkid=2128143)|2020년 4월 28일| 18.5|15.0.4769.1|
+
+### <a name="features"></a>기능
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| 배포 | SQL Server 2008 이상, Azure SQL Database 및 Azure SQL Data Warehouse에서 데이터 민감도 분류가 지원됩니다. |
+| 배포 | 테이블 제약 조건을 위한 Azure SQL Data Warehouse 지원이 추가되었습니다. |
+| 배포 | 순서가 지정된 클러스터형 columnstore 인덱스를 위한 Azure SQL Data Warehouse 지원이 추가되었습니다. |
+| 배포 | Oracle, Teradata, MongoDB/CosmosDB, ODBC, Big Data Cluster용 외부 데이터 원본 지원과 SQL Server 2019 Big Data Cluster용 외부 테이블 지원이 추가되었습니다. |
+| 배포 | 지원되는 버전으로 SQL Database Edge 인스턴스가 추가되었습니다. |
+| 배포 | ‘\<server>.\<dnszone>.database.windows.net’ 형식의 Managed Instance 서버 이름에 대한 지원이 추가되었습니다. |
+| 배포 | Azure SQL Data Warehouse에 복사 명령에 대한 지원이 추가되었습니다. |
+| 배포 | Azure SQL Data Warehouse에 대해 테이블에서 파티션 함수가 변경된 경우 테이블이 다시 만들어지지 않도록 배포 옵션 게시 중에 ‘IgnoreTablePartitionOptions’가 추가되었습니다. |
+| .NET Core | sqlpackage의 .NET Core 버전에 Microsoft.Data.SqlClient에 대한 지원이 추가되었습니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>수정 프로그램
+| Fix | 세부 정보 |
+| :-- | :------ |
+| 배포 | 외부 사용자를 포함하는 데이터베이스의 dacpac 게시가 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다” 오류를 throw하는 문제가 수정되었습니다. |
+| 배포 | json 경로가 식으로 구문 분석되는 문제가 수정되었습니다. |
+| 배포 | AlterAnyDatabaseScopedConfiguration 및 AlterAnySensitivityClassification 권한에 대해 GRANT 문이 생성되는 문제가 수정되었습니다. |
+| 배포 | 외부 스크립트 권한이 인식되지 않는 문제가 수정되었습니다. |
+| 배포 | 인라인 속성이 수정되었습니다. 속성의 암시적인 추가는 차이에 표시되지 않아야 하나 스크립트를 통해 명시적인 언급이 표시되어야 합니다. |
+| 배포 | MV(구체화된 뷰)에 의해 참조되는 테이블을 변경하면 Azure SQL Data Warehouse에서 MV에 대해 지원되지 않는 뷰 변경 문이 생성되는 문제가 해결되었습니다. |
+| 배포 | Azure SQL Data Warehouse에 대해 데이터가 있는 테이블에 열을 추가하면 게시가 실패하는 문제가 수정되었습니다. |
+| 배포 | Azure SQL Data Warehouse에 대해 배포 열 유형을 변경할 때 데이터가 새 테이블로 이동되도록(데이터 손실 시나리오) 업데이트 스크립트가 수정되었습니다. |
+| ScriptDom | 인라인 인덱스 뒤에 정의된 인라인 제약 조건을 인식하지 않는 ScriptDom 버그가 수정되었습니다. |
+| ScriptDom | 일괄 처리 문에서 ScriptDom SYSTEM_TIME에 닫는 괄호가 누락된 문제가 수정되었습니다. |
+| Always Encrypted | sqlpackage가 다시 연결되었는데 연결이 끊기면 임시 테이블이 사라지므로 임시 테이블이 이미 사라진 경우 #tmpErrors 테이블이 삭제되지 않는 문제가 수정되었습니다. |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |플랫폼|다운로드|릴리스 날짜|버전|빌드

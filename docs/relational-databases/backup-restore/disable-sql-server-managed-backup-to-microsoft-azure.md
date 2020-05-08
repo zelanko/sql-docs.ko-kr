@@ -1,5 +1,6 @@
 ---
 title: Azure Blob Storage로의 관리형 백업 사용 안 함
+description: 이 문서에서는 Transact-SQL을 사용하여 데이터베이스 수준과 인스턴스 수준에서 Microsoft Azure로의 SQL Server 관리형 백업을 사용 안 함으로 설정하거나 일시 중지하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d85df8c4d07a61c75dcb42eadbc9c7cdae4faad6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 891a760dd1935d43219f3603a27a284be3c99b6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257970"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179174"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

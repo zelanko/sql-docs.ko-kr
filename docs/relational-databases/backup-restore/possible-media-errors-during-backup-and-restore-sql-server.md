@@ -1,5 +1,6 @@
 ---
 title: '미디어 오류: 백업 및 복원 | Microsoft Docs'
+description: SQL Server 2019에서 검색된 오류와 관계없이 데이터베이스를 복구할 수 있습니다. RESTORE 및 RESTORE VERIFYONLY를 백업 체크섬과 함께 사용하여 오류를 검사합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a94825fe0af3820ab7f39ca25a104242e21bda8c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 85b6077e5dfa2d70ecbbe6aead13fd02dbdf43b2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258647"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180163"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

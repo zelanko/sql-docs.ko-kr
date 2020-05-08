@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 226100ce85527276f2f1f2b67f9ebb5f43a336d8
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903922"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262114"
 ---
 # <a name="resource-governor-classifier-function"></a>Resource Governor Classifier Function
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "72903922"
   
 1.  로그인 인증  
   
-2.  LOGON 트리거 실행  
+2.  로그온 트리거 실행(인스턴스에 로그온 트리거가 존재하는 경우에만 발생)
   
 3.  분류  
 

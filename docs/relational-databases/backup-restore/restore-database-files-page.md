@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 복원(파일 페이지) | Microsoft 문서
+description: SQL Server에서 데이터베이스를 복원할 때 데이터베이스 복원 대화 상자의 파일 페이지를 사용하여 데이터베이스 내에서 복원할 특정 파일을 관리합니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944826"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180769"
 ---
 # <a name="restore-database-files-page"></a>데이터베이스 복원(파일 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

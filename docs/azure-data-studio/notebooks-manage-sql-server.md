@@ -1,6 +1,6 @@
 ---
-title: SQL Server Notebook 관리
-description: Azure Data Studio에서 Notebook을 관리하는 방법을 알아봅니다. 여기에는 Notebook 열기, Notebook 저장, 빅 데이터 클러스터 연결 변경이 포함됩니다.
+title: Notebook을 관리하는 방법
+description: Azure Data Studio에서 Notebook을 관리하는 방법을 알아봅니다. 여기에는 Notebook 열기, Notebook 저장, SQL 연결 또는 Python 커널 변경이 포함됩니다.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531596"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178702"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio에서 Notebook을 관리하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server를 사용하여 Azure Data Studio에서 Notebook 파일을 열고 저장하는 방법을 보여 줍니다. SQL Server 연결을 변경하는 방법도 보여 줍니다.
+이 문서에서는 Azure Data Studio에서 Notebook 파일을 열고 저장하는 방법을 설명합니다. SQL Server 또는 Python 커널에 대한 연결을 변경하는 방법도 보여 줍니다.
 
 ## <a name="open-a-notebook"></a>Notebook 열기
 
@@ -57,9 +57,9 @@ ms.locfileid: "80531596"
 > - 파일 메뉴의 **파일 저장**, **다른 이름으로 파일 저장...** 및 **파일 모두 저장**
 > - 명령 팔레트에서 입력한 **파일: 저장** 명령을 입력하여 Notebook을 저장할 수 있습니다.
 
-## <a name="change-the-connection"></a>연결 변경
+## <a name="change-the-sql-connection"></a>SQL 연결 변경
 
-Notebook 연결을 변경하려면 다음을 수행합니다.
+Notebook에 대한 SQL 연결을 변경하려면 다음을 수행합니다.
 
 1. Notebook 도구 모음에서 **연결 대상** 메뉴를 선택하고 **연결 변경**을 선택합니다.
 
@@ -69,6 +69,31 @@ Notebook 연결을 변경하려면 다음을 수행합니다.
 
    ![연결 대상 메뉴에서 서버 선택](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Python 커널 변경
+
+Azure Data Studio를 처음으로 열면 **Notebook용 Python 구성** 페이지가 표시됩니다. 다음 중 하나를 선택할 수 있습니다.
+
+- **새 Python 설치**를 선택하여 Azure Data Studio용으로 새 Python 사본을 설치합니다.
+- **기존 Python 설치 사용**을 선택하여 Azure Data Studio가 사용할 수 있도록 기존 Python 설치의 경로를 지정합니다.
+
+활성 Python 커널의 위치와 버전을 보려면 코드 셀을 만들고 다음 Python 명령을 실행합니다.
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+다른 Python 설치로 변경하려면:
+
+1. **파일** 메뉴에서 **기본 설정**을 선택한 후 **설정**을 선택합니다.
+1. **확장** 아래의 **노트북 구성**으로 스크롤합니다.
+1. **기존 Python 사용** 아래에서 “Notebook에서 사용하는 기존 python 설치의 로컬 경로입니다” 옵션의 선택을 취소합니다.
+1. Azure Data Studio를 다시 시작합니다.
+
+**Notebook용 Python 구성** 페이지가 표시되면 새 Python 설치를 만들지 아니면 기존 설치의 경로를 지정할지 선택할 수 있습니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-Azure Data Studio의 Notebooks에 대한 자세한 내용은 [SQL Server 2019에서 Notebooks를 사용하는 방법](notebooks-guidance.md)을 참조하세요.
+Azure Data Studio의 SQL Notebook에 대한 자세한 내용은 [Azure Data Studio에서 SQL Server와 함께 Notebook 사용](notebooks-guidance.md)을 참조하세요.

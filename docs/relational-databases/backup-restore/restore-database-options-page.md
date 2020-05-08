@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 복원(옵션 페이지) | Microsoft 문서
+description: SQL Server에서 데이터베이스를 복원할 때 데이터베이스 복원 대화 상자의 옵션 페이지를 사용하여 복원 작업의 동작 및 결과를 수정합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041549"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180754"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fde97db271ccd0307d0af75ea0c7d4aacad9703
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634799"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598739"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ HOLDLOCK
 트랜잭션이 끝날 때까지 텍스트 값을 읽을 수 없게 잠급니다. 다른 사용자는 값을 읽을 수 있지만 수정할 수는 없습니다.  
   
 ## <a name="remarks"></a>설명  
-유효한 [text](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md)ptr _값을 얻으려면 \_TEXTPTR_ 함수를 사용합니다. TEXTPTR은 지정된 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환합니다. TEXTPTR은 쿼리에서 둘 이상의 행을 반환하는 경우 반환되는 마지막 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환할 수도 있습니다. TEXTPTR은 16바이트 이진 문자열을 반환하므로 지역 변수를 선언하여 텍스트 포인터를 보유한 다음 READTEXT로 해당 변수를 사용하는 것이 좋습니다. 지역 변수 선언 방법에 대한 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하십시오.  
+유효한 _text\_ptr_ 값을 얻으려면 [TEXTPTR](../../t-sql/functions/text-and-image-functions-textptr-transact-sql.md) 함수를 사용합니다. TEXTPTR은 지정된 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환합니다. TEXTPTR은 쿼리에서 둘 이상의 행을 반환하는 경우 반환되는 마지막 행에 **text**, **ntext** 또는 **image** 열에 대한 포인터를 반환할 수도 있습니다. TEXTPTR은 16바이트 이진 문자열을 반환하므로 지역 변수를 선언하여 텍스트 포인터를 보유한 다음 READTEXT로 해당 변수를 사용하는 것이 좋습니다. 지역 변수 선언 방법에 대한 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하십시오.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 행 내부 텍스트 포인터가 있을 수 있지만 유효하지 않습니다. **text in row** 옵션에 대한 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하십시오. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   
@@ -72,7 +72,7 @@ HOLDLOCK
 다음 예에서는 `pr_info` 테이블에 있는 `pub_info` 열의 문자를 두 번째 문자부터 26번째 문자까지 읽습니다.  
   
 > [!NOTE]  
->  이 예를 실행하려면 **pubs** 예제 데이터베이스를 설치해야 합니다.  
+>  이 예를 실행하려면 [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases) 샘플 데이터베이스를 설치해야 합니다.  
   
 ```  
 USE pubs;  

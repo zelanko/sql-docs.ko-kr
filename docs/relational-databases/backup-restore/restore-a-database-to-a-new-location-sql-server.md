@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스를 새 위치로 복원(SQL Server) | Microsoft 문서
+description: 이 문서에서는 SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server 데이터베이스를 새 위치로 복원하고 데이터베이스 이름을 바꾸는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cc3681d52768cbd35fe0189739646c2752e5fb4d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72989558"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180834"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +170,7 @@ ms.locfileid: "72989558"
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 디바이스에 있는 첫 번째 백업 세트입니다.  
   
-> **참고:** 지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 `MyAdvWorks_FullRM` 문 ALTER DATABASE <database_name> SET RECOVERY FULL을 사용하여 결과로 생성된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스가 전체 복구 모델을 사용하도록 변경되어야 합니다.  
+> **참고:** 지정 시간 복원을 비롯하여 트랜잭션 로그를 백업 및 복원하는 예에서는 다음 `MyAdvWorks_FullRM` 예와 마찬가지로 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에서 만든 `MyAdvWorks` 데이터베이스를 사용합니다. 그러나 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 결과로 생성된 `MyAdvWorks_FullRM` 데이터베이스에서 전체 복구 모델을 사용하도록 변경해야 합니다. ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
 ```sql  
 USE master;  

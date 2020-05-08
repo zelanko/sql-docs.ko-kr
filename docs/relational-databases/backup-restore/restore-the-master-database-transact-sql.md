@@ -1,5 +1,6 @@
 ---
 title: master 데이터베이스 복원(Transact-SQL) | Microsoft 문서
+description: 이 문서에서는 SQL Server에서 Transact-SQL을 사용하여 전체 데이터베이스 백업에서 master 데이터베이스를 복원하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c8bfaa8ffee65be6c0c5693420c89032c9b83763
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041473"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180733"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

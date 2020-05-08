@@ -3,18 +3,18 @@ title: R에서 파티션 기반 모델 만들기
 description: SQL Server 기계 학습의 파티션 기반 모델링 기능을 사용할 때 동적으로 생성된 분할된 데이터를 모델링하고, 학습시키고, 사용하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9dd7cd37b724611eedfc98c64cec1ef1acd98b7c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116136"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619666"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ SQL Server 2019의 파티션 기반 모델링은 분할된 데이터에 대한 �
 + [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak) - 로컬 데이터베이스 엔진 인스턴스에 [다운로드하고 복원](demo-data-nyctaxi-in-sql.md)할 수 있습니다. 파일 크기는 약 90MB입니다.
 
 + Machine Learning Services 및 R이 통합된 SQL Server 2019 데이터베이스 엔진 인스턴스입니다.
+
++ 이 자습서에서는 [ODBC를 통한 R 스크립트에서 SQL Server로의 루프백 연결](../connect/loopback-connection.md]을 사용합니다. 따라서 [SQLRUserGroup의 로그인을 만들어야 합니다](../security/create-a-login-for-sqlrusergroup.md).
 
 쿼리 도구에서 T-SQL 쿼리로 **`SELECT @@Version`** 을 실행하여 버전을 확인합니다.
 

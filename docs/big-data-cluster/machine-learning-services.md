@@ -4,16 +4,16 @@ titleSuffix: SQL Server Big Data Clusters
 description: SQL Server 빅 데이터 클러스터의 마스터 인스턴스에서 Machine Learning Services를 사용하여 Python 및 R 스크립트를 실행하는 방법을 알아봅니다.
 author: dphansen
 ms.author: davidph
-ms.date: 11/04/2019
+ms.date: 04/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
-ms.openlocfilehash: dd8e1b948d259b4c233aebcb3614dea5b3e72129
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d105db3da8a6732c2884af7e42a71441eef6f077
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664127"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643335"
 ---
 # <a name="run-python-and-r-scripts-with-machine-learning-services-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하여 Python 및 R 스크립트 실행
 
@@ -36,39 +36,68 @@ RECONFIGURE WITH OVERRIDE
 GO
 ```
 
-## <a name="enable-always-on-availability-groups"></a>Always On 가용성 그룹 사용
+이제 빅 데이터 클러스터의 마스터 인스턴스에서 Python 및 R 스크립트를 실행할 준비가 되었습니다. [다음 단계](#next-steps)의 빠른 시작을 참고하여 첫 번째 스크립트를 실행하세요.
 
-[Always On 가용성 그룹](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)에서 SQL Server 빅 데이터 클러스터를 사용하는 경우 Machine Learning Services를 사용하려면 몇 가지 단계를 추가로 수행해야 합니다.
+>[!NOTE]
+>가용성 그룹 수신기 연결에는 구성 설정을 설정할 수 없습니다. 빅 데이터 클러스터가 고가용성으로 배포된 경우, 각 복제본에서 `external scripts enabled`를 설정합니다. [고가용성 클러스터에서 사용하도록 설정](#enable-on-cluster-with-high-availability)을 참조하세요.
 
-1. 마스터 인스턴스에 연결하고 다음 문을 실행합니다.
+## <a name="enable-on-cluster-with-high-availability"></a>고가용성 클러스터에서 사용하도록 설정
 
-    ```sql
-    SELECT @@SERVERNAME
-    ```
+[SQL Server 빅 데이터 클러스터를 고가용성으로 배포](deployment-high-availability.md)하면 배포가 마스터 인스턴스에 대해 가용성 그룹을 만듭니다. Machine Learning Services를 사용하도록 설정하려면 가용성 그룹의 각 인스턴스에서 `external scripts enabled`를 설정합니다. 빅 데이터 클러스터의 경우 SQL Server 마스터 인스턴스의 각 복제본에서 `sp_configure`를 실행해야 합니다.
 
-    서버 이름을 기록해 둡니다. 이 예제에서 마스터 인스턴스의 서버 이름은 **master-2**입니다.
+다음 섹션에서는 각 인스턴스에서 외부 스크립트를 사용하도록 설정하는 방법을 설명합니다.
 
-1. 빅 데이터 클러스터의 Always On 가용성 그룹에 있는 각 복제본에서 다음 `kubectl` 명령을 실행합니다.
+### <a name="create-an-external-load-balancer-for-each-instance"></a>각 인스턴스에 대해 외부 부하 분산 장치 만들기
 
-    ```
-    kubectl -n bdc expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer
+가용성 그룹에 있는 각 복제본에 대해, 인스턴스에 연결할 수 있도록 부하 분산 장치를 만듭니다. 
 
-    kubectl -n bdc expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer
+`kubectl expose pod <pod-name> --port=<connection port number> --name=<load-balancer-name> --type=LoadBalancer -n <kubernetes namespace>`
 
-    kubectl -n bdc expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer
-    ```
+이 문서의 예제에서는 다음 값을 사용합니다.
 
-    다음과 비슷한 내용이 출력됩니다.
-    
-    ```
-    service/mymaster-0 exposed
+- `<pod-name>`: `master-#`
+- `<connection port number>`: `1533`
+- `<load-balancer-name>`: `mymaster-#`
+- `<kubernetes namespace>`: `mssql-cluster`
 
-    service/mymaster-1 exposed
+환경에 맞게 다음 스크립트를 업데이트하고, 명령을 실행합니다.
 
-    service/mymaster-2 exposed
-    ```
+```bash
+kubectl expose pod master-0 --port=1533 --name=mymaster-0 --type=LoadBalancer -n mssql-cluster 
+kubectl expose pod master-1 --port=1533 --name=mymaster-1 --type=LoadBalancer -n mssql-cluster
+kubectl expose pod master-2 --port=1533 --name=mymaster-2 --type=LoadBalancer -n mssql-cluster 
+```
 
-1. 각 마스터 복제본 엔드포인트에 연결하고 스크립트 실행을 사용하도록 설정합니다.
+`kubectl`은 다음 출력을 반환합니다.
+
+```bash
+service/mymaster-0 exposed
+service/mymaster-1 exposed
+service/mymaster-2 exposed
+```
+
+각 부하 분산 장치는 마스터 복제본 엔드포인트입니다.
+
+### <a name="enable-script-execution-on-each-replica"></a>각 복제본에서 스크립트 실행을 사용하도록 설정
+
+1. 마스터 복제본 엔드포인트의 IP 주소를 가져옵니다.
+
+   다음 명령은 복제본 엔드포인트의 외부 IP 주소를 반환합니다. 
+
+   `kubectl get services <load-balancer-name> -n <kubernetes namespace>`
+
+   이 시나리오에서 각 복제본의 외부 IP 주소를 가져오려면 다음 명령을 실행합니다.
+
+   ```bash
+   kubectl get services mymaster-0 -n mssql-cluster
+   kubectl get services mymaster-1 -n mssql-cluster
+   kubectl get services mymaster-2 -n mssql-cluster
+   ```
+
+   >[!NOTE]
+   > 외부 IP 주소를 확인할 수 있을 때까지 시간이 걸릴 수 있습니다. 각 엔드포인트가 모두 외부 IP 주소를 반환할 때까지 잎에 나온 스크립트를 주기적으로 실행합니다.
+
+1. 마스터 복제본 엔드포인트에 연결하고 스크립트 실행을 사용하도록 설정합니다.
 
     다음 문을 실행합니다.
 
@@ -78,7 +107,37 @@ GO
     GO
     ```
 
-이제 빅 데이터 클러스터의 마스터 인스턴스에서 Python 및 R 스크립트를 실행할 준비가 되었습니다. 아래의 빠른 시작을 참고하여 첫 번째 스크립트를 실행하세요.
+   예를 들어, 앞에 나온 명령을 `sqlcmd`로 실행할 수 있습니다. 다음 예제에서는 마스터 복제본 엔드포인트에 연결하고 스크립트 실행을 사용하도록 설정합니다. 환경에 맞게 스크립트의 값을 업데이트합니다.
+
+   ```bash
+   sqlcmd -S <IP address>,1533 -U <user name> -P <password> -Q "EXEC sp_configure 'external scripts enabled', 1; RECONFIGURE WITH OVERRIDE;"
+   ```
+
+   각 복제본에 대해 이 단계를 반복합니다.
+
+### <a name="demonstration"></a>데모
+
+다음 이미지에서는 이 프로세스를 보여 줍니다.
+
+[![](media/machine-learning-services/example-kube-enable-scripts.png "Demonstrate enable feature on Kubernetes")](media/machine-learning-services/example-kube-enable-scripts.png#lightbox)
+
+이제 빅 데이터 클러스터의 마스터 인스턴스에서 Python 및 R 스크립트를 실행할 준비가 되었습니다. [다음 단계](#next-steps)의 빠른 시작을 참고하여 첫 번째 스크립트를 실행하세요.
+
+### <a name="delete-the-master-replica-endpoints"></a>마스터 복제본 엔드포인트 삭제
+
+Kubernetes 클러스터에서 각 복제본에 대해 엔드포인트를 삭제합니다. 엔드포인트는 Kubernetes에서 부하 분산 서비스로 노출됩니다.
+
+다음 명령은 부하 분산 서비스를 삭제합니다.
+
+`kubectl delete svc <load-balancer-name> -n mssql-cluster`
+
+이 문서의 예제에서는 다음 명령을 실행합니다.
+
+```bash
+kubectl delete svc mymaster-0 -n mssql-cluster
+kubectl delete svc mymaster-1 -n mssql-cluster
+kubectl delete svc mymaster-2 -n mssql-cluster
+```
 
 ## <a name="next-steps"></a>다음 단계
 

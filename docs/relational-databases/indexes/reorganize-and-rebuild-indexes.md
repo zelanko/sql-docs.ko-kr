@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138151"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220718"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>인덱스를 다시 구성하거나 다시 빌드하여 인덱스 조각화 해결
 
@@ -57,6 +57,9 @@ ms.locfileid: "82138151"
 
 사용할 인덱스 조각 모음 방법을 결정하기 위한 첫 번째 단계는 인덱스를 분석하여 조각화 수준을 확인하는 것입니다. rowstore 인덱스와 columnstore 인덱스의 조각화는 각각 다른 방법으로 검색됩니다.
 
+> [!NOTE]
+> 대량의 데이터가 삭제된 후에 인덱스 또는 힙 조각화를 검토하는 것이 특히 중요합니다. 힙의 경우, 업데이트가 자주 이루어지면 전달하는 레코드의 확산을 방지하기 위해 조각화를 검토해야 할 수도 있습니다. 힙에 대한 자세한 내용은 [힙(클러스터형 인덱스가 없는 테이블)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)을 참조하세요. 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>rowstore 인덱스의 조각화 검색
 
 [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)를 사용하면 특정 인덱스, 테이블이나 인덱싱된 뷰의 모든 인덱스, 데이터베이스의 모든 인덱스 또는 모든 데이터베이스 내 모든 인덱스에서 조각화를 검색할 수 있습니다. 분할된 인덱스의 경우 **sys.dm_db_index_physical_stats** 에서도 각 파티션의 조각화 정보를 제공합니다.
@@ -73,14 +76,18 @@ ms.locfileid: "82138151"
 
 |**avg_fragmentation_in_percent** 값|수정문|
 |-----------------------------------------------|--------------------------|
-|> 5% 및 < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5% 및 < = 30% <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30% <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> 온라인 또는 오프라인으로 인덱스를 다시 작성할 수 있습니다. 인덱스를 다시 구성하는 과정은 항상 온라인으로 실행됩니다. 다시 구성할 때와 비슷한 가용성을 얻으려면 온라인으로 인덱스를 다시 작성해야 합니다. 자세한 내용은 [인덱스 다시 빌드](#rebuild-an-index) 및 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.
+<sup>1</sup> 이러한 값은 `ALTER INDEX REORGANIZE` 및 `ALTER INDEX REBUILD`를 전환해야 하는 시점을 확인하기 위한 대략적인 지침을 제공합니다. 그러나 실제 값은 경우에 따라 달라질 수 있습니다. 실험을 통해 환경에 맞는 임계값을 확인하는 것이 중요합니다.      
 
-이러한 값은 `ALTER INDEX REORGANIZE` 및 `ALTER INDEX REBUILD`를 전환해야 하는 시점을 확인하기 위한 대략적인 지침을 제공합니다. 그러나 실제 값은 경우에 따라 달라질 수 있습니다. 실험을 통해 환경에 맞는 임계값을 확인하는 것이 중요합니다. 예를 들어 지정된 인덱스가 주로 스캔 작업에 사용되는 경우 조각화를 제거하면 해당 작업의 성능을 개선할 수 있습니다. 검색 작업에 주로 사용되는 인덱스의 경우 성능상 장점이 그다지 눈에 띄지 않을 수 있습니다. 마찬가지로 힙(클러스터형 인덱스가 없는 테이블)에서 조각화를 제거하는 기능은 비클러스터형 인덱스 검색 작업에 특히 유용하지만 조회 작업에는 거의 영향을 주지 않습니다.
+> [!TIP] 
+> 예를 들어 지정된 인덱스가 주로 스캔 작업에 사용되는 경우 조각화를 제거하면 해당 작업의 성능을 개선할 수 있습니다. 검색 작업에 주로 사용되는 인덱스의 경우 성능상 장점이 눈에 띄지 않을 수 있습니다.    
+마찬가지로 힙(클러스터형 인덱스가 없는 테이블)에서 조각화를 제거하는 기능은 비클러스터형 인덱스 검색 작업에 특히 유용하지만 조회 작업에는 거의 영향을 주지 않습니다.
 
-대체로 적은 양의 조각화를 제거할 경우 얻게 되는 이점보다 인덱스를 다시 구성하거나 다시 빌드하는 데 필요한 CPU 비용이 훨씬 크기 때문에, 조각화가 5% 미만인 인덱스는 조각 모음을 수행할 필요가 없습니다. 또한, 작은 rowstore 인덱스는 다시 빌드하거나 다시 구성해도 실제 조각화가 줄어들지 않는 경우가 많습니다. 작은 인덱스의 페이지는 종종 혼합 익스텐트에 저장됩니다. 혼합 익스텐트는 최대 8개의 개체가 공유할 수 있으므로 인덱스를 다시 작성하거나 다시 구성한 후에도 작은 인덱스의 조각화가 줄어들지 않을 수 있습니다. [rowstore 인덱스 다시 빌드 관련 고려 사항](#considerations-specific-to-rebuilding-rowstore-indexes)도 참조하세요.
+<sup>2</sup> 온라인 또는 오프라인으로 인덱스를 다시 작성할 수 있습니다. 인덱스를 다시 구성하는 과정은 항상 온라인으로 실행됩니다. 다시 구성할 때와 비슷한 가용성을 얻으려면 온라인으로 인덱스를 다시 작성해야 합니다. 자세한 내용은 [인덱스 다시 빌드](#rebuild-an-index) 및 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.
+
+대체로 적은 양의 조각화를 제거할 경우 얻게 되는 이점보다 인덱스를 다시 구성하거나 다시 빌드하는 데 필요한 CPU 비용이 훨씬 크기 때문에, 조각화가 5% 미만인 인덱스는 조각 모음을 수행할 필요가 없습니다. 또한, 작은 rowstore 인덱스는 다시 빌드하거나 다시 구성해도 실제 조각화가 줄어들지 않는 경우가 많습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지는, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 혼합 익스텐트를 사용하여 공간을 할당합니다. 따라서 작은 인덱스의 페이지는 종종 혼합 익스텐트에 저장됩니다. 혼합 익스텐트는 최대 8개의 개체가 공유할 수 있으므로 인덱스를 다시 작성하거나 다시 구성한 후에도 작은 인덱스의 조각화가 줄어들지 않을 수 있습니다. [rowstore 인덱스 다시 빌드 관련 고려 사항](#considerations-specific-to-rebuilding-rowstore-indexes)도 참조하세요. 익스텐트에 대한 자세한 내용은 [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md#extents)를 참조하세요.
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>columnstore 인덱스의 조각화 검색
 

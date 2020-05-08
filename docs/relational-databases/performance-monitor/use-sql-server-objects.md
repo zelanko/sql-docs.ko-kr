@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982182"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262151"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "73982182"
   
  지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스용 카운터는 **SQLServer:** _\<개체 이름>_ 형식으로 표시됩니다. 명명된 인스턴스용 카운터는 **MSSQL$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 또는**SQLAgent$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 형식으로 표시됩니다.  
   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 카운터 값은 WPC(Windows Performance Counter) 엔진을 사용하여 생성됩니다. 일부 카운터 값은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 의해 직접 계산되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 WPC 엔진에 베이스 값을 제공하면 백분율과 같은 필요한 계산을 수행합니다. [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 동적 관리 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 생성된 원래 값과 함께 모든 카운터를 제공합니다. `cntr_type` 열은 카운터의 형식을 나타냅니다. WPC 엔진이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터를 처리하는 방식은 이 형식에 따라 달라집니다. 성능 카운터 형식에 대한 자세한 내용은 [WMI 설명서](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types)를 참조하세요.
+  
  카운터를 차트에 추가하거나 제거하고 차트 설정을 저장하면 시스템 모니터가 시작될 때 모니터링되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 카운터를 지정할 수 있습니다.  
   
  시스템 모니터를 어떤 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터의 통계라도 표시하도록 구성할 수 있습니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터에 대해 임계값을 설정한 다음 카운터가 임계값을 초과할 때 경고를 생성하도록 설정할 수도 있습니다. 경고 설정에 대한 자세한 내용은 [SQL Server 데이터베이스 경고 만들기](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)를 참조하세요.  
-  
-> [!TIP]  
->  [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) 동적 관리 뷰를 쿼리하여 성능 카운터 값을 반환할 수도 있습니다.  
+    
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치한 경우에만 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 중지하고 다시 시작하면 통계 표시도 중단되었다가 자동으로 재개됩니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 중이 아닌 경우에도 시스템 모니터 스냅인에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터가 나타납니다. 클러스터형 인스턴스에서 성능 카운터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행 중인 노드에서만 작동합니다.  
@@ -118,14 +118,14 @@ ms.locfileid: "73982182"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|메모리 브로커 클럭과 관련된 통계입니다.|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|현재 할당된 총 잠금 구조 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용에 관한 정보를 제공합니다.|  
 |[SQLServer:Plan Cache](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|저장 프로시저, 트리거, 쿼리 계획과 같은 개체를 저장할 때 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캐시에 관한 정보를 제공합니다.|  
-|[SQLServer:Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|쿼리 저장소에 대한 정보를 제공합니다.|  
-|[SQLServer:Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: 쿼리 저장소](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|쿼리 저장소에 대한 정보를 제공합니다.|  
+|[SQLServer: Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 받은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]쿼리 상태에 관한 정보를 제공합니다.|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|전체 트랜잭션 수 및 스냅샷 트랜잭션 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 활성 트랜잭션에 대한 정보를 제공합니다.|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|사용자 지정 모니터링을 수행합니다. 각 카운터는 사용자 지정 저장 프로시저 또는 모니터링할 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 될 수 있습니다.|  
-|[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
-|[SQLServer:Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: 대기 통계](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
+|[SQLServer: Workload Group Stats](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
   
 ##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에서 사용되는 성능 개체를 나열합니다.  

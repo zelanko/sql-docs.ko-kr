@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 348a4984f7616bb58faa1d6182bc27ae974dde82
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633213"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169361"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -131,7 +131,7 @@ DELETE
  대상 테이블에 허용되는 하나 이상의 테이블 힌트를 지정합니다. WITH 키워드와 괄호가 필요합니다. NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
  \<OUTPUT_Clause>  
- 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
+ 삭제된 행 또는 삭제된 행 기반의 식을 DELETE 작업의 일부로 반환합니다. OUTPUT 절은 뷰나 원격 테이블을 대상으로 하는 모든 DML 문에서 지원되지 않습니다. 이 절의 인수 및 동작에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
  FROM *table_source*  
  FROM 절을 추가로 지정합니다. DELETE에 대한 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확장을 사용하여 \<table_source>의 데이터를 지정하고 첫 번째 FROM 절에 있는 테이블에서 해당 행을 삭제할 수 있습니다.  

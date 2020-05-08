@@ -1,7 +1,7 @@
 ---
 title: 시스템 버전 임시 테이블에서 시스템 버전 관리 중지 | Microsoft 문서
 ms.custom: ''
-ms.date: 10/11/2016
+ms.date: 04/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: dddd707e-bfb1-44ff-937b-a84c5e5d1a94
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74b222b8014b3a0e41e34d588d5893b7f4aaf9b8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ebeb98accf6f89e094949a7a8e56a86a2dcd6dd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165448"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220393"
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>시스템 버전 관리 temporal 테이블에서 시스템 버전 관리 중지
 
@@ -39,6 +39,7 @@ temporal 테이블에 대해 특정 유지 관리 작업을 수행하려는 경�
 - **SYSTEM_VERSIONING = OFF** 로 설정하고 **SYSTEM_TIME** 기간을 제거/삭제하지 않으면 시스템은 모든 삽입 및 업데이트 작업에 대해 기간 열을 계속 업데이트합니다. 현재 테이블에서 수행하는 삭제 작업은 영구적인 작업입니다.
 - 기간 열을 완전히 제거하려면 **SYSTEM_TIME** 기간을 삭제합니다.
 - **SYSTEM_VERSIONING = OFF**로 설정하면 충분한 권한이 있는 모든 사용자가 기록 테이블의 내용과 스키마를 수정하거나 기록 테이블을 완전히 삭제할 수 있습니다.
+- **SYSTEM_TIME** 참조와 같이 임시 쿼리 확장을 사용하여 SCHEMABINDING으로 만든 다른 개체가 있는 경우에는 **SYSTEM_VERSIONING = OFF**를 설정할 수 없습니다. 이러한 제한은 **SYSTEM_VERSIONING = OFF**를 설정한 경우 다른 개체가 실패하는 것을 방지합니다.
 
 ### <a name="permanently-remove-system_versioning"></a>영구적으로 SYSTEM_VERSIONING 제거
 

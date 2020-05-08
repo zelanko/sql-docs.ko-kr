@@ -1,5 +1,6 @@
 ---
 title: 백업 디바이스 선택 | Microsoft 문서
+description: SQL Server 복원의 경우, 백업 디바이스 선택 대화 상자를 사용하여 복원 작업에 사용할 논리적 백업 디바이스를 선택합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b444c21be67be97f66e7855cfeb4c37eadbd22
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68216187"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180694"
 ---
 # <a name="select-backup-device"></a>백업 디바이스 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

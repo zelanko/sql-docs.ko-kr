@@ -1,5 +1,6 @@
 ---
 title: 자격 증명 만들기 - Azure Storage 인증 | Microsoft 문서
+description: SQL Server에서 데이터베이스 백업 대화 상자의 자격 증명 만들기 페이지를 사용하여 Azure 관리 인증서를 제공하고 연결의 유효성을 검사합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d22e7dda1575f1861ad5a86d735e26ec0afd7efc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40ee955b5f8cc683d2ec4f875c688f5575a0a44a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70176250"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179241"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 스토리지 인증
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

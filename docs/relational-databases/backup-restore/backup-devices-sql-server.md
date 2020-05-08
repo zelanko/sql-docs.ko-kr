@@ -1,5 +1,6 @@
 ---
 title: 백업 디바이스(SQL Server) | Microsoft 문서
+description: 이 문서에서는 용어와 백업 디바이스 사용 방법을 포함하여 SQL Server 데이터베이스용 백업 디바이스에 대해 설명합니다.
 ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b4b67ba15f7660c82da249eadec1f6d0da2f7fb3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e9bd20f7b0176c3d57bdd032f9c7f47d6729ba6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909182"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220583"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "72909182"
   
  TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -91,7 +92,7 @@ RESTORE DATABASE AdventureWorks2012
   
   
 ##  <a name="specify-the-disk-backup-file-path"></a><a name="BackupFileDiskPath"></a> 디스크 백업 파일 경로 지정 
- 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup입니다.  
+ 백업 파일을 지정할 경우 전체 경로 및 파일 이름을 입력해야 합니다. 파일에 백업할 때 파일 이름이나 상대 경로만 지정하면 백업 파일이 기본 백업 디렉터리에 저장됩니다. 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL.*n*\MSSQL\Backup입니다. 여기서 *n* 은 서버 인스턴스의 번호입니다. 따라서 기본 서버 인스턴스의 경우 기본 백업 디렉터리는 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup입니다.  
   
  특히 스크립트에서 모호성을 피하기 위해 모든 DISK 절에 백업 디렉터리의 경로를 명시적으로 지정하는 것이 좋습니다. 그러나 쿼리 편집기를 사용할 경우 이는 그다지 중요하지 않습니다. 쿼리 편집기를 사용할 경우 백업 파일이 확실히 기본 백업 디렉터리에 있으면 DISK 절에서 경로를 생략할 수 있습니다. 예를 들어 다음 `BACKUP` 문은 기본 백업 디렉터리에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 백업합니다.  
   
@@ -101,7 +102,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory**레지스트리 키에 저장되어 있습니다.  
+> **참고:** 기본 위치는 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.n\MSSQLServer** 아래의 **BackupDirectory**레지스트리 키에 저장됩니다.  
   
    
 ###  <a name="back-up-to-a-network-share-file"></a><a name="NetworkShare"></a> 네트워크 공유 파일에 백업  
@@ -118,7 +119,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>UNC(범용 명명 규칙) 이름 지정  
  백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC(범용 명명 규칙) 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_.  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -148,7 +149,7 @@ GO
   
  TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```sql  
 BACKUP LOG AdventureWorks2012   
@@ -173,12 +174,12 @@ GO
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 백업이나 복원 작업 후에 테이프를 열어 놓을지 또는 테이프가 꽉 찬 후에 테이프를 해제하고 되감을지를 제어할 수 있습니다. 기본 동작은 테이프를 되감는 것입니다(REWIND).  
   
-> **참고:** BACKUP 구문 및 인수에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)를 참조하세요. RESTORE 구문 및 인수에 대한 자세한 내용은 각각 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
+> **참고:** BACKUP 구문 및 인수에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요. RESTORE 구문 및 인수에 대한 자세한 내용은 각각 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a> 열려 있는 테이프 관리  
  열려 있는 테이프 디바이스 목록 및 탑재 요청 상태를 보려면 [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) 동적 관리 뷰를 쿼리합니다. 이 뷰는 다음 BACKUP 또는 RESTORE 작업을 기다리는 동안 일시적으로 유휴 상태에 있는 사용 중인 테이프를 비롯하여 열려 있는 모든 테이프를 표시합니다.  
   
- 테이프가 실수로 열려 있는 경우, 테이프를 가장 빨리 해제하는 방법으로 다음 명령을 사용할 수 있습니다. RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
+ 테이프를 실수로 열어 놓은 경우 테이프를 해제하는 가장 빠른 방법은 RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_ 명령을 사용하는 것입니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)를 참조하세요.  
   
   
 ## <a name="using-the-azure-blob-storage-service"></a>Azure Blob Storage 서비스 사용  

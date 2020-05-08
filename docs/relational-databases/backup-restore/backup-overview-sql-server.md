@@ -1,5 +1,6 @@
 ---
 title: 백업 개요(SQL Server) | Microsoft 문서
+description: 백업 유형 및 제한 사항을 비롯한 SQL Server 백업 구성 요소와 백업 디바이스 및 백업 미디어에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bfda79efac4e64fbb735e424cad4b8bb9ba93851
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70176268"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220498"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

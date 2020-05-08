@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634299"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220378"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>설명  
  SET SHOWPLAN_ALL 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- SET SHOWPLAN_ALL 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 문을 실행하지 않고 문에 대한 실행 정보를 반환하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실행되지 않습니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 정보가 반환됩니다. 예를 들어, SET SHOWPLAN_ALL을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 같은 테이블이 사용되는 이후 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_ALL 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보고서를 생성하지 않고 문을 실행합니다.  
+ `SET SHOWPLAN_ALL` 옵션을 ON으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 각 문을 실행하지 않고 문에 대한 실행 정보를 반환하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 실행되지 않습니다. 이 옵션을 ON으로 설정할 경우 다시 OFF로 설정할 때까지 이후 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 정보가 반환됩니다. 예를 들어, `SET SHOWPLAN_ALL`을 ON으로 설정한 상태에서 CREATE TABLE 문을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 같은 테이블이 사용되는 이후 SELECT 문에서 지정한 테이블이 없음을 알리는 오류 메시지를 반환합니다. 따라서 이후 이 테이블을 참조하는 작업은 실패합니다. SET SHOWPLAN_ALL 옵션을 OFF로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 보고서를 생성하지 않고 문을 실행합니다.  
   
- SET SHOWPLAN_ALL은 그 출력을 처리하도록 작성된 애플리케이션에서 사용하기 위한 옵션입니다. SET SHOWPLAN_TEXT 옵션을 사용하여 **osql** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 애플리케이션에 읽을 수 있는 출력을 반환할 수 있습니다.  
+ `SET SHOWPLAN_ALL`은 그 출력을 처리하도록 작성된 애플리케이션에서 사용하기 위한 옵션입니다. SET SHOWPLAN_TEXT 옵션을 사용하여 **osql** 유틸리티와 같은 Microsoft Win32 명령 프롬프트 애플리케이션에 읽을 수 있는 출력을 반환할 수 있습니다.  
   
  SET SHOWPLAN_TEXT와 SET SHOWPLAN_ALL 옵션을 저장 프로시저 내에 지정할 수 없으며 일괄 처리에서 유일한 문이어야 합니다.  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|이 연산자를 통해 통과되는 행의 예상 평균 행 크기(바이트)입니다.|  
 |**TotalSubtreeCost**|이 작업과 모든 자식 작업의 예상(누적) 비용입니다.|  
 |**OutputList**|현재 작업에서 예상하고 있는 열에 대한 쉼표로 구분된 목록을 포함합니다.|  
-|**경고**|현재 작업과 연관된 경고 메시지에 대한 쉼표로 구분된 목록을 포함합니다. 경고 메시지에 열 목록과 함께 "NO STATS:()" 문자열이 포함될 경우도 있습니다. 이 경고 메시지는 쿼리 최적화 프로그램이 이 열의 통계에 기초하여 결정을 내리려고 했지만 사용 가능한 통계가 없었음을 나타냅니다. 따라서 쿼리 최적화 프로그램이 추측을 해야 했고 결과적으로 비효율적인 쿼리 계획을 선택했을 수도 있습니다. 쿼리 최적화 프로그램이 더 효율적인 쿼리 계획을 선택할 수 있도록 통계를 만들거나 업데이트하는 방법은 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요. 어떤 경우에는 이 열에 조인 조건자 없이 조인(테이블을 수반하는)이 일어났음을 나타내는 "MISSING JOIN PREDICATE" 문자열이 포함되기도 합니다. 실수로 조인 조건자를 삭제하면 예상보다 실행 시간이 긴 쿼리가 만들어지고 큰 결과 집합이 반환됩니다. 이 경고가 나타나면 조인 조건자를 의도적으로 사용하지 않았는지 확인하세요.|  
-|**형식**|노드 유형. 각 쿼리의 부모 노드에 대해서는 노드 유형이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 유형(예: SELECT, INSERT, EXECUTE 등)입니다. 실행 계획을 나타내는 하위 노드에 대해서는 PLAN_ROW 유형입니다.|  
+|**:::no-loc text="Warnings":::**|현재 작업과 연관된 경고 메시지에 대한 쉼표로 구분된 목록을 포함합니다. 경고 메시지에 열 목록과 함께 "NO STATS:()" 문자열이 포함될 경우도 있습니다. 이 경고 메시지는 쿼리 최적화 프로그램이 이 열의 통계에 기초하여 결정을 내리려고 했지만 사용 가능한 통계가 없었음을 나타냅니다. 따라서 쿼리 최적화 프로그램이 추측을 해야 했고 결과적으로 비효율적인 쿼리 계획을 선택했을 수도 있습니다. 쿼리 최적화 프로그램이 더 효율적인 쿼리 계획을 선택할 수 있도록 통계를 만들거나 업데이트하는 방법은 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요. 어떤 경우에는 이 열에 조인 조건자 없이 조인(테이블을 수반하는)이 일어났음을 나타내는 "MISSING JOIN PREDICATE" 문자열이 포함되기도 합니다. 실수로 조인 조건자를 삭제하면 예상보다 실행 시간이 긴 쿼리가 만들어지고 큰 결과 집합이 반환됩니다. 이 경고가 나타나면 조인 조건자를 의도적으로 사용하지 않았는지 확인하세요.|  
+|**:::no-loc text="Type":::**|노드 유형. 각 쿼리의 부모 노드에 대해서는 노드 유형이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 유형(예: SELECT, INSERT, EXECUTE 등)입니다. 실행 계획을 나타내는 하위 노드에 대해서는 PLAN_ROW 유형입니다.|  
 |**Parallel**|**0** = 연산자가 병렬로 실행되지 않습니다.<br /><br /> **1** = 연산자가 병렬로 실행됩니다.|  
 |**EstimateExecutions**|현재 쿼리를 실행하는 동안 이 연산자가 실행될 예상 횟수입니다.|  
 |||

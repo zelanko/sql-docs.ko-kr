@@ -1,5 +1,6 @@
 ---
 title: '백업 및 복원: 기능 상호 운용성'
+description: 이 문서에서는 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링을 포함하는 SQL Server의 백업 및 복원 기능에 대해 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ae58f796b86beb346e810faf4549d11afd36d21
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247448"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220552"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,6 +135,6 @@ ms.locfileid: "75247448"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[활성 보조: 보조 복제본에 백업 \(Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[활성 보조 복제본: 보조 복제본에 백업\((Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

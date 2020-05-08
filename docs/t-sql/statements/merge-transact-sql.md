@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634133"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181100"
 ---
 # <a name="merge-transact-sql"></a>MERGE(Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81634133"
 
 원본 테이블과의 조인 결과를 기반으로 대상 테이블에서 삽입, 업데이트 또는 삭제 작업을 실행합니다. 예를 들어 원본 테이블과의 차이점에 따라 대상 테이블에서 행을 삽입, 업데이트 및 삭제하여 두 테이블을 동기화합니다.  
   
-**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 다음은 그 예입니다.  
+**성능 팁:** MERGE 문에 대해 설명된 조건부 동작은 두 테이블에 일치하는 특성이 복합적으로 혼합되어 있는 경우 가장 효과적입니다. 예를 들어, 행이 없는 경우 행을 삽입하고 행이 일치하지 않는 경우 행을 업데이트합니다. 다른 테이블의 행을 기반으로 한 테이블을 단순히 업데이트하는 경우 기본 INSERT, UPDATE 및 DELETE 문을 사용하여 성능 및 확장성을 향상합니다. 다음은 그 예입니다.   
   
 ```sql
 INSERT tbl_A (col, col2)  
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 원본 테이블과의 암시적 조인을 수행하는 대상 테이블에 있는 하나 이상의 인덱스에 대한 이름 또는 ID를 지정합니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
 \<output_clause>  
-업데이트, 삽입 또는 삭제되는 *target_table*의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action**은 OUTPUT 절에서 지정할 수 있습니다. **$action**은 각 행에 대한 세 가지 값 중 하나를 반환하는 **nvarchar(10)** 형식의 열입니다. 이 열은 해당 행에서 수행된 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다. 이 절의 인수에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
+업데이트, 삽입 또는 삭제되는 *target_table*의 모든 행과 일치하는 행을 임의의 순서로 반환합니다. **$action**은 OUTPUT 절에서 지정할 수 있습니다. **$action**은 각 행에 대한 세 가지 값 중 하나를 반환하는 **nvarchar(10)** 형식의 열입니다. 이 열은 해당 행에서 수행된 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다. 이 절의 인수 및 동작에 대한 자세한 내용은 [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)을 참조하세요.  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 최적화 프로그램 힌트를 사용하여 데이터베이스 엔진이 문을 처리하는 방법을 사용자 지정하도록 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  

@@ -1,5 +1,6 @@
 ---
 title: 표시된 트랜잭션을 사용하여 관련 데이터베이스 복구
+description: SQL Server는 특정 표시로 복구할 수 있도록 트랜잭션 로그에서 명명된 표시를 지원합니다. 표시는 특정 작업에 연결될 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd28690296697c256dcdde832517d9713e611184
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75238885"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180878"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>표시된 트랜잭션이 포함된 관련 데이터베이스 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

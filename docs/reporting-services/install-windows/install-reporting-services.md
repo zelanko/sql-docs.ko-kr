@@ -1,18 +1,18 @@
 ---
 title: SQL Server Reporting Services 설치 | Microsoft Docs
-ms.date: 10/02/2019
+ms.date: 05/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 07669b5c0466c725a271f71ed207c332ffdb5a26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486822"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693796"
 ---
 # <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services 설치
 
@@ -32,6 +32,8 @@ Microsoft 다운로드 센터에서 [SQL Server 2017 Reporting Services](https:/
 
 > [!NOTE]
 > Power BI Report Server를 찾고 있나요? [Power BI Report Server 설치](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)를 참조하세요.
+> 
+> SQL Server 2016 또는 이전 버전의 Reporting Services에서 업그레이드하거나 마이그레이션하려고 하나요? [Reporting Services 업그레이드 및 마이그레이션](upgrade-and-migrate-reporting-services.md)을 참조하세요.
 
 ## <a name="before-you-begin"></a>시작하기 전에
 

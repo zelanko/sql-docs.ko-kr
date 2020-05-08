@@ -1,5 +1,6 @@
 ---
 title: 디바이스 내용(SQL Server) | Microsoft 문서
+description: SQL Server에서 디바이스 내용 대화 상자를 사용하여 디바이스, 미디어, 미디어 세트 및 백업 세트를 설명하는 백업 정보를 볼 수 있습니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68068488"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179192"
 ---
 # <a name="device-contents-sql-server"></a>디바이스 내용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,8 +58,8 @@ ms.locfileid: "68068488"
 |헤더|값|  
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
-|**형식**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
-|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<비어 있음>* (트랜잭션 로그의 경우)이 될 수 있습니다.|  
+|**형식**|수행된 백업 유형: 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
+|**구성 요소**|백업된 구성 요소: 데이터베이스, 파일 또는 *\<blank>* (트랜잭션 로그의 경우)일 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**Database**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

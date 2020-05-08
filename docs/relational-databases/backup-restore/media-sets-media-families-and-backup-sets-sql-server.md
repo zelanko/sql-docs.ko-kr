@@ -1,5 +1,6 @@
 ---
 title: 미디어 세트, 미디어 패밀리, 백업 세트
+description: 이 문서에서는 SQL Server가 백업 및 복구에 사용하는 미디어 세트, 미디어 패밀리 및 백업 세트에 대해 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod_service: backup-restore
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 168a471a57b3f1d8cd3ea2a5428d8b0bd9063965
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af54a71c97397954db3a4aa86acccd64a9f8afa4
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258677"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180224"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
 
@@ -52,7 +53,7 @@ ms.locfileid: "75258677"
 ##  <a name="overview-of-media-sets-media-families-and-backup-sets"></a><a name="OvMediaSetsFamiliesBackupSets"></a> 미디어 세트, 미디어 패밀리 및 백업 세트의 개요  
  백업 미디어가 하나 이상인 세트의 백업이 미디어 세트 하나를 구성합니다. *미디어 세트* 는 하나 이상의 백업 작업에서 고정된 유형과 개수의 백업 디바이스를 사용하여 기록한 *백업 미디어*, 테이프 또는 디스크 파일, 또는 Windows Azure Blob을 정렬하여 모아 놓은 것입니다. 지정된 미디어 세트에서는 테이프 드라이브, 디스크 드라이브 또는 Azure Blob을 사용하지만 둘 이상을 조합하여 사용하지는 않습니다. 
  
-**예제:** 미디어 세트와 연결된 백업 디바이스는 `\\.\TAPE0`, `\\.\TAPE1`및 `\\.\TAPE2`라는 3개의 테이프 드라이브일 수 있습니다. 이 미디어 세트에는 드라이브마다 최소한 3개로 시작되는 테이프만 포함됩니다. 미디어 세트가 만들어질 때 백업 디바이스 유형과 개수가 설정되며 이 값은 변경할 수 없습니다. 그러나 필요할 경우 백업 작업과 복원 작업 중간에 지정된 디바이스를 같은 유형의 디바이스로 바꿀 수 있습니다.  
+**예:** 미디어 세트와 연결된 백업 디바이스는 `\\.\TAPE0`, `\\.\TAPE1` 및 `\\.\TAPE2`라는 3개의 테이프 드라이브일 수 있습니다. 이 미디어 세트에는 드라이브마다 최소한 3개로 시작되는 테이프만 포함됩니다. 미디어 세트가 만들어질 때 백업 디바이스 유형과 개수가 설정되며 이 값은 변경할 수 없습니다. 그러나 필요할 경우 백업 작업과 복원 작업 중간에 지정된 디바이스를 같은 유형의 디바이스로 바꿀 수 있습니다.  
   
  백업 미디어를 포맷하여 백업 작업을 수행하는 동안 백업 미디어에 미디어 세트가 생성됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [새 미디어 세트 만들기](#CreatingMediaSet)를 참조하십시오. 포맷 후에는 각 파일이나 테이프에 미디어 세트의 미디어 헤더가 포함되어 파일이나 테이프가 백업 내용을 수신할 수 있는 준비가 됩니다. 헤더가 있으면 백업 작업에서 작업에 지정된 모든 백업 디바이스에 있는 백업 미디어에 지정된 데이터를 백업합니다.  
   

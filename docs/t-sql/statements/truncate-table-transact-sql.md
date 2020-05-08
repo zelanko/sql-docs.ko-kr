@@ -25,12 +25,12 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fea00776176f66f53ec8f20d2420980ba5c0b06
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635449"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643372"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,10 +71,10 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  *table_name*  
  잘라내거나 모든 행을 제거할 테이블의 이름입니다. *table_name*은 리터럴이어야 합니다. *table_name*은 **OBJECT_ID()** 함수 또는 변수일 수 없습니다.  
   
- WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )  
+ WITH ( PARTITIONS ( { \<*partition_number_expression*> | \<*range*> } [ , ...n ] ) )    
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- 자를 파티션이나 모든 행이 제거되는 파티션을 지정합니다. 테이블이 분할되지 않은 경우 **WITH PARTITIONS** 인수를 사용하면 오류가 발생합니다. **WITH PARTITIONS** 절을 지정하지 않으면 전체 테이블이 잘립니다.  
+ 자를 파티션이나 모든 행이 제거되는 파티션을 지정합니다. 테이블이 분할되지 않은 경우 `WITH PARTITIONS` 인수를 사용하면 오류가 발생합니다. `WITH PARTITIONS` 절을 지정하지 않으면 전체 테이블이 잘립니다.  
   
  *\<partition_number_expression>* 은 다음과 같은 방법으로 지정할 수 있습니다. 
   
@@ -89,32 +89,39 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  분할된 테이블을 자르려면 테이블과 인덱스를 정렬해야 합니다(동일한 파티션 함수에 분할).  
   
 ## <a name="remarks"></a>설명  
- DELETE 문과 비교하여 TRUNCATE TABLE에는 다음과 같은 이점이 있습니다.  
+ DELETE 문과 비교하여 `TRUNCATE TABLE`에는 다음과 같은 이점이 있습니다.  
   
 -   트랜잭션 로그 공간을 덜 사용합니다.  
   
-     DELETE 문은 행을 한번에 하나씩 제거하고 삭제된 각 행에 대해 트랜잭션 로그에 항목을 기록합니다. 반면 TRUNCATE TABLE은 테이블의 데이터를 저장하는 데 사용되는 데이터 페이지의 할당을 취소하는 방식으로 데이터를 제거하며 페이지 할당 취소만을 트랜잭션 로그에 기록합니다.  
+     DELETE 문은 행을 한번에 하나씩 제거하고 삭제된 각 행에 대해 트랜잭션 로그에 항목을 기록합니다. 반면 `TRUNCATE TABLE`은 테이블의 데이터를 저장하는 데 사용되는 데이터 페이지의 할당을 취소하는 방식으로 데이터를 제거하며 페이지 할당 취소만을 트랜잭션 로그에 기록합니다.  
   
 -   일반적으로 적은 수의 잠금이 사용됩니다.  
   
-     행 잠금을 사용하여 DELETE 문을 실행하면 삭제를 위해 테이블의 각 행이 잠깁니다. TRUNCATE TABLE은 항상 테이블(스키마(SCH-M) 잠금 포함)과 페이지를 잠그지만 각 행은 잠그지 않습니다.  
+     행 잠금을 사용하여 DELETE 문을 실행하면 삭제를 위해 테이블의 각 행이 잠깁니다. `TRUNCATE TABLE`은 항상 테이블(스키마(SCH-M) 잠금 포함)과 페이지를 잠그지만 각 행은 잠그지 않습니다.  
   
 -   빈 페이지는 예외 없이 테이블에 남습니다.  
   
      DELETE 문이 실행된 후에도 테이블은 계속 빈 페이지를 포함할 수 있습니다. 예를 들어, 힙의 빈 페이지는 최소한 배타적인(LCK_M_X) 테이블 잠금이 있어야만 할당 취소할 수 있으므로 삭제를 위해 테이블 잠금을 사용하지 않는 경우 테이블(힙)에는 빈 페이지가 많이 남게 됩니다. 인덱스의 경우도 삭제 작업 후에 빈 페이지가 남을 수 있지만 이러한 페이지는 백그라운드 정리 프로세스에 의해 신속하게 할당 취소됩니다.  
   
- TRUNCATE TABLE은 테이블에서 모든 행을 제거하지만 테이블 구조와 테이블의 열, 제약 조건, 인덱스 등은 그대로 남습니다. 테이블 정의 및 테이블의 데이터를 제거하려면 DROP TABLE 문을 사용하세요.  
+ `TRUNCATE TABLE`은 테이블에서 모든 행을 제거하지만 테이블 구조와 테이블의 열, 제약 조건, 인덱스 등은 그대로 남습니다. 테이블 정의 및 테이블의 데이터를 제거하려면 `DROP TABLE` 문을 사용하세요.  
   
  테이블에 ID 열이 포함되어 있으면 해당 열의 카운터는 열에 대한 초기값으로 다시 설정됩니다. 초기값이 정의되어 있지 않으면 기본값인 1이 사용됩니다. ID 카운터를 보존하려면 DELETE를 대신 사용하세요.  
+ 
+ > [!NOTE]
+ > `TRUNCATE TABLE` 작업은 롤백할 수 있습니다.
   
 ## <a name="restrictions"></a>제한  
- 다음과 같은 테이블에서는 TRUNCATE TABLE 문을 사용할 수 없습니다.  
+ 다음과 같은 테이블에서는 `TRUNCATE TABLE` 문을 사용할 수 없습니다.  
   
--   FOREIGN KEY 제약 조건에 의해 참조됩니다. 자신을 참조하는 외래 키가 있는 테이블을 잘라낼 수 있습니다.  
+-   FOREIGN KEY 제약 조건에 의해 참조됩니다. 자신을 참조하는 외래 키가 있는 테이블을 잘라낼 수 있습니다. 
   
 -   인덱싱된 뷰에 참여합니다.  
   
 -   트랜잭션 복제 또는 병합 복제에 의해 게시됩니다.  
+
+-   시스템 버전 임시 테이블입니다.
+
+-   EDGE 제약 조건에 의해 참조됩니다.  
   
  이런 특징을 한 개 이상 갖고 있는 테이블의 경우 DELETE 문을 대신 사용하세요.  
   
@@ -122,15 +129,15 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
  
  [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[sspdw](../../includes/sspdw-md.md)]의 경우:
 
-- TRUNCATE TABLE은 EXPLAIN 문 내에 허용되지 않습니다.
+- `TRUNCATE TABLE`은 EXPLAIN 문 내에 허용되지 않습니다.
 
-- TRUNCATE TABLE은 트랜잭션 내부에서 실행할 수 없습니다.
+- `TRUNCATE TABLE`은 트랜잭션 내부에서 실행할 수 없습니다.
   
 ## <a name="truncating-large-tables"></a>대형 테이블 잘라내기  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 삭제할 모든 익스텐트에 대한 동시 잠금이 없는 한 128개를 초과하는 익스텐트를 갖고 있는 테이블을 삭제하거나 잘라내는 기능이 추가되었습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 최소한 *table_name*에 대한 ALTER 권한이 필요합니다. TRUNCATE TABLE 권한은 테이블 소유자, sysadmin 고정 서버 역할 멤버 및 db_owner 및 db_ddladmin 고정 데이터베이스 역할의 기본 권한이며 위임할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 TRUNCATE TABLE 문을 통합한 뒤 EXECUTE AS 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
+ 최소한 *table_name*에 대한 `ALTER` 권한이 필요합니다. `TRUNCATE TABLE` 권한은 기본적으로 테이블 소유자, `sysadmin` 고정 서버 역할의 멤버와 `db_owner` 및 `db_ddladmin` 고정 데이터베이스 역할에 할당되며 이전할 수 없습니다. 하지만 저장 프로시저와 같은 모듈 내에 `TRUNCATE TABLE` 문을 통합한 뒤 `EXECUTE AS` 절을 사용하여 적절한 권한을 모듈에 허용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   

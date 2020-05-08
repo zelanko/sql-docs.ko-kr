@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 7a510500d16c29971d1a5263c5138ad1981c9401
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215482"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619676"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="april-2020-hotfix"></a>2020년 4월(핫픽스)
+
+2020년 4월 30일 &nbsp; / &nbsp; 버전: 1.17.1
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 버그 #10197 MFA를 통해 연결할 수 없음 수정 | [#10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>2020년 4월
+
+2020년 4월 27일 &nbsp; / &nbsp; 버전: 1.17.0
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| 홈페이지 개선 | 일반적인 작업을 쉽게 볼 수 있도록 홈페이지의 UI 업데이트를 개선하고 확장을 강조 표시했습니다. |
+| 새로운 Notebook 기능 | &bull; &nbsp; Markdown을 사용한 쉬운 작성을 위해 텍스트 셀을 편집할 때 Markdown 도구 모음이 추가되었습니다. <br/> &bull; &nbsp; Jupyter Books 뷰렛을 Jupyter Books와 Notebook을 함께 관리할 수 있는 Notebook 뷰렛으로 강화했습니다. <br/>&bull; &nbsp; Notebook을 저장할 때 영구 차트에 대한 지원이 추가되었습니다. <br/> &bull; &nbsp; Python Notebook에 KQL 매직에 대한 지원이 추가되었습니다.|
+| 대시보드 개선 | Azure Data Studio 전체의 대시보드가 동작 도구 모음을 포함하는 최신 디자인 패턴으로 업데이트되었습니다. 이는 여러 확장에도 적용됩니다. |
+| Azure 보기에 Cloud Shell 통합이 추가되었습니다. | |
+| Always Encrypted 및 보안 enclave를 사용한 Always Encrypted에 대한 지원이 추가되었습니다. | |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)를 참조하세요. |
+| &nbsp; | &nbsp; |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22)를 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>2020년 3월
 
@@ -50,7 +79,7 @@ ms.locfileid: "80215482"
 
 ## <a name="february-2020"></a>2020년 2월
 
-2020년 2월 13일 &nbsp; / &nbsp; 버전: 1.15.0 
+2020년 2월 13일 &nbsp; / &nbsp; 버전: 1.15.0
 
 &nbsp;
 
@@ -87,7 +116,7 @@ ms.locfileid: "80215482"
 | 변경 | 세부 정보 |
 | :----- | :------ |
 | 현재 활성 연결만 나열하도록 Notebooks의 연결에 연결 드롭다운 변경됨 | [#8129](https://github.com/microsoft/azuredatastudio/issues/8129) |
-| BDC에 연결할 때 SSL 확인 오류를 무시할 수 있도록 bigdatacluster.ignoreSslVerification 설정 추가됨 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
+| BDC에 연결할 때 TLS/SSL 확인 오류를 무시할 수 있도록 bigdatacluster.ignoreSslVerification 설정 추가됨 | [#8582](https://github.com/microsoft/azuredatastudio/pull/8582) |
 | 오프라인 쿼리 편집기의 기본 언어 버전 변경 허용 | [#8419](https://github.com/microsoft/azuredatastudio/pull/8419) |
 | 빅 데이터 클러스터/SQL 2019 기능의 GA 상태 | [#8269](https://github.com/microsoft/azuredatastudio/issues/8269) |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/44?closed=1)를 참조하세요. |
@@ -302,7 +331,7 @@ ms.locfileid: "80215482"
 | PowerShell 확장이 추가됨  | VS Code에서 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) 환경을 가져옵니다.  |
 | SQL Server dacpac 확장이 추가됨  | SQL Server 가져오기 확장의 데이터 계층 애플리케이션 마법사를 제거하고 새 확장으로 대체합니다.  |
 | 커뮤니티 확장 QueryPlan.show가 추가됨 | 통합 지원을 추가하여 쿼리 계획을 시각화합니다.  |
-| SQL Server 2019 미리 보기 확장이 업데이트됨 | &bull; &nbsp; Jupyter Notebook 지원, 특히 Python3 및 Spark 커널이 핵심 Azure Data Studio 도구로 이동됨 <br/>&bull; &nbsp; 외부 데이터 마법사 버그 수정  |
+| SQL Server 2019 미리 보기 확장이 업데이트됨 | &bull; &nbsp; Jupyter Notebook 지원, 특히 Python3 및 Spark 커널이 핵심 Azure Data Studio 도구로 이동되었습니다. <br/>&bull; &nbsp; 외부 데이터 마법사 버그 수정  |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -391,7 +420,7 @@ ms.locfileid: "80215482"
 - [이슈 #2906](https://github.com/Microsoft/azuredatastudio/pull/2906) 해결: 테이블 이름에 특수 문자가 포함된 경우 데이터 편집 문서 이름 수정
 - [이슈 #2929](https://github.com/Microsoft/azuredatastudio/issues/2929) 해결: VSCode 릴리스 정보에서 변경 내용을 확인하기 위한 기본 제공 확장 변경 로그
 - [이슈 #2719](https://github.com/Microsoft/azuredatastudio/issues/2719) 해결: 고대비 테마 이중/삼중 쌍 아이콘
-- [이슈 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047) 해결: SQL Server에 연결하기 위한 명령줄 인터페이스 추가
+- [이슈 #3047](https://github.com/Microsoft/azuredatastudio/pull/3047) 해결: SQL Server에 연결하기 위한 명령줄 인터페이스가 추가되었습니다.
 - [이슈 #3031](https://github.com/Microsoft/azuredatastudio/pull/3031) 해결: 쿼리 계획 테마 지원 추가
 
 ## <a name="october-2018"></a>2018년 10월
@@ -495,7 +524,7 @@ _0.32.8에는 0.32.7의 몇 가지 기능 저하_에 대한 수정([#1971](https
 - [이슈 #1836](https://github.com/Microsoft/azuredatastudio/issues/1836) 해결: .sql 파일이 SQL Operations Studio와 연결되지 않음
 - [이슈 #1850](https://github.com/Microsoft/azuredatastudio/issues/1850) 해결: N’’을 입력하면 N’’’으로 자동 완성됨
 - [이슈 #1985](https://github.com/Microsoft/azuredatastudio/issues/1985) 해결 : 쿼리 결과 그리드에서 복사할 때 1열씩 벗어남
-- [이슈 #1998](htpts://github.com/Microsoft/azuredatastudio/pull/1998) 해결: 정보 대화 상자에 VS Code 버전 추가
+- [이슈 #1998](https://github.com/Microsoft/azuredatastudio/pull/1998) 해결: 정보 대화 상자에 VS Code 버전 추가
 - [이슈 #2042](https://github.com/Microsoft/azuredatastudio/pull/2042) 해결: 에이전트: sql 파일에서 쿼리를 가져오는 단추를 사용할 수 있음
 - [이슈 #2091](https://github.com/Microsoft/azuredatastudio/issues/2091) 해결: Ctrl+C 바로 가기를 사용하여 결과 창에서 복사할 수 없음
 - [이슈 #2099](https://github.com/Microsoft/azuredatastudio/pull/2099) 해결: saveAsCsv 옵션이 더 추가됨

@@ -1,5 +1,6 @@
 ---
 title: Suspect_pages 테이블 관리(SQL Server) | Microsoft 문서
+description: SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 suspect_pages 테이블을 관리하는 방법을 알아봅니다. 특정 오류를 생성하는 페이지를 suspect라고 합니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d364f28e1d27d9eeb758c174e7e8062e7540873
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908919"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180210"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

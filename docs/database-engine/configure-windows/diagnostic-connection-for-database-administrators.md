@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983043"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588149"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,46 +42,54 @@ ms.locfileid: "73983043"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin 역할의 멤버만이 DAC를 사용하여 연결할 수 있습니다.  
   
- DAC는 **sqlcmd** 명령 프롬프트 유틸리티에 특수 관리자 스위치( **-A**)를 사용하여 이용 가능하며 지원됩니다. **sqlcmd**를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 **admin:** 을 **sqlcmd -S admin:<*instance_name*>** 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]admin: **\<instance_name  >에 연결하여**  쿼리 편집기에서 DAC를 시작할 수도 있습니다.  
-  
+ DAC는 `sqlcmd` 명령 프롬프트 유틸리티에 특수 관리자 스위치(`-A`)를 사용하여 이용 가능하며 지원됩니다. `sqlcmd`를 사용하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. 또한 접두사 `admin:`을 `sqlcmd -S admin:<*instance_name*>` 형식으로 인스턴스 이름에 추가하여 연결할 수 있으며 `admin:\<*instance_name*>`에 연결하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 DAC를 시작할 수도 있습니다.
+
+> [!Note]  
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DAC를 설정하려면
+> - 개체 탐색기와 열려 있는 모든 쿼리 창을 포함하여 관련 SQL Server 인스턴스에 대한 모든 연결을 끊습니다.
+> - 메뉴에서 **파일** > **새로 만들기** > **데이터베이스 엔진 쿼리**를 선택합니다.
+> - 연결 대화 상자의 서버 이름 필드에 기본 인스턴스를 사용하는 경우 `admin:<server_name>`을 입력하고 명명된 인스턴스를 사용하는 경우 `admin:<server_name>\<instance_name>`을 입력합니다.
+
 ## <a name="restrictions"></a>제한  
  DAC는 드물게 발생하는 서버 문제 진단만을 위한 연결이므로 연결에 다음과 같은 제한이 있습니다.  
   
--   연결에 사용할 수 있는 리소스를 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 하나의 DAC만 허용됩니다. DAC 연결이 이미 활성화된 경우 DAC를 통해 연결하려는 모든 새 요청은 17810 오류가 발생하면서 거부됩니다.  
+- 연결에 사용할 수 있는 리소스를 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스당 하나의 DAC만 허용됩니다. DAC 연결이 이미 활성화된 경우 DAC를 통해 연결하려는 모든 새 요청은 17810 오류가 발생하면서 거부됩니다.  
   
--   리소스 절약을 위해 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 은 추적 플래그 7806을 사용하여 시작되지 않는 한 DAC 포트에서 수신하지 않습니다.  
+- 리소스 절약을 위해 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 은 추적 플래그 7806을 사용하여 시작되지 않는 한 DAC 포트에서 수신하지 않습니다.  
   
--   DAC는 처음에 로그인과 관련된 기본 데이터베이스에 연결을 시도합니다. 성공적으로 연결되면 master 데이터베이스에 연결할 수 있습니다. 기본 데이터베이스가 오프라인이거나 사용할 수 없는 경우 연결은 4060 오류를 반환합니다. 그러나 다음 명령을 사용하면 기본 데이터베이스를 무시하고 master 데이터베이스에 연결할 수 있습니다.  
+- DAC는 처음에 로그인과 관련된 기본 데이터베이스에 연결을 시도합니다. 성공적으로 연결되면 master 데이터베이스에 연결할 수 있습니다. 기본 데이터베이스가 오프라인이거나 사용할 수 없는 경우 연결은 4060 오류를 반환합니다. 그러나 다음 명령을 사용하면 기본 데이터베이스를 무시하고 master 데이터베이스에 연결할 수 있습니다.  
+
+   ```powershell
+   sqlcmd -A -d master 
+   ```
+
+   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 시작되면 master를 사용할 수 있으므로 DAC로 master 데이터베이스에 연결하는 것이 좋습니다.  
   
-     **sqlcmd -A -d master**  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 DAC를 사용하여 병렬 쿼리 또는 명령을 실행할 수 없습니다. 예를 들어 DAC로 다음 문 중 하나를 실행하는 경우 3637 오류가 발생합니다.  
   
-     [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 시작되면 master를 사용할 수 있으므로 DAC로 master 데이터베이스에 연결하는 것이 좋습니다.  
+  - `RESTORE...`
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 DAC를 사용하여 병렬 쿼리 또는 명령을 실행할 수 없습니다. 예를 들어 DAC로 다음 문 중 하나를 실행하는 경우 3637 오류가 발생합니다.  
+  - `BACKUP...`
+
+- DAC에서는 제한된 리소스만 사용할 수 있습니다. DAC를 사용하여 많은 리소스가 필요한 쿼리(예: 큰 테이블의 복잡한 조인) 또는 차단될 수 있는 쿼리를 실행하지 마십시오. 그래야만 DAC가 기존 서버 문제를 더 악화시키는 것을 방지할 수 있습니다. 차단 가능성을 예방하려면 차단될 수 있는 쿼리를 실행해야 하는 경우에 가능하면 스냅샷 기반 격리 수준에서 해당 쿼리를 실행합니다. 또는 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하고 LOCK_TIMEOUT 값을 2000밀리초 등의 짧은 값으로 설정하거나 두 방법 모두를 사용합니다. 이렇게 하면 DAC 세션이 차단되지 않습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 상태에 따라 DAC 세션이 래치에서 차단될 수 있습니다. Ctrl+C를 사용하여 DAC 세션을 종료할 수도 있지만 보장할 수 없습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다.  
   
-    -   RESTORE  
-  
-    -   BACKUP  
-  
--   DAC에서는 제한된 리소스만 사용할 수 있습니다. DAC를 사용하여 많은 리소스가 필요한 쿼리(예: 큰 테이블의 복잡한 조인) 또는 차단될 수 있는 쿼리를 실행하지 마십시오. 그래야만 DAC가 기존 서버 문제를 더 악화시키는 것을 방지할 수 있습니다. 차단 가능성을 예방하려면 차단될 수 있는 쿼리를 실행해야 하는 경우에 가능하면 스냅샷 기반 격리 수준에서 해당 쿼리를 실행합니다. 또는 트랜잭션 격리 수준을 READ UNCOMMITTED로 설정하고 LOCK_TIMEOUT 값을 2000밀리초 등의 짧은 값으로 설정하거나 두 방법 모두를 사용합니다. 이렇게 하면 DAC 세션이 차단되지 않습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 상태에 따라 DAC 세션이 래치에서 차단될 수 있습니다. Ctrl+C를 사용하여 DAC 세션을 종료할 수도 있지만 보장할 수 없습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다.  
-  
--   DAC를 통한 연결과 문제 해결을 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DAC에서 실행된 명령을 처리하도록 제한된 리소스를 예약합니다. 일반적으로 이러한 리소스는 아래에 나열된 기능과 같은 간단한 진단 및 문제 해결 기능만을 수행할 수 있습니다.  
+- DAC를 통한 연결과 문제 해결을 보장하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 DAC에서 실행된 명령을 처리하도록 제한된 리소스를 예약합니다. 일반적으로 이러한 리소스는 아래에 나열된 기능과 같은 간단한 진단 및 문제 해결 기능만을 수행할 수 있습니다.  
   
  이론상으로는 DAC에서 병렬로 실행하지 않아도 되는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있지만 다음과 같은 진단 및 문제 해결 명령에만 사용하는 것이 좋습니다.  
   
--   기본 진단을 위해 잠금 상태에 대한 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md), 캐시 상태를 확인하기 위한 [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md), 활성 세션과 요청을 위한 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 및 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 등 동적 관리 뷰를 쿼리합니다. 리소스를 많이 사용하는 동적 관리 뷰(예를 들어 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)는 전체 버전 저장소를 검색하므로 광범위한 I/O를 발생시킬 수 있음) 또는 복잡한 조인을 사용하는 동적 관리 뷰를 사용하지 마세요. 성능에 미치는 영향에 대한 자세한 내용은 해당 [동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)문서를 참조하십시오.  
+- 기본 진단을 위해 잠금 상태에 대한 [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md), 캐시 상태를 확인하기 위한 [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md), 활성 세션과 요청을 위한 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 및 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 등 동적 관리 뷰를 쿼리합니다. 리소스를 많이 사용하는 동적 관리 뷰(예를 들어 [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)는 전체 버전 저장소를 검색하므로 광범위한 I/O를 발생시킬 수 있음) 또는 복잡한 조인을 사용하는 동적 관리 뷰를 사용하지 마세요. 성능에 미치는 영향에 대한 자세한 내용은 해당 [동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)문서를 참조하십시오.  
   
--   카탈로그 뷰를 쿼리합니다.  
+- 카탈로그 뷰를 쿼리합니다.  
   
--   [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md), [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) 등의 기본 DBCC 명령을 사용합니다. [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 또는 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
+- [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md), [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md) 등의 기본 DBCC 명령을 사용합니다. [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) 또는 [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md) 등 리소스를 많이 사용하는 명령을 실행하지 마세요.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
+- [!INCLUDE[tsql](../../includes/tsql-md.md)] KILL *\<spid>* 명령 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 상태에 따라 KILL 명령은 성공하지 않을 수도 있습니다. 이러한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 것이 유일한 해결 방법입니다. 일반적인 지침은 다음과 같습니다.  
   
-    -   `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`쿼리를 실행하여 SPID가 실제로 중지되었는지 확인합니다. 행이 반환되지 않으면 세션이 중지된 것입니다.  
+    - `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`쿼리를 실행하여 SPID가 실제로 중지되었는지 확인합니다. 행이 반환되지 않으면 세션이 중지된 것입니다.  
   
-    -   세션이 아직 중지되지 않은 경우 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`쿼리를 실행하여 이 세션에 할당된 태스크가 있는지 확인합니다. 할당된 태스크가 있는 경우 세션이 현재 중지되고 있을 가능성이 높습니다. 이러한 작업은 매우 많은 시간이 소요되며 실패할 수 있습니다.  
+    - 세션이 아직 중지되지 않은 경우 `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`쿼리를 실행하여 이 세션에 할당된 태스크가 있는지 확인합니다. 할당된 태스크가 있는 경우 세션이 현재 중지되고 있을 가능성이 높습니다. 이러한 작업은 매우 많은 시간이 소요되며 실패할 수 있습니다.  
   
-    -   이 세션과 연관된 sys.dm_os_tasks에 태스크가 없지만 KILL 명령을 실행한 후 sys.dm_exec_sessions에 세션이 그대로 남아 있는 경우 사용 가능한 작업자가 없음을 의미합니다. 현재 실행 중인 태스크( `sessions_id <> NULL`로 sys.dm_os_tasks 뷰에 나열된 작업) 중 하나를 선택하고 해당 작업과 연관된 세션을 중지하여 작업자를 확보합니다. 한 세션을 중지해도 해결되지 않으면 여러 세션을 중지해야 합니다.  
+    - 이 세션과 연관된 sys.dm_os_tasks에 태스크가 없지만 KILL 명령을 실행한 후 sys.dm_exec_sessions에 세션이 그대로 남아 있는 경우 사용 가능한 작업자가 없음을 의미합니다. 현재 실행 중인 태스크( `sessions_id <> NULL`로 sys.dm_os_tasks 뷰에 나열된 작업) 중 하나를 선택하고 해당 작업과 연관된 세션을 중지하여 작업자를 확보합니다. 한 세션을 중지해도 해결되지 않으면 여러 세션을 중지해야 합니다.  
   
 ## <a name="dac-port"></a>DAC 포트  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 TCP 포트 1434(사용 가능한 경우) 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 시작 시 동적으로 할당된 TCP 포트에서 DAC를 수신합니다. [오류 로그](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)에는 DAC를 수신 대기 중인 포트 번호가 포함되어 있습니다. 기본적으로 DAC 수신기는 로컬 포트에서만 연결을 허용합니다. 원격 관리 연결을 활성화하는 코드 샘플은 [remote admin connections 서버 구성 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)을 참조하세요.  

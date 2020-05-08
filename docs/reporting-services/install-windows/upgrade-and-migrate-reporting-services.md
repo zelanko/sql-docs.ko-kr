@@ -10,25 +10,30 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487262"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719527"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  이 항목은 SQL Server Reporting Services의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. SQL Server Reporting Services 배포를 업그레이드하는 방법은 일반적으로 두 가지가 있습니다.  
+  이 항목은 SQL Server Reporting Services의 업그레이드 및 마이그레이션 옵션에 대한 개요입니다. 다음은 SQL Server Reporting Services 배포를 업그레이드하는 일반적인 방법입니다.  
  
--   **업그레이드:** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서 뒷부분에 나오는 '기본 모드에서 SharePoint 모드로 마이그레이션' 섹션을 참조하세요.  
+- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2016 및 이전 버전으로 업그레이드:  ** 현재 설치된 서버 및 인스턴스의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소를 업그레이드합니다. 이를 일반적으로 "현재 위치" 업그레이드라고 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버의 한 모드에서 다른 모드로의 전체 업그레이드는 지원되지 않습니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드 보고서 서버로 업그레이드할 수 없습니다. 보고서 항목을 한 모드에서 다른 모드로 마이그레이션할 수 있습니다. 자세한 내용은 이 문서의 뒷부분에 나오는 [SharePoint 모드 업그레이드 및 마이그레이션 시나리오](#bkmk_sharePoint_scenarios) 섹션을 참조하세요.  
+
+- **Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드**는 이전 버전과 동일한 업그레이드 시나리오가 아닙니다.   Reporting Services 2016 및 이전 버전으로 업그레이드할 때는 SQL Server 설치 미디어를 사용하여 현재 위치 업그레이드를 수행할 수 있습니다.  Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드할 때는 새로운 Reporting Services 설치가 독립 실행형 제품이므로 동일한 단계를 따를 수 없습니다.   이는 더 이상 SQL Server 설치 미디어의 일부가 아닙니다. 
+
+    Reporting Services 2016 및 이전 버전에서 Reporting Services 2017 및 이후 버전으로 업그레이드하려면 [Reporting Services 설치 마이그레이션(기본 모드)](migrate-a-reporting-services-installation-native-mode.md) 문서를 따르고, Reporting Services 2017 및 이상을 대상 인스턴스로 설정하세요. 
+
+- **Reporting Services 2017에서 이후 버전으로 업그레이드**는 제품 설치 GUID가 동일하므로 현재 위치 업그레이드 시나리오입니다.  SQLServerReportingServices.exe 설치 파일을 실행하여 현재 Reporting Services가 설치된 서버에서 현재 위치 업그레이드를 시작하세요.
   
--   **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고 보고서 항목 및 리소스를 새 환경에 복사하고 기존 내용을 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드
+- **마이그레이션**: 새 SharePoint 환경을 설치 및 구성하고 보고서 항목 및 리소스를 새 환경에 복사하고 기존 내용을 사용하도록 새 환경을 구성합니다. 낮은 수준 형식의 마이그레이션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스, 구성 파일 및 SharePoint 콘텐츠 데이터베이스(SharePoint 모드를 사용하는 경우)를 복사하는 것입니다.  
+
 
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
@@ -37,9 +42,7 @@ ms.locfileid: "81487262"
  업그레이드할 수 있는 버전의 상세 목록은 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하십시오.  
   
 > [!TIP]  
->  SQL Server의 문제에 대한 최신 정보는 다음을 참조하세요.  
->   
->  -   [SQL Server 2016 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  SQL Server의 문제에 대한 최신 정보는 [SQL Server 2016 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=398124)를 참조하세요.  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> 함께 설치  

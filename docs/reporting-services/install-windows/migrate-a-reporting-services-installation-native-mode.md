@@ -5,19 +5,19 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/06/2018
-ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: c4a9ea113597324828574560af03db7caaac7cc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487062"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719279"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
 이 항목에서는 다음과 같은 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 배포 중 하나를 새로운 SQL Server Reporting Services 인스턴스로 마이그레이션하는 데 필요한 단계별 지침을 제공합니다.  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -147,9 +147,11 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
  새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]인스턴스를 설치하는 방법에 대한 지침을 보려면 다음 링크 중 하나를 클릭하십시오.  
   
-* [설치 마법사에서 SQL Server 설치 &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [설치 마법사에서 SQL Server Reporting Services 2016 및 이전 버전 설치 &#40;Setup&#41; ](install-reporting-services-native-mode-report-server.md) 
   
-* [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [명령 프롬프트에서 SQL Server Reporting Services 2016 및 이전 버전 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+
+* [SQL Server Reporting Services 2017 이상 설치](install-reporting-services.md)
 
 ## <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> 보고서 서버 데이터베이스 이동
 
@@ -199,7 +201,7 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
   
 1. 어셈블리가 지원되거나 어셈블리를 다시 컴파일해야 하는지 확인합니다.
 
-    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다.
+    * 사용자 지정 보안 확장 프로그램은 [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) 인터페이스를 사용하여 다시 작성해야 합니다. 
   
     * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]용 사용자 지정 렌더링 확장 프로그램은 ROM(렌더링 개체 모델)을 사용하여 다시 작성해야 합니다.  
   

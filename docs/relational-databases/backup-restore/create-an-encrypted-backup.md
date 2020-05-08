@@ -1,5 +1,6 @@
 ---
 title: 암호화된 백업 만들기 | Microsoft 문서
+description: 이 문서에서는 SQL Server에서 Transact-SQL을 사용하여 암호화된 백업을 만드는 방법을 보여 줍니다. 디스크나 Azure Storage로 백업할 수 있습니다.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a3a7d08c93b42b8b8cd236dae775b28cc5040751
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70280814"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179270"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

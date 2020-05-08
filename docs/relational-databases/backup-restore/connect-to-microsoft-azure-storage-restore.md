@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure Storage에 연결(복원) | Microsoft 문서
+description: SQL Server에서 Azure Storage 계정 대화 상자를 사용하여 Azure 계정의 파일 스토리지를 가져오도록 Azure Storage 계정 정보에 대한 연결을 지정할 수 있습니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94860f25b8cb53ab3c273da2e020d0d6a506ad0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c6564d9dc63a4d2e35ac306db91cead15f024c6
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155615"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220460"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Microsoft Azure 스토리지에 연결(복원)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

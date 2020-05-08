@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531092"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178134"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 시작
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 배포 시작
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)를 배포하는 방법에 대한 개요를 제공합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 배포하는 방법을 설명합니다. 이 문서에서는 배포 시나리오를 이해하는 데 도움이 되는 개념과 프레임워크를 안내합니다. 특정 배포 단계는 클라이언트 및 서버에 대해 선택한 플랫폼에 따라 다릅니다. [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대한 소개는 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)를 참조하세요.
 
-기타 배포 시나리오는 다음을 참조하세요.
+기타 SQL Server 배포 시나리오는 다음을 참조하세요.
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Docker 컨테이너](../linux/sql-server-linux-configure-docker.md)
 
-이 문서는 개념을 설명하고 이 섹션의 다른 배포 문서를 이해하기 위한 프레임워크를 제공합니다. 특정 배포 단계는 클라이언트 및 서버에 대해 선택한 플랫폼에 따라 다릅니다.
-
-> [!TIP]
-> Kubernetes 및 빅 데이터 클러스터가 배포된 환경을 신속하게 구축하여 기능을 강화하려면 [스크립트 섹션](#scripts) 에서 가리키는 샘플 스크립트 중 하나를 사용합니다. 배포 후 클러스터를 관리하려면 다음 섹션의 [클라이언트 도구](#tools)를 사용합니다.
+## <a name="quick-introduction"></a>간략한 소개 
 
 빅 데이터 클러스터를 배포하는 방법에 대한 개요는 9분 분량의 다음 동영상을 시청하세요.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Kubernetes 및 빅 데이터 클러스터가 배포된 환경을 신속하게 구축하여 기능을 강화하려면 [스크립트 섹션](#scripts) 에서 가리키는 샘플 스크립트 중 하나를 사용합니다. 배포 후 클러스터를 관리하려면 다음 섹션의 [클라이언트 도구](#tools)를 사용합니다.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> 클라이언트 도구

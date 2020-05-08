@@ -1,5 +1,6 @@
 ---
 title: '오프라인 복원: 주 파일 그룹 및 1개 파일 그룹'
+description: 이 예제에서는 SQL Server에서 전체 복구 모델로 여러 파일 그룹을 사용하여 데이터베이스의 기본 파일 그룹과 다른 하나의 파일 그룹을 오프라인 복원하는 방법을 보여 줍니다.
 ms.description: Full recovery model
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8d98eefac2e015aa1648f1afaa56a5676805cf10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cecd3a4bdf237b8ba0c1794489ccb624d3641fbb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245247"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179154"
 ---
 # <a name="example-offline-restore-of-primary-and-1-other-filegroup-full-recovery-model"></a>예제: 주 파일 그룹 및 기타 1개 파일 그룹의 오프라인 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

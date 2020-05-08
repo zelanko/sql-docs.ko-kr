@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 백업(일반 페이지) | Microsoft 문서
+description: SQL Server에서 데이터베이스 백업 대화 상자의 일반 페이지를 사용하여 데이터베이스 백업 작업의 원본 및 대상 설정을 확인하거나 수정할 수 있습니다.
 ms.custom: ''
 ms.date: 07/01/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97521f50bd002cc67a3d73dbfde3999f4ea3dabc
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940921"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220618"
 ---
 # <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "67940921"
  기본 백업 개념에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)]스크립트[ 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 ](../../t-sql/statements/backup-transact-sql.md) **BACKUP** 스크립트를 생성할 수 있습니다.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 백업 태스크를 지정할 때 **스크립트** 단추를 클릭한 다음 스크립트에 대한 대상을 선택하여 해당되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 스크립트를 생성할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 백업을 만들려면**  
   

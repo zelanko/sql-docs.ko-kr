@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138291"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588237"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  **rowstore** 인덱스 REORGANIZE  
  rowstore 인덱스의 경우 REORGANIZE는 인덱스 리프 수준을 재구성하도록 지정합니다. REORGANIZE 작업은:  
   
--   항상 온라인으로 수행됩니다. 즉, 장기간 차단 테이블 잠금이 유지되지 않으며 ALTER INDEX REORGANIZE 트랜잭션 중 기본 테이블에 대한 쿼리나 업데이트를 계속할 수 있습니다.  
--   비활성화된 인덱스에 대해서는 허용되지 않음  
--   ALLOW_PAGE_LOCKS가 OFF로 설정된 경우 허용되지 않음  
--   트랜잭션 내에서 수행되는 경우 롤백되지 않고 트랜잭션이 롤백됩니다.  
+-   항상 온라인으로 수행됩니다. 즉, 장기간 차단 테이블 잠금이 유지되지 않으며 ALTER INDEX REORGANIZE 트랜잭션 중 기본 테이블에 대한 쿼리나 업데이트를 계속할 수 있습니다.
+-   비활성화된 인덱스에 대해서는 허용되지 않음
+-   ALLOW_PAGE_LOCKS가 OFF로 설정된 경우 허용되지 않음
+-   트랜잭션 내에서 수행되는 경우 롤백되지 않고 트랜잭션이 롤백됩니다.
+
+> [!NOTE]
+> ALTER INDEX REORGANIZE가 명시적 트랜잭션을 사용하는 경우(예: BEGIN TRAN ... COMMIT/ROLLBACK 내부의 ALTER INDEX가), REORGANIZE의 잠금 동작은 기본 암시적 트랜잭션 모드가 되는 대신 보다 제한적이 되어 차단을 유발할 수 있습니다. 암시적 트랜잭션에 대한 자세한 내용은 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)을 참조하세요.
 
 자세한 내용은 [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)을 참조하세요. 
 

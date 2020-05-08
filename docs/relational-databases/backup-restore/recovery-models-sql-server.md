@@ -1,5 +1,6 @@
 ---
 title: 복구 모델(SQL Server) | Microsoft 문서
+description: SQL Server에서 복구 모델은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요한지 여부 및 사용 가능한 복원 작업을 제어합니다.
 ms.custom: ''
 ms.date: 07/16/2016
 ms.prod: sql
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aa1521e40df7483c7a4dc336484d6ecf28e909cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7d04f6a6ed9a1e09c3ca278e1481000abc6cab8
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325461"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180884"
 ---
 # <a name="recovery-models-sql-server"></a>복구 모델(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

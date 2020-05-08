@@ -1,5 +1,6 @@
 ---
 title: SSMS를 사용하여 데이터베이스 백업 복원 | Microsoft 문서
+description: 이 문서에서는 SQL Server Management Studio를 사용하여 전체 SQL Server 데이터베이스 백업을 복원하는 방법을 설명합니다.
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278765"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180857"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +147,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
 
     > [!NOTE]
-    > 이 옵션을 선택하면 다음과 같은 오류 메시지가 표시될 수 있습니다. "System.Data.SqlClient.SqlError: 백업 세트에 기존 '`Sales`' 데이터베이스가 아닌 데이터베이스의 백업이 있습니다. (Microsoft.SqlServer.SmoExtended)"
+    > 이 옵션을 선택하지 않으면 다음과 같은 오류 메시지가 발생할 수 있습니다. "System.Data.SqlClient.SqlError: 백업 세트에 기존 '`Sales`' 데이터베이스가 아닌 데이터베이스의 백업이 있습니다. (Microsoft.SqlServer.SmoExtended)"
 
 8.  **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
 
@@ -158,7 +159,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 9.  **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
 
     > [!NOTE]
-    > 이 옵션을 선택하면 다음과 같은 오류 메시지가 표시될 수 있습니다. "System.Data.SqlClient.SqlError: 데이터베이스가 사용 중이어서 배타적으로 액세스할 수 없습니다. (Microsoft.SqlServer.SmoExtended)"
+    > 이 옵션을 선택하지 않으면 다음과 같은 오류 메시지가 발생할 수 있습니다. "System.Data.SqlClient.SqlError: 데이터베이스가 사용 중이어서 배타적으로 액세스할 수 없습니다. (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
@@ -181,7 +182,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
     > [!NOTE]
     > 다음과 같은 오류 메시지가 나타나는 경우:      
-    > "System.Data.SqlClient.SqlError: 데이터베이스 "`Sales`"의 비상 로그 백업이 수행되지 않았습니다. 로그에 포함된 작업이 손실되지 않도록 하려면 `BACKUP LOG WITH NORECOVERY`를 사용하여 로그를 백업합니다. 로그 내용을 덮어쓰려면 `WITH REPLACE` 문의 `WITH STOPAT` 또는 `RESTORE` 절을 사용합니다. (Microsoft.SqlServer.SmoExtended)"라는 오류 메시지가 표시되면      
+    > "System.Data.SqlClient.SqlError: 데이터베이스 "`Sales`"의 비상 로그 백업이 수행되지 않았습니다. 로그에 포함된 작업이 손실되지 않도록 하려면 `BACKUP LOG WITH NORECOVERY`를 사용하여 로그를 백업합니다. 로그 내용을 덮어쓰려면 `RESTORE` 문의 `WITH REPLACE` 또는 `WITH STOPAT` 절을 사용합니다. (Microsoft.SqlServer.SmoExtended)"라는 오류 메시지가 표시되면      
     > 위의 6단계에서 사용한 새 데이터베이스 이름을 입력하지 않은 것입니다. 복원은 보통 실수로 복원 중 다른 데이터베이스로 현재 데이터베이스를 덮어쓰는 일을 방지합니다. `RESTORE` 문에서 지정된 데이터베이스가 현재 서버에 이미 존재하고 지정된 데이터베이스 패밀리 GUID가 백업 세트에 기록된 데이터베이스 패밀리 GUID와 다르면 해당 데이터베이스는 복원되지 않습니다. 이것은 중요한 보호 수단입니다.
 
 ### <a name="d--restore-earlier-disk-backups-to-a-point-in-time"></a>D.  이전 디스크 백업을 특정 시점으로 복원

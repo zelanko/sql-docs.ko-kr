@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 98aea4830dcbf299e4f8e54e893f60e55d7e3520
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 4cf63cf0f1939a47a95ef0c66934ebd910f2201a
+ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086832"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82643323"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -101,7 +101,7 @@ ms.locfileid: "82086832"
 |**1802**|데이터베이스 연결 또는 분리 작업 중 ACL 변경 및 가장된 액세스 확인을 사용하지 않습니다. 이는 데이터베이스를 연결할 때 오류 5120과 같은 액세스 권한 오류가 발생할 경우 유용할 수 있습니다.<br /><br />**범위**: 전역만| 
 |**2301**|고급 의사 결정 지원 최적화를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON) |
 |**2312**|데이터베이스 호환성 수준에 따라 쿼리 최적화 프로그램 카디널리티 추정 모델을 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 버전으로 설정합니다.<br /><br />**참고:** 데이터베이스 호환성 수준이 120 미만인 경우 추적 플래그 2312를 사용하도록 설정하면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 카디널리티 추정 모델(120)이 사용됩니다. 자세한 내용은 [Microsoft 지원 문서](https://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT ‘FORCE_DEFAULT_CARDINALITY_ESTIMATION’ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)| 
-|**2335**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리 최적화 중에 고정된 크기의 메모리를 사용한다고 가정하도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행하도록 허용하는 메모리를 제한하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구성된 메모리는 데이터 캐시, 쿼리 실행 및 다른 소비자에서 계속 사용됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2413549)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|
+|**2335**|[최대 서버 메모리 서버 구성](../../database-engine/configure-windows/server-memory-server-configuration-options.md)이 너무 높게 설정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리 최적화 중에 고정된 양의 메모리가 사용 가능하다고 인지하도록 하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 특정 쿼리에 대해 비효율적인 계획을 생성하도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 쿼리를 실행하도록 허용하는 메모리를 제한하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 구성된 메모리는 데이터 캐시, 쿼리 실행 및 다른 소비자에서 계속 사용됩니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|
 |**2340**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 계획을 생성할 때 최적화된 중첩 루프 조인에 정렬 작업(일괄 처리 정렬)을 사용하지 않도록 합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿼리 최적화 프로그램에서 정렬이 필요하지 않다고 결정하지만 카디널리티 또는 비용 추정이 잘못될 수 있는 경우에 명시적 정렬을 사용한 전체 검색 또는 중첩 루프 조인 대신 최적화된 중첩 루프 조인을 사용할 수 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2009160)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT ‘DISABLE_OPTIMIZED_NESTED_LOOP’ [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|
 |**2371**|고정 업데이트 통계 임계값을 선형 업데이트 통계 임계값으로 변경합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2754171)를 참조하세요.<br /><br />**참고:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130 이상에서 이 동작은 엔진을 통해 제어되며, 추적 플래그 2371이 영향을 주지 않습니다.<br /><br />**범위**: 전역만|
 |**2389**|오름차순 키에 대해 자동으로 생성되는 빠른 통계를 사용하도록 설정합니다(히스토그램 수정). 2389 추적 플래그가 설정되고 선행 통계 열이 오름차순으로 표시되면, 카디널리티를 추정하는 데 사용되는 히스토그램이 쿼리 컴파일 시간에 조정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2801413)를 참조하세요.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 120 이상에 적용되지 않습니다. 대신 4139 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리(QUERYTRACEON)|

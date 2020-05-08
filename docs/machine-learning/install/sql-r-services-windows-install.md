@@ -1,26 +1,28 @@
 ---
-title: SQL Server 2016 R Services(In-Database) 설치
+title: SQL Server 2016 R Services 설치
+titleSuffix: ''
 description: Windows의 SQL Server 2016 R Services에서 데이터베이스 엔진에 R 프로그래밍 언어 지원을 추가합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/29/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bef992e06f8f02e5ba7c553c2511eac353fe498a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 92b7a8190bdd221333d49c2113256faab7c9edaf
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118206"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588199"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 **SQL Server 2016 R Services**를 설치 및 구성하는 방법을 설명합니다. SQL Server 2016이 있는 경우 이 기능을 설치하여 SQL Server에서 R 코드를 실행할 수 있도록 합니다.
 
-SQL Server 2017에서는 [Machine Learning Services](../r/r-server-standalone.md)에 R이 통합되고 Python이 추가되었습니다. R 통합을 원하며 SQL Server 2017 설치 미디어가 있는 경우 [SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)를 참조하여 기능을 추가하세요. 
+> [!NOTE]
+> SQL Server 2017 이상에서는 [Machine Learning Services](../sql-server-machine-learning-services.md)에 R이 통합되고 Python이 추가되었습니다. R 통합을 원하며 SQL Server 2017 이상이 있는 경우 [SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)를 참조하여 기능을 추가하세요. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -30,7 +32,7 @@ SQL Server 2017에서는 [Machine Learning Services](../r/r-server-standalone.md
 
 + 비즈니스 연속성을 위해 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)이 R Services에 대해 지원됩니다. 각 노드에서 R Services를 설치하고 패키지를 구성해야 합니다.
 
-+ 장애 조치(Failover) 클러스터에는 R Services를 설치하지 않도록 합니다. R 프로세스 격리에 사용되는 보안 메커니즘이 Windows Server 장애 조치(failover) 클러스터 환경과 호환되지 않기 때문입니다.
++ SQL Server Always On FCI(장애 조치(failover) 클러스터 인스턴스)에는 R Services를 설치하지 않도록 합니다. R 프로세스 격리에 사용되는 보안 메커니즘이 SQL Server Always On FCI(장애 조치(failover) 클러스터 인스턴스) 환경과 호환되지 않기 때문입니다.
 
 + 도메인 컨트롤러에는 R Services를 설치하지 않도록 합니다. 설치 시 R Services 부분이 실패하게 됩니다.
 

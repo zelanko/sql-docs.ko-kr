@@ -10,108 +10,125 @@ ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
-ms.date: 11/27/2018
-ms.openlocfilehash: afabb7e6509c3e7692b5aaaf4d3fcedcbf4353a9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.date: 05/01/2020
+ms.openlocfilehash: 127c8dc055118612bff2382b2cf01a899be5f8fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81288118"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719231"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
-  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.
+
 > [!IMPORTANT]
-> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다. 
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent 프로파일러](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
+> SQL 추적 및 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 사용되지 않습니다. Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않습니다.
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+> 확장 이벤트를 대신 사용하세요. [확장 이벤트](../../relational-databases/extended-events/extended-events.md)에 대한 자세한 내용은 [빠른 시작: SQL Server의 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) 및 [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)를 참조하세요.
 
 > [!NOTE]
-> Analysis Services 워크로드에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 계속 사용되며 지원됩니다.
+> Analysis Services 워크로드를 위한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이(가) 지원됩니다.
 
- ## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
- 
+> [!NOTE]
+> SQL Server Profiler에서 SQL Azure 데이터베이스에 연결하려고 하면 다음과 같은 오류 메시지가 잘못 throw됩니다.
+>
+> - SQL Server에 대해 추적을 실행하려면 sysadmin 고정 서버 역할의 멤버이거나 ALTER TRACE 권한이 있어야 합니다.
+>
+> 메시지는 SQL Server Profiler에서 SQL Azure Database 인스턴스를 지원하지 않는다고 설명해야 합니다.
+
+## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
+
 다양한 방법으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 프로파일러를 시작할 수 있습니다. [다음 항목에서는 프로파일러를 시작할 수 있는 방법을 나열했습니다.](start-sql-server-profiler.md)
-  
-## <a name="capture-and-replay-trace-data"></a>추적 데이터 캡처 및 재생 
+
+## <a name="capture-and-replay-trace-data"></a>추적 데이터 캡처 및 재생
+
 다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 추적 데이터를 캡처하고 재생하는 데 사용할 수 있는 권장 기능을 보여 줍니다.
-  
-||||  
-|-|-|-|  
+
+||||
+|-|-|-|
 |**기능\대상 작업**|**관계형 엔진**|**Analysis Services**|  
-|**추적 캡처**|[의 ](../../relational-databases/extended-events/extended-events.md)확장 이벤트[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 그래픽 사용자 인터페이스|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
-|**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
-  
-## <a name="sql-server-profiler"></a>SQL Server Profiler  
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 다음과 같은 작업에 사용됩니다.  
-  
--   문제가 발생한 원인을 찾기 위해 문제 쿼리 실행  
-  
--   실행이 느린 쿼리를 찾고 진단
-  
--   문제가 발생한 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 포착. 그런 다음 저장된 추적을 사용하여, 문제를 진단할 수 있는 테스트 서버에서 문제를 복제할 수 있습니다.  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 성능을 모니터링하여 작업 튜닝. 데이터베이스 작업에 맞게 물리적 데이터베이스 디자인을 튜닝하는 방법은 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)를 참조하세요.  
-  
--   문제 진단을 위해 성능 카운터의 상관 관계 지정  
-  
-또한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 수행되는 동작을 감사하는 기능을 지원합니다. 감사는 보안 관리자가 나중에 검토할 수 있도록 보안 관련 동작을 기록합니다.  
-  
-## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler 개념  
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]도구를 사용하려면 도구가 작동하는 방식을 설명하는 용어를 알고 있어야 합니다.  
-  
+|**추적 캡처**|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 [확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|
+
+## <a name="use-sql-server-profiler"></a>SQL Server Profiler 사용
+
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 다음과 같은 작업에 사용됩니다.
+
+- 문제가 발생한 원인을 찾기 위해 문제 쿼리 실행
+
+- 실행이 느린 쿼리를 찾고 진단
+
+- 문제가 발생한 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 포착. 그런 다음 저장된 추적을 사용하여, 문제를 진단할 수 있는 테스트 서버에서 문제를 복제할 수 있습니다.
+
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 성능을 모니터링하여 작업 튜닝. 데이터베이스 작업에 맞게 물리적 데이터베이스 디자인을 튜닝하는 방법은 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)를 참조하세요.
+
+- 문제 진단을 위해 성능 카운터의 상관 관계 지정
+
+또한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 수행되는 동작을 감사하는 기능을 지원합니다. 감사는 보안 관리자가 나중에 검토할 수 있도록 보안 관련 동작을 기록합니다.
+
+## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler 개념
+
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]도구를 사용하려면 도구가 작동하는 방식을 설명하는 용어를 알고 있어야 합니다.
+
 > [!NOTE]
-> SQL 추적을 이해하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 작업할 때 큰 도움이 됩니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.  
+> SQL 추적을 이해하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 작업할 때 큰 도움이 됩니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.
+
+### <a name="event"></a>이벤트
+
+이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 발생하는 동작으로, 이벤트의 예는 다음과 같습니다.  
   
- **이벤트**  
- 이벤트는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 발생하는 동작으로, 이벤트의 예는 다음과 같습니다.  
-  
--   로그인 연결, 실패 및 연결 끊김    
--   [!INCLUDE[tsql](../../includes/tsql-md.md)], `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문.    
--   RPC(원격 프로시저 호출) 일괄 처리 상태  
--   저장 프로시저의 시작 또는 끝  
--   저장 프로시저에 있는 문의 시작 또는 끝  
--   SQL 일괄 처리의 시작 또는 끝  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 쓴 오류  
--   데이터베이스 개체에서 획득 또는 해제된 잠금  
--   열린 커서  
--   보안 권한 검사  
+- 로그인 연결, 실패 및 연결 끊김    
+- [!INCLUDE[tsql](../../includes/tsql-md.md)], `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문.
+- RPC(원격 프로시저 호출) 일괄 처리 상태  
+- 저장 프로시저의 시작 또는 끝  
+- 저장 프로시저에 있는 문의 시작 또는 끝  
+- SQL 일괄 처리의 시작 또는 끝  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 쓴 오류  
+- 데이터베이스 개체에서 획득 또는 해제된 잠금  
+- 열린 커서  
+- 보안 권한 검사  
   
 한 이벤트에 의해 생성된 모든 데이터는 추적에서 한 줄에 표시됩니다. 이 행은 이벤트를 자세히 설명하는 데이터 열로 구분됩니다.  
-  
- **EventClass**  
- 이벤트 클래스는 추적할 수 있는 이벤트 유형입니다. 이벤트 클래스에는 이벤트에서 보고할 수 있는 모든 데이터가 포함됩니다. 이벤트 클래스의 예는 다음과 같습니다.  
-  
--   **SQL:BatchCompleted**  
--   **Audit Login**  
--   **Audit Logout**  
--   **Lock:Acquired**  
--   **Lock:Released**  
-  
- **EventCategory**  
- 이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서 이벤트를 그룹화하는 방법을 정의합니다. 예를 들어 모든 잠금 이벤트 클래스는 **Locks** 이벤트 범주 내에서 그룹화됩니다. 그러나 이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서만 존재합니다. 이 용어는 엔진 이벤트를 그룹화하는 방법과 관계가 없습니다.  
-  
- **DataColumn**  
- 데이터 열은 추적에 캡처된 이벤트 클래스의 특성입니다. 이벤트 클래스가 수집할 수 있는 데이터 형식을 결정하기 때문에 모든 데이터 열이 모든 이벤트 클래스에 적용되는 것은 아닙니다. 예를 들어 **Lock:Acquired** 이벤트 클래스를 캡처하는 추적에서 **BinaryData** 데이터 열에는 잠긴 페이지 ID 값이나 행 값이 들어 있지만 캡처하는 이벤트 클래스에 적용할 수 없는 **Integer Data** 데이터 열에는 아무 값도 들어 있지 않습니다.  
-  
- **템플릿**  
- 템플릿은 추적의 기본 구성을 정의합니다. 특히 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 모니터링하려는 이벤트 클래스가 템플릿에 포함됩니다. 예를 들어 사용할 이벤트, 데이터 열 및 필터를 지정하는 템플릿을 만들 수 있습니다. 템플릿은 실행되지 않으며 .tdf 확장명을 가진 파일로 저장됩니다. 템플릿을 저장한 후에는 템플릿에 기반한 추적이 시작될 때 캡처된 추적 데이터를 제어할 수 있습니다.  
-  
- **추적**  
- 추적은 선택한 이벤트 클래스, 데이터 열 및 필터에 기초하여 데이터를 캡처합니다. 예를 들어 예외 오류를 모니터링하는 추적을 만들 수 있습니다. 이 작업을 수행하려면 **Exception** 이벤트 클래스를 선택하고 **Error**, **State**및 **Severity** 데이터 열을 선택합니다. 추적 결과에서 의미 있는 데이터를 제공하려면 이 3열의 데이터를 수집해야 합니다. 그런 다음 구성된 방식으로 추적을 실행하고 서버에서 발생하는 모든 **Exception** 이벤트에 대한 데이터를 수집합니다. 추적 데이터를 즉시 분석에 사용하거나 저장한 후 나중에 분석할 수 있습니다. 나중에 추적을 재생할 수 있지만 **Exception** 이벤트와 같은 특정 이벤트는 재생할 수 없습니다. 또한 추적을 템플릿으로 저장하여 나중에 유사한 추적을 구성할 수 있습니다.  
-  
+
+### <a name="eventclass"></a>EventClass
+
+이벤트 클래스는 추적할 수 있는 이벤트 유형입니다. 이벤트 클래스에는 이벤트에서 보고할 수 있는 모든 데이터가 포함됩니다. 이벤트 클래스의 예는 다음과 같습니다.
+
+- **SQL:BatchCompleted**
+- **Audit Login**
+- **Audit Logout**
+- **Lock: Acquired**
+- **Lock: Released**
+
+### <a name="eventcategory"></a>EventCategory
+
+이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서 이벤트를 그룹화하는 방법을 정의합니다. 예를 들어 모든 잠금 이벤트 클래스는 **Locks** 이벤트 범주 내에서 그룹화됩니다. 그러나 이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서만 존재합니다. 이 용어는 엔진 이벤트를 그룹화하는 방법과 관계가 없습니다.
+
+### <a name="datacolumn"></a>DataColumn
+
+데이터 열은 추적에 캡처된 이벤트 클래스의 특성입니다. 이벤트 클래스가 수집할 수 있는 데이터 형식을 결정하기 때문에 모든 데이터 열이 모든 이벤트 클래스에 적용되는 것은 아닙니다. 예를 들어 **Lock: Acquired** 이벤트 클래스를 캡처하는 추적에서 **BinaryData** 데이터 열에는 잠긴 페이지 ID 값이나 행 값이 들어 있지만 캡처하는 이벤트 클래스에 적용할 수 없는 **Integer Data** 데이터 열에는 아무 값도 들어 있지 않습니다.
+
+### <a name="template"></a>템플릿
+
+템플릿은 추적의 기본 구성을 정의합니다. 특히 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 모니터링하려는 이벤트 클래스가 템플릿에 포함됩니다. 예를 들어 사용할 이벤트, 데이터 열 및 필터를 지정하는 템플릿을 만들 수 있습니다. 템플릿은 실행되지 않으며 .tdf 확장명을 가진 파일로 저장됩니다. 템플릿을 저장한 후에는 템플릿에 기반한 추적이 시작될 때 캡처된 추적 데이터를 제어할 수 있습니다.
+
+### <a name="trace"></a>추적
+
+추적은 선택한 이벤트 클래스, 데이터 열 및 필터에 기초하여 데이터를 캡처합니다. 예를 들어 예외 오류를 모니터링하는 추적을 만들 수 있습니다. 이 작업을 수행하려면 **Exception** 이벤트 클래스를 선택하고 **Error**, **State**및 **Severity** 데이터 열을 선택합니다. 추적 결과에서 의미 있는 데이터를 제공하려면 이 3열의 데이터를 수집해야 합니다. 그런 다음 구성된 방식으로 추적을 실행하고 서버에서 발생하는 모든 **Exception** 이벤트에 대한 데이터를 수집합니다. 추적 데이터를 즉시 분석에 사용하거나 저장한 후 나중에 분석할 수 있습니다. 나중에 추적을 재생할 수 있지만 **Exception** 이벤트와 같은 특정 이벤트는 재생할 수 없습니다. 또한 추적을 템플릿으로 저장하여 나중에 유사한 추적을 구성할 수 있습니다.  
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은(는) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 추적하는 두 가지 방법을 제공합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]을(를) 사용하여 추적하거나 시스템 저장 프로시저를 사용하여 추적할 수 있습니다.  
-  
- **Filter**  
- 추적 또는 템플릿을 만들 때 이벤트가 수집하는 데이터를 필터링할 조건을 정의할 수 있습니다. 추적이 지나치게 커지지 않도록 필터링을 통해 이벤트 데이터의 하위 집합만 수집할 수 있습니다. 예를 들어 추적에서 Microsoft Windows 사용자 이름을 특정 사용자로 제한하여 출력 데이터를 줄일 수 있습니다.  
-  
- 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다.  
-  
-## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler 태스크  
-  
+
+### <a name="filter"></a>Assert
+
+추적 또는 템플릿을 만들 때 이벤트가 수집하는 데이터를 필터링할 조건을 정의할 수 있습니다. 추적이 지나치게 커지지 않도록 필터링을 통해 이벤트 데이터의 하위 집합만 수집할 수 있습니다. 예를 들어 추적에서 Microsoft Windows 사용자 이름을 특정 사용자로 제한하여 출력 데이터를 줄일 수 있습니다.  
+
+필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다.
+
+## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler 태스크
+
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |SQL Server에서 특정한 유형의 이벤트를 모니터링하기 위해 제공하는 미리 정의된 템플릿과 추적을 재생하는 데 필요한 사용 권한을 보여 줍니다.|[SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
@@ -168,12 +185,11 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!IN
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 재생 기능을 사용하는 방법을 설명합니다.|[추적 재생](../../tools/sql-server-profiler/replay-traces.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에 대한 상황에 맞는 도움말 항목이 나열되어 있습니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 성능 및 작업을 모니터링하는 데 사용하는 시스템 저장 프로시저를 보여 줍니다.|[SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
-  
-## <a name="see-also"></a>참고 항목  
- [잠금 이벤트 범주](../../relational-databases/event-classes/locks-event-category.md)   
- [세션 이벤트 범주](../../relational-databases/event-classes/sessions-event-category.md)   
- [저장 프로시저 이벤트 범주](../../relational-databases/event-classes/stored-procedures-event-category.md)   
- [TSQL 이벤트 범주](../../relational-databases/event-classes/tsql-event-category.md)   
- [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
-  
-  
+
+## <a name="see-also"></a>참고 항목
+
+- [잠금 이벤트 범주](../../relational-databases/event-classes/locks-event-category.md)
+- [Sessions 이벤트 범주](../../relational-databases/event-classes/sessions-event-category.md)
+- [Stored Procedures 이벤트 범주](../../relational-databases/event-classes/stored-procedures-event-category.md)
+- [TSQL 이벤트 범주](../../relational-databases/event-classes/tsql-event-category.md)
+- [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)

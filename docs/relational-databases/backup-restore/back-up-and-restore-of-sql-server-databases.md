@@ -1,5 +1,6 @@
 ---
 title: SQL Server 데이터베이스 백업 및 복원 | Microsoft 문서
+description: 이 문서에서는 SQL Server 데이터베이스 백업의 이점을 설명하고 백업 및 복원 전략과 보안 고려 사항을 소개합니다.
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: bea2f639677de4869b537d3fb6cfbd1faa271134
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487953"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220643"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

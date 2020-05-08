@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 932995bad218df91e58af7daed01ddf4277a5dc0
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f46b27019d85084b572dced79e786033b30c2aec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117186"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719283"
 ---
 # <a name="real-time-scoring-with-sp_rxpredict-in-sql-server-machine-learning"></a>SQL Server 기계 학습의 sp_rxPredict에 대한 실시간 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "81117186"
 
 ## <a name="how-real-time-scoring-works"></a>실시간 채점 작동 방식
 
-실시간 채점은 RevoScaleR 또는 MicrosoftML 함수(예: [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet))를 기반으로 하는 특정 모델 형식에 대해 지원됩니다. 특수 이진 형식으로 저장된 기계 학습 모델에 제공된 사용자 입력을 기준으로 네이티브 C++ 라이브러리를 사용하여 점수를 생성합니다.
+실시간 채점은 RevoScaleR 또는 MicrosoftML 함수(예: [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 및 [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet))를 기반으로 하는 특정 모델 형식에 대해 지원됩니다. 특수 이진 형식으로 저장된 기계 학습 모델에 제공된 사용자 입력을 기준으로 네이티브 C++ 라이브러리를 사용하여 점수를 생성합니다.
 
 외부 언어 런타임을 호출할 필요 없이 학습된 모델을 채점에 사용할 수 있기 때문에 여러 프로세스의 오버헤드가 줄어듭니다. 이는 프로덕션 채점 시나리오에 대해 훨씬 더 빠른 예측 성능을 지원합니다. 데이터는 SQL Server에 남지 않으므로 R과 SQL 간에 데이터를 변환하지 않고 결과를 생성하여 새 테이블에 삽입할 수 있습니다.
 

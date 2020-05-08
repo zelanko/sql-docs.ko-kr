@@ -1,5 +1,6 @@
 ---
 title: 차등 백업
+description: 이 문서에서는 SQL Server에서 SQL Server Management Studio 또는 Transact-SQL을 사용하여 차등 데이터베이스 백업을 만드는 방법을 보여 줍니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e76d404a63e424740dcc2fc829d38f9c2961a1de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254070"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179304"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "75254070"
 5.  **백업 유형** 목록 상자에서 **차등**을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  **차등**을 선택할 때는 **백업만 복사** 확인란 선택을 취소해야 합니다.  
+    >  **차등** 을 선택할 때는 **백업만 복사** 확인란 선택을 취소해야 합니다.  
   
 6.  **백업 구성 요소**의 경우 **데이터베이스**를 클릭합니다.  
   

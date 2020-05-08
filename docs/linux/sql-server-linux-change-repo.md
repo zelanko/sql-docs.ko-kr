@@ -3,17 +3,17 @@ title: SQL Server 2017 및 2019에 대한 Linux 리포지토리 구성
 description: Linux에서 SQL Server 2019 및 SQL Server 2017의 원본 리포지토리를 확인하고 구성합니다. 원본 리포지토리는 설치 및 업그레이드 중에 적용되는 SQL Server 버전에 영향을 줍니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301704"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262047"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>SQL Server on Linux 설치 및 업그레이드를 위한 리포지토리 구성
 
@@ -181,7 +181,7 @@ SQL Server 설치 및 업그레이드에 사용할 새 리포지토리를 구성
 >
 > SQL Server 2017 CU20부터 RHEL 8이 지원됩니다.
 >
-> RHEL 7 또는 RHEL 8을 사용하는 경우 경로가 `/rhel/7` 또는 `/rhel/8`과 일치하는지 확인합니다.
+> RHEL 7 또는 RHEL 8을 사용하는 경우 경로가 `/rhel/7` 또는 `/rhel/8`과 일치하는지 확인합니다. Microsoft 패키지는 RHEL 부 버전에 독립적입니다. 즉, RHEL 7.6을 사용하는 경우 경로 `/rhel/7`을 사용하여 리포지토리를 구성해야 합니다.
 
 | 리포지토리 | 버전 | 명령 |
 |---|---|---|

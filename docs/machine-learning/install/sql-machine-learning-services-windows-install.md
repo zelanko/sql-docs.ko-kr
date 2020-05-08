@@ -3,18 +3,18 @@ title: Windows에 설치
 description: Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알아봅니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118416"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588236"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows에 SQL Server Machine Learning Services(Python 및 R) 설치
 
@@ -28,7 +28,7 @@ Windows에서 SQL Server Machine Learning Services를 설치하는 방법을 알
 
 + 비즈니스 연속성을 위해 [Always On 가용성 그룹](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server)은 Machine Learning Services에 대해 지원됩니다. 각 노드에서 Machine Learning Services를 설치하고 패키지를 구성합니다.
 
-+ SQL Server 2017의 장애 조치(failover) 클러스터에서는 Machine Learning Services 설치가 *지원되지 않습니다*. SQL Server 2019에 대해서는 지원됩니다.
++ SQL Server 2017의 [Always On FCI(장애 조치(failover) 클러스터 인스턴스)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)에서는 Machine Learning Services 설치가 지원되지 않습니다.  SQL Server 2019 이상에서 지원됩니다.
  
 + 도메인 컨트롤러에 Machine Learning Services를 설치하지 마세요. 설치 시 Machine Learning Services 부분이 실패하게 됩니다.
 

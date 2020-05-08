@@ -1,5 +1,6 @@
 ---
 title: 데이터베이스 백업(미디어 옵션 페이지) | Microsoft 문서
+description: SQL Server에서 데이터베이스 백업 대화 상자의 미디어 옵션을 사용하여 미디어 덮어쓰기, 안정성, 트랜잭션 로그와 같은 미디어 옵션을 확인하거나 수정할 수 있습니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: efbd8b811b9dda44a4cc4609704291b9469edec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: eff34ba4721f036aceca6c6617177881017744e1
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70155555"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220604"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
