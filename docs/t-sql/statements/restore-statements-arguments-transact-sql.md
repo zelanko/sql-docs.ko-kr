@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a39f9cf72f08e80face176412851778f1afec174
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982458"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922214"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 문 - 인수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -252,7 +252,7 @@ CREDENTIAL
  Microsoft Azure Blob Storage 서비스에서 백업을 복원할 때에만 사용됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 디바이스에서만 복원할 수 있습니다. URL에서 복원할 때 여러 디바이스에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 until[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]을 사용하는 경우, URL에서 복원할 때 단일 디바이스에서만 복원할 수 있습니다. URL에서 복원할 때 여러 디바이스에서 복원하려면 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)까지 사용해야 하며 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 자세한 내용은 [SQL Server Managed Backup을 Microsoft Azure에 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md) 및 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명)로 SQL 자격 증명 단순화](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)를 참조하세요.  
   
  REPLACE  
  **지원 요소:**  [복원](../../t-sql/statements/restore-statements-transact-sql.md)  

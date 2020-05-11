@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295038"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922339"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 Integration Services의 새로운 기능
 
@@ -187,9 +187,9 @@ ms.locfileid: "71295038"
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> SSIS 카탈로그에서 항상 암호화 지원  
  SSIS는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 항상 암호화 기능을 이미 지원합니다. 자세한 내용은 다음 블로그 게시물을 참조하세요.  
   
--   [SSIS의 항상 암호화 기능](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS의 항상 암호화 기능](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [항상 암호화된 조회 변환](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [항상 암호화된 조회 변환](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>디버깅 향상
 
@@ -215,7 +215,7 @@ ms.locfileid: "71295038"
   
 -   스크립트 구성 요소 또는 사용자 지정 데이터 흐름 구성 요소에서 IDTSComponentMetadata100 인터페이스의 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> 메서드를 호출합니다.  
   
- 이러한 향상에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물 [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(SSIS 데이터 흐름에 대한 오류 열 개선)를 참조하세요.  
+ 이러한 향상에 대한 자세한 내용은 SSIS 개발자 Bo Fan의 다음 블로그 게시물 [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)(SSIS 데이터 흐름에 대한 오류 열 개선)를 참조하세요.  
   
 > [!NOTE]  
 >  (이 지원은 후속 릴리스에서 확장되었습니다. 자세한 내용은 [오류 열 이름에 대한 지원 확장](#getidstring) 및 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.)  
@@ -225,7 +225,7 @@ ms.locfileid: "71295038"
   
  GetIdentificationStringByLineageID 메서드 이름이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>에서 추가되거나 업데이트된 기능에 대해 설명합니다. 자세한 내용은 [데이터 흐름의 오류에 대한 열 이름](#ErrorColumn)를 참조하십시오.  
   
- 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ 이러한 변경 및 오류 열 개선에 대한 자세한 내용은 업데이트된 다음 블로그 게시물을 참조하세요. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  RC0에서 이 메서드는 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> 인터페이스로 이동되었습니다. 자세한 내용은 [API의 새로운 IDTSComponentMetaData130 인터페이스](#CMD130)를 참조하세요.  

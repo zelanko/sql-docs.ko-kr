@@ -1710,7 +1710,7 @@
               href: relational-databases/tables/disable-foreign-key-constraints-for-replication.md
             - name: INSERT 및 UPDATE를 사용하여 제약 조건 해제
               href: relational-databases/tables/disable-foreign-key-constraints-with-insert-and-update-statements.md
-        - name: UNIQUE 제약 조건
+        - name: UNIQUE 제약 조건 및 CHECK 제약 조건
           href: relational-databases/tables/unique-constraints-and-check-constraints.md
           items:
             - name: 생성

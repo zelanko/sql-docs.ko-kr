@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af11c20870da67f9b6004c4a277c17e277c1ffed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822040"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922431"
 ---
 # <a name="monitor-and-troubleshoot-availability-groups"></a>가용성 그룹 모니터링 및 문제 해결
  이 가이드에서는 Always On 가용성 그룹 모니터링 및 가용성 그룹의 일반적인 문제 중 일부의 문제 해결을 시작하도록 돕습니다. 원래 콘텐츠 뿐만 아니라 다른 곳에서 게시된 유용한 정보의 방문 페이지를 제공합니다. 이 가이드는 가용성 그룹의 넓은 영역에서 발생할 수 있는 모든 문제를 완벽하게 논의할 수 없지만 근본 원인 분석 및 문제 해결의 올바른 방향을 안내할 수 있습니다. 
@@ -64,15 +64,15 @@ ms.locfileid: "74822040"
 |-----------|-----------------|  
 |[Always On 가용성 그룹에 대한 성능 모니터링](monitor-performance-for-always-on-availability-groups.md)|가용성 그룹에 대한 데이터 동기화 프로세스, 흐름 제어 게이트 및 가용성 그룹을 모니터링할 때 유용한 메트릭을 설명하고 RTO 및 RPO 메트릭을 수집하는 방법을 보여줍니다.|  
 |[가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|가용성 그룹 모니터링을 위한 도구의 정보를 제공합니다.|  
-|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)|Always On 상태 모델의 개요를 제공합니다.|  
-|[Always On 상태 모델, 파트 2: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
-|[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
+|[Always On 상태 모델, 파트 1: 상태 모델 아키텍처](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)|Always On 상태 모델의 개요를 제공합니다.|  
+|[Always On 상태 모델, 파트 2: 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)|Always On 상태 모델을 사용자 지정하고 Always On 대시보드를 사용자 지정하여 추가 정보를 표시하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 1부: 기본 cmdlet 개요](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)|가용성 그룹의 상태를 모니터링하는 데 사용할 수 있는 Always On PowerShell cmdlet의 기본적인 개요를 제공합니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 2부: 고급 cmdlet 사용](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)|가용성 그룹의 상태를 모니터링하는 Always On PowerShell cmdlet의 고급 사용에 대한 정보를 제공합니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 3부: 간단한 모니터링 애플리케이션](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)|애플리케이션을 사용하여 가용성 그룹을 자동으로 모니터링하는 방법을 보여줍니다.|  
+|[PowerShell을 사용하여 Always On 상태 모니터링, 4부: SQL Server 에이전트와의 통합](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)|SQL Server 에이전트를 사용하여 가용성 그룹 모니터링을 통합하고 문제가 발생하는 경우 적절한 대상에 대한 알림을 구성하는 방법에 대한 정보를 제공합니다.|  
 
 ## <a name="next-steps"></a>다음 단계  
- [SQL Server Always On 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)   
+ [SQL Server Always On 팀 블로그](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
  [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   
   
