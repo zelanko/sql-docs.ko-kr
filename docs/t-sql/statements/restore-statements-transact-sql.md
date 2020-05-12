@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bef2c016492636e0005701cf07e16d6fb8c338ca
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 3661b840340f4fb14e5dcc52f2ae0aa296b7520e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262163"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922172"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -770,7 +770,7 @@ FROM URL
 복원 작업에 사용되는 URL에 배치된 하나 이상의 백업 디바이스를 지정합니다. URL 형식은 Microsoft Azure Storage 서비스에서 백업을 복구하는 데 사용됩니다.
 
 > [!IMPORTANT]
-> URL에서 복원할 때 여러 디바이스에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요.
+> URL에서 복원할 때 여러 디바이스에서 복원하려면 SAS(공유 액세스 서명) 토큰을 사용해야 합니다. 공유 액세스 서명 만들기에 대한 자세한 내용은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md) 및 [Powershell로 Azure Storage의 SAS(공유 액세스 서명) 토큰이 있는 SQL 자격 증명 만들기 간소화](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)를 참조하세요.
 
 *n* 쉼표로 구분된 목록에 백업 디바이스를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.
 

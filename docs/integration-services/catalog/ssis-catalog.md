@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e240a53d86d66fdf81b53cae1ba55d41820befd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81f446164fd12867c19273e6cf15018b749061a4
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287727"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925175"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
 
@@ -359,7 +359,7 @@ ms.locfileid: "79287727"
   
     ```  
   
-     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
+     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)블로그 항목을 참조하십시오.  
 
 ## <a name="catalog-properties-dialog-box"></a>카탈로그 속성 대화 상자
   카탈로그 속성 대화 상자를 사용하여 SSISDB 카탈로그를 구성할 수 있습니다. 카탈로그 속성은 중요한 데이터가 암호화되는 방법, 작업 및 프로젝트 버전 관리 데이터가 보존되는 방법 및 유효성 검사 작업의 제한 시간을 정의합니다. SSISDB 카탈로그는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트, 패키지, 매개 변수 및 환경에 대한 중앙 스토리지 및 관리 지점 역할을 합니다.  
@@ -582,7 +582,7 @@ ms.locfileid: "79287727"
 ###  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
 SSISDB 데이터베이스에 대한 Always On 지원을 활성화하기 전에 다음 필수 구성 요소를 수행합니다.  
   
-1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
+1.  Windows 장애 조치(Failover) 클러스터를 설정합니다. 지침은 [Windows Server 2012용 장애 조치(Failover) 클러스터 기능 및 도구 설치](https://techcommunity.microsoft.com/t5/failover-clustering/installing-the-failover-cluster-feature-and-tools-in-windows/ba-p/371733) 블로그 게시물을 참조하세요. 모든 클러스터 노드에 기능 및 도구를 설치합니다.  
   
 2.  클러스터의 각 노드에 Integration Services 기능이 포함된 SQL Server 2016(SSIS)을 설치합니다.  
   
@@ -668,4 +668,4 @@ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 �
   
 -   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 액세스 제어 팁](https://go.microsoft.com/fwlink/?LinkId=246669)  
   
--   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)  
+-   blogs.msdn.com의 블로그 항목 - [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)  
