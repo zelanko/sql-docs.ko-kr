@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244379"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925291"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 CLUSTER.LOG 생성 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244379"
 ## <a name="generate-cluster-log"></a>클러스터 로그 생성  
  클러스터 로그를 두 가지 방법으로 생성할 수 있습니다.  
   
-1.  명령 프롬프트에서 `cluster /log /g` 명령을 사용합니다. 이 명령은 각 WSFC 노드의 \windows\cluster\reports 디렉터리에 클러스터 로그를 생성합니다. 이 방법의 장점은 `/level` 옵션을 사용하여 생성된 로그의 세부 수준을 지정할 수 있다는 것입니다. 단점은 생성된 클러스터 로그에 대한 대상 디렉터리를 지정할 수 없다는 것입니다. 자세한 내용은 [Windows Server 2008 장애 조치(failover) 클러스터링에서 cluster.log를 만드는 방법](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx)을 참조하세요.  
+1.  명령 프롬프트에서 `cluster /log /g` 명령을 사용합니다. 이 명령은 각 WSFC 노드의 \windows\cluster\reports 디렉터리에 클러스터 로그를 생성합니다. 이 방법의 장점은 `/level` 옵션을 사용하여 생성된 로그의 세부 수준을 지정할 수 있다는 것입니다. 단점은 생성된 클러스터 로그에 대한 대상 디렉터리를 지정할 수 없다는 것입니다. 자세한 내용은 [Windows Server 2008 장애 조치(failover) 클러스터링에서 cluster.log를 만드는 방법](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283)을 참조하세요.  
   
 2.  [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet을 사용합니다. 이 방법의 장점은 cmdlet에서 실행하는 노드의 모든 노드에서 한 대상 디렉터리까지 클러스터 로그를 생성할 수 있다는 것입니다. 단점은 생성된 로그의 세부 수준을 지정할 수 없다는 것입니다.  
   

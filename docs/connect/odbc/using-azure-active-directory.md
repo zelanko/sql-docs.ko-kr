@@ -2,7 +2,7 @@
 title: ODBC 드라이버에서 Azure Active Directory 사용
 description: Microsoft ODBC Driver for SQL Server를 사용하면 ODBC 애플리케이션에서 Azure Active Directory를 사용하여 Azure SQL Database 인스턴스에 연결할 수 있습니다.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15f8117c84f952d4244c95a53d187e142daa8572
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b829cb837eafb1a47283d50ede3ee789471e5f7f
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635407"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886310"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -178,5 +178,5 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};U
 ~~~
 
 ## <a name="see-also"></a>참고 항목
-[Azure AD 인증을 사용하는 Azure SQL DB에 대한 토큰 기반 인증 지원](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
+[Azure AD 인증을 사용하는 Azure SQL DB에 대한 토큰 기반 인증 지원](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)

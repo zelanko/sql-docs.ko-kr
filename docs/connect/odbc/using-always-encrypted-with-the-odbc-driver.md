@@ -2,19 +2,19 @@
 title: Always Encrypted와 ODBC Driver 사용
 description: Always Encrypted 및 Microsoft ODBC Driver for SQL Server를 사용하여 ODBC 애플리케이션을 개발하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 09/01/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635417"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886300"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -115,9 +115,9 @@ CREATE TABLE [dbo].[Patients](
 
 - 샘플 코드에는 암호화에 대한 내용이 없습니다. 드라이버에서 암호화된 열을 대상으로 하는 SSN 및 날짜 매개 변수의 값을 자동으로 검색하고 암호화합니다. 이렇게 하면 애플리케이션에 투명하게 암호화할 수 있습니다.
 
-- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다([SQLBindParameter Function](https://msdn.microsoft.com/library/ms710963(v=vs.85).aspx) 참조). 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값을 쿼리 문에 포함된 리터럴로 전달하면, 드라이버에서 쿼리의 리터럴을 암호화하거나 다른 방식으로 처리하지 않기 때문에 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
+- 암호화된 열을 포함하여 데이터베이스 열에 삽입된 값은 바인딩된 매개 변수로 전달됩니다([SQLBindParameter Function](../../odbc/reference/syntax/sqlbindparameter-function.md) 참조). 매개 변수를 사용하여 암호화되지 않은 열에 값을 전달하는 것은 선택 사항이지만(그러나 SQL 삽입을 방지할 수 있으므로 매우 권장됨) 암호화된 열을 대상으로 하는 값에 필요합니다. SSN 또는 BirthDate 열에 삽입된 값을 쿼리 문에 포함된 리터럴로 전달하면, 드라이버에서 쿼리의 리터럴을 암호화하거나 다른 방식으로 처리하지 않기 때문에 쿼리가 실패합니다. 결과적으로, 암호화된 열과 호환 불가능한 것으로 간주하여 서버에서 거부합니다.
 
-- SSN 열에 삽입된 매개 변수의 SQL 형식은 **char** SQL Server 데이터 형식(`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)에 매핑되는 SQL_CHAR로 설정됩니다. 매개 변수 형식을 **nchar**에 매핑되는 SQL_WCHAR로 설정하면 Always Encrypted에서 암호화된 nchar 값을 암호화된 char 값으로 변환하는 서버 쪽 작업을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [ODBC 프로그래머 참조 -- 부록 D: 데이터 형식](https://msdn.microsoft.com/library/ms713607.aspx)을 참조하세요.
+- SSN 열에 삽입된 매개 변수의 SQL 형식은 **char** SQL Server 데이터 형식(`rc = SQLBindParameter(hstmt, 1, SQL_PARAM_INPUT, SQL_C_CHAR, SQL_CHAR, 11, 0, (SQLPOINTER)SSN, 0, &cbSSN);`)에 매핑되는 SQL_CHAR로 설정됩니다. 매개 변수 형식을 **nchar**에 매핑되는 SQL_WCHAR로 설정하면 Always Encrypted에서 암호화된 nchar 값을 암호화된 char 값으로 변환하는 서버 쪽 작업을 지원하지 않으므로 쿼리가 실패합니다. 데이터 형식 매핑에 대한 자세한 내용은 [ODBC 프로그래머 참조 -- 부록 D: 데이터 형식](../../odbc/reference/appendixes/appendix-d-data-types.md)을 참조하세요.
 
 ```
     SQL_DATE_STRUCT date;
@@ -289,11 +289,11 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 `SQLSetPos` API를 사용하면 애플리케이션이 SQLBindCol로 바인딩되고 이전에 행 데이터를 가져온 버퍼를 통해 결과 집합의 행을 업데이트할 수 있습니다. 암호화된 고정 길이 형식의 비대칭 패딩 동작으로 인해 행의 다른 열을 업데이트하는 동안 이러한 열의 데이터가 예기치 않게 변경될 수 있습니다. AE에서는 값이 버퍼 크기보다 작을 경우 고정 길이 문자 값이 패딩됩니다.
 
-이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다.  자세한 내용은 [SQLSetPos 함수 참조](https://msdn.microsoft.com/library/ms713507(v=vs.85).aspx)를 참조하세요.
+이 동작을 완화하려면 커서 기반 업데이트에 `SQLSetPos`를 사용하는 경우 `SQL_COLUMN_IGNORE` 플래그를 사용하여 `SQLBulkOperations`의 일부로 업데이트되지 않는 열을 무시합니다.  실제 (DB) 크기보다 ‘작은’ 버퍼에 바인딩된 열의 잘림을 방지하고 성능을 최적화하려면 애플리케이션에서 직접 수정되지 않는 열을 모두 무시해야 합니다.  자세한 내용은 [SQLSetPos 함수 참조](../../odbc/reference/syntax/sqlsetpos-function.md)를 참조하세요.
 
 #### <a name="sqlmoreresults--sqldescribecol"></a>SQLMoreResults 및 SQLDescribeCol
 
-애플리케이션 프로그램에서 [SQLDescribeCol](https://msdn.microsoft.com/library/ms716289(v=vs.85).aspx)을 호출하여 준비된 문의 열에 대한 메타데이터를 반환할 수 있습니다.  Always Encrypted를 사용하는 경우, `SQLMoreResults`를 호출한 *후에* `SQLDescribeCol`을 호출하면 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)가 호출되어 암호화된 열에 대한 일반 텍스트 메타데이터가 올바르게 반환되지 않습니다. 이 문제를 방지하려면 준비된 문에서 `SQLDescribeCol`을 호출한 *후에*`SQLMoreResults`를 호출합니다.
+애플리케이션 프로그램에서 [SQLDescribeCol](../../odbc/reference/syntax/sqldescribecol-function.md)을 호출하여 준비된 문의 열에 대한 메타데이터를 반환할 수 있습니다.  Always Encrypted를 사용하는 경우, `SQLMoreResults`를 호출한 *후에* `SQLDescribeCol`을 호출하면 [sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)가 호출되어 암호화된 열에 대한 일반 텍스트 메타데이터가 올바르게 반환되지 않습니다. 이 문제를 방지하려면 준비된 문에서 `SQLDescribeCol`을 호출한 *후에*`SQLMoreResults`를 호출합니다.
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>상시 암호화의 성능 영향 제어
 
@@ -379,7 +379,7 @@ ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 �
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 
-AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)를 참조하세요.
+AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](/archive/blogs/kv/azure-key-vault-step-by-step), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
 
 > [!NOTE]
 > ODBC 드라이버는 Azure Active Directory에 대해 직접 AKV 인증만을 지원합니다. AKV에 Azure Active Directory 인증을 사용하고 Active Directory 구성에 Active Directory Federation Services 엔드포인트에 대한 인증이 필요한 경우 인증이 실패할 수 있습니다.
@@ -541,7 +541,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`ValuePtr`|[Input] CEKeystoreData 구조체에 대한 포인터입니다. 구조체의 이름 필드는 데이터의 대상 공급자를 식별합니다.|
 |`StringLength`|[Input] SQL_IS_POINTER 상수입니다.|
 
-[SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx)를 통해 자세한 오류 정보를 얻을 수 있습니다.
+[SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md)를 통해 자세한 오류 정보를 얻을 수 있습니다.
 
 > [!NOTE]
 > 공급자는 필요한 경우 연결 핸들을 사용하여 기록된 데이터를 특정 연결에 연관지을 수 있습니다. 이 기능은 연결별 구성을 구현하는 데 유용합니다. 연결 컨텍스트를 무시하고, 데이터 전송에 사용된 연결과 관계없이 데이터를 동일하게 처리할 수도 있습니다. 자세한 내용은 [컨텍스트 연결](custom-keystore-providers.md#context-association)을 참조하세요.
@@ -562,7 +562,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 |`BufferLength`|[Input] SQL_IS_POINTER 상수입니다.|
 |`StringLengthPtr`|[Output] BufferLength를 반환할 버퍼에 대한 포인터입니다. *ValuePtr이 null 포인터이면, 길이가 반환되지 않습니다.|
 
-호출자는 CEKEYSTOREDATA 구조체를 따르는 충분한 길이의 버퍼가 기록되는 공급자에 대해 할당되도록 해야 합니다. 반환 시 해당 dataSize 필드가 공급자로부터 읽은 데이터의 실제 길이로 업데이트됩니다. [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx)를 통해 자세한 오류 정보를 얻을 수 있습니다.
+호출자는 CEKEYSTOREDATA 구조체를 따르는 충분한 길이의 버퍼가 기록되는 공급자에 대해 할당되도록 해야 합니다. 반환 시 해당 dataSize 필드가 공급자로부터 읽은 데이터의 실제 길이로 업데이트됩니다. [SQLGetDiacRec](../../odbc/reference/syntax/sqlgetdescrec-function.md)를 통해 자세한 오류 정보를 얻을 수 있습니다.
 
 애플리케이션과 키 저장소 공급자 간에 전송되는 데이터의 형식과 관련해서 이 인터페이스의 추가 요구 사항은 없습니다. 각 공급자가 필요에 따라 고유한 프로토콜/데이터 형식을 정의할 수 있습니다.
 
@@ -659,7 +659,6 @@ Always Encrypted를 사용하는 데 문제가 발생할 경우 다음 사항부
 
 - `ColumnEncryption`이 DSN, 연결 문자열 또는 연결 특성에서 사용되도록 설정되고, 보안 Enclave를 사용하는 경우에는 올바른 형식입니다.
 
-
 또한 보안 Enclave을 사용하는 경우 증명 오류는 다음 표에 따라 오류가 발생한 증명 프로세스의 단계를 식별합니다.
 
 |단계|Description|
@@ -669,9 +668,7 @@ Always Encrypted를 사용하는 데 문제가 발생할 경우 다음 사항부
 |200-299| Enclave의 ID가 예기치 않거나 잘못된 형식입니다. |
 |300-399| Enclave로 보안 채널을 설정하는 동안 오류가 발생했습니다. |
 
-
 ## <a name="see-also"></a>참고 항목
 
 - [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
-- [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
