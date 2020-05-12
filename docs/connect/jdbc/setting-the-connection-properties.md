@@ -2,7 +2,7 @@
 title: 연결 속성 설정
 description: Microsoft JDBC Driver for SQL Server에 대한 연결 문자열 속성은 다양한 방식으로 지정할 수 있습니다.
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f1b62700-f046-488d-bd6b-a5cd8fc345b7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fadc79d2d44cbd835fafbf4ecd68247122577c66
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 0fcc9c86bc71846fd43cd1c606b55116c2171ca4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487082"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922319"
 ---
 # <a name="setting-the-connection-properties"></a>연결 속성 설정
 
@@ -71,9 +71,9 @@ ms.locfileid: "81487082"
 | INSTANCENAME<br/><br/>String<br/>[&lt;=128 char]<br/><br/>null | 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름입니다. 지정하지 않으면 기본 인스턴스에 연결합니다. instanceName 및 포트를 모두 지정하는 경우에 대해서는 포트 관련 설명을 참조하십시오.<br/><br/> **Server** 연결 속성에 Virtual Network 이름을 지정하는 경우 **instanceName** 연결 속성을 사용할 수 없습니다. 자세한 내용은 [고가용성, 재해 복구를 위한 ODBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)을 참조하세요. |
 | integratedSecurity<br/><br/>boolean<br/>["true"&#124;"false"]<br/><br/>false | "true"로 설정되면 Windows 운영 체제의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows 자격 증명을 사용한다는 뜻입니다. "true"일 경우 JDBC 드라이버는 사용자의 컴퓨터 또는 네트워크 로그인 시 제공된 자격 증명에 대해 로컬 컴퓨터 자격 증명 캐시를 검색합니다.<br/><br/> "true"(**authenticationscheme=JavaKerberos**)로 설정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Kerberos 자격 증명을 사용함을 뜻합니다. Kerberos 인증에 대한 자세한 내용은 [Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)을 참조하세요. <br/><br/> "true"(**authenticationscheme=NTLM**)로 설정되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 NTLM 자격 증명을 사용함을 뜻합니다. <br/><br/> "false"로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다. |
 | jaasConfigurationName<br/><br/>String<br/><br/>SQLJDBCDriver | SQL Server용 Microsoft JDBC Driver 6.2부터는 SQL Server로의 연결마다 Kerberos 연결 설정을 위한 JAAS 로그인 구성 파일이 있습니다. 이 속성을 통해 로그인 구성 파일의 이름을 전달할 수 있습니다. <br/> 드라이버는 기본적으로 IBM JVM의 경우 `useDefaultCcache = true` 속성을, 기타 JVM의 경우 `useTicketCache = true` 속성을 설정합니다. |
-| keyStoreAuthentication<br/><br/>String<br/><br/>null | SQL Server용 Microsoft JDBC Driver 6.0부터는 이 속성이 Always Encrypted와의 연결을 위해 어떤 키 저장소를 원활히 설정할지를 확인하고 해당 키 저장소의 인증에 사용될 인증 메커니즘을 결정합니다. SQL Server용 Microsoft JDBC Driver 6.0은 "**keyStoreAuthentication=JavaKeyStorePassword**" 설정에 필요한 이 속성으로 Java 키 저장소의 원활한 설정을 지원합니다. 이 속성을 사용하려면 Java 키 저장소에 대해 **keyStoreLocation** 및 **keyStoreSecret** 속성 설정도 필요합니다. <br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. |
-| keyStoreLocation<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword**의 경우에는 **keyStoreLocation** 속성이 Always Encrypted 데이터와 함께 사용할 열 마스터 키가 저장되는 Java 키 저장소 파일로의 경로를 확인합니다. 이 경로에는 키 저장소 파일 이름이 포함되어야 합니다.<br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. |
-| keyStoreSecret<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword**의 경우에는 **keyStoreSecret** 속성이 키 저장소와 키에 대해 사용할 암호를 확인합니다. Java 키 저장소를 사용하는 경우에는 키 저장소와 키 암호가 동일해야 합니다.<br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](https://msdn.microsoft.com/library/mt591987%28v=sql.110%29.aspx?f=255&MSPPError=-2147217396)을 참조하세요. |
+| keyStoreAuthentication<br/><br/>String<br/><br/>null | SQL Server용 Microsoft JDBC Driver 6.0부터는 이 속성이 Always Encrypted와의 연결을 위해 어떤 키 저장소를 원활히 설정할지를 확인하고 해당 키 저장소의 인증에 사용될 인증 메커니즘을 결정합니다. SQL Server용 Microsoft JDBC Driver 6.0은 "**keyStoreAuthentication=JavaKeyStorePassword**" 설정에 필요한 이 속성으로 Java 키 저장소의 원활한 설정을 지원합니다. 이 속성을 사용하려면 Java 키 저장소에 대해 **keyStoreLocation** 및 **keyStoreSecret** 속성 설정도 필요합니다. <br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요. |
+| keyStoreLocation<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword**의 경우에는 **keyStoreLocation** 속성이 Always Encrypted 데이터와 함께 사용할 열 마스터 키가 저장되는 Java 키 저장소 파일로의 경로를 확인합니다. 이 경로에는 키 저장소 파일 이름이 포함되어야 합니다.<br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요. |
+| keyStoreSecret<br/><br/>String<br/><br/>null | **keyStoreAuthentication=JavaKeyStorePassword**의 경우에는 **keyStoreSecret** 속성이 키 저장소와 키에 대해 사용할 암호를 확인합니다. Java 키 저장소를 사용하는 경우에는 키 저장소와 키 암호가 동일해야 합니다.<br/><br/>자세한 내용은 [JDBC 드라이버에서 Always Encrypted 사용](using-always-encrypted-with-the-jdbc-driver.md)을 참조하세요. |
 | lastUpdateCount<br/><br/>boolean<br/>["true" &#124; "false"]<br/><br/>true | "true" 값을 설정할 경우 서버에 전달된 SQL 문에서 마지막 업데이트 횟수만 반환되며, 이 값을 단일 SELECT, INSERT 또는 DELETE 문에서 사용하면 서버 트리거로 인한 추가 업데이트 횟수를 무시할 수 있습니다. 이 속성을 "false"로 설정하면 서버 트리거로 인해 반환된 업데이트 횟수를 포함하여 모든 업데이트 횟수가 반환됩니다.<br/><br/> **참고:**  이 속성은 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드와 함께 사용될 경우에만 적용됩니다. 다른 모든 execute 메서드는 모든 결과 및 업데이트 횟수를 반환합니다. 이 속성은 서버 트리거에서 반환하는 업데이트 횟수에만 영향을 미치고 트리거 실행 중 발생하는 오류 또는 결과 집합에는 영향을 미치지 않습니다. |
 | lockTimeout<br/><br/>int<br/><br/>-1 | 데이터베이스에서 잠금 시간 초과가 보고될 때까지의 대기 시간(밀리초)입니다. 기본 동작은 무한정 대기하는 것입니다. 이 값을 지정하면 연결의 모든 문에 대해 기본값으로 사용됩니다. **Statement.setQueryTimeout()** 은 특정 문에 대한 제한 시간 설정에 사용할 수 있습니다. 대기 시간이 없음을 나타내는 0을 값으로 지정할 수도 있습니다. |
 | loginTimeout<br/><br/>int<br/>[0..65535]<br/><br/>15 | 드라이버가 연결 실패 제한 시간까지 대기해야 하는 시간(초)입니다. 0 값을 지정하면 기본적으로 15초로 지정되는 시스템 제한 시간이 사용됩니다. 0이 아닌 값은 드라이버가 연결 실패 제한 시간까지 대기해야 하는 시간(초)입니다.<br/><br/> Virtual Network 이름을 **Server** 연결 속성에 지정하는 경우 시간 제한 값을 3분 이상으로 지정하여 장애 조치(failover) 연결이 성공하도록 충분한 시간을 허용해야 합니다. 자세한 내용은 [고가용성, 재해 복구를 위한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)을 참조하세요. |

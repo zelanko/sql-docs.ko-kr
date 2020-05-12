@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3730a4a6cff31098df9d081457fb233727096de5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014683"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922360"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -312,7 +312,7 @@ DMV [sys.dm_hadr_database_replica_states](../../../relational-databases/system-d
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO 및 RPO 모니터링  
- 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)에 지정된 GUI 자습서와 유사합니다.  
+ 이 섹션에서는 가용성 그룹의 RTO 및 RPO 메트릭을 모니터링하는 방법을 보여 줍니다. 이 데모는 [Always On 상태 모델, 2부: 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)에 지정된 GUI 자습서와 유사합니다.  
   
  [예상 장애 조치(failover) 시간(RTO)](#estimating-failover-time-rto) 및 [예상 잠재적 데이터 손실(RPO)](#estimating-potential-data-loss-rpo)에서 장애 조치(failover) 시간과 잠재적 데이터 손실 계산의 요소는 편의상 정책 관리 패싯 **데이터베이스 복제본 상태**의 성능 메트릭으로 제공됩니다([SQL Server 개체에 대한 정책 기반 관리 패싯 보기](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md) 참조). 이러한 두 메트릭을 일정에 따라 모니터링하고 메트릭이 각각 RTO 및 RPO를 초과하는 경우 경고할 수 있습니다.  
   

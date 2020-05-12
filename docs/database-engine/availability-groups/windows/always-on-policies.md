@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 26bf8f71-c2b8-45ef-b3a3-372b96c9e6e3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a48450322a8552720a119ea325ed720669fe5a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f391a812a83d573a5f19cd2eaa238d9dae311efb
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245648"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922349"
 ---
 # <a name="evaluate-health-of-the-always-on-availability-group-using-group-policies"></a>그룹 정책을 사용하여 Always On 가용성 그룹의 상태 평가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "75245648"
 3.  모든 가용성 그룹 시스템 정책을 보려면 **페이지 선택** 창에서 **정책 선택**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- [Always On 상태 모델, 파트 2: 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)   
+ [Always On 상태 모델, 파트 2: 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)   
   
   

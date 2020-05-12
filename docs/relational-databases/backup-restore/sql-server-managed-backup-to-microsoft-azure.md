@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9038b277c5ef552dcf2bbdc2fdcabef52e269599
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180448"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922271"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure로의 SQL Server 관리형 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "82180448"
 |**Microsoft Azure 계정**|[무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 Azure를 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.|  
 |**Azure Storage 계정**|백업은 Azure 스토리지 계정에 연결된 Azure Blob 스토리지에 저장됩니다. 스토리지 계정을 만드는 단계별 지침은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.|  
 |**Blob 컨테이너**|Blob은 컨테이너에 구성됩니다. 백업 파일에 대한 대상 컨테이너를 지정합니다. [Azure 관리 포털](https://manage.windowsazure.com/)에서 컨테이너를 만들거나 **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 명령을 사용할 수 있습니다.|  
-|**공유 액세스 서명(SAS)**|대상 컨테이너에 대한 액세스는 공유 액세스 서명(SAS)으로 제어됩니다. SAS에 대한 개요는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 코드 또는 **New-AzureStorageContainerSASToken** PowerShell 명령으로 SAS 토큰을 만들 수 있습니다. 이 프로세스를 간소화하는 PowerShell 스크립트는 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명) 토큰으로 SQL 자격 증명 만들기 간소화](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)를 참조하세요. SAS 토큰은 **에 사용할 수 있도록** SQL 자격 증명 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 저장할 수 있습니다.|  
+|**공유 액세스 서명(SAS)**|대상 컨테이너에 대한 액세스는 공유 액세스 서명(SAS)으로 제어됩니다. SAS에 대한 개요는 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. 코드 또는 **New-AzureStorageContainerSASToken** PowerShell 명령으로 SAS 토큰을 만들 수 있습니다. 이 프로세스를 간소화하는 PowerShell 스크립트는 [Powershell 포함 Azure Storage에서 SAS(공유 액세스 서명) 토큰으로 SQL 자격 증명 만들기 간소화](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell)를 참조하세요. SAS 토큰은 **에 사용할 수 있도록** SQL 자격 증명 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 저장할 수 있습니다.|  
 |**SQL Server 에이전트**|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 이 작동하려면 SQL Server 에이전트가 실행되고 있어야 합니다. 자동으로 시작 옵션을 설정하는 것이 좋습니다.|  
   
 ## <a name="components"></a>구성 요소  

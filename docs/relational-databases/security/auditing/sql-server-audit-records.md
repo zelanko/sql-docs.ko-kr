@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73926026"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922189"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73926026"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|**datetime2**|yes|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|**int**|yes|  
-|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|yes|  
+|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)을 참조하세요.|**varchar(4)**|yes|  
 |**succeeded**|감사 이벤트를 트리거하는 동작의 사용 권한 검사가 성공했는지 아니면 실패했는지 여부를 나타냅니다. |**bit**<br /> –1 = 성공, <br />0 = 실패|yes|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|예|  
 |**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />- 1 = True, <br />0 = False|예|  

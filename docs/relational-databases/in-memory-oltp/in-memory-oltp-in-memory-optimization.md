@@ -14,12 +14,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87ad093d5be6f4fa394e934e6c0d88796a22e196
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1546b8fbf4abeafcb9051e17fae7c949babcfc24
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74401650"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922125"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>메모리 내 OLTP 및 메모리 최적화
 
@@ -82,7 +82,7 @@ SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 �
   
 -   [메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [메모리 내 OLTP 블로그](https://go.microsoft.com/fwlink/?LinkId=311696)  
+-   [메모리 내 OLTP 블로그](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)  
 
 ## <a name="17-minute-video-indexed"></a><a name="anchorname-17minute-video"></a>인덱싱된 17분 분량의 비디오
 
