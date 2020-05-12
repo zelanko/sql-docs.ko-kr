@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8ae130cf312dae22eebc30e84b950b2dd9a6b3c4
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8c2bd66eacb5a91def2a9f6c9f7cb2e807e404f1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487753"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886500"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>기본 모드 보고서 서버에서 TLS 연결 구성
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 HTTP SSL(Secure Sockets Layer) 서비스를 사용하여 보고서 서버에 대한 암호화된 연결을 설정합니다. TLS(전송 계층 보안)는 이전에 SSL(Secure Sockets Layer)로 알려져 있었습니다. 보고서 서버 컴퓨터의 로컬 인증서 저장소에 설치된 인증서(.cer) 파일이 있는 경우 인증서를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약에 바인딩하여 암호화된 채널을 통한 보고서 서버 연결을 지원할 수 있습니다.  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 사용 중인 경우 자세한 내용은 SharePoint 설명서를 참조하십시오. 예를 들어 [SharePoint 2010 웹 애플리케이션에서 TLS를 사용하는 방법](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)입니다.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 사용 중인 경우 자세한 내용은 SharePoint 설명서를 참조하십시오. 예를 들어 [SharePoint 2010 웹 애플리케이션에서 TLS를 사용하는 방법](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)입니다.  
   
  인터넷 정보 서비스(IIS)도 HTTP SSL을 사용하므로 IIS와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 동일한 컴퓨터에서 실행하는 경우 중요한 상호 운용성 문제를 고려해야 합니다. IIS와의 상호 운용성 문제 섹션에서 이러한 문제를 처리하는 방법에 대한 지침을 확인하십시오.  
   

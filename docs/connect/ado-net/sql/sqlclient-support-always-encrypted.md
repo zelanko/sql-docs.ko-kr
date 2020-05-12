@@ -1,6 +1,7 @@
 ---
-title: '**Microsoft.NET Data Provider for SQL Server**와 Always Encrypted 사용 | Microsoft Docs'
-ms.date: 11/18/2019
+title: SqlClient와 Always Encrypted 사용
+description: 데이터를 안전하게 유지하기 위해 Microsoft. SqlClient 및 Always Encrypted를 사용하여 애플리케이션을 개발하는 방법을 알아봅니다.
+ms.date: 05/06/2020
 ms.assetid: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dc70690bfe3d3d95171c885707b5a195c31b2fc1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b4634d1d9bed66aed6d7871d1e2c14813e5ec34
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75233924"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886470"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Microsoft.NET Data Provider for SQL Server와 Always Encrypted 사용
 
@@ -559,7 +560,6 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 ## <a name="see-also"></a>참고 항목
 
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [SQL Database 자습서: Always Encrypted로 중요한 데이터 보호](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 - [자습서: 보안 enclave를 사용한 Always Encrypted를 이용하여 .NET 애플리케이션 개발](tutorial-always-encrypted-enclaves-develop-net-apps.md)을 참조하세요.
 - [예: Always Encrypted에서 작동하는 Azure Key Vault](azure-key-vault-example.md)

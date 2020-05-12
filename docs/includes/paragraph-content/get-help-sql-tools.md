@@ -2,14 +2,14 @@
 ms.date: 05/21/2019
 ms.topic: include
 ms.prod: sql
-author: craigg-msft
-ms.author: craigg
-ms.openlocfilehash: 991261683a84b3afc200308bd82d8fce8e95e96d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a0fb783018fd21ffcaf8863faad06105687dbb8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68161799"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83002375"
 ---
 ## <a name="info_tip-get-help-for-sql-tools"></a>![info_tip](../media/info-tip.png) SQL 도구 도움말 보기
 
