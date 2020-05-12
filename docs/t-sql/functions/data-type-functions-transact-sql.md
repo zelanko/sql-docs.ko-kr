@@ -10,14 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0a6e4985-9601-4877-942a-cf53f6932958
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 01c31919eebd170013ebcc84ac3851a920fefedc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: julieMSFT
+ms.author: jrasnick
+ms.openlocfilehash: 41737456f39c3940cf8199693abaeb5d05624246
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026228"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823883"
 ---
 # <a name="data-type-functions-transact-sql"></a>데이터 형식 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
