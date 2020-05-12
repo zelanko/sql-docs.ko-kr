@@ -2,7 +2,7 @@
 title: 상시 암호화와 JDBC 드라이버 사용
 description: SQL Server에 대한 JDBC 드라이버를 통해 Java 애플리케이션에서 Always Encrypted를 사용하여 서버에서 중요한 데이터를 암호화하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37250a846a7dbf712a61731c3ee996b1312d3b8c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c63c15ad0a435235f246945d25c732798fb758df
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634865"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886356"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 이 페이지에서는 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 SQL Server용 Microsoft JDBC Driver 6.0(이상)을 사용하여 Java 애플리케이션을 개발하는 방법을 설명합니다.
@@ -58,7 +59,8 @@ SQL Server용 Microsoft JDBC Driver에는 다음과 같은 기본 제공 열 마
 이러한 모든 키 저장소 공급자에 대한 자세한 내용은 다음 섹션을 참조하세요. Always Encrypted를 사용할 키 저장소 공급자를 하나만 구현하면 됩니다.
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). SQL Server용 Microsoft JDBC Driver에는 Azure Key Vault에 키가 저장된 애플리케이션용 기본 제공 공급자인 SQLServerColumnEncryptionAzureKeyVaultProvider가 포함되어 있습니다. 이 공급자의 이름은 AZURE_KEY_VAULT입니다. Azure Key Vault 저장소 공급자를 사용하려면 애플리케이션 개발자가 Azure Key Vault에서 자격 증명 모음 및 키를 만들고 Azure Active Directory에서 앱 등록을 만들어야 합니다. 등록된 애플리케이션은 Always Encrypted와 함께 사용하기 위해 생성된 키 자격 증명 모음에 대해 정의된 액세스 정책에서 Get, Decrypt, Encrypt, Unwrap Key, Wrap Key 및 Verify 권한을 가져야 합니다. 키 자격 증명 모음을 설정하고 열 마스터 키를 만드는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별 가이드](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) 및 [Azure Key Vault에서 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
+
+Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). SQL Server용 Microsoft JDBC Driver에는 Azure Key Vault에 키가 저장된 애플리케이션용 기본 제공 공급자인 SQLServerColumnEncryptionAzureKeyVaultProvider가 포함되어 있습니다. 이 공급자의 이름은 AZURE_KEY_VAULT입니다. Azure Key Vault 저장소 공급자를 사용하려면 애플리케이션 개발자가 Azure Key Vault에서 자격 증명 모음 및 키를 만들고 Azure Active Directory에서 앱 등록을 만들어야 합니다. 등록된 애플리케이션은 Always Encrypted와 함께 사용하기 위해 생성된 키 자격 증명 모음에 대해 정의된 액세스 정책에서 Get, Decrypt, Encrypt, Unwrap Key, Wrap Key 및 Verify 권한을 가져야 합니다. 키 자격 증명 모음을 설정하고 열 마스터 키를 만드는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별 가이드](/archive/blogs/kv/azure-key-vault-step-by-step) 및 [Azure Key Vault에서 열 마스터 키 만들기](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault)를 참조하세요.
 
 Azure Key Vault 공급자를 사용하는 경우, JDBC 드라이버가 열 마스터 키 경로를 신뢰할 수 있는 엔드포인트 목록과 비교하여 유효성을 검사합니다. 드라이버 버전 8.2.2부터 이 목록을 구성할 수 있습니다. 애플리케이션의 작업 디렉터리 안에 “mssql-jdbc.properties” 파일을 만들고 `AKVTrustedEndpoints` 속성을 세미콜론으로 구분된 목록으로 설정하세요. 값이 세미콜론으로 시작되면 기본 목록을 확장합니다. 그러지 않으면 기본 목록을 대체합니다.
 

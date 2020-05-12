@@ -2,7 +2,7 @@
 title: Microsoft ODBC 드라이버를 통해 XA 사용
 description: Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 macOS에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635549"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886330"
 ---
 # <a name="using-xa-transactions"></a>XA 트랜잭션 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635549"
 
 ## <a name="overview"></a>개요
 
-버전 17.3부터 Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 macOS에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다. 드라이버 측의 XA 구현을 통해 클라이언트 애플리케이션이 TM(트랜잭션 관리자)에 작업(예: 트랜잭션 분기 시작, 커밋, 롤백 등)을 보낼 수 있습니다. 그런 다음, TM은 이러한 작업에 따라 RM(Resource Manager)과 통신합니다. XA 사양 및 DTC(MS DTC)의 Microsoft 구현에 대한 자세한 내용은 [작동 방식: SQL Server DTC(MSDTC 및 XA 트랜잭션)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)을 참조하세요.
+버전 17.3부터 Microsoft ODBC Driver for SQL Server는 Windows, Linux 및 macOS에서 DTC(Distributed Transaction Coordinator)와 XA 트랜잭션을 지원합니다. 드라이버 측의 XA 구현을 통해 클라이언트 애플리케이션이 TM(트랜잭션 관리자)에 작업(예: 트랜잭션 분기 시작, 커밋, 롤백 등)을 보낼 수 있습니다. 그런 다음, TM은 이러한 작업에 따라 RM(Resource Manager)과 통신합니다. XA 사양 및 DTC(MS DTC)의 Microsoft 구현에 대한 자세한 내용은 [작동 방식: SQL Server DTC(MSDTC 및 XA 트랜잭션)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions)을 참조하세요.
 
 
 

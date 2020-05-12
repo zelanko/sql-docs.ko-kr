@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487121"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886461"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "81487121"
 패키지 위치 및 설치 경로에 대한 자세한 내용은 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
 
 > [!NOTE]
-> SQL Server 2019에 Python 패키지를 추가하는 경우 표준 Python `pip install` 명령이 권장되지 않습니다. 대신, 이 문서에 설명된 대로 **sqlmlutils**를 사용하세요.
+> 이 문서에서 설명하는 **sqlmlutils** 패키지는 SQL Server 2019 이상에 Python 패키지를 추가하는 데 사용됩니다. SQL Server 2017 이전 버전의 경우 [Python 도구를 사용하여 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-python-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -63,7 +63,6 @@ ms.locfileid: "81487121"
 1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 대체합니다. 이 예제에서는 다운로드한 파일을 `c:\temp\sqlmlutils-1.0.0.zip`이라고 가정합니다.
 
    ```console
-   pip install "pymssql<3.0"
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils-1.0.0.zip
    ```
 
