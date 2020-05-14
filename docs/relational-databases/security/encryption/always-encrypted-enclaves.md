@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558048"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999434"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ bacpac 파일을 사용하여 데이터베이스를 마이그레이션하는 경
 - 임의 암호화를 사용하여 암호화된 열의 패턴 일치(LIKE) 및 비교 연산자
     > [!NOTE]
     > 위의 작업은 binary2 정렬 순서의 데이터 정렬(BIN2 데이터 정렬)을 사용하는 문자열 열에 대해 지원됩니다. BIN2 이외의 데이터 정렬을 사용하는 문자열 열은 임의 암호화 및 Enclave 사용 열 암호화 키로 암호화할 수 있습니다. 그러나 이러한 열에 사용할 수 있는 유일한 새 기능은 바로 암호화입니다.
-- 임의 암호화를 사용하는 Enclave 사용 열에 비클러스터형 인덱스 만들기
+- 임의 암호화를 사용하는 Enclave 사용 열에 비클러스터형 인덱스 및 통계 만들기
 
 [기능 정보](always-encrypted-database-engine.md#feature-details)에 나열된 Always Encrypted의 다른 모든 제한 사항은 보안 Enclave를 사용한 Always Encrypted에도 적용됩니다.
 

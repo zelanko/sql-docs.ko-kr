@@ -1,8 +1,8 @@
 ---
-title: 오류 | Microsoft Docs
-description: 오류
+title: OLE DB Errors
+description: OLE DB Driver for SQL Server에서 오류를 반환하는 방법 및 이러한 오류에 대한 정보를 가져오는 방법에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 82fe76b5a7ab2445884f7741abc81bfa0b400ed1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922399"
 ---
 # <a name="errors"></a>오류
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

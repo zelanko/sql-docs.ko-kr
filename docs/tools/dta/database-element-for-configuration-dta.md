@@ -1,5 +1,6 @@
 ---
 title: Configuration의 Database 요소(DTA)
+description: dta 유틸리티에서 Configuration에 대한 Database 요소는 구성을 평가하려는 데이터베이스를 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: cb444b56c70d70fda8578459b83939ebcbcf3645
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4d36151f58ad6b60162ff2984035f10c0ce4e09a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306692"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831609"
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration의 Database 요소(DTA)
 

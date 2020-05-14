@@ -1,8 +1,8 @@
 ---
-title: 오류 인터페이스의 정보 | Microsoft Docs
-description: 오류 인터페이스의 정보
+title: 오류 인터페이스의 정보
+description: OLE DB Driver for SQL Server는 OLE DB에서 정의된 오류 인터페이스 IErrorInfo, IErrorRecords 및 ISQLErrorInfo의 몇 가지 오류 및 상태 정보를 보고합니다.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92e396b88ec7fe0869d2657b602ad3463d7b95da
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994936"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922395"
 ---
 # <a name="information-in-error-interfaces"></a>오류 인터페이스의 정보
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "67994936"
 |매개 변수|Description|  
 |---------------|-----------------|  
 |*pbstrSQLState*|오류의 SQLSTATE 값을 반환합니다. SQLSTATE 값은 SQL-92, ODBC 및 ISO SQL, API 사양에서 정의됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 OLE DB Driver for SQL Server는 구현별 SQLSTATE 값을 정의하지 않았습니다.|  
-|*plNativeError*|사용 가능한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]master.dbo.sysmessages**의**  오류 번호를 반환합니다. OLE DB Driver for SQL Server 데이터 원본을 성공적으로 초기화하면 원시 오류를 사용할 수 있습니다. 시도하기 전에 OLE DB Driver for SQL Server는 항상 0을 반환합니다.|  
+|*plNativeError*|사용 가능한 경우 **master.dbo.sysmessages**의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 번호를 반환합니다. OLE DB Driver for SQL Server 데이터 원본을 성공적으로 초기화하면 원시 오류를 사용할 수 있습니다. 시도하기 전에 OLE DB Driver for SQL Server는 항상 0을 반환합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Errors](../../oledb/ole-db-errors/errors.md)  

@@ -1,5 +1,6 @@
 ---
 title: Workload의 Database 요소(DTA)
+description: dta 유틸리티에서 Workload의 Database 요소는 워크로드 추적 테이블이 있는 데이터베이스를 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4d6dc6d1dc291b9a8bd477561567339ba1ce5c57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e89674b0637cbdc113ff690fcb51e7238aba0709
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831593"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload의 Database 요소(DTA)
 

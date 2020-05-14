@@ -1,5 +1,6 @@
 ---
 title: KeepExisting 요소(DTA)
+description: dta 유틸리티에서 KeepExisting 요소는 권장 사항을 생성할 때 데이터베이스 엔진 튜닝 관리자가 유지되는 물리적 디자인 구조를 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50741d36bfd0dd3b9f566954d1ef53b86be14609
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d76ae0a45b08ff826deaac7750688d521746c077
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307639"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831507"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting 요소(DTA)
 

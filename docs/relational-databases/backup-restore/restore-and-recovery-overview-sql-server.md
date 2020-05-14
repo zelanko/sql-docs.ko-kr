@@ -1,5 +1,6 @@
 ---
 title: 복원 및 복구 개요(SQL Server) | Microsoft 문서
+description: 이 문서는 SQL Server 백업 세트를 순서대로 복원하여 오류로부터 SQL Server 데이터베이스를 복구하는 것과 관련된 작업의 개요입니다.
 ms.custom: ''
 ms.date: 04/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 9b034e43f918a0f6c198c29cf2f6618ba38638f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 143925d3fa6867d656a4f473194608e77f5a960e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288577"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924977"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +176,7 @@ ms.locfileid: "79288577"
   
 -   [복구 관리자: 소개](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
--   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
+-   [복구 관리자: SSMS를 사용하여 분할 백업 만들기/복원](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> 가속 데이터베이스 복구
 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 사용할 수 있습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [복구 프로세스](#TlogAndRecovery)를 다시 설계하여 데이터베이스 가용성을 크게 향상합니다. 가속 데이터베이스 복구가 사용하도록 설정된 데이터베이스는 장애 조치(failover) 또는 다른 완전하지 않은 종료 후에 훨씬 빠르게 복구 프로세스를 완료합니다. 가속 데이터베이스 복구를 사용하도록 설정하면 취소된 장기 실행 트랜잭션의 롤백이 훨씬 빨리 완료됩니다.

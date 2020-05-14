@@ -1,7 +1,8 @@
 ---
-title: Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구 | Microsoft Docs
+title: Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
+description: Linux 및 macOS용 Microsoft ODBC 드라이버가 AlwaysOn 가용성 그룹을 지원하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 04/05/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +11,25 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b738bac760211ff8b24ef1e5fdbc027fd966f166
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50a72faf7dc517257ee2ce66f0f800c289f4329e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80912439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922177"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 Linux 및 macOS용 ODBC 드라이버는 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 지원합니다. [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]에 대한 자세한 내용은 다음을 참조하세요.  
   
--   [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)(SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
+-   [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)(SQL Server)](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
--   [가용성 그룹의 생성 및 구성(SQL Server)](https://msdn.microsoft.com/library/ff878265.aspx)  
+-   [가용성 그룹의 생성 및 구성(SQL Server)](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)  
   
--   [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)  
+-   [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)  
+-   [활성 보조 복제본: 읽기 가능한 보조 복제본(AlwaysOn 가용성 그룹)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 연결 문자열에서 특정 AG(가용성 그룹)에 대한 가용성 그룹 수신기를 지정할 수 있습니다. Linux 또는 macOS의 ODBC 애플리케이션이 장애 조치(Failover)되는 가용성 그룹의 데이터베이스에 연결된 경우, 원래 연결은 끊어지며 장애 조치 후 애플리케이션이 계속 작동하려면 새 연결을 열어야 합니다.
 
@@ -42,7 +43,7 @@ DNS 서버의 첫 번째 반환된 IP 주소가 연결 가능하지 않은 경�
 
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결
 
-**가용성 그룹 수신기 또는** 장애 조치(failover) 클러스터 인스턴스에 연결할 때 항상 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]MultiSubnetFailover=Yes[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 지정합니다. **MultiSubnetFailover**는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 모든 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대해 보다 빠르게 장애 조치(failover)를 수행할 수 있도록 합니다. **MultiSubnetFailover**는 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(failover) 시간도 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치(failover) 동안 드라이버에서 TCP 연결을 적극적으로 다시 시도합니다.
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 수신기 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스에 연결할 때 항상 **MultiSubnetFailover=Yes**를 지정합니다. **MultiSubnetFailover**는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]의 모든 가용성 그룹 및 장애 조치(failover) 클러스터 인스턴스에 대해 보다 빠르게 장애 조치(failover)를 수행할 수 있도록 합니다. **MultiSubnetFailover**는 단일 및 다중 서브넷 Always On 토폴로지에 대한 장애 조치(failover) 시간도 크게 줄여 줍니다. 다중 서브넷 장애 조치(failover) 중에는 클라이언트가 병렬로 연결을 시도합니다. 서브넷 장애 조치(failover) 동안 드라이버에서 TCP 연결을 적극적으로 다시 시도합니다.
 
 **MultiSubnetFailover** 연결 속성은 애플리케이션이 가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스에서 배포되는 중이라는 것을 나타냅니다. 드라이버는 모든 IP 주소에 연결하려고 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결하려고 합니다. **MultiSubnetFailover=Yes**를 사용하여 연결하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. **MultiSubnetFailover=Yes** 는 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(failover) 클러스터 인스턴스의 장애 조치(failover) 후 더 빠르게 다시 연결할 수 있도록 합니다. **MultiSubnetFailover=Yes**는 단일 및 다중 서브넷 가용성 그룹과 장애 조치(failover) 클러스터 인스턴스에 모두 적용됩니다.  
 
@@ -56,7 +57,7 @@ DNS 서버의 첫 번째 반환된 IP 주소가 연결 가능하지 않은 경�
   
 -   64개 이상의 IP 주소로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 없습니다.
 
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]MultiSubnetFailover=Yes**를 지정하면 애플리케이션의 동작에 영향을 주지 않고**  인증 또는 Kerberos 인증을 모두 사용할 수 있습니다.
+-   **MultiSubnetFailover=Yes**를 지정하면 애플리케이션의 동작에 영향을 주지 않고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 또는 Kerberos 인증을 모두 사용할 수 있습니다.
 
 -   장애 조치(failover) 시간을 수용하고 애플리케이션의 연결 재시도 횟수를 줄이기 위해 **loginTimeout** 값을 늘릴 수 있습니다.
 

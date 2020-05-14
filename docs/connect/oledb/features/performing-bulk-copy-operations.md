@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c6b1d33f4a0a768d33ebe9613c0c0cb97c5e77c3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8357abd0100a7320f898864de7af6f7a493d0fed
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67988986"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922409"
 ---
 # <a name="performing-bulk-copy-operations"></a>대량 복사 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,5 +117,4 @@ ms.locfileid: "67988986"
  [데이터 대량 가져오기 및 내보내기&#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
- [대량 가져오기 성능 최적화](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server의 최대 용량 사양
+description: 이 문서에서는 SQL Server 구성 요소에 정의된 다양한 개체의 최대 크기와 개수를 추가 정보와 함께 보여 줍니다.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.reviewer: ''
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 36f66c64cb3055aad20dee7a87d429065ca54cc6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 03b4da335fad10135ef592913022e705adc0e9a0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510224"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999453"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 
@@ -91,7 +92,7 @@ ms.locfileid: "79510224"
 |중첩 트랜잭션||4,294,967,296|| 
 |중첩 트리거 수준 수||32||
 |테이블당 비클러스터형 인덱스 수||999||
-|`GROUP BY`, `CUBE`, `ROLLUP`, `GROUPING SETS`, `WITH CUBE` 중 하나가 있는 경우 `WITH ROLLUP` 절의 개별 식 수||32||
+|`CUBE`, `ROLLUP`, `GROUPING SETS`, `WITH CUBE`, `WITH ROLLUP` 중 하나가 있는 경우 `GROUP BY` 절의 개별 식 수||32||
 |`GROUP BY` 절에서 연산자를 통해 생성되는 그룹화 집합 수||4,096||
 |저장 프로시저당 매개 변수 개수||2,100||
 |사용자 정의 함수당 매개 변수 개수||2,100||

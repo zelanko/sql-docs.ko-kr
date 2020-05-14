@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode 요소(DTA)
+description: dta 유틸리티에서 DropOnlyMode 요소는 데이터베이스 엔진 튜닝 관리자가 기존 인덱스, 인덱싱된 뷰 또는 파티션을 삭제하는 것만 고려하도록 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305598"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831559"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 요소(DTA)
 
@@ -43,7 +44,7 @@ ms.locfileid: "75305598"
   
  **기본값**  
   
- **발생 빈도**: 선택 사항입니다. 각 **TuningOptions** 요소에 한 번만 사용할 수 있습니다. **TuningOptions** 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.  
+ **발생 빈도**: (선택 사항) 각 **TuningOptions** 요소에 한 번만 사용할 수 있습니다. **TuningOptions** 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.  
   
 -   [FeatureSet 요소&#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   

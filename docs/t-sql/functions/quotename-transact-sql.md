@@ -19,15 +19,15 @@ helpviewer_keywords:
 - QUOTENAME function
 - valid identifiers [SQL Server]
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b83a3dbe28848a335e414a0dd39ef1fafdffff17
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c0b033d43bd2912fe113634af7422b3728c83765
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634912"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987489"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "81634912"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
@@ -55,24 +55,33 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ## <a name="examples"></a>예  
  다음 예에서는 `abc[]def` 문자열에 `[` 및 `]` 문자를 추가하여 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 식별자로 만듭니다.  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  `abc[]def` 문자열에서 오른쪽 대괄호는 이중으로 사용되었는데, 이것은 이스케이프 문자를 나타내기 위한 것입니다.  
+ 
+ 다음 예에서는 열의 이름을 지정하는 데 사용할 따옴표 붙은 문자열을 준비합니다.  
+  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `abc def` 문자열에 `[` 및 `]` 문자를 추가하여 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 식별자로 만듭니다.  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -96,6 +105,3 @@ SELECT QUOTENAME('abc def');
  [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE&#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [문자열 함수&#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

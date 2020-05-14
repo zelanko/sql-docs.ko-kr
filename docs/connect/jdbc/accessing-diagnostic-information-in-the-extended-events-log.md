@@ -1,7 +1,8 @@
 ---
-title: 확장 이벤트 로그의 진단 정보 액세스 | Microsoft Docs
+title: 확장 이벤트 로그의 진단 정보 액세스
+description: SQL Server용 Microsoft JDBC 드라이버의 이벤트와 관련된 서버의 확장 이벤트에 액세스하는 방법에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,20 +11,20 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5f8086c0ccb161bb94e1b878736b55ee306fe4b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920344"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922248"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서 추적([드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md))이 업데이트되어 서버의 연결 링 버퍼와 확장 이벤트 로그의 애플리케이션 성능 정보에서 클라이언트 이벤트와 진단 정보(예: 연결 실패)의 상관관계를 손쉽게 지정할 수 있게 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [View Event Session Data](https://msdn.microsoft.com/library/hh710068(SQL.110).aspx)를 참조하십시오.  
+  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서 추적([드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md))이 업데이트되어 서버의 연결 링 버퍼와 확장 이벤트 로그의 애플리케이션 성능 정보에서 클라이언트 이벤트와 진단 정보(예: 연결 실패)의 상관관계를 손쉽게 지정할 수 있게 되었습니다. 확장 이벤트 로그를 읽는 방법에 대한 자세한 내용은 [확장 이벤트](../../relational-databases/extended-events/extended-events.md)를 참조하세요.  
   
 ## <a name="details"></a>세부 정보  
- 연결 작업의 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](https://go.microsoft.com/fwlink/?LinkId=207752)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 클라이언트 드라이버 진단 추가 지원이 필요한 경우 추적을 사용하도록 설정하고 연결 명령을 다시 실행하여 추적에 있는 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
+ 연결 작업의 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 클라이언트 드라이버 진단 추가 지원이 필요한 경우 추적을 사용하도록 설정하고 연결 명령을 다시 실행하여 추적에 있는 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
   
  [ISQLServerConnection 인터페이스](../../connect/jdbc/reference/isqlserverconnection-interface.md)를 사용하여 클라이언트 연결 ID를 프로그래밍 방식으로 가져올 수 있습니다. 연결 ID는 연결 관련 예외에서도 표시됩니다.  
   
@@ -51,7 +52,6 @@ add event rpc_completed (action (client_connection_id))
 add target ring_buffer with (track_causality=on)  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+[JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  

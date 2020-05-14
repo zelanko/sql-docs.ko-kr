@@ -1,6 +1,7 @@
 ---
 title: Distributed Replay 설치
 titleSuffix: SQL Server Distributed Replay
+description: 이 문서에서는 설치 마법사, 명령 프롬프트 창 또는 구성 파일을 사용하여 Distributed Replay를 설치하는 방법에 대해 설명합니다.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992176"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999393"
 ---
 # <a name="install-distributed-replay"></a>Distributed Replay 설치
 
@@ -210,18 +211,17 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  다음 예에서는 명령 프롬프트에서 구성 파일을 지정하는 방법을 보여 줍니다.  
   
-```  
+```
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
-```  
-  
-> [!NOTE]  
->  구성 파일에서는 암호를 구성할 수 없으므로 명령줄에서 두 암호를 모두 지정해야 합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+```
+
+> [!NOTE]
+> 구성 파일에서는 암호를 구성할 수 없으므로 명령줄에서 두 암호를 모두 지정해야 합니다.  
+
+## <a name="see-also"></a>참고 항목
+
+- [SQL Server 2016 버전에서 지원되는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)

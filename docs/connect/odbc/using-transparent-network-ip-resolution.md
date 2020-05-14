@@ -1,7 +1,8 @@
 ---
-title: 투명 네트워크 IP 확인 사용 | Microsoft Docs
+title: 투명 네트워크 IP 확인 사용
+description: ODBC Driver for SQL Server의 투명 네트워크 IP 확인과 MultiSubnetFailover 기능에 미치는 영향에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68070543e8fee326f0b5a02c73f0c0e4aaef6fbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1a003b4817868516c6acfac10df80cafdf044c01
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928290"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922290"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>투명 네트워크 IP 확인 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -50,8 +51,8 @@ TransparentNetworkIPResolution은 호스트 이름의 첫 번째 확인된 IP가
 -|-|-|-|-
 `SQL_COPT_SS_TNIR` (1249)| `SQL_IS_INTEGER` 또는 `SQL_IS_UINTEGER`| `SQL_IS_ON`(1), `SQL_IS_OFF`(0)|`SQL_IS_ON`|TNIR을 사용 또는 사용 안 함으로 설정합니다.
 
-<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>MultiSubnetFailover에 대한 자세한 내용은 [Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)를 참조하세요.
+<a name="for-more-information-about-multisubnetfailover-see-odbc-driver-on-linux-and-macos---high-availability-and-disaster-recovery"></a>MultiSubnetFailover에 대한 자세한 내용은 [Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구](linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)를 참조하세요.
 --------------------------------------------------
 ## <a name="see-also"></a>참고 항목  
-* [Windows의 Microsoft ODBC Driver for SQL Server](../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
-* [SQL Server 다중 서브넷 클러스터링(SQL Server)](https://msdn.microsoft.com/library/ff878716.aspx#RelatedContent)
+* [Windows의 Microsoft ODBC Driver for SQL Server](windows/microsoft-odbc-driver-for-sql-server-on-windows.md)
+* [SQL Server 다중 서브넷 클러스터링(SQL Server)](../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)

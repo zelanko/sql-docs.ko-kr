@@ -1,5 +1,6 @@
 ---
 title: Index의 Column 요소(DTA)
+description: dta 유틸리티에서 Index의 Column 요소는 사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831630"
 ---
 # <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
 
@@ -42,7 +43,7 @@ ms.locfileid: "75307884"
   
 ## <a name="element-attributes"></a>요소 특성  
   
- **Type**: 선택 사항입니다. 인덱스 열 유형을 지정합니다. **string** 데이터 형식을 사용하여 허용된 다음 값 중 하나로 이 특성을 지정할 수 있습니다.  
+ **형식**: (선택 사항) 인덱스 열 유형을 지정합니다. **string** 데이터 형식을 사용하여 허용된 다음 값 중 하나로 이 특성을 지정할 수 있습니다.  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "75307884"
   
      키가 아닌 열 포함에 대한 자세한 내용은 [포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조하세요.  
   
- **SortOrder**: 선택 사항입니다. 열의 정렬 순서를 지정합니다. 다음과 같이 **string** 데이터 형식을 사용하여 **"Ascending"** 또는 **"Descending"** 정렬 순서를 지정할 수 있습니다.  
+ **SortOrder**: (선택 사항) 열의 정렬 순서를 지정합니다. 다음과 같이 **string** 데이터 형식을 사용하여 **"Ascending"** 또는 **"Descending"** 정렬 순서를 지정할 수 있습니다.  
   
 ```  
 <Column SortOrder="Ascending">  

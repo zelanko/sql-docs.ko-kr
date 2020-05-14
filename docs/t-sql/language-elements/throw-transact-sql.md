@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631843"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925207"
 ---
 # <a name="throw-transact-sql"></a>THROW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |*msg_id*가 RAISERROR에 전달되는 경우 ID가 sys.messages에 정의되어야 합니다.|*error_number* 매개 변수가 sys.messages에 정의되지 않아도 됩니다.|  
 |*msg_str* 매개 변수는 **printf** 서식 지정 스타일을 포함할 수 있습니다.|*message* 매개 변수에는 **printf** 스타일 서식 지정을 사용할 수 없습니다.|  
-|*severity* 매개 변수는 예외의 심각도를 지정합니다.|*severity* 매개 변수가 없습니다. 예외 심각도는 항상 16으로 설정됩니다.|  
+|*severity* 매개 변수는 예외의 심각도를 지정합니다.|*severity* 매개 변수가 없습니다. THROW를 사용하여 예외를 시작하면 심각도는 항상 16으로 설정됩니다. 그러나 THROW를 사용하여 기존 예외를 다시 throw하면 심각도가 해당 예외의 심각도 수준으로 설정됩니다.|  
   
 ## <a name="examples"></a>예  
   

@@ -1,5 +1,6 @@
 ---
 title: Index 요소(DTA)
+description: dta 유틸리티에서 Index 요소는 사용자 지정 구성에 대해 만들거나 삭제하려는 인덱스에 대한 정보를 포함합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1d865d3ea2893f255155ee03c229731eed9d48a8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df13c50363723ca9351b6e73cf5db59bc6a183d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307703"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831574"
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 

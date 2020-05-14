@@ -1,5 +1,6 @@
 ---
-title: 비동기 실행(알림 방법) 샘플 | Microsoft Docs
+title: 비동기 실행(알림 방법) 샘플
+description: Microsoft ODBC Driver for SQL Server에서 알림 메서드를 사용하여 비동기 실행을 사용하는 방법을 보여 주는 예제 코드입니다.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ab208859cd0eb560ca72a37db05cd2ff547abad
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f0a5a7ea9f252364c200c587e60193366a005f60
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928292"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922278"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>비동기 실행(알림 방법) 샘플
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  이 항목의 코드 샘플은 [비동기 실행(알림 방법)](https://msdn.microsoft.com/library/hh405038(VS.85).aspx)을 사용하는 방법을 보여 줍니다.  
+  이 항목의 코드 샘플은 [비동기 실행(알림 방법)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)을 사용하는 방법을 보여 줍니다.  
   
  이 함수는 비동기 알림을 사용하여 다섯 개의 연결을 열고 각 연결의 명령문에서 하나의 쿼리를 실행합니다.  
   

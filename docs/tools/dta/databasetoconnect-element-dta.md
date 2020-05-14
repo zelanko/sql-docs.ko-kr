@@ -1,5 +1,6 @@
 ---
 title: DatabaseToConnect 요소(DTA)
+description: dta 유틸리티에서 DatabaseToConnect 요소는 워크로드를 튜닝할 때 데이터베이스 엔진 튜닝 관리자가 연결하는 첫 번째 데이터베이스를 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5ea514d4f401eeebc822e8d6bbaafcf09282da34
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d6fbf9f58f7370f2fb1638f1736627544bc51c52
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306903"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831575"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 요소(DTA)
 
