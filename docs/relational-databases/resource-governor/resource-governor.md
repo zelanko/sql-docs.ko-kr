@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912050"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849841"
 ---
 # <a name="resource-governor"></a>관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. Resource Governor를 사용하면 CPU, 물리적 IO, 들어오는 애플리케이션 요청에 사용할 수 있는 메모리 양의 한도를 지정할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 워크로드 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. Resource Governor를 사용하면 CPU, 물리적 I/O, 들어오는 애플리케이션 요청에 사용할 수 있는 메모리 양의 한도를 지정할 수 있습니다.  
   
 ## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  
  리소스 관리자를 사용하여 리소스 소비량에 대한 제한을 들어오는 요청별로 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업과 리소스를 관리할 수 있습니다. 리소스 관리자 컨텍스트에서 작업이란 단일 엔터티로 취급해야 하거나 취급할 수 있는 비슷한 크기의 쿼리 또는 요청 집합입니다. 반드시 그래야 하는 것은 아니지만 작업의 리소스 사용 패턴이 균일할수록 리소스 관리자를 통해 얻을 수 있는 이점이 많아집니다. 리소스 제한은 실행 중인 작업에 미치는 영향을 최소화하면서 실시간으로 다시 구성할 수 있습니다.  
   
- 같은 서버에 고유 작업이 여러 개 있는 환경에서 리소스 관리자를 사용하면 이러한 여러 작업을 구별할 수 있으며 지정한 제한에 따라 요청된 공유 리소스를 할당할 수 있습니다. CPU, 물리적 IO 및 메모리가 이러한 리소스에 해당합니다.  
+ 같은 서버에 고유 작업이 여러 개 있는 환경에서 리소스 관리자를 사용하면 이러한 여러 작업을 구별할 수 있으며 지정한 제한에 따라 요청된 공유 리소스를 할당할 수 있습니다. CPU, 물리적 I/O 및 메모리가 이러한 리소스에 해당합니다.  
   
  리소스 관리자를 사용하면 다음을 수행할 수 있습니다.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67912050"
   
 -   다중 작업 및 다중 사용자 환경에서 작업 테넌트에 대한 예측 가능한 성능 및 지원 SLA를 제공합니다.  
   
--   IO 하위 시스템을 포화 상태로 만들어 다른 작업의 성능을 저하시킬 수 있는 DBCC CHECKDB 등의 작업에 대해 IO 리소스를 제한하거나 런어웨이 쿼리를 격리 및 제한합니다.  
+-   I/O 하위 시스템을 포화 상태로 만들어 다른 워크로드의 성능을 저하시킬 수 있는 DBCC CHECKDB 등의 작업에 대해 I/O 리소스를 제한하거나 런어웨이 쿼리를 격리 및 제한합니다.  
   
 -   리소스 사용 비용 환불을 위한 세분화된 리소스 추적 기능을 추가하고 서버 리소스 소비자에게 예측 가능한 요금 청구 기능을 제공합니다.  
   
@@ -43,13 +43,13 @@ ms.locfileid: "67912050"
   
 -   리소스 관리가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]으로 제한되며 리소스 관리자를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용할 수 없습니다.  
   
--   SQL Server 인스턴스 간 작업 모니터링 또는 작업 관리가 없습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간 워크로드 모니터링 또는 워크로드 관리가 없습니다.  
   
 -   리소스 관리자는 OLTP 작업을 관리할 수는 있지만 이러한 유형의 쿼리는 일반적으로 지속 시간이 매우 짧으므로 대역폭 제어를 적용할 수 있을 정도로 오래 CPU에 항상 상주하지 않습니다. 이로 인해 CPU 사용량(%)으로 반환되는 통계가 왜곡될 수 있습니다.  
   
--   물리적 IO 관리 기능은 사용자 작업에만 적용되고 시스템 태스크에는 적용되지 않습니다. 시스템 태스크에는 트랜잭션 로그에 대한 쓰기 작업 및 지연 기록기 IO 작업이 포함됩니다. 대부분의 쓰기 작업은 일반적으로 시스템 태스크에 의해 수행되므로 리소스 관리자는 주로 사용자 읽기 작업에 적용됩니다.  
+-   물리적 I/O 관리 기능은 사용자 작업에만 적용되고 시스템 태스크에는 적용되지 않습니다. 시스템 태스크에는 트랜잭션 로그에 대한 쓰기 작업 및 지연 기록기 I/O 작업이 포함됩니다. 대부분의 쓰기 작업은 일반적으로 시스템 태스크에 의해 수행되므로 리소스 관리자는 주로 사용자 읽기 작업에 적용됩니다.  
   
--   내부 리소스 풀에 대해서는 IO 임계값을 설정할 수 없습니다.  
+-   내부 리소스 풀에 대해서는 I/O 임계값을 설정할 수 없습니다.  
   
 ## <a name="resource-concepts"></a>리소스 개념  
  다음은 리소스 관리자를 이해하고 사용하기 위한 세 가지 기본 개념입니다.  

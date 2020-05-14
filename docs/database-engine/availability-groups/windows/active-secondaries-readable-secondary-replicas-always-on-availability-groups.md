@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822408"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784653"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Always On 가용성 그룹의 보조 복제본으로 읽기 전용 워크로드 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822408"
   
 -   주 복제본에서 디스크 기반 테이블이 포함된 파일에 대해 DBCC SHRINKFILE 작업을 수행할 경우 해당 파일에 삭제할 레코드가 포함되어 있고 이 레코드가 보조 복제본에서 여전히 필요하면 작업이 실패할 수 있습니다.  
   
--   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]부터 사용자 동작 또는 실패로 인해 주 복제본이 오프라인인 경우에도 읽기 가능한 보조 복제본은 온라인 상태를 유지할 수 있습니다. 하지만 이 상황에서는 가용성 그룹 수신기도 오프라인 상태가 되므로 읽기 전용 라우팅이 작동하지 않습니다. 클라이언트는 읽기 전용 작업을 위해 읽기 전용 보조 복제본에 직접 연결해야 합니다.  
+-   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]부터 시작하여 사용자 동작이나 오류로 인해 주 복제본이 오프라인 상태인 경우(예: 사용자 명령 또는 오류로 인해 동기화가 일시 중단되었거나, WSFC가 오프라인 상태이기 때문에 복제본이 상태를 해결 중인 경우)에도 읽기 가능한 보조 복제본이 온라인 상태를 유지할 수 있습니다. 하지만 이 상황에서는 가용성 그룹 수신기도 오프라인 상태가 되므로 읽기 전용 라우팅이 작동하지 않습니다. 클라이언트는 읽기 전용 작업을 위해 읽기 전용 보조 복제본에 직접 연결해야 합니다.  
   
 > [!NOTE]  
 >  읽기 가능한 보조 복제본을 호스트하는 서버 인스턴스에서 [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰를 쿼리할 경우 REDO 차단 문제가 발생할 수 있습니다. 이는 이 동적 관리 뷰가 지정된 사용자 테이블 또는 뷰에 대한 IS 잠금을 획득하여 REDO 스레드에서의 해당 사용자 테이블 또는 뷰에 대한 X 잠금 요청이 차단되기 때문입니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822408"
  이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [Always On 대시보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰를 사용하면 됩니다.  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> 메모리 최적화 테이블이 포함된 데이터베이스의 데이터 대기 시간  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx) 참조). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 최적화 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)을 참조하세요). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 최적화 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 최적화 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> 읽기 전용 작업의 영향  
  읽기 전용 액세스를 사용하도록 보조 복제본을 구성하면 특히 디스크 기반 테이블의 읽기 전용 작업이 I/O를 매우 많이 사용하는 경우 보조 데이터베이스의 읽기 전용 작업은 다시 실행 스레드의 CPU 및 I/O(디스크 기반 테이블의 경우)와 같은 시스템 리소스를 소비합니다. 모든 행이 메모리 내에 상주하기 때문에 메모리 액세스에 최적화된 테이블에 액세스할 때 IO의 영향이 없습니다.  
@@ -216,9 +216,9 @@ GO
     |읽기 가능한 보조 복제본인지 여부|스냅샷 격리 또는 RCSI 수준이 설정되었는지 여부|주 데이터베이스|보조 데이터베이스|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
     |예|예|행 버전이 없거나 14바이트 오버헤드임|행 버전이 없거나 14바이트 오버헤드임|  
-    |예|yes|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
-    |yes|예|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
-    |yes|yes|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 없지만 14바이트 오버헤드임|  
+    |예|예|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
+    |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
 ##  <a name="related-tasks"></a><a name="bkmk_RelatedTasks"></a> 관련 작업  
   

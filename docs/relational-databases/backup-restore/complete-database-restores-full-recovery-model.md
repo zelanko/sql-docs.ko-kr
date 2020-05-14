@@ -1,5 +1,6 @@
 ---
 title: 전체 데이터베이스 복원(전체 복구 모델) | Microsoft 문서
+description: 모든 데이터가 일정한 시점으로 복구되는 전체 SQL Server 데이터베이스 복원에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdcc38c973f1e1c79fda3fb366472b569cf392dc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908967"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824113"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>전체 데이터베이스 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.locfileid: "72908967"
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 예: 오류 지점으로 복구(Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> 예제: 오류 지점으로 복구(Transact-SQL)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예에서는 복원 순서에서 오류 지점으로 데이터베이스를 복원하는 필수 옵션을 보여 줍니다. 이 예에서는 데이터베이스의 비상 로그 백업을 만듭니다. 다음으로 전체 데이터베이스 백업 및 로그 백업을 복원한 다음 비상 로그 백업을 복원합니다. 이 예의 경우 별도의 마지막 단계에서 데이터베이스를 복구합니다.  
   
 > [!NOTE]  

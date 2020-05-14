@@ -1,5 +1,6 @@
 ---
 title: BLOB 저장 옵션 비교(SQL Server) | Microsoft 문서
+description: SQL Server는 Windows 애플리케이션에서 사용하는 Blob(Binary Large Object) 데이터를 저장할 수 있습니다. 조화되지 않은 데이터를 저장하기 위한 이 관계형 데이터베이스의 옵션을 비교합니다.
 ms.custom: ''
 ms.date: 03/04/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 049e001d5193f1d96862755e8045bb84d002050d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085439"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000093"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>BLOB 저장 옵션 비교(SQL Server)
 
@@ -52,12 +53,12 @@ FileTable 기능은 기존의 FILESTREAM 기술을 기반으로 빌드됩니다.
 
 |기능|파일 서버 및 데이터베이스 솔루션|FILESTREAM 솔루션|FileTable 솔루션|
 |:------|:--------------------------------|:------------------|:-----------------|
-|**단일화된 관리 태스크**|예|yes|**예**|
-|**단일 서비스 집합**: 검색, 보고, 쿼리 등|예|yes|**예**|
-|**통합 보안 모델**|예|yes|**예**|
-|**FILESTREAM 데이터의 현재 위치 업데이트**|yes|예|**예**|
+|**단일화된 관리 태스크**|예|예|**예**|
+|**단일 서비스 집합**: 검색, 보고, 쿼리 등|예|예|**예**|
+|**통합 보안 모델**|예|예|**예**|
+|**FILESTREAM 데이터의 현재 위치 업데이트**|예|예|**예**|
 |**파일 및 디렉터리 계층 구조를 데이터베이스에서 유지 관리**|예|예|**예**|
-|**Windows 애플리케이션 호환성**|yes|예|**예**|
+|**Windows 애플리케이션 호환성**|예|예|**예**|
 |**파일 특성에 대한 관계형 액세스**|예|예|**예**|
 
 ## <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> FILESTREAM 및 RBS(Remote BLOB Store) 비교

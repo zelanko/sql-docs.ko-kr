@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784492"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
 
@@ -51,7 +51,7 @@ temporal 테이블 관련 작업을 수행할 때는 다음 사항을 고려해�
 
   - **Always On:** 완벽하게 지원
   - **변경 데이터 캡처 및 변경 데이터 추적:** 현재 테이블에서만 지원
-  - **스냅샷 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다. 배포 에이전트가 시작되면 배포 에이전트가 중지될 때까지 열린 상태로 유지되는 트랜잭션이 열립니다. 이 동작으로 인해 SysStartTime 및 SysEndTime은 배포 에이전트가 시작되는 첫 번째 트랜잭션의 시작 시간으로 채워집니다. 따라서 배포 에이전트를 지속적으로 실행하는 기본값이 아닌 일정에 따라 실행하는 것이 더 적합할 수 있습니다. 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.
+  - **스냅샷 및 트랜잭션 복제**: 임시로 활성화되지 않은 단일 게시자 및 임시로 활성화된 한 구독자에서만 지원됩니다. 이 경우 게시자는 OLTP 작업에서 사용되고 구독자는 오프로딩 보고서('AS OF' 쿼리 포함)에서 사용됩니다. 배포 에이전트가 시작되면 배포 에이전트가 중지될 때까지 열린 상태로 유지되는 트랜잭션이 열립니다. 이 동작으로 인해 SysStartTime 및 SysEndTime은 배포 에이전트가 시작되는 첫 번째 트랜잭션의 시작 시간으로 채워집니다. 따라서 애플리케이션 또는 조직에 중요한 최신 시스템 시간에 가까운 시간으로 SysStartTime 및 SysEndTime을 채운 경우 배포 에이전트를 지속적으로 실행하는 기본 동작이 아닌 일정에 따라 실행하는 것이 더 좋을 수 있습니다. 로컬 시스템 시계에 의존하여 임시 데이터가 일치하지 않을 수 있으므로 다중 구독자를 사용할 수 없습니다.
   - **병합 복제:** temporal 테이블에서 지원되지 않습니다.
 
 - 일반 쿼리는 현재 테이블의 데이터에만 영향을 줍니다. 기록 테이블에서 데이터를 쿼리하려면 임시 쿼리를 사용해야 합니다. 이것에 대한 설명은 이 문서의 임시 데이터 쿼리 섹션에서 차후에 설명됩니다.

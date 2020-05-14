@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809721"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987207"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
 
@@ -344,6 +344,14 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |sensitive|환경 변수의 값이 민감한지 여부입니다.|잘못된 입력: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-100"></a>Version 1.0.0
+
+릴리스 날짜: 2020년 5월 8일
+
+- GA(일반 공급) 릴리스
+- 에이전트에서 최소 .NET Framework 버전의 제한을 추가했습니다. 현재 최소 .NET Framework 버전은 4.6.2입니다.
+- SSIS 빌드 태스크 및 SSIS 배포 태스크에 대한 구체화된 설명입니다.
 
 ### <a name="version-020-preview"></a>버전 0.2.0 미리 보기
 

@@ -1,5 +1,6 @@
 ---
 title: SQL Server의 버전별 컴퓨팅 용량 제한 | Microsoft 문서
+description: 이 항목에서는 SQL Server 2019의 컴퓨팅 용량 제한과 이들 버전이 하이퍼스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.
 ms.custom: ''
 ms.date: 11/07/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5a3be2f37257195edb6c3305a79237c39ea930bf
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68067571"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000435"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

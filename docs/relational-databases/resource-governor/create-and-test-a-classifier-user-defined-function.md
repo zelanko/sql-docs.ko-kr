@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 32d8a7a590b31d63c256f861338193c234774908
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c11771790e91bb888df7e77749e6dc879081a46e
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165566"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849621"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "74165566"
   
 1.  새 리소스 풀 및 작업 그룹을 만들고 구성합니다. 각 작업 그룹을 적합한 리소스 풀에 할당합니다.  
   
-    ```  
+    ```sql  
     --- Create a resource pool for production processing  
     --- and set limits.  
     USE master;  
@@ -57,6 +57,7 @@ ms.locfileid: "74165566"
          MIN_CPU_PERCENT = 50  
     );  
     GO  
+    
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gProductionProcessing  
@@ -64,13 +65,14 @@ ms.locfileid: "74165566"
     (  
          IMPORTANCE = MEDIUM  
     );  
+    
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
     GO  
+    
     --- Create a resource pool for off-hours processing  
     --- and set limits.  
-  
     CREATE RESOURCE POOL pOffHoursProcessing  
     WITH  
     (  
@@ -78,6 +80,7 @@ ms.locfileid: "74165566"
          MIN_CPU_PERCENT = 0  
     );  
     GO  
+    
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
     CREATE WORKLOAD GROUP gOffHoursProcessing  
@@ -93,14 +96,14 @@ ms.locfileid: "74165566"
   
 2.  메모리 내 구성을 업데이트합니다.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  테이블을 만들고 프로덕션 처리 시간 범위의 시작 시간과 종료 시간을 정의합니다.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
@@ -113,7 +116,7 @@ ms.locfileid: "74165566"
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
     INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
-    go  
+    GO  
     ```  
   
 4.  조회 테이블의 시간에 대해 계산될 수 있는 시간 함수 및 값을 사용하는 분류자 함수를 만듭니다. 분류자 함수에서 조회 테이블을 사용하는 방법에 대한 자세한 내용은 이 항목의 "분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법"을 참조하세요.  
@@ -121,7 +124,7 @@ ms.locfileid: "74165566"
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에는 날짜 및 시간 데이터 형식 및 함수의 확장된 집합이 도입되었습니다. 자세한 내용은 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION fnTimeClassifier()  
     RETURNS sysname  
     WITH SCHEMABINDING  
@@ -149,7 +152,7 @@ ms.locfileid: "74165566"
   
 5.  분류자 함수를 등록하고 메모리 내 구성을 업데이트합니다.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
@@ -159,7 +162,7 @@ ms.locfileid: "74165566"
   
 1.  다음 쿼리를 사용하여 리소스 풀 및 작업 그룹 구성을 가져옵니다.  
   
-    ```  
+    ```sql  
     USE master;  
     SELECT * FROM sys.resource_governor_resource_pools;  
     SELECT * FROM sys.resource_governor_workload_groups;  
@@ -168,7 +171,7 @@ ms.locfileid: "74165566"
   
 2.  다음 쿼리를 사용하여 분류자 함수가 존재하며 설정되었는지 확인합니다.  
   
-    ```  
+    ```sql  
     --- Get the classifier function Id and state (enabled).  
     SELECT * FROM sys.resource_governor_configuration;  
     GO  
@@ -182,7 +185,7 @@ ms.locfileid: "74165566"
   
 3.  다음 쿼리를 사용하여 리소스 풀 및 작업 그룹에 대한 현재 런타임 데이터를 가져옵니다.  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.dm_resource_governor_resource_pools;  
     SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
@@ -190,7 +193,7 @@ ms.locfileid: "74165566"
   
 4.  다음 쿼리를 사용하여 각 그룹에 있는 세션을 확인합니다.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
         CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
     FROM sys.dm_exec_sessions AS s  
@@ -202,7 +205,7 @@ ms.locfileid: "74165566"
   
 5.  다음 쿼리를 사용하여 각 그룹에 있는 요청을 확인합니다.  
   
-    ```  
+    ```sql  
     SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
         r.start_time, r.command, r.sql_handle, t.text   
     FROM sys.dm_exec_requests AS r  
@@ -215,7 +218,7 @@ ms.locfileid: "74165566"
   
 6.  다음 쿼리를 사용하여 분류자에서 실행하는 요청을 확인합니다.  
   
-    ```  
+    ```sql  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
     FROM sys.dm_exec_sessions AS s  
     INNER JOIN sys.dm_resource_governor_workload_groups AS g  
@@ -241,7 +244,7 @@ ms.locfileid: "74165566"
   
 2.  조회 테이블에 대해 수행되는 I/O를 제한합니다.  
   
-    1.  TOP 1을 사용하여 행을 하나만 반환합니다.  
+    1.  `TOP 1`을 사용하여 행을 하나만 반환합니다.  
   
     2.  테이블의 행 수를 최소화합니다.  
   
@@ -253,7 +256,7 @@ ms.locfileid: "74165566"
   
 3.  조회 테이블에 대한 차단을 방지합니다.  
   
-    1.  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT` (최대값 1000밀리초)을 사용합니다.  
+    1.  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT`(최댓값 1,000밀리초)을 사용합니다.  
   
     2.  테이블은 반드시 master 데이터베이스에 있어야 합니다. 클라이언트 컴퓨터가 연결을 시도할 때 복구가 보장되는 데이터베이스는 master 데이터베이스뿐입니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: FileTable의 필수 구성 요소를 사용하도록 설정 | Microsoft 문서
+description: FileTables를 사용하려면 먼저 FILESTREAM을 사용하도록 설정하고 디렉터리를 지정하고 특정 옵션 및 액세스 수준을 설정합니다. 모든 필수 구성 요소를 충족하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 960020f14560a68dd9cf4fdaac9c75037592165d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71974306"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999941"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "71974306"
 ##  <a name="enabling-filestream-at-the-instance-level"></a><a name="BasicsFilestream"></a> 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
  FileTable은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 FILESTREAM 기능을 확장합니다. 따라서 FileTable을 만들고 사용하려면 먼저 Windows 수준과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 파일 I/O 액세스를 위해 FILESTREAM을 사용하도록 설정해야 합니다.  
   
-###  <a name="how-to-enable-filestream-at-the-instance-level"></a><a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
+###  <a name="how-to-enable-filestream-at-the-instance-level"></a><a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM 사용  
  FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
  **sp_configure** 를 호출하여 인스턴스 수준에서 FILESTREAM을 사용하도록 설정하려면 filestream_access_level 옵션을 2로 설정해야 합니다. 자세한 내용은 [FILESTREAM 액세스 수준 서버 구성 옵션](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.  
@@ -67,14 +68,14 @@ GO
  사용 가능한 비트랜잭션 액세스 수준은 FULL, READ_ONLY 및 OFF입니다.  
   
  **Transact-SQL을 사용하여 비트랜잭션 액세스 수준 지정**  
- - **새 데이터베이스를 만들 경우**[NON_TRANSACTED_ACCESS](../../t-sql/statements/create-database-sql-server-transact-sql.md) FILESTREAM 옵션을 사용하여 **CREATE DATABASE&#40;SQL Server Transact-SQL&#41;** 문을 호출합니다.
+ - **새 데이터베이스를 만들 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
 
    ```sql
    CREATE DATABASE database_name  
      WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
    ```
 
-- **기존 데이터베이스를 변경할 경우**[NON_TRANSACTED_ACCESS](../../t-sql/statements/alter-database-transact-sql.md) FILESTREAM 옵션을 사용하여 **ALTER DATABASE&#40;Transact-SQL&#41;** 문을 호출합니다.
+- **기존 데이터베이스를 변경할 경우** **NON_TRANSACTED_ACCESS** FILESTREAM 옵션을 사용하여 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 문을 호출합니다.
 
    ```sql
    ALTER DATABASE database_name  
@@ -93,7 +94,7 @@ GO
  지정한 이름은 데이터베이스 수준 디렉터리의 인스턴스 전체에서 고유해야 합니다.  
   
 **Transact-SQL을 사용하여 FileTable의 디렉터리 지정**  
-- **새 데이터베이스를 만들 경우**[DIRECTORY_NAME](../../t-sql/statements/create-database-sql-server-transact-sql.md) FILESTREAM 옵션을 사용하여 **CREATE DATABASE&#40;SQL Server Transact-SQL&#41;** 문을 호출합니다.
+- **새 데이터베이스를 만들 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.
 
    ```sql
    CREATE DATABASE database_name  
@@ -101,7 +102,7 @@ GO
    GO  
    ```
 
--   **기존 데이터베이스를 변경할 경우**[DIRECTORY_NAME](../../t-sql/statements/alter-database-transact-sql.md) FILESTREAM 옵션을 사용하여 **ALTER DATABASE&#40;Transact-SQL&#41;** 문을 호출합니다. 이러한 옵션을 사용하여 디렉터리 이름을 변경할 경우 데이터베이스가 단독으로 잠겨 있고 열려 있는 파일 핸들이 없어야 합니다.  
+-   **기존 데이터베이스를 변경할 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 문을 호출합니다. 이러한 옵션을 사용하여 디렉터리 이름을 변경할 경우 데이터베이스가 단독으로 잠겨 있고 열려 있는 파일 핸들이 없어야 합니다.  
   
     ```sql  
     ALTER DATABASE database_name  
@@ -109,7 +110,7 @@ GO
     GO  
     ```  
   
--   **데이터베이스를 연결할 경우**[FOR ATTACH](../../t-sql/statements/create-database-sql-server-transact-sql.md) 옵션 및 **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 **CREATE DATABASE&#40;SQL Server Transact-SQL&#41;** 문을 호출합니다.  
+-   **데이터베이스를 연결할 경우** **FOR ATTACH** 옵션 및 **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 문을 호출합니다.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -117,7 +118,7 @@ GO
     GO  
     ```  
   
--   **데이터베이스를 복원할 경우**[DIRECTORY_NAME](../../t-sql/statements/restore-statements-transact-sql.md) FILESTREAM 옵션을 사용하여 **RESTORE&#40;Transact-SQL&#41;** 문을 호출합니다.  
+-   **데이터베이스를 복원할 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 문을 호출합니다.  
   
     ```sql  
     RESTORE DATABASE database_name  

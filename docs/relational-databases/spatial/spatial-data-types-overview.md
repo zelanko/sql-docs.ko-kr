@@ -1,6 +1,6 @@
 ---
 title: 공간 데이터 형식 개요 | Microsoft 문서
-ms.date: 11/01/2016
+ms.date: 05/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2abe169f1666a1ce44b96130a52ef8edbc5a788e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb9acb0aa03184f038c2dda9be10b36e6ca32ee
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048525"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784678"
 ---
 # <a name="spatial-data-types-overview"></a>공간 데이터 형식 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ geometry 형식의 원호 세그먼트는 XY 데카르트 좌표 평면(Z 값은
 ### <a name="orientation-of-spatial-data"></a>공간 데이터의 방향  
 평면 시스템에서 다각형의 링 방향은 중요한 요소가 아닙니다. 예를 들어 ((0, 0), (10, 0), (0, 20), (0, 0))로 나타내는 다각형은 ((0, 0), (0, 20), (10, 0), (0, 0))로 나타내는 다각형과 동일합니다. OGC Simple Features for SQL Specification에서는 링 순서를 지정하지 않으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 링 순서를 강제로 지정하지 않습니다.  
 
-타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. **geography** 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다. 타원 시스템의 다각형 내부는 왼쪽 규칙으로 정의됩니다.  
+타원 시스템에서 방향이 없는 다각형은 아무 의미가 없거나 모호합니다. 적도 주변 링이 남반구 또는 북반구를 나타내는지 여부를 예로 들 수 있습니다. **geography** 데이터 형식을 사용하여 공간 인스턴스를 저장할 경우 링의 방향을 지정하고 인스턴스의 위치를 정확하게 나타내야 합니다. 타원 시스템에서 다각형의 내부는 "왼쪽 규칙"에 의해 정의됩니다. 지리적 다각형의 링을 점들이 나열된 순서대로 점을 따라 걷고 있다고 상상해보면 왼쪽의 영역은 다각형의 내부로 처리되고 오른쪽은 다각형의 외부로 처리됩니다.
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 호환성 수준이 100 이하일 경우 **geography** 데이터 형식에는 다음과 같은 제한 사항이 있습니다.  
 -   각 **geography** 인스턴스가 단일 반구 내에 포함되어야 합니다. 반구보다 큰 공간 개체는 저장할 수 없습니다.  

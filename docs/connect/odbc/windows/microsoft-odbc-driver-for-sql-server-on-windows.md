@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31688509bb7c7592da29ef51535029e1251ffd44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f3aa47d41f347867a0db98b59e0cf5ab9b47c2da
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921105"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886320"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Windows의 Microsoft ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,11 +47,10 @@ Microsoft ODBC Driver for SQL Server를 사용하여 새 애플리케이션을 �
 -   [투명 네트워크 IP 확인 사용](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>커뮤니티  
-- [Microsoft ODBC Driver for SQL Server 팀 블로그](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server 드라이버 블로그](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server 데이터 액세스 포럼](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
 ## <a name="see-also"></a>참고 항목  
-- [SQL Server Native Client 정보](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
 - [SQL Server Native Client를 사용하여 애플리케이션 빌드](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client FAQ](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [ODBC 프로그래머 참조](../../../odbc/reference/odbc-programmer-s-reference.md)   

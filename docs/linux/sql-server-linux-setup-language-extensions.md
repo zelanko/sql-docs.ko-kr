@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a9949ec67b2e9d3e89af1e50887532ab0726232
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: 34a6cdbc0c58692e62ce6279bdff6a56194f0c16
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298243"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872747"
 ---
 # <a name="install-sql-server-language-extensions-on-linux"></a>Linux에 SQL Server 언어 확장 설치
 
@@ -200,9 +200,13 @@ sudo zypper install mssql-server-extensibility-java
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+Java 확장의 경우 환경 변수 “JRE_HOME”을 사용하여 JVM을 찾고 초기화할 경로를 결정합니다.
+
+CREATE EXTERNAL LANGUAGE ddl은 확장을 호스트하는 프로세스에 대해 특별히 환경 변수를 설정하는 매개 변수(ENVIRONMENT_VARIABLES)를 제공합니다. 외부 언어 확장에 필요한 환경 변수를 설정하는 가장 효과적인 방법입니다.
 
 자세한 내용은 [외부 언어 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql)를 참조하세요.
 

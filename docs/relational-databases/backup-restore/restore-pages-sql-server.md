@@ -1,5 +1,6 @@
 ---
 title: 페이지 복원(SQL Server) | Microsoft 문서
+description: SQL Server Management Studio 또는 Transact-SQL을 사용하여 SQL Server에서 페이지를 복원하는 방법을 알아봅니다. 전체 데이터베이스를 복원하지 않고 손상된 페이지를 복원합니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2bb7f9186ba44c094a54c4e44e7d54b29bc30ed0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908825"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823682"
 ---
 # <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.locfileid: "72908825"
   
     -   트랜잭션 로그  
   
-    -   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+    -   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
     -   모든 데이터 파일의 0페이지(파일 부트 페이지)  
   
@@ -135,8 +136,8 @@ ms.locfileid: "72908825"
     |헤더|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>** (트랜잭션 로그의 경우)이 될 수 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<blank>** (트랜잭션 로그의 경우)가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**Database**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
     |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

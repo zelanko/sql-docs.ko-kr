@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 3a2f1aa7394f50d4814141ea383f8832511d0335
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636183"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746384"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -274,9 +274,9 @@ ROBUST PLAN
 지원되는 힌트는 다음과 같습니다.    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [ 이상의 쿼리 최적화 프로그램 ](../../relational-databases/performance/cardinality-estimation-sql-server.md)카디널리티 추정[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리 계획을 생성하게 합니다. 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상의 쿼리 최적화 프로그램 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델에서 조인에 기본 베이스 제약 가정 대신 단순 제약을 사용하여 쿼리 계획을 생성하게 합니다. 이 힌트 이름은 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476과 동일합니다. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. 이 힌트 이름은 [ 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)추적 플래그[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
+   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 상관 관계에 해당하는 필터에 대해 AND 조건자를 추정할 때 최소 선택을 사용하여 계획을 생성하게 합니다. 이 힌트 이름은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 그 이전 버전의 카디널리티 추정 모델에 사용하던 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137에 해당하며 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471을 카디널리티 추정 모델 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에서 사용할 때 결과가 비슷합니다.
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
    일괄 처리 모드 적응 조인을 사용 하지 않습니다. 자세한 내용은 [일괄 처리 모드 적응 조인](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)을 참조하세요.     
    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
@@ -318,14 +318,14 @@ ROBUST PLAN
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    쿼리 최적화 프로그램이 현재 데이터베이스 호환성 수준에 해당하는 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. 이 힌트를 사용하여 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 `LEGACY_CARDINALITY_ESTIMATION = ON` 또는 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 재정의합니다.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   쿼리 최적화 프로그램이 [ 및 이전 버전의 ](../../relational-databases/performance/cardinality-estimation-sql-server.md)카디널리티 추정[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 `LEGACY_CARDINALITY_ESTIMATION = ON`에 해당합니다.
+   쿼리 최적화 프로그램이 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 이전 버전의 [카디널리티 추정](../../relational-databases/performance/cardinality-estimation-sql-server.md) 모델을 사용하도록 강제 적용합니다. [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 또는 [데이터베이스 범위 구성](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 설정 `LEGACY_CARDINALITY_ESTIMATION = ON`에 해당합니다.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- 쿼리 수준에서 쿼리 최적화 프로그램 동작을 적용합니다. 이 동작은 쿼리가 데이터베이스 호환성 수준 _n_으로 컴파일된 것처럼 나타납니다. 여기서 _n_은 지원되는 데이터베이스 호환성 수준입니다. [n](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)에 대해 현재 지원되는 값 목록은 _sys.dm_exec_valid_use_hints_를 참조하세요.      
+ 쿼리 수준에서 쿼리 최적화 프로그램 동작을 적용합니다. 이 동작은 쿼리가 데이터베이스 호환성 수준 _n_으로 컴파일된 것처럼 나타납니다. 여기서 _n_은 지원되는 데이터베이스 호환성 수준입니다(예: 100, 130 등). _n_에 대해 현재 지원되는 값 목록은 [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)를 참조하세요.      
    **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10부터)    
 
    > [!NOTE]
    > 데이터베이스 범위 구성, 추적 플래그 또는 다른 쿼리 힌트(예: QUERYTRACEON)를 통해 적용되는 경우 QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n 힌트는 기본 또는 레거시 카디널리티 예상 설정을 재정의하지 않습니다.   
-   > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]호환성 수준[에 따라 달라질 수 있는 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)의 다른 기능에는 영향을 주지 않습니다.  
+   > 이 힌트는 쿼리 최적화 프로그램의 동작에만 영향을 줍니다. 특정 데이터베이스 기능의 가용성과 같이, 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에 따라 달라질 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능에는 영향을 주지 않습니다.  
    > 이 힌트에 대한 자세한 내용은 [개발자 선택 사항: 힌트 쿼리 실행 모델](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)을 참조하세요.
     
 *  'QUERY_PLAN_PROFILE'      
@@ -377,7 +377,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
  INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 쿼리 힌트로 지정하는 경우 다음 개체에 대해서 유효합니다.  
   
 -   테이블  
--   뷰  
+-   보기  
 -   인덱싱된 뷰  
 -   공통 테이블 식(공통 테이블 식을 채울 결과 집합을 위한 SELECT 문에 힌트를 지정해야 함)  
 -   동적 관리 뷰  

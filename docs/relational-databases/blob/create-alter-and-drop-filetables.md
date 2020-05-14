@@ -1,5 +1,6 @@
 ---
 title: FileTable 만들기, 변경 및 삭제 | Microsoft 문서
+description: SQL Server에서 FileTables 기능은 디렉터리 구조를 사용하여 파일을 저장합니다. 새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5483c2b6d344d72eb161b303abf1bf7e56825987
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76922897"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000197"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "76922897"
   
 ###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> 방법: FileTable 만들기  
  **Transact-SQL을 사용하여 FileTable 만들기**  
- [AS FileTable](../../t-sql/statements/create-table-transact-sql.md) 옵션이 포함된 **CREATE TABLE&#40;Transact-SQL&#41;** 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
+ **AS FileTable** 옵션이 포함된 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 문을 호출하여 FileTable을 만듭니다. FileTable에는 고정 스키마가 있으므로 열 목록을 지정할 필요가 없습니다. 새 FileTable에 대해 다음 설정을 지정할 수 있습니다.  
   
 1.  **FILETABLE_DIRECTORY**. FileTable에 저장된 모든 파일 및 디렉터리에 대한 루트 디렉터리 역할을 하는 디렉터리를 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성 비교는 현재 데이터 정렬 설정과 관계없이 대/소문자를 구분하지 않습니다.  
   

@@ -1,7 +1,8 @@
 ---
-title: ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링 | Microsoft Docs
+title: ODBC 드라이버에서 드라이버 인식 연결 풀링
+description: Windows 기반의 Microsoft ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링 개선 사항을 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928302"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922082"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](https://msdn.microsoft.com/library/hh405031(VS.85).aspx)을 지원합니다. 이 항목은 Windows 기반의 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 드라이버 인식 연결 풀링 개선 사항을 설명합니다.  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)을 지원합니다. 이 항목은 Windows 기반의 Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 드라이버 인식 연결 풀링 개선 사항을 설명합니다.  
   
 -   연결 속성에 관계없이 `SQLDriverConnect`를 사용하는 연결은 `SQLConnect`를 사용하는 연결과는 별도의 풀로 이동합니다.
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 스레드에 대한 Windows 사용자의 보안 컨텍스트를 사용하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 Windows 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하고 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 자격 증명을 사용하여 백 엔드에 연결하는 경우 여러 Windows 사용자가 잠재적으로 동일한 연결 풀을 사용할 수 있다는 것입니다. Windows 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 Windows 사용자의 보안 컨텍스트를 사용합니다. 즉, Windows의 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하는 경우에도 여러 Windows 사용자가 연결을 공유하지 않습니다.

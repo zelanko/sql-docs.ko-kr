@@ -1,5 +1,6 @@
 ---
 title: FileTable에서 디렉터리 및 경로 작업 | Microsoft 문서
+description: FileTables 기능은 디렉터리 구조를 사용하여 파일을 저장합니다. 디렉터리, 경로, 제한 사항 및 의미 체계를 사용하여 작업하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908695"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999533"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

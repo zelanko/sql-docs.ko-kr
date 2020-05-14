@@ -1,6 +1,7 @@
 ---
 title: 컨트롤러 및 클라이언트 서비스 계정 수정
 titleSuffix: SQL Server Distributed Replay
+description: Distributed Replay 컨트롤러 및 클라이언트 서비스 계정을 수정한 후 액세스 제어 목록을 다시 적용하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: c9ac64de75c79f3a614a8448b47e48af00b967b0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7abe40c16dc49e948fbca68486f96db221e1aae8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75238919"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000463"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
 

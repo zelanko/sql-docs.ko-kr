@@ -13,12 +13,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: afc420ffe62f31c5793f00f3acea12dedac7f509
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cd776b547c60ddbb144415f7185d1c770d9e6df
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79198400"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872805"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 
@@ -99,7 +99,8 @@ any changes to one section should be duplicated in the other-->
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d \
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -107,7 +108,8 @@ any changes to one section should be duplicated in the other-->
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -115,7 +117,8 @@ any changes to one section should be duplicated in the other-->
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -133,7 +136,8 @@ any changes to one section should be duplicated in the other-->
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | 8자 이상이고 [SQL Server 암호 요구 사항](../relational-databases/security/password-policy.md)을 충족하는 자신만의 강력한 암호를 지정합니다. SQL Server 이미지에 대한 설정을 해야 합니다. |
    | **-p 1433:1433** | 호스트 환경의 TCP 포트(첫 번째 값)를 컨테이너의 TCP 포트(두 번째 값)로 매핑합니다. 이 예제에서 SQL Server는 컨테이너의 TCP 1433에서 수신 대기하고 호스트의 포트 1433에 공개됩니다. |
    | **--name sql1** | 컨테이너에 대해 임의로 생성된 이름보다는 사용자 지정 이름을 지정합니다. 둘 이상의 컨테이너를 실행하는 경우 이 동일한 이름을 다시 사용할 수 없습니다. |
-   | **-d mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
+   | **-d** | 백그라운드(디먼)에서 컨테이너를 실행합니다. |
+   | ** mcr.microsoft.com/mssql/server:2017-latest** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
 3. Docker 컨테이너를 보려면 `docker ps` 명령을 사용합니다.
 

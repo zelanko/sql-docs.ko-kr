@@ -1,5 +1,6 @@
 ---
 title: 증분 복원(SQL Server) | Microsoft 문서
+description: SQL Server에서 증분 복원을 사용하면 여러 파일 그룹을 포함하는 데이터베이스를 단계별로 복원/복구할 수 있습니다. 증분 복원은 모든 복구 모델에서 작동합니다.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9fb2e77a9d32e48965e491a2bc0549fb7c9ad400
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916003"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824102"
 ---
 # <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -120,9 +121,9 @@ ms.locfileid: "72916003"
   
 ### <a name="examples"></a>예  
   
--   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>전체 복구 모델에서의 증분 복원  
  전체 복구 모델 또는 대량 로그 복구 모델에서는 여러 파일 그룹이 있는 모든 데이터베이스에 대해 증분 복원을 사용하여 해당 데이터베이스를 임의의 시점으로 복원할 수 있습니다. 증분 복원의 복원 순서는 다음과 같이 동작합니다.  
@@ -148,9 +149,9 @@ ms.locfileid: "72916003"
   
 ### <a name="examples"></a>예  
   
--   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원 수행  
  전체 또는 부분 데이터베이스 백업 이후 단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원을 수행할 수 있습니다. 예를 들어 다음 단계를 수행할 데이터베이스가 있다고 가정합니다.  

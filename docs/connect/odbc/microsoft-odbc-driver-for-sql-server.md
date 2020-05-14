@@ -1,8 +1,8 @@
 ---
-title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
+title: Microsoft ODBC Driver for SQL Server
 description: Microsoft ODBC Driver for SQL Server는 표준 ODBC API를 통해 SQL Server 및 Azure SQL Database에 대한 연결을 제공합니다.
 ms.custom: ''
-ms.date: 02/05/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8eb3024d231522ce9c96e9a9cacd48a97c0b5869
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486778"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886341"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -76,8 +76,7 @@ ODBC 드라이버에는 [**sqlcmd**](../../tools/sqlcmd-utility.md) 및 [**bcp**
 - [Windows 기반 SQL Server에 대한 ODBC 릴리스 정보](windows/release-notes-odbc-sql-server-windows.md)
 - [시스템 요구 사항, 설치 및 드라이버 파일](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## <a name="community"></a>커뮤니티
 
-
-## <a name="community"></a>커뮤니티  
-- [Microsoft ODBC Driver for SQL Server 팀 블로그](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server 드라이버 블로그](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server 데이터 액세스 포럼](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

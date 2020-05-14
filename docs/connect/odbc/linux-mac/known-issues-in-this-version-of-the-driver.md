@@ -1,7 +1,7 @@
 ---
 title: Linux 및 macOS 기반 ODBC 드라이버의 알려진 문제
 description: Linux 및 macOS에서 Microsoft ODBC Driver for SQL Server의 알려진 문제를 살펴보고 연결 문제를 해결하는 단계를 알아봅니다.
-ms.date: 03/05/2020
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f6e39184b8ba565fed48ba501e2502dad19257ce
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 898df9a68fd0e1fd87cab597502d6e0baa17172b
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728421"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886410"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Linux 및 macOS 기반 ODBC 드라이버의 알려진 문제
 
@@ -25,7 +25,7 @@ ms.locfileid: "81728421"
 
 ## <a name="known-issues"></a>알려진 문제
 
-추가 문제는 [Microsoft ODBC 드라이버 팀 블로그](https://blogs.msdn.com/b/sqlnativeclient/)에 게시됩니다.  
+추가 문제는 [SQL Server 드라이버 블로그](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)에 게시됩니다.  
 
 - 시스템 라이브러리 제한으로 인해 Alpine Linux는 더 적은 수의 문자 인코딩과 로캘을 지원합니다. 예를 들어 en_US.UTF-8은 사용할 수 없습니다. 자세한 내용은 [musl libc - glibc의 기능 차이점](https://wiki.musl-libc.org/functional-differences-from-glibc.html)을 참조하세요.
 
@@ -82,7 +82,7 @@ UNICODE Using encoding ASCII 'ISO8859-1' and UNICODE 'UCS-2LE'
   
 - [연결 링 버퍼를 사용하여 SQL Server 2008의 연결 문제 해결](https://techcommunity.microsoft.com/t5/sql-server/connectivity-troubleshooting-in-sql-server-2008-with-the/ba-p/383393)  
   
-- [SQL Server 인증 문제 해결사](https://docs.microsoft.com/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
+- [SQL Server 인증 문제 해결사](/archive/blogs/sqlsecurity/sql-server-authentication-troubleshooter)  
 
 ## <a name="next-steps"></a>다음 단계
 

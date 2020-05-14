@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873139"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825669"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사 
+# <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ ms.locfileid: "80873139"
 - **ANSI 패딩** - 스크립트에 **ANSI PADDING ON** 을 포함합니다. 기본값은 **True**입니다.
 
 - **파일에 추가** - **True**이면 **스크립팅 옵션 설정** 페이지에서 지정한 기존 스크립트의 아래쪽에 이 스크립트가 추가되고, **False**이면 새 스크립트가 이전 스크립트를 덮어씁니다. 기본값은 **False**입니다.
+
+- **개체 존재 여부 검사** - **True**인 경우 SQL 개체에 대한 create 문을 생성하기 전에 존재 여부 검사를 추가합니다. 예를 들면, 테이블, 뷰, 함수 또는 저장된 프로시저 등입니다. CREATE 문은 IF 문에 래핑됩니다. 대상이 정리된 것을 알고 있는 경우 스크립트는 훨씬 더 명확합니다. 대상에 개체가 존재하지 않을 것으로 예상되면 오류가 발생합니다. 기본값은 **False**입니다.
 
 - **오류 발생 시 스크립팅 계속** - **False**이면 오류 발생 시 스크립팅이 중지됩니다. **True**이면 스크립팅이 계속됩니다. 기본값은 **False**입니다.
 

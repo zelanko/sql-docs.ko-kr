@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325465"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872793"
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
 
@@ -31,7 +31,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 |요구 사항|설치 방법|  
 |-----------------|--------------------|  
-|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]를 제외한 모든 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
+|[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 |[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 제외한 모든 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전의 경우 설치 프로그램에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6.1 Server Core Profile이 필요합니다. 아직 설치되지 않은 경우 SQL Server 설치 프로그램에서 이를 자동으로 설치합니다. 설치에는 다시 부팅이 필요합니다. 설치 프로그램을 실행하기 전에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 설치하여 다시 부팅을 방지할 수 있습니다.|  
 |Windows  Installer  4.5|Server Core 설치와 함께 제공됩니다.|  
 |Windows PowerShell|Server Core 설치와 함께 제공됩니다.|  
 |Java Runtime |PolyBase를 사용하려면 적절한 Java Runtime을 설치해야 합니다. 자세한 내용은 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.|
@@ -41,15 +41,15 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 |기능|지원됨|추가 정보|  
 |-------------|---------------|----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|yes||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|yes||  
-|전체 텍스트 검색|yes||  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|yes||  
-|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|yes||  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제|예||  
+|전체 텍스트 검색|예||  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|예||  
+|[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|예||  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|예||  
 |SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|예||  
-|클라이언트 도구 연결|yes||  
-|Integration Services 서버|yes||  
+|클라이언트 도구 연결|예||  
+|Integration Services 서버|예||  
 |클라이언트 도구 이전 버전과의 호환성|예||  
 |클라이언트 도구 SDK|예||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|예||  
@@ -57,8 +57,8 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |관리 도구 - 전체|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
 |Distributed  Replay  Controller|예||  
 |Distributed  Replay  Client|원격 전용|Server Core에는 이러한 기능을 설치할 수 없습니다. 이러한 구성 요소는 Server Core가 아닌 다른 서버에 설치되고, Server Core에 설치된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 연결됩니다.|  
-|SQL  클라이언트 연결 SDK|yes||  
-|Microsoft  Sync  Framework|yes|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=221788)(https://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
+|SQL  클라이언트 연결 SDK|예||  
+|Microsoft  Sync  Framework|예|Microsoft Sync Framework는 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 설치 패키지에 포함되지 않습니다. [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkId=221788)(https://go.microsoft.com/fwlink/?LinkId=221788) 페이지에서 적절한 버전의 Sync Framework를 다운로드하여 Server Core를 실행하는 컴퓨터에 설치할 수 있습니다.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|예||  
 |[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|예||  
   
@@ -287,13 +287,9 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  TCP/IP 프로토콜은 Server Core에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 Windows PowerShell을 통해 설정할 수 있습니다. 다음 단계를 수행하세요.  
   
-1.  서버에서 작업 관리자를 시작합니다.  
+1.  PowerShell에서: Import-Module SQLPS.  
   
-2.  **애플리케이션** 탭에서 **새 작업**을 클릭합니다.  
-  
-3.  **새 작업 만들기** 대화 상자에서 **열기** 필드에 **sqlps.exe** 를 입력하고 **확인**을 클릭합니다. 이렇게 하면 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창이 열립니다.  
-  
-4.  **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창에서 다음 스크립트를 실행하여 TCP/IP 프로토콜을 사용하도록 설정합니다.  
+2.  **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창에서 다음 스크립트를 실행하여 TCP/IP 프로토콜을 사용하도록 설정합니다.  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

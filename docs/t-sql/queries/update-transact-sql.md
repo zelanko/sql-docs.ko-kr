@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 405071c6f4752ab3aebc9f96d23dd2b5734fb39a
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169371"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872770"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -458,7 +458,7 @@ ID     Value
 ```  
 
 ## <a name="locking-behavior"></a>잠금 동작  
- UPDATE 문은 항상 수정하는 테이블에 대해 배타적(X) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 배타적 잠금이 설정되면 다른 트랜잭션에서 데이터를 수정할 수 없습니다. 테이블 힌트를 지정해 다른 잠금 방법을 지정하여 UPDATE 문의 기간에 이 기본 동작을 재정의할 수 있지만, 숙련된 개발자 및 데이터베이스 관리자가 최후의 수단으로만 힌트를 사용하시기 바랍니다. 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
+ UPDATE 문은 수정하는 모든 행에 대해 배타적(X) 잠금을 획득하고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. UPDATE 문의 쿼리 계획, 수정되는 행 수 및 트랜잭션의 격리 수준에 따라 ROW 수준이 아닌 PAGE 수준 또는 TABLE 수준에서 잠금이 가능할 수 있습니다. 이러한 더 높은 수준의 잠금을 피하려면 수천 개의 행에 영향을 주는 update 문을 일괄 처리로 나누고 인덱스에서 조인 및 필터 조건이 지원되는지 확인하세요. SQL Server의 잠금 메커니즘에 대한 자세한 내용은 [데이터베이스 엔진의 잠금](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine)에 대한 문서를 참조하세요.  
   
 ## <a name="logging-behavior"></a>로깅 동작  
  UPDATE 문은 로그되지만 **\.WRITE** 절을 사용하는 큰 값 데이터 형식의 부분 업데이트는 최소로 로그됩니다. 자세한 내용은 이전 섹션 “데이터 형식”에서 "큰 값 데이터 형식 업데이트"를 참조하세요.  

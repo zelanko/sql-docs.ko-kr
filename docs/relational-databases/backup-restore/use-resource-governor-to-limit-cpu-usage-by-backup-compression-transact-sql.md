@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65f3000cdc56079d2e55040e4844ce5578998e9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6446ad935f2388f2fd2d8df898232f897e475cc3
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180451"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849821"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,6 @@ USE AdventureWorks2012;
 CREATE USER [domain_name\MAX_CPU] FOR LOGIN [domain_name\MAX_CPU];  
 EXEC sp_addrolemember 'db_backupoperator', 'domain_name\MAX_CPU';  
 GO  
-  
 ```  
   
  [&#91;맨 위로 이동&#93;](#Top)  
@@ -137,35 +136,33 @@ GO
   
 1.  [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md) 문을 실행하여 리소스 풀을 만듭니다. 이 절차에 대한 예에서는 다음 구문을 사용합니다.  
   
-     *CREATE RESOURCE POOL pool_name* WITH ( MAX_CPU_PERCENT = *value* );  
+    ```sql  
+    CREATE RESOURCE POOL <pool_name> WITH ( MAX_CPU_PERCENT = <value> );
+    ```  
   
-     *Value* 는 최대 평균 CPU 대역폭의 비율을 나타내는 1에서 100까지의 정수입니다. 적절한 값은 해당 환경에 따라 달라집니다. 이 항목의 예에서는 설명을 위해 20% 비율을 사용합니다(MAX_CPU_PERCENT = 20).  
+    *Value* 는 최대 평균 CPU 대역폭의 비율을 나타내는 1에서 100까지의 정수입니다. 적절한 값은 해당 환경에 따라 달라집니다. 이 항목의 예에서는 설명을 위해 20% 비율을 사용합니다(MAX_CPU_PERCENT = 20).  
   
 2.  [CREATE WORKLOAD GROUP](../../t-sql/statements/create-workload-group-transact-sql.md) 문을 실행하여 CPU 사용량을 관리하려는 우선 순위가 낮은 작업에 대한 작업 그룹을 만듭니다. 이 절차에 대한 예에서는 다음 구문을 사용합니다.  
   
-     CREATE WORKLOAD GROUP *group_name* USING *pool_name*;  
+    ```sql  
+    CREATE WORKLOAD GROUP <group_name> USING <pool_name>;
+    ```
   
 3.  [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) 문을 실행하여 이전 단계에서 만든 작업 그룹을 우선 순위가 낮은 로그인의 사용자에 매핑하는 분류자 함수를 만듭니다. 이 절차에 대한 예에서는 다음 구문을 사용합니다.  
   
-     CREATE FUNCTION [*schema_name*.]*function_name*() RETURNS sysname  
+    ```sql 
+    CREATE FUNCTION <schema_name>.<function_name>() RETURNS sysname  
+    WITH SCHEMABINDING  
+    AS  
+    BEGIN  
+        DECLARE @workload_group_name AS <sysname>  
+        IF (SUSER_NAME() = '<user_of_low_priority_login>')  
+        SET @workload_group_name = '<workload_group_name>'  
+        RETURN @workload_group_name  
+    END;
+    ```
   
-     WITH SCHEMABINDING  
-  
-     AS  
-  
-     BEGIN  
-  
-     DECLARE @workload_group_name AS *sysname*  
-  
-     IF (SUSER_NAME() = '*user_of_low_priority_login*')  
-  
-     SET @workload_group_name = '*workload_group_name*'  
-  
-     RETURN @workload_group_name  
-  
-     END  
-  
-     이 CREATE FUNCTION 문의 구성 요소에 대한 자세한 내용은 다음을 참조하십시오.  
+    이 `CREATE FUNCTION` 문의 구성 요소에 대한 자세한 내용은 다음을 참조하세요.  
   
     -   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
   
@@ -175,14 +172,16 @@ GO
         >  SUSER_NAME은 분류자 함수에 사용할 수 있는 여러 시스템 함수 중 하나일 뿐입니다. 자세한 내용은 [분류자 사용자 정의 함수 만들기 및 테스트](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)를 참조하세요.  
   
     -   [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
-  
+      
 4.  [ALTER RESOURCE GOVERNOR](../../t-sql/statements/alter-resource-governor-transact-sql.md) 문을 실행하여 리소스 관리자에 분류자 함수를 등록합니다. 이 절차에 대한 예에서는 다음 구문을 사용합니다.  
   
-     ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = *schema_name*.*function_name*);  
+    ```sql  
+    ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = <schema_name>.<function_name>);
+    ```  
   
 5.  두 번째 ALTER RESOURCE GOVERNOR 문을 실행하여 다음과 같이 변경 내용을 리소스 관리자 메모리 내 구성에 적용합니다.  
   
-    ```  
+    ```sql  
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
@@ -204,17 +203,18 @@ GO
   
 ```sql  
 -- Configure Resource Governor.  
-BEGIN TRAN  
 USE master;  
 -- Create a resource pool that sets the MAX_CPU_PERCENT to 20%.   
 CREATE RESOURCE POOL pMAX_CPU_PERCENT_20  
    WITH  
       (MAX_CPU_PERCENT = 20);  
 GO  
+
 -- Create a workload group to use this pool.   
 CREATE WORKLOAD GROUP gMAX_CPU_PERCENT_20  
 USING pMAX_CPU_PERCENT_20;  
 GO  
+
 -- Create a classification function.  
 -- Note that any request that does not get classified goes into   
 -- the 'Default' group.  
@@ -233,10 +233,10 @@ GO
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION= dbo.rgclassifier_MAX_CPU);  
 COMMIT TRAN;  
 GO  
+
 -- Start Resource Governor  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
  [&#91;맨 위로 이동&#93;](#Top)  

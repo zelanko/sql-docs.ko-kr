@@ -3,7 +3,7 @@
 - name: 문서 탐색 팁
   href: sql-server/sql-docs-navigation-guide.md
 - name: 이전 버전 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: 개요
   items:
     - name: What's New
@@ -2570,7 +2570,7 @@
           items:
             - name: 확장성 프레임워크 API
               href: language-extensions/reference/extensibility-framework-api.md
-    - name: 'SQL Server Native Client '
+    - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
         - name: 개요
@@ -9972,7 +9972,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: '장애 조치 '
+                    - name: 장애 조치
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md

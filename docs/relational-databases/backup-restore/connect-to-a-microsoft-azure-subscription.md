@@ -1,5 +1,6 @@
 ---
 title: Microsoft Azure 구독에 연결 | Microsoft 문서
+description: 공유 액세스 서명, 저장된 액세스 정책 및 SQL Server 자격 증명을 만드는 SQL Server 인스턴스에 Azure Blob 컨테이너를 등록합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 765763ae01183d0907e5371cf1420205cd5737b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 974086bc61e2f40819c77693a6033aac512893ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076129"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829762"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure 구독에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

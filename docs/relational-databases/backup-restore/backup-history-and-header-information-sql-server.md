@@ -1,5 +1,6 @@
 ---
 title: 백업 기록 및 헤더 | Microsoft Docs
+description: msdb 데이터베이스에는 서버 인스턴스의 SQL Server 백업 및 복원 작업 기록이 저장됩니다. 백업 기록에 액세스하는 Transact-SQL 문에 대해 알아봅니다.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242592"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824118"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
