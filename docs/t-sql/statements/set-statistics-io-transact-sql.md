@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9bfc21987ff4a556796ce53ef8ae0c6f3733d53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634707"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67941844"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "81634707"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```  
   
 SET STATISTICS IO { ON | OFF }  
 ```  
@@ -75,7 +75,7 @@ SET STATISTICS IO { ON | OFF }
 ## <a name="examples"></a>예  
  다음 예에서는 문을 처리할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 및 물리적 읽기 수를 보여 줍니다.  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS IO ON;  

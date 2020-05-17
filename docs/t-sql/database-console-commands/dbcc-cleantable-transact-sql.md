@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d29708f71353c5aeb56aeb3bf92e9343aa4f5a71
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625823"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68101972"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "81625823"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```sql
   
 DBCC CLEANTABLE  
 (  

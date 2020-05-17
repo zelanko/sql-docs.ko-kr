@@ -44,12 +44,12 @@ ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: cdeab9ba00b4c498970ebac378c4abe53f4fbd2c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fe0605cdfd2d2cf341ff6ab51939fee2c78ae797
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628613"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80216280"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -72,7 +72,7 @@ ms.locfileid: "81628613"
 
 ## <a name="syntax"></a>구문
 
-```syntaxsql
+```
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -692,7 +692,7 @@ Azure SQL Database 관리되는 인스턴스의 데이터베이스에 이 문을
 
 ## <a name="syntax-for-databases-in-a-managed-instance"></a>관리되는 인스턴스의 데이터베이스 구문
 
-```syntaxsql
+```
 ALTER DATABASE database_name
 {
     <add_or_modify_files>

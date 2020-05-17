@@ -17,15 +17,15 @@ helpviewer_keywords:
 - ACOS function
 - arccosine
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: julieMSFT
-ms.author: jrasnick
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: badc4182c3d81b89fe744d056c8999a84798763b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 65f4db24d081dc8ceb85201eee088005662e9146
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832275"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68040443"
 ---
 # <a name="acos-transact-sql"></a>ACOS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "82832275"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```sql
 ACOS ( float_expression )  
 ```  
   

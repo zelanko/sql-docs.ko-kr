@@ -13,14 +13,14 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: 1d272fc215c43b72ce9f30a1d3b138d10798d881
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924807"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "67983222"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
-author: David-Engel
-ms.author: v-daenge
-ms.openlocfilehash: d05200ff0c634ea327e58e5288ff8e99c0ec9418
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: ee1e64794480346b1742b441437db95b8ae41456
+ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922555"
+ms.lasthandoff: 03/29/2020
+ms.locfileid: "69028291"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식 사용(JDBC)
 

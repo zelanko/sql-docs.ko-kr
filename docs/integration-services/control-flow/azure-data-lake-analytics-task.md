@@ -4,6 +4,8 @@ description: Azure Data Lake Analytics 태스크를 사용하여 U-SQL 작업을
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
+ms.prod_service: integration-services
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -11,13 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763664"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67947353"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics 태스크
 
@@ -52,7 +53,6 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
 |**DirectInput**|인라인 편집기를 통해 U-SQL 스크립트를 지정합니다. 이 값을 선택하면 동적 옵션 **USQLStatement**가 표시됩니다.|  
 |**FileConnection**|U-SQL 스크립트를 포함하는 로컬 .usql 파일을 지정합니다. 이 옵션을 설정하면 동적 옵션 **FileConnection**이 표시됩니다.|  
 |**변수**|U-SQL 스크립트를 포함하는 SSIS 변수를 지정합니다. 이 값을 선택하면 동적 옵션 **SourceVariable**이 표시됩니다.|
-| &nbsp; | &nbsp; |
 
 **SourceType 동적 옵션**은 U-SQL 쿼리의 스크립트 콘텐츠를 지정합니다. 
 
@@ -61,7 +61,6 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
 |**SourceType = DirectInput**|옵션 상자에서 직접 제출할 U-SQL 쿼리를 입력하거나 [찾아보기] 단추(...)를 선택하여 **U-SQL 쿼리 입력** 대화 상자에 U-SQL 쿼리를 입력합니다.|  
 |**SourceType = FileConnection**|기존 파일 연결 관리자를 선택하거나 <**새 연결...** >을 선택하여 새 파일 연결을 만듭니다. 관련 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.|  
 |**SourceType = Variable**|기존 변수를 선택하거나 \<**새 변수...** >를 선택하여 새 변수를 만듭니다. 관련 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)를 참조하세요.|
-| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>작업 구성
@@ -79,7 +78,6 @@ U-SQL 구성에는 두 개의 설정인 **SourceType** 및 **SourceType** 값을
   |-----------|-----------------|
   |True|태스크 결과는 U-SQL 작업 실행 결과를 기반으로 합니다. 작업 성공 > 태스크 성공. 작업 실패 > 태스크 실패. 태스크 성공 또는 실패 > 태스크 완료.|
   |False|태스크 결과는 U-SQL 작업 제출 및 준비 결과를 기반으로 합니다. 작업 제출 성공 및 준비 단계 통과 > 태스크 성공. 작업 제출 실패 또는 준비 단계에서 작업 실패 > 태스크 실패. 태스크 성공 또는 실패 > 태스크 완료.|
-  | &nbsp; | &nbsp; |
 
 - **TimeOut:** 작업 실행을 위한 시간 제한 시간(초)을 지정합니다. 작업 시간이 초과되면 작업이 취소되고 실패로 표시됩니다. **Synchronous**가 false로 설정되면 이 속성을 사용할 수 없습니다.
 
@@ -127,7 +125,6 @@ OUTPUT @rs1
 |-------------|--------------|
 |사용자: Variable1|\@in|
 |사용자: Variable2|\@out| 
-| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>식 페이지 구성
 

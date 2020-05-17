@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fac9026b149380b024fa8b0ff4c98a906320d743
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634297"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "67941664"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "81634297"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```  
   
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
@@ -61,8 +61,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
 |열 이름|Description|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 **SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 의 [Argument](../../t-sql/statements/set-showplan-all-transact-sql.md) 열을 참조하세요.|  
-|||
-
+  
  실행 계획 출력에 표시된 물리적 연산자 및 논리적 연산자에 대한 자세한 내용은 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -81,7 +80,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  이것은 인덱스를 사용하는 쿼리입니다.  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  
@@ -110,7 +109,7 @@ StmtText
   
  다음은 인덱스를 사용하지 않은 쿼리입니다.  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_TEXT ON;  

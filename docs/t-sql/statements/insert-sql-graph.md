@@ -17,12 +17,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44a966ba100441a652ca0558552152a460e21c66
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634183"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68071168"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634183"
 ## <a name="insert-into-node-table-syntax"></a>노드 테이블 구문에 INSERT 
 노드 테이블에 삽입하는 구문은 일반 테이블과 동일합니다. 
 
-```syntaxsql
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  

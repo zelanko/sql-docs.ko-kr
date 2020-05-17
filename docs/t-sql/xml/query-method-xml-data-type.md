@@ -1,7 +1,7 @@
 ---
 title: query() 메서드(xml 데이터 형식) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2020
+ms.date: 07/26/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9501e1cf2b6c34ba3cf0ff4494866e2a32d16366
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636111"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72278166"
 ---
 # <a name="query-method-xml-data-type"></a>query() 메서드(xml 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "81636111"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```  
   
 query ('XQuery')  
 ```  
@@ -45,7 +45,7 @@ XQuery
   
 이 쿼리는 <`Features`> 요소의 <`ProductDescription`> 자식 요소를 검색합니다.  
   
-```sql
+```  
 declare @myDoc xml  
 set @myDoc = '<Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
@@ -70,7 +70,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. XML 형식 열에 대해 query() 메서드 사용  
 다음 예에서는 **query()** 메서드를 사용하여 **AdventureWorks** 데이터베이스에서 **xml** 형식의 **CatalogDescription** 열에 XQuery를 지정합니다.  
   
-```sql
+```  
 SELECT CatalogDescription.query('  
 declare namespace PD="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
 <Product ProductModelID="{ /PD:ProductDescription[1]/@ProductModelID }" />  
@@ -100,7 +100,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 query() 메서드와 exist() 메서드는 모두 PD 접두사를 선언합니다. 이 경우 WITH XMLNAMESPACES를 사용하여 접두사를 먼저 정의하고 쿼리에서 이를 사용할 수 있습니다.  
   
-```sql
+```  
 WITH XMLNAMESPACES 
 (  
    'https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD,  

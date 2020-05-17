@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087423"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "75501924"
 ---
 # <a name="power-query-source-preview"></a>파워 쿼리 원본(미리 보기)
 
@@ -70,7 +70,7 @@ SSDT에서 파워 쿼리 원본을 사용하여 데이터 흐름을 디자인할
 
 ![PQ 원본 연결 관리자 편집기 종류](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**와 같은 일부 원본을 사용하려면 [파워 쿼리 필수 구성 요소](/power-bi/desktop-data-source-prerequisites) 문서에서 가져올 수 있는 ADO.NET 드라이버를 추가로 설치해야 합니다. 사용자 지정 설정 인터페이스를 사용하여 Azure-SSIS IR에 해당 드라이버를 설치할 수 있습니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서를 참조하세요.
+**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**와 같은 일부 원본을 사용하려면 [파워 쿼리 필수 구성 요소](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) 문서에서 가져올 수 있는 ADO.NET 드라이버를 추가로 설치해야 합니다. 사용자 지정 설정 인터페이스를 사용하여 Azure-SSIS IR에 해당 드라이버를 설치할 수 있습니다. [Azure-SSIS IR 사용자 지정](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup) 문서를 참조하세요.
 
 **데이터 원본 경로**의 경우 인증 정보 없이 연결 문자열을 형성하는 데이터 원본별 속성을 입력할 수 있습니다. 예를 들어 **SQL** 데이터 원본의 경로는 `<Server>;<Database>`로 형성됩니다. **편집** 단추를 선택하여 경로를 형성하는 데이터 원본별 속성에 값을 할당할 수 있습니다.
 

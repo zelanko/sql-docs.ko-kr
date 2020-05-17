@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e06886ec3a66e4860927a9f953c0bee9da2b902
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634635"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "68004718"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "81634635"
   
 ## <a name="syntax"></a>구문  
   
-```syntaxsql
+```  
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>예  
  다음 두 문에서는 SET STATISTICS XML 설정을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리에서 인덱스 사용을 분석하고 최적화하는 방법을 보여 줍니다. 첫 번째 쿼리에서는 인덱싱된 열의 WHERE 절에 Equals(=) 비교 연산자를 사용합니다. 두 번째 쿼리에서는 WHERE 절에 LIKE 연산자를 사용합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클러스터형 인덱스 검색을 사용하여 WHERE 절 조건을 충족하는 데이터를 찾을 수 있습니다. 처음 인덱싱된 쿼리의 경우에는 **EstimateRows** 및 **EstimatedTotalSubtreeCost** 특성의 값이 더 작습니다. 즉, 인덱싱된 쿼리가 인덱싱되지 않은 쿼리에 비해 훨씬 빨리 처리되고 리소스도 더 적게 사용한다는 의미입니다.  
   
-```sql
+```  
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

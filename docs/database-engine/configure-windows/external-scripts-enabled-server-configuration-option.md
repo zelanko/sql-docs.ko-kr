@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f47352cc82ac831ebcd64548baa24423490094f
+ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664298"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "72006053"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External Scripts Enabled 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ RECONFIGURE WITH OVERRIDE;
 
 이 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작해야 합니다.
 
-자세한 내용은 [SQL Server Machine Learning 설정](../../machine-learning/install/sql-machine-learning-services-windows-install.md)을 참조하세요.
+자세한 내용은 [SQL Server Machine Learning 설정](../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -63,4 +63,4 @@ RECONFIGURE WITH OVERRIDE;
 
 [sp_execute_external_script&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-[SQL Server Machine Learning 서비스](../../machine-learning/index.yml)
+[SQL Server Machine Learning 서비스](../../advanced-analytics/r/sql-server-r-services.md)
