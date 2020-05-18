@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903780"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152003"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]란 무엇인가요?
 
@@ -117,7 +117,7 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 스토리지 풀은 Linux의 SQL Server, Spark 및 HDFS로 이루어진 스토리지 풀 pod로 구성됩니다. SQL Server 빅 데이터 클러스터의 모든 스토리지 노드는 HDFS 클러스터의 멤버입니다.
 
 > [!TIP]
-> 빅 데이터 클러스터 아키텍처 및 설치를 자세히 알아보려면 [워크숍: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> 빅 데이터 클러스터 아키텍처 및 설치를 자세히 알아보려면 [워크숍: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## <a name="next-steps"></a>다음 단계
 

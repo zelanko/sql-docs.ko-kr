@@ -1,10 +1,10 @@
 ---
 title: OPENXML(SQL Server) | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
+ms.reviewer: jroth
 ms.technology: xml
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3719463499049d860d0aab234f7917a1f8bc052d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665250"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269446"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "80665250"
   
  다음 예에서는 두 개의 `<Customers>` 문을 사용하여 `Customers` 요소를 `<Orders>` 테이블에 저장하고 `Orders` 요소를 `INSERT` 테이블에 저장하는 방식으로 XML 문서가 조각화됩니다. 또한 XML 문서에서 `SELECT` 및 `OPENXML` 를 검색하는 `CustomerID` 이 포함된 `OrderDate` 문을 보여 줍니다. 이 과정의 마지막 단계에서 `sp_xml_removedocument`를 호출합니다. 이 작업은 구문 분석 단계 중에 생성된 내부 XML 트리를 표시하는 데 할당된 메모리를 해제하기 위해 수행합니다.  
   
-```  
+```sql
 -- Create tables for later population using OPENXML.  
 CREATE TABLE Customers (CustomerID varchar(20) primary key,  
                 ContactName varchar(20),   
                 CompanyName varchar(20));  
 GO  
-CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime;)  
+CREATE TABLE Orders( CustomerID varchar(20), OrderDate datetime);
 GO  
 DECLARE @docHandle int;  
 DECLARE @xmlDocument nvarchar(max); -- or xml type  
@@ -90,7 +90,8 @@ SELECT *
 FROM OPENXML(@docHandle, N'//Orders')   
   WITH Orders;  
 -- Using OPENXML in a SELECT statement.  
-SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders') WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);  
+SELECT * FROM OPENXML(@docHandle, N'/ROOT/Customers/Orders')
+  WITH (CustomerID nchar(5) '../@CustomerID', OrderDate datetime);
 -- Remove the internal representation of the XML document.  
 EXEC sp_xml_removedocument @docHandle;   
 ```  
@@ -149,7 +150,8 @@ EXEC sp_xml_removedocument @docHandle;
 |**datatype**|**nvarchar(max)**|요소 또는 특성 행의 실제 데이터 형식이며, 그렇지 않은 경우에는 NULL입니다. 데이터 형식은 인라인 DTD 또는 인라인 스키마로부터 추정할 수 있습니다.|  
 |**prev**|**bigint**|이전의 형제 요소에 대한 XML ID입니다. 바로 이전의 형제가 없으면 NULL입니다.|  
 |**text**|**ntext**|특성 값 또는 텍스트 형식의 요소 내용이 포함됩니다. 또는 Edge 테이블 항목에 값이 필요하지 않은 경우 NULL입니다.|  
-  
+||||
+
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>WITH 절을 사용하여 기존 테이블 지정  
  WITH 절을 사용하여 기존 테이블의 이름을 지정할 수 있습니다. 이렇게 하려면 행 집합을 생성하기 위해 OPENXML이 사용할 수 있는 스키마의 기존 테이블 이름만 지정하면 됩니다.  
   

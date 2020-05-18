@@ -14,19 +14,19 @@ ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e85741c2d1f5b3435a0e790a81bc29697ee269ee
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 516a05c1a797278fd5de383acc39284d689ce191
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001124"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151573"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   이 문서는 서비스 팩을 포함하여 SQL Server 2016 릴리스 관련 제한 사항 및 문제를 설명합니다. 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016)을 참조하세요.
 
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 에서 SQL Server 2016 다운로드
-- [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
+- [![Azure 가상 컴퓨터 소형](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 머신을 실행해 보세요.
 - [![SSMS 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)** 를 참조하세요.
 
 ## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 서비스 팩 2(SP2)

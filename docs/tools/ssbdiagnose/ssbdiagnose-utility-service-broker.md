@@ -1,5 +1,6 @@
 ---
 title: ssbdiagnose 유틸리티(Service Broker)
+description: ssbdiagnose 유틸리티는 Service Broker 대화 또는 Service Broker 서비스 구성의 문제를 보고합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -26,12 +27,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5775600e5dc6e0bebd74104dcc9bfa350873de3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9454e30cefa778a45b4fda2a1db7e3ef9c60eb7a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254200"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150552"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
 

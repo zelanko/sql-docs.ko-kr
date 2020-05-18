@@ -11,12 +11,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f81d902160da2f51be2aa88ae8b038153495608
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: a25249c04d322e2faa4c876b1afd2822896038b6
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809796"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151874"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
 
@@ -28,7 +28,7 @@ SSMS(SQL Server Management Studio)를 사용하여 다양한 개체를 스크립
 
 ## <a name="before-you-begin"></a>시작하기 전에
 
-요구 사항에 가장 적합한 메커니즘을 선택합니다.  
+요구 사항에 가장 적합한 메커니즘을 선택합니다. 
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사
 
