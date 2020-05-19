@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Row property [ADO]
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 134f5fe05f89d6c8662a68f9f782f460c4b5f0aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9752510e51f8486f40a16f353b603a8f8e3c7596
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917110"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756223"
 ---
 # <a name="row-property-ado"></a>Row 속성(ADO)
 [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) 개체의 또는에서 OLE DB **행** 개체를 가져오거나 설정 합니다. **Put_Row** 를 사용 하 여 **행** 개체를 설정 하는 경우에는 행이 ADO **Record** 개체로 설정 됩니다.  

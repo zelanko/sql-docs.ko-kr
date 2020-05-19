@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - Resync method [ADO]
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54c92fad618ffaad9b22a8ed73b287c0a5716959
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917166"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756307"
 ---
 # <a name="resync-method"></a>Resync 메서드
 현재 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 또는 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체의 [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 있는 데이터를 기본 데이터베이스에서 새로 고칩니다.  
@@ -37,10 +37,10 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>매개 변수  
  *AffectRecords*  
- 선택 사항입니다. 다시 **동기화** 방법이 영향을 줄 수 있는 레코드 수를 결정 하는 [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 값입니다. 기본값은 **adAffectAll**입니다. **Record** 개체의 **Fields** 컬렉션에 대 한 **Resync** 메서드에서는이 값을 사용할 수 없습니다.  
+ (선택 사항) 다시 **동기화** 방법이 영향을 줄 수 있는 레코드 수를 결정 하는 [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 값입니다. 기본값은 **adAffectAll**입니다. **Record** 개체의 **Fields** 컬렉션에 대 한 **Resync** 메서드에서는이 값을 사용할 수 없습니다.  
   
  *ResyncValues*  
- 선택 사항입니다. 내부 값을 덮어쓸지 여부를 지정 하는 [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 값입니다. 기본값은 **adResyncAllValues**입니다.  
+ (선택 사항) 내부 값을 덮어쓸지 여부를 지정 하는 [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) 값입니다. 기본값은 **adResyncAllValues**입니다.  
   
 ## <a name="remarks"></a>설명  
   

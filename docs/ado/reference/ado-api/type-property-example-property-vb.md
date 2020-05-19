@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [property] [ADO], Visual Basic example
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2308d02f5e220a315cfa97d3b24172fccc5d5bf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937856"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755601"
 ---
 # <a name="type-property-example-property-vb"></a>Type 속성 예제(속성)(VB)
 이 예제에서는 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. [속성](../../../ado/reference/ado-api/properties-collection-ado.md), [필드](../../../ado/reference/ado-api/fields-collection-ado.md)등과 같은 컬렉션의 이름 및 형식을 나열 하는 유틸리티의 모델입니다.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3d39355a95b46170ab3f7a5b24cd43582ecac3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755520"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState 속성 예제(VBScript)
 > [!IMPORTANT]
@@ -27,7 +27,7 @@ ms.locfileid: "67963601"
   
  다음 예제에서는 RDS의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성을 읽는 방법을 보여 줍니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)VBScript 코드의 런타임에는 DataControl 개체입니다. **ReadyState** 는 읽기 전용 속성입니다.  
   
- 이 예를 테스트 하려면이 코드를 잘라내어 \<본문>와 \<> 태그 사이에 붙여넣고 **RDSReadySt**. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
+ 이 예를 테스트 하려면이 코드를 잘라내어 \< 본문>와 \<> 태그 사이에 붙여넣고 **RDSReadySt**. **찾기** 를 사용 하 여 Adovbs 파일을 찾은 다음 사용 하려는 디렉터리에 배치 합니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginReadyStateVBS -->  
