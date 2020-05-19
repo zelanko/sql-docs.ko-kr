@@ -2,7 +2,7 @@
 title: 어셈블리 디자인 | Microsoft Docs
 description: 이 문서에서는 어셈블리에 대 한 패키징, 관리 및 제한을 포함 하 여 SQL Server에서 호스팅할 어셈블리를 설계할 때 고려해 야 할 요소에 대해 설명 합니다.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488059"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262062"
 ---
 # <a name="assemblies---designing"></a>어셈블리 - 디자인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>허용되지 않는 .NET Framework API  
- 허용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 되지 않는 **HostProtectionAttributes** 중 하나를 사용 하 여 주석이 추가 된 모든 API는 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 호출할 수 없습니다.  
+ 허용 되지 않는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **HostProtectionAttributes** 중 하나를 사용 하 여 주석이 추가 된 모든 API는 SAFE 및 EXTERNAL_ACCESS 어셈블리에서 호출할 수 없습니다.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,19 +102,22 @@ eUI
  CREATE ASSEMBLY를 사용하여 사용자 지정 어셈블리에서 참조하는 모든 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드해야 합니다. 다음 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리는 이미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드되어 있으므로 CREATE ASSEMBLY를 사용하지 않아도 사용자 지정 어셈블리에서 참조할 수 있습니다.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>참고 항목  

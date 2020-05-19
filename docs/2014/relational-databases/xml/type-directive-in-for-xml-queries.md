@@ -10,18 +10,18 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193289"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702442"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql) 를 지원 하므로 필요에 따라 type 지시어를 지정 하 여 for xml 쿼리 결과가 데이터 형식으로 `xml` 반환 되도록 요청할 수 있습니다. 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어이에 대해 XQuery를 지정 하거나, 결과를 `xml` 유형 변수에 할당 하거나, [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)를 작성할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql) 를 지원 하므로 필요에 따라 type 지시어를 지정 하 여 for xml 쿼리 결과가 데이터 형식으로 반환 되도록 요청할 수 있습니다 `xml` . 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어이에 대해 XQuery를 지정 하거나, 결과를 `xml` 유형 변수에 할당 하거나, [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)를 작성할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 TYPE 지시어를 사용하거나 `xml` 데이터 형식을 사용하여 SQL 테이블 열과 출력 매개 변수에서 XML 인스턴스 데이터 값을 반환하는 FOR XML 쿼리와 같은 여러 서버 구문의 결과로 XML 데이터 형식 인스턴스 데이터를 클라이언트에 반환합니다. 클라이언트 애플리케이션 코드에서 ADO.NET 공급자가 이 XML 데이터 형식 정보를 서버에서 이진 인코딩으로 보내도록 요청합니다. 그러나 TYPE 지시어 없이 FOR XML을 사용하면 XML 데이터가 문자열 유형으로 반환됩니다. 클라이언트 공급자는 항상 두 XML 유형 중 하나를 처리할 수 있습니다. TYPE 지시어가 없는 최상위 FOR XML은 커서와 함께 사용할 수 없습니다.  
@@ -50,7 +50,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>xml 유형 변수에 FOR XML 쿼리 결과 할당  
- 다음 예에서는 FOR XML 결과가 `xml` 유형 변수 `@x`에 할당됩니다. 쿼리 `BusinessEntityID`는의 `FirstName` `LastName` `AdditionalContactInfo` 열에서,, 및 추가 전화 번호와 같은 연락처 정보를 검색 합니다. `xml``TYPE` `FOR XML` 절은 `TYPE` 지시어를 지정하므로 XML은 `xml` 유형으로 반환되며 변수에 할당됩니다.  
+ 다음 예에서는 FOR XML 결과가 `xml` 유형 변수 `@x`에 할당됩니다. 쿼리는 `BusinessEntityID` `FirstName` `LastName` 의 열에서,, 및 추가 전화 번호와 같은 연락처 정보를 검색 합니다 `AdditionalContactInfo` `xml``TYPE` . `FOR XML` 절은 `TYPE` 지시어를 지정하므로 XML은 `xml` 유형으로 반환되며 변수에 할당됩니다.  
   
 ```  
 USE AdventureWorks2012;  

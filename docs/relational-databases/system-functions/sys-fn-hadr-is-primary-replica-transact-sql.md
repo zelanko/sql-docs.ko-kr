@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811407"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262122"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  데이터베이스의 이름입니다. *dbname* 은 sysname 형식입니다.  
   
 ## <a name="returns"></a>반환  
- 현재 인스턴스의 데이터베이스가 주 복제본이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
+ 현재 인스턴스의 데이터베이스가 주 복제본 이면 **bool**: 1 데이터 형식을 반환 하 고 그렇지 않으면 0을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  이 함수를 사용하여 로컬 인스턴스에서 지정된 가용성 데이터베이스의 주 복제본을 호스팅하는지 여부를 편리하게 확인합니다. 예제 코드는 다음과 비슷할 수 있습니다.  

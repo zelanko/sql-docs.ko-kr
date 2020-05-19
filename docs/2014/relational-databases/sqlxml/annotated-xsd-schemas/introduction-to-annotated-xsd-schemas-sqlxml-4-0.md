@@ -18,24 +18,24 @@ helpviewer_keywords:
 - annotated XSD schemas, examples
 - XML views [SQLXML]
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b00f2a5f7d6bf9b0ac127b5df736d4a40c94219
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014455"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702932"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
   XSD(XML 스키마 정의) 언어를 사용하여 관계형 데이터의 XML 뷰를 만들 수 있습니다. 그런 다음 XPath(XML Path Language) 쿼리를 사용하여 뷰를 쿼리할 수 있습니다. 이는 CREATE VIEW 문을 사용하여 뷰를 만들고 뷰에 대해 SQL 쿼리를 지정하는 것과 유사합니다.  
   
  XML 스키마는 XML 문서의 구조뿐만 아니라 문서 내의 데이터에 대한 다양한 제약 조건을 설명합니다. 스키마에 대해 XPath 쿼리를 지정하면 XPath 쿼리가 실행되는 스키마에 따라 반환되는 XML 문서의 구조가 결정됩니다.  
   
- Xsd 스키마에서 ** \<xsd: schema>** 요소는 전체 스키마를 포함 합니다. 모든 요소 선언은 ** \<xsd: schema>** 요소 내에 포함 되어야 합니다. 스키마가 있는 네임 스페이스 및 스키마에 사용 되는 네임 스페이스를 ** \<xsd: schema>** 요소의 속성으로 정의 하는 특성을 설명할 수 있습니다.  
+ Xsd 스키마에서 ** \< xsd: schema>** 요소는 전체 스키마를 포함 하며 모든 요소 선언은 ** \< xsd: schema>** 요소에 포함 되어야 합니다. 스키마가 있는 네임 스페이스 및 스키마에 사용 되는 네임 스페이스를 ** \< xsd: schema>** 요소의 속성으로 정의 하는 특성을 설명할 수 있습니다.  
   
- 유효한 xsd 스키마는 다음과 같이 정의 된 ** \<xsd: schema>** 요소를 포함 해야 합니다.  
+ 유효한 XSD 스키마는 다음과 같이 정의 된 ** \< xsd: schema>** 요소를 포함 해야 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -44,7 +44,7 @@ ms.locfileid: "66014455"
 </xsd:schema>  
 ```  
   
- Xsd: schema>요소는의 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema. ** \<**  
+ ** \< Xsd: schema>** 요소는의 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema .  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 스키마에 주석 추가  
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "66014455"
  관계형 데이터베이스 컨텍스트에서는 임의의 XSD 스키마를 관계형 저장소에 매핑하는 것이 유용합니다. 이를 수행하는 한 가지 방법은 XSD 스키마에 주석을 추가하는 것입니다. 주석을 포함 하는 XSD 스키마를 *매핑 스키마*라고 하며,이 스키마는 XML 데이터가 관계형 저장소에 매핑되는 방법과 관련 된 정보를 제공 합니다. 매핑 스키마는 궁극적으로 관계형 데이터에 대한 XML 뷰로 생각할 수 있습니다. 이러한 매핑을 사용하여 관계형 데이터를 XML 문서로 검색할 수 있습니다.  
   
 ## <a name="namespace-for-annotations"></a>주석에 대한 네임스페이스  
- XSD 스키마에서 주석은 **urn: schema-microsoft-com: mapping 스키마**네임 스페이스를 사용 하 여 지정 됩니다. 다음 예제와 같이 네임 스페이스를 지정 하는 가장 쉬운 방법은 ** \<xsd: schema>** 태그에서 지정 하는 것입니다.  
+ XSD 스키마에서 주석은 **urn: schema-microsoft-com: mapping 스키마**네임 스페이스를 사용 하 여 지정 됩니다. 다음 예제와 같이 네임 스페이스를 지정 하는 가장 쉬운 방법은 ** \< xsd: schema>** 태그에서 지정 하는 것입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -67,7 +67,7 @@ ms.locfileid: "66014455"
  사용된 네임스페이스 접두사는 임의로 지정되었습니다. 이 설명서에서 **sql** 접두사는 주석 네임 스페이스를 나타내고이 네임 스페이스의 주석을 다른 네임 스페이스의 주석과 구별 하는 데 사용 됩니다.  
   
 ## <a name="example-of-an-annotated-xsd-schema"></a>주석이 추가된 XSD 스키마 예  
- 다음 예에서 XSD 스키마는 ** \<Person>** 요소로 구성 됩니다. Employee>요소에는 **ContactID** 특성과 ** \<FirstName>** 및 ** \<LastName>** 자식 요소가 있습니다. ** \<**  
+ 다음 예에서 XSD 스키마는 ** \< Person>** 요소로 구성 됩니다. ** \< Employee>** 요소에는 **ContactID** 특성과 ** \< FirstName>** 및 ** \< LastName>** 자식 요소가 있습니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -108,14 +108,14 @@ ms.locfileid: "66014455"
 </xsd:schema>  
 ```  
   
- 매핑 스키마에서 ** \<contact>** 요소는 `sql:relation` 주석을 사용 하 여 샘플 AdventureWorks 데이터베이스의 Person. contact 테이블에 매핑됩니다. ConID, FName 및 LName 특성은 `sql:field` 주석을 사용하여 Person.Contact 테이블의 ContactID, FirstName 및 LastName 열에 매핑됩니다.  
+ 매핑 스키마에서 ** \< contact>** 요소는 주석을 사용 하 여 샘플 AdventureWorks 데이터베이스의 Person. contact 테이블에 매핑됩니다. `sql:relation` ConID, FName 및 LName 특성은 `sql:field` 주석을 사용하여 Person.Contact 테이블의 ContactID, FirstName 및 LastName 열에 매핑됩니다.  
   
  주석이 추가된 이 XSD 스키마는 관계형 데이터에 대한 XML 뷰를 제공합니다. 이 XML 뷰는 XPath 언어를 사용하여 쿼리할 수 있습니다. SQL 쿼리에서 행 집합을 반환하는 것과는 달리 XPath 쿼리에서는 XML 문서를 결과로 반환합니다.  
   
 > [!NOTE]  
 >  매핑 스키마에서 지정된 관계형 값(예: 테이블 이름 및 열 이름)의 대/소문자 구분은 SQL Server에서 대/소문자 구분 데이터 정렬 설정을 사용하고 있는지 여부에 따라 결정됩니다. 자세한 내용은 [Collation and Unicode Support](../../collations/collation-and-unicode-support.md)을 참조하세요.  
   
-## <a name="other-resources"></a>관련 자료  
+## <a name="other-resources"></a>기타 리소스  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  
   
 -   XML 스키마 파트 0: 입문, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-0/)  

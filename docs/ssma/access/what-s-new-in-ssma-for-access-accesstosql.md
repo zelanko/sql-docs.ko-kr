@@ -3,22 +3,29 @@ title: Access 용 SSMA의 새로운 기능 (AccessToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 2fd3da31e6a635a65f3d2a2f75320dd0586159d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625577"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220268"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
 이 문서에서는 각 릴리스의 액세스 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+Access 용 SSMA의 v 8.9 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 자체 참조 쿼리를 위한 변환 향상
+* 프로젝트 이름에서 특수 문자를 사용 하 여 문제 해결
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -30,7 +37,7 @@ Access 용 SSMA의 v 8.8 릴리스에는 다음이 포함 됩니다.
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
 
-Access 용 SSMA의 v2.0 릴리스는 쿼리 기능에 대 한 `IIF` 변환 뿐만 아니라 그래픽 사용자 인터페이스의 사소한 수정 및 성능 향상 기능을 향상 시켰습니다.
+Access 용 SSMA의 v2.0 릴리스는 쿼리 기능에 대 한 변환 `IIF` 뿐만 아니라 그래픽 사용자 인터페이스의 사소한 수정 및 성능 향상 기능을 향상 시켰습니다.
 
 > [!IMPORTANT]
 > SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
@@ -39,7 +46,7 @@ Access 용 SSMA의 v2.0 릴리스는 쿼리 기능에 대 한 `IIF` 변환 뿐�
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여, 유용성 및 성능을 향상 시키기 위해 설계 된 대상 수정 집합 외에도 Access 용 SSMA의 v 8.6 릴리스가 향상 되었습니다.
 
-이 설정을 활용 하려면 Access 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 Access 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../access/media/ssma-omit-extended-properties.png)
 
@@ -50,7 +57,7 @@ Access 용 SSMA의 v2.0 릴리스는 쿼리 기능에 대 한 `IIF` 변환 뿐�
 
 Access 용 SSMA의 v 8.5 릴리스는 유용성 및 성능을 향상 시 키도 록 설계 된 대상 수정 집합과 함께 SQL server의 JSON 기능에 대 한 기본 지원 및 Azure Active Directory 인증을 지원 하 여 향상 되었습니다.
 
-또한 Access 용 ssma는 이제 여러 표준 함수 (`ISNULL`, `IIF`등)의 변환을 지원 합니다.
+또한 Access 용 SSMA는 이제 여러 표준 함수 (, 등)의 변환을 지원 합니다. `ISNULL` `IIF`
 
 > [!IMPORTANT]
 > SSMA v 8.5를 사용 하는 경우 .NET 4.7.2 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
@@ -67,7 +74,7 @@ Access 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 �
 Access 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다. 또한 액세스에 대 한이 SSMA 릴리스는 다음을 수정 합니다.
 
 * 접근성 문제를 해결 합니다.
-* SQL Server 형식에 대 `hierarchyid` 한 기본 지원을 추가 합니다.
+* SQL Server 형식에 대 한 기본 지원을 추가 `hierarchyid` 합니다.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -181,8 +188,8 @@ Access 용 SSMA의 2016 년 5 월 릴리스는 다음과 같은 변경 내용을
 
 * SQL Server 2016에 대 한 공식적인 지원이 추가 되었습니다.
 * .NET 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
-* SSMA `open-project` 콘솔에 대 한 및 명령이 수정 `save-project` 되었습니다.
-* SSMA 콘솔에 대 한 고정 `securepassword` 명령입니다.
+* `save-project` `open-project` Ssma 콘솔에 대 한 및 명령이 수정 되었습니다.
+* `securepassword`SSMA 콘솔에 대 한 고정 명령입니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * 액세스를 위한 UI 탭의 고정 테이블 데이터 로드
 * 전역 설정에서 버그가 수정 되었습니다.
@@ -238,8 +245,8 @@ Access 용 SSMA의 7 월 2011 릴리스는 데이터 마이그레이션 중에 �
 
 Access 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 및 Azure SQL을 지 원하는 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]"ssma for Access"가 설치 된 단일를 추가 했습니다.
-* 에 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]연결 하는 기능이 추가 되었습니다.
+* [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 및 Azure SQL을 지 원하는 "ssma for Access"가 설치 된 단일를 추가 했습니다 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
+* 에 연결 하는 기능이 추가 되었습니다 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * 이전 버전과의 호환성을 위해 Access Console 용 SSMA 버전 지원을 추가 했습니다. 이전 버전에서 만든 프로젝트를 SSMA v 5.0으로 열 수 있습니다.
 * 이전 버전의 SSMA 제품에서 SxS ()를 설치 하는 기능이 추가 되었습니다.
 
@@ -251,7 +258,7 @@ Access 용 SSMA의 7 월 2010 릴리스에는 다음과 같은 변경 내용이 
 * SQL Server 및 Azure SQL에 대 한 보안 연결을 추가 했습니다.
 * Access 2010 데이터베이스에 대 한 지원이 추가 되었습니다.
 * 명령줄 실행을 위한 새 SSMA 콘솔 응용 프로그램이 추가 되었습니다.
-* SQL Server `DateTime2` 데이터 형식에 대 한 지원이 추가 되었습니다.
+* SQL Server 데이터 형식에 대 한 지원이 추가 되었습니다 `DateTime2` .
 
 ## <a name="june-2008"></a>6 월 2008
 
@@ -270,10 +277,10 @@ Access 용 SSMA의 2007 년 5 월 릴리스는 다음과 같은 변경 내용을
 
 Access 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* 단일 데이터베이스를로 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하는 과정을 안내 하는 새 데이터베이스 마이그레이션 마법사가 추가 되었습니다.
-* Access 데이터베이스를 변환 하 고, 변환 된 개체를에 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)]로드 하 고, 데이터를 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 모두 한 번에 마이그레이션하는 새 변환, 로드 및 마이그레이션 명령을 추가 했습니다.
+* 단일 데이터베이스를로 마이그레이션하는 과정을 안내 하는 새 데이터베이스 마이그레이션 마법사가 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
+* Access 데이터베이스를 변환 하 고, 변환 된 개체를에 로드 하 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터를 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 모두 한 번에 마이그레이션하는 새 변환, 로드 및 마이그레이션 명령을 추가 했습니다.
 * 향상 된 쿼리 마이그레이션. 이제 쿼리 마이그레이션이 더 많은 SELECT 쿼리를 뷰로 변환 합니다. 자세한 내용은 [Access 데이터베이스 개체 변환](converting-access-database-objects-accesstosql.md)을 참조 하세요.
-* [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **테이블** 탭의 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다.
+* 테이블 탭의 테이블 및 인덱스 속성을 편집 하는 기능이 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] **Table** .
 * 새 전역 설정이 추가 됨:
   * 편집기 창에 줄 번호를 표시 하도록 선택할 수 있습니다.
   * 중복 된 개체를 바꿀지 묻는 메시지를 표시 하도록 SSMA를 구성 하거나 스키마를 변환 하는 동안 중복 개체를 항상 또는 절대 바꾸지 않도록 구성할 수 있습니다.

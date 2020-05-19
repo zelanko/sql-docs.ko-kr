@@ -3,22 +3,34 @@ title: Oracle 용 SSMA의 새로운 기능 (OracleToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 88b87aad931f28637accc95aa4d993037fcf0b0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625603"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220688"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 동적 SQL 문자열 리터럴 변환
+* `LAG`, `FIRST_VALUE` 및 `LAST_VALUE` 분석 함수 변환
+* 기본 DDL에 대 한 지원 추가 `ALTER TRIGGER` / `ALTER INDEX` (설정/해제 등)
+* 기본 제공 함수 이름과 일치 하는 열에 대 한 변환 향상
+* 사용할 수 있는 열에 대 한 필터링 된 고유 인덱스 생성 `NULL`
+* Azure SQL Data Warehouse에 대 한 변수 선언 변환 향상
+* 프로젝트 이름에서 특수 문자를 사용 하 여 문제 해결
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -26,10 +38,10 @@ Oracle 용 SSMA의 v 8.8 릴리스에는 다음이 포함 됩니다.
 
 * SQL Server 개체 동기화 안정성 향상
 * 평가 및 변환 중 GUI 성능 향상
-* 분석 `OVER PARTITION` 절의 변환 개선
-* 분석 함수에 `LEAD` 대 한 새 변환
+* 분석 절의 변환 개선 `OVER PARTITION`
+* 분석 함수에 대 한 새 변환 `LEAD`
 * 하위 쿼리 팩터링 절의 새 변환
-* Azure SQL Data Warehouse `REPLICATE` 에 대 한 새 배포 옵션
+* `REPLICATE`Azure SQL Data Warehouse에 대 한 새 배포 옵션
 * 변환 성능을 향상 시키기 위해 새로운 Oracle 구문 파서
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
@@ -45,11 +57,11 @@ Oracle 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 �
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 Oracle 용 SSMA의 hyper-v 8.6 릴리스를 향상 시켰습니다.
 
-이 설정을 활용 하려면 Oracle 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 Oracle 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../oracle/media/ssma-omit-extended-properties.png)
 
-또한 Oracle 용 SSMA는 이제 `XMLTABLE` 절의 구문 분석을 향상 시킵니다.
+또한 Oracle 용 SSMA는 이제 절의 구문 분석을 향상 시킵니다 `XMLTABLE` .
 
 > [!IMPORTANT]
 > SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
@@ -60,9 +72,9 @@ Oracle 용 SSMA의 v 8.5 릴리스는 유용성 및 성능을 향상 시 키도 
 
 또한 Oracle 용 SSMA는 다음에 대 한 지원으로 향상 되었습니다.
 
-* 검색을 위해 선택 된 개체 수를 990으로 제한 (Oracle `WHERE .. IN (..)` 의 절 제한은 1000 항목).
-* 에서 `RAW` 로 `UNIQUEIDENTIFIER`데이터 마이그레이션
-* 절을 `PARALLEL_ENABLE` 구문 분석 하는 중입니다.
+* 검색을 위해 선택 된 개체 수를 990으로 제한 (Oracle의 `WHERE .. IN (..)` 절 제한은 1000 항목).
+* 에서로 데이터 `RAW` 마이그레이션 `UNIQUEIDENTIFIER`
+* 절을 구문 분석 하는 중 `PARALLEL_ENABLE` 입니다.
 
 마지막으로, Oracle 용 SSMA의 v 8.5 릴리스는 이제 다음을 제공 합니다.
 
@@ -76,7 +88,7 @@ Oracle 용 SSMA의 v 8.5 릴리스는 유용성 및 성능을 향상 시 키도 
 
 Oracle 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 액세스 가능성 문제를 해결 하 고 max index 열 (16 대신 32을 허용 하도록)과 관련 된 버그를 수정 하도록 설계 된 대상 수정 기능을 사용 하 여 향상 되었습니다.
 
-또한 Oracle 용 SSMA 릴리스는 저장 프로시저 `SYS_REFCURSOR` `OUT` 매개 변수로의 변환을 추가 합니다.
+또한 Oracle 용 SSMA 릴리스는 `SYS_REFCURSOR` 저장 프로시저 매개 변수로의 변환을 추가 `OUT` 합니다.
 
 > [!IMPORTANT]
 > SSMA 버전 7.4 ~ 8.4을 사용 하 여 .NET 4.5.2는 설치 필수 구성 요소입니다.
@@ -86,7 +98,7 @@ Oracle 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 �
 Oracle 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다. 또한 Oracle 용 SSMA 릴리스는 다음과 같은 수정 사항을 제공 합니다.
 
 * 접근성 문제를 해결 합니다.
-* SQL Server 형식에 대 `hierarchyid` 한 기본 지원을 추가 합니다.
+* SQL Server 형식에 대 한 기본 지원을 추가 `hierarchyid` 합니다.
 * 동의어를 통해 호출 되는 함수에 대 한 알 수 없는 반환 형식 문제를 해결 합니다.
 * ODP.NET을 v 19.3로 업데이트 합니다.
 
@@ -94,11 +106,11 @@ Oracle 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 �
 
 Oracle 용 SSMA의 v 8.2 릴리스는 다음과 같이 향상 되었습니다.
 
-* 에 대 한 `DBMS_OUTPUT.ENABLE` / `DISABLE`지원을 추가 합니다.
-* 기본 `CAST AS FLOAT` 데이터 `BINARY_FLOAT` 마이그레이션 `BINARY_DOUBLE` 쿼리에서 및 열을 제거 합니다.
+* 에 대 한 지원을 추가 `DBMS_OUTPUT.ENABLE` / `DISABLE` 합니다.
+* `CAST AS FLOAT` `BINARY_FLOAT` `BINARY_DOUBLE` 기본 데이터 마이그레이션 쿼리에서 및 열을 제거 합니다.
 * 현재 값이 변경 된 경우 시퀀스 새로 고침을 수정 합니다.
-* 이름이 같은 열이 있는 경우 의사 열 (`ROWNUM`등)의 잘못 해석 관련 된 버그를 수정 합니다.
-* 모호 하지 않은 식별자로 루프 `FOR` 를 변환 하는 동안 발생 하는 충돌을 해결 합니다.
+* 이름이 같은 열이 있는 경우 의사 열 (등)의 잘못 해석 관련 된 버그를 수정 `ROWNUM` 합니다.
+* 모호 하지 않은 식별자로 루프를 변환 하는 동안 발생 하는 충돌을 해결 `FOR` 합니다.
 
 또한이 버전에는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 수정 내용 집합 뿐만 아니라에 대 한 수정 프로그램도 포함 됩니다.
 
@@ -141,7 +153,7 @@ Oracle 용 SSMA의 v 8.0 릴리스는 품질 및 변환 메트릭을 개선 하�
 
 * 관리 되는 공식 .NET 드라이버를 사용 하 여 Oracle에 연결 하는 기능입니다. OCI 드라이버는 더 이상 Oracle 용 SQL Server Migration Assistant를 사용 하기 위한 필수 구성 요소가 아닙니다.
 
-* 기본적으로 및 `ROWID` `UROWID` 에 `VARCHAR` 매핑할 수 있습니다. 명시적 `ROWID` 열 `uniqueidentifier` 에 대 한 데이터 마이그레이션을 수용 하기 위해에서로 변경 되었습니다.
+* `ROWID` `UROWID` 기본적으로 및에 매핑할 수 `VARCHAR` 있습니다. `uniqueidentifier`명시적 열에 대 한 데이터 마이그레이션을 수용 하기 위해에서로 변경 되었습니다 `ROWID` .
 
 ## <a name="ssma-v710"></a>SSMA v 7.10
 
@@ -165,7 +177,7 @@ Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 
 Oracle 용 SSMA의 v 7.8 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
 * 지원:
-  * `IN` 절에 대 한 행 식입니다.
+  * 절에 대 한 행 식 `IN` 입니다.
   * 암시적 형식 캐스트입니다.
   * `UID`Azure SQL Database에 대 한 변환입니다.
 * **프로젝트 설정**에서 강조 표시 된 형식 매핑을 변경 합니다.
@@ -178,7 +190,7 @@ Oracle 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 
 * Oracle 용 SSMA는 품질 및 변환 메트릭을 개선 하는 대상 수정 기능으로 향상 되었습니다.
 * 인기 있는 수요에 따라 Oracle 용 SSMA의 32 비트 버전이 다시 사용 됩니다. 이전 구현에 비해 (v 7.4 이전)에는 두 개의 설치 관리자 패키지가 있지만 함께 설치할 수는 없습니다. 따라서 사용 중인 연결 구성 요소에 따라 가장 적합 한 버전을 선택 해야 합니다. 가능 하면 항상 64 비트 버전을 사용 하는 것이 좋습니다.
 * SQL Server 2017 지원은 이제 Linux에서 지원 되는 Oracle 확장 팩 (새 원격 설치 옵션)을 사용 하 여 공식적으로 지원 됩니다. 테스터 및 서버 쪽 데이터 마이그레이션 기능이 지원 되지 않으므로 Linux에 설치 된 경우 확장 팩 기능이 제한 됩니다.
-* Oracle 용 ssma를 사용 하면 구체화 된 뷰를 일반 테이블로 마이그레이션할 수 있습니다 ( **프로젝트 설정** -> **동기화** -> 의 설정을 통해 구성 가능,**구체화 된 뷰에 대 한 지원 테이블 검색**).
+* Oracle 용 ssma를 사용 하면 구체화 된 뷰를 일반 테이블로 마이그레이션할 수 있습니다 ( **프로젝트 설정**동기화의 설정을 통해 구성 가능,  ->  **Synchronization**  ->  **구체화 된 뷰에 대 한 지원 테이블 검색**).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 
@@ -269,8 +281,8 @@ Oracle의 SSMA 릴리스 2016에는 다음과 같은 변경 내용이 포함 되
 * 파서 및 확인자를 개선 했습니다.
 * .NET 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
 * .NET 3.5에서 .NET 4.0으로 확장 팩 종속성을 업데이트 했습니다.
-* SSMA `open-project` 콘솔에 대 한 및 명령이 수정 `save-project` 되었습니다.
-* SSMA 콘솔에 대 한 고정 `securepassword` 명령입니다.
+* `save-project` `open-project` Ssma 콘솔에 대 한 및 명령이 수정 되었습니다.
+* `securepassword`SSMA 콘솔에 대 한 고정 명령입니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * Oracle에 대 한 문자 데이터 형식의 변환을 수정 했습니다.
 * 전역 설정에서 버그가 수정 되었습니다.
@@ -320,13 +332,13 @@ Oracle 용 SSMA의 4 월 2014 릴리스에는 다음과 같은 변경 내용이 
 
 ## <a name="january-2012"></a>2012년 1월
 
-Oracle 용 SSMA의 1 월 2012 릴리스는 및 `RowType` `RecordType` 입력 매개 변수에 대 한 지원을 `NULL`에 추가 합니다.
+Oracle 용 SSMA의 1 월 2012 릴리스는 `RowType` 및 입력 매개 변수에 대 한 지원을에 추가 `RecordType` `NULL` 합니다.
 
 ## <a name="july-2011"></a>2011년 7월
 
 Oracle 용 SSMA의 7 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* Oracle 시퀀스에서 시퀀스 생성기로 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 의 변환에 대 한 지원이 추가 되었습니다.
+* Oracle 시퀀스에서 시퀀스 생성기로의 변환에 대 한 지원이 추가 되었습니다 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * 데이터 마이그레이션 중에 향상 된 오류 보고
 * 예약어를 사용 하 여 문의 변환을 개선 했습니다.
 * 함수에서 날짜 값의 암시적 변환이 향상 되었습니다.
@@ -335,13 +347,13 @@ Oracle 용 SSMA의 7 월 2011 릴리스에는 다음과 같은 변경 내용이 
 
 Oracle 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* 및 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]를 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 지 원하는 통합 된 "Oracle 용 ssma" 제품입니다.
-* 에 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]연결 및 마이그레이션에 대 한 지원이 추가 되었습니다.
+* 및를 지 원하는 통합 된 "Oracle 용 SSMA" 제품입니다 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
+* 에 연결 및 마이그레이션에 대 한 지원이 추가 되었습니다 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * 데이터의 병렬 마이그레이션을 지 원하는 향상 된 클라이언트 쪽 데이터 마이그레이션 엔진.
-* 및 `Bulk` 로그 복구 모델을 `Simple` 사용 하 여 데이터 마이그레이션 성능이 개선 되었습니다.
+* `Simple`및 로그 복구 모델을 사용 하 여 데이터 마이그레이션 성능이 개선 `Bulk` 되었습니다.
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)에서 만든 프로젝트의 이전 버전과의 호환성에 대 한 지원이 추가 되었습니다.
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)와 함께 Oracle v 5.0 용 SSMA 제품을 함께 설치 하는 기능이 추가 되었습니다.
-* 사용자 정의 형식 (하위 형식, `VARRAY`, `NESTED TABLE`, 개체 테이블 및 개체 뷰 포함)과 특수 오류 메시지를 포함 하는 PL/SQL 블록의 용도에 대 한 지원이 추가 되었습니다.
+* 사용자 정의 형식 (하위 형식, `VARRAY` , `NESTED TABLE` , 개체 테이블 및 개체 뷰 포함)과 특수 오류 메시지를 포함 하는 PL/SQL 블록의 용도에 대 한 지원이 추가 되었습니다.
 
 ## <a name="july-2010"></a>2010년 7월
 
@@ -359,14 +371,14 @@ Oracle 용 SSMA의 6 월 2008 릴리스에는 다음과 같은 변경 내용이 
 
 * 동의어에 대 한 추가 정보, 구문 분석 된 개체에 대 한 원시 원본, 패널 및 SQL Server 로고 제거 및 레이아웃 지 속성을 비롯 하 여 평가 보고서에 향상 된 기능이 추가 되었습니다.
 * 개체 변환에 향상 된 기능이 추가 되었습니다.
-  * 패키지 `DBMS_LOB`, `DBMS_SQL` 변환 추가
+  * 패키지 `DBMS_LOB` , `DBMS_SQL` 변환 추가
   * 조인 변환이 수정 되었습니다.
   * 각 필드에 대 한 별도의 변수를 통해 릴리스된 간단한 사례에서 레코드 변환, 컬렉션 및 레코드 변환의 수정
   * 레코드 및 컬렉션 구현의 향상 된 기능.
   * 창 고 집계 함수를 추가 했습니다.
   * `ROLLUP`/`CUBE`절이 추가 되었습니다.
-  * `NEXTVAL` /개선 `CURVAL`.
-  * 절, 그룹화 `SET` 집합 및 그룹화 ID의 열 그룹화가 추가 되었습니다.
+  * 개선 `NEXTVAL` / `CURVAL` .
+  * `SET`절, 그룹화 집합 및 그룹화 ID의 열 그룹화가 추가 되었습니다.
   * `MERGE`문이 추가 되었습니다.
   * CLR 데이터 형식이 추가 된 새 datetime 형식 및 레코드와 컬렉션의 변환을 지원 합니다.
 * 테스터의 새 기능을 추가 했습니다. 이제 테스터를 사용 하 여 테이블을 개체로 테스트할 수 있습니다. 테스트 사례에서 여러 테스트 가능한 개체의 호출 순서를 변경할 수 있으며, 사용자는 매개 변수 및 반환 값으로 레코드 및 컬렉션을 사용 하 여 프로시저와 함수를 테스트 하 고 사용 된 테이블만 검사 하도록 종속성 분석기를 추가할 수 있습니다.

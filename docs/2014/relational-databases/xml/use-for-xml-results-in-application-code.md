@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193336"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702399"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>애플리케이션 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 애플리케이션 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
@@ -290,7 +290,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  데이터 형식 지원을 통해 [type 지시어](type-directive-in-for-xml-queries.md)를 지정 하 여 FOR XML 쿼리의 결과가 문자열이 나 이미지 형식의 `xml` 데이터 대신 데이터 형식으로 반환 되도록 요청할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [애플리케이션에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 데이터 형식 지원을 통해 `xml` [type 지시어](type-directive-in-for-xml-queries.md)를 지정 하 여 FOR XML 쿼리의 결과가 문자열이 나 이미지 형식의 데이터 대신 데이터 형식으로 반환 되도록 요청할 수 있습니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [애플리케이션에서 XML 데이터 사용](use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [FOR XML&#40;SQL Server&#41;](for-xml-sql-server.md)  

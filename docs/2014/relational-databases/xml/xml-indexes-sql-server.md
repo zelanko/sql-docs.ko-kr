@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631369"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702280"
 ---
 # <a name="xml-indexes-sql-server"></a>XML 인덱스(SQL Server)
   XML 인덱스를 `xml` 데이터 형식의 열에 만들 수 있습니다. 그러면 열에 있는 XML 인스턴스에 대해 모든 태그, 값 및 경로가 인덱싱되어 쿼리 성능이 향상됩니다. 다음 경우에 애플리케이션에서 XML 인덱스를 활용할 수 있습니다.  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  쿼리 프로세서에서는 [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) 를 포함하는 쿼리에 대해 기본 XML 인덱스를 사용하고 기본 인덱스 자체에서 스칼라 값이나 XML 하위 트리를 반환합니다. 이 인덱스는 XML 인스턴스를 재구성하는 데 필요한 모든 정보를 저장합니다.  
   
- 예를 들어 다음 쿼리는 `CatalogDescription``xml` `ProductModel` 테이블의 유형 열에 저장 된 요약 정보를 반환 합니다. 이 쿼리는 카탈로그 설명에 <`Summary`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Features`> 정보를 반환합니다.  
+ 예를 들어 다음 쿼리는 `CatalogDescription``xml` 테이블의 유형 열에 저장 된 요약 정보를 반환 합니다 `ProductModel` . 이 쿼리는 카탈로그 설명에 <`Summary`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Features`> 정보를 반환합니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -168,7 +168,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]` - 쿼리가 `book` 값이 있는 일부 특성을 가진 <`"someValue"`> 요소를 찾는 경우  
   
- 다음 쿼리에서는 `ContactID` 테이블에서 `Contact` 를 반환합니다. 절 `WHERE` 은 `AdditionalContactInfo``xml` 유형 열에서 값을 찾는 필터를 지정 합니다. 연락처 ID는 해당되는 추가 연락처 정보 XML BLOB에 특정 전화 번호가 포함되는 경우에만 반환됩니다. <`telephoneNumber`> 요소가 XML의 아무 위치에서나 나타날 수 있기 때문에 경로 식은 하위 또는 자체 축을 지정합니다.  
+ 다음 쿼리에서는 `ContactID` 테이블에서 `Contact` 를 반환합니다. `WHERE`절은 유형 열에서 값을 찾는 필터를 지정 합니다 `AdditionalContactInfo``xml` . 연락처 ID는 해당되는 추가 연락처 정보 XML BLOB에 특정 전화 번호가 포함되는 경우에만 반환됩니다. <`telephoneNumber`> 요소가 XML의 아무 위치에서나 나타날 수 있기 때문에 경로 식은 하위 또는 자체 축을 지정합니다.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -183,7 +183,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  이 경우 <`number`>에 대한 검색 값을 알지만 이 값은 <`telephoneNumber`> 요소의 자식으로 XML 인스턴스의 아무 위치에서나 나타날 수 있습니다. 이러한 유형의 쿼리를 사용하면 특정 값에 기반한 인덱스 조회의 장점을 활용할 수 있습니다.  
   
 ### <a name="property-secondary-index"></a>PROPERTY 보조 인덱스  
- 개별 XML 인스턴스에서 하나 이상의 값을 검색하는 쿼리는 PROPERTY 인덱스의 장점을 활용할 수 있습니다. 이 시나리오는 `xml` 형식의 **value ()** 메서드를 사용 하 여 개체 속성을 검색 하 고 개체의 기본 키 값을 알고 있는 경우에 발생 합니다.  
+ 개별 XML 인스턴스에서 하나 이상의 값을 검색하는 쿼리는 PROPERTY 인덱스의 장점을 활용할 수 있습니다. 이 시나리오는 형식의 **value ()** 메서드를 사용 하 여 개체 속성을 검색 하 `xml` 고 개체의 기본 키 값을 알고 있는 경우에 발생 합니다.  
   
  PK가 기본 테이블의 기본 키인 기본 XML 인덱스의 열(PK, 경로 및 노드 값)에 PROPERTY XML 인덱스를 만듭니다.  
   
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 이 항목의 뒷부분에서 설명 하는 차이점을 제외 하 고`xml` 유형 열에 XML 인덱스를 만드는 것은 비-`xml` 유형 열에 인덱스를 만드는 것과 비슷합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 XML 인덱스의 작성 및 관리에 사용될 수 있습니다.  
+ 이 항목의 뒷부분에서 설명 하는 차이점을 제외 하 고 유형 열에 XML 인덱스를 만드는 `xml` 것은 비-유형 열에 인덱스를 만드는 것과 비슷합니다 `xml` . 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 XML 인덱스의 작성 및 관리에 사용될 수 있습니다.  
   
 -   [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

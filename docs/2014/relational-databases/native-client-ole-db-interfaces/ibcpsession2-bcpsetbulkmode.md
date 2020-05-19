@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - BCPSetBulkMode function
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989984"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694586"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode는 열 형식을 지정하기 위한 [IBCPSession::BCPColFmt&#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md)에 대한 대안을 제공합니다. 개별 열 형식 특성을 설정하는 IBCPSession::BCPColFmt와 달리, IBCPSession2::BCPSetBulkMode는 모든 특성을 설정합니다.  
@@ -58,7 +58,7 @@ HRESULT BCPSetBulkMode (
 |-|-|  
 |`S_OK`|메서드가 성공했습니다.|  
 |`E_FAIL`|공급자 관련 오류가 발생했습니다. 자세한 내용을 보려면 ISQLServerErrorInfo 인터페이스를 사용하세요.|  
-|`E_UNEXPECTED`|예기치 않은 메서드가 호출되었습니다. 예를 들어 IBCPSession2 `IBCPSession2::BCPInit` :: Bcpset대량 모드를 호출 하기 전에 메서드를 호출 하지 않았습니다.|  
+|`E_UNEXPECTED`|예기치 않은 메서드가 호출되었습니다. 예를 들어 `IBCPSession2::BCPInit` IBCPSession2:: Bcpset대량 모드를 호출 하기 전에 메서드를 호출 하지 않았습니다.|  
 |`E_INVALIDARG`|잘못된 인수입니다.|  
 |`E_OUTOFMEMORY`|메모리 부족 오류가 발생했습니다.|  
   
@@ -71,14 +71,14 @@ HRESULT BCPSetBulkMode (
   
 |속성|설명|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt를 *Euserdatatype* 속성으로 설정 `BCP_TYPE_SQLCHARACTER`합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 `BCP_TYPE_SQLNCHAR`설정 됩니다.|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt with *Euserdatatype* 속성은 열 `BCP_TYPE_SQLNCHAR` 유형이 문자열 이거나 `BCP_TYPE_DEFAULT` 문자열이 아닌 경우로 설정 됩니다.|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 `BCP_TYPE_DEFAULT`설정 됩니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt를 *Euserdatatype* 속성으로 설정 `BCP_TYPE_SQLCHARACTER` 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 설정 `BCP_TYPE_SQLNCHAR` 됩니다.|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt with *Euserdatatype* 속성 `BCP_TYPE_SQLNCHAR` 은 열 유형이 문자열 이거나 문자열이 아닌 경우로 설정 됩니다 `BCP_TYPE_DEFAULT` .|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE 및 IBCPSession:: BCPColFmt와 *Euserdatatype* 속성은로 설정 `BCP_TYPE_DEFAULT` 됩니다.|  
   
- IBCPSession2::BCPSetBulkMode와 충돌하지 않는 IBCPSession::BCPControl 옵션에 대해 IBCPSession::BCPControl 및 IBCPSession2::BCPSetBulkMode를 호출할 수 있습니다. 예를 들어 및 IBCPSession2:: Bcpset대량 모드를 `BCP_OPTION_FIRST` 사용 하 여 IBCPSession:: BCPControl을 호출할 수 있습니다.  
+ IBCPSession2::BCPSetBulkMode와 충돌하지 않는 IBCPSession::BCPControl 옵션에 대해 IBCPSession::BCPControl 및 IBCPSession2::BCPSetBulkMode를 호출할 수 있습니다. 예를 들어 `BCP_OPTION_FIRST` 및 IBCPSession2:: Bcpset대량 모드를 사용 하 여 IBCPSession:: BCPControl을 호출할 수 있습니다.  
   
- 및 IBCPSession2:: BcpsetIBCPSession 모드를 `BCP_OPTION_TEXTFILE` 사용 하 여:: BCPControl을 호출할 수 없습니다.  
+ `BCP_OPTION_TEXTFILE`및 IBCPSession2:: BcpsetIBCPSession 모드를 사용 하 여:: BCPControl을 호출할 수 없습니다.  
   
  IBCPSession::BCPColFmt, IBCPSession::BCPControl 및 IBCPSession::BCPReadFmt를 포함하는 일련의 함수 호출을 사용하여 IBCPSession2::BCPSetBulkMode를 호출하려고 하면 함수 호출 중 하나가 시퀀스 오류를 반환합니다. 이러한 오류를 해결하도록 선택하는 경우 IBCPSession::BCPInit를 호출하여 설정을 재설정하고 다시 시작합니다.  
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d1f6540a8be6cc45af4d396daf10ca0d1a7d88
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287356"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702698"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
   다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
@@ -66,7 +66,7 @@ FOR XML AUTO, TYPE
   
 -   `SalesOrder` 절에 지정된 행 집합인 `FROM`를 쿼리합니다. 결과는 하나 이상의 <`SalesOrder`> 요소가 있는 XML입니다.  
   
--   `AUTO` 모드 및 `TYPE` 지시어를 지정합니다. `AUTO`모드는 쿼리 결과를 XML로 변환 하 고 `TYPE` 지시어는 결과를 형식 `xml` 으로 반환 합니다.  
+-   `AUTO` 모드 및 `TYPE` 지시어를 지정합니다. `AUTO`모드는 쿼리 결과를 XML로 변환 하 고 `TYPE` 지시어는 결과를 형식으로 반환 합니다 `xml` .  
   
 -   쉼표로 구분된 두 개의 중첩된 `SELECT` 문을 포함합니다. 첫 번째 중첩된 `SELECT` 는 판매 주문 정보, 헤더 및 세부 정보를 검색하고 두 번째 중첩된 `SELECT` 문은 판매 직원 정보를 검색합니다.  
   

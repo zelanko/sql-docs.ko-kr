@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLXML, samples
 - examples [SQLXML], requirements
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 712b1a78f3b2892bdb889f1262fd545c2fc6b5e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87df27b5f087800928eb841b2903bdb6c4f4d9ce
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251294"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702857"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>SQLXML 예 실행을 위한 요구 사항
   [SQLXML 4.0 프로그래밍](sqlxml-4-0-programming-concepts.md) 단원에서는 다양 한 예제를 제공 합니다. 이 항목에서는 이러한 예를 사용하여 작업 예제를 만들기 위한 요구 사항을 보여 줍니다.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012646"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703089"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>축 지정(SQLXML 4.0)
     
@@ -33,7 +33,7 @@ ms.locfileid: "66012646"
   
      컨텍스트 노드의 자식을 포함합니다.  
   
-     다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 모든 ** \<고객>** 자식을 선택 합니다.  
+     다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 모든 ** \< 고객>** 자식을 선택 합니다.  
   
     ```  
     child::Customer  
@@ -45,7 +45,7 @@ ms.locfileid: "66012646"
   
      컨텍스트 노드의 부모를 포함합니다.  
   
-     다음 XPath 식은 ** \<Order>** 자식의 모든 ** \<고객>** 부모를 선택 합니다.  
+     다음 XPath 식은 ** \< Order>** 자식의 모든 ** \< 고객>** 부모를 선택 합니다.  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +67,7 @@ ms.locfileid: "66012646"
   
      컨텍스트 노드 자신을 포함합니다.  
   
-     다음 XPath 식은 ** \<Order>** 노드인 경우 현재 노드를 선택 합니다.  
+     다음 XPath 식은 ** \< Order>** 노드인 경우 현재 노드를 선택 합니다.  
   
     ```  
     self::Order  

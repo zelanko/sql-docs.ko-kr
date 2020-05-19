@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be434e4d80a8146b58beb0ae0de07e62415a6ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200490"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701578"
 ---
 # <a name="use-cursors-odbc"></a>커서 사용(ODBC)
     
@@ -27,7 +27,7 @@ ms.locfileid: "63200490"
   
      SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY 특성을 설정합니다(기본 옵션).  
   
-     Or  
+     또는  
   
      SQL_CURSOR_SCROLLABLE 및 SQL_CURSOR_SENSITIVITY 특성을 설정합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200490"
   
      열 단위 바인딩을 사용합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      행 단위 바인딩을 사용합니다.  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156219"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702207"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 Transact-SQL 지원
   Transact-SQL 쿼리 또는 DML 문(SELECT, INSERT, UPDATE 또는 DELETE), 임시 문과, 저장 프로시저, 테이블 반환 함수, 스칼라 함수, 트리거, 뷰와 같은 SQL 모듈을 사용하여 메모리 최적화 테이블에 액세스할 수 있습니다. 자세한 내용은 해석 된 [transact-sql을 사용 하 여 메모리 액세스에 최적화 된 테이블에 액세스](accessing-memory-optimized-tables-using-interpreted-transact-sql.md)를 참조 하세요.  
@@ -24,17 +24,17 @@ ms.locfileid: "63156219"
   
  데이터베이스 개체(DDL 문)를 만들고 수정할 때 다음 문이 수정되었습니다.  
   
--   [ALTER Database 파일 및 파일 그룹 옵션 transact-sql&#41;&#40;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (참조 `MEMORY_OPTIMIZED_DATA`)  
+-   [ALTER Database 파일 및 파일 그룹 옵션 transact-sql&#41;&#40;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (참조 `MEMORY_OPTIMIZED_DATA` )  
   
--   [Transact-sql&#41;SQL SERVER 데이터베이스 &#40;만들기](/sql/t-sql/statements/create-database-sql-server-transact-sql) (참조 `MEMORY_OPTIMIZED_DATA`)  
+-   [Transact-sql&#41;SQL SERVER 데이터베이스 &#40;만들기](/sql/t-sql/statements/create-database-sql-server-transact-sql) (참조 `MEMORY_OPTIMIZED_DATA` )  
   
--   [Transact-sql&#41;&#40;프로시저 만들기](/sql/t-sql/statements/create-procedure-transact-sql) (,, 및 `NATIVE_COMPILATION` `BEGIN ATOMIC`참조 `SCHEMABINDING` `EXECUTE AS`)  
+-   [Transact-sql&#41;&#40;프로시저 만들기](/sql/t-sql/statements/create-procedure-transact-sql) (,, `NATIVE_COMPILATION` 및 참조 `SCHEMABINDING` `EXECUTE AS` `BEGIN ATOMIC` )  
   
--   [Transact-sql&#41;&#40;CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) (,,, `MEMORY_OPTIMIZED`및 `DURABILITY` `HASH`참조 `BUCKET_COUNT` `INDEX`)  
+-   [Transact-sql&#41;&#40;CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) (,,, `MEMORY_OPTIMIZED` `DURABILITY` 및 참조 `BUCKET_COUNT` `INDEX` `HASH` )  
   
--   [Transact-sql&#41;형식 &#40;만듭니다](/sql/t-sql/statements/create-type-transact-sql) (,, 및 `MEMORY_OPTIMIZED` `HASH`참조 `BUCKET_COUNT` `INDEX`).  
+-   [Transact-sql&#41;형식 &#40;만듭니다](/sql/t-sql/statements/create-type-transact-sql) (,, `MEMORY_OPTIMIZED` 및 참조 `BUCKET_COUNT` `INDEX` `HASH` ).  
   
--   [Transact-sql @local_variable&#41;&#40;선언](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (참조) `NULL`  |  `NOT NULL`  
+-   [ @local_variable Transact-sql&#41;&#40;선언](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (참조 `NULL`  |  `NOT NULL` )  
   
  메모리 액세스에 최적화된 테이블은 `PRIMARY KEY` 및 `NOT NULL` 제약 조건을 지원합니다. 지원 되지 않는 제약 조건 구현에 대 한 자세한 내용은 [Check 및 Foreign Key 제약 조건 마이그레이션](../../database-engine/migrating-check-and-foreign-key-constraints.md)을 참조 하세요.  
   

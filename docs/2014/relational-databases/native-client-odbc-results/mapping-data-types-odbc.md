@@ -16,29 +16,29 @@ helpviewer_keywords:
 - sql_variant data type
 - SQL Server Native Client ODBC driver, data types
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1fad6175b6330b35264d8558fa7b52f86b85a9c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200008"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699274"
 ---
 # <a name="mapping-data-types-odbc"></a>데이터 형식 매핑(ODBC)
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 sql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 odbc sql 데이터 형식에 매핑합니다. 아래 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 데이터 형식과 이러한 데이터 형식이 매핑되는 ODBC SQL 데이터 형식에 대해 설명합니다. 또한 ODBC SQL 데이터 형식 및 해당 ODBC C 데이터 형식과 지원되는 변환 및 기본 변환에 대해 설명합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sql 데이터 형식을 odbc sql 데이터 형식에 매핑합니다. 아래 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL 데이터 형식과 이러한 데이터 형식이 매핑되는 ODBC SQL 데이터 형식에 대해 설명합니다. 또한 ODBC SQL 데이터 형식 및 해당 ODBC C 데이터 형식과 지원되는 변환 및 기본 변환에 대해 설명합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Timestamp 데이터 형식은** **timestamp** 열의 값이 **datetime** 값이 아니라 행의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 순서를 나타내는 **BINARY (8)** 또는 **VARBINARY (8)** 값 이기 때문에 SQL_BINARY 또는 SQL_VARBINARY ODBC 데이터 형식에 매핑됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 바이트 수가 홀수인 SQL_C_WCHAR(유니코드) 값을 발견하면 후행 홀수 바이트가 잘립니다.  
+>  Timestamp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** 데이터 형식은 **timestamp** 열의 값이 **datetime** 값이 아니라 행의 작업 순서를 나타내는 **BINARY (8)** 또는 **VARBINARY (8)** 값 이기 때문에 SQL_BINARY 또는 SQL_VARBINARY ODBC 데이터 형식에 매핑됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 바이트 수가 홀수인 SQL_C_WCHAR(유니코드) 값을 발견하면 후행 홀수 바이트가 잘립니다.  
   
 ## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>ODBC의 sql_variant 데이터 형식 처리  
- **Sql_variant** 데이터 형식 열에는 **text**, **Ntext**및 **image**와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lob (large objects)를 제외한의 데이터 형식이 포함 될 수 있습니다. 예를 들어 열에는 일부 행에 대해 **smallint** 값, 다른 행의 경우 **float** 값, 나머지에는 **char/nchar** 값이 포함 될 수 있습니다.  
+ **Sql_variant** 데이터 형식 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **text**, **ntext**및 **image**와 같은 lob (large objects)를 제외한의 데이터 형식이 포함 될 수 있습니다. 예를 들어 열에는 일부 행에 대해 **smallint** 값, 다른 행의 경우 **float** 값, 나머지에는 **char/nchar** 값이 포함 될 수 있습니다.  
   
  **Sql_variant** 데이터 형식은 Microsoft Visual Basic의 **variant** 데이터 형식과 비슷합니다??.  
   
 ### <a name="retrieving-data-from-the-server"></a>서버에서 데이터 검색  
- ODBC에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는의 odbc 드라이버를 사용 하 여 **sql_variant** 데이터 형식의 사용을 제한 하는 variant 형식의 개념이 없습니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]바인딩이 지정 된 경우 **sql_variant** 데이터 형식이 문서화 된 ODBC 데이터 형식 중 하나에 바인딩되어야 합니다. Native Client ODBC 드라이버와 관련 된 새 특성인 SQL_CA_SS_VARIANT_TYPE는 **sql_variant** 열에 있는 인스턴스의 데이터 형식을 사용자에 게 반환 합니다. **SQL_CA_SS_VARIANT_TYPE** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ ODBC에는의 ODBC 드라이버를 사용 하 여 **sql_variant** 데이터 형식의 사용을 제한 하는 variant 형식의 개념이 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 바인딩이 지정 된 경우 **sql_variant** 데이터 형식이 문서화 된 ODBC 데이터 형식 중 하나에 바인딩되어야 합니다. Native Client ODBC 드라이버와 관련 된 새 특성인 **SQL_CA_SS_VARIANT_TYPE**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant** 열에 있는 인스턴스의 데이터 형식을 사용자에 게 반환 합니다.  
   
  바인딩이 지정 되지 않은 경우 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 함수를 사용 하 여 **sql_variant** 열에서 인스턴스의 데이터 형식을 확인할 수 있습니다.  
   
@@ -86,7 +86,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
  사용자가 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)를 사용 하 여 바인딩을 만드는 경우 드라이버는 메타 데이터 및 데이터를 읽습니다. 그런 다음 데이터를 바인딩에 지정된 적절한 ODBC 형식으로 변환합니다.  
   
 ### <a name="sending-data-to-the-server"></a>데이터를 서버로 보내기  
- Native Client ODBC 드라이버와 관련 된 새 데이터 유형인 SQL_SS_VARIANT는 **sql_variant** 열로 전송 되는 데이터에 사용 됩니다. **SQL_SS_VARIANT** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 매개 변수를 사용 하 여 서버에 데이터를 전송 하는 경우 (예: INSERT INTO TableName VALUES (?,?)) [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 는 C 형식 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식을 포함 하는 매개 변수 정보를 지정 하는 데 사용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 C 데이터 형식을 적절 한 **sql_variant** 하위 형식 중 하나로 변환 합니다.  
+ Native Client ODBC 드라이버와 관련 된 새 데이터 유형인 **SQL_SS_VARIANT**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sql_variant** 열로 전송 되는 데이터에 사용 됩니다. 매개 변수를 사용 하 여 서버에 데이터를 전송 하는 경우 (예: INSERT INTO TableName VALUES (?,?)) [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 는 C 형식 및 해당 형식을 포함 하는 매개 변수 정보를 지정 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 C 데이터 형식을 적절 한 **sql_variant** 하위 형식 중 하나로 변환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;결과 처리](processing-results-odbc.md)  

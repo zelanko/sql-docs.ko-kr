@@ -13,15 +13,15 @@ helpviewer_keywords:
 - updategrams [SQLXML], passing parameters
 - null values [SQLXML]
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92238e27c364c8f09721a55d00c750022b53a18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea22b1c0bc435006e05fde02043ca9f44a8ca681
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014730"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703020"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
   Updategram은 템플릿이므로 Updategram에 매개 변수를 전달할 수 있습니다. 템플릿에 매개 변수를 전달 하는 방법에 대 한 자세한 내용은 [Updategram 보안 고려 사항 &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)를 참조 하세요.  
@@ -62,7 +62,7 @@ ms.locfileid: "66014730"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramWithParameters.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 `cmd.Properties("Output Stream").Value = outStream`쿼리를 실행 하 여 updategram를 실행 합니다.  
+2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
   
     ```  
     cmd.NamedParameters = True  
@@ -97,7 +97,7 @@ ms.locfileid: "66014730"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramPassingNullvalues.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 `cmd.Properties("Output Stream").Value = outStream`쿼리를 실행 하 여 updategram를 실행 합니다.  
+2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
   
     ```  
     cmd.NamedParameters = True  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - binding result sets [SQL Server Native Client]
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0aefbfdeb984aa6b384c5c123ed69ec4fdaa41ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca5ab2c7c3b92f30701fd51ddef95eccff4842fd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200035"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699709"
 ---
 # <a name="assigning-storage"></a>스토리지 할당
   애플리케이션에서 SQL 문 실행 전이나 후에 결과의 스토리지를 할당할 수 있습니다. 애플리케이션에서 먼저 SQL 문을 준비하거나 실행하는 경우 결과의 스토리지를 할당하기 전에 결과 집합을 조회할 수 있습니다. 예를 들어 결과 집합을 알 수 없는 경우 애플리케이션에서는 결과의 스토리지를 할당하기 전에 열의 수를 검색해야 합니다.  

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLStatistics function
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 509205e0eeb2a913c8fdb4505961b8a3d4965529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 412dea0c99c8351e8f7747b0acbd09a3116d468f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188609"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702106"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics** 는 정적 커서에 대해 실행할 수 있습니다. 업데이트 가능한 커서(키 집합 또는 동적 커서)에 대해 **SQLStatistics** 를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  

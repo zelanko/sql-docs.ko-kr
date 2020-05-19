@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195578"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702553"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "68195578"
  승격된 열은 같은 테이블에 있는 계산 열이거나 테이블에서 사용자가 유지 관리하는 별개의 열일 수 있습니다. 각 XML 인스턴스로부터 단일 항목 값이 승격되는 경우에는 이것으로 충분합니다. 하지만 다중 값 속성의 경우 다음 섹션의 설명과 같이 속성에 대해 별개의 테이블을 만들어야 합니다.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml 데이터 형식에 따른 계산 열  
- 데이터 형식 메서드를 호출 `xml` 하는 사용자 정의 함수를 사용 하 여 계산 열을 만들 수 있습니다. 계산 열의 유형은 XML을 포함하는 모든 SQL 유형일 수 있습니다. 다음 예에서 확인할 수 있습니다.  
+ 데이터 형식 메서드를 호출 하는 사용자 정의 함수를 사용 하 여 계산 열을 만들 수 있습니다 `xml` . 계산 열의 유형은 XML을 포함하는 모든 SQL 유형일 수 있습니다. 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>예: xml 데이터 형식 메서드에 따른 계산 열  
  책 ISBN 번호에 대한 사용자 정의 함수를 만듭니다.  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- 사용자 정의 함수를 만들어 사용자 정의 함수를 사용 하 `xml` 여 데이터 형식과 계산 열을 반환할 수 있습니다. 하지만 XML 계산 열에는 XML 인덱스를 만들 수 없습니다.  
+ 사용자 정의 함수를 만들어 `xml` 사용자 정의 함수를 사용 하 여 데이터 형식과 계산 열을 반환할 수 있습니다. 하지만 XML 계산 열에는 XML 인덱스를 만들 수 없습니다.  
   
 ## <a name="creating-property-tables"></a>속성 테이블 만들기  
  XML 데이터에서 여러 값의 속성 중 일부를 하나 이상의 테이블로 승격시키고 해당 테이블에서 인덱스를 만들고 이를 사용하도록 쿼리를 다시 대상화할 수 있습니다. 일반적인 시나리오는 속성 중 일부에 대부분의 쿼리 작업이 포함되는 경우입니다. 사용할 수 있는 기능은 다음과 같습니다.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  속성 테이블을 유지 관리하기 위한 사용자 정의 함수를 사용하여 삽입, 업데이트 및 삭제 트리거를 정의합니다.  
   
- 이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. `xml` 데이터 형식은 ADO.NET에서 관리 되는 클래스 SqlXml으로 노출 되며 XmlReader를 반환 하는 **CreateReader ()** 메서드를 지원 합니다.  
+ 이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. `xml`데이터 형식은 ADO.NET에서 관리 되는 클래스 SqlXml으로 노출 되며 XmlReader를 반환 하는 **CreateReader ()** 메서드를 지원 합니다.  
   
 > [!NOTE]  
 >  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 애플리케이션에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](../../database-engine/dev-guide/architecture-of-clr-integration.md)를 참조하세요.  

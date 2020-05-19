@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPReadFmt method
 ms.assetid: e2a12050-94e4-48a3-8a48-b780d646f116
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5a82cd2b9261b8f8c26e4e37636423cc27603fcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54cfcdb87e8292f4588360e5a6b8c77f410a1fc9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192416"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695411"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
   서식 파일에서 각 열의 서식 정보를 읽습니다.  
@@ -35,13 +35,13 @@ const wchar_t *pwszFormatFile);
 ```  
   
 ## <a name="remarks"></a>설명  
- **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider BCP에서 지 원하는 형식 파일 버전은 버전 6.0 이상입니다.  
+ **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. Native Client OLE DB provider BCP에서 지 원하는 형식 파일 버전은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 6.0 이상입니다.  
   
  **BCPReadFmt** 메서드는 형식 값을 읽은 후 [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) 메서드를 적절히 호출합니다. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
   
  서식 파일을 저장하려면 [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) 메서드를 호출합니다. **BCPReadFmt** 메서드를 호출할 때 저장된 형식을 참조할 수 있습니다. 또한 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **BCPReadFmt** 메서드가 참조할 수 있는 파일에 저장할 수 있습니다.  
   
- `BCP_OPTION_DELAYREADFMT` [IBCPSession:: Bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) 의 *Eoption* 매개 변수 값은 IBCPSession:: bcpreadfmt의 동작을 수정 합니다.  
+ `BCP_OPTION_DELAYREADFMT` [IBCPSession:: BCPControl](ibcpsession-bcpcontrol-ole-db.md) 의 *eoption* 매개 변수 값은 IBCPSession:: bcpreadfmt의 동작을 수정 합니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszFormatFile*[in]  

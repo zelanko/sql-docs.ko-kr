@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193033"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702258"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
-  [Xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)항목에서 설명 하는 것 처럼 SQL Server는 `xml` 데이터 형식을 통해 xml 데이터의 기본 저장소를 제공 합니다. 필요에 따라 XML 스키마 컬렉션을 통해 XSD 스키마를 변수나 `xml` 형식의 열에 연결할 수 있습니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
+  [Xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql)항목에서 설명 하는 것 처럼 SQL Server는 데이터 형식을 통해 xml 데이터의 기본 저장소를 제공 합니다 `xml` . 필요에 따라 XML 스키마 컬렉션을 통해 XSD 스키마를 변수나 형식의 열에 연결할 수 있습니다 `xml` . XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
   
 -   XML 인스턴스 유효성 검사  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193033"
   
  쿼리 프로세싱 엔진은 또한 유형 검사 및 쿼리와 데이터 수정 최적화를 위해 스키마를 사용합니다.  
   
- 또한 SQL Server는 형식화 `xml`된의 경우 연결 된 xml 스키마 컬렉션을 사용 하 여 xml 인스턴스의 유효성을 검사 합니다. XML 인스턴스가 스키마로 컴파일되는 경우 데이터베이스에서 인스턴스를 해당 유형 정보와 함께 시스템에 저장할 수 있습니다. 그렇지 않으면 인스턴스가 거부됩니다.  
+ 또한 SQL Server는 형식화 된의 경우 연결 된 XML 스키마 컬렉션을 사용 하 여 `xml` xml 인스턴스의 유효성을 검사 합니다. XML 인스턴스가 스키마로 컴파일되는 경우 데이터베이스에서 인스턴스를 해당 유형 정보와 함께 시스템에 저장할 수 있습니다. 그렇지 않으면 인스턴스가 거부됩니다.  
   
  내장 함수 XML_SCHEMA_NAMESPACE를 사용하여 데이터베이스에 저장된 스키마 컬렉션을 검색할 수 있습니다. 자세한 내용은 [저장된 XML 스키마 컬렉션 보기](../xml/view-a-stored-xml-schema-collection.md)를 참조하세요.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63193033"
   
 -   XML 스키마 컬렉션에 적합한 카탈로그 뷰에 Transact-SQL 쿼리를 작성합니다.  
   
--   기본 제공 함수 **XML_SCHEMA_NAMESPACE()** 를 사용합니다. 이 함수의 출력 `xml` 에 데이터 형식 메서드를 적용할 수 있습니다. 하지만 기본 XML 스키마는 수정할 수 없습니다.  
+-   기본 제공 함수 **XML_SCHEMA_NAMESPACE()** 를 사용합니다. `xml`이 함수의 출력에 데이터 형식 메서드를 적용할 수 있습니다. 하지만 기본 XML 스키마는 수정할 수 없습니다.  
   
  이러한 내용은 다음 예에 설명되어 있습니다.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 컬렉션 내의 개별 XML 스키마는 **XML_SCHEMA_NAMESPACE ()** 에 `xml` 대 한 세 번째 인수로 대상 네임 스페이스를 지정 하 여 데이터 형식 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
+ 컬렉션 내의 개별 XML 스키마 `xml` 는 **XML_SCHEMA_NAMESPACE ()** 에 대 한 세 번째 인수로 대상 네임 스페이스를 지정 하 여 데이터 형식 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
  다음 명령문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 <https://www.microsoft.com/books>인 XML 스키마를 출력합니다.  

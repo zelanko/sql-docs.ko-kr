@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 459cd091043d567b4c93555c271213d066f3989e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a676688176e164736552460667432919250f8e99
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487126"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82261853"
 ---
 # <a name="supported-net-framework-libraries"></a>지원되는 .NET Framework 라이브러리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,39 +33,29 @@ ms.locfileid: "81487126"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CLR 통합에서 지원되는 라이브러리/네임스페이스는 다음과 같습니다.  
   
 -   CustomMarshalers  
-  
 -   Microsoft.VisualBasic  
-  
 -   Microsoft.VisualC  
-  
 -   mscorlib  
-  
--   System (시스템)  
-  
+-   시스템  
 -   System.Configuration  
-  
+-   System.Core  
 -   System.Data  
-  
 -   System.Data.OracleClient  
-  
 -   System.Data.SqlXml  
-  
 -   System.Deployment  
-  
 -   System.Security  
-  
 -   System.Transactions  
-  
 -   System.Web.Services  
-  
 -   System.Xml  
-  
--   System.Core.dll  
-  
--   System.Xml.Linq.dll  
-  
+-   System.Xml.Linq  
+
+<!--
+Any modifications to the list above should be duplicated on the following page:
+https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-designing#supported-net-framework-assemblies
+-->
+
 ## <a name="unsupported-libraries"></a>지원되지 않는 라이브러리  
- 지원되지 않는 라이브러리도 관리되는 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계에서 호출할 수 있습니다. 코드에서 사용할 수 있으려면 먼저 **CREATE ASSEMBLY** 문을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용 하 여 데이터베이스에 지원 되지 않는 라이브러리를 등록 해야 합니다. 지원되지 않는 라이브러리를 서버에 등록하고 실행하는 경우 보안과 안정성을 검토하여 테스트해야 합니다.  
+ 지원되지 않는 라이브러리도 관리되는 저장 프로시저, 트리거, 사용자 정의 함수, 사용자 정의 형식 및 사용자 정의 집계에서 호출할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]코드에서 사용할 수 있으려면 먼저 **CREATE ASSEMBLY** 문을 사용 하 여 데이터베이스에 지원 되지 않는 라이브러리를 등록 해야 합니다. 지원되지 않는 라이브러리를 서버에 등록하고 실행하는 경우 보안과 안정성을 검토하여 테스트해야 합니다.  
   
  예를 들어 **DirectoryServices** 네임 스페이스는 지원 되지 않습니다. 코드에서 호출 하려면 먼저 **UNSAFE** 권한으로 DirectoryServices 어셈블리를 등록 해야 합니다. **DirectoryServices** 네임 스페이스의 클래스가 **SAFE** 또는 **EXTERNAL_ACCESS**에 대 한 요구 사항을 충족 하지 않으므로 **UNSAFE** 권한이 필요 합니다. 자세한 내용은 [Clr 통합 프로그래밍 모델 제한](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) 및 [Clr 통합 코드 액세스 보안](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)을 참조 하세요.  
   

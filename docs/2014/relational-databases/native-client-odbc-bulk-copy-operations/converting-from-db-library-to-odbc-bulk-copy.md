@@ -13,18 +13,18 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f9694a5f54d740e298b9c6af4ab3169a3eb8ab14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75ac184717fbee6cf26c99924fdccb164592fdfa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067629"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702090"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>DB-Library에서 ODBC 대량 복사로 변환
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client odbc 드라이버에서 지 원하는 대량 복사 함수는 db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
+  Native Client ODBC 드라이버에서 지 원하는 대량 복사 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수와 비슷하며, 다음과 같은 경우를 제외 하 고 db-library 대량 복사 프로그램을 ODBC로 쉽게 변환할 수 있습니다.  
   
 -   DB-Library 애플리케이션은 DBPROCESS 구조에 대한 포인터를 대량 복사 함수의 첫 번째 매개 변수로 전달합니다. ODBC 애플리케이션에서는 DBPROCESS 포인터가 ODBC 연결 핸들로 대체됩니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63067629"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 db-library 메시지 및 오류 처리기를 지원 하지 않습니다. ODBC 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 db-library 메시지 및 오류 처리기를 지원 하지 않습니다. odbc 대량 복사 함수에 의해 발생 한 오류 및 메시지를 얻으려면 **SQLGetDiagRec** 를 호출 해야 합니다. ODBC 버전의 대량 복사 함수는 SQL_SUCCESS 또는 SQL_ERROR와 같은 ODBC 스타일 반환 코드가 아니라 표준 대량 복사 반환 코드인 SUCCEED 또는 FAILED를 반환합니다.  
   
 -   DB-LIBRARY [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* 매개 변수에 대해 지정 된 값은 ODBC **bcp_bind**_cbdata_ 매개 변수와 다르게 해석 됩니다.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63067629"
     |-------------------------|--------------------------------|-------------------------|  
     |Null 값 제공|0|-1(SQL_NULL_DATA)|  
     |변수 데이터 제공|-1|-10(SQL_VARLEN_DATA)|  
-    |길이가 0인 문자 또는 이진 문자열|해당 없음|0|  
+    |길이가 0인 문자 또는 이진 문자열|NA|0|  
   
      DB-LIBRARY에서 *varlen* 값-1은 가변 길이 데이터를 제공 하 고 있음을 나타냅니다 .이는 ODBC *CBDATA* 에서 NULL 값만 제공 됨을 의미 하는 것으로 해석 됩니다. -1의 DB-LIBRARY *varlen* 사양을 SQL_VARLEN_DATA로 변경 하 고 0의 *varlen* 사양을 SQL_NULL_DATA으로 변경 합니다.  
   
--   DB-LIBRARY **\_bcp colfmt**_\_파일 collen_ 및 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata* 는 위에서 언급 한 **bcp_bind**_varlen_ 및 *cbdata* 매개 변수와 동일한 문제를 가집니다. -1의 DB-LIBRARY *file_collen* 사양을 SQL_VARLEN_DATA으로 변경 하 고 *file_collen* 지정을 0에서 SQL_NULL_DATA로 변경 합니다.  
+-   DB-LIBRARY **bcp \_ colfmt**_파일 \_ collen_ 및 ODBC [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbuserdata* 는 위에서 언급 한 **bcp_bind**_varlen_ 및 *cbdata* 매개 변수와 동일한 문제를 가집니다. -1의 DB-LIBRARY *file_collen* 사양을 SQL_VARLEN_DATA으로 변경 하 고 *file_collen* 지정을 0에서 SQL_NULL_DATA로 변경 합니다.  
   
 -   ODBC [bcp_control](../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) 함수의 *ivalue* 매개 변수는 void 포인터입니다. DB-LIBRARY에서 *Ivalue* 는 정수입니다. ODBC *Ivalue* 의 값을 void *로 캐스팅 합니다.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63067629"
   
     -   DB-LIBRARY **dbconvert** 함수에서 지 원하는 모든 형식의 **datetime** 및 **smalldatetime** 문자열  
   
-    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY 옵션 탭에서 **국가별 설정 사용** 확인란을 선택 하면 db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다. **Options** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   클라이언트 네트워크 유틸리티의 DB-LIBRARY **옵션** 탭에서 **국가별 설정 사용** 확인란을 선택 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] db-library 대량 복사 함수도 클라이언트 컴퓨터 레지스트리의 로캘 설정에 대해 정의 된 국가별 날짜 형식으로 날짜를 적용 합니다.  
   
      DB-LIBRARY 대량 복사 함수는 ODBC **datetime** 및 **smalldatetime** 형식을 허용 하지 않습니다.  
   

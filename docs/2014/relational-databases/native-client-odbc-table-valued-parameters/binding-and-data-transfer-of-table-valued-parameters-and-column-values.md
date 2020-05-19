@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), binding and data transfer
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5aa061f51d63085cc55e59aca7d7e4d69e1a2e27
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199955"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698736"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>테이블 반환 매개 변수 및 열 값에 대한 바인딩 및 데이터 전송
   테이블 반환 매개 변수는 다른 매개 변수처럼 서버에 전달되기 전에 바인딩되어야 합니다. 응용 프로그램은 SQLSetDescField 또는 SQLSetDescRec에 대 한 SQLBindParameter 또는 동등한 호출을 사용 하 여 다른 매개 변수를 바인딩하는 것과 동일한 방식으로 테이블 반환 매개 변수를 바인딩합니다. 테이블 반환 매개 변수의 서버 데이터 형식은 SQL_SS_TABLE입니다. C 형식은 SQL_C_DEFAULT 또는 SQL_C_BINARY로 지정할 수 있습니다.  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 입력 테이블 반환 매개 변수만 지원됩니다. 따라서 DESC_PARAMETER_TYPE을 SQL_PARAM_INPUT 이외의 값으로 설정하면 SQLSTATE=HY105 및 "매개 변수 유형이 잘못되었습니다"라는 메시지가 포함된 SQL_ERROR가 반환됩니다.  
   
- SQL_CA_SS_COL_HAS_DEFAULT_VALUE 특성을 사용하여 전체 테이블 반환 매개 변수 열에 기본값을 할당할 수 있습니다. 그러나 SQLBindParameter와 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 개별 테이블 반환 매개 변수 열 값에 기본값을 할당할 수는 없습니다. SQLBindParameter와 함께 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 전체 테이블 반환 매개 변수를 기본값으로 설정할 수 없습니다. 이러한 규칙을 따르지 않는 경우 SQLExecute 또는 SQLExecDirect는 SQL_ERROR을 반환 합니다. SQLSTATE = 07S01 및 "매개 변수 \<p>에 대 한 기본 매개 변수 사용이 잘못 되었습니다" 라는 메시지가 포함 된 진단 레코드가 \<생성 됩니다. 여기서 p>는 쿼리 문에서 TVP의 서 수입니다.  
+ SQL_CA_SS_COL_HAS_DEFAULT_VALUE 특성을 사용하여 전체 테이블 반환 매개 변수 열에 기본값을 할당할 수 있습니다. 그러나 SQLBindParameter와 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 개별 테이블 반환 매개 변수 열 값에 기본값을 할당할 수는 없습니다. SQLBindParameter와 함께 *StrLen_or_IndPtr* 에서 SQL_DEFAULT_PARAM를 사용 하 여 전체 테이블 반환 매개 변수를 기본값으로 설정할 수 없습니다. 이러한 규칙을 따르지 않는 경우 SQLExecute 또는 SQLExecDirect는 SQL_ERROR을 반환 합니다. SQLSTATE = 07S01 및 "매개 변수 p>에 대 한 기본 매개 변수 사용이 잘못 되었습니다" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다 \< \< . 여기서 p>는 쿼리 문에서 TVP의 서 수입니다.  
   
  테이블 반환 매개 변수를 바인딩한 후에는 애플리케이션에서 각 테이블 반환 매개 변수 열을 바인딩해야 합니다. 이렇게 하기 위해 응용 프로그램은 먼저 SQLSetStmtAttr를 호출 하 여 SQL_SOPT_SS_PARAM_FOCUS를 테이블 반환 매개 변수의 서 수로 설정 합니다. 그런 다음 응용 프로그램은 SQLBindParameter, SQLSetDescRec 및 SQLSetDescField 루틴을 호출 하 여 테이블 반환 매개 변수의 열을 바인딩합니다. SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정 하면 일반적인 최상위 매개 변수에서 작동 하는 SQLBindParameter, SQLSetDescRec 및 SQLSetDescField의 일반적인 효과가 복원 됩니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63199955"
   
 3.  SQLSetStmtAttr를 호출 하 여 SQL_SOPT_SS_PARAM_FOCUS를 0으로 설정 합니다. SQLExecute 또는 SQLExecDirect를 호출 하기 전에이 작업을 수행 해야 합니다. 그렇지 않으면 SQL_ERROR가 반환되고 SQLSTATE=HY024 및 "특성 값 SQL_SOPT_SS_PARAM_FOCUS가 잘못되었습니다. 실행 시 0이어야 합니다"라는 메시지가 포함된 진단 레코드가 생성됩니다.  
   
-4.  *StrLen_or_IndPtr* 또는 SQL_DESC_OCTET_LENGTH_PTR를 설정 하 여 행이 없는 테이블 반환 매개 변수에 대해 또는 테이블 반환 매개 변수에 행이 있는 경우 sqlexecute 또는 SQLExecDirect를 호출할 때 전송 되는 행 수를 SQL_DEFAULT_PARAM 합니다. 테이블 반환 매개 변수는 null을 허용 하지 않으므로 테이블 반환 매개 변수는 null을 허용 하지 않지만 테이블 반환 매개 변수는 null을 허용 하지 않으므로 *StrLen_or_IndPtr* 또는 SQL_DESC_OCTET_LENGTH_PTR를 SQL_NULL_DATA로 설정할 수 없습니다. 이 값이 잘못 된 값으로 설정 된 경우 SQLExecute 또는 SQLExecDirect는 SQL_ERROR를 반환 하 고 SQLSTATE = HY090 및 "매개 변수 \<p>에 대 한 문자열 또는 버퍼 길이가 잘못 되었습니다" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다. 여기서 p는 매개 변수 번호입니다.  
+4.  *StrLen_or_IndPtr* 또는 SQL_DESC_OCTET_LENGTH_PTR를 설정 하 여 행이 없는 테이블 반환 매개 변수에 대해 또는 테이블 반환 매개 변수에 행이 있는 경우 sqlexecute 또는 SQLExecDirect를 호출할 때 전송 되는 행 수를 SQL_DEFAULT_PARAM 합니다. 테이블 반환 매개 변수는 null을 허용 하지 않으므로 테이블 반환 매개 변수는 null을 허용 하지 않지만 테이블 반환 매개 변수는 null을 허용 하지 않으므로 *StrLen_or_IndPtr* 또는 SQL_DESC_OCTET_LENGTH_PTR를 SQL_NULL_DATA로 설정할 수 없습니다. 이 값이 잘못 된 값으로 설정 된 경우 SQLExecute 또는 SQLExecDirect는 SQL_ERROR를 반환 하 고 SQLSTATE = HY090 및 "매개 변수 p>에 대 한 문자열 또는 버퍼 길이가 잘못 되었습니다" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다 \< . 여기서 p는 매개 변수 번호입니다.  
   
 5.  SQLExecute 또는 SQLExecDirect를 호출 합니다.  
   

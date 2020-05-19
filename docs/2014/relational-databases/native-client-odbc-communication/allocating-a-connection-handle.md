@@ -17,15 +17,15 @@ helpviewer_keywords:
 - modifying passwords
 - SQLAllocHandle function
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62865004"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702076"
 ---
 # <a name="allocating-a-connection-handle"></a>연결 핸들 할당
   애플리케이션이 데이터 원본이나 드라이버에 연결하려면 먼저 연결 핸들을 할당해야 합니다. 이 작업은 *HandleType* 매개 변수를 SQL_HANDLE_DBC로 설정 하 고 초기화 된 환경 핸들을 가리키는 *InputHandle* **를 호출 하** 여 수행 됩니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "62865004"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전에 대해 애플리케이션을 실행하는 경우 TDS(Tabular Data Stream) 네트워크 패킷 크기를 다시 설정하면 성능이 향상될 수도 있습니다. 기본 패킷 크기는 서버에서 4KB로 설정됩니다. 일반적으로 패킷 크기가 4KB에서 8KB 사이일 때 최상의 성능을 얻을 수 있습니다. 테스트 결과, 다른 패킷 크기에서 성능이 더 빠른 경우 애플리케이션에서 패킷 크기를 다시 설정할 수 있습니다. ODBC 응용 프로그램은 SQL_ATTR_PACKET_SIZE 옵션으로 **SQLSetConnectAttr** 를 호출 하 여 연결 하기 전에이 작업을 수행할 수 있습니다. 큰 패킷 크기에서 성능이 더 나은 애플리케이션도 있지만 일반적으로 패킷 크기가 8KB보다 크면 성능 향상이 최소화됩니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에는 응용 프로그램에서 기능을 향상 시키기 위해 사용할 수 있는 여러 가지 확장 된 연결 특성이 있습니다. 이러한 특성 중 일부는 데이터 원본에 지정할 수 있는 것과 동일한 옵션을 제어하며, 데이터 원본에 설정된 옵션을 무시하는 데 사용됩니다. 예를 들어 애플리케이션에서 따옴표 붙은 식별자를 사용하는 경우 드라이버별 특성 SQL_COPT_SS_QUOTED_IDENT를 SQL_QI_ON으로 설정하여 데이터 원본의 설정에 관계없이 이 옵션이 항상 설정되도록 할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버에는 응용 프로그램에서 기능을 향상 시키기 위해 사용할 수 있는 여러 가지 확장 된 연결 특성이 있습니다. 이러한 특성 중 일부는 데이터 원본에 지정할 수 있는 것과 동일한 옵션을 제어하며, 데이터 원본에 설정된 옵션을 무시하는 데 사용됩니다. 예를 들어 애플리케이션에서 따옴표 붙은 식별자를 사용하는 경우 드라이버별 특성 SQL_COPT_SS_QUOTED_IDENT를 SQL_QI_ON으로 설정하여 데이터 원본의 설정에 관계없이 이 옵션이 항상 설정되도록 할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server &#40;ODBC&#41;와 통신](communicating-with-sql-server-odbc.md)  

@@ -19,18 +19,18 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 - implicit schema mapping
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 114bc96623b608cfbb520a9d2f35f23a04310a74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185b10d428217bad55d0b30720976562da84556e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014797"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703082"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
-  Updategram 또는 OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용 하 여 기존 XML 문서에서 데이터베이스를 수정 (삽입, 업데이트 또는 삭제) 할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATEGRAM 또는 OPENXML 함수를 사용 하 여 기존 XML 문서에서 데이터베이스를 수정 (삽입, 업데이트 또는 삭제) 할 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  OPENXML 함수는 기존 XML 문서를 조각화하여 INSERT, UPDATE 또는 DELETE 문에 전달할 수 있는 행 집합을 제공함으로써 데이터베이스를 수정합니다. OPENXML을 사용하면 작업이 데이터베이스 테이블에 대해 직접 수행되기 때문에 OPENXML은 테이블과 같은 행 집합 공급자를 원본으로 표시할 수 있는 경우에 가장 적합합니다.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "66014797"
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 주석이 추가 된 [XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)를 참조 하세요. XDR을 사용 하는 레거시 응용 프로그램의 경우 [SQLXML 4.0&#41;에서 사용 되지 &#40;주석이 추가 된 Xdr 스키마 ](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)를 참조 하세요.  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram의 필수 네임스페이스  
- Updategram의 키워드 (예: ** \<동기화>**, ** \<>전 **및 ** \<>이후 **는 `urn:schemas-microsoft-com:xml-updategram` 네임 스페이스에 존재 합니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서 `updg` 접두사는 `updategram` 네임스페이스를 나타냅니다.  
+ Updategram의 키워드 (예: ** \< 동기화>**, ** \<>전 **및 ** \<>이후 **는 네임 스페이스에 존재 합니다 `urn:schemas-microsoft-com:xml-updategram` . 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서 `updg` 접두사는 `updategram` 네임스페이스를 나타냅니다.  
   
 ## <a name="reviewing-syntax"></a>구문 검토  
- Updategram는 ** \<동기화>**, ** \<>하기 전 **및 ** \<>** 의 구문을 구성 하는 블록 이후의 템플릿입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
+ Updategram는 ** \< 동기화>**, ** \<>하기 전 **및>의 구문을 구성 하는 블록 ** \< 이후의** 템플릿입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -67,15 +67,15 @@ ms.locfileid: "66014797"
  데이터가 변경될 새 상태를 식별합니다.  
   
  **\<동기화>**  
- ** \<이전>** 와 ** \<>블록 이후** 를 포함 합니다. ** \<동기화>** 블록에는 ** \<>** 및 ** \<>블록 이후** 둘 이상의 집합이 포함 될 수 있습니다. ** \<>이전** 에를 두 개 이상 포함 ** \<>** 하는 경우 이러한 블록 (비어 있는 경우에도)은 쌍으로 지정 해야 합니다. 또한 updategram에는 두 개 이상의 ** \<동기화>** 블록이 있을 수 있습니다. 각 ** \<동기화>** 블록은 하나의 트랜잭션 단위입니다. 즉, ** \<sync>** 블록의 모든 항목을 수행 하거나 아무 것도 수행 하지 않습니다. Updategram에서 여러 ** \<동기화>** 블록을 지정 하는 경우 한 ** \<동기화>** 블록의 실패가 다른 ** \<동기화>** 블록에 영향을 주지 않습니다.  
+ ** \< 이전>** 와>블록 ** \< 이후** 를 포함 합니다. ** \< 동기화>** 블록에는 ** \<>** 및 ** \<>블록 이후** 둘 이상의 집합이 포함 될 수 있습니다. ** \<>이전** 에를 두 개 이상 포함 ** \<>** 하는 경우 이러한 블록 (비어 있는 경우에도)은 쌍으로 지정 해야 합니다. 또한 updategram에는 두 개 이상의 ** \< 동기화>** 블록이 있을 수 있습니다. 각 ** \< 동기화>** 블록은 하나의 트랜잭션 단위입니다. 즉, ** \< sync>** 블록의 모든 항목을 수행 하거나 아무 것도 수행 하지 않습니다. Updategram에서 여러 ** \< 동기화>** 블록을 지정 하는 경우 한 ** \< 동기화>** 블록의 실패가 다른 ** \< 동기화>** 블록에 영향을 주지 않습니다.  
   
- Updategram에서 레코드 인스턴스를 삭제, 삽입 또는 업데이트 하는 것은 ** \<>** ** \<이전>** 블록의 내용에 따라 달라 집니다.  
+ Updategram에서 레코드 인스턴스를 삭제, 삽입 또는 업데이트 하는 것은 ** \<>이전** ** \<>** 블록의 내용에 따라 달라 집니다.  
   
--   레코드 **인스턴스가 \<after>** 블록에 해당 하는 인스턴스가 없는 ** \<before>** 블록에만 나타나는 경우 updategram는 삭제 작업을 수행 합니다.  
+-   레코드 인스턴스가 ** \< after>** 블록에 해당 하는 인스턴스가 없는 ** \< before>** 블록에만 나타나는 경우 updategram는 삭제 작업을 수행 합니다.  
   
--   이전>블록에 해당 인스턴스가 없는 ** \<after>** 블록에만 레코드 인스턴스가 나타나는 경우 삽입 작업입니다. ** \<**  
+-   ** \< 이전>** 블록에 해당 인스턴스가 없는 ** \< after>** 블록에만 레코드 인스턴스가 나타나는 경우 삽입 작업입니다.  
   
--   레코드 인스턴스가 ** \<before>** 블록에 표시 되 고 ** \<after>** 블록에 해당 인스턴스가 있으면 업데이트 작업입니다. 이 경우 updategram는 레코드 인스턴스를 ** \<after>** 블록에 지정 된 값으로 업데이트 합니다.  
+-   레코드 인스턴스가 ** \< before>** 블록에 표시 되 고 ** \< after>** 블록에 해당 인스턴스가 있으면 업데이트 작업입니다. 이 경우 updategram는 레코드 인스턴스를 ** \< after>** 블록에 지정 된 값으로 업데이트 합니다.  
   
 ## <a name="specifying-a-mapping-schema-in-the-updategram"></a>Updategram에 매핑 스키마 지정  
  Updategram에는 매핑 스키마(XSD 및 XDR 스키마 모두 지원됨)에서 제공하는 XML 추상화를 암시적 또는 명시적으로 지정할 수 있습니다. 즉, updategram은 매핑 스키마가 지정되었는지 여부에 관계없이 작업을 수행할 수 있습니다. 매핑 스키마를 지정 하지 않으면 updategram는 암시적 매핑 (기본 매핑)을 가정 합니다. 여기서는 ** \<>** 블록 ** \<>앞** 의 각 요소가 테이블에 매핑되고 각 요소의 자식 요소나 특성이 데이터베이스의 열에 매핑됩니다. 매핑 스키마를 명시적으로 지정할 경우에는 updategram의 요소 및 특성이 매핑 스키마의 요소 및 특성과 일치해야 합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "66014797"
 ### <a name="implicit-default-mapping"></a>암시적(기본) 매핑  
  일반적으로 간단한 업데이트를 수행하는 updategram에는 매핑 스키마가 필요하지 않습니다. 이 경우에는 기본 매핑 스키마가 사용됩니다.  
   
- 다음 updategram은 암시적 매핑을 보여 줍니다. 이 예에서 updategram은 Sales.Customer 테이블에 새 고객을 추가합니다. 이 updategram는 암시적 매핑을 사용 하기 때문 \<에 Sales. customer> 요소는 sales. customer 테이블에 매핑되고 CustomerID 및 SalesPersonID 특성은 Sales. customer 테이블의 해당 열에 매핑됩니다.  
+ 다음 updategram은 암시적 매핑을 보여 줍니다. 이 예에서 updategram은 Sales.Customer 테이블에 새 고객을 추가합니다. 이 updategram는 암시적 매핑을 사용 하기 때문에 sales. \< customer> 요소는 sales. customer 테이블에 매핑되고 CustomerID 및 SalesPersonID 특성은 sales. customer 테이블의 해당 열에 매핑됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -108,7 +108,7 @@ ms.locfileid: "66014797"
  Updategram에 매핑 스키마가 지정되지 않은 기본 매핑의 경우 updategram 요소는 테이블에 매핑되고 자식 요소(요소 중심 매핑)와 특성(특성 중심 매핑)은 열에 매핑됩니다.  
   
 ### <a name="element-centric-mapping"></a>요소 중심 매핑  
- 요소 중심 updategram의 경우 요소에는 요소의 속성을 나타내는 자식 요소가 포함됩니다. 한 가지 예로 다음 updategram을 참조하십시오. ** \<Person. Contact>** 요소는 ** \<FirstName>** 및 ** \<LastName>** 자식 요소를 포함 합니다. 이러한 자식 요소는 ** \<Person. Contact>** 요소의 속성입니다.  
+ 요소 중심 updategram의 경우 요소에는 요소의 속성을 나타내는 자식 요소가 포함됩니다. 한 가지 예로 다음 updategram을 참조하십시오. ** \< Person. Contact>** 요소는 ** \< FirstName>** 및 ** \< LastName>** 자식 요소를 포함 합니다. 이러한 자식 요소는 ** \< Person. Contact>** 요소의 속성입니다.  
   
  이 updategram는 매핑 스키마를 지정 하지 않기 때문에 ** \<>** updategram는 요소를 person. contact 테이블에 매핑하고 해당 자식 요소를 FirstName 및 LastName 열에 매핑합니다.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66014797"
 ```  
   
 ### <a name="attribute-centric-mapping"></a>특성 중심 매핑  
- 특성 중심 매핑에서는 요소가 특성을 포함합니다. 다음 updategram은 특성 중심 매핑을 사용합니다. 이 예에서는 ** \<Person. Contact>** 요소는 **FirstName** 및 **LastName** 특성으로 구성 됩니다. 이러한 특성은 ** \<Person. Contact>** 요소의 속성입니다. 이전 예제에서와 같이이 updategram는 ** \<** 매핑 스키마를 지정 하지 않으므로 암시적 매핑을 사용 하 여 person을 매핑합니다. contact>요소를 person. contact 테이블 및 요소의 특성을 테이블의 각 열에 매핑합니다.  
+ 특성 중심 매핑에서는 요소가 특성을 포함합니다. 다음 updategram은 특성 중심 매핑을 사용합니다. 이 예에서는 ** \< Person. Contact>** 요소는 **FirstName** 및 **LastName** 특성으로 구성 됩니다. 이러한 특성은 ** \< Person. Contact>** 요소의 속성입니다. 이전 예제에서와 같이이 updategram는 매핑 스키마를 지정 하지 않으므로 암시적 매핑을 사용 하 여 person을 매핑합니다 ** \< . contact>** 요소를 person. contact 테이블 및 요소의 특성을 테이블의 각 열에 매핑합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -141,7 +141,7 @@ ms.locfileid: "66014797"
 ```  
   
 ### <a name="using-both-element-centric-and-attribute-centric-mapping"></a>요소 중심 및 특성 중심 매핑 모두 사용  
- 다음 updategram과 같이 요소 중심 및 특성 중심 매핑을 혼합하여 지정할 수 있습니다. Person. Contact>요소는 특성과 자식 요소를 모두 포함 합니다. ** \<** 또한 이 updategram에는 암시적 매핑이 사용됩니다. 따라서 **FirstName** 특성과 ** \<LastName>** 자식 요소는 Person. Contact 테이블의 해당 열에 매핑됩니다.  
+ 다음 updategram과 같이 요소 중심 및 특성 중심 매핑을 혼합하여 지정할 수 있습니다. ** \< Person. Contact>** 요소는 특성과 자식 요소를 모두 포함 합니다. 또한 이 updategram에는 암시적 매핑이 사용됩니다. 따라서 **FirstName** 특성과 ** \< LastName>** 자식 요소는 Person. Contact 테이블의 해당 열에 매핑됩니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -160,9 +160,9 @@ ms.locfileid: "66014797"
 ## <a name="working-with-characters-valid-in-sql-server-but-not-valid-in-xml"></a>SQL Server에서는 유효하지만 XML에서는 유효하지 않은 문자 사용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 테이블 이름에 공백이 포함될 수 있지만 이러한 형식의 테이블 이름은 XML에서는 유효하지 않습니다.  
   
- 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효한 XML 식별자가 아닌 문자를 인코딩하려면 ' __xHHHH\_\_'를 인코딩 값으로 사용 합니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다. 이 인코딩 체계를 사용 하면 공백 문자가 x0020 (공백 문자에 대 한 4 자리 16 진수 코드)로 바뀝니다. 따라서의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 이름 [Order Details]는 XML로 _x005B_Order_x0020_Details_x005D\_ 됩니다.  
+ 유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효한 XML 식별자가 아닌 문자를 인코딩하려면 ' __xHHHH \_ \_ '를 인코딩 값으로 사용 합니다. 여기서 HHHH는 가장 중요 한 비트 우선 순서로 문자에 대 한 4 자리 16 진수 UCS-2 코드를 나타냅니다. 이 인코딩 체계를 사용 하면 공백 문자가 x0020 (공백 문자에 대 한 4 자리 16 진수 코드)로 바뀝니다. 따라서의 테이블 이름 [Order Details]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \_ XML로 _x005B_Order_x0020_Details_x005D 됩니다.  
   
- 마찬가지로 [database]와 \<같은 세 부분으로 구성 된 요소 이름을 지정 해야 할 수도 있습니다. [owner]. [테이블] >입니다. XML에서는 대괄호 문자 ([및])가 유효 하지 않기 \<때문에이를 _x005B_database_x005D\__x005B_owner_x005D\_. _x005B_table_x005D\_>로 지정 해야 합니다. 여기서 _x005B\_ 는 왼쪽 대괄호 ([)의 인코딩입니다. _x005D\_ 는 오른쪽 대괄호 (])의 인코딩입니다.  
+ 마찬가지로 [database]와 같은 세 부분으로 구성 된 요소 이름을 지정 해야 할 수도 있습니다 \< . owner]. [테이블] >입니다. XML에서는 대괄호 문자 ([및])가 유효 하지 않기 때문에이를 \< _x005B_database_x005D _x005B_owner_x005D. _x005B_table_x005D>로 지정 해야 합니다. \_ \_ \_ 여기서 _x005B \_ 는 왼쪽 대괄호 ([)의 인코딩입니다. _x005D는 \_ 오른쪽 대괄호 (])의 인코딩입니다.  
   
 ## <a name="executing-updategrams"></a>Updategram 실행  
  Updategram은 템플릿이기 때문에 템플릿의 모든 처리 메커니즘이 적용됩니다. SQLXML 4.0에서는 다음 방법 중 하나로 updategram을 실행할 수 있습니다.  

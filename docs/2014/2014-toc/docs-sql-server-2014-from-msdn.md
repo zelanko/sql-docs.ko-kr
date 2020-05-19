@@ -1,20 +1,20 @@
 ---
 title: SQL Server 2014 문서 이동 중 | Microsoft Docs
 description: SQL Server 2014에 대 한 Microsoft 설명서는 MSDN에서 문서에 대 한 7 월 2018 일 이전에 진행 됩니다.
-author: mightypen
+author: rothja
 manager: craigg
 ms.prod: sql-server-2014
 ms.custom: ''
 ms.topic: article
 ms.date: 04/26/2018
-ms.author: genemi
+ms.author: jroth
 ms.reviewer: sudeepk
-ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe626ad99e4e0c5842d3551c8864116ee7b8634
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62473642"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82693714"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>SQL Server 2014용 문서가 Docs로 이동 중
 

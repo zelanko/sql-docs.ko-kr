@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - statements [ODBC]
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 841ba81e4459fe08b207ee87c2c27f1fbe7ba73e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200328"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700816"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
     
@@ -35,11 +35,11 @@ ms.locfileid: "63200328"
   
 5.  SQLExecDirect를 사용하여 문을 직접 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      문이 준비되어 있는 경우 [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)를 사용하여 여러 번 실행합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      카탈로그 함수를 호출하여 결과가 반환되도록 합니다.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63200328"
   
      문의 결과 집합을 한 번에 한 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   

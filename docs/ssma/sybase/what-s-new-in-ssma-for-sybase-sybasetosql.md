@@ -3,22 +3,29 @@ title: SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 7f23c7e1c676b4ade42b43cf963e0fa6956f93c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625592"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220678"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
 이 문서에서는 각 릴리스의 SAP ASE (이전에는 Sybase 용 SSMA) 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+SAP ASE 용 SSMA의 v 8.9 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 날짜 및 시간 형식 변환 향상
+* 개체에 대 한 SQL 정의에 누락 문자가 있는 문제에 대 한 수정
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -39,7 +46,7 @@ SAP ASE 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 SAP ASE 용 SSMA의 hyper-v 8.6 릴리스를 향상 시켰습니다.
 
-이 설정을 활용 하려면 SAP ASE 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 SAP ASE 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../sybase/media/ssma-omit-extended-properties.png)
 
@@ -67,7 +74,7 @@ SAP ASE 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 
 SAP ASE 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다. 또한이 SAP ASE 용 SSMA 릴리스는 다음과 같은 수정 사항을 제공 합니다.
 
 * 접근성 문제 해결
-* SQL Server 형식에 대 `hierarchyid` 한 기본 지원 추가
+* SQL Server 형식에 대 한 기본 지원 추가 `hierarchyid`
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -142,7 +149,7 @@ SAP ASE 용 SSMA의 v 7.6 릴리스에는 다음과 같은 변경 내용이 포�
 SAP ASE 용 SSMA의 v2.0 릴리스 (이전에는 Sybase 용 SSMA)에는 다음 변경 내용이 포함 되어 있습니다.
 
 * 장애가 있는 사용자에 게 더 많은 접근성을 보장 하기 위해 몇 가지 기능이 향상 되었습니다.
-* `CREATE OR REPLACE` 구문 지원.
+* 구문 지원 `CREATE OR REPLACE` .
 
 ## <a name="ssma-v74"></a>SSMA v 7.4
 
@@ -193,8 +200,8 @@ Sybase 용 SSMA의 2016 년 5 월 릴리스에서는 다음과 같은 변경 내
 * SQL Server 2016에 대 한 지원이 추가 되었습니다.
 * .NET 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
 * .NET 3.5에서 .NET 4.0으로 확장 팩 종속성을 업데이트 했습니다.
-* SSMA `open-project` 콘솔에 대 한 및 명령이 수정 `save-project` 되었습니다.
-* SSMA 콘솔에 대 한 고정 `securepassword` 명령입니다.
+* `save-project` `open-project` Ssma 콘솔에 대 한 및 명령이 수정 되었습니다.
+* `securepassword`SSMA 콘솔에 대 한 고정 명령입니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * 전역 설정에서 버그가 수정 되었습니다.
 
@@ -236,7 +243,7 @@ Sybase 용 SSMA의 4 월 2014 릴리스에는 다음과 같은 변경 내용이 
 Sybase 용 SSMA의 1 월 2012 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
 * 롤백 트리거 변환에 대 한 지원이 추가 되었습니다.
-* 같은 `SET` 문에서 및 `@@ERROR` 를 `@@ROWCOUNT` 변환 하기 위한 수정이 제공 되었습니다.
+* 같은 문에서 및를 변환 하기 위한 수정이 제공 `@@ROWCOUNT` `@@ERROR` `SET` 되었습니다.
 
 ## <a name="july-2011"></a>2011년 7월
 
@@ -246,16 +253,16 @@ Sybase 용 SSMA의 7 월 2011 릴리스는 데이터 마이그레이션 중에 �
 
 Sybase 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
 
-* [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] 및 Azure SQL을 지 원하는 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]통합 된 "Sybase 용 ssma" 제품입니다.
-* 에 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]연결 및 마이그레이션에 대 한 지원이 추가 되었습니다.
+* [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], 및 Azure SQL을 지 원하는 통합 된 "Sybase 용 ssma" 제품 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] [!INCLUDE [ssSQL11](../../includes/ssSQL11-md.md)] 입니다.
+* 에 연결 및 마이그레이션에 대 한 지원이 추가 되었습니다 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * Sybase 데이터베이스를 Azure SQL로 변환 하 고 마이그레이션하는 새 기능이 추가 되었습니다.
 * 데이터의 병렬 마이그레이션을 지 원하는 향상 된 클라이언트 쪽 데이터 마이그레이션 엔진.
 * 단순 및 대량 로그 복구 모델로 데이터 마이그레이션 성능이 개선 되었습니다.
 * 대/소문자를 구분 하는 Sybase 데이터베이스를 대/소문자를 구분 하는 SQL Server으로 올바르게 변환 하 고 마이그레이션하는 기능이 추가 되었습니다.
 * SQL Server ANSI join 문이 DELETE 및 UPDATE 문으로 확장 되었으므로 Sybase ASE 비 ANSI 조인 문 변환에 대 한 지원이 추가 되었습니다.
 * Sybase ASE ODBC 공급자 및 Sybase ASE ADO.NET 공급자를 사용 하 여 Sybase ASE 서버에 연결 하기 위한 추가 연결 옵션을 제공 했습니다.
-* Sybase 에뮬레이션 함수 (확장 팩의 일부로 `SysDB`설치 됨)를 포함 하는 라는 별도의 데이터베이스에 대 한 종속성이 제거 되었습니다.
-* 클러스터에 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] Sybase 확장 팩용 ssma를 설치 하는 기능이 추가 되었습니다.
+* `SysDB`Sybase 에뮬레이션 함수 (확장 팩의 일부로 설치 됨)를 포함 하는 라는 별도의 데이터베이스에 대 한 종속성이 제거 되었습니다.
+* 클러스터에 Sybase 확장 팩용 SSMA를 설치 하는 기능이 추가 되었습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)에서 만든 프로젝트의 이전 버전과의 호환성이 추가 되었습니다.
 * 이전 버전의 SSMA (v 4.0 및 v 4.2)와 함께 Sybase v 5.0 용 SSMA 제품을 함께 설치 하는 기능이 추가 되었습니다.
 
@@ -278,9 +285,9 @@ Sybase 용 SSMA의 6 월 2008 릴리스에는 다음과 같은 변경 내용이 
 * 개체 변환에 향상 된 기능이 추가 되었습니다.
   * 조인 변환이 수정 되었습니다.
   * Having/group by 절 없이 집계 및 비 집계
-  * `SELECT INTO` 문이 포함 된 `IDENTITY` 함수입니다.
+  * `IDENTITY`문이 포함 된 함수 `SELECT INTO` 입니다.
   * 데이터 전용의 클러스터형 제약 조건 및 인덱스-잠김
-  * 에서 `SELECT INTO`만든 임시 테이블
+  * 에서 만든 임시 테이블 `SELECT INTO`
   * 임시 테이블에 대 한 제약 조건/인덱스.
   * 새 [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] datetime 형식이 지원 됩니다.
   * Sybase 15.0 연결 및 데이터 형식이 지원 됩니다.
@@ -301,15 +308,15 @@ Sybase 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이
   * 편집기 창에 줄 번호를 표시 하도록 선택할 수 있습니다.
   * 중복 된 개체를 바꿀지 묻는 메시지를 표시 하도록 SSMA를 구성 하거나 스키마를 변환 하는 동안 중복 개체를 항상 또는 절대 바꾸지 않도록 구성할 수 있습니다.
 * SSMA에서 다음과 같은 상황을 처리 하는 방법을 구성할 수 있는 새로운 변환 옵션이 추가 되었습니다.
-  * 이진 `CAST` 문자열 `CONVERT` 을 포함 하는 또는 문입니다.
+  * `CAST` `CONVERT` 이진 문자열을 포함 하는 또는 문입니다.
   * 같음 식에서 null 값을 확인 합니다.
   * 프록시 테이블
-  * 의 `RAISERROR`사용자 메시지 오류 번호입니다.
+  * 의 사용자 메시지 오류 번호 `RAISERROR` 입니다.
   * `UPDATE`확인 되지 않은 식별자를 포함 하는 문입니다.
-* 에서 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 범위 밖에 있는 날짜를 처리 하는 방법을 지정할 수 있는 새로운 마이그레이션 옵션을 추가 했습니다.
+* 에서 날짜 범위 밖에 있는 날짜를 처리 하는 방법을 지정할 수 있는 새로운 마이그레이션 옵션을 추가 했습니다 [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] .
 * 가독성 향상을 위해 코드의 형식을 지정 하는 **sql** 탭에 **형식이 지정 된 sql** 설정이 추가 되었습니다.
 * 다음을 포함 한 버그 수정
-  * 이제 SSMA는 `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` 테이블의 후속 `SELECT` 쿼리에 `TABLOCK` 또는 `TABLOCKX` 힌트를 추가 하 여 문을 변환 합니다.
+  * 이제 SSMA는 `LOCK TABLE <table> IN { SHARED | EXCLUSIVE } MODE` `TABLOCK` `TABLOCKX` 테이블의 후속 쿼리에 또는 힌트를 추가 하 여 문을 변환 `SELECT` 합니다.
   * 이제 문자 식에서 이진 형식을 사용 하는 경우 필요한 캐스팅이 추가 됩니다.
   * 메모리 및 성능 향상.
 

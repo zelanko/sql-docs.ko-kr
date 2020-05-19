@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702192"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 SQL_ATTR_CONNECTION_TIMEOUT의 설정을 무시합니다.  
@@ -46,22 +46,22 @@ ms.locfileid: "68207106"
 |SQL_COPT_SS_BROWSE_CONNECT|이전|  
 |SQL_COPT_SS_BROWSE_SERVER|이전|  
 |SQL_COPT_SS_CONCAT_NULL|이전|  
-|SQL_COPT_SS_CONNECTION_DEAD|After|  
+|SQL_COPT_SS_CONNECTION_DEAD|이러한|  
 |SQL_COPT_SS_ENCRYPT|이전|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After|  
-|SQL_COPT_SS_ENLIST_IN_XA|After|  
+|SQL_COPT_SS_ENLIST_IN_DTC|이러한|  
+|SQL_COPT_SS_ENLIST_IN_XA|이러한|  
 |SQL_COPT_SS_FALLBACK_CONNECT|이전|  
 |SQL_COPT_SS_FAILOVER_PARTNER|이전|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|이전|  
 |SQL_COPT_SS_MARS_ENABLED|이전|  
 |SQL_COPT_SS_MULTISUBMIT_FAILOVER|이전|  
 |SQL_COPT_SS_OLDPWD|이전|  
-|SQL_COPT_SS_PERF_DATA|After|  
-|SQL_COPT_SS_PERF_DATA_LOG|After|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
-|SQL_COPT_SS_PERF_QUERY|After|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After|  
+|SQL_COPT_SS_PERF_DATA|이러한|  
+|SQL_COPT_SS_PERF_DATA_LOG|이러한|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|이러한|  
+|SQL_COPT_SS_PERF_QUERY|이러한|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|이러한|  
+|SQL_COPT_SS_PERF_QUERY_LOG|이러한|  
 |SQL_COPT_SS_PRESERVE_CURSORS|이전|  
 |SQL_COPT_SS_QUOTED_IDENT|여기서는|  
 |SQL_COPT_SS_TRANSLATE|여기서는|  
@@ -71,7 +71,7 @@ ms.locfileid: "68207106"
 |SQL_COPT_SS_USER_DATA|여기서는|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|이전|  
   
- 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 동일한 세션, 데이터베이스 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 상태에 대해 사전 연결 특성 및 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 사용하면 예기치 못한 동작이 발생할 수 있습니다. 예제:  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -91,13 +91,13 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
  연결 풀링을 사용 하는 경우 SQLSetConnectAttr를 사용 하는 대신 연결 문자열에 SQL_COPT_SS_ANSI_NPW를 설정 해야 합니다. 연결 풀링을 사용할 경우 연결이 설정된 후 이 특성을 변경하려고 시도하면 자동으로 실패합니다.  
   
 ## <a name="sql_copt_ss_application_intent"></a>SQL_COPT_SS_APPLICATION_INTENT  
- 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 `Readonly` 및 `ReadWrite`입니다. 예를 들어:  
+ 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 `Readonly` 및 `ReadWrite`입니다. 다음은 그 예입니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 기본값은 `ReadWrite`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 지원에 대 한 자세한 내용은 [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ 기본값은 `ReadWrite`입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
   
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME은 연결할 수 있는 데이터베이스의 주 파일 이름을 지정합니다. 이 데이터베이스는 연결되어 해당 연결에 대한 기본 데이터베이스가 됩니다. SQL_COPT_SS_ATTACHDBFILENAME를 사용 하려면 데이터베이스의 이름을 connection 특성 SQL_ATTR_CURRENT_CATALOG 값으로 지정 하거나 [SQLDriverConnect](sqldriverconnect.md)의 database = 매개 변수에 지정 해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않습니다.  
@@ -127,7 +127,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |값|설명|  
 |-----------|-----------------|  
-|컴퓨터 이름|**SQLBrowseConnect** 는 지정 된 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있는 인스턴스 목록을 반환 합니다. 서버 이름에\\\\는 이중 백슬래시 ()를 사용 하지 않아야 합니다. 예를 들어 \\\myserver, MyServer를 사용 해야 합니다.|  
+|컴퓨터 이름|**SQLBrowseConnect** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에 있는 인스턴스 목록을 반환 합니다. \\ \\ 서버 이름에는 이중 백슬래시 ()를 사용 하지 않아야 합니다. 예를 들어 \\ \Myserver, MyServer를 사용 해야 합니다.|  
 |NULL|기본값 **SQLBrowseConnect** 는 도메인에 있는 모든 서버에 대 한 정보를 반환 합니다.|  
   
 ## <a name="sql_copt_ss_concat_null"></a>SQL_COPT_SS_CONCAT_NULL  
@@ -149,7 +149,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_EN_OFF|연결을 암호화하지 않습니다. 이것이 기본값입니다.|  
   
 ## <a name="sql_copt_ss_enlist_in_dtc"></a>SQL_COPT_SS_ENLIST_IN_DTC  
- 클라이언트는 ms dtc (Microsoft DTC(Distributed Transaction Coordinator)) OLE DB **ITransactionDispenser:: BeginTransaction** 메서드를 호출 하 여 ms dtc 트랜잭션을 시작 하 고 해당 트랜잭션을 나타내는 ms dtc 트랜잭션 개체를 만듭니다. 그런 다음 응용 프로그램 `SQLSetConnectAttr` 은 SQL_COPT_SS_ENLIST_IN_DTC 옵션을 사용 하 여를 호출 하 여 트랜잭션 개체를 ODBC 연결과 연결 합니다. 관련된 모든 데이터베이스 작업은 MS DTC 트랜잭션의 보호 아래 수행됩니다. 응용 프로그램은 `SQLSetConnectAttr` SQL_DTC_DONE를 사용 하 여를 호출 하 여 연결의 DTC 연결을 종료 합니다.  
+ 클라이언트는 ms dtc (Microsoft DTC(Distributed Transaction Coordinator)) OLE DB **ITransactionDispenser:: BeginTransaction** 메서드를 호출 하 여 ms dtc 트랜잭션을 시작 하 고 해당 트랜잭션을 나타내는 ms dtc 트랜잭션 개체를 만듭니다. 그런 다음 응용 프로그램은 `SQLSetConnectAttr` SQL_COPT_SS_ENLIST_IN_DTC 옵션을 사용 하 여를 호출 하 여 트랜잭션 개체를 ODBC 연결과 연결 합니다. 관련된 모든 데이터베이스 작업은 MS DTC 트랜잭션의 보호 아래 수행됩니다. 응용 프로그램은 `SQLSetConnectAttr` SQL_DTC_DONE를 사용 하 여를 호출 하 여 연결의 DTC 연결을 종료 합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -157,7 +157,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_DTC_DONE|DTC 트랜잭션의 종료를 구분합니다.|  
   
 ## <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA  
- XA 호환 트랜잭션 프로세서 (TP)를 사용 하 여 XA 트랜잭션을 시작 하기 위해 클라이언트는 Open Group **tx_begin** 함수를 호출 합니다. 그런 다음 응용 프로그램 `SQLSetConnectAttr` 은 SQL_COPT_SS_ENLIST_IN_XA 매개 변수 TRUE로를 호출 하 여 XA 트랜잭션을 ODBC 연결과 연결 합니다. 관련된 모든 데이터베이스 작업은 XA 트랜잭션의 보호 아래 수행됩니다. ODBC 연결을 사용 하 여 XA 연결을 종료 하려면 클라이언트는 SQL_COPT_SS_ENLIST_IN_XA `SQLSetConnectAttr` 매개 변수를 FALSE로 설정 하 여를 호출 해야 합니다. 자세한 내용은 Microsoft Distributed Transaction Coordinator 설명서를 참조하십시오.  
+ XA 호환 트랜잭션 프로세서 (TP)를 사용 하 여 XA 트랜잭션을 시작 하기 위해 클라이언트는 Open Group **tx_begin** 함수를 호출 합니다. 그런 다음 응용 프로그램은 `SQLSetConnectAttr` SQL_COPT_SS_ENLIST_IN_XA 매개 변수 TRUE로를 호출 하 여 XA 트랜잭션을 ODBC 연결과 연결 합니다. 관련된 모든 데이터베이스 작업은 XA 트랜잭션의 보호 아래 수행됩니다. ODBC 연결을 사용 하 여 XA 연결을 종료 하려면 클라이언트는 `SQLSetConnectAttr` SQL_COPT_SS_ENLIST_IN_XA 매개 변수를 FALSE로 설정 하 여를 호출 해야 합니다. 자세한 내용은 Microsoft Distributed Transaction Coordinator 설명서를 참조하십시오.  
   
 ## <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT  
  이 특성은 더 이상 지원되지 않습니다.  
@@ -188,13 +188,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  MARS에 대 한 자세한 내용은 [mars&#41;&#40;여러 활성 결과 집합 사용 ](../native-client/features/using-multiple-active-result-sets-mars.md)을 참조 하세요.  
   
 ## <a name="sql_copt_ss_multisubnet_failover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
- 애플리케이션이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 예를 들어:  
+ 애플리케이션이 다른 서브넷에 있는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG(가용성 그룹)에 연결하는 경우 이 연결 속성을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 현재 활성 서버를 보다 빠르게 검색하고 연결할 수 있도록 구성됩니다. 다음은 그 예입니다.  
   
 ```  
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 지원에 대 한 자세한 내용은 [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
   
 |값|설명|  
 |-----------|-----------------|  

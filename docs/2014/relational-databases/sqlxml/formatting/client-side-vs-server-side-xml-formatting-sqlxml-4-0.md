@@ -15,21 +15,21 @@ helpviewer_keywords:
 - AUTO mode
 - client-side XPath
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012346"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702880"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>클라이언트 쪽 서식에서 지원되지 않는 여러 행 집합 쿼리  
- 클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. Sql: query>블록에 두 개의 SELECT 문이 있는이 샘플 템플릿을 살펴보겠습니다. ** \<**  
+ 클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. ** \< Sql: query>** 블록에 두 개의 SELECT 문이 있는이 샘플 템플릿을 살펴보겠습니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,12 +40,12 @@ ms.locfileid: "66012346"
 </ROOT>  
 ```  
   
- 애플리케이션 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 별도의 두 ** \<sql: query>** 블록으로 쿼리를 지정 하는 경우 원하는 결과를 얻을 수 있습니다.  
+ 애플리케이션 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 별도의 두 ** \< sql: query>** 블록으로 쿼리를 지정 하는 경우 원하는 결과를 얻을 수 있습니다.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
  서버 쪽 XML 서식에서 `timestamp` 형식의 데이터베이스 열은 쿼리에 XMLDATA 옵션이 지정된 경우 i8 XDR 형식에 매핑됩니다.  
   
- 클라이언트 쪽 XML 서식에서 `timestamp` 형식의 데이터베이스 열은 쿼리에 이진 Base64 옵션이 지정되어 있는지 여부에 따라 `uri` 또는 `bin.base64` XDR 형식에 매핑됩니다. `bin.base64` XDR 형식은 updategram 및 bulkload 기능을 사용 하는 경우에 유용 합니다 .이 형식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` 형식으로 변환 되기 때문입니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
+ 클라이언트 쪽 XML 서식에서 `timestamp` 형식의 데이터베이스 열은 쿼리에 이진 Base64 옵션이 지정되어 있는지 여부에 따라 `uri` 또는 `bin.base64` XDR 형식에 매핑됩니다. `bin.base64`XDR 형식은 updategram 및 bulkload 기능을 사용 하는 경우에 유용 합니다 .이 형식은 형식으로 변환 되기 때문입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `timestamp` . 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>서버 쪽 서식에는 중첩이 많은 VARIANT가 사용됨  
  서버 쪽 XML 서식에는 중첩이 많은 VARIANT 형식이 사용됩니다. 클라이언트 쪽 XML 서식을 사용하는 경우 변형은 유니코드 문자열로 변환되고 VARIANT의 하위 유형은 사용되지 않습니다.  

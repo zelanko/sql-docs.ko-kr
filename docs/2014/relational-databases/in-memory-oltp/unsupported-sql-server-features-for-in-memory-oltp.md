@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157238"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702221"
 ---
 # <a name="supported-sql-server-features"></a>지원되는 SQL Server 기능
   이 항목에서는 메모리 최적화 개체와 함께 사용할 수 있거나 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대해 설명합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "63157238"
   
 -   제한 사항이 있는 Service Broker. 고유하게 컴파일된 저장 프로시저에서 큐에 액세스할 수 없습니다. 메모리 최적화 테이블에 액세스하는 트랜잭션에서 원격 데이터베이스에 있는 큐에 액세스할 수 없습니다.  
   
--   장애 조치 (failover) 클러스터링: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alwayson 제공의 일부로 Alwayson 장애 조치 (Failover) 클러스터 인스턴스는 WSFC (Windows Server 장애 조치 (Failover) 클러스터링) 기능을 사용 하 여 fci (장애 조치 (failover) 클러스터 인스턴스)에서 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공 합니다 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
+-   장애 조치 (failover) 클러스터링: alwayson 제공의 일부로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Alwayson 장애 조치 (failover) 클러스터 인스턴스는 WSFC (Windows Server 장애 조치 (failover) 클러스터링) 기능을 사용 하 여 FCI (장애 조치 (failover) 클러스터 인스턴스)에서 서버 인스턴스 수준의 중복성을 통해 로컬 고가용성을 제공 합니다 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
 -   AlwaysOn과 통합: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 AlwaysOn을 비롯하여 서버 또는 데이터베이스의 고가용성 유지를 위한 여러 가지 옵션을 제공합니다. 자세한 내용은 [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)을 참조하세요.  
   

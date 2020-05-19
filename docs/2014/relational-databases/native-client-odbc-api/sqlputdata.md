@@ -11,32 +11,32 @@ topic_type:
 helpviewer_keywords:
 - SQLPutData function
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046628"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702198"
 ---
 # <a name="sqlputdata"></a>SQLPutData
-  SQLPutData를 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) 또는 SQL_LONGVARBINARY (`image`) 열에 대해 65535 바이트 이상의 데이터 (버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다.  
+  SQLPutData를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) 또는 SQL_LONGVARBINARY () 열에 대해 65535 바이트 이상의 데이터 (버전 4.21 a) 또는 400 KB의 데이터 (SQL Server 버전 6.0 이상)를 전송 하는 경우 다음과 같은 제한 사항이 적용 됩니다 `image` .  
   
 -   참조 된 매개 변수는 INSERT 문에서 *insert_value* 수 있습니다.  
   
 -   참조 된 매개 변수는 UPDATE 문의 SET 절에 있는 *식일* 수 있습니다.  
   
- 을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. Sqlcancel `ntext`이 호출 `image` 될 때 참조 된 `text`, 또는 열은 중간 자리 표시자 값으로 설정 됩니다.  
+ 을 실행 하는 서버에 블록의 데이터를 제공 하는 SQLPutData 호출의 시퀀스를 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하면 버전 6.5 또는 이전 버전을 사용할 때 열의 값이 부분적으로 업데이트 됩니다. `text` `ntext` `image` Sqlcancel이 호출 될 때 참조 된, 또는 열은 중간 자리 표시자 값으로 설정 됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 및 이전 버전에 대한 연결을 지원하지 않습니다.  
   
 ## <a name="diagnostics"></a>진단  
- SQLPutData [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대해 하나의 Native CLIENT 특정 SQLSTATE가 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLPutData에 대해 하나의 Native Client 특정 SQLSTATE가 있습니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Error|설명|  
 |--------------|-----------|-----------------|  
 |22026|문자열 데이터, 길이가 일치하지 않음|전송할 데이터 길이 (바이트)를 응용 프로그램에서 지정 하는*경우 (예*SQL_LEN_DATA_AT_EXEC: *n* 이 0 보다 큰 경우)에는 sqlputdata를 통해 응용 프로그램에서 제공 하는 총 바이트 수가 지정 된 길이와 일치 해야 합니다.|  
   

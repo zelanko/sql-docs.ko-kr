@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225535"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701988"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서의 대량 복사에 사용하기 위해 사용자 파일에서 찾는 총 열 수를 설정합니다. bcp_columns 및 [bcp_colfmt](bcp-colfmt.md)대신 [bcp_setbulkmode](bcp-setbulkmode.md) 를 사용할 수 있습니다.  
@@ -47,7 +47,7 @@ nColumns
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
  *nColumns*  
- 사용자 파일에 포함된 총 열 수입니다. 사용자 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 대량 복사 하 고 사용자 파일의 모든 열을 복사 하지 않으려는 경우에도 *ncolumns* 를 총 사용자 파일 열 수로 설정 해야 합니다.  
+ 사용자 파일에 포함된 총 열 수입니다. 사용자 파일에서 테이블로 데이터를 대량 복사 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 사용자 파일의 모든 열을 복사 하지 않으려는 경우에도 *ncolumns* 를 총 사용자 파일 열 수로 설정 해야 합니다.  
   
 ## <a name="returns"></a>반환  
  SUCCEED 또는 FAIL  
@@ -57,7 +57,7 @@ nColumns
   
  기본값과는 다른 사용자 파일 형식을 사용하려는 경우에만 이 함수를 호출해야 합니다. 기본 사용자 파일 형식에 대 한 자세한 내용은 **bcp_init**를 참조 하십시오.  
   
- 를 호출한 `bcp_columns`후 사용자 파일의 각 열에 대해 [bcp_colfmt](bcp-colfmt.md)를 호출 하 여 사용자 지정 파일 형식을 완전히 정의 해야 합니다.  
+ 를 호출한 후 `bcp_columns` 사용자 파일의 각 열에 대해 [bcp_colfmt](bcp-colfmt.md)를 호출 하 여 사용자 지정 파일 형식을 완전히 정의 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  

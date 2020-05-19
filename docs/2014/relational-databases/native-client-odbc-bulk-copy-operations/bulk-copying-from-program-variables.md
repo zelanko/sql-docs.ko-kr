@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - program variables [ODBC]
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206846"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702120"
 ---
 # <a name="bulk-copying-from-program-variables"></a>프로그램 변수에서 대량 복사
   프로그램 변수에서 직접 대량 복사를 수행할 수 있습니다. 행의 데이터를 보유할 변수를 할당하고 [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 를 호출하여 대량 복사를 시작한 후 각 열에 대해 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) 를 호출하여 열과 연결될 프로그램 변수의 위치와 서식을 지정합니다. 각 변수에 데이터를 채운 다음 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 를 호출하여 데이터 행 하나를 서버에 전송합니다. 모든 행을 서버에 전송할 때까지 변수에 데이터를 채우고 **bcp_sendrow** 를 호출하는 과정을 반복한 후 [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) 을 호출하여 작업이 완료되었음을 지정합니다.  
@@ -104,7 +104,7 @@ GO
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 interval 데이터 형식을 직접 지원하지 않습니다. 하지만 애플리케이션에서 interval 이스케이프 시퀀스를 문자열로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 열에 저장할 수 있습니다. 나중에 애플리케이션에서 이러한 문자열을 읽을 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에는 해당 문자열을 사용할 수 없습니다.  
   
- 대량 복사 함수를 사용하면 ODBC 데이터 원본에서 읽은 데이터를 빠르게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 로드할 수 있습니다. 데이터 변수 하나만 있는 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) 의 지침에 따라 결과 집합의 열을 프로그램 변수에 바인딩한 후 **bcp_bind** 를 사용하여 동일한 프로그램 변수를 대량 복사 작업에 바인딩합니다. [Sqlfetchscroll](../native-client-odbc-api/sqlfetchscroll.md) 또는 **sqlfetch** 를 호출 하면 ODBC 데이터 원본에서 프로그램 변수로 데이터 행을 페치하고를 호출 하 여 프로그램 변수 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) 에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 대량 복사 bcp_sendrow 합니다.  
+ 대량 복사 함수를 사용하면 ODBC 데이터 원본에서 읽은 데이터를 빠르게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 로드할 수 있습니다. 데이터 변수 하나만 있는 [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) 의 지침에 따라 결과 집합의 열을 프로그램 변수에 바인딩한 후 **bcp_bind** 를 사용하여 동일한 프로그램 변수를 대량 복사 작업에 바인딩합니다. [Sqlfetchscroll](../native-client-odbc-api/sqlfetchscroll.md) 또는 **sqlfetch** 를 호출 하면 ODBC 데이터 원본에서 프로그램 변수로 데이터 행을 페치하고를 호출 하 여 프로그램 변수에서로 데이터를 대량 복사 [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  응용 프로그램은 **bcp_bind** _.pdata_ 매개 변수에 원래 지정 된 데이터 변수의 주소를 변경 해야 하는 경우 언제 든 지 [bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) 함수를 사용할 수 있습니다. 또한 [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) cbData **매개 변수에 원래 지정된 데이터 길이를 변경해야 할 경우에는**_bcp_collen_ 함수를 사용할 수 있습니다.  
   

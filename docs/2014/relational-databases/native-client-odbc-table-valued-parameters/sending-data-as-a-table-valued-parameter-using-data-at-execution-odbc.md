@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205467"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698613"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   이는 [모든 메모리 내](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저와 유사 하지만 테이블 반환 매개 변수에 대해 실행 시 데이터를 사용 합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "68205467"
   
  테이블 값에 대해 SQLPutData가 호출 되 면 사용 가능한 행 수 (이 예에서는 항상 1)에 대해 *Dataptr* 이 사용 됩니다. *StrLen_or_IndPtr* 항상 0 이어야 합니다. 테이블 값의 모든 행이 전달 되 면 SQLPutData가 *Dataptr* 값 0으로 호출 됩니다.  
   
-## <a name="prerequisite"></a>필수 구성 요소  
+## <a name="prerequisite"></a>필수 조건  
  이 절차에서는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 서버에서 실행되었다고 가정합니다.  
   
 ```  

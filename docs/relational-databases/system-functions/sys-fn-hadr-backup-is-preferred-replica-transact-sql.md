@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120249"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262137"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  백업할 데이터베이스의 이름입니다. *dbname* 은 sysname 형식입니다.  
   
 ## <a name="returns"></a>반환  
- 현재 인스턴스의 데이터베이스가 기본 복제본에 있으면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
+ 현재 인스턴스의 데이터베이스가 기본 복제본에 있으면 **bool**: 1 데이터 형식을 반환 하 고 그렇지 않으면 0을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
  백업 스크립트에서 이 함수를 사용하여 현재 데이터베이스가 백업용 기본 복제본에 있는지 여부를 확인할 수 있습니다. 모든 가용성 복제본에서 스크립트를 실행할 수 있습니다. 이러한 각 작업은 동일한 데이터를 조사하여 실행해야 하는 작업을 확인하므로 예약된 작업 중 하나만이 실제로 백업 단계로 진행됩니다. 예제 코드는 다음과 비슷할 수 있습니다.  

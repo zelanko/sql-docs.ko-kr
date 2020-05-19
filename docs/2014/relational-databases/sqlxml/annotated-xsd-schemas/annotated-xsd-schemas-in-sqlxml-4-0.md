@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59940c88f72ed46da3e4b81ce3fabe3bb73ec4b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014514"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702938"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0의 주석이 추가된 XSD 스키마
   이 섹션에서는 SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대해 설명합니다. 이전 버전의 SQLXML에서는 XDR(XML-Data Reduced) 스키마를 통해 비슷한 기능이 제공되었습니다. 이 섹션에서는 레거시 애플리케이션을 위한 XDR 정보도 제공합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "66014514"
  [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 더 이상 사용 되지 않습니다&#41;](annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  이전 버전의 SQLXML은 XDR 스키마에서 주석을 지원합니다. 주석이 추가된 XDR 스키마는 SQLXML 4.0에서 더 이상 사용되지 않지만 이 섹션은 레거시 프로그램을 위한 참조 정보로 제공됩니다.  
   
-## <a name="other-resources"></a>관련 자료  
+## <a name="other-resources"></a>기타 리소스  
  XSD(XML 스키마 정의 언어), XPath(XML Path Language) 및 XSLT(Extensible Stylesheet Language Transformations)에 대한 자세한 내용은 다음 웹 사이트를 참조하십시오.  
   
 -   XML 스키마 파트 0: 입문, W3C 권장 사항 (http://www.w3.org/TR/xmlschema-0/)  

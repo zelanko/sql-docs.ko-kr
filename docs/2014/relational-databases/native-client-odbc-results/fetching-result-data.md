@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200077"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699290"
 ---
 # <a name="fetching-result-data"></a>결과 데이터 인출
   ODBC 애플리케이션에는 결과 데이터를 인출하기 위한 세 가지 옵션이 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "63200077"
   
  SQL_C_DEFAULT를 사용하여 C 변수의 형식을 지정할 때는 주의를 기울여야 합니다. SQL_C_DEFAULT는 C 변수 형식이 열이나 매개 변수의 SQL 데이터 형식과 일치하도록 지정합니다. **Ntext**, **nchar**또는 **nvarchar** 열에 SQL_C_DEFAULT을 지정 하면 유니코드 데이터가 응용 프로그램으로 반환 됩니다. 유니코드 데이터를 처리하도록 애플리케이션이 코딩되지 않은 경우 이로 인해 여러 가지 문제가 발생할 수 있습니다. **Uniqueidentifier** (SQL_GUID) 데이터 형식에는 동일한 유형의 문제가 발생할 수 있습니다.  
   
- **text**, **ntext**및 **image** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지 않으며 일반적으로 **SQLBindCol**대신 **SQLGetData** 를 사용 하 여 처리 됩니다. 서버 커서를 사용할 때 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 행이 인출 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 **SQLGetData** 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
+ **text**, **ntext**및 **image** 데이터는 일반적으로 너무 커서 단일 프로그램 변수에 맞지 않으며 일반적으로 **SQLBindCol**대신 **SQLGetData** 를 사용 하 여 처리 됩니다. 서버 커서를 사용할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 행이 인출 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 **SQLGetData** 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
   
  사용자가 커서를 위나 아래로 스크롤 하는 동안 **text**, **ntext**또는 **image** 데이터가 표시 되지 않도록 이러한 최적화를 응용 프로그램에 적용할 수 있습니다. 사용자가 행을 선택 하면 응용 프로그램에서 **SQLGetData** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 검색할 수 있습니다. 이렇게 하면 사용자가 선택 하지 않은 행에 대해 **text**, **ntext**또는 **image** 데이터를 전송 하 고 대량의 데이터 전송을 저장할 수 있습니다.  
   

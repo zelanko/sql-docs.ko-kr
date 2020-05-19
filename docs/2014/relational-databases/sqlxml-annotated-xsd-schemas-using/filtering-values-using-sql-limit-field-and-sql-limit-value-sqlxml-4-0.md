@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013804"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703585"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
   데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. `sql:limit-field` 및 `sql:limit-value` 주석은 제한 값이 포함된 데이터베이스 열을 식별하고 반환되는 데이터를 필터링하는 데 사용할 특정 제한 값을 지정하는 데 사용됩니다.  
@@ -170,7 +170,7 @@ ms.locfileid: "66013804"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 이는 주문 정보의 **orderid** 특성이 주문 관계의 orderid 열에 매핑되는 매핑 스키마입니다. 이 특성에 대해 반환 되는 값은 `sql:limit-field` 및 `sql:limit-value` 주석을 사용 하는 **할인율** 에 지정 된 대로 2.0000000 e-001 (0.2) 값을 가진 값 으로만 제한 됩니다.  
+ 이는 주문 정보의 **orderid** 특성이 주문 관계의 orderid 열에 매핑되는 매핑 스키마입니다. 이 특성에 대해 반환 되는 값은 및 주석을 사용 하는 **할인율** 에 지정 된 대로 2.0000000 e-001 (0.2) 값을 가진 값 으로만 제한 됩니다 `sql:limit-field` `sql:limit-value` .  
   
  스키마는 다음과 같습니다.  
   

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188690"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702146"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 혼합(키 집합/동적) 커서 모델을 지원하지 않습니다. SQL_ATTR_KEYSET_SIZE를 사용하여 키 집합 크기를 0이 아닌 값으로 설정하려고 하면 오류가 발생합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "63188690"
   
 |*값*|설명|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|기본값 빠른 앞 으로만 이동 가능한 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정 하 여 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하도록 설정 합니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램에서/SQL_ATTR_CURSOR_TYPE를 사용 하 여 `SQLSetStmtAttr`다른 커서 유형을 설정 해야 합니다.|  
+|SQL_CO_OFF|기본값 빠른 앞 으로만 이동 가능한 읽기 전용 커서 및 자동 인출 사용 하지 않도록 설정 하 여 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하도록 설정 합니다. SQL_SOPT_SS_CURSOR_OPTIONS가 SQL_CO_OFF로 설정되면 커서 유형이 변경되지 않습니다. 즉, 빠른 정방향 전용 커서는 빠른 정방향 전용 커서로 유지됩니다. 커서 유형을 변경 하려면 응용 프로그램에서/SQL_ATTR_CURSOR_TYPE를 사용 하 여 다른 커서 유형을 설정 해야 합니다 `SQLSetStmtAttr` .|  
 |SQL_CO_FFO|빠른 전진 전용, 읽기 전용 커서를 사용 하도록 설정 하 고 앞 으로만 이동 가능한 읽기 전용 커서에서 **SQLGetData** 를 사용 하지 않도록 설정 합니다.|  
 |SQL_CO_AF|임의의 커서 유형에 대해 자동 인출 옵션을 설정합니다. 문 핸들에 대해이 옵션을 설정 하면 **Sqlexecute** 또는 **sqlexecdirect** 가 암시적 **sqlfetchscroll** (SQL_FIRST)을 생성 합니다. 커서가 열리고 서버에 대한 단일 왕복에서 행의 첫 번째 일괄 처리가 반환됩니다.|  
 |SQL_CO_FFO_AF|빠른 정방향 전용 커서에 대해 자동 인출 옵션을 설정합니다. 이는 SQL_CO_AF 및 SQL_CO_FFO를 모두 지정한 것과 같습니다.|  
@@ -110,7 +110,7 @@ ms.locfileid: "63188690"
   
  `service=<service-name>[;(local database=<database>|broker instance=<broker instance>)]`  
   
- 예를 들어:  
+ 다음은 그 예입니다.  
   
  `service=mySSBService;local database=mydb`  
   
@@ -131,10 +131,10 @@ ms.locfileid: "63188690"
   
 |*값*|설명|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|기본값<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 `column_set`의 멤버가 아닌 열만 반환 합니다.|  
+|SQL_SS_NAME_SCOPE_TABLE|기본값<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스의 멤버가 아닌 열만 반환 합니다 `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|애플리케이션이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램은 테이블 반환 매개 변수의 TYPE_NAME를 *TableName* 매개 변수로 전달 합니다.|  
-|SQL_SS_NAME_SCOPE_EXTENDED|스파스 열 기능을 사용 하는 경우 SQLColumns는 `column_set` 멤버 자격에 관계 없이 모든 열을 반환 합니다.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스 `column_set`의 멤버인 열만 반환 합니다.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|스파스 열 기능을 사용 하는 경우 SQLColumns는 멤버 자격에 관계 없이 모든 열을 반환 합니다 `column_set` .|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|스파스 열 기능을 사용 하는 경우 SQLColumns는 스파스의 멤버인 열만 반환 합니다 `column_set` .|  
 |SQL_SS_NAME_SCOPE_DEFAULT|SQL_SS_NAME_SCOPE_TABLE과 같습니다.|  
   
  SS_TYPE_CATALOG_NAME 및 SS_TYPE_SCHEMA_NAME는 각각 *CatalogName* 및 *SchemaName* 매개 변수와 함께 사용 되어 테이블 반환 매개 변수의 카탈로그와 스키마를 식별 합니다. 애플리케이션이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  

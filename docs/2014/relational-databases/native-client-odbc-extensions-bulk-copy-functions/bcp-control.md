@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adadafc3a7dcf23de9bceefaee6f5622e0f86705
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689520"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702006"
 ---
 # <a name="bcp_control"></a>bcp_control
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  
@@ -61,7 +61,7 @@ iValue
  BCPDELAYREADFMT  
  부울 값이 true로 설정 된 경우 실행 시 [bcp_readfmt](bcp-readfmt.md) 를 읽습니다. False (기본값) 이면 bcp_readfmt는 서식 파일을 즉시 읽습니다. BCPDELAYREADFMT가 true이 고 bcp_columns 또는 bcp_setcolfmt를 호출 하면 시퀀스 오류가 발생 합니다.  
   
- Bcpdelayreadfmt`, (void *)TRUE)` 및 bcp_writefmt를 호출한 `bcp_control(hdbc,` `, (void *)FALSE)` `bcp_control(hdbc,` 후 bcpdelayreadfmt를 호출 하는 경우에도 시퀀스 오류가 발생 합니다.  
+ `bcp_control(hdbc,` `, (void *)FALSE)` `bcp_control(hdbc,` Bcpdelayreadfmt 및 bcp_writefmt를 호출한 후 bcpdelayreadfmt를 호출 하는 경우에도 시퀀스 오류가 발생 합니다 `, (void *)TRUE)` .  
   
  자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
@@ -75,7 +75,7 @@ iValue
  BCPFILE_RAW: 파일의 데이터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 코드 페이지에 있습니다.  
   
  BCPFILEFMT  
- 데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 기본값은 120입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 서버의 **varchar (max)** 열로 가져오려면 80을 지정 해야 합니다. 마찬가지로 **varchar (max)** 열에서 데이터를 내보낼 때 80을 지정 하면 텍스트 열이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 형식으로 저장 되는 것 처럼 저장 되 고 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서버의 텍스트 열로 가져올 수 있습니다.  
+ 데이터 파일 형식의 버전 번호입니다. 이 값은 80([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 또는 120([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])이 될 수 있습니다. 기본값은 120입니다. 이 옵션은 이전 버전 서버에서 지원하는 형식으로 데이터를 가져오고 내보내는 데 유용합니다. 예를 들어 서버의 텍스트 열에서 얻은 데이터를 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이상 서버의 **varchar (max)** 열로 가져오려면 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 80을 지정 해야 합니다. 마찬가지로 **varchar (max)** 열에서 데이터를 내보낼 때 80을 지정 하면 텍스트 열이 형식으로 저장 되는 것 처럼 저장 되 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 고 서버의 텍스트 열로 가져올 수 있습니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .  
   
  BCPFIRST  
  복사할 파일이나 테이블의 첫 번째 데이터 행입니다. 기본값은 1입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.  
@@ -99,10 +99,10 @@ iValue
  *Ivalue* 는 sqltchar 문자열 포인터를 포함 합니다. 주소가 지정된 문자열에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 처리 힌트나 결과 집합을 반환하는 Transact-SQL 문을 지정합니다. Transact-SQL 문이 둘 이상의 결과 집합을 반환하도록 지정된 경우 첫 번째 결과 집합 다음에 오는 결과 집합은 모두 무시됩니다. 대량 복사 처리 힌트에 대 한 자세한 내용은 [Bcp 유틸리티](../../tools/bcp-utility.md)를 참조 하세요.  
   
  BCPKEEPIDENTITY  
- *Ivalue* 가 TRUE 이면 대량 복사 함수에서 identity 제약 조건으로 정의 된 열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 제공 된 데이터 값을 삽입 하도록 지정 합니다. 입력 파일은 ID 열에 해당하는 값을 제공해야 합니다. 설정되지 않은 경우 삽입된 행에 대해 새 ID 값이 생성됩니다. 파일에서 ID 열에 대한 데이터는 모두 무시됩니다.  
+ *Ivalue* 가 TRUE 이면 대량 복사 함수에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identity 제약 조건으로 정의 된 열에 제공 된 데이터 값을 삽입 하도록 지정 합니다. 입력 파일은 ID 열에 해당하는 값을 제공해야 합니다. 설정되지 않은 경우 삽입된 행에 대해 새 ID 값이 생성됩니다. 파일에서 ID 열에 대한 데이터는 모두 무시됩니다.  
   
  BCPKEEPNULLS  
- 파일의 빈 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL 값으로 변환할지 여부를 지정합니다. *Ivalue* 가 TRUE 이면 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL로 변환 됩니다. 기본적으로 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 열의 기본값(있는 경우)으로 변환됩니다.  
+ 파일의 빈 데이터 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 NULL 값으로 변환할지 여부를 지정합니다. *Ivalue* 가 TRUE 이면 빈 값은 테이블에서 NULL로 변환 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본적으로 빈 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 열의 기본값(있는 경우)으로 변환됩니다.  
   
  BCPLAST  
  복사할 마지막 행입니다. 기본값은 모든 행 복사입니다. 1보다 작은 값을 지정하면 이 옵션은 기본값으로 다시 설정됩니다.  
@@ -142,7 +142,7 @@ iValue
   
  또한 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SELECT의 결과 집합을 대량 복사할 때 SELECT 문을 지정하는 데 사용됩니다. *Eoption* 을 BCPHINTS로 설정 하 고 SELECT 문을 포함 하는 sqltchar 문자열에 대 한 포인터를 갖도록 *ivalue* 를 설정 합니다.  
   
- 이러한 제어 매개 변수는 사용자 파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 간에 복사하는 경우에만 의미가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Bcp_sendrow](bcp-sendrow.md)로 복사 되는 행에는 컨트롤 매개 변수 설정이 적용 되지 않습니다.  
+ 이러한 제어 매개 변수는 사용자 파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 간에 복사하는 경우에만 의미가 있습니다. Bcp_sendrow로 복사 되는 행에는 컨트롤 매개 변수 설정이 적용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [bcp_sendrow](bcp-sendrow.md)  
   
 ## <a name="example"></a>예제  
   

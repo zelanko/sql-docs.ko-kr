@@ -19,15 +19,15 @@ helpviewer_keywords:
 - attribute mapping [SQLXML], excluding schema elements
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013867"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703593"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>sql:mapped를 사용하여 결과 XML 문서에서 스키마 요소 제외(SQLXML 4.0)
   기본 매핑 때문에 XSD 스키마의 모든 요소와 특성은 데이터베이스 테이블/뷰 및 열에 매핑됩니다. 그러나 어느 데이터베이스 테이블(뷰) 또는 열에도 매핑되지 않고 XML에 표시되지 않는 요소를 XSD 스키마에 만들려면 `sql:mapped` 주석을 지정할 수 있습니다.  
@@ -40,11 +40,11 @@ ms.locfileid: "66013867"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
- 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 **HomeAddress** **ContactID** **LastName** **FirstName** ** \<Person** 으로 구성 됩니다. ContactID, FirstName, LastName 및 HomeAddress 특성을 사용 하 여>요소에 문의 하세요.  
+ 다른 원본의 XSD 스키마가 있고, 이 XSD 스키마는 Person으로 구성 됩니다. **ContactID**, **FirstName**, **LastName**및 **HomeAddress** 특성을 사용 하 여 ** \<>요소에 문의 하세요** .  
   
- 이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 Employees 테이블에 `sql:mapped` 직원의 홈 주소가 저장 되지 않기 때문에 **HomeAddress** 특성에이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
+ 이 XSD 스키마를 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑하면 `sql:mapped` employees 테이블에 직원의 홈 주소가 저장 되지 않기 때문에 **HomeAddress** 특성에이 지정 됩니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  
   
- 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. Person. contact>요소는 person 테이블에 매핑되고, 모든 특성은 person. contact 테이블에서 이름이 같은 열에 매핑됩니다. ** \<**  
+ 스키마의 나머지 부분에 대해서는 기본 매핑이 수행됩니다. Person ** \< . contact>** 요소는 person 테이블에 매핑되고, 모든 특성은 person. contact 테이블에서 이름이 같은 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

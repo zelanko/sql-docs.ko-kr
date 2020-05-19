@@ -13,15 +13,15 @@ helpviewer_keywords:
 - IRowset interface
 - SQL Server Native Client OLE DB provider, fetching
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a68c66eaaccfa3ea32a4fb940eba71026d49361
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140476"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82694416"
 ---
 # <a name="fetching-rows"></a>행 인출
   **IRowset** 인터페이스는 기본 행 집합 인터페이스입니다. **IRowset** 인터페이스는 순차적으로 행을 인출하고, 해당 행에서 데이터를 가져오고, 행을 관리하기 위한 메서드를 제공합니다. 소비자는 모든 기본 행 집합 작업에 **IRowset**의 메서드를 사용합니다. 여기에는 행 인출 및 해제, 열 값 가져오기 등이 포함됩니다.  

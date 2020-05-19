@@ -3,22 +3,29 @@ title: MySQL 용 SSMA의 새로운 기능 (MySQLToSql) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 9d5c33bbb9e09a5a833c928547a5ec659fe43c96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 288056843e8868c5738f8f1e101015c0142bb6bd
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625549"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220198"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
 이 문서에서는 각 릴리스의 MySQL 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+MySQL 용 SSMA 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
+
+* 공간 형식의 데이터 마이그레이션에 대 한 수정
+* 프로젝트 이름에서 특수 문자를 사용 하 여 문제 해결
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -31,7 +38,7 @@ MySQL 용 SSMA의 v 8.8 릴리스에는 다음이 포함 됩니다.
 
 MySQL 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 약간 수정 및 성능 향상 기능이 있습니다.
 
-또한 Azure SQL을 대상으로 하는 경우에는 `LIMIT` 이제 MYSQL 용 ssma가 변환 절을 제공 합니다.
+또한 Azure SQL을 대상으로 하는 경우에는 이제 MySQL 용 SSMA가 변환 절을 제공 합니다 `LIMIT` .
 
 > [!IMPORTANT]
 > SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.
@@ -40,7 +47,7 @@ MySQL 용 SSMA의 v2.0 릴리스에는 그래픽 사용자 인터페이스의 �
 
 사용자가 변환 된 코드에서 SSMA 확장 속성을 생략할 수 있도록 하는 설정을 추가 하 여 MySQL 용 SSMA의 v 8.6 릴리스가 향상 되었습니다.
 
-이 설정을 활용 하려면 MySQL 용 ssma에서 **도구** > **프로젝트 설정** > **일반** > **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
+이 설정을 활용 하려면 MySQL 용 ssma에서 **도구**  >  **프로젝트 설정**  >  **일반**  >  **변환**으로 이동한 다음 **기타**에서 **확장 속성 생략** 설정의 값을 **예**로 업데이트 합니다.
 
 ![확장 속성 설정 생략](../mysql/media/ssma-omit-extended-properties.png)
 
@@ -66,7 +73,7 @@ MySQL 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 �
 MySQL 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다. 또한이 MySQL 용 SSMA 릴리스는 다음과 같은 수정 사항을 제공 합니다.
 
 * 접근성 문제를 해결 합니다.
-* SQL Server 형식에 대 `hierarchyid` 한 기본 지원을 추가 합니다.
+* SQL Server 형식에 대 한 기본 지원을 추가 `hierarchyid` 합니다.
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -193,8 +200,8 @@ MySQL 용 SSMA의 2016 년 5 월 릴리스에는 다음과 같은 변경 내용�
 * .NET 2.0에 대 한 설치 관리자 검사가 제거 되었습니다.
 * .NET 3.5에서 .NET 4.0으로 확장 팩 종속성을 업데이트 했습니다.
 * MySql에 대 한 기본 BigInt 형식 매핑을 수정 했습니다.
-* SSMA `open-project` 콘솔에 대 한 및 명령이 수정 `save-project` 되었습니다.
-* SSMA 콘솔에 대 한 고정 `securepassword` 명령입니다.
+* `save-project` `open-project` Ssma 콘솔에 대 한 및 명령이 수정 되었습니다.
+* `securepassword`SSMA 콘솔에 대 한 고정 명령입니다.
 * 초기 로드에 대 한 개체 계산을 수정 했습니다.
 * MsSql 개체 로드를 수정 했습니다.
 * 전역 설정에서 버그가 수정 되었습니다.
@@ -236,15 +243,15 @@ MySQL 용 SSMA의 4 월 2014 릴리스에는 다음과 같은 변경 내용이 �
 
 MySQL 용 SSMA의 7 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
   
-* 에서로 `LIMIT` [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET`의 변환을 지원 합니다.
+* 에서로의 변환을 `LIMIT` 지원 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] `OFFSET` 합니다.
 * 데이터 마이그레이션 중에 향상 된 오류 보고
   
 ## <a name="april-2011"></a>4 월 2011
 
 MySQL 용 SSMA의 4 월 2011 릴리스에는 다음과 같은 변경 내용이 포함 되어 있습니다.
   
-* [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)], [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 및 Azure SQL을 지 원하는 [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]"ssma for MySQL"의 단일 설치 가능.
-* 연결할 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]수 있는 권한입니다.
+* [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] 및 Azure SQL을 지 원하는 "ssma for MySQL"의 단일 설치 가능 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
+* 연결할 수 있는 권한 [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] 입니다.
 * 데이터의 병렬 마이그레이션을 지 원하는 향상 된 클라이언트 쪽 데이터 마이그레이션 엔진.
 * 단순 및 대량 로그 복구 모델로 데이터 마이그레이션 성능이 개선 되었습니다.
 * MySQL 용 SSMA 콘솔 버전은 이전 버전과의 호환성을 지원 합니다. 이전 버전에서 만든 프로젝트를 SSMA v 5.0으로 열 수 있습니다.

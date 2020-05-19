@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - large data
 ms.assetid: b057f04b-e5f4-466e-a39a-090dae797236
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9789ddf12272dd6c33c8cfbbb8677ecc3bb4b191
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63218658"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696195"
 ---
 # <a name="set-large-data-ole-db"></a>대형 데이터 설정(OLE DB)
   이 예제에서는 BLOB 데이터를 설정하고 테이블을 만들어 예제 레코드를 추가한 다음 행 집합에서 해당 레코드를 인출하고 BLOB 필드의 값을 설정하는 방법을 보여 줍니다. 이 예제는 IA64에서 지원되지 않습니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "63218658"
   
 #### <a name="to-set-blob-data"></a>BLOB 데이터를 설정하려면  
   
-1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 **Dwflag** 요소를 STGM_READ 설정 하 고 iid 요소를 (노출할 인터페이스) `IID_ISequentialStream` 로 설정 합니다.  
+1.  BLOB 열에 액세스하는 방법을 설명하는 DBOBJECT 구조를 만듭니다. DBOBJECT 구조의 **Dwflag** 요소를 STGM_READ 설정 하 고 iid 요소를 `IID_ISequentialStream` (노출할 인터페이스)로 설정 합니다.  
   
 2.  행 집합 업데이트가 가능하도록 DBPROPSET_ROWSET 속성 그룹의 속성을 설정합니다.  
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQL_SS_TABLE
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199980"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698862"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>테이블 반환 매개 변수의 ODBC SQL 유형
   새로운 ODBC SQL 형식인 SQL_SS_TABLE에서 테이블 반환 매개 변수에 대한 지원을 제공합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "63199980"
   
  SQLGetData를 호출할 때 *TargetType* 매개 변수가 SQL_SS_TABLE 된 경우 SQL_ERROR가 반환 되 고 SQLSTATE = HY003, "잘못 된 응용 프로그램 버퍼 형식"으로 진단 레코드가 생성 됩니다.  
   
- 테이블 반환 매개 변수 열은 SQL_SS_TABLE 형식으로 바인딩할 수 없습니다. ParameterType `SQLBindParameter` 를 SQL_SS_TABLE으로 *ParameterType* 설정 하 여를 호출 하면 SQL_ERROR가 반환 되 고 SQLSTATE = HY004, "잘못 된 SQL 데이터 형식"으로 진단 레코드가 생성 됩니다. SQLSetDescField 및 SQLSetDescRec에도이 문제가 발생할 수 있습니다.  
+ 테이블 반환 매개 변수 열은 SQL_SS_TABLE 형식으로 바인딩할 수 없습니다. `SQLBindParameter` *ParameterType* 를 SQL_SS_TABLE으로 설정 하 여를 호출 하면 SQL_ERROR가 반환 되 고 SQLSTATE = HY004, "잘못 된 SQL 데이터 형식"으로 진단 레코드가 생성 됩니다. SQLSetDescField 및 SQLSetDescRec에도이 문제가 발생할 수 있습니다.  
   
  테이블 반환 매개 변수 열 값에는 매개 변수 및 결과 열과 동일한 데이터 변환 옵션이 포함됩니다.  
   

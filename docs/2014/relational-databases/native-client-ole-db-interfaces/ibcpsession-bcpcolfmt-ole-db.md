@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240271"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82695684"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
   프로그램 변수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 간의 바인딩을 만듭니다.  
@@ -75,7 +75,7 @@ DBORDINALidxServerCol);
  사용자 데이터 파일에 포함된 필드의 인덱스입니다.  
   
  *eUserDataType*[in]  
- 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일(sqlncli.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. 인수를 `eUserDataType` BCP_TYPE_SQLDECIMAL 하거나 BCP_TYPE_SQLNUMERIC 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일에 대 한 대량 복사 작업의 경우:  
+ 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 헤더 파일(sqlncli.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `eUserDataType` 인수를 BCP_TYPE_SQLDECIMAL 하거나 BCP_TYPE_SQLNUMERIC 때 파일에 대 한 대량 복사 작업의 경우:  
   
 -   원본 열이 decimal 또는 numeric이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   
@@ -87,13 +87,13 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  길이 표시기나 종결자의 길이를 제외한 사용자 파일에 있는 이 필드 데이터의 최대 길이(바이트)입니다.  
   
- BCP_LENGTH_NULL `cbUserData` 로 설정 하면 데이터 파일 필드의 모든 값이 이거나 NULL로 설정 되어야 함을 나타냅니다. BCP_LENGTH_VARIABLE `cbUserData` 로 설정 하면 시스템에서 각 필드에 대 한 데이터의 길이를 확인 해야 함을 나타냅니다. 일부 필드의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.  
+ `cbUserData`BCP_LENGTH_NULL로 설정 하면 데이터 파일 필드의 모든 값이 이거나 NULL로 설정 되어야 함을 나타냅니다. `cbUserData`BCP_LENGTH_VARIABLE로 설정 하면 시스템에서 각 필드에 대 한 데이터의 길이를 확인 해야 함을 나타냅니다. 일부 필드의 경우 이 설정은 길이 또는 Null 표시기가 생성되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복사되는 복사본의 데이터 앞에 추가됨을 의미하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 복사되는 데이터에 표시기가 필요함을 나타냅니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 및 이진 데이터 형식의 경우은 `cbUserData` BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 또는 양수 값일 수 있습니다. 가 `cbUserData` BCP_LENGTH_VARIABLE 경우 시스템은 길이 표시기 (있는 경우) 또는 종결자 시퀀스를 사용 하 여 데이터 길이를 확인 합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. 이 `cbUserData` BCP_LENGTH_VARIABLE 경우 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이 고 길이 표시기 나 종결자 시퀀스를 모두 지정 하지 않으면 시스템에서 오류 메시지를 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]문자 및 이진 데이터 형식의 경우은 `cbUserData` BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 또는 양수 값일 수 있습니다. `cbUserData`가 BCP_LENGTH_VARIABLE 경우 시스템은 길이 표시기 (있는 경우) 또는 종결자 시퀀스를 사용 하 여 데이터 길이를 확인 합니다. 길이 표시기와 종결자 시퀀스를 모두 지정하는 경우 대량 복사에는 복사되는 데이터 크기가 가장 작은 방법이 사용됩니다. `cbUserData`이 BCP_LENGTH_VARIABLE 경우 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문자 또는 이진 형식이 고 길이 표시기 나 종결자 시퀀스를 모두 지정 하지 않으면 시스템에서 오류 메시지를 반환 합니다.  
   
- 가 `cbUserData` 0 또는 양수 값 이면 시스템은를 최대 데이터 `cbUserData` 길이로 사용 합니다. 그러나 양수 `cbUserData`, 길이 표시자 또는 종결자 시퀀스가 제공 되는 경우 시스템은 복사할 데이터가 적은 방법을 사용 하 여 데이터 길이를 결정 합니다.  
+ `cbUserData`가 0 또는 양수 값 이면 시스템은를 `cbUserData` 최대 데이터 길이로 사용 합니다. 그러나 양수 `cbUserData` , 길이 표시자 또는 종결자 시퀀스가 제공 되는 경우 시스템은 복사할 데이터가 적은 방법을 사용 하 여 데이터 길이를 결정 합니다.  
   
- 데이터 `cbUserData` 의 바이트 수를 나타내는 값입니다. 문자 데이터가 유니코드 와이드 문자로 표현 되는 경우 양의 `cbUserData` 매개 변수 값은 문자 수와 각 문자의 크기 (바이트)를 곱한 값을 나타냅니다.  
+ `cbUserData`데이터의 바이트 수를 나타내는 값입니다. 문자 데이터가 유니코드 와이드 문자로 표현 되는 경우 양의 `cbUserData` 매개 변수 값은 문자 수와 각 문자의 크기 (바이트)를 곱한 값을 나타냅니다.  
   
  *pbUserDataTerm*[size_is][in]  
  이 필드에 사용할 종결자 시퀀스입니다. 이 매개 변수는 주로 문자 데이터 형식에 유용한데 그 이유는 다른 모든 형식은 길이가 고정되어 있거나 이진 데이터의 경우 현재 바이트 수를 정확하게 기록하기 위해 길이 표시기가 필요하기 때문입니다.  

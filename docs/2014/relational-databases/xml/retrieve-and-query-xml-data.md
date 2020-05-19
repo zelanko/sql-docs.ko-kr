@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241206"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702517"
 ---
 # <a name="retrieve-and-query-xml-data"></a>XML 데이터 검색 및 쿼리
   이 항목에서는 XML 데이터를 쿼리할 때 지정해야 하는 쿼리 옵션에 대해 설명합니다. 또한 XML 인스턴스가 데이터베이스에 저장될 때 보존되지 않는 인스턴스의 일부분에 대해 설명합니다.  
@@ -40,7 +40,7 @@ FROM T1
   
  결과는 `<doc/>`입니다.  
   
- XML 데이터가 `xml` 데이터 형식 인스턴스에 저장될 때 `<?xml version='1.0'?>`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적인 것입니다. XML 선언 () 및 해당 특성 (버전/인코딩/독립 실행형)은 데이터가 형식 `xml`으로 변환 된 후 손실 됩니다. XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
+ XML 데이터가 `xml` 데이터 형식 인스턴스에 저장될 때 `<?xml version='1.0'?>`과 같은 XML 선언이 보존되지 않습니다. 이것은 의도적인 것입니다. XML 선언 () 및 해당 특성 (버전/인코딩/독립 실행형)은 데이터가 형식으로 변환 된 후 손실 됩니다 `xml` . XML 선언은 XML 파서에 대한 지시어로 취급됩니다. XML 데이터는 내부적으로 ucs-2로 저장되며 XML 인스턴스의 다른 모든 PI는 보존됩니다.  
   
   
 ### <a name="order-of-attributes"></a>특성 순서  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> 필수 쿼리 옵션 설정  
- 데이터 형식 `xml` 메서드를 사용 하 여 `xml` 형식 열 또는 변수를 쿼리할 때는 다음 옵션을 표시 된 대로 설정 해야 합니다.  
+ `xml`데이터 형식 메서드를 사용 하 여 형식 열 또는 변수를 쿼리할 때는 `xml` 다음 옵션을 표시 된 대로 설정 해야 합니다.  
   
 |SET 옵션|필요한 값|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|OFF|  
 |QUOTED_IDENTIFIER|켜기|  
   
- 옵션이 표시 된 대로 설정 되어 있지 않으면 데이터 형식 메서드에 대 `xml` 한 쿼리 및 수정이 실패 합니다.  
+ 옵션이 표시 된 대로 설정 되어 있지 않으면 데이터 형식 메서드에 대 한 쿼리 및 수정 `xml` 이 실패 합니다.  
   
   
 ## <a name="see-also"></a>참고 항목  
