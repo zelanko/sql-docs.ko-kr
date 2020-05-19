@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CancelUpdate method [RDS]
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea3be9a06d41718271fee2480da1bf58081c1f07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 05426b2d4fba81e70a8bae35db215bcd750d3169
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746345"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate 메서드(RDS)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 또는 새 행에 대 한 변경 내용을 취소 합니다.  

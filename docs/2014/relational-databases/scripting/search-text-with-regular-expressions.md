@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243319"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718673"
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
   정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 특정 정규식 세트를 사용할 수 있습니다.  

@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9202a3125b35075e9fe4311a4ebe81103cf6b937
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242936"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718133"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 편집기(SQL Server Management Studio)
   XML 스키마, ADO.NET 데이터 세트 및 XML 문서 작업에 사용할 수 있는 다양한 시각적 도구를 제공합니다. XML 디자이너는 WC3(World Wide Web Consortium)에서 정의한 XSD(XML 스키마 정의) 언어를 지원합니다. DTD(문서 유형 정의)나 XDR(XML-Data Reduced)와 같은 다른 XML 스키마 언어는 지원하지 않습니다.  
@@ -95,7 +95,7 @@ ms.locfileid: "75242936"
 -   XML 문서에서 XML 스키마 생성  
   
 ## <a name="xml-view"></a>XML 뷰  
- XML 뷰는 원시 XML을 편집할 수 있는 편집기와 IntelliSense 및 색 구분 기능을 제공합니다. 스키마가 연결되어 있는 .xml 파일과 .xsd 파일로 작업할 때는 문 완성 기능을 사용할 수 있습니다. 을 \< 입력 하 여 태그를 시작 하면 해당 위치에서 유효한 요소 목록이 표시 됩니다. 요소 이름을 입력한 후 스페이스바를 누르면 요소가 지원하는 특성이 목록으로 표시됩니다.  
+ XML 뷰는 원시 XML을 편집할 수 있는 편집기와 IntelliSense 및 색 구분 기능을 제공합니다. 스키마가 연결되어 있는 .xml 파일과 .xsd 파일로 작업할 때는 문 완성 기능을 사용할 수 있습니다. 을 입력 \< 하 여 태그를 시작 하면 해당 위치에서 유효한 요소 목록이 표시 됩니다. 요소 이름을 입력한 후 스페이스바를 누르면 요소가 지원하는 특성이 목록으로 표시됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 도구 모음에서 사용할 수 없습니다. XML 편집기에서 이 옵션을 사용하려면 **편집** 메뉴에서 **IntelliSense**를 클릭합니다.  

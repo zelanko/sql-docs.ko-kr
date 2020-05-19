@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Keys collection [ADOX]
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a7bebc1c05ab195d3b23c5c0894d4fcce967625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965850"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746548"
 ---
 # <a name="keys-collection-adox"></a>Keys 컬렉션(ADOX)
 [테이블](../../../ado/reference/adox-api/table-object-adox.md)의 모든 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- [키 컬렉션](../../../ado/reference/adox-api/keys-collection-adox.md) 에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-keys.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ [키 컬렉션](../../../ado/reference/adox-api/keys-collection-adox.md) 에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-keys.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
   
 -   [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) 메서드를 사용 하 여 컬렉션에 새 키를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 키에 액세스 합니다.  
   

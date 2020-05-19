@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014788"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717502"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
   이 항목에서는 updategram을 실행 하기 위한 usingOLE DB의 작업 예제를 제공 합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014788"
 </Schema>  
 ```  
   
- 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여 ** \<contact>** 요소는 AdventureWorks 데이터베이스의 person. contact 테이블에 매핑됩니다.  
+ 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여 ** \< contact>** 요소는 AdventureWorks 데이터베이스의 person. contact 테이블에 매핑됩니다.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML을 명령으로 설정하고 결과를 XML 문서로 검색하려면  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리에는 매개 변수 (@Title)의 값이 필요 합니다. 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
+ 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리에는 매개 변수 ()의 값이 필요 @Title 합니다. 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
   
  매개 변수 값을 템플릿에 전달하는 경우 매개 변수 이름과 값을 모두 지정해야 합니다.  
   

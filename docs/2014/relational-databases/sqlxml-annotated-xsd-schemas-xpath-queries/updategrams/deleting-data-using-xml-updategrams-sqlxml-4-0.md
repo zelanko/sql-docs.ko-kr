@@ -13,18 +13,18 @@ helpviewer_keywords:
 - mapping-schema attribute
 - record deletions [SQLXML]
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 444ef7d8c95b0cbd41ba3fbb55a6fbeb30870462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01abd0eb56be4b8037aa9e03465c00a169c9967
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014865"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717519"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삭제(SQLXML 4.0)
-  Updategram **는 \<after>** 블록에 해당 레코드가 없는 ** \<이전>** 블록에 레코드 인스턴스가 나타날 때 삭제 작업을 나타냅니다. 이 경우 updategram는 데이터베이스에서 ** \<이전>** 블록의 레코드를 삭제 합니다.  
+  Updategram는 ** \< after>** 블록에 해당 레코드가 없는 ** \< 이전>** 블록에 레코드 인스턴스가 나타날 때 삭제 작업을 나타냅니다. 이 경우 updategram는 데이터베이스에서 ** \< 이전>** 블록의 레코드를 삭제 합니다.  
   
  삭제 작업에 대한 Updategram 형식은 다음과 같습니다.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66014865"
 </ROOT>  
 ```  
   
- Updategram는 삭제 작업만 수행 하는 경우 ** \<after>** 태그를 생략할 수 있습니다. 선택적 `mapping-schema` 특성을 지정 하지 않으면 updategram에 지정 된 ** \<ElementName>** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
+ Updategram는 삭제 작업만 수행 하는 경우 ** \< after>** 태그를 생략할 수 있습니다. 선택적 특성을 지정 하지 않으면 `mapping-schema` updategram에 지정 된 ** \< ElementName>** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
   
- Updategram에 지정 된 요소가 테이블에서 둘 이상의 행과 일치 하거나 행과 일치 하지 않는 경우 updategram는 오류를 반환 하 고 전체 ** \<sync>** 블록을 취소 합니다. Updategram의 요소는 한 번에 하나의 레코드만 삭제할 수 있습니다.  
+ Updategram에 지정 된 요소가 테이블에서 둘 이상의 행과 일치 하거나 행과 일치 하지 않는 경우 updategram는 오류를 반환 하 고 전체 ** \< sync>** 블록을 취소 합니다. Updategram의 요소는 한 번에 하나의 레코드만 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  이 섹션의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되어 있지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
@@ -55,7 +55,7 @@ ms.locfileid: "66014865"
   
  이러한 예에서 Updategram은 매핑 스키마를 지정하지 않으므로 요소 이름은 테이블 이름에 매핑되고 특성 또는 하위 요소는 열에 매핑되는 기본 매핑을 사용합니다.  
   
- 이 첫 번째 updategram은 특성 중심 이며 ** \<before>** 블록의 두 교대 교대 (야간 및 야간 시간)을 식별 합니다. After>블록에는 해당 레코드가 없기 때문에이는 삭제 작업입니다. ** \<**  
+ 이 첫 번째 updategram은 특성 중심 이며 ** \< before>** 블록의 두 교대 교대 (야간 및 야간 시간)을 식별 합니다. ** \< After>** 블록에는 해당 레코드가 없기 때문에이는 삭제 작업입니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

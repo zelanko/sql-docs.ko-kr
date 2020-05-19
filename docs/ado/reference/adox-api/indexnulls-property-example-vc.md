@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9e119dba2a24df76a918e87a6a5a28d66e381400
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc1c58ea2b7a496dfe0b101969d18c5274e2b784
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929426"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746661"
 ---
 # <a name="indexnulls-property-example-vc"></a>IndexNulls 속성 예제(VC++)
 이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 인덱스를 만들고 사용자 입력을 기반으로 **IndexNulls** 의 값을 설정 합니다. 그런 다음 **인덱스가** *Northwind* [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)의 **Employees** [테이블](../../../ado/reference/adox-api/table-object-adox.md) 에 추가 됩니다. 새 **인덱스** 는 **Employees** 테이블을 기반으로 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에 적용 되 고 **레코드 집합** 은 열립니다. 새 레코드가 **Employees** 테이블에 추가 되 고 인덱싱된 필드에 **Null** 값이 추가 됩니다. 이 새 레코드가 표시 되는지 여부는 **IndexNulls** 속성의 설정에 따라 달라 집니다.  

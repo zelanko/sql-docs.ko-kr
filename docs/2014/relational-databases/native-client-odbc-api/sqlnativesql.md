@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLNativeSql function
 ms.assetid: 2d999fec-9e22-4514-ad5f-22a64b82f95b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8329eac48b395467c8c9c7354f28649d44149248
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046738"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705963"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 서버를 방문하지 않고 **SQLNativeSql** 요청을 충족합니다. 이 함수는 SQL 문의 구문을 효율적으로 테스트합니다. 구문 검사는 SQL 문의 식 결과나 식별자가 유효한지 여부를 확인하지 않으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLNativeSql **에서 반환된** 네이티브 SQL이 실행되지 않을 수 있습니다.  

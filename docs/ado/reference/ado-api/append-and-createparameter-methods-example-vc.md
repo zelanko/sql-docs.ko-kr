@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CreateParameter method [ADO], VC++ example
 - Append method [ADO], VC++ example
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0abc0742f3313e127d3c0478d9be600b0e02d908
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920690"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746990"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append 및 CreateParameter 메서드 예제 (VC + +)
 이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  

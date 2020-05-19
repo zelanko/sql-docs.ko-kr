@@ -11,22 +11,22 @@ helpviewer_keywords:
 - updategrams [SQLXML], ADO
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 54ee962310cb1ac41e442155a146afec8758c64f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef87a971b939a7f7c0ed5475a2b79ceba6150802
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014843"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717571"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
   이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 애플리케이션은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 updategram을 실행합니다. 사용되는 updategram은 특정 직원의 성을 업데이트합니다. 이 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다.  
   
  이 예제 애플리케이션에서는 다음 작업이 수행됩니다.  
   
--   **Conn** 개체 (**ADODB. 연결**) 특정 서버 컴퓨터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 실행 중인 인스턴스에 대 한 연결을 설정 합니다.  
+-   **Conn** 개체 (**ADODB. 연결**) 특정 서버 컴퓨터에서 실행 중인 인스턴스에 대 한 연결을 설정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
 -   **Cmd** 개체 (**ADODB 명령**)는 설정 된 연결에서 실행 됩니다.  
   

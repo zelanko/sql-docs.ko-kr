@@ -12,15 +12,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], unavailable options
 - troubleshooting [IntelliSense]
 ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7088bee1d78efdc6051bf58d174b7ea503362831
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb7fa5b5b4f12e37ba698c7f912abc2146366ac4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242977"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718196"
 ---
 # <a name="troubleshooting-intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio) 문제 해결
   다음과 같은 몇몇 경우에서는 IntelliSense 옵션이 제대로 작동하지 않을 수 있습니다.  

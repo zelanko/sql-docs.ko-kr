@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7f8e72831e333323621279a0403e95e6a134860
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243077"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718420"
 ---
 # <a name="command-window"></a>명령 창
   **명령 창** 을 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 쿼리 편집기 창에서 현재 디버깅 중인 코드에 디버그 및 편집 명령과 같은 명령을 실행합니다. **명령 창**을 사용하려면 디버그 모드여야 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **명령** 창에서도 지원되는 많은 명령을 지원합니다. 자세한 내용은 [Visual Studio 명령 창](https://go.microsoft.com/fwlink/?LinkId=112007)을 참조하십시오.  
@@ -33,7 +33,7 @@ ms.locfileid: "75243077"
   
  **현재 스레드에 대한 정보를 표시하려면**  
   
--   **Commandwindow**에서를 입력 `Debug.ListThread`한 다음 enter 키를 누릅니다.  
+-   **Commandwindow**에서를 입력 한 `Debug.ListThread` 다음 enter 키를 누릅니다.  
   
  **간략한 조사식 창에 변수를 추가하려면**  
   

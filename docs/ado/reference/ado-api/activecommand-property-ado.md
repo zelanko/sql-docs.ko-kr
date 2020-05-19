@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921673"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747474"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성(ADO)
 연결 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만든 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **명령** 개체를 포함 하는 **Variant** 를 반환 합니다. 기본값은 null 개체 참조입니다.  
   
 ## <a name="remarks"></a>설명  

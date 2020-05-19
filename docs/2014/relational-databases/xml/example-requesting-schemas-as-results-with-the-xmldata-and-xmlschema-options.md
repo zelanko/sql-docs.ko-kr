@@ -10,15 +10,15 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c757db5cd8a5513f80233ba4ba4d6be3cc53dd1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637929"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716883"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
   다음 쿼리는 문서 구조를 설명하는 XMLDATA 스키마를 반환합니다.  

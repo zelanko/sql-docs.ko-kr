@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155305"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718861"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
   메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 디스크 기반 테이블과 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 지원되는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 노출 영역을 지원하지 않습니다. 지원되지 않는 기능 중 하나를 사용하려고 하면 서버에서 오류가 반환됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "63155305"
 ## <a name="databases-that-use-in-memory-oltp"></a>메모리 내 OLTP를 사용하는 데이터베이스  
  다음 표에는 메모리 내 OLTP 데이터베이스와 관련된 오류 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드가 나열되어 있습니다.  
   
-|유형|이름|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |옵션|AUTO_CLOSE|데이터베이스 옵션 AUTO_CLOSE=ON은 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
 |옵션|ATTACH_REBUILD_LOG|CREATE 데이터베이스 옵션 ATTACH_REBUILD_LOG는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "63155305"
 ## <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블  
  다음 표에서는 메모리 최적화 테이블과 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|유형|이름|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|켜기|파일 그룹이나 파티션 구성표에는 메모리 액세스에 최적화된 테이블을 배치할 수 없습니다. `CREATE TABLE` 문에서 ON 절을 제거합니다.|  
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [지원 되는 데이터 형식](supported-data-types-for-in-memory-oltp.md)을 참조 하세요.|  
@@ -71,7 +71,7 @@ ms.locfileid: "63155305"
 |작업(Operation)|CREATE FULLTEXT INDEX|전체 텍스트 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다.|  
 |작업(Operation)|스키마 변경|메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 `sp_rename`과 같은 스키마 변경을 지원하지 않습니다.<br /><br /> 테이블 이름 바꾸기와 같이 스키마를 변경하려고 하면 오류 12320이 발생합니다. 스키마 버전을 변경해야 하는 작업(예: 이름 바꾸기)은 메모리 최적화 테이블에서 지원되지 않습니다.<br /><br /> 스키마를 변경하려면 테이블이나 프로시저를 삭제하고 업데이트된 정의를 사용하여 다시 만듭니다.|  
 |작업(Operation)|CREATE TRIGGER|메모리 최적화 테이블의 트리거는 지원되지 않습니다.|  
-|작업(Operation)|TRUNCATE TABLE|TRUNCATE 작업은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거 `DELETE FROM` *하려면 테이블을 사용 하* 여 모든 행을 삭제 하거나 테이블을 삭제 하 고 다시 만듭니다.|  
+|작업(Operation)|TRUNCATE TABLE|TRUNCATE 작업은 메모리 최적화 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거 하려면 테이블을 사용 하 여 모든 행을 삭제 `DELETE FROM` *table* 하거나 테이블을 삭제 하 고 다시 만듭니다.|  
 |작업(Operation)|ALTER AUTHORIZATION|메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저의 소유자 변경은 지원되지 않습니다. 테이블이나 프로시저를 삭제하고 다시 만들어 소유권을 변경합니다.|  
 |작업(Operation)|ALTER SCHEMA|기존의 메모리 최적화 테이블이나 고유하게 컴파일된 저장 프로시저의 스키마 변경은 지원되지 않습니다. 스키마를 변경하려면 테이블이나 프로시저를 삭제하고 다시 만듭니다.|  
 |작업(Operation)|DBCC CHECKTABLE|DBCC CHECKTABLE은 메모리 최적화 테이블에서 지원되지 않습니다.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155305"
 ## <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스  
  다음 표에서는 메모리 최적화 테이블의 인덱스와 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|유형|이름|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|필터링된 인덱스|필터링된 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 인덱스 사양에서 `WHERE` 절을 생략합니다.|  
 |기능|UNIQUE|고유 인덱스는 메모리 최적화 테이블에서 지원되지 않습니다. 인덱스 사양에서 `UNIQUE` 인수를 제거합니다.|  
@@ -98,28 +98,28 @@ ms.locfileid: "63155305"
 ## <a name="nonclustered-hash-indexes"></a>비클러스터형 해시 인덱스  
  다음 표에서는 비클러스터형 해시 인덱스와 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|유형|이름|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |옵션|ASC/DESC|비클러스터형 해시 인덱스가 정렬되지 않습니다. 인덱스 키 사양에서 `ASC` 및 `DESC` 키워드를 제거합니다.|  
   
 ## <a name="natively-compiled-stored-procedures"></a>Natively Compiled Stored Procedures  
  다음 표에서는 고유하게 컴파일된 저장 프로시저와 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|유형|기능|해결 방법|  
+|형식|기능|해결 방법|  
 |----------|-------------|----------------|  
 |기능|인라인 테이블 변수|변수 선언을 사용하여 테이블 형식을 인라인으로 선언할 수 없습니다. `CREATE TYPE` 문을 사용하여 테이블 형식을 명시적으로 선언해야 합니다.|  
-|기능|커서|커서는 고유하게 컴파일된 저장 프로시저 위나 안에서 지원되지 않습니다.<br /><br /> -클라이언트에서 프로시저를 실행할 때는 커서 API 대신 RPC를 사용 합니다. ODBC가 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 `EXECUTE`를 사용하지 말고 그 대신 프로시저 이름을 직접 지정합니다.<br /><br /> - [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다른 저장 프로시저에서 프로시저를 실행할 때는 고유 하 게 컴파일된 저장 프로시저에 커서를 사용 하지 마십시오.<br /><br /> -고유 하 게 컴파일된 저장 프로시저를 만들 때 커서를 사용 하는 대신 집합 기반 논리 또는 `WHILE` 루프를 사용 합니다.|  
+|기능|커서|커서는 고유하게 컴파일된 저장 프로시저 위나 안에서 지원되지 않습니다.<br /><br /> -클라이언트에서 프로시저를 실행할 때는 커서 API 대신 RPC를 사용 합니다. ODBC가 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 `EXECUTE`를 사용하지 말고 그 대신 프로시저 이름을 직접 지정합니다.<br /><br /> - [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 다른 저장 프로시저에서 프로시저를 실행할 때는 고유 하 게 컴파일된 저장 프로시저에 커서를 사용 하지 마십시오.<br /><br /> -고유 하 게 컴파일된 저장 프로시저를 만들 때 커서를 사용 하는 대신 집합 기반 논리 또는 루프를 사용 `WHILE` 합니다.|  
 |기능|비 상수 매개 변수 기본값|고유하게 컴파일된 저장 프로시저에서 매개 변수와 함께 기본값을 사용할 때는 값이 상수여야 합니다. 매개 변수 선언에서 와일드카드를 제거 합니다.|  
 |기능|EXTERNAL|CLR 저장 프로시저는 고유하게 컴파일될 수 없습니다. CREATE PROCEDURE 문에서 AS EXTERNAL 절이나 NATIVE_COMPILATION 옵션을 제거합니다.|  
-|기능|번호가 매겨진 저장 프로시저|고유하게 컴파일된 저장 프로시저에 번호를 매길 수 없습니다. 문에서 번호 `;`를 제거 합니다. *number* `CREATE PROCEDURE`|  
+|기능|번호가 매겨진 저장 프로시저|고유하게 컴파일된 저장 프로시저에 번호를 매길 수 없습니다. `;`문에서 *번호* 를 제거 `CREATE PROCEDURE` 합니다.|  
 |기능|다중 행 삽입 ... VALUES 문|고유하게 컴파일된 저장 프로시저에서 동일한 `INSERT` 문을 사용하여 여러 행을 삽입할 수 없습니다. 각 행에 대해 `INSERT` 문을 만듭니다.|  
 |기능|CTE(공통 테이블 식)|CTE(공통 테이블 식)은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 쿼리를 다시 작성합니다.|  
 |기능|하위 쿼리|하위 쿼리(다른 쿼리 내에 중첩된 쿼리)는 지원되지 않습니다. 쿼리를 다시 작성합니다.|  
 |기능|COMPUTE|`COMPUTE` 절은 지원되지 않습니다. 쿼리에서 이 절을 제거합니다.|  
-|기능|SELECT INTO|`INTO` 절은 `SELECT` 문에 지원되지 않습니다. 쿼리 `INSERT INTO`를 *테이블로*`SELECT`다시 작성 합니다.|  
+|기능|SELECT INTO|`INTO` 절은 `SELECT` 문에 지원되지 않습니다. 쿼리를 테이블로 다시 작성 `INSERT INTO` *Table* `SELECT` 합니다.|  
 |기능|OUTPUT|`OUTPUT` 절은 지원되지 않습니다. 쿼리에서 이 절을 제거합니다.|  
 |기능|불완전한 삽입 열 목록|`INSERT` 문에서는 테이블에 잇는 모든 열에 대해 값을 지정해야 합니다.|  
-|함수|*기능*|기본 제공 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 함수를 제거합니다. 지원 되는 기본 제공 함수에 대 한 자세한 내용은 [고유 하 게 컴파일된 저장 프로시저](../in-memory-oltp/natively-compiled-stored-procedures.md)를 참조 하세요.|  
+|기능|*Function*|기본 제공 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 저장 프로시저에서 함수를 제거합니다. 지원 되는 기본 제공 함수에 대 한 자세한 내용은 [고유 하 게 컴파일된 저장 프로시저](../in-memory-oltp/natively-compiled-stored-procedures.md)를 참조 하세요.|  
 |기능|CASE|`CASE` 문은 고유하게 컴파일된 저장 프로시저 내부의 쿼리에서 지원되지 않습니다. 각 사례에 대해 쿼리를 만듭니다. 자세한 내용은 [CASE 문 구현](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)을 참조 하세요.|  
 |기능|사용자 정의 함수|사용자 정의 함수는 고유하게 컴파일된 저장 프로시저에서 사용할 수 없습니다. 프로시저 정의에서 함수에 대한 참조를 제거합니다.|  
 |기능|사용자 정의 집계|사용자 정의 집계 함수는 고유하게 컴파일된 저장 프로시저에서 사용할 수 없습니다. 프로시저에서 함수에 대한 참조를 제거합니다.|  
@@ -177,10 +177,10 @@ ms.locfileid: "63155305"
 |옵션|DISTINCT|이 옵션은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 `DISTINCT`를 제거합니다.|  
 |옵션|PERCENT|이 옵션은 `TOP` 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 `PERCENT`를 제거합니다.|  
 |옵션|WITH  TIES|이 옵션은 `TOP` 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 `WITH TIES`를 제거합니다.|  
-|집계 함수|*집계 함수*|이 절은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 집계 함수에 대한 자세한 내용은 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하십시오.|  
+|집계 함수|*Aggregate 함수*|이 절은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 집계 함수에 대한 자세한 내용은 [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하십시오.|  
 |순위 함수|*순위 함수*|순위 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 프로시저 정의에서 해당 함수를 제거합니다.|  
-|함수|*기능*|이 함수는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
-|인수를 제거합니다.|*인수를 제거합니다.*|이 문은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
+|기능|*Function*|이 함수는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
+|인수를 제거합니다.|*선언문*|이 문은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
 |기능|문자 및 이진 문자열과 함께 사용되는 MIN 및 MAX|집계 함수 `MIN` 및 `MAX`는 고유하게 컴파일된 저장 프로시저 내부의 문자와 이진 문자열에 사용할 수 없습니다.|  
 |기능|집계 함수 없는 GROUP BY|고유하게 컴파일된 저장 프로시저에서 쿼리에 `GROUP BY` 절이 있으면 쿼리에서 SELECT 또는 HAVING 절에 집계 함수도 사용해야 합니다. 집계 함수를 쿼리에 추가합니다.|  
 |기능|GROUP BY ALL|ALL은 고유하게 컴파일된 저장 프로시저에서 GROUP BY 절에 사용할 수 없습니다. GROUP BY 절에서 ALL을 제거합니다.|  
@@ -191,15 +191,15 @@ ms.locfileid: "63155305"
 |기능|BEGIN TRANSACTION, COMMIT TRANSACTION 및 ROLLBACK TRANSACTION|ATOMIC 블록을 사용하여 트랜잭션과 오류 처리를 제어합니다. 자세한 내용은 [Atomic Blocks](atomic-blocks-in-native-procedures.md)을(를) 참조하십시오.|  
 |기능|인라인 테이블 변수 선언|테이블 변수는 명시적으로 정의된 메모리 최적화 테이블 형식을 참조해야 합니다. 메모리 최적화 테이블 형식을 만들고 이 형식을 인라인으로 지정하는 대신 변수 선언에 이 형식을 사용합니다.|  
 |기능|sp_recompile|고유하게 컴파일된 저장 프로시저의 다시 컴파일은 지원되지 않습니다. 프로시저를 삭제하고 다시 만듭니다.|  
-|기능|EXECUTE AS CALLER|`EXECUTE AS` 절은 필수입니다. 그러나 `EXECUTE AS CALLER`는 지원되지 않습니다. , `EXECUTE AS OWNER` `EXECUTE AS` *사용자*또는 `EXECUTE AS SELF`을 사용 합니다.|  
+|기능|EXECUTE AS CALLER|`EXECUTE AS` 절은 필수입니다. 그러나 `EXECUTE AS CALLER`는 지원되지 않습니다. `EXECUTE AS OWNER`, `EXECUTE AS` *사용자*또는을 사용 `EXECUTE AS SELF` 합니다.|  
 |기능|디스크 기반 테이블|디스크 기반 테이블은 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 고유하게 컴파일된 저장 프로시저에서 디스크 기반 테이블에 대한 참조를 제거합니다. 또는 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션합니다.|  
-|기능|보기|뷰는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 뷰 대신 기본 테이블을 참조합니다.|  
+|기능|뷰|뷰는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 뷰 대신 기본 테이블을 참조합니다.|  
 |기능|테이블 반환 함수|테이블 반환 함수는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 고유하게 컴파일된 저장 프로시저에서 테이블 반환 함수에 대한 참조를 제거합니다.|  
   
 ## <a name="transactions-that-access-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 액세스하는 트랜잭션  
  다음 표에서는 메모리 최적화 테이블에 액세스하는 트랜잭션과 관련된 오류의 메시지 텍스트에 나타날 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 및 키워드와 오류를 해결하기 위한 수정 동작을 나열합니다.  
   
-|유형|이름|해결 방법|  
+|형식|이름|해결 방법|  
 |----------|----------|----------------|  
 |기능|저장점(savepoint)|메모리 최적화 테이블에 액세스하는 트랜잭션에서 명시적인 저장점을 만드는 작업은 지원되지 않습니다.|  
 |기능|바운드 트랜잭션|바운드 세션은 메모리 최적화 테이블에 액세스하는 트랜잭션에 참여할 수 없습니다. 프로시저를 실행하기 전에 세션을 바인딩하지 마십시오.|  

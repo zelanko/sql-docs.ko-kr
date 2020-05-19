@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60ea4653fac6bd2fada500d562420b1ff705d4d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72964e1c3c44b389d8aabee9b794fb3dc5e1fd36
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920715"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746976"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Append 및 CreateParameter 메서드 예제(VB)
 이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다.  

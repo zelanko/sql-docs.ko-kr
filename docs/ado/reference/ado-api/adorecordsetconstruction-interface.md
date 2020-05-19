@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordsetConstruction interface [ADO]
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 770bf86f62f243ea255693c7773e6fae48527cfd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920791"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747083"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction 인터페이스
 **ADORecordsetConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROWSET** 개체에서 ADO **레코드 집합** 개체를 생성 하는 데 사용 됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "67920791"
  없음  
   
 ## <a name="remarks"></a>설명  
- OLE DB **Rowset** 개체 (`pRowset`)를 지정 하는 경우 다음 세 가지 기본 작업에`adoRs`대 한 ADO **레코드 집합** 개체 ()가 생성 됩니다.  
+ OLE DB **Rowset** 개체 ( `pRowset` )를 지정 하는 경우 다음 세 가지 기본 작업에 대 한 ADO **레코드 집합** 개체 ()가 생성 됩니다 `adoRs` .  
   
 1.  ADO **레코드 집합** 개체를 만듭니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "67920791"
                          (void**)&adoRsConstruct);  
     ```  
   
-3.  속성 메서드를 호출 하 여 ADO `Recordset` 개체 `Rowset` 의 OLE DB 개체를 설정 합니다. `IADORecordsetConstruction::put_Rowset`  
+3.  `IADORecordsetConstruction::put_Rowset`속성 메서드를 호출 하 여 `Rowset` ADO 개체의 OLE DB 개체를 설정 합니다 `Recordset` .  
   
     ```  
     IUnknown *pUnk=NULL;  

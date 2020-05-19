@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bce894f1e0cce8c8d8800b2633924f9cc5bc6bd9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921012"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747347"
 ---
 # <a name="ado-events-model-example-vc"></a>ADO 이벤트 모델 예제(VC++)
 [언어별 Ado 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md) 의 Visual C++ 섹션에서는 ado 이벤트 모델을 인스턴스화하는 방법에 대 한 일반적인 설명을 제공 합니다. 다음은 **#import** 지시문에 의해 만들어진 환경 내에서 이벤트 모델을 인스턴스화하는 특정 예제입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "67921012"
   
 -   이 예제는 콘솔 응용 프로그램으로 작성 됩니다.  
   
--   "`// Do some work`" 주석 아래에 사용자 고유의 코드를 삽입 해야 합니다.  
+-   "" 주석 아래에 사용자 고유의 코드를 삽입 해야 합니다 `// Do some work` .  
   
 -   모든 이벤트 처리기는 기본적으로 아무 작업도 수행 하지 않고 추가 알림을 취소 합니다. 응용 프로그램에 적합 한 코드를 삽입 하 고 필요한 경우 알림을 허용 해야 합니다.  
   

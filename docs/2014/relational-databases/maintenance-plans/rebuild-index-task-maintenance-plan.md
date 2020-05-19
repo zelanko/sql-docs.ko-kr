@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807038"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706430"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>인덱스 다시 작성 태스크(유지 관리 계획)
   **인덱스 다시 작성 태스크** 대화 상자를 사용하여 데이터베이스에 있는 테이블의 인덱스를 새 채우기 비율로 다시 만들 수 있습니다. 채우기 비율은 향후 확장을 수용하기 위해 각 인덱스 페이지에 남겨 둘 빈 공간을 결정합니다. 데이터를 테이블에 추가할 때는 채우기 비율이 유지되지 않으므로 사용 가능한 공간이 꽉 찹니다. 데이터 및 인덱스 페이지를 다시 구성하면 사용 가능한 공간을 다시 확보할 수 있습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "62807038"
  **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
- **신규**  
+ **새 항목**  
  이 태스크를 수행할 때 사용할 새 서버 연결을 만듭니다. 아래에서는 **새 연결** 대화 상자에 대해 설명합니다.  
   
  **데이터베이스**  
@@ -69,7 +69,7 @@ ms.locfileid: "62807038"
  데이터베이스 테이블의 인덱스를 삭제하고 자동으로 계산된 새 채우기 비율로 인덱스를 다시 만들기 때문에 인덱스 페이지에 대해 지정된 크기의 사용 가능한 공간이 예약됩니다. 이 비율이 커질수록 인덱스 페이지에 대해 더 많은 사용 가능한 공간이 예약되고 인덱스가 더 커집니다. 유효한 값은 0에서 100까지입니다.  
   
  **tempdb에 결과 정렬**  
- 인덱스를 `SORT_IN_TEMPDB`만드는 동안 생성 된 중간 정렬 결과가 일시적으로 저장 되는 위치를 결정 하는 옵션을 사용 합니다. 정렬 작업이 필요하지 않거나 메모리에서 정렬을 수행할 수 있으면 `SORT_IN_TEMPDB`옵션이 무시됩니다.  
+ 인덱스를 `SORT_IN_TEMPDB` 만드는 동안 생성 된 중간 정렬 결과가 일시적으로 저장 되는 위치를 결정 하는 옵션을 사용 합니다. 정렬 작업이 필요하지 않거나 메모리에서 정렬을 수행할 수 있으면 `SORT_IN_TEMPDB`옵션이 무시됩니다.  
   
  **인덱스를 다시 만드는 동안 인덱스를 온라인으로 유지**  
  사용자가 인덱스 작업을 수행하는 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있는 `ONLINE` 옵션을 사용합니다.  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - InheritTypeEnum enumeration [ADOX]
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f420d7d49ad24188f5210001af1209427478f3f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965956"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746676"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 개체가 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)로 설정 된 사용 권한을 상속 하는 방법을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|주 개체에 포함 된 개체와 기타 컨테이너는 모두 항목을 상속 합니다.|  
 |**adInheritContainers**|2|주 개체에 포함 된 다른 컨테이너는 항목을 상속 합니다.|  

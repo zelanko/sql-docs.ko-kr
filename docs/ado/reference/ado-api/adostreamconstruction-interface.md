@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADOStreamConstruction interface [ADO]
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2c120667a0ce279ea03922adf487f58c1fdc92de
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920782"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747055"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 **ADOStreamConstruction** 인터페이스는 C/c + + 응용 프로그램의 OLE DB **ISTREAM** 개체에서 ADO **스트림** 개체를 생성 하는 데 사용 됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "67920782"
  없음  
   
 ## <a name="remarks"></a>설명  
- OLE DB **IStream** 개체 (`pStream`)를 지정 하는 경우 다음 세 가지 기본 작업에`adoStr`대 한 ADO **스트림** 개체 ()의 생성은 다음과 같습니다.  
+ OLE DB **IStream** 개체 ()를 지정 하는 경우 `pStream` **Stream** `adoStr` 다음 세 가지 기본 작업에 대 한 ADO 스트림 개체 ()의 생성은 다음과 같습니다.  
   
 1.  ADO **Stream** 개체를 만듭니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "67920782"
                          (void**)&adoStrConstruct);  
     ```  
   
- 속성 메서드를 호출 하 여 ADO **스트림** 개체에 대 한 OLE DB IStream 개체를 설정 합니다. **IStream** `IADOStreamConstruction::get_Stream`  
+ `IADOStreamConstruction::get_Stream`속성 메서드를 호출 하 여 ADO **스트림** 개체에 대 한 OLE DB **IStream** 개체를 설정 합니다.  
   
 ```  
 IUnknown *pUnk=NULL;  

@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067823"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706382"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-  `SQLBindParameter`는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE client ODBC 드라이버에 대 한 데이터를 제공 하는 데 사용 될 때 데이터 변환 부담을 없앨 수 있으므로 응용 프로그램의 클라이언트 및 서버 구성 요소 모두에서 성능이 크게 향상 됩니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
+  `SQLBindParameter`는 Native Client ODBC 드라이버에 대 한 데이터를 제공 하는 데 사용 될 때 데이터 변환 부담을 없앨 수 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램의 클라이언트 및 서버 구성 요소 모두에서 성능이 크게 향상 됩니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  
   
 > [!NOTE]  
 >  `char` 및 `wchar` 형식 데이터를 이미지 열에 삽입할 경우 이진 형식으로 변환된 후의 데이터 크기가 아니라 전달되는 데이터의 크기가 사용됩니다.  
@@ -31,12 +31,12 @@ ms.locfileid: "63067823"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용할 경우 입력 매개 변수를 바인딩할 때 SQL_PARAM_INPUT을 지정합니다. OUTPUT 키워드를 사용하여 정의된 저장 프로시저 매개 변수를 바인딩할 경우에는 SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT만 지정합니다.  
   
- 바인딩된 매개 변수 배열의 배열 요소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문 실행 시 오류가 발생 하는 경우에는 NATIVE Client ODBC 드라이버를 사용 하 여 [sqlrowcount](sqlrowcount.md) 를 신뢰할 수 없습니다. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 애플리케이션에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
+ [SQLRowCount](sqlrowcount.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 바인딩된 매개 변수 배열의 배열 요소에서 문 실행 시 오류가 발생 하는 경우에는 Native Client ODBC 드라이버를 사용 하 여 sqlrowcount를 신뢰할 수 없습니다. ODBC 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR은 오류가 발생하기 전까지 처리된 행 수를 보고합니다. 그러면 필요한 경우 애플리케이션에서는 해당 매개 변수 상태 배열을 확인하여 성공적으로 실행된 문 수를 파악할 수 있습니다.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>SQL 문자 형식에 대한 매개 변수 바인딩  
- 전달된 SQL 데이터 형식이 문자 형식인 경우 *ColumnSize* 는 문자 수입니다(바이트 아님). 바이트 단위의 데이터 문자열 길이가 8000 보다 큰 경우 *Columnsize* 는 SQL 형식의 크기에 제한이 없음을 나타내는로 `SQL_SS_LENGTH_UNLIMITED`설정 되어야 합니다.  
+ 전달된 SQL 데이터 형식이 문자 형식인 경우 *ColumnSize* 는 문자 수입니다(바이트 아님). 바이트 단위의 데이터 문자열 길이가 8000 보다 큰 경우 *Columnsize* 는 `SQL_SS_LENGTH_UNLIMITED` SQL 형식의 크기에 제한이 없음을 나타내는로 설정 되어야 합니다.  
   
- 예를 들어 SQL 데이터 형식이 인 `SQL_WVARCHAR`경우 *columnsize* 는 4000 보다 클 수 없습니다. 실제 데이터 길이가 4000 보다 큰 경우에는 *Columnsize* 를로 `SQL_SS_LENGTH_UNLIMITED` 설정 하 여 `nvarchar(max)` 가 드라이버에서 사용 되도록 해야 합니다.  
+ 예를 들어 SQL 데이터 형식이 인 경우 `SQL_WVARCHAR` *columnsize* 는 4000 보다 클 수 없습니다. 실제 데이터 길이가 4000 보다 큰 경우에는 *Columnsize* 를로 설정 하 `SQL_SS_LENGTH_UNLIMITED` `nvarchar(max)` 여가 드라이버에서 사용 되도록 해야 합니다.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter와 테이블 반환 매개 변수  
  다른 매개 변수 형식과 마찬가지로 테이블 반환 매개 변수는 SQLBindParameter에 의해 바인딩됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "63067823"
  테이블 반환 매개 변수에 대 한 자세한 내용은 [ODBC&#41;&#40;테이블 반환 매개 변수 ](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)를 참조 하세요.  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLBindParameter 지원  
- 날짜/시간 형식의 매개 변수 값은 [C에서 SQL로 변환](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)에 설명 된 대로 변환 됩니다. `time` 및 `datetimeoffset` 형식의 매개 변수는 해당 하는 구조체 (`SQL_SS_TIME2_STRUCT` 및 `SQL_SS_TIMESTAMPOFFSET_STRUCT`) `SQL_C_BINARY` 를 사용 하는 경우 또는로 `SQL_C_DEFAULT` 지정 된 *ValueType* 을 포함 해야 합니다.  
+ 날짜/시간 형식의 매개 변수 값은 [C에서 SQL로 변환](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)에 설명 된 대로 변환 됩니다. 및 형식의 매개 변수는 `time` `datetimeoffset` 해당 하는 *ValueType* `SQL_C_DEFAULT` `SQL_C_BINARY` 구조체 (및)를 사용 하는 경우 또는로 지정 된 ValueType을 포함 해야 합니다 `SQL_SS_TIME2_STRUCT` `SQL_SS_TIMESTAMPOFFSET_STRUCT` .  
   
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688897"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718795"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
   메모리 최적화 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 최적화 테이블에서 행은 8,060바이트를 초과할 수 없습니다. 메모리 최적화 테이블의 크기를 알면 컴퓨터 메모리가 충분한지 이해하는 데 도움이 됩니다.  
@@ -70,14 +70,14 @@ ms.locfileid: "72688897"
   
  다음 표에서는 [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns]와 같이 행 본문 크기의 계산에 대해 설명합니다.  
   
-|단원|크기|주석|  
+|섹션|크기|의견|  
 |-------------|----------|--------------|  
 |단순 형식 열|SUM([size of shallow types])<br /><br /> **개별 형식의 크기는 다음과 같습니다.**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> 숫자 (전체 자릿수 <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> 숫자 (전체 자릿수>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
-|단순 열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|전체 형식 열의 오프셋 배열|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|전체 형식 열의 오프셋 배열|가능한 값은<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
-|NULL 배열 패딩|가능한 값은 다음과 같습니다.<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|안쪽 여백|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|NULL 배열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|여백|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
 |고정 길이 전체 형식 열|SUM([size of fixed length deep type columns])<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
 |가변 길이 전체 형식 열 [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 [computed row body size]에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
 |가변 길이 전체 형식 열 [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 [actual row body size]에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|  
@@ -117,14 +117,14 @@ ms.locfileid: "72688897"
   
  200보다 큰 시간의 경우 테이블에 다음 행이 포함됩니다.  
   
-|속성|City|  
+|이름|City|  
 |----------|----------|  
 |John|베이징|  
 |Jane|프라하|  
   
  그러나 시작 시간이 100인 활성 트랜잭션은 다음 버전의 테이블을 참조합니다.  
   
-|속성|City|  
+|이름|City|  
 |----------|----------|  
 |John|파리|  
 |Jane|프라하|  
@@ -188,7 +188,7 @@ GO
   
 -   NULL 배열 크기가 홀수이고 전체 형식 열이 있으므로 NULL 배열 패딩은 1입니다.  
   
--   안쪽 여백  
+-   여백  
   
     -   가장 큰 맞춤 요구 사항은 8입니다.  
   
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transact-SQL IntelliSense
 - IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242999"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718233"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
@@ -49,10 +49,10 @@ ms.locfileid: "75242999"
 |-----------------------------|----------------------|  
 |[INSERT](/sql/t-sql/statements/insert-transact-sql)|*execute_statement* 절을 제외한 모든 구문|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|모든 구문|  
-|[제거](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|모든 구문|  
 |[있다고@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|모든 구문|  
 |[설정@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|모든 구문|  
-|[실행할](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
+|[CREATE 문을 실행하기 전에](/sql/t-sql/language-elements/execute-transact-sql)|사용자 정의 저장 프로시저, 시스템 저장 프로시저, 사용자 정의 함수 및 시스템 함수 실행|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|모든 구문|  
 |[뷰 만들기](/sql/t-sql/statements/create-view-transact-sql)|모든 구문|  
 |[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|모든 구문. 단, 다음 항목은 예외입니다.<br /><br /> EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  

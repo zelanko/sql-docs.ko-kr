@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Cancel method [RDS]
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90d3e60a77df15d1b2db302df8a3c1d4a39de245
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d9d8c0a478fd21c924752e6ebccc72767f8050f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964610"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746407"
 ---
 # <a name="cancel-method-rds"></a>Cancel 메서드(RDS)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  

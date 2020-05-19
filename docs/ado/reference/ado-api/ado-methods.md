@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920921"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747254"
 ---
 # <a name="ado-methods"></a>ADO 메서드
 
@@ -31,7 +31,7 @@ ms.locfileid: "67920921"
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|보류 중인 비동기 메서드 호출의 실행을 취소 합니다.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|보류 중인 일괄 처리 업데이트를 취소 합니다.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|**Update** 메서드를 호출 하기 전에 레코드 **집합** 개체의 현재 행 또는 새 행 또는 **Record** 개체의 **Fields** 컬렉션에 적용 된 모든 변경 내용을 취소 합니다.|  
-|[해제](../../../ado/reference/ado-api/clear-method-ado.md)|**Errors** 컬렉션에서 **오류** 개체를 모두 제거 합니다.|  
+|[지우기](../../../ado/reference/ado-api/clear-method-ado.md)|**Errors** 컬렉션에서 **오류** 개체를 모두 제거 합니다.|  
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|기존 **recordset** 개체에서 중복 **레코드 집합** 개체를 만듭니다. 필요에 따라 복제본을 읽기 전용으로 지정 합니다.|  
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|열린 개체와 모든 종속 개체를 닫습니다.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|두 책갈피를 비교 하 여 상대 값의 표시를 반환 합니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "67920921"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|파일이 나 디렉터리와 모든 하위 디렉터리를 삭제 합니다.|  
 |[Execute (ADO 명령)](../../../ado/reference/ado-api/execute-method-ado-command.md)|**CommandText** 속성에 지정 된 쿼리, SQL 문 또는 저장 프로시저를 실행 합니다.|  
 |[Execute (ADO 연결)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|지정 된 쿼리, SQL 문, 저장 프로시저 또는 공급자별 텍스트를 실행 합니다.|  
-|[찾아낼](../../../ado/reference/ado-api/find-method-ado.md)|**레코드 집합** 에서 지정 된 조건을 만족 하는 행을 검색 합니다.|  
+|[찾기](../../../ado/reference/ado-api/find-method-ado.md)|**레코드 집합** 에서 지정 된 조건을 만족 하는 행을 검색 합니다.|  
 |[플러시가](../../../ado/reference/ado-api/flush-method-ado.md)|ADO 버퍼에 남아 있는 **스트림의** 내용을 **스트림이** 연결 된 기본 개체에 강제로 적용 합니다.|  
 |[get_OLEDBCommand 메서드](../../../ado/reference/ado-api/get-oledbcommand-method.md)|먼저 ADO 명령에 설정 된 모든 매개 변수 정보를 OLEDB 명령에 전파 하는 기본 OLEDB 명령을 반환 합니다.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|이 **레코드가**나타내는 디렉터리의 파일 및 하위 디렉터리를 나타내는 행을 포함 하는 **레코드 집합** 을 반환 합니다.|  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921882"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747609"
 ---
 # <a name="writing-your-own-customized-handler"></a>고유한 사용자 지정된 처리기 작성
 기본 RDS 지원을 원하는 IIS 서버 관리자 인 경우 사용자 요청 및 액세스 권한을 더 자세히 제어 하려면 고유한 처리기를 작성 하는 것이 좋습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "67921882"
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler 인터페이스  
  이 인터페이스에는 두 가지 메서드인 **Getrecordset** 및 **Reconnect**가 있습니다. 두 방법 모두 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 합니다.  
   
- 두 메서드는 "**Handler =**" 키워드의 첫 번째 쉼표 뒤에 나오는 인수를 사용 합니다. 예를 들어 `"Handler=progid,arg1,arg2;"` 는의 `"arg1,arg2"`인수 문자열을 전달 하 고 `"Handler=progid"` 는 null 인수를 전달 합니다.  
+ 두 메서드는 "**Handler =**" 키워드의 첫 번째 쉼표 뒤에 나오는 인수를 사용 합니다. 예를 들어 `"Handler=progid,arg1,arg2;"` 는의 인수 문자열을 전달 `"arg1,arg2"` 하 고는 `"Handler=progid"` null 인수를 전달 합니다.  
   
 ## <a name="getrecordset-method"></a>GetRecordset 메서드  
  이 메서드는 데이터 소스를 쿼리하고 제공 된 인수를 사용 하 여 새 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만듭니다. **레코드 집합** 은 **Adlockbatchoptimistic** 으로 열어야 하며 비동기식으로 열지 않아야 합니다.  

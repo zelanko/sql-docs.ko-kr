@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0702fa4580cadce688591b976102b25118f7a189
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966055"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746844"
 ---
 # <a name="indexes-append-method-example-vb"></a>Indexes Append 메서드 예제(VB)
 다음 코드에서는 새 인덱스를 만드는 방법을 보여 줍니다. 인덱스는 테이블의 두 열에 있습니다.  

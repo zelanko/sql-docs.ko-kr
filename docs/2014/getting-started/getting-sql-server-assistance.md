@@ -38,15 +38,15 @@ helpviewer_keywords:
 - SQL Server assistance
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683610"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706931"
 ---
 # <a name="getting-sql-server-assistance"></a>SQL Server 지원 받기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  
@@ -86,7 +86,7 @@ ms.locfileid: "74683610"
 ## <a name="additional-online-information"></a>추가적인 온라인 정보  
  추가적인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 정보는 다음 [!INCLUDE[msCoName](../includes/msconame-md.md)] 웹 사이트에서 이용할 수 있습니다.  
   
-|리소스|Description|  
+|리소스|설명|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 데이터 스토리지 및 비즈니스 인텔리전스 도구로 평가하는 사전 영업 정보를 제공합니다.|  
 |[Microsoft 기술 자료](https://go.microsoft.com/fwlink/?LinkId=42461)|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술 지원 서비스에서 제공하는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 문서를 검색할 수 있는 저장소입니다.|    

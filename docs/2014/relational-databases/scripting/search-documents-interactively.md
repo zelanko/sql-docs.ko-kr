@@ -11,15 +11,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], interactive
 - Query Editor [SQL Server Management Studio], interactive search
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ac2a15bae8fde50315ab6c7c41f2e3e57973061f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05fac94c8673aed046455fc57eac223bd7853d40
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243289"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718739"
 ---
 # <a name="search-documents-interactively"></a>대화형으로 문서 검색
   **찾기 및 바꾸기** 대화 상자를 사용하면 하나 이상의 열려 있는 파일이나 창을 검색하고 검색 조건과 일치하는 항목을 하나씩 이동할 수 있습니다. 이 기술을 사용하면 일치하는 항목 주위의 텍스트 컨텍스트에서 일치하는 개별 항목을 검토할 수 있습니다. 또한 **찾기 및 바꾸기** 대화 상자를 사용하여 대량 찾기 작업을 수행하고 검색 조건과 일치하는 항목을 보고서 형식으로 검토할 수 있습니다.  

@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: ffd3442e-d880-46e9-b848-2365a09a2406
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf8ac0cf868394d9aa8063220939feee69ac2f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 306abff20146ec5004b515578f5c71b8cb574bba
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62626586"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718868"
 ---
 # <a name="bound-vs-unbound-text-and-image-columns"></a>바인딩된 Text 및 Image 열과 바인딩되지 않은 Text 및 Image 열
-  서버 커서를 사용할 때 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 **sqlfetch** 가 수행 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
+  서버 커서를 사용할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 **sqlfetch** 가 수행 될 때 바인딩되지 않은 **text**, **ntext**또는 **image** 열에 대 한 데이터를 전송 하지 않도록 최적화 되어 있습니다. **Text**, **ntext**또는 **image** 데이터는 응용 프로그램이 열에 대해 [SQLGetData](../native-client-odbc-api/sqlgetdata.md) 를 발급할 때까지 서버에서 실제로 검색 되지 않습니다.  
   
  사용자가 커서에서 위나 아래로 스크롤 하는 동안 **text**, **ntext**또는 **image** 데이터가 표시 되지 않도록 많은 응용 프로그램을 작성할 수 있습니다. 사용자가 행을 선택 하 여 세부 정보를 가져오는 경우 응용 프로그램은 **SQLGetData** 를 호출 하 여 **text**, **ntext**또는 **image** 데이터를 검색할 수 있습니다. 이렇게 하면 사용자가 선택 하지 않은 행에 대해 **text**, **ntext**또는 **image** 데이터가 전송 되지 않으므로 매우 많은 양의 데이터가 전송 되는 것을 방지할 수 있습니다.  
   

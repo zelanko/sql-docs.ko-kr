@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010723"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717825"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 축 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 축을 지정하는 방법을 보여 줍니다.  
@@ -33,13 +33,13 @@ ms.locfileid: "66010723"
 ## <a name="examples"></a>예  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. 컨텍스트 노드의 자식 요소 검색  
- 다음 XPath 쿼리는 컨텍스트 노드의 모든 ** \<연락처>** 자식 요소를 선택 합니다.  
+ 다음 XPath 쿼리는 컨텍스트 노드의 모든 ** \< 연락처>** 자식 요소를 선택 합니다.  
   
 ```  
 /child::Contact  
 ```  
   
- `child` 쿼리에서 `Contact` 는 축 이며은 노드 테스트 (가 `Contact` \< `child` ** \<요소>** 노드인 경우 TRUE)입니다. 요소>는 축과 연결 된 주 노드 형식 이기 때문입니다.  
+ 쿼리에서는 `child` 축 이며은 `Contact` 노드 테스트 ( `Contact` 가 요소 ** \<>** 노드인 경우 TRUE \< )입니다. 요소>는 축과 연결 된 주 노드 형식 이기 때문입니다 `child` .  
   
  기본값은 `child` 축입니다. 따라서 다음과 같이 쿼리를 작성할 수 있습니다.  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010723"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 컨텍스트 노드의 손자 검색  
- 다음 XPath 쿼리는 컨텍스트 노드의 ** \<Customer>** 요소 자식의 모든 ** \<Order>** 요소 자식을 선택 합니다.  
+ 다음 XPath 쿼리는 컨텍스트 노드의 ** \< Customer>** 요소 자식의 모든 ** \< Order>** 요소 자식을 선택 합니다.  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- `child` 쿼리에서 `Customer` 는 축이 고 및 `Order` 는 노드 테스트입니다. 이러한 노드 테스트는 ** \<요소>** 노드가 `child` 축에 대 한 주 노드인지 때문에 Customer와 Order가 ** \<요소>** 노드인 경우 TRUE입니다. ** \<고객>** 일치 하는 각 노드에 대해 ** \<주문>** 일치 하는 노드가 결과에 추가 됩니다. 결과 집합에는 ** \<Order>** 반환 됩니다.  
+ 쿼리에서 `child` 는 축이 고 `Customer` 및 `Order` 는 노드 테스트입니다. 이러한 노드 테스트는 ** \< 요소>** 노드가 축에 대 한 주 노드인지 때문에 Customer와 ORDER가 ** \< 요소>** 노드인 경우 TRUE입니다 `child` . ** \< 고객>** 일치 하는 각 노드에 대해 ** \< 주문>** 일치 하는 노드가 결과에 추가 됩니다. 결과 집합에는 ** \< Order>** 반환 됩니다.  
   
  기본값은 `child` 축입니다. 따라서 다음과 같이 쿼리를 지정할 수 있습니다.  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010723"
 </ROOT>  
 ```  
   
- XPath 쿼리가와 같이 `Customer/Order/OrderDetail`지정 된 경우 ** \<고객>** 일치 하는 각 노드에서 쿼리가 ** \<Order>** 요소로 이동 합니다. 그리고 ** \<순서>** 일치 하는 각 노드에 대해 쿼리는 ** \<orderdetail>** 노드를 결과에 추가 합니다. ** \<Orderdetail>** 만 결과 집합에 반환 됩니다.  
+ XPath 쿼리가와 같이 지정 된 경우 `Customer/Order/OrderDetail` ** \< 고객>** 일치 하는 각 노드에서 쿼리가 ** \< Order>** 요소로 이동 합니다. 그리고 ** \< 순서>** 일치 하는 각 노드에 대해 쿼리는 ** \< orderdetail>** 노드를 결과에 추가 합니다. ** \< Orderdetail>** 만 결과 집합에 반환 됩니다.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. ..를 사용하여 부모 축 지정  
- 다음 쿼리는 **CustomerID** 특성 값이 1 인 부모 ** \<Customer>** 요소를 사용 하 여 모든 ** \<Order>** 요소를 검색 합니다. 쿼리에서는 조건자의 `child` 축을 사용 하 여 ** \<Order>** 요소의 부모를 찾습니다.  
+ 다음 쿼리는 **CustomerID** 특성 값이 1 인 부모 ** \< Customer>** 요소를 사용 하 여 모든 ** \< Order>** 요소를 검색 합니다. 쿼리에서는 `child` 조건자의 축을 사용 하 여 ** \< Order>** 요소의 부모를 찾습니다.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010723"
 ```  
   
 > [!NOTE]  
->  ** \<Order>** 의 `/Order[../@CustomerID="1"]` 부모가 없기 때문에 XPath 쿼리는 오류를 반환 합니다. 매핑 스키마에 ** \<Order>** 포함 된 요소가 있을 수 있지만 XPath가 어떤 경우에도 시작 되지 않았습니다. 따라서 ** \<순서>** 문서의 최상위 요소 형식으로 간주 됩니다.  
+>  `/Order[../@CustomerID="1"]` ** \< Order>** 의 부모가 없기 때문에 XPath 쿼리는 오류를 반환 합니다. 매핑 스키마에 ** \< order>** 포함 된 요소가 있을 수 있지만 XPath가 어떤 경우에도 시작 되지 않았습니다. 따라서 ** \<>순서** 는 문서의 최상위 요소 형식으로 간주 됩니다.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010723"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. 특성 축 지정  
- 다음 XPath 쿼리는 **CustomerID** 특성 값이 1 인 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 선택 합니다.  
+ 다음 XPath 쿼리는 **CustomerID** 특성 값이 1 인 컨텍스트 노드의 모든 ** \< 고객>** 자식 요소를 선택 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 조건자 `attribute::CustomerID`에서는 축 `attribute` 이 `CustomerID` 고는 노드 테스트입니다 `CustomerID` .이 특성 ** \<>** 노드가 `attribute` 축에 대 한 주 노드인지 때문에 노드 테스트는 TRUE입니다.  
+ 조건자에서는 `attribute::CustomerID` `attribute` 축이 고 `CustomerID` 는 노드 테스트입니다 `CustomerID` .이 특성 ** \<>** 노드가 축에 대 한 주 노드인지 때문에 노드 테스트는 TRUE입니다 `attribute` .  
   
  `attribute` 축에 대한 바로 가기(@)를 지정할 수 있으며 `child` 축은 기본 축이므로 쿼리에서 생략할 수 있습니다.  
   

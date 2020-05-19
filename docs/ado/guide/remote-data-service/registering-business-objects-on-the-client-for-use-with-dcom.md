@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79f88f36b7eae83163ef2754f9b2c2265550c684
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922351"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747665"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM에서 사용할 클라이언트에서 비즈니스 개체 등록
 사용자 지정 비즈니스 개체는 클라이언트 쪽에서 ProgId (프로그램 이름)를 DCOM을 통해 사용할 수 있는 식별자 (CLSID)에 매핑할 수 있도록 해야 합니다. 이러한 이유로 DCOM 개체의 ProgID는 클라이언트 쪽 레지스트리에 있어야 하 고 서버 쪽 비즈니스 개체의 클래스 ID에 매핑되어야 합니다. 지원 되는 다른 프로토콜 (HTTP, HTTPS 및 in-process)의 경우에는이 작업이 필요 하지 않습니다.  

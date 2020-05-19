@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ac041e19aeb5948a644a9fcf82b3e687472b7259
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 892dd145ea19c40bada704387a4b2408e84d9522
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468296"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718941"
 ---
 # <a name="simulating-an-exists-clause-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저의 EXISTS 절 시뮬레이션
   고유하게 컴파일된 저장 프로시저는 `EXISTS` 절을 지원하지 않지만 해결 방법이 있습니다.  

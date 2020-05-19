@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ADORecordConstruction interface [ADO]
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12a9b2cae1c516ed3bf8caef8127034e6ff2a847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920805"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747180"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 **ADORecordConstruction**인터페이스는 C/c + + 응용 프로그램의 OLE DB **ROW** 개체에서 ADO **Record** 개체를 생성 하는 데 사용 됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "67920805"
  없음  
   
 ## <a name="remarks"></a>설명  
- OLE DB **행** 개체 (`pRow`)가 지정 된 경우 ADO **Record** 개체 (`adoR`)의 생성은 다음 세 가지 기본 작업에 해당 합니다.  
+ OLE DB **행** 개체 ()가 지정 된 경우 `pRow` ADO **Record** 개체 ()의 생성은 `adoR` 다음 세 가지 기본 작업에 해당 합니다.  
   
 1.  ADO **Record** 개체를 만듭니다.  
   

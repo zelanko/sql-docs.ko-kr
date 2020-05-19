@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], XPath variables
 - XPath variables [SQLXML]
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 25e6c96ccbe51ccc0d2d88c4b119c08538d37fcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010688"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717708"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 XPath 변수 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 XPath 변수를 전달하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
@@ -26,7 +26,7 @@ ms.locfileid: "66010688"
 ## <a name="examples"></a>예  
   
 ### <a name="a-use-the-xpath-variables"></a>A. XPath 변수 사용  
- 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 기본값이 지정 된 두 매개 변수는 ** \<sql: header>** 에 지정 됩니다.  
+ 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 기본값이 지정 된 두 매개 변수는 ** \< sql: header>** 에 지정 됩니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

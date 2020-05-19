@@ -19,18 +19,18 @@ helpviewer_keywords:
 - product feedback [SQL Server]
 - automatic error or usage reporting
 ms.assetid: 28f3ebf0-ad71-4816-86a6-18a46f023cfe
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15fe0d424ac1f5a83fb842a2b9ab2f9416fedd55
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772280"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706897"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014에 대한 사용자 의견 제공
-  [!INCLUDE[msCoName](../includes/msconame-md.md)]microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품 및 설명서를 제품과 개선을 하는 데 도움이 되는 시간을 감사 한다는 메시지가. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용량 현황 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)]microsoft 제품 및 설명서를 제품과 개선을 하는 데 도움이 되는 시간을 감사 한다는 메시지가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용량 현황 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  
   
 ## <a name="submitting-feedback-about-the-product"></a>제품에 대한 사용자 의견 보내기  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사용자 의견 페이지를 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능에 대한 제안 사항 및 버그 보고서를 보낼 수 있습니다. 이러한 기능에는 도구와 유틸리티, 언어 및 프로그래밍 인터페이스가 포함됩니다.  

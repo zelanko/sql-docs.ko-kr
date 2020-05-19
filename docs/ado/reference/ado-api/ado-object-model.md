@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, object model
 ms.assetid: 4aca9838-1ec6-4084-bd63-dc2d17d8ab7d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 603b0a95dbf469041247a2b73da67b6ebe272079
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1a2d28ded4c6758edcbd436e4b2177852319eb72
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920910"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747244"
 ---
 # <a name="ado-object-model"></a>ADO 개체 모델
 다음 그림에서는 ADO 개체와 해당 컬렉션을 보여 줍니다.  

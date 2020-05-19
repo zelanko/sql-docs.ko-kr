@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Output Window [Transact-SQL]
 - Output Window [SQL Server Management Studio]
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ee3d5bb623de84704de97b798573b769d85ae15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243056"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718381"
 ---
 # <a name="output-window"></a>출력 창
   이 창에는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다양한 기능에 대한 상태 메시지가 표시됩니다. **디버거, 외부 도구 기능 또는 디버거** 명령 창 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 실행되는 명령의 출력은 **출력**창의 특수 창으로 전달됩니다 일반적으로 명령 프롬프트 창에 표시되는 .bat 파일이나 .com 파일과 같은 외부 도구의 출력도 확인할 수 있습니다.  

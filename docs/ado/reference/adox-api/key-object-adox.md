@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3b1c14c19fe624de5a6b634cd1adebe018896011
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965907"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746642"
 ---
 # <a name="key-object-adox"></a>키 개체(ADOX)
 데이터베이스 테이블의 기본 키, 외래 키 또는 고유 키 필드를 나타냅니다.  

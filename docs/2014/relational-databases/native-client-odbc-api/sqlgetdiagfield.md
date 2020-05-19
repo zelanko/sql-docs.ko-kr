@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706024"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는에 대해 `SQLGetDiagField`다음과 같은 추가 진단 필드를 지정 합니다. 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는에 대해 다음과 같은 추가 진단 필드를 지정 합니다 `SQLGetDiagField` . 이러한 필드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 대한 다양한 오류 보고를 지원하며 연결된 ODBC 연결 핸들과 ODBC 문 핸들에서 생성된 모든 진단 레코드에서 사용할 수 있습니다. 필드는 sqlncli.h에서 정의됩니다.  
   
-|진단 레코드 필드|Description|  
+|진단 레코드 필드|설명|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|오류를 생성하는 저장 프로시저의 줄 번호를 보고합니다. SQL_DIAG_SS_LINE 값은 SQL_DIAG_SS_PROCNAME에서 값을 반환하는 경우에만 의미가 있습니다. 값은 부호 없는 16비트 정수로 반환됩니다.|  
 |SQL_DIAG_SS_MSGSTATE|오류 메시지의 상태입니다. 오류 메시지 상태에 대한 자세한 내용은 [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql)를 참조하십시오. 값은 부호 있는 32비트 정수로 반환됩니다.|  

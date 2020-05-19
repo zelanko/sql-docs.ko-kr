@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012505"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718052"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
   이 예에서는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 구성 된 템플릿 파일을 지정할 수 있는 방법을 보여 줍니다. SQL 또는 XPath 쿼리를 CommandText 값으로 지정 하는 대신 파일 이름을 값으로 지정할 수 있습니다. 다음 예제에서 CommandType 속성은 SqlXmlCommandType. 템플릿 파일로 지정 됩니다.  
@@ -91,7 +91,7 @@ class Test
   
 5.  명령 프롬프트에서 DocSample.exe를 실행합니다.  
   
- 템플릿에 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호 (@)로 시작 해야 합니다. 예를 들면 p.Name = "@ContactID"와 같습니다. 여기서 p는 SqlXmlParameter 개체입니다.  
+ 템플릿에 매개 변수를 전달 하는 경우 매개 변수 이름은 at 기호 (@)로 시작 해야 합니다. 예를 들면 p.Name = " @ContactID "와 같습니다. 여기서 p는 SqlXmlParameter 개체입니다.  
   
  다음은 하나의 매개 변수를 사용하는 업데이트된 템플릿입니다.  
   

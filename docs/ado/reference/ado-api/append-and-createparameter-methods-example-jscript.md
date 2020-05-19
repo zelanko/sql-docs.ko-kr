@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 048a54ab758304bbfef50ffb1eaa98254b4fd496
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920722"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747003"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append 및 CreateParameter 메서드 예제 (JScript)
 이 예에서는 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [createparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 메서드를 사용 하 여 입력 매개 변수를 사용 하 여 저장 프로시저를 실행 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 파일을 **Appendjs .asp**로 저장 합니다.  

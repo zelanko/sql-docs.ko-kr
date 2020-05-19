@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2687acdf1c4d9b3decc8fe83f7c967173cdba3a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc9f1f8ce97941d111cd187b4228fd498fbfe8c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637896"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716966"
 ---
 # <a name="enumeration-facets"></a>열거 패싯
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 패턴 패싯 형식이나 이러한 패싯을 위반하는 열거형의 XML 스키마를 거부합니다.  

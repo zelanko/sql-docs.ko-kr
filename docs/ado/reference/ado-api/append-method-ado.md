@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920667"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746921"
 ---
 # <a name="append-method-ado"></a>Append 메서드(ADO)
 컬렉션에 개체를 추가 합니다. 컬렉션이 [필드인](../../../ado/reference/ado-api/fields-collection-ado.md)경우 컬렉션에 추가 되기 전에 새 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 만들 수 있습니다.  

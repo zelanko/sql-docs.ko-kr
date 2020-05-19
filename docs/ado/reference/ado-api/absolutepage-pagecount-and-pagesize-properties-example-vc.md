@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], VC++ example
 - PageSize property [ADO], VC++ example
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 46b0b7c4eab855c33366550c981df8f03e9e1819
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921841"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747575"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount 및 PageSize 속성 예제 (VC + +)
 이 예에서는 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성을 사용 하 여 ***Employee*** 테이블에서 이름 및 채용 날짜를 표시 하 고 한 번에 5 개의 레코드를 고용 합니다.  

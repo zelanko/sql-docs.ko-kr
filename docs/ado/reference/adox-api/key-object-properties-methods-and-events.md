@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Key object [ADOX], members
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eab25808c08196286353206c51caacefbc75c709
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746615"
 ---
 # <a name="key-object-properties-methods-and-events"></a>키 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

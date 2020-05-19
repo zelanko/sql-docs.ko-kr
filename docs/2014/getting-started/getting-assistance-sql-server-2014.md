@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62837706"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706957"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>지원 받기(SQL Server 2014)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 는 다음과 같은 세 가지 주요 정보원을 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 대한 정보를 제공합니다.  

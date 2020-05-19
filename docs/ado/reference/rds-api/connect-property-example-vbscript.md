@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Connect property [ADO], VBScript example
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cee201d56361d18ded5fbef1c2c36051c34ecdc8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964582"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746270"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect 속성 예제(VBScript)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964582"
   
  다음 예제에서는 런타임에 VBScript 코드에서 **Connect** 속성을 설정 하는 방법을 보여 줍니다.  
   
- 이 예를 테스트 하려면 일반 HTML 문서에서 \<Body> 및 \</tbody> 태그 사이에 코드를 잘라내어 붙여넣고 이름을 **connectvbs .asp**로 이름을 붙입니다. ASP 스크립트는 서버를 식별 합니다.  
+ 이 예를 테스트 하려면 \< 일반 HTML 문서에서 Body> 및/tbody> 태그 사이에 코드를 잘라내어 붙여넣고 \< 이름을 **connectvbs .asp**로 이름을 붙입니다. ASP 스크립트는 서버를 식별 합니다.  
   
 ```  
 <!-- BeginConnectVBS -->  

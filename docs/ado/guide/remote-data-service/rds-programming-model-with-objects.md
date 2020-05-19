@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS programming model [ADO]
 - RDS objects [ADO]
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5f41fd577b470493aa6a53c8ea9ad760287a3507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922478"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747751"
 ---
 # <a name="rds-programming-model-with-objects"></a>개체에서 RDS 프로그래밍 모델
 RDS의 목표는 IIS와 같은 중개자를 통해 데이터 원본에 액세스 하 고 업데이트 하는 것입니다. 프로그래밍 모델은이 목표를 달성 하는 데 필요한 활동의 시퀀스를 지정 합니다. 개체 모델은 메서드 및 속성이 프로그래밍 모델에 영향을 주는 개체를 지정 합니다.  

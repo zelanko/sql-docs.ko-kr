@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157995"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719076"
 ---
 # <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
   트랜잭션 성능 보고서 도구( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 메모리 최적화 관리자를 사용하여 디스크 기반 데이터베이스 테이블을 메모리 내 OLTP로 마이그레이션할 수 있습니다.  
@@ -84,7 +84,7 @@ ms.locfileid: "63157995"
 > [!WARNING]  
 >  비영구 테이블과 관련된 데이터 손실 위험에 대해 잘 알고 있는 경우에만 이 옵션을 선택하십시오.  
   
- 계속하려면 **다음**을 클릭합니다.  
+ **다음** 을 클릭하여 계속합니다.  
   
 ### <a name="review-primary-key-conversion"></a>기본 키 변환 검토  
  다음 화면은 **기본 키 변환 검토**화면입니다. 메모리 최적화 관리자는 테이블에 하나 이상의 기본 키가 있는지 확인하고 기본 키 메타데이터를 기준으로 열 목록을 채웁니다. 기본 키가 없는 경우 메모리 최적화 영구 테이블로 마이그레이션하려면 기본 키를 만들어야 합니다.  

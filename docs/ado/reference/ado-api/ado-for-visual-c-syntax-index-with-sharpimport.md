@@ -15,19 +15,19 @@ helpviewer_keywords:
 - 'ADO for Visual C++ syntax with #import [ADO]'
 - '#import [ADO]'
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88be8dbcee4633fc8c0014088c7996f95f3e2f73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920960"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747275"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import를 사용 하는 Visual C++ 구문 인덱스에 대 한 ADO
 이 인덱스는 Microsoft Visual C++ 및 **#import** 지시문을 기반으로 하는 ADO 언어 참조에 대 한 상호 참조입니다.  
   
- 이 특정 인덱스는 .tlh에 대 한 지시문을 사용 **#import** 하 여 프로그램을 컴파일한 다음 생성 된 파일 \*을 다시 포맷 하는 방법으로 파생 되었습니다. 메서드, 속성 및 이벤트에 대 한 정보만 보존 됩니다. 각 속성에 대해 선언 된 대체 구문은 해당 "`__declspec(property...)`" 지시문에 의해 나열 됩니다.  
+ 이 특정 인덱스는 .tlh에 대 한 지시문을 사용 **#import** 하 여 프로그램을 컴파일한 다음 \* 생성 된 파일을 다시 포맷 하는 방법으로 파생 되었습니다. 메서드, 속성 및 이벤트에 대 한 정보만 보존 됩니다. 각 속성에 대해 선언 된 대체 구문은 해당 "" 지시문에 의해 나열 됩니다 `__declspec(property...)` .  
   
  자세한 내용은 [ADO 프로그래밍 Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md) 를 참조 하는 것이 좋습니다.  
   

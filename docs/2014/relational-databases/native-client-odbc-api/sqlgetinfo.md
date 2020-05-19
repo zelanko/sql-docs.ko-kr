@@ -11,20 +11,20 @@ topic_type:
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4a17b9b6599a57275524308608ac6ef18a8e18e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128652"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706003"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   테이블은 **SQLGetInfo**에서 반환 되는 값을 보여 줍니다. 값은 연결된 서버의 버전 번호에 따라 다를 수 있습니다.  
   
- **SQLGetInfo** Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 sqlgetinfo는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32)의 **sqlgetinfo** 와 다릅니다. DLL)를 사용 하 여 **SQLGetInfo** 를 호출 하면 SQL_KEYWORDS 및 0 버퍼 길이가 사용 됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 **SQLGetInfo** 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client의 SQLGetInfo는 SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
+ **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 sqlgetinfo는 **SQLGetInfo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 (SQLSRV32)의 sqlgetinfo와 다릅니다. DLL)를 사용 하 여 **SQLGetInfo** 를 호출 하면 SQL_KEYWORDS 및 0 버퍼 길이가 사용 됩니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 드라이버는 SQL_SUCCESS를 반환하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 SQL_SUCCESS_WITH_INFO를 반환합니다.  그러나 output 키워드 문자열 보다 작은 0이 아닌 버퍼 길이를 사용 하 여 호출 하는 경우 Native Client의 **SQLGetInfo** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 및 SQLState 01004을 반환 합니다.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -49,13 +49,13 @@ ms.locfileid: "63128652"
 |SQL_COLLATION_SEQ|연결 및 서버에 현재 할당된 데이터 정렬 순서입니다.|  
 |SQL_COLUMN_ALIAS|"Y"|  
 |SQL_CONCAT_NULL_BEHAVIOR|SQL_CB_NULL|  
-|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT 데이터 형식의 변환이 지원되지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 odbc 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_DECIMAL **10 진수 (19, 0)** 데이터 형식을 지원 합니다. 아래의 SQL_CONVERT_DECIMAL을 참조하십시오.|  
+|SQL_CONVERT_BIGINT|ODBC SQL_BIGINT 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] odbc 형식 SQL_DECIMAL **10 진수 (19, 0)** 데이터 형식을 지원 합니다. 아래의 SQL_CONVERT_DECIMAL을 참조하십시오.|  
 |SQL_CONVERT_BINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_BIT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_CHAR|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_LONGVARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_TIMESTAMP SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WLONGVARCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE 데이터 형식의 변환이 지원되지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식을 odbc 형식 SQL_TYPE_TIMESTAMP으로 지원 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
+|SQL_CONVERT_DATE|ODBC SQL_TYPE_DATE 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DATETIME** 데이터 형식을 odbc 형식 SQL_TYPE_TIMESTAMP으로 지원 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
 |SQL_CONVERT_DECIMAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_DOUBLE|ODBC SQL_DOUBLE 데이터 형식의 변환이 지원되지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 odbc SQL_DOUBLE 데이터 형식을 SQL_FLOAT 지원 합니다. 아래의 SQL_CONVERT_FLOAT를 참조하십시오.|  
+|SQL_CONVERT_DOUBLE|ODBC SQL_DOUBLE 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 odbc SQL_DOUBLE 데이터 형식을 SQL_FLOAT 지원 합니다. 아래의 SQL_CONVERT_FLOAT를 참조하십시오.|  
 |SQL_CONVERT_FLOAT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_FUNCTIONS|SQL_FN_CVT_CONVERT SQL_FN_CVT_CAST|  
 |SQL_CONVERT_INTEGER|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
@@ -66,7 +66,7 @@ ms.locfileid: "63128652"
 |SQL_CONVERT_NUMERIC|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_REAL|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_SMALLINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
-|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME 데이터 형식의 변환이 지원되지 않습니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 데이터 형식을 odbc 형식 SQL_TYPE_TIMESTAMP으로 지원 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
+|SQL_CONVERT_TIME|ODBC SQL_TYPE_TIME 데이터 형식의 변환이 지원되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DATETIME** 데이터 형식을 odbc 형식 SQL_TYPE_TIMESTAMP으로 지원 합니다. 아래의 SQL_CONVERT_TIMESTAMP를 참조하십시오.|  
 |SQL_CONVERT_TIMESTAMP|SQL_CVT_CHAR SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TIMESTAMP SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_TINYINT|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_FLOAT SQL_CVT_REAL SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_BIT SQL_CVT_TINYINT SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  
 |SQL_CONVERT_VARBINARY|SQL_CVT_CHAR SQL_CVT_NUMERIC SQL_CVT_DECIMAL SQL_CVT_INTEGER SQL_CVT_SMALLINT SQL_CVT_VARCHAR SQL_CVT_BINARY SQL_CVT_VARBINARY SQL_CVT_TINYINT SQL_CVT_LONGVARBINARY SQL_CVT_WCHAR SQL_CVT_WVARCHAR|  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d0960fa50551b3279f97b289892d7b544c5a9e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012388"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717805"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
   다음 예에서는 XPath 쿼리에 부울 함수를 지정하는 방법을 보여 줍니다. 이 예의 XPath 쿼리는 SampleSchema1.xml에 포함된 매핑 스키마에 대해 지정되었습니다. 이 샘플 스키마에 대 한 자세한 내용은 [예제 주석 XSD schema For XPath 예제 &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)를 참조 하세요.  
@@ -29,7 +29,7 @@ ms.locfileid: "66012388"
 ## <a name="examples"></a>예  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 부울 함수 지정  
- 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
+ 이 쿼리는 ** \< Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \< 고객>** 자식 요소를 반환 합니다.  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +77,7 @@ ms.locfileid: "66012388"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 및 false() 부울 함수 지정  
- 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<Customer>** 요소 자식을 반환 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
+ 이 쿼리는 ** \< Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \< Customer>** 요소 자식을 반환 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
   
 ```  
 /child::Customer[child::Order=false()]  

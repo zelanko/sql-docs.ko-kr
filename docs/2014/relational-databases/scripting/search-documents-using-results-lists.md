@@ -12,15 +12,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03fa961955b963f0149fbfcd2dbdfc379bb8a7cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f85db72d1d1a5d5c6935f2aa795c91cf8104a27
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243306"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718721"
 ---
 # <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
   **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  

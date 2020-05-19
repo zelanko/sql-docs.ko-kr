@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706030"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 관련 된 SQLGetDescRec 기능에 대해 설명 합니다.  
+  이 항목에서는 Native Client와 관련 된 SQLGetDescRec 기능에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec 및 테이블 반환 매개 변수  
  SQLGetDescRec를 사용 하 여 테이블 반환 매개 변수 및 테이블 반환 매개 변수 열의 특성에 대 한 값을 가져올 수 있습니다. SQLGetDescRec의 *값* 은 SQLBindParameter의 *parameternumber* 매개 변수에 해당 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "62657716"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*이름*|저장 프로시저 호출의 경우 형식 매개 변수 이름, 다른 경우 길이가 0인 문자열|테이블 반환 매개 변수 열 이름|  
 |*TypePtr*|SQL_DESC_TYPE 테이블 반환 매개 변수의 경우 SQL_SS_TABLE|SQL_DESC_TYPE|  
-|*SubTypePtr*|정의되지 않음|SQL_DESC_DATETIME_INTERVAL_CODE(형식이 SQL_DATETIME 또는 SQL_INTERVAL인 레코드의 경우)|  
+|*SubTypePtr*|Undefined|SQL_DESC_DATETIME_INTERVAL_CODE(형식이 SQL_DATETIME 또는 SQL_INTERVAL인 레코드의 경우)|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  

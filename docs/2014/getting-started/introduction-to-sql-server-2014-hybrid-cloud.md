@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a005ab43ff33023827ea57fc6dbd9584c8da1f2d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228067"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706910"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>SQL Server 2014 하이브리드 클라우드 소개
  대부분의 애플리케이션에는 높은 효율성, 비즈니스 가치, 복잡한 하드웨어 구성, 수요의 엄청난 폭증, 업계 및 회사 규정 준수 등의 주요 문제가 있습니다. 이러한 요소를 모두 고려하고 엔터프라이즈급 기술을 구현하는 작업은 매우 어려울 수 있습니다. Microsoft 하이브리드 클라우드 전략은 이러한 주요 문제를 극복할 수 있도록 기존, 프라이빗 클라우드, 퍼블릭 클라우드 및 하이브리드 클라우드 환경에 대한 지원을 제공합니다. 
@@ -107,7 +107,7 @@ ms.locfileid: "75228067"
  
  응용 프로그램 계층 (예: 프레젠테이션 계층, 비즈니스 계층 및 데이터베이스 계층)을 Azure Virtual Machines로 이동 하려는 경우 [azure Virtual Machines의 SQL Server에 대 한 응용 프로그램 패턴 및 개발 전략](https://msdn.microsoft.com/library/dn574746.aspx) 문서에 제공 된 권장 사항을 검토 하는 것이 좋습니다. 이 글의 목표는 설계자 및 개발자들이 기존 애플리케이션을 Azure로 마이그레이션하고 Azure에서 새로운 애플리케이션을 개발할 때 활용할 수 있도록 좋은 애플리케이션 아키텍처 및 설계에 대한 기초 지식을 제공하는 것입니다. 이 문서에서는 각 애플리케이션 패턴에 대한 온-프레미스 시나리오, 해당 클라우드 사용 솔루션 및 관련된 기술 권장 사항을 설명합니다. 또한 애플리케이션의 올바른 개발에 도움이 되는 Azure 특정 개발 전략에 대해서도 논의합니다. 
  
-## <a name="see-also"></a>참고 항목 
+## <a name="see-also"></a>참조 
  [SQL Server 2014 CTP2 제품 가이드](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Microsoft SQL Server 하이브리드 클라우드 블로그 시리즈](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

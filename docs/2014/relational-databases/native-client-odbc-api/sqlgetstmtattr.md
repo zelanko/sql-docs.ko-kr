@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657812"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705989"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 SQLGetStmtAttr를 확장 하 여 드라이버별 문 특성을 노출 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 SQLGetStmtAttr를 확장 하 여 드라이버별 문 특성을 노출 합니다.  
   
  [SQLSetStmtAttr](sqlsetstmtattr.md) 에서는 읽기 및 쓰기 문 특성을 나열합니다. 이 항목에서는 읽기 전용 문 특성을 나열합니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62657812"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  SQL_SOPT_SS_NOCOUNT_STATUS 특성은 NOCOUNT 옵션의 현재 설정을 나타냅니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLRowCount [를 호출할 때](sqlrowcount.md) 가 문의 영향을 받는 행 수를 보고할지 여부를 제어합니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-|Value|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT가 OFF입니다. SQLRowCount는 영향을 받는 행의 수를 반환 합니다.|  
 |SQL_NC_ON|NOCOUNT가 ON입니다. 영향을 받는 행 수는 SQLRowCount에서 반환 되지 않으며 반환 된 값은 0입니다.|  

@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010744"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717943"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 개체(SQLXML 관리되는 클래스)
   SqlXmlCommand 개체에 대 한 생성자입니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "66010744"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 여기서 `cnString` 는 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열입니다 (예:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ 여기서 `cnString` 는 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열입니다 (예:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  연결 문자열에서 `Provider`는 SQLOLEDB여야 하고 `Data Provider`는 공급자 문자열에 포함되면 안 됩니다.  
   
@@ -86,7 +86,7 @@ public SqlXmlCommand(string cnString)
  디렉터리 경로를 포함한 XSL 파일의 이름입니다. 이 속성에는 절대 경로 또는 상대 경로를 지정할 수 있으며 경로가 상대 경로 이면 기본 경로에 지정 된 기본 경로를 사용 하 여 상대 경로를 확인 합니다. 기본 경로가 지정되어 있지 않으면 상대 경로는 현재 디렉터리에 상대적입니다. 작업 예제는 [XSL 변환 적용 &#40;SQLXML 관리 되는 클래스&#41;](applying-an-xsl-transformation-sqlxml-managed-classes.md)를 참조 하세요.  
   
  기본 경로  
- 기본 경로(디렉터리 경로)입니다. 이 속성은 XslPath 속성을 사용 하 여 XSL 파일에 대해 지정 된 상대 경로를 확인 하거나, SchemaPath 속성을 사용 하 여 매핑 스키마 파일을 확인 하거나, 특성을 `mapping-schema` 사용 하 여 지정 된 XML 템플릿의 외부 스키마 참조를 확인 하는 데 유용 합니다.  
+ 기본 경로(디렉터리 경로)입니다. 이 속성은 XslPath 속성을 사용 하 여 XSL 파일에 대해 지정 된 상대 경로를 확인 하거나, SchemaPath 속성을 사용 하 여 매핑 스키마 파일을 확인 하거나, 특성을 사용 하 여 지정 된 XML 템플릿의 외부 스키마 참조를 확인 하는 데 유용 `mapping-schema` 합니다.  
   
  OutputEncoding  
  명령을 실행하여 반환되는 스트림의 인코딩을 지정합니다. 이 속성은 반환되는 스트림에 특정 인코딩을 사용하려는 경우에 유용합니다. 일반적으로 UTF-8, ANSI 및 유니코드와 같은 인코딩이 사용되며 기본 인코딩은 UTF-8입니다.  
