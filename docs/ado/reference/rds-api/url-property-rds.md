@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09785fde3531d50f33064415ddc769eb07f0fec2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963220"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750526"
 ---
 # <a name="url-property-rds"></a>URL 속성(RDS)
 상대 또는 절대 URL이 포함 된 문자열을 나타냅니다.  
@@ -37,7 +37,7 @@ Run time: DataControl.URL="Server"
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Server*  
+ *서버*  
  유효한 URL을 포함 하는 **문자열** 값입니다.  
   
  *DataControl*  

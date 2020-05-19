@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6258c44d267462cea097c5553c9814b10d3787f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750284"
 ---
 # <a name="data-shaping-overview"></a>데이터 셰이핑 개요
 *데이터 셰이핑* 은 쿼리에서 둘 이상의 논리적 엔터티 간에 계층적 관계를 작성 하는 것을 의미 합니다. 계층 구조는 한 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 레코드와 다른 레코드 **집합**의 하나 이상의 레코드 (챕터 라고도 함) 간의 부모-자식 관계에서 볼 수 있습니다. 부모-자식 관계에서 부모 **레코드 집합** 은 자식 **레코드 집합**을 포함 합니다. 이러한 계층적 관계의 예는 고객과 주문입니다. 데이터베이스의 모든 고객에 대해 0 개 이상의 주문이 있을 수 있습니다. 계층 관계는 재귀적 일 수 있습니다. 즉, 하위 레코드에서 손자 레코드를 중첩할 수 있습니다. 원칙적으로 계층적 레코드는 모든 깊이에 중첩 될 수 있습니다. 실제로 ADO는 재귀를 최대 512 개의 **레코드 집합**으로 제한 합니다.  

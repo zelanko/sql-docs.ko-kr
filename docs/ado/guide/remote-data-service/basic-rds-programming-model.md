@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS programming model [ADO]
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 441d3f9f2de12e269839c3561dd0d202121018be
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922951"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750185"
 ---
 # <a name="basic-rds-programming-model"></a>기본 RDS 프로그래밍 모델
 > [!IMPORTANT]

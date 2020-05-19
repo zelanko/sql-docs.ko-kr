@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922794"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749874"
 ---
 # <a name="customization-file-sql-section"></a>사용자 지정 파일 SQL 섹션
 **Sql** 섹션에는 클라이언트 명령 문자열을 대체 하는 새 sql 문자열이 포함 될 수 있습니다. 섹션에 SQL 문자열이 없는 경우 섹션은 무시 됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "67922794"
   
  새 SQL 문자열은 *매개 변수화*될 수 있습니다. 즉, **sql** 섹션 sql 문자열 ('? ' 문자에 의해 지정 됨)의 매개 변수는 클라이언트 명령 문자열 (괄호 안의 쉼표로 구분 된 목록으로 지정)의 *식별자* 에서 해당 인수로 바꿀 수 있습니다. 식별자 및 인수 목록은 함수 호출 처럼 동작 합니다.  
   
- 예를 들어, 클라이언트 명령 문자열이 `"CustomerByID(4)"`이 고 sql 섹션 헤더가 `[SQL CustomerByID]`이며 새 SQL 섹션 문자열 `"SELECT * FROM Customers WHERE CustomerID = ?".` 은 처리기가 해당 문자열을 생성 `"SELECT * FROM Customers WHERE CustomerID = 4"` 하 고 사용 하 여 데이터 소스를 쿼리 한다고 가정 합니다.  
+ 예를 들어, 클라이언트 명령 문자열이이 고 `"CustomerByID(4)"` sql 섹션 헤더가 이며 `[SQL CustomerByID]` 새 SQL 섹션 문자열은 `"SELECT * FROM Customers WHERE CustomerID = ?".` 처리기가 해당 문자열을 생성 하 `"SELECT * FROM Customers WHERE CustomerID = 4"` 고 사용 하 여 데이터 소스를 쿼리 한다고 가정 합니다.  
   
  새 SQL 문이 null 문자열 ("") 인 경우이 섹션은 무시 됩니다.  
   

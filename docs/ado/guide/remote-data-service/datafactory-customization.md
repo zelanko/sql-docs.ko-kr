@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory customization in RDS [ADO]
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5339af431c913af21591124960e0e59a939dc14
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922778"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749657"
 ---
 # <a name="datafactory-customization"></a>DataFactory 사용자 지정
 RDS (원격 데이터 서비스)는 3 계층 클라이언트/서버 시스템에서 데이터 액세스를 쉽게 수행할 수 있는 방법을 제공 합니다. 클라이언트 데이터 컨트롤은 원격 데이터 원본에 대 한 쿼리를 수행 하는 연결 및 명령 문자열 매개 변수 또는 업데이트를 수행 하기 위해 연결 문자열 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 매개 변수를 지정 합니다.  

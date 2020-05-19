@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5cd4f578a8146a8fa7d45dcfd8e2b58f795def13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963478"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750857"
 ---
 # <a name="server-property-rds"></a>Server 속성(RDS)
 인터넷 정보 서비스 (IIS) 이름 및 통신 프로토콜을 나타냅니다.  
@@ -89,7 +89,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **In-Process**  
+ **In Process**  
   
  디자인 타임 구문  
   
@@ -111,7 +111,7 @@ DataControl.Server=""
  서버가 원격 컴퓨터에 있는 경우 인터넷 또는 인트라넷 경로 또는 컴퓨터 이름을 포함 하는 **문자열** 값입니다. 또는 서버가 로컬 컴퓨터에 있는 경우 빈 문자열입니다.  
   
  *포트인*  
- 선택 사항입니다. IIS를 실행 하는 서버에 연결 하는 데 사용 되는 포트입니다. 포트 번호는 Internet Explorer에서 설정 됩니다 ( **보기** 메뉴에서 **옵션**을 클릭 한 다음 **연결** 탭 선택) 또는 IIS에서 설정 합니다.  
+ (선택 사항) IIS를 실행 하는 서버에 연결 하는 데 사용 되는 포트입니다. 포트 번호는 Internet Explorer에서 설정 됩니다 ( **보기** 메뉴에서 **옵션**을 클릭 한 다음 **연결** 탭 선택) 또는 IIS에서 설정 합니다.  
   
  *DataControl*  
  RDS를 나타내는 개체 변수입니다 **. DataControl** 개체입니다.  

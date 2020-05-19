@@ -12,21 +12,21 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8382abfb78b67f900101ec27c33abeba988800e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919999"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748995"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone 메서드 예제(VBScript)
 이 예제에서는 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  
   
  Active Server 페이지 (ASP)에서 다음 예제를 사용 합니다. 이 예에서는 Microsoft Access와 함께 배포 된 **Northwind** 데이터베이스를 사용 합니다. 다음 코드를 잘라내어 메모장 또는 다른 텍스트 편집기에 붙여넣고 CloneVBS로 저장 합니다. 모든 클라이언트 브라우저에서 결과를 볼 수 있습니다.  
   
- 예제를 실행 하려면 줄 `RsCustomerList.Source = "Customers"` 을로 `RsCustomerList.Source = "Products"` 변경 하 여 더 큰 테이블을 계산 합니다.  
+ 예제를 실행 하려면 줄을로 변경 하 여 `RsCustomerList.Source = "Customers"` `RsCustomerList.Source = "Products"` 더 큰 테이블을 계산 합니다.  
   
 ```  
 <!-- BeginCloneVBS -->  

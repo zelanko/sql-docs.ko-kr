@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963346"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750726"
 ---
 # <a name="sql-property"></a>SQL 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 나타냅니다.  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  RDS를 나타내는 개체 변수입니다 **. DataControl** 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 일반적으로이는와 `"Select * from NewTitles"`같은 SQL 문입니다 (데이터베이스 서버 언어 사용). 레코드가 일치 하 고 정확 하 게 업데이트 되도록 하려면 긴 이진 필드 또는 계산 필드 이외의 필드를 업데이트할 수 있는 쿼리에 포함 해야 합니다.  
+ 일반적으로이는와 같은 SQL 문입니다 (데이터베이스 서버 언어 사용) `"Select * from NewTitles"` . 레코드가 일치 하 고 정확 하 게 업데이트 되도록 하려면 긴 이진 필드 또는 계산 필드 이외의 필드를 업데이트할 수 있는 쿼리에 포함 해야 합니다.  
   
  사용자 지정 서버 쪽 비즈니스 개체가 클라이언트의 데이터를 검색 하는 경우 **SQL** 속성은 선택 사항입니다.  
   

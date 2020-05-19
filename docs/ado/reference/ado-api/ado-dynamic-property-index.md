@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d2c5bcc1b07107164b8df73c8239ebd66b9fa4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921087"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749224"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 동적 속성 인덱스
 데이터 공급자, 서비스 공급자 및 서비스 구성 요소는 열려 있지 않은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 **속성** 컬렉션에 동적 속성을 추가할 수 있습니다. 지정 된 공급자는 이러한 개체를 열 때 추가 속성을 삽입할 수도 있습니다. 이러한 속성 중 일부는 [ADO 동적 속성](../../../ado/reference/ado-api/ado-dynamic-properties.md) 섹션에 나열 됩니다. 자세한 내용은 [부록 a: providers](../../../ado/guide/appendixes/appendix-a-providers.md) 섹션의 특정 공급자에 나열 되어 있습니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "67921087"
 |최대 행 크기|DBPROP_MAXROWSIZE|  
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|모드|DBPROP_INIT_MODE|  
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|  
 |여러 결과|DBPROP_MULTIPLERESULTS|  
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|  

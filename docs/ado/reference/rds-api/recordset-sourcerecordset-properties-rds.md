@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Recordset property [ADO]
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f63630b0aa956f9d6ecbeb87304802a0c6ec4414
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963579"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751131"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset, SourceRecordset 속성(RDS)
 사용자 지정 비즈니스 개체에서 반환 된 **레코드 집합** 개체를 나타냅니다.  

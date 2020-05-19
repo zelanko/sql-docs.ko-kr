@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clone method [ADO], VC++ example
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9a3952563b1aed3184bb2a659d3fda145f487639
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748971"
 ---
 # <a name="clone-method-example-vc"></a>Clone 메서드 예제(VC++)
 이 예제에서는 [Clone](../../../ado/reference/ado-api/clone-method-ado.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 복사본을 만든 다음 사용자가 각 복사본의 레코드 포인터를 독립적으로 배치할 수 있도록 합니다.  

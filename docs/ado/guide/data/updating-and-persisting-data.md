@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data updates [ADO]
 - ADO, updating data
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923720"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750215"
 ---
 # <a name="updating-and-persisting-data"></a>데이터 업데이트 및 유지
 위의 장에서는 ADO를 사용 하 여 데이터 원본의 데이터를 가져오는 방법, 데이터에서 이동 하는 방법 및 데이터를 편집 하는 방법에 대해 설명 했습니다. 물론 응용 프로그램의 목표가 사용자가 데이터를 변경할 수 있도록 허용 하는 경우 해당 변경 내용을 저장 하는 방법을 이해 해야 합니다. **Save** 메서드를 사용 하 여 파일에 대 한 **레코드 집합** 변경 내용을 유지 하거나 **업데이트** 또는 **UpdateBatch** 메서드를 사용 하 여 변경 내용을 저장소에 대 한 데이터 원본으로 다시 보낼 수 있습니다.  

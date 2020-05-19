@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ba23a9584e94df817e55b710ddadb073313e865b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923642"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750201"
 ---
 # <a name="using-a-connection-object"></a>연결 개체 사용
 **연결** 개체를 열기 전에 데이터 원본 및 연결 유형에 대 한 특정 정보를 정의 해야 합니다. 이러한 정보의 대부분은 **connection** 개체에서 [Open 메서드의](../../../ado/reference/ado-api/open-method-ado-connection.md) *connectionstring* 매개 변수 또는 **connection** 개체의 [connectionstring 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 의해 유지 됩니다. 연결 문자열은 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 값은 작은따옴표로 묶여 있습니다. 다음은 그 예입니다.  

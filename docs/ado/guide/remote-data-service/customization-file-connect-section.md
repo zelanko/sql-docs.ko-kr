@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connect section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9dab615fd861252832abe83d4b0ae736e2189180
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922802"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749977"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 하는 것입니다. **Connect** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어 모든 **connect** 섹션이 없거나 비어 있는 경우 기본적으로 연결을 설정할 수 없습니다.  
@@ -60,7 +60,7 @@ connectionString
 |**액세스**|이 항목이 액세스 항목 임을 나타내는 리터럴 문자열입니다.|  
 |**_accessRight_**|다음 액세스 권한 중 하나입니다.<br /><br /> -   **NoAccess** -사용자가 데이터 원본에 액세스할 수 없습니다.<br />-   **ReadOnly** -사용자가 데이터 소스를 읽을 수 있습니다.<br />-   **ReadWrite** -사용자가 데이터 소스를 읽거나 쓸 수 있습니다.|  
   
- 기본 처리기 동작을 사용 하지 않도록 설정 하 여 모든 연결을 허용 하려는 경우 **기본값 연결** 섹션 `Access=ReadWrite`에서 액세스 항목을로 설정 하 고 다른 모든 **연결** _식별자_ 섹션을 삭제 하거나 주석으로 처리 합니다.  
+ 기본 처리기 동작을 사용 하지 않도록 설정 하 여 모든 연결을 허용 하려는 경우 **기본값 연결** 섹션에서 액세스 항목을로 설정 하 `Access=ReadWrite` 고 다른 모든 **연결** _식별자_ 섹션을 삭제 하거나 주석으로 처리 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 지정 파일 로그 섹션](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   

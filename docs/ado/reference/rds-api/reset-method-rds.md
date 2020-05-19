@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963491"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750988"
 ---
 # <a name="reset-method-rds"></a>Reset 메서드(RDS)
 지정 된 정렬 및 필터 속성을 기반으로 클라이언트 쪽 **레코드 집합** 에서 정렬 또는 필터를 실행 합니다.  
@@ -38,7 +38,7 @@ DataControl.Reset(value)
  RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
  *value*  
- 선택 사항입니다. 현재 "필터링 된" 행 집합을 필터링 하려는 경우 **부울** **값 (기본값)입니다.** **False** 는 원래 행 집합을 필터링 하 고 이전 필터 옵션을 제거 함을 나타냅니다.  
+ (선택 사항) 현재 "필터링 된" 행 집합을 필터링 하려는 경우 **부울** **값 (기본값)입니다.** **False** 는 원래 행 집합을 필터링 하 고 이전 필터 옵션을 제거 함을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
  [Sortcolumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [filtervalue](../../../ado/reference/rds-api/filtercriterion-property-rds.md)및 [filtervalue](../../../ado/reference/rds-api/filtercolumn-property-rds.md) 속성은 클라이언트 쪽 캐시에 정렬 및 필터링 기능을 제공 합니다. 정렬 기능은 한 열의 값으로 레코드를 정렬 합니다. 필터링 기능은 검색 조건에 따라 레코드의 하위 집합을 표시 하는 반면 전체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 은 캐시에 유지 됩니다. **Reset** 메서드는 조건을 실행 하 고 현재 **레코드 집합** 을 업데이트할 수 있는 **레코드 집합**으로 바꿉니다.  

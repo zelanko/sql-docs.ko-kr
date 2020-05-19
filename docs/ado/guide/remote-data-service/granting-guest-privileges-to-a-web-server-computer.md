@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guest privileges in RDS [ADO]
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9a2145fdf106814647b4d9cca067c28db72f848
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749585"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한 부여
 익명 웹 서버 계정 (IUSR_*ComputerName*)을 웹 서버 컴퓨터의 게스트 로컬 그룹에 추가 하 여 RDS를 사용 해야 합니다.  

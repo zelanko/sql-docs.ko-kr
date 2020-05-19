@@ -11,14 +11,14 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922780"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749952"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 **Logs** 섹션에는 **DataFactory**작업 중에 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목이 포함 되어 있습니다.  

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ae2d78f4647e2aefa707e97349daa73d08ee492
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964511"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748846"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 연결 되지 않은 빈 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 만듭니다.  
@@ -40,16 +40,16 @@ object.CreateRecordset(ColumnInfos)
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *Object*  
+ *개체가*  
  DataFactory 또는 RDS를 나타내는 개체 변수 [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . [ DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
  *ColumnsInfos*  
  만든 **레코드 집합** 의 각 열을 정의 하는 특성의 **변형** 배열입니다. 각 열 정의에는 네 개의 필수 특성과 하나의 선택적 특성 배열을 포함 합니다.  
   
-|특성|Description|  
+|특성|설명|  
 |---------------|-----------------|  
-|속성|열 머리글의 이름입니다.|  
-|Type|데이터 형식의 정수입니다.|  
+|이름|열 머리글의 이름입니다.|  
+|형식|데이터 형식의 정수입니다.|  
 |크기|데이터 형식과 관계 없이 문자 너비의 정수입니다.|  
 |Null 허용 여부|부울 값을 지정합니다.|  
 |크기 조정 (선택 사항)|이 선택적 특성은 숫자 필드에 대 한 소수 자릿수를 정의 합니다. 이 값을 지정 하지 않으면 숫자 값이 3 눈금으로 잘립니다. 전체 자릿수는 영향을 받지 않지만 소수점 뒤의 자릿수는 3으로 잘립니다.|  
@@ -65,28 +65,28 @@ object.CreateRecordset(ColumnInfos)
   
  일부 변수 데이터 형식의 경우이 형식은 대체 열에 기록 된 형식으로 강제 변환할 수 있습니다. **레코드 집합** 을 만들고 채울 때까지 대체가 표시 되지 않습니다. 그런 다음 필요한 경우 실제 데이터 형식을 확인할 수 있습니다.  
   
-|길이|상수|번호|Substitution|  
+|길이|상수|숫자|Substitution|  
 |------------|--------------|------------|------------------|  
-|수정됨|**adTinyInt**|16||  
-|수정됨|**adSmallInt**|2||  
-|수정됨|**adInteger**|3||  
-|수정됨|**adBigInt**|20||  
-|수정됨|**adUnsignedTinyInt**|17||  
-|수정됨|**adUnsignedSmallInt**|18||  
-|수정됨|**adUnsignedInt**|19||  
-|수정됨|**adUnsignedBigInt**|21||  
-|수정됨|**adSingle**|4||  
-|수정됨|**adDouble**|5||  
-|수정됨|**adCurrency**|6||  
-|수정됨|**adDecimal**|14||  
-|수정됨|**adNumeric**|131||  
-|수정됨|**adBoolean**|11||  
-|수정됨|**adError**|10||  
-|수정됨|**adGuid**|72||  
-|수정됨|**adDate**|7||  
-|수정됨|**adDBDate**|133||  
-|수정됨|**adDBTime**|134||  
-|수정됨|**adDBTimestamp**|135|7|  
+|고정|**adTinyInt**|16||  
+|고정|**adSmallInt**|2||  
+|고정|**adInteger**|3||  
+|고정|**adBigInt**|20||  
+|고정|**adUnsignedTinyInt**|17||  
+|고정|**adUnsignedSmallInt**|18||  
+|고정|**adUnsignedInt**|19||  
+|고정|**adUnsignedBigInt**|21||  
+|고정|**adSingle**|4||  
+|고정|**adDouble**|5||  
+|고정|**adCurrency**|6||  
+|고정|**adDecimal**|14||  
+|고정|**adNumeric**|131||  
+|고정|**adBoolean**|11||  
+|고정|**adError**|10||  
+|고정|**adGuid**|72||  
+|고정|**adDate**|7||  
+|고정|**adDBDate**|133||  
+|고정|**adDBTime**|134||  
+|고정|**adDBTimestamp**|135|7|  
 |변수|**adBSTR**|8|130|  
 |변수|**adChar**|129|200|  
 |변수|**adVarChar**|200||  

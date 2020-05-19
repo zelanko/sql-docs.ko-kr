@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919938"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748913"
 ---
 # <a name="close-method-ado"></a>Close 메서드(ADO)
 열린 개체와 모든 종속 개체를 닫습니다.  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751214"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 속성(RDS)
 데이터를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체로 검색할 때 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 진행 상태를 나타냅니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "67963596"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|현재 쿼리가 계속 실행 중 이며 행을 가져오지 않았습니다. **DataControl** 개체의 **레코드 집합** 을 사용할 수 없습니다.|  
 |**adcReadyStateInteractive**|현재 쿼리에서 검색 된 초기 행 집합은 **DataControl** 개체의 **레코드 집합** 에 저장 되 고 사용할 수 있습니다. 나머지 행은 계속 인출 됩니다.|  

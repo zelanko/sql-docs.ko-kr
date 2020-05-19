@@ -11,14 +11,14 @@ helpviewer_keywords:
 - deadlocks in RDS [ADO]
 - read repeatable in RDS [ADO]
 ms.assetid: 29f3683f-12f3-4304-8a54-fe133c25a423
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8e4e59606f3b68fbd9ce272db8ea8a50ab53e88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31c90281860473d43e0a6bde4d1dd9e64e39bb3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922713"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749632"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>읽기 반복 가능 격리 수준으로 인한 교착 상태
 사용자 지정 비즈니스 개체에서 반복 읽기의 격리 수준을 사용 하 여 SQL Server에 액세스 하 고, 동일한 트랜잭션에서 쿼리 및 업데이트를 전송 하는 두 클라이언트에서 비즈니스 개체를 동시에 호출 하는 경우 교착 상태가 발생할 수 있습니다. 원격 데이터 서비스는 프로세스 중 하나가 시간 초과 되어 교착 상태를 해제할 수 있도록 설계 되었지만 해당 클라이언트에 대 한 업데이트는 실패 합니다.  

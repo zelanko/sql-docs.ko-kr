@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 00b33a9fa92dd6ec86cbac5a939fe593725bc091
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921027"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749213"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 지원 하기 위해 ADO 열거형에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 된 각 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  
