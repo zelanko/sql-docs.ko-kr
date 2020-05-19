@@ -1,7 +1,6 @@
 ---
 title: Read 메서드 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Read method [ADO]
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 75b39b758d48a173bcfbe84e3fecbd20cce5ee12
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917411"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754267"
 ---
 # <a name="read-method"></a>Read 메서드
 이진 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 지정 된 바이트 수를 읽습니다.  
@@ -35,9 +34,9 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>매개 변수  
  *NumBytes*  
- 선택 사항입니다. 파일에서 읽을 바이트 수 또는 기본값 인 [Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md) 값 **adreadall**을 지정 하는 **Long** 값입니다.  
+ (선택 사항) 파일에서 읽을 바이트 수 또는 기본값 인 [Streamreadenum](../../../ado/reference/ado-api/streamreadenum.md) 값 **adreadall**을 지정 하는 **Long** 값입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **Read** 메서드는 **stream** 개체에서 지정 된 바이트 수 또는 전체 스트림을 읽고 결과 데이터를 **Variant**로 반환 합니다.  
   
 ## <a name="remarks"></a>설명  

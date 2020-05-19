@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 182946d30141ecbbcc2cba706338609b431abb97
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932278"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754501"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions 속성(ADO)
 서버에 다시 마샬링할 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 레코드를 나타냅니다.  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Hierarchies collection [ADO MD], members
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e49929c80dbaea4ccf1424267be10bf060207640
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949749"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753925"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

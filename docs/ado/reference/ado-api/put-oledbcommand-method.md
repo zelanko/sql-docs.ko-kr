@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - put_OLEDBCommand method [ADO]
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f04e021e656646361114d5be33b5ab6a63b1b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917420"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754319"
 ---
 # <a name="put_oledbcommand-method"></a>put_OLEDBCommand 메서드
 이 메서드는 작업을 수행 하지 않으며 항상 S_OK을 반환 합니다.  

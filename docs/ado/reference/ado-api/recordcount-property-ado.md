@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931474"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754006"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount 속성(ADO)
 
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 레코드 수를 나타냅니다.
   
-## <a name="return-value"></a>Return Value
+## <a name="return-value"></a>반환 값
 
 레코드 **집합**의 레코드 수를 나타내는 **Long** 값을 반환 합니다.
   

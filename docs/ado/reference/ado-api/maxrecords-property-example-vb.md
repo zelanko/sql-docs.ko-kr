@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], Visual Basic example
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38812977823e514b63a558640df86c08265257df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918185"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754366"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords 속성 예제(VB)
 이 예에서는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다.  

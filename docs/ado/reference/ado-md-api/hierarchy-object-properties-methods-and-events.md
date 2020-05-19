@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Hierarchy object [ADO MD], members
 ms.assetid: 8ec0b00e-0e18-4f1b-9bbf-42168670bf5f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 366e40cd507970b88a1a844454eeae8699ae699b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f60b0138abdfba0cc6bd49d509d5b43b3432e405
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949649"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753957"
 ---
 # <a name="hierarchy-object-properties-methods-and-events"></a>Hierarchy 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

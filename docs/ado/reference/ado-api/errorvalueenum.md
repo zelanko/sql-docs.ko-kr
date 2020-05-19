@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e0280faf3399c24015fd07ec2e62c688a3d8e799
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932870"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755223"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO 런타임 오류의 유형을 지정 합니다.  
@@ -36,7 +36,7 @@ ADO 런타임 오류의 유형을 지정 합니다.
 > [!NOTE]
 >  OLE DB 오류가 ADO 응용 프로그램으로 전달 될 수 있습니다. 일반적으로 Windows 기능 코드 *4*로 식별할 수 있습니다. 예를 들면 0x800***4***입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|**Command** 개체를 원본으로 포함 하는 **레코드 집합** 개체의 **ActiveConnection** 속성을 변경할 수 없습니다.|  
 |**adErrCannotComplete**|3732-2146824556 0x800A0E94|서버에서 작업을 완료할 수 없습니다.|  

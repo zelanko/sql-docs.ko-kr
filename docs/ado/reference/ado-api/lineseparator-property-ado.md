@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - LineSeparator property [ADO]
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9248dcabb4c52ceceb6e4876b034480415e77963
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918281"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754815"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator 속성(ADO)
 텍스트 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에서 줄 구분 기호로 사용할 이진 문자를 나타냅니다.  

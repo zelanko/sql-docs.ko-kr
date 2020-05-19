@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchies collection [ADO MD]
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63b8e4491d4d0a561bf5e7f108684570fc550928
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f7d8605b52ead95433548095015497b6b42220d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949703"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753981"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies 컬렉션(ADO MD)
 차원의 [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 개체 집합을 포함 합니다.  
