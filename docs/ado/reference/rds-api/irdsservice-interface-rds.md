@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - IRDSService interface [ADO]
 ms.assetid: 01044c3a-ed38-4144-bc43-fe38a6d22d04
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16a1a97f08ff15e1b19573f35e81a1e10d5c7331
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1759596c515b3bb41d1f52a5e8b0577314495bb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751810"
 ---
 # <a name="irdsservice-interface-rds"></a>IRDSService 인터페이스(RDS)
 개체의 지원 되는 버전에서 요청 된 인터페이스에 대 한 포인터를 반환 하는 데 사용 되는 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) 메서드를 노출 합니다.  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964959"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753176"
 ---
 # <a name="users-collection-adox"></a>Users 컬렉션(ADOX)
 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 또는 [그룹](../../../ado/reference/adox-api/group-object-adox.md)의 모든 저장 된 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체를 포함 합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "67964959"
 ## <a name="remarks"></a>설명  
  [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 의 **사용자** 컬렉션은 모든 카탈로그의 사용자를 나타냅니다. [그룹](../../../ado/reference/adox-api/group-object-adox.md) 에 대 한 **사용자** 컬렉션은 특정 그룹의 멤버 자격이 있는 사용자만 나타냅니다.  
   
- **사용자** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-users.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ **사용자** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-users.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 사용자를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 사용자에 액세스 합니다.  
   

@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Views collection [ADOX]
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 355a18d172939113eb71e58655811a44e89aa7c2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964774"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752985"
 ---
 # <a name="views-collection-adox"></a>Views 컬렉션(ADOX)
 카탈로그의 모든 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **Views** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ **Views** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-views.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 뷰를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 뷰에 액세스 합니다.  
   

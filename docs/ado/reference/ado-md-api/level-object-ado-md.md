@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949607"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753842"
 ---
 # <a name="level-object-ado-md"></a>Level 개체(ADO MD)
 에는 계층 구조 내에서 순위가 동일한 멤버 집합이 포함 되어 있습니다.  
@@ -42,11 +42,11 @@ ms.locfileid: "67949607"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CubeName|큐브 이름입니다.|  
-|Description|수준에 대 한 의미 있는 설명입니다.|  
+|설명|수준에 대 한 의미 있는 설명입니다.|  
 |DimensionUniqueName|[차원의](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)명확 하지 않은 이름입니다.|  
 |HierarchyUniqueName|계층의 모호 하지 않은 이름입니다.|  
 |LevelCaption|수준과 연결 된 레이블 또는 캡션입니다.|  

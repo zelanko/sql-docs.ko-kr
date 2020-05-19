@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964181"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752550"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 속성(RDS)
 비동기 실행을 사용 하는지 여부를 나타냅니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "67964181"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  다음 값 중 하나를 설정 하거나 반환 합니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adcExecSync**|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 다음 새로 고침을 동기적으로 실행 합니다.|  
 |**adcExecAsync**|기본값 **레코드 집합** 의 다음 새로 고침을 비동기적으로 실행 합니다.|  

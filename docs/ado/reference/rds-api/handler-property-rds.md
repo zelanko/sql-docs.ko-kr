@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964001"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751945"
 ---
 # <a name="handler-property-rds"></a>Handler 속성(RDS)
 DataFactory의 기능과 *처리기*에서 사용 하는 매개 변수를 확장 하는 서버 쪽 사용자 지정 프로그램 (처리기)의 이름을 나타냅니다 [RDSServer.](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
@@ -40,7 +40,7 @@ DataControl.Handler = String
  RDS를 나타내는 개체 변수입니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
  *String*  
- 처리기의 이름과 모든 매개 변수를 쉼표로 구분 하 여 포함 하는 **문자열** 값입니다 (예: `"handlerName,parm1,parm2,...,parm` *N*`"`).  
+ 처리기의 이름과 모든 매개 변수를 쉼표로 구분 하 여 포함 하는 **문자열** 값입니다 (예: `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
 ## <a name="remarks"></a>설명  
  이 속성은 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**로 설정 해야 하는 기능인 [사용자 지정](../../../ado/guide/remote-data-service/datafactory-customization.md)을 지원 합니다.  

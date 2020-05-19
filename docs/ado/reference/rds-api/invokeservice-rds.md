@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ead0a42c0c5239a0f3bb4cafecb584788e06832
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963869"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751904"
 ---
 # <a name="invokeservice-rds"></a>InvokeService(RDS)
 개체의 지원 되는 버전에서 요청 된 인터페이스에 대 한 포인터를 반환 합니다.  
@@ -46,7 +46,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  제한이 *Riid*에서 요청 된 인터페이스 포인터를 받는 포인터 변수의 주소입니다. 반환이 성공적 이면 *ppunkMoreFunctionalInterface* 매개 변수는 개체에 대 한 요청 된 인터페이스 포인터를 포함 합니다. 개체에서 *riid*에 지정 된 인터페이스를 지원 하지 않는 경우 *ppunkMoreFunctionalInterface* 가 NULL로 설정 됩니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **InvokeService** 메서드에 대 한 호출이 성공 했는지 여부를 나타내는 HRESULT 값입니다.  
   
 ## <a name="remarks"></a>설명  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MoveFirst method [RDS]
 - MoveNext method [RDS]
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 096ad338f1ec9f039a6c63366984aee4d891c202
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751593"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드(RDS)
 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 첫 번째, 마지막, 다음 또는 이전 레코드로 이동 합니다.  
