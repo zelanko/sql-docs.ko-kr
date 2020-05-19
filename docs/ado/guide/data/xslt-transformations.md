@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923349"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748207"
 ---
 # <a name="xslt-transformations"></a>XSLT 변환
 XSLT는 생성 된 XML에 적용 하 여 다른 형식으로 변환할 수 있습니다. ADO의 XML 형식을 이해 하면 보다 사용자에 게 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  

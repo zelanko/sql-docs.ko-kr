@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923137"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748001"
 ---
 # <a name="working-with-multidimensional-data"></a>다차원 데이터 작업
 *셀 집합* 은 다차원 데이터에 대 한 쿼리의 결과입니다. 이는 축 컬렉션으로 구성 됩니다. 일반적으로 축은 4 개 이하로, 일반적으로는 2 개 또는 3 개만 있습니다. *축은* 큐브에서 특정 값을 찾거나 필터링 하는 데 사용 되는 하나 이상의 차원에서 가져온 멤버의 컬렉션입니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "67923137"
   
 -   측정값-Sales, PercentChange, BudgetedSales  
   
--   Products  
+-   제품  
   
  다음 셀 집합은 모든 제품의 1991 판매를 나타냅니다.  
   

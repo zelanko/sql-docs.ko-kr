@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923384"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748315"
 ---
 # <a name="xml-persistence-format"></a>XML 지속성 형식
 ADO는 유지 되는 XML 스트림에 UTF-8 인코딩을 사용 합니다.  
@@ -68,7 +68,7 @@ xmlns:z="#RowsetSchema">
   
  스키마 정의는 [W3C XML 데이터 사양을](http://www.w3.org/TR/1998/NOTE-XML-data/) 따르며 완전히 유효성을 검사할 수 있습니다. 그러나 Internet Explorer 5에서는 유효성 검사가 수행 되지 않습니다. 현재 XML 데이터는 레코드 집합 지 속성에 대해 지원 되는 유일한 스키마 형식입니다.  
   
- 데이터 섹션에는 운송 정보를 포함 하는 3 개의 행이 있습니다. 빈 행 집합의 경우 데이터 섹션이 비어 있을 수 있지만 \<rs: data> 태그가 있어야 합니다. 데이터가 없는 경우 간단한 \<rs: data/> 태그를 작성할 수 있습니다. "Rs" 접두사가 붙은 태그는 urn: 스키마-microsoft-com: rowset에서 정의 된 네임 스페이스에 있음을 나타냅니다.  
+ 데이터 섹션에는 운송 정보를 포함 하는 3 개의 행이 있습니다. 빈 행 집합의 경우 데이터 섹션이 비어 있을 수 있지만 \< rs: data> 태그가 있어야 합니다. 데이터가 없는 경우 간단한 \< rs: data/> 태그를 작성할 수 있습니다. "Rs" 접두사가 붙은 태그는 urn: 스키마-microsoft-com: rowset에서 정의 된 네임 스페이스에 있음을 나타냅니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)

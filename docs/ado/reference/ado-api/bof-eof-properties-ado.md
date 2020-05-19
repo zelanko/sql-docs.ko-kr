@@ -15,21 +15,21 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920383"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748739"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF 속성(ADO)
 -   **BOF** 현재 레코드 위치가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 첫 번째 레코드 앞에 있음을 나타냅니다.  
   
 -   **EOF** 현재 레코드 위치가 **레코드 집합** 개체의 마지막 레코드 뒤에 있음을 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **BOF** 및 **EOF** 속성은 **부울** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -49,8 +49,8 @@ ms.locfileid: "67920383"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Move < 0|0 이동|MoveNext<br /><br /> Move > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|허용됨|Error|Error|허용됨|  
-|**BOF**=**False**, **EOF**=**True**|허용됨|허용됨|Error|Error|  
+|**BOF** = **True**, **EOF** = **False**|허용됨|Error|Error|허용됨|  
+|**BOF** = **False**, **EOF** = **True**|허용됨|허용됨|Error|Error|  
 |모두 **True**|Error|Error|Error|Error|  
 |모두 **False**|허용됨|허용됨|허용됨|허용됨|  
   

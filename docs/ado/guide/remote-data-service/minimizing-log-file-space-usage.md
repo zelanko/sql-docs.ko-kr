@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - log file space in RDS [ADO]
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1eca3db07301ca45c898f21f558339e5f2ab93e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922550"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747876"
 ---
 # <a name="minimizing-log-file-space-usage"></a>로그 파일 공간 사용 최소화
 SQL Server 데이터베이스에 작업 볼륨이 많은 경우 로그 파일이 빠르게 채워질 수 있습니다 (따라서 서버가 중지 됨). **검사점에서 Truncate** 로그 파일을 설정 하 여 데이터베이스에 대 한 로그 파일의 수명을 현저 하 게 확장할 수 있습니다.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920012"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748674"
 ---
 # <a name="clone-method-ado"></a>Clone 메서드(ADO)
 기존 **recordset** 개체에서 중복 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 만듭니다. 필요에 따라 복제본을 읽기 전용으로 지정 합니다.  

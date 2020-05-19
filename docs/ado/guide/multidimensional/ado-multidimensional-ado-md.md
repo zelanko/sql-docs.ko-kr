@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO (Multidimensional) [ADO MD]
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2b0e7b3ad36067c7ef2ba9cc80cf9abd2f418a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 96857286964b0407d7b1e9b9e436a410f8caf055
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923190"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748121"
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO(다차원)(ADO MD)
 이 섹션에는 다음 항목이 포함 되어 있습니다.  

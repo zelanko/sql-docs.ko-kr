@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, prerequisites
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 192c249bfa73c17d32faef7ec925d2704aff3144
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747948"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>ADO 설명서 사용을 위한 필수 구성 요소
 이 설명서를 사용 하려면 최소한 Microsoft Visual Basic를 사용 하 여 응용 프로그램을 개발 하는 경험이 있어야 합니다 .이 가이드의 대부분 예제는이 언어로 작성 되었기 때문입니다. 또한 VBScript (Microsoft Visual C++, Java, Visual Basic Scripting Edition) 및 Microsoft JScript로 작성 된 몇 가지 예제가 있습니다.  

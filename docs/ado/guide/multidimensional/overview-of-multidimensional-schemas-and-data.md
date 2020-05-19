@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923185"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748086"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>다차원 스키마 및 데이터 개요
 ## <a name="understanding-multidimensional-schemas"></a>다차원 스키마 이해  
@@ -53,7 +53,7 @@ Hamburg, Munich, Stuttgart}
 ### <a name="hierarchies"></a>계층 구조  
  계층은 차원 수준을 "롤업" 하거나 그룹화 하는 방법을 정의 합니다. 차원에 둘 이상의 계층이 있을 수 있습니다. Geography 차원에는 자연 계층이 있습니다.  
   
-### <a name="levels"></a>Levels  
+### <a name="levels"></a>수준  
  위의 그림에 나온 예제 Geography 차원에서 각 상자는 계층의 수준을 나타냅니다.  
   
  각 수준에는 다음과 같은 멤버 집합이 있습니다.  

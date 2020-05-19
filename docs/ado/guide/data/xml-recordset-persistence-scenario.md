@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923361"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748310"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP (Active Server Pages) 응용 프로그램을 만듭니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "67923361"
   adoRec.Open strSQL, adoCon, adOpenStatic, adLockOptimistic, adCmdText  
 ```  
   
- 에서 `Data Source` `strCon` 매개 변수의 값을 Microsoft SQL Server 컴퓨터 이름으로 변경 해야 합니다.  
+ `Data Source`에서 매개 변수의 값을 `strCon` Microsoft SQL Server 컴퓨터 이름으로 변경 해야 합니다.  
   
  파일을 열어 두고 다음 단계로 이동 합니다.  
   
