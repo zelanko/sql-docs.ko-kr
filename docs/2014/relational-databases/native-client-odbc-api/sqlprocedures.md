@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedures function
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b0001f1d6e45e855b884028a595a2b61263c2e58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046689"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705908"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 값을 반환합니다. **Sqlprocedures** 는 결과 집합 열 PROCEDURE_TYPE에 대 한 SQL_PT_FUNCTION를 보고 합니다.  

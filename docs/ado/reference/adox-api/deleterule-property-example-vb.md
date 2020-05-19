@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], Visual Basic example
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 95f27c6ad6e4ae7cdfd0938f6c82a9932751fbc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 928da8cdfa8bb693bde69781ce40ecad7343c038
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966409"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763924"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 속성 예제(VB)
 이 예제에서는 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체의 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 을 추가 하 고 **DeleteRule** 를 **adRICascade**로 설정 하 여 새 기본 키를 정의 합니다.  

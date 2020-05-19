@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, queries
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b924596a4071f59175faa629006e9e5b220f66ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200238"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711085"
 ---
 # <a name="executing-queries-odbc"></a>쿼리 실행(ODBC)
   ODBC 애플리케이션은 연결 핸들을 초기화하고 데이터 원본에 연결한 후 연결 핸들에 하나 이상의 문 핸들을 할당합니다. 그런 다음 응용 프로그램은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문 핸들에서 문을 실행할 수 있습니다. SQL 문을 실행하는 이벤트의 일반적인 순서는 다음과 같습니다.  
@@ -46,7 +46,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  모든 SQL 문을 실행하고 해당 결과 집합을 처리한 후 애플리케이션은 문 핸들을 해제합니다.  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 연결 핸들 당 여러 문 핸들을 지원 합니다. 트랜잭션은 연결 수준에서 관리되므로 단일 연결 핸들의 모든 문 핸들에서 수행된 모든 작업은 동일한 트랜잭션의 일부로 관리됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 연결 핸들 당 여러 문 핸들을 지원 합니다. 트랜잭션은 연결 수준에서 관리되므로 단일 연결 핸들의 모든 문 핸들에서 수행된 모든 작업은 동일한 트랜잭션의 일부로 관리됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

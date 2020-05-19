@@ -10,18 +10,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637996"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717098"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
-  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, `xml` 함수 반환 유형 또는 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)로 테이블을 만들 때 데이터 형식을 열 유형으로 사용할 수 있습니다.  
+  `xml` 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 `int` 및 `varchar`와 같은 다른 기본 제공 유형과 비슷한 점이 있습니다. 다른 기본 제공 유형과 마찬가지로 `xml` 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 [CAST 및 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)로 테이블을 만들 때 데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
 ## <a name="creating-columns-and-variables"></a>열 및 변수 만들기  
  다음 예에서와 같이 테이블의 일부분으로 `xml` 유형 열을 만들려면 `CREATE TABLE` 문을 사용합니다.  
@@ -127,9 +127,9 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>같은 테이블 또는 다른 테이블  
- 다른 `xml` 관계형 열이 포함 된 테이블 또는 주 테이블에 대 한 외래 키 관계가 있는 별도의 테이블에 데이터 형식 열을 만들 수 있습니다.  
+ `xml`다른 관계형 열이 포함 된 테이블 또는 주 테이블에 대 한 외래 키 관계가 있는 별도의 테이블에 데이터 형식 열을 만들 수 있습니다.  
   
- 다음 조건 `xml` 중 하나에 해당 하는 경우 동일한 테이블에 데이터 형식 열을 만듭니다.  
+ `xml`다음 조건 중 하나에 해당 하는 경우 동일한 테이블에 데이터 형식 열을 만듭니다.  
   
 -   애플리케이션이 XML 열에서 데이터 검색을 수행하고 XML 열에 XML 인덱스가 필요하지 않습니다.  
   

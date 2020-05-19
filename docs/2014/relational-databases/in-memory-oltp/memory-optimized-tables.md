@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cb4a57afcc40c15341a64dfd841e97b551bc81
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158757"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706484"
 ---
 # <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 내 OLTP는 효율적이고 메모리 최적화 데이터 액세스, 비즈니스 논리의 고유 컴파일, 잠금 및 래치 없는 알고리즘을 통해 OLTP 애플리케이션의 성능을 향상하는 데 도움이 됩니다. 메모리 내 OLTP 기능에는 메모리 최적화 테이블 및 테이블 형식뿐 아니라 이 테이블에 효율적으로 액세스하기 위한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저의 고유 컴파일도 포함됩니다.  

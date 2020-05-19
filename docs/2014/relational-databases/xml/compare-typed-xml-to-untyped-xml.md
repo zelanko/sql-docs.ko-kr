@@ -22,15 +22,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637621"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717193"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
   `xml` 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 `xml` 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이 경우 `xml` 데이터 형식 인스턴스를 *형식화*됨 이라고 합니다. 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637621"
   
 -   스키마가 있지만 서버에서 데이터 유효성 검사를 수행하지 않습니다. 이러한 경우는 데이터를 서버에 저장하기 전에 애플리케이션이 클라이언트 쪽 유효성 검사를 수행하거나, 스키마에 대해 유효하지 않은 XML 데이터를 임시적으로 저장하거나, 서버에서 지원되지 않는 스키마 구성 요소를 사용하는 경우입니다.  
   
- 다음과 같은 `xml` 상황에서 형식화 된 데이터 형식을 사용 합니다.  
+ `xml`다음과 같은 상황에서 형식화 된 데이터 형식을 사용 합니다.  
   
 -   XML 데이터에 대한 스키마가 있으며 이 XML 스키마에 따라 서버에서 XML 데이터의 유효성을 검사하려고 합니다.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637621"
  형식화된 XML 열, 매개 변수 및 변수는 XML 문서 또는 내용을 저장할 수 있습니다. 그러나 선언 시 문서를 저장하는지 아니면 내용을 저장하는지에 따라 플래그를 지정해야 합니다. 또한 XML 스키마의 컬렉션을 제공해야 합니다. 각 XML 인스턴스에 정확히 하나의 최상위 요소가 있는 경우 DOCUMENT를 지정합니다. 그렇지 않으면 CONTENT를 사용합니다. 쿼리 컴파일러는 쿼리 컴파일 중에 형식 검사에서 DOCUMENT 플래그를 사용하여 단일 항목인 최상위 요소를 유추합니다.  
   
 ## <a name="creating-typed-xml"></a>형식화된 XML 만들기  
- 형식화 `xml` 된 변수, 매개 변수 또는 열을 만들려면 먼저 [Transact-sql&#41;&#40;CREATE xml schema collection ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용 하 여 xml 스키마 컬렉션을 등록 해야 합니다. 그런 다음 XML 스키마 컬렉션을 `xml` 데이터 형식의 변수, 매개 변수 또는 열과 연결할 수 있습니다.  
+ 형식화 `xml` 된 변수, 매개 변수 또는 열을 만들려면 먼저 [transact-sql&#41;&#40;CREATE XML schema collection ](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)을 사용 하 여 xml 스키마 컬렉션을 등록 해야 합니다. 그런 다음 XML 스키마 컬렉션을 `xml` 데이터 형식의 변수, 매개 변수 또는 열과 연결할 수 있습니다.  
   
  다음 예에서는 XML 스키마 컬렉션 이름을 지정하기 위해 두 부분으로 된 명명 규칙이 사용됩니다. 첫 번째 부분은 스키마 이름이고 두 번째 부분은 XML 스키마 컬렉션 이름입니다.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예제: xml 유형 변수와 스키마 컬렉션 연결  
- 다음 예에서는`xml` 형식 변수를 만들고이를 스키마 컬렉션에 연결 합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
+ 다음 예에서는 `xml` 형식 변수를 만들고이를 스키마 컬렉션에 연결 합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

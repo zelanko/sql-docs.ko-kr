@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e87e5e2c1acdc11619b8cc1ed67dcf1542e1d8d5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206793"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82713253"
 ---
 # <a name="process-odbc-errors-odbc"></a>프로세스 ODBC 오류(ODBC)
   ODBC 메시지를 검색 하는 데는 두 개의 ODBC 함수 호출 ( [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 및 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md))을 사용할 수 있습니다. **SQLState**, **pfNative**및 **ErrorMessage** 진단 필드에 있는 기본 ODBC 관련 정보를 가져오려면 SQL_NO_DATA를 반환할 때까지 [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) 를 호출합니다. 각 진단 레코드에 대해 [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) 를 호출하여 개별 필드를 검색할 수 있습니다. 드라이버별 필드는 모두 `SQLGetDiagField`를 사용하여 검색해야 합니다.  

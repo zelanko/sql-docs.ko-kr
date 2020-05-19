@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbf710587d67bf56d2c5f56d7d89a436608c572f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287165"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716719"
 ---
 # <a name="example-specifying-the-element-directive"></a>예제: ELEMENT 지시어 지정
   이 예에서는 직원 정보를 검색하고 다음과 같이 요소 중심 XML을 생성합니다.  

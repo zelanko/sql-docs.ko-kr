@@ -22,15 +22,15 @@ helpviewer_keywords:
 - compatibility [Reporting Services]
 - earlier versions [SQL Server], (See also backward compatibility)
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088583"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707011"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   다음 섹션에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 대한 이전 버전과의 호환성 정보를 다룹니다. 여기에는 사용되지 않는 기능, 사용 중단 기능, 주요 변경, 기능 변경 등에 대한 정보가 포함됩니다.  

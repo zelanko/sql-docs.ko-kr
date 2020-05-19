@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157943"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706505"
 ---
 # <a name="implementing-a-case-statement"></a>CASE 문 구현
   CASE 문은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 문의 기능을 구현하는 방법을 보여 줍니다.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157843"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706481"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
   메모리 액세스에 최적화된 테이블은 [CREATE TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)을 사용하여 만드는 테이블입니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "63157843"
 |[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|예|예|아니요|  
 |[Natively Compiled Stored Procedures](https://msdn.microsoft.com/library/dn133184.aspx)|EXECUTE 문으로는 고유하게 컴파일된 저장 프로시저에서 저장 프로시저를 실행할 수 없습니다.|예|아니요 <sup>1</sup>|  
   
- <sup>1</sup> 컨텍스트 연결 (CLR 모듈을 실행 하는 경우의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결)에서 메모리 최적화 테이블 또는 고유 하 게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 [일반 연결 및 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)을 참조 하세요.  
+ <sup>1</sup> 컨텍스트 연결 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 모듈을 실행 하는 경우의 연결)에서 메모리 최적화 테이블 또는 고유 하 게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다. 자세한 내용은 [일반 연결 및 컨텍스트 연결](../clr-integration/data-access/context-connections-vs-regular-connections.md)을 참조 하세요.  
   
 ## <a name="performance-and-scalability"></a>성능 및 확장성  
  다음과 같은 요인이 메모리 내 OLTP에서 얻을 수 있는 성능 향상에 영향을 미칩니다.  

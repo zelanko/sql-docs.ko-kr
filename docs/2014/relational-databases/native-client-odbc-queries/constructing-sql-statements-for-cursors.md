@@ -14,18 +14,18 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207084"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711067"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>쿼리에 대한 SQL 문 생성
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client odbc 드라이버는 서버 커서를 사용 하 여 odbc 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램은 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 를 사용 하 여 다른 문 특성을 설정 하 여 커서 동작을 제어 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 서버 커서를 사용 하 여 odbc 사양에 정의 된 커서 기능을 구현 합니다. ODBC 응용 프로그램은 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) 를 사용 하 여 다른 문 특성을 설정 하 여 커서 동작을 제어 합니다. 다음은 이러한 특성과 해당 기본값에 대한 설명입니다.  
   
 |attribute|기본값|  
 |---------------|-------------|  
@@ -35,7 +35,7 @@ ms.locfileid: "68207084"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- SQL 문을 실행할 때 이러한 옵션을 기본값으로 설정 하면 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 커서를 사용 하 여 결과 집합을 구현 하지 않습니다. 대신 기본 결과 집합을 사용 합니다. SQL 문이 실행 될 때 이러한 옵션이 기본값에서 변경 된 경우 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 커서를 사용 하 여 결과 집합을 구현 하려고 합니다.  
+ SQL 문이 실행 될 때 이러한 옵션을 기본값으로 설정 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 서버 커서를 사용 하 여 결과 집합을 구현 하지 않고 대신 기본 결과 집합을 사용 합니다. SQL 문이 실행 될 때 이러한 옵션이 기본값에서 변경 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 서버 커서를 사용 하 여 결과 집합을 구현 하려고 합니다.  
   
  기본 결과 집합을 사용할 때는 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지원됩니다. 기본 결과 집합을 사용할 경우 실행할 수 있는 SQL 문의 유형에는 제한이 없습니다.  
   

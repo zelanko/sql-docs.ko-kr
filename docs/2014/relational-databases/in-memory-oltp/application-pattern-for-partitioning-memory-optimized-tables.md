@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62466099"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706550"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 `datetime` 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "62466099"
   
 -   활성 파티션을 추가합니다.  
   
- ![파티션 전환](../../database-engine/media/hekaton-partitioned-tables.gif "파티션 전환.")  
+ ![파티션 전환.](../../database-engine/media/hekaton-partitioned-tables.gif "파티션 전환.")  
 활성 데이터 유지 관리  
   
  데이터 삭제와 준비 테이블 전환 사이의 시간 중에 누락된 데이터 쿼리가 수행되지 않도록 하려면 활성 주문 삭제로 시작되는 작업을 유지 관리 시간 중에 수행해야 합니다.  

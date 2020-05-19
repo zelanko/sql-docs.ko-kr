@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89fc6a74486cad96be0baee374721e06520acfcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015306"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706444"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>메모리 내 OLTP로 마이그레이션
   이 섹션에서는 데이터베이스 개체를 마이그레이션하여 메모리 내 OLTP를 사용하는 방법을 설명합니다.  

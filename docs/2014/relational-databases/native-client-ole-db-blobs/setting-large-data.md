@@ -13,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b61d8b7436ab8766ad4009de46370d3914001ae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140622"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708481"
 ---
 # <a name="setting-large-data"></a>대규모 데이터 설정
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하면 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자를 사용 하면 소비자 저장소 개체에 대 한 포인터를 전달 하 여 BLOB 데이터를 설정할 수 있습니다.  
   
  소비자는 이 데이터가 포함된 스토리지 개체를 만들고 이 스토리지 개체에 대한 포인터를 공급자에게 전달합니다. 그러면 공급자는 소비자 스토리지 개체에서 데이터를 읽고 이를 BLOB 열에 씁니다.  
   

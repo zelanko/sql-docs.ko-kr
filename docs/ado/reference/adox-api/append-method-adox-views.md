@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967157"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764004"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
 새 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 만들어 [Views](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션에 추가 합니다.  
@@ -37,7 +37,7 @@ Views.Append Name, Command
  *이름*  
  만들 뷰의 이름을 지정 하는 **문자열** 값입니다.  
   
- *명령*  
+ *Command*  
  만들 뷰를 나타내는 ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
 ## <a name="remarks"></a>설명  

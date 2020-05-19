@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7243e28bf17b6c38f7274e221a1b6b5e5cf830f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206638"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707237"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 지원([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가됨)에 대해 설명합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본(AlwaysOn 가용성 그룹)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
@@ -30,7 +30,7 @@ ms.locfileid: "68206638"
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
  SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 `MultiSubnetFailover=Yes`를 지정하십시오. `MultiSubnetFailover`를 사용하면 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
   
- `MultiSubnetFailover` 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배치하는 중이고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결 `MultiSubnetFailover=Yes` 에 대해를 지정 하면 클라이언트는 운영 체제의 기본 tcp 재전송 간격 보다 빠르게 TCP 연결을 다시 시도 합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
+ `MultiSubnetFailover` 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배치하는 중이고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. `MultiSubnetFailover=Yes`연결에 대해를 지정 하면 클라이언트는 운영 체제의 기본 tcp 재전송 간격 보다 빠르게 TCP 연결을 다시 시도 합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
  연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68206638"
   
 -   IP 주소가 64개 이상으로 구성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 연결 오류가 발생합니다.  
   
--   `MultiSubnetFailover` 연결 속성을 사용 하는 응용 프로그램의 동작은 인증 유형 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따라 영향을 받지 않습니다.  
+-   연결 속성을 사용 하는 응용 프로그램의 동작은 인증 `MultiSubnetFailover` 유형 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증)에 따라 영향을 받지 않습니다.  
   
 -   장애 조치(Failover) 시간을 수용하고 애플리케이션 연결 재시도 횟수를 줄이기 위해 `loginTimeout` 값을 늘릴 수 있습니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "68206638"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 애플리케이션에서는 다음 세 가지 함수 중 하나를 사용하여 연결할 수 있습니다.  
   
-|함수|Description|  
+|기능|설명|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|`SQLBrowseConnect`에서 반환되는 서버 목록에는 VNN이 포함되지 않습니다. 서버가 독립 실행형 서버인지, 아니면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 주 또는 보조 서버인지는 표시되지 않고 서버 목록만 표시됩니다. 서버에 연결한 후 오류가 발생할 경우에는 서버에 연결은 되었지만 `ApplicationIntent` 설정이 서버 구성과 호환되지 않기 때문일 수 있습니다.<br /><br /> `SQLBrowseConnect`는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 서버를 인식하지 않으므로 `SQLBrowseConnect`는 `MultiSubnetFailover` 연결 문자열 키워드를 무시합니다.|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect`는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 `ApplicationIntent`와 `MultiSubnetFailover`를 모두 지원합니다.|  

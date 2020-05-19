@@ -10,15 +10,15 @@ helpviewer_keywords:
 - developer's guide [SQL Server Database Engine]
 - Database Engine [SQL Server], development
 ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5751cadb999ee3a2c9d8260bee7a6197047d312
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530953"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706857"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;s 가이드 (데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 애플리케이션 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "69530953"
  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에 새로 추가된 기능(예: XML 데이터 형식)을 지원하는 추가 업데이트 및 SQLXML 3.0과 동일한 기능을 제공하는 최신 버전의 SQLXML에 대해 설명합니다.  
   
  [구성 관리용 WMI 공급자 개념](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- MMC (Microsoft Management Console) 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager에 대 한 Configuration Manager 스냅인과 함께 사용 되는 게시 된 계층에 대해 설명 합니다. 이 계층은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 요청하는 레지스트리 작업을 관리하는 통합 API 호출 상호 작용 방법과 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스에 대한 향상된 제어 및 조작을 제공합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]MMC (Microsoft Management Console) 및 Configuration Manager에 대 한 Configuration Manager 스냅인과 함께 사용 되는 게시 된 계층에 대해 설명 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 이 계층은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 요청하는 레지스트리 작업을 관리하는 통합 API 호출 상호 작용 방법과 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스에 대한 향상된 제어 및 조작을 제공합니다.  
   
  [서버 이벤트용 WMI 공급자 개념](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 모니터링하는 방법을 설명합니다.  

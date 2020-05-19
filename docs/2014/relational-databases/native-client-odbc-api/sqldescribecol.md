@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067770"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706295"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  실행 된 문의 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 결과 집합의 열을 설명 하기 위해 서버를 쿼리할 필요가 없습니다. 이 경우 `SQLDescribeCol` 는 서버 왕복을 발생 시 키 지 않습니다. [Sqlcolattribute](sqlnumresultcols.md)와 마찬가지로 준비 `SQLDescribeCol` 되었지만 실행 되지 않은 문에 대해를 호출 하면 서버 왕복이 생성 됩니다.  
+  실행 된 문의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 결과 집합의 열을 설명 하기 위해 서버를 쿼리할 필요가 없습니다. 이 경우는 `SQLDescribeCol` 서버 왕복을 발생 시 키 지 않습니다. [Sqlcolattribute](sqlnumresultcols.md)와 마찬가지로 `SQLDescribeCol` 준비 되었지만 실행 되지 않은 문에 대해를 호출 하면 서버 왕복이 생성 됩니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 문 일괄 처리에서 여러 결과 행 집합이 반환되는 경우 서수로 참조되는 열이 별도의 테이블에서 시작되거나 결과 집합의 완전히 다른 열을 참조할 수 있습니다. `SQLDescribeCol`각 집합에 대해를 호출 해야 합니다. 결과 집합이 변경되면 애플리케이션에서는 행 결과를 인출하기 전에 데이터 값을 다시 바인딩해야 합니다. 여러 결과 집합 반환을 처리하는 방법은 [SQLMoreResults](sqlmoreresults.md)를 참조하십시오.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63067770"
   
  대량 값 데이터 형식의 경우 *DataTypePtr* 에서 반환 되는 값은 SQL_VARCHAR, SQL_VARBINARY 또는 SQL_NVARCHAR입니다. *ColumnSizePtr* 의 SQL_SS_LENGTH_UNLIMITED 값은 크기가 "제한 없음" 임을 나타냅니다.  
   
- 로 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 시작 하는 데이터베이스 엔진의 향상 된 기능을 통해 SQLDescribeCol를 통해 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SQLDescribeCol에 의해 반환 된 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
+ 로 시작 하는 데이터베이스 엔진의 향상 된 기능 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 통해 SQLDescribeCol를 통해 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의에서 SQLDescribeCol에 의해 반환 된 값과 다를 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [메타데이터 검색](../native-client/features/metadata-discovery.md)을 참조하세요.  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLDescribeCol 지원  
  날짜/시간 형식에 대해 반환되는 값은 다음과 같습니다.  

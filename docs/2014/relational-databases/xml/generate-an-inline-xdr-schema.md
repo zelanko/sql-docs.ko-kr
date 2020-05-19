@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XMLDATA option
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93170d78512ba3c79e1dfa4b8e5e9aae83a4862
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9641c727f52f9e108a368457a668aaf68e38f812
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205078"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716297"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>인라인 XDR 스키마 생성
   FOR XML의 **XMLDATA** 지시어는 쿼리 결과와 함께 인라인 XDR 스키마를 반환합니다. 하지만 XDR 스키마는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제공되는 새로운 데이터 형식과 기타 향상된 기능 중 일부를 지원하지 않습니다. 대신 [XMLSCHEMA](generate-an-inline-xsd-schema.md)지시어를 사용하여 인라인 XSD 스키마를 요청할 수 있습니다.  

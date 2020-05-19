@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072386"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706532"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
-  의 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 트랜잭션 성능 수집기를 사용 하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능을 향상 시킬 수 있습니다. 트랜잭션 성능 분석 보고서에는 애플리케이션에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
+  의 트랜잭션 성능 수집기를 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용 하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능을 향상 시킬 수 있습니다. 트랜잭션 성능 분석 보고서에는 애플리케이션에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
   
  이 항목에서는 다음과 같은 작업을 수행하는 방법에 대해 설명합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63072386"
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 를 설치할 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]때 **관리 도구-기본** 또는 **관리 도구-고급** 을 선택 하면 트랜잭션 성능 수집기와 트랜잭션 성능 분석 보고서를 생성 하는 기능이 설치 됩니다.  
+ 를 설치할 때 **관리 도구-기본** 또는 **관리 도구-고급** 을 선택 하면 트랜잭션 성능 수집기와 트랜잭션 성능 분석 보고서를 생성 하는 기능이 설치 됩니다 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 ## <a name="best-practices"></a>모범 사례  
  다음 순서도에서는 권장 워크플로를 보여 줍니다. 노란색 노드는 선택적 절차를 나타냅니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "63072386"
   
  트랜잭션 성능 수집기는 15분마다 데이터를 캡처합니다. 유용한 결과를 얻으려면 적어도 1시간 동안 트랜잭션 성능 수집기를 실행하십시오. 최상의 결과를 얻으려면 기본 시나리오의 데이터를 캡처하는 데 필요한 만큼 오래 트랜잭션 성능 수집기를 실행하십시오. 반드시 데이터 수집을 완료한 후에 트랜잭션 성능 분석 보고서를 생성하십시오.  
   
- 최소한의 오버헤드를 위해 프로덕션 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하고 개발(테스트) 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 수집하도록 트랜잭션 성능 수집기를 구성하십시오. 원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 관리 데이터 웨어하우스 데이터베이스에 데이터를 저장 하는 방법에 대 한 자세한 내용은 [원격 SQL Server 인스턴스에서 데이터 수집 구성](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)을 참조 하세요.  
+ 최소한의 오버헤드를 위해 프로덕션 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하고 개발(테스트) 환경에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 수집하도록 트랜잭션 성능 수집기를 구성하십시오. 원격 인스턴스의 관리 데이터 웨어하우스 데이터베이스에 데이터를 저장 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [원격 SQL Server 인스턴스에서 데이터 수집 구성](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx)을 참조 하세요.  
   
 ## <a name="performance-impacts"></a>성능에 미치는 영향  
  트랜잭션 성능 수집기는 다음과 같은 두 개의 데이터 컬렉션 집합으로 구성됩니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "63072386"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>로컬 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 컬렉션 구성  
  데이터 컬렉션을 사용하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 시작해야 합니다. 데이터 수집기는 서버에 하나만 구성하면 됩니다.  
   
- 데이터 수집기는 SQL Server 2012 이상 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 구성할 수 있습니다.  
+ 데이터 수집기는 SQL Server 2012 이상 버전의에서 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  같은 인스턴스에서 관리 데이터 웨어하우스 데이터베이스로 업로드하기 위해 데이터 컬렉션을 구성하려면  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072386"
   
 6.  선택 내용을 확인합니다. 설정을 수정 하려면 **뒤로** 를 클릭 합니다. 완료되었으면 **마침** 을 클릭합니다.  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>원격 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 데이터 수집 구성  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>원격 인스턴스에서 데이터 수집 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  데이터를 수집하려면 데이터를 수집하는 인스턴스에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 시작해야 합니다.  
   
- 데이터 수집기는 SQL Server 2012 이상 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 구성할 수 있습니다.  
+ 데이터 수집기는 SQL Server 2012 이상 버전의에서 구성할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  트랜잭션이 프로파일링된 인스턴스와 다른 인스턴스에 있는 관리 데이터 웨어하우스 데이터베이스에 데이터를 업로드하려면 데이터 수집기에 대한 올바른 자격 증명으로 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시가 필요합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시를 사용하도록 설정하려면 먼저 도메인이 활성화된 로그인을 사용하여 자격 증명을 설정해야 합니다. 도메인이 활성화된 로그인은 관리 데이터 웨어하우스 데이터베이스에 대한 `mdw_admin` 그룹의 멤버여야 합니다. 자격 증명을 만드는 방법에 대 한 자세한 내용은 [방법: 자격 증명 만들기 (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) 를 참조 하세요.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "63072386"
   
 6.  **설정 하려는 데이터 수집기 집합 선택**상자에 **트랜잭션 성능 컬렉션 집합**을 선택 합니다.  
   
-7.  **원격 업로드에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 프록시 사용**을 선택 합니다.  
+7.  ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 원격 업로드에 에이전트 프록시 사용**을 선택 합니다.  
   
 8.  작업이 끝나면 **다음**을 클릭합니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63072386"
   
     3.  **추가** 를 클릭 하 고 **Msdb** 역할을 선택 합니다.  
   
-    4.  을 `dc_proxy` 선택 하 고 **확인**을 클릭 합니다. 그런 다음 **확인**을 다시 클릭합니다.  
+    4.  을 선택 `dc_proxy` 하 고 **확인**을 클릭 합니다. 그런 다음 **확인**을 다시 클릭합니다.  
   
      올바른 프록시를 선택한 후 **다음**을 클릭 합니다.  
   

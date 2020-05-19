@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e762c1999a4206d5277050934e82b5d5d5c59371
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015924"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715124"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 기능 구현
   데이터베이스에 특정 행 이 이미 있는지 여부에 따라 데이터베이스에서 삽입 또는 업데이트를 수행해야 할 수 있습니다.  

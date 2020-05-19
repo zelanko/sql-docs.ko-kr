@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a2dc0ac57b132a0e681337b358a951a0e33f56db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae18871fd21ebb6909a45f7f2905d2b28bfc92bc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688913"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82714773"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>서식 파일을 사용하여 대량 복사(ODBC)
   이 예제에서는 ODBC bcp_init 함수를 서식 파일과 함께 사용하는 방법을 보여 줍니다.  

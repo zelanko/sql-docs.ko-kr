@@ -13,22 +13,22 @@ helpviewer_keywords:
 - macros [SQL Server]
 - Extended Stored Procedure API [SQL Server]
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f66eb4b47588476afc2e01cf9c42a00293aee5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917822"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706841"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>데이터베이스 엔진 확장 저장 프로시저 프로그래밍
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하십시오. 자세한 내용은 [CLR&#40;공용 언어 런타임&#41; 통합 프로그래밍 개요](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)를 참조하세요.  
   
- 확장 [!INCLUDE[msCoName](../includes/msconame-md.md)] 저장 프로시저 api는 기능을 확장 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하기 위한 서버 기반 api (응용 프로그래밍 인터페이스)를 제공 합니다. 이 API는 확장 저장 프로시저와 게이트웨이 애플리케이션과 같은 애플리케이션을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]확장 저장 프로시저 api는 기능을 확장 하기 위한 서버 기반 api (응용 프로그래밍 인터페이스)를 제공 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 이 API는 확장 저장 프로시저와 게이트웨이 애플리케이션과 같은 애플리케이션을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
   
  확장 저장 프로시저를 사용하면 C 언어와 같은 프로그래밍 언어로 자신의 외부 루틴을 만들 수 있습니다. 확장 저장 프로시저는 일반 저장 프로시저와 비슷하며 일반 저장 프로시저와 같은 방식으로 실행됩니다. 매개 변수를 확장 저장 프로시저에 보낼 수 있으며, 이를 통해 결과 및 상태를 반환할 수 있습니다.  
   

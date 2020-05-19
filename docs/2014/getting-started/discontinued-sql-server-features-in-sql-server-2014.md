@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112226"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706976"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 SQL Server 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 더 이상 사용할 수 없는 기능에 대해 설명합니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "79112226"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008에서 지원되지 않는 기능  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express 설치에서 더 이상 제공되지 않는 SQL-DMO  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]용 SQL-DMO가 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]에서 제거되었습니다. 현재 이 기능을 사용하는 애플리케이션을 가능한 한 빨리 수정하는 것이 좋습니다. Express 용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql-dmo를 지원 해야 하는 경우 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 다운로드 센터](https://www.microsoft.com/download/)의 기능 팩에서 이전 버전과의 호환성 구성 요소를 설치 합니다. 새로운 개발 작업에는 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)를 사용하십시오.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]용 SQL-DMO가 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]에서 제거되었습니다. 현재 이 기능을 사용하는 애플리케이션을 가능한 한 빨리 수정하는 것이 좋습니다. Express 용 SQL-DMO를 지원 해야 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [Microsoft 다운로드 센터](https://www.microsoft.com/download/)의 기능 팩에서 이전 버전과의 호환성 구성 요소를 설치 합니다. 새로운 개발 작업에는 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)를 사용하십시오.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>더 이상 제공되지 않는 웹 길잡이 옵션  
  웹 길잡이를 사용할 수 있도록 설정하는 `sp_configure` 옵션이 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 제거되었습니다. 대신 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 을 사용하는 것이 좋습니다.  
@@ -78,7 +78,7 @@ ms.locfileid: "79112226"
   
  <sup>1</sup> 이러한 매개 변수는 설치에만 유효 합니다.  
   
- <sup>2</sup> 부터 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]원래 설치 미디어를 사용 하지 않고 언제 든 지/Action = [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] EditionUpgrade을 지정 하 여 기존 버전을 다른 버전으로 업그레이드 합니다. 지원되는 버전 및 버전 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
+ <sup>2</sup> 부터 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 원래 설치 미디어를 사용 하지 않고 언제 든 지/Action = EditionUpgrade을 지정 하 여 기존 버전을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 버전으로 업그레이드 합니다. 지원되는 버전 및 버전 업그레이드에 대한 자세한 내용은 [지원되는 버전 및 버전 업그레이드](../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요.  
   
  자세한 내용은 [명령 프롬프트에서 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)를 참조하세요.  
   

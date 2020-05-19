@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200354"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712931"
 ---
 # <a name="log-long-running-queries-odbc"></a>장기 실행 쿼리 기록(ODBC)
   이 예제에서는 장기 실행 쿼리를 로깅하기 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 관련 옵션을 보여 줍니다. 이 예제를 실행할 경우 애플리케이션에서 설정한 간격을 초과하여 실행되는 쿼리 목록이 포함된 Odbcqry.log가 만들어집니다. 이 예제는 IA64에서 지원되지 않습니다. 이 예제는 ODBC 버전 3.0 이상용으로 개발되었습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "63200354"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>장기 실행 쿼리 데이터를 프로그래밍 방식으로 기록하려면  
   
-1.  SQL_COPT_SS_PERF_QUERY_LOG와 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예를 들어:  
+1.  SQL_COPT_SS_PERF_QUERY_LOG와 장기 실행 쿼리 로그 파일의 전체 경로 및 파일 이름을 사용 하 여 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 를 호출 합니다. 예:  
   
     ```  
     C:\\Odbcqry.log  

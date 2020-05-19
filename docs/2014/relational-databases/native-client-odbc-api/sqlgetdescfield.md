@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706041"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 IRD(구현 행 설명자) 전용의 드라이버별 설명자 필드를 노출합니다. IRD 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설명자 필드는 드라이버별 열 특성을 통해 참조됩니다. 사용 가능한 드라이버별 설명자 필드의 전체 목록에 대한 자세한 내용은 [SQLColAttribute](sqlcolattribute.md)를 참조하십시오.  
@@ -36,13 +36,13 @@ ms.locfileid: "62657787"
   
  자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  
   
- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 응용 프로그램에서 ODBC 3.8 `SQL_C_SS_TIME2` 를 사용 `time` 하는 경우 `SQL_C_SS_TIMESTAMPOFFSET` SQLGetDescField는 `datetimeoffset`대신 `SQL_C_BINARY`(형식) 또는 (의 경우)를 반환할 수 있습니다.  
+ 부터 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] `SQL_C_SS_TIME2` `time` `SQL_C_SS_TIMESTAMPOFFSET` `datetimeoffset` `SQL_C_BINARY` 응용 프로그램에서 ODBC 3.8를 사용 하는 경우 SQLGetDescField는 대신 (형식) 또는 (의 경우)를 반환할 수 있습니다.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>큰 CLR UDT에 대한 SQLGetDescField 지원  
  `SQLGetDescField`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>스파스 열에 대한 SQLGetDescField 지원  
- SQLGetDescField를 사용 하 여 열이 `column_set` 열 인지 여부를 확인 하는 SQL_CA_SS_IS_COLUMN_SET 새 IRD 필드를 쿼리할 수 있습니다.  
+ SQLGetDescField를 사용 하 여 열이 열 인지 여부를 확인 하는 SQL_CA_SS_IS_COLUMN_SET 새 IRD 필드를 쿼리할 수 있습니다 `column_set` .  
   
  자세한 내용은 [스파스 열 지원 &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md)를 참조 하세요.  
   

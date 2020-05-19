@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], VC++ example
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 976864842781828f3505ed18ab9ff81fda570c86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925611"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763954"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection 속성 예제(VC++)
 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 유효한 열린 연결로 설정 하면 카탈로그가 열립니다. 열려 있는 카탈로그에서 해당 카탈로그 내에 포함 된 스키마 개체에 액세스할 수 있습니다.  

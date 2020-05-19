@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data sources
 - SQL Server Native Client ODBC driver, connections
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0192e3b4bf295ad0590b26a6f3e77d94d76acd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63075189"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705784"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>데이터 원본에 연결(ODBC)
   애플리케이션은 환경 및 연결 핸들을 할당하고 연결 특성을 설정한 후 데이터 원본이나 드라이버에 연결합니다. 연결에 사용할 수 있는 함수는 다음과 같이 세 가지가 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "63075189"
   
 -   ODBC 데이터 원본을 사용하지 않고 연결하려는 경우  
   
- **SQLDriverConnect** 연결 문자열에는 ODBC 드라이버에서 지 원하는 모든 연결 정보를 지정 하는 일련의 키워드-값 쌍이 포함 되어 있습니다. 각 드라이버는 드라이버에서 지원하는 모든 연결 정보에 대해 해당 드라이버의 키워드와 함께 표준 ODBC 키워드(DSN, FILEDSN, DRIVER, UID, PWD 및 SAVEFILE)를 지원합니다. **SQLDriverConnect** 는 데이터 원본 없이 연결 하는 데 사용할 수 있습니다. 예를 들어 인스턴스에 "DSN 없음" 연결을 설정 하도록 디자인 된 응용 프로그램은 로그인 ID, 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 네트워크 라이브러리, 연결할 서버 이름 및 사용할 기본 데이터베이스를 정의 하는 연결 문자열을 사용 하 여 **SQLDriverConnect** 를 호출할 수 있습니다.  
+ **SQLDriverConnect** 연결 문자열에는 ODBC 드라이버에서 지 원하는 모든 연결 정보를 지정 하는 일련의 키워드-값 쌍이 포함 되어 있습니다. 각 드라이버는 드라이버에서 지원하는 모든 연결 정보에 대해 해당 드라이버의 키워드와 함께 표준 ODBC 키워드(DSN, FILEDSN, DRIVER, UID, PWD 및 SAVEFILE)를 지원합니다. **SQLDriverConnect** 는 데이터 원본 없이 연결 하는 데 사용할 수 있습니다. 예를 들어 인스턴스에 "DSN 없음" 연결을 설정 하도록 디자인 된 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID, 암호, 네트워크 라이브러리, 연결할 서버 이름 및 사용할 기본 데이터베이스를 정의 하는 연결 문자열을 사용 하 여 **SQLDriverConnect** 를 호출할 수 있습니다.  
   
  **SQLDriverConnect**를 사용 하는 경우 사용자에 게 필요한 연결 정보를 요청 하는 두 가지 옵션이 있습니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "63075189"
   
  **SQLBrowseConnect** 가 성공적으로 연결 되 면 **SQLDriverConnect**에 대 한 후속 호출에서 사용할 수 있는 연결 문자열을 반환 합니다.  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 항상 성공적인 **SQLConnect**, **SQLDriverConnect**또는 **SQLBrowseConnect**에 대 한 SQL_SUCCESS_WITH_INFO를 반환 합니다. SQL_SUCCESS_WITH_INFO 가져온 후 ODBC 응용 프로그램이 **SQLGetDiagRec** 를 호출 하면 다음과 같은 메시지가 표시 될 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 항상 성공적인 **SQLConnect**, **SQLDriverConnect**또는 **SQLBrowseConnect**에 대 한 SQL_SUCCESS_WITH_INFO를 반환 합니다. SQL_SUCCESS_WITH_INFO 가져온 후 ODBC 응용 프로그램이 **SQLGetDiagRec** 를 호출 하면 다음과 같은 메시지가 표시 될 수 있습니다.  
   
  5701  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터 원본에 정의된 기본 데이터베이스 또는 데이터 원본에 기본 데이터베이스가 없는 경우 연결에 사용된 로그인 ID에 대해 정의된 기본 데이터베이스에 사용자의 컨텍스트를 가져옴을 나타냅니다.  
@@ -97,7 +97,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- 메시지 5701 및 5703은 정보 메시지일 뿐이므로 무시해도 됩니다. 그러나 5701이나 5703 이외의 메시지가 반환될 수 있으므로 SQL_SUCCESS_WITH_INFO 반환 코드를 주의해서 검토해야 합니다. 예를 들어 드라이버가 오래 된 카탈로그 저장 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 인스턴스를 실행 하는 서버에 연결 하는 경우 SQL_SUCCESS_WITH_INFO 후 **SQLGetDiagRec** 를 통해 반환 되는 오류 중 하나는 다음과 같습니다.  
+ 메시지 5701 및 5703은 정보 메시지일 뿐이므로 무시해도 됩니다. 그러나 5701이나 5703 이외의 메시지가 반환될 수 있으므로 SQL_SUCCESS_WITH_INFO 반환 코드를 주의해서 검토해야 합니다. 예를 들어 드라이버가 오래 된 카탈로그 저장 프로시저를 사용 하 여 인스턴스를 실행 하는 서버에 연결 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_SUCCESS_WITH_INFO 후 **SQLGetDiagRec** 를 통해 반환 되는 오류 중 하나는 다음과 같습니다.  
   
 ```  
 SqlState:   01000  
@@ -109,7 +109,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- 연결에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램의 오류 처리 함수는 SQL_NO_DATA 반환 될 때까지 **SQLGetDiagRec** 를 호출 해야 합니다. 그런 다음 *pfNative* 코드가 5701 또는 5703 인 메시지 이외의 모든 메시지에 대해 작업을 수행 해야 합니다.  
+ 연결에 대 한 응용 프로그램의 오류 처리 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL_NO_DATA 반환 될 때까지 **SQLGetDiagRec** 를 호출 해야 합니다. 그런 다음 *pfNative* 코드가 5701 또는 5703 인 메시지 이외의 모든 메시지에 대해 작업을 수행 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server &#40;ODBC&#41;와 통신](communicating-with-sql-server-odbc.md)  

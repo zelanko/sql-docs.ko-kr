@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTXSINIL directive
 ms.assetid: bbcb6f9e-a51b-4775-9795-947c9d6d758f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fff115ff60ef5343c317794578d6facdee928c8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704815"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716705"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>예제: ELEMENTXSINIL 지시어 지정
   요소 중심 XML을 검색하기 위해 ELEMENT 지시어를 지정할 때 열에 NULL 값이 있으면 EXPLICIT 모드에서 해당 요소가 생성되지 않습니다. `xsi:nil` 특성이 TRUE 값으로 설정된 경우 NULL 값에 대한 요소를 생성하도록 요청하기 위해 선택적으로 ELEMENTXSINIL 지시어를 지정할 수 있습니다.  

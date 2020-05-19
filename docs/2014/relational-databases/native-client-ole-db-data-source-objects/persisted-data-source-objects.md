@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, persisted data source objects
 - persisted data source objects
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e4eaf05eb6334a9df316642adbeb4086be079ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63231447"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707411"
 ---
 # <a name="persisted-data-source-objects"></a>지속형 데이터 원본 개체
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **IPersistFile** 인터페이스를 사용 하 여 지속형 데이터 원본 개체를 지원 합니다.  
   
 ## <a name="examples"></a>예  
  **1. 데이터 원본 초기화 지속:**  

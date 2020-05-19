@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2baaa43fdf638dcd1f6794eaa9f5cf76df424c06
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228957"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707082"
 ---
 # <a name="performing-distributed-transactions"></a>분산 트랜잭션 수행
   MS DTC(Microsoft Distributed Transaction Coordinator)를 사용하면 애플리케이션이 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 트랜잭션을 확장할 수 있습니다. 또한 애플리케이션이 Open Group DTP XA 표준을 준수하는 트랜잭션 관리자가 관리하는 트랜잭션에 참가할 수 있습니다.  

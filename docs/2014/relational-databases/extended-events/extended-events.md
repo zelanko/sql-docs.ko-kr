@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990698"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706661"
 ---
 # <a name="extended-events"></a>확장 이벤트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트는 확장성이 높고 다양하게 구성 가능한 인프라를 갖추고 있으므로 사용자는 이를 통해 문제를 해결하거나 성능 문제를 파악하는 데 필요한 만큼의 정보만 수집할 수 있습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "62990698"
 |각 SQL 추적 이벤트 및 관련 열에 해당하는 확장 이벤트의 이벤트 및 동작을 확인하는 방법에 대해 설명합니다.|[SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |CREATE EVENT SESSION 또는 ALTER EVENT SESSION에 ADD TARGET 인수를 사용할 경우에 설정할 수 있는 매개 변수를 확인하는 방법에 대해 설명합니다.|[ADD TARGET 인수에 대한 구성 가능한 매개 변수 가져오기](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환하는 방법에 대해 설명합니다.|[기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|잠금을 보유 중인 쿼리, 쿼리 계획 및 잠긴 시점의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 확인하는 방법에 대해 설명합니다.|[잠금을 보유 하 고 있는 쿼리 확인](determine-which-queries-are-holding-locks.md)|  
+|잠금을 보유 중인 쿼리, 쿼리 계획 및 잠긴 시점의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 확인하는 방법에 대해 설명합니다.|[잠금을 보유한 쿼리 파악](determine-which-queries-are-holding-locks.md)|  
 |데이터베이스 성능을 저하시키는 잠금의 원인을 파악하는 방법에 대해 설명합니다.|[가장 많은 잠금이 발생한 개체 찾기](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |확장 이벤트를 Windows용 이벤트 추적과 함께 사용하여 시스템 작업을 모니터링하는 방법에 대해 설명합니다.|[확장 이벤트를 사용하여 시스템 작업 모니터링](monitor-system-activity-using-extended-events.md)|  
   

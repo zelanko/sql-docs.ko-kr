@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8c809190e8c0230dfe301f973fcab3017d69ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287778"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716655"
 ---
 # <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 다음은 결과의 일부입니다. 쿼리에서 ManuInstr를 열 이름으로 지정 하므로 `query()` 메서드에 의해 반환 된 XML은 다음과 같이 <`ManuInstr`> 태그로 래핑됩니다.  
+ 다음은 결과의 일부입니다. 쿼리에서 ManuInstr를 열 이름으로 지정 하므로 메서드에 의해 반환 된 XML은 `query()` 다음과 같이 <`ManuInstr`> 태그로 래핑됩니다.  
   
  `<Root>`  
   

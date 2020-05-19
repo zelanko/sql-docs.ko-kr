@@ -12,15 +12,15 @@ helpviewer_keywords:
 - extended events [SQL Server], locks
 - objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: af71bf168517e979113c51e81bf9aa3bed504a52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e533f823d69f10af28084eecd714c303735957d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62705482"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706633"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>가장 많은 잠금이 발생한 개체 찾기
   데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3896de6c921f85d4b3e5a2194b1baa2fe511f22b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967310"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764054"
 ---
 # <a name="append-method-adox-groups"></a>Append 메서드(ADOX 그룹)
 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션에 새 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체를 추가 합니다.  

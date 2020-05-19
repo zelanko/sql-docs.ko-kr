@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumnPrivileges function
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 737ace72f201f3abe192393b1a1cc3747f5774e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35bd61c12933dac25ac90d8b56afb0e17b44d3ab
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067759"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706331"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **Sqlcolumnprivileges** *CatalogName*, *SchemaName*, *TableName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS를 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  

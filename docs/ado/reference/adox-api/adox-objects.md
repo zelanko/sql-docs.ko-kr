@@ -11,14 +11,14 @@ helpviewer_keywords:
 - objects [ADOX]
 - ADOX, objects
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2969927d6221f45bff027b97f6e6468ab63baa86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928509"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764114"
 ---
 # <a name="adox-objects"></a>ADOX 개체
 ## <a name="adox-object-summary"></a>ADOX 개체 요약  
@@ -26,11 +26,11 @@ ms.locfileid: "67928509"
 |Object|설명|  
 |------------|-----------------|  
 |[카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md)|데이터 원본의 스키마 카탈로그를 설명 하는 컬렉션을 포함 합니다.|  
-|[열의](../../../ado/reference/adox-api/column-object-adox.md)|테이블, 인덱스 또는 키에서 열을 나타냅니다.|  
+|[열](../../../ado/reference/adox-api/column-object-adox.md)|테이블, 인덱스 또는 키에서 열을 나타냅니다.|  
 |[그룹](../../../ado/reference/adox-api/group-object-adox.md)|보안 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.|  
-|[인덱스](../../../ado/reference/adox-api/index-object-adox.md)|데이터베이스 테이블의 인덱스를 나타냅니다.|  
+|[인덱싱할](../../../ado/reference/adox-api/index-object-adox.md)|데이터베이스 테이블의 인덱스를 나타냅니다.|  
 |[키](../../../ado/reference/adox-api/key-object-adox.md)|데이터베이스 테이블의 기본 키, 외래 키 또는 고유 키 필드를 나타냅니다.|  
-|[여기서](../../../ado/reference/adox-api/procedure-object-adox.md)|저장 프로시저를 나타냅니다.|  
+|[프로시저](../../../ado/reference/adox-api/procedure-object-adox.md)|저장 프로시저를 나타냅니다.|  
 |[테이블](../../../ado/reference/adox-api/table-object-adox.md)|열, 인덱스 및 키를 포함 하는 데이터베이스 테이블을 나타냅니다.|  
 |[사용자](../../../ado/reference/adox-api/user-object-adox.md)|보안 데이터베이스 내에서 액세스 권한이 있는 사용자 계정을 나타냅니다.|  
 |[보기](../../../ado/reference/adox-api/view-object-adox.md)|레코드 또는 가상 테이블의 필터링 된 집합을 나타냅니다.|  

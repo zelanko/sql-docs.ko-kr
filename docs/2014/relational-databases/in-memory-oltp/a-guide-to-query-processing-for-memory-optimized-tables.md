@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112248"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706576"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 쿼리 처리 가이드
   메모리 내 OLTP는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 메모리 최적화 테이블과 고유하게 컴파일된 저장 프로시저를 도입합니다. 이 문서에서는 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 모두의 쿼리 처리에 대한 개요를 제공합니다.  
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |초기 컴파일|생성 시|처음 실행 시|  
 |자동 다시 컴파일|데이터베이스나 서버를 다시 시작한 후 프로시저를 처음 실행할 때|서버를 다시 시작할 때 또는 일반적으로 스키마 또는 통계 변경이나 메모리 압력에 따라 계획 캐시에서 계획이 제거될 때|  
-|수동 다시 컴파일|지원 안 됨 해결을 위해서는 저장 프로시저를 삭제하고 다시 만들어야 합니다.|대신 `sp_recompile`를 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
+|수동 다시 컴파일|지원되지 않습니다. 해결을 위해서는 저장 프로시저를 삭제하고 다시 만들어야 합니다.|대신 `sp_recompile`를 캐시에서 계획을 수동으로 제거할 수 있습니다(예: DBCC FREEPROCCACHE 사용). 또한 WITH RECOMPILE로 저장 프로시저를 만들면 실행할 때마다 저장 프로시저가 다시 컴파일됩니다.|  
   
 ### <a name="compilation-and-query-processing"></a>컴파일 및 쿼리 처리  
  다음 다이어그램은 고유하게 컴파일된 저장 프로시저의 컴파일 프로세스를 보여줍니다.  
@@ -239,7 +239,7 @@ END
  고유하게 컴파일된 저장 프로시저를 컴파일하는 데에는 매개 변수 스니핑이 사용되지 않습니다. 이 저장 프로시저에 대한 모든 매개 변수는 UNKNOWN 값을 갖는 것으로 간주됩니다. 해석된 저장 프로시저처럼 고유하게 컴파일된 저장 프로시저도 `OPTIMIZE FOR` 힌트를 지원합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)를 참조하세요.  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 검색  
- 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 고유하게 컴파일된 저장 프로시저에 대한 쿼리 실행 계획은 **에서** 예상 실행 계획 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]을 사용하거나 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 SHOWPLAN_XML 옵션을 사용하여 검색할 수 있습니다. 예:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 메모리 최적화 테이블에 대해 열 수준의 통계를 유지 관리합니다. 또한 테이블의 실제 행 개수도 유지 관리합니다. 그러나 디스크 기반 테이블과 달리 메모리 최적화 테이블에 대한 통계는 자동으로 업데이트되지 않습니다. 따라서 테이블이 크게 변경된 후 통계를 수동으로 업데이트해야 합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블에 대한 통계](memory-optimized-tables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)  
+ [메모리 최적화 테이블](memory-optimized-tables.md)  
   
   

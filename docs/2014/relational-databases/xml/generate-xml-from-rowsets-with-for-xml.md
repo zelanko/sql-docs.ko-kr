@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7024369f579f818e56250f1aac48c2d1834ea26
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204989"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82715381"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>행 집합으로부터 XML을 생성하기 위해 FOR XML 사용
-  New Type 지시어를 `xml` 사용 하 여 FOR XML을 사용 하 여 행 집합에서 데이터 **TYPE** 형식 인스턴스를 생성할 수 있습니다.  
+  `xml`New **type** 지시어를 사용 하 여 FOR XML을 사용 하 여 행 집합에서 데이터 형식 인스턴스를 생성할 수 있습니다.  
   
  결과는 `xml` 데이터 형식 열, 변수 또는 매개 변수에 할당 될 수 있습니다. 또한 FOR XML은 계층적 구조를 생성하도록 중첩될 수 있습니다. 이로 인해 FOR XML EXPLICIT보다 중첩된 FOR XML이 작성하기에 더욱 편리하지만 중첩이 많은 계층에서는 성능이 저하될 수 있습니다. FOR XML은 또한 새로운 PATH 모드를 제공합니다. 이 새로운 모드는 열 값이 나타나는 XML 트리의 경로를 지정합니다.  
   
@@ -36,7 +36,7 @@ FROM   T
 FOR XML AUTO, TYPE  
 ```  
   
- V 뷰에는 XML 유형의`.` 단일 columnxmlVal이 있는 단일 행이 포함 되어 있으므로 일반 `xml` 데이터 유형 인스턴스와 같이 쿼리할 수 있습니다. 예를 들어 다음 쿼리는 이름이 "David"인 저자를 반환합니다.  
+ V 뷰에는 XML 유형의 단일 columnxmlVal이 있는 단일 행이 포함 되어 `.` 있으므로 일반 데이터 유형 인스턴스와 같이 쿼리할 수 있습니다 `xml` . 예를 들어 다음 쿼리는 이름이 "David"인 저자를 반환합니다.  
   
 ```  
 SELECT xmlVal.query('//author[first-name = "David"]')  

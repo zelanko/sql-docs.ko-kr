@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088513"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706861"
 ---
 # <a name="sql-server-backward-compatibility"></a>이전 SQL Server 버전과의 호환성
   이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 버전 간에 변경된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]동작을 설명합니다.  

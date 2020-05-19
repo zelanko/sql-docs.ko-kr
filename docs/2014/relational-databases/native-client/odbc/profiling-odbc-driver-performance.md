@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143590"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707071"
 ---
 # <a name="profiling-odbc-driver-performance"></a>ODBC 드라이버 성능 프로파일링
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 두 가지 유형의 성능 데이터를 프로파일링할 수 있습니다.  
@@ -68,7 +68,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   네트워크  
   
--   시간  
+-   Time  
   
  다음 표에서 SQLPERF 데이터 구조의 필드에 대한 설명은 성능 로그 파일에 기록되는 통계에도 적용됩니다.  
   
@@ -81,7 +81,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLiduRows|SQL_PERF_START 이후의 INSERT, DELETE 또는 UPDATE 문의 수입니다.|  
 |SQLSelects|SQL_PERF_START 이후 처리된 SELECT 문의 수입니다.|  
 |SQLSelectRows|SQL_PERF_START 이후에 선택된 행의 수입니다.|  
-|의|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
+|트랜잭션|SQL_PERF_START 이후 롤백을 포함한 사용자 트랜잭션의 수입니다. ODBC 애플리케이션이 SQL_AUTOCOMMIT_ON 상태로 실행 중인 경우 각 명령은 트랜잭션으로 간주됩니다.|  
 |SQLPrepares|SQL_PERF_START 후 [Sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360) 호출 수입니다.|  
 |ExecDirects|SQL_PERF_START 후 **Sqlexecdirect** 호출 수입니다.|  
 |SQLExecutes|SQL_PERF_START 후의 **Sqlexecute** 호출 수입니다.|  

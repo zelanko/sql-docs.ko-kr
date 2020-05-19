@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9373aeec2086e330da95eba343645c0c0d68ab6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68205504"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712066"
 ---
 # <a name="use-date-and-time-types"></a>날짜 및 시간 형식 사용
   이 예제에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 추가된 날짜/시간 데이터 구조체를 초기화하는 방법을 보여 줍니다. 그런 다음 입력 값을 준비하고, 매개 변수를 바인딩하고, 쿼리를 실행합니다. 이러한 유형을 사용 하는 방법에 대 한 자세한 내용은 [ODBC&#41;&#40;날짜 및 시간 향상 ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)을 참조 하세요.  

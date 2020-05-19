@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DeleteRule property [ADOX], VC++ example
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6dc6d3284018aecd247baad6e66aaa332b721459
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb8100365b064ef5403788ec072595f7b3f8e86e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76911097"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763914"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule 속성 예제(VC++)
 이 예제에서는 [키](../../../ado/reference/adox-api/key-object-adox.md) 개체의 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) 속성을 보여 줍니다. 이 코드는 새 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 을 추가 하 고 **DeleteRule** 를 **adRICascade**로 설정 하 여 새 기본 키를 정의 합니다.  

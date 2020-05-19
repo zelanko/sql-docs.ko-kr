@@ -11,26 +11,26 @@ topic_type:
 helpviewer_keywords:
 - SQLProcedureColumns function
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21c0a7248f2e8c5313678f503b239cdf44d16ea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046718"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705879"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-  `SQLProcedureColumns`모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저의 반환 값 특성을 보고 하는 한 행을 반환 합니다.  
+  `SQLProcedureColumns`모든 저장 프로시저의 반환 값 특성을 보고 하는 한 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  `SQLProcedureColumns`*CatalogName*, *SchemaName*, *ProcName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS를 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  
   
  `SQLProcedureColumns`는 정적 서버 커서에 대해 실행할 수 있습니다. 업데이트할 수 있는(동적 또는 키 집합) 커서에 대해 `SQLProcedureColumns`를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  
   
- 다음 표에서는 결과 집합에서 반환 되는 열과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버를 통해 **udt** 및 **xml** 데이터 형식을 처리 하도록 확장 하는 방법을 보여 줍니다.  
+ 다음 표에서는 결과 집합에서 반환 되는 열과 Native Client ODBC 드라이버를 통해 **udt** 및 **xml** 데이터 형식을 처리 하도록 확장 하는 방법을 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|열 이름|설명|  
+|열 이름|Description|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름을 반환합니다.|  
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름을 반환합니다.|  

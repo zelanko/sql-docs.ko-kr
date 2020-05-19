@@ -14,18 +14,18 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206774"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82710747"
 ---
 # <a name="batches-of-statements"></a>문의 일괄 처리
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문 일괄 처리에는 두 개 이상의 문이 포함 되어 있습니다. 세미콜론 (;)은 **sqlexecdirect** 또는 [sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)에 전달 된 단일 문자열로 기본 제공 됩니다. 예를 들어:  
+  문 일괄 처리에는 두 개 이상의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문이 포함 되어 있습니다. 세미콜론 (;)은 **Sqlexecdirect** 또는 [sqlprepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)에 전달 된 단일 문자열로 기본 제공 됩니다. 예:  
   
 ```  
 SQLExecDirect(hstmt,   

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046691"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705895"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   테이블에는 고유한 행 식별자로 사용할 수 있는 열이 있을 수 있으며, PRIMARY KEY 제약 조건 없이 만든 테이블은 SQLPrimaryKeys에 빈 결과 집합을 반환 합니다. ODBC 함수 [SQLSpecialColumns](sqlspecialcolumns.md) 는 기본 키가 없는 테이블에 대 한 행 식별자 후보를 보고 합니다.  

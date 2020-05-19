@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225560"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707239"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 기능
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 WDAC(Windows Data Access Component)(이전의 MDAC(Microsoft Data Access Component))의 기능을 제공할 뿐만 아니라 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 제공하는 다른 여러 기능도 구현합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "63225560"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client부터 변경된 동작에 대해 설명합니다.  
   
  [데이터베이스 미러링 사용](using-database-mirroring.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 미러된 데이터베이스의 사용을 지 원하는 방법에 대해 설명 합니다 .이는 대기 서버에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 복사본 또는 미러를 보관 하는 기능입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client가 미러된 데이터베이스의 사용을 지 원하는 방법에 대해 설명 합니다 .이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대기 서버에서 데이터베이스의 복사본 또는 미러를 보관 하는 기능입니다.  
   
  [비동기 작업 수행](performing-asynchronous-operations.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 비동기 작업을 지원하는 방법을 설명합니다. 비동기 작업은 호출 스레드를 차단하지 않고 즉시 반환할 수 있는 기능입니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "63225560"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 XML 데이터 형식을 지원하는 방법을 설명합니다. XML 데이터 형식은 열 형식, 변수 형식, 매개 변수 형식 또는 함수 반환 형식에 사용할 수 있는 XML 기반 데이터 형식입니다.  
   
  [사용자 정의 형식 사용](using-user-defined-types.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 UDT (사용자 정의 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client에서 UDT (사용자 정의 형식)를 지 원하는 방법에 대해 설명 합니다. 이러한 UDT는 데이터베이스에 개체 및 사용자 지정 데이터 구조를 저장할 수 있도록 하 여 SQL 형식 시스템을 확장 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [큰 값 형식 사용](using-large-value-types.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 큰 값 데이터 형식인 LOB(Large Object) 데이터 형식을 지원하는 방법을 설명합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "63225560"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 행 집합 수정에 대한 소비자 알림을 지원하는 방법을 설명합니다.  
   
  [대량 복사 작업 수행](performing-bulk-copy-operations.md)  
- Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블 또는 뷰에서 많은 양의 데이터를 전송할 수 있도록 하는 대량 복사 작업을 지 원하는 방법에 대해 설명 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client가 테이블 또는 뷰에서 많은 양의 데이터를 전송할 수 있도록 하는 대량 복사 작업을 지 원하는 방법에 대해 설명 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
  [유효성 검사 없이 암호화 사용](using-encryption-without-validation.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하여 인증서 유효성을 검사하지 않고 서버에 전송된 데이터를 암호화하는 방법을 설명합니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "63225560"
  큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)에 대한 지원을 설명합니다.  
   
  [FILESTREAM 지원](filestream-support.md)  
- 향상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 된 FILESTREAM 기능에 대 한 Native Client 지원을 설명 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]향상 된 FILESTREAM 기능에 대 한 Native Client 지원을 설명 합니다.  
   
  [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41; 지원](service-principal-name-spn-support-in-client-connections.md)  
  모든 프로토콜에서 상호 인증을 지원하기 위해 SPN(서비스 사용자 이름)이 어떻게 확장되었는지 설명합니다.  

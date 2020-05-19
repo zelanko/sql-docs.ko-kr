@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967058"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763944"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체(ADOX)
 데이터 원본의 스키마 카탈로그를 설명 하는 컬렉션 ([테이블](../../../ado/reference/adox-api/tables-collection-adox.md), [뷰](../../../ado/reference/adox-api/views-collection-adox.md), [사용자](../../../ado/reference/adox-api/users-collection-adox.md), [그룹](../../../ado/reference/adox-api/groups-collection-adox.md)및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md))을 포함 합니다.  

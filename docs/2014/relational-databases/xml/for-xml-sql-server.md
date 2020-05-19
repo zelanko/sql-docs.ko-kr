@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 - XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c7676d046a504a6f230df7a1352e791802ce7b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 669bf07101a05f2646a0928405b1807dadf0b2ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288267"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716647"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
   SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.  

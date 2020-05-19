@@ -15,15 +15,15 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 598442c972f1af0f6c3b498bdd80284efb34be1e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206627"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707178"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>MARS(Multiple Active Result Sets) 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 액세스하는 애플리케이션에서 MARS(Multiple Active Result Sets)를 지원합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 애플리케이션이 연결에 대한 다중 활성 문을 유지할 수 없었습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본 결과 집합을 사용할 경우 애플리케이션에서 한 일괄 작업의 모든 결과 집합을 처리하거나 취소해야만 해당 연결에서 다른 일괄 작업을 실행할 수 있었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 애플리케이션에서 연결당 둘 이상의 보류 중인 요청을 유지할 수 있도록 하는 새로운 연결 특성이 도입되었습니다. 즉, 연결당 둘 이상의 활성 기본 결과 집합을 유지할 수 있게 되었습니다.  
@@ -75,14 +75,14 @@ ms.locfileid: "68206627"
  ADO에서 MARS를 사용 하는 예제는 [SQL Server Native Client에서 Ado 사용](../applications/using-ado-with-sql-server-native-client.md)을 참조 하세요.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에서 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성을 추가 하 여 MARS를 지원 합니다. 이와 함께 새 연결 문자열 키워드인 `MarsConn`이 추가되었습니다. 이 키워드는 `true` 또는 `false` 값을 받으며, 기본값은 `false`입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBPROPSET_SQLSERVERDBINIT 속성 집합에서 구현 된 SSPROP_INIT_MARSCONNECTION 데이터 원본 초기화 속성을 추가 하 여 MARS를 지원 합니다. 이와 함께 새 연결 문자열 키워드인 `MarsConn`이 추가되었습니다. 이 키워드는 `true` 또는 `false` 값을 받으며, 기본값은 `false`입니다.  
   
- 데이터 원본 속성 DBPROP_MULTIPLECONNECTIONS의 기본값은 VARIANT_TRUE입니다. 이것은 공급자가 다중 동시 명령 및 행 집합 개체를 지원하기 위해 다중 연결을 생성한다는 의미입니다. MARS를 사용 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우 Native Client는 단일 연결에서 여러 명령 및 행 집합 개체를 지원할 수 있으므로 MULTIPLE_CONNECTIONS는 기본적으로 VARIANT_FALSE로 설정 됩니다.  
+ 데이터 원본 속성 DBPROP_MULTIPLECONNECTIONS의 기본값은 VARIANT_TRUE입니다. 이것은 공급자가 다중 동시 명령 및 행 집합 개체를 지원하기 위해 다중 연결을 생성한다는 의미입니다. MARS를 사용 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 단일 연결에서 여러 명령 및 행 집합 개체를 지원할 수 있으므로 MULTIPLE_CONNECTIONS는 기본적으로 VARIANT_FALSE로 설정 됩니다.  
   
  DBPROPSET_SQLSERVERDBINIT 속성 집합의 향상된 기능에 대한 자세한 내용은 [초기화 및 권한 부여 속성](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)을 참조하세요.  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>SQL Server Native Client OLE DB 공급자 예  
- 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 OLE DB 공급자를 사용 하 여 데이터 원본 개체를 만들고, MARS는 세션 개체가 만들어지기 전에 DBPROPSET_SQLSERVERDBINIT 속성 집합을 사용 하 여 설정 됩니다.  
+ 이 예에서는 네이티브 OLE DB 공급자를 사용 하 여 데이터 원본 개체를 만들고, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] MARS는 세션 개체가 만들어지기 전에 DBPROPSET_SQLSERVERDBINIT 속성 집합을 사용 하 여 설정 됩니다.  
   
 ```  
 #include <sqlncli.h>  
@@ -168,7 +168,7 @@ hr = pIOpenRowset->OpenRowset (NULL,
 ```  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) 함수를 추가 하 여 MARS를 지원 합니다. SQL_MARS_ENABLED_YES 또는 SQL_MARS_ENABLED_NO를 받아들이는 SQL_COPT_SS_MARS_ENABLED가 추가되었으며 기본값은 SQL_MARS_ENABLED_NO입니다. 이와 함께 새 연결 문자열 키워드인 `Mars_Connection`이 추가되었습니다. 이 키워드는 "yes" 또는 "no" 값을 받으며, 기본값은 "no"입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) 및 [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) 함수를 추가 하 여 MARS를 지원 합니다. SQL_MARS_ENABLED_YES 또는 SQL_MARS_ENABLED_NO를 받아들이는 SQL_COPT_SS_MARS_ENABLED가 추가되었으며 기본값은 SQL_MARS_ENABLED_NO입니다. 이와 함께 새 연결 문자열 키워드인 `Mars_Connection`이 추가되었습니다. 이 키워드는 "yes" 또는 "no" 값을 받으며, 기본값은 "no"입니다.  
   
 ### <a name="sql-server-native-client-odbc-driver-example"></a>SQL Server Native Client ODBC 드라이버 예  
  이 예에서는 **SQLDriverConnect** 함수를 호출 하 여 데이터베이스를 연결 하기 전에 **SQLSetConnectAttr** 함수를 사용 하 여 MARS를 설정 합니다. 연결이 설정 되 면 두 개의 **Sqlexecdirect** 함수를 호출 하 여 동일한 연결에서 두 개의 별도 결과 집합을 만듭니다.  

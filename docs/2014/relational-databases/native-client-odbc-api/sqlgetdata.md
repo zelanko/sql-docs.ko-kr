@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193302"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706058"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** 는 열 값을 바인딩하지 않고 결과 집합 데이터를 검색하는 데 사용됩니다. 동일한 열에서**SQLGetData** 를 연속해서 호출하여 **text**, **ntext**또는 **image** 데이터 형식 열에서 많은 양의 데이터를 검색할 수 있습니다.  

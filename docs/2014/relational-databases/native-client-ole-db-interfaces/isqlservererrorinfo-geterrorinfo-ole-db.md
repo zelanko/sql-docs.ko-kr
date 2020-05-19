@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127781"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707357"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 정보가 포함 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client OLE DB provider SSERRORINFO 구조체에 대 한 포인터를 반환 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]오류 정보가 포함 된 Native Client OLE DB PROVIDER SSERRORINFO 구조체에 대 한 포인터를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,10 +50,10 @@ OLECHAR**ppErrorStrings);
  *ppSSErrorInfo* 또는 *ppErrorStrings* 인수는 NULL입니다.  
   
  E_OUTOFMEMORY  
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자에서 요청을 완료 하는 데 충분 한 메모리를 할당할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자에서 요청을 완료 하는 데 충분 한 메모리를 할당할 수 없습니다.  
   
 ## <a name="remarks"></a>설명  
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 소비자가 전달한 포인터를 통해 반환 된 SSERRORINFO 및 OLECHAR 문자열에 대해 메모리를 할당 합니다. 소비자는 오류 데이터에 액세스할 필요가 없게 되면 **IMalloc::Free** 메서드를 사용하여 이 메모리의 할당을 취소해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 소비자가 전달한 포인터를 통해 반환 된 SSERRORINFO 및 OLECHAR 문자열에 대해 메모리를 할당 합니다. 소비자는 오류 데이터에 액세스할 필요가 없게 되면 **IMalloc::Free** 메서드를 사용하여 이 메모리의 할당을 취소해야 합니다.  
   
  SSERRORINFO 구조는 다음과 같이 정의됩니다.  
   

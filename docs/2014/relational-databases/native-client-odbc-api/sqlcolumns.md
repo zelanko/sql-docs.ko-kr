@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067731"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706333"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`*CatalogName*, *TableName*또는 *ColumnName* 매개 변수에 대 한 값이 있는지 여부를 SQL_SUCCESS를 반환 합니다. 이러한 매개 변수에 잘못 된 값이 사용 되는 경우 **Sqlfetch** SQL_NO_DATA 반환 합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "63067731"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *CatalogName* 매개 변수의 두 부분으로 구성된 이름인 *Linked_Server_Name.Catalog_Name*을 사용하여 연결된 서버의 테이블에 대한 정보를 보고할 수 있도록 지원합니다.  
   
- ODBC 2의 경우. *x* 응용 프로그램은 *tablename*에서 와일드 카드 `SQLColumns` 를 사용 하지 않으며 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 `SQLColumns` 않는 경우는 테이블 이름이 *tablename* 매개 변수와 일치 하는 다른 사용자가 소유 하는 모든 테이블에 대 한 정보를 반환 합니다. ODBC 2의 경우. *x* 와일드 카드를 사용 하 `SQLColumns` 는 x 응용 프로그램은 이름이 *TableName*과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 `SQLColumns` 프로그램은 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
+ ODBC 2의 경우. *x* 응용 프로그램은 *tablename*에서 와일드 카드를 사용 하지 않으며 `SQLColumns` 이름이 *tablename* 과 일치 하 고 현재 사용자가 소유 하 고 있는 모든 테이블에 대 한 정보를 반환 합니다. 현재 사용자가 이름이 *tablename* 매개 변수와 일치 하는 테이블을 소유 하지 않는 경우는 `SQLColumns` 테이블 이름이 *tablename* 매개 변수와 일치 하는 다른 사용자가 소유 하는 모든 테이블에 대 한 정보를 반환 합니다. ODBC 2의 경우. 와일드 카드를 사용 하는 *x* 응용 프로그램은 `SQLColumns` 이름이 *TableName*과 일치 하는 모든 테이블을 반환 합니다. ODBC 3의 경우. *x* 응용 프로그램은 `SQLColumns` 소유자 또는 와일드 카드 사용 여부에 관계 없이 이름이 *TableName* 과 일치 하는 모든 테이블을 반환 합니다.  
   
  다음 표에서는 결과 집합에서 반환되는 열을 나열합니다.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63067731"
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름입니다.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT의 어셈블리가 명시된 정식 이름입니다.|  
   
- Udt의 경우 기존 TYPE_NAME 열은 UDT의 이름을 나타내는 데 사용 됩니다. 따라서 또는 `SQLColumns` [SQLProcedureColumns](sqlprocedurecolumns.md)의 결과 집합에 추가 열을 추가 하지 않아야 합니다. UDT 열 또는 매개 변수의 DATA_TYPE은 SQL_SS_UDT입니다.  
+ Udt의 경우 기존 TYPE_NAME 열은 UDT의 이름을 나타내는 데 사용 됩니다. 따라서 또는 SQLProcedureColumns의 결과 집합에 추가 열을 추가 하지 않아야 합니다 `SQLColumns` . [SQLProcedureColumns](sqlprocedurecolumns.md) UDT 열 또는 매개 변수의 DATA_TYPE은 SQL_SS_UDT입니다.  
   
  UDT 매개 변수의 경우 서버에서 이 정보를 반환하거나 요구하면 위에 정의된 새로운 드라이버별 설명자를 사용하여 UDT의 추가 메타데이터 속성을 얻거나 설정할 수 있습니다.  
   
- 클라이언트가 SQLColumns에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하 고이를 호출 하는 경우 카탈로그 입력 매개 변수에 NULL 또는 와일드 카드 값을 사용 하면 다른 카탈로그의 정보가 반환 되지 않습니다. 현재 카탈로그에 대한 정보만 반환됩니다. 클라이언트는 먼저 SQLTables를 호출 하 여 원하는 테이블이 있는 카탈로그를 확인할 수 있습니다. 그런 다음 클라이언트는 SQLColumns 호출에서 카탈로그 입력 매개 변수에 해당 카탈로그 값을 사용 하 여 해당 테이블의 열에 대 한 정보를 검색할 수 있습니다.  
+ 클라이언트가 SQLColumns에 연결 하 고이를 호출 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그 입력 매개 변수에 NULL 또는 와일드 카드 값을 사용 하면 다른 카탈로그의 정보가 반환 되지 않습니다. 현재 카탈로그에 대한 정보만 반환됩니다. 클라이언트는 먼저 SQLTables를 호출 하 여 원하는 테이블이 있는 카탈로그를 확인할 수 있습니다. 그런 다음 클라이언트는 SQLColumns 호출에서 카탈로그 입력 매개 변수에 해당 카탈로그 값을 사용 하 여 해당 테이블의 열에 대 한 정보를 검색할 수 있습니다.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns 및 테이블 반환 매개 변수  
  SQLColumns에서 반환 하는 결과 집합은 SQL_SOPT_SS_NAME_SCOPE 설정에 따라 달라 집니다. 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)를 참조 하세요. 테이블 반환 매개 변수에 다음 열이 추가되었습니다.  
@@ -75,14 +75,14 @@ ms.locfileid: "63067731"
  `SQLColumns`는 큰 CLR UDT(사용자 정의 형식)를 지원합니다. 자세한 내용은 [ODBC&#41;&#40;LARGE CLR 사용자 정의 형식 ](../native-client/odbc/large-clr-user-defined-types-odbc.md)을 참조 하세요.  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
- SQLColumns의 결과 집합에는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 특정 열이 추가 되었습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQLColumns의 결과 집합에는 두 개의 특정 열이 추가 되었습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
 |SS_IS_COLUMN_SET|`Smallint`|열이 `column_set` 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
   
- ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]버전에 추가 된 모든 드라이버 특정 열 앞에, 그리고 odbc 자체에 의해 지정 된 모든 열 뒤에 나타납니다.  
+ ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET는 이전 버전에 추가 된 모든 드라이버 특정 열 앞에, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 그리고 odbc 자체에 의해 지정 된 모든 열 뒤에 나타납니다.  
   
  SQLColumns에서 반환 하는 결과 집합은 SQL_SOPT_SS_NAME_SCOPE 설정에 따라 달라 집니다. 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)를 참조 하세요.  
   

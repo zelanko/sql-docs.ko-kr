@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8448e133891d375a97010c15d2079335e473c6f1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637763"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717061"
 ---
 # <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "62637763"
   
 -   기본 XML 인덱스 이름에는 뷰 이름과 같은 제한이 있습니다.  
   
- 뷰의 `xml` 유형 열, 유형 열이 있는 `xml` `xml` **테이블** 반환 변수 또는 유형 변수에서 XML 인덱스를 만들 수 없습니다.  
+ `xml`뷰의 유형 열, 유형 열이 있는 **테이블** 반환 변수 `xml` 또는 유형 변수에서 XML 인덱스를 만들 수 없습니다 `xml` .  
   
 -   ALTER TABLE ALTER COLUMN 옵션을 사용하여 `xml` 유형 열을 형식화되지 않은 XML에서 형식화된 XML로 변경하거나 그 반대로 변경하려면 열에 XML 인덱스가 있으면 안 됩니다. XML 인덱스가 있으면 열 형식 변경을 시도하기 전에 먼저 삭제해야 합니다.  
   

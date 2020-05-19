@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, large value data types
 - SQL Server Native Client OLE DB provider, large value data types
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206994"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707210"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대 한 **max** 지정자를 도입 하 여 값을 2 ^ 31-1 바이트로 저장할 수 있습니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수는 **varchar (max)**, **nvarchar (max)** 또는 **varbinary (max)** 데이터 형식을 지정할 수 있습니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "68206994"
 >  데이터를 복제 하는 경우 [최대 텍스트 복제 크기 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 을-1로 구성 해야 할 수 있습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR으로 노출 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR으로 노출 합니다.  
   
  **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68206994"
   
  스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   
- 스트리밍을 지원 하기 위해 Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)**, **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
+ 스트리밍을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)**, **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client OLE DB 공급자는 또한 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 출력 매개 변수를 바인딩할 수 있습니다 .이 경우 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN 표시 되는 반환 값으로 많은 값 형식을 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client OLE DB 공급자는 또한 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 출력 매개 변수를 바인딩할 수 있습니다 .이 경우 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN 표시 되는 반환 값으로 많은 값 형식을 반환 합니다.  
   
  이러한 형식으로 작업하기 위해 애플리케이션에는 다음 옵션이 있습니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68206994"
   
 -   DBTYPE_IUNKNOWN으로 바인딩하고 스트리밍을 사용합니다.  
   
- 열의 최대 크기를 보고할 때 Native Client OLE DB 공급자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다음을 보고 합니다.  
+ 열의 최대 크기를 보고할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 보고 합니다.  
   
 -   예를 들어 **varchar (** 2000 **)** 열에 대해 정의 된 최대 크기는 2000입니다.  
   
@@ -687,10 +687,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 많은 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 [Blob 및 OLE 개체](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 많은 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 [BLOB 및 OLE 개체](../../native-client-ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client odbc 드라이버는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (MAX)** 형식을 odbc API 함수에서 odbc SQL 데이터 형식을 허용 하거나 반환 하는 SQL_VARCHAR, SQL_VARBINARY 및 SQL_WVARCHAR 제공 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 **varchar (max)**, **varbinary (max)** 및 **NVARCHAR (max)** 형식을 odbc API 함수에서 odbc SQL 데이터 형식을 허용 하거나 반환 하는 SQL_VARCHAR, SQL_VARBINARY 및 SQL_WVARCHAR 제공 합니다.  
   
  열의 최대 크기를 보고할 때 드라이버는 다음 중 하나를 보고합니다.  
   

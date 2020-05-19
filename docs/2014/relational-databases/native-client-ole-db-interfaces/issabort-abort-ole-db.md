@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ad1310112b3cd6ac536a55a82757ae99433372d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e36bb4cff26213467f30dd58b4d172be7d8a38d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511517"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707331"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort(OLE DB)
   현재 행 집합 및 현재 명령과 연결된 일괄 처리되는 명령을 취소합니다.  

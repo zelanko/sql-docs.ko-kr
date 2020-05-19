@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: e7c2a5b5-83f4-4c72-9aca-7b9fb4748b11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f9e4790cfae631a9a977431f25282aae766f3e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36a5d580b6edb04f51d2fcf77dcc8ff0c8ba042f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067514"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706143"
 ---
 # <a name="sqlexecdirect"></a>SQLExecDirect
   SQL_SOPT_SS_PARAM_FOCUS statement 특성이 0이 아니면 SQLExecDirect는 SQL_ERROR를 반환 하 고 SQLSTATE = HY024 및 "잘못 된 특성 값 SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)" 라는 메시지가 포함 된 진단 레코드를 생성 합니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - IBCPSession2 interface
 ms.assetid: 12816656-940d-4724-acfb-e916eef2e644
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: caa99de2383a022ff73c04dd5fcdeeb151ca086d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61084969ad28c94dd2047cda1d05f685751a70f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691856"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707396"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2(OLE DB)
   IBCPSession2 인터페이스는 각 열에 대해 IBCPSession::BCPColFmt를 호출하는 방법 대신 사용할 수 있는 멤버 함수를 제공하는 IBCPSession에 대한 확장입니다.  IBCPSession2는 IBCPSession에서 상속 하 고 [IBCPSession2:: Bcpset대량 모드](ibcpsession2-bcpsetbulkmode.md)의 새 메서드를 추가 합니다.  

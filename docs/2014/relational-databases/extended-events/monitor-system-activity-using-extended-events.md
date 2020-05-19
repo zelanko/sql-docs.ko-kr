@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xe
 - extended events [SQL Server], monitoring system activity
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44bb482d1385ad9b22900bb74015a779ea6750d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a15a6e9a04c64e6e277d37a86d8e6f198b81906
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638731"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706619"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>확장 이벤트를 사용하여 시스템 작업 모니터링
   이 절차는 확장 이벤트를 ETW(Windows용 이벤트 추적)와 함께 사용하여 시스템 작업을 모니터링하는 방법을 설명합니다. 또한 CREATE EVENT SESSION, ALTER EVENT SESSION 및 DROP EVENT SESSION 문을 사용하는 방법도 보여 줍니다.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910617"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764104"
 ---
 # <a name="adox-properties"></a>ADOX 속성
 
@@ -27,7 +27,7 @@ ms.locfileid: "67910617"
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|카탈로그가 속한 ADO **연결** 개체를 나타냅니다.|  
 |[특성](../../../ado/reference/adox-api/attributes-property-adox.md)|열 특징을 설명 합니다.|  
 |[클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md)|인덱스가 클러스터형 인지 여부를 나타냅니다.|  
-|[명령](../../../ado/reference/adox-api/command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
+|[Command](../../../ado/reference/adox-api/command-property-adox.md)|프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO **명령** 개체를 지정 합니다.|  
 |[Count](../../../ado/reference/ado-api/count-property-ado.md)|컬렉션의 개체 수를 나타냅니다.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|개체를 만든 날짜를 나타냅니다.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|개체가 마지막으로 수정 된 날짜를 나타냅니다.|  

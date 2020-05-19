@@ -14,25 +14,25 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ce1e2c701db485d8251bc9c017a9b192576a7c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657683"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707830"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에서 여러 행 집합을 반환할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 문에서 여러 행 집합을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
   
 -   일괄 처리되는 SQL 문이 단일 명령으로 제출된 경우  
   
 -   저장 프로시저가 SQL 문의 일괄 처리를 구현하는 경우  
   
 ## <a name="batches"></a>Batch  
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 세미콜론 문자를 SQL 문에 대 한 일괄 처리 구분 기호로 인식 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 세미콜론 문자를 SQL 문에 대 한 일괄 처리 구분 기호로 인식 합니다.  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

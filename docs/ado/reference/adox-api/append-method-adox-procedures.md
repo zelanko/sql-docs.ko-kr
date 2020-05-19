@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967287"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764074"
 ---
 # <a name="append-method-adox-procedures"></a>Append 메서드(ADOX 프로시저)
 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션에 새 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 개체를 추가 합니다.  
@@ -37,7 +37,7 @@ Procedures.Append Name, Command
  *이름*  
  만들고 추가 하는 프로시저의 이름을 지정 하는 **문자열** 값입니다.  
   
- *명령*  
+ *Command*  
  만들고 추가 하는 프로시저를 나타내는 ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다.  
   
 ## <a name="remarks"></a>설명  

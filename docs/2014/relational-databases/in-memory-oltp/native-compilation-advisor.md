@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1aeb6b4cb356cbb2d965ce449e36b2c5cd484ccc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072773"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706471"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
   트랜잭션 성능 보고서 도구( [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 네이티브 컴파일을 사용하도록 변환할 경우 효과적인 해석된 저장 프로시저에 대한 정보를 제공합니다. 네이티브 컴파일을 사용하도록 변환할 저장 프로시저를 식별한 후 네이티브 컴파일 관리자를 사용하여 해석된 저장 프로시저를 네이티브 컴파일로 마이그레이션할 수 있습니다. 고유하게 컴파일된 저장 프로시저에 대한 자세한 내용은 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)를 참조하세요.  
@@ -28,7 +28,7 @@ ms.locfileid: "63072773"
  마이그레이션 방법에 대 한 자세한 내용은 [메모리 내 OLTP-일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조 하세요.  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>네이티브 컴파일 관리자 사용 연습  
- **개체 탐색기**에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자**를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자**시작 페이지가 표시됩니다. 계속하려면 **다음**을 클릭합니다.  
+ **개체 탐색기**에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자**를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자**시작 페이지가 표시됩니다. **다음** 을 클릭하여 계속합니다.  
   
 ### <a name="stored-procedure-validation"></a>저장 프로시저 유효성 검사  
  이 페이지에는 저장 프로시저에 네이티브 컴파일과 호환되지 않는 구문이 사용되었는지 여부가 표시됩니다. **다음** 을 클릭하여 세부 정보를 볼 수 있습니다. 네이티브 컴파일과 호환되지 않는 구문이 있는 경우 **다음** 을 클릭하여 세부 정보를 볼 수 있습니다.  

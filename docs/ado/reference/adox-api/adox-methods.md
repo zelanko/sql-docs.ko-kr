@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59149594d618350c9188d40eb6ade51b3aecde68
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928541"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764124"
 ---
 # <a name="adox-methods"></a>ADOX 메서드
 
@@ -34,7 +34,7 @@ ms.locfileid: "67928541"
 |[추가 (뷰)](../../../ado/reference/adox-api/append-method-adox-views.md)|**뷰** 컬렉션에 새 **뷰** 개체를 추가 합니다.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|사용자 계정에 대 한 암호를 변경 합니다.|  
 |[만들기](../../../ado/reference/adox-api/create-method-adox.md)|새 카탈로그를 만듭니다.|  
-|[Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md)|컬렉션에서 개체를 제거 합니다.|  
+|[삭제](../../../ado/reference/adox-api/delete-method-adox-collections.md)|컬렉션에서 개체를 제거 합니다.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|카탈로그에 있는 개체의 소유자를 반환 합니다.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|개체의 그룹 또는 사용자에 대 한 사용 권한을 반환 합니다.|  
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|카탈로그에 있는 개체의 소유자를 지정 합니다.|  

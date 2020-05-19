@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206835"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705797"
 ---
 # <a name="using-data-files-and-format-files"></a>데이터 파일 및 서식 파일 사용
   가장 간단한 대량 복사 프로그램은 다음을 수행합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "68206835"
   
  서식 파일에서 설명 하는 데이터 파일에서 대량 복사를 수행 하는 경우 **bcp_init** 후 **bcp_exec**전에 [bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) 을 호출 하 여 서식 파일을 읽습니다.  
   
- **Bcp_control** 함수는 데이터 파일에서로의 대량 복사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 몇 가지 옵션을 제어 합니다. **bcp_control** 는 종료 전 최대 오류 수, 대량 복사를 시작할 파일의 행, 중지할 행 및 일괄 처리 크기와 같은 옵션을 설정 합니다.  
+ **Bcp_control** 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일에서로의 대량 복사에 대 한 몇 가지 옵션을 제어 합니다. **bcp_control** 는 종료 전 최대 오류 수, 대량 복사를 시작할 파일의 행, 중지할 행 및 일괄 처리 크기와 같은 옵션을 설정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ODBC&#41;&#40;대량 복사 작업 수행](performing-bulk-copy-operations-odbc.md)  

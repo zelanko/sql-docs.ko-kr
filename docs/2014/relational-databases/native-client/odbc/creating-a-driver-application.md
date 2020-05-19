@@ -20,27 +20,27 @@ helpviewer_keywords:
 - ODBC, driver extensions
 - function calls [ODBC]
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c5dc6e2452ea538f30e9ac10fa27b051aba13a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205270"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707099"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>SQL Server Native Client ODBC 드라이버 애플리케이션 만들기
   ODBC 아키텍처에는 다음과 같은 기능을 수행하는 네 가지 구성 요소가 있습니다.  
   
-|구성 요소|함수|  
+|구성 요소|기능|  
 |---------------|--------------|  
 |애플리케이션|ODBC 데이터 원본과 통신하는 ODBC 함수를 호출하고, SQL 문을 전송하고, 결과 집합을 처리합니다.|  
 |드라이버 관리자|애플리케이션과 애플리케이션에서 사용하는 모든 ODBC 드라이버 사이의 통신을 관리합니다.|  
 |드라이버|애플리케이션으로부터의 모든 ODBC 호출을 처리하고, 데이터 원본에 연결하고, 애플리케이션에서 데이터 원본으로 SQL 문을 전달하고, 애플리케이션에 결과를 반환합니다. 필요한 경우 드라이버는 애플리케이션에서 전달된 ODBC SQL을 데이터 원본에서 사용하는 기본 SQL로 변환합니다.|  
 |데이터 원본|드라이버가 DBMS의 특정 데이터 인스턴스에 액세스하는 데 필요한 모든 정보를 포함합니다.|  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버를 사용 하 여 인스턴스와 통신 하는 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 작업을 수행 합니다.  
+ Native Client ODBC 드라이버를 사용 하 여 인스턴스와 통신 하는 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 작업을 수행 합니다.  
   
 -   데이터 원본에 연결  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63205270"
   
 -   데이터 원본에 대한 연결 종료  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에 대해 작성 된 더 복잡 한 응용 프로그램은 다음 작업을 수행할 수도 있습니다.  
+ Native Client ODBC 드라이버에 대해 작성 된 더 복잡 한 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 작업을 수행할 수도 있습니다.  
   
 -   커서를 사용하여 결과 집합에서 위치 제어  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63205270"
   
  ODBC 함수를 호출하려면 C 또는 C++ 애플리케이션에 sql.h, sqlext.h 및 sqltypes.h 헤더 파일이 포함되어야 하며 ODBC 설치 관리자 API 함수를 호출하려면 애플리케이션에 odbcinst.h 헤더 파일이 포함되어야 합니다. 유니코드 ODBC 애플리케이션에는 sqlucode.h 헤더 파일이 반드시 포함되어야 합니다. ODBC 애플리케이션은 odbc32.lib 파일에 연결되어야 하고 ODBC 설치 관리자 API 함수를 호출하는 ODBC 애플리케이션은 odbccp32.lib 파일에 연결되어야 합니다. 이러한 파일은 Windows Platform SDK에 포함되어 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client odbc 드라이버를 비롯 한 많은 odbc 드라이버는 드라이버별 ODBC 확장을 제공 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버별 확장을 활용 하려면 응용 프로그램에 sqlncli 헤더 파일이 포함 되어야 합니다. 이 헤더 파일에는 다음과 같은 항목이 들어 있습니다.  
+ Native Client ODBC 드라이버를 비롯 한 많은 ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 드라이버별 ODBC 확장을 제공 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버별 확장을 활용 하려면 응용 프로그램에 sqlncli 헤더 파일이 포함 되어야 합니다. 이 헤더 파일에는 다음과 같은 항목이 들어 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버별 연결 특성입니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "63205270"
   
 -   연결된 서버와 해당 카탈로그의 목록을 위해 분산 쿼리 메타데이터 API 함수 호출  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버의 대량 복사 기능을 사용 하는 모든 C 또는 c + + odbc 응용 프로그램은 sqlncli11 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 애플리케이션도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli 및 sqlncli11 파일은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발자 도구의 일부로 배포 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
+ Native Client ODBC 드라이버의 대량 복사 기능을 사용 하는 모든 C 또는 c + + ODBC 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sqlncli11 파일에 연결 되어야 합니다. 또한 분산 쿼리 메타데이터 API 함수를 호출하는 애플리케이션도 sqlncli11.lib 파일에 연결되어야 합니다. Sqlncli 및 sqlncli11 파일은 개발자 도구의 일부로 배포 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include 및 Lib 디렉터리는 다음과 같이 컴파일러의 INCLUDE 및 LIB 경로에 있습니다.  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  

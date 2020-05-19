@@ -10,22 +10,22 @@ helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088628"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707044"
 ---
 # <a name="about-the-sql-server-license-terms"></a>SQL Server 사용 조건 정보
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. % ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\license 약관 \ 또는% ProgramFiles (x86)% \에 파일을 씁니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]\120\license 조건\\ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]입니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. % ProgramFiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\license 약관 \ 또는% ProgramFiles (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 파일을 씁니다. \120\License 조건 \\ 입니다.  
   
  버전 및 언어가 같은 여러 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다.  
   
- 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 버전과 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 사용 조건 파일 이름은 SQLServer2014_License_Edition_\<형식>_\<LCID> .rtf입니다. 예를 들어:  
+ 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 버전과 설치된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 사용 조건 파일 이름은 SQLServer2014_License_Edition_ \< 형식>_ \< LCID> .rtf입니다. 예:  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer의 영어 버전의 경우 SQLServer2014_License_DEV_1033.rtf  
   
@@ -59,12 +59,12 @@ ms.locfileid: "66088628"
 |독일어|DEU|1031|  
 |스페인어|ESN|3082|  
 |중국어(간체)|CHS|2052|  
-|중국어(번체)|CHT|1028|  
+|중국어 번체|CHT|1028|  
 |포르투갈어(브라질)|PTB|1046|  
 |러시아어|RUS|1049|  
   
 ## <a name="ssnoversion-licensing-options"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 라이선스 옵션  
- 가격 책정 및 라이선스 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션에 대 한 자세한 내용은 [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (웹https://www.microsoft.com/sqlserver/sql-server-2014.aspx) 사이트)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가격 책정 및 라이선스 옵션에 대 한 자세한 내용은 [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (웹 사이트)를 참조 하세요 https://www.microsoft.com/sqlserver/sql-server-2014.aspx) .  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server에 대 한 라이선스 고려 사항](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

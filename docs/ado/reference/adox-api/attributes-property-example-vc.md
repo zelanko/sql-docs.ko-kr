@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1d3da3d5228345f6f6ae995718b641ecaead89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76918816"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763984"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes 속성 예제(VC++)
 이 예에서는 열의 [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) 속성을 보여 [Column](../../../ado/reference/adox-api/column-object-adox.md)줍니다. **Adcolnullable** 로 설정 하면 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 의 값을 빈 문자열로 설정할 수 있습니다. 이 경우 사용자는 데이터를 알 수 없는 레코드와 데이터가 적용 되지 않는 레코드를 구분할 수 있습니다.  

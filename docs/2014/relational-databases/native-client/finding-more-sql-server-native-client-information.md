@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 639796b9abcf95c9f701d3ed88fbb5e71078eb8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205845"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707138"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  
@@ -34,7 +34,7 @@ ms.locfileid: "63205845"
   
  Window DAC SDK에는 ADO(ActiveX Data Object), OLE DB 및 ODBC(Open Database Connectivity)에 대한 설명서가 포함되어 있습니다.  
   
- Native Client에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 추가 정보는 [Microsoft 지원](https://support.microsoft.com)을 검색 하 여 찾을 수 있습니다.  
+ Native Client에 대 한 추가 정보 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [Microsoft 지원](https://support.microsoft.com)을 검색 하 여 찾을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client 프로그래밍](sql-server-native-client-programming.md)  

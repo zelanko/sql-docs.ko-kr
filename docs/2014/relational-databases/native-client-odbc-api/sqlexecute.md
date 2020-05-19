@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLExecute function
 ms.assetid: 4d7db8b6-611f-4fe4-be85-2a407059de45
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3ad659cfb929ac5a489b069db0b6a5f2b8abdae7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac50a5abd1f7e87017c6f0c559887b1796032328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067499"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706121"
 ---
 # <a name="sqlexecute"></a>SQLExecute
   SQL_SOPT_SS_PARAM_FOCUS statement 특성이 0으로 설정 되지 않은 경우 SQLExecute는 SQL_ERROR를 반환 하 고 SQLSTATE = HY024 및 "잘못 된 특성 값, SQL_SOPT_SS_PARAM_FOCUS (실행 시 0 이어야 함)" 라는 메시지와 함께 진단 레코드를 생성 합니다. SQL_SOPT_SS_PARAM_FOCUS에 대한 자세한 내용은 [SQLSetStmtAttr](sqlsetstmtattr.md)을 참조하십시오.  

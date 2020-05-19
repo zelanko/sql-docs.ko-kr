@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683594"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707020"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  
@@ -79,10 +79,10 @@ ms.locfileid: "74683594"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 온라인으로 사용할 수 있습니다. 자세한 내용은 [SQL Server에 대 한 제품 설명서 사용](../2014-toc/index.yml)을 참조 하세요.  
   
 ## <a name="obtaining-documentation-for-additional-msconame-products"></a>[!INCLUDE[msCoName](../includes/msconame-md.md)]의 추가 제품에 대한 설명서 구하기  
- [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67164)에서 제품 [!INCLUDE[msCoName](../includes/msconame-md.md)] 에 대 한 액세스 가능한 설명서를 얻을 수 있습니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [Microsoft Accessibility 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=67164)에서 제품에 대 한 액세스 가능한 설명서를 얻을 수 있습니다.  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- 블라인드 & Dyslexic, [!INCLUDE[msCoName](../includes/msconame-md.md)] i n c .에 대 한 기록에서 추가 게시를 가져올 수 있습니다. 이러한 문서는 에게만 오디오 카세트 또는 플로피 디스크에서 배포 서비스에 등록 된 적격 한 멤버에 게 배포 됩니다. 이 발행물 모음에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press에서 출판한 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서 및 서적을 비롯하여 80,000개 이상의 타이틀이 포함되어 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Press에서 출판한 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서 및 서적의 가용성 및 입수 자격 요건에 대해서는 다음으로 문의하십시오.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]블라인드 & Dyslexic, i n c .에 대 한 기록에서 추가 게시를 가져올 수 있습니다. 이러한 문서는 에게만 오디오 카세트 또는 플로피 디스크에서 배포 서비스에 등록 된 적격 한 멤버에 게 배포 됩니다. 이 발행물 모음에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Press에서 출판한 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서 및 서적을 비롯하여 80,000개 이상의 타이틀이 포함되어 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Press에서 출판한 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 설명서 및 서적의 가용성 및 입수 자격 요건에 대해서는 다음으로 문의하십시오.  
   
  블라인드 & Dyslexic, Inc. 20 Roszel, NJ 08540에 대 한 기록  
   
@@ -97,8 +97,8 @@ ms.locfileid: "74683594"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>청각 장애가 있거나 청력이 좋지 않은 사용자를 위한 고객 서비스  
  청각 장애가 있거나 청력이 좋지 않은 사용자의 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] 제품 및 고객 서비스의 모든 내용은 텍스트 전화(TTY/TDD) 서비스를 통해 사용할 수 있습니다. 한국에서는 이 서비스가 지원되지 않습니다.  
   
-### <a name="customer-service"></a>고객 서비스  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 판매 정보 센터에서 6:30 A.M. 사이에 전화를 걸어 (800) 892-5234에 문의할 수 있습니다. Sales Information Center에 필요한 정보를 문의할 수 있습니다. 기술 지원 서비스에 문의할 수 있습니다.  
+### <a name="customer-service"></a>Customer Service  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]판매 정보 센터에서 6:30 A.M. 사이에 전화를 걸어 (800) 892-5234에 문의할 수 있습니다. Sales Information Center에 필요한 정보를 문의할 수 있습니다. 기술 지원 서비스에 문의할 수 있습니다.  
   
 ### <a name="technical-help"></a>기술 지원  
  미국에서 기술 지원을 받는 경우 월요일 - 금요일(휴일 제외), 오전 6시와 오후 6시(태평양 표준시) 사이에 (800) 892-5234번으로 텍스트 전화를 걸어 [!INCLUDE[msCoName](../includes/msconame-md.md)] 오후 6시 사이로 기술 지원 서비스에 문의할 수 있습니다. 캐나다의 경우 월요일 - 금요일(휴일 제외), 오전 8시와 오후 8시(동부 표준시) 기술 지원 서비스에 전화를 걸면 됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 지원 서비스는 서비스를 받는 시점의 가격, 상황 및 조건에 따릅니다.  

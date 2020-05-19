@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveConnection property [ADOX], Visual Basic example
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dc83a171b9ed2632900c8f31a4ea4d059493b19a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967110"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763964"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection 속성 예제(VB)
 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) 속성을 유효한 열린 연결로 설정 하면 카탈로그가 열립니다. 열려 있는 카탈로그에서 해당 카탈로그 내에 포함 된 스키마 개체에 액세스할 수 있습니다.  
