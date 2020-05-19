@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c266cf82a6f790d20cec3b3ec94f3c5e42b74b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1cfee492433da4a9812a6961d34b741cf8bff089
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241988"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703817"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>스크립트 생성 마법사에 지원되는 개체
   스크립트 생성 및 게시 마법사는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 지원되는 개체의 하위 집합을 지원합니다.  

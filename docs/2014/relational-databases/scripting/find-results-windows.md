@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245133"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703889"
 ---
 # <a name="find-results-windows"></a>찾기 결과 창
   두 개의 찾기 결과 창에는 **찾기 및 바꾸기** 대화 상자의 **파일에서 찾기** 또는 **파일에서 바꾸기** 탭을 사용하여 찾은 항목이 표시됩니다. **파일에서 찾기** 와 **파일에서 바꾸기** 의 **결과 옵션** 명령을 사용하여 항목을 표시할 찾기 결과 창을 선택할 수 있습니다.  

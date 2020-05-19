@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3d96670edc599a1f16456b862922dc6378b1362
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d65ec8de3e45632548a813024223eb72314acc2b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245151"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703926"
 ---
 # <a name="find-and-replace"></a>찾기 및 바꾸기
   **찾기 및 바꾸기** 대화 상자를 사용하여 파일 내에서 텍스트를 찾을 수 있으며 필요하면 다른 텍스트로 바꿀 수 있습니다. 대화 상자를 여는 방법에 따라 **찾기 및 바꾸기** 대화 상자에 표시되는 옵션이 조금씩 다릅니다. 찾기 옵션만 있고 바꾸기 옵션은 없는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 찾기** 를 클릭합니다. 찾기 옵션과 바꾸기 옵션이 모두 있는 대화 상자를 열려면 **편집** 메뉴에서 **찾기 및 바꾸기**를 가리킨 다음 **빠른 바꾸기** 를 클릭합니다.  

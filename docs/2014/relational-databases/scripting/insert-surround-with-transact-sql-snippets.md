@@ -11,15 +11,15 @@ helpviewer_keywords:
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fde81304117befec38844c28b6d0c434ab3606e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 729cf43a76ea9874e2fc04a8425866d8969e90ff
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242093"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703886"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>코드 감싸기 Transact-SQL 조각 삽입
   코드 감싸기 조각은 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 BEGIN, IF 또는 WHILE 블록으로 묶을 때 시작 지점으로 사용할 수 있는 템플릿입니다.  

@@ -15,22 +15,22 @@ topic_type:
 helpviewer_keywords:
 - bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226240"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705289"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt** 함수는 [bcp_colfmt](bcp-colfmt.md)를 대체 합니다. 열 데이터 정렬을 지정할 때 **bcp_setcolfmt** 함수를 사용 해야 합니다. [bcp_setbulkmode](bcp-setbulkmode.md) 를 사용 하 여 두 개 이상의 열 형식을 지정할 수 있습니다.  
   
  이 함수를 사용하면 대량 복사 작업에서 열 형식을 융통성 있게 지정할 수 있습니다. 이 함수는 개별 열의 형식 특성을 설정하는 데 사용합니다. **Bcp_setcolfmt** 에 대 한 각 호출은 하나의 열 형식 특성을 설정 합니다.  
   
- **Bcp_setcolfmt** 함수는 사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정 합니다. 원본 형식으로 사용 하는 경우 **bcp_setcolfmt** 은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블에 대량 복사 하 여 데이터의 데이터 원본으로 사용 되는 기존 데이터 파일의 형식을 지정 합니다. 대상 형식으로 사용 되는 경우 데이터 파일은 **bcp_setcolfmt**에 지정 된 열 형식을 사용 하 여 생성 됩니다.  
+ **Bcp_setcolfmt** 함수는 사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정 합니다. 원본 형식으로 사용 하는 경우 **bcp_setcolfmt** 은의 테이블에 대량 복사 하 여 데이터의 데이터 원본으로 사용 되는 기존 데이터 파일의 형식을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 대상 형식으로 사용 되는 경우 데이터 파일은 **bcp_setcolfmt**에 지정 된 열 형식을 사용 하 여 생성 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -59,7 +59,7 @@ cbValue
  *hdbc*  
  대량 복사가 가능한 ODBC 연결 핸들입니다.  
   
- *필드(field)*  
+ *필드가*  
  속성을 설정할 서수 열 번호입니다.  
   
  *property*  

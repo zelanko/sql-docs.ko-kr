@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4403e542125918bb5fd738077ebdcc6182201a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa9e42b6b4bd33bc3c0212615bc9e89f2d06426e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242045"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703848"
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
   코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  

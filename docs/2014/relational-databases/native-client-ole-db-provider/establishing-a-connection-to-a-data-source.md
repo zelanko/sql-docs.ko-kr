@@ -13,24 +13,24 @@ helpviewer_keywords:
 - CoCreateInstance method
 - OLE DB data sources [SQL Server Native Client]
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263728218fd032c0814d73197cde56fc2d661e9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183742"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704750"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>데이터 원본에 대한 연결 설정
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 액세스 하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출 하 여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 경우 클래스 식별자가 CLSID_SQLNCLI10 됩니다. 참조 하는 SQLNCLI에서 사용 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 확인 하는 SQLNCLI_CLSID 기호를 사용할 수도 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자에 액세스 하려면 소비자는 먼저 **CoCreateInstance** 메서드를 호출 하 여 데이터 원본 개체의 인스턴스를 만들어야 합니다. 각 OLE DB 공급자는 고유한 CLSID(클래스 ID)를 사용하여 식별합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자의 경우 클래스 식별자가 CLSID_SQLNCLI10 됩니다. 참조 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLNCLI에서 사용 되는 Native Client OLE DB 공급자를 확인 하는 SQLNCLI_CLSID 기호를 사용할 수도 있습니다.  
   
  소비자는 데이터 원본 개체가 공개하는 **IDBProperties** 인터페이스를 사용하여 서버 이름, 데이터베이스 이름, 사용자 ID 및 암호와 같은 기본 인증 정보를 제공할 수 있습니다. 이러한 속성을 설정하려면 **IDBProperties::SetProperties** 메서드를 호출합니다.  
   
  컴퓨터에서 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 경우 서버 이름은 ServerName\InstanceName 형식으로 지정됩니다.  
   
- 데이터 원본 개체는 또한 **IDBInitialize** 인터페이스를 공개합니다. 속성을 설정한 다음에는 **IDBInitialize::Initialize** 메서드를 호출하여 데이터 원본에 연결할 수 있습니다. 예를 들어:  
+ 데이터 원본 개체는 또한 **IDBInitialize** 인터페이스를 공개합니다. 속성을 설정한 다음에는 **IDBInitialize::Initialize** 메서드를 호출하여 데이터 원본에 연결할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

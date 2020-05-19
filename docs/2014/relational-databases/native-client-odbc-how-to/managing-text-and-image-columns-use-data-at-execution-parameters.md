@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - data-at-execution
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d69ec20d919110ce241aa38bcfb22069a20d53a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206797"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705249"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>실행 시 데이터 매개 변수 사용(ODBC)
     
@@ -25,7 +25,7 @@ ms.locfileid: "68206797"
   
 1.  [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)를 호출하여 프로그램 버퍼를 문 매개 변수에 바인딩하는 경우:  
   
-    -   마지막 매개 변수의 경우 length를 SQL_LEN_DATA_AT_EXEC 사용 합니다. 여기서 *length* 는 `text`, `ntext`또는 `image` 매개 변수 데이터의 총 길이 (바이트)입니다.*length*  
+    -   마지막 매개 변수의 경우 length를 SQL_LEN_DATA_AT_EXEC 사용*length*합니다. 여기서 *length* 는 `text` , `ntext` 또는 `image` 매개 변수 데이터의 총 길이 (바이트)입니다.  
   
     -   프로그램에서 정의된 매개 변수 식별자의 `rgbValue`(8번째 매개 변수)를 사용합니다.  
   

@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - GetParameterProperties method
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638085"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704807"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties(OLE DB)
   각 UDT 또는 XML 매개 변수당 SSPARAMPROPS 속성 집합을 하나씩 반환하는 방식으로 SSPARAMPROPS 속성 집합 구조의 배열을 반환합니다.  

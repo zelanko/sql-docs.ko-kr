@@ -16,26 +16,26 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, indexes
 - indexes [OLE DB]
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72cd2aa4afab66a91351013f9c9141f2d94bff79
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213524"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704497"
 ---
 # <a name="tables-and-indexes"></a>테이블 및 인덱스
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 소비자가 테이블과 인덱스를 생성, 변경 및 삭제할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있도록 **Iindexdefinition** 및 **itabledefinition** 인터페이스를 제공 합니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 소비자가 테이블과 인덱스를 생성, 변경 및 삭제할 수 있도록 **Iindexdefinition** 및 **itabledefinition** 인터페이스를 제공 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
   
  테이블과 인덱스를 만들거나 삭제하는 기능은 소비자 애플리케이션 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 권한에 따라 달라집니다. 테이블 삭제는 선언적 참조 무결성 제약 조건이나 다른 요인이 있는지 여부에 따라 더욱 제한할 수 있습니다.  
   
- 을 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 하는 대부분의 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 Native Client OLE DB 공급자 인터페이스 대신 sql-dmo를 사용 합니다. SQL-DMO는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 관리 기능을 지원하는 OLE Automation 개체 컬렉션입니다. 여러 OLE DB 공급자를 대상으로 하는 애플리케이션은 다양한 OLE DB 공급자가 지원하는 일반 OLE DB 인터페이스를 사용합니다.  
+ 을 대상으로 하는 대부분의 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 인터페이스 대신 sql-dmo를 사용 합니다. SQL-DMO는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 관리 기능을 지원하는 OLE Automation 개체 컬렉션입니다. 여러 OLE DB 공급자를 대상으로 하는 애플리케이션은 다양한 OLE DB 공급자가 지원하는 일반 OLE DB 인터페이스를 사용합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 공급자별 속성 집합 DBPROPSET_SQLSERVERCOLUMN에 다음과 같은 속성을 정의합니다.  
   
-|속성 ID|설명|  
+|속성 ID|Description|  
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|유형: VT_BSTR<br /><br /> R/W: 쓰기<br /><br /> 기본값: Null<br /><br /> 설명: 이 속성은 **ITableDefinition**에서만 사용됩니다. 이 속성에 지정된 문자열은 [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)을 생성할 때 사용됨<br /><br /> 문을 만들 때 사용됩니다.|  
   
@@ -55,8 +55,8 @@ ms.locfileid: "63213524"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [CREATE INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
+ [DROP INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
   

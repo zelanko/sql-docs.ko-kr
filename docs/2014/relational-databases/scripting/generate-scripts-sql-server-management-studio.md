@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f97b1682fa8a2e04b5f1afcc2a552a326a9e43
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242100"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703900"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용 하 여 여러 개체에 대 한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - bulk load [SQLXML], annotation interpretations
 - annotated XDR schemas, XML Bulk Load
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2db54a2bec501c3422cf19b1efab7cdb581420e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80b472ee00aba60e2bc01883b79b570dbed07b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013446"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703390"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>주석 해석(SQLXML 4.0)
   이 섹션의 항목에서는 XML 대량 로드가 XSD 스키마의 주석을 해석하는 방법에 대해 설명합니다. 여기서 설명하는 동작은 XDR 스키마의 주석에도 적용됩니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "66013446"
  XML 대량 로드에서 `sql:overflow` 주석이 해석되는 방법에 대해 설명합니다.  
   
  [SQLXML 4.0 &#40;다른 주석&#41;](annotation-interpretation-other-annotations.md)  
- XML 대량 로드에서 다음 주석을 해석 하는 방법에 대해 `sql:id-prefix`설명 `sql:use-cdata`합니다 `sql:url-encode`. `sql:is-mapping-schema`, `sql:key-fields`,,,.  
+ XML 대량 로드에서 다음 주석을 해석 하는 방법에 대해 설명 합니다. `sql:id-prefix` ,, `sql:use-cdata` `sql:url-encode` , `sql:is-mapping-schema` , `sql:key-fields` .  
   
   

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9e922f5bf8d07e75c976dbfc07b89b8527dbbc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d248abc5fbfeb22b7ef399945b0116e9be2bda51
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023370"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705089"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
   이 항목에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성된 클라이언트 애플리케이션 간에 수행되는 날짜 및 시간 변환에 대해 설명합니다.  
@@ -27,25 +27,25 @@ ms.locfileid: "63023370"
   
 |대상 -><br /><br /> 시작|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|날짜|1,7|확인|-|-|1|1,3|1,7|-|OK(VT_BSTR)|확인|확인|4|4|  
-|시간|5, 6, 7|-|9|확인|6|3, 6|5, 6|-|OK(VT_BSTR)|확인|확인|4|4|  
-|Smalldatetime|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|DateTime|5, 7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK(VT_BSTR)|확인|확인|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|OK(VT_BSTR)|확인|확인|4|4|  
+|날짜|1,7|정상|-|-|1|1,3|1,7|-|OK(VT_BSTR)|정상|확인|4|4|  
+|Time|5, 6, 7|-|9|정상|6|3, 6|5, 6|-|OK(VT_BSTR)|정상|확인|4|4|  
+|Smalldatetime|7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  
+|DateTime|5, 7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  
+|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK(VT_BSTR)|정상|확인|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|정상|5, 7, 11|-|OK(VT_BSTR)|정상|확인|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|해당 없음|  
-|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|확인|2|2|1|1,3|1,7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|확인|6|3, 6|5, 6|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|확인|3|5, 7|-|가능(VT_BSTR)|확인|확인|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|확인|5, 7, 11|-|가능(VT_BSTR)|확인|확인|4|4|  
+|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|정상|3|7|-|7(VT_DATE)|정상|확인|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|정상|2|2|1|1,3|1,7|-|가능(VT_BSTR)|정상|확인|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|정상|6|3, 6|5, 6|-|가능(VT_BSTR)|정상|확인|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|정상|3|5, 7|-|가능(VT_BSTR)|정상|확인|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|정상|5, 7, 11|-|가능(VT_BSTR)|정상|확인|4|4|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
-|확인|변환이 필요 없습니다.|  
+|정상|변환이 필요 없습니다.|  
 |-|변환이 지원되지 않습니다. IAccessor::CreateAccessor가 호출될 때 바인딩의 유효성이 검사되면 *rgStatus*에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |1|시간 필드가 0으로 설정됩니다.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  

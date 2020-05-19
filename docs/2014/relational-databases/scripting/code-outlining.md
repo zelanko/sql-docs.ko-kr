@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], outlining code
 - Query Editor [SQL Server Management Studio], hiding code
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd54eb65c4d4136f9fb37e229b88fbdb660f0e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176803"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704076"
 ---
 # <a name="code-outlining"></a>코드 개요
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 쿼리를 편집할 때 개요 기능을 사용하여 코드를 필요에 따라 숨길 수 있습니다. 이 기능을 사용하면 특히 큰 쿼리 파일에서 작업 중인 코드를 쉽게 볼 수 있습니다.

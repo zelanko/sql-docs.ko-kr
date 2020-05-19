@@ -10,15 +10,15 @@ helpviewer_keywords:
 - schema rowsets [OLE DB]
 - table-valued parameters (OLE DB), schema rowsets changed for (OLE DB)
 ms.assetid: 581e3ead-53db-44da-8718-f3fc4b5108f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff0086d6b8c724ef83575cde387217ad69549d56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b51f1d6b3e8a7a75574e78e24e27b5d9d75df42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213852"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704607"
 ---
 # <a name="schema-rowsets-changed-for-ole-db-table-valued-parameters"></a>OLE DB 테이블 반환 매개 변수에 대해 변경된 스키마 행 집합
   다음은 테이블 반환 매개 변수를 지원하기 위해 변경 또는 추가된 스키마 행 집합입니다.  

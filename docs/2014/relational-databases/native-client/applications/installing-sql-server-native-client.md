@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data access [SQL Server Native Client], installing SQL Server Native Client
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f832c4b55c8a039de440b08e6d2ed3350175e2a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231808"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704426"
 ---
 # <a name="installing-sql-server-native-client"></a>SQL Server Native Client 설치
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0은 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]을(를) 설치할 때 설치됩니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client는 없습니다. 자세한 내용은 [SQL Server Native Client의 새로운 기능](../sql-server-native-client.md)을 참조 하세요. sqlncli.msi는 SQL Server 2012 기능 팩 웹 페이지에서도 제공됩니다. 최신 버전의 SQL Server Native Client을 다운로드 하려면 [Microsoft?? SQL Server?? 2012 SP2 기능 팩](https://www.microsoft.com/download/details.aspx?id=43339) SQL Server 2012 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 컴퓨터에 설치되어 있으면 이전 버전과 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0이 설치됩니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "75231808"
   
  x64 및 Itanium 버전의 sqlncli.msi가 32비트 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 설치합니다. 애플리케이션을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   
- sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 Native Client를 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개발 된 응용 프로그램을 실행할 수 있도록 지 원하는 파일입니다. SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 다음은 그 예입니다.  
+ sqlncli.msi를 호출하면 클라이언트 구성 요소만 기본적으로 설치됩니다. 클라이언트 구성 요소는 Native Client를 사용 하 여 개발 된 응용 프로그램을 실행할 수 있도록 지 원하는 파일입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . SDK 구성 요소도 함께 설치하려면 명령줄에 `ADDLOCAL=All`을 지정하면 됩니다. 다음은 그 예입니다.  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75231808"
  msiexec 명령에 /passive, /qn, /qb, or /qr 옵션을 사용할 경우 IACCEPTSQLNCLILICENSETERMS=YES를 지정하여 최종 사용자 사용권 약관에 동의함을 명시적으로 나타내야 합니다. 이 옵션은 모두 대문자로 지정해야 합니다.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>SQL Server Native Client 제거  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 도구와 같은 응용 프로그램은 native client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 종속 되므로 모든 종속 응용 프로그램이 제거 될 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 때까지 native client를 제거 하지 않는 것이 중요 합니다. 응용 프로그램이 Native Client에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 종속 된다는 경고를 공급자에 게 제공 하려면 다음과 같이 MSI에서 appguid 설치 옵션을 사용 합니다.  
+ 서버 및 도구와 같은 응용 프로그램은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] native client에 종속 되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모든 종속 응용 프로그램이 제거 될 때까지 native client를 제거 하지 않는 것이 중요 합니다. 응용 프로그램이 Native Client에 종속 된다는 경고를 공급자에 게 제공 하려면 다음과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 같이 MSI에서 APPGUID 설치 옵션을 사용 합니다.  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client, ODBC
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 570c0574357d9315f0e6b153f3eeabac79ec673b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca071567d8151c2b620283c0da422e9963c7c01c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63055663"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704289"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client(ODBC)
   ODBC는 관계형 데이터베이스 또는 ISAM(Indexed Sequential Access Method) 데이터베이스의 데이터에 액세스하는 데 사용되는 API(응용 프로그래밍 인터페이스)의 표준 정의입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 통신하는 C 및 C++ 애플리케이션을 작성하기 위한 네이티브 API 중 하나인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 통해 ODBC를 지원합니다.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244939"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703996"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트를 만들고 실행할 수 있습니다. 또한 편집기는 **sqlcmd** 명령을 포함하는 스크립트 실행을 지원합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "75244939"
  **사용 가능한 데이터베이스**  
  같은 서버의 다른 데이터베이스로 연결을 변경합니다.  
   
- **Execute**  
+ **실행할**  
  선택한 코드를 실행하거나, 코드를 선택하지 않은 경우 쿼리 편집기에 있는 모든 코드를 실행합니다.  
   
  **디버그**  
@@ -77,7 +77,7 @@ ms.locfileid: "75244939"
  **쿼리 실행 취소**  
  취소 요청을 서버로 보냅니다. 일부 쿼리는 바로 취소할 수 없으며 적절한 취소 조건이 될 때까지 기다려야 합니다. 트랜잭션을 취소해도 트랜잭션이 롤백되는 동안 작업이 지연될 수 있습니다.  
   
- **Parse**  
+ **구문 분석**  
  선택한 코드의 구문을 확인합니다. 코드를 선택하지 않은 경우 쿼리 편집기 창에 있는 모든 코드의 구문을 확인합니다.  
   
  **예상 실행 계획 표시**  

@@ -12,22 +12,22 @@ helpviewer_keywords:
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a18986af71f652a833f413ee1fa62ca2fd44ba06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215989"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704508"
 ---
 # <a name="isolation-levels-ole-db"></a>격리 수준(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. Native Client OLE DB 공급자 소비자는 트랜잭션 격리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수준을 제어 하기 위해 다음을 사용 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트는 연결에 대한 트랜잭션 격리 수준을 제어할 수 있습니다. Native Client OLE DB 공급자 소비자는 트랜잭션 격리 수준을 제어 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음을 사용 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 기본 자동 커밋 모드의 DBPROPSET_SESSION 속성 DBPROP_SESS_AUTOCOMMITISOLEVELS입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 기본 자동 커밋 모드의 DBPROPSET_SESSION 속성 DBPROP_SESS_AUTOCOMMITISOLEVELS입니다.  
   
-     수준 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 Native Client OLE DB 공급자 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]수준에 대 한 Native Client OLE DB 공급자 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
   
 -   로컬 수동 커밋 트랜잭션에 대한 **ITransactionLocal::StartTransaction** 메서드의 *isoLevel* 매개 변수를 사용합니다.  
   

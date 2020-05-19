@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, executing commands containing
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5c6bbdf0d26002af350293a6526ed46bb71fd3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228563"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704647"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>테이블 반환 매개 변수가 포함된 명령 실행
   테이블 반환 매개 변수가 포함된 명령을 실행하려면 두 단계가 필요합니다.  

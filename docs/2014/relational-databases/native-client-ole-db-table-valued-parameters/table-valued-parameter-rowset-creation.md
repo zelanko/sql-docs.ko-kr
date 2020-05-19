@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046518"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704592"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
   소비자는 테이블 반환 매개 변수에 대해 모든 행 집합 개체를 제공할 수 있지만 일반적으로 행 집합 개체는 백 엔드 데이터 저장소에 대해 구현되므로 성능이 제한되는 경우가 많습니다. 이러한 이유로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 메모리 내 데이터에 대해 특수화된 행 집합 개체를 만들 수 있습니다. 이 특수 한 메모리 내 행 집합 개체는 테이블 반환 매개 변수 행 집합 이라는 새 COM 개체입니다. 이 개체는 매개 변수 집합과 비슷한 기능을 제공합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "63046518"
   
  이 시나리오에서는 공급자가 소비자 대신 서버에서 테이블 반환 매개 변수 행 집합 개체에 대한 유형 정보를 가져옵니다.  
   
- *pTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오의 경우와 마찬가지로 설정해야 합니다. 그런 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
+ *pTableID* 및 *pUnkOuter* 매개 변수는 정적 시나리오의 경우와 마찬가지로 설정해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]그런 다음 Native Client OLE DB 공급자는 서버에서 유형 정보 (열 정보 및 제약 조건)를 가져오고 *ppRowset* 매개 변수를 통해 테이블 반환 매개 변수 행 집합 개체를 반환 합니다. 이 경우 서버와의 통신이 필요하므로 이 작업은 정적 시나리오와 같은 방식으로 수행되지 않습니다. 동적 시나리오는 매개 변수가 있는 프로시저 호출의 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 반환 매개 변수 OLE DB &#40;&#41;](table-valued-parameters-ole-db.md)   

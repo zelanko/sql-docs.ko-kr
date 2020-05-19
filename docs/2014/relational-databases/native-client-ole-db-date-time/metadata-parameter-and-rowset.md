@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655629"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705022"
 ---
 # <a name="parameter-and-rowset-metadata"></a>매개 변수 및 행 집합 메타데이터
   이 항목에서는 향상된 OLE DB 날짜 및 시간 기능과 관련하여 다음과 같은 형식 및 형식 멤버에 대한 정보를 제공합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "62655629"
   
  *bPrecision* 매개 변수는 무시됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 &quot;`datetime`&quot; 및 &quot;`smalldatetime`&quot;을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. 이상 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 서버에 연결 된 경우 "`datetime2`" 형식이 사용 되며, 필요한 경우 유형 이름이 "`datetime2`" 또는 "DBTYPE_DBTIMESTAMP" 인 경우 암시적 서버 변환이 수행 됩니다. *bScale* 공급자별 형식 이름 "`datetime`" 또는 "`smalldatetime`"를 사용 하는 경우에는 눈금이 무시 됩니다. 그렇지 않으면 appications는 *Bscale* 이 올바르게 설정 되었는지 확인 해야 합니다. "DBTYPE_DBTIMESTAMP"를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 하는 MDAC 및 Native Client에서 업그레이드 된 응용 프로그램은 *bscale* 을 올바르게 설정 하지 않은 경우 실패 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 &quot;`datetime`&quot; 및 &quot;`smalldatetime`&quot;을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전의 서버에 연결 된 경우 " `datetime2` " 형식이 사용 되며, 필요한 경우 유형 이름이 " `datetime2` " 또는 "DBTYPE_DBTIMESTAMP" 인 경우 암시적 서버 변환이 수행 됩니다. *bScale* 공급자별 형식 이름 " `datetime` " 또는 ""를 사용 하는 경우에는 눈금이 무시 됩니다 `smalldatetime` . 그렇지 않으면 appications는 *Bscale* 이 올바르게 설정 되었는지 확인 해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"DBTYPE_DBTIMESTAMP"를 사용 하는 MDAC 및 Native Client에서 업그레이드 된 응용 프로그램은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] *bscale* 을 올바르게 설정 하지 않은 경우 실패 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
  ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 공급자는 다음과 같이 IAccessor:: CreateAccessor에 지정 된 바인딩 형식에서 서버 유형을 유추 합니다.  
   

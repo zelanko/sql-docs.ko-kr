@@ -13,18 +13,18 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7af3d096d9e58b1cb75e2d7cab15988183578fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f005b9ab1c3d334242b2a20d47f6e4646d6cef8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704541"
 ---
 # <a name="dropping-a-sql-server-table"></a>SQL Server 테이블 삭제
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **itabledefinition::D roptable** 함수를 노출 합니다. 이를 통해 소비자는 데이터베이스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 테이블을 제거할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **Itabledefinition::D roptable** 함수를 노출 합니다. 이를 통해 소비자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 테이블을 제거할 수 있습니다.  
   
  소비자는 *pTableID* 매개 변수에서 *uName* 공용 구조체의 *pwszName* 멤버에 테이블 이름을 유니코드 문자열로 지정합니다. *pTableID*의 *eKind* 멤버는 DBKIND_NAME이어야 합니다.  
   

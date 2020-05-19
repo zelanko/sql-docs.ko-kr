@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 782b352402e9469fbdb0ce06153d2d80eb9dc84e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013389"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703370"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 대량 로드 소개(SQLXML 4.0)
   XML 대량 로드는 반구조화된 XML 데이터를 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 로드할 수 있게 해주는 독립 실행형 COM 개체입니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "66013389"
 ## <a name="streaming-of-xml-data"></a>XML 데이터 스트리밍  
  원본 XML 문서가 클 수 있으므로 대량 로드 처리를 위해 전체 문서를 메모리로 읽어 오지는 않습니다. 대신 XML 대량 로드에서 XML 데이터를 스트림으로 해석하고 읽습니다. 유틸리티는 데이터를 읽는 동안 데이터베이스 테이블을 식별하고, XML 데이터 원본에서 적절한 레코드를 생성한 다음 삽입을 위해 해당 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다.  
   
- 예를 들어 다음 소스 XML 문서는 ** \<Customer>** 요소와 ** \<Order>** 자식 요소로 구성 됩니다.  
+ 예를 들어 다음 소스 XML 문서는 ** \< Customer>** 요소와 ** \< Order>** 자식 요소로 구성 됩니다.  
   
 ```  
 <Customer ...>  
@@ -56,7 +56,7 @@ ms.locfileid: "66013389"
 ...  
 ```  
   
- XML 대량 로드는 ** \<Customer>** 요소를 읽으므로 customertable에 대 한 레코드를 생성 합니다. /Customer>끝 태그를 읽으면 XML 대량 로드에서 해당 레코드를의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]테이블에 삽입 합니다. ** \<** 마찬가지로 ** \<Order>** 요소를 읽는 경우 XML 대량 로드는 ordertable에 대 한 레코드를 생성 한 다음 ** \</order>** 끝 태그를 읽을 때 해당 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 삽입 합니다.  
+ XML 대량 로드는 ** \< Customer>** 요소를 읽으므로 customertable에 대 한 레코드를 생성 합니다. ** \< /Customer>** 끝 태그를 읽으면 XML 대량 로드에서 해당 레코드를의 테이블에 삽입 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 마찬가지로 ** \< Order>** 요소를 읽는 경우 XML 대량 로드는 ordertable에 대 한 레코드를 생성 한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** \< /order>** 끝 태그를 읽을 때 해당 레코드를 테이블에 삽입 합니다.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>트랜잭션 및 비트랜잭션 XML 대량 로드 작업  
  XML 대량 로드는 트랜잭션 또는 비트랜잭션 모드로 작동할 수 있습니다. 일반적으로 트랜잭션이 아닌 모드에서 대량 로드 하는 경우 (즉, 트랜잭션 속성이 FALSE로 설정 됨) 다음 조건 중 하나가 true 인 경우 성능이 최적화 됩니다.  

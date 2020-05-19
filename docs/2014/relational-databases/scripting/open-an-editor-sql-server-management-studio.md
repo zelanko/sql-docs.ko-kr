@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 443ff4762fe653850af8ba23166bd880298bae52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 092c06c2f790c5f62901fd805dc7fd8d76d3a464
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242025"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703800"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>편집기 열기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리, MDX, DMX 또는 XML/A 편집기를 여는 방법에 대해 설명합니다. 편집기를 열면 각 편집기 창이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]가운데 창에 탭으로 표시됩니다.  

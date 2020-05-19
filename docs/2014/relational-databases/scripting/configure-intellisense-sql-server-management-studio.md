@@ -11,15 +11,15 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6060d6deba748ee800dfae41ab7e8da0e558f91f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d123cad9cbc67930786a54fd257ab82e29af39
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245158"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704009"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense 구성(SQL Server Management Studio)
   대부분의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션은 기본적으로 설정되어 있습니다. IntelliSense 옵션을 해제하고 대신에 메뉴 명령이나 키 입력 조합을 통해 호출할 수 있습니다.  

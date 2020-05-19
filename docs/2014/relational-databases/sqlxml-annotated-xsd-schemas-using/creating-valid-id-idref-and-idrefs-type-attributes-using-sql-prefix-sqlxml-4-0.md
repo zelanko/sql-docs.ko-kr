@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013916"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703626"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix(SQLXML 4.0)를 사용하여 유효한 ID, IDREF 및 IDREFS 유형 특성 만들기
   특성을 ID 유형 특성으로 지정할 수 있습니다. 그런 다음 IDREF 또는 IDREFS로 지정된 특성을 사용하여 ID 유형 특성을 참조하고 문서 간의 링크를 사용할 수 있습니다.  
@@ -52,9 +52,9 @@ ms.locfileid: "66013916"
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 및 IDREFS 유형 지정  
- 다음 스키마에서 ** \<Customer>** 요소는 ** \<Order>** 자식 요소로 구성 됩니다. Order>요소에는 자식 요소인 ** \<orderdetail>** 요소가 있습니다. ** \<**  
+ 다음 스키마에서 ** \< Customer>** 요소는 ** \< Order>** 자식 요소로 구성 됩니다. ** \< Order>** 요소에는 자식 요소인 ** \< orderdetail>** 요소가 있습니다.  
   
- ** \<Customer>** 의 **orderidlist** 특성은 ** \<Order>** 요소의 **OrderID** 특성을 참조 하는 IDREFS 유형 특성입니다.  
+ ** \< Customer>** 의 **orderidlist** 특성은 ** \< Order>** 요소의 **OrderID** 특성을 참조 하는 IDREFS 유형 특성입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

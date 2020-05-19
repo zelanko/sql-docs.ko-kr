@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703931"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
   **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
@@ -150,7 +150,7 @@ ms.locfileid: "75242106"
   
  **일반** - 다음 옵션이 전체 스크립트에 적용됩니다.  
   
--   **ANSI 패딩** -스크립트 `ANSI PADDING ON` 에를 포함 합니다. 기본값은 **True**입니다.  
+-   **ANSI 패딩** - `ANSI PADDING ON` 스크립트에를 포함 합니다. 기본값은 **True**입니다.  
   
 -   **파일에 추가** - **True**이면 **스크립팅 옵션 설정** 페이지에서 지정한 기존 스크립트의 아래쪽에 이 스크립트가 추가되고, **False**이면 새 스크립트가 이전 스크립트를 덮어씁니다. 기본값은 **False**입니다.  
   
@@ -190,7 +190,7 @@ ms.locfileid: "75242106"
   
 -   **통계 스크립팅** - **통계 스크립팅**으로 설정 된 경우이 옵션은 `CREATE STATISTICS` 개체에 대 한 통계를 다시 만드는 문을 포함 합니다. **통계 및 히스토그램 스크립팅** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 스크립팅 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
   
--   **USE DATABASE 스크립팅** -스크립트에 `USE DATABASE` 문을 추가 합니다. 올바른 데이터베이스에서 데이터베이스 개체를 만들려면 `USE DATABASE` 문을 포함해야 합니다. 스크립트가 다른 데이터베이스에서 사용 될 것으로 예상 되는 경우 **False** 를 선택 하 여 `USE DATABASE` 문을 생략 합니다. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
+-   **USE DATABASE 스크립팅** - `USE DATABASE` 스크립트에 문을 추가 합니다. 올바른 데이터베이스에서 데이터베이스 개체를 만들려면 `USE DATABASE` 문을 포함해야 합니다. 스크립트가 다른 데이터베이스에서 사용 될 것으로 예상 되는 경우 **False** 를 선택 하 여 `USE DATABASE` 문을 생략 합니다. 기본값은 **True**입니다. 자세한 내용은 [USE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)를 참조하세요.  
   
 -   **스크립팅할 데이터 형식** - 스크립팅할 항목을 선택합니다. **데이터만**, **스키마만** 또는 둘 다 선택할 수 있습니다. 기본값은 **스키마만**입니다.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "75242106"
   
 7.  **개체 수준 사용 권한 게시** - 데이터베이스에서 선택한 개체에 대한 사용 권한을 포함합니다. 기본값은 **False**입니다.  
   
-8.  **통계 게시** - **통계 게시**로 설정 하면 개체에 대 `CREATE STATISTICS` 한 통계를 다시 만드는 문을 포함 합니다. **통계 및 히스토그램 게시** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 게시 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
+8.  **통계 게시** - **통계 게시**로 설정 하면 `CREATE STATISTICS` 개체에 대 한 통계를 다시 만드는 문을 포함 합니다. **통계 및 히스토그램 게시** 옵션은 히스토그램 정보도 만듭니다. 기본값은 **통계 게시 안 함**입니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)를 참조하세요.  
   
 9. **Vardecimal 옵션 게시** - `vardecimal` 원본 데이터베이스 테이블에서 대상 데이터베이스 테이블을 사용할 수 있는 경우 해당 테이블 형식을 사용 하도록 설정 합니다. 기본값은 **True**입니다.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242106"
   
  **테이블/뷰 옵션** - 다음 옵션은 테이블 또는 뷰에만 적용됩니다.  
   
-1.  **Check 제약 조건 게시** -게시 프로세스에 `CHECK` 제약 조건 만들기를 포함 합니다. 기본값은 **True**입니다. `CHECK` 제약 조건에서는 테이블에 입력한 데이터가 일부 지정된 조건에 맞아야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+1.  **Check 제약 조건 게시** - `CHECK` 게시 프로세스에 제약 조건 만들기를 포함 합니다. 기본값은 **True**입니다. `CHECK` 제약 조건에서는 테이블에 입력한 데이터가 일부 지정된 조건에 맞아야 합니다. 자세한 내용은 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
 2.  **외래 키 게시** - 게시 프로세스에 외래 키 만들기를 포함합니다. 기본값은 **True**입니다. 외래 키는 테이블 간의 관계를 나타내고 적용합니다. 자세한 내용은 [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md)을 참조하세요.  
   

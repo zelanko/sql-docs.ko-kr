@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Native Client, system requirements
 - SQLNCLI, system requirements
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 85b00f00e2c557f31a7343a99e1f2592741a6b59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637792"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704136"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "73637792"
 >  이 소프트웨어를 설치하기 전에 관리자 권한으로 로그온했는지 확인하십시오.  
   
 ## <a name="operating-system-requirements"></a>운영 체제 요구 사항  
- Native Client를 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 목록은 [SQL Server Native Client에 대 한 지원 정책](applications/support-policies-for-sql-server-native-client.md)을 참조 하세요.  
+ Native Client를 지 원하는 운영 체제 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server Native Client에 대 한 지원 정책](applications/support-policies-for-sql-server-native-client.md)을 참조 하세요.  
   
 ## <a name="sql-server-requirements"></a>SQL Server 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 설치되어 있어야 합니다.  
@@ -62,13 +62,13 @@ ms.locfileid: "73637792"
   
  ODBC에는 `DataTypeCompatibility` 컨트롤이 없습니다.  
   
- IDBInfo:: GetKeywords는 항상 연결의 서버 버전에 해당 하는 키워드 목록을 반환 하며에는 영향을 주지 않습니다 `DataTypeCompatibility`.  
+ IDBInfo:: GetKeywords는 항상 연결의 서버 버전에 해당 하는 키워드 목록을 반환 하며에는 영향을 주지 않습니다 `DataTypeCompatibility` .  
   
 |데이터 형식|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 애플리케이션에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|이미지|  
-|varchar(max)|varchar|varchar|Text|  
+|varchar(max)|varchar|varchar|텍스트|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |Xml|Xml|Xml|Ntext|  
 |CLR UDT (> 8Kb)|udt|varbinary|이미지|  

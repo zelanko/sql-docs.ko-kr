@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Find in Files dialog box
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3b3ccbab2d77f92fe9d28ae616939b8fa02ea4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 811247325eb146ba63a478b72729ccfb735dd904
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245172"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703909"
 ---
 # <a name="find-in-files"></a>파일에서 찾기
-  찾기 및 바꾸기 창의 **파일에서 찾기** 탭을 사용하여 지정한 파일에서 문자열이나 식을 검색할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
+   찾기 및 바꾸기 창의 **파일에서 찾기** 탭을 사용하여 지정한 파일에서 문자열이나 식을 검색할 수 있습니다. **결과 옵션**에서 선택한 찾기 결과 창에 일치하는 항목과 수행한 동작이 나열됩니다.  
   
  도구 모음 단추 및 바로 가기 키를 사용하여 **찾기 및 바꾸기** 대화 상자를 열 수도 있습니다.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "75245172"
  **찾는 위치** 드롭다운 목록에서 선택한 옵션에 따라 **파일에서 찾기** 에서 현재 활성화된 파일만 검색할지 아니면 특정 폴더에 저장되어 있는 모든 파일을 검색할지 여부가 결정됩니다. 목록에서 검색 범위를 선택하거나 폴더 경로를 입력하거나 **찾아보기** 단추를 클릭하여 **사용자 지정 디렉터리 집합** 대화 상자를 표시한 다음 검색할 폴더 집합을 선택합니다.  
   
 > [!NOTE]  
->  **찾는 위치** 옵션을 선택하면 소스 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 파일의 버전만 검색합니다.  
+>  **찾는 위치** 옵션을 선택하면 원본 코드 제어에서 체크 아웃한 파일을 검색합니다. 즉, 로컬 컴퓨터로 다운로드한 버전만 검색합니다.  
   
- **Look in**  
+ **찾는 위치**  
  이 목록에서 미리 정의된 검색 범위를 선택하거나 **사용자 지정 디렉터리 집합** 대화 상자를 사용하여 원하는 디렉터리 집합을 입력합니다.  
   
  **현재 문서**  
@@ -80,7 +80,7 @@ ms.locfileid: "75245172"
  **사용**  
  **찾을 내용** 또는 **바꿀 내용** 입력란에 입력한 특수 문자의 해석 방법을 나타냅니다. 옵션에는 **와일드카드** 및 **정규식**이 있습니다.  
   
- **Regular Expressions**  
+ **정규식**  
  특수 표기를 사용하여 일치하는 텍스트의 패턴을 정의합니다. 목록을 보려면 [정규식으로 텍스트 검색](search-text-with-regular-expressions.md)을 참조하세요.  
   
  **와일드카드**  

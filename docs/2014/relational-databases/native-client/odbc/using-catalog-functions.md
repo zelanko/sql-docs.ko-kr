@@ -14,20 +14,20 @@ helpviewer_keywords:
 - catalog functions [ODBC]
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62667381"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704271"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
   모든 데이터베이스에는 데이터베이스에 저장된 데이터를 포함하는 구조가 있습니다. 이 구조의 정의는 데이터 사전이라고도 하는 시스템 테이블의 집합으로 구현된 카탈로그에 사용 권한과 같은 다른 정보와 함께 저장됩니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client odbc 드라이버를 사용 하면 응용 프로그램에서 odbc 카탈로그 함수를 호출 하 여 데이터베이스 구조를 확인할 수 있습니다. 카탈로그 함수는 결과 집합에 정보를 반환하며 카탈로그의 시스템 테이블을 쿼리하는 카탈로그 저장 프로시저를 사용하여 구현됩니다. 예를 들어 애플리케이션은 시스템의 모든 테이블이나 특정 테이블의 모든 열에 대한 정보를 포함하는 결과 집합을 요청할 수 있습니다. 표준 ODBC 카탈로그 함수는 애플리케이션이 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 카탈로그 정보를 가져오는 데 사용됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버를 사용 하면 응용 프로그램에서 odbc 카탈로그 함수를 호출 하 여 데이터베이스 구조를 확인할 수 있습니다. 카탈로그 함수는 결과 집합에 정보를 반환하며 카탈로그의 시스템 테이블을 쿼리하는 카탈로그 저장 프로시저를 사용하여 구현됩니다. 예를 들어 애플리케이션은 시스템의 모든 테이블이나 특정 테이블의 모든 열에 대한 정보를 포함하는 결과 집합을 요청할 수 있습니다. 표준 ODBC 카탈로그 함수는 애플리케이션이 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 카탈로그 정보를 가져오는 데 사용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 단일 쿼리를 통해 여러 다른 유형의 OLE DB 데이터 원본에 있는 데이터에 액세스하는 분산 쿼리를 지원합니다. 원격 OLE DB 데이터 원본에 액세스하는 방법 중 하나는 데이터 원본을 연결된 서버로 정의하는 것입니다. [Sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 사용 하 여이 작업을 수행할 수 있습니다. 연결된 서버를 정의하면 Transact-SQL 문에서 네 부분으로 된 이름을 사용하여 해당 서버의 개체를 참조할 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62667381"
   
      연결된 서버에 포함되어 있는 카탈로그 목록을 반환합니다.  
   
- 연결 된 서버 이름과 카탈로그 이름이 있으면 Native Client ODBC 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] _linked_server_name_의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보 가져오기를 지원 합니다 **.** 다음 ODBC 카탈로그 함수에서 *CatalogName* 에 대 한 _카탈로그_ :  
+ 연결 된 서버 이름과 카탈로그 이름이 있으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 _linked_server_name_의 두 부분으로 된 이름을 사용 하 여 카탈로그에서 정보 가져오기를 지원 합니다 **.** 다음 ODBC 카탈로그 함수에서 *CatalogName* 에 대 한 _카탈로그_ :  
   
 -   **SQLColumnPrivileges**  
   

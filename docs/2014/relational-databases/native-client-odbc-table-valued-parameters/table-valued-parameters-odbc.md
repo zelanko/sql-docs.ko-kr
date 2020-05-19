@@ -10,15 +10,15 @@ helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31ed60f10f12bbc11037a64caa50802360b919de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e22b65aab9b9775889a3a03fe3ba90a84aafc9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467303"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705160"
 ---
 # <a name="table-valued-parameters-odbc"></a>테이블 반환 매개 변수(ODBC)
   ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 애플리케이션에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  

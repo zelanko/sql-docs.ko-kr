@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d152274847abb46ee14a9a878be8bdef5b80b3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63237963"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705057"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB로 작성한 클라이언트 애플리케이션과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "63237963"
 ## <a name="conversions"></a>변환  
  이 항목에서는 클라이언트에서 수행되는 변환에 대해 설명합니다. 클라이언트가 매개 변수에 지정한 소수 자릿수 초의 전체 자릿수가 서버에 정의된 것과 다르면 서버에서 작업을 허용하는 경우에 클라이언트 변환이 실패할 수 있습니다. 특히 클라이언트는 소수 자릿수 초 잘림을 모두 오류로 취급하는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 시간 값을 가장 근사한 정수 초로 반올림합니다.  
   
- ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 DBTYPE_DBTIMESTAMP 바인딩이 인 것 처럼 변환 됩니다 `datetime2`.  
+ ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 DBTYPE_DBTIMESTAMP 바인딩이 인 것 처럼 변환 됩니다 `datetime2` .  
   
 |대상 -><br /><br /> 시작|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  

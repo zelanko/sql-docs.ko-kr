@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], color coding
 - color coding [Query Editor]
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e615a8e316cb5c8e15056eeaa111b5daf1ef5513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 840096c197a2e827281bb0023ad03a6d407f3758
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244949"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704050"
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
   코드 편집기에 입력하는 텍스트에는 범주가 할당되고 각 범주는 색으로 표시됩니다. 색을 통해 코드의 텍스트를 빠르게 찾을 수 있습니다. 예를 들어 주석은 진한 녹색으로 표시됩니다. 다음 표에서는 가장 일반적인 색을 나열합니다. **도구**, **옵션** 메뉴를 사용하여 전체 색 목록과 해당 범주를 볼 수 있으며 사용자 지정 색 구성표를 구성할 수 있습니다. 기본 색을 변경하는 방법은 [Change Font Color, Size, and Style](change-font-color-size-and-style.md)을 참조하십시오.  

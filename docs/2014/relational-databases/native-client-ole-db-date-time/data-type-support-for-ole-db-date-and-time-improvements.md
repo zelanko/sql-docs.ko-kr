@@ -10,15 +10,15 @@ helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54cf3ae9f20f66e3930e6eadc197e09275fceacd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929535"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705079"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식을 지원하는 OLE DB([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 유형에 대한 정보를 제공합니다.  
@@ -173,11 +173,11 @@ enum SQLVARENUM {
 |OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIME2|`time`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIME2|`time`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
- 응용 프로그램에서 *Wtype*에 DBTYPE_DBTIMESTAMP를 지정 하는 경우 *pwszTypeName*에서 형식 `datetime2` 이름을 제공 하 여에 대 한 매핑을 재정의할 수 있습니다. 을 `datetime` 지정 하는 경우 *bscale* 은 3 이어야 합니다. 을 `smalldatetime` 지정 하면 *bscale* 은 0 이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않는 경우 DB_E_BADSCALE 반환 됩니다.  
+ 응용 프로그램에서 *Wtype*에 DBTYPE_DBTIMESTAMP를 지정 하는 경우 `datetime2` *pwszTypeName*에서 형식 이름을 제공 하 여에 대 한 매핑을 재정의할 수 있습니다. `datetime`을 지정 하는 경우 *bscale* 은 3 이어야 합니다. `smalldatetime`을 지정 하면 *bscale* 은 0 이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않는 경우 DB_E_BADSCALE 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  

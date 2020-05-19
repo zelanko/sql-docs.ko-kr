@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (methods)
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2dd4ec6578ee59044157fcdb4fa8d082a297c536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046588"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704639"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>OLE DB 테이블 반환 매개 변수 형식 지원(메서드)
   다음 표준 OLE DB 메서드는 테이블 반환 매개 변수를 지원합니다.  

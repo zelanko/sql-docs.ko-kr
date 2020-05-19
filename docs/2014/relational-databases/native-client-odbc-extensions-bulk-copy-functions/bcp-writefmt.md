@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_writefmt function
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689413"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705285"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   현재 대량 복사 데이터 파일의 서식에 대한 설명이 포함된 서식 파일을 만듭니다.  
@@ -60,7 +60,7 @@ szFormatFile
  저장 된 서식 파일을 로드 하려면 [bcp_readfmt](bcp-readfmt.md)을 사용 합니다.  
   
 > [!NOTE]  
->  **Bcp_writefmt** 에서 생성 된 서식 파일은 버전 7.0 이상으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포 된 **bcp** 유틸리티 버전 에서만 지원 됩니다.  
+>  **Bcp_writefmt** 에서 생성 된 서식 파일은 버전 7.0 이상으로 배포 된 **bcp** 유틸리티 버전 에서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="example"></a>예제  
   

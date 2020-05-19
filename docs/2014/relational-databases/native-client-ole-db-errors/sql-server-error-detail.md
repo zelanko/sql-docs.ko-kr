@@ -14,18 +14,18 @@ helpviewer_keywords:
 - OLE DB error handling, error details
 - ISQLServerErrorInfo interface
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c7535e4579204834fc8024b7c37c46675320b8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156397"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704952"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
-  Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 공급자별 오류 인터페이스 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 공급자별 오류 인터페이스 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  
   
  **ISQLServerErrorInfo** 인터페이스에 액세스하는 두 가지 방법이 있습니다.  
   

@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231707"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704329"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client의 스파스 열 지원
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 스파스 열을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../tables/use-sparse-columns.md) 및 [열 집합 사용](../../tables/use-column-sets.md)을 참조하세요.  
   
- Native Client의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스파스 열 지원에 대 한 자세한 내용은 [스파스 열 지원 &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) 및 [스파스 열 지원 &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md)을 참조 하세요.  
+ Native Client의 스파스 열 지원에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [스파스 열 지원 &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) 및 [스파스 열 지원 &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md)을 참조 하세요.  
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
@@ -42,18 +42,18 @@ ms.locfileid: "75231707"
 |열이 스파스 열인지 여부 확인|SQLColumns 결과 집합 (ODBC)의 SS_IS_SPARSE 열을 참조 하세요.<br /><br /> DBSCHEMA_COLUMNS 스키마 행 집합의 SS_IS_SPARSE 열을 확인합니다(OLE DB).<br /><br /> 이 시나리오는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 릴리스의 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client를 사용하는 애플리케이션에서는 사용할 수 없습니다. 하지만 이러한 애플리케이션은 시스템 뷰를 쿼리할 수 있습니다.|  
 |열이 `column_set`인지 확인|SQLColumns 결과 집합의 SS_IS_COLUMN_SET 열을 참조 하세요. 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열 특성인 SQL_CA_SS_IS_COLUMN_SET을 확인합니다(ODBC).<br /><br /> DBSCHEMA_COLUMNS 스키마 행 집합의 SS_IS_COLUMN_SET 열을 확인합니다. 또는 IColumnsRowset::GetColumnsRowset에서 반환된 행 집합에서 IColumnsinfo::GetColumnInfo 또는 DBCOLUMNFLAGS에 의해 반환된 *dwFlags*를 참조합니다. `column_set` 열의 경우 DBCOLUMNFLAGS_SS_ISCOLUMNSET이 설정됩니다(OLE DB).<br /><br /> 이 시나리오는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 릴리스의 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client를 사용하는 애플리케이션에서는 사용할 수 없습니다. 하지만 이러한 애플리케이션은 시스템 뷰를 쿼리할 수 있습니다.|  
 |`column_set`이 없는 테이블에 대해 BCP를 사용하여 스파스 열 가져오기 및 내보내기|이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 비교해서 동작이 변경되지 않았습니다.|  
-|`column_set`이 있는 테이블에 대해 BCP를 사용하여 스파스 열 가져오기 및 내보내기|는 `column_set` XML과 같은 방식으로 가져오고 내보냅니다. 즉, 이진 형식 `varbinary(max)` 으로 바인딩된 경우 또는 `char` 또는 **wchar** 형식으로 바인딩된 `nvarchar(max)` 경우입니다.<br /><br /> 스파스 `column_set`의 멤버인 열은 별개의 열로 내보내지 않습니다. 이러한 열은 `column_set`의 값으로만 내보냅니다.|  
+|`column_set`이 있는 테이블에 대해 BCP를 사용하여 스파스 열 가져오기 및 내보내기|는 `column_set` XML과 같은 방식으로 가져오거나 내보냅니다. 즉, `varbinary(max)` 이진 형식으로 바인딩된 경우에는로, `nvarchar(max)` `char` 또는 **wchar** 형식으로 바인딩되는 경우로 내보내집니다.<br /><br /> 스파스 `column_set`의 멤버인 열은 별개의 열로 내보내지 않습니다. 이러한 열은 `column_set`의 값으로만 내보냅니다.|  
 |BCP에 대한 `queryout` 동작|명시적으로 명명된 열의 처리 동작에 있어 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 비교해서 변경된 사항이 없습니다.<br /><br /> 스키마가 서로 다른 테이블 간의 가져오기 및 내보내기가 포함된 시나리오의 경우 특수 처리가 필요할 수도 있습니다.<br /><br /> BCP에 대한 자세한 내용은 이 항목의 뒤에 나오는 스파스 열에 대한 BCP(대량 복사) 지원을 참조하십시오.|  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- 하위 수준 클라이언트는 SQLColumns 및 DBSCHMA_COLUMNS에 대해 스파스 `column_set` 의 멤버가 아닌 열에 대 한 메타 데이터만 반환 합니다. Native Client에 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 도입 된 추가 OLE DB 스키마 행 집합은 사용할 수 없으며 SQL_SOPT_SS_NAME_SCOPE를 통해 ODBC의 sqlcolumns를 수정할 수도 없습니다.  
+ 하위 수준 클라이언트는 `column_set` sqlcolumns 및 DBSCHMA_COLUMNS에 대해 스파스의 멤버가 아닌 열에 대 한 메타 데이터만 반환 합니다. Native Client에 도입 된 추가 OLE DB 스키마 행 집합은 사용할 수 없으며 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] SQL_SOPT_SS_NAME_SCOPE를 통해 ODBC의 SQLColumns를 수정할 수도 없습니다.  
   
  하위 수준 클라이언트는 스파스 `column_set`의 멤버인 열에 이름으로 액세스할 수 있습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 클라이언트는 `column_set` 열을 XML 열로 액세스할 수 있습니다.  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>스파스 열에 대한 BCP(대량 복사) 지원  
  스파스 열이나 `column_set` 기능과 관련해서는 ODBC나 OLE DB의 BCP API에 변경된 사항이 없습니다.  
   
- 테이블에 `column_set`이 있으면 스파스 열이 별개의 열로 처리되지 않습니다. 모든 스파스 열의 값은 XML 열과 동일한 방식으로 내보내지는의 `column_set`값에 포함 됩니다. 즉, 이진 형식 `varbinary(max)` 으로 바인딩된 경우로, 또는를 `nvarchar(max)` `char` 또는 **wchar** 형식으로 바인딩된 경우입니다. 가져오는 경우 `column_set` 값은 `column_set`의 스키마를 따라야 합니다.  
+ 테이블에 `column_set`이 있으면 스파스 열이 별개의 열로 처리되지 않습니다. 모든 스파스 열의 값은 `column_set` XML 열과 같은 방식으로, 즉 `varbinary(max)` 이진 형식으로 바인딩된 경우 또는 `nvarchar(max)` `char` 또는 **wchar** 형식으로 바인딩된 경우로 내보내는의 값에 포함 됩니다. 가져오는 경우 `column_set` 값은 `column_set`의 스키마를 따라야 합니다.  
   
  `queryout` 작업의 경우 명시적으로 참조된 열의 처리 방법에는 변경된 사항이 없습니다. `column_set` 열은 XML 열과 동작이 같고 스파스 열인지 여부는 명명된 스파스 열의 처리에 어떠한 영향도 주지 않습니다.  
   

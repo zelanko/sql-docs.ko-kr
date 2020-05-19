@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_collen function
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a66a88a61a581dff262fb8585b5cf32830f8eeed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62718100"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705319"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   현재 대량 복사에 대한 프로그램 변수의 데이터 길이를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 설정합니다.  
@@ -59,7 +59,7 @@ idxServerCol
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- **Bcp_collen** 함수를 사용 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [bcp_sendrow](bcp-sendrow.md)를 사용 하 여 데이터를에 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다.  
+ **Bcp_collen** 함수를 사용 하면 bcp_sendrow를 사용 하 여 데이터를에 복사할 때 특정 열에 대해 프로그램 변수의 데이터 길이를 변경할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [bcp_sendrow](bcp-sendrow.md)  
   
  처음에는 [bcp_bind](bcp-bind.md) 를 호출할 때 데이터 길이가 결정 됩니다. **Bcp_sendrow** 호출 사이에 데이터 길이가 변경 되 고 길이 접두사나 종결자가 사용 되지 않는 경우 **bcp_collen** 를 호출 하 여 길이를 다시 설정할 수 있습니다. **Bcp_sendrow** 에 대 한 다음 호출에서는 **bcp_collen**에 대 한 호출로 설정 된 길이를 사용 합니다.  
   

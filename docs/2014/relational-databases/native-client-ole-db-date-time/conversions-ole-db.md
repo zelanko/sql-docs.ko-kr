@@ -11,15 +11,15 @@ helpviewer_keywords:
 - bindings [OLE DB]
 - OLE DB, bindings and conversions
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638210"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705053"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>바인딩 및 변환(OLE DB)
   이 섹션에서는 `datetime` 값과 `datetimeoffset` 값 사이의 변환 방법에 대해 설명합니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "62638210"
   
 -   `datetime` 및 `datetimeoffset` 문자열의 형식  
   
-     *yyyy*-*mm*mm-*dd*[ *hh*:*mm*:*ss*[.* 9999999*] [?? *hh*:*mm*]]  
+     *yyyy* - *mm* - *dd*[ *hh*:*mm*:*ss*[.* 9999999*] [?? *hh*:*mm*]]  
   
 -   `time` 문자열의 형식  
   

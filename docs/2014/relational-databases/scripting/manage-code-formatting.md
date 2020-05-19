@@ -23,15 +23,15 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e25a5438eb147cfe5e3c7e4df3d3fe504cfcda48
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242016"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703840"
 ---
 # <a name="manage-code-formatting"></a>코드 서식 관리
   편집기를 사용하면 들여쓰기, 숨겨진 텍스트, URL 등으로 코드의 서식을 지정할 수 있습니다. 또한 스마트 들여쓰기를 사용하여 입력 시에 코드의 서식을 자동으로 지정할 수 있습니다.  

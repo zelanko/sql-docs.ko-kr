@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238018"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705036"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>날짜 및 시간 및 스키마 행 집합
   이 항목에서는 COLUMNS 및 PROCEDURE_PARAMETERS 행 집합에 대한 정보를 제공합니다. 이 정보는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 새로 추가된 향상된 OLE DB 날짜 및 시간 기능과 관련이 있습니다.  

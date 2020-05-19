@@ -18,15 +18,15 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 169d65e801aca6ed34735649757b37a3ffe13193
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013607"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703447"
 ---
 # <a name="other-annotations-sqlxml-40"></a>기타 주석(SQLXML 4.0)
   XML 대량 로드는 이 섹션의 이전 항목에서 설명한 주석 외에 다음과 같은 기타 주석도 해석합니다.  

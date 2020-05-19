@@ -15,22 +15,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033563"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704179"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client(OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 데이터 액세스에 사용되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 애플리케이션에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 수 있는 OLE DB 지원을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 OLE DB 버전 2.0 호환 공급자입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63033563"
   
 -   [트랜잭션](../../native-client-ole-db-transactions/transactions.md)  
   
--   [오류](../../native-client-ole-db-errors/errors.md)  
+-   [Errors](../../native-client-ole-db-errors/errors.md)  
   
 -   [클라이언트 연결의 SPN&#40;서비스 사용자 이름&#41;&#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   

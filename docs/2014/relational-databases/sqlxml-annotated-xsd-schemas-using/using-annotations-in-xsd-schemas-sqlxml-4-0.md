@@ -14,15 +14,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7c62357496d0b143fcd8736bc61117d43c6a0fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56a8d0daaa7eb64600c7e3a06f4121c45ce25a23
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013598"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703506"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>XSD 스키마에 주석 사용(SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0의 XSD 스키마 언어는 XDR(XML-Data Reduced) 스키마 언어에 도입된 주석과 비슷한 방식으로 주석을 지원합니다. XSD에는 XDR에서는 지원되지 않은 추가 주석도 도입되었습니다.  

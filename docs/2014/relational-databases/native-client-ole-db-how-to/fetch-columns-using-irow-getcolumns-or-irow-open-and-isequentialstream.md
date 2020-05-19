@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ISequentialStream interface, samples
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467586"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704885"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
   대형 데이터는 `ISequentialStream` 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "62467586"
   
     -   `IRow::Open()`은 행에 대해 `ISequentialStream`을 여는 데 사용할 수 있습니다. DBGUID_STREAM을 지정하여 열에 이진 데이터 스트림이 있음을 나타냅니다. 그런 다음 `IStream` 또는 `ISequentialStream`을 사용하여 열에서 데이터를 읽을 수 있습니다.  
   
-    -   를 `IRow::GetColumns()` 사용 하면 DBCOLUMNACCESS 구조체의 **.pdata** 요소가 스트림 개체를 가리키도록 설정 됩니다.  
+    -   `IRow::GetColumns()`를 사용 하면 DBCOLUMNACCESS 구조체의 **.pdata** 요소가 스트림 개체를 가리키도록 설정 됩니다.  
   
 4.  **ISequentialStream::Read()** 를 반복해서 사용하여 지정된 바이트 수를 소비자 버퍼로 읽습니다.  
   

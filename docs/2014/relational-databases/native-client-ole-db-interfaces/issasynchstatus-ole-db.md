@@ -13,20 +13,20 @@ topic_type:
 helpviewer_keywords:
 - ISSAsynchStatus interface
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aeb6c6c789bfe1ca2af5616fb0a1ef9785700224
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127764"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704834"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus(OLE DB)
   **ISSAsynchStatus** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비동기 작업에 대한 지원을 제공합니다. 이 인터페이스는 선택적 인터페이스이며 핵심 OLE DB 인터페이스인 **IDBAsynchStatus**에서 상속됩니다. **ISSAsynchStatus** 는 **IDBAsynchStatus** 에서 상속된 **Abort**및 **GetStatus** 메서드 이외에도 비동기 작업이 완료되거나 제한 시간이 초과될 때까지 대기하는 데 사용되는 새 메서드를 제공합니다.  
   
-|방법|Description|  
+|메서드|설명|  
 |------------|-----------------|  
 |[ISSAsynchStatus::Abort&#40;OLE DB&#41;](issasynchstatus-abort-ole-db.md)|비동기적으로 실행 중인 작업을 취소합니다.|  
 |[ISSAsynchStatus::GetStatus&#40;OLE DB&#41;](issasynchstatus-getstatus-ole-db.md)|비동기적으로 실행 중인 작업의 상태를 반환합니다.|  

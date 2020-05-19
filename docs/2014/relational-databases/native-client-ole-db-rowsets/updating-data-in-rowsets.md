@@ -14,22 +14,22 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data updates
 - data updates [SQL Server], OLE DB
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f68e4f2be641d6c6aeaf8bbbfcc8cad81ab1a39a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938684"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704714"
 ---
 # <a name="updating-data-in-rowsets"></a>행 집합의 데이터 업데이트
-  소비자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 해당 데이터를 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 수정 가능한 행 집합을 업데이트할 때 Native Client OLE DB 공급자는 데이터를 업데이트 합니다. 수정할 수 있는 행 집합은 소비자가 **IRowsetChange** 또는 **IRowsetUpdate** 인터페이스에 대한 지원을 요청할 때 생성됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소비자가 해당 데이터를 포함 하는 수정 가능한 행 집합을 업데이트할 때 Native Client OLE DB 공급자는 데이터를 업데이트 합니다. 수정할 수 있는 행 집합은 소비자가 **IRowsetChange** 또는 **IRowsetUpdate** 인터페이스에 대한 지원을 요청할 때 생성됩니다.  
   
- 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 수정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합은 커서를 사용 하 여 행 집합을 지원 합니다. 행 집합 속성 DBPROP_LOCKMODE는 커서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시성 제어 동작을 변경하고 업데이트할 수 있는 행 집합의 데이터 무결성 오류 생성과 행 집합 행 인출 동작을 결정합니다.  
+ 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 수정할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있는 행 집합은 커서를 사용 하 여 행 집합을 지원 합니다. 행 집합 속성 DBPROP_LOCKMODE는 커서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동시성 제어 동작을 변경하고 업데이트할 수 있는 행 집합의 데이터 무결성 오류 생성과 행 집합 행 인출 동작을 결정합니다.  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 업데이트 전후에 행 동기화를 지원 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 업데이트 전후에 행 동기화를 지원 합니다.  
   
 > [!NOTE]  
 >  IRowChange::SetColumns를 사용하여 행 개체에 대한 하나 이상의 명명된 열 값을 설정할 수 있습니다.  

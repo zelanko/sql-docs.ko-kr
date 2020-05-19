@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - sql_variant data type
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215958"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705426"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>날짜 및 시간 형식에 대한 sql_variant 지원
   이 항목에서는 `sql_variant` 데이터 형식에서 향상된 날짜 및 시간 기능을 지원하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "63215958"
   
  SQL_SS_TIME2 및 SQL_SS_TIMESTAMPOFFSET 매개 변수의 경우 드라이버에서는 아래 표에 설명된 대로 C 값을 `sql_variant` 값으로 변환합니다. 매개 변수가 SQL_C_BINARY로 바인딩되어 있고 서버 형식이 SQL_SS_VARIANT인 경우에는 애플리케이션에서 SQL_CA_SS_VARIANT_SQL_TYPE을 다른 SQL 형식으로 설정한 경우 외에는 이진 값으로 처리됩니다. 이 경우 SQL_CA_SS_VARIANT_SQL_TYPE이 우선 순위가 높습니다. 즉, SQL_CA_SS_VARIANT_SQL_TYPE이 설정된 경우 C 형식에서 variant SQL 형식을 추론하는 기본 동작이 무시됩니다.  
   
-|C 형식|서버 유형|설명|  
+|C 형식|서버 유형|의견|  
 |------------|-----------------|--------------|  
 |SQL_C_CHAR|varchar|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_WCHAR|nvarcar|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
@@ -48,12 +48,12 @@ ms.locfileid: "63215958"
 |SQL_C_BIT|bit|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_UTINYINT|tinyint|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_BINARY|varbinary|SQL_CA_SS_VARIANT_SQL_TYPE이 설정되지 않습니다.|  
-|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale은 SQL_DESC_PRECISION (의 `SQLBindParameter` *DecimalDigits* 매개 변수)로 설정 됩니다.|  
-|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE= SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale은 SQL_DESC_PRECISION (의 `SQLBindParameter` *DecimalDigits* 매개 변수)로 설정 됩니다.|  
+|SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale은 SQL_DESC_PRECISION (의 *DecimalDigits* 매개 변수)로 설정 됩니다 `SQLBindParameter` .|  
+|SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE= SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale은 SQL_DESC_PRECISION (의 *DecimalDigits* 매개 변수)로 설정 됩니다 `SQLBindParameter` .|  
 |SQL_C_TYPE_DATE|date|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_TYPE_TIME|time(0)|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
-|SQL_C_TYPE_TIMESTAMP|datetime2|Scale은 SQL_DESC_PRECISION (의 `SQLBindParameter` *DecimalDigits* 매개 변수)로 설정 됩니다.|  
-|SQL_C_NUMERIC|decimal|전체 자릿수는 SQL_DESC_PRECISION (의 `SQLBindParameter` *columnsize* 매개 변수)로 설정 됩니다.<br /><br /> 소수 자릿수가 SQL_DESC_SCALE(SQLBindParameter의 *DecimalDigits* 매개 변수)로 설정됩니다.|  
+|SQL_C_TYPE_TIMESTAMP|datetime2|Scale은 SQL_DESC_PRECISION (의 *DecimalDigits* 매개 변수)로 설정 됩니다 `SQLBindParameter` .|  
+|SQL_C_NUMERIC|decimal|전체 자릿수는 SQL_DESC_PRECISION (의 *Columnsize* 매개 변수)로 설정 됩니다 `SQLBindParameter` .<br /><br /> 소수 자릿수가 SQL_DESC_SCALE(SQLBindParameter의 *DecimalDigits* 매개 변수)로 설정됩니다.|  
 |SQL_C_SS_TIME2|time|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
 |SQL_C_SS_TIMESTAMPOFFSET|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE이 무시됩니다.|  
   

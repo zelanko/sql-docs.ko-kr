@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abe342538fd191d2992e852e3cdcb09926725e49
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046538"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704620"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 테이블 반환 매개 변수 형식 지원(속성)
   이 항목에서는 테이블 반환 매개 변수 행 집합 개체와 연관된 OLE DB 속성 및 속성 집합에 대한 정보를 제공합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "63046538"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: 읽기 전용<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 설명: 테이블 반환 매개 변수 행 집합 개체에 책갈피가 허용되지 않습니다.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W: 읽기 전용<br /><br /> Default: VARIANT_FALSE<br /><br /> 설명: 테이블 반환 매개 변수 행 집합 개체에 책갈피가 허용되지 않습니다.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -78,7 +78,7 @@ ms.locfileid: "63046538"
   
 |속성 ID|속성 값|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> 기본값: VARIANT_FALSE<br /><br /> 형식: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
+|SSPROP_COL_COMPUTED|R/W: 읽기/쓰기<br /><br /> Default: VARIANT_FALSE<br /><br /> 유형: VT_BOOL<br /><br /> 설명: VARIANT_TRUE로 설정된 경우 열이 계산 열임을 나타냅니다. VARIANT_FALSE는 열이 계산 열이 아님을 나타냅니다.|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  이러한 속성은 소비자가 ISSCommandWithParameters::GetParameterProperties에 대한 호출에서 테이블 반환 매개 변수 형식 정보를 검색하는 동안 읽혀지고, 소비자가 ISSCommandWithParameters::SetParameterProperties를 통해 테이블 반환 매개 변수에 대한 특정 속성을 설정하는 동안 설정됩니다.  

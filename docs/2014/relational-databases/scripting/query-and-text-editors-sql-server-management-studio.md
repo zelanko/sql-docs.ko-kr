@@ -22,15 +22,15 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd16879f512bf1529bec8dab6679880cd0a6b8dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243334"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703789"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  
@@ -85,7 +85,7 @@ ms.locfileid: "75243334"
 ## <a name="database-engine-query-editor-components"></a>데이터베이스 엔진 쿼리 편집기 구성 요소  
  다음은 데이터베이스 엔진 쿼리 편집기에서만 사용할 수 있는 구성 요소입니다.  
   
- **디버거로**  
+ **디버거**  
  특정 문에서의 코드 실행을 일시 중지할 수 있습니다. 그리고 나서 데이터 및 시스템 정보를 검토하여 코드 오류를 찾을 수 있습니다.  
   
  **오류 목록**  

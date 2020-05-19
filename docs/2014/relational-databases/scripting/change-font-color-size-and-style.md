@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing fonts
 - text fonts [SQL Server Management Studio]
 ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa6753b0e49e898476f4138c5e445ea75918aa17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21e6a4b3a391840a4240a9f20c4b74f697e4aa5f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244994"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704060"
 ---
 # <a name="change-font-color-size-and-style"></a>글꼴 색상, 크기 및 스타일 변경
   편집기뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 다른 위치에서 텍스트가 표시되는 방법을 사용자 지정할 수 있습니다.  

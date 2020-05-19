@@ -12,15 +12,15 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: f005182b-6151-432d-ab22-3bc025742cd3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 594ebdbad3968ba2efe7e255b28379194d2fb77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b91e3dcca3277a9ef1953065d3331682d1a9af7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013467"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703415"
 ---
 # <a name="sqloverflow-field-sqlxml-40"></a>sql:overflow-field(SQLXML 4.0)
   스키마에서 열을 오버플로 열로 식별하여 XML 문서에서 사용되지 않은 데이터를 모두 받을 수 있습니다. 이 열은 `sql:overflow-field` 주석을 사용하여 스키마에 지정합니다. 오버플로 열을 여러 개 지정할 수도 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "66013467"
   
  XML 대량 로드에서는 오버플로 열에 데이터를 저장할 때 `sql:overflow-field`가 정의된 부모 요소의 여는 태그와 닫는 태그도 저장됩니다.  
   
- 예를 들어 다음 스키마는 ** \<고객>** 및 ** \<CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마는 ** \< 고객>** 및 ** \< CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -73,9 +73,9 @@ ms.locfileid: "66013467"
 </xsd:schema>  
 ```  
   
- 스키마에서 ** \<Customer>** 요소는 Cust 테이블에 매핑되고 ** \<Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에서 ** \< Customer>** 요소는 Cust 테이블에 매핑되고 ** \< Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- ** \<Customer>** 와 ** \<Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \<Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
+ ** \< Customer>** 와 ** \< Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \< Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

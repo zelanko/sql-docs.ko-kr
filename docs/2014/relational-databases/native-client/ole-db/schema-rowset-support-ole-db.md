@@ -13,18 +13,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, schema rowsets
 - rowsets [OLE DB], schema
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62625969"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704241"
 ---
 # <a name="schema-rowset-support-ole-db"></a>스키마 행 집합 지원(OLE DB)
-  Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 분산 쿼리를 처리할 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 때 연결 된 서버에서 스키마 정보를 반환 하는 것도 지원 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 분산 쿼리를 처리할 때 연결 된 서버에서 스키마 정보를 반환 하는 것도 지원 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 동의어를 지원하기는 하지만 동의어의 메타데이터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 반환하지 않습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "62625969"
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> -COLUMN_LCID 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br />-COLUMN_COMPFLAGS 데이터 정렬에 대해 지원 되는 비교를 정의 합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br />-COLUMN_SORTID 데이터 정렬의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 정렬 스타일입니다.<br />-COLUMN_TDSCOLLATION 열에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬입니다.<br />-IS_COMPUTED입니다. 열이 계산 열인 경우에는 VARIANT_TRUE이 고, 그렇지 않으면 VARIANT_FALSE입니다.|  
+|DBSCHEMA_COLUMNS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 다음의 추가 열은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 관련됩니다.<br /><br /> -COLUMN_LCID 데이터 정렬의 로캘 ID입니다. COLUMN_LCID는 Windows LCID 값과 같습니다.<br />-COLUMN_COMPFLAGS 데이터 정렬에 대해 지원 되는 비교를 정의 합니다. 데이터 형식은 DBPROB_FINDCOMPAREOPS와 같습니다.<br />-COLUMN_SORTID [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 정렬의 정렬 스타일입니다.<br />-COLUMN_TDSCOLLATION [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열에 대 한 데이터 정렬입니다.<br />-IS_COMPUTED입니다. 열이 계산 열인 경우에는 VARIANT_TRUE이 고, 그렇지 않으면 VARIANT_FALSE입니다.|  
 |DBSCHEMA_FOREIGN_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|제한 사항 1, 2, 3 및 5가 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|모든 제한 사항이 지원됩니다.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

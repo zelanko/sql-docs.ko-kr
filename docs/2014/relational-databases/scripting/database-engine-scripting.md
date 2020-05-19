@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine]
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48f749da0acc21e990954a1198d868c0786d2a72
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244958"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703978"
 ---
 # <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "75244958"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 계층을 파일 시스템 경로와 비슷한 PowerShell 경로로 노출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 클래스를 사용하여 경로의 각 노드에 표현되는 개체를 관리할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 구현하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet 집합. **Invoke-Sqlcmd**는 이러한 cmdlet 중 하나로, 유틸리티를 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 실행 되도록 쿼리 스크립트를 실행 하는 데 사용 됩니다. `sqlcmd`  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령을 구현하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet 집합. **Invoke-Sqlcmd**는 이러한 cmdlet 중 하나로, 유틸리티를 사용 하 여 실행 되도록 쿼리 스크립트를 실행 하는 데 사용 됩니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] `sqlcmd` .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 PowerShell을 실행하기 위한 다음과 같은 기능을 제공합니다.  
   
@@ -47,19 +47,19 @@ ms.locfileid: "75244958"
   
 -   XQuery 언어 문  
   
--   `sqlcmd` 유틸리티의 명령 및 변수  
+-   유틸리티의 명령 및 변수 `sqlcmd`  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리를 작성하는 다음과 같은 세 가지 환경을 제공합니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리를 대화형으로 실행 및 디버깅할 수 있습니다. 하나의 세션에서 여러 문을 코딩 및 디버깅한 다음 모든 문을 하나의 스크립트 파일에 저장할 수 있습니다.  
   
--   `sqlcmd` 명령 프롬프트 유틸리티를 사용 하면 쿼리를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 대화형으로 실행 하 고 기존 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일을 실행할 수도 있습니다.  
+-   `sqlcmd`명령 프롬프트 유틸리티를 사용 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리를 대화형으로 실행 하 고 기존 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일을 실행할 수도 있습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트 파일은 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 대화형으로 코딩됩니다. 이 파일은 나중에 다음 환경 중 하나에서 열 수 있습니다.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **파일**/**열기** 메뉴를 사용하여 새 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 파일을 열 수 있습니다.  
   
--   유틸리티를 사용 하 여 파일을 실행 하려면 **-i**input_file 매개 변수를 사용 합니다._input_file_ `sqlcmd`  
+-   유틸리티를 사용 하 여 파일을 실행 하려면 **-i**_input_file_ 매개 변수를 사용 `sqlcmd` 합니다.  
   
 -   **-QueryFromFile** 매개 변수를 사용하여 **PowerShell 스크립트에서** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet으로 파일을 실행할 수 있습니다.  
   

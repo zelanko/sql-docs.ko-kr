@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 843bd1c4213b6cb50c843b846cd9f5d95529b4b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9dd0dc621b0d799398098cea6fb614d5021e6016
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243700"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703747"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  

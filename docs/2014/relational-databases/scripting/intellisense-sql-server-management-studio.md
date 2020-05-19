@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a3d31af206653ee5dbbaaf1e1b54b8c05d79027
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ddfb8c7f0db110f2129aeb0e216904d1b507eda
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242074"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703857"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 편집기는 입력을 축소하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 옵션을 지원하거나, 구문 정보에 대한 빠른 액세스를 제공하거나, 복잡한 식의 구분 기호를 쉽게 볼 수 있습니다.  

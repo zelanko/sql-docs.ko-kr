@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint filter
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a9759134504c7b55f5008783a2e6c3bd9ebf1755
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42e068120e3eae54580d58e0f4d525ab5451d864
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243216"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703720"
 ---
 # <a name="specify-a-breakpoint-filter"></a>중단점 필터 지정
   중단점 필터는 중단점이 지정된 컴퓨터, 운영 체제 프로세스 및 스레드에서만 작동하도록 제한합니다. 중단점 필터는 일반적으로 병렬 애플리케이션을 디버깅할 때 사용됩니다.  

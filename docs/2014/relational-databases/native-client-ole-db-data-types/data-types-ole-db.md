@@ -12,18 +12,18 @@ helpviewer_keywords:
 - data types [OLE DB]
 - OLE DB, data types
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062144"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705110"
 ---
 # <a name="data-types-ole-db"></a>데이터 형식(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자 [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용 하 여 문을 실행 하 고 결과를 처리 하려면 행 집합의 매개 변수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 열을 바인딩할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **itabledefinition** 인터페이스를 사용 하 여에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]테이블을 만들 때 native client OLE DB 공급자가 데이터 형식을 OLE DB 데이터 형식에 매핑하는 방법을 알아야 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]Native client OLE DB 공급자를 사용 하 여 문을 실행 하 고 결과를 처리 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 집합의 매개 변수 또는 열을 바인딩할 때 및 **itabledefinition** 인터페이스를 사용 하 여에 테이블을 만들 때 native client OLE DB 공급자가 데이터 형식을 OLE DB 데이터 형식에 매핑하는 방법을 알아야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

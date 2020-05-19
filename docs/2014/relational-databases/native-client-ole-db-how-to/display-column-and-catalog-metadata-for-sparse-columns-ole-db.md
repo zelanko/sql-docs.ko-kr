@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1259ef4b320e097998f2a631367b2e52e7c789e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874564"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704915"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>열 및 스파스 열의 카탈로그 메타데이터 표시(OLE DB)
   이 예제에서는 세 개의 열(스파스 열, 스파스 열이 아닌 열, 열 집합 열)이 포함된 테이블을 만듭니다. 그런 다음 열 및 스파스가 아닌 열과 열 집합 열의 카탈로그 메타데이터를 보여 주는 OLE DB 플래그를 표시합니다.  

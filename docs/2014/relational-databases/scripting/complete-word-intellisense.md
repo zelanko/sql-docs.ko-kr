@@ -12,15 +12,15 @@ helpviewer_keywords:
 - text completion [IntelliSense]
 - Complete Word option [IntelliSense]
 ms.assetid: ee9c43a6-aae9-4cfa-b18e-1da9266fabcd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e9606d85d18418df94501a91ddfb888915302788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f321d8c048697652055723773c0a9868c5a29b1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244922"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704019"
 ---
 # <a name="complete-word-intellisense"></a>단어 자동 완성(IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 단어 자동 완성 옵션은 용어를 고유하게 식별할 수 있을 정도의 문자가 입력된 경우 변수, 명령 또는 함수 이름의 나머지를 입력하는 기능입니다.  

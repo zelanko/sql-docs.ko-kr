@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144313"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704281"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>큰 CLR 사용자 정의 형식(ODBC)
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server Native Client의 ODBC 변경 내용에 대해 설명합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "63144313"
   
 |SQL 데이터 형식|메모리 레이아웃|C 데이터 형식|값(sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (부호 없는 \*문자)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (부호 없는 문자 \* )|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>매개 변수의 설명자 필드  
  IPD 필드에 반환되는 정보는 다음과 같습니다.  
@@ -130,7 +130,7 @@ ms.locfileid: "63144313"
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|되지|  
-|SQL_C_BINARY|지원 여부|  
+|SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
  \*이진 데이터가 16 진수 문자열로 변환 됩니다.  
@@ -140,7 +140,7 @@ ms.locfileid: "63144313"
 |변환 원본 및 대상|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|되지|  
-|SQL_C_BINARY|지원 여부|  
+|SQL_C_BINARY|지원됨|  
 |SQL_C_CHAR|되지|  
   
  \*16 진수 문자열에서 이진 데이터로의 변환이 발생 합니다.  
@@ -210,7 +210,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  UDT에 대해 반환되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|유형|하위 유형|길이|자릿수|확장|  
+|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +230,7 @@ ms.locfileid: "63144313"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT에 허용되는 값은 다음과 같습니다.  
   
-|SQL 데이터 형식|유형|하위 유형|길이|자릿수|확장|  
+|SQL 데이터 형식|형식|하위 유형|길이|전체 자릿수|확장|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (8,000바이트 이하 길이)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (8,000바이트를 초과하는 길이)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

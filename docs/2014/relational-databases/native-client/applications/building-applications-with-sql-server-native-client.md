@@ -12,15 +12,15 @@ helpviewer_keywords:
 - applications [SQL Server Native Client]
 - SQL Server Native Client, building applications
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175419"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704458"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client를 사용하여 애플리케이션 빌드
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 라이브러리를 사용하는 애플리케이션을 개발할 때 발생하는 많은 문제가 있습니다. 이 섹션의 항목에서는 MDAC에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client로의 업그레이드, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 헤더 및 라이브러리 파일, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 사용할 수 있는 다양한 연결 문자열 개요를 비롯하여 이러한 많은 문제를 설명합니다.  

@@ -15,31 +15,31 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63213504"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704496"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 **ITransactionJoin:: JoinTransaction** 메서드를 사용 하 여 MS DTC (Microsoft DTC(Distributed Transaction Coordinator))에서 조정 하는 분산 트랜잭션에 참여할 수 있습니다.  
   
- MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. Native Client OLE DB 공급자 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션을 시작 하기 위해 MS DTC **ITransactionDispenser** 인터페이스를 사용 합니다. **ITransactionDispenser**의 **BeginTransaction** 멤버는 분산 트랜잭션 개체에 대한 참조를 반환합니다. 이 참조는 **JoinTransaction**을 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 Native Client OLE DB 공급자로 전달 됩니다.  
+ MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 트랜잭션을 시작 하기 위해 MS DTC **ITransactionDispenser** 인터페이스를 사용 합니다. **ITransactionDispenser**의 **BeginTransaction** 멤버는 분산 트랜잭션 개체에 대한 참조를 반환합니다. 이 참조는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **JoinTransaction**을 사용 하 여 Native Client OLE DB 공급자로 전달 됩니다.  
   
  MS DTC는 분산 트랜잭션에 대해 비동기 커밋 및 중단을 지원합니다. 비동기 트랜잭션 상태에 대한 알림을 제공하려면 소비자는 **ITransactionOutcomeEvents** 인터페이스를 구현하고 이 인터페이스를 MS DTC 트랜잭션 개체에 연결합니다.  
   
- 분산 트랜잭션의 경우 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 공급자는 다음과 같이 **ITransactionJoin:: JoinTransaction** 매개 변수를 구현 합니다.  
+ 분산 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransactionJoin:: JoinTransaction** 매개 변수를 구현 합니다.  
   
 |매개 변수|설명|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 트랜잭션 개체에 대한 포인터입니다.|  
-|*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 무시 합니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  
-|*IsoFlags*|0이어야 합니다. 소비자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다른 값을 지정 하는 경우 Native Client OLE DB 공급자는 XACT_E_NOISORETAIN를 반환 합니다.|  
-|*POtherOptions*|NULL이 아닌 경우 Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 인터페이스에서 options 개체를 요청 합니다. 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 *ultimeout* 멤버가 0이 아니면 Native Client OLE DB 공급자가 XACT_E_NOTIMEOUT을 반환 합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 *szdescription* 멤버의 값을 무시 합니다.|  
+|*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 무시 합니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  
+|*IsoFlags*|0이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]소비자가 다른 값을 지정 하는 경우 Native Client OLE DB 공급자는 XACT_E_NOISORETAIN를 반환 합니다.|  
+|*POtherOptions*|NULL이 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 인터페이스에서 options 개체를 요청 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]옵션 개체의 *ultimeout* 멤버가 0이 아니면 Native Client OLE DB 공급자가 XACT_E_NOTIMEOUT을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 *szdescription* 멤버의 값을 무시 합니다.|  
   
  이 예에서는 MS DTC를 사용하여 트랜잭션을 관리합니다.  
   

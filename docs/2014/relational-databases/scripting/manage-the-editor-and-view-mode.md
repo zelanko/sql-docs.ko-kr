@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying line numbers
 - view modes [SQL Server Management Studio]
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfb1749eee9ea18049ed28b6fb66e14a98d152b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242040"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703834"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>편집기 및 보기 모드 관리
   편집기에서 여러 가지 방법으로 코드 보기를 제어할 수 있습니다.  
