@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], C to SQL
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207013"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705490"
 ---
 # <a name="conversions-from-c-to-sql"></a>C에서 SQL로의 변환
-  이 항목에서는 C 형식을 날짜/시간 형식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변환할 때 고려해 야 할 문제에 대해 설명 합니다.  
+  이 항목에서는 C 형식을 날짜/시간 형식으로 변환할 때 고려해 야 할 문제에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  다음 표에서 설명하는 변환은 클라이언트에서 수행되는 변환에 해당합니다. 클라이언트가 매개 변수에 대해 소수 자릿수 초의 전체 자릿수를 서버에 정의된 것과 다르게 지정하는 경우 클라이언트 변환이 성공하더라도 서버는 `SQLExecute` 또는 `SQLExecuteDirect`가 호출될 때 오류를 반환합니다. 특히 ODBC는 모든 소수 자릿수 초 잘림을 오류로 처리하는 반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 반올림 동작을 수행합니다. 예를 들어 `datetime2(6)`를 `datetime2(2)`로 변환하는 경우 반올림이 수행됩니다. datetime 열 값은 1/300초로 반올림되며 smalldatetime 열은 서버에 의해 0초로 설정됩니다.  
   

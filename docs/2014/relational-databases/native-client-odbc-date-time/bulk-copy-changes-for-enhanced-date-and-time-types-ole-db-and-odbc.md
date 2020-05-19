@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207108"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705534"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>향상된 날짜 및 시간 형식에 대한 대량 복사 변경 사항(OLE DB 및 ODBC)
   이 항목에서는 대량 복사 기능을 지원하기 위한 날짜/시간 개선 사항에 대해 설명합니다. 이 항목의 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 OLE DB 및 ODBC 둘 모두에 적용됩니다.  
@@ -26,12 +26,12 @@ ms.locfileid: "63207108"
 ## <a name="format-files"></a>서식 파일  
  서식 파일을 대화형으로 빌드할 경우 다음 표에서는 날짜/시간 형식을 지정하는 데 사용되는 입력 및 해당되는 호스트 파일 데이터 형식 이름을 보여 줍니다.  
   
-|파일 스토리지 유형|호스트 파일 데이터 형식|프롬프트에 대 한 응답: "필드의 파일 저장 유형 입력 <field_name> [\<기본>]:"|  
+|파일 스토리지 유형|호스트 파일 데이터 형식|프롬프트에 대 한 응답: "필드의 파일 저장 유형 입력 <field_name> [ \< 기본>]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DateTime|SQLDATETIME|일|  
 |Smalldatetime|SQLDATETIM4|D|  
 |날짜|SQLDATE|de|  
-|시간|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63207108"
 ## <a name="character-data-files"></a>문자 데이터 파일  
  문자 데이터 파일에서 날짜 및 시간 값은 odbc의 [Odbc 날짜 및 시간 향상을 위한 데이터 형식 지원](data-type-support-for-odbc-date-and-time-improvements.md) 의 "데이터 형식: 문자열 및 리터럴" 섹션 또는 OLE DB에 대 한 [OLE DB 날짜 및 시간 향상을 위한 데이터 형식 지원](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) 에 설명 된 대로 표시 됩니다.  
   
- 네이티브 데이터 파일의 경우 네 가지 새로운 형식의 날짜 및 시간 값은 해당되는 TDS 표현으로 표시되며 최대 소수 자릿수는 7입니다. 소수 자릿수가 7인 이유는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지원되는 최대 값이 7이고 bcp 데이터 파일에는 이러한 열의 소수 자릿수가 저장되지 않기 때문입니다. 기존 `datetime` 및 `smalldatetime` 형식 또는 해당 tds (tabular data stream) 표현의 저장소는 변경 되지 않습니다.  
+ 네이티브 데이터 파일의 경우 네 가지 새로운 형식의 날짜 및 시간 값은 해당되는 TDS 표현으로 표시되며 최대 소수 자릿수는 7입니다. 소수 자릿수가 7인 이유는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 지원되는 최대 값이 7이고 bcp 데이터 파일에는 이러한 열의 소수 자릿수가 저장되지 않기 때문입니다. 기존 `datetime` 및 `smalldatetime` 형식 또는 해당 TDS (tabular data stream) 표현의 저장소는 변경 되지 않습니다.  
   
  OLE DB의 경우 파일 스토리지 유형에 따른 스토리지 크기는 다음과 같습니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63207108"
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |날짜|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|시간|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63207108"
 |대상 --><br /><br /> 시작|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |날짜|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|시간|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|해당 없음|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10(ODBC)1,12(OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  

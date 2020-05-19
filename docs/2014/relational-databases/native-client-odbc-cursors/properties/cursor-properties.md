@@ -12,15 +12,15 @@ helpviewer_keywords:
 - ODBC applications, cursors
 - ODBC cursors, cursor behaviors
 ms.assetid: e70960e1-2085-46ed-9d55-aeb8c3532c84
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66a4fe9d231ea4d2a2231bdde65267a9cd47e4af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705577"
 ---
 # <a name="cursor-properties"></a>커서 속성
   커서의 전체적인 특성은 ODBC 스타일 커서 형식이나 SQL-92/ISO 커서 동작을 설정하는 방법으로 결정됩니다. 다음 항목에서는 커서 동작에 영향을 미치는 추가적인 문과 연결 특성에 대해 설명합니다.  

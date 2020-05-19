@@ -12,18 +12,18 @@ helpviewer_keywords:
 - cursors [ODBC], fast forward-only
 - ODBC cursors, fast forward-only
 ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: df3cea50a8800cdca7fe0a5c846bc32556299e0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 812419f7ebf9501ab2409876c4cc5c0a775492b9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209790"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705619"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>빠른 정방향 전용 커서(ODBC)
-  의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결 된 경우 NATIVE Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 드라이버는 앞 으로만 이동 가능한 읽기 전용 커서에 대해 성능 최적화를 지원 합니다. 빠른 정방향 전용 커서는 기본 결과 집합과 매우 유사한 방식으로 드라이버 및 서버에서 내부적으로 구현됩니다. 정방향 전용 커서는 높은 성능 외에도 다음과 같은 특성이 있습니다.  
+  의 인스턴스에 연결 된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 앞 으로만 이동 가능한 읽기 전용 커서에 대해 성능 최적화를 지원 합니다. 빠른 정방향 전용 커서는 기본 결과 집합과 매우 유사한 방식으로 드라이버 및 서버에서 내부적으로 구현됩니다. 정방향 전용 커서는 높은 성능 외에도 다음과 같은 특성이 있습니다.  
   
 -   [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) 는 지원 되지 않습니다. 결과 집합 열은 프로그램 변수에 바인딩되어야 합니다.  
   

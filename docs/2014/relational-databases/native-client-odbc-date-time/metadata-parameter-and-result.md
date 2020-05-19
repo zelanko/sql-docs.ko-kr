@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032332"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705440"
 ---
 # <a name="parameter-and-result-metadata"></a>매개 변수 및 결과 메타데이터
   이 항목에서는 날짜 및 시간 데이터 형식에 대해 IPD(구현 매개 변수 설명자) 및 IRD(구현 행 설명자) 필드에서 반환되는 내용에 대해 설명합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "63032332"
 ## <a name="information-returned-in-ipd-fields"></a>IPD 필드에서 반환되는 정보  
  다음은 IPD 필드에서 반환되는 정보입니다.  
   
-|매개 변수 형식|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
+|매개 변수 유형|date|time|smalldatetime|Datetime|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -66,7 +66,7 @@ ms.locfileid: "63032332"
   
  SQLSetDescField를 호출 하 여 SQL_CA_SS_SERVER_TYPE를 설정 하는 경우 해당 값은 SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME 또는 SQL_SS_TYPE_DATETIME 이어야 합니다. 그렇지 않으면 SQL_ERROR가 반환되고 SQLState HY092 및 "잘못된 특성/옵션 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
   
- SQL_CA_SS_SERVER_TYPE 특성은 `datetime` 및 `smalldatetime`에서 지원되지만 `datetime2`에서는 지원되지 않는 기능에 종속된 애플리케이션에서 사용할 수 있습니다. 예를 들어 `datetime2` , 및 **datediif** 함수를 사용 `dateadd` 해야 하는 반면 `datetime` 및 `smalldatetime` 는 산술 연산자를 허용 합니다. 이 속성은 대부분의 애플리케이션에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
+ SQL_CA_SS_SERVER_TYPE 특성은 `datetime` 및 `smalldatetime`에서 지원되지만 `datetime2`에서는 지원되지 않는 기능에 종속된 애플리케이션에서 사용할 수 있습니다. 예를 들어, 및 `datetime2` `dateadd` **datediif** 함수를 사용 해야 하는 반면 `datetime` 및는 `smalldatetime` 산술 연산자를 허용 합니다. 이 속성은 대부분의 애플리케이션에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD 필드에서 반환되는 정보  
  다음은 IRD 필드에서 반환되는 정보입니다.  

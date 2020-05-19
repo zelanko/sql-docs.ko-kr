@@ -13,15 +13,15 @@ helpviewer_keywords:
 - cursors [ODBC]
 - ODBC cursors
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 190efb4a3c5343eab9f8654009a4a7b3c6d2a6f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206824"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705538"
 ---
 # <a name="using-cursors-odbc"></a>커서 사용(ODBC)
   ODBC는 다음을 허용하는 커서 모델을 지원합니다.  

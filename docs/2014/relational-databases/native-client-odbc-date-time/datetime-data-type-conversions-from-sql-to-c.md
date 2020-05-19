@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - conversions [ODBC], SQL to C
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd19cb92f2d2f333954adeb97229feb718c4b592
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ef4d3f57f70641b738b21f86d55021e14606d57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207039"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705478"
 ---
 # <a name="conversions-from-sql-to-c"></a>SQL에서 C로 변환
   다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 형식을 C 형식으로 변환할 때 고려할 문제를 설명합니다.  
@@ -29,16 +29,16 @@ ms.locfileid: "63207039"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
 |SQL_WCHAR|2, 3, 4, 5|2, 3, 6, 7, 8|2, 3, 9, 10, 11|2, 3, 6, 7|2, 3, 9, 10, 11|1|1|1|  
-|SQL_TYPE_DATE|확인|12|13|12|13, 23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|확인|10, 23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7, 8|확인|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|확인|21|16|16|  
+|SQL_TYPE_DATE|정상|12|13|12|13, 23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|정상|10, 23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7, 8|정상|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18, 22|7, 8, 20|20|7, 20|정상|21|16|16|  
   
 ## <a name="key-to-symbols"></a>기호 설명  
   
 |기호|의미|  
 |------------|-------------|  
-|확인|변환 문제가 발생하지 않습니다.|  
+|정상|변환 문제가 발생하지 않습니다.|  
 |1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 규칙이 적용됩니다.|  
 |2|선행 공백과 후행 공백이 무시됩니다.|  
 |3|문자열이 날짜, 시간, 표준 시간대 또는 표준 시간대 오프셋으로 구문 분석되고 소수 자릿수 초에 대해 9자리까지 허용합니다. 표준 시간대 오프셋이 구문 분석되는 경우 시간이 클라이언트 표준 시간대로 변환됩니다. 이 변환 중에 오류가 발생 하면 SQLSTATE 22018 및 "Datetime 필드 오버플로" 라는 메시지가 포함 된 진단 레코드가 생성 됩니다.|  
