@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ea8094778c8ccb204712536f01b13152c89c7a1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688666"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701901"
 ---
 # <a name="bcp_readfmt"></a>bcp_readfmt
   지정한 형식 파일에서 데이터 파일 형식 정의를 읽어 옵니다.  
@@ -55,11 +55,11 @@ szFormatFile
 ## <a name="remarks"></a>설명  
  는 `bcp_readfmt` 형식 값을 읽은 후 [bcp_columns](bcp-columns.md) 및 [bcp_colfmt](bcp-colfmt.md)에 대 한 적절 한 호출을 수행 합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
   
- 형식 파일을 저장하려면 [bcp_writefmt](bcp-writefmt.md)를 호출합니다. 에 대 `bcp_readfmt` 한 호출은 저장 된 형식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)를 참조하십시오.  
+ 형식 파일을 저장하려면 [bcp_writefmt](bcp-writefmt.md)를 호출합니다. 에 대 한 호출은 `bcp_readfmt` 저장 된 형식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](bcp-init.md)를 참조하십시오.  
   
- 또는**bcp**(대량 복사 유틸리티)는에서 `bcp_readfmt`참조할 수 있는 파일에 사용자 정의 데이터 형식을 저장할 수 있습니다. **Bcp 유틸리티와** **bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
+ 또는**bcp**(대량 복사 유틸리티)는에서 참조할 수 있는 파일에 사용자 정의 데이터 형식을 저장할 수 있습니다 `bcp_readfmt` . **Bcp 유틸리티와** **bcp** 데이터 형식 파일의 구조에 대 한 자세한 내용은 [데이터 대량 가져오기 및 내보내기 &#40;SQL Server&#41;](../import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
   
- Bcp_control `BCPDELAYREADFMT` *eoption* 매개 변수의 값은 bcp_readfmt [bcp_control](bcp-control.md) 동작을 수정 합니다.  
+ `BCPDELAYREADFMT` [Bcp_control](bcp-control.md) *eoption* 매개 변수의 값은 bcp_readfmt 동작을 수정 합니다.  
   
 > [!NOTE]  
 >  형식 파일은 **bcp** 유틸리티 4.2 이상 버전에서 생성된 파일이어야 합니다.  

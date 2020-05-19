@@ -28,15 +28,15 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013288"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703344"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 대량 로드 개체 모델(SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 대량 로드 개체 모델은 SQLXMLBulkLoad 개체로 구성 됩니다. 이 개체는 다음 메서드 및 속성을 지원합니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "66013288"
  SchemaGen  
  대량 로드 작업을 수행하기 전에 필요한 테이블을 만들지 여부를 지정합니다. 이 속성은 부울 속성입니다. 이 속성이 TRUE로 설정된 경우 매핑 스키마에 식별된 테이블이 생성됩니다. 이 경우 데이터베이스가 있어야 합니다. 하나 이상의 테이블이 데이터베이스에 이미 있는 경우 SGDropTables 속성은 이러한 기존 테이블을 삭제 하 고 다시 만들지 여부를 결정 합니다.  
   
- SchemaGen 속성의 기본값은 FALSE입니다. SchemaGen은 새로 만든 테이블에 PRIMARY KEY 제약 조건을 만들지 않습니다. 그러나 SchemaGen은 매핑 스키마에서 일치 `sql:relationship` 하는 및 `sql:key-fields` 주석을 찾을 수 있고 키 필드가 단일 열로 구성 된 경우 데이터베이스에서 FOREIGN KEY 제약 조건을 만듭니다.  
+ SchemaGen 속성의 기본값은 FALSE입니다. SchemaGen은 새로 만든 테이블에 PRIMARY KEY 제약 조건을 만들지 않습니다. 그러나 SchemaGen은 `sql:relationship` 매핑 스키마에서 일치 하는 및 주석을 찾을 수 `sql:key-fields` 있고 키 필드가 단일 열로 구성 된 경우 데이터베이스에서 FOREIGN KEY 제약 조건을 만듭니다.  
   
  SchemaGen 속성을 TRUE로 설정 하면 XML 대량 로드에서 다음을 수행 합니다.  
   
@@ -132,12 +132,12 @@ ms.locfileid: "66013288"
  기본값은 FALSE입니다.  
   
  SGUseID  
- 매핑 스키마에서 `id` 유형으로 식별된 특성을 테이블 생성 시 PRIMARY KEY 제약 조건을 만드는 데 사용할 수 있는지 여부를 지정합니다. SchemaGen 속성이 TRUE로 설정 된 경우이 속성을 사용 합니다. SGUseID가 TRUE 이면 SchemaGen 유틸리티는 기본 키 열로 지정 된 `dt:type="id"` 특성을 사용 하 고 테이블을 만들 때 적절 한 primary key 제약 조건을 추가 합니다.  
+ 매핑 스키마에서 `id` 유형으로 식별된 특성을 테이블 생성 시 PRIMARY KEY 제약 조건을 만드는 데 사용할 수 있는지 여부를 지정합니다. SchemaGen 속성이 TRUE로 설정 된 경우이 속성을 사용 합니다. SGUseID가 TRUE 이면 SchemaGen 유틸리티는 `dt:type="id"` 기본 키 열로 지정 된 특성을 사용 하 고 테이블을 만들 때 적절 한 PRIMARY key 제약 조건을 추가 합니다.  
   
  기본값은 FALSE입니다.  
   
  TempFilePath  
- XML 대량 로드에서 트랜잭션된 대량 로드에 사용할 임시 파일을 만들 파일 경로를 지정합니다. 이 속성은 Transaction 속성이 TRUE로 설정 된 경우에만 유용 합니다. XML 대량 로드에 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 되는 계정에이 경로에 대 한 액세스 권한이 있는지 확인 해야 합니다. 이 속성이 설정되지 않은 경우 XML 대량 로드에서는 임시 파일을 TEMP 환경 변수에 지정된 위치에 저장합니다.  
+ XML 대량 로드에서 트랜잭션된 대량 로드에 사용할 임시 파일을 만들 파일 경로를 지정합니다. 이 속성은 Transaction 속성이 TRUE로 설정 된 경우에만 유용 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]XML 대량 로드에 사용 되는 계정에이 경로에 대 한 액세스 권한이 있는지 확인 해야 합니다. 이 속성이 설정되지 않은 경우 XML 대량 로드에서는 임시 파일을 TEMP 환경 변수에 지정된 위치에 저장합니다.  
   
  트랜잭션  
  대량 로드를 트랜잭션으로 수행할지 여부를 지정합니다. 트랜잭션으로 수행하면 대량 로드가 실패할 경우 롤백이 수행됩니다. 이 속성은 부울 속성입니다. 이 속성이 TRUE로 설정된 경우 대량 로드가 트랜잭션 컨텍스트에서 수행됩니다. TempFilePath 속성은 Transaction이 TRUE로 설정 된 경우에만 유용 합니다.  

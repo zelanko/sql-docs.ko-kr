@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232424"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702318"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
   이 항목에서는 애플리케이션에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET을 사용하여 xml 유형의 열에서 XML 처리  
- ADO.NET 및를 `xml` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 사용 하 여 데이터 형식 열에서 XML을 처리 하려면 `SqlCommand` 클래스의 표준 동작을 사용할 수 있습니다. 예를 들어 `xml` 데이터 형식 열과 해당 값은 `SqlDataReader`를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 `xml` 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 `XmlReader` 유형에 할당해야 합니다.  
+ `xml`ADO.NET 및를 사용 하 여 데이터 형식 열에서 XML을 처리 하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 클래스의 표준 동작을 사용할 수 있습니다 `SqlCommand` . 예를 들어 `xml` 데이터 형식 열과 해당 값은 `SqlDataReader`를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 `xml` 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 `XmlReader` 유형에 할당해야 합니다.  
   
  자세한 내용과 예제 코드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 문서에서 “XML Column Values in a Data Reader”(데이터 판독기의 XML 열 값)를 참조하세요.  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014382"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703217"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 소개(SQLXML 4.0)
   SQLXMLOLEDB 공급자는 ADO(ActiveX Data Objects)를 통해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 기능을 노출하는 OLE DB Provider입니다. 하지만 이 공급자는 ADO의 "출력 스트림에 쓰기" 모드에서만 명령을 실행할 수 있습니다. SQLXMLOLEDB 공급자는 행 집합 공급자가 아닙니다. 명령을 실행할 때 adExecuteStream 플래그를 지정 해야 합니다 .이 플래그는 지정 된 출력 스트림을 ADO에 사용 하도록 지시 합니다.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Base Path property
 - XSL Transformations [SQLXML]
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 39c36831838ef222b4c98befded8af55045a86ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013166"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703268"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>XSL 변환 적용(SQLXMLOLEDB 공급자)
   이 예제 ADO 애플리케이션에서는 SQL 쿼리를 실행하고 결과에 XSL 변환을 적용합니다. Clientside Xml 속성을 True로 설정 하면 클라이언트 쪽에서 행 집합의 처리가 적용 됩니다. 이 예에서는 명령 언어가 {5d531cb2-e6ed-11d2-b252-00c04f681b71}로 설정되었는데 그 이유는 SQL 쿼리가 템플릿에 지정되었고, 템플릿을 실행하려면 이 명령 언어를 지정해야 하기 때문입니다. Xsl 속성은 변환을 적용 하는 데 사용할 XSL 파일을 지정 합니다. 기본 경로 속성의 값은 XSL 파일을 검색 하는 데 사용 됩니다. Xsl 속성의 값에 경로를 지정 하는 경우 경로는 기본 경로 속성에 지정 된 경로를 기준으로 합니다.  

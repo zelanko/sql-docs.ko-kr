@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688839"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701925"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   긴 가변 길이 데이터 형식 값의 일부를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보냅니다.  
@@ -59,19 +59,19 @@ pData
  SUCCEED 또는 FAIL  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 [bcp_bind](bcp-bind.md) 및 [bcp_sendrow](bcp-sendrow.md) 와 함께 사용 하 여 긴 가변 길이 데이터 값을 여러 개의 작은 청크로 SQL Server 복사할 수 있습니다. **bcp_moretext** 는 `text`, `ntext`, `image`, `varchar(max)` `nvarchar(max)`,, `varbinary(max)`, UDT (사용자 정의 형식) 및 XML과 같은 SQL Server 데이터 형식이 있는 열과 함께 사용할 수 있습니다. **bcp_moretext** 데이터 변환을 지원 하지 않으므로 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
+ 이 함수는 [bcp_bind](bcp-bind.md) 및 [bcp_sendrow](bcp-sendrow.md) 와 함께 사용 하 여 긴 가변 길이 데이터 값을 여러 개의 작은 청크로 SQL Server 복사할 수 있습니다. **bcp_moretext** 는 `text` , `ntext` ,,,, `image` `varchar(max)` `nvarchar(max)` `varbinary(max)` , UDT (사용자 정의 형식) 및 XML과 같은 SQL Server 데이터 형식이 있는 열과 함께 사용할 수 있습니다. **bcp_moretext** 데이터 변환을 지원 하지 않으므로 제공 된 데이터가 대상 열의 데이터 형식과 일치 해야 합니다.  
   
- **Bcp_moretext**에서 지원 되는 데이터 형식에 대해 null이 아닌 *.pdata* 매개 변수를 사용 하 `bcp_sendrow` 여 **bcp_bind** 를 호출 하는 경우는 길이에 관계 없이 전체 데이터 값을 보냅니다. 그러나 **bcp_bind** 지원 되는 데이터 형식에 대 한 NULL *.pdata* 매개 변수를 포함 하는 경우 데이터가 있는 바인딩된 모든 열이 처리 되었음을 나타내는 `bcp_sendrow` 에서 성공적으로 반환 된 후 즉시 데이터를 복사 하는 데 **bcp_moretext** 사용할 수 있습니다.  
+ **Bcp_moretext**에서 지원 되는 데이터 형식에 대해 Null이 아닌 *.pdata* 매개 변수를 사용 하 여 **bcp_bind** 를 호출 하는 경우는 `bcp_sendrow` 길이에 관계 없이 전체 데이터 값을 보냅니다. 그러나 **bcp_bind** 지원 되는 데이터 형식에 대 한 NULL *.pdata* 매개 변수를 포함 하는 경우 데이터가 있는 **bcp_moretext** `bcp_sendrow` 바인딩된 모든 열이 처리 되었음을 나타내는에서 성공적으로 반환 된 후 즉시 데이터를 복사 하는 데 bcp_moretext 사용할 수 있습니다.  
   
  **Bcp_moretext** 를 사용 하 여 지원 되는 데이터 형식 열을 하나의 행에 보내려면이 열을 사용 하 여 행에서 지원 되는 다른 데이터 형식 열을 모두 전송 해야 합니다. 열을 건너뛸 수 없습니다. 지원되는 데이터 형식은 SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT 및 SQLXML입니다. 열이 각각 varchar(max), nvarchar(max) 또는 varbinary(max)인 경우 SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY 및 SQLVARBINARY도 이 범주에 해당합니다.  
   
- **Bcp_bind** 또는 [bcp_collen](bcp-collen.md) 를 호출 하면 SQL Server 열에 복사 되는 모든 데이터 부분의 총 길이가 설정 됩니다. **Bcp_bind** 에 대 한 호출에 지정 된 것 보다 더 많은 바이트 SQL Server 보내려는 `bcp_collen` 시도는 오류를 생성 합니다. 예를 들어이 오류는 SQL Server `bcp_collen` `text` 열에 사용 가능한 데이터의 길이를 4500로 설정 하는 데 사용 되는 응용 프로그램에서 데이터 버퍼 길이가 1000 바이트 였는 각 호출을 나타내는 동안 **bcp_moretext** 를 5 번 호출 하는 경우에 발생 합니다.  
+ **Bcp_bind** 또는 [bcp_collen](bcp-collen.md) 를 호출 하면 SQL Server 열에 복사 되는 모든 데이터 부분의 총 길이가 설정 됩니다. **Bcp_bind** 에 대 한 호출에 지정 된 것 보다 더 많은 바이트 SQL Server 보내려는 시도는 `bcp_collen` 오류를 생성 합니다. 예를 들어이 오류는 `bcp_collen` SQL Server 열에 사용 가능한 데이터의 길이를 4500로 설정 하는 데 사용 되는 응용 프로그램에서 `text` 데이터 버퍼 길이가 1000 바이트 였는 각 호출을 나타내는 동안 **bcp_moretext** 를 5 번 호출 하는 경우에 발생 합니다.  
   
  복사 된 행에 두 개 이상의 long 가변 길이 열이 포함 된 경우 **bcp_moretext** 는 먼저 가장 낮은 서 수로 번호 열에 데이터를 보내고 그 다음에 가장 낮은 서 수로 번호 열을 입력 합니다. 필요한 데이터의 총 길이를 올바르게 설정하는 것이 중요합니다. 길이 설정 외에는 대량 복사에서 열의 모든 데이터가 수신되었음을 나타낼 방법이 없습니다.  
   
- Bcp_sendrow `var(max)` 및 bcp_moretext를 사용 하 여 값을 서버로 보내는 경우에는 bcp_collen를 호출 하 여 열 길이를 설정할 필요가 없습니다. 대신 이러한 형식에 대해서만 값이 0 인 bcp_sendrow를 호출 하 여 종료 됩니다.  
+ `var(max)`Bcp_sendrow 및 bcp_moretext를 사용 하 여 값을 서버로 보내는 경우에는 bcp_collen를 호출 하 여 열 길이를 설정할 필요가 없습니다. 대신 이러한 형식에 대해서만 값이 0 인 bcp_sendrow를 호출 하 여 종료 됩니다.  
   
- 응용 프로그램은 일반적 `bcp_sendrow` 으로 루프 내에서를 호출 하 고 **bcp_moretext** 하 여 많은 데이터 행을 보냅니다. 다음은 두 개의 `text` 열이 포함 된 테이블에 대해이 작업을 수행 하는 방법에 대 한 개요입니다.  
+ 응용 프로그램은 일반적으로 `bcp_sendrow` 루프 내에서를 호출 하 고 **bcp_moretext** 하 여 많은 데이터 행을 보냅니다. 다음은 두 개의 열이 포함 된 테이블에 대해이 작업을 수행 하는 방법에 대 한 개요입니다 `text` .  
   
 ```  
 while (there are still rows to send)  
@@ -91,7 +91,7 @@ bcp_moretext(hdbc, 0, NULL);
 ```  
   
 ## <a name="example"></a>예제  
- 이 예제에서는 **bcp_bind** 와 `bcp_sendrow`함께 **bcp_moretext** 를 사용 하는 방법을 보여 줍니다.  
+ 이 예제에서는 **bcp_bind** 와 함께 **bcp_moretext** 를 사용 하는 방법을 보여 줍니다 `bcp_sendrow` .  
   
 ```  
 // Variables like henv not specified.  

@@ -28,21 +28,21 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 - bulk load [SQLXML], examples
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013273"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703329"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>XML 대량 로드 예(SQLXML 4.0)
   다음 예에서는 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 XML 대량 로드 기능을 보여 줍니다. 각 예는 XSD 스키마와 이에 해당하는 XDR 스키마를 제공합니다.  
   
 ## <a name="bulk-loader-script-validateandbulkloadvbs"></a>대량 로더 스크립트(ValidateAndBulkload.vbs)  
- VBScript ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition)로 작성 된 다음 스크립트는 xml 문서를 xml DOM에 로드 합니다. 스키마에 대해 유효성을 검사 합니다. 문서가 올바르면 XML 대량 로드를 실행 하 여 XML을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블로 로드 합니다. 이 스크립트는 이 항목의 뒷부분에서 이 스크립트를 참조하는 각 개별 예와 함께 사용할 수 있습니다.  
+ VBScript (Visual Basic Scripting Edition)로 작성 된 다음 스크립트는 xml [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 문서를 XML DOM에 로드 하 고, 스키마에 대해 유효성을 검사 하 고, 문서가 유효한 경우 xml 대량 로드를 실행 하 여 xml을 테이블로 로드 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 스크립트는 이 항목의 뒷부분에서 이 스크립트를 참조하는 각 개별 예와 함께 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  데이터 파일에서 업로드되는 내용이 없을 경우 XML 대량 로드는 경고 또는 오류를 표시하지 않습니다. 따라서 대량 로드 작업을 실행하기 전에 XML 데이터 파일의 유효성을 검사하는 것이 좋습니다.  
@@ -111,7 +111,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. 테이블에 XML 대량 로드  
- 이 예에서는 ConnectionString 속성 (MyServer)에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지정 된 인스턴스에 대 한 연결을 설정 합니다. 또한이 예제에서는 ErrorLogFile 속성을 지정 합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. 또한 Execute 메서드는 매핑 스키마 파일 (Sampleschema.xml)과 XML 데이터 파일 (Samplexmldata.xml로)의 매개 변수를 포함 합니다. 대량 로드를 실행 하면 **tempdb** 데이터베이스에서 만든 Cust 테이블에 XML 데이터 파일의 내용에 따라 새 레코드가 포함 됩니다.  
+ 이 예에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ConnectionString 속성 (MyServer)에 지정 된 인스턴스에 대 한 연결을 설정 합니다. 또한이 예제에서는 ErrorLogFile 속성을 지정 합니다. 따라서 오류 출력은 지정된 파일("C:\error.log")에 저장되며 위치는 다른 곳으로 변경할 수 있습니다. 또한 Execute 메서드는 매핑 스키마 파일 (Sampleschema.xml)과 XML 데이터 파일 (Samplexmldata.xml로)의 매개 변수를 포함 합니다. 대량 로드를 실행 하면 **tempdb** 데이터베이스에서 만든 Cust 테이블에 XML 데이터 파일의 내용에 따라 새 레코드가 포함 됩니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
   
@@ -199,7 +199,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. 여러 테이블에 XML 데이터 대량 로드  
- 이 예제에서 XML 문서는 ** \<Customer>** 및 ** \<Order>** 요소로 구성 됩니다.  
+ 이 예제에서 XML 문서는 ** \< Customer>** 및 ** \< Order>** 요소로 구성 됩니다.  
   
 ```  
 <ROOT>  
@@ -231,7 +231,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- 다음 XSD 스키마는 이러한 테이블의 XML 뷰를 정의합니다. 이 스키마는 ** \<Customer>** 와 ** \<Order>** 요소 간의 부모-자식 관계를 지정 합니다.  
+ 다음 XSD 스키마는 이러한 테이블의 XML 뷰를 정의합니다. 이 스키마는 ** \< Customer>** 와 ** \< Order>** 요소 간의 부모-자식 관계를 지정 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +270,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- XML 대량 로드는 ** \<CustOrder>** 요소 ** \<>** 사이에 지정 된 기본 키/외래 키 관계를 사용 하 여 두 테이블에 데이터를 대량으로 로드 합니다.  
+ XML 대량 로드는 ** \< CustOrder>** 요소 ** \<>** 사이에 지정 된 기본 키/외래 키 관계를 사용 하 여 두 테이블에 데이터를 대량으로 로드 합니다.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>예제 대량 로드를 테스트하려면  
   
@@ -383,7 +383,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- 이 스키마는 ** \<Product>** 자식 요소와 함께 ** \<Order>** 요소를 지정 합니다. ** \<Order>** 요소는 Ord 테이블에 매핑되고 ** \<product>** 요소는 데이터베이스의 product 테이블에 매핑됩니다. Product>요소에 지정 된 체인 관계는 orderdetail 테이블로 표시 되는 m:n 관계를 식별 합니다. ** \<** 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
+ 이 스키마는 ** \< Product>** 자식 요소와 함께 ** \< Order>** 요소를 지정 합니다. ** \< Order>** 요소는 Ord 테이블에 매핑되고 ** \< product>** 요소는 데이터베이스의 product 테이블에 매핑됩니다. ** \< Product>** 요소에 지정 된 체인 관계는 orderdetail 테이블로 표시 되는 m:n 관계를 식별 합니다. 하나의 주문이 여러 제품을 포함할 수 있으며, 하나의 제품은 여러 주문에 포함될 수 있습니다.  
   
  이 스키마를 사용하여 XML 문서를 대량 로드하는 경우 Ord, Product 및 OrderDetail 테이블에 레코드가 추가됩니다.  
   
@@ -456,7 +456,7 @@ OrderDetail (OrderID, ProductID)
   
  여기에서 XML 대량 로드는 테이블 간의 기본 키/외래 키 관계를 식별합니다. 대량 로드는 먼저 기본 키가 있는 테이블에 레코드를 삽입한 후 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성한 ID 값을 외래 키 열이 있는 테이블로 전파합니다. 다음 예의 XML 대량 로드는 다음 순서에 따라 데이터를 테이블에 삽입합니다.  
   
-1.  Product  
+1.  제품  
   
 2.  Ord  
   
@@ -541,7 +541,7 @@ OrderDetail (OrderID, ProductID)
     </ROOT>  
     ```  
   
-4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. `Execute` 메서드에 대 한 매개 변수로 사용할 파일의 적절 한 경로를 지정 합니다.  
+4.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 다음 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. 메서드에 대 한 매개 변수로 사용할 파일의 적절 한 경로를 지정 합니다 `Execute` .  
   
     ```  
     Set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
@@ -587,7 +587,7 @@ Set objBL = Nothing
   
 1.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleSchema.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XSD 스키마를 파일에 추가합니다.  
   
-2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleXMLData.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XML 문서를 파일에 추가합니다. 문서에서 \<루트> 요소를 제거 하 여 조각으로 만듭니다.  
+2.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 SampleXMLData.xml로 저장합니다. 앞의 예 "스키마의 체인 관계를 사용하여 XML 대량 로드"에 제공된 XML 문서를 파일에 추가합니다. \<문서에서 루트> 요소를 제거 하 여 조각으로 만듭니다.  
   
 3.  기본 텍스트 편집기 또는 XML 편집기에서 파일을 만든 후 ValidateAndBulkload.vbs로 저장합니다. 이 파일에 이 예의 VBScript 코드를 추가합니다. 연결 문자열을 수정하여 해당 서버 및 데이터베이스 이름을 지정합니다. Execute 메서드에 대 한 매개 변수로 지정 된 파일에 대 한 적절 한 경로를 지정 합니다.  
   
@@ -845,7 +845,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- 스키마는 Cust 테이블에 대한 오버플로 열(OverflowColumn)을 식별합니다. 따라서 각 ** \<Customer>** 요소에 대해 소비 되지 않은 모든 XML 데이터가이 열에 추가 됩니다.  
+ 스키마는 Cust 테이블에 대한 오버플로 열(OverflowColumn)을 식별합니다. 따라서 각 ** \< Customer>** 요소에 대해 소비 되지 않은 모든 XML 데이터가이 열에 추가 됩니다.  
   
 > [!NOTE]  
 >  모든 추상 요소 ( **abstract = "true"** 가 지정 된 요소) 및 모든 금지 된 특성 ( **금지 = "true"** 가 지정 된 특성)은 XML 대량 로드에 의해 오버플로로 간주 되 고 지정 된 경우 오버플로 열에 추가 됩니다. 지정되지 않은 경우에는 무시됩니다.  
@@ -972,7 +972,7 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 애플리케이션을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 로컬 서버에서 대량 로드 하는 경우가 아니면 임시 파일 경로는 UNC 경로 (예: \\\servername\sharename) 여야 합니다.  
+>  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 애플리케이션을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 로컬 서버에서 대량 로드 하는 경우가 아니면 임시 파일 경로는 UNC 경로 (예: \servername\sharename) 여야 합니다 \\ .  
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
@@ -1031,7 +1031,7 @@ set objBL=Nothing
   
 5.  VBScript 코드를 실행합니다.  
   
-     Customerid의 값이 중괄호 ( `sql:datatype` {및})를 포함 하는 **CustomerID** GUID로 지정 된 경우 스키마는 **customerid** 특성에 해당 하는을 지정 해야 합니다. 예를 들면 다음과 같습니다.  
+     `sql:datatype` **Customerid** 의 값이 중괄호 ({및})를 포함 하는 GUID로 지정 된 경우 스키마는 **customerid** 특성에 해당 하는을 지정 해야 합니다. 예를 들면 다음과 같습니다.  
   
     ```  
     <ROOT>  
@@ -1063,7 +1063,7 @@ set objBL=Nothing
     </xsd:schema>  
     ```  
   
-     열 `sql:datatype` 유형을으로 `uniqueidentifier`식별 하는을 지정 하면 대량 로드 작업은 열에 삽입 하기 전에 **CustomerID** 값에서 중괄호 ({및})를 제거 합니다.  
+     `sql:datatype`열 유형을으로 식별 하는을 지정 하면 `uniqueidentifier` 대량 로드 작업은 열에 삽입 하기 전에 **CustomerID** 값에서 중괄호 ({및})를 제거 합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   
@@ -1243,9 +1243,9 @@ End Sub
 ```  
   
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. xml 데이터 형식 열에 대량 로드  
- 매핑 스키마가 `sql:datatype="xml"` 주석을 사용 하 여 [xml 데이터 형식](/sql/t-sql/xml/xml-transact-sql) 열을 지정 하는 경우 xml 대량 로드는 원본 문서에서 매핑된 필드의 xml 자식 요소를이 열에 복사할 수 있습니다.  
+ 매핑 스키마가 주석을 사용 하 여 [xml 데이터 형식](/sql/t-sql/xml/xml-transact-sql) 열을 지정 하는 경우 `sql:datatype="xml"` xml 대량 로드는 원본 문서에서 매핑된 필드의 xml 자식 요소를이 열에 복사할 수 있습니다.  
   
- AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 표에서 `xml` 데이터 형식의 CatalogDescription 필드는 `sql:field` 및 `sql:datatype="xml"` 주석을 사용 하 여 ** \<Desc>** 요소에 매핑됩니다.  
+ AdventureWorks 예제 데이터베이스에 있는 Production.ProductModel 테이블의 뷰를 매핑하는 다음 XSD 스키마를 고려해 보십시오. 이 표에서 데이터 형식의 CatalogDescription 필드는 `xml` 및 주석을 사용 하 여 ** \< Desc>** 요소에 매핑됩니다 `sql:field` `sql:datatype="xml"` .  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

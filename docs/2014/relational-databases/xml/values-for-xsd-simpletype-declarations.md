@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193079"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702300"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 선언의 값
   다음 표에서는 인식된 모든 XSD 단순 유형 열거를 기반으로 적용되는 제한 사항에 대해 간단하게 설명합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "63193079"
   
 |단순 유형|제한 사항|  
 |-----------------|----------------|  
-|`duration`|연도 부분은-2<sup>^</sup>31에서 2<sup>^</sup>31-1 사이 여야 합니다. 월, 일, 시, 분, 초는 모두 0에서 9999 사이여야 합니다. 초 부분은 소수점 이하 셋째 자릿수까지 추가할 수 있습니다.|  
+|`duration`|연도 부분은-2 31에서 2 31-1 사이 여야 합니다 <sup>^</sup> <sup>^</sup> . 월, 일, 시, 분, 초는 모두 0에서 9999 사이여야 합니다. 초 부분은 소수점 이하 셋째 자릿수까지 추가할 수 있습니다.|  
 |`dateTime`|표준 시간대 하위 필드에서 시간 부분은 -14에서 +14 사이여야 합니다. 연도 부분은 1에서 9999 사이여야 합니다. 월 부분은 1에서 12 사이여야 합니다. 일 부분은 1에서 31 사이여야 하고 올바른 날짜여야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 1974-02-31과 같은 잘못된 날짜(2월에는 31일이 없음)를 검색하고 오류를 반환합니다.<br /><br /> 초 구성 요소에는 100나노초 정밀도를 사용할 수 있습니다. 표준 시간대 표시는 선택적입니다.<br /><br /> SQL Server 2005에서 지원하는 연도 범위는 -9999에서 9999까지입니다. 현재 SQL Server에서는 좀 더 제한된 연도 범위를 지원합니다. 자세한 내용은 [형식화 된 Xml과 형식화 되지 않은 Xml 비교](compare-typed-xml-to-untyped-xml.md)를 참조 하세요.|  
 |`date`|연도 부분은 1에서 9999 사이여야 합니다. 월 부분은 1에서 12 사이여야 합니다. 일 부분은 1에서 31 사이여야 하고 올바른 날짜여야 합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 1974-02-31과 같은 잘못된 날짜(2월에는 31일이 없음)를 검색하고 오류를 반환합니다.<br /><br /> SQL Server 2005에서 지원하는 연도 범위는 -9999에서 9999까지입니다. 현재 SQL Server에서는 좀 더 제한된 연도 범위를 지원합니다. 자세한 내용은 [형식화 된 Xml과 형식화 되지 않은 Xml 비교](compare-typed-xml-to-untyped-xml.md)를 참조 하세요.|  
 |`gYearMonth`|연도 부분은 -9999에서 9999 사이여야 합니다.|  
