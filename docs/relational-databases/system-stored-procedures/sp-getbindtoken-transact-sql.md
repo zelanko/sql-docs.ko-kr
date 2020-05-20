@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123999"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833214"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,17 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [@out_token=] '*return_value*'  
+ [ @out_token =] '*return_value*'  
  세션을 바인딩하는 데 사용되는 토큰입니다. *return_value* 는 **varchar (255)** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 예를 들면 다음과 같습니다.  
+ sp_getbindtoken은 활성 트랜잭션 내에서 저장 프로시저를 실행 하는 경우에만 유효한 토큰을 반환 합니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 오류 메시지를 반환합니다. 다음은 그 예입니다.  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동일한 토큰을 반환 합니다. 예를 들면 다음과 같습니다.  
+ Sp_getbindtoken를 사용 하 여 열린 트랜잭션 내부에 분산 트랜잭션 연결을 등록 하면는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동일한 토큰을 반환 합니다. 다음은 그 예입니다.  
   
 ```  
 USE AdventureWorks2012;  

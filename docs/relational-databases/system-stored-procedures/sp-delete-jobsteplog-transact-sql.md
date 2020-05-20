@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305091"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833357"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **참고:** *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @step_id = ] step_id`작업 단계 로그를 삭제할 작업 단계의 id 번호입니다. 포함 되지 않은 경우 ** \@older_than** 또는 ** \@larger_than** 지정 되지 않은 경우 작업의 모든 작업 단계 로그가 삭제 됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
+`[ @step_id = ] step_id`작업 단계 로그를 삭제할 작업 단계의 id 번호입니다. 포함 되지 않은 경우 ** \@ older_than** 또는 ** \@ larger_than** 지정 되지 않은 경우 작업의 모든 작업 단계 로그가 삭제 됩니다. *step_id* 은 **int**이며 기본값은 NULL입니다.  
   
 `[ @step_name = ] 'step_name'`작업 단계 로그를 삭제할 작업 단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > **참고:** *Step_id* 또는 *step_name* 를 지정할 수 있지만 둘 다 지정할 수는 없습니다.  
   
-`[ @older_than = ] 'date'`유지 하려는 가장 오래 된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 는 **datetime**이며 기본값은 NULL입니다. ** \@Older_than** 와 ** \@larger_than** 를 모두 지정할 수 있습니다.  
+`[ @older_than = ] 'date'`유지 하려는 가장 오래 된 작업 단계 로그의 날짜와 시간입니다. 이 날짜와 시간보다 오래된 모든 작업 단계 로그는 제거됩니다. *날짜* 는 **datetime**이며 기본값은 NULL입니다. ** \@ Older_than** 와 ** \@ larger_than** 를 모두 지정할 수 있습니다.  
   
-`[ @larger_than = ] 'size_in_bytes'`유지 하려는 가장 큰 작업 단계 로그의 크기 (바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. ** \@Larger_than** 와 ** \@older_than** 를 모두 지정할 수 있습니다.  
+`[ @larger_than = ] 'size_in_bytes'`유지 하려는 가장 큰 작업 단계 로그의 크기 (바이트)입니다. 이 크기보다 큰 모든 작업 단계 로그는 제거됩니다. ** \@ Larger_than** 와 ** \@ older_than** 를 모두 지정할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  **sp_delete_jobsteplog** **msdb** 데이터베이스에 있습니다.  
   
- ** \@Job_id** 또는 ** \@job_name** 를 제외한 인수가 지정 되지 않은 경우 지정 된 작업에 대 한 모든 작업 단계 로그가 삭제 됩니다.  
+ ** \@ Job_id** 또는 ** \@ job_name** 를 제외한 인수가 지정 되지 않은 경우 지정 된 작업에 대 한 모든 작업 단계 로그가 삭제 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  

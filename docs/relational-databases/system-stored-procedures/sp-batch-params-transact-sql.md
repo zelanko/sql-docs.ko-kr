@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001813"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833477"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 포함 된 매개 변수에 대 한 정보를 포함 하는 행 집합을 반환 합니다. **sp_batch_params** 지정 된 일괄 처리만 구문 분석 하 고 포함 된 매개 변수 값에 대 한 정보를 반환 합니다. 일괄 처리를 실행하거나 실행 환경을 수정하지는 않습니다.  
+  일괄 처리에 포함 된 매개 변수에 대 한 정보를 포함 하는 행 집합을 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . **sp_batch_params** 지정 된 일괄 처리만 구문 분석 하 고 포함 된 매개 변수 값에 대 한 정보를 반환 합니다. 일괄 처리를 실행하거나 실행 환경을 수정하지는 않습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,10 +39,10 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @tsqlbatch = ] 'tsqlbatch'`원하는 매개 변수 정보에 대 한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리를 포함 하는 유니코드 문자열입니다. *tsqlbatch* 는 **nvarchar (max)** 또는 **nvarchar (max)** 로 암시적으로 변환 될 수 있습니다.  
+`[ @tsqlbatch = ] 'tsqlbatch'`[!INCLUDE[tsql](../../includes/tsql-md.md)]원하는 매개 변수 정보에 대 한 문 또는 일괄 처리를 포함 하는 유니코드 문자열입니다. *tsqlbatch* 는 **nvarchar (max)** 또는 **nvarchar (max)** 로 암시적으로 변환 될 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**소수**|**int**|유효 자릿수입니다. **전체 자릿수** 열의 반환 값은 밑수 10에 있습니다.|  
 |**LENGTH**|**int**|데이터의 전송 크기입니다. 이 값은 NULL입니다.|  
 |**배율을**|**smallint**|소수점 오른쪽 자릿수입니다. 이 값은 NULL입니다.|  
-|**RADIX**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
+|**기 수**|**smallint**|숫자 유형에 대한 기준입니다. 이 값은 NULL입니다.|  
 |**않는**|**smallint**|Null 허용 여부를 지정합니다.<br /><br /> 1 = Null 값을 허용하는 매개 변수 데이터 형식을 만들 수 있습니다.<br /><br /> 0 = Null 값이 허용되지 않습니다.<br /><br /> 이 값은 NULL입니다.|  
 |**SQL_DATA_TYPE**|**smallint**|설명자의 TYPE 필드에 표시된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식의 값입니다. 이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외 하 고는 **DATA_TYPE** 열과 동일 합니다. 이 열은 항상 값을 반환합니다. 이 값은 NULL입니다.|  
 |**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** 값이 SQL_DATETIME 또는 SQL_INTERVAL 경우 **datetime** 또는 ISO **interval** 하위 코드입니다. **datetime**과 ISO **interval**이 아닌 데이터 형식의 경우 이 열은 NULL입니다. 이 값은 NULL입니다.|  

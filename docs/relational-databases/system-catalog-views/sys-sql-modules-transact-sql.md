@@ -17,24 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_modules catalog view
 ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f3e007a0676afd507af54e3b3406297cf40042e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108995"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833940"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  고유 하 게 컴파일된 스칼라 사용자 정의 함수를 포함 하 여의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL 언어로 정의 된 모듈인 각 개체에 대해 하나의 행을 반환 합니다. P, RF, V, TR, FN, IF, TF 및 R 유형의 개체에는 연결된 SQL 모듈이 있습니다. 이 뷰에는 독립 실행형 기본값인 유형 D 개체에 대한 SQL 모듈 정의도 있습니다. 이러한 유형에 대 한 설명은 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰의 **type** 열을 참조 하세요.  
+  고유 하 게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴파일된 스칼라 사용자 정의 함수를 포함 하 여의 SQL 언어로 정의 된 모듈인 각 개체에 대해 하나의 행을 반환 합니다. P, RF, V, TR, FN, IF, TF 및 R 유형의 개체에는 연결된 SQL 모듈이 있습니다. 이 뷰에는 독립 실행형 기본값인 유형 D 개체에 대한 SQL 모듈 정의도 있습니다. 이러한 유형에 대 한 설명은 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰의 **type** 열을 참조 하세요.  
   
  자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|포함하는 개체의 개체 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**정의**|**nvarchar(max)**|이 모듈을 정의하는 SQL 텍스트입니다. [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 기본 제공 함수를 사용 하 여이 값을 가져올 수도 있습니다.<br /><br /> NULL = 암호화됨|  
@@ -44,7 +44,7 @@ ms.locfileid: "68108995"
 |**uses_database_collation**|**bit**|1 = 스키마 바운드 모듈 정의는 정확한 평가를 위해 데이터베이스의 기본 데이터 정렬에 의존합니다. 그렇지 않으면 0입니다. 이러한 종속성으로 인해 데이터베이스의 기본 데이터 정렬을 바꿀 수 없습니다.|  
 |**is_recompiled**|**bit**|WITH RECOMPILE 옵션으로 프로시저를 만들었습니다.|  
 |**null_on_null_input**|**bit**|임의의 NULL 입력에 대해 NULL 출력을 생성하기 위해 모듈을 선언했습니다.|  
-|**execute_as_principal_id**|**정수**|EXECUTE AS 데이터베이스 보안 주체의 ID입니다.<br /><br /> 기본값은 NULL이며 EXECUTE AS CALLER인 경우에도 NULL입니다.<br /><br /> EXECUTE AS SELF 또는 EXECUTE AS \<principal> 경우 지정 된 보안 주체의 ID입니다.<br /><br /> -2 = EXECUTE AS OWNER|  
+|**execute_as_principal_id**|**정수**|EXECUTE AS 데이터베이스 보안 주체의 ID입니다.<br /><br /> 기본값은 NULL이며 EXECUTE AS CALLER인 경우에도 NULL입니다.<br /><br /> EXECUTE AS SELF 또는 EXECUTE AS principal> 경우 지정 된 보안 주체의 ID입니다 \< .<br /><br /> -2 = EXECUTE AS OWNER|  
 |**uses_native_compilation**|**bit**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]까지<br /><br /> 0 = 고유 컴파일 아님<br /><br /> 1 = 고유 컴파일<br /><br /> 기본값은 0입니다.|  
 |**is_inlineable**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 이상<br/><br />모듈이 inlineable 인지 여부를 나타냅니다. Inlineability는 [여기](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements)에 지정 된 조건을 기반으로 합니다.<br /><br /> 0 = inlineable 안 함<br /><br /> 1 = inlineable입니다. <br /><br /> 스칼라 Udf의 경우 UDF가 inlineable 인 경우 값은 1이 고, 그렇지 않으면 0입니다. 이 값은 항상 인라인 Tvf 값 1을 포함 하 고 다른 모든 모듈 형식에 대해 0을 포함 합니다.<br />|  
 |**inline_type**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] 이상<br /><br />현재 모듈에 대해 인라인이 설정 되어 있는지 여부를 나타냅니다. <br /><br />0 = 인라이닝을 해제 합니다.<br /><br /> 1 = 인라인이 설정 되어 있습니다.<br /><br /> 스칼라 Udf의 경우 인라인을 명시적 또는 암시적으로 설정 하면 값은 1이 됩니다. 인라인 Tvf 값은 항상 1이 고 다른 모듈 형식의 경우 0입니다.<br />|  

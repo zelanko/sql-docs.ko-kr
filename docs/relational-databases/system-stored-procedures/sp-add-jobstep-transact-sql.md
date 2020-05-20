@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412851"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833701"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412851"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
+  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서는 대부분의 SQL Server 에이전트 작업 유형이 지원 되지 않습니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
   
 ## <a name="syntax"></a>구문  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`단계의 이름입니다. *step_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에서 *명령을*실행 하는 데 사용 하는 하위 시스템입니다. *하위 시스템* 은 **nvarchar (40)** 이며 다음 값 중 하나일 수 있습니다.  
+`[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 서비스에서 *명령을*실행 하는 데 사용 하는 하위 시스템입니다. *하위 시스템* 은 **nvarchar (40)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|액티브 스크립트<br /><br /> ** \* 중요 \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|액티브 스크립트<br /><br /> ** \* \* \* 중요 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|운영 체제 명령 또는 실행 프로그램|  
 |'**배포**'|복제 배포 에이전트 작업|  
 |'**SNAPSHOT**'|복제 스냅샷 에이전트 작업|  
@@ -104,7 +104,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
-`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *매개 변수* 는 **ntext**이며 기본값은 NULL입니다.  
+`[ @additional_parameters = ] 'parameters'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *매개 변수* 는 **NTEXT**이며 기본값은 NULL입니다.  
   
 `[ @cmdexec_success_code = ] code`*명령이* 성공적으로 실행 되었음을 나타내는 **CmdExec** 하위 시스템 명령에서 반환 하는 값입니다. *코드* 는 **int**이며 기본값은 **0**입니다.  
   
@@ -132,9 +132,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 는 **nvarchar (30)** 이며 기본값은 NULL입니다.  
   
-`[ @database_name = ] 'database'`[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 실행할 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname**이며 기본값은 NULL입니다 .이 경우 **master** 데이터베이스가 사용 됩니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. ActiveX 작업 단계의 경우 *데이터베이스* 는 단계에서 사용 하는 스크립트 언어의 이름입니다.  
+`[ @database_name = ] 'database'`단계를 실행할 데이터베이스의 이름입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *데이터베이스* 는 **sysname**이며 기본값은 NULL입니다 .이 경우 **master** 데이터베이스가 사용 됩니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. ActiveX 작업 단계의 경우 *데이터베이스* 는 단계에서 사용 하는 스크립트 언어의 이름입니다.  
   
-`[ @database_user_name = ] 'user'`단계를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 실행할 때 사용할 사용자 계정의 이름입니다. *사용자* 는 **sysname**이며 기본값은 NULL입니다. *사용자* 가 NULL 이면 단계가 *데이터베이스*의 작업 소유자 사용자 컨텍스트에서 실행 됩니다.  SQL Server 에이전트는 작업 소유자가 SQL Server sysadmin인 경우에만 이 매개 변수를 포함합니다. 작업 소유자가 SQL Server sysadmin일 경우 지정한 Transact-SQL 단계가 지정한 SQL Server 사용자 이름의 컨텍스트에서 실행됩니다. 작업 소유자가 sysadmin SQL Server 아닌 경우 Transact-sql 단계는 항상이 작업을 소유 하는 로그인의 컨텍스트에서 실행 되 고 매개 변수는 @database_user_name 무시 됩니다.  
+`[ @database_user_name = ] 'user'`단계를 실행할 때 사용할 사용자 계정의 이름입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *사용자* 는 **sysname**이며 기본값은 NULL입니다. *사용자* 가 NULL 이면 단계가 *데이터베이스*의 작업 소유자 사용자 컨텍스트에서 실행 됩니다.  SQL Server 에이전트는 작업 소유자가 SQL Server sysadmin인 경우에만 이 매개 변수를 포함합니다. 작업 소유자가 SQL Server sysadmin일 경우 지정한 Transact-SQL 단계가 지정한 SQL Server 사용자 이름의 컨텍스트에서 실행됩니다. 작업 소유자가 sysadmin SQL Server 아닌 경우 Transact-sql 단계는 항상이 작업을 소유 하는 로그인의 컨텍스트에서 실행 되 고 @database_user_name 매개 변수는 무시 됩니다.  
   
 `[ @retry_attempts = ] retry_attempts`이 단계가 실패 하는 경우 다시 시도 하는 횟수입니다. *retry_attempts* 는 **int**이며 기본값은 다시 시도 하지 않음을 나타내는 **0**입니다.  
   
@@ -142,7 +142,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`쓰이는.  
   
-`[ @output_file_name = ] 'file_name'`이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 은 **nvarchar (200)** 이며 기본값은 NULL입니다. *file_name* *명령*아래에 나열 된 토큰을 하나 이상 포함할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]이 매개 변수는, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하위 시스템에서 실행 되는 명령에만 사용할 수 있습니다.  
+`[ @output_file_name = ] 'file_name'`이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 은 **nvarchar (200)** 이며 기본값은 NULL입니다. *file_name* *명령*아래에 나열 된 토큰을 하나 이상 포함할 수 있습니다. 이 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**, **PowerShell**, 또는 하위 시스템에서 실행 되는 명령에만 사용할 수 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 있습니다.  
   
 `[ @flags = ] flags`는 동작을 제어 하는 옵션입니다. *flags* 는 **int**이며 다음 값 중 하나일 수 있습니다.  
   
@@ -156,9 +156,9 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**32**|모든 출력을 작업 기록에 씁니다.|  
 |**64**|중단할 Cmd jobstep에 대한 신호로 사용할 Windows 이벤트를 만듭니다.|  
   
-`[ @proxy_id = ] proxy_id`작업 단계가 실행 되는 프록시의 id입니다. *proxy_id* 은 **int**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 됩니다.  
+`[ @proxy_id = ] proxy_id`작업 단계가 실행 되는 프록시의 id입니다. *proxy_id* 은 **int**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 서비스 계정으로 실행 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @proxy_name = ] 'proxy_name'`작업 단계가 실행 되는 프록시의 이름입니다. *proxy_name* 는 **sysname**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 됩니다.  
+`[ @proxy_name = ] 'proxy_name'`작업 단계가 실행 되는 프록시의 이름입니다. *proxy_name* 는 **sysname**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 서비스 계정으로 실행 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데, 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
- 기본적으로 다른 프록시를 지정 하지 않으면 작업 단계는 에이전트에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 서비스 계정으로 실행 됩니다. 이 계정의 요구 사항은 **sysadmin** 고정 보안 역할의 멤버 여야 합니다.
+ 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다른 프록시를 지정 하지 않으면 작업 단계는 에이전트에 대 한 서비스 계정으로 실행 됩니다. 이 계정의 요구 사항은 **sysadmin** 고정 보안 역할의 멤버 여야 합니다.
   
  프록시는 *proxy_name* 또는 *proxy_id*로 식별할 수 있습니다.  
   

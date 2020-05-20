@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats_columns catalog view
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6abf636a371047f344861f09affaa1dd9f7d82de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 88a8dbf26dacf97638b482655307386c08d9e5b9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108970"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833925"
 ---
 # <a name="sysstats_columns-transact-sql"></a>sys.stats_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   에는 각 열에 대 한 행이 포함 되어 **있습니다.**  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속한 개체의 ID입니다.|  
 |**stats_id**|**int**|이 열이 속한 통계의 ID입니다.<br /><br />통계가 인덱스에 해당 하는 경우 *stats_id* 값은 [sys. 인덱스](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰의 *index_id* 값과 동일 합니다.|  

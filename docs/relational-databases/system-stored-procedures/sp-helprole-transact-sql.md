@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprole
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674da069c1c47c9e577327e9482add64353de881
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832632"
 ---
 # <a name="sp_helprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**RoleId**|**smallint**|**RoleName**의 ID입니다.|  

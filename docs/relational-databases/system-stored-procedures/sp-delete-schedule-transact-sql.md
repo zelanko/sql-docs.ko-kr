@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_schedule
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57dea8c65cf1541030b87e965591b98c64c9b261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833341"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  기본적으로 작업에 연결된 일정은 삭제할 수 없습니다. 작업에 연결 된 일정을 삭제 하려면 *force_delete*값을 **1** 로 지정 합니다. 일정을 삭제해도 현재 실행 중인 작업은 중지되지 않습니다.  

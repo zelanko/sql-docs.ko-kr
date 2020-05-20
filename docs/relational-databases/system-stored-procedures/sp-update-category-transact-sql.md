@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b0af70ae46d73a7eedde55c2fcd7e93f63be8928
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084922"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832546"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_update_category
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'`업데이트할 범주의 클래스입니다. *클래스*는 **varchar (8)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**오류**|경고 범주를 업데이트합니다.|  
 |**직함**|작업 범주를 업데이트합니다.|  

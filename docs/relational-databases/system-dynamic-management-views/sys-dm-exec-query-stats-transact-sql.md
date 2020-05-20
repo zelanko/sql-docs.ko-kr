@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23fd1a0c896436dad27ab771e2ed04c775938091
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04468a272cb3d344ef55074e60d2dca4eec9bb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833855"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ ms.locfileid: "77429017"
   
 > [!NOTE]
 > - 데이터는 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로, **dm_exec_query_stats** 의 결과는 각 실행에 따라 달라질 수 있습니다.
-> - 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_exec_query_stats**을 사용 합니다.    
+> - 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_query_stats**을 사용 합니다.    
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**sql_handle**|**varbinary(64)**  |쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다.<br /><br /> **sql_handle**은 **statement_start_offset** 및 **statement_end_offset**과 함께 사용되어 **sys.dm_exec_sql_text** 동적 관리 함수를 호출하여 쿼리의 SQL 텍스트를 검색할 수 있습니다.|  
 |**statement_start_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 시작 위치(바이트)를 나타냅니다.|  
-|**statement_end_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 끝 위치(바이트)를 나타냅니다. 이전 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]버전의 경우 값-1은 일괄 처리의 끝을 나타냅니다. 후행 주석을 더이상 포함하지 않습니다.|  
+|**statement_end_offset**|**int**|0부터 시작하여 일괄 처리 또는 지속형 개체의 텍스트 내에서 행이 설명하는 쿼리의 끝 위치(바이트)를 나타냅니다. 이전 버전의 경우 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 값-1은 일괄 처리의 끝을 나타냅니다. 후행 주석을 더이상 포함하지 않습니다.|  
 |**plan_generation_num**|**bigint**|다시 컴파일한 후 계획의 인스턴스 간을 서로 구별하는 데 사용될 수 있는 시퀀스 번호입니다.|  
 |**plan_handle**|**varbinary(64)**|실행 된 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰 이며 계획 캐시에 있거나 현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 합니다. 이 값은 [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) 동적 관리 함수로 전달되어 쿼리 계획을 가져올 수 있습니다.<br /><br /> 고유하게 컴파일된 저장 프로시저에서 메모리 최적화 테이블을 쿼리하는 경우 항상 0x000입니다.|  
 |**creation_time**|**datetime**|이 계획이 컴파일된 시간입니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "77429017"
 |**last_logical_reads**|**bigint**|이 계획이 마지막으로 실행되었을 때 수행된 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**min_logical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최소 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**max_logical_reads**|**bigint**|단일 실행 중 이 계획에서 수행한 최대 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**total_clr_time**|**bigint**|이 계획이 컴파일된 이후 실행 될 때 CLR (공용 언어 런타임) 개체 내 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서 사용 되는 시간 (마이크로초 단위로 보고 되지만 밀리초 단위 까지만 정확 함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
+|**total_clr_time**|**bigint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 이 계획이 컴파일된 이후 실행 될 때 CLR (공용 언어 런타임) 개체 내에서 사용 되는 시간 (마이크로초 단위로 보고 되지만 밀리초 단위 까지만 정확 함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**last_clr_time**|**bigint**|이 계획을 마지막으로 실행하는 동안 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 개체 내에서 실행에 사용한 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**min_clr_time**|**bigint**|단일 실행 중에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 개체 내에서 이 계획이 사용한 최소 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
 |**max_clr_time**|**bigint**|단일 실행 중에 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 내에서 이 계획이 사용한 최대 시간(마이크로초 단위로 보고되지만 밀리초 단위까지만 정확함)입니다. CLR 개체는 저장 프로시저, 함수, 트리거, 유형 및 집계일 수 있습니다.|  
@@ -103,19 +103,19 @@ ms.locfileid: "77429017"
 |**last_used_threads**|**bigint**|이 계획이 마지막으로 실행 될 때 사용 된 병렬 스레드의 수입니다. 메모리 최적화 테이블을 쿼리 하는 경우 항상 0입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
 |**min_used_threads**|**bigint**|이 계획을 실행 하는 동안 사용한 병렬 스레드의 최소 수입니다. 메모리 최적화 테이블을 쿼리 하는 경우 항상 0입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
 |**max_used_threads**|**bigint**|이 계획을 실행 하는 동안 사용한 병렬 스레드의 최대 수입니다. 메모리 최적화 테이블을 쿼리 하는 경우 항상 0입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상|  
-|**total_columnstore_segment_reads**|**bigint**|쿼리에서 읽은 columnstore 세그먼트의 총 합계입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**last_columnstore_segment_reads**|**bigint**|쿼리를 마지막으로 실행 했을 때 읽은 columnstore 세그먼트의 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**min_columnstore_segment_reads**|**bigint**|한 번의 실행 중에 쿼리에서 읽은 최소 columnstore 세그먼트 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**max_columnstore_segment_reads**|**bigint**|한 번의 실행 중에 쿼리에서 읽은 columnstore 세그먼트의 최대 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**total_columnstore_segment_skips**|**bigint**|쿼리에서 건너뛴 columnstore 세그먼트의 총 합계입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**last_columnstore_segment_skips**|**bigint**|쿼리를 마지막으로 실행 한 후 건너뛴 columnstore 세그먼트 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**min_columnstore_segment_skips**|**bigint**|한 번의 실행 중에 쿼리에서 건너뛴 columnstore 세그먼트의 최소 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|    
-|**max_columnstore_segment_skips**|**bigint**|한 번의 실행 중에 쿼리에서 건너뛴 columnstore 세그먼트의 최대 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|
-|**total_spills**|**bigint**|이 쿼리가 컴파일된 이후 실행 될 때 발생 한 총 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**last_spills**|**bigint**|쿼리가 마지막으로 실행 되었을 때의 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**min_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최소 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**max_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최대 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|쿼리에서 읽은 columnstore 세그먼트의 총 합계입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**last_columnstore_segment_reads**|**bigint**|쿼리를 마지막으로 실행 했을 때 읽은 columnstore 세그먼트의 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**min_columnstore_segment_reads**|**bigint**|한 번의 실행 중에 쿼리에서 읽은 최소 columnstore 세그먼트 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**max_columnstore_segment_reads**|**bigint**|한 번의 실행 중에 쿼리에서 읽은 columnstore 세그먼트의 최대 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**total_columnstore_segment_skips**|**bigint**|쿼리에서 건너뛴 columnstore 세그먼트의 총 합계입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**last_columnstore_segment_skips**|**bigint**|쿼리를 마지막으로 실행 한 후 건너뛴 columnstore 세그먼트 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**min_columnstore_segment_skips**|**bigint**|한 번의 실행 중에 쿼리에서 건너뛴 columnstore 세그먼트의 최소 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|    
+|**max_columnstore_segment_skips**|**bigint**|한 번의 실행 중에 쿼리에서 건너뛴 columnstore 세그먼트의 최대 수입니다. null일 수 없습니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|
+|**total_spills**|**bigint**|이 쿼리가 컴파일된 이후 실행 될 때 발생 한 총 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
+|**last_spills**|**bigint**|쿼리가 마지막으로 실행 되었을 때의 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
+|**min_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최소 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
+|**max_spills**|**bigint**|단일 실행 중이 쿼리가 분산 한 최대 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 및 CU3부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 시작|  
+|**pdw_node_id**|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 |**total_page_server_reads**|**bigint**|이 계획이 컴파일된 이후 실행 될 때 수행 된 원격 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
 |**last_page_server_reads**|**bigint**|계획이 마지막으로 실행 되었을 때 수행 된 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
 |**min_page_server_reads**|**bigint**|단일 실행 중이 계획에서 수행한 최소 원격 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL DB Hyperscale |  
@@ -125,8 +125,8 @@ ms.locfileid: "77429017"
   
 ## <a name="permissions"></a>사용 권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
 ## <a name="remarks"></a>설명  
  쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124139"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833237"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`수행할 동작입니다. *action* 은 **nvarchar (50)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**만들기**|*Qualified_table_name* 에서 참조 하는 테이블의 전체 텍스트 인덱스에 대 한 메타 데이터를 만들고이 테이블의 전체 텍스트 인덱스 데이터가 *fulltext_catalog_name*에 있어야 함을 지정 합니다. 또한이 작업은 *unique_index_name* 를 전체 텍스트 키 열로 사용 하도록 지정 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
 |**그림자**|*Qualified_table_name*에 대 한 전체 텍스트 인덱스에 대 한 메타 데이터를 삭제 합니다. 전체 텍스트 인덱스가 활성화된 경우에는 삭제되기 전에 자동으로 비활성화됩니다. 전체 텍스트 인덱스를 삭제하기 전에 열을 제거할 필요는 없습니다.|  
@@ -79,7 +79,7 @@ sp_fulltext_table
  None  
   
 ## <a name="remarks"></a>설명  
- 특정 테이블에 대해 전체 텍스트 인덱스를 비활성화 한 후에는 기존 전체 텍스트 인덱스가 다음 전체 채우기까지 그대로 유지 됩니다. 그러나이 인덱스는 비활성화 된 테이블에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대 한 쿼리를 차단 하기 때문에 사용 되지 않습니다.  
+ 특정 테이블에 대해 전체 텍스트 인덱스를 비활성화 한 후에는 기존 전체 텍스트 인덱스가 다음 전체 채우기까지 그대로 유지 됩니다. 그러나이 인덱스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비활성화 된 테이블에 대 한 쿼리를 차단 하기 때문에 사용 되지 않습니다.  
   
  테이블이 다시 활성화되고 인덱스가 다시 채워지지 않은 경우, 신규가 아닌 남아 있는 모든 전체 텍스트를 사용할 수 있는 열에 대해 쿼리할 때 여전히 이전 인덱스를 사용할 수 있습니다. 삭제된 열에서 가져온 데이터는 모든 전체 텍스트 열 검색을 지정하는 쿼리에서 짝을 찾습니다.  
   

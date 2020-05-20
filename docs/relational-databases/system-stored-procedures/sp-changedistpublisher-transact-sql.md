@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771360"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833438"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |속성|값|Description|  
 |--------------|------------|-----------------|  
-|**활성**|**true**|게시자를 활성화합니다.|  
+|**active**|**true**|게시자를 활성화합니다.|  
 ||**false**|게시자를 비활성화합니다.|  
 |**distribution_db**||배포 데이터베이스의 이름입니다.|  
 |**로그인**||로그인 이름입니다.|  
 |**password**||제공된 로그인에 대한 강력한 암호입니다.|  
-|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.|  
-||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이외 게시자에 대해서는 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*|  
+||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이를 변경할* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다. *게시자.*|  
 |**working_directory**||게시용 데이터 및 스키마 파일을 저장하는 데 사용되는 작업 디렉터리입니다.|  
 |NULL(기본값)||사용 가능한 모든 *속성* 옵션이 출력 됩니다.| 
 |**storage_connection_string**| 액세스 키 | 데이터베이스가 Azure SQL Database Managed Instance 될 때의 작업 디렉터리에 대 한 액세스 키입니다. 

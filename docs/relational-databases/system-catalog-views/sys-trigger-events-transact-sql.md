@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.trigger_events catalog view
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a4a15ab9d38297ee1376d70a817efcf603d47df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091940"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833888"
 ---
 # <a name="systrigger_events-transact-sql"></a>sys.trace_events(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68091940"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**\<Sys. events>에서 상속 된 열**|해당 없음|는 [sys.debug](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)의 **object_id**, **형식** **type_desc** 열을 상속 합니다.|  
+|**\<Sys. events>에서 상속 된 열**|해당 사항 없음|는 [sys.debug](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)의 **object_id**, **형식** **type_desc** 열을 상속 합니다.|  
 |**is_first**|**bit**|트리거가 해당 이벤트에 대해 처음 실행되도록 표시됩니다.|  
 |**is_last**|**bit**|트리거가 해당 이벤트에 대해 마지막에 실행되도록 표시됩니다.|  
 |**event_group_type**|**int**|트리거가 생성되는 이벤트 그룹 또는 Null(이벤트 그룹에 생성되지 않은 경우)입니다.|  

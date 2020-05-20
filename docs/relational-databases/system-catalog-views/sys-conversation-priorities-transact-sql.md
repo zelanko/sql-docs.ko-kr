@@ -19,14 +19,14 @@ helpviewer_keywords:
 - Service Broker, conversations
 - sys.conversation_priorities catalog view
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9398862ba3c86496ce235efc53b750d2c5f91ccf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109475"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832782"
 ---
 # <a name="sysconversation_priorities-transact-sql"></a>sys.conversation_priorities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ORDER BY priority_name, contract_name,
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
- [Transact-sql&#41;&#40;BROKER 우선 순위 만들기](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [CREATE BROKER PRIORITY&#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [DROP BROKER PRIORITY &#40;Transact-sql&#41;](../../t-sql/statements/drop-broker-priority-transact-sql.md)   
  [sys.debug &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)   
  [service_contracts &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-service-contracts-transact-sql.md)  

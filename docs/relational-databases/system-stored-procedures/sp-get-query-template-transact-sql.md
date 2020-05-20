@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124076"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833238"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>인수  
  '*query_text*'  
- 매개 변수가 있는 버전을 생성할 쿼리입니다. '*query_text*'는 작은따옴표로 묶고 N 유니코드 지정자 뒤에와 야 합니다. N '*query_text*'은 (는) @querytext 매개 변수에 할당 된 값입니다. **Nvarchar (max)** 형식입니다.  
+ 매개 변수가 있는 버전을 생성할 쿼리입니다. '*query_text*'는 작은따옴표로 묶고 N 유니코드 지정자 뒤에와 야 합니다. N '*query_text*'은 (는) 매개 변수에 할당 된 값입니다 @querytext . **Nvarchar (max)** 형식입니다.  
   
  @templatetext  
  는 표시 된 대로 제공 된 **nvarchar (max)** 형식의 출력 매개 변수 이며, 매개 변수가 있는 형식의 *query_text* 를 문자열 리터럴로 받습니다.  
   
  @parameters  
- 는 지정 된 대로 제공 된 **nvarchar (max)** 형식의 출력 매개 변수 이며 매개 변수가 있는 @templatetext매개 변수 이름 및 데이터 형식의 문자열 리터럴을 수신 합니다.  
+ 는 지정 된 대로 제공 된 **nvarchar (max)** 형식의 출력 매개 변수 이며 매개 변수가 있는 매개 변수 이름 및 데이터 형식의 문자열 리터럴을 수신 @templatetext 합니다.  
   
 ## <a name="remarks"></a>설명  
  다음 경우 sp_get_query_template은 오류를 반환합니다.  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *QUERY_TEXT* NULL 이거나 유니코드 문자열이 아니거나 구문이 올바르지 않거나 컴파일될 수 없습니다.  
   
- Sp_get_query_template에서 오류를 반환 하는 경우 @templatetext 및 @parameters 출력 매개 변수의 값을 수정 하지 않습니다.  
+ Sp_get_query_template에서 오류를 반환 하는 경우 @templatetext 및 출력 매개 변수의 값을 수정 하지 않습니다 @parameters .  
   
 ## <a name="permissions"></a>사용 권한  
  public 데이터베이스 역할의 멤버여야 합니다.  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2fc5e725a86f974c14922d620c2a55af1340409f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832026"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67940200"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|속성|**sysname**|감사 사양의 이름입니다.|  
+|이름|**sysname**|감사 사양의 이름입니다.|  
 |database_specification_id|**int**|데이터베이스 사양의 ID입니다.|  
 |create_date|**datetime**|감사 사양을 만든 날짜입니다.|  
 |modified_date|**datetime**|감사 사양을 마지막으로 수정한 날짜입니다.|  

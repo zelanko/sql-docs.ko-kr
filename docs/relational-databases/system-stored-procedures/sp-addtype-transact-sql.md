@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addtype
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c876b024b0e8dd218064999adde4a43a18404829
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833592"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="arguments"></a>인수  
 `[ @typename = ] type`별칭 데이터 형식의 이름입니다. 별칭 데이터 형식 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 에 대 한 규칙을 따라야 하며 각 데이터베이스에서 고유 해야 합니다. *형식은* **sysname**이며 기본값은 없습니다.  
   
-`[ @phystype = ] system_data_type`별칭 데이터 형식의 기반이 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 물리적 또는 제공 된 데이터 형식입니다. *system_data_type* 는 **sysname**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
+`[ @phystype = ] system_data_type`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]별칭 데이터 형식의 기반이 되는 물리적 또는 제공 된 데이터 형식입니다.* system_data_type* 는 **sysname**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 ||||  
 |-|-|-|  
@@ -70,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *삭제*  
  소수점 오른쪽에 저장할 수 있는 최대 십진 자릿수를 표시하는 음이 아닌 정수이며 전체 자릿수보다 작거나 같아야 합니다. 자세한 내용은 [decimal 및 numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
-`[ @nulltype = ] 'null_type'`별칭 데이터 형식이 null 값을 처리 하는 방법을 나타냅니다. *null_type* 는 **varchar (** 8 **)** 이며 기본값은 NULL이 고 작은따옴표 (' null ', ' NOT null ' 또는 ' nonull ')로 묶어야 합니다. *Null_type* **sp_addtype**에 의해 명시적으로 정의 되지 않은 경우 현재 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. ** \@Phystype** 가 **bit**이 고 ** \@nulltype** 이 지정 되지 않은 경우 기본값은 NULL이 아닙니다.  
+`[ @nulltype = ] 'null_type'`별칭 데이터 형식이 null 값을 처리 하는 방법을 나타냅니다. *null_type* 는 **varchar (** 8 **)** 이며 기본값은 NULL이 고 작은따옴표 (' null ', ' NOT null ' 또는 ' nonull ')로 묶어야 합니다. *Null_type* **sp_addtype**에 의해 명시적으로 정의 되지 않은 경우 현재 기본 null 허용 여부로 설정 됩니다. GETANSINULL 시스템 함수를 사용하면 현재의 기본 NULL 허용 여부를 확인할 수 있습니다. 이것은 SET 문 또는 ALTER DATABASE를 사용하여 조정될 수 있습니다. NULL 허용 여부는 명시적으로 정의해야 합니다. ** \@ Phystype** 가 **bit**이 고 ** \@ nulltype** 이 지정 되지 않은 경우 기본값은 NULL이 아닙니다.  
   
 > [!NOTE]  
 >  *Null_type* 매개 변수는이 데이터 형식에 대 한 기본 null 허용만 정의 합니다. 테이블을 만드는 동안 별칭 데이터 형식을 사용할 때 NULL 허용 여부를 명시적으로 정의하면 정의된 NULL 허용 여부보다 우선적으로 적용됩니다. 자세한 내용은 [ALTER TABLE &#40;transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) 및 [CREATE TABLE &#40;transact-sql&#41;](../../t-sql/statements/create-table-transact-sql.md)을 참조 하세요.  
@@ -99,7 +99,7 @@ sp_addtype [ @typename = ] type,
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. NULL 값을 허용하지 않는 별칭 데이터 형식 만들기  
- 다음 예에서는 제공 된 **varchar** 데이터 형식을 기반 `ssn` 으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
+ 다음 예에서는 `ssn` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제공 된 **varchar** 데이터 형식을 기반으로 하는 (주민 등록 번호) 라는 별칭 데이터 형식을 만듭니다. `ssn` 데이터 형식은 11자리의 주민 등록 번호(999-99-9999)를 보유하는 열에 사용됩니다. 이 열은 NULL이 될 수 없습니다.  
   
  `varchar(11)`는 문장 부호(괄호)를 포함하고 있으므로 작은따옴표로 묶어야 합니다.  
   

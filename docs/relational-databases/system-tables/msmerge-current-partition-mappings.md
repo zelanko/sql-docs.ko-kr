@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_current_partition_mappings system table
 ms.assetid: a3088840-5a30-40f5-8e8a-aa03afc4905f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a0297b8af4e5cba9fe96df935d6d1b43a8e2d5f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 319b4a3008f398327459a0c90d7d69a4d6d97aef
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907229"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832305"
 ---
 # <a name="msmerge_current_partition_mappings"></a>MSmerge_current_partition_mappings
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_current_partition_mappings** 테이블은 지정 된 변경 된 행이 속한 각 파티션 id에 대해 하나의 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|**Sysmergepublications**에 저장 되는 게시 번호입니다.|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  

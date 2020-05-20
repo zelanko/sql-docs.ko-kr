@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132946"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832747"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132946"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|연결된 서버의 로컬 ID입니다.|  
 |**name**|**sysname**|**Server_id** = 0 인 경우 반환 되는 값은 서버 이름입니다.<br /><br /> **Server_id** > 0 인 경우 반환 되는 값은 연결 된 서버의 로컬 이름입니다.|  
-|**product**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 인스턴스를 나타냅니다.|  
+|**제품은**|**sysname**|연결된 서버의 제품 이름입니다. "SQL Server" 값은의 다른 인스턴스를 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**공급자별**|**sysname**|연결된 서버에 연결하기 위한 OLE DB 공급자 이름입니다.|  
 |**data_source**|**nvarchar(4000)**|OLE DB 데이터 원본 연결 속성입니다.|  
 |**location**|**nvarchar(4000)**|OLE DB 위치 연결 속성입니다. 이 속성이 없으면 NULL입니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68132946"
   
  로컬 서버 (**server_id** = 0)를 보는 데 사용 권한이 필요 하지 않습니다.  
   
- 연결 된 서버 또는 원격 서버를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **public** 서버 역할에 대 한 기본 로그인 매핑을 만듭니다. 기본 로그인 매핑은 모든 로그인이 모든 연결 된 서버 및 원격 서버를 볼 수 있음을 의미 합니다. 이러한 서버에 대 한 표시 여부를 제한 하려면 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) 를 실행 하 고 *locallogin* 매개 변수에 NULL을 지정 하 여 기본 로그인 매핑을 제거 합니다.  
+ 연결 된 서버 또는 원격 서버를 만들 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **public** 서버 역할에 대 한 기본 로그인 매핑을 만듭니다. 기본 로그인 매핑은 모든 로그인이 모든 연결 된 서버 및 원격 서버를 볼 수 있음을 의미 합니다. 이러한 서버에 대 한 표시 여부를 제한 하려면 [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) 를 실행 하 고 *locallogin* 매개 변수에 NULL을 지정 하 여 기본 로그인 매핑을 제거 합니다.  
   
  기본 로그인 매핑이 삭제되면 연결된 로그인 또는 원격 로그인으로 명시적으로 추가된 사용자만 로그인 권한이 있으며 연결된 서버 또는 원격 서버를 볼 수 있습니다.  기본 로그인 매핑 후에 모든 연결 된 서버 및 원격 서버를 보려면 다음 권한이 필요 합니다.  
   

@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_pkeys
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 999b630a90f6413a1442bd8719e7714071f3cf14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056419"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832605"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,19 +42,19 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @table_name= ] '*이름*'  
+ [ @table_name =] '*name*'  
  정보를 반환할 테이블입니다. *name* 은 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
- [ @table_owner= ] '*owner*'  
+ [ @table_owner =] '*owner*'  
  지정된 테이블의 소유자를 지정합니다. *owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Owner* 를 지정 하지 않은 경우 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정된 이름의 테이블을 소유한 경우 해당 테이블의 열이 반환됩니다. *Owner* 를 지정 하지 않은 경우 현재 사용자가 지정 된 *이름의*테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *이름의* 테이블을 찾습니다. 테이블이 있을 경우 해당 테이블의 열이 반환됩니다.  
   
- [ @table_qualifier= ] '*한정자*'  
+ [ @table_qualifier =] '*한정자*'  
  테이블 식별자입니다. *한정자* 는 **sysname**이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   

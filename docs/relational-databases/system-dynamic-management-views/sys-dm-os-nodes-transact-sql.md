@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3069bbf376fbd1a94be6697e6bbb4ea2552c5c27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265730"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833747"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "68265730"
 SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷한 노드 구조를 만듭니다. 이러한 구조는 [소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) 를 사용 하 여 변경 하 여 사용자 지정 노드 레이아웃을 만들 수 있습니다.  
 
 > [!NOTE]
-> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 특정 하드웨어 구성에 대해 소프트 NUMA를 자동으로 사용 합니다. 자세한 내용은 [자동 소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)를 참조 하세요.
+> 부터 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 특정 하드웨어 구성에 대해 소프트 NUMA를 자동으로 사용 합니다. 자세한 내용은 [자동 소프트 NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa)를 참조 하세요.
   
 다음 표에서는 이러한 노드에 대한 정보를 제공합니다.  
   
 > [!NOTE]
-> 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이 DMV를 호출 하려면 이름 **sys. dm_pdw_nodes_os_nodes**를 사용 합니다.  
+> 또는에서이 DMV를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_nodes**를 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -59,12 +59,12 @@ SQLOS라는 내부 구성 요소는 하드웨어 프로세서 위치와 비슷�
 |online_scheduler_mask|**bigint**|이 노드에 대한 프로세스 선호도 마스크를 식별합니다.|  
 |processor_group|**smallint**|이 노드에 대한 프로세서 그룹을 식별합니다.|  
 |cpu_count |**int** |이 노드에 사용할 수 있는 Cpu 수입니다. |
-|pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|이 배포가 설정 된 노드의 식별자입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>사용 권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="see-also"></a>참고 항목    
  [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c57822529290a6ae4c3e1b5c96f712dbd626d04d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769033"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833634"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,24 +75,24 @@ sp_addsubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication=] '*게시*'  
+ [ @publication =] '*게시*'  
  게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
- [ @article=] '*article*'  
+ [ @article =] '*article*'  
  게시를 구독하는 아티클입니다. *article* 은 **sysname**이며 기본값은 all입니다. all인 경우 해당 게시의 모든 아티클에 구독이 추가됩니다. Oracle 게시자의 경우 all 또는 NULL 값만 지원됩니다.  
   
- [ @subscriber=] '*구독자*'  
+ [ @subscriber =] '*구독자*'  
  구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
   
- [ @destination_db=] '*destination_db*'  
+ [ @destination_db =] '*destination_db*'  
  복제된 데이터를 추가할 대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 NULL입니다. NULL 인 경우 *destination_db* 는 게시 데이터베이스의 이름으로 설정 됩니다. Oracle 게시자의 경우 *destination_db* 를 지정 해야 합니다. SQL Server 이외 구독자의 경우 *destination_db*의 값 (기본 대상)을 지정 합니다.  
   
- [ @sync_type=] '*sync_type*'  
+ [ @sync_type =] '*sync_type*'  
  구독 동기화 유형입니다. *sync_type* 는 **nvarchar (255)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|none|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고:이 옵션은 더 이상 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
+|없음|게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있습니다.<br /><br /> 참고:이 옵션은 더 이상 사용 되지 않습니다. 대신 replication support only를 사용하십시오.|  
 |automatic(기본값)|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
 |replication support only|필요한 경우 구독자에서 업데이트 구독을 지원하는 아티클 사용자 지정 저장 프로시저 및 트리거의 자동 생성을 제공합니다. 이 옵션은 게시된 테이블에 대한 스키마 및 초기 데이터가 구독자에 이미 있다고 가정합니다. 피어 투 피어 트랜잭션 복제 토폴로지를 구성하는 경우 토폴로지의 모든 노드에 있는 데이터가 동일해야 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.<br /><br /> *SQL Server 이외 게시에 대한 구독에 대해서는 지원되지 않습니다.*|  
 |initialize with backup|게시된 테이블의 스키마 및 초기 데이터는 게시 데이터베이스의 백업에서 가져옵니다. 구독자에 게시 데이터베이스 백업에 대한 액세스 권한이 있다고 가정합니다. 백업에 대 한 백업 및 미디어 유형의 위치는 *backupdevicename* 이름 및 *backupdevicetype*에서 지정 합니다. 이 옵션을 사용하는 경우 구성 중에 피어 투 피어 트랜잭션 복제 토폴로지를 정지할 필요가 없습니다.<br /><br /> *SQL Server 이외 게시에 대한 구독에 대해서는 지원되지 않습니다.*|  
@@ -101,7 +101,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  시스템 테이블 및 데이터는 항상 전송됩니다.  
   
- [ @status=] '*상태*'  
+ [ @status =] '*상태*'  
  동기화 상태입니다. *status* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수를 명시적으로 설정하지 않으면 복제 시 자동으로 다음 값 중 하나로 설정됩니다.  
   
 |값|설명|  
@@ -109,13 +109,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |활성|구독이 초기화되고 변경 내용을 받아들일 준비가 되었습니다. 이 옵션은 *sync_type* 값이 none, initialize with backup 또는 replication support only 인 경우에 설정 됩니다.|  
 |subscribed|구독을 초기화해야 합니다. 이 옵션은 *sync_type* 값이 자동 인 경우에 설정 됩니다.|  
   
- [ @subscription_type=] '*subscription_type*'  
+ [ @subscription_type =] '*subscription_type*'  
  구독 유형입니다. *subscription_type* 은 **nvarchar (4)** 이며 기본값은 push입니다. push 또는 pull이 될 수 있습니다. push 구독의 배포 에이전트는 배포자에 있고 pull 구독의 배포 에이전트는 구독자에 있습니다. *subscription_type* 를 가져와서 게시자에 게 알려진 명명 된 끌어오기 구독을 만들 수 있습니다. 자세한 내용은 [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
 > [!NOTE]  
 >  익명 구독은 이 저장 프로시저를 사용할 필요가 없습니다.  
   
- [ @update_mode=] '*update_mode*'  
+ [ @update_mode =] '*update_mode*'  
  업데이트의 유형입니다. *update_mode* 은 **nvarchar (30)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -128,7 +128,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  구독 중인 게시에서 DTS를 허용 하는 경우에는 synctran 및 큐에 대기 된 tran 값을 사용할 수 없습니다.  
   
- [ @loopback_detection=] '*loopback_detection*'  
+ [ @loopback_detection =] '*loopback_detection*'  
  배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보낼지 여부를 지정합니다. *loopback_detection* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |false|배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자에게 보냅니다.|  
 |NULL(기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서는 자동으로 true로 설정되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해서는 자동으로 false로 설정됩니다.|  
   
- [ @frequency_type=] *frequency_type*  
+ [ @frequency_type =] *frequency_type*  
  배포 태스크를 예약하는 빈도입니다. *frequency_type* 은 int 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -151,10 +151,10 @@ sp_addsubscription [ @publication = ] 'publication'
 |64 (기본값)|자동 시작|  
 |128|되풀이|  
   
- [ @frequency_interval=] *frequency_interval*  
+ [ @frequency_interval =] *frequency_interval*  
  *Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다. *frequency_interval* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @frequency_relative_interval=] *frequency_relative_interval*  
+ [ @frequency_relative_interval =] *frequency_relative_interval*  
  배포 에이전트의 날짜입니다. 이 매개 변수는 *frequency_type* 이 32 (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -166,10 +166,10 @@ sp_addsubscription [ @publication = ] 'publication'
 |16|마지막|  
 |NULL(기본값)||  
   
- [ @frequency_recurrence_factor=] *frequency_recurrence_factor*  
+ [ @frequency_recurrence_factor =] *frequency_recurrence_factor*  
  *Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @frequency_subday=] *frequency_subday*  
+ [ @frequency_subday =] *frequency_subday*  
  정의된 기간 동안 다시 예약하는 빈도(분)입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -177,64 +177,64 @@ sp_addsubscription [ @publication = ] 'publication'
 |1|한 번|  
 |2|초|  
 |4|Minute|  
-|8|Hour|  
+|8|시간|  
 |NULL||  
   
- [ @frequency_subday_interval=] *frequency_subday_interval*  
+ [ @frequency_subday_interval =] *frequency_subday_interval*  
  *Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @active_start_time_of_day=] *active_start_time_of_day*  
+ [ @active_start_time_of_day =] *active_start_time_of_day*  
  하루 중에서 배포 에이전트가 처음으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_start_time_of_day* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @active_end_time_of_day=] *active_end_time_of_day*  
+ [ @active_end_time_of_day =] *active_end_time_of_day*  
  하루 중에서 배포 에이전트가 마지막으로 실행되도록 예약된 시간이며 HHMMSS 형식으로 표시됩니다. *active_end_time_of_day* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @active_start_date=] *active_start_date*  
+ [ @active_start_date =] *active_start_date*  
  배포 에이전트가 처음으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_start_date* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @active_end_date=] *active_end_date*  
+ [ @active_end_date =] *active_end_date*  
  배포 에이전트가 마지막으로 실행되도록 예약된 날짜이며 YYYYMMDD 형식으로 표시됩니다. *active_end_date* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @optional_command_line=] '*optional_command_line*'  
+ [ @optional_command_line =] '*optional_command_line*'  
  실행할 선택적 명령 프롬프트입니다. *optional_command_line* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다.  
   
- [ @reserved=] '*예약*'  
+ [ @reserved =] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Windows 동기화 관리자를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구독을 동기화 할 수 있는지 여부입니다. *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. false인 경우 구독이 Windows 동기화 관리자에 등록되지 않습니다. true인 경우에는 구독이 Windows 동기화 관리자에 등록되며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하지 않고 구독을 동기화할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.  
+ [ @enabled_for_syncmgr =] '*enabled_for_syncmgr*'  
+ Windows 동기화 관리자를 통해 구독을 동기화 할 수 있는지 여부입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. false인 경우 구독이 Windows 동기화 관리자에 등록되지 않습니다. true인 경우에는 구독이 Windows 동기화 관리자에 등록되며 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하지 않고 구독을 동기화할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.  
   
- [ @offloadagent= ] '*remote_agent_activation*'  
+ [ @offloadagent =] '*remote_agent_activation*'  
  에이전트를 원격으로 활성화할 수 있음을 나타냅니다. *remote_agent_activation* 은 **bit** 이며 기본값은 0입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전의 스크립트와의 호환성을 위해서만 유지 관리됩니다.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver =] '*remote_agent_server_name*'  
  원격 활성화에 사용할 서버의 네트워크 이름을 지정합니다. *remote_agent_server_name*는 **sysname**이며 기본값은 NULL입니다.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name =] '*dts_package_name*'  
  DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. *dts_package_name* 는 **sysname** 이며 기본값은 NULL입니다. 예를 들어 DTSPub_Package의 패키지를 지정하려면 매개 변수가 `@dts_package_name = N'DTSPub_Package'`가 되어야 합니다. 이 매개 변수는 밀어넣기 구독에 사용할 수 있습니다. DTS 패키지 정보를 끌어오기 구독에 추가하려면 sp_addpullsubscription_agent를 사용하십시오.  
   
- [ @dts_package_password= ] '*dts_package_password*'  
+ [ @dts_package_password =] '*dts_package_password*'  
  패키지의 암호를 지정합니다. *dts_package_password* 는 **sysname** 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  *Dts_package_name* 지정 된 경우 암호를 지정 해야 합니다.  
   
- [ @dts_package_location= ] '*dts_package_location*'  
+ [ @dts_package_location =] '*dts_package_location*'  
  패키지 위치를 지정합니다. *dts_package_location* 은 **nvarchar (12)** 이며 기본값은 배포자입니다. 패키지 위치는 distributor 또는 subscriber일 수 있습니다.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name =] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*게시자*'  
- 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+ [ @publisher =] '*게시자*'  
+ 이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
+>  게시자에 대해 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype =] '*backupdevicetype*'  
  백업에서 구독자를 초기화할 때 사용되는 백업 디바이스의 유형을 지정합니다. *backupdevicetype* 은 **nvarchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -245,34 +245,34 @@ sp_addsubscription [ @publication = ] 'publication'
   
  *backupdevicetype* 는 *sync_method*이 initialize_with_backup으로 설정 된 경우에만 사용 됩니다.  
   
- [ @backupdevicename= ] '*backupdevicename*이름 '  
+ [ @backupdevicename =] '*backupdevicename*이름 '  
  백업에서 구독자를 초기화할 때 사용되는 디바이스의 이름을 지정합니다. *backupdevicename* 이름은 **nvarchar (1000)** 이며 기본값은 NULL입니다.  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword =] '*mediapassword*'  
  미디어를 포맷할 때 암호를 설정한 경우 미디어 세트의 암호를 지정합니다. *mediapassword* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*암호*'  
+ [ @password =] '*password*'  
  백업을 만들 때 암호를 설정한 경우 백업의 암호를 지정합니다. *password*는 **sysname**이며 기본값은 NULL입니다.  
   
- [ @fileidhint= ] *fileidhint*  
+ [ @fileidhint =] *fileidhint*  
  복원할 백업 세트의 서수 값을 식별합니다. *fileidhint* 은 **int**이며 기본값은 NULL입니다.  
   
- [ @unload= ] *언로드*  
+ [ @unload =] *unload*  
  백업으로 초기화를 완료한 후 테이프 백업 디바이스를 언로드할지 여부를 지정합니다. *unload* 는 **bit**이며 기본값은 1입니다. 1은 테이프를 언로드하도록 지정합니다. *unload* 는 *backupdevicetype* 가 tape 인 경우에만 사용 됩니다.  
   
- [ @subscriptionlsn= ] *subscriptionlsn*  
- 구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. 모든 관련 트랜잭션이 @sync_type 새 노드에 복제 되도록 하려면 initialize from lsn 값과 함께 사용 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
+ [ @subscriptionlsn =] *subscriptionlsn*  
+ 구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. @sync_type모든 관련 트랜잭션이 새 노드에 복제 되도록 하려면 initialize from lsn 값과 함께 사용 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  
   
- [ @subscriptionstreams= ] *subscriptionstreams*  
+ [ @subscriptionstreams =] *subscriptionstreams*  
  단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지하면서 변경 내용의 일괄 처리를 구독자에 대해 병렬로 적용하기 위해 배포 에이전트당 허용된 연결 수입니다. *subscriptionstreams* 은 **tinyint**이며 기본값은 NULL입니다. 1에서 64 사이의 값 범위가 지원됩니다. 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자, Oracle 게시자 또는 피어 투 피어 구독에 대해서는이 매개 변수가 지원 되지 않습니다. 구독 스트림을 사용할 때마다 agent_id가 NULL로 설정된 상태로 추가 행이 msreplication_subscriptions 테이블(스트림당 1개)에 추가됩니다.  
   
 > [!NOTE]  
 >  Subscriptionstreams는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 제공하도록 구성된 아티클에 대해서는 작동하지 않습니다. subscriptionstreams를 사용하려면 대신 저장 프로시저 호출을 제공하도록 아티클을 구성하십시오.  
   
- [ @subscriber_type=] *subscriber_type*  
+ [ @subscriber_type =] *subscriber_type*  
  구독자의 유형입니다. *subscriber_type* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
@@ -282,7 +282,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |3|OLE DB 공급자|  
   
- [ @memory_optimized=] *memory_optimized*  
+ [ @memory_optimized =] *memory_optimized*  
  구독에서 메모리 액세스에 최적화 된 테이블을 지원함을 나타냅니다. *memory_optimized* 는 **bit**입니다. 여기서 1은 true (구독에서 메모리 액세스에 최적화 된 테이블을 지원함)입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -291,7 +291,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  sp_addsubscription은 스냅샷 복제 및 트랜잭션 복제에 사용됩니다.  
   
- sysadmin 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 sp_addsubscription을 실행할 경우 배포 에이전트 작업이 암시적으로 생성되어 SQL Server 에이전트 서비스 계정에서 실행됩니다. [Sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 를 실행 하 고 및 @job_login @job_password에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조 하세요.  
+ sysadmin 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 sp_addsubscription을 실행할 경우 배포 에이전트 작업이 암시적으로 생성되어 SQL Server 에이전트 서비스 계정에서 실행됩니다. [Sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 를 실행 하 고 및에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다 @job_login @job_password . 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조 하세요.  
   
  sp_addsubscription은 ODBC 및 OLE DB 구독자가 다음과 같은 게시에 액세스하는 것을 막습니다.  
   

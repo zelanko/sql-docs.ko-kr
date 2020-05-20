@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108507"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831811"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>인수  
  *cursor*  
- 는에서 *handle* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 되 고 sp_cursoropen에서 반환 하는 핸들 값입니다. *커서* 는 **int** 입력 값에 대해를 호출 하는 필수 매개 변수입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.  
+ 는에서 *handle* 생성 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 sp_cursoropen에서 반환 하는 핸들 값입니다. *커서* 는 **int** 입력 값에 대해를 호출 하는 필수 매개 변수입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.  
   
  *fetchtype*  
  인출할 커서 버퍼를 지정합니다. *fetchtype* 은 다음 정수 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  

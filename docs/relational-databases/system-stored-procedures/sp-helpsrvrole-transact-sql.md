@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrole
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9abcbec940d9afa7b5aeb36183610b471bb3a3df
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006122"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833196"
 ---
 # <a name="sp_helpsrvrole-transact-sql"></a>sp_helpsrvrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>인수  
 `[ @srvrolename = ] 'role'`고정 서버 역할의 이름입니다. *role* 은 **sysname**이며 기본값은 NULL입니다. *role* 은 다음 값 중 하나일 수 있습니다.  
   
-|고정 서버 역할|Description|  
+|고정 서버 역할|설명|  
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
@@ -60,14 +60,14 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|서버 역할의 이름입니다.|  
-|Description|**sysname**|ServerRole에 대한 설명입니다.|  
+|설명|**sysname**|ServerRole에 대한 설명입니다.|  
   
 ## <a name="remarks"></a>설명  
  고정 서버 역할은 서버 수준에서 정의되며 서버 수준의 특정 관리 작업을 수행할 사용 권한을 갖습니다. 고정 서버 역할은 추가, 제거, 변경할 수 없습니다.  
   
  서버 역할에서 멤버를 추가 하거나 제거 하려면 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)를 참조 하세요.  
   
- 모든 로그인은 public의 멤버입니다. 는 내부적으로 public을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할로 구현 하지 않기 때문에 sp_helpsrvrole은 public 역할을 인식 하지 못합니다.  
+ 모든 로그인은 public의 멤버입니다. 는 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] public을 역할로 구현 하지 않기 때문에 sp_helpsrvrole은 public 역할을 인식 하지 못합니다.  
   
  sp_helpsrvrole는 사용자 정의 서버 역할을 인수로 사용 하지 않습니다. 사용자 정의 서버 역할을 나열 하려면 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)의 예제를 참조 하세요.  
   

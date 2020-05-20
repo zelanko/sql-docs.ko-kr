@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124239"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833280"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -59,10 +59,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
-|키|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
+|Key|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
   
  <sup>*</sup>Key의 데이터 형식은 기본 테이블에 있는 전체 텍스트 키 열의 데이터 형식과 동일 합니다.  
   
@@ -89,10 +89,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>예  
   
 > [!NOTE]  
->  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. `ProductReview` [TRANSACT-SQL&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
+>  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. `ProductReview` [Transact-sql&#41;&#40;전체 텍스트 인덱스 만들기 ](../../t-sql/statements/create-fulltext-index-transact-sql.md)에서 테이블에 대해 제공 된 예를 실행 하 여이 인덱스를 만들 수 있습니다.  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 모든 Key 및 DocId 값 가져오기  
- 다음 예에서는 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 문을 사용 하 여 지역 변수 `@table_id` 를 만들고 `ProductReview` 테이블의 ID를 해당 값으로 할당 합니다. 이 예에서는 *table_id* 매개 `@table_id` 변수에 대해를 지정 하 **sp_fulltext_keymappings** 를 실행 합니다.  
+ 다음 예에서는 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 문을 사용 하 여 지역 변수를 만들고 `@table_id` 테이블의 ID를 `ProductReview` 해당 값으로 할당 합니다. 이 예에서는 **sp_fulltext_keymappings** `@table_id` *table_id* 매개 변수에 대해를 지정 하 sp_fulltext_keymappings를 실행 합니다.  
   
 > [!NOTE]  
 >  *Table_id* 매개 변수만 **sp_fulltext_keymappings** 를 사용 하는 것은 작은 테이블에 적합 합니다.  
@@ -117,7 +117,7 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. 특정 Key 값에 대한 DocId 값 가져오기  
- 다음 예에서는 DECLARE 문을 사용하여 지역 변수 `@table_id`를 만들고 `ProductReview` 테이블의 ID를 해당 값으로 할당합니다. 이 예에서는 *table_id* 매개 `@table_id` 변수에 대해를 지정 하 **sp_fulltext_keymappings** 를 실행 하 고, *docid* 매개 변수에 NULL을 지정 하 고, *키* 매개 변수에 대해 4를 실행 합니다.  
+ 다음 예에서는 DECLARE 문을 사용하여 지역 변수 `@table_id`를 만들고 `ProductReview` 테이블의 ID를 해당 값으로 할당합니다. 이 예에서는 table_id 매개 변수에 대해를 지정 하 **sp_fulltext_keymappings** 를 실행 하 `@table_id` 고, *docid* 매개 변수에 NULL을 지정 하 고, *table_id* *키* 매개 변수에 대해 4를 실행 합니다.  
   
 > [!NOTE]  
 >  작은 테이블에 적합 한 *table_id* 매개 변수가 **sp_fulltext_keymappings** 사용 합니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_delete_proxy
 - DROP PROXY statement
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53f9e9f32a017427bc23dcf618cd119daa94bdbc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305103"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833319"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  None  
   
 ## <a name="remarks"></a>설명  
- Proxy_name 또는 ** \@proxy_id** 를 지정 해야 합니다. ** \@** 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
+ ** \@ Proxy_name** 또는 ** \@ proxy_id** 를 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
  작업 단계가 지정된 프록시를 참조할 경우 해당 프록시는 삭제할 수 없으며 저장 프로시저가 실패합니다.  
   

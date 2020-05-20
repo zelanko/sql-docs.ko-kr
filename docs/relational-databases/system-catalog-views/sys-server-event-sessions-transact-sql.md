@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 142e4bfd81a60ec6f80294bce16bfb7a59d3211a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313709"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832743"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있는 이벤트 세션 정의를 모두 나열합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 고유한 ID입니다. Null을 허용하지 않습니다.|  
 |name|**sysname**|이벤트 세션을 식별하기 위한 사용자 정의 이름입니다. 이름은 고유 합니다. Null을 허용하지 않습니다.|  

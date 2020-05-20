@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96ab4f3fa8d3b756a40b4ca0aa347f2827aab66e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769050"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833690"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**1**|한 번|  
 |**2**|초|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 **5**입니다.  
   
@@ -104,10 +104,10 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date`배포 에이전트가 마지막으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 의미 하는 99991231입니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
+>  게시자에 대해 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

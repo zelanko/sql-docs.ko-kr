@@ -1,5 +1,5 @@
 ---
-title: cdc. &lt;capture_instance&gt;_CT (transact-sql) | Microsoft Docs
+title: cdc. &lt; capture_instance &gt; _CT (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6595fa2a2462463b9ecc64778af1d72e588477d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72908402"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833100"
 ---
-# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc. &lt;capture_instance&gt;_CT (transact-sql)
+# <a name="cdcltcapture_instancegt_ct-transact-sql"></a>cdc. &lt; capture_instance &gt; _CT (transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   원본 테이블에서 변경 데이터 캡처를 활성화할 때 생성된 변경 테이블입니다. 이 테이블은 원본 테이블에 대해 수행된 각 삽입 및 삭제 작업당 한 개의 행을, 업데이트 작업당 두 개의 행을 반환합니다. 원본 테이블이 활성화될 때 변경 테이블의 이름이 지정되지 않을 경우 이름이 파생됩니다. 이름 형식은 cdc입니다. _CT *capture_instance* *capture_instance* 은 원본 테이블의 스키마 이름이 고 *schema_table*형식으로 된 원본 테이블 이름입니다. 예를 들어 **AdventureWorks** 예제 데이터베이스의 테이블 **Person 주소** 에 변경 데이터 캡처가 설정 되어 있으면 파생 된 변경 테이블 이름은 cdc가 됩니다 **. Person_Address_CT**.  
@@ -33,7 +33,7 @@ ms.locfileid: "72908402"
   
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN(로그 시퀀스 번호)입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블에 대 한 삭제 작업이 두 행을 제거 하는 경우 변경 테이블에는 두 개의 행이 포함 되 고 각 행에는 동일한 **__ $ start_lsn** 값이 포함 됩니다.|  
 |**__ $ end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
@@ -45,7 +45,7 @@ ms.locfileid: "72908402"
   
 ## <a name="remarks"></a>설명  
 
-열 `__$command_id` 이 열은 2012 ~ 2016 버전의 누적 업데이트에서 도입 되었습니다. 버전 및 다운로드 정보는 기술 자료 문서 3030352의 [FIX: Microsoft SQL Server 데이터베이스에 대 한 변경 데이터 캡처를 사용 하도록 설정한 후 업데이트 된 행에 대해 변경 테이블을 잘못 정렬](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)합니다.  자세한 내용은 [SQL Server 2012, 2014 및 2016에 대 한 최신 CU로 업그레이드 한 후 CDC 기능이 중단 될 수 있음](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)을 참조 하세요.
+`__$command_id`열이 열은 2012 ~ 2016 버전의 누적 업데이트에서 도입 되었습니다. 버전 및 다운로드 정보는 기술 자료 문서 3030352의 [FIX: Microsoft SQL Server 데이터베이스에 대 한 변경 데이터 캡처를 사용 하도록 설정한 후 업데이트 된 행에 대해 변경 테이블을 잘못 정렬](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)합니다.  자세한 내용은 [SQL Server 2012, 2014 및 2016에 대 한 최신 CU로 업그레이드 한 후 CDC 기능이 중단 될 수 있음](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)을 참조 하세요.
 
 ## <a name="captured-column-data-types"></a>캡처된 열 데이터 형식  
  이 테이블에 포함된 캡처된 열의 데이터 형식과 값은 다음 항목을 제외하고 해당하는 원본 열과 동일합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "72908402"
  그러나 이러한 열의 값은 원본 열 값과 같습니다.  
   
 ### <a name="large-object-data-types"></a>큰 개체 데이터 형식  
- __ $ Operation이 1 또는 \_ \_$operation = 3 인 경우에는 **image**, **text**및 **ntext** 데이터 형식의 열에 항상 **NULL** 값이 할당 됩니다. 업데이트 중에 열이 변경 되지 않은 경우 **varbinary (max)**, **varchar (max)** 또는 **nvarchar (max)** 데이터 형식의 \_ \_열에는 값이 3 인 $operation 경우 **NULL** 값이 할당 됩니다. $Operation \_ \_= 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함 된 계산 열은 항상 **NULL**값을 갖습니다.  
+ __ $ Operation이 **image**1 또는 **text** **ntext** **NULL** \_ $operation = 3 인 경우에는 image, text 및 ntext 데이터 형식의 열에 항상 NULL 값이 할당 됩니다 \_ . 업데이트 중에 열 **NULL** 이 변경 되지 않은 경우 **varbinary (max)**, **varchar (max)** 또는 **nvarchar (max)** 데이터 형식의 열에는 값이 3 인 $operation 경우 NULL 값이 할당 됩니다 \_ \_ . \_ \_ $Operation = 1 인 경우에는 삭제 시 이러한 열에 해당 값이 할당 됩니다. 캡처 인스턴스에 포함 된 계산 열은 항상 **NULL**값을 갖습니다.  
   
  기본적으로 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 캡처된 열에 추가할 수 있는 최대 크기는 65,536바이트(64KB)입니다. 이 크기를 늘려 더 큰 LOB 데이터를 지원 하려면 최대 [텍스트 복제 크기 서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 을 사용 하 여 최대 크기를 더 크게 지정 합니다. 자세한 내용은 [max text repl size 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 참조하세요.  
   

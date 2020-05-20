@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123986"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833182"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  와 DBMS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템) 간에 지정 된 데이터 형식에 대 한 기본 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (데이터베이스 관리 시스템) 간에 지정 된 데이터 형식에 대 한 기본 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,7 +101,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_getdefaultdatatypemapping** 는와 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS 간에 모든 유형의 복제에 사용 됩니다.  
+ **sp_getdefaultdatatypemapping** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 비 DBMS 간에 모든 유형의 복제에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **sp_getdefaultdatatypemapping** 는 지정 된 원본 데이터 형식과 가장 일치 하는 기본 대상 데이터 형식을 반환 합니다.  
   

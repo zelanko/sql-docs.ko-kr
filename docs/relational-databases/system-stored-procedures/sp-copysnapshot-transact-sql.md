@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9d9eca16209dd9cfc5695ae56daf929d067ab6e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154602"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831802"
 ---
 # <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  지정 된 게시의 스냅숏 폴더를 ** \@destination_folder**에 나열 된 폴더로 복사 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
+  지정 된 게시의 스냅숏 폴더를 ** \@ destination_folder**에 나열 된 폴더로 복사 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_copysnapshot** 은 모든 유형의 복제에 사용 됩니다. 버전 7.0 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 이전 버전을 실행 하는 구독자는 대체 스냅숏 위치를 사용할 수 없습니다.  
+ **sp_copysnapshot** 은 모든 유형의 복제에 사용 됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 및 이전 버전을 실행 하는 구독자는 대체 스냅숏 위치를 사용할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_copysnapshot**을 실행할 수 있습니다.  

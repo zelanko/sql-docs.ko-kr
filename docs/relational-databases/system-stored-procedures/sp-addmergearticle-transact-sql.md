@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174000"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831895"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_add_targetservergroup(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. 이름은 반드시 게시 내에서 고유해야 합니다. *article* 은 **sysname**이며 기본값은 없습니다. *아티클은* 를 실행 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 로컬 컴퓨터에 있어야 하며 식별자에 대 한 규칙을 준수 해야 합니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. 이름은 반드시 게시 내에서 고유해야 합니다. *article* 은 **sysname**이며 기본값은 없습니다. *아티클은* 를 실행 하는 로컬 컴퓨터에 있어야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하며 식별자에 대 한 규칙을 준수 해야 합니다.  
   
 `[ @source_object = ] 'source_object'`게시할 데이터베이스 개체입니다. *source_object* 는 **sysname**이며 기본값은 없습니다. 병합 복제를 사용 하 여 게시할 수 있는 개체 유형에 대 한 자세한 내용은 [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)를 참조 하세요.  
   
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|**Xml** 열에 인덱스를 복제 합니다.|  
 |**0x8000000**|구독자에 없는 스키마를 만듭니다.|  
 |**0x10000000**|구독자에서 **xml** 열을 **ntext** 로 변환 합니다.|  
-|**0x20000000**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 도입 된 large object 데이터 형식 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar (max)**, **varchar (max)** 및 **varbinary (max)**)을에서 지원 되는 데이터 형식으로 변환 합니다.|  
+|**0x20000000**|에서 도입 된 large object 데이터 형식 (**nvarchar (max)**, **varchar (max)** 및 **varbinary (max)**) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 을에서 지원 되는 데이터 형식으로 변환 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 합니다.|  
 |**0x40000000**|사용 권한을 복제합니다.|  
 |**0x80000000**|게시의 일부가 아닌 개체에 대한 종속성을 삭제합니다.|  
-|**0x100000000**|**Varbinary (max)** 열에 지정 된 경우이 옵션을 사용 하 여 FILESTREAM 특성을 복제 합니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블은이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 스키마 옵션이 설정 된 방법에 관계 없이 구독자에 복제할 수 없습니다. 관련 옵션 **0x800000000**을 참조 하십시오.|  
-|**0x200000000**|에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 도입 된 날짜 및 시간 데이터 형식 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**, **time**, **datetimeoffset**및 **datetime2**)을 이전 버전의에서 지원 되는 데이터 형식으로 변환 합니다.|  
+|**0x100000000**|**Varbinary (max)** 열에 지정 된 경우이 옵션을 사용 하 여 FILESTREAM 특성을 복제 합니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 은이 스키마 옵션이 설정 된 방법에 관계 없이 구독자에 복제할 수 없습니다. 관련 옵션 **0x800000000**을 참조 하십시오.|  
+|**0x200000000**|에서 도입 된 날짜 및 시간 데이터 형식 (**date**, **time**, **datetimeoffset**및 **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 을 이전 버전의에서 지원 되는 데이터 형식으로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 |**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅샷을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조 하세요.<br /><br /> 관련 옵션인 **0x100000000**을 참조 하십시오.|  
-|**0x1000000000**|UDT 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있도록 CLR (공용 언어 런타임) udt (사용자 정의 형식)를 **varbinary (max)** 로 변환 합니다.|  
-|**0x2000000000**|**Hierarchyid 데이터 형식을** **varbinary (max)** 로 변환 하 여 **hierarchyid** 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있습니다. 복제 된 테이블에서 **hierarchyid** 열을 사용 하는 방법에 대 한 자세한 내용은 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)를 참조 하세요.|  
+|**0x1000000000**|UDT 형식의 열을를 실행 하는 구독자로 복제할 수 있도록 CLR (공용 언어 런타임) Udt (사용자 정의 형식)를 **varbinary (max)** 로 변환 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 합니다.|  
+|**0x2000000000**|**Hierarchyid 데이터 형식을** **varbinary (max)** 로 변환 하 여 **hierarchyid** 형식의 열을를 실행 하는 구독자로 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 복제 된 테이블에서 **hierarchyid** 열을 사용 하는 방법에 대 한 자세한 내용은 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)를 참조 하세요.|  
 |**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조 하세요.|  
-|**0x8000000000**|**Geography** 및 **geometry** 데이터 형식을 **varbinary (max)** 로 변환 하 여 이러한 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있습니다.|  
+|**0x8000000000**|**Geography** 및 **geometry** 데이터 형식을 **varbinary (max)** 로 변환 하 여 이러한 형식의 열을를 실행 하는 구독자로 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 |**0x10000000000**|**Geography** 및 **geometry**형식의 열에 대 한 인덱스를 복제 합니다.|  
   
  이 값이 NULL인 경우 시스템은 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다. 설명 섹션의 **기본 스키마 옵션** 표에서는 아티클 유형에 따라 선택 되는 값을 보여 줍니다. 또한 모든 복제 유형 및 아티클 유형에 대해 모든 *schema_option* 값이 유효 하지는 않습니다. 설명에 지정 된 **유효한 스키마 옵션** 표에서는 지정 된 아티클 유형에 대해 지정할 수 있는 옵션을 보여 줍니다.  
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`자동 id 범위 관리가 사용 될 때 게시자와 구독자 모두에 게 할당 되는 id 범위 크기를 제어 합니다. *identity_range* 는 **bigint**이며 기본값은 NULL입니다. *Identityrangemanagementoption* 가 **auto** 이거나 *auto_identity_range* **true**이면이 매개 변수를 지정 해야 합니다.  
   
 > [!NOTE]  
->  *identity_range* 는 이전 버전의를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]사용 하 여 재게시 구독자의 id 범위 크기를 제어 합니다.  
+>  *identity_range* 는 이전 버전의를 사용 하 여 재게시 구독자의 id 범위 크기를 제어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 `[ @threshold = ] threshold`병합 에이전트 새 id 범위를 할당 하는 시기를 제어 하는 백분율 값입니다. *임계값* 에 지정 된 값의 백분율을 사용 하는 경우 병합 에이전트 새 id 범위를 만듭니다. *임계값* 은 **int**이며 기본값은 NULL입니다. *Identityrangemanagementoption* 가 **auto** 이거나 *auto_identity_range* **true**이면이 매개 변수를 지정 해야 합니다.  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** 은 서명이 신뢰할 수 있는 원본에서 가져온 것인지 확인 하도록 지정 합니다.  
   
-`[ @destination_object = ] 'destination_object'`구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 는 **sysname**이며 기본값은 ** \@source_object**에 있는 값입니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정한 아티클이 테이블 문서인 경우의 *@source_object* 값이 *destination_object*의 값을 재정의 합니다.  
+`[ @destination_object = ] 'destination_object'`구독 데이터베이스에 있는 개체의 이름입니다. *destination_object* 는 **sysname**이며 기본값은 ** \@ source_object**에 있는 값입니다. 이 매개 변수는 아티클이 저장 프로시저, 뷰 및 UDF와 같은 스키마 전용 아티클일 경우에만 지정할 수 있습니다. 지정한 아티클이 테이블 문서인 경우의 값이 *@source_object* *destination_object*의 값을 재정의 합니다.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`아티클에서 대화형 해결 프로그램을 사용 하거나 사용 하지 않도록 설정 합니다. *allow_interactive_resolver* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **true로** 설정 하면 아티클에서 대화형 해결 프로그램을 사용할 수 있습니다. **false** 는 사용 하지 않도록 설정 합니다.  
   
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** *column_tracking*에 지정 된 대로 기본 충돌 검색을 사용 하도록 지정 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_detection* 에 false 값을 지정 해야 합니다. **false** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
+>  구독자는 논리적 레코드를 지원 하지 않기 때문에 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 이러한 구독자를 지원 하려면 *logical_record_level_conflict_detection* 에 **false** 값을 지정 해야 합니다.  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`논리적 레코드의 멤버인 아티클에 대 한 충돌 해결 수준을 지정 합니다. *logical_record_level_conflict_resolution* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
   
@@ -249,7 +249,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** 는 적용 되는 행을 논리적 레코드로 제한 하지 않도록 지정 합니다. *Logical_record_level_conflict_detection* **true**이면 *logical_record_level_conflict_resolution* 도 **true**로 설정 해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독자는 논리적 레코드를 지원 하지 않기 때문에 이러한 구독자를 지원 하려면 *logical_record_level_conflict_resolution* 에 false 값을 지정 해야 합니다. **false** [!INCLUDE[ssEW](../../includes/ssew-md.md)]  
+>  구독자는 논리적 레코드를 지원 하지 않기 때문에 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 이러한 구독자를 지원 하려면 *logical_record_level_conflict_resolution* 에 **false** 값을 지정 해야 합니다.  
   
 `[ @partition_options = ] partition_options`아티클의 데이터가 분할 되는 방식을 정의 합니다 .이를 통해 모든 행이 하나의 파티션 또는 하나의 구독에만 속한 경우 성능 최적화를 사용할 수 있습니다. *partition_options* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
@@ -284,7 +284,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**없음**|ID 범위 관리를 사용하지 않습니다.|  
 |**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
-|**자동**|ID 범위의 자동 관리를 지정합니다.|  
+|**auto**|ID 범위의 자동 관리를 지정합니다.|  
 |NULL (기본값)|*Auto_identity_range* 값이 **true**가 아니면 기본값은 **none**입니다.|  
   
  이전 버전과의 호환성을 위해 *identityrangemanagementoption* 의 값이 NULL 이면 *auto_identity_range* 의 값이 선택 됩니다. 그러나 *identityrangemanagementoption* 의 값이 NULL이 아닌 경우 *auto_identity_range* 값은 무시 됩니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**table**|**0x0C034FD1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기본 모드 스냅숏을 사용 하는 0x0C034FD1 이상 호환 게시.<br /><br /> **0x08034FF1** -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 문자 모드 스냅숏을 사용 하는 0x08034FF1 이상 호환 게시입니다.|  
+|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기본 모드 스냅숏을 사용 하는 0x0C034FD1 이상 호환 게시.<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 문자 모드 스냅숏을 사용 하는 0x08034FF1 이상 호환 게시입니다.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  게시에서 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지 원하는 경우 **테이블** 에 대 한 기본 스키마 옵션은 **0x30034ff1**입니다.  
+>  게시에서 이전 버전의를 지 원하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **테이블** 에 대 한 기본 스키마 옵션은 **0X30034ff1**입니다.  
   
 ## <a name="valid-schema-option-table"></a>유효한 스키마 옵션 표  
  다음 표에서는 아티클 유형에 따라 허용 되는 *schema_option* 값을 설명 합니다.  

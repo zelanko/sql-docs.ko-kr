@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSdistribution_agents system table
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b82585e75be46cc38372564a68661815430c2be4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907410"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833085"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ ms.locfileid: "67907410"
 |**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|배포 또는 병합 에이전트가 생성된 datetime입니다.|  
-|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열에 **SQL**값이 포함 됩니다.<br /><br /> 참고: 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐 사용은 더 이상 사용 되지 않으며 더 이상 지원 되지 않습니다.|  
+|**queue_id**|**sysname**|지연 업데이트 구독의 큐 위치를 나타내는 식별자입니다. 지연 구독이 아닌 경우 이 값은 NULL입니다. MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 기반으로 하는 게시의 경우 이 값은 구독에 사용할 큐를 고유하게 식별하는 GUID입니다. SQL Server 기반 큐 게시의 경우 열에 **SQL**값이 포함 됩니다.<br /><br /> 참고: 메시지 큐 사용은 더 이상 사용 되지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 않으며 더 이상 지원 되지 않습니다.|  
 |**queue_status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offload_enabled**|**bit**|에이전트를 원격으로 활성화할 수 있는지 여부를 나타냅니다.<br /><br /> **0** 은 에이전트를 원격으로 활성화할 수 없음을 나타냅니다.<br /><br /> **1** 은 에이전트가 원격으로 활성화 되 고 *offload_server* 속성에 지정 된 원격 컴퓨터에서 활성화 되도록 지정 합니다.|  
 |**offload_server**|**sysname**|원격 에이전트 활성화에 사용할 서버의 네트워크 이름입니다.|  
-|**dts_package_name**|**sysname**|DTS 패키지의 이름입니다. 예를 들어 **DTSPub_Package**패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'`합니다.|  
+|**dts_package_name**|**sysname**|DTS 패키지의 이름입니다. 예를 들어 **DTSPub_Package**패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'` 합니다.|  
 |**dts_package_password**|**nvarchar (524)**|패키지의 암호입니다.|  
 |**dts_package_location**|**int**|패키지 위치입니다. 패키지의 위치는 **배포자** 또는 **구독자**일 수 있습니다.|  
 |**sid**|**varbinary(85)**|첫 번째 실행 시 배포 에이전트 또는 병합 에이전트의 SID(보안 ID)입니다.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
+|**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**subscriber_login**|**sysname**|구독자에 연결할 때 사용하는 로그인입니다.|  
 |**subscriber_password**|**nvarchar (524)**|구독자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  
 |**reset_partial_snapshot_progress**|**bit**|스냅샷이 일부분만 다운로드된 경우 이를 삭제하여 전체 스냅샷 과정을 다시 시작하도록 할지 여부입니다.|  

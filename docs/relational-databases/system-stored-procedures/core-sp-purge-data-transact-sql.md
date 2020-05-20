@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833722"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>인수  
- [@retention_days =] *retention_days*  
+ [ @retention_days =] *retention_days*  
  데이터를 관리 데이터 웨어하우스 테이블에 보관하는 일 수입니다. 타임 스탬프가 *retention_days* 보다 오래 된 데이터는 제거 됩니다. *retention_days* 은 **smallint**이며 기본값은 NULL입니다. 지정된 경우 값은 양수여야 합니다. NULL인 경우 core.snapshots 뷰의 valid_through 열에 있는 값에 따라 제거에 적합한 행이 결정됩니다.  
   
- [@instance_name = ] '*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  컬렉션 집합의 인스턴스 이름입니다. *instance_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
- *instance_name* 는 *computername*\\*instancename*형식의 컴퓨터 이름과 인스턴스 이름으로 구성 된 정규화 된 인스턴스 이름 이어야 합니다. NULL인 경우 로컬 서버의 기본 인스턴스가 사용됩니다.  
+ *instance_name* 는 *computername*instancename 형식의 컴퓨터 이름과 인스턴스 이름으로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 \\ *instancename*. NULL인 경우 로컬 서버의 기본 인스턴스가 사용됩니다.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 은 **uniqueidentifier**이며 기본값은 NULL입니다. NULL인 경우 모든 컬렉션 집합에서 한정하는 행이 제거됩니다. 이 값을 확인하려면 syscollector_collection_sets 카탈로그 뷰를 쿼리합니다.  
   
- [@duration = ] *기간*  
+ [ @duration =] *기간*  
  제거 작업을 실행해야 하는 최대 시간(분)입니다. *duration* 은 **smallint**이며 기본값은 NULL입니다. 지정된 경우 값은 0 또는 양의 정수여야 합니다. NULL인 경우 한정된 모든 행이 제거될 때까지 작업이 실행되거나 작업이 수동으로 중지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>설명  
  이 프로시저는 보존 기간을 기준으로 제거에 적합한 core.snapshots 뷰에서 행을 선택합니다. 그러면 제거에 적합한 모든 행이 core.snapshots_internal 테이블에서 삭제됩니다. 이전 행을 삭제하면 모든 관리 데이터 웨어하우스 테이블에서 연계 삭제 동작이 트리거됩니다. 이 작업은 수집된 데이터를 저장하는 모든 테이블에 대해 정의된 ON DELETE CASCADE 절을 사용하여 수행됩니다.  
   
- 각 스냅샷과 이와 연결된 데이터는 명시적 트랜잭션 내에서 삭제된 다음 커밋됩니다. 따라서 제거 작업을 수동으로 중지 하거나에 @duration 지정 된 값을 초과 하는 경우 커밋되지 않은 데이터만 유지 됩니다. 이 데이터는 다음에 작업이 실행될 때 제거될 수 있습니다.  
+ 각 스냅샷과 이와 연결된 데이터는 명시적 트랜잭션 내에서 삭제된 다음 커밋됩니다. 따라서 제거 작업을 수동으로 중지 하거나에 지정 된 값을 초과 하는 경우 @duration 커밋되지 않은 데이터만 유지 됩니다. 이 데이터는 다음에 작업이 실행될 때 제거될 수 있습니다.  
   
  이 프로시저는 관리 데이터 웨어하우스 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. 보존 및 기간 값 지정  
- 다음 예에서는 관리 데이터 웨어하우스에서 7일보다 오래된 데이터를 제거합니다. 또한 작업을 5 @duration 분 이상 실행 하지 않도록 매개 변수를 지정 해야 합니다.  
+ 다음 예에서는 관리 데이터 웨어하우스에서 7일보다 오래된 데이터를 제거합니다. 또한 @duration 작업을 5 분 이상 실행 하지 않도록 매개 변수를 지정 해야 합니다.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. 인스턴스 이름 및 컬렉션 집합 지정  
- 다음 예에서는 관리 데이터 웨어하우스에서 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 지정된 컬렉션 집합에 대한 데이터를 제거합니다. 을 @retention_days 지정 하지 않았기 때문에, 핵심 스냅숏의 뷰에서 valid_through 열의 값을 사용 하 여 제거할 수 있는 컬렉션 집합의 행을 확인 합니다.  
+ 다음 예에서는 관리 데이터 웨어하우스에서 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 지정된 컬렉션 집합에 대한 데이터를 제거합니다. @retention_days을 지정 하지 않았기 때문에, 핵심 스냅숏의 뷰에서 valid_through 열의 값을 사용 하 여 제거할 수 있는 컬렉션 집합의 행을 확인 합니다.  
   
 ```  
 USE <management_data_warehouse>;  

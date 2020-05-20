@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084883"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833124"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,9 +101,9 @@ sp_update_jobstep
   
 `[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 는 **nvarchar (128)** 이며 기본값은 NULL입니다.  
   
-`[ @database_name = ] 'database'`[!INCLUDE[tsql](../../includes/tsql-md.md)] 단계를 실행할 데이터베이스의 이름입니다. *데이터베이스*는 **sysname**입니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
+`[ @database_name = ] 'database'`단계를 실행할 데이터베이스의 이름입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *데이터베이스*는 **sysname**입니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
-`[ @database_user_name = ] 'user'`단계를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 실행할 때 사용할 사용자 계정의 이름입니다. *사용자*는 **sysname**이며 기본값은 NULL입니다.  
+`[ @database_user_name = ] 'user'`단계를 실행할 때 사용할 사용자 계정의 이름입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . *사용자*는 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @retry_attempts = ] retry_attempts`이 단계가 실패 하는 경우 다시 시도 하는 횟수입니다. *retry_attempts*은 **int**이며 기본값은 NULL입니다.  
   
@@ -127,9 +127,9 @@ sp_update_jobstep
 |**20cm(8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
 |**x**|테이블에 로그를 씁니다(기존 기록에 추가).|  
   
-`[ @proxy_id = ] proxy_id`작업 단계가 실행 되는 프록시의 ID입니다. *proxy_id* 은 **int**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 됩니다.  
+`[ @proxy_id = ] proxy_id`작업 단계가 실행 되는 프록시의 ID입니다. *proxy_id* 은 **int**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 서비스 계정으로 실행 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @proxy_name = ] 'proxy_name'`작업 단계가 실행 되는 프록시의 이름입니다. *proxy_name* 는 **sysname**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 실행 됩니다.  
+`[ @proxy_name = ] 'proxy_name'`작업 단계가 실행 되는 프록시의 이름입니다. *proxy_name* 는 **sysname**형식 이며 기본값은 NULL입니다. *Proxy_id* 지정 되지 않은 경우 *proxy_name* 지정 되지 않고 *user_name* 지정 되지 않은 경우 작업 단계는 에이전트의 서비스 계정으로 실행 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  **Sysadmin** 의 멤버만 다른 사용자가 소유한 작업 단계를 업데이트할 수 있습니다.  
   
- 작업 단계에서 프록시에 액세스해야 할 경우 작업 단계를 만든 사람에게 작업 단계의 프록시에 대한 액세스 권한이 있어야 합니다. Transact-SQL을 제외한 모든 하위 시스템에서는 프록시 계정이 필요합니다. **Sysadmin** 의 멤버는 모든 프록시에 액세스할 수 있으며 프록시에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 에이전트 서비스 계정을 사용할 수 있습니다.  
+ 작업 단계에서 프록시에 액세스해야 할 경우 작업 단계를 만든 사람에게 작업 단계의 프록시에 대한 액세스 권한이 있어야 합니다. Transact-SQL을 제외한 모든 하위 시스템에서는 프록시 계정이 필요합니다. **Sysadmin** 의 멤버는 모든 프록시에 액세스할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프록시에 대 한 에이전트 서비스 계정을 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `Weekly Sales Data Backup` 작업의 첫 번째 단계에 대한 재시도 횟수를 변경합니다. 이 예를 실행한 후 재시도 횟수는 `10`이 됩니다.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cbc772ff5dcc14c196a8c9b920f67b03bd70598
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130587"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834217"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server 에이전트 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

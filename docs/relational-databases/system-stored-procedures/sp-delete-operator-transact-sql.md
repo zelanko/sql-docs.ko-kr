@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_operator
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: adeed3012f6009ac174d758e7fdd3464fc3d2320
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27656c693409387eb65dea75800142255648a864
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009123"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833353"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_delete_operator [ @name = ] 'name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  운영자가 제거되면 그 운영자와 연관된 알림도 모두 함께 제거됩니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022454"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833691"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = 에이전트가 스크립트를 계속 하 고 오류를 무시 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -65,14 +65,14 @@ sp_addscriptexec [ @publication = ] publication
   
  **Sp_addscriptexec**를 사용 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 위치에 대 한 읽기 및 쓰기 권한과 스크립트가 저장 된 위치에 대 한 읽기 권한이 있어야 합니다.  
   
- [Sqlcmd 유틸리티](../../tools/sqlcmd-utility.md) 는 구독자에서 스크립트를 실행 하는 데 사용 되며, 구독 데이터베이스에 연결할 때 배포 에이전트 또는 병합 에이전트에서 사용 되는 보안 컨텍스트에서 스크립트가 실행 됩니다. 에이전트가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행 되는 경우에는 [sqlcmd](../../tools/sqlcmd-utility.md)대신 [osql 유틸리티가](../../tools/osql-utility.md) 사용 됩니다.  
+ [Sqlcmd 유틸리티](../../tools/sqlcmd-utility.md) 는 구독자에서 스크립트를 실행 하는 데 사용 되며, 구독 데이터베이스에 연결할 때 배포 에이전트 또는 병합 에이전트에서 사용 되는 보안 컨텍스트에서 스크립트가 실행 됩니다. 에이전트가 이전 버전의에서 실행 되는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [sqlcmd](../../tools/sqlcmd-utility.md)대신 [osql 유틸리티가](../../tools/osql-utility.md) 사용 됩니다.  
   
  **sp_addscriptexec** 는 구독자에 스크립트를 적용 하는 데 유용 하며 [sqlcmd](../../tools/sqlcmd-utility.md) 를 사용 하 여 스크립트의 내용을 구독자에 적용 합니다. 하지만 구독자 구성은 다양할 수 있으므로 게시자에 게시하기 전에 테스트한 스크립트도 구독자에서 오류를 일으킬 수 있습니다. *skiperror* 는 배포 에이전트 또는 병합 에이전트 오류를 무시 하 고 계속 진행할 수 있는 기능을 제공 합니다. **Sp_addscriptexec**를 실행 하기 전에 [sqlcmd](../../tools/sqlcmd-utility.md) 를 사용 하 여 스크립트를 테스트 합니다.  
   
 > [!NOTE]  
 >  오류 건너뛰기는 에이전트 기록에 참조로 계속 기록됩니다.  
   
- 스냅숏 **sp_addscriptexec** 배달에 FTP를 사용 하는 게시에 대 한 스크립트 파일을 게시 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_addscriptexec를 사용 하는 것은 구독자 에서만 지원 됩니다.  
+ 스냅숏 배달에 FTP를 사용 하는 게시에 대 한 스크립트 파일을 게시 하기 위해 **sp_addscriptexec** 를 사용 하는 것은 구독자 에서만 지원 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addscriptexec**을 실행할 수 있습니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4f5b003eccda5fdada81e49d2a1f5347591869
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769004"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831810"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @agent_id = ] agent_id`특정 복제 에이전트에 대 한 명령만 반환 하도록 지정 합니다. *agent_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @compatibility_level = ] compatibility_level`*Compatibility_level* **int**인 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이며 기본값은 900만입니다.  
+`[ @compatibility_level = ] compatibility_level`Compatibility_level int 인 버전 이며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값은 *compatibility_level* 900만입니다 **int**.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|명령의 시퀀스 번호입니다.|  
 |**originator_srvname**|**sysname**|트랜잭션이 시작된 서버입니다.|  
@@ -73,7 +73,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|아티클의 ID입니다.|  
 |**type**|**int**|명령의 유형입니다.|  
 |**partial_command**|**bit**|부분 명령인지 여부를 나타냅니다.|  
-|**hashkey**|**int**|내부적으로만 사용됩니다.|  
+|**hashkey**|**int**|내부 전용입니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  

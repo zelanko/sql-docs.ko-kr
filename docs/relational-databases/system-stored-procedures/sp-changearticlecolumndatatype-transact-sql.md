@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f101d9081c7eb898d43c461a3bd64eca0c043b64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa069ffe0d4ce677542ac714b19475aa3930f290
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995519"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833469"
 ---
 # <a name="sp_changearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +53,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 `[ @column = ] 'column'`데이터 형식 매핑을 변경할 열의 이름입니다. *열* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @type = ] 'type'`대상 열에 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 이름입니다. *type* 은 **sysname**이며 기본값은 NULL입니다.  
+`[ @type = ] 'type'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 열에 있는 데이터 형식의 이름입니다. *type* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @length = ] length`대상 열에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 길이입니다. *length* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @length = ] length`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대상 열에 있는 데이터 형식의 길이입니다. *length* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @precision = ] precision`대상 열에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식의 전체 자릿수입니다. *전체 자릿수* 는 **bigint**이며 기본값은 NULL입니다.  
+`[ @precision = ] precision`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대상 열에 있는 데이터 형식의 전체 자릿수입니다. *전체 자릿수* 는 **bigint**이며 기본값은 NULL입니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **Sp_changearticlecolumndatatype** 은 지원 되는 게시자 유형 (Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) 간의 기본 데이터 형식 매핑을 재정의 하는 데 사용 됩니다. 이러한 기본 데이터 형식 매핑을 보려면 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)를 실행 합니다.  
+ **Sp_changearticlecolumndatatype** 은 지원 되는 게시자 유형 (Oracle 및) 간의 기본 데이터 형식 매핑을 재정의 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이러한 기본 데이터 형식 매핑을 보려면 [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)를 실행 합니다.  
   
  **sp_changearticlecolumndatatype** 은 Oracle 게시자에 대해서만 지원 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에 대해 이 저장 프로시저를 실행하면 오류가 발생합니다.  
   

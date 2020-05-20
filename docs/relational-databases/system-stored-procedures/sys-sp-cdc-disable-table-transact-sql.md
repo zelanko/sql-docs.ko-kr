@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3586c6a18d01dda7f1e462b8874cc9d9f36d2d5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106515"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832501"
 ---
 # <a name="syssp_cdc_disable_table-transact-sql"></a>sys.sp_cdc_disable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스의 지정된 원본 테이블 및 캡처 인스턴스에 대한 변경 데이터 캡처를 비활성화합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.  
+  현재 데이터베이스의 지정된 원본 테이블 및 캡처 인스턴스에 대한 변경 데이터 캡처를 비활성화합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ sys.sp_cdc_disable_table
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_cdc_disable_table** 는 지정 된 원본 테이블 및 캡처 인스턴스와 연결 된 변경 데이터 캡처 변경 테이블 및 시스템 함수를 삭제 합니다. 변경 데이터 캡처 시스템 테이블에서 지정 된 캡처 인스턴스와 연결 된 모든 행을 삭제 하 고, [sys. tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 카탈로그 뷰의 테이블 항목에 대 한 **is_tracked_by_cdc** 열을 0으로 설정 합니다.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890842"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832549"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,17 +70,17 @@ sp_update_alert
   
 `[ @message_id = ] message_id`경고 정의에 대 한 새 메시지 또는 오류 번호입니다. 일반적으로 *message_id* 는 **sysmessages** 테이블의 오류 번호에 해당 합니다. *message_id* 은 **int**이며 기본값은 NULL입니다. 경고에 대 한 심각도 수준 설정이 **0**인 경우에만 메시지 ID를 사용할 수 있습니다.  
   
-`[ @severity = ] severity`경고 정의에 대 한 새 심각도 수준 ( **1** 에서 **25**까지)입니다. 지정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 심각도를 사용 하 여 Windows 응용 프로그램 로그에 전송 된 모든 메시지는 경고를 활성화 합니다. *심각도* 는 **int**이며 기본값은 NULL입니다. 심각도 수준은 경고에 대 한 메시지 ID 설정이 **0**인 경우에만 사용할 수 있습니다.  
+`[ @severity = ] severity`경고 정의에 대 한 새 심각도 수준 ( **1** 에서 **25**까지)입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 심각도를 사용 하 여 Windows 응용 프로그램 로그에 전송 된 모든 메시지는 경고를 활성화 합니다. *심각도* 는 **int**이며 기본값은 NULL입니다. 심각도 수준은 경고에 대 한 메시지 ID 설정이 **0**인 경우에만 사용할 수 있습니다.  
   
 `[ @delay_between_responses = ] delay_between_responses`경고에 대 한 응답 간의 새로운 대기 기간 (초)입니다. *delay_between_responses* 은 **int**이며 기본값은 NULL입니다.  
   
 `[ @notification_message = ] 'notification_message'`전자 메일, **net send**또는 호출기 알림의 일부로 운영자에 게 전달 되는 추가 메시지의 수정 된 텍스트입니다. *notification_message* 은 **nvarchar (512)** 이며 기본값은 NULL입니다.  
   
-`[ @include_event_description_in = ] include_event_description_in`Windows 응용 프로그램 로그의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대 한 설명을 알림 메시지에 포함시킬지 여부를 지정 합니다. *include_event_description_in* 은 **tinyint**이며 기본값은 NULL이 고 다음 값 중 하나 이상이 될 수 있습니다.  
+`[ @include_event_description_in = ] include_event_description_in`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 응용 프로그램 로그의 오류에 대 한 설명을 알림 메시지에 포함시킬지 여부를 지정 합니다. *include_event_description_in* 은 **tinyint**이며 기본값은 NULL이 고 다음 값 중 하나 이상이 될 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|없음|  
 |**1**|전자 메일|  
 |**2**|호출기|  
 |**4**|**net send**|  
@@ -112,10 +112,10 @@ sp_update_alert
   
 `[ @performance_condition = ] 'performance_condition'`**'**_Itemcomparatorvalue_**'** 형식으로 표시 된 값입니다. *performance_condition* 은 **nvarchar (512)** 이며 기본값은 NULL이 고이 요소로 구성 됩니다.  
   
-|형식 요소|Description|  
+|형식 요소|설명|  
 |--------------------|-----------------|  
 |*항목*|성능 개체, 성능 카운터 또는 카운터의 명명된 인스턴스|  
-|*비교자*|다음 연산자 중 하나입니다 **>**. **<**,,**=**|  
+|*비교자*|다음 연산자 중 하나입니다. **>** , **<** ,**=**|  
 |*값*|카운터의 숫자 값|  
   
 `[ @category_name = ] 'category'`경고 범주의 이름입니다. *category* 는 **sysname** 이며 기본값은 NULL입니다.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- Windows 응용 프로그램 로그에 기록 된 sysmessages만 경고를 발생 시킬 수 있습니다. **sysmessages** [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+ Windows 응용 프로그램 로그에 기록 된 **sysmessages** 만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 경고를 발생 시킬 수 있습니다.  
   
  **sp_update_alert** 는 매개 변수 값이 제공 되는 경고 설정만 변경 합니다. 매개 변수가 생략되면 현재 설정이 보존됩니다.  
   

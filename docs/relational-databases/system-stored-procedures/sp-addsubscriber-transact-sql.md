@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962408"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833635"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,17 +66,17 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |값|Description|  
 |-----------|-----------------|  
-|**0** (기본값)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
+|**0** (기본값)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구독자|  
 |**1**|ODBC 데이터 원본 서버|  
 |**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet 데이터베이스|  
 |**3**|OLE DB 공급자|  
   
-`[ @login = ] 'login'`인증에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'`인증에 대 한 로그인 ID입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *login*은 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @password = ] 'password'`인증에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 암호입니다. *password* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
+`[ @password = ] 'password'`인증에 대 한 암호입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *password* 는 **nvarchar (524)** 이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
@@ -101,7 +101,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`복제 에이전트를 예약 하는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|주문형|  
@@ -122,7 +122,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`복제 에이전트의 날짜입니다. 이 매개 변수는 *frequency_type* 이 **32** (매월 상대적)로 설정 된 경우에 사용 됩니다. *frequency_relative_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|처음|  
 |**2**|초|  
@@ -140,12 +140,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`정의 된 기간 동안 다시 예약 하는 빈도입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|한 번|  
 |**2**|초|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)를 실행할 때 구독 별로 지정 됩니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
@@ -184,10 +184,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @encrypted_password = ] encrypted_password`이 매개 변수는 더 이상 사용 되지 않으며 이전 버전과의 호환성을 위해서만 *encrypted_password* 값에 대해 제공 되지만 **0** 으로 설정 하면 오류가 발생 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

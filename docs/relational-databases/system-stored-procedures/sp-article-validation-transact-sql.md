@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f4d1b571bd32023b6ea47331c2757c814dc00ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833559"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ sp_article_validation [ @publication = ] 'publication'
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대 한 유효성 검사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에 대 한 유효성 검사를 요청할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query_store_runtime_stats catalog view
 - sys.query_store_runtime_stats catalog view
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bd7f1870a88ae2050445050565e0f268f4d9b0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148292"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834125"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -93,11 +93,11 @@ ms.locfileid: "70148292"
 |**min_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최소 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**max_log_bytes_used**|**bigint**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 최대 바이트 수입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**stdev_log_bytes_used**|**float**|집계 간격 내에서 쿼리 계획에 사용 되는 데이터베이스 로그의 바이트 수에 대 한 표준 편차입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|  
-|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**last_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
-|**stdev_tempdb_space_used**|**float**|페이지 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**avg_tempdb_space_used**|**float**|집계 간격 내의 쿼리 계획에 대 한 평균 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 입니다.|
+|**last_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 마지막 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 입니다.|
+|**min_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최소 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 입니다.|
+|**max_tempdb_space_used**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 최대 페이지 읽기 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 입니다.|
+|**stdev_tempdb_space_used**|**float**|페이지 수는 집계 간격 내의 쿼리 계획에 대 한 표준 편차를 읽습니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 입니다.|
 |**avg_page_server_io_reads**|**float**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 평균 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
 |**last_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 마지막 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
 |**min_page_server_io_reads**|**bigint**|집계 간격 내의 쿼리 계획에 대 한 페이지 서버 i/o 읽기의 최소 수입니다. (8KB 페이지 읽기 수로 표시 됨).<br><br/>**적용 대상:** Azure SQL Database Hyperscale</br>**참고:** Azure SQL Data Warehouse Azure SQL DB, MI (비 hyperscale)는 항상 0을 반환 합니다.|
@@ -115,7 +115,7 @@ ms.locfileid: "70148292"
  [query_store_query_text &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 쿼리 저장소](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   

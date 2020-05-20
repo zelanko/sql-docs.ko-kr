@@ -13,14 +13,14 @@ helpviewer_keywords:
 - system tables [SQL Server], replication
 - replication [SQL Server], system tables
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dc89ce68529212246d85bdbafa8d9487b77a067
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58fb3b54989dec45a56c057cb472e1107e9e4e48
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910233"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834174"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "67910233"
 |[MSqreader_history](msqreader-history-transact-sql.md)            ||
 | &nbsp; | &nbsp; |
   
- 배포 데이터베이스의 이러한 테이블은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 데이터를 복제 하는 데 사용 됩니다. 자세한 내용은 [비 SQL Server 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)를 참조 하세요.  
+ 배포 데이터베이스의 이러한 테이블은 이외 게시자의 데이터를 복제 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 자세한 내용은 [비 SQL Server 게시자](../../relational-databases/replication/non-sql/non-sql-server-publishers.md)를 참조 하세요.  
   
 |||  
 |-|-|  
@@ -91,7 +91,7 @@ ms.locfileid: "67910233"
  
 |||  
 |-|-|  
-|[conflict_\<스키마>_\<테이블>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \< 스키마>_ \< 테이블>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

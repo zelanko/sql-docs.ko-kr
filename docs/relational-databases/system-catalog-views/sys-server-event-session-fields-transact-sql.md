@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.server_event_session_fields catalog view
 - xe
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 260a0252d096a926eee8ea81c68320dc3b035b31
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133217"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834027"
 ---
 # <a name="sysserver_event_session_fields-transact-sql"></a>sys.server_event_session_fields(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이벤트 및 대상에 명시적으로 설정된 각 사용자 지정 가능 열에 대해 한 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |object_id|**int**|이 필드와 관련된 개체의 ID입니다. Null을 허용하지 않습니다.|  

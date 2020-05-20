@@ -16,14 +16,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117914"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833611"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>인수  
 `[ @devtype = ] 'device_type'`백업 장치의 유형입니다. *device_type* 는 **varchar (20)** 이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**디스크로**|백업 디바이스로서의 하드 디스크 파일입니다.|  
 |**테이프가**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 디바이스입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  원격 네트워크 위치에서 백업 디바이스를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
- 테이프 장치를 추가 하는 경우이 매개 변수는 Windows에서 로컬 테이프 장치에 할당 된 물리적 이름 이어야 합니다. 예를 ** \\ \\** 들어 컴퓨터의 첫 번째 테이프 장치에 대 한 .\TAPE0. 테이프 디바이스는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
+ 테이프 장치를 추가 하는 경우이 매개 변수는 Windows에서 로컬 테이프 장치에 할당 된 물리적 이름 이어야 합니다. 예를 들어 컴퓨터의 첫 번째 테이프 장치에 대 한 ** \\ \\ .\TAPE0** . 테이프 디바이스는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
   
 > [!NOTE]  
 >  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 디바이스에 액세스하거나 디바이스를 만들지는 않습니다.  
@@ -139,13 +139,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [백업 장치 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [SQL Server&#41;&#40;디스크 파일에 대 한 논리적 백업 장치를 정의 합니다.](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [테이프 드라이브에 대 한 논리적 백업 장치를 정의 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [디스크 파일에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [Transact-sql&#41;sp_dropdevice &#40;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [backup_devices &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

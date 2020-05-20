@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_triggers catalog view
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b7a0a99f46cdd3ec5d2b6b9ac96cae7a1dc5c55e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133008"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832738"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   TR 또는 TA의 object_type이 있는 모든 서버 수준 DDL 트리거의 집합을 포함합니다. CLR 트리거의 경우에는 어셈블리를 **master** 데이터베이스에 로드 해야 합니다. 모든 서버 수준 DDL 트리거 이름은 단일 전역 범위에 존재합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|트리거의 이름입니다.|  
 |**object_id**|**int**|개체의 ID입니다.|  

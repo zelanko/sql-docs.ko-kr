@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717255"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833251"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  잠금 리소스를 식별하는 이름을 지정하는 문자열입니다. 애플리케이션은 리소스 이름이 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. 리소스 문자열이 **nvarchar (255)** 보다 길면 **nvarchar (255)** 로 잘립니다.  
   
  *resource_name* 은 이진 비교 되므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  애플리케이션 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
- [ @LockMode= ] '*lock_mode*'  
+ [ @LockMode =] '*lock_mode*'  
  특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared**또는 **Exclusive**중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
   
- [ @LockTimeout= ] '*value*'  
- 잠금 제한 시간 값(밀리초)입니다. 기본값은 @@LOCK_TIMEOUT에서 반환 하는 값과 같습니다. 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
+ [ @LockTimeout =] '*value*'  
+ 잠금 제한 시간 값(밀리초)입니다. 기본값은 @에서 반환 하는 값과 같습니다 @LOCK_TIMEOUT . 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 애플리케이션 역할입니다. 함수를 성공적으로 호출 하려면 함수의 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버 여야 합니다. 기본값은 public입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -91,7 +91,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
  @DbPrincipal 매개 변수에 지정한 데이터베이스 보안 주체의 멤버만이 해당 보안 주체를 지정하는 애플리케이션 잠금을 획득할 수 있습니다. dbo 및 db_owner 역할의 멤버는 암시적으로 모든 역할의 멤버로 간주됩니다.  
   
- sp_releaseapplock을 사용하여 명시적으로 잠금을 해제할 수 있습니다. 애플리케이션이 동일한 잠금 리소스에 대해 sp_getapplock을 여러 번 호출한 경우에는 잠금을 해제하는 데도 동일한 횟수만큼 sp_releaseapplock을 호출해야 합니다.  잠금 소유자를 사용 `Transaction` 하 여 잠금을 열면 트랜잭션이 커밋되거나 롤백될 때 해당 잠금이 해제 됩니다.
+ sp_releaseapplock을 사용하여 명시적으로 잠금을 해제할 수 있습니다. 애플리케이션이 동일한 잠금 리소스에 대해 sp_getapplock을 여러 번 호출한 경우에는 잠금을 해제하는 데도 동일한 횟수만큼 sp_releaseapplock을 호출해야 합니다.  잠금 소유자를 사용 하 여 잠금을 열면 `Transaction` 트랜잭션이 커밋되거나 롤백될 때 해당 잠금이 해제 됩니다.
   
  동일 잠금 리소스에 대해 sp_getapplock을 여러 번 호출하되 요청 중 하나에서 기존 모드와 다른 잠금 모드를 지정한 경우 리소스에 두 잠금 모드를 합친 것만큼의 영향을 미칩니다. 즉, 대부분의 경우에 잠금 모드가 기존 모드 또는 새로 요청된 모드 중에서 보다 강력한 잠금 모드 수준으로 올라갑니다. 이 더욱 강력한 잠금 모드는 이전에 잠금 해제 호출이 발생한 경우에도 잠금이 궁극적으로 해제될 때까지 유지됩니다. 예를 들어 다음과 같은 호출 시퀀스에서 리소스는 `Exclusive` 모드가 아니라 `Shared` 모드에서 유지됩니다.  
   
@@ -111,7 +111,7 @@ GO
   
  애플리케이션을 잠그는 교착 상태가 발생해도 애플리케이션 잠금을 요청한 트랜잭션이 롤백되지 않습니다. 반환 값의 결과로 필요할 수 있는 롤백은 모두 직접 수행해야 합니다. 따라서 특정 값(예: -3)을 반환하는 경우 ROLLBACK TRANSACTION 또는 대체 동작을 시작하도록 코드에 오류 확인 작업을 포함시키는 것이 좋습니다.  
   
- 다음은 예제입니다.  
+ 예를 들면 다음과 같습니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_database
 ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c27f2efcfc15cc1ff9d53f735c08fad922f9466
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 105582d8e172849d4296486557984550a032dd72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124283"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833317"
 ---
 # <a name="sp_fulltext_database-transact-sql"></a>sp_fulltext_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_fulltext_database [@action=] 'action'
   
 |값|설명|  
 |-----------|-----------------|  
-|**활성화**|이전 버전과의 호환성을 위해서만 지원됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않습니다.|  
-|**하지**|이전 버전과의 호환성을 위해서만 지원됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않습니다.|  
+|**enable**|이전 버전과의 호환성을 위해서만 지원됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않습니다.|  
+|**disable**|이전 버전과의 호환성을 위해서만 지원됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그에 영향을 미치지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 전체 텍스트 인덱싱 기능을 해제할 수 없습니다. 전체 텍스트 인덱싱을 사용 하지 않도록 설정 해도 **sysfulltextcatalogs** 에서 행이 제거 되지 않으며 전체 텍스트를 사용 하도록 설정 된 테이블이 더 이상 전체 텍스트 인덱싱을 위해 표시 되지 않습니다. 모든 전체 텍스트 메타데이터 정의는 시스템 테이블 내에서 여전히 유효합니다.  

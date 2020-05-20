@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSpublicationthresholds system table
 ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2025dac432856e944dfd7e12e591907ef05a3565
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088522"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831967"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpublicationthresholds** 테이블은 게시에 대 한 복제 성능 메트릭을 추적 하는 데 사용 되며 모니터링 되는 각 임계값에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|임계값이 설정된 게시를 식별합니다.|  
 |**metric_id**|**int**|[MSreplmonthresholdmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) 시스템 테이블에 정의 된 대로 모니터링 되는 복제 성능 메트릭을 식별 합니다.|  

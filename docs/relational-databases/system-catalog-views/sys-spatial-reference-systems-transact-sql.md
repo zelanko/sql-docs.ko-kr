@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.spatial_reference_systems catalog view
 - spatial_reference_systems
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7beb40f3810a4e9793eaadd912a501edacfa222e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68073255"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833987"
 ---
 # <a name="sysspatial_reference_systems-transact-sql"></a>sys.spatial_reference_systems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68073255"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 공간 참조 시스템(SRID)을 나열합니다.  
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |spatial_reference_id|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 SRID입니다.|  
 |authority_name|**nvarchar(128)**|SRID의 인증 기관입니다.|  

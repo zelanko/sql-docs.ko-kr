@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dcaa69b0e300ebd169e762ec28ce73e6ab1ffc7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67989997"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834175"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "67989997"
   
  기록 및 모니터링과 연관된 테이블은 주 서버와 보조 서버에서도 사용됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|백업의 경우 주 ID, 복사나 복원의 경우 보조 ID입니다.|  
 |**agent_type**|**tinyint**|로그 전달 작업의 유형입니다.<br /><br /> 0 = 백업<br /><br /> 1 = 복사<br /><br /> 2 = 복원|  

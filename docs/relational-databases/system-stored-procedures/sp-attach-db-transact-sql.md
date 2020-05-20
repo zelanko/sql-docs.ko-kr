@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305265"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833493"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>인수  
 `[ @dbname = ] 'dbnam_ '`서버에 연결할 데이터베이스의 이름입니다. 이름은 고유해야 합니다. *dbname* 은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @filename1 = ] 'filename_n'`경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 ** \@filename1** 에서 시작 하 여 ** \@filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
+`[ @filename1 = ] 'filename_n'`경로를 포함 한 데이터베이스 파일의 물리적 이름입니다. *filename_n* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. 파일 이름은 16개까지 지정할 수 있습니다. 매개 변수 이름은 ** \@ filename1** 에서 시작 하 여 ** \@ filename16**로 증가 합니다. 파일 이름 목록에는 적어도 주 파일이 포함되어야 합니다. 주 파일에는 데이터베이스의 다른 파일을 가리키는 시스템 테이블이 포함됩니다. 또한 목록은 데이터베이스가 분리된 다음 이동된 모든 파일을 포함해야 합니다.  
   
 > [!NOTE]  
 >  이 인수는 CREATE DATABASE 문의 FILENAME 매개 변수에 매핑됩니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
@@ -60,7 +60,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **Sp_attach_db** 저장 프로시저는 명시적 **sp_detach_db** 작업을 사용 하 여 데이터베이스 서버에서 이전에 분리 된 데이터베이스나 복사 된 데이터베이스 에서만 실행 해야 합니다. 16 개 이상의 파일을 지정 해야 하는 경우 CREATE DATABASE *database_name* 를 사용 하 여 ATTACH 또는 create database *database_name* FOR_ATTACH_REBUILD_LOG 합니다. 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
@@ -97,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transact-sql&#41;sp_detach_db &#40;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [Transact-sql&#41;sp_helpfile &#40;](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [Transact-sql&#41;sp_removedbreplication &#40;](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

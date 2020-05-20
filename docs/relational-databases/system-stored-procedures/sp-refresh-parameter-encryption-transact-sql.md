@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sp_refresh_parameter_encryption
 - Always Encrypted, sp_refresh_parameter_encryption
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47f622c287eb0e32e1c5db2d33b64af2de3e379b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002466"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833147"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>인수
 
-`[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 `nvarchar`이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
+`[ @name = ] 'module_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 이며 `nvarchar` 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.
 
-`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER`입니다.    
+`[ @namespace = ] ' < class > '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 인 경우 `<class>` 가 필요 합니다. `<class>`은 `nvarchar(20)`입니다. 유효한 입력은 `DATABASE_DDL_TRIGGER` 및 `SERVER_DDL_TRIGGER` 입니다.    
 
 ## <a name="return-code-values"></a>반환 코드 값  
 
@@ -63,26 +63,26 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 테이블의 암호화 속성이 수정 된 경우에는 `sp_refresh_parameter_encryption` 테이블을 직접 또는 간접적으로 참조 하는 모든 모듈에 대해를 실행 해야 합니다. 이 저장 프로시저는 사용자가 호출자로 이동 하기 전에 먼저 내부 모듈을 새로 고치지 않아도 모든 순서로 해당 모듈에서 호출 될 수 있습니다.
 
-`sp_refresh_parameter_encryption`는 개체와 연결 된 사용 권한, 확장 속성 `SET` 또는 옵션에는 영향을 주지 않습니다. 
+`sp_refresh_parameter_encryption`는 개체와 연결 된 사용 권한, 확장 속성 또는 옵션에는 영향을 주지 않습니다 `SET` . 
 
 서버 수준 DDL 트리거를 새로 고치려면 아무 데이터베이스 컨텍스트에서 이 저장 프로시저를 실행하세요.
 
 > [!NOTE]
->  을 실행 `sp_refresh_parameter_encryption`하면 개체와 연결 된 모든 서명이 삭제 됩니다.
+>  을 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다 `sp_refresh_parameter_encryption` .
 
 ## <a name="permissions"></a>사용 권한
 
-모듈 `ALTER` 에 대 한 `REFERENCES` 권한과 개체에서 참조 하는 모든 CLR 사용자 정의 형식 및 XML 스키마 컬렉션에 대 한 사용 권한이 필요 합니다.   
+`ALTER`모듈에 대 한 권한과 `REFERENCES` 개체에서 참조 하는 모든 CLR 사용자 정의 형식 및 XML 스키마 컬렉션에 대 한 사용 권한이 필요 합니다.   
 
-지정 된 모듈이 데이터베이스 수준 DDL 트리거 인 경우에는 현재 데이터베이스 `ALTER ANY DATABASE DDL TRIGGER` 에 대 한 권한이 필요 합니다.    
+지정 된 모듈이 데이터베이스 수준 DDL 트리거 인 경우에는 `ALTER ANY DATABASE DDL TRIGGER` 현재 데이터베이스에 대 한 권한이 필요 합니다.    
 
 지정 된 모듈이 서버 수준 DDL 트리거 인 경우에는 권한이 필요 `CONTROL SERVER` 합니다.
 
-`EXECUTE AS` 절로 정의 된 모듈의 경우 지정 된 보안 `IMPERSONATE` 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 `EXECUTE AS` `EXECUTE AS USER` 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며, 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
+절로 정의 된 모듈의 경우 `EXECUTE AS` `IMPERSONATE` 지정 된 보안 주체에 대 한 권한이 필요 합니다. 일반적으로를 사용 하 여 모듈을 정의 하지 않으면 개체를 새로 고치면 해당 보안 주체가 변경 되지 않으며 `EXECUTE AS` , `EXECUTE AS USER` 보안 주체의 사용자 이름이 모듈이 생성 될 때와 다른 사용자로 확인 됩니다.
  
 ## <a name="examples"></a>예
 
-다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 `sp_refresh_parameter_encryption` 실행 하는 방법을 보여 줍니다.  
+다음 예에서는 테이블 및 테이블을 참조 하는 프로시저를 만들고 Always Encrypted 구성한 다음 테이블을 변경 하 고 프로시저를 실행 하는 방법을 보여 줍니다 `sp_refresh_parameter_encryption` .  
 
 먼저 테이블을 참조 하는 초기 테이블과 저장 프로시저를 만듭니다.
 ```sql
@@ -135,7 +135,7 @@ GO
 ```
 
 
-마지막으로 SSN 열을 암호화 된 열로 바꾸고 `sp_refresh_parameter_encryption` 프로시저를 실행 하 여 Always Encrypted 구성 요소를 업데이트 합니다.
+마지막으로 SSN 열을 암호화 된 열로 바꾸고 프로시저를 실행 하 여 `sp_refresh_parameter_encryption` Always Encrypted 구성 요소를 업데이트 합니다.
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO

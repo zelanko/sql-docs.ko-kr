@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_attachsubscription
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3ac5075f3bedeb889536fe90ebe7f6c4049199a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768974"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833454"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 **1**입니다. **0**인 경우 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 지정 합니다. **1**인 경우 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 **1**입니다. **0**인 경우 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1**인 경우 Windows 인증을 지정 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`동기화 시 게시자에 연결할 때 사용 하는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다.  
   

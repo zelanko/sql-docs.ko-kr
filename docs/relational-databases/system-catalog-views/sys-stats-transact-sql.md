@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.stats catalog view
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d81d0447558f964839b8849fe141f127fe1e37c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c6d5a67293cd03bc7d20150bbff177b0391113c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982141"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833947"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블, 인덱스 및 인덱싱된 뷰에 대한 각 통계 개체의 행을 포함합니다. 모든 인덱스에는 동일한 이름 및 ID (**index_id** = **stats_id**)를 사용 하는 해당 통계 행이 있지만 모든 통계 행에 해당 하는 인덱스가 없습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스의 테이블, 인덱스 및 인덱싱된 뷰에 대한 각 통계 개체의 행을 포함합니다. 모든 인덱스에는 동일한 이름 및 ID (**index_id**stats_id)를 사용 하는 해당 통계 행이  =  **stats_id**있지만 모든 통계 행에 해당 하는 인덱스가 없습니다.  
   
  카탈로그 뷰 [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) 는 데이터베이스의 각 열에 대 한 통계 정보를 제공 합니다. 통계에 대 한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768989"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833507"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** 은 아티클에 대 한 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에서 게시할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`복제를 동기화 하는 데 사용 되는 저장 프로시저가 자동으로 다시 생성 되는지 여부입니다. *refreshsynctranprocs* 는 **bit**이며 기본값은 1입니다.  
   

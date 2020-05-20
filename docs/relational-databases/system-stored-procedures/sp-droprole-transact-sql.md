@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933814"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833330"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67933814"
   현재 데이터베이스에서 데이터베이스 역할을 제거합니다.  
   
 > [!IMPORTANT]  
->  에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **sp_droprole** 은 DROP ROLE 문으로 바뀌었습니다. **sp_droprole** 는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와의 호환성을 위해서만 포함 되었으며 이후 릴리스에서는 지원 되지 않을 수 있습니다.  
+>  에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **SP_DROPROLE** 은 DROP ROLE 문으로 바뀌었습니다. **sp_droprole** 는 이전 버전의와의 호환성을 위해서만 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 되었으며 이후 릴리스에서는 지원 되지 않을 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

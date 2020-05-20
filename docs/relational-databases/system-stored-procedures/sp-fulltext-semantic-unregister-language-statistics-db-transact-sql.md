@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_unregister_language_statistics_db
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d6952d245dfc9083c7cfa6e6d36ad991ffd24654
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f6b769291c43081be2dbe9ceeb256ad4edf5c02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909136"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833267"
 ---
 # <a name="sp_fulltext_semantic_unregister_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_unregister_language_statistics_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ GO
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
 ## <a name="metadata"></a>메타데이터  
- 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치 된 의미 체계 언어 통계 데이터베이스에 대 한 자세한 내용은 [fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)카탈로그 뷰를 쿼리 합니다.  
+ 인스턴스에 설치 된 의미 체계 언어 통계 데이터베이스에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Fulltext_semantic_language_statistics_database &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)카탈로그 뷰를 쿼리 합니다.  
   
 ## <a name="security"></a>보안  
   

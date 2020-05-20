@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0446943767217050753c233b03b5b8031dddd1f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82321378ac65802a2cf710a86f6844ac5670965e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982635"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834077"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 리소스 풀 구성을 반환합니다. 뷰의 각 행에 따라 풀의 구성이 결정됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.|  
 |name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "73982635"
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;카탈로그 뷰 Resource Governor](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [dm_resource_governor_resource_pools &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
- [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [sys.resource_governor_external_resource_pools&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)  
   
   

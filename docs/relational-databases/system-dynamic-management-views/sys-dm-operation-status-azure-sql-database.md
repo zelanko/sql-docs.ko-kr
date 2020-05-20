@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911205"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833763"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status(Azure SQL Database)
 
@@ -32,7 +32,7 @@ ms.locfileid: "70911205"
 
   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버의 데이터베이스에 대해 수행된 작업 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|작업의 ID입니다. Null이 아닙니다.|  
 |resource_type|**int**|작업이 수행된 리소스의 유형을 나타냅니다. Null이 아닙니다. 현재 릴리스에서 이 뷰는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 수행된 작업을 추적하며 해당 정수 값은 0입니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "70911205"
  이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. 서버의 master `sys.dm_operation_status` 데이터베이스에 있는 뷰를 사용 하 여에 대해 수행 된 다음 작업의 상태를 추적할 수 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]있습니다. **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
+ 이 뷰를 사용 하려면 **master** 데이터베이스에 연결 해야 합니다. `sys.dm_operation_status`서버의 **master** 데이터베이스에 있는 뷰를 사용 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 하 여에 대해 수행 된 다음 작업의 상태를 추적할 수 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 있습니다.  
   
 -   데이터베이스 만들기  
   

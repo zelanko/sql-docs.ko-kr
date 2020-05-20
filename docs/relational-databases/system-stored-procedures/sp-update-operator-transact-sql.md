@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832530"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,41 +53,41 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name=] '*이름*'  
+ [ @name =] '*name*'  
  수정할 운영자의 이름입니다. *name* 은 **sysname**이며 기본값은 없습니다.  
   
- [ @new_name=] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  운영자의 새 이름입니다. 이 이름은 고유해야 합니다. *new_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
- [ @enabled=] *사용*  
+ [ @enabled =] *사용*  
  운영자의 현재 상태를 나타내는 숫자입니다 (현재 사용 하도록 설정 된 경우**1** , 그렇지 않은 경우 **0** ). *enabled* 는 **tinyint**이며 기본값은 NULL입니다. 설정되어 있지 않으면 운영자는 경고 알림을 받을 수 없습니다.  
   
- [ @email_address=] '*email_address*'  
+ [ @email_address =] '*email_address*'  
  운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_number* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  월요일부터 금요일까지 이 운영자에게 호출기 알림 전달을 시작할 수 있는 시간을 지정합니다. *weekday_pager_start_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  월요일부터 금요일까지 지정한 운영자에게 호출기 알림 전달을 마쳐야 하는 시간을 지정합니다. *weekday_pager_end_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  토요일에 지정한 운영자에게 호출기 알림 전달을 시작할 수 있는 시간을 지정합니다. *saturday_pager_start_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  토요일에 지정한 운영자에게 호출기 알림 전달을 마쳐야 하는 시간을 지정합니다. *saturday_pager_end_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  일요일에 지정한 운영자에게 호출기 알림 전달을 시작할 수 있는 시간을 지정합니다. *sunday_pager_start_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  일요일에 지정한 운영자에게 호출기 알림 전달을 마쳐야 하는 시간을 지정합니다. *sunday_pager_end_time*은 **int**이며 기본값은 NULL이 고 24 시간제를 사용 하 여 HHMMSS 형식으로 입력 해야 합니다.  
   
- [ @pager_days=] *pager_days*  
- 지정한 시작/종료 시간에 따라 운영자가 호출을 받을 수 있는 날을 지정합니다. *pager_days*은 **tinyint**이며 기본값은 NULL이 고 **0** 에서 **127**사이의 값 이어야 합니다. *pager_days* 는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2**+**4**+**8**+**16**+**32** = **64**입니다.  
+ [ @pager_days =] *pager_days*  
+ 지정한 시작/종료 시간에 따라 운영자가 호출을 받을 수 있는 날을 지정합니다. *pager_days*은 **tinyint**이며 기본값은 NULL이 고 **0** 에서 **127**사이의 값 이어야 합니다. *pager_days* 는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2** + **4** + **8** + **16** + **32**  =  **64**입니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -99,10 +99,10 @@ sp_update_operator
 |**32**|금요일|  
 |**64**|토요일|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  네트워크 메시지가 전송되는 운영자의 네트워크 주소입니다. *netsend_address*은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- [ @category_name=] '*category*'  
+ [ @category_name =] '*category*'  
  이 경고에 대한 범주 이름입니다. *category* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

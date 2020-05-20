@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832629"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>공간 데이터-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -113,9 +113,9 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>비활성화된 개체의 동작  
  **인덱스**  
   
- 클러스터형 인덱스를 사용할 수 없거나 비클러스터형 인덱스가 강제로 적용 된 경우에는 다음 오류가 발생 합니다. "인덱스 '% (으)로 인해 쿼리 프로세서에서 계획을 생성할 수 없습니다. \*ls ' 테이블 또는 뷰 '%. \*ls '을 (를) 사용할 수 없습니다. " 이러한 개체를 다시 활성화 하려면 업그레이드 후 **ALTER INDEX ON ...를 호출 하 여 인덱스를 다시 작성 합니다. 다시 작성**.  
+ 클러스터형 인덱스를 사용할 수 없거나 비클러스터형 인덱스가 강제로 적용 된 경우에는 다음 오류가 발생 합니다. "인덱스 '% (으)로 인해 쿼리 프로세서에서 계획을 생성할 수 없습니다. \* ls ' 테이블 또는 뷰 '%. \* ls '을 (를) 사용할 수 없습니다. " 이러한 개체를 다시 활성화 하려면 업그레이드 후 **ALTER INDEX ON ...를 호출 하 여 인덱스를 다시 작성 합니다. 다시 작성**.  
   
- **힙에**  
+ **힙**  
   
  비활성화된 힙이 포함된 테이블을 사용하면 다음 오류가 발생합니다. 이러한 개체를 다시 활성화 하려면 업그레이드 후 **ALTER INDEX ALL ON ...을 호출 하 여 다시 빌드하십시오. 다시 작성**.  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 885b736424dfa0b1a83f0d0c854fc11b80f67ade
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832768"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68109566"
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**value**|**sql_variant**|이 옵션에 구성된 값입니다.|  
 |**최대**|**sql_variant**|구성 옵션의 최소값입니다.|  
-|**maximum**|**sql_variant**|구성 옵션의 최대값입니다.|  
+|**최대화**|**sql_variant**|구성 옵션의 최대값입니다.|  
 |**value_in_use**|**sql_variant**|이 옵션에 대해 현재 유효한 값을 실행하고 있습니다.|  
 |**한**|**nvarchar(255)**|구성 옵션의 설명입니다.|  
 |**is_dynamic**|**bit**|1 = RECONFIGURE 문이 실행될 때 효력을 갖는 변수입니다.|  

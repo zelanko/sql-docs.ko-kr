@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_dependencies catalog view
 ms.assetid: 1779aa87-a0b8-470a-a286-d7cc0b93ad2e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8742ebefab7a4b826eac0088a2d57f022a27715b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e6ec79ad00de37b7887164795752b350630193f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68073186"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833976"
 ---
 # <a name="syssql_dependencies-transact-sql"></a>sys.sql_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68073186"
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용 해야 합니다.  
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|참조된 엔터티의 클래스를 식별합니다.<br /><br /> 0 = 개체 또는 열(스키마 바운드가 아닌 참조만 해당)<br /><br /> 1 = 개체 또는 열(스키마 바운드 참조)<br /><br /> 2 = 유형(스키마 바운드 참조)<br /><br /> 3 = XML 스키마 컬렉션(스키마 바운드 참조)<br /><br /> 4 = 파티션 함수(스키마 바운드 참조)|  
 |**class_desc**|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_NON_SCHEMA_BOUND**<br /><br /> **OBJECT_OR_COLUMN_REFERENCE_SCHEMA_BOUND**<br /><br /> **TYPE_REFERENCE**<br /><br /> **XML_SCHEMA_COLLECTION_REFERENCE**<br /><br /> **PARTITION_FUNCTION_REFERENCE**|  

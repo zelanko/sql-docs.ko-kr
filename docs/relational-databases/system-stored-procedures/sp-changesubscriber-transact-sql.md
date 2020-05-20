@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762776"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833408"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>인수  
 `[ @subscriber = ] 'subscriber'`옵션을 변경할 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @type = ] type`구독자 유형입니다. *type* 은 **tinyint**이며 기본값은 NULL입니다. **0** 은 구독자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 나타냅니다. **1** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그렇지 않은 ODBC 데이터 원본 서버 구독자를 지정 합니다.  
+`[ @type = ] type`구독자 유형입니다. *type* 은 **tinyint**이며 기본값은 NULL입니다. **0** 은 구독자를 나타냅니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 그렇지 않은 ODBC 데이터 원본 서버 구독자를 지정 합니다.  
   
-`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
+`[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인증 로그인 ID입니다. *login*은 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 암호입니다. *password* 는 **sysname**이며 기본값은 **%** 입니다. **%** 암호 속성이 변경 되지 않았음을 나타냅니다.  
+`[ @password = ] 'password'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인증 암호입니다. *password* 는 **sysname**이며 기본값은 **%** 입니다. **%** 암호 속성이 변경 되지 않았음을 나타냅니다.  
   
 `[ @commit_batch_size = ] commit_batch_size`이전 버전과의 호환성을 위해서만 지원 됩니다.  
   
@@ -104,7 +104,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequence_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
   
@@ -120,15 +120,15 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`는 구현 된 보안 모드입니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증|  
 |**1**|Windows 인증|  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

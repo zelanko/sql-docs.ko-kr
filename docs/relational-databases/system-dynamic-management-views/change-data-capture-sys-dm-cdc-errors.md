@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 81908d815818c0274615e9bd2bd3bf40037e2b99
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018006"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833844"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>변경 데이터 캡처-sys. dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68018006"
   변경 데이터 캡처 로그 검색 세션 중 발생한 각 오류마다 한 개의 행을 반환합니다.  
  
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|세션의 ID입니다.<br /><br /> 0 = 로그 검색 세션 내에서 오류가 발생하지 않았습니다.|  
 |**phase_number**|**int**|오류 발생한 시점의 세션 단계를 나타내는 번호입니다. 각 단계에 대 한 설명은 [dm_cdc_log_scan_sessions &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)을 참조 하십시오.|  

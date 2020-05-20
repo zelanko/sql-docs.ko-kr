@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833827"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

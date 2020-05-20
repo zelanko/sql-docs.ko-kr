@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0c2c39363ca1b0824b27645df8c8501931b674a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c0cc477647150a11fc644378196f97cfc21007ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056762"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832521"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *연속* = 0 인 경우 **sp_cdc_scan** 작업은 최대 *max_scans* 검색을 실행 하 여 각 검색 중에 *max_trans* 트랜잭션을 처리 한 다음 종료 됩니다.  
   
- ** \@연속** 이 1에서 0으로 변경 되 면 ** \@pollinginterval** 가 자동으로 0으로 설정 됩니다. 0이 아닌 ** \@pollinginterval** 에 대해 지정 된 값은 무시 됩니다.  
+ ** \@ 연속** 이 1에서 0으로 변경 되 면 ** \@ pollinginterval** 가 자동으로 0으로 설정 됩니다. 0이 아닌 ** \@ pollinginterval** 에 대해 지정 된 값은 무시 됩니다.  
   
- ** \@연속** 이 생략 되거나 명시적으로 NULL로 설정 되 고 ** \@pollinginterval** 가 0 보다 큰 값으로 명시적으로 설정 된 경우 ** \@연속** 은 자동으로 1로 설정 됩니다.  
+ ** \@ 연속** 이 생략 되거나 명시적으로 NULL로 설정 되 고 ** \@ pollinginterval** 가 0 보다 큰 값으로 명시적으로 설정 된 경우 ** \@ 연속** 은 자동으로 1로 설정 됩니다.  
   
  *연속* 은 캡처 작업에 대해서만 유효 합니다.  
   
@@ -98,7 +98,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-capture-job"></a>A. 캡처 작업 변경  
- 다음 `@job_type`예에서는 `@maxscans` `AdventureWorks2012` 데이터베이스에서 캡처 작업의 `@maxtrans` , 및 매개 변수를 업데이트 합니다. 캡처 작업에 대한 다른 유효한 매개 변수인 `@continuous`와 `@pollinginterval`은 생략되며 해당 값은 수정되지 않습니다.  
+ 다음 예에서는 `@job_type` `@maxscans` `@maxtrans` 데이터베이스에서 캡처 작업의, 및 매개 변수를 업데이트 합니다 `AdventureWorks2012` . 캡처 작업에 대한 다른 유효한 매개 변수인 `@continuous`와 `@pollinginterval`은 생략되며 해당 값은 수정되지 않습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. 정리 작업 변경  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 정리 작업을 업데이트합니다. 이 작업 유형에 대 한 모든 유효한 매개 변수 ( ** \@임계값**제외)가 지정 됩니다. Threshold 값은 수정 되지 않습니다. ** \@**  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 정리 작업을 업데이트합니다. 이 작업 유형에 대 한 모든 유효한 매개 변수 ( ** \@ 임계값**제외)가 지정 됩니다. ** \@ Threshold** 값은 수정 되지 않습니다.  
   
 ```  
 USE AdventureWorks2012;  

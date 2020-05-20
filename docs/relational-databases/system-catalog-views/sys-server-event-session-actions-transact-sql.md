@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.server_event_session_actions catalog view
 - xe
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f19e3d6588aa336c671e03179cf3936556ddb8d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124927"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834059"
 ---
 # <a name="sysserver_event_session_actions-transact-sql"></a>sys.server_event_session_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이벤트 세션의 각 이벤트의 동작에 대해 한 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 ID입니다. Null을 허용하지 않습니다.|  
 |event_id|**int**|이벤트 ID입니다. 이 ID는 이벤트 세션 개체 내에서 고유합니다. Null을 허용하지 않습니다.|  

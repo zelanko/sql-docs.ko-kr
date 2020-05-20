@@ -17,20 +17,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69561130"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833963"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에는 고유 하 게 컴파일된, 스칼라 사용자 정의 함수 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모듈 간의 종속성 포함 됩니다. 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
+  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에는 고유 하 게 컴파일된, 스칼라 사용자 정의 함수 및 기타 모듈 간의 종속성 포함 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
   
  자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "69561130"
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|보기|예|예|  
+|View|예|예|  
 |필터링된 인덱스|예**|아니요|  
 |필터링된 통계|예**|아니요|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
@@ -91,7 +91,7 @@ ms.locfileid: "69561130"
 |XML 스키마 컬렉션|예|예|  
 |파티션 함수|예|예|  
   
- \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 필터 조건자에 사용된 각 열은 참조 엔터티로 추적됩니다.  
   

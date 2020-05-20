@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 43f5a4ca7dbad88fe98734576fd23368cc280fa2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125016"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834073"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 서버 감사 사양 세부 정보(동작)를 포함합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. 모든 audit_action_id 및 해당 이름 목록을 보려면 [transact-sql&#41;&#40;dm_audit_actions ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)를 쿼리 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |server_specification_id|**int**|감사 서버 사양의 ID입니다.|  
 |audit_action_id|**int**|감사 동작의 ID입니다.|  

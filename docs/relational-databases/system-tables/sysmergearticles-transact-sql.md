@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251943"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831947"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,8 +69,8 @@ ms.locfileid: "72251943"
 |**gen_cur**|**int**|아티클의 기본 테이블에 대한 로컬 변경 사항의 생성 번호입니다.|  
 |**vertical_partition**|**int**|테이블 아티클에 열 필터링 사용 여부를 지정합니다. **0** 은 세로 필터링이 없으며 모든 열을 게시 함을 나타냅니다.|  
 |**identity_support**|**int**|자동 ID 범위 처리가 설정되었는지 여부를 지정합니다. **1** 은 id 범위 처리를 사용 하도록 설정 하 고 **0** 은 id 범위를 지원 하지 않음을 의미 합니다.|  
-|**before_image_objid**|**int**|추적 테이블의 개체 ID입니다. * \@Keep_partition_changes* = **true**를 사용 하 여 게시를 만들 때 추적 테이블에 특정 키 열 값이 포함 됩니다.|  
-|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. * \@Keep_partition_changes* = **true** 를 사용 하 여 게시를 만들 때만 적용 됩니다.|  
+|**before_image_objid**|**int**|추적 테이블의 개체 ID입니다. * \@ Keep_partition_changes*true를 사용 하 여 게시를 만들 때 추적 테이블에 특정 키 열 값이 포함  =  **true**됩니다.|  
+|**before_view_objid**|**int**|뷰 테이블의 개체 ID입니다. 뷰는 행이 삭제 또는 업데이트되기 전에 특정 구독자에 속했는지를 추적하는 테이블에 있습니다. * \@ Keep_partition_changes*true를 사용 하 여 게시를 만들 때만 적용 됩니다  =  **.**|  
 |**verify_resolver_signature**|**int**|해결 프로그램을 병합 복제에 사용하기 전에 디지털 서명을 확인할지 여부를 지정합니다.<br /><br /> **0** = 서명이 확인 되지 않습니다.<br /><br /> **1** = 서명을 확인 하 여 신뢰할 수 있는 원본에서 가져온 것인지 확인 합니다.|  
 |**allow_interactive_resolver**|**bit**|아티클에 대화형 해결 프로그램을 사용할지 여부를 지정합니다. **1** 은 대화형 해결 프로그램을 아티클에서 사용 하도록 지정 합니다.|  
 |**fast_multicol_updateproc**|**bit**|병합 에이전트를 사용하도록 설정하여 한 UPDATE 문에서 같은 행의 여러 열에 변경 사항을 적용했는지 여부를 지정합니다.<br /><br /> **0** = 변경 된 각 열에 대해 별도의 업데이트를 발급 합니다.<br /><br /> **1** = 한 문의 여러 열에 업데이트를 발생 시키는 UPDATE 문을 실행 합니다.|  

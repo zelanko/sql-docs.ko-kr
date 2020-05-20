@@ -16,22 +16,22 @@ helpviewer_keywords:
 - sys.resource_governor_external_resource_pools
 - resource_governor_external_resource_pools
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4751cb9164d5ca11cfdaca4365fa7156c2c2425e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d9b7a733acaf5f6136f6746b313c30c03f63683
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80663005"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834115"
 ---
 # <a name="sysresource_governor_external_resource_pools-transact-sql"></a>sys. resource_governor_external_resource_pools (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 된 외부 리소스 풀 구성을 반환 합니다. 뷰의 각 행에 따라 풀의 구성이 결정됩니다.
+에서 저장 된 외부 리소스 풀 구성을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 뷰의 각 행에 따라 풀의 구성이 결정됩니다.
   
-|열 이름|데이터 형식|설명|
+|열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|
 |external_pool_id|**int**|리소스 풀의 고유한 ID입니다. Null을 허용하지 않습니다.|
 |name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|

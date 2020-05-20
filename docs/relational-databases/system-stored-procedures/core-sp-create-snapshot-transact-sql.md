@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078225"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831854"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 은 **uniqueidentifier** 이며 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collection_sets 뷰를 쿼리합니다.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  수집기 유형의 GUID입니다. *collector_type_uid* 은 **uniqueidentifier** 이며 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 뷰를 쿼리합니다.  
   
- [ @machine_name= ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  컬렉션 집합이 있는 서버의 이름입니다. *machine_name* 는 **sysname**이며 기본값은 없습니다.  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  컬렉션 집합의 인스턴스 이름입니다. *named_instance* 는 **sysname**이며 기본값은 없습니다.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  데이터를 수집한 서버의 컬렉션 집합 이벤트 로그에 매핑되는 고유 식별자입니다. *log_id* 는 **bigint** 이며 기본값은 없습니다. *Log_id*에 대 한 값을 가져오려면 msdb 데이터베이스에서 syscollector_execution_log 뷰를 쿼리 합니다.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  핵심 스냅숏 뷰에 삽입 되는 행의 고유 식별자입니다. *snapshot_id* **int** 이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  

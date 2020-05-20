@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022420"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833651"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  새 멤버를 추가할 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 Windows 로그인 `Corporate\HelenS` 을 `sysadmin` 고정 서버 역할에 추가 합니다.  
+ 다음 예에서는 Windows 로그인을 `Corporate\HelenS` `sysadmin` 고정 서버 역할에 추가 합니다.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

@@ -19,12 +19,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bff80fbe2b5022e12eca58de42192a3a1bb18d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74190368"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834109"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-sql)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74190368"
 
   쿼리의 대기 정보에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**wait_stats_id**|**bigint**|Plan_id, runtime_stats_interval_id execution_type 및 wait_category에 대 한 대기 통계를 나타내는 행의 식별자입니다. 이전 런타임 통계 간격에 대해서만 고유 합니다. 현재 활성 간격의 경우 plan_id에서 참조 하는 계획에 대 한 대기 통계를 나타내는 여러 행이 있을 수 있으며 execution_type로 표시 되는 실행 유형과 wait_category 표시 되는 대기 범주가 있습니다. 일반적으로 한 행은 디스크로 플러시된 대기 통계를 나타내고 다른 하나는 메모리 내 상태를 나타냅니다. 따라서 모든 간격에 대 한 실제 상태를 가져오려면 메트릭을 집계 해야 합니다. plan_id, runtime_stats_interval_id, execution_type 및 wait_category를 기준으로 그룹화 합니다. |  
 |**plan_id**|**bigint**|외래 키입니다. [Transact-sql&#41;&#40;query_store_plan ](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 조인 합니다.|  
@@ -41,11 +41,11 @@ ms.locfileid: "74190368"
 |**wait_category_desc**|**nvarchar(128)**|대기 범주 필드에 대 한 텍스트 설명을 보려면 아래 표를 검토 하십시오.|
 |**execution_type**|**tinyint**|쿼리 실행 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료 됨)<br /><br /> 3-클라이언트에서 시작한 실행 중단<br /><br /> 4-예외 실행 중단|  
 |**execution_type_desc**|**nvarchar(128)**|실행 형식 필드에 대 한 텍스트 설명입니다.<br /><br /> 0-일반<br /><br /> 3-중단 됨<br /><br /> 4-예외|  
-|**total_query_wait_time_ms**|**bigint**|집계 `CPU wait` 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 총 시간입니다.|
+|**total_query_wait_time_ms**|**bigint**|`CPU wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 총 시간입니다.|
 |**avg_query_wait_time_ms**|**float**|집계 간격 및 대기 범주 (밀리초 단위로 보고) 내에 실행 되는 쿼리 계획의 평균 대기 기간입니다.|
 |**last_query_wait_time_ms**|**bigint**|집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 마지막 대기 기간입니다.|
-|**min_query_wait_time_ms**|**bigint**|집계 `CPU wait` 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최소 시간입니다.|
-|**max_query_wait_time_ms**|**bigint**|집계 `CPU wait` 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최대 시간입니다.|
+|**min_query_wait_time_ms**|**bigint**|`CPU wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최소 시간입니다.|
+|**max_query_wait_time_ms**|**bigint**|`CPU wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 최대 시간입니다.|
 |**stdev_query_wait_time_ms**|**float**|`Query wait`집계 간격 및 대기 범주 (밀리초 단위로 보고) 내의 쿼리 계획에 대 한 기간 표준 편차입니다.|
 
 ## <a name="wait-categories-mapping-table"></a>대기 범주 매핑 테이블
@@ -54,7 +54,7 @@ ms.locfileid: "74190368"
   
 |정수 값|대기 범주|대기 유형은 범주에 포함 됩니다.|  
 |-----------------|---------------|-----------------|  
-|**0**|**Unknown**|Unknown |  
+|**0**|**알 수 없음**|알 수 없음 |  
 |**1**|**CPU**|SOS_SCHEDULER_YIELD|
 |**2**|**작업자 스레드**|THREADPOOL|
 |**3**|**잠기지**|LCK_M_%|
@@ -73,7 +73,7 @@ ms.locfileid: "74190368"
 |**x**|**병렬로**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
 |**17@@**|**메모리**|RESOURCE_SEMAPHORE, CMEMTHREAD, CMEMTHREAD, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**개가**|**사용자 대기**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
-|**19**|**추적**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
+|**mb**|**추적**|TRACEWRITE, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**720**|**전체 텍스트 검색**|FT_RESTART_CRAWL, 전체 텍스트 GATHERER, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR|
 |**일**|**기타 디스크 IO**|ASYNC_IO_COMPLETION, IO_COMPLETION, BACKUPIO, WRITE_COMPLETION, IO_QUEUE_LIMIT, IO_RETRY|
 |**22**|**복제**|SE_REPL_%, REPL_%, HADR_% **(HADR_THROTTLE_LOG_RATE_GOVERNOR는 아님)**, PWAIT_HADR_%, REPLICA_WRITES, FCB_REPLICA_WRITE, FCB_REPLICA_READ, PWAIT_HADRSIM|

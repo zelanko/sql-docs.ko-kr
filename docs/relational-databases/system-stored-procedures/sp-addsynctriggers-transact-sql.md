@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsynctriggers
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b99d42216f188771219f711f34ccd7f105770f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096215"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833615"
 ---
 # <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @distributor = ] 'distributor'`배포자의 이름입니다. *배포자* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @pubversion = ] pubversion`게시자의 버전을 나타냅니다. *pubversion* 은 **int**이며 기본값은 1입니다. **1** 은 게시자 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 2 이전 임을 의미 합니다. **2** 는 게시자가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 3 (SP3) 이상 임을 의미 합니다. 게시자 버전이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 이상이 면 *pubversion* 을 명시적으로 **2** 로 설정 해야 합니다.  
+`[ @pubversion = ] pubversion`게시자의 버전을 나타냅니다. *pubversion* 은 **int**이며 기본값은 1입니다. **1** 은 게시자 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 2 이전 임을 의미 합니다. **2** 는 게시자가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 3 (SP3) 이상 임을 의미 합니다. 게시자 버전이 SP3 이상이 면 *pubversion* 을 명시적으로 **2** 로 설정 해야 합니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
