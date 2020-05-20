@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_configure_peerconflictdetection
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a332257b640124c04ed339ff11473b89a7c3b83b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68215942"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828437"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,43 +44,43 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication=] '*게시*'  
+ [ @publication =] '*게시*'  
  충돌 감지를 구성할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
- [ @action= ] '*action*'  
+ [ @action =] '*작업*'  
  이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. *action* 은 **nvarchar (5)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|**활성화**|게시에 충돌 감지를 사용합니다.|  
-|**하지**|게시에 충돌 감지를 사용하지 않습니다.|  
+|**enable**|게시에 충돌 감지를 사용합니다.|  
+|**disable**|게시에 충돌 감지를 사용하지 않습니다.|  
 |NULL(기본값)||  
   
- [ @originator_id= ] *originator_id*  
+ [ @originator_id =] *originator_id*  
  피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. *originator_id* 은 **int**이며 기본값은 NULL입니다. 이 ID는 *작업* 이 **사용**으로 설정 된 경우 충돌 검색에 사용 됩니다. 토폴로지에 사용되지 않은 0이 아닌 양수 ID를 지정합니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 시스템 테이블을 쿼리하십시오.  
   
- [ @conflict_retention= ] *conflict_retention*  
+ [ @conflict_retention =] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict= ] '*continue_onconflict*']  
+ [ @continue_onconflict =] '*continue_onconflict*']  
  충돌이 검색된 후 배포 에이전트에서 변경 내용을 계속 처리할지 여부를 결정합니다. *continue_onconflict* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
   
 > [!CAUTION]  
 >  기본값인 FALSE를 사용하는 것이 좋습니다. 이 옵션이 TRUE로 설정된 경우 배포 에이전트는 송신자 ID가 가장 높은 노드에서 충돌 행을 적용하여 토폴로지의 데이터를 일치시킵니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.  
   
- [ @local= ] '*local*'  
+ [ @local =] '*local*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ] *시간 제한*  
+ [ @timeout =] *시간 제한*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- sp_configure_peerconflictdetection은 피어 투 피어 트랜잭션 복제에 사용됩니다. 충돌 검색을 사용 하려면 모든 노드에서 이상 버전이 실행 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 되 고 있어야 합니다. 그리고 모든 노드에 대해 검색을 사용 하도록 설정 해야 합니다.  
+ sp_configure_peerconflictdetection은 피어 투 피어 트랜잭션 복제에 사용됩니다. 충돌 검색을 사용 하려면 모든 노드에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전이 실행 되 고 있어야 하며 모든 노드에 대해 검색을 사용 하도록 설정 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

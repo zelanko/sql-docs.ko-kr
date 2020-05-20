@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528790"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828457"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,7 +109,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  Oracle 게시자의 경우 Oracle에서는 서버 인스턴스당 하나의 데이터베이스만 허용 하므로 *publisher_db* 값은 무시 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_change_subscription_properties**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

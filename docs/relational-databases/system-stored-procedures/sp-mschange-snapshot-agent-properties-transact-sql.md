@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828867"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 배포자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 실행 되는 스냅숏 에이전트 작업의 속성을 변경 합니다. 이 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 인스턴스에서 게시자가 실행될 때 속성을 변경하는 데 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
+  이상 버전의 배포자에서 실행 되는 스냅숏 에이전트 작업의 속성을 변경 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 이 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 인스턴스에서 게시자가 실행될 때 속성을 변경하는 데 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +84,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 는 **int**이며 기본값은 없습니다.  
   
@@ -102,7 +102,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`기존 작업을 사용 하는 경우 기존 스냅숏 에이전트 작업 이름의 이름입니다. *snapshot_agent_name* 은 **nvarchar (100)** 이며 기본값은 없습니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 는 **int**이며 기본값은 없습니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다. 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해 **0** 값을 지정 해야 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 는 **int**이며 기본값은 없습니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다. 비-게시자에 대해 **0** 값을 지정 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`게시자에 연결할 때 사용 되는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 없습니다. *publisher_security_mode* **0**인 경우 *publisher_login* 를 지정 해야 합니다. *Publisher_login* 가 NULL이 고 publisher *_ * * Security_mode* **1**이면 게시자에 연결할 때 *job_login* 에 지정 된 Windows 계정이 사용 됩니다.  
   
@@ -111,14 +111,14 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @job_login = ] 'job_login'`에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다. *이외 게시자에 대해서는 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. 이 Windows 계정은 에이전트가 배포자에 연결할 때 항상 사용됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다. *이를 변경할* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다. *게시자.*  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -136,9 +136,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
  **Sp_MSchange_snapshot_agent_properties**를 실행 하는 경우 모든 매개 변수를 지정 해야 합니다. [Sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) 를 실행 하 여 스냅숏 에이전트 작업의 현재 속성을 반환 합니다.  
   
- 게시자가 이상 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에서 실행 되는 경우 [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 를 사용 하 여 스냅숏 에이전트 작업의 속성을 변경 해야 합니다.  
+ 게시자가 이상 버전의 인스턴스에서 실행 되는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 를 사용 하 여 스냅숏 에이전트 작업의 속성을 변경 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_MSchange_snapshot_agent_properties**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828427"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -80,7 +80,7 @@ RECONFIGURE
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
 |**최대**|**int**|구성 옵션의 최소값입니다.|  
-|**maximum**|**int**|구성 옵션의 최대값입니다.|  
+|**최대화**|**int**|구성 옵션의 최대값입니다.|  
 |**config_value**|**int**|**Sp_configure** (값을 사용 하 여 구성 옵션이 설정 된 값입니다 **.** 이러한 옵션에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 및 [sys. 구성 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)을 참조 하세요.|  
 |**run_value**|**int**|현재 실행 중인 구성 옵션 값입니다 ( **value_in_use**의 값).<br /><br /> 자세한 내용은 [&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)를 참조 하세요.|  
   
@@ -99,7 +99,7 @@ RECONFIGURE
 > [!CAUTION]  
 > 옵션 값을 잘못 설정하면 역으로 서버 인스턴스 구성에 영향을 줄 수 있습니다. RECONFIGURE WITH OVERRIDE는 매우 주의를 기울여 사용해야 합니다.  
   
- RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server memory** 서버 메모리 옵션은에서 동적으로 업데이트 됩니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 따라서 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]다시 시작 해야 합니다.  
+ RECONFIGURE 문은 일부 옵션을 동적으로 업데이트합니다. 그 외의 옵션을 업데이트하려면 서버를 중지하고 다시 시작해야 합니다. 예를 들어 **min server memory** 및 **max server** memory 서버 메모리 옵션은에서 동적으로 업데이트 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 되므로 서버를 다시 시작 하지 않고 변경할 수 있습니다. 반면 **채우기 비율** 옵션의 실행 값을 다시 구성 하려면을 다시 시작 해야 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 합니다.  
   
  구성 옵션에서 RECONFIGURE를 실행 한 후 **sp_configure '***option_name***'** 를 실행 하 여 옵션이 동적으로 업데이트 되었는지 여부를 확인할 수 있습니다. **Run_value** 및 **config_value** 열의 값은 동적으로 업데이트 된 옵션에 대해 일치 해야 합니다. 또한 **sys. 구성** 카탈로그 뷰의 **is_dynamic** 열을 살펴보면 동적 옵션을 확인할 수 있습니다.  
  
@@ -115,7 +115,7 @@ RECONFIGURE
   
  구성 옵션 및 해당 설정에 대 한 자세한 내용은 [서버 구성 옵션 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경 하거나 RECONFIGURE 문을 실행 하는 두 매개 변수를 사용 하 여 **sp_configure** 를 실행 하려면 ALTER SETTINGS 서버 수준 사용 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ## <a name="examples"></a>예  
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 은 재구성이 완료 될 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
+ 결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. **Config_value** 은 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 재구성이 완료 될 때 사용할 값입니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 특정 구성 이름에 대한 구성 설정 나열  
   

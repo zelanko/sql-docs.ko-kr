@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_logreader_agent_properties
 ms.assetid: 925df9d3-a041-4046-8e17-c47f40edb86d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 37a36218b4e9e93a761c776e76a6596f40a6c0eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab4acf32a4277c5f8c13e71640b98554712d5dac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322290"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828884"
 ---
 # <a name="sp_mschange_logreader_agent_properties-transact-sql"></a>sp_MSchange_logreader_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 배포자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 실행 되는 로그 판독기 에이전트 작업의 속성을 변경 합니다. 이 저장 프로시저는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 인스턴스에서 게시자가 실행될 때 속성을 변경하는 데 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
+  이상 버전의 배포자에서 실행 되는 로그 판독기 에이전트 작업의 속성을 변경 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 이 저장 프로시저는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 인스턴스에서 게시자가 실행될 때 속성을 변경하는 데 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,11 +59,11 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
 `[ @publisher_password = ] 'publisher_password'`게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @job_login = ] 'job_login'`에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. *이외 게시자에 대해서는 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 없습니다. *이를 변경할* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다. *게시자.*  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
+`[ @publisher_type = ] 'publisher_type'`인스턴스에서 게시자가 실행 되 고 있지 않을 때 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -80,9 +80,9 @@ sp_MSchange_logreader_agent_properties [ @publisher = ] 'publisher'
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
- 게시자가 이상 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에서 실행 되는 경우 [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 를 사용 하 여 로그 판독기 에이전트 속성을 변경 해야 합니다.  
+ 게시자가 이상 버전의 인스턴스에서 실행 되는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [sp_changelogreader_agent](../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) 를 사용 하 여 로그 판독기 에이전트 속성을 변경 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_MSchange_logreader_agent_properties**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

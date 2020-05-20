@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010634"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828767"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @cache_window = ] *cache_window*  
+ [ @cache_window =] *cache_window*  
  데이터 손실이 없는 오류 발생 시에 관리 데이터 웨어하우스에 대한 데이터 업로드를 다시 시도하는 횟수입니다. *cache_window* 은 **int** 이며 기본값은 1입니다. *cache_window* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
 |값|설명|  
@@ -56,7 +56,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="remarks"></a>설명  
  캐시 시간대 구성을 변경하려면 먼저 데이터 수집기를 사용하지 않도록 설정해야 합니다. 데이터 수집기를 사용하면 이 저장 프로시저가 실패합니다. 자세한 내용은 [데이터 컬렉션 활성화 또는 비활성화](../../relational-databases/data-collection/enable-or-disable-data-collection.md)및 [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

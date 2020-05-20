@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_defect
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1bc6139afdf99fad7a6abcf5134e3341e7a8082c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952313"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828819"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="remarks"></a>설명  
  **Sp_msx_defect** 정상적으로 완료 되 면 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 저장 프로시저를 실행하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

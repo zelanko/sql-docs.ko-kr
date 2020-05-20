@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc92c675902309179865593b03f51a385f61621e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107885"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828848"
 ---
 # <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,13 +94,13 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="remarks"></a>설명  
  **Sp_OAMethod** 를 사용 하 여 속성 값을 가져올 수도 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-a-local-variable"></a>A. 지역 변수 사용  
- 다음 예에서는 이전에 `HostName` 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  
+ 다음 예에서는 `HostName` 이전에 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -114,7 +114,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. 결과 집합 사용  
- 다음 예에서는 이전에 `HostName` 만든 **SQLServer** 개체의 속성을 가져와서이를 결과 집합으로 클라이언트에 반환 합니다.  
+ 다음 예에서는 `HostName` 이전에 만든 **SQLServer** 개체의 속성을 가져와서이를 결과 집합으로 클라이언트에 반환 합니다.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  

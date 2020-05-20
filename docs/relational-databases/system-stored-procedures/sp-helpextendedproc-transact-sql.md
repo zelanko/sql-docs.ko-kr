@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpextendedproc
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8341f752b266d245603f849325dc32f90f9d92c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67943503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828915"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|확장 저장 프로시저의 이름입니다.|  
 |**gdiplus.dll**|**nvarchar(255)**|DLL의 이름입니다.|  
@@ -57,7 +57,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ## <a name="remarks"></a>설명  
  *프로시저* 를 지정 하면 지정 된 확장 저장 프로시저에 대해 보고서를 **sp_helpextendedproc** 합니다. 이 매개 변수를 지정 하지 않으면 **sp_helpextendedproc** 는 확장 저장 프로시저의 모든 확장 저장 프로시저 이름 및 DLL 이름을 반환 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sp_helpextendedproc** 를 실행할 수 있는 권한은 **public**에 부여 됩니다.  
   
 ## <a name="examples"></a>예  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. 단일 확장 저장 프로시저에 관한 도움말 보고  
- 다음 예에서는 `xp_cmdshell` 확장 저장 프로시저에 대해 보고 합니다.  
+ 다음 예에서는 확장 저장 프로시저에 대해 보고 합니다 `xp_cmdshell` .  
   
 ```  
 USE master;  

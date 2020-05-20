@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046032"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828495"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
  열에 규칙을 바인딩하면 관련 정보가 **sys. columns** 테이블에 추가 됩니다. 별칭 데이터 형식에 규칙을 바인딩하면 관련 정보가 **sys. types** 테이블에 추가 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  테이블 열에 규칙을 바인딩하려면 해당 테이블에 대한 ALTER 권한이 필요합니다. 별칭 데이터 형식에 규칙을 바인딩하려면 별칭 데이터 형식에 대한 CONTROL 권한 또는 그 형식이 속한 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. 별칭 데이터 형식에 규칙 바인딩  
- `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. *Futureonly_flag* `ssn` 에 대해 **futureonly** 를 지정 하지 `rule_ssn` 않거나 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 `ssn` 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
+ `rule_ssn`이라는 규칙과 `ssn`이라는 별칭 데이터 형식이 있다고 가정할 때 다음 예에서는 `rule_ssn`에 `ssn`을 바인딩하는 방법을 보여 줍니다. CREATE TABLE 문에서 `ssn` 형식의 열은 `rule_ssn` 규칙을 상속합니다. `ssn` `rule_ssn` *Futureonly_flag*에 대해 **futureonly** 를 지정 하지 않거나 `ssn` 해당 규칙에 직접 바인딩된 규칙을 포함 하는 경우에도 형식의 기존 열은 규칙을 상속 합니다. 데이터 형식에 바인딩한 규칙보다 열에 바인딩한 규칙이 항상 우선합니다.  
   
 ```  
 USE master;  

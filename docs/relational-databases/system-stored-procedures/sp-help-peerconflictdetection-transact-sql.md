@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085290"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828387"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @publication= ] '*게시*'  
+ [ @publication =] '*게시*'  
  정보가 반환될 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
- [ @timeout= ] *시간 제한*  
+ [ @timeout =] *시간 제한*  
  토폴로지에 있는 모든 노드의 응답을 기다리는 동안 프로시저가 시간 초과되는 시간(초)을 지정합니다. 토폴로지에 읽기 전용 구독자가 있으면 시간 제한 값을 지정할 수 없습니다. 읽기 전용 구독자는 이 프로시저의 호출에 응답하지 않습니다. *timeout* 은 **int**이며 기본값은 60입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -59,7 +59,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  sp_help_peerconflictdetection은 피어 투 피어 트랜잭션 복제에 사용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997479"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828885"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997479"
   현재 데이터베이스의 개체에 대한 사용자 권한 또는 문 사용 권한에 관한 정보가 포함된 보고서를 반환합니다.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** 는에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다. 대신 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 와 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 를 사용 하십시오.  
+>  **sp_helprotect** 는에 도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 대신 [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) 와 [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 를 사용 하십시오.  
   
  고정 서버 역할 또는 고정 데이터베이스 역할에 항상 할당된 사용 권한을 나열하지 않습니다. 역할에서의 멤버 자격에 따라 사용 권한을 받는 로그인 또는 사용자를 포함하지 않습니다.  
   
@@ -65,12 +65,12 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**소유자**|**sysname**|개체 소유자의 이름입니다.|  
-|**Object**|**sysname**|개체 이름입니다.|  
+|**개체가**|**sysname**|개체 이름입니다.|  
 |**피부 여자**|**sysname**|사용 권한이 부여된 보안 주체의 이름입니다.|  
 |**Grantor**|**sysname**|지정된 사람에게 사용 권한을 부여한 보안 주체의 이름입니다.|  
 |**ProtectType**|**nvarchar (10)**|보호의 유형 이름입니다.<br /><br /> GRANT  REVOKE|  
-|**동작**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
-|**열의**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
+|**작업**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
+|**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 절차의 모든 매개 변수는 선택 사항입니다. 매개 변수 없이 `sp_helprotect`를 실행한 경우에는 현재 데이터베이스에 부여되었거나 거부된 모든 사용 권한을 표시합니다.  

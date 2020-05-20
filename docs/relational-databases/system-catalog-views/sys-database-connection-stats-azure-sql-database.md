@@ -16,24 +16,24 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844466"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828527"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  **데이터베이스 연결 이벤트에** 대 한 통계를 포함 하 여 데이터베이스 연결 성공 및 실패에 대 한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 개요를 제공 합니다. 연결 이벤트에 대 한 자세한 내용은 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)에서 이벤트 유형을 참조 하세요.  
+  데이터베이스 연결 이벤트에 대 한 통계 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 를 포함 하 여 데이터베이스 연결 성공 및 실패에 대 한 개요를 제공 합니다. **connectivity** 연결 이벤트에 대 한 자세한 내용은 [event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)에서 이벤트 유형을 참조 하세요.  
   
-|통계|Type|Description|  
+|통계|형식|설명|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 다음은 그 예입니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -41,8 +41,8 @@ ms.locfileid: "73844466"
 |**success_count**|**int**|성공한 연결 수:|  
 |**total_failure_count**|**int**|실패한 연결의 총 수입니다. **Connection_failure_count**, **terminated_connection_count**및 **throttled_connection_count**의 합계 이며, 교착 상태 이벤트를 포함 하지 않습니다.|  
 |**connection_failure_count**|**int**|로그인 실패 횟수입니다.|  
-|**terminated_connection_count**|**int**|**_V11에 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 만 적용 됩니다._**<br /><br /> 종료된 연결 수:|  
-|**throttled_connection_count**|**int**|**_V11에 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 만 적용 됩니다._**<br /><br /> 정체된 연결 수입니다.|  
+|**terminated_connection_count**|**int**|**_V11에만 적용 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 됩니다._**<br /><br /> 종료된 연결 수:|  
+|**throttled_connection_count**|**int**|**_V11에만 적용 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 됩니다._**<br /><br /> 정체된 연결 수입니다.|  
   
 ## <a name="remarks"></a>설명  
   
@@ -79,9 +79,9 @@ start_time                    end_time
 
  이 뷰에는 일부 연결 및 오류 정보가 포함되지 않을 수 있습니다.  
   
-- 이 뷰에는 발생할 수 있는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 모든 데이터베이스 오류가 포함 되어 있지 않습니다. Event_log의 이벤트 유형에 지정 된 오류 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
+- 이 뷰에는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 발생할 수 있는 모든 데이터베이스 오류가 포함 되어 있지 않습니다. event_log의 이벤트 유형에 지정 된 오류 [&#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-- 데이터 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 센터 내에 컴퓨터 오류가 발생 하면 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
+- 데이터 센터 내에 컴퓨터 오류가 발생 하면 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 이벤트 테이블에서 소량의 데이터가 누락 될 수 있습니다.  
   
 - DoSGuard를 통해 IP 주소를 차단하는 경우 해당 IP 주소로부터의 연결 시도 이벤트는 수집할 수 없으며 이 뷰에 나타나지 않습니다.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137693"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828898"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 모든 아티클의 **%** 이름을 반환 하는입니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 모든 아티클의 이름을 반환 하는입니다.  
   
-`[ @filtername = ] 'filtername'`정보를 반환할 필터의 이름입니다. *filtername* 는 **sysname**이며 기본값은 아티클 또는 **%** 게시에 정의 된 모든 필터에 대 한 정보를 반환 하는입니다.  
+`[ @filtername = ] 'filtername'`정보를 반환할 필터의 이름입니다. *filtername* 는 **sysname**이며 기본값은 **%** 아티클 또는 게시에 정의 된 모든 필터에 대 한 정보를 반환 하는입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -67,7 +67,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_helpmergefilter** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 및 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpmergefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

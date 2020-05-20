@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_enable_collector
 - data collector [SQL Server], stored procedures
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab6087b68fba057e6acd91f43804b0e324992e1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7015577f6965524735d97969f025c23a8a1b65d6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000811"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828782"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ dbo.sp_syscollector_enable_collector
 ## <a name="remarks"></a>설명  
  기본값은 서버의 데이터 수집기입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 **dc_admin** 또는 **dc_operator** (EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

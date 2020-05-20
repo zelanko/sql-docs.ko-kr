@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828502"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  세션을 동일한 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]다른 세션에 바인딩 또는 바인딩 해제 합니다. 세션을 바인딩하면 두 개 이상의 세션이 같은 트랜잭션에 참가할 수 있으며 ROLLBACK TRANSACTION 또는 COMMIT TRANSACTION이 실행될 때까지 잠금을 공유할 수 있습니다.  
+  세션을 동일한 인스턴스의 다른 세션에 바인딩 또는 바인딩 해제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 합니다. 세션을 바인딩하면 두 개 이상의 세션이 같은 트랜잭션에 참가할 수 있으며 ROLLBACK TRANSACTION 또는 COMMIT TRANSACTION이 실행될 때까지 잠금을 공유할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 MARS(Multiple Active Results Sets) 또는 분산 트랜잭션을 사용하십시오. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.  
@@ -53,7 +53,7 @@ sp_bindsession { 'bind_token' | NULL }
   
  **sp_bindsession** 바인드 토큰을 사용 하 여 둘 이상의 기존 클라이언트 세션을 바인딩합니다. 이들 클라이언트 세션은 바인딩 토큰을 확보한 같은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있어야 합니다. 세션은 명령을 실행하는 클라이언트입니다. 바인딩된 데이터베이스 세션은 트랜잭션 및 잠금 공간을 공유합니다.  
   
- 한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 확보한 바인딩 토큰은 DTC 트랜잭션을 포함해서 다른 인스턴스에 연결된 클라이언트 세션에 사용할 수 없습니다. 바인딩 토큰은 각 인스턴스 내에 로컬로만 유효하며 여러 인스턴스에 걸쳐 공유할 수 없습니다. 의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]다른 인스턴스에 있는 클라이언트 세션을 바인딩하려면 **sp_getbindtoken**를 실행 하 여 다른 바인드 토큰을 가져와야 합니다.  
+ 한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 확보한 바인딩 토큰은 DTC 트랜잭션을 포함해서 다른 인스턴스에 연결된 클라이언트 세션에 사용할 수 없습니다. 바인딩 토큰은 각 인스턴스 내에 로컬로만 유효하며 여러 인스턴스에 걸쳐 공유할 수 없습니다. 의 다른 인스턴스에 있는 클라이언트 세션을 바인딩하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_getbindtoken**를 실행 하 여 다른 바인드 토큰을 가져와야 합니다.  
   
  활성 상태가 아닌 토큰을 사용 하는 경우 오류가 발생 하 여 **sp_bindsession** 실패 합니다.  
   

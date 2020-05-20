@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 33e9094a7f08cc6b4929b36b2739aa4dda026e07
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771180"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828807"
 ---
 # <a name="sp_refreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
   
  **sp_refreshsubscriptions** 는 즉시 업데이트 게시를 위해 **sp_addarticle** 에서 호출 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_refreshsubscriptions**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

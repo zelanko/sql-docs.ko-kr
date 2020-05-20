@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_get_account
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e0fbfe21194dbfa30c54942352d9bd28d6df45b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108041"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828849"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|마스터 서버 연결 번호입니다.|  
 |msx_credential_id|**int**|이 마스터 서버 연결에 사용된 자격 증명의 ID입니다.|  
@@ -54,7 +54,7 @@ sp_msx_get_account
 ## <a name="remarks"></a>설명  
  이 대상 서버에 대해 지정된 자격 증명이 없으면 빈 결과 집합을 반환합니다. 자격 증명을 설정하려면 sp_msx_set_account를 사용하십시오.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

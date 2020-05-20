@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107909"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828863"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |오류 및 HRESULT|일반적 원인|  
 |-----------------------|------------------|  
-|**잘못된 변수 형식(0x80020008)**|메서드 매개 변수로 전달 [!INCLUDE[tsql](../../includes/tsql-md.md)] 된 값의 데이터 형식이 메서드 매개 변수의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식과 일치 하지 않거나, NULL 값이 메서드 매개 변수로 전달 되었습니다.|  
+|**잘못된 변수 형식(0x80020008)**|메서드 매개 변수로 전달 된 값의 데이터 형식이 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 메서드 매개 변수의 데이터 형식과 일치 하지 않거나, NULL 값이 메서드 매개 변수로 전달 되었습니다.|  
 |**알 수 없는 이름(0x8002006)**|지정한 개체에 대해 지정한 속성 또는 메서드 이름이 없습니다.|  
 |**잘못된 클래스 문자열(0x800401f3)**|지정된 ProgID 또는 CLSID가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 OLE 개체로 등록되어 있지 않습니다. 사용자 지정 OLE 자동화 서버를 **sp_OACreate**를 사용 하 여 인스턴스화하려면 먼저 등록 해야 합니다. 이 작업은 in-process (.dll) 서버에 대해 Regsvr32 유틸리티를 사용 하거나 로컬 (.exe) 서버에 **/REGSERVER** 명령줄 스위치를 사용 하 여 수행할 수 있습니다.|  
 |**서버 실행 실패(0x80080005)**|지정된 OLE 개체가 로컬 OLE 서버(.exe 파일)로 등록되어 있지만 .exe 파일을 찾거나 시작할 수 없습니다.|  
@@ -94,7 +94,7 @@ sp_OAGetErrorInfo [ objecttoken ]
   
  HRESULT 반환 코드를 처리 하는 방법에 대 한 자세한 내용은 [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  

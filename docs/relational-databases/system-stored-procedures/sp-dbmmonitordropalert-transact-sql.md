@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4776e043505c787e74c9cecf766325d189c4f702
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37877860454612e6ebc9b623b47a42606abe4646
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108120"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828404"
 ---
 # <a name="sp_dbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_dbmmonitordropalert database_name
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  

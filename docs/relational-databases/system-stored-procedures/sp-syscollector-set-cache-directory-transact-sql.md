@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910046"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828787"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +50,11 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  Sp_syscollector_set_cache_directory 실행 될 때 지정 된 디렉터리가 존재 하지 않아도 됩니다. 그러나 디렉터리를 만들 때까지 데이터를 성공적으로 캐시 하 고 업로드할 수 없습니다. 따라서 이 저장 프로시저를 실행하기 전에 지정된 디렉터리를 만드는 것이 좋습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 데이터 수집기를 사용 하지 않도록 설정 하 고 데이터 수집기의 캐시 디렉터리 `D:\tempdata`를로 설정한 다음 데이터 수집기를 사용 하도록 설정 합니다.  
+ 다음 예에서는 데이터 수집기를 사용 하지 않도록 설정 하 고 데이터 수집기의 캐시 디렉터리를로 설정한 `D:\tempdata` 다음 데이터 수집기를 사용 하도록 설정 합니다.  
   
 ```sql  
 USE msdb;  

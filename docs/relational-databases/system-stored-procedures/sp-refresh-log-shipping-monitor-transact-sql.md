@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828840"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_refresh_log_shipping_monitor
   
  **sp_refresh_log_shipping_monitor** 는 주 서버 또는 보조 서버에 있는 **master** 데이터베이스에서 실행 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

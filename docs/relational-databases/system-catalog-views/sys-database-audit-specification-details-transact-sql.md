@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specification_details catalog view
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0c2666b30a0a9618aa03f68a7266d14b7c37d625
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940280"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828553"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 인스턴스에 있는 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 데이터베이스 감사 사양 정보를 포함합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. 모든 audit_action_id 및 해당 이름 목록을 보려면 [transact-sql&#41;&#40;dm_audit_actions ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)를 쿼리 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**int**|감사 사양의 ID입니다.|  
 |**audit_action_id**|**int**|감사 동작의 ID입니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "67940280"
 |**audited_result**|**Nvarchar (60)**|감사 동작 결과:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**조금**|다음은 개체가 그룹인지 여부를 보여 줍니다.<br /><br /> 0 - 그룹 아님<br /><br /> 1 - 그룹임|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **ALTER ANY DATABASE AUDIT** 또는 **VIEW DEFINITION** 권한이 있는 보안 주체, **dbo** 역할 및 **db_owners** 고정 데이터베이스 역할의 멤버는이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체에 게 **VIEW DEFINITION** 권한이 거부 되지 않아야 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

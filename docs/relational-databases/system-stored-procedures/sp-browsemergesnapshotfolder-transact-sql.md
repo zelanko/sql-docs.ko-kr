@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsemergesnapshotfolder
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a89cf408bd1acdd19ae982dfc0afa92c3c6cbe02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828449"
 ---
 # <a name="sp_browsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
  **sp_browsemergesnapshotfolder** 는 병합 스냅숏 파일이 생성 되는 디렉터리를 결정 하는 데 유용 합니다. 이 폴더/경로 및 그 내용은 이동식 미디어에 복사될 수 있고 스냅샷은 대체 스냅샷 위치에서 구독을 동기화하는 데 사용될 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_browsemergesnapshotfolder**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
