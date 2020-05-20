@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB simple provider
 - OLE DB simple provider [ADO]
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926603"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761601"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 단순 공급자 개요
 Microsoft OSP (OLE DB Simple Provider)를 사용 하면 ADO에서 [osp (OLE DB Simple provider) 도구 키트](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)를 사용 하 여 공급자가 작성 된 모든 데이터에 액세스할 수 있습니다. 단순 공급자는 메모리 내 배열 또는 XML 문서와 같이 기본적인 OLE DB 지원만 필요한 데이터 원본에 액세스 하기 위한 것입니다.
@@ -44,7 +44,7 @@ MSDAOSP
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본**|서버의 이름을 지정합니다.|

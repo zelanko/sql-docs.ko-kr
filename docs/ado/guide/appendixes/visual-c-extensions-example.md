@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926397"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761511"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
 이 프로그램은 필드에서 값을 검색 하 고 C/c + + 변수로 변환 하는 방법을 보여 줍니다.  
@@ -38,7 +38,7 @@ TESTHR(pRs->QueryInterface(
 if (picRs) picRs->Release();  
 ```  
   
- 스마트 포인터를 사용 하면 다음 문을 `IADORecordBindingPtr` 사용 하 여 `IADORecordBinding` 인터페이스에서 형식을 파생 시킬 수 있습니다.  
+ 스마트 포인터를 사용 하면 `IADORecordBindingPtr` 다음 문을 사용 하 여 인터페이스에서 형식을 파생 시킬 수 있습니다 `IADORecordBinding` .  
   
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));  
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual C++ 확장은 **레코드 집합** 개체에 의해 구현 되기 때문에 스마트 포인터 `picRs`에 대 한 생성자는 _`RecordsetPtr` 포인터를 `pRs`사용 합니다. 생성자는 `QueryInterface` `pRs` 를 호출 하 여 `IADORecordBinding` 인터페이스를 찾습니다.  
+ Visual C++ 확장은 **레코드 집합** 개체에 의해 구현 되기 때문에 스마트 포인터에 대 한 생성자는 `picRs` _ `RecordsetPtr` 포인터를 사용 `pRs` 합니다. 생성자는를 호출 하 여 `QueryInterface` `pRs` 인터페이스를 찾습니다 `IADORecordBinding` .  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

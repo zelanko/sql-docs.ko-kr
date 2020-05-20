@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f1b66cf9d8e2e284dba2eea888ddc1eda061dabb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926610"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761621"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>SQL Server 용 Microsoft OLE DB 공급자 개요
 SQL Server에 대 한 Microsoft OLE DB 공급자 SQLOLEDB를 사용 하면 ADO에서 Microsoft SQL Server에 액세스할 수 있습니다.
@@ -47,7 +47,7 @@ User ID=MyUserID;Password=MyPassword;"
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|SQL Server에 대 한 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본** 또는 **서버**|서버의 이름을 지정합니다.|
@@ -61,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
  공급자는 ADO에 의해 정의 된 매개 변수 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. ADO 연결 속성과 마찬가지로 이러한 공급자별 속성은 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 의 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션을 통해 설정 하거나 **ConnectionString**의 일부로 설정할 수 있습니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |Trusted_Connection|사용자 인증 모드를 나타냅니다. **예** 또는 **아니요**로 설정할 수 있습니다. 기본값은 **No**입니다. 이 속성이 **예**로 설정 된 경우 SQLOLEDB는 MICROSOFT Windows NT 인증 모드를 사용 하 여 **Location** 및 [Datasource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값으로 지정 된 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. 이 속성이 **아니요**로 설정 된 경우 SQLOLEDB는 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. **사용자 Id** **및 암호 속성에** SQL Server 로그인 및 암호가 지정 됩니다.|
 |현재 언어|SQL Server 언어 이름을 나타냅니다. 시스템 메시지 선택 및 서식 지정에 사용되는 언어를 식별합니다. 언어가 SQL Server에 설치 되어 있어야 합니다. 그렇지 않으면 연결을 열 수 없습니다.|

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bda85bae42b294fa63c67adfe51d8c60c5b56af
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926004"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761279"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 셰이핑은 다음과 같은 기능을 지원 합니다. 작업할 열을 포함 하는 챕터에 할당 된 이름은 *챕터 별칭*입니다.  

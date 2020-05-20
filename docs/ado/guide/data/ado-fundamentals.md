@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e6571ee28b9b069613ecb6aa9df991751118ca74
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926068"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761299"
 ---
 # <a name="ado-fundamentals"></a>ADO 기본 사항
 ADO는 개발자에 게 OLE DB 시스템 인터페이스를 통해 다양 한 데이터 소스의 데이터를 프로그래밍 방식으로 액세스, 편집 및 업데이트할 수 있는 강력한 논리 개체 모델을 제공 합니다. ADO의 가장 일반적인 사용법은 관계형 데이터베이스의 테이블을 쿼리하고, 결과를 검색 하 여 응용 프로그램에 표시 하 고, 사용자가 데이터를 변경 하 고 변경 내용을 저장할 수 있도록 하는 것입니다. 다른 작업에는 다음이 포함 됩니다.  
@@ -62,4 +62,4 @@ ADO는 개발자에 게 OLE DB 시스템 인터페이스를 통해 다양 한 �
   
 -   [OLE DB 공급자](../../../ado/guide/data/ole-db-providers-ado.md)  
   
--   [오류](../../../ado/guide/data/errors-ado.md)
+-   [Errors](../../../ado/guide/data/errors-ado.md)

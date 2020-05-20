@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b84ce6679071cc3ea90ce23b4dcd9f8e1894bb2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926632"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761631"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>ODBC 용 Microsoft OLE DB 공급자 개요
 ADO 또는 RDS 프로그래머는 모든 데이터 원본이 OLE DB 인터페이스를 노출 하는 것이 가장 좋습니다. 그러면 ADO에서 데이터 소스를 직접 호출할 수 있습니다. 점점 더 많은 데이터베이스 공급 업체가 OLE DB 인터페이스를 구현 하지만 일부 데이터 원본은 아직 이러한 방식으로 노출 되지 않습니다. 그러나 현재 사용 중인 대부분의 DBMS 시스템은 ODBC를 통해 액세스할 수 있습니다.
@@ -92,7 +92,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-connection-properties"></a>공급자별 연결 속성
  ODBC 용 OLE DB 공급자는 **연결** 개체의 [properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 몇 가지 속성을 추가 합니다. 다음 표에서는 이러한 속성에 해당 하는 OLE DB 속성 이름을 괄호 안에 나열 합니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |액세스 가능한 프로시저 (KAGPROP_ACCESSIBLEPROCEDURES)|사용자에 게 저장 프로시저에 대 한 액세스 권한이 있는지 여부를 나타냅니다.|
 |액세스 가능한 테이블 (KAGPROP_ACCESSIBLETABLES)|사용자에 게 데이터베이스 테이블에 대해 SELECT 문을 실행할 수 있는 권한이 있는지 여부를 나타냅니다.|
@@ -119,7 +119,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="provider-specific-recordset-and-command-properties"></a>공급자별 레코드 집합 및 명령 속성
  ODBC 용 OLE DB 공급자는 **레코드 집합** 및 **명령** 개체의 **properties** 컬렉션에 몇 가지 속성을 추가 합니다. 다음 표에서는 이러한 속성에 해당 하는 OLE DB 속성 이름을 괄호 안에 나열 합니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |쿼리 기반 업데이트/삭제/삽입 (KAGPROP_QUERYBASEDUPDATES)|SQL 쿼리를 사용 하 여 업데이트, 삭제 및 삽입을 수행할 수 있는지 여부를 나타냅니다.|
 |ODBC 동시성 유형 (KAGPROP_CONCURRENCY)|두 사용자가 동시에 데이터 소스에서 동일한 데이터에 액세스 하려고 할 때 발생 하는 잠재적인 문제를 줄이는 데 사용 되는 방법을 나타냅니다.|
@@ -192,7 +192,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기/쓰기|사용할 수 없음|읽기 전용|읽기 전용|
 |[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|읽기/쓰기|읽기/쓰기|읽기/쓰기|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
-|[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|읽기 전용|읽기 전용|읽기 전용|
 
  [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 및 [ABSOLUTEPAGE](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성은 ADO가 MICROSOFT OLE DB Provider for ODBC의 1.0 버전에서 사용 되는 경우 쓰기 전용입니다.
 
@@ -206,7 +206,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|예|예|예|예|
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|아니요|예|예|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|예|예|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
+|[삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|예|예|예|예|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|예|예|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|예|예|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|예|예|예|
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|모드|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f623bd3eb0c0c4cdde47c6fea7e7cd8af2ad0de6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926371"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761521"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO용 Visual C++ 확장
 Visual C++를 사용 하 여 ADO를 프로그래밍 하는 기본 방법은 [Ado 프로그래밍 Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md)에서 설명한 대로 **#import** 지시어를 사용 하는 것입니다. 그러나 Visual C++를 사용 하 여 다른 프로그래밍 방법으로 제공 되는 이전 버전의 ADO에는 Visual C++ 확장이 있습니다. 이 섹션에서는 Visual C++ 확장 코드를 유지 관리 해야 하는 사용자를 위해이 기능을 설명 하지만 #**import**를 사용 하 여 새 ADO 코드를 작성 해야 합니다.

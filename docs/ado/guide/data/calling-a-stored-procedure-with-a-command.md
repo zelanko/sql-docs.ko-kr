@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stored procedures [ADO]
 - commands [ADO]
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 998bda7d2c940b16f298fdfe436a2d60b27f09ba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925861"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761219"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>명령을 사용하여 저장 프로시저 호출
 명령을 사용 하 여 저장 프로시저를 호출할 수 있습니다. 이 항목의 끝에 있는 코드 샘플은 다음과 같이 정의 된 CustOrdersOrders 이라는 Northwind 샘플 데이터베이스의 저장 프로시저를 참조 합니다.  
@@ -40,7 +40,7 @@ ORDER BY OrderID
   
  매개 변수가 수동으로 입력 된 다음 코드 샘플과 [Command 개체 매개 변수의](../../../ado/guide/data/command-object-parameters.md)코드 사이에는 다른 중요 한 차이점이 있습니다. 첫째,이 코드는 SQL Server 저장 프로시저이 고 정의에 의해 미리 컴파일되어 **준비** 된 속성을 **True** 로 설정 하지 않습니다. 두 번째 예에서는 명령이 저장 프로시저 임을 ADO에 알리기 위해 **명령** 개체의 **CommandType** 속성이 **adCmdStoredProc** 로 변경 되었습니다.  
   
- 마지막으로, 두 번째 예제에서는 디자인 타임에 매개 변수 이름을 알 수 없기 때문에 값을 설정할 때 인덱스에서 매개 변수를 참조 해야 합니다. 매개 변수의 이름을 알고 있는 경우 **명령** 개체의 새 [Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) 속성을 True로 설정 하 고 속성의 이름을 참조할 수 있습니다. 저장 프로시저 (@CustomerID)에서 언급 된 첫 번째 매개 변수의 위치가 0 (`objCmd(1) = "ALFKI"`)이 아닌 1 인 이유가 궁금할 수 있습니다. 이는 매개 변수 0에 SQL Server 저장 프로시저의 반환 값이 포함 되어 있기 때문입니다.  
+ 마지막으로, 두 번째 예제에서는 디자인 타임에 매개 변수 이름을 알 수 없기 때문에 값을 설정할 때 인덱스에서 매개 변수를 참조 해야 합니다. 매개 변수의 이름을 알고 있는 경우 **명령** 개체의 새 [Namedparameters](../../../ado/reference/ado-api/namedparameters-property-ado.md) 속성을 True로 설정 하 고 속성의 이름을 참조할 수 있습니다. 저장 프로시저 ()에서 언급 된 첫 번째 매개 변수의 위치가 @CustomerID 0 ()이 아닌 1 인 이유가 궁금할 수 있습니다 `objCmd(1) = "ALFKI"` . 이는 매개 변수 0에 SQL Server 저장 프로시저의 반환 값이 포함 되어 있기 때문입니다.  
   
 ```  
 'BeginAutoParamCmd  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926457"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761551"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -116,11 +116,11 @@ Update(CADORecordBinding *binding)
 |*Ordinal*|C/c + + 변수에 해당 하는 **레코드 집합** 필드 중 하나에서 계산 하는 서 수입니다.|
 |*DataType*|C/c + + 변수의 해당 ADO 데이터 형식입니다 (유효한 데이터 형식 목록은 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 참조). 필요한 경우 **레코드 집합** 필드의 값이이 데이터 형식으로 변환 됩니다.|
 |*버퍼*|**레코드 집합** 필드가 저장 되는 c/c + + 변수의 이름입니다.|
-|*크기*|*버퍼*의 최대 크기 (바이트)입니다. *버퍼가* 가변 길이 문자열을 포함 하는 경우 종료 0에 대해 공간을 허용 합니다.|
-|*상태*|*버퍼* 의 내용이 올바른지 여부와 필드를 *데이터 형식* 으로 변환 하는 작업이 성공 했는지 여부를 나타내는 변수의 이름입니다.<br /><br /> 이 변수에 대 한 가장 중요 한 두 가지 값은 변환이 성공 했음을 의미 하는 **Adfldok**입니다. 및 **Adfldnull**은 필드의 값이 단순히 비어 있지 않고 VT_NULL 형식의 VARIANT 임을 의미 합니다.<br /><br /> *상태* 에 사용할 수 있는 값은 다음 테이블인 "상태 값"에 나열 되어 있습니다.|
+|*Size*|*버퍼*의 최대 크기 (바이트)입니다. *버퍼가* 가변 길이 문자열을 포함 하는 경우 종료 0에 대해 공간을 허용 합니다.|
+|*Status*|*버퍼* 의 내용이 올바른지 여부와 필드를 *데이터 형식* 으로 변환 하는 작업이 성공 했는지 여부를 나타내는 변수의 이름입니다.<br /><br /> 이 변수에 대 한 가장 중요 한 두 가지 값은 변환이 성공 했음을 의미 하는 **Adfldok**입니다. 및 **Adfldnull**은 필드의 값이 단순히 비어 있지 않고 VT_NULL 형식의 VARIANT 임을 의미 합니다.<br /><br /> *상태* 에 사용할 수 있는 값은 다음 테이블인 "상태 값"에 나열 되어 있습니다.|
 |*수정*|부울 플래그입니다. TRUE 이면 ADO에서 해당 **레코드 집합** 필드를 *버퍼*에 포함 된 값으로 업데이트할 수 있음을 나타냅니다.<br /><br /> 부울 *modify* 매개 변수를 TRUE로 설정 하 여 ADO에서 바인딩된 필드를 업데이트할 수 있게 하 고, 필드를 검사 하지만 변경 하지 않으려면 FALSE로 설정 합니다.|
 |*정밀도*|숫자 변수로 나타낼 수 있는 자릿수입니다.|
-|*규모*|숫자 변수의 소수 자릿수입니다.|
+|*크기 조정*|숫자 변수의 소수 자릿수입니다.|
 |*길이*|*버퍼*에 있는 데이터의 실제 길이를 포함 하는 4 바이트 변수의 이름입니다.|
 
 ## <a name="status-values"></a>상태 값

@@ -8,14 +8,14 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 86c48e9cb3d34eb4ac499ff5f58df77367faeec0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70212335"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761359"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO 이벤트 인스턴스: ADO 및 WFC
 Windows Foundation 클래스 (ADO/WFC) 용 ADO는 ADO 이벤트 모델을 기반으로 하며 간소화 된 응용 프로그램 프로그래밍 인터페이스를 제공 합니다. 일반적으로 ADO/WFC는 ADO 이벤트를 가로채 고 이벤트 매개 변수를 단일 이벤트 클래스로 통합 한 다음 이벤트 처리기를 호출 합니다.  

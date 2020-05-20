@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Recordset object [ADO], boundaries of a Recordset
 - BOF property [ADO], boundaries of a Recordset
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3819ba4951307a6f1ada11030fdc2808e568df0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925919"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761229"
 ---
 # <a name="boundaries-of-a-recordset"></a>레코드 집합의 경계
 **레코드** 집합은 데이터 집합의 시작과 끝을 각각 나타내며 **BOF** 및 **EOF** 속성을 지원 합니다. **BOF** 및 **EOF** 는 **레코드 집합**의 시작과 끝에 배치 되는 "가상" 레코드로 간주할 수 있습니다. **BOF** 및 **EOF**를 계산 하면 샘플 **레코드 집합** 은 다음과 같이 표시 됩니다.  

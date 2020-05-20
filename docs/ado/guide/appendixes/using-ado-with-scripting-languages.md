@@ -11,14 +11,14 @@ helpviewer_keywords:
 - scripting languages [ADO]
 - ADO, scripting languages
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926484"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761571"
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어로 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립팅을 통해 데이터를 노출할 수 있습니다. 이 시나리오에서 사용 하는 기본 OLE DB 공급자와 지정 된 데이터 저장소를 참조 하는 데 필요한 다른 모든 구성 요소는 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 됩니다. ADO는 ASP (Active Server Pages)를 사용 하 여 HTML을 생성할 수 있는 스크립트에서 참조 되는 구성 요소입니다 (예:). 이 HTML 콘텐츠는 HTTP를 통해 클라이언트 웹 브라우저에 전달 될 수 있습니다. 스크립팅을 사용 하면 웹 페이지에서 서버 쪽 스크립트로 작업을 다시 보낼 수 있으므로 특정 데이터를 업데이트 하거나 트래버스 하거나 볼 수 있습니다.  

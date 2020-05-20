@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926240"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761389"
 ---
 # <a name="ado-errors"></a>ADO 오류
 **Errorvalueenum** 상수는 ADO 오류 값을 설명 합니다. 값을 포함 하 여 이러한 열거 상수의 전체 목록은 [부록 B: ADO 오류](../../../ado/guide/appendixes/appendix-b-ado-errors.md)를 참조 하세요. 이 섹션에서는 더 흥미로운 오류 중 일부를 살펴보고이를 발생 시킬 수 있는 몇 가지 특정 상황 또는 문제를 해결 하는 해결 방법을 설명 합니다. **Errorvalueenum** 상수와 짧은 양의 10 진수가 모두 나열 됩니다.
@@ -63,7 +63,7 @@ ms.locfileid: "67926240"
 |**3724**|**adErrCantConvertvalue**|부호 불일치 또는 데이터 오버플로가 아닌 다른 이유로 인해 데이터 값을 변환할 수 없습니다. 예를 들어 변환은 데이터를 잘랐습니다.|
 |**3725**|**adErrCantCreate**|필드 데이터 형식을 알 수 없거나 공급자가 작업을 수행할 수 있는 리소스가 부족 하 여 데이터 값을 설정 하거나 검색할 수 없습니다.|
 |**3726**|**adErrColumnNotOnThisRow**|레코드에이 필드가 없습니다. 잘못 된 필드 이름을 지정 했거나 현재 레코드의 **Fields** 컬렉션에 없는 필드를 참조 했습니다.|
-|**3727**|**adErrURLDoesNotExist**|원본 URL 또는 대상 URL의 부모가 없습니다. 원본 또는 대상 URL에 철자 오류가 있습니다. 실제로가 있는 `https://mysite/photo/myphoto.jpg` `https://mysite/photos/myphoto.jpg` 경우를 들 수 있습니다. 부모 URL (이 *경우 사진 대신* *사진* )의 입력 오류로 인해 오류가 발생 했습니다.|
+|**3727**|**adErrURLDoesNotExist**|원본 URL 또는 대상 URL의 부모가 없습니다. 원본 또는 대상 URL에 철자 오류가 있습니다. `https://mysite/photo/myphoto.jpg`실제로가 있는 경우를 들 수 있습니다 `https://mysite/photos/myphoto.jpg` . 부모 URL (이 *경우 사진 대신* *사진* )의 입력 오류로 인해 오류가 발생 했습니다.|
 |**3728**|**adErrTreePermissionDenied**|트리 또는 하위 트리에 액세스할 수 있는 권한이 부족 합니다. 연결 문자열에서 이름이 인 사용자에 게 적절 한 권한이 없습니다.|
 |**3729**|**adErrInvalidURL**|URL에 잘못 된 문자가 포함 되어 있습니다. URL을 올바르게 입력 했는지 확인 합니다. URL은 현재 공급자에 등록 된 체계를 따릅니다. 예를 들어, http에 대해 인터넷 게시 공급자가 등록 됩니다.|
 |**3730**|**adErrResourceLocked**|지정 된 URL이 나타내는 개체가 하나 이상의 다른 프로세스에 의해 잠겨 있습니다. 프로세스가 완료 될 때까지 기다렸다가 작업을 다시 시도 하십시오. 액세스 하려는 개체를 다른 사용자나 응용 프로그램의 다른 프로세스에서 잠 궜 습니다. 이는 다중 사용자 환경에서 발생할 수 있습니다.|

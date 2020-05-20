@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - VB
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ead713a37d4ecf8bdfecd0d6c485684d1ad0777f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dba3be9c80160dca2773c63b2ed7f7c706678625
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926076"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761319"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>ADO 이벤트 인스턴스: Visual Basic
 Microsoft® Visual Basic®에서 ADO 이벤트를 처리 하려면 **WithEvents** 키워드를 사용 하 여 모듈 수준 변수를 선언 해야 합니다. 변수는 클래스 모듈의 일부로만 선언할 수 있으며 모듈 수준에서 선언 되어야 합니다. 그러나 Visual Basic **폼** 개체도 클래스 이므로이는 제한적이 지 않습니다. ADO 이벤트를 처리 하는 가장 간단한 방법은 **WithEvents**를 사용 하 여 변수를 선언 하는 것입니다. 다음 예에서는 **연결** 개체에 대 한 **connectcomplete** 이벤트를 처리 합니다.  

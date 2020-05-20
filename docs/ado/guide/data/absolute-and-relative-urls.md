@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926363"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761481"
 ---
 # <a name="absolute-and-relative-urls"></a>절대 및 상대 URL
 URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상의 위치를 지정 합니다. 대상은 파일, 디렉터리, HTML 페이지, 이미지, 프로그램 등이 될 수 있습니다.  
@@ -41,7 +41,7 @@ URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상�
  *path*  
  대상으로 이어지는 디렉터리 시퀀스를 지정 합니다. *리소스* 를 생략 하면 대상은 *경로*에서 마지막 디렉터리입니다.  
   
- *리소스나*  
+ *리소스*  
  포함 되는 경우 *리소스* 는 대상 이며 일반적으로 파일의 이름입니다. 단일 이진 바이트를 포함 하는 *간단한 파일* 이거나 하나 이상의 저장소 및 이진 바이트 스트림을 포함 하는 *구조화 된 문서* 일 수 있습니다.  
   
 ## <a name="url-scheme-registration"></a>URL 체계 등록  
@@ -70,13 +70,13 @@ URL은 로컬 또는 네트워크에 저장 된 컴퓨터에 저장 된 대상�
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- 연결 문자열의 절대 URL은 서버 (`YourServer`)와 경로 (`Winnt`)를 지정 합니다. 또한이 URL은 컨텍스트를 정의 합니다.  
+ 연결 문자열의 절대 URL은 서버 ( `YourServer` )와 경로 ()를 지정 합니다 `Winnt` . 또한이 URL은 컨텍스트를 정의 합니다.  
   
- 명령 텍스트의 상대 URL은 절대 URL을 시작 점으로 사용 하 고 경로 (`system32`)의 나머지 부분과 열려는 파일 (`Readme25.txt`)을 지정 합니다.  
+ 명령 텍스트의 상대 URL은 절대 URL을 시작 점으로 사용 하 고 경로 ()의 나머지 부분과 `system32` 열려는 파일 ()을 지정 합니다 `Readme25.txt` .  
   
- 옵션 필드 (`adCmdTableDirect`)는 명령 유형이 상대 URL 임을 나타냅니다.  
+ 옵션 필드 ( `adCmdTableDirect` )는 명령 유형이 상대 URL 임을 나타냅니다.  
   
- 또 다른 예로, 다음 코드는 `Winnt` 디렉터리의 내용에 대 한 **레코드 집합** 을 엽니다.  
+ 또 다른 예로, 다음 코드는 디렉터리의 내용에 대 한 **레코드 집합** 을 엽니다 `Winnt` .  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

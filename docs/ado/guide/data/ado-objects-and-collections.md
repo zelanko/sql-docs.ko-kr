@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, objects and collections
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1d4901384a8e4b1b297bc8459e52a2f345f7ead
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761289"
 ---
 # <a name="ado-objects-and-collections"></a>ADO 개체 및 컬렉션
 ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 구성 됩니다.  

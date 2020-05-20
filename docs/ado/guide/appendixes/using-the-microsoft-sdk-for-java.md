@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761561"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Java용 Microsoft SDK 사용
 
@@ -29,7 +29,7 @@ Microsoft SDK for Java는 Microsoft Internet Explorer 환경용 개발자 키트
   
  Jactivex 유틸리티는 형식 라이브러리에서 클래스를 생성 하지만 명령줄 에서만 호출할 수 있습니다. 이 기능은 Visual j + + 개발 환경과 통합 되지 않습니다. Java 형식 라이브러리 마법사에 의해 생성 된 클래스와 달리 SDK를 통해 만든 클래스 래퍼를 한 단계씩 코드 실행 할 수 있습니다. 이는 코드에서 ADO 래퍼 클래스를 사용 하는 방법을 디버깅 하는 데 유용 합니다.  
   
- 이 메커니즘은 ADO 형식 라이브러리를 읽고 응용 프로그램 내에서 인스턴스화할 수 있는 클래스를 생성 합니다. 이러한 클래스를 다음 위치에 생성 합니다. \\<windows directory\>\Java\trustlib\msado15.  
+ 이 메커니즘은 ADO 형식 라이브러리를 읽고 응용 프로그램 내에서 인스턴스화할 수 있는 클래스를 생성 합니다. 이러한 클래스를 다음 위치에 생성 합니다. \\<windows directory \> \Java\trustlib\msado15.  
   
  Java 용 Microsoft SDK를 사용 하 여 java에서 ADO 응용 프로그램을 만드는 것은 기본적으로 소스 코드의 관점에서 Java 형식 라이브러리 마법사를 사용 하는 것과 같습니다. 샘플 코드는 [ADO Java 클래스 래퍼](../../../ado/guide/appendixes/ado-java-class-wrappers.md)를 참조 하세요. 다음 단계에서 설명 하는 것 처럼 첫 번째 환경에서 래퍼 클래스를 생성 하는 방법에만 실질적인 차이가 있습니다.  
   

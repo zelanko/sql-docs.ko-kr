@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 811d850127b215e69c3710e7680f655714773f57
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927134"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761701"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO 개요 및 이점
 ADO (ADO(ActiveX Data Objects))는 OLE DB 하는 데 사용 하기 쉬운 고급 인터페이스입니다. OLE DB은 다양 한 데이터 저장소에 대 한 낮은 수준의 고성능 인터페이스입니다. ADO와 OLE DB 모두 관계형 (테이블 형식) 및 비관계형 (계층적 또는 스트림) 데이터에서 사용할 수 있습니다.

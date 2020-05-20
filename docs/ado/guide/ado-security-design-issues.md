@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, security
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dde159e0b04b319b978e9a3743d866d05c64253
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927032"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761681"
 ---
 # <a name="ado-security-design-features"></a>ADO 보안 디자인 기능
 다음 섹션에서는 ADO(ActiveX Data Objects) (ADO) 2.8 이상의 보안 디자인 기능에 대해 설명 합니다. 이러한 변경 내용은 보안을 개선 하기 위해 ADO 2.8에서 수행 되었습니다. Windows Vista의 Windows DAC 6.0에 포함 된 ADO 6.0는 Windows XP 및 Windows Server 2003의 MDAC 2.8에 포함 된 ADO 2.8와 기능적으로 동일 합니다. 이 항목에서는 ADO 2.8 이상에서 응용 프로그램의 보안을 유지 하는 방법에 대 한 정보를 제공 합니다.

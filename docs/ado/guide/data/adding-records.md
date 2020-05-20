@@ -13,14 +13,14 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c3dbcdf4ab089968741a4d0b08b7b02d1324f26d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926260"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761399"
 ---
 # <a name="adding-records-to-a-recordset"></a>레코드 집합에 레코드 추가
 **AddNew** 메서드를 사용 하 여 기존 레코드 **집합**에 새 레코드를 만들고 초기화 합니다. **CursorOptionEnum** 값이 **Adaddnew** 인 **Supports** 메서드를 사용 하 여 현재 **레코드 집합** 개체에 레코드를 추가할 수 있는지 여부를 확인할 수 있습니다.

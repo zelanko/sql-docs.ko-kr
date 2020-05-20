@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926564"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761591"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Microsoft Visual Basic 및 Visual Basic for Applications에서 ADO 사용
 ADO 프로젝트를 설정 하 고 ADO 코드를 작성 하는 것은 Visual Basic 또는 Visual Basic for Applications를 사용 하는 경우와 비슷합니다. 이 항목에서는 Visual Basic와 Visual Basic for Applications 모두 ADO를 사용 하는 방법을 설명 하 고 차이점을 설명 합니다.
@@ -80,7 +80,7 @@ Set conn = New ADODB.Connection
 ```
 
 > [!NOTE]
->  프로젝트에서 ADO 라이브러리를 올바르게 참조 하 `ADODB` 는 경우 **Dim** 문과 함께 progid를 명시적으로 사용할 필요는 없습니다. 그러나이를 사용 하면 다른 라이브러리와 이름 충돌이 발생 하지 않습니다.
+>  `ADODB`프로젝트에서 ADO 라이브러리를 올바르게 참조 하는 경우 **Dim** 문과 함께 progid를 명시적으로 사용할 필요는 없습니다. 그러나이를 사용 하면 다른 라이브러리와 이름 충돌이 발생 하지 않습니다.
 
 > [!NOTE]
 >  예를 들어 동일한 프로젝트에 ADO와 DAO 둘 다에 대 한 참조를 포함 하는 경우 다음 코드와 같이 **레코드 집합** 개체를 인스턴스화할 때 사용할 개체 모델을 지정 하는 한정자를 포함 해야 합니다.

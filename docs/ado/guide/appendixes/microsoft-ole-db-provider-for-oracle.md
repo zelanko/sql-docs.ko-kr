@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926629"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761641"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 개요
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ MSDAORA
 |**창 핸들**|추가 정보를 확인 하는 데 사용할 창 핸들을 나타냅니다.|
 |**로캘 ID**|사용자 언어와 관련 된 기본 설정을 지정 하는 고유한 32 비트 숫자 (예: 1033)를 나타냅니다. 이러한 기본 설정은 날짜 및 시간 형식을 지정 하는 방법, 항목을 사전순으로 정렬 하 고 문자열을 비교 하는 등의 방법을 지정 합니다.|
 |**OLE DB 서비스**|사용 하거나 사용 하지 않도록 설정할 OLE DB 서비스를 지정 하는 비트 마스크를 나타냅니다.|
-|**Prompt**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
+|**프롬프트**|연결을 설정 하는 동안 사용자에 게 메시지를 표시할지 여부를 나타냅니다.|
 |**확장 속성**|공급자별 확장 연결 정보를 포함 하는 문자열입니다. 속성 메커니즘을 통해 설명할 수 없는 공급자별 연결 정보에 대해서만이 속성을 사용 합니다.|
 
 ## <a name="see-also"></a>참고 항목

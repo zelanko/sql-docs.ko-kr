@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761209"
 ---
 # <a name="command-streams"></a>명령 스트림
 ADO는 항상 **CommandText** 속성에 지정 된 문자열 형식으로 지원 되는 명령 입력을 지원 합니다. 또는 ADO 2.7 이상에서는 명령을 **commandstream** 속성에 할당 하 여 명령 입력에 대 한 정보 스트림을 사용할 수도 있습니다. ADO **스트림** 개체나 COM **IStream** 인터페이스를 지 원하는 개체를 할당할 수 있습니다.  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  쿼리 스트림의 내용은 XML 템플릿 쿼리가 됩니다.  
   
- 템플릿 쿼리에는 \<sql: query> 태그의 sql: 접두사로 식별 된 XML 네임 스페이스에 대 한 참조가 필요 합니다. SQL SELECT 문은 XML 템플릿의 내용으로 포함 되며 다음과 같이 문자열 변수에 할당 됩니다.  
+ 템플릿 쿼리에는 \< sql: query> 태그의 sql: 접두사로 식별 된 XML 네임 스페이스에 대 한 참조가 필요 합니다. SQL SELECT 문은 XML 템플릿의 내용으로 포함 되며 다음과 같이 문자열 변수에 할당 됩니다.  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - JScript
 ms.assetid: b37e5957-7f00-4d62-b0f1-929fec996f4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f34dcec902eaf8d4542ae9a2053741af8f5ce3b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bc6f0219bef22ca040f2ed3e441b4400fe711b3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761339"
 ---
 # <a name="ado-event-instantiation-jscript"></a>ADO 이벤트 인스턴스: JScript
 Microsoft® JScript®는 ADO 이벤트를 지원 하지 않습니다.

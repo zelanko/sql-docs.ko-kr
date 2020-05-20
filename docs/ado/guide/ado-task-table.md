@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tasks [ADO]
 - ADO, tasks
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cfae068fdac58f7e6e6d1320b301aa9c52701dd4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927022"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761671"
 ---
 # <a name="ado-programming-task-table"></a>ADO 프로그래밍 작업 테이블
 다음 표에서는 *ADO 프로그래머 가이드* 에 포함 된 프로그래밍 태스크를 나열 하 고 각 작업에 대 한 참조를 제공 합니다. 이러한 참조에는 작업을 수행 하는 ADO 기능에 대 한 정보를 찾을 수 있는 텍스트 설명 또는 코드 예제가 있습니다.

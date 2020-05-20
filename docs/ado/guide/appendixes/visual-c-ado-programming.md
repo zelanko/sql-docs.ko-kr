@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926428"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761531"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ ADO 프로그래밍
 ADO API 참조는 Microsoft Visual Basic와 비슷한 구문을 사용 하 여 ADO API (응용 프로그래밍 인터페이스)의 기능을 설명 합니다. 대상 사용자가 모든 사용자 이기는 하지만 ADO 프로그래머는 Visual Basic, Visual C++ ( **#import** 지시문 포함 및 제외) 및 Visual j + + (ADO/WFC 클래스 패키지 사용)와 같은 다양 한 언어를 사용 합니다.  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- 컴파일러는 선언 된 대체 구문 및 속성을 읽거나 쓸지 여부를 기반으로 적절 한 **Get**_-_, **Put**또는 **putref**_속성_ 호출을 생성 합니다.  
+ 컴파일러는 **Get** _-_ 선언 된 대체 구문 및 속성을 읽거나 쓸지 여부를 기반으로 적절 한 Get, **Put**또는 **putref**_속성_ 호출을 생성 합니다.  
   
  **__Declspec (속성 ...)** 컴파일러 지시문은 함수에 대 한 **get**, **put**또는 **get** 및 **put** 구문도 선언할 수 있습니다. 읽기 전용 작업에는 **get** 선언만 있습니다. 쓰기 전용 작업에는 **put** 선언만 있습니다. 읽기 및 쓰기 작업에는 모두 **get** 및 **put** 선언이 있습니다.  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- 예를 들어 **pubs** 데이터베이스의 **authors** 테이블에서 파생 된 **_rs_** 라는 **레코드 집합** 개체의 필드에 값을 할당 합니다. **Item ()** 속성을 사용 하 여 **레코드 집합** 개체 **필드** 컬렉션의 세 번째 **필드** 에 액세스 합니다. 컬렉션은 0에서 인덱싱됩니다. 세 번째 필드의 이름은 **_\_au fname_** 이라고 가정 합니다. 그런 다음 **Field** 개체에서 **value ()** 메서드를 호출 하 여 문자열 값을 할당 합니다.  
+ 예를 들어 **pubs** 데이터베이스의 **authors** 테이블에서 파생 된 **_rs_** 라는 **레코드 집합** 개체의 필드에 값을 할당 합니다. **Item ()** 속성을 사용 하 여 **레코드 집합** 개체 **필드** 컬렉션의 세 번째 **필드** 에 액세스 합니다. 컬렉션은 0에서 인덱싱됩니다. 세 번째 필드의 이름은 **_au \_ fname_** 이라고 가정 합니다. 그런 다음 **Field** 개체에서 **value ()** 메서드를 호출 하 여 문자열 값을 할당 합니다.  
   
  다음 네 가지 방법으로 Visual Basic 표현할 수 있습니다. 마지막 두 형식은 Visual Basic에 고유 하며 다른 언어에는 해당 사항이 없습니다.  
   
@@ -116,7 +116,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  이 규칙에 대 한 예외는 COM에 한정 된 **Variant**, **BSTR**및 **SafeArray**의 데이터 형식입니다.  
   
-### <a name="variant"></a>Variant  
+### <a name="variant"></a>변형  
  **변형은** 값 멤버 및 데이터 형식 멤버를 포함 하는 구조화 된 데이터 형식입니다. **Variant** 에는 다른 VARIANT, BSTR, Boolean, IDispatch 또는 IUnknown 포인터, 통화, 날짜 등을 비롯 한 다양 한 데이터 형식이 포함 될 수 있습니다. 또한 COM은 한 데이터 형식을 다른 데이터 형식으로 쉽게 변환할 수 있게 해 주는 메서드를 제공 합니다.  
   
  **_Variant_t** 클래스는 **variant** 데이터 형식을 캡슐화 하 고 관리 합니다.  
@@ -148,18 +148,18 @@ rs->Fields->Item["au_fname"]->Value = "value";
         long Options );  
 ```
   
- 인수 `ActiveConnection` 는 연결 문자열 또는 열린 **연결** 개체에 대 한 포인터로 코딩할 수 있는 **_variant_t**에 대 한 참조를 사용 합니다.  
+ `ActiveConnection`인수는 연결 문자열 또는 열린 **연결** 개체에 대 한 포인터로 코딩할 수 있는 **_variant_t**에 대 한 참조를 사용 합니다.  
   
- "" **_variant_t** 와`DSN=pubs;uid=MyUserName;pwd=MyPassword;`같은 문자열 또는 "`(IDispatch *) pConn`"와 같은 포인터를 전달 하는 경우 올바른 _variant_t 생성 됩니다.  
+ "" **_variant_t** 와 같은 문자열 `DSN=pubs;uid=MyUserName;pwd=MyPassword;` 또는 ""와 같은 포인터를 전달 하는 경우 올바른 _variant_t 생성 됩니다 `(IDispatch *) pConn` .  
   
 > [!NOTE]
 >  Windows 인증을 지 원하는 데이터 원본 공급자에 연결 하는 경우 연결 문자열에 사용자 ID 및 암호 정보 대신 **Trusted_Connection = yes** 또는 **INTEGRATED Security = SSPI** 를 지정 해야 합니다.  
   
- 또는 "`_variant_t((IDispatch *) pConn, true)`"와 같은 포인터를 포함 하는 **_variant_t** 를 명시적으로 코딩할 수 있습니다. Cast `(IDispatch *)`는 IUnknown 인터페이스에 대 한 포인터를 사용 하는 다른 생성자를 사용 하 여 모호성을 해결 합니다.  
+ 또는 ""와 같은 포인터를 포함 하는 **_variant_t** 를 명시적으로 코딩할 수 있습니다 `_variant_t((IDispatch *) pConn, true)` . Cast는 `(IDispatch *)` IUnknown 인터페이스에 대 한 포인터를 사용 하는 다른 생성자를 사용 하 여 모호성을 해결 합니다.  
   
  매우 중요 하지만 ADO가 IDispatch 인터페이스 이기는 하지만 거의 언급 되지 않습니다. ADO 개체에 대 한 포인터가 **Variant**로 전달 되어야 할 때마다 해당 포인터를 IDispatch 인터페이스에 대 한 포인터로 캐스팅 해야 합니다.  
   
- 마지막 사례는 선택적의 `true`기본값인를 사용 하 여 생성자의 두 번째 부울 인수를 명시적으로 코딩 합니다. 이 인수를 통해 **Variant** 생성자는 ado 메서드 또는 속성 호출이 완료 될 때 **_Variant_t:: Release**() 메서드를 자동으로 호출 하는 ado를 보정 하는 **AddRef**() 메서드를 호출 합니다.  
+ 마지막 사례는 선택적의 기본값인를 사용 하 여 생성자의 두 번째 부울 인수를 명시적으로 코딩 합니다 `true` . 이 인수를 통해 **Variant** 생성자는 ado 메서드 또는 속성 호출이 완료 될 때 **_Variant_t:: Release**() 메서드를 자동으로 호출 하는 ado를 보정 하는 **AddRef**() 메서드를 호출 합니다.  
   
 ### <a name="safearray"></a>SafeArray  
  **SafeArray** 는 다른 데이터 형식의 배열을 포함 하는 구조화 된 데이터 형식입니다. **SafeArray** 는 각 배열 차원의 범위에 대 한 정보를 포함 하 고 해당 범위 내의 배열 요소에 대 한 액세스를 제한 하기 때문에 *safe* 라고 합니다.  
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>오류 처리  
- COM에서 대부분의 작업은 함수가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT 반환 코드를 반환 합니다. **#Import** 지시문은 각 "raw" 메서드 또는 속성에 대 한 래퍼 코드를 생성 하 고 반환 된 HRESULT를 확인 합니다. HRESULT가 실패를 나타내면 래퍼 코드는 HRESULT 반환 코드를 인수로 사용 하 여 _com_issue_errorex ()를 호출 하 여 COM 오류를 throw 합니다. COM 오류 개체는 **try**-**catch** 블록에서 catch 할 수 있습니다. 효율성을 높이기 위해 **_com_error** 개체에 대 한 참조를 catch 합니다.  
+ COM에서 대부분의 작업은 함수가 성공적으로 완료 되었는지 여부를 나타내는 HRESULT 반환 코드를 반환 합니다. **#Import** 지시문은 각 "raw" 메서드 또는 속성에 대 한 래퍼 코드를 생성 하 고 반환 된 HRESULT를 확인 합니다. HRESULT가 실패를 나타내면 래퍼 코드는 HRESULT 반환 코드를 인수로 사용 하 여 _com_issue_errorex ()를 호출 하 여 COM 오류를 throw 합니다. COM 오류 개체는 **try** - **catch** 블록에서 catch 할 수 있습니다. 효율성을 높이기 위해 **_com_error** 개체에 대 한 참조를 catch 합니다.  
   
  Ado 오류가 발생 하 여 ado 작업이 실패 하는 것을 명심 해야 합니다. 기본 공급자가 반환 하는 오류는 **연결** 개체 **오류** 컬렉션에 **오류** 개체로 표시 됩니다.  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- "`ADODB.Recordset`" 절은 레지스트리에 정의 된 **레코드 집합** 개체의 ProgID입니다. **Record** 개체의 새 인스턴스는 다음과 같이 선언 됩니다.  
+ "" 절은 `ADODB.Recordset` 레지스트리에 정의 된 **레코드 집합** 개체의 ProgID입니다. **Record** 개체의 새 인스턴스는 다음과 같이 선언 됩니다.  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- 하나`.`는 변수가 클래스`rs.CreateInstance`의 인스턴스인 것 처럼 "" 연산자를 사용 하 고, 다른 경우에는 변수가 인터페이스 (`->``rs->Open`)에 대 한 포인터인 것 처럼 "" 연산자를 사용 합니다.  
+ 하나는 `.` 변수가 클래스의 인스턴스인 것 처럼 "" 연산자를 사용 하 `rs.CreateInstance` 고, 다른 경우에는 `->` 변수가 인터페이스 ()에 대 한 포인터인 것 처럼 "" 연산자를 사용 `rs->Open` 합니다.  
   
- "`->`" 연산자는 클래스의 인스턴스가 인터페이스에 대 한 포인터 처럼 동작 하도록 하기 위해 오버 로드 되기 때문에 두 가지 방법으로 하나의 변수를 사용할 수 있습니다. 인스턴스 변수의 private 클래스 멤버가 **_Recordset** 인터페이스에 대 한 포인터를 포함 합니다. "`->`" 연산자는 해당 포인터를 반환 합니다. 반환 된 포인터는 **_Recordset** 개체의 멤버에 액세스 합니다.  
+ " `->` " 연산자는 클래스의 인스턴스가 인터페이스에 대 한 포인터 처럼 동작 하도록 하기 위해 오버 로드 되기 때문에 두 가지 방법으로 하나의 변수를 사용할 수 있습니다. 인스턴스 변수의 private 클래스 멤버가 **_Recordset** 인터페이스에 대 한 포인터를 포함 합니다. " `->` " 연산자는 해당 포인터를 반환 하 고 반환 된 포인터는 **_Recordset** 개체의 멤버에 액세스 합니다.  
   
 ### <a name="coding-a-missing-parameter---string"></a>누락 된 매개 변수-문자열 코딩  
  Visual Basic에서 누락 된 **문자열** 피연산자를 코딩 해야 하는 경우 피연산자를 생략 하기만 하면 됩니다. Visual C++에서 피연산자를 지정 해야 합니다. 값으로 빈 문자열을 포함 하는 **_bstr_t** 을 코딩 합니다.  
@@ -326,7 +326,7 @@ End Sub
   
  다음 Visual C++ 예제에서는 **_variant_t**에서 사용 되는 **SafeArray** 를 사용 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  다시 한 번 TESTHR () 인라인 함수를 정의 하 여 기존 오류 처리 메커니즘을 활용 합니다.  
@@ -344,7 +344,7 @@ End Sub
   
      반환 되는 **레코드 집합** 은 몇 개의 열, 즉 제약 조건 열인 하위 집합으로 구성 됩니다. 반환 된 각 행에 대 한 제약 조건 열의 값은 해당 제약 조건 값과 동일 해야 합니다.  
   
-4.  **Safearray** 에 익숙한 경우에는 종료 전에 **safearraydestroy**()이 호출 되지 않을 수 있습니다. 실제로이 경우 **Safearraydestroy**()을 호출 하면 런타임 예외가 발생 합니다. 그 이유는에 대 한 `vtCriteria` 소멸자는 **_variant_t** 범위를 벗어날 때 **VariantClear**()를 호출 하므로 **SafeArray**가 해제 됩니다. **_Variant_t**를 수동으로 지우지 않고 **safearraydestroy**를 호출 하면 소멸자가 잘못 된 **SafeArray** 포인터를 지우도록 시도 합니다.  
+4.  **Safearray** 에 익숙한 경우에는 종료 전에 **safearraydestroy**()이 호출 되지 않을 수 있습니다. 실제로이 경우 **Safearraydestroy**()을 호출 하면 런타임 예외가 발생 합니다. 그 이유는에 대 한 소멸자는 `vtCriteria` **_variant_t** 범위를 벗어날 때 **VariantClear**()를 호출 하므로 **SafeArray**가 해제 됩니다. **_Variant_t**를 수동으로 지우지 않고 **safearraydestroy**를 호출 하면 소멸자가 잘못 된 **SafeArray** 포인터를 지우도록 시도 합니다.  
   
      **Safearraydestroy** 를 호출한 경우 코드는 다음과 같습니다.  
   
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- 이 Visual C++ 예제에서는 **Get**/**Put**/**putref**_속성_을 보여 줍니다.  
+ 이 Visual C++ 예제에서는 **Get** / **Put** / **putref**_속성_을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
 1.  이 예제에서는 두 가지 형식의 누락 된 문자열 인수를 사용 합니다. 명시적 상수, **Strmissing**및 컴파일러가 **Open** 메서드의 범위에 대해 존재 하는 임시 **_bstr_t** 을 만드는 데 사용 하는 문자열입니다.  
   
-2.  피연산자의 형식이 이미 `rs->PutRefActiveConnection(cn)` `(IDispatch *)` `(IDispatch *)`이므로의 피연산자를로 캐스팅할 필요가 없습니다.  
+2.  `rs->PutRefActiveConnection(cn)` `(IDispatch *)` 피연산자의 형식이 이미 이므로의 피연산자를로 캐스팅할 필요가 없습니다 `(IDispatch *)` .  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -554,14 +554,14 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>를 사용 하 여 ADO 개체 포인터 캐스팅 (IDispatch *)  
  다음 Visual C++ 예제에서는 (IDispatch *)를 사용 하 여 ADO 개체 포인터를 캐스팅 하는 방법을 보여 줍니다.  
   
-#### <a name="notes"></a>메모  
+#### <a name="notes"></a>참고  
  다음 메모는 코드 예제의 주석 처리 된 섹션에 해당 합니다.  
   
-1.  명시적으로 코딩 된 **Variant**에서 열린 **연결** 개체를 지정 합니다. (IDispatch \*)로 캐스팅 하면 올바른 생성자가 호출 됩니다. 또한 두 번째 **_variant_t** 매개 변수를 기본값인 **true**로 명시적으로 설정 하면 **Recordset:: Open** 작업이 종료 될 때 개체 참조 개수가 올바릅니다.  
+1.  명시적으로 코딩 된 **Variant**에서 열린 **연결** 개체를 지정 합니다. (IDispatch)로 캐스팅 하면 \* 올바른 생성자가 호출 됩니다. 또한 두 번째 **_variant_t** 매개 변수를 기본값인 **true**로 명시적으로 설정 하면 **Recordset:: Open** 작업이 종료 될 때 개체 참조 개수가 올바릅니다.  
   
-2.  `(_bstr_t)`식은 캐스트가 아니지만 **값**으로 반환 된 **변형** 에서 **_bstr_t** 문자열을 추출 하는 **_variant_t** 연산자입니다.  
+2.  식은 `(_bstr_t)` 캐스트가 아니지만 **값**으로 반환 된 **변형** 에서 **_bstr_t** 문자열을 추출 하는 **_variant_t** 연산자입니다.  
   
- 식은 `(char*)`캐스트가 아니라 **_bstr_t** 개체의 캡슐화 된 문자열에 대 한 포인터를 추출 하는 **_bstr_t** 연산자입니다.  
+ 식은 캐스트가 아니라 `(char*)` **_bstr_t** 개체의 캡슐화 된 문자열에 대 한 포인터를 추출 하는 **_bstr_t** 연산자입니다.  
   
  코드의이 섹션에서는 **_variant_t** 및 **_bstr_t** 연산자에 대 한 몇 가지 유용한 동작을 보여 줍니다.  
   
