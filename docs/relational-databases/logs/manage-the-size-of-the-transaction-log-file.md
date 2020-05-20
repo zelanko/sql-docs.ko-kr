@@ -28,7 +28,7 @@ ms.locfileid: "68084026"
 ##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>로그 공간 사용 모니터링  
 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)를 사용하여 로그 공간 사용을 모니터링합니다. 이 DMV는 현재 사용된 로그 공간 크기에 대한 정보를 반환하고 트랜잭션 로그 잘림을 수행해야 하는 시기를 나타냅니다. 
 
-로그 파일의 현재 크기 및 최대 크기, 파일의 자동 증가 옵션에 대한 정보를 보기 위해 **sys.database_files**에서 해당 로그 파일의 **size**, **max_size** 및 [growth](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 열을 사용할 수도 있습니다.  
+로그 파일의 현재 크기 및 최대 크기, 파일의 자동 증가 옵션에 대한 정보를 보기 위해 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)에서 해당 로그 파일의 **size**, **max_size** 및 **growth** 열을 사용할 수도 있습니다.  
   
 > [!IMPORTANT]
 > 로그 디스크가 오버로드되지 않도록 하세요. 로그 스토리지가 트랜잭션 로드에 대한 [IOPS](https://wikipedia.org/wiki/IOPS) 및 지연 시간 요구 사항을 견딜 수 있는지 확인하세요. 
@@ -63,8 +63,8 @@ ms.locfileid: "68084026"
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a> 로그 파일 추가 또는 확장  
 디스크 공간이 충분한 경우 기존의 로그 파일을 확장하거나 일반적으로 다른 디스크에 있는 데이터베이스에 로그 파일을 추가하여 공간을 확보할 수 있습니다. 로그 공간이 부족하고 로그 파일을 보관하는 볼륨에 디스크 공간이 부족한 경우가 아니라면 하나의 트랜잭션 로그 파일로 충분합니다.   
   
--   로그 파일을 데이터베이스에 추가하려면 `ADD LOG FILE` 문의 `ALTER DATABASE` 절을 사용합니다. 로그 파일을 추가하면 로그가 확장될 수 있습니다.  
--   로그 파일을 확대하려면 `MODIFY FILE` 문의 `ALTER DATABASE` 절을 사용하여 `SIZE` 및 `MAXSIZE` 구문을 지정합니다. 자세한 내용은 [ALTER DATABASE &#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
+-   로그 파일을 데이터베이스에 추가하려면 `ALTER DATABASE` 문의 `ADD LOG FILE` 절을 사용합니다. 로그 파일을 추가하면 로그가 확장될 수 있습니다.  
+-   로그 파일을 확대하려면 `ALTER DATABASE` 문의 `MODIFY FILE` 절을 사용하여 `SIZE` 및 `MAXSIZE` 구문을 지정합니다. 자세한 내용은 [ALTER DATABASE &#40;Transact-SQL&#41; 파일 및 파일 그룹 옵션](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
 
 자세한 내용은 이 항목의 [권장 사항](#Recommendations)을 참조하세요.
     
@@ -90,7 +90,7 @@ ms.locfileid: "68084026"
     -  가장 큰 인덱스 유지 보수 작업에 필요한 시간.
     -  데이터베이스에서 가장 큰 일괄 처리를 실행하는 데 필요한 시간.
 
--   **옵션을 사용하여 데이터 및 로그 파일에 대해**자동 증가`FILEGROWTH`를 설정한 경우, 백분율은 계속 증가하는 양이기 때문에 **백분율**보다 **크기**에서 설정하는 것이 확장률을 더 잘 제어할 수 있습니다.
+-   `FILEGROWTH` 옵션을 사용하여 데이터 및 로그 파일에 대해 **자동 증가**를 설정한 경우, 백분율은 계속 증가하는 양이기 때문에 **백분율**보다 **크기**에서 설정하는 것이 확장률을 더 잘 제어할 수 있습니다.
     -  트랜잭션 로그는 [인스턴트 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 활용할 수 없기 때문에 확장된 로그 증가 시간이 특히 중요합니다. 
     -  모범 사례에서는 트랜잭션 로그에 대해 `FILEGROWTH` 옵션 값을 1,024MB 이상으로 설정하지 않습니다. `FILEGROWTH` 옵션에 대한 기본값은 다음과 같습니다.  
   

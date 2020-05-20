@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965431"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763653"
 ---
 # <a name="procedures-collection-adox"></a>Procedures 컬렉션(ADOX)
 카탈로그의 모든 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 개체를 포함 합니다.  
   
 ## <a name="remarks"></a>설명  
- **프로시저** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ **프로시저** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-procedures.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 프로시저를 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 프로시저에 액세스 합니다.  
   

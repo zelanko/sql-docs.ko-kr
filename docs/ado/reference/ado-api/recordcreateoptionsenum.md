@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917339"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761911"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 [Record](../../../ado/reference/ado-api/record-object-ado.md) object [Open](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드에 대해 기존 **레코드** 를 열지 아니면 새 **레코드** 를 만들지를 지정 합니다. 값은 AND 연산자와 함께 사용할 수 있습니다.  

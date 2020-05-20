@@ -33,7 +33,7 @@ ms.locfileid: "71294909"
   데이터 흐름 태스크에 구성 요소를 추가한 후 해당 구성 요소를 연결하여 원본에서 변환을 거쳐 대상으로 이동하는 데이터 흐름을 나타내는 실행 트리를 만들 수 있습니다. 데이터 흐름의 구성 요소를 연결하려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 사용합니다.  
   
 ## <a name="creating-a-path"></a>경로 만들기  
- <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 인터페이스에 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 속성의 새 메서드를 호출하여 새 경로를 만들고 이 경로를 데이터 흐름 태스크의 경로 컬렉션에 추가할 수 있습니다. 이 메서드는 연결이 끊어진 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 반환합니다. 그러면 이 개체를 사용하여 두 구성 요소를 연결할 수 있습니다.  
+ <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipe> 인터페이스에 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.MainPipeClass.PathCollection%2A> 속성의 새 메서드를 호출하여 새 경로를 만들고 이 경로를 데이터 흐름 태스크의 경로 컬렉션에 추가할 수 있습니다. 이 메서드는 연결이 끊어진 새 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> 개체를 반환합니다. 그러면 이 개체를 사용하여 두 구성 요소를 연결할 수 있습니다.  
   
  경로를 연결하고 연결된 경로에 참여하는 구성 요소에 해당 구성 요소가 연결되었음을 알리려면 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100.AttachPathAndPropagateNotifications%2A> 메서드를 호출합니다. 이 메서드는 업스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>과 다운스트림 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>을 매개 변수로 받아들입니다. 기본적으로 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A> 메서드를 호출하면 입력이 있는 구성 요소에 대한 단일 입력과 출력이 있는 구성 요소에 대한 단일 출력이 만들어집니다. 다음 예에서는 원본의 이 기본 출력과 대상의 입력을 사용합니다.  
   

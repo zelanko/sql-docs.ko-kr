@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 31ce05ce069e0eb3e7d6431b296f40824a8acd3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931938"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762204"
 ---
 # <a name="open-method-ado-connection"></a>Open 메서드(ADO 연결)
 데이터 원본에 대 한 연결을 엽니다.  
@@ -36,16 +36,16 @@ connection.Open ConnectionString, UserID, Password, Options
   
 #### <a name="parameters"></a>매개 변수  
  *ConnectionString*  
- 선택 사항입니다. 연결 정보를 포함 하는 **문자열** 값입니다. 유효한 설정에 대 한 자세한 내용은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 참조 하세요.  
+ (선택 사항) 연결 정보를 포함 하는 **문자열** 값입니다. 유효한 설정에 대 한 자세한 내용은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성을 참조 하세요.  
   
  *Id*  
- 선택 사항입니다. 연결을 설정할 때 사용할 사용자 이름을 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 연결을 설정할 때 사용할 사용자 이름을 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- 선택 사항입니다. 연결을 설정할 때 사용할 암호를 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 연결을 설정할 때 사용할 암호를 포함 하는 **문자열** 값입니다.  
   
- *옵션*  
- 선택 사항입니다. 이 메서드가 연결을 설정한 후 (동기적으로) 또는 이전 (비동기적으로) 된 후에 반환 해야 하는지 여부를 결정 하는 [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 값입니다.  
+ *Options*  
+ (선택 사항) 이 메서드가 연결을 설정한 후 (동기적으로) 또는 이전 (비동기적으로) 된 후에 반환 해야 하는지 여부를 결정 하는 [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명  
  [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체에 대해 **Open** 메서드를 사용 하면 데이터 원본에 대 한 물리적 연결이 설정 됩니다. 이 메서드가 성공적으로 완료 되 면 연결이 라이브 되며이에 대 한 명령을 실행 하 고 결과를 처리할 수 있습니다.  

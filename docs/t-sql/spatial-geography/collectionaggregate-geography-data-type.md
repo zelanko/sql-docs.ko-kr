@@ -52,7 +52,7 @@ ConvexHullAggregate ( geography_operand )
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `GeometryCollection`geography**개체 집합을 포함하는** 인스턴스를 반환합니다.  
+ 다음 예에서는 **geography** 개체 집합을 포함하는 `GeometryCollection` 인스턴스를 반환합니다.  
   
  ```
  USE AdventureWorks2012  

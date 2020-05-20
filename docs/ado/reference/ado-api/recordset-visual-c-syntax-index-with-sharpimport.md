@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'Recordset collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: fe41da71-b607-4329-94da-60964b8efcdc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be0dd3aba94e228ce32e09660c867ca5385e755b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 59e2205ccedd2b68194a92d30291e225ab7cc0b5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931274"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761851"
 ---
 # <a name="recordset-visual-c-syntax-index-with-import"></a>레코드 집합 (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

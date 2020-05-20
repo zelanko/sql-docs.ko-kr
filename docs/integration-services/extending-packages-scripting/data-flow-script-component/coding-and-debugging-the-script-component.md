@@ -65,7 +65,7 @@ ms.locfileid: "71286543"
   
     -   **Variables** 컬렉션 클래스 - **스크립트 변환 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariable** 및 **ReadWriteVariables** 속성에 입력한 변수에 대한 참조를 포함합니다.  
   
--   **BufferWrapper** 프로젝트 항목은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>스크립트 변환 편집기**의** 입/출력**페이지에서 구성한 각 입력 및 출력에 대해**에서 상속된 클래스를 포함합니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.  
+-   **BufferWrapper** 프로젝트 항목은 **스크립트 변환 편집기**의 **입/출력** 페이지에서 구성한 각 입력 및 출력에 대해 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>에서 상속된 클래스를 포함합니다. 각 클래스는 구성된 입/출력 열과 그 열이 포함된 데이터 흐름 버퍼에 해당하는 형식화된 접근자 속성을 포함합니다.  
   
  이러한 개체, 메서드 및 속성을 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소 개체 모델 이해](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)를 참조하세요. 특정 유형의 스크립트 구성 요소에서 이러한 클래스의 메서드와 속성을 사용하는 방법에 대한 자세한 내용은 [추가 스크립트 구성 요소 예제](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md) 섹션을 참조하세요. 예 항목에는 전체 코드 예제도 들어 있습니다.  
   
@@ -174,8 +174,8 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |variables|**ScriptMain** 클래스의 **Variables** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Variables** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.<br /><br /> **PreExecute** 메서드는 읽기 전용 변수만 액세스할 수 있습니다. **PostExecute** 메서드는 읽기 전용 변수 및 읽기/쓰기 변수 모두에 액세스할 수 있습니다.|  
 |Connections|**ScriptMain** 클래스의 **Connections** 속성을 통해 노출되는 **ComponentWrapper** 프로젝트 항목의 **Connections** 컬렉션 클래스에서 명명되고 형식화된 접근자 속성을 사용합니다.|  
-|이벤트|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>ScriptMain**클래스의** 속성과  **인터페이스의 \<Fire**X><xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 사용하여 이벤트를 발생시킵니다.|  
-|로깅|<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>ScriptMain**클래스의** 메서드를 사용하여 로깅을 수행합니다.|  
+|이벤트|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 속성과 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 **Fire\<X>** 메서드를 사용하여 이벤트를 발생시킵니다.|  
+|로깅|**ScriptMain** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 메서드를 사용하여 로깅을 수행합니다.|  
   
 ## <a name="debugging-the-script-component"></a>스크립트 구성 요소 디버깅  
  스크립트 구성 요소의 코드를 디버깅하려면 코드에 하나 이상의 중단점을 설정한 다음 VSTA IDE를 닫고 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 패키지를 실행합니다. 패키지 실행 중 스크립트 구성 요소 실행이 시작되면 VSTA IDE가 다시 열리고 코드가 읽기 전용 모드에서 열립니다. 중단점에 도달한 후에는 변수 값을 검사하고 나머지 코드를 단계별로 실행할 수 있습니다.  
@@ -190,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   **System.Windows.Forms** 네임스페이스의 **MessageBox.Show** 메서드를 사용하여 실행을 중단하고 모달 메시지를 표시합니다. (이 코드는 디버깅 프로세스를 완료한 후 제거하십시오.)  
   
--   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 **디자이너의**진행률[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)을 참조하세요.  
+-   정보 메시지, 경고 및 오류에 대한 이벤트를 발생시킵니다. FireInformation, FireWarning 및 FireError 메서드는 Visual Studio **출력** 창에 이벤트 설명을 표시합니다. 그러나 FireProgress 메서드, Console.Write 메서드 및 Console.WriteLine 메서드는 **출력** 창에 어떠한 정보도 표시하지 않습니다. FireProgress 이벤트의 메시지는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너의 **진행률** 탭에 표시됩니다. 자세한 내용은 [스크립트 구성 요소에서 이벤트 발생](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)을 참조하세요.  
   
 -   이벤트 또는 사용자 정의 메시지를 활성화된 로깅 공급자에 기록합니다. 자세한 내용은 [스크립트 구성 요소의 로깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)을 참조하세요.  
   

@@ -68,13 +68,13 @@ ms.locfileid: "68133273"
   
     1.  게시에 대해 스냅샷을 생성한 후 게시에 대한 스냅샷 폴더로 이동합니다.  
   
-    2.  `.sch` 등 아티클과 같은 이름의 `MyArticle.sch` 파일을 찾습니다.  
+    2.  `MyArticle.sch` 등 아티클과 같은 이름의 `.sch` 파일을 찾습니다.  
   
     3.  메모장 또는 다른 텍스트 편집기를 사용하여 이 파일을 엽니다.  
   
     4.  파일을 수정하고 다른 디렉터리에 저장합니다.  
   
-    5.  `sp_changearticle`creation_script*속성에 파일 경로 및 이름을 지정하여*을 실행합니다. 자세한 내용은 [sp_changearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 참조하세요.  
+    5.  *creation_script* 속성에 파일 경로 및 이름을 지정하여 `sp_changearticle`을 실행합니다. 자세한 내용은 [sp_changearticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 참조하세요.  
   
      **아티클 스크립트를 만들어서 사용자 지정 생성 스크립트로 제공하려면**  
   

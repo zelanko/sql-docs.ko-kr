@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - OpenSchema method [ADO], VC++ example
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 50228f2cf6f8564be500f671de797dfbff0aa7c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931885"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762124"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema 메서드 예제(VC++)
 이 예에서는 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드를 사용 하 여 ***Pubs*** 데이터베이스에 있는 각 테이블의 이름 및 유형을 표시 합니다.  

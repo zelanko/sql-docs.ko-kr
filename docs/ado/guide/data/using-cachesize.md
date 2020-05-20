@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923571"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763044"
 ---
 # <a name="using-cachesize"></a>CacheSize 사용
 **CacheSize** 속성을 사용 하 여 한 번에 공급자의 로컬 메모리로 검색할 레코드 수를 제어 합니다. 예를 들어 **CacheSize** 가 10 이면 먼저 **레코드 집합** 개체를 연 후 공급자는 처음 10 개의 레코드를 로컬 메모리에 검색 합니다. **레코드 집합** 개체를 이동할 때 공급자는 로컬 메모리 버퍼에서 데이터를 반환 합니다. 캐시의 마지막 레코드를 지나서 이동 하는 즉시 공급자는 데이터 원본에서 캐시로 다음 10 개의 레코드를 검색 합니다.  

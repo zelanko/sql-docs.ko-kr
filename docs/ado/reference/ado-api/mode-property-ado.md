@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bdd16d8e98bd1c038c5bc6c761305e87b65b765
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932224"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762514"
 ---
 # <a name="mode-property-ado"></a>Mode 속성(ADO)
 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md)또는 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체의 데이터를 수정 하는 데 사용할 수 있는 권한을 나타냅니다.  

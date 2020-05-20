@@ -13,14 +13,14 @@ helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af8f2a1431c8d41393e25638edf1ac83fee16236
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919106"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763464"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord 및 MoveRecord 메서드 예제 (VB)
 이 예제에서는 웹 폴더에 게시 된 텍스트 파일의 내용을 복사, 이동, 편집 및 삭제 하는 방법을 보여 줍니다. 사용 되는 기타 속성 및 메서드에는 [Getchildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [parenturl](../../../ado/reference/ado-api/parenturl-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-record.md)및 [Flush](../../../ado/reference/ado-api/flush-method-ado.md)가 포함 됩니다.  

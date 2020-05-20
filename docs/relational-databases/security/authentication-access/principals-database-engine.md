@@ -84,7 +84,7 @@ ms.locfileid: "68344601"
  이러한 사용자 계정은 Microsoft에 발급된 인증서에 기반하므로 관리자에 의해 변경될 수 있는 암호를 갖지 않습니다.
   
 ## <a name="the-guest-user"></a>guest 사용자  
- 각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자는 삭제할 수 없지만 CONNECT 권한을 취소하여 해제할 수 있습니다. CONNECT 권한은 `REVOKE CONNECT FROM GUEST;` 또는 `master`가 아닌 임의의 데이터베이스 내에서 `tempdb`를 실행하여 취소할 수 있습니다.  
+ 각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자는 삭제할 수 없지만 CONNECT 권한을 취소하여 해제할 수 있습니다. CONNECT 권한은 `master` 또는 `tempdb`가 아닌 임의의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST;`를 실행하여 취소할 수 있습니다.  
   
   
 ## <a name="related-tasks"></a>관련 작업  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Move method, VBScript example
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 23db96e87538227691f00548c47c2f3d1858349b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918161"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762484"
 ---
 # <a name="move-method-example-vbscript"></a>Move 메서드 예제(VBScript)
 이 예제에서는 [Move](../../../ado/reference/ado-api/move-method-ado.md) 메서드를 사용 하 여 사용자 입력을 기준으로 레코드 포인터를 배치 합니다.  

@@ -68,7 +68,7 @@ SET @string = 1;
 SELECT @string + ' is a string.'
 ```
 
-`int`의 `1` 값은 `varchar`로 변환되므로 `SELECT` 문은 `1 is a string.` 값을 반환합니다.
+`1`의 `int` 값은 `varchar`로 변환되므로 `SELECT` 문은 `1 is a string.` 값을 반환합니다.
 
 다음 예에서는 대신 `int` 변수를 사용하는 유사한 스크립트를 보여 줍니다.
 
@@ -135,7 +135,7 @@ SELECT @notastring + '1'
 |**datetime**, **smalldatetime**|**Date**|  
 |NULL로 설정된 모든 것|**Variant**가 null로 설정되었습니다|  
   
-단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]binary **,** varbinary**및**이미지**값을 제외하고 모두 단일** 값으로 변환됩니다. 이러한 값은 **의 1차원** Byte()[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 배열로 변환됩니다. 이 배열에는 **Byte(** 0에서 _length_ 1까지 **)** 의 범위가 포함됩니다. 여기서 *length*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
+단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값은 **binary**, **varbinary** 및 **이미지** 값을 제외하고 모두 단일 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 값으로 변환됩니다. 이러한 값은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 1차원 **Byte()** 배열로 변환됩니다. 이 배열에는 **Byte(** 0에서 _length_ 1까지 **)** 의 범위가 포함됩니다. 여기서 *length*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** 또는 **image** 값의 바이트 수입니다.
   
 이들은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환한 것입니다.
   

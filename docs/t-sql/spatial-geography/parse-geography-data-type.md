@@ -46,7 +46,7 @@ Parse ( 'geography_tagged_text' )
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- **에 의해 반환되는** geography`Parse()` 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
+ `Parse()`에 의해 반환되는 **geography** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  문자열 'Null'은 Null **geography** 인스턴스로 해석됩니다.  
   

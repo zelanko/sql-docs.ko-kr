@@ -76,7 +76,7 @@ GO
 
 하위 쿼리의 SELECT 쿼리는 항상 괄호로 묶습니다. 또한 `COMPUTE` 또는 `FOR BROWSE` 절은 포함할 수 없으며 TOP 절이 지정된 경우 `ORDER BY` 절만 포함할 수 있습니다.   
 
-하위 쿼리는 외부 `WHERE`, `HAVING`, `SELECT` 또는 `INSERT` 문의 `UPDATE` 또는 `DELETE` 절이나 다른 하위 쿼리 내부에 중첩될 수 있습니다. 최대 32개 수준까지 중첩이 가능하지만 이 값은 사용 가능한 메모리 및 쿼리에 있는 다른 식의 복잡성에 따라 달라지며 개별 쿼리에서 32개 수준까지 중첩을 지원하지 않을 수도 있습니다. 하위 쿼리는 단일 값을 반환할 경우 식을 사용할 수 있는 모든 위치에 나타날 수 있습니다.   
+하위 쿼리는 외부 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문의 `WHERE` 또는 `HAVING` 절이나 다른 하위 쿼리 내부에 중첩될 수 있습니다. 최대 32개 수준까지 중첩이 가능하지만 이 값은 사용 가능한 메모리 및 쿼리에 있는 다른 식의 복잡성에 따라 달라지며 개별 쿼리에서 32개 수준까지 중첩을 지원하지 않을 수도 있습니다. 하위 쿼리는 단일 값을 반환할 경우 식을 사용할 수 있는 모든 위치에 나타날 수 있습니다.   
 
 테이블이 하위 쿼리에만 나타나고 외부 쿼리에는 나타나지 않으면 해당 테이블의 열은 결과(외부 쿼리의 SELECT 목록)에 포함될 수 없습니다.   
 
@@ -88,7 +88,7 @@ GO
 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 하위 쿼리는 독립적인 쿼리처럼 평가될 수 있습니다. 개념적으로 하위 쿼리 결과는 외부 쿼리로 대체됩니다. 물론 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 하위 쿼리가 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 반드시 이렇게 처리되는 것은 아닙니다.    
 
 하위 쿼리에는 다음과 같은 세 가지 기본 유형이 있습니다. 
--   `IN` 또는 `ANY`에 의해 수정된 비교 연산자나 `ALL`으로 시작하는 목록에서 실행
+-   `ANY` 또는 `ALL`에 의해 수정된 비교 연산자나 `IN`으로 시작하는 목록에서 실행
 -   수정되지 않은 비교 연산자로 시작하고 단일 값을 반환
 -   `EXISTS`로 시작하는 존재 테스트
 
@@ -105,7 +105,7 @@ GO
 -   `EXISTS`로 시작하는 하위 쿼리의 선택 목록은 규칙에 따라 단일 열 이름 대신 별표(\*)로 구성됩니다. `EXISTS`로 시작하는 하위 쿼리는 존재 테스트를 만들며 데이터 대신 TRUE 또는 FALSE를 반환하므로 `EXISTS`로 시작하는 하위 쿼리에 대한 규칙은 표준 선택 목록의 규칙과 동일합니다.   
 
 ## <a name="qualifying-column-names-in-subqueries"></a><a name="qualifying"></a> 하위 쿼리의 열 이름 한정
-다음 예제에서는 외부 쿼리의 *절에 있는*BusinessEntityID`WHERE` 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
+다음 예제에서는 외부 쿼리의 `WHERE` 절에 있는 *BusinessEntityID* 열이 외부 쿼리의 `FROM` 절에 있는 테이블 이름(*Sales.Store*)으로 암시적으로 한정됩니다. 하위 쿼리의 SELECT 목록에서 *CustomerID*에 대한 참조는 하위 쿼리의 `FROM` 절, 즉 *Sales.Customer* 테이블로 한정됩니다.
 
 ```sql
 USE AdventureWorks2016;
@@ -736,7 +736,7 @@ GO
 ```   
 
 ### <a name="subqueries-with-not-exists"></a><a name="notexists"></a> NOT EXISTS가 있는 하위 쿼리
-`NOT EXISTS`는 하위 쿼리에서 반환되는 행이 없을 때 이것이 사용되는 `EXISTS` 절이 만족되는 경우를 제외하면 `WHERE`와 비슷합니다.    
+`NOT EXISTS`는 하위 쿼리에서 반환되는 행이 없을 때 이것이 사용되는 `WHERE` 절이 만족되는 경우를 제외하면 `EXISTS`와 비슷합니다.    
 
 예를 들어 Wheels 하위 범주에 없는 제품 이름을 찾으려면 다음 코드를 사용합니다.   
 
@@ -755,7 +755,7 @@ GO
 ```   
 
 ### <a name="subqueries-used-in-place-of-an-expression"></a><a name="expression"></a> 식 대신 하위 쿼리 사용
-[!INCLUDE[tsql](../../includes/tsql-md.md)]에서 하위 쿼리는 `SELECT` 목록을 제외하고 `UPDATE`, `INSERT`, `DELETE` 및 `ORDER BY` 문에서 식 대신 사용할 수 있습니다.    
+[!INCLUDE[tsql](../../includes/tsql-md.md)]에서 하위 쿼리는 `ORDER BY` 목록을 제외하고 `SELECT`, `UPDATE`, `INSERT` 및 `DELETE` 문에서 식 대신 사용할 수 있습니다.    
 
 다음은 이러한 향상된 기능을 사용하는 방법을 보여 주는 예입니다. 다음 쿼리는 모든 산악용 자전거의 가격, 평균 가격 및 각 산악용 자전거의 가격과 평균 가격 간의 차이를 검색합니다.    
 

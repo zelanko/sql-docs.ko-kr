@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Optimize property [ADO], Visual Basic example
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 70bb3e20b36faff0358fe91ea51f85ba125207d1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917808"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762056"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize 속성 예제(VB)
 이 예제에서는 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 dynamic **Optimize** 속성을 보여 줍니다. ***Pubs*** 데이터베이스에 있는 ***Authors*** 테이블의 ***zip*** 필드는 인덱싱되지 않습니다. ***Zip*** 필드에서 [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 로 설정 하면 ADO에서 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드의 성능을 향상 시키는 인덱스를 작성할 수 있습니다.  

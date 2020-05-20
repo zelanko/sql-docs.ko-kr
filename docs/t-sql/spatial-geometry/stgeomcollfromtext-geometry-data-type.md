@@ -49,7 +49,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- **에 의해 반환되는** geometry`STGeomCollFromText()` 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
+ `STGeomCollFromText()`에 의해 반환되는 **geometry** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  이 메서드는 입력이 잘못된 경우 예외를 throw합니다.  
   

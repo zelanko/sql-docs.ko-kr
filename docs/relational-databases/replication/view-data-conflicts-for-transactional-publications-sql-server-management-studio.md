@@ -34,7 +34,7 @@ ms.locfileid: "75321870"
   
     -   @conflict_retention sp_addpublication [의](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)매개 변수에 보존 값을 지정합니다.  
   
-    -   **매개 변수에 대해**'conflict_retention'@property 값을 지정하고 @valuesp_changepublication[의 ](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 매개 변수에 대해 보존 기간 값을 지정합니다.  
+    -   @property 매개 변수에 대해 **'conflict_retention'** 값을 지정하고 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)의 @value 매개 변수에 대해 보존 기간 값을 지정합니다.  
   
 ### <a name="to-view-conflicts"></a>충돌을 보려면  
   

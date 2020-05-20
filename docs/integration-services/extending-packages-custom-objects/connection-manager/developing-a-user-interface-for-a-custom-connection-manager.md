@@ -30,7 +30,7 @@ ms.locfileid: "71297254"
  사용자 지정 사용자 인터페이스 프로젝트 또는 어셈블리에는 일반적으로 두 개의 클래스가 포함됩니다. 하나는 <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>를 구현하는 클래스이고 다른 하나는 이 클래스에서 사용자로부터 정보를 수집하기 위해 표시하는 Windows Form입니다.  
   
 > [!IMPORTANT]  
->  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에 설명된 대로 사용자 지정 사용자 인터페이스를 서명 및 빌드하고 전역 어셈블리 캐시에 설치한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 속성에서 이 클래스의 정규화된 이름을 지정해야 합니다.  
+>  [사용자 지정 연결 관리자 코딩](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에 설명된 대로 사용자 지정 사용자 인터페이스를 서명 및 빌드하고 전역 어셈블리 캐시에 설치한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 속성에서 이 클래스의 정규화된 이름을 지정해야 합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에 기본 제공된 대부분의 태스크, 원본 및 대상은 특정 유형의 기본 제공 연결 관리자와만 사용할 수 있습니다. 따라서 이러한 예제를 기본 제공 태스크 및 구성 요소와 함께 테스트할 수 없습니다.  

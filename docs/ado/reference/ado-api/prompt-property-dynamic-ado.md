@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Prompt property [ADO]
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e99273a94fc38779b50203d3dd5b78106f6a90c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931585"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761921"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt 속성-동적(ADO)
 OLE DB 공급자가 초기화 정보를 묻는 메시지를 사용자에 게 표시할지 여부를 지정 합니다.  
@@ -34,7 +34,7 @@ OLE DB 공급자가 초기화 정보를 묻는 메시지를 사용자에 게 표
 > [!NOTE]
 >  사용자가 대화 상자에 응답할 수 없는 시나리오에서 공급자가 사용자에 게 메시지를 표시 하도록 지정 하지 마십시오. 예를 들어 응용 프로그램이 사용자의 클라이언트 대신 서버 시스템에서 실행 되 고 있거나 사용자가 로그온 하지 않은 시스템에서 실행 되 고 있는 경우 사용자가 응답할 수 없습니다. 이러한 경우 응용 프로그램은 응답을 무기한 대기 하 고 잠금 상태로 보일 것입니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용량  
   
 ```  
 Set cn = New Connection  

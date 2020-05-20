@@ -70,7 +70,7 @@ End Sub
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> 인터페이스는 **개체** 형식의 속성 값을 제한적으로 지원합니다. 사용자 지정 속성의 값으로는 문자열 또는 정수와 같은 단순 형식의 배열만 저장할 수 있습니다.  
   
- 다음 예제와 같이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 속성을 **열거형의**CPET_NOTIFY<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType>로 설정하여 사용자 지정 속성이 속성 식을 지원하도록 지정할 수 있습니다. 사용자가 입력한 속성 식을 처리하거나 유효성을 검사하기 위한 코드를 추가할 필요는 없습니다. 속성의 기본값을 설정하고 해당 값의 유효성을 검사한 다음 값을 정상적으로 읽고 사용할 수 있습니다.  
+ 다음 예제와 같이 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.ExpressionType%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSCustomPropertyExpressionType> 열거형의 **CPET_NOTIFY**로 설정하여 사용자 지정 속성이 속성 식을 지원하도록 지정할 수 있습니다. 사용자가 입력한 속성 식을 처리하거나 유효성을 검사하기 위한 코드를 추가할 필요는 없습니다. 속성의 기본값을 설정하고 해당 값의 유효성을 검사한 다음 값을 정상적으로 읽고 사용할 수 있습니다.  
   
 ```csharp  
 IDTSCustomProperty100 myCustomProperty;  

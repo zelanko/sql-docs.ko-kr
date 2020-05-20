@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919252"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763504"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 사용 되는 커서 유형을 나타냅니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "67919252"
   
 |이 CursorType 레코드 집합의 경우|Supports 메서드는 이러한 모든 상수에 대해 True를 반환 해야 합니다.|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|none|  
+|**adOpenForwardOnly**|없음|  
 |**adOpenKeyset**|**Adbookmark**, **adHoldRecords**, **adMovePrevious**, **adbookmark**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**Adbookmark**, **adHoldRecords**, **adMovePrevious**, **adbookmark**|  

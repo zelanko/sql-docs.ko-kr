@@ -1,4 +1,4 @@
-**SA** 계정은 설치 중에 생성되는 SQL Server 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `MSSQL_SA_PASSWORD`를 실행하여 지정한 `echo $MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안을 위해 다음과 같이 SA 암호를 변경합니다.
+**SA** 계정은 설치 중에 생성되는 SQL Server 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $MSSQL_SA_PASSWORD`를 실행하여 지정한 `MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안을 위해 다음과 같이 SA 암호를 변경합니다.
 
 1. SA 사용자에게 사용할 강력한 암호를 선택합니다.
 

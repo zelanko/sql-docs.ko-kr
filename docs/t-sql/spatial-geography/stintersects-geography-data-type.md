@@ -39,7 +39,7 @@ ms.locfileid: "68042082"
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- **를 호출할 인스턴스와 비교할 다른** geography`STIntersects()` 인스턴스입니다.  
+ `STIntersects()`를 호출할 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  

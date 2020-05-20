@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d59fcbbd7edea7ac87b2c080d27160cb98732759
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917833"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762161"
 ---
 # <a name="open-method-ado-stream"></a>Open 메서드(ADO 스트림)
 이진 또는 텍스트 데이터 스트림을 조작 하는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 엽니다.  
@@ -34,20 +34,20 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *원본*  
- 선택 사항입니다. **스트림에**대 한 데이터 원본을 지정 하는 **변형** 값입니다. *원본* 에는 전자 메일 또는 파일 시스템과 같이 잘 알려진 트리 구조의 기존 노드를 가리키는 절대 URL 문자열이 포함 될 수 있습니다. Url은 url 키워드 ("url =*체계*://*서버*/*폴더*")를 사용 하 여 지정 해야 합니다. 또는 *원본* 에 이미 열려 있는 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체에 대 한 참조가 포함 되어 있을 수 있습니다. 그러면 **레코드**와 연결 된 기본 스트림이 열립니다. *Source* 가 지정 되지 않은 경우 기본적으로 기본 소스와 연결 된 **스트림이** 인스턴스화되고 열립니다. URL 스키마 및 연결 된 공급자에 대 한 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
+ *소스*  
+ (선택 사항) **스트림에**대 한 데이터 원본을 지정 하는 **변형** 값입니다. *원본* 에는 전자 메일 또는 파일 시스템과 같이 잘 알려진 트리 구조의 기존 노드를 가리키는 절대 URL 문자열이 포함 될 수 있습니다. Url은 url 키워드 ("url =*체계*://*서버* / *폴더*")를 사용 하 여 지정 해야 합니다. 또는 *원본* 에 이미 열려 있는 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체에 대 한 참조가 포함 되어 있을 수 있습니다. 그러면 **레코드**와 연결 된 기본 스트림이 열립니다. *Source* 가 지정 되지 않은 경우 기본적으로 기본 소스와 연결 된 **스트림이** 인스턴스화되고 열립니다. URL 스키마 및 연결 된 공급자에 대 한 자세한 내용은 [절대 및 상대 url](../../../ado/guide/data/absolute-and-relative-urls.md)을 참조 하세요.  
   
  *모드*  
- 선택 사항입니다. 결과 **스트림에** 대 한 액세스 모드를 지정 하는 [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값 (예: 읽기/쓰기 또는 읽기 전용)입니다. 기본값은 **Admodeunknown**입니다. 액세스 모드에 대 한 자세한 내용은 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 참조 하세요. *Mode* 를 지정 하지 않으면 소스 개체에 의해 상속 됩니다. 예를 들어 읽기 전용 모드에서 원본 **레코드가** 열리는 경우 **스트림은** 기본적으로 읽기 전용 모드에서 열립니다.  
+ (선택 사항) 결과 **스트림에** 대 한 액세스 모드를 지정 하는 [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값 (예: 읽기/쓰기 또는 읽기 전용)입니다. 기본값은 **Admodeunknown**입니다. 액세스 모드에 대 한 자세한 내용은 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 참조 하세요. *Mode* 를 지정 하지 않으면 소스 개체에 의해 상속 됩니다. 예를 들어 읽기 전용 모드에서 원본 **레코드가** 열리는 경우 **스트림은** 기본적으로 읽기 전용 모드에서 열립니다.  
   
  *OpenOptions*  
- 선택 사항입니다. [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) 값입니다. 기본값은 **Adopenstreamunspecified 되지 않음**입니다.  
+ (선택 사항) [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) 값입니다. 기본값은 **Adopenstreamunspecified 되지 않음**입니다.  
   
  *이름*  
- 선택 사항입니다. 필요한 경우 **스트림** 개체에 액세스 하는 사용자 id를 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 필요한 경우 **스트림** 개체에 액세스 하는 사용자 id를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- 선택 사항입니다. 필요한 경우 **스트림** 개체에 액세스 하는 암호를 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 필요한 경우 **스트림** 개체에 액세스 하는 암호를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
  **Record** 개체가 source 매개 변수로 전달 되는 경우 **record** 개체에 대 한 액세스를 이미 사용할 수 있으므로 *UserID* 및 *Password* 매개 변수는 사용 되지 않습니다. 마찬가지로 **Record** 개체의 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 는 **Stream** 개체에 전송 됩니다. *Source* 를 지정 하지 않으면 열린 **스트림에** 데이터가 없고 [크기가](../../../ado/reference/ado-api/size-property-ado-stream.md) 0입니다. **스트림이** 닫힐 때이 **스트림에** 작성 되는 데이터의 손실을 방지 하려면 [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) 또는 [SaveToFile](../../../ado/reference/ado-api/savetofile-method.md) 메서드를 사용 하 여 **스트림을** 저장 하거나 다른 메모리 위치에 저장 합니다.  

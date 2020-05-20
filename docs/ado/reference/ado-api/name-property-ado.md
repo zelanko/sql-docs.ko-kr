@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918030"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762424"
 ---
 # <a name="name-property-ado"></a>Name 속성(ADO)
 개체의 이름을 나타냅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "67918030"
   
  [매개 변수 컬렉션에](../../../ado/reference/ado-api/parameters-collection-ado.md) 아직 추가 되지 않은 **매개 변수** 개체의 경우 **Name** 속성은 읽기/쓰기가 됩니다. 추가 된 **매개 변수** 개체 및 기타 모든 개체의 경우 **Name** 속성은 읽기 전용입니다. 이름은 컬렉션 내에서 고유 하지 않아도 됩니다.  
   
- 서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `rstMain.Properties(20).Name` 생성 `Updatability`되 면 이후에이 속성을 참조할 수 있습니다 `rstMain.Properties("Updatability")`.  
+ 서 수 참조로 개체의 **이름** 속성을 검색할 수 있으며, 그 후에는 개체를 이름으로 직접 참조할 수 있습니다. 예를 들어가 `rstMain.Properties(20).Name` 생성 되 면 `Updatability` 이후에이 속성을 참조할 수 있습니다 `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>적용 대상  
   

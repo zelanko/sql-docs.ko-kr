@@ -23,7 +23,7 @@ ms.locfileid: "74095923"
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>SQL 서버 및 클라이언트 앱에서 FOR JSON 출력 사용(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-다음 예제에는 **또는 클라이언트 앱에서**FOR JSON[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 절 및 해당 JSON 출력을 사용하는 몇 가지 방법이 나와 있습니다.  
+다음 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 클라이언트 앱에서 **FOR JSON** 절 및 해당 JSON 출력을 사용하는 몇 가지 방법이 나와 있습니다.  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>SQL 서버 변수에서 FOR JSON 출력 사용  
 FOR JSON 절의 출력은 NVARCHAR(MAX) 형식이므로 다음 예제에 나와 있는 것처럼 어떤 변수에나 할당할 수 있습니다.  

@@ -29,7 +29,7 @@ ms.locfileid: "68101011"
 
   평면 공간 데이터 형식인 **geometry**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. 이 데이터 형식은 유클리드(평면) 좌표 시스템의 데이터를 나타냅니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **geometry** 공간 데이터 형식에 대해 메서드 집합을 지원합니다. 이러한 메서드에는 OGC(Open Geospatial Consortium) 표준 및 해당 표준에 대한 **확장의 집합으로 정의된**geometry[!INCLUDE[msCoName](../../includes/msconame-md.md)]의 메서드가 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **geometry** 공간 데이터 형식에 대해 메서드 집합을 지원합니다. 이러한 메서드에는 OGC(Open Geospatial Consortium) 표준 및 해당 표준에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장의 집합으로 정의된 **geometry**의 메서드가 포함됩니다.  
  
  기하 도형 메서드의 허용 오차는 1.0e-7 * 익스텐트와 같을 수 있습니다. 익스텐트는 **geometry** 개체의 점 사이의 최대 근사 거리를 나타냅니다.
   

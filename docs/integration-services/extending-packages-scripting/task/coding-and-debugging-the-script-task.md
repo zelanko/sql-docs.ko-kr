@@ -210,9 +210,9 @@ To open Help, press F1.
 >  프로젝트 참조는 VSTA IDE의 **클래스 뷰** 또는 **프로젝트 탐색기**에서 볼 수 있습니다. **보기** 메뉴에서 이러한 창 중 하나를 엽니다. **프로젝트** 메뉴, **프로젝트 탐색기** 또는 **클래스 뷰**에서 새 참조를 추가할 수 있습니다.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>스크립트 태스크에서 패키지와 상호 작용  
- 스크립트 태스크는 **클래스의 인스턴스인 전역**Dts<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 개체 및 해당 멤버를 사용하여 이를 포함한 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.  
+ 스크립트 태스크는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 인스턴스인 전역 **Dts** 개체 및 해당 멤버를 사용하여 이를 포함한 패키지 및 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임과 상호 작용합니다.  
   
- 다음 표에는 전역 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>Dts**개체를 통해 스크립트 태스크 코드에 노출되는** 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
+ 다음 표에는 전역 **Dts** 개체를 통해 스크립트 태스크 코드에 노출되는 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> 클래스의 주요 공용 멤버가 나와 있습니다. 이 섹션의 항목에서는 이러한 멤버의 사용 방법을 보다 자세히 설명합니다.  
   
 |멤버|목적|  
 |------------|-------------|  

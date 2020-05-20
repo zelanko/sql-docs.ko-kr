@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bookmarks [ADO]
 - Recordset object [ADO]
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ebf38cb9afaabef6d1af4e941cf02df1947c7b73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763054"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 모든 레코드를 스크롤하고 값을 비교할 필요 없이 **레코드 집합** 에서 이동한 후 특정 레코드로 직접 반환 하는 것이 유용한 경우가 많습니다. 예를 들어 **Find** 메서드를 사용 하 여 레코드를 검색 하려고 하지만 검색에서 레코드를 반환 하지 않는 경우에는 레코드 **집합**의 한쪽 끝에 자동으로 배치 됩니다. 공급자가 지 원하는 경우 사용자의 위치로 돌아갈 수 있도록 책갈피를 사용 하 여 **찾기** 방법을 사용 하기 전에 위치를 표시할 수 있습니다. 책갈피는 레코드 **집합** 개체의 레코드를 고유 하 게 식별 하는 **Variant** 형식 값입니다.  

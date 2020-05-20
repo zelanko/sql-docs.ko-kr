@@ -42,7 +42,7 @@ SQL Server는 [서비스별 보안 식별자(SID)](https://support.microsoft.com
 
 시스템 계정은 지금까지 [LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190)([en-us의 NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) 또는 [NetworkService](/windows/desktop/Services/networkservice-account)([en-us의 NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) 계정에 대한 로그인을 생성하고 해당 로그인 권한을 부여하여 사용 권한을 부여 받았습니다. 이 메서드는 시스템 계정으로 실행 중인 SQL에 모든 프로세스 또는 서비스 사용 권한을 부여합니다.
 
-서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `View Server State`의 컨텍스트에서 실행 중일 때 `HealthService`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
+서비스 SID를 사용하면 특정 서비스에 사용 권한을 부여할 수 있습니다. 이 서비스는 실행 중일 때 권한이 부여된 리소스에만 액세스할 수 있습니다. 예를 들어 `HealthService`가 `LocalSystem`으로 실행 중이고 `View Server State`가 부여된 경우 `LocalSystem` 계정은 `HealthService`의 컨텍스트에서 실행 중일 때 `View Server State`에 대한 권한만 가집니다. 다른 프로세스가 SQL의 서버 상태에 `LocalSystem`으로 액세스하려고 하면 액세스가 거부됩니다.
 
 ## <a name="examples"></a>예
 

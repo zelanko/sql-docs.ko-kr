@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AppendChunk method [ADO]
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5ebf6f52e4c2ac9cc4875db26e633457915c0a5e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920562"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762942"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 메서드(ADO)
 대량 텍스트 또는 이진 데이터 [필드](../../../ado/reference/ado-api/field-object.md)또는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체에 데이터를 추가 합니다.  

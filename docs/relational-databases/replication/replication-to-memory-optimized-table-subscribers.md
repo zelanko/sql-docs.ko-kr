@@ -27,11 +27,11 @@ ms.locfileid: "76287351"
   
 -   **메모리 최적화 테이블로의 복제를 지원하도록 구독자 데이터베이스 구성**  
   
-     **sp_addsubscription &#40;Transact-SQL&#41;\@ 또는** sp_changesubscription &#40;Transact-SQL&#41;**을 사용하여** [memory_optimized](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 속성을 [true](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)로 설정합니다.  
+     [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 또는 [sp_changesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)을 사용하여 **\@memory_optimized** 속성을 **true**로 설정합니다.  
   
 -   **메모리 최적화 테이블로의 복제를 지원하도록 아티클 구성**  
   
-     `@schema_option = 0x40000000000`sp_addarticle&#40;Transact-SQL&#41;[ 또는 ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)sp_changearticle&#40;Transact-SQL&#41;[을 사용하여 아티클의 ](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 옵션을 설정합니다.  
+     [sp_addarticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 사용하여 아티클의 `@schema_option = 0x40000000000` 옵션을 설정합니다.  
   
 #### <a name="to-configure-a-memory-optimized-table-as-a-subscriber"></a>메모리 최적화 테이블을 구독자로 구성하려면  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76287351"
   
 2.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle\@ 저장 프로시저의** **schema_option** 매개 변수를 다음으로 설정합니다.   
+     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 다음으로 설정합니다.   
     **0x40000000000**부터 사용할 수 있습니다.  
   
 3.  아티클 속성 창에서 **메모리 최적화 사용** 을 **true**로 설정합니다.  
@@ -54,16 +54,16 @@ ms.locfileid: "76287351"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 구독 속성으로 이동한 다음 **메모리 액세스에 최적화된 구독** 을 **true**로 설정합니다. 구독을 다시 초기화해야 변경 내용이 적용됩니다.  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addsubscription\@ 저장 프로시저의 새** **memory_optimized** 매개 변수를 true로 설정합니다.  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addsubscription** 저장 프로시저의 새 **\@memory_optimized** 매개 변수를 true로 설정합니다.  
   
 2.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 아티클 속성으로 이동한 다음 **메모리 최적화 사용** 을 true로 설정합니다.  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle\@ 저장 프로시저의** **schema_option** 매개 변수를 다음으로 설정합니다.   
+     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 다음으로 설정합니다.   
     **0x40000000000**부터 사용할 수 있습니다.  
   
 3.  메모리 액세스에 최적화된 테이블은 클러스터형 인덱스를 지원하지 않습니다. 클러스터형 인덱스를 대상에서 비클러스터형 인덱스로 변환하여 복제에서 해당 인덱스를 처리하도록 하려면 **메모리 액세스에 최적화된 아티클에 대해 클러스터형 인덱스를 비클러스터형 인덱스로 변환** 을 true로 설정합니다.  
   
-     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle\@ 저장 프로시저의** **schema_option** 매개 변수를 **0x0000080000000000**으로 설정합니다.  
+     [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 구성하는 경우 **sp_addarticle** 저장 프로시저의 **\@schema_option** 매개 변수를 **0x0000080000000000**으로 설정합니다.  
   
 4.  스냅샷을 다시 생성합니다.  
   

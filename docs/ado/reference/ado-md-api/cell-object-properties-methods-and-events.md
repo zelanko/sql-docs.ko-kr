@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Cell object [ADO MD], members
 ms.assetid: c45d795b-3272-4df4-a54c-7cd4fcb187fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7f76a24c4db4d6a5144188be2ee0fa00ca5679f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60424bed2d6496ce23f7bf9ed28d4c49a222e3f2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947977"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761791"
 ---
 # <a name="cell-object-properties-methods-and-events"></a>Cell 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

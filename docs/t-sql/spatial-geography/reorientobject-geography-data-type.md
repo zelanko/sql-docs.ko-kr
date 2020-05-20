@@ -40,7 +40,7 @@ ms.locfileid: "68101748"
   
 ## <a name="arguments"></a>인수  
 _geography_  
-**를 호출할 다른** geography`ReorientObject()` 인스턴스입니다.  
+`ReorientObject()`를 호출할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-value"></a>Return Value  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926642"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763214"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft Jet 용 microsoft OLE DB 공급자 개요
 Microsoft Jet 용 OLE DB 공급자를 사용 하 여 ADO에서 Microsoft Jet 데이터베이스에 액세스할 수 있습니다.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |키워드|Description|
 |-------------|-----------------|
 |**공급자**|Microsoft Jet의 OLE DB 공급자를 지정 합니다.|
-|**데이터 원본**|데이터베이스 경로와 파일 이름을 지정 합니다 (예: `c:\Northwind.mdb`).|
-|**사용자 ID**|사용자 이름을 지정합니다. 이 키워드를 지정 하지 않으면 기본적으로 "`admin`" 문자열이 사용 됩니다.|
+|**데이터 원본**|데이터베이스 경로와 파일 이름을 지정 합니다 (예: `c:\Northwind.mdb` ).|
+|**사용자 ID**|사용자 이름을 지정합니다. 이 키워드를 지정 하지 않으면 `admin` 기본적으로 "" 문자열이 사용 됩니다.|
 |**암호**|사용자 암호를 지정 합니다. 이 키워드를 지정 하지 않으면 기본적으로 빈 문자열 ("")이 사용 됩니다.|
 
 > [!NOTE]
@@ -57,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  다음 표에서는 이러한 속성을 해당 OLE DB 속성 이름과 함께 괄호 안에 나열 합니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |Jet OLEDB: 압축 여유 공간 크기 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|데이터베이스를 압축 하 여 회수할 수 있는 공간의 예상 크기 (바이트)를 나타냅니다. 이 값은 데이터베이스 연결이 설정 된 후에만 유효 합니다.|
 |Jet OLEDB: 연결 제어 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|사용자가 데이터베이스에 연결할 수 있는지 여부를 나타냅니다.|
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>공급자별 레코드 집합 및 명령 속성
  또한 Jet 공급자는 여러 공급자별 **레코드 집합과** **명령** 속성을 지원 합니다. 이러한 속성에 액세스 하 여 **레코드 집합** 또는 **명령** 개체의 **속성** 컬렉션을 통해 설정 합니다. 표는 ADO 속성 이름 및 해당 OLE DB 속성 이름을 괄호 안에 나열 합니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |Jet OLEDB: 대량 트랜잭션 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|SQL 대량 작업이 트랜잭션 되었는지 여부를 나타냅니다. 리소스 지연으로 인해 트랜잭션이 트랜잭션 되었을 때 대규모 대량 작업이 실패할 수 있습니다.|
 |Jet OLEDB: Fat 커서 사용 (DBPROP_JETOLEDB_ENABLEFATCURSOR)|원격 행 원본에 대해 레코드 집합을 채울 때 Jet에서 여러 행을 캐시 해야 하는지 여부를 나타냅니다.|
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |최대 행 크기|DBPROP_MAXROWSIZE|
 |최대 행 크기에 BLOB 포함|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |SELECT의 최대 테이블|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|모드|DBPROP_INIT_MODE|
 |여러 매개 변수 집합|DBPROP_MULTIPLEPARAMSETS|
 |여러 결과|DBPROP_MULTIPLERESULTS|
 |여러 저장소 개체|DBPROP_MULTIPLESTORAGEOBJECTS|

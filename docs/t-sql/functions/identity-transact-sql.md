@@ -58,7 +58,7 @@ ms.locfileid: "73843664"
  @@IDENTITY 값은 복제 트리거 및 저장 프로시저 내에서 사용되므로 복제로 인한 영향을 받을 수 있습니다. 열이 복제 아티클의 일부인 경우 @@IDENTITY은 사용자가 만든 가장 최근 ID를 정확하게 표시하지 않습니다. @@IDENTITY 대신 SCOPE_IDENTITY() 함수 구문을 사용할 수 있습니다. 자세한 내용은 [SCOPE_IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/scope-identity-transact-sql.md)를 참조하세요.  
   
 > [!NOTE]  
->  복제에 사용되는 중첩 트리거 범위 내의 ID가 아니라 해당 사용자 명령문의 범위 내에서 사용되는 최신 ID를 반환할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하도록 호출하는 저장 프로시저 또는 `SCOPE_IDENTITY()` 문을 다시 작성해야 합니다.  
+>  복제에 사용되는 중첩 트리거 범위 내의 ID가 아니라 해당 사용자 명령문의 범위 내에서 사용되는 최신 ID를 반환할 `SCOPE_IDENTITY()` 함수를 사용하도록 호출하는 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 다시 작성해야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 ID 열(`LocationID`)이 있는 테이블에 행을 삽입하고 `@@IDENTITY`를 사용하여 새 행에 사용된 ID 값을 표시합니다.  

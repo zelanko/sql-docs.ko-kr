@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], VC++ example
 ms.assetid: 43ae202e-1972-4aab-9cc1-3b6612bad363
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0f01656c93d6699403657e970034076200255d0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9fde13dc2182f5c1258f43c1ec887dd300b2c008
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928013"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763744"
 ---
 # <a name="parentcatalog-property-example-vc"></a>ParentCatalog 속성 예제(VC++)
 다음 코드에서는 카탈로그에 테이블을 추가 하기 전에 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 속성을 사용 하 여 공급자별 속성에 액세스 하는 방법을 보여 줍니다. 속성은 **autoincrement**이며 Microsoft Jet 데이터베이스에서 autoincrement 필드를 만듭니다.  

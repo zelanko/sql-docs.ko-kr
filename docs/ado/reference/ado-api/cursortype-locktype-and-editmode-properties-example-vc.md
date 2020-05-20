@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EditMode property [ADO], VC++ example
 - CursorType property [ADO], VC++ example
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: be094e6886cceb8e6f4e42e3b60f9e7355df7592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26124aa4259ffa145cdbf0c42a559e89a5e2b766
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933252"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763526"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>CursorType, LockType 및 EditMode 속성 예제 (VC + +)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 열기 전에 [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 및 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) 속성을 설정 하는 방법을 보여 줍니다. 또한 다양 한 조건에서 [EditMode](../../../ado/reference/ado-api/editmode-property.md) 속성의 값을 보여 줍니다. 이 프로시저를 실행 하려면 EditModeOutput 함수가 필요 합니다.  

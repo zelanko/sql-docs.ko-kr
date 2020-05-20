@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924597"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763614"
 ---
 # <a name="persisting-records-in-xml-format"></a>XML 형식으로 레코드 유지
 ADTG 형식과 마찬가지로 XML 형식의 **레코드 집합** 지 속성은 Microsoft OLE DB 지 속성 공급자를 사용 하 여 구현 됩니다. 이 공급자는 ADO에서 생성 한 스키마 정보를 포함 하는 저장 된 XML 파일 또는 스트림에서 앞 으로만 이동 가능한 읽기 전용 행 집합을 생성 합니다. 마찬가지로, ADO **레코드 집합**을 사용 하 여 XML을 생성 하 고이를 파일 또는 COM **IStream** 인터페이스를 구현 하는 모든 개체에 저장할 수 있습니다. 실제로 파일은 **IStream**을 지 원하는 개체의 또 다른 예입니다. 2.5 이상 버전의 경우 ADO는 Microsoft XML 파서 (MSXML)를 사용 하 여 XML을 **레코드 집합**으로 로드 합니다. 따라서 msxml .dll이 필요 합니다.  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO는 항상 전체 **레코드 집합** 개체를 유지 합니다. **Recordset** 개체의 행 하위 집합을 유지 하려면 **필터** 메서드를 사용 하 여 행의 범위를 좁히거나 선택 절을 변경 합니다. 그러나 **필터** 메서드를 사용 하 여 행의 하위 집합을 저장 하려면**CursorLocation** = **adUseClient**(클라이언트 쪽 커서)를 사용 하 여 **레코드 집합** 개체를 열어야 합니다. 예를 들어 문자 "b"로 시작 하는 제목을 검색 하려면 열려 있는 **레코드 집합** 개체에 필터를 적용 하면 됩니다.  
+ ADO는 항상 전체 **레코드 집합** 개체를 유지 합니다. **Recordset** 개체의 행 하위 집합을 유지 하려면 **필터** 메서드를 사용 하 여 행의 범위를 좁히거나 선택 절을 변경 합니다. 그러나 필터 메서드를 사용 하 여 행의 하위 집합을 저장 하려면**CursorLocation**adUseClient (클라이언트 쪽 커서)를 사용 하 여 **레코드 집합** 개체를 열어야 합니다  =  **adUseClient**. **Filter** 예를 들어 문자 "b"로 시작 하는 제목을 검색 하려면 열려 있는 **레코드 집합** 개체에 필터를 적용 하면 됩니다.  
   
 ```  
 rs.Filter "title_id like 'B*'"  

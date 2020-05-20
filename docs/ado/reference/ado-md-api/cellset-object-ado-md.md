@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761771"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체(ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 다른 셀 집합에서 선택 된 셀의 컬렉션입니다.  
   
 ## <a name="remarks"></a>설명  
- **셀 집합** 내의 데이터는 직접 배열 유사 액세스를 사용 하 여 검색 됩니다. 특정 멤버로 드릴 다운 하 여 해당 멤버에 대 한 데이터를 가져올 수 있습니다. 예를 들어 다음 코드는 라는 `cst`셀 집합의 첫 번째 축에서 첫 번째 위치의 캡션을 반환 합니다.  
+ **셀 집합** 내의 데이터는 직접 배열 유사 액세스를 사용 하 여 검색 됩니다. 특정 멤버로 드릴 다운 하 여 해당 멤버에 대 한 데이터를 가져올 수 있습니다. 예를 들어 다음 코드는 라는 셀 집합의 첫 번째 축에서 첫 번째 위치의 캡션을 반환 합니다 `cst` .  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 16c837d37dc51c5f5203c1404b9c9a6bf9d8e95d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932243"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762524"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords 속성 예제(VC++)
 이 예에서는 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) 속성을 사용 하 여 ***titles*** 테이블에서 가장 비싼 10 개의 제목이 포함 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다.  

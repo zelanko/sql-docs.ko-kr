@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931649"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761991"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
 현재 **record** 개체의 부모 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 를 가리키는 절대 URL 문자열을 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  부모 **레코드**의 URL을 나타내는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- 이제 `the` **parenturl** 속성 `"https://first"`의 값은 **ActiveConnection**와 동일 합니다.  
+ 이제 `the` **parenturl** 속성의 값은 `"https://first"` **ActiveConnection**와 동일 합니다.  
   
- 원본은와 같은 절대 URL 일 수도 있습니다 `"https://first/second"`. **Parenturl** 속성은 `"https://first"`위의 `"second"`수준입니다.  
+ 원본은와 같은 절대 URL 일 수도 있습니다 `"https://first/second"` . **Parenturl** 속성은 `"https://first"` 위의 수준입니다 `"second"` .  
   
  이 속성은 다음과 같은 경우에는 null 값이 될 수 있습니다.  
   

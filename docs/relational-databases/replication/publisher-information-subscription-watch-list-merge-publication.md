@@ -74,7 +74,7 @@ ms.locfileid: "75320638"
  각 구독의 이름으로, 형식은*SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **이름**  
- 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 `@description`sp_addmergesubscription[ 또는 ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription[의 ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 매개 변수를 사용하여 지정합니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
+ 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 또는 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)의 `@description` 매개 변수를 사용하여 지정합니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
   
  **게시**  
  구독을 동기화할 게시의 이름이며 *PublicationDatabaseName: PublicationName*형식입니다.  

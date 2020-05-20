@@ -14,14 +14,14 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0654d6874c898102d6a85cadd70e821f8530a876
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920360"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762664"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF 및 Bookmark 속성 예제 (VC + +)
 이 예제의 첫 번째 함수는 사용자가 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 첫 번째 또는 마지막 레코드를 지나서 이동 하려고 시도 하는 경우 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성을 사용 하 여 메시지를 표시 합니다. [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성을 사용 하 여 사용자가 레코드 **집합** 의 레코드에 플래그를 지정 하 고 나중에이 레코드로 돌아갈 수 있습니다.  

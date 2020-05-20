@@ -35,7 +35,7 @@ ms.locfileid: "68116174"
 ## <a name="explanation"></a>설명  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스를 잠글 수 없습니다. 이 오류는 다음과 같은 문제로 인해 발생할 수 있습니다.  
   
--   다른 프로세스가 사용 중이거나 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]max server memory**옵션이 구성된 상태로 동작 중이어서**가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
+-   다른 프로세스가 사용 중이거나 서버가 **max server memory** 옵션이 구성된 상태로 동작 중이어서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
   
 -   잠금 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리의 60% 이상을 사용하지 않습니다.  
   

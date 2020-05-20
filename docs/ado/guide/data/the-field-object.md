@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923981"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763094"
 ---
 # <a name="the-field-object"></a>필드 개체
 각 **필드** 개체는 일반적으로 데이터베이스 테이블의 열에 해당 합니다. 그러나 **필드** 는 챕터 라는 다른 **레코드 집합**에 대 한 포인터를 나타낼 수도 있습니다. 장 열과 같은 예외는이 가이드의 뒷부분에 설명 되어 있습니다.  
@@ -68,9 +68,9 @@ ms.locfileid: "67923981"
 ### <a name="getting-more-field-information"></a>추가 필드 정보 얻기  
  ADO 개체에는 기본 제공 및 동적 속성의 두 가지 유형이 있습니다. 이 시점에서는 **Field** 개체의 기본 제공 속성만 설명 했습니다.  
   
- 기본 제공 속성은 ADO에서 구현 되 고 `MyObject.Property` 구문을 사용 하 여 새 개체에서 즉시 사용할 수 있는 속성입니다. 이러한 속성은 개체의 **Properties** 컬렉션에 **속성** 개체로 표시 되지 않습니다.  
+ 기본 제공 속성은 ADO에서 구현 되 고 구문을 사용 하 여 새 개체에서 즉시 사용할 수 있는 속성입니다 `MyObject.Property` . 이러한 속성은 개체의 **Properties** 컬렉션에 **속성** 개체로 표시 되지 않습니다.  
   
- 동적 속성은 기본 데이터 공급자에 의해 정의 되 고 해당 ADO 개체의 **properties** 컬렉션에 표시 됩니다. 예를 들어 공급자와 관련 된 속성은 **레코드 집합** 개체가 트랜잭션을 지원 하는지 또는 업데이트를 지원 하는지 여부를 나타낼 수 있습니다. 이러한 추가 속성은 해당 **레코드 집합** 개체의 **속성** 컬렉션에 **속성** 개체로 표시 됩니다. 동적 속성은 또는 `MyObject.Properties(0)` `MyObject.Properties("Name")`구문을 사용 하 여 컬렉션을 통해서만 참조할 수 있습니다.  
+ 동적 속성은 기본 데이터 공급자에 의해 정의 되 고 해당 ADO 개체의 **properties** 컬렉션에 표시 됩니다. 예를 들어 공급자와 관련 된 속성은 **레코드 집합** 개체가 트랜잭션을 지원 하는지 또는 업데이트를 지원 하는지 여부를 나타낼 수 있습니다. 이러한 추가 속성은 해당 **레코드 집합** 개체의 **속성** 컬렉션에 **속성** 개체로 표시 됩니다. 동적 속성은 또는 구문을 사용 하 여 컬렉션을 통해서만 참조할 수 `MyObject.Properties(0)` 있습니다 `MyObject.Properties("Name")` .  
   
  두 종류의 속성을 모두 삭제할 수는 없습니다.  
   

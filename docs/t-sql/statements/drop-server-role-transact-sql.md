@@ -68,7 +68,7 @@ GO
 ```  
   
 ### <a name="b-to-view-role-membership"></a>B. 역할 멤버 자격 보기  
- 역할 멤버 자격을 보려면 **에서** 서버 역할(멤버[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
+ 역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버**) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

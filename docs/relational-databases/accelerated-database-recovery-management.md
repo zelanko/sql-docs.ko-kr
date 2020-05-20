@@ -114,7 +114,7 @@ PVS는 기준선보다 훨씬 크거나 데이터베이스 크기의 50%에 가�
 
    활성 트랜잭션이 PVS를 정리하는 것을 방지합니다.
 
-1. 데이터베이스가 가용성 그룹의 일부인 경우 `secondary_low_water_mark`를 확인합니다. 이는 `low_water_mark_for_ghosts`에 의해 보고된 `sys.dm_hadr_database_replica_states`와 동일합니다. `sys.dm_hadr_database_replica_states`를 쿼리하여 복제본 중 하나가 이 값을 보유하고 있는지 확인합니다. 이 경우 pvs 정리도 방지됩니다.
-1. `min_transaction_timestamp`(또는 `online_index_min_transaction_timestamp`)를 확인하고 이를 기반으로 `sys.dm_tran_active_snapshot_database_transactions` 열에 대한 `transaction_sequence_num`를 확인하여 PVS 정리를 보유한 이전 스냅숏 트랜잭션이 있는 세션을 찾습니다.
+1. 데이터베이스가 가용성 그룹의 일부인 경우 `secondary_low_water_mark`를 확인합니다. 이는 `sys.dm_hadr_database_replica_states`에 의해 보고된 `low_water_mark_for_ghosts`와 동일합니다. `sys.dm_hadr_database_replica_states`를 쿼리하여 복제본 중 하나가 이 값을 보유하고 있는지 확인합니다. 이 경우 pvs 정리도 방지됩니다.
+1. `min_transaction_timestamp`(또는 `online_index_min_transaction_timestamp`)를 확인하고 이를 기반으로 `transaction_sequence_num` 열에 대한 `sys.dm_tran_active_snapshot_database_transactions`를 확인하여 PVS 정리를 보유한 이전 스냅숏 트랜잭션이 있는 세션을 찾습니다.
 1. 위의 사항이 적용되지 않는 경우에는 중단된 트랜잭션이 정리를 보유하고 있음을 의미합니다. `aborted_version_cleaner_last_start_time` 및 `aborted_version_cleaner_last_end_time`의 마지막 시간을 확인하여 중단된 트랜잭션 정리가 완료되었는지 확인합니다. `oldest_aborted_transaction_id`는 중단된 트랜잭션 정리가 완료된 후 더 높은 수준으로 이동해야 합니다.
 1. 중단된 트랜잭션이 최근에 성공적으로 완료되지 않은 경우 `VersionCleaner` 문제를 보고하는 메시지에 대한 오류 로그를 확인합니다.

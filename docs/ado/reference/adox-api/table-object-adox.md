@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Table object [ADOX]
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bcebe14b7b989e584539dd3f92fd8ea676ebd48a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965165"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763304"
 ---
 # <a name="table-object-adox"></a>테이블 개체(ADOX)
 열, 인덱스 및 키를 포함 하는 데이터베이스 테이블을 나타냅니다.  

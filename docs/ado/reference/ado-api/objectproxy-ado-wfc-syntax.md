@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ObjectProxy collection [ADO]
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff9cd79b4ac787987ef44ea3f73cbd9fb102ae43
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917951"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762322"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy(ADO - WFC 구문)
 **ObjectProxy** 개체는 서버를 나타내며 [, 해당 개체](../../../ado/reference/rds-api/dataspace-object-rds.md) 의 **createObject** 메서드에서이를 반환 합니다. ObjectProxy 클래스에는 서버에서 메서드를 호출 하 고 해당 호출로 인해 발생 하는 **개체를 반환할**수 있는 메서드 하나가 있습니다.  
@@ -49,4 +49,4 @@ public Object ObjectProxy.( String method, Object[] args)
  서버에서 호출할 메서드의 이름을 포함 하는 문자열입니다.  
   
  *args*  
- 선택 사항입니다. 서버에 있는 메서드에 대 한 인수인 개체의 배열입니다. Java 데이터 형식은 서버에서 사용 하기에 적합 한 데이터 형식으로 자동으로 변환 됩니다.
+ (선택 사항) 서버에 있는 메서드에 대 한 인수인 개체의 배열입니다. Java 데이터 형식은 서버에서 사용 하기에 적합 한 데이터 형식으로 자동으로 변환 됩니다.

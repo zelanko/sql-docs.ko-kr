@@ -72,7 +72,7 @@ ms.locfileid: "67929309"
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. CircularString 인스턴스에 여러 허용 오차 값 사용  
- 다음 예에서는 허용 오차를 설정하면 `LineString` 인스턴스에서 반환된 `CircularString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  
+ 다음 예에서는 허용 오차를 설정하면 `CircularString` 인스턴스에서 반환된 `LineString`인스턴스가 어떤 영향을 받는지 보여 줍니다.  
   
 ```
  DECLARE @g geometry; 
@@ -99,7 +99,7 @@ ms.locfileid: "67929309"
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. 호출하는 CurvePolygon 인스턴스에 대해 극대값을 true로 설정  
- 다음 예에서는 `CurvePolygon`relative`CurveToLineWithTolerance()`를 true로 설정하여 *인스턴스를 사용해*를 호출합니다.  
+ 다음 예에서는 *relative*를 true로 설정하여 `CurvePolygon` 인스턴스를 사용해 `CurveToLineWithTolerance()`를 호출합니다.  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 

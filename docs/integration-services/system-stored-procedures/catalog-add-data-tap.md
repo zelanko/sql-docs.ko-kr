@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  데이터 탭의 ID를 반환합니다. *data_tap_id*는 **bigint**입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(`output0.txt`\<드라이브 *>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의*  파일에 저장됩니다.  
+ 다음 예에서는 데이터 흐름 태스크 `'Paths[OLE DB Source.OLE DB Source Output]`의 데이터 흐름 경로 `\Package\Data Flow Task`에 데이터 탭을 만듭니다. 탭 데이터는 DataDumps 폴더(\<*드라이브*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps)의 `output0.txt` 파일에 저장됩니다.  
   
 ```sql
 Declare @execution_id bigint  
@@ -81,7 +81,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>설명  
- 데이터 탭을 추가하려면 실행 인스턴스가 생성됨 상태(**catalog.operations&#40;SSISDB 데이터베이스&#41;** 뷰의 [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 열 값이 1임)여야 합니다. 실행 인스턴스를 실행하면 상태 값이 변경됩니다. [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 호출하여 실행을 만들 수 있습니다.  
+ 데이터 탭을 추가하려면 실행 인스턴스가 생성됨 상태([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰의 **status** 열 값이 1임)여야 합니다. 실행 인스턴스를 실행하면 상태 값이 변경됩니다. [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md)을 호출하여 실행을 만들 수 있습니다.  
   
  다음은 add_data_tap 저장 프로시저에 대한 고려 사항입니다.  
   

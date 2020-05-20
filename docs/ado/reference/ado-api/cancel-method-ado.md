@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel method [ADO]
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: db369b32737c0e2dae4603a4a5a6c26cdd3a7142
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd6fc7b58d49c788242e029fa004ec38534c8e38
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920234"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763544"
 ---
 # <a name="cancel-method-ado"></a>Cancel 메서드(ADO)
 보류 중인 비동기 메서드 호출의 실행을 취소 합니다.  
@@ -43,7 +43,7 @@ object.Cancel
   
 |*개체가* 인 경우|이 메서드에 대 한 마지막 비동기 호출이 종료 되었습니다.|  
 |----------------------|-------------------------------------------------------------|  
-|[명령](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Command](../../../ado/reference/ado-api/command-object-ado.md)|[실행할](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|[실행](../../../ado/reference/ado-api/execute-method-ado-connection.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[기록은](../../../ado/reference/ado-api/record-object-ado.md)|[Copyrecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)또는 [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|[열기](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  

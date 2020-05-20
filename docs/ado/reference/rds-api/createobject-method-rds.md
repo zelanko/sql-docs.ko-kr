@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964541"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762674"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 메서드(RDS)
 대상 비즈니스 개체에 대 한 프록시를 만들어 해당 개체에 대 한 포인터를 반환 합니다. 프록시 패키지 및는 비즈니스 개체와 통신 하 여 인터넷을 통해 요청 및 데이터를 전송 하기 위해 서버 쪽 스텁으로 데이터를 마샬링합니다. In-process 구성 요소 개체의 경우에는 프록시를 사용 하지 않고 개체에 대 한 포인터만 제공 됩니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "67964541"
   
 |프로토콜|구문|  
 |--------------|------------|  
-|HTTP|Set object = 스페이스. CreateObject ("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set object = 스페이스. CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTP|Set object = 스페이스. CreateObject ("ProgId", "https \: //awebsrvr")|  
+|HTTPS|Set object = 스페이스. CreateObject ("ProgId", "https \: //awebsrvr")|  
 |DCOM|Set object = 스페이스 이름. CreateObject ("ProgId", "computername")|  
-|In-Process|Set object = 스페이스. CreateObject ("ProgId", "")|  
+|In Process|Set object = 스페이스. CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>매개 변수  
- *Object*  
+ *개체가*  
  *ProgID*에 지정 된 형식인 개체로 계산 되는 개체 변수입니다.  
   
  *스페이스가*  

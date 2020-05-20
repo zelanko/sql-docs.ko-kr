@@ -273,7 +273,7 @@ SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으
 + `packageA`는 `packageB`에 대한 종속성이 있음
 + `packageB`는 `packageC`에 대한 종속성이 있음
 
-`packageA`의 설치에 성공하려면 SQL Server에 `packageB`를 추가하는 것과 동시에 `packageC` 및 `packageA`에 대한 라이브러리를 만들어야 합니다. 필요한 패키지 버전도 확인해야 합니다.
+`packageA`의 설치에 성공하려면 SQL Server에 `packageA`를 추가하는 것과 동시에 `packageB` 및 `packageC`에 대한 라이브러리를 만들어야 합니다. 필요한 패키지 버전도 확인해야 합니다.
 
 실제로 인기 있는 패키지에 대한 패키지 종속성은 대개 이처럼 간단한 예제보다 훨씬 더 복잡합니다. 예를 들어 **ggplot2**에는 30개가 넘는 패키지가 필요할 수 있으며 그러한 패키지에는 서버에서 사용할 수 없는 추가 패키지가 필요할 수 있습니다. 누락된 패키지 또는 잘못된 패키지 버전을 사용하면 설치가 실패할 수 있습니다.
 
@@ -302,7 +302,7 @@ SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으
 
     필요한 패키지가 인스턴스에 이미 업로드된 경우 다시 추가할 필요는 없습니다. 기존 패키지가 올바른 버전인지 여부만 확인하면 됩니다. 
     
-    `packageC`을 먼저 실행하여 패키지 `packageB`를 설치하면 필요한 패키지 `sp_execute_external_script` 및 `packageA`가 올바른 순서로 설치됩니다.
+    `sp_execute_external_script`을 먼저 실행하여 패키지 `packageA`를 설치하면 필요한 패키지 `packageC` 및 `packageB`가 올바른 순서로 설치됩니다.
 
     그러나 필요한 패키지를 사용할 수 없는 경우 대상 패키지 `packageA`의 설치가 실패합니다.
 

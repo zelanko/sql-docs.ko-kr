@@ -26,7 +26,7 @@ ms.locfileid: "68094739"
 
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-이 문서에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.
+이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.
 
 ## <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에
 

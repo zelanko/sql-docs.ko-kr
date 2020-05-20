@@ -38,7 +38,7 @@ ms.locfileid: "67930143"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- **를 호출할 인스턴스와 비교할 다른** geometry`STCrosses()` 인스턴스입니다.  
+ `STCrosses()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  

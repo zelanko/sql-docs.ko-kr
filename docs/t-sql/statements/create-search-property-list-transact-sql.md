@@ -96,7 +96,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>A. 빈 속성 목록을 만들고 인덱스와 연결  
- 다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `Production.Document` 데이터베이스에 있는 `AdventureWorks` 테이블의 전체 텍스트 인덱스와 연결합니다.  
+ 다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `AdventureWorks` 데이터베이스에 있는 `Production.Document` 테이블의 전체 텍스트 인덱스와 연결합니다.  
   
 > [!NOTE]  
 >  이 검색 속성 목록에 미리 정의되고 잘 알려진 검색 속성을 여러 개 추가하는 예에 대해서는 [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)을 참조하세요. 목록에 검색 속성을 추가한 후에는 데이터베이스 관리자가 다른 ALTER FULLTEXT INDEX 문을 START FULL POPULATION 절과 함께 사용해야 합니다.  

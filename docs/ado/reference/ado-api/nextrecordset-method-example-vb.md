@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - NextRecordset method [ADO], Visual Basic example
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 78480bd71a1d96f5c5447022e3c7748814003bea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918017"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762384"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 메서드 예제(VB)
 이 예제에서는 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) 메서드를 사용 하 여 세 개의 개별 **SELECT** 문으로 구성 된 복합 명령 문을 사용 하는 레코드 집합의 데이터를 봅니다.  

@@ -38,7 +38,7 @@ ms.locfileid: "68066307"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- **를 호출할 인스턴스와 비교할 다른** geometry`STRelate()` 인스턴스입니다.  
+ `STRelate()`를 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
  *intersection_pattern_matrix*  
  두 **geometry** 인스턴스 간에서 DE-9IM 패턴 행렬 디바이스에 대해 인코딩을 사용할 수 있는 값 **nchar(9)** 형식의 문자열입니다.  

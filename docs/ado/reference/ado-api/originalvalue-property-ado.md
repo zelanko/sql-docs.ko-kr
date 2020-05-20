@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - OriginalValue property [ADO]
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b46b9e76a397d81b339aef231634b3b16f717ce4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917840"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762026"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue 속성(ADO)
 변경을 수행 하기 전에 레코드에 있던 [필드](../../../ado/reference/ado-api/field-object.md) 의 값을 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  변경 전 필드의 값을 나타내는 **Variant** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  

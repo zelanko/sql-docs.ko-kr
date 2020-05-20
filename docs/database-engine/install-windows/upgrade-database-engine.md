@@ -25,7 +25,7 @@ ms.locfileid: "73531555"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
-  이 섹션의 문서에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
+  이 섹션의 문서에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 업그레이드하는 방법을 설명합니다.  
   
 1.  [데이터베이스 엔진 업그레이드 방법 선택을 선택합니다](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md), 업그레이드를 시작하기 전에 다양한 업그레이드 방법을 파악해야 합니다. 이 문서에서는 업그레이드 방법 및 각 업그레이드 방법에서 수행하는 단계를 설명합니다.  
   

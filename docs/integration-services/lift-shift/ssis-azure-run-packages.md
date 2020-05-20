@@ -64,7 +64,7 @@ Azure SQL Database에 연결하고 Transact SQL 코드를 실행할 수 있는 �
 
 ## <a name="run-a-package-with-script-or-code"></a><a name="script"></a> 스크립트 또는 코드를 사용하여 패키지 실행
 
-`Execute` 네임 스페이스에서 `Package` 개체의 `Microsoft.SQLServer.Management.IntegrationServices` 메서드를 호출하여 관리되는 API를 호출할 수 있는 모든 개발 환경에서 패키지를 실행할 수 있습니다.
+`Microsoft.SQLServer.Management.IntegrationServices` 네임 스페이스에서 `Package` 개체의 `Execute` 메서드를 호출하여 관리되는 API를 호출할 수 있는 모든 개발 환경에서 패키지를 실행할 수 있습니다.
 
 자세한 내용은 다음 예제를 참조하세요.
 

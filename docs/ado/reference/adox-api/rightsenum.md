@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RightsEnum enumeration [ADOX]
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f6db3d1fecd8a2670a81fb239cb1a100389be21a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965277"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762814"
 ---
 # <a name="rightsenum"></a>RightsEnum
 개체의 그룹 또는 사용자에 대 한 권한 또는 사용 권한을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|사용자 또는 그룹에이 유형의 새 개체를 만들 수 있는 권한이 있습니다.|  
 |**adRightDelete**|65536 (&H10000)|사용자 또는 그룹에 개체의 데이터를 삭제할 수 있는 권한이 있습니다. **테이블과**같은 개체의 경우 사용자에 게 레코드에서 데이터 값을 삭제할 수 있는 권한이 있습니다.|  

@@ -29,11 +29,11 @@ ms.locfileid: "76286550"
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   새 게시 마법사에서 게시를 만들 때 처음으로 게시에 아티클을 추가합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- 게시를 만든 후 **게시 속성 -** Publication> **대화 상자의 \<아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 게시를 만든 후 **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 아티클을 추가 및 삭제합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 아티클을 추가 및 삭제할 때 고려할 사항은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>게시를 만든 후 아티클을 추가하려면  
   
-1.  **게시 속성 -** Publication> **대화 상자의 \<아티클** 페이지에서 **선택 표시된 개체만 목록에 표시** 확인란의 선택을 취소합니다. 이렇게 하면 게시 데이터베이스에서 게시되지 않은 개체를 볼 수 있습니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 **선택 표시된 개체만 목록에 표시** 확인란의 선택을 취소합니다. 이렇게 하면 게시 데이터베이스에서 게시되지 않은 개체를 볼 수 있습니다.  
   
 2.  추가할 각 아티클 옆에 있는 확인란을 선택합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76286550"
   
 ### <a name="to-delete-an-article"></a>아티클을 삭제하려면  
   
-1.  **게시 속성 -** Publication> **대화 상자의 \<아티클** 페이지에서 삭제할 각 아티클 옆에 있는 확인란의 선택을 취소합니다.  
+1.  **게시 속성 - \<Publication>** 대화 상자의 **아티클** 페이지에서 삭제할 각 아티클 옆에 있는 확인란의 선택을 취소합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

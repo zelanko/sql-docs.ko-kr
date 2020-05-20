@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 527e8c4f2f4c7c18163346f76029be539d1581d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918192"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762504"
 ---
 # <a name="move-method-ado"></a>Move 메서드(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 현재 레코드의 위치를 이동 합니다.  
@@ -38,7 +38,7 @@ recordset.Move NumRecords, Start
  현재 레코드 위치가 이동 하는 레코드 수를 지정 하는 부호 있는 **Long** 식입니다.  
   
  *Start*  
- 선택 사항입니다. 책갈피를 반환 하는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
+ (선택 사항) 책갈피를 반환 하는 **문자열** 값 또는 **변형** 입니다. [책갈피 열거형](../../../ado/reference/ado-api/bookmarkenum.md) 값을 사용할 수도 있습니다.  
   
 ## <a name="remarks"></a>설명  
  **Move** 메서드는 모든 **레코드 집합** 개체에서 지원 됩니다.  

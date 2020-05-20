@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], Visual Basic example
 - OriginalValue property [ADO]
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6a4332853a238f316689b67ee71410c59719786
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917807"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762066"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue 및 UnderlyingValue 속성 예제 (VB)
 이 예제에서는 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 처리를 업데이트 하는 동안 레코드의 기본 데이터가 변경 된 경우 메시지를 표시 하 여 [Originalvalue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 및 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) 속성을 보여 줍니다.  

@@ -93,7 +93,7 @@ SQL Server 2노드 공유 디스크 장애 조치(failover) 클러스터 인스�
    ```bash
    sudo vi /etc/hosts
    ```
-   다음 예제에서는 `/etc/hosts` 및 `sqlfcivm1`라는 두 노드의 정보가 추가된 `sqlfcivm2`를 보여 줍니다.
+   다음 예제에서는 `sqlfcivm1` 및 `sqlfcivm2`라는 두 노드의 정보가 추가된 `/etc/hosts`를 보여 줍니다.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4

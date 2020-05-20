@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917918"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762194"
 ---
 # <a name="open-method-ado-record"></a>Open 메서드(ADO 레코드)
 기존 [record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열거나 파일이 나 디렉터리와 같이 **레코드가**나타내는 새 항목을 만듭니다.  
@@ -34,26 +34,26 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *원본*  
- 선택 사항입니다. 이 **Record** 개체, **명령**, 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 다른 **레코드** 개체, SQL SELECT 문 또는 테이블 이름이 포함 된 문자열을 나타내는 엔터티의 URL을 나타낼 수 있는 **Variant** 입니다.  
+ *소스*  
+ (선택 사항) 이 **Record** 개체, **명령**, 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 다른 **레코드** 개체, SQL SELECT 문 또는 테이블 이름이 포함 된 문자열을 나타내는 엔터티의 URL을 나타낼 수 있는 **Variant** 입니다.  
   
  *ActiveConnection*  
- 선택 사항입니다. 연결 문자열 또는 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타내는 **Variant** 입니다.  
+ (선택 사항) 연결 문자열 또는 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체를 나타내는 **Variant** 입니다.  
   
  *모드*  
- 선택 사항입니다. 결과 **레코드** 개체의 액세스 모드를 지정 하는 [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값입니다. 기본값은 **Admodeunknown**입니다.  
+ (선택 사항) 결과 **레코드** 개체의 액세스 모드를 지정 하는 [connectmodeenum](../../../ado/reference/ado-api/connectmodeenum.md) 값입니다. 기본값은 **Admodeunknown**입니다.  
   
  *CreateOptions*  
- 선택 사항입니다. 기존 파일 또는 디렉터리를 열어야 하는지 아니면 새 파일 또는 디렉터리를 만들어야 하는지를 지정 하는 [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 값입니다. 기본값은 **Adfailifnotexists**입니다. 이 값을 기본값으로 설정 하면 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 속성에서 액세스 모드를 가져옵니다. *원본* 매개 변수에 URL이 포함 되어 있지 않으면이 매개 변수는 무시 됩니다.  
+ (선택 사항) 기존 파일 또는 디렉터리를 열어야 하는지 아니면 새 파일 또는 디렉터리를 만들어야 하는지를 지정 하는 [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) 값입니다. 기본값은 **Adfailifnotexists**입니다. 이 값을 기본값으로 설정 하면 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 속성에서 액세스 모드를 가져옵니다. *원본* 매개 변수에 URL이 포함 되어 있지 않으면이 매개 변수는 무시 됩니다.  
   
- *옵션*  
- 선택 사항입니다. **레코드**열기 옵션을 지정 하는 [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) 값입니다. 기본값은 **Adopenrecordunspecified 되지 않음**입니다. 이러한 값은 결합할 수 있습니다.  
+ *Options*  
+ (선택 사항) **레코드**열기 옵션을 지정 하는 [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) 값입니다. 기본값은 **Adopenrecordunspecified 되지 않음**입니다. 이러한 값은 결합할 수 있습니다.  
   
  *이름*  
- 선택 사항입니다. 필요한 경우 *소스*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 필요한 경우 *소스*에 대 한 액세스 권한을 부여 하는 사용자 ID를 포함 하는 **문자열** 값입니다.  
   
  *암호*  
- 선택 사항입니다. 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
+ (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  
  *소스* 는 다음과 같을 수 있습니다.  

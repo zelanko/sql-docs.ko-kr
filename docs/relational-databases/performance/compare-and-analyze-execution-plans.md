@@ -29,7 +29,7 @@ ms.locfileid: "72289335"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 이 섹션에서는 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을(를) 사용하여 실행 계획을 비교하고 분석하는 방법을 설명합니다. 이 기능은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4부터 사용할 수 있습니다.  
   
-실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SET SHOWPLAN_ALL[ 또는 ](../../t-sql/statements/set-showplan-all-transact-sql.md)SET SHOWPLAN_TEXT[ 문으로 생성되는 테이블 형식이 아닌 아이콘으로 ](../../t-sql/statements/set-showplan-text-transact-sql.md) 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 매우 유용합니다. 
+실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 또는 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 문으로 생성되는 테이블 형식이 아닌 아이콘으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 매우 유용합니다. 
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 사용자가 두 실행 계획을 비교하고(예: 동일한 쿼리에 대해 인지된 올바른 계획과 잘못된 계획 간) 근본 원인 분석을 수행할 수 있는 기능이 포함되어 있습니다. 또한 해당 실행 계획의 분석을 통해 쿼리의 성능에 영향을 줄 수 있는 시나리오로 인사이트를 허용하는 단일 쿼리 계획 분석을 수행하는 기능도 포함됩니다.
 

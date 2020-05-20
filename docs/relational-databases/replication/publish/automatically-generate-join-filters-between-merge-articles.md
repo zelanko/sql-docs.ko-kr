@@ -23,7 +23,7 @@ ms.locfileid: "75321286"
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>병합 아티클 간에 자동으로 조인 필터 생성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에서 자동으로 조인 필터 집합을 생성합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 자동으로 조인 필터 집합을 생성합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 > [!NOTE]  
 >  게시에 대한 구독이 초기화된 후 **게시 속성 - \<게시&gt;** 대화 상자에서 조인 필터 집합을 자동으로 생성한 경우에는 변경 내용을 적용한 후에 새 스냅샷을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
@@ -32,7 +32,7 @@ ms.locfileid: "75321286"
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>병합 아티클 간의 조인 필터 집합을 자동으로 생성하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** Publication>**의 \<행 필터** 페이지에서 **추가**를 클릭하고 **자동으로 필터 생성**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<Publication>** 의 **행 필터** 페이지에서 **추가**를 클릭하고 **자동으로 필터 생성**을 클릭합니다.  
   
     > [!NOTE]  
     >  자동으로 필터를 생성하면 게시의 기존 행 필터나 조인 필터가 삭제됩니다. 필터 집합을 자동으로 생성한 후에 필터를 추가할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "75321286"
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>자동으로 생성된 필터를 수정하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **편집**을 클릭합니다.  
   
 2.  **필터 편집** 또는 **조인 편집** 대화 상자에서 필터를 수정합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75321286"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>자동으로 생성된 필터를 삭제하려면  
   
-1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 -** 게시> **대화 상자의 \<행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
+1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에 있는 **필터링된 테이블** 창에서 필터를 선택하고 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   

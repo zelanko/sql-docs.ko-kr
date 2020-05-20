@@ -38,7 +38,7 @@ ms.locfileid: "68066225"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- **을 호출할 인스턴스와 통합할 다른** geometry`STUnion()` 인스턴스입니다.  
+ `STUnion()`을 호출할 인스턴스와 통합할 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  

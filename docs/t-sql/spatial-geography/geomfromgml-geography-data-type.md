@@ -28,7 +28,7 @@ ms.locfileid: "67930739"
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-GML(Geography Markup Language)의 **하위 집합에 표현이 지정된 경우**geography[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 생성합니다.
+GML(Geography Markup Language)의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하위 집합에 표현이 지정된 경우 **geography** 인스턴스를 생성합니다.
   
 GML에 대한 자세한 내용은 [OGC 사양, Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)를 참조하세요.
   

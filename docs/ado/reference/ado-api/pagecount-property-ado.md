@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - PageCount property [ADO]
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ea893a019ab6d1333cecc5da5f1f66928467adfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ebb85eee8ea976f1ef078ebfe22eca195081bba
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931781"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762007"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 속성(ADO)
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가 포함 하는 데이터 페이지 수를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  **레코드 집합**의 페이지 수를 나타내는 **Long** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  

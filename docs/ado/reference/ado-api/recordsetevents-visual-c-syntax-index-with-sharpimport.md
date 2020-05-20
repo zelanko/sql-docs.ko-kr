@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - RecordsetEvents collection [ADO]
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd512cbb01ace33bad275981be4c895591cd229d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d398cfc8146850cca396ff386dd4215dbfbe2f8e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917320"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761841"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="events"></a>이벤트  

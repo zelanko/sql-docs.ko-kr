@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8d27195b00d1e1867f6bf037cd6c20500ec35e84
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931857"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762086"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
 [필드](../../../ado/reference/ado-api/field-object.md)에 인덱스를 만들지 여부를 지정 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "67931857"
   
  **Optimize** 는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 **AdUseClient**로 설정 된 경우 [Field](../../../ado/reference/ado-api/field-object.md) object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션에 추가 되는 동적 속성입니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용량  
   
 ```  
 Dim rs As New Recordset  

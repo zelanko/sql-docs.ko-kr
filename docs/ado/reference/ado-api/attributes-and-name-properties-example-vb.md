@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920584"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762931"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes 및 Name 속성 예제(VB)
 이 예에서는 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [필드](../../../ado/reference/ado-api/field-object.md)및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체에 대 한 [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) 속성의 값을 표시 합니다. [Name](../../../ado/reference/ado-api/name-property-ado.md) 속성을 사용 하 여 각 **필드** 및 **속성** 개체의 이름을 표시 합니다.  

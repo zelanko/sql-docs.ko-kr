@@ -64,7 +64,7 @@ ms.locfileid: "70846665"
      예를 들어 HOST_A 시스템의 인증서를 만들려면 다음 코드를 사용합니다.  
   
     > [!IMPORTANT]  
-    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **인증서\@ 패싯의** **ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
+    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **인증서** 패싯의 **\@ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
   
     ```  
     USE master;  

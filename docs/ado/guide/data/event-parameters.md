@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 32e3cd177089fb99009490b82941928e091ab7c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925362"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763194"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에는 이벤트 처리기를 제어 하는 상태 매개 변수가 있습니다. 전체 이벤트의 경우이 매개 변수를 사용 하 여 이벤트를 생성 한 작업의 성공 또는 실패를 나타낼 수도 있습니다. 또한 대부분의 전체 이벤트에는 발생 한 오류에 대 한 정보를 제공 하 고 작업을 수행 하는 데 사용 되는 ADO 개체를 참조 하는 하나 이상의 개체 매개 변수를 포함 하는 오류 매개 변수가 있습니다. 예를 들어 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 이벤트는 이벤트와 연결 된 **명령**, **레코드 집합**및 **연결** 개체에 대 한 개체 매개 변수를 포함 합니다. 다음 Microsoft® Visual Basic® 예제에서는 **Execute** 메서드에서 사용 하는 **명령**, **레코드 집합**및 **연결** 개체를 나타내는 pcommand, pcommand 및 pcommand 개체를 볼 수 있습니다.  
@@ -43,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>Status 매개 변수  
  이벤트 처리기 루틴이 호출 되 면 *Status* 매개 변수는 다음 값 중 하나로 설정 됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adStatusOK**|둘 다에 전달 되 고 이벤트를 완료 합니다. 이 값은 이벤트를 발생 시킨 작업이 성공적으로 완료 되었음을 의미 합니다.|  
 |**adStatusErrorsOccurred**|완료 이벤트만 전달 됩니다. 이 값은 이벤트를 발생 시킨 작업이 실패 했음을 의미 합니다. 그렇지 않으면에서 작업을 취소 합니다. 자세한 내용은 *Error* 매개 변수를 확인 하세요.|  
@@ -53,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  더 이상 이벤트를 처리 하지 않으려면 *상태* 를 **adStatusUnwantedEvent** 로 설정 하면 응용 프로그램에서 해당 이벤트에 대 한 알림을 더 이상 받지 않게 됩니다. 그러나 일부 이벤트는 여러 가지 이유로 발생할 수 있습니다. 이 경우 가능한 각 원인에 대해 **adStatusUnwantedEvent** 를 지정 해야 합니다. 예를 들어 보류 중인 **Recordchange** 이벤트의 알림 수신을 중지 하려면 *상태* 매개 변수를 **adrsnaddnew**, **adrsnaddnew**, **Adrsnaddnew**, adRsnUndoUpdate, **Adrsnaddnew**, Adrsnaddnew **delete**및 **adrsnfirstchange** 에 대해 **adStatusUnwantedEvent** 로 설정 해야 합니다. **adRsnUndoUpdate**  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|이 이벤트 처리기에서 추가 알림을 수신 하지 않도록 요청 합니다.|  
 |**adStatusCancel**|발생 하려는 작업의 취소를 요청 합니다.|  

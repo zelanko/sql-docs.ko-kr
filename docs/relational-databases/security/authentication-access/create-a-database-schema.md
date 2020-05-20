@@ -86,7 +86,7 @@ ms.locfileid: "72903752"
     CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
     ```
 
-4.  단일 문에서 추가 옵션을 수행할 수 있습니다. 다음 예제에서는 Annik가 소유하고 `Sprockets` 테이블을 포함하는 `NineProngs` 스키마를 만듭니다. 이 문에서는 Mandar에게 `SELECT` 권한을 부여하고 Prasanna에게는 `SELECT` 권한을 거부합니다.  
+4.  단일 문에서 추가 옵션을 수행할 수 있습니다. 다음 예제에서는 Annik가 소유하고 `NineProngs` 테이블을 포함하는 `Sprockets` 스키마를 만듭니다. 이 문에서는 Mandar에게 `SELECT` 권한을 부여하고 Prasanna에게는 `SELECT` 권한을 거부합니다.  
 
     ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  

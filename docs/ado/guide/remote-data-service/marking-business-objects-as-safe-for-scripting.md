@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business objects in RDS [ADO]
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6655b1bba274a9dc5079c7c996b58da6ba8ae0f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922603"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763604"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>비즈니스 개체를 스크립팅하기에 안전하다고 표시
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "67922603"
 > [!NOTE]
 >  "스크립팅에 안전"으로 표시 되거나 초기화에 안전 하 게 표시 된 비즈니스 개체는 네트워크를 통해 모든 사용자가 인스턴스화하고 초기화할 수 있습니다. 비즈니스 개체를 "스크립팅에 안전" 하 게 표시 해도 안전 하지 않습니다. 이러한 개체가 중요 한 데이터에 대해 보호 되지 않는 액세스 지점을 제공 하지 않도록 하기 위해 가장 높은 보안을 사용 하 여 비즈니스 개체가 코딩 되었는지 확인 하는 것이 매우 중요 합니다.  
   
- 비즈니스 개체를 스크립팅에 안전 하 게 안전 하 게 표시 하려면 다음 텍스트를 포함 하는 .reg 확장명을 사용 하 여 텍스트 파일을 만듭니다. 이 예제 \<에서 *myactivexguid*>은 비즈니스 개체의 16 진수 GUID 번호입니다. 다음 두 가지 숫자를 사용 하면 안전한 스크립팅 기능을 사용할 수 있습니다.  
+ 비즈니스 개체를 스크립팅에 안전 하 게 안전 하 게 표시 하려면 다음 텍스트를 포함 하는 .reg 확장명을 사용 하 여 텍스트 파일을 만듭니다. 이 예제에서 \< *myactivexguid*>은 비즈니스 개체의 16 진수 GUID 번호입니다. 다음 두 가지 숫자를 사용 하면 안전한 스크립팅 기능을 사용할 수 있습니다.  
   
 ```console
 [HKEY_CLASSES_ROOT\CLSID\<MyActiveXGUID>\Implemented   
@@ -43,6 +43,6 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  마지막 단계에서 응용 프로그램 설치 마법사는 .htm 및 .cab 파일을 만듭니다. 그런 다음이 두 파일을 대상 컴퓨터에 복사 하 고 .htm 파일을 두 번 클릭 하 여 페이지를 로드 하 고 서버를 올바르게 등록할 수 있습니다.  
   
- 비즈니스 개체는 기본적으로 Windows\System32\Occache 디렉터리에 설치 되므로 Windows\System32 디렉터리로 이동 하 고 **\\HKEY_CLASSES_ROOT \00myactivexguid***MyActiveXGUID*>\\\<**InprocServer32** 레지스트리 키를 올바른 경로와 일치 하도록 변경 합니다.
+ 비즈니스 개체는 기본적으로 Windows\System32\Occache 디렉터리에 설치 되므로 Windows\System32 디렉터리로 이동 하 고 ** \\ HKEY_CLASSES_ROOT** \< \00myactivexguid*MyActiveXGUID* > \\ **InprocServer32** 레지스트리 키를 올바른 경로와 일치 하도록 변경 합니다.
 
 

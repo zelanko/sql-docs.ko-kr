@@ -28,7 +28,7 @@ ms.locfileid: "71295266"
   
  저장 프로시저는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스가 다운될 때 실행 중이었던 패키지의 상태를 수정합니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)]카탈로그 만들기**대화 상자에서**SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행**옵션을 선택하여** 서버 인스턴스를 다시 시작할 때마다 저장 프로시저를 자동으로 실행하도록 설정할 수 있습니다.  
+ **카탈로그 만들기** 대화 상자에서 **SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행** 옵션을 선택하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 서버 인스턴스를 다시 시작할 때마다 저장 프로시저를 자동으로 실행하도록 설정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

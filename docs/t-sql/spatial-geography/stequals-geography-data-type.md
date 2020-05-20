@@ -38,7 +38,7 @@ ms.locfileid: "68042267"
   
 ## <a name="arguments"></a>인수  
  *other_geography*  
- **가 호출되는 인스턴스와 비교할 다른** geography`STEquals()` 인스턴스입니다.  
+ `STEquals()`가 호출되는 인스턴스와 비교할 다른 **geography** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **bit**  

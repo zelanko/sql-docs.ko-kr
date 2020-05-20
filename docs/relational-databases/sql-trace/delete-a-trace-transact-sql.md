@@ -29,9 +29,9 @@ ms.locfileid: "71952707"
   
 ### <a name="to-delete-a-trace"></a>추적을 삭제하려면  
   
-1.  **을 지정하고** sp_trace_setstatus`@status = 0`를 실행하여 추적을 중지합니다.  
+1.  `@status = 0`을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
   
-2.  **를 지정하고** sp_trace_setstatus`@status = 2`를 실행하여 추적을 닫고 서버에서 추적 정보를 삭제합니다.  
+2.  `@status = 2`를 지정하고 **sp_trace_setstatus**를 실행하여 추적을 닫고 서버에서 추적 정보를 삭제합니다.  
   
 > [!NOTE]  
 >  추적은 먼저 중지한 후 닫아야 합니다.  

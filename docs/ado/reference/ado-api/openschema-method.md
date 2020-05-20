@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - OpenSchema method [ADO]
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 716eec332690d1a6e9df1f16d67d82afc1a30985
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931869"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762104"
 ---
 # <a name="openschema-method"></a>OpenSchema 메서드
 공급자에서 데이터베이스 스키마 정보를 가져옵니다.  
@@ -41,7 +41,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  실행할 스키마 쿼리의 유형을 나타내는 [Schemaenum](../../../ado/reference/ado-api/schemaenum.md) 값입니다.  
   
  *조건*  
- 선택 사항입니다. [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)에 나열 된 각 *QueryType* 옵션에 대 한 쿼리 제약 조건의 배열입니다.  
+ (선택 사항) [Schemaenum](../../../ado/reference/ado-api/schemaenum.md)에 나열 된 각 *QueryType* 옵션에 대 한 쿼리 제약 조건의 배열입니다.  
   
  *SchemaID*  
  OLE DB 사양에서 정의 하지 않은 공급자 스키마 쿼리의 GUID입니다. 이 매개 변수는 *QueryType* 이 **adschemaproviderspecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  

@@ -150,7 +150,7 @@ Ubuntu 및 SLES는 **firewalld** 서비스를 사용하지 않으므로 **iptabl
 
 ### <a name="port-routing-in-rhel"></a>RHEL의 포트 라우팅
 
-Red Hat Enterprise Linux와 같이 **firewalld** 서비스를 사용하는 배포에서는 서버에서 포트 열기 및 내부 포트 전달에 동일한 서비스를 사용할 수 있습니다. 예를 들어 Red Hat Enterprise Linux에서는 **firewalld** 서비스를 사용하여(**또는 비슷한 옵션과 함께**firewall-cmd`-add-forward-port` 구성 유틸리티를 통해) iptables를 사용하지 않고 영구적 포트 전달 규칙을 만들고 관리해야 합니다.
+Red Hat Enterprise Linux와 같이 **firewalld** 서비스를 사용하는 배포에서는 서버에서 포트 열기 및 내부 포트 전달에 동일한 서비스를 사용할 수 있습니다. 예를 들어 Red Hat Enterprise Linux에서는 **firewalld** 서비스를 사용하여(`-add-forward-port` 또는 비슷한 옵션과 함께 **firewall-cmd** 구성 유틸리티를 통해) iptables를 사용하지 않고 영구적 포트 전달 규칙을 만들고 관리해야 합니다.
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500

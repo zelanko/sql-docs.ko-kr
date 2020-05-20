@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataMember property
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 87d525907edde2e3dc99b78eb827c571c604d8b7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919227"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763484"
 ---
 # <a name="datamember-property"></a>DataMember 속성
 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) 속성이 참조 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 에서 검색 되는 데이터 멤버의 이름을 나타냅니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "67919227"
   
  **DataMember** 속성은 **DataSource** 속성으로 지정 되는 개체를 **레코드 집합** 개체로 나타낼지 여부를 결정 합니다. 이 속성을 설정 하려면 먼저 **레코드 집합** 개체를 닫아야 합니다. **Datasource 속성이 datasource** 속성 **앞에 설정** 되어 있지 않거나 **datasource** 속성에 지정 된 개체에서 **datamember** 이름이 인식 되지 않는 경우 오류가 생성 됩니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용량  
   
 ```  
 Dim rs as New ADODB.Recordset  

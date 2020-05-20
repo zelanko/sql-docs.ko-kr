@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Procedure object [ADOX]
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a56088e47a9f794f1862ef87bf142a8d3ab12c4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965482"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763694"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
 저장 프로시저를 나타냅니다. ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 함께 사용 하는 경우 **프로시저** 개체를 사용 하 여 저장 프로시저를 추가, 삭제 또는 수정할 수 있습니다.  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f6eaf12308db09c81b426b33f0002cd4664f62b8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932031"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762394"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 지우고 일련의 명령으로 이동 하 여 다음 **레코드 집합** 을 반환 합니다.  
@@ -45,7 +45,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 >  이 매개 변수는 작업의 영향을 받는 레코드 수를 반환 합니다. 레코드 **집합**을 생성 하는 데 사용 되는 select 문에서 레코드 수를 반환 하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- **NextRecordset** 메서드를 사용 하 여 여러 결과를 반환 하는 복합 명령 문이나 저장 프로시저에서 다음 명령의 결과를 반환 합니다. 복합 명령 문 (예: "table1에서 선택 \* ")을 기반으로 하 여 **레코드 집합** 개체를 열 경우 SELECT \* FROM table2 ") [명령](../../../ado/reference/ado-api/command-object-ado.md) 에 대해 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 사용 하거나 **레코드 집합**의 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 사용 하 여 ADO는 첫 번째 명령만 실행 하 고 결과를 *레코드 집합*으로 반환 합니다. 문의 후속 명령에 대 한 결과에 액세스 하려면 **NextRecordset** 메서드를 호출 합니다.  
+ **NextRecordset** 메서드를 사용 하 여 여러 결과를 반환 하는 복합 명령 문이나 저장 프로시저에서 다음 명령의 결과를 반환 합니다. 복합 명령 문 (예: "table1에서 선택")을 기반으로 하 여 **레코드 집합** 개체를 열 경우 \* SELECT \* FROM table2 ") [명령](../../../ado/reference/ado-api/command-object-ado.md) 에 대해 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 사용 하거나 **레코드 집합**의 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를 사용 하 여 ADO는 첫 번째 명령만 실행 하 고 결과를 *레코드 집합*으로 반환 합니다. 문의 후속 명령에 대 한 결과에 액세스 하려면 **NextRecordset** 메서드를 호출 합니다.  
   
  추가 결과가 있고 복합 문을 포함 하는 **레코드 집합이** 프로세스 경계를 넘어 연결 되지 않거나 마샬링되는 경우 **NextRecordset** 메서드는 계속 해 서 **레코드 집합** 개체를 반환 합니다. 행 반환 명령이 성공적으로 실행 되지만 레코드를 반환 하지 않는 경우 반환 되는 **레코드 집합** 개체는 열려 있지만 비어 있습니다. [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 및 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성이 모두 **True**인지 확인 하 여이 사례를 테스트 합니다. 행을 반환 하지 않는 명령이 성공적으로 실행 되 면 반환 되는 **레코드 집합** 개체가 닫힙니다 .이는 **레코드 집합**에서 [State](../../../ado/reference/ado-api/state-property-ado.md) 속성을 테스트 하 여 확인할 수 있습니다. 결과가 더 이상 없는 경우에는 *레코드* 집합을 *Nothing*으로 설정 합니다.  
   

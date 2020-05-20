@@ -87,7 +87,7 @@ ms.locfileid: "68041096"
   
 -   배포 에이전트에서 변경 내용 적용을 계속하도록 하여 노드를 다시 동기화합니다.  
   
-    1.  [ 매개 변수에 'p2p_continue_onconflict', ](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 매개 변수에 @propertytrue**를 지정하여** sp_changepublication@value을 실행합니다.  
+    1.  @property 매개 변수에 'p2p_continue_onconflict', @value 매개 변수에 **true**를 지정하여 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
     2.  배포 에이전트를 시작합니다.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "68041096"
         > [!NOTE]  
         >  이 단계를 수행한 이후에도 데이터에 일관성이 없는 경우에는 우선 순위가 가장 높은 노드의 행을 수동으로 업데이트한 후 이 노드에서 변경 내용이 전파되도록 해야 합니다. 토폴로지에 더 이상 충돌하는 변경 내용이 없으면 모든 노드가 일관적인 상태가 됩니다.  
   
-    5.  [ 매개 변수에 'p2p_continue_onconflict', ](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 매개 변수에 @propertyfalse**를 지정하여** sp_changepublication@value을 실행합니다.  
+    5.  @property 매개 변수에 'p2p_continue_onconflict', @value 매개 변수에 **false**를 지정하여 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  

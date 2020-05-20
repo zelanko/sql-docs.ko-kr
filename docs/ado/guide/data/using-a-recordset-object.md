@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connections [ADO]
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dda89464598ddc4ecfee0078b36aadd01b4486f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 183c8b3379d2ac90fa089f2f2834b46473961abf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923639"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763084"
 ---
 # <a name="using-a-recordset-object"></a>레코드 집합 개체 사용
 또는 **레코드 집합** 을 사용 하 여 암시적으로 연결을 설정 하 고 단일 작업으로 해당 연결을 통해 명령을 실행할 수 있습니다. 예를 들어 Visual Basic에서 다음을 수행 합니다.  

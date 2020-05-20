@@ -13,14 +13,14 @@ helpviewer_keywords:
 - GetChunk method [ADO], VC++ example
 - AppendChunk method [ADO], VC++ example
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 991c295f5437d16ed10aafeacf184722046941a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3f74c65a2a732c6875cf71a69420616f0b619f1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76922559"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762954"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 및 GetChunk 메서드 예제(VC++)
 이 예제에서는 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 메서드를 사용 하 여 다른 레코드의 데이터로 이미지 필드를 채웁니다.  

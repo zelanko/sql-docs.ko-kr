@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965196"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762774"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder 속성 예제(VB)
 이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) 컬렉션에 추가 된 [열의](../../../ado/reference/adox-api/column-object-adox.md) [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) 속성을 보여 줍니다. 이 코드는 **Employees** 테이블의 Country 열에 오름차순 인덱스를 추가한 다음 레코드를 표시 합니다. 그런 다음 코드는 **Employees** 테이블의 Country 열에 내림차순 인덱스를 추가 하 고 레코드를 다시 표시 합니다. 오름차순과 내림차순 인덱스의 차이가 표시 됩니다.  

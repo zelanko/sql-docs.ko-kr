@@ -41,13 +41,13 @@ ms.locfileid: "71286892"
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스에 정의되며 태스크 대신 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서 발생시키는 다른 이벤트 집합도 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서는 유효성 검사 및 실행 전후에 이벤트를 발생시키는 반면 태스크에서는 실행 및 유효성 검사 도중에 이벤트를 발생시킵니다.  
   
 ## <a name="creating-custom-events"></a>사용자 지정 이벤트 만들기  
- 사용자 지정 태스크 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 메서드의 재정의된 구현에서 새 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>를 만들어 새 사용자 지정 이벤트를 정의할 수 있습니다. 생성된 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>는 **메서드를 사용하여**EventInfos<xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 컬렉션에 추가됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드의 서명은 다음과 같습니다.  
+ 사용자 지정 태스크 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> 메서드의 재정의된 구현에서 새 <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>를 만들어 새 사용자 지정 이벤트를 정의할 수 있습니다. 생성된 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo>는 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드를 사용하여 **EventInfos** 컬렉션에 추가됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> 메서드의 서명은 다음과 같습니다.  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  다음 코드 샘플에서는 두 개의 사용자 지정 이벤트를 만들고 해당 속성을 설정하는 사용자 지정 태스크의 **InitializeTask** 메서드를 보여 줍니다. 그런 다음 새 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가합니다.  
   
- 첫 번째 사용자 지정 이벤트에는 "*OnBeforeIncrement*"라는 **eventName**과 "*Fires after the initial value is updated.* "라는 **description**이 있습니다. 다음 매개 변수인 **true** 값은 이 이벤트에서 이벤트를 처리하기 위해 이벤트 처리기 컨테이너를 만들 수 있도록 허용해야 함을 나타냅니다. 이벤트 처리기는 패키지, 시퀀스, ForLoop, ForEachLoop 등의 다른 컨테이너와 같이 태스크에 패키지의 구조와 서비스를 제공하는 컨테이너입니다. *allowEventHandlers* 매개 변수가 **true**이면 해당 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체가 생성됩니다. 그러면 해당 이벤트에 대해 정의된 모든 매개 변수를 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>의 변수 컬렉션에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 사용할 수 있습니다.  
+ 첫 번째 사용자 지정 이벤트에는 "**OnBeforeIncrement**"라는 *eventName*과 "**Fires after the initial value is updated.**"라는 *description*이 있습니다. 다음 매개 변수인 **true** 값은 이 이벤트에서 이벤트를 처리하기 위해 이벤트 처리기 컨테이너를 만들 수 있도록 허용해야 함을 나타냅니다. 이벤트 처리기는 패키지, 시퀀스, ForLoop, ForEachLoop 등의 다른 컨테이너와 같이 태스크에 패키지의 구조와 서비스를 제공하는 컨테이너입니다. *allowEventHandlers* 매개 변수가 **true**이면 해당 이벤트에 대한 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체가 생성됩니다. 그러면 해당 이벤트에 대해 정의된 모든 매개 변수를 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>의 변수 컬렉션에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 사용할 수 있습니다.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -121,7 +121,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>샘플  
- 다음 예에서는 **InitializeTask** 메서드에서 사용자 지정 이벤트를 정의하고 이 사용자 지정 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가한 다음 **메서드를 호출하여**Execute<xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 메서드 실행 중 사용자 지정 이벤트를 발생시키는 태스크를 보여 줍니다.  
+ 다음 예에서는 **InitializeTask** 메서드에서 사용자 지정 이벤트를 정의하고 이 사용자 지정 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가한 다음 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> 메서드를 호출하여 **Execute** 메서드 실행 중 사용자 지정 이벤트를 발생시키는 태스크를 보여 줍니다.  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  

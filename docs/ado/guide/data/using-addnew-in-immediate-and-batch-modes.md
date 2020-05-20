@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, adding data
 - editing data [ADO], AddNew method
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 93fc9cb388440a8efd9099d6ae82b110cb60b2d0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923621"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763074"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>직접 실행 및 일괄 처리 모드에서 AddNew 사용
 **AddNew** 메서드의 동작은 **레코드 집합** 개체의 업데이트 모드와 *fieldlist)* 및 *Values* 인수를 전달 하는지 여부에 따라 달라 집니다.  

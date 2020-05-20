@@ -75,14 +75,14 @@ ms.locfileid: "71296415"
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에서 기존 변수를 사용하려는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에 있는 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에서 해당 변수를 추가할 수 있습니다.  
   
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 또한 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표( **...** ) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 변수를 선택하면 여러 개의 변수를 선택할 수 있습니다.  
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 또한 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드 옆에 있는 줄임표(**...**) 단추를 클릭한 다음, **변수 선택** 대화 상자에서 변수를 선택하면 여러 개의 변수를 선택할 수 있습니다.  
   
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.  
   
  **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)를 참조하세요.  
   
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>코드 디자인 모드에서 동기 변환 구성 요소 스크립팅  
- 구성 요소에 대한 메타데이터를 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]스크립트[!INCLUDE[msCoName](../../includes/msconame-md.md)] 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 **Visual Basic 또는** Visual C# 중에서 선택한 언어에 따라 달라집니다.  
+ 구성 요소에 대한 메타데이터를 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.  
   
  스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 중요한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71296415"
   
  VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소에서 읽기 전용 **BufferWrapper** 및 **ComponentWrapper** 프로젝트 항목도 생성했음을 확인할 수 있습니다. **ScriptMain** 클래스는 **ComponentWrapper** 프로젝트 항목의 **UserComponent** 클래스에서 상속됩니다.  
   
- 런타임에 데이터 흐름 엔진에서 **부모 클래스의** 메서드를 재정의하는 **UserComponent** 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>ProcessInput<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 호출합니다. 그러면 **ProcessInput** 메서드에서 입력 버퍼의 행을 반복하고 각 행에 대해 **ProcessInputRow** 메서드를 한 번씩 호출합니다.  
+ 런타임에 데이터 흐름 엔진에서 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 메서드를 재정의하는 **UserComponent** 클래스의 **ProcessInput** 메서드를 호출합니다. 그러면 **ProcessInput** 메서드에서 입력 버퍼의 행을 반복하고 각 행에 대해 **ProcessInputRow** 메서드를 한 번씩 호출합니다.  
   
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성  
  동기 출력을 사용하는 변환 구성 요소는 모든 데이터 흐름 구성 요소 중에서 작성하기가 가장 간단합니다. 예를 들어 이 항목의 뒷부분에 있는 단일 출력 예는 다음과 같은 사용자 지정 코드로 구성되어 있습니다.  
@@ -157,7 +157,7 @@ else
   
 5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-6.  **대상이나**스크립트 구성 요소를 사용하여 대상 만들기**에서 보여 준 예제 대상 구성 요소와 같이** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [City](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 출력을 대상 구성 요소에 연결합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**데이터베이스에서 다음** 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 출력을 대상 구성 요소에 연결합니다. **AdventureWorks** 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -211,7 +211,7 @@ public class ScriptMain:
   
 6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.  
   
-7.  **대상, 플랫 파일 대상 또는**스크립트 구성 요소를 사용하여 대상 만들기**에서 보여 준 예제 대상 구성 요소와 같이** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [City](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 열을 필요로 하는 두 개의 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 각 출력을 대상 구성 요소 중 하나에 연결합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]AdventureWorks**데이터베이스에서 다음과 같이 고유한 테이블 이름으로** 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상, 플랫 파일 대상 또는 [스크립트 구성 요소를 사용하여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 두 개의 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 각 출력을 대상 구성 요소 중 하나에 연결합니다. **AdventureWorks** 데이터베이스에서 다음과 같이 고유한 테이블 이름으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.  
   
     ```sql
     CREATE TABLE [Person].[Address2](  

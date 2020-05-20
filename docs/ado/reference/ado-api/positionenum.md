@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - PositionEnum enumeration
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 57a440a97dcdf1c0fddcff8017e0c2d04967b92d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763344"
 ---
 # <a name="positionenum"></a>PositionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)내에서 레코드 포인터의 현재 위치를 지정 합니다.  

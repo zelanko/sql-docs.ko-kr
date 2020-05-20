@@ -30,13 +30,13 @@ ms.locfileid: "74165760"
   
 ## <a name="open-and-view-a-deadlock-file"></a>교착 상태 파일 열기 및 보기  
   
-1. **의** 파일[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   
 ## <a name="print-a-deadlock-file"></a>교착 상태 파일 인쇄  
   
-1. **의** 파일[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
+1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **파일** 메뉴에서 **열기**를 가리킨 다음 **파일**을 선택합니다.  
   
 2. **파일 열기** 대화 상자의 **파일 유형** 확인란에서 .xdl 파일 유형을 선택합니다. 교착 상태 파일만 필터링한 목록이 남아 있을 것입니다.  
   

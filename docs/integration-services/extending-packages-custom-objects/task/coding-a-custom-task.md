@@ -56,12 +56,12 @@ ms.locfileid: "71297124"
   
  유효성 검사를 수행할 대상 항목을 결정할 때는 성능을 고려해야 합니다. 예를 들어 태스크에 대한 입력이 대역폭이 낮거나 트래픽이 많은 네트워크 연결을 통해 이루어지는 경우 유효성 검사를 통해 리소스의 사용 가능성을 확인하는 데는 몇 초 정도만 소요되지만 다른 유효성 검사 작업에는 사용량이 많은 서버로의 왕복이 필요하므로 유효성 검사 루틴의 속도가 느릴 수 있습니다. 유효성을 검사할 수 있는 속성 및 설정은 여러 가지가 있지만 모든 속성 및 설정에 대해 유효성을 검사해야 하는 것은 아닙니다.  
   
--   태스크가 실행되기 전에 **에서도** Validate<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 메서드의 코드를 호출하고, 유효성 검사가 실패하면 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서 실행을 취소합니다.  
+-   태스크가 실행되기 전에 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서도 **Validate** 메서드의 코드를 호출하고, 유효성 검사가 실패하면 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서 실행을 취소합니다.  
   
 #### <a name="user-interface-considerations-during-validation"></a>유효성 검사 중 사용자 인터페이스 고려 사항  
- <xref:Microsoft.SqlServer.Dts.Runtime.Task>에는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>Validate**메서드에 대한 매개 변수로** 인터페이스가 포함됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스에는 태스크에서 런타임 엔진에 이벤트를 발생시키기 위해 호출하는 메서드가 포함되어 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드는 유효성 검사 중 경고 또는 오류 조건이 발생할 때 호출됩니다. 두 경고 메서드에는 동일한 매개 변수가 필요하며 이러한 매개 변수에는 오류 코드, 원본 구성 요소, 설명, 도움말 파일, 및 도움말 컨텍스트 정보가 포함됩니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 정보를 사용하여 디자인 화면에 시각적 표시를 제공합니다. 디자이너에서 제공하는 시각적 표시로는 디자이너 화면에서 태스크 옆에 나타나는 느낌표 아이콘이 있습니다. 이 시각적 표시는 실행을 계속하기 전에 태스크에 추가 구성이 필요함을 나타냅니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.Task>에는 **Validate** 메서드에 대한 매개 변수로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스가 포함됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스에는 태스크에서 런타임 엔진에 이벤트를 발생시키기 위해 호출하는 메서드가 포함되어 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드는 유효성 검사 중 경고 또는 오류 조건이 발생할 때 호출됩니다. 두 경고 메서드에는 동일한 매개 변수가 필요하며 이러한 매개 변수에는 오류 코드, 원본 구성 요소, 설명, 도움말 파일, 및 도움말 컨텍스트 정보가 포함됩니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 정보를 사용하여 디자인 화면에 시각적 표시를 제공합니다. 디자이너에서 제공하는 시각적 표시로는 디자이너 화면에서 태스크 옆에 나타나는 느낌표 아이콘이 있습니다. 이 시각적 표시는 실행을 계속하기 전에 태스크에 추가 구성이 필요함을 나타냅니다.  
   
- 느낌표 아이콘에는 오류 메시지가 포함된 도구 설명도 표시됩니다. 오류 메시지는 태스크에서 이벤트의 설명 매개 변수로 제공됩니다. 오류 메시지는 **의** 태스크 목록[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 창에도 표시되어 사용자에게 모든 유효성 검사 오류를 볼 수 있는 중앙 위치를 제공합니다.  
+ 느낌표 아이콘에는 오류 메시지가 포함된 도구 설명도 표시됩니다. 오류 메시지는 태스크에서 이벤트의 설명 매개 변수로 제공됩니다. 오류 메시지는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **태스크 목록** 창에도 표시되어 사용자에게 모든 유효성 검사 오류를 볼 수 있는 중앙 위치를 제공합니다.  
   
 #### <a name="validation-example"></a>유효성 검사 예  
  다음 코드 예제에서는 **UserName** 속성이 있는 태스크를 보여 줍니다. 이 속성은 유효성 검사를 성공적으로 수행하기 위한 필수 항목으로 지정되었습니다. 이 속성이 설정되어 있지 않으면 태스크에서는 오류를 게시하고 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 열거형의 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>를 반환합니다. **Validate** 메서드는 try/catch 블록에 래핑되며, 예외가 발생하면 유효성 검사가 실패합니다.  
@@ -183,7 +183,7 @@ End Class
  <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서는 실행 결과에 대한 추가 정보를 제공하는 데 사용할 수 있는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 속성도 제공합니다. 예를 들어 태스크에서 해당 **Execute** 메서드의 일부로 테이블 행을 삭제하는 경우 삭제된 행 수를 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 속성의 값으로 반환할 수 있습니다. 또한 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>에서는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecValueVariable%2A> 속성을 제공합니다. 이 속성을 통해 사용자는 태스크에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A>를 태스크에 표시되는 변수에 매핑할 수 있습니다. 그런 다음 지정한 변수를 사용하여 태스크 간에 선행 제약 조건을 설정할 수 있습니다.  
   
 ### <a name="execution-example"></a>실행 예  
- 다음 코드 예제에서는 **Execute** 메서드의 구현과 재정의된 **ExecutionValue** 속성을 보여 줍니다. 태스크는 해당 태스크의 **fileName** 속성에 지정된 파일을 삭제하고, 파일이 없거나 **fileName** 속성이 빈 문자열인 경우 경고를 게시합니다. 또한 **속성에서**Boolean<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 값을 반환하여 파일이 삭제되었는지 여부를 나타냅니다.  
+ 다음 코드 예제에서는 **Execute** 메서드의 구현과 재정의된 **ExecutionValue** 속성을 보여 줍니다. 태스크는 해당 태스크의 **fileName** 속성에 지정된 파일을 삭제하고, 파일이 없거나 **fileName** 속성이 빈 문자열인 경우 경고를 게시합니다. 또한 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost.ExecutionValue%2A> 속성에서 **Boolean** 값을 반환하여 파일이 삭제되었는지 여부를 나타냅니다.  
   
 ```csharp  
 using System;  

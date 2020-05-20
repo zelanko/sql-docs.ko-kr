@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f646bd95e3ae9cb809f04c2ef66c47386fbde6c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922419"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762984"
 ---
 # <a name="rds-tutorial"></a>RDS 자습서
 이 자습서에서는 RDS 프로그래밍 모델을 사용 하 여 데이터 원본을 쿼리하고 업데이트 하는 방법을 보여 줍니다. 먼저이 작업을 수행 하는 데 필요한 단계를 설명 합니다. 그런 다음 자습서는 Microsoft® Visual Basic Scripting Edition (ADO/WFC 클래스의 ADO)에서 반복 됩니다.  

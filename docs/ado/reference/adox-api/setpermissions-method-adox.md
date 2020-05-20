@@ -16,14 +16,14 @@ f1_keywords:
 helpviewer_keywords:
 - SetPermissions method [ADOX]
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 94cc5b07c97bd5c8d7c7ae6c30c179e2555b95d5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762784"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드(ADOX)
 개체의 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 사용 권한을 지정 합니다.  
@@ -42,17 +42,17 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectType*  
  사용 권한을 가져올 개체의 형식을 지정 하는 **Long** 값으로, [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) 상수 중 하나일 수 있습니다.  
   
- *동작*  
+ *작업*  
  사용 권한을 설정할 때 수행할 동작의 유형을 지정 하는 [Actionenum](../../../ado/reference/adox-api/actionenum.md) 상수 중 하나일 수 있는 **Long** 값입니다.  
   
  *권한*  
  설정할 권한을 나타내는 하나 이상의 [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) 상수에 대 한 비트 마스크 일 수 있는 **Long** 값입니다.  
   
  *계승*  
- 선택 사항입니다. 개체에서 이러한 사용 권한을 상속 하는 방법을 지정 하는 **Long** 값 ( [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) 상수 중 하나일 수 있음) 기본값은 **adInheritNone**입니다.  
+ (선택 사항) 개체에서 이러한 사용 권한을 상속 하는 방법을 지정 하는 **Long** 값 ( [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) 상수 중 하나일 수 있음) 기본값은 **adInheritNone**입니다.  
   
  *ObjectTypeId*  
- 선택 사항입니다. OLE DB 사양에서 정의 되지 않은 공급자 개체 유형의 GUID를 지정 하는 **변형** 값입니다. 이 매개 변수는 *ObjectType* 이 **adPermObjProviderSpecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  
+ (선택 사항) OLE DB 사양에서 정의 되지 않은 공급자 개체 유형의 GUID를 지정 하는 **변형** 값입니다. 이 매개 변수는 *ObjectType* 이 **adPermObjProviderSpecific**로 설정 된 경우에 필요 합니다. 그렇지 않은 경우에는 사용 되지 않습니다.  
   
 ## <a name="remarks"></a>설명  
  공급자가 그룹 또는 사용자에 대 한 액세스 권한을 설정 하는 것을 지원 하지 않으면 오류가 발생 합니다.  

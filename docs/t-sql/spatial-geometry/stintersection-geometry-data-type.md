@@ -38,7 +38,7 @@ ms.locfileid: "67950130"
   
 ## <a name="arguments"></a>인수  
  *other_geometry*  
- 교차점을 확인하기 위해 **을 호출할 인스턴스와 비교할 다른** geometry`STIntersection()` 인스턴스입니다.  
+ 교차점을 확인하기 위해 `STIntersection()`을 호출할 인스턴스와 비교할 다른 **geometry** 인스턴스입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geometry**  

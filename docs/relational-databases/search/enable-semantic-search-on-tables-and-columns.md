@@ -158,7 +158,7 @@ GO
 **ALTER FULLTEXT INDEX** 문을 사용하여 기존 전체 텍스트 인덱스를 변경할 때 의미 체계 인덱싱을 삭제할 수 있습니다. 또한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다양한 대화 상자를 사용하여 의미 체계 인덱싱을 삭제할 수 있습니다.  
   
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Transact-SQL을 사용하여 의미 체계 인덱스 삭제  
-열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN** **column**name _\_DROP STATISTICAL_SEMANTICS_ 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
+열에서 의미 체계 인덱싱만 삭제하려면 **ALTER COLUMN**_column\_name_**DROP STATISTICAL_SEMANTICS** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다. 단일 **ALTER** 문으로 여러 열의 인덱싱을 삭제할 수도 있습니다.  
   
 ```sql  
 USE database_name  
@@ -170,7 +170,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN** **column**name _\_DROP_ 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
+열에서 전체 텍스트 인덱스와 의미 체계 인덱싱을 모두 삭제하려면 **ALTER COLUMN**_column\_name_**DROP** 옵션을 사용하여 **ALTER FULLTEXT INDEX** 문을 호출합니다.  
   
 ```sql  
 USE database_name  
@@ -194,7 +194,7 @@ GO
 ## <a name="check-whether-semantic-search-is-enabled-on-database-objects"></a>데이터베이스 개체에 의미 체계 검색이 사용하도록 설정되어 있는지 확인  
 ### <a name="is-semantic-search-enabled-for-a-database"></a>데이터베이스에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인
   
- **DATABASEPROPERTYEX&#40;Transact-SQL&#41;** 메타데이터 함수의 [IsFullTextEnabled](../../t-sql/functions/databasepropertyex-transact-sql.md) 속성을 쿼리합니다.  
+ [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 메타데이터 함수의 **IsFullTextEnabled** 속성을 쿼리합니다.  
   
  반환 값이 1이면 데이터베이스에 대해 전체 텍스트 검색과 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -205,7 +205,7 @@ GO
   
 ### <a name="is-semantic-search-enabled-for-a-table"></a>테이블에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인  
  
- **OBJECTPROPERTYEX&#40;Transact-SQL&#41;** 메타데이터 함수의 [TableFullTextSemanticExtraction](../../t-sql/functions/objectpropertyex-transact-sql.md) 속성을 쿼리합니다.  
+ [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md) 메타데이터 함수의 **TableFullTextSemanticExtraction** 속성을 쿼리합니다.  
   
  반환 값이 1이면 테이블에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   
@@ -218,7 +218,7 @@ GO
    
  특정 열에 대해 의미 체계 검색이 사용하도록 설정되어 있는지 확인하려면  
   
--   **COLUMNPROPERTY&#40;Transact-SQL&#41;** 메타데이터 함수의 [StatisticalSemantics](../../t-sql/functions/columnproperty-transact-sql.md) 속성을 쿼리합니다.  
+-   [COLUMNPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md) 메타데이터 함수의 **StatisticalSemantics** 속성을 쿼리합니다.  
   
      반환 값이 1이면 열에 대해 의미 체계 검색이 사용하도록 설정되어 있음을 나타내고, 반환 값이 0이면 그렇지 않음을 나타냅니다.  
   

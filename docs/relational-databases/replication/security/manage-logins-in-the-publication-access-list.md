@@ -47,11 +47,11 @@ ms.locfileid: "76287313"
 -   PAL에 로그인을 추가하려면 먼저 게시 데이터베이스의 데이터베이스 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인을 연결해야 합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **게시 속성 - \<게시>** 대화 상자의 **게시 액세스 목록** 페이지에서 PAL(게시 액세스 목록)을 사용하여 로그인을 관리할 수 있습니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 #### <a name="to-manage-logins-in-the-pal"></a>PAL에서 로그인을 관리하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **게시 액세스 목록** 페이지에서 **추가**, **제거** 및 **모두 제거** 단추를 사용하여 PAL에서 로그인과 그룹을 추가 및 제거합니다. PAL에서 **distributor_admin** 은 제거하지 마세요. 이 계정은 복제에 사용됩니다.  
   
     > [!NOTE]  
     >  원격 배포자를 사용할 경우 PAL의 계정을 게시자와 배포자에서 모두 사용할 수 있어야 합니다. 이 계정은 두 서버 모두에 정의된 도메인 계정이나 로컬 계정이어야 합니다. 또한 두 로그인과 연결된 암호는 같아야 합니다.  

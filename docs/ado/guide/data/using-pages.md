@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO]
 - PageCount property [ADO]
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6542cb23deef9f10979e3bdb90c0820d84c0f150
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923519"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763034"
 ---
 # <a name="using-pages"></a>페이지 사용
 **PageCount** 속성을 사용 하 여 **레코드 집합** 개체에 있는 데이터 페이지 수를 확인 합니다. *페이지* 는 크기가 **PageSize** 속성 설정과 같은 레코드의 그룹입니다. **PageSize** 값 보다 레코드 수가 적기 때문에 마지막 페이지가 불완전 한 경우에도 **PageCount** 값에서 추가 페이지로 계산 됩니다. **레코드 집합** 개체가이 속성을 지원 하지 않는 경우 **PageCount** 은 **PageCount** 을 확인할 수 없음을 나타내는-1입니다.  

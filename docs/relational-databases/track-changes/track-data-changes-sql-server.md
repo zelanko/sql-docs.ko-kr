@@ -65,7 +65,7 @@ ms.locfileid: "74095424"
 ##  <a name="change-data-capture"></a><a name="Capture"></a> 변경 데이터 캡처  
  변경 데이터 캡처는 DML 변경이 적용되었다는 사실과 변경된 실제 데이터 모두를 캡처하여 사용자 테이블에 대한 기록 변경 정보를 제공합니다. 트랜잭션 로그를 읽고 시스템에 대한 영향이 적은 비동기 프로세스를 사용하여 변경을 캡처합니다.  
   
- 다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [에서 제공하는 ](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)변경 데이터 캡처[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
+ 다음 그림과 같이 사용자 테이블에 적용된 변경은 해당 변경 테이블에서 캡처됩니다. 이러한 변경 테이블은 시간에 따라 변경을 기록하여 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 [변경 데이터 캡처](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md) 함수를 사용하면 변경 데이터를 쉽고 체계적으로 사용할 수 있습니다.  
   
  ![변경 데이터 캡처의 개념 설명](../../relational-databases/track-changes/media/cdcart1.gif "변경 데이터 캡처의 개념 설명")  
   

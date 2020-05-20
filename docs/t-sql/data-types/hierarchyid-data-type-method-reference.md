@@ -60,7 +60,7 @@ ms.locfileid: "68077907"
 ## <a name="data-type-conversion"></a>데이터 형식 변환
 **hierarchyid** 데이터 형식은 다음과 같이 다른 데이터 형식으로 변환할 수 있습니다.
 -   [ToString()](../../t-sql/data-types/tostring-database-engine.md) 메서드를 사용하여 **hierarchyid** 값을 **nvarchar(4000)** 데이터 형식의 논리 표현으로 변환할 수 있습니다.  
--   [hierarchyid](../../t-sql/data-types/read-database-engine.md)를 [varbinary](../../t-sql/data-types/write-database-engine.md)로 변환하려면 **Read ()** 및 **Write ()** 를 사용합니다.  
+-   **hierarchyid**를 **varbinary**로 변환하려면 [Read ()](../../t-sql/data-types/read-database-engine.md) 및 [Write ()](../../t-sql/data-types/write-database-engine.md)를 사용합니다.  
 -   SOAP를 통해 **hierarchyid** 매개 변수를 전송하려면 먼저 문자열로 캐스팅해야 합니다.  
   
 ## <a name="upgrading-databases"></a>데이터베이스 업그레이드
@@ -76,7 +76,7 @@ ms.locfileid: "68077907"
 ### <a name="one-directional-replication"></a>단방향 복제
 단방향 복제에는 변경 내용이 구독자에 적용되지 않는 병합 복제 및 스냅샷 복제, 트랜잭션 복제가 포함됩니다. **hierarchyid** 열이 단방향 복제에서 어떻게 작동하는지는 구독자가 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 특별히 고려할 사항 없이 **hierarchyid** 열을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구독자에 복제할 수 있습니다.  
--   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 이전 버전의 **를 실행하고 있는 구독자에게** hierarchyid[!INCLUDE[ssEW](../../includes/ssew-md.md)] 열을 복제하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자는 이러한 열을 변환해야 합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **hierarchyid** 열이 지원되지 않습니다. 이러한 버전 중 하나를 사용 중인 경우에도 데이터를 구독자로 복제할 수 있습니다. 이렇게 하려면 열을 호환되는 데이터 형식으로 변환할 수 있도록 스키마 옵션이나 게시 호환성 수준(병합 복제의 경우)을 설정해야 합니다.  
+-   [!INCLUDE[ssEW](../../includes/ssew-md.md)] 또는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 구독자에게 **hierarchyid** 열을 복제하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 게시자는 이러한 열을 변환해야 합니다. [!INCLUDE[ssEW](../../includes/ssew-md.md)] 및 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **hierarchyid** 열이 지원되지 않습니다. 이러한 버전 중 하나를 사용 중인 경우에도 데이터를 구독자로 복제할 수 있습니다. 이렇게 하려면 열을 호환되는 데이터 형식으로 변환할 수 있도록 스키마 옵션이나 게시 호환성 수준(병합 복제의 경우)을 설정해야 합니다.  
   
 열 필터링은 이러한 두 가지 시나리오에서 모두 지원됩니다. 여기에는 **hierarchyid** 열 필터링도 포함됩니다. 행 필터링은 필터에 **hierarchyid** 열이 포함되어 있지 않은 경우에 한해 지원됩니다.
   

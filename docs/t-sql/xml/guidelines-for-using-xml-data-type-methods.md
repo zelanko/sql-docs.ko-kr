@@ -73,7 +73,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ### <a name="example-known-singleton"></a>예: 알려진 단일 항목
 
-이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. **노드에서 평가되는**value()`<book>` 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
+이 예에서 **nodes()** 메서드는 각 `<book>` 요소에 대해 별개의 행을 생성합니다. `<book>` 노드에서 평가되는 **value()** 메서드는 `@genre`의 값을 추출하고 싱글톤 특성이 됩니다.
 
 ```sql
 SELECT nref.value('@genre', 'varchar(max)') LastName

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - group object [ADOX]
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b0cd75780abe01edc6f2e90258cc7d24f5eae016
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966217"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763324"
 ---
 # <a name="group-object-adox"></a>그룹 개체(ADOX)
 보안 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.  
