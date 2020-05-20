@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4ed943e0768e031c07fa1748961e311373af8ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74866049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812262"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Mssubscriptions** 테이블에는 로컬 배포자가 서비스 하는 구독에 게시 된 각 아티클에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "74866049"
 |**subscription_seqno**|**varbinary(16)**|스냅샷 트랜잭션 시퀀스 번호입니다.|  
 |**snapshot_seqno_flag**|**bit**|스냅숏 트랜잭션 시퀀스 번호의 원본을 나타냅니다. 여기서 값 **1** 은 **subscription_seqno** 이 스냅숏 시퀀스 번호 임을 의미 합니다.|  
 |**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
-|**subscription_time**|**datetime**|내부적으로만 사용됩니다.|  
+|**subscription_time**|**datetime**|내부 전용입니다.|  
 |**loopback_detection**|**bit**|양방향 트랜잭션 복제 토폴로지에 속한 구독에 적용됩니다. 루프백 검색은 배포 에이전트가 구독자에서 발생한 트랜잭션을 다시 구독자로 보낼지 여부를 결정합니다.<br /><br /> **1** = 다시 보내지 않습니다.<br /><br /> **0** = 다시 보냅니다.<br /><br />|  
 |**agent_id**|**int**|에이전트의 ID입니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  

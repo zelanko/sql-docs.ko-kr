@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d4ccd016c32e197c75026c1039e5ff4c21eef32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cc8fd7a20da6d0bf56d68b690bf35341cb6a63e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135183"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812141"
 ---
 # <a name="sysdm_exec_query_plan-transact-sql"></a>sys.dm_exec_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.dm_exec_query_plan(plan_handle)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|이 계획에 해당하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 컴파일할 당시 유효했던 컨텍스트 데이터베이스의 ID입니다. 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.<br /><br /> 열이 Null 값을 허용합니다.|  
 |**objectid**|**int**|이 쿼리 계획에 대한 저장 프로시저나 사용자 정의 함수와 같은 개체의 ID입니다. 임시 및 준비된 일괄 처리의 경우 이 열은 **Null**입니다.<br /><br /> 열이 Null 값을 허용합니다.|  
@@ -73,21 +73,21 @@ sys.dm_exec_query_plan(plan_handle)
   
 -   대량 작업 문이나 8KB를 넘는 문자열 리터럴이 포함된 문과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 캐시되지 않습니다. 이러한 문의 XML 실행 계획은 캐시에 없기 때문에 일괄 처리가 현재 실행되고 있지 않으면 **sys.dm_exec_query_plan**을 사용하여 검색할 수 없습니다.  
   
--   EXEC ( [!INCLUDE[tsql](../../includes/tsql-md.md)] *string*)를 사용 하는 경우와 같이 일괄 처리 또는 저장 프로시저가 사용자 정의 함수에 대 한 호출을 포함 하거나 동적 SQL에 대 한 호출을 포함 하는 경우 사용자 정의 함수에 대 한 컴파일된 XML 실행 계획은 일괄 처리 또는 저장 프로시저에 대 한 **dm_exec_query_plan** 에서 반환 된 테이블에 포함 되지 않습니다. 대신 사용자 정의 함수에 해당 하는 계획 핸들에 대해 **dm_exec_query_plan** 에 대 한 별도의 호출을 수행 해야 합니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]EXEC (*string*)를 사용 하는 경우와 같이 일괄 처리 또는 저장 프로시저가 사용자 정의 함수에 대 한 호출을 포함 하거나 동적 SQL에 대 한 호출을 포함 하는 경우 사용자 정의 함수에 대 한 컴파일된 XML 실행 계획은 일괄 처리 또는 저장 프로시저에 대 한 **dm_exec_query_plan** 에서 반환 된 테이블에 포함 되지 않습니다. 대신 사용자 정의 함수에 해당 하는 계획 핸들에 대해 **dm_exec_query_plan** 에 대 한 별도의 호출을 수행 해야 합니다.  
   
  임시 쿼리에서 간단한 매개 변수화 또는 강제 매개 변수화를 사용하는 경우 **query_plan** 열에는 문 텍스트만 포함되고 실제 쿼리 계획은 포함되지 않습니다. 쿼리 계획을 반환하려면 매개 변수가 있는 준비된 쿼리의 계획 핸들에 대한 **sys.dm_exec_query_plan**을 호출합니다. [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 뷰의 **sql** 열 또는 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 동적 관리 뷰의 텍스트 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다.  
   
 > [!NOTE] 
-> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. 서비스 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 팩 2 이상 버전에서 **QUERY_PLAN** 열은 NULL을 반환 합니다.   
+> **Xml** 데이터 형식에서 허용 되는 중첩 수준 수의 제한으로 인해 **dm_exec_query_plan** 는 128 수준의 중첩 된 요소를 충족 하거나 초과 하는 쿼리 계획을 반환할 수 없습니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 상태로 인해 쿼리 계획을 반환하지 못했으므로 오류 6335가 발생합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]서비스 팩 2 이상 버전에서 **query_plan** 열은 NULL을 반환 합니다.   
 > [Dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) 동적 관리 함수를 사용 하 여 쿼리 계획의 출력을 텍스트 형식으로 반환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
- **Dm_exec_query_plan**를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 이거나 서버에 대 한 `VIEW SERVER STATE` 권한이 있어야 합니다.  
+## <a name="permissions"></a>권한  
+ **Dm_exec_query_plan**를 실행 하려면 사용자가 **sysadmin** 고정 서버 역할의 멤버 이거나 `VIEW SERVER STATE` 서버에 대 한 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 **sys.dm_exec_query_plan** 동적 관리 뷰를 사용하는 방법을 보여줍니다.  
   
- XML 실행 계획을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행하고 **sys.dm_exec_query_plan**에 의해 반환된 테이블의 **query_plan** 열에서 **ShowPlanXML**을 클릭합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 보고서 요약 창에 XML 실행 계획이 표시됩니다. XML 실행 계획을 파일에 저장 하려면 **query_plan** 열에서 **showplan XML** 을 마우스 오른쪽 단추로 클릭 하 고 다른 이름 **으로 결과 저장**을 클릭 하 여> \< *file_name* 형식으로 파일 이름을 지정 합니다. sqlplan; 예: MyXMLShowplan. sqlplan.  
+ XML 실행 계획을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행하고 **sys.dm_exec_query_plan**에 의해 반환된 테이블의 **query_plan** 열에서 **ShowPlanXML**을 클릭합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 보고서 요약 창에 XML 실행 계획이 표시됩니다. XML 실행 계획을 파일에 저장 하려면 **query_plan** 열에서 **showplan XML** 을 마우스 오른쪽 단추로 클릭 하 고 다른 이름 **으로 결과 저장**을 클릭 하 고 파일 이름을 \<>. Sqlplan (예: myxmlshowplan. sqlplan)으로 *file_name* 지정 합니다.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. 실행 속도가 느린 Transact-SQL 쿼리 또는 일괄 처리에 대한 캐시된 쿼리 계획 검색  
  임시 일괄 처리, 저장 프로시저, 사용자 정의 함수 등 다양한 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대한 쿼리 계획은 계획 캐시라는 메모리 영역에서 캐시됩니다. 캐시된 쿼리 계획 각각은 계획 핸들이라는 고유 식별자로 식별됩니다. **sys.dm_exec_query_plan** 동적 관리 뷰에 이 계획 핸들을 지정하여 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 일괄 처리에 대한 실행 계획을 검색할 수 있습니다.  
@@ -116,7 +116,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- **Dm_exec_requests** 에서 반환 하는 테이블은 실행 속도가 느려지는 쿼리 또는 일괄 처리 `0x06000100A27E7C1FA821B10600`에 대 한 계획 핸들이 다음과 같이 XML 형식의 실행 계획을 검색 하는 데 사용 `sys.dm_exec_query_plan` 하는 *plan_handle* 인수로 지정할 수 있음을 나타냅니다. 실행 속도가 느린 쿼리나 일괄 처리에 대한 XML 형식의 실행 계획은 `sys.dm_exec_query_plan`에 의해 반환되는 테이블의 **query_plan** 열에 포함됩니다.  
+ **Dm_exec_requests** 에서 반환 하는 테이블은 실행 속도가 느려지는 쿼리 또는 일괄 처리에 대 한 계획 핸들이 `0x06000100A27E7C1FA821B10600` *plan_handle* `sys.dm_exec_query_plan` 다음과 같이 XML 형식의 실행 계획을 검색 하는 데 사용 하는 plan_handle 인수로 지정할 수 있음을 나타냅니다. 실행 속도가 느린 쿼리나 일괄 처리에 대한 XML 형식의 실행 계획은 `sys.dm_exec_query_plan`에 의해 반환되는 테이블의 **query_plan** 열에 포함됩니다.  
   
 ```sql  
 USE master;  

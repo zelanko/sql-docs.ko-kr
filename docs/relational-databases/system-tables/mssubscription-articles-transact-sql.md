@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_articles system table
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0aaa6b412f1ccbbc71e9e5b19f68a518912f333
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139782"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812267"
 ---
 # <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscription_articles** 테이블에는 대기 중인 구독의 아티클에 대 한 정보가 포함 되어 있습니다. 이 테이블은 지연 업데이트와 장애 조치로 지연 업데이트를 사용하는 즉시 업데이트의 복제 유형에 대해서만 채워집니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|이 아티클을 서비스하는 에이전트의 ID입니다.|  
 |**artid**|**int**|**Sysarticles** 테이블의 문서 ID입니다.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37114a42cd7e9c64872ff42848bb916b21c1d941
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079988"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812427"
 ---
 # <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68079988"
 |**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명|  
 |**distribution_agent**|**sysname**|배포 에이전트의 이름입니다.|  
-|**런타임**|**smalldatetime**|배포 에이전트가 마지막으로 업데이트한 시간입니다.|  
+|**Time**|**smalldatetime**|배포 에이전트가 마지막으로 업데이트한 시간입니다.|  
 |**한**|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |**transaction_timestamp**|**varbinary(16)**|내부적으로만 사용됩니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  

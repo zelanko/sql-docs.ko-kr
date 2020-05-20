@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - systargetservers system table
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6193bdfaaac12d34ed4993b71fd6b5862046384c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095838"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813880"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   해당 다중 서버 작업 도메인에 현재 참여하는 대상 서버를 기록합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|서버 ID입니다.|  
 |**server_name**|**sysname**|서버 이름입니다.|  

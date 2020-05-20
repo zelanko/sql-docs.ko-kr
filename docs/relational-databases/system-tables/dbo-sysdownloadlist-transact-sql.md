@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sysdownloadlist system table
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3b87a32aec99b0b5775e492191683dd1b3b2366
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813761"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   모든 대상 서버의 다운로드 명령 대기열을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|행의 자연 삽입 시퀀스를 제공하는 ID 열입니다.|  
 |**source_server**|**sysname**|원본 서버의 이름입니다.|  

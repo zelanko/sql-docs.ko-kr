@@ -17,24 +17,24 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_group_states dynamic management view
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bace0824a7c8411e267186c3e9919ba2eb4be15c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900773"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812036"
 ---
 # <a name="sysdm_hadr_availability_group_states-transact-sql"></a>sys.dm_hadr_availability_group_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로컬 인스턴스에서 가용성 복제본을 소유 하는 각 Always On 가용성 그룹에 대해 하나의 행을 반환 합니다. 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다.  
+  의 로컬 인스턴스에서 가용성 복제본을 소유 하는 각 Always On 가용성 그룹에 대해 하나의 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 각 행에는 지정된 가용성 그룹의 상태를 정의하는 상태가 표시됩니다.  
   
 > [!NOTE]  
 >  의 전체 목록을 얻으려면 [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰를 쿼리 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|가용성 그룹의 고유한 식별자입니다.|  
 |**primary_replica**|**varchar(128)**|현재 주 복제본을 호스팅하는 서버 인스턴스의 이름입니다.<br /><br /> NULL = 주 복제본이 아니거나 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없습니다.|  

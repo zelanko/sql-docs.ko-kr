@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_virtual_file_stats dynamic management function
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f74fcfb00286d79699eed1e40c3dc36f907026ec
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412843"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811847"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74412843"
   데이터 및 로그 파일에 대한 I/O 통계를 반환합니다. 이 동적 관리 뷰는 [fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md) 함수를 대체 합니다.  
   
 > [!NOTE]  
->  에서 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]이를 호출 하려면 이름 **sys. dm_pdw_nodes_io_virtual_file_stats**를 사용 합니다. 
+>  에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 이름 **sys. dm_pdw_nodes_io_virtual_file_stats**를 사용 합니다. 
 
 ## <a name="syntax"></a>구문  
   
@@ -88,14 +88,14 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|사용자가 파일에 대한 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**size_on_disk_bytes**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅샷에 사용된 디스크의 실제 바이트 수입니다.|  
 |**file_handle**|**varbinary**|이 파일에 대한 Windows 파일 핸들입니다.|  
-|**io_stall_queued_read_ms**|**bigint**|:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터까지 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] **적용 되지 않습니다**.<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 [dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)을 참조 하십시오.|  
-|**io_stall_queued_write_ms**|**bigint**|:: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터까지 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] **적용 되지 않습니다**.<br /><br />  쓰기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다.|
+|**io_stall_queued_read_ms**|**bigint**|::부터까지 **적용 되지 않습니다** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 [dm_resource_governor_resource_pools &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)을 참조 하십시오.|  
+|**io_stall_queued_write_ms**|**bigint**|::부터까지 **적용 되지 않습니다** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  쓰기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다.|
 |**pdw_node_id**|**int**|**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>분포 노드의 식별자입니다.
  
 ## <a name="remarks"></a>설명
 이 카운터는 SQL Server (MSSQLSERVER) 서비스가 시작 될 때마다 빈 상태로 초기화 됩니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  VIEW SERVER STATE 권한이 필요합니다. 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  

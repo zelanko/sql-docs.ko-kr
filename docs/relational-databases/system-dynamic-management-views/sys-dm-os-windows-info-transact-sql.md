@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_windows_info dynamic management view
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f3dceed9572ef2e3a3999759ac120901408b893
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899589"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811751"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67899589"
   
   Windows에서 실행 되는 SQL Server에만 적용 됩니다. Windows가 아닌 호스트에서 실행 되는 SQL Server에 대 한 유사한 내용은 (예: Linux)를 보려면 [dm_os_host_info &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)를 사용 합니다. 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar(256)**|Windows의 경우 릴리스 번호를 반환 합니다. 값 및 설명 목록은 [운영 체제 버전 (Windows)](/windows/desktop/SysInfo/operating-system-version)을 참조 하세요. NULL이 될 수 없습니다.|  
 |**windows_service_pack_level**|**nvarchar(256)**| Windows의 경우 Service Pack 번호를 반환 합니다. NULL이 될 수 없습니다. |  
@@ -40,7 +40,7 @@ ms.locfileid: "67899589"
 |**os_language_version**|**int**| Windows의 경우 운영 체제의 Windows LCID (로캘 식별자)를 반환 합니다. LCID 값 및 설명 목록은 [Microsoft에서 할당 한 로캘 id](https://go.microsoft.com/fwlink/?LinkId=208080)를 참조 하세요. NULL이 될 수 없습니다.|  
   
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 기본적으로 dm_os_windows_info의 SELECT 권한은 public 역할에 부여 됩니다. 해지 된 경우 서버에 대 한 VIEW SERVER STATE 권한이 필요 합니다.  
 
 ## <a name="limitations-and-restrictions"></a>제한 사항

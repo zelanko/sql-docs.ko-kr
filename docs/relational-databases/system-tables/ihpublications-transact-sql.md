@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublications system table
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82813627"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67990338"
 |**alt_snapshot_folder**|**nvarchar (510)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |**pre_snapshot_script**|**nvarchar (510)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다.|  
 |**post_snapshot_script**|**nvarchar (510)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 초기 동기화 동안 기타 복제된 개체 스크립트 및 데이터를 적용한 후에 포스트 스냅샷 스크립트를 실행합니다.|  
-|**compress_snapshot**|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 압축 되도록 지정 합니다. **0** 은 스냅숏이 압축 되지 않도록 지정 합니다.|  
+|**compress_snapshot**|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 CAB 형식으로 압축 되도록 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . **0** 은 스냅숏이 압축 되지 않도록 지정 합니다.|  
 |**ftp_address**|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 배포 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |**ftp_port**|**int**|배포자용 FTP 서비스의 포트 번호입니다. 배포 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |**ftp_subdirectory**|**nvarchar (510)**|게시가 FTP를 사용한 스냅샷 전파를 지원할 경우 배포 에이전트가 선택할 수 있는 스냅샷 파일의 위치를 지정합니다.|  
@@ -57,9 +57,9 @@ ms.locfileid: "67990338"
 |**centralized_conflicts**|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌을 일으킨 게시자와 구독자 모두에 충돌 레코드가 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**conflict_retention**|**int**|충돌 보존 기간(일)을 지정합니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자가 충돌을 적용 합니다.<br /><br /> **2** = 구독자가 충돌을 적용 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
-|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq. 메시지 큐 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = sql-를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 트랜잭션을 저장 합니다.<br /><br /> 이 열은 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에서 사용 되지 않습니다.<br /><br /> 참고: 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐 사용은 더 이상 사용 되지 않으며 더 이상 지원 되지 않습니다.<br /><br /> *이 열은 SQL 이외 게시자에 대해서는 지원 되지 않습니다.*|  
-|**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID (globally unique identifier)는 게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory 게시 하 고 guid는 해당 하는 Active Directory 게시 개체 **objectGUID**임을 지정 합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
+|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq [!INCLUDE[msCoName](../../includes/msconame-md.md)] . 메시지 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **2** = sql-를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션을 저장 합니다.<br /><br /> 이 열은 이외 게시자에서 사용 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> 참고: 메시지 큐 사용은 더 이상 사용 되지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 않으며 더 이상 지원 되지 않습니다.<br /><br /> *이 열은 SQL 이외 게시자에 대해서는 지원 되지 않습니다.*|  
+|**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID (globally unique identifier)는 게시를 Active Directory 게시 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 고 guid는 해당 하는 Active Directory 게시 개체 **objectGUID**임을 지정 합니다. NULL인 경우 게시는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시되지 않습니다. *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *SQL 게시자 이외에 대해서는 지원되지 않습니다.*|  
 |**한**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
 |**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시에서 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 단일 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트 있습니다.|  
 |**immediate_sync**|**bit**|스냅숏 에이전트 실행 될 때마다 동기화 파일을 만들지 아니면 다시 만들지를 나타냅니다. **1** 은 에이전트가 실행 될 때마다 생성 됨을 의미 합니다.|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165499"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812062"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165499"
 쿼리가 실행되는 동안 실시간 쿼리 프로세스를 모니터링합니다. 예를 들어 이 DMV를 사용하여 느리게 실행되는 쿼리 부분을 결정합니다. 설명 필드에서 식별된 열을 사용하여 이 DMV를 다른 시스템 DMV와 조인합니다. 또는 타임스탬프 열을 사용하여 이 DMV를 다른 성능 카운터(예: 성능 모니터, xperf)와 조인합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
-반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적 이며 쿼리가 완료 될 때만 출력을 만드는 것 `SET STATISTICS XML ON` 과 같은 기존 옵션의 결과와 일치 하지 않습니다.  
+반환된 카운터는 연산자 및 스레드 기준입니다. 결과는 동적 이며 `SET STATISTICS XML ON` 쿼리가 완료 될 때만 출력을 만드는 것과 같은 기존 옵션의 결과와 일치 하지 않습니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -72,28 +72,28 @@ ms.locfileid: "74165499"
 |segment_read_count|**int**|지금까지의 세그먼트 read-ahead 수입니다.|  
 |segment_skip_count|**int**|지금까지 생략된 세그먼트 수입니다.| 
 |actual_read_row_count|**bigint**|잔여 조건자를 적용 하기 전에 연산자가 읽은 행 수입니다.| 
-|estimated_read_row_count|**bigint**|**적용 대상:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] S p 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
+|estimated_read_row_count|**bigint**|**적용 대상:** S p [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 1 부터는 <br/>나머지 조건자가 적용 되기 전에 연산자에서 읽을 수 있는 것으로 예상 되는 행 수입니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  쿼리 계획 노드에 i/o가 없는 경우 모든 i/o 관련 카운터가 NULL로 설정 됩니다.  
   
- 이 DMV에서 보고 하는 i/o 관련 카운터는 다음 두 가지 방법으로에서 보고 `SET STATISTICS IO` 되는 것 보다 더 세분화 됩니다.  
+ 이 DMV에서 보고 하는 i/o 관련 카운터는 `SET STATISTICS IO` 다음 두 가지 방법으로에서 보고 되는 것 보다 더 세분화 됩니다.  
   
 -   `SET STATISTICS IO`지정 된 테이블에 대 한 모든 i/o의 카운터를 그룹화 합니다. 이 DMV를 사용 하 여 테이블에 i/o를 수행 하는 쿼리 계획의 모든 노드에 대해 별도의 카운터를 가져옵니다.  
   
 -   병렬 스캔이 있는 경우 이 DMV는 스캔에 대해 작동하는 각 병렬 스레드의 카운터를 보고합니다.
  
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] S p 1 부터는 *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON`및 `SET STATISTICS PROFILE ON` 는 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. `sys.dm_exec_query_profiles` 를 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
+S p 1 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] *표준 쿼리 실행 통계를 프로 파일링* 하는 것이 *경량 쿼리 실행 통계 프로 파일링 인프라*와 나란히 있습니다. `SET STATISTICS XML ON`및는 `SET STATISTICS PROFILE ON` 항상 *표준 쿼리 실행 통계 프로 파일링 인프라*를 사용 합니다. 를 `sys.dm_exec_query_profiles` 채우도록 쿼리 프로 파일링 인프라 중 하나를 사용 하도록 설정 해야 합니다. 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.    
 
 >[!NOTE]
-> 조사 중인 쿼리는 쿼리 프로 파일링 인프라를 사용 하도록 설정한 **후** 시작 해야 합니다. 쿼리를 시작한 후에 사용 하도록 설정 하면에서 `sys.dm_exec_query_profiles`결과가 생성 되지 않습니다. 쿼리 프로 파일링 인프라를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.
+> 조사 중인 쿼리는 쿼리 프로 파일링 인프라를 사용 하도록 설정한 **후** 시작 해야 합니다. 쿼리를 시작한 후에 사용 하도록 설정 하면에서 결과가 생성 되지 않습니다 `sys.dm_exec_query_profiles` . 쿼리 프로 파일링 인프라를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [쿼리 프로 파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조 하세요.
 
-## <a name="permissions"></a>사용 권한  
-및 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 관리 되는 인스턴스에서 `VIEW DATABASE STATE` 는 `db_owner` 데이터베이스 역할의 권한 및 멤버 자격이 필요 합니다.   
-Premium [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+## <a name="permissions"></a>권한  
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]및의 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리 되는 인스턴스에서는 `VIEW DATABASE STATE` 데이터베이스 역할의 권한 및 멤버 자격이 필요 `db_owner` 합니다.   
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
    
 ## <a name="examples"></a>예  
- 1 단계: 분석할 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles`합니다. 프로 파일링 사용 `SET STATISTICS PROFILE ON`을 위해 쿼리를 구성 합니다. 동일한 세션에서 쿼리를 실행합니다.  
+ 1 단계: 분석할 쿼리를 실행 하려는 세션에 로그인 `sys.dm_exec_query_profiles` 합니다. 프로 파일링 사용을 위해 쿼리를 구성 `SET STATISTICS PROFILE ON` 합니다. 동일한 세션에서 쿼리를 실행합니다.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  
