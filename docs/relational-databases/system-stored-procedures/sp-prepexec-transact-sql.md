@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 670b64cb107610fe8b5506654b9e655b0da5fb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9e291a0ff8b2fc14e7bc249ceea8320facedf9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68794720"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830991"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_ prepexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  매개 변수가 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 준비 하 고 실행 합니다. sp_prepexec sp_prepare 및 sp_execute의 기능을 결합 합니다. 이 작업은 TDS (tabular data stream) 패킷에서 ID = 13에 의해 호출 됩니다.  
+  매개 변수가 있는 문을 준비 하 고 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다. sp_prepexec sp_prepare 및 sp_execute의 기능을 결합 합니다. 이 작업은 TDS (tabular data stream) 패킷에서 ID = 13에 의해 호출 됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,7 +41,7 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>인수  
  *처리*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 생성 된 *핸들* 식별자입니다. *handle* 은 **int** 반환 값을 포함 하는 필수 매개 변수입니다.  
+ 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 된 *핸들* 식별자입니다. *handle* 은 **int** 반환 값을 포함 하는 필수 매개 변수입니다.  
   
  *params*  
  매개 변수가 있는 문을 식별합니다. 변수의 매개 변수 정의는 문에서 매개 변수 표식을 *대체 합니다.* *params* 는 **ntext**, **nchar**또는 **nvarchar** 입력 값을 호출 하는 필수 매개 변수입니다. 문에 매개 변수가 없으면 NULL 값을 입력합니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771013"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829985"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|명령의 유형입니다.|  
 |**originator_srvname**|**sysname**|트랜잭션이 시작된 서버입니다.|  
 |**originator_db**|**sysname**|트랜잭션이 시작된 데이터베이스입니다.|  
-|**pkHash**|**int**|내부적으로만 사용됩니다.|  
+|**pkHash**|**int**|내부 전용입니다.|  
 |**originator_publication_id**|**int**|트랜잭션이 시작된 게시의 ID입니다.|  
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다.|  
@@ -73,7 +73,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  동일한 데이터베이스 내에서 **sp_replcmds** 를 실행 하려고 시도 하는 클라이언트는 첫 번째 클라이언트가 연결을 끊을 때까지 18752 오류를 수신 합니다. 첫 번째 클라이언트가 연결을 끊은 후에는 다른 클라이언트가 **sp_replcmds**를 실행 하 여 새 로그 판독기가 됩니다.  
   
- 텍스트 포인터가 동일한 트랜잭션에서 검색 되지 않았기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때문에 **sp_replcmds** 에서 텍스트 명령을 복제할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없는 경우 오류 로그와 Windows 응용 프로그램 로그에 모두 경고 메시지 번호 18759이 추가 됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 텍스트 포인터가 동일한 트랜잭션에서 검색 되지 않았기 때문에 **sp_replcmds** 에서 텍스트 명령을 복제할 수 없는 경우 오류 로그와 Windows 응용 프로그램 로그에 모두 경고 메시지 번호 18759이 추가 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replcmds**을 실행할 수 있습니다.  

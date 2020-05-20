@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTables [SQL Server], catalog views
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04fc26296d7c499982c75296089decfb57bd9ab4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b0294cb76ad25e4c11038be59666892c270256bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016603"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829767"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Filestream 및 FileTable 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768955"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829627"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -120,7 +120,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day`하루 중 병합 에이전트이 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_end_time_of_day* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @job_login = ] 'job_login'`매개 변수가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows 계정입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows 계정입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
 `[ @job_password = ] 'job_password'`매개 변수가 있는 행 필터를 사용 하 여 구독에 대 한 스냅숏을 생성할 때 스냅숏 에이전트 실행 되는 Windows 계정의 암호입니다. *job_password* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
@@ -135,7 +135,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changedynamicsnapshot_job**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

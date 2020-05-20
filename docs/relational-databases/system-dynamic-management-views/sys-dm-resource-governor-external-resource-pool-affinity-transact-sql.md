@@ -17,18 +17,18 @@ helpviewer_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - dm_resource_governor_external_resource_pool_affinity
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 77d0d322139be1f1c6086622855600a7c24fc4c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3f3b22b1889380be3aeeacc70877987f080ac766
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80664318"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830467"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys. dm_resource_governor_external_resource_pool_affinity (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
-**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)][!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] 및 [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 현재 외부 리소스 풀 구성에 대 한 CPU 선호도 정보를 반환 합니다.
   
@@ -40,7 +40,7 @@ ms.locfileid: "80664318"
   
 ## <a name="remarks"></a>설명
 
-선호도를 사용 하 여 `AUTO` 만든 풀은 선호도가 없기 때문에이 뷰에 나타나지 않습니다. 자세한 내용은 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 및 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) 문을 참조 하세요.
+선호도를 사용 하 여 만든 풀은 `AUTO` 선호도가 없기 때문에이 뷰에 나타나지 않습니다. 자세한 내용은 [CREATE EXTERNAL RESOURCE pool &#40;transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) 및 [ALTER external Resource pool &#40;transact-sql&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) 문을 참조 하세요.
 
 ## <a name="permissions"></a>사용 권한
 

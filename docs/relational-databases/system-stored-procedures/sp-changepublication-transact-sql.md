@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762421"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829580"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정 된 게시에 대해 익명 구독을 만들 수 있으며 *immediate_sync* 도 **true**여야 합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|새 구독이 있는 경우에만 동기화 파일이 만들어집니다. 구독자는 스냅샷 에이전트가 시작되어 완료될 때까지는 구독 이후의 동기화 파일을 받을 수 없습니다.|  
 |**independent_agent**|**true**|게시에는 전용 배포 에이전트가 있습니다.|  
 ||**false**|게시는 공유 배포 에이전트를 사용하며 게시/구독 데이터베이스 쌍마다 공유 에이전트가 있습니다.|  
-|**p2p_continue_onconflict**|**true**|충돌이 감지되면 배포 에이전트에서 변경 내용을 계속 처리합니다.<br /> **주의:** 의 `FALSE`기본값을 사용 하는 것이 좋습니다. 이 옵션을로 `TRUE`설정 하면 배포 에이전트는 송신자 ID가 가장 높은 노드에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 수렴 하려고 시도 합니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
+|**p2p_continue_onconflict**|**true**|충돌이 감지되면 배포 에이전트에서 변경 내용을 계속 처리합니다.<br /> **주의:** 의 기본값을 사용 하는 것이 좋습니다 `FALSE` . 이 옵션을로 설정 하면 `TRUE` 배포 에이전트는 송신자 ID가 가장 높은 노드에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 수렴 하려고 시도 합니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
 ||**false**|충돌이 감지되면 배포 에이전트에서 변경 내용 처리를 중지합니다.|  
 |**post_snapshot_script**||초기 동기화 동안 다른 모든 복제된 개체 스크립트 및 데이터를 적용한 후에 배포 에이전트가 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 위치를 지정합니다.|  
 |**pre_snapshot_script**||초기 동기화 동안 다른 모든 복제된 개체 스크립트 및 데이터를 적용하기 전에 배포 에이전트가 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일의 위치를 지정합니다.|  
 |**publish_to_ActiveDirectory**|**true**|이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시 정보를 추가할 수 없습니다.|  
 ||**false**|Active Directory에서 게시 정보를 제거합니다.|  
-|**queue_type**|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다.<br /><br /> 참고: 메시지 큐 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에 대 한 지원이 중단 되었습니다. *Value* 에 **msmq** 값을 지정 하면 오류가 발생 합니다.|  
+|**queue_type**|**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다. 이 속성은 활성 구독이 없을 경우에만 변경될 수 있습니다.<br /><br /> 참고: 메시지 큐 사용에 대 한 지원이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 중단 되었습니다. *Value* 에 **msmq** 값을 지정 하면 오류가 발생 합니다.|  
 |**repl_freq**|**주기가**|모든 로그 기반의 트랜잭션에 대한 출력을 게시합니다.|  
 ||**스냅숏에**|예약된 동기화 이벤트만 게시합니다.|  
 |**replicate_ddl**|**1**|게시자에서 실행된 DDL(데이터 정의 언어) 문이 복제됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
@@ -104,15 +104,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**보존**||구독 작업에 대 한 보존 기간 (시간)을 나타내는 **int** 입니다. 구독이 보존 기간 동안 활성화되지 않으면 제거됩니다.|  
 |**snapshot_in_defaultfolder**|**true**|스냅샷 파일이 기본 스냅샷 폴더에 저장됩니다. *Alt_snapshot_folder*도 지정한 경우에는 스냅숏 파일이 기본 위치 및 대체 위치 모두에 저장 됩니다.|  
 ||**false**|스냅숏 파일은 *alt_snapshot_folder*에 지정 된 대체 위치에 저장 됩니다.|  
-|**status**|**활성**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
+|**status**|**active**|구독자는 게시가 생성되는 즉시 게시 데이터를 사용할 수 있습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 ||**라**|게시가 생성되면 구독자가 게시 데이터를 사용할 수 없습니다. Oracle 게시자에 대해서는 지원되지 않습니다.|  
 |**sync_method**|**native**|구독을 동기화할 때 모든 테이블의 기본 모드 대량 복사 출력을 사용합니다.|  
 ||**자의**|구독을 동기화할 때 모든 테이블의 문자 모드 대량 복사 출력을 사용합니다.|  
 ||**노드당**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용하지만 스냅샷을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅샷 복제에는 적합하지 않습니다.|  
 ||**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용하지만 스냅샷을 생성하는 동안에는 테이블을 잠그지 않습니다. 스냅샷 복제에는 적합하지 않습니다.|  
 |**taskid**||이 속성은 더 이상 사용되지 않으며 지원되지 않습니다.|  
-|**allow_drop**|**true**|트랜잭션 `DROP TABLE` 복제의 일부인 아티클에 대해 DLL 지원을 사용 하도록 설정 합니다. 지원 되는 최소 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 버전: 서비스 팩 2 이상 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 서비스 팩 1 이상. 추가 참조: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|트랜잭션 `DROP TABLE` 복제의 일부인 아티클에 대해 DLL 지원을 사용 하지 않도록 설정 합니다. 이 값은이 속성의 **기본값** 입니다.|
+|**allow_drop**|**true**|`DROP TABLE`트랜잭션 복제의 일부인 아티클에 대해 DLL 지원을 사용 하도록 설정 합니다. 지원 되는 최소 버전: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서비스 팩 2 이상 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 서비스 팩 1 이상. 추가 참조: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|`DROP TABLE`트랜잭션 복제의 일부인 아티클에 대해 DLL 지원을 사용 하지 않도록 설정 합니다. 이 값은이 속성의 **기본값** 입니다.|
 |**NULL** (기본값)||*속성*에 대해 지원 되는 값 목록을 반환 합니다.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 은 **bit**이며 기본값은 **0**입니다.  
@@ -120,15 +120,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 지정 합니다. 기존 구독에 새 스냅샷이 필요한 경우 이 값은 기존 스냅샷을 사용되지 않는 것으로 표시하고 새 스냅샷을 생성할 수 있는 권한을 부여합니다.   
 변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 은 **bit** 이며 기본값은 **0**입니다.  
   - **0** 은 아티클에 대 한 변경으로 인해 구독이 다시 초기화 되지 않도록 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 은 아티클에 대 한 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
   > [!NOTE]  
-  >  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+  >  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -150,7 +150,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-**Publish_to_active_directory** 매개 변수를 사용 하 여 Active Directory에서 게시 개체를 나열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하려면 Active Directory에서 개체가 이미 만들어져 있어야 합니다.  
+**Publish_to_active_directory** 매개 변수를 사용 하 여 Active Directory에서 게시 개체를 나열 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Active Directory에서 개체가 이미 만들어져 있어야 합니다.  
   
 ## <a name="impact-of-immediate-sync"></a>즉시 동기화의 영향  
  즉시 동기화가 설정되어 있으면 구독이 없어도 초기 스냅숏이 생성된 후에 로그의 모든 변경 내용이 즉시 추적됩니다. 기록 된 변경 내용은 고객이 백업을 사용 하 여 새 피어 노드를 추가할 때 사용 됩니다. 백업이 복원 된 후에는 백업이 수행 된 후에 발생 하는 다른 변경 내용과 피어가 동기화 됩니다. 배포 데이터베이스에서 명령이 추적 되므로 동기화 논리는 마지막으로 백업 된 LSN을 확인 하 고이를 시작 지점으로 사용 하 여 최대 보존 기간 내에 백업이 수행 된 경우에는 명령을 사용할 수 있습니다. 최소 보존 기간의 기본값은 0 시간이 고 최대 보존 기간은 24 시간입니다.  
@@ -160,7 +160,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changepublication](../../relational-databases/replication/codesnippet/tsql/sp-changepublication-tra_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changepublication**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

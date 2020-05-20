@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sp_ backup_master_switch
 - smart_admin.sp_backup_master_switch
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 242ef833cbb5a6a54b52fba0d1f435a7ca475cf0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942060"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830368"
 ---
 # <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup. sp_backup_master_switch (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="arguments"></a><a name="Arguments"></a>인수의  
  @state  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state 매개 변수가 **비트**입니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]의 상태를 설정합니다. @state매개 변수가 **비트**입니다. 값을 0으로 설정하면 작업이 일시 중지되고 1로 설정하면 작업이 다시 시작됩니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -80,6 +80,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Microsoft Azure에 대 한 관리 되는 백업 SQL Server](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

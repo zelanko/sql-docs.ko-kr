@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155396"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830455"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정된 데이터베이스 백업을 수행하려면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 요청합니다.  
   
- 이 저장 프로시저를 사용하면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]으로 구성된 데이터베이스에 대한 임시 백업을 수행할 수 있습니다. 이렇게 하면 백업 체인의 모든 중단을 방지 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 하 고 프로세스를 인식 하며 백업이 동일한 Azure Blob storage 컨테이너에 저장 됩니다.  
+ 이 저장 프로시저를 사용하면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]으로 구성된 데이터베이스에 대한 임시 백업을 수행할 수 있습니다. 이렇게 하면 백업 체인의 모든 중단을 방지 하 고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 프로세스를 인식 하며 백업이 동일한 Azure Blob storage 컨테이너에 저장 됩니다.  
   
  백업이 성공적으로 완료된 다음에는 전체 백업 파일 경로가 반환됩니다. 여기에는 백업 작업으로 발생하는 새 백업 파일의 이름 및 위치가 포함됩니다.  
   
@@ -53,7 +53,7 @@ EXEC managed_backup.sp_backup_on_demand
  백업을 수행할 데이터베이스의 이름입니다. 는 @database_name **SYSNAME**입니다.  
   
  @type  
- 수행할 백업 유형입니다. 데이터베이스 또는 로그입니다. 매개 @type 변수는 **NVARCHAR (32)** 입니다.  
+ 수행할 백업 유형입니다. 데이터베이스 또는 로그입니다. @type매개 변수는 **NVARCHAR (32)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

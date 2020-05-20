@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_stats dynamic management view
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c93cc5f34d86e15645b4d53c02244e2705bbeda5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026861"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830837"
 ---
 # <a name="sysdm_db_xtp_checkpoint_stats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]는 최신 버전과 상당히 다르며 [SQL Server 2014](#bkmk_2014)의 항목에서 더 자세히 설명 합니다.**
   
 ## <a name="sssql15-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
- 다음 표에서는부터 시작 하 여 `sys.dm_db_xtp_checkpoint_stats`의 열에 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 대해 설명 합니다.  
+ 다음 표에서는부터 시작 하 여의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|컨트롤러에서 표시 한 마지막 LSN입니다.|  
 |end_of_log_lsn|**numeric (38)**|로그 끝의 LSN입니다.|  
-|bytes_to_end_of_log|**bigint**|및 `last_lsn_processed` `end_of_log_lsn`사이의 바이트에 해당 하는 컨트롤러에서 처리 되지 않은 로그 바이트 수입니다.|  
+|bytes_to_end_of_log|**bigint**|및 사이의 바이트에 해당 하는 컨트롤러에서 처리 되지 않은 로그 바이트 수 `last_lsn_processed` `end_of_log_lsn` 입니다.|  
 |log_consumption_rate|**bigint**|컨트롤러의 트랜잭션 로그 사용 률 (k b/초)입니다.|  
 |active_scan_time_in_ms|**bigint**|컨트롤러에서 트랜잭션 로그를 적극적으로 검사 하는 데 걸린 시간입니다.|  
 |total_wait_time_in_ms|**bigint**|로그를 검사 하지 않는 동안 컨트롤러의 누적 대기 시간입니다.|  
@@ -84,9 +84,9 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |bytes_of_large_data_serialized|**bigint**|Serialize 된 데이터의 양입니다. |  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 다음 표에서는의 열 `sys.dm_db_xtp_checkpoint_stats`에 대해 설명 합니다 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ 다음 표에서는의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_stats` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|스레드의 현재 LSN(로그 시퀀스 번호) 및 로그 끝 사이의 로그 바이트 수입니다.|  
 |total_log_blocks_processed|**bigint**|서버 시작 후 처리된 총 로그 블록 수입니다.|  

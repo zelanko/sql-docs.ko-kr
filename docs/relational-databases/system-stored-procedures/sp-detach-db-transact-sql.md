@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278187"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830233"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`분리 되는 데이터베이스와 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 분리 작업 동안 삭제 되지 않도록 지정 합니다. *KeepFulltextIndexFile* 은 **nvarchar (10)** 값 이며 기본값은 **true**입니다. *KeepFulltextIndexFile* 가 **false**이면 데이터베이스가 읽기 전용이 아니면 데이터베이스와 연결 된 전체 텍스트 인덱스 파일과 전체 텍스트 인덱스의 메타 데이터가 모두 삭제 됩니다. NULL 또는 **true**이면 전체 텍스트 관련 메타 데이터를 유지 합니다.  
   
 > [!IMPORTANT]
->  ** \@Keepfulltextindexfile** 매개 변수는의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이후 버전에서 제거 될 예정입니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
+>  ** \@ Keepfulltextindexfile** 매개 변수는의 이후 버전에서 제거 될 예정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 애플리케이션은 가능한 한 빨리 수정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  데이터베이스를 SINGLE_USER로 설정하기 전에 AUTO_UPDATE_STATISTICS_ASYNC 옵션이 OFF로 설정되어 있는지 확인합니다. 이 옵션이 ON으로 설정되면 통계 업데이트에 사용되는 백그라운드 스레드가 데이터베이스에 대한 연결을 점유하므로 사용자는 단일 사용자 모드로 데이터베이스에 액세스할 수 없습니다. 자세한 내용은 [데이터베이스를 단일 사용자 모드로 설정](../databases/set-a-database-to-single-user-mode.md)을 참조 하세요.
 
- 예를 들어 다음 `ALTER DATABASE` 문은 현재 사용자가 모두 데이터베이스와 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 의 연결을 끊은 후 데이터베이스에 대 한 단독 액세스 권한을 얻습니다.  
+ 예를 들어 다음 `ALTER DATABASE` 문은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 현재 사용자가 모두 데이터베이스와의 연결을 끊은 후 데이터베이스에 대 한 단독 액세스 권한을 얻습니다.  
   
 ```  
 USE master;  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [데이터베이스 분리](../../relational-databases/databases/detach-a-database.md)  
   

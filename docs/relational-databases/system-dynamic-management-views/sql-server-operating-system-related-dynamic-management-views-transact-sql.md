@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SQL OS dynamic management objects [SQL Server]
 - dynamic management objects [SQL Server], SQL OS
 ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ea0bbe308e3b0e49f6250dd02d2c6c1f636751c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830926"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server 운영 체제 관련 동적 관리 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-이 섹션에서는 SQLOS (운영 체제)와 연결 된 DMV [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (동적 관리 뷰)에 대해 설명 합니다. SQLOS는에 특정 한 운영 체제 리소스를 관리 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일을 담당 합니다.
+이 섹션에서는 SQLOS (운영 체제)와 연결 된 DMV (동적 관리 뷰)에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. SQLOS는에 특정 한 운영 체제 리소스를 관리 하는 일을 담당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.
 
-SQLOS Dmv는 목차에 나열 됩니다. 이러한 및의 대부분은로 `sys.dm_os_<description>`이름이 지정 됩니다.
+SQLOS Dmv는 목차에 나열 됩니다. 이러한 및의 대부분은로 이름이 지정 됩니다 `sys.dm_os_<description>` .
 
- 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 관련 동적 관리 뷰는 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
+ 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 관련 동적 관리 뷰는 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] 입니다.  
   
 |||  
 |-|-|  

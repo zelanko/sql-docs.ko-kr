@@ -13,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_wait_for_database_copy_sync
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: adee14219a29fef48abdcdcec9d7aac7894c2270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79198210"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829686"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>활성 지역 복제-sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @target_server = ] ' server_name '  
+ [ @target_server =] ' server_name '  
  활성 보조 데이터베이스를 호스트하는 SQL Database 서버의 이름입니다. server_name은 sysname이며 기본값은 없습니다.  
   
  [ @target_database = ] 'database_name'  

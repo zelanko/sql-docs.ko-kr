@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set catalog view
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1591c84de006308e96a3b8079ea05ef9ad6802b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097809"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830617"
 ---
 # <a name="sysdm_exec_describe_first_result_set-transact-sql"></a>sys.dm_exec_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
  하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (***n***)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
  *\@params*  
- \@params는 sp_executesql와 유사 하 게 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
+ \@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql와 유사 하 게 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] *_Batch*에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수는 params \@에 정의 되어야 합니다. 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. Stmt에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
  *\@include_browse_information*  
  1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
@@ -57,7 +57,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>반환된 테이블  
  이 공통 메타데이터가 결과 집합으로 반환됩니다. 결과 메타데이터에 있는 각 열의 행 하나가 가지는 열의 유형과 Null 허용 여부를 다음 표에 나타난 형식으로 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|해당 열이 검색 및 정보 제공 목적으로 추가되어 실제로 결과 집합에 나타나지 않는 별도의 열임을 지정합니다.|  
 |**column_ordinal**|**int**|결과 집합에서 열의 서수 위치를 포함합니다. 첫 번째 열의 위치가 1로 지정됩니다.|  
@@ -119,11 +119,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|일괄 처리에 재귀 문이 포함되어 있어 결과를 확인할 수 없습니다.|  
 |10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함되고 **sp_describe_first_result_set**에서 일괄 처리를 지원하지 않으므로 결과를 확인할 수 없습니다.|  
 |11|UNSUPPORTED_STATEMENT|**sp_describe_first_result_set**에서 지원하지 않는 문(예: FETCH, REVERT 등)이 일괄 처리에 포함되어 있어 결과를 확인할 수 없습니다.|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|함수 \@에 전달 된 object_id은 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
-|13|OBJECT_DOES_NOT_EXIST|함수 \@에 전달 된 object_id를 시스템 카탈로그에서 찾을 수 없습니다.|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@함수에 전달 된 object_id은 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
+|13|OBJECT_DOES_NOT_EXIST|\@함수에 전달 된 object_id를 시스템 카탈로그에서 찾을 수 없습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- \@Tsql 인수를 실행할 수 있는 권한이 필요 합니다.  
+ Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
 ## <a name="examples"></a>예  
  **Dm_exec_describe_first_result_set**를 사용 하도록 [transact-sql&#41;&#40;sp_describe_first_result_set](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 항목의 추가 예를 수정할 수 있습니다.  

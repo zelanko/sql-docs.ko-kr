@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829652"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자* 에 대해서는 변경할 수 없습니다.  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *이를 변경할* [!INCLUDE[msCoName](../../includes/msconame-md.md)] 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자.*  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -74,7 +74,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changelogreader_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

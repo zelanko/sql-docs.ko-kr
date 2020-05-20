@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e150318d4c334c67c51f6cf47c127793a25edb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120045"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831263"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'`범주의 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 없으며 다음 값 중 하나를 사용 해야 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직함**|작업 범주를 제거합니다.|  
 |**오류**|경고 범주를 제거합니다.|  

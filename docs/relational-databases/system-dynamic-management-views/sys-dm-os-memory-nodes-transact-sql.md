@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_nodes dynamic management view
 ms.assetid: bf4032fe-7db1-40e9-a62e-d69cebff4b44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f68524b2713b9d662c9e9ed0950334ea0a94ece
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d933fd9974848437f9fa19983df14bed273fc7b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983126"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829381"
 ---
 # <a name="sysdm_os_memory_nodes-transact-sql"></a>sys.dm_os_memory_nodes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "73983126"
  Windows 메모리 할당 루틴을 통한 직접적인 할당은 추적되지 않습니다. 다음 표에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 관리자 인터페이스를 통해서만 이루어진 메모리 할당에 대한 정보가 나와 있습니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_memory_nodes**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_memory_nodes**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +50,17 @@ ms.locfileid: "73983126"
 |**multi_pages_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 노드에서 실행 중인 스레드별로 다중 페이지 할당자를 사용하여 할당된 커밋된 메모리의 크기(KB)입니다. 이 메모리는 버퍼 풀 외부에 있습니다. 이 값은 할당 요청이 충족된 물리적 위치가 아닌 할당 요청이 발생한 지점의 노드를 나타냅니다.|  
 |**shared_memory_reserved_kb**|**bigint**|이 노드에서 예약된 공유 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
 |**shared_memory_committed_kb**|**bigint**|이 노드에서 커밋된 공유 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
-|**cpu_affinity_mask**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부적으로만 사용됩니다. Null을 허용하지 않습니다.|  
-|**online_scheduler_mask**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부적으로만 사용됩니다. Null을 허용하지 않습니다.|  
-|**processor_group**|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부적으로만 사용됩니다. Null을 허용하지 않습니다.|  
+|**cpu_affinity_mask**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부 전용입니다. Null을 허용하지 않습니다.|  
+|**online_scheduler_mask**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부 전용입니다. Null을 허용하지 않습니다.|  
+|**processor_group**|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 내부 전용입니다. Null을 허용하지 않습니다.|  
 |**foreign_committed_kb**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 다른 메모리 노드에서 커밋된 메모리 크기(KB)를 지정합니다. Null을 허용하지 않습니다.|  
-|**target_kb** |**bigint** |**적용**대상: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 메모리 노드의 메모리 목표 (KB)를 지정 합니다. |   
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**target_kb** |**bigint** |**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 메모리 노드의 메모리 목표 (KB)를 지정 합니다. |   
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="see-also"></a>참고 항목  
   [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

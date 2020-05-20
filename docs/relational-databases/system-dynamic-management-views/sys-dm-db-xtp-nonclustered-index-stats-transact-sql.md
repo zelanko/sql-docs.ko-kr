@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_nonclustered_index_stats
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c66bc0d20274819de2c9dc1b4a20e125e6e9044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830817"
 ---
 # <a name="sysdm_db_xtp_nonclustered_index_stats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "68026793"
   
  메모리 액세스에 최적화 된 비클러스터형 인덱스에 대 한 자세한 내용은 [메모리 내 OLTP 내부 개요](https://t.co/T6zToWc6y6), 페이지 17을 SQL Server 참조 하십시오.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|개체의 ID입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블의 ID입니다.|  

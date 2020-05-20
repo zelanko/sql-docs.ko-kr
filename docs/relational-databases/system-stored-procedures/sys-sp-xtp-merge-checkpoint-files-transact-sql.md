@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d439edc04b13092c2dc95bbf3e45c62739f43a4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041018"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829945"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68041018"
   
 ||  
 |-|  
-|**참고**:이 저장 프로시저는에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]더 이상 사용 되지 않습니다. 더 이상 필요 하지 않으므로를 사용 하 여 시작할 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]수 없습니다.|  
+|**참고**:이 저장 프로시저는에서 더 이상 사용 되지 않습니다 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] . 더 이상 필요 하지 않으므로를 사용 하 여 시작할 수 없습니다 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .|  
   
 ## <a name="syntax"></a>구문  
   
@@ -56,7 +56,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  [Dm_db_xtp_checkpoint_files &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)에 표시 되는 데이터 파일의 트랜잭션 (bigint) 상한입니다. 트랜잭션 ID 값이 잘못된 경우 오류가 생성됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  None  

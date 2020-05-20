@@ -19,26 +19,26 @@ helpviewer_keywords:
 - dm_exec_compute_node_errors
 - sys.dm_exec_compute_node_errors management view
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b074da717a2c5deac9d576da938d1229dafeac77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5de36530fcf50a403558cb97fa72ad6a2d126e32
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830697"
 ---
 # <a name="sysdm_exec_compute_node_errors-transact-sql"></a>sys. dm_exec_compute_node_errors (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase 계산 노드에서 발생 하는 오류를 반환 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|`nvarchar(36)`|오류와 연결 된 고유 숫자 id입니다.|시스템의 모든 쿼리 오류에서 고유|  
-|source|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
-|type|`nvarchar(255)`|오류 유형입니다.||  
+|원본|`nvarchar(255)`|소스 스레드 또는 프로세스 설명||  
+|형식|`nvarchar(255)`|오류 유형입니다.||  
 |create_time|`datetime`|오류가 발생 한 시간입니다.||  
 |compute_node_id|`int`|특정 계산 노드의 식별자입니다.|Compute_node_id의 [dm_exec_compute_nodes &#40;transact-sql](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 을 참조 하세요&#41;|  
 |rexecution_id|`nvarchar(36)`|PolyBase 쿼리 (있는 경우)의 식별자입니다.||  

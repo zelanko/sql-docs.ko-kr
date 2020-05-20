@@ -18,14 +18,14 @@ helpviewer_keywords:
 - automatic page repair
 - sys.dm_hadr_auto_page_repair dynamic management view
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cd78dd4ef6e5d5b718a98c73a75b55dd548ac85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900683"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830582"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67900683"
   
   다음 표에서는 다양 한 열의 의미를 정의 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|이 행이 해당하는 데이터베이스의 ID입니다.|  
 |**file_id**|**int**|해당 페이지가 있는 파일의 ID입니다.|  

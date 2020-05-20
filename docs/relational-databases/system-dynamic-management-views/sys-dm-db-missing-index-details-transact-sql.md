@@ -18,15 +18,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263795"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829441"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ ms.locfileid: "68263795"
 |**index_handle**|**int**|특정 누락된 인덱스를 식별합니다. 이 식별자는 서버에서 고유합니다. **index_handle** 은이 테이블의 키입니다.|  
 |**database_id**|**smallint**|누락된 인덱스가 있는 테이블이 위치한 데이터베이스를 식별합니다.|  
 |**object_id**|**int**|인덱스가 없는 테이블을 식별합니다.|  
-|**equality_columns**|**nvarchar(4000)**|다음 형식의 같음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *테이블. 열* =*constant_value*|  
-|**inequality_columns**|**nvarchar(4000)**|다음 형식의 같지 않음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *테이블. 열* > *constant_value*<br /><br /> "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.|  
+|**equality_columns**|**nvarchar(4000)**|다음 형식의 같음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *table. 열*  = *constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|다음 형식의 같지 않음 조건자에 적용되는 쉼표로 구분된 열 목록입니다.<br /><br /> *table. 열*  >  *constant_value*<br /><br /> "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.|  
 |**included_columns**|**nvarchar(4000)**|쿼리에 대한 포함 열로서 필요한 쉼표로 구분된 열 목록입니다. 포괄 열 또는 포괄 열에 대 한 자세한 내용은 [포괄 열을 사용 하 여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조 하세요.<br /><br /> 메모리 최적화 인덱스 (해시 및 메모리 최적화 비클러스터형)의 경우 **included_columns**를 무시 합니다. 테이블의 모든 열은 모든 메모리 최적화 인덱스에 포함됩니다.|  
-|**선언문**|**nvarchar(4000)**|인덱스가 없는 테이블의 이름입니다.|  
+|**statement**|**nvarchar(4000)**|인덱스가 없는 테이블의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
  **sys.dm_db_missing_index_details**에서 반환된 정보는 쿼리 최적화 프로그램이 쿼리를 최적화할 때 업데이트되며 지속되지 않습니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
@@ -62,10 +62,10 @@ ms.locfileid: "68263795"
 ## <a name="transaction-consistency"></a>트랜잭션 일관성  
  트랜잭션이 테이블을 만들거나 삭제하면 삭제된 개체에 대한 누락된 인덱스 정보가 포함된 행이 이 동적 관리 개체에서 제거되어 트랜잭션 일관성이 유지됩니다.  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="see-also"></a>참고 항목  
  [dm_db_missing_index_columns &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 274276a55a7b3e91ff85330a0810f01786a5a080
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831066"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT`비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`는를 재정의 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다. *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT`는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다. 저장 프로시저가 게시자에서 호출되지 않을 경우 이 매개 변수를 사용하십시오. 지정하지 않으면 로컬 서버가 게시자인 것으로 가정합니다.  
   

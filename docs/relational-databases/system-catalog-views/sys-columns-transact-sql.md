@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.columns catalog view
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4811f9a3f7178c77699c30a2a334787eed9e41e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981960"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829737"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,19 +73,19 @@ ms.locfileid: "73981960"
 |rule_object_id|**int**|sys.sp_bindrule을 사용하여 열에 바인딩된 독립 실행형 규칙의 ID입니다.<br /><br /> 0 = 독립 실행형 규칙이 없습니다. 열 수준 CHECK 제약 조건에 대해서는 [check_constraints &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)을 참조 하십시오.|  
 |is_sparse|**bit**|1 = 열이 스파스 열입니다. 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.|  
 |is_column_set|**bit**|1 = 열이 열 집합입니다. 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.|  
-|generated_always_type|**tinyint**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열 값이 생성 되는 시기를 식별 합니다. 시스템 테이블의 열에 대해서는 항상 0입니다.<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 자세한 내용은 [Temporal Tables &#40;관계형 데이터베이스&#41;](../../relational-databases/tables/temporal-tables.md)를 참조 하세요.|  
-|generated_always_type_desc|**nvarchar(60)**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 의 값에 `generated_always_type`대 한 텍스트 설명 (시스템 테이블의 열에 대해 항상 NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
-|encryption_type|**int**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 유형:<br /><br /> 1 = 결정적 암호화<br /><br /> 2 = 임의 암호화|  
-|encryption_type_desc|**nvarchar (64)**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 유형 설명:<br /><br /> 임의<br /><br /> DETERMINISTIC|  
-|encryption_algorithm_name|**sysname**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 알고리즘의 이름입니다.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512만 지원 됩니다.|  
-|column_encryption_key_id|**int**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> CEK의 ID입니다.|  
-|column_encryption_key_database_name|**sysname**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> 열의 데이터베이스와 다른 경우 열 암호화 키가 있는 데이터베이스의 이름입니다. 키가 열과 동일한 데이터베이스에 있으면 NULL입니다.|  
-|is_hidden|**bit**|**적용**대상: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열이 숨겨져 있는지 여부를 나타냅니다.<br /><br /> 0 = 일반, 숨김, 표시 열<br /><br /> 1 = 숨겨진 열|  
-|is_masked|**bit**|**적용**대상: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열이 동적 데이터 마스킹에 의해 마스킹 되는지 여부를 나타냅니다.<br /><br /> 0 = 일반, 마스크 되지 않은 열<br /><br /> 1 = 열이 마스킹 됨|  
+|generated_always_type|**tinyint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열 값이 생성 되는 시기를 식별 합니다. 시스템 테이블의 열에 대해서는 항상 0입니다.<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> 자세한 내용은 [Temporal Tables &#40;관계형 데이터베이스&#41;](../../relational-databases/tables/temporal-tables.md)를 참조 하세요.|  
+|generated_always_type_desc|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 의 값에 대 한 텍스트 설명 `generated_always_type` (시스템 테이블의 열에 대해 항상 NOT_APPLICABLE) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|encryption_type|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 유형:<br /><br /> 1 = 결정적 암호화<br /><br /> 2 = 임의 암호화|  
+|encryption_type_desc|**nvarchar (64)**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 유형 설명:<br /><br /> 임의<br /><br /> DETERMINISTIC|  
+|encryption_algorithm_name|**sysname**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 암호화 알고리즘의 이름입니다.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512만 지원 됩니다.|  
+|column_encryption_key_id|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> CEK의 ID입니다.|  
+|column_encryption_key_database_name|**sysname**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> 열의 데이터베이스와 다른 경우 열 암호화 키가 있는 데이터베이스의 이름입니다. 키가 열과 동일한 데이터베이스에 있으면 NULL입니다.|  
+|is_hidden|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열이 숨겨져 있는지 여부를 나타냅니다.<br /><br /> 0 = 일반, 숨김, 표시 열<br /><br /> 1 = 숨겨진 열|  
+|is_masked|**bit**|**적용 대상**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 이상, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> 열이 동적 데이터 마스킹에 의해 마스킹 되는지 여부를 나타냅니다.<br /><br /> 0 = 일반, 마스크 되지 않은 열<br /><br /> 1 = 열이 마스킹 됨|  
 
 
  
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

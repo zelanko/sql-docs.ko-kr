@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 10558ea4d489ad39fe762f360affdaae372ddee6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936972"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830910"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다. 감사에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자세한 내용은 [SQL Server 감사 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조 하세요.  
+  감사 로그에 보고할 수 있는 모든 감사 동작 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit의 일부로 구성할 수 있는 모든 감사 동작 그룹에 대한 행을 반환합니다. 감사에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 감사 &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)를 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|감사 동작의 ID입니다. 각 감사 레코드에 기록 된 **action_id** 값과 관련 됩니다. Null을 허용합니다. 감사 그룹의 경우 NULL입니다.|  
 |**action_in_log**|**bit**|동작을 감사 로그에 기록할 수 있는지 여부를 나타냅니다. 값은 다음과 같습니다.<br /><br /> 1 = 예<br /><br /> 0 = 아니요|  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - dm_os_cluster_properties
 - sys.dm_os_cluster_properties
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ca7b6c657170c4e1afe5792d6e58a8e2a4aab277
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900221"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830553"
 ---
 # <a name="sysdm_os_cluster_properties-transact-sql"></a>sys.dm_os_cluster_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

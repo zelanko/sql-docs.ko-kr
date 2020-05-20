@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproc
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 645d9d6f1951c1e35bd8e72f764f46a209a77161
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054303"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830149"
 ---
 # <a name="sp_dropextendedproc-transact-sql"></a>sp_dropextendedproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **Sp_dropextendedproc** 를 실행 하면 사용자 정의 확장 저장 프로시저 이름이 [sys. objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰에서 삭제 되 고 [extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) 카탈로그 뷰에서 항목이 제거 됩니다. 이 저장 프로시저는 **master** 데이터베이스 에서만 실행할 수 있습니다.  

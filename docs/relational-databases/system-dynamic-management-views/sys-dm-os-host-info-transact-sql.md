@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_host_info dynamic management view
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8275ed39d49c8fdb64c1d2f26cc1d218c525500c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900156"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830517"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 운영 체제 버전 정보를 표시 하는 한 행을 반환 합니다.  
   
-|열 이름 |데이터 형식 |설명 |  
+|열 이름 |데이터 형식 |Description |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |운영 체제 유형: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제에 대 한 설명입니다. |
@@ -46,10 +46,10 @@ ms.locfileid: "67900156"
 ## <a name="security"></a>보안  
   
 ### <a name="permissions"></a>사용 권한  
-에 `SELECT` 대 한 `sys.dm_os_host_info` 사용 권한은 기본적으로 `public` 역할에 부여 됩니다. 해지 된 경우 서버 `VIEW SERVER STATE` 에 대 한 권한이 필요 합니다.   
+`SELECT`에 대 한 사용 권한은 `sys.dm_os_host_info` `public` 기본적으로 역할에 부여 됩니다. 해지 된 경우 `VIEW SERVER STATE` 서버에 대 한 권한이 필요 합니다.   
  
 > [!CAUTION]
->  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 버전 CTP 1.3부터 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 버전 17부터에 `SELECT` `sys.dm_os_host_info` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]연결 하기 위해에 대 한 권한이 필요 합니다. 사용 `SELECT` 권한이에서 `public`해지 된 경우 권한이 있는 `VIEW SERVER STATE` 로그인만 최신 버전의 SSMS와 연결할 수 있습니다. 과 `sqlcmd.exe` 같은 다른 도구는에 대 한 `SELECT` `sys.dm_os_host_info`권한 없이 연결할 수 있습니다.
+>  버전 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.3부터 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] 버전 17부터 `SELECT` 에 연결 하기 위해에 대 한 권한이 필요 `sys.dm_os_host_info` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 합니다. `SELECT`사용 권한이에서 해지 된 경우 `public` 권한이 있는 로그인만 `VIEW SERVER STATE` 최신 버전의 SSMS와 연결할 수 있습니다. 과 같은 다른 도구는 `sqlcmd.exe` `SELECT` 에 대 한 권한 없이 연결할 수 있습니다 `sys.dm_os_host_info` .
 
   
 ## <a name="examples"></a>예  

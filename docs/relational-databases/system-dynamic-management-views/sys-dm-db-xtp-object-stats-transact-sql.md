@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_object_stats dynamic management view
 ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e14d5162c15f38cf741ceead94c2bacb230c42a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf3997a3c0f8ed4c51651e3d32311b0c43725d59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043167"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830789"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "68043167"
 |row_delete_attempts|**bigint**|마지막 데이터베이스 다시 시작 이후 커밋된 트랜잭션 및 중단된 트랜잭션 모두에 의해 테이블에서 삭제된 행 수입니다.|  
 |write_conflicts|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 쓰기 충돌 수입니다.|  
 |unique_constraint_violations|**bigint**|마지막 데이터베이스 다시 시작 이후 발생한 UNIQUE 제약 조건 위반 수입니다.|  
-|object_address|**varbinary(8)**|내부적으로만 사용됩니다.|  
+|object_address|**varbinary(8)**|내부 전용입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  현재 데이터베이스에 대해 VIEW DATABASE STATE 권한이 필요합니다.  

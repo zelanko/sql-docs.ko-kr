@@ -18,28 +18,28 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900416"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830578"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Always On 가용성 그룹에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 조인 된 가용성 복제본을 호스팅하는 모든 인스턴스에 대해 서버 인스턴스를 호스팅하는 WSFC (Windows Server 장애 조치 (Failover) 클러스터) 노드의 이름을 반환 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Always On 가용성 그룹에 조인 된 가용성 복제본을 호스팅하는 모든 인스턴스에 대해 서버 인스턴스를 호스팅하는 WSFC (Windows Server 장애 조치 (Failover) 클러스터) 노드의 이름을 반환 합니다. 이러한 동적 관리 뷰는 다음과 같이 사용됩니다.  
   
 -   이 동적 관리 뷰는 동일한 WSFC 노드에서 호스팅되는 여러 가용성 복제본이 포함된 가용성 그룹을 검색하는 데 유용합니다. 이러한 구성은 가용성 그룹이 잘못 구성된 경우 FCI 장애 조치(failover) 이후 발생 가능한 지원되지 않는 구성입니다. 자세한 내용은 [장애 조치(failover) 클러스터링 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
 -   여러 SQL Server 인스턴스가 동일한 WSFC 노드에 호스팅되는 경우 리소스 DLL이 이 동적 관리 뷰를 사용하여 연결할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 확인합니다.  
    
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar(256)**|WSFC의 리소스로 서의 가용성 그룹에 대 한 고유 ID입니다.|  
-|**instance_name**|**nvarchar(256)**|이름-*서버*/*인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스의 이름입니다.|  
+|**instance_name**|**nvarchar(256)**|이름-*서버* / *인스턴스*-가용성 그룹의 복제본을 호스팅하는 서버 인스턴스의 이름입니다.|  
 |**node_name**|**nvarchar(256)**|WSFC 노드의 이름입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

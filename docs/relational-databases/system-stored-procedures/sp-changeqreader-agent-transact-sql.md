@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2258510d8e28230d238d4187cb3d454078d60842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099145"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829557"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'`에이전트가 실행 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]에이전트가 실행 되는 Windows 계정의 로그인입니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다.  
   
 `[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -55,7 +55,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_changeqreader_agent**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

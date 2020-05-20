@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.views catalog view
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5f7d4c9c6bb44d978007170abfff5a7730b028a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bb5fb2353c20d379714faeceb82eaca574b0335f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095535"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831272"
 ---
 # <a name="sysviews-transact-sql"></a>sys.views(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   각 뷰 개체에 대 한 행을 포함 **합니다. 여기에는 sys. type** = V가 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 을 참조 하세요&#41;|  
 |**is_replicated**|**bit**|1 = 뷰가 복제됩니다.|  

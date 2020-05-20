@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_filestream_non_transacted_handles dynamic management view
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 22a45505d5b79e7431902331d1dbca5ef0facbbf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950987"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830597"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67950987"
   
  자세한 내용은 [FileTables 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
-|**열의**|**Type**|**설명**|  
+|**열**|**Type**|**설명**|  
 |----------------|--------------|---------------------|  
 |database_id|int|핸들과 연결된 데이터베이스의 ID입니다.|  
 |object_id|int|핸들이 연결된 FileTable의 개체 ID입니다.|  

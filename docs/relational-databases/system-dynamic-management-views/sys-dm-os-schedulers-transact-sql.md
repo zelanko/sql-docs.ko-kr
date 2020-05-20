@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2597289894f3a037e9ad8ada499b5f2d259ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abf872e708b04e7c31b65bec3d90d357520b5c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72289397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829343"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "72289397"
   각 스케줄러가 개별 프로세서에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 스케줄러당 하나의 행을 반환합니다. 이 뷰를 사용하여 스케줄러 상태를 모니터링하거나 런어웨이 태스크를 식별할 수 있습니다. 스케줄러에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_schedulers**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_schedulers**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. Null을 허용하지 않습니다.|  
 |parent_node_id|**int**|부모 노드라고도 하는 스케줄러가 속한 노드의 ID입니다. 이것은 NUMA(Non-Uniform Memory Access) 노드를 나타냅니다. Null을 허용하지 않습니다.|  
 |scheduler_id|**int**|스케줄러의 ID입니다. 일반 쿼리를 실행하는 데 사용되는 모든 스케줄러에는 1048576 미만의 ID 번호가 있습니다. 관리자 전용 연결 스케줄러와 같이 ID가 1048576보다 크거나 같은 스케줄러는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 내부적으로 사용됩니다. Null을 허용하지 않습니다.|  
-|cpu_id|**smallint**|스케줄러에 할당된 CPU ID입니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> **참고:** 255는에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같이 선호도를 나타내지 않습니다. 추가 선호도 정보는 [dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 를 참조 하세요.|  
+|cpu_id|**smallint**|스케줄러에 할당된 CPU ID입니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> **참고:** 255는에서와 같이 선호도를 나타내지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 추가 선호도 정보는 [dm_os_threads &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) 를 참조 하세요.|  
 |상태|**nvarchar(60)**|스케줄러의 상태를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> -온라인에서 숨김<br />-오프 라인으로 숨김<br />-온라인에서 표시<br />-오프 라인으로 표시<br />-온라인에서 볼 때 (DAC)<br />-HOT_ADDED<br /><br /> Null을 허용하지 않습니다.<br /><br /> HIDDEN 스케줄러는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 내부의 요청을 처리하는 데 사용되고 VISIBLE 스케줄러는 사용자 요청을 처리하는 데 사용됩니다.<br /><br /> OFFLINE 스케줄러는 선호도 마스크에서 오프라인 상태인 프로세서에 매핑되므로 다른 요청을 처리하는 데 사용되지 않습니다. ONLINE 스케줄러는 선호도 마스크에서 온라인 상태인 프로세서에 매핑되므로 스레드 처리에 사용할 수 있습니다.<br /><br /> DAC는 스케줄러가 관리자 전용 연결로 실행되고 있음을 나타냅니다.<br /><br /> HOT ADDED는 hot add CPU 이벤트에 대한 응답으로 스케줄러가 추가되었음을 나타냅니다.|  
 |is_online|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 서버에서 사용할 수 있는 프로세서 중 일부만 사용하도록 구성된 경우 이 구성은 일부 스케줄러가 선호도 마스크에 없는 프로세서에 매핑되어 있음을 의미할 수 있습니다. 이 경우 이 열은 0을 반환합니다. 이 값은 스케줄러가 쿼리나 일괄 처리를 처리하는 데 사용되고 있지 않음을 의미합니다.<br /><br /> Null을 허용하지 않습니다.|  
 |is_idle|**bit**|1 = 스케줄러가 유휴 상태입니다. 현재 실행되고 있는 작업자가 없습니다. Null을 허용하지 않습니다.|  
@@ -62,14 +62,14 @@ ms.locfileid: "72289397"
 |task_memory_object_address|**varbinary(8)**|태스크 메모리 개체의 메모리 주소입니다. Null을 허용하지 않습니다. 자세한 내용은 [dm_os_memory_objects &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)을 참조 하십시오.|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] SQLOS에 사용된 스케줄러 퀀텀을 노출합니다.|  
 | total_cpu_usage_ms |**bigint**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 <br><br> 비 선점형 작업자에 의해 보고 된이 스케줄러에서 사용 된 총 CPU입니다. Null을 허용하지 않습니다.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)][서비스 수준 목표](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)에 따라 제한을 나타냅니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Azure 버전이 아닌 경우에는 항상 0입니다. Null을 허용합니다.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)][서비스 수준 목표](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)에 따라 제한을 나타냅니다. Azure 버전이 아닌 경우에는 항상 0입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Null을 허용합니다.|
 |total_scheduler_delay_ms|**bigint**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 <br><br> 한 작업자와 다른 작업자 간의 전환 간의 시간입니다. 선점형 작업 자가 다음 비 선점형 작업자의 일정을 지연 하거나 다른 프로세스의 OS 예약 스레드로 인해 발생할 수 있습니다. Null을 허용하지 않습니다.|
 |ideal_workers_limit|**int**|**적용**대상: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 이상 <br><br> 스케줄러에 가장 적합 한 작업자 수 현재 작업 자가 부하가 분산 된 작업 로드로 인 한 제한을 초과 하는 경우 유휴 상태가 되 면 잘립니다. Null을 허용하지 않습니다.|
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+## <a name="permissions"></a>권한
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="examples"></a>예  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f522fde05ce951575d3e02b3cdc4d3336056bd4e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0abb6be6bc64ba0e55c3f7528d5b7996185f0f2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026807"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830804"
 ---
 # <a name="sysdm_db_xtp_merge_requests-transact-sql"></a>sys.dm_db_xtp_merge_requests(Transact-SQL)
 
@@ -28,7 +28,7 @@ ms.locfileid: "68026807"
 
 ## <a name="columns-in-the-report"></a>보고서의 열
 
-| 열 이름 | 데이터 형식 | 설명 |
+| 열 이름 | 데이터 형식 | Description |
 | :-- | :-- | :-- |
 | request_state | tinyint | 병합 요청의 상태입니다.<br/>0 = 요청됨<br/>1 = 보류 중<br/>2 = 설치 됨<br/>3 = 중단됨 |
 | request_state_desc | nvarchar(60) | 요청의 현재 상태에 대 한 의미입니다.<br/><br/>요청 됨-병합 요청이 있습니다.<br/>보류 중-병합을 처리 하는 중입니다.<br/>설치 됨-병합이 완료 되었습니다.<br/>중단 됨-저장소 부족으로 인해 병합을 완료할 수 없습니다. |

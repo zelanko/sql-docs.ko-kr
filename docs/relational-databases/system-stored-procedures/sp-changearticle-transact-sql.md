@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771397"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829726"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|**Xml** 열에 인덱스를 복제 합니다.|  
 ||**0x8000000**|구독자에 없는 스키마를 만듭니다.|  
 ||**0x10000000**|구독자에서 **xml** 열을 **ntext** 로 변환 합니다.|  
-||**0x20000000**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에 도입 된 large object 데이터 형식 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]**nvarchar (max)**, **varchar (max)** 및 **varbinary (max)**)을에서 지원 되는 데이터 형식으로 변환 합니다.|  
+||**0x20000000**|에 도입 된 large object 데이터 형식 (**nvarchar (max)**, **varchar (max)** 및 **varbinary (max)**) [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 을에서 지원 되는 데이터 형식으로 변환 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 합니다.|  
 ||**0x40000000**|사용 권한을 복제합니다.|  
 ||**0x80000000**|게시의 일부가 아닌 개체에 대한 종속성을 삭제합니다.|  
-||**0x100000000**|**Varbinary (max)** 열에 지정 된 경우이 옵션을 사용 하 여 FILESTREAM 특성을 복제 합니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블은이 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 스키마 옵션이 설정 된 방법에 관계 없이 구독자에 복제할 수 없습니다.<br /><br /> 관련 옵션 **0x800000000**을 참조 하십시오.|  
-||**0x200000000**|에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 도입 된 날짜 및 시간 데이터 형식 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**date**, **time**, **datetimeoffset**및 **datetime2**)을 이전 버전의에서 지원 되는 데이터 형식으로 변환 합니다.|  
+||**0x100000000**|**Varbinary (max)** 열에 지정 된 경우이 옵션을 사용 하 여 FILESTREAM 특성을 복제 합니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 은이 스키마 옵션이 설정 된 방법에 관계 없이 구독자에 복제할 수 없습니다.<br /><br /> 관련 옵션 **0x800000000**을 참조 하십시오.|  
+||**0x200000000**|에서 도입 된 날짜 및 시간 데이터 형식 (**date**, **time**, **datetimeoffset**및 **datetime2**) [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 을 이전 버전의에서 지원 되는 데이터 형식으로 변환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
 ||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅샷을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조 하세요.<br /><br /> 관련 옵션인 **0x100000000**을 참조 하십시오.|  
-||**0x1000000000**|UDT 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있도록 CLR (공용 언어 런타임) udt (사용자 정의 형식)를 8000 바이트에서 **varbinary (max)** 로 변환 합니다.|  
-||**0x2000000000**|**Hierarchyid 데이터 형식을** **varbinary (max)** 로 변환 하 여 **hierarchyid** 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있습니다. 복제 된 테이블에서 **hierarchyid** 열을 사용 하는 방법에 대 한 자세한 내용은 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)를 참조 하세요.|  
+||**0x1000000000**|UDT 형식의 열을를 실행 하는 구독자로 복제할 수 있도록 CLR (공용 언어 런타임) Udt (사용자 정의 형식)를 8000 바이트에서 **varbinary (max)** 로 변환 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 합니다.|  
+||**0x2000000000**|**Hierarchyid 데이터 형식을** **varbinary (max)** 로 변환 하 여 **hierarchyid** 형식의 열을를 실행 하는 구독자로 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 복제 된 테이블에서 **hierarchyid** 열을 사용 하는 방법에 대 한 자세한 내용은 [hierarchyid &#40;transact-sql&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)를 참조 하세요.|  
 ||**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조 하세요.|  
-||**0x8000000000**|**Geography** 및 **geometry** 데이터 형식을 **varbinary (max)** 로 변환 하 여 이러한 형식의 열을를 실행 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]하는 구독자로 복제할 수 있습니다.|  
+||**0x8000000000**|**Geography** 및 **geometry** 데이터 형식을 **varbinary (max)** 로 변환 하 여 이러한 형식의 열을를 실행 하는 구독자로 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 ||**0x10000000000**|**Geography** 및 **geometry**형식의 열에 대 한 인덱스를 복제 합니다.|  
 ||**0x20000000000**|열에 대한 SPARSE 특성을 복제합니다. 이 특성에 대 한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조 하세요.|  
 ||**0x40000000000으로 설정**|구독자에서 메모리 액세스에 최적화 된 테이블을 만들기 위해 스냅숏 에이전트에서 스크립팅을 사용 하도록 설정 합니다.|  
@@ -157,10 +157,10 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  변경 시 기존의 모든 구독을 다시 초기화해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -228,12 +228,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x200000**, **0x800000**, **0x40000000**및 **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x200000**, **0x800000**, **0x40000000**및 **0x80000000**|  
   
 > [!NOTE]
->  지연 업데이트 게시의 경우 **0x80** 의 *schema_option* 값을 사용 하도록 설정 해야 합니다. 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시에 대해 지원 되는 *schema_option* 값은 **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** 및 **0x4000**입니다.  
+>  지연 업데이트 게시의 경우 **0x80** 의 *schema_option* 값을 사용 하도록 설정 해야 합니다. 이외 게시에 대해 지원 되는 *schema_option* 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** 및 **0x4000**입니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changearticle**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

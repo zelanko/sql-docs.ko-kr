@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_identity_range_allocations system table
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f9adbc21b0c226746c879bf1b32377c93b2d76c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68072656"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829268"
 ---
 # <a name="msmerge_identity_range_allocations-transact-sql"></a>MSmerge_identity_range_allocations(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_identity_range_allocations** 테이블은 게시 된 아티클에 대 한 id 범위 할당 기록을 게시자와 구독자 모두에 추적 하는 데 사용 됩니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**nvarchar(128)**|게시 데이터베이스의 이름입니다.|  

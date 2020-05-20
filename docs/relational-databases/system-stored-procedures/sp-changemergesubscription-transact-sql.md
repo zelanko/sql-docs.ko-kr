@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3f7597272a1547a11f2c76e65fab391e2fbcd05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124866"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829609"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`지정 된 *속성*의 새 값입니다. *value* 는 **nvarchar (255)** 이며 테이블에 있는 값 중 하나일 수 있습니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**한**||해당 병합 구독에 관한 설명입니다.|  
 |**priority**||구독 우선 순위입니다. 우선 순위는 기본 해결 프로그램이 충돌을 감지했을 때 먼저 적용할 항목을 선택하는 데 사용합니다.|  
@@ -80,7 +80,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

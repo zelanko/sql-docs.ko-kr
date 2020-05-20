@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097839"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830647"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|커서가 열려 있는지 여부를 지정합니다.|  
 |**is_async_population**|**bit**|백그라운드 스레드가 여전히 KEYSET 또는 STATIC 커서를 비동기적으로 채우고 있는지 여부를 지정합니다.|  
 |**is_close_on_commit**|**bit**|커서가 CURSOR_CLOSE_ON_COMMIT을 사용하여 선언되었는지 여부를 지정합니다.<br /><br /> 1 = 트랜잭션이 종료될 때 커서가 닫힙니다.|  
-|**fetch_status**|**int**|커서의 마지막 인출 상태를 반환합니다. 마지막으로 반환 된 @@FETCH_STATUS 값입니다.|  
+|**fetch_status**|**int**|커서의 마지막 인출 상태를 반환합니다. 마지막으로 반환 된 @ @FETCH_STATUS 값입니다.|  
 |**fetch_buffer_size**|**int**|인출 버퍼 크기에 대한 정보를 반환합니다.<br /><br /> 1 = Transact-SQL 커서입니다. API 커서의 경우 더 높은 값으로 설정할 수 있습니다.|  
 |**fetch_buffer_start**|**int**|FAST_FORWARD 및 DYNAMIC 커서의 경우, 커서가 열려 있지 않거나 첫 번째 행 앞에 있으면 0을 반환합니다. 그렇지 않으면 -1을 반환합니다.<br /><br /> STATIC 및 KEYSET 커서의 경우, 커서가 열려 있지 않으면 0을 반환하고 커서가 마지막 행 뒤에 있으면 -1을 반환합니다.<br /><br /> 그렇지 않으면 커서가 있는 행 번호를 반환합니다.|  
 |**ansi_position**|**int**|인출 버퍼 내의 커서 위치입니다.|  
@@ -74,14 +74,14 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="remarks"></a>설명  
  다음 표에서는 커서 선언 인터페이스에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |API|데이터 액세스 API(ODBC, OLEDB) 중 하나를 사용하여 커서가 선언되었습니다.|  
 |TSQL|Transact-SQL DECLARE CURSOR 구문을 사용하여 커서가 선언되었습니다.|  
   
  다음 표에서는 커서 유형에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|Type|설명|  
+|형식|설명|  
 |----------|-----------------|  
 |Keyset|키 집합 커서로 선언되었습니다.|  
 |동적|동적 커서로 선언되었습니다.|  
@@ -90,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 동시성에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|동시성|Description|  
+|동시성|설명|  
 |-----------------|-----------------|  
 |읽기 전용|커서가 읽기 전용으로 선언되었습니다.|  
 |Scroll Locks|커서가 스크롤 잠금을 사용합니다.|  
@@ -101,7 +101,7 @@ dm_exec_cursors (session_id | 0 )
 |범위|Description|  
 |-----------|-----------------|  
 |로컬|커서 범위를 커서가 생성된 일괄 처리, 저장 프로시저, 트리거에 대해 로컬로 지정합니다.|  
-|Global|커서 범위를 연결에 대해 전역으로 지정합니다.|  
+|전역|커서 범위를 연결에 대해 전역으로 지정합니다.|  
   
 ## <a name="examples"></a>예  
   

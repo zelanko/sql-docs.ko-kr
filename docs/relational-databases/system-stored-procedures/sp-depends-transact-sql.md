@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053107"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830238"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +63,17 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>결과 집합  
  **sp_depends** 는 두 개의 결과 집합을 표시 합니다.  
   
- 다음 결과 집합은 * \<개체>* 종속 된 개체를 표시 합니다.  
+ 다음 결과 집합은 * \< 개체>* 종속 된 개체를 표시 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|종속성이 있는 항목의 이름입니다.|  
 |**type**|**nvarchar (16)**|항목의 유형입니다.|  
-|**updated**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
+|**업데이트됨**|**nvarchar (7)**|항목의 업데이트 여부를 결정합니다.|  
 |**선택**|**nvarchar(8)**|SELECT 문에서 항목의 사용 여부를 결정합니다.|  
-|**열의**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
+|**column**|**sysname**|종속성이 있는 열 또는 매개 변수입니다.|  
   
- 다음 결과 집합은 * \<개체>* 에 종속 된 개체를 표시 합니다.  
+ 다음 결과 집합은 * \< 개체>* 에 종속 된 개체를 표시 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

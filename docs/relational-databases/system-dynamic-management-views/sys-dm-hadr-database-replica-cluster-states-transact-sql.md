@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_database_replica_cluster_states dynamic management view
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73f6af5cb03c19c106e55b074c402aa2cf4f4c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900667"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830585"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67900667"
   
 -   [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**Log_reuse_wait_desc** 열 값이 "AVAILABILITY_REPLICA" 인 경우 가용성 그룹의 보조 복제본이 지정 된 주 데이터베이스에서 로그 잘림을 보류 하 고 있습니까?     
    
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|가용성 그룹 내 가용성 복제본의 식별자입니다.|  
 |**group_database_id**|**uniqueidentifier**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  

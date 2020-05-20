@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98902f096bb960436d764416e2563af5056f00dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7d0e9c5198b65a6e4ddce148dbafd46821e2f40
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874155"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830546"
 ---
 # <a name="sysdm_io_backup_tapes-transact-sql"></a>sys.dm_io_backup_tapes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "70874155"
 |**media_sequence_number**|**int**|미디어 패밀리 내 볼륨의 인덱스 (1* ... n*). Null을 허용합니다.|  
 |**tape_operation**|**int**|수행 중인 테이프 작업:<br /><br /> 1 = 읽기<br /><br /> 2 = 포맷<br /><br /> 3 = 초기화<br /><br /> 4 = 추가<br /><br /> Null을 허용합니다.|  
 |**tape_operation_desc**|**nvarchar(120)**|수행 중인 테이프 작업입니다.<br /><br /> READ<br /><br /> FORMAT<br /><br /> INIT<br /><br /> APPEND<br /><br /> Null을 허용합니다.|  
-|**mount_request_type**|**int**|탑재 요청 유형입니다.<br /><br /> 1 = 특정 테이프. **Media_\* ** 필드에 의해 식별 되는 테이프가 필요 합니다.<br /><br /> 2 = 다음 미디어 패밀리. 아직 복원되지 않은 다음 미디어 패밀리를 요청합니다. 이 유형은 복원하는 디바이스 수가 미디어 패밀리 수보다 적을 때 사용됩니다.<br /><br /> 3 = 연속 테이프. 미디어 패밀리를 확장 중이며 연속 테이프를 요청합니다.<br /><br /> Null을 허용합니다.|  
+|**mount_request_type**|**int**|탑재 요청 유형입니다.<br /><br /> 1 = 특정 테이프. **Media_ \* ** 필드에 의해 식별 되는 테이프가 필요 합니다.<br /><br /> 2 = 다음 미디어 패밀리. 아직 복원되지 않은 다음 미디어 패밀리를 요청합니다. 이 유형은 복원하는 디바이스 수가 미디어 패밀리 수보다 적을 때 사용됩니다.<br /><br /> 3 = 연속 테이프. 미디어 패밀리를 확장 중이며 연속 테이프를 요청합니다.<br /><br /> Null을 허용합니다.|  
 |**mount_request_type_desc**|**nvarchar(120)**|탑재 요청 유형입니다.<br /><br /> SPECIFIC TAPE<br /><br /> NEXT MEDIA FAMILY<br /><br /> CONTINUATION VOLUME<br /><br /> Null을 허용합니다.|  
   
 ## <a name="permissions"></a>사용 권한  

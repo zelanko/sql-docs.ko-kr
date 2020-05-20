@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092669"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831037"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자에 속하는 게시에는 *게시자* 를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 안 됩니다.  
+>  게시자에 속하는 게시에는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,9 +57,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_marksubscriptionvalidation** 은 트랜잭션 복제에 사용 됩니다.  
   
- **sp_marksubscriptionvalidation** 는 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지원 하지 않습니다.  
+ **sp_marksubscriptionvalidation** 는 이외 구독자를 지원 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우에는 명시적 트랜잭션 내에서 **sp_marksubscriptionvalidation** 를 실행할 수 없습니다. 이는 게시자에 액세스하는 데 사용되는 연결된 서버 연결을 통해서는 명시적 트랜잭션이 지원되지 않기 때문입니다.  
+ 이외 게시자의 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 명시적 트랜잭션 내에서 **sp_marksubscriptionvalidation** 를 실행할 수 없습니다. 이는 게시자에 액세스하는 데 사용되는 연결된 서버 연결을 통해서는 명시적 트랜잭션이 지원되지 않기 때문입니다.  
   
  **sp_marksubscriptionvalidation** 는 *subscription_level*에 대해 값 **1** 을 지정 하 고 sp_marksubscriptionvalidation에 대 한 다른 호출에서 다른 구독자에 대해 현재 열려 있는 트랜잭션을 **표시 하는** 데 사용할 수 [sp_article_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)와 함께 사용 해야 합니다.  
   

@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_columns catalog view
 ms.assetid: 4ab1d48a-d57a-4e76-a08c-9627eeaf4588
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdb28d10d04c21f0d377777b41c332eb20d1ee9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 76706ee2d516bce0f60a78224c983056b5220d72
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831320"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   열이 있는 시스템 개체의 각 열당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속한 개체의 ID입니다.|  
 |**name**|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  

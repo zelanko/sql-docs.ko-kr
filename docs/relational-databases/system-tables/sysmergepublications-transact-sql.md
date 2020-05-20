@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029783"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829838"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029783"
 |**alt_snapshot_folder**|**nvarchar(255)**|스냅샷에 대한 대체 폴더의 위치입니다.|  
 |**pre_snapshot_script**|**nvarchar(255)**|에 대 한 포인터입니다. 구독자에서 스냅숏을 적용할 때 병합 에이전트 복제 개체 스크립트 보다 먼저 실행 되는 **sql** 파일입니다.|  
 |**post_snapshot_script**|**nvarchar(255)**|에 대 한 포인터입니다. 초기 동기화 중에 다른 모든 복제 개체 스크립트 및 데이터를 적용 한 후 병합 에이전트 실행 되는 **sql** 파일입니다.|  
-|**compress_snapshot**|**bit**|**Alt_snapshot_folder** 위치에 작성 된 스냅숏이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 압축 되는지 여부를 지정 합니다. **0** 은 파일이 압축 되지 않도록 지정 합니다.|  
+|**compress_snapshot**|**bit**|**Alt_snapshot_folder** 위치에 작성 된 스냅숏이 CAB 형식으로 압축 되는지 여부를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . **0** 은 파일이 압축 되지 않도록 지정 합니다.|  
 |**ftp_address**|**sysname**|배포자용 FTP(파일 전송 프로토콜) 서비스의 네트워크 주소입니다. FTP를 사용하는 경우 병합 에이전트가 선택할 수 있도록 게시 스냅샷 파일을 둘 장소를 지정합니다.|  
 |**ftp_port**|**int**|배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_subdirectory**|**nvarchar(255)**|병합 에이전트가 스냅샷 파일을 선택할 수 있는 하위 디렉터리입니다.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029783"
 |**allow_synctoalternate**|**bit**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. **0** 은 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
 |**validate_subscriber_info**|**nvarchar (500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID는 게시가 Active Directory 게시 되도록 지정 하 고 GUID는 해당 Active Directory 게시 개체 **objectGUID**입니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.|  
-|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|데이터베이스 호환성 수준이며 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|최대 동시 병합 프로세스 수입니다. 이 속성 값이 **0** 이면 지정 된 시간에 실행 중인 동시 병합 프로세스 수에 제한이 없음을 의미 합니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 병합 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅샷 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**max_concurrent_dynamic_snapshots**|**int**|병합 게시에 대해 동시에 실행할 수 있는 필터링된 동시 데이터 스냅샷 세션의 최대 수입니다. **0**인 경우 지정 된 시간에 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 제한이 없습니다. 이 속성은 병합 게시에 대해 한 번에 실행할 수 있는 동시 스냅샷 프로세스의 수를 제한합니다. 실행하도록 허용된 값보다 많은 스냅샷 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 병합 프로세스가 완료될 때까지 기다립니다.|  
 |**use_partition_groups**|**smallint**|게시에서 사전 계산 파티션을 사용하는지 여부를 지정합니다.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_backuphistory
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: afaf4166facc16e7582f3978f3806d8d5a68fb0e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120060"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831277"
 ---
 # <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_delete_backuphistory** **msdb** 데이터베이스에서 실행 해야 하며 다음 테이블에 영향을 줍니다.  

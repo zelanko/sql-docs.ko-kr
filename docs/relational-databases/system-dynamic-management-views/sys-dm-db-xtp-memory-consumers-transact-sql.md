@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2efcff0a713c4f7f59206b484c26c4c797cd343
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026824"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830781"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68026824"
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 ID(내부)입니다.|  
 |memory_consumer_type|**int**|메모리 소비자 유형입니다.<br /><br /> 0=Aggregation. (둘 이상 소비자의 메모리 사용량을 집계합니다. 표시되어서는 안 됩니다.)<br /><br /> 2=VARHEAP(가변 길이 힙에 대한 메모리 소비량을 추적합니다.)<br /><br /> 3=HASH(인덱스에 대한 메모리 소비를 추적합니다.)<br /><br /> 5=DB 페이지 풀(런타임 작업에 사용되는 데이터베이스 페이지 풀에 대한 메모리 소비량을 추적합니다. 예를 들어 테이블 변수 및 일부 순차 가능 검색입니다. 데이터베이스당 이 유형의 메모리 소비자는 하나뿐입니다.)|  
@@ -46,10 +46,10 @@ ms.locfileid: "68026824"
 |allocated_bytes|**bigint**|이 소비자에 대해 예약된 바이트 수입니다.|  
 |used_bytes|**bigint**|이 소비자가 사용하는 바이트입니다. varheap에만 적용됩니다.|  
 |allocation_count|**int**|할당 수입니다.|  
-|partition_count|**int**|내부적으로만 사용됩니다.|  
-|sizeclass_count|**int**|내부적으로만 사용됩니다.|  
-|min_sizeclass|**int**|내부적으로만 사용됩니다.|  
-|max_sizeclass|**int**|내부적으로만 사용됩니다.|  
+|partition_count|**int**|내부 전용입니다.|  
+|sizeclass_count|**int**|내부 전용입니다.|  
+|min_sizeclass|**int**|내부 전용입니다.|  
+|max_sizeclass|**int**|내부 전용입니다.|  
 |memory_consumer_address|**varbinary**|소비자의 내부 주소입니다. 내부 전용입니다.|  
 |xtp_object_id|**bigint**|메모리 액세스에 최적화 된 테이블에 해당 하는 메모리 내 OLTP 개체 ID입니다.|  
   

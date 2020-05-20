@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 53bb2daacf55bf86693f2e083262083d7cbff22b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72306274"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831251"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +64,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>설명  
- ** \@Originating_server** 인수는 내부용으로 예약 되어 있습니다.  
+ ** \@ Originating_server** 인수는 내부용으로 예약 되어 있습니다.  
   
- ** \@Delete_unused_schedule** 인수는 작업에 연결 되지 않은 일정을 자동으로 제거 하 여 이전 버전의 SQL Server와 이전 버전과의 호환성을 제공 합니다. 이 매개 변수는 이전 버전과의 호환성 동작이 기본적으로 설정되어 있습니다. 작업에 연결 되지 않은 일정을 유지 하려면 값 **0** 을 ** \@delete_unused_schedule** 인수로 제공 해야 합니다.  
+ ** \@ Delete_unused_schedule** 인수는 작업에 연결 되지 않은 일정을 자동으로 제거 하 여 이전 버전의 SQL Server와 이전 버전과의 호환성을 제공 합니다. 이 매개 변수는 이전 버전과의 호환성 동작이 기본적으로 설정되어 있습니다. 작업에 연결 되지 않은 일정을 유지 하려면 값 **0** 을 ** \@ delete_unused_schedule** 인수로 제공 해야 합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   

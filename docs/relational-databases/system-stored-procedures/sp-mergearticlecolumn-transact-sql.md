@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831012"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`게시에 있는 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @column = ] 'column'`수직 분할을 만들 열을 식별 합니다. *열* 은 **sysname**이며 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *작업이* **drop**으로 설정 된 경우에는 *열* 이 NULL 일 수 없습니다. 아티클에서 열을 제외 하려면 **sp_mergearticlecolumn** 를 실행 하 고 지정 된 *아티클에서*제거할 열 `@operation = N'drop'` *과 열을 지정 합니다* .  
+`[ @column = ] 'column'`수직 분할을 만들 열을 식별 합니다. *열* 은 **sysname**이며 기본값은 NULL입니다. NULL 및 `@operation = N'add'`일 경우 원본 테이블의 모든 열이 기본적으로 아티클에 추가됩니다. *작업이* **drop**으로 설정 된 경우에는 *열* 이 NULL 일 수 없습니다. 아티클에서 열을 제외 하려면 **sp_mergearticlecolumn** 를 실행 하 고 지정 된 아티클에서 제거할 열 *과 열을 지정* `@operation = N'drop'` 합니다 *article*.  
   
 `[ @operation = ] 'operation'`복제 상태입니다. *연산은* **nvarchar (4)** 이며 기본값은 ADD입니다. **추가** 는 복제를 위해 열을 표시 합니다. **drop** 은 열을 지웁니다.  
   

@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_elements catalog view
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d43f30f15502a41882190dcdd19984d9ec042d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1be210ca687ff19c5e1dfaf56923a55c731807c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037387"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831291"
 ---
 # <a name="sysxml_schema_elements-transact-sql"></a>sys.xml_schema_elements(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Symbol_space** **E**의 형식인 XML 스키마 구성 요소별 행을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**|**--**|[Xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)에서 열을 상속 합니다.|  
 |**is_default_fixed**|**bit**|1 = 기본값이 고정 값입니다. XML 인스턴스에서 이 값을 무시할 수 없습니다.<br /><br /> 0 = 기본값이 요소에 대해 고정 값이 않습니다(기본값).|  

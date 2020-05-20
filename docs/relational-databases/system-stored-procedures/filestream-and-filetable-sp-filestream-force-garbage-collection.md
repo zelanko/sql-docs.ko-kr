@@ -16,14 +16,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cbf1658fd1567d9cdd3c35e02195435b6e86adcc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942282"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830404"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ sp_filestream_force_garbage_collection
   
 |||  
 |-|-|  
-|값|Description|  
+|값|설명|  
 |0|작업 성공|  
 |1|작업 실패|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |*file_name*|FILESTREAM 컨테이너 이름을 나타냅니다.|  
 |*num_collected_items*|이 컨테이너에서 가비지 수집된(삭제된) FILESTREAM 항목(파일/디렉터리) 수를 나타냅니다.|  
@@ -79,7 +79,7 @@ sp_filestream_force_garbage_collection
 
 2 단계 작업으로 인해 저장 프로시저를 두 번 실행 하 여 기본 Filestream 파일을 실제로 삭제 해야 합니다.  
 
-GC (가비지 수집)는 로그 잘림에 의존 합니다. 따라서 전체 복구 모델을 사용 하는 데이터베이스에서 최근에 파일을 삭제 한 경우에는 해당 트랜잭션 로그 부분의 로그 백업을 수행 하 고 로그 부분을 비활성으로 표시 한 후에만 GC를 사용 합니다. 단순 복구 모델을 사용 하는 데이터베이스에서 데이터베이스에 대해 `CHECKPOINT` 가 실행 된 후 로그 잘림이 발생 합니다.  
+GC (가비지 수집)는 로그 잘림에 의존 합니다. 따라서 전체 복구 모델을 사용 하는 데이터베이스에서 최근에 파일을 삭제 한 경우에는 해당 트랜잭션 로그 부분의 로그 백업을 수행 하 고 로그 부분을 비활성으로 표시 한 후에만 GC를 사용 합니다. 단순 복구 모델을 사용 하는 데이터베이스에서 `CHECKPOINT` 데이터베이스에 대해가 실행 된 후 로그 잘림이 발생 합니다.  
 
 
 ## <a name="permissions"></a>사용 권한  

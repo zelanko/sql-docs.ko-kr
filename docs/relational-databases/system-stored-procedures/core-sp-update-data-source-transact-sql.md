@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942464"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829672"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,22 +46,22 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 은 **uniqueidentifier**이며 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collection_sets 뷰를 쿼리합니다.  
   
- [ @machine_name = ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  컬렉션 집합이 있는 서버의 이름입니다. *machine_name* 는 **sysname** 이며 기본값은 없습니다.  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  컬렉션 집합의 인스턴스 이름입니다. *named_instance* 는 **sysname**이며 기본값은 없습니다.  
   
 > [!NOTE]  
->  *named_instance* 는 *computername*\\*instancename*형식의 컴퓨터 이름과 인스턴스 이름으로 구성 된 정규화 된 인스턴스 이름 이어야 합니다.  
+>  *named_instance* 는 *computername*instancename 형식의 컴퓨터 이름과 인스턴스 이름으로 구성 된 정규화 된 인스턴스 이름 이어야 합니다 \\ *instancename*.  
   
- [ @days_until_expiration = ] *days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  스냅샷 데이터 보존 기간 중 남은 일수입니다. *days_until_expiration* 은 **smallint**입니다.  
   
- [ @source_id = ] *source_id*  
+ [ @source_id =] *source_id*  
  업데이트 원본의 고유 식별자입니다. *source_id* **int** 이며 OUTPUT으로 반환 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -74,7 +74,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 -   days_until_expiration의 값이 변경된 경우  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Mdw_writer** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  

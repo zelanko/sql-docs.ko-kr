@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletetracertokenhistory
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6be1b5454fd134cd6c5de0473d404ec38cddedf3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771137"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830293"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory(Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 게시자의 이름입니다. 데이터 형식은 **sysname**입니다. 기본값은 *null*입니다.
 
 > [!NOTE]
-> 이 매개 변수는 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서만 지정 하거나 배포자에서 저장 프로시저를 실행 하는 경우에만 지정 해야 합니다.
+> 이 매개 변수는 이외 게시자에 대해서만 지정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 배포자에서 저장 프로시저를 실행 하는 경우에만 지정 해야 합니다.
 
 `[ @publisher_db= ] 'publisher_db'`  
 게시 데이터베이스의 이름입니다. 데이터 형식은 **sysname**입니다. 기본값은 NULL입니다. 이 매개 변수는 게시자에서 저장 프로시저가 실행될 경우 무시됩니다.

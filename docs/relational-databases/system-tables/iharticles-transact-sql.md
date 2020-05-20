@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHarticles system table
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e5ccf91f17022ccf910c840c1af2abb7a4048dfb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829906"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68056216"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**int**|아티클에 대해 고유한 ID를 제공하는 ID 열입니다.|  
 |**name**|**sysname**|아티클과 관련된 이름이며 게시 내에서 고유합니다.|  
@@ -54,7 +54,7 @@ ms.locfileid: "68056216"
 |**objid**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
 |**sync_objid**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  
 |**한**|**nvarchar(255)**|아티클에 대한 설명 항목입니다.|  
-|**publisher_status**|**int**|게시 된 아티클을 정의 하는 뷰가 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 호출 하 여 정의 되었는지 여부를 나타내는 데 사용 됩니다.<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되었습니다.<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되지 않았습니다.|  
+|**publisher_status**|**int**|게시 된 아티클을 정의 하는 뷰가 [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 호출 하 여 정의 되었는지 여부를 나타내는 데 사용 됩니다.<br /><br /> **0**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되었습니다.<br /><br /> **1**  =  [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) 가 호출 되지 않았습니다.|  
 |**article_view_owner**|**nvarchar(255)**|로그 판독기 에이전트에서 사용하는 게시자에 있는 동기화 개체의 소유자입니다.|  
 |**article_view**|**nvarchar(255)**|로그 판독기 에이전트에서 사용하는 게시자에 있는 동기화 개체입니다.|  
 |**ins_scripting_proc**|**int**|이 열은 사용 되지 않으며 **IHarticles** 테이블의 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰가 SQL Server 아티클에 사용 되는 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) 뷰 ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))와 호환 되도록 하기 위해서만 포함 됩니다.|  

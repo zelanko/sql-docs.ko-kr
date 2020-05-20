@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2b581c09345b3eba21d53cbf0993b541e3b9422f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67934019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830152"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dropextendedproperty
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name= ] {'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  삭제할 속성의 이름입니다. *property_name* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  지정된 수준 0 개체 유형의 이름입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다.  
   
  유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE 및 NULL입니다.  
@@ -61,19 +61,19 @@ sp_dropextendedproperty
 > [!IMPORTANT]  
 >  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  수준 1 개체의 유형입니다. *level1_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
   
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -121,7 +121,7 @@ GO
 ```  
   
 ### <a name="b-dropping-an-extended-property-on-a-database"></a>B. 데이터베이스의 확장 속성 삭제  
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에서 라는 `MS_Description` 속성을 제거 합니다. 이 속성은 데이터베이스 자체에 있으므로 개체 유형과 이름이 지정되지 않습니다.  
+ 다음 예에서는 `MS_Description` 예제 데이터베이스에서 라는 속성을 제거 합니다 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . 이 속성은 데이터베이스 자체에 있으므로 개체 유형과 이름이 지정되지 않습니다.  
   
 ```  
 USE AdventureWorks2012;  

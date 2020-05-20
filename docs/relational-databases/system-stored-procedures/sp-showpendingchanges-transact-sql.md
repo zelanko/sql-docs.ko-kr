@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f2430e334d5e7de4225a9c2022a719058837261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632742"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829957"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|변경 내용이 복제되는 대상 서버의 이름입니다.|  
 |pub_name|**sysname**|게시의 이름입니다.|  
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|변경이 시작된 테이블에 대한 아티클의 이름입니다.|  
 |pending_deletes|**int**|복제 대기 중인 삭제 수입니다.|  
 |pending_ins_and_upd|**int**|복제 대기 중인 삽입 및 업데이트 수입니다.|  
-|is_delete|**bit**|보류 중인 변경 내용의 삭제 여부를 나타냅니다. 값 **1** 은 변경 내용이 삭제 임을 나타냅니다. 에 @show_rows는 값 **1** 이 필요 합니다.|  
-|rowguid|**uniqueidentifier**|변경된 행을 식별하는 GUID입니다. 에 @show_rows는 값 **1** 이 필요 합니다.|  
+|is_delete|**bit**|보류 중인 변경 내용의 삭제 여부를 나타냅니다. 값 **1** 은 변경 내용이 삭제 임을 나타냅니다. 에는 값 **1** 이 필요 @show_rows 합니다.|  
+|rowguid|**uniqueidentifier**|변경된 행을 식별하는 GUID입니다. 에는 값 **1** 이 필요 @show_rows 합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

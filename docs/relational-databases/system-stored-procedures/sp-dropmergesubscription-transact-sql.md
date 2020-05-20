@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831167"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscription_type = ] 'subscription_type'`구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**모두가**|밀어넣기, 끌어오기 및 익명 구독|  
 |**익명**|익명 구독입니다.|  

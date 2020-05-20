@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097662"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830133"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @rmtsrvname = ] 'rmtsrvname'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 매핑이 적용 되는 연결 된 서버의 이름입니다. *rmtsrvname* 는 **sysname**이며 기본값은 없습니다. *rmtsrvname* 가 이미 있어야 합니다.  
+`[ @rmtsrvname = ] 'rmtsrvname'`로그인 매핑이 적용 되는 연결 된 서버의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *rmtsrvname* 는 **sysname**이며 기본값은 없습니다. *rmtsrvname* 가 이미 있어야 합니다.  
   
 `[ @locallogin = ] 'locallogin'`연결 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 *rmtsrvname*에 대 한 매핑이 있는 로컬 서버의 로그인입니다. *locallogin* 은 **sysname**이며 기본값은 없습니다. *Rmtsrvname* 에 대 한 *locallogin* 에 대 한 매핑이 이미 존재 해야 합니다. NULL 인 경우 로컬 서버의 모든 로그인을 연결 된 서버의 로그인에 매핑하는 **sp_addlinkedserver**에서 만든 기본 매핑이 삭제 됩니다.  
   

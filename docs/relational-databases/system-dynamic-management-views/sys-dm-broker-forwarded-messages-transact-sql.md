@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_forwarded_messages dynamic management view
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7142fd9482b3db72a356568b97beb4467a3fab31
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099151"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830882"
 ---
 # <a name="sysdm_broker_forwarded_messages-transact-sql"></a>sys.dm_broker_forwarded_messages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68099151"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 전달하고 있는 각 Service Broker 메시지에 대해 행을 반환합니다.  
   
 
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**conversation_id**|**uniqueidentifier**|이 메시지가 속하는 대화의 ID입니다. NULL을 허용합니다.|  
 |**is_initiator**|**bit**|이것이 대화 시작자가 보낸 메시지인지 여부를 나타냅니다.  NULL을 허용합니다.<br /><br /> 0 = 시작자가 보낸 메시지가 아닙니다.<br /><br /> 1 = 시작자가 보낸 메시지입니다.|  

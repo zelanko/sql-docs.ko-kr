@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c30cbd012bb1ccc7d379eadcfd29fee87a96dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313687"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830426"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   감사의 현재 상태를 나타내는 각 서버 감사의 행을 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|감사의 ID입니다. 는 **sys. 감사** 카탈로그 뷰의 **audit_id** 필드에 매핑됩니다.|  
 |**name**|**sysname**|감사의 이름입니다. **Server_audits** 카탈로그 뷰의 **이름** 필드와 동일 합니다.|  

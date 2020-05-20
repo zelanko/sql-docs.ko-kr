@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.types catalog view
 - table-valued parameters,sys.types
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc3072c78ed74324345832daeb709fc6090b8763
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095567"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831297"
 ---
 # <a name="systypes-transact-sql"></a>sys.types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68095567"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|형식의 이름입니다. 스키마 내에서 고유합니다.|  
 |**system_type_id**|**tinyint**|형식의 내부 시스템 형식 ID입니다.|  
-|**user_type_id**|**int**|유형 ID입니다. 데이터베이스 내에서 고유합니다. 시스템 데이터 형식의 경우**system_type_id**을 **user_type_id** = 합니다.|  
+|**user_type_id**|**int**|유형 ID입니다. 데이터베이스 내에서 고유합니다. 시스템 데이터 형식의 경우 system_type_id을 **user_type_id**  =  **system_type_id**합니다.|  
 |**schema_id**|**int**|형식이 속한 스키마의 ID입니다.|  
 |**principal_id**|**int**|스키마 소유자와 다른 경우 개별 소유자의 ID입니다. 기본적으로 스키마에 포함된 개체는 스키마 소유자가 소유합니다. 그러나 ALTER AUTHORIZATION 문으로 대체 소유자를 지정하여 소유권을 변경할 수 있습니다.<br /><br /> 대체 개별 소유자가 없으면 NULL입니다.|  
 |**max_length**|**smallint**|유형의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**입니다.<br /><br /> **텍스트** 열의 경우에는 **max_length** 값이 16이 됩니다.|  

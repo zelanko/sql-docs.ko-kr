@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropdistributor
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a82a3bedf78eb69dfc4a1736e212164341077601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55ebb2b9c42c0690bcffe409cbc6a5bf5bf68fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304979"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830160"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>설명  
  **sp_dropdistributor** 은 모든 유형의 복제에 사용 됩니다.  
   
- 서버에 다른 게시자 또는 배포 개체가 있는 경우 ** \@no_checks** **1**로 설정 되어 있지 않으면 **sp_dropdistributor** 실패 합니다.  
+ 서버에 다른 게시자 또는 배포 개체가 있는 경우 ** \@ no_checks** **1**로 설정 되어 있지 않으면 **sp_dropdistributor** 실패 합니다.  
   
  이 저장 프로시저는 **sp_dropdistributiondb**를 실행 하 여 배포 데이터베이스를 삭제 한 후에 실행 해야 합니다.  
   

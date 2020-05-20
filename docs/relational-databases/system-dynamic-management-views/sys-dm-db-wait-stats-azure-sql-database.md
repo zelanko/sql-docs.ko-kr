@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090872"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830857"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68090872"
   
  쿼리 실행 중에 특정 유형의 대기 시간이 쿼리 내의 병목 또는 대기 지점을 나타낼 수 있습니다. 마찬가지로 높은 대기 시간이나 서버 전체의 대기 횟수가 서버 인스턴스 내의 쿼리 상호 작용에서 병목 또는 핫 스폿을 나타낼 수 있습니다. 예를 들어 잠금 대기는 쿼리의 데이터 경합을, 페이지 IO 래치 대기는 느린 IO 응답 시간을, 페이지 래치 업데이트 대기는 잘못된 파일 레이아웃을 나타냅니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [대기 유형](#WaitTypes)을 참조하십시오.|  
 |waiting_tasks_count|**bigint**|이 대기 유형의 대기 수입니다. 이 카운터는 각 대기가 시작될 때 증가합니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68090872"
   
  스레드가 더 이상 대기하지 않더라도 즉시 스레드 실행을 시작하지는 않습니다. 그와 같은 스레드가 실행 가능한 작업자 큐의 첫 번째 항목이고 퀀텀이 스케줄러에서 실행될 때까지 대기해야 하기 때문입니다.  
   
- 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터는 **bigint** 값 이므로 이전 버전의에 해당 하는 카운터로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]카운터 롤오버가 발생 하기 쉽습니다.  
+ 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대기 시간 카운터는 **bigint** 값 이므로 이전 버전의에 해당 하는 카운터로 인해 카운터 롤오버가 발생 하기 쉽습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  다음 표에서는 태스크에서 발생한 대기 유형을 나열합니다.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68090872"
 |FSAGENT|FILESTREAM 파일 I/O 작업이 다른 파일 I/O 작업에 사용되는 FILESTREAM 에이전트 리소스를 기다리는 경우에 발생합니다.|  
 |FSTR_CONFIG_MUTEX|다른 FILESTREAM 기능 다시 구성 작업이 완료될 때까지 대기하는 경우에 발생합니다.|  
 |FSTR_CONFIG_RWLOCK|FILESTREAM 구성 매개 변수에 대한 액세스 직렬화를 대기하는 경우에 발생합니다.|  
-|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_METADATA_MUTEX|정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
 |FT_RESTART_CRAWL|임시 오류로부터 복구하기 위해 마지막으로 알려진 양호 지점부터 전체 텍스트 탐색을 다시 시작해야 하는 경우에 발생합니다. 이 대기를 사용하면 해당 채우기에서 현재 작동 중인 작업자 태스크가 현재 단계를 완료하거나 종료할 수 있습니다.|  
 |FULLTEXT GATHERER|전체 텍스트 작업을 동기화하는 경우에 발생합니다.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -256,8 +256,8 @@ ms.locfileid: "68090872"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|ALTER DATABASE termination 절을 사용하여 전환된 데이터베이스에서 사용자 프로세스가 끝나기를 기다리는 데 사용됩니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|백그라운드 태스크가 폴링을 통해 Windows Server 장애 조치(Failover) 클러스터링 알림을 받는 백그라운드 태스크가 종료될 때까지 기다리는 경우에 발생합니다.  내부적으로만 사용됩니다.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거 작업에서 Always On 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 잡기 위해 대기 하 고 있습니다.  내부적으로만 사용됩니다.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|백그라운드 태스크가 폴링을 통해 Windows Server 장애 조치(Failover) 클러스터링 알림을 받는 백그라운드 태스크가 종료될 때까지 기다리는 경우에 발생합니다.  내부 전용입니다.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|추가, 바꾸기 및/또는 제거 작업에서 Always On 내부 목록 (예: 네트워크, 네트워크 주소 또는 가용성 그룹 수신기의 목록)에 대 한 쓰기 잠금을 잡기 위해 대기 하 고 있습니다.  내부 전용입니다.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On drop availability group 작업이 Windows Server 장애 조치 (Failover) 클러스터링 개체를 삭제 하기 전에 대상 가용성 그룹이 오프 라인 상태가 될 때까지 기다리고 있습니다.|  
 |PWAIT_HADR_ONLINE_COMPLETED|가용성 그룹 만들기 또는 장애 조치 (failover) 작업이 대상 가용성 그룹이 온라인 상태가 될 때까지 기다리고 있습니다. Always On|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Always On drop availability group 작업이 이전 명령의 일부로 예약 된 백그라운드 태스크가 종료 될 때까지 기다리고 있습니다. 예를 들어 가용성 데이터베이스를 주 역할로 전환 중인 백그라운드 작업이 있을 수 있습니다. 경합 상태를 방지하기 위해 DROP AVAILABILITY GROUP DDL이 이 백그라운드 태스크가 종료될 때까지 기다려야 합니다.|  
@@ -379,11 +379,11 @@ ms.locfileid: "68090872"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_COMPROWSET_RWLOCK|전체 텍스트가 조각 메타데이터 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTS_RWLOCK|전체 텍스트가 내부 동기화에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|전체 텍스트 스케줄러 중지 대기 유형입니다. 스케줄러가 유휴 상태입니다.|  
-|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
-|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
-|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원 안 됨 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSHC_MUTEX|전체 텍스트가 fdhost 제어 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_IFTSISM_MUTEX|전체 텍스트가 통신 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
+|FT_MASTER_MERGE|전체 텍스트가 마스터 병합 작업에서 대기 중입니다. 정보를 제공하기 위해서만 문서화됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|  
   
   

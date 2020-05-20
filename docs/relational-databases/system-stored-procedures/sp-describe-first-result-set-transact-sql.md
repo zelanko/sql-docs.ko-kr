@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053053"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831184"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 가능한 결과 집합에 대 한 메타 데이터를 반환 합니다. 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 에서 정적 분석을 수행 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 하 여 실행 되는 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없는 경우에서 오류를 발생 시킵니다. 동적 관리 뷰 [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 는 동일한 정보를 반환 합니다.  
+  일괄 처리의 첫 번째 가능한 결과 집합에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 일괄 처리에서 아무 결과도 반환되지 않은 경우 빈 결과 집합을 반환합니다. 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 정적 분석을 수행 하 여 실행 되는 첫 번째 쿼리에 대 한 메타 데이터를 확인할 수 없는 경우에서 오류를 발생 시킵니다. 동적 관리 뷰 [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 는 동일한 정보를 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="arguments"></a>인수  
 `[ \@tsql = ] 'Transact-SQL_batch'`하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. *SQL_batch* 는 **nvarchar (***n***)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
-`[ \@params = ] N'parameters'`\@params는 sp_executesql와 비슷한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
+`[ \@params = ] N'parameters'`\@params는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_executesql와 비슷한 일괄 처리에 대 한 매개 변수에 대 한 선언 문자열을 제공 합니다. 매개 변수는 **nvarchar (n)** 또는 **nvarchar (max)** 일 수 있습니다.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] *_Batch*에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 params에 \@정의 되어야 합니다. 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
+ _Batch에 포함 된 모든 매개 변수의 정의를 포함 하는 하나의 문자열입니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 은 추가 매개 변수 정의를 나타내는 자리 표시자입니다. 문에 지정 된 모든 매개 변수는 params에 정의 되어야 합니다 \@ . 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리에 매개 변수가 없는 경우 \@ params가 필요 하지 않습니다. NULL이 이 매개 변수의 기본값입니다.  
   
 `[ \@browse_information_mode = ] tinyint`추가 키 열과 원본 테이블 정보가 반환 되는지 여부를 지정 합니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 포함된 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보가 반환됩니다.  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** 는 다음과 같은 경우에 오류를 반환 합니다.  
   
--   입력 \@tsql이 유효한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 아닌 경우 유효성은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리를 구문 분석 하 고 분석 하 여 결정 됩니다. 일괄 처리가 유효한 지 여부를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 확인 하는 경우 쿼리 최적화 중에 또는 실행 중에 일괄 처리로 인해 발생 하는 모든 오류는 고려 되지 않습니다.  
+-   입력 \@ tsql이 유효한 일괄 처리가 아닌 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 유효성은 일괄 처리를 구문 분석 하 고 분석 하 여 결정 됩니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 일괄 처리가 유효한 지 여부를 확인 하는 경우 쿼리 최적화 중에 또는 실행 중에 일괄 처리로 인해 발생 하는 모든 오류는 고려 되지 않습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
--   Params \@가 NULL이 아니고, 매개 변수에 대 한 구문상 올바른 선언 문자열이 아닌 문자열을 포함 하거나, 매개 변수를 두 번 이상 선언 하는 문자열을 포함 하는 경우입니다.  
+-   \@Params가 NULL이 아니고, 매개 변수에 대 한 구문상 올바른 선언 문자열이 아닌 문자열을 포함 하거나, 매개 변수를 두 번 이상 선언 하는 문자열을 포함 하는 경우입니다.  
   
--   입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 params에 \@선언 된 매개 변수와 같은 이름의 지역 변수를 선언 하는 경우  
+-   입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리가 params에 선언 된 매개 변수와 같은 이름의 지역 변수를 선언 하는 \@ 경우  
   
 -   해당 문에서 임시 테이블을 사용하는 경우  
   
 -   쿼리에 다음으로 쿼리되는 영구 테이블 생성이 포함되는 경우  
   
- 다른 모든 확인이 성공한 경우에는 입력 일괄 처리 내에서 가능한 모든 제어 흐름 경로가 고려됩니다. 이는 모든 제어 흐름 문 (GOTO, EXEC 문에 의해 입력 일괄 처리에서 호출 된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 트리거와 함께 IF/ELSE, WHILE 및 TRY/CATCH 블록을 비롯 하 여, ddl 트리거를 발생 시키는 ddl 문 또는 외래 키 제약 조건에 대 한 연계 동작으로 인해 대상 테이블 또는 테이블에서 트리거를 발생 시키는 DML 문이 있습니다. 가능한 대부분의 제어 경로에서 특정 시점에 알고리즘이 중지됩니다.  
+ 다른 모든 확인이 성공한 경우에는 입력 일괄 처리 내에서 가능한 모든 제어 흐름 경로가 고려됩니다. 이는 모든 제어 흐름 문 (GOTO, [!INCLUDE[tsql](../../includes/tsql-md.md)] EXEC 문에 의해 입력 일괄 처리에서 호출 된 프로시저, 동적 일괄 처리 또는 트리거와 함께 IF/ELSE, WHILE 및 TRY/CATCH 블록을 비롯 하 여, [!INCLUDE[tsql](../../includes/tsql-md.md)] ddl 트리거를 발생 시키는 ddl 문 또는 외래 키 제약 조건에 대 한 연계 동작으로 인해 대상 테이블 또는 테이블에서 트리거를 발생 시키는 DML 문이 있습니다. 가능한 대부분의 제어 경로에서 특정 시점에 알고리즘이 중지됩니다.  
   
  각 제어 흐름 경로에 대해 결과 집합을 반환 하는 첫 번째 문 (있는 경우)은 **sp_describe_first_result_set**에 의해 결정 됩니다.  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** 는 간접 재귀를 지원 하지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- \@Tsql 인수를 실행할 수 있는 권한이 필요 합니다.  
+ Tsql 인수를 실행할 수 있는 권한이 필요 \@ 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- 결과: \<알 수 없는 열 이름> **varchar (20) NULL**  
+ 결과: \< 알 수 없는 열 이름> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>별칭을 통해 동일해진 열 이름  
  이전 예와 동일하지만, 열 별칭을 통해 열 이름이 같아진 경우입니다.  

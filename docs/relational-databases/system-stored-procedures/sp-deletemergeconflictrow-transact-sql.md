@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d778a90adf2579ca136603847762b2577a5155f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68111962"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830282"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 **%** 입니다. *CONFLICT_TABLE* NULL **%** 또는로 지정 된 경우 충돌은 삭제 충돌로 간주 되며 *rowguid* 와 *origin_datasource* 및 *source_object* 일치 하는 행이 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블에서 삭제 됩니다.  
+`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 **%** 입니다. *CONFLICT_TABLE* NULL 또는로 지정 된 경우 **%** 충돌은 삭제 충돌로 간주 되며 *rowguid* 와 *origin_datasource* 및 *Source_object* 일치 하는 행이 [MSmerge_conflicts_info &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) 테이블에서 삭제 됩니다.  
   
 `[ @source_object = ] 'source_object'`원본 테이블의 이름입니다. *source_object* 은 **nvarchar (386)** 이며 기본값은 NULL입니다.  
   

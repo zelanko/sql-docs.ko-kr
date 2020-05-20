@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768234"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830017"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_droppublication [ @publication= ] 'publication'
   
  **sp_droppublication** 는 게시와 연결 된 모든 아티클을 재귀적으로 삭제 한 다음 게시 자체를 삭제 합니다. 게시에 구독이 한 개 이상 있는 경우에는 게시를 제거할 수 없습니다. 구독을 제거 하는 방법에 대 한 자세한 내용은 [delete a Push subscription](../../relational-databases/replication/delete-a-push-subscription.md) 및 [Delete a Pull subscription](../../relational-databases/replication/delete-a-pull-subscription.md)을 참조 하세요.  
   
- 게시를 삭제 하기 위해 **sp_droppublication** 를 실행 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. 필요한 경우 \<DROP object>를 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
+ 게시를 삭제 하기 위해 **sp_droppublication** 를 실행 해도 게시 데이터베이스의 게시 된 개체 또는 구독 데이터베이스의 해당 개체는 제거 되지 않습니다. \<필요한 경우 DROP object>를 사용 하 여 이러한 개체를 수동으로 제거 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_droppublication**를 실행할 수 있습니다.  

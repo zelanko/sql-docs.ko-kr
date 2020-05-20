@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3998211b12b942df15ebb4e7978c1e989486e013
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032643"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830962"
 ---
 # <a name="sp_syscollector_create_collection_set-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_syscollector_create_collection_set
   
 `[ @days_until_expiration = ] days_until_expiration`수집 된 데이터가 관리 데이터 웨어하우스에 저장 되는 일 수입니다. *days_until_expiration* 은 **smallint** 이며 기본값은 730 (2 년)입니다. *days_until_expiration* 는 0 또는 양의 정수 여야 합니다.  
   
-`[ @proxy_id = ] proxy_id`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 고유 식별자입니다. *proxy_id* 은 **int** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_name* 은 NULL 이어야 합니다. *Proxy_id*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다. dc_admin 고정 데이터베이스 역할에는 프록시에 액세스할 권한이 있어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조 하세요.  
+`[ @proxy_id = ] proxy_id`에이전트 프록시 계정의 고유 식별자입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *proxy_id* 은 **int** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_name* 은 NULL 이어야 합니다. *Proxy_id*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다. dc_admin 고정 데이터베이스 역할에는 프록시에 액세스할 권한이 있어야 합니다. 자세한 내용은 [SQL Server 에이전트 프록시 만들기](../../ssms/agent/create-a-sql-server-agent-proxy.md)를 참조 하세요.  
   
 `[ @proxy_name = ] 'proxy_name'`프록시 계정의 이름입니다. *proxy_name* 는 **sysname** 이며 기본값은 NULL입니다. 지정 하는 경우 *proxy_id* 은 NULL 이어야 합니다. *Proxy_name*를 얻으려면 sysproxies 시스템 테이블을 쿼리 합니다.  
   

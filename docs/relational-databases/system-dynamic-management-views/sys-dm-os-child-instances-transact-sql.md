@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_os_child_instances dynamic management view
 - monitoring server health
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 59a58348f5428f568f40d28b4e83bc6bc040647c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 75eaf98c0b9c1f9c1bdf8a92dd2fe99520e20d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900242"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829353"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "67900242"
   
 > **중요!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- **Dm_os_child_instances** 에서 반환 된 정보를 사용 하 여 각 사용자 인스턴스의 상태를 확인 하 고 (heart_beat) 또는 SQLCmd를 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용자 인스턴스에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name)을 가져올 수 있습니다. 클라이언트 애플리케이션과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
+ **Dm_os_child_instances** 에서 반환 된 정보를 사용 하 여 각 사용자 인스턴스의 상태를 확인 하 고 (heart_beat) 또는 SQLCmd를 사용 하 여 사용자 인스턴스에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name)을 가져올 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 클라이언트 애플리케이션과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
   
-> **참고:** 사용자 인스턴스는의 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 기능입니다.  
+> **참고:** 사용자 인스턴스는의 기능 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 입니다.  
 > 
-> **참고** 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_child_instances**을 사용 합니다.  
+> **참고** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_child_instances**을 사용 합니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**owning_principal_name**|**nvarchar(256)**|이 사용자 인스턴스의 사용자 이름입니다.|  
 |owning_principal_sid|nvarchar(256)|이 사용자 인스턴스를 소유하는 보안 주체의 SID(보안 ID)입니다. 이는 Windows SID와 일치합니다.|  
@@ -50,13 +50,13 @@ ms.locfileid: "67900242"
 |**os_process_id**|**정수**|이 사용자 인스턴스에 대한 Windows 프로세스의 프로세스 번호입니다.|  
 |**os_process_creation_date**|**날짜**|이 사용자 인스턴스 프로세스가 마지막으로 시작된 날짜 및 시간입니다.|  
 |**heart_beat**|**nvarchar (5)**|이 사용자 인스턴스의 현재 상태(연결 또는 연결 끊김)입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
- 동적 관리 뷰에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 참조 하십시오.  
+ 동적 관리 뷰에 대 한 자세한 내용은 온라인 설명서의 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 참조 하십시오 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [비관리자용 사용자 인스턴스](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  

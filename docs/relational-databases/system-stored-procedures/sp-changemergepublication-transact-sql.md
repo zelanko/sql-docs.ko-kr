@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097680"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829610"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|대체 스냅샷 폴더의 스냅샷을 CAB 형식으로 압축합니다. 기본 스냅샷 폴더의 스냅샷은 압축할 수 없습니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
 ||**false**|기본적으로 스냅샷은 압축되지 않습니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
 |**conflict_logging**|**발행자**|충돌 레코드가 게시자에 저장됩니다.|  
-||**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. 구독자에 대해서 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 는 지원 되지 않습니다 *.*|  
+||**구독자**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. 구독자에 대해서는 지원 되지 않습니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] *.*|  
 ||**양방향**|충돌 레코드가 게시자와 구독자 둘 다에 저장됩니다.|  
 |**conflict_retention**||충돌을 보존할 보존 기간 (일)을 지정 하는 **int** 입니다. *Conflict_retention* 를 **0** 으로 설정 하면 충돌 정리가 필요 하지 않습니다.|  
 |**한**||게시에 대한 설명입니다.|  
@@ -110,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|스냅숏 파일은 *alt_snapshot_folder*에 지정 된 대체 위치에 저장 됩니다. 이 조합은 스냅샷 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정할 수 있습니다.|  
 |**snapshot_ready**|**true**|게시에 대한 스냅샷을 사용할 수 있습니다.|  
 ||**false**|게시에 대한 스냅샷을 사용할 수 없습니다.|  
-|**status**|**활성**|게시가 활성 상태입니다.|  
+|**status**|**active**|게시가 활성 상태입니다.|  
 ||**라**|게시가 비활성 상태입니다.|  
 |**sync_mode**|**네이티브** 또는<br /><br /> **bcp 네이티브**|초기 스냅샷에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
 ||**자의**<br /><br /> 또는 **bcp 문자**|초기 스냅샷에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
@@ -178,12 +178,12 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- *Publish_to_active_directory*를 사용 하 여 Active Directory 게시 개체를 나열 하려면 Active Directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 개체가 이미 만들어져 있어야 합니다.  
+ *Publish_to_active_directory*를 사용 하 여 Active Directory 게시 개체를 나열 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Active Directory에서 개체가 이미 만들어져 있어야 합니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergepublication**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

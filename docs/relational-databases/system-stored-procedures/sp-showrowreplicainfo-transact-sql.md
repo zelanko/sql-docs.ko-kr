@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032887"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830950"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|이 항목을 만든 데이터베이스의 이름입니다.|  
 |**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
 |**version**|**int**|항목의 버전입니다.|  
-|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> n/a>-적용할 수 없습니다. ** \<**<br /><br /> 알 수 없는>-현재 상태를 확인할 수 없습니다. ** \<**|  
+|**current_state**|**nvarchar (9)**|행의 현재 상태에 대한 정보를 반환합니다.<br /><br /> **y** 행 데이터는 행의 현재 상태를 나타냅니다.<br /><br /> **n** 행 데이터가 행의 현재 상태를 나타내지 않습니다.<br /><br /> ** \< n/a>** -적용할 수 없습니다.<br /><br /> ** \< 알 수 없는>** -현재 상태를 확인할 수 없습니다.|  
 |**rowversion_table**|**nchar (17)**|행 버전이 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) 테이블이 나 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) 테이블에 저장 되는지 여부를 나타냅니다.|  
-|**주석의**|**nvarchar(255)**|현재 행 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
+|**comment**|**nvarchar(255)**|현재 행 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
   
 ## <a name="result-sets-for-column-information"></a>열 정보에 대한 결과 집합  
   
@@ -69,7 +69,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|이 항목을 만든 데이터베이스의 애칭입니다.|  
 |**version**|**int**|항목의 버전입니다.|  
 |**colname**|**sysname**|열 버전 항목이 표시되는 아티클 열의 이름입니다.|  
-|**주석의**|**nvarchar(255)**|이 열 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
+|**comment**|**nvarchar(255)**|이 열 버전 항목에 대한 추가 정보입니다. 일반적으로 이 필드는 비어 있습니다.|  
   
 ## <a name="result-set-for-both"></a>두 가지 모두에 대한 결과 집합  
  모두 *표시*에 대해 **두** 값을 선택 하면 행 및 열 결과 집합이 모두 반환 됩니다.  

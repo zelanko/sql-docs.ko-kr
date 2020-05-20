@@ -18,22 +18,22 @@ helpviewer_keywords:
 - dm_exec_compute_node_status
 - sys.dm_exec_compute_node_status management view
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11883f7744aad3f8d483e808922a7170c8fe5391
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 604b7cc86ecd0bc191de50bb07baa0690c16ca57
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73532755"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830691"
 ---
 # <a name="sysdm_exec_compute_node_status-transact-sql"></a>sys. dm_exec_compute_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   모든 PolyBase 노드의 성능 및 상태에 대 한 추가 정보를 포함 합니다. 노드당 하나의 행을 나열 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|`int`|노드와 연결 된 고유 숫자 id입니다.|형식에 관계 없이 스케일 아웃 클러스터에서 고유 합니다.|  
 |process_id|`int`|||  

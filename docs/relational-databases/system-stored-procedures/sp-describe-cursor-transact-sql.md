@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053070"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831206"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +47,25 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @cursor_return= ] *output_cursor_variable* 출력  
+ [ @cursor_return =] *output_cursor_variable* 출력  
  커서 출력을 수신하기 위해 선언된 커서 변수의 이름입니다. *output_cursor_variable* 는 **커서**이며 기본값은 없으며 sp_describe_cursor 호출 될 때 커서와 연결 되지 않아야 합니다. 반환된 커서는 스크롤할 수 있으며 동적인 읽기 전용 커서입니다.  
   
- [ @cursor_source= ] {N'local ' | N'global ' | N'variable' }  
+ [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
  보고할 커서를 로컬 커서, 전역 커서 또는 커서 변수의 이름 중 어느 것을 사용하여 지정할지 결정합니다. 매개 변수는 **nvarchar (30)** 입니다.  
   
- [ @cursor_identity= ] N '*local_cursor_name*']  
+ [ @cursor_identity =] N '*local_cursor_name*']  
  LOCAL 키워드를 갖거나 LOCAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *local_cursor_name* 은 **nvarchar (128)** 입니다.  
   
- [ @cursor_identity= ] N '*global_cursor_name*']  
+ [ @cursor_identity =] N '*global_cursor_name*']  
  GLOBAL 키워드를 갖거나 GLOBAL이 기본값인 DECLARE CURSOR 문에 의해 생성된 커서의 이름입니다. *global_cursor_name* 은 **nvarchar (128)** 입니다.  
   
  SQLSetCursorName을 호출 하 여 명명 된 ODBC 응용 프로그램에 의해 열린 API 서버 커서의 이름일 수도 있습니다. *global_cursor_name*  
   
- [ @cursor_identity= ] N '*input_cursor_variable*']  
+ [ @cursor_identity =] N '*input_cursor_variable*']  
  열린 커서와 연관된 커서 변수의 이름입니다. *input_cursor_variable* 은 **nvarchar (128)** 입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="cursors-returned"></a>반환되는 커서  
  sp_describe_cursor는 [!INCLUDE[tsql](../../includes/tsql-md.md)] **커서** 출력 매개 변수로 결과 집합을 캡슐화 합니다. 이로 인해 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 한 번에 하나의 행만 출력 작업을 하는 트리거가 허용됩니다. 이는 데이터베이스 API 함수에서 바로 프로시저를 호출할 수 없음을 의미하기도 합니다. **Cursor** output 매개 변수는 프로그램 변수에 바인딩되어야 하지만 데이터베이스 api는 **커서** 매개 변수 또는 변수 바인딩을 지원 하지 않습니다.  

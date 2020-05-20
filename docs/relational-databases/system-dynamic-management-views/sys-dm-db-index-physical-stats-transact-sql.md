@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d7fe788192aac7f7bd3e4723b615391c5d8c6e86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97339050b2bb6b81945b6bc7604befdfd45f360b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829545"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ sys.dm_db_index_physical_stats (
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 할당 단위의 리프 수준에 있는 조각 하나의 평균 페이지 수입니다.<br /><br /> 리프가 아닌 인덱스 수준과 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 NULL입니다.<br /><br /> *Mode* = 샘플링 된 경우 힙의 경우 NULL입니다.|  
 |page_count|**bigint**|전체 인덱스 또는 데이터 페이지 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 있는 총 인덱스 페이지 수입니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 데이터 페이지 수입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 할당 단위에서 총 페이지 수입니다.|  
 |avg_page_space_used_in_percent|**float**|모든 페이지에서 사용되는 사용 가능한 데이터 스토리지 공간의 평균 백분율입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균이 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 모든 데이터 페이지의 평균입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW DATA 할당 단위의 경우 할당 단위에서 모든 페이지의 평균입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
-|record_count|**bigint**|총 레코드 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 총 레코드 수가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 레코드 수입니다.<br /><br /> **참고:** 힙의 경우이 함수에서 반환 된 레코드 수는 힙에 대해 SELECT COUNT (\*)를 실행 하 여 반환 되는 행 수와 일치 하지 않을 수 있습니다. 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 스토리지에서 여러 레코드로 분할됩니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 총 레코드 수입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
+|record_count|**bigint**|총 레코드 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 총 레코드 수가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 레코드 수입니다.<br /><br /> **참고:** 힙의 경우이 함수에서 반환 된 레코드 수는 힙에 대해 SELECT COUNT ()를 실행 하 여 반환 되는 행 수와 일치 하지 않을 수 있습니다 \* . 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 스토리지에서 여러 레코드로 분할됩니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 총 레코드 수입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |ghost_record_count|**bigint**|할당 단위에서 삭제할 레코드 정리 태스크에 의해 제거될 삭제할 레코드 수입니다.<br /><br /> IN_ROW_DATA 할당 단위에서 리프가 아닌 인덱스 수준에 대해 0입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |version_ghost_record_count|**bigint**|할당 단위에서 처리 중인 스냅샷 격리 트랜잭션이 보유하고 있는 삭제할 레코드 수입니다.<br /><br /> IN_ROW_DATA 할당 단위에서 리프가 아닌 인덱스 수준에 대해 0입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |min_record_size_in_bytes|**int**|최소 레코드 크기(바이트)입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 최소 레코드 크기가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 최소 레코드 크기입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 최소 레코드 크기입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
@@ -110,9 +110,9 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|평균 레코드 크기(바이트)입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균 레코드 크기가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 평균 레코드 크기입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 평균 레코드 크기입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |forwarded_record_count|**bigint**|다른 데이터 위치로의 전달 포인터가 있는 힙의 레코드 수입니다. 이 상태는 업데이트하는 동안 원본 위치에 새 행을 저장할 공간이 충분하지 않은 경우에 발생합니다.<br /><br /> 힙의 IN_ROW_DATA 할당 단위 이외의 모든 할당 단위에 대해 NULL입니다.<br /><br /> *Mode* = 제한 된 경우 힙의 경우 NULL입니다.|  
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
-|hobt_id|bigint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스의 경우에는 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합의 ID입니다. 행 집합은 데이터 힙 또는 이진 트리로 저장 됩니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 가집니다. 자세한 내용은 [internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)을 참조 하십시오.<br /><br /> If 인 경우 NULL|  
-|column_store_delete_buffer_state|tinyint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
-|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 열기-deleters 및 스캐너가이를 사용 합니다.<br /><br /> 드레이닝이 드레이닝 중입니다. 하지만 스캐너는이를 계속 사용 합니다.<br /><br /> 플러시-버퍼가 닫히고 버퍼의 행이 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지-닫힌 삭제 버퍼의 행이 삭제 비트맵에 기록 되었지만 스캐너가 아직 사용 하 고 있기 때문에 버퍼가 잘렸습니다. 새 스캐너는 오픈 버퍼가 충분 하므로 사용 중지 버퍼를 사용할 필요가 없습니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 되었습니다.|  
+|hobt_id|bigint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Columnstore 인덱스의 경우에는 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합의 ID입니다. 행 집합은 데이터 힙 또는 이진 트리로 저장 됩니다. 부모 columnstore 인덱스와 동일한 인덱스 ID를 가집니다. 자세한 내용은 [internal_partitions &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)을 참조 하십시오.<br /><br /> If 인 경우 NULL|  
+|column_store_delete_buffer_state|tinyint|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
+|column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> 열기-deleters 및 스캐너가이를 사용 합니다.<br /><br /> 드레이닝이 드레이닝 중입니다. 하지만 스캐너는이를 계속 사용 합니다.<br /><br /> 플러시-버퍼가 닫히고 버퍼의 행이 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지-닫힌 삭제 버퍼의 행이 삭제 비트맵에 기록 되었지만 스캐너가 아직 사용 하 고 있기 때문에 버퍼가 잘렸습니다. 새 스캐너는 오픈 버퍼가 충분 하므로 사용 중지 버퍼를 사용할 필요가 없습니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  
@@ -168,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>모범 사례  
- DB_ID 또는 OBJECT_ID를 사용할 때는 항상 유효한 ID가 반환되는지 확인합니다. 예를 들어 OBJECT_ID를 사용 하는 경우와 `OBJECT_ID(N'AdventureWorks2012.Person.Address')`같은 세 부분으로 구성 된 이름을 지정 하거나 함수에서 반환 된 값을 테스트 하 여 dm_db_index_physical_stats 함수에서 사용 합니다. 뒤에 나오는 예 1과 2에서는 데이터베이스와 개체 ID를 안전하게 지정하는 방법을 보여 줍니다.  
+ DB_ID 또는 OBJECT_ID를 사용할 때는 항상 유효한 ID가 반환되는지 확인합니다. 예를 들어 OBJECT_ID를 사용 하는 경우와 같은 세 부분으로 구성 된 이름을 지정 `OBJECT_ID(N'AdventureWorks2012.Person.Address')` 하거나 함수에서 반환 된 값을 테스트 하 여 dm_db_index_physical_stats 함수에서 사용 합니다. 뒤에 나오는 예 1과 2에서는 데이터베이스와 개체 ID를 안전하게 지정하는 방법을 보여 줍니다.  
   
 ## <a name="detecting-fragmentation"></a>조각화 검색  
  조각화는 테이블, 즉 테이블에 정의된 인덱스에 대한 데이터 수정 작업(INSERT, UPDATE 및 DELETE 문)을 처리할 때 발생합니다. 이러한 수정 사항은 테이블 및 인덱스의 행에서 균등하게 분산되지 않으므로 각 페이지의 사용률이 시간에 따라 달라지게 됩니다. 테이블의 인덱스 일부 또는 전부를 검색하는 쿼리의 경우 이런 테이블 조각화로 인해 읽어야 하는 페이지의 수가 늘어날 수 있으며 이는 데이터의 병렬 검색에 방해가 됩니다.  
@@ -194,7 +194,7 @@ GO
   
 -   DBCC INDEXDEFRAG 대신 ALTER INDEX REORGANIZE를 사용하여 인덱스의 리프 수준 페이지를 논리적 순서로 다시 정렬합니다. 이 작업은 온라인 작업이므로 문이 실행 중일 때 인덱스를 사용할 수 있습니다. 또한 작업이 중단되더라도 이미 완료된 작업은 손실되지 않습니다. 이 방법의 단점은 데이터를 다시 구성하는 작업이 인덱스를 다시 작성하는 작업만큼 효과적이지 않다는 것과 통계가 업데이트되지 않는다는 것입니다.  
   
--   DBCC DBREINDEX 대신 ALTER INDEX REBUILD를 사용하여 인덱스를 온라인이나 오프라인 상태로 다시 작성합니다. 자세한 내용은 [ALTER INDEX &#40;transact-sql&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조 하세요.  
+-   DBCC DBREINDEX 대신 ALTER INDEX REBUILD를 사용하여 인덱스를 온라인이나 오프라인 상태로 다시 작성합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
  인덱스를 다시 구성하거나 작성하는 이유가 전적으로 조각화 때문만은 아닙니다. 조각화는 주로 인덱스 검색 중 페이지 미리 읽기 성능을 저하시킵니다. 이로 인해 응답 시간이 느려집니다. 조각화된 테이블이나 인덱스에 대한 쿼리 작업은 기본적으로 단일 조회이기 때문에 검색과 관련이 없는 경우에는 조각화를 제거하더라도 효과를 기대하기 어려울 수 있습니다.
   
@@ -221,7 +221,7 @@ GO
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  클러스터형 columnstore 인덱스에 데이터를 반환하지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  다음 사용 권한이 필요합니다.  
   
 -   데이터베이스 내의 지정된 개체에 대한 CONTROL 권한  

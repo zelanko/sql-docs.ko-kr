@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026915"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830848"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   파일 크기, 물리적 위치 및 트랜잭션 ID를 포함하여 검사점 파일에 대한 정보를 표시합니다.  
   
-> **참고:** 닫히지 않은 현재 검사점의 경우의 상태 열은 새 파일에 대해`ys.dm_db_xtp_checkpoint_files` 생성 중입니다. 마지막 검사점 이후 트랜잭션 로그 증가가 충분 하거나 `CHECKPOINT` 명령을 실행 하는 경우 ([검사점 &#40;transact-sql&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)) 검사점이 자동으로 닫힙니다.  
+> **참고:** 닫히지 않은 현재 검사점의 경우의 상태 열은 `ys.dm_db_xtp_checkpoint_files` 새 파일에 대해 생성 중입니다. 마지막 검사점 이후 트랜잭션 로그 증가가 충분 하거나 명령을 실행 하는 경우 `CHECKPOINT` ([검사점 &#40;transact-sql&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)) 검사점이 자동으로 닫힙니다.  
   
  메모리 최적화 파일 그룹은 내부적으로 추가 전용 파일을 사용 하 여 메모리 내 테이블에 삽입 된 행과 삭제 된 행을 저장 합니다. 두 가지 유형의 파일이 있으며, 데이터 파일에는 삽입 된 행이 포함 되 고 델타 파일에는 삭제 된 행에 대 한 참조가 포함 됩니다. 
   
@@ -40,10 +40,10 @@ ms.locfileid: "68026915"
   
  자세한 내용은 [메모리 액세스에 최적화 된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)를 참조 하세요.  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
- 다음 표에서는부터의 `sys.dm_db_xtp_checkpoint_files`열에 대해 설명 합니다 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]이상  
+ 다음 표에서는부터의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|데이터 또는 델타 파일이 속한 컨테이너(sys.database_files에서 FILESTREAM 형식의 파일로 표현됨)의 ID입니다. [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)를 사용 하 여 file_id와 조인 합니다.|  
 |container_guid|**uniqueidentifier**|루트, 데이터 또는 델타 파일이 속한 컨테이너의 GUID입니다. Database_files 테이블의 file_guid와 조인 합니다.|  
@@ -67,13 +67,13 @@ ms.locfileid: "68026915"
 |encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 = 키 1로 암호화 된><br /><br /> 2 = 키 2로 암호화 된>. 활성 파일에 대해서만 유효 합니다.|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- 다음 표에서는의 열 `sys.dm_db_xtp_checkpoint_files`에 대해 설명 합니다 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ 다음 표에서는의 열에 대해 설명 합니다 `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|데이터 또는 델타 파일이 속한 컨테이너(sys.database_files에서 FILESTREAM 형식의 파일로 표현됨)의 ID입니다. [Database_files &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)를 사용 하 여 file_id와 조인 합니다.|  
 |container_guid|**uniqueidentifier**|데이터 또는 델타 파일이 속한 컨테이너의 GUID입니다.|  
-|checkpoint_file_id|**EID**|데이터 또는 델타 파일의 ID입니다.|  
+|checkpoint_file_id|**GUID**|데이터 또는 델타 파일의 ID입니다.|  
 |relative_file_path|**nvarchar(256)**|컨테이너 위치에 상대적인 데이터 또는 델타 파일의 경로입니다.|  
 |file_type|**tinyint**|데이터 파일의 경우 0이고,<br /><br /> 델타 파일의 경우 1입니다.<br /><br /> 상태 열이 7로 설정된 경우 NULL입니다.|  
 |file_type_desc|**nvarchar(60)**|파일의 형식: DATA_FILE, DELTA_FILE, 상태 열이 7로 설정 된 경우 NULL입니다.|  

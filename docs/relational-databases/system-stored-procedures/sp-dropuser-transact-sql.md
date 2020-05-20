@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropuser
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d4f4b08f21d29fead3f2cebf477be69cfaf766ad
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124719"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831137"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 데이터베이스 사용자를 제거합니다. **sp_dropuser** 는 이전 버전의와의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]호환성을 제공 합니다.  
+  현재 데이터베이스에서 데이터베이스 사용자를 제거합니다. **sp_dropuser** 는 이전 버전의와의 호환성을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]대신 [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) 를 사용 해야 합니다.  
@@ -54,7 +54,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  데이터베이스 사용자가 제거되면 해당 사용자의 모든 별칭도 함께 제거됩니다. 사용자가 사용자와 동일한 이름의 빈 스키마를 소유하는 경우 해당 스키마는 삭제됩니다. 데이터베이스 내의 다른 보안 개체를 소유하는 사용자는 삭제되지 않습니다. 이러한 사용자를 삭제하려면 먼저 개체의 소유권을 다른 보안 주체로 이전해야 합니다. 자세한 내용은 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요. 데이터베이스 사용자를 제거하면 사용자와 연관된 사용 권한이 자동으로 제거되며 이 사용자가 속해 있던 모든 데이터베이스 역할에서 해당 사용자가 제거됩니다.  
   
- **sp_dropuser** 은 **master** 또는 **tempdb** 데이터베이스에서**dbo**(데이터베이스 소유자) **INFORMATION_SCHEMA** 사용자 또는 **게스트** 사용자를 제거 하는 데 사용할 수 없습니다. 시스템을 `EXEC sp_dropuser 'guest'` 사용 하지 않는 데이터베이스에서는 사용자 **게스트**의 CONNECT 권한을 취소 합니다. 그러나 사용자 자체는 삭제되지 않습니다.  
+ **sp_dropuser** 은 **master** 또는 **tempdb** 데이터베이스에서**dbo**(데이터베이스 소유자) **INFORMATION_SCHEMA** 사용자 또는 **게스트** 사용자를 제거 하는 데 사용할 수 없습니다. 시스템을 사용 하지 않는 데이터베이스에서 `EXEC sp_dropuser 'guest'` 는 사용자 **게스트**의 CONNECT 권한을 취소 합니다. 그러나 사용자 자체는 삭제되지 않습니다.  
   
  사용자 정의 트랜잭션 내에서는 **sp_dropuser** 을 실행할 수 없습니다.  
   

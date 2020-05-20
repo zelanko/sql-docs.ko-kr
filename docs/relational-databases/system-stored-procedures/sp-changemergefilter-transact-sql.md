@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304943"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829594"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|조인 필터입니다.<br /><br /> 이 옵션은 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
 ||**2**|논리적 레코드 관계입니다.|  
@@ -84,11 +84,11 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_changemergefilter** 는 병합 복제에 사용 됩니다.  
   
- 병합 아티클의 필터를 변경하려면 스냅샷이 하나 있는 경우 이를 다시 만들어야 합니다. 이는 ** \@force_invalidate_snapshot** **1**로 설정 하 여 수행 됩니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 이 작업은 ** \@force_reinit_subscription** **1**로 설정 하 여 수행 합니다.  
+ 병합 아티클의 필터를 변경하려면 스냅샷이 하나 있는 경우 이를 다시 만들어야 합니다. 이는 ** \@ force_invalidate_snapshot** **1**로 설정 하 여 수행 됩니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 이 작업은 ** \@ force_reinit_subscription** **1**로 설정 하 여 수행 합니다.  
   
  논리적 레코드를 사용하려면 게시 및 아티클이 여러 가지 요구 사항을 만족해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_changemergefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

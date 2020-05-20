@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936892"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830641"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|데이터베이스의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 문이 컴파일된 데이터베이스의 ID입니다.|  
 |**objectid**|**int**|개체의 ID입니다.<br /><br /> 임시 및 준비된 SQL 문의 경우 NULL입니다.|  
@@ -100,7 +100,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="a-conceptual-example"></a>A. 개념 예
 다음은 직접 또는 **CROSS APPLY**를 사용 하 여 **sql_handle** 를 전달 하는 방법을 보여 주는 기본 예제입니다.
   1.  활동을 만듭니다.  
-의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]새 쿼리 창에서 다음 t-sql을 실행 합니다.   
+의 새 쿼리 창에서 다음 T-sql을 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  **CROSS APPLY**사용.  
-    **Dm_exec_requests** 에서 Sql_handle는 **CROSS APPLY**를 사용 하 여 **sys. dm_exec_sql_text** 전달 됩니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59`.
+    **Dm_exec_requests** 에서 Sql_handle는 **CROSS APPLY**를 사용 하 여 **sys. dm_exec_sql_text** 전달 됩니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59` .
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  직접 **sql_handle** 전달.  
-**Dm_exec_requests**에서 **sql_handle** 를 가져옵니다. 그런 다음 **sql_handle** 를 **dm_exec_sql_text**에 직접 전달 합니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 **dm_exec_requests**으로 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59`. 그런 다음 반환 된 **sql_handle** 를 **dm_exec_sql_text**에 대 한 인수로 전달 합니다.
+**Dm_exec_requests**에서 **sql_handle** 를 가져옵니다. 그런 다음 **sql_handle** 를 **dm_exec_sql_text**에 직접 전달 합니다. 새 쿼리 창을 열고 1 단계에서 확인 한 spid를 **dm_exec_requests**으로 전달 합니다. 이 예에서는 spid가로 수행 됩니다 `59` . 그런 다음 반환 된 **sql_handle** 를 **dm_exec_sql_text**에 대 한 인수로 전달 합니다.
 
         ```sql
         -- acquire sql_handle
@@ -186,5 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [dm_exec_cursors &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [dm_exec_xml_handles &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [dm_exec_query_memory_grants &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- Dm_exec_text_query_plan   [APPLY를 사용 하 여](../../t-sql/queries/from-transact-sql.md#using-apply) [transact-sql&#41;&#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [APPLY 사용](../../t-sql/queries/from-transact-sql.md#using-apply)   [dm_exec_text_query_plan &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 
