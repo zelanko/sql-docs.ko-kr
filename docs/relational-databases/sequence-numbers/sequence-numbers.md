@@ -391,7 +391,7 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하는 `SELECT *` 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
+ `SELECT *`를 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  

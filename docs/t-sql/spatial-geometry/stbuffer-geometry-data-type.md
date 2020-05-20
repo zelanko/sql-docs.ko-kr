@@ -46,7 +46,7 @@ ms.locfileid: "67930362"
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- `STBuffer()`는 [허용 오차](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md) = distance *.001 및* relative\*  false = 로 지정하여 **BufferWithTolerance**와 동일한 방식으로 버퍼를 계산합니다.  
+ `STBuffer()`는 *허용 오차* = distance\*.001 및 *relative* = **false**로 지정하여 [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
   
  *distance* > 0이면, **Polygon** 또는 **MultiPolygon** 인스턴스가 반환됩니다.  
   
@@ -160,7 +160,7 @@ ms.locfileid: "67930362"
  SELECT @g.STBuffer(1.6).ToString();
  ```  
   
- 처음 두 **SELECT** 문은 매개 변수 `MultiPolygon`distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에*  인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
+ 처음 두 **SELECT** 문은 매개 변수 *distance*가 두 요소(1 1)과(1 4) 사이 거리의 1/2보다 작거나 같기 때문에 `MultiPolygon` 인스턴스를 반환합니다. 세 번째 **SELECT** 문은 두 요소(1 1)과(1 4)의 버퍼링된 인스턴스가 겹치기 때문에 `Polygon` 인스턴스를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [BufferWithTolerance &#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   

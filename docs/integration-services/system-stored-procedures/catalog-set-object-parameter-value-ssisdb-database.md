@@ -58,7 +58,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
  패키지의 이름입니다. 이 인수는 매개 변수가 패키지 매개 변수인 경우에 필요합니다. *object_name*은 **nvarchar(260)** 입니다.  
   
  [@value_type =] *value_type*  
- 매개 변수 값의 유형입니다. `V`parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면*  문자를 사용하고, `R`parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면*  문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)** 입니다.  
+ 매개 변수 값의 유형입니다. *parameter_value*가 실행 전에 할당된 다른 값이 없어 기본적으로 사용되는 리터럴 값임을 나타내려면 `V` 문자를 사용하고, *parameter_value*가 환경 변수 이름으로 설정된 참조 값임을 나타내려면 `R` 문자를 사용합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type*은 **char(1)** 입니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
@@ -90,7 +90,7 @@ catalog.set_object_parameter_value [@object_type =] object_type
   
 ## <a name="remarks"></a>설명  
   
--   *value_type*이 지정되지 않으면 *parameter_value*에 대한 리터럴 값이 기본적으로 사용됩니다. 리터럴 값이 사용되는 경우 *object_parameters* 뷰의 [value_set](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md)가 `1`로 설정됩니다. NULL 매개 변수 값은 허용되지 않습니다.  
+-   *value_type*이 지정되지 않으면 *parameter_value*에 대한 리터럴 값이 기본적으로 사용됩니다. 리터럴 값이 사용되는 경우 [object_parameters](../../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) 뷰의 *value_set*가 `1`로 설정됩니다. NULL 매개 변수 값은 허용되지 않습니다.  
   
 -   *value_type*에 참조된 값임을 나타내는 `R` 문자가 포함된 경우 *parameter_value*는 환경 변수 이름을 참조합니다.  
   

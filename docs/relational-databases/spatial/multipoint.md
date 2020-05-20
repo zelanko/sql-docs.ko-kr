@@ -34,7 +34,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT((2 3), (7 8 9.5))', 23);
 ```  
   
 ### <a name="example-b"></a>예 2. 
-다음 예제에서는 `MultiPoint`를 사용하여 `STMPointFromText()` 인스턴스를 표현합니다.  
+다음 예제에서는 `STMPointFromText()`를 사용하여 `MultiPoint` 인스턴스를 표현합니다.  
   
 ```sql  
 DECLARE @g geometry;  

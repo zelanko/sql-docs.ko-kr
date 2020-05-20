@@ -50,7 +50,7 @@ ms.locfileid: "68042535"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- STBuffer()는 [tolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md) = abs(distance) *.001 및*relative\*  false =  지정을 통해 **BufferWithTolerance**와 동일한 방식으로 버퍼를 계산합니다.  
+ STBuffer()는 *tolerance* = abs(distance) \* .001 및 *relative* = **false** 지정을 통해 [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)와 동일한 방식으로 버퍼를 계산합니다.  
   
  버퍼가 음수이면 **geography** 인스턴스 경계에서 지정된 거리 내에 있는 모든 요소가 제거됩니다.  
   

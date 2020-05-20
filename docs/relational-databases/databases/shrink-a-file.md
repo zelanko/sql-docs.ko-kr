@@ -132,7 +132,7 @@ ms.locfileid: "71961926"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 을 사용하여 `DataFile1` 데이터베이스에 있는 `UserDB` 이라는 데이터 파일의 크기를 7MB로 축소합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 을 사용하여 `UserDB` 데이터베이스에 있는 `DataFile1` 이라는 데이터 파일의 크기를 7MB로 축소합니다.  
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   

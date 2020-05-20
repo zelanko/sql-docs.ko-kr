@@ -30,7 +30,7 @@ ms.locfileid: "71297164"
  사용자 지정 사용자 인터페이스 프로젝트 또는 어셈블리에서는 <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI>를 구현하는 클래스를 만듭니다. 이 클래스는 일반적으로 다른 Windows Forms 컨트롤을 호스팅하는 합성 컨트롤을 만드는 데 사용되는 System.Windows.Forms.UserControl에서 파생됩니다. 만든 컨트롤은 **Foreach 루프 편집기**의 **컬렉션** 탭에 있는 **열거자 구성** 영역에 표시됩니다.  
   
 > [!IMPORTANT]  
->  [사용자 지정 개체 빌드, 배포 및 디버그](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에 설명된 대로 사용자 지정 사용자 인터페이스를 서명 및 빌드하고 전역 어셈블리 캐시에 설치한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute> 속성에서 이 클래스의 정규화된 이름을 지정해야 합니다.  
+>  [사용자 지정 개체 빌드, 배포 및 디버그](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)에 설명된 대로 사용자 지정 사용자 인터페이스를 서명 및 빌드하고 전역 어셈블리 캐시에 설치한 후에는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>의 <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A> 속성에서 이 클래스의 정규화된 이름을 지정해야 합니다.  
   
 ## <a name="coding-the-user-interface-control-class"></a>사용자 인터페이스 컨트롤 클래스 코딩  
   

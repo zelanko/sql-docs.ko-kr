@@ -25,7 +25,7 @@ ms.locfileid: "74056198"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 쿼리는 전체 텍스트 검색 *동의어 사전*을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. 각 동의어 사전은 특정 언어에 대한 동의어 집합을 정의합니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다.
 
-동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 [ 절을 지정하는 ](../../t-sql/queries/contains-transact-sql.md)CONTAINS[ 및 ](../../relational-databases/system-functions/containstable-transact-sql.md)CONTAINSTABLE`FORMSOF THESAURUS` 쿼리에 대해 수행됩니다.
+동의어 사전 검색은 모든 [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) 및 [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 쿼리와 `FORMSOF THESAURUS` 절을 지정하는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 및 [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) 쿼리에 대해 수행됩니다.
   
 전체 텍스트 검색 동의어 사전은 XML 텍스트 파일입니다.
   

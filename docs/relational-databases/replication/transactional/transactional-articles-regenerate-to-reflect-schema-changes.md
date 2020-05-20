@@ -33,7 +33,7 @@ ms.locfileid: "76287002"
   
     1.  [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하는 경우 `@schema_option` 0x02비트를 **true**로 설정해야 합니다.  
   
-    2.  [ 매개 변수에 ‘insert’, ‘update’ 또는 ‘delete’ 값, ](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) 매개 변수에 사용자 지정 스크립팅 프로시저의 이름을 지정하고 `@type`sp_register_custom_scripting&#40;Transact-SQL&#41;`@value`을 실행합니다.  
+    2.  `@type` 매개 변수에 ‘insert’, ‘update’ 또는 ‘delete’ 값, `@value` 매개 변수에 사용자 지정 스크립팅 프로시저의 이름을 지정하고 [sp_register_custom_scripting&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md)을 실행합니다.  
   
      다음에 스키마를 변경하면 복제는 이 저장 프로시저를 호출하여 사용자가 새로 정의한 사용자 지정 저장 프로시저에 대한 정의를 스크립팅한 다음 프로시저를 각 구독자로 전파합니다.  
   

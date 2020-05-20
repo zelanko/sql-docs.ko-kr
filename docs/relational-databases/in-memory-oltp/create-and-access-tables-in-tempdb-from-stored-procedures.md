@@ -25,7 +25,7 @@ ms.locfileid: "74412724"
 
 임시 테이블 및 테이블 변수 시나리오의 메모리 최적화에 대한 자세한 내용은 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)을 참조하세요.
   
-  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **dbo.OrderQuantityByProduct\@ 형식의** **OrderQuantityByProduct** 테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
+  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **dbo.OrderQuantityByProduct** 형식의 **\@OrderQuantityByProduct** 테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

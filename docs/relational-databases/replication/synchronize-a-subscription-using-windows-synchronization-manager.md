@@ -37,7 +37,7 @@ ms.locfileid: "76287030"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성-** Subscriber>: **SubscriptionDatabase>\< 대화 상자의 \<일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
+1.  **구독 속성-\<Subscriber>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

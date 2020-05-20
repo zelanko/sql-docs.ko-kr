@@ -88,11 +88,11 @@ ms.locfileid: "76286930"
   
 3.  게시자에서 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)을 실행합니다. `@publication` 및 `@subscriber`를 지정합니다.  
   
-4.  게시자에서 [를 지정하고 ](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)sp_helpsubscriberinfo`@subscriber`를 실행합니다. 이렇게 하면 구독자에 대한 정보가 표시됩니다.  
+4.  게시자에서 `@subscriber`를 지정하고 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)를 실행합니다. 이렇게 하면 구독자에 대한 정보가 표시됩니다.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독의 속성을 변경하려면  
   
-1.  구독자에서 [, ](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), `@publisher`을 지정한 다음 `@publisher_db`에 `@publication`0 **(트랜잭션) 또는** 1 **(스냅샷) 값,** 에 변경되는 구독 속성, `@publication_type`에 새 값을 지정하고 `@property`sp_change_subscription_properties`@value`를 실행합니다.  
+1.  구독자에서 `@publisher`, `@publisher_db`, `@publication`을 지정한 다음 `@publication_type`에 **0**(트랜잭션) 또는 **1**(스냅샷) 값, `@property`에 변경되는 구독 속성, `@value`에 새 값을 지정하고 [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)를 실행합니다.  
   
 2.  (옵션) 구독 데이터베이스의 구독자에서 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md)를 실행합니다. 이때 `@jobid`에 배포 에이전트의 ID를 지정하고 다음과 같은 DTS(데이터 변환 서비스) 패키지 속성을 지정합니다.  
   
@@ -113,9 +113,9 @@ ms.locfileid: "76286930"
   
 2.  게시자에서 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)를 실행합니다. 이때 `@publisher`, `@publisher_db`, `@publication`을 지정하고 `@publication_type`에 2 값을 지정합니다.  
   
-3.  게시자에서 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) 을 실행하여 구독 정보를 표시합니다. 특정 구독에 대한 정보를 반환하려면 `@publication`, `@subscriber`을 지정하고 **에** pull@subscription_type에서 지정해야 합니다.  
+3.  게시자에서 [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) 을 실행하여 구독 정보를 표시합니다. 특정 구독에 대한 정보를 반환하려면 `@publication`, `@subscriber`을 지정하고 @subscription_type에 **pull**에서 지정해야 합니다.  
   
-4.  게시자에서 [를 지정하고 ](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)sp_helpsubscriberinfo`@subscriber`를 실행합니다. 이렇게 하면 구독자에 대한 정보가 표시됩니다.  
+4.  게시자에서 `@subscriber`를 지정하고 [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)를 실행합니다. 이렇게 하면 구독자에 대한 정보가 표시됩니다.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독의 속성을 변경하려면  
   

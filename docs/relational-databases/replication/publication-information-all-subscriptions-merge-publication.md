@@ -71,7 +71,7 @@ ms.locfileid: "75321425"
  각 구독의 이름으로, 형식은*SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **이름**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 `@description`sp_addmergesubscription[ 또는 ](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription[의 ](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) 매개 변수를 사용하여 지정합니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 각 구독에 대한 설명입니다. 설명은 **구독 속성** 대화 상자에서 입력하거나 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) 또는 [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)의 `@description` 매개 변수를 사용하여 지정합니다. 설명을 구독의 "이름" 또는 애칭으로 사용하기도 합니다.  
   
  **성능**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 복제 모니터에서 측정한 가장 최근의 배달 속도 측정값을 기반으로 하는 각 구독의 성능 등급입니다. 등급은 개별 구독 성능과 게시에 대한 구독(연결 유형이 전화 접속 또는 LAN 등으로 동일한 구독)의 평균 기록 성능을 비교하여 결정됩니다. 복제 모니터는 같은 유형의 연결별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상의 변경 사항에 대해 동기화가 5번 미만으로 수행되었거나 가장 최근에 동기화가 수행된 변경 사항이 50개 미만인 경우에는 이 열이 비어 있습니다.  

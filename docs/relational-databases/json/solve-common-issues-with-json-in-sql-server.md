@@ -85,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON 쿼리에서 반환된 텍스트가 일반 텍스트로 이스케이프된 것 같습니다. 이 문제는 WITHOUT_ARRAY_WRAPPER가 지정된 경우에만 발생합니다. 왜 JSON 개체로 처리되지 않고 결과에서 이스케이프되지 않나요?  
   
- **대답.** 내부 `WITHOUT_ARRAY_WRAPPER`에 `FOR JSON` 옵션을 지정하는 경우 결과 JSON 텍스트가 유효한 JSON이 아닐 수 있습니다. 따라서 외부 `FOR JSON`은 이것을 일반 텍스트로 간주하고 문자열을 이스케이프합니다. JSON 출력이 확실히 유효한 경우 다음 예제에서와 같이 `JSON_QUERY` 함수로 래핑하여 적절한 형식의 JSON으로 수준을 올립니다.  
+ **대답.** 내부 `FOR JSON`에 `WITHOUT_ARRAY_WRAPPER` 옵션을 지정하는 경우 결과 JSON 텍스트가 유효한 JSON이 아닐 수 있습니다. 따라서 외부 `FOR JSON`은 이것을 일반 텍스트로 간주하고 문자열을 이스케이프합니다. JSON 출력이 확실히 유효한 경우 다음 예제에서와 같이 `JSON_QUERY` 함수로 래핑하여 적절한 형식의 JSON으로 수준을 올립니다.  
   
 ```sql  
 SELECT 'Text' as myText,  

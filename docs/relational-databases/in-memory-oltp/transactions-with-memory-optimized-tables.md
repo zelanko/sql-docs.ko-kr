@@ -81,7 +81,7 @@ SELECT * FROM
 COMMIT TRANSACTION;
 ```
 
-데이터베이스 옵션 `WITH (SNAPSHOT)`을 사용할 경우 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` 힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 최적화 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
+데이터베이스 옵션 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`을 사용할 경우 `WITH (SNAPSHOT)` 힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 최적화 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
 
 ```sql
 ALTER DATABASE CURRENT

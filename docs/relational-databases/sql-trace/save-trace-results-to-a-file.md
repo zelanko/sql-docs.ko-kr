@@ -35,7 +35,7 @@ ms.locfileid: "70846817"
   
 -   쿼리 최적화 수행  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **sp_trace_create\@ 저장 프로시저의** **tracefile** 인수에 경로 및 파일 이름이 지정되면 추적 결과를 이 파일에 저장합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 **sp_trace_create** 저장 프로시저의 **\@tracefile** 인수에 경로 및 파일 이름이 지정되면 추적 결과를 이 파일에 저장합니다.  
   
 > [!NOTE]  
 >  추적 파일을 저장하기 위한 경로가 **sp_trace_create** 저장 프로시저에 지정되는 경우 서버에서 해당 디렉터리에 액세스할 수 있어야 합니다. 또한 로컬 디렉터리가 **sp_trace_create**에 지정되는 경우 이는 서버 컴퓨터의 로컬 디렉터리라는 점을 유의하세요.  

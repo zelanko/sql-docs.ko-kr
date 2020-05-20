@@ -43,9 +43,9 @@ ms.locfileid: "71297045"
   
 3.  `FFIsEmpty`라는 부울 변수를 만듭니다.  
   
-4.  스크립트 태스크의 `FFNonDataRows`ReadOnlyVariables**속성에** 변수를 추가합니다.  
+4.  스크립트 태스크의 **ReadOnlyVariables** 속성에 `FFNonDataRows` 변수를 추가합니다.  
   
-5.  스크립트 태스크의 `FFIsEmpty`ReadWriteVariables**속성에** 변수를 추가합니다.  
+5.  스크립트 태스크의 **ReadWriteVariables** 속성에 `FFIsEmpty` 변수를 추가합니다.  
   
 6.  코드에서 **System.IO** 네임스페이스를 가져옵니다.  
   

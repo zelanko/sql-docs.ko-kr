@@ -46,7 +46,7 @@ ms.locfileid: "71297020"
   
 2.  Foreach from Variable 열거자에서 나중에 사용할 수 있도록 스크립트 태스크에서 수집된 파일 목록을 받을 `FileList`라는 **개체** 형식의 패키지 변수를 만듭니다.  
   
-3.  스크립트 태스크의 `FileAge`ReadOnlyVariables**속성에** 변수를 추가하고, `FileList`ReadWriteVariables**속성에** 변수를 추가합니다.  
+3.  스크립트 태스크의 **ReadOnlyVariables** 속성에 `FileAge` 변수를 추가하고, **ReadWriteVariables** 속성에 `FileList` 변수를 추가합니다.  
   
 4.  코드 내에서 **System.Collections** 및 **System.IO** 네임스페이스를 가져옵니다.  
   

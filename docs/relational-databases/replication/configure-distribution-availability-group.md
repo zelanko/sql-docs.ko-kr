@@ -98,7 +98,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ### <a name="distributors-workflow"></a>배포자 워크플로
 
-1. `sp_adddistributor @@servername`을 통해 배포자로 DIST1, DIST2, DIST3을 구성합니다. `distributor_admin`를 통해 `@password`에 대한 암호를 지정합니다. `@password`는 DIST1, DIST2, DIST3 전체에서 동일해야 합니다.
+1. `sp_adddistributor @@servername`을 통해 배포자로 DIST1, DIST2, DIST3을 구성합니다. `@password`를 통해 `distributor_admin`에 대한 암호를 지정합니다. `@password`는 DIST1, DIST2, DIST3 전체에서 동일해야 합니다.
 2. `sp_adddistributiondb`를 통해 DIST1에 배포 데이터베이스를 만듭니다. 배포 데이터베이스의 이름은 `distribution`입니다. `distribution` 데이터베이스의 복구 모두를 simple에서 full로 변경합니다.
 3. DIST1, DIST2 및 DIST3에서 복제본을 통해 `distribution` 데이터베이스에 대한 AG를 만듭니다. 모든 복제본은 동기 상태인 것이 좋습니다. 보조 복제본을 읽기 가능 또는 읽기 허용으로 구성합니다. 이번에는 배포 데이터베이스가 AG, DIST1이 주 복제본, DIST2 및 DIST3이 보조 복제본입니다.
 4. AG에 대해 이름이 `DISTLISTENER`인 수신기를 구성합니다.
@@ -286,7 +286,7 @@ DIST1은 `distribution` 데이터베이스 AG의 현재 주 복제본입니다.
 
 ### <a name="subscriber-workflow"></a>구독자 워크플로
 
-AG에서 배포 데이터베이스를 통해 게시에 대한 끌어오기 구독을 추가하려면 `@distributor`의 `sp_addpullsubscription_agent` 매개 변수에서 AG 수신기 이름을 사용합니다.
+AG에서 배포 데이터베이스를 통해 게시에 대한 끌어오기 구독을 추가하려면 `sp_addpullsubscription_agent`의 `@distributor` 매개 변수에서 AG 수신기 이름을 사용합니다.
 
 ## <a name="sample-t-sql-create-distribution-db-in-ag"></a>샘플 T-SQL: AG에서 배포 DB 만들기
 

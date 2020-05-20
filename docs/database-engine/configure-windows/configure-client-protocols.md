@@ -55,7 +55,7 @@ ms.locfileid: "68012816"
 2.  **사용할 수 있는 프로토콜** 상자에서 **위로 이동** 이나 **아래로 이동**을 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결을 시도할 때 사용되는 프로토콜 순서를 변경합니다. **사용할 수 있는 프로토콜** 상자의 가장 위에 있는 프로토콜은 기본 프로토콜입니다.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서버 별칭 구성과 기본 클라이언트 네트워크 라이브러리에 대한 레지스트리 항목을 만듭니다. 하지만 애플리케이션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 라이브러리 또는 네트워크 프로토콜을 설치하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 Network 라이브러리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 함께 설치되며 Network 프로토콜은 Microsoft Windows 설치 프로그램의 일부로 설치되거나 **제어판**의 **네트워크**를 통해 설치됩니다. 특정 네트워크 프로토콜은 Windows 설치 프로그램의 일부로 제공되지 않을 수 있습니다. 이러한 네트워크 프로토콜을 설치하는 방법은 공급업체 설명서를 참조하십시오.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 서버 별칭 구성과 기본 클라이언트 네트워크 라이브러리에 대한 레지스트리 항목을 만듭니다. 하지만 애플리케이션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 라이브러리 또는 네트워크 프로토콜을 설치하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 네트워크 라이브러리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 함께 설치되며 네트워크 프로토콜은 Microsoft Windows 설치 프로그램의 일부로 설치되거나 **제어판**의 **네트워크**를 통해 설치됩니다. 특정 네트워크 프로토콜은 Windows 설치 프로그램의 일부로 제공되지 않을 수 있습니다. 이러한 네트워크 프로토콜을 설치하는 방법은 공급업체 설명서를 참조하십시오.  
   
 ###  <a name="to-configure-a-client-to-use-tcpip"></a><a name="Configure"></a> 클라이언트에서 TCP/IP를 사용하도록 구성하려면  
   

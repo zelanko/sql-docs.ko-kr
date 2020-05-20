@@ -23,7 +23,7 @@ ms.locfileid: "74165582"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 **를 사용하여 추적에서 캡처된** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이벤트를 개별 .SQLPLan 파일에 저장하는 방법에 대해 설명합니다. **에서** Showplan XML[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
+  이 항목에서는 **를 사용하여 추적에서 캡처된** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이벤트를 개별 .SQLPLan 파일에 저장하는 방법에 대해 설명합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **Showplan XML** 이벤트 파일을 열어 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
   
 ## <a name="save-showplan-xml-events-separately"></a>Showplan XML 이벤트를 개별적으로 저장  
   

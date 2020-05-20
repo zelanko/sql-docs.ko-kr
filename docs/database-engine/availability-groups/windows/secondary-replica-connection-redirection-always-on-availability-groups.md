@@ -46,7 +46,7 @@ ms.locfileid: "77256666"
 보조 복제본이 읽기/쓰기 연결 요청을 리디렉션하려면 다음이 충족되어야 합니다.
 * 보조 복제본이 온라인 상태여야 합니다. 
 * 복제본 사양 `PRIMARY_ROLE`에는 `READ_WRITE_ROUTING_URL`이 포함되어야 합니다.
-* `ReadWrite`를 `ApplicationIntent`로 정의하거나 `ReadWrite`를 설정하지 않고 기본값(`ApplicationIntent`)이 적용되도록 함으로써 연결 문자열은 `ReadWrite`가 되어야 합니다.
+* `ApplicationIntent`를 `ReadWrite`로 정의하거나 `ApplicationIntent`를 설정하지 않고 기본값(`ReadWrite`)이 적용되도록 함으로써 연결 문자열은 `ReadWrite`가 되어야 합니다.
 
 ## <a name="set-read_write_routing_url-option"></a>READ_WRITE_ROUTING_URL 옵션 설정
 

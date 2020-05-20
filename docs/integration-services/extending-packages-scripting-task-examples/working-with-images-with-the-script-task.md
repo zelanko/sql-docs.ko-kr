@@ -51,7 +51,7 @@ ms.locfileid: "71296974"
   
 1.  `CurrentImageFile`이라는 문자열 변수를 만들고 해당 값을 기존 이미지 파일의 경로 및 파일 이름으로 설정합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `CurrentImageFile`ReadOnlyVariables**속성에** 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `CurrentImageFile` 변수를 추가합니다.  
   
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 설정합니다.  
   

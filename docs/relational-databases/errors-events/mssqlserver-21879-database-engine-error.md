@@ -52,9 +52,9 @@ ms.locfileid: "68056713"
   
 구독자에서 실행되는 병합 에이전트 같이 배포자와는 다른 노드에서 실행되는 복제 에이전트에서 시작한 **sp_get_redirected_publisher** 호출에서 오류 21879가 반환될 경우 특별히 고려해야 할 사항이 있습니다. Windows 인증을 사용하여 리디렉션된 게시자에 연결하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증이 구성되어 있어야만 성공적으로 연결할 수 있습니다. Windows 인증을 사용하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증이 구성되어 있지 않을 경우 구독자에서 실행되는 병합 에이전트는 'NT AUTHORITY\ANONYMOUS LOGON' 로그인이 실패했음을 나타내는 오류 18456을 수신합니다. 다음 세 가지 방법으로 이 문제를 해결할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증을 구성합니다. **온라인 설명서의**Kerberos 인증 및 SQL Server[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Kerberos 인증을 구성합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 **Kerberos 인증 및 SQL Server**를 참조하세요.  
   
 -   **sp_changedistpublisher**를 사용하여 MSdistpublishers에 있는 원래 게시자와 연관된 보안 모드를 변경하고 연결에 사용할 로그인 및 암호를 지정합니다.  
   
--   배포자에서 *sp_get_redirected_publisher*가 호출될 때 유효성 검사를 무시하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 **BypassPublisherValidation**을 지정합니다.  
+-   배포자에서 **sp_get_redirected_publisher**가 호출될 때 유효성 검사를 무시하도록 병합 에이전트 명령줄에서 명령줄 매개 변수 *BypassPublisherValidation*을 지정합니다.  
   

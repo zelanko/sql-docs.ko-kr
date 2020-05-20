@@ -55,7 +55,7 @@ ms.locfileid: "79288377"
  원본 또는 대상 데이터베이스의 이름을 입력하거나 드롭다운 목록에서 데이터베이스를 선택합니다.  
   
  **통합 보안**  
- Windows 통합 인증을 사용하여 연결하려면(권장) **True**를 지정하고, **인증을 사용하여 연결하려면**False[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지정합니다. **False**를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 **False**입니다.  
+ Windows 통합 인증을 사용하여 연결하려면(권장) **True**를 지정하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 **False**를 지정합니다. **False**를 지정하면 사용자 ID와 암호를 입력해야 합니다. 기본값은 **False**입니다.  
   
  **사용자 ID**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 사용자 이름을 입력합니다.  

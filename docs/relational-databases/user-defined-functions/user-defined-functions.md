@@ -64,7 +64,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
  `BEGIN...END` 블록 내에 있는 명령문은 어떠한 부작용도 유발하지 않습니다. 함수의 부작용으로는 데이터베이스 테이블 수정과 같은 함수 외부 범위를 갖는 리소스 상태의 영구적인 변경을 들 수 있습니다. 함수의 문에서 변경할 수 있는 것은 로컬 커서나 변수와 같은 함수의 로컬 개체뿐입니다. 함수에서 수행할 수 없는 동작의 예로는 데이터베이스 테이블의 수정, 함수에서 로컬로 사용되지 않는 커서 작업, 전자 메일 보내기, 카탈로그 수정 시도 및 사용자에게 반환되는 결과 집합 생성 등이 있습니다.  
   
 > [!NOTE]
-> `CREATE FUNCTION`에서는 `CREATE FUNCTION` 문이 실행될 때 존재하지 않는 리소스에 대해 부작용이 생기는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 실행하지만 이 문이 호출되는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 이 함수가 실행되지 않습니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 `CREATE FUNCTION` 문이 실행될 때 존재하지 않는 리소스에 대해 부작용이 생기는 경우에는 `CREATE FUNCTION` 문을 실행하지만 이 문이 호출되는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 이 함수가 실행되지 않습니다.  
   
  쿼리에 지정된 함수가 실제로 실행되는 횟수는 최적화 프로그램에서 작성한 실행 계획마다 다릅니다. 예를 들면 `WHERE` 절의 하위 쿼리에서 호출하는 함수가 있습니다. 하위 쿼리 및 그 함수가 실행되는 횟수는 최적화 프로그램에서 선택한 액세스 경로에 따라 다릅니다.  
  
@@ -103,7 +103,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
 |@@IDLE|@@TOTAL_WRITE|  
 |@@IO_BUSY||  
   
- 다음과 같은 비결정적 기본 제공 함수는 **사용자 정의 함수에 사용할 수**없습니다[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 다음과 같은 비결정적 기본 제공 함수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수에 사용할 수 **없습니다**.  
   
 |||  
 |-|-|  
@@ -115,7 +115,7 @@ UDF(사용자 정의 함수)를 사용하는 이유는 무엇인가요?
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> 스키마 바운드 함수  
  `CREATE FUNCTION`에서는 테이블, 뷰, 다른 사용자 정의 함수와 같은 참조하는 개체의 스키마에 함수를 바인드하는 `SCHEMABINDING` 절을 지원합니다. 스키마 바운드 함수에서 참조하는 개체는 변경하거나 삭제할 수 없습니다.  
   
- `SCHEMABINDING`CREATE FUNCTION[에서 ](../../t-sql/statements/create-function-transact-sql.md) 절을 지정하려면 먼저 다음 조건이 만족되어야 합니다.  
+ [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)에서 `SCHEMABINDING` 절을 지정하려면 먼저 다음 조건이 만족되어야 합니다.  
   
 -   함수에서 참조하는 모든 뷰와 사용자 정의 함수도 스키마 바운드이어야 합니다.  
   

@@ -167,7 +167,7 @@ GO
 
 ### <a name="d-resetting-the-identity-value-on-an-empty-table"></a>D. 빈 테이블에 ID 값 다시 설정
 
- 다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLogID` 테이블의 `ErrorLog` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
+ 다음 예에서는 테이블에서 모든 레코드를 삭제한 후 `ErrorLog` 테이블의 `ErrorLogID` 열에 있는 현재 ID 값을 1로 강제 설정합니다. 테이블에 기존 행이 없기 때문에 삽입된 다음 행은 열에 대해 정의된 증분 값을 추가하지 않고 새로운 현재 ID 값으로 1을 사용합니다  
   
 ```sql
 USE AdventureWorks2012;  

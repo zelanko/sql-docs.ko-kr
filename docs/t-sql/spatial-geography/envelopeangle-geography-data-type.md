@@ -48,7 +48,7 @@ EnvelopeAngle( )
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 메서드는 **FullGlobe** 인스턴스로 확장되었습니다.  
   
- `EnvelopeAngle()`의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에 적용된 반구 제한이 제거되었습니다. 그러나 각도가 90도보다 큰 인스턴스의 경우 180도가 반환됩니다. `EnvelopeAngle()`geography**인스턴스가 둘 이상의 반구에 걸쳐 있을 경우**이 정확하지 않습니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]의 `EnvelopeAngle()`에 적용된 반구 제한이 제거되었습니다. 그러나 각도가 90도보다 큰 인스턴스의 경우 180도가 반환됩니다. **geography** 인스턴스가 둘 이상의 반구에 걸쳐 있을 경우 `EnvelopeAngle()`이 정확하지 않습니다.  
   
 ## <a name="examples"></a>예  
   

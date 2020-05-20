@@ -20,7 +20,7 @@ ms.locfileid: "73594412"
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell 모듈은 [ 또는 ](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)에서 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]Always Encrypted[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 구성하기 위한 cmdlet을 제공합니다.
+SqlServer PowerShell 모듈은 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 구성하기 위한 cmdlet을 제공합니다.
 
 ## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell을 사용하여 Always Encrypted를 구성할 때의 보안 고려 사항
 

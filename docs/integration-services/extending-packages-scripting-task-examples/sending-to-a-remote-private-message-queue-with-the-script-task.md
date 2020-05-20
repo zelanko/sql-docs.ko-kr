@@ -44,9 +44,9 @@ ms.locfileid: "71296993"
     FORMATNAME:DIRECT=OS:<computername>\private$\<queuename>  
     ```  
   
-2.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]MessageText**라는** String**형식의** 변수를 만들어 메시지 텍스트를 스크립트에 전달합니다. 변수의 값으로 기본 메시지를 입력합니다.  
+2.  **MessageText**라는 **String** 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변수를 만들어 메시지 텍스트를 스크립트에 전달합니다. 변수의 값으로 기본 메시지를 입력합니다.  
   
-3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 `MessageText`ReadOnlyVariables**속성에** 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
+3.  디자인 화면에 스크립트 태스크를 추가하고 편집합니다. **스크립트 태스크 편집기**의 **스크립트** 탭에서 **ReadOnlyVariables** 속성에 `MessageText` 변수를 추가하여 해당 변수를 스크립트 내에서 사용할 수 있게 합니다.  
   
 4.  **스크립트 편집**을 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) 스크립트 편집기를 엽니다.  
   

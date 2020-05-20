@@ -82,7 +82,7 @@ ms.locfileid: "79287807"
 ##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> 트랜잭션 로그 잘림  
 로그 잘림은 트랜잭션 로그에서 다시 사용할 수 있도록 로그 파일의 공간을 확보하는 것입니다. 할당된 공간이 가득 차지 않도록 트랜잭션 로그를 주기적으로 줄여야 합니다. 몇몇 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
  
-로그 잘림은 [ 데이터베이스의 논리 트랜잭션 로그에서 비활성 ](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)가상 로그 파일(VLF)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 채워집니다.  
+로그 잘림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 [가상 로그 파일(VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 채워집니다.  
   
 공간 부족 문제를 방지하기 위해 어떤 이유로 로그 잘림이 지연되지 않는 한 다음과 같은 경우에 잘림이 자동으로 수행됩니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79287807"
 > [!IMPORTANT]
 > 가득 찬 트랜잭션 로그에 응답하는 방법에 대한 자세한 내용은 [Troubleshoot a Full Transaction Log &#40;SQL Server Error 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
   
- 실제로 여러 이유로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 **sys.databases** 카탈로그 뷰의 **log_reuse_wait** 및 [log_reuse_wait_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
+ 실제로 여러 이유로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 발생하지 않는 이유는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 쿼리하여 확인할 수 있습니다. 다음 표에서는 이러한 열의 값에 대해 설명합니다.  
   
 |log_reuse_wait 값|log_reuse_wait_desc 값|Description|  
 |----------------------------|----------------------------------|-----------------|  
@@ -141,7 +141,7 @@ ms.locfileid: "79287807"
   
 트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 `SELECT INTO` 작업이 모두 기록됩니다.  
   
--   새 데이터를 삽입 또는 추가할 때 `.WRITE`UPDATE[ 문의 ](../../t-sql/queries/update-transact-sql.md) 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
+-   새 데이터를 삽입 또는 추가할 때 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 `.WRITE` 절을 사용하여 큰 값 데이터 형식을 부분적으로 업데이트하는 작업. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다. 큰 값 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.  
   
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext**, 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   

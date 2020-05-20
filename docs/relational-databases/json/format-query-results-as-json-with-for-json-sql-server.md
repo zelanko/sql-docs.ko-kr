@@ -77,7 +77,7 @@ FOR JSON AUTO;
 
 다음 `SELECT...FOR JSON AUTO`의 예제에는 `JOIN`'ed 테이블의 데이터 간에 일 대 다 관계가 있을 때 JSON 결과가 어떻게 표시되는지가 포함됩니다.
 
-반환된 JSON에서 null 값이 없음도 보여줍니다. 그러나 `INCLUDE_NULL_VALUES` 절에 `FOR` 키워드를 사용하여 이 기본 동작을 재정의할 수 있습니다.
+반환된 JSON에서 null 값이 없음도 보여줍니다. 그러나 `FOR` 절에 `INCLUDE_NULL_VALUES` 키워드를 사용하여 이 기본 동작을 재정의할 수 있습니다.
 
 ```sql
 go

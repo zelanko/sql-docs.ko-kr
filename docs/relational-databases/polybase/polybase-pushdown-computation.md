@@ -65,7 +65,7 @@ SQL Server는 조건자 푸시다운에 대해 다음과 같은 기본 식과 �
 
 BETWEEN, NOT, IN 및 LIKE 연산자를 푸시다운할 수도 있습니다. 실제 동작은 쿼리 최적화 프로그램에서 기본 관계형 연산자를 사용하는 일련의 문으로 다시 작성하는 방법에 따라 달라집니다.
 
-이 예제의 쿼리에는 Hadoop에 푸시다운할 수 있는 여러 조건자가 있습니다. SQL Server는 Hadoop에 맵 감소 작업을 푸시하여 `customer.account_balance <= 200000` 조건자를 수행할 수 있습니다. `BETWEEN 92656 and 92677` 식도 Hadoop에 푸시할 수 있는 이진 및 논리 연산으로 구성됩니다. **의 논리적** AND`customer.account_balance and customer.zipcode`는 최종 식입니다.
+이 예제의 쿼리에는 Hadoop에 푸시다운할 수 있는 여러 조건자가 있습니다. SQL Server는 Hadoop에 맵 감소 작업을 푸시하여 `customer.account_balance <= 200000` 조건자를 수행할 수 있습니다. `BETWEEN 92656 and 92677` 식도 Hadoop에 푸시할 수 있는 이진 및 논리 연산으로 구성됩니다. `customer.account_balance and customer.zipcode`의 논리적 **AND**는 최종 식입니다.
 
 이 조건자를 결합하면 맵 감소 작업에서 모든 WHERE 절을 수행할 수 있습니다. SELECT 조건에 맞는 데이터만 SQL Server PDW에 다시 복사됩니다.
 

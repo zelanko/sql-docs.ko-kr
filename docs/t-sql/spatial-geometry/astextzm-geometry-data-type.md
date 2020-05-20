@@ -46,7 +46,7 @@ ms.locfileid: "68027645"
 ## <a name="remarks"></a>설명  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Point`Z **(높이) 값 및** M **(측정값) 값을 포함하는**  인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (1 2)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M**의 값을 반환하여 (1 2 3 4)를 반환합니다.  
+ 다음 예에서는 **Z**(높이) 값 및 **M**(측정값) 값을 포함하는 `Point` 인스턴스를 만듭니다. `STAsText()`는 WKT 값인 (1 2)을 선택하며 `AsTextZM()`도 동일한 WKT 값을 선택하여 **Z** 및 **M**의 값을 반환하여 (1 2 3 4)를 반환합니다.  
   
 ```  
 DECLARE @g geometry;  

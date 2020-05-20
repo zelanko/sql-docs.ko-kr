@@ -126,7 +126,7 @@ ms.locfileid: "74056106"
   
  **Transact-SQL을 사용하여 속성을 검색 속성 목록에 추가하려면**  
   
- [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문서에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문을 사용합니다.  
+ [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md) 문서에서 설명한 방법 중 하나를 사용하여 가져온 값과 함께 [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문을 사용합니다.  
   
  다음 예에서는 속성을 검색 속성 목록에 추가할 때 이러한 값을 사용하는 방법을 보여 줍니다.  
   
@@ -150,7 +150,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Transact-SQL을 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- [ 절과 함께 ](../../t-sql/statements/alter-fulltext-index-transact-sql.md)ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;`SET SEARCH PROPERTY LIST = <property_list_name>` 문을 사용합니다.  
+ `SET SEARCH PROPERTY LIST = <property_list_name>` 절과 함께 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용합니다.  
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   

@@ -53,7 +53,7 @@ ms.locfileid: "68001968"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 **문의 경우**database_name**및**object_name[!INCLUDE[tsql](../../includes/tsql-md.md)] 열은 NULL입니다.  
+1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 경우 **database_name** 및 **object_name** 열은 NULL입니다.  
   
     ```sql   
     SELECT DB_NAME(st.dbid) AS database_name,  

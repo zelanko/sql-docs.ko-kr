@@ -115,7 +115,7 @@ ms.locfileid: "80243413"
 ## <a name="considerations"></a>고려 사항  
  감사 시작 도중에 오류가 발생하면 서버가 시작되지 않습니다. 이 경우 명령줄에서 **–f** 옵션을 사용하여 서버를 시작할 수 있습니다.  
   
- 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**플래그를 사용하여**를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-m**플래그를 사용하여**를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
+ 감사에 대해 ON_FAILURE=SHUTDOWN이 지정되어 있어 감사 오류 발생 시 서버가 종료되거나 시작되지 않으면 MSG_AUDIT_FORCED_SHUTDOWN 이벤트가 로그에 기록됩니다. 종료는 이 설정을 처음 발견할 때 발생하므로 이벤트는 한 번만 기록됩니다. 이 이벤트는 종료를 발생시킨 감사 오류 메시지 이후에 기록됩니다. 관리자는 단일 사용자 모드에서 **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작함으로써 감사로 인한 종료를 무시할 수 있습니다. 단일 사용자 모드에서 시작하면 ON_FAILURE=SHUTDOWN이 지정된 모든 감사를 해당 세션에서 ON_FAILURE=CONTINUE로 실행되도록 다운그레이드할 수 있습니다. **-m** 플래그를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 시작하면 MSG_AUDIT_SHUTDOWN_BYPASSED 메시지가 오류 로그에 기록됩니다.  
   
  서비스 시작 옵션에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)을 참조하세요.  
   

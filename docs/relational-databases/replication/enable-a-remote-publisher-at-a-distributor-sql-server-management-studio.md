@@ -42,7 +42,7 @@ ms.locfileid: "76288080"
 
 ### <a name="to-enable-a-publisher-in-the-distributor-properties-dialog-box"></a>배포자 속성 대화 상자에서 게시자를 설정하려면  
   
-1.  **배포자 속성 -** Distributor> **대화 상자의 \<게시자** 페이지에서 **추가**를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 **추가**를 클릭합니다.  
   
 2.  **SQL Server 게시자 추가**를 클릭합니다. 배포자를 사용하도록 Oracle 게시자를 설정하는 방법은 [Create a Publication from an Oracle Database](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하십시오.  
   

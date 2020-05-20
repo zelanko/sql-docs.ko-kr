@@ -87,7 +87,7 @@ GO
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 호환성 수준을 `120`의 호환성 수준인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]으로 변경합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 호환성 수준을 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 호환성 수준인 `120`으로 변경합니다.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

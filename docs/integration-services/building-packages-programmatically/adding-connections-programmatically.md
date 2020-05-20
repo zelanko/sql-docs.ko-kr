@@ -45,7 +45,7 @@ ms.locfileid: "71299093"
   
  `ConnectionManagerAdoNetClass cmado = cm.InnerObject as ConnectionManagerAdoNet;`  
   
- 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 **개체의**QueryInterface<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
+ 이 코드 줄은 관리되는 연결 관리자 개체를 기본 연결 개체로 캐스팅합니다. C++를 사용하는 경우에는 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체의 **QueryInterface** 메서드를 호출하며 기본 연결 개체의 인터페이스가 필요합니다.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 연결 관리자와 `package.Connections.Add("xxx")` 문에 사용되는 문자열을 보여 줍니다. 모든 연결 관리자의 목록은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)를 참조하세요.  
   

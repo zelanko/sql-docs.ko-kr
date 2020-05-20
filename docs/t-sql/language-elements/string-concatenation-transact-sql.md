@@ -43,7 +43,7 @@ expression + expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 문자 및 이진 데이터 형식 범주에서 [image](../../t-sql/language-elements/expressions-transact-sql.md), **ntext** 또는 **text** 데이터 형식을 제외한 모든 데이터 형식으로 구성된 유효한 **식**입니다. 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다.  
+ 문자 및 이진 데이터 형식 범주에서 **image**, **ntext** 또는 **text** 데이터 형식을 제외한 모든 데이터 형식으로 구성된 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다.  
   
  이진 문자열 사이에 문자가 있는 형태의 연결에서는 문자 데이터로의 명시적 변환이 필요합니다. 다음 예에서는 이진 연결에 `CONVERT` 또는 `CAST`가 필요한 경우와 `CONVERT` 또는 `CAST`를 사용하지 않아야 하는 보여 줍니다.  
   

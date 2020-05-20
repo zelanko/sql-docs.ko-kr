@@ -89,7 +89,7 @@ SELECT CAST( @BinaryVariable2 AS INT);
 GO  
 ```  
   
-최종 결과는 `57921`이 아니라 `123457`입니다.
+최종 결과는 `123457`이 아니라 `57921`입니다.
   
 > [!NOTE]  
 >  모든 데이터 형식과 **binary** 데이터 형식 간의 변환은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전 사이에서 같다고 보장할 수 없습니다.  

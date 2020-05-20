@@ -114,7 +114,7 @@ ORDER BY s.name;
 * [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다. 이 값은 1,000 곱의 제곱근과 현재 테이블 카디널리티로 계산됩니다. 예를 들어 테이블에 2백만 개 행이 포함되어 있으면 sqrt (1000 * 2000000) = 44721.359와 같이 계산됩니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다. 그러나 데이터베이스의 호환성 수준이 130 미만이면 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 임계값이 적용됩니다. ?
 
 > [!IMPORTANT]
-> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]데이터베이스 호환성 수준[이 130 미만인 ](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 이상에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
+> [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]부터 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 또는 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)이 130 미만인 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상에서는 [2371 추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 사용하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블의 행 수에 따라 조정되는, 감소하는 동적 통계 업데이트 임계값을 사용합니다.
   
 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
@@ -161,7 +161,7 @@ AUTO_UPDATE_STATISTICS 제어 방법에 대한 자세한 내용은 [SQL Server�
 1.  인덱스가 만들어진 경우 쿼리 최적화 프로그램에서 테이블 또는 뷰의 인덱스에 대한 통계를 작성합니다. 이러한 통계는 인덱스의 키 열에 대해 만들어집니다. 인덱스가 필터링된 인덱스인 경우 쿼리 최적화 프로그램은 필터링된 인덱스로 지정된 행의 동일한 하위 집합에 대해 필터링된 통계를 작성합니다. 필터링된 인덱스에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md) 및 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
 
     > [!NOTE]
-    > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신, 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `CREATE STATISTICS` 절에서 `UPDATE STATISTICS` 또는 `FULLSCAN`를 사용합니다. 
+    > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신, 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 통계를 생성합니다. 분할된 인덱스로 데이터베이스를 업그레이드한 후 인덱스에 대한 히스토그램 데이터가 달라집니다. 이 동작 변경이 쿼리 성능에는 영향을 주지 않을 수 있습니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 `FULLSCAN` 절에서 `CREATE STATISTICS` 또는 `UPDATE STATISTICS`를 사용합니다. 
   
 2.  [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics)가 ON이면 쿼리 최적화 프로그램은 쿼리 조건자의 단일 열에 대한 통계를 작성합니다.  
 
@@ -302,7 +302,7 @@ GO
   
 * 이미 전달된 매개 변수를 사용하는 쿼리가 저장 프로시저에 포함되어 있는 경우 쿼리에서 매개 변수 값을 사용하기 전에 저장 프로시저 내의 매개 변수 값을 변경하지 마십시오. 쿼리에 대한 카디널리티 예상치는 업데이트된 값이 아닌 이미 전달된 매개 변수 값을 기준으로 합니다. 매개 변수 값이 변경되지 않도록 두 개의 저장 프로시저를 사용하여 쿼리를 다시 작성할 수 있습니다.  
   
-     예를 들어 `Sales.GetRecentSales`가 NULL인 경우 다음 `@date` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
+     예를 들어 `@date`가 NULL인 경우 다음 `Sales.GetRecentSales` 저장 프로시저에서는 `@date` 매개 변수의 값을 변경합니다.  
   
     ```sql  
     USE AdventureWorks2012;  
@@ -351,7 +351,7 @@ GO
 ### <a name="improving-cardinality-estimates-with-query-hints"></a>쿼리 힌트를 사용하여 카디널리티 예상치 정확도 향상  
  지역 변수에 대한 카디널리티 예상치 정확도를 높이기 위해 RECOMPILE과 함께 `OPTIMIZE FOR <value>` 또는 `OPTIMIZE FOR UNKNOWN` 쿼리 힌트를 사용할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
- 일부 애플리케이션의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `OPTIMIZE FOR` 옵션을 사용하지 않는 경우에도 `RECOMPILE` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
+ 일부 애플리케이션의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. `RECOMPILE` 옵션을 사용하지 않는 경우에도 `OPTIMIZE FOR` 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 저장 프로시저에 추가할 수 있습니다. 다음 예에서는 `OPTIMIZE FOR` 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
   
 ```sql  
 USE AdventureWorks2012;  

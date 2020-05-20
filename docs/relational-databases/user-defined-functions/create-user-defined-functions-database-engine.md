@@ -52,7 +52,7 @@ ms.locfileid: "79287997"
   
 -   사용자 정의 함수는 중첩될 수 있습니다. 즉, 하나의 사용자 정의 함수가 다른 사용자 정의 함수를 호출할 수 있습니다. 중첩 수준은 호출된 함수의 실행이 시작되면 늘어나고 호출된 함수의 실행이 끝나면 줄어듭니다. 사용자 정의 함수는 최대 32 수준까지 중첩될 수 있습니다. 최대 중첩 수준을 초과하면 전체 함수 호출 체인이 실패합니다. Transact-SQL 사용자 정의 함수의 관리 코드 참조는 32 수준의 중첩 제한에 대해 한 수준으로 계산됩니다. 관리 코드 내에서 호출된 메서드는 이 제한에 따라 계산되지 않습니다.  
   
--   다음 Service Broker 문은 **사용자 정의 함수에**포함시킬 수 없습니다[!INCLUDE[tsql](../../includes/tsql-md.md)].  
+-   다음 Service Broker 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수에 **포함시킬 수 없습니다**.  
   
     -   `BEGIN DIALOG CONVERSATION`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "79287997"
 데이터베이스에 대한 `CREATE FUNCTION` 권한과 함수가 생성되는 스키마에 대한 `ALTER` 권한이 필요합니다. 함수가 사용자 정의 형식을 지정하면 해당 유형에 대한 `EXECUTE` 권한이 필요합니다.  
   
 ##  <a name="scalar-functions"></a><a name="Scalar"></a> 스칼라 함수  
- 다음 예에서는 **데이터베이스의 다중 명령문**스칼라 함수(스칼라 UDF)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 다중 명령문 **스칼라 함수(스칼라 UDF)** 를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
@@ -105,7 +105,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 > 스칼라 함수에 대한 자세한 내용 및 예제는 [CREATE FUNCTION(Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)을 참조하세요. 
 
 ##  <a name="table-valued-functions"></a><a name="TVF"></a> 테이블 반환 함수  
-다음 예제에서는 **데이터베이스에서**인라인 TVF(테이블 반환 함수)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
+다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 **인라인 TVF(테이블 반환 함수)** 를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
   
 ```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
@@ -132,7 +132,7 @@ RETURN
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-다음 예제에서는 **데이터베이스에서**MSTVF(다중 명령문 테이블 반환 함수)[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
+다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 **MSTVF(다중 명령문 테이블 반환 함수)** 를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
   
 ```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  

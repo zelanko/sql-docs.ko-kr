@@ -97,7 +97,7 @@ ms.locfileid: "67930139"
  이전의 세 가지 예와 결과가 동일합니다. 같은 곡선 시퀀스를 입력하기 위해 어떤 WKT(Well-known Text) 형식을 사용하건 간에 `STCurveN()` 인스턴스가 사용될 때 `CompoundCurve`에서 반환하는 결과는 같습니다.  
   
 ### <a name="d-validating-the-parameter-before-calling-stcurven"></a>D. STCurveN() 호출 전 매개 변수 유효성 검사  
- 다음 예에서는 `@n`메서드를 호출하기 전에 `STCurveN()`이 올바른지 확인하는 방법을 보여 줍니다.  
+ 다음 예에서는 `STCurveN()`메서드를 호출하기 전에 `@n`이 올바른지 확인하는 방법을 보여 줍니다.  
   
 ```
  DECLARE @g geometry;  

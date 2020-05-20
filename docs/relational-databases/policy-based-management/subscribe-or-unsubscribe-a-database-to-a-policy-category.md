@@ -22,7 +22,7 @@ ms.locfileid: "75558235"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 데이터베이스에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 정책 범주를 구독하거나 구독 취소하는 방법을 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 정책 범주를 구독하거나 구독 취소하는 방법을 설명합니다.  
   
  **항목 내용**  
   

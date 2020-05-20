@@ -67,7 +67,7 @@ ms.locfileid: "76285130"
 
    SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
-3. 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행합니다. 이때 `@dbname`에 게시할 데이터베이스를 지정하고 `@optname`에 복제 유형을 지정하며 `true`에 `@value` 값을 지정합니다.
+3. 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행합니다. 이때 `@dbname`에 게시할 데이터베이스를 지정하고 `@optname`에 복제 유형을 지정하며 `@value`에 `true` 값을 지정합니다.
 
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>원격 배포자를 사용하여 게시를 구성하려면 
 

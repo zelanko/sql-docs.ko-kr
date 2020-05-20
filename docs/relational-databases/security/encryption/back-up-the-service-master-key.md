@@ -20,7 +20,7 @@ ms.locfileid: "74957487"
 ---
 # <a name="back-up-the-service-master-key"></a>서비스 마스터 키 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 문서에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 서비스 마스터 키를 백업하는 방법에 대해 설명합니다. 서비스 마스터 키는 암호화 계층의 루트입니다. 이 키는 안전한 오프 사이트 위치에 백업 및 저장해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  
+  이 문서에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 서비스 마스터 키를 백업하는 방법에 대해 설명합니다. 서비스 마스터 키는 암호화 계층의 루트입니다. 이 키는 안전한 오프 사이트 위치에 백업 및 저장해야 합니다. 이러한 백업을 만드는 작업은 서버에서 수행되는 첫 번째 관리 동작 중 하나입니다.  
 
 ## <a name="before-you-begin"></a>시작하기 전에  
   

@@ -109,7 +109,7 @@ ms.locfileid: "79433760"
     ```  
   
     > [!NOTE]  
-    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용하지 않거나 사용하도록 설정하려면 *sp_update_job &#40;Transact-SQL&#41;\@의* [enabled](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md) 옵션을 사용합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)에서 지원됩니다.  
+    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용하지 않거나 사용하도록 설정하려면 [sp_update_job &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)의 *\@enabled* 옵션을 사용합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)에서 지원됩니다.  
   
 -   **Always On 주 데이터베이스 복제본에 CDC 역할 추가**  
   

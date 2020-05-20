@@ -60,7 +60,7 @@ ms.locfileid: "71286742"
   
 #### <a name="to-configure-this-script-task-example-with-an-smtp-connection-manager"></a>이 스크립트 태스크 예에서 SMTP 연결 관리자를 사용하도록 구성하려면  
   
-1.  `HtmlEmailServer`ReadOnlyVariables**목록에서** 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
+1.  **ReadOnlyVariables** 목록에서 `HtmlEmailServer` 변수를 제거하여 이전에 구성한 스크립트 태스크를 수정합니다.  
   
 2.  서버 이름을 가져오는 다음 코드 줄을  
   

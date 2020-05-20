@@ -44,7 +44,7 @@ ms.locfileid: "75243616"
  기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]RSreportserver.config**와 같은**  구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
+>  **RSreportserver.config**와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
   
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 기반으로 하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본의 동작은 관리자가 AG 환경을 구성한 방법에 따라 다를 수 있습니다.  

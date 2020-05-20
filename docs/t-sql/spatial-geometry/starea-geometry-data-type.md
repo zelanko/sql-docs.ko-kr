@@ -42,7 +42,7 @@ ms.locfileid: "68100988"
  CLR 반환 형식: **SqlDouble**  
   
 ## <a name="remarks"></a>설명  
- `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. `STArea()`geometry**인스턴스가 초기화되지 않은 경우**는 **NULL**을 반환합니다.  
+ `STArea()`는 **geometry** 인스턴스가 0 및 1차원 도형만 포함하거나 비어 있으면 0을 반환합니다. **geometry** 인스턴스가 초기화되지 않은 경우 `STArea()`는 **NULL**을 반환합니다.  
   
 ## <a name="examples"></a>예  
   

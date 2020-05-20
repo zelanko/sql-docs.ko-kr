@@ -43,7 +43,7 @@ Parse ( 'geometry_tagged_text' )
  CLR 반환 형식: **SqlGeometry**  
   
 ## <a name="remarks"></a>설명  
- **에 의해 반환되는** geometry`Parse()` 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
+ `Parse()`에 의해 반환되는 **geometry** 인스턴스의 OGC 형식은 해당 WKT 입력으로 설정됩니다.  
   
  문자열 'Null'은 Null **geometry** 인스턴스로 해석됩니다.  
   

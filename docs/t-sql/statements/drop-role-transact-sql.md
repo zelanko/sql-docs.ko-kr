@@ -78,7 +78,7 @@ DROP ROLE role_name
  데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `purchasing` 데이터베이스에서 `AdventureWorks2012` 데이터베이스 역할을 삭제합니다.  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 `purchasing` 데이터베이스 역할을 삭제합니다.  
   
 ```  
 DROP ROLE purchasing;  

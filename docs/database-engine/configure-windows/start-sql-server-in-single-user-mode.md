@@ -61,7 +61,7 @@ ms.locfileid: "68037159"
   
 4.  클러스터 관리자 또는 장애 조치(failover) 클러스터 관리 콘솔에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 여전히 오프라인 상태인지 확인합니다.  
   
-5.  이제 SQLCMD -E -S[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]servername> 명령을 사용하여 \<에 연결하고 필요한 작업을 수행합니다.  
+5.  이제 SQLCMD -E -S\<servername> 명령을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 필요한 작업을 수행합니다.  
   
 6.  작업이 완료되면 명령 프롬프트를 닫고 클러스터 관리자를 통해 SQL 및 기타 리소스를 다시 온라인 상태로 만듭니다.  
   

@@ -313,7 +313,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. NOT EXISTS 사용  
- NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `DimCustomer` 및 `LastName`가 `BirthDate` 테이블의 모든 항목에 일치하지 않는 행을 `ProspectiveBuyers` 테이블에서 찾습니다.  
+ NOT EXISTS는 EXISTS와 반대됩니다. 하위 쿼리에서 반환되는 행이 없는 경우에는 NOT EXISTS의 WHERE 절 조건이 충족됩니다. 다음 예제에서는 `LastName` 및 `BirthDate`가 `ProspectiveBuyers` 테이블의 모든 항목에 일치하지 않는 행을 `DimCustomer` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
