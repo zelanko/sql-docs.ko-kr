@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobserver
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 046a5b9c4c162dd29c812d326f6d8a448e860604
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305242"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819040"
 ---
 # <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>설명  
- automatic_post는 **sp_add_jobserver**에 있지만 인수 아래에는 나열 되지 않습니다. ** \@** automatic_post는 내부용으로 예약 되어 있습니다. ** \@**  
+ ** \@ automatic_post** 는 **sp_add_jobserver**에 있지만 인수 아래에는 나열 되지 않습니다. ** \@ automatic_post** 는 내부용으로 예약 되어 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
