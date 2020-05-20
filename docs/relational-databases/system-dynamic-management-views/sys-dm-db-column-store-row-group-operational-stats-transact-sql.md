@@ -10,15 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 35d30dfa78ab43f8efe8d3a1cb6bbb9ad30188a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824603"
 ---
 # <a name="sysdm_db_column_store_row_group_operational_stats-transact-sql"></a>sys. dm_db_column_store_row_group_operational_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68005043"
  메모리 내 columnstore 인덱스는이 DMV에 나타나지 않습니다.  
  
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Columnstore 인덱스가 있는 테이블의 ID입니다.|  
 |**index_id**|**int**|Columnstore 인덱스의 ID입니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68005043"
 |**rowgroup_lock_wait_count**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 횟수입니다.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|마지막 SQL 다시 시작 이후 데이터베이스 엔진이이 행 그룹 잠금에서 대기한 누적 시간 (밀리초)입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  다음 사용 권한이 필요합니다.  
   
 -   Object_id에 지정 된 테이블에 대 한 CONTROL 권한  

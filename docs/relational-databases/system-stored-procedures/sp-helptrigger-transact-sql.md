@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptrigger
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c01290f0f95a7e240931a9398ab7acea1b287be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048224"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824407"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helptrigger [ @tabname = ] 'table'
   
 `[ @triggertype = ] 'type'`정보를 반환할 DML 트리거의 유형입니다. *type* 은 **char (6)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**제거**|DELETE 트리거 정보를 반환합니다.|  
+|**DELETE**|DELETE 트리거 정보를 반환합니다.|  
 |**INSERT**|INSERT 트리거 정보를 반환합니다.|  
 |**UPDATE**|UPDATE 트리거 정보를 반환합니다.|  
   
@@ -68,7 +68,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**isinsteadof**|**int**|1=INSTEAD OF 트리거입니다.<br /><br /> 0=INSTEAD OF 트리거가 아닙니다.|  
 |**trigger_schema**|**sysname**|트리거가 속한 스키마의 이름입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  테이블에 대 한 [메타 데이터 표시 유형 구성](../../relational-databases/security/metadata-visibility-configuration.md) 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  

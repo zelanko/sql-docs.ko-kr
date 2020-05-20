@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d37cae4776a5a5fe67ed7e2265d9a23a28a725e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824478"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ## <a name="remarks"></a>설명  
  sp_helpserver를 사용하여 로컬 서버에 정의되어 있는 원격 서버 이름을 나열합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용 권한을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73633012"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824374"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`이외 게시자의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @schema = ] 'schema'`스키마의 이름입니다. *schema* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -47,13 +47,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |값|설명|  
 |-----------|-----------------|  
-|**add**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
+|**추가**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에 추가합니다.|  
 |**그림자**|지정된 스키마를 게시에 적합하지 않은 스키마 목록에서 삭제합니다.|  
 |**help**|게시에 적합하지 않은 스키마 목록을 반환합니다.|  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**schemaname**|**sysname**|게시에 적합하지 않은 스키마의 이름입니다.|  
   
@@ -63,7 +63,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_schemafilter** 은 유형이 다른 게시자에만 사용 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_schemafilter**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

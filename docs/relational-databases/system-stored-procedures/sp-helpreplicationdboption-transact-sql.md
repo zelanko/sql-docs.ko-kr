@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771526"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824451"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`지정 된 복제 옵션 *유형* 값이 설정 된 데이터베이스만 포함 하도록 결과 집합을 제한 합니다. *형식은* **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**게시**|트랜잭션 복제가 허용됩니다.|  
 |**merge publish**|병합 복제가 허용됩니다.|  
@@ -70,7 +70,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="remarks"></a>설명  
  **sp_helpreplicationdboption** 은 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버는 모든 데이터베이스에 대해 **sp_helpreplicationdboption** 를 실행할 수 있습니다. **Db_owner** 고정 데이터베이스 역할의 멤버는 해당 데이터베이스에 대해 **sp_helpreplicationdboption** 을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

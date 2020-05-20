@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9baab3745fde8249e5143b025dd4094c6f4a9133
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824315"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'`구독에 대 한 장애 조치 (failover) 모드입니다. *failover_mode* 은 **nvarchar (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**즉시** 또는 **동기화**|구독자에서 수행된 데이터 변경 내용을 즉시 게시자로 대량 복사합니다.|  
-|**넣었습니다**|데이터 수정 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐에 저장 됩니다.|  
+|**넣었습니다**|데이터 수정 내용은 큐에 저장 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
 > [!NOTE]  
 >  MSMQ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)는 더 이상 사용되지 않으며 지원되지 않습니다.  
@@ -65,7 +65,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>설명  
  즉시 업데이트에 대 한 장애 조치 (failover)가 포함 된 지연 업데이트 또는 지연 업데이트에 대 한 장애 조치 (failover)를 사용 하는 즉시 업데이트의 경우 구독이 사용 하도록 설정 된 스냅숏 복제 또는 트랜잭션 복제에 사용 됩니다. **sp_setreplfailovermode**  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_setreplfailovermode**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

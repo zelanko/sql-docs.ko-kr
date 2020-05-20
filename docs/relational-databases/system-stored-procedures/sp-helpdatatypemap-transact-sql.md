@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771057"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824537"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  와 DBMS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 관리 시스템) 간의 정의 된 데이터 형식 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS (데이터베이스 관리 시스템) 간의 정의 된 데이터 형식 매핑에 대 한 정보를 반환 합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>인수  
 `[ @source_dbms = ] 'source_dbms'`데이터 형식이 매핑되는 DBMS의 이름입니다. *source_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`대상 DBMS의 이름입니다. *destination_dbms* 는 **sysname**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
@@ -84,11 +84,11 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_helpdatatypemap** 는 SQL Server 이외 게시자와 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자로의 데이터 형식 매핑을 정의 합니다.  
+ **sp_helpdatatypemap** 는 SQL Server 이외 게시자와 게시자에서 이외 구독자로의 데이터 형식 매핑을 정의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  원본 및 대상 DBMS의 지정 된 조합이 지원 되지 않는 경우 **sp_helpdatatypemap** 는 빈 결과 집합을 반환 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpdatatypemap**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

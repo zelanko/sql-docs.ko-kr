@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983138"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824588"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983138"
 -   쿼리 계획의 출력 크기는 제한되지 않습니다.  
 -   일괄 처리 내 개별 문을 지정할 수 있습니다.  
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -100,11 +100,11 @@ sys.dm_exec_text_query_plan
   
 -   대량 작업 문이나 8KB를 넘는 문자열 리터럴이 포함된 문과 같은 일부 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 캐시되지 않습니다. 이러한 문의 실행 계획은 캐시에 없기 때문에 **sys.dm_exec_text_query_plan**을 사용하여 검색할 수 없습니다.  
   
--   EXEC ( [!INCLUDE[tsql](../../includes/tsql-md.md)] *string*)를 사용 하는 경우와 같이 일괄 처리 또는 저장 프로시저가 사용자 정의 함수에 대 한 호출을 포함 하거나 동적 SQL에 대 한 호출을 포함 하는 경우 사용자 정의 함수에 대 한 컴파일된 XML 실행 계획은 일괄 처리 또는 저장 프로시저에 대 한 **dm_exec_text_query_plan** 에서 반환 된 테이블에 포함 되지 않습니다. 대신 사용자 정의 함수에 해당 하는 *plan_handle* 에 대해 **dm_exec_text_query_plan** 에 대 한 별도의 호출을 수행 해야 합니다.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]EXEC (*string*)를 사용 하는 경우와 같이 일괄 처리 또는 저장 프로시저가 사용자 정의 함수에 대 한 호출을 포함 하거나 동적 SQL에 대 한 호출을 포함 하는 경우 사용자 정의 함수에 대 한 컴파일된 XML 실행 계획은 일괄 처리 또는 저장 프로시저에 대 한 **dm_exec_text_query_plan** 에서 반환 된 테이블에 포함 되지 않습니다. 대신 사용자 정의 함수에 해당 하는 *plan_handle* 에 대해 **dm_exec_text_query_plan** 에 대 한 별도의 호출을 수행 해야 합니다.  
   
 임시 쿼리가 [단순](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) [매개 변수화 또는 강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 사용 하는 경우 **query_plan** 열에는 문 텍스트만 포함 되 고 실제 쿼리 계획은 포함 되지 않습니다. 쿼리 계획을 반환하려면 매개 변수가 있는 준비된 쿼리의 계획 핸들에 대한 **sys.dm_exec_text_query_plan**을 호출합니다. [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) 뷰의 **sql** 열 또는 [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) 동적 관리 뷰의 텍스트 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sys.dm_exec_text_query_plan**을 실행하려면 **sysadmin** 고정 서버 역할의 멤버이거나 해당 서버에서 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. 계획 캐시에서 모든 쿼리 계획 검색  
- 계획 캐시에 있는 모든 쿼리 계획의 스냅샷을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 현재 계획 캐시에 있는 각 계획의 실행 계획 출력은 반환 되 `query_plan` 는 테이블의 열에 있습니다.  
+ 계획 캐시에 있는 모든 쿼리 계획의 스냅샷을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 현재 계획 캐시에 있는 각 계획의 실행 계획 출력은 반환 되는 `query_plan` 테이블의 열에 있습니다.  
   
 ```sql  
 USE master;  

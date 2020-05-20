@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 44ee5c5ff44928c2f2b9e775eae41aea77fed87a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 859f298787b69cadb6f6d53abfbfb7f8c5439b27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086223"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824658"
 ---
 # <a name="sysdm_cryptographic_provider_keys-transact-sql"></a>sys.dm_cryptographic_provider_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**key_id**|**int**|공급자에서 키의 ID 번호입니다.|  
 |**key_name**|**nvarchar(512)**|공급자에서 키의 이름입니다.|  
@@ -55,7 +55,7 @@ dm_cryptographic_provider_keys ( provider_id )
 |**key_type**|**nchar(256)**|공급자에서 키의 유형입니다.|  
 |**key_length**|**int**|공급자에서 키의 길이입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 뷰가 쿼리되면 사용자 컨텍스트를 공급자로 인증하고 모든 키를 열거하여 사용자에게 표시합니다.  
   
  사용자가 EKM 공급자로 인증할 수 없으면 키 정보가 반환되지 않습니다.  

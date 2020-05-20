@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfced9a7fa554149b491f8ff350ca81723c81d20
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075731"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824361"
 ---
 # <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name'`비즈니스 논리 처리기를 구현 하는 어셈블리의 이름입니다. *dotnet_assembly_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'`는를 재정의 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다. 이름은 **Namespace. Classname**형식으로 지정 해야 합니다. *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'`는를 재정의 하 여 비즈니스 논리 처리기를 구현 하는 클래스의 이름입니다 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> . 이름은 **Namespace. Classname**형식으로 지정 해야 합니다. *dotnet_class_name* 은 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -57,7 +57,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>설명  
  **sp_registercustomresolver** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_registercustomresolver**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

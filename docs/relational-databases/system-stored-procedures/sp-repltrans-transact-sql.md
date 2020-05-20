@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repltrans
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9338d427a3a957a531456d9ea29448a2148b56e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770858"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824403"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ sp_repltrans
 ## <a name="remarks"></a>설명  
  **sp_repltrans** 은 트랜잭션 복제에 사용 됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서는 **sp_repltrans** 지원 되지 않습니다.  
+ 이외 게시자에 대해서는 **sp_repltrans** 지원 되지 않습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_repltrans**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

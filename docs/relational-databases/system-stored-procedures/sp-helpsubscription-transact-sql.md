@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771568"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824454"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은이 서버 **%** 에 대 한 모든 구독 정보를 반환 합니다.  
+`[ @publication = ] 'publication'`연결 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 이 서버에 대 한 모든 구독 정보를 반환 합니다.  
   
-`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 선택한 게시 **%** 및 구독자에 대 한 모든 구독 정보를 반환 하는입니다. **All**인 경우 게시의 전체 구독에 대해 하나의 항목만 반환 됩니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 **%** 선택한 게시 및 구독자에 대 한 모든 구독 정보를 반환 하는입니다. **All**인 경우 게시의 전체 구독에 대해 하나의 항목만 반환 됩니다.  
   
-`[ @subscriber = ] 'subscriber'`구독 정보를 가져올 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 선택한 게시 **%** 및 아티클에 대 한 모든 구독 정보를 반환 하는입니다.  
+`[ @subscriber = ] 'subscriber'`구독 정보를 가져올 구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 선택한 게시 및 아티클에 대 한 모든 구독 정보를 반환 하는입니다.  
   
 `[ @destination_db = ] 'destination_db'`대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 **%** 입니다.  
   
@@ -81,7 +81,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**offload_server**|**sysname**|원격 에이전트 활성화를 위해 사용할 수 있는 서버의 이름입니다. NULL 인 경우 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) 테이블에 나열 된 현재 offload_server 사용 됩니다.|  
 |**dts_package_name**|**sysname**|DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다.|  
 |**dts_package_location**|**int**|구독에 할당된 경우 DTS 패키지의 위치입니다. 패키지가 있는 경우 값 **0** 은 **배포자**에서 패키지 위치를 지정 합니다. 값 **1** 은 **구독자**를 지정 합니다.|  
-|**subscriber_security_mode**|**smallint**|구독자의 보안 모드입니다. **1** 은 Windows 인증을 의미 하 고 **0** 은 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 의미 합니다.|  
+|**subscriber_security_mode**|**smallint**|구독자의 보안 모드입니다. **1** 은 Windows 인증을 의미 하 고 **0** 은 인증을 의미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |**subscriber_login**|**sysname**|구독자의 로그인 이름입니다.|  
 |**subscriber_password**||실제 구독자 암호는 반환되지 않습니다. 결과는 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 문자열로 마스킹 됩니다.|  
 |**job_login**|**sysname**|배포 에이전트가 실행되는 Windows 계정의 이름입니다.|  
@@ -100,7 +100,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>설명  
  **sp_helpsubscription** 는 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  실행 권한은 기본적으로 **public** 역할로 사용 됩니다. 자신이 만든 구독에 대한 정보만 반환됩니다. 모든 구독에 대 한 정보는 게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버에 게 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

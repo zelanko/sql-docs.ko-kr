@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f8d75b208cc91d52d20fb4e94340809cd6857fa1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 82259f4293d821882f64e8162e0e5ec48e0548d1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129727"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824376"
 ---
 # <a name="sp_requestpeerresponse-transact-sql"></a>sp_requestpeerresponse(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
  사용자 정의 트랜잭션 내에서는 **sp_requestpeerresponse** 을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_requestpeerresponse**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

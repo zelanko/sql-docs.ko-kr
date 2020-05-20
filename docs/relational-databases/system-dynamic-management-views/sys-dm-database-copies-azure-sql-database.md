@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_database_copies
 - sys.dm_database_copies
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005088"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824635"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ ms.locfileid: "68005088"
  이 뷰는 **master** 데이터베이스에서 서버 수준 보안 주체 로그인에 대해서만 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 원본 또는 대상 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버의 **master** 데이터베이스에서 **dm_database_copies** 뷰를 사용할 수 있습니다. 데이터베이스 복사가 성공적으로 완료 되 고 새 데이터베이스가 온라인 상태가 되 면 **dm_database_copies** 뷰의 행이 자동으로 제거 됩니다.  
+ 원본 또는 대상 서버의 **master** 데이터베이스에서 **dm_database_copies** 뷰를 사용할 수 있습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . 데이터베이스 복사가 성공적으로 완료 되 고 새 데이터베이스가 온라인 상태가 되 면 **dm_database_copies** 뷰의 행이 자동으로 제거 됩니다.  
   
   
