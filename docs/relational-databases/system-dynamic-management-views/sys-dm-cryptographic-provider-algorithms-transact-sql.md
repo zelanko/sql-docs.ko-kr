@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d465515d6446c16fc9186b03eafc9a287571bc5e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121007"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824678"
 ---
 # <a name="sysdm_cryptographic_provider_algorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|알고리즘의 ID 번호입니다.|  
 |algorithm_tag|**nvarchar(60)**|알고리즘의 ID 태그입니다.|  
 |key_type|**nvarchar(128)**|키 입력을 표시합니다. ASYMMETRIC KEY 또는 SYMMETRIC KEY를 반환합니다.|  
 |key_length|**int**|키 길이(비트)를 나타냅니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 공용 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

@@ -18,12 +18,12 @@ ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e79848b26d664eeb23a567c41178cc94ee8a3ad
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: d4b70d64da9d87a8bab61f1881473dd7daaefb28
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886487"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606796"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 
@@ -153,8 +153,8 @@ Min_percentage_resource 및 cap_percentage_resource를 변경하려면 변경 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [CREATE WORKLOAD GROUP(Transact-SQL)](create-workload-group-transact-sql.md)
-- [DROP WORKLOAD GROUP(Transact-SQL)](drop-workload-group-transact-sql.md)
+- [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](create-workload-group-transact-sql.md)
+- [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](drop-workload-group-transact-sql.md)
 - [sys.workload_management_workload_groups](../../relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql.md)
 - [sys.dm_workload_management_workload_groups_stats](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md)
 - [빠른 시작: T-SQL을 사용하여 워크로드 격리 구성](/azure/sql-data-warehouse/quickstart-configure-workload-isolation-tsql)

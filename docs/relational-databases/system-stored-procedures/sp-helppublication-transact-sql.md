@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72689047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824511"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  게시에 관한 정보를 반환합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 게시의 경우이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 됩니다. Oracle 게시의 경우 이 저장 프로시저는 배포자에서 모든 데이터베이스에 대해 실행됩니다.  
+  게시에 관한 정보를 반환합니다. 게시의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행 됩니다. Oracle 게시의 경우 이 저장 프로시저는 배포자에서 모든 데이터베이스에 대해 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,18 +39,18 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`보려는 게시의 이름입니다. *게시* 는 sysname 이며 기본값은 모든 게시 **%** 에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'`보려는 게시의 이름입니다. *게시* 는 sysname 이며 기본값은 **%** 모든 게시에 대 한 정보를 반환 하는입니다.  
   
 `[ @found = ] 'found' OUTPUT`반환 하는 행을 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 **23456**입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 sysname 이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 sysname 이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에서 게시 정보를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때 게시자를 지정 하면 안 됩니다.  
+>  게시자에서 게시 정보를 요청할 때 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|게시에 대한 ID입니다.|  
 |name|**sysname**|게시의 이름입니다.|  
@@ -77,7 +77,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |alt_snapshot_folder|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |pre_snapshot_script|**nvarchar(255)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다.|  
 |post_snapshot_script|**nvarchar(255)**|**.Sql** 파일 위치에 대 한 포인터를 지정 합니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅샷 스크립트를 실행합니다.|  
-|compress_snapshot|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 압축 되도록 지정 합니다. **0** 은 스냅숏이 압축 되지 않도록 지정 합니다.|  
+|compress_snapshot|**bit**|*Alt_snapshot_folder* 위치에 기록 되는 스냅숏이 CAB 형식으로 압축 되도록 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . **0** 은 스냅숏이 압축 되지 않도록 지정 합니다.|  
 |ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅샷 파일의 위치를 지정합니다.|  
 |ftp_port|**int**|배포자용 FTP 서비스의 포트 번호입니다.|  
 |ftp_subdirectory|**nvarchar(255)**|게시에서 FTP를 사용하는 스냅샷 전파를 지원하는 경우 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 사용 가능한 스냅샷 파일의 위치를 지정합니다.|  
@@ -87,17 +87,17 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌을 일으킨 게시자와 구독자 모두에 충돌 레코드가 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.|  
 |conflict_retention|**int**|충돌 보존 기간(일)을 지정합니다.|  
 |conflict_policy|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자가 충돌을 적용 합니다.<br /><br /> **2** = 구독자가 충돌을 적용 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
-|queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **msmq** = 메시지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **sql** = 트랜잭션을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 하는 데 사용 합니다.<br /><br /> 참고: 메시지 큐에 대 한 지원이 중단 되었습니다.|  
-|backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **msmq** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐를 사용 하 여 트랜잭션을 저장 합니다.<br /><br /> **sql** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션을 저장 하는 데 사용 합니다.<br /><br /> 참고: 메시지 큐에 대 한 지원이 중단 되었습니다.|  
+|backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 값 **1** 은 게시 됨을 나타내고 값 **0** 은 게시 되지 않았음을 나타냅니다.|  
 |allow_initialize_from_backup|**bit**|구독자가 초기 스냅샷 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 은 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 은 사용할 수 없음을 의미 합니다. 자세한 내용은 스냅숏 없이 트랜잭션 구독자를 스냅숏 없이 트랜잭션 [구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 를 참조 하세요.|  
 |replicate_ddl|**int**|게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. **1** 은 게시자에서 실행 된 ddl (데이터 정의 언어) 문이 복제 됨을 나타내고 **0** 은 ddl 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  
 |enabled_for_p2p|**int**|피어 투 피어 복제 토폴로지에서 게시가 사용될 수 있는지 여부를 나타냅니다. **1** 은 게시에서 피어 투 피어 복제를 지원함을 나타냅니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|enabled_for_het_sub|**int**|게시에서 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지원하는지 여부를 지정합니다. 값 **1** 은 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됨을 의미 합니다. 값이 **0** 이면 구독자만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 됩니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.|  
+|enabled_for_het_sub|**int**|게시에서 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자를 지원하는지 여부를 지정합니다. 값 **1** 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 지원 됨을 의미 합니다. 값이 **0** 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자만 지원 됩니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요.|  
 |enabled_for_p2p_conflictdetection|**int**|피어 투 피어 복제에 게시가 사용되도록 설정된 경우 배포 에이전트에서 충돌을 검색할지 여부를 지정합니다. 값 **1** 은 충돌이 검색 됨을 의미 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)을 참조하세요.|  
 |originator_id|**int**|피어 투 피어 토폴로지에 있는 노드의 ID를 지정합니다. 이 ID는 **enabled_for_p2p_conflictdetection** **1**로 설정 된 경우 충돌 검색에 사용 됩니다. 이미 사용된 ID 목록을 보려면 [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) 시스템 테이블을 쿼리하십시오.|  
-|p2p_continue_onconflict|**int**|충돌이 검색되면 배포 에이전트에서 변경 내용을 계속 처리할지 여부를 지정합니다. 값이 **1** 이면 에이전트에서 변경 내용을 계속 처리 합니다.<br /><br /> ** \* 주의 \* \* ** 기본값인 **0**을 사용 하는 것이 좋습니다. 이 옵션을 **1**로 설정 하면 배포 에이전트는 송신자 ID가 가장 높은 노드에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 수렴 하려고 시도 합니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
+|p2p_continue_onconflict|**int**|충돌이 검색되면 배포 에이전트에서 변경 내용을 계속 처리할지 여부를 지정합니다. 값이 **1** 이면 에이전트에서 변경 내용을 계속 처리 합니다.<br /><br /> ** \* \* 주의 \* 기본값 \* ** **0**을 사용 하는 것이 좋습니다. 이 옵션을 **1**로 설정 하면 배포 에이전트는 송신자 ID가 가장 높은 노드에서 충돌 하는 행을 적용 하 여 토폴로지의 데이터를 수렴 하려고 시도 합니다. 이 방법으로 데이터가 일치하게 되지 않는 경우도 있습니다. 충돌이 검색된 후 토폴로지의 일관성을 확인해야 합니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.|  
 |allow_partition_switch|**int**|ALTER TABLE ... SWITCH 문은 게시 된 데이터베이스에 대해 실행할 수 있습니다. 자세한 내용은 [분할 테이블 및 인덱스 복제](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)를 참조하세요.|  
 |replicate_partition_switch|**int**|ALTER TABLE ... 게시 된 데이터베이스에 대해 실행 되는 SWITCH 문을 구독자에 복제 해야 합니다. 이 옵션은 *allow_partition_switch* **1**로 설정 된 경우에만 유효 합니다.|  
   
@@ -112,10 +112,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_helppublication](../../relational-databases/replication/codesnippet/tsql/sp-helppublication-trans_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  게시자에서 sysadmin 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대한 db_owner 고정 데이터베이스 역할의 멤버 또는 PAL(게시 액세스 목록)의 사용자만 sp_helppublication을 실행할 수 있습니다.  
   
- 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우 배포자에서 sysadmin 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 db_owner 고정 데이터베이스 역할의 멤버 또는 PAL의 사용자만 sp_helppublication를 실행할 수 있습니다.  
+ 이외 게시자의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에서 sysadmin 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 db_owner 고정 데이터베이스 역할의 멤버 또는 PAL의 사용자만 sp_helppublication를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

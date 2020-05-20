@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026923"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828000"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68026923"
 |-|-|-|  
 |**열 이름**|**Type**|**설명**|  
 |*class*|**int**|1 = 개체 또는 열(모듈, XP, 뷰, 동의어 및 테이블 포함)<br /><br /> 4 = 데이터베이스 보안 주체<br /><br /> 5 = 어셈블리<br /><br /> 6 = 형식<br /><br /> 7 = 인덱스(전체 텍스트 인덱스)<br /><br /> 12 = 데이터베이스 DDL 트리거<br /><br /> 19 = 경로<br /><br /> 30 = 감사 사양|  
-|*class_desc*|**nvarchar(120)**|엔터티의 클래스에 대한 설명입니다. 클래스와 일치 하는 다음 중 하나입니다.<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **어셈블리**<br /><br /> **유형**<br /><br /> **인덱싱할**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|엔터티의 클래스에 대한 설명입니다. 클래스와 일치 하는 다음 중 하나입니다.<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **어셈블리**<br /><br /> **유형**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|엔터티의 ID입니다.<br /><br /> *클래스* = 1 인 경우 object_id<br /><br /> *클래스* = 4 인 경우 database_principals. principal_id입니다.<br /><br /> *클래스* = 5 인 경우 assembly_id 합니다.<br /><br /> *클래스* = 6 인 경우에는 user_type_id 합니다.<br /><br /> *Class* = 7 인 경우 index_id 합니다.<br /><br /> *클래스* = 12 이면 object_id 합니다.<br /><br /> *클래스* = 19 인 경우에는 route_id 합니다.<br /><br /> *클래스* = 30 인 경우 sys. database_audit_specifications database_specification_id입니다.|  
 |*statement_line_number*|**int**|클래스가 모듈인 경우 포함되지 않은 용도가 있는 줄 번호를 반환합니다.  그렇지 않으면 값이 Null입니다.|  
 |*statement_ offset_begin*|**int**|클래스가 모듈인 경우 포함되지 않은 용도의 시작 위치(0으로 시작되는 바이트)를 나타냅니다. 그렇지 않으면 반환 값이 Null입니다.|  
@@ -86,6 +86,6 @@ LEFT JOIN sys.objects AS SO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [포함 된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
+ [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)  
   
   

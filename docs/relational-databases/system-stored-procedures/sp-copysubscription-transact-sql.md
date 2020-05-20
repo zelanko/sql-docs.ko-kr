@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copysubscription
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a2a2405b4ca22f780576135c66ee32d058ed10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304830"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826280"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="arguments"></a>인수  
 `[ @filename = ] 'file_name'`데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
   
-`[ @temp_dir = ] 'temp_dir'`임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인 경우 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
+`[ @temp_dir = ] 'temp_dir'`임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. NULL 인 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`** \@Filename**에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 ** \@filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`** \@ Filename**에 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*은 **bit**이며 기본값은 **0**입니다. 1 인 경우 ** \@ filename**에 지정 된 파일 (있는 경우 **)** 을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -59,7 +59,7 @@ sp_copysubscription [ @filename = ] 'file_name'
   
  **sp_copysubscription** 은 클라이언트 구독이 있는 데이터베이스에 대해서만 지원 되며 데이터베이스에 서버 구독이 있는 경우에는 실행할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

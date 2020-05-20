@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029775"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824784"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68029775"
 |subscriber_server|**sysname**|서버의 ID입니다. 구독 데이터베이스의 사본을 다른 서버로 마이그레이션하는 경우 서버 지정 값에 srvid 필드를 매핑할 때 사용합니다.|  
 |db_name|**sysname**|구독 데이터베이스의 이름입니다.|  
 |pubid|**uniqueidentifier**|현재 구독을 만든 게시의 ID입니다.|  
-|datasource_type|**int**|데이터 원본의 유형입니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = Jet OLE DB.|  
+|datasource_type|**int**|데이터 원본의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **2** = Jet OLE DB.|  
 |subid|**uniqueidentifier**|구독에 대한 고유한 ID입니다.|  
 |replnickname|**binary**|복제의 압축된 애칭입니다.|  
 |replicastate|**uniqueidentifier**|게시자의 값을 구독자의 값과 비교하여 이전 동기화가 성공했는지 확인하는 데 사용되는 고유한 식별자입니다.|  
@@ -59,9 +59,9 @@ ms.locfileid: "68029775"
 |partition_id|**int**|구독이 속한 사전 계산 파티션을 식별합니다.|  
 |cleanedup_unsent_changes|**bit**|보내지 않은 변경 사항에 대한 메타데이터가 구독자에서 정리되었음을 식별합니다.|  
 |replica_version|**int**|구독이 속한 구독자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 식별합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|내부적으로만 사용됩니다.|  
-|application_name|**nvarchar(128)**|내부적으로만 사용됩니다.|  
-|subscriber_number|**int**|내부적으로만 사용됩니다.|  
+|supportability_mode|**int**|내부 전용입니다.|  
+|application_name|**nvarchar(128)**|내부 전용입니다.|  
+|subscriber_number|**int**|내부 전용입니다.|  
 |last_makegeneration_datetime|**datetime**|Makegeneration 프로세스가 게시자에 대해 실행 한 마지막 **날짜/시간** 입니다. 자세한 내용은 [Replication 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)의-MakeGenerationInterval 매개 변수를 참조 하세요.|  
   
 ## <a name="see-also"></a>참고 항목  

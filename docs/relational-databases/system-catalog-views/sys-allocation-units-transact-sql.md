@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c996a258ae9f0dacec09fc58b3f433e620b6d663
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001293"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822113"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68001293"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|할당 단위의 ID입니다. 데이터베이스 내에서 고유합니다.|  
-|type|**tinyint**|할당 단위 형식입니다.<br /><br /> 0 = 삭제됨<br /><br /> 1 = 행 내부 데이터(LOB 데이터 형식을 제외한 모든 데이터 형식)<br /><br /> 2 = LOB (Large object) 데이터 (**text**, **ntext**, **image**, **xml**, 큰 값 형식 및 CLR 사용자 정의 형식)<br /><br /> 3 = 행 오버플로 데이터|  
+|형식|**tinyint**|할당 단위 형식입니다.<br /><br /> 0 = 삭제됨<br /><br /> 1 = 행 내부 데이터(LOB 데이터 형식을 제외한 모든 데이터 형식)<br /><br /> 2 = LOB (Large object) 데이터 (**text**, **ntext**, **image**, **xml**, 큰 값 형식 및 CLR 사용자 정의 형식)<br /><br /> 3 = 행 오버플로 데이터|  
 |type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> **놓도록**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|할당 단위와 연결된 스토리지 컨테이너의 ID입니다.<br /><br /> type이 1 또는 3이면 container_id는 sys.partitions.hobt_id입니다.<br /><br /> type이 2이면 container_id = sys.partitions.partition_id입니다.<br /><br /> 0 = 삭제가 지연된 것으로 표시된 할당 단위|  
 |data_space_id|**int**|이 할당 단위가 있는 파일 그룹의 ID입니다.|  

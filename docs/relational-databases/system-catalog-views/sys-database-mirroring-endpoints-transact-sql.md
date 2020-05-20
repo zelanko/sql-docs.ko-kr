@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022775"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823524"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68022775"
 |-----------------|---------------|-----------------|  
 |**\<상속 된 열>**|-|는 **sys.debug** 에서 열을 상속 합니다. 자세한 내용은 [&#41;&#40;transact-sql ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)을 참조 하세요.|  
 |**role**|**tinyint**|미러링 역할. 다음 중 하나입니다.<br /><br /> **0** = 없음<br /><br /> **1** = 파트너<br /><br /> **2** = 미러링 모니터<br /><br /> **3** = 모두<br /><br /> 참고:이 값은 데이터베이스 미러링과만 관련이 있습니다.|  
-|**role_desc**|**nvarchar(60)**|미러링 역할 설명. 다음 중 하나입니다.<br /><br /> **없음을**<br /><br /> **당사자**<br /><br /> **감시**<br /><br /> **ALL**<br /><br /> 참고:이 값은 데이터베이스 미러링과만 관련이 있습니다.|  
+|**role_desc**|**nvarchar(60)**|미러링 역할 설명. 다음 중 하나입니다.<br /><br /> **NONE**<br /><br /> **당사자**<br /><br /> **감시**<br /><br /> **ALL**<br /><br /> 참고:이 값은 데이터베이스 미러링과만 관련이 있습니다.|  
 |**is_encryption_enabled**|**bit**|**1** 은 암호화가 사용 됨을 의미 합니다.<br /><br /> **0** 은 암호화가 사용 되지 않음을 의미 합니다.|  
 |**connection_auth**|**tinyint**|이 엔드포인트에 연결하는 데 필요한 연결 인증 유형. 다음 중 하나입니다.<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOTIATE<br /><br /> **4** -인증서<br /><br /> **5** -NTLM, 인증서<br /><br /> **6** -KERBEROS, 인증서<br /><br /> **7** -협상, 인증서<br /><br /> **8** -인증서, NTLM<br /><br /> **9** -인증서, KERBEROS<br /><br /> **10** -인증서, 협상|  
 |**connection_auth_desc**|**nvarchar (60)**|이 엔드포인트에 연결하는 데 필요한 인증 유형 설명. 다음 중 하나입니다.<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> 인증서<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  

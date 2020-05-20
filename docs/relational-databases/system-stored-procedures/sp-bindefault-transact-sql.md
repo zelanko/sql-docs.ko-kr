@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828503"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
  기본값을 열에 바인딩하면 관련 정보가 **sys. columns** 카탈로그 뷰에 추가 됩니다. 별칭 데이터 형식에 기본값을 바인딩하면 관련 정보가 **sys. types** 카탈로그 뷰에 추가 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 테이블을 소유 하거나 **sysadmin** 고정 서버 역할의 멤버 이거나 고정 데이터베이스 역할을 **db_ddladmin** **db_owner** 합니다.  
   
 ## <a name="examples"></a>예  
@@ -90,7 +90,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. futureonly_flag 사용  
- 다음 예에서는 기본값 `def_ssn`을 별칭 데이터 형식 `ssn`에 바인딩합니다. **Futureonly** 가 지정 되었으므로 형식의 `ssn` 기존 열은 영향을 받지 않습니다.  
+ 다음 예에서는 기본값 `def_ssn`을 별칭 데이터 형식 `ssn`에 바인딩합니다. **Futureonly** 가 지정 되었으므로 형식의 기존 열 `ssn` 은 영향을 받지 않습니다.  
   
 ```  
 USE master;  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. 구분 식별자 사용  
- 다음 예제에서는 *object_name*에서 구분 식별자를 `[t.1]`사용 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 object_name에서 구분 식별자를 사용 하는 방법을 보여 줍니다 `[t.1]` . *object_name*  
   
 ```  
 USE master;  

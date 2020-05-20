@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983182"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823491"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "73983182"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|데이터베이스 내 파일의 ID입니다.|  
-|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 업그레이드 되었습니다 (SQL Server 2005 이전 버전의 경우 유효).|  
+|**file_guid**|**uniqueidentifier**|파일에 대한 GUID입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의에서 업그레이드 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 이전 버전의 경우 유효).|  
 |**type**|**tinyint**|파일 유형입니다.<br/><br /> 0 = 행<br /><br/> 1 = 로그<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트|  
 |**type_desc**|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|값은 0 이상일 수 있습니다. 값 0은 데이터베이스 로그 파일을 나타내고 0보다 큰 값은 이 데이터 파일이 저장되는 파일 그룹의 ID를 나타냅니다.|  
 |**name**|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|운영 체제 파일 이름입니다. 데이터베이스가 AlwaysOn [읽기 가능한 보조 복제본](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)에 의해 호스트 되는 경우 **physical_name** 는 주 복제본 데이터베이스의 파일 위치를 나타냅니다. 읽을 수 있는 보조 데이터베이스의 올바른 파일 위치에 대해 [sys.sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md)를 쿼리 합니다.|  
-|**state**|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
+|**상태**|**tinyint**|파일 상태입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|파일 상태에 대한 설명입니다.<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 자세한 내용은 [파일 상태](../../relational-databases/databases/file-states.md)를 참조하세요.|  
 |**size**|**int**|8KB 페이지 단위로 나타낸 파일의 현재 크기입니다.<br /><br /> 0 = 해당 사항 없음<br /><br /> 데이터베이스 스냅샷의 경우 size는 스냅샷이 파일에 대해 사용할 수 있는 최대 공간을 나타냅니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너의 경우 크기는 컨테이너의 현재 사용 된 크기를 반영 합니다.|  
 |**max_size**|**int**|8KB 페이지 단위로 나타낸 파일의 최대 크기입니다.<br /><br /> 0 = 증가를 허용하지 않습니다.<br /><br /> -1 = 디스크가 꽉 찰 때까지 파일이 증가합니다.<br /><br /> 268435456 = 로그 파일이 최대 2TB까지 증가합니다.<br /><br /> FILESTREAM 파일 그룹 컨테이너의 경우 max_size는 컨테이너의 최대 크기를 반영 합니다.<br /><br /> 로그 파일의 크기가 무제한으로 업그레이드 된 데이터베이스는 로그 파일의 최대 크기에 대해-1을 보고 합니다.|  
@@ -79,7 +79,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-사용 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에 대 한 자세한 내용은 SQL 고객 자문 팀 블로그에서 [Azure SQL Database V12에서 데이터베이스 크기 확인](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 을 참조 하세요.
+사용에 대 한 자세한 내용은 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] SQL 고객 자문 팀 블로그에서 [Azure SQL Database V12에서 데이터베이스 크기 확인](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) 을 참조 하세요.
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 및 파일 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   

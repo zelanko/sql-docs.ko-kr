@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055196"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827727"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`지정 된 작업에 대 한 유효한 작업입니다. *연산은* **varchar (64)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**제거**|마스터 **SQLServerAgent** 서비스에서 오류를 제거 하도록 대상 서버를 요청 하는 서버 작업입니다.|  
-|**제거**|전체 작업을 제거하는 작업의 수행입니다.|  
+|**DELETE**|전체 작업을 제거하는 작업의 수행입니다.|  
 |**INSERT**|전체 작업을 추가하거나 기존 작업을 새로 고치는 작업의 수행입니다. 여기에는 적용되는 모든 작업 단계 및 일정이 포함됩니다.|  
 |**RE-ENLIST**|서버 작업이 대상 서버로 하여금 폴링 간격 및 다중 서버 도메인에 대한 표준 시간대를 포함하여 포함 정보를 다시 전달하도록 합니다. 또한 대상 서버는 **MSXOperator** 세부 정보를 다시 다운로드 합니다.|  
 |**SET-POLL**|대상 서버가 다중 서버 도메인을 폴링하는 간격(초)을 설정하는 서버 작업입니다. 지정 된 경우 *값* 은 필수 간격 값으로 해석 되 고 **10** 에서 **28800**사이의 값이 될 수 있습니다.|  
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|명령의 고유한 정수 ID입니다.|  
-|**source_server**|**nvarchar(30)**|명령을 발생시킨 서버의 컴퓨터 이름입니다. 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0에서이는 항상 마스터 (MSX) 서버의 컴퓨터 이름입니다.|  
+|**source_server**|**nvarchar(30)**|명령을 발생시킨 서버의 컴퓨터 이름입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0에서이는 항상 마스터 (MSX) 서버의 컴퓨터 이름입니다.|  
 |**operation_code**|**nvarchar(4000)**|명령의 작업 코드입니다.|  
 |**object_name**|**sysname**|명령이 적용되는 개체입니다.|  
 |**object_id**|**uniqueidentifier**|명령의 영향을 받는 개체의 id 번호 (작업 개체에 대 한**job_id** 또는 서버 개체의 경우 0x00) 또는 **operation_code**특정 한 데이터 값입니다.|  
@@ -97,7 +97,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**date_downloaded**|**datetime**|대상 서버가 명령을 다운로드한 날짜입니다.|  
 |**status**|**tinyint**|작업의 상태입니다.<br /><br /> **0** = 아직 다운로드 되지 않음<br /><br /> **1** = 성공적으로 다운로드 되었습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - PolyBase
 - dm_exec_distributed_sql_requests management view
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52a1ee453d0a516bc2dc1fd42dcd4439272d844c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097802"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821154"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68097802"
   
  사용자는 세션 및 요청 ID에 따라 실행 되도록 생성 된 실제 분산 요청을 검색할 수 있습니다. dm_exec_distributed_requests를 통해 수행 됩니다. 예를 들어 일반 SQL 및 외부 SQL 테이블과 관련 된 쿼리는 다양 한 계산 노드에서 실행 되는 다양 한 문/요청으로 분해 됩니다. 모든 계산 노드에서 분산 단계를 추적 하기 위해 하나의 특정 요청 및 연산자와 연결 된 계산 노드의 모든 작업을 추적 하는 데 사용할 수 있는 ' 전역 ' 실행 ID를 소개 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |sql_handle|**varbinary(64)**|이 보기의 키입니다. 요청과 연결 된 고유 숫자 id입니다.|시스템의 모든 요청에 대해 고유 합니다.|  
 |execution_id|**nvarchar (32**|이 쿼리가 실행 된 세션과 연결 된 고유 숫자 id입니다.||  

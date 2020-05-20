@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 07d96a38d97917b11614e3c48c781e615a32554b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265788"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820845"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68265788"
   특정 캐시 클럭의 각 포인터 상태를 반환합니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_memory_cache_clock_hands**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_memory_cache_clock_hands**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,12 +47,12 @@ ms.locfileid: "68265788"
 |**last_tick_time**|**bigint**|마지막으로 클럭 포인터가 이동한 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |**round_start_time**|**bigint**|이전 스윕의 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |**last_round_start_time**|**bigint**|클럭이 이전 라운드를 완료하는 데 걸린 총 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 메모리 캐시라는 구조의 메모리에 정보를 저장합니다. 캐시의 정보는 데이터, 인덱스 항목, 컴파일된 프로시저 계획 및 다양한 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정보일 수 있습니다. 정보가 다시 생성되지 않도록 하기 위해 가능한 한 오랫동안 메모리 캐시에 정보가 보관되며 정보가 너무 오래되어서 유용하지 않거나 새 정보를 위해 메모리 공간이 필요한 경우 일반적으로 캐시에서 정보가 제거됩니다. 이전 정보를 제거하는 프로세스를 메모리 스윕이라고 합니다. 메모리 스윕 작업은 자주 수행될 수 있지만 연속적으로 수행되지 않습니다. 메모리 캐시의 스윕은 클럭 알고리즘으로 제어됩니다. 각 클럭에서 포인터라고 하는 메모리 스윕을 여러 개 제어할 수 있습니다. 메모리 캐시 클럭 포인터는 메모리 스윕 그룹 중 하나의 현재 위치입니다.  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255606"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829460"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|attribute|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
+|특성|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 항목의 바로 아래 표에는 가능한 특성, 해당 데이터 형식 및 해당 설명이 나열 되어 있습니다.|  
 |value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
 |is_cache_key|**bit**|특성이 계획에 대한 캐시 조회 키의 일부로 사용되는지 여부를 나타냅니다.|  
 
@@ -78,10 +78,10 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|일괄 처리의 SQL 핸들입니다.|  
 |merge_action_type|**smallint**|MERGE 문의 결과로 사용되는 트리거 실행 계획의 유형입니다.<br /><br /> 0은 비 트리거 계획, MERGE 문의 결과로 실행되지 않는 트리거 계획 또는 DELETE 동작만 지정하는 MERGE 문의 결과로 실행되는 트리거 계획을 나타냅니다.<br /><br /> 1은 MERGE 문의 결과로 실행되는 INSERT 트리거 계획을 나타냅니다.<br /><br /> 2는 MERGE 문의 결과로 실행되는 UPDATE 트리거 계획을 나타냅니다.<br /><br /> 3은 해당 INSERT 또는 UPDATE 동작을 포함하는 MERGE 문의 결과로 실행되는 DELETE 트리거 계획을 나타냅니다.<br /><br /> 동작을 연계하여 실행되는 중첩 트리거의 경우 이 값은 연계를 유발하는 MERGE 문의 동작입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
   
@@ -111,7 +111,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
 |DATEFORMAT|32768|  
 |LanguageID|65536|  
 |UPON<br /><br /> 계획을 컴파일할 때 데이터베이스 옵션 PARAMETERIZATION이 FORCED로 설정됨을 나타냅니다.|131072|  
-|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
+|ROWCOUNT|**적용 대상:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 받는 사람[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>커서  
  비활성 커서가 컴파일된 계획에서 캐시되어 커서의 동시 사용자가 커서 저장에 사용된 메모리를 다시 사용할 수 있습니다. 예를 들어 일괄 처리가 커서를 할당 취소하지 않고 선언 및 사용한다고 가정합니다. 두 사용자가 동일한 일괄 처리를 실행하는 경우에는 두 활성 커서가 있습니다. 커서가 다른 일괄 처리에서 잠재적으로 할당 취소되면 커서 저장에 사용된 메모리가 캐시되고 해제되지 않습니다. 이 비활성 커서 목록은 컴파일된 계획에서 유지됩니다. 이후에 사용자가 일괄 처리를 실행하면 캐시된 커서 메모리가 다시 사용되고 활성 커서로 적절히 초기화됩니다.  
@@ -121,7 +121,7 @@ Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이�
   
 |옵션|값|  
 |------------|-----------|  
-|None|0|  
+|없음|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

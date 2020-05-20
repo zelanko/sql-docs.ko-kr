@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ece2e3c42c549b248ef85e05f2f7b471a7d40ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948630"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824757"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "67948630"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|모니터에서 감시하는 큐를 포함하는 데이터베이스의 개체 식별자입니다. NULL을 허용합니다.|  
 |**queue_id**|**int**|모니터에서 감시하는 큐의 개체 식별자입니다. NULL을 허용합니다.|  
-|**state**|**nvarchar(32)**|모니터의 상태입니다. NULL을 허용합니다. 다음 중 하나일 수 있습니다.<br /><br /> **라**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**상태**|**nvarchar(32)**|모니터의 상태입니다. NULL을 허용합니다. 다음 중 하나일 수 있습니다.<br /><br /> **라**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|큐에서 RECEIVE가 마지막으로 빈 결과를 반환한 시간입니다. NULL을 허용합니다.|  
 |**last_activated_time**|**datetime**|이 큐 모니터에서 마지막으로 저장 프로시저를 활성화한 시간입니다. NULL을 허용합니다.|  
 |**tasks_waiting**|**int**|이 큐에 대해 RECEIVE 문 내에서 현재 대기하고 있는 세션 수입니다. NULL을 허용합니다.<br /><br /> 참고:이 수에는 큐 모니터가 세션을 시작 했는지 여부에 관계 없이 receive 문을 실행 하는 모든 세션이 포함 됩니다. RECEIVE와 함께 WAITFOR를 사용하는 경우 해당됩니다. 기본적으로 이러한 태스크는 메시지가 큐에 도착할 때까지 대기하고 있습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

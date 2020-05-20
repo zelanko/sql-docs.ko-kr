@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085284"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828418"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +65,14 @@ sp_help_proxy
 |Dts|SSIS 패키지 실행|  
 |PowerShell|PowerShell 스크립트|  
   
-`[ @name = ] 'name'`프록시를 나열할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. 이름은 **nvarchar (256)** 이며 기본값은 NULL입니다. *Name* 을 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
+`[ @name = ] 'name'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]프록시를 나열할 로그인의 이름입니다. 이름은 **nvarchar (256)** 이며 기본값은 NULL입니다. *Name* 을 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**name**|**sysname**|프록시 이름입니다.|  
@@ -88,7 +88,7 @@ sp_help_proxy
   
  지정 된 하위 시스템에 대해 로그인에서 사용할 수 있는 프록시를 확인 하려면 *이름* 및 *subsystem_name*를 지정 합니다. 이러한 인수를 제공 하면 **sp_help_proxy** 는 지정 된 로그인이 액세스할 수 있고 지정 된 하위 시스템에 사용할 수 있는 프록시를 나열 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 **msdb** 데이터베이스의 **SQLAgentOperatorRole** 고정 데이터베이스 역할을 부여 받아야 합니다.  
   
  **SQLAgentOperatorRole**에 대 한 자세한 내용은 [고정 데이터베이스 역할 SQL Server 에이전트](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조 하세요.  

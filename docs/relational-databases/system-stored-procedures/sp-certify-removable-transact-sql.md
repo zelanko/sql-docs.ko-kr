@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 64621f1d675fc7cd4e64b690b1e440a1dbad2d1c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045933"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826687"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   데이터 파일 그룹을 읽기 전용으로 표시하여 해당 파일이 읽기 전용 미디어에만 복사되도록 합니다.  
   
- 시스템 관리자는 반드시 데이터베이스 및 모든 데이터베이스 개체의 소유자여야 합니다. 시스템 관리자는를 실행 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 모든 서버에 존재 하며 나중에 데이터베이스를 배포 하 고 설치할 때 존재 하는 것으로 예상할 수 있는 알려진 사용자입니다.  
+ 시스템 관리자는 반드시 데이터베이스 및 모든 데이터베이스 개체의 소유자여야 합니다. 시스템 관리자는를 실행 하는 모든 서버에 존재 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하며 나중에 데이터베이스를 배포 하 고 설치할 때 존재 하는 것으로 예상할 수 있는 알려진 사용자입니다.  
   
  **Auto** 값 없이 **sp_certify_removable** 를 실행 하는 경우 다음 조건에 대 한 정보를 반환 합니다.  
   
@@ -73,13 +73,13 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  이러한 경우 다음과 같은 방법으로 문제를 해결할 수 있습니다.  
   
--   도구 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 절차를 사용 하 고 **sp_certify_removable** 를 다시 실행 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]도구 및 절차를 사용 하 고 **sp_certify_removable** 를 다시 실행 합니다.  
   
 -   **Auto** 값을 사용 하 여 **sp_certify_removable** 를 실행 하면 됩니다.  
   
  이 저장 프로시저는 사용자 및 사용자 권한에 관한 것만 확인합니다. 데이터베이스에 그룹을 추가하고 이 그룹에 권한을 부여할 수 있습니다. 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)과 함께 작동하도록 Service Broker를 구성하는 방법에 대한 정보를 제공합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Execute 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
 ## <a name="examples"></a>예  
@@ -90,7 +90,7 @@ EXEC sp_certify_removable inventory, AUTO;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Transact-sql&#41;sp_create_removable &#40;](../../relational-databases/system-stored-procedures/sp-create-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Transact-sql&#41;sp_dbremove &#40;](../../relational-databases/system-stored-procedures/sp-dbremove-transact-sql.md)   

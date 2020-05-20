@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769131"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820712"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`각 병합 사이에 *frequency_subday* 발생 하는 빈도입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`는이 병합 구독에 대 한 간단한 설명입니다. *description*은 **nvarchar (255)** 이며 기본값은 NULL입니다. 이 값은 모니터링 되는 게시에 대 한 구독을 정렬 하는 데 사용할 수 있는 **이름** 열의 복제 모니터에 의해 표시 됩니다.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 동기화 관리자를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구독을 동기화 할 수 있는지 여부를 지정 합니다. *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]하지 않고 동기화 할 수 있습니다.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 동기화 관리자를 통해 구독을 동기화 할 수 있는지 여부를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`에이전트를 원격으로 활성화할 수 있도록 지정 합니다. *remote_agent_activation* 은 **bit** 이며 기본값은 **0**입니다.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`대화형 해결을 허용 하는 모든 아티클에 대해 대화형으로 충돌을 해결할 수 있습니다. *use_interactive_resolver* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다.  
   
-`[ @merge_job_name = ] 'merge_job_name'`Merge_job_name 매개 변수는 더 이상 사용 되지 않으며 설정할 수 없습니다. * \@* *merge_job_name* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @merge_job_name = ] 'merge_job_name'`* \@ Merge_job_name* 매개 변수는 더 이상 사용 되지 않으며 설정할 수 없습니다. *merge_job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 `[ @hostname = ] 'hostname'`매개 변수가 있는 필터의 WHERE 절에서이 함수를 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 에서 반환 하는 값을 재정의 합니다. *호스트 이름은* **sysname**이며 기본값은 NULL입니다.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_addmergesubscription** 는 병합 복제에 사용 됩니다.  
   
- **Sysadmin** 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_addmergesubscription** 를 실행 하면 병합 에이전트 작업이 암시적으로 만들어지고 에이전트 서비스 계정에서 실행 됩니다. [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 를 실행 하 고 ** \@job_login** 및 ** \@job_password**에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조 하세요.  
+ **Sysadmin** 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 **sp_addmergesubscription** 를 실행 하면 병합 에이전트 작업이 암시적으로 만들어지고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정에서 실행 됩니다. [Sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) 를 실행 하 고 ** \@ job_login** 및 ** \@ Job_password**에 대 한 다른 에이전트 특정 Windows 계정의 자격 증명을 지정 하는 것이 좋습니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조 하세요.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

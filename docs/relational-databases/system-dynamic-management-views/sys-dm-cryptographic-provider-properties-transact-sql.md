@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_properties dynamic management view
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0b08159d666fb18cc92feb88f087168b249ff523
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005107"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824699"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "68005107"
   등록된 암호화 공급자에 대한 정보를 반환합니다.  
   
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|암호화 공급자의 ID 번호입니다.|  
 |guid|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
 |provider_version|**nvarchar(256)**|'*Aa.bb.cccc.dd*' 형식의 공급자 버전입니다.|  
-|sqlcrypt_version|**nvarchar(256)**|' Aa.bb.cccc.dd ' 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 된 암호화 API의 주*aa.bb.cccc.dd*버전입니다.|  
+|sqlcrypt_version|**nvarchar(256)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]'*Aa.bb.cccc.dd*' 형식으로 된 암호화 API의 주 버전입니다.|  
 |friendly_name|**nvarchar(2048)**|공급자가 제공한 이름입니다.|  
 |authentication_type|**nvarchar(256)**|WINDOWS, BASIC 또는 OTHER입니다.|  
 |symmetric_key_support|**tinyint**|0(지원되지 않음)<br /><br /> 1(지원됨)|  

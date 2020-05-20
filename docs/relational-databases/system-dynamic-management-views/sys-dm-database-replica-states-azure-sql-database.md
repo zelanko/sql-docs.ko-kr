@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_database_replica_states dynamic management view
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b8fab1b53e5a86139728f49169c50cfa014698a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3a9bf27341663de266b0b45f003fd5fdb4a1a79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983061"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824630"
 ---
 # <a name="sysdm_database_replica_states-azure-sql-database"></a>sys.dm_database_replica_states(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "73983061"
 |**quorum_commit_time**|**datetime**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
 
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.
 

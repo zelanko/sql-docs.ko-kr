@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57b3016f0f5ee9f58e41ce6993af69c33aa3b742
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762759"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827780"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="remarks"></a>설명  
  **sp_help_agent_default** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_help_agent_default**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

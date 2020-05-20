@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262209"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824579"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ ms.locfileid: "68262209"
 |**last_elapsed_time**|**bigint**|가장 최근에 이 트리거의 실행을 완료하는 데 소요된 경과 시간(마이크로초)입니다.|  
 |**min_elapsed_time**|**bigint**|이 트리거의 실행을 완료 하는 데 소요 된 최소 경과 시간 (마이크로초)입니다.|  
 |**max_elapsed_time**|**bigint**|이 트리거의 실행을 완료 하는 데 소요 된 최대 경과 시간 (마이크로초)입니다.| 
-|**total_spills**|**bigint**|이 트리거가 컴파일된 이후 실행 될 때 발생 한 총 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**last_spills**|**bigint**|트리거가 마지막으로 실행 되었을 때의 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**min_spills**|**bigint**|단일 실행 중이 트리거가 연결한 최소 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
-|**max_spills**|**bigint**|단일 실행 중이 트리거가 연결한 최대 페이지 수입니다.<br /><br /> **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3부터 시작|  
+|**total_spills**|**bigint**|이 트리거가 컴파일된 이후 실행 될 때 발생 한 총 페이지 수입니다.<br /><br /> **적용 대상**: CU3부터 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**last_spills**|**bigint**|트리거가 마지막으로 실행 되었을 때의 페이지 수입니다.<br /><br /> **적용 대상**: CU3부터 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**min_spills**|**bigint**|단일 실행 중이 트리거가 연결한 최소 페이지 수입니다.<br /><br /> **적용 대상**: CU3부터 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
+|**max_spills**|**bigint**|단일 실행 중이 트리거가 연결한 최대 페이지 수입니다.<br /><br /> **적용 대상**: CU3부터 시작 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|  
 |**total_page_server_reads**|**bigint**|이 트리거가 컴파일된 이후 실행 될 때 수행 된 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상**: Azure SQL Database hyperscale|  
 |**last_page_server_reads**|**bigint**|트리거가 마지막으로 실행 되었을 때 수행 된 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상**: Azure SQL Database hyperscale|  
 |**min_page_server_reads**|**bigint**|단일 실행 중이 트리거가 수행한 최소 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상**: Azure SQL Database hyperscale|  
@@ -78,10 +78,10 @@ ms.locfileid: "68262209"
 
 쿼리가 완료되면 뷰의 통계가 업데이트됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별된 상위 5개의 트리거에 대한 정보를 반환합니다.  

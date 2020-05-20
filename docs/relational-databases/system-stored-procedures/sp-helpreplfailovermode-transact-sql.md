@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 93793b697ea2e59f4725cf61d2d3fcec4ebdf579
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824467"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode' OUTPUT`구독자에서 데이터가 수정 되는 모드를 반환 합니다. *failover_mode* 은 **nvarchar (10)** 이며 기본값은 NULL입니다. 는 **OUTPUT** 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**관련이**|즉시 업데이트: 구독자에서 수행되는 업데이트가 2단계 커밋 프로토콜(2PC)을 사용하여 즉시 게시자로 전파됩니다.|  
 |**넣었습니다**|지연 업데이트: 구독자에서 수행되는 업데이트가 큐에 저장됩니다.|  
@@ -62,7 +62,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>설명  
  장애 조치 (failover)로 지연 업데이트를 사용 하 여 즉시 업데이트를 사용 하도록 설정 하는 스냅숏 복제 또는 트랜잭션 복제에는 **sp_helpreplfailovermode** 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpreplfailovermode**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

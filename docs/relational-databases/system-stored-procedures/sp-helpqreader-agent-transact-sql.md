@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b1162939039470cdf8e7283950c342e1555c5c78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771418"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824475"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|에이전트의 ID입니다.|  
 |**name**|**nvarchar (100)**|에이전트의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|에이전트 작업의 고유한 ID입니다.|  
-|**job_login**|**nvarchar(512)**|배포 에이전트가 실행 되는 Windows 계정으로, *도메인*\\*사용자 이름*형식으로 반환 됩니다.|  
-|**job_password**|**sysname**|** \* \* 보안상 \* 의 \* \* 이유로 항상 \* 값이 반환 \* 됩니다. \* \* **|  
+|**job_login**|**nvarchar(512)**|배포 에이전트가 실행 되는 Windows 계정으로, *도메인* \\ *사용자 이름*형식으로 반환 됩니다.|  
+|**job_password**|**sysname**|보안상의 이유로 **\*\*\*\*\*\*\*\*\*\*** 항상 값이 반환 됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -55,7 +55,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ## <a name="remarks"></a>설명  
  **sp_helpqreader_agent** 은 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  *Frompublisher* 의 값이 **1**인 경우 게시자에서 **sysadmin** 고정 서버 역할의 멤버 또는 게시 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다. 그렇지 않으면 배포자에서 **sysadmin** 고정 서버 역할의 멤버 또는 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_helpqreader_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

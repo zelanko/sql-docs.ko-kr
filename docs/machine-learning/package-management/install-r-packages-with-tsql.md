@@ -9,19 +9,17 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b19b2df1b39bcc88332d60f1389be12b32d7b921
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e9aa1b7b2b21883e3034d32959a8267d67d56c0
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118016"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606908"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL(CREATE EXTERNAL LIBRARY)을 사용하여 SQL Server에 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 기계 학습이 사용되는 SQL Server 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 여러 가지 방법 중에서 선택할 수 있습니다. T-SQL을 사용하는 것은 R에 익숙하지 않은 서버 관리자에게 가장 적합합니다.
-
-**적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 문을 사용하면 R 또는 Python 코드를 직접 실행하지 않고도 패키지 또는 패키지 집합을 인스턴스 또는 특정 데이터베이스에 추가할 수 있습니다. 그러나 이 방법에는 패키지 준비와 추가 데이터베이스 권한이 필요합니다.
 
@@ -35,7 +33,7 @@ ms.locfileid: "81118016"
 
 단일 패키지를 설치하는 경우 패키지를 압축 형식으로 다운로드합니다.
 
-패키지 종속성 때문에 여러 패키지를 설치하는 것이 더 일반적입니다. 패키지에 다른 패키지가 필요한 경우 설치하는 동안 각 패키지에 모두 액세스할 수 있는지 확인해야 합니다. [miniCRAN](create-a-local-package-repository-using-minicran.md)을 사용해 전체 패키지 컬렉션을 어셈블하여 [로컬 리포지토리를 만들고](https://andrie.github.io/miniCRAN/) 패키지 종속성 분석을 위해 [igraph](https://igraph.org/r/)를 사용하는 것이 좋습니다. 잘못된 버전의 패키지를 설치하거나 패키지 종속성을 생략하면 CREATE EXTERNAL LIBRARY 문이 실패할 수 있습니다. 
+패키지 종속성 때문에 여러 패키지를 설치하는 것이 더 일반적입니다. 패키지에 다른 패키지가 필요한 경우 설치하는 동안 각 패키지에 모두 액세스할 수 있는지 확인해야 합니다. [miniCRAN](https://andrie.github.io/miniCRAN/)을 사용해 전체 패키지 컬렉션을 어셈블하여 [로컬 리포지토리를 만들고](create-a-local-package-repository-using-minicran.md) 패키지 종속성 분석을 위해 [igraph](https://igraph.org/r/)를 사용하는 것이 좋습니다. 잘못된 버전의 패키지를 설치하거나 패키지 종속성을 생략하면 CREATE EXTERNAL LIBRARY 문이 실패할 수 있습니다. 
 
 ## <a name="copy-the-file-to-a-local-folder"></a>로컬 폴더에 파일 복사
 

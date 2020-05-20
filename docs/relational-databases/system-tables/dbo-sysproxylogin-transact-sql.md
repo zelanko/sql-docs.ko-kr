@@ -17,26 +17,26 @@ dev_langs:
 helpviewer_keywords:
 - sysproxylogin system table
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfa29500a798cdcfe535a377abd8c649972415b0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984882"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825962"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 SQL Server 에이전트 프록시 계정에 연결되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기록합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 ID입니다. 이 값은 **sysproxies** 테이블의 **proxy_id** 열에 해당 합니다.|  
 |**sid**|**varbinary(85)**|SQL Server 로그인에 대 한 Microsoft Windows *security_identifier* 입니다.|  
 |**principal_id**|**int**|지정된 하위 시스템 단계에 프록시 계정을 사용할 수 있는 권한이 있는 사용자 또는 그룹의 ID입니다.|  
-|**flags**|**int**|로그인 유형은 다음과 같습니다.<br /><br /> **0** = Windows 사용자 또는 그룹 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정 시스템 역할<br /><br /> **2** = **msdb** 데이터베이스 역할|  
+|**flags**|**int**|로그인 유형은 다음과 같습니다.<br /><br /> **0** = Windows 사용자 또는 그룹 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고정 시스템 역할<br /><br /> **2**  =  **msdb** 데이터베이스 역할|  
   
 ## <a name="remarks"></a>설명  
  **Sysadmin** 고정 서버 역할의 멤버만이 테이블에 액세스할 수 있습니다.  

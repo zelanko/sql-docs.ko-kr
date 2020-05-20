@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983308"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821292"
 ---
 # <a name="systables-transact-sql"></a>sys.tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983308"
 |-----------------|---------------|-----------------|  
 |\<상속 된 열>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |lob_data_space_id|**int**|0이 아닌 값은 이 테이블의 BLOB(Binary Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다. LOB 데이터 형식의 예로는 **varbinary (max)**, **varchar (max)**, **geography**또는 **xml**이 있습니다.<br /><br /> 0 = 테이블에 LOB 데이터가 없습니다.|  
-|filestream_data_space_id|**int**|FILESTREAM 파일 그룹 또는 FILESTREAM 파일 그룹으로 구성된 파티션 구성표의 데이터 공간 ID입니다.<br /><br /> FILESTREAM 파일 그룹의 이름을 보고 하려면 쿼리 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`를 실행 합니다.<br /><br /> sys.tables는 filestream_data_space_id = data_space_id에서 다음과 같은 뷰에 조인할 수 있습니다.<br /><br /> -sys. 파일 그룹<br /><br /> -sys. partition_schemes<br /><br /> -sys. 인덱스<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id에 조인)|  
+|filestream_data_space_id|**int**|FILESTREAM 파일 그룹 또는 FILESTREAM 파일 그룹으로 구성된 파티션 구성표의 데이터 공간 ID입니다.<br /><br /> FILESTREAM 파일 그룹의 이름을 보고 하려면 쿼리를 실행 `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` 합니다.<br /><br /> sys.tables는 filestream_data_space_id = data_space_id에서 다음과 같은 뷰에 조인할 수 있습니다.<br /><br /> -sys. 파일 그룹<br /><br /> -sys. partition_schemes<br /><br /> -sys. 인덱스<br /><br /> -sys. allocation_units<br /><br /> -sys. fulltext_catalogs<br /><br /> -sys. data_spaces<br /><br /> -sys. destination_data_spaces<br /><br /> -sys. master_files<br /><br /> -sys. database_files<br /><br /> -backupfilegroup (filegroup_id에 조인)|  
 |max_column_id_used|**int**|이 테이블에 사용된 최대 열 ID입니다.|  
 |lock_on_bulk_load|**bit**|대량 로드 시 테이블이 잠깁니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|  
 |uses_ansi_nulls|**bit**|테이블이 SET ANSI_NULLS 데이터베이스 옵션을 ON으로 설정하여 생성되었습니다.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73983308"
 |temporal_type_desc|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블 형식에 대 한 텍스트 설명입니다.<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및 [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> (2, 4)의 temporal_type 기록 데이터를 유지 하는 테이블의 object_id를 반환 하 고, 그렇지 않으면 NULL을 반환 합니다.|  
 |is_remote_data_archive_enabled|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 및[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> 테이블이 스트레치를 사용 하는지 여부를 나타냅니다.<br /><br /> 0 = 테이블이 스트레치 사용 되지 않습니다.<br /><br /> 1 = 스트레치를 사용 하도록 설정 된 테이블입니다.<br /><br /> 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.|  
-|is_external|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]및 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]<br /><br /> 테이블이 외부 테이블 임을 나타냅니다.<br /><br /> 0 = 테이블이 외부 테이블이 아닙니다.<br /><br /> 1 = 테이블이 외부 테이블입니다.| 
+|is_external|**bit**|**적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]<br /><br /> 테이블이 외부 테이블 임을 나타냅니다.<br /><br /> 0 = 테이블이 외부 테이블이 아닙니다.<br /><br /> 1 = 테이블이 외부 테이블입니다.| 
 |history_retention_period|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>History_retention_period_unit 지정 된 단위로 temporal 기록 보존 기간의 기간을 나타내는 숫자 값입니다. |  
 |history_retention_period_unit|**int**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Temporal 기록 보존 기간 단위의 형식을 나타내는 숫자 값입니다. <br /><br />-1: 무한 <br /><br />3: 일 <br /><br />4: 주 <br /><br />5: 월 <br /><br />6: 년 |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**적용 대상**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Temporal 기록 보존 기간 단위 유형에 대 한 텍스트 설명입니다. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  

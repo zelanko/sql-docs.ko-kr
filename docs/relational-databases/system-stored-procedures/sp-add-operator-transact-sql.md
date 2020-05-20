@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_operator
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 080933e13c2f72deef536885b9d3b5c1c4c7593b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "74095507"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821100"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -52,22 +52,22 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'`운영자 이름 (알림 받는 사람)입니다. 이 이름은 고유 해야 하며 백분율 (**%**) 문자를 포함할 수 없습니다. *name* 은 **sysname**이며 기본값은 없습니다.  
+`[ @name = ] 'name'`운영자 이름 (알림 받는 사람)입니다. 이 이름은 고유 해야 하며 백분율 () 문자를 포함할 수 없습니다 **%** . *name* 은 **sysname**이며 기본값은 없습니다.  
   
 `[ @enabled = ] enabled`운영자의 현재 상태를 나타냅니다. *enabled* 는 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우에는 연산자를 사용할 수 없으며 알림이 수신 되지 않습니다.  
   
 `[ @email_address = ] 'email_address'`운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 예를 들어:  
+ *Email_address*에 대 한 실제 전자 메일 주소나 별칭을 지정할 수 있습니다. 다음은 그 예입니다.  
   
- '**jdoe**' 또는 '**jdoe\@xyz.com**'  
+ '**jdoe**' 또는 '**jdoe \@ xyz.com**'  
   
 > [!NOTE]  
 >  데이터베이스 메일에서는 전자 메일 주소를 사용해야 합니다.  
   
 `[ @pager_address = ] 'pager_address'`운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
-`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 월요일부터 금요일 까지의 평일에 지정 된 운영자에 게 호출기 알림을 보내는 시간입니다. *weekday_pager_start_time*는 **int**이며 기본값은 **090000**입니다 .이는 9:00 A.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트가 월요일부터 금요일 까지의 평일에 지정 된 운영자에 게 호출기 알림을 보내는 시간입니다. *weekday_pager_start_time*는 **int**이며 기본값은 **090000**입니다 .이는 9:00 A.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
 `[ @weekday_pager_end_time = ] weekday_pager_end_time`**SQLServerAgent** 서비스가 월요일부터 금요일 까지의 평일에 지정 된 운영자에 게 호출기 알림을 더 이상 보내지 않는 시간입니다. *weekday_pager_end_time*는 **int**이며 기본값은 18만입니다 .이는 6:00 P.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
@@ -79,7 +79,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @sunday_pager_end_time = ] sunday_pager_end_time`**SQLServerAgent** 서비스가 일요일에 지정 된 운영자에 게 호출기 알림을 더 이상 보내지 않는 시간입니다. *sunday_pager_end_time*는 **int**이며 기본값은 **18만**입니다 .이는 6:00 P.M.를 나타냅니다. 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
-`[ @pager_days = ] pager_days`지정 된 시작/종료 시간에 따라 운영자를 페이지에 사용할 수 있는 요일을 나타내는 숫자입니다. *pager_days*은 **tinyint**이며 기본값은 운영자가 페이지를 받을 수 없음을 나타내는 **0** 입니다. 유효한 값은 **0** 부터 **127**까지입니다. *pager_days*는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2**+**4**+**8**+**16**+**32** = **62**입니다. 다음 표에서는 각 요일에 대한 값을 나열합니다.  
+`[ @pager_days = ] pager_days`지정 된 시작/종료 시간에 따라 운영자를 페이지에 사용할 수 있는 요일을 나타내는 숫자입니다. *pager_days*은 **tinyint**이며 기본값은 운영자가 페이지를 받을 수 없음을 나타내는 **0** 입니다. 유효한 값은 **0** 부터 **127**까지입니다. *pager_days*는 필요한 요일에 대 한 개별 값을 더하여 계산 됩니다. 예를 들어 월요일부터 금요일까지 **2** + **4** + **8** + **16** + **32**  =  **62**입니다. 다음 표에서는 각 요일에 대한 값을 나열합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -99,7 +99,7 @@ sp_add_operator [ @name = ] 'name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **sp_add_operator** 는 **msdb** 데이터베이스에서 실행 해야 합니다.  

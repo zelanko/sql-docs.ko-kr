@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6385f4dd17f4b3f04d145db7ce5a59169dbc4ccb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828229"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int** 이며 기본값은 NULL입니다. *name* 이 NULL 인 경우 *collection_set_id* 에 값이 있어야 합니다.  
   
- [ @name = ] '*이름*'  
+ [ @name =] '*name*'  
  컬렉션 집합의 이름입니다. *name* 은 **sysname** 이며 기본값은 NULL입니다. *collection_set_id* 가 NULL 이면 *이름* 에 값이 있어야 합니다.  
   
- [ @stop_collection_job = ] *stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  컬렉션 집합의 컬렉션 작업이 실행 중인 경우 중단하도록 지정합니다. *stop_collection_job* 은 **bit** 이며 기본값은 1입니다.  
   
  *stop_collection_job* 는 컬렉션 모드가 cached로 설정 된 컬렉션 집합에만 적용 됩니다. 자세한 내용은 [sp_syscollector_create_collection_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md)를 참조 하세요.  
@@ -60,7 +60,7 @@ sp_syscollector_stop_collection_set
 ## <a name="remarks"></a>설명  
  sp_syscollector_create_collection_set은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

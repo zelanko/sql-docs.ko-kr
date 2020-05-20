@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addmessage
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d040fa0ccfe9b962f8847db0a841b95a534326fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c046d562164e47ed72580801196756714547755e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531031"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820724"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'`이 메시지의 언어입니다. *language* 는 **sysname** 이며 기본값은 NULL입니다. 여러 언어를 동일한 서버에 설치할 수 있으므로 *언어* 는 각 메시지가 기록 되는 언어를 지정 합니다. *Language* 를 생략 하면 언어는 세션의 기본 언어입니다.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`메시지가 발생할 때 Windows 응용 프로그램 로그에 메시지를 쓸지 여부입니다. with_log는 **varchar (5)** 이며 기본값은 FALSE입니다. ** \@** TRUE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. **Sysadmin** 서버 역할의 멤버만이 옵션을 사용할 수 있습니다.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }`메시지가 발생할 때 Windows 응용 프로그램 로그에 메시지를 쓸지 여부입니다. ** \@ with_log** 는 **varchar (5)** 이며 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. **Sysadmin** 서버 역할의 멤버만이 옵션을 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  Windows 애플리케이션 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
@@ -61,7 +61,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  영어 버전이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 영어(미국) 버전의 메시지가 이미 존재하고 있어야 다른 언어를 사용하여 메시지를 추가할 수 있습니다. 두 버전의 메시지에 대한 심각도는 일치해야 합니다.  
