@@ -85,7 +85,7 @@ ms.locfileid: "68107197"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

@@ -75,7 +75,7 @@ ms.locfileid: "72906377"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
+9. **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
 
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-in-object-explorer"></a>개체 탐색기에서 기존 인덱스를 다른 파일 그룹으로 이동하려면  
   

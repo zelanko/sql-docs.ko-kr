@@ -20,7 +20,7 @@ ms.locfileid: "77081988"
   
  행과 열을 제어하는 방법은 테이블 또는 행렬이 있는지 여부에 따라 다릅니다. 테이블이 있는 경우 정적 멤버(행 및 열 머리글)가 계속 표시되도록 구성합니다. 행렬이 있는 경우 행 및 열 그룹 머리글이 계속 표시되도록 구성합니다.  
   
- Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 **Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;** 의 [페이지 머리글 및 바닥글](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md) 섹션을 참조하세요.  
+ Excel로 보고서를 내보내는 경우 머리글이 자동으로 고정되지 않습니다. Excel에서 창을 고정할 수 있습니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)의 **페이지 머리글 및 바닥글** 섹션을 참조하세요.  
   
 > [!NOTE]  
 >  테이블에 행 및 열 그룹이 있는 경우에도 스크롤하는 동안 이러한 그룹 머리글이 계속 표시되도록 할 수 없습니다.  

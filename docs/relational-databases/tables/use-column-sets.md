@@ -28,7 +28,7 @@ ms.locfileid: "71326134"
   
  테이블의 열 수가 많고 이러한 열을 개별적으로 작업하는 것이 복잡한 경우 열 집합을 사용하는 것이 좋습니다. 애플리케이션에서 열이 많은 테이블의 열 집합을 사용하여 데이터를 선택하고 삽입하는 경우 성능이 약간 향상될 수도 있습니다. 그러나 테이블의 열에 많은 인덱스가 정의되어 있는 경우 열 집합의 성능이 저하될 수 있습니다. 왜냐하면 실행 계획에 필요한 메모리 양이 늘어나기 때문입니다.  
   
- 열 집합을 정의하려면 *CREATE TABLE* 또는 [ALTER TABLE](../../t-sql/statements/create-table-transact-sql.md) 문에 [<column_set_name>](../../t-sql/statements/alter-table-transact-sql.md) FOR ALL_SPARSE_COLUMNS 키워드를 사용합니다.  
+ 열 집합을 정의하려면 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문에 *<column_set_name>* FOR ALL_SPARSE_COLUMNS 키워드를 사용합니다.  
   
 ## <a name="guidelines-for-using-column-sets"></a>열 집합 사용 지침  
  열 집합을 사용하는 경우 다음 지침을 고려합니다.  

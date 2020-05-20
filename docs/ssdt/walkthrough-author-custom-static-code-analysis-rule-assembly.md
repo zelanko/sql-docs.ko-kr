@@ -544,7 +544,7 @@ Visual Studio 2012의 경우 <Visual Studio Install Dir>은 일반적으로 C:\P
   
 3. **코드 분석**을 클릭합니다. RuleSamples.CategorySamples라는 새 범주가 표시됩니다.  
   
-4. RuleSamples .CategorySamples를 확장합니다. SR1004: 저장 프로시저, 함수 및 트리거에서 WaitFor Delay 문을 사용하지 마세요.가 표시됩니다.  
+4. RuleSamples .CategorySamples를 확장합니다. SR1004가 표시되어야 합니다. 저장 프로시저, 함수 및 트리거에서 WAITFOR DELAY 문을 사용하지 마세요.  
   
 ## <a name="see-also"></a>참고 항목
 
