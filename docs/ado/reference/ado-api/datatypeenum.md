@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DataTypeEnum enumeration [ADO]
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5d22757951cad59c10bc1d7eea85ea8ee11ed0ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933222"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757629"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md)또는 [속성](../../../ado/reference/ado-api/property-object-ado.md)의 데이터 형식을 지정 합니다. 해당 OLE DB 형식 표시기는 다음 표의 설명 열에 괄호 안에 표시 됩니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|다른 데이터 형식의 배열을 나타내는 플래그 값으로, 항상 다른 데이터 형식 상수와 결합 됩니다. ADOX에는 적용 되지 않습니다.|  
 |**adBigInt**|20|부호 있는 8 바이트 정수 (DBTYPE_I8)를 나타냅니다.|  

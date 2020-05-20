@@ -10,19 +10,19 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ed57bb3087378ac6529fc5bd8c8a0aa01e06cfa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926873"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758529"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 C: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 Visual C++를 비롯 한 다양 한 프로그래밍 언어에 사용할 수 있는 COM 자동화 인터페이스 구성 요소입니다. 이러한 도구 및 기타 응용 프로그램 (예: Microsoft Office 및 Microsoft SQL Server)과 함께 ADO 버전이 설치 됩니다.
 
- ADO 용 라이브러리는 msado15.dll이 고 program ID (ProgID) 접두사는 "ADODB"입니다. 예를 들어 ADO [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 명시적으로 참조 하려면를 `ADODB.Recordset`사용 합니다.
+ ADO 용 라이브러리는 msado15.dll이 고 program ID (ProgID) 접두사는 "ADODB"입니다. 예를 들어 ADO [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 명시적으로 참조 하려면를 사용 `ADODB.Recordset` 합니다.
 
  다양 한 개발 환경에서 ADO를 사용 하 여 프로그래밍 하는 방법에 대 한 자세한 내용은 다음 항목을 참조 하십시오.
 

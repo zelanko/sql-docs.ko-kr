@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933412"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758799"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 메서드(ADO)
 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 엔터티를 다른 위치로 복사 합니다.  
@@ -37,7 +37,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *소스*  
  (선택 사항) 복사할 엔터티 (예: 파일 또는 디렉터리)를 지정 하는 URL을 포함 하는 **문자열** 값입니다. *Source* 를 생략 하거나 빈 문자열을 지정 하면 현재 [레코드가](../../../ado/reference/ado-api/record-object-ado.md) 나타내는 파일이 나 디렉터리가 복사 됩니다.  
   
- *대상*  
+ *대상이*  
  (선택 사항) *원본이* 복사 될 위치를 지정 하는 URL을 포함 하는 **문자열** 값입니다.  
   
  *이름*  
@@ -46,13 +46,13 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *암호*  
  (선택 사항) 필요한 경우 *사용자 이름을*확인 하는 암호를 포함 하는 **문자열** 값입니다.  
   
- *옵션*  
+ *Options*  
  (선택 사항) 기본값은 **adCopyUnspecified**인 [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) 값입니다. 이 메서드의 동작을 지정 합니다.  
   
  *동기화*  
  (선택 사항) **부울** 값입니다. **True**인 경우이 작업을 비동기로 지정 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  일반적으로 *Destination*값을 반환 하는 **문자열** 값입니다. 그러나 반환 되는 정확한 값은 공급자에 따라 다릅니다.  
   
 ## <a name="remarks"></a>설명  

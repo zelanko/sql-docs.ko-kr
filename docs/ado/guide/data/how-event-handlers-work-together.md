@@ -15,14 +15,14 @@ helpviewer_keywords:
 - event handlers [ADO]
 - multiple object event handlers [ADO]
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98144b1dacb406de4f57f9d051547640edd09397
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925048"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758109"
 ---
 # <a name="how-event-handlers-work-together"></a>이벤트 처리기가 함께 작동하는 방법
 Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합** 이벤트에 대 한 모든 이벤트 처리기는 실제로 모든 이벤트를 처리 하는지 여부에 관계 없이 구현 되어야 합니다. 구현 해야 하는 작업의 양은 프로그래밍 언어에 따라 달라 집니다. 자세한 내용은 [언어별 ADO 이벤트 인스턴스화](../../../ado/guide/data/ado-event-instantiation-by-language.md)를 참조 하세요.  
@@ -45,7 +45,7 @@ Visual Basic 프로그래밍 하지 않는 한 **연결** 및 **레코드 집합
   
  단일 **Complete** 이벤트 처리기는 비동기 작업을 관리 하는 데 유용할 수 있습니다. 각 비동기 작업에는 적절 한 **완료** 이벤트가 있습니다.  
   
- 예를 들어, 대량 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 채우는 데 시간이 오래 걸릴 수 있습니다. 응용 프로그램이 적절 하 게 작성 되 면 작업을 `Recordset.Open(...,adAsyncExecute)` 시작 하 고 다른 처리를 계속할 수 있습니다. **ExecuteComplete** 이벤트로 **레코드 집합** 을 채울 때 알림이 표시 됩니다.  
+ 예를 들어, 대량 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 채우는 데 시간이 오래 걸릴 수 있습니다. 응용 프로그램이 적절 하 게 작성 되 면 작업을 시작 `Recordset.Open(...,adAsyncExecute)` 하 고 다른 처리를 계속할 수 있습니다. **ExecuteComplete** 이벤트로 **레코드 집합** 을 채울 때 알림이 표시 됩니다.  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>단일 이벤트 처리기 및 여러 개체  
  Microsoft Visual C++®와 같은 프로그래밍 언어의 유연성을 사용 하면 하나의 이벤트 처리기에서 여러 개체의 이벤트를 처리할 수 있습니다. 예를 들어 여러 **연결** 개체에서 이벤트 처리기를 처리 하 **는 이벤트 처리기가 하나 있을** 수 있습니다. 연결 중 하나가 종료 되 면 **연결 끊기** 이벤트 처리기가 호출 됩니다. 이벤트 처리기 개체 매개 변수가 해당 **연결** 개체로 설정 되기 때문에 이벤트를 발생 시킨 연결을 확인할 수 있습니다.  

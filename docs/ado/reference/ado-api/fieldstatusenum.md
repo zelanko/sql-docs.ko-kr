@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ea1fc2d8347df28e983b412976c545327456ad8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918662"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756813"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 [필드 개체](../../../ado/reference/ado-api/field-object.md)의 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 를 지정 합니다.  
   
- **Adfieldpending\* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
+ **Adfieldpending \* ** 값은 상태를 설정 하는 작업을 나타내며 다른 상태 값과 결합 될 수 있습니다.  
   
 |상수|값|설명|  
 |--------------|-----------|-----------------|  

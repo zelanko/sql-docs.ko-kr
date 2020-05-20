@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Internet publishing
 - Internet Publishing provider [ADO]
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 079bbefce30b5836c16394a7b8efb215725c5ce6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926758"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758459"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>인터넷 게시용 Microsoft OLE DB 공급자 개요
 Microsoft OLE DB Provider for Internet 게시용을 사용 하면 ADO에서 Microsoft FrontPage 또는 Microsoft Internet Information Server가 제공 하는 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등의 웹 원본 파일이 포함 됩니다.
@@ -48,7 +48,7 @@ MSDAIPP.DSO
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|인터넷 게시용 OLE DB 공급자를 지정 합니다.|
 |**데이터 원본** 또는 **URL**|웹 폴더에 게시 된 파일 또는 디렉터리의 URL을 지정 합니다.|

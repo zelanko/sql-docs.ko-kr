@@ -12,14 +12,14 @@ helpviewer_keywords:
 - underlying providers [ADO]
 - data shaping [ADO], commands
 ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6bc30f35ebfe2ddc59e9ef1404253e9bc99d62e0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924942"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757809"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>기본 데이터 공급자에 명령 발급
 SHAPE로 시작 하지 않는 모든 명령은 데이터 공급자로 전달 됩니다. 이는 "SHAPE {provider command}" 형식으로 셰이프 명령을 실행 하는 것과 같습니다. 이러한 명령은 **레코드 집합**을 생성할 필요가 *없습니다* . 예를 들어 "SHAPE {DROP TABLE MyTable}은 데이터 공급자가 DROP TABLE을 지원 한다고 가정 하 고 완벽 하 게 유효한 SHAPE 명령입니다.  

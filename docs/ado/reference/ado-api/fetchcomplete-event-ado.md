@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - FetchComplete event [ADO]
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 850709dd8b4370360f5c06105266fb2c2510916c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932831"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757129"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete 이벤트(ADO)
 **Fetchcomplete** 이벤트는 긴 비동기 작업의 모든 레코드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)으로 검색 한 후에 호출 됩니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetRowsOptionEnum enumeration [ADO]
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7b1c38e266cc84816a4ad751112d5744edf3e3e4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918477"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758759"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 검색할 레코드 수를 지정 합니다.  

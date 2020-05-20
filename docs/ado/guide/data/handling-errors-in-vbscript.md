@@ -13,17 +13,17 @@ helpviewer_keywords:
 - VBScript error handling [ADO]
 - errors [ADO], VBScript
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d191748315cb4636b295dbae56333e9ee0d16227
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925148"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758859"
 ---
 # <a name="handling-errors-in-vbscript"></a>VBScript로 오류 처리
-Visual Basic에 사용 되는 메서드와 VBScript에서 사용 되는 방법 간에는 약간의 차이가 있습니다. 주요 차이점은 VBScript는 레이블에서 실행을 계속 하 여 오류 처리 개념을 지원 하지 않는다는 것입니다. 즉, VBScript에서는를 사용할 `On Error GoTo` 수 없습니다. 대신 다음 예제 `On Error Resume Next` 와 같이을 사용 하 고 **Errors** 컬렉션의 Err 및 **Count** 속성을 모두 확인 **합니다** .  
+Visual Basic에 사용 되는 메서드와 VBScript에서 사용 되는 방법 간에는 약간의 차이가 있습니다. 주요 차이점은 VBScript는 레이블에서 실행을 계속 하 여 오류 처리 개념을 지원 하지 않는다는 것입니다. 즉, VBScript에서는를 사용할 수 없습니다 `On Error GoTo` . 대신 다음 예제와 같이을 사용 하 `On Error Resume Next` 고 **Errors** 컬렉션의 Err 및 **Count** 속성을 모두 확인 **합니다** .  
   
 ```  
 <!-- BeginErrorExampleVBS -->  

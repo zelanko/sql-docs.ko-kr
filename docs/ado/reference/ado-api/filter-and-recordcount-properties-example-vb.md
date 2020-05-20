@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8eeb68293e7c800fda4c4dd395f840cfeeb2d572
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918646"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756764"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter 및 RecordCount 속성 예제(VB)
 이 예에서는 ***Pubs*** 데이터베이스의 Publishers 테이블에서 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 엽니다. 그런 다음 [Filter](../../../ado/reference/ado-api/filter-property.md) 속성을 사용 하 여 특정 국가/지역의 해당 게시자로 표시 되는 레코드 수를 제한 합니다. **RecordCount** 속성은 필터링 되거나 필터링 되지 않은 레코드 집합 간의 차이를 표시 하는 데 사용 됩니다.  

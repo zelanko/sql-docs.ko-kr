@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917143"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756475"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command 속성-동적(ADO)
 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드에서 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 동적 속성의 테이블에 있는 데이터를 새로 고치는 데 발급 하는 사용자 제공 명령 문자열을 지정 합니다.  
@@ -33,7 +33,7 @@ ms.locfileid: "67917143"
   
  다음은 SQL을 기반으로 하는 두 가지 예제입니다.  
   
- 1\) **레코드 집합** 은 명령으로 정의 됩니다.  
+ 1 \) **레코드 집합** 은 명령으로 정의 됩니다.  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  **고유 테이블** 은 *Orders* 이 고 해당 기본 키인 *OrderID*는 매개 변수화 됩니다. 하위 select는 원래 명령과 동일한 개수의 열이 반환 되는지 프로그래밍 방식으로 확인 하는 간단한 방법을 제공 합니다.  
   
- 2\) **레코드 집합** 은 저장 프로시저에 의해 정의 됩니다.  
+ 2 \) **레코드 집합** 은 저장 프로시저에 의해 정의 됩니다.  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

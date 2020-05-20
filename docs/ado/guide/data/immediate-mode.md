@@ -12,14 +12,14 @@ helpviewer_keywords:
 - immediate mode [ADO]
 - updating data [ADO], immediate mode
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d036b2fa33c2f9fd5696eeb2984d07d4217eff6e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925010"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757909"
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드는 **LockType** 속성이 **adlockoptimistic** 또는 **adlockoptimistic**으로 설정 된 경우에 적용 됩니다. 즉시 실행 모드에서는 **Update** 메서드를 호출 하 여 완료 된 행에 대해 작업을 선언 하는 즉시 레코드에 대 한 변경 내용이 데이터 소스에 전파 됩니다.  

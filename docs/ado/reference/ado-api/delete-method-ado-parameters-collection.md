@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete method [ADO]
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 19fb69e51e04a2e15c60767981bc32e4dfe77141
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933174"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757379"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 메서드(ADO 매개 변수 컬렉션)
 [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션에서 개체를 삭제 합니다.  
@@ -34,7 +34,7 @@ Parameters.Delete Index
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *인덱스*  
+ *인덱싱할*  
  삭제할 개체의 이름 또는 컬렉션의 개체의 서 수 위치 (인덱스)를 포함 하는 **문자열** 값입니다.  
   
 ## <a name="remarks"></a>설명  

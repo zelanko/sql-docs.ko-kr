@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - DefinedSize property [ADO]
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4bfb0db701801f1853009594b9d6d24aeb41c629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933218"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757399"
 ---
 # <a name="definedsize-property"></a>DefinedSize 속성
 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 데이터 용량을 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  필드 개체의 데이터 형식에 따라 결정 되는 필드의 정의 된 크기를 반영 하는 **Long** 값을 반환 합니다. 자세한 내용은 [형식](../../../ado/reference/ado-api/type-property-ado.md) 을 참조 하세요. 고정 길이 데이터 형식을 사용 하는 필드의 경우 반환 값은 데이터 형식의 크기 (바이트)입니다. 가변 길이 데이터 형식을 사용 하는 필드의 경우 다음 중 하나입니다.  
   
 1.  필드의 최대 길이 ( **adVarChar** 및 **adVarWChar**의 경우) 또는 바이트 ( **adVarBinary**의 경우) 또는 (예: **) 필드**의 길이가 정의 된 경우입니다. 예를 들어 **adVarChar (5)** 필드의 최대 길이는 5입니다.  

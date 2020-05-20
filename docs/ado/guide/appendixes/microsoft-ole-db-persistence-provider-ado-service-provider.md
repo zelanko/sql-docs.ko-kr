@@ -12,14 +12,14 @@ helpviewer_keywords:
 - persistence provider [ADO]
 - OLE DB persistence provider [ADO]
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926763"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758469"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 파일에 저장 하 고 나중에 파일에서 해당 **레코드 집합** 개체를 복원할 수 있습니다. 스키마 정보, 데이터 및 보류 중인 변경 내용이 유지 됩니다.
@@ -36,7 +36,7 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 [레코드 집합](../../
 ## <a name="errors"></a>오류
  이 공급자가 발급 한 다음 오류는 응용 프로그램에서 검색할 수 있습니다.
 
-|상수|Description|
+|상수|설명|
 |--------------|-----------------|
 |E_BADSTREAM|열린 파일의 형식이 잘못 되었습니다 (즉, ADTG 또는 XML 형식이 아님).|
 |E_CANTPERSISTROWSET|저장 된 **레코드 집합** 개체에는 저장 되지 않도록 하는 특징이 있습니다.|

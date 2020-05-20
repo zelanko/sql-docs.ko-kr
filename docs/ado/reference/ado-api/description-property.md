@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Description property
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25130c94ce9491fa8e61b1bba38246498880568a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757249"
 ---
 # <a name="description-property"></a>Description 속성
 [오류](../../../ado/reference/ado-api/error-object.md) 개체에 대해 설명 합니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  오류에 대 한 설명을 포함 하는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  

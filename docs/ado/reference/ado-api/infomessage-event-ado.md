@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5fc0adfec791294bb6c680dab94078b8a63ec07
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932339"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758689"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 이벤트(ADO)
 **InfoMessage** 이벤트는 **connectionevent** 작업 중에 경고가 발생할 때마다 호출 됩니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2a77aa3c2e144859eaead332e71c5c4c8776608c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932431"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758699"
 ---
 # <a name="index-property"></a>Index 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에 현재 적용 되는 인덱스의 이름을 나타냅니다.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c45f457cdf633cc16052ed2945f71da176efe472
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924904"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757589"
 ---
 # <a name="more-about-recordset-persistence"></a>레코드 집합 지속성에 대한 자세한 정보
 ADO 레코드 집합 개체는 [Save](../../../ado/reference/ado-api/save-method.md) 메서드를 사용 하 여 **레코드 집합** 개체의 내용을 파일에 저장 하는 것을 지원 합니다. 영구적으로 저장 된 파일은 로컬 드라이브, 서버 또는 웹 사이트의 URL로 존재할 수 있습니다. 나중에이 파일을 **Recordset** 개체의 [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 또는 [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드를 사용 하 여 복원할 수 있습니다.  

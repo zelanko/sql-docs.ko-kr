@@ -11,14 +11,14 @@ helpviewer_keywords:
 - errors [ADO], IIS
 - IIS errors [ADO]
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a49e136f7d67c5d0713087aa225cee6e1aa3791e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926823"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758519"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 인터넷 정보 서비스 오류 코드
 다음 표에서는 원격 데이터 서비스 사용량과 관련 된 Microsoft IIS (® 인터넷 정보 서비스) 오류 코드를 나열 합니다. 낮은 2 바이트의 10 진수 변환, 전체 오류 코드의 음수 10 진수 변환 및 16 진수 값이 표시 됩니다.

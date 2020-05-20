@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925303"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758199"
 ---
 # <a name="forward-only-cursors"></a>정방향 전용 커서
 앞 으로만 이동 가능 하거나 스크롤할 수 없는 커서 라고 하는 일반적인 기본 커서 유형은 결과 집합을 통해서만 앞으로 이동할 수 있습니다. 앞 으로만 이동 가능한 커서는 스크롤을 지원 하지 않습니다 (결과 집합에서 앞으로 또는 뒤로 이동 하는 기능). 결과 집합의 처음부터 끝까지 행 인출만 지원 합니다. 일부 전방 전용 커서 (예: SQL Server 커서 라이브러리 사용)를 사용 하 여 결과 집합의 행에 영향을 주는 현재 사용자가 수행한 모든 삽입, 업데이트 및 삭제 문은 행이 인출 될 때 표시 됩니다. 그러나 커서는 뒤로 스크롤할 수 없기 때문에 행이 페치된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 볼 수 없습니다.  

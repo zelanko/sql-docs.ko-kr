@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Mode property [ADO], Visual Basic example
 - IsolationLevel property [ADO], Visual Basic example
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 893e60a87a59c882a361317af6bced3aabd7c3c7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918411"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758679"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel 및 Mode 속성 예제 (VB)
 이 예에서는 [Mode](../../../ado/reference/ado-api/mode-property-ado.md) 속성을 사용 하 여 배타적 연결을 열고 [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) 속성을 사용 하 여 다른 트랜잭션과 분리 하 여 수행 되는 트랜잭션을 엽니다.  

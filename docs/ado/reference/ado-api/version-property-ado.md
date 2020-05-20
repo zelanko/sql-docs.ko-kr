@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Version property [ADO]
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: addae0713fc175c7a261668c532b771ee0f4fa34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dbd13ac245ad10d4300e76a4c86d326b8b9b9ad
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938732"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758609"
 ---
 # <a name="version-property-ado"></a>Version 속성(ADO)
 ADO 버전 번호를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  버전을 나타내는 **문자열** 값을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
