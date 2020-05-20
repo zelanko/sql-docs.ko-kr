@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_input_buffer dynamic management function
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05ec724effbabfeec11d113e46fd11c4daec0688
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74097875"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821075"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-인스턴스에 전송 된 문에 대 한 정보를 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+인스턴스에 전송 된 문에 대 한 정보를 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -59,12 +59,12 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="permissions"></a>사용 권한
 
-에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]사용자에 게 VIEW SERVER STATE 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.
+에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자에 게 VIEW SERVER STATE 권한이 있는 경우 사용자는 인스턴스에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.
 
 > [!IMPORTANT]
 > 뷰 서버 상태 권한 (예: 트리거, 저장 프로시저 또는 함수)이 없는 SQL Server에 대해이 DMV를 SQL Server Management Studio 외부에서 실행 하면 master 데이터베이스에 대 한 사용 권한 오류가 throw 됩니다.
 
-에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]사용자가 데이터베이스 소유자 인 경우에서 실행 중인 모든 세션을 볼 수 있습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.
+에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용자가 데이터베이스 소유자 인 경우에서 실행 중인 모든 세션을 볼 수 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다.
 
 > [!IMPORTANT]
 > 트리거, 저장 프로시저 또는 함수와 같은 소유자 권한이 없는 Azure SQL Database에 대해이 DMV를 SQL Server Management Studio 외부에서 실행 하면 master 데이터베이스에 대 한 사용 권한 오류가 throw 됩니다.

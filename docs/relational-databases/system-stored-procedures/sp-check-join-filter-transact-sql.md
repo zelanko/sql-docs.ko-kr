@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c15b8e79dc683c299a1a3f0407b401b2565faffb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771268"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824019"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
  **sp_check_join_filter** 는 게시 되지 않은 경우에도 관련 테이블에 대해 실행할 수 있습니다. 이 저장 프로시저는 두 아티클 간의 조인 필터를 정의하기 전 조인 필터 절을 확인하는 데 사용될 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_check_join_filter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

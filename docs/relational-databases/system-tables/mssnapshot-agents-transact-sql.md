@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fcbbe40247742a1a5a1eda5e6f501aae279a12a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079961"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821084"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68079961"
 |**profile_id**|**int**|[Transact-sql&#41;테이블 &#40;MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 구성 ID입니다.|  
 |**dynamic_filter_login**|**sysname**|SUSER_SNAME를 평가 하는 데 사용 되는 값은 파티션을 정의 하는 매개 변수가 있는 필터에서 [transact-sql&#41;함수 &#40;](../../t-sql/functions/suser-sname-transact-sql.md) 합니다. 이 열은 분할된 스냅샷에 사용됩니다.|  
 |**dynamic_filter_hostname**|**sysname**|HOST_NAME를 평가 하는 데 사용 되는 값은 파티션을 정의 하는 매개 변수가 있는 필터에서 [transact-sql&#41;함수 &#40;](../../t-sql/functions/host-name-transact-sql.md) 합니다. 이 열은 분할된 스냅샷에 사용됩니다.|  
-|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
+|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**publisher_login**|**sysname**|게시자에 연결할 때 사용하는 로그인입니다.|  
 |**publisher_password**|**nvarchar (524)**|게시자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 고유 ID입니다.|  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531198"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819848"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "80531198"
 |----------------|-----------------|  
 |**sys.sysschobjs**|모든 데이터베이스에 있습니다. 각 행은 데이터베이스의 개체를 나타냅니다.|  
 |**sys.sysbinobjs**|모든 데이터베이스에 있습니다. 데이터베이스의 각 Service Broker 엔터티에 대한 행을 포함합니다. Service Broker 엔터티에는 다음이 포함됩니다.<br /><br /> 메시지 유형<br /><br /> 서비스 계약<br /><br /> 서비스<br /><br /> 이름 및 유형에는 고정된 이진 데이터 정렬이 사용됩니다.|  
-|**sys.sysclsobjs**|모든 데이터베이스에 있습니다. 다음을 비롯한 동일한 공용 속성을 공유하는 각 분류된 엔터티에 대한 행을 포함합니다.<br /><br /> Assembly<br /><br /> 백업 디바이스<br /><br /> 전체 텍스트 카탈로그<br /><br /> 파티션 함수<br /><br /> 파티션 구성표<br /><br /> 파일 그룹<br /><br /> 난독 처리 키|  
+|**sys.sysclsobjs**|모든 데이터베이스에 있습니다. 다음을 비롯한 동일한 공용 속성을 공유하는 각 분류된 엔터티에 대한 행을 포함합니다.<br /><br /> 어셈블리<br /><br /> 백업 디바이스<br /><br /> 전체 텍스트 카탈로그<br /><br /> 파티션 함수<br /><br /> 파티션 구성표<br /><br /> 파일 그룹<br /><br /> 난독 처리 키|  
 |**sys.sysnsobjs**|모든 데이터베이스에 있습니다. 각 네임스페이스 범위의 엔터티에 대한 행을 포함합니다. 이 테이블은 XML 컬렉션 엔터티를 저장하는 데 사용됩니다.|  
 |**sys.syscolpars**|모든 데이터베이스에 있습니다. 테이블, 뷰 또는 테이블 반환 함수의 모든 열에 대한 행을 포함합니다. 이 테이블에는 프로시저 또는 함수의 모든 매개 변수에 대한 행도 포함됩니다.|  
 |**sys.systypedsubobjs**|모든 데이터베이스에 있습니다. 유형이 지정된 각 하위 엔터티에 대한 행을 포함합니다. 파티션 함수의 매개 변수만 이 범주에 해당합니다.|  

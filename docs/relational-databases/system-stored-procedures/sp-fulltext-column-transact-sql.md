@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124335"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820457"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -58,10 +58,10 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 |값|Description|  
 |-----------|-----------------|  
-|**add**|테이블의 비활성 전체 텍스트 인덱스에 *qualified_table_name* *column_name* 를 추가 합니다. 이 동작으로 전체 텍스트 인덱싱에 열을 사용할 수 있습니다.|  
+|**추가**|테이블의 비활성 전체 텍스트 인덱스에 *qualified_table_name* *column_name* 를 추가 합니다. 이 동작으로 전체 텍스트 인덱싱에 열을 사용할 수 있습니다.|  
 |**그림자**|테이블의 비활성 전체 텍스트 인덱스에서 *qualified_table_name* *column_name* 를 제거 합니다.|  
   
-`[ @language = ] 'language_term'`열에 저장 된 데이터의 언어입니다. 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]포함 된 언어 목록은 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)을 참조 하십시오.  
+`[ @language = ] 'language_term'`열에 저장 된 데이터의 언어입니다. 에 포함 된 언어 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)을 참조 하십시오.  
   
 > [!NOTE]  
 >  열에 여러 언어 또는 지원되지 않는 언어의 데이터가 있을 때는 중립을 사용하십시오. 기본값은 구성 옵션인 '기본 전체 텍스트 언어'에 의해 지정됩니다.  
@@ -79,7 +79,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
  변경 내용 추적이 진행 중이고 인덱스를 보관하는 동안 전체 텍스트 인덱스에서 열을 추가하거나 삭제해야 할 경우 테이블은 비활성 상태이어야 하고 필요한 열은 추가 또는 삭제되어야 합니다. 이러한 동작은 열을 고정시킵니다. 실제 채우기가 시작되면 테이블은 나중에 활성화될 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 이거나 고정 데이터베이스 역할 **db_owner** 또는 테이블 소유자의 멤버 여야 합니다.  
   
 ## <a name="examples"></a>예  

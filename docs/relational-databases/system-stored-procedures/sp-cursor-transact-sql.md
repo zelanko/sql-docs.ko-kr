@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108569"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820614"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>value 매개 변수  
  앞의 인수 섹션에서 설명한 대로 *값* 을 사용 하는 규칙에 대 한 두 가지 대안이 있습니다.  
   
-1.  이름 앞에 '\@'을 사용 하 여 명명 된 *값* 매개 변수에 대 한 select 목록에 있는 열의 이름을 지정할 수 있습니다. 이 이름을 사용하는 경우 데이터 변환이 필요하지 않을 수도 있다는 이점이 있습니다.  
+1.  이름 앞에 ' '을 사용 하 여 \@ 명명 된 *값* 매개 변수에 대 한 select 목록에 있는 열의 이름을 지정할 수 있습니다. 이 이름을 사용하는 경우 데이터 변환이 필요하지 않을 수도 있다는 이점이 있습니다.  
   
 2.  매개 변수를 사용 하 여 전체 UPDATE 또는 INSERT 문을 제출 하거나, 여러 매개 변수를 사용 하 여 UPDATE 또는 INSERT 문의 여러 부분을 제출할 수 있습니다. 그러면 SQL Server는 전체 문으로 작성 됩니다. 이 작업의 예는 이 항목 뒷부분의 예 섹션에 나와 있습니다.  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  업데이트 \<테이블 이름> 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
+>  업데이트 \< 테이블 이름> 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
   
  여러 매개 변수를 사용하는 경우에는 첫 번째 매개 변수가 다음 형식의 문자열이어야 합니다.  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- 이 경우 생성 된 update \<문에서 테이블 이름> *테이블 매개 변수에서 지정* 하거나 기본값으로 지정 됩니다.  
+ 이 경우 \< 생성 된 update 문에서 테이블 이름> *테이블* 매개 변수에서 지정 하거나 기본값으로 지정 됩니다.  
   
  INSERT의 경우:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  INSERT * \<테이블 이름>* 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
+>  INSERT * \< 테이블 이름>* 지정 하면 *table* 매개 변수에 대해 지정 된 모든 값이 무시 됩니다.  
   
  여러 매개 변수를 사용하는 경우에는 첫 번째 매개 변수가 다음 형식의 문자열이어야 합니다.  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우 생성 된 UPDATE 문에서 * \<테이블 이름>* *테이블 매개 변수에서 지정* 하거나 기본값으로 지정 됩니다.  
+ 단, VALUES를 지정한 경우는 예외입니다. 이 경우에는 마지막 식 다음에 후행 ")"가 있어야 합니다. 이 경우 생성 된 UPDATE 문에서 * \< 테이블 이름>* *테이블 매개 변수에서 지정* 하거나 기본값으로 지정 됩니다.  
   
 > [!NOTE]  
 >  매개 변수 하나를 명명된 매개 변수인 "`@VALUES`"로 제출할 수 있습니다. 이 경우 다른 명명된 매개 변수는 사용할 수 없습니다.  

@@ -6,29 +6,29 @@ ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4ef8388e18ee73a0f1217e4e04adc13379892520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915087"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823542"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에 있는 이벤트 세션 정의를 모두 나열 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
+  현재 데이터베이스에 있는 이벤트 세션 정의를 모두 나열 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 합니다.  
   
 > [!NOTE]
->  이라는 `sys.server_event_sessions` 유사한 카탈로그 뷰는에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]만 적용 됩니다.  
+>  이라는 유사한 카탈로그 뷰는 `sys.server_event_sessions` 에만 적용 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ||  
 |-|  
-|**적용**대상: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], 및 모든 이후 버전에 적용 됩니다.|  
+|**적용**대상: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] , 및 모든 이후 버전에 적용 됩니다.|  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 고유한 ID입니다. Null을 허용하지 않습니다.|  
 |name|**sysname**|이벤트 세션을 식별하기 위한 사용자 정의 이름입니다. 이름은 고유 합니다. Null을 허용하지 않습니다.|  

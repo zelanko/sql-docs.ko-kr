@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_incremental_stats_properties
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1f958e122277e28665b10ff27be4c0224574690d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004932"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820921"
 ---
 # <a name="sysdm_db_incremental_stats_properties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체(테이블)에 대한 증분 통계 속성을 반환합니다. `sys.dm_db_incremental_stats_properties` 사용은(파티션 번호 포함) 비증분 통계에 사용되는 `sys.dm_db_stats_properties` 와 비슷합니다. 
   
-  이 함수는 서비스 팩 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 2 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 서비스 팩 1에서 도입 되었습니다.
+  이 함수는 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 서비스 팩 2 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 서비스 팩 1에서 도입 되었습니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +47,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|통계 개체의 속성을 반환하는 개체(테이블)의 ID입니다.|  
 |stats_id|**int**|통계 개체의 ID입니다. 테이블 내에서 고유합니다. 자세한 내용은 [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)를 참조하세요.|

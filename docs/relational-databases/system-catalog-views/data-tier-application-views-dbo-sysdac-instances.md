@@ -18,21 +18,21 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033119"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823652"
 ---
 # <a name="data-tier-application-views---dbosysdac_instances"></a>데이터 계층 응용 프로그램 뷰-dbo. sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 애플리케이션) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances은 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서는 sysdac_instances 뷰의 열에 대해 설명 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 인스턴스의 식별자입니다.|  
 |instance_name|**sysname**|DAC를 배포할 때 지정된 DAC 인스턴스의 이름입니다.|  

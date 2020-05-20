@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dbba9ea2f9df7e9a9fd154193c8f52fe904899c7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906102"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820450"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`반환할 알림 방법 열을 결정 하는 숫자 값입니다. *notification_method* 은 **tinyint**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1**|전자 메일: **use_email** 열만 반환 합니다.|  
 |**2**|Pager: **use_pager** 열만 반환 합니다.|  
@@ -73,7 +73,7 @@ sp_help_notification
 ## <a name="result-sets"></a>결과 집합  
  *Object_type* **경고**인 경우에는 결과 집합에 지정 된 운영자에 대 한 모든 경고가 나열 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|경고 ID 번호입니다.|  
 |**alert_name**|**sysname**|경고 이름입니다.|  
@@ -86,7 +86,7 @@ sp_help_notification
   
  **Object_type** 가 **operators**인 경우 결과 집합에 지정 된 경고에 대 한 모든 연산자가 나열 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|운영자의 ID입니다.|  
 |**operator_name**|**sysname**|운영자 이름입니다.|  

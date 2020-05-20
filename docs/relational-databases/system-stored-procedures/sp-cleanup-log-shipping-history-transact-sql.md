@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cleanup_log_shipping_history
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d956e3760599e2de92c1b6b4eb313a91adbc5f2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070375"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824000"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_cleanup_log_shipping_history
 ## <a name="remarks"></a>설명  
  **sp_cleanup_log_shipping_history** 는 모든 로그 전달 서버의 **master** 데이터베이스에서 실행 해야 합니다. 이 저장 프로시저는 기록 보존 기간에 따라 **log_shipping_monitor_history_detail** 및 **log_shipping_monitor_error_detail** 의 로컬 및 원격 복사본을 정리 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만이 프로시저를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

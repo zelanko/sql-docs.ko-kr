@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fkeys
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124396"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820534"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +44,10 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @pktable_name=] '*pktable_name*'  
+ [ @pktable_name =] '*pktable_name*'  
  카탈로그 정보를 반환하는 데 사용하는 기본 키가 있는 테이블 이름입니다. *pktable_name* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 이 매개 변수 또는 *fktable_name* 매개 변수 또는 둘 다를 제공 해야 합니다.  
   
- [ @pktable_owner=] '*pktable_owner*'  
+ [ @pktable_owner =] '*pktable_owner*'  
  카탈로그 정보를 반환 하는 데 사용 되는 기본 키가 있는 테이블의 소유자 이름입니다. *pktable_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Pktable_owner* 지정 하지 않으면 기본 DBMS의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. *Pktable_owner* 지정 되지 않은 경우 현재 사용자가 지정 된 *pktable_name*를 가진 테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *pktable_name* 를 사용 하 여 테이블을 찾습니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
@@ -55,7 +55,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  [ @pktable_qualifier =] '*pktable_qualifier*'  
  기본 키가 있는 테이블 한정자의 이름입니다. *pktable_qualifier* 는 sysname 이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블 (*qualifier.owner.name*)에 대 한 세 부분으로 구성 되는 이름을 지원 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ @fktable_name=] '*fktable_name*'  
+ [ @fktable_name =] '*fktable_name*'  
  카탈로그 정보를 반환하는 데 사용되는 외래 키가 있는 테이블 이름입니다. *fktable_name* 는 sysname 이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. 이 매개 변수 또는 *pktable_name* 매개 변수 또는 둘 다를 제공 해야 합니다.  
   
  [ @fktable_owner =] '*fktable_owner*'  
@@ -63,11 +63,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. *Fktable_owner* 지정 되지 않은 경우 현재 사용자가 지정 된 *fktable_name*를 가진 테이블을 소유 하 고 있지 않은 경우이 프로시저는 데이터베이스 소유자가 소유한 지정 된 *fktable_name* 를 사용 하 여 테이블을 찾습니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
   
- [ @fktable_qualifier= ] '*fktable_qualifier*'  
+ [ @fktable_qualifier =] '*fktable_qualifier*'  
  외래 키가 있는 테이블 한정자의 이름입니다. *fktable_qualifier* 는 **sysname**이며 기본값은 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 한정자는 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -101,7 +101,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 sp_fkeys 저장 프로시저는 ODBC에서 SQLForeignKeys와 같습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 스키마 `SELECT` 에 대 한 권한이 필요 합니다.  
+ `SELECT`스키마에 대 한 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `HumanResources.Department` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 외래 키 목록을 검색합니다.  
@@ -114,7 +114,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `DimDate` 데이터베이스의 `AdventureWorksPDW2012` 테이블에 대한 외래 키 목록을 검색합니다. 에서 외래 키를 지원 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 하지 않기 때문에 행이 반환 되지 않습니다.  
+ 다음 예에서는 `DimDate` 데이터베이스의 `AdventureWorksPDW2012` 테이블에 대한 외래 키 목록을 검색합니다. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에서 외래 키를 지원 하지 않기 때문에 행이 반환 되지 않습니다.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  

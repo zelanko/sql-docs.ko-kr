@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.database_mirroring_witnesses catalog view
 - witness [SQL Server], sys.database_mirroring_witnesses catalog view
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b84e1002f84cbcd0117ed79253b611f3e6ca4da3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033083"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823622"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>데이터베이스 미러링 모니터 서버 카탈로그 뷰-sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68033083"
   
   데이터베이스 미러링 세션에서 자동 장애 조치(Failover)를 수행하려면 미러링 모니터 서버가 필요합니다. 이상적으로 미러링 모니터 서버는 주 서버 및 미러 서버와 다른 컴퓨터에 있어야 합니다. 미러링 모니터 서버는 데이터베이스 역할을 하지 않습니다. 대신 주 서버와 미러 서버의 상태를 모니터링합니다. 주 서버에서 오류가 발생 하면 미러링 모니터 서버가 미러 서버에 대 한 자동 장애 조치 (failover)를 시작할 수 있습니다. 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스 미러링 세션에 있는 두 개의 데이터베이스 사본의 이름입니다.|  
 |**principal_server_name**|**sysname**|현재 주 데이터베이스 역할을 하는 데이터베이스 사본을 가진 파트너 서버의 이름입니다.|  

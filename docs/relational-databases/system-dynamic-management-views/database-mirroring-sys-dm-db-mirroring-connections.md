@@ -16,25 +16,25 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 57987f90552897b57e2efe685a9f7ea95152daa9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090954"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819695"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>데이터베이스 미러링-sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 미러링에 설정된 각 연결에 대해 하나의 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|연결의 ID입니다.|  
-|**transport_stream_id**|**uniqueidentifier**|TCP/IP 통신용으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 연결에서 사용 하는 SNI (네트워크 인터페이스) 연결의 식별자입니다.|  
-|**state**|**smallint**|연결의 현재 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 닫힘|  
+|**transport_stream_id**|**uniqueidentifier**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Tcp/ip 통신용으로이 연결에서 사용 하는 SNI (네트워크 인터페이스) 연결의 식별자입니다.|  
+|**상태**|**smallint**|연결의 현재 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = 닫힘|  
 |**state_desc**|**nvarchar(60)**|연결의 현재 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|연결을 연 날짜와 시간입니다.|  
 |**login_time**|**datetime**|연결에 대한 로그인이 성공한 날짜와 시간입니다.|  

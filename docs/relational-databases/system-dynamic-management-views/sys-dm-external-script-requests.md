@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_external_script_requests dynamic management view
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17df7a7b74f80a2a412e248de1261a22cdd6d4ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488203"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821038"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "81488203"
 >  
 > 이 DMV (동적 관리 뷰)는 외부 스크립트 실행을 지 원하는 기능을 설치 하 고 사용 하도록 설정한 경우에만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2017 이상에서 SQL Server 2016 및 Machine Learning Services (r, Python)](../../machine-learning/sql-server-machine-learning-services.md) [의 r Services](../../machine-learning/r/sql-server-r-services.md) 를 참조 하세요.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**고유 식별자**|외부 스크립트 요청을 전송한 프로세스 ID입니다. 이는에서 수신 하는 프로세스 ID에 해당 합니다.[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |언어|**nvarchar**|지원되는 스크립트 언어를 나타내는 키워드입니다. |  
@@ -83,7 +83,7 @@ external_script_request_id  |언어  |degree_of_parallelism  |external_user_name
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;동적 관리 뷰 및 함수](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [실행 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
-[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
+ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 12ee833860c4131b6dc9634d7f1da926968c1e14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824058"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`**Syssubscriptions** 테이블의 구독 상태입니다. *status* 는 **sysname**이며 기본값은 없으며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**활성**|구독자가 동기화되어 데이터를 받습니다.|  
+|**active**|구독자가 동기화되어 데이터를 받습니다.|  
 |**라**|구독이 없는 구독자 항목이 있습니다.|  
 |**예약한**|구독자가 데이터를 요청하고 있으나 아직 동기화되지 않았습니다.|  
   
@@ -106,7 +106,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -135,7 +135,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  원격 에이전트 활성화는 더 이상 사용되지 않으며 지원되지 않습니다. 이 매개 변수는 이전 버전 스크립트와의 호환성을 유지하기 위한 목적으로만 지원됩니다. *Remote_agent_server_name* 를 NULL이 아닌 값으로 설정 하면 오류가 발생 합니다.  
   
-`[ @dts_package_name = ] 'dts_package_name'`DTS (데이터 변환 서비스) 패키지의 이름을 지정 합니다. *dts_package_name* 는 **sysname**이며 기본값은 NULL입니다. 예를 들어 **DTSPub_Package** 이라는 패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'`합니다.  
+`[ @dts_package_name = ] 'dts_package_name'`DTS (데이터 변환 서비스) 패키지의 이름을 지정 합니다. *dts_package_name* 는 **sysname**이며 기본값은 NULL입니다. 예를 들어 **DTSPub_Package** 이라는 패키지의 경우를 지정 `@dts_package_name = N'DTSPub_Package'` 합니다.  
   
 `[ @dts_package_password = ] 'dts_package_password'`패키지에 대 한 암호를 지정 합니다. *dts_package_password* 는 **sysname** 이며 기본값은 암호 속성이 변경 되지 않은 상태로 유지 되도록 지정 하는 NULL입니다.  
   
@@ -148,10 +148,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @distribution_job_name = ] 'distribution_job_name'`배포 작업의 이름입니다. *distribution_job_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 아티클 속성을 변경할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에 대 한 아티클 속성을 변경할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -161,7 +161,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  **sp_changesubstatus** **Syssubscriptions** 테이블의 구독자 상태를 변경 된 상태로 변경 합니다. 필요한 경우 **sysarticles** 테이블의 문서 상태를 업데이트 하 여 활성 또는 비활성으로 표시 합니다. 필요한 경우 복제 된 테이블에 대해 **sysobjects** 테이블에서 복제 플래그를 설정 하거나 해제 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 구독의 작성자만 **sp_changesubstatus**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

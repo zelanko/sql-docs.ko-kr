@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894039"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820711"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**1**|한 번|  
 |**2**|초|  
 |**4** (기본값)|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5입니다.  
   
@@ -154,21 +154,21 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`패키지 위치를 지정 합니다. *dts_package_location* 은 **nvarchar (12)** 이며 기본값은 배포자입니다. 패키지의 위치는 **배포자** 또는 **구독자**일 수 있습니다.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`동기화 관리자를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구독을 동기화 할 수 있는지 여부입니다. *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]하지 않고 동기화 할 수 있습니다.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`동기화 관리자를 통해 구독을 동기화 할 수 있는지 여부입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 대 한 OLE DB 공급자가 등록 되는 고유한 PROGID (프로그래밍 식별자)입니다. *subscriber_provider* 는 **sysname**이며 기본값은 NULL입니다. *subscriber_provider* 는 배포자에 설치 된 OLE DB 공급자에 대해 고유 해야 합니다. *subscriber_provider* 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서만 지원 됩니다.  
+`[ @subscriber_provider = ] 'subscriber_provider'`비 데이터 원본에 대 한 OLE DB 공급자가 등록 되는 고유한 PROGID (프로그래밍 식별자)입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *subscriber_provider* 는 **sysname**이며 기본값은 NULL입니다. *subscriber_provider* 는 배포자에 설치 된 OLE DB 공급자에 대해 고유 해야 합니다. *subscriber_provider* 은 이외 구독자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB 공급자가 인식 하는 데이터 원본의 이름입니다. *subscriber_datasrc* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_datasrc* 은 DBPROP_INIT_DATASOURCE 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_datasrc* 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서만 지원 됩니다.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`OLE DB 공급자가 인식 하는 데이터 원본의 이름입니다. *subscriber_datasrc* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_datasrc* 은 DBPROP_INIT_DATASOURCE 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_datasrc* 은 이외 구독자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_location = ] 'subscriber_location'`는 OLE DB 공급자가 이해 하는 데이터베이스의 위치입니다. *subscriber_location* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_location* 은 DBPROP_INIT_LOCATION 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_location* 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서만 지원 됩니다.  
+`[ @subscriber_location = ] 'subscriber_location'`는 OLE DB 공급자가 이해 하는 데이터베이스의 위치입니다. *subscriber_location* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_location* 은 DBPROP_INIT_LOCATION 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_location* 은 이외 구독자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`데이터 원본을 식별 하는 OLE DB 공급자별 연결 문자열입니다. *subscriber_provider_string* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_provider_string* 를 IDataInitialize에 전달 하거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 하 여 OLE DB 공급자를 초기화 합니다. *subscriber_provider_string* 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서만 지원 됩니다.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`데이터 원본을 식별 하는 OLE DB 공급자별 연결 문자열입니다. *subscriber_provider_string* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. *subscriber_provider_string* 를 IDataInitialize에 전달 하거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 하 여 OLE DB 공급자를 초기화 합니다. *subscriber_provider_string* 은 이외 구독자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`OLE DB 공급자에 연결할 때 사용 되는 카탈로그입니다. *subscriber_catalog* 는 **sysname**이며 기본값은 NULL입니다. *subscriber_catalog* 은 DBPROP_INIT_CATALOG 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_catalog* 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자에 대해서만 지원 됩니다.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`OLE DB 공급자에 연결할 때 사용 되는 카탈로그입니다. *subscriber_catalog* 는 **sysname**이며 기본값은 NULL입니다. *subscriber_catalog* 은 DBPROP_INIT_CATALOG 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. *subscriber_catalog* 은 이외 구독자에 대해서만 지원 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -179,7 +179,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addpushsubscription-a_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addpushsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

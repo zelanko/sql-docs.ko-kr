@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_loaded_modules dynamic management view
 ms.assetid: 56c7743a-b568-4943-bd3b-73c57d9d641c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f43e03e482bb7125100ed7bed56337fb75a2e711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58f0258843995acc82e84d69a4d2d101594fc313
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900084"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820830"
 ---
 # <a name="sysdm_os_loaded_modules-transact-sql"></a>sys.dm_os_loaded_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "67900084"
   서버 주소 공간으로 로드되는 각 모듈에 대해 행을 반환합니다.  
   
 > [!NOTE]  
->  에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_loaded_modules**를 사용 합니다.  
+>  에서이를 호출 하려면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_loaded_modules**를 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**base_address**|**varbinary(8)**|처리 중인 모듈의 주소입니다.|  
 |**file_version**|**varchar (23)**|파일 버전입니다. 형식은 다음과 같습니다.<br /><br /> x.x:x.x|  

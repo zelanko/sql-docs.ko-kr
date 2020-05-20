@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.trace_events catalog view
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5bf6d23db1a6807b95e9c33f4e3bfd5f38d63982
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68106665"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820917"
 ---
 # <a name="systrace_events-transact-sql"></a>sys.trace_events(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68106665"
  이러한 추적 이벤트에 대 한 자세한 내용은 [SQL Server 이벤트 클래스 참조](../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조 하세요.  
   
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|이벤트의 고유 ID입니다. 이 열은 또한 **sys. trace_event_bindings** 및 **trace_subclass_values** 카탈로그 뷰에 있습니다.|  
 |**category_id**|**smallint**|이벤트의 범주 ID입니다. 이 열은 **sys. trace_categories** 카탈로그 뷰에도 있습니다.|  

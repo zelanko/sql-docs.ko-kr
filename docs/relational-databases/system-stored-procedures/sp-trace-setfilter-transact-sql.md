@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820272"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="arguments"></a>인수  
 `[ @traceid = ] trace_id`필터가 설정 된 추적의 ID입니다. *trace_id* 는 **int**이며 기본값은 없습니다. 사용자는이 *trace_id* 값을 사용 하 여 추적을 식별, 수정 및 제어할 수 있습니다.  
   
-`[ @columnid = ] column_id`필터가 적용 되는 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다. *Column_id* 가 NULL 이면 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 추적에 대 한 모든 필터를 지웁니다.  
+`[ @columnid = ] column_id`필터가 적용 되는 열의 ID입니다. *column_id* 는 **int**이며 기본값은 없습니다. *Column_id* 가 NULL 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 추적에 대 한 모든 필터를 지웁니다.  
   
 `[ @logical_operator = ] logical_operator`AND (**0**) 또는 or (**1**) 연산자를 적용할지 여부를 지정 합니다. *logical_operator* 는 **int**이며 기본값은 없습니다.  
   
@@ -78,7 +78,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |0|오류가 없습니다.|  
 |1|알 수 없는 오류입니다.|  
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- **sp_trace_setfilter** 는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 확장 저장 프로시저에 의해 이전에 실행 된 작업을 대부분 수행 하는 저장 프로시저입니다. **Xp_trace_set\*필터** 확장 저장 프로시저 대신 **sp_trace_setfilter** 를 사용 하 여 추적에 필터를 생성, 적용, 제거 또는 조작할 수 있습니다. 자세한 내용은 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)을 참조 하세요.  
+ **sp_trace_setfilter** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 버전의에서 사용할 수 있는 확장 저장 프로시저에 의해 이전에 실행 된 작업을 대부분 수행 하는 저장 프로시저입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Xp_trace_set \* 필터** 확장 저장 프로시저 대신 **sp_trace_setfilter** 를 사용 하 여 추적에 필터를 생성, 적용, 제거 또는 조작할 수 있습니다. 자세한 내용은 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)을 참조 하세요.  
   
  특정 열에 대 한 모든 필터는 **sp_trace_setfilter**한 번의 실행에서 함께 사용 해야 합니다. 예를 들어 필터 두 개를 애플리케이션 이름 열에, 그리고 필터 하나를 사용자 이름 열에 적용하려면 애플리케이션 이름에 필터를 차례로 지정해야 합니다. 한 번의 저장 프로시저 호출에서 애플리케이션 이름에 필터 하나를 지정한 다음 사용자 이름에 필터를 지정하고 애플리케이션 이름에 나머지 필터 하나를 지정하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  
   

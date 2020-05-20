@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72005965"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820538"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,20 +52,20 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  필요에 따라 전체 텍스트 카탈로그를 만들고 삭제하고 수정할 수 있습니다. 그러나 동시에 여러 카탈로그에서 스키마를 변경하지 마십시오. 이러한 작업은 권장 되는 방법인 **sp_fulltext_table** 저장 프로시저를 사용 하 여 수행할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**만들기**|파일 시스템에 비어 있는 새 전체 텍스트 카탈로그를 만들고 *fulltext_catalog_name* 및 *root_directory*(있는 경우)와 관련 된 행을 **sysfulltextcatalogs** 에 추가 합니다. *fulltext_catalog_name* 은 데이터베이스 내에서 고유 해야 합니다.|  
 |**그림자**|는 파일 시스템에서 제거 하 고 **sysfulltextcatalogs**에서 연결 된 행을 삭제 하 여 *fulltext_catalog_name* 을 삭제 합니다. 해당 카탈로그에 한 개 이상의 테이블에 대한 인덱스가 있는 경우에는 이 동작이 실패합니다. **sp_fulltext_table** 카탈로그에서 테이블을 삭제 하려면 '*table_name*', ' 삭제 '를 실행 해야 합니다.<br /><br /> 카탈로그가 없을 경우에는 오류가 표시됩니다.|  
 |**start_incremental**|*Fulltext_catalog_name*에 대 한 증분 채우기를 시작 합니다. 카탈로그가 없을 경우에는 오류가 표시됩니다. 전체 텍스트 인덱스 채우기가 이미 활성화된 경우에는 경고가 표시되고 채우기 동작은 수행되지 않습니다. 증분 채우기를 사용 하면 전체 텍스트 인덱싱에 대해 변경 된 행만 검색 되며 테이블에 전체 텍스트 인덱싱되는 **타임 스탬프** 열이 있는 것으로 나타납니다.|  
 |**start_full**|*Fulltext_catalog_name*에 대 한 전체 채우기를 시작 합니다. 전체 텍스트 인덱싱에 대해 전체 텍스트 카탈로그와 연결된 모든 테이블의 모든 행 및 이미 인덱스를 만든 행까지도 검색합니다.|  
 |**중지**|*Fulltext_catalog_name*에 대 한 인덱스 채우기를 중지 합니다. 카탈로그가 없을 경우에는 오류가 표시됩니다. 채우기가 이미 중단된 경우에는 경고가 표시되지 않습니다.|  
-|**빌드하십시오**|*Fulltext_catalog_name*를 다시 빌드합니다. 카탈로그를 다시 작성하면 기존 카탈로그가 삭제되고 새 카탈로그가 해당 위치에 만들어집니다. 전체 텍스트 인덱싱 참조가 있는 모든 테이블은 새 카탈로그와 연결됩니다. 카탈로그를 다시 작성하면 데이터베이스 시스템 테이블의 전체 텍스트 메타데이터가 설정됩니다.<br /><br /> 변경 추적이 해제되어 있으면 새로 만들어진 전체 텍스트 카탈로그가 다시 채워지지도 않습니다. 이 경우 다시 채우려면 **start_full** 또는 **start_incremental** 작업을 사용 하 여 **sp_fulltext_catalog** 를 실행 합니다.|  
+|**다시 빌드**|*Fulltext_catalog_name*를 다시 빌드합니다. 카탈로그를 다시 작성하면 기존 카탈로그가 삭제되고 새 카탈로그가 해당 위치에 만들어집니다. 전체 텍스트 인덱싱 참조가 있는 모든 테이블은 새 카탈로그와 연결됩니다. 카탈로그를 다시 작성하면 데이터베이스 시스템 테이블의 전체 텍스트 메타데이터가 설정됩니다.<br /><br /> 변경 추적이 해제되어 있으면 새로 만들어진 전체 텍스트 카탈로그가 다시 채워지지도 않습니다. 이 경우 다시 채우려면 **start_full** 또는 **start_incremental** 작업을 사용 하 여 **sp_fulltext_catalog** 를 실행 합니다.|  
   
 `[ @path = ] 'root_directory'`**만들기** 작업에 대 한 루트 디렉터리 (전체 실제 경로 아님)입니다. *root_directory* 은 **nvarchar (100)** 이며 기본값은 설치 시 지정 된 기본 위치의 사용을 나타내는 NULL입니다. Mssql 디렉터리의 Ftdata 하위 디렉터리입니다. 예: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. 지정된 루트 디렉터리는 반드시 같은 컴퓨터의 드라이브에 있어야 하며 드라이브 문자 및 다른 문자로 구성되어야 하고 상대 경로가 될 수 없습니다. 네트워크 드라이브, 이동식 드라이브, 플로피 디스크 및 UNC 경로는 지원하지 않습니다. 전체 텍스트 카탈로그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 연결된 로컬 하드 드라이브에 만들어야 합니다.  
   
- path는 *action* 이 **create**인 경우에만 유효 합니다. ** \@** **Create** (**중지**, **다시 작성**등) 이외의 작업의 경우 ** \@경로** 는 NULL 이거나 생략 되어야 합니다.  
+ ** \@ path** 는 *action* 이 **create**인 경우에만 유효 합니다. **Create** (**중지**, **다시 작성**등) 이외의 작업의 경우 ** \@ 경로** 는 NULL 이거나 생략 되어야 합니다.  
   
- 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 가상 서버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 의존하는 공유 디스크 드라이브에 있는 카탈로그 디렉터리를 지정해야 합니다. 을 @path 지정 하지 않으면 기본 카탈로그 디렉터리의 위치는 공유 디스크 드라이브의 가상 서버를 설치할 때 지정 된 디렉터리에 있습니다.  
+ 클러스터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 가상 서버인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 의존하는 공유 디스크 드라이브에 있는 카탈로그 디렉터리를 지정해야 합니다. @path을 지정 하지 않으면 기본 카탈로그 디렉터리의 위치는 공유 디스크 드라이브의 가상 서버를 설치할 때 지정 된 디렉터리에 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -76,7 +76,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="remarks"></a>설명  
  **Start_full** 작업은 *fulltext_catalog_name*에서 전체 텍스트 데이터의 전체 스냅숏을 만드는 데 사용 됩니다. **Start_incremental** 작업은 데이터베이스에서 변경 된 행만 다시 인덱싱하는 데 사용 됩니다. 테이블에 **timestamp**형식의 열이 있는 경우에만 증분 채우기를 적용할 수 있습니다. 전체 텍스트 카탈로그의 테이블에 **timestamp**형식의 열이 없는 경우 테이블은 전체 채우기를 수행 합니다.  
   
- 전체 텍스트 카탈로그 및 인덱스 데이터는 전체 텍스트 카탈로그 디렉터리에서 만들어진 파일에 저장됩니다. ** \@경로가** 지정 되지 않은 경우 전체 텍스트 카탈로그 디렉터리는 ** \@path** 또는 서버 기본 전체 텍스트 카탈로그 디렉터리에 지정 된 디렉터리의 하위 디렉터리로 생성 됩니다. 전체 텍스트 카탈로그 디렉터리의 이름은 해당 서버에서 고유한 이름이 되도록 생성됩니다. 따라서 서버의 모든 전체 텍스트 카탈로그 디렉터리는 같은 경로를 공유할 수 있습니다.  
+ 전체 텍스트 카탈로그 및 인덱스 데이터는 전체 텍스트 카탈로그 디렉터리에서 만들어진 파일에 저장됩니다. ** \@ 경로가** 지정 되지 않은 경우 전체 텍스트 카탈로그 디렉터리는 ** \@ path** 또는 서버 기본 전체 텍스트 카탈로그 디렉터리에 지정 된 디렉터리의 하위 디렉터리로 생성 됩니다. 전체 텍스트 카탈로그 디렉터리의 이름은 해당 서버에서 고유한 이름이 되도록 생성됩니다. 따라서 서버의 모든 전체 텍스트 카탈로그 디렉터리는 같은 경로를 공유할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  호출자는 **db_owner** 역할의 멤버 여야 합니다. 요청 된 작업에 따라 대상 전체 텍스트 카탈로그에서 호출자가 ALTER 또는 CONTROL 권한 ( **db_owner** )을 거부 해서는 안 됩니다.  

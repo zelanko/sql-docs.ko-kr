@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2535aff30c0a3071b641889f5e4a3f1433f88b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823979"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @table_name= ] '*table_name*'  
+ [ @table_name =] '*table_name*'  
  카탈로그 정보를 반환하는 데 사용되는 테이블입니다. *table_name* 는 **sysname**이며 기본값은 없습니다. 와일드카드 패턴 일치는 지원되지 않습니다.  
   
- [ @table_owner= ] '*table_owner*'  
+ [ @table_owner =] '*table_owner*'  
  카탈로그 정보를 반환하는 데 사용하는 테이블의 소유자입니다. *table_owner* 는 **sysname**이며 기본값은 NULL입니다. 와일드카드 패턴 일치는 지원되지 않습니다. *Table_owner* 지정 하지 않으면 기본 DBMS (데이터베이스 관리 시스템)의 기본 테이블 표시 규칙이 적용 됩니다.  
   
  현재 사용자가 지정한 이름의 테이블을 소유하고 있는 경우 해당 테이블의 열이 반환됩니다. *Table_owner* 지정 되지 않은 상태에서 현재 사용자가 지정 된 *table_name*있는 테이블을 소유 하 고 있지 않은 경우 sp_column 권한은 데이터베이스 소유자가 소유한 지정 된 *table_name* 를 사용 하 여 테이블을 찾습니다. 테이블이 있으면 테이블의 열이 반환됩니다.  
   
- [ @table_qualifier= ] '*table_qualifier*'  
+ [ @table_qualifier =] '*table_qualifier*'  
  테이블 한정자의 이름입니다. *table_qualifier* 는 *sysname*이며 기본값은 NULL입니다. 다양 한 DBMS 제품에서 테이블에 대해 세 부분으로 구성 되는 이름 (_한정자_)을 지원**합니다.** _소유자_**.** _이름_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 테이블 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
- [ @column_name= ] '*column*'  
+ [ @column_name =] '*열*'  
  카탈로그 정보 중 한 열만 확보될 때 사용되는 단일 열입니다. *열* 은 **nvarchar (** 384 **)** 이며 기본값은 NULL입니다. *열* 을 지정 하지 않으면 모든 열이 반환 됩니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *열* 은 행 이름 테이블에 나열 된 열 이름을 나타냅니다. *열* 은 기본 DBMS의 와일드 카드 일치 패턴을 사용 하는 와일드 카드 문자를 포함할 수 있습니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트에서 ISO 표준 패턴 일치(% 및 _ 와일드카드 문자)만 사용해야 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -74,7 +74,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 GRANT 문으로 사용 권한을 부여하고 REVOKE 문으로 사용 권한을 제거합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 88ec07ae0655f6a4617f15ed5f486a8fbb1b61d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032725"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820312"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_stop_job
   
  작업에서 현재 **CmdExec** 또는 **PowerShell**유형의 단계를 실행 하는 경우 실행 중인 프로세스 (예: myprogram .exe)가 강제로 중간에 종료 됩니다. 예기치 않은 종료로 인해 프로세스가 보유하고 있던 파일이 열리는 등 예기치 않은 상황이 발생할 수 있습니다. 따라서 작업에 **CmdExec** 또는 **PowerShell**유형의 단계가 포함 된 경우에는 극단적인 경우에만 **sp_stop_job** 을 사용 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

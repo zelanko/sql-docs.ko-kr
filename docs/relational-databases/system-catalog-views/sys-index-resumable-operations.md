@@ -19,12 +19,12 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73980299"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823385"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-sql)
 
@@ -32,7 +32,7 @@ ms.locfileid: "73980299"
 **index_resumable_operations** 는 다시 시작 가능한 인덱스 다시 작성 또는 만들기에 대 한 현재 실행 상태를 모니터링 하 고 확인 하는 시스템 뷰입니다.  
 **적용 대상**: SQL Server (2017 이상) 및 Azure SQL Database
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 인덱스가 속한 개체의 ID입니다. null을 허용 하지 않습니다.|  
 |**index_id**|**int**|인덱스의 ID입니다. null을 허용 하지 않습니다. **index_id** 는 개체 내 에서만 고유 합니다.|
@@ -40,7 +40,7 @@ ms.locfileid: "73980299"
 |**sql_text**|**nvarchar(max)**|DDL T-sql 문 텍스트|
 |**last_max_dop**|**smallint**|마지막으로 사용한 MAX_DOP (기본값 = 0)|
 |**partition_number**|**int**|소유 인덱스 또는 힙 내의 파티션 번호입니다. 분할 되지 않은 테이블 및 인덱스의 경우 또는 모든 파티션이 다시 작성 되는 경우이 열의 값은 NULL입니다.|
-|**state**|**tinyint**|다시 시작 가능한 인덱스의 작동 상태:<br /><br />0 = 실행 중<br /><br />1 = 일시 중지|
+|**상태**|**tinyint**|다시 시작 가능한 인덱스의 작동 상태:<br /><br />0 = 실행 중<br /><br />1 = 일시 중지|
 |**state_desc**|**nvarchar(60)**|다시 시작 가능한 인덱스의 작동 상태 (실행 중 또는 일시 중지 됨)에 대 한 설명입니다.|  
 |**start_time**|**datetime**|인덱스 작업 시작 시간 (null 허용 안 함)|
 |**last_pause_time**|**datatime**| 인덱스 작업 마지막 일시 중지 시간 (nullable)입니다. 작업이 실행 중이 고 일시 중지 되지 않은 경우 NULL입니다.|

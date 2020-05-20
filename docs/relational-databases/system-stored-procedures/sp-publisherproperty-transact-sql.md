@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962386"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820382"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  이외 게시자에 대 한 게시자 속성을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 표시 하거나 변경 합니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
+  이외 게시자에 대 한 게시자 속성을 표시 하거나 변경 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|설정할 수 있는 다음 게시 속성을 반환합니다.<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|는 **propertyname** 열의 속성에 대 한 현재 설정입니다.|  
@@ -65,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_publisherproperty** 은 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 트랜잭션 복제에 사용 됩니다.  
+ **sp_publisherproperty** 은 이외 게시자의 트랜잭션 복제에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  *게시자* 만 지정 하는 경우 결과 집합에는 설정할 수 있는 모든 속성에 대 한 현재 설정이 포함 됩니다.  
   
@@ -75,7 +75,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  실행 중인 작업의 **xactsetjobinterval** 속성을 변경 하는 경우 작업을 다시 시작 해야 새 간격이 적용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포자에서 **sysadmin** 고정 서버 역할의 멤버만 **sp_publisherproperty**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

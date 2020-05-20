@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_sql_modules catalog view
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bd4eba56c6550f4a3ae8b033dbd81b71ac7b5418
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133015"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821429"
 ---
 # <a name="sysserver_sql_modules-transact-sql"></a>sys.server_sql_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

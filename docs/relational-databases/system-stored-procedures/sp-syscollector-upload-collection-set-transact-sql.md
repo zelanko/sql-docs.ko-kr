@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9302728bf93a53ce333dce5a38bfa7e046d38fe0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010535"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824241"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
   
  이 프로시저는 실행 중인 컬렉션 집합에 대한 요청 시 업로드를 시작하는 데 사용될 수 있습니다. 또한 데이터 컬렉션 및 업로드가 캐시된 모드로 구성된 컬렉션 집합에만 사용할 수 있습니다. 이를 통해 사용자는 예약된 업로드를 기다리지 않고 분석에 사용할 데이터를 가져올 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행 하려면 **dc_operator** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="example"></a>예제  

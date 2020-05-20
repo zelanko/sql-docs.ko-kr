@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSrepl_transactions system table
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: db034831d9c8a85285ae1ec99263496170fab655
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 62cb6c4d977b1096b76f46f7d6924811e1185ae3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67948622"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820066"
 ---
 # <a name="msrepl_transactions-transact-sql"></a>MSrepl_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_transactions** 테이블은 복제 된 각 트랜잭션에 대해 하나의 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**xact_id**|**varbinary(16)**|트랜잭션의 ID입니다.|  

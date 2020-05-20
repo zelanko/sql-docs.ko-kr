@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad5e7a1d03dde408da52ca2b5ebe6b40f10c06c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64832f713153e6eaed126e30a2a0fd56c38a4bc6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313760"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820368"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  **Sysadmin** 고정 서버 역할의 멤버 또는 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 멤버는 *job_name* 또는 *job_id*를 지정 하지 않고 **sp_purge_jobhistory** 을 실행할 수 있습니다. **Sysadmin** 사용자가 이러한 인수를 지정 하지 않으면 *oldest_date*에 지정 된 시간 내에 모든 로컬 및 다중 서버 작업에 대 한 작업 기록이 삭제 됩니다. **SQLAgentOperatorRole** 사용자가 이러한 인수를 지정 하지 않으면 *oldest_date*에 지정 된 시간 내에 모든 로컬 작업에 대 한 작업 기록이 삭제 됩니다.  
   
-`[ @job_id = ] job_id`삭제할 레코드에 대 한 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. **Sysadmin** 또는 **SQLAgentOperatorRole** 사용자가이 인수를 사용할 수 있는 방법에 대 한 자세한 내용은 ** \@job_name** 설명의 참고를 참조 하세요.  
+`[ @job_id = ] job_id`삭제할 레코드에 대 한 작업의 id입니다. *job_id* 은 **uniqueidentifier**이며 기본값은 NULL입니다. *Job_id* 또는 *job_name* 를 지정 해야 하지만 둘 다 지정할 수는 없습니다. **Sysadmin** 또는 **SQLAgentOperatorRole** 사용자가이 인수를 사용할 수 있는 방법에 대 한 자세한 내용은 ** \@ job_name** 설명의 참고를 참조 하세요.  
   
 `[ @oldest_date = ] oldest_date`기록에 보존할 가장 오래 된 레코드입니다. *oldest_date* 은 **datetime**이며 기본값은 NULL입니다. *Oldest_date* 지정 된 경우 **sp_purge_jobhistory** 는 지정 된 값 보다 오래 된 레코드만 제거 합니다.  
   
@@ -56,12 +56,12 @@ sp_purge_jobhistory
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  **Sp_purge_jobhistory** 성공적으로 완료 되 면 메시지가 반환 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할 또는 **SQLAgentOperatorRole** 고정 데이터베이스 역할의 멤버만이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 의 멤버는 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거할 수 있습니다. **SQLAgentOperatorRole** 의 멤버는 모든 로컬 작업에 대 한 작업 기록만 제거할 수 있습니다.  
   
  **SQLAgentUserRole** 멤버 및 **SQLAgentReaderRole**멤버를 비롯 한 다른 사용자는 **sp_purge_jobhistory**에 대 한 EXECUTE 권한을 명시적으로 부여 해야 합니다. 이러한 사용자는 이 저장 프로시저에 대해 EXECUTE 권한을 부여 받은 다음에도 각자 소유한 작업에 대한 기록만 제거할 수 있습니다.  

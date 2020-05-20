@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688252"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820592"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name = ] N '*plan_guide_name*'  
+ [ @name =] N '*plan_guide_name*'  
  계획 지침의 이름입니다. 계획 지침 이름은 현재 데이터베이스 범위에 적용됩니다. *plan_guide_name* 는 [식별자](../../relational-databases/databases/database-identifiers.md) 에 대 한 규칙을 따라야 하며 숫자 기호 (#)로 시작할 수 없습니다. *Plan_guide_name* 최대 길이는 124 자입니다.  
   
- [ @plan_handle = ] *plan_handle*  
+ [ @plan_handle =] *plan_handle*  
  계획 캐시의 일괄 처리를 식별합니다. *plan_handle* 은 **varbinary (64)** 입니다. *plan_handle* 은 [dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰에서 가져올 수 있습니다.  
   
- [ @statement_start_offset = ] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
  지정 된 *plan_handle*일괄 처리 내에서 문의 시작 위치를 식별 합니다. *statement_start_offset* 은 **int**이며 기본값은 NULL입니다.  
   
  문 오프셋은 [dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) 동적 관리 뷰의 statement_start_offset 열에 해당 합니다.  
@@ -57,13 +57,13 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  계획 지침은 일부 문 유형에 대해 만들 수 없습니다. 일괄 처리의 문에 대해 계획 지침을 만들 수 없으면 저장 프로시저가 문을 무시하고 일괄 처리의 다음 문을 계속 수행합니다. 문이 같은 일괄 처리로 여러 번 수행되면 마지막 수행을 위한 계획이 활성화되고 문에 대한 이전 계획이 비활성화됩니다. 일괄 처리의 문은 계획 지침에 사용할 수 없습니다. 오류 10532이 발생하고 문이 실패합니다. 이 오류의 발생을 방지하려면 항상 sys.dm_exec_query_stats 동적 관리 뷰에서 계획 핸들을 가져오는 것이 좋습니다.  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle은 계획 캐시에 표시된 계획에 따라 계획 지침을 만듭니다. 이것은 일괄 처리 텍스트, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 XML 실행 계획을 문자 단위로 계획 캐시에서 결과 계획 지침으로 가져옵니다. 이러한 텍스트 문자열에는 중요한 정보가 포함될 수 있습니다. 이 경우 이러한 정보는 데이터베이스의 메타데이터에 저장됩니다. 적절 한 권한이 있는 사용자는의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]plan_guides 카탈로그 뷰 및 **계획 지침 속성** 대화 상자를 사용 하 여이 정보를 볼 수 있습니다. 중요한 정보가 계획 지침에서 공개되지 않게 하려면 계획 캐시에서 만든 계호기 지침을 검토하는 것이 좋습니다.  
+>  sp_create_plan_guide_from_handle은 계획 캐시에 표시된 계획에 따라 계획 지침을 만듭니다. 이것은 일괄 처리 텍스트, [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 XML 실행 계획을 문자 단위로 계획 캐시에서 결과 계획 지침으로 가져옵니다. 이러한 텍스트 문자열에는 중요한 정보가 포함될 수 있습니다. 이 경우 이러한 정보는 데이터베이스의 메타데이터에 저장됩니다. 적절 한 권한이 있는 사용자는의 plan_guides 카탈로그 뷰 및 **계획 지침 속성** 대화 상자를 사용 하 여이 정보를 볼 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . 중요한 정보가 계획 지침에서 공개되지 않게 하려면 계획 캐시에서 만든 계호기 지침을 검토하는 것이 좋습니다.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>쿼리 힌트 내에 여러 명령문에 대한 계획 지침 만들기  
  sp_create_plan_guide와 같이 sp_create_plan_guide_from_handle은 계획 캐시에서 대상 일괄 처리 또는 모듈에 대한 쿼리 계획을 제거합니다. 이 작업을 통해 모든 사용자가 새 계획 지침을 사용하여 시작할 수 있습니다. 단일 쿼리 계획 내에 여러 명령문에 대한 계획 지침을 만들 경우 명시적 트랜잭션에 모든 계획 지침을 만들어 캐시에서 계획 제거를 연기할 수 있습니다. 이 방법을 사용하여 트랜잭션이 완료되고 지정한 각 문에 대한 계획 지침을 만들 때까지 캐시에 계획이 남아 있게 할 수 있습니다. 예 B를 참조하십시오.  
   
 ## <a name="permissions"></a>사용 권한  
- `VIEW SERVER STATE` 권한이 필요합니다. 그리고 sp_create_plan_guide_from_handle을 사용하여 만든 각 계획 지침에 대해 개별 권한이 필요합니다. OBJECT 유형의 계획 지침을 만들려면 참조 된 개체 `ALTER` 에 대 한 권한이 있어야 합니다. SQL 또는 TEMPLATE 유형의 계획 지침을 만들려면 현재 데이터베이스에 `ALTER` 대 한 권한이 필요 합니다. 만들어질 계획 지침 유형을 확인하려면 다음 쿼리를 실행하십시오.  
+ `VIEW SERVER STATE` 권한이 필요합니다. 그리고 sp_create_plan_guide_from_handle을 사용하여 만든 각 계획 지침에 대해 개별 권한이 필요합니다. OBJECT 유형의 계획 지침을 만들려면 `ALTER` 참조 된 개체에 대 한 권한이 있어야 합니다. SQL 또는 TEMPLATE 유형의 계획 지침을 만들려면 `ALTER` 현재 데이터베이스에 대 한 권한이 필요 합니다. 만들어질 계획 지침 유형을 확인하려면 다음 쿼리를 실행하십시오.  
   
 ```sql  
 SELECT cp.plan_handle, sql_handle, st.text, objtype   
@@ -123,9 +123,9 @@ GO
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [dm_exec_query_stats &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
- [Transact-sql&#41;sp_create_plan_guide &#40;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [dm_exec_sql_text &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [dm_exec_text_query_plan &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123936"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820474"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**동작**|**nvarchar (10)**|동기화가 일어날 때 수행할 동작의 유형입니다.<br /><br /> INS= 삽입<br /><br /> DEL = 삭제<br /><br /> UPD = 업데이트|  
+|**작업**|**nvarchar (10)**|동기화가 일어날 때 수행할 동작의 유형입니다.<br /><br /> INS= 삽입<br /><br /> DEL = 삭제<br /><br /> UPD = 업데이트|  
 |**Id**|**nvarchar (70)**|명령이 실행되는 트랜잭션 ID입니다.|  
 |**table column1...n**||*Tablename*에 지정 된 테이블의 각 열에 대 한 값입니다.|  
 |**msrepl_tran_version**|**uniqueidentifier**|이 열을 사용하여 복제된 데이터의 변경 사항을 추적하고 게시자에서 충돌 감지를 수행합니다. 이 열은 테이블에 자동으로 추가됩니다.|  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032743"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820310"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,14 +72,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**NON_UNIQUE**|**smallint**|NOT NULL입니다.<br /><br /> 0 = 고유함<br /><br /> 1 = 고유하지 않음|  
-|**INDEX_QUALIFIER**|**sysname**|인덱스 소유자 이름입니다. 일부 DBMS 제품은 테이블 소유자 이외의 사용자가 인덱스를 만들 수 있도록 허용합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 열은 항상 **TABLE_NAME**와 동일 합니다.|  
+|**INDEX_QUALIFIER**|**sysname**|인덱스 소유자 이름입니다. 일부 DBMS 제품은 테이블 소유자 이외의 사용자가 인덱스를 만들 수 있도록 허용합니다. 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 열은 항상 **TABLE_NAME**와 동일 합니다.|  
 |**INDEX_NAME**|**sysname**|인덱스의 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**유형**|**smallint**|이 열은 항상 값을 반환합니다.<br /><br /> 0 = 테이블에 대한 통계<br /><br /> 1 = 클러스터형<br /><br /> 2 = 해시됨<br /><br /> 3 = 비클러스터형|  
 |**SEQ_IN_INDEX**|**smallint**|인덱스 내의 열 위치입니다.|  
 |**COLUMN_NAME**|**sysname**|반환 된 **TABLE_NAME** 의 각 열에 대 한 열 이름입니다. 이 열은 항상 값을 반환합니다.|  
 |**부씩**|**char (1)**|데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음|  
 |**카디널리티**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
-|**PAGES**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
+|**마주보**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -88,17 +88,17 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>설명  
  결과 집합의 인덱스는 **NON_UNIQUE**, **형식**, **INDEX_NAME**및 **SEQ_IN_INDEX**열을 기준으로 오름차순으로 표시 됩니다.  
   
- 클러스터형 인덱스 유형은 테이블 데이터가 그 안에서 인덱스 순서로 저장된 인덱스를 의미합니다. 이는 클러스터형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인덱스에 해당 합니다.  
+ 클러스터형 인덱스 유형은 테이블 데이터가 그 안에서 인덱스 순서로 저장된 인덱스를 의미합니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인덱스에 해당 합니다.  
   
  해시됨 인덱스 유형은 정확하게 일치하는 항목 검색 또는 범위 검색을 허용하지만 패턴 일치 검색은 이 인덱스를 사용하지 않습니다.  
   
  **sp_statistics** 은 ODBC의 **SQLStatistics** 와 동일 합니다. 반환 되는 결과는 **NON_UNIQUE**, **형식**, **INDEX_QUALIFIER**, **INDEX_NAME**및 **SEQ_IN_INDEX**를 기준으로 정렬 됩니다. 자세한 내용은 [ODBC API 참조](https://go.microsoft.com/fwlink/?LinkId=68323)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="example-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `DimEmployee` 테이블에 대 한 정보를 반환 합니다.  
+ 다음 예에서는 테이블에 대 한 정보를 반환 합니다 `DimEmployee` .  
   
 ```  
 -- Uses AdventureWorks  

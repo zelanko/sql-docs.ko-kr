@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.extended_properties catalog view
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e60ba9faf4cf666b431d251cadd5c075a8559d3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388570"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823442"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>확장 속성 카탈로그 뷰-sys. extended_properties
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   현재 데이터베이스의 각 확장 속성당 한 개의 행을 반환합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |class|**tinyint**|속성이 존재하는 항목의 클래스를 식별합니다. 다음 중 하나일 수 있습니다.<br /><br /> 0 = 데이터베이스<br /><br /> 1 = 개체 또는 열<br /><br /> 2 = 매개 변수<br /><br /> 3 = 스키마<br /><br /> 4 = 데이터베이스 보안 주체<br /><br /> 5 = 어셈블리<br /><br /> 6 = 형식<br /><br /> 7 = 인덱스<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 15 = 메시지 유형<br /><br /> 16 = 서비스 계약<br /><br /> 17 = 서비스<br /><br /> 18 = 원격 서비스 바인딩<br /><br /> 19 = 경로<br /><br /> 20 = 데이터베이스(파일 그룹 또는 파티션 구성표)<br /><br /> 21 = 파티션 함수<br /><br /> 22 = 데이터베이스 파일<br /><br /> 27 = 계획 지침|  
 |class_desc|**nvarchar(60)**|확장 속성이 존재하는 클래스에 대한 설명입니다. 다음 중 하나일 수 있습니다.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> 매개 변수<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  

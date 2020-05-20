@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 643cd663510877760893bf33944f01dac93d4ded
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090804"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821011"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 생성된 각 메모리 덤프 파일에 대해 행을 하나씩 반환합니다. 이 동적 관리 뷰를 사용하여 잠재적인 문제를 해결할 수 있습니다.  
  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**이름도**|**nvarchar(256)**|메모리 덤프 파일의 경로 및 이름입니다. null일 수 없습니다.|  
 |**creation_time**|**datetimeoffset(7)**|파일을 만든 날짜와 시간입니다. null일 수 없습니다.|  

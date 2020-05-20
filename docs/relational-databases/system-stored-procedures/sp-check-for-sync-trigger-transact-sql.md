@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251247"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824041"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@tabid =** ] '*tabid*'  
+ [** @tabid =** ] '*tabid*'  
  즉시 업데이트 트리거의 발생 여부가 확인되는 테이블의 개체 ID입니다. *tabid* 는 **int** 이며 기본값은 없습니다.  
   
- [**@trigger_op =** ] '*trigger_output_parameters*' 출력  
+ [** @trigger_op =** ] '*trigger_output_parameters*' 출력  
  출력 매개 변수에서 호출되고 있는 트리거 유형을 반환할지 여부를 지정합니다. *trigger_output_parameters* 은 **char (10)** 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**기능**|INSERT 트리거|  
 |**Upd**|UPDATE 트리거|  
@@ -55,7 +55,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher`저장 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 는 **bit**이며 기본값은 0입니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 1은 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고 * \@trigger_op*에서 반환 되는 트리거의 유형 임을 나타냅니다.  
+ 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 1은 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고 * \@ trigger_op*에서 반환 되는 트리거의 유형 임을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
  **sp_check_for_sync_trigger** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
@@ -85,7 +85,7 @@ IF @retcode = 1
 RETURN  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sp_check_for_sync_trigger** 저장 프로시저는 [sys. OBJECTS](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 시스템 뷰에서 SELECT 권한이 있는 모든 사용자가 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

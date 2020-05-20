@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_gettopologyinfo
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 901ad9739966327102ceda6c7d26815daa867888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f3bb48f4fc219f0bc6d4e46b8073d10fd255f1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123918"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820478"
 ---
 # <a name="sp_gettopologyinfo-transact-sql"></a>sp_gettopologyinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @request_id= ] *request_id*  
+ [ @request_id =] *request_id*  
  토폴로지 상태 요청 ID입니다. *request_id* 은 **int**이며 기본값은 NULL입니다. ID를 얻으려면 @request_id [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) 의 output 매개 변수를 사용 하거나 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md) 시스템 테이블을 쿼리 합니다.  
   
 ## <a name="result-sets"></a>결과 집합  

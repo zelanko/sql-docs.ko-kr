@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.data_spaces catalog view
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 203c16e818d8a53cd025065d9c49ef8c5aeebcfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ab7be8ba4aba0241b45800b77e28b44e168ab182
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983186"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823423"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983186"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|데이터베이스 내에서 고유한 데이터 공간의 이름입니다.|  
 |data_space_id|**int**|데이터베이스 내에서 고유한 데이터 공간 ID 수입니다.|  
-|type|**char(2)**|데이터 공간 유형입니다.<br /><br /> FG = 파일 그룹<br /><br /> FD = FILESTREAM 데이터 파일 그룹<br /><br /> FX = 메모리 액세스에 최적화된 테이블 파일 그룹<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> PS = 파티션 구성표|  
+|형식|**char(2)**|데이터 공간 유형입니다.<br /><br /> FG = 파일 그룹<br /><br /> FD = FILESTREAM 데이터 파일 그룹<br /><br /> FX = 메모리 액세스에 최적화된 테이블 파일 그룹<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> PS = 파티션 구성표|  
 |type_desc|**nvarchar(60)**|데이터 공간 유형에 대한 설명입니다.<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = 기본 데이터 공간입니다. 파일 그룹 또는 파티션 구성표가 CREATE TABLE 또는 CREATE INDEX 문에 지정되지 않은 경우에 기본 데이터 공간을 사용합니다.<br /><br /> 0 = 기본 데이터 공간이 아닙니다.|  
 |is_system|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 1 = 데이터 공간이 전체 텍스트 인덱스 조각에 사용됩니다.<br /><br /> 0 = 데이터 공간이 전체 텍스트 인덱스 조각에 사용되지 않습니다.|  

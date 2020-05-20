@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982238"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824298"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |값|설명|  
 |-----------|-----------------|  
 |**기본**|트리거가 첫 번째로 실행됩니다.|  
-|**최신**|트리거가 마지막으로 실행됩니다.|  
+|**마지막**|트리거가 마지막으로 실행됩니다.|  
 |**없음**|트리거가 정의되지 않은 순서로 실행됩니다.|  
   
-`[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
+`[ @stmttype = ] 'statement_type'`트리거를 실행 하는 SQL 문을 지정 합니다. *statement_type* 는 **varchar (50)** 이며 [!INCLUDE[tsql](../../includes/tsql-md.md)] [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)에 나열 된 INSERT, UPDATE, DELETE, LOGON 또는 statement 이벤트 일 수 있습니다. 이벤트 그룹은 지정할 수 없습니다.  
   
- 트리거를 문 형식에 대 한 트리거로 정의한 후에만 트리거를 문 형식에 대 한 **첫 번째** 또는 **마지막** 트리거로 지정할 수 있습니다. 예를 들어 **tr1** 이 insert 트리거로 정의 된 **경우 Tr1 트리거** 는 **T1** 테이블에서 insert에 대해 **처음** 으로 지정할 수 있습니다. INSERT [!INCLUDE[ssDE](../../includes/ssde-md.md)] 트리거로만 정의 된 **TR1**이 UPDATE 문의 **First**또는 **Last**트리거로 설정 된 경우는 오류를 반환 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
+ 트리거를 문 형식에 대 한 트리거로 정의한 후에만 트리거를 문 형식에 대 한 **첫 번째** 또는 **마지막** 트리거로 지정할 수 있습니다. 예를 들어 **tr1** 이 insert 트리거로 정의 된 **경우 Tr1 트리거** 는 **T1** 테이블에서 insert에 대해 **처음** 으로 지정할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]INSERT 트리거로만 정의 된 **TR1**이 UPDATE 문의 **First**또는 **Last**트리거로 설정 된 경우는 오류를 반환 합니다. 자세한 내용은 주의 섹션을 참조하세요.  
   
- namespace = { **' DATABASE '** | **' SERVER '** | ** \@** N  
- *Triggername* 가 DDL 트리거 이면 ** \@네임 스페이스** 는 데이터베이스 범위 또는 서버 범위를 사용 하 여 *triggername* 를 만들었는지 여부를 지정 합니다. *Triggername* 가 logon 트리거 이면 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 [Ddl 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요. 지정 하지 않거나 NULL을 지정 하면 *triggername* 는 DML 트리거입니다.  
+ ** \@ namespace =** { **' DATABASE '**  |  **' SERVER '** | N  
+ *Triggername* 가 DDL 트리거 이면 ** \@ 네임 스페이스** 는 데이터베이스 범위 또는 서버 범위를 사용 하 여 *triggername* 를 만들었는지 여부를 지정 합니다. *Triggername* 가 logon 트리거 이면 서버를 지정 해야 합니다. DDL 트리거 범위에 대 한 자세한 내용은 [Ddl 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요. 지정 하지 않거나 NULL을 지정 하면 *triggername* 는 DML 트리거입니다.  
   
 ||  
 |-|  
@@ -99,7 +99,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  둘 이상의 문 형식에 대해 동일한 트리거를 첫 번째 또는 마지막 순서로 지정 해야 하는 경우 각 문 형식에 대해 **sp_settriggerorder** 를 실행 해야 합니다. 또한 트리거를 해당 문 형식에 대해 실행할 **첫 번째** 트리거나 **마지막** 트리거로 지정할 수 있으려면 먼저 문 형식에 대해 트리거를 먼저 정의 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버 범위(ON ALL SERVER)의 DDL 트리거 또는 로그온 트리거의 순서를 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
  데이터베이스 범위(ON DATABASE)의 DDL 트리거 순서를 설정하려면 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
