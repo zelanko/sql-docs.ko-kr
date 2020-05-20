@@ -80,7 +80,7 @@ ms.locfileid: "72909157"
 
 1.  모든 누락된 인덱스 참조에 대해 그래픽 실행 계획을 활용합니다.
 2.  [데이터베이스 엔진 튜닝 관리자](../tools/dta/tutorial-database-engine-tuning-advisor.md)에서 생성한 인덱싱 제안 사항을 검토합니다.
-3.  [SQL Server 성능 대시보드](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 통해 [누락된 인덱스 DMV](https://www.microsoft.com/download/details.aspx?id=29063)를 활용합니다.
+3.  [SQL Server 성능 대시보드](https://www.microsoft.com/download/details.aspx?id=29063)를 통해 [누락된 인덱스 DMV](../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)를 활용합니다.
 4.  기존 DMV를 사용하여 누락되거나 중복되거나 거의 사용되지 않거나 전혀 사용되지 않는 인덱스에 대한 정보를 제공할 수 있는 기존 스크립트를 활용하고 인덱스 참조가 힌트로 제공되거나 데이터베이스의 기존 프로시저 및 함수에 하드 코딩되었는지 확인합니다. 
 
 > [!TIP] 

@@ -88,7 +88,7 @@ ALTER DATABASE msdb SET ENABLE_BROKER ;
 GO
 ``` 
 
-데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션**을 사용합니다.
+데이터베이스 메일은 많은 내부 저장 프로시저를 사용합니다. SQL Server를 새로 설치하면 노출 영역을 줄이기 위해 이러한 저장 프로시저가 사용하지 않도록 설정됩니다. 이러한 저장 프로시저를 설정하려면 다음 예제에서처럼 **sp_configure** 시스템 저장 프로시저의 [Database Mail XPs 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)을 사용합니다.
 
 ```sql
 EXEC sp_configure 'show advanced options', 1;  

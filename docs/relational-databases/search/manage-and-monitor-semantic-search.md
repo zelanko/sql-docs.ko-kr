@@ -65,7 +65,7 @@ GO
 ```  
   
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [IndexSize](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 속성을 쿼리합니다.  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **IndexSize** 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [ItemCount](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 속성을 쿼리합니다.  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **ItemCount** 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

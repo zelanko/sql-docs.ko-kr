@@ -45,7 +45,7 @@ ms.locfileid: "72251298"
   
 -   쿼리 저장소는 메모리 내 OLTP의 계획 생성 메커니즘을 활용하여 컴파일하는 동안 쿼리 실행 계획을 캡처합니다. 저장된 계획은 의미상 `SET SHOWPLAN_XML ON` 을(를) 사용하여 획득한 것과 같고 한 가지 차이점은 쿼리 저장소의 계획은 개별 문을 기준으로 분할 및 저장된다는 것입니다.  
     
--   혼합 작업이 있는 데이터베이스에서 쿼리 저장소를 실행하는 경우 **sys.query_store_plan&#40;Transact-SQL&#41;** 의 [is_natively_compiled](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 필드를 사용하여 네이티브 코드 컴파일에서 생성된 쿼리 계획을 쉽게 찾을 수 있습니다.  
+-   혼합 작업이 있는 데이터베이스에서 쿼리 저장소를 실행하는 경우 [sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)의 **is_natively_compiled** 필드를 사용하여 네이티브 코드 컴파일에서 생성된 쿼리 계획을 쉽게 찾을 수 있습니다.  
   
 -   쿼리 저장소 캡처 모드(*ALTER TABLE* 문의 **QUERY_CAPTURE_MODE** 매개 변수)는 구성된 값과 관계없이 항상 캡처되므로 기본적으로 컴파일된 모듈에서 쿼리에 영향을 주지 않습니다. 여기에는 `QUERY_CAPTURE_MODE = NONE`설정이 포함됩니다.  
   

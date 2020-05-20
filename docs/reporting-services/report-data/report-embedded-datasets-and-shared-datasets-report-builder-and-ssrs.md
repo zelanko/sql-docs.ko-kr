@@ -149,7 +149,7 @@ ms.locfileid: "77081796"
 |필드|쿼리 명령의 필드<br /><br /> 데이터 세트 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 세트를 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 세트 속성** 대화 상자에서 **필드 새로 고침**을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
 |데이터 세트|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
- 데이터 세트를 만드는 방법은 [Reporting Services 설명서](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/tools/reporting-services-tools.md) 및 [Reporting Services 도구](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)를 참조하세요.  
+ 데이터 세트를 만드는 방법은 [Reporting Services 설명서](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)에서 [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
 ##  <a name="filtering-sorting-and-grouping-data-in-a-dataset"></a><a name="SortGroupFilter"></a> 데이터 세트의 데이터 필터링,  정렬 및 그룹화  
  데이터 세트의 데이터는 외부 데이터 원본에 대해 쿼리 명령을 실행한 결과로 반환되는 생성됩니다. 데이터 확장 프로그램의 쿼리 명령 구문에 따라 데이터 정렬 또는 그룹화 가능 여부가 결정됩니다. 보고서에서 데이터를 검색하기 전에 쿼리에서 정렬 및 그룹화가 수행됩니다. 필터링은 보고서에서 데이터를 검색한 후에 수행됩니다.  

@@ -48,7 +48,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  None  
   
 ## <a name="remarks"></a>설명  
- 데이터 탭을 제거하려면 실행 인스턴스가 생성됨 상태여야 합니다(**catalog.operations&#40;SSISDB 데이터베이스&#41;** 보기의 [status](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 열 값이 1).  
+ 데이터 탭을 제거하려면 실행 인스턴스가 생성됨 상태여야 합니다([catalog.operations&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 보기의 **status** 열 값이 1).  
   
 ## <a name="permissions"></a>사용 권한  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  

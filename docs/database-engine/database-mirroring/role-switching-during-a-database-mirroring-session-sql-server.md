@@ -109,7 +109,7 @@ ms.locfileid: "75252788"
 2.  미러 서버는 주 서버에서 받은 마지막 로그 레코드의 LSN(로그 시퀀스 번호)을 장애 조치 LSN으로 기록합니다.  
   
     > [!NOTE]  
-    >  이 LSN을 보려면 **sys.database_mirroring&#40;Transact-SQL&#41;** 에서 [mirroring_failover_lsn](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) 열을 선택합니다.  
+    >  이 LSN을 보려면 [sys.database_mirroring&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)에서 **mirroring_failover_lsn** 열을 선택합니다.  
   
 3.  Redo Queue에서 대기 중인 로그가 있으면 미러 서버가 미러 데이터베이스의 롤포워드를 마칩니다. 소요 시간은 시스템 속도, 최근 작업 및 Redo Queue에 있는 로그 양에 따라 달라집니다. 동기 운영 모드의 경우 Redo Queue의 크기를 제한하여 장애 조치 시간을 조정할 수 있습니다. 그러나 이 경우 미러 서버에서 동기화 상태를 계속 유지해야 하므로 주 서버의 속도가 느려질 수 있습니다.  
   

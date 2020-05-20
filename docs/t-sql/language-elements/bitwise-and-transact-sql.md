@@ -43,7 +43,7 @@ expression & expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 정수 데이터 형식 범주에 속하는 데이터 형식, [bit](../../t-sql/language-elements/expressions-transact-sql.md), **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 **식**입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
+ 정수 데이터 형식 범주에 속하는 데이터 형식, **bit**, **binary** 또는 **varbinary** 데이터 형식 중 하나인 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *expression*은 비트 연산의 이진 숫자로 처리됩니다.  
   
 > [!NOTE]  
 >  비트 연산에서는 하나의 *식*이 **binary** 또는 **varbinary** 데이터 형식이 될 수 있습니다.  

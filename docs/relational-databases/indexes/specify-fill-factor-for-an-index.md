@@ -82,7 +82,7 @@ ms.locfileid: "67909521"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
   
 #### <a name="to-specify-a-fill-factor-in-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스의 채우기 비율을 지정하려면  
   

@@ -149,7 +149,7 @@ ms.locfileid: "75242669"
   
     ```  
   
-    [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 및 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx)의 기본 클래스인 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 기본 클래스로부터 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 메서드를 재정의합니다. OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 배포 계획 및 배포 옵션에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 배포 계획 및 대상 데이터베이스 이름을 가져옵니다.  
+    [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 및 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)의 기본 클래스인 [DeploymentPlanContributor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.aspx) 기본 클래스로부터 [OnExecute](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributor.onexecute.aspx) 메서드를 재정의합니다. OnExecute 메서드에는 지정된 모든 인수, 원본 및 대상 데이터베이스 모델, 배포 계획 및 배포 옵션에 대한 액세스를 제공하는 [DeploymentPlanContributorContext](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplancontributorcontext.aspx) 개체가 전달됩니다. 이 예에서는 배포 계획 및 대상 데이터베이스 이름을 가져옵니다.  
   
 2.  이제 본문의 처음 부분을 OnExecute 메서드에 추가합니다.  
   

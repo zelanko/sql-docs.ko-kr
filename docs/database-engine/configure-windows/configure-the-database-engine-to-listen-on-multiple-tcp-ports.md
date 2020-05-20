@@ -75,9 +75,9 @@ ms.locfileid: "68012723"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
   
-1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 **<instance_name>** _에 대한 프로토콜_을 클릭합니다.  
+1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 _<instance_name>_ **에 대한 프로토콜**을 클릭합니다.  
   
-2.  **<instance_name>** _에 대한 프로토콜_을 확장한 다음 **TCP/IP**를 클릭합니다.  
+2.  _<instance_name>_ **에 대한 프로토콜**을 확장한 다음 **TCP/IP**를 클릭합니다.  
   
 3.  오른쪽 창에서 설정하려는 해제된 각 IP 주소를 마우스 오른쪽 단추로 클릭한 다음 **설정**을 클릭합니다.  
   

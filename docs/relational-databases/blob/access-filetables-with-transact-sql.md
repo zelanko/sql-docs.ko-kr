@@ -30,7 +30,7 @@ ms.locfileid: "68018895"
   
 -   INSERT 문이 **name**, **path_locator**, **parent_path_locator**또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
--   애플리케이션에서는 **GetPathLocator&#40;Transact-SQL&#41;** 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 [path_locator](../../relational-databases/system-functions/getpathlocator-transact-sql.md)를 가져올 수 있습니다.  
+-   애플리케이션에서는 [GetPathLocator&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  

@@ -71,7 +71,7 @@ ms.locfileid: "72908035"
   
 8.  **닫기**를 클릭합니다.  
   
-9. **파일** 메뉴에서 **table name**_저장_을 클릭합니다.  
+9. **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
 
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
   

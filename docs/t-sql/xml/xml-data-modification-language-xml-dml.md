@@ -42,7 +42,7 @@ ms.locfileid: "68140885"
   
  [XML 데이터 형식 및 열&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-type-and-columns-sql-server.md)에 설명된 것과 같이 **xml** 형식의 변수 및 열을 만들고 XML 문서 또는 조각을 여기에 할당할 수 있습니다. 이러한 XML 인스턴스를 수정 또는 업데이트하려면 다음을 수행합니다.  
   
--   [xml](../../t-sql/xml/modify-method-xml-data-type.md) 데이터 형식의 **modify() 메서드(xml 데이터 형식)** 를 사용합니다.  
+-   **xml** 데이터 형식의 [modify() 메서드(xml 데이터 형식)](../../t-sql/xml/modify-method-xml-data-type.md)를 사용합니다.  
   
 -   **modify()** 메서드 내부에 적합한 XML DML 문을 지정합니다.  
   

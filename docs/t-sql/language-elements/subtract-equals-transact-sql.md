@@ -42,7 +42,7 @@ expression -= expression
   
 ## <a name="arguments"></a>인수  
  *expression*  
- 숫자 범주에서 [bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 **식**입니다.  
+ 숫자 범주에서 **bit** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  우선 순위가 높은 인수의 데이터 형식을 반환합니다. 자세한 내용은 [데이터 형식 우선 순위&#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)를 참조하세요.  

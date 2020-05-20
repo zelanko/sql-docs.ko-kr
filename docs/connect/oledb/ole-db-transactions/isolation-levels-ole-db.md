@@ -33,9 +33,9 @@ ms.locfileid: "67993966"
   
      수준에 대한 OLE DB Driver for SQL Server 기본값은 DBPROPVAL_TI_READCOMMITTED입니다.  
   
--   로컬 수동 커밋 트랜잭션에 대한 *ITransactionLocal::StartTransaction* 메서드의 **isoLevel** 매개 변수를 사용합니다.  
+-   로컬 수동 커밋 트랜잭션에 대한 **ITransactionLocal::StartTransaction** 메서드의 *isoLevel* 매개 변수를 사용합니다.  
   
--   MS DTC 통합 분산 트랜잭션에 대해 *ITransactionDispenser::BeginTransaction* 메서드의 **isoLevel** 매개 변수를 사용합니다.  
+-   MS DTC 통합 분산 트랜잭션에 대해 **ITransactionDispenser::BeginTransaction** 메서드의 *isoLevel* 매개 변수를 사용합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 커밋되지 않은 읽기 격리 수준에서 읽기 전용으로 액세스할 수 있습니다. 이외의 다른 모든 수준은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체에 잠금을 적용하므로 동시성을 제한합니다. 클라이언트에 더 높은 동시성 수준이 필요한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 동시 액세스에 대해 더 높은 수준의 제한을 적용합니다. 최고 수준의 데이터 동시 액세스를 유지하려면 SQL Server용 OLE DB 드라이버 소비자가 특정 동시성 수준에 대한 요청을 지능적으로 제어해야 합니다.  
   

@@ -42,7 +42,7 @@ dividend / divisor
   
 ## <a name="arguments"></a>인수  
  *dividend*  
- 나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 [datetime](../../t-sql/language-elements/expressions-transact-sql.md) 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 **식**일 수 있습니다.  
+ 나눌 숫자 식입니다. *dividend*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)일 수 있습니다.  
   
  *divisor*  
  피제수를 나눌 숫자 식입니다. *divisor*는 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.  

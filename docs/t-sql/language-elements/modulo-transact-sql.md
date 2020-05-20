@@ -47,7 +47,7 @@ dividend % divisor
   
 ## <a name="arguments"></a>인수  
  *dividend*  
- 나눌 숫자 식입니다. *dividend*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 [numeric](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 사용하는 유효한 **식**이어야 합니다.  
+ 나눌 숫자 식입니다. *dividend*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이어야 합니다.  
   
  *divisor*  
  피제수를 나눌 숫자 식입니다. *divisor*는 정수 및 통화 데이터 형식 범주에 속하는 데이터 형식 중 하나 또는 **numeric** 데이터 형식을 사용하는 유효한 식이어야 합니다.  

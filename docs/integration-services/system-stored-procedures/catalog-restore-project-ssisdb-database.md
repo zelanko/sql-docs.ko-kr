@@ -49,7 +49,7 @@ catalog.restore_project [ @folder_name = ] folder_name
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- **project_name**이 있는 경우 프로젝트 상세 정보가 *varbinary(MAX)* 로 결과 집합에 포함됩니다.  
+ *project_name*이 있는 경우 프로젝트 상세 정보가 **varbinary(MAX)** 로 결과 집합에 포함됩니다.  
   
  프로젝트를 지정된 폴더로 복원할 수 없는 경우 **NO RESULT SET**이 반환됩니다.  
   
@@ -72,7 +72,7 @@ catalog.restore_project [ @folder_name = ] folder_name
 -   사용자에게 적절한 권한이 없는 경우  
   
 ## <a name="remarks"></a>설명  
- 프로젝트가 복원되면 모든 매개 변수에 기본값이 할당되고 모든 환경 참조가 변경되지 않은 상태로 유지됩니다. 카탈로그에 유지되는 프로젝트 버전의 최대 수는 **catalog_property** 보기에 표시된 대로 [MAX_VERSIONS_PER_PROJECT](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 카탈로그 속성에 따라 결정됩니다.  
+ 프로젝트가 복원되면 모든 매개 변수에 기본값이 할당되고 모든 환경 참조가 변경되지 않은 상태로 유지됩니다. 카탈로그에 유지되는 프로젝트 버전의 최대 수는 [catalog_property](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) 보기에 표시된 대로 **MAX_VERSIONS_PER_PROJECT** 카탈로그 속성에 따라 결정됩니다.  
   
 > [!WARNING]  
 >  프로젝트를 복원된 후 환경 참조가 더 이상 유효하지 않을 수도 있습니다.  

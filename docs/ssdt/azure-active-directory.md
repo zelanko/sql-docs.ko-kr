@@ -29,7 +29,7 @@ Visual Studio에서 **보기** 메뉴에서 **SQL Server 개체 탐색기**를 �
 
 #### <a name="which-azure-sql-products"></a>Azure SQL 제품이란?
 
-이 문서에서는 *Azure 클라우드*에서 다음 [Azure SQL 제품](https://azure.microsoft.com/) 목록에 대해 Azure AD를 설명합니다.
+이 문서에서는 [Azure 클라우드](https://azure.microsoft.com/)에서 다음 *Azure SQL 제품* 목록에 대해 Azure AD를 설명합니다.
 
 - Azure SQL Database
 - Azure SQL Data Warehouse

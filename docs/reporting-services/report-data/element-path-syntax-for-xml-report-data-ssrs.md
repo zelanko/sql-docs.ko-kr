@@ -22,7 +22,7 @@ ms.locfileid: "77077664"
   보고서 디자이너에서 대/소문자 구분 요소 경로를 정의하여 XML 데이터 원본에서 보고서에 사용할 데이터를 지정할 수 있습니다. 요소 경로는 XML 데이터 원본의 XML 계층 노드와 해당 특성으로 이동하는 방법을 나타냅니다. 기본 요소 경로를 사용하려면 데이터 세트 쿼리나 XML **ElementPath**의 XML **Query**를 비워 둡니다. XML 데이터 원본에서 데이터가 검색될 때 텍스트 값이 있는 요소 노드와 요소 노드 특성은 결과 집합의 열이 됩니다. 쿼리를 실행하면 노드 및 특성 값은 행 데이터가 됩니다. 열은 보고서 데이터 창에 데이터 세트 필드 컬렉션으로 표시됩니다. 이 항목에서는 요소 경로 구문을 설명합니다.  
   
 > [!NOTE]  
->  요소 경로 구문은 네임스페이스로부터 독립적입니다. 요소 경로에 네임스페이스를 사용하려면 **XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;** 에 설명된 대로 XML [ElementPath](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md) 요소를 포함하는 XML 쿼리 구문을 사용합니다.  
+>  요소 경로 구문은 네임스페이스로부터 독립적입니다. 요소 경로에 네임스페이스를 사용하려면 [XML 보고서 데이터를 위한 XML 쿼리 구문&#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)에 설명된 대로 XML **ElementPath** 요소를 포함하는 XML 쿼리 구문을 사용합니다.  
   
  다음 표에서는 요소 경로를 정의하는 데 사용되는 규칙을 설명합니다.  
   

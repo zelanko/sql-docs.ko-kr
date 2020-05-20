@@ -24,7 +24,7 @@ ms.locfileid: "73531599"
 
 ## <a name="use-azure-data-studio"></a><a id="datastudio"></a> Azure Data Studio 사용
 
-**Azure Data Studio**의 최신 [참가자 빌드](https://aka.ms/getazuredatastudio)를 다운로드한 후에 SQL Server 빅 데이터 클러스터 대시보드를 사용하여 서비스 엔드포인트와 빅 데이터 클러스터 상태를 볼 수 있습니다. 아래 기능 중 일부는 Azure Data Studio 참가자 빌드에서만 처음으로 제공되는 것입니다.
+[Azure Data Studio](https://aka.ms/getazuredatastudio)의 최신 **참가자 빌드**를 다운로드한 후에 SQL Server 빅 데이터 클러스터 대시보드를 사용하여 서비스 엔드포인트와 빅 데이터 클러스터 상태를 볼 수 있습니다. 아래 기능 중 일부는 Azure Data Studio 참가자 빌드에서만 처음으로 제공되는 것입니다.
 
 1. 먼저 Azure Data Studio에서 빅 데이터 클러스터에 연결합니다. 자세한 내용은 [Azure Data Studio를 사용하여 SQL Server 빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)을 참조하세요.
 

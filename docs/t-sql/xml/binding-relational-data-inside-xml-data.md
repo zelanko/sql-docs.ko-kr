@@ -28,7 +28,7 @@ ms.locfileid: "68051335"
 # <a name="binding-relational-data-inside-xml-data"></a>XML 데이터 내 관계형 데이터 바인딩
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [xml](../../t-sql/xml/xml-data-type-methods.md) 데이터 형식 변수 또는 열에 대해 **xml 데이터 형식 메서드**를 지정할 수 있습니다. 예를 들어 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)는 XML 인스턴스에 대해 지정된 XQuery를 실행합니다. 이 방식으로 XML을 구성하면 비-XML 유형의 열이나 Transact-SQL 변수로부터 값을 가져올 수 있습니다. 이러한 과정을 XML 내 관계형 데이터 바인딩이라고 합니다.  
+  **xml** 데이터 형식 변수 또는 열에 대해 [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)를 지정할 수 있습니다. 예를 들어 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)는 XML 인스턴스에 대해 지정된 XQuery를 실행합니다. 이 방식으로 XML을 구성하면 비-XML 유형의 열이나 Transact-SQL 변수로부터 값을 가져올 수 있습니다. 이러한 과정을 XML 내 관계형 데이터 바인딩이라고 합니다.  
   
  XML 내 비-XML 관계형 데이터를 바인딩하기 위해 SQL Server 데이터베이스 엔진은 다음과 같은 의사 함수를 제공합니다.  
   

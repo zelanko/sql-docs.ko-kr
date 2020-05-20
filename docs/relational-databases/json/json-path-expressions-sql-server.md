@@ -38,7 +38,7 @@ ms.locfileid: "74095738"
 ## <a name="parts-of-a-path-expression"></a>경로 식의 요소
  경로 식에는 두 가지 구성 요소가 있습니다.  
   
-1.  값이 [lax](#PATHMODE) 또는 **strict**인 선택적 **Path 모드**  
+1.  값이 **lax** 또는 **strict**인 선택적 [Path 모드](#PATHMODE)  
   
 2.  [PATH](#PATH) 자체.  
 

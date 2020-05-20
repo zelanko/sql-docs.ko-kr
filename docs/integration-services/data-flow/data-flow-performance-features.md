@@ -178,7 +178,7 @@ ms.locfileid: "73637952"
   
 -   technet.microsoft.com의 기술 문서 [Integration Services: 성능 튜닝 기술](https://go.microsoft.com/fwlink/?LinkId=98900)  
   
--   [SQLCAT의 BI 및 분석 가이드](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)의 기술 문서 - _동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가_
+-   _SQLCAT의 BI 및 분석 가이드_의 기술 문서 - [동기 변환을 여러 태스크로 분할하여 파이프라인의 처리량 증가](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)
   
 -   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](https://go.microsoft.com/fwlink/?LinkId=220816)  
   

@@ -58,7 +58,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
 ### <a name="sharepoint-mode"></a>SharePoint 모드 
 **보고서 서버 설치 옵션** 페이지에는 SharePoint 모드의 유일한 **설치만** 옵션이 있습니다. 이 옵션은 모든 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 및 SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스를 설치합니다. 다음 단계에는 다음 방법 중 하나를 사용하여 SSRS 서비스 애플리케이션을 하나 이상 만듭니다.  
   
-- SSRS 서비스 애플리케이션을 만들려면 SharePoint Server에서 중앙 관리로 이동하세요. 자세한 내용은 **SharePoint 모드에서 첫 번째 보고서 서버 설치**의 [서비스 애플리케이션 만들기](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication) 섹션을 참조하세요.  
+- SSRS 서비스 애플리케이션을 만들려면 SharePoint Server에서 중앙 관리로 이동하세요. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md#bkmk_create_serrviceapplication)의 **서비스 애플리케이션 만들기** 섹션을 참조하세요.  
   
 - SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 사용하여 서비스 애플리케이션 및 보고서 서버 데이터베이스를 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드용 PowerShell cmdlet](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)항목에서 서비스 애플리케이션 만들기 예제를 참조하세요.  
 
@@ -96,7 +96,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Share
   
 ## <a name="edition-requirements-for-a-database-server"></a>데이터베이스 서버의 버전 요구 사항 
 
- 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)에서 [보고서 서버 데이터베이스의 버전 요구 사항](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
+ 보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)에서 [보고서 서버 데이터베이스의 버전 요구 사항](../reporting-services-features-supported-by-the-editions-of-sql-server-2016.md#edition-requirements-for-the-report-server-database)을 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 

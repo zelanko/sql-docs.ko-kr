@@ -54,7 +54,7 @@ _tolerance_
 최소 제한은 거리의 0.1%이며, 이보다 작은 허용 오차는 최소 제한으로 올림됩니다.  
   
 _relative_  
-**tolerance** 값이 상대적인지, 아니면 절대적인지를 지정하는 _비트_입니다. 값이 'TRUE' 또는 1이면 허용 오차는 상대적입니다. _tolerance_ 매개 변수와 각 범위 \* 타원면의 종반지름으로 계산됩니다. 값이 'FALSE' 또는 0이면 허용 오차는 절대적입니다. 이 _tolerance_ 값은 반환된 선형 근삿값에 대한 이상적인 버퍼 거리의 절대적 최대 편차입니다.  
+_tolerance_ 값이 상대적인지, 아니면 절대적인지를 지정하는 **비트**입니다. 값이 'TRUE' 또는 1이면 허용 오차는 상대적입니다. _tolerance_ 매개 변수와 각 범위 \* 타원면의 종반지름으로 계산됩니다. 값이 'FALSE' 또는 0이면 허용 오차는 절대적입니다. 이 _tolerance_ 값은 반환된 선형 근삿값에 대한 이상적인 버퍼 거리의 절대적 최대 편차입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 반환 형식: **geography**  
@@ -62,7 +62,7 @@ _relative_
 CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
-이 메서드는 **distance**가 숫자가 아니거나(NAN), _distance_가 양 또는 음의 무한대인 경우 _ArgumentException_을 생성합니다.  이 메서드는 **tolerance**가 0이 아니거나, 숫자가 아니거나(NaN), 양 또는 음의 무한대인 경우 _ArgumentException_을 생성합니다.  
+이 메서드는 _distance_가 숫자가 아니거나(NAN), _distance_가 양 또는 음의 무한대인 경우 **ArgumentException**을 생성합니다.  이 메서드는 _tolerance_가 0이 아니거나, 숫자가 아니거나(NaN), 양 또는 음의 무한대인 경우 **ArgumentException**을 생성합니다.  
   
 `STBuffer()`는 경우에 따라 **FullGlobe** 인스턴스를 반환합니다. 예를 들어 `STBuffer()`는 버퍼 거리가 적도에서 극지방까지의 거리보다 큰 경우 두 극지방에서 **FullGlobe** 인스턴스를 반환합니다.  
   

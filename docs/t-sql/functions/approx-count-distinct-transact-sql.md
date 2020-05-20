@@ -38,7 +38,7 @@ APPROX_COUNT_DISTINCT ( expression )
   
 ## <a name="arguments"></a>인수  
 *expression*  
-[image](../../t-sql/language-elements/expressions-transact-sql.md), **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 **식**입니다. 
+**image**, **sql_variant**, **ntext** 또는 **text**를 제외한 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 
 
 ## <a name="return-types"></a>반환 형식
  **bigint**  

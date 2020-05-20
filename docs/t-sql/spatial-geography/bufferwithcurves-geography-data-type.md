@@ -27,7 +27,7 @@ ms.locfileid: "68066548"
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  호출하는 **geography** 인스턴스와의 거리가 **distance** 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 *geography* 인스턴스를 반환합니다.  
+  호출하는 **geography** 인스턴스와의 거리가 *distance* 매개 변수보다 작거나 같은 모든 점의 집합을 나타내는 **geography** 인스턴스를 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   

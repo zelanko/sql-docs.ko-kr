@@ -72,7 +72,7 @@ ms.locfileid: "72906675"
   
 5.  쿼리 창에서 ALTER FUNCTION 문을 필요에 따라 변경합니다.  
   
-6.  **파일** 메뉴에서 **function_name**_저장_을 클릭합니다.  
+6.  **파일** 메뉴에서 _function_name_**저장**을 클릭합니다.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

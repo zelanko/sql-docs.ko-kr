@@ -65,7 +65,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
   
 |형식|Description|  
 |------------|-----------------|  
-|String|*language_term*은 **sys.syslanguages (Transact-SQL)** 호환성 뷰의 [alias](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
+|String|*language_term*은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
 |정수|*language_term*은 언어의 LCID입니다.|  
 |Hexadecimal|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
   

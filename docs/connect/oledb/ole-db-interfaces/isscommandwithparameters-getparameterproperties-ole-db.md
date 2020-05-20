@@ -43,7 +43,7 @@ HRESULT GetParameterProperties(
  *prgParamProperties*에 반환된 SSPARAMPROPS 구조의 개수를 포함하는 메모리에 대한 포인터입니다.  
   
  *prgParamProperties*[out]  
- SSPARAMPROPS 구조의 배열이 반환될 메모리에 대한 포인터입니다. 공급자는 구조에 사용할 메모리를 할당하고 이 메모리에 대한 주소를 반환합니다. 소비자는 구조가 더 이상 필요 없게 되면 **IMalloc::Free**를 사용하여 이 메모리를 해제합니다. 변형에 BSTR과 같은 참조 형식이 포함되어 있는 경우 메모리 누수를 방지하려면 소비자는 **prgParamProperties**에 대해 *IMalloc::Free*를 호출하기 전에 각 DBPROP 구조의 **vValue** 속성에 대해 *VariantClear*를 호출해야 합니다. 출력에서 *pcParams*가 0이거나 DB_E_ERRORSOCCURRED 외의 오류가 발생하는 경우 공급자는 메모리를 할당하지 않으며 출력에서 *prgParamProperties*가 Null 포인터인지 확인합니다.  
+ SSPARAMPROPS 구조의 배열이 반환될 메모리에 대한 포인터입니다. 공급자는 구조에 사용할 메모리를 할당하고 이 메모리에 대한 주소를 반환합니다. 소비자는 구조가 더 이상 필요 없게 되면 **IMalloc::Free**를 사용하여 이 메모리를 해제합니다. 변형에 BSTR과 같은 참조 형식이 포함되어 있는 경우 메모리 누수를 방지하려면 소비자는 *prgParamProperties*에 대해 **IMalloc::Free**를 호출하기 전에 각 DBPROP 구조의 *vValue* 속성에 대해 **VariantClear**를 호출해야 합니다. 출력에서 *pcParams*가 0이거나 DB_E_ERRORSOCCURRED 외의 오류가 발생하는 경우 공급자는 메모리를 할당하지 않으며 출력에서 *prgParamProperties*가 Null 포인터인지 확인합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **GetParameterProperties** 메서드는 DB_S_ERRORSOCCURRED 및 DB_E_ERRORSOCCURED가 발생할 수 없다는 점을 제외하고는 핵심 OLE DB **ICommandProperties::GetProperties** 메서드와 같은 오류 코드를 반환합니다.  

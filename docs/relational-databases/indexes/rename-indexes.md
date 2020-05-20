@@ -69,7 +69,7 @@ ms.locfileid: "72906306"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table name**_저장_을 클릭합니다.  
+8.  **파일** 메뉴에서 _table name_**저장**을 클릭합니다.  
 
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   

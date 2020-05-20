@@ -30,7 +30,7 @@ ms.locfileid: "71286287"
  스크립트에 중단점을 설정하면 중단점이 기본 제공 중단점과 함께 **중단점 설정 - \<개체 이름>** 대화 상자에 나열됩니다.  
   
 > [!IMPORTANT]  
->  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 **스크립트 태스크 코딩 및 디버깅**의 [스크립트 태스크 디버깅](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) 섹션 및 **스크립트 구성 요소 코딩 및 디버깅**의 [스크립트 구성 요소 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.  
+>  스크립트 태스크 및 스크립트 구성 요소의 중단점이 무시되는 경우도 있습니다. 자세한 내용은 [스크립트 태스크 코딩 및 디버깅](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)의 **스크립트 태스크 디버깅** 섹션 및 [스크립트 구성 요소 코딩 및 디버깅](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)의 **스크립트 구성 요소 디버깅**을 참조하세요.  
   
 ### <a name="to-set-a-breakpoint-in-script"></a>스크립트에 중단점을 설정하려면  
   

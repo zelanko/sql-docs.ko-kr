@@ -139,14 +139,14 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
     b. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
 
-      * **통계 스크립팅**으로 설정된 *통계 스크립팅*입니다.
-      * **스키마 전용**으로 설정된 *스크립팅할 데이터 형식*입니다.
-      * **True**로 설정된 *인덱스 스크립팅*입니다.
+      * *통계 스크립팅*으로 설정된 **통계 스크립팅**입니다.
+      * *스키마 전용*으로 설정된 **스크립팅할 데이터 형식**입니다.
+      * *True*로 설정된 **인덱스 스크립팅**입니다.
 
    ![스크립트 개체](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > *스크립팅할 데이터 형식* 옵션에 **스키마 및 데이터**를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 사용합니다.
+   > **스크립팅할 데이터 형식** 옵션에 *스키마 및 데이터*를 선택하면 데이터베이스에 대한 데이터를 스크립팅할 수 있습니다. 그러나 대용량 데이터베이스는 이상적이 아닙니다. SSMS에서 할당할 수 있는 것보다 많은 메모리가 필요할 수 있습니다. 이 제한은 작은 데이터베이스의 경우 괜찮습니다. 대형 데이터베이스용 데이터를 이동하려는 경우 [가져오기 및 내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard)를 사용합니다.
 
 6. **확인**선택하고 **다음**을 선택합니다.
 
