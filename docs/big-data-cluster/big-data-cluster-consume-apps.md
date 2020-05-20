@@ -115,7 +115,7 @@ azdata app describe --name add-app --version v1
 ## <a name="execute-the-app-using-the-restful-web-service"></a>RESTful 웹 서비스를 사용하여 앱 실행
 
 > [!NOTE]
-> 원하는 경우 브라우저에서 `swagger`을 실행했을 때 반환된 `azdata app describe --name [appname] --version [version]`의 URL을 열 수 있습니다. 이 URL은 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`과 유사합니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인해야 합니다. `swagger.json`의 내용을 [Swagger 편집기](https://editor.swagger.io)에 붙여넣을 수 있습니다. 웹 서비스에서 `run` 메서드가 공개됩니다. 맨 위에 표시되는 기준 URL도 적어 둡니다.
+> 원하는 경우 브라우저에서 `azdata app describe --name [appname] --version [version]`을 실행했을 때 반환된 `swagger`의 URL을 열 수 있습니다. 이 URL은 `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`과 유사합니다. `azdata login`에 사용한 것과 동일한 자격 증명으로 로그인해야 합니다. `swagger.json`의 내용을 [Swagger 편집기](https://editor.swagger.io)에 붙여넣을 수 있습니다. 웹 서비스에서 `run` 메서드가 공개됩니다. 맨 위에 표시되는 기준 URL도 적어 둡니다.
 
 자주 사용하는 도구를 통해 `run` 메서드(`https://[IP]:30778/api/app/[appname]/[version]/run`)를 호출하고 POST 요청의 본문에 있는 매개 변수를 json으로 전달할 수 있습니다. 이 예제에서는 [Postman](https://www.getpostman.com/)을 사용합니다. 호출하기 전에 `Authorization`을 `Bearer Token`으로 설정하고 앞에서 검색한 토큰을 붙여넣어야 합니다. 이렇게 하면 요청에 헤더가 설정됩니다. 아래 스크린샷을 참조하세요.
 

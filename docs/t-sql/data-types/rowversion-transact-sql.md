@@ -81,7 +81,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다. 이 스크립트는 행을 마지막으로 읽을 때의 `<myRv>`rowversion**값을 나타내기 위해**를 사용합니다. 값을 실제 **rowversion** 값으로 바꿉니다. 실제 **rowversion** 값의 예는 `0x00000000000007D3`입니다.
+그런 후 다음 예제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 업데이트 중에 `MyTest` 테이블에 대한 낙관적 동시성 제어를 구현할 수 있습니다. 이 스크립트는 행을 마지막으로 읽을 때의 **rowversion** 값을 나타내기 위해 `<myRv>`를 사용합니다. 값을 실제 **rowversion** 값으로 바꿉니다. 실제 **rowversion** 값의 예는 `0x00000000000007D3`입니다.
   
 ```sql
 DECLARE @t TABLE (myKey int);  

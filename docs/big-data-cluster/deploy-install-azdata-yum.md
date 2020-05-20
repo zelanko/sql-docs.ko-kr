@@ -65,7 +65,7 @@ azdata --version
 
 ## <a name="update"></a>업데이트
 
-`azdata-cli` 명령을 사용하여 `yum update`를 업데이트합니다.
+`yum update` 명령을 사용하여 `azdata-cli`를 업데이트합니다.
 
 ```bash
 sudo yum update azdata-cli

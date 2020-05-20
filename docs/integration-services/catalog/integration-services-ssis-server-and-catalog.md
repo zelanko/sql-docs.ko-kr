@@ -41,7 +41,7 @@ ms.locfileid: "71298969"
  또한 SSIS 및 Always On 가용성 그룹을 사용하여 SSISDB의 고가용성 및 해당 콘텐츠를 제공할 수도 있습니다. 자세한 내용은 [SSIS 카탈로그에 대한 Always On(SSISDB)](ssis-catalog.md#always-on-for-ssis-catalog-ssisdb)을 참조하세요. blogs.msdn.com에서 Matt Masson이 게시한 [Always On을 사용하는 SSIS](https://go.microsoft.com/fwlink/?LinkId=255873) 블로그도 참조하세요.  
   
 ##  <a name="integration-services-server-in-sql-server-management-studio"></a><a name="ssms"></a> SQL Server Management Studio의 Integration Services 서버  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]SSISDB**데이터베이스를 호스트하는**의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
+ **SSISDB** 데이터베이스를 호스트하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결할 때 개체 탐색기에 다음 개체가 표시됩니다.  
   
 -   **SSISDB 데이터베이스**  
   

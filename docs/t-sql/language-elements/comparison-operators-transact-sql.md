@@ -47,7 +47,7 @@ ms.locfileid: "68140263"
 ## <a name="boolean-data-type"></a>부울 데이터 형식  
  비교 연산자의 결과는 **Boolean** 데이터 형식입니다. TRUE, FALSE 및 UNKNOWN의 세 값이 있습니다. **Boolean** 데이터 형식을 반환하는 식을 부울 식이라고 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Boolean**데이터 형식은 다른** 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
+ **Boolean** 데이터 형식은 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과 달리 테이블 열이나 변수의 데이터 형식으로 지정될 수 없으며 결과 집합으로 반환될 수 없습니다.  
   
  SET ANSI_NULLS가 ON이면 한두 개의 NULL 식이 있는 연산자가 UNKNOWN을 반환합니다. SET ANSI_NULLS가 OFF이면 같음(=) 및 같지 않음(<>) 연산자를 제외하고 동일한 규칙이 적용됩니다. SET ANSI_NULLS가 OFF이면 이러한 연산자는 다른 모든 NULL과 동등한 알려진 값으로 NULL을 처리하고 TRUE 또는 FALSE(UNKNOWN은 절대 아님)만 반환합니다.  
   

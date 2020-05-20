@@ -26,7 +26,7 @@ ms.locfileid: "72908782"
 ##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
  FileTable은 대개 Windows 파일 시스템 및 파일 I/O API를 통해 사용합니다. FileTable은 다양한 사용 가능한 파일 I/O API를 통한 비트랜잭션 액세스를 지원합니다.  
   
-1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]GetFileNamespacePath&#40;Transact-SQL&#41;[ 함수와 함께 ](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
+1.  파일 I/O API 액세스는 일반적으로 파일 또는 디렉터리에 대한 논리 UNC 경로를 가져오는 것으로 시작됩니다. 애플리케이션에서는 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수와 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 디렉터리 또는 파일에 대한 논리 경로를 가져올 수 있습니다. 자세한 내용은 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)을 참조하세요.  
   
 2.  그러면 애플리케이션에서는 이 논리 경로를 사용하여 파일 또는 디렉터리에 대한 핸들을 가져오고 개체에 대해 일부 작업을 수행합니다. 경로를 CreateFile() 또는 CreateDirectory()와 같은 지원되는 파일 시스템 API 함수에 전달하여 파일을 만들거나 열고 핸들을 가져올 수 있습니다. 그런 다음 핸들을 사용하여 데이터 스트리밍, 디렉터리 열거 또는 구성, 파일 특성 가져오기 또는 설정, 파일 또는 디렉터리 삭제 등과 같은 작업을 수행할 수 있습니다.  
 

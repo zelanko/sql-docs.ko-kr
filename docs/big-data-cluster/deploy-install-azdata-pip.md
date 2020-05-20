@@ -16,11 +16,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/29/2020
 ms.locfileid: "75726950"
 ---
-# <a name="install-azdata-with-pip"></a>`azdata`를 사용하여 `pip` 설치
+# <a name="install-azdata-with-pip"></a>`pip`를 사용하여 `azdata` 설치
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 `azdata`를 사용하여 `pip` 도구 Windows 또는 Linux를 설치하는 방법을 설명합니다.
+이 문서에서는 `pip`를 사용하여 `azdata` 도구 Windows 또는 Linux를 설치하는 방법을 설명합니다.
 
 Windows 및 Linux(Ubuntu 배포판)의 경우 [패키지 관리자](./deploy-install-azdata-installer.md)를 사용하여 간단한 환경을 설치할 수 있습니다.
 

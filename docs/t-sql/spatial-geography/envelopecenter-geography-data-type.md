@@ -49,7 +49,7 @@ CLR 반환 형식: **SqlGeography**
 이 메서드는 **지점**을 반환합니다. `EnvelopeAngle()`과 함께 사용할 경우 `EnvelopeCenter()`는 **geography** 인스턴스의 경계 원을 반환합니다.  
   
 > [!NOTE]  
->  `EnvelopeCenter()`는 **geography** 인스턴스의 경계 원을 반환하지만 이 경계 원이 가장 작은 경계 원이 아닐 수 있습니다. 반면에 **geometry** 인스턴스에 `STEnvelope()`geometry**데이터 형식 메서드**를 적용하면 가장 작은 경계 상자가 반환됩니다.  
+>  `EnvelopeCenter()`는 **geography** 인스턴스의 경계 원을 반환하지만 이 경계 원이 가장 작은 경계 원이 아닐 수 있습니다. 반면에 **geometry** 인스턴스에 **geometry** 데이터 형식 메서드 `STEnvelope()`를 적용하면 가장 작은 경계 상자가 반환됩니다.  
   
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서는 이 인스턴스의 봉투를 나타내는 원의 중심을 **지점**으로 반환합니다. `EnvelopeAngle()` = 180으로 정의된 모든 큰 개체의 경우 `EnvelopeCenter()`는 (90,0)을 반환합니다.  
   

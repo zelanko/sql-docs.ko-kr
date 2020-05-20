@@ -35,7 +35,7 @@ ms.locfileid: "71710364"
   
 -   복제가 만드는 연결된 서버 - 구독자에서 변경 내용을 적용하는 사용자의 자격 증명으로 연결합니다.  
   
- 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 사용해서만 지정할 수 있습니다. **매개 변수에**1`@security_mode` 값을 지정합니다.  
+ 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)을 사용해서만 지정할 수 있습니다. `@security_mode` 매개 변수에 **1** 값을 지정합니다.  
   
 ## <a name="options"></a>옵션  
  **다음 SQL Server 인증을 사용하여 연결되는 연결된 서버 만들기**  

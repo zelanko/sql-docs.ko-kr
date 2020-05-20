@@ -90,7 +90,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  이 저장 프로시저는 변수의 데이터 형식에 대한 유효성을 검사하여 해당 변수가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에서 지원되는지 확인합니다.  
   
 > [!TIP]  
->  **에서는 지원되지 않는** Sbyte[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식 대신 **Int16** 데이터 형식을 사용하는 것이 좋습니다.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 지원되지 않는 **Sbyte** 데이터 형식 대신 **Int16** 데이터 형식을 사용하는 것이 좋습니다.  
   
  *value* 매개 변수를 사용하여 이 저장 프로시저에 전달된 값은 다음 표에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 변환됩니다.  
   

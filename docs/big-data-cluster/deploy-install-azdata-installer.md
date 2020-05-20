@@ -30,7 +30,7 @@ ms.locfileid: "73594334"
 
 Microsoft Windows Installer를 사용하여 `azdata`를 설치하려면 다음을 수행합니다.
 
-1. 기존에 `azdata`를 사용하여 `pip`를 설치했다면 제거합니다. 기존에 Windows Installer를 사용하여 `azdata`를 설치했다면 다음 단계로 넘어갑니다.
+1. 기존에 `pip`를 사용하여 `azdata`를 설치했다면 제거합니다. 기존에 Windows Installer를 사용하여 `azdata`를 설치했다면 다음 단계로 넘어갑니다.
 1. Windows Installer를 사용하여 `azdata`를 설치합니다.
 
 ### <a name="uninstall-if-previous-installation-done-with-pip"></a>기존에 `pip`를 사용하여 설치한 경우 제거

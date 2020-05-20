@@ -45,10 +45,10 @@ ms.locfileid: "68042266"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 매개 변수가 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)의 결과보다 크면 Null을 반환하고 **expression** 매개 변수가 1보다 작으면 *ArgumentOutOfRangeException*을 throw합니다.  
+ 이 메서드는 매개 변수가 [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md)의 결과보다 크면 Null을 반환하고 *expression* 매개 변수가 1보다 작으면 **ArgumentOutOfRangeException**을 throw합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `MultiPoint``geography` 인스턴스를 만들고 `STGeometryN()`을 사용하여 `geography`GeometryCollection**의 두 번째**  인스턴스를 찾습니다.  
+ 다음 예에서는 `MultiPoint``geography` 인스턴스를 만들고 `STGeometryN()`을 사용하여 **GeometryCollection**의 두 번째 `geography` 인스턴스를 찾습니다.  
   
 ```  
 DECLARE @g geography;  

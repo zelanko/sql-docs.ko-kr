@@ -65,7 +65,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 |**BadPasswordCount**|잘못된 암호를 사용하여 연속해서 로그인을 시도한 횟수를 반환합니다.|  
 |**BadPasswordTime**|잘못된 암호를 사용하여 마지막으로 로그인을 시도한 시간을 반환합니다.|  
 |**DaysUntilExpiration**|암호 만료일까지 남은 일 수를 반환합니다.|  
-|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master**에 저장된**  로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
+|**DefaultDatabase**|데이터베이스가 지정되지 않은 경우 메타데이터 또는 **master**에 저장된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 기본 데이터베이스를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**DefaultLanguage**|메타데이터에 저장된 로그인 기본 언어를 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 로그인이 제공되는 사용자(예: Windows 인증 사용자)의 경우 NULL을 반환합니다.|  
 |**HistoryLength**|암호 정책 적용 메커니즘을 사용하여 로그인에 대해 추적된 암호의 수를 반환합니다. 암호 정책이 적용되지 않을 경우 0이며 암호 정책 적용은 1에서 시작됩니다.|  
 |**IsExpired**|로그인이 만료되었는지 여부를 나타납니다.|  

@@ -58,7 +58,7 @@ The following diagram visually describes opportunities and benefits of the exten
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll for Java | Java 확장 | SQL Server 2019 |
 
-[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 **AppContainers**를 사용하는 [SQLRUserGroup](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)에서 실행됩니다.
+[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 실행 격리를 위해 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)를 사용하는 **SQLRUserGroup**에서 실행됩니다.
 
 SQL Server 컴퓨터 언어 확장을 추가한 각 데이터베이스 엔진 인스턴스에 대해 별도의 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스가 생성됩니다. 각 데이터베이스 엔진 인스턴스마다 하나의 실행 패드 서비스가 있으므로, 외부 스크립트를 지원하는 여러 인스턴스가 있는 경우 각 인스턴스에 대한 실행 패드 서비스가 제공됩니다. 데이터베이스 엔진 인스턴스는 생성된 실행 패드 서비스에 바인딩됩니다. 저장 프로시저 또는 T-SQL에서 외부 스크립트를 호출할 때마다 SQL Server 서비스가 동일한 인스턴스에 대해 만들어진 실행 패드 서비스를 호출합니다.
 

@@ -143,7 +143,7 @@ ms.locfileid: "76286082"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>복제 서버에 연결  
- RMO 프로그래밍 개체의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클래스의 인스턴스를 사용하여 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
+ RMO 프로그래밍 개체의 경우 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 `P:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContex`t 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
   
 -   지정된 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 대해 모든 연결 속성을 정의합니다.  
   

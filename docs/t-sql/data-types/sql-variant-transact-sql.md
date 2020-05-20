@@ -115,7 +115,7 @@ ODBC에서는 **sql_variant**를 모두 지원하지는 않습니다. 따라서 
 ## <a name="examples"></a>예  
 
 ### <a name="a-using-a-sql_variant-in-a-table"></a>A. 테이블에서 sql_variant 사용  
- 다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `SQL_VARIANT_PROPERTY`에 `colA` 및 `46279.1` 유형인 `colB`가 있는 경우  =`1689``tableA`인 `colA`값`sql_variant`에 대한 `colB` 정보를 검색합니다.  
+ 다음 예에서는 sql_variant 데이터 형식이 있는 테이블을 만듭니다. 그런 다음, 예제는 `tableA`에 `sql_variant` 및 `colB` 유형인 `colA`가 있는 경우 `colB` =`1689`인 `colA`값`46279.1`에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 CREATE   TABLE tableA(colA sql_variant, colB int)  
@@ -138,7 +138,7 @@ decimal      8           2
 ```  
   
 ### <a name="b-using-a-sql_variant-as-a-variable"></a>B. 변수로 sql_variant 사용   
- 다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, `SQL_VARIANT_PROPERTY` 변수에 대한 @v1 정보를 검색합니다.  
+ 다음 예제에서는 sql_variant 데이터 형식을 사용하여 변수를 만든 다음, @v1 변수에 대한 `SQL_VARIANT_PROPERTY` 정보를 검색합니다.  
   
 ```sql    
 DECLARE @v1 sql_variant;  

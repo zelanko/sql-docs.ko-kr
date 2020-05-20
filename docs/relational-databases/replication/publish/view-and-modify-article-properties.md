@@ -84,7 +84,7 @@ ms.locfileid: "76287524"
   
 #### <a name="to-view-and-modify-article-properties"></a>아티클 속성을 보고 수정하려면  
   
-1.  **게시 속성 -** 게시> **대화 상자의 \<아티클** 페이지에서 아티클을 선택한 후 **아티클 속성**을 클릭합니다.  
+1.  **게시 속성 - \<게시>** 대화 상자의 **아티클** 페이지에서 아티클을 선택한 후 **아티클 속성**을 클릭합니다.  
   
 2.  속성 변경 내용을 적용할 아티클을 다음과 같이 선택합니다.  
   
@@ -97,36 +97,36 @@ ms.locfileid: "76287524"
   
 3.  필요한 경우 속성을 수정한 다음 **확인**을 클릭합니다.  
   
-4.  **게시 속성 -** 게시> **대화 상자에서 \<확인**을 클릭합니다.  
+4.  **게시 속성 - \<게시>** 대화 상자에서 **확인**을 클릭합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
  아티클은 수정할 수 있으며 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 해당 속성을 반환할 수 있습니다. 사용되는 저장 프로시저는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
   
-1.  [ 매개 변수에 게시의 이름, ](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) 매개 변수에 아티클의 이름을 지정하고 `@publication`sp_helparticle`@article`을 실행합니다. `@article`을 지정하지 않으면 게시의 모든 아티클 정보가 반환됩니다.  
+1.  `@publication` 매개 변수에 게시의 이름, `@article` 매개 변수에 아티클의 이름을 지정하고 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)을 실행합니다. `@article`을 지정하지 않으면 게시의 모든 아티클 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) 를 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  [ 매개 변수에 변경되는 아티클 속성, ](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 매개 변수에 이 속성의 새 값을 지정하고 `@property`sp_changearticle`@value`을 실행합니다.  
+1.  `@property` 매개 변수에 변경되는 아티클 속성, `@value` 매개 변수에 이 속성의 새 값을 지정하고 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `1`에 `@force_invalidate_snapshot` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `1`에도 `@force_reinit_subscription` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `@force_invalidate_snapshot`에 `1` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `@force_reinit_subscription`에도 `1` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 보려면  
   
-1.  [ 매개 변수에 게시의 이름, ](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) 매개 변수에 아티클의 이름을 지정하고 `@publication`sp_helpmergearticle`@article`을 실행합니다. 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
+1.  `@publication` 매개 변수에 게시의 이름, `@article` 매개 변수에 아티클의 이름을 지정하고 [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)을 실행합니다. 이러한 매개 변수를 지정하지 않으면 게시 또는 게시자에 있는 모든 아티클에 대한 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) 을 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 수정하려면  
   
-1.  [ 매개 변수에 변경되는 아티클 속성, ](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 매개 변수에 이 속성의 새 값을 지정하고 `@property`sp_changemergearticle`@value`을 실행합니다.  
+1.  `@property` 매개 변수에 변경되는 아티클 속성, `@value` 매개 변수에 이 속성의 새 값을 지정하고 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `1`에 `@force_invalidate_snapshot` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `1`에도 `@force_reinit_subscription` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 `@force_invalidate_snapshot`에 `1` 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 `@force_reinit_subscription`에도 `1` 값을 지정해야 합니다. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예에서는 게시된 아티클의 속성을 반환합니다.  
@@ -162,7 +162,7 @@ ms.locfileid: "76287524"
   
 6.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.TransArticle> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-7.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. **에 대해** false<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
+7.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-merge-publication"></a>병합 게시에 속하는 아티클의 속성을 보거나 수정하려면  
   
@@ -178,7 +178,7 @@ ms.locfileid: "76287524"
   
 6.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.MergeArticle> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-7.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. **에 대해** false<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
+7.  (옵션) **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** 값도 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>값을 지정했으면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다. <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>에 대해 **false** 값(기본값)을 지정했으면 변경 내용이 즉시 서버로 전송됩니다.  
   
 ###  <a name="example-rmo"></a><a name="PShellExample"></a> 예(RMO)  
  다음 예에서는 병합 아티클을 변경하여 아티클에서 사용하는 비즈니스 논리 처리기를 지정합니다.  

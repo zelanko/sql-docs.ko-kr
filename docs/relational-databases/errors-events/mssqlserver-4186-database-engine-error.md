@@ -67,7 +67,7 @@ GO
   
 **함수에 의해 정의되는 뷰 열**  
   
-다음 예제에서는 열 `dbo.ufnGetStock`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `CurrentInventory`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
+다음 예제에서는 열 `CurrentInventory`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `dbo.ufnGetStock`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
   
 ```  
 USE AdventureWorks2012;  

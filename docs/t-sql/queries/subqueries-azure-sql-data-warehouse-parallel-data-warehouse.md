@@ -115,7 +115,7 @@ SELECT Rb.b1, (SELECT RA.a1 FROM RA WHERE RB.b1 = RA.a1) FROM RB GROUP BY RB.b1;
 ```  
   
 ### <a name="i-using-in-with-a-correlated-subquery"></a>9\. 상호 관련된 하위 쿼리가 있는 IN 사용  
- 다음 예에서는 상관 또는 반복 하위 쿼리에 `IN`을 사용합니다. 이것은 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 내부 쿼리는 외부 쿼리에서 선택한 각 행마다 한 번씩 반복적으로 실행됩니다. 이 `EmployeeKey` 테이블에서 `OrderQuantity`가 `FactResellerSales`이고 `5` 및 `DimEmployee` 테이블에서 직원 ID 번호가 일치하는 각 직원의 `FactResellerSales`와 이름 및 성의 인스턴스 하나를 검색합니다.  
+ 다음 예에서는 상관 또는 반복 하위 쿼리에 `IN`을 사용합니다. 이것은 외부 쿼리에 따라 해당 값이 달라지는 쿼리입니다. 내부 쿼리는 외부 쿼리에서 선택한 각 행마다 한 번씩 반복적으로 실행됩니다. 이 `FactResellerSales` 테이블에서 `OrderQuantity`가 `5`이고 `DimEmployee` 및 `FactResellerSales` 테이블에서 직원 ID 번호가 일치하는 각 직원의 `EmployeeKey`와 이름 및 성의 인스턴스 하나를 검색합니다.  
   
 ```  
 SELECT DISTINCT dm.EmployeeKey, dm.FirstName, dm.LastName   

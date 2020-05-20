@@ -54,7 +54,7 @@ EnvelopeAggregate ( geography_operand )
 >  이 메서드는 모든 입력 값이 **null**인 경우 **null**을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 한 도시 안의 `EnvelopeAggregate`geography**위치 지점 집합에서**를 수행합니다.  
+ 다음 예에서는 한 도시 안의 **geography** 위치 지점 집합에서 `EnvelopeAggregate`를 수행합니다.  
   
  ```
  USE AdventureWorks2012  

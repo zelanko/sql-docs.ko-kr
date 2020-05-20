@@ -52,7 +52,7 @@ ms.locfileid: "68116790"
 |**serveradmin**|**serveradmin** 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.|  
 |**securityadmin**|**securityadmin** 고정 서버 역할의 멤버는 로그인 및 해당 속성을 관리합니다. 서버 수준 사용 권한을 `GRANT`, `DENY` 및 `REVOKE`할 수 있습니다. 데이터베이스에 액세스할 수 있는 데이터베이스 수준 사용 권한도 `GRANT`, `DENY` 및 `REVOKE`할 수 있습니다. 또한 이 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로그인 암호를 다시 설정할 수 있습니다.<br /><br /> **중요:** 보안 관리자는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에 대한 액세스 권한을 부여하고 사용자 권한을 구성할 수 있으므로 대부분의 서버 사용 권한을 할당할 수 있습니다. **securityadmin** 역할은 **sysadmin** 역할과 동일하게 처리되어야 합니다.|  
 |**processadmin**|**processadmin** 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에서 실행 중인 프로세스를 종료할 수 있습니다.|  
-|**setupadmin**|**setupadmin** 고정 서버 역할의 멤버는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 연결된 서버를 추가하거나 제거할 수 있습니다. (**를 사용할 때** sysadmin[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 멤버 자격이 필요합니다.)|  
+|**setupadmin**|**setupadmin** 고정 서버 역할의 멤버는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 연결된 서버를 추가하거나 제거할 수 있습니다. ([!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 사용할 때 **sysadmin** 멤버 자격이 필요합니다.)|  
 |**bulkadmin**|**bulkadmin** 고정 서버 역할의 멤버는 `BULK INSERT` 문을 실행할 수 있습니다.|  
 |**diskadmin**|**diskadmin** 고정 서버 역할은 디스크 파일을 관리하는 데 사용됩니다.|  
 |**dbcreator**|**dbcreator** 고정 서버 역할의 멤버는 데이터베이스를 생성, 변경, 삭제, 복원할 수 있습니다.|  

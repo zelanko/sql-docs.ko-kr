@@ -59,7 +59,7 @@ XML 스키마 컬렉션을 삭제하는 것은 트랜잭션 작업입니다. 트
   
 -   테이블 제약 조건에 지정된 컬렉션  
   
--   스키마 바운드 함수 또는 저장 프로시저에서 참조하는 컬렉션. 예를 들어 다음 함수는 `MyCollection`을 지정하기 때문에 `WITH SCHEMABINDING` XML 스키마 컬렉션을 잠급니다. 이것을 제거하면 XML SCHEMA COLLECTION에 대한 잠금이 사라집니다.  
+-   스키마 바운드 함수 또는 저장 프로시저에서 참조하는 컬렉션. 예를 들어 다음 함수는 `WITH SCHEMABINDING`을 지정하기 때문에 `MyCollection` XML 스키마 컬렉션을 잠급니다. 이것을 제거하면 XML SCHEMA COLLECTION에 대한 잠금이 사라집니다.  
   
     ```  
     CREATE FUNCTION dbo.MyFunction()  

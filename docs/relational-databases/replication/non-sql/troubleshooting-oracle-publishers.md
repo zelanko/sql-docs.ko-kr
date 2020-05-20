@@ -62,14 +62,14 @@ ms.locfileid: "72907960"
   
 -   올바른 Oracle 홈 및 경로를 사용해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 하나의 Oracle 바이너리 집합만 설치한 경우에도 Oracle 홈과 관련된 환경 변수를 제대로 설정해야 합니다. 환경 변수 값을 변경한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 중지하고 다시 시작하여 변경 내용을 적용해야 합니다.  
   
- 연결을 구성 및 테스트하는 방법은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Oracle 게시자 구성[의 "](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md) 배포자에 Oracle 클라이언트 네트워킹 소프트웨어 설치 및 구성"을 참조하세요.  
+ 연결을 구성 및 테스트하는 방법은 [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)의 "[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 Oracle 클라이언트 네트워킹 소프트웨어 설치 및 구성"을 참조하세요.  
   
 ## <a name="the-oracle-publisher-is-associated-with-another-distributor"></a>Oracle 게시자가 다른 배포자와 연결되어 있습니다.  
  Oracle 게시자는 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에만 연결할 수 있습니다. Oracle 게시자에 배포자가 연결되어 있는 경우 다른 배포자를 사용하려면 먼저 기존 배포자를 삭제해야 합니다. 기존 배포자를 먼저 삭제하지 않으면 다음 오류 메시지 중 하나가 표시됩니다.  
   
 -   "Oracle 서버 인스턴스 '\<*OraclePublisherName*'은 '\<*SQLServerDistributorName*>'를 배포자로 사용하도록 이전에 구성되었습니다. '\<*NewSQLServerDistributorName*>'을 배포자로 사용하려면 Oracle 서버 인스턴스의 현재 복제 구성을 제거하여 해당 서버 인스턴스의 모든 게시를 삭제해야 합니다."  
   
--   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.\<*DistributionDatabaseName>* '에 대한 게시자 ' *\<OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
+-   "Oracle 서버 '\<*OracleServerName*>'는 배포자 '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*'에 대한 게시자 '\<*OraclePublisherName*>'으로 이미 정의되었습니다. 게시자를 삭제하거나 공용 동의어 ' *\<SynonymName>* '을 삭제하고 다시 만드세요."  
   
  Oracle 게시자를 삭제하면 Oracle 데이터베이스의 복제 개체가 자동으로 정리됩니다. 그러나 어떤 경우에는 Oracle 복제 개체를 수동으로 정리해야 합니다. 복제에 의해 생성된 Oracle 복제 개체를 수동으로 정리하려면 다음을 수행하십시오.  
   

@@ -39,7 +39,7 @@ ms.locfileid: "68042474"
  CLR 반환 형식: **SqlGeography**  
   
 ## <a name="remarks"></a>설명  
- 봉투 각도가 90보다 큰 `FullGlobe`geography**인스턴스에 대해** 개체를 반환합니다.  
+ 봉투 각도가 90보다 큰 **geography** 인스턴스에 대해 `FullGlobe` 개체를 반환합니다.  
   
  빈 **geography** 인스턴스에 대해 빈 **geography** 컬렉션을 반환합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68042474"
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>A. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
- 다음 예에서는 초기화되지 않은 `STConvexHull()`geography**인스턴스에**을 사용합니다.  
+ 다음 예에서는 초기화되지 않은 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```
  DECLARE @g geography;  
@@ -73,7 +73,7 @@ ms.locfileid: "68042474"
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>D. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
- 다음 예에서는 봉투 각도가 90도보다 큰 `STConvexHull()`geography**인스턴스에**을 사용합니다.  
+ 다음 예에서는 봉투 각도가 90도보다 큰 **geography** 인스턴스에 `STConvexHull()`을 사용합니다.  
   
 ```
  DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  

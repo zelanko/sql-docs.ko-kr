@@ -42,7 +42,7 @@ ms.locfileid: "68107845"
  CLR 반환 형식: **SqlInt32**  
   
 ## <a name="remarks"></a>설명  
- `STDimension()`geometry**인스턴스가 비어 있으면**은 1을 반환합니다.  
+ **geometry** 인스턴스가 비어 있으면 `STDimension()`은 1을 반환합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 테이블 변수를 만들어 **geometry** 인스턴스를 보관하고 `Point`, `LineString` 및 `Polygon`를 삽입합니다.  그런 다음, `STDimension()`을 사용하여 각 **geometry** 인스턴스의 차원을 반환합니다.  

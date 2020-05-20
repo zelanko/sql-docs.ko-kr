@@ -106,7 +106,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-반환된 행 집합에는 형식 정보가 유지됩니다. **query()** , **value()** , **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
+반환된 행 집합에는 형식 정보가 유지됩니다. **query()**, **value()**, **exist()** 및 **nodes()** 와 같은 **xml** 데이터 형식 메서드를 **nodes()** 메서드의 결과에 적용할 수 있습니다. 하지만 **modify()** 메서드를 적용하여 XML 인스턴스를 수정할 수는 없습니다.  
   
 또한 행 집합의 컨텍스트 노드는 구체화할 수 없습니다. 즉, 이 노드를 SELECT 문에서 사용할 수 없습니다. 하지만 IS NULL 및 COUNT(*)에서는 사용할 수 있습니다.  
   
@@ -201,9 +201,9 @@ go
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>2\. xml 형식의 열에 대해 nodes() 메서드 지정  
 이 예에서는 자전거 제조 지침이 사용되며 **ProductModel** 테이블에서 **xml** 형식의 Instructions 열에 저장되어 있습니다.  
   
-다음 예에서 `nodes()` 메서드는 `Instructions` 테이블에 있는 **xml** 형식의 `ProductModel` 열에 대해 지정됩니다.  
+다음 예에서 `nodes()` 메서드는 `ProductModel` 테이블에 있는 **xml** 형식의 `Instructions` 열에 대해 지정됩니다.  
   
-`nodes()` 메서드는 `Location` 경로를 지정하여 <`/MI:root/MI:Location`> 요소를 컨텍스트 노드로 설정합니다. 결과 행 집합에는 <`Location`> 요소로 설정된 컨텍스트 노드와 함께 문서에 있는 각 <`Location`> 노드에 대해 원래 문서의 논리적 복사본이 하나씩 들어 있습니다. 따라서 `nodes()` 함수는 일련의 <`Location`> 컨텍스트 노드를 제공합니다.  
+`nodes()` 메서드는 `/MI:root/MI:Location` 경로를 지정하여 <`Location`> 요소를 컨텍스트 노드로 설정합니다. 결과 행 집합에는 <`Location`> 요소로 설정된 컨텍스트 노드와 함께 문서에 있는 각 <`Location`> 노드에 대해 원래 문서의 논리적 복사본이 하나씩 들어 있습니다. 따라서 `nodes()` 함수는 일련의 <`Location`> 컨텍스트 노드를 제공합니다.  
   
 이 행 집합에 대한 `query()` 메서드는 `self::node`를 요청하고 각 행에 `<Location>` 요소를 반환합니다.  
   
@@ -211,7 +211,7 @@ go
   
 - 각 <`Location`>에서 위치 ID 찾기  
   
-- 각 <`step``Location`에서 제조 단계(<>> 자식 요소) 검색  
+- 각 <`Location`>에서 제조 단계(<`step`> 자식 요소) 검색  
   
 이 쿼리는 `'.'` 메서드에서 `self::node()`에 대한 축약형 구문 `query()`이 지정된 컨텍스트 항목을 반환합니다.  
   

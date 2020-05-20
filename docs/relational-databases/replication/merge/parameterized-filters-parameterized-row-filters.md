@@ -48,7 +48,7 @@ ms.locfileid: "71711062"
   
      구독자 또는 배포자 이름 대신 다른 값으로 이 함수를 재정의할 수도 있습니다. 일반적으로 애플리케이션에서는 판매 직원 이름 또는 판매 직원 ID와 같은 의미 있는 값으로 이 함수를 재정의합니다. 자세한 내용은 이 항목의 "HOST_NAME() 값 재정의"를 참조하십시오.  
   
- 시스템 함수에서 반환된 값을 사용자가 필터링하는 테이블에서 지정한 열과 비교한 다음 해당 데이터가 구독자로 다운로드됩니다. 구독이 초기화되어 초기 스냅샷에 해당 데이터만 들어 있을 경우와 구독이 동기화될 때마다 이 비교를 수행합니다. 기본적으로 게시자의 변경 내용으로 인해 파티션 외부로 이동되는 행은 구독자에서 삭제됩니다. 이 동작은 `@allow_partition_realignment`sp_addmergepublication&#40;Transact-SQL&#41;[의 ](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) 매개 변수를 사용하여 제어합니다.  
+ 시스템 함수에서 반환된 값을 사용자가 필터링하는 테이블에서 지정한 열과 비교한 다음 해당 데이터가 구독자로 다운로드됩니다. 구독이 초기화되어 초기 스냅샷에 해당 데이터만 들어 있을 경우와 구독이 동기화될 때마다 이 비교를 수행합니다. 기본적으로 게시자의 변경 내용으로 인해 파티션 외부로 이동되는 행은 구독자에서 삭제됩니다. 이 동작은 [sp_addmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 `@allow_partition_realignment` 매개 변수를 사용하여 제어합니다.  
   
 > [!NOTE]  
 >  매개 변수가 있는 필터에 대해 비교가 수행될 경우 항상 데이터베이스 데이터 정렬을 사용합니다. 예를 들어 데이터베이스 데이터 정렬에서는 대/소문자를 구분하지 않지만 테이블 또는 열 데이터 정렬에서는 대/소문자를 구분할 경우 비교 시 대/소문자를 구분하지 않습니다.  
@@ -95,7 +95,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
 > [!IMPORTANT]
->  HOST_NAME() 함수는 **nchar** 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절을 `@subset_filterclause`sp_addmergearticle[의 ](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 매개 변수에 사용할 수 있지만, 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행하여 유효성을 검사하는데, 컴퓨터 이름을 **int**로 변환할 수 없기 때문에 유효성 검사에 실패합니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
+>  HOST_NAME() 함수는 **nchar** 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절을 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)의 `@subset_filterclause` 매개 변수에 사용할 수 있지만, 일반적으로 새 게시 마법사에서는 사용할 수 없습니다. 마법사는 필터 절을 실행하여 유효성을 검사하는데, 컴퓨터 이름을 **int**로 변환할 수 없기 때문에 유효성 검사에 실패합니다. 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
   
@@ -103,7 +103,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: 새 구독 마법사의 **HOST\_NAME\(\) 값** 페이지에서 값을 지정합니다. 구독 만들기에 대한 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: `@hostname`sp_addmergesubscription&#40;Transact-SQL&#41;[(밀어넣기 구독의 경우) 또는 ](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;[(끌어오기 구독의 경우)의 ](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) 매개 변수에 값을 지정합니다.  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [sp_addmergesubscription&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)(밀어넣기 구독의 경우) 또는 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(끌어오기 구독의 경우)의 `@hostname` 매개 변수에 값을 지정합니다.  
   
 -   병합 에이전트: 명령줄 또는 에이전트 프로필을 통해 **-Hostname** 매개 변수의 값을 지정합니다. 병합 에이전트에 대한 자세한 내용은 [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)를 참조하십시오. 에이전트 프로필에 대한 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하십시오.  
   

@@ -62,7 +62,7 @@ ms.locfileid: "71290734"
 
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
 
--   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 `AdventureWorks2014.bak`AdventureWorks 샘플 데이터베이스[에서 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)를 다운로드하고 백업을 복원하세요.  
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
 
 -   AdventureWorks 데이터베이스에서 테이블을 만들고 삭제할 수 있는 권한이 있어야 합니다.
     
@@ -76,7 +76,7 @@ ms.locfileid: "71290734"
 
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 샘플 데이터와 강의 패키지를 Zip 파일로 다운로드하려면 [SQL Server Integration Services 자습서 파일](https://www.microsoft.com/download/details.aspx?id=56827)을 참조하세요. Zip 파일에 있는 대부분 파일은 의도하지 않은 변경을 방지하기 위해 읽기 전용입니다. 출력을 파일에 쓰거나 변경하려면 파일 속성에서 읽기 전용 특성을 꺼야 할 수 있습니다.
 
--   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 `AdventureWorks2014.bak`AdventureWorks 샘플 데이터베이스[에서 ](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)를 다운로드하고 백업을 복원하세요.  
+-   **AdventureWorks2014** 샘플 데이터베이스. **AdventureWorks2014** 데이터베이스를 다운로드하려면 [AdventureWorks 샘플 데이터베이스](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)에서 `AdventureWorks2014.bak`를 다운로드하고 백업을 복원하세요.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     

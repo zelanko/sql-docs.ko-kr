@@ -54,7 +54,7 @@ IDENT_INCR ( 'table_or_view' )
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 지정된 테이블에서 증가값 반환  
- 다음 예에서는 `Person.Address` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 대한 증가값을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Person.Address` 테이블에 대한 증가값을 반환합니다.  
   
 ```sql  
 USE AdventureWorks2012;  

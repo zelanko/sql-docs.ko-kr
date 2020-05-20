@@ -104,7 +104,7 @@ RECEIVE * FROM MyQueue
 
 큐가 비어 있는 경우 이 문은 즉시 빈 결과 집합을 반환합니다. 그렇지 않으면 모든 큐 알림을 반환합니다.
 
-`SSPROP_QP_NOTIFICATION_MSGTEXT` 및 `SSPROP_QP_NOTIFICATION_OPTIONS`가 null이 아니고 비어 있지 않은 경우 위에 정의된 세 가지 속성을 포함하는 쿼리 알림 TDS 헤더가 서버로 전송됩니다. 이 동작은 명령이 실행될 때마다 발생합니다. 둘 중 하나가 null이거나 비어 있는 경우 헤더가 전송되지 않고 `DB_E_ERRORSOCCURRED`가 발생합니다(또는 속성이 모두 선택 사항으로 표시되는 경우 `DB_S_ERRORSOCCURRED`가 발생함). 그러면 상태 값이 `DBPROPSTATUS_BADVALUE`로 설정됩니다. 실행 및 준비 시 유효성 검사가 수행됩니다. 마찬가지로, `DB_S_ERRORSOCCURED` 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 연결에 대해 쿼리 알림 속성이 설정되어 있으면 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]가 발생합니다. 이 경우 상태 값은 `DBPROPSTATUS_NOTSUPPORTED`입니다.
+`SSPROP_QP_NOTIFICATION_MSGTEXT` 및 `SSPROP_QP_NOTIFICATION_OPTIONS`가 null이 아니고 비어 있지 않은 경우 위에 정의된 세 가지 속성을 포함하는 쿼리 알림 TDS 헤더가 서버로 전송됩니다. 이 동작은 명령이 실행될 때마다 발생합니다. 둘 중 하나가 null이거나 비어 있는 경우 헤더가 전송되지 않고 `DB_E_ERRORSOCCURRED`가 발생합니다(또는 속성이 모두 선택 사항으로 표시되는 경우 `DB_S_ERRORSOCCURRED`가 발생함). 그러면 상태 값이 `DBPROPSTATUS_BADVALUE`로 설정됩니다. 실행 및 준비 시 유효성 검사가 수행됩니다. 마찬가지로, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 연결에 대해 쿼리 알림 속성이 설정되어 있으면 `DB_S_ERRORSOCCURED`가 발생합니다. 이 경우 상태 값은 `DBPROPSTATUS_NOTSUPPORTED`입니다.
 
 구독을 시작한다고 해서 반드시 후속 메시지가 성공적으로 배달되는 것은 아닙니다. 또한 지정된 서비스 이름의 유효성이 검사되지 않습니다.
 

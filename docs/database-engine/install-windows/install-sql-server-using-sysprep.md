@@ -83,7 +83,7 @@ ms.locfileid: "67990955"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
   
 3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   
@@ -95,7 +95,7 @@ ms.locfileid: "67990955"
   
 7. **이미지 유형 준비** 페이지에서 **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비**를 선택합니다. 
   
-     컴퓨터에 **의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만** 이미지 유형 준비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오. 
+     컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만 **이미지 유형 준비** 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오. 
   
 8. **사용 조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 
   
@@ -225,7 +225,7 @@ ms.locfileid: "67990955"
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다. 
   
-2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지에서** 독립 실행형  **인스턴스의 이미지 준비**를 클릭합니다. 
+2. 설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 실행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하려면 **고급** 페이지에서 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**를 클릭합니다. 
   
 3. 시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 **확인**을 클릭합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다. 
   

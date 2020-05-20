@@ -136,7 +136,7 @@ SQL Server 2017에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 클러스
 
 ## <a name="understand-sql-server-resource-agent-for-pacemaker"></a>pacemaker용 SQL Server 리소스 에이전트 이해
 
-SQL Server 2017 CTP 1.4에서는 `sequence_number`에 `sys.availability_groups`가 추가되어, Pacemaker에서 보조 복제본이 주 복제본을 기준으로 얼마나 최신 상태인지를 확인할 수 있습니다. `sequence_number`는 로컬 가용성 그룹 복제본이 얼마나 최신 상태인지를 나타내는 단조롭게 증가하는 BIGINT입니다. Pacemaker는 가용성 그룹 구성이 변경될 때마다 `sequence_number`를 업데이트합니다. 구성 변경의 예로는 장애 조치(failover), 복제본 추가, 제거 등이 있습니다. 이 번호는 주 복제본에서 업데이트된 다음, 보조 복제본에 복제됩니다. 따라서 최신 구성이 포함된 보조 복제본은 주 복제본과 시퀀스 번호가 같습니다. 
+SQL Server 2017 CTP 1.4에서는 `sys.availability_groups`에 `sequence_number`가 추가되어, Pacemaker에서 보조 복제본이 주 복제본을 기준으로 얼마나 최신 상태인지를 확인할 수 있습니다. `sequence_number`는 로컬 가용성 그룹 복제본이 얼마나 최신 상태인지를 나타내는 단조롭게 증가하는 BIGINT입니다. Pacemaker는 가용성 그룹 구성이 변경될 때마다 `sequence_number`를 업데이트합니다. 구성 변경의 예로는 장애 조치(failover), 복제본 추가, 제거 등이 있습니다. 이 번호는 주 복제본에서 업데이트된 다음, 보조 복제본에 복제됩니다. 따라서 최신 구성이 포함된 보조 복제본은 주 복제본과 시퀀스 번호가 같습니다. 
 
 Pacemaker는 복제본 수준을 주 복제본으로 올리기로 결정한 경우 먼저 모든 복제본에 ‘수준 올리기 전’ 알림을 보냅니다.  복제본이 시퀀스 번호를 반환합니다. 그다음에 Pacemaker가 실제로 복제본 수준을 주 복제본으로 올리려고 할 때 시퀀스 번호가 모든 시퀀스 번호 중 가장 높은 경우에만 복제본 수준이 올라갑니다. 시퀀스 번호가 가장 높은 시퀀스 번호와 일치하지 않는 복제본의 수준 올리기 작업은 거부됩니다. 이 방법에서는 일련 번호가 가장 높은 복제본만 주 복제본으로 승격될 수 있으므로 데이터가 손실되지 않습니다. 
 
@@ -155,7 +155,7 @@ Pacemaker는 복제본 수준을 주 복제본으로 올리기로 결정한 경�
 
 기본 동작을 재정의하여 가용성 그룹 리소스가 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 자동으로 설정하지 못하도록 방지할 수 있습니다.
 
-다음 스크립트에서는 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 가용성 그룹의 `<**ag1**>`을 0으로 설정합니다. 실행하기 전에 `<**ag1**>`을 가용성 그룹의 이름으로 바꿉니다.
+다음 스크립트에서는 `<**ag1**>` 가용성 그룹의 `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`을 0으로 설정합니다. 실행하기 전에 `<**ag1**>`을 가용성 그룹의 이름으로 바꿉니다.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0

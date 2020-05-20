@@ -27,7 +27,7 @@ ms.locfileid: "76288202"
   
 -   사용자의 게시 데이터베이스 이름을 사용할 수 있도록 `use AdventureWorks2012` 줄을 변경합니다.  
   
--   `--` 줄에서 주석(`exec sp_helparticle @publication='<PublicationName>'`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
+-   `exec sp_helparticle @publication='<PublicationName>'` 줄에서 주석(`--`)을 제거하고 \<PublicationName>을 게시 이름으로 바꿉니다.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

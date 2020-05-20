@@ -41,9 +41,9 @@ ms.locfileid: "71286821"
   
 1.  `email`, `name` 및 `title`이라는 세 개의 문자열 변수를 만듭니다. `email` 변수 값으로 올바른 회사 전자 메일 주소를 입력합니다.  
   
-2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `email`ReadOnlyVariables**속성에** 변수를 추가합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 **ReadOnlyVariables** 속성에 `email` 변수를 추가합니다.  
   
-3.  `name`ReadWriteVariables`title` 속성에 **및** 변수를 추가합니다.  
+3.  **ReadWriteVariables** 속성에 `name` 및 `title` 변수를 추가합니다.  
   
 4.  스크립트 프로젝트에서 **System.DirectoryServices** 네임스페이스에 대한 참조를 추가합니다.  
   

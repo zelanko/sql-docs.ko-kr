@@ -26,7 +26,7 @@ ms.locfileid: "72907051"
   
 ### <a name="to-set-a-trace-filter"></a>추적 필터를 설정하려면  
   
-1.  추적이 이미 실행 중이면 **을 지정하고** sp_trace_setstatus`@status = 0`를 실행하여 추적을 중지합니다.  
+1.  추적이 이미 실행 중이면 `@status = 0`을 지정하고 **sp_trace_setstatus**를 실행하여 추적을 중지합니다.  
   
 2.  **sp_trace_setfilter** 를 실행하여 추적할 이벤트에서 검색할 정보 유형을 구성합니다.  
 
