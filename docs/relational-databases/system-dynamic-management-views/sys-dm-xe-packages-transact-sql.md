@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_packages dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090266"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829077"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68090266"
 |module_guid|**nvarchar(60)**|이 패키지를 표시하는 모듈의 GUID입니다. Null을 허용하지 않습니다.|  
 |module_address|**varbinary(8)**|패키지를 포함하는 모듈이 로드된 기준 주소입니다. 한 개의 모듈이 여러 개의 패키지를 표시할 수 있습니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -57,7 +57,7 @@ ms.locfileid: "68090266"
 |시작|대상|관계|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

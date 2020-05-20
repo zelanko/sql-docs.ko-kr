@@ -17,14 +17,14 @@ helpviewer_keywords:
 - extended events [SQL Server], views
 - sys.dm_xe_session_event_actions dynamic management view
 ms.assetid: 0c22a546-683e-4c84-ab97-1e9e95304b03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10ef9265ef659985d667632e864e55f58ef4911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9ff9864f3d94909cba5acc20123f00caef6bfa3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090248"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829054"
 ---
 # <a name="sysdm_xe_session_event_actions-transact-sql"></a>sys.dm_xe_session_event_actions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68090248"
 |event_name|**nvarchar(256)**|동작이 바인딩된 이벤트의 이름입니다. Null을 허용하지 않습니다.|  
 |event_package_guid|**uniqueidentifier**|이벤트가 포함된 패키지의 GUID입니다. Null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  

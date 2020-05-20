@@ -22,14 +22,14 @@ helpviewer_keywords:
 - readable secondary replicas
 - sys.availability_read_only_routing_lists dynamic management view
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 9449c9a52a49f86e72542d965c1ae1b6a5d1809c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5a0cc56c8a942a430958f301831b16d9eb079a20
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942633"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829111"
 ---
 # <a name="sysavailability_read_only_routing_lists-transact-sql"></a>sys.availability_read_only_routing_lists(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67942633"
 |**routing_priority**|**int**|라우팅 우선 순위입니다(1이 우선 순위가 가장 높고 2가 그 다음으로 높음).|  
 |**read_only_replica_id**|**uniqueidentifier**|읽기 전용 작업이 라우팅될 가용성 복제본의 고유한 ID입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

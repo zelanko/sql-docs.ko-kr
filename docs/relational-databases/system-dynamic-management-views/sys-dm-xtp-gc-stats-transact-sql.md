@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28d98f7f95d9e9c2af967976b875f61388342583
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e9e9502dda9eab45c27065c37b31109c99c4c4f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090170"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829027"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68090170"
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|서버 시작 이후 가비지 수집 하위 시스템에 의해 검사되는 행의 수입니다.|  
 |rows_no_sweep_needed|**bigint**|불량 영역 검색 없이 제거된 행 수입니다.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68090170"
 |sweep_rows_expired|**bigint**|불량 영역 처리에서 읽는 만료된 행입니다.|  
 |sweep_rows_expired_removed|**bigint**|불량 영역 처리에서 제거되어 만료된 행입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  인스턴스에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="usage-scenario"></a>사용 시나리오  

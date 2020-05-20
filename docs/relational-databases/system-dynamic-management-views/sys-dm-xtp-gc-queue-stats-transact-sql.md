@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 286449b00f20858f641e25fd1b4e3f1914925bb0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829055"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats(Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "68090206"
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
 
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|큐의 고유 식별자입니다.|  
 |total_enqueues|**bigint**|서버 시작 후 이 큐에 배치된 가비지 수집 작업 항목의 총 수입니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68090206"
 |maximum_queue_depth|**bigint**|이 큐의 최대 깊이입니다.|  
 |last_service_ticks|**bigint**|큐가 마지막으로 서비스되었을 때의 CPU 틱입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="user-scenario"></a>사용자 시나리오  

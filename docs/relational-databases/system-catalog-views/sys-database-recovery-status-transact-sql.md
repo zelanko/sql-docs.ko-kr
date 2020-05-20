@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 712ee7d1f4f841de507ee56095cb47307b05b45b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829087"
 ---
 # <a name="sysdatabase_recovery_status-transact-sql"></a>sys.database_recovery_status(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68079520"
   
 -   **Master** 데이터베이스에서 CREATE DATABASE 권한이 있어야 합니다.    
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유한 데이터베이스 ID입니다.|  
 |**database_guid**|**uniqueidentifier**|데이터베이스의 모든 데이터베이스 파일을 함께 연결하는 데 사용됩니다. 데이터베이스를 제대로 시작하려면 모든 파일의 헤더 페이지에 이 GUID가 있어야 합니다. 현재까지는 하나의 데이터베이스에만 이 GUID가 있었습니다. 그러나 데이터베이스를 복사하고 연결하여 GUID를 중복하여 만들 수 있습니다. 아직 존재하지 않는 데이터베이스를 복원할 때 RESTORE는 항상 새 GUID를 생성합니다.<br /><br /> NULL= 데이터베이스가 오프라인이거나 데이터베이스를 시작할 수 없습니다.|  
@@ -49,13 +49,13 @@ ms.locfileid: "68079520"
 |**first_recovery_fork_guid**|**uniqueidentifier**|복구 분기 시작 지점의 식별자입니다.<br /><br /> NULL= 데이터베이스가 오프라인이거나 데이터베이스를 시작할 수 없습니다.|  
 |**fork_point_lsn**|**numeric(25,0)**|**First_recovery_fork_guid** (! =)이 같지 않은 경우 fork_point_lsn **recovery_fork_guid**은 **fork_point_lsn** 현재 분기 지점의 로그 시퀀스 번호입니다. 그렇지 않으면 값은 NULL입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [데이터베이스 및 파일 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [HEADERONLY &#40;Transact-sql&#41;복원](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

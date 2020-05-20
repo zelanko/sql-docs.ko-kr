@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090090"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829020"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
-|열 이름|유형|설명|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|메모리 소비자의 내부 ID입니다.|  
 |memory_consumer_type|**int**|다음 값 중 하나를 사용 하는 메모리 소비자의 유형을 나타내는 정수입니다.<br /><br /> 0-표시 되지 않아야 합니다. 둘 이상 소비자의 메모리 사용량을 집계합니다.<br /><br /> 1-할당 준비: 시스템 할당 준비에 대 한 메모리 소비량을 추적 합니다.<br /><br /> 2 VARHEAP: 가변 길이 힙의 메모리 소비량을 추적 합니다.<br /><br /> 4-IO 페이지 풀: IO 작업에 사용 되는 시스템 페이지 풀의 메모리 소비량을 추적 합니다.|  
@@ -48,13 +48,13 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|이 소비자에 대해 예약된 바이트 수입니다.|  
 |used_bytes|**bigint**|이 소비자가 사용하는 바이트입니다. varheap 메모리 소비자에만 적용됩니다.|  
 |allocation_count|**int**|할당 수입니다.|  
-|partition_count|**int**|내부적으로만 사용됩니다.|  
-|sizeclass_count|**int**|내부적으로만 사용됩니다.|  
-|min_sizeclass|**int**|내부적으로만 사용됩니다.|  
-|max_sizeclass|**int**|내부적으로만 사용됩니다.|  
+|partition_count|**int**|내부 전용입니다.|  
+|sizeclass_count|**int**|내부 전용입니다.|  
+|min_sizeclass|**int**|내부 전용입니다.|  
+|max_sizeclass|**int**|내부 전용입니다.|  
 |memory_consumer_address|**varbinary**|소비자의 내부 주소입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="user-scenario"></a>사용자 시나리오  

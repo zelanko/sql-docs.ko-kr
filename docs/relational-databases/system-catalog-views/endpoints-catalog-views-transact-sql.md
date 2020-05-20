@@ -13,14 +13,14 @@ helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98838772b53b5b650aa2d268049afde29443277e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b0a153beae9d95d9ff3d59945ee1665374a4cf12
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68033028"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829149"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>엔드포인트 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

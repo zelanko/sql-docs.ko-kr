@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6963d3a2b28ba103c731f015fd352ff105cfb95
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137767"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828945"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시가 지정된 경우에는 해당 게시에 대한 모든 충돌이 반환됩니다. 예를 들어 **MSmerge_conflict_Customers** 테이블에 **WA** 및 **CA** 게시에 대 한 충돌 행이 있는 경우 게시 이름 **ca** 를 전달 하면 **ca** 게시와 관련 된 충돌을 검색 합니다.  
   
-`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 없습니다. 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에서 충돌 테이블은 게시 된 각 아티클에 대해 하나의 테이블을 사용 하 여 **\_MSmerge_conflict 게시\_아티클의**형식 이름을 사용 하 여 지정 됩니다.  
+`[ @conflict_table = ] 'conflict_table'`충돌 테이블의 이름입니다. *conflict_table* 는 **sysname**이며 기본값은 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 충돌 테이블은 게시 된 각 아티클에 대해 하나의 테이블을 사용 하 여 **MSmerge_conflict \_ _게시 \_ 아티클의_** 형식 이름을 사용 하 여 지정 됩니다.  
   
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -69,7 +69,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>설명  
  **sp_helpmergeconflictrows** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  배포 데이터베이스의 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 **replmonitor** 역할의 멤버만 **sp_helpmergeconflictrows**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
