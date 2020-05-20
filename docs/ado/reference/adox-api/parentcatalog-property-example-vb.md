@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ParentCatalog property [ADOX], Visual Basic example
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38dad31ffcdd134acef35ce397ac3ee10b5cc3a7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965596"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763754"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog 속성 예제(VB)
 다음 코드에서는 카탈로그에 테이블을 추가 하기 전에 [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) 속성을 사용 하 여 공급자별 속성에 액세스 하는 방법을 보여 줍니다. 속성은 **autoincrement**이며 Microsoft Jet 데이터베이스에서 autoincrement 필드를 만듭니다.  
