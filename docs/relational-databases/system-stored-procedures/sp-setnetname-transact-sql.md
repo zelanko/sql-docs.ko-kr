@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e75d1d43c37d0e758b02025df4f601c87f44f2e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104406"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816817"
 ---
 # <a name="sp_setnetname-transact-sql"></a>sp_setnetname(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원격 인스턴스에 대 한 실제 네트워크 컴퓨터 이름으로 **sys. servers** 의 네트워크 이름을 설정 합니다. 이 프로시저를 사용하여 잘못된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자를 포함하는 네트워크 이름을 가진 컴퓨터에 원격 저장 프로시저 호출을 실행할 수 있습니다.  
+  의 원격 인스턴스에 대 한 실제 네트워크 컴퓨터 이름으로 **sys. servers** 의 네트워크 이름을 설정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 프로시저를 사용하여 잘못된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자를 포함하는 네트워크 이름을 가진 컴퓨터에 원격 저장 프로시저 호출을 실행할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>인수  
- *server* ** @server = '** server **'**  
+ ** @server = '** *server* **'**  
  사용자가 코드화한 원격 저장 프로시저 호출 구문에서 참조되는 원격 서버의 이름입니다. 이 *서버*를 사용 하려면 **sys. 서버** 에 정확히 한 개의 행이 있어야 합니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
- *network_name* ** @netname = '** network_name **'**  
+ ** @netname = '** *network_name* **'**  
  원격 저장 프로시저 호출이 수행되는 컴퓨터의 네트워크 이름입니다. *network_name* 는 **sysname**이며 기본값은 없습니다.  
   
  이 이름은 반드시 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 컴퓨터 이름과 일치해야 하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자에 사용할 수 없는 문자를 포함할 수 있습니다.  
@@ -53,7 +53,7 @@ sp_setnetname
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  컴퓨터 이름에 잘못된 식별자가 있는 경우 Windows 컴퓨터에 일부 원격 저장 프로시저를 호출하면 문제가 발생할 수 있습니다.  
@@ -73,7 +73,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  **Sp_setnetname** 를 사용 하 여 연결 된 서버를 로컬 서버에 다시 가리키는 것은 지원 되지 않습니다. 이런 방법으로 참조된 서버는 분산 트랜잭션에 참여할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 및 **setupadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  

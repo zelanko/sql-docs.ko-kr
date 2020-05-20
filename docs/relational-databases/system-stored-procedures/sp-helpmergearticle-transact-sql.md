@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818130"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`정보를 검색할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 현재 데이터베이스 **%** 의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'`정보를 검색할 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 **%** 현재 데이터베이스의 모든 게시에 포함 된 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
   
 `[ @article = ] 'article'`정보를 반환할 아티클의 이름입니다. *article*은 **sysname**이며 기본값은 지정 된 **%** 게시의 모든 병합 아티클에 대 한 정보를 반환 하는입니다.  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|자동 id 범위 처리를 사용할 수 있으면이 고, 그렇지 않으면입니다. 여기서 **1** 은 사용 하도록 설정 되 고 **0** 은 사용 하지 않도록 설정 됩니다.|  
 |**pub_identity_range**|**bigint**|새 ID 값 할당 시 사용할 범위 크기입니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**identity_range**|**bigint**|새 ID 값 할당 시 사용할 범위 크기입니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
-|**고대비**|**int**|또는 이전 버전의 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 하는 구독자에 사용 되는 백분율 값입니다. **임계값** 병합 에이전트 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
+|**고대비**|**int**|또는 이전 버전의를 실행 하는 구독자에 사용 되는 백분율 값입니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **임계값** 병합 에이전트 새 id 범위를 할당 하는 시기를 제어 합니다. 임계값에 지정된 백분율 값을 사용하는 경우 해당 병합 에이전트가 새 ID 범위를 만듭니다. 자세한 내용은 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)의 "병합 복제" 섹션을 참조 하세요.|  
 |**verify_resolver_signature**|**int**|병합 복제에서 해결 프로그램을 사용 하기 전에 디지털 서명을 확인 하면이 고, 그렇지 않으면입니다. 여기서 **0** 은 서명이 확인 되지 않음을 의미 하 고, **1** 은 서명이 신뢰할 수 있는 소스에서 온 것인지를 확인 하는 것을 의미 합니다.|  
 |**destination_object**|**sysname**|대상 개체의 이름입니다. 저장 프로시저, 뷰 및 UDF 스키마 아티클 병합에만 적용할 수 있습니다.|  
 |**allow_interactive_resolver**|**int**|아티클에서 대화형 해결 프로그램을 사용 하는 경우 여기서 **1** 은이 해결 프로그램이 사용 됨을 의미 하 고 **0** 은 사용 되지 않음을 의미 합니다.|  

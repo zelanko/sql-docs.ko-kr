@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010546"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816461"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`이 수집기 유형에 대 한 XML 스키마입니다. *parameter_schema* **xml** 이며 특정 수집기 형식에 필요할 수 있습니다. 필요하지 않은 경우 이 인수는 NULL일 수 있습니다.  
   
-`[ @collection_package_id = ] collection_package_id`는 컬렉션 집합에 사용 되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* **uniqueidentifer** 필요 합니다. *Collection_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @collection_package_id = ] collection_package_id`는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 컬렉션 패키지를 가리키는 고유한 로컬 식별자입니다. *collection_package_id* **uniqueidentifer** 필요 합니다. *Collection_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
-`[ @upload_package_id = ] upload_package_id`는 컬렉션 집합에 사용 되는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 이며 필수입니다. *Upload_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
+`[ @upload_package_id = ] upload_package_id`는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 컬렉션 집합에 사용 되는 업로드 패키지를 가리키는 고유한 로컬 식별자입니다. *upload_package_id* 은 **uniqueidentifier** 이며 필수입니다. *Upload_package_id*에 대 한 값을 가져오려면 msdb 데이터베이스의 dbo. syscollector_collector_types 시스템 뷰를 쿼리 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Dc_admin** (실행 권한 포함) 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="example"></a>예제  

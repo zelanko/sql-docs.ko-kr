@@ -18,19 +18,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: b70d87a6f1a72662c1ca466a532d3050b4fe58ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5f70fa8b486688a6c83133781b63d188742e345
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942585"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816203"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sp_addumpdevice** 를 사용 하 여 등록 하거나에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]만든 각 백업 장치에 대 한 행을 포함 합니다.  
+  **Sp_addumpdevice** 를 사용 하 여 등록 하거나에서 만든 각 백업 장치에 대 한 행을 포함 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -39,14 +39,14 @@ ms.locfileid: "67942585"
 |**type_desc**|**nvarchar(60)**|백업 디바이스 유형에 대한 설명입니다.<br /><br /> DISK<br /><br /> DISKETTE(사용되지 않음)<br /><br /> TAPE<br /><br /> PIPE(사용되지 않음)<br /><br /> VIRTUAL_DEVICE(타사 백업 공급업체에서 선택적으로 사용)<br /><br /> 일반적으로 DISK와 TAPE만 사용됩니다.|  
 |**physical_name**|**nvarchar(260)**|백업 디바이스의 물리적 파일 이름 또는 경로입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [백업 장치 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
- [Transact-sql&#41;sp_addumpdevice &#40;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [데이터베이스 및 파일 카탈로그 뷰 &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [SQL Server 시스템 카탈로그 쿼리에 대한 질문과 대답](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   

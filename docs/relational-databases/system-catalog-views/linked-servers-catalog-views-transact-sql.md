@@ -13,14 +13,14 @@ helpviewer_keywords:
 - linked servers [SQL Server], catalog views
 - catalog views [SQL Server], linked servers
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03d7058e0e378e3848fe51a2df56886cbb51bcd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 38b17fb728188ff6ea71b4674c6bb2fee7e84f12
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816198"
 ---
 # <a name="linked-servers-catalog-views-transact-sql"></a>연결된 서버 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

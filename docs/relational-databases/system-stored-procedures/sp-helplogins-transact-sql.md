@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122447"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818281"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +47,28 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서 볼 수 있듯이 첫 번째 보고서에는 지정한 각 로그인에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**S**|**varbinary(85)**|로그인 SID(보안 ID)입니다.|  
-|**DefDBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DefDBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|**LoginName**에서 사용 되는 기본 언어입니다.|  
 |**Auser**|**char (5)**|예 = **LoginName** 이 데이터베이스에 연결 된 사용자 이름을 갖습니다.<br /><br /> 아니요 = **LoginName** 에 연결 된 사용자 이름이 없습니다.|  
 |**ARemote**|**char (7)**|예 = **LoginName** 에 연결 된 원격 로그인이 있습니다.<br /><br /> 아니요 = **LoginName** 에 연결 된 로그인이 없습니다.|  
   
  두 번째 보고서에는 다음 표와 같이 각 로그인에 매핑된 사용자와 해당 로그인의 역할 멤버 자격에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
-|**DBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**DBName**|**sysname**|인스턴스에 연결할 때 **LoginName** 이 사용 하는 기본 데이터베이스입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**이름**|**sysname**|**Dbname**에서 **loginname** 이 매핑된 사용자 계정 및 **dbname**에서 **loginname** 이 멤버로 속해 있는 역할입니다.|  
 |**UserOrAlias**|**char (8)**|MemberOf = **UserName** 이 역할입니다.<br /><br /> User = **UserName** 은 사용자 계정입니다.|  
   
 ## <a name="remarks"></a>설명  
  로그인을 제거 하기 전에 **sp_helplogins** 를 사용 하 여 로그인에 매핑된 사용자 계정을 식별 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Securityadmin** 고정 서버 역할의 멤버 자격이 필요 합니다.  
   
  지정 된 로그인에 매핑된 모든 사용자 계정을 식별 하려면 **sp_helplogins** 서버 내의 모든 데이터베이스를 확인 해야 합니다. 따라서 서버의 각 데이터베이스에 대해 다음 조건 중 최소한 하나를 만족해야 합니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dsninfo
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cb67524304807eba6765387590fd53a52b92f19a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124714"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818705"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**정보 유형**|**nvarchar (64)**|DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER 등의 정보 유형입니다.|  
 |**값**|**nvarchar(512)**|관련 정보 유형의 값입니다.|  

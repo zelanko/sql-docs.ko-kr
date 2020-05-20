@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771479"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817743"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>인수  
 `[ @optname = ] 'option_name'`쿼리할 복제 옵션의 이름입니다. *option_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**트랜잭션과**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
 |**결합**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
@@ -53,7 +53,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**수정**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

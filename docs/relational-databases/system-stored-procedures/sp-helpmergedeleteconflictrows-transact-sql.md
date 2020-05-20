@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8b99ca34f1c30e23135e285950b7543d90192ecd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137752"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817966"
 ---
 # <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

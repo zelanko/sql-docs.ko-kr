@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpsubscription
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68764349"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817397"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`게시의 유형입니다. *publication_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
 |**1**|스냅샷 게시|  
@@ -61,7 +61,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`구독 모니터링 정보를 반환할 때 사용 하는 필터링 모드입니다. *모드* 는 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|모든 구독을 반환합니다.|  
 |**1**|오류가 있는 구독만 반환합니다.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_remove_job_from_targets
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d195ca70eb1c1236518ce9af804dc4c5771cd37
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006972"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817359"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행할 수 있는 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  

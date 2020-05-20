@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041035"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816846"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
  초기 스냅숏 이후의 모든 변경 내용을 다시 적용 하는 *resync_type* 매개 변수의 값 **0** 은 리소스를 많이 사용 하지만 전체 다시 초기화 보다 훨씬 더 적을 수 있습니다. 예를 들어 초기 스냅샷이 한 달 전에 전달되었다면 이 값은 지난 달부터의 데이터를 다시 적용합니다. 초기 스냅샷이 1GB의 데이터를 가지고 있으나 지난 달부터의 변경 사항의 양은 2MB의 변경된 데이터를 가진다면 그 데이터를 다시 적용하는 것이 전체 1GB의 스냅샷을 다시 적용하는 것보다 효율적입니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_resyncmergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

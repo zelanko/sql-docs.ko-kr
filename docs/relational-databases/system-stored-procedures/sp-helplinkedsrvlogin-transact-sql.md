@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122457"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818466"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**연결된 서버**|**sysname**|연결된 서버 이름입니다.|  
 |**로컬 로그인**|**sysname**|매핑이 적용되는 로컬 로그인입니다.|  
@@ -59,7 +59,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="remarks"></a>설명  
  로그인 매핑을 삭제 하려면 먼저 **sp_helplinkedsrvlogin** 를 사용 하 여 관련 된 연결 된 서버를 확인 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용 권한을 확인하지 않습니다.  
   
 ## <a name="examples"></a>예  

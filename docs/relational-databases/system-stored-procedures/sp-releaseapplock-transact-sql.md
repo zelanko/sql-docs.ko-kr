@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_releaseapplock
 ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ad6ca284f99a777b8909d2f96ea68ff83c9f467
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075634"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818143"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  클라이언트 애플리케이션이 지정한 잠금 리소스의 이름입니다. 애플리케이션은 리소스가 고유한지 확인해야 합니다. 지정된 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 관리자에 저장할 수 있는 값으로 내부적으로 해시됩니다. *resource_name* 은 **nvarchar (255)** 이며 기본값은 없습니다. *resource_name* 은 이진 비교 되므로 현재 데이터베이스의 데이터 정렬 설정에 관계 없이 대/소문자를 구분 합니다.  
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  데이터베이스의 개체에 대한 사용 권한이 있는 사용자, 역할 또는 애플리케이션 역할입니다. 함수를 성공적으로 호출 하려면 함수의 호출자가 *database_principal*, dbo 또는 db_owner 고정 데이터베이스 역할의 멤버 여야 합니다. 기본값은 public입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -65,7 +65,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
   
  어떤 이유로든 서버가 종료되면 잠금은 해제됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
