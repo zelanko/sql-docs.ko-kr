@@ -1,6 +1,7 @@
 ---
 title: 추적 파일의 SPID(서버 프로세스 ID) 필터링
 titleSuffix: SQL Server Profiler
+description: SPID(서버 프로세스 ID)에 대한 필터를 적용하여 SQL Server Profiler에서 추적 출력을 제한하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 4e565ab93f927c5ccb973a85c810d778e392845a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5e4c3d5b6d69b55a588b9be957d2a3226c6b4719
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307219"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152063"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089195"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001046"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   이 대화 상자를 사용하여 XML 문서를 편집하는 데 사용되는 XML 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **XML** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  
   
 ## <a name="setting-options-in-multiple-locations"></a>여러 위치에서 옵션 설정  
- XML 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용 하 여 DMX 또는 MDX 편집기 등의 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 다른 편집기에 대해 다른 옵션을 설정 하는 경우에는이 대화 상자를 사용 하 여 XML 편집기 옵션을 다시 설정 해야 합니다.  
+ XML 편집기에 대한 옵션은 **모든 언어** 대화 상자(일반)에서도 설정할 수 있습니다. **모든 언어** 대화 상자를 사용 하 여 DMX 또는 MDX 편집기 등의 다른 편집기에 대해 다른 옵션을 설정 하는 경우에는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 이 대화 상자를 사용 하 여 XML 편집기 옵션을 다시 설정 해야 합니다.  
   
 ## <a name="statement-completion"></a>문 완성  
  **멤버 목록 자동 표시**  
@@ -55,7 +55,7 @@ ms.locfileid: "66089195"
   
  줄이 비어 있지 않으면 이 설정은 **복사** 또는 **잘라내기** 에 영향을 주지 않습니다. 어떤 영역도 선택하지 않으면 줄 전체를 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 줄 전체의 텍스트와 줄 끝 문자를 붙여 넣습니다.  
   
-## <a name="display"></a>디스플레이  
+## <a name="display"></a>표시  
  **줄 번호**  
  이 확인란을 선택하면 각 코드 줄 옆에 줄 번호가 표시됩니다.  
   

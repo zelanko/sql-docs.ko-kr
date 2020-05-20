@@ -2,7 +2,7 @@
 title: ODBC를 사용하여 연결
 description: Microsoft ODBC Driver for SQL Server를 사용하여 Linux 또는 macOS에서 데이터베이스에 대한 연결을 만드는 방법에 대해 알아봅니다.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632813"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152043"
 ---
 # <a name="connecting-to-sql-server"></a>SQL Server에 연결
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와의 연결을 만들 수 있는 방법을 설명합니다.  
@@ -36,22 +37,27 @@ Linux 및 macOS에서 지원되는 모든 연결 문자열 키워드 및 특성�
   
 **Driver** 키워드에 전달된 값은 다음 중 하나일 수 있습니다.  
   
--   드라이버를 설치할 때 사용한 이름입니다.
+- 드라이버를 설치할 때 사용한 이름입니다.
 
--   드라이버를 설치하는 데 사용하는 템플릿 .ini 파일에 지정된 드라이버 라이브러리에 대한 경로입니다.  
+- 드라이버를 설치하는 데 사용하는 템플릿 .ini 파일에 지정된 드라이버 라이브러리에 대한 경로입니다.  
 
-DSN을 만들려면 현재 사용자만 액세스할 수 있는 사용자 DSN의 경우 **~/.odbc.ini** 파일(홈 디렉터리의`.odbc.ini`) 또는 시스템 DSN의 경우 `/etc/odbc.ini` 파일을 만들고(필요한 경우) 편집합니다(관리자 권한 필요). 다음은 DSN에 필요한 최소 항목을 표시하는 샘플 파일입니다.  
+DSN은 선택 사항입니다. DSN을 사용하여 연결 문자열에서 참조할 수 있는 `DSN` 이름으로 연결 문자열 키워드를 정의할 수 있습니다. DSN을 만들려면 현재 사용자만 액세스할 수 있는 사용자 DSN의 경우 **~/.odbc.ini** 파일(홈 디렉터리의`.odbc.ini`) 또는 시스템 DSN의 경우 `/etc/odbc.ini` 파일을 만들고(필요한 경우) 편집합니다(관리자 권한 필요). 다음은 DSN에 필요한 최소 항목을 표시하는 샘플 파일입니다.  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+연결 문자열에 위의 DSN을 사용해 연결하려면 다음과 같이 `DSN` 키워드를 지정합니다. `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+위의 연결 문자열은 다음과 같이 `DSN` 키워드가 없는 연결 문자열을 지정하는 것과 동일합니다. `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
 필요에 따라 서버에 연결할 프로토콜 및 포트를 지정할 수 있습니다. 예를 들어 **Server=tcp:** _servername_ **,12345**입니다. Linux 및 macOS 드라이버에서 지원되는 유일한 프로토콜은 `tcp`입니다.
 
@@ -59,11 +65,12 @@ Server = [protocol:]server[,port]
 
 또는 DSN 정보를 템플릿 파일에 추가하고 다음 명령을 실행하여 `~/.odbc.ini`에 추가할 수 있습니다.
  - **odbcinst -i -s -f** _template_file_  
- 
+
 `isql`을 사용하여 연결을 테스트해 드라이버가 작동하는지 확인할 수 있으며, 다음 명령을 사용할 수도 있습니다.
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>TLS/SSL 사용  
+
 이전에 SSL(Secure Sockets Layer)로 알려진 TLS(전송 계층 보안)를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 암호화할 수 있습니다. TLS는 네트워크에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 사용자 이름과 암호를 보호합니다. 또한 TLS는 서버의 ID를 확인하여 MITM(메시지 가로채기) 공격으로부터 보호합니다.  
 
 암호화를 사용하면 보안은 강화되지만 성능은 저하됩니다.
@@ -79,7 +86,7 @@ Server = [protocol:]server[,port]
 
 기본적으로 암호화된 연결에서 서버의 인증서를 항상 확인합니다. 그러나 자체 서명된 인증서가 있는 서버에 연결하는 경우에는 신뢰할 수 있는 인증 기관 목록에 대해 인증서 검사를 우회하는 `TrustServerCertificate` 옵션도 추가해야 합니다.  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

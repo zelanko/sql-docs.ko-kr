@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 84f502edda64fef31acfad4747e669843602e4cb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c005ad315a3bcbeb1048d16cb10e30035512ac6c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632480"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606642"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA 섹션을 사용하여 데이터 삽입  
- XML에서 유효하지 않은 <, > 등의 문자가 포함된 텍스트를 삽입하는 경우 다음 쿼리와 같이 CDATA 섹션을 사용하여 데이터를 삽입할 수 있습니다. 이 쿼리에서는 CDATA 섹션을 지정하지만 엔터티로 변환된 유효하지 않은 문자가 포함된 텍스트 노드로 추가됩니다. 예를 들어 ‘<’는 &lt;로 저장됩니다.  
+ XML에서 유효하지 않은 <, > 등의 문자가 포함된 텍스트를 삽입하는 경우 다음 쿼리와 같이 CDATA 섹션을 사용하여 데이터를 삽입할 수 있습니다. 이 쿼리에서는 CDATA 섹션을 지정하지만 엔터티로 변환된 유효하지 않은 문자가 포함된 텍스트 노드로 추가됩니다. 예를 들어 `<`는 `&lt;`로 저장됩니다.  
   
 ```  
 USE AdventureWorks;  
@@ -236,7 +236,7 @@ GO
 ```  
 <Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
-<Features> <notxml> as text </notxml> or cdata </Features>  
+<Features> &lt;notxml@gt; as text &lt;/notxml&gt; or cdata </Features>  
 </ProductDescription>  
 </Root>       
 ```  

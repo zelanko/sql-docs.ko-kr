@@ -1,5 +1,6 @@
 ---
 title: Recommendation 요소(DTA)
+description: dta 유틸리티에서 Recommendation 요소는 사용자 지정 구성의 일부인 가상 인덱스에 대한 정보를 포함합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6ad8f298dc633959a3da16376c3e2a486ee807c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4ffcd156a3379a341188622142205575a3209a11
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306037"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151823"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 요소(DTA)
 

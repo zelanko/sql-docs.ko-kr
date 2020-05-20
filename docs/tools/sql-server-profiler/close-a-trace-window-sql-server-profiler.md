@@ -1,6 +1,7 @@
 ---
 title: 추적 창 닫기
 titleSuffix: SQL Server Profiler
+description: 이벤트 데이터를 캡처하는 SQL Server Profiler 추적 창을 닫는 방법에 대해 알아봅니다. 추적 도중이나 완료된 후에 추적 창을 닫는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.topic: conceptual
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8f601af41c0a78af0f49a98d97f559b47de237f4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92bf90cf51bc380a1c1cd61d72fb5ebcca68dbd1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74957657"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151927"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>추적 창 닫기(SQL Server Profiler)
 

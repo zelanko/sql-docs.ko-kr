@@ -1,32 +1,34 @@
 ### YamlMime:Landing
-title: SQL Server Machine Learning Services(Python 및 R) 설명서
-summary: SQL Server Machine Learning Services를 사용하여 관계형 데이터에 대해 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서 방법을 보여 줍니다.
+title: SQL Machine Learning 설명서
+summary: SQL에서 기계 학습을 사용하여 온-프레미스와 클라우드에서 관계형 데이터에 대해 Python 및 R을 실행하는 방법을 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서 SQL Machine Learning 사용 방법을 보여 줍니다.
 metadata:
-  title: SQL Server Machine Learning Services(Python, R) 설명서 - 자습서, 빠른 시작 및 설치 가이드
-  description: SQL Server Machine Learning Services를 사용하여 관계형 데이터에 대해 Python 및 R 스크립트를 실행하는 방법을 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서 방법을 보여 줍니다.
+  title: SQL Machine Learning 설명서 - 자습서 및 설치 가이드
+  description: SQL에서 기계 학습을 사용하여 온-프레미스와 클라우드에서 관계형 데이터에 대해 Python 및 R을 실행하는 방법을 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서 SQL Machine Learning 사용 방법을 보여 줍니다.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 09/12/2019
-  ms.openlocfilehash: 94675074f4c9399f3192253a294ff8df8bd6c722
-  ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+  ms.date: 04/24/2020
+  ms.openlocfilehash: 41832dfd555df827e14182900a4faa07ad22ab1e
+  ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
   ms.translationtype: HT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 04/16/2020
-  ms.locfileid: "81487524"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83606827"
 landingContent:
-- title: Machine Learning Services 정보
+- title: SQL Server의 Machine Learning
   linkLists:
   - linkListType: overview
     links:
-    - text: SQL Server Machine Learning Services(Python 및 R)이란?
+    - text: Python 및 R을 사용하는 SQL Server Machine Learning Services란?
       url: sql-server-machine-learning-services.md
-  - linkListType: whats-new
+  - linkListType: get-started
     links:
-    - text: Machine Learning Services의 새로운 기능
-      url: what-s-new-in-sql-server-machine-learning-services.md
+    - text: Windows에 Machine Learning Services 설치
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Linux에 Machine Learning Services 설치
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
   - linkListType: video
     links:
     - text: Machine Learning Services를 사용하여 SQL Server에서 R/Python을 실행하는 방법
@@ -35,11 +37,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server에서 "Hello world" Python 스크립트 실행
+    - text: 간단한 Python 스크립트 실행
       url: tutorials/quickstart-python-create-script.md
     - text: 입력 및 출력 처리
       url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
-    - text: SQL Server에서 Python 데이터 구조 사용
+    - text: SQL에서 Python 데이터 구조 사용
       url: tutorials/quickstart-python-data-structures.md
     - text: 첫 번째 모델 학습 및 사용
       url: tutorials/quickstart-python-train-score-model.md
@@ -53,11 +55,11 @@ landingContent:
   linkLists:
   - linkListType: quickstart
     links:
-    - text: SQL Server에서 "Hello world" R 스크립트 실행
+    - text: 간단한 R 스크립트 실행
       url: tutorials/quickstart-r-create-script.md
     - text: 입력 및 출력 처리
       url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
-    - text: SQL Server에서 R 데이터 구조 사용
+    - text: SQL에서 R 데이터 구조 사용
       url: tutorials/quickstart-r-data-types-and-objects.md
     - text: 첫 번째 모델 학습 및 사용
       url: tutorials/quickstart-r-train-score-model.md
@@ -67,43 +69,45 @@ landingContent:
       url: tutorials/sqldev-in-database-r-for-sql-developers.md
     - text: R 도구에서 Machine Learning Services 사용
       url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
-- title: Machine Learning Services 설치
+- title: 빅 데이터 클러스터의 ML
   linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server 빅 데이터 클러스터란 무엇인가요?
+      url: ../big-data-cluster/big-data-cluster-overview.md
   - linkListType: get-started
     links:
-    - text: Windows에 Machine Learning Services 설치
-      url: install/sql-machine-learning-services-windows-install.md
-    - text: Linux에 Machine Learning Services 설치
-      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/machine-learning/toc.json
+    - text: SQL Server 빅 데이터 클러스터에서 Machine Learning Services 사용
+      url: ../big-data-cluster/machine-learning-services.md
   - linkListType: how-to-guide
     links:
-    - text: Python 클라이언트 설정
-      url: python/setup-python-client-tools-sql.md
-    - text: R 클라이언트 설정
-      url: r/set-up-a-data-science-client.md
-- title: 아키텍처 및 보안
+    - text: MLeap이 있는 Spark 기계 학습 모델
+      url: ../big-data-cluster/spark-create-machine-learning-model.md
+    - text: SQL Server 빅 데이터 클러스터의 Sparklyr
+      url: ../big-data-cluster/sparklyr-from-rstudio.md
+    - text: SQL Server와 Spark 통합
+      url: ../big-data-cluster/spark-mssql-connector.md
+- title: Azure Synapse Analytics의 ML
   linkLists:
-  - linkListType: architecture
+  - linkListType: overview
     links:
-    - text: 확장성 프레임워크
-      url: concepts/extensibility-framework.md
-    - text: Python 확장
-      url: concepts/extension-python.md
-    - text: R 확장
-      url: concepts/extension-r.md
-  - linkListType: concept
+    - text: Azure Synapse Analytics란?
+      url: /azure/synapse-analytics/overview-what-is
+  - linkListType: tutorial
     links:
-    - text: 확장성 프레임워크에 대한 보안
-      url: concepts/security.md
-- title: Python 및 R 패키지 관리
-  linkLists:
+    - text: Apache Spark MLlib 및 Azure Synapse Analytics를 사용하여 기계 학습 앱 빌드
+      url: /azure/synapse-analytics/spark/apache-spark-machine-learning-mllib-notebook
   - linkListType: how-to-guide
     links:
-    - text: Python 패키지 정보 가져오기
-      url: package-management/python-package-information.md
-    - text: sqlmlutils를 사용하여 Python 패키지 설치
-      url: package-management/install-additional-python-packages-on-sql-server.md
-    - text: R 패키지 정보 가져오기
-      url: package-management/r-package-information.md
-    - text: sqlmlutils를 사용하여 새 R 패키지 설치
-      url: package-management/install-additional-r-packages-on-sql-server.md
+    - text: Azure Synapse Studio Notebook 만들기, 개발 및 유지 관리
+      url: /azure/synapse-analytics/spark/apache-spark-development-using-notebooks
+- title: Azure SQL Database Edge의 ML
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Database Edge에서 ONNX를 통한 기계 학습 및 AI
+      url: /azure/sql-database-edge/onnx-overview
+  - linkListType: how-to-guide
+    links:
+    - text: SQL Database Edge에서 ONNX 모델을 사용하여 배포 및 예측 수행
+      url: /azure/sql-database-edge/deploy-onnx

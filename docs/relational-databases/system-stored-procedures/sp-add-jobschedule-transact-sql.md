@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810500"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151959"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70810500"
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)대부분의 SQL Server 에이전트 기능은 현재 지원 되지 않습니다. 자세한 내용은 [Azure SQL Database Managed Instance t-sql 차이점 SQL Server을](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) 참조 하세요.
+  > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -79,14 +80,14 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval`작업이 실행 되는 날짜입니다. *frequency_interval* 은 **int**이며 기본값은 0이 고 다음 표에 나와 있는 것 처럼 *frequency_type* 의 값에 따라 달라 집니다.  
   
-|값|영향|  
+|값|효과|  
 |-----------|------------|  
 |**1** (한 번)|*frequency_interval* 사용 되지 않습니다.|  
 |**4** (매일)|*Frequency_interval* 일 마다.|  
 |**8** (매주)|*frequency_interval* 는 or 논리 연산자와 결합 된 다음 중 하나 이상입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 4 = 화요일<br /><br /> 8 = 수요일<br /><br /> 16 = 목요일<br /><br /> 32 = 금요일<br /><br /> 64 = 토요일|  
 |**16** (매월)|월의 *frequency_interval* 날짜|  
 |**32** (매월 상대적)|*frequency_interval* 은 다음 중 하나입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 3 = 화요일<br /><br /> 4 = 수요일<br /><br /> 5 = 목요일<br /><br /> 6 = 금요일<br /><br /> 7 = 토요일<br /><br /> 8 = 일<br /><br /> 9 = 평일<br /><br /> 10 = 주말|  
-|**64** (에이전트 서비스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 되는 경우)|*frequency_interval* 사용 되지 않습니다.|  
+|**64** ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 시작 되는 경우)|*frequency_interval* 사용 되지 않습니다.|  
 |**128**|*frequency_interval* 사용 되지 않습니다.|  
   
 `[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*단위를 지정 합니다. *frequency_subday_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
@@ -150,7 +151,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
  
  ## <a name="example"></a>예제
- 다음 예에서는 매주 토요일 오전 2:00 시 `SaturdayReports` 에 실행 되는 작업 일정을 할당 합니다.
+ 다음 예에서는 `SaturdayReports` 매주 토요일 오전 2:00 시에 실행 되는 작업 일정을 할당 합니다.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name

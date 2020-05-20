@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035292"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001093"
 ---
 # <a name="choosing-a-network-protocol"></a>네트워크 프로토콜 선택
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동시에 여러 프로토콜에 대 한 요청을 처리 합니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  
+  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 동시에 여러 프로토콜에 대 한 요청을 처리 합니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  
   
 ## <a name="shared-memory"></a>공유 메모리  
  공유 메모리는 가장 간단한 프로토콜이며 구성 가능한 설정이 없습니다. 공유 메모리 프로토콜을 사용하는 클라이언트는 동일한 컴퓨터에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에만 연결할 수 있으므로 대부분의 데이터베이스 작업에 유용하지 않습니다. 다른 프로토콜이 제대로 구성되지 않는 것으로 의심되는 경우 문제 해결에 공유 메모리 프로토콜을 사용하십시오.  

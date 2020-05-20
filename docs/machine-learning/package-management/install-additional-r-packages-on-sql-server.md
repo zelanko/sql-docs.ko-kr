@@ -3,19 +3,19 @@ title: 새 R 패키지 설치
 description: sqlmlutils를 사용하여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/20/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ecfeeafd90d2fd7449ed99c5bacbdff05dff2784
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746323"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269436"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
@@ -51,54 +51,59 @@ ms.locfileid: "82746323"
 
 클라이언트 컴퓨터에서 인터넷에 액세스할 수 있는 경우 **sqlmlutils** 및 해당 종속 패키지를 온라인으로 다운로드하여 설치할 수 있습니다.
 
-1. 최신 **sqlmlutils** zip 파일을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일 압축을 풀지 마세요.
+1. 최신 **sqlmlutils** 파일(Windows의 경우 `.zip`, Linux의 경우 `.tar.gz`)을 https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 에서 클라이언트 컴퓨터로 다운로드합니다. 파일을 확장하지 않습니다.
 
-1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **sqlmlutils** 및 **RODBCext** 패키지를 설치합니다. 다운로드한 **sqlmlutils** zip 파일의 전체 경로를 바꿉니다(이 예제에서는 파일이 문서 폴더에 있는 것으로 가정). **RODBCext** 패키지는 온라인으로 찾아서 설치합니다.
+1. **명령 프롬프트**를 열고 다음 명령을 실행하여 **RODBCext** 및 **sqlmlutils**를 설치합니다. 다운로드한 **sqlmlutils** 파일의 경로를 대체합니다. **RODBCext** 패키지는 온라인으로 찾아서 설치합니다.
 
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```console
-   R -e "install.packages('RODBCext', repos='https://cran.microsoft.com')"
-   R CMD INSTALL %UserProfile%\Documents\sqlmlutils_0.7.1.zip
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
    ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='https://mran.microsoft.com/snapshot/2019-02-01/')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ### <a name="install-sqlmlutils-offline"></a>오프라인으로 sqlmlutils 설치
 
-클라이언트 컴퓨터가 인터넷에 연결되어 있지 않은 경우에는 인터넷에 액세스할 수 있는 컴퓨터를 사용하여 **sqlmlutils** 및 **RODBCext** 패키지를 미리 다운로드해야 합니다. 그런 다음, 클라이언트 컴퓨터의 폴더에 파일을 복사하고 오프라인으로 패키지를 설치할 수 있습니다.
+클라이언트 컴퓨터가 인터넷에 연결되어 있지 않은 경우에는 인터넷에 액세스할 수 있는 컴퓨터를 사용하여 **RODBCext** 및 **sqlmlutils** 패키지를 미리 다운로드해야 합니다. 그런 다음, 클라이언트 컴퓨터의 폴더에 파일을 복사하고 오프라인으로 패키지를 설치할 수 있습니다.
 
 **RODBCext** 패키지에는 여러 종속 패키지가 포함되어 있으므로 패키지의 모든 종속 요소를 식별하기가 어렵습니다. 따라서 [**miniCRAN**](https://andrie.github.io/miniCRAN/)을 사용하여 모든 종속 패키지가 포함된 패키지의 로컬 리포지토리 폴더를 만드는 것이 좋습니다.
 자세한 내용은 [miniCRAN을 사용하여 로컬 R 패키지 리포지토리 만들기](create-a-local-package-repository-using-minicran.md)를 참조하세요.
 
-**sqlmlutils** 패키지는 클라이언트 컴퓨터에 복사하여 설치할 수 있는 단일 zip 파일로 구성되어 있습니다.
+**sqlmlutils** 패키지는 클라이언트 컴퓨터에 복사하여 설치할 수 있는 단일 파일로 구성되어 있습니다.
 
 인터넷에 액세스할 수 있는 컴퓨터의 경우:
 
 1. **miniCRAN**을 설치합니다. 자세한 내용은 [miniCRAN 설치](create-a-local-package-repository-using-minicran.md#install-minicran)를 참조하세요.
 
-1. RStudio에서 다음 R 스크립트를 실행하여 **RODBCext** 패키지의 로컬 리포지토리를 만듭니다. 다음 예제는 `c:\downloads\rodbcext` 폴더에 리포지토리를 만듭니다.
+1. RStudio에서 다음 R 스크립트를 실행하여 **RODBCext** 패키지의 로컬 리포지토리를 만듭니다. 이 예에서는 `rodbcext` 폴더에 리포지토리가 생성된 것으로 가정합니다.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
-   local_repo <- "c:/downloads/rodbcext"
+   CRAN_mirror <- c(CRAN = "https://mran.microsoft.com/snapshot/2019-02-01/")
+   local_repo <- "rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    `Rversion` 값으로는 SQL Server에 설치된 R 버전을 사용합니다. 설치된 버전을 확인하려면 다음 T-SQL 명령을 사용합니다.
@@ -108,16 +113,29 @@ ms.locfileid: "82746323"
     , @script = N'print(R.version)'
    ```
 
-1. [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist)에서 최신 **sqlmlutils** zip 파일을 다운로드합니다(파일 압축을 풀지 않음). 예를 들어 `c:\downloads\sqlmlutils_0.7.1.zip`에 파일을 다운로드합니다.
+1. [https://github.com/Microsoft/sqlmlutils/tree/master/R/dist](https://github.com/Microsoft/sqlmlutils/tree/master/R/dist)에서 최신 **sqlmlutils** 파일(Windows의 경우 `.zip` , Linux의 경우 `.tar.gz` )을 다운로드합니다. 파일을 확장하지 않습니다.
 
-1. 전체 **RODBCext** 리포지토리 폴더(`c:\downloads\rodbcext`) 및 **sqlmlutils** zip 파일(`c:\downloads\sqlmlutils_0.7.1.zip`)을 클라이언트 컴퓨터에 복사합니다. 예를 들어 클라이언트 컴퓨터의 `c:\temp\packages` 폴더에 복사합니다.
+1. 전체 **RODBCext** 리포지토리 폴더와 **sqlmlutils** 파일을 클라이언트 컴퓨터로 복사합니다.
 
-SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에서 명령 프롬프트를 열고 다음 명령을 실행하여 **RODBCext**를 설치한 다음, **sqlmlutils**를 설치합니다.
+SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에서 다음을 수행합니다.
 
-```console
-R -e "install.packages('RODBCext', repos='c:\temp\packages\rodbcext')"
-R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
-```
+1. 명령 프롬프트를 엽니다.
+
+1. 다음 명령을 실행하여 **RODBCext**와 **sqlmlutils**를 차례로 설치합니다. 이 컴퓨터에 복사한 **RODBCext** 리포지토리 폴더와 **sqlmlutils** 파일의 전체 경로를 대체합니다.
+
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.zip
+   ```
+   ::: moniker-end
+
+   ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
+   ```console
+   R -e "install.packages('RODBCext', repos='rodbcext')"
+   R CMD INSTALL sqlmlutils_0.7.1.tar.gz
+   ```
+   ::: moniker-end
 
 ## <a name="add-an-r-package-on-sql-server"></a>SQL Server에서 R 패키지 추가
 
@@ -154,8 +172,7 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 1. 다음 R 스크립트를 실행하여 **glue**에 대한 로컬 리포지토리를 만듭니다. 다음 예제는 `c:\downloads\glue`에 리포지토리 폴더를 만듭니다.
 
-   ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
-
+   ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -164,11 +181,9 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
-
    ```R
    CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
@@ -177,7 +192,6 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
    makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "source", Rversion = "3.5");
    ```
-
    ::: moniker-end
 
 

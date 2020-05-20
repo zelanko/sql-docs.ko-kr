@@ -1,5 +1,6 @@
 ---
 title: Table의 Name 요소(DTA)
+description: dta 유틸리티에서 Table의 Name 요소는 튜닝할 테이블 이름을 지정합니다. 이 문서에서는 이 요소에 대해 설명합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: d8c2cedbf969975504b29f00832a4ae3722b29c8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: cb397cf7642f4b523c0919ac70c06f6a3442ef46
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307950"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151852"
 ---
 # <a name="name-element-for-table-dta"></a>Table의 Name 요소(DTA)
 

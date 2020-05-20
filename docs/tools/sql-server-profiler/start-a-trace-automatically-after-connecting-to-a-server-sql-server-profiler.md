@@ -1,6 +1,7 @@
 ---
 title: 서버 연결 후 자동으로 추적 시작
 titleSuffix: SQL Server Profiler
+description: SQL Server 인스턴스에 연결한 후 SQL Server Profiler에서 자동으로 이벤트 데이터 추적을 시작하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 0e1999897413531366d207b7b5df587030c02647
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ff07dedccd12bbbe67040ebcccb8f716af85c753
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307811"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151680"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>서버 연결 후 자동으로 추적 시작(SQL Server Profiler)
 

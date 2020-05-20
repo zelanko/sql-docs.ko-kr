@@ -1,5 +1,6 @@
 ---
 title: Partitioning 요소(DTA)
+description: dta 유틸리티에서 Partitioning 요소는 분석 도중에 데이터베이스 엔진 튜닝 관리자에서 사용할 수 있는 파티션 구성표를 포함합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 092a652783f5ccaa16e52fe915820a009e4fc274
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b9c07012e71b28caac02cef3f9a4e6bc729c667c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306122"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151833"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 요소(DTA)
 

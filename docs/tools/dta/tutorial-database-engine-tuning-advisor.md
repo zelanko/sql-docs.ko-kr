@@ -1,5 +1,6 @@
 ---
-title: '자습서: 데이터베이스 엔진 튜닝 관리자'
+title: '자습서: Database Engine Tuning Advisor'
+description: 데이터베이스 엔진 튜닝 관리자는 쿼리를 처리하는 방법을 검사하고 데이터베이스 구조를 수정하여 쿼리 처리 성능을 향상하는 방법을 추천합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304700"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151482"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>자습서: 데이터베이스 엔진 튜닝 관리자
+# <a name="tutorial-database-engine-tuning-advisor"></a>자습서: Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -38,7 +39,7 @@ ms.locfileid: "75304700"
 [2단원: 데이터베이스 엔진 튜닝 관리자 사용](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 이 단원에서는 데이터베이스 엔진 튜닝 관리자 GUI로 기본 튜닝 태스크를 수행하는 방법을 배웁니다.  
   
-[3단원: dta 명령 프롬프트 유틸리티 사용](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[3단원: DTA 명령 프롬프트 유틸리티 사용](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 이 단원에서는 **dta** 명령 프롬프트 유틸리티를 시작하는 방법과 일부 단순 튜닝 명령을 실행하는 방법을 알아봅니다.  
   
 ## <a name="requirements"></a>요구 사항  

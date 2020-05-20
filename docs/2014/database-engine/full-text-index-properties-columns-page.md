@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.columns.f1
 ms.assetid: 75e52edb-0d07-4393-9345-8b5af4561e35
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1b842f8fe4e2a5c3adc489df35e20c58000a69d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778858"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000919"
 ---
 # <a name="full-text-index-properties-columns-page"></a>전체 텍스트 인덱스 속성(열 페이지)
   **전체 텍스트 인덱스의 속성을 보거나 변경하려면**  
   
 -   [전체 텍스트 인덱스 관리](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **고유 인덱스**  
  드롭다운 목록에서 인덱스를 선택합니다. 인덱스는 Null 값을 허용하지 않는 고유한 단일 키 열이어야 합니다.  
   

@@ -1,6 +1,7 @@
 ---
 title: Distributed Replay 보안
 titleSuffix: SQL Server Distributed Replay
+description: 이 문서에서는 SQL Server Distributed Replay의 보안 구성 단계와 데이터 보호 및 제거 단계에 대한 중요 고려 사항을 설명합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a9d29f7c546064d6069caa3770e1ddc1e7ebe53f
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087449"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151103"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 보안
 

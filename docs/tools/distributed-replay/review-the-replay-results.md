@@ -1,6 +1,7 @@
 ---
 title: 재생 결과 검토
 titleSuffix: SQL Server Distributed Replay
+description: SQL Server Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 추적 파일에 저장할 수 있습니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306939"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152146"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 

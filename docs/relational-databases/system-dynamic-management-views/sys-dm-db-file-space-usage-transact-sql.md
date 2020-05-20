@@ -17,39 +17,39 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_file_space_usage dynamic management view
 ms.assetid: 148a5276-a8d5-49d2-8146-3c63d24c2144
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c235ebc59424eba97d985740a7cf8456eee53150
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983053"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152021"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  데이터베이스의 각 파일에 대한 공간 사용량 정보를 반환합니다.  
+  데이터베이스의 각 데이터 파일에 대 한 공간 사용 정보를 반환 합니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_db_file_space_usage**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_file_space_usage**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|데이터베이스 ID입니다.|  
 |file_id|**smallint**|파일의 ID입니다.<br /><br /> file_id은 [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) 의 file_id와 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)의 fileid에 매핑됩니다.|  
 |filegroup_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 파일 그룹 ID입니다.|  
-|total_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 파일의 총 페이지 수입니다.|  
-|allocated_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 파일에서 할당된 익스텐트에 있는 총 페이지 수입니다.|  
-|unallocated_extent_page_count|**bigint**|파일에서 할당되지 않은 익스텐트에 있는 총 페이지 수입니다.<br /><br /> 할당된 익스텐트에서 사용되지 않은 페이지는 포함되지 않습니다.|  
+|total_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 데이터 파일의 총 페이지 수입니다.|  
+|allocated_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 데이터 파일에 할당 된 익스텐트의 총 페이지 수입니다.|  
+|unallocated_extent_page_count|**bigint**|데이터 파일의 할당 되지 않은 익스텐트의 총 페이지 수입니다.<br /><br /> 할당된 익스텐트에서 사용되지 않은 페이지는 포함되지 않습니다.|  
 |version_store_reserved_page_count|**bigint**|버전 저장소에 대해 할당된 단일 익스텐트에 있는 총 페이지 수입니다. 버전 저장소 페이지는 혼합 익스텐트에서 할당되지 않습니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 자세한 내용은 [sys.dm_tran_version_store&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md)를 참조하세요.|  
 |user_object_reserved_page_count|**bigint**|데이터베이스에서 사용자 개체에 대해 단일 익스텐트에서 할당된 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> [Allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) 카탈로그 뷰의 total_pages 열을 사용 하 여 사용자 개체에 있는 각 할당 단위의 예약 된 페이지 수를 반환할 수 있습니다. 하지만 total_pages 열에는 IAM 페이지가 포함됩니다.|  
 |internal_object_reserved_page_count|**bigint**|파일에서 내부 개체에 대해 할당된 단일 익스텐트의 총 페이지 수입니다. 할당된 익스텐트에서 사용되지 않은 페이지도 포함됩니다.<br /><br /> IAM 페이지는 항상 혼합 익스텐트에서 할당되기 때문에 포함되지 않습니다. PFS 페이지는 단일 익스텐트에서 할당된 경우에 포함됩니다.<br /><br /> 각 내부 개체의 페이지 수를 반환하는 카탈로그 뷰나 동적 관리 개체는 없습니다.|  
 |mixed_extent_page_count|**bigint**|파일에서 할당된 혼합 익스텐트의 할당된 페이지와 할당되지 않은 페이지의 총 수입니다. 혼합 익스텐트에는 여러 다른 개체에 할당된 페이지가 포함됩니다. 이 값에는 파일에 있는 모든 IAM 페이지가 포함됩니다.|
 |modified_extent_page_count|**bigint**|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 이상.<br /><br />마지막 전체 데이터베이스 백업 이후 파일의 할당 된 범위에서 수정 된 총 페이지 수입니다. 수정 된 페이지 수를 사용 하 여 차등 백업이 필요한 지 여부를 결정 하기 위해 마지막 전체 백업 이후 데이터베이스의 차등 변경 내용을 추적할 수 있습니다.|
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
-|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|distribution_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 분포와 연결 된 고유 숫자 id입니다.|  
   
 ## <a name="remarks"></a>설명  
  페이지 수는 항상 익스텐트 수준에 대한 값입니다. 따라서 페이지 수는 항상 8의 배수입니다. GAM(Global Allocation Map) 및 SGAM(Shared Global Allocation Map) 할당 페이지를 포함하는 익스텐트는 할당된 단일 익스텐트로, 앞서 설명된 페이지 수에 포함되지 않습니다. 페이지 및 익스텐트에 대 한 자세한 내용은 [페이지 및 익스텐트 아키텍처 가이드](../../relational-databases/pages-and-extents-architecture-guide.md)를 참조 하세요. 
@@ -90,13 +90,13 @@ ms.locfileid: "73983053"
   
 ## <a name="permissions"></a>사용 권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="examples"></a>예  
   
 ### <a name="determing-the-amount-of-free-space-in-tempdb"></a>tempdb의 빈 공간 확인  
- 다음 쿼리는 **tempdb**의 모든 파일에서 사용 가능한 총 여유 페이지 수와 사용 가능한 총 공간 (mb)을 반환 합니다.  
+ 다음 쿼리는 **tempdb**의 모든 데이터 파일에서 사용할 수 있는 총 사용 가능한 페이지 수와 사용 가능한 총 공간 (mb)을 반환 합니다.  
   
 ```sql
 USE tempdb;  

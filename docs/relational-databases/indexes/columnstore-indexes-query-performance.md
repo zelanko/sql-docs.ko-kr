@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d34b2a8bfeaf11a58f0cf9e07962fb44fa8973fd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816712"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151562"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -33,9 +33,16 @@ ms.locfileid: "71816712"
     
 -   **삽입 순서 활용** 일반적인 데이터 웨어하우스에서 주로 데이터는 시간 순서에, 분석은 시간 차원에 삽입됩니다. 예를 들어 분기별로 판매를 분석하는 경우 이런 종류의 작업에서는 행 그룹이 자동으로 제거됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 쿼리 처리의 일부로 건너뛴 숫자 행 그룹을 찾을 수 있습니다.    
     
--   **클러스터형 rowstore 인덱스 활용** 일반 쿼리 조건자가 행의 삽입 순서와 관련되지 않은 열(예: C1)에 있는 경우 열 C1에서 클러스터형 rowstore 인덱스를 만든 다음 클러스터형 rowstore 인덱스를 삭제하여 클러스터형 columnstore 인덱스를 만듭니다. `MAXDOP = 1`를 사용하여 명시적으로 클러스터형 columnstore 인덱스를 만드는 경우에는 결과 클러스터형 columnstore 인덱스가 열 C1에서 완벽하게 정렬됩니다. `MAXDOP = 8`를 지정하면 8개의 행 그룹 전체에서 값 중복이 표시됩니다. 큰 데이터 집합으로 columnstore 인덱스를 처음 만들 때 이 전략을 주로 사용합니다. NCCI(비클러스터형 columnstore 인덱스)의 경우 기본 rowstore 테이블에 클러스터형 인덱스가 있으면 행은 이미 정렬되어 있습니다. 이 경우 결과 비클러스터형 columnstore 인덱스는 자동으로 정렬됩니다. 한 가지 중요한 점으로 columnstore 인덱스는 기본적으로 행 순서를 유지 관리하지 않음을 참고하세요. 새 행이 삽입되거나 더 오래된 행이 업데이트되면 분석 쿼리 성능이 악화될 수 있으므로 프로세스를 반복해야 할 수 있습니다.    
+-   **클러스터형 rowstore 인덱스 활용** 일반 쿼리 조건자가 행의 삽입 순서와 관련되지 않은 열(예: C1)에 있는 경우 열 C1에서 클러스터형 rowstore 인덱스를 만든 다음 클러스터형 rowstore 인덱스를 삭제하여 클러스터형 columnstore 인덱스를 만듭니다. `MAXDOP = 1`를 사용하여 명시적으로 클러스터형 columnstore 인덱스를 만드는 경우에는 결과 클러스터형 columnstore 인덱스가 열 C1에서 완벽하게 정렬됩니다. `MAXDOP = 8`을 지정하면 8개의 행 그룹 전체에서 값 중복이 표시됩니다. 큰 데이터 집합으로 columnstore 인덱스를 처음 만들 때 이 전략을 주로 사용합니다. NCCI(비클러스터형 columnstore 인덱스)의 경우 기본 rowstore 테이블에 클러스터형 인덱스가 있으면 행은 이미 정렬되어 있습니다. 이 경우 결과 비클러스터형 columnstore 인덱스는 자동으로 정렬됩니다. 한 가지 중요한 점으로 columnstore 인덱스는 기본적으로 행 순서를 유지 관리하지 않음을 참고하세요. 새 행이 삽입되거나 더 오래된 행이 업데이트되면 분석 쿼리 성능이 악화될 수 있으므로 프로세스를 반복해야 할 수 있습니다.    
     
--   **테이블 분할 활용** columnstore 인덱스를 분할한 다음 파티션 제거를 사용하여 검색할 행 그룹의 수를 줄일 수 있습니다. 예를 들어 팩트 테이블에 고객 구매 정보가 저장되어 있고, 일반 쿼리 패턴이 특정 고객의 분기별 구매 정보 찾기일 경우 삽입 순서와 고객 열의 분할을 결합할 수 있습니다. 각 파티션에는 특정 고객에 대한 행이 시간 순서로 포함됩니다.    
+-   **테이블 분할 활용** columnstore 인덱스를 분할한 다음 파티션 제거를 사용하여 검색할 행 그룹의 수를 줄일 수 있습니다. 예를 들어 팩트 테이블에 고객 구매 정보가 저장되어 있고, 일반 쿼리 패턴이 특정 고객의 분기별 구매 정보 찾기일 경우 삽입 순서와 고객 열의 분할을 결합할 수 있습니다. 각 파티션에는 특정 고객에 대한 행이 시간 순서로 포함됩니다. 또한 columnstore에서 데이터를 제거해야 하는 경우 테이블 분할을 사용하는 것이 좋습니다. 더 이상 필요 없는 파티션을 전환하고 잘라내는 것은 행 그룹이 더 작은 경우에 발생하는 조각화를 생성하지 않고도 데이터를 삭제할 수 있는 효율적인 전략입니다.    
+
+-   **대량의 데이터 삭제를 방지합니다**. 행 그룹에서 압축된 행을 제거하는 작업은 동기적으로 이루어지지 않습니다. 행 그룹의 압축을 풀고 행을 삭제한 다음 다시 압축하는 것이 비용이 많이 듭니다. 따라서 압축된 행 그룹에서 데이터를 삭제하는 경우 이 행 그룹은 더 적은 행을 반환하기는 하지만 여전히 검사됩니다. 여러 행 그룹에 대해 삭제된 행의 수가 더 적은 행 그룹으로 병합될 수 있을 만큼 충분히 큰 경우 columnstore를 다시 구성하면 인덱스의 품질이 높아지고 쿼리 성능이 향상됩니다. 데이터 삭제 프로세스에서 일반적으로 전체 행 그룹을 비우는 경우에는 테이블 분할을 사용하여 더 이상 필요하지 않은 파티션에서 전환하고 행을 삭제하는 대신 잘라내는 것이 좋습니다. 
+
+    > [!NOTE]
+    > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다. 이번 변경 덕분에 지속적으로 columnstore 인덱스 품질이 향상됩니다.   
+    > columnstore 인덱스에서 많은 양의 데이터를 삭제해야 하는 경우 이 작업을 지속적으로 더 작은 삭제 배치로 분할하는 것이 좋습니다. 이렇게 하면 백그라운드 병합 태스크가 더 작은 행 그룹을 병합하고 인덱스 품질을 개선하는 태스크를 처리할 수 있어 데이터 삭제 후의 인덱스 재구성 유지 관리 기간을 예약하지 않아도 됩니다.    
+    > columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
     
 ### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. 병렬로 columnstore 인덱스를 만들기에 충분한 메모리 계획    
  인덱스 만들기는 메모리가 제한되지 않는 한 기본적으로 병렬 작업입니다. 병렬로 인덱스를 만들려면 직렬로 인덱스를 만들 때보다 많은 메모리가 필요합니다. 메모리가 충분하면 동일한 열에 B-트리를 작성할 때보다 1.5배 많은 메모리가 columnstore 인덱스를 만드는 데 사용됩니다.    
@@ -47,7 +54,7 @@ ms.locfileid: "71816712"
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 쿼리는 항상 일괄 처리 모드로 작동합니다. 이전 릴리스에서 일괄 처리는 DOP가 1보다 클 경우에만 실행됩니다.    
     
 ## <a name="columnstore-performance-explained"></a>Columnstore 성능 설명    
- sColumnstore 인덱스에서는 고속 메모리 내 일괄 처리 모드를 I/O 요구 사항을 크게 줄이는 기술과 결합하여 쿼리 성능이 크게 향상되었습니다.  분석 쿼리에서는 많은 행이 검색되므로 일반적으로 IO 바인딩되며, 이로 인해 쿼리 실행 중 I/O를 줄이는 작업은 columnstore 인덱스 디자인에 매우 중요합니다.  데이터를 메모리로 읽어온 후에는 메모리 내 작업 수를 줄이는 것이 중요합니다.    
+ sColumnstore 인덱스에서는 고속 메모리 내 일괄 처리 모드를 I/O 요구 사항을 크게 줄이는 기술과 결합하여 쿼리 성능이 크게 향상되었습니다. 분석 쿼리에서는 많은 행이 검색되므로 일반적으로 IO 바인딩되며, 이로 인해 쿼리 실행 중 I/O를 줄이는 작업은 columnstore 인덱스 디자인에 매우 중요합니다. 데이터를 메모리로 읽어온 후에는 메모리 내 작업 수를 줄이는 것이 중요합니다.    
     
  Columnstore 인덱스는 I/O는 줄이고, 높은 데이터 압축, columnstore 제거, 행 그룹 제거 및 일괄 처리를 통해 메모리 내 작업을 최적화합니다.    
     
@@ -56,9 +63,9 @@ ms.locfileid: "71816712"
     
 -   Columnstore 인덱스는 디스크에서 압축된 데이터를 읽습니다. 즉, 메모리로 읽어야 하는 데이터 바이트가 적어집니다.    
     
--   Columnstore 인덱스는 데이터를 압축된 형태로 메모리에 저장합니다. 이렇게 하면 동일한 데이터를 메모리로 읽는 횟수가 줄어 I/O도 줄어듭니다. 예를 들어 압축률이 10배인 columnstore 인덱스에서는 데이터를 압축되지 않은 형태로 저장하는 작업과 비교해 볼 때 메모리에 10배 이상의 데이터를 보관할 수 있습니다. 메모리에서 더 많은 데이터를 사용하면 columnstore 인덱스에서는 디스크에서 추가 읽기를 하지 않고도 메모리에 필요한 데이터를 찾을 가능성이 높아집니다.    
+-   columnstore 인덱스는 데이터를 압축된 형태로 메모리에 저장합니다. 이렇게 하면 동일한 데이터를 메모리로 읽는 횟수가 줄어 I/O도 줄어듭니다. 예를 들어 압축률이 10배인 columnstore 인덱스에서는 데이터를 압축되지 않은 형태로 저장하는 작업과 비교해 볼 때 메모리에 10배 이상의 데이터를 보관할 수 있습니다. 메모리에서 더 많은 데이터를 사용하면 columnstore 인덱스에서는 디스크에서 추가 읽기를 하지 않고도 메모리에 필요한 데이터를 찾을 가능성이 높아집니다.    
     
--   Columnstore 인덱스 높은 압축률을 보여 주는 데이터를 행 대신 열을 기준으로 압축하여 디스크에 저장되는 데이터 크기를 줄입니다. 각 열은 개별적으로 압축되어 저장됩니다.  한 열에 있는 데이터는 항상 형식이 동일하며, 유사한 값을 포함하려는 경향이 있습니다. 데이터 압축 기술은 값이 비슷할 경우 더 높은 압축률을 달성할 수 있습니다.    
+-   columnstore 인덱스는 행이 아니라 열을 기준으로 데이터를 압축하여 높은 압축률을 확보하고 디스크에 저장되는 데이터의 크기를 줄입니다. 각 열은 개별적으로 압축되어 저장됩니다.  한 열에 있는 데이터는 항상 형식이 동일하며, 유사한 값을 포함하려는 경향이 있습니다. 데이터 압축 기술은 값이 비슷할 경우 더 높은 압축률을 달성할 수 있습니다.    
     
 -   예를 들어 팩트 테이블에 고객 주소가 저장되어 있고 국가에 대한 열이 하나 있는 경우 가능한 총 값 수는 200개 미만입니다. 이러한 값 중 일부는 여러 번 반복됩니다. 팩트 테이블에 1억 개의 행이 있는 경우에는 국가 열이 쉽게 압축되므로 요구되는 스토리지 크기는 매우 작습니다. 행 단위 압축은 이 방식으로 열 값의 유사성을 활용할 수 없어 국가 열의 값을 압축하는 데 더 많은 바이트를 사용합니다.    
     
@@ -74,7 +81,7 @@ ms.locfileid: "71816712"
     
  **columnstore 인덱스는 전체 테이블 검색을 언제 수행해야 하나요?**    
     
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 rowstore 힙에서와 같이 클러스터형 columnstore 인덱스에서 하나 이상의 일반 비클러스터형 B-트리 인덱스를 만들 수 있습니다. 비클러스터형 B-트리 인덱스는 같음 조건자 또는 작은 값 범위를 가진 조건자가 있는 쿼리의 속도를 높일 수 있습니다.  더 복잡한 조건자의 경우 쿼리 최적화 프로그램에서 전체 테이블 검색을 선택할 수도 있습니다. 행 그룹을 건너뛸 수 없다면 전체 테이블 검색은 특히 큰 테이블의 경우 시간이 많이 소요됩니다.    
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 rowstore 힙에서와 같이 클러스터형 columnstore 인덱스에서 하나 이상의 일반 비클러스터형 B-트리 인덱스를 만들 수 있습니다. 비클러스터형 B-트리 인덱스는 같음 조건자 또는 작은 값 범위를 가진 조건자가 있는 쿼리의 속도를 높일 수 있습니다. 더 복잡한 조건자의 경우 쿼리 최적화 프로그램에서 전체 테이블 검색을 선택할 수도 있습니다. 행 그룹을 건너뛸 수 없다면 전체 테이블 검색은 특히 큰 테이블의 경우 시간이 많이 소요됩니다.    
     
  **분석 쿼리에서 전체 테이블 검색 시 행 그룹 제거를 언제 활용하나요?**    
     
@@ -84,7 +91,7 @@ ms.locfileid: "71816712"
     
  제거할 행 그룹을 결정하려면 columnstore 인덱스는 메타데이터를 사용하여 각 행 그룹에 대한 각 열 세그먼트의 최소값 및 최대값을 저장합니다. 열 세그먼트 범위 중 어떤 것도 쿼리 조건자의 조건에 맞지 않을 경우 실제 IO를 수행하지 않고 행 그룹 전체를 건너뜁니다. 데이터가 주로 정렬된 순서대로 로드되고, 행 정렬이 보장되지 않더라도 유사한 데이터 값이 보통 동일한 행 그룹 또는 인접한 행 그룹에 위치하므로 이 작업이 가능합니다.    
     
- 행 그룹에 대한 자세한 내용은 Columnstore 인덱스 가이드를 참조하세요.    
+ 행 그룹에 대한 자세한 내용은 [columnstore 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)을 참조하세요.    
     
 ### <a name="batch-mode-execution"></a>일괄 처리 모드 실행    
  일괄 처리 모드 실행이란 실행 효율성을 위해 일반적으로 최대 900개의 행을 함께 행 집합으로 처리하는 것을 말합니다. 예를 들어 `SELECT SUM (Sales) FROM SalesData` 쿼리는 SalesData 테이블에서의 총 판매액을 집계합니다. 일괄 처리 모드 실행에서 쿼리 실행 엔진은 집계를 900개 값으로 이루어진 그룹으로 계산합니다. 이렇게 하면 각 행에 대한 비용을 부담하지 않고 모든 행에서 메타데이터 액세스 비용과 기타 오버헤드 유형을 일괄 처리로 분산하여 코드 경로가 상당히 줄어듭니다. 일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 처리에서 사용하는 교환 연산자 중 일부를 제거합니다. 이렇게 하면 크기 순서대로 정렬되어 분석 쿼리 실행 속도가 향상됩니다.    
@@ -134,10 +141,10 @@ ms.locfileid: "71816712"
 ```sql     
 SELECT  productkey, SUM(TotalProductCost)    
 FROM FactResellerSalesXL_CCI    
-GROUP BY productkey    
+GROUP BY productkey;    
     
 SELECT  SUM(TotalProductCost)    
-FROM FactResellerSalesXL_CCI    
+FROM FactResellerSalesXL_CCI;    
 ```    
     
 ### <a name="string-predicate-pushdown"></a>문자열 조건자 푸시다운    
@@ -160,8 +167,7 @@ columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포�
     -   Null을 평가하는 식이 지원되지 않습니다.    
     
 ## <a name="see-also"></a>참고 항목    
- [Columnstore 인덱스 디자인 지침](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
- [Columnstore 인덱스 데이터 로드 지침](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
+ [columnstore 인덱스 디자인 지침](../../relational-databases/sql-server-index-design-guide.md#columnstore_index) [columnstore 인덱스 데이터 로드 지침](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    

@@ -1,6 +1,7 @@
 ---
 title: 추적 시작
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 새 추적을 정의하거나 템플릿을 만든 후 추적을 시작하고 해당 데이터를 찾는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b7e2432d728b487fe0ea55a1e03c84f613c270d1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a5f93237a6a52c4a9695e0bd940dd7d712a6e5b3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307800"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151742"
 ---
 # <a name="start-a-trace"></a>추적 시작
 

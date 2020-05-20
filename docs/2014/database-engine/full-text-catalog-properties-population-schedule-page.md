@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778825"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000935"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>전체 텍스트 카탈로그 속성(채우기 일정 페이지)
   이 대화 상자를 사용하여 전체 텍스트 카탈로그를 채우거나 다시 채우는 시기를 결정하는 일정을 추가하거나 수정할 수 있습니다.  
@@ -37,13 +37,13 @@ ms.locfileid: "62778825"
  **설명**  
  예약된 작업에 대한 설명입니다.  
   
- **신규**  
+ **새 항목**  
  새 인덱싱 일정을 만들려면 이 단추를 클릭합니다. 이 단추를 클릭하면 **새 전체 텍스트 인덱싱 카탈로그 일정** 대화 상자가 표시됩니다.  
   
  **편집**  
  선택한 채우기 일정을 편집하려면 이 단추를 클릭합니다.  
   
- **Delete**  
+ **삭제**  
  선택한 채우기 일정을 제거하려면 이 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

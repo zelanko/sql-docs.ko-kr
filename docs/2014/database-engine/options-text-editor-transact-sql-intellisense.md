@@ -12,15 +12,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 1855d916-5bf9-4d94-b0fb-9f9bb05ff950
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39d0ad9439e265b80bdfc408389332fe308848e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089817"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000660"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>옵션 (텍스트 편집기-Transact-sql-IntelliSense)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 쿼리 편집기에 대한 IntelliSense 설정을 변경할 수 있습니다. 이러한 설정은 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더와 **Transact-SQL** 폴더를 차례로 확장한 다음 **고급**을 클릭하면 볼 수 있습니다.  

@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486523"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151996"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>SQL Server 인덱스 아키텍처 및 디자인 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -659,6 +659,8 @@ columnstore 인덱스에 대해 살펴볼 때 데이터 스토리지에 대한 �
   또한 columnstore 인덱스는 물리적으로 일부 행을 deltastore라는 rowstore 형식으로 저장합니다. 델타 행 그룹이라고도 하는 deltastore는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. 각 델타 행 그룹은 클러스터형 B-트리 인덱스로 구현됩니다. 
 
 - **deltastore**는 개수가 너무 적어서 columnstore로 압축할 수 없는 행을 보관하는 장소입니다. deltastore는 rowstore 형식으로 행을 저장합니다. 
+
+columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>행 그룹 및 열 세그먼트에서 작업이 수행됨
 
@@ -667,17 +669,27 @@ columnstore 인덱스는 행을 관리할 수 있는 단위로 그룹화합니�
 예를 들어 columnstore 인덱스는 행 그룹에서 다음 작업을 수행합니다.
 
 * 행 그룹을 columnstore로 압축합니다. 압축은 행 그룹 내의 각 열 세그먼트에서 수행됩니다.
-* `ALTER INDEX ... REORGANIZE` 작업 동안 행그룹을 병합합니다.
+* 삭제된 데이터 제거를 포함하여 `ALTER INDEX ... REORGANIZE` 작업 중에 행 그룹을 병합합니다.
 * `ALTER INDEX ... REBUILD` 작업 동안 새 행그룹을 만듭니다.
 * DMV(동적 관리 뷰)에서 행 그룹 상태 및 조각화를 보고합니다.
 
-deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 구성됩니다. 델타 행 그룹 각각은 행 그룹에 1,048,576개의 행이 포함되거나 인덱스가 다시 빌드될 때까지 작은 대량 로드 및 삽입을 저장하는 클러스터형 B-트리 인덱스입니다.  델타 행 그룹에 1,048,576개의 행이 포함된 경우 닫힘으로 표시되고 tuple-mover라는 프로세스가 columnstore로 압축할 때까지 기다립니다. 
+deltastore는 **델타 행 그룹**이라는 하나 이상의 행 그룹으로 구성됩니다. 각 델타 행 그룹은 행 그룹에 1,048,576개의 행이 포함될 때(**튜플 이동기**라는 프로세스가 닫힌 행 그룹을 columnstore로 자동 압축함)까지 작은 대량 로드와 삽입을 저장하는 클러스터형 B-트리 인덱스입니다. 
+
+행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요. 
+
+> [!TIP]
+> 작은 행 그룹이 너무 많이 있으면 columnstore 인덱스 품질이 저하됩니다. 재구성 작업은 삭제된 행을 제거하고 압축된 행 그룹을 결합하는 방법을 결정하는 내부 임계값 정책에 따라 더 작은 행 그룹을 병합합니다. 병합 후에는 인덱스 품질이 향상됩니다. 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다.      
 
 행 그룹마다 각 열의 일부 값이 있습니다. 이러한 값을 **열 세그먼트**라고 합니다. 각 행 그룹에는 테이블의 모든 열에 대해 각각 하나의 열 세그먼트가 포함됩니다. 행 그룹마다 각 열의 열 세그먼트 하나가 있습니다.
 
 ![열 세그먼트](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "열 세그먼트") 
  
-columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다.   
+columnstore 인덱스는 행 그룹을 압축할 때 각 열 세그먼트를 개별적으로 압축합니다. 전체 열의 압축을 풀려면 columnstore 인덱스가 각 행 그룹에서 하나의 열 세그먼트 압축만 풀면 됩니다. 
+
+columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
 
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>작은 로드 및 삽입은 deltastore로 이동함
 columnstore 인덱스는 한 번에 102,400개 이상의 행을 columnstore 인덱스로 압축하여 columnstore 압축 및 성능을 향상합니다. 행을 대량으로 압축하기 위해 columnstore 인덱스는 작은 로드 및 삽입을 deltastore에 누적합니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다. 
@@ -689,11 +701,19 @@ columnstore 인덱스는 한 번에 102,400개 이상의 행을 columnstore 인�
 
 deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적으로 삭제되지 않은 삭제된 행의 ID 목록도 저장합니다. 
 
+columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
+
 #### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>델타 행 그룹이 꽉 차면 columnstore로 압축됨
 
-클러스터형 columnstore 인덱스는 행 그룹을 columnstore로 압축하기 전에 각 델타 행 그룹에 최대 1,048,576개의 행을 수집합니다. 이를 통해 columnstore 인덱스의 압축이 개선됩니다. 델타 행 그룹에 1,048,576개의 행이 포함되면 columnstore 인덱스가 행 그룹을 닫힘으로 표시합니다. *tuple-mover*라는 백그라운드 프로세스가 각 닫힌 행 그룹을 발견하고 columnstore로 압축합니다. 
+클러스터형 columnstore 인덱스는 행 그룹을 columnstore로 압축하기 전에 각 델타 행 그룹에 최대 1,048,576개의 행을 수집합니다. 이를 통해 columnstore 인덱스의 압축이 개선됩니다. 델타 행 그룹이 최대 행 수에 도달하면 상태가 OPEN에서 CLOSED로 전환됩니다. 튜플 이동기라는 백그라운드 프로세스가 닫힌 행 그룹을 확인합니다. 닫힌 행 그룹이 있으면 행 그룹을 압축하여 columnstore에 저장합니다.  
 
-[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)를 사용하여 인덱스를 다시 작성하거나 다시 구성하면 델타 행 그룹을 columnstore로 강제로 보낼 수 있습니다.  압축하는 동안 메모리 압력이 있을 경우 columnstore 인덱스가 압축된 행 그룹의 행 수를 줄일 수도 있습니다.
+델타 행 그룹이 압축된 경우 기존 델타 행 그룹은 TOMBSTONE 상태로 전환되어 나중에 이 그룹에 대한 참조가 없어지면 튜플 이동기에 의해 제거되며 새로운 압축된 행 그룹이 COMPRESSED로 표시됩니다. 
+
+행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요. 
+
+[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)를 사용하여 인덱스를 다시 작성하거나 다시 구성하면 델타 행 그룹을 columnstore로 강제로 보낼 수 있습니다. 압축하는 동안 메모리 압력이 있을 경우 columnstore 인덱스가 압축된 행 그룹의 행 수를 줄일 수도 있습니다.   
+
+columnstore 용어 및 개념에 대한 자세한 내용은 [columnstore 인덱스: 개요](../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요. 
 
 #### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>각 테이블 파티션에 고유한 행 그룹과 델타 행 그룹이 있음
 
@@ -701,8 +721,11 @@ deltastore는 삭제된 것으로 표시되었지만 columnstore에서 물리적
 
 행 그룹은 항상 테이블 파티션 내에서 정의됩니다. columnstore 인덱스를 분할하는 경우 각 파티션에 압축된 행 그룹과 델타 행 그룹이 있습니다.
 
+> [!TIP]
+> columnstore에서 데이터를 제거해야 하는 경우 테이블 분할을 사용하는 것이 좋습니다. 더 이상 필요 없는 파티션을 전환하고 잘라내는 것은 행 그룹이 더 작은 경우에 발생하는 조각화를 생성하지 않고도 데이터를 삭제할 수 있는 효율적인 전략입니다.
+
 ##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>각 파티션에 델타 행 그룹이 여러 개 있을 수 있습니다.
-각 파티션에 델타 행 그룹이 둘 이상 포함될 수 있습니다. columnstore 인덱스가 델타 행 그룹에 데이터를 추가해야 하고 델타 행 그룹이 잠겨 있는 경우 columnstore 인덱스는 다른 델타 행 그룹에 대한 잠금을 획득하려고 합니다. 사용할 수 있는 델타 행 그룹이 없으면 columnstore 인덱스에서 새 델타 행 그룹을 만듭니다.  예를 들어 10개의 파티션이 있는 테이블에 20개 이상의 델타 행 그룹이 쉽게 포함될 수 있습니다. 
+각 파티션에 델타 행 그룹이 둘 이상 포함될 수 있습니다. columnstore 인덱스가 델타 행 그룹에 데이터를 추가해야 하고 델타 행 그룹이 잠겨 있는 경우 columnstore 인덱스는 다른 델타 행 그룹에 대한 잠금을 획득하려고 합니다. 사용할 수 있는 델타 행 그룹이 없으면 columnstore 인덱스에서 새 델타 행 그룹을 만듭니다. 예를 들어 10개의 파티션이 있는 테이블에 20개 이상의 델타 행 그룹이 쉽게 포함될 수 있습니다. 
 
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>동일한 테이블에서 columnstore 및 rowstore 인덱스를 결합할 수 있습니다.
 비클러스터형 인덱스는 기본 테이블에 있는 행과 열의 전체 또는 일부에 대한 복사본을 포함합니다. 이 인덱스는 테이블의 하나 이상의 열로 정의되며 행을 필터링하는 선택적 조건이 있습니다. 

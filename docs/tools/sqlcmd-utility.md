@@ -1,5 +1,6 @@
 ---
 title: sqlcmd 유틸리티
+description: sqlcmd 유틸리티를 사용하면 다양한 모드를 사용해 Transact-SQL 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티는 ODBC를 사용하여 Transact-SQL 일괄 처리를 실행합니다.
 ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
@@ -27,12 +28,12 @@ ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 413d8fffc505c8b2cfb5404e70cdd9f64cd150de
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0b4274b0c724ca86608bf35c9398b3edd199d55a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77544940"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151611"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -413,7 +414,7 @@ sqlcmd
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_ = **"** _values_ **"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
+ **sqlcmd**스크립트에서 사용할 수 있는 **sqlcmd** 스크립팅 변수를 만듭니다. 공백이 포함된 값은 따옴표로 묶습니다. 여러 _**var**_= **"** _values_ **"** 값을 지정할 수 있습니다. 지정한 값에 오류가 있을 경우 **sqlcmd** 는 오류 메시지를 생성하고 종료됩니다.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   

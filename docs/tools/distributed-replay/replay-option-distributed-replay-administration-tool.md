@@ -1,6 +1,7 @@
 ---
 title: 관리 도구의 재생 옵션
 titleSuffix: SQL Server Distributed Replay
+description: 이 문서에서는 이벤트 재생 단계를 시작하는 SQL Server Distributed Replay 관리 도구의 재생 명령줄 옵션 및 구문에 대해 설명합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a41c619bd2d14fdc5438669d5ada239a88125c5a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 7c012d88065a6a2958411aa1c0849002e9c0436a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925130"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152151"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>재생 옵션(Distributed Replay Administration Tool)
 

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sessions dynamic management view
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9c87a6900b8ee19e18efb76506d1bed5a645202
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce44d14573000e9880fb1daf3a1ddb42746ee85
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76516274"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151969"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "76516274"
   
  Dm_exec_connections, dm_exec_sessions 및 sys. dm_exec_requests 동적 관리 뷰는 [sysprocesses](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 테이블에 매핑됩니다.  
   
-> **참고:** 또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_exec_sessions**을 사용 합니다.  
+> **참고:** 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_sessions**을 사용 합니다.  
   
 |열 이름|데이터 형식|설명 및 버전별 정보|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|각각의 기본 활성 연결과 연결된 세션을 식별합니다. Null을 허용하지 않습니다.|  
-|login_time|**datetime**|세션이 설정된 시간입니다. Null을 허용하지 않습니다.|  
+|login_time|**datetime**|세션이 설정된 시간입니다. Null을 허용하지 않습니다. 이 DMV를 쿼리할 때 로그인을 완료 하지 않은 세션은 로그인 시간으로 표시 됩니다 `1900-01-01` .|  
 |host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램은 워크스테이션 이름을 제공 하며 부정확 한 데이터를 제공할 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
 |program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_interface_name|**nvarchar(32)**|클라이언트에서 서버와 통신 하는 데 사용 하는 라이브러리/드라이버의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |security_id|**varbinary(85)**|로그인과 연결된 Microsoft Windows 보안 ID입니다. Null을 허용하지 않습니다.|  
-|login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. 인증 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름 또는 Windows 인증 된 도메인 사용자 이름일 수 있습니다. Null을 허용하지 않습니다.|  
+|login_name|**nvarchar(128)**|현재 세션을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다. 세션을 만든 원래 로그인 이름은 original_login_name을 참조하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인증 된 로그인 이름 또는 Windows 인증 된 도메인 사용자 이름일 수 있습니다. Null을 허용하지 않습니다.|  
 |nt_domain|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 도메인입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |nt_user_name|**nvarchar(128)**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상<br /><br /> 세션에서 Windows 인증 또는 트러스트된 연결을 사용하는 경우 클라이언트의 Windows 사용자 이름입니다. 내부 세션 및 비도메인 사용자에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |상태|**nvarchar(30)**|세션 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **실행 중** - 현재 하나 이상의 요청을 실행 중입니다.<br /><br /> **중지 중** - 현재 실행 중인 요청이 없습니다.<br /><br /> 연결 풀링은 현재 사전 로그인 상태 이므로 **유휴** 상태에서 세션이 다시 설정 되었습니다.<br /><br /> **Preconnect** - 세션은 리소스 관리자의 분류자에 있습니다.<br /><br /> Null을 허용하지 않습니다.|  
@@ -88,13 +88,13 @@ ms.locfileid: "76516274"
 |database_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 각 세션에 대한 현재 데이터베이스의 ID입니다.|  
 |authenticating_database_id|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 보안 주체를 인증하는 데이터베이스의 ID입니다. 로그인의 경우 값이 0이 됩니다. 포함된 데이터베이스 사용자의 경우 값은 포함된 데이터베이스의 데이터베이스 ID가 됩니다.|  
 |open_transaction_count|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 세션당 열린 트랜잭션 수입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
 |page_server_reads|**bigint**|**적용 대상**: Azure SQL Database hyperscale<br /><br /> 이 세션 중에이 세션의 요청에 의해 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
   
 ## <a name="permissions"></a>사용 권한  
 누구나 자신의 세션 정보를 볼 수 있습니다.  
-**[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** 서버의 `VIEW SERVER STATE` 모든 세션 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 을 보려면에 대 한 권한이 필요 합니다.  
-**[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 에서는 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 확인 해야 합니다. `VIEW DATABASE STATE``master` 데이터베이스에서를 부여할 수 없습니다. 
+** [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] :** `VIEW SERVER STATE` [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 서버의 모든 세션을 보려면에 대 한 권한이 필요 합니다.  
+** [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** 를 사용 `VIEW DATABASE STATE` 하 여 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE`데이터베이스에서를 부여할 수 없습니다 `master` . 
   
   
 ## <a name="remarks"></a>설명  

@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e46eaf73be4f14e90065627379bb778525051a
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089374"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000853"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>옵션 (쿼리 실행-SQL Server-ANSI 페이지)
-  이러한 ANSI(ISO) 표준 SET 옵션은 사용자 쿼리 실행 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 그러나 이러한 SET 옵션에 ISO 표준을 준수하는 데 필요한 모든 옵션이 포함되지는 않습니다. 이 페이지를 사용 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 ISO 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **실행**아래에서 **ANSI**를 클릭합니다.  
+  이러한 ANSI(ISO) 표준 SET 옵션은 사용자 쿼리 실행 기간, 실행 중인 트리거, 저장 프로시저에 대해 쿼리 처리 환경을 정의합니다. 그러나 이러한 SET 옵션에 ISO 표준을 준수하는 데 필요한 모든 옵션이 포함되지는 않습니다. 이 페이지를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **실행**아래에서 **ANSI**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **SET ANSI_DEFAULTS**  
  기본 ISO 설정을 모두 선택하려면 이 확인란을 선택합니다. 기본적으로 모든 ISO 옵션이 선택되지는 않습니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: osql 유틸리티
+description: SQL Server에서 osql 유틸리티를 사용하여 명령 프롬프트에서 Transact-SQL 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. osql은 ODBC를 사용하여 서버와 통신합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -25,12 +26,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dbc103ea44027056541dada86451c757a27619ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a6b04e904088ce78d46f692b9f29207d54f14c99
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307362"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151352"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
 

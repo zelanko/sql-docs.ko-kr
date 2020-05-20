@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787761"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001023"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>전체 텍스트 검색의 주요 변경 내용
   이 항목에서는 전체 텍스트 검색의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  

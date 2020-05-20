@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ff2094e1452c17fa33d2d909f9b4796b4eddc706
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925379"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150600"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -406,7 +406,16 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
   
  없음  
  이 가용성 복제본이 주 복제본인 경우 읽기 전용 라우팅이 지원되지 않도록 지정합니다. 기본 동작입니다. 이 값에 MODIFY REPLICA ON을 사용하면 기존 목록(있는 경우)이 비활성화됩니다.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
+ 적용 대상: SQL Server(SQL Server 2019(15.x)부터) 
+
+ 기본 역할로 실행 중일 때 다음과 같은 요구 사항을 충족하는 이 가용성 그룹에 대한 가용성 복제본을 호스트하는 서버 인스턴스를 지정합니다.
+-   복제본 사양 PRIMARY_ROLE에 READ_WRITE_ROUTING_URL이 포함되어 있습니다.
+-   연결 문자열은 ReadWrite으로서 ApplicationIntent를 ReadWrite로 정의하거나, ApplicationIntent를 설정하지 않고 기본값인 ReadWrite가 적용되도록 하면 됩니다.
+
+자세한 내용은 [보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)을 참조하세요.
+
  SESSION_TIMEOUT **=** _seconds_  
  세션 제한 시간(초)을 지정합니다. 이 옵션을 지정하지 않으면 기본적으로 제한 시간은 10초로 설정됩니다. 최소값은 5초입니다.  
   

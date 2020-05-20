@@ -1,5 +1,6 @@
 ---
 title: 인라인 워크로드가 포함된 XML 입력 파일 샘플
+description: 이 문서에는 데이터베이스 엔진 튜닝 관리자에서 사용할 샘플 XML 입력 파일과 튜닝 작업에 사용할 인라인 워크로드가 포함되어 있습니다.
 titleSuffix: DTA
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: b12c6f285a7c9eb1e32c33332b00ec624092c3c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 743b8dcbb3bde709ac69108b5038d80ee4931567
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258025"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151754"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>인라인 작업이 포함된 XML 입력 파일 예제(DTA)
 

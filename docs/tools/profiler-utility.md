@@ -1,5 +1,6 @@
 ---
 title: 프로파일러 유틸리티
+description: 프로파일러 유틸리티는 SQL Server Profiler 도구를 시작합니다. 옵션 인수를 사용하여 애플리케이션 시작 방법을 제어할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ed207e5fa854dc25a07edfff49a75aad9d370ff
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08c37d53b0ab9bd9d02ca3574edfcc6061cf8218
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307394"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151309"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

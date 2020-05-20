@@ -1,6 +1,7 @@
 ---
 title: 입력 추적 데이터 준비
 titleSuffix: SQL Server Distributed Replay
+description: SQL Server Distributed Replay를 사용하여 분산 재생을 시작하려면 먼저 전처리 단계를 시작하여 입력 추적 데이터를 준비합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4bb84ab2f8df17bba52b41d115b2c67d47931eb3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307002"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152202"
 ---
 # <a name="prepare-the-input-trace-data"></a>입력 추적 데이터 준비
 
@@ -33,7 +34,7 @@ ms.locfileid: "75307002"
   
 ### <a name="to-prepare-the-input-trace-data"></a>입력 추적 데이터를 준비하려면  
   
-1.  **(선택 사항) 전처리 구성 설정 수정**: 시스템 세션 필터링 여부 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정하려면 XML 기반 전처리 구성 파일인 `<PreprocessModifiers>` 의 `DReplay.exe.preprocess.config`요소를 수정해야 합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
+1.  **(선택 사항) 전처리 구성 설정 수정**: 시스템 세션 필터링 여부 또는 최대 유휴 시간 구성 여부 등의 전처리 구성 설정을 수정하려면 XML 기반 전처리 구성 파일인 `DReplay.exe.preprocess.config`의 `<PreprocessModifiers>` 요소를 수정해야 합니다. 전처리 구성 파일을 수정하는 경우 원래 파일 대신 복사본을 수정하는 것이 좋습니다. 설정을 수정하려면 다음 단계를 수행합니다.  
   
     1.  기본 전처리 구성 파일인 `DReplay.exe.preprocess.config`를 복사한 후 복사한 파일의 이름을 바꿉니다. 기본 전처리 구성 파일은 관리 도구 설치 폴더에 있습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "75307002"
   
      전처리 구성 파일에 대한 자세한 내용은 [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)을 참조하세요.  
   
-2.  **전처리 단계 시작**: 입력 추적 데이터를 준비하려면 **preprocess** 옵션을 사용하여 관리 도구를 실행해야 합니다.하 자세한 내용은 [전처리 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
+2.  **전처리 단계 시작**: 입력 추적 데이터를 준비하려면 **preprocess** 옵션을 사용하여 관리 도구를 실행해야 합니다. 자세한 내용은 [전처리 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
     1.  Windows 명령 프롬프트 유틸리티(**CMD.exe**)를 열고 Distributed Replay Administration Tool의 설치 위치(**DReplay.exe**)로 이동합니다.  
   

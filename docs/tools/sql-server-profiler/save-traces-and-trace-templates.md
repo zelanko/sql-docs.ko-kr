@@ -1,6 +1,7 @@
 ---
 title: 추적 및 추적 템플릿 저장
 titleSuffix: SQL Server Profiler
+description: 캡처한 이벤트 데이터를 추적 파일이나 SQL Server Profiler의 데이터베이스 테이블에 저장하는 방법 및 사용자 정의 추적 템플릿을 저장하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9d3437ca51d12de09c7f0ae386b2e1c09ad50eab
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307421"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151691"
 ---
 # <a name="save-traces-and-trace-templates"></a>추적 및 추적 템플릿 저장
 

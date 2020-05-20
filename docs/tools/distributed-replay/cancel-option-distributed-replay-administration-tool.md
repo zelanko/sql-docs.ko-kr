@@ -1,6 +1,7 @@
 ---
 title: 취소 옵션 관리 도구
 titleSuffix: SQL Server Distributed Replay
+description: 이 문서에서는 SQL Server Distributed Replay 관리 도구의 취소 명령줄 옵션 및 구문에 대해 설명합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: fea376de-307a-4b45-b7e2-37df88f3681a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 00bff043287d323b84ad878e1444fda83e6d97be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41d76a8b87e6aa0bc46c5199c2843cce89f7cdac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307064"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152114"
 ---
 # <a name="cancel-option-distributed-replay-administration-tool"></a>취소 옵션(Distributed Replay Administration Tool)
 

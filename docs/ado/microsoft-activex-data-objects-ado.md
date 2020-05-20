@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921879"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606615"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ADO(ActiveX Data Objects)
 
-ADO는 c + + 프로그램에서 SQL Server에 연결 하는 데 사용 됩니다. 물론 클라우드의 Azure SQL Database에 연결 하는 것도 마찬가지입니다.
+ADO(ActiveX Data Objects)은 지정 된 백 엔드 엔진에 종속 되지 않음을 의미 하는 프로그래밍 모델입니다. 그러나 현재 ADO 모델을 지 원하는 유일한 엔진은 OLE DB입니다. ODBC 용 OLE DB 공급자는 물론 많은 네이티브 OLE DB 공급자가 있습니다. ADO는 c + + 및 Visual Basic 프로그램에서 SQL Server 및 기타 데이터베이스에 연결 하는 데 사용 됩니다. 물론 클라우드의 Azure SQL Database에 연결 하는 것도 마찬가지입니다.
 
 이 문서의 각 섹션에서는 ADO의 구성 요소에 대해 설명 합니다.
 
@@ -48,7 +48,7 @@ ADO는 c + + 프로그램에서 SQL Server에 연결 하는 데 사용 됩니다
   
  ADOX는 핵심 ADO 개체에 대 한 도우미 라이브러리입니다. 테이블, 프로시저 등의 스키마 개체를 만들고 수정 하 고 삭제 하기 위한 추가 개체를 제공 합니다. 또한 사용자 및 그룹을 유지 관리 하 고 개체에 대 한 사용 권한을 부여 하 고 취소 하는 보안 개체를 포함 합니다.  
   
-## <a name="documentation"></a>문서화  
+## <a name="documentation"></a>설명서  
  [ADO 보안 디자인 문제](../ado/guide/ado-security-design-issues.md)  
   
  [ADO 프로그래머 가이드](../ado/guide/ado-programmer-s-guide.md)  
@@ -61,7 +61,7 @@ ADO는 c + + 프로그램에서 SQL Server에 연결 하는 데 사용 됩니다
   
  [ADO 용어 설명](../ado/ado-glossary.md)  
   
-## <a name="support"></a>지원  
+## <a name="support"></a>Support(지원)  
  ADO 문제에 대 한 무료 도움말을 보려면 ADO 공용 뉴스 그룹에 게시 해 보세요. 이 뉴스 그룹은 ADO를 다루는 Microsoft PSS (기술 지원 서비스) 지원 전문가와 기타 숙련 된 ADO 개발자에 의해 모니터링 됩니다.  
   
  지원 옵션에 대 한 자세한 내용은 Microsoft 도움말 및 지원 웹 사이트에서 찾을 수 있습니다.

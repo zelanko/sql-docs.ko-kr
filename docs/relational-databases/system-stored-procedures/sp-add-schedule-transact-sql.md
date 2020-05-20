@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_schedule
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "70810388"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151975"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @active_end_time = ] active_end_time ]   
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
-    [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+    [ , [ @schedule_id = ] schedule_id OUTPUT ]
+    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -129,7 +130,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  

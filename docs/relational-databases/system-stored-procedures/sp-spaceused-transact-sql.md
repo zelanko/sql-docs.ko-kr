@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252025"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152140"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>인수  
 
-및 [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]의 경우 `sp_spaceused` 은 `sp_spaceused (@objname= N'Table1');` 매개 변수의 서 수 위치에 의존 하지 않고 명명 된 매개 변수를 지정 해야 합니다. 
+[!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및의 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 경우 `sp_spaceused` 은 `sp_spaceused (@objname= N'Table1');` 매개 변수의 서 수 위치에 의존 하지 않고 명명 된 매개 변수를 지정 해야 합니다. 
 
 `[ @objname = ] 'objname'`
    
@@ -52,7 +52,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 *Objname* 을 지정 하지 않으면 전체 데이터베이스에 대해 결과가 반환 됩니다.  
 *objname* 은 **nvarchar (776)** 이며 기본값은 NULL입니다.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 는 데이터베이스 및 테이블 개체만 지원 합니다.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]및는 [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] 데이터베이스 및 테이블 개체만 지원 합니다.
   
 `[ @updateusage = ] 'updateusage'`공간 사용량 정보를 업데이트 하기 위해 DBCC UPDATEUSAGE을 실행 해야 함을 나타냅니다. *Objname* 을 지정 하지 않으면 전체 데이터베이스에서 문이 실행 됩니다. 그렇지 않으면 문이 *objname*에 대해 실행 됩니다. 값은 **true** 또는 **false**일 수 있습니다. *updateusage* 은 **varchar (5)** 이며 기본값은 **false**입니다.  
   
@@ -60,27 +60,27 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  *Mode* 인수는 다음과 같은 값을 가질 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ALL|로컬 부분과 원격 부분을 모두 포함 하는 개체 또는 데이터베이스의 저장소 통계를 반환 합니다.|  
-|LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 대 한 저장소 통계만 반환 합니다. 스트레치를 사용 하지 않는 개체 또는 데이터베이스는 when @mode = ALL과 동일한 통계를 반환 합니다.|  
+|LOCAL_ONLY|개체 또는 데이터베이스의 로컬 부분에 대 한 저장소 통계만 반환 합니다. 스트레치를 사용 하지 않는 개체 또는 데이터베이스는 when = ALL과 동일한 통계를 반환 합니다 @mode .|  
 |REMOTE_ONLY|개체 또는 데이터베이스의 원격 부분만의 저장소 통계만 반환 합니다. 이 옵션은 다음 조건 중 하나에 해당 하는 경우 오류를 발생 시킵니다.<br /><br /> 스트레치에 대해 테이블을 사용할 수 없습니다.<br /><br /> 테이블이 스트레치에 대해 사용 하도록 설정 되어 있지만 데이터 마이그레이션을 사용 하도록 설정 하지 않았습니다. 이 경우 원격 테이블에는 아직 스키마가 없습니다.<br /><br /> 사용자가 원격 테이블을 수동으로 삭제 했습니다.<br /><br /> 원격 데이터 보관의 프로 비전이 성공 상태를 반환 했지만 실제로 실패 했습니다.|  
   
  *모드* 는 **varchar (11)** 이며 기본값은 **N'ALL '** 입니다.  
   
 `[ @oneresultset = ] oneresultset`단일 결과 집합을 반환할지 여부를 나타냅니다. *Oneresultset* 인수에는 다음 값을 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|0|* \@Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
-|1|Objname = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다. * \@*|  
+|0|* \@ Objname* 이 null 이거나 지정 되지 않은 경우 두 개의 결과 집합이 반환 됩니다. 두 개의 결과 집합이 기본 동작입니다.|  
+|1|* \@ Objname* = null 또는를 지정 하지 않으면 단일 결과 집합이 반환 됩니다.|  
   
  *oneresultset* 는 **bit**이며 기본값은 **0**입니다.  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
-**적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**적용 대상:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] , [!INCLUDE[sssds-md](../../includes/sssds-md.md)] .  
   
- = @oneresultset1 일 경우 매개 변수 @include_total_xtp_storage 는 단일 resultset에 MEMORY_OPTIMIZED_DATA 저장소에 대 한 열이 포함 되어 있는지 여부를 확인 합니다. 기본값은 0입니다. 즉, 기본적으로 매개 변수를 생략 하면 XTP 열이 resultset에 포함 되지 않습니다.  
+ @oneresultset= 1 일 경우 매개 변수는 @include_total_xtp_storage 단일 resultset에 MEMORY_OPTIMIZED_DATA 저장소에 대 한 열이 포함 되어 있는지 여부를 확인 합니다. 기본값은 0입니다. 즉, 기본적으로 매개 변수를 생략 하면 XTP 열이 resultset에 포함 되지 않습니다.  
 
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -149,7 +149,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다.|  
 |**xtp_pending_truncation**|**varchar (18)**|상태 WAITING_FOR_LOG_TRUNCATION의 전체 검사점 파일 크기 (KB)입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다.|
 
-*Objname* 이 생략 된 경우 oneresultset의 값은 1이 고 *include_total_xtp_storage* 1 이면 현재 데이터베이스 크기 정보를 제공 하기 위해 다음과 같은 단일 결과 집합이 반환 됩니다. 이 `include_total_xtp_storage` 0 (기본값) 이면 마지막 세 개의 열이 생략 됩니다. 
+*Objname* 이 생략 된 경우 oneresultset의 값은 1이 고 *include_total_xtp_storage* 1 이면 현재 데이터베이스 크기 정보를 제공 하기 위해 다음과 같은 단일 결과 집합이 반환 됩니다. `include_total_xtp_storage`이 0 (기본값) 이면 마지막 세 개의 열이 생략 됩니다. 
 
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -160,12 +160,12 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**데이터**|**varchar (18)**|데이터가 사용하는 총 공간입니다.|  
 |**index_size**|**varchar (18)**|인덱스가 사용하는 총 공간입니다.|  
 |**사용 되지 않는**|**varchar (18)**|데이터베이스의 개체에 예약되었지만 아직 사용되지 않은 총 공간입니다.|
-|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 = 1 인 @include_total_xtp_storage경우에만 포함 됩니다*.| 
-|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 = 1 인 @include_total_xtp_storage경우에만 포함 됩니다*.| 
-|**xtp_pending_truncation**|**varchar (18)**|상태 WAITING_FOR_LOG_TRUNCATION의 전체 검사점 파일 크기 (KB)입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. 이 열은 인 경우 `@include_total_xtp_storage=1`에만 포함 됩니다.|
+|**xtp_precreated**|**varchar (18)**|상태가 사전 생성 된 검사점 파일의 총 크기 (KB)입니다. 이는 전체 데이터베이스의 할당 되지 않은 공간을 계산 합니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
+|**xtp_used**|**varchar (18)**|생성, 활성 및 병합 대상에서 상태의 검사점 파일의 총 크기 (KB)입니다. 메모리 최적화 테이블의 데이터에 적극적으로 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. *이 열은 @include_total_xtp_storage = 1 인 경우에만 포함 됩니다*.| 
+|**xtp_pending_truncation**|**varchar (18)**|상태 WAITING_FOR_LOG_TRUNCATION의 전체 검사점 파일 크기 (KB)입니다. 로그 잘림이 발생 한 후 정리를 대기 중인 검사점 파일에 사용 되는 디스크 공간입니다. 하나 이상의 컨테이너를 포함 하는 memory_optimized_data 파일 그룹이 데이터베이스에 없는 경우 NULL을 반환 합니다. 이 열은 인 경우에만 포함 됩니다 `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>설명  
- **database_size** 은 로그 파일의 크기를 포함 하기 때문에 **예약** + **된 할당 되지 않은 공간의** 합계 보다 항상 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다.  
+ **database_size** 은 **reserved**  +  로그 파일의 크기를 포함 하기 때문에 예약 된**할당 되지 않은 공간의** 합계 보다 일반적으로 더 큽니다. **예약** 된 공간 및 **unallocated_space** 데이터 페이지만 고려 합니다. Azure Synapse Analytics를 사용 하는 경우이 문은 true가 아닐 수 있습니다. 
   
  XML 인덱스 및 전체 텍스트 인덱스에 사용 되는 페이지는 두 결과 집합의 **index_size** 에 포함 됩니다. *Objname* 을 지정 하면 개체의 XML 인덱스 및 전체 텍스트 인덱스에 대 한 페이지도 총 **예약** 된 결과와 **index_size** 결과에 계산 됩니다.  
   
@@ -202,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. 스트레치 사용 테이블에 연결 된 원격 테이블에 대 한 공간 사용량 정보 표시  
- 다음 예에서는 ** \@mode** 인수를 사용 하 여 원격 대상을 지정 하 여 스트레치 사용 테이블에 연결 된 원격 테이블에 사용 되는 공간을 요약 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
+ 다음 예에서는 ** \@ mode** 인수를 사용 하 여 원격 대상을 지정 하 여 스트레치 사용 테이블에 연결 된 원격 테이블에 사용 되는 공간을 요약 합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.  
   
 ```sql  
 USE StretchedAdventureWorks2016  

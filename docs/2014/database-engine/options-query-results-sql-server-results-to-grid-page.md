@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
 ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 914daa6a44df3410224616efbe8285598c95dbd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089307"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000763"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>옵션 (쿼리 결과-SQL Server-표 형태로 결과 생성 페이지)
-  이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자 왼쪽 창의 **결과**에서 **표**를 클릭합니다.  
+  이 페이지를 사용하여 쿼리 결과 집합을 표 형태로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자 왼쪽 창의 **결과**에서 **표**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **결과 집합에 쿼리 포함**  
  쿼리 출력의 일부로 쿼리 텍스트를 반환합니다.  
   

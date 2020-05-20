@@ -1,7 +1,7 @@
 ---
 title: Columnstore 인덱스 - 새로운 기능 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0728c62f3c866a75a88702b7fdd2f7e8cea557dc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009420"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269452"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,12 @@ ms.locfileid: "70009420"
 |Columnstore 인덱스에는 비지속형 계산 열이 있을 수 있음||||예|||   
   
  <sup>1</sup> 읽기 전용 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 이러한 새 기능을 추가합니다.
+
+### <a name="functional"></a>기능
+- [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다. 이전에는 부분적으로 삭제된 데이터와 행 그룹을 병합하기 위해 인덱스를 다시 구성하는 작업이 필요했습니다. 이번 변경 덕분에 지속적으로 columnstore 인덱스 품질이 향상됩니다. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.

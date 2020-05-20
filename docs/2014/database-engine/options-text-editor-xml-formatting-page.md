@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089852"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000635"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
 
@@ -48,7 +48,7 @@ ms.locfileid: "66089852"
  **끝 태그가 완료될 때**  
  끝 태그가 완료될 때 요소 서식을 다시 설정합니다.  
   
-## <a name="mixed-content"></a>혼합된 콘텐츠  
+## <a name="mixed-content"></a>혼합 내용  
  **기본값으로 혼합된 콘텐츠 서식 지정**  
  `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 이것이 기본값입니다.  
   

@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: c323fc0e0535b941b1349c3ceae2331aa55d7bb7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528769"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151885"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -205,6 +206,8 @@ distrib [-?]
 -   마지막 기록 이벤트가 기록된 후 **MessageInterval** 값에 도달한 경우  
   
  원본에 사용할 수 있는 복제된 트랜잭션이 없는 경우 에이전트에서는 배포자에 트랜잭션 없음 메시지를 보고합니다. 이 옵션은 다른 트랜잭션 없음 메시지를 보고하기 전에 에이전트에서 기다리는 시간을 지정합니다. 에이전트에서는 이전에 복제된 트랜잭션을 처리한 후 원본에 사용할 수 있는 트랜잭션이 없는지 감지할 때 항상 트랜잭션 없음 메시지를 보고합니다. 기본값은 60초입니다.  
+
+**-MultiSubnetFailover** MultiSubnetFailover 속성이 사용되는지 여부를 지정합니다. 애플리케이션이 다른 서브넷의 AG(AlwaysOn 가용성 그룹)에 연결 중인 경우 MultiSubnetFailover=true을 설정하면 (현재) 활성 서버를 더 신속하게 검색하여 연결할 수 있습니다.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming**을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
@@ -299,6 +302,7 @@ distrib [-?]
 |업데이트된 내용|  
 |---------------------|  
 |**-ExtendedEventConfigFile** 매개 변수를 추가했습니다.|  
+|**-MultiSubnetFailover** 매개 변수를 추가했습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  

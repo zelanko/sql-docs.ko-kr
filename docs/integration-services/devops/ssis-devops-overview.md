@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: 946ea5d404db51c5241e5657524cf3dbc1a519a7
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987207"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152165"
 ---
-# <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>SSIS(SQL Server Integration Services) DevOps 도구(미리 보기)
+# <a name="sql-server-integration-services-ssis-devops-tools"></a>SSIS(SQL Server Integration Services) DevOps 도구
 
 [SSIS DevOps 도구](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) 확장은 **Azure DevOps** Marketplace에서 제공됩니다.
 
@@ -90,7 +90,7 @@ cat log.txt
 
 대상 유형입니다. 현재 SSIS 배포 작업은 다음 두 가지 유형을 지원합니다.
 
-- ‘파일 시스템’:  SSISDeploymentManifest 파일 및 관련 파일을 지정된 파일 시스템에 배포합니다. 온-프레미스와 Azure 파일 공유가 모두 지원됩니다.
+- ‘파일 시스템’: SSISDeploymentManifest 파일 및 관련 파일을 지정된 파일 시스템에 배포합니다. 온-프레미스와 Azure 파일 공유가 모두 지원됩니다.
 - *SSISDB*: 온-프레미스 SQL Server 또는 Azure-SSIS Integration Runtime에 호스트될 수 있는 지정된 SSIS 카탈로그에 ISPAC 파일을 배포합니다.
 
 #### <a name="destination-server"></a>대상 서버
@@ -290,7 +290,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 
 |속성  |Description  |메모  |
 |---------|---------|---------|
-|폴더  |폴더 개체의 배열입니다. 각 개체에는 하나의 카탈로그 폴더에 대한 구성 정보가 포함되어 있습니다.|폴더 개체의 스키마는 ‘폴더 특성’을 참조하세요. |
+|폴더  |폴더 개체의 배열입니다. 각 개체에는 하나의 카탈로그 폴더에 대한 구성 정보가 포함되어 있습니다.|폴더 개체의 스키마는 ‘폴더 특성’을 참조하세요.|
 
 ##### <a name="folder-attributes"></a>폴더 특성
 
@@ -298,24 +298,24 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |---------|---------|---------|
 |name  |카탈로그 폴더의 이름입니다.|폴더가 존재하지 않는 경우 생성됩니다.|
 |description|카탈로그 폴더에 대한 설명입니다.|*null*의 값은 건너뜁니다.|
-|projects|프로젝트 개체의 배열입니다. 각 개체에는 하나의 프로젝트에 대한 구성 정보가 포함되어 있습니다.|프로젝트 개체의 스키마는 ‘프로젝트 특성’을 참조하세요. |
-|environments|환경 개체의 배열입니다. 각 개체에는 하나의 환경에 대한 구성 정보가 포함되어 있습니다.|환경 개체의 스키마는 ‘환경 특성’을 참조하세요. |
+|projects|프로젝트 개체의 배열입니다. 각 개체에는 하나의 프로젝트에 대한 구성 정보가 포함되어 있습니다.|프로젝트 개체의 스키마는 ‘프로젝트 특성’을 참조하세요.|
+|environments|환경 개체의 배열입니다. 각 개체에는 하나의 환경에 대한 구성 정보가 포함되어 있습니다.|환경 개체의 스키마는 ‘환경 특성’을 참조하세요.|
 
 ##### <a name="project-attributes"></a>프로젝트 특성
 
 |속성  |Description  |메모  |
 |---------|---------|---------|
 |name|프로젝트의 이름입니다. |부모 폴더에 프로젝트가 없는 경우 프로젝트 개체를 건너뜁니다.|
-|매개 변수|매개 변수 개체의 배열입니다. 각 개체에는 하나의 매개 변수에 대한 구성 정보가 포함되어 있습니다.|매개 변수 개체의 스키마는 ‘매개 변수 특성’을 참조하세요. |
-|references|참조 개체의 배열입니다. 각 개체는 대상 프로젝트에 대한 환경 참조를 나타냅니다.|참조 개체의 스키마는 ‘참조 특성’을 참조하세요. |
+|매개 변수|매개 변수 개체의 배열입니다. 각 개체에는 하나의 매개 변수에 대한 구성 정보가 포함되어 있습니다.|매개 변수 개체의 스키마는 ‘매개 변수 특성’을 참조하세요.|
+|references|참조 개체의 배열입니다. 각 개체는 대상 프로젝트에 대한 환경 참조를 나타냅니다.|참조 개체의 스키마는 ‘참조 특성’을 참조하세요.|
 
 ##### <a name="parameter-attributes"></a>매개 변수 특성
 
 |속성  |Description  |메모  |
 |---------|---------|---------|
-|name|매개 변수의 이름입니다.|매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다.   <br> 부모 프로젝트에 매개 변수가 없는 경우 매개 변수를 건너뜁니다.|
+|name|매개 변수의 이름입니다.|매개 변수는 ‘프로젝트 매개 변수’ 또는 ‘패키지 매개 변수’일 수 있습니다.  <br> 부모 프로젝트에 매개 변수가 없는 경우 매개 변수를 건너뜁니다.|
 |container|매개 변수의 컨테이너입니다.|<li>매개 변수가 프로젝트 매개 변수이면 *container*는 프로젝트 이름이어야 합니다. <li>매개 변수가 패키지 매개 변수이면 *container*는 **.dtsx** 확장자를 갖는 패키지 이름이어야 합니다. <li> 매개 변수가 연결 관리자 속성이면 이름은 다음과 같은 형식이어야 합니다. **CM.\<연결 관리자 이름>.\<속성 이름>** .|
-|값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다.  <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다.    <br> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
+|값|매개 변수의 값입니다.|<li>*valueType*이 *referenced*인 경우: 값은 ‘문자열’ 형식의 환경 변수에 대한 참조입니다. <li> *valueType*이 *literal*인 경우: 이 특성은 임의의 유효한 ‘부울’, ‘숫자’ 및 ‘문자열’ JSON 값을 지원합니다.   <br> 값은 대상 매개 변수 형식으로 변환됩니다. 변환할 수 없는 경우 오류가 발생합니다.<li> *null* 값은 유효하지 않습니다. 작업은 이 매개 변수 개체를 건너뛰고 경고를 표시합니다.|
 |valueType|매개 변수 값의 유형입니다.|유효한 유형은 다음과 같습니다. <br> *literal*: *value* 특성이 리터럴 값을 나타냅니다. <br> *referenced*: *value* 특성이 환경 변수에 대한 참조를 나타냅니다.|
 
 ##### <a name="reference-attributes"></a>참조 특성
@@ -331,7 +331,7 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |---------|---------|---------|
 |name|환경의 이름입니다.|환경이 존재하지 않는 경우 생성됩니다.|
 |description|환경에 대한 설명입니다.|*null*의 값은 건너뜁니다.|
-|variables|변수 개체의 배열입니다.|각 개체에는 하나의 환경 변수에 대한 구성 정보가 포함되어 있습니다. 변수 개체의 스키마는 ‘변수 특성’을 참조하세요. |
+|variables|변수 개체의 배열입니다.|각 개체에는 하나의 환경 변수에 대한 구성 정보가 포함되어 있습니다. 변수 개체의 스키마는 ‘변수 특성’을 참조하세요.|
 
 ##### <a name="variable-attributes"></a>변수 특성
 
@@ -344,6 +344,12 @@ SSIS 카탈로그 구성의 인라인 JSON입니다. 이 속성은 구성 파일
 |sensitive|환경 변수의 값이 민감한지 여부입니다.|잘못된 입력: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>릴리스 정보
+
+### <a name="version-101"></a>버전 1.0.1
+
+릴리스 날짜: 2020년 5월 9일
+
+- 단일 dtproj 파일이 프로젝트 경로로 지정된 경우에도 SSIS 빌드 작업에서 항상 전체 솔루션을 빌드하는 문제를 해결했습니다.
 
 ### <a name="version-100"></a>Version 1.0.0
 

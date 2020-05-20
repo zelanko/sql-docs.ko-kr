@@ -1,5 +1,6 @@
 ---
 title: XML 출력 파일 형식
+description: SQL Server에서 ssbdiagnose 유틸리티는 출력을 XML 파일로 전달할 수 있습니다. 오류를 분석 또는 보고하거나 XML 편집기에서 볼 수 있는 애플리케이션을 만듭니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,12 +15,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50d1c8467c3ec7d51325b1a2beaad8f9216f0dbc
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1b039d5441ed39c85a8cf1e9468eddfe165aad1c
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254177"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150502"
 ---
 # <a name="xml-output-file-format-ssbdiagnose"></a>XML 출력 파일 형식(ssbdiagnose)
 

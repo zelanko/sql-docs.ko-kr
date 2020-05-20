@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.schedule.f1
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779033"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000903"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>전체 텍스트 인덱스 속성(일정 페이지)
   이 페이지를 사용하여 전체 텍스트 인덱스의 기본 테이블에 대한 업데이트의 증분 채우기를 시작하는 SQL Server 에이전트 작업을 실행하는 일정을 보거나 만들 수 있습니다. 기본 테이블이나 뷰에 `timestamp` 데이터 형식의 열이 포함되어 있지 않으면 전체 채우기가 수행됩니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "62779033"
   
 -   [전체 텍스트 인덱스 관리](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **일정**  
  전체 텍스트 인덱스의 기본 테이블에 대해 예약된 각 증분 채우기(있는 경우)를 나열합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62779033"
  **설명**  
  예약을 만들 때 지정한 설명을 표시합니다.  
   
- **신규**  
+ **새 항목**  
  전체 텍스트 인덱스를 채우는 일정을 새로 만들려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

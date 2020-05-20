@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6c4cbb43048e9dff683b510d958e3e25d87e823
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77507508"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151521"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "77507508"
 
 ## <a name="syntax"></a>구문
 
-``` 
+```syntaxsql
 CREATE DATABASE SCOPED CREDENTIAL credential_name
 WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]
@@ -51,6 +51,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* 만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.
 
 IDENTITY **=’** _identity\_name_ **’** 서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
+
+> [!NOTE]
+Azure Blob Storage의 컨테이너가 익명 액세스를 사용하도록 설정된 경우에는 WITH IDENTITY가 필요하지 않습니다. Azure Blob Storage를 쿼리하는 예제는 [Azure Blob Storage에 저장된 파일에서 테이블로 가져오기](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage)를 참조하세요.
 
 SECRET **=’** _secret_ **’** 나가는 인증에 필요한 암호를 지정합니다. `SECRET`은 Azure Blob 스토리지에서 파일을 가져오는 데 필요합니다. Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.
 > [!WARNING]
@@ -101,7 +104,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명 만들기
 
-다음 예에서는 [BULK INSERT](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [OPENROWSET](../../t-sql/statements/bulk-insert-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/functions/openrowset-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
+다음 예에서는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
 
 ```sql
 -- Create a db master key if one does not already exist, using your own password.

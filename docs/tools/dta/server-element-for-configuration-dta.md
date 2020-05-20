@@ -1,5 +1,6 @@
 ---
 title: Configuration의 Server 요소(DTA)
+description: dta 유틸리티에서 Configuration의 Server 요소는 구성을 평가하려는 서버에 대한 식별 정보를 포함합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 9bb781ac08e8dc8a7750dfbcea874287fb5c2241
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f723e02b13ed5613d3606927ae500c3072c8c6fc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307608"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151794"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration의 Server 요소(DTA)
 

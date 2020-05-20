@@ -1,5 +1,6 @@
 ---
 title: sqlagent90 애플리케이션
+description: sqlagent90 애플리케이션은 명령 프롬프트에서 SQL Server 에이전트를 시작합니다. SQL Server 에이전트를 진단하거나 지원 공급자가 안내하는 경우에 사용하세요.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c75d932356d24bd5a268eb27d50deee91a6329f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9012e40eacdb1bd2b242021a0855f3ed36a5a4b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307762"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151633"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

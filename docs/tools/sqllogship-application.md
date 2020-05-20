@@ -1,5 +1,6 @@
 ---
 title: sqllogship 애플리케이션
+description: sqllogship 애플리케이션은 SQL Server 데이터베이스의 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 정리 태스크를 수행합니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306649"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151591"
 ---
 # <a name="sqllogship-application"></a>sqllogship 애플리케이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

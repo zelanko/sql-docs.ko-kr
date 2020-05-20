@@ -1,6 +1,5 @@
 ---
 title: max degree of parallelism 서버 구성 옵션 구성 | Microsoft Docs
-ms.custom: ''
 ms.date: 02/12/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,17 +15,18 @@ helpviewer_keywords:
 ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 94f8c87e0b996be0b9485cbe5a43038e33420fe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.custom: contperfq4
+ms.openlocfilehash: 41c65a001047a32e51580633bd82366b7783a2aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288727"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606815"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>max degree of parallelism 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  이 문서에서는 **또는**을 사용하여 SQL Server에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]MAXDOP(최대 병렬 처리 수준)[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
+  이 문서에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 SQL Server에서 **MAXDOP(최대 병렬 처리 수준)** 서버 구성 옵션을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 마이크로프로세서나 CPU가 둘 이상인 컴퓨터에서 실행될 경우 병렬 처리 수준, 즉 각 병렬 계획 실행에 대해 단일 문을 실행하는 데 사용된 프로세서 수를 검색합니다. **max degree of parallelism** 옵션을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리에 대한 병렬 실행 계획, 인덱스 DDL(데이터 정의 언어) 작업, 병렬 삽입, 온라인 열 변경, 병렬 통계 수집 및 정적 커서와 키 집합 커서 채우기를 고려합니다.
 
 > [!NOTE]
 > [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)]에서는 설치하는 동안 MAXDOP 서버 구성 옵션을 설정하기 위한 자동 권장 사항이 도입되었습니다. 설정 사용자 인터페이스를 사용하여 권장 설정을 적용하거나 사용자 고유 값을 입력할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](../../sql-server/install/instance-configuration.md#maxdop)를 참조하세요.
@@ -72,7 +72,7 @@ ms.locfileid: "79288727"
 > 위 표의 NUMA 노드는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상 버전에서 자동으로 생성되는 소프트 NUMA 노드 또는 소프트 NUMA가 사용되지 않는 경우 하드웨어 기반 NUMA 노드를 가리킵니다.   
 >  Resource Governor 작업 그룹에 대해 최대 병렬 처리 수준 옵션을 설정할 때도 동일한 지침을 사용합니다. 자세한 내용은 [작업 그룹 만들기(Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조하세요.
   
-[!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]최대 병렬 처리 수준[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버 구성 값을 구성할 때 **~** 에서 다음 지침을 사용합니다.
+**최대 병렬 처리 수준** 서버 구성 값을 구성할 때 [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 다음 지침을 사용합니다.
 
 ||||
 |----------------|-----------------|-----------------|
@@ -125,10 +125,8 @@ GO
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)      
- [SQL Server의 "최대 병렬 처리 수준" 구성 옵션에 대한 권장 사항 및 지침](https://support.microsoft.com/help/2806535)     
- [선호도 마스크 서버 구성 옵션](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)   
- [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)        
+ [선호도 마스크 서버 구성 옵션](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)      
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md#DOP)       
@@ -136,3 +134,8 @@ GO
  [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)    
  [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)     
  [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)     
+
+## <a name="next-steps"></a>다음 단계
+
+[RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)
+[성능 모니터링 및 튜닝](../../relational-databases/performance/monitor-and-tune-for-performance.md)

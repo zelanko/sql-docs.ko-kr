@@ -1,7 +1,7 @@
 ---
 title: DELETE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/30/2019
+ms.date: 05/19/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -25,12 +25,12 @@ ms.assetid: ed6b2105-0f35-408f-ba51-e36ade7ad5b2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1207f4938c1c3b269cd503e1f7f7f7e279207685
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56e259f707a665c5bc2f4af89b63c2cb3846b70c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82169361"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606415"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 
@@ -80,7 +80,27 @@ DELETE
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics (formerly SQL Data Warehouse)
+
+[ WITH <common_table_expression> [ ,...n ] ] 
+DELETE [database_name . [ schema ] . | schema. ] table_name  
+FROM [database_name . [ schema ] . | schema. ] table_name 
+JOIN {<join_table_source>}[ ,...n ]  
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( <query_options> [ ,...n ]  ) ]  
+[; ]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
 DELETE 
     [ FROM [database_name . [ schema ] . | schema. ] table_name ]   
@@ -440,7 +460,8 @@ GO
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>12. 테이블에서 행 집합을 DELETE합니다.  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>12. 테이블에서 행 집합을 DELETE합니다.
+
  다음 예에서는 `Table1` 테이블에서 `StandardCost` 열에 1000.00보다 큰 값을 가진 모든 행을 삭제합니다.  
   
 ```sql
@@ -448,7 +469,8 @@ DELETE FROM Table1
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>13. DELETE 문과 함께 LABEL 사용  
+### <a name="m-using-label-with-a-delete-statement"></a>13. DELETE 문과 함께 LABEL 사용
+
  다음 예제에서는 DELETE 문과 함께 레이블을 사용합니다.  
   
 ```sql
@@ -457,7 +479,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>14. DELETE 문에 레이블 및 쿼리 힌트 사용
+
  이 쿼리는 DELETE 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절(Transact-SQL)](../queries/option-clause-transact-sql.md)을 참조하세요.
   
 ```sql
@@ -481,8 +504,32 @@ DELETE tableA WHERE EXISTS (
 SELECT TOP 1 1 FROM tableB tb WHERE tb.col1 = tableA.col1
 )
 ```
-  
-## <a name="see-also"></a>참고 항목  
+
+### <a name="p-delete-based-on-the-result-of-joining-with-another-table"></a>16. 다른 테이블과의 조인 결과에 따라 삭제
+
+이 예제에서는 다른 테이블과의 조인 결과에 따라 테이블에서 삭제하는 방법을 보여 줍니다.
+
+```sql
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+
+CREATE TABLE dbo.Table2   
+    (ColA int PRIMARY KEY NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0), (1, 20.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+
+DELETE dbo.Table2   
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA)
+    WHERE dboTable2.ColA = 1;  
+```
+
+## <a name="see-also"></a>참고 항목
+
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

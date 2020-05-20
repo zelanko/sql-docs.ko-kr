@@ -1,5 +1,6 @@
 ---
 title: SQL Server 관리 도구 업그레이드 | Microsoft Docs
+description: 이 문서에서는 SQL Server 관리 도구 및 SQL Server 에이전트와 같은 관리 구성 요소의 업그레이드와 관련된 지원에 대해 설명합니다.
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 332c513c7c7d76956fc5647d7e4cb96eeac633d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 267daba47822bee503f004f57cd1ccb769a765c9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934708"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269490"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 관리 도구 업그레이드
 

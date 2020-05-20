@@ -1,6 +1,7 @@
 ---
 title: 추적 중지
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 실행 중인 추적을 중지하고, 조정하려는 속성을 변경하고, 캡처된 데이터를 저장하는 방법을 알아봅니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 8b5c41497df9934102626031e23e53dd756898d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1639a4c95524387859c8163d94ce5bb9d8a5519a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307771"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151652"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>추적 중지(SQL Server Profiler)
 

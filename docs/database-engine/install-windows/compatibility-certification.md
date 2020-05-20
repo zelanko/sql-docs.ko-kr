@@ -1,5 +1,6 @@
 ---
 title: 호환성 인증 | Microsoft Docs
+description: 호환성 인증은 애플리케이션 호환성의 위험을 해소하여 온-프레미스와 클라우드에서 SQL Server 데이터베이스를 업그레이드할 수 있도록 합니다.
 ms.custom: ''
 ms.date: 08/26/2019
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d4d4812ccdc944411224094f3a9a29115845dc1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b993647898865d0b67c25c1ab6040b9b7eedaf1
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73632931"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606475"
 ---
 # <a name="compatibility-certification"></a>호환성 인증
 
@@ -83,7 +84,7 @@ ms.locfileid: "73632931"
 >
 > 허용된 수준보다 낮은 호환성 수준으로 데이터베이스를 업그레이드하면(예: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 기본값인 90) 데이터베이스를 허용된 가장 낮은 호환성 수준(100)으로 설정합니다.
 >
-> 현재 호환성 수준을 확인하려면 **sys.databases**의 [compatibility_level](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열을 쿼리합니다.
+> 현재 호환성 수준을 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)의 **compatibility_level** 열을 쿼리합니다.
 
 ## <a name="compatibility-levels-and-database-engine-upgrades"></a>호환성 수준 및 업그레이드 데이터베이스 엔진
 업그레이드 이전의 데이터베이스 호환성 수준과 지원 가능성 상태를 유지하면서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]을 최신 버전으로 업그레이드하려면 [DMA](https://www.microsoft.com/download/details.aspx?id=53595) 도구(Microsoft Data Migration Assistant)를 사용하여 데이터베이스(저장 프로시저, 함수, 트리거 등의 프로그래밍 기능 개체) 및 애플리케이션(애플리케이션에서 전송된 동적 코드를 캡처하는 워크로드 추적 사용)의 애플리케이션 코드에 대한 정적 기능 노출 영역 유효성 검사를 수행하는 것이 좋습니다. DMA 도구 출력에 누락되거나 호환되지 않는 기능에 대한 오류가 없는 경우 애플리케이션이 새로운 대상 버전의 기능 회귀로부터 보호됩니다. 자세한 내용은 [Data Migration Assistant 개요](../../dma/dma-overview.md)를 참조하세요.
@@ -98,7 +99,7 @@ ms.locfileid: "73632931"
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 다음과 같은 경우 쿼리 계획 셰이프 보호를 제공합니다.
 >
 > - 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(대상)은 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전(원본)이 실행 중인 하드웨어와 유사한 하드웨어에서 실행됩니다.
-> - 대상 [ 및 원본 ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) 모두에서 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지원 데이터베이스 호환성 수준[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 사용됩니다.
+> - 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모두에서 동일한 [지원 데이터베이스 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats)이 사용됩니다.
 >
 > 위의 조건에서 발생하는 모든 쿼리 계획 셰이프 회귀(원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기준)는 해결될 예정입니다. 이 경우 Microsoft 고객 지원팀에 문의하세요.
   

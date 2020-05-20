@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065551"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001033"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>명명된 파이프를 사용하여 유효한 연결 문자열 만들기
-  사용자가 변경 하지 않은 경우의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스는 명명 된 파이프 프로토콜에서 수신 하는 경우를 `\\.\pipe\sql\query` 파이프 이름으로 사용 합니다. 마침표는 컴퓨터가 로컬 컴퓨터임을 나타내고 `pipe` 는 연결이 명명된 파이프임을 나타내며 `sql\query` 는 파이프의 이름입니다. 기본 파이프에 연결하려면 별칭의 파이프 이름으로 `\\<computer_name>\pipe\sql\query` 를 지정해야 합니다. 다른 파이프에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 파이프 이름으로 해당 파이프를 사용해야 합니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 `\\.\pipe\unit\app` 를 파이프로 사용하는 경우 별칭의 파이프 이름은 `\\<computer_name>\pipe\unit\app` 여야 합니다.  
+  사용자가 변경 하지 않은 경우의 기본 인스턴스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명 된 파이프 프로토콜에서 수신 하는 경우를 `\\.\pipe\sql\query` 파이프 이름으로 사용 합니다. 마침표는 컴퓨터가 로컬 컴퓨터임을 나타내고 `pipe` 는 연결이 명명된 파이프임을 나타내며 `sql\query` 는 파이프의 이름입니다. 기본 파이프에 연결하려면 별칭의 파이프 이름으로 `\\<computer_name>\pipe\sql\query` 를 지정해야 합니다. 다른 파이프에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 파이프 이름으로 해당 파이프를 사용해야 합니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 `\\.\pipe\unit\app` 를 파이프로 사용하는 경우 별칭의 파이프 이름은 `\\<computer_name>\pipe\unit\app` 여야 합니다.  
   
  올바른 파이프 이름을 만들려면 다음을 수행해야 합니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63065551"
   
 -   **서버**를 지정합니다. 명명된 인스턴스의 경우 서버 이름과 인스턴스 이름을 제공할 수 있습니다.  
   
- 연결할 때 Native Client 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 별칭 이름에 대 한 서버, 프로토콜 및 파이프 이름 값을 레지스트리에서 읽고 또는 `np:\\<computer_name>\pipe\<pipename>` `np:\\<IPAddress>\pipe\<pipename>`형식으로 파이프 이름을 만듭니다. 명명 된 인스턴스의 경우 기본 파이프 이름은 `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`입니다.  
+ 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 구성 요소는 지정 된 별칭 이름에 대 한 서버, 프로토콜 및 파이프 이름 값을 레지스트리에서 읽고 또는 형식으로 파이프 이름을 만듭니다 `np:\\<computer_name>\pipe\<pipename>` `np:\\<IPAddress>\pipe\<pipename>` . 명명 된 인스턴스의 경우 기본 파이프 이름은 `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` 입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 방화벽에서는 포트 445가 기본적으로 닫힙니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 포트 445에서 통신하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 명명된 파이프를 사용하여 들어오는 클라이언트 연결을 수신하도록 구성된 경우 이 포트를 다시 열어야 합니다. 방화벽 구성에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "방법: SQL Server 액세스를 허용하도록 방화벽 구성"을 참조하거나 해당 방화벽 설명서를 검토하세요.  

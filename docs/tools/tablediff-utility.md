@@ -1,5 +1,6 @@
 ---
 title: tablediff 유틸리티
+description: tablediff 유틸리티를 사용하면 두 테이블에 포함된 데이터의 불일치 여부를 비교하고 복제 토폴로지의 데이터 불일치 문제를 해결할 수 있습니다.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cb12cc164490e249dae13ef22cdd5279a0427102
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b7f8a136c5aa17b1d7ed32cdc8024cdc44db0d25
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304802"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150515"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -173,7 +174,7 @@ tablediff
 |**2**|테이블 차이|  
   
 ## <a name="remarks"></a>설명  
- **이외 서버에서는**tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이외 서버에서는 **tablediff** 유틸리티를 사용할 수 없습니다.  
   
  데이터 형식이 **sql_variant** 인 열이 있는 테이블은 지원되지 않습니다.  
   

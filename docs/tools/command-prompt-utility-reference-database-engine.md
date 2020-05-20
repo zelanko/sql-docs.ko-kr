@@ -1,5 +1,6 @@
 ---
 title: SQL 명령 프롬프트 유틸리티(데이터베이스 엔진)
+description: 명령 프롬프트 유틸리티를 사용하여 SQL Server 작업을 스크립트로 작성할 수 있습니다. 이 문서에서는 SQL Server와 함께 제공되는 다양한 명령 프롬프트 유틸리티를 보여 줍니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c201c13c0d2a77f4005ad2fe788c783431c88094
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992743"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151427"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티(데이터베이스 엔진)
 
@@ -30,7 +31,7 @@ ms.locfileid: "74992743"
 
 명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 다양한 명령 프롬프트 유틸리티를 보여 줍니다.
 
-‘기본’ SQL GUI 및 명령줄 도구에 대한 자세한 내용은 [SQL 도구 개요](overview-sql-tools.md)를 참조하세요. 
+‘기본’ SQL GUI 및 명령줄 도구에 대한 자세한 내용은 [SQL 도구 개요](overview-sql-tools.md)를 참조하세요.
 
 |**유틸리티**|**설명**|**설치 위치**|  
 |-----------------|---------------------|----------------------|  

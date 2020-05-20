@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779194"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000953"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>전체 텍스트 카탈로그 속성(테이블 및 뷰 페이지)
   이 대화 상자를 사용하여 전체 텍스트 카탈로그에 할당된 테이블과 뷰를 보거나 수정할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **이 데이터베이스에서 적합한 모든 테이블/뷰 개체**  
  고유 인덱스가 정의되어 있지만 아직 전체 텍스트 카탈로그에 포함되지 않은 테이블 및 뷰를 나열합니다. 테이블이 나 뷰를 선택 하 여 카탈로그에 할당 하려면 목록 상자에서 항목을 선택 하 고 "->" 단추를 누릅니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62779194"
 |-|-|  
 |**사용 가능한 열**|전체 텍스트 인덱싱된 모든 열을 표시합니다. 전체 텍스트 인덱스에 열을 추가하려면 확인란을 선택합니다.|  
 |**단어 분리기 용 언어**|단어 분리기의 언어를 표시합니다.|  
-|**데이터 형식 열**|열이 `varbinary(max)` 또는 `image` 열인 경우 **사용 가능한 열** 에 나열 된 열의 문서 유형을 포함 하는 테이블의 열 이름을 나열 합니다.|  
+|**데이터 형식 열**|열이 또는 열인 경우 **사용 가능한 열** 에 나열 된 열의 문서 유형을 포함 하는 테이블의 열 이름을 나열 합니다 `varbinary(max)` `image` .|  
 |**통계 의미 체계**|선택한 열에 대해 의미 체계 인덱싱을 사용하도록 설정할지 여부를 선택합니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.<br /><br /> **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 확인란은 사용할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계**를 선택한 경우 드롭다운 콤보 상자에서 사용할 수 있는 언어가 의미 체계 언어 모델에서 지원하는 언어로 제한됩니다.|  
   
 ## <a name="track-changes"></a>변경 내용 추적  

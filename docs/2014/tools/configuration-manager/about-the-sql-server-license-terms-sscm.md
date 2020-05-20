@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035322"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001080"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server 사용 조건 정보 (SSCM)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일은 다음에 기록 됩니다.:%ProgramFiles%\Microsoft SQL Server\110\license terms\ ts\ 또는% ProgramFiles (x86)% \ Microsoft SQL\\server\110\license terms\ 약관.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일은 다음에 기록 됩니다.:%ProgramFiles%\Microsoft SQL Server\110\license terms\ ts\ 또는% ProgramFiles (x86)% \ Microsoft SQL Server\110\license terms\ 약관 \\ .  
   
  버전 및 언어가 같은 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다.  
   
- 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 예를 들어:  
+ 사용 조건 파일 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 언어 버전을 나타냅니다. 다음은 그 예입니다.  
   
 -   License_DEV_ENU.txt: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer, 영어 버전  
   

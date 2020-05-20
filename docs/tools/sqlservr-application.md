@@ -1,5 +1,6 @@
 ---
 title: sqlservr 애플리케이션
+description: sqlservr 애플리케이션은 명령 프롬프트에서 SQL Server 인스턴스를 시작, 중지, 일시 중지 및 계속합니다.
 ms.custom: seo-lt-2019
 ms.date: 08/01/2019
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a4a35081f52ddc6f6e75c4bfa8ff56e1020cb0c6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305782"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150562"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
 
@@ -67,7 +68,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 **-n** 명명된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작할 수 있습니다. **-s** 매개 변수를 설정하지 않으면 기본 인스턴스가 시작됩니다. **sqlservr.exe**를 시작하기 전에 명령 프롬프트에서 해당 인스턴스에 적합한 BINN 디렉터리로 전환해야 합니다. 예를 들어 Instance1이 이진 파일에 대해 \mssql$Instance1을 사용할 경우, 사용자는 \mssql$Instance1\binn 디렉터리에서 **sqlservr.exe -s instance1**을 시작해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **옵션으로** 인스턴스를 시작하는 경우에는 **-e** 옵션을 함께 사용하는 것이 좋습니다. 이렇게 하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 이벤트가 기록되지 않습니다.
 
-**-T** *trace#* 지정된 추적 플래그([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]trace# *) 적용 시*  인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
+**-T** *trace#* 지정된 추적 플래그(*trace#* ) 적용 시 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
 
 >[!IMPORTANT]
 >추적 플래그를 지정할 때는 **-T** 를 사용하여 추적 플래그 번호를 전달합니다. **에서 소문자 t(** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)])를 사용할 수는 있습니다. 그러나 **-t** 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지원 엔지니어에게 필요한 다른 내부 추적 플래그를 설정합니다.

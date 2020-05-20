@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779410"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000863"
 ---
 # <a name="full-text-stoplist-properties"></a>전체 텍스트 중지 목록 속성
   이 대화 상자를 사용하여 중지 단어를 개별적으로 추가 또는 삭제하거나 특정 언어에 대한 중지 단어를 모두 삭제하거나 현재 중지 목록을 지울 수 있습니다. 중지 단어란 자주 사용되는 단어 중 중지 목록에 포함된 것을 말합니다. 중지 목록에 있는 중지 단어는 해당 중지 목록을 사용하는 테이블에 대한 전체 텍스트 인덱싱에서 생략됩니다. 자세한 내용은 [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../relational-databases/search/full-text-search.md)를 참조하세요.  

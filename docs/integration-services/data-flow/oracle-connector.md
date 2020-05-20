@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 92aaf7c04d7a5e176fce4448b9d4f6172b541647
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce461246f0afef31ab4b60b772f92aeeb479a4cb
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755844"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606892"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Microsoft Connector for Oracle
 
@@ -26,7 +26,7 @@ Microsoft Connector for Oracle를 사용하면 SSIS 패키지에서 Oracle 데�
 
 다음 Microsoft SQL Server 제품은 Microsoft Connector for Oracle에서 지원됩니다.
 
-- SQL Server 2019 이상
+- SQL Server 2019 CU1 이상
 - SSDT(SQL Server Data Tools) 버전 15.9.3 이후
 
 데이터 원본의 다음 Oracle 데이터베이스 버전이 지원됩니다.

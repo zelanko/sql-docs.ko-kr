@@ -16,12 +16,12 @@ ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 58ff313686f1f37643068a28d4e30ac93eddd2ce
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 9f459e71ebeb95de2b1d80f1281881df1c0474a0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528227"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151863"
 ---
 # <a name="replication-log-reader-agent"></a>복제 로그 판독기 에이전트
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,8 @@ logread [-?]
 [-LoginTimeOut login_time_out_seconds]  
 [-LogScanThreshold scan_threshold]  
 [-MaxCmdsInTran number_of_commands]  
-[-MessageInterval message_interval]  
+[-MessageInterval message_interval]
+[-MultiSubnetFailover [0|1]]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2|3|4]]  
 [-PacketSize packet_size]  
@@ -139,6 +140,8 @@ logread [-?]
  기록 로깅에 사용되는 시간 간격입니다. 기록 이벤트는 마지막 기록 이벤트가 기록된 후 **MessageInterval** 값에 도달할 때 기록됩니다.  
   
  원본에 사용할 수 있는 복제된 트랜잭션이 없는 경우 에이전트에서는 배포자에 트랜잭션 없음 메시지를 보고합니다. 이 옵션은 다른 트랜잭션 없음 메시지를 보고하기 전에 에이전트에서 기다리는 시간을 지정합니다. 에이전트에서는 이전에 복제된 트랜잭션을 처리한 후 원본에 사용할 수 있는 트랜잭션이 없는지 감지할 때 항상 트랜잭션 없음 메시지를 보고합니다. 기본값은 60초입니다.  
+ 
+ **-MultiSubnetFailover** [**0**|**1**] MultiSubnetFailover 속성이 사용되는지 여부를 지정합니다. 애플리케이션이 다른 서브넷의 AG(AlwaysOn 가용성 그룹)에 연결 중인 경우 MultiSubnetFailover를 1(true)로 설정하면 (현재) 활성 서버를 더 신속하게 검색하여 연결할 수 있습니다.
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
@@ -201,6 +204,7 @@ logread [-?]
 |업데이트된 내용|  
 |---------------------|  
 |**-ExtendedEventConfigFile** 매개 변수를 추가했습니다.|  
+|**-MultiSubnetFailover** 매개 변수를 추가했습니다.|
   
 ## <a name="see-also"></a>참고 항목  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  

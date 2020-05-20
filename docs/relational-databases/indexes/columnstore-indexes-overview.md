@@ -1,7 +1,7 @@
 ---
-title: 'Columnstore 인덱스: 개요 | Microsoft Docs'
+title: 'columnstore 인덱스: 개요 | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009400"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269489"
 ---
-# <a name="columnstore-indexes-overview"></a>Columnstore 인덱스: 개요
+# <a name="columnstore-indexes-overview"></a>columnstore 인덱스: 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 이 인덱스는 열 기반 데이터 스토리지 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 스토리지보다 최대 **10배 높은 쿼리 성능**을 실현합니다. 또한 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축**을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
+Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 이 인덱스는 열 기반 데이터 스토리지 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 스토리지보다 최대 10배 높은 쿼리 성능을 실현합니다. 또한 압축되지 않은 데이터 크기보다 최대 10배의 데이터 압축 향상을 얻을 수 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 columnstore 인덱스는 트랜잭션 워크로드에 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
   
 관련 시나리오에 대한 자세한 정보:  
   
@@ -55,6 +55,16 @@ Rowstore는 열과 행이 있는 테이블로 논리적으로 구성되는 데�
   
 Columnstore 인덱스는 성능과 압축률을 높이기 위해 테이블을 여러 행 그룹으로 조각화한 후에 각 행 그룹을 열 방식으로 압축합니다. 행 그룹의 행 수는 압축률을 높일 만큼 크고, 메모리 내 작업을 활용할 만큼 작아야 합니다.    
 
+모든 데이터가 삭제된 행 그룹은 COMPRESSED에서 TOMBSTONE 상태로 전환되고 나중에 튜플 이동기라는 백그라운드 프로세스에 의해 제거됩니다. 행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요.
+
+> [!TIP]
+> 작은 행 그룹이 너무 많이 있으면 columnstore 인덱스 품질이 저하됩니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지 재구성 작업은 삭제된 행을 제거하고 압축된 행 그룹을 결합하는 방법을 결정하는 내부 임계값 정책에 따라 더 작은 COMPRESSED 행 그룹을 병합하는 데 필요합니다.    
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 백그라운드 병합 작업도 다수의 행이 삭제된 COMPRESSED 행 그룹을 병합할 수 있습니다.     
+> 더 작은 행 그룹을 병합한 후에는 인덱스 품질이 향상됩니다. 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다. 이번 변경 덕분에 지속적으로 columnstore 인덱스 품질이 향상됩니다.         
+
 #### <a name="column-segment"></a>열 세그먼트
 열 세그먼트는 행 그룹 내의 데이터 열입니다.  
   
@@ -71,9 +81,16 @@ Columnstore 인덱스는 성능과 압축률을 높이기 위해 테이블을 �
 Columnstore 인덱스는 열 세그먼트의 조각화를 줄이고 성능을 향상하기 위해 삭제된 행에 대한 ID의 btree 목록과 함께 *deltastore*라는 클러스터형 인덱스에 일부 데이터를 임시로 저장할 수 있습니다. deltastore 작업은 백그라운드에서 처리됩니다. 정확한 쿼리 결과를 반환하기 위해 클러스터형 columnstore 인덱스는 columnstore와 deltastore의 쿼리 결과를 모두 결합합니다.  
   
 #### <a name="delta-rowgroup"></a>델타 행 그룹
-델타 행 그룹은 columnstore 인덱스에만 사용되는 클러스터형 인덱스입니다. 델타 행 그룹은 행 수가 임계값에 도달한 후에 columnstore로 이동할 때까지 행을 저장하여 columnstore 압축 및 성능을 개선합니다.  
+델타 행 그룹은 columnstore 인덱스에만 사용되는 클러스터형 B-트리 인덱스입니다. 델타 행 그룹은 행 수가 임계값(1,048,576개 행)에 도달한 후에 columnstore로 이동할 때까지 행을 저장하여 columnstore 압축 및 성능을 개선합니다.  
 
-델타 행 그룹이 최대 행 수에 도달하면 닫힙니다. 튜플 이동기 프로세스는 닫힌 행 그룹이 있는지 확인합니다. 닫힌 행 그룹이 있으면 행 그룹을 압축하여 columnstore에 저장합니다.  
+델타 행 그룹이 최대 행 수에 도달하면 상태가 OPEN에서 CLOSED로 전환됩니다. 튜플 이동기라는 백그라운드 프로세스가 닫힌 행 그룹을 확인합니다. 닫힌 행 그룹이 있으면 델타 행 그룹을 압축하여 columnstore에 COMPRESSED 행 그룹으로 저장합니다. 
+
+델타 행 그룹이 압축된 경우 기존 델타 행 그룹은 TOMBSTONE 상태로 전환되어 나중에 이 그룹에 대한 참조가 없어지면 튜플 이동기에 의해 제거됩니다. 
+
+행 그룹 상태에 대한 자세한 내용은 [sys.dm_db_column_store_row_group_physical_stats(Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)를 참조하세요. 
+
+> [!NOTE]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 내부 임계값에 따라 특정 시간 동안 존재하던 더 작은 OPEN 델타 행 그룹을 자동으로 압축하거나 다수의 행이 삭제된 위치에서 COMPRESSED 행 그룹을 병합하는 백그라운드 병합 작업이 튜플 이동기를 지원합니다. 이번 변경 덕분에 지속적으로 columnstore 인덱스 품질이 향상됩니다.         
   
 #### <a name="deltastore"></a>Deltastore
 columnstore 인덱스에는 둘 이상의 델타 행 그룹이 포함될 수 있습니다. 모든 델타 행 그룹을 통칭하여 deltastore라고 합니다.   
@@ -88,7 +105,7 @@ columnstore 인덱스에는 둘 이상의 델타 행 그룹이 포함될 수 있
 비클러스터형 columnstore 인덱스는 columnstore 인덱스에서 분석이 동시에 실행되는 동안 OLTP 워크로드에서 기본 클러스터형 인덱스를 사용하는 실시간 운영 분석을 지원합니다. 자세한 내용은 [실시간 운영 분석을 위한 columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
 #### <a name="batch-mode-execution"></a>일괄 처리 모드 실행
-‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다.   Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
+‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다.  Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
   
 ##  <a name="why-should-i-use-a-columnstore-index"></a><a name="benefits"></a> Columnstore 인덱스를 사용해야 하는 이유  
 Columnstore 인덱스는 매우 높은 수준의 데이터 압축(일반적으로 10배)을 제공하여 데이터 웨어하우스 스토리지 비용을 크게 줄일 수 있습니다. 분석을 위해 columnstore 인덱스는 btree 인덱스보다 몇 배 더 나은 성능을 제공합니다. Columnstore 인덱스는 데이터 웨어하우징 및 분석 작업에 대한 기본 설정된 데이터 스토리지 형식입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 운영 워크로드에 대한 실시간 분석에 columnstore 인덱스를 사용할 수 있습니다.  
@@ -134,7 +151,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
 ## <a name="related-tasks"></a>관련 작업  
-모든 관계형 테이블은 클러스터형 columnstore 인덱스로 지정하지 않는 한 rowstore를 기본 데이터 형식으로 사용합니다. `CREATE TABLE` 옵션을 지정하지 않으면 `WITH CLUSTERED COLUMNSTORE INDEX`은 rowstore 테이블을 만듭니다.  
+모든 관계형 테이블은 클러스터형 columnstore 인덱스로 지정하지 않는 한 rowstore를 기본 데이터 형식으로 사용합니다. `WITH CLUSTERED COLUMNSTORE INDEX` 옵션을 지정하지 않으면 `CREATE TABLE`은 rowstore 테이블을 만듭니다.  
   
 `CREATE TABLE` 문을 사용하여 테이블을 만드는 경우 `WITH CLUSTERED COLUMNSTORE INDEX` 옵션을 지정하여 테이블을 columnstore로 만들 수 있습니다. rowstore 테이블이 이미 있는 경우 이를 columnstore로 변환하려면 `CREATE COLUMNSTORE INDEX` 문을 사용합니다.  
   
@@ -152,7 +169,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |Columnstore 인덱스에서 행을 삭제합니다.|[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 실제 스토리지를 회수하지 않습니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적 및 물리적으로 삭제합니다.|  
 |Columnstore 인덱스의 행을 업데이트합니다.|[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|행을 삭제하려면 [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제됨으로 표시한 다음 업데이트된 행을 deltastore에 삽입합니다.<br /><br /> **deltastore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 deltastore에 있는 행을 업데이트합니다.|  
 |데이터를 columnstore 인덱스로 로드합니다.|[Columnstore 인덱스 데이터 로드](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`ALTER INDEX` 옵션과 함께 `REBUILD`를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  
+|deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`REBUILD` 옵션과 함께 `ALTER INDEX`를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  
 |Columnstore 인덱스를 조각 모음합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE`는 columnstore 인덱스를 온라인으로 조각 모음합니다.|  
 |테이블을 columnstore 인덱스와 병합합니다.|[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   

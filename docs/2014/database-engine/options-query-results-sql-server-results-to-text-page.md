@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090015"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000753"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>옵션 (쿼리 결과-SQL Server-텍스트 페이지로 결과 생성)
-  이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **결과**에서 **텍스트**를 클릭합니다.  
+  이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 내용은 새로운 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대 한 옵션을 변경 하려면 **쿼리 메뉴에서** **쿼리 옵션** 을 클릭 하거나 쿼리 창에서 마우스 오른쪽 단추 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 클릭 한 다음 **쿼리 옵션**을 선택 합니다. **쿼리 옵션** 대화 상자의 **결과**에서 **텍스트**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **출력 형식**  
  기본적으로 결과에 공백을 채워 만든 열에 출력됩니다. 이외에 쉼표, 탭 또는 공백을 사용하여 열을 구분하는 옵션이 있습니다. **사용자 지정 구분 기호** 입력란에 다른 구분 문자를 지정하려면 이 드롭다운 목록에서 **사용자 지정 구분 기호** 를 선택합니다.  
   

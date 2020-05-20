@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779666"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000963"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>전체 텍스트 카탈로그 속성(일반 페이지)
   이 섹션에서는 **전체 텍스트 카탈로그 속성** 대화 상자의 **일반** 페이지에서 사용할 수 있는 옵션과 기능을 보여 줍니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "62779666"
  카탈로그가 데이터베이스의 기본 카탈로그인지 여부를 표시합니다.  
   
  **채우기 상태**  
- 카탈로그의 상태를 나타냅니다. 가능한 값은 다음과 같습니다.  
+ 카탈로그의 상태를 나타냅니다. 가능한 값은  
   
 -   **유휴 상태**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62779666"
  전체 텍스트 카탈로그의 이름입니다.  
   
  **악센트 구분**  
- 카탈로그가 물결표 (**~**), 악센트 부호 (**́**) 또는**움라우트 (?**)와 같은 분음 부호를 구분 하는지 여부를 확인 하거나 수정 합니다. 유효한 값은 다음과 같습니다.  
+ 카탈로그가 물결표 ( **~** ), 악센트 부호 (**́**) 또는 움라우트 (?)와 같은 분음 부호를 구분 하는지 여부를 확인 하거나 수정 합니다.**¨** 유효한 값은 다음과 같습니다.  
   
 -   **아니요**  
   

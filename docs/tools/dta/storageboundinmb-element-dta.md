@@ -1,5 +1,6 @@
 ---
 title: StorageBoundInMB 요소(DTA)
+description: dta 유틸리티에서 StorageBoundInMB 요소는 데이터베이스 엔진 튜닝 관리자 튜닝 권장 구성에 사용될 수 있는 최대 공간을 지정합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: f6d83065a572e2d125b43830653fde5a2298eb2b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c300ee1935b408078d5e7eeb0c0f25ea8ec03f80
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306619"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83150523"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 요소(DTA)
 

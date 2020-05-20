@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089238"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000723"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>옵션(텍스트 편집기: 편집기 탭 및 상태 표시줄 페이지)
   **편집기 탭 및 상태 표시줄** 페이지를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 쿼리 편집기에 표시되는 정보를 사용자 지정할 수 있습니다. 쿼리 편집기 창의 탭 및 상태 표시줄에 표시되는 정보의 수준을 지정하고 상태 표시줄을 편집기 창의 위쪽에 표시할지, 아래쪽에 표시할지를 지정할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "66089238"
  **맨 위로**  
  상태 표시줄이 쿼리 편집기 창 위쪽에 표시됩니다.  
   
- **하위별**  
+ **아래쪽**  
  상태 표시줄이 쿼리 편집기 창 아래쪽에 표시됩니다.  
   
 ## <a name="tab-text"></a>탭 텍스트  

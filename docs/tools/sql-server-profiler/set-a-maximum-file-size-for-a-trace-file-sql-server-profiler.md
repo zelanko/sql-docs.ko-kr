@@ -1,6 +1,7 @@
 ---
 title: 추적 파일에 최대 파일 크기 설정
 titleSuffix: SQL Server Profiler
+description: SQL Server Profiler에서 추적 파일의 크기를 제한하는 방법 및 파일이 최대 크기에 도달했을 때 롤오버되는지 여부를 지정하는 방법을 설명합니다.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 74d0d90ed27da0cd66ccf4a14232731a9eeb8f7b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b426b6eff3c8e8d561d6151f20fa32a294b43d45
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307918"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151684"
 ---
 # <a name="set-a-maximum-file-size-for-a-trace-file-sql-server-profiler"></a>추적 파일에 최대 파일 크기 설정(SQL Server Profiler)
 

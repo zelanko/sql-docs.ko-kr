@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd68ebe406fc7168746c804e585fa7465ee8c527
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089274"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000696"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   이 대화 상자를 사용하여 특정 개발 언어와 연관되지 않은 문서를 편집하는 데 사용되는 텍스트 편집기의 일반 편집 동작을 변경할 수 있습니다. 이 설정을 표시하려면 **도구** 메뉴의 **옵션** 을 클릭한 다음 **텍스트 편집기**를 확장하고 **일반 텍스트** 를 확장한 다음 **일반**을 클릭합니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "66089274"
   
  줄이 비어 있지 않으면 이 설정은 **복사** 또는 **잘라내기** 에 영향을 주지 않습니다. 어떤 영역도 선택하지 않으면 줄 전체를 복사하거나 잘라냅니다. 그런 다음 **붙여넣기**를 클릭하면 줄 전체의 텍스트와 줄 끝 문자를 붙여 넣습니다.  
   
-## <a name="display"></a>디스플레이  
+## <a name="display"></a>표시  
  **줄 번호**  
  각 텍스트 줄 옆에 줄 번호를 표시합니다.  
   
