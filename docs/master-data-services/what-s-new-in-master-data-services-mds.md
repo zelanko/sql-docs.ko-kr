@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: edf04dad0ce7f0a86bd651a2699d01f9dbea029c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80ffd207d44f8c53bed0fe7fb5f7efb4ed54ebc8
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727783"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886230"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -29,9 +29,9 @@ ms.locfileid: "73727783"
   
  **다운로드**  
   
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을(를) 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
+-   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** 로 이동하세요.  
   
--   Azure 계정이 있으세요?  그런 다음 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동 하 여 이미 설치 된 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 가상 컴퓨터를 실행 합니다.  
+-   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2019-ws2019?tab=Overview)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.  
   
 ##  <a name="improved-performance"></a>향상된 성능  
   

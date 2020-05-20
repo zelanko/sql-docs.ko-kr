@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175917"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925097"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>메모리 사용량 모니터링 및 문제 해결
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 에서는 디스크 기반 테이블과 다른 패턴으로 메모리를 사용합니다. 메모리 및 가비지 수집 하위 시스템에 제공되는 DMV 또는 성능 카운터를 사용하여 데이터베이스에 할당된 메모리의 양과 메모리 최적화 테이블 및 인덱스에서 사용하는 메모리의 양을 모니터링할 수 있습니다.  이를 통해 시스템 및 데이터베이스 수준에서 가시성을 확보하고 메모리 부족으로 인한 문제를 방지할 수 있습니다.
@@ -112,8 +112,8 @@ ms.locfileid: "78175917"
 
 ##  <a name="monitoring-memory-usage"></a>메모리 사용 모니터링
 
-###  <a name="using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 사용
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 [여기](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)에 설명된 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.
+###  <a name="using-ssmanstudiofull"></a>[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 시작
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 메모리 내 테이블이 사용하는 메모리를 모니터링할 수 있는 기본 표준 보고서를 제공합니다. 이러한 보고서는 개체 탐색기를 사용하여 액세스할 수 있습니다. 또한 개체 탐색기를 사용하여 메모리 최적화 개별 테이블에서 사용하는 메모리를 모니터링할 수 있습니다.
 
 #### <a name="consumption-at-the-database-level"></a>데이터베이스 수준에서 사용
  다음과 같이 데이터베이스 수준에서 메모리 사용을 모니터링할 수 있습니다.
@@ -122,7 +122,7 @@ ms.locfileid: "78175917"
 
 2.  개체 탐색기에서 보고하려는 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.
 
-3.  상황에 맞는 메뉴에서 **보고서** -> **표준** -> 에서 메모리 액세스에**최적화 된 개체별 메모리 사용량** 을 보고 함을 선택 합니다.
+3.  상황에 맞는 메뉴에서 **보고서**  ->  **표준**에서 메모리 액세스에  ->  **최적화 된 개체별 메모리 사용량** 을 보고 함을 선택 합니다.
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

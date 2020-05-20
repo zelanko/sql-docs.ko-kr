@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766830"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922064"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>프로그래밍 방식으로 패키지 실행 및 관리
   개발 환경 외부에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리 및 실행해야 하는 경우 패키지를 프로그래밍 방식으로 조작할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "62766830"
 ## <a name="running-packages-on-the-integration-services-server"></a>Integration Services 서버의 패키지 실행  
  패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 경우 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하여 프로그래밍 방식으로 패키지를 실행할 수 있습니다. Microsoft.SqlServer.Management.IntegrationServices 어셈블리는 .NET Framework 3.5로 컴파일됩니다. .NET Framework 4.0 애플리케이션을 빌드하는 경우 프로젝트 파일에 어셈블리 참조를 직접 추가해야 할 수 있습니다.  
   
- 또한 네임스페이스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포 및 관리할 수 있습니다. 네임스페이스 및 코드 조각에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=253122)블로그 항목을 참조하십시오.  
+ 또한 네임스페이스를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포 및 관리할 수 있습니다. 네임스페이스 및 코드 조각에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)블로그 항목을 참조하십시오.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [로컬 실행과 원격 실행의 차이점 이해](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

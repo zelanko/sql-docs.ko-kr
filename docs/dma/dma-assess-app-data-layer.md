@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 24763f190172da637d19df7ce36553b7341bd894
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761987"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886180"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 응용 프로그램의 데이터 액세스 계층 평가
 

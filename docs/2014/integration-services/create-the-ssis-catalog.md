@@ -10,12 +10,12 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798021"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922054"
 ---
 # <a name="create-the-ssis-catalog"></a>SSIS 카탈로그 만들기
   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 디자인하고 테스트한 후에는 이 패키지가 포함된 프로젝트를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 프로젝트를 배포하려면 서버에 `SSISDB` 카탈로그가 있어야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 설치 프로그램에서 카탈로그를 자동으로 만들지 않으므로 다음 지침에 따라 카탈로그를 수동으로 만들어야 합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "72798021"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>SQL Server Management Studio에서 SSISDB 카탈로그를 만들려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 엽니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 엽니다.  
   
 2.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진에 연결합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "72798021"
     $catalog.Create()
     ```  
   
-     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://go.microsoft.com/fwlink/?LinkId=254267)블로그 항목을 참조하십시오.  
+     Windows PowerShell 및 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임스페이스를 사용하는 방법의 예를 더 보려면 blogs.msdn.com에서 [SQL Server 2012의 SSIS 및 PowerShell](https://go.microsoft.com/fwlink/?LinkId=242539) 블로그 항목을 참조하세요. 네임스페이스 및 코드 예제에 대한 개요는 blogs.msdn.com에서 [SSIS 카탈로그 관리 개체 모델에 대한 이해](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)블로그 항목을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SSIS 카탈로그](catalog/ssis-catalog.md)   

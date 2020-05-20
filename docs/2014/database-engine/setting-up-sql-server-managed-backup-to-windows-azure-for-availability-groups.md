@@ -1,5 +1,6 @@
 ---
 title: 가용성 그룹에 대해 Azure에 SQL Server 관리 되는 백업 설정 | Microsoft Docs
+description: 이 자습서에서는 Always On 가용성 그룹에 참여 하는 데이터베이스에 대 한 Microsoft Azure SQL Server 관리 되는 백업을 구성 하는 방법을 보여 줍니다.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75ab1892641fa3bf805d52c649a8526e256d14b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228200"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849532"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>가용성 그룹의 Azure에 SQL Server 관리 백업 설정
   이 항목은 AlwaysOn 가용성 그룹에 참여하는 데이터베이스를 위해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하는 방법에 대한 자습서입니다.  
@@ -30,13 +31,13 @@ ms.locfileid: "75228200"
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성  
  **권한에**  
   
--   **ALTER ANY CREDENTIAL** `EXECUTE` 권한 및 **sp_delete_backuphistory**저장 프로시저에 대 한 권한이 있는 **db_backupoperator** 데이터베이스 역할의 멤버 자격이 필요 합니다.  
+-   **ALTER ANY CREDENTIAL** 권한 및 **db_backupoperator** `EXECUTE` **sp_delete_backuphistory**저장 프로시저에 대 한 권한이 있는 db_backupoperator 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 -   Smart_admin에 대 한 **SELECT** 권한이 필요 합니다. **fn_get_current_xevent_settings**함수.  
   
 -   `EXECUTE` **Smart_admin sp_get_backup_diagnostics** 저장 프로시저에 대 한 권한이 필요 합니다. 또한 `VIEW SERVER STATE` 권한도 필요한데, 이 권한이 필요한 다른 시스템 개체를 내부적으로 호출하기 때문입니다.  
   
--   및 저장 프로시저에 대 한 권한이 필요 `EXECUTE` 합니다. `smart_admin.sp_backup_master_switch` `smart_admin.sp_set_instance_backup`  
+-   `EXECUTE`및 저장 프로시저에 대 한 권한이 필요 `smart_admin.sp_set_instance_backup` `smart_admin.sp_backup_master_switch` 합니다.  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 사용하여 AlwaysOn 가용성 그룹을 설정하는 기본적인 단계는 다음과 같습니다. 자세한 단계별 자습서는 이 항목의 뒷부분에서 설명합니다.  
   
@@ -48,7 +49,7 @@ ms.locfileid: "75228200"
   
 4.  각 복제본에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] **sp_set_db_backup** 저장 프로시저를 사용 하 여 데이터베이스에 대 한 구성을 실행 합니다.  
   
-     **장애 조치 후의 동작:는 장애 조치 (failover) 이벤트 후에도 계속 작동 하 고 백업 복사본 및 복구 기능을 유지 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 장애 조치(Failover) 후에는 별도의 조치가 필요하지 않습니다.  
+     ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 장애 조치 후의 동작:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 장애 조치 (failover) 이벤트 후에도 계속 작동 하 고 백업 복사본 및 복구 기능을 유지 합니다. 장애 조치(Failover) 후에는 별도의 조치가 필요하지 않습니다.  
   
 #### <a name="considerations-and-requirements"></a>고려 사항 및 요구 사항  
  데이터베이스가 AlwaysOn 가용성 그룹에 참여하도록 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하려면 특별한 고려 사항 및 요구 사항이 필요합니다. 이러한 고려 사항 및 요구 사항은 다음과 같습니다.  
@@ -72,13 +73,13 @@ ms.locfileid: "75228200"
   
 2.  **SQL 자격 증명 만들기:** 저장소 계정의 이름을 Id로 사용 하 고 저장소 액세스 키를 암호로 사용 하 여 SQL 자격 증명을 만듭니다.  
   
-3.  **SQL Server 에이전트 서비스가 시작되고 실행 중인지 확인:** SQL 서버를 실행합니다(현재 실행되고 있지 않은 경우). [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 실행하여 백업 작업을 수행하려면 SQL Server 에이전트가 필요합니다.  SQL 에이전트가 자동으로 실행되어 백업 작업이 정기적으로 발생하도록 설정할 수 있습니다.  
+3.  **SQL Server 에이전트 서비스가 시작되고 실행 중인지 확인:** 현재 SQL Server 에이전트가 실행되지 않고 있으면 시작합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 실행하여 백업 작업을 수행하려면 SQL Server 에이전트가 필요합니다.  SQL 에이전트가 자동으로 실행되어 백업 작업이 정기적으로 발생하도록 설정할 수 있습니다.  
   
 4.  **보존 기간 결정:** 백업 파일에 대해 원하는 보존 기간을 결정 합니다. 보존 기간은 일 단위로 지정되며 1-30일의 범위로 설정할 수 있습니다. 보존 기간은 데이터베이스의 복구 가능 시간대를 결정합니다.  
   
 5.  **백업 하는 동안 암호화에 사용할 인증서 또는 비대칭 키를 만듭니다.** 첫 번째 노드 Node1에서 인증서를 만든 다음 [백업 인증서 &#40;](/sql/t-sql/statements/backup-certificate-transact-sql)사용 하 여 파일로 내보냅니다. transact-sql&#41;. Node1에서 내보낸 파일을 사용하여 Node2에서 인증서를 만듭니다. 파일에서 인증서를 만드는 방법에 대 한 자세한 내용은 [CREATE certificate &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)의 예제를 참조 하세요.  
   
-6.  **Node1에서 AGTestDB를 사용 하도록 설정 하 고 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 합니다.** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 노드 1의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
+6.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1에서 AGTestDB에 대해 설정 및 구성:** SQL Server Management Studio 시작 하 고 가용성 데이터베이스가 설치 된 노드 1의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
     ```  
     Use msdb;  
@@ -97,7 +98,7 @@ ms.locfileid: "75228200"
   
      암호화에 대 한 인증서를 만드는 방법에 대 한 자세한 내용은 [암호화 된 백업 만들기](../relational-databases/backup-restore/create-an-encrypted-backup.md)의 **백업 인증서 만들기** 단계를 참조 하세요.  
   
-7.  **노드 2에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Agtestdb를 사용 하도록 설정 하 고 구성 합니다.** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 노드 2의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
+7.  ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 노드 2의 AGTestDB에 대해 설정 및 구성:** SQL Server Management Studio을 시작 하 고 가용성 데이터베이스가 설치 된 노드 2의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
     ```  
     Use msdb;  
@@ -116,7 +117,7 @@ ms.locfileid: "75228200"
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 설정되었습니다. 데이터베이스에서 백업 작업이 실행을 시작하려면 최대 15분이 필요합니다. 백업은 기본 백업 복제본에서 실행됩니다.  
   
-8.  **확장 이벤트 기본 구성 검토:**  에서 백업을 예약 하는 데 사용 하 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 복제본에서 다음 transact-sql 문을 실행 하 여 확장 이벤트 구성을 검토 합니다. 이는 데이터베이스가 속한 가용성 그룹에 대한 기본 백업 복제본 설정입니다.  
+8.  **확장 이벤트 기본 구성 검토:**  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 백업을 예약 하는 데 사용 하는 복제본에서 다음 transact-sql 문을 실행 하 여 확장 이벤트 구성을 검토 합니다. 이는 데이터베이스가 속한 가용성 그룹에 대한 기본 백업 복제본 설정입니다.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -128,9 +129,9 @@ ms.locfileid: "75228200"
   
     1.  인스턴스에 데이터베이스 메일이 설정되지 않은 경우 데이터베이스 메일을 설정합니다. 자세한 내용은 [Configure Database Mail](../relational-databases/database-mail/configure-database-mail.md)을 참조하세요.  
   
-    2.  데이터베이스 메일을 사용하도록 SQL Server 에이전트 알림을 구성합니다. 자세한 내용은 [데이터베이스 메일 사용 하도록 메일 SQL Server 에이전트 구성](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)을 참조 하세요.  
+    2.  데이터베이스 메일을 사용하도록 SQL Server 에이전트 알림을 구성합니다. 자세한 내용은 [Configure SQL Server Agent Mail to Use Database Mail](../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)을 참조하세요.  
   
-    3.  **백업 오류 및 경고를 수신하도록 메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
+    3.  **백업 오류 및 경고를 수신하도록 이메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -143,7 +144,7 @@ ms.locfileid: "75228200"
   
 10. **Azure Storage 계정에서 백업 파일 보기:** SQL Server Management Studio 또는 Azure 관리 포털에서 저장소 계정에 연결 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 사용하도록 구성한 데이터베이스를 호스팅하는 SQL Server 인스턴스에 대한 컨테이너가 표시됩니다. 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 설정한 후 15분 이내에 데이터베이스 및 로그 백업도 표시됩니다.  
   
-11. **상태 모니터링:**  이전에 구성한 메일 알림을 통해 모니터링하거나 기록된 이벤트를 능동적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
+11. **상태 모니터링:**  이전에 구성한 메일 알림을 통해 모니터링하거나 기록된 이벤트를 적극적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
   
     ```  
     --  view all admin events  

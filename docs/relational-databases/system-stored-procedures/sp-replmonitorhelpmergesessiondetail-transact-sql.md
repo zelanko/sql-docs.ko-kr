@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d275b0666ae80ff933d7d236d0d04f2648b744fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321625"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834290"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|동기화 세션의 단계를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 초기화 또는 요약 행<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
 |**M e**|**sysname**|동기화 중인 아티클의 이름입니다. 또한 **m e** 에는 아티클 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보가 포함 되어 있습니다.|  
 |**되었고**|**decimal**|현재 실행 중이거나 실패한 세션에 대해 지정한 아티클 정보 행에 적용된 전체 변경 내용의 비율을 나타냅니다.|  
 |**RelativeCost**|**decimal**|아티클을 동기화하는 데 소요된 시간을 세션의 전체 동기화 시간에 대한 비율로 나타냅니다.|  
-|**Duration**|**int**|에이전트 세션의 길이입니다.|  
+|**기간**|**int**|에이전트 세션의 길이입니다.|  
 |**Inserts**|**int**|세션의 삽입 수입니다.|  
 |**업데이트**|**int**|세션의 업데이트 수입니다.|  
 |**Deletes**|**int**|세션의 삭제 수입니다.|  

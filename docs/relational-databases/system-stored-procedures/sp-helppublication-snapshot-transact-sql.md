@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helppublication_snapshot
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771498"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834417"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자에 아티클을 추가할 때 *게시자* 를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 안 됩니다.  
+>  게시자에 아티클을 추가할 때 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -51,12 +51,12 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**id**|**int**|스냅샷 에이전트의 ID입니다.|  
 |**name**|**nvarchar (100)**|스냅샷 에이전트의 이름입니다.|  
-|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로서 다음 중 하나일 수 있습니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로서 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**publisher_login**|**sysname**|게시자에 연결할 때 사용하는 로그인입니다.|  
-|**publisher_password**|**nvarchar (524)**|** \* \* 보안상 \* 의 \* \* 이유로 항상 \* 값이 반환 \* 됩니다. \* \* **|  
+|**publisher_password**|**nvarchar (524)**|보안상의 이유로 **\*\*\*\*\*\*\*\*\*\*** 항상 값이 반환 됩니다.|  
 |**job_id**|**uniqueidentifier**|에이전트 작업의 고유한 ID입니다.|  
-|**job_login**|**nvarchar(512)**|는 스냅숏 에이전트가 실행 되는 Windows 계정이 며 *도메인*\\*사용자 이름*형식으로 반환 됩니다.|  
-|**job_password**|**sysname**|** \* \* 보안상 \* 의 \* \* 이유로 항상 \* 값이 반환 \* 됩니다. \* \* **|  
+|**job_login**|**nvarchar(512)**|는 스냅숏 에이전트가 실행 되는 Windows 계정이 며 *도메인* \\ *사용자 이름*형식으로 반환 됩니다.|  
+|**job_password**|**sysname**|보안상의 이유로 **\*\*\*\*\*\*\*\*\*\*** 항상 값이 반환 됩니다.|  
 |**schedule_name**|**sysname**|이 에이전트 작업에 사용된 일정의 이름입니다.|  
 |**frequency_type**|**int**|에이전트 실행이 예약되는 빈도로 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
 |**frequency_interval**|**int**|에이전트가 실행되는 요일로 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  

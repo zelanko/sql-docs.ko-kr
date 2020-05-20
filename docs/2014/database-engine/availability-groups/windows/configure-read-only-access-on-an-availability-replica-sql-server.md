@@ -16,12 +16,12 @@ ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d93f78c157d5551e805437f156b8972ca8616c2b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797740"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922039"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
   기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 AlwaysOn 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법에 대해 설명합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "72797740"
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
   
-2.  새 가용성 그룹에 대 한 복제본을 지정 하는 경우 [CREATE availability group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 합니다. 기존 가용성 그룹의 복제본을 추가 하거나 수정 하는 경우 [ALTER availability group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 합니다.  
+2.  새 가용성 그룹에 대 한 복제본을 지정 하는 경우 [CREATE AVAILABILITY group](/sql/t-sql/statements/create-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 합니다. 기존 가용성 그룹의 복제본을 추가 하거나 수정 하는 경우 [ALTER AVAILABILITY group](/sql/t-sql/statements/alter-availability-group-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 합니다.  
   
     -   보조 역할에 대한 연결 액세스를 구성하려면 ADD REPLICA 또는 MODIFY REPLICA WITH 절에서 다음과 같이 SECONDARY_ROLE 옵션을 지정합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "72797740"
      ALL  
      주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예제에서는 *AG2*라는 가용성 그룹에 보조 복제본을 추가합니다. 독립 실행형 서버 인스턴스인 *COMPUTER03\HADR_INSTANCE*가 새 가용성 복제본을 호스트하도록 지정됩니다. 이 복제본은 주 역할에 대해 읽기/쓰기 연결만 허용하고 보조 역할에 대해 읽기 전용 연결만 허용하도록 구성되어 있습니다.  
   
 ```sql
@@ -182,13 +182,13 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ##  <a name="follow-up-after-configuring-read-only-access-for-an-availability-replica"></a><a name="FollowUp"></a>후속 작업: 가용성 복제본에 대 한 읽기 전용 액세스를 구성한 후  
  **읽을 수 있는 보조 복제본에 대한 읽기 전용 액세스**  
   
--   [Bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용 하는 경우 스위치를 `-K ReadOnly` 지정 하 여 읽기 전용 액세스를 사용 하도록 설정 된 보조 복제본에 대 한 읽기 전용 액세스를 지정할 수 있습니다.  
+-   [Bcp 유틸리티](../../../tools/bcp-utility.md) 또는 [sqlcmd 유틸리티](../../../tools/sqlcmd-utility.md)를 사용 하는 경우 스위치를 지정 하 여 읽기 전용 액세스를 사용 하도록 설정 된 보조 복제본에 대 한 읽기 전용 액세스를 지정할 수 있습니다 `-K ReadOnly` .  
   
 -   클라이언트 애플리케이션을 읽을 수 있는 보조 복제본에 연결할 수 있도록 설정하려면:  
   
-    ||필수 요소|링크|  
+    ||필수 조건|링크|  
     |-|------------------|----------|  
-    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
     |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **장애 조치(Failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
@@ -206,31 +206,30 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 -   [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   [AlwaysOn: 읽기용 보조 복제본의 가치 제안](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [Always On: 읽기용 보조 복제본의 가치 제안](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
   
--   [AlwaysOn: 읽기 작업에 보조 복제본을 사용하도록 설정하는 옵션이 2개 제공되는 이유는 무엇인가요?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [Always On: 읽기 작업에 보조 복제본을 사용하도록 설정하는 옵션이 2개 제공되는 이유는 무엇인가요?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
   
--   [AlwaysOn: 읽기용 보조 복제본 설정](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [Always On: 읽기 가능한 보조 복제본 설정](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
   
--   [AlwaysOn: 읽기용 보조 복제본을 사용하도록 설정했는데 쿼리가 차단되는 이유는 무엇인가요?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [Always On: 읽기용 보조 복제본을 사용하도록 설정했는데 쿼리가 차단되는 이유는 무엇인가요?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
   
--   [AlwaysOn: 최신 통계를 읽기용 보조 복제본, 읽기 전용 데이터베이스 및 데이터베이스 스냅샷에서 사용하도록 구성](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [Always On: 최신 통계를 읽기용 보조 복제본, 읽기 전용 데이터베이스 및 데이터베이스 스냅샷에서 사용하도록 구성](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
   
--   [AlwaysOn: 읽기 전용 데이터베이스, 데이터베이스 스냅샷 및 보조 복제본에 대한 통계 문제](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [Always On: 읽기 전용 데이터베이스, 데이터베이스 스냅샷 및 보조 복제본에 대한 통계 문제](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
   
--   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 주 작업에 미치는 영향](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [Always On: 보조 복제본에서 보고 작업을 실행할 때 주 작업에 미치는 영향](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
   
--   [AlwaysOn: 읽기용 보조 복제본의 보고 작업을 스냅샷 격리로 매핑할 때의 영향](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [Always On: 읽기용 보조 복제본의 보고 작업을 스냅샷 격리로 매핑할 때의 영향](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
   
--   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 REDO 스레드 차단 최소화](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [Always On: 보조 복제본에서 보고 작업을 실행할 때 REDO 스레드 차단 최소화](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
   
--   [AlwaysOn: 읽기용 보조 복제본 및 데이터 대기 시간](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
-  
+-   [Always On: 읽기용 보조 복제본 및 데이터 대기 시간](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   

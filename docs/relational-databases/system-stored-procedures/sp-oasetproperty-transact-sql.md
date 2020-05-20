@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ecbfba038b1954565839a3d931ef96431b77f50b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 680a21141e459656e0bec19ca8417483a9024088
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834367"
 ---
 # <a name="sp_oasetproperty-transact-sql"></a>sp_OASetProperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 이전에 `HostName` 만든 **SQLServer** 개체의 속성을 새 값으로 설정 합니다.  
+ 다음 예에서는 `HostName` 이전에 만든 **SQLServer** 개체의 속성을 새 값으로 설정 합니다.  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  

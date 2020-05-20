@@ -1,5 +1,6 @@
 ---
 title: 복원 계속 Microsoft Docs
+description: SQL Server에서 복원 계속 대화 상자를 사용 하 여 다음 백업 세트를 복원할지 여부를 나타냅니다.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +13,12 @@ ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd26a49b87615114b36c3fe57c7c6b50fbdbe7b0
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808255"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849591"
 ---
 # <a name="continue-with-restore"></a>복원 계속
   **복원 계속** 대화 상자를 사용하여 다음 백업 세트를 복원할지 여부를 나타낼 수 있습니다. 예를 들어 테이프를 바꾸기 위해 복원 작업을 지연하려면 계속할 준비가 될 때까지 기다렸다가 **확인**을 클릭합니다.  
@@ -35,8 +36,8 @@ ms.locfileid: "62808255"
  백업 세트에 대한 설명을 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [백업 테이프 또는 파일의 내용을 보려면 SQL Server &#40;&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
- [논리적 백업 장치의 속성 및 내용을 보려면 SQL Server &#40;&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
+ [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
+ [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

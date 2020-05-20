@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056485"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885790"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 SQL Server 로그인 마이그레이션
 
@@ -34,7 +34,7 @@ ms.locfileid: "74056485"
 
 - Data Migration Assistant는 현재 독립 실행형 보안 인증서 (인증서에 매핑된 로그인), 독립 실행형 비대칭 키 (비대칭 키에 매핑된 로그인) 및 자격 증명에 매핑된 로그인과 연결 된 로그인을 지원 하지 않습니다.
 
-- Data Migration Assistant **sa** 로그인 및 서버 원칙은 내부용 으로만 사용 되는 이중 해시 표시 (\#\#)로 묶인 이름으로 이동 하지 않습니다.
+- Data Migration Assistant **sa** 로그인 및 서버 원칙은 \# \# 내부용 으로만 사용 되는 이중 해시 표시 ()로 묶인 이름으로 이동 하지 않습니다.
 
 - 기본적으로 Data Migration Assistant는 마이그레이션할 모든 정규화 된 로그인을 선택 합니다. 선택적으로 마이그레이션할 특정 로그인을 선택할 수 있습니다. Data Migration Assistant에서 모든 정규화 된 로그인을 마이그레이션하면 로그인 사용자 매핑이 마이그레이션되는 데이터베이스에 그대로 유지 됩니다.
 

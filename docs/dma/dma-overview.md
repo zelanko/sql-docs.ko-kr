@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632858"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885800"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 
@@ -50,7 +50,7 @@ DMA를 설치 하려면 [Microsoft 다운로드 센터](https://www.microsoft.co
 
   - 성능
   - 보안
-  - 스토리지
+  - Storage
 
 - 온-프레미스 SQL Server 인스턴스를 온-프레미스 또는 온-프레미스 네트워크에서 액세스할 수 있는 Azure VM (가상 머신)에 호스팅된 최신 SQL Server 인스턴스로 마이그레이션합니다. VPN 또는 기타 기술을 사용 하 여 Azure VM에 액세스할 수 있습니다. 마이그레이션 워크플로는 다음 구성 요소를 마이그레이션하는 데 도움이 됩니다.
 
@@ -67,7 +67,7 @@ DMA를 설치 하려면 [Microsoft 다운로드 센터](https://www.microsoft.co
 
   - 정보 문제: 원본 패키지에서 사용 되는 부분적으로 지원 되거나 더 이상 사용 되지 않는 기능을 검색 합니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 평가를 실행 하려면 SQL Server **sysadmin** 역할의 멤버 여야 합니다.
 

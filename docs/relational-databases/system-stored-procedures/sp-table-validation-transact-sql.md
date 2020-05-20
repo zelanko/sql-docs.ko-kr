@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173550"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834228"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`배포 에이전트에서 **sp_table_validation**를 실행 하는 경우 배포 에이전트 유효성 검사가 완료 되 면 즉시 종료 해야 하는지 여부를 지정 합니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 오류 20578가 발생 하 고 복제 에이전트가 종료 될 수 있습니다. 사용자가 **sp_table_validation** 를 직접 실행 하는 경우이 매개 변수는 무시 됩니다.  
   
-`[ @table_name = ] table_name`출력 메시지에 사용 되는 뷰의 테이블 이름입니다. *table_name* 는 **sysname**이며 기본값은 ** \@table**입니다.  
+`[ @table_name = ] table_name`출력 메시지에 사용 되는 뷰의 테이블 이름입니다. *table_name* 는 **sysname**이며 기본값은 ** \@ table**입니다.  
   
 `[ @column_list = ] 'column_list'`Checksum 함수에서 사용 해야 하는 열 목록입니다. *column_list* 은 **nvarchar (4000)** 이며 기본값은 NULL입니다. 계산 열 및 타임스탬프 열을 제외한 열 목록을 지정하려면 병합 아티클의 유효성 검사를 사용할 수 있도록 설정하십시오.  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  체크섬을 계산할 때는 두 서버의 테이블 구조가 동일해야 합니다. 즉, 테이블에 같은 열이 같은 순서로 있어야 하며 데이터 형식, 길이가 같아야 하고 NULL 허용 여부가 같아야 합니다. 예를 들어 게시자가 CREATE TABLE 작업을 수행한 다음 열을 추가하기 위해 ALTER TABLE 작업을 수행하였으나 구독자에 적용되는 스크립트가 단순한 CREATE 테이블인 경우에는 구조가 일치하지 않습니다. 두 테이블의 구조가 동일한 것이 확실 하지 않은 경우 [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) 를 확인 하 고 각 테이블의 오프셋이 동일한 지 확인 합니다.  
   
- 문자 모드 **bcp** 를 사용 하는 경우 부동 소수점 값은 체크섬 차이를 생성할 수 있습니다 .이 경우 게시에 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자가 있는 경우입니다. 그 이유는 문자 모드에서, 또는 문자 모드로 변환을 수행할 때 사소하지만 피할 수 없는 전체 자릿수의 차이가 있기 때문입니다.  
+ 문자 모드 **bcp** 를 사용 하는 경우 부동 소수점 값은 체크섬 차이를 생성할 수 있습니다 .이 경우 게시에 이외 구독자가 있는 경우입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그 이유는 문자 모드에서, 또는 문자 모드로 변환을 수행할 때 사소하지만 피할 수 없는 전체 자릿수의 차이가 있기 때문입니다.  
   
 ## <a name="permissions"></a>사용 권한  
  **Sp_table_validation**를 실행 하려면 유효성 검사 중인 테이블에 대 한 SELECT 권한이 있어야 합니다.  

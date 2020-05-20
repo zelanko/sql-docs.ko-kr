@@ -1,5 +1,6 @@
 ---
 title: 'Azure에 대 한 관리 되는 백업 SQL Server: 상호 운용성 및 공존 성 | Microsoft Docs'
+description: 이 문서에서는 SQL Server 2014의 여러 기능과의 상호 운용성 및 공존을 Microsoft Azure 하기 위해 관리 되는 백업 SQL Server 설명 합니다.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dcfa6636e5fc4391b42d2077bd55e0811dc0ca39
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176069"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849831"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Azure에 SQL Server 관리 백업: 상호 운용성 및 공존성
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 의 몇 가지 기능에 대한 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 상호 운용성 및 공존성에 대해 설명합니다. 다음 기능을 포함합니다. AlwaysOn 가용성 그룹, 데이터베이스 미러링, 백업 유지 관리 계획, 로그 전달, 임시 백업, 데이터베이스 분리 및 데이터베이스 삭제가 있습니다.  
   
 ### <a name="alwayson-availability-groups"></a>AlwaysOn 가용성 그룹  
- 에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]지원 되는 Azure 전용 솔루션으로 구성 된 AlwaysOn 가용성 그룹. 온-프레미스 전용 또는 혼합 AlwaysOn 가용성 그룹 구성은 지원되지 않습니다. 자세한 내용 및 기타 고려 사항은 [가용성 그룹에 대해 Azure에 대 한 관리 되는 백업 SQL Server 설정](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) 을 참조 하세요.  
+ 에 대해 지원 되는 Azure 전용 솔루션으로 구성 된 AlwaysOn 가용성 그룹 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . 온-프레미스 전용 또는 혼합 AlwaysOn 가용성 그룹 구성은 지원되지 않습니다. 자세한 내용 및 기타 고려 사항은 [가용성 그룹에 대해 Azure에 대 한 관리 되는 백업 SQL Server 설정](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) 을 참조 하세요.  
   
 ### <a name="database-mirroring"></a>데이터베이스 미러링  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 주 데이터베이스에서만 지원됩니다. 주 데이터베이스와 미러 데이터베이스 모두 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 사용하도록 구성된 경우 미러된 데이터베이스를 건너뛰고 백업하지 않습니다. 그러나 장애 조치(Failover) 시 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 은 미러가 역할 전환을 완료했거나 온라인 상태가 된 이후 백업 프로세스를 시작합니다. 이 경우 백업이 새 컨테이너에 저장됩니다. 미러가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 사용하도록 구성되지 않은 경우에는 장애 조치 시에 백업이 수행되지 않습니다. 백업이 장애 조치 시에 계속되도록 주 데이터베이스와 미러 데이터베이스 모두에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하는 것이 좋습니다.  
@@ -39,7 +40,7 @@ ms.locfileid: "70176069"
  동일한 데이터베이스에 대해 로그 전달 및 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 동시에 구성할 수 없습니다. 이렇게 하면 둘 중 한 기능을 사용하는 데이터베이스 복구가 영향을 받습니다.  
   
 ### <a name="ad-hoc-backups-using-transact-sql-and-sql-server-management-studio"></a>Transact-SQL 및 SQL Server Management Studio를 사용하는 임시 백업  
- Transact-SQL 또는 SQL Server Management Studio를 사용하여 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 외부에서 만든 임시 또는 한 번 백업은 사용되는 백업 및 스토리지 미디어 유형에 따라 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 프로세스에 영향을 줄 수 있습니다. Azure Blob 저장소 서비스를 사용 하 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 는 것과 다른 azure storage 계정에 대 한 로그 백업은 로그 체인 중단을 발생 시킵니다. [Smart_admin. sp_backup_on_demand &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) 저장 프로시저를 사용 하 여를 사용 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 하도록 설정한 데이터베이스에서 백업을 시작 하는 것이 좋습니다. 이 저장 프로시저를 사용하여 전체 데이터베이스 또는 로그 백업을 시작할 수 있습니다.  
+ Transact-SQL 또는 SQL Server Management Studio를 사용하여 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 외부에서 만든 임시 또는 한 번 백업은 사용되는 백업 및 스토리지 미디어 유형에 따라 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 프로세스에 영향을 줄 수 있습니다. Azure Blob 저장소 서비스를 사용 하는 것과 다른 Azure storage 계정에 대 한 로그 백업은 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 로그 체인 중단을 발생 시킵니다. [Smart_admin. sp_backup_on_demand &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) 저장 프로시저를 사용 하 여를 사용 하도록 설정한 데이터베이스에서 백업을 시작 하는 것이 좋습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 저장 프로시저를 사용하여 전체 데이터베이스 또는 로그 백업을 시작할 수 있습니다.  
   
 ### <a name="drop-database-and-detach-database"></a>데이터베이스 삭제 및 데이터베이스 분리  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 이 설정된 데이터베이스가 분리되거나 삭제되면 가능한 추가 백업이 없어도 보존 기간이 경과될 때까지 이전 백업이 스토리지에 그대로 있는데 이때 백업이 제거됩니다.  
@@ -57,6 +58,6 @@ ms.locfileid: "70176069"
   
  **타사 도구 또는 스크립트:** 로그 잘림을 유발하는 로그 백업을 수행하는 모든 타사 도구 또는 스크립트는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]과 호환되지 않으며 지원되지 않습니다.  
   
- 데이터베이스 인스턴스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 를 사용 하도록 설정한 상태에서 임시 백업을 수행 하려는 경우 이전 섹션에 설명 된 대로 [smart_admin. sp_backup_on_demand &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) 저장 프로시저를 사용할 수 있습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]외부에서 주기적으로 백업을 예약하거나 실행해야 하는 경우에는 복사 전용 백업을 사용할 수 있습니다.  자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]데이터베이스 인스턴스에 대해를 사용 하도록 설정한 상태에서 임시 백업을 수행 하려는 경우 이전 섹션에 설명 된 대로 [smart_admin. Sp_backup_on_demand &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql) 저장 프로시저를 사용할 수 있습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]외부에서 주기적으로 백업을 예약하거나 실행해야 하는 경우에는 복사 전용 백업을 사용할 수 있습니다.  자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
   
   

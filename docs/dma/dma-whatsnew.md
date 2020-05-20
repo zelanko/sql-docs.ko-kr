@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896801"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924627"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant의 새로운 기능
 
 이 문서에서는 Data Migration Assistant의 각 릴리스에 추가 된 기능을 나열 합니다.
+
+## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5.2
+Data Migration Assistant의 v 5.2 릴리스는 다음에 대 한 지원을 제공 합니다.
+- Azure Government 및 국가별 클라우드 (소 버린 제공)에 대 한 지원을 포함 하는 Azure Migrate에 대 한 평가를 업로드 합니다.  이 기능을 사용 하면 Azure SQL로의 SQL Server 데이터 공간 마이그레이션 준비 상태를 평가할 수 있습니다.
+- Azure Migrate에 대 한 평가 업로드에 대 한 명령줄 지원은 Azure Government 및 국가별 클라우드를 지원 합니다.  이제 Azure 마이그레이션 프로젝트로 평가 업로드를 완전히 자동화 하 여 통합 된 Azure SQL 준비 보고서를 가져올 수 있습니다. 
 
 ## <a name="data-migration-assistant-v-50"></a>Data Migration Assistant v 5.0
 
@@ -182,7 +187,7 @@ Data Migration Assistant의 v1.0 릴리스는 초기 릴리스 이며 다음을 
 - 업그레이드 후 데이터베이스에서 혜택을 받을 수 있는 대상 SQL Server 플랫폼의 새로운 기능에 대 한 검색입니다. 모든 결과는 기능 권장 사항으로 설명 되며 다음 영역으로 분류 됩니다.
   - 성능
   - 보안
-  - 스토리지
+  - Storage
 - 평가를 수행 하기 위한 최신 사용자 환경입니다.
 
 ## <a name="see-also"></a>참고 항목

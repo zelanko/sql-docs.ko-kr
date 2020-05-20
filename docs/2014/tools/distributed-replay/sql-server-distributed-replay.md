@@ -13,12 +13,12 @@ ms.assetid: 58ef7016-b105-42c2-90a0-364f411849a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 583af6e77d699c88e7712ac03053467138bd5a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 021e37ee7efb8d525cdbc16d2f7b1111045ea7a6
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177353"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925047"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 기능을 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 업그레이드에 따르는 영향을 쉽게 평가할 수 있습니다. 또한 하드웨어 및 운영 체제 업그레이드와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 튜닝에 따르는 영향도 쉽게 평가할 수 있습니다.
@@ -47,7 +47,7 @@ ms.locfileid: "78177353"
 ## <a name="distributed-replay-concepts"></a>Distributed Replay 개념
  Distributed Replay 환경을 구성하는 요소는 다음과 같습니다.
 
--   **Distributed Replay 관리 도구**: Distributed Replay controller와 `DReplay.exe`통신 하는 데 사용 되는 콘솔 응용 프로그램입니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.
+-   **Distributed Replay 관리 도구**: `DReplay.exe` Distributed Replay controller와 통신 하는 데 사용 되는 콘솔 응용 프로그램입니다. 관리 도구를 사용하여 Distributed Replay를 제어할 수 있습니다.
 
 -   **Distributed Replay Controller**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Controller라는 Windows 서비스를 실행하는 컴퓨터. Distributed Replay Controller는 Distributed Replay Client의 동작을 조정합니다. 각 Distributed Replay 환경에는 컨트롤러 인스턴스가 하나만 있을 수 있습니다.
 
@@ -72,6 +72,6 @@ ms.locfileid: "78177353"
 |관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소하는 방법에 대해 설명합니다.|[관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)|
 
 ## <a name="see-also"></a>참고 항목
- [Distributed Replay를 사용 하 여 SQL Server를 로드](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) 하는 [Distributed Replay 포럼 SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/) Distributed Replay 테스트를 사용 하 여 [SQL Server 테스트-1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx) 부
+ [Distributed Replay를 사용 하 여 SQL Server를 로드](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) 하는 [Distributed Replay 포럼 SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/) Distributed Replay 테스트를 사용 하 여 [SQL Server 테스트-1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1) 부
 
 

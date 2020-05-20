@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843721"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000563"
 ---
 # <a name="search-sql-server"></a>검색(SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]`LIKE` 키워드의 [!INCLUDE[tsql](../includes/tsql-md.md)] 기능을 벗어나는 텍스트와 문서에 대 한 검색 기능을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]키워드의 기능을 벗어나는 텍스트와 문서에 대 한 검색 기능을 제공 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [전체 텍스트 검색](../relational-databases/search/full-text-search.md)  

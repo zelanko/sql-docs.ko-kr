@@ -13,12 +13,12 @@ ms.assetid: 1d5e3291-0d0a-45a1-88e5-1fc242d17210
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1793032a72ae1dd150caa5ddd1739f7f5620bce1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f1da20eb1c23176036dad0847d5b420a498e83e
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62790199"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921997"
 ---
 # <a name="monitoring-of-availability-groups-sql-server"></a>가용성 그룹 모니터링(SQL Server)
   AlwaysOn 가용성 그룹의 속성 및 상태를 모니터링하려면 다음 도구를 사용할 수 있습니다.  
@@ -36,19 +36,19 @@ ms.locfileid: "62790199"
   
 -   **블로그:**  
   
-     [AlwaysOn 상태 모델 파트 1 -- 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/09/overview-of-the-alwayson-manageability-health-model.aspx)  
+     [AlwaysOn 상태 모델 파트 1 -- 상태 모델 아키텍처](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-1-health-model-architecture)  
   
-     [AlwaysOn 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+     [AlwaysOn 상태 모델 파트 2 -- 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
-     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 1단계: 기본 Cmdlet 개요](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  
+     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 1단계: 기본 Cmdlet 개요](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
-     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 2단계: 고급 Cmdlet 사용](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx)  
+     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 2단계: 고급 Cmdlet 사용](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage)  
   
-     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 3단계: 간단한 모니터링 애플리케이션](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)  
+     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 3단계: 간단한 모니터링 애플리케이션](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application)  
   
-     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 4단계: SQL Server 에이전트와의 통합](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)  
+     [PowerShell을 사용하여 AlwaysOn 상태 모니터링 - 4단계: SQL Server 에이전트와의 통합](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent)  
   
-     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://blogs.msdn.com/b/sqlalwayson/)  
+     [SQL Server AlwaysOn 팀 블로그: 공식 SQL Server AlwaysOn 팀 블로그](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)  
   

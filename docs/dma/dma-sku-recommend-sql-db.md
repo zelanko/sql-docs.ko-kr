@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586732"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885831"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 적합 한 Azure SQL Database/Managed Instance SKU 식별
 
@@ -38,10 +38,10 @@ SKU 권장 사항 기능을 사용 하면 데이터베이스를 호스트 하는
 
 다음은 Azure SQL Database SKU 권장 사항을 확인 하 고 DMA를 사용 하 여 Azure에서 해당 하는 단일 데이터베이스 또는 관리 되는 인스턴스를 프로 비전 하는 데 도움이 되는 지침입니다.
 
-## <a name="prerequisites"></a>사전 요구 사항
+## <a name="prerequisites"></a>필수 조건
 
 - 최신 버전의 [DMA](https://aka.ms/get-dma)를 다운로드 하 여 설치 합니다. 이전 버전의 도구가 이미 있는 경우이를 열면 DMA를 업그레이드할지 묻는 메시지가 표시 됩니다.
-- 모든 스크립트를 실행 하는 데 필요한 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 이상이 컴퓨터에 있는지 확인 합니다. 컴퓨터에 설치 된 PowerShell 버전을 findoug 하는 방법에 대 한 자세한 내용은 [Windows powershell 5.1 다운로드 및 설치](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)문서를 참조 하세요.
+- 모든 스크립트를 실행 하는 데 필요한 [PowerShell 버전 5.1](https://www.microsoft.com/download/details.aspx?id=54616) 이상이 컴퓨터에 있는지 확인 합니다. 컴퓨터에 설치 된 PowerShell 버전을 확인 하는 방법에 대 한 자세한 내용은 [Windows powershell 5.1 다운로드 및 설치](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)문서를 참조 하세요.
 - 컴퓨터에 Azure Powershell 모듈이 설치 되어 있는지 확인 합니다. 자세한 내용은 [Azure PowerShell 모듈 설치](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)문서를 참조 하세요.
 - 성능 카운터를 수집 하는 데 필요한 PowerShell 파일 **SkuRecommendationDataCollectionScript**이 DMA 폴더에 설치 되어 있는지 확인 합니다.
 - 이 프로세스를 수행할 컴퓨터에 데이터베이스를 호스트 하는 컴퓨터에 대 한 관리자 권한이 있는지 확인 합니다.

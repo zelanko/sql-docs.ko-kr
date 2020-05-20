@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172062"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925067"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>재생 옵션(Distributed Replay Administration Tool)
-  Distributed Replay 관리 도구인 `DReplay.exe`는 Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 항목에서는 **replay** 명령줄 옵션과 해당 구문에 대해 설명합니다.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인는 `DReplay.exe` Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **replay** 명령줄 옵션과 해당 구문에 대해 설명합니다.
 
  **replay** 옵션은 이벤트 재생 단계를 시작합니다. 이 단계에서 컨트롤러는 재생 데이터를 지정된 클라이언트로 발송하고 분산 재생을 시작하며 클라이언트를 동기화합니다. 필요에 따라 재생에 참여하는 각 클라이언트는 재생 작업을 기록하고 결과 추적 파일을 로컬에 저장할 수 있습니다.
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172062"
 
 -   UNC 경로는 지원되지 않습니다.
 
- **-o** 클라이언트의 재생 작업을 캡처하여 클라이언트 구성 파일의 `<ResultDirectory>` 요소에 지정 된 경로에 있는 결과 추적 파일에 저장 `DReplayClient.xml`합니다.
+ **-o** 클라이언트의 재생 작업을 캡처하여 `<ResultDirectory>` 클라이언트 구성 파일의 요소에 지정 된 경로에 있는 결과 추적 파일에 저장 `DReplayClient.xml` 합니다.
 
  **-O** 매개 변수를 지정 하지 않으면 결과 추적 파일이 생성 되지 않습니다. 콘솔 출력은 재생이 끝날 때 요약 정보를 반환하지만 그 외 다른 재생 통계는 사용할 수 없습니다.
 
- **-s** *target_server* 분산 작업을 재생 해야 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 대상 인스턴스를 지정 합니다. 이 매개 변수는 **server_name[\인스턴스 이름]** 형식으로 지정해야 합니다.
+ **-s** *target_server* [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 분산 작업을 재생 해야 하는 대상 인스턴스를 지정 합니다. 이 매개 변수는 **server_name[\인스턴스 이름]** 형식으로 지정해야 합니다.
 
  "`localhost`" 또는 "`.`"을 대상 서버로 사용할 수 없습니다.
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  자세한 내용은 [Distributed Replay Security](distributed-replay-security.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
- [추적 데이터 재생](replay-trace-data.md) [Distributed Replay SQL Server](sql-server-distributed-replay.md) [재생 결과를 검토 하 고](review-the-replay-results.md) Distributed Replay [를 사용 하 여 Distributed Replay 테스트 SQL Server을 사용 하 여](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) Distributed Replay 테스트를 [SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/) [Distributed Replay 구성](configure-distributed-replay.md) 합니다. SQL Server를 사용 하 여 [테스트를 부하 테스트 1 부](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [추적 데이터 재생](replay-trace-data.md) [Distributed Replay SQL Server](sql-server-distributed-replay.md) [재생 결과를 검토 하 고](review-the-replay-results.md) Distributed Replay [를 사용 하 여 Distributed Replay 테스트 SQL Server을 사용 하 여](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) Distributed Replay 테스트를 [SQL Server](https://social.technet.microsoft.com/Forums/sl/sqldru/) [Distributed Replay 구성](configure-distributed-replay.md) 합니다. SQL Server를 사용 하 여 [테스트를 부하 테스트 1 부](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

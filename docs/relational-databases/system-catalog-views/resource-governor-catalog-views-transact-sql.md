@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Resource Governor, catalog views
 - catalog views [SQL Server]
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 20d8b284106bf3f8cfbcd7a69cf57d3fd59d7d82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7faa6ad3c27022194ce7d90643733299ae3ae6ba
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018367"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834479"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>리소스 관리자 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

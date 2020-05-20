@@ -10,12 +10,12 @@ ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87ed68cc3540075e0fd5d357182d709394f44455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cfaffaeec425542597aaa43498ec0222813a251e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797502"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925037"
 ---
 # <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
   FailureConditionLevel 속성을 사용하여 AlwaysOn FCI(장애 조치(Failover) 클러스터 인스턴스)가 장애 조치(Failover)되거나 다시 시작되는 조건을 설정할 수 있습니다. 이 속성에 대한 변경 내용은 WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 또는 FCI 리소스를 다시 시작할 필요 없이 즉시 적용됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "72797502"
   
 2.  클러스터 Cmdlet을 사용할 수 있도록 `FailoverClusters` 모듈을 가져옵니다.  
   
-3.  `Get-ClusterResource` Cmdlet을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 찾은 다음 cmdlet `Set-ClusterParameter` 을 사용 하 여 장애 조치 (Failover) 클러스터 인스턴스에 대 한 **FailureConditionLevel** 속성을 설정 합니다.  
+3.  Cmdlet을 사용 `Get-ClusterResource` 하 여 리소스를 찾은 다음 cmdlet을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `Set-ClusterParameter` 장애 조치 (Failover) 클러스터 인스턴스에 대 한 **FailureConditionLevel** 속성을 설정 합니다.  
   
 > [!TIP]  
 >  새 PowerShell 창을 열 때마다 `FailoverClusters` 모듈을 가져와야 합니다.  
@@ -58,7 +58,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ### <a name="related-content-powershell"></a>관련 내용(PowerShell)  
   
--   [클러스터링 및 고가용성](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
+-   [클러스터링 및 고가용성](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
   
 -   [장애 조치(Failover) 클러스터에서 Windows PowerShell 시작](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -80,9 +80,9 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 
 ### <a name="to-configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정을 구성 하려면
   
- [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 하 여 FailureConditionLevel 속성 값을 지정할 수 있습니다.  
+ [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) 문을 사용 하 여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] FailureConditionLevel 속성 값을 지정할 수 있습니다.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 FailureConditionLevel 속성을 0으로 설정하여 어떤 실패 조건에서도 장애 조치(failover) 또는 다시 시작이 자동으로 트리거되지 않음을 나타냅니다.  
   
 ```sql

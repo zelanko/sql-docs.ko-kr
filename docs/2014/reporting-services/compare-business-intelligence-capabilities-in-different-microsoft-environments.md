@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1acbc2c75a7cd0dc45c0f9dd329951e073f8120
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656590"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925077"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>다양한 Microsoft 환경에서 비즈니스 인텔리전스 기능 비교
 
@@ -31,7 +31,7 @@ SharePoint Server 및 SharePoint Online 비교에 대한 자세한 내용은 [Sh
 |MDS(Master Data Services) 및 DQS(Data Quality Services)와의 통합|예|아니요|아니요|  
 |데이터 새로 고침 예약|예. 하지만 파워 쿼리 데이터가 들어 있는 통합 문서는 지원하지 않습니다.|예|예|  
 |자연어 쿼리 (Q&A)|아니요|아니요|예 **<sup>2</sup>**|  
-|예측|아니요|아니요|예 **<sup>3</sup>**|  
+|예측|아니요|아니요|예 ** <sup>3</sup>**|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 통합|예|아니요|아니요|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 통합(다차원 및 테이블 형식)|예|아니요|아니요|  
 |대화형 Power View 대시보드를 PowerPoint 프레젠테이션으로 내보내기|예|아니요|아니요|  
@@ -44,7 +44,7 @@ SharePoint Server 및 SharePoint Online 비교에 대한 자세한 내용은 [Sh
   
  **<sup>2</sup>**  [Power BI Q&a: Power BI 통합 문서 최적화 (클라우드 모델링)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
- **<sup>3</sup>**  [Office 365용 Power View에서 새로운 예측 기능 도입](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)(영문).  
+ **<sup>3</sup>**  [Office 365용 Power View에서 새로운 예측 기능 도입](https://powerbi.microsoft.com/blog/introducing-new-forecasting-capabilities-in-power-view-for-office-365/)(영문).  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>BI 데이터, 보고서 및 대시보드 보기 및 찾아보기  
   
@@ -54,7 +54,7 @@ SharePoint Server 및 SharePoint Online 비교에 대한 자세한 내용은 [Sh
 |HTML5에서 브라우저 내 데이터 탐색|아니요|예|예|  
 |보고서 및 대시보드에 원격으로 액세스하는 모바일 BI 앱|아니요|아니요|예 **<sup>1</sup>**|  
 |데이터 소스로 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 를 사용하는 Excel 통합 문서 **<sup>2</sup>**|예|아니요|아니요|  
-|다른 브라우저 및 버전의 기능을 사용하는 기능|예(Power View가 아닌 시각화의 경우) **<sup>3</sup>**|예(크기 10MB 미만의 통합 문서 파일의 경우) **<sup>3</sup>**|예 **<sup>3</sup>**|  
+|다른 브라우저 및 버전의 기능을 사용하는 기능|예(Power View가 아닌 시각화의 경우) **<sup>3</sup>**|예(크기 10MB 미만의 통합 문서 파일의 경우) **<sup>3</sup>**|예 ** <sup>3</sup>**|  
 |||||
 
  **<sup>1</sup>**  [Microsoft Power BI](https://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  
@@ -63,7 +63,7 @@ SharePoint Server 및 SharePoint Online 비교에 대한 자세한 내용은 [Sh
   
  **<sup>3</sup>**  [BI(비즈니스 인텔리전스) 도구의 모바일 지원](https://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx) 및 [Reporting Services 및 Power View 브라우저 지원 계획(Reporting Services 2014)](https://msdn.microsoft.com/library/ms156511.aspx).  
   
-## <a name="more-information"></a>추가 정보  
+## <a name="more-information"></a>자세한 정보  
   
 - [Excel 및 Office 365의 BI 기능](https://support.office.com/article/BI-capabilities-in-Excel-and-Office-365-26c0548e-124c-4fd3-aab3-5f64568cb743).  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721182"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000483"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>1단원: 병합 복제를 사용하여 데이터 게시
   이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 병합 게시를 만들어 **샘플 데이터베이스에**Employee **,** SalesOrderHeader **및** SalesOrderDetail [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 하위 집합을 게시합니다. 이러한 테이블은 각 구독에 고유한 데이터 파티션이 포함되도록 매개 변수가 있는 행 필터로 필터링됩니다. 또한 병합 에이전트에 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 사용하려면 이전 자습서인 [복제용 서버 준비](tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "62721182"
   
 21. **즉시 스냅샷 만들기**를 선택하고 **스냅샷 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 클릭합니다.  
   
-22. 에이전트 보안 페이지에서 **보안 설정**을 클릭 \<하 고 **프로세스 계정** 상자에 _Machine_Name>_ **\ repl_snapshot** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 합니다. **Finish**를 클릭합니다.  
+22. 에이전트 보안 페이지에서 **보안 설정**을 클릭 하 고 \< **프로세스 계정** 상자에 _Machine_Name>_ **\ repl_snapshot** 를 입력 한 다음이 계정에 대 한 암호를 입력 하 고 **확인**을 클릭 합니다. **마침**을 클릭합니다.  
   
 23. 마법사 완료 페이지에서 **게시 이름** 상자에 **AdvWorksSalesOrdersMerge** 를 입력하고 **마침**을 클릭합니다.  
   

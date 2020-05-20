@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228178"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921829"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>데이터 및 델타 파일 쌍에 대한 병합 모니터링 및 문제 해결
   메모리 내 OLTP는 병합 정책을 사용하여 인접한 데이터 및 델타 파일 쌍을 자동으로 병합합니다. 병합 작업은 해제할 수 없습니다.  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  3개의 데이터 및 델타 파일 쌍에 각각 15,836개의 행과 5,279개의 삭제된 행이 있다고 가정합니다. 병합 후 새로운 데이터 파일에는 31,872개의 행과 0개의 삭제된 행이 있습니다. 새로운 데이터 파일의 크기는 처음에 할당된 크기인 128MB보다 훨씬 클 수 있습니다. 이는 수동 병합이 병합 정책을 재정의하고 요청된 파일의 병합을 강제로 수행하기 때문입니다.  
   
- 메모리 액세스에 [최적화 된 테이블이 있는 데이터베이스의 검사점 파일에 대 한 블로그 상태 전환은](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) 개시에서 가비지 수집으로의 데이터 및 델타 파일 쌍의 상태 전환에 대해 설명 합니다.  
+ 메모리 액세스에 [최적화 된 테이블이 있는 데이터베이스의 검사점 파일에 대 한 블로그 상태 전환은](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) 개시에서 가비지 수집으로의 데이터 및 델타 파일 쌍의 상태 전환에 대해 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

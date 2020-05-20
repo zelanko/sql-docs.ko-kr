@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721016"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000426"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>2단원: 스냅샷 폴더 준비
   이 단원에서는 게시 스냅샷을 만들고 저장하는 데 사용되는 스냅샷 폴더를 구성하는 방법을 배웁니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "62721016"
   
 6.  **보안** 탭에서 **편집**을 클릭합니다.  
   
-7.  **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1 \<단원에서 만든 스냅숏 에이전트 계정의 이름을 _Machine_Name>_ **\ repl_snapshot**입력 합니다. 여기서 \< *Machine_Name>* 은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
+7.  **권한** 대화 상자에서 **추가**를 클릭합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 입력란에 1 단원에서 만든 스냅숏 에이전트 계정의 이름을 \< _Machine_Name>_ **\ repl_snapshot**입력 합니다. 여기서 \< *Machine_Name>* 은 게시자의 이름입니다. **이름 확인**을 클릭한 다음 **확인**을 클릭합니다.  
   
 8.  이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 \<_Machine_Name>_**\repl_merge**로 추가합니다.  
   

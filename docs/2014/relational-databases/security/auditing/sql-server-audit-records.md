@@ -12,12 +12,12 @@ ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238383"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922141"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]입니다.  
@@ -28,14 +28,14 @@ ms.locfileid: "63238383"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|`datetime2`|예|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|`int`|예|  
-|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|`varchar(4)`|예|  
-|**열었습니다**|이벤트를 발생시킨 동작의 성공 여부를 나타냅니다.|`bit`-1 = 성공, 0 = 실패|예|  
+|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate)을 참조하세요.|`varchar(4)`|예|  
+|**성공**|이벤트를 발생시킨 동작의 성공 여부를 나타냅니다.|`bit`-1 = 성공, 0 = 실패|예|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|`bigint`|아니요|  
 |**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|`bit`-1 = True, 0 = False|아니요|  
 |**session_id**|이벤트가 발생한 세션의 ID입니다.|`int`|예|  
 |**server_principal_id**|동작을 수행한 로그인 컨텍스트의 ID입니다.|`int`|예|  
 |**database_principal_id**|동작을 수행한 데이터베이스 사용자 컨텍스트의 ID입니다.|`int`|아니요|  
-|**object_ id**|감사가 수행된 엔터티의 주 ID이며 여기에는 다음이 포함됩니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|`int`|아니요|  
+|**object_ id**|감사가 수행된 엔터티의 주 ID이며 다음 내용이 포함됩니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체|`int`|아니요|  
 |**target_server_principal_id**|감사 가능한 동작이 적용되는 서버 보안 주체입니다.|`int`|예|  
 |**target_database_principal_id**|감사 가능한 동작이 적용되는 데이터베이스 보안 주체입니다.|`int`|아니요|  
 |**class_type**|감사가 수행되는 감사 가능한 엔터티의 형식입니다.|`varchar(2)`|예|  
@@ -49,7 +49,7 @@ ms.locfileid: "63238383"
 |**server_instance_name**|감사가 수행된 서버 인스턴스의 이름입니다. 표준 machine\instance 형식을 사용합니다.|`nvarchar(120)`|예|  
 |**database_name**|동작이 수행된 데이터베이스 컨텍스트입니다.|`sysname`|아니요|  
 |**schema_name**|동작이 수행된 스키마 컨텍스트입니다.|`sysname`|예|  
-|**object_name**|감사가 수행된 대상 엔터티의 이름입니다. 여기에는 다음이 포함됩니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체<br /><br /> TSQL 문(있는 경우)|`sysname`|아니요|  
+|**object_name**|감사가 수행된 대상 엔터티의 이름입니다. 다음 내용이 포함됩니다.<br /><br /> 서버 개체<br /><br /> 데이터베이스<br /><br /> 데이터베이스 개체<br /><br /> 스키마 개체<br /><br /> TSQL 문(있는 경우)|`sysname`|아니요|  
 |**선언문**|TSQL 문(있는 경우)|`nvarchar(4000)`|예|  
 |**additional_information**|이벤트에 대한 추가 정보이며 XML로 저장됩니다.|`nvarchar(4000)`|아니요|  
   
@@ -71,42 +71,42 @@ ms.locfileid: "63238383"
 ## <a name="related-content"></a>관련 내용  
  [CREATE SERVER AUDIT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
- [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
+ [CREATE SERVER AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   
- [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-transact-sql)  
+ [ALTER SERVER AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-transact-sql)  
   
- [DROP SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)  
+ [DROP SERVER AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)  
   
- [CREATE DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-audit-specification-transact-sql)  
+ [CREATE DATABASE AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-audit-specification-transact-sql)  
   
- [ALTER DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)  
+ [ALTER DATABASE AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)  
   
- [DROP DATABASE AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)  
+ [DROP DATABASE AUDIT SPECIFICATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)  
   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+ [ALTER AUTHORIZATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
- [sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)  
+ [sys.fn_get_audit_file&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)  
   
- [sys.server_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)  
+ [sys.server_audits&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)  
   
- [sys.server_file_audits &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)  
+ [sys.server_file_audits&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)  
   
- [sys.server_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)  
+ [sys.server_audit_specifications&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)  
   
- [sys.server_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)  
+ [sys.server_audit_specification_details&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)  
   
- [sys.database_audit_specifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)  
+ [sys.database_audit_specifications&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)  
   
- [sys.database_audit_specification_details &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)  
+ [sys.database_audit_specification_details&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)  
   
- [sys.dm_server_audit_status &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)  
+ [sys.dm_server_audit_status&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)  
   
- [sys.dm_audit_actions &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)  
+ [sys.dm_audit_actions&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)  
   
- [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)  
+ [sys.dm_audit_class_type_map&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql)  
   
   

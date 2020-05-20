@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002647"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834480"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +43,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. NULL 또는 **%** 인 경우 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. 게시는 이미 존재하고 있어야 하며 식별자에 적용되는 규칙을 준수해야 합니다. NULL 또는 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
   
 `[ @subscriber = ] 'subscriber'`구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 **%** 입니다. NULL 또는 %인 경우 지정한 게시에 대한 모든 구독에 관한 정보가 반환됩니다.  
   
-`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 모든 구독 **%** 데이터베이스에 대 한 정보를 반환 하는입니다.  
+`[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db*는 **sysname**이며 기본값은 **%** 모든 구독 데이터베이스에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher = ] 'publisher'`게시자의 이름입니다. 게시자는 유효한 서버여야 합니다. *publisher*는 **sysname**이며 기본값은 모든 게시자 **%** 에 대 한 정보를 반환 하는입니다.  
+`[ @publisher = ] 'publisher'`게시자의 이름입니다. 게시자는 유효한 서버여야 합니다. *publisher*는 **sysname**이며 기본값은 **%** 모든 게시자에 대 한 정보를 반환 하는입니다.  
   
-`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 모든 게시자 **%** 데이터베이스에 대 한 정보를 반환 하는입니다.  
+`[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db*는 **sysname**이며 기본값은 **%** 모든 게시자 데이터베이스에 대 한 정보를 반환 하는입니다.  
   
 `[ @subscription_type = ] 'subscription_type'`구독의 유형입니다. *subscription_type*은 **nvarchar (15)** 이며 다음 값 중 하나일 수 있습니다.  
   
@@ -65,7 +65,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|구독의 이름입니다.|  
 |**게시물**|**sysname**|게시의 이름입니다.|  
@@ -85,9 +85,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_server**|**sysname**|에이전트가 실행되는 서버의 이름입니다.|  
 |**use_interactive_resolver**|**int**|조정 상태 동안 대화형 해결 프로그램의 사용 여부를 반환합니다. **0**인 경우 대화형 해결 프로그램을 사용 하지 않습니다.|  
 |**hostname**|**sysname**|구독이 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수의 값으로 필터링 될 때 제공 되는 값입니다.|  
-|**subscriber_security_mode**|**smallint**|구독자의 보안 모드입니다. **1** 은 Windows 인증을 의미 하 고 **0** 은 인증 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 의미 합니다.|  
+|**subscriber_security_mode**|**smallint**|구독자의 보안 모드입니다. **1** 은 Windows 인증을 의미 하 고 **0** 은 인증을 의미 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |**subscriber_login**|**sysname**|구독자의 로그인 이름입니다.|  
-|**subscriber_password**|**sysname**|실제 구독자 암호는 반환되지 않습니다. 결과는**\*\*\*"\*" 문자열로 마스킹 됩니다.\***|  
+|**subscriber_password**|**sysname**|실제 구독자 암호는 반환되지 않습니다. 결과는 "" 문자열로 마스킹 됩니다 **\*\*\*\*\*\*** .|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -9,20 +9,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089074"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000624"
 ---
 # <a name="query-options-execution-ansi-page"></a>쿼리 옵션 실행(ANSI 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 ISO (ANSI) 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다.  
+  이 페이지를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ISO (ANSI) 표준에 지정 된 설정의 일부 또는 전부를 사용 하 여 쿼리를 실행 하도록 지정할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="uielement-list"></a>UI 요소 목록  
  **SET ANSI_DEFAULTS**  
  기본 ISO 설정을 모두 선택합니다. 일부 ISO 설정만 구성되어 있으므로 이 상자는 기본적으로 비활성화되어 있습니다.  
   

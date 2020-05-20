@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902450"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921605"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "62902450"
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
 |DT_IMAGE|최대 크기가 2<sup>31</sup>-1 (2147483647) 바이트인 이진 값입니다. .|  
 |DT_NTEXT|최대 길이가 2<sup>30</sup> -1 (1073741823) 자인 유니코드 문자열입니다.|  
-|DT_TEXT|최대 [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]길이가 2<sup>31</sup>-1 (2147483647) 자인/MBCS 문자열입니다.|  
+|DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]최대 길이가 2<sup>31</sup>-1 (2147483647) 자인/MBCS 문자열입니다.|  
   
 ## <a name="conversion-of-data-types"></a>데이터 형식 변환  
  열의 데이터에 원본 데이터 형식으로 할당된 전체 너비가 필요하지 않은 경우 열의 데이터 형식을 변경할 수 있습니다. 각 행이 좁을수록 원본에서 대상으로 데이터를 이동하는 속도가 빨라지기 때문에 각 데이터 행을 가능한 한 좁게 만들면 데이터 전송 시 성능을 최적화할 수 있습니다.  
@@ -253,7 +253,7 @@ ms.locfileid: "62902450"
  데이터 흐름의 데이터 형식 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://go.microsoft.com/fwlink/?LinkId=220823)  
+ blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 흐름의 데이터](data-in-data-flows.md)  

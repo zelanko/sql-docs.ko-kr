@@ -16,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770439"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921556"
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
   데이터 변환은 입력 열의 데이터를 다른 데이터 형식으로 변환한 다음 새 출력 열에 복사합니다. 예를 들어 패키지는 여러 개의 원본에서 데이터를 추출한 다음 이 변환을 사용하여 대상 데이터 저장소에 필요한 데이터 형식으로 열을 변환할 수 있습니다. 단일 입력 열에 여러 개의 변환을 적용할 수 있습니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "62770439"
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. SSIS 디자이너에서 데이터 변환을 사용하는 방법은 [데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환](data-conversion-transformation.md) 및 [데이터 변환 편집기](../../data-conversion-transformation-editor.md)를 참조하세요. 이 변환의 속성을 프로그래밍 방식으로 설정하는 방법은 [공용 속성](../../common-properties.md) 및 [변환 사용자 지정 속성](transformation-custom-properties.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
- blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://go.microsoft.com/fwlink/?LinkId=220823)  
+ blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035)  
   
 ## <a name="see-also"></a>참고 항목  
  [빠른 구문 분석](../../fast-parse.md)   

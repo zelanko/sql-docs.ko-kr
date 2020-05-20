@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834514"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. *게시가* 인 **%** 경우 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 입니다. *게시가* 인 경우 **%** 현재 데이터베이스의 모든 병합 게시 및 구독에 대 한 정보가 반환 됩니다.  
   
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher*는 **sysname**이며 기본값은 **%** 입니다.  
   
@@ -69,11 +69,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**last_updated**|**nvarchar (26)**|병합 에이전트가 구독의 동기화를 마지막으로 성공한 시각입니다.|  
 |**publisher_login**|**sysname**|게시자 로그인 이름입니다.|  
 |**publisher_password**|**sysname**|게시자 암호입니다.|  
-|**publisher_security_mode**|**int**|게시자의 보안 모드를 지정합니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**publisher_security_mode**|**int**|게시자의 보안 모드를 지정합니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**총판**|**sysname**|배포자의 이름입니다.|  
 |**distributor_login**|**sysname**|배포자의 로그인 이름입니다.|  
 |**distributor_password**|**sysname**|배포자 암호입니다.|  
-|**distributor_security_mode**|**int**|배포자의 보안 모드를 지정합니다.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
+|**distributor_security_mode**|**int**|배포자의 보안 모드를 지정합니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**ftp_address**|**sysname**|이전 버전과의 호환성을 위해서만 사용 가능합니다. 배포자용 FTP(파일 전송 프로토콜) 서비스의 네트워크 주소입니다.|  
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 사용 가능합니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
@@ -92,11 +92,11 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_url**|**nvarchar(260)**|웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**internet_login**|**nvarchar(128)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  
 |**internet_password**|**nvarchar (524)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인 암호입니다.|  
-|**internet_security_mode**|**int**|웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용하는 인증 모드입니다. 값 **1** 은 Windows 인증을 의미 하 고, 값 **0** 은 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 의미 합니다.|  
+|**internet_security_mode**|**int**|웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용하는 인증 모드입니다. 값 **1** 은 Windows 인증을 의미 하 고, 값 **0** 은 인증을 의미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.|  
 |**internet_timeout**|**int**|웹 동기화 요청이 만료되기 전까지의 시간(초)입니다.|  
 |**hostname**|**nvarchar(128)**|매개 변수가 있는 행 필터의 WHERE 절에서이 함수를 사용 하는 경우 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 에 대해 오버 로드 된 값을 지정 합니다.|  
-|**job_login**|**nvarchar(512)**|병합 에이전트가 실행 되는 Windows 계정으로, *도메인*\\*사용자 이름*형식으로 반환 됩니다.|  
-|**job_password**|**sysname**|보안상의 이유로**\*\*\*\*\*항상\*"\*"\*이 반환\*** 됩니다.|  
+|**job_login**|**nvarchar(512)**|병합 에이전트가 실행 되는 Windows 계정으로, *도메인* \\ *사용자 이름*형식으로 반환 됩니다.|  
+|**job_password**|**sysname**|보안상의 이유로 **\*\*\*\*\*\*\*\*\*\*** 항상 "" 값이 반환 됩니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

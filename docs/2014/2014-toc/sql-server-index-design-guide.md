@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475980"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000513"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 
   데이터베이스 애플리케이션 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 애플리케이션 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 애플리케이션 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
   
-**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 별도로 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 언급 하지 않는 한부터까지  
+**적용 대상**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 별도로 언급 하지 않는 한부터까지  
   
  이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   자주 변경되는 열  
   
-     [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 행의 데이터 값을 물리적인 순서로 보관해야 하기 때문에 열이 자주 변경되면 전체 행이 이동됩니다. 다음은 일반적으로 데이터가 불안정한 대량 트랜잭션 처리 시스템에서 고려해야 할 사항입니다.  
+     이렇게 하면에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 행의 데이터 값을 실제 순서로 유지 해야 하기 때문에 전체 행이 이동 합니다. 다음은 일반적으로 데이터가 불안정한 대량 트랜잭션 처리 시스템에서 고려해야 할 사항입니다.  
   
 -   다양한 키  
   
@@ -628,10 +628,10 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>추가 참고 자료  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> 더 보기  
 
  [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   
- [분할 된 테이블 및 인덱스](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

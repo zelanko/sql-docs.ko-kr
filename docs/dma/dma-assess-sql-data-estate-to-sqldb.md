@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253509"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886190"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant를 사용 하 여 Azure SQL Database으로 마이그레이션하는 SQL Server 데이터 공간 준비 상태를 평가 합니다.
 
@@ -62,7 +62,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
     | ------------- | ------------- |
     | 아시아 | 동남 아시아 또는 동아시아 |
     | 유럽 | 남부 유럽 또는 유럽 서부 |
-    | United Kingdom | 영국 남부 또는 영국 서부 |
+    | 영국 | 영국 남부 또는 영국 서부 |
     | 미국 | 미국 중부 또는 미국 서 부 2 |
 
     프로젝트에 대해 지정된 지리는 온-프레미스 VM에서 수집된 메타데이터를 저장하는 데 사용됩니다. 실제 마이그레이션에 대한 대상 지역을 선택할 수 있습니다.
@@ -127,7 +127,7 @@ Azure Migrate 프로젝트는 평가 하거나 마이그레이션하는 환경�
    > [!NOTE]
    > Shift 또는 Ctrl 키를 누른 채 원본 제거를 클릭 하 여 여러 데이터베이스를 선택 하 여 제거할 수 있습니다. 소스 추가 단추를 사용 하 여 여러 SQL Server 인스턴스에서 데이터베이스를 추가할 수도 있습니다.
 
-4. **다음** 을 선택 하 여 평가를 시작 합니다.
+4. **다음**을 선택하여 평가를 시작합니다.
 
    ![Azure Migrate-Data Migration Assistant 소스 선택 화면](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 

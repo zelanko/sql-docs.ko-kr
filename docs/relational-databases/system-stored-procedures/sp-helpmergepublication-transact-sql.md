@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137650"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834488"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>인수  
  [ @publication **=** ] **'**_게시_**'**  
- 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 현재 데이터베이스 **%** 의 모든 병합 게시에 대 한 정보를 반환 하는입니다.  
+ 게시의 이름입니다. *게시*는 **sysname**이며 기본값은 **%** 현재 데이터베이스의 모든 병합 게시에 대 한 정보를 반환 하는입니다.  
   
  [ @found **=** ] **'***found***'** 출력  
  행을 반환하는지 여부를 나타내는 플래그입니다. *검색*된 **int** 및 OUTPUT 매개 변수 이며 기본값은 NULL입니다. **1** 은 게시가 발견 되었음을 나타냅니다. **0** 은 게시를 찾을 수 없음을 나타냅니다.  
   
- [ @publication_id **=**] **'***publication_id***'** 출력  
+ [ @publication_id **=** ] **'***publication_id***'** 출력  
  게시 ID 번호입니다. *publication_id* 은 **uniqueidentifier** 및 OUTPUT 매개 변수 이며 기본값은 NULL입니다.  
   
- [ @reserved **=**] **'***예약 됨***'**  
+ [ @reserved **=** ] **'***예약 됨***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reserved* 는 **nvarchar (20)** 이며 기본값은 NULL입니다.  
   
  [ @publisher **=** ] **'***게시자***'**  
  게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -79,14 +79,14 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |publication_type|**int**|게시 유형입니다.<br /><br /> **0** = 스냅숏<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합.|  
 |pubid|**uniqueidentifier**|해당 게시의 고유 식별자입니다.|  
 |snapshot_jobid|**binary(16)**|스냅샷 에이전트의 작업 ID입니다. [Sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) 시스템 테이블에서 스냅숏 작업에 대 한 항목을 가져오려면이 16 진수 값을 **uniqueidentifier**로 변환 해야 합니다.|  
-|enabled_for_internet|**int**|인터넷에서 게시를 사용할 수 있는지 여부를 나타냅니다. **1**인 경우 게시에 대 한 동기화 파일이 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` 디렉터리에 배치 됩니다. 사용자가 FTP(파일 전송 프로토콜) 디렉터리를 만들어야 합니다. **0**인 경우 게시는 인터넷에 액세스할 수 없습니다.|  
+|enabled_for_internet|**int**|인터넷에서 게시를 사용할 수 있는지 여부를 나타냅니다. **1**인 경우 게시에 대 한 동기화 파일이 디렉터리에 배치 됩니다 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` . 사용자가 FTP(파일 전송 프로토콜) 디렉터리를 만들어야 합니다. **0**인 경우 게시는 인터넷에 액세스할 수 없습니다.|  
 |dynamic_filter|**int**|매개 변수가 있는 행 필터가 사용되는지 여부를 나타냅니다. **0** 은 매개 변수가 있는 행 필터가 사용 되지 않음을 의미 합니다.|  
 |has_subscription|**bit**|게시에 구독이 있는지 여부를 나타냅니다. **0** 은 현재이 게시에 대 한 구독이 없음을 의미 합니다.|  
 |snapshot_in_default_folder|**bit**|스냅샷 파일을 기본 폴더에 저장하는지 여부를 지정합니다.<br /><br /> **1**인 경우 기본 폴더에서 스냅숏 파일을 찾을 수 있습니다.<br /><br /> **0**인 경우 스냅숏 파일이 **alt_snapshot_folder**에 지정 된 대체 위치에 저장 됩니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP 사이트에 스냅샷 파일을 저장할 수도 있습니다.<br /><br /> 참고:이 매개 변수는 true 일 수 있으며 여전히 **alt_snapshot_folder** 매개 변수에 위치를 포함 합니다. 이 경우 스냅샷 파일은 기본 위치와 대체 위치에 모두 저장됩니다.|  
 |alt_snapshot_folder|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |pre_snapshot_script|**nvarchar(255)**|구독자에서 스냅숏을 적용할 때 병합 에이전트 복제 된 개체 스크립트 보다 먼저 실행 되는 **.sql** 파일에 대 한 포인터를 지정 합니다.|  
 |post_snapshot_script|**nvarchar(255)**|초기 동기화 중에 다른 모든 복제 된 개체 스크립트 및 데이터를 적용 한 후 병합 에이전트 실행 되는 **.sql** 파일에 대 한 포인터를 지정 합니다.|  
-|compress_snapshot|**bit**|**Alt_snapshot_folder** 위치에 기록 되는 스냅숏이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 압축 되도록 지정 합니다.|  
+|compress_snapshot|**bit**|**Alt_snapshot_folder** 위치에 기록 되는 스냅숏이 CAB 형식으로 압축 되도록 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .|  
 |ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |ftp_port|**int**|배포자용 FTP 서비스의 포트 번호입니다. **ftp_port** 기본값은 **21**입니다. 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
 |ftp_subdirectory|**nvarchar(255)**|FTP를 사용하여 스냅샷을 배달할 때 배포 에이전트에서 스냅샷 파일을 선택할 수 있는 위치를 지정합니다.|  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. 값 **0** 은 복사가 허용 되지 않음을 의미 합니다.|  
 |allow_synctoalternate|**int**|대체 동기화 파트너가 해당 게시자와 동기화될 수 있는지 여부를 지정합니다. **0** 값은 동기화 파트너가 허용 되지 않음을 의미 합니다.|  
 |validate_subscriber_info|**nvarchar (500)**|구독자 정보를 검색하고 구독자에서 매개 변수가 있는 행 필터링 조건의 유효성을 검사하는 데 사용하는 함수를 나열합니다. 정보가 각 병합으로 일관성 있게 분할되는지 확인하는 데 유용합니다.|  
-|backward_comp_level|**int**|데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|게시 정보가 Active Directory에 게시되는지 여부를 지정합니다. 값 **0** 은 Active Directory에서 게시 정보를 사용할 수 없음을 의미 합니다.<br /><br /> 이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 Active Directory에 게시 정보를 추가할 수 없습니다.|  
 |max_concurrent_merge|**int**|동시 병합 프로세스의 수입니다. **0**인 경우에는 지정 된 시간에 실행 중인 동시 병합 프로세스 수에 제한이 없습니다.|  
 |max_concurrent_dynamic_snapshots|**int**|병합 게시에 대해 실행할 수 있는 필터링된 동시 데이터 스냅샷 세션의 최대 수입니다. **0**인 경우 지정 된 시간에 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 제한이 없습니다.|  

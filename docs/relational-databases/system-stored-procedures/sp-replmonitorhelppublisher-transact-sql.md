@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelppublisher
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5db934c972282609e9b2978a66034b39bb38a092
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 58b3251160b1d60862d0621dad1372265daefb5d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771187"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834274"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**발행자**|**sysname**|게시자의 이름입니다.|  
 |**distribution_db**|**sysname**|지정된 게시자에서 사용하는 배포 데이터베이스의 이름입니다.|  

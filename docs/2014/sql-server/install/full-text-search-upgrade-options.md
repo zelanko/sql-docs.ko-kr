@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095091"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000218"
 ---
 # <a name="full-text-search-upgrade-options"></a>전체 텍스트 검색 업그레이드 옵션
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 전체 텍스트 검색 업그레이드 옵션 페이지에서 현재 업그레이드 중인 데이터베이스에 사용할 전체 텍스트 검색 업그레이드 옵션을 선택할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "66095091"
   
  전체 텍스트 인덱스를 가져오는 데 따르는 영향에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "전체 텍스트 업그레이드 옵션 선택 시 고려 사항"을 참조하십시오.  
   
- **빌드하십시오**  
+ **다시 빌드**  
  향상된 새로운 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 작성합니다. 인덱스를 다시 작성하면 시간이 오래 걸릴 수 있으며 업그레이드 후 CPU 및 메모리가 많이 필요할 수 있습니다.  
   
  **다시 설정**  

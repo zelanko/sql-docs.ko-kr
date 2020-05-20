@@ -1,5 +1,6 @@
 ---
 title: Azure에 대 한 SQL Server Managed Backup 모니터링 | Microsoft Docs
+description: 이 문서에서는 Azure에 대 한 SQL Server Managed Backup을 사용 하 여 백업의 전체 상태를 확인 하 고 오류를 식별 하는 데 사용할 수 있는 도구에 대해 설명 합니다.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,18 +11,18 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798041"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849612"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Azure에 SQL Server 관리 백업 모니터링
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 프로세스 중에 문제 및 오류와 가능한 경우 수정 작업을 포함하는 해결책을 식별하는 기본 제공된 조치를 포함합니다.  그러나 사용자 개입이 필요한 특정 상황이 있습니다. 이 항목에서는 백업의 전체 상태를 확인하고 해결해야 할 오류를 식별하는 데 사용할 수 있는 도구에 대해 설명합니다.  
   
 ## <a name="overview-of-ss_smartbackup-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본 제공 디버깅 개요  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 스토리지 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Azure 제한 정책을 고려 하 고 여러 데이터베이스 백업을 관리 하는 메커니즘이 있습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 운영 이벤트에는 백업 예약, 성공적인 백업 완료 등이 포함 됩니다. 디버그는 가장 자세한 정보를 표시 하며 문제를 확인 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 하 고 필요한 경우 수정 하는 데 내부적으로 사용 됩니다.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 스토리지 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Azure 제한 정책을 고려 하 고 여러 데이터베이스 백업을 관리 하는 메커니즘이 있습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 운영 이벤트에는 백업 예약, 성공적인 백업 완료 등이 포함 됩니다. 디버그는 가장 자세한 정보를 표시 하며 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 문제를 확인 하 고 필요한 경우 수정 하는 데 내부적으로 사용 됩니다.  
   
 ### <a name="configure-monitoring-parameters-for-ss_smartbackup"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 대한 모니터링 매개 변수 구성  
  **Smart_admin sp_set_parameter** 시스템 저장 프로시저를 사용 하 여 모니터링 설정을 지정할 수 있습니다. 다음 섹션은 확장 이벤트를 설정하고 오류 및 경고에 대한 전자 메일 알림을 설정하는 프로세스를 안내합니다.  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>집계된 오류 수/상태  
- **Smart_admin fn_get_health_status** 함수는의 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]상태를 모니터링 하는 데 사용할 수 있는 각 범주에 대 한 집계 된 오류 개수 테이블을 반환 합니다. 이 동일한 함수는 이 항목 뒷부분에서 설명하는 시스템에서 구성된 전자 메일 알림 메커니즘에서도 사용됩니다.   
+ **Smart_admin fn_get_health_status** 함수는의 상태를 모니터링 하는 데 사용할 수 있는 각 범주에 대 한 집계 된 오류 개수 테이블을 반환 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 합니다. 이 동일한 함수는 이 항목 뒷부분에서 설명하는 시스템에서 구성된 전자 메일 알림 메커니즘에서도 사용됩니다.   
 이 집계 수는 시스템 상태를 모니터링하는 데 사용될 수 있습니다. 예를 들어 number_ of_retention_loops 열이 30분에서 0인 경우 보존 관리 작업에 시간이 오래 걸리고 있거나 제대로 작동하지 않고 있을 가능성이 있습니다. 0이 아닌 오류 열은 문제를 나타내며 해당 문제를 검색하기 위해 확장 이벤트 로그를 확인해야 합니다. 또는 smart_admin 저장 프로시저를 호출 하 여 오류에 대 한 세부 정보를 찾을 수 **sp_get_backup_diagnostics 있습니다.**  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>백업 상태 확인을 위해 에이전트 알림 사용  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 SQL Server 정책 기반 관리 정책에 따른 알림 메커니즘을 포함합니다.  
   
- **사전**  
+ **사전 요구 사항:**  
   
 -   이러한 기능을 사용하려면 데이터베이스 메일이 필요합니다. SQL Server 인스턴스에 대해 DB 메일을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 [데이터베이스 메일 구성](../relational-databases/database-mail/configure-database-mail.md)을 참조 하세요.  
   
@@ -124,7 +125,7 @@ GO
   
 -   **정책 기반 관리:** 백업 상태를 모니터링 하는 두 가지 정책: **스마트 관리 시스템 상태 정책**및 **스마트 관리 사용자 작업 상태 정책**. 스마트 관리 시스템 상태 정책은 SQL 자격 증명 부족 또는 잘못된 SQL 자격 증명과 같은 중요한 오류, 연결 오류를 평가하거나 시스템 상태를 보고합니다. 이 경우 일반적으로 기본 문제를 해결하는 데 수동 작업이 필요합니다. 스마트 관리 사용자 작업 상태 정책은 손상된 백업과 같은 경고를 평가합니다.  이 경우 작업은 필요하지 않지만 이벤트 경고만 필요할 수 있습니다. 이러한 문제는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에 의해 자동으로 처리될 것입니다.  
   
--   **SQL Server 에이전트** 작업: 세 개의 작업 단계를 포함 하는 SQL Server 에이전트 작업을 사용 하 여 알림이 수행 됩니다. 첫 번째 작업 단계에서는 데이터베이스 또는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 구성되어 있는지 여부를 검색합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 사용 하도록 설정 되 고 구성 된 경우 두 번째 단계를 실행 합니다. SQL Server 정책 기반 관리 정책을 평가 하 여 상태를 평가 하는 PowerShell cmdlet을 실행 합니다. 오류 또는 경고가 발견 되 면 오류가 발생 하 고 세 번째 단계를 트리거합니다. 세 번째 단계는 오류/경고 보고서와 함께 전자 메일 알림을 보냅니다.  그러나 이 SQL Server 에이전트 작업은 기본적으로 설정되지 않습니다. 전자 메일 알림 작업을 사용 하도록 설정 하려면 **smart_admin. sp_set_backup_parameter** 시스템 저장 프로시저를 사용 합니다.  다음 절차에서 이러한 단계를 자세히 설명합니다.  
+-   **SQL Server 에이전트** 작업: 세 개의 작업 단계를 포함 하는 SQL Server 에이전트 작업을 사용 하 여 알림이 수행 됩니다. 첫 번째 작업 단계에서는 데이터베이스 또는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 구성되어 있는지 여부를 검색합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]사용 하도록 설정 되 고 구성 된 경우 두 번째 단계를 실행 합니다. SQL Server 정책 기반 관리 정책을 평가 하 여 상태를 평가 하는 PowerShell cmdlet을 실행 합니다. 오류 또는 경고가 발견 되 면 오류가 발생 하 고 세 번째 단계를 트리거합니다. 세 번째 단계는 오류/경고 보고서와 함께 전자 메일 알림을 보냅니다.  그러나 이 SQL Server 에이전트 작업은 기본적으로 설정되지 않습니다. 전자 메일 알림 작업을 사용 하도록 설정 하려면 **smart_admin. sp_set_backup_parameter** 시스템 저장 프로시저를 사용 합니다.  다음 절차에서 이러한 단계를 자세히 설명합니다.  
   
 ##### <a name="enabling-email-notification"></a>전자 메일 알림 설정  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- 다음 스크립트는 기본 인스턴스 (`\SQL\COMPUTER\DEFAULT`)에 대 한 오류 및 경고에 대 한 자세한 보고서를 반환 합니다.  
+ 다음 스크립트는 기본 인스턴스 ()에 대 한 오류 및 경고에 대 한 자세한 보고서를 반환 합니다 `\SQL\COMPUTER\DEFAULT` .  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  
@@ -248,7 +249,7 @@ smart_backup_files;
   
 -   **복사 실패-F:** 진행 중인 복사와 마찬가지로이는 특정 가용성 그룹 데이터베이스입니다. 복사 프로세스가 실패하면 상태가 F로 표시됩니다.  
   
--   **손상 됨-C:** 가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 여러 번의 시도 후에도 RESTORE HEADER_ONLY 명령을 수행 하 여 저장소의 백업 파일을 확인할 수 없는 경우이 파일을 손상 된 것으로 표시 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 손상된 파일로 인해 백업 체인이 끊어지지 않도록 하기 위해 백업을 예약합니다.  
+-   **손상 됨-C:** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]가 여러 번의 시도 후에도 RESTORE HEADER_ONLY 명령을 수행 하 여 저장소의 백업 파일을 확인할 수 없는 경우이 파일을 손상 된 것으로 표시 합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 손상된 파일로 인해 백업 체인이 끊어지지 않도록 하기 위해 백업을 예약합니다.  
   
 -   **삭제 됨-D:** Azure storage에서 해당 파일을 찾을 수 없습니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 삭제된 파일로 인해 백업 체인이 끊어지는 경우 백업을 예약합니다.  
   

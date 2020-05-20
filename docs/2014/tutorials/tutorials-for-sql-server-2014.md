@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242064"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000063"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>SQL Server 2014 자습서
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 많은 새로운 기술과 기능이 도입되었습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "75242064"
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [PowerPivot 및 Power View의 HelloWorldPicnic 샘플 모델용 이미지 파일](https://www.microsoft.com/download/details.aspx?id=26719)(영문)로 이동합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 Enterprise Edition 용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] 추가 기능의 기능입니다.  
+    >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Enterprise Edition 용 추가 기능의 기능입니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[SPS2010](../includes/sps2010-md.md)] .  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 데이터베이스의 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 버전을 다운로드하려면 CodePlex의 [Adventure Works 2014 샘플 데이터베이스](https://msftdbprodsamples.codeplex.com/releases/view/125550) (영문)로 이동합니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75242064"
 ## <a name="in-this-section"></a>섹션 내용  
  다음 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 기술에 대한 자습서가 제공됩니다.  
   
-|기술|Description|  
+|기술|설명|  
 |----------------|-----------------|  
 |[Analysis Services 자습서&#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
 |[Reporting Services&#40;SSRS&#41; 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)|기본 보고서와 구독을 만드는 방법에 대해 알아봅니다.|  

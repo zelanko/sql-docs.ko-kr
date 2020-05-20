@@ -10,12 +10,12 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228474"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921728"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>메모리 내 OLTP를 보여주기 위한 AdventureWorks 확장
     
@@ -35,7 +35,7 @@ ms.locfileid: "75228474"
   
 -   [AdventureWorks 기반의 메모리 내 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
--   예제 [테이블 및 프로시저](#Descriptionofthesampletablesandprocedures) 에 대 한 설명- [!INCLUDE[hek_2](../includes/hek-2-md.md)] 샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대 한 설명 뿐만 아니라 원래 adventureworks 테이블 일부를 메모리 최적화로 마이그레이션하기 위한 고려 사항도 포함 되어 있습니다.  
+-   예제 [테이블 및 프로시저](#Descriptionofthesampletablesandprocedures) 에 대 한 설명-샘플에서 AdventureWorks에 추가한 테이블 및 프로시저에 대 한 설명 뿐만 아니라 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 원래 adventureworks 테이블 일부를 메모리 최적화로 마이그레이션하기 위한 고려 사항도 포함 되어 있습니다.  
   
 -   [데모 작업을 사용한 성능 측정](#PerformanceMeasurementsusingtheDemoWorkload)을 수행하기 위한 지침 – 데모 작업 자체를 실행하기 위한 지침뿐 아니라 작업을 추진하는 데 사용되는 도구인 ostress를 설치하고 실행하기 위한 지침이 포함되어 있습니다.  
   
@@ -45,14 +45,14 @@ ms.locfileid: "75228474"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM-Evaluation, Developer 또는 Enterprise edition  
   
--   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 의 하드웨어에 대 한 [!INCLUDE[hek_2](../includes/hek-2-md.md)]일반적인 지침은 다음 블로그 게시물을 참조 하세요.[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   성능 테스트에 사용할, 프로덕션 환경과 유사한 사양을 가진 서버 이 특정 샘플의 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 사용할 수 있는 메모리가 16GB 이상 있어야 합니다. 의 하드웨어에 대 한 일반적인 지침은 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 다음 블로그 게시물을 참조 하세요.[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
-##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>AdventureWorks에 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 따라 샘플 설치  
+##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>[!INCLUDE[hek_2](../includes/hek-2-md.md)]AdventureWorks에 따라 샘플 설치  
  다음 단계를 수행하여 예제를 설치합니다.  
   
 1.  AdventureWorks2014 데이터베이스의 전체 백업에 대한 보관 파일을 다운로드합니다.  
   
-    1.  다음을 엽니다 [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  다음을 엽니다 [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  파일을 로컬 폴더에 저장하라는 메시지가 표시됩니다.  
   
@@ -87,15 +87,15 @@ ms.locfileid: "75228474"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [SQL Server 2014 RTM 메모리 내 OLTP 샘플](https://go.microsoft.com/fwlink/?LinkID=396372) 의 ' RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample .sql ' 샘플 스크립트를 로컬 폴더로 다운로드 합니다.  
+5.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] [SQL Server 2014 RTM 메모리 내 OLTP 샘플](https://go.microsoft.com/fwlink/?LinkID=396372) 의 ' RTM sample .sql ' 샘플 스크립트를 로컬 폴더로 다운로드 합니다.  
   
-6.  '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample .sql ' 스크립트의 ' checkpoint_files_location ' 변수 값을 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일의 대상 위치를 가리키도록 업데이트 합니다. 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
+6.  ' RTM Sample .sql ' 스크립트의 ' checkpoint_files_location ' 변수 값을 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 검사점 파일의 대상 위치를 가리키도록 업데이트 합니다 [!INCLUDE[hek_2](../includes/hek-2-md.md)] . 검사점 파일은 순차 IO 성능이 좋은 드라이브에 배치되어야 합니다.  
   
      변수 'database_name'의 값을 업데이트하여 AdventureWorks2014 데이터베이스를 가리킵니다.  
   
-    1.  백슬래시\' 를 경로 이름의 일부로 포함 해야 합니다.  
+    1.  백슬래시를 \' 경로 이름의 일부로 포함 해야 합니다.  
   
-    2.  예:  
+    2.  예제:  
   
         ```  
         :setvar checkpoint_files_location "d:\DBData\"  
@@ -113,7 +113,7 @@ ms.locfileid: "75228474"
   
     2.  Management Studio 사용:  
   
-        1.  쿼리 창에서 '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. s q l ' 스크립트를 엽니다.  
+        1.  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[hek_2](../includes/hek-2-md.md)] 쿼리 창에서 ' RTM Sample. s q l ' 스크립트를 엽니다.  
   
         2.  AdventureWorks2014 데이터베이스가 포함된 대상 서버에 연결합니다.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "75228474"
   
 -   *기본 제약 조건* - SalesOrderHeader와 유사하게 시스템 날짜/시간을 필요로 하는 기본 제약 조건은 마이그레이션되지 않으며, 대신 판매 주문을 삽입하는 저장 프로시저가 첫 번째 삽입 시 현재 시스템 날짜/시간을 삽입하는 작업을 처리합니다.  
   
--   *계산 열-계산* 열이에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]메모리 최적화 테이블에 대해 지원 되지 않으므로 계산 열 LineTotal 마이그레이션되지 않았습니다. 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
+-   *계산 열-계산* 열이에서 메모리 최적화 테이블에 대해 지원 되지 않으므로 계산 열 LineTotal 마이그레이션되지 않았습니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . 이 열에 액세스하려면 Sales.vSalesOrderDetail_extended_inmem 뷰를 사용합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228474"
   
 -   *별칭 UDT* - 원래 테이블은 시스템 데이터 형식 bit와 동일한 사용자 정의 데이터 형식 dbo.Flag를 사용합니다. 마이그레이션된 테이블은 bit 데이터 형식을 대신 사용합니다.  
   
--   *BIN2 데이터 정렬* -열 이름 및 제품 번호는 인덱스 키에 포함 되어 있으므로에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]BIN2 데이터 정렬을 포함 해야 합니다. 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
+-   *BIN2 데이터 정렬* -열 이름 및 제품 번호는 인덱스 키에 포함 되어 있으므로에서 BIN2 데이터 정렬을 포함 해야 합니다 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . 여기에서는 응용 프로그램이 대/소문자 구분 안 함과 같은 데이터 정렬 사항에 의존하지 않는다고 가정합니다.  
   
 -   *Rowguid* - rowguid 열이 생략되었습니다. 자세한 내용은 SalesOrderHeader 테이블에 대한 설명을 참조하세요.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "75228474"
   
 -   -S 연결할 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 이름  
   
--   -E Windows 인증을 사용 하 여 연결 (기본값); 인증을 사용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 하는 경우에는 옵션과-P 옵션을 사용 하 여 사용자 이름과 암호를 각각 지정 합니다.  
+-   -E Windows 인증을 사용 하 여 연결 (기본값); 인증을 사용 하는 경우에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 옵션과-P 옵션을 사용 하 여 사용자 이름과 암호를 각각 지정 합니다.  
   
 -   -d 데이터베이스의 이름. 이 예의 경우 AdventureWorks2014입니다.  
   
@@ -462,7 +462,7 @@ END
  ostress 도구를 사용하여 여러 동시 연결을 통해 스크립트를 실행할 것입니다. ‘-n’ 매개 변수를 사용하여 연결 수를 제어하고 ‘r’ 매개 변수를 사용하여 스크립트가 각 연결에서 실행되는 횟수를 제어하려고 합니다.  
   
 #### <a name="functional-validation-of-the-workload"></a>작업의 기능 유효성 검사  
- 모든 것이 제대로 작동 하는지 확인 하기 위해 샘플 테스트를 시작 하 고, 10 개의 동시 연결 및 5 개의 반복을 사용 하 여 \* 총 10 * 5 20 = 1000 판매 주문을 삽입 합니다.  
+ 모든 것이 제대로 작동 하는지 확인 하기 위해 샘플 테스트를 시작 하 고, 10 개의 동시 연결 및 5 개의 반복을 사용 하 여 총 10 * 5 \* 20 = 1000 판매 주문을 삽입 합니다.  
   
  아래의 명령을 사용할 때 로컬 컴퓨터에서 기본 인스턴스를 사용한다고 가정합니다. 명명된 인스턴스나 원격 서버를 사용하는 경우 -S 매개 변수를 사용하여 서버 이름을 적절하게 변경합니다.  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  물리적 코어가 총 8개(논리적 코어 총 16개)인 테스트 서버에서 이 작업은 41분 25초가 소요되었고, 물리적 코어가 24개(논리적 코어 48개)인 두 번째 테스트 서버에서는 52분 16초가 소요되었습니다.  
   
- 이 테스트에서 메모리 최적화 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. [!INCLUDE[hek_2](../includes/hek-2-md.md)] 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입을 차단 하지 않기 때문 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에에서 CPU를 완전히 활용할 수 있습니다.  
+ 이 테스트에서 메모리 최적화 테이블과 디스크 기반 테이블 간 성능 차이의 주요 요인은 디스크 기반 테이블을 사용하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 CPU를 완전히 활용할 수 없다는 사실입니다. 그 이유는 래치 경합 때문입니다. 즉, 동시 트랜잭션이 동일한 데이터 페이지에 쓰려고 합니다. 래치는 한 번에 한 트랜잭션만 페이지에 쓸 수 있도록 하는 데 사용됩니다. [!INCLUDE[hek_2](../includes/hek-2-md.md)] 엔진은 래치를 사용하지 않으며 데이터 행이 페이지에 구성되지 않습니다. 따라서 동시 트랜잭션이 서로의 삽입을 차단 하지 않기 때문에에서 CPU를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 완전히 활용할 수 있습니다.  
   
  작업 관리자 등을 사용하여 작업이 실행되는 동안 CPU 사용률을 관찰할 수 있습니다. 디스크 기반 테이블을 사용하는 경우 CPU 사용률이 100%에 크게 못 미치는 것을 확인할 수 있습니다. 논리적 프로세서가 16개인 테스트 구성에서 사용률은 24% 정도입니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 관리 되는 백업 구성 (SQL Server Management Studio) | Microsoft Docs
+description: 관리 되는 백업 대화 상자를 사용 하 여 Azure 기본 설정으로 SQL Server 관리 되는 백업을 구성할 수 있습니다. 고려해 야 할 옵션에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -12,17 +13,17 @@ ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154338"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849441"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>관리되는 백업 구성(SQL Server Management Studio)
   **관리되는 백업** 대화에서는 인스턴스의 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성할 수 있습니다. 이 항목에서는 이 대화를 사용하여인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본값을 구성하는 방법과, 이 때 고려해야 할 옵션에 대해 설명합니다. 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성할 때 이 설정은 이후 생성되는 모든 새 데이터베이스에 적용됩니다.  
   
- 특정 데이터베이스에 대해을 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성 하려면 [데이터베이스에 대해 Azure에 대 한 관리 되는 백업 SQL Server 사용 및 구성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure)을 참조 하세요.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]특정 데이터베이스에 대해을 구성 하려면 [데이터베이스에 대해 Azure에 대 한 관리 되는 백업 SQL Server 사용 및 구성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure)을 참조 하세요.  
  
 > [!NOTE] 
 > 프록시 서버에서 SQL Server Managed Backup이 지원되지 않습니다. 
@@ -53,7 +54,7 @@ ms.locfileid: "70154338"
   
  `smart_admin.fn_get_current_xevent_settings` 함수에 대한 `SELECT` 사용 권한.  
   
- `EXECUTE``smart_admin.sp_get_backup_diagnostics` 저장 프로시저에 대 한 사용 권한. 또한 `VIEW SERVER STATE` 권한도 필요한데, 이 권한이 필요한 다른 시스템 개체를 내부적으로 호출하기 때문입니다.  
+ `EXECUTE`저장 프로시저에 대 한 사용 권한 `smart_admin.sp_get_backup_diagnostics` . 또한 `VIEW SERVER STATE` 권한도 필요한데, 이 권한이 필요한 다른 시스템 개체를 내부적으로 호출하기 때문입니다.  
   
  `smart_admin.sp_set_instance_backup` 및 `smart_admin.sp_backup_master_switch`에서 `EXECUTE` 권한  
   
@@ -68,7 +69,7 @@ ms.locfileid: "70154338"
   
  Azure storage 계정에 대 한 **저장소 URL** , 저장소 계정에 대 한 인증 정보를 저장 하는 SQL 자격 증명과 백업 파일의 보존 기간을 지정 합니다.  
   
- 저장소 URL 형식은 다음과 같습니다. https://\<storageaccount> blob.core.windows.net/  
+ 저장소 URL 형식은 다음과 같습니다. https:// \< storageaccount> blob.core.windows.net/  
   
  인스턴스 수준에서 암호화 설정을 지정하려면 **암호화 백업** 옵션을 선택하고 암호화에 사용할 알고리즘 및 인증서 또는 비대칭 키를 지정합니다.  이 항목은 인스턴스 수준에서 설정되어 이 구성 적용 후 생성되는 모든 새 데이터베이스에 사용됩니다.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "70154338"
 ### <a name="considerations"></a>고려 사항  
  인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성할 경우 이후 생성되는 모든 새 데이터베이스에 설정이 적용됩니다.  그러나 기존 데이터베이스가 자동으로 이 설정을 상속하지는 않습니다. 기존 데이터베이스에서 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하려면 각 데이터베이스를 특정하게 구성해야 합니다. 자세한 내용은 [Azure에 대 한 데이터베이스에 대해 관리 되는 백업 SQL Server 사용 및 구성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure)을 참조 하세요.  
   
- 을 사용 하 여가 일시 중지 된 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] "관리 되는 백업이 비활성화 되었으며 현재 구성이 적용 되지 않습니다 ..." 라는 경고 메시지가 표시 됩니다. `smart_admin.sp_backup_master_switch` 구성을 완료 하려고 합니다. 저장 된 `smart_admin.sp_backup_master_switch` 를 사용 하 고 @new_state= 1을 설정 합니다. 그러면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스가 재개되고 구성 설정이 적용됩니다. 저장 프로시저에 대 한 자세한 내용은 [smart_admin sp_ backup_master_switch &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)을 참조 하세요.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 사용 하 여가 일시 중지 된 경우 `smart_admin.sp_backup_master_switch` "관리 되는 백업이 비활성화 되었으며 현재 구성이 적용 되지 않습니다 ..." 라는 경고 메시지가 표시 됩니다. 구성을 완료 하려고 합니다. 저장 된를 사용 `smart_admin.sp_backup_master_switch` 하 고 @new_state = 1을 설정 합니다. 그러면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스가 재개되고 구성 설정이 적용됩니다. 저장 프로시저에 대 한 자세한 내용은 [smart_admin sp_ backup_master_switch &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Azure에 SQL Server 관리 백업: 상호 운용성 및 공존성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  

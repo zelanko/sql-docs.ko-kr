@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175935"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922106"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175935"
 
 |||
 |-|-|
-|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료 되 면 가상 컴퓨터를 삭제할 수 있습니다.|
+|![Azure Virtual Machine](../../master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|SQL Server 2016을 사용해 보시겠나요? Microsoft Azure에 등록한 다음 **[여기](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** 로 이동하여 이미 설치된 SQL Server 2016으로 가상 머신을 실행합니다. 완료 되 면 가상 컴퓨터를 삭제할 수 있습니다.|
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]를 사용하려면 자주 액세스하는 테이블을 메모리 액세스에 최적화된 상태로 정의합니다. 메모리 액세스에 최적화된 테이블은 내구성 있는 완전 트랜잭션이며 디스크 기반 테이블과 같은 방법으로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 액세스됩니다. 쿼리는 메모리 최적화 테이블 및 디스크 기반 테이블을 모두 참조할 수 있습니다. 트랜잭션은 메모리 최적화 테이블 및 디스크 기반 테이블에서 데이터를 업데이트할 수 있습니다. 메모리 최적화 테이블만 참조하는 저장 프로시저는 성능 향상을 위해 기계어 코드에 고유하게 컴파일될 수 있습니다. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 엔진은 고도로 확장된 중간 계층에서 파생되는 OLTP 유형의 트랜잭션을 위한 매우 높은 수준의 세션 동시성을 지원하도록 설계되었습니다. 이를 위해서 래치가 설정되지 않은 데이터 구조와 낙관적인 여러 버전의 동시성 제어를 사용합니다. 따라서 결과는 예측 가능하며, 지연 시간은 밀리초 미만으로 짧고, 처리량은 많으며 데이터베이스 트랜잭션을 위해 직선형으로 확장됩니다. 실제 성능 향상은 많은 요인에 따라 달라지지만 일반적으로 성능이 5 - 20배 향상됩니다.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175935"
 |짧은 대기 시간|일반적인 데이터베이스 솔루션으로 구현할 수 없는 짧은 대기 시간 비즈니스 트랜잭션 필요|경합 제거<br /><br /> 코드 실행 시간 최소화<br /><br /> 코드 실행 대기 시간 단축<br /><br /> 효율적인 데이터 검색|
 |세션 상태 관리|삽입, 업데이트 및 지점 검색을 자주 수행<br /><br /> 수많은 상태 비저장 웹 서버의 대규모 부하|경합 제거<br /><br /> 효율적인 데이터 검색<br /><br /> 내구성 없는 테이블을 사용할 경우 옵션 IO 절감 또는 제거|
 
- 에서 가장 큰 성능 이점을 얻을 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 수 있는 시나리오에 대 한 자세한 내용은 [메모리 내 OLTP-일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조 하세요.
+ 에서 가장 큰 성능 이점을 얻을 수 있는 시나리오에 대 한 자세한 내용은 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] [메모리 내 OLTP-일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조 하세요.
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]는 짧은 트랜잭션 실행 시간으로 OLTP에서 가장 높은 성능 개선을 보입니다.
 
@@ -63,7 +63,7 @@ ms.locfileid: "78175935"
 > [!IMPORTANT]
 >  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]를 사용하려면 일부 구문을 테이블과 저장 프로시저로 변경해야 합니다. 자세한 내용은 [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md)을 참조하세요. 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하기 전에 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)을 읽고 어떤 테이블과 저장 프로시저가 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]에서 이익을 얻을지 확인하세요.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
  이 섹션에서는 다음과 같은 개념에 대해 설명합니다.
 
 |항목|설명|
@@ -71,7 +71,7 @@ ms.locfileid: "78175935"
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 최적화 테이블의 사용 지침에 대해 설명합니다.|
 |[VM 환경에서 메모리 내 OLTP 사용](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|가상화된 환경에서 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 사용에 대해 다룹니다.|
 |[메모리 내 OLTP 코드 예제](in-memory-oltp-code-samples.md)|메모리 최적화 테이블을 만들고 사용하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|
-|[메모리 액세스에 최적화 된 테이블](memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|
+|[메모리 최적화 테이블](memory-optimized-tables.md)|메모리 최적화 테이블을 소개합니다.|
 |[메모리 액세스에 최적화된 테이블 변수](../../database-engine/memory-optimized-table-variables.md)|기존의 테이블 변수 대신 메모리 최적화 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|
 |[메모리 액세스에 최적화된 테이블의 인덱스](../../database-engine/indexes-on-memory-optimized-tables.md)|메모리 최적화 인덱스를 소개합니다.|
 |[Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|
@@ -87,7 +87,7 @@ ms.locfileid: "78175935"
 
 -   [Microsoft?? SQL Server?? 2014 제품 가이드](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [메모리 내 OLTP 블로그](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [메모리 내 OLTP 블로그](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [메모리 내 OLTP-일반적인 워크 로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)
 

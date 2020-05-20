@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815758"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922010"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 운영 문제에 대한 Always On 정책(SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모델은 미리 정의된 PBM(정책 기반 관리) 정책 집합을 평가합니다. 이를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹 및 가용성 복제본과 데이터베이스의 상태를 볼 수 있습니다.  
@@ -48,20 +48,20 @@ ms.locfileid: "62815758"
   
 |정책 이름|문제|범주**<sup>*</sup>**|패싯|  
 |-----------------|-----------|------------------------------|-----------|  
-|WSFC 클러스터 상태|[WSFC 클러스터 서비스가 오프 라인 상태입니다](wsfc-cluster-service-is-offline.md).|위험|SQL Server 인스턴스|  
-|가용성 그룹 온라인 상태|[가용성 그룹이 오프 라인 상태입니다](availability-group-is-offline.md).|위험|가용성 그룹|  
-|가용성 그룹 자동 장애 조치(Failover) 준비|[가용성 그룹에 자동 장애 조치 (failover)가 준비 되지 않았습니다](availability-group-is-not-ready-for-automatic-failover.md).|위험|가용성 그룹|  
-|가용성 복제본 데이터 동기화 상태|[일부 가용성 복제본에서 데이터를 동기화 하지 않습니다](some-availability-replicas-are-not-synchronizing-data.md).|Warning|가용성 그룹|  
-|동기 복제본 데이터 동기화 상태|[일부 동기 복제본이 동기화 되지 않았습니다](some-synchronous-replicas-are-not-synchronized.md).|Warning|가용성 그룹|  
-|가용성 복제본 역할 상태|[일부 가용성 복제본에 정상 상태의 역할이 없습니다](some-availability-replicas-do-not-have-a-healthy-role.md).|Warning|가용성 그룹|  
-|가용성 복제본 연결 상태|[일부 가용성 복제본의 연결을 끊습니다](some-availability-replicas-are-disconnected.md).|Warning|가용성 그룹|  
-|가용성 복제본 역할 상태|[가용성 복제본에 정상 상태의 역할이 없습니다](availability-replica-does-not-have-a-healthy-role.md).|위험|가용성 복제본|  
-|가용성 복제본 연결 상태|[가용성 복제본의 연결이 끊어졌습니다](availability-replica-is-disconnected.md).|위험|가용성 복제본|  
-|가용성 복제본 조인 상태|[가용성 복제본이 조인 되지](availability-replica-is-not-joined.md)않았습니다.|Warning|가용성 복제본|  
-|가용성 복제본 데이터 동기화 상태|[일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Warning|가용성 복제본|  
-|가용성 데이터베이스 일시 중지 상태|[가용성 데이터베이스가 일시 중지 되었습니다](availability-database-is-suspended.md).|Warning|가용성 데이터베이스|  
-|가용성 데이터베이스 조인 상태|[보조 데이터베이스가 조인 되지](secondary-database-is-not-joined.md)않았습니다.|Warning|가용성 데이터베이스|  
-|가용성 데이터베이스 데이터 동기화 상태|[가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다](data-synchronization-state-of-availability-database-is-not-healthy.md).|Warning|가용성 데이터베이스|  
+|WSFC 클러스터 상태|[WSFC 클러스터 서비스가 오프 라인 상태입니다](wsfc-cluster-service-is-offline.md).|중요|SQL Server 인스턴스|  
+|가용성 그룹 온라인 상태|[가용성 그룹이 오프 라인 상태입니다](availability-group-is-offline.md).|중요|가용성 그룹|  
+|가용성 그룹 자동 장애 조치(Failover) 준비|[가용성 그룹에 자동 장애 조치 (failover)가 준비 되지 않았습니다](availability-group-is-not-ready-for-automatic-failover.md).|중요|가용성 그룹|  
+|가용성 복제본 데이터 동기화 상태|[일부 가용성 복제본에서 데이터를 동기화 하지 않습니다](some-availability-replicas-are-not-synchronizing-data.md).|경고|가용성 그룹|  
+|동기 복제본 데이터 동기화 상태|[일부 동기 복제본이 동기화 되지 않았습니다](some-synchronous-replicas-are-not-synchronized.md).|경고|가용성 그룹|  
+|가용성 복제본 역할 상태|[일부 가용성 복제본에 정상 상태의 역할이 없습니다](some-availability-replicas-do-not-have-a-healthy-role.md).|경고|가용성 그룹|  
+|가용성 복제본 연결 상태|[일부 가용성 복제본의 연결을 끊습니다](some-availability-replicas-are-disconnected.md).|경고|가용성 그룹|  
+|가용성 복제본 역할 상태|[가용성 복제본에 정상 상태의 역할이 없습니다](availability-replica-does-not-have-a-healthy-role.md).|중요|가용성 복제본|  
+|가용성 복제본 연결 상태|[가용성 복제본의 연결이 끊어졌습니다](availability-replica-is-disconnected.md).|중요|가용성 복제본|  
+|가용성 복제본 조인 상태|[가용성 복제본이 조인 되지](availability-replica-is-not-joined.md)않았습니다.|경고|가용성 복제본|  
+|가용성 복제본 데이터 동기화 상태|[일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|경고|가용성 복제본|  
+|가용성 데이터베이스 일시 중지 상태|[가용성 데이터베이스가 일시 중지 되었습니다](availability-database-is-suspended.md).|경고|가용성 데이터베이스|  
+|가용성 데이터베이스 조인 상태|[보조 데이터베이스가 조인 되지](secondary-database-is-not-joined.md)않았습니다.|경고|가용성 데이터베이스|  
+|가용성 데이터베이스 데이터 동기화 상태|[가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다](data-synchronization-state-of-availability-database-is-not-healthy.md).|경고|가용성 데이터베이스|  
   
 > [!IMPORTANT]  
 >  **<sup>*</sup>** AlwaysOn 정책의 경우 범주 이름이 Id로 사용 됩니다. AlwaysOn 범주의 이름을 변경하면 상태 평가 기능이 작동하지 않으므로 이름을 수정하지 마세요.  
@@ -86,7 +86,7 @@ ms.locfileid: "62815758"
   
  사용자 정의 정책은 AlwaysOn 미리 정의된 정책에서 사용되는 패싯을 포함하여 사용 가능한 모든 PBM 패싯을 사용할 수 있습니다(이 항목의 앞 부분에 나오는 [미리 정의된 정책 및 문제](#AlwaysOnPBM) 참조). 서버 패싯은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 상태 모니터링을 위해 `IsHadrEnabled` 및 `HadrManagerStatus` 속성을 제공합니다. 서버 패싯은 또한 WSFC 클러스터 구성을 모니터링하기 위해 `ClusterQuorumType` 및 `ClusterQuorumState` 정책의 속성을 제공합니다.  
   
- 자세한 내용은 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)(AlwaysOn 상태 모델 2부 -- 상태 모델 확장)(SQL Server AlwaysOn 팀 블로그)을 참조하세요.  
+ 자세한 내용은 [The AlwaysOn Health Model Part 2 -- Extending the Health Model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)(AlwaysOn 상태 모델 2부 -- 상태 모델 확장)(SQL Server AlwaysOn 팀 블로그)을 참조하세요.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815758"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> 관련 내용  
   
--   [AlwaysOn 상태 모델 파트 1 -- 상태 모델 아키텍처](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 상태 모델 파트 1 -- 상태 모델 아키텍처](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [AlwaysOn 상태 모델 파트 2 -- 상태 모델 확장](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [AlwaysOn 상태 모델 파트 2 -- 상태 모델 확장](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

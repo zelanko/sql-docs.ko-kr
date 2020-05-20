@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086889"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922246"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 만들기(보고서 작성기)
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "82086889"
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
-1.  **시작**을 클릭 하 고 **프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**을 차례로 가리킨 다음 **보고서 작성기**를 클릭 합니다.  
+1.  **시작**을 클릭 하 고 **프로그램**, 보고서 작성기을 차례로 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**다음 **보고서 작성기**를 클릭 합니다.  
   
      **시작** 대화 상자가 열립니다. 표시 되지 않는 경우 **보고서 작성기** 단추에서 **새로 만들기**를 클릭 합니다.  
   
@@ -340,7 +340,7 @@ ms.locfileid: "82086889"
   
 1.  보고서 데이터 창에서 **매개 변수**를 확장합니다.  
   
-2.  제품 제품 범주 \@를 마우스 오른쪽 단추로 클릭 한 다음 **매개 변수 속성**을 클릭 합니다.  
+2.  제품 제품 범주를 마우스 오른쪽 단추로 클릭 한 \@ 다음 **매개 변수 속성**을 클릭 합니다.  
   
     > [!NOTE]  
     >  이름 옆에 있는 \@ 문자는 이것이 매개 변수임을 나타냅니다.  
@@ -394,7 +394,7 @@ ms.locfileid: "82086889"
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
-1.  **시작**을 클릭 하 고 **프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**을 차례로 가리킨 다음 **보고서 작성기**를 클릭 합니다.  
+1.  **시작**을 클릭 하 고 **프로그램**, 보고서 작성기을 차례로 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Report Builder**다음 **보고서 작성기**를 클릭 합니다.  
   
 2.  **시작** 대화 상자에서 **새 보고서** 가 선택되어 있는지 확인한 다음 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
@@ -413,7 +413,7 @@ ms.locfileid: "82086889"
   
 5.  **데이터 원본**에서 데이터 원본이 **Microsoft SQL Server Analysis Services(AdomdClient)** 인지 확인합니다.  
   
-6.  **서버 이름**에 인스턴스가 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 설치 된 서버의 이름을 입력 합니다.  
+6.  **서버 이름**에 인스턴스가 설치 된 서버의 이름을 입력 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다.  
   
 7.  **데이터베이스 이름 선택 또는 입력**에서 Contoso 큐브를 선택합니다.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "82086889"
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
+    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  

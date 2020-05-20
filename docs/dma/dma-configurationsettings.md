@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056538"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886000"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Data Migration Assistant에 대 한 설정 구성
 
@@ -29,11 +29,11 @@ Dma .exe .config 파일에서 구성 값을 설정 하 여 Data Migration Assist
 
 - 데스크톱 응용 프로그램
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\ping.exe .config
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ ping.exe .config
 
 - 명령줄 유틸리티
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\ 
+  % ProgramFiles% \\ Microsoft Data Migration Assistant \\ 
 
 변경 하기 전에 원래 구성 파일의 복사본을 저장 해야 합니다. 변경 후 새 구성 값을 적용 하려면 Data Migration Assistant을 다시 시작 합니다.
 
@@ -82,7 +82,7 @@ Data Migration Assistant v2.0부터이 문제가 발생 하는 경우 parallelDa
 평가 하는 동안 데이터베이스 스키마를 이해 하기 위해 dacpac (데이터 계층 응용 프로그램)를 추출 Data Migration Assistant 합니다. 매우 큰 데이터베이스에 대 한 제한 시간이 초과 되거나 서버가 로드 중이면이 작업에 실패할 수 있습니다. Data Migration v1.0부터 다음 구성 값을 수정 하 여 오류를 방지할 수 있습니다. 
 
 > [!NOTE]
-> 전체 &lt;dacfx&gt; 항목은 기본적으로 주석 처리 됩니다. 주석을 제거한 다음 필요에 따라 값을 수정 합니다.
+> 전체 &lt; dacfx &gt; 항목은 기본적으로 주석 처리 됩니다. 주석을 제거한 다음 필요에 따라 값을 수정 합니다.
 
 - commandTimeout
 
@@ -90,7 +90,7 @@ Data Migration Assistant v2.0부터이 문제가 발생 하는 경우 parallelDa
 
 - databaseLockTimeout
 
-   이 매개 변수는 [잠금\_제한 시간 제한\_기간](../t-sql/statements/set-lock-timeout-transact-sql.md) *(밀리초)* 을 설정 하는 것과 같습니다.(기본값 = 5000)
+   이 매개 변수는 [잠금 제한 시간 \_ 제한 \_ 기간](../t-sql/statements/set-lock-timeout-transact-sql.md) *(밀리초)* 을 설정 하는 것과 같습니다.(기본값 = 5000)
 
 - maxDataReaderDegreeOfParallelism
 

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721163"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000473"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>1단원: 복제용 Windows 계정 만들기
   이 단원에서는 복제 에이전트를 실행할 Windows 계정을 만들며 다음 에이전트에 대해 로컬 서버에 별도의 Windows 계정을 만듭니다.  
   
 |에이전트|위치|계정 이름|  
 |-----------|--------------|------------------|  
-|스냅샷 에이전트|게시자|\<*machine_name*> \ repl_snapshot|  
-|로그 판독기 에이전트|게시자|\<*machine_name*> \ repl_logreader|  
+|스냅샷 에이전트|Publisher|\<*machine_name*> \ repl_snapshot|  
+|로그 판독기 에이전트|Publisher|\<*machine_name*> \ repl_logreader|  
 |배포 에이전트|게시자 및 구독자|\<*machine_name*> \ repl_distribution|  
 |병합 에이전트|게시자 및 구독자|\<*machine_name*> \ repl_merge|  
   

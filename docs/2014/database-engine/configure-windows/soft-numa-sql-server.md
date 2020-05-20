@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809043"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924778"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
 최신 프로세서는 소켓당 여러 개에서 많은 코어를 가지고 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다. 소켓 당 10 개 이상의 코어가 포함 된 프로세서의 경우 소프트웨어 NUMA (소프트 NUMA)를 사용 하 여 하드웨어 NUMA 노드를 분할 하면 일반적으로 확장성 및 성능이 향상 됩니다.   
@@ -40,14 +40,14 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
 
 ## <a name="manual-soft-numa"></a>수동 Soft-NUMA
   
-소프트 NUMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 수동으로 사용 하도록를 구성 하려면 레지스트리를 편집 하 여 노드 구성 선호도 마스크를 추가 해야 합니다. 소프트 NUMA 마스크는 이진, DWORD(16진수 또는 십진수) 또는 QWORD(16진수 또는 십진수) 레지스트리 항목으로 정의할 수 있습니다. 첫 32개 CPU 이상을 구성하려면 QWORD 또는 BINARY 레지스트리 값을 사용합니다. (이 (가) 이전에는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]qword(64 값을 사용할 수 없습니다.) 소프트 NUMA를 구성 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 하려면를 다시 시작 해야 합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]소프트 NUMA를 수동으로 사용 하도록를 구성 하려면 레지스트리를 편집 하 여 노드 구성 선호도 마스크를 추가 해야 합니다. 소프트 NUMA 마스크는 이진, DWORD(16진수 또는 십진수) 또는 QWORD(16진수 또는 십진수) 레지스트리 항목으로 정의할 수 있습니다. 첫 32개 CPU 이상을 구성하려면 QWORD 또는 BINARY 레지스트리 값을 사용합니다. (이 (가) 이전에는 QWORD(64 값을 사용할 수 없습니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .) 소프트 NUMA를 구성 하려면를 다시 시작 해야 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 > [!TIP]  
 >  CPU 번호는 0부터 시작합니다.  
   
  [!INCLUDE[ssNoteRegistry](../../includes/ssnoteregistry-md.md)]  
   
- 아래 예제를 고려해 보세요. 8개의 CPU가 있고 하드웨어 NUMA가 없는 컴퓨터가 있습니다. 3개의 소프트 NUMA 노드가 구성되어 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 A는 CPU를 0부터 3까지 사용하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 번째 인스턴스가 설치되고 CPU 4에서 7까지 사용하도록 구성되었습니다. 이 예는 시각적으로 다음과 같이 나타낼 수 있습니다.  
+ 다음 예제를 살펴보십시오. 8개의 CPU가 있고 하드웨어 NUMA가 없는 컴퓨터가 있습니다. 3개의 소프트 NUMA 노드가 구성되어 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 A는 CPU를 0부터 3까지 사용하도록 구성됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 두 번째 인스턴스가 설치되고 CPU 4에서 7까지 사용하도록 구성되었습니다. 이 예는 시각적으로 다음과 같이 나타낼 수 있습니다.  
   
  `CPUs          0  1  2  3  4  5  6  7`  
   
@@ -57,7 +57,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
  이제 I/O가 많은 인스턴스 A에는 I/O 스레드와 지연 기록기 스레드가 각각 한 개씩 있는 반면, 프로세서를 많이 사용하는 작업을 수행하는 인스턴스 B에는 I/O 스레드와 지연 기록기 스레드가 각각 하나뿐입니다. 두 인스턴스에 서로 다른 양의 메모리를 할당할 수 있지만 하드웨어 NUMA와 달리 두 인스턴스는 모두 동일한 운영 체제 메모리 블록에서 메모리를 받으며 메모리에서 프로세서로의 선호도가 없습니다.  
   
- 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQL OS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방식: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 작업자 및 메모리 노드](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)를 참조하세요.  
+ 지연 기록기 스레드는 물리적 NUMA 메모리 노드의 SQL OS 보기와 연결되어 있습니다. 따라서, 물리적 NUMA 노드로 표시되는 하드웨어는 생성되는 지연 기록기 스레드의 수와 같습니다. 자세한 내용은 [작동 방식: 소프트 NUMA, I/O 완료 스레드, 지연 기록기 작업자 및 메모리 노드](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-soft-numa-io-completion-thread-lazy-writer-workers-and-memory-nodes)를 참조하세요.  
   
 > [!NOTE]  
 >  **Soft-NUMA** 레지스트리 키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드할 때 복사되지 않습니다.  
@@ -84,7 +84,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      다음 예제에서는 DL580 G9 서버가 있고 4개의 소켓에서 소켓당 18개의 코어가 있으며 각 소켓은 자체 K 그룹에 있다고 가정합니다. 만들 수 있는 소프트 NUMA 구성은 다음과 유사할 것입니다. (노드당 6개의 코어, 그룹당 3개의 노드, 4개의 그룹).  
   
-    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|유형|값 이름|값 데이터|  
+    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|형식|값 이름|값 데이터|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -113,7 +113,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      추가 예:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|유형|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|형식|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -125,7 +125,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     > [!TIP]  
     >  CPU 60 - 63을 지정하려면 QWORD 값 F000000000000000 또는 BINARY 값 1111000000000000000000000000000000000000000000000000000000000000을 사용합니다.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|유형|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|형식|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -134,7 +134,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008 R2|유형|값 이름|값 데이터|  
+    |SQL Server 2008 R2|형식|값 이름|값 데이터|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -143,13 +143,13 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008|유형|값 이름|값 데이터|  
+    |SQL Server 2008|형식|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|유형|값 이름|값 데이터|  
+    |SQL Server 2005|형식|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  

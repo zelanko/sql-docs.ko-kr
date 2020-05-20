@@ -10,12 +10,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656580"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922159"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>SQL Server 2005에서 업그레이드하나요?
   SQL Server 2005 지원 연장이 종료되므로 새 버전의 SQL Server와 Azure SQL 데이터베이스로 업그레이드할 이유가 생겼습니다. 업그레이드를 통해 보안 및 규정 준수를 유지할 수 있고, 획기적인 성능을 달성하고 데이터 플랫폼 인프라를 최적화할 수 있습니다.  
@@ -57,11 +57,11 @@ ms.locfileid: "75656580"
   
 -   SQL Server 팀에서 올린 다음 일련의 블로그 게시물을 통해 업그레이드를 계획 하는 방법에 대해 알아봅니다.  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 1/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 1/3단계](https://cloudblogs.microsoft.com/sqlserver/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3/)  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 2/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 2/3단계](https://cloudblogs.microsoft.com/sqlserver/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3/)  
   
-    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 3/3단계](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [SQL Server 2005에서 효율적인 업그레이드 계획: 3/3단계](https://cloudblogs.microsoft.com/sqlserver/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3/)  
   
 -   [SQL Server 2014를 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항을](hardware-and-software-requirements-for-installing-sql-server.md)비롯 하 여 [SQL Server 설치 계획](../../../2014/sql-server/install/planning-a-sql-server-installation.md)에서 요구 사항 및 고려 사항을 검토 합니다.  
   

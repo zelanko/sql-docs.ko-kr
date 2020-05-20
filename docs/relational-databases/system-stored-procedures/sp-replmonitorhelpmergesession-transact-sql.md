@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771245"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834342"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`기록 에이전트 세션 정보를 반환할 시간 범위 (시간)입니다. *시간은* **int**이며 다음 범위 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |< **0**|이전에 실행된 에이전트 세션에 대한 정보를 최대 100개까지 반환합니다.|  
 |**0** (기본값)|이전에 실행된 모든 에이전트 세션에 대한 정보를 반환합니다.|  
@@ -54,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type`세션 종료 결과를 기준으로 결과 집합을 필터링 합니다. *session_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|다시 시도 또는 성공한 에이전트 세션입니다.|  
 |**0**|실패한 에이전트 세션입니다.|  
@@ -70,10 +70,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|에이전트 작업 세션의 ID입니다.|  
-|**상태**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
+|**Status**|**int**|에이전트 실행 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도<br /><br /> **6** = 실패|  
 |**StartTime**|**datetime**|에이전트 작업 세션이 시작된 시간입니다.|  
 |**EndTime**|**datetime**|에이전트 작업 세션이 완료된 시간입니다.|  
-|**Duration**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
+|**기간**|**int**|해당 작업 세션에 소요된 총 시간(초)입니다.|  
 |**UploadedCommands**|**int**|에이전트 세션 중에 업로드된 명령 수입니다.|  
 |**DownloadedCommands**|**int**|에이전트 세션 중에 다운로드된 명령 수입니다.|  
 |**ErrorMessages**|**int**|에이전트 세션 중에 생성된 오류 메시지 수입니다.|  
