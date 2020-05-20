@@ -244,9 +244,9 @@ int main(int argc, char **argv)
 ```
 
 ## <a name="supported-version"></a><a name="bkmk-version"></a>지원되는 버전
-Microsoft ODBC Driver 17.2는 `SQLGetDescField`가 `FieldIdentifier`(1237)으로 설정된 경우 `SQL_CA_SS_DATA_CLASSIFICATION`를 통해 데이터 분류 정보 검색을 허용합니다. 
+Microsoft ODBC Driver 17.2는 `FieldIdentifier`가 `SQL_CA_SS_DATA_CLASSIFICATION`(1237)으로 설정된 경우 `SQLGetDescField`를 통해 데이터 분류 정보 검색을 허용합니다. 
 
-Microsoft ODBC Driver 17.4.1.1부터는 `SQLGetDescField`(1238) 필드 식별자를 사용하여 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION`를 통해 서버에서 지원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서는 지원되는 데이터 분류 버전이 "2"로 설정됩니다.
+Microsoft ODBC Driver 17.4.1.1부터는 `SQL_CA_SS_DATA_CLASSIFICATION_VERSION`(1238) 필드 식별자를 사용하여 `SQLGetDescField`를 통해 서버에서 지원하는 데이터 분류 버전을 검색할 수 있습니다. 17.4.1.1에서는 지원되는 데이터 분류 버전이 "2"로 설정됩니다.
 
  
 

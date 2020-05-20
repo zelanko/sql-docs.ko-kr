@@ -75,7 +75,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  예를 들어 **ServerCollection** 클래스에 대한 서버, **DatabaseCollection** 클래스에 대한 데이터베이스를 지정합니다.  
   
  \@*PropertyName*  
- *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 \@Database**클래스 속성인**IsAnsiNull**에** IsAnsiNull을 지정합니다.  
+ *Object*에서 지정된 개체와 연결되는 클래스 속성 중 하나의 이름을 지정합니다. 속성 이름은 \@ 문자로 시작해야 합니다. 예를 들어 **Database** 클래스 속성인 **IsAnsiNull**에 \@IsAnsiNull을 지정합니다.  
   
  \@*BooleanPropertyName*=true()  
  지정된 부울 속성이 TRUE로 설정된 개체를 모두 열거합니다.  

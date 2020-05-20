@@ -35,7 +35,7 @@ ms.locfileid: "68045762"
  이 문서에서는 로컬 컴퓨터에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거하는 과정에 대해 설명합니다.  
   
  [Data Quality 서버 개체 제거](../../sql-server/install/remove-data-quality-server-objects.md)  
- 이 문서에서는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 수동으로 제거하거나 DQS([!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)])의 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] 구성 요소만 제거하는 방법에 대해 설명합니다.  
+ 이 문서에서는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]를 제거한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 수동으로 제거하거나 DQS([!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)])의 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소만 제거하는 방법에 대해 설명합니다.  
   
 ## <a name="related-sections"></a>관련 섹션  
   
