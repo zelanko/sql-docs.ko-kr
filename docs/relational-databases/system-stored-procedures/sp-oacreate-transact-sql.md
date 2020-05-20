@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d851461ae4cd07f3dd89e2cff4326d03e05a5d66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107929"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815299"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  지정 하지 않으면 기본값은 **5**입니다. 이 값은 **CoCreateInstance**호출의 *dwclscontext* 매개 변수로 전달 됩니다.  
   
- 컨텍스트 값이 **1** 또는 **5** 인 컨텍스트 값을 사용 하거나 컨텍스트 값을 지정 하지 않아 in-process OLE 서버가 허용 되는 경우에는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]소유 하는 메모리 및 기타 리소스에 액세스할 수 있습니다. in-process OLE 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 또는 리소스를 손상시켜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 위반과 같은 예기치 못한 결과를 초래할 수도 있습니다.  
+ 컨텍스트 값이 **1** 또는 **5** 인 컨텍스트 값을 사용 하거나 컨텍스트 값을 지정 하지 않아 in-process OLE 서버가 허용 되는 경우에는에서 소유 하는 메모리 및 기타 리소스에 액세스할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . in-process OLE 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 또는 리소스를 손상시켜 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 위반과 같은 예기치 못한 결과를 초래할 수도 있습니다.  
   
- 컨텍스트 값을 **4**로 지정 하면 로컬 OLE 서버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 액세스할 수 없으며 메모리 또는 리소스를 손상 시킬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다.  
+ 컨텍스트 값을 **4**로 지정 하면 로컬 OLE 서버는 리소스에 액세스할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없으며 메모리 또는 리소스를 손상 시킬 수 없습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  이 저장 프로시저의 매개 변수는 이름이 아니라 위치로 지정됩니다.  
@@ -82,7 +82,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  만들어진 OLE 개체는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝 부분에서 자동으로 삭제됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  

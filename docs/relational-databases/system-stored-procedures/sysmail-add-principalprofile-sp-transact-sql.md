@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d752015dab48058af18cb981a009691f407da171
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814439"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,21 +55,21 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- 프로필을 공용으로 설정 하려면 ** \@principal_id** **0** 또는 **public** ** \@principal_name** 를 지정 합니다. 공용 프로필은 **msdb** 데이터베이스의 모든 사용자가 사용할 수 있지만 **sp_send_dbmail**를 실행 하려면 사용자가 **DatabaseMailUserRole** 의 멤버 여야 합니다.  
+ 프로필을 공용으로 설정 하려면 ** \@ principal_id** **0** 또는 **public** ** \@ principal_name** 를 지정 합니다. 공용 프로필은 **msdb** 데이터베이스의 모든 사용자가 사용할 수 있지만 **sp_send_dbmail**를 실행 하려면 사용자가 **DatabaseMailUserRole** 의 멤버 여야 합니다.  
   
- 데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. ** \@Is_default** '**1**'이 고 사용자가 이미 하나 이상의 프로필에 연결 된 경우 지정 된 프로필이 사용자의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 사용자와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
+ 데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. ** \@ Is_default** '**1**'이 고 사용자가 이미 하나 이상의 프로필에 연결 된 경우 지정 된 프로필이 사용자의 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 사용자와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  
   
- ** \@Is_default** 가 '**0**'이 고 다른 연결이 없는 경우 저장 프로시저에서 오류를 반환 합니다.  
+ ** \@ Is_default** 가 '**0**'이 고 다른 연결이 없는 경우 저장 프로시저에서 오류를 반환 합니다.  
   
  **Sysmail_add_principalprofile_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  
  **1. 연결 생성 및 기본 프로필 설정**  
   
- 다음 예에서는 라는 `AdventureWorks Administrator Profile` 프로필과 **msdb** 데이터베이스 사용자 `ApplicationUser`간의 연결을 만듭니다. 이 프로필은 해당 사용자의 기본 프로필입니다.  
+ 다음 예에서는 라는 프로필과 `AdventureWorks Administrator Profile` **msdb** 데이터베이스 사용자 간의 연결을 만듭니다 `ApplicationUser` . 이 프로필은 해당 사용자의 기본 프로필입니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **2. 프로필을 기본 공개 프로필로 사용**  
   
- 다음 예에서는 프로필 `AdventureWorks Public Profile` 을 **msdb** 데이터베이스의 사용자에 대 한 기본 공개 프로필로 만듭니다.  
+ 다음 예에서는 프로필을 `AdventureWorks Public Profile` **msdb** 데이터베이스의 사용자에 대 한 기본 공개 프로필로 만듭니다.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

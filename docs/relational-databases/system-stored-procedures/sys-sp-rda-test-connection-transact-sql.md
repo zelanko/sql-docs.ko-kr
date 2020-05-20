@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305156"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814563"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address= N '*azure_server_fully_qualified_address*'  
  Azure 서버의 정규화 된 주소입니다.  
   
--   ** \@Database_name**에 대 한 값을 제공 하지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되어 있지 않은 경우에는 ** \@server_address**에 대 한 값을 제공 해야 합니다.  
+-   ** \@ Database_name**에 대 한 값을 제공 하지만 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 되어 있지 않은 경우에는 ** \@ server_address**에 대 한 값을 제공 해야 합니다.  
   
--   ** \@Database_name**에 대 한 값을 제공 하 고 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 된 경우에는 ** \@server_address**에 대 한 값을 제공할 필요가 없습니다. ** \@Server_address**에 대 한 값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
+-   ** \@ Database_name**에 대 한 값을 제공 하 고 지정 된 데이터베이스가 스트레치를 사용 하도록 설정 된 경우에는 ** \@ server_address**에 대 한 값을 제공할 필요가 없습니다. ** \@ Server_address**에 대 한 값을 제공 하는 경우 저장 프로시저는이를 무시 하 고 스트레치 사용 데이터베이스에 이미 연결 되어 있는 기존 Azure 서버를 사용 합니다.  
   
  @azure_username= N '*azure_username*  
  원격 Azure 서버에 대 한 사용자 이름입니다.  
@@ -75,7 +75,7 @@ EXECUTE sys.sp_rda_test_connection
 |error_number|int|오류 번호입니다. 오류가 없으면이 필드는 NULL입니다.|  
 |error_message|nvarchar(1024)|오류 메시지입니다. 오류가 없으면이 필드는 NULL입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb5e9a1ab72140a08423fa50c10eeb1f2d06ad79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac6e69db443bd23c3e9b1119b21d8fd98ebe39c4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909088"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815753"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Storage_type**|**nvarchar (** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 이름입니다.|  
     |**길이**|**smallint**|데이터 형식의 물리적 길이(바이트)입니다.|  
     |**Prec**|**int**|전체 자릿수(총 자릿수)입니다.|  
-    |**규모**|**int**|소수점 이하 자릿수입니다.|  
+    |**크기 조정**|**int**|소수점 이하 자릿수입니다.|  
     |**Null 허용**|**varchar (** 35 **)**|NULL 값이 허용 되는지 여부를 나타냅니다 (예 또는 아니요).|  
     |**Default_name**|**nvarchar (** 128 **)**|해당 형식에 바인딩된 기본값의 이름입니다.<br /><br /> NULL = 기본값이 바인딩되지 않습니다.|  
     |**Rule_name**|**nvarchar (** 128 **)**|해당 형식에 바인딩된 규칙의 이름입니다.<br /><br /> NULL = 기본값이 바인딩되지 않습니다.|  
@@ -94,7 +94,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**더한**|**varchar (** 35 **)**|열의 값이 계산 되는지 여부를 나타냅니다 (예 또는 아니요).|  
         |**길이**|**int**|열 길이(바이트)입니다.<br /><br /> 참고: 열 데이터 형식이 많은 값 형식 (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** 또는 **xml**) 이면 값이-1로 표시 됩니다.|  
         |**Prec**|**char (** 5 **)**|열의 전체 자릿수입니다.|  
-        |**규모**|**char (** 5 **)**|열의 소수 자릿수입니다.|  
+        |**크기 조정**|**char (** 5 **)**|열의 소수 자릿수입니다.|  
         |**Null 허용**|**varchar (** 35 **)**|열에 NULL 값을 사용할 수 있는지 여부를 나타냅니다 (예 또는 아니요).|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|후행 공백을 자를지 여부를 Yes 또는 No로 표시합니다.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
@@ -105,7 +105,7 @@ sp_help [ [ @objname = ] 'name' ]
         |열 이름|데이터 형식|Description|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar (** 128 **)**|데이터 형식이 ID로 선언되는 열의 이름입니다.|  
-        |**시드는**|**numeric**|ID 열의 시작 값입니다.|  
+        |**Seed**|**numeric**|ID 열의 시작 값입니다.|  
         |**씩**|**numeric**|해당 열의 값에 대해 사용하는 증가값입니다.|  
         |**복제용 아님**|**int**|**Sqlrepl**과 같은 복제 로그인이 테이블에 데이터를 삽입 하는 경우 IDENTITY 속성이 적용 되지 않습니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
   
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Type**|**nvarchar (** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
         |**길이**|**smallint**|물리적 스토리지의 최대 길이(바이트)입니다.|  
         |**Prec**|**int**|전체 자릿수 또는 총 자릿수입니다.|  
-        |**규모**|**int**|소수점 오른쪽 자릿수입니다.|  
+        |**크기 조정**|**int**|소수점 오른쪽 자릿수입니다.|  
         |**Param_order**|**smallint**|매개 변수의 순서입니다.|  
   
 ## <a name="remarks"></a>설명  

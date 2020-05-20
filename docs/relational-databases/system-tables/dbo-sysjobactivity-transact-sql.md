@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sysjobactivity system table
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b6c15d41d2eae5498c5e044cac2c222ee96e6be0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902218"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814136"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 활동 및 상태를 기록합니다.  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|**Msdb** 데이터베이스의 **syssessions** 테이블에 저장 된 세션의 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  

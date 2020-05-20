@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sequence number object, sys. sequences catalog view
 - sys.sequences catalog view
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060551"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815841"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "68060551"
 |**is_exhausted**|**비트 NOT NULL**|0은 시퀀스에서 값을 더 생성할 수 있다는 의미이며, 1은 시퀀스 개체가 MAXVALUE 매개 변수에 도달했고 시퀀스가 CYCLE로 설정되지 않았다는 의미입니다. ALTER SEQUENCE를 사용하여 시퀀스가 다시 시작될 때까지 NEXT VALUE FOR 함수가 오류를 반환합니다.|  
 |**last_used_value**|**NULL sql_variant**|[Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) 함수에 의해 생성 된 마지막 값을 반환 합니다. SQL Server 2017 이상에 적용 됩니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 사용자가 소유하고 있거나 일부 사용 권한이 부여된 보안 개체의 경우에만 카탈로그 뷰의 메타데이터를 볼 수 있도록 제한됩니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

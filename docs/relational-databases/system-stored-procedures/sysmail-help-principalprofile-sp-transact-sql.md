@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c1ffcec53c40feef7d72baefd39208f3d289f1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044525"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814144"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |**principal_id**|**int**|데이터베이스 사용자의 ID입니다.|  
 |**principal_name**|**sysname**|데이터베이스 사용자의 이름입니다.|  
 |**profile_id**|**int**|데이터베이스 메일 프로필의 ID입니다.|  
@@ -65,11 +65,11 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**is_default**|**bit**|프로필이 해당 사용자의 기본 프로필인지 여부를 나타내는 플래그입니다.|  
   
 ## <a name="remarks"></a>설명  
- **Sysmail_help_principalprofile_sp** 매개 변수 없이 호출 되는 경우 반환 되는 결과 집합에는 인스턴스의 모든 연결이 나열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]됩니다. 그렇지 않으면 결과 집합은 제공된 매개 변수와 일치하는 연결에 대한 정보를 포함합니다. 예를 들어 프로필 이름이 제공된 경우 프로시저가 해당 프로필에 대한 모든 연결을 나열합니다.  
+ **Sysmail_help_principalprofile_sp** 매개 변수 없이 호출 되는 경우 반환 되는 결과 집합에는 인스턴스의 모든 연결이 나열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 됩니다. 그렇지 않으면 결과 집합은 제공된 매개 변수와 일치하는 연결에 대한 정보를 포함합니다. 예를 들어 프로필 이름이 제공된 경우 프로시저가 해당 프로필에 대한 모든 연결을 나열합니다.  
   
  **sysmail_help_principalprofile_sp** **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

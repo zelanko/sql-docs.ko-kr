@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770987"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815842"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'`액세스할 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @return_granted = ] 'return_granted'`로그인 ID입니다. *return_granted* 은 **bit**이며 기본값은 1입니다. **0** 을 지정 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용 하는 경우 게시자에는 표시 되지만 배포자에는 표시 되지 않는 사용 가능한 로그인이 반환 됩니다. **0** 을 지정 하 고 Windows 인증을 사용 하는 경우 게시자 또는 배포자에서 특별히 액세스가 거부 되지 않은 로그인이 반환 됩니다.  
+`[ @return_granted = ] 'return_granted'`로그인 ID입니다. *return_granted* 은 **bit**이며 기본값은 1입니다. **0** 을 지정 하 고 인증을 사용 하는 경우 게시자에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 표시 되지만 배포자에는 표시 되지 않는 사용 가능한 로그인이 반환 됩니다. **0** 을 지정 하 고 Windows 인증을 사용 하는 경우 게시자 또는 배포자에서 특별히 액세스가 거부 되지 않은 로그인이 반환 됩니다.  
   
 `[ @login = ] 'login'`표준 보안 로그인 ID입니다. *login* 은 **sysname**이며 기본값은 **%** 입니다.  
   
@@ -66,9 +66,9 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_help_publication_access** 은 모든 유형의 복제에 사용 됩니다.  
   
- 결과 집합에서 **Isntname** 및 **Isntgroup** 가 모두 **0**인 경우 로그인이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이라고 가정 합니다.  
+ 결과 집합에서 **Isntname** 및 **Isntgroup** 가 모두 **0**인 경우 로그인이 로그인 이라고 가정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_help_publication_access**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

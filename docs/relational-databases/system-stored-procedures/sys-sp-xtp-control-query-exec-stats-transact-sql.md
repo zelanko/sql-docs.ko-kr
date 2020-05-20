@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_query_exec_stats
 ms.assetid: 4838125d-ad1e-479e-b7d2-42655e8f4f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd8ee38dc4ac1a8fd3a729d94744d3fd98f78875
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d5967417698bc1970f02658fc28e8659201089
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017854"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814494"
 ---
 # <a name="syssp_xtp_control_query_exec_stats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @new_collection_value= *값*  
  프로시저 수준 통계 컬렉션이 설정(1)되었는지 아니면 해제(0)되었는지를 결정합니다.  
   
- @new_collection_value는가 시작 될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 0으로 설정 됩니다.  
+ @new_collection_value는가 시작 될 때 0으로 설정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  @database_id= = *database_id*, @xtp_object_id = *procedure_id*  
  고유하게 컴파일된 저장 프로시저에 대한 데이터베이스 ID 및 개체 ID입니다. 인스턴스에 대해 statistics 컬렉션을 사용 하는 경우 ([sp_xtp_control_proc_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)) 고유 하 게 컴파일된 저장 프로시저에 대 한 통계가 수집 됩니다. 인스턴스에 대해 통계 컬렉션을 해제하는 경우 개별적으로 고유하게 컴파일된 저장 프로시저에 대한 통계 컬렉션은 해제되지 않습니다.  
@@ -59,7 +59,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
 ## <a name="return-code"></a>반환 코드  
  성공의 경우 0이고, 실패의 경우 0이 아닙니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  고정 sysadmin 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="code-sample"></a>코드 예제  

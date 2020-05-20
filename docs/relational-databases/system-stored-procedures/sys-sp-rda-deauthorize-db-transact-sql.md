@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6aeb27d4fb452a4ed5b7f45086f601eacb4f0339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: eec07109c8f3697eb4738f30d3c201c6addc15a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905108"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814897"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_rda_deauthorize_db
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

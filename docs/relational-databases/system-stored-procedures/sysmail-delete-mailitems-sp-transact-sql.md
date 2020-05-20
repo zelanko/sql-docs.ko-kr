@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee0298a714394bdf90009657c3d5b7a4daafebcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70846643"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814368"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- 데이터베이스 메일 메시지 및 첨부 파일은 **msdb** 데이터베이스에 저장 됩니다. **Msdb** 가 예상 보다 크게 증가 하는 것을 방지 하 고 조직 문서 보존 프로그램을 따르도록 메시지를 주기적으로 삭제 해야 합니다. **Sysmail_delete_mailitems_sp** 저장 프로시저를 사용 하 여 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제할 수 있습니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 **sent_status** 인수로 지정 된 특정 유형의 전자 메일만 삭제할 수 있습니다. ** \@Sent_before** 또는 ** \@sent_status**에 대 한 인수를 제공 해야 합니다. 모든 메시지를 삭제 하려면 ** \@sent_before = getdate ()** 를 사용 합니다.  
+ 데이터베이스 메일 메시지 및 첨부 파일은 **msdb** 데이터베이스에 저장 됩니다. **Msdb** 가 예상 보다 크게 증가 하는 것을 방지 하 고 조직 문서 보존 프로그램을 따르도록 메시지를 주기적으로 삭제 해야 합니다. **Sysmail_delete_mailitems_sp** 저장 프로시저를 사용 하 여 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제할 수 있습니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 **sent_status** 인수로 지정 된 특정 유형의 전자 메일만 삭제할 수 있습니다. ** \@ Sent_before** 또는 ** \@ sent_status**에 대 한 인수를 제공 해야 합니다. 모든 메시지를 삭제 하려면 ** \@ sent_before = getdate ()** 를 사용 합니다.  
   
  전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도 **sysmail_event_log**의 해당 항목은 삭제 되지 않습니다. [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 를 사용 하 여 로그에서 항목을 삭제 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole**의 멤버에 대해이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 고정 서버 역할의 멤버는이 프로시저를 실행 하 여 모든 사용자가 보낸 전자 메일을 삭제할 수 있습니다. **DatabaseMailUserRole** 의 멤버는 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  

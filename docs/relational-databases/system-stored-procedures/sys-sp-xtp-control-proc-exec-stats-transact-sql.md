@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 940caad59adf191e0ed1fe550707788de820c6b7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909222"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814562"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  @new_collection_value= *값*  
  프로시저 수준 통계 컬렉션이 설정(1)되었는지 아니면 해제(0)되었는지를 결정합니다.  
   
- @new_collection_value는 또는 데이터베이스가 시작 될 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때 0으로 설정 됩니다.  
+ @new_collection_value는 또는 데이터베이스가 시작 될 때 0으로 설정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  @old_collection_value= *값*  
  현재 상태를 반환합니다.  
@@ -49,11 +49,11 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
 ## <a name="return-code"></a>반환 코드  
  성공의 경우 0이고, 실패의 경우 0이 아닙니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  고정 sysadmin 역할의 멤버 자격이 필요합니다.  
   
-## <a name="code-samples"></a>코드 예제  
- 의 값 @new_collection_value 을 설정 하 고 쿼리하려면@new_collection_value:  
+## <a name="code-samples"></a>코드 샘플  
+ 의 값을 설정 하 @new_collection_value 고 쿼리하려면@new_collection_value:  
   
 ```  
 exec [sys].[sp_xtp_control_proc_exec_stats] @new_collection_value = 1  

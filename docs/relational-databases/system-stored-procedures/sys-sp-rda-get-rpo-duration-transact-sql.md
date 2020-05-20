@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 715ceb531f2334f4cf9580c630d922f45faae74e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1e89e4901cf8e0bb5674038bfd8fe74bc637511
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252064"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814797"
 ---
 # <a name="syssp_rda_get_rpo_duration-transact-sql"></a>sys. sp_rda_get_rpo_duration (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_rda_get_rpo_duration @durationinhours output
  *\@durationinhours*    
   현재 스트레치 사용 데이터베이스에 대해 SQL Server 유지 하는 마이그레이션된 데이터의 시간 (null이 아닌 정수 값) 수입니다.    
     
-## <a name="permissions"></a>사용 권한    
+## <a name="permissions"></a>권한    
  Db_owner 권한이 필요 합니다.    
     
 ## <a name="remarks"></a>설명    

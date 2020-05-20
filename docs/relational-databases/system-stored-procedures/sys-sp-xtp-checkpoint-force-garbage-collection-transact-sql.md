@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 45eb999d6101902ebf9d079235f56d28e343f8e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814493"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>결과 집합  
  반환된 행에는 다음 정보가 포함되어 있습니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |num_collected_items|Filestream 가비지 수집으로 이동한 파일 수를 나타냅니다. 이러한 파일의 LSN(로그 시퀀스 번호)은 로그 잘림 지점의 LSN보다 작습니다.|  
 |num_marked_for_collection_items|LSN이 로그 끝 LSN의 로그 blockID로 업데이트된 데이터/델타 파일 수를 나타냅니다.|  
 |last_collected_xact_seqno|파일이 Filestream 가비지 수집으로 이동한 마지막 해당 LSN을 반환합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스 소유자 권한이 필요합니다.  
   
-## <a name="sample"></a>예제  
+## <a name="sample"></a>샘플  
   
 ```  
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  

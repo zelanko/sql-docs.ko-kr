@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771088"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815913"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`열이 반환 된 아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자가 요청한 아티클을 게시할 때 게시자를 지정 하면 안 됩니다. *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+>  게시자가 요청한 아티클을 게시할 때 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (게시 되지 않은 열) 또는 **1** (게시 된 열)  
@@ -56,7 +56,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**열 id**|**int**|열의 식별자입니다.|  
-|**열의**|**sysname**|열의 이름입니다.|  
+|**column**|**sysname**|열의 이름입니다.|  
 |**published**|**bit**|열이 게시되는지 여부입니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**게시자 유형**|**sysname**|게시자에 있는 열의 데이터 형식입니다.|  
 |**구독자 유형**|**sysname**|구독자에 있는 열의 데이터 형식입니다.|  
@@ -66,7 +66,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
  **sp_helparticlecolumns** 는 수직 분할을 확인 하는 데 유용 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버, **db_owner** 고정 데이터베이스 역할 또는 현재 게시에 대 한 게시 액세스 목록의 멤버만 **sp_helparticlecolumns**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
