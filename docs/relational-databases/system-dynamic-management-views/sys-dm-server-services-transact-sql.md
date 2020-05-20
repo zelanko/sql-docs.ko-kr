@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_services dynamic management view
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ed3638e3c8811235778ab2362700c9e08bf08ca5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095378"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811439"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 인스턴스의 SQL Server, 전체 텍스트 SQL Server 실행 패드 서비스 (SQL Server 2017 +) 및 SQL Server 에이전트 서비스에 대 한 정보를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 이 동적 관리 뷰를 사용하여 이러한 서비스에 대한 상태 정보를 보고할 수 있습니다.  
+  현재 인스턴스의 SQL Server, 전체 텍스트 SQL Server 실행 패드 서비스 (SQL Server 2017 +) 및 SQL Server 에이전트 서비스에 대 한 정보를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 동적 관리 뷰를 사용하여 이러한 서비스에 대한 상태 정보를 보고할 수 있습니다.  
   
  
 |열 이름|데이터 형식|Description|  
@@ -44,7 +44,7 @@ ms.locfileid: "74095378"
 |filename|**nvarchar(256)**|서비스 실행 파일의 경로 및 파일 이름입니다. null일 수 없습니다.|  
 |is_clustered|**nvarchar (1)**|서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다. null일 수 없습니다.|  
 |cluster_nodename|**nvarchar(256)**|서비스가 설치된 클러스터 노드의 이름입니다. Null을 허용합니다.|
-|instant_file_initialization_enabled|**nvarchar (1)**|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스에 대해 인스턴트 파일 초기화를 사용할지 여부를 지정 합니다.<br /><br />Y = 인스턴트 파일 초기화가 서비스에 사용 됩니다.<br /><br />N = 서비스에 대해 인스턴트 파일 초기화를 사용할 수 없습니다.<br /><br /> Null을 허용합니다.<br /><br /> **참고:** SQL Server 에이전트와 같은 다른 서비스에는 적용 되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상 버전부터)|  
+|instant_file_initialization_enabled|**nvarchar (1)**|서비스에 대해 인스턴트 파일 초기화를 사용할지 여부를 지정 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .<br /><br />Y = 인스턴트 파일 초기화가 서비스에 사용 됩니다.<br /><br />N = 서비스에 대해 인스턴트 파일 초기화를 사용할 수 없습니다.<br /><br /> Null을 허용합니다.<br /><br /> **참고:** SQL Server 에이전트와 같은 다른 서비스에는 적용 되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (부터 [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상).|  
 
 ## <a name="security"></a>보안  
   

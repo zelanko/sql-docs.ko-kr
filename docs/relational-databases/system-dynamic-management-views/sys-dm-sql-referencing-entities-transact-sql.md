@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982348"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811427"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982348"
   
 -   서버 수준 DDL 트리거  
   
-**적용**대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -102,7 +102,7 @@ sys.dm_sql_referencing_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|보기|예|예|  
+|View|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
 |CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
@@ -118,11 +118,11 @@ sys.dm_sql_referencing_entities (
 |XML 스키마 컬렉션|아니요|예|  
 |파티션 함수|아니요|예|  
   
- \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
   
 ### <a name="sskatmai---sssql11"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. 지정된 유형을 참조하는 엔터티 반환  
- 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag` 형식은 `HumanResources.Employee` 테이블에 있는 여러 열의 정의에도 사용 됩니다. 그러나이 형식은 테이블의 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에 있지 않기 때문에 `HumanResources.Employee` 테이블에 대 한 행이 반환 되지 않습니다.  
+ 다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. `dbo.Flag`형식은 테이블의 여러 열에 대 한 정의에도 사용 되지만 테이블에 `HumanResources.Employee` 있는 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건의 정의에는 없습니다. 테이블에 대해서는 행이 반환 되지 않습니다 `HumanResources.Employee` .  
   
 ```sql  
 USE AdventureWorks2012;  

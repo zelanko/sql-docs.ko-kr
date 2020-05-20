@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7793291a565d50554180de10ab9df39a491f423a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67898414"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809356"
 ---
 # <a name="sp_updateextendedproperty-transact-sql"></a>sp_updateextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,31 +52,31 @@ sp_updateextendedproperty
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @name= ] {'*property_name*'}  
+ [ @name =] {'*property_name*'}  
  업데이트할 속성의 이름입니다. *property_name* 는 **sysname**이며 NULL 일 수 없습니다.  
   
- [ @value= ] {'*value*'}  
+ [ @value =] {'*value*'}  
  속성에 연결된 값입니다. *값* 은 **sql_variant**이며 기본값은 NULL입니다. *값* 의 크기는 7500 바이트를 초과할 수 없습니다.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  사용자 또는 사용자 정의 형식입니다. *level0_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, PLAN GUIDE, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE 및 NULL입니다.  
   
 > [!IMPORTANT]  
 >  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level0_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  수준 1 개체의 유형입니다. *level1_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION 및 NULL입니다.  
   
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 는 **sysname** 이며 기본값은 NULL입니다.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  수준 2 개체의 유형입니다. *level2_object_type* 는 **varchar (128)** 이며 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -87,7 +87,7 @@ sp_updateextendedproperty
   
  유효한 *property_name* 및 *값*이 지정 된 경우 모든 개체 형식 및 이름이 null 이면 업데이트 된 속성이 현재 데이터베이스에 속합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Db_owner 및 db_ddladmin 고정 데이터베이스 역할의 멤버는 개체의 확장 속성을 업데이트할 수 있습니다. 단, 데이터베이스 자체 나 사용자 또는 역할에는 속성을 추가할 수 없습니다 db_ddladmin.  
   
  사용자는 자신이 소유하거나 ALTER 또는 CONTROL 권한이 있는 개체의 확장 속성을 업데이트할 수 있습니다.  

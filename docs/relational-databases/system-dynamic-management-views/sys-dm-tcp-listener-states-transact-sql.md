@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - sys.dm_tcp_listener_states dynamic management view
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bc0867408dfd7b950029b1a66163dcccbddb4f21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090655"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811157"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68090655"
 |**포트인**|**int**|수신기가 수신 중인 포트 번호입니다. Null을 허용하지 않습니다.|  
 |**type**|**tinyint**|수신기 유형이며 다음 중 하나입니다.<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = Service Broker<br /><br /> 2 = 데이터베이스 미러링<br /><br /> Null을 허용하지 않습니다.|  
 |**type_desc**|**nvarchar (20)**|**형식**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Null을 허용하지 않습니다.|  
-|**state**|**tinyint**|가용성 그룹 수신기의 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. 수신기가 요청을 수신 및 처리 중입니다.<br /><br /> 2 = 다시 시작 보류 중. 수신기가 오프라인 상태이며 다시 시작을 보류 중입니다.<br /><br /> 가용성 그룹 수신기가 서버 인스턴스와 동일한 포트를 수신 중인 경우 두 수신기의 상태는 항상 동일합니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> 참고:이 열의 값은 TSD_listener 개체에서 제공 됩니다. TDS_listener가 오프라인 상태이면 상태에 대해 쿼리할 수 없으므로 이 열은 오프라인 상태를 지원하지 않습니다.|  
+|**상태**|**tinyint**|가용성 그룹 수신기의 상태이며 다음 중 하나입니다.<br /><br /> 1 = 온라인. 수신기가 요청을 수신 및 처리 중입니다.<br /><br /> 2 = 다시 시작 보류 중. 수신기가 오프라인 상태이며 다시 시작을 보류 중입니다.<br /><br /> 가용성 그룹 수신기가 서버 인스턴스와 동일한 포트를 수신 중인 경우 두 수신기의 상태는 항상 동일합니다.<br /><br /> Null을 허용하지 않습니다.<br /><br /> 참고:이 열의 값은 TSD_listener 개체에서 제공 됩니다. TDS_listener가 오프라인 상태이면 상태에 대해 쿼리할 수 없으므로 이 열은 오프라인 상태를 지원하지 않습니다.|  
 |**state_desc**|**nvarchar (16)**|**상태**에 대 한 설명 이며 다음 중 하나입니다.<br /><br /> ONLINE<br /><br /> PENDING_RESTART<br /><br /> Null을 허용하지 않습니다.|  
 |**start_time**|**datetime**|수신기가 시작된 시간을 나타내는 타임스탬프입니다. Null을 허용하지 않습니다.|  
   

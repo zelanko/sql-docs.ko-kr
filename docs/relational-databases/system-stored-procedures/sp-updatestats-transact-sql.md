@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085787"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808954"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-현재 `UPDATE STATISTICS` 데이터베이스에 있는 모든 사용자 정의 테이블 및 내부 테이블에 대해 실행 됩니다.  
+`UPDATE STATISTICS`현재 데이터베이스에 있는 모든 사용자 정의 테이블 및 내부 테이블에 대해 실행 됩니다.  
   
-에 대 한 `UPDATE STATISTICS`자세한 내용은 [UPDATE STATISTICS &#40;transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조 하세요. 통계에 대 한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
+에 대 한 자세한 내용은 `UPDATE STATISTICS` [UPDATE STATISTICS &#40;transact-sql&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조 하세요. 통계에 대 한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조 하세요.  
     
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +47,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 `[ @resample = ] 'resample'`**Sp_updatestats** [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문의 다시 샘플링 옵션을 사용 하도록 지정 합니다. ' 다시 지정 **'** 을 지정 하지 않으면 **sp_updatestats** 기본 샘플링을 사용 하 여 통계를 업데이트 합니다. 다시 **샘플링** 은 **varchar (8)** 이며 기본값은 NO입니다.  
   
 ## <a name="remarks"></a>설명  
- **sp_updatestats** 은 `UPDATE STATISTICS` `ALL` 데이터베이스의 모든 사용자 정의 및 내부 테이블에 대해 키워드를 지정 하 여 실행 합니다. sp_updatestats 진행률을 나타내는 메시지를 표시 합니다. 업데이트가 완료되면 모든 테이블에 대해 통계가 업데이트되었다고 보고합니다.  
+ **sp_updatestats** `UPDATE STATISTICS` 은 `ALL` 데이터베이스의 모든 사용자 정의 및 내부 테이블에 대해 키워드를 지정 하 여 실행 합니다. sp_updatestats 진행률을 나타내는 메시지를 표시 합니다. 업데이트가 완료되면 모든 테이블에 대해 통계가 업데이트되었다고 보고합니다.  
   
 sp_updatestats는 비활성화된 비클러스터형 인덱스에 대한 통계는 업데이트하며 비활성화된 클러스터형 인덱스에 대한 통계는 업데이트하지 않습니다.  
   
@@ -57,7 +57,7 @@ sp_updatestats는 비활성화된 비클러스터형 인덱스에 대한 통계�
   
 호환성 수준이 90 미만인 데이터베이스의 경우 **sp_updatestats** 를 실행 해도 특정 통계에 대 한 최신 NORECOMPUTE 설정이 유지 되지 않습니다. 호환성 수준이 90 이상인 데이터베이스의 경우 sp_updatestats는 특정 통계에 대 한 최신 NORECOMPUTE 옵션을 유지 합니다. 통계 업데이트를 비활성화하고 다시 활성화하는 방법은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스 (**dbo**)의 소유권이 필요 합니다.  
 
 ## <a name="examples"></a>예  
@@ -73,7 +73,7 @@ EXEC sp_updatestats;
 [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)와 같은 솔루션을 사용하여 하나 이상의 데이터베이스에 대한 인덱스 조각 모음 및 통계 업데이트를 자동으로 관리합니다. 이 절차는 다른 매개 변수 사이에서 조각화 수준에 따라 인덱스를 다시 작성하거나 다시 구성할지 여부를 자동으로 선택하고 통계를 선형 임계값으로 업데이트합니다.
 
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE SET 옵션 &#40;Transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Transact-sql&#41;&#40;통계 만들기](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-sql&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   

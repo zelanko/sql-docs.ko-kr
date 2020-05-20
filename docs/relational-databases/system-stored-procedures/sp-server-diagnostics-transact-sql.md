@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982114"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810616"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
 |**component_type**|**sysname**|행에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 정보가 포함 되어 있는지 여부를 나타냅니다.<br /><br /> 인스턴스<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|구성 요소의 이름이나 가용성 그룹의 이름을 나타냅니다.<br /><br /> 시스템<br /><br /> 리소스<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<가용성 그룹의 이름>*|  
-|**state**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**상태**|**int**|구성 요소의 상태를 나타냅니다.<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|state 열을 설명합니다. state 열의 값에 해당하는 설명은 다음과 같습니다.<br /><br /> 0: 알 수 없음<br /><br /> 1: 정리<br /><br /> 2: 경고<br /><br /> 3: 오류|  
 |**데이터**|**varchar (max)**|구성 요소와 관련된 데이터를 지정합니다.|  
   
@@ -77,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **이벤트**: 링 버퍼 예외, 메모리 브로커에 대 한 링 버퍼 이벤트, 메모리 부족, 스케줄러 모니터, 버퍼 풀, spinlock, 보안 및 연결에 대 한 세부 정보를 포함 하 여 서버에서 기록 하는 오류 및 이벤트에 대 한 저장 프로시저를 통해 데이터 및 화면을 수집 합니다. 이벤트는 항상 상태로 0을 표시합니다.  
   
--   **가용성 그룹>의 이름: 지정 된 가용성 그룹에 대 한 데이터를 수집 합니다 (component_type = "Always On: AvailabilityGroup"). \< **  
+-   ** \< 가용성 그룹>의 이름 **: 지정 된 가용성 그룹에 대 한 데이터를 수집 합니다 (component_type = "Always On: AvailabilityGroup").  
   
 ## <a name="remarks"></a>설명  
 오류 큐브 뷰에서 시스템, 리소스 및 쿼리 처리 구성 요소는 오류 감지에 활용되고, IO 하위 시스템 및 이벤트 구성 요소는 진단용으로만 활용됩니다.  
@@ -97,7 +97,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > Sp_server_diagnostics 내부 프로시저의 실행은 높은 우선 순위로 선점형 스레드에 구현 됩니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

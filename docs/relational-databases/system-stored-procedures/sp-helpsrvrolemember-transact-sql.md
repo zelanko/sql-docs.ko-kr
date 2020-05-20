@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73a8052af35854b0e2a1d557b1b31050dbb560ea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010757"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810792"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  *role* 은 다음 값 중 하나일 수 있습니다.  
   
-|고정 서버 역할|Description|  
+|고정 서버 역할|설명|  
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
@@ -68,13 +68,13 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ## <a name="remarks"></a>설명  
  데이터베이스 역할의 멤버를 표시하려면 sp_helprolemember를 사용합니다.  
   
- 모든 로그인은 public의 멤버입니다. 는 내부적으로 public을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할로 구현 하지 않기 때문에 sp_helpsrvrolemember은 public 역할을 인식 하지 못합니다.  
+ 모든 로그인은 public의 멤버입니다. 는 내부적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] public을 역할로 구현 하지 않기 때문에 sp_helpsrvrolemember은 public 역할을 인식 하지 못합니다.  
   
  서버 역할에서 멤버를 추가 하거나 제거 하려면 [ALTER SERVER ROLE &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)를 참조 하세요.  
   
  sp_helpsrvrolemember는 사용자 정의 서버 역할을 인수로 사용 하지 않습니다. 사용자 정의 서버 역할의 멤버를 확인 하려면 [ALTER SERVER role &#40;transact-sql&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)의 예제를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

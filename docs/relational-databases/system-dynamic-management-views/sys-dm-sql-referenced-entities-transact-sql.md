@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090668"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811280"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지정 된 참조 엔터티 정의에 이름으로 참조 되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환 합니다. 두 엔터티 간의 종속성은 *참조*된 엔터티 라는 하나의 사용자 정의 엔터티를 *참조 엔터티*라고 하는 다른 사용자 정의 엔터티의 지속형 SQL 식에 이름으로 표시 하는 경우 생성 됩니다. 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
+에서 지정 된 참조 엔터티 정의에 이름으로 참조 되는 각 사용자 정의 엔터티에 대해 하나의 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 두 엔터티 간의 종속성은 *참조*된 엔터티 라는 하나의 사용자 정의 엔터티를 *참조 엔터티*라고 하는 다른 사용자 정의 엔터티의 지속형 SQL 식에 이름으로 표시 하는 경우 생성 됩니다. 예를 들어 저장 프로시저가 지정된 참조 엔터티인 경우 이 함수는 테이블, 뷰, UDT(사용자 정의 형식), 또는 다른 저장 프로시저 등 이 저장 프로시저에서 참조되는 모든 사용자 정의 엔터티를 반환합니다.  
   
  이러한 동적 관리 함수를 사용하면 지정된 참조 엔터티에 의해 참조되는 다음과 같은 엔터티 유형을 보고할 수 있습니다.  
   
@@ -122,7 +122,7 @@ sys.dm_sql_referenced_entities (
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
 |테이블|예*|예|  
-|보기|예|예|  
+|View|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
 |CLR 저장 프로시저|예|예|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
@@ -139,11 +139,11 @@ sys.dm_sql_referenced_entities (
 |파티션 함수|예|예|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
+ \*테이블은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 정수 값 1보다 큰 번호가 있는 저장 프로시저는 참조 엔터티나 참조된 엔터티로 추적되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  sys.dm_sql_referenced_entities에 대한 SELECT 권한 및 참조 엔터티에 대한 VIEW DEFINITION 권한이 필요합니다. 기본적으로 SELECT 권한은 public에 부여됩니다. 참조 엔터티가 데이터 수준 DDL 트리거인 경우 데이터베이스에 대한 ALTER DATABASE DDL TRIGGER 권한 또는 데이터베이스에 대한 VIEW DEFINITION 권한이 필요합니다. 참조 엔터티가 서버 수준 DDL 트리거인 경우 서버에 대한 VIEW ANY DEFINITION 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -268,7 +268,7 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 이 예에서는 D 예제가 실행 되었다고 가정 합니다. 예 E에서는 종속성이 동적으로 유지 되 고 있음을 보여 줍니다. 이 예제에서는 다음 작업을 수행 합니다.
 
-1. 예 D에서 `Table1`삭제 된를 다시 만듭니다.
+1. `Table1`예 D에서 삭제 된를 다시 만듭니다.
 2. 그러면 `sys.dm_sql_referenced_entities` 저장 프로시저가 참조 엔터티로 지정 되어 실행이 다시 실행 됩니다.
 
 결과 집합에는 저장 프로시저에 정의 된 테이블 및 각 열이 반환 되는 것이 표시 됩니다. 또한 `is_all_columns_found` 열은 모든 개체 및 열에 대해 1을 반환합니다.
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. 개체 또는 열 사용법 반환  
- 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 프로시저는 `NationalIDNumber`지정 `BirthDate,``MaritalStatus` `Gender` `Employee` `BusinessEntityID` 된 값을 기준으로 테이블의, 및 열을 업데이트 합니다. 다른 저장 프로시저 `upsLogError` 는 TRY ... 실행 오류를 캡처하기 위한 CATCH 블록입니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
+ 다음 예에서는 저장 프로시저 `HumanResources.uspUpdateEmployeePersonalInfo`의 개체 및 열 종속성을 반환합니다. 이 프로시저는 지정 된 `NationalIDNumber` `BirthDate,``MaritalStatus` 값을 `Gender` `Employee` 기준으로 테이블의, 및 열을 업데이트 합니다 `BusinessEntityID` . 다른 저장 프로시저 `upsLogError` 는 TRY ... 실행 오류를 캡처하기 위한 CATCH 블록입니다. `is_selected`, `is_updated` 및 `is_select_all` 열은 참조하는 개체 내에 이러한 개체 및 열이 사용되는 방식에 대한 정보를 반환합니다. 수정된 테이블 및 열은 is_updated 열에서 1로 표시됩니다. `BusinessEntityID` 열만 선택되며 저장 프로시저 `uspLogError`는 선택되거나 수정되지 않습니다.  
 
 ```sql  
 USE AdventureWorks2012;

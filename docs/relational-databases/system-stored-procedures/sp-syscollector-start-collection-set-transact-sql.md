@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 52afba46b09552af62ba9f08c34e1749689f41cc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010605"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810024"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_syscollector_start_collection_set
   
  컬렉션 집합에 컬렉션 항목이 포함되어 있지 않으면 이 작업은 효과가 없습니다. 이 경우 오류 14685가 경고로 반환됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_operator 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 컬렉션 집합에 프록시 계정이 없는 경우에는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

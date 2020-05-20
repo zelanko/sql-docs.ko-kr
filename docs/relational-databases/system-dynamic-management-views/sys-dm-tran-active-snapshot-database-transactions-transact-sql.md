@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262699"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811102"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68262699"
  이 동적 관리 뷰에는 시스템 트랜잭션이 포함되지 않습니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**을 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -58,7 +58,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|트랜잭션에 할당된 고유 ID입니다. 트랜잭션 ID는 주로 잠금 작업에서 트랜잭션을 식별하는 데 사용됩니다.|  
 |**transaction_sequence_num**|**bigint**|트랜잭션 시퀀스 번호입니다. 트랜잭션 시작 시 해당 트랜잭션에 할당되는 고유 시퀀스 번호인 트랜잭션 시퀀스 번호입니다. 버전 레코드를 생성하지 않고 스냅샷 검색을 사용하지 않는 트랜잭션에는 트랜잭션 시퀀스 번호가 지정되지 않습니다.|  
@@ -69,12 +69,12 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|트랜잭션 측면에서 일관된 버전을 찾기 위해 이동한 버전 체인의 최대 길이입니다.|  
 |**average_version_chain_traversed**|**real**|이동한 버전 체인의 평균 행 버전 수입니다.|  
 |**elapsed_time_seconds**|**bigint**|트랜잭션이 트랜잭션 시퀀스 번호를 받은 이후 경과된 시간입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
  **dm_tran_active_snapshot_database_transactions** 는 XSN (트랜잭션 시퀀스 번호)이 할당 된 트랜잭션을 보고 합니다. 트랜잭션이 처음으로 버전 저장소에 액세스하면 XSN이 할당됩니다. 스냅샷 격리나 행 버전 관리를 사용하는 커밋된 읽기 격리가 설정된 데이터베이스에서 이 예는 XSN이 트랜잭션에 할당된 시기를 보여 줍니다.  
@@ -145,7 +145,7 @@ elapsed_time_seconds
   
  다음 정보는 **dm_tran_active_snapshot_database_transactions**의 결과를 평가 합니다.  
   
--   XSN-57:이 트랜잭션이 스냅숏 격리에서 실행 되 고 있지 않기 때문 `is_snapshot` 에 및 `first_snapshot_sequence_num` 값 `0`은입니다. ALLOW_SNAPSHOT_ISOLATION 또는 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 중 하나 또는 둘 다가 ON이므로 `transaction_sequence_num`은 이 트랜잭션에 트랜잭션 시퀀스 번호가 할당되었음을 보여 줍니다.  
+-   XSN-57:이 트랜잭션이 스냅숏 격리에서 실행 되 고 있지 않기 때문에 `is_snapshot` 및 값은 `first_snapshot_sequence_num` `0` 입니다. ALLOW_SNAPSHOT_ISOLATION 또는 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 중 하나 또는 둘 다가 ON이므로 `transaction_sequence_num`은 이 트랜잭션에 트랜잭션 시퀀스 번호가 할당되었음을 보여 줍니다.  
   
 -   XSN-58:이 트랜잭션은 스냅숏 격리에서 실행 되 고 있지 않으며 XSN-57에 대해 동일한 정보를 적용 합니다.  
   

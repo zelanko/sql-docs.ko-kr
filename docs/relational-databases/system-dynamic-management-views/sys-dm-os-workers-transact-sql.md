@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72289355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811517"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "72289355"
   시스템의 각 작업자에 대해 행을 반환합니다. 작업자에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요. 
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_os_workers**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_workers**을 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|작업자의 메모리 주소입니다.|  
-|상태|**int**|내부적으로만 사용됩니다.|  
+|상태|**int**|내부 전용입니다.|  
 |is_preemptive|**bit**|1 = 작업자가 선점형 일정을 사용하여 실행되고 있습니다. 외부 코드를 실행 중인 작업자는 선점형 일정을 사용하여 실행됩니다.|  
 |is_fiber|**bit**|1 = 작업자가 경량 풀링을 사용하여 실행되고 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.|  
 |is_sick|**bit**|1 = 작업자가 spinlock을 획득하려고 하는 중 멈췄습니다. 이 비트가 설정된 경우 자주 액세스되는 개체에 경합 문제가 있음을 나타내는 것일 수 있습니다.|  
@@ -63,9 +63,9 @@ ms.locfileid: "72289355"
 |end_quantum|**bigint**|이 작업자의 현재 실행이 종료된 시간(밀리초)입니다.|  
 |last_wait_type|**nvarchar(60)**|마지막 대기의 유형입니다. 대기 유형 목록은 [dm_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)을 참조 하십시오.|  
 |return_code|**int**|마지막 대기에서 반환된 값입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> 0 = 성공<br /><br /> 3 = 교착<br /><br /> 4 = 중간 시작<br /><br /> 258 = 시간 초과|  
-|quantum_used|**bigint**|내부적으로만 사용됩니다.|  
-|max_quantum|**bigint**|내부적으로만 사용됩니다.|  
-|boost_count|**int**|내부적으로만 사용됩니다.|  
+|quantum_used|**bigint**|내부 전용입니다.|  
+|max_quantum|**bigint**|내부 전용입니다.|  
+|boost_count|**int**|내부 전용입니다.|  
 |tasks_processed_count|**int**|이 작업자가 처리한 태스크 수입니다.|  
 |fiber_address|**varbinary(8)**|이 작업자와 연관된 파이버의 메모리 주소입니다.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 경량 풀링을 사용하도록 구성되지 않았습니다.|  
 |task_address|**varbinary(8)**|현재 태스크의 메모리 주소입니다. 자세한 내용은 [dm_os_tasks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)을 참조 하십시오.|  
@@ -74,16 +74,16 @@ ms.locfileid: "72289355"
 |signal_worker_address|**varbinary(8)**|이 개체에 마지막으로 신호를 보낸 작업자의 메모리 주소입니다. 자세한 내용은 [dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)를 참조 하세요.|  
 |scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. 자세한 내용은 [dm_os_schedulers &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)을 참조 하십시오.|  
 |processor_group|**smallint**|이 스레드에 할당된 프로세서 그룹 ID를 저장합니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  작업자 상태가 RUNNING이고 작업자가 비선점형 모드로 실행되고 있으면 작업자 주소가 sys.dm_os_schedulers의 active_worker_address와 일치합니다.  
   
  이벤트를 기다리고 있는 작업자가 신호를 받으면 해당 작업자가 실행 가능한 큐의 맨 처음에 배치됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 작업이 연속해서 1,000회 발생할 수 있습니다. 그런 다음 작업자가 큐 끝에 배치됩니다. 작업자를 큐 끝으로 이동하면 성능에 약간 영향을 줍니다.  
   
-## <a name="permissions"></a>사용 권한
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. 표준 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 및 기본 계층에서에는 `Server Admin` 역할 멤버 자격 또는 `Azure Active Directory admin` 계정이 필요 합니다.   
+## <a name="permissions"></a>권한
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서에는 `Server Admin` 역할 멤버 자격 또는 계정이 필요 합니다 `Azure Active Directory admin` .   
 
 ## <a name="examples"></a>예  
  다음 쿼리를 사용하여 SUSPENDED 또는 RUNNABLE 상태에서 작업자가 실행된 시간을 확인할 수 있습니다.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032671"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810225"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,26 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  컬렉션 집합의 고유한 로컬 식별자입니다. *collection_set_id* 은 **int**입니다.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  이 항목에 사용할 수집기 유형을 식별 하는 GUID 이며 기본값은 없는 **uniqueidentifier** *collector_type_uid* 입니다. 수집기 유형의 목록을 보려면 syscollector_collector_types 시스템 뷰를 쿼리합니다.  
   
- [ @name = ] '*이름*'  
+ [ @name =] '*name*'  
  컬렉션 항목의 이름입니다. *name* 은 **sysname** 이며 빈 문자열 또는 NULL 일 수 없습니다.  
   
  *이름은* 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  
   
- [ @frequency = ] *빈도*  
+ [ @frequency =] *빈도*  
  이 컬렉션 항목에서 데이터를 수집하는 빈도(초)를 지정하는 데 사용됩니다. *frequency* 는 **int**이며 기본값은 5입니다. 지정할 수 있는 최소값은 5초입니다.  
   
  컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도가 무시됩니다. 컬렉션 집합의 컬렉션 모드를 보려면 [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) 시스템 뷰를 쿼리 합니다.  
   
- [ @parameters = ] '*parameters*'  
+ [ @parameters =] '*parameters*'  
  수집기 유형의 입력 매개 변수입니다. *매개 변수* 는 **xml** 이며 기본값은 NULL입니다. *Parameters* 스키마는 수집기 유형의 매개 변수 스키마와 일치 해야 합니다.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  컬렉션 집합 항목을 식별하는 고유한 식별자입니다. *collection_item_id* **int** 이며 출력이 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -76,7 +76,7 @@ sp_syscollector_create_collection_item
   
  컬렉션 항목을 추가할 컬렉션 집합은 컬렉션 항목을 만들기 전에 중지해야 합니다. 시스템 컬렉션 집합에는 컬렉션 항목을 추가할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

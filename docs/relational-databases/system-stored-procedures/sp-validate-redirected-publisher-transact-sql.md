@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252056"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809165"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72252056"
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @original_publisher = ] 'original_publisher'`원래 데이터베이스를 게시 한 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원래 데이터베이스를 게시 한 인스턴스의 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @publisher_db = ] 'publisher_db'`게시 되는 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -53,13 +53,13 @@ ms.locfileid: "72252056"
  없음  
   
 ## <a name="remarks"></a>설명  
- 게시자 및 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 는 출력 매개 변수 * \@redirected_publisher*에 null을 반환 합니다. 항목이 있으면 성공한 경우와 실패한 경우 모두에 대해 해당 항목이 출력 매개 변수에 반환됩니다.  
+ 게시자 및 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 는 출력 매개 변수 * \@ redirected_publisher*에 null을 반환 합니다. 항목이 있으면 성공한 경우와 실패한 경우 모두에 대해 해당 항목이 출력 매개 변수에 반환됩니다.  
   
  유효성 검사가 성공 하면 **sp_validate_redirected_publisher** 는 성공 표시를 반환 합니다.  
   
  유효성 검사에 실패한 경우에는 실패를 설명하는 오류가 발생합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

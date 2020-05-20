@@ -7,15 +7,15 @@ ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 88f05392-1e97-4693-ba60-a4910af3c000
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 770ddc4d1e182360b13d4f9e27d9e0bbf80cceee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b9274946c5890e5ff688663a0cd3d37cb3850e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899581"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811426"
 ---
 # <a name="sysdm_pdw_component_health_alerts-transact-sql"></a>sys. dm_pdw_component_health_alerts (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "67899581"
   
 |열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 노드의 고유 식별자입니다.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id 및 alert_instance_id이 뷰의 키를 구성 합니다.|NOT NULL|  
+|pdw_node_id|**int**|노드의 고유 식별자 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 입니다.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id 및 alert_instance_id이 뷰의 키를 구성 합니다.|NOT NULL|  
 |component_id|**int**|구성 요소의 ID입니다. [Pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)을 참조 하십시오.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id 및 alert_instance_id이 뷰의 키를 구성 합니다.|NOT NULL|  
 |component_instance_id|**nvarchar(255)**|pdw_node_id, component_id, component_instance_id, alert_id 및 alert_instance_id이 뷰의 키를 구성 합니다.|NOT NULL|  
 |alert_id|**int**|경고 유형의 ID입니다. [Pdw_health_alerts &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-alerts-transact-sql.md)을 참조 하십시오.<br /><br /> pdw_node_id, component_id, component_instance_id, alert_id 및 alert_instance_id이 뷰의 키를 구성 합니다.|NOT NULL|  

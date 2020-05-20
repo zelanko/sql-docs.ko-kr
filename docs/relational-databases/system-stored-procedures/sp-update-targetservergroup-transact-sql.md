@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46e14eb91dde8018abcc52fe618dd9ff688a15b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946620"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809118"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_update_targetservergroup
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
 ## <a name="remarks"></a>설명  

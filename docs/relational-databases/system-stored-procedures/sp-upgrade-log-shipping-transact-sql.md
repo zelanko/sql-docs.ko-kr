@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_upgrade_log_shipping
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 493fcac9f5de8ee85a2e3c014763045c697bbe0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119439"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809105"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_upgrade_log_shipping
   
  sp_upgrade_log_shipping은 주 서버 또는 모니터 서버에 있는 master 데이터베이스에서 실행해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

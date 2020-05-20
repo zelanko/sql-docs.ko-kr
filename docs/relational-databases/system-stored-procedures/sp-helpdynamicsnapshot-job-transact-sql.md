@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdynamicsnapshot_job
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 55d7ad0dfd941102cfeb6661e65980f980fa8b2d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 866f05904cfa1b6c7b3ce6b20a59a5be3096be2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770984"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810735"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 모든 게시 **%** 에 대해 지정 된 *dynamic_snapshot_jobid*및 *dynamic_snapshot_jobname*일치 하는 모든 필터링 된 데이터 스냅숏 작업에 대 한 정보를 반환 하는입니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 **%** 모든 게시에 대해 지정 된 *dynamic_snapshot_jobid*및 *dynamic_snapshot_jobname*일치 하는 모든 필터링 된 데이터 스냅숏 작업에 대 한 정보를 반환 하는입니다.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 지정 **%** 된 *dynamic_snapshot_jobid*를 사용 하 여 게시에 대 한 모든 동적 작업을 반환 하는 '입니다. 작업을 만들 때 작업 이름을 명시적으로 지정하지 않은 경우에는 작업 이름이 다음 형식으로 지정됩니다.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`필터링 된 데이터 스냅숏 작업의 이름입니다. *dynamic_snapshot_jobname*는 **sysname**이며 기본값은 **%** 지정 된 *dynamic_snapshot_jobid*를 사용 하 여 게시에 대 한 모든 동적 작업을 반환 하는 '입니다. 작업을 만들 때 작업 이름을 명시적으로 지정하지 않은 경우에는 작업 이름이 다음 형식으로 지정됩니다.  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -61,7 +61,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**id**|**int**|필터링된 데이터 스냅샷 작업을 식별합니다.|  
 |**job_name**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
-|**job_id**|**uniqueidentifier**|배포자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 식별 합니다.|  
+|**job_id**|**uniqueidentifier**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에서 에이전트 작업을 식별 합니다.|  
 |**dynamic_filter_login**|**sysname**|게시에 대해 정의 된 매개 변수가 있는 행 필터에서 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 함수를 계산 하는 데 사용 되는 값입니다.|  
 |**dynamic_filter_hostname**|**sysname**|게시에 대해 정의 된 매개 변수가 있는 행 필터에서 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 함수를 계산 하는 데 사용 되는 값입니다.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|매개 변수가 있는 행 필터를 사용하는 경우 스냅샷 파일을 읽을 폴더의 경로입니다.|  
@@ -84,7 +84,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
  모든 기본 매개 변수 값이 사용되는 경우에는 전체 게시 데이터베이스에 대한 모든 분할 데이터 스냅샷 작업의 정보가 반환됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버, **db_owner** 고정 데이터베이스 역할 및 게시에 대 한 게시 액세스 목록의 멤버만 **sp_helpdynamicsnapshot_job**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

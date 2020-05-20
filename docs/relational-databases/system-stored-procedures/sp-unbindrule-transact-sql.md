@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 54c5c0f9bfa6bc64a79e0f4dcde72c09b2a281fb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095866"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809455"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_unbindrule [ @objname = ] 'object_name'
   
  규칙이 별칭 데이터 형식에서 바인딩 해제되면 해당 규칙은 이 별칭 데이터 형식을 가진 열에서도 바인딩 해제됩니다. ALTER TABLE 문의 ALTER COLUMN 절에서 나중에 해당 데이터 형식을 변경한 열에도 규칙을 바인딩할 수 있습니다. **sp_unbindrule** 을 사용 하 고 열 이름을 지정 하 여 이러한 열에서 규칙의 바인딩을 해제 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  테이블 열에서 규칙을 바인딩 해제하려면 테이블에 대한 ALTER 권한이 필요합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하려면 형식에 대한 CONTROL 권한 또는 형식이 속한 스키마에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

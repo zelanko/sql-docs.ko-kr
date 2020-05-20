@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946648"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809259"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ sp_update_schedule
 ## <a name="remarks"></a>설명  
  일정을 즉시 사용하는 모든 작업은 새 설정을 사용합니다. 그러나 일정을 변경해도 현재 실행 중인 작업은 중지되지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  
