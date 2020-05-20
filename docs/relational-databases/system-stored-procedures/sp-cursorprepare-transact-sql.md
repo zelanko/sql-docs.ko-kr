@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_prepare
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165905"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831720"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
 |값|설명|  
 |-----------|-----------------|  
-|0|성공|  
+|0|Success|  
 |0x0001|실패|  
 |1FF6|메타데이터를 반환할 수 없습니다.<br /><br /> 참고:이 이유는 문이 결과 집합을 생성 하지 않기 때문입니다. 예를 들어 INSERT 또는 DDL 문입니다.|  
   
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  *Stmt* 매개 변수화 되 고 *scrollopt* PARAMETERIZED_STMT 값이 ON 이면 문자열 형식은 다음과 같습니다.  
   
- { * \<지역 변수 이름> * *\<데이터 형식>* } [ ,... *n* ]  
+ { * \< 지역 변수 이름> * * \< 데이터 형식>* } [,... *n* ]  
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;sp_cursorexecute &#40;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

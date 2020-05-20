@@ -18,22 +18,22 @@ helpviewer_keywords:
 - query_store_query catalog view
 - sys.query_store_query catalog view
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 073c90b18d9f6fb8b75bf5da44f3d3817d8f296c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067962"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831424"
 ---
 # <a name="sysquery_store_query-transact-sql"></a>sys. query_store_query (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|기본 키입니다.|  
 |**query_text_id**|**bigint**|외래 키입니다. [Query_store_query_text &#40;transact-sql](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md) 에 조인&#41;|  
@@ -64,7 +64,7 @@ ms.locfileid: "68067962"
 |**avg_compile_memory_kb**|**float**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**last_compile_memory_kb**|**bigint**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
 |**max_compile_memory_kb**|**bigint**|컴파일 메모리 통계입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
-|**is_clouddb_internal_query**|**bit**|온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
+|**is_clouddb_internal_query**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]온-프레미스의 경우 항상 0입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 0을 반환 합니다.|
   
 ## <a name="permissions"></a>사용 권한  
  **VIEW DATABASE STATE** 권한이 필요 합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "68067962"
  [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [query_store_runtime_stats &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [query_store_runtime_stats_interval &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
- [쿼리 저장소를 사용 하 여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Transact-sql&#41;&#40;카탈로그 뷰](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Transact-sql&#41;&#40;저장 프로시저 쿼리 저장소](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  

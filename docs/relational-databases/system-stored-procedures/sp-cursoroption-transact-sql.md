@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108452"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831727"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,15 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>인수  
  *cursor*  
- 는에서 *handle* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 생성 되 고 sp_cursoropen 저장 프로시저에서 반환 하는 핸들 값입니다. *커서* 를 실행 하려면 **int** 입력 값이 필요 합니다.  
+ 는에서 *handle* 생성 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 sp_cursoropen 저장 프로시저에서 반환 하는 핸들 값입니다. *커서* 를 실행 하려면 **int** 입력 값이 필요 합니다.  
   
  *code*  
  커서 반환 값의 여러 요인을 규정하는 데 사용됩니다. *코드* 에는 다음 **int** 입력 값 중 하나가 필요 합니다.  
   
-|값|속성|Description|  
+|값|속성|설명|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|지정된 특정 텍스트 또는 이미지 열에 대해 실제 데이터가 아닌 텍스트 포인터를 반환합니다.<br /><br /> TEXTPTR_ONLY 사용 하 여 텍스트 포인터를 blob 개체에 대 한 *핸들로* 사용할 수 있습니다 .이 개체는 나중 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 또는 DBLIB 시설 (예 [!INCLUDE[tsql](../../includes/tsql-md.md)] : READTEXT 또는 DBLIB dbwritetext)을 사용 하 여 선택적으로 검색 하거나 업데이트할 수 있습니다.<br /><br /> "0" 값을 할당하면 선택 목록에 있는 모든 텍스트 및 이미지 열이 데이터가 아닌 텍스트 포인터를 반환합니다.|  
-|0x0002|CURSOR_NAME|*값* 에 지정 된 이름을 커서에 할당 합니다. 이렇게 하면 ODBC가 sp_cursoropen를 통해 열린 커서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대해 위치 지정 UPDATE/DELETE 문을 사용할 수 있습니다.<br /><br /> 문자열은 원하는 문자나 유니코드 데이터 형식으로 지정할 수 있습니다.<br /><br /> 위치 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지정 UPDATE/delete 문은 기본적으로 fat 커서의 첫 번째 행에서 작동 하므로 위치 지정 UPDATE/delete 문을 실행 하기 전에 SP_CURSOR setposition을 사용 하 여 커서를 배치 해야 합니다.|  
+|0x0001|TEXTPTR_ONLY|지정된 특정 텍스트 또는 이미지 열에 대해 실제 데이터가 아닌 텍스트 포인터를 반환합니다.<br /><br /> TEXTPTR_ONLY 사용 하 여 텍스트 포인터를 blob 개체에 대 한 *핸들로* 사용할 수 있습니다 .이 개체는 나중에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 DBLIB 시설 (예: [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT 또는 DBLIB dbwritetext)을 사용 하 여 선택적으로 검색 하거나 업데이트할 수 있습니다.<br /><br /> "0" 값을 할당하면 선택 목록에 있는 모든 텍스트 및 이미지 열이 데이터가 아닌 텍스트 포인터를 반환합니다.|  
+|0x0002|CURSOR_NAME|*값* 에 지정 된 이름을 커서에 할당 합니다. 이렇게 하면 ODBC가 [!INCLUDE[tsql](../../includes/tsql-md.md)] sp_cursoropen를 통해 열린 커서에 대해 위치 지정 UPDATE/DELETE 문을 사용할 수 있습니다.<br /><br /> 문자열은 원하는 문자나 유니코드 데이터 형식으로 지정할 수 있습니다.<br /><br /> [!INCLUDE[tsql](../../includes/tsql-md.md)]위치 지정 update/delete 문은 기본적으로 fat 커서의 첫 번째 행에서 작동 하므로 위치 지정 update/delete 문을 실행 하기 전에 SP_CURSOR SETPOSITION을 사용 하 여 커서를 배치 해야 합니다.|  
 |0x0003|TEXTDATA|후속 인출에서 특정 텍스트 또는 이미지 열에 대해 텍스트 포인터가 아닌 실제 데이터를 반환합니다. 즉, TEXTPTR_ONLY의 효과를 실행 취소합니다.<br /><br /> 특정 열에 대해 TEXTDATA를 설정하면 행을 다시 인출하거나 새로 고치며, 그런 다음 행을 TEXTPTR_ONLY로 다시 설정할 수 있습니다. TEXTPTR_ONLY와 마찬가지로 값 매개 변수는 열 번호를 지정하는 정수이며, 값이 0이면 모든 텍스트 또는 이미지 열이 반환됩니다.|  
 |0x0004|SCROLLOPT|스크롤 옵션입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "반환 코드 값"을 참조하십시오.|  
 |0x0005|CCOPT|동시성 제어 옵션입니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "반환 코드 값"을 참조하십시오.|  
@@ -63,7 +63,7 @@ sp_cursoroption cursor, code, value
 ## <a name="return-code-values"></a>반환 코드 값  
  *값* 매개 변수는 다음 *코드* 값 중 하나를 반환할 수 있습니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |0x0004|SCROLLOPT|  
 |0X0005|CCOPT|  
@@ -71,7 +71,7 @@ sp_cursoroption cursor, code, value
   
  *값* 매개 변수는 다음 SCROLLOPT 값 중 하나를 반환 합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -80,7 +80,7 @@ sp_cursoroption cursor, code, value
   
  *값* 매개 변수는 다음 값 중 하나를 반환 합니다.  
   
-|반환 값|Description|  
+|반환 값|설명|  
 |------------------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS|  

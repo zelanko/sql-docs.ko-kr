@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.partitions catalog view
 ms.assetid: 1c19e1b1-c925-4dad-a652-581692f4ab5e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2531dde9237734d3c6eb4b3ea96ed2ac18e9d399
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39ae65e980d8f35f3a59d2f1d17481fed4d2a596
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982797"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831544"
 ---
 # <a name="syspartitions-transact-sql"></a>sys.partitions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스 내의 모든 테이블 및 대부분의 인덱스에서 각 파티션당 행 하나를 포함합니다. Full-Text, Spatial, XML 등의 특수 인덱스 유형은 이 뷰에 포함되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 모든 테이블 및 인덱스는 명시적으로 분할되었는지 여부에 상관없이 최소한 하나의 파티션을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.|  
 |object_id|**int**|이 파티션이 속한 개체의 ID를 나타냅니다. 모든 테이블 또는 뷰는 최소한 하나 이상의 파티션으로 구성됩니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "73982797"
 |hobt_id|**bigint**|이 파티션에 대 한 행을 포함 하는 데이터 힙 또는 B-트리 (HoBT)의 ID를 나타냅니다.|  
 |rows|**bigint**|이 파티션에 있는 행의 대략적인 수를 나타냅니다.|  
 |filestream_filegroup_id|**smallint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 파티션에 저장된 FILESTREAM 파일 그룹의 ID를 나타냅니다.|  
-|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: 다음 **에 적용 됩니다**. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br />4 = COLUMNSTORE_ARCHIVE: 이상 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] **에 적용**됨<br /><br /> **참고:** 전체 텍스트 인덱스는 모든 버전에서 압축 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|data_compression|**tinyint**|각 파티션의 압축 상태를 나타냅니다.<br /><br /> 0 = 없음 <br />1 = ROW <br />2 = PAGE <br />3 = COLUMNSTORE: 다음 **에 적용 됩니다**. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br />4 = COLUMNSTORE_ARCHIVE: **이상에 적용**됨 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> **참고:** 전체 텍스트 인덱스는 모든 버전에서 압축 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |data_compression_desc|**nvarchar(60)**|각 파티션의 압축 상태를 나타냅니다. rowstore 테이블의 가능한 값은 NONE, ROW 및 PAGE입니다. columnstore 테이블의 가능한 값은 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

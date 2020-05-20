@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108479"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831773"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  커서를 엽니다. sp_cursoropen 커서 및 커서 옵션과 연결 된 SQL 문을 정의한 다음 커서를 채웁니다. sp_cursoropen는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 DECLARE_CURSOR의 조합에 해당 합니다. 이 프로시저는 TDS(Tabular Data Stream) 패킷에서 ID =2를 지정하여 호출합니다.  
+  커서를 엽니다. sp_cursoropen 커서 및 커서 옵션과 연결 된 SQL 문을 정의한 다음 커서를 채웁니다. sp_cursoropen는 문과 DECLARE_CURSOR의 조합에 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 합니다. 이 프로시저는 TDS(Tabular Data Stream) 패킷에서 ID =2를 지정하여 호출합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 는 다음 **int** 입력 값 중 하나를 필요로 하는 선택적 매개 변수입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  *Stmt* 매개 변수의 허용 되는 내용은 *ccopt* ALLOW_DIRECT 반환 값이 또는 나머지 *ccopt* 값 (예:)에 의해 연결 되었는지 여부에 따라 달라 집니다.  
   
--   ALLOW_DIRECT 지정 하지 않으면 단일 SELECT 문을 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하는 저장 프로시저를 호출 하는 SELECT 또는 EXECUTE 문을 사용 해야 합니다. 또한 SELECT 문은 커서로서 적합해야 합니다. 즉, SELECT INTO 또는 FOR BROWSE 키워드를 포함해서는 안 됩니다.  
+-   ALLOW_DIRECT 지정 하지 않으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단일 select 문을 포함 하는 저장 프로시저를 호출 하는 select 또는 EXECUTE 문을 사용 해야 합니다. 또한 SELECT 문은 커서로서 적합해야 합니다. 즉, SELECT INTO 또는 FOR BROWSE 키워드를 포함해서는 안 됩니다.  
   
 -   ALLOW_DIRECT를 지정하면 여러 문이 들어 있는 다른 저장 프로시저를 실행하는 문을 비롯한 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 생성될 수 있습니다. SELECT 외의 문이나 SELECT INTO 또는 FOR BROWSE 키워드를 포함하는 SELECT 문은 단순히 실행되기만 하며 커서는 작성되지 않습니다. 여러 문의 일괄 처리에 포함된 SELECT 문의 경우에도 마찬가지입니다. SELECT 문이 커서에만 관련된 절을 포함하는 경우 해당 절은 무시됩니다. 예를 들어 *ccopt* 의 값이 0x2002 인 경우이 요청은 다음에 대 한 요청입니다.  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH 및 AUTO_CLOSE는 OR을 통해 FAST_FORWARD에 연결할 수 있습니다.  
   
- CHECK_ACCEPTED_TYPES ON 이면 마지막 5 개의 *scrollopt* 값 (KEYSET_ACCEPTABLE`,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE 또는 FAST_FORWARD_ACCEPTABLE) 중 하나 이상이 설정 되어 있어야 합니다.  
+ CHECK_ACCEPTED_TYPES ON 이면 마지막 5 개의 *scrollopt* 값 (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE 또는 FAST_FORWARD_ACCEPTABLE) 중 하나 이상이 설정 되어 있어야 합니다.  
   
  STATIC 커서는 항상 READ_ONLY로 열립니다. 즉, 이 커서를 통해 기본 테이블을 업데이트할 수 없습니다.  
   

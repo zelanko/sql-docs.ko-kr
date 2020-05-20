@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_contract_usages catalog view
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9acced780886d9016206c33392c7308e21b4fbd8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132882"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831375"
 ---
 # <a name="sysservice_contract_usages-transact-sql"></a>sys.service_contract_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰에는 각 서비스-계약 쌍에 대한 행이 포함되어 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**service_id**|**int**|계약을 사용하는 서비스의 식별자입니다. NULL을 허용하지 않습니다.|  
 |**service_contract_id**|**int**|서비스에서 사용하는 계약의 식별자입니다. NULL을 허용하지 않습니다.|  

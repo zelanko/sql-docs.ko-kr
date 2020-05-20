@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180118"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831692"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  고정 데이터베이스 역할에 대한 사용 권한을 표시합니다. **sp_dbfixedrolepermission** 는에서 올바른 정보 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]를 반환 합니다. 출력에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 구현된 사용 권한 계층 구조의 변경 내용은 출력에 반영되지 않습니다. 자세한 내용은 고정 데이터베이스 역할의 목록과 해당 권한이 있는 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)을 참조 하세요.  
+  고정 데이터베이스 역할에 대한 사용 권한을 표시합니다. **sp_dbfixedrolepermission** 는에서 올바른 정보를 반환 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 합니다. 출력에는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 구현된 사용 권한 계층 구조의 변경 내용은 출력에 반영되지 않습니다. 자세한 내용은 고정 데이터베이스 역할의 목록과 해당 권한이 있는 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles)을 참조 하세요.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -49,7 +49,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|고정 데이터베이스 역할의 이름입니다.|  
 |**사용 권한**|**nvarchar (70)**|**Dbfixedrole** 과 관련 된 사용 권한|  
