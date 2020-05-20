@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936610"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764454"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 이벤트(ADO)
 **WillExecute** 이벤트는 연결에서 보류 중인 명령이 실행 되기 직전에 호출 됩니다.  
@@ -43,7 +43,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  열 **레코드 집합** 의 잠금 유형을 포함 하는 [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) 입니다. 이 매개 변수를 사용 하면 **RecordsetOpen** 작업을 수행 하는 동안 잠금을 모든 형식으로 변경할 수 있습니다. 다른 작업의 경우에는 *LockType* 가 무시 됩니다.  
   
- *옵션*  
+ *Options*  
  명령을 실행 하거나 **레코드 집합**을 여는 데 사용할 수 있는 옵션을 나타내는 **Long** 값입니다.  
   
  *adStatus*  

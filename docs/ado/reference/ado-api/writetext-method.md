@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947493"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764414"
 ---
 # <a name="writetext-method"></a>WriteText 메서드
 지정 된 텍스트 문자열을 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 씁니다.  
@@ -37,8 +37,8 @@ Stream.WriteText Data, Options
  *Data*  
  쓸 문자 텍스트를 포함 하는 **문자열** 값입니다.  
   
- *옵션*  
- 선택 사항입니다. 지정 된 문자열의 끝에 줄 구분 기호 문자를 써야 하는지 여부를 지정 하는 [Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md) 값입니다.  
+ *Options*  
+ (선택 사항) 지정 된 문자열의 끝에 줄 구분 기호 문자를 써야 하는지 여부를 지정 하는 [Streamwriteenum](../../../ado/reference/ado-api/streamwriteenum.md) 값입니다.  
   
 ## <a name="remarks"></a>설명  
  지정 된 문자열은 각 문자열 사이에 공백이 나 문자를 넣지 않고 **Stream** 개체에 기록 됩니다.  

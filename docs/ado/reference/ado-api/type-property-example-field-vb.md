@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Type property [field] [ADO], Visual Basic example
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d3f13b0f76884f4b5e0077bdebef0c009d7b546
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936688"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765354"
 ---
 # <a name="type-property-example-field-vb"></a>Type 속성 예제(필드)(VB)
 이 예에서는 ***Employees*** 테이블에 있는 모든 [Field](../../../ado/reference/ado-api/field-object.md) 개체의 [type](../../../ado/reference/ado-api/type-property-ado.md) 속성 값에 해당 하는 상수의 이름을 표시 하 여 [Type](../../../ado/reference/ado-api/type-property-ado.md) 속성을 보여 줍니다. FieldType 함수는이 프로시저를 실행 하는 데 필요 합니다.  

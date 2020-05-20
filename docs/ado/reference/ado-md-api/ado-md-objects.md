@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, objects
 - objects [ADO MD]
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01a35a38812d105a1e26454022321e57448efadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930571"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765254"
 ---
 # <a name="ado-md-objects"></a>ADO MD 개체
 
@@ -31,13 +31,13 @@ ms.locfileid: "67930571"
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|관련 차원 집합을 포함 하는 다차원 스키마의 큐브를 나타냅니다.|  
 |[차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|하나 이상의 멤버 계층을 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.|  
 |[계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|차원의 멤버를 집계 하거나 "롤업" 할 수 있는 한 가지 방법을 나타냅니다. 하나 이상의 계층 구조를 따라 차원을 집계할 수 있습니다.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|에는 계층 구조 내에서 순위가 동일한 멤버 집합이 포함 되어 있습니다.|  
-|[멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md)|큐브의 수준 멤버, 수준 멤버의 자식 또는 셀 집합의 축에 있는 위치의 멤버를 나타냅니다.|  
-|[놓을](../../../ado/reference/ado-md-api/position-object-ado-md.md)|축의 한 지점을 정의 하는 여러 차원의 멤버 집합을 나타냅니다.|  
+|[수준](../../../ado/reference/ado-md-api/level-object-ado-md.md)|에는 계층 구조 내에서 순위가 동일한 멤버 집합이 포함 되어 있습니다.|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|큐브의 수준 멤버, 수준 멤버의 자식 또는 셀 집합의 축에 있는 위치의 멤버를 나타냅니다.|  
+|[위치](../../../ado/reference/ado-md-api/position-object-ado-md.md)|축의 한 지점을 정의 하는 여러 차원의 멤버 집합을 나타냅니다.|  
   
  또한 **카탈로그** 개체는 표준 ado 라이브러리에 포함 된 ado **연결** 개체에 연결 됩니다.  
   
-|Object|Description|  
+|Object|설명|  
 |------------|-----------------|  
 |[연결](../../../ado/reference/ado-api/connection-object-ado.md)|데이터 소스에 대해 열려 있는 연결을 나타냅니다.|  
   

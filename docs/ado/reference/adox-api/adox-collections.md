@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADOX, collections
 - collections [ADOX]
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f5c2792f9a5ef413f09793df8ff320d3826773f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928601"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764154"
 ---
 # <a name="adox-collections"></a>ADOX 컬렉션
 
@@ -31,7 +31,7 @@ ms.locfileid: "67928601"
 |[절차](../../../ado/reference/adox-api/procedures-collection-adox.md)|카탈로그의 모든 **프로시저** 개체를 포함 합니다.|  
 |[테이블](../../../ado/reference/adox-api/tables-collection-adox.md)|카탈로그의 모든 **테이블** 개체를 포함 합니다.|  
 |[사용자](../../../ado/reference/adox-api/users-collection-adox.md)|카탈로그 또는 그룹의 모든 저장 된 **사용자** 개체를 포함 합니다.|  
-|[보기](../../../ado/reference/adox-api/views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
+|[Views](../../../ado/reference/adox-api/views-collection-adox.md)|카탈로그의 모든 **뷰** 개체를 포함 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [ADOX API 참조](../../../ado/reference/adox-api/adox-api-reference.md)   

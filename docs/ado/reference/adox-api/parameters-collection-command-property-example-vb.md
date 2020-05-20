@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Command property [ADOX], Visual Basic example
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4feb9c7ec12bbf560c874b15389adcd3a7eec04a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965627"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763784"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters 컬렉션, Command 속성 예제(VB)
 다음 [코드에서는 command 개체와](../../../ado/reference/ado-api/command-object-ado.md) 함께 [command](../../../ado/reference/adox-api/command-property-adox.md) 속성을 사용 하 여 프로시저에 대 한 매개 변수 정보를 검색 하는 방법을 보여 줍니다.  

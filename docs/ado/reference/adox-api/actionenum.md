@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ActionEnum enumeration [ADOX]
 ms.assetid: f948febd-c885-4621-823b-421e116fec4e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fad40c6daed6fd86f93da3f658af6a21c33ca762
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: af82b9fbe8f38bcd55e90b5fee979e8c248c3542
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928628"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764224"
 ---
 # <a name="actionenum"></a>ActionEnum
 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) 가 호출 될 때 수행할 동작의 유형을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAccessDeny**|3|그룹이 나 사용자에 게 지정 된 사용 권한이 거부 됩니다.|  
 |**adAccessGrant**|1|그룹이 나 사용자에 게 적어도 요청 된 사용 권한이 있습니다.|  

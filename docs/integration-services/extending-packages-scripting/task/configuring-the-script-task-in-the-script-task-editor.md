@@ -45,12 +45,12 @@ ms.locfileid: "71286042"
  스크립트 태스크 및 스크립트 구성 요소에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에 있는 **ScriptLanguage** 속성을 사용합니다. 자세한 내용은 [General Page](../../general-page-of-integration-services-designers-options.md)을 참조하세요.  
   
 ### <a name="entrypoint-property"></a>EntryPoint 속성  
- **EntryPoint** 속성은 **런타임이 VSTA 프로젝트의**ScriptMain[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. **ScriptMain** 클래스는 스크립트 템플릿이 생성하는 기본 클래스입니다.  
+ **EntryPoint** 속성은 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임이 VSTA 프로젝트의 **ScriptMain** 클래스에서 스크립트 태스크 코드에 대한 진입점으로 호출하는 메서드를 지정합니다. **ScriptMain** 클래스는 스크립트 템플릿이 생성하는 기본 클래스입니다.  
   
  VSTA 프로젝트에서 메서드 이름을 변경한 경우 **EntryPoint** 속성의 값을 변경해야 합니다.  
   
 ### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 및 ReadWriteVariables 속성  
- 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 태스크 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 두 유형의 변수 모두 코드에서 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>Dts**개체의** 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [Using Variables in the Script Task](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)을 참조하세요.  
+ 쉼표로 구분된 기존 변수 목록을 이러한 속성의 값으로 입력하여 스크립트 태스크 코드 내에서 해당 변수를 읽기 전용 또는 읽기/쓰기 권한으로 액세스할 수 있게 할 수 있습니다. 두 유형의 변수 모두 코드에서 **Dts** 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 액세스할 수 있습니다. 자세한 내용은 [Using Variables in the Script Task](../../../integration-services/extending-packages-scripting/task/using-variables-in-the-script-task.md)을 참조하세요.  
   
 > [!NOTE]  
 >  변수 이름은 대소문자를 구분합니다.  

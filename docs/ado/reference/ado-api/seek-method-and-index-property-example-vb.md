@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a9d82cda586f5694b9f7644ca01eff781ea3e79d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931120"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765424"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek 메서드 및 인덱스 속성 예제 (VB)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 속성을 지정 된 ***직원 ID***와 함께 사용 하 여 Nwind 데이터베이스의 ***Employees*** 테이블에서 직원의 이름을 찾습니다.  

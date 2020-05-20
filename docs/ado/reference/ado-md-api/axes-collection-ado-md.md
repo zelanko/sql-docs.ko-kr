@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Axes collection [ADO MD]
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 36c6a55b5ba59fab0fab3f873225f67b18d2d384
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947403"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765214"
 ---
 # <a name="axes-collection-ado-md"></a>Axes 컬렉션(ADO MD)
 셀 집합을 정의 하는 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 포함 합니다.  

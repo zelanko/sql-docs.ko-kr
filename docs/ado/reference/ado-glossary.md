@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925595"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765304"
 ---
 # <a name="ado-glossary"></a>ADO 용어 설명
 이 항목에서는 ADO와 관련 된 용어를 정의 합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "76925595"
  테이블의 필드와 변수 간의 매핑입니다. ADO Visual C++ 확장에서 **레코드 집합** 필드는 C/c + + 변수에 매핑됩니다.  
   
  이며  
- 일반적으로 매개 변수 또는 반환 값의 옵션에 플래그를 지정 하기 위해 다른 숫자 값과 비트 값 비교를 위한 숫자 값입니다. 일반적으로 이러한 비교 작업 **은 and,** **or** 등의 비트 논리 연산자를 사용 하 여 **&** 수행 되며 c + +의 **&#124;** Visual Basic.  
+ 일반적으로 매개 변수 또는 반환 값의 옵션에 플래그를 지정 하기 위해 다른 숫자 값과 비트 값 비교를 위한 숫자 값입니다. 일반적으로 이러한 비교 작업 **은 and,** **or** 등의 비트 논리 연산자를 사용 하 여 수행 되며 **&** c + +의 **&#124;** Visual Basic.  
   
  예를 들어 ADO **FieldAttributeEnum** 값을 비트 마스크로 사용 하 여 필드의 특성을 확인할 수 있습니다. 필드를 업데이트할 수 있는지 여부를 확인 하 려 한다고 가정 합니다. Visual Basic에서 다음 식을 사용 하 여이를 테스트할 수 있습니다.`Field.Attributes AND adFldUpdatable`  
   
@@ -100,7 +100,7 @@ ms.locfileid: "76925595"
  비교 연산자  
  두 식을 비교 하 고 부울 값을 반환 하는 연산자입니다.  
   
- ">" (보다 큼), "\<" (보다 작음), "=" (같음), ">=" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.  
+ ">" (보다 큼), " \< " (보다 작음), "=" (같음), ">=" (크거나 같음), "<=" (작거나 같음), "<>" (같지 않음) 또는 "like" (패턴 일치)로 표현 될 수 있는 조건 매개 변수입니다.  
   
  구성 요소  
  데이터와 코드를 모두 캡슐화 하 고 공개적으로 사용 가능한 서비스의 잘 지정 된 집합을 제공 하는 개체입니다.  
@@ -186,7 +186,7 @@ ms.locfileid: "76925595"
  ISAPI (인터넷 서버 응용 프로그래밍 인터페이스)  
  IIS (Microsoft® 인터넷 정보 서비스)를 실행 하는 Windows NT® Server/Windows 2000 서버와 같은 인터넷 서버용 함수 집합입니다.  
   
- 키  
+ Key  
  행을 고유 하 게 식별 하는 테이블의 열입니다. 테이블을 인덱싱하는 데 자주 사용 됩니다.  
   
 ## <a name="m"></a>M  

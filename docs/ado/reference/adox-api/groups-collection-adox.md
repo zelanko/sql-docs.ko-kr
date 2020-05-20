@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966180"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764854"
 ---
 # <a name="groups-collection-adox"></a>Groups 컬렉션(ADOX)
 카탈로그나 사용자의 모든 저장 된 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체를 포함 합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "67966180"
 ## <a name="remarks"></a>설명  
  [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 의 **Groups** 컬렉션은 모든 카탈로그 그룹 계정을 나타냅니다. [사용자](../../../ado/reference/adox-api/user-object-adox.md) 에 대 한 **그룹** 컬렉션은 사용자가 속한 그룹만 나타냅니다.  
   
- **그룹** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드는 ADOX에 대해 고유 합니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ **그룹** 컬렉션에 대 한 [APPEND](../../../ado/reference/adox-api/append-method-adox-groups.md) 메서드는 ADOX에 대해 고유 합니다. 다음을 수행할 수 있습니다.  
   
 -   **Append** 메서드를 사용 하 여 컬렉션에 새 보안 그룹을 추가 합니다.  
   
- 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음과 같은 작업을 수행할 수 있습니다.  
+ 나머지 속성 및 메서드는 ADO 컬렉션의 표준입니다. 다음을 수행할 수 있습니다.  
   
 -   [Item](../../../ado/reference/ado-api/item-property-ado.md) 속성을 사용 하 여 컬렉션의 그룹에 액세스 합니다.  
   

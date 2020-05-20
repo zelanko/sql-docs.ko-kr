@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimension object [ADO MD]
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d5b475600ef211d8203a64a1a2c6d917bb99914
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938535"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764304"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension 개체(ADO MD)
 하나 이상의 멤버 계층을 포함 하는 다차원 큐브의 차원 중 하나를 나타냅니다.  
@@ -38,12 +38,12 @@ ms.locfileid: "67938535"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |CubeName|큐브 이름입니다.|  
 |DefaultHierarchy|기본 계층의 고유한 이름입니다.|  
-|Description|큐브에 대 한 의미 있는 설명입니다.|  
+|설명|큐브에 대 한 의미 있는 설명입니다.|  
 |DimensionCaption|차원과 연결 된 레이블 또는 캡션입니다.|  
 |DimensionCardinality|차원의 멤버 수입니다.|  
 |DimensionGUID|차원의 GUID입니다.|  

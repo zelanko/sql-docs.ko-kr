@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919113"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765584"
 ---
 # <a name="delete-method-example-vbscript"></a>Delete 메서드 예제(VBScript)
 이 예제에서는 [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 지정 된 레코드를 제거 합니다.  

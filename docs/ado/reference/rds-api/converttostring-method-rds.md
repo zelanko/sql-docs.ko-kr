@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ConvertToString method [ADO]
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6eff6ae54dc5cc0b901cfb1da61244e30d963615
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964574"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764844"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 메서드(RDS)
 [레코드 집합을 레코드](../../../ado/reference/ado-api/recordset-object-ado.md) 집합 데이터를 나타내는 MIME 문자열로 변환 합니다.  

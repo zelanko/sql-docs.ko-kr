@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764714"
 ---
 # <a name="address-book-navigation-buttons"></a>주소록 탐색 단추
 주소록 응용 프로그램은 웹 페이지의 맨 아래에 탐색 단추를 표시 합니다. 탐색 단추를 사용 하 여 데이터의 첫 번째 또는 마지막 행을 선택 하거나 현재 선택 영역에 인접 한 행을 선택 하 여 HTML 그리드 표시의 데이터를 탐색할 수 있습니다.  

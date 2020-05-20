@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Positions collection [ADO MD]
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28d0305daa755a501ff1214103b77a94bccff7ea
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949216"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765024"
 ---
 # <a name="positions-collection-ado-md"></a>Positions 컬렉션(ADO MD)
 축의 점을 정의 하는 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체를 포함 합니다.  

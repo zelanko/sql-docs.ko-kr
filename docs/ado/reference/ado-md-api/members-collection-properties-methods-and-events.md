@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Members collection [ADO MD], members
 ms.assetid: da2c0761-fe23-421b-acbf-d97dfa02d2b9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4e61574fb352a38b22141577c5f73229ae987792
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc801358c4b757d3444652b6ae03ea58cdfda250
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949424"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765131"
 ---
 # <a name="members-collection-properties-methods-and-events"></a>Members 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

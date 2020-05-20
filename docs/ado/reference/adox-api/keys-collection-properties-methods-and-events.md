@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Keys collection [ADOX], members
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 516a26466a4e817fc2fdabffadf8f19dc9593781
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2a7b1a104c9ab68ef380f4318ed983e61113866
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965801"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763844"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

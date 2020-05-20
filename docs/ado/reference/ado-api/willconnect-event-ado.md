@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WillConnect event [ADO]
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73798796af7629e70dda86bd0e264ec325be8a0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945854"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764464"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트(ADO)
 **WillConnect** 이벤트는 연결을 시작 하기 전에 호출 됩니다.  
@@ -45,7 +45,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *암호*  
  보류 중인 연결에 대 한 암호를 포함 하는 **문자열** 입니다.  
   
- *옵션*  
+ *Options*  
  공급자가 *ConnectionString*을 평가 하는 방법을 나타내는 **Long** 값입니다. 유일한 옵션은 **adAsyncOpen**입니다.  
   
  *adStatus*  

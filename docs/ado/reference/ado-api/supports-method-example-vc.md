@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 242b9888239ee2261014e47a13a347cb3bfcd421
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936712"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765374"
 ---
 # <a name="supports-method-example-vc"></a>Supports 메서드 예제(VC++)
 이 예제에서는 [Supports](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 예제를 실행 하려면 DisplaySupport 함수가 필요 합니다.  

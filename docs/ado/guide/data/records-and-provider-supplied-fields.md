@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924512"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764794"
 ---
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 공급자 제공 필드
 [Record](../../../ado/reference/ado-api/record-object-ado.md) 개체를 열면 해당 원본은 열린 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체와 함께 열린 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 행, 절대 url 또는 상대 url 일 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "67924512"
 ## <a name="resource-recordset-columns"></a>리소스 레코드 집합 열  
  *리소스 레코드 집합* 은 다음과 같은 열로 구성 됩니다.  
   
-|열 이름|Type|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|읽기 전용입니다. 리소스의 URL을 나타냅니다.|  
 |RESOURCE_PARENTNAME|AdVarWChar|읽기 전용입니다. 부모 레코드의 절대 URL을 나타냅니다.|  
@@ -63,7 +63,7 @@ ms.locfileid: "67924512"
 |RESOURCE_ISHIDDEN|AdBoolean|리소스가 숨겨져 있으면 True입니다. 행 집합을 만드는 명령이 RESOURCE_ISHIDDEN가 True 인 행을 명시적으로 선택 하지 않으면 행이 반환 되지 않습니다.|  
 |RESOURCE_ISREADONLY|AdBoolean|리소스가 읽기 전용 이면 True입니다. DBBINDFLAG_WRITE를 사용 하 여이 리소스를 열려고 시도 하 고 DB_E_READONLY와 함께 실패 합니다. 리소스를 읽기용 으로만 연 경우에도이 속성을 편집할 수 있습니다.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|문서를 사용 하는 경우 (예: lawyer의 brief)를 나타냅니다. 이는 문서를 만드는 데 사용 된 Office 템플릿에 해당할 수 있습니다.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|"`text/html`"와 같은 형식을 나타내는 문서의 MIME 형식을 나타냅니다.|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|""와 같은 형식을 나타내는 문서의 MIME 형식을 나타냅니다 `text/html` .|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|콘텐츠가 저장 되는 언어를 나타냅니다.|  
 |RESOURCE_CREATIONTIME|adFileTime|읽기 전용입니다. 리소스를 만든 시간을 포함 하는 FILETIME 구조체를 나타냅니다. 시간은 UTC (협정 세계시) 형식으로 보고 됩니다.|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|읽기 전용입니다. 리소스를 마지막으로 액세스 한 시간을 포함 하는 FILETIME 구조체를 나타냅니다. 시간은 UTC 형식입니다. 공급자가이 시간 멤버를 지원 하지 않는 경우 FILETIME 멤버가 0입니다.|  

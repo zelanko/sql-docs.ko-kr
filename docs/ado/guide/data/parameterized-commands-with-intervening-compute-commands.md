@@ -13,14 +13,14 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924720"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764784"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>중간에 COMPUTE 명령을 사용한 매개 변수화된 명령
 매개 변수가 있는 일반적인 shape APPEND 명령에는 쿼리 명령을 사용 하 여 부모 **레코드 집합** 을 만드는 절과 매개 변수가 있는 쿼리 명령, 즉 매개 변수 자리 표시자 (물음표, "?")가 포함 된 명령이 포함 된 하위 **레코드 집합** 을 만드는 다른 절이 있습니다. 결과를 생성 하는 **레코드 집합** 에는 부모가 상위 수준으로 차지 하 고 자식은 하위 수준을 차지 하는 두 가지 수준이 있습니다.  

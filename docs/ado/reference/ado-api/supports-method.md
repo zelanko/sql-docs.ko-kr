@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3fbfbf28c430fb698f5e024fe3359027c84512c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936701"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765364"
 ---
 # <a name="supports-method"></a>Supports 메서드
 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가 특정 유형의 기능을 지원 하는지 여부를 확인 합니다.  

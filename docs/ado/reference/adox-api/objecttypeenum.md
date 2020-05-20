@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - ObjectTypeEnum enumeration [ADOX]
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d493218f31965c04b5a64321c4a1bf87a2518f6f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965657"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763794"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 사용 권한이 나 소유권을 설정할 데이터베이스 개체의 유형을 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|개체는 열입니다.|  
 |**adPermObjDatabase**|3|개체가 데이터베이스입니다.|  

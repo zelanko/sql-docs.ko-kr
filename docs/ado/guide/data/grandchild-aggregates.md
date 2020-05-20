@@ -11,14 +11,14 @@ helpviewer_keywords:
 - grandchild aggregates [ADO]
 - data shaping [ADO], grandchild aggregates
 ms.assetid: 4162d35f-2ce1-4218-80a5-b6933348837e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac0b06479b3ad4feedaa63bdac227d028b7a9e09
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 148a2798d04bc7ec41832e5103d8ec097ffa9a0c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925234"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764824"
 ---
 # <a name="grandchild-aggregates"></a>최하위 집계
 셰이프 명령의 절에 생성 된 장 열에는 일반적으로 AS 키워드를 사용 하 여 *챕터 별칭 이름을* 지정할 수 있습니다. 열을 포함 하는 자식을 식별 하는 정규화 된 이름을 사용 하 여 모양 있는 **레코드 집합** 의 모든 챕터에 있는 모든 열을 식별할 수 있습니다. 예를 들어, 부모 챕터 chap1에 amount 열인 amt가 있는 자식 장 chap2이 포함 된 경우 정규화 된 이름은 chap1입니다. 그런 다음 정규화 된 이름을 집계 함수 (SUM, AVG, MAX, MIN, COUNT, STDEV 또는 ANY) 중 하나에 대 한 인수로 사용할 수 있습니다.  

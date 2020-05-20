@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Dimension object [ADO MD], members
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 29f5b7e001fe764c026841da11895a5bc1881b0d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938528"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764294"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  

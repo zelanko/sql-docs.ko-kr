@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], specifying server program
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6cecddfe127bba43852412b6d804254f35103def
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922111"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764694"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>1단계: 서버 프로그램 지정(RDS 자습서)
 가장 일반적인 경우에는 RDS를 사용 합니다 [. 공간](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체 [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) 방법 기본 서버 프로그램, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)또는 사용자 지정 서버 프로그램 (비즈니스 개체)을 지정 합니다. 서버 프로그램은 서버에서 인스턴스화되고 서버 프로그램 또는 *프록시*에 대 한 참조가 반환 됩니다.  

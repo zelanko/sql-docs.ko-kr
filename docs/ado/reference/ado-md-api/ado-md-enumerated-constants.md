@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 450f1d8748b6f9300a353892f3ca321c82732602
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939988"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765264"
 ---
 # <a name="ado-md-enumerated-constants"></a>ADO MD 열거 상수
 디버깅을 지원 하기 위해 ADO MD 열거형 상수에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADO MD의 릴리스 간에 변경 될 수 있습니다. 코드는 열거 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  

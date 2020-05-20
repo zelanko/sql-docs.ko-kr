@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8aec1ebbb5d83829431e1045e746c99f1569dc48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922033"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764634"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>주소록 애플리케이션에 대한 시스템 요구 사항
 주소록 샘플 응용 프로그램을 설정 하려면 다음 소프트웨어 및 데이터베이스 요구 사항을 충족 해야 합니다.  

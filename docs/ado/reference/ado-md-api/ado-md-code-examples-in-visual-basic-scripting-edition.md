@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad4aac57c2876c8f924044f0f27da79ebdb1d72c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947417"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765319"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic의 ADO MD코드 예제, 스크립팅 버전
 다음 예에서는 Microsoft Internet Information Server 4.0 용 Microsoft Active Server Pages (ASP)를 요구 합니다.  

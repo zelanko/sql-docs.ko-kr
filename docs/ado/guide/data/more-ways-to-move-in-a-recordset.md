@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924885"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764814"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>레코드 집합에서 이동하는 추가 방법
 다음 네 가지 방법을 사용 하 여 **레코드 집합**에서 이동 하거나 스크롤할 수 있습니다. [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). 이러한 메서드 중 일부는 앞 으로만 이동 가능한 커서에서 사용할 수 없습니다.  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- **레코드 집합** 을 필터링 하거나 정렬 하 고 현재 레코드의 데이터를 변경한 경우 위치가 변경 될 수도 있습니다. 이러한 경우 **MoveNext** 메서드는 정상적으로 작동 하지만 위치는 이전 위치가 아니라 새 위치에서 앞으로 한 레코드를 이동 한다는 점에 주의 해야 합니다. 예를 들어 레코드를 정렬 된 **레코드 집합**의 끝으로 이동 하는 등의 방법으로 현재 레코드의 데이터를 변경 하면 **MoveNext** 를 호출 하면 ADO에서 현재 레코드를 **레코드 집합** 에서 마지막 레코드의 위치 (**EOF** = **True**)로 설정 하는 것을 의미 합니다.  
+ **레코드 집합** 을 필터링 하거나 정렬 하 고 현재 레코드의 데이터를 변경한 경우 위치가 변경 될 수도 있습니다. 이러한 경우 **MoveNext** 메서드는 정상적으로 작동 하지만 위치는 이전 위치가 아니라 새 위치에서 앞으로 한 레코드를 이동 한다는 점에 주의 해야 합니다. 예를 들어 레코드를 정렬 된 **레코드 집합**의 끝으로 이동 하는 등의 방법으로 현재 레코드의 데이터를 변경 하면 **MoveNext** 를 호출 하면 ADO에서 현재 레코드를 **레코드 집합** 에서 마지막 레코드의 위치 (**EOF**  =  **True**)로 설정 하는 것을 의미 합니다.  
   
  **레코드** 집합 개체에 대 한 다양 한 Move 메서드의 동작은 **레코드 집합**내의 데이터에 대 한 일부 범위에 따라 다릅니다. **레코드 집합** 에 추가 되는 새 레코드는 처음에 데이터 원본에 의해 정의 되 고 새 레코드의 데이터에 대해 암시적 또는 명시적으로 종속 될 수 있는 특정 순서로 추가 됩니다. 예를 들어 **레코드 집합**을 채우는 쿼리 내에서 정렬 또는 조인이 수행 되 면 새 레코드가 **레코드 집합**내의 적절 한 위치로 삽입 됩니다. **레코드 집합**을 만들 때 정렬이 명시적으로 지정 되지 않은 경우에는 데이터 원본 구현의 변경으로 인해 반환 되는 행의 순서가 실수로 변경 될 수 있습니다. 또한 **레코드 집합** 의 정렬, 필터링 및 편집 함수는 순서에 영향을 줄 수 있으며 레코드 집합의 행이 표시 될 수도 있습니다.  
   

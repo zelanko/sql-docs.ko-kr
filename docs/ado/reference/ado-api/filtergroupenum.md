@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97add08a1d656e8c163600bb0ea8dda7fca264b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932640"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764514"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 레코드 [집합](../../../ado/reference/ado-api/recordset-object-ado.md)에서 필터링 할 레코드 그룹을 지정 합니다.  

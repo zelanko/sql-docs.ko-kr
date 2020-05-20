@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADOX]
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 84a03af49152bc305f62aceb149d904ef0acf9a0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928551"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764144"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 디버깅을 지원 하기 위해 ADOX 열거 상수에는 각 상수에 대 한 값이 나열 됩니다. 그러나이 값은 전적으로 advise 이며 ADOX의 한 릴리스에서 다른 릴리스로 변경 될 수 있습니다. 코드는 열거 상수의 실제 값이 아닌 이름에만 의존 해야 합니다.  
   
  다음 열거 상수가 정의 됩니다.  
   
-|열거형|Description|  
+|열거형|설명|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|**SetPermissions** 가 호출 될 때 수행할 동작의 유형을 지정 합니다.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 값이 있는 레코드를 인덱싱할 지 여부를 지정 합니다.|  

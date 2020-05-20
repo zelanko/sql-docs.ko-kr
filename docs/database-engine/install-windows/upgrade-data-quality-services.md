@@ -25,7 +25,7 @@ ms.locfileid: "67934852"
   
 > [!IMPORTANT]
 >  -   스키마 업그레이드 중에 데이터 손실을 방지하기 위해 DQS를 업그레이드하기 전에 DQS 데이터베이스를 백업해야 합니다. DQS 데이터베이스 백업에 대한 자세한 내용은 [Backing Up and Restoring DQS Databases](../../data-quality-services/backing-up-and-restoring-dqs-databases.md)을 참조하십시오.  
-> -   현재 또는 이전 버전의 Data Quality Client 또는 Integration Services의 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]DQS 정리 변환[을 사용하여 ](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md) Data Quality 서버에 연결하면 데이터 품질 태스크를 수행할 수 있습니다.  
+> -   현재 또는 이전 버전의 Data Quality Client 또는 Integration Services의 [DQS 정리 변환](../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)을 사용하여 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality 서버에 연결하면 데이터 품질 태스크를 수행할 수 있습니다.  
 > -   Data Quality Services 및 Master Data Services를 업그레이드한 후에는 이전 버전의 Excel용 Master Data Services 추가 기능이 더 이상 작동하지 않습니다. [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](https://go.microsoft.com/fwlink/?LinkID=506665)서 다운로드할 수 있습니다.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  

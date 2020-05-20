@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 16fdefcb06d2b1b90dfc3da39aaf6b1c9659debc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0a0090a24207e6faad1b14aa3cb5afd6091bc87
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965740"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763814"
 ---
 # <a name="numericscale-property-adox"></a>NumericScale 속성(ADOX)
 열에 있는 숫자 값의 소수 자릿수를 나타냅니다.  

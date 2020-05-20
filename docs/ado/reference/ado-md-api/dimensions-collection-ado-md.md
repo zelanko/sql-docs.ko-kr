@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Dimensions collection [ADO MD]
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91d535097ce43b910aac24afc841d2a061d29956
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949770"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764274"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions 컬렉션(ADO MD)
 큐브를 구성 하는 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 개체를 포함 합니다.  

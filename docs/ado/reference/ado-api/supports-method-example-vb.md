@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e5b9fd4327a25af3faf87b966c510d1d4016c89d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67911704"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765384"
 ---
 # <a name="supports-method-example-vb"></a>Supports 메서드 예제(VB)
 이 예제에서는 [Supports](../../../ado/reference/ado-api/supports-method.md) 메서드를 사용 하 여 다른 커서 유형으로 열린 레코드 집합에서 지원 되는 옵션을 표시 합니다. 이 절차를 실행 하려면 DisplaySupport 절차가 필요 합니다.  

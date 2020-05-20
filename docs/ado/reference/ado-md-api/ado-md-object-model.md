@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, object model
 ms.assetid: 6242b374-091b-406f-827a-c0dcd3e1967a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68a4b4a11c8662cfdd3df19aa99cdc2e749f1de9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 69536f73c26a51debe4e53ea123c8b73fcd0488e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930598"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765274"
 ---
 # <a name="ado-md-object-model"></a>ADO MD 개체 모델
 이 항목에서는 ADO MD에서 개체를 표시 하 고 관련 하는 방법에 대해 설명 합니다.  

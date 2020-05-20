@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Caption property [ADO MD]
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79b8108f832e70aca4620c35c95e34952b4a0268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930481"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765164"
 ---
 # <a name="caption-property-ado-md"></a>Caption 속성(ADO MD)
 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 또는 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체를 표시할 때 사용할 텍스트 캡션을 나타냅니다.  

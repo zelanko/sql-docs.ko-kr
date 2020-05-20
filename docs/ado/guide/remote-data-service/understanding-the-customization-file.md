@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2edcfaaae08da97eccfe7b9a570716a2dfedfc2c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921965"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764614"
 ---
 # <a name="understanding-the-customization-file"></a>사용자 지정 파일 이해
 사용자 지정 파일의 각 섹션 헤더는 형식 및 매개 변수를 포함 하는 대괄호 (**[]**)로 구성 됩니다. 네 가지 섹션 형식은 **connect**, **sql**, **userlist**또는 **logs**리터럴 문자열로 표시 됩니다. 매개 변수는 리터럴 문자열, 기본값, 사용자 지정 식별자 또는 nothing입니다.  
@@ -48,7 +48,7 @@ identifier
 |**userlist**|특정 사용자의 액세스 권한을 수정 하는 리터럴 문자열입니다.|  
 |**로그온**|작업 오류를 기록 하는 로그 파일을 지정 하는 리터럴 문자열입니다.|  
 |**default**|지정 된 식별자가 없거나 없는 경우 사용 되는 리터럴 문자열입니다.|  
-|*한정자*|**Connect** 또는 **command** 문자열의 문자열과 일치 하는 문자열입니다.<br /><br /> -섹션 헤더에 **connect** 가 있고 식별자 문자열이 연결 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **sql** 이 포함 되어 있고 식별자 문자열이 명령 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **userlist** 가 포함 되어 있고 식별자 문자열이 **connect** 섹션 식별자와 일치 하는 경우이 섹션을 사용 합니다.|  
+|*identifier*|**Connect** 또는 **command** 문자열의 문자열과 일치 하는 문자열입니다.<br /><br /> -섹션 헤더에 **connect** 가 있고 식별자 문자열이 연결 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **sql** 이 포함 되어 있고 식별자 문자열이 명령 문자열에 있는 경우이 섹션을 사용 합니다.<br />-섹션 헤더에 **userlist** 가 포함 되어 있고 식별자 문자열이 **connect** 섹션 식별자와 일치 하는 경우이 섹션을 사용 합니다.|  
   
  **DataFactory** 는 클라이언트 매개 변수를 전달 하 여 처리기를 호출 합니다. 처리기는 해당 섹션 헤더의 식별자와 일치 하는 클라이언트 매개 변수에서 전체 문자열을 검색 합니다. 일치 하는 항목이 발견 되 면 해당 섹션의 내용이 클라이언트 매개 변수에 적용 됩니다.  
   

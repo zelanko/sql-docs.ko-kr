@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Seek method [ADO]
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3e2ee81ac2ede53eb4fdbcfe8d3b5987db96f1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a96c8054d83fa0ecff4cc3fed3a1227f300f7e2e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917008"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765404"
 ---
 # <a name="seek-method"></a>Seek 메서드
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 인덱스를 검색 하 여 지정 된 값과 일치 하는 행을 빠르게 찾고 현재 행 위치를 해당 행으로 변경 합니다.  

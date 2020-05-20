@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b653bd79c6e6e27dee30a4f11385f457717364a2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930557"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765234"
 ---
 # <a name="ado-md-properties"></a>ADO MD 속성
 
@@ -42,7 +42,7 @@ ms.locfileid: "67930557"
 |[이름](../../../ado/reference/ado-md-api/name-property-ado-md.md)|개체의 이름을 나타냅니다.|  
 |[서 수 (셀)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)|셀 집합의 위치를 기준으로 셀을 고유 하 게 식별 합니다.|  
 |[서 수 (위치)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|축을 따라 위치를 고유 하 게 식별 합니다.|  
-|[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|계층에서 현재 멤버의 부모인 멤버를 나타냅니다.|  
+|[부모](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|계층에서 현재 멤버의 부모인 멤버를 나타냅니다.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|이 위치 멤버의 부모가 바로 앞에 있는 멤버의 부모와 같은지 여부를 나타냅니다.|  
 |[소스](../../../ado/reference/ado-md-api/source-property-ado-md.md)|셀 집합의 데이터 원본을 나타냅니다.|  
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|셀 집합의 현재 상태를 나타냅니다.|  

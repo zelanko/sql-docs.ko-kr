@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDef object [ADO MD]
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 25dd4d6a9c8a5518c8c2b637af63b39e7b992557
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764354"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 개체(ADO MD)
 관련 차원 집합을 포함 하는 다차원 스키마의 큐브를 나타냅니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "67949796"
   
  **속성** 컬렉션에는 공급자가 제공한 속성이 포함 되어 있습니다. 다음 표에서는 사용할 수 있는 속성을 보여 줍니다. 실제 속성 목록은 공급자의 구현에 따라 다를 수 있습니다. 사용 가능한 속성의 전체 목록은 공급자 설명서를 참조 하세요.  
   
-|속성|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |Adventureworks.createdon|큐브를 만든 날짜와 시간입니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67949796"
 |CubeName|큐브 이름입니다.|  
 |자세한 유형|큐브의 유형입니다.|  
 |DataUpdatedBy|마지막 데이터 업데이트를 수행 하는 사용자의 사용자 ID입니다.|  
-|Description|큐브에 대 한 의미 있는 설명입니다.|  
+|설명|큐브에 대 한 의미 있는 설명입니다.|  
 |LastSchemaUpdate|스키마가 마지막으로 업데이트 된 날짜 및 시간입니다.|  
 |SchemaName|이 큐브가 속한 스키마의 이름입니다.|  
 |SchemaUpdatedBy|마지막 스키마 업데이트를 수행 하는 사용자의 사용자 ID입니다.|  

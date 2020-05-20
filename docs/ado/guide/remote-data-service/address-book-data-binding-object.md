@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], data-binding object
 - address book application scenario [ADO], data-binding object
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 71b1897830c4a5382e6903f5e05aa29d1ce37d1b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922970"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764734"
 ---
 # <a name="address-book-data-binding-object"></a>주소록 데이터 바인딩 개체
 주소록 응용 프로그램은 RDS를 사용 합니다 [. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)응용 프로그램의 클라이언트 HTML 페이지에서 SQL Server 데이터베이스의 시각적 개체 (이 경우 DHTML 테이블)에 데이터를 바인딩하는 DataControl 개체입니다. 이벤트 기반 VBScript 프로그램 논리는 RDS를 사용 합니다 [. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) :  
@@ -50,7 +50,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>일반 개체 태그 매개 변수  
  다음 표에서는 개체 태그와 연결 된 매개 변수에 대해 설명 합니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |***CLASSID***|시스템에 포함 된 개체의 유형을 식별 하는 고유 128 비트 번호입니다. 이 식별자는 로컬 컴퓨터의 시스템 레지스트리에서 유지 관리 됩니다. (RDS의 클래스 Id에 해당 **합니다. DataControl** 개체 RDS를 참조 하십시오 [. DataControl 개체](../../../ado/reference/rds-api/datacontrol-object-rds.md)입니다.|  
 |***ID***|코드에서이를 식별 하는 데 사용 되는 포함 된 개체의 문서 전체 식별자를 정의 합니다.|  
@@ -58,9 +58,9 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDS. DataControl 태그 매개 변수  
  다음 표에서는 RDS와 관련 된 매개 변수에 대해 설명 합니다 **. DataControl** 개체입니다. (RDS의 전체 목록은 ** DataControl** 개체 매개 변수 및이 매개 변수를 구현 하는 경우 RDS를 참조 하세요 [. DataControl 개체](../../../ado/reference/rds-api/datacontrol-object-rds.md)입니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
-|[서버인](../../../ado/reference/rds-api/server-property-rds.md)|HTTP를 사용 하는 경우이 값은 앞에 오는 서버 컴퓨터의 이름입니다 `https://`.|  
+|[서버인](../../../ado/reference/rds-api/server-property-rds.md)|HTTP를 사용 하는 경우이 값은 앞에 오는 서버 컴퓨터의 이름입니다 `https://` .|  
 |[연결할지](../../../ado/reference/rds-api/connect-property-rds.md)|RDS에 필요한 연결 정보를 제공 합니다 **. **SQL Server에 연결 하는 DataControl입니다.|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 검색 하는 데 사용 되는 쿼리 문자열을 설정 하거나 반환 합니다.|  
   
