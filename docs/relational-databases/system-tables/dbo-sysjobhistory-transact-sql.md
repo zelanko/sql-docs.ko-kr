@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobhistory system table
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cc488958513f4a84ac776ff26f1fe2c867f8fa74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2ff3c872b195123608c12515fb3c19a03c3e3f44
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76761837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807126"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "76761837"
 
 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|행의 고유한 식별자입니다.|  
 |**job_id**|**uniqueidentifier**|작업 ID입니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "76761837"
 |**서버인**|**sysname**|작업이 실행된 서버의 이름입니다.|  
   
   ## <a name="example"></a>예제
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 **run_time** 및 **run_duration** 열을 보다 사용자에 게 친숙 한 형식으로 변환 합니다.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]스크립트를 실행 합니다.
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 **run_time** 및 **run_duration** 열을 보다 사용자에 게 친숙 한 형식으로 변환 합니다.  에서 스크립트를 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.
  
  ```sql
  SET NOCOUNT ON;

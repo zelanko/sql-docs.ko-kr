@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50bc55ab39f61e8c1588770b3b1a0adec82d6f53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70026202"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806951"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 특정 작업과 하나 이상의 대상 서버와의 연관 또는 관계를 저장합니다. 이 테이블은 msdb 데이터베이스에 저장됩니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |job_id|**uniqueidentifier**|작업 ID입니다.|  
 |server_id|**int**|서버 ID입니다.|  
@@ -39,7 +39,7 @@ ms.locfileid: "70026202"
 |last_outcome_ 메시지|**nvarchar(1024)**|last_run_outcome 열과 연관된 메시지(있는 경우)입니다.|  
 |last_run_date|**int**|작업을 마지막으로 실행한 날짜입니다.|  
 |last_run_time|**int**|작업을 마지막으로 실행한 시간입니다.|  
-|last_run_duration|**int**|작업의 실행 시간(시, 분, 초)입니다. (*시간*\*1만) + (*분*\*100) + *초*수식을 사용 하 여 계산 됩니다.|  
+|last_run_duration|**int**|작업의 실행 시간(시, 분, 초)입니다. (*시간* \* 1만) + (*분* \* 100) + *초*수식을 사용 하 여 계산 됩니다.|  
 
 
 ## <a name="remarks"></a>설명

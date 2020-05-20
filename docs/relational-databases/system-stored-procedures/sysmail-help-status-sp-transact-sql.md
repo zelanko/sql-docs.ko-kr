@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_status_sp
 ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6822b1624934bf7e48dbeca777c568be65c57310
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044465"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807463"
 ---
 # <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,11 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**상태**|**nvarchar (7)**|데이터베이스 메일의 상태입니다. 가능한 값은 **시작** 및 **중지**됨입니다.|  
+|**Status**|**nvarchar (7)**|데이터베이스 메일의 상태입니다. 가능한 값은 **시작** 및 **중지**됨입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만이 프로시저에 액세스할 수 있습니다.  
   
 ## <a name="examples"></a>예  

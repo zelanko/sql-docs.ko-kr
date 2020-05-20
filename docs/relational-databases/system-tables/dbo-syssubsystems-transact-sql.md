@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - syssubsystems system table
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ff13af62635273773551ded6df3175bc80157a45
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68069080"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806634"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   모든 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 하위 시스템에 대한 정보를 포함합니다. **Syssubsystems 시스템** 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|하위 시스템의 ID입니다.|  
 |**하위**|**nvarchar(40)**|하위 시스템의 이름입니다.|  
