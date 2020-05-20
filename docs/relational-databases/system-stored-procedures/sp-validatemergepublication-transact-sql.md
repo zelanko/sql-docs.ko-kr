@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergepublication
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 02ffdd0facfedd1b9eb6d8eee083f819566d818d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6a0ca36329c8ddb68c9727fe1b9d2cf17674c93a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72006098"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808874"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**\@게시 =**] **'***게시***'**  
+ [** \@ 게시 =**] **'***게시***'**  
  게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @level = ] level`수행할 유효성 검사의 유형입니다. *level* 은 **tinyint**이며 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
@@ -46,7 +46,7 @@ sp_validatemergepublication [@publication=] 'publication'
 |수준 값|Description|  
 |-----------------|-----------------|  
 |**1**|행 개수의 유효성만 검사합니다.|  
-|**2**|행 개수 및 체크섬의 유효성을 검사합니다. 구독자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 경우이는 자동으로 **3**으로 설정 됩니다.|  
+|**2**|행 개수 및 체크섬의 유효성을 검사합니다. 구독자의 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이는 자동으로 **3**으로 설정 됩니다.|  
 |**3**|권장 값입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -55,7 +55,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_validatemergepublication** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_validatemergepublication**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

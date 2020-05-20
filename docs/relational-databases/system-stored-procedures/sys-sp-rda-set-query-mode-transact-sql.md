@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 06690f79bf2cc708a83ec272906b3f4be09fe03d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278328"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807839"
 ---
 # <a name="syssp_rda_set_query_mode-transact-sql"></a>sys. sp_rda_set_query_mode (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @mode = ] * \@모드*  
+ [ @mode =] * \@ 모드*  
  는 다음 값 중 하나입니다.  
   
 -   **사용 안 함** 스트레치 사용 테이블에 대 한 모든 쿼리가 실패 합니다.  
@@ -48,13 +48,13 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리는 로컬 및 원격 데이터를 모두 반환 합니다. 기본 동작입니다.  
   
- [ @force = ]  * \@force*  
+ [ @force =] * \@ force*  
  는 유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

@@ -63,7 +63,7 @@ Azure Active Directory 인증을 지원하기 위해 다음과 같은 연결 문
 > ADO 애플리케이션 및 `IDataInitialize::GetDataSource`를 통해 `IDBInitialize` 인터페이스를 가져오는 애플리케이션에서는 인터페이스를 구현하는 핵심 구성 요소가 명시적으로 암호화를 기본값 `no`로 설정합니다. 따라서 새 인증 속성/키워드가 이 설정을 준수하고 암호화 값이 재정의되지 **않습니다**. 따라서 이러한 애플리케이션이 명시적으로 `Use Encryption for Data=true`를 설정하여 기본값을 재정의할 것을 **권장**합니다.
 
 ### <a name="certificate-validation"></a>인증서의 유효성 검사
-보안을 개선하기 위해 새 연결 속성/키워드는 **클라이언트 암호화 설정과 관계없이** `TrustServerCertificate` 설정(및 해당 연결 문자열 키워드/속성)을 준수합니다. 따라서 서버 인증서는 기본적으로 유효성이 검사됩니다.
+보안을 개선하기 위해 새 연결 속성/키워드는 **클라이언트 암호화 설정과 관계없이**`TrustServerCertificate` 설정(및 해당 연결 문자열 키워드/속성)을 준수합니다. 따라서 서버 인증서는 기본적으로 유효성이 검사됩니다.
 
 > [!NOTE]   
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2` 레지스트리 항목의 `Value` 필드를 통해 인증서 유효성 검사를 제어할 수도 있습니다. 유효한 값은 `0` 또는 `1`입니다. OLE DB 드라이버는 레지스트리와 연결 속성/키워드 설정 사이에서 가장 안전한 옵션을 선택합니다. 즉, 레지스트리/연결 설정 중 하나 이상에서 서버 인증서 유효성 검사를 사용하도록 설정하면 드라이버가 서버 인증서의 유효성을 검사합니다.

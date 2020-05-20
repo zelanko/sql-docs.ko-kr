@@ -36,7 +36,7 @@ ms.locfileid: "74866336"
  보고서 서버 데이터베이스를 만들거나 구성하려면 여러 단계를 수행해야 합니다. 보고서 서버 데이터베이스를 만들기 전에 다음 항목을 지정하는 방법을 고려해야 합니다.  
   
  **데이터베이스 서버 선택**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;[ 항목에서 지원되는 버전 및 ](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)의 지원되는 버전을 검토합니다.  
+ [보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md) 항목에서 지원되는 버전 및 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 지원되는 버전을 검토합니다.  
   
  **TCP/IP 연결 설정**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대해 TCP/IP 연결을 설정하십시오. 일부 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전은 기본적으로 TCP/IP 연결을 설정하지 않습니다. 지침은 이 항목에 설명되어 있습니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "74866336"
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 **데이터베이스 로그인을 사용하여 연결하려면**데이터베이스 자격 증명[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "74866336"
   
     1.  인증 유형을 지정합니다.  
   
-         이미 정의된 **데이터베이스 로그인을 사용하여 연결하려면**데이터베이스 자격 증명[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
+         이미 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하여 연결하려면 **데이터베이스 자격 증명**을 선택합니다. 보고서 서버가 다른 도메인이나 트러스트되지 않은 도메인에 있는 컴퓨터 또는 방화벽 뒤에 있는 컴퓨터에 있는 경우 데이터베이스 자격 증명을 사용하는 것이 좋습니다.  
   
          컴퓨터와 보고서 서버에 대한 로그온 권한을 가진 최소 권한 도메인 사용자 계정이 있는 경우에는 **Windows 자격 증명** 을 선택합니다.  
   

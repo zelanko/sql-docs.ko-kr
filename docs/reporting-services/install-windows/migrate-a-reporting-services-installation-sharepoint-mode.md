@@ -42,7 +42,7 @@ ms.locfileid: "65570930"
 -   [SharePoint 2013에서 콘텐츠 데이터베이스 이동](https://technet.microsoft.com/library/cc262792.aspx).
   
 ##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> SQL Server 2012 이전의 Reporting Services SharePoint 모드 버전에서 마이그레이션  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 애플리케이션 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 이전 버전에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 SQL Server 2016 Reporting Services SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 서비스 애플리케이션 데이터베이스 스키마를 비롯한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SharePoint 모드 아키텍처가 변경되었습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전에서 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 모드로 마이그레이션하려면 먼저 SharePoint 및 SQL Server 2016 Reporting Services SharePoint 모드를 설치하여 새 SharePoint 환경을 만듭니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
   
  새 SharePoint 환경이 실행 중이면 콘텐츠 데이터베이스가 포함된 데이터베이스 수준에서 콘텐츠 전용 마이그레이션 또는 전체 마이그레이션을 선택할 수 있습니다.  
   

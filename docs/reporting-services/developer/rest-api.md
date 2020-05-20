@@ -30,7 +30,7 @@ REST API는 SQL Server 2017 Reporting Services 보고서 서버 카탈로그에 
 
 REST API 요청/응답 쌍은 5개의 구성 요소로 구분할 수 있습니다.
 
-* **으로 구성되는** 요청 URI`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. 요청 URI는 요청 메시지 헤더에 포함되어 있지만, 대부분 언어 또는 프레임워크는 요청 메시지에서 이를 별도로 전달해야 하기 때문에 여기에서는 별도로 분류합니다.
+* `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`으로 구성되는 **요청 URI**. 요청 URI는 요청 메시지 헤더에 포함되어 있지만, 대부분 언어 또는 프레임워크는 요청 메시지에서 이를 별도로 전달해야 하기 때문에 여기에서는 별도로 분류합니다.
 
     * URI 체계: 요청을 전송하는 데 사용되는 프로토콜을 나타냅니다. 예를 들어 `http` 또는 `https`입니다.
     * URI 호스트: `myserver.contoso.com`과 같이 REST 서비스 엔드포인트가 호스팅되는 서버의 도메인 이름 또는 IP 주소를 지정합니다.

@@ -66,8 +66,8 @@ ms.locfileid: "67995140"
 |11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
 |12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
 |13|DBTYPE_FILETIME에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. Windows FileTimeToSystemTime API를 사용하는 경우 소수 자릿수 초의 전체 자릿수는 1밀리초로 제한됩니다.|  
-|14|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]smalldatetime**에 대한**  이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
-|15|[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]datetime**에 대한**  이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
+|14|**smalldatetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 0으로 설정됩니다.|  
+|15|**datetime**에 대한 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 초는 가장 근사한 300초로 반올림됩니다.|  
 |16|SSVARIANT 클라이언트 구조에 포함된 값(지정된 형식)의 변환 동작은 SSVARIANT 클라이언트 구조에 포함되지 않은 동일한 값 및 형식의 동작과 같습니다.|  
   
 ||||  

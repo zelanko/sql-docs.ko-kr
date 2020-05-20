@@ -32,7 +32,7 @@ ms.locfileid: "75241667"
   
 -   **SQL Server 개체 탐색기**에서 데이터베이스 확장. 이 작업은 데이터베이스 모델 가져오기를 시작합니다.  
   
--   Transact**SQL 편집기의** 데이터베이스 업데이트\- 단추를 통해 데이터베이스에 변경 내용을 커밋하거나 스크립트 생성. 자세한 내용은 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)를 참조하세요.  
+-   Transact\-SQL 편집기의 **데이터베이스 업데이트** 단추를 통해 데이터베이스에 변경 내용을 커밋하거나 스크립트 생성. 자세한 내용은 [방법: 파워 버퍼를 사용하여 연결된 데이터베이스 업데이트](../ssdt/how-to-update-a-connected-database-with-power-buffer.md)를 참조하세요.  
   
 -   **SQL Server 개체 탐색기**에서 개체 삭제. 자세한 내용은 [방법: 개체 삭제 및 종속성 해결](../ssdt/how-to-delete-objects-and-resolve-dependencies.md)을 참조하세요.  
   

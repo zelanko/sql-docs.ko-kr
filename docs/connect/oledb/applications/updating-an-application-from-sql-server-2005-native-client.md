@@ -24,11 +24,11 @@ ms.locfileid: "67989252"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 이후에 OLE DB Driver for SQL Server에 대해 이루어진 주요 변경 사항을 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 이후에 OLE DB Driver for SQL Server에 대해 이루어진 주요 변경 사항을 설명합니다.  
 
  MDAC(Microsoft Data Access Components)에서 SQL Server용 OLE DB 드라이버로 업그레이드하는 경우에도 몇 가지 동작 차이점이 표시될 수 있습니다. 자세한 내용은 [MDAC에서 OLE DB Driver for SQL Server로 애플리케이션 업데이트](../../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)를 참조하세요.  
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client 9.0. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client 10.0.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]와 함께 제공되는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0.  
+ [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]와 함께 제공되는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0.  
 
 |[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client와 비교하여 OLE DB Driver for SQL Server의 동작이 변경됨|Description|  
 |------------------------------------------------------------------------------------|-----------------|  

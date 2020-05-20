@@ -33,10 +33,10 @@ ms.locfileid: "63193395"
  보고서 서버 어셈블리는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 제품의 일부인 코드를 포함하는 어셈블리입니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]는 관리 코드 어셈블리를 사용하여 작성됩니다. 이러한 모든 어셈블리에는 강력한 이름이 지정(디지털로 서명)됩니다. 이러한 어셈블리에 대한 코드 그룹은 어셈블리의 강력한 이름에 대한 공개 키 정보를 기반으로 증명 정보를 제공하는 **StrongNameMembershipCondition**을 사용하여 정의됩니다. 코드 그룹에는 **FullTrust** 권한 집합이 부여됩니다.  
   
 ## <a name="report-server-extensions-rendering-data-delivery-and-security"></a>보고서 서버 확장 프로그램(렌더링, 데이터, 배달 및 보안)  
- 보고서 서버 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 기능을 확장하기 위해 만드는 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램입니다. 확장하는 **구성 요소와 연결된 정책 구성 파일에서 이러한 확장 프로그램 또는 어셈블리 코드에**FullTrust[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]를 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 일부로 제공되는 확장 프로그램은 보고서 서버 공개 키로 서명되며 **FullTrust** 권한 집합을 받습니다.  
+ 보고서 서버 확장 프로그램은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 기능을 확장하기 위해 만드는 사용자 지정 데이터, 배달, 렌더링 및 보안 확장 프로그램입니다. 확장하는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 요소와 연결된 정책 구성 파일에서 이러한 확장 프로그램 또는 어셈블리 코드에 **FullTrust**를 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 일부로 제공되는 확장 프로그램은 보고서 서버 공개 키로 서명되며 **FullTrust** 권한 집합을 받습니다.  
   
 > [!IMPORTANT]  
->  타사 확장 프로그램에 대해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]FullTrust**를 허용하려면**  정책 구성 파일을 수정해야 합니다. 사용자 지정 확장 프로그램에 대해 **FullTrust**가 있는 코드 그룹을 추가하지 않으면 해당 확장 프로그램을 보고서 서버에서 사용할 수 없습니다.  
+>  타사 확장 프로그램에 대해 **FullTrust**를 허용하려면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 정책 구성 파일을 수정해야 합니다. 사용자 지정 확장 프로그램에 대해 **FullTrust**가 있는 코드 그룹을 추가하지 않으면 해당 확장 프로그램을 보고서 서버에서 사용할 수 없습니다.  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 정책 구성 파일에 대한 자세한 내용은 [Reporting Services 보안 정책 파일 사용](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)을 참조하세요.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63193395"
   
  **Execution** 권한을 사용하면 코드를 실행할 수 있지만 보호된 리소스는 사용할 수 없습니다. 보고서 내의 모든 식은 컴파일된 보고서의 일부로 저장되는 어셈블리("식 호스트" 어셈블리)로 컴파일됩니다. 보고서가 실행되면 보고서 서버는 식 호스트 어셈블리를 로드하고 해당 어셈블리를 호출하여 식을 실행합니다. 식 호스트 어셈블리는 모든 식 호스트에 대한 코드 그룹을 정의하는 데 사용되는 특정 키로 서명됩니다.  
   
- 보고서 식은 보고서 개체 모델 컬렉션(필드, 매개 변수 등)을 참조하고 산술 및 문자열 연산과 같은 간단한 태스크를 수행합니다. 이러한 간단한 연산을 수행하는 코드에는 **Execution** 권한만 필요합니다. 기본적으로 **에서** Code**요소의 사용자 정의 메서드 및 모든 사용자 지정 어셈블리에는**Execution[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 권한이 부여됩니다. 따라서 대부분의 식에서는 현재 구성에서 보안 정책 파일을 수정하지 않아도 됩니다. 식 호스트 어셈블리에 추가 권한을 부여하려면 관리자가 보고서 서버 및 보고서 디자이너의 정책 구성 파일을 수정하고 보고서 식 코드 그룹을 변경해야 합니다. 이는 전역 설정이므로 식 호스트에 대한 기본 권한을 변경하면 모든 보고서가 영향을 받습니다. 이러한 이유로 추가 보안이 필요한 모든 코드를 사용자 지정 어셈블리에 저장하는 것이 좋습니다. 그러면 이 어셈블리에만 사용자에게 필요한 권한이 부여됩니다.  
+ 보고서 식은 보고서 개체 모델 컬렉션(필드, 매개 변수 등)을 참조하고 산술 및 문자열 연산과 같은 간단한 태스크를 수행합니다. 이러한 간단한 연산을 수행하는 코드에는 **Execution** 권한만 필요합니다. 기본적으로 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 **Code** 요소의 사용자 정의 메서드 및 모든 사용자 지정 어셈블리에는 **Execution** 권한이 부여됩니다. 따라서 대부분의 식에서는 현재 구성에서 보안 정책 파일을 수정하지 않아도 됩니다. 식 호스트 어셈블리에 추가 권한을 부여하려면 관리자가 보고서 서버 및 보고서 디자이너의 정책 구성 파일을 수정하고 보고서 식 코드 그룹을 변경해야 합니다. 이는 전역 설정이므로 식 호스트에 대한 기본 권한을 변경하면 모든 보고서가 영향을 받습니다. 이러한 이유로 추가 보안이 필요한 모든 코드를 사용자 지정 어셈블리에 저장하는 것이 좋습니다. 그러면 이 어셈블리에만 사용자에게 필요한 권한이 부여됩니다.  
   
 > [!IMPORTANT]  
 >  외부 어셈블리 또는 보호된 리소스를 호출하는 코드는 보고서에서 사용할 수 있도록 사용자 지정 어셈블리에 통합되어야 합니다. 이렇게 하면 코드에 의해 요청 및 어설션되는 권한을 보다 자세히 제어할 수 있습니다. **Code** 요소 내에서는 보안 메서드를 호출하지 않아야 합니다. 이렇게 하려면 보고서 식 호스트에 **FullTrust**를 부여하고 모든 사용자 지정 코드에 CLR에 대한 모든 액세스 권한을 부여해야 합니다.  

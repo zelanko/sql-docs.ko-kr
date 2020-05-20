@@ -20,7 +20,7 @@ ms.locfileid: "63225686"
   SharePoint 팜에 두 번째 이상의 SharePoint 모드 보고서 서버를 추가하면 보고서 서버 처리 성능 및 응답 시간을 향상시킬 수 있습니다. 보고서 서버에 더 많은 사용자, 보고서 및 기타 애플리케이션을 추가할수록 성능이 저하되는 경우에는 보고서 서버를 추가하면 성능을 향상시킬 수 있습니다. 또한 하드웨어에 문제가 있거나 사용자 환경의 개별 서버에 대한 전반적인 관리를 수행하는 경우 보고서 서버의 가용성을 늘리기 위해 두 번째 보고서 서버를 추가하는 것이 좋습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 환경을 확장하는 단계는 표준 SharePoint 팜 배포를 따르며 SharePoint 부하 분산 기능을 이용합니다.  
   
 > [!IMPORTANT]  
->  일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장이 지원되지 않습니다. 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SQL Server 버전에서 지원하는 기능[의 ](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS) 섹션을 참조하세요.  
+>  일부 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]확장이 지원되지 않습니다. 자세한 내용은 [SQL Server 버전에서 지원하는 기능](~/sql-server/editions-and-components-of-sql-server-2017.md#SSRS)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 섹션을 참조하세요.  
   
 > [!TIP]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터는 서버를 추가하고 보고서 서버를 확장하는 데 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 포함된 SharePoint 서버가 팜에 추가되어 SharePoint 제품에서 보고서 서비스의 확장을 관리합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "63225686"
 ##  <a name="additional-configuration"></a><a name="bkmk_additional"></a> 기타 고려 사항  
  확장된 배포에서 백그라운드 처리만 수행하도록 개별 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서버를 최적화하여 대화형 보고서 실행과 리소스를 두고 경합하지 않도록 할 수 있습니다. 백그라운드 처리에는 일정, 구독 및 데이터 경고가 포함됩니다.  
   
- 개별 보고서 서버의 동작을 변경하려면 **RSreportServer.config\< 구성 파일에서** **IsWebServiceEnable>** 을 false로 설정합니다.  
+ 개별 보고서 서버의 동작을 변경하려면 **RSreportServer.config** 구성 파일에서 **\<IsWebServiceEnable>** 을 false로 설정합니다.  
   
  기본적으로 \<IsWebServiceEnable>을 TRUE로 설정하여 보고서 서버가 구성됩니다. 모든 서버가 TRUE로 구성된 경우 팜의 모든 노드에서 대화형 및 백그라운드의 로드 균형이 조정됩니다.  
   

@@ -33,10 +33,10 @@ ms.locfileid: "67988861"
 > [!NOTE]  
 >  큰 값 데이터 형식은 1-8KB의 최대 크기를 가질 수 있거나 무제한으로 지정될 수 있습니다.  
   
- 이전에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]text **,** ntext**및**image**와 같은**  데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 OLE DB Driver for SQL Server의 DBCOLUMNFLAGS_ISLONG 플래그가 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
+ 이전에는 **text**, **ntext** 및 **image**와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식만 이러한 길이에 도달할 수 있었습니다. **varchar**, **nvarchar** 및 **varbinary**에 대한 **max** 지정자로 인해 이러한 데이터 형식은 중복이 되었습니다. 그러나 긴 데이터 형식은 여전히 사용할 수 있으므로, OLE DB 데이터 액세스 구성 요소에 대한 대부분의 인터페이스는 동일하게 유지됩니다. 이전 릴리스와의 호환성을 위해 OLE DB Driver for SQL Server의 DBCOLUMNFLAGS_ISLONG 플래그가 계속 사용됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이상 버전 대해 작성된 공급자와 드라이버는 무제한 최대 길이로 설정된 경우 새 형식에 대해 계속 이러한 용어를 사용합니다.  
   
 > [!NOTE]  
->  저장 프로시저, 함수 반환 형식 또는 **CAST 및 CONVERT** 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)** , **nvarchar(max)** 및 [varbinary(max)](../../../t-sql/functions/cast-and-convert-transact-sql.md) 데이터 형식을 지정할 수도 있습니다.  
+>  저장 프로시저, 함수 반환 형식 또는 [CAST 및 CONVERT](../../../t-sql/functions/cast-and-convert-transact-sql.md) 함수의 입력 및 출력 매개 변수 형식으로 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 지정할 수도 있습니다.  
   
 > [!NOTE]  
 >  데이터를 복제할 경우 [최대 텍스트 복제 크기 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)을 -1로 구성해야 할 수 있습니다.  
@@ -44,9 +44,9 @@ ms.locfileid: "67988861"
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 
  SQL Server용 OLE DB 드라이버는 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
   
- **max** 크기가 무제한으로 설정된 열의 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
+ **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
  스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   

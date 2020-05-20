@@ -64,13 +64,13 @@ NLB 클러스터에서 스케일 아웃 배포를 실행하려면 사용자가 �
     <machineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`system.web`> 요소를 <`machineKey`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
+2. Reportserver에 대한 Web.config 파일을 열고 생성한 <`machineKey`> 요소를 <`system.web`> 섹션에 붙여넣습니다. 기본적으로 보고서 관리자 Web.config 파일은 \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config에 있습니다.  
   
 3. 파일을 저장합니다.  
   
 4. 스케일 아웃 배포의 각 보고서 서버에 대해 이전 단계를 반복합니다.  
   
-5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`machineKey`> 섹션에 동일한 <`system.web`> 요소가 포함되어 있는지 확인합니다.  
+5. \Reporting Services\Reportserver 폴더에 있는 모든 Web.Config 파일의 <`system.web`> 섹션에 동일한 <`machineKey`> 요소가 포함되어 있는지 확인합니다.  
 
 ::: moniker-end
 

@@ -24,7 +24,7 @@ ms.locfileid: "75255514"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>이름 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-이 대화 상자는 **파일\< 메뉴에서** **TableName> 저장<DiagramName>,** **저장<ViewName> 또는** **저장**을 선택하면 나타납니다.  
+이 대화 상자는 **파일** 메뉴에서 **\<TableName> 저장**, **<DiagramName> 저장** 또는 **<ViewName> 저장**을 선택하면 나타납니다.  
   
 **테이블/다이어그램/뷰 이름 입력**  
 테이블, 다이어그램이나 뷰의 이름을 입력할 수 있는 입력란이 제공됩니다.  

@@ -39,7 +39,7 @@ ms.locfileid: "68264969"
     ::: moniker-end
   
 ## <a name="backing-up-the-report-server-databases"></a>보고서 서버 데이터베이스 백업  
- 보고서 서버는 상태 비저장 서버이므로 애플리케이션 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 **데이터베이스 백업 방법 중 하나를 사용하여**reportserver**및**reportservertempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
+ 보고서 서버는 상태 비저장 서버이므로 애플리케이션 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업 방법 중 하나를 사용하여 **reportserver** 및 **reportservertempdb** 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 몇 가지 권장 사항이 있습니다.  
   
 -   **reportserver** 데이터베이스를 백업하려면 전체 복구 모델을 사용합니다.  
   

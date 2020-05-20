@@ -24,7 +24,7 @@ ms.locfileid: "65579423"
 
 ## <a name="modifying-the-rsreportserverconfig-file"></a>RSReportServer.Config 파일 수정
 
-RSReportServer.config 파일의 웹 포털 구성 설정에 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]\<PassThroughCookies **> 요소를 추가하여** 에서 추가 쿠키를 보고서 서버에 전송하도록 설정할 수 있습니다. 추가 쿠키 전송은 보고서 서버 인증 쿠키뿐만 아니라 타사 인증 시스템의 쿠키도 필요한 Single Sign-On 인증 솔루션에 유용합니다.
+RSReportServer.config 파일의 웹 포털 구성 설정에 \<**PassThroughCookies**> 요소를 추가하여 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]에서 추가 쿠키를 보고서 서버에 전송하도록 설정할 수 있습니다. 추가 쿠키 전송은 보고서 서버 인증 쿠키뿐만 아니라 타사 인증 시스템의 쿠키도 필요한 Single Sign-On 인증 솔루션에 유용합니다.
 
 웹 포털 사용 시 HTTP 요청을 통해 추가 쿠키를 전송하려면 RSReportServer.config 파일에서 다음 요소를 설정합니다.
   

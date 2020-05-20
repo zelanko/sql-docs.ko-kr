@@ -28,7 +28,7 @@ ms.locfileid: "65502653"
   
 2.  제어판에서 **프로그램 및 기능**을 클릭합니다.  
   
-3.  [!INCLUDE[msCoName](../../includes/msconame-md.md)]이름**목록에서** SQL Server 보고서 작성기를 찾아 클릭합니다.  
+3.  **이름** 목록에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 보고서 작성기를 찾아 클릭합니다.  
   
 4.  **제거**를 클릭합니다.  
   

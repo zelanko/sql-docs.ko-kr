@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 40a6b569dc469f216d54e615fadd506e968db981
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289951"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807579"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 메일에는 메일 큐와 상태 큐의 두 가지 큐가 있습니다. 메일 큐는 전송 대기 중인 메일 항목을 저장합니다. 상태 큐는 이미 전송된 항목의 상태를 저장합니다. 이 저장 프로시저를 사용하여 메일 또는 상태 큐의 상태를 볼 수 있습니다. ** \@Queue_type** 매개 변수를 지정 하지 않으면 저장 프로시저는 각 큐에 대해 하나의 행을 반환 합니다.  
+  데이터베이스 메일에는 메일 큐와 상태 큐의 두 가지 큐가 있습니다. 메일 큐는 전송 대기 중인 메일 항목을 저장합니다. 상태 큐는 이미 전송된 항목의 상태를 저장합니다. 이 저장 프로시저를 사용하여 메일 또는 상태 큐의 상태를 볼 수 있습니다. ** \@ Queue_type** 매개 변수를 지정 하지 않으면 저장 프로시저는 각 큐에 대해 하나의 행을 반환 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,18 +46,18 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|큐의 유형입니다. 가능한 값은 **mail** 및 **status**입니다.|  
 |**length**|**int**|지정된 큐의 메일 항목 수입니다.|  
-|**state**|**nvarchar (64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성 상태임), **알림** (큐에 수신 되었다는 알림이 표시 됨) 및 **RECEIVES_OCCURRING** (큐에서 수신 됨)입니다.|  
+|**상태**|**nvarchar (64)**|모니터의 상태입니다. 가능한 값은 **비활성** (큐가 비활성 상태임), **알림** (큐에 수신 되었다는 알림이 표시 됨) 및 **RECEIVES_OCCURRING** (큐에서 수신 됨)입니다.|  
 |**last_empty_rowset_time**|**날짜**|쿼리가 마지막으로 비워진 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
 |**last_activated_time**|**날짜**|큐가 마지막으로 활성화된 날짜와 시간입니다. 군대식 시간 형식 및 GMT 표준 시간대로 표시됩니다.|  
   
 ## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결 하는 경우 **sysmail_help_queue_sp** 를 사용 하 여 큐에 있는 항목 수, 큐의 상태 및 마지막으로 활성화 된 시간을 확인 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버만이 프로시저에 액세스할 수 있습니다.  
   
 ## <a name="examples"></a>예  

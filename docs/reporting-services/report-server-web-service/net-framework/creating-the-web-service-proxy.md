@@ -117,7 +117,7 @@ rs.Credentials = System.Net.CredentialCache.DefaultCredentials;
   
 ```  
   
- **using**(**의 경우** Import[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
+ **using**([!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]의 경우 **Import**) 지시문을 보고서 서버 웹 서비스 참조에 추가할 수도 있습니다. 이 지시문을 사용할 경우에는 네임스페이스에서 형식을 정규화하지 않아도 됩니다. 이렇게 하려면 다음 코드를 파일에 추가합니다.  
   
 ```vb  
 Import myNamespace.myReferenceName  

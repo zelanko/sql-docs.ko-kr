@@ -159,7 +159,7 @@ ms.locfileid: "73981932"
     GO  
     ```  
   
- 자세한 내용은 추가 [ 예제가 포함된 ](../../../t-sql/statements/create-user-transact-sql.md)CREATE USER&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../../includes/tsql-md.md)]를 참조하세요.  
+ 자세한 내용은 추가 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예제가 포함된 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   

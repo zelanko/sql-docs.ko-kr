@@ -70,7 +70,7 @@ rsconfig {-?}
   
 -   다른 자격 증명을 사용할 수 없을 때 보고서 서버에서 원격 데이터베이스 서버에 로그온하는 데 사용하는 특수 계정을 구성하려는 경우  
   
-**의 로컬 또는 원격 인스턴스에서** rsconfig[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 유틸리티를 실행할 수 있습니다. 이미 설정된 값을 해독하고 보는 데 **rsconfig** 유틸리티를 사용할 수 없습니다.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 로컬 또는 원격 인스턴스에서 **rsconfig** 유틸리티를 실행할 수 있습니다. 이미 설정된 값을 해독하고 보는 데 **rsconfig** 유틸리티를 사용할 수 없습니다.  
   
 이 유틸리티를 실행하려면 구성 중인 컴퓨터에 WMI(Windows Management Instrumentation)가 설치되어 있어야 합니다.  
   

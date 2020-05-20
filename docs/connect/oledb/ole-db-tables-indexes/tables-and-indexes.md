@@ -31,7 +31,7 @@ ms.locfileid: "68015243"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server용 OLE DB 드라이버는 소비자가 **테이블과 인덱스를 생성, 변경 및 삭제할 수 있도록**IIndexDefinition**및**ITableDefinition[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인터페이스를 노출합니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
+  SQL Server용 OLE DB 드라이버는 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블과 인덱스를 생성, 변경 및 삭제할 수 있도록 **IIndexDefinition** 및 **ITableDefinition** 인터페이스를 노출합니다. 올바른 테이블 및 인덱스 정의는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에 따라 달라집니다.  
   
  테이블과 인덱스를 만들거나 삭제하는 기능은 소비자 애플리케이션 사용자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 액세스 권한에 따라 달라집니다. 테이블 삭제는 선언적 참조 무결성 제약 조건이나 다른 요인이 있는지 여부에 따라 더욱 제한할 수 있습니다.  
   

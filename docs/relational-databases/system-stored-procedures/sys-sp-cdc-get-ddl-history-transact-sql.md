@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e7b22c489c7237bd9793aa590e92c1145f071b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083732"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808154"
 ---
 # <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정한 캡처 인스턴스에 대해 변경 데이터 캡처를 사용하도록 설정한 시점부터의 캡처 인스턴스 관련 DDL(데이터 정의 언어) 변경 기록을 반환합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.  
+  지정한 캡처 인스턴스에 대해 변경 데이터 캡처를 사용하도록 설정한 시점부터의 캡처 인스턴스 관련 DDL(데이터 정의 언어) 변경 기록을 반환합니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname** 이며 NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -64,7 +64,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ## <a name="remarks"></a>설명  
  열 추가 또는 삭제, 기존 열의 데이터 형식 변경 등 원본 테이블 열 구조를 변경 하는 원본 테이블에 대 한 DDL 수정은 [cdc. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블에서 유지 관리 됩니다. 이러한 변경 내용은 이 저장 프로시저를 사용하여 보고할 수 있습니다. cdc.ddl_history의 항목은 캡처 프로세스에서 로그의 DDL 트랜잭션을 읽을 때 생성됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스의 모든 캡처 인스턴스에 대한 행을 반환하려면 db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

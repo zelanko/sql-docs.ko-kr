@@ -43,7 +43,7 @@ ms.locfileid: "79090519"
    traceflag0 = 1204
    ```
 
-1. `mssql-custom.conf` 파일을 `/var/opt/mssql` Pod의 `mssql-server` 컨테이너에 있는 `master-0`에 복사합니다. `<namespaceName>`을 빅 데이터 클러스터 이름으로 바꿉니다.
+1. `mssql-custom.conf` 파일을 `master-0` Pod의 `mssql-server` 컨테이너에 있는 `/var/opt/mssql`에 복사합니다. `<namespaceName>`을 빅 데이터 클러스터 이름으로 바꿉니다.
 
    ```bash
    kubectl cp mssql-custom.conf master-0:/var/opt/mssql/mssql-custom.conf -c mssql-server -n <namespaceName>
@@ -58,7 +58,7 @@ ms.locfileid: "79090519"
    ```
 
 > [!IMPORTANT]
-> SQL Server 마스터 인스턴스가 가용성 그룹 구성에 있는 경우 모든 `mssql-custom.conf` Pod의 `master` 파일을 복사합니다. 다시 시작할 때마다 장애 조치(failover)가 발생하므로, 가동 중지 시간 동안 이 작업의 타이밍을 지정해야 합니다.
+> SQL Server 마스터 인스턴스가 가용성 그룹 구성에 있는 경우 모든 `master` Pod의 `mssql-custom.conf` 파일을 복사합니다. 다시 시작할 때마다 장애 조치(failover)가 발생하므로, 가동 중지 시간 동안 이 작업의 타이밍을 지정해야 합니다.
 
 ## <a name="known-limitations"></a>알려진 제한 사항
 

@@ -78,7 +78,7 @@ HRESULT BCPColFmt(
  사용자 데이터 파일에 포함된 필드의 인덱스입니다.  
   
  *eUserDataType*[in]  
- 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 OLE DB Driver for SQL Server 헤더 파일(msoledbsql.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]eUserDataType**인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우**에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
+ 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 OLE DB Driver for SQL Server 헤더 파일(msoledbsql.h)에 BCP_TYPE_XXX 형식으로 표시됩니다(예: BCP_TYPE_SQLINT4). BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. **eUserDataType** 인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
   
 -   원본 열이 decimal 또는 numeric이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   

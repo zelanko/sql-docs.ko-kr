@@ -31,7 +31,7 @@ ms.locfileid: "75254235"
   
 -   자체 조인 등과 같이 동일한 테이블의 여러 인스턴스를 사용하여 작업할 때 특정 인스턴스를 지정해야 하는 경우  
   
-예를 들어, 테이블 이름 `"e"`에 대한 별칭 `employee_information`를 만든 다음 쿼리의 나머지 부분 전반에 걸쳐 테이블을 `"e"`로 지칭할 수 있습니다.  
+예를 들어, 테이블 이름 `employee_information`에 대한 별칭 `"e"`를 만든 다음 쿼리의 나머지 부분 전반에 걸쳐 테이블을 `"e"`로 지칭할 수 있습니다.  
   
 ### <a name="to-create-an-alias-for-a-table-or-table-valued-object"></a>테이블이나 테이블 반환 개체에 대한 별칭을 만들려면  
   

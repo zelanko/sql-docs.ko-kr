@@ -21,7 +21,7 @@ ms.locfileid: "75246494"
 
 단일 트랜잭션 범위 내에서 실행할 단위 테스트를 수정할 수 있습니다. 이 방법을 사용하는 경우 테스트가 종료된 후 테스트가 실행한 변경 내용을 롤백할 수 있습니다. 다음 절차에서는 아래 작업을 수행하는 방법에 대해 설명합니다.  
   
--   \-BEGIN TRANSACTION**및**ROLLBACK TRANSACTION**을 사용하는 Transact**SQL 테스트 스크립트에서 트랜잭션을 만듭니다.  
+-   **BEGIN TRANSACTION** 및 **ROLLBACK TRANSACTION**을 사용하는 Transact\-SQL 테스트 스크립트에서 트랜잭션을 만듭니다.  
   
 -   테스트 클래스의 단일 테스트 메서드에 대한 트랜잭션을 만듭니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "75246494"
     ```  
   
     > [!NOTE]  
-    > Visual Basic을 사용하고 있는 경우 `Imports System.Transactions`, `Imports Microsoft.VisualStudio.TestTools.UnitTesting` 및 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting`와 함께 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`를 추가해야 합니다. Visual C#을 사용하고 있는 경우에는 Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting 및 Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions에 대한 `using System.Transactions` 문과 함께 `using`를 추가해야 합니다. 또한 프로젝트에 대한 참조를 해당 어셈블리에 추가해야 합니다.  
+    > Visual Basic을 사용하고 있는 경우 `Imports Microsoft.VisualStudio.TestTools.UnitTesting`, `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTesting` 및 `Imports Microsoft.VisualStudio.TeamSystem.Data.UnitTest.Conditions`와 함께 `Imports System.Transactions`를 추가해야 합니다. Visual C#을 사용하고 있는 경우에는 Microsoft.VisualStudio.TestTools, Microsoft.VisualStudio.TeamSystem.Data.UnitTesting 및 Microsoft.VisualStudio.TeamSystem.Data.UnitTesting.Conditions에 대한 `using` 문과 함께 `using System.Transactions`를 추가해야 합니다. 또한 프로젝트에 대한 참조를 해당 어셈블리에 추가해야 합니다.  
   
 ## <a name="to-create-a-transaction-for-all-test-methods-in-a-test-class"></a>테스트 클래스의 모든 테스트 메서드에 대한 트랜잭션을 만들려면  
   

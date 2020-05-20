@@ -29,7 +29,7 @@ ms.locfileid: "77081402"
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> 연결 문자열  
- [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에 연결할 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스 내의 데이터베이스 개체에 연결됩니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다. 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 **어플라이언스에 있는**CustomerSales[!INCLUDE[ssDW](../../includes/ssdw-md.md)] 예제 데이터베이스를 지정합니다.  
+ [!INCLUDE[ssDW](../../includes/ssdw-md.md)]에 연결할 때 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스 내의 데이터베이스 개체에 연결됩니다. 쿼리 디자이너에서 사용할 데이터베이스 개체를 지정합니다. 연결 문자열에 데이터베이스를 지정하지 않을 경우 관리자가 할당한 기본 데이터베이스에 연결됩니다. 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 어플라이언스에 있는 **CustomerSales** 예제 데이터베이스를 지정합니다.  
   
 ```  
 HOST=<IP address>; database= CustomerSales; port=<port>  

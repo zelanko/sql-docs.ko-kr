@@ -53,7 +53,7 @@ ms.locfileid: "75306770"
  master 데이터베이스를 이동하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "시스템 데이터베이스 이동" 항목을 참조하십시오.  
   
 ## <a name="optional-parameters"></a>선택적 매개 변수  
- 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T*trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" 항목을 참조하세요.  
+ 모든 지원되는 시작 매개 변수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목에 설명되어 있습니다. 시작 매개 변수 -T*trace#* 은 지정된 추적 플래그( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace# *) 적용 시*인스턴스를 시작해야 함을 나타냅니다. 추적 플래그는 비표준 동작으로 서버를 시작하는 데 사용합니다. 추적 플래그에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "추적 플래그([!INCLUDE[tsql](../../includes/tsql-md.md)])" 항목을 참조하세요.  
   
 > [!CAUTION]  
 >  인터넷에서 문서화되지 않은 추가 시작 매개 변수 및 추적 플래그를 참조할 수 있습니다. 문서화되지 않은 시작 매개 변수 및 추적 플래그를 만들어 특수한 문제를 해결하거나 테스트하는 데 필요한 특정 조건을 강제 적용할 수 있습니다. 문서화되지 않은 시작 매개 변수를 사용하면 예기치 못한 결과가 발생할 수 있습니다. 문서화되지 않은 매개 변수는 Microsoft 고객 지원 서비스에서 안내하는 경우에만 사용하십시오.  

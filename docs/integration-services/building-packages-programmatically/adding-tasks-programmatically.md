@@ -47,7 +47,7 @@ ms.locfileid: "71299066"
  패키지에 태스크를 추가하려면 기존 <xref:Microsoft.SqlServer.Dts.Runtime.Executables> 컬렉션이 있는 컨테이너가 필요합니다. 대부분의 경우 컬렉션에 추가할 태스크는 패키지입니다. 새 태스크 실행 파일을 해당 컨테이너의 컬렉션에 추가하려면 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드를 호출합니다. 이 메서드에는 추가할 태스크의 CLSID, PROGID, STOCK 모니커 또는 <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A>이 들어 있는 단일 문자열 매개 변수가 있습니다.  
   
 ## <a name="task-names"></a>태스크 이름  
- 태스크는 이름이나 ID로 지정할 수 있지만 **메서드에서 가장 자주 사용되는 매개 변수는**STOCK<xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 모니커입니다. **STOCK** 모니커로 식별된 실행 파일에 태스크를 추가하려면 다음 구문을 사용합니다.  
+ 태스크는 이름이나 ID로 지정할 수 있지만 <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> 메서드에서 가장 자주 사용되는 매개 변수는 **STOCK** 모니커입니다. **STOCK** 모니커로 식별된 실행 파일에 태스크를 추가하려면 다음 구문을 사용합니다.  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  

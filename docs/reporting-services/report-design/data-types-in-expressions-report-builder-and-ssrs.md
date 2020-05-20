@@ -93,7 +93,7 @@ ms.locfileid: "77080533"
  데이터 원본의 모든 데이터 형식에 대한 변환을 지원하지 않는 데이터 공급자를 사용하여 데이터 원본에 연결하는 경우 지원되지 않는 데이터 원본 형식의 기본 데이터 형식은 String이 됩니다. 다음 예제에서는 문자열로 반환되는 특정 데이터 형식에 대한 솔루션을 제공합니다.  
   
 ### <a name="concatenating-a-string-and-a-clr-datetimeoffset-data-type"></a>String 및 CLR DateTimeOffset 데이터 형식 연결  
- 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 <xref:System.DateTime> 식은 "The date and time are: "라는 텍스트와 `="The date and time are: " & Fields!StartDate.Value` 값인 데이터 세트 필드 StartDate를 연결합니다.  
+ 대부분의 데이터 형식에 대해 CLR에서는 사용자가 & 연산자를 사용하여 데이터 형식이 각기 다른 값을 하나의 문자열로 연결할 수 있도록 기본 변환을 제공합니다. 예를 들어 `="The date and time are: " & Fields!StartDate.Value` 식은 "The date and time are: "라는 텍스트와 <xref:System.DateTime> 값인 데이터 세트 필드 StartDate를 연결합니다.  
   
  일부 데이터 형식의 경우에는 ToString 함수를 포함해야 할 수 있습니다. 예를 들어 <xref:System.DateTimeOffset>System.DateTimeOffset `="The time is: " & Fields!StartDate.Value.ToString()`을 참조하세요.  
   

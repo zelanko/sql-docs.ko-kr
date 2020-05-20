@@ -43,13 +43,13 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-컨트롤러가 `runtime` 파일에 지정된 `spec.yaml`을 검사하고 해당 런타임 처리기를 호출합니다. 런타임 처리기가 애플리케이션을 만듭니다. 먼저, 각각 배포할 애플리케이션을 포함하는 Pod가 하나 이상 포함된 Kubernetes ReplicaSet가 생성됩니다. Pod 수는 애플리케이션의 `replicas` 파일에 설정된 `spec.yaml` 매개 변수를 통해 정의됩니다. 각 Pod는 하나 이상의 풀을 포함할 수 있습니다. 풀 수는 `poolsize` 파일에 설정된 `spec.yaml` 매개 변수를 통해 정의됩니다.
+컨트롤러가 `spec.yaml` 파일에 지정된 `runtime`을 검사하고 해당 런타임 처리기를 호출합니다. 런타임 처리기가 애플리케이션을 만듭니다. 먼저, 각각 배포할 애플리케이션을 포함하는 Pod가 하나 이상 포함된 Kubernetes ReplicaSet가 생성됩니다. Pod 수는 애플리케이션의 `spec.yaml` 파일에 설정된 `replicas` 매개 변수를 통해 정의됩니다. 각 Pod는 하나 이상의 풀을 포함할 수 있습니다. 풀 수는 `spec.yaml` 파일에 설정된 `poolsize` 매개 변수를 통해 정의됩니다.
 
 이러한 설정은 배포에서 병렬로 처리할 수 있는 요청량에 영향을 줍니다. 지정된 한 시점의 최대 요청 수는 `replicas`에 `poolsize`를 곱한 값과 같습니다. 복제본 5개와 복제본당 풀 2개가 있다면 배포에서 요청 10개를 병렬로 처리할 수 있습니다. `replicas` 및 `poolsize`의 그래픽 표현은 아래 그림을 참조하세요.
 
 ![poolsize 및 replicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-ReplicaSet가 생성되고 Pod가 시작된 후에는 `schedule` 파일에 `spec.yaml`이 설정된 경우 cron 작업이 생성됩니다. 마지막으로, 애플리케이션을 관리하고 실행하는 데 사용할 수 있는 Kubernetes 서비스가 생성됩니다(아래 참조).
+ReplicaSet가 생성되고 Pod가 시작된 후에는 `spec.yaml` 파일에 `schedule`이 설정된 경우 cron 작업이 생성됩니다. 마지막으로, 애플리케이션을 관리하고 실행하는 데 사용할 수 있는 Kubernetes 서비스가 생성됩니다(아래 참조).
 
 애플리케이션을 실행하면 애플리케이션의 Kubernetes 서비스가 요청을 복제본으로 프록시하고 결과를 반환합니다.
 

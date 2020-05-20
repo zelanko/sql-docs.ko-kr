@@ -58,11 +58,11 @@ ms.locfileid: "75253477"
   
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 사용되는 기본 인스턴스 ID의 예는 다음과 같습니다.  
   
--   \{의 기본 인스턴스인 경우 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MSSQLSERVER  
+-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기본 인스턴스인 경우 MSSQL\{nn}.MSSQLSERVER  
   
--   \{ Analysis Services의 기본 인스턴스인 경우 MSAS[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nn}.MSSQLSERVER  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services의 기본 인스턴스인 경우 MSAS\{nn}.MSSQLSERVER  
   
--   "MyInstance"로 명명된 \{ 인스턴스인 경우 MSSQL[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nn}.MyInstance  
+-   "MyInstance"로 명명된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스인 경우 MSSQL\{nn}.MyInstance  
   
 
  "MyInstance"로 명명된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 과 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 포함하고 기본 디렉터리에 설치된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스에 대한 디렉터리 구조는 다음과 같습니다.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056164"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807789"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,17 +39,17 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @parameter_name = ] 'parameter_name'`검색할 구성 설정의 이름입니다. 이 값을 지정 하면 구성 설정의 값이 ** \@parameter_value** OUTPUT 매개 변수에 반환 됩니다. ** \@Parameter_name** 지정 하지 않으면이 저장 프로시저는 인스턴스의 모든 데이터베이스 메일 구성 설정을 포함 하는 결과 집합을 반환 합니다.  
+`[ @parameter_name = ] 'parameter_name'`검색할 구성 설정의 이름입니다. 이 값을 지정 하면 구성 설정의 값이 ** \@ parameter_value** OUTPUT 매개 변수에 반환 됩니다. ** \@ Parameter_name** 지정 하지 않으면이 저장 프로시저는 인스턴스의 모든 데이터베이스 메일 구성 설정을 포함 하는 결과 집합을 반환 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- ** \@Parameter_name** 지정 하지 않으면는 다음 열이 포함 된 결과 집합을 반환 합니다.  
+ ** \@ Parameter_name** 지정 하지 않으면는 다음 열이 포함 된 결과 집합을 반환 합니다.  
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |**paramname**|**nvarchar(256)**|구성 매개 변수의 이름입니다.|  
 |**paramvalue**|**nvarchar(256)**|구성 매개 변수의 값입니다.|  
 |**한**|**nvarchar(256)**|구성 매개 변수에 대한 설명입니다.|  
@@ -57,11 +57,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>설명  
  저장 프로시저 **sysmail_help_configure_sp** 인스턴스에 대 한 현재 데이터베이스 메일 구성 설정을 나열 합니다.  
   
- Parameter_name 지정 되었지만 ** \@parameter_value**에 대해 출력 매개 변수가 제공 되지 않은 경우이 저장 프로시저는 출력을 생성 하지 않습니다. ** \@**  
+ ** \@ Parameter_name** 지정 되었지만 ** \@ parameter_value**에 대해 출력 매개 변수가 제공 되지 않은 경우이 저장 프로시저는 출력을 생성 하지 않습니다.  
   
  **Sysmail_help_configure_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 호출 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  

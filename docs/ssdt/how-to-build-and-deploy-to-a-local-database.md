@@ -75,5 +75,5 @@ Microsoft SQL Server 2012에서는 SQL Server 데이터베이스 프로젝트를
     select * from dbo.GetProductsBySupplier(1)  
     ```  
   
-9. Transact**SQL 편집기 창 아래의** 결과\- 창에 `Products` 테이블의 Apples 및 Potato Chips 행이 반환됩니다.  
+9. Transact\-SQL 편집기 창 아래의 **결과** 창에 `Products` 테이블의 Apples 및 Potato Chips 행이 반환됩니다.  
   

@@ -19,7 +19,7 @@ ms.locfileid: "68126042"
 # <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 인스턴스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 제거하려면 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)의 단계를 따르고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]기능 선택**페이지에서**를 제거할 기능으로 지정합니다. 제거 프로세스는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 폴더와 파일을 제거하고 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 로컬 컴퓨터에서 제거합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능을 제거하려면 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)의 단계를 따르고 **기능 선택** 페이지에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거할 기능으로 지정합니다. 제거 프로세스는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 폴더와 파일을 제거하고 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 를 로컬 컴퓨터에서 제거합니다.  
   
  데이터 손실을 방지하고 시스템의 다른 컴퓨터에 영향을 주지 않기 위해 일부 항목은 제거 프로세스에서 제거 또는 변경되지 않습니다. 다음 표를 검토하여 항목을 남겨둘지, 아니면 제거할지 여부를 결정합니다.  
   

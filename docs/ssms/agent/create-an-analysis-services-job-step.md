@@ -82,7 +82,7 @@ ms.locfileid: "75258491"
   
 8.  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
   
-9. 작업 단계가 성공하거나 실패할 경우 **에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면**고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 클릭합니다.  
+9. 작업 단계가 성공하거나 실패할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급** 페이지를 클릭합니다.  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>Analysis Services 쿼리 작업 단계를 만들려면  
   
@@ -102,7 +102,7 @@ ms.locfileid: "75258491"
   
 8.  **명령** 입력란에 실행할 문을 입력하거나 **열기** 를 클릭하여 문을 선택합니다.  
   
-9. 작업 단계가 성공하거나 실패할 경우 **에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면**고급[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 클릭합니다.  
+9. 작업 단계가 성공하거나 실패할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 수행할 동작으로 작업 단계를 시도할 횟수 및 작업 단계 출력이 쓸 위치와 같은 작업 단계에 대한 옵션을 정의하려면 **고급** 페이지를 클릭합니다.  
   
 ## <a name="using-transact-sql"></a><a name="TSQL"></a>Transact-SQL 사용  
   

@@ -20,7 +20,7 @@ ms.locfileid: "75251051"
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-다음 문서에서는 `app template` 도구의 `azdata` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+다음 문서에서는 `azdata` 도구의 `app template` 명령에 대한 참조를 제공합니다. 다른 `azdata` 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
 |     |     |

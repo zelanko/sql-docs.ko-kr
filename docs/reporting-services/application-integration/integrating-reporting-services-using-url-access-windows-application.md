@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 새 Windows 애플리케이션을 만듭니다.  
   
-2.  <xref:System.Windows.Forms.WebBrowser>도구 상자**대화 상자에서** 컨트롤을 찾습니다.  
+2.  **도구 상자** 대화 상자에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 찾습니다.  
   
      **도구 상자**가 보이지 않을 경우 **보기** 메뉴 항목을 클릭하고 **도구 상자**를 선택하여 액세스할 수 있습니다.  
   
@@ -97,7 +97,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
      이름이 webBrowser1인 <xref:System.Windows.Forms.WebBrowser> 컨트롤이 폼에 추가됩니다.  
   
- <xref:System.Windows.Forms.WebBrowser>Navigate**메서드를 호출하여** 컨트롤을 URL에 지정합니다. 다음 예에서 볼 수 있는 것처럼 런타임에 특정 URL 액세스 문자열을 <xref:System.Windows.Forms.WebBrowser> 컨트롤에 할당할 수 있습니다.  
+ **Navigate** 메서드를 호출하여 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 URL에 지정합니다. 다음 예에서 볼 수 있는 것처럼 런타임에 특정 URL 액세스 문자열을 <xref:System.Windows.Forms.WebBrowser> 컨트롤에 할당할 수 있습니다.  
   
 ```vb  
 Dim url As String = "https://localhost/reportserver?/" & _  

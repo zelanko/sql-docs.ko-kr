@@ -30,7 +30,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (**String**) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 null(**의** Nothing[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
+ (**String**) 행 개수를 계산할 컨텍스트를 지정하는 데이터 세트, 데이터 영역, 그룹의 이름 또는 null([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)입니다. **Nothing**은 가장 바깥쪽 컨텍스트를 지정하며 이는 일반적으로 보고서 데이터 세트입니다.  
   
 ## <a name="remarks"></a>설명  
  **RowNumber** 는 [RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md) 가 집계 함수의 실행 값을 반환하는 것처럼 지정한 범위 내 행 개수의 실행 값을 반환합니다. 범위를 지정할 때 행 개수를 1로 다시 설정할 시점을 지정합니다.  

@@ -60,7 +60,7 @@ ms.locfileid: "65580421"
   
 1.  **시작**을 클릭하고 **프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 **인스턴스에 대한**프로토콜[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 클릭합니다.  
+2.  왼쪽 창에서 **SQL Server 네트워크 구성**을 확장한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 **프로토콜**을 클릭합니다.  
   
 3.  세부 정보 창에서 TCP/IP 및 명명된 파이프 프로토콜을 설정한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
   

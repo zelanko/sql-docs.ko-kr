@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea49facab2c91961a49fbb0c4d04ddc30e6253cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044490"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807532"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|프로필의 이름입니다.|  
 |**account_id**|**int**|계정의 ID입니다.|  
@@ -71,7 +71,7 @@ sysmail_help_profileaccount_sp
   
  **Sysmail_help_profileaccount_sp** 저장 프로시저는 **msdb** 데이터베이스에 있으며 **dbo** 스키마가 소유 합니다. 현재 데이터베이스가 **msdb**가 아닌 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저에 대 한 실행 권한은 기본적으로 **sysadmin** 고정 서버 역할의 멤버로 사용 됩니다.  
   
 ## <a name="examples"></a>예  

@@ -31,7 +31,7 @@ ms.locfileid: "76971378"
 > [!NOTE]
 > SQL Server 2016 이후부터 SharePoint와의 Reporting Services 통합을 사용할 수 없습니다.
   
- [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 웹 포털 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 시작할 수 있습니다. 자세한 내용은 [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)을 참조하세요.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트에서 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]를 시작할 수 있습니다. 자세한 내용은 [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)을 참조하세요.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -65,7 +65,7 @@ ms.locfileid: "76971378"
 4.  **기본 대상 서버** 페이지에서 필요 시 대상 보고서 서버의 URL을 제공합니다(기본값과 다른 경우). **다음**을 클릭합니다.  
   
     > [!NOTE]  
-    >  보고서 서버에 연결되었을 때 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 로 작업하려면 이 단계에서 서버에 URL을 제공하는 것이 편리합니다. **의** 옵션[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 대화 상자에서도 이 작업을 수행할 수 있습니다.  
+    >  보고서 서버에 연결되었을 때 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 로 작업하려면 이 단계에서 서버에 URL을 제공하는 것이 편리합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 **옵션** 대화 상자에서도 이 작업을 수행할 수 있습니다.  
   
 5.  **설치**를 클릭하여 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 설치를 완료합니다.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "76971378"
   
 -   **보고서 작성기** 를 클릭합니다.  
   
-     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음, **의 하단에 있는** 연결[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]을 클릭하여 서버에 연결합니다.  
+     기존 서버 목록에 보고서 서버가 표시되지 않는 경우 **보고서 열기** 대화 상자를 닫은 다음, [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]의 하단에 있는 **연결**을 클릭하여 서버에 연결합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)   

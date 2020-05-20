@@ -77,7 +77,7 @@ WITH NO_INFOMSGS
 |**상태**|로그 파일의 상태이며 항상 0입니다.|  
   
 ## <a name="remarks"></a><a name="Remarks"></a> 주의  
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 [ 대신에 ](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)sys.dm_db_log_space_usage`DBCC SQLPERF(LOGSPACE)` DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작하여 `DBCC SQLPERF(LOGSPACE)` 대신에 [sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) DMV를 사용하여 데이터베이스 당 트랜잭션 로그의 공간 사용 정보를 반환합니다.    
  
 트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.
   

@@ -76,7 +76,7 @@ SQL Server 마스터를 가용성 그룹에 배포하려면 다음을 수행합�
 }
 ```
 
-다음 단계에서는 `aks-dev-test-ha` 프로필에서 시작하여 빅 데이터 클러스터 배포 구성을 사용자 지정하는 방법에 대한 예제를 안내합니다. `kubeadm` 클러스터에 배포하는 경우 비슷한 단계가 적용되지만 `NodePort` 섹션의 `serviceType`에 `endpoints`를 사용하고 있는지 확인합니다.
+다음 단계에서는 `aks-dev-test-ha` 프로필에서 시작하여 빅 데이터 클러스터 배포 구성을 사용자 지정하는 방법에 대한 예제를 안내합니다. `kubeadm` 클러스터에 배포하는 경우 비슷한 단계가 적용되지만 `endpoints` 섹션의 `serviceType`에 `NodePort`를 사용하고 있는지 확인합니다.
 
 1. 대상 프로필을 복제합니다.
 
@@ -132,7 +132,7 @@ SQL Server Master Readable Secondary Replicas  11.11.111.11,11111  sql-server-ma
 서버 수준 구성 설정 또는 수동으로 가용성 그룹에 데이터베이스 추가와 같은 특정 작업의 경우 SQL Server 인스턴스에 연결해야 합니다. SQL Server 2019 CU2 이전에는 `sp_configure`, `RESTORE DATABASE` 또는 가용성 그룹 DDL과 같은 작업에 이 연결 형식이 필요합니다. 기본적으로 빅 데이터 클러스터에는 인스턴스 연결을 사용하도록 설정하는 엔드포인트가 포함되지 않으므로 이 엔드포인트는 수동으로 공개해야 합니다. 
 
 > [!IMPORTANT]
-> SQL Server 인스턴스 연결에 공개된 엔드포인트는 Active Directory를 사용하도록 설정된 클러스터에서도 SQL 인증만 지원합니다. 빅 데이터 클러스터를 배포하는 동안 기본적으로 `sa` 로그인을 사용하지 않도록 설정되고, 배포 시 `sysadmin` 및 `AZDATA_USERNAME` 환경 변수에 제공되는 값에 따라 새 `AZDATA_PASSWORD` 로그인이 프로비저닝됩니다.
+> SQL Server 인스턴스 연결에 공개된 엔드포인트는 Active Directory를 사용하도록 설정된 클러스터에서도 SQL 인증만 지원합니다. 빅 데이터 클러스터를 배포하는 동안 기본적으로 `sa` 로그인을 사용하지 않도록 설정되고, 배포 시 `AZDATA_USERNAME` 및 `AZDATA_PASSWORD` 환경 변수에 제공되는 값에 따라 새 `sysadmin` 로그인이 프로비저닝됩니다.
 
 이 엔드포인트를 공개한 다음, 복원 워크플로를 사용하여 만든 데이터베이스를 가용성 그룹에 추가하는 방법을 보여 주는 예제는 다음과 같습니다. `sp_configure`를 사용하여 서버 구성을 변경하려는 경우 SQL Server 마스터 인스턴스에 대한 연결을 설정하는 방법에 대한 비슷한 지침이 적용됩니다.
 

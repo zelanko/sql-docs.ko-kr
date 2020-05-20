@@ -16,21 +16,21 @@ helpviewer_keywords:
 - backupmediafamily system table
 - backup media [SQL Server], backupmediafamily system table
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6ea3fd7937447ba3ed0f3ad89965301dead772cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122877"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807474"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 미디어 패밀리에 대해 한 행을 포함합니다. 미디어 패밀리가 미러된 미디어 세트에 있을 경우 이 미디어 패밀리에는 미디어 세트의 각 미러에 대한 별도의 행이 있습니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
     
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|패밀리가 멤버인 미디어 세트를 표시하는 고유한 ID 번호입니다. **Backupmediaset (media_set_id)** 참조|  
 |**family_sequence_number**|**tinyint**|미디어 세트에서 해당 미디어 패밀리의 위치입니다.|  
@@ -49,10 +49,10 @@ ms.locfileid: "68122877"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediaset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

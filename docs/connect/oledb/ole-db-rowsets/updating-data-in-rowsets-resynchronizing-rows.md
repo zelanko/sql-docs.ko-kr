@@ -27,7 +27,7 @@ ms.locfileid: "67994166"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 **커서 지원 행 집합에서만**IRowsetResynch[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 지원합니다. **IRowsetResynch**는 요청 시 사용할 수 없으며 소비자가 행 집합을 열기 전에 이 인터페이스를 요청해야 합니다.  
+  OLE DB Driver for SQL Server는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서 지원 행 집합에서만 **IRowsetResynch**를 지원합니다. **IRowsetResynch**는 요청 시 사용할 수 없으며 소비자가 행 집합을 열기 전에 이 인터페이스를 요청해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [행 집합의 데이터 업데이트](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

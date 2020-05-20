@@ -31,7 +31,7 @@ ms.locfileid: "73531970"
   
 ## <a name="hdfs-shell"></a>HDFS 셸
 
-`hdfs`의 `azdata` 셸 기능을 사용하면 파일 및 디렉터리에 대한 HDFS 권한을 관리하는 명령을 셸에서 직접 실행할 수 있습니다. 기본 메커니즘은 WebHdfs 호출을 사용하여 명령을 실행합니다.
+`azdata`의 `hdfs` 셸 기능을 사용하면 파일 및 디렉터리에 대한 HDFS 권한을 관리하는 명령을 셸에서 직접 실행할 수 있습니다. 기본 메커니즘은 WebHdfs 호출을 사용하여 명령을 실행합니다.
 
 다음 명령을 실행하면 셸이 열립니다.
 
@@ -74,7 +74,7 @@ acl modify: Change completed.
 
 ## <a name="create-a-directory-in-hdfs-using-azdata"></a>`azdata`를 사용하여 HDFS에 디렉터리 만들기
 
-경로 `data`에 디렉터리 `/sales`를 만듭니다.
+경로 `/sales`에 디렉터리 `data`를 만듭니다.
 
 ```bash
 azdata bdc hdfs mkdir --path '/sales/data'
@@ -102,7 +102,7 @@ azdata bdc hdfs chmod --permission 775 --path /sales/data/file.txt
 
 ## <a name="set-sticky-bit-on-directories"></a>디렉터리에 고정 비트 설정
 
-의도치 않은 파일 삭제나 재배치가 이루어지지 않도록 디렉터리에 고정 비트를 설정합니다. 고정 비트는 파일의 삭제 또는 이동 권한을 슈퍼 사용자, 디렉터리 소유자 또는 파일 소유자로 제한합니다. 이 설정은 파일에 영향을 주지 않습니다. 다음 예제에서는 권한에 접두사 `users`를 붙여서 디렉터리 `1`에 고정 비트를 설정합니다.
+의도치 않은 파일 삭제나 재배치가 이루어지지 않도록 디렉터리에 고정 비트를 설정합니다. 고정 비트는 파일의 삭제 또는 이동 권한을 슈퍼 사용자, 디렉터리 소유자 또는 파일 소유자로 제한합니다. 이 설정은 파일에 영향을 주지 않습니다. 다음 예제에서는 권한에 접두사 `1`를 붙여서 디렉터리 `users`에 고정 비트를 설정합니다.
 
 ```bash
 azdata bdc hdfs chmod --path /sales/users --permission 1750

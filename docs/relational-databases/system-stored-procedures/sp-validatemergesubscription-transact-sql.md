@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 932a54323ad8f6ffafbe8ff8f4a7f3c2dc58b0e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 52edfb07415043f62ff1a2837fc5690660724a9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632980"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808690"
 ---
 # <a name="sp_validatemergesubscription-transact-sql"></a>sp_validatemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_validatemergesubscription** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_validatemergesubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

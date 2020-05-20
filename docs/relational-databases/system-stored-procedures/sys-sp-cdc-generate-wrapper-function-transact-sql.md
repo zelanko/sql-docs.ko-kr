@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083750"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808197"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance= ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  스크립트를 생성할 캡처 인스턴스입니다. *capture_instance* 는 **sysname** 이며 기본값은 NULL입니다. 값이 생략되거나 NULL로 명시적으로 설정된 경우 모든 캡처 인스턴스에 대해 래퍼 스크립트가 생성됩니다.  
   
- [ @closed_high_end_point= ] *high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  생성된 프로시저가 커밋 시간이 상위 엔드포인트와 같은 변경 내용을 추출 간격에 포함할지 여부를 나타내는 플래그 비트입니다. *high_end_pt_flag* 은 **bit** 이며 기본값은 끝점을 포함 해야 함을 나타내는 1입니다. 값 0은 모든 커밋 시간이 상위 엔드포인트보다 낮아야 함을 나타냅니다.  
   
- [ @column_list= ] '*column_list*'  
+ [ @column_list =] '*column_list*'  
  래퍼 함수가 반환하는 결과 집합에 포함할 캡처된 열 목록입니다. *column_list* 은 **nvarchar (max)** 이며 기본값은 NULL입니다. NULL을 지정하면 캡처된 모든 열이 포함됩니다.  
   
- [ @update_flag_list= ] '*update_flag_list*'  
+ [ @update_flag_list =] '*update_flag_list*'  
  래퍼 함수가 반환하는 결과 집합에 업데이트 플래그가 포함되는 포함 열 목록입니다. *update_flag_list* 은 **nvarchar (max)** 이며 기본값은 NULL입니다. NULL을 지정하면 업데이트 플래그가 포함되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|생성된 함수의 이름입니다.|  
 |**create_script**|**nvarchar(max)**|캡처 인스턴스 래퍼 함수를 만드는 스크립트입니다.|  

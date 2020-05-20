@@ -257,7 +257,7 @@ ms.locfileid: "75257035"
     |AvoidWaitForDelay_ProblemDescription|WAITFOR DELAY 문이 {0}에 있습니다.|  
     |AvoidWaitForDelay_RuleName|저장 프로시저, 함수 및 트리거에서 WaitFor Delay 문을 사용하지 마세요.|  
     |CategorySamples|SamplesCategory|  
-    |CannotCreateResourceManager|{0}에서 {1}에 대한 ResourceManager를 만들 수 없습니다.|  
+    |CannotCreateResourceManager|{1}에서 {0}에 대한 ResourceManager를 만들 수 없습니다.|  
   
 7. **파일** 메뉴에서 **RuleResources.resx 저장**을 클릭합니다.  
   

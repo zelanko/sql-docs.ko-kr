@@ -35,7 +35,7 @@ ms.locfileid: "75253646"
   
 출력 메시지는 디버깅 중인 **의 정보가 포함된 식을 포함하는 텍스트 문자열로** 메시지 표시 [!INCLUDE[tsql](../../includes/tsql-md.md)] 옵션에 지정합니다. 식은 다음과 같습니다.  
   
--   중괄호([!INCLUDE[tsql](../../includes/tsql-md.md)])에 포함된 {} 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
+-   중괄호({})에 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식. 식은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 및 기본 제공 함수를 포함할 수 있습니다. 예제에는 {@MyVariable}, {@NameParameter}, {@@SPID} 또는 {SERVERPROPERTY('ProcessID')}가 포함됩니다.  
   
 -   다음 키워드 중 하나:  
   

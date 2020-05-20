@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909325"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808303"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,34 +45,34 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  변경 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 는 **sysname**이며 기본값은 없고 NULL 일 수 없습니다.  
   
  현재 데이터베이스에 있는 캡처 인스턴스의 이름을 *capture_instance* 합니다.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  *캡처 인스턴스에*대 한 새 하위 워터 마크로 사용할 LSN (로그 시퀀스 번호)입니다. *low_water_mark* 는 **binary (10)** 이며 기본값은 없습니다.  
   
  값이 null이 아닌 경우에는이 값이 [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) 테이블에 있는 현재 항목의 start_lsn 값으로 나타나야 합니다. cdc.lsn_time_mapping에 있는 다른 항목의 커밋 시간이 새 하위 워터마크에서 식별한 항목과 동일한 경우 해당 항목 그룹과 연결된 최소 LSN이 하위 워터마크로 지정됩니다.  
   
  값을 명시적으로 NULL로 설정 하면 *캡처 인스턴스의* 현재 *하위 워터 마크가* 정리 작업의 상한을 정의 하는 데 사용 됩니다.  
   
- [ @threshold= ] '*삭제 임계값*'  
+ [ @threshold =] '*임계값 삭제*'  
  정리 시 단일 문을 사용하여 삭제할 수 있는 삭제 항목의 최대 수입니다. *delete_threshold* 는 **bigint**이며 기본값은 5000입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
  sys.sp_cdc_cleanup_change_table은 다음 작업을 수행합니다.  
   
-1.  @low_water_mark 매개 변수가 NULL이 아닌 경우 *캡처 인스턴스에* 대 한 start_lsn 값을 새 *하위 워터 마크로*설정 합니다.  
+1.  @low_water_mark매개 변수가 NULL이 아닌 경우 *캡처 인스턴스에* 대 한 start_lsn 값을 새 *하위 워터 마크로*설정 합니다.  
   
     > [!NOTE]  
-    >  새 하위 워터마크는 저장 프로시저 호출에 지정된 하위 워터마크가 아닐 수 있습니다. cdc.lsn_time_mapping 테이블에 있는 다른 항목이 동일한 커밋 시간을 공유하는 경우 항목 그룹에 표시된 최소 LSN이 조정된 하위 워터마크로 선택됩니다. @low_water_mark 매개 변수가 NULL 이거나 현재 하위 워터 마크가 새 lowwatermark 마크 보다 큰 경우 캡처 인스턴스에 대 한 start_lsn 값이 변경 되지 않은 상태로 유지 됩니다.  
+    >  새 하위 워터마크는 저장 프로시저 호출에 지정된 하위 워터마크가 아닐 수 있습니다. cdc.lsn_time_mapping 테이블에 있는 다른 항목이 동일한 커밋 시간을 공유하는 경우 항목 그룹에 표시된 최소 LSN이 조정된 하위 워터마크로 선택됩니다. @low_water_mark매개 변수가 NULL 이거나 현재 하위 워터 마크가 새 lowwatermark 마크 보다 큰 경우 캡처 인스턴스에 대 한 start_lsn 값이 변경 되지 않은 상태로 유지 됩니다.  
   
 2.  __$start_lsn 값이 하위 워터마크보다 작은 변경 테이블 항목이 삭제됩니다. 단일 트랜잭션에서 삭제되는 행 수를 제한하는 데 삭제 임계값이 사용됩니다. 항목을 성공적으로 삭제하지 못하는 오류가 발생하면 이 오류가 보고만 되고 캡처 인스턴스 하위 워터마크에서 호출을 기준으로 변경되었을 수 있는 내용에는 영향을 주지 않습니다.  
 
@@ -80,13 +80,13 @@ sys.sp_cdc_cleanup_change_table
   
 -   정리 에이전트 작업에서 삭제 실패를 보고하는 경우  
   
-     관리자는 이 저장 프로시저를 명시적으로 실행하여 실패한 작업을 다시 시도할 수 있습니다. 지정 된 캡처 인스턴스에 대 한 정리를 다시 시도 하려면 sp_cdc_cleanup_change_table를 실행 하 고 @low_water_mark 매개 변수에 대해 NULL을 지정 합니다.  
+     관리자는 이 저장 프로시저를 명시적으로 실행하여 실패한 작업을 다시 시도할 수 있습니다. 지정 된 캡처 인스턴스에 대 한 정리를 다시 시도 하려면 sp_cdc_cleanup_change_table를 실행 하 고 매개 변수에 대해 NULL을 지정 @low_water_mark 합니다.  
   
 -   정리 에이전트 작업에서 사용하는 단순 보존 기반 정책이 적합하지 않은 경우  
   
      이 저장 프로시저는 단일 캡처 인스턴스의 정리를 수행하므로 개별 캡처 인스턴스에 따라 정리 규칙을 조정하는 사용자 지정 정리 전략을 작성하는 데 사용할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

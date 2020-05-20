@@ -46,7 +46,7 @@ ms.locfileid: "74822019"
 ## <a name="prerequisites"></a>사전 요구 사항  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
--   [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 업그레이드할 수 있는지 확인합니다. 예를 들어 SQL Server 2005 장애 조치(failover) 클러스터링 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드하거나 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)]에서 실행 중인 장애 조치(failover) 클러스터를 업그레이드할 수는 없습니다.  
+-   [지원되는 버전 및 버전 업그레이드](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 업그레이드할 수 있는지 확인합니다. 예를 들어 SQL Server 2005 장애 조치(failover) 클러스터링 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드하거나 [!INCLUDE[winxpsvr-md](../../../includes/winxpsvr-md.md)]에서 실행 중인 장애 조치(failover) 클러스터를 업그레이드할 수는 없습니다.  
   
 -   [Choose a Database Engine Upgrade Method](../../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): 지원되는 버전 및 버전 업그레이드에 대한 검토와 사용자 환경에 설치된 기타 구성 요소를 바탕으로 적절한 업그레이드 방법 및 단계를 선택하여 올바른 순서로 구성 요소를 업그레이드합니다.  
   

@@ -109,7 +109,7 @@ ms.locfileid: "77082276"
 |타사 CRI|업그레이드가 수행되지 않습니다.<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기를 사용하여 처리됩니다.|  
   
 ###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> 보고서 디자이너에서 CRI가 있는 보고서 열기  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 보고서 디자이너의 CRI로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 보고서를 열면 해당 보고서가 새 보고서 정의 스키마로 업그레이드됩니다. 보고서에 있는 CRI에 따라 다음 동작 중 하나가 수행됩니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서 디자이너의 CRI로 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 열면 해당 보고서가 새 보고서 정의 스키마로 업그레이드됩니다. 보고서에 있는 CRI에 따라 다음 동작 중 하나가 수행됩니다.  
   
 -   타사 CRI가 검색됩니다. 보고서 작성 컴퓨터에 설치된 CRI 버전이 새 RDL 스키마와 호환되지 않으면 디자인 화면에 빨간 X가 있는 입력란이 표시됩니다. 새 RDL 스키마와 호환되는 타사 공급업체의 새 CRI 버전을 설치하려면 시스템 관리자에게 문의해야 합니다.  
   

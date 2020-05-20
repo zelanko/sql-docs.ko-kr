@@ -63,7 +63,7 @@ ms.locfileid: "76287730"
     go  
     ```  
   
-     [sp_addserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장 프로시저를 실행한 후에 @[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용하려면 @SERVERNAME 서비스를 다시 시작해야 합니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
      클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   

@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905172"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808034"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 변경 데이터 캡처가 활성화된 각 테이블에 대한 변경 데이터 캡처 구성을 반환합니다. 각 원본 테이블당 최대 두 개의 열, 각 캡처 인스턴스당 한 개의 열을 반환할 수 있습니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2016 버전에서 지 원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조 하세요.  
+  현재 데이터베이스에서 변경 데이터 캡처가 활성화된 각 테이블에 대한 변경 데이터 캡처 구성을 반환합니다. 각 원본 테이블당 최대 두 개의 열, 각 캡처 인스턴스당 한 개의 열을 반환할 수 있습니다. 변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @source_schema = ] '*source_schema*'  
+ [ @source_schema =] '*source_schema*'  
  원본 테이블이 속한 스키마의 이름입니다. *source_schema* 는 **sysname**이며 기본값은 NULL입니다. *Source_schema* 지정 된 경우 *source_name* 도 지정 해야 합니다.  
   
  NULL이 아닌 경우 *source_schema* 는 현재 데이터베이스에 있어야 합니다.  
   
  *SOURCE_SCHEMA* null이 아닌 경우 *source_name* 은 null이 아니어야 합니다.  
   
- [ @source_name = ] '*source_name*'  
+ [ @source_name =] '*source_name*'  
  원본 테이블의 이름입니다. *source_name* 는 **sysname**이며 기본값은 NULL입니다. *Source_name* 지정 된 경우 *source_schema* 도 지정 해야 합니다.  
   
  NULL이 아닌 경우 *source_name* 는 현재 데이터베이스에 있어야 합니다.  
@@ -64,7 +64,7 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|원본 테이블 스키마의 이름입니다.|  
 |source_table|**sysname**|원본 테이블의 이름입니다.|  
@@ -85,7 +85,7 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="remarks"></a>설명  
  *Source_schema* 와 *source_name* 기본값을 모두 NULL로 설정 하거나 null을 명시적으로 설정 하는 경우이 저장 프로시저는 호출자가 액세스를 선택 하는 모든 데이터베이스 캡처 인스턴스에 대 한 정보를 반환 합니다. *Source_schema* 및 *source_name* 가 NULL이 아닌 경우 명명 된 특정 테이블의 정보만 반환 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  *Source_schema* 및 *source_name* NULL 인 경우 호출자의 권한 부여는 결과 집합에 포함 되는 활성화 된 테이블을 결정 합니다. 호출자는 캡처 인스턴스의 모든 캡처된 열에 대해 SELECT 권한을 가지고 있어야 하며 포함할 테이블 정보에 대해 정의된 제어 역할의 멤버여야 합니다. db_owner 데이터베이스 역할의 멤버는 정의된 모든 캡처 인스턴스에 대한 정보를 볼 수 있습니다. 설정된 특정 테이블에 대한 정보가 요청되면 동일한 SELECT 및 멤버 자격 조건이 명명된 테이블에 적용됩니다.  
   
 ## <a name="examples"></a>예  

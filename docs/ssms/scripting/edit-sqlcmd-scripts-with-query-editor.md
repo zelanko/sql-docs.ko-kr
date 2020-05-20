@@ -51,7 +51,7 @@ ms.locfileid: "75253911"
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>데이터베이스 엔진 쿼리 편집기 창을 SQLCMD 모드로 전환하려면  
   
-1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭하여 새[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 엽니다.  
+1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리[!INCLUDE[ssDE](../../includes/ssde-md.md)]를 클릭하여 새** 쿼리 편집기 창을 엽니다.  
   
 2.  **쿼리** 메뉴에서 **SQLCMD 모드**를 클릭합니다.  
   

@@ -62,7 +62,7 @@ ms.locfileid: "75728574"
 
 ## <a name="update"></a>업데이트
 
-`azdata-cli` 명령을 사용하여 `zypper update`를 업데이트합니다.
+`zypper update` 명령을 사용하여 `azdata-cli`를 업데이트합니다.
 
    ```bash
    sudo zypper refresh

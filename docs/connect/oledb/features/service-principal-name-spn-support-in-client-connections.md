@@ -69,7 +69,7 @@ ms.locfileid: "74056676"
  새 연결 동작은 클라이언트에 의해 구현되므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 특정 버전에 국한되지 않습니다.  
   
 ## <a name="linked-servers-and-delegation"></a>연결된 서버 및 위임  
- 연결된 서버가 만들어질 때 **sp_addlinkedserver\@ 의** [provstr](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 하는 경우의 이점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
+ 연결된 서버가 만들어질 때 [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) 의 **\@provstr** 매개 변수를 사용하여 서버 및 장애 조치 파트너 SPN을 지정할 수 있습니다. 이렇게 하는 경우의 이점은 클라이언트 연결 문자열에 SPN을 지정하는 경우와 동일합니다. Kerberos 인증을 사용하는 연결을 설정하는 것이 더 쉽고 안정적입니다.  
   
  연결된 서버를 사용한 위임에는 Kerberos 인증이 필요합니다.  
   

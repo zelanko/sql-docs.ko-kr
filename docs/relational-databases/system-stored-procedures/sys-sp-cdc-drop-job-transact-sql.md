@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 0318322442aae5a72b25b2eb011e03a82fe84525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7429f2c375daa12035e0734cf7a205f03f9be765
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066769"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808326"
 ---
 # <a name="syssp_cdc_drop_job-transact-sql"></a>sys.sp_cdc_drop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="remarks"></a>설명  
  sp_cdc_drop_job은 [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)에서 내부적으로 호출 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

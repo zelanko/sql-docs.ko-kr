@@ -150,7 +150,7 @@ spid 54: Transaction rollback in progress. Estimated rollback completion: 80% Es
 ```  
   
 ### <a name="c-using-kill-to-stop-an-orphaned-distributed-transaction"></a>C. KILL을 사용하여 분리된 분산 트랜잭션 종료  
-다음 예에서는 *의* UOW`D5499C66-E398-45CA-BF7E-DC9C194B48CF`를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
+다음 예에서는 `D5499C66-E398-45CA-BF7E-DC9C194B48CF`의 *UOW*를 사용하여 분리된 분산 트랜잭션(세션 ID = -2)을 종료하는 방법을 보여 줍니다.  
   
 ```sql  
 KILL 'D5499C66-E398-45CA-BF7E-DC9C194B48CF';  

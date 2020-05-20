@@ -101,7 +101,7 @@ ms.locfileid: "68889693"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  SharePoint 2013/2016 중앙 관리 -> "[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]애플리케이션 관리 **" -> "** 서버의 서비스 관리 **" 페이지에서**  서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다.  
+2.  SharePoint 2013/2016 중앙 관리 -> "**애플리케이션 관리**" -> "**서버의 서비스 관리**" 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다.  
   
  ![맨 위로 이동 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
