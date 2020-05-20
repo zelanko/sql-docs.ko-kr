@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931029"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759859"
 ---
 # <a name="sort-property-example-vb"></a>Sort 속성 예제(VB)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Sort](../../../ado/reference/ado-api/sort-property.md) 속성을 사용 하 여 ***Pubs*** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  

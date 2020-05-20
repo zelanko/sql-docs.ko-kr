@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923901"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759059"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>인터넷 게시용 OLE DB 공급자
 Microsoft OLE DB Provider for Internet publishing (internet Publishing Provider)를 사용 하 여 Microsoft FrontPage에서 [제공 하는](../../../ado/reference/ado-api/stream-object-ado.md) 웹 폴더 또는 파일과 같은 리소스에 액세스 [하 고 조작할](../../../ado/reference/ado-api/record-object-ado.md) 수 있습니다. ADO를 사용 하 여 **레코드**, **스트림**또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 원본을 URL로 지정할 수 있습니다. 그런 다음 리소스를 업로드, 다운로드, 이동, 복사 및 삭제 하거나 리소스 속성을 직접 조작할 수 있습니다.  
@@ -32,19 +32,19 @@ Microsoft OLE DB Provider for Internet publishing (internet Publishing Provider)
   
  ADO를 인터넷 게시 공급자에 연결 하는 방법에는 다음 세 가지가 있습니다.  
   
--   연결 문자열에서 "URL ="을 지정 합니다. 예를 들면 다음과 같습니다.  
+-   연결 문자열에서 "URL ="을 지정 합니다. 다음은 그 예입니다.  
   
     ```  
     objConn.Open "URL=https://servername"  
     ```  
   
--   연결 문자열의 *Provider* 키워드에 대해 msdaipp.dll를 지정 합니다. 예를 들면 다음과 같습니다.  
+-   연결 문자열의 *Provider* 키워드에 대해 msdaipp.dll를 지정 합니다. 다음은 그 예입니다.  
   
     ```  
     objConn.Open "provider=MSDAIPP.DSO;data source=https://servername"  
     ```  
   
--   [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 속성에 대해 msdaipp.dll를 지정 합니다. 예를 들면 다음과 같습니다.  
+-   [Connection](../../../ado/reference/ado-api/connection-object-ado.md) 개체의 [Provider](../../../ado/reference/ado-api/provider-property-ado.md) 속성에 대해 msdaipp.dll를 지정 합니다. 다음은 그 예입니다.  
   
     ```  
     objConn.Provider = "MSDAIPP.DSO"  

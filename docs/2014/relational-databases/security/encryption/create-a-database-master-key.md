@@ -3,7 +3,6 @@ title: 데이터베이스 마스터 키 만들기 | Microsoft 문서
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql-server-2014
-ms.reviewer: carlrab
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.reviewer: carlrab
+ms.openlocfilehash: cc0b3e0dccd1ecf674d583e4d1b7adc1a85341d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957247"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758889"
 ---
 # <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
 
-이 항목에서는를 사용 `master` [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)]하 여에서 데이터베이스에 데이터베이스 마스터 키를 만드는 방법에 대해 설명 합니다.
+이 항목에서는를 사용 하 여에서 데이터베이스에 데이터베이스 마스터 키를 만드는 방법에 대해 설명 `master` [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] 합니다.
 
 **항목 내용**
 

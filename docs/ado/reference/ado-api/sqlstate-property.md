@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLState property
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e43ace17f3f2b709c327f185a189a107b6b73065
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b40c35730b02352f1e8667941aa4c220a7ad4df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916879"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759769"
 ---
 # <a name="sqlstate-property"></a>SQLState 속성
 지정 된 [오류](../../../ado/reference/ado-api/error-object.md) 개체에 대 한 SQL 상태를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  ANSI SQL 표준에 따라 5 자리 **문자열** 값을 반환 하 고 오류 코드를 나타냅니다.  
   
 ## <a name="remarks"></a>설명  

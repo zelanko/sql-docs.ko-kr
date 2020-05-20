@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], VC++ example
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4c01370efddbd4163459d694772f3e581ddeadd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930964"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759849"
 ---
 # <a name="sort-property-example-vc"></a>Sort 속성 예제(VC++)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Sort](../../../ado/reference/ado-api/sort-property.md) 속성을 사용 하 여 **Pubs** 데이터베이스의 ***Authors*** 테이블에서 파생 된 **레코드 집합** 의 행을 다시 정렬 합니다. 보조 유틸리티 루틴은 각 행을 인쇄 합니다.  

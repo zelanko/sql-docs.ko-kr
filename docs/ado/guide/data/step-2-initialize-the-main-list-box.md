@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924073"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760819"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>2단계: 기본 목록 상자 초기화
 전역 레코드 및 레코드 집합 개체를 선언 하려면 Form1의 (일반) (선언)에 다음 코드를 삽입 합니다.  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. ActiveConnection로 지정 된 `grec`URL이 있는 Record 개체가 열립니다. URL이 있는 경우 열립니다. 아직 존재 하지 않는 경우 생성 됩니다. "<https://servername/foldername/>"를 사용자 환경의 올바른 URL로 바꾸어야 합니다.  
+ 이 코드는 전역 레코드 및 레코드 집합 개체를 인스턴스화합니다. `grec`ActiveConnection로 지정 된 URL이 있는 Record 개체가 열립니다. URL이 있는 경우 열립니다. 아직 존재 하지 않는 경우 생성 됩니다. " <https://servername/foldername/> "를 사용자 환경의 올바른 URL로 바꾸어야 합니다.  
   
- 레코드 집합 개체 `grs`는 레코드의 자식에 대해 열립니다 `grec`. 그런 `lstMain` 다음 URL에 게시 된 리소스의 파일 이름으로 채워집니다.  
+ 레코드 집합 개체는 `grs` 레코드의 자식에 대해 열립니다 `grec` . 그런 다음 `lstMain` URL에 게시 된 리소스의 파일 이름으로 채워집니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   

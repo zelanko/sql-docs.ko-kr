@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f6b2e68947959ecd497645d2290bb7acaa03f86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919793"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760413"
 ---
 # <a name="command-object-ado"></a>명령 개체(ADO)
 데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.  

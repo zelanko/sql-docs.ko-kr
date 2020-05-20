@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d737c2f031fa3ba630eabb7e52dff0e056c3390
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aa4be74086e4d35af70ac52aa9db0066f4279e3e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919593"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760369"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks 메서드(ADO)
 두 책갈피를 비교 하 여 상대 값의 표시를 반환 합니다.  

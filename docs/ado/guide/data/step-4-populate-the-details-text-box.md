@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924062"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760789"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>4단계: 세부 정보 텍스트 상자 채우기
 세부 정보 텍스트 상자를 채우려면 새 **서브루틴 이라는 새 서브루틴을 만들고** 다음 코드를 삽입 합니다.  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- 이 코드는 `lstDetails` 에 `recFields`전달 된 단순 레코드의 필드 및 값으로 채워집니다. 리소스가 텍스트 파일이 면 리소스 레코드에서 텍스트 스트림이 열립니다. 이 코드는 문자 집합이 ASCII 인지 확인 하 고 스트림 내용을에 `txtDetails`복사 합니다.  
+ 이 코드는 `lstDetails` 에 전달 된 단순 레코드의 필드 및 값으로 채워집니다 `recFields` . 리소스가 텍스트 파일이 면 리소스 레코드에서 텍스트 스트림이 열립니다. 이 코드는 문자 집합이 ASCII 인지 확인 하 고 스트림 내용을에 복사 합니다 `txtDetails` .  
   
 ## <a name="see-also"></a>참고 항목  
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   

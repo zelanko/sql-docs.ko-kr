@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - State property [ADO]
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c45b9331ddd538cdf23a57eaf39b6efb71bccc4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68a0e6fe0c595a79447cbf79155914606415df89
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930859"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759759"
 ---
 # <a name="state-property-ado"></a>State 속성(ADO)
 개체의 상태가 열리거나 닫혀 있는지 여부에 관계 없이 모든 개체를 나타냅니다. 개체가 비동기 메서드를 실행 하는 경우 개체의 현재 상태에서 연결, 실행 또는 검색 하는지 여부를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) 값이 될 수 있는 **Long** 값을 반환 합니다. 기본값은 **adStateClosed**입니다.  
   
 ## <a name="remarks"></a>설명  

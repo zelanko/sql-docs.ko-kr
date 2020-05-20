@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a38140e32f594e78e047c83eb1b4d6a495483e21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930684"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759619"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="methods"></a>메서드  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], Visual Basic example
 ms.assetid: b682bcc3-04b3-42b0-86f4-c17e0cd29baf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a97ff4191aa065ece5af53087295e13885209d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fa4c09a56f164ca8c0d2b6d6222b9d827c1ee45
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930813"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759679"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제(VB)
 이 예에서는 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  

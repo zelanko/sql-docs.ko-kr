@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], Visual Basic example
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91f2f3bc8793a82cd7fd7eee16e259868bdad915
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966958"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759409"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 속성 예제(VB)
 이 예에서는 [인덱스](../../../ado/reference/adox-api/index-object-adox.md)의 [클러스터형](../../../ado/reference/adox-api/clustered-property-adox.md) 속성을 보여 줍니다. Microsoft Jet 데이터베이스는 클러스터형 인덱스를 지원 하지 않으므로이 예에서는 **Northwind** 데이터베이스에 있는 모든 인덱스의 **클러스터형** 속성에 대해 **False** 를 반환 합니다.  

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - connections [ADO]
 - connection strings [ADO]
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b58dc19097d01630fa1ab1c2707e8be379ae83cb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925762"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761149"
 ---
 # <a name="creating-a-connection-string"></a>연결 문자열 만들기
-연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 예를 들면 다음과 같습니다.  
+연결 문자열은 세미콜론으로 구분 된 인수/값 쌍 (즉, 매개 변수)의 목록으로 구성 됩니다. 다음은 그 예입니다.  
   
 ```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
@@ -48,7 +48,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
   
- 이 연결 문자열에서 ADO는 SQL Server에 대 `"Provider=SQLOLEDB"` 한 Microsoft OLE DB 공급자를 ado 데이터 원본으로 지정 하는 매개 변수만 인식 합니다. 인수/값 쌍 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"`의 나머지가이 공급자에 게 전달 됩니다. 이러한 매개 변수의 유형 및 유효성 검사는 공급자별로 다릅니다. 연결 문자열에 전달 될 수 있는 유효한 매개 변수에 대 한 자세한 내용은 개별 공급자 설명서를 참조 하십시오.  
+ 이 연결 문자열에서 ADO는 `"Provider=SQLOLEDB"` SQL Server에 대 한 Microsoft OLE DB 공급자를 ado 데이터 원본으로 지정 하는 매개 변수만 인식 합니다. 인수/값 쌍의 나머지가 `"Data Source=MySqlServer; Initial Catalog=Northwind;Integrated Security='SSPI';"` 이 공급자에 게 전달 됩니다. 이러한 매개 변수의 유형 및 유효성 검사는 공급자별로 다릅니다. 연결 문자열에 전달 될 수 있는 유효한 매개 변수에 대 한 자세한 내용은 개별 공급자 설명서를 참조 하십시오.  
   
  SQL Server 설명서에 대 한 OLE DB 공급자에 따라 "Server"를 *데이터 원본* 매개 변수로 대체 하 고 "Database"를 *초기 카탈로그* 매개 변수에 사용할 수 있습니다. 따라서 다음 연결 문자열은 위의 결과와 동일한 결과를 생성 합니다.  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Properties collection [ADO], members
 ms.assetid: 03dc1e08-5f03-49e5-8596-76b306b931bd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8b54a2ba47f5f153c51b0f34d12017024a25aeaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb1c058fce72fb0321b961a72c8c27d5abfb2419
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917558"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759979"
 ---
 # <a name="properties-collection-properties-methods-and-events"></a>Properties 컬렉션 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

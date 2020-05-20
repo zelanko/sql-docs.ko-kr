@@ -12,14 +12,14 @@ helpviewer_keywords:
 - errors [ADO]
 - ADO, error handling
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa18c5d93617963afa1cf8d472651d03db6ed493
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925422"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761019"
 ---
 # <a name="error-handling"></a>오류 처리
 ADO는 여러 가지 방법을 사용 하 여 발생 하는 오류를 응용 프로그램에 알립니다. 이 섹션에서는 ADO를 사용할 때 발생할 수 있는 오류 유형과 응용 프로그램에 알리는 방법을 설명 합니다. 이러한 오류를 처리 하는 방법에 대 한 제안으로 마무리 합니다.  

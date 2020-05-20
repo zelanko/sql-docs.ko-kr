@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], VC++ example
 - Execute method [ADO], VC++ example
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 451aed8a69562578cfaa68f18c692613995a6e0e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932859"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760149"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery 및 Clear 메서드 예제 (VC + +)
 이 예제에서는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 실행 되는 경우 **Execute** 메서드를 보여 줍니다. 또한 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 데이터를 검색 하 고 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 메서드를 사용 하 여 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션의 내용을 지웁니다. ExecuteCommand 및 PrintOutput 함수는이 예제를 실행 하는 데 필요 합니다.  

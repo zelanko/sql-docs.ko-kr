@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Clear method [ADO], VBScript example
 - Requery method [ADO], VBScript example
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a0785e3e91c6d01f446e1d49b34a41beef052c48
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918811"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760159"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute, Requery 및 Clear 메서드 예제 (VBScript)
 이 예제에서는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체와 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 모두에서 실행 되는 경우 **Execute** 메서드를 보여 줍니다. 또한 [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 사용 하 여 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 현재 데이터를 검색 하 고 [clear](../../../ado/reference/ado-api/clear-method-ado.md) 메서드를 사용 하 여 [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션의 내용을 지웁니다. 이 프로시저를 실행 하려면 ExecuteCommand 및 PrintOutput 프로시저가 필요 합니다.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760759"
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지속성
 [레코드](../../../ado/reference/ado-api/recordset-object-ado.md) 집합 개체 [Save](../../../ado/reference/ado-api/save-method.md) 메서드는 파일에 **레코드 집합** 을 저장 하거나 *유지*하며, [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 해당 파일에서 **레코드 집합** 을 복원 합니다.  

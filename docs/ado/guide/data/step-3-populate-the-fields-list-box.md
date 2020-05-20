@@ -8,17 +8,17 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2ecedd516891e2f99a800da452573717f211ff60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924059"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760799"
 ---
 # <a name="step-3-populate-the-fields-list-box"></a>3단계: 필드 목록 상자 채우기
-필드 목록 상자를 채우려면 다음 코드를의 `lstMain`Click 이벤트 처리기에 삽입 합니다.  
+필드 목록 상자를 채우려면 다음 코드를의 Click 이벤트 처리기에 삽입 합니다 `lstMain` .  
   
 ```  
 Private Sub lstMain_Click()  
@@ -46,13 +46,13 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- 이 코드는 로컬 레코드 및 레코드 집합 개체를 `rec` `rs`각각 선언 하 고 인스턴스화합니다.  
+ 이 코드는 로컬 레코드 및 레코드 집합 개체를 각각 선언 하 고 인스턴스화합니다 `rec` `rs` .  
   
- 에서 `lstMain` 선택한 리소스에 해당 하는 행을의 `grs`현재 행으로 설정 합니다. 그런 다음 세부 정보 목록 상자가 지워지고 `rec` 의 `grs` 현재 행을 원본으로 사용 하 여 열립니다.  
+ 에서 선택한 리소스에 해당 하는 행을 `lstMain` 의 현재 행으로 설정 합니다 `grs` . 그런 다음 세부 정보 목록 상자가 지워지고 `rec` 의 현재 행을 원본으로 사용 하 여 열립니다 `grs` .  
   
- [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)에 지정 된 대로 리소스가 컬렉션 레코드 이면 로컬 레코드 집합이 `rs` rec의 자식에서 열립니다. 그런 `lstDetails` 다음는의 `rs`행 값으로 채워집니다.  
+ [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)에 지정 된 대로 리소스가 컬렉션 레코드 이면 로컬 레코드 집합이 `rs` rec의 자식에서 열립니다. 그런 다음 `lstDetails` 는의 행 값으로 채워집니다 `rs` .  
   
- 리소스가 단순 레코드 이면 `recFields` 가 호출 됩니다. 에 대 한 `recFields`자세한 내용은 다음 단계를 참조 하세요.  
+ 리소스가 단순 레코드 이면 `recFields` 가 호출 됩니다. 에 대 한 자세한 내용은 `recFields` 다음 단계를 참조 하세요.  
   
  리소스가 구조적 문서인 경우 코드는 구현 되지 않습니다.  
   

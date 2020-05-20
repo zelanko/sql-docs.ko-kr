@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 092c67ec3fef6705d103e87cd5e47adc37397475
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921478"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760699"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize 및 DefinedSize 속성 예제 (VC + +)
 이 예에서는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다.  

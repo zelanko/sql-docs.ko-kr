@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2b5df87b29a0fc73a83d8b6dde568a7c173876cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4e8b3c6da84e0b439671adcc4516acde22fd2adf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930750"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759669"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync 속성 예제(VC++)
 이 예에서는 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성을 통해 계층적 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)의 행에 쉽게 액세스 하는 방법을 보여 줍니다.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924173"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760859"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 데이터 셰이핑은 셰이프 **레코드 집합**의 열, 열이 나타내는 엔터티 간의 관계 및 **레코드 집합이** 데이터로 채워지는 방식을 정의 합니다.  

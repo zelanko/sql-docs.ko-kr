@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930940"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759839"
 ---
 # <a name="sort-property"></a>Sort 속성
 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 정렬 하는 하나 이상의 필드 이름과 각 필드가 오름차순으로 정렬 되는지 또는 내림차순으로 정렬 되는지 나타냅니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "67930940"
   
  **Sort** 속성을 빈 문자열로 설정 하면 행을 원래 순서로 다시 설정 하 고 임시 인덱스를 삭제 합니다. 기존 인덱스는 삭제 되지 않습니다.  
   
- **레코드 집합** 에 *firstName*, *middleInitial*및 *lastName*이라는 세 개의 필드가 있다고 가정 합니다. **Sort** 속성을 문자열 "`lastName DESC, firstName ASC`"로 설정 합니다 .이 문자열은 성을 기준으로 내림차순으로 정렬 한 다음 **이름을 기준으로** 오름차순으로 정렬 합니다. 중간 이니셜은 무시 됩니다.  
+ **레코드 집합** 에 *firstName*, *middleInitial*및 *lastName*이라는 세 개의 필드가 있다고 가정 합니다. **Sort** 속성을 문자열 ""로 설정 합니다 .이 문자열은 `lastName DESC, firstName ASC` 성을 기준으로 내림차순으로 정렬 한 다음 이름을 **기준으로** 오름차순으로 정렬 합니다. 중간 이니셜은 무시 됩니다.  
   
  이름이 **asc** 및 **DESC**와 충돌 하므로 필드 이름을 "ASC" 또는 "DESC"로 지정할 수 없습니다. **레코드 집합**을 반환 하는 쿼리에서 **AS** 키워드를 사용 하 여 이름이 충돌 하는 필드에 대 한 별칭을 만들 수 있습니다.  
   

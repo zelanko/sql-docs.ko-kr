@@ -11,14 +11,14 @@ helpviewer_keywords:
 - address book application scenario [ADO]
 - RDS scenarios [ADO]
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3a2c971f952a7c3f13b058bb3937201d323746d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922243"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758989"
 ---
 # <a name="running-the-address-book-sample-application"></a>주소록 예제 애플리케이션 실행
 > [!IMPORTANT]

@@ -15,19 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b2880c63e42c1d64526db053a61f2824e6ac8305
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930831"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759719"
 ---
 # <a name="status-property-ado-field"></a>Status 속성(ADO 필드)
 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 상태를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  [Fieldstatusenum](../../../ado/reference/ado-api/fieldstatusenum.md) 값을 반환 합니다. 기본값은 **adFieldOK**입니다.  
   
 ## <a name="remarks"></a>설명  

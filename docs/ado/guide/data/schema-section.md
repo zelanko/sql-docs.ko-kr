@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924298"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760899"
 ---
 # <a name="schema-section"></a>스키마 섹션
 스키마 섹션이 필요 합니다. 이전 예제에서 볼 수 있듯이 ADO는 각 열에 대 한 자세한 메타 데이터를 작성 하 여 데이터 값의 의미 체계를 업데이트 가능한 한 많이 유지 합니다. 그러나 XML에서 로드 하려면 ADO에 열 이름과 해당 열이 속한 행 집합만 필요 합니다. 최소 스키마의 예는 다음과 같습니다.  
@@ -95,10 +95,10 @@ ms.locfileid: "67924298"
 </rs:data>  
 ```  
   
- 마찬가지로, 이전 예제에서에 대해 `CompanyName` 정의 된 별칭이 없기 때문에 문서 `CompanyName` 전체에서를 일관 되 게 사용 해야 합니다.  
+ 마찬가지로, 이전 예제에서에 대해 정의 된 별칭이 없기 때문에 `CompanyName` `CompanyName` 문서 전체에서를 일관 되 게 사용 해야 합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- Dt: type 특성을 사용 하 여 열에 데이터 형식을 적용할 수 있습니다. 허용 되는 XML 유형에 대 한 명확한 지침은 [W3C XML 데이터 사양의](http://www.w3.org/TR/1998/NOTE-XML-data/)데이터 형식 섹션을 참조 하세요. 다음 두 가지 방법으로 데이터 형식을 지정할 수 있습니다. 열 정의 자체에는 dt: type 특성을 직접 지정 하거나, 열 정의의 중첩 된 요소로는 다음과 같은 두 가지 방법을 사용 합니다. 예를 들면 다음과 같습니다.  
+ Dt: type 특성을 사용 하 여 열에 데이터 형식을 적용할 수 있습니다. 허용 되는 XML 유형에 대 한 명확한 지침은 [W3C XML 데이터 사양의](http://www.w3.org/TR/1998/NOTE-XML-data/)데이터 형식 섹션을 참조 하세요. 다음 두 가지 방법으로 데이터 형식을 지정할 수 있습니다. 열 정의 자체에는 dt: type 특성을 직접 지정 하거나, 열 정의의 중첩 된 요소로는 다음과 같은 두 가지 방법을 사용 합니다. 예제:  
   
 ```  
 <s:AttributeType name="Phone" >  
@@ -106,7 +106,7 @@ ms.locfileid: "67924298"
 </s:AttributeType>  
 ```  
   
- 이는 다음과 동등합니다.  
+ 위의 식은 아래의 식과 동일합니다.  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  
@@ -152,13 +152,13 @@ ms.locfileid: "67924298"
 </s:AttributeType>  
 ```  
   
- 정의 `CompanyName` 는 null이 될 수 있지만 `ShipperID` null 값을 포함할 수 없습니다. 데이터 섹션에 다음 행이 포함 된 경우 지 속성 공급자는 `CompanyName` 열에 대 한 데이터의 상태를 OLE DB 상태 상수 DBSTATUS_S_ISNULL 설정 합니다.  
+ 정의는 `CompanyName` null이 될 수 있지만 `ShipperID` null 값을 포함할 수 없습니다. 데이터 섹션에 다음 행이 포함 된 경우 지 속성 공급자는 열에 대 한 데이터의 상태를 `CompanyName` OLE DB 상태 상수 DBSTATUS_S_ISNULL 설정 합니다.  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- 다음과 같이 행이 완전히 비어 있으면 지 속성 공급자는에 대해 `ShipperID` DBSTATUS_E_UNAVAILABLE OLE DB 상태를 반환 하 고 CompanyName에 대해 DBSTATUS_S_ISNULL을 반환 합니다.  
+ 다음과 같이 행이 완전히 비어 있으면 지 속성 공급자는에 대해 DBSTATUS_E_UNAVAILABLE OLE DB 상태를 반환 `ShipperID` 하 고 CompanyName에 대해 DBSTATUS_S_ISNULL을 반환 합니다.  
   
 ```  
 <z:row/>   
@@ -170,7 +170,7 @@ ms.locfileid: "67924298"
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- 이전 행의 경우 지 속성 공급자는 두 열에 대해 DBSTATUS_S_OK의 OLE DB 상태를 반환 합니다. 이 `CompanyName` 경우는 단순히 "" (빈 문자열)입니다.  
+ 이전 행의 경우 지 속성 공급자는 두 열에 대해 DBSTATUS_S_OK의 OLE DB 상태를 반환 합니다. `CompanyName`이 경우는 단순히 "" (빈 문자열)입니다.  
   
  OLE DB XML 문서 스키마 내에서 사용할 수 있는 OLE DB 구문에 대 한 자세한 내용은 "urn: schema-microsoft-com: rowset"의 정의 및 OLE DB 프로그래머 가이드를 참조 하십시오.  
   

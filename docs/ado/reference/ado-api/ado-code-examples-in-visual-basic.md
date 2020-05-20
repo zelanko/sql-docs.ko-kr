@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f09b1827ae26f5ba8b8168e9c53809120bce6133
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921193"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760579"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 Visual Basic에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

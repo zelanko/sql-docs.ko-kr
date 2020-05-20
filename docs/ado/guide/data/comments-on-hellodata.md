@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3836d577ab9230e425f42a52b53ed82d3354d72a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925803"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761180"
 ---
 # <a name="comments-on-hellodata"></a>HelloData에 대한 설명
 HelloData 응용 프로그램은 일반적인 ADO 응용 프로그램의 기본 작업 (데이터 가져오기, 검사, 편집 및 업데이트)을 단계별로 안내 합니다. 응용 프로그램을 시작할 때 첫 번째 단추인 **데이터 가져오기**를 클릭 합니다. 이렇게 하면 **GetData** 서브루틴이 실행 됩니다.  
@@ -27,9 +27,9 @@ HelloData 응용 프로그램은 일반적인 ADO 응용 프로그램의 기본 
   
  Visual Basic **OnError** 문을 사용 하 여 오류 처리기를 할당 합니다. ADO의 오류 처리에 대 한 자세한 내용은 [오류 처리](../../../ado/guide/data/error-handling.md)를 참조 하세요. HelloData 예제에서 *연결이 끊어진 레코드 집합*을 만들기 때문에 새 **연결** 개체가 만들어지고 **CursorLocation** 속성은 **adUseClient** 로 설정 됩니다. 즉, 데이터 원본에서 데이터를 가져온 후 데이터 원본에 대 한 실제 연결이 끊어지고 **레코드 집합** 개체에서 로컬로 캐시 된 데이터를 계속 사용할 수 있습니다.  
   
- 연결을 연 후 변수에 SQL 문자열을 할당 합니다 (sSQL). 그런 다음 새 **레코드 집합** 개체의 인스턴스를 `m_oRecordset1`만듭니다. 다음 코드 줄에서 기존 **연결**을 통해 **레코드 집합** 을 열고를 **레코드 집합**의 원본 `sSQL` 으로 전달 합니다. **레코드 집합** 의 원본으로 전달 된 SQL 문자열을 확인 하는 데 도움이 되는 ADO는 최종 인수의 **Adcmdtext** 를 **recordset Open** 메서드에 전달 하 여 명령의 텍스트 정의입니다. 이 줄에는 **레코드 집합과**연결 된 **LockType** 및 **CursorType** 설정 됩니다.  
+ 연결을 연 후 변수에 SQL 문자열을 할당 합니다 (sSQL). 그런 다음 새 **레코드 집합** 개체의 인스턴스를 만듭니다 `m_oRecordset1` . 다음 코드 줄에서 기존 **연결**을 통해 **레코드 집합** 을 열고를 `sSQL` **레코드 집합**의 원본으로 전달 합니다. **레코드 집합** 의 원본으로 전달 된 SQL 문자열을 확인 하는 데 도움이 되는 ADO는 최종 인수의 **Adcmdtext** 를 **recordset Open** 메서드에 전달 하 여 명령의 텍스트 정의입니다. 이 줄에는 **레코드 집합과**연결 된 **LockType** 및 **CursorType** 설정 됩니다.  
   
- 코드의 다음 줄에서는 **MarshalOptions** 속성을 **adMarshalModifiedOnly**로 설정 합니다. **MarshalOptions** 는 중간 계층 (또는 웹 서버)으로 마샬링되는 레코드를 나타냅니다. 마샬링에 대 한 자세한 내용은 COM 설명서를 참조 하십시오. 클라이언트 쪽 커서 ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**)와 함께 **adMarshalModifiedOnly** 를 사용 하는 경우 클라이언트에서 수정 된 레코드만 중간 계층에 다시 기록 됩니다. **MarshalOptions** 를 **adMarshalModifiedOnly** 로 설정 하면 마샬링되는 행이 줄어들기 때문에 성능을 향상 시킬 수 있습니다.  
+ 코드의 다음 줄에서는 **MarshalOptions** 속성을 **adMarshalModifiedOnly**로 설정 합니다. **MarshalOptions** 는 중간 계층 (또는 웹 서버)으로 마샬링되는 레코드를 나타냅니다. 마샬링에 대 한 자세한 내용은 COM 설명서를 참조 하십시오. 클라이언트 쪽 커서 ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)adUseClient)와 함께 **adMarshalModifiedOnly** 를 사용 하는 경우  =  **adUseClient**클라이언트에서 수정 된 레코드만 중간 계층에 다시 기록 됩니다. **MarshalOptions** 를 **adMarshalModifiedOnly** 로 설정 하면 마샬링되는 행이 줄어들기 때문에 성능을 향상 시킬 수 있습니다.  
   
  그런 다음 **ActiveConnection** 속성을 **Nothing**으로 설정 하 여 **레코드 집합** 의 연결을 끊습니다. 자세한 내용은 [데이터 업데이트 및 유지](../../../ado/guide/data/updating-and-persisting-data.md)에서 "레코드 집합 연결 끊기 및 다시 연결" 섹션을 참조 하세요.  
   
@@ -66,7 +66,7 @@ HelloData 응용 프로그램은 일반적인 ADO 응용 프로그램의 기본 
   
  그런 다음 새 **연결** 개체를 만들고 사용 하 여 데이터 원본에 대 한 연결을 다시 설정 합니다. 레코드 집합에 대 한 **ActiveConnection** 으로 새 **연결** 을 설정 하 여 **레코드 집합** 을 데이터 원본에 다시 연결 **합니다.** 서버에 업데이트를 보내기 위해 코드는 **레코드 집합**에서 **UpdateBatch** 를 호출 합니다.  
   
- 일괄 업데이트가 성공 하면 모듈 수준 플래그 변수 `m_flgPriceUpdated`가 True로 설정 됩니다. 그러면 나중에 데이터베이스에 대해 수행 된 모든 변경 내용을 정리 하는 알림이 표시 됩니다.  
+ 일괄 업데이트가 성공 하면 모듈 수준 플래그 변수가 `m_flgPriceUpdated` True로 설정 됩니다. 그러면 나중에 데이터베이스에 대해 수행 된 모든 변경 내용을 정리 하는 알림이 표시 됩니다.  
   
  마지막으로, 코드는 **레코드 집합** 의 첫 번째 레코드로 다시 이동 하 고 원래 값과 현재 값을 표시 합니다. 값은 **UpdateBatch**를 호출한 후에 동일 합니다.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bbc90dc2d818ca880a9f712d551fd6a98fb9ecf3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919699"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760429"
 ---
 # <a name="commandtype-property-ado"></a>CommandType 속성(ADO)
 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 유형을 나타냅니다.  

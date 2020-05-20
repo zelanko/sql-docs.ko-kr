@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Connection collection [ADO], ADO for Visual C++ syntax
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1ba62fde43bad840f2559758fe45db34d1e8a507
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919541"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760319"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>연결(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

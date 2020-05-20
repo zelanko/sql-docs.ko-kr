@@ -11,14 +11,14 @@ helpviewer_keywords:
 - record location [ADO]
 - current record [ADO]
 ms.assetid: e770e626-68b1-4ddf-a217-d7b30311e2ee
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1882c5298d92e17a7ddaa165288fddfab7fdb02b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0f712c6c1604f96d5d66d5ded712ae6efe54edb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924305"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760919"
 ---
 # <a name="sample-recordset-for-examining-data"></a>데이터를 검사하기 위한 샘플 레코드 집합
 먼저 Microsoft SQL Server의 Northwind 샘플 데이터에 대해 실행 되는 다음 SQL 쿼리를 사용 하 여 반환 되는 **레코드 집합** 개체를 살펴보겠습니다.  

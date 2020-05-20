@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d8d6f40ebbb7ba4c90ba6d00291f40dc38118a13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919330"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760209"
 ---
 # <a name="count-property-example-vc"></a>Count 속성 예제(VC++)
 이 예에서는 ***Employee*** 데이터베이스에 두 개의 컬렉션이 있는 [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성을 보여 줍니다. 속성은 각 컬렉션의 개체 수를 가져오고 이러한 컬렉션을 열거 하는 루프의 상한 값을 설정 합니다.  

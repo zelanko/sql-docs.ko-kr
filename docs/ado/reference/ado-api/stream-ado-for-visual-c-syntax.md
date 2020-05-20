@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - Stream collection [ADO]
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b570b21caed38042cfe975332791251426236c98
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930692"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759649"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>스트림(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

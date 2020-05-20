@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Command object [ADO], creating and executing
 - commands [ADO], creating and executing
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f4946af23a684e1bc98556c914cbd9e271fd208
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925734"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761139"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>간단한 명령 만들기 및 실행
 간단한 명령은 매개 변수화 되지 않고 지 속성을 필요로 하지 않는 명령입니다. 간단한 명령을 만들고 실행 하는 방법에는 세 가지가 있습니다.  

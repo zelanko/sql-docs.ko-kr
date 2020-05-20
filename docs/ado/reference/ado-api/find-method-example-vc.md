@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], VC++ example
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e6be0edf100501762f6d4eada735ff90caa84df4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 73ba054b583fb9930cc62d18ff9e8e28a20720e9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932523"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760099"
 ---
 # <a name="find-method-example-vc"></a>Find 메서드 예제(VC++)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 사용 하 여 **Pubs** 데이터베이스의 비즈니스 타이틀 수를 찾고 계산 합니다. 이 예에서는 기본 공급자가 유사한 기능을 지원 하지 않는다고 가정 합니다.  

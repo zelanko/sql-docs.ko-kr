@@ -11,14 +11,14 @@ helpviewer_keywords:
 - editing data [ADO], edit mode
 - ADO, editing data
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6df3765b8dd9461349937fc14f6edebcaab3fbfb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925542"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761079"
 ---
 # <a name="determining-edit-mode"></a>편집 모드 확인
 ADO는 현재 레코드와 연결 된 편집 버퍼를 유지 관리 합니다. **EditMode** 속성은이 버퍼가 변경 되었는지 또는 새 레코드가 생성 되었는지 여부를 나타냅니다. **EditMode** 를 사용 하 여 현재 레코드의 편집 상태를 확인 합니다. 편집 프로세스가 중단 된 경우 보류 중인 변경 내용을 테스트 하 고 **Update** 또는 **CancelUpdate** 메서드를 사용 해야 하는지 여부를 결정할 수 있습니다.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - PropertyAttributesEnum enumeration [ADO]
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcb17116d7332e9afb359a7dd47d69cb3eb75df4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759939"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체의 특성을 지정 합니다.  

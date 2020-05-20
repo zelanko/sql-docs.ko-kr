@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - StreamWriteEnum enumeration [ADO]
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 479bc032cf779752f11dccca73ee56fc05a8ebdd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928639"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759569"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 줄 구분 기호가 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 개체에 쓰여진 문자열에 추가 되는지 여부를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|기본값 *데이터* 매개 변수에 의해 지정 된 지정 된 텍스트 문자열을 **스트림** 개체에 씁니다.|  
 |**adWriteLine**|1|텍스트 문자열과 줄 구분선 문자를 **스트림** 개체에 씁니다. [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) 속성이 정의 되지 않은 경우 런타임 오류가 반환 됩니다.|  

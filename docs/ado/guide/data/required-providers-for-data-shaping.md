@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], data shaping
 - data shaping [ADO], providers required
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abda9d7a275ce100636efa58430009dd430fac0b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68661273"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760949"
 ---
 # <a name="required-providers-for-data-shaping"></a>데이터 셰이프에 필요한 공급자
 데이터 셰이핑에는 일반적으로 두 개의 공급자가 필요 합니다. [OLE DB에 대 한 서비스 공급자, 데이터 셰이핑 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)는 데이터 셰이핑 기능을 제공 하 고 SQL Server 용 OLE DB 공급자와 같은 데이터 공급자는 셰이프 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)을 채울 데이터 행을 제공 합니다.  

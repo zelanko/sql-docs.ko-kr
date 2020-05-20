@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Status property [ADO Recordset]
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1d91c3e92be7679ad6fbbb4a4ee7bd1bb6a48422
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d3ba9ad977fe02a712a675b8a9e4bae4b3d038b1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916834"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759739"
 ---
 # <a name="status-property-ado-recordset"></a>Status 속성(ADO 레코드 집합)
 일괄 업데이트 또는 기타 대량 작업과 관련 하 여 현재 레코드의 상태를 나타냅니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  하나 이상의 [Recordstatusenum](../../../ado/reference/ado-api/recordstatusenum.md) 값의 합을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  

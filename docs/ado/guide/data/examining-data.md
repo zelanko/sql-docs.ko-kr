@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data retrieval [ADO]
 - ADO, examining data
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 80f41778d1afa806b739e43edda6fb5b79e8f432
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925352"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760469"
 ---
 # <a name="examining-data"></a>데이터 검사
 데이터 [가져오기](../../../ado/guide/data/getting-data.md) 섹션에서는 데이터 원본에서 하나 이상의 **레코드 집합** 개체로 데이터를 검색 하는 방법에 대해 설명 했습니다. 이 섹션에서는 **레코드** 집합을 탐색 하 고 데이터를 보는 방법을 비롯 하 여 **레코드 집합** 에 대해 자세히 설명 합니다.  

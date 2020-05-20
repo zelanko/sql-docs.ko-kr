@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f36eace18280cd810341c5eeeec1fb294999e6ec
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930742"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759639"
 ---
 # <a name="stayinsync-property"></a>StayInSync 속성
 부모 행 위치가 변경 될 때 계층 구조 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체에서 기본 자식 레코드에 대 한 참조 (즉, *장*)가 변경 되는지 여부를 나타냅니다.  

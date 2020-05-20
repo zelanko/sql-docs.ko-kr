@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DefinedSize property [ADOX], Visual Basic example
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09e65fec85fd224df64ce7cc7fdb5166e67897e8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966457"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759189"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize 속성 예제(VB)
 이 예에서는 열의 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) 속성을 보여 [Column](../../../ado/reference/adox-api/column-object-adox.md)줍니다. 이 코드는 *Northwind* 데이터베이스의 **Employees** 테이블에 있는 FirstName 열의 크기를 다시 정의 합니다. 그런 다음 **Employees** 테이블을 기반으로 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 의 FirstName [필드](../../../ado/reference/ado-api/field-object.md) 값이 변경 됩니다. 기본적으로 **DefinedSize** 속성을 다시 정의한 후 FirstName 필드는 공백을 사용 하 여 채워집니다.  

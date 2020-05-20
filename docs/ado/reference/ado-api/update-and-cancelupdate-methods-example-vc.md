@@ -13,14 +13,14 @@ helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], VC++ example
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7a3e1b9eed98ba310498706c9708cb47ee8d6680
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940083"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759509"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update 및 CancelUpdate 메서드 예제(VC++)
 이 예제에서는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드와 함께 [Update](../../../ado/reference/ado-api/update-method.md) 메서드를 보여 줍니다.  

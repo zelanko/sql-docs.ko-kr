@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6dfb672b57b95224cf6ff056c3298c7c8a437d2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925651"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761109"
 ---
 # <a name="data-providers"></a>데이터 공급자
 데이터 공급자는 SQL 데이터베이스, 인덱싱된 순차 파일, 스프레드시트, 문서 저장소, 메일 파일 등 다양 한 데이터 원본을 나타냅니다. 공급자는 행 집합 이라는 일반적인 추상화를 사용 하 여 데이터를 균일 하 게 노출 합니다.  

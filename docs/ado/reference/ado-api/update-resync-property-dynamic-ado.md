@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Update Resync property [ADO]
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e9d000150cc86a8c838ac5dea827b5c376f3a79f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938803"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759489"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync 속성 - 동적(ADO)
 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 다시 [동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업이 오고 그 뒤에 해당 작업의 범위가 있는지 여부를 지정 합니다.  

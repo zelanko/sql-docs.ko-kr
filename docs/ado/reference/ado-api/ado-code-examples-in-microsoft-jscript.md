@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO code examples, JScript
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7ddf42eb5a34d17c735066cd4e936c75e64ff64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: db537a1d7fb8d5a440145c298a6ce524965a12b0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921210"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760589"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 JScript에서 작성할 때 ADO 메서드, 속성 및 이벤트를 사용 하는 방법을 배울 수 있습니다.  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 39e1670d9d37b1404e65ecb50f09dc214abdaaff
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926976"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760549"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>부록 A: 데이터 및 서비스 공급자
 이 섹션에서는 세 가지 종류의 공급자 인 데이터 공급자, 서비스 공급자 및 서비스 구성 요소를 다룹니다. 공급자는 데이터 및 서비스 제공 서비스를 제공 하는 두 가지 범주로 나뉩니다. *데이터 공급자* 는 자체 데이터를 소유 하 고 응용 프로그램에 테이블 형식으로 제공 합니다. *서비스 공급자* 는 데이터를 생성 및 사용 하 여 서비스를 캡슐화 하 고 ADO 응용 프로그램의 기능을 확대 합니다. 서비스 공급자는 다른 서비스 공급자나 구성 요소와 함께 작동 해야 하는 *서비스 구성 요소로*추가로 정의할 수도 있습니다.
@@ -70,7 +70,7 @@ ms.locfileid: "67926976"
  OLE DB 공급자에 대 한 자세한 내용은 [Microsoft OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)를 참조 하세요.
 
 ## <a name="provider-commands"></a>공급자 명령
- 여기에 나열 된 각 공급자에 대해 응용 프로그램이 사용자에 게 SQL 문을 공급자 명령으로 입력할 수 있도록 허용 하는 경우 항상 사용자 입력의 유효성을 검사 하 고 잠재적으로 `DROP TABLE t1`위험한 SQL 문 (예: 사용자 입력의 일부로)을 사용 하 여 가능한 해커 공격을 유의 해야 합니다.
+ 여기에 나열 된 각 공급자에 대해 응용 프로그램이 사용자에 게 SQL 문을 공급자 명령으로 입력할 수 있도록 허용 하는 경우 항상 사용자 입력의 유효성을 검사 하 고 잠재적으로 위험한 SQL 문 (예: `DROP TABLE t1` 사용자 입력의 일부로)을 사용 하 여 가능한 해커 공격을 유의 해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
  Microsoft Active Directory 서비스에 대 한 ado ( [Command Object](../../../ado/reference/ado-api/command-object-ado.md) [) 연결 개체 (](../../../ado/reference/ado-api/connection-object-ado.md) Ado) [Microsoft OLE DB provider For Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) microsoft [OLE DB provider for microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [OLE DB service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) for microsoft Microsoft OLE DB Provider for Oracle provider For microsoft [OLE DB provider for](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [Properties Collection (](../../../ado/reference/ado-api/properties-collection-ado.md) ado) [레코드 집합 개체 (ado) ado (ado)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh 메서드 (](../../../ado/reference/rds-api/refresh-method-rds.md) ado)

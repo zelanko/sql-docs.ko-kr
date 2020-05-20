@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924189"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760869"
 ---
 # <a name="shape-append-clause"></a>셰이프 APPEND 절
 Shape command APPEND 절은 **레코드 집합**에 열을 추가 합니다. 이러한 열은 종종 자식 **레코드 집합**을 참조 하는 장 열입니다.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *부모-명령*  
  0 또는 다음 중 하나입니다 ( *parent 명령을* 완전히 생략할 수 있음).  
   
--   **레코드 집합** 개체를 반환 하는 중괄호{}("")로 묶인 공급자 명령입니다. 명령은 기본 데이터 공급자에 대해 실행 되며 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO에 특정 쿼리 언어가 필요 하지는 않지만 일반적으로 SQL 언어입니다.  
+-   {} **레코드 집합** 개체를 반환 하는 중괄호 ("")로 묶인 공급자 명령입니다. 명령은 기본 데이터 공급자에 대해 실행 되며 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO에 특정 쿼리 언어가 필요 하지는 않지만 일반적으로 SQL 언어입니다.  
   
 -   괄호 안에 포함 된 다른 셰이프 명령입니다.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>설명  
  *하위 레코드 집합*  
- -   **레코드 집합** 개체를 반환 하는 중괄호{}("")로 묶인 공급자 명령입니다. 명령은 기본 데이터 공급자에 대해 실행 되며 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO에 특정 쿼리 언어가 필요 하지는 않지만 일반적으로 SQL 언어입니다.  
+ -   {} **레코드 집합** 개체를 반환 하는 중괄호 ("")로 묶인 공급자 명령입니다. 명령은 기본 데이터 공급자에 대해 실행 되며 해당 구문은 해당 공급자의 요구 사항에 따라 달라 집니다. ADO에 특정 쿼리 언어가 필요 하지는 않지만 일반적으로 SQL 언어입니다.  
   
 -   괄호 안에 포함 된 다른 셰이프 명령입니다.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE는 `select * from t1` 및 (`select * from t2 RELATE k1 TO k2)`의 두 명령을 실행 합니다. 세미콜론으로 구분 된 여러 공급자 명령으로 구성 된 복합 명령을 사용자가 제공 하는 경우 SHAPE는 차이를 구분할 수 없습니다. 따라서 다음 SHAPE 명령에서  
+ SHAPE는 및 (의 두 명령을 실행 `select * from t1` `select * from t2 RELATE k1 TO k2)` 합니다. 세미콜론으로 구분 된 여러 공급자 명령으로 구성 된 복합 명령을 사용자가 제공 하는 경우 SHAPE는 차이를 구분할 수 없습니다. 따라서 다음 SHAPE 명령에서  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE는 `select * from t1; drop table t1` 및를`select * from t2 RELATE k1 TO k2),` 실행 합니다. `drop table t1` 즉, 별도 이며이 경우에는 위험한, 공급자 명령으로 인식 되지 않습니다. 응용 프로그램은 항상 사용자 입력의 유효성을 검사 하 여 이러한 잠재적인 해커 공격이 발생 하지 않도록 해야 합니다.  
+ SHAPE는 `select * from t1; drop table t1` 및를 실행 `select * from t2 RELATE k1 TO k2),` 합니다. 즉, `drop table t1` 별도 이며이 경우에는 위험한, 공급자 명령으로 인식 되지 않습니다. 응용 프로그램은 항상 사용자 입력의 유효성을 검사 하 여 이러한 잠재적인 해커 공격이 발생 하지 않도록 해야 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

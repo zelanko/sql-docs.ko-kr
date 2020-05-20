@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d61b11ee6fedd4229433570f6b159cccf658853
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928682"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759589"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체를 여는 옵션을 지정 합니다. 값은 또는 작업과 함께 사용할 수 있습니다.  

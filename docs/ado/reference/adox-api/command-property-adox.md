@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Command property [ADOX]
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b9b46a0385505f8673cb456adab4ee7905f499af
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966685"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759289"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
 프로시저를 만들거나 실행 하는 데 사용할 수 있는 ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 지정 합니다.  

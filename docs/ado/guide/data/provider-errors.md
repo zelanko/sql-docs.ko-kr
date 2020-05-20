@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924541"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760999"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류가 반환 됩니다. 이 오류가 표시 되 면 활성 **연결** 개체의 **오류** 컬렉션을 확인 합니다 .이 컬렉션에는 발생 한 작업을 설명 하는 하나 이상의 오류가 포함 됩니다.  
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>Error 개체  
  **오류 개체를** 검사 하 여 발생 한 오류 및 더 중요 한 응용 프로그램 또는 오류를 발생 시킨 개체를 확인할 수 있습니다. **Error** 개체에는 다음과 같은 속성이 있습니다.  
   
-|속성 이름|Description|  
+|속성 이름|설명|  
 |-------------------|-----------------|  
 |**설명**|발생 한 오류에 대 한 텍스트 설명입니다.|  
 |**HelpContext, HelpFile**|발생 한 오류에 대 한 설명이 포함 된 도움말 항목 및 도움말 파일을 참조 하세요.|  
 |**NativeError**|공급자별 오류 번호입니다.|  
-|**번호**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
+|**수많은**|발생 한 오류의 숫자 ( **Errorvalueenum**에 나열 됨)를 나타내는 정수 (Long)입니다.|  
 |**소스**|오류를 생성 한 개체 또는 응용 프로그램의 이름을 나타냅니다.|  
 |**SQLState**|SQL 문 프로세스 중에 공급자가 반환 하는 다섯 문자 오류 코드입니다.|  
   

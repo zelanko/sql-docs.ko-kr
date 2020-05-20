@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12c31fcd18918b05626dc1dda817bb524bca9449
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924080"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760809"
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>1단계: Visual Basic 프로젝트 설정
 이 시나리오에서는 Microsoft Visual Basic 6.0, ADO 2.5 이상 및 Microsoft OLE DB Provider for Internet Publishing이 시스템에 설치 되어 있다고 가정 합니다. 먼저 새 프로젝트를 만든 다음 일부 컨트롤을 프로젝트의 기본 폼에 추가 합니다.  

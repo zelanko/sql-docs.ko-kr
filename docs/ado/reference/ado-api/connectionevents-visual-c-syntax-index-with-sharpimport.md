@@ -13,14 +13,14 @@ dev_langs:
 helpviewer_keywords:
 - 'ConnectionEvents collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e813759c6500d8982145d12bac57f75448a9574d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7494af68f8989110023c44f750de2c520f3345c6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760279"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (#import를 사용 하는 Visual C++ 구문 인덱스)
 ## <a name="events"></a>이벤트  

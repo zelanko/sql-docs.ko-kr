@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChunk method [ADO]
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f41cd6a590c318f3268eb5292b2086685a36848
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918561"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760059"
 ---
 # <a name="getchunk-method-ado"></a>GetChunk 메서드(ADO)
 크게 텍스트 또는 이진 데이터 [필드](../../../ado/reference/ado-api/field-object.md) 개체의 내용 전체 또는 일부를 반환 합니다.  
@@ -37,7 +37,7 @@ variable = field.GetChunk(Size)
  **Variant**를 반환 합니다.  
   
 #### <a name="parameters"></a>매개 변수  
- *크기*  
+ *Size*  
  검색 하려는 바이트 또는 문자 수와 동일한 **Long** 식입니다.  
   
 ## <a name="remarks"></a>설명  

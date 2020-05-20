@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandText property [ADO]
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0fea58e679e11ac068189ad622b3dce627fc8a63
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919722"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760440"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 속성(ADO)
 공급자에 대해 실행할 명령의 텍스트를 나타냅니다.  

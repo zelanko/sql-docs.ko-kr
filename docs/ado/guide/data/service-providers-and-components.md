@@ -12,14 +12,14 @@ helpviewer_keywords:
 - ADO, OLE DB providers
 - service providers [ADO]
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6d0a4b9160ca0c2ff3ee64e5814e24df52141cf
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924241"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760879"
 ---
 # <a name="service-providers-and-components"></a>서비스 공급자 및 구성 요소
 서비스 공급자는 데이터 저장소에서 기본적으로 지원 하지 않는 확장 된 인터페이스를 구현 하 여 데이터 공급자의 기능을 확장 하는 구성 요소입니다.  

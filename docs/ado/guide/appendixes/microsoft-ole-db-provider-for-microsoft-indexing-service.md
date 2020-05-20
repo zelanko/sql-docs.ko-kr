@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926660"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760479"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft 인덱싱 서비스에 대 한 microsoft OLE DB 공급자 개요
 Microsoft OLE DB Provider for Microsoft 인덱싱 서비스는 파일 시스템에 대 한 읽기 전용 액세스와 Microsoft 인덱싱 서비스에서 인덱싱된 웹 데이터에 대 한 읽기 전용 액세스를 제공 합니다. ADO 응용 프로그램은 SQL 쿼리를 실행 하 여 콘텐츠 및 파일 속성 정보를 검색할 수 있습니다.
@@ -44,7 +44,7 @@ MSIDXS
 
  문자열은 다음과 같은 키워드로 구성 됩니다.
 
-|키워드|Description|
+|키워드|설명|
 |-------------|-----------------|
 |**공급자**|Microsoft 인덱싱 서비스용 OLE DB 공급자를 지정 합니다. 일반적으로이 키워드는 연결 문자열에 지정 된 유일한 키워드입니다.|
 |**데이터 원본**|인덱싱 서비스 카탈로그 이름을 지정 합니다. 이 키워드를 지정 하지 않으면 기본 시스템 카탈로그가 사용 됩니다.|
@@ -77,7 +77,7 @@ MSIDXS
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|항상 **Aduseserver**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|항상 **Adopenstatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|항상 **adEditNone**|
-|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|
+|[객체](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|읽기 전용|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|읽기/쓰기|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|읽기/쓰기|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|사용할 수 없음|
@@ -87,7 +87,7 @@ MSIDXS
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|읽기 전용|
 |[소스](../../../ado/reference/ado-api/source-property-ado-recordset.md)|읽기/쓰기|
 |[State](../../../ado/reference/ado-api/state-property-ado.md)|읽기 전용|
-|[상태](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|
+|[Status](../../../ado/reference/ado-api/status-property-ado-recordset.md)|읽기 전용|
 
  \*이 기능이 **레코드 집합**에 존재 하려면 공급자에서 책갈피를 사용 하도록 설정 해야 합니다.
 
@@ -101,7 +101,7 @@ MSIDXS
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
+|[삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|
 |[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], disconnecting and reconnecting
 ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7ef30165a05bc472bfe34cec4e7f669d545d7768
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925518"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761059"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>레코드 집합 연결 끊기 및 다시 연결
 ADO에 있는 가장 강력한 기능 중 하나는 데이터 원본에서 클라이언트 쪽 레코드 집합을 열고 데이터 원본에서 레코드 집합의 연결을 끊는 기능입니다. 레코드 집합의 연결이 끊어지면 데이터 원본에 대 한 연결을 닫아 서버에서 리소스를 유지 관리 하는 데 사용 되는 리소스를 해제할 수 있습니다. 연결이 끊어져 있는 동안에도 레코드 집합의 데이터를 계속 보고 편집할 수 있으며 나중에 데이터 원본에 다시 연결 하 여 일괄 처리 모드로 업데이트를 보낼 수 있습니다.  

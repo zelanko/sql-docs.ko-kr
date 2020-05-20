@@ -13,14 +13,14 @@ helpviewer_keywords:
 - UpdateBatch method [ADO]
 - CancelBatch method [ADO]
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 810cb2cdeb45c3ab7ea907864b344c4624bfa527
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3145309ec2fadab882d62e8c044a3ceb5a962ab8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941643"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759479"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch 및 CancelBatch 메서드 예제 (VB)
 이 예제에서는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 메서드와 함께 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드를 보여 줍니다.  

@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - ADCPROP_ASYNCTHREADPRIORITY_ENUM [ADO]
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ecdc80a2f1e1ace36170a9b4527ba01f0b02ee11
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921462"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760659"
 ---
 # <a name="adcprop_asyncthreadpriority_enum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 RDS [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 경우 데이터를 검색 하는 비동기 스레드의 실행 우선 순위를 지정 합니다.  
   
  이러한 상수를 **레코드 집합** "**백그라운드 스레드 우선 순위**"와 함께 사용 합니다. 동적 속성은 ADO to OLE DB 동적 속성 인덱스에서 참조 되며 [Microsoft Cursor Service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 설명서에 설명 되어 있습니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|보통에서 가장 높은 우선 순위를 설정 합니다.|  
 |**adPriorityBelowNormal**|2|우선 순위를 최저에서 보통 사이로 설정 합니다.|  

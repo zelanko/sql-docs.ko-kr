@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 60b3a9e036bb199b72373055b299f262862a5d16
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759119"
 ---
 # <a name="persisting-data"></a>데이터 유지
 휴대용 컴퓨팅 (예: 랩톱 사용)은 연결 된 상태와 연결이 끊어진 상태에서 실행 될 수 있는 응용 프로그램에 대 한 필요성을 생성 했습니다. ADO는 개발자에 게 클라이언트 커서 **레코드 집합** 을 디스크에 저장 하 고 나중에 다시 로드할 수 있는 기능을 제공 하 여이에 대 한 지원을 추가 했습니다.  

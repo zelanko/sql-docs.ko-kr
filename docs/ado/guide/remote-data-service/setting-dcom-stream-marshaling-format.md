@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - dcom stream marshaling format in rds [ADO]
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 29bf8d19b9e3c9ec9b4072edd9575add9947c8f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f3e7dd82d54b20ccceec73c0917f4f81c3cf16dd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922212"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758959"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>DCOM 스트림 마샬링 형식 설정
 RDS 1.5 또는 이전 버전의 구성 요소를 사용 하는 클라이언트 컴퓨터는 RDS 2.0 이상에서 구성 요소를 사용 하는 서버와 호환 되지 않습니다. DCOM을 기본 프로토콜로 사용할 때 RDS 2.0 이상에 대 한 지원은 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체를 전송 하는 데 더 효율적입니다. 클라이언트가 RDS 1.5 이전 버전의 구성 요소를 실행 하는 경우 이전 RDS 지원 (RDS 1.0 이라고 함) 또는 최신 RDS 지원 (RDS 2.0 이상)을 사용 하도록 서버를 설정할 수 있습니다. 다음 레지스트리 항목 중 하나를 설정 합니다.  

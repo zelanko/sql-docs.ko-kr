@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef7f31068c6ced2aab693756987ebccc1feaedca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938788"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759439"
 ---
 # <a name="value-property-example-vb"></a>Value 속성 예제(VB)
 이 예에서는 ***Employees*** 테이블의 필드 및 속성 값을 표시 하 여 [필드](../../../ado/reference/ado-api/field-object.md) 및 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체가 포함 된 [Value](../../../ado/reference/ado-api/value-property-ado.md) 속성을 보여 줍니다.  

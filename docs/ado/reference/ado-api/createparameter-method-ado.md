@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933295"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760219"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드(ADO)
 지정 된 속성을 사용 하 여 새 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 만듭니다.  
@@ -38,19 +38,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>매개 변수  
  *이름*  
- 선택 사항입니다. **매개 변수** 개체의 이름을 포함 하는 **문자열** 값입니다.  
+ (선택 사항) **매개 변수** 개체의 이름을 포함 하는 **문자열** 값입니다.  
   
  *Type*  
- 선택 사항입니다. **매개 변수** 개체의 데이터 형식을 지정 하는 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값입니다.  
+ (선택 사항) **매개 변수** 개체의 데이터 형식을 지정 하는 [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) 값입니다.  
   
- *Direction*  
- 선택 사항입니다. **매개 변수** 개체의 유형을 지정 하는 [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 값입니다.  
+ *방향*  
+ (선택 사항) **매개 변수** 개체의 유형을 지정 하는 [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) 값입니다.  
   
- *크기*  
- 선택 사항입니다. 매개 변수 값의 최대 길이 (문자 또는 바이트)를 지정 하는 **Long** 값입니다.  
+ *Size*  
+ (선택 사항) 매개 변수 값의 최대 길이 (문자 또는 바이트)를 지정 하는 **Long** 값입니다.  
   
  *값*  
- 선택 사항입니다. **매개 변수** 개체의 값을 지정 하는 **Variant** 입니다.  
+ (선택 사항) **매개 변수** 개체의 값을 지정 하는 **Variant** 입니다.  
   
 ## <a name="remarks"></a>설명  
  **Createparameter** 메서드를 사용 하 여 지정 된 이름, 형식, 방향, 크기 및 값을 사용 하 여 새 **매개 변수** 개체를 만듭니다. 인수에서 전달 하는 모든 값은 해당 **매개 변수** 속성에 기록 됩니다.  

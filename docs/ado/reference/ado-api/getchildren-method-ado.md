@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetChildren method [ADO]
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 84f1a2f7a80e17571f1b8ad3e63db640fb58dc19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 605fb2e2afbd73a8a5509102ae98f348aad90bcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932505"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760069"
 ---
 # <a name="getchildren-method-ado"></a>GetChildren 메서드(ADO)
 행이 컬렉션 [레코드](../../../ado/reference/ado-api/record-object-ado.md)의 자식을 나타내는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 을 반환 합니다.  

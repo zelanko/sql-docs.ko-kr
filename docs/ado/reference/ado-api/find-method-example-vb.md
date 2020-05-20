@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Find method [ADO], Visual Basic example
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e3495e26fa4b71563716877db501299873aff532
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932620"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760109"
 ---
 # <a name="find-method-example-vb"></a>Find 메서드 예제(VB)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Find](../../../ado/reference/ado-api/find-method-ado.md) 메서드를 사용 하 여 ***Pubs*** 데이터베이스의 비즈니스 타이틀 수를 찾고 계산 합니다. 이 예에서는 기본 공급자가 유사한 기능을 지원 하지 않는다고 가정 합니다.  

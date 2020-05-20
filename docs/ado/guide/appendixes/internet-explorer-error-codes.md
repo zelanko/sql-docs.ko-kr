@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Internet Explorer errors [ADO]
 - errors [ADO], Internet Explorer
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d7c3364dba94f6b106509e2646821391bd01df1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8b50d56cca411af0a9a6a3999cdc1d891da2569f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81219272"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760509"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
 다음 표에는 원격 데이터 서비스 사용량과 관련 된 Microsoft® Internet Explorer 오류 코드가 나열 되어 있습니다. 낮은 2 바이트의 10 진수 변환, 전체 오류 코드의 음수 10 진수 변환 및 16 진수 값이 표시 됩니다.

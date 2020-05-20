@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Size property [ADO Parameter]
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 58f989ab60099673f95debbe4eb5f8217beb0ccd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931050"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759889"
 ---
 # <a name="size-property-ado-parameter"></a>Size 속성(ADO 매개 변수)
 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 최대 크기 (바이트 또는 문자)를 나타냅니다.  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data section [ADO]
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2d6b03137e920be036d1dd47cb4612076247fa3f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925649"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761099"
 ---
 # <a name="data-section"></a>데이터 섹션
 데이터 섹션은 보류 중인 모든 업데이트, 삽입 또는 삭제와 함께 행 집합의 데이터를 정의 합니다. 데이터 섹션에는 0 개 이상의 행이 포함 될 수 있습니다. 행이 스키마에 의해 정의 되는 한 행 집합의 데이터만 포함할 수 있습니다. 또한 앞에서 설명한 것 처럼 데이터를 포함 하지 않는 열은 생략할 수 있습니다. 데이터 섹션에서 특성 또는 하위 요소를 사용 하 고 해당 구문이 schema 섹션에서 정의 되지 않은 경우 자동으로 무시 됩니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "67925649"
 <z:row CompanyName="Joe's Garage"/>  
 ```  
   
- 다음 문자는 XML에서 예약 되며 문자 엔터티로 바꾸어야 합니다: {', ", &,\<>}.  
+ 다음 문자는 XML에서 예약 되며 문자 엔터티로 바꾸어야 합니다: {', ", &, \< >}.  
   
 ## <a name="binary"></a>이진  
  이진 데이터는 bin입니다. hex로 인코드 됩니다. 즉, 1 바이트는 니블 당 한 문자씩 두 문자로 매핑됩니다.  

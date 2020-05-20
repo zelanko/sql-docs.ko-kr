@@ -11,14 +11,14 @@ helpviewer_keywords:
 - receiving multiple Recordsets [ADO]
 - Recordset object [ADO], receiving multiple Recordsets
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 12aa80b918d11dad07119a26da3da8f27ef82cdb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924537"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759109"
 ---
 # <a name="receiving-multiple-recordsets"></a>다중 레코드 집합 수신
 [SQL Server 용 Microsoft OLE DB 공급자](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) 는 여러 sql 문을 포함 하는 단일 명령에 대 한 여러 **레코드 집합** 개체를 반환 하는 것을 지원 합니다. Sql 문 당 하나의 **레코드 집합** **레코드 집합**의 반환 순서는 SQL 문이 명령 텍스트에 배치 되는 순서에 따라 결정 됩니다.  
