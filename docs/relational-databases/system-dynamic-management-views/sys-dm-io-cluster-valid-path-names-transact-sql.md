@@ -20,21 +20,21 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff2348efe62929bdfbe03b4c92b5d411f57c2b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba860f3d329341575c3f3f222b0fa7e1c86934e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900353"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827923"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   클러스터된 공유 볼륨을 비롯한 모든 유효한 공유 디스크에서 SQL Server 장애 조치(failover) 클러스터 인스턴스에 대한 정보를 반환합니다. 인스턴스가 클러스터되지 않은 경우 빈 행 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**path_name**|**Nvarchar (512)**|데이터베이스 및 로그 파일의 루트 디렉터리로 사용할 수 있는 볼륨 탑재 지점 또는 드라이브 경로입니다. Null을 허용하지 않습니다.|  
 |**cluster_owner_node**|**Nvarchar (64)**|드라이브의 현재 소유자입니다. CSV(클러스터 공유 볼륨)의 경우 소유자는 메타데이터 서버를 호스팅하는 노드입니다. Null을 허용하지 않습니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67900353"
 > [!NOTE]  
 >  이 뷰는 이후 릴리스에서 [dm_io_cluster_shared_drives &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) 를 대체 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056229"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826011"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_publication_validation [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링 되 면 체크섬 작업 대신 행 개수 연산이 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
-|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 구독자의 경우 행 개수 유효성 검사만 수행 됩니다.|  
+|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자의 경우 행 개수 유효성 검사만 수행 됩니다.|  
   
 `[ @full_or_fast = ] 'full_or_fast'`행 개수를 계산 하는 데 사용 되는 방법입니다. *full_or_fast* 은 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
   
@@ -61,10 +61,10 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`유효성 검사가 완료 되 면 즉시 배포 에이전트 종료 해야 하는지 여부입니다. *shutdown_agent* 은 **bit**이며 기본값은 **0**입니다. **0**인 경우 복제 에이전트가 종료 되지 않습니다. **1**인 경우 마지막 아티클의 유효성을 검사 한 후 복제 에이전트가 종료 됩니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *publisher* 게시자에 대 한 유효성 검사를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청할 때는 게시자를 사용 하면 안 됩니다.  
+>  게시자에 대 한 유효성 검사를 요청할 때는 *게시자* 를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -76,7 +76,7 @@ sp_publication_validation [ @publication = ] 'publication'
   
  응용 프로그램에 즉시 업데이트 하는 구독자가 있는 경우 **sp_publication_validation** 는 의사 오류를 감지할 수 있습니다. **sp_publication_validation** 는 먼저 게시자에서 행 개수 또는 체크섬을 계산한 다음 구독자에서 계산 합니다. 즉시 업데이트 트리거는 행 개수 또는 체크섬이 게시자에서 완료된 다음에 구독자의 업데이트를 게시자로 전파할 수 있으므로 행 개수 또는 체크섬이 구독자에서 완료되기 전에 값을 변경할 수 있습니다. 게시의 유효성을 검사하는 동안 구독자 및 게시자에서 값이 변경되지 않았는지 확인하려면 유효성 검사 동안 게시자에서 MS DTC(Microsoft Distributed Transaction Coordinator) 서비스를 중지하십시오.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_publication_validation**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

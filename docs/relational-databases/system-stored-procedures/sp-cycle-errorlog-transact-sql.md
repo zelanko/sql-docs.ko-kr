@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_errorlog
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59f21f3ce4c69bf9cb0df0d2fbd078c7614bd1a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826231"
 ---
 # <a name="sp_cycle_errorlog-transact-sql"></a>sp_cycle_errorlog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +45,9 @@ sp_cycle_errorlog
  None  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 시작 될 때마다 현재 오류 로그의 이름이 오류 로그로 바뀝니다 **. 1**; **오류 로그 1** 은 **오류 로그 2**, **오류 로그 2** 는 **오류 로그 3**등이 됩니다. **sp_cycle_errorlog** 를 사용 하면 서버를 중지 하 고 시작 하지 않고 오류 로그 파일을 순환할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 시작 될 때마다 현재 오류 로그의 이름이 오류 로그로 바뀝니다 **. 1**; **오류 로그 1** 은 **오류 로그 2**, **오류 로그 2** 는 **오류 로그 3**등이 됩니다. **sp_cycle_errorlog** 를 사용 하면 서버를 중지 하 고 시작 하지 않고 오류 로그 파일을 순환할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sp_cycle_errorlog** 에 대 한 실행 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
 ## <a name="examples"></a>예  

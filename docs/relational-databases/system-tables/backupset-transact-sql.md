@@ -17,15 +17,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb367dd29a96f5819563f0b10e036b7274c4303
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68119327"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827381"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68119327"
  이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
 
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|백업 세트를 식별하는 고유한 백업 세트 ID입니다. ID, 즉 기본 키입니다.|  
 |**backup_set_uuid**|**uniqueidentifier**|백업 세트를 식별하는 고유한 백업 세트 ID입니다.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68119327"
 |**name**|**nvarchar(128)**|백업 세트의 이름입니다. NULL일 수 있습니다.|  
 |**한**|**nvarchar(255)**|백업 세트에 관한 설명입니다. NULL일 수 있습니다.|  
 |**user_name**|**nvarchar(128)**|백업 작업을 수행하는 사용자의 이름입니다. NULL일 수 있습니다.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 주 버전 번호입니다. NULL일 수 있습니다.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]주 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부 버전 번호입니다. NULL일 수 있습니다.|  
 |**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 빌드 번호입니다. NULL일 수 있습니다.|  
 |**time_zone**|**smallint**|15분 간격으로 백업 작업이 수행되는 현지 시간과 UCT 간의 차이입니다. 값은 -48에서 +48까지 사용할 수 있으며 각 값을 포함합니다. 값 127은 알 수 없음을 의미합니다. 예를 들어 -20은 EST(동부 표준시) 또는 UTC 이후 5시간을 의미합니다. NULL일 수 있습니다.|  
@@ -108,14 +108,14 @@ ms.locfileid: "68119327"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupfilegroup &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [백업 및 복원 중 발생 가능한 미디어 오류 &#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [미디어 세트, 미디어 패밀리 및 백업 세트는 SQL Server &#40;&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
+ [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupfilegroup&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
+ [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
+ [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
- [HEADERONLY &#40;Transact-sql&#41;복원](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)  
   
   

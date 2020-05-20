@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 78ef8690e4f8dd374125d4c8e6e77a4a1964d329
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019967"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828317"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 > [!IMPORTANT]  
 >  데이터베이스에 게시가 여러 개 있고 이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하는 경우 **sp_mergemetadataretentioncleanup** 를 실행 해도 데이터베이스의 병합 복제 변경 내용 추적 메타 데이터가 정리 되지 않습니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지 확인 하려면 게시자에서 [sp_helpmergepublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 을 실행 하 고 결과 집합의 모든 게시에 대해 **보존**기간으로 **0** 값을 기록해 둡니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버 또는 게시 된 데이터베이스에 대 한 게시 액세스 목록의 사용자만 **sp_mergemetadataretentioncleanup**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

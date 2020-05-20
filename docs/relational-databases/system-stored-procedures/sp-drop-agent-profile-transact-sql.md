@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6ac93ebe2bc9c0ec63e22b3273592005873efac7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 36ffa90eeb79316ed886990568ba81184d129b05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001079"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826117"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
   
  지정 된 프로필의 매개 변수도 **MSagent_parameters** 테이블에서 삭제 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_drop_agent_profile**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

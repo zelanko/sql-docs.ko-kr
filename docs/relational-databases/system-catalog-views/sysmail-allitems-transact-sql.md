@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745460"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824900"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745460"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지를 보내는 데 사용되는 프로필의 식별자입니다.|  
-|**recipients**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
+|**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
@@ -56,7 +56,7 @@ ms.locfileid: "70745460"
 |**send_request_date**|**datetime**|메시지가 메일 큐에 추가된 날짜와 시간입니다.|  
 |**send_request_user**|**sysname**|메시지를 보낸 사용자입니다. 메시지의 보낸 사람: 필드가 아니라 데이터베이스 메일 프로시저의 사용자 컨텍스트입니다.|  
 |**sent_account_id**|**int**|메시지를 보내는 데 사용되는 데이터베이스 메일 계정의 식별자입니다.|  
-|**sent_status**|**varchar (8)**|메일의 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **sent** -메일을 보냈습니다.<br /><br /> **보내지** 않은 데이터베이스 메일이 여전히 메시지를 보내려고 시도 하 고 있습니다.<br /><br /> 다시 **시도** 하는 중 데이터베이스 메일 메시지를 보내지 못했지만 다시 보내려고 시도 하는 중입니다.<br /><br /> **실패** -데이터베이스 메일에서 메시지를 보낼 수 없습니다.|  
+|**sent_status**|**varchar (8)**|메일의 상태입니다. 가능한 값은<br /><br /> **sent** -메일을 보냈습니다.<br /><br /> **보내지** 않은 데이터베이스 메일이 여전히 메시지를 보내려고 시도 하 고 있습니다.<br /><br /> 다시 **시도** 하는 중 데이터베이스 메일 메시지를 보내지 못했지만 다시 보내려고 시도 하는 중입니다.<br /><br /> **실패** -데이터베이스 메일에서 메시지를 보낼 수 없습니다.|  
 |**sent_date**|**datetime**|메시지를 보낸 날짜와 시간입니다.|  
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
@@ -66,7 +66,7 @@ ms.locfileid: "70745460"
   
  이 뷰에 표시 되는 시스템 테이블은 모든 메시지를 포함 하며 **msdb** 데이터베이스의 증가를 일으킬 수 있습니다. 테이블 크기를 줄이려면 뷰에서 오래된 메시지를 주기적으로 삭제하십시오. 자세한 내용은 [데이터베이스 메일 메시지 및 이벤트 로그를 보관 하는 SQL Server 에이전트 작업 만들기](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole** 데이터베이스 역할에 부여 됩니다. **Sysadmin** 고정 서버 역할의 멤버에 의해 실행 되는 경우이 뷰는 모든 메시지를 표시 합니다. 그 밖의 다른 사용자는 자신이 제출한 메시지만 볼 수 있습니다.  
   
   

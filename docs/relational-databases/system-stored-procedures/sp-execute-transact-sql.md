@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute
 ms.assetid: 2009acd3-0d92-435a-a8fb-057e50dc7146
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1957103cf2c817f0ef77816446be5fb2d352c9d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3f46d5856aa061bac0dd06fb954052923a4d7d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124458"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827798"
 ---
 # <a name="sp_execute-transact-sql"></a>sp_execute(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  지정 된 핸들 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 선택적 매개 변수 값을 사용 하 여 준비 된 문을 실행 합니다. sp_execute은 TDS (tabular data stream) 패킷에서 ID = 12를 지정 하 여 호출 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]지정 된 핸들 및 선택적 매개 변수 값을 사용 하 여 준비 된 문을 실행 합니다. sp_execute은 TDS (tabular data stream) 패킷에서 ID = 12를 지정 하 여 호출 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

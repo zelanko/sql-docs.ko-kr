@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sys.dm_xe_objects dynamic management view
 - extended events [SQL Server], views
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80170f22636b9542524f8ce97b6fe8a5e595953c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090268"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827853"
 ---
 # <a name="sysdm_xe_objects-transact-sql"></a>sys.dm_xe_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68090268"
  |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(60)**|개체 이름입니다. 이름은 특정 개체 유형에 대 한 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
-|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> event<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Null을 허용하지 않습니다.|  
+|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> event<br /><br /> action<br /><br /> 대상<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 형식<br /><br /> Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|해당 동작을 표시하는 패키지의 GUID입니다. sys.dm_xe_packages.package_id와의 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(256)**|동작에 대한 설명입니다. 설명은 패키지 작성자가 설정 합니다. Null을 허용하지 않습니다.|  
 |capabilities|**int**|개체의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68090268"
 |type_package_guid|**uniqueidentifier**|해당 개체가 작동하는 유형을 표시하는 패키지의 GUID입니다. Null을 허용합니다.|  
 |type_size|**int**|데이터 형식의 크기(바이트)이며 유효한 개체 유형에만 사용됩니다. Null을 허용합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ### <a name="relationship-cardinalities"></a>관계 카디널리티  

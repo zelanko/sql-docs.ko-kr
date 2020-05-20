@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables
 ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 4ac8e09eff53c04377ccd48a47cc31d9d7ddc5e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30f43a2da32da7984aa4d84aaae259f1e85232fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055017"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827629"
 ---
 # <a name="sp_help_fulltext_tables-transact-sql"></a>sp_help_fulltext_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자입니다. 테이블을 만든 데이터베이스 사용자의 이름입니다.|  
 |**TABLE_NAME**|**sysname**|테이블 이름입니다.|  
@@ -61,7 +61,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**FULLTEXT_INDEX_ACTIVE**|**int**|해당 테이블의 전체 텍스트 인덱싱에 대해 표시된 열이 쿼리에 적합한지 여부를 지정합니다.<br /><br /> 0 = 비활성<br /><br /> 1 = 활성|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|전체 텍스트 인덱스 데이터가 있는 전체 텍스트 카탈로그입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

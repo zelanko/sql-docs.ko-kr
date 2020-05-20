@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokens
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b04bf618bccb5d4d49724e0b62f03ba193dc0f2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771544"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826051"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]
->  이 매개 변수는 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서만 지정 해야 합니다.  
+>  이 매개 변수는 이외 게시자에 대해서만 지정 해야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @publisher_db = ] 'publisher_db'`게시 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. 이 매개 변수는 게시자에서 저장 프로시저가 실행될 경우 무시됩니다.  
   
@@ -66,7 +66,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  게시 데이터베이스의 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 배포 데이터베이스의 **db_owner** 고정 데이터베이스 역할 또는 **replmonitor** 역할이 **sp_helptracertokenhistory**실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

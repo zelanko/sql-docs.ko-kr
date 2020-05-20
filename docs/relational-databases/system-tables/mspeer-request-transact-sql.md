@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 25e9a7f2e13af0aafacdfa1882bb6ac5da37b91c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1d24825e87c65e998d00a02339f07b6f87b27175
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824870"
 ---
 # <a name="mspeer_request-transact-sql"></a>MSpeer_request(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   MSpeer_request 테이블은 피어 투 피어 복제에서 지정된 게시에 대한 상태 요청을 추적하는 데 사용됩니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |id|**int**|요청을 식별합니다.|  
 |publication|**sysname**|상태 요청이 시작된 게시의 이름입니다.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108331"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826254"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서이 열은 데이터베이스 이름을 **sys.** s a s. 카탈로그 뷰에 저장 된 것으로 나타냅니다.|  
+|**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 열은 데이터베이스 이름을 **sys.** s a s. 카탈로그 뷰에 저장 된 것으로 나타냅니다.|  
 |**DATABASE_SIZE**|**int**|데이터베이스 크기(KB)입니다.|  
 |**설명**|**varchar (254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
   
@@ -54,7 +54,7 @@ sp_databases
   
  **sp_databases** 에는 ODBC (Open Database Connectivity)에 해당 하는 기능이 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION 권한이 필요하며 데이터베이스에 대한 액세스 권한이 있어야 합니다. VIEW ANY DEFINITION 권한은 거부될 수 없습니다.  
   
 ## <a name="examples"></a>예  

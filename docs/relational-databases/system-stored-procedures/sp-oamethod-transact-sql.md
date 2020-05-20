@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828267"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  출력 매개 변수의 반환 값을 가져오려면 *매개 변수* 는 적절 한 데이터 형식의 지역 변수 여야 하며 **output** 을 지정 해야 합니다. 상수 매개 변수를 지정 하거나 **output** 을 지정 하지 않은 경우 출력 매개 변수의 모든 반환 값은 무시 됩니다.  
   
- 지정 된 경우 *parametername* 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수의 이름 이어야 합니다. **@**_Parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수가 아닙니다. At 기호 (**@**)가 제거 되 고 *parametername*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
+ 지정 된 경우 *parametername* 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 명명 된 매개 변수의 이름 이어야 합니다. **@**_Parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] 지역 변수가 아닙니다. At 기호 ( **@** )가 제거 되 고 *PARAMETERNAME*이 OLE 개체에 매개 변수 이름으로 전달 됩니다. 모든 명명된 매개 변수는 반드시 모든 위치 매개 변수가 지정된 후에 지정되어야 합니다.  
   
  *n*  
  여러 매개 변수를 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
 > [!NOTE]
->  parametername은 지정 된 메서드의 일부 이며 개체로 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. * \@* 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
+>  * \@ parametername* 은 지정 된 메서드의 일부 이며 개체로 전달 되기 때문에 명명 된 매개 변수가 될 수 있습니다. 이 저장 프로시저의 다른 매개 변수는 이름이 아니라 위치로 지정됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 숫자(실패)이며 OLE Automation 개체가 반환한 HRESULT의 정수 값입니다.  
@@ -104,13 +104,13 @@ sp_OAMethod objecttoken , methodname
 ## <a name="remarks"></a>설명  
  **Sp_OAMethod** 를 사용 하 여 속성 값을 가져올 수도 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는이 저장 프로시저에 대 한 execute 권한이 필요 합니다. `Ole Automation Procedures`OLE 자동화와 관련 된 시스템 프로시저를 사용 하려면 구성을 사용 하도록 **설정** 해야 합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-calling-a-method"></a>A. 메서드 호출  
- 다음 예에서는 이전에 `Connect` 만든 **SQLServer** 개체의 메서드를 호출 합니다.  
+ 다음 예에서는 `Connect` 이전에 만든 **SQLServer** 개체의 메서드를 호출 합니다.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. 속성 가져오기  
- 다음 예에서는 이전에 `HostName` 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  
+ 다음 예에서는 `HostName` 이전에 만든 **SQLServer** 개체의 속성을 가져와 지역 변수에 저장 합니다.  
   
 ```  
 DECLARE @property varchar(255);  

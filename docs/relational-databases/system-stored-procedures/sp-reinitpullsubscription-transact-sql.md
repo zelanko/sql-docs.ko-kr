@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6f9021ec9b71694fc6567db5edf79965e09fd3c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46abcc422058503a0c1911d69ec36b1539957753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304918"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826590"
 ---
 # <a name="sp_reinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,14 +55,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  다음에 배포 에이전트를 실행 하는 동안 구독을 다시 초기화 하기 위해 구독자에서 **sp_reinitpullsubscription** 를 호출할 수 있습니다.  
   
- ** \@Immediate_sync** 에 대해 **false** 값을 사용 하 여 만든 게시에 대 한 구독은 구독자에서 다시 초기화할 수 없습니다.  
+ ** \@ Immediate_sync** 에 대해 **false** 값을 사용 하 여 만든 게시에 대 한 구독은 구독자에서 다시 초기화할 수 없습니다.  
   
  구독자에서 **sp_reinitpullsubscription** 실행 하거나 게시자에서 **sp_reinitsubscription** 하 여 끌어오기 구독을 다시 초기화할 수 있습니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_reinitpullsubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -18,12 +18,12 @@ ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c579d8d31daff1b03db4c82bcd33642c02f85c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19e8a8508a6be17b07b6db06c09fb46329c7fb06
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251272"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827377"
 ---
 # <a name="sp_xtp_flush_temporal_history-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  Db_owner 권한이 필요 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

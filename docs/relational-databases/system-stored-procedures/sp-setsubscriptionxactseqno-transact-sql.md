@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021077"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827501"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  이 오류가 발생하면 단일 구독 스트림으로 배포 에이전트를 실행해야 합니다. 자세한 내용은 [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_setsubscriptionxactseqno**을 실행할 수 있습니다.  
   
 ## <a name="see-more"></a>자세히 보기

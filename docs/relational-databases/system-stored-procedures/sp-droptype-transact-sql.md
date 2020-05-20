@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droptype
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13ef625d778fe20aa5d33b2958c90aa8cd5a2a8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8bc4462e05c97975d643f6900574f39000bc4eca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088464"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827809"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_droptype [ @typename = ] 'type'
 > [!NOTE]  
 >  별칭 데이터 형식이 테이블 정의에서 사용되거나 별칭 데이터 형식에 규칙 또는 기본값이 바인딩되어 있는 경우 해당 별칭 데이터 형식을 삭제할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다.  
   
 ## <a name="examples"></a>예  

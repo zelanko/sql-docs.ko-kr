@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997358"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826087"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helpsort
  서버의 기본 데이터 정렬을 반환합니다.  
   
 ## <a name="remarks"></a>설명  
- 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 설치와 호환 되도록 지정 된 데이터 정렬을 사용 하 여 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치 하면 **sp_helpsort** 빈 결과를 반환 합니다. 이 동작이 발생할 때 SERVERPROPERTY 개체 (예: `SELECT SERVERPROPERTY ('Collation');`)를 쿼리하여 데이터 정렬을 확인할 수 있습니다.  
+ 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전 설치와 호환 되도록 지정 된 데이터 정렬을 사용 하 여 인스턴스를 설치 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sp_helpsort** 빈 결과를 반환 합니다. 이 동작이 발생할 때 SERVERPROPERTY 개체 (예:)를 쿼리하여 데이터 정렬을 확인할 수 있습니다 `SELECT SERVERPROPERTY ('Collation');` .  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  

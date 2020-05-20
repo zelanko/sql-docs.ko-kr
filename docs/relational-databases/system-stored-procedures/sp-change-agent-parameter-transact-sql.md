@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824839"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 > [!NOTE]  
 >  매개 변수가 지정 된 *agent_type*에 대해 지원 되지만 에이전트 프로필에 정의 되지 않은 경우 오류가 반환 됩니다. 에이전트 프로필에 매개 변수를 추가 하려면 [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)를 실행 해야 합니다.  
   
- 프로필에 스냅숏 에이전트 (*agent_type*=**1**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
+ 프로필에 스냅숏 에이전트 (*agent_type* = **1**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
   
 -   **70 구독자**  
   
@@ -70,7 +70,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **UsePerArticleContentsView**  
   
- 프로필에 로그 판독기 에이전트 (*agent_type*=**2**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
+ 프로필에 로그 판독기 에이전트 (*agent_type* = **2**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
   
 -   **HistoryVerboseLevel**  
   
@@ -92,7 +92,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchThreshold**  
   
- 프로필에 배포 에이전트 (*agent_type*=**3**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
+ 프로필에 배포 에이전트 (*agent_type* = **3**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
   
 -   **BcpBatchSize**  
   
@@ -130,7 +130,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **TransactionsPerHistory**  
   
- 프로필에 병합 에이전트 (*agent_type*=**4**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
+ 프로필에 병합 에이전트 (*agent_type* = **4**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
   
 -   **AltSnapshotFolder**  
   
@@ -220,7 +220,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- 프로필에 큐 판독기 에이전트 (*agent_type*=**9**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
+ 프로필에 큐 판독기 에이전트 (*agent_type* = **9**)가 정의 된 경우 다음 속성을 변경할 수 있습니다.  
   
 -   **HistoryVerboseLevel**  
   
@@ -248,7 +248,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="remarks"></a>설명  
  **sp_change_agent_parameter** 은 모든 유형의 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_change_agent_parameter**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

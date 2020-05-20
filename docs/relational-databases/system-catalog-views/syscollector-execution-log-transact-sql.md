@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 48c4bc9a4d7cbcb01839bc37b1f74819252c3ea9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060347"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824932"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68060347"
 |package_execution_id|**uniqueidentifier**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] 로그 테이블에 대한 링크를 제공합니다. Null을 허용합니다.|  
 |failure_message|**nvarchar(2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 얻으려면 [fn_syscollector_get_execution_details &#40;transact-sql&#41;](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수를 사용 합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  dc_operator에 대한 SELECT가 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

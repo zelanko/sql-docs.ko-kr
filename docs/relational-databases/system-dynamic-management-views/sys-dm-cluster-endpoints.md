@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cluster_endpoints dynamic management view
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b6ec5de74d2da2a94c25ef121abc0157348554d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41d360ef2d0e9808f1ef4af49b14354cff637a14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74947076"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824744"
 ---
 # <a name="sysdm_cluster_endpoints-transact-sql"></a>sys. dm_cluster_endpoints (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "74947076"
 |엔드포인트(endpoint)|`sysname`|끝점 url 또는 연결 특성입니다. Null을 허용하지 않습니다. |
 |protocol_desc|`sysname`|끝점 프로토콜에 대 한 설명 |
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826217"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|DBMS에 종속된 데이터 형식입니다.|  
 |DATA_TYPE|**smallint**|ODBC 형식의 열이 모두 매핑되는 해당 형식의 코드입니다.|  
@@ -75,11 +75,11 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>설명  
  sp_datatype_info은 ODBC의 SQLGetTypeInfo와 동일 합니다. 반환되는 결과는 DATA_TYPE을 기준으로 정렬되며 데이터 형식의 근접한 정도에 따라 해당 ODBC SQL 데이터 형식에 매핑됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예 `-9`에서는의 *data_type* 값을 지정 하 여 **sysname** 및 **nvarchar** 데이터 형식에 대 한 정보를 검색 합니다.  
+ 다음 예에서는의 *data_type* 값을 지정 하 여 **sysname** 및 **nvarchar** 데이터 형식에 대 한 정보를 검색 합니다 `-9` .  
   
 ```  
 USE master;  

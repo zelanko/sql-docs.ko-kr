@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_job
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 29870a0ffb3d2c3b1872acbb40266aef0d16b62c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75546559"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827652"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`작업의 실행 상태입니다. *status* 는 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|유휴 또는 일시 중지 상태가 아닌 작업만 반환합니다.|  
 |**1**|실행 중입니다.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|일시 중지 상태입니다.|  
 |**7**|동작을 완전히 수행하였습니다.|  
   
-`[ @date_comparator = ] 'date_comparison'`*Date_created* 와 *date_modified*을 비교 하는 데 사용할 비교 연산자입니다. *date_comparison* 은 **char (1)** 이 고 =, \<또는 > 수 있습니다.  
+`[ @date_comparator = ] 'date_comparison'`*Date_created* 와 *date_modified*을 비교 하는 데 사용할 비교 연산자입니다. *date_comparison* 은 **char (1)** 이 고 =, \< 또는 > 수 있습니다.  
   
 `[ @date_created = ] date_created`작업을 만든 날짜입니다. *date_created*은 **datetime**이며 기본값은 NULL입니다.  
   
@@ -105,7 +105,7 @@ sp_help_job { [ @job_id = ] job_id
 ## <a name="result-sets"></a>결과 집합  
  인수를 지정 하지 않으면 **sp_help_job** 이 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 ID입니다.|  
 |**originating_server**|**nvarchar(30)**|작업을 가져온 서버의 이름입니다.|  
@@ -144,7 +144,7 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 단계에 관한 결과 집합입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|해당 작업에 관한 단계의 고유 ID입니다.|  
 |**step_name**|**sysname**|단계의 이름입니다.|  
@@ -162,7 +162,7 @@ sp_help_job { [ @job_id = ] job_id
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 해당 단계를 실패로 간주하기 전에 명령을 재시도할 최대 횟수입니다.|  
 |**retry_interval**|**int**|재시도 간의 간격(분)입니다.|  
 |**os_run_priority**|**varchar (4000)**|예약되어 있습니다.|  
-|**output_file_name**|**varchar (200)**|명령 출력을 써야 하는 파일입니다 ([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 **CmdExec** 단계에만 해당).|  
+|**output_file_name**|**varchar (200)**|명령 출력을 써야 하는 파일입니다 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 **CmdExec** 단계에만 해당).|  
 |**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계를 마지막으로 실행했을 때의 기간(초)입니다.|  
 |**last_run_retries**|**int**|단계를 마지막으로 실행했을 때 명령을 재시도할 횟수입니다.|  
@@ -172,7 +172,7 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 일정에 관한 결과 집합입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|모든 작업에서 고유한 일정의 ID입니다.|  
 |**schedule_name**|**sysname**|해당 작업에 대해서만 고유한 일정의 이름입니다.|  
@@ -196,7 +196,7 @@ sp_help_job { [ @job_id = ] job_id
   
  다음은 작업 대상 서버의 결과 집합입니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|대상 서버의 ID입니다.|  
 |**server_name**|**nvarchar(30)**|대상 서버의 컴퓨터 이름입니다.|  
@@ -208,7 +208,7 @@ sp_help_job { [ @job_id = ] job_id
 |**last_run_outcome**|**tinyint**|해당 서버에서 작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
 |**last_outcome_message**|**nvarchar(1024)**|해당 대상 서버에서 작업이 마지막으로 실행되었을 때의 결과 메시지입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

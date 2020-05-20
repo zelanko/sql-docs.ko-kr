@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056792"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826075"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'`작업이 속하는 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`작업이 속하는 이외 게시자의 이름입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -65,7 +65,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
  **sp_helpxactsetjob** 항상 게시자에서 Xactset 작업 (HREPL_XactSetJob)에 대 한 현재 설정을 반환 합니다. Xactset 작업이 현재 작업 큐에 있는 경우 Oracle 게시자의 관리자 계정에서 만든 USER_JOB 데이터 사전 뷰에서 작업의 특성을 추가로 반환합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_helpxactsetjob**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

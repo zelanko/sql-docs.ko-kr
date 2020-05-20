@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054934"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827620"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`작업의 실행 상태입니다. *run_status* 은 **int**이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0**|Failed|  
 |**1**|성공|  
 |**2**|다시 시도(단계에만 적용됨)|  
 |**3**|취소됨|  
 |**4**|메시지 처리 중|  
-|**5**|Unknown|  
+|**5**|알 수 없음|  
   
 `[ @minimum_retries = ] minimum_retries`작업 실행을 다시 시도해 야 하는 최소 횟수입니다. *minimum_retries* 은 **int**이며 기본값은 NULL입니다.  
   
@@ -121,7 +121,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="remarks"></a>설명  
  **sp_help_jobhistory** 는 지정 된 예약 된 작업의 기록이 포함 된 보고서를 반환 합니다. 매개 변수를 지정하지 않은 경우에는 보고서에 예정된 모든 작업에 관한 기록이 포함됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

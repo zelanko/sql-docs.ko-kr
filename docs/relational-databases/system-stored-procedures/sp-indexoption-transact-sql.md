@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030917"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826034"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`인덱스 옵션 이름입니다. *option_name* 는 **varchar (35)** 이며 기본값은 없습니다. *option_name* 는 다음 값 중 하나를 사용할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**AllowRowLocks**|TRUE인 경우 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. FALSE로 설정된 경우 행 잠금을 사용하지 않습니다. 기본값은 TRUE입니다.|  
 |**AllowPageLocks**|TRUE인 경우 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. FALSE로 설정된 경우 페이지 잠금을 사용하지 않습니다. 기본값은 TRUE입니다.|  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>예  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. 특정 인덱스에 대한 옵션 설정  
- 다음 예에서는 `IX_Customer_TerritoryID` `Customer` 테이블의 인덱스에 대 한 페이지 잠금을 허용 하지 않습니다.  
+ 다음 예에서는 테이블의 인덱스에 대 한 페이지 잠금을 허용 하지 `IX_Customer_TerritoryID` `Customer` 않습니다.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. 클러스터형 인덱스가 없는 테이블에 대한 옵션 설정  
- 다음 예에서는 클러스터형 인덱스가 없는 테이블(힙)에 대해 페이지 잠금을 허용하지 않습니다. 문 `sys.indexes` 결과를 표시 하기 위해 `sp_indexoption` 프로시저를 실행 하기 전과 후에 카탈로그 뷰를 쿼리 합니다.  
+ 다음 예에서는 클러스터형 인덱스가 없는 테이블(힙)에 대해 페이지 잠금을 허용하지 않습니다. `sys.indexes` `sp_indexoption` 문 결과를 표시 하기 위해 프로시저를 실행 하기 전과 후에 카탈로그 뷰를 쿼리 합니다.  
   
 ```sql  
 USE AdventureWorks2012;  

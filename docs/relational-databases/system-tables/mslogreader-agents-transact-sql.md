@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 802d2075a0146febc4521fb17b65f236533596bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85afab7ff3183953da0a4655c98733dd66fb138a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907306"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827258"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67907306"
 |**local_job**|**bit**|로컬 배포자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 있는지 여부를 나타냅니다.|  
 |**job_id**|**binary(16)**|작업 ID입니다.|  
 |**profile_id**|**int**|[MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 테이블의 구성 ID입니다.|  
-|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
+|**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**publisher_login**|**sysname**|게시자에 연결할 때 사용하는 로그인입니다.|  
 |**publisher_password**|**nvarchar (524)**|게시자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 고유 ID입니다.|  

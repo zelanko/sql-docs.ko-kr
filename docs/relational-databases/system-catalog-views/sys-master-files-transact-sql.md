@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313714"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825151"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313714"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|이 파일을 적용할 데이터베이스의 ID입니다. Masterdatabase_id은 항상 1입니다.|  
 |file_id|**int**|데이터베이스 내 파일의 ID입니다. 주 file_id는 항상 1입니다.|  
-|file_guid|**uniqueidentifier**|파일의 고유 식별자입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 업그레이드 되었습니다 (SQL Server 2005 이전 버전의 경우 유효).|  
-|type|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
+|file_guid|**uniqueidentifier**|파일의 고유 식별자입니다.<br /><br /> NULL = 데이터베이스가 이전 버전의에서 업그레이드 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2005 이전 버전의 경우 유효).|  
+|형식|**tinyint**|파일 유형입니다.<br /><br /> 0 = 행<br /><br /> 1 = 로그<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 전체 텍스트([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상으로 업그레이드되었거나 여기서 만들어진 전체 텍스트 카탈로그는 파일 유형 0을 보고함)|  
 |type_desc|**nvarchar(60)**|파일 유형에 대한 설명입니다.<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 전체 텍스트 카탈로그)|  
 |data_space_id|**int**|이 파일이 속한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹입니다.<br /><br /> 0 = 로그 파일|  
 |name|**sysname**|데이터베이스에서 파일의 논리적 이름입니다.|  
@@ -64,12 +64,12 @@ ms.locfileid: "72313714"
 |redo_target_lsn|**numeric(25,0)**|이 파일에 대한 온라인 롤포워드를 중지할 수 있는 시점의 LSN입니다.<br /><br /> state = RESTORING 또는 state = RECOVERY_PENDING이 아니면 NULL입니다.|  
 |redo_target_fork_guid|**uniqueidentifier**|컨테이너를 복구할 수 있는 복구 분기 지점입니다. redo_target_lsn과 쌍을 이룹니다.|  
 |backup_lsn|**numeric(25,0)**|파일의 가장 최근 데이터 또는 차등 백업의 LSN입니다.|  
-|credential_id|**int**|`credential_id` 파일을 `sys.credentials` 저장 하는 데 사용 되는의입니다. 예를 들어가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure 가상 머신에서 실행 중이 고 데이터베이스 파일이 azure blob 저장소에 저장 된 경우 자격 증명은 저장소 위치에 대 한 액세스 자격 증명으로 구성 됩니다.|  
+|credential_id|**int**|`credential_id` `sys.credentials` 파일을 저장 하는 데 사용 되는의입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Azure 가상 머신에서 실행 중이 고 데이터베이스 파일이 azure blob 저장소에 저장 된 경우 자격 증명은 저장소 위치에 대 한 액세스 자격 증명으로 구성 됩니다.|  
   
 > [!NOTE]  
 >  대형 인덱스를 삭제하거나 다시 작성할 때 또는 대형 테이블을 삭제하거나 자를 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 트랜잭션이 커밋될 때까지 실제 페이지 할당 해제 및 관련 잠금을 연기합니다. 삭제 작업이 지연되어도 할당된 공간이 즉시 해제되지는 않습니다. 따라서 큰 개체를 삭제하거나 자른 직후 sys.master_files가 반환한 값은 실제 사용 가능한 디스크 공간과 다를 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  해당 행을 보는 데 필요한 최소 권한은 CREATE DATABASE, ALTER ANY DATABASE 또는 VIEW ANY DEFINITION입니다.  
   
 ## <a name="see-also"></a>참고 항목  

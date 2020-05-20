@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090047"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827569"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|단계의 고유 식별자입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
@@ -78,7 +78,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_attempts**|**int**|단계가 성공하지 못한 경우에 명령을 재시도할 최대 횟수입니다.|  
 |**retry_interval**|**int**|재시도 간격(분)입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
-|**output_file_name**|**nvarchar(200)**|명령 출력을 기록할 파일입니다 ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**및 **PowerShell** 단계에만 해당).|  
+|**output_file_name**|**nvarchar(200)**|명령 출력을 기록할 파일입니다 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] , **CmdExec**및 **PowerShell** 단계에만 해당).|  
 |**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|단계를 마지막으로 실행했을 때 명령을 재시도할 횟수입니다.|  
@@ -89,7 +89,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  **sp_help_jobstep** **msdb** 데이터베이스에 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

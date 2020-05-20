@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns_cursor
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8a9bbd9039e20fad5cf4c22b71e9a85662bf5912
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5024194e2acccaf35b315c38538cbd322e94ebe5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055103"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827685"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자입니다. 테이블을 만든 데이터베이스 사용자의 이름입니다.|  
 |**TABLE_ID**|**int**|테이블 ID입니다.|  
@@ -66,7 +66,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_BLOBTP_COLID**|**int**|문서 유형 열의 ID입니다. 이 값은 전체 텍스트 인덱싱된 열이 **varbinary (max)** 또는 **image** 열인 경우에만 적용할 수 있습니다.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|열의 전체 텍스트 검색에 사용된 언어입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

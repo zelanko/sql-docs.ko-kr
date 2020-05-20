@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983068"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826577"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @objname = ] '*object_name*'  
+ [ @objname =] '*object_name*'  
  현재 사용자 개체나 데이터 형식의 정규화된 이름 또는 정규화되지 않은 이름입니다. 이름을 바꿀 개체가 테이블의 열인 경우에는 *테이블. column* 또는 *schema. table 열*에 *object_name* 있어야 합니다. 이름을 바꿀 개체가 인덱스 이면 *object_name* *테이블. index* 또는 *schema. table. index*형식 이어야 합니다. 이름을 바꿀 개체가 제약 조건이 면 *object_name* 은 *schema. 제약 조건*형식 이어야 합니다.  
   
  정규화된 개체가 지정된 경우에는 따옴표만 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *object_name* 은 **nvarchar (776)** 이며 기본값은 없습니다.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*'  
  지정한 개체의 새 이름입니다. *new_name* 은 한 부분으로 구성 된 이름 이어야 하며 식별자 규칙을 따라야 합니다. *newname* 은 **sysname**이며 기본값은 없습니다.  
   
 > [!NOTE]  
 >  트리거 이름은 # 또는 ##로 시작될 수 없습니다.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  이름을 바꾸는 개체의 유형입니다. *object_type* 는 **varchar (13)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |COLUMN|이름을 바꿀 열입니다.|  
 |DATABASE|사용자 정의 데이터베이스입니다. 이 개체 유형은 데이터베이스 이름을 바꿀 경우 필요합니다.|  
@@ -84,7 +84,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  테이블이나 열과 같은 개체의 이름을 변경해도 이 개체를 참조하는 개체의 이름은 자동으로 변경되지 않습니다. 이름을 변경한 개체를 참조하는 개체는 수동으로 수정해야 합니다. 예를 들어 테이블 열의 이름을 변경하고 이 열이 트리거에서 참조되는 경우 트리거를 수정하여 새로운 열 이름을 적용해야 합니다. [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 를 사용하여 이 개체에 종속된 개체를 나열한 다음 개체의 이름을 변경할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  개체, 열 및 인덱스의 이름을 변경하려면 개체에 대한 ALTER 권한이 필요합니다. 사용자 유형의 이름을 변경하려면 유형에 대한 CONTROL 권한이 필요합니다. 데이터베이스의 이름을 변경하려면 sysadmin 또는 dbcreator 고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. 열 이름 바꾸기  
- 다음 예에서는 `TerritoryID` `SalesTerritory` 테이블의 열 이름을로 `TerrID`변경 합니다.  
+ 다음 예에서는 `TerritoryID` 테이블의 열 이름을 `SalesTerritory` 로 변경 합니다 `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  

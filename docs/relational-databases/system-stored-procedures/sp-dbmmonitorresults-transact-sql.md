@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e46116111e9f1e85cdaad48e9742e62fba187e74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fc35a4c163642f711810f49a816e6c553855b6d9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899169"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826158"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_dbmmonitorresults database_name
 ## <a name="result-sets"></a>결과 집합  
  지정한 데이터베이스에 대해 요청된 개수의 기록 상태 행을 반환합니다. 각 행에는 다음 정보가 들어 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|미러된 데이터베이스의 이름입니다.|  
 |**role**|**int**|서버 인스턴스의 현재 미러링 역할입니다.<br /><br /> 1 = 주 서버<br /><br /> 2 = 미러 서버|  
@@ -102,7 +102,7 @@ sp_dbmmonitorresults database_name
 ## <a name="remarks"></a>설명  
  **sp_dbmmonitorresults** 는 **msdb** 데이터베이스의 컨텍스트에서만 실행할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 자격 또는 **msdb** 데이터베이스의 **dbm_monitor** 고정 데이터베이스 역할의 멤버 자격이 필요 합니다. **Dbm_monitor** 역할을 사용 하면 해당 멤버가 데이터베이스 미러링 상태를 볼 수 있지만 업데이트할 수는 없지만 데이터베이스 미러링 이벤트는 보거나 구성할 수 없습니다.  
   
 > [!NOTE]  

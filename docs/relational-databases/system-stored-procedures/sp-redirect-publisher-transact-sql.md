@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252120"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828255"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @original_publisher = ] 'original_publisher'`원래 데이터베이스를 게시 한 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
+`[ @original_publisher = ] 'original_publisher'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]원래 데이터베이스를 게시 한 인스턴스의 이름입니다. *original_publisher* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @publisher_db = ] 'publisher_db'`게시 되는 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 없습니다.  
   
@@ -55,9 +55,9 @@ sp_redirect_publisher
 ## <a name="remarks"></a>설명  
  **sp_redirect_publisher** 를 사용 하 여 게시자/데이터베이스 쌍을 가용성 그룹의 수신기와 연결 하 여 복제 게시자를 Always On 가용성 그룹의 현재 주 복제본으로 리디렉션할 수 있습니다. 게시 된 데이터베이스를 포함 하는 가용성 그룹에 대해 AG 수신기를 구성한 후 **sp_redirect_publisher** 를 실행 합니다.  
   
- 원래 게시자의 게시 데이터베이스가 주 복제본의 가용성 그룹에서 제거 된 경우 * \@redirected_publisher* 매개 변수의 값을 지정 하지 않고 **sp_redirect_publisher** 을 실행 하 여 게시자/데이터베이스 쌍에 대 한 리디렉션을 제거 합니다. 에서 게시자를 리디렉션하는 방법에 대 한 자세한 내용은 [SQL Server&#41;&#40;AlwaysOn 게시 데이터베이스 유지 관리 ](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)를 참조 하세요.  
+ 원래 게시자의 게시 데이터베이스가 주 복제본의 가용성 그룹에서 제거 된 경우 * \@ redirected_publisher* 매개 변수의 값을 지정 하지 않고 **sp_redirect_publisher** 을 실행 하 여 게시자/데이터베이스 쌍에 대 한 리디렉션을 제거 합니다. 에서 게시자를 리디렉션하는 방법에 대 한 자세한 내용은 [SQL Server&#41;&#40;AlwaysOn 게시 데이터베이스 유지 관리 ](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  호출자는 **sysadmin** 고정 서버 역할의 멤버 이거나 배포 데이터베이스에 대 한 **db_owner** 고정 데이터베이스 역할의 멤버 이거나 게시자 데이터베이스에 연결 된 정의 된 게시에 대 한 게시 액세스 목록의 멤버 여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

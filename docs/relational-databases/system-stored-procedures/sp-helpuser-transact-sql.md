@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048165"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826055"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048165"
   현재 데이터베이스에서 데이터베이스 수준의 보안 주체 정보를 보고합니다.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** 는에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다. 대신 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 를 사용 해야 합니다.  
+>  **sp_helpuser** 는에 도입 된 보안 개체에 대 한 정보를 반환 하지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 대신 [database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 를 사용 해야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

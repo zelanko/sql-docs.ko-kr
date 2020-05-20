@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771096"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828354"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_helparticle [ @publication = ] 'publication'
   
 `[ @returnfilter = ] returnfilter`필터 절을 반환할지 여부를 지정 합니다. *returnfilter* 는 **bit**이며 기본값은 필터 절을 반환 하는 **1**입니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  게시자가 게시 한 아티클에 대 한 정보를 요청할 때 게시자를 지정 하면 안 됩니다. *publisher* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+>  게시자가 게시 한 아티클에 대 한 정보를 요청할 때 *게시자* 를 지정 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @found = ] found OUTPUT`내부용 으로만 사용 됩니다.  
   
@@ -95,7 +95,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_helparticle** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버, **db_owner** 고정 데이터베이스 역할 또는 현재 게시에 대 한 게시 액세스 목록의 멤버만 **sp_helparticle**을 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  

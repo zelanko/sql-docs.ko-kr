@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50823db39b3369c5e9f2fe54b8acbbe5dd424fc0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910150"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827186"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 복원 작업에 대해 하나의 행을 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|각 복원 작업을 식별하는 고유 ID입니다. ID, 즉 기본 키입니다.|  
 |**restore_date**|**datetime**|복원 작업이 시작 된 날짜 및 시간입니다. NULL일 수 있습니다.|  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028903"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827457"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>공간 인덱스 저장 프로시저-인수 및 속성
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "69028903"
 `[ @xml_output = ] 'xml_output'`는 XML 조각에서 결과 집합을 반환 하는 출력 매개 변수입니다. *xml_output* 은 **xml** 이며 기본값은 없습니다.  
   
 ## <a name="properties"></a>속성  
- 아래 표에 표시 된 것 처럼 ** \@verboseoutput** = 0을 설정 하 여 핵심 속성을 반환 합니다. verboseoutput는 0을 > 하 여 공간 인덱스의 모든 속성을 반환 합니다. ** \@**  
+ 아래 표에 표시 된 것 처럼 ** \@ verboseoutput** = 0을 설정 하 여 핵심 속성을 반환 합니다. ** \@ verboseoutput** 는 0을 > 하 여 공간 인덱스의 모든 속성을 반환 합니다.  
   
  **Base_Table_Rows**  
  기본 테이블에 있는 행의 수입니다. 값이 **bigint**입니다.  
@@ -297,7 +297,7 @@ ms.locfileid: "69028903"
  **Primary_Filter_Efficiency**  
  기본 필터에서 P 행을 선택 하 고 O가 행의 수를 출력 하는 경우이 값은 백분율로 표시 됩니다. 기본 필터의 효율성이 높을수록 보조 필터가 처리해야 하는 거짓 긍정의 수는 줄어듭니다. 이 속성은 핵심 속성입니다. 값이 **float입니다.**  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 **public** 역할의 멤버 여야 합니다. 서버 및 개체에 대한 READ ACCESS 권한이 필요합니다. 모든 공간 인덱스 저장 프로시저에 적용됩니다.  
   
 ## <a name="remarks"></a>설명  

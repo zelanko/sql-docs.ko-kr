@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbremove
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ea264c48332f6e72a5f26b330e42cfb1e3d3ff8d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20941c190dc2de90821e1e03a2dc3268dde20e8d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061248"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826134"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
@@ -65,7 +65,7 @@ EXEC sp_dbremove sales;
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [DBCC &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
+ [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

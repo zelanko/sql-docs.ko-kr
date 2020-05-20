@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobschedules system table
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e417a597b6cd7fbb2ccb0aa7131fb17ed458370a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061185"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827337"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68061185"
   
 > **참고:** **Sysjobschedules** 테이블은 20 분 마다 새로 고쳐지고 **sp_help_jobschedule** 저장 프로시저에서 반환 하는 값에 영향을 줄 수 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정의 ID입니다.|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  

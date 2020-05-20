@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060224"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824921"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68060224"
   
  각각의 계정 배달 시도가 실패하면 데이터베이스 메일은 메일 항목 배달이 성공하거나 실패할 때까지 다시 시도하는 동안 오류 메시지를 유지합니다. 최종 성공의 경우 누적 된 모든 오류는 **account_id**을 포함 한 별도의 경고로 기록 됩니다. 이에 따라 전자 메일이 보내진 경우에도 경고가 표시될 수 있습니다. 최종 배달에 실패 하는 경우 모든 계정에 오류가 발생 하 여 모든 이전 경고는 **account_id**없는 하나의 오류 메시지로 기록 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 뷰에 액세스 하려면 **sysadmin** 고정 서버 역할 또는 **DatabaseMailUserRole** 데이터베이스 역할의 멤버 여야 합니다. **Sysadmin** 역할의 멤버가 아닌 **DatabaseMailUserRole** 의 멤버는 제출한 전자 메일에 대 한 이벤트만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

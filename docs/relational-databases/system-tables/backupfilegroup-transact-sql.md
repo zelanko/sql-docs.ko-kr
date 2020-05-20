@@ -16,14 +16,14 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0e2f1c1ae33bd94ffcbe6faef16523d7d808ac70
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122919"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827394"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68122919"
 > [!NOTE]  
 >  **Backupfilegroup** 테이블은 백업 집합이 아니라 데이터베이스의 파일 그룹 구성을 보여 줍니다. 파일이 백업 세트에 포함 되어 있는지 여부를 확인 하려면 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 테이블의 **is_present** 열을 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|이 파일 그룹이 포함된 백업 세트입니다.|  
 |**name**|**sysname**|파일 그룹의 이름입니다.|  
@@ -56,10 +56,10 @@ ms.locfileid: "68122919"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;테이블 백업 및 복원](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
- [backupfile &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
- [backupmediafamily &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
- [backupmediaset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
- [backupset &#40;Transact-sql&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
+ [backupfile&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
+ [backupmediafamily&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
+ [backupmediaset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   
+ [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

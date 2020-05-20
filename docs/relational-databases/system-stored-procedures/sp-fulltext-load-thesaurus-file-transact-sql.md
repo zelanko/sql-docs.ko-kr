@@ -17,14 +17,14 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305206"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827793"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 
@@ -44,7 +44,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  동의어 사전 XML 정의를 로드할 언어의 LCID(로캘 ID)를 매핑하는 정수입니다. 서버 인스턴스에서 사용할 수 있는 언어의 Lcid를 얻으려면 [fulltext_languages &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) 카탈로그 뷰를 사용 합니다.  
   
- **\@loadonly ifnotloaded** = *작업*  
+ ** \@ loadonly ifnotloaded**  =  *작업*  
  동의어 사전 파일이 이미 로드된 경우에도 내부 동의어 사전 테이블로 로드되는지 여부를 지정합니다. *작업* 은 다음 중 하나입니다.  
   
 |값|정의|  
@@ -53,7 +53,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|아직 로드되지 않은 경우에만 동의어 사전 파일을 로드합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
@@ -63,7 +63,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
  '**Update_languages**' [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)사용 하 여 전체 텍스트 검색에 등록 된 언어 목록을 업데이트 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버 또는 시스템 관리자만 **sp_fulltext_load_thesaurus_file** 저장 프로시저를 실행할 수 있습니다.  
   
  동의어 사전 파일은 시스템 관리자만 업데이트, 수정 또는 삭제할 수 있습니다.  

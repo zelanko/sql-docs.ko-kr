@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f7b64251d139b34f0a23cec49ffbb4dcbf0384a0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070339"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826690"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`사용 중인 ODBC의 버전입니다. *ODBCVer* 는 **int**이며 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 버전 3의 동작 차이에 대한 자세한 내용은 ODBC SQLColumns 사양을 참조하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -90,7 +90,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  지정한 연결 된 서버의 OLE DB 공급자가 **IDBSchemaRowset** 인터페이스의 columns 행 집합을 지원 하지 않는 경우 빈 결과 집합을 반환 합니다. **sp_columns_ex**  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="remarks"></a>설명  

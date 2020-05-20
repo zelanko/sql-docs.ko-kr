@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241a0594f3487d47c49a96fb2539b660b294b8a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002558"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827517"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @objname= ] '*object*'  
+ [ @objname =] '*object*'  
  현재 데이터베이스에 있는 저장 프로시저, 트리거, 테이블, 뷰 또는 사용자 정의 함수의 정규화된 이름 또는 정규화되지 않은 이름입니다. *object* 는 **nvarchar (776)** 이며 기본값은 없습니다. *Object* 가 저장 프로시저, 트리거 또는 사용자 정의 함수의 이름인 경우에는 저장 프로시저, 트리거 또는 함수가 다음에 실행 될 때 다시 컴파일됩니다. *Object* 가 테이블 또는 뷰의 이름인 경우 테이블이 나 뷰를 참조 하는 모든 저장 프로시저, 트리거 또는 사용자 정의 함수는 다음에 실행 될 때 다시 컴파일됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -54,7 +54,7 @@ sp_recompile [ @objname = ] 'object'
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 자동으로 저장 프로시저, 트리거 및 사용자 정의 함수를 다시 컴파일하는 편이 좋은 경우 그렇게 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  지정된 개체에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

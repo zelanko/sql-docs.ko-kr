@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 209a41ff29f8063ec6c46fe1fb5e821be1419cd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019983"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828327"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
   
  **sp_mergedummyupdate** 은 복제 충돌 뷰어 (Wzcnfl..exe)에 대 한 대안을 직접 작성 하는 경우에 유용 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Db_owner** 고정 데이터베이스 역할의 멤버만 **sp_mergedummyupdate**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

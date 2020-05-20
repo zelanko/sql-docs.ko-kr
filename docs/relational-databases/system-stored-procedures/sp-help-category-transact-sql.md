@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304809"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827770"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'`정보를 요청 하는 클래스입니다. *클래스* 는 **varchar (8)** 이며 기본값은 **JOB**입니다. *클래스* 는 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**직함**|작업 범주에 관한 정보를 제공합니다.|  
 |**오류**|경고 범주에 관한 정보를 제공합니다.|  
@@ -52,11 +52,11 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`정보가 요청 되는 범주의 유형입니다. *type* 은 **varchar (12)** 이며 기본값은 NULL이 고 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**로컬**|로컬 작업 범주입니다.|  
+|**LOCAL**|로컬 작업 범주입니다.|  
 |**MULTI -SERVER**|다중 서버 작업 범주입니다.|  
-|**없음을**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
+|**NONE**|**JOB**이 아닌 다른 클래스에 대 한 범주입니다.|  
   
 `[ @name = ] 'name'`정보를 요청 하는 범주의 이름입니다. *name* 은 **sysname**이며 기본값은 NULL입니다.  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 접미사가 0 이면 **0** **sp_help_category** 는 다음 결과 집합을 반환 합니다. ** \@**  
+ ** \@ 접미사가** **0**이면 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|범주의 유형입니다.<br /><br /> **1** = 로컬<br /><br /> **2** = 다중 서버<br /><br /> **3** = 없음|  
 |**name**|**sysname**|범주의 이름입니다.|  
   
- ** \@접미사** 가 **1**인 경우 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
+ ** \@ 접미사** 가 **1**인 경우 **sp_help_category** 는 다음 결과 집합을 반환 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -87,7 +87,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  매개 변수가 지정되지 않은 경우에는 결과 집합이 모든 작업 범주에 관한 정보를 제공합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

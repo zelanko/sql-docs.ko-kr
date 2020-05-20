@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982767"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825991"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>인수  
 `[ @name = ] 'module\_name'`저장 프로시저, 사용자 정의 함수, 뷰, DML 트리거, 데이터베이스 수준 DDL 트리거 또는 서버 수준 DDL 트리거의 이름입니다. *module_name* 은 clr (공용 언어 런타임) 저장 프로시저 또는 clr 함수가 될 수 없습니다. *module_name* 은 스키마 바인딩될 수 없습니다. *module_name* 는 **nvarchar**이며 기본값은 없습니다. *module_name* 은 여러 부분으로 구성 된 식별자가 될 수 있지만 현재 데이터베이스의 개체만 참조할 수 있습니다.  
   
-`[ , @namespace = ] ' \<class> '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 일 경우 \<클래스> 필요 합니다. >클래스는 **nvarchar**(20)입니다. * \<* 잘못된 입력:  
+`[ , @namespace = ] ' \<class> '`는 지정 된 모듈의 클래스입니다. *MODULE_NAME* DDL 트리거 일 경우 \< 클래스> 필요 합니다. * \<>클래스* 는 **nvarchar**(20)입니다. 잘못된 입력:  
   
 |||  
 |-|-|  
@@ -78,7 +78,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  **Sp_refreshsqlmodule**를 실행 하면 개체와 연결 된 모든 서명이 삭제 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  모듈에 대한 ALTER 권한 및 개체가 참조하는 CLR 사용자 정의 형식과 XML 스키마 컬렉션에 대한 REFERENCES 권한이 필요합니다. 지정된 모듈이 데이터베이스 수준 DDL 트리거일 경우 현재 데이터베이스에 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다. 지정된 모듈이 서버 수준 DDL 트리거일 경우 CONTROL SERVER 권한이 필요합니다.  
   
  또한 EXECUTE AS 절로 정의되는 모듈의 경우 지정된 보안 주체에 대해 IMPERSONATE 권한이 필요합니다. 일반적으로 모듈이 EXECUTE AS USER로 정의되었으며 보안 주체의 사용자 이름이 모듈이 만들어진 때의 사용자와 다른 사용자로 확인되지 않는 이상 개체를 새로 고쳐도 EXECUTE AS 보안 주체가 변경되지 않습니다.  

@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sysjobsteps system table
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004738"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827324"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 실행될 작업의 각 단계에 대한 정보를 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**step_id**|**int**|작업 단계의 ID입니다.|  

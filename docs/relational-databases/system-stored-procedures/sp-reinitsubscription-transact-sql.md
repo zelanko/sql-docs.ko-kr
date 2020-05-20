@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ee9af1ee7057b7a64a62e0ead12ba7e386839587
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762526"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828254"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 `[ @for_schema_change = ] 'for_schema_change'`게시 데이터베이스에서 스키마가 변경 된 결과로 다시 초기화가 발생 하는지 여부를 나타냅니다. *for_schema_change* 은 **bit**이며 기본값은 0입니다. **0**인 경우 전체 게시가 아닌 전체 게시가 다시 초기화 되는 동안 즉시 업데이트를 허용 하는 게시에 대 한 활성 구독이 다시 활성화 됩니다. 이는 스키마가 변경되어 다시 초기화가 시작됨을 의미합니다. **1**인 경우 스냅숏 에이전트 실행 될 때까지 활성 구독이 다시 활성화 되지 않습니다.  
   
-`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 게시자를 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *게시자* 에는 게시자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하면 안 됩니다.  
+>  *게시자* 에는 게시자를 사용 하면 안 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @ignore_distributor_failure = ] ignore_distributor_failure`배포자가 없거나 오프 라인 상태인 경우에도 다시 초기화할 수 있습니다. *ignore_distributor_failure* 은 **bit**이며 기본값은 0입니다. **0**인 경우 배포자가 없거나 오프 라인 상태 이면 다시 초기화가 실패 합니다.  
   
@@ -88,7 +88,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할의 멤버 또는 구독의 작성자만 **sp_reinitsubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.transmission_queue catalog view
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1d420ae3d04072af5b0ce4bbc7d31e09bef78d8d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022602"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826457"
 ---
 # <a name="systransmission_queue-transact-sql"></a>sys.transmission_queue(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68022602"
 |**transmission_status**|**nvarchar(4000)**|이 메시지가 큐에 있는 이유입니다. 일반적으로 메시지 보내기가 실패한 이유를 설명하는 오류 메시지입니다. 비어 있으면 아직 메시지를 보내지 않은 것입니다. NULL을 허용합니다.|  
 |**priority**|**tinyint**|이 메시지에 할당된 우선 순위 수준입니다. NULL을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
   

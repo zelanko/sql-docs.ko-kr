@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c95cc2db84bdf059437a45e2719bbc63d6eb6829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fcb9bad5548107ef3a9294f22696abeacbdedcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108347"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826255"
 ---
 # <a name="sp_cycle_agent_errorlog-transact-sql"></a>sp_cycle_agent_errorlog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ sp_cycle_agent_errorlog
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 없음  
+ None  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작 될 때마다 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그의 이름이 **SQLAgent. 1**로 바뀝니다. **SQLAgent** 는 **SQLAgent**가 되 고 **SQLAgent** 는 **SQLAgent. 3**이 됩니다. **sp_cycle_agent_errorlog** 를 사용 하면 서버를 중지 하 고 시작 하지 않고 오류 로그 파일을 순환할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트가 시작 될 때마다 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 오류 로그의 이름이 **SQLAgent. 1**로 바뀝니다. **SQLAgent** 는 **SQLAgent**가 되 고 **SQLAgent** 는 **SQLAgent. 3**이 됩니다. **sp_cycle_agent_errorlog** 를 사용 하면 서버를 중지 하 고 시작 하지 않고 오류 로그 파일을 순환할 수 있습니다.  
   
  이 저장 프로시저는 **msdb** 데이터베이스에서 실행 해야 합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sp_cycle_agent_errorlog** 에 대 한 실행 권한은 **sysadmin** 고정 서버 역할의 멤버로 제한 됩니다.  
   
 ## <a name="examples"></a>예  

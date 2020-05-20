@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_describe_first_result_set_for_object catalog view
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199338"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827992"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  이 동적 관리 함수는를 @object_id 매개 변수로 사용 하 고 해당 ID를 가진 모듈의 첫 번째 결과 메타 데이터를 설명 합니다. 지정 @object_id 된은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거의 ID 일 수 있습니다. 그 밖에 다른 개체(예: 뷰, 테이블, 함수 또는 CLR 프로시저)의 ID인 경우에는 결과의 오류 열에 오류가 지정됩니다.  
+  이 동적 관리 함수는를 @object_id 매개 변수로 사용 하 고 해당 ID를 가진 모듈의 첫 번째 결과 메타 데이터를 설명 합니다. 지정 된은 @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저나 트리거의 ID 일 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] . 그 밖에 다른 개체(예: 뷰, 테이블, 함수 또는 CLR 프로시저)의 ID인 경우에는 결과의 오류 열에 오류가 지정됩니다.  
   
  **dm_exec_describe_first_result_set_for_object** 는 [dm_exec_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) 와 동일한 결과 집합 정의가 있으며 [sp_describe_first_result_set &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)와 비슷합니다.  
   
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>인수  
  *\@object_id*  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거의 @object_id 입니다. @object_id는 **int** 형식입니다.  
+ @object_id [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트리거의입니다. @object_id는 **int** 형식입니다.  
   
  *\@include_browse_information*  
  @include_browse_information는 **bit**형식입니다. 1로 설정되면 쿼리에 FOR BROWSE 옵션이 있는 것처럼 각 쿼리가 분석됩니다. 추가 키 열과 원본 테이블 정보를 반환합니다.  
@@ -101,7 +101,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
  다음 표에서는 오류 유형 및 설명을 나열합니다.  
   
-|error_type|error_type|Description|  
+|error_type|error_type|설명|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|설명하지 않은 모든 오류입니다.|  
 |2|SYNTAX|일괄 처리에 발생한 구문 오류입니다.|  
@@ -114,11 +114,11 @@ sys.dm_exec_describe_first_result_set_for_object
 |9|RECURSION|일괄 처리에 재귀 문이 포함되어 있어 결과를 확인할 수 없습니다.|  
 |10|TEMPORARY_TABLE|일괄 처리에 임시 테이블이 포함되고 **sp_describe_first_result_set**에서 일괄 처리를 지원하지 않으므로 결과를 확인할 수 없습니다.|  
 |11|UNSUPPORTED_STATEMENT|**sp_describe_first_result_set**에서 지원하지 않는 문(예: FETCH, REVERT 등)이 일괄 처리에 포함되어 있어 결과를 확인할 수 없습니다.|  
-|12|OBJECT_ID_NOT_SUPPORTED|함수 @object_id 에 전달 된이 (가) 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
-|13|OBJECT_ID_DOES_NOT_EXIST|함수 @object_id 에 전달 된를 시스템 카탈로그에서 찾을 수 없습니다.|  
+|12|OBJECT_ID_NOT_SUPPORTED|@object_id함수에 전달 된이 (가) 지원 되지 않습니다 (예: 저장 프로시저가 아님).|  
+|13|OBJECT_ID_DOES_NOT_EXIST|@object_id함수에 전달 된를 시스템 카탈로그에서 찾을 수 없습니다.|  
   
-## <a name="permissions"></a>사용 권한  
- @tsql 인수를 실행할 수 있는 권한이 필요 합니다.  
+## <a name="permissions"></a>권한  
+ 인수를 실행할 수 있는 권한이 필요 @tsql 합니다.  
   
 ## <a name="examples"></a>예  
   
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-combining-the-sysdm_exec_describe_first_result_set_for_object-function-and-a-table-or-view"></a>B. sys.dm_exec_describe_first_result_set_for_object 함수와 테이블 또는 뷰 결합  
- 다음 예에서는 sys. 프로시저 시스템 카탈로그 뷰와 **dm_exec_describe_first_result_set_for_object** 함수를 사용 하 여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 모든 저장 프로시저의 결과 집합에 대 한 메타 데이터를 표시 합니다.  
+ 다음 예에서는 sys. 프로시저 시스템 카탈로그 뷰와 **dm_exec_describe_first_result_set_for_object** 함수를 사용 하 여 데이터베이스에 있는 모든 저장 프로시저의 결과 집합에 대 한 메타 데이터를 표시 합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 ```  
 USE AdventureWorks2012;  

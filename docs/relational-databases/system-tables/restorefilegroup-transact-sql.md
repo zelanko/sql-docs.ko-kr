@@ -16,21 +16,21 @@ helpviewer_keywords:
 - filegroups [SQL Server], restorefilegroup system table
 - restorefilegroup system table
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8dbdc6cb36ccfca3abb3966fc6e192200b6b72c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910159"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827170"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   복원된 각 파일 그룹에 대해 하나의 행을 포함합니다. 이 테이블은 **msdb** 데이터베이스에 저장 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. **Restorehistory (restore_history_id)** 를 참조 합니다.|  
 |**filegroup_name**|**nvarchar(128)**|복원되는 파일 그룹의 이름입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  

@@ -18,22 +18,22 @@ helpviewer_keywords:
 - sys.parameters catalog view
 - table-valued parameters,sys.parameters
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b478dcb30bbe95c9c8f3aa6256330634bbc0c1b3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125350"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825009"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   매개 변수를 받는 개체의 각 매개 변수당 하나의 행을 포함합니다. 개체가 스칼라 함수인 경우 반환 값을 설명하는 단일 행도 있으며 해당 행의 **parameter_id** 값은 0이 됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 매개 변수가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|매개 변수의 이름입니다. 개체 내에서 고유합니다.<br /><br /> 개체가 스칼라 함수이면 매개 변수 이름은 반환 값을 나타내는 행에서 빈 문자열입니다.|  
@@ -45,14 +45,14 @@ ms.locfileid: "68125350"
 |**scale**|**tinyint**|숫자 기반일 경우 매개 변수의 소수 자릿수이고 그렇지 않으면 0입니다.|  
 |**is_output**|**bit**|1 = 매개 변수가 출력 또는 반환 값인 경우, 그렇지 않으면 0입니다.|  
 |**is_cursor_ref**|**bit**|1 = 매개 변수가 커서 참조 매개 변수입니다.|  
-|**has_default_value**|**bit**|1 = 매개 변수에 기본값이 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 카탈로그 뷰의 CLR 개체에 대한 기본값만 유지하므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 개체의 경우 이 열 값은 0입니다. 개체에서 매개 변수의 기본값을 보려면 [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 정의 열을 쿼리하거나 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 시스템 함수를 사용 합니다. **definition** [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
+|**has_default_value**|**bit**|1 = 매개 변수에 기본값이 있습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 카탈로그 뷰의 CLR 개체에 대한 기본값만 유지하므로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 개체의 경우 이 열 값은 0입니다. 개체에서 매개 변수의 기본값을 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰의 **정의** 열을 쿼리하거나 [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) 시스템 함수를 사용 합니다.|  
 |**is_xml_document**|**bit**|1 = 내용이 완전한 XML 문서입니다.<br /><br /> 0 = 내용이 문서 조각 이거나 열의 데이터 형식이 **xml**이 아닙니다.|  
 |**default_value**|**sql_variant**|**Has_default_value** 1 인 경우이 열의 값은 매개 변수의 기본값입니다. 그렇지 않으면 NULL입니다.|  
 |**xml_collection_id**|**int**|매개 변수의 데이터 형식이 **xml** 이 고 xml이 입력 된 경우 0이 아닙니다. 매개 변수의 유효성 검사 XML 스키마 네임스페이스를 포함하는 컬렉션의 ID가 됩니다.<br /><br /> 0 = XML 스키마 컬렉션이 없습니다.|  
 |**is_readonly**|**bit**|1 = 매개 변수가 읽기 전용인 경우, 그렇지 않으면 0입니다.|  
 |**is_nullable**|**bit**|1 = 매개 변수가 null을 허용합니다. (기본값).<br /><br /> 0 = 고유하게 컴파일된 저장 프로시저를 보다 효율적으로 실행할 수 있도록 매개 변수가 null을 허용하지 않습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

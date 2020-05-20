@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_mailattachments database mail view
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab020c70d1d1062f507bbb745f2e5f00d9faba6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060198"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824878"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68060198"
   
  시스템 테이블에 저장 된 첨부 파일은 **msdb** 데이터베이스의 증가를 일으킬 수 있습니다. **Sysmail_delete_mailitems_sp** 를 사용 하 여 메일 항목 및 연결 된 첨부 파일을 삭제 합니다. 자세한 내용은 [데이터베이스 메일 메시지 및 이벤트 로그를 보관 하는 SQL Server 에이전트 작업 만들기](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)를 참조 하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole** 데이터베이스 역할에 부여 됩니다. **Sysadmin** 고정 서버 역할의 멤버에 의해 실행 되는 경우이 뷰는 모든 첨부 파일을 표시 합니다. 다른 모든 사용자는 자신이 제출한 메시지의 첨부 파일만 볼 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

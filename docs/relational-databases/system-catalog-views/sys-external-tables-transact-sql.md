@@ -8,22 +8,22 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: fac4720c-b679-4ab2-864b-ff7810a9b559
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c8920361fafe9ecd26ff401110d4661c278de88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054308"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828157"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   현재 데이터베이스의 각 외부 테이블에 대 한 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |\<상속 된 열>||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.||  
 |max_column_id_used|**int**|이 테이블에 사용 되는 최대 열 ID입니다.||  
@@ -40,7 +40,7 @@ ms.locfileid: "68054308"
 |remote_schema_name|**sysname**|외부 테이블 SHARD_MAP_MANAGER 외부 데이터 원본에 대 한 외부 테이블은 원격 데이터베이스에 있는 기본 테이블이 있는 스키마입니다 (외부 테이블이 정의 된 스키마와 다른 경우).||  
 |remote_object_name|**sysname**|외부 테이블 SHARD_MAP_MANAGER 외부 데이터 원본에 대 한 외부 테이블의 경우이 이름은 원격 데이터베이스에 있는 기본 테이블의 이름입니다 (외부 테이블의 이름과 다른 경우).||  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

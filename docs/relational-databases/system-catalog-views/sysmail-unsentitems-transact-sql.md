@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f84e84ed7801beb20bdaca5c92d333133fad3b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f3f7c55d0a4cf165b5ff77e51f1fe7bb861abc7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745359"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828107"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "70745359"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지 전송에 사용된 프로필의 식별자입니다.|  
-|**recipients**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
+|**사람과**|**varchar(max)**|메시지를 받는 사람의 전자 메일 주소입니다.|  
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**제목**|**nvarchar (510)**|메시지의 제목 줄입니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "70745359"
 ## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결할 때 이 뷰를 사용하여 전송 대기 중인 메시지 수와 메시지 대기 시간을 보고 문제의 근원을 확인할 수 있습니다. 보낸 메시지가 없으면 데이터베이스 메일 프로그램이 실행 중이 아니거나 데이터베이스 메일의 SMTP 서버 접속을 차단하는 네트워크 문제가 있을 수 있습니다. 보내지 않은 메시지 중 상당수가 동일한 **profile_id**있으면 SMTP 서버에 문제가 있을 수 있습니다. 이 경우 프로필에 계정을 추가하는 방법을 고려하십시오. 메시지가 전송되지 않았으나 큐에서 너무 오래 대기 중인 경우 필요한 메시지 양을 처리하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 더 많은 리소스를 필요로 하는 것일 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole** 데이터베이스 역할에 부여 됩니다. **Sysadmin** 고정 서버 역할의 멤버에 의해 실행 되는 경우이 뷰는 **보내지** 않았거나 **다시 시도** 하는 모든 메시지를 표시 합니다. 다른 모든 사용자에 게는 **제출한 메시지만** **보내지** 않은 메시지만 표시 됩니다.  
   
   

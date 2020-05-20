@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010549"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828221"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  컬렉션 항목을 식별하는 고유한 식별자입니다. *collection_item_id* 은 **int** 이며 기본값은 NULL입니다. *name* 이 NULL 인 경우 *collection_item_id* 에 값이 있어야 합니다.  
   
- [ @name = ] '*이름*'  
+ [ @name =] '*name*'  
  컬렉션 항목의 이름입니다. *name* 은 **sysname** 이며 기본값은 NULL입니다. *collection_item_id* 가 NULL 이면 *이름* 에 값이 있어야 합니다.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  컬렉션 항목의 새 이름입니다. *new_name* 는 **sysname**이며 사용 될 경우 빈 문자열일 수 없습니다.  
   
  *new_name* 은 고유 해야 합니다. 현재 컬렉션 항목 이름의 목록을 보려면 syscollector_collection_items 시스템 뷰를 쿼리합니다.  
   
- [ @frequency = ] *빈도*  
+ [ @frequency =] *빈도*  
  이 컬렉션 항목에 의해 데이터가 수집되는 빈도(초)입니다. *frequency* 는 **int**이며 기본값은 5이 고, 최소값은 지정할 수 있습니다.  
   
- [ @parameters = ] '*parameters*'  
+ [ @parameters =] '*parameters*'  
  컬렉션 항목의 입력 매개 변수입니다. *매개 변수* 는 **xml** 이며 기본값은 NULL입니다. *Parameters* 스키마는 수집기 유형의 매개 변수 스키마와 일치 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -81,7 +81,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin 또는 dc_operator(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버여야 합니다. dc_operator는 이 저장 프로시저를 실행할 수 있지만 이 역할의 멤버가 변경할 수 있는 속성은 제한적입니다. 다음 속성은 dc_admin만 변경할 수 있습니다.  
   
 -   @new_name  

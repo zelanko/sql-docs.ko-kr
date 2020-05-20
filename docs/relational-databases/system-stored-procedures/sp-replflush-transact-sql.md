@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replflush
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a6745589616dec5b129992cc555e1238cd62b545
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a95b0ac89751e284537eda5e44ec9a7bb0efe712
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771595"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825987"
 ---
 # <a name="sp_replflush-transact-sql"></a>sp_replflush(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_replflush
   
  하나의 클라이언트 연결만 지정된 데이터베이스로의 로그 판독기 액세스를 가질 수 있습니다. 클라이언트에 데이터베이스에 대 한 로그 판독기 액세스 권한이 있는 경우 **sp_replflush** 를 실행 하면 클라이언트가 해당 액세스를 해제 합니다. 그러면 다른 클라이언트는 **sp_replcmds** 또는 **sp_replshowcmds**를 사용 하 여 트랜잭션 로그를 검색할 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_replflush**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

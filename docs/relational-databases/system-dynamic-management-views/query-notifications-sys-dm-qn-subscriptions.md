@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061917"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826392"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>쿼리 알림-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "68061917"
 |**sid**|**varbinary(85)**|이 구독을 만들고 소유하는 서버 보안 주체의 보안 ID입니다.|  
 |**object_id**|**int**|구독 매개 변수에 관한 정보를 저장하는 내부 테이블의 ID입니다.|  
 |**created**|**datetime**|구독을 만든 날짜와 시간입니다.|  
-|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정 된 시간 제한 보다 클 수 있습니다. 그러나 구독을 무효화 하는 변경 내용이 지정 된 제한 시간 이후에 발생 하지만 구독이 실행 되기 전에 발생 하는 경우에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 변경이 수행 된 시간에 발생 합니다.|  
+|**timeout**|**int**|구독의 제한 시간(초)입니다. 이 시간이 경과하면 알림이 발생하도록 플래그가 지정됩니다.<br /><br /> 참고: 실제 발생 시간은 지정 된 시간 제한 보다 클 수 있습니다. 그러나 구독을 무효화 하는 변경 내용이 지정 된 제한 시간 이후에 발생 하지만 구독이 실행 되기 전에 발생 하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경이 수행 된 시간에 발생 합니다.|  
 |**status**|**int**|구독의 상태를 나타냅니다. 코드 목록은 설명 아래의 표를 참조하십시오.|  
   
 ## <a name="relationship-cardinalities"></a>관계 카디널리티  
   
-|시작|대상|설정|Type|  
+|시작|대상|켜기|형식|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|다 대 일|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|다 대 일|  
@@ -55,7 +55,7 @@ ms.locfileid: "68061917"
 |코드|보조 상태|정보|  
 |----------|------------------|----------|  
 |65798|데이터가 변경되어 구독이 발생했습니다.|삽입으로 인해 구독이 트리거되었습니다.|  
-|65799|데이터가 변경되어 구독이 발생했습니다.|DELETE|  
+|65799|데이터가 변경되어 구독이 발생했습니다.|삭제|  
 |65800|데이터가 변경되어 구독이 발생했습니다.|업데이트|  
 |65801|데이터가 변경되어 구독이 발생했습니다.|병합|  
 |65802|데이터가 변경되어 구독이 발생했습니다.|테이블 자르기|  
@@ -90,7 +90,7 @@ ms.locfileid: "68061917"
 |199168|구독이 활성화되어 있습니다.|정의되지 않은 정보 모드입니다.|  
 |199424|구독이 초기화되었지만 아직 활성화되지 않았습니다.|정의되지 않은 정보 모드입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  서버에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 > [!NOTE]  

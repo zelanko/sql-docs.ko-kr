@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084860"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827489"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ sp_update_notification
   
  지정 된 *notification_method*를 사용 하 여 필요한 주소 정보가 없는 운영자에 대 한 알림을 업데이트할 수 있습니다. 전자 메일 메시지 또는 호출기 알림을 보내는 중에 실패하면 Microsoft SQL Server 에이전트 오류 로그에 실패가 보고됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 저장 프로시저를 실행 하려면 사용자에 게 **sysadmin** 고정 서버 역할을 부여 해야 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 경고 `François Ajenstat` `Test Alert`에 대해로 전송 된 알림에 대 한 알림 방법을 수정 합니다.  
+ 다음 예에서는 경고에 대해로 전송 된 알림에 대 한 알림 방법을 수정 합니다 `François Ajenstat` `Test Alert` .  
   
 ```  
 USE msdb ;  

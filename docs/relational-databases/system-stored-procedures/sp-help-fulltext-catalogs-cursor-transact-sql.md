@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs_cursor
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 280d5eaf75c8b6775222a1dbde028f74feac842f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 741b1311aee361e83c0d4ba2465ec9b80e1c217f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055137"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827717"
 ---
 # <a name="sp_help_fulltext_catalogs_cursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |**상태**|**int**|카탈로그의 전체 텍스트 인덱스 채우기 상태입니다.<br /><br /> 0 = 유휴 상태<br /><br /> 1 = 전체 채우기 진행 중<br /><br /> 2 = 일시 중지됨<br /><br /> 3 = 정체됨<br /><br /> 4 = 복구 중<br /><br /> 5 = 종료<br /><br /> 6 = 증분 채우기 진행 중<br /><br /> 7 = 인덱스 작성 중<br /><br /> 8 = 디스크가 꽉 참. 일시 중지됨<br /><br /> 9 = 변경 내용 추적 중|  
 |**NUMBER_FULLTEXT_TABLES**|**int**|카탈로그와 연결된 전체 텍스트 인덱싱된 테이블의 번호입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  실행 권한은 기본적으로 **public** 역할로 사용 됩니다.  
   
 ## <a name="examples"></a>예  

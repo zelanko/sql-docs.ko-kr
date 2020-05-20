@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266060"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824730"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266060"
   
  **Version** 속성은 서버에서 .NET Framework 및 호스팅된 CLR의 버전을 나타냅니다.  
   
- **Dm_clr_properties** 동적 관리 뷰는 호스트 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다. 다음 창이 여기에 포함됩니다.  
+ **Dm_clr_properties** 동적 관리 뷰는 호스트 된 clr의 상태를 반영 하는 **상태** 속성에 대해 6 개의 다른 값을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 아래에 이 계정과 키의 예제가 나와 있습니다.  
   
 -   Mscoree is not loaded.  
   
@@ -62,19 +62,19 @@ ms.locfileid: "68266060"
   
  호스팅된 clr 버전이 사용 되 고 있지 않아 아직 초기화 되지 않은 상태에서 **문제가 있는 clr 버전이** 표시 될 수 있습니다. 호스트 된 CLR은 DDL 문 (예: [CREATE ASSEMBLY &#40;transact-sql&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) 또는 관리 되는 데이터베이스 개체가 실행 될 때 초기화 됩니다.  
   
- **Clr이 초기화** 됨 상태는 호스팅된 clr이 성공적으로 초기화 되었음을 나타냅니다. 사용자 CLR 코드 실행이 설정되었는지 여부는 나타내지 않습니다. 사용자 CLR 코드 실행이 먼저 활성화 된 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 저장 프로시저를 사용 하 여 비활성화 된 경우 상태 값은 여전히 **CLR이 초기화**됩니다.  
+ **Clr이 초기화** 됨 상태는 호스팅된 clr이 성공적으로 초기화 되었음을 나타냅니다. 사용자 CLR 코드 실행이 설정되었는지 여부는 나타내지 않습니다. 사용자 CLR 코드 실행이 먼저 활성화 된 다음 sp_configure 저장 프로시저를 사용 하 여 비활성화 된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 상태 값은 여전히 **CLR이 초기화**됩니다.  
   
  **Clr 초기화가 영구적으로 실패** 상태는 호스팅된 CLR 초기화에 실패 했음을 나타냅니다. 이는 메모리 부족 때문이거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR 간의 호스팅 핸드셰이크에서 오류가 발생했기 때문일 수도 있습니다. 이 경우 오류 메시지 6512 또는 6513이 발생합니다.  
   
- **CLR이 중지 됨 상태** 는가 종료 되 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동안에만 표시 됩니다.  
+ **CLR이 중지 됨 상태** 는가 종료 되는 동안에만 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="remarks"></a>설명  
- CLR 통합 기능의 향상 된 기능으로 인해이 뷰의 속성 및 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 변경 될 수 있습니다.  
+ CLR 통합 기능의 향상 된 기능으로 인해이 뷰의 속성 및 값이의 이후 버전에서 변경 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
   
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="examples"></a>예  
  다음 예에서는 호스팅된 CLR에 대한 정보를 검색합니다.  

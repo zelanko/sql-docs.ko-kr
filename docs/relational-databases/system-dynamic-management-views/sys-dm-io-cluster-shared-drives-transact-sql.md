@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e89252effd6e8fbb14d800837328c9ff8042e0d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900391"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827951"
 ---
 # <a name="sysdm_io_cluster_shared_drives-transact-sql"></a>sys.dm_io_cluster_shared_drives(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "67900391"
   이 뷰에서는 현재 서버 인스턴스가 클러스터형 서버인 경우 각 공유 드라이브의 이름을 반환합니다. 현재 서버 인스턴스가 클러스터형 인스턴스가 아닌 경우 빈 행 집합을 반환합니다.  
   
 > [!NOTE]  
->  에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]이를 호출 하려면 이름 **sys. dm_pdw_nodes_io_cluster_shared_drives**를 사용 합니다.  
+>  에서이를 호출 하려면 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_io_cluster_shared_drives**를 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|클러스터 공유 디스크 배열에 속한 개별 디스크를 나타내는 드라이브 이름(드라이브 문자)입니다. 열은 Null을 허용하지 않습니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: sspdw<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67900391"
 > [!NOTE]  
 >  이 뷰는 이후 릴리스에서 더 이상 사용되지 않습니다. 대신 [dm_io_cluster_valid_path_names &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) 를 사용 하는 것이 좋습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 VIEW SERVER STATE 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

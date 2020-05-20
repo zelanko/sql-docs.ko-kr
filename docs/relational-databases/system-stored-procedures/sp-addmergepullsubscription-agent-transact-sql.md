@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528977"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826305"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 1입니다. **0**인 경우 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 지정 합니다. **1**인 경우 Windows 인증을 지정 합니다.  
+`[ @publisher_security_mode = ] publisher_security_mode`동기화 시 게시자에 연결할 때 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **int**이며 기본값은 1입니다. **0**인 경우 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1**인 경우 Windows 인증을 지정 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 NULL입니다.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`동기화 시 구독자에 연결할 때 사용 하는 보안 모드입니다. *subscriber_security_mode* 은 **int**이며 기본값은 1입니다. **0**인 경우 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 지정 합니다. **1**인 경우 Windows 인증을 지정 합니다.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`동기화 시 구독자에 연결할 때 사용 하는 보안 모드입니다. *subscriber_security_mode* 은 **int**이며 기본값은 1입니다. **0**인 경우 인증을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **1**인 경우 Windows 인증을 지정 합니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 병합 에이전트는 항상 Windows 인증을 사용해 로컬 구독자로 연결됩니다. 이 매개 변수의 값을 지정하면 경고 메시지가 반환되고 값은 무시됩니다.  
@@ -126,7 +126,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 이 매개 변수의 값을 지정하면 경고 메시지가 반환되고 값은 무시됩니다.  
   
-`[ @subscriber_password = ] 'subscriber_password'`인증에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자 암호입니다. *subscriber_security_mode* 가 **0**으로 설정 된 경우 *subscriber_password* 필요 합니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber_password = ] 'subscriber_password'`인증에 대 한 구독자 암호입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *subscriber_security_mode* 가 **0**으로 설정 된 경우 *subscriber_password* 필요 합니다. *subscriber_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 이 매개 변수의 값을 지정하면 경고 메시지가 반환되고 값은 무시됩니다.  
@@ -200,7 +200,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**1**|한 번|  
 |**2**|초|  
 |**4**|Minute|  
-|**20cm(8**|Hour|  
+|**20cm(8**|시간|  
 |NULL(기본값)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 NULL입니다.  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`작업 ID의 출력 매개 변수입니다. *merge_jobid* 는 **binary (16)** 이며 기본값은 NULL입니다.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 동기화 관리자를 통해 구독을 동기화 할 수 있는지 여부를 지정 합니다. *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]하지 않고 동기화 할 수 있습니다.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Windows 동기화 관리자를 통해 구독을 동기화 할 수 있는지 여부를 지정 합니다. *enabled_for_syncmgr* 은 **nvarchar (5)** 이며 기본값은 FALSE입니다. **False**이면 구독이 동기화 관리자에 등록 되지 않습니다. **True**이면 구독이 동기화 관리자에 등록 되며를 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`이전 버전과의 호환성을 위한 것입니다.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`웹 동기화가 사용 하도록 설정 되어 있음을 나타냅니다. *use_web_sync* 은 **bit**이며 기본값은 0입니다. **1** 은 HTTP를 사용 하 여 끌어오기 구독을 인터넷을 통해 동기화 할 수 있도록 지정 합니다.  
   
-`[ @internet_url = ] 'internet_url'`복제 수신기 (REPLISAPI)의 위치입니다. DLL)을 동기화 합니다. *internet_url* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. *internet_url* 은 형식의 `http://server.domain.com/directory/replisapi.dll`정규화 된 url입니다. 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
+`[ @internet_url = ] 'internet_url'`복제 수신기 (REPLISAPI)의 위치입니다. DLL)을 동기화 합니다. *internet_url* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. *internet_url* 은 형식의 정규화 된 url입니다 `http://server.domain.com/directory/replisapi.dll` . 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
   
 `[ @internet_login = ] 'internet_login'`는 HTTP 기본 인증을 사용 하 여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트에서 사용 하는 로그인입니다. *internet_login* 는 **sysname**이며 기본값은 NULL입니다.  
   
@@ -296,7 +296,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_addmergepullsubscription_agent**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

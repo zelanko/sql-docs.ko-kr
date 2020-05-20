@@ -20,15 +20,15 @@ helpviewer_keywords:
 - user-defined table types [SQL Server]
 - table types [SQL Server]
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a31236d24a2490e693d35dd799b4f4abe1ce2d99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0673c55c64c623bd112cbf63c50bc803764ce04c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982123"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825033"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "73982123"
 |principal_id|**int**|스키마 소유자와 다른 경우 개별 소유자의 ID입니다. 기본적으로 스키마에 포함된 개체는 스키마 소유자가 소유합니다. 그러나 ALTER AUTHORIZATION 문으로 대체 소유자를 지정하여 소유권을 변경할 수 있습니다.<br /><br /> 대체 개별 소유자가 없으면 NULL입니다.<br /><br /> 개체 형식이 다음 중 하나인 경우 NULL입니다.<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일, 독립 실행형)<br /><br /> TA = 어셈블리(CLR 통합) 트리거<br /><br /> TR = SQL 트리거<br /><br /> UQ = UNIQUE 제약 조건<br /><br /> EC =에 지 제약 조건 |  
 |schema_id|**int**|개체가 포함된 스키마의 ID입니다.<br /><br /> 스키마 범위 시스템 개체는 항상 sys 또는 INFORMATION_SCHEMA 스키마에 포함됩니다.|  
 |parent_object_id|**int**|이 개체가 속하는 개체의 ID입니다.<br /><br /> 0 = 자식 개체가 아닙니다.|  
-|type|**char(2)**|개체 유형:<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = SQL 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수<br /><br /> IF = SQL 인라인 테이블 반환 함수<br /><br /> IT = 내부 테이블<br /><br /> P = SQL 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> PG = 계획 지침<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일, 독립 실행형)<br /><br /> RF = 복제 필터 프로시저<br /><br /> S = 시스템 기본 테이블<br /><br /> SN = 동의어<br /><br /> SO = 시퀀스 개체<br /><br /> U = 테이블(사용자 정의)<br /><br /> V = 뷰<br /><br /> EC =에 지 제약 조건 <br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> <br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = SQL 테이블 반환 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> UQ = UNIQUE 제약 조건<br /><br /> X = 확장 저장 프로시저<br /><br /> <br /><br /> **적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)],,<br /><br /> <br /><br /> ET = 외부 테이블|  
+|형식|**char(2)**|개체 유형:<br /><br /> AF = 집계 함수(CLR)<br /><br /> C = CHECK 제약 조건<br /><br /> D = DEFAULT(제약 조건 또는 독립 실행형)<br /><br /> F = FOREIGN KEY 제약 조건<br /><br /> FN = SQL 스칼라 함수<br /><br /> FS = 어셈블리(CLR) 스칼라 함수<br /><br /> FT = 어셈블리(CLR) 테이블 반환 함수<br /><br /> IF = SQL 인라인 테이블 반환 함수<br /><br /> IT = 내부 테이블<br /><br /> P = SQL 저장 프로시저<br /><br /> PC = 어셈블리(CLR) 저장 프로시저<br /><br /> PG = 계획 지침<br /><br /> PK = PRIMARY KEY 제약 조건<br /><br /> R = 규칙 (이전 스타일, 독립 실행형)<br /><br /> RF = 복제 필터 프로시저<br /><br /> S = 시스템 기본 테이블<br /><br /> SN = 동의어<br /><br /> SO = 시퀀스 개체<br /><br /> U = 테이블(사용자 정의)<br /><br /> V = 뷰<br /><br /> EC =에 지 제약 조건 <br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> <br /><br /> SQ = 서비스 큐<br /><br /> TA = 어셈블리(CLR) DML 트리거<br /><br /> TF = SQL 테이블 반환 함수<br /><br /> TR = SQL DML 트리거<br /><br /> TT = 테이블 유형<br /><br /> UQ = UNIQUE 제약 조건<br /><br /> X = 확장 저장 프로시저<br /><br /> <br /><br /> **적용**대상: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상,, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> ET = 외부 테이블|  
 |type_desc|**nvarchar(60)**|개체 유형에 대한 설명:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|개체를 만든 날짜입니다.|  
 |modify_date|**datetime**|ALTER 문을 사용하여 개체를 마지막으로 수정한 날짜입니다. 개체가 테이블이나 뷰인 경우 테이블이나 뷰에서 클러스터형 인덱스가 생성되거나 변경되면 modify_date도 변경됩니다.|  
@@ -74,7 +74,7 @@ ms.locfileid: "73982123"
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  

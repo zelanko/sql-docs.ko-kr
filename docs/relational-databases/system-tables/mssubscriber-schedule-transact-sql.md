@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb5a31470af2630b0df53907db285e1206cc6fb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139796"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824818"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "68139796"
   **MSsubscriber_schedule** 테이블에는 각 게시자/구독자 쌍에 대 한 기본 병합 및 트랜잭션 동기화 일정이 포함 되어 있습니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
 > [!NOTE]
->  이 시스템 테이블은 더 이상 사용 되지 않으며 이전 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지원 하기 위해 유지 관리 되 고 있습니다.  
+>  이 시스템 테이블은 더 이상 사용 되지 않으며 이전 버전의를 지원 하기 위해 유지 관리 되 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**발행자**|**sysname**|게시자의 이름입니다.|  
 |**구독자**|**sysname**|구독자 이름입니다.|  

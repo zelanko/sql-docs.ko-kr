@@ -17,23 +17,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_histogram dynamic management function
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06a8b8e36123f34b42b890c8315b8847a3c0e0bb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096249"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828055"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 지정한 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)의 통계 히스토그램을 반환 합니다. `DBCC SHOW_STATISTICS WITH HISTOGRAM`와 유사합니다.
+현재 데이터베이스에서 지정한 데이터베이스 개체 (테이블 또는 인덱싱된 뷰)의 통계 히스토그램을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . `DBCC SHOW_STATISTICS WITH HISTOGRAM`와 비슷합니다.
 
 > [!NOTE] 
-> 이 DMF는 [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)] SP1 CU2부터 사용할 수 있습니다.
+> 이 DMF는 SP1 CU2부터 사용할 수 있습니다. [!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]
 
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +50,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|통계 개체의 속성을 반환하는 개체(테이블 또는 인덱싱된 뷰)의 ID입니다.|  
 |stats_id |**int**|통계 개체의 ID입니다. 테이블 또는 인덱싱된 뷰 내에서 고유합니다. 자세한 내용은 [sys.stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)를 참조하세요.|  
@@ -59,13 +59,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |상한을 제외한 히스토그램 단계 내에 열 값이 있는 예상 행 수입니다. |
 |equal_rows |**real** |히스토그램 단계에서 상한과 열 값이 동일한 예상 행 수입니다. |
 |distinct_range_rows |**bigint** |상한을 제외한 히스토그램 단계 내에 고유한 열 값이 있는 예상 행 수입니다. |
-|average_range_rows |**real** |상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수입니다 (`RANGE_ROWS / DISTINCT_RANGE_ROWS` 의 경우 `DISTINCT_RANGE_ROWS > 0`). |
+|average_range_rows |**real** |상한을 제외한 히스토그램 단계 내에 중복 열 값이 있는 평균 행 수 `RANGE_ROWS / DISTINCT_RANGE_ROWS` 입니다 (의 경우 `DISTINCT_RANGE_ROWS > 0` ). |
   
  ## <a name="remarks"></a>설명  
  
- `sys.dm_db_stats_histogram` 의 resultset은 `DBCC SHOW_STATISTICS WITH HISTOGRAM` 와 유사한 정보를 반환 하며, `object_id` `stats_id`및 `step_number`도 포함 합니다.
+ 의 resultset은 `sys.dm_db_stats_histogram` 와 유사한 정보를 반환 하며 `DBCC SHOW_STATISTICS WITH HISTOGRAM` `object_id` , 및도 포함 `stats_id` `step_number` 합니다.
 
- 열 `range_high_key` 이 sql_variant 데이터 형식 이므로 조건자가 문자열이 아닌 상수와 비교 하 `CAST` 는 `CONVERT` 경우 또는를 사용 해야 할 수 있습니다.
+ 열 `range_high_key` 이 sql_variant 데이터 형식 이므로 `CAST` 조건자가 `CONVERT` 문자열이 아닌 상수와 비교 하는 경우 또는를 사용 해야 할 수 있습니다.
 
 ### <a name="histogram"></a>히스토그램
   
@@ -87,14 +87,14 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
 사용자가 통계 열에 대한 select 권한이 있거나 테이블을 소유하거나 `sysadmin` 고정 서버 역할, `db_owner` 고정 데이터베이스 역할, 또는 `db_ddladmin` 고정 데이터베이스 역할의 멤버여야 합니다.
 
 ## <a name="examples"></a>예  
 
 ### <a name="a-simple-example"></a>A. 간단한 예    
-다음 예에서는 간단한 테이블을 만들고 채웁니다. 는 `Country_Name` 열에 대 한 통계를 만듭니다.
+다음 예에서는 간단한 테이블을 만들고 채웁니다. 는 열에 대 한 통계를 만듭니다 `Country_Name` .
 
 ```sql
 CREATE TABLE Country
@@ -105,7 +105,7 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-기본 키는 숫자 1 `stat_id` 을 차지 하므로 `sys.dm_db_stats_histogram` `stat_id` 숫자 2를 호출 하 여 `Country` 테이블에 대 한 통계 히스토그램을 반환 합니다.    
+기본 키는 `stat_id` 숫자 1을 차지 하므로 `sys.dm_db_stats_histogram` 숫자 2를 호출 하 여 `stat_id` 테이블에 대 한 통계 히스토그램을 반환 합니다 `Country` .    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
@@ -120,14 +120,14 @@ WHERE s.[name] = N'<statistic_name>';
 ```
 
 ### <a name="c-useful-query"></a>C. 유용한 쿼리:
-다음 예에서는 열 `Country` `Country_Name`에 조건자가 있는 테이블에서를 선택 합니다.
+다음 예에서는 `Country` 열에 조건자가 있는 테이블에서를 선택 합니다 `Country_Name` .
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-다음 예에서는 위의 쿼리에서 조건자와 일치 하는 히스토그램 `Country` 단계에 `Country_Name` 대해 이전에 만든 통계를 테이블 및 열에 대해 살펴봅니다.
+다음 예에서는 `Country` `Country_Name` 위의 쿼리에서 조건자와 일치 하는 히스토그램 단계에 대해 이전에 만든 통계를 테이블 및 열에 대해 살펴봅니다.
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 

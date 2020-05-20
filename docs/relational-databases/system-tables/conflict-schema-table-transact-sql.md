@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;schema&gt;_&lt;table&gt; (transact-sql) | Microsoft Docs
+title: conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -15,23 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - conflict_<schema>_<table>
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7986df966f25644a05d63165cc3d87f4be752ec9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084775"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825955"
 ---
-# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (transact-sql)
+# <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; schema &gt; _ &lt; table &gt; (transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Conflict_\<스키마>_\<테이블> 테이블에는 피어 투 피어 복제에서 충돌 하는 행에 대 한 정보가 포함 되어 있습니다. 스키마 안에 각 복제 테이블에 대한 충돌 테이블이 존재하는데 충돌 테이블 이름 끝에 게시 및 아티클 이름이 붙습니다. 이러한 아티클별 충돌 테이블은 각 게시 데이터베이스 존재합니다.  
+  Conflict_ \< 스키마>_ \< 테이블> 테이블에는 피어 투 피어 복제에서 충돌 하는 행에 대 한 정보가 포함 되어 있습니다. 스키마 안에 각 복제 테이블에 대한 충돌 테이블이 존재하는데 충돌 테이블 이름 끝에 게시 및 아티클 이름이 붙습니다. 이러한 아티클별 충돌 테이블은 각 게시 데이터베이스 존재합니다.  
   
  피어 투 피어 복제의 경우 충돌이 감지되면 기본적으로 배포 에이전트가 실패합니다. 오류 로그에 충돌 오류가 기록되지만 충돌 테이블에는 충돌 데이터가 기록되지 않으므로 해당 데이터를 볼 수 없습니다. 배포 에이전트가 계속할 수 있으면 충돌이 감지된 각 노드에 로컬로 충돌이 기록됩니다. 자세한 내용은 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)의 "충돌 처리"를 참조하십시오.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |__$originator_id|**int**|충돌을 일으키는 변경이 시작된 노드의 ID입니다. Id 목록은 [sp_help_peerconflictdetection](../../relational-databases/system-stored-procedures/sp-help-peerconflictdetection-transact-sql.md)를 실행 합니다.|  
 |__$origin_datasource|**int**|충돌을 일으키는 변경이 시작된 노드입니다.|  

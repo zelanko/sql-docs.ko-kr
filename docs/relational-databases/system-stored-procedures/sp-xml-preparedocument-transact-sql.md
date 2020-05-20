@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65ec62997eb25564e19696a8df2895b980d728be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67950523"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827505"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ OUTPUT
  [ *xpath_namespaces* ]  
  OPENXML의 행과 열 XPath 식에 사용되는 네임스페이스 선언을 지정합니다. *xpath_namespaces* 는 **char**, **nchar**, **varchar**, **nvarchar**, **text**, **ntext** 또는 **xml**과 같은 텍스트 매개 변수입니다.  
   
- 기본값은 ** \<root xmlns: mp = "urn: xml-metaprop" >** 입니다. *xpath_namespaces* 은 올바른 형식의 XML 문서를 통해 OPENXML의 xpath 식에 사용 된 접두사에 대 한 네임 스페이스 uri를 제공 합니다. *xpath_namespaces* 네임 스페이스 **urn: 스키마-xml-metaprop**;를 참조 하는 데 사용 해야 하는 접두사를 선언 합니다. 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. *Xpath_namespaces* 에 이러한 선언이 포함 되지 않은 경우에도 접두사 **mp** 는 **urn: 스키마-microsoft-com: xml-metaprop** 에 대해 계속 유효 합니다.  
+ 기본값은 ** \< root xmlns: mp = "urn: xml-metaprop" >** 입니다. *xpath_namespaces* 은 올바른 형식의 XML 문서를 통해 OPENXML의 xpath 식에 사용 된 접두사에 대 한 네임 스페이스 uri를 제공 합니다. *xpath_namespaces* 네임 스페이스 **urn: 스키마-xml-metaprop**;를 참조 하는 데 사용 해야 하는 접두사를 선언 합니다. 구문 분석 된 XML 요소에 대 한 메타 데이터를 제공 합니다. 이 기술을 사용하여 메타 속성 네임스페이스의 네임스페이스 접두사를 다시 정의할 수 있지만 이 네임스페이스는 손실되지 않습니다. *Xpath_namespaces* 에 이러한 선언이 포함 되지 않은 경우에도 접두사 **mp** 는 **urn: 스키마-microsoft-com: xml-metaprop** 에 대해 계속 유효 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0 (성공) 또는 >0 (실패)  
@@ -127,7 +127,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc;
 ```  
   
 ### <a name="c-specifying-a-namespace-uri"></a>C. 네임스페이스 URI 지정  
- 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. `sp_xml_preparedocument` 에 대 한 호출은 메타 `mp` 속성 네임 스페이스 매핑에 접두사를 유지 하 고 `xyz` 매핑 접두사를 네임 스페이스 `urn:MyNamespace`에 추가 합니다.  
+ 다음 예에서는 입력으로 제공된 XML 문서의 새로 생성된 내부 표현에 대한 핸들을 반환합니다. 에 대 한 호출은 `sp_xml_preparedocument` `mp` 메타 속성 네임 스페이스 매핑에 접두사를 유지 하 고 `xyz` 매핑 접두사를 네임 스페이스에 추가 합니다 `urn:MyNamespace` .  
   
 ```  
 DECLARE @hdoc int;  

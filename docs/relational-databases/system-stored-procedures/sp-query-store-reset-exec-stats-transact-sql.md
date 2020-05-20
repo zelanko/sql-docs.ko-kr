@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_query_store_reset_exec_stats
 - sys.sp_query_store_reset_exec_stats
 ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 27fa8901fb1bfdf62196caab3847b1fe7c8aa3ed
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418931"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826618"
 ---
 # <a name="sp_query_store_reset_exec_stats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
   
 ## <a name="remarks"></a>설명  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스에 대 한 **ALTER** 권한이 필요 합니다. 
   
 ## <a name="examples"></a>예  

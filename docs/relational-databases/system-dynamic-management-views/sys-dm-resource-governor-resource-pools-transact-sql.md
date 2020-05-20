@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982304"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827851"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "73982304"
   현재 리소스 풀 상태, 리소스 풀의 현재 구성 및 리소스 풀 통계에 대한 정보를 반환합니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_resource_governor_resource_pools**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_resource_governor_resource_pools**을 사용 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|리소스 풀의 ID입니다. Null을 허용하지 않습니다.|  
 |name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|  
@@ -76,14 +76,14 @@ ms.locfileid: "73982304"
 |write_io_stall_queued_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 쓰기 IO 도착과 완료 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.<br /><br /> IO 리소스 관리로 인해 발생한 지연 시간입니다.|  
 |io_issue_violations_total|**int**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 총 IO 실행 위반 수입니다. 즉, IO 실행 속도가 예약된 속도보다 낮았던 횟수입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
 |io_issue_delay_total_ms|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 예약된 IO 실행과 실제 IO 실행 사이의 총 시간(밀리초)입니다. Null을 허용합니다. 리소스 풀에서 IO가 관리되지 않으면 Null입니다. 즉, 리소스 풀의 MIN_IOPS_PER_VOLUME 및 MAX_IOPS_PER_VOLUME 설정이 0입니다.|  
-|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
 ## <a name="remarks"></a>설명  
  리소스 관리자 작업 그룹 및 리소스 관리자 리소스 풀에는 다 대 일 매핑이 있습니다. 따라서 리소스 풀 통계의 대부분은 작업 그룹 통계에서 파생됩니다.  
   
  이 동적 관리 뷰는 인-메모리 구성을 표시합니다. 저장된 구성 메타데이터를 보려면 sys.resource_governor_resource_pools 카탈로그 뷰를 사용합니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

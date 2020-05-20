@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 784c812639e4bea815038f8c6813ef6d18ef8fae
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67909067"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827214"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_replinfo** 테이블에는 각 구독에 대 한 행이 하나씩 포함 되어 있습니다. 이 테이블은 구독에 대한 정보를 추적합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|복제에 대한 고유 ID입니다.|  
 |**use_interactive_resolver**|**bit**|조정하는 동안 대화형 해결 프로그램을 사용할지 여부를 지정합니다.<br /><br /> **0** = 대화형 해결 프로그램을 사용 하지 않습니다.<br /><br /> **1** = 대화형 해결 프로그램을 사용 합니다.|  

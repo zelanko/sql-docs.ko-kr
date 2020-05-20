@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 131925ed4ef1e7521db2f41b915a5f671723a980
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826576"
 ---
 # <a name="sp_reinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_reinitmergepullsubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

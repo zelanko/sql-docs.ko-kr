@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d684fd74271b6c9c1d29f17e0570991c4668b4f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000879"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826538"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  컬렉션 집합의 고유 식별자입니다. *collection_set_id* 은 **int** 이며 *name* 이 NULL 인 경우 값이 있어야 합니다.  
   
- [ @name = ] '*이름*'  
+ [ @name =] '*name*'  
  컬렉션 집합의 이름입니다. *name* 은 **SYSNAME** 이며 *collection_set_id* NULL 인 경우 값이 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -57,7 +57,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
  시스템 정의 컬렉션 집합은 삭제할 수 없습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

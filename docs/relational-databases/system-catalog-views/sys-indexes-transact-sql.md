@@ -17,28 +17,28 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes catalog view
 ms.assetid: 066bd9ac-6554-4297-88fe-d740de1f94a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3208f538a1c1e111913c0808a8213743fed41bcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1083c3510ed8aeb74f1be1610d8b46b009559567
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77179294"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825133"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   테이블, 뷰 또는 테이블 반환 함수와 같은 테이블 형식 개체의 인덱스 또는 힙당 하나의 행을 포함합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 인덱스가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|인덱스의 이름입니다. **이름은** 개체 내 에서만 고유 합니다.<br /><br /> NULL = 힙|  
 |**index_id**|**int**|인덱스의 ID입니다. **index_id** 는 개체 내 에서만 고유 합니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형 인덱스<br /><br /> > 1 = 비클러스터형 인덱스|  
 |**type**|**tinyint**|인덱스의 유형입니다.<br /><br /> 0 = 힙<br /><br /> 1 = 클러스터형<br /><br /> 2 = 비클러스터형<br /><br /> 3 = XML<br /><br /> 4 = 공간<br /><br /> 5 = 클러스터형 columnstore 인덱스 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상<br /><br /> 6 = 비클러스터형 columnstore 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 7 = 비클러스터형 해시 인덱스입니다. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
-|**type_desc**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터형 COLUMNSTORE-다음 **에 적용 됩니다**. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상에 적용 됩니다.<br /><br /> 비클러스터형 COLUMNSTORE-이상 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **에 적용 됩니다**.<br /><br /> 비클러스터형 해시: 비클러스터형 해시 인덱스는 메모리 최적화 테이블 에서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)을 참조 하십시오. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
+|**type_desc**|**nvarchar(60)**|인덱스 유형의 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> 클러스터형 COLUMNSTORE-다음 **에 적용 됩니다. 이상에 적용**됩니다 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .<br /><br /> 비클러스터형 COLUMNSTORE- **이상에 적용 됩니다**. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 비클러스터형 해시: 비클러스터형 해시 인덱스는 메모리 최적화 테이블 에서만 지원 됩니다. sys.hash_indexes 뷰는 현재 해시 인덱스 및 해시 속성을 보여 줍니다. 자세한 내용은 [hash_indexes &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md)을 참조 하십시오. **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
 |**is_unique**|**bit**|1 = 인덱스가 고유합니다.<br /><br /> 0 = 인덱스가 고유하지 않습니다.<br /><br /> 클러스터형 columnstore 인덱스의 경우 항상 0입니다.|  
 |**data_space_id**|**int**|이 인덱스에 대한 데이터 공간의 ID입니다. 데이터 공간은 파일 그룹 또는 파티션 구성표입니다.<br /><br /> 0 = **object_id** 테이블 반환 함수 또는 메모리 내 인덱스입니다.|  
 |**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY가 ON입니다.<br /><br /> 0 = IGNORE_DUP_KEY가 OFF입니다.|  
@@ -58,11 +58,11 @@ ms.locfileid: "77179294"
 > [!NOTE]
 > **Optimize_for_sequential_key** 비트 SQL SERVER 2019 CTP 3.1 이상 버전 에서만 지원 됩니다.
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Production.Product` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 테이블에 대 한 모든 인덱스를 반환 합니다.  
+ 다음 예에서는 데이터베이스의 테이블에 대 한 모든 인덱스를 반환 합니다 `Production.Product` [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
 ```  
   

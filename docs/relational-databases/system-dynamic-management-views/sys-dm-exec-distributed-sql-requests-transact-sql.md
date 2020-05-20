@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sys.dm_exec_distributed_requests management view
 - dm_exec_distributed_requests management view
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a63d8a331163283598dd50a418f0dd32f9ac5edd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bfaaa65c08155263c15a1e4e4ddf17c20913e66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097795"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827977"
 ---
 # <a name="sysdm_exec_distributed_sql_requests-transact-sql"></a>sys. dm_exec_distributed_sql_requests (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68097795"
 |total_elapsed_time|**int**|쿼리 단계가 실행 된 총 시간 (밀리초)입니다.|0과 start_time 사이의 차이를 end_time 합니다. 대기 단계에 대해 0입니다.|  
 |row_count|**bigint**|이 요청에서 변경 되거나 반환 된 총 행 수입니다.|0은 데이터를 변경 하거나 반환 하지 않은 단계의 경우에는 그렇지 않은 경우 영향을 받는 행 수입니다. DMS 단계에 대해-1로 설정 합니다.|  
 |spid|**int**|쿼리 배포를 실행 하는 SQL Server 인스턴스의 세션 id||  
-|command|nvarchar(4000)|이 단계의 명령에 대 한 전체 텍스트를 포함 합니다.|단계에 대 한 유효한 모든 요청 문자열입니다. 4000 자 보다 길면 잘립니다.|  
+|명령을 사용합니다.|nvarchar(4000)|이 단계의 명령에 대 한 전체 텍스트를 포함 합니다.|단계에 대 한 유효한 모든 요청 문자열입니다. 4000 자 보다 길면 잘립니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [동적 관리 뷰를 사용한 PolyBase 문제 해결](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

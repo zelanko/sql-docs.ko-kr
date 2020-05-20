@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSqreader_history system table
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 37f5db39ad610d205a0bd6b268ab701f53c93ffa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032533"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827222"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68032533"
 |**transaction_rate**|**float (53)**|처리된 트랜잭션 비율입니다.|  
 |**구독자**|**sysname**|구독자 이름입니다.|  
 |**subscriberdb**|**sysname**|구독 데이터베이스의 이름입니다.|  
-|**error_id**|**int**|0이 아니면 숫자는 오류 메시지를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나타냅니다.|  
+|**error_id**|**int**|0이 아니면 숫자는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지를 나타냅니다.|  
 |**timestamp**|**timestamp**|테이블의 타임스탬프 열입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

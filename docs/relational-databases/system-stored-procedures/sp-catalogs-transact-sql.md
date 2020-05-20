@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0844001016f67d227b4612176b2804dcda0a3d29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b760e27d7a0b320c0e911a1a485d1e5e9033146a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68045944"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824857"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 |**Catalog_name**|**nvarchar (** 128 **)**|카탈로그의 이름입니다.|  
 |**설명**|**nvarchar (** 4000 **)**|카탈로그에 관한 설명입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `OLE DB ODBC Linked Server #3`이라는 연결된 서버에 대한 카탈로그 정보를 반환합니다.  
   
 > [!NOTE]  
->  유용한 **sp_catalogs** 정보를 제공 하려면가 이미 `OLE DB ODBC Linked Server #3` 있어야 합니다. sp_catalogs  
+>  유용한 **sp_catalogs** 정보를 제공 하려면가 `OLE DB ODBC Linked Server #3` 이미 있어야 합니다. sp_catalogs  
   
 ```  
 USE master;  

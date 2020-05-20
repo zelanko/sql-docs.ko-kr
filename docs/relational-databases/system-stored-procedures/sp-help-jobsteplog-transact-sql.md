@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobsteplog
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 522672192ab955ced5987184ed2f6ea2812a431a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090040"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827559"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계 로그에 대 한 메타 데이터를 반환 합니다. **sp_help_jobsteplog** 은 실제 로그를 반환 하지 않습니다.  
+  특정 에이전트 작업 단계 로그에 대 한 메타 데이터를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **sp_help_jobsteplog** 은 실제 로그를 반환 하지 않습니다.  
 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -73,7 +73,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>설명  
  **sp_help_jobsteplog** **msdb** 데이터베이스에 있습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

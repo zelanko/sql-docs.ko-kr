@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899187"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826188"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ sp_dbmmonitorhelpalert database_name
 ## <a name="result-sets"></a>결과 집합  
  반환되는 각 경고에 대해 다음 열이 포함된 행을 반환합니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|아래 표에서는 각 성능 메트릭에 대 한 **alert_id** 값과 **sp_dbmmonitorresults** 결과 집합에 표시 되는 메트릭의 측정 단위를 나열 합니다.|  
 |**고대비**|**int**|경고에 대한 임계값입니다. 미러링 상태를 업데이트할 때 이 임계값 위의 값이 반환되면 Windows 이벤트 로그에 항목이 입력됩니다. 이 값은 경고에 따라 KB, 분 또는 밀리초를 나타냅니다. 임계값이 현재 설정되어 있지 않으면 이 값은 NULL입니다.<br /><br /> **참고:** 현재 값을 보려면 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) 저장 프로시저를 실행 합니다.|  
@@ -79,7 +79,7 @@ sp_dbmmonitorhelpalert database_name
 |4|미러 커밋 오버헤드|밀리초|  
 |5|보존 기간|시간|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 8009c9d2aa5f4b8f8be873633420bd1b088ece16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7b49f8be9ead1b94d9320f4a912f7e20d7891c53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055095"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827670"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 |**FULLTEXT_BLOBTP_COLID**|**int**|문서 유형 열의 ID입니다. 이 값은 전체 텍스트 인덱싱된 열이 **varbinary (max)** 또는 **image** 열인 경우에만 적용할 수 있습니다.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|열의 전체 텍스트 검색에 사용된 언어입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  실행 권한은 기본적으로 **public** 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

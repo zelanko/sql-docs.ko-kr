@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - MSmerge_past_partition_mappings system table
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9faca4ae8492f7ec0c784b05b16799c5b5b398ae
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827237"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_past_partition_mappings** 테이블은에 속해 있지만 더 이상 속하지 않는 지정 된 변경 된 행의 각 파티션 id에 대해 하나의 행을 저장 합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|**Sysmergepublications**에 저장 되는 게시 번호입니다.|  
 |**tablenick**|**int**|게시된 테이블의 애칭입니다.|  

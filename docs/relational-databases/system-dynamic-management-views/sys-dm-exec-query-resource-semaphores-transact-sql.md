@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_resource_semaphores dynamic management view
 ms.assetid: e43a2aa9-dd52-4c89-911e-1a7d05f7ffbb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 026c13a461d6b4efe7244a08a9f3cdbe117deee9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ea2f693b49f2b8eebd2c2348883607e08112600
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255280"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827963"
 ---
 # <a name="sysdm_exec_query_resource_semaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68255280"
 -   쿼리 비용은 3 개의 비용 단위 미만 이어야 합니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_exec_query_resource_semaphores**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_exec_query_resource_semaphores**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -53,17 +53,17 @@ ms.locfileid: "68255280"
 |**timeout_error_count**|**bigint**|서버 시작 후 시간 초과 오류의 총 수입니다. 작은 쿼리 리소스 세마포의 경우 NULL이 됩니다.|  
 |**forced_grant_count**|**bigint**|서버 시작 후 강제 적용된 최소 메모리 부여의 총 수입니다. 작은 쿼리 리소스 세마포의 경우 NULL이 됩니다.|  
 |**pool_id**|**int**|이 리소스 세마포가 속한 리소스 풀의 ID입니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
   
 ## <a name="remarks"></a>설명  
  쿼리에서 ORDER BY 또는 집계가 포함된 동적 관리 뷰를 사용하는 경우 메모리 사용이 증가하여 해결하려는 문제가 악화될 수 있습니다.  
   
- 문제 해결을 위해 **dm_exec_query_resource_semaphores** 를 사용 하지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용 하는 응용 프로그램에는이를 포함 하지 않습니다.  
+ 문제 해결을 위해 dm_exec_query_resource_semaphores를 사용 하지만 이후 버전의를 사용 하는 응용 프로그램에는이를 포함 하지 않습니다 **.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  데이터베이스 관리자는 리소스 관리자 기능을 사용하여 서버 리소스를 최대 20개의 리소스 풀에 배치할 수 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서 각 풀은 독립된 작은 서버 인스턴스와 같이 작동하며 2개의 세마포가 필요합니다.  
   

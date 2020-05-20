@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d374b244b265d6bc46ca9e6073f9a688fcd2b4a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138408"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824768"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  서버의 각 애플리케이션 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)은 응용 프로그램에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 대 한 격리 단위인 CLR (공용 언어 런타임)의 구문입니다. 이 뷰를 사용 하 여에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]실행 중인 CLR 통합 개체를 이해 하 고 문제를 해결할 수 있습니다.  
+  서버의 각 애플리케이션 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에 대 한 격리 단위인 CLR (공용 언어 런타임)의 구문입니다. 이 뷰를 사용 하 여에서 실행 중인 CLR 통합 개체를 이해 하 고 문제를 해결할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  CLR 통합의 관리되는 데이터베이스 개체 유형은 다양합니다. 이러한 개체에 대 한 일반적인 내용은 [CLR (공용 언어 런타임) 통합을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)을 참조 하세요. 이러한 개체가 실행 될 때마다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필요한 코드를 로드 하 고 실행할 수 있는 **AppDomain** 을 만듭니다. **Appdomain** 의 격리 수준은 데이터베이스당 데이터베이스당 하나의 **appdomain** 입니다. 즉, 사용자가 소유한 모든 CLR 개체는 항상 데이터베이스당 동일한 **AppDomain** 에서 실행 됩니다. 사용자가 다른 데이터베이스에 clr 데이터베이스 개체를 등록 하는 경우 clr 데이터베이스 개체는 다른 응용 프로그램 도메인에서 실행 됩니다. 코드 실행이 완료 된 후에는 **AppDomain** 이 제거 되지 않습니다. 나중에 실행하도록 메모리에 캐시됩니다. 이렇게 하면 성능이 향상됩니다.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "68138408"
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|**AppDomain**의 주소입니다. 사용자가 소유 하는 모든 관리 되는 데이터베이스 개체는 항상 동일한 **AppDomain**에 로드 됩니다. 이 열을 사용 하 여 **dm_clr_loaded_assemblies**에서이 **AppDomain** 에 현재 로드 된 모든 어셈블리를 조회할 수 있습니다.|  
 |**appdomain_id**|**int**|**AppDomain**의 ID입니다. 각 **AppDomain** 에는 고유한 ID가 있습니다.|  
-|**appdomain_name**|**varchar (386)**|에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]할당 된 **AppDomain** 의 이름입니다.|  
+|**appdomain_name**|**varchar (386)**|에 의해 할당 된 **AppDomain** 의 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.|  
 |**creation_time**|**datetime**|**AppDomain** 이 생성 된 시간입니다. **Appdomain** 은 성능 향상을 위해 캐시 되 고 다시 사용 되기 때문에 **creation_time** 는 코드를 실행 하는 데 반드시 필요한 것은 아닙니다.|  
 |**db_id**|**int**|이 **AppDomain** 이 생성 된 데이터베이스의 ID입니다. 서로 다른 두 데이터베이스에 저장 된 코드는 하나의 **AppDomain**을 공유할 수 없습니다.|  
 |**user_id**|**int**|이 **AppDomain**에서 개체를 실행할 수 있는 사용자의 ID입니다.|  
-|**state**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
+|**상태**|**nvarchar(128)**|**AppDomain**의 현재 상태에 대 한 설명자입니다. AppDomain은 생성부터 삭제까지 여러 가지 상태를 가질 수 있습니다. 자세한 내용은 이 항목의 주의 섹션을 참조하십시오.|  
 |**strong_refcount**|**int**|이 **AppDomain**에 대 한 강력한 참조 수입니다. 이는이 **AppDomain**을 사용 하는 현재 실행 중인 일괄 처리의 수를 반영 합니다. 이 뷰를 실행 하면 **강력한 refcount**가 생성 됩니다. 가 현재 실행 중인 코드가 없는 경우에도 **strong_refcount** 값은 1입니다.|  
-|**weak_refcount**|**int**|이 **AppDomain**에 대 한 약한 참조 수입니다. 이는 **AppDomain** 내에서 캐시 되는 개체 수를 나타냅니다. 관리 되는 데이터베이스 개체를 실행 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우는 나중에 다시 사용할 수 있도록 **AppDomain** 내부에 캐시 합니다. 이렇게 하면 성능이 향상됩니다.|  
+|**weak_refcount**|**int**|이 **AppDomain**에 대 한 약한 참조 수입니다. 이는 **AppDomain** 내에서 캐시 되는 개체 수를 나타냅니다. 관리 되는 데이터베이스 개체를 실행 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나중에 다시 사용할 수 있도록 **AppDomain** 내부에 캐시 합니다. 이렇게 하면 성능이 향상됩니다.|  
 |**cost**|**int**|**AppDomain**의 비용입니다. 비용이 높을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높아집니다. 비용은 일반적으로이 **AppDomain**을 다시 만드는 데 필요한 메모리 양에 따라 달라 집니다.|  
 |**value**|**int**|**AppDomain**의 값입니다. 값이 낮을수록 메모리가 부족 하 여이 **AppDomain** 이 언로드될 가능성이 높습니다. 값은 일반적으로이 **AppDomain**을 사용 하는 연결 또는 일괄 처리의 수에 따라 달라 집니다.|  
 |**total_processor_time_ms**|**bigint**|프로세스가 시작된 후 현재 애플리케이션 도메인에서 실행되는 동안 모든 스레드에서 사용되는 총 프로세서 시간(밀리초)입니다. 이는 **MonitoringTotalProcessorTime**에 해당 합니다.|  
@@ -58,13 +58,13 @@ ms.locfileid: "68138408"
   
 ## <a name="appdomain-initialization"></a>AppDomain 초기화  
   
-|시스템 상태|Description|  
+|주|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain** 을 만들고 있습니다.|  
   
 ## <a name="appdomain-usage"></a>AppDomain 사용  
   
-|시스템 상태|Description|  
+|주|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|여러 사용자가 런타임 **AppDomain** 을 사용할 준비가 되었습니다.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** 은 DDL 작업에서 사용할 준비가 되었습니다. 공유된 AppDomain이 DDL 작업이 아닌 CLR 통합 실행에 사용된다는 점에서 E_APPDOMAIN_SHARED와 다릅니다. 이러한 AppDomain은 동시에 실행되는 다른 작업과 격리됩니다.|  
@@ -72,15 +72,15 @@ ms.locfileid: "68138408"
   
 ## <a name="appdomain-cleanup"></a>AppDomain 정리  
   
-|시스템 상태|Description|  
+|주|설명|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일반적으로 관리 되는 데이터베이스 개체를 포함 하는 어셈블리가 변경 되거나 삭제 되었기 때문에 CLR이 **AppDomain**을 언로드하기 위해 요청 했습니다.|  
 |E_APPDOMAIN_UNLOADED|CLR이 **AppDomain**을 언로드 했습니다. 이는 일반적으로 **Threadabort**, **OutOfMemory**또는 사용자 코드의 처리 되지 않은 예외로 인 한 에스컬레이션 프로시저의 결과입니다.|  
-|E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** 이 CLR에서 언로드 되었으며에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]소멸 되도록 설정 되었습니다.|  
-|E_APPDOMAIN_DESTROY|**AppDomain** 이에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]소멸 되 고 있습니다.|  
-|E_APPDOMAIN_ZOMBIE|**AppDomain** 이에 의해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]제거 되었습니다. 그러나 **AppDomain** 에 대 한 모든 참조가 정리 된 것은 아닙니다.|  
+|E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** 이 CLR에서 언로드 되었으며에 의해 소멸 되도록 설정 되었습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|E_APPDOMAIN_DESTROY|**AppDomain** 이에 의해 소멸 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.|  
+|E_APPDOMAIN_ZOMBIE|**Appdomain** 이에 의해 소멸 되었지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **appdomain** 에 대 한 모든 참조가 정리 되지 않았습니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  데이터베이스에 대한 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

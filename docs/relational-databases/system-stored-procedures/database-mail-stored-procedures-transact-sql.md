@@ -15,19 +15,19 @@ helpviewer_keywords:
 - e-mail [SQL Server], stored procedures
 - system stored procedures [SQL Server], mail
 ms.assetid: 3bdb0e6d-9d09-465e-9a3f-7a8ccd53aca8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 13c8c9c7c14cdd4cd6a3c15d3c6216614b38a518
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b8f81d6839346de07eb84ed5250bb5986dbd2fff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70211314"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826353"
 ---
 # <a name="database-mail-stored-procedures-transact-sql"></a>데이터베이스 메일 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 인스턴스 내에서 전자 메일 작업을 수행 하는 데 사용 되는 다음과 같은 시스템 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 프로시저를 지원 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 전자 메일 작업을 수행 하는 데 사용 되는 다음과 같은 시스템 저장 프로시저를 지원 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="database-mail-procedures"></a>데이터베이스 메일 프로시저  
   

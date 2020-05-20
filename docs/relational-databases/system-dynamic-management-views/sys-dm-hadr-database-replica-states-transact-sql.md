@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982274"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827967"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로컬 인스턴스에서 가용성 복제본을 호스팅하는 Always On 가용성 그룹에 참여 하는 각 데이터베이스에 대해 하나의 행을 반환 합니다. 이 동적 관리 뷰는 주 복제본과 보조 복제본 모두에 대한 상태 정보를 표시합니다. 보조 복제본에서 이 뷰는 서버 인스턴스에 있는 모든 보조 데이터베이스에 대해 하나의 행을 반환합니다. 주 복제본에서 이 뷰는 각 주 데이터베이스에 대해 하나의 행과 해당 보조 데이터베이스에 대해 하나의 행을 반환합니다.  
+  의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 Always On 가용성 그룹에 참여 하는 각 데이터베이스에 대해 하나의 행을 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 동적 관리 뷰는 주 복제본과 보조 복제본 모두에 대한 상태 정보를 표시합니다. 보조 복제본에서 이 뷰는 서버 인스턴스에 있는 모든 보조 데이터베이스에 대해 하나의 행을 반환합니다. 주 복제본에서 이 뷰는 각 주 데이터베이스에 대해 하나의 행과 해당 보조 데이터베이스에 대해 하나의 행을 반환합니다.  
   
 > [!IMPORTANT]
 > 동작과 상위 수준의 상태에 따라 데이터베이스 상태 정보가 사용할 수 없거나 만료될 수 있습니다. 또한 값은 로컬 관련성만 가집니다. 예를 들어 주 복제본에서 **last_hardened_lsn** 열의 값은 보조 복제본이 현재 보유 하 고 있을 수 있는 실제 확정 된 lsn 값이 아니라 주 복제본에서 현재 사용할 수 있는 지정 된 보조 데이터베이스에 대 한 정보를 반영 합니다.  

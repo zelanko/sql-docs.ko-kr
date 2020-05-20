@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dde823a82557789f1f2c9142fcf91ca2335d8b6d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060445"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828089"
 ---
 # <a name="sysxml_schema_namespaces-transact-sql"></a>sys.xml_schema_namespaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68060445"
 |**name**|**nvarchar(4000)**|XML 네임스페이스의 이름입니다. 빈 **이름** 은 대상 네임 스페이스를 나타냅니다.|  
 |**xml_namespace_id**|**int**|데이터베이스에서 XML 네임스페이스를 고유하게 식별하는 서수이며 1부터 시작합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67943494"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828338"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**name**|**sysname**|논리적 파일 이름입니다.|  
 |**fileid**|**smallint**|파일의 숫자 식별자입니다. *Name* 이 지정 된 경우이 반환 되지 않습니다 *.*|  
 |**이름도**|**nchar (260)**|물리적 파일 이름입니다.|  
-|**filegroup**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
+|**그룹별로**|**sysname**|파일이 속한 파일 그룹입니다.<br /><br /> NULL = 파일이 로그 파일입니다. 파일 그룹에 속하지 않습니다.|  
 |**size**|**nvarchar (15)**|파일 크기(KB)입니다.|  
 |**크기**|**nvarchar (15)**|파일이 증가할 수 있는 최대 크기입니다. 이 필드 값이 UNLIMITED이면 디스크가 꽉 찰 때까지 파일이 증가할 수 있음을 의미합니다.|  
 |**growth**|**nvarchar (15)**|파일의 증가분입니다. 공간이 새로 필요할 때마다 파일에 추가되는 공간의 양을 나타냅니다.<br /><br /> 0 = 파일은 고정 크기를 가지며 증가하지 않습니다.|  

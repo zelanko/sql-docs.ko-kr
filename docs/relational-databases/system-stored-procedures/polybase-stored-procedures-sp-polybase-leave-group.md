@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_polybase_leave_group
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 3fd28f5a3cecb6da28603ae6f8a88d751081e80c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4e9f5e12a56fe825909dd991c4b3253d3d90608c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80216503"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827827"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  CONTROL SERVER 권한이 필요 합니다.  
   
 ## <a name="remarks"></a>설명  

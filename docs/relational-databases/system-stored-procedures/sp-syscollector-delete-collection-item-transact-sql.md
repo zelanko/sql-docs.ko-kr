@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf578b1ce23aa47e9bf71360f1211b5667c08c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000899"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826536"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  컬렉션 항목의 고유 식별자입니다. *collection_item_id* 은 **int** 이며 기본값은 NULL입니다. *name* 이 NULL 인 경우 *collection_item_id* 에 값이 있어야 합니다.  
   
- [ @name = ] '*이름*'  
+ [ @name =] '*name*'  
  컬렉션 항목의 이름입니다. *name* 은 **sysname** 이며 기본값은 NULL입니다. *collection_item_id* 가 NULL 이면 *이름* 에 값이 있어야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -55,7 +55,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
  이 작업을 수행하는 동안에는 컬렉션 항목을 포함하는 컬렉션 집합이 중지되고 다시 시작됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  이 프로시저를 실행하려면 dc_admin(EXECUTE 권한 있음) 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

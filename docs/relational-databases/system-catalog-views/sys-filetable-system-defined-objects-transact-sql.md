@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.filetable_system_defined_objects catalog view
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dd05f24ab90844065b708230ee016ce9ce78bfbd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ed70162c89d9aa3a02d8d1fe5cb76f7031a806c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005154"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828138"
 ---
 # <a name="sysfiletable_system_defined_objects-transact-sql"></a>sys.filetable_system_defined_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "68005154"
   
  FileTables 기능에 대한 자세한 내용은 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |**object_id**|**int**|FileTable과 관련된 시스템 정의 개체의 개체 ID입니다.<br /><br /> **Sys. 개체**의 개체를 참조 합니다.|  
 |**parent_object_id**|**int**|부모 FileTable의 개체 ID입니다.<br /><br /> **Sys. 개체**의 개체를 참조 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Filetable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
+ [FileTable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [FileTable 관리](../../relational-databases/blob/manage-filetables.md)  
   
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobserver
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f16eb9ad600537ec5b7afe63474f78769c1b810b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054883"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827580"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_help_jobserver
 |**last_outcome_message**|**nvarchar(1024)**|작업의 마지막 결과에 대해 설명합니다.|  
 |**last_run_outcome**|**int**|해당 서버에서 작업이 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **3** = 취소 됨<br /><br /> **5** = 알 수 없음|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
   
 -   **SQLAgentUserRole**  

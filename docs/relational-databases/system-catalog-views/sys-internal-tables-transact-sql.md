@@ -18,21 +18,21 @@ helpviewer_keywords:
 - internal tables
 - sys.internal_tables catalog view
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044543"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825400"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블은 모든 데이터베이스의 **sys** 스키마에 표시 되 고 해당 기능을 나타내는 고유한 시스템 생성 이름 (예: **xml_index_nodes_2021582240_32001** 또는 **queue_messages_1977058079**  
   
- 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예를 들어 select \* FROM * \<sys. internal_table_name>* 와 같은 문은 실행할 수 없습니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
+ 내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예를 들어 SELECT \* FROM * \< sys. internal_table_name>* 와 같은 문은 실행할 수 없습니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
   
   
 |열 이름|데이터 형식|Description|  
@@ -40,12 +40,12 @@ ms.locfileid: "68044543"
 |**\<Sys. 개체에서 상속 된 열>**||이 뷰가 상속 하는 열 목록은 [sys. 개체 &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)를 참조 하세요.|  
 |**internal_type**|**tinyint**|내부 테이블의 유형입니다.<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (예: 공간 인덱스)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|내부 테이블의 유형에 대한 설명입니다.<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
-|**parent_id**|**int**|부모의 ID입니다(스키마 범위 여부에 관계없이). 부모가 없는 경우 0입니다.<br /><br /> **큐의 queue_messages** = **object_id**<br /><br /> **xml_index_nodes** = xml 인덱스의 xml_index_nodes**object_id**<br /><br /> **fulltext_catalog_freelist** = 전체 텍스트 카탈로그의 fulltext_catalog_freelist**fulltext_catalog_id**<br /><br /> **fulltext_index_map** = 전체 텍스트 인덱스의 fulltext_index_map**object_id**<br /><br /> **query_notification**또는 **service_broker_map** = 0<br /><br /> **extended_indexes** = 확장 된 인덱스의 extended_indexes**object_id** (예: 공간 인덱스)<br /><br /> 테이블 추적을 사용 하도록 설정 된 테이블의 **object_id** = **change_tracking**|  
-|**parent_minor_id**|**int**|부모의 보조 ID입니다.<br /><br /> **xml_index_nodes** = XML 인덱스의 xml_index_nodes**index_id**<br /><br /> **extended_indexes** = 확장 된 인덱스의 extended_indexes**index_id** (예: 공간 인덱스)<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**또는 **change_tracking**|  
+|**parent_id**|**int**|부모의 ID입니다(스키마 범위 여부에 관계없이). 부모가 없는 경우 0입니다.<br /><br /> **queue_messages**  =  큐의 **object_id**<br /><br /> **xml_index_nodes**  =  xml 인덱스의 **object_id**<br /><br /> **fulltext_catalog_freelist**  =  전체 텍스트 카탈로그의 **fulltext_catalog_id**<br /><br /> **fulltext_index_map**  =  전체 텍스트 인덱스의 **object_id** 입니다.<br /><br /> **query_notification**또는 **service_broker_map** = 0<br /><br /> **extended_indexes**  =  공간 인덱스와 같은 확장 된 인덱스의 **object_id**<br /><br /> 테이블 추적을 사용 하도록 설정 된 테이블의 **object_id** = **change_tracking**|  
+|**parent_minor_id**|**int**|부모의 보조 ID입니다.<br /><br /> **xml_index_nodes**  =  XML 인덱스의 **index_id**<br /><br /> **extended_indexes**  =  공간 인덱스와 같은 확장 된 인덱스의 **index_id**<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**또는 **change_tracking**|  
 |**lob_data_space_id**|**int**|0이 아닌 값은 이 테이블의 LOB(Large Object) 데이터를 보관하는 데이터 공간(파일 그룹 또는 파티션 구성표)의 ID입니다.|  
 |**filestream_data_space_id**|**int**|다음에 사용하도록 예약됩니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>설명  

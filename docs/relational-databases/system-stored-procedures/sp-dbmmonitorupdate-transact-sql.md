@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f847881fa57735a09945d47d446949db3443b3e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061258"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826187"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  미러링 상태를 업데이트할 데이터베이스의 이름입니다. *Database_name* 지정 하지 않으면이 프로시저는 서버 인스턴스의 모든 미러된 데이터베이스에 대해 상태 테이블을 업데이트 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- None  
+ 없음  
   
 ## <a name="result-sets"></a>결과 집합  
  None  
@@ -61,7 +61,7 @@ sp_dbmmonitorupdate [ database_name ]
   
  데이터베이스의 미러링 상태를 업데이트할 때 **sp_dbmmonitorupdate** 는 경고 임계값이 지정 된 미러링 성능 메트릭의 최신 값을 검사 합니다. 이 값이 임계값을 초과하면 프로시저는 이벤트 로그에 정보 이벤트를 추가합니다. 모든 속도는 마지막 업데이트 이후의 평균입니다. 자세한 내용은 [미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)을 참조하세요.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

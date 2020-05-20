@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.filegroups catalog view
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 313c0b80a1bf1d2a094760198053e26426e99c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e143c5f995c05b7bf23f62f36ea5681621cccab
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005177"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828154"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68005177"
 |**filegroup_guid**|**uniqueidentifier**|파일 그룹의 GUID입니다.<br /><br /> NULL = PRIMARY 파일 그룹|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 값은 NULL입니다.|  
 |**is_read_only**|**bit**|1 = 읽기 전용 파일 그룹입니다.<br /><br /> 0 = 읽기/쓰기 파일 그룹입니다.|  
-|**is_autogrow_all_files**|**bit**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = 파일 그룹의 파일이 자동 증가 임계값을 충족 하면 파일 그룹의 모든 파일이 증가 합니다.<br /><br /> 0 = 파일 그룹의 파일이 자동 증가 임계값을 충족 하면 해당 파일만 증가 합니다. 기본값입니다.|  
+|**is_autogrow_all_files**|**bit**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> 1 = 파일 그룹의 파일이 자동 증가 임계값을 충족 하면 파일 그룹의 모든 파일이 증가 합니다.<br /><br /> 0 = 파일 그룹의 파일이 자동 증가 임계값을 충족 하면 해당 파일만 증가 합니다. 이것이 기본값입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  

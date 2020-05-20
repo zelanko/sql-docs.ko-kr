@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 137189bf0c49667b238c09ba2291463e3922cfde
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108758"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824843"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +76,9 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  비활성화된 계획 지침을 비활성화하거나 활성화된 계획 지침을 활성화하면 아무런 영향을 미치지 않고 오류 없이 실행됩니다.  
   
- 계획 지침은 일부 버전 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 그러나 모든 버전에서 DROP 또는 DROP ALL 옵션을 사용 하 여 **sp_control_plan_guide** 를 실행할 수 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]있습니다.  
+ 계획 지침은 일부 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 그러나 모든 버전에서 DROP 또는 DROP ALL 옵션을 사용 하 여 **sp_control_plan_guide** 를 실행할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  ** @type = '** Object **'** 를 지정 하 여 만든 개체 유형의 계획 지침에서 **sp_control_plan_guide** 를 실행 하려면 계획 지침에서 참조 하는 개체에 대 한 ALTER 권한이 필요 합니다. 다른 모든 계획 지침에는 ALTER DATABASE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -136,7 +136,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;저장 프로시저 데이터베이스 엔진](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Transact-sql&#41;&#40;시스템 저장 프로시저](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Transact-sql&#41;sp_create_plan_guide &#40;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [plan_guides &#40;Transact-sql&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)  
   

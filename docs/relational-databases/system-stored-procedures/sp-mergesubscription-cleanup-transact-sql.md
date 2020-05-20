@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergesubscription_cleanup
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b0a7117066527b85f4eb8c4d859dc523785fa1d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a4f091267a714adbc4d0c2bd147daa0cc2a9f9cd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022363"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828282"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ## <a name="remarks"></a>설명  
  **sp_mergesubscription_cleanup** 는 병합 복제에 사용 됩니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만 **sp_mergesubscription_cleanup**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

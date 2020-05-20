@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278116"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826375"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>인수  
- head_node_address = N '*head_node_address*' * \@*  
- PolyBase 스케일 아웃 그룹의 SQL Server 헤드 노드를 호스트 하는 컴퓨터의 이름입니다. head_node_address은 nvarchar (255)입니다. * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ PolyBase 스케일 아웃 그룹의 SQL Server 헤드 노드를 호스트 하는 컴퓨터의 이름입니다. * \@ head_node_address* 은 nvarchar (255)입니다.  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- 헤드 노드 PolyBase 데이터 이동 서비스에 대 한 컨트롤 채널이 실행 되는 포트입니다. dms_control_channel_port는 서명 되지 않은 __int16입니다. * \@* 기본값은 **16450**입니다.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ 헤드 노드 PolyBase 데이터 이동 서비스에 대 한 컨트롤 채널이 실행 되는 포트입니다. * \@ dms_control_channel_port* 는 서명 되지 않은 __int16입니다. 기본값은 **16450**입니다.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- PolyBase 스케일 아웃 그룹의 SQL Server 헤드 노드의 이름입니다. head_node_sql_server_instance_name은 nvarchar (16)입니다. * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ PolyBase 스케일 아웃 그룹의 SQL Server 헤드 노드의 이름입니다. * \@ head_node_sql_server_instance_name* 은 nvarchar (16)입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  

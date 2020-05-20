@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - dbo.cdc_jobs
 ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69c38cca8ab26691a155d11ad3afc88bdc2852d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084697"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827325"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68084697"
   
  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|작업이 실행되고 있는 데이터베이스의 ID입니다.|  
 |**job_type**|**nvarchar (20)**|작업 유형으로 ‘캡처' 또는 '정리'입니다.|  

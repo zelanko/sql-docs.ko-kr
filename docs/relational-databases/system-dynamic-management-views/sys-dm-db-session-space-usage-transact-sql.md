@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_session_space_usage dynamic management view
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c65202540cff25ca04be41d085ff5a640e11fb61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263968"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828032"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68263968"
 >  이 뷰는 [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)에만 적용 됩니다.  
   
 > [!NOTE]  
->  또는 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에서이를 호출 하려면 이름 **sys. dm_pdw_nodes_db_session_space_usage**을 사용 합니다.  
+>  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_session_space_usage**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,13 +46,13 @@ ms.locfileid: "68263968"
 |**user_objects_dealloc_page_count**|**bigint**|이 세션에 의해 사용자 개체에서 할당 취소되고 더 이상 예약되지 않는 페이지 수입니다.|  
 |**internal_objects_alloc_page_count**|**bigint**|이 세션에 의해 내부 개체에 예약되거나 할당된 페이지 수입니다.|  
 |**internal_objects_dealloc_page_count**|**bigint**|이 세션에 의해 내부 개체에서 할당 취소되고 더 이상 예약되지 않는 페이지 수입니다.|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|지연 된 할당 취소로 표시 된 페이지 수입니다.<br /><br /> **참고:** 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]용 서비스 팩에 도입 되었습니다.|  
-|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|지연 된 할당 취소로 표시 된 페이지 수입니다.<br /><br /> **참고:** 및 용 서비스 팩에 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 도입 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 되었습니다.|  
+|**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
 
-에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
-Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="remarks"></a>설명  
  IAM 페이지는 이 뷰에서 보고되는 모든 할당 또는 할당 취소 수에 포함되지 않습니다.  
