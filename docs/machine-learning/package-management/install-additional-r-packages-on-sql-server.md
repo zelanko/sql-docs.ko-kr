@@ -1,6 +1,6 @@
 ---
 title: 새 R 패키지 설치
-description: sqlmlutils를 사용하여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치하는 방법을 알아봅니다.
+description: sqlmlutils를 사용하여 SQL Server Machine Learning Services 인스턴스에 새 R 패키지를 설치하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/11/2020
@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269436"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606878"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 새 R 패키지 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 설치하는 패키지는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 R 스크립트에서 사용할 수 있습니다.
+이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용하여 SQL Server Machine Learning Services 인스턴스에 새 R 패키지를 설치하는 방법을 설명합니다. 설치하는 패키지는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) T-SQL 문을 사용하여 데이터베이스 내에서 실행되는 R 스크립트에서 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 문서에서 설명하는 **sqlmlutils** 패키지는 SQL Server 2019 이상에 R 패키지를 추가하는 데 사용됩니다. SQL Server 2017 이전 버전의 경우 [R 도구를 사용하여 패키지 설치](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15)를 참조하세요.
@@ -30,7 +30,7 @@ ms.locfileid: "83269436"
 
 - SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [R](https://www.r-project.org) 및 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)을 설치합니다. 스크립트 실행에 아무 R IDE를 사용해도 되지만, 이 문서에서는 RStudio를 사용하는 것으로 가정합니다.
 
-- SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 또는 SSMS([SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms))를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만 이 문서에서는 Azure Data Studio 또는 SSMS를 사용한다고 가정합니다.
+- SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만, 이 문서에서는 Azure Data Studio를 사용한다고 가정합니다.
 
 ### <a name="other-considerations"></a>기타 고려 사항
 
@@ -194,7 +194,6 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
    ```
    ::: moniker-end
 
-
    `Rversion` 값으로는 SQL Server에 설치된 R 버전을 사용합니다. 설치된 버전을 확인하려면 다음 T-SQL 명령을 사용합니다.
 
    ```sql
@@ -227,7 +226,7 @@ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터가 인터�
 
 **glue** 패키지가 설치되었으면 T-SQL **sp_execute_external_script** 명령을 사용하여 SQL Server의 R 스크립트에서 glue 패키지를 사용할 수 있습니다.
 
-1. Azure Data Studio 또는 SSMS를 열고 SQL Server 데이터베이스에 연결합니다.
+1. Azure Data Studio를 열고 SQL Server 데이터베이스에 연결합니다.
 
 1. 다음 명령 실행:
 
