@@ -1,29 +1,30 @@
 ---
 title: Python 자습서
-description: 이 문서에서는 SQL Server Machine Learning Services용 Python 자습서에 대해 설명합니다. SQL Server에서 스크립트를 실행하고 기계 학습 모델을 빌드하는 방법에 대해 알아봅니다.
+titleSuffix: SQL machine learning
+description: 이 문서에서는 SQL 기계 학습용 Python 자습서에 대해 설명합니다. 스크립트를 실행하고 기계 학습 모델을 빌드하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/04/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3733f12ed93d7c84a86259742b6996333c3900f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7127be209c9637eb0c1cc701d16f0d157f90be54
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487355"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605795"
 ---
-# <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services용 Python 자습서
+# <a name="python-tutorials-for-sql-machine-learning"></a>SQL 기계 학습용 Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)용 Python 자습서 및 빠른 시작에 대해 설명합니다.
-
-+ Python 스크립트를 실행하는 방법을 알아봅니다.
-+ Python 모델을 빌드 및 학습하고 SQL Server에 배포합니다.
-+ 원격 및 로컬 컴퓨팅 컨텍스트에 대해 알아봅니다.
-+ 데이터 과학 및 기계 학습을 위한 Microsoft Python 패키지를 살펴봅니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 문서에서는 [SQL Server의 Machine Learning Services](../sql-server-machine-learning-services.md) 및 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에 대한 Python 자습서와 빠른 시작에 대해 설명합니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+이 문서에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)용 Python 자습서 및 빠른 시작에 대해 설명합니다.
+::: moniker-end
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -38,15 +39,14 @@ ms.locfileid: "81487355"
 
 ## <a name="python-quickstarts"></a>Python 빠른 시작
 
-SQL Server Machine Learning Services를 처음 접하는 경우 Python 빠른 시작을 사용해 볼 수도 있습니다.
+SQL 기계 학습을 처음 접하는 경우 Python 빠른 시작을 수행해도 됩니다.
 
 | 빠른 시작 | Description |
 |-|-|
-| [Python 및 SQL Server의 Hello World Hello World](quickstart-python-create-script.md) | [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 T-SQL에서 Python을 호출하는 방법에 대한 기본 사항을 알아봅니다. |
-| [SQL Server에서 Python을 사용하여 데이터 형식 및 개체 처리](quickstart-python-data-structures.md) | SQL Server에서 Python pandas 패키지를 사용하여 데이터 구조를 처리하는 방법을 보여 줍니다. |
+| [간단한 Python 스크립트 실행](quickstart-python-create-script.md) | [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 T-SQL에서 Python을 호출하는 방법에 대한 기본 사항을 알아봅니다. |
+| [Python을 사용하는 데이터 구조 및 개체](quickstart-python-data-structures.md) | SQL에서 Python pandas 패키지를 사용하여 데이터 구조를 처리하는 방법을 보여줍니다. |
 | [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md) | Python 모델을 만들고 학습하고 사용하여 새 데이터에서 예측을 수행하는 방법을 설명합니다. |
 
 ## <a name="next-steps"></a>다음 단계
 
-+ [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
 + [SQL Server에 대한 Python 확장](../concepts/extension-python.md)

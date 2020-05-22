@@ -1,6 +1,6 @@
 ---
 title: 'Python 자습서: 클러스터 모델 배포'
-description: 4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 SQL Server Machine Learning Services를 사용하여 클러스터링 모델을 배포합니다.
+description: 4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 SQL 기계 학습을 사용하여 클러스터링 모델을 배포합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116566"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606448"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>자습서: Python에서 SQL Server Machine Learning Services를 사용하여 고객을 분류하기 위한 모델 배포
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 고객을 분류하는 모델 배포
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 4부에서는 Python에서 개발한 클러스터링 모델을 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 SQL 데이터베이스에 배포합니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 4부로 구성된 자습서 시리즈의 4부에서는 Machine Learning Services를 사용하여 Python에서 개발한 클러스터링 모델을 SQL 데이터베이스에 배포합니다.
+::: moniker-end
 
-새 고객이 계속 등록되므로 정기적으로 클러스터링을 수행하기 위해서는 어떤 앱에서든 Python 스크립트를 호출할 수 있어야 합니다. 이를 위해서는 데이터베이스에서 SQL 저장 프로시저 내에 Python 스크립트를 저장하여 SQL Server에서 Python 스크립트를 배포할 수 있습니다. 모델이 SQL 데이터베이스에서 실행되기 때문에 데이터베이스에 저장된 데이터에 대해 쉽게 학습을 수행할 수 있습니다.
+새 고객이 계속 등록되므로 정기적으로 클러스터링을 수행하기 위해서는 어떤 앱에서든 Python 스크립트를 호출할 수 있어야 합니다. 그러려면 SQL 저장 프로시저 내부에 Python 스크립트를 배치하여 데이터베이스에 Python 스크립트를 배포하면 됩니다. 모델이 데이터베이스에서 실행되기 때문에 데이터베이스에 저장된 데이터에 대해 쉽게 학습시킬 수 있습니다.
 
-이 섹션에서는 바로 전에 작성한 Python 코드를 SQL Server로 이동하고 SQL Server Machine Learning Services를 사용해서 클러스터링을 배포합니다.
+이 섹션에서는 방금 서버에 작성한 Python 코드를 이동하고 클러스터링을 배포합니다.
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 모델을 생성하는 저장 프로시저 만들기
-> * SQL Server에서 클러스터링 수행
+> * 서버에서 클러스터링 수행
 > * 클러스터링 정보 사용
 
 [1부](python-clustering-model.md)에서는 사전 요구 사항을 설치하고 샘플 데이터베이스를 복원했습니다.
@@ -175,19 +180,18 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이 자습서를 완료했으면, SQL Server에서 tpcxbb_1gb 데이터베이스를 삭제할 수 있습니다.
+이 자습서를 마쳤으면 tpcxbb_1gb 데이터베이스를 삭제해도 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서 시리즈의 4부에서는 다음 단계를 완료했습니다.
 
 * 모델을 생성하는 저장 프로시저 만들기
-* SQL Server에서 클러스터링 수행
+* 서버에서 클러스터링 수행
 * 클러스터링 정보 사용
 
-SQL Server Machine Learning Services에서 Python을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.
+SQL 기계 학습에서 Python을 사용하는 방법에 대한 자세한 내용은 다음을 참조하세요.
 
-* [빠른 시작: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 만들기 및 실행](quickstart-python-create-script.md)
-* [SQL Server Machine Learning Services를 위한 다른 Python 자습서](sql-server-python-tutorials.md)
+* [빠른 시작: 간단한 Python 스크립트 만들기 및 실행](quickstart-python-create-script.md)
+* [기타 SQL 기계 학습용 Python 자습서](python-tutorials.md)
 * [sqlmlutils를 사용하여 Python 패키지 설치](../package-management/install-additional-python-packages-on-sql-server.md)
-

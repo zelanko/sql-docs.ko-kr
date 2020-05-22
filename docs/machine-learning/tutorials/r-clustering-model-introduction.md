@@ -1,51 +1,52 @@
 ---
-title: 'Python 자습서: 고객 분류'
-titleSuffix: SQL machine learning
-description: 4부로 구성된 이 자습서 시리즈에서는 SQL 기계 학습과 함께 Python을 사용하여 데이터베이스에서 K-평균 클러스터링을 통해 고객을 분류합니다.
+title: '자습서: R에서 클러스터링 모델 개발'
+titleSuffix: SQL Machine Learning
+description: 4부로 구성된 이 자습서 시리즈에서는 R에서 SQL 기계 학습을 사용하여 클러스터링을 수행하는 모델을 개발합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.devlang: python
-ms.date: 04/15/2020
 ms.topic: tutorial
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye, davidph
+ms.date: 05/04/2020
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8b3be490a6da01d34f8c762bf9c6cae1a35dbe40
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 558d6b9aaa47288de7c75e61ee38d379a3fc1e68
 ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606555"
+ms.locfileid: "83607106"
 ---
-# <a name="python-tutorial-categorizing-customers-using-k-means-clustering-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습에서 k-평균 클러스터링을 사용하여 고객 분류
+# <a name="tutorial-prepare-data-to-perform-clustering-in-r-with-sql-machine-learning"></a>자습서: R에서 SQL 기계 학습을 사용하여 클러스터링을 수행하기 위한 데이터 준비
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 분류하기 위해 Python을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 K-평균 클러스터링 모델을 개발하고 배포합니다.
+4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 분류하기 위해 R을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 K-평균 클러스터링 모델을 개발하고 배포합니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
+4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 R을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈에서는 고객 데이터를 클러스터링하기 위해 [SQL Server R Services](../r/sql-server-r-services.md)에서 R을 사용하여 K-평균 클러스터링 모델을 개발 및 배포합니다.
 ::: moniker-end
 
-이 시리즈의 1부에서는 자습서의 사전 요구 사항을 설치한 다음, 샘플 데이터 세트를 데이터베이스에 복원합니다. 이 시리즈의 뒷부분에서는 Python에서 SQL 기계 학습을 사용하여 이 데이터로 클러스터링 모델을 학습시키고 배포합니다.
-
-이 시리즈의 2부 및 3부에서는 데이터를 분석 및 준비하고 Machine Learning 모델을 학습시키기 위해 Azure Data Studio 노트북에서 일부 Python 스크립트를 개발합니다. 그런 다음, 4부에서는 데이터베이스 내부에서 저장 프로시저를 사용하여 Python 스크립트를 실행합니다.
+이 시리즈의 1부에서는 자습서의 사전 요구 사항을 설치한 다음, 샘플 데이터 세트를 데이터베이스에 복원합니다. 2부 및 3부에서는 데이터를 분석 및 준비하고 기계 학습 모델을 학습시키기 위해 Azure Data Studio Notebook에서 일부 R 스크립트를 개발합니다. 그런 다음, 4부에서는 데이터베이스 내부에서 저장 프로시저를 사용하여 R 스크립트를 실행합니다.
 
 *클러스터링*은 그룹 구성원이 일정 기준에 따라 유사한 특성을 갖는 그룹으로 데이터를 정리하는 것과 같습니다. 이 자습서 시리즈에서는 사용자가 판매점을 소유하고 있다고 가정합니다. **K-평균** 알고리즘을 사용하여 제품 구매 및 반품 데이터 세트에서 고객에 대한 클러스터링을 수행합니다. 고객을 클러스터링하면 특정 그룹을 대상으로 보다 효과적으로 마케팅 노력을 집중할 수 있습니다. K-평균 클러스터링은 유사성을 기준으로 데이터의 패턴을 찾는 *자율 학습* 알고리즘입니다.
+
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 샘플 데이터베이스 복원
+> 
+[2부](r-clustering-model-prepare-data.md)에서는 클러스터링을 수행하기 위해 데이터베이스의 데이터를 준비하는 방법을 알아봅니다.
 
-[2부](python-clustering-model-prepare-data.md)에서는 클러스터링을 수행하기 위해 데이터베이스의 데이터를 준비하는 방법을 알아봅니다.
+[3부](r-clustering-model-build.md)에서는 R에서 K-평균 클러스터링 모델을 만들고 학습시키는 방법을 알아봅니다.
 
-[3부](python-clustering-model-build.md)에서는 Python에서 K-평균 클러스터링 모델을 만들고 학습시키는 방법을 알아봅니다.
-
-[4부](python-clustering-model-deploy.md)에서는 새 데이터를 기준으로 Python에서 클러스터링을 수행할 수 있는 저장 프로시저를 데이터베이스에서 만드는 방법을 알아봅니다.
+[4부](r-clustering-model-deploy.md)에서는 새 데이터를 기준으로 R에서 클러스터링을 수행할 수 있는 저장 프로시저를 데이터베이스에서 만드는 방법을 알아봅니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -53,22 +54,14 @@ ms.locfileid: "83606555"
 * [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 Python 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-machine-learning?toc=%2fsql%2fmachine-learning%2ftoc.json&view=sql-server-linux-ver15)의 설치 지침을 따릅니다. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 Python 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)의 설치 지침을 따릅니다.
+* [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 및 R 언어 옵션 - [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)의 설치 지침을 따릅니다.
 ::: moniker-end
 
-* [Azure Data Studio](../../azure-data-studio/what-is.md) Python 및 SQL에 대한 Azure Data Studio에서 Notebook을 사용합니다. Notebook에 대한 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/sql-notebooks.md)을 참조하세요.
+* [Azure Data Studio](../../azure-data-studio/what-is.md) SQL용 Azure Data Studio에서 Notebook을 사용합니다. Notebook에 대한 자세한 내용은 [Azure Data Studio에서 Notebook을 사용하는 방법](../../azure-data-studio/notebooks-guidance.md)을 참조하세요.
 
-* 추가 Python 패키지 - 이 자습서 시리즈의 예제에서는 사용자가 설치했거나 설치하지 않았을 수 있는 Python 패키지가 사용됩니다.
+* R IDE - 이 자습서에서는 [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)을 사용합니다.
 
-  **명령 프롬프트**를 열고 Azure Data Studio에서 사용하는 Python 버전의 설치 경로를 변경합니다. `cd %LocalAppData%\Programs\Python\Python37-32`)을 입력합니다. 그런 후 다음 명령을 실행하여 아직 설치되지 않은 패키지를 설치합니다.
-
-  ```console
-  pip install matplotlib
-  pip install pandas
-  pip install pyodbc
-  pip install scipy
-  pip install sklearn
-  ```
+* RODBC - 이 드라이버는 이 자습서에서 개발할 R 스크립트에 사용됩니다. 아직 설치하지 않았으면 R 명령 `install.packages("RODBC")`를 사용하여 설치합니다. RODBC에 대한 자세한 내용은 [CRAN - Package RODBC](https://CRAN.R-project.org/package=RODBC)를 참조하세요.
 
 ## <a name="restore-the-sample-database"></a>샘플 데이터베이스 복원
 
@@ -101,9 +94,10 @@ ms.locfileid: "83606555"
 
 이 자습서 시리즈의 1부에서 다음 단계를 완료했습니다.
 
-* 샘플 데이터베이스 복원
+* 필수 구성 요소 설치
+* 샘플 데이터베이스를 SQL Server에 복원함
 
 Machine Learning 모델을 위해 데이터를 준비하려면 이 자습서 시리즈의 2부를 진행합니다.
 
 > [!div class="nextstepaction"]
-> [Python 자습서: 클러스터링을 수행할 데이터 준비](python-clustering-model-prepare-data.md)
+> [클러스터링을 수행할 데이터 준비](r-clustering-model-prepare-data.md)

@@ -1,7 +1,7 @@
 ---
 title: Spark를 사용하여 샘플 Notebook 실행
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 샘플 Spark Notebook을 로드 및 실행하는 방법을 보여 줍니다.
+description: 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 샘플 Spark Notebook을 로드하고 실행하는 방법을 보여줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 03/30/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 440deb44e98a29136fa540efb8619702c51b7342
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: ce2b2439f136150348409f591550b8fc07383bd9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531306"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606893"
 ---
 # <a name="run-a-sample-notebook-using-spark"></a>Spark를 사용하여 샘플 Notebook 실행
 

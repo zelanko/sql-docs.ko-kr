@@ -3,24 +3,29 @@ title: '빠른 시작: Python 데이터 구조'
 description: 이 빠른 시작에서는 Python 및 SQL Server Machine Learning Services에서 데이터 형식과 데이터 개체로 작업을 수행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487336"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606697"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 SQL Server Machine Learning Services에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 알아봅니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 Python을 사용하는 경우 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. Python과 SQL Server 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)에서 Python을 사용할 때 데이터 구조와 데이터 형식을 사용하는 방법을 알아봅니다. Python과 SQL Server 사이의 데이터 이동과 일반적으로 발생할 수 있는 문제에 대해 알아봅니다.
+::: moniker-end
 
 SQL Server는 표 형식 데이터를 사용할 때 유용한 Python **pandas** 패키지를 사용합니다. 하지만 Python에서 SQL Server로 스칼라를 전달만 해도 "단순히 작동"하는 것은 아닙니다. 이 빠른 시작에서는 Python과 SQL Server 사이에 표 형식 데이터를 전달할 때 발생할 수 있는 추가적인 문제들을 준비하기 위해 몇 가지 기본적인 데이터 구조 정의를 검토합니다.
 
@@ -37,9 +42,15 @@ data.frame에 표 형식 구조가 필요한 경우 계산의 단일 결과를 �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작을 수행하려면 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 포함된 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
+이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+::: moniker-end
+- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)를 사용합니다.
 
 ## <a name="scalar-value-as-a-series"></a>계열로서의 스칼라 값
 

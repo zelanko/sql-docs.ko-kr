@@ -1,7 +1,7 @@
 ---
 title: Kubeadm을 사용하여 Kubernetes 구성
 titleSuffix: SQL Server Big Data Clusters
-description: 여러 Ubuntu 16.04 또는 18.04 머신(물리적 또는 가상)에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포에 대해 Kubernetes를 구성하는 방법을 알아봅니다.
+description: 여러 Ubuntu 16.04 또는 18.04 머신(물리적 또는 가상)에서 SQL Server 2019 빅 데이터 클러스터 배포에 대해 Kubernetes를 구성하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0d5478df68f6f88d638aaafc88c92f2a5730b9f7
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 83f66841c4894d3c61ff8196eb52f3ac84fe42f9
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269462"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606549"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>여러 머신에서 SQL Server 빅 데이터 클러스터 배포에 대해 Kubernetes 구성
 

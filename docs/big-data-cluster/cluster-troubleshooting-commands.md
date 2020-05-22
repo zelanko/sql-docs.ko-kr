@@ -1,7 +1,7 @@
 ---
 title: Kubernetes 문제 해결
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9ab57972b9ba0d758ff692887fa8d93d7f731d0a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 49ed75b4986a45dfec25547317e3fe0789671fe4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664177"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606405"
 ---
 # <a name="troubleshoot-big-data-clusters-2019-kubernetes"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Kubernetes 문제 해결
 
@@ -211,7 +211,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 > [!Note]
 > 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}], 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다.
 
-브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 Pod를 사용할 수 없습니다.  사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임스페이스의 Pod를 나열할 수 없습니다.가 표시됩니다. 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
+브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 Pod를 사용할 수 없습니다. 사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임스페이스의 Pod를 나열할 수 없습니다.가 표시됩니다. 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

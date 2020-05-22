@@ -1,7 +1,7 @@
 ---
 title: 빅 데이터 도구 설치
 titleSuffix: SQL Server big data clusters
-description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]와 함께 사용되는 도구를 설치하는 방법을 알아봅니다.'
+description: SQL Server 2019 빅 데이터 클러스터와 함께 사용되는 도구를 설치하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 77acaa43c1360c1f5d1126f46b5d79dc6d74b4ce
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: cafec0d1542cd2ec6a02557b400a17b6d0d0ddad
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002706"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606675"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 

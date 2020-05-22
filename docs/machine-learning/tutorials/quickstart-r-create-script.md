@@ -1,41 +1,57 @@
 ---
 title: '빠른 시작: R 스크립트 실행'
-description: SQL Server Machine Learning Services를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 sp_execute_external_script를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+titleSuffix: SQL machine learning
+description: SQL 기계 학습에서 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 sp_execute_external_script를 사용하여 스크립트를 실행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 33baeba807711c1eb65b3a9c972066bb384e2542
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ed4f4899869dbc9609f29d935c80a7df88fa3d4c
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487302"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606755"
 ---
-# <a name="quickstart-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services로 간단한 R 스크립트 실행
+# <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>빠른 시작: SQL 기계 학습에서 간단한 R 스크립트를 실행합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+이 빠른 시작에서는 [SQL Server R Services](../r/sql-server-r-services.md)를 사용하여 간단한 R 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작에서는 R 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)를 사용하여 SQL Server 인스턴스에 액세스해야 합니다.
+이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-  SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용하지 않도록 설정되어 있으므로 시작하기 전에 [외부 스크립팅을 활성화](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)하고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인해야 합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. R Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요. 
+::: moniker-end
 
-- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구도 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
 ## <a name="run-a-simple-script"></a>간단한 스크립트 실행
 
-R 스크립트를 실행하려면 이를 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대한 인수로 전달합니다.
-이 시스템 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하고 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
+R 스크립트를 실행하려면 이를 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 대한 인수로 전달합니다. 이 시스템 저장 프로시저는 R 런타임을 시작하고, 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트에 반환합니다.
 
-다음 단계에서는 이 예제 R 스크립트를 SQL Server 인스턴스에서 실행합니다.
+다음 단계에서는 아래의 예제 R 스크립트를 실행합니다.
 
 ```r
 a <- 1
@@ -45,7 +61,7 @@ d <- a*b
 print(c(c, d))
 ```
 
-1. **SQL Server Management Studio**를 열고 SQL Server 인스턴스에 연결합니다.
+1. **Azure Data Studio**를 열고 서버에 연결합니다.
 
 1. R Python 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달합니다.
 
@@ -91,8 +107,8 @@ GO
 |-|-|
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 R). |
 | @script | R 런타임으로 전달되는 명령을 정의합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |
-| @input_data_1 | 쿼리에서 반환된 데이터는 R 런타임에 전달되고 R 런타임은 데이터를 SQL Server에 데이터 프레임으로 전달합니다. |
-|WITH RESULT SETS | 절은 SQL Server에 대해 반환된 데이터 테이블의 스키마를 정의하고 "Hello World"를 열 이름 및 **int**(데이터 형식)로 추가합니다. |
+| @input_data_1 | 쿼리에서 반환된 데이터는 R 런타임에 전달되고, R 런타임은 데이터를 데이터 프레임으로 전달합니다. |
+|WITH RESULT SETS | 이 절은 반환된 데이터 테이블의 스키마를 정의하고, "Hello World"를 열 이름으로 추가하고 데이터 형식으로 **int**를 추가합니다. |
 
 이 명령은 다음 텍스트를 출력합니다.
 
@@ -182,7 +198,12 @@ GO
 
 ## <a name="check-r-version"></a>R 버전 확인
 
-SQL Server 인스턴스에 설치된 R 버전을 확인하려면 다음 스크립트를 실행합니다.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server Machine Learning Services와 함께 설치된 R 버전을 확인하려면 다음 스크립트를 실행합니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 2016 R Services와 함께 설치된 R 버전을 확인하려면 다음 스크립트를 실행합니다.
+::: moniker-end
 
 ```sql
 EXECUTE sp_execute_external_script @language = N'R'
@@ -214,8 +235,12 @@ nickname       Someone to Lean On
 ```
 
 ## <a name="list-r-packages"></a>R 패키지 나열
-
-Microsoft는 SQL Server Machine Learning Services와 함께 미리 설치된 여러 R 패키지를 제공합니다.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Microsoft는 Machine Learning Services와 함께 미리 설치된 여러 R 패키지를 제공합니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Microsoft는 R Services와 함께 미리 설치된 여러 R 패키지를 제공합니다.
+::: moniker-end
 
 버전, 종속 항목, 라이선스 및 라이브러리 경로 정보를 포함하여 설치된 R 패키지 목록을 보려면 다음 스크립트를 실행합니다.
 
@@ -240,13 +265,7 @@ R의 `installed.packages()`에서 출력이 생성되고 결과 집합으로 반
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server Machine Learning Services에서 R을 사용하는 경우 데이터 구조를 사용하는 방법을 알아보려면 다음 빠른 시작을 따르세요.
+SQL 기계 학습에서 R을 사용할 때 데이터 구조를 사용하는 방법을 알아보려면 다음 빠른 시작을 수행하세요.
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services에서 R을 사용하여 데이터 형식 및 개체 처리](quickstart-r-data-types-and-objects.md)
-
-SQL Server Machine Learning Services에서 R 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
-
-- [SQL Server Machine Learning Services를 사용하여 고급 R 함수 작성](quickstart-r-functions.md)
-- [SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점](quickstart-r-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
+> [SQL 기계 학습에서 R을 사용하여 데이터 형식 및 개체 처리](quickstart-r-data-types-and-objects.md)

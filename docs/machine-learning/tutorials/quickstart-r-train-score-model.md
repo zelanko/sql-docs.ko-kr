@@ -1,31 +1,40 @@
 ---
 title: '빠른 시작: R에서 모델 학습'
-description: 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, SQL Server Machine Learning Services를 사용하여 모델로 새 데이터의 값을 예측합니다.
+titleSuffix: SQL machine learning
+description: 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 테이블에 저장한 다음, 모델에서 SQL 기계 학습을 사용하여 새 데이터로 값을 예측합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b34bfbf4f539412835c0de1e3c75b55e15b1e471
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 532a08f29b3b623d531d03ff7bc0ac56605faa17
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487279"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606210"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 R에서 예측 모델 만들기 및 채점
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-machine-learning"></a>빠른 시작: R에서 SQL 기계 학습을 사용하여 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, 모델에서 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 새 데이터로 값을 예측합니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 모델로 새 데이터의 값을 예측합니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+이 빠른 시작에서는 T를 사용하여 예측 모델을 만들어 학습시키고, 모델을 SQL Server 인스턴스의 테이블에 저장한 다음, 모델에서 [SQL Server R Services](../r/sql-server-r-services.md)를 사용하여 새 데이터로 값을 예측합니다.
+::: moniker-end
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 R에 포함된 **mtcars** 데이터 세트를 사용하여 차량에 수동 변속기가 장착되었을 확률을 예측하는 단순한 일반화된 선형 모델(GLM)을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 R 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 
 > [!TIP]
-> 선형 모델에 리프레셔가 필요한 경우 rxLinMod를 사용하여 모델을 맞추는 프로세스를 설명하는 다음 자습서를 참조하세요.  [선형 모델 맞춤](/machine-learning-server/r/how-to-revoscaler-linear-model) 자습서를 권장합니다.
+> 선형 모델에 리프레셔가 필요한 경우 rxLinMod를 사용하여 모델을 맞추는 프로세스를 설명하는 다음 자습서를 참조하세요. [선형 모델 맞춤](/machine-learning-server/r/how-to-revoscaler-linear-model) 자습서를 권장합니다.
 
 이 빠른 시작을 완료하면 다음을 배울 수 있습니다.
 
@@ -36,19 +45,27 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작에서는 R 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)를 사용하여 SQL Server 인스턴스에 액세스해야 합니다.
+이 빠른 시작을 실행하려면 다음과 같은 필수 구성 요소가 필요합니다.
 
-  SQL Server 인스턴스는 Azure 가상 머신 또는 온-프레미스에 있을 수 있습니다. 외부 스크립팅 기능은 기본적으로 사용하지 않도록 설정되어 있으므로 시작하기 전에 [외부 스크립팅을 활성화](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)하고 **SQL Server 실행 패드 서비스**가 실행 중인지 확인해야 합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. R Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-r-services-windows-install.md)를 참조하세요.
+::: moniker-end
 
-- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구도 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
 
 ## <a name="create-the-model"></a>모델 만들기
 
-모델을 만들려면 학습시킬 원본 데이터를 만들고, 모델을 만들고, 데이터를 사용하여 학습시킨 다음, 새 데이터로 예측을 생성하는 데 사용할 수 있는 SQL 데이터베이스에 모델을 저장합니다.
+모델을 만들려면 학습시킬 원본 데이터를 만들고, 모델을 만들고, 데이터를 사용하여 학습시킨 다음, 새 데이터로 예측을 생성하는 데 사용할 수 있는 데이터베이스에 모델을 저장합니다.
 
 ### <a name="create-the-source-data"></a>원본 데이터 만들기
 
-1. SSMS를 열고 SQL Server 인스턴스에 연결한 다음, 새 쿼리 창을 엽니다.
+1. Azure Data Studio를 열고 인스턴스에 연결한 다음, 새 쿼리 창을 엽니다.
 
 1. 먼저 학습 데이터를 저장할 테이블을 만듭니다.
 
@@ -108,9 +125,9 @@ GO
 - `glm`에 대한 첫 번째 인수는 `am`를 `hp + wt`에 종속된 것으로 정의하는 *formula* 매개 변수입니다.
 - 입력 데이터는 SQL 쿼리에 의해 채워지는 `MTCarsData` 변수에 저장됩니다. 입력 데이터에 구체적인 이름을 할당하지 않으면 기본 변수 이름 _InputDataSet_가 사용됩니다.
 
-### <a name="store-the-model-in-the-sql-database"></a>모델을 SQL 데이터베이스에 저장
+### <a name="store-the-model-in-the-database"></a>모델을 데이터베이스에 저장
 
-다음으로, 모델을 예측에 사용하거나 다시 학습시킬 수 있도록 SQL 데이터베이스에 저장합니다. 
+다음으로, 모델을 예측에 사용하거나 다시 학습시킬 수 있도록 데이터베이스에 저장합니다. 
 
 1. 모델을 저장할 테이블을 만듭니다.
 
@@ -220,6 +237,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
+SQL 기계 학습을 사용하는 R 자습서에 대한 자세한 내용은 다음을 참조하세요.
 
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
+- [R 자습서](r-tutorials.md)

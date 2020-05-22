@@ -1,7 +1,7 @@
 ---
 title: 컨트롤러란?
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 컨트롤러에 대해 설명합니다.
+description: 이 문서에서는 SQL Server 빅 데이터 클러스터의 컨트롤러를 설명합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5390ca81583668c49fa07fa2cacac8bedc7f8cef
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 3748e66b01b1b168d617625fe789ce895e79a1a8
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742115"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606147"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 컨트롤러란?
 

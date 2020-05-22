@@ -1,28 +1,34 @@
 ---
 title: 'Python 자습서: 클러스터 데이터 준비'
-description: 4부로 구성된 이 자습서 시리즈의 2부에서는 SQL 데이터를 준비하여 SQL Server Machine Learning Services를 통해 Python에서 클러스터링을 수행합니다.
+titleSuffix: SQL machine learning
+description: 4부로 구성된 이 자습서 시리즈의 2부에서는 Python에서 SQL 기계 학습을 사용하여 클러스터링을 수행하기 위한 SQL 데이터를 준비합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 12/17/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116516"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606849"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>자습서: SQL Server Machine Learning Services를 사용하여 Python에서 고객을 범주화하기 위한 데이터 준비
+# <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Python 자습서: SQL 기계 학습을 사용하여 고객을 분류하는 데이터 준비
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 4부 자습서 시리즈의 2부에서는 Python을 사용하여 SQL 데이터베이스에서 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 이 데이터를 사용하여 SQL Server Machine Learning Services와 함께 Python에서 클러스터링 모델을 학습시키고 배포합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 Python에서 SQL Server Machine Learning Services 또는 빅 데이터 클러스터를 사용하여 이 데이터로 클러스터링 모델을 학습시키고 배포합니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+4부로 구성된 이 자습서 시리즈의 2부에서는 Python을 사용하여 데이터베이스의 데이터를 복원하고 준비합니다. 이 시리즈의 후반부에서는 이 데이터를 사용하여 SQL Server Machine Learning Services와 함께 Python에서 클러스터링 모델을 학습시키고 배포합니다.
+::: moniker-end
 
 이 문서에서는 다음을 수행하는 방법을 알아봅니다.
 
@@ -34,7 +40,7 @@ ms.locfileid: "81116516"
 
 [3부](python-clustering-model-build.md)에서는 Python에서 K-평균 클러스터링 모델을 만들고 학습시키는 방법을 알아봅니다.
 
-[4부](python-clustering-model-deploy.md)에서는 새 데이터를 기준으로 Python에서 클러스터링을 수행할 수 있는 저장 프로시저를 SQL 데이터베이스에서 만드는 방법을 알아봅니다.
+[4부](python-clustering-model-deploy.md)에서는 새 데이터를 기준으로 Python에서 클러스터링을 수행할 수 있는 저장 프로시저를 데이터베이스에서 만드는 방법을 알아봅니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -69,7 +75,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -139,16 +145,16 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="clean-up-resources"></a>리소스 정리
 
-이 자습서를 계속 진행하지 않으려면 SQL Server에서 tpcxbb_1gb 데이터베이스를 삭제하세요.
+이 자습서를 계속 진행할 생각이 없으면 tpcxbb_1gb 데이터베이스를 삭제하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 이 자습서 시리즈의 2부에서 다음 단계를 완료했습니다.
 
 * Python을 사용하여 다양한 차원에 따라 고객 구분
-* SQL 데이터베이스에서 Python 데이터 프레임으로 데이터 로드
+* 데이터베이스의 데이터를 Python 데이터 프레임에 로드
 
 이 고객 데이터를 사용하는 기계 학습 모델을 만들려면 다음 자습서 시리즈의 3부를 따르세요.
 
 > [!div class="nextstepaction"]
-> [자습서: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기](python-clustering-model-build.md)
+> [Python 자습서: 예측 모델 만들기](python-clustering-model-build.md)

@@ -3,24 +3,29 @@ title: '빠른 시작: Python에서 모델 학습'
 description: 이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 SQL Server Machine Learning Services로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487342"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606876"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 채점
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음, 해당 모델을 사용하여 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)에서 새 데이터로 값을 예측합니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 Python을 사용하여 예측 모델을 만들고 학습합니다. SQL Server 인스턴스의 테이블에 모델을 저장한 다음 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)로 새로운 데이터의 값을 예측하는 데 해당 모델을 사용합니다.
+::: moniker-end
 
 SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니다. 첫 번째 저장 프로시저는 클래식 아이리스 꽃 데이터 세트를 사용하여 꽃 특성을 기반으로 아이리스 종류를 예측하는 Naive Bayes 모델을 생성합니다. 두 번째 저장 프로시저는 첫 번째 프로시저에서 생성된 모델을 호출하여 새 데이터를 기반으로 예측 세트를 출력합니다. SQL 저장 프로시저에 Python 코드를 배치하면 작업이 SQL에 포함되고 다시 사용할 수 있으며, 다른 저장 프로시저와 클라이언트 애플리케이션에서 호출할 수 있습니다.
 
@@ -33,9 +38,15 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작을 수행하려면 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 포함된 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md)를 참조하세요. 
+::: moniker-end
 
-- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+- R 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구. 이 빠른 시작에서는 [Azure Data Studio](../../azure-data-studio/what-is.md)를 사용합니다.
+
 
 - 이 연습에 사용되는 샘플 데이터는 아이리스 샘플 데이터입니다. [아이리스 데모 데이터](demo-data-iris-in-sql.md)의 지침에 따라 샘플 데이터베이스 **irissql**을 만듭니다.
 
@@ -43,7 +54,7 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 이 단계에서는 결과를 예측하는 모델을 생성하는 저장 프로시저를 만듭니다.
 
-1. SSMS를 열고 SQL Server 인스턴스에 연결한 다음, 새 쿼리 창을 엽니다.
+1. Azure Data Studio를 열고 SQL Server 인스턴스에 연결한 다음, 새 쿼리 창을 엽니다.
 
 1. irissql 데이터베이스에 연결합니다.
 
@@ -83,7 +94,7 @@ SQL에서 실행되는 두 개의 저장 프로시저를 만들고 실행합니�
 
 1. 저장 프로시저가 있는지 확인합니다. 
 
-   이전 단계의 T-SQL 스크립트가 오류 없이 실행된 경우 **generate_iris_model**이라는 새 저장 프로시저가 생성되어 **irissql** 데이터베이스에 추가됩니다. SSMS **개체 탐색기**의 **프로그래밍 기능**에서 저장 프로시저를 찾을 수 있습니다.
+   이전 단계의 T-SQL 스크립트가 오류 없이 실행된 경우 **generate_iris_model**이라는 새 저장 프로시저가 생성되어 **irissql** 데이터베이스에 추가됩니다. Azure Data Studio **개체 탐색기**의 **프로그래밍 기능**에서 저장 프로시저를 찾을 수 있습니다.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>프로시저를 실행하여 모델을 만들고 학습
 
@@ -174,7 +185,7 @@ SQL Server에서 다시 사용하기 위해 저장된 모델은 바이트 스트
 
 이 연습에서는 다른 작업에 전용될 저장 프로시저를 만드는 방법을 알아보았으며, 해당 작업에서 각 저장 프로시저는 시스템 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 프로세스를 시작합니다. Python 프로세스에 대한 입력은 `sp_execute_external`에 매개 변수로 전달됩니다. Python 스크립트 자체와 SQL Server 데이터베이스의 데이터 변수는 모두 입력으로 전달됩니다.
 
-일반적으로 세련된 Python 코드와 함께 SSMS를 사용하거나 행 기반 출력을 반환하는 간단한 Python 코드만 사용하도록 계획을 세워야 합니다. SSMS 도구는 T-SQL 같은 쿼리 언어를 지원하고 평면화된 행 세트를 반환합니다. 코드에서 산점도 또는 히스토그램과 같은 시각적 출력을 생성하는 경우 저장 프로시저 외부에서 이미지를 렌더링할 수 있는 별도의 도구 또는 최종 사용자 애플리케이션이 필요합니다.
+일반적으로 세련된 Python 코드와 함께 Azure Data Studio를 사용하거나 행 기반 출력을 반환하는 간단한 Python 코드만 사용하도록 계획을 세워야 합니다. Azure Data Studio 도구는 T-SQL 같은 쿼리 언어를 지원하고 평면화된 행 세트를 반환합니다. 코드에서 산점도 또는 히스토그램과 같은 시각적 출력을 생성하는 경우 저장 프로시저 외부에서 이미지를 렌더링할 수 있는 별도의 도구 또는 최종 사용자 애플리케이션이 필요합니다.
 
 광범위한 작업을 처리하는 모든 것이 포함된 스크립트를 작성하는 데 익숙한 Python 개발자의 경우 작업을 별도의 프로시저로 구성할 필요가 없다고 생각할 수 있습니다. 하지만 학습과 채점의 사용 사례는 서로 다릅니다. 둘을 구분하면 각 작업을 서로 다른 일정에 배치하고 각 작업의 권한 범위를 지정할 수 있습니다.
 
@@ -184,6 +195,6 @@ SQL Server에서 다시 사용하기 위해 저장된 모델은 바이트 스트
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server Machine Learning Services에 대한 자세한 내용은 다음을 참조하세요.
+SQL 기계 학습을 사용하는 Python 자습서에 대한 자세한 내용은 다음을 참조하세요.
 
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)
+- [Python 자습서](python-tutorials.md)

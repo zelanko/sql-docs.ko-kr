@@ -1,7 +1,7 @@
 ---
 title: 'HDFS 데이터 쿼리: 스토리지 풀'
 titleSuffix: SQL Server Big Data Clusters
-description: 이 자습서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]에서 HDFS 데이터를 쿼리하는 방법을 보여 줍니다. 스토리지 풀의 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
+description: 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터에서 HDFS 데이터를 쿼리하는 방법을 보여줍니다. 스토리지 풀의 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf20e6b02e67655b7347a2a53d1e62501d357f30
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f0e9e6c84d1c465e05aab5ac7f47f9218888159
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75226477"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83605825"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 HDFS 쿼리
 

@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619666"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606685"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2019의 파티션 기반 모델링은 분할된 데이터에 대한 �
 
 + Machine Learning Services 및 R이 통합된 SQL Server 2019 데이터베이스 엔진 인스턴스입니다.
 
-+ 이 자습서에서는 [ODBC를 통한 R 스크립트에서 SQL Server로의 루프백 연결](../connect/loopback-connection.md]을 사용합니다. 따라서 [SQLRUserGroup의 로그인을 만들어야 합니다](../security/create-a-login-for-sqlrusergroup.md).
++ 이 자습서에서는 [ODBC를 통해 R 스크립트에서 SQL Server로 루프백 연결](../connect/loopback-connection.md) 방법을 사용합니다. 따라서 [SQLRUserGroup의 로그인을 만들어야 합니다](../security/create-a-login-for-sqlrusergroup.md).
 
 쿼리 도구에서 T-SQL 쿼리로 **`SELECT @@Version`** 을 실행하여 버전을 확인합니다.
 

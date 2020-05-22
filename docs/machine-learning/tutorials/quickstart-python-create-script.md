@@ -3,30 +3,42 @@ title: '빠른 시작: Python 스크립트 실행'
 description: SQL Server Machine Learning Services를 사용하여 간단한 Python 스크립트 집합을 실행합니다. 저장 프로시저 sp_execute_external_script를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/17/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ae25eeb4890057074f78ec6a62c251cd097e22e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6b15423d82a13485d343dc797bdf6e6efe25088f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487402"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606455"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services로 간단한 Python 스크립트 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) 또는 [빅 데이터 클러스터](../../big-data-cluster/machine-learning-services.md)를 사용하여 간단한 Python 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 이 빠른 시작에서는 [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md)를 사용하여 간단한 Python 스크립트 세트를 실행합니다. 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용하여 SQL Server 인터페이스에서 스크립트를 실행하는 방법을 알아봅니다.
+::: moniker-end
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 이 빠른 시작을 수행하려면 Python 언어가 설치된 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)가 포함된 SQL Server 인스턴스에 대한 액세스 권한이 필요합니다.
 
-- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)를 사용합니다.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Machine Learning Services를 설치하는 방법은 [Windows 설치 가이드](../install/sql-machine-learning-services-windows-install.md) 또는 [Linux 설치 가이드](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json)를 참조하세요. [SQL Server 빅 데이터 클러스터에서 Machine Learning Services를 사용하도록 설정](../../big-data-cluster/machine-learning-services.md)할 수도 있습니다.
+::: moniker-end
+
+- 또한 Python 스크립트가 포함된 SQL 쿼리를 실행하기 위한 도구가 필요합니다. SQL Server 인스턴스에 연결할 수 있는 데이터베이스 관리 또는 쿼리 도구를 사용하여 이러한 스크립트를 실행하고 T-SQL 쿼리 또는 저장 프로시저를 실행할 수 있습니다. 이 빠른 시작에서는 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)를 사용합니다.
 
 ## <a name="run-a-simple-script"></a>간단한 스크립트 실행
 
@@ -43,7 +55,7 @@ d = a*b
 print(c, d)
 ```
 
-1. SQL Server 인스턴스에 연결된 **SQL Server Management Studio**에서 새 쿼리 창을 엽니다.
+1. SQL Server 인스턴스에 연결된 **Azure Data Studio**에서 새 쿼리 창을 엽니다.
 
 1. 전체 Python 스크립트를 `sp_execute_external_script` 저장 프로시저에 전달합니다.
 
@@ -89,8 +101,9 @@ GO
 |-|-|
 | @language | 호출할 언어 확장을 정의합니다(이 경우에는 Python). |
 | @script | Python 런타임으로 전달되는 명령을 정의합니다.<br>이 인수에서 전체 Python 스크립트는 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음, 변수를 호출할 수도 있습니다. |
-| @input_data_1 | 쿼리로 반환되고 Python 런타임으로 전달되는 데이터입니다. 데이터를 SQL Server에 데이터 프레임으로 반환합니다. |
-|WITH RESULT SETS | 이 절은 SQL Server에 대해 반환된 데이터 테이블의 스키마를 정의합니다. 이 경우에는 "Hello World"를 열 이름 및 **int**(데이터 형식)로 추가합니다. |
+| @input_data_1 | 쿼리에서 반환된 데이터는 Python 런타임에 전달되고, R 런타임은 데이터를 데이터 프레임으로 전달합니다. |
+|WITH RESULT SETS | 절은 SQL Server에 대해 반환된 데이터 테이블의 스키마를 정의하고 "Hello World"를 열 이름 및 **int**(데이터 형식)로 추가합니다. |
+
 
 이 명령은 다음 텍스트를 출력합니다.
 
@@ -241,13 +254,8 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server Machine Learning Services에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 알아보려면 다음 빠른 시작을 참조하세요.
+SQL 기계 학습에서 Python을 사용할 때 데이터 구조를 사용하는 방법을 알아보려면 다음 빠른 시작을 수행하세요.
 
 > [!div class="nextstepaction"]
 > [빠른 시작: SQL Server Machine Learning Services에서 Python을 사용하는 데이터 구조 및 개체](quickstart-python-data-structures.md)
 
-SQL Server Machine Learning Services에서 Python 사용에 대한 자세한 내용은 다음 문서를 참조하세요.
-
-- [SQL Server Machine Learning Services를 사용하여 고급 Python 함수 작성](quickstart-python-functions.md)
-- [SQL Server Machine Learning Services를 사용하여 Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md)
-- [SQL Server Machine Learning Services(Python 및 R)란?](../sql-server-machine-learning-services.md)

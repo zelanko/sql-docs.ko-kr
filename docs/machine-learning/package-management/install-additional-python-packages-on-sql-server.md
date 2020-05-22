@@ -3,18 +3,18 @@ title: sqlmlutils를 사용하여 Python 패키지 설치
 description: Python pip를 사용하여 SQL Server Machine Learning Services 인스턴스에 새 Python 패키지를 설치하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886461"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606493"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>sqlmlutils를 사용하여 Python 패키지 설치
 
@@ -33,11 +33,11 @@ ms.locfileid: "82886461"
 
 + SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [python](https://www.python.org/)을 설치합니다. [Python 확장](https://marketplace.visualstudio.com/items?itemName=ms-python.python)이 있는 [Visual Studio Code](https://code.visualstudio.com/download)와 같은 Python 개발 환경을 원할 수도 있습니다. 
 
-+ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) 또는 SSMS([SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms))를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만 이 문서에서는 Azure Data Studio 또는 SSMS를 사용한다고 가정합니다.
++ SQL Server에 연결하는 데 사용하는 클라이언트 컴퓨터에 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)를 설치합니다. 다른 데이터베이스 관리 또는 쿼리 도구를 사용할 수 있지만, 이 문서에서는 Azure Data Studio를 사용한다고 가정합니다.
 
 ### <a name="other-considerations"></a>기타 고려 사항
 
-+ 패키지는 사용 중인 Python 버전의 규격을 준수해야 합니다. 각 SQL Server 버전에 포함된 Python 버전에 대한 자세한 내용은 [SQL Server Machine Learning Services(Python 및 R)이란?의 Python 및 R 버전](../sql-server-machine-learning-services.md#versions)을 참조하세요.
++ 패키지는 사용 중인 Python 버전의 규격을 준수해야 합니다. 각 SQL Server 버전에 포함된 Python 버전에 대한 자세한 내용은 [Python 및 R 버전](../sql-server-machine-learning-services.md#versions)을 참조하세요.
 
 + Python 패키지 라이브러리는 SQL Server 인스턴스의 Program Files 폴더에 있으며, 기본적으로 이 폴더에 설치하려면 관리자 권한이 필요합니다. 자세한 내용은 [패키지 라이브러리 위치](../package-management/python-package-information.md#default-python-library-location)를 참조하세요.
 
@@ -134,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>SQL Server에서 패키지 사용
+## <a name="use-the-package"></a>패키지 사용
 
 이제 SQL Server의 Python 스크립트에서 이 패키지를 사용할 수 있습니다. 다음은 그 예입니다.
 
@@ -158,8 +158,8 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="next-steps"></a>다음 단계
 
-+ SQL Server Machine Learning Services에 설치된 Python 패키지에 대한 정보를 보려면 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
++ SQL Server Machine Learning Services에 설치된 Python 패키지에 대한 자세한 내용은 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조하세요.
 
 + SQL Server Machine Learning Services에서 R 패키지를 설치하는 방법에 대한 내용은 [SQL Server에 새로운 R 패키지 설치](install-additional-r-packages-on-sql-server.md)를 참조하세요.

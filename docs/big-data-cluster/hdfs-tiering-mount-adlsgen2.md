@@ -1,7 +1,7 @@
 ---
 title: HDFS 계층화를 위한 ADLS Gen2 탑재
 titleSuffix: How to mount ADLS Gen2
-description: 이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]의 HDFS에 외부 Azure Data Lake Storage 파일 시스템을 탑재하도록 HDFS 계층화를 구성하는 방법을 설명합니다.
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 HDFS에 외부 Azure Data Lake Storage 파일 시스템을 탑재하도록 HDFS 계층화를 구성하는 방법을 설명합니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 11/05/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 481e0170e14b978f9fa26689a71383d981313a57
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215383"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606525"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 

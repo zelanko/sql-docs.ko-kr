@@ -1,7 +1,7 @@
 ---
 title: 'Spark 작업 제출: Azure Data Studio'
 titleSuffix: SQL Server Big Data Clusters
-description: Azure Data Studio에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업을 제출합니다.
+description: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업을 제출합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fc4f40981d246c47f923cb2a1afa5533a98081ac
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 13510f430c11253a569540e02dc83d3b8b3ca113
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75244068"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606745"
 ---
 # <a name="submit-spark-jobs-on-big-data-clusters-2019-in-azure-data-studio"></a>Azure Data Studio에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 Spark 작업 제출
 
