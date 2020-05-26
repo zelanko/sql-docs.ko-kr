@@ -30,7 +30,7 @@ ms.locfileid: "72006080"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|메시지 텍스트|\***hints\@에 지정된 힌트를** **stmt\@ 또는** **statement_start_offset\@으로 지정된 문에 적용할 수 없어서 계획 지침 '%.** ls'을(를) 만들 수 없습니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
+|메시지 텍스트|**\@hints**에 지정된 힌트를 **\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 적용할 수 없어서 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 힌트를 문에 적용할 수 있는지 확인하십시오.|  
   
 ## <a name="explanation"></a>설명  
 **\@hints**에 지정된 힌트를 **\@stmt** 또는 **\@statement_start_offset**으로 지정된 문에 적용할 수 없습니다.  
