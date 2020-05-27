@@ -108,7 +108,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   IN 연산자를 사용하여 함수 매개 변수를 상수 값 목록과 비교할 수 있습니다.  
   
-     다음은 *shipment_status* 열의 값이 `IN (N'Completed', N'Returned', N'Cancelled')`인지 확인하는 예제입니다.  
+     다음은 *shipment_status`IN (N'Completed', N'Returned', N'Cancelled')` 열의 값이* 인지 확인하는 예제입니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  

@@ -112,7 +112,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 서버 역할에 SQL Server 로그인 추가  
-다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `Ted` 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
+다음 예에서는 `Ted`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. 역할 멤버 자격 보기  
-역할 멤버 자격을 보려면 **에서** 서버 역할(멤버)[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 페이지를 사용하거나 다음 쿼리를 실행합니다.  
+역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버)** 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   

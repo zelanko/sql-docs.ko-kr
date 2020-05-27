@@ -25,7 +25,7 @@ ms.locfileid: "67982105"
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.  
+  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 문자 및 이진 열 값에 대해 반환될 수 있는 최대 바이트 수를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

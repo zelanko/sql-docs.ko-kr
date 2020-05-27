@@ -147,7 +147,7 @@ GO
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. EKM 공급자에서 비대칭 키 만들기  
- 다음 예제에서는 `EKM_askey1`이라는 확장 가능 키 관리 공급자에 저장된 키 쌍에서 `EKM_Provider1` 비대칭 키와, 해당 공급자에서 `key10_user1`이라는 키를 만듭니다.  
+ 다음 예제에서는 `EKM_Provider1`이라는 확장 가능 키 관리 공급자에 저장된 키 쌍에서 `EKM_askey1` 비대칭 키와, 해당 공급자에서 `key10_user1`이라는 키를 만듭니다.  
   
 ```sql  
 CREATE ASYMMETRIC KEY EKM_askey1   

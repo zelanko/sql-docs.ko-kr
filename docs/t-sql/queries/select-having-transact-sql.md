@@ -60,7 +60,7 @@ ORDER BY SalesOrderID ;
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예제에서는 `HAVING` 절을 사용하여 `SalesAmount` 테이블의 각 `80000`에 대해 `OrderDateKey`을 초과하는 `FactInternetSales` 합계를 검색합니다.  
+ 다음 예제에서는 `HAVING` 절을 사용하여 `FactInternetSales` 테이블의 각 `OrderDateKey`에 대해 `80000`을 초과하는 `SalesAmount` 합계를 검색합니다.  
   
 ```sql
 -- Uses AdventureWorks  

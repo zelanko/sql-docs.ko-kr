@@ -155,7 +155,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 | 인수 | 설명 |
 | -------- | ----------- |
-|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]가 행을 분할하는 데 사용하는 열을 지정합니다. 이 열은 모든 데이터 형식일 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 파티션 열 값을 오름차순으로 정렬합니다. 낮음-높은 순서는 `LEFT` 지정의 `RIGHT`에서 `RANGE`로 진행됩니다. |  
+|*partition_column_name*| [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]가 행을 분할하는 데 사용하는 열을 지정합니다. 이 열은 모든 데이터 형식일 수 있습니다. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 파티션 열 값을 오름차순으로 정렬합니다. 낮음-높은 순서는 `RANGE` 지정의 `LEFT`에서 `RIGHT`로 진행됩니다. |  
 | `RANGE LEFT` | 왼쪽(낮은 값)에서 파티션에 속하는 경계 값을 지정합니다. 기본값은 LEFT입니다. |
 | `RANGE RIGHT` | 오른쪽(높은 값)에서 파티션에 속하는 경계 값을 지정합니다. | 
 | `FOR VALUES` ( *boundary_value* [,...*n*] ) | 파티션에 대한 경계 값을 지정합니다. *boundary_value*는 상수 식입니다. NULL일 수 없습니다. *partition_column_name*의 데이터 형식과 일치하거나 암시적으로 변환할 수 있어야 합니다. 암시적으로 변환하는 동안에는 자를 수 없습니다. 그러면 값의 크기와 배율이 *partition_column_name*의 데이터 형식과 일치하지 않습니다.<br></br><br></br>`PARTITION` 절은 지정하되 경계 값을 지정하지 않으면 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]는 하나의 파티션으로 분할된 테이블을 만듭니다. 해당하는 경우 나중에 두 개의 파티션으로 테이블을 분할할 수 있습니다.<br></br><br></br>하나의 경계 값을 지정한 경우 결과 테이블은 경계 값보다 낮은 값에 대한 파티션 하나와 경계 값보다 높은 값에 대한 파티션 하나 이렇게 두 개의 파티션을 갖습니다. 분할되지 않은 테이블에 파티션을 이동하는 경우 분할되지 않은 테이블은 데이터를 받되 해당 메타데이터의 파티션 경계는 없습니다.| 
@@ -544,7 +544,7 @@ WITH
   
 ### <a name="k-create-a-table-with-date-partitioning"></a><a name="DatePartition"></a> K. 날짜 분할로 테이블 만들기
 
- 다음 예제에서는 `myTable` 열에서 분할하여 `date`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
+ 다음 예제에서는 `date` 열에서 분할하여 `myTable`이라는 새 테이블을 만듭니다. 경계 값에 대해 RANGE RIGHT 및 날짜를 사용하면 각 파티션에 데이터의 월을 배치합니다.  
   
 ```sql
 CREATE TABLE myTable (  

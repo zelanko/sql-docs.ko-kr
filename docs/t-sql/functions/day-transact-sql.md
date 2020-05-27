@@ -35,7 +35,7 @@ ms.locfileid: "68119058"
 
 이 함수는 지정된 *date*의 일(월의 일)을 나타내는 정수를 반환합니다.
   
-모든 [의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]을 참조하세요.
+모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

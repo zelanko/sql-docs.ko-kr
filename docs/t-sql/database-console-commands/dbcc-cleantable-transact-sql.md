@@ -86,7 +86,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-cleantable-to-reclaim-space"></a>A. DBCC CLEANTABLE을 사용하여 공간 반환  
-다음 예에서는 `Production.Document` 예제 데이터베이스의 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블에 대해 DBCC CLEANTABLE을 실행합니다.
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `Production.Document` 테이블에 대해 DBCC CLEANTABLE을 실행합니다.
   
 ```sql  
 DBCC CLEANTABLE (AdventureWorks2012,'Production.Document', 0)  

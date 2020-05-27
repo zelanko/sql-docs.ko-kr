@@ -43,7 +43,7 @@ public java.lang.String getURL()
 ## <a name="remarks"></a>설명  
  이 getURL 메서드는 java.sql.DatabaseMetaData 인터페이스의 getURL 메서드에 의해 지정됩니다.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 데이터베이스와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 경우 이 메서드는 다음 정보가 들어 있는 **문자열** 값을 반환합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 다음 정보가 들어 있는 **문자열** 값을 반환합니다.  
   
 -   URL 값 "jdbc:sqlserver://"  
   

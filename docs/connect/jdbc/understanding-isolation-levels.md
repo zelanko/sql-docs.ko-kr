@@ -55,7 +55,7 @@ ms.locfileid: "69027387"
   
 두 트랜잭션이 각기 동일한 행을 검색할 때 발생할 수 있는 업데이트 손실을 방지하려면 반복 읽기 이상의 격리 수준에서 트랜잭션을 실행해야 합니다. 그런 다음 원래 검색된 값에 따라 행을 업데이트하십시오. 두 트랜잭션이 한 개의 UPDATE 문을 사용하여 행을 업데이트하더라도 업데이트가 이전에 검색된 값에 따라 수행되지 않을 경우 기본 격리 수준인 커밋된 읽기에서는 업데이트 손실이 발생하지 않습니다.  
 
-트랜잭션 격리 수준을 설정하는 데 [SQLServerConnection](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 클래스의 [setTransactionIsolation](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용할 수 있습니다. 이 메서드는 다음과 같은 연결 상수 중 하나를 기반으로 하는 **int** 값을 인수로 사용합니다.  
+트랜잭션 격리 수준을 설정하는 데 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 메서드를 사용할 수 있습니다. 이 메서드는 다음과 같은 연결 상수 중 하나를 기반으로 하는 **int** 값을 인수로 사용합니다.  
 
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
@@ -73,7 +73,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 온라인 설명서에서 "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 격리 수준"을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]의 격리 수준"을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목
 

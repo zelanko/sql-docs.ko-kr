@@ -56,7 +56,7 @@ FILEGROUP_NAME ( filegroup_id )
 *filegroup_id*는 **sys.filegroups** 카탈로그 뷰의 **data_space_id** 열에 해당합니다.  
   
 ## <a name="examples"></a>예  
-이 예에서는 `1` 데이터베이스에 있는 파일 그룹 ID [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 파일 그룹 이름을 반환합니다.  
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 파일 그룹 ID `1`의 파일 그룹 이름을 반환합니다.  
   
 ```  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  

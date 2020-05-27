@@ -43,7 +43,7 @@ DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )
   
 ## <a name="arguments"></a>인수  
  \<partition_by_clause>  
-먼저 [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 파티션으로 나눈 다음, `DENSE_RANK`함수를 각 파티션에 적용합니다. [ 구문은 ](../../t-sql/queries/select-over-clause-transact-sql.md)OVER 절 &#40;Transact-SQL&#41;`PARTITION BY`을 참조하세요.  
+먼저 [FROM](../../t-sql/queries/from-transact-sql.md) 절이 생성한 결과 집합을 파티션으로 나눈 다음, `DENSE_RANK`함수를 각 파티션에 적용합니다. `PARTITION BY` 구문은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요.  
   
  \<order_by_clause>  
 파티션의 행에 `DENSE_RANK` 함수가 적용되는 순서를 결정합니다.  

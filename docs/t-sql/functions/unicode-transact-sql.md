@@ -48,7 +48,7 @@ UNICODE ( 'ncharacter_expression' )
 **int**  
   
 ## <a name="remarks"></a>설명  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 UNICODE 함수는 유니코드 BMP(Basic Multilingual Plane)로 65,535개 문자를 나타낼 수 있는 000000~00FFFF 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 UNICODE가 000000에서 10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 유니코드 지원에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)을 참조하세요. 
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 UNICODE 함수는 유니코드 BMP(Basic Multilingual Plane)로 65,535개 문자를 나타낼 수 있는 000000~00FFFF 범위의 UCS-2 코드 포인트를 반환합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 UNICODE가 000000에서 10FFFF까지 범위의 UTF-16 코드 포인트를 반환합니다. [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 유니코드 지원에 대한 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn)을 참조하세요. 
   
 ## <a name="examples"></a>예  
   

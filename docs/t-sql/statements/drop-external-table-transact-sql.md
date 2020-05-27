@@ -64,7 +64,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>C. 다른 데이터베이스에서 테이블 삭제  
- 다음 예에서는 `SalesPerson` 데이터베이스에서 `EasternDivision` 테이블을 삭제합니다.  
+ 다음 예에서는 `EasternDivision` 데이터베이스에서 `SalesPerson` 테이블을 삭제합니다.  
   
 ```  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  

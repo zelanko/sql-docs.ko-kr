@@ -48,7 +48,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="remarks"></a>설명  
  이 executeQuery 메서드는 java.sql.Statement 인터페이스의 executeQuery 메서드에 의해 지정됩니다.  
   
- 지정된 SQL 문에서 단일 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverexception-class.md) 개체 이외의 개체를 생성하면 [SQLServerException](../../../connect/jdbc/reference/sqlserverresultset-class.md)이 발생합니다.  
+ 지정된 SQL 문에서 단일 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체 이외의 개체를 생성하면 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)이 발생합니다.  
   
  업데이트 횟수가 1보다 크거나 둘 이상의 결과 집합을 생성하는 저장 프로시저 결과를 실행하는 경우 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 메서드를 사용하여 저장 프로시저를 실행합니다.  
   

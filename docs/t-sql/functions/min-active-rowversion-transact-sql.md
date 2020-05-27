@@ -52,7 +52,7 @@ MIN_ACTIVE_ROWVERSION
  MIN_ACTIVE_ROWVERSION 함수는 트랜잭션 격리 수준에 있는 변경 내용의 영향을 받지 않습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 **및**를 사용하여 `MIN_ACTIVE_ROWVERSION`rowversion`@@DBTS` 값을 반환합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
+ 다음 예에서는 `MIN_ACTIVE_ROWVERSION` 및 `@@DBTS`를 사용하여 **rowversion** 값을 반환합니다. 데이터베이스에 활성 트랜잭션이 없으면 값이 달라집니다.  
   
 ```  
 -- Create a table that has a ROWVERSION column in it.  

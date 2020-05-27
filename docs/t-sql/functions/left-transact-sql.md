@@ -51,9 +51,9 @@ LEFT ( character_expression , integer_expression )
  *integer_expression* 매개 변수는 UTF-16 서로게이트 문자를 한 문자로 계산합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **character_expression**이 유니코드가 아닌 문자 데이터 형식인 경우 *varchar*를 반환합니다.  
+ *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
   
- **character_expression**이 유니코드 문자 데이터 형식인 경우 *nvarchar*를 반환합니다.  
+ *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
   
 ## <a name="remarks"></a>설명  
  SC 데이터 정렬을 사용하는 경우 *integer_expression* 매개 변수가 UTF-16 서로게이트 쌍을 한 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
@@ -61,7 +61,7 @@ LEFT ( character_expression , integer_expression )
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-left-with-a-column"></a>A. 열에서 LEFT 사용  
- 다음 예에서는 `Product` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Product` 테이블에서 각 제품 이름에서 가장 왼쪽에 있는 5문자를 반환합니다.  
   
 ```  
 SELECT LEFT(Name, 5)   

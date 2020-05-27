@@ -288,7 +288,7 @@ GO
 ```  
   
 ### <a name="h-assigning-a-value-to-a-user-defined-type-variable-by-invoking-a-method-of-the-type"></a>H. 사용자 정의 형식의 메서드를 호출하여 사용자 정의 형식 변수에 값 할당  
-다음 예제에서는 형식의 **메서드를 호출하여**point`SetXY` 사용자 정의 형식의 값을 설정합니다.  
+다음 예제에서는 형식의 `SetXY` 메서드를 호출하여 **point** 사용자 정의 형식의 값을 설정합니다.  
   
 ```  
 DECLARE @p Point;  

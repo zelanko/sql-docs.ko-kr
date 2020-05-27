@@ -53,7 +53,7 @@ PATINDEX ( '%pattern%' , expression )
  일반적으로 지정된 패턴이 검색되는 열을 나타내는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 문자열 데이터 형식 범주입니다.  
   
 ## <a name="return-types"></a>반환 형식  
-**식**의 데이터 형식이 *varchar(max)* 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+*식*의 데이터 형식이 **varchar(max)** 또는 **nvarchar(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
 ## <a name="remarks"></a>설명  
 *패턴* 또는 *식*이 NULL인 경우 PATINDEX에서 NULL을 반환합니다.  
@@ -85,7 +85,7 @@ position
 ```
   
 ### <a name="b-using-a-pattern-with-patindex"></a>B. PATINDEX와 함께 패턴 사용  
-다음 예에서는 `ensure` 데이터베이스에서 `DocumentSummary` 테이블에 있는 `Document` 열의 특정 행에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 패턴이 시작하는 위치를 찾습니다.  
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ensure` 테이블에 있는 `DocumentSummary` 열의 특정 행에서 `Document` 패턴이 시작하는 위치를 찾습니다.  
   
 ```sql  
 SELECT position = PATINDEX('%ensure%',DocumentSummary)  

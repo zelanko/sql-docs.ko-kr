@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 애플리케이션 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
- 다음 예에서는 `IMPERSONATE` 애플리케이션 역할 `HamithaL`로부터 사용자 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 대한 `AccountsPayable17` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 애플리케이션 역할 `IMPERSONATE`로부터 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   

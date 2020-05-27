@@ -21,7 +21,7 @@ ms.locfileid: "67930312"
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-현재 *데이터베이스에 대한*어플라이언스에서[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
+현재 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 데이터베이스에 대한 *어플라이언스에서* 트랜잭션 로그의 크기를 줄입니다. 트랜잭션 로그를 축소하기 위해 데이터를 조각 모음합니다. 시간이 지남에 따라 데이터베이스 트랜잭션 로그가 조각화되고 비효율적일 수 있습니다. DBCC SHRINKLOG를 사용하여 조각화를 줄이고 로그 크기를 줄입니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

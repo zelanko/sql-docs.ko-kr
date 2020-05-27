@@ -274,9 +274,9 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 다음을 유의하십시오.  
   
--   ListPrice 및 DealerPrice 모두 같은 `money`유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`Price`> 요소의 복합 유형 선언에는 <`row`> 자식 요소가 하나만 있습니다.  
+-   ListPrice 및 DealerPrice 모두 같은 `money`유형이며 두 요소 모두 테이블에서 NULL일 수 있습니다. 따라서 두 요소는 결과 XML에 반환되지 않을 수도 있기 때문에 minOccurs=0 및 maxOccurs=2로 지정된 <`row`> 요소의 복합 유형 선언에는 <`Price`> 자식 요소가 하나만 있습니다.  
   
--   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`xsi:nil`> 요소에 대해 `Price` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `Price` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`nillable`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
+-   결과에서는 `DealerPrice` 값이 테이블에서 NULL이기 때문에 `ListPrice`만 <`Price`> 요소로 반환됩니다. `XSINIL` 매개 변수를 ELEMENTS 지시어로 추가하는 경우 DealerPrice에 해당하는 <`Price`> 요소에 대해 `xsi:nil` 값이 TRUE로 설정된 두 요소가 모두 수신됩니다. 또한 `nillable` 특성이 모두 TRUE로 설정된 인라인 XSD 스키마에서 <`row`> 복합 유형 정의에 있는 두 개의 <`Price`> 자식 요소가 수신됩니다. 다음은 결과의 일부입니다.  
   
  `...`  
   

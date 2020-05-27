@@ -57,7 +57,7 @@ END
 
 ## <a name="example"></a>예제
 
-다음 예제의 샘플 코드에서는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 데이터베이스에 연결합니다. 그런 다음 샘플 데이터를 만들고 매개 변수가 있는 쿼리를 사용하여 Production.Document 테이블을 업데이트합니다. 그런 다음, [SQLServerStatement](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 클래스의 [getResponseBuffering](../../../connect/jdbc/reference/sqlserverstatement-class.md) 메서드를 사용하여 선택 버퍼링 모드를 가져오고 GetLargeDataValue 저장 프로시저를 실행합니다. JDBC 드라이버 버전 2.0 릴리스 이상에서는 기본적으로 responseBuffering 연결 속성이 "adaptive"로 설정됩니다.
+다음 예제의 샘플 코드에서는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 데이터베이스에 연결합니다. 그런 다음 샘플 데이터를 만들고 매개 변수가 있는 쿼리를 사용하여 Production.Document 테이블을 업데이트합니다. 그런 다음, [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 선택 버퍼링 모드를 가져오고 GetLargeDataValue 저장 프로시저를 실행합니다. JDBC 드라이버 버전 2.0 릴리스 이상에서는 기본적으로 responseBuffering 연결 속성이 "adaptive"로 설정됩니다.
 
 마지막으로 샘플 코드는 OUT 매개 변수로 반환된 데이터를 표시하고 스트림에서 `mark` 및 `reset` 메서드를 사용하여 데이터의 부분을 다시 읽는 방법도 보여 줍니다.
 

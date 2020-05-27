@@ -135,7 +135,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ##  <a name="examples"></a><a name="Examples"></a> 예  
   
 ### <a name="a-creating-a-remote-table"></a>A. 원격 테이블 만들기  
- 이 예제에서는 데이터베이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 스키마 `MyOrdersTable`에 대해 `OrderReporting`라는 `Orders` SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `David`인 사용자 `e4n8@3`의 자격 증명을 사용합니다.  
+ 이 예제에서는 데이터베이스 `OrderReporting` 및 스키마 `Orders`에 대해 `MyOrdersTable`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP 원격 테이블을 만듭니다. `OrderReporting` 데이터베이스는 기본 포트 1433에서 수신하는 `SQLA`라는 서버에 있습니다. 서버에 대한 연결에는 암호가 `e4n8@3`인 사용자 `David`의 자격 증명을 사용합니다.  
   
 ```  
 CREATE REMOTE TABLE OrderReporting.Orders.MyOrdersTable  

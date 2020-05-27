@@ -36,9 +36,9 @@ ms.locfileid: "74901870"
 # <a name="create-type-transact-sql"></a>CREATE TYPE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 현재 데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식을 만듭니다. 별칭 데이터 형식의 구현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 시스템 형식을 기반으로 합니다. 사용자 정의 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서 어셈블리의 클래스를 통해 구현됩니다. 사용자 정의 형식을 구현에 바인딩하기 위해서는 우선 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]CREATE ASSEMBLY[를 사용하여 해당 형식의 구현을 포함하는 CLR 어셈블리를 ](../../t-sql/statements/create-assembly-transact-sql.md)에 등록해야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 현재 데이터베이스에 별칭 데이터 형식 또는 사용자 정의 형식을 만듭니다. 별칭 데이터 형식의 구현은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 시스템 형식을 기반으로 합니다. 사용자 정의 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임)에서 어셈블리의 클래스를 통해 구현됩니다. 사용자 정의 형식을 구현에 바인딩하기 위해서는 우선 [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md)를 사용하여 해당 형식의 구현을 포함하는 CLR 어셈블리를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드 실행 기능이 기본적으로 해제되어 있습니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_configure[를 사용하여 ](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)clr enabled Option[을 설정해야만 ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)에서 이러한 참조가 실행됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드 실행 기능이 기본적으로 해제되어 있습니다. 관리 코드 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 [clr enabled Option](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정해야만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조가 실행됩니다.  
  
 > [!NOTE]  
 >  이 항목에서는 .NET Framework CLR을 SQL Server에 통합하는 방법에 대해 설명합니다. Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에는 CLR 통합이 적용되지 않습니다.
@@ -258,7 +258,7 @@ column_name <data_type>
   
 -   클래스는 오버로드된 메서드를 가질 수 있지만 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 아닌 관리 코드 내부에서만 이런 메서드를 호출할 수 있습니다.  
   
--   **assembly_name**이 SAFE 또는 EXTERNAL_ACCESS인 경우에는 정적 멤버를 **const** 또는 *readonly*로 선언해야 합니다.  
+-   *assembly_name*이 SAFE 또는 EXTERNAL_ACCESS인 경우에는 정적 멤버를 **const** 또는 **readonly**로 선언해야 합니다.  
   
  데이터베이스 내의 CLR에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 업로드하는 각 형식에 대한 사용자 정의 형식은 오직 하나만 등록할 수 있습니다. 데이터베이스에 사용자 정의 형식이 존재하는 CLR 형식에 대해 다시 사용자 정의 형식을 만드는 경우 CREATE TYPE에 오류가 발생하면서 실패합니다. 이런 제한은 CLR 형식을 둘 이상의 사용자 정의 형식에 매핑할 수 있는 경우 SQL 형식 확인 과정의 모호성을 피하기 위해 필요합니다.  
   
@@ -295,7 +295,7 @@ FROM varchar(11) NOT NULL ;
 ```  
   
 ### <a name="b-creating-a-user-defined-type"></a>B. 사용자 정의 형식 만들기  
- 다음 예에서는 `Utf8String` 어셈블리 내의 `utf8string`클래스를 참조하는 `utf8string` 형식을 만드는 방법을 보여 줍니다. 형식을 만들기 전에 로컬 데이터베이스에 `utf8string` 어셈블리를 등록합니다. CREATE ASSEMBLY의 이진 부분을 올바른 유효한 설명으로 대체합니다.  
+ 다음 예에서는 `utf8string` 어셈블리 내의 `utf8string`클래스를 참조하는 `Utf8String` 형식을 만드는 방법을 보여 줍니다. 형식을 만들기 전에 로컬 데이터베이스에 `utf8string` 어셈블리를 등록합니다. CREATE ASSEMBLY의 이진 부분을 올바른 유효한 설명으로 대체합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상  
   

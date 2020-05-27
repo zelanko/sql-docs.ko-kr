@@ -69,7 +69,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="remarks"></a>설명  
  UseIS_SRVROLEMEMBER를 사용하여 현재 사용자가 서버 역할의 사용 권한이 필요한 동작을 수행할 수 있는지 여부를 확인할 수 있습니다.  
   
- *login*에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 **에 대한 직접 액세스가 허용 또는 거부되지 않으면** IS_SRVROLEMEMBER**가** NULL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 반환합니다.  
+ *login*에 Contoso\Mary5와 같은 Windows 로그인이 지정된 경우 해당 로그인에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 직접 액세스가 허용 또는 거부되지 않으면 **IS_SRVROLEMEMBER**가 **NULL**을 반환합니다.  
   
  선택적 *login* 매개 변수를 제공하지 않고 *login*이 Windows 도메인 로그인인 경우 Windows 그룹 멤버 자격을 통해 고정 서버 역할의 멤버가 될 수 있습니다. 이러한 간접 멤버 자격을 확인하기 위해 IS_SRVROLEMEMBER는 도메인 컨트롤러에 Windows 그룹 멤버 자격 정보를 요청합니다. 도메인 컨트롤러에 액세스할 수 없거나 도메인 컨트롤러가 응답하지 않으면 **IS_SRVROLEMEMBER**가 사용자 및 사용자의 로컬 그룹만 고려하여 역할 멤버 자격 정보를 반환합니다. 지정된 사용자가 현재 사용자가 아닌 경우 IS_SRVROLEMEMBER가 반환하는 값이 인증자(예: Active Directory)의 마지막 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 업데이트와 다를 수 있습니다.  
   

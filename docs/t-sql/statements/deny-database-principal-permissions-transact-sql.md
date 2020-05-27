@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. 애플리케이션 역할에 대해 사용자에 대한 IMPERSONATE 권한 거부  
- 다음 예에서는 `IMPERSONATE` 애플리케이션 역할 `HamithaL`에 대해 사용자 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 대한 `AccountsPayable17` 권한을 거부합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 애플리케이션 역할 `IMPERSONATE`에 대해 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 거부합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   

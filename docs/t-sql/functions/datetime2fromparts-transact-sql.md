@@ -61,7 +61,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 소수 자릿수 초 값을 지정하는 정수 식입니다.
   
 *전체 자릿수*  
-**에서 반환하는** datetime2`DATETIME2FROMPARTS` 값의 전체 자릿수를 지정하는 정수 식입니다.
+`DATETIME2FROMPARTS`에서 반환하는 **datetime2** 값의 전체 자릿수를 지정하는 정수 식입니다.
   
 ## <a name="return-types"></a>반환 형식
 **datetime2(** *precision* **)**

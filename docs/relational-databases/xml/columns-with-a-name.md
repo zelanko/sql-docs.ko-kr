@@ -127,7 +127,7 @@ WHERE  E.EmployeeID = C.ContactID  AND
 FOR XML PATH;
 ```  
   
- PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함하는 열 이름이 '\@'로 시작하므로 **EmpID** 특성이 `row` 요소에 추가됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 `EmpName` 요소 아래에 `row` 자식을 포함하고 `EmpName` 자식은 `First`, `Middle` 및 `Last` 요소 자식을 갖습니다.  
+ PATH 모드에서 XML을 생성할 때 열 이름이 경로로 사용됩니다. 직원 ID 값을 포함하는 열 이름이 '\@'로 시작하므로 **EmpID** 특성이 `row` 요소에 추가됩니다. 다른 모든 열에는 계층을 나타내는 열 이름에 슬래시 기호('/')가 있습니다. 결과 XML은 `row` 요소 아래에 `EmpName` 자식을 포함하고 `EmpName` 자식은 `First`, `Middle` 및 `Last` 요소 자식을 갖습니다.  
   
 ```xml
 <row EmpID="1">  

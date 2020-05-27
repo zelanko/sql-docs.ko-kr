@@ -68,7 +68,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  만들어진 서버 감사 사양은 CONTROL SERVER 또는 ALTER ANY SERVER AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 감사에 대한 명시적인 액세스가 있는 보안 주체가 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 `HIPAA_Audit` Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
+ 다음 예에서는 `HIPAA_Audit_Specification`이라는 서버 감사 사양을 만듭니다. 이 예에서는 실패한 로그인에 대한 감사 동작 그룹을 삭제하고 `HIPAA_Audit`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 데이터베이스 개체 액세스에 대한 감사 동작 그룹을 추가합니다.  
   
 ```  
 ALTER SERVER AUDIT SPECIFICATION HIPAA_Audit_Specification  

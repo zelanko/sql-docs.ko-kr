@@ -49,9 +49,9 @@ FOR XML EXPLICIT;
   
  결과 XML 문서에서 다음에 유의하십시오.  
   
--   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 특성 목록에 첨부됩니다.  
+-   *AttributeName*이 `Overflow` 열에 대해 지정되어 있지 않고 `xmltext` 지시어가 지정되어 있기 때문에 <`Parent`> 요소의 특성이 묶는 <`overflow`> 요소의 특성 목록에 첨부됩니다.  
   
--   <`PersonID`> 요소의 `xmltext` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
+-   <`xmltext`> 요소의 `PersonID` 특성은 동일 요소 수준에서 검색된 `PersonID` 특성과 충돌하기 때문에 <`xmltext`> 요소의 특성은 `PersonID`가 NULL인 경우에도 무시됩니다. 특성은 일반적으로 오버플로의 동일한 이름의 특성에 우선합니다.  
   
  다음은 결과입니다.  
   

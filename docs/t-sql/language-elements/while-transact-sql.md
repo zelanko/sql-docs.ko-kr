@@ -57,7 +57,7 @@ WHILE Boolean_expression
   
 ## <a name="arguments"></a>인수  
  *Boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md) 또는 **FALSE**를 반환하는 **식**입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
+ **TRUE** 또는 **FALSE**를 반환하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 부울 식이 SELECT 문을 포함하는 경우에는 SELECT 문을 괄호로 묶어야 합니다.  
   
  {*sql_statement* | *statement_block*}  
  문 블록에 정의된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 문 그룹입니다. 문 블록을 정의하려면 흐름 제어 키워드인 BEGIN 및 END를 사용하세요.  

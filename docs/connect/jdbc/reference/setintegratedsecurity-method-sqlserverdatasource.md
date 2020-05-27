@@ -40,7 +40,7 @@ public void setIntegratedSecurity(boolean enable)
  integratedSecurity가 사용되면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>설명  
- **에서 Windows 자격 증명을 사용하여 애플리케이션 사용자를 인증하도록 하려면 “** true[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]”로 설정합니다. “**true**”로 설정할 경우 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 로컬 컴퓨터 자격 증명 캐시에서 컴퓨터 또는 네트워크 로그온 시 이미 제공된 자격 증명을 검색합니다. “**false**”로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 Windows 자격 증명을 사용하여 애플리케이션 사용자를 인증하도록 하려면 “**true**”로 설정합니다. “**true**”로 설정할 경우 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 로컬 컴퓨터 자격 증명 캐시에서 컴퓨터 또는 네트워크 로그온 시 이미 제공된 자격 증명을 검색합니다. “**false**”로 설정하는 경우 사용자 이름과 암호를 입력해야 합니다.  
   
 > [!NOTE]  
 >  이 속성은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 운영 체제에서만 지원됩니다.  

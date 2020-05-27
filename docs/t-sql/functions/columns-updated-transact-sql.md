@@ -30,7 +30,7 @@ ms.locfileid: "75721928"
 # <a name="columns_updated-transact-sql"></a>COLUMNS_UPDATED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-이 함수는 테이블이나 뷰에서 삽입되거나 업데이트된 열을 나타내는 **varbinary** 비트 패턴을 반환합니다. `COLUMNS_UPDATED` INSERT 또는 UPDATE 트리거의 본문 내 어디서나 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 트리거에서 특정 작업을 실행해야 하는지 여부를 테스트합니다.
+이 함수는 테이블이나 뷰에서 삽입되거나 업데이트된 열을 나타내는 **varbinary** 비트 패턴을 반환합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거의 본문 내 어디서나 `COLUMNS_UPDATED`를 사용하여 트리거에서 특정 작업을 실행해야 하는지 여부를 테스트합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED`는 [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT 또는 UPDATE 트리거 내 어디서든 사용합니다.
   
-INFORMATION_SCHEMA.COLUMNS 뷰의 ORDINAL_POSITION 열은 `COLUMNS_UPDATED`에서 반환하는 열의 비트 패턴과 호환되지 않습니다. `COLUMNS_UPDATED`와 호환되는 비트 패턴을 얻으려면 다음 예제와 같이 `ColumnID` 뷰를 쿼리할 때 `COLUMNPROPERTY` 시스템 함수의 `INFORMATION_SCHEMA.COLUMNS` 속성을 참조합니다.
+INFORMATION_SCHEMA.COLUMNS 뷰의 ORDINAL_POSITION 열은 `COLUMNS_UPDATED`에서 반환하는 열의 비트 패턴과 호환되지 않습니다. `COLUMNS_UPDATED`와 호환되는 비트 패턴을 얻으려면 다음 예제와 같이 `INFORMATION_SCHEMA.COLUMNS` 뷰를 쿼리할 때 `COLUMNPROPERTY` 시스템 함수의 `ColumnID` 속성을 참조합니다.
   
 ```sql
 SELECT TABLE_NAME, COLUMN_NAME,  
@@ -184,7 +184,7 @@ GO
 ```  
   
 ### <a name="b-using-columns_updated-to-test-more-than-eight-columns"></a>B. COLUMNS_UPDATED를 사용하여 9개 이상의 열 테스트  
-처음 8개 이외의 테이블 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에서 정확한 비트를 반환하는지 테스트합니다. 다음 예제에서는 `3` 테이블의 `5`, `9` 및 `AdventureWorks2012.Person.Person` 열에 영향을 주는 업데이트를 테스트합니다.
+처음 8개 이외의 테이블 열에 영향을 주는 업데이트를 확인하려면 `SUBSTRING` 함수를 사용하여 `COLUMNS_UPDATED`에서 정확한 비트를 반환하는지 테스트합니다. 다음 예제에서는 `AdventureWorks2012.Person.Person` 테이블의 `3`, `5` 및 `9` 열에 영향을 주는 업데이트를 테스트합니다.
   
 ```sql
 USE AdventureWorks2012;  

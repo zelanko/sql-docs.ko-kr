@@ -38,7 +38,7 @@ SQL Server 데이터 형식을 지정하려면 데이터를 삽입하거나 업�
   
 3.  쿼리를 준비하거나 실행할 때 사용되는 *$params* 배열을 생성합니다. 또한 *$params* 배열의 각 요소는 SQL Server 데이터 형식을 지정할 때 배열이어야 합니다.  
   
-4.  **$params** 배열의 각 하위 배열에서 네 번째 매개 변수로 적절한 *SQLSRV_SQLTYPE_&#42;* 상수를 사용하여 원하는 SQL Server 데이터 형식을 지정합니다. **SQLSRV_SQLTYPE_&#42;** 상수의 전체 목록은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 SQLTYPE 섹션을 참조하세요. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
+4.  *$params* 배열의 각 하위 배열에서 네 번째 매개 변수로 적절한 **SQLSRV_SQLTYPE_&#42;** 상수를 사용하여 원하는 SQL Server 데이터 형식을 지정합니다. **SQLSRV_SQLTYPE_&#42;** 상수의 전체 목록은 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)의 SQLTYPE 섹션을 참조하세요. 예를 들어 아래 코드에서 *$changeDate*, *$rate*및 *$payFrequency* 는 **$params**배열에서 SQL Server 형식 **datetime**, **money** 및 *tinyint* 로 각각 지정됩니다. *$employeeId* 에 대해 SQL Server 형식이 지정되지 않고 정수로 초기화되었기 때문에 기본 SQL Server 형식 **정수** 가 사용됩니다.  
   
     ```  
     $employeeId = 5;  

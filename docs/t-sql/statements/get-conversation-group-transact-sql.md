@@ -77,7 +77,7 @@ ms.locfileid: "72252190"
 ## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은  **문 종결자인 세미콜론(** ;[!INCLUDE[tsql](../../includes/tsql-md.md)])으로 종결되어야 합니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   

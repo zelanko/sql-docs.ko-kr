@@ -41,7 +41,7 @@ TAN ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환될 수 있는 형식을 사용한 **식**이며 라디안의 수로 해석됩니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환될 수 있는 형식을 사용한 [식](../../t-sql/language-elements/expressions-transact-sql.md)이며 라디안의 수로 해석됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  

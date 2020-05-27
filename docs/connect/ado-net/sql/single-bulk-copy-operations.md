@@ -26,7 +26,7 @@ ms.locfileid: "78896593"
 SQL Server 대량 복사 작업을 수행하는 가장 간단한 방법은 데이터베이스에 대해 단일 작업을 수행하는 것입니다. 기본적으로 대량 복사 작업은 격리된 작업으로 수행됩니다. 복사 작업은 트랜잭션되지 않은 방식으로 수행되어 롤백할 수 없습니다.  
   
 > [!NOTE]
->  오류가 발생하여 대량 복사의 일부 또는 전체를 롤백해야 하는 경우 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 관리형 트랜잭션을 사용하거나 기존 트랜잭션 내에서 대량 복사 작업을 수행할 수 있습니다. 연결이 **System.Transactions** 트랜잭션에 암시적으로나 명시적으로 등록된 경우 <xref:System.Transactions>SqlBulkCopy**에서도** 을 사용합니다.  
+>  오류가 발생하여 대량 복사의 일부 또는 전체를 롤백해야 하는 경우 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 관리형 트랜잭션을 사용하거나 기존 트랜잭션 내에서 대량 복사 작업을 수행할 수 있습니다. 연결이 **System.Transactions** 트랜잭션에 암시적으로나 명시적으로 등록된 경우 **SqlBulkCopy**에서도 <xref:System.Transactions>을 사용합니다.  
 >   
 >  자세한 내용은 [트랜잭션 및 대량 복사 작업](transaction-bulk-copy-operations.md)을 참조하세요.  
   

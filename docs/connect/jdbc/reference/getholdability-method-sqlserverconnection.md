@@ -25,7 +25,7 @@ ms.locfileid: "67982934"
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체의 현재 유지 기능을 검색합니다.  
+  이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 유지 기능을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

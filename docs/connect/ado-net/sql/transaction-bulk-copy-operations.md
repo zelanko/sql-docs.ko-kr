@@ -55,7 +55,7 @@ ms.locfileid: "78896000"
 [!code-csharp[DataWorks SqlBulkCopyOptions_UseInternalTransaction#1](~/../sqlclient/doc/samples/SqlBulkCopyOptions_UseInternalTransaction.cs#1)]
   
 ## <a name="using-existing-transactions"></a>기존 트랜잭션 사용  
-<xref:Microsoft.Data.SqlClient.SqlTransaction> 생성자에서 기존 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 개체를 매개 변수로 지정할 수 있습니다. 이 상황에서는 대량 복사 작업이 기존 트랜잭션에서 수행되며 트랜잭션 상태가 변경되지 않습니다. 즉, 커밋되거나 중단되지 않습니다. 따라서 애플리케이션이 다른 데이터베이스 작업과 함께 대량 복사 작업을 트랜잭션에 포함할 수 있습니다. 그러나 <xref:Microsoft.Data.SqlClient.SqlTransaction> 개체를 지정하지 않고 null 참조를 전달하며 연결에 활성 트랜잭션이 있는 경우 예외가 throw됩니다.  
+<xref:Microsoft.Data.SqlClient.SqlBulkCopy> 생성자에서 기존 <xref:Microsoft.Data.SqlClient.SqlTransaction> 개체를 매개 변수로 지정할 수 있습니다. 이 상황에서는 대량 복사 작업이 기존 트랜잭션에서 수행되며 트랜잭션 상태가 변경되지 않습니다. 즉, 커밋되거나 중단되지 않습니다. 따라서 애플리케이션이 다른 데이터베이스 작업과 함께 대량 복사 작업을 트랜잭션에 포함할 수 있습니다. 그러나 <xref:Microsoft.Data.SqlClient.SqlTransaction> 개체를 지정하지 않고 null 참조를 전달하며 연결에 활성 트랜잭션이 있는 경우 예외가 throw됩니다.  
   
 오류가 발생하여 전체 대량 복사 작업을 롤백해야 하는 경우 또는 롤백할 수 있는 더 큰 프로세스의 일부로 대량 복사를 실행해야 하는 경우 <xref:Microsoft.Data.SqlClient.SqlTransaction> 개체를 <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 생성자로 제공할 수 있습니다.  
   

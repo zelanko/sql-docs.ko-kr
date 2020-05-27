@@ -78,7 +78,7 @@ FROM OldTable;
 ```  
   
 ## <a name="examples"></a>예  
- 다음 예는 `Contact` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 행을 `NewContact`라는 새 테이블에 삽입합니다. IDENTITY 함수는 `NewContact` 테이블에서 ID를 1 대신 100부터 시작하는 데 사용됩니다.  
+ 다음 예는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Contact` 테이블에 있는 모든 행을 `NewContact`라는 새 테이블에 삽입합니다. IDENTITY 함수는 `NewContact` 테이블에서 ID를 1 대신 100부터 시작하는 데 사용됩니다.  
   
 ```  
 USE AdventureWorks2012;  

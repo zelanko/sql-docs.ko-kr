@@ -57,12 +57,12 @@ ALTER FULLTEXT CATALOG catalog_name
  WITH ACCENT_SENSITIVITY = {ON|OFF}  
  변경할 카탈로그의 전체 텍스트 인덱싱 및 쿼리에 대한 악센트 구분 여부를 지정합니다.  
   
- 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 **catalog_name**에 대해 *accentsensitivity* 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
+ 전체 텍스트 카탈로그의 현재 악센트 구분 속성 설정을 확인하려면 *catalog_name*에 대해 **accentsensitivity** 속성 값을 가진 FULLTEXTCATALOGPROPERTY 함수를 사용합니다. 함수가 '1'을 반환하면 전체 텍스트 카탈로그가 악센트를 구분하고, '0'을 반환하면 악센트를 구분하지 않습니다.  
   
  카탈로그와 데이터베이스의 악센트 구분 기본값은 동일합니다.  
   
  REORGANIZE  
- 인덱싱 과정에서 만들어진 작은 인덱스를 하나의 큰 인덱스로 병합하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]master merge*을 수행하도록* 에 알려줍니다. 전체 텍스트 인덱스 조각을 병합하면 성능이 향상되고 디스크 및 메모리 리소스를 확보할 수 있습니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
+ 인덱싱 과정에서 만들어진 작은 인덱스를 하나의 큰 인덱스로 병합하는 *master merge*을 수행하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 알려줍니다. 전체 텍스트 인덱스 조각을 병합하면 성능이 향상되고 디스크 및 메모리 리소스를 확보할 수 있습니다. 전체 텍스트 카탈로그를 자주 변경하는 경우에는 이 명령을 주기적으로 사용하여 전체 텍스트 카탈로그를 다시 구성할 수 있습니다.  
   
  REORGANIZE는 내부 인덱스 및 카탈로그 구조도 최적화합니다.  
   

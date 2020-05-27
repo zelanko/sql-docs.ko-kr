@@ -71,7 +71,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>민감도 데이터 분류 메타데이터
 
-버전 5.8.0부터 사용자가 Microsoft SQL Server 2019에서 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`를 사용하여(Microsoft ODBC Driver 17.4.2 이상 필요) [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있는 새 문 특성 `PDOStatement::getColumnMeta`을 사용할 수 있습니다.
+버전 5.8.0부터 사용자가 Microsoft SQL Server 2019에서 `PDOStatement::getColumnMeta`를 사용하여(Microsoft ODBC Driver 17.4.2 이상 필요) [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있는 새 문 특성 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`을 사용할 수 있습니다.
 
 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` 특성은 기본적으로 `false`이지만 `true`로 설정된 경우 앞서 언급한 배열 필드 `flags`에는 민감도 데이터 분류 메타데이터(있는 경우)가 채워집니다. 
 
@@ -93,7 +93,7 @@ ADD SENSITIVITY CLASSIFICATION TO [Patients].SSN WITH (LABEL = 'Highly Confident
 ADD SENSITIVITY CLASSIFICATION TO [Patients].BirthDate WITH (LABEL = 'Confidential Personal Data', INFORMATION_TYPE = 'Birthdays')
 ```
 
-메타데이터에 액세스하려면 아래 코드 조각과 같이 `PDOStatement::getColumnMeta`을 true로 설정한 후 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`를 사용합니다.
+메타데이터에 액세스하려면 아래 코드 조각과 같이 `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION`을 true로 설정한 후 `PDOStatement::getColumnMeta`를 사용합니다.
 
 ```
 $options = array(PDO::SQLSRV_ATTR_DATA_CLASSIFICATION => true);

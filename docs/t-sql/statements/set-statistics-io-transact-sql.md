@@ -35,7 +35,7 @@ ms.locfileid: "67941844"
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 표시되도록 합니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 의해 생성된 디스크 작동 크기에 대한 정보가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 표시되도록 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

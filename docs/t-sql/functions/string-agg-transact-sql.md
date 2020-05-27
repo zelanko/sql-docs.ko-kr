@@ -96,7 +96,7 @@ FROM Person.Person;
 |--- |
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
-`NULL` 셀에 있는 `name` 값은 결과에 반환되지 않습니다.   
+`name` 셀에 있는 `NULL` 값은 결과에 반환되지 않습니다.   
 
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.       
@@ -162,7 +162,7 @@ GROUP BY a.articleId, title;
 |177 |Dogs continue to be more popular than cats |polls,animals|
 
 > [!NOTE]
-> `GROUP BY` 함수가 `STRING_AGG` 목록의 유일한 항목이 아닌 경우 `SELECT` 절이 필요합니다.
+> `STRING_AGG` 함수가 `SELECT` 목록의 유일한 항목이 아닌 경우 `GROUP BY` 절이 필요합니다.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 

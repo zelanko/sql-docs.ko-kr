@@ -68,7 +68,7 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 표준 시간대 오프셋의 분 부분을 지정하는 정수 식입니다.  
   
 *전체 자릿수*  
-**가 반환하는** datetimeoffset`DATETIMEOFFSETFROMPARTS` 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
+`DATETIMEOFFSETFROMPARTS`가 반환하는 **datetimeoffset** 값의 전체 자릿수를 지정하는 정수 리터럴 값입니다.  
   
 ## <a name="return-types"></a>반환 형식
 **datetimeoffset(** *precision* **)**  

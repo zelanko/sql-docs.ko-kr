@@ -107,7 +107,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 취소  
- 다음 예에서는 `VIEW DEFINITION` 로그인 `MyAg`에 대해 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -116,7 +116,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>B. CASCADE를 지정하여 TAKE OWNERSHIP 권한 취소  
- 다음 예에서는 `TAKE OWNERSHIP` 사용자 `MyAg`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 MyAg에 대한 TAKE OWNERSHIP을 부여한 모든 보안 주체로부터 가용성 그룹 `PKomosinski`에 대한 `PKomosinski` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `TAKE OWNERSHIP`에 대해 `MyAg`가 MyAg에 대한 TAKE OWNERSHIP을 부여한 모든 보안 주체로부터 가용성 그룹 `PKomosinski`에 대한 `PKomosinski` 권한을 취소합니다.  
   
 ```  
 USE master;  

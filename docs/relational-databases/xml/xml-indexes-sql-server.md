@@ -104,7 +104,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  쿼리 프로세서에서는 [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) 를 포함하는 쿼리에 대해 기본 XML 인덱스를 사용하고 기본 인덱스 자체에서 스칼라 값이나 XML 하위 트리를 반환합니다. 이 인덱스는 XML 인스턴스를 재구성하는 데 필요한 모든 정보를 저장합니다.  
   
- 예를 들어 다음 쿼리는 `CatalogDescription`**테이블의** xml `ProductModel` 형식 열에 저장된 요약 정보를 반환합니다. 이 쿼리는 카탈로그 설명에 <`Summary`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Features`> 정보를 반환합니다.  
+ 예를 들어 다음 쿼리는 `CatalogDescription`**테이블의** xml `ProductModel` 형식 열에 저장된 요약 정보를 반환합니다. 이 쿼리는 카탈로그 설명에 <`Features`> 설명도 저장되어 있는 제품 모델에 대해서만 <`Summary`> 정보를 반환합니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -167,7 +167,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//author[LastName="someName"]` - <`LastName`> 요소의 값은 알지만 <`author`> 부모가 아무 곳에서나 발생할 수 있는 경우  
   
--   `/book[@* = "someValue"]` - 쿼리가 `book` 값이 있는 일부 특성을 가진 <`"someValue"`> 요소를 찾는 경우  
+-   `/book[@* = "someValue"]` - 쿼리가 `"someValue"` 값이 있는 일부 특성을 가진 <`book`> 요소를 찾는 경우  
   
  다음 쿼리에서는 `ContactID` 테이블에서 `Contact` 를 반환합니다. `WHERE` 절은 `AdditionalContactInfo`**xml** 유형 열에서 값을 찾는 필터를 지정합니다. 연락처 ID는 해당되는 추가 연락처 정보 XML BLOB에 특정 전화 번호가 포함되는 경우에만 반환됩니다. <`telephoneNumber`> 요소가 XML의 아무 위치에서나 나타날 수 있기 때문에 경로 식은 하위 또는 자체 축을 지정합니다.  
   

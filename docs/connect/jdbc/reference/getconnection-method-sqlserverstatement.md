@@ -25,7 +25,7 @@ ms.locfileid: "67952681"
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 생성한 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 검색합니다.  
+  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 생성한 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

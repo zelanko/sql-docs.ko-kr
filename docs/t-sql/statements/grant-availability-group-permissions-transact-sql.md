@@ -100,7 +100,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 부여  
- 다음 예에서는 `VIEW DEFINITION` 로그인 `MyAg`에 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 부여합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
- 다음 예에서는 `TAKE OWNERSHIP`으로 `MyAg` 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 가용성 그룹 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
+ 다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `MyAg`에 가용성 그룹 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -119,7 +119,7 @@ GO
 ```  
   
 ### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 가용성 그룹에 대한 CONTROL 권한 부여  
- 다음 예에서는 `CONTROL` 사용자 `MyAg`에 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `PKomosinski` 권한을 부여합니다. CONTROL 권한이 있으면 가용성 그룹의 소유자가 아니더라도 가용성 그룹에 대한 완벽한 로그인 제어를 할 수 있습니다. 소유권을 변경하려면 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `CONTROL`에 가용성 그룹 `MyAg`에 대한 `PKomosinski` 권한을 부여합니다. CONTROL 권한이 있으면 가용성 그룹의 소유자가 아니더라도 가용성 그룹에 대한 완벽한 로그인 제어를 할 수 있습니다. 소유권을 변경하려면 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.  
   
 ```  
 USE master;  

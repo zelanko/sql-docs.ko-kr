@@ -27,13 +27,13 @@ ms.locfileid: "69027768"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>SQLXML 개체를 사용하여 XML 데이터 읽기 및 쓰기  
  다음 목록은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 메서드를 사용하여 SQLXML 개체를 통해 XML 데이터를 읽고 쓰는 방법에 대해 설명합니다.  
   
--   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. SQLXML 개체에 **xml** 데이터를 추가하려면 SQLXML 인터페이스에 지정된 메서드 setResult, setCharacterStream, setBinaryStream 또는 setString 중 하나를 호출합니다.  
+-   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. SQLXML 개체에 **xml** 데이터를 추가하려면 SQLXML 인터페이스에 지정된 메서드 setResult, setCharacterStream, setBinaryStream 또는 setString 중 하나를 호출합니다.  
   
 -   SQLXML 개체 자체를 검색하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스 또는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 getSQLXML 메서드를 사용합니다.  
   
 -   SQLXML 개체에서 **xml** 데이터를 검색하려면 SQLXML 인터페이스에 지정된 메서드 getSource, getCharacterStream, getBinaryStream 또는 getString중 하나를 사용합니다.  
   
--   SQLXML 개체의 **xml** 데이터를 업데이트하려면 [SQLServerResultSet](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 클래스의 [updateSQLXML](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 사용합니다.  
+-   SQLXML 개체의 **xml** 데이터를 업데이트하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 메서드를 사용합니다.  
   
 -   **xml** 유형의 데이터베이스 테이블 열에 SQLXML 개체를 저장하려면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스 또는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 setSQLXML 메서드를 사용합니다.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "69027768"
   
 -   **메서드 이름** 열은 JDBC API에서 지원하는 getter, setter 및 updater 메서드를 나타냅니다.  
   
--   **Getter SQLXML 개체** 열은 SQLXML 개체를 나타내는데, 이 개체는 [SQLServerCallableStatement](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 클래스의 [getSQLXML](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 메서드 또는 [SQLServerResultSet](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 클래스의 [getSQLXML](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드에 의해 생성됩니다.  
+-   **Getter SQLXML 개체** 열은 SQLXML 개체를 나타내는데, 이 개체는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlservercallablestatement.md) 메서드 또는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getSQLXML](../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md) 메서드에 의해 생성됩니다.  
   
--   **Setter SQLXML 개체** 열은 SQLXML 개체를 나타내는데, 이 개체는 [SQLServerConnection](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드에 의해 생성됩니다. 아래 setter 메서드는 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드에 의해 생성된 SQLXML 개체만 사용합니다.  
+-   **Setter SQLXML 개체** 열은 SQLXML 개체를 나타내는데, 이 개체는 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드에 의해 생성됩니다. 아래 setter 메서드는 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드에 의해 생성된 SQLXML 개체만 사용합니다.  
   
 |메서드 이름|Getter SQLXML 개체<br /><br /> (읽기 가능)|Setter SQLXML 개체<br /><br /> (쓰기 가능)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  

@@ -20,7 +20,7 @@ ms.locfileid: "68015137"
 # <a name="connecting-to-the-server"></a>서버에 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 연결하기 위한 옵션 및 절차를 설명합니다.  
+이 섹션의 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하기 위한 옵션 및 절차를 설명합니다.  
 
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 Windows 인증 또는 SQL Server 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. 기본적으로 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 는 Windows 인증을 사용하여 서버에 연결합니다.  
 

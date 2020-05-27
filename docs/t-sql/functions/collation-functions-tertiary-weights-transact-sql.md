@@ -42,10 +42,10 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>인수  
 *non_Unicode_character_string_expression*  
-3차 SQL 데이터 정렬에 정의된 [char](../../t-sql/language-elements/expressions-transact-sql.md), **varchar** 또는 **varchar(max)** 형식의 문자열 **식**입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
+3차 SQL 데이터 정렬에 정의된 **char**, **varchar** 또는 **varchar(max)** 형식의 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이러한 데이터 정렬의 목록은 주의를 참조하세요.
   
 ## <a name="return-types"></a>반환 형식
-`TERTIARY_WEIGHTS`는 **non_Unicode_character_string_expression**이 *char* 또는 **varchar**인 경우 **varbinary**를 반환하고, **non_Unicode_character_string_expression**이 *varchar(max)* 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
+`TERTIARY_WEIGHTS`는 *non_Unicode_character_string_expression*이 **char** 또는 **varchar**인 경우 **varbinary**를 반환하고, *non_Unicode_character_string_expression*이 **varchar(max)** 데이터 형식을 가진 경우 **varbinary(max)** 를 반환합니다.
   
 ## <a name="remarks"></a>설명  
 `TERTIARY_WEIGHTS`는 SQL 3차 컬렉션이 *non_Unicode_character_string_expression*을 정의하지 않는 경우 NULL을 반환합니다. 이 표에서는 SQL 3차 데이터 정렬을 보여 줍니다.
@@ -85,7 +85,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-`TERTIARY_WEIGHTS`char **,** varchar**또는**varchar(max)**열 값에 정의되는 계산 열 정의에**를 사용합니다. 계산 열과 **char**, **varchar** 또는 **varchar(max)** 열 모두에서 인덱스 정의는 쿼리의 ORDER BY 절이 해당 **char**, **varchar** 또는 **varchar(max)** 열을 지정하는 경우 성능을 향상시킬 수 있습니다.
+**char**, **varchar** 또는 **varchar(max)** 열 값에 정의되는 계산 열 정의에 `TERTIARY_WEIGHTS`를 사용합니다. 계산 열과 **char**, **varchar** 또는 **varchar(max)** 열 모두에서 인덱스 정의는 쿼리의 ORDER BY 절이 해당 **char**, **varchar** 또는 **varchar(max)** 열을 지정하는 경우 성능을 향상시킬 수 있습니다.
   
 ## <a name="examples"></a>예  
 이 예에서는 `TERTIARY_WEIGHTS` 함수를 `char` 열의 값에 적용하는 계산 열을 테이블에 만듭니다.

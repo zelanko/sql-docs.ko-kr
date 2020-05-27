@@ -98,7 +98,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 가용성 그룹에 대한 VIEW DEFINITION 권한 거부  
- 다음 예에서는 `VIEW DEFINITION` 로그인 `MyAg`에 대해 가용성 그룹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 거부합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 거부합니다.  
   
 ```  
 USE master;  
@@ -107,7 +107,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
- 다음 예에서는 `TAKE OWNERSHIP` 옵션으로 `MyAg` 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 가용성 그룹 `PKomosinski`에 대한 `CASCADE` 권한을 거부합니다.  
+ 다음 예에서는 `TAKE OWNERSHIP` 옵션으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `MyAg`에 대해 가용성 그룹 `PKomosinski`에 대한 `CASCADE` 권한을 거부합니다.  
   
 ```  
 USE master;  

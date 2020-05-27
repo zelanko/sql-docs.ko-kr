@@ -45,7 +45,7 @@ ms.locfileid: "68099020"
  **integer**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `SELECT`를 사용하여 `@@TEXTSIZE` 문을 통해 값이 변경되기 이전과 이후의 `SET``TEXTSIZE` 값을 표시합니다.  
+ 다음 예에서는 `SELECT`를 사용하여 `SET``TEXTSIZE` 문을 통해 값이 변경되기 이전과 이후의 `@@TEXTSIZE` 값을 표시합니다.  
   
 ```  
 -- Set the TEXTSIZE option to the default size of 4096 bytes.  

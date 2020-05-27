@@ -128,7 +128,7 @@ sqlsrv_close($conn);
 
 ## <a name="sensitivity-data-classification-metadata"></a>민감도 데이터 분류 메타데이터
 
-사용자가 `DataClassification`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있도록 새 옵션인 `sqlsrv_field_metadata`이 버전 5.8.0에 도입되었습니다.
+사용자가 `sqlsrv_field_metadata`를 사용하여(Microsoft ODBC Driver 17.4.2 이상이 필요함) Microsoft SQL Server 2019에서 [민감도 데이터 분류 메타데이터](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4)에 액세스할 수 있도록 새 옵션인 `DataClassification`이 버전 5.8.0에 도입되었습니다.
 
 기본적으로 `DataClassification`이라는 옵션은 `false`이지만 `true`로 설정하면 `sqlsrv_field_metadata`에서 반환하는 배열이 민감도 데이터 분류 메타데이터(있는 경우)로 채워집니다. 
 
@@ -213,7 +213,7 @@ Array
 )
 ```
 
-`sqlsrv_query` 대신 `sqlsrv_prepare`를 사용 중인 경우 위 코드 조각을 다음과 같이 수정할 수 있습니다.
+`sqlsrv_prepare` 대신 `sqlsrv_query`를 사용 중인 경우 위 코드 조각을 다음과 같이 수정할 수 있습니다.
 
 ```
 $tableName = 'Patients';

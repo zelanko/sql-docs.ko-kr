@@ -38,7 +38,7 @@ public javax.naming.Reference getReference()
  참조 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 getReference 메서드는 javax.naming.Referenceable 인터페이스의 getReference 메서드에 의해 지정됩니다. 이 메서드는 [SQLServerDataSource](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 클래스의 [getReference](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 메서드를 재정의합니다.  
+ 이 getReference 메서드는 javax.naming.Referenceable 인터페이스의 getReference 메서드에 의해 지정됩니다. 이 메서드는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 [getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md) 메서드를 재정의합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnectionPoolDataSource 메서드](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>예  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. 뷰에 대한 SELECT 권한 부여  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 `Sylvester1` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Sylvester1` 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
   
 ```  
 USE AdventureWorks2012;  

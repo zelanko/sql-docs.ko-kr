@@ -42,7 +42,7 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환할 수 있는 형식의 **식**입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
+**float** 형식 또는 float로 암시적으로 변환할 수 있는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. -1.00에서 1.00까지의 값만 유효합니다. 값이 이 범위를 벗어나면 NULL이 반환되고 ASIN에서 도메인 오류가 보고됩니다.
   
 ## <a name="return-types"></a>반환 형식  
 **float**

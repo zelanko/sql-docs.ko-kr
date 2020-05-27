@@ -26,7 +26,7 @@ ms.locfileid: "67955128"
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삭제를 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -60,7 +60,7 @@ public boolean deletesAreDetected(int type)
 ## <a name="return-value"></a>Return Value  
  간격이 삭제된 행을 대체하면 **true**입니다. 삭제된 행이 제거되면 **false**입니다.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 데이터베이스와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -40,7 +40,7 @@ POWER ( float_expression , y )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *y*  
  *float_expression*의 거듭제곱입니다. *y*는 **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 식일 수 있습니다.  
@@ -149,7 +149,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-power-to-return-the-cube-of-a-number"></a>4\. POWER를 사용하여 숫자의 세제곱 반환  
- 다음 예에서는 `POWER`의 세제곱에 대한 `2.0` 결과를 반환합니다.  
+ 다음 예에서는 `2.0`의 세제곱에 대한 `POWER` 결과를 반환합니다.  
   
 ```  
 SELECT POWER(2.0, 3);  

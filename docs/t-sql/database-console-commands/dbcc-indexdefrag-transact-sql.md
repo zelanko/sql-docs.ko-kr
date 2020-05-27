@@ -113,7 +113,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
-다음 예제에서는 `PK_Product_ProductID` 데이터베이스의 `Production.Product` 테이블에서 `AdventureWorks` 인덱스의 모든 파티션을 조각 모음합니다.
+다음 예제에서는 `AdventureWorks` 데이터베이스의 `Production.Product` 테이블에서 `PK_Product_ProductID` 인덱스의 모든 파티션을 조각 모음합니다.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

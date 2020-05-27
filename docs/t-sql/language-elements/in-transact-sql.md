@@ -174,7 +174,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-using-in-and-not-in"></a>D. IN 및 NOT IN 사용  
- 다음 예제에서는 `FactInternetSales` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하는 모든 항목을 `FactInternetSales` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -184,7 +184,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- 다음 예제에서는 `FactInternetSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `DimSalesReason` 테이블에서 찾습니다.  
+ 다음 예제에서는 `DimSalesReason` 테이블의 `SalesReasonKey` 값에 일치하지 않는 모든 항목을 `FactInternetSalesReason` 테이블에서 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  
@@ -195,7 +195,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ```  
   
 ### <a name="e-using-in-with-an-expression-list"></a>E. 식 목록과 함께 IN 사용  
- 다음 예제에서는 이름이 `DimEmployee` 또는 `Mike`인 직원을 위한 `Michael` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
+ 다음 예제에서는 이름이 `Mike` 또는 `Michael`인 직원을 위한 `DimEmployee` 테이블에서 영업 사원의 모든 ID를 찾습니다.  
   
 ```  
 -- Uses AdventureWorks  

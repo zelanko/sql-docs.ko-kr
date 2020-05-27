@@ -47,7 +47,7 @@ FILE_ID ( file_name )
   
 ## <a name="arguments"></a>인수  
 *file_name*  
-반환될 파일 ID 값 **가 포함된 파일의 논리적 이름을 나타내는** sysname`FILE_ID`형식 식입니다.  
+반환될 파일 ID 값 `FILE_ID`가 포함된 파일의 논리적 이름을 나타내는 **sysname**형식 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **smallint**  
@@ -55,12 +55,12 @@ FILE_ID ( file_name )
 ## <a name="remarks"></a>설명  
 *file_name*은 sys.master_files 또는 sys.database_files 카탈로그 뷰의 name 열에 표시되는 논리적 파일 이름과 일치합니다.  
 
-`FILE_ID`file_name`NULL`이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 *는* 을 반환합니다.
+*file_name*이 현재 데이터베이스 구성 요소 파일의 논리적 이름과 일치하지 않으면 `FILE_ID`는 `NULL`을 반환합니다.
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그에 할당되는 파일 ID 번호는 32767보다 큽니다. `FILE_ID` 함수는 **smallint** 반환 형식이므로 `FILE_ID`는 전체 텍스트 파일을 지원하지 않습니다. 대신 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)를 사용하십시오.  
   
 ## <a name="examples"></a>예  
-이 예에서는 `AdventureWorks_Data` 데이터베이스의 구성 요소 파일인 `ADVENTUREWORKS2012` 파일의 파일 ID 값을 반환합니다.  
+이 예에서는 `ADVENTUREWORKS2012` 데이터베이스의 구성 요소 파일인 `AdventureWorks_Data` 파일의 파일 ID 값을 반환합니다.  
 
 ```sql  
 USE AdventureWorks2012;  

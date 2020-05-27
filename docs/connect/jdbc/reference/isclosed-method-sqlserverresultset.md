@@ -30,7 +30,7 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>Return Value  
- 이 **SQLServerResultSet** 개체가 닫히면 [true](../../../connect/jdbc/reference/sqlserverresultset-class.md)이고, 계속 열려 있으면 **false**입니다.  
+ 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 닫히면 **true**이고, 계속 열려 있으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

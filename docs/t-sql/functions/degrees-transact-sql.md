@@ -41,7 +41,7 @@ DEGREES ( numeric_expression )
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
-[bit](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 **expression**입니다.  
+**bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
 데이터 형식이 *numeric_expression* 데이터 형식과 일치하는 값을 반환합니다.  

@@ -92,7 +92,7 @@ sqlsrv_cancel( $stmt);
 ```  
   
 ## <a name="comments"></a>주석  
-[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 조합을 사용하여 준비되고 실행되는 명령문은 **sqlsrv_cancel**을 호출한 후 **sqlsrv_execute**를 사용하여 다시 실행될 수 있습니다. [sqlsrv_cancel](../../connect/php/sqlsrv-query.md)을 호출한 후에는 **sqlsrv_query**로 실행되는 명령문을 다시 실행할 수 없습니다.  
+[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 및 [sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 조합을 사용하여 준비되고 실행되는 명령문은 **sqlsrv_cancel**을 호출한 후 **sqlsrv_execute**를 사용하여 다시 실행될 수 있습니다. **sqlsrv_cancel**을 호출한 후에는 [sqlsrv_query](../../connect/php/sqlsrv-query.md)로 실행되는 명령문을 다시 실행할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)

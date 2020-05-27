@@ -38,7 +38,7 @@ public final int getFetchDirection()
 ```  
   
 ## <a name="return-value"></a>Return Value  
- **setFetchDirection** 메서드로 지정된 인출 방향을 나타내는 [int](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)입니다.  
+ [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md) 메서드로 지정된 인출 방향을 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

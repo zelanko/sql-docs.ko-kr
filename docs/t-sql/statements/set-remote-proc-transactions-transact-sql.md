@@ -60,7 +60,7 @@ SET REMOTE_PROC_TRANSACTIONS { ON | OFF }
   
  REMOTE_PROC_TRANSACTIONS 옵션을 OFF로 설정하면 원격 저장 프로시저가 로컬 트랜잭션의 일부로 호출되지 않습니다. 원격 저장 프로시저에서 수정한 내용은 저장 프로시저가 완료될 때 커밋되거나 롤백됩니다. 이후 원격 저장 프로시저를 호출한 연결에서 실행한 COMMIT TRANSACTION이나 ROLLBACK TRANSACTION 문은 프로시저에서 완료한 처리에 영향을 주지 않습니다.  
   
- REMOTE_PROC_TRANSACTIONS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_addserver**를 사용하여 원격 서버로 정의된**  인스턴스에 대해 호출되는 원격 저장 프로시저에만 영향을 주는 호환성 옵션입니다. 이 옵션은 **sp_addlinkedserver**를 사용하여 연결된 서버로 정의된 인스턴스에서 저장 프로시저를 실행하는 분산 쿼리에는 적용되지 않습니다.  
+ REMOTE_PROC_TRANSACTIONS 옵션은 **sp_addserver**를 사용하여 원격 서버로 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 호출되는 원격 저장 프로시저에만 영향을 주는 호환성 옵션입니다. 이 옵션은 **sp_addlinkedserver**를 사용하여 연결된 서버로 정의된 인스턴스에서 저장 프로시저를 실행하는 분산 쿼리에는 적용되지 않습니다.  
   
  SET REMOTE_PROC_TRANSACTIONS 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   

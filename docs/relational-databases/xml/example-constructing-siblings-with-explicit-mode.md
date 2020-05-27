@@ -33,7 +33,7 @@ ms.locfileid: "68006826"
 <OrderHeader ...</OrderHeader>  
 ```  
   
- 다음 EXPLICIT 모드 쿼리는 이 XML을 생성합니다. 이 쿼리는 <`Tag`> 요소, <`OrderHeader`> 요소 및 <`SalesPerson`> 요소에 대해 `OrderDetail` 값을 각각 1, 2 및 3으로 지정합니다. <`SalesPerson`>과 <`OrderDetail`>은 형제이기 때문에 이 쿼리는 같은 `Parent` 태그 값으로 1을 지정하여 <`OrderHeader`> 요소를 식별합니다.  
+ 다음 EXPLICIT 모드 쿼리는 이 XML을 생성합니다. 이 쿼리는 <`OrderHeader`> 요소, <`SalesPerson`> 요소 및 <`OrderDetail`> 요소에 대해 `Tag` 값을 각각 1, 2 및 3으로 지정합니다. <`SalesPerson`>과 <`OrderDetail`>은 형제이기 때문에 이 쿼리는 같은 `Parent` 태그 값으로 1을 지정하여 <`OrderHeader`> 요소를 식별합니다.  
   
 ```  
 USE AdventureWorks2012;  

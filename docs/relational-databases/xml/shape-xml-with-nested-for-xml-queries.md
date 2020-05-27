@@ -62,9 +62,9 @@ for XML AUTO, TYPE, XMLSCHEMA
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   외부 SELECT 문은 `Product`ProductID **특성과 두 개의 <** > 자식 요소가 있는 <`Price`> 요소를 생성합니다.  
+-   외부 SELECT 문은 **ProductID** 특성과 두 개의 <`Price`> 자식 요소가 있는 <`Product`> 요소를 생성합니다.  
   
--   두 개의 내부 SELECT 문은 각각 `Price`PriceType **특성과 제품 가격을 반환하는 XML이 포함된 두 개의 <** > 요소를 생성합니다.  
+-   두 개의 내부 SELECT 문은 각각 **PriceType** 특성과 제품 가격을 반환하는 XML이 포함된 두 개의 <`Price`> 요소를 생성합니다.  
   
 -   외부 SELECT 문에 있는 XMLSCHEMA 지시어는 결과 XML의 셰이프를 기술하는 인라인 XSD 스키마를 생성합니다.  
   

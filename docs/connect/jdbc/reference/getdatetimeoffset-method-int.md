@@ -43,7 +43,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>설명  
- [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 매개 변수 값을 설정할 수 있습니다.  
+ [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 매개 변수 값을 설정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getDateTimeOffset 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

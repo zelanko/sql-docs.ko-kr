@@ -54,7 +54,7 @@ GROUPING ( <column_expression> )
  GROUPING은 ROLLUP, CUBE 또는 GROUPING SETS에서 반환된 Null 값과 표준 Null 값을 구분하기 위해 사용됩니다. ROLLUP, CUBE 또는 GROUPING SETS 작업의 결과로 반환되는 Null은 특별한 Null입니다. 이것은 결과 집합에서 열 자리 표시자로 사용되며 "모두"를 의미합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `SalesQuota` 데이터베이스에서 `SaleYTD`를 그룹화하고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 금액을 집계합니다. `GROUPING` 함수는 `SalesQuota` 열에 적용됩니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesQuota`를 그룹화하고 `SaleYTD` 금액을 집계합니다. `GROUPING` 함수는 `SalesQuota` 열에 적용됩니다.  
   
 ```  
 SELECT SalesQuota, SUM(SalesYTD) 'TotalSalesYTD', GROUPING(SalesQuota) AS 'Grouping'  

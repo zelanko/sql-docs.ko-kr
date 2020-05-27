@@ -107,7 +107,7 @@ White           19.00                 6.7926
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 `Sales.SalesPerson` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
+ 다음 예에서는 OVER 절과 함께 SUM 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Sales.SalesPerson` 테이블에 있는 각 지역에 대해 연간 매출의 누적 합계를 구합니다. 데이터는 `TerritoryID`를 기준으로 분할되고 `SalesYTD`를 기준으로 논리적으로 정렬됩니다. 즉, SUM 함수는 판매 연도를 기준으로 각 지역에 대해 계산됩니다. `TerritoryID` 1의 경우 2005년도에 대한 두 개의 행이 있습니다. 이 두 행은 해당 연도의 두 영업 사원과 매출을 나타냅니다. 이 두 행의 누적 매출이 계산된 다음, 2006년도 매출을 나타내는 세 번째 행이 계산에 포함됩니다.  
   
 ```  
 SELECT BusinessEntityID, TerritoryID   

@@ -50,7 +50,7 @@ SET STATISTICS TIME { ON | OFF }
   
  SET STATISTICS TIME 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lightweight pooling**구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft**가 정확한 통계를 제공할 수 없습니다.  
+ **lightweight pooling** 구성 옵션을 설정하면 활성화되는 파이버 모드에서는 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 정확한 통계를 제공할 수 없습니다.  
   
  SET STATISTICS TIME을 ON으로 설정해 쿼리를 실행하면 **sysprocesses** 테이블의 **cpu** 열만 업데이트됩니다. SET STATISTICS TIME이 OFF인 경우에는 **0**이 반환됩니다.  
   

@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 취소  
- 다음 예에서는 `VIEW DEFINITION`로그인 `Mirror7`으로부터 엔드포인트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 `VIEW DEFINITION`으로부터 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 취소  
- 다음 예에서는 `TAKE OWNERSHIP` 사용자 `Shipping83` 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 `PKomosinski`에 대해 `PKomosinski`을 부여한 모든 보안 주체로부터 엔드포인트 `TAKE OWNERSHIP`에 대한 `Shipping83` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `PKomosinski` 및 `PKomosinski`가 `Shipping83`에 대해 `TAKE OWNERSHIP`을 부여한 모든 보안 주체로부터 엔드포인트 `Shipping83`에 대한 `TAKE OWNERSHIP` 권한을 취소합니다.  
   
 ```  
 USE master;  

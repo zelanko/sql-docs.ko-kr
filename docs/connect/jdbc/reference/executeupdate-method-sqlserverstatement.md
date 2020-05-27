@@ -32,7 +32,7 @@ ms.locfileid: "67954591"
 |속성|Description|  
 |----------|-----------------|  
 |[executeUpdate(java.lang.String)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-sqlserverstatement.md)|INSERT, UPDATE, DELETE 또는 MERGE 문과 같은 지정된 SQL 문이나 SQL DDL 문 같이 아무 것도 반환하지 않는 SQL 문을 실행합니다.|  
-|[executeUpdate(java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|지정된 SQL 문을 실행하고 이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ 개체에서 생성된 자동 생성 키를 검색에 사용할 수 있도록 해야 하는지 여부를 지정된 플래그로 ](../../../connect/jdbc/reference/sqlserverstatement-class.md)에 알립니다.|  
+|[executeUpdate(java.lang.String, int)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-int.md)|지정된 SQL 문을 실행하고 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에서 생성된 자동 생성 키를 검색에 사용할 수 있도록 해야 하는지 여부를 지정된 플래그로 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 알립니다.|  
 |[executeUpdate(java.lang.String, int&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string.md)|지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
 |[executeUpdate(java.lang.String, java.lang.String&#91;&#93;)](../../../connect/jdbc/reference/executeupdate-method-java-lang-string-java-lang-string.md)|지정된 SQL 문을 실행하고, 지정된 배열에 표시된 자동 생성 키를 검색에 사용할 수 있도록 해야 할지 여부를 JDBC 드라이버에 알립니다.|  
   

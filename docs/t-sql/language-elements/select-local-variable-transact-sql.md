@@ -37,7 +37,7 @@ ms.locfileid: "68121776"
 
   지역 변수를 식의 값으로 설정합니다.  
   
- 변수 할당에는 SELECT @[local_variable@local_variable 대신 ](../../t-sql/language-elements/set-local-variable-transact-sql.md)SET  을 사용하는 것이 좋습니다.  
+ 변수 할당에는 SELECT @*local_variable* 대신 [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)을 사용하는 것이 좋습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

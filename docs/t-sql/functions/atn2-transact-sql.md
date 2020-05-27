@@ -42,7 +42,7 @@ ATN2 ( float_expression , float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 데이터 형식의 **expression**입니다.
+**float** 데이터 형식의 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**

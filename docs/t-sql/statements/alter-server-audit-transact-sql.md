@@ -107,7 +107,7 @@ ALTER SERVER AUDIT audit_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 계속합니다. 감사 레코드는 보존되지 않습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. 계속 옵션을 선택하면 감사되지 않는 작업이 허용되어 보안 정책을 위반할 수 있습니다. 전체 감사를 유지 관리하는 것보다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 작업을 계속하는 것이 더 중요하면 이 옵션을 사용하십시오.  
   
 SHUTDOWN  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 어떤 이유로든 감사 대상에 데이터를 쓰지 못하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 강제 종료됩니다. `ALTER` 문을 실행하는 로그인은 `SHUTDOWN` 내에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한이 있어야 합니다. `SHUTDOWN` 권한이 실행중인 로그인에서 나중에 취소된 경우에도 종료 동작은 지속됩니다. 사용자에게 이 권한이 없으면 명령문은 실패하고 감사는 수정되지 않습니다. 감사 실패로 인해 시스템 무결성 또는 보안이 손상될 수 있는 경우 이 옵션을 사용하십시오. 자세한 내용은 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)을 참조하세요. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 어떤 이유로든 감사 대상에 데이터를 쓰지 못하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스가 강제 종료됩니다. `ALTER` 문을 실행하는 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에 `SHUTDOWN` 권한이 있어야 합니다. `SHUTDOWN` 권한이 실행중인 로그인에서 나중에 취소된 경우에도 종료 동작은 지속됩니다. 사용자에게 이 권한이 없으면 명령문은 실패하고 감사는 수정되지 않습니다. 감사 실패로 인해 시스템 무결성 또는 보안이 손상될 수 있는 경우 이 옵션을 사용하십시오. 자세한 내용은 [SHUTDOWN](../../t-sql/language-elements/shutdown-transact-sql.md)을 참조하세요. 
   
  FAIL_OPERATION  
  감사된 이벤트를 발생시키는 데이터베이스 동작이 실패합니다. 감사된 이벤트를 발생시키지 않는 동작은 계속할 수 있지만 감사된 이벤트는 발생할 수 없습니다. 감사는 계속해서 이벤트 기록을 시도하며 실패 조건이 해결되면 재개됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 모든 권한을 얻는 것보다 전체 감사를 유지 관리하는 것이 더 중요하면 이 옵션을 사용하십시오.  

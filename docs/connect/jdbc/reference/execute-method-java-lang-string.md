@@ -48,7 +48,7 @@ public final boolean execute(java.lang.String sql)
 ## <a name="remarks"></a>설명  
  이 execute 메서드는 java.sql.Statement 인터페이스의 execute 메서드에 의해 지정됩니다.  
   
- 이 메서드는 [SQLServerStatement](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 클래스에 있는 [execute](../../../connect/jdbc/reference/sqlserverstatement-class.md) 메서드를 재정의합니다.  
+ 이 메서드는 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스에 있는 [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 메서드를 재정의합니다.  
   
  SQLServerPreparedStatement 개체에 대한 SQL 문은 개체가 만들어질 때 지정되므로 이 메서드를 호출하면 예외가 발생합니다.  
   

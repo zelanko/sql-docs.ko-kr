@@ -46,7 +46,7 @@ PDO::errorInfo는 데이터베이스에서 직접 수행된 작업에 대한 오
 PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 2.0에 추가되었습니다.  
   
 ## <a name="example"></a>예제  
-이 예제에서는 열 이름의 철자가 잘못되어(`Cityx`가 아닌 `City`) 오류가 발생하므로 보고됩니다.  
+이 예제에서는 열 이름의 철자가 잘못되어(`City`가 아닌 `Cityx`) 오류가 발생하므로 보고됩니다.  
   
 ```  
 <?php  

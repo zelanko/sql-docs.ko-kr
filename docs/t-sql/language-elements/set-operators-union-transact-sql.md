@@ -249,7 +249,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-a-simple-union"></a>E. 단순 UNION 사용  
-다음 예제에서는 결과 집합에 `CustomerKey`와 `FactInternetSales` 테이블 모두의 `DimCustomer` 열 내용이 포함됩니다. ALL 키워드는 사용되지 않으므로 중복 결과가 제외됩니다.  
+다음 예제에서는 결과 집합에 `FactInternetSales`와 `DimCustomer` 테이블 모두의 `CustomerKey` 열 내용이 포함됩니다. ALL 키워드는 사용되지 않으므로 중복 결과가 제외됩니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -263,7 +263,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="f-using-union-of-two-select-statements-with-order-by"></a>F. 두 SELECT 문에서 ORDER BY와 함께 UNION 사용  
- UNION 문의 SELECT 문에 ORDER BY 절이 포함되어 있으면, 해당 절을 모든 SELECT 문 뒤에 배치해야 합니다. 다음 예제에서는 열이 ORDER BY로 정렬된 두 `UNION` 문에서 `SELECT`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
+ UNION 문의 SELECT 문에 ORDER BY 절이 포함되어 있으면, 해당 절을 모든 SELECT 문 뒤에 배치해야 합니다. 다음 예제에서는 열이 ORDER BY로 정렬된 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -289,7 +289,7 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="g-using-union-of-two-select-statements-with-where-and-order-by"></a>G. WHERE 및 ORDER BY와 함께 두 SELECT 문의 UNION 사용  
-다음 예제에서는 WHERE 및 ORDER BY가 필요한 곳에 두 `UNION` 문에서 `SELECT`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
+다음 예제에서는 WHERE 및 ORDER BY가 필요한 곳에 두 `SELECT` 문에서 `UNION`을 잘못 사용한 경우와 올바르게 사용한 경우를 보여 줍니다.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -317,11 +317,11 @@ ORDER BY CustomerKey;
 ```  
   
 ### <a name="h-using-union-of-three-select-statements-to-show-effects-of-all-and-parentheses"></a>H. ALL 및 괄호의 효과를 나타내기 위해 세 개의 SELECT 문의 UNION 사용  
-다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 **을 사용하여** 같은 테이블`UNION`의 결과를 결합합니다.  
+다음 예제에서는 `UNION`를 이용할 때 ALL 및 괄호의 효과를 보여 주기 위해 `UNION`을 사용하여 **같은 테이블**의 결과를 결합합니다.  
   
-첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `UNION` 없이 `ALL`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
+첫 번째 예제에서는 `UNION ALL`을 사용하여 중복된 레코드를 표시하고 원본 테이블의 각 행을 세 번 반환합니다. 두 번째 예제에서는 `ALL` 없이 `UNION`을 사용하여 세 `SELECT` 문의 결합된 결과에서 중복 행을 제거하고 원본 테이블에서 중복되지 않은 행만 반환합니다.  
   
-세 번째 예제에서는 첫 번째 `ALL`에서 `UNION`을 사용하고 `UNION`을 사용하지 않는 두 번째 `ALL`은 괄호로 묶습니다. 두 번째 `UNION`은 괄호 안에 있기 때문에 먼저 처리됩니다. `ALL` 옵션이 사용되지 않고 중복이 제거되므로 테이블에서 복제되지 않은 행만 반환됩니다. 이러한 행은 `SELECT` 키워드를 사용하여 첫 번째 `UNION ALL` 결과와 결합됩니다. 이 예제에서는 두 집합 간의 중복 항목을 제거하지 않습니다.  
+세 번째 예제에서는 첫 번째 `UNION`에서 `ALL`을 사용하고 `ALL`을 사용하지 않는 두 번째 `UNION`은 괄호로 묶습니다. 두 번째 `UNION`은 괄호 안에 있기 때문에 먼저 처리됩니다. `ALL` 옵션이 사용되지 않고 중복이 제거되므로 테이블에서 복제되지 않은 행만 반환됩니다. 이러한 행은 `UNION ALL` 키워드를 사용하여 첫 번째 `SELECT` 결과와 결합됩니다. 이 예제에서는 두 집합 간의 중복 항목을 제거하지 않습니다.  
   
 ```sql
 -- Uses AdventureWorks  

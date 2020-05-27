@@ -92,7 +92,7 @@ GO
  ```  
   
 ### <a name="b-using-the-over-clause"></a>B. OVER 절 사용  
- 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 `HumanResources.Department` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
+ 다음 예에서는 OVER 절과 함께 MIN, MAX, AVG 및 COUNT 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Department` 테이블에서 각 부서에 대한 집계 값을 제공합니다.  
   
 ```  
 SELECT DISTINCT Name  

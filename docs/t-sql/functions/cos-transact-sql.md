@@ -41,7 +41,7 @@ COS ( float_expression )
   
 ## <a name="arguments"></a>인수  
 *float_expression*  
-[float](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **식**입니다.
+**float** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
 **float**

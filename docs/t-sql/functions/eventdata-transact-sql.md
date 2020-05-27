@@ -85,7 +85,7 @@ EVENTDATA는 **xml** 데이터 형식 값을 반환합니다. 기본적으로 �
 이 예제에서는 새 데이터베이스 테이블 만들기를 차단하는 DDL 트리거를 만듭니다. `EVENTDATA`에서 생성한 XML 데이터에 XQuery를 사용하면 트리거를 실행하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 캡처됩니다. 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)를 참조하세요.  
   
 > [!NOTE]  
->  **에서** 표 형태로 결과 표시[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 `<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시**를 사용하세요.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **표 형태로 결과 표시**를 사용하여 `<TSQLCommand>` 요소를 쿼리하는 경우 명령 텍스트의 줄 바꿈이 표시되지 않습니다. 대신 **텍스트로 결과 표시**를 사용하세요.  
   
 ```  
 USE AdventureWorks2012;  

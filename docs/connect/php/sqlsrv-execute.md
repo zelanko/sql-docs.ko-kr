@@ -46,7 +46,7 @@ sqlsrv_execute( resource $stmt)
 부울 값: 문이 성공적으로 실행되면 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="example"></a>예제  
-다음 예제에서는 *AdventureWorks* 데이터베이스의 [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 테이블에서 필드를 업데이트하는 문을 실행합니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+다음 예제에서는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스의 *Sales.SalesOrderDetail* 테이블에서 필드를 업데이트하는 문을 실행합니다. 이 예제에서는 SQL Server 및 AdventureWorks 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  

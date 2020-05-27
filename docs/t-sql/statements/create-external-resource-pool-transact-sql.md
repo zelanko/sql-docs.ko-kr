@@ -35,7 +35,7 @@ ms.locfileid: "68893890"
 외부 프로세스에 대한 리소스를 정의하는 데 사용된 외부 풀을 만듭니다. 리소스 풀은 데이터베이스 엔진 인스턴스의 물리적 리소스(메모리 및 CPU)의 하위 집합을 나타냅니다. 데이터베이스 관리자는 리소스 관리자를 사용하여 서버 리소스를 최대 64개의 리소스 풀에 배치할 수 있습니다.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"

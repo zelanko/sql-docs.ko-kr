@@ -69,7 +69,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 TYPE = [HADOOP | BLOB_STORAGE]   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. **URL 끝에 /** `LOCATION`, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
+대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
 사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
 
   

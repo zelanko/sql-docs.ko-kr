@@ -48,7 +48,7 @@ PDO_SQLSRV 드라이버를 사용하여 커서를 지정하는 방법에 대한 
 
 클라이언트 쪽 커서를 사용하는 경우 버퍼가 전체 결과 집합을 저장할 만큼 크지 않으면 쿼리에서 false가 반환됩니다. PHP 메모리 한도까지 버퍼 크기를 늘릴 수 있습니다.
 
-`PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE`PDO::setAttribute[ 또는 ](../../connect/php/pdo-setattribute.md)PDOStatement::setAttribute[의 ](../../connect/php/pdostatement-setattribute.md) 특성을 사용하여 결과 집합이 저장되는 버퍼 크기를 구성할 수 있습니다. Pdo_sqlsrv.client_buffer_max_kb_size를 사용하여 php.ini 파일에서 최대 버퍼 크기를 설정할 수도 있습니다(예: pdo_sqlsrv.client_buffer_max_kb_size = 1024).
+[PDO::setAttribute](../../connect/php/pdo-setattribute.md) 또는 [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md)의 `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` 특성을 사용하여 결과 집합이 저장되는 버퍼 크기를 구성할 수 있습니다. Pdo_sqlsrv.client_buffer_max_kb_size를 사용하여 php.ini 파일에서 최대 버퍼 크기를 설정할 수도 있습니다(예: pdo_sqlsrv.client_buffer_max_kb_size = 1024).
 
 [PDO::prepare](../../connect/php/pdo-prepare.md)를 사용하고 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 커서 형식을 지정한 다음, `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED`를 지정하여 클라이언트 쪽 커서를 요청할 수 있습니다.
 

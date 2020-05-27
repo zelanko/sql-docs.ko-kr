@@ -42,7 +42,7 @@ FILEGROUP_ID ( 'filegroup_name' )
 ```  
   
 ## <a name="arguments"></a>인수  
-*filegroup_name*은 반환될 파일 그룹 ID **를 포함하는 파일 그룹 이름을 나타내는** sysname`FILEGROUP_ID` 형식의 식입니다.  
+*filegroup_name*은 반환될 파일 그룹 ID `FILEGROUP_ID`를 포함하는 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
   
 ## <a name="return-types"></a>반환 형식  
 **int**  

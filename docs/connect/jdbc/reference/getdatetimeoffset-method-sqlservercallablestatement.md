@@ -24,7 +24,7 @@ ms.locfileid: "67983812"
   
  매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 Java 프로그래밍 언어의 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 검색합니다.  
   
- [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md) 매개 변수 값을 설정할 수 있습니다.  
+ [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 매개 변수 값을 설정할 수 있습니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   

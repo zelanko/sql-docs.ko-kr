@@ -84,7 +84,7 @@ SELECT COUNT(*)
 ```
 
 *WLM_CONTEXT*  
-요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 [ 변수와 동일한 변수 이름을 가진 ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)sp_set_session_context`wlm_context`를 사용합니다.
+요청을 분류할 수 있는 세션 컨텍스트 값을 지정합니다.  context는 nvarchar(255) 형식의 선택적 매개 변수입니다.  세션 컨텍스트 설정 요청을 제출하기 전에 `wlm_context` 변수와 동일한 변수 이름을 가진 [sp_set_session_context](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md?view=azure-sqldw-latest)를 사용합니다.
 
 예제:
 

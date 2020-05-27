@@ -25,7 +25,7 @@ ms.locfileid: "67981848"
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 개체가 실행될 때 반환되는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 열에 대한 정보가 들어 있는 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체를 검색합니다.  
+  이 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체가 실행될 때 반환되는 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 열에 대한 정보가 들어 있는 [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 개체를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -43,7 +43,7 @@ DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }
   
 ## <a name="arguments"></a>인수  
  *cursor_name*  
- 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 *이 지정되면* cursor_name`GLOBAL`이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
+ 이미 선언된 커서의 이름입니다. 글로벌 커서와 지역 커서에 모두 해당 이름으로 *cursor_name*이 있는 경우 `GLOBAL`이 지정되면 *cursor_name*이 글로벌 커서를 참조하고, `GLOBAL`이 지정되지 않으면 지역 커서를 참조합니다.  
   
  @*cursor_variable_name*  
  **cursor** 변수의 이름입니다. @*cursor_variable_name*은 **cursor** 형식이어야 합니다.  

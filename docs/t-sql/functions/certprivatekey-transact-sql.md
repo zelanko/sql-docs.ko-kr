@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-[CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 더 복잡한 예는 **CERTENCODED &#40;Transact-SQL&#41;** 의 예 2를 참조하세요.
+**CERTPRIVATEKEY** 및 **CERTENCODED**를 사용하여 다른 데이터베이스로 인증서를 복사하는 더 복잡한 예는 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)의 예 2를 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 [보안 함수&#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

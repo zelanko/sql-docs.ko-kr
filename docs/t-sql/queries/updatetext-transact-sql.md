@@ -33,7 +33,7 @@ ms.locfileid: "67948228"
   기존 **text**, **ntext** 또는 **image** 필드를 업데이트합니다. UPDATETEXT를 사용하여 **text**, **ntext** 또는 **image** 열의 일부만 변경할 수 있습니다. WRITETEXT를 사용하여 **text**, **ntext** 또는 **image** 필드 전체를 업데이트하고 바꿀 수 있습니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 **UPDATE** 문의 [.](../../t-sql/queries/update-transact-sql.md)WRITE 절을 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -72,7 +72,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  
   
  *inserted_data*  
- **insert_offset** 위치에서 기존 **text**, **ntext** 또는 *image* 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
+ *insert_offset* 위치에서 기존 **text**, **ntext** 또는 **image** 열로 삽입할 데이터입니다. 이것은 단일 **char**, **nchar**, **varchar**, **nvarchar**, **binary**, **varbinary**, **text**, **ntext** 또는 **image** 값입니다. *inserted_data*는 리터럴 또는 변수일 수 있습니다.  
   
  *table_name.src_column_name*  
  삽입된 데이터 원본으로 사용되는 **text**, **ntext** 또는 **image** 열 이름과 테이블의 이름입니다. 테이블 이름과 열 이름은 식별자 규칙을 따라야 합니다.  

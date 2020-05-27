@@ -92,7 +92,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  만들어진 데이터베이스 감사 사양은 CONTROL SERVER, ALTER ANY DATABASE AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 해당 감사에 대한 명시적 액세스 권한이 있는 보안 주체가 볼 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `HIPAA_Audit_DB_Specification`라는 `SELECT` Audit에 대해 `dbo` 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 감사하는 `HIPAA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
+ 다음 예에서는 `HIPAA_Audit_DB_Specification`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 `SELECT` 사용자의 `dbo` 문을 감사하는 `HIPAA_Audit`이라는 데이터베이스 감사 사양을 변경합니다.  
   
 ```  
 ALTER DATABASE AUDIT SPECIFICATION HIPAA_Audit_DB_Specification  

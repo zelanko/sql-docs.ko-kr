@@ -60,7 +60,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
 |열 이름|Description|  
 |-----------------|-----------------|  
-|**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 **SET SHOWPLAN_ALL &#40;Transact-SQL&#41;** 의 [Argument](../../t-sql/statements/set-showplan-all-transact-sql.md) 열을 참조하세요.|  
+|**StmtText**|PLAN_ROW 유형이 아닌 행에 대해 이 열에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트가 포함됩니다. PLAN_ROW 유형의 행에 대해서는 이 열에 작업의 설명이 포함됩니다. 이 열에는 물리적 연산자가 포함되며 논리 연산자가 포함될 경우도 있습니다. 이 열 다음에 물리적 연산자가 결정한 설명이 나올 경우도 있습니다. 물리적 연산자에 대한 자세한 내용은 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)의 **Argument** 열을 참조하세요.|  
   
  실행 계획 출력에 표시된 물리적 연산자 및 논리적 연산자에 대한 자세한 내용은 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)를 참조하세요.  
   

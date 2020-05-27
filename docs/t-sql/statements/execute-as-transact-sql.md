@@ -116,7 +116,7 @@ ms.locfileid: "76287840"
   
 -   **CompanyDomain\SqlUser1**은 **SQLUsers**의 멤버이므로 그룹에 **Sales** 데이터베이스에 대한 암시적 액세스 권한이 있습니다.  
   
- **CompanyDomain\SqlUser1**이 **SQLUsers** 그룹의 멤버 자격을 통해 데이터베이스에 대한 액세스 권한을 가지더라도 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'`이 데이터베이스에서 보안 주체가 아니므로 `CompanyDomain\SqlUser1` 문이 실패합니다.  
+ **CompanyDomain\SqlUser1**이 **SQLUsers** 그룹의 멤버 자격을 통해 데이터베이스에 대한 액세스 권한을 가지더라도 `CompanyDomain\SqlUser1`이 데이터베이스에서 보안 주체가 아니므로 `EXECUTE AS USER = 'CompanyDomain\SqlUser1'` 문이 실패합니다.  
   
 사용자가 분리되었고(연결된 로그인이 더 이상 존재하지 않음) **WITHOUT LOGIN**으로 생성되지 않은 경우 해당 사용자에 대한 **EXECUTE AS**는 실패하게 됩니다.  
   

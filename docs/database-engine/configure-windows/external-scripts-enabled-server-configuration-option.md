@@ -40,7 +40,7 @@ ms.locfileid: "72006053"
 
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]는 SQL Server 2016에서와 동일한 아키텍처를 사용하지만, Python 언어에 대한 지원을 제공합니다.
 
-    외부 스크립트를 실행할 수 있도록 설정하려면 **설치 중에**고급 분석 확장[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치합니다. 초기 설치 과정에서 R 또는 Python 중 하나, 또는 둘다를 선택하도록 합니다. 
+    외부 스크립트를 실행할 수 있도록 설정하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 **고급 분석 확장** 기능을 설치합니다. 초기 설치 과정에서 R 또는 Python 중 하나, 또는 둘다를 선택하도록 합니다. 
 
 ## <a name="additional-requirements"></a>추가 요구 사항
 

@@ -23,7 +23,7 @@ ms.locfileid: "78896219"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-이 섹션의 예제는 ASP.NET <xref:Microsoft.Data.SqlClient.SqlDependency> 개체를 활용하여 <xref:System.Web.Caching.SqlCacheDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체는 <xref:Microsoft.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  
+이 섹션의 예제는 ASP.NET <xref:System.Web.Caching.SqlCacheDependency> 개체를 활용하여 <xref:Microsoft.Data.SqlClient.SqlDependency>를 간접적으로 사용하는 방법을 보여 줍니다. <xref:System.Web.Caching.SqlCacheDependency> 개체는 <xref:Microsoft.Data.SqlClient.SqlDependency>를 사용하여 알림을 수신하고 캐시를 올바르게 업데이트합니다.  
   
 > [!NOTE]
 >  이 샘플 코드에서는 사용자가 [쿼리 알림 사용](enable-query-notifications.md)의 스크립트를 실행하여 쿼리 알림을 활성화했다고 가정합니다.  

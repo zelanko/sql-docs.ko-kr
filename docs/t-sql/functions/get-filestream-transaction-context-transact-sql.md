@@ -50,7 +50,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
  GET_FILESTREAM_TRANSACTION_CONTEXT를 호출하면 호출자에게 트랜잭션 기간 동안 트랜잭션에 대한 파일 시스템 액세스 권한이 부여됩니다. 다른 사용자가 파일 시스템을 통해 트랜잭션에 액세스할 수 있도록 하려면 EXECUTE AS를 사용하여 GET_FILESTREAM_TRANSACTION_CONTEXT를 다른 사용자로 실행합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `GET_FILESTREAM_TRANSACTION_CONTEXT` 트랜잭션에 [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용하여 트랜잭션 컨텍스트를 구합니다.  
+ 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션에 `GET_FILESTREAM_TRANSACTION_CONTEXT`를 사용하여 트랜잭션 컨텍스트를 구합니다.  
   
 ```csharp  
 using System;  

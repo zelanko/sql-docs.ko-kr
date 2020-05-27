@@ -41,9 +41,9 @@ XQuery
 이 섹션에서는 **xml** 데이터 형식의 query() 메서드를 사용하는 예를 보여 줍니다.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 형식 변수에 대해 query() 메서드 사용  
-다음 예에서는 **xml\@ 형식의** **myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
+다음 예에서는 **xml** 형식의 **\@myDoc** 변수를 선언하고 여기에 XML 인스턴스를 할당합니다. 그런 다음, **query()** 메서드를 사용하여 문서에 대해 XQuery를 지정합니다.  
   
-이 쿼리는 <`Features`> 요소의 <`ProductDescription`> 자식 요소를 검색합니다.  
+이 쿼리는 <`ProductDescription`> 요소의 <`Features`> 자식 요소를 검색합니다.  
   
 ```  
 declare @myDoc xml  
@@ -86,7 +86,7 @@ declare namespace wm="https://schemas.microsoft.com/sqlserver/2004/07/adventure-
   
 -   CatalogDescription 열은 형식화된 **xml** 열입니다. 즉, 이 열에 연결된 스키마 컬렉션이 있다는 의미입니다. [XQuery 프롤로그](../../xquery/modules-and-prologs-xquery-prolog.md)에서는 **namespace** 키워드가 나중에 쿼리 본문에 사용될 접두사를 정의합니다.  
   
--   **query()** 메서드는 `Product`ProductModelID **특성이 있는 XML <** > 요소를 생성하는데, 이 경우 **ProductModelID** 특성 값을 데이터베이스에서 검색합니다. XML 생성에 대한 자세한 내용은 [XML 생성&#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)을 참조하세요.  
+-   **query()** 메서드는 **ProductModelID** 특성이 있는 XML <`Product`> 요소를 생성하는데, 이 경우 **ProductModelID** 특성 값을 데이터베이스에서 검색합니다. XML 생성에 대한 자세한 내용은 [XML 생성&#40;XQuery&#41;](../../xquery/xml-construction-xquery.md)을 참조하세요.  
   
 -   WHERE 절의 [exist() 메서드(XML 데이터 형식)](../../t-sql/xml/exist-method-xml-data-type.md)는 XML에서 <`Warranty`> 요소를 포함하는 행만 찾습니다. 다시 **namespace** 키워드는 두 개의 네임스페이스 접두사를 정의합니다.  
   

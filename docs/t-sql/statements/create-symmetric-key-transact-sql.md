@@ -180,7 +180,7 @@ GO
 ```  
   
 ### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. EKM(확장 가능 키 관리) 디바이스를 사용하여 대칭 키 만들기  
- 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 `MyEKMProvider`의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]라는 공급자를 이미 등록했다고 가정합니다.  
+ 다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `MyEKMProvider`라는 공급자를 이미 등록했다고 가정합니다.  
   
 ```  
 CREATE SYMMETRIC KEY MySymKey  

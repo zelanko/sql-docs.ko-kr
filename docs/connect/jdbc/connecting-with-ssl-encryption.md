@@ -61,7 +61,7 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  또는 **SQLServerDataSource** 클래스에서 제공하는 적절한 [setter](../../connect/jdbc/reference/sqlserverdatasource-class.md) 메서드를 사용하여 연결 속성의 값을 설정할 수 있습니다.  
+>  또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 제공하는 적절한 **setter** 메서드를 사용하여 연결 속성의 값을 설정할 수 있습니다.  
   
  **encrypt** 속성이 **true**로 설정되고 **trustServerCertificate** 속성이 **false**로 설정되며 연결 문자열의 서버 이름이 TLS 인증서의 서버 이름과 일치하지 않는 경우 다음 오류가 발생합니다. `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. 버전 7.2부터 드라이버는 TLS 인증서에 있는 서버 이름의 맨 왼쪽 레이블에서 와일드카드 패턴 일치를 지원합니다.
 

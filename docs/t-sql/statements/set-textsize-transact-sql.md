@@ -53,7 +53,7 @@ SET TEXTSIZE { number }
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(10.0 이상) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 ODBC 드라이버가 자동으로 `-1`(무제한)을 지정합니다.  
   
- **2008년보다 오래된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 드라이버:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008년보다 오래된  **드라이버:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자(버전 9)는 연결될 때 TEXTSIZE를 2147483647로 자동으로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  SET TEXTSIZE 설정은 @@TEXTSIZE 함수에 영향을 줍니다.  

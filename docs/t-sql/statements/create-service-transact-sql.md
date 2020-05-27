@@ -50,7 +50,7 @@ CREATE SERVICE service_name
  생성할 서비스의 이름입니다. 새 서비스는 현재 데이터베이스에 생성되며 AUTHORIZATION 절에서 지정한 주체가 소유합니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다. *service_name*은 유효한 **sysname**이어야 합니다.  
   
 > [!NOTE]  
-> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `ANY`에서 서비스 이름에 `CREATE BROKER PRIORITY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
+> *service_name*에 ANY 키워드를 사용하는 서비스를 만들지 마십시오. `CREATE BROKER PRIORITY`에서 서비스 이름에 `ANY`를 지정하면 모든 서비스에 대해 우선순위가 고려됩니다. 이러한 규칙은 이름이 ANY인 서비스로 제한되지 않습니다.  
   
  AUTHORIZATION *owner_name*  
  서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 IMPERSONATE 권한을 갖는 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  

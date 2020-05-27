@@ -47,7 +47,7 @@ sp_configure 'user instances enabled','0'
 사용자 인스턴스에 대한 네트워크 프로토콜은 로컬 명명된 파이프여야 합니다. 사용자 인스턴스는 SQL Server의 원격 인스턴스에서 시작할 수 없으며 SQL Server 로그인은 허용되지 않습니다.  
   
 ## <a name="connecting-to-a-user-instance"></a>사용자 인스턴스에 연결  
-`User Instance`에서 `AttachDBFilename` 및 <xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A><xref:Microsoft.Data.SqlClient.SqlConnection> 키워드를 사용하여 사용자 인스턴스에 연결할 수 있습니다. 사용자 인스턴스는 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성에 의해서도 지원됩니다.  
+<xref:Microsoft.Data.SqlClient.SqlConnection>에서 `User Instance` 및 `AttachDBFilename`<xref:Microsoft.Data.SqlClient.SqlConnection.ConnectionString%2A> 키워드를 사용하여 사용자 인스턴스에 연결할 수 있습니다. 사용자 인스턴스는 <xref:Microsoft.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 및 `AttachDBFilename` 속성에 의해서도 지원됩니다.  
   
 아래에 표시된 샘플 연결 문자열에 대해 다음을 확인하세요.  
   
@@ -113,7 +113,7 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  사용자 인스턴스는 SQL Server 내부에서 실행되는 CLR(공용 언어 런타임) 코드에서 지원되지 않습니다. 연결 문자열에 <xref:System.InvalidOperationException>를 포함하는 `Open`에서 <xref:Microsoft.Data.SqlClient.SqlConnection>을 호출하면 `User Instance=true`이 throw됩니다.  
+>  사용자 인스턴스는 SQL Server 내부에서 실행되는 CLR(공용 언어 런타임) 코드에서 지원되지 않습니다. 연결 문자열에 `User Instance=true`를 포함하는 <xref:Microsoft.Data.SqlClient.SqlConnection>에서 `Open`을 호출하면 <xref:System.InvalidOperationException>이 throw됩니다.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>사용자 인스턴스 연결의 수명  
 서비스로 실행되는 SQL Server 버전과 달리 SQL Server Express 인스턴스는 수동으로 시작 및 중지할 필요가 없습니다. 사용자가 로그인하여 사용자 인스턴스에 연결할 때마다 이미 실행 중이지 않은 경우 사용자 인스턴스가 시작됩니다. 사용자 인스턴스 데이터베이스는 `AutoClose` 옵션이 설정되어 있어 일정 시간 비활성 상태를 유지하면 데이터베이스가 자동으로 종료됩니다. 시작된 sqlservr.exe 프로세스는 인스턴스에 대한 마지막 연결이 닫힌 후 제한된 시간 동안 계속 실행되므로 이 제한 시간이 만료되기 전에 다른 연결이 열리는 경우 다시 시작할 필요가 없습니다. 해당 제한 시간이 만료되기 전에 새 연결이 열리지 않으면 사용자 인스턴스는 자동으로 종료됩니다. 부모 인스턴스의 시스템 관리자는 **user instance timeout** 옵션을 변경하려면 **sp_configure**를 사용하여 사용자 인스턴스에 대한 시간 제한 기간의 지속 시간을 설정할 수 있습니다. 기본값은 60분입니다.  

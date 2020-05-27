@@ -71,7 +71,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
- 다음 예에서는 `cust`uniqueidentifier**데이터 형식을 사용하여** 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
+ 다음 예에서는 **uniqueidentifier** 데이터 형식을 사용하여 `cust` 테이블을 만들고, NEWID를 사용하여 테이블을 기본값으로 채웁니다. `NEWID()`의 기본값을 할당할 때 새 행과 기존 행마다 `CustomerID` 열에 고유 값이 있습니다.  
   
 ```  
 -- Creating a table using NEWID for uniqueidentifier data type.  

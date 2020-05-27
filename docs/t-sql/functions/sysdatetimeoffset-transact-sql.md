@@ -40,7 +40,7 @@ ms.locfileid: "68117518"
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetimeoffset(7)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetimeoffset(7)** 값을 반환합니다. 여기에는 표준 시간대 오프셋이 포함됩니다.  
   
  모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.  
   

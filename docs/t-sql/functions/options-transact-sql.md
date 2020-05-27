@@ -49,7 +49,7 @@ ms.locfileid: "73982468"
   
  **\@\@OPTIONS** 함수는 10진수 정수로 변환된 옵션의 비트맵을 반환합니다. 비트 설정은 [사용자 옵션 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) 항목의 표에 나와 있는 위치에 저장됩니다.  
   
- **\@\@OPTIONS** 값을 해독하려면 **\@\@OPTIONS**에서 반환한 정수를 이진으로 변환한 다음, [사용자 옵션 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)의 표에서 값을 검색합니다. 예를 들어 `SELECT @@OPTIONS;`에서 `5496` 값을 반환하는 경우 Windows 프로그래머 계산기(**calc.exe**)를 사용하여 10진수 `5496`을 이진으로 변환하세요. 결과는 `1010101111000`입니다. 가장 오른쪽의 문자(이진 1, 2, 4)는 0으로, 표의 맨 앞 세 항목이 해제된 상태를 나타냅니다. 표에서 해당 항목은 **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS**, **CURSOR_CLOSE_ON_COMMIT**입니다. 다음 항목(**위치의**ANSI_WARNINGS`1000`)이 설정되어 있습니다. 비트맵에서 계속 왼쪽으로 작동하다가 옵션 목록의 아래로 이동합니다. 가장 왼쪽 옵션이 0이면 유형 변환에 의해 잘립니다. 비트맵 `1010101111000`은 실제로 `001010101111000`으로 모두 15개의 옵션을 나타냅니다.  
+ **\@\@OPTIONS** 값을 해독하려면 **\@\@OPTIONS**에서 반환한 정수를 이진으로 변환한 다음, [사용자 옵션 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)의 표에서 값을 검색합니다. 예를 들어 `SELECT @@OPTIONS;`에서 `5496` 값을 반환하는 경우 Windows 프로그래머 계산기(**calc.exe**)를 사용하여 10진수 `5496`을 이진으로 변환하세요. 결과는 `1010101111000`입니다. 가장 오른쪽의 문자(이진 1, 2, 4)는 0으로, 표의 맨 앞 세 항목이 해제된 상태를 나타냅니다. 표에서 해당 항목은 **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS**, **CURSOR_CLOSE_ON_COMMIT**입니다. 다음 항목(`1000` 위치의 **ANSI_WARNINGS**)이 설정되어 있습니다. 비트맵에서 계속 왼쪽으로 작동하다가 옵션 목록의 아래로 이동합니다. 가장 왼쪽 옵션이 0이면 유형 변환에 의해 잘립니다. 비트맵 `1010101111000`은 실제로 `001010101111000`으로 모두 15개의 옵션을 나타냅니다.  
   
 ## <a name="examples"></a>예  
   

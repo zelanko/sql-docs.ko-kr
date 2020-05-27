@@ -51,7 +51,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>인수  
  *transaction_name*  
- BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만, 트랜잭션 이름의 처음 32자만 사용됩니다. 트랜잭션을 중첩하는 경우 *transaction_name*은 가장 바깥쪽 BEGIN TRANSACTION 문의 이름이어야 합니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
+ BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만, 트랜잭션 이름의 처음 32자만 사용됩니다. 트랜잭션을 중첩하는 경우 *transaction_name*은 가장 바깥쪽 BEGIN TRANSACTION 문의 이름이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
   
  **@** *tran_name_variable*  
  유효한 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다.  

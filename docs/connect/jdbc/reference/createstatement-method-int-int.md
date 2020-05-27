@@ -25,7 +25,7 @@ ms.locfileid: "67955311"
 # <a name="createstatement-method-int-int"></a>createStatement 메서드(int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 생성하는 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 만듭니다.  
+  지정된 형식 및 동시성을 사용하여 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 생성하는 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -37,7 +37,7 @@ ms.locfileid: "75255824"
 
 이 함수는 지정한 *date*에서 특정 *datepart*를 나타내는 문자열을 반환합니다.
 
-모든 [의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;[!INCLUDE[tsql](../../includes/tsql-md.md)]을 참조하세요.
+모든 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 날짜 및 시간 데이터 형식 및 함수에 대한 개요는 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)을 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,7 +49,7 @@ DATENAME ( datepart , date )
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-*이 반환할* date`DATENAME` 인수의 특정 부분입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
+`DATENAME`이 반환할 *date* 인수의 특정 부분입니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
 
 > [!NOTE]
 > `DATENAME`은 *datepart* 인수에 해당하는 사용자 정의 변수 항목을 허용하지 않습니다.
@@ -92,7 +92,7 @@ DATENAME ( datepart , date )
   
 -   각 *datepart*와 해당 약어는 동일한 값을 반환합니다.  
   
-반환 값은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 로그인의 [기본 언어 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 사용하여 설정한 언어 환경에 따라 다릅니다. [date](../../t-sql/statements/set-dateformat-transact-sql.md)가 특정 형식의 문자열 리터럴인 경우 반환 값은 *SET DATEFORMAT*에 따라 다릅니다. date가 날짜 또는 시간 데이터 형식의 열 식이면 SET DATEFORMAT은 반환 값을 변경하지 않습니다.
+반환 값은 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 및 로그인의 [기본 언어 구성 서버 구성 옵션](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md)을 사용하여 설정한 언어 환경에 따라 다릅니다. *date*가 특정 형식의 문자열 리터럴인 경우 반환 값은 [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)에 따라 다릅니다. date가 날짜 또는 시간 데이터 형식의 열 식이면 SET DATEFORMAT은 반환 값을 변경하지 않습니다.
   
 *date* 매개 변수에 **date** 데이터 형식 인수가 있으면 반환 값은 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)에 의해 지정된 설정에 따라 달라집니다.
   
@@ -135,7 +135,7 @@ SELECT DATENAME(year, @t);
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 DATENAME은 문자열 리터럴을 **datetime2** 형식으로 암시적으로 캐스팅합니다. 즉 `DATENAME`는 데이터가 문자열로 전달될 때 형식 YDM을 지원하지 않습니다. YDM 형식을 사용하려면 문자열을 **datetime** 또는 **smalldatetime** 형식으로 명시적으로 캐스팅해야 합니다.
   
 ## <a name="examples"></a>예  
-이 예는 지정된 날짜에 대한 날짜 부분을 반환합니다. SELECT 문의 *인수에 대한 테이블에서*datepart`datepart` 값을 대체합니다.
+이 예는 지정된 날짜에 대한 날짜 부분을 반환합니다. SELECT 문의 `datepart` 인수에 대한 테이블에서 *datepart* 값을 대체합니다.
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
   
@@ -161,7 +161,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-이 예는 지정된 날짜에 대한 날짜 부분을 반환합니다. SELECT 문의 *인수에 대한 테이블에서*datepart`datepart` 값을 대체합니다.
+이 예는 지정된 날짜에 대한 날짜 부분을 반환합니다. SELECT 문의 `datepart` 인수에 대한 테이블에서 *datepart* 값을 대체합니다.
   
 ```sql
 SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');  

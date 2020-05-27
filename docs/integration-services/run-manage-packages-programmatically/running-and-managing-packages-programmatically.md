@@ -32,7 +32,7 @@ ms.locfileid: "71295683"
   
  단 몇 줄의 코드를 작성하여 클라이언트 애플리케이션에서 기존 패키지를 로드하고 실행할 수 있습니다.  
   
- 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 애플리케이션에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]프로그래밍 방식으로 패키지 작성[ 항목의 설명에 따라 ](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
+ 이 섹션에서는 기존 패키지를 프로그래밍 방식으로 실행하는 방법과 다른 애플리케이션에서 데이터 흐름의 출력에 액세스하는 방법을 설명합니다. 고급 프로그래밍 옵션인 [프로그래밍 방식으로 패키지 작성](../../integration-services/building-packages-programmatically/building-packages-programmatically.md) 항목의 설명에 따라 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 프로그래밍 방식으로 한 줄씩 만들 수 있습니다.  
   
  이 섹션에서는 저장된 패키지, 실행 중인 패키지 및 패키지 역할을 관리하기 위해 프로그래밍 방식으로 수행할 수 있는 기타 관리 태스크도 설명합니다.  
   

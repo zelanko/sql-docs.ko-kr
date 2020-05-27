@@ -136,7 +136,7 @@ SELECT TOP (1) - ( - 17) FROM DimEmployee;
 ```  
   
 ### <a name="e-returning-the-negative-of-a-column"></a>E. 열의 음수 반환  
- 다음 예에서는 `BaseRate` 테이블의 각 직원에 대해 `dimEmployee` 값의 음수를 반환합니다.  
+ 다음 예에서는 `dimEmployee` 테이블의 각 직원에 대해 `BaseRate` 값의 음수를 반환합니다.  
   
 ```  
 USE ssawPDW;  

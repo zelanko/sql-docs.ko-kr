@@ -44,7 +44,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>인수  
  *boolean_expression*  
- [TRUE](../../t-sql/language-elements/expressions-transact-sql.md), **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 **식**입니다.  
+ **TRUE**, **FALSE** 또는 **UNKNOWN**의 부울 값을 반환하는 유효한 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  **Boolean**  

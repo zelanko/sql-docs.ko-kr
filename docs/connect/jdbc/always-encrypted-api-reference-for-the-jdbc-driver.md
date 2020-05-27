@@ -156,7 +156,7 @@ ms.locfileid: "75681704"
 
 |속성|Description|  
 |----------|-----------------|  
-|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|**API 메서드를 사용하여**암호화된`setObject()/updateObject()` datetime, smalldatetime, money, smallmoney, uniqueidentifier 열에 매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용합니다.|  
+|DATETIME, SMALLDATETIME, MONEY, SMALLMONEY, GUID|`setObject()/updateObject()` API 메서드를 사용하여 **암호화된** datetime, smalldatetime, money, smallmoney, uniqueidentifier 열에 매개 변수 값을 보낼 때 이러한 형식을 대상 SQL 형식으로 사용합니다.|  
   
   
  **SQLServerStatementColumnEncryptionSetting 열거형**  

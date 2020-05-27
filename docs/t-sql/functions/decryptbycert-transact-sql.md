@@ -67,7 +67,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 `DECRYPTBYCERT`는 인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-이 예제는 인증서 `[AdventureWorks2012].[ProtectedData04]`로 원래 암호화된 데이터로 표시되는 `JanainaCert02`에서 행을 선택합니다. 예제는 먼저 인증서 `JanainaCert02`의 암호로 인증서 `pGFD4bb925DGvbd2439587y`의 프라이빗 키를 암호 해독합니다. 그런 다음, 예제에서는 이 프라이빗 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
+이 예제는 인증서 `JanainaCert02`로 원래 암호화된 데이터로 표시되는 `[AdventureWorks2012].[ProtectedData04]`에서 행을 선택합니다. 예제는 먼저 인증서 `pGFD4bb925DGvbd2439587y`의 암호로 인증서 `JanainaCert02`의 프라이빗 키를 암호 해독합니다. 그런 다음, 예제에서는 이 프라이빗 키로 암호 텍스트를 암호 해독합니다. 예제는 암호가 해독된 데이터를 **varbinary**에서 **nvarchar**로 변환합니다.  
 
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  

@@ -71,7 +71,7 @@ SELECT name FROM sys.registered_search_property_lists;
  *property_name*  
  전체 텍스트 쿼리에서 속성을 식별하는 데 사용할 이름을 지정합니다. *property_name*은 속성 집합 내에서 해당 속성을 고유하게 식별해야 합니다. 속성 이름은 내부에 공백을 포함할 수 있습니다. *property_name*의 최대 길이는 256자입니다. "작성자"나 "집 주소"와 같은 친숙한 단어 또는 **System.Author**나 **System.Contact.HomeAddress**와 같은 Windows 정식 속성 이름을 이 이름에 사용할 수 있습니다.  
   
- 개발자는 *CONTAINS* 조건자에 있는 속성을 식별하기 위해 [property_name](../../t-sql/queries/contains-transact-sql.md)에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+ 개발자는 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 조건자에 있는 속성을 식별하기 위해 *property_name*에 지정된 값을 사용해야 합니다. 따라서 속성을 추가할 때는 지정된 속성 집합 GUID(*property_set_guid*) 및 속성 식별자(*property_int_id*)로 정의된 속성을 의미 있게 나타내는 값을 지정해야 합니다. 속성 이름에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
   
  현재 데이터베이스의 검색 속성 목록에 현재 존재하는 속성의 이름을 보려면 다음과 같이 [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) 카탈로그 뷰를 사용하십시오.  
   

@@ -47,7 +47,7 @@ ms.locfileid: "68136026"
 트랜잭션 격리 수준에 대한 변경 내용은 @@DBTS 함수에 영향을 주지 않습니다.
   
 ## <a name="examples"></a>예  
-이 예에서는 **데이터베이스의 현재**timestamp[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 반환합니다.
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 현재 **timestamp**를 반환합니다.
   
 ```sql
 USE AdventureWorks2012;  

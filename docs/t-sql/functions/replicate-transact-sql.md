@@ -56,7 +56,7 @@ REPLICATE ( string_expression ,integer_expression )
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-replicate"></a>A. REPLICATE 사용  
- 다음 예에서는 `0` 데이터베이스의 프로덕션 코드 줄 앞에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 문자를 4번 복제합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 프로덕션 코드 줄 앞에 `0` 문자를 4번 복제합니다.  
   
 ```  
 SELECT [Name]  
@@ -120,7 +120,7 @@ Varchar Column        Char Column
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-replicate"></a>3\. REPLICATE 사용  
- 다음 예에서는 `0` 값 앞의 `ItemCode` 문자를 4번 복제합니다.  
+ 다음 예에서는 `ItemCode` 값 앞의 `0` 문자를 4번 복제합니다.  
   
 ```  
 -- Uses AdventureWorks  

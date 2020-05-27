@@ -138,7 +138,7 @@ ms.locfileid: "70929693"
 
 다음은 인덱스에서 성능 비효율을 방지하는 방법의 예제입니다.
 
-`Customers`에 기본 키가 있는 `CustomerId` 테이블과 `CustomerCategoryID` 열의 인덱스를 고려합니다. 일반적으로 많은 고객이 특정 범주에 속합니다. 이로 인해 인덱스의 주어진 키 안에 CustomerCategoryID에 대해 여러 중복된 값이 있게 됩니다.
+`CustomerId`에 기본 키가 있는 `Customers` 테이블과 `CustomerCategoryID` 열의 인덱스를 고려합니다. 일반적으로 많은 고객이 특정 범주에 속합니다. 이로 인해 인덱스의 주어진 키 안에 CustomerCategoryID에 대해 여러 중복된 값이 있게 됩니다.
 
 이 시나리오에서는 `(CustomerCategoryID, CustomerId)`에서 비클러스터형 인덱스를 사용하는 것이 모범 사례입니다. 이 인덱스는 `CustomerCategoryID`를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있지만, 인덱스 키는 중복을 포함하지 않습니다. 따라서 CustomerCategoryID 값 중복이나 인덱스의 추가 열에 따른 인덱스 유지 관리에서의 비효율이 발생하지 않습니다.
 

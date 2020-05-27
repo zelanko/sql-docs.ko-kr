@@ -49,7 +49,7 @@ TRANSLATE ( inputString, characters, translations)
 
 ## <a name="remarks"></a>설명
 
-`TRANSLATE`characters*와* translations*식이 다른 경우*는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
+*characters*와 *translations* 식이 다른 경우 `TRANSLATE`는 오류를 반환합니다. 인수 중에 NULL이 있는 경우 `TRANSLATE`는 NULL을 반환합니다.  
 
 `TRANSLATE` 함수의 동작은 [REPLACE](../../t-sql/functions/replace-transact-sql.md) 함수를 여러 개 사용할 때와 유사합니다. 그러나 `TRANSLATE`는 `inputString`의 개별 문자를 두 번 이상 바꾸지는 않습니다. `characters` 매개 변수의 단일 값은 `inputString`의 여러 문자를 바꿀 수 있습니다. 
 

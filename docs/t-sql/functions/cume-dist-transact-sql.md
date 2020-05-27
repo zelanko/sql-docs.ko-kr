@@ -29,7 +29,7 @@ ms.locfileid: "68026465"
 # <a name="cume_dist-transact-sql"></a>CUME_DIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 `CUME_DIST`r_에서 값의_ 는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 이 함수에서는 값 그룹 내에서 값의 누적 분포를 계산합니다. 즉, `CUME_DIST`는 값 그룹에서 지정한 값의 상대적 위치를 계산합니다. 오름차순으로 정렬되었다고 가정하면, 행 _r_에서 값의 `CUME_DIST`는 행 _r_에서 해당 값 이하인 값을 가진 행의 수로 정의되며 파티션 또는 쿼리 결과 집합에서 계산된 행의 수로 나뉩니다. `CUME_DIST`는 `PERCENT_RANK` 함수와 유사합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

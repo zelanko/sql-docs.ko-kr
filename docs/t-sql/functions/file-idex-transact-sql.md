@@ -52,7 +52,7 @@ FILE_IDEX ( file_name )
 오류 발생 시 **NULL**  
   
 ## <a name="remarks"></a>설명  
-*file_name*은 **sys.master_files** 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 카탈로그 뷰의 [name](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 열에 표시되는 논리적 파일 이름과 일치합니다.  
+*file_name*은 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 카탈로그 뷰의 **name** 열에 표시되는 논리적 파일 이름과 일치합니다.  
   
 SELECT 목록, WHERE 절 또는 식 사용을 지원하는 모든 위치에서 `FILE_IDEX`를 사용합니다. 자세한 내용은 [식&#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   

@@ -56,7 +56,7 @@ FILE_NAME ( file_id )
 *file_ID*는 sys.master_files 또는 sys.database_files 카탈로그 뷰의 file_id 열과 일치합니다.  
   
 ## <a name="examples"></a>예  
-이 예에서는 `file_ID 1` 데이터베이스에서 `file_ID` 및 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]에 대한 파일 이름을 반환합니다.  
+이 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `file_ID 1` 및 `file_ID`에 대한 파일 이름을 반환합니다.  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  

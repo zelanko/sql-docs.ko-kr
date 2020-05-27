@@ -48,7 +48,7 @@ SQL Server의 데이터베이스 미러링을 사용하면 대기 서버에서 S
 >  데이터베이스 미러링 시나리오의 경우 연결 문자열에 초기 카탈로그 또는 데이터베이스 이름을 명시적으로 지정해야 합니다. 클라이언트에서 명시적으로 지정된 초기 카탈로그 또는 데이터베이스가 없는 연결에 대한 장애 조치 정보를 받으면 장애 조치 정보가 캐시되지 않고 주 서버가 실패해도 애플리케이션에서 장애 조치를 시도하지 않습니다. 연결 문자열에 장애 조치(failover) 파트너에 대한 값은 있지만 초기 카탈로그 또는 데이터베이스에 대한 값이 없는 경우에는 `InvalidArgumentException`이 발생합니다.  
   
 ## <a name="retrieving-the-current-server-name"></a>현재 서버 이름 검색  
-장애 조치(failover) 시 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 개체의 <xref:Microsoft.Data.SqlClient.SqlConnection> 속성을 사용하여 현재 연결이 실제로 연결된 서버의 이름을 검색할 수 있습니다. 다음 코드 조각은 연결 변수가 열린 <xref:Microsoft.Data.SqlClient.SqlConnection>을 참조한다고 가정하여 활성 서버의 이름을 검색합니다.  
+장애 조치(failover) 시 <xref:Microsoft.Data.SqlClient.SqlConnection> 개체의 <xref:Microsoft.Data.SqlClient.SqlConnection.DataSource%2A> 속성을 사용하여 현재 연결이 실제로 연결된 서버의 이름을 검색할 수 있습니다. 다음 코드 조각은 연결 변수가 열린 <xref:Microsoft.Data.SqlClient.SqlConnection>을 참조한다고 가정하여 활성 서버의 이름을 검색합니다.  
   
 장애 조치 이벤트가 발생하고 연결이 미러 서버로 전환되면 **DataSource** 속성이 업데이트되며 미러 이름을 반영합니다.  
   

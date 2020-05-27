@@ -43,7 +43,7 @@ LOG10 ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  

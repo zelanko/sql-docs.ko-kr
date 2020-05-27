@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
- 다음 예에서는 `VIEW DEFINITION` 로그인 `Mirror7`에 대해 엔드포인트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 `ZArifin` 권한을 부여합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
- 다음 예에서는 `TAKE OWNERSHIP`으로 `Shipping83` 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
+ 다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `Shipping83`에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
 ```  
 USE master;  

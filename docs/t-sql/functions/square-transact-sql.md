@@ -41,7 +41,7 @@ SQUARE ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 float로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 float로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **float**  
@@ -65,7 +65,7 @@ Cyl Vol
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 `volume` 테이블의 `containers` 열에 각 값의 제곱을 반환합니다.  
+ 다음 예에서는 `containers` 테이블의 `volume` 열에 각 값의 제곱을 반환합니다.  
   
 ```  
 -- Uses AdventureWorks  

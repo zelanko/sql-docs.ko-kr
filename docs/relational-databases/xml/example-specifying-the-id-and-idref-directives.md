@@ -24,7 +24,7 @@ ms.locfileid: "68006702"
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-이 예는 [ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 예와 가장 비슷합니다. 쿼리가 **ID** 및 **IDREF** 지시어를 지정한다는 점만 다릅니다. 이러한 지시어는 < **> 및 <** > 요소에 있는 `OrderHeader`SalesPersonID`OrderDetail` 특성의 유형을 덮어씁니다. 이 쿼리는 문서 간 연결을 형성합니다. 덮어쓴 유형을 확인하려면 스키마가 필요합니다. 따라서 이 쿼리에서는 FOR XML 절에 스키마를 검색하기 위한 **XMLDATA** 옵션을 지정합니다.  
+이 예는 [ELEMENTXSINIL 지시어 지정](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) 예와 가장 비슷합니다. 쿼리가 **ID** 및 **IDREF** 지시어를 지정한다는 점만 다릅니다. 이러한 지시어는 <`OrderHeader`> 및 <`OrderDetail`> 요소에 있는 **SalesPersonID** 특성의 유형을 덮어씁니다. 이 쿼리는 문서 간 연결을 형성합니다. 덮어쓴 유형을 확인하려면 스키마가 필요합니다. 따라서 이 쿼리에서는 FOR XML 절에 스키마를 검색하기 위한 **XMLDATA** 옵션을 지정합니다.  
   
 ```sql
 USE AdventureWorks2012;  
@@ -79,7 +79,7 @@ ORDER BY [OrderHeader!1!SalesOrderID!id],
 FOR XML EXPLICIT, XMLDATA;
 ```  
   
- 다음은 결과의 일부입니다. 스키마에서 **ID** 및 **IDREF** 지시어는 < **> 및 <** > 요소에 있는 `OrderHeader`SalesOrderID`OrderDetail` 특성의 데이터 형식을 덮어 씁니다. 이러한 지시어를 제거하면 스키마가 이러한 특성의 원래 유형을 반환합니다.  
+ 다음은 결과의 일부입니다. 스키마에서 **ID** 및 **IDREF** 지시어는 <`OrderHeader`> 및 <`OrderDetail`> 요소에 있는 **SalesOrderID** 특성의 데이터 형식을 덮어 씁니다. 이러한 지시어를 제거하면 스키마가 이러한 특성의 원래 유형을 반환합니다.  
   
 ```xml
 <Schema

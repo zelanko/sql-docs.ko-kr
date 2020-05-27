@@ -34,7 +34,7 @@ ms.locfileid: "68117478"
 # <a name="sysutcdatetime-transact-sql"></a>SYSUTCDATETIME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된**datetime2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되고 있는 컴퓨터의 날짜와 시간이 포함된 **datetime2** 값을 반환합니다. 날짜와 시간은 UTC 시간(Coordinated Universal Time)으로 반환됩니다. 소수 자릿수 초의 전체 자릿수는 1-7자리입니다. 기본 전체 자릿수는 7자리입니다.  
   
 > [!NOTE]  
 >  SYSDATETIME 및 SYSUTCDATETIME에는 GETDATE 및 GETUTCDATE보다 많은 소수 자릿수 초의 전체 자릿수가 있습니다. SYSDATETIMEOFFSET에는 시스템 표준 시간대 오프셋이 포함되어 있습니다. SYSDATETIME, SYSUTCDATETIME 및 SYSDATETIMEOFFSET은 날짜 및 시간 유형 중 하나의 변수에 할당할 수 있습니다.  

@@ -25,7 +25,7 @@ ms.locfileid: "78896018"
 
 대부분의 비동기 처리 시나리오에서는 데이터베이스 작업을 시작하고 데이터베이스 작업이 완료될 때까지 기다리지 않고 다른 프로세스를 계속 실행하려고 합니다. 그러나 많은 시나리오에서는 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어 Windows 애플리케이션에서 장기 실행 작업을 백그라운드 스레드에 위임하는 동시에 사용자 인터페이스 스레드가 응답성을 유지하기를 원합니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 양식을 채워야 합니다. 이 시나리오 유형은 콜백을 사용하여 구현하는 것이 가장 좋습니다.  
   
-<xref:System.AsyncCallback>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 메서드에서 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 대리자를 지정하여 콜백을 정의합니다. 작업이 완료되면 대리자가 호출됩니다. <xref:Microsoft.Data.SqlClient.SqlCommand> 자체에 대한 참조를 대리자에게 전달할 수 있습니다. 그러면 대리자가 쉽게 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체에 액세스하고 전역 변수를 사용하지 않고 적절한 `End` 메서드를 호출할 수 있습니다.  
+<xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>, <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 메서드에서 <xref:System.AsyncCallback> 대리자를 지정하여 콜백을 정의합니다. 작업이 완료되면 대리자가 호출됩니다. <xref:Microsoft.Data.SqlClient.SqlCommand> 자체에 대한 참조를 대리자에게 전달할 수 있습니다. 그러면 대리자가 쉽게 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체에 액세스하고 전역 변수를 사용하지 않고 적절한 `End` 메서드를 호출할 수 있습니다.  
   
 ## <a name="example"></a>예제  
 다음 Windows 애플리케이션에서는 <xref:Microsoft.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드를 사용하여 몇 초의 지연이 포함된 Transact-SQL 문을 실행하는 방법을 보여 줍니다(장기 실행 명령을 에뮬레이션).  

@@ -65,7 +65,7 @@ TEXTPTR ( column )
 |PATINDEX<b>(‘</b> _%pattern%_ **’ ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
 |DATALENGTH<b>(</b>_expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 **start** 오프셋과 *length*로 지정한 *varchar* 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
   
 ## <a name="examples"></a>예  
   
@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
 ### <a name="a-using-textptr"></a>A. TEXTPTR 사용  
- 다음 예에서는 `TEXTPTR` 함수를 사용하여 **데이터베이스의** 테이블에서 `logo`와 관련된 `New Moon Books`image`pub_info` 열 `pubs`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
+ 다음 예에서는 `TEXTPTR` 함수를 사용하여 `pubs` 데이터베이스의 `pub_info` 테이블에서 `New Moon Books`와 관련된 **image** 열 `logo`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
   
 ```  
 USE pubs;  
@@ -163,7 +163,7 @@ This is sample text data for Lucerne Publishing, publisher 9999 in the pubs data
 ```  
   
 ### <a name="d-returning-specific-text-data"></a>D. 특정 텍스트 데이터 반환  
- 다음 예에서는 `text` 데이터베이스의 `pr_info` 테이블에서 `pub_id``0736`과 연관된 `pub_info` 열(`pubs`)을 찾는 방법을 보여 줍니다. 먼저 지역 변수 `@val`을 선언하고 텍스트 포인터(긴 이진 문자열)를 `@val`로 설정한 다음 `READTEXT` 문에 대한 매개 변수로 제공합니다. 이 문은 5번째 바이트(오프셋 4)에서 시작하여 10바이트를 반환합니다.  
+ 다음 예에서는 `pubs` 데이터베이스의 `pub_info` 테이블에서 `pub_id``0736`과 연관된 `text` 열(`pr_info`)을 찾는 방법을 보여 줍니다. 먼저 지역 변수 `@val`을 선언하고 텍스트 포인터(긴 이진 문자열)를 `@val`로 설정한 다음 `READTEXT` 문에 대한 매개 변수로 제공합니다. 이 문은 5번째 바이트(오프셋 4)에서 시작하여 10바이트를 반환합니다.  
   
 ```  
 USE pubs;  

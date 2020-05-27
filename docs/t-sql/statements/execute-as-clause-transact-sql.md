@@ -101,7 +101,7 @@ DDL Triggers with Database Scope
  실행 컨텍스트의 사용자 ID는 메타데이터에 저장되고 **sys.sql_modules** 또는 **sys.assembly_modules** 카탈로그 뷰의 **execute_as_principal_id** 열에 표시될 수 있습니다.  
   
  **'** *login_name* **'**  
- 모듈 내부의 문이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]login_name*에 지정된*  로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
+ 모듈 내부의 문이 *login_name*에 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 컨텍스트에서 실행되도록 지정합니다. 모듈 내의 모든 개체에 대한 사용 권한은 *login_name*과 비교 검증됩니다. *login_name*은 서버 범위의 DDL 트리거 또는 로그온 트리거에만 지정할 수 있습니다.  
   
  *login_name*은 그룹, 역할, 인증서 또는 키이거나 NT AUTHORITY\LocalService, NT AUTHORITY\NetworkService 또는 NT AUTHORITY\LocalSystem과 같은 기본 제공 계정이 될 수 없습니다.  
   

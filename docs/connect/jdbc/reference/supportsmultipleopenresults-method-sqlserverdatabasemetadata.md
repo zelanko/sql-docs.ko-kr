@@ -25,7 +25,7 @@ ms.locfileid: "67969269"
 # <a name="supportsmultipleopenresults-method-sqlserverdatabasemetadata"></a>supportsMultipleOpenResults 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에서 동시에 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체가 반환될 수 있는지 여부를 검색합니다.  
+  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체에서 동시에 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 반환될 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

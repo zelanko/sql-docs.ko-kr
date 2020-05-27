@@ -27,7 +27,7 @@ ms.locfileid: "68071168"
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-`node`의 `edge` 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 새 행을 하나 이상 추가합니다. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `node` 또는 `edge` 테이블에 새 행을 하나 이상 추가합니다. 
 
 > [!NOTE]   
 >  표준 Transact-SQL 문의 경우 [INSERT TABLE(Transact SQL)](../../t-sql/statements/insert-transact-sql.md)을 참조하세요.

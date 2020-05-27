@@ -54,7 +54,7 @@ ms.locfileid: "69028013"
 ## <a name="collation-support"></a>데이터 정렬 지원  
  JDBC 드라이버 3.0에서는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원하는 모든 데이터 정렬 및 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]에 도입된 새로운 버전의 Windows 데이터 정렬 이름 또는 새 데이터 정렬을 지원합니다.  
   
- 데이터 정렬에 대한 자세한 내용은 [ 온라인 설명서의](https://go.microsoft.com/fwlink/?LinkId=131366)데이터 정렬 및 유니코드 지원[ 및 ](https://go.microsoft.com/fwlink/?LinkId=131367)Windows 데이터 정렬 이름(Transact-SQL)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 참조하십시오.  
+ 데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의[데이터 정렬 및 유니코드 지원](https://go.microsoft.com/fwlink/?LinkId=131366) 및 [Windows 데이터 정렬 이름(Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367)을 참조하십시오.  
   
 ## <a name="using-international-domain-names-idn"></a>IDN(국제 도메인 이름) 사용  
  SQL Server용 JDBC Driver 6.0에서는 IDN(Internationalized Domain Name)의 사용을 지원하고 연결 중 필요한 경우 유니코드 serverName을 ASCII 호환 인코딩(Punycode)으로 변환할 수 있습니다.  IDN이 Punycode 형식(RFC 3490에서 지정)의 ASCII 문자열로 DNS(Domain Name System)에 저장되면 serverNameAsACE 속성을 true로 설정하여 유니코드 서버 이름을 변환할 수 있습니다.  그렇지 않으면 DNS 서비스가 유니코드 문자를 사용할 수 있도록 구성된 경우 serverNameAsACE 속성을 false(기본값)로 설정합니다.  또한 이전 버전의 JDBC 드라이버의 경우 연결을 위해 해당 속성을 설정하기 전에 [Java의 IDN.toASCII](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) 메서드를 사용하여 serverName을 Punycode로 변환할 수 있습니다.  

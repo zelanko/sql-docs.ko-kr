@@ -63,7 +63,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  보기에 유지할 이벤트 수입니다. 예를 들어 100을 지정하는 경우 필터 조건과 일치하는 최신 이벤트 100개가 진단 세션에 유지됩니다. 일치하는 이벤트가 100개보다 작은 경우 진단 세션은 100개 미만의 이벤트를 포함하게 됩니다. *max_item_count_num*은 100 이하이거나 100,000개여야 합니다.  
   
  *event_name*  
- 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 [의 ](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)sys.pdw_diag_events`sys.pdw_diag_events.is_enabled='True'`에 나열된 이벤트 중 하나입니다.  
+ 진단 세션에서 수집할 실제 이벤트를 정의합니다.  *event_name*은 `sys.pdw_diag_events.is_enabled='True'`의 [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md)에 나열된 이벤트 중 하나입니다.  
   
  *filter_property_name*  
  결과를 제한하는 속성의 이름입니다. 예를 들어, 세션 ID에 따라 제한하려는 경우 *filter_property_name*은 *SessionId*여야 합니다. *filter_property_name*에 대한 가능한 값의 목록은 아래 *property_name*을 참조하세요.  

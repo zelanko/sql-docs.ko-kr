@@ -104,7 +104,7 @@ ON ALL SERVER
 ## <a name="examples"></a>예  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. DML 트리거 삭제  
- 다음 예에서는 `employee_insupd` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `employee_insupd` 트리거를 삭제합니다. ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터는 DROP TRIGGER IF EXISTS 구문을 사용할 수 있습니다.)  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  

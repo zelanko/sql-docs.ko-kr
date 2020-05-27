@@ -25,7 +25,7 @@ ms.locfileid: "67977868"
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) 메서드를 호출하여 표시된 행 삽입을 검색할 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

@@ -35,7 +35,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 횟수를 수정할 수 있습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 다시 시도 횟수**컨트롤을 사용하여 ODBC Driver for**를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   **연결 다시 시도 횟수** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryCount** 연결 문자열 키워드를 사용합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68008428"
   
      다음과 같이 하면 연결 다시 시도 간격을 수정할 수 있습니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 다시 시도 간격**컨트롤을 사용하여 ODBC Driver for**를 사용하는 데이터 원본을 정의하거나 수정합니다.  
+    -   **연결 다시 시도 간격** 컨트롤을 사용하여 ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하는 데이터 원본을 정의하거나 수정합니다.  
   
     -   **ConnectRetryInterval** 연결 문자열 키워드를 사용합니다.  
   

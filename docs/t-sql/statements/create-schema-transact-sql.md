@@ -171,7 +171,7 @@ GO
 ```  
   
 ### <a name="c-setting-the-owner-of-a-schema"></a>C. 스키마 소유자 설정  
- 다음 예에서는 `Production`가 소유한 `Mary` 스키마를 만듭니다.  
+ 다음 예에서는 `Mary`가 소유한 `Production` 스키마를 만듭니다.  
   
 ```  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  

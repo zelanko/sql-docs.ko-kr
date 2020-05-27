@@ -30,7 +30,7 @@ ms.locfileid: "68893678"
 외부 프로세스에서 사용할 수 있는 리소스를 지정하는 Resource Governor 외부 풀을 변경합니다. 
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-[!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]에서 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
+[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)]의 경우 외부 풀은 `rterm.exe`, `BxlServer.exe`, 이들에 의해 생성된 기타 프로세스를 제어합니다.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -65,7 +65,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 
 { *pool_name* | "기본값" }  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 설치될 때 만들어지는 기본 외부 리소스 풀이나 기존 사용자 정의 외부 리소스 풀의 이름입니다.
-"default"는 시스템 예약어인 `ALTER EXTERNAL RESOURCE POOL`와의 충돌을 피하기 위해 `DEFAULT`과 함께 사용될 경우 따옴표("") 또는 대괄호([])로 묶어야 합니다.
+"default"는 시스템 예약어인 `DEFAULT`와의 충돌을 피하기 위해 `ALTER EXTERNAL RESOURCE POOL`과 함께 사용될 경우 따옴표("") 또는 대괄호([])로 묶어야 합니다.
 
 MAX_CPU_PERCENT =*value*  
 CPU 경합이 있을 때 이 외부 리소스 풀의 모든 요청이 받을 수 있는 최대 평균 CPU 대역폭을 지정합니다. *값*은 정수입니다. 허용되는 *value*의 범위는 1에서 100까지입니다.

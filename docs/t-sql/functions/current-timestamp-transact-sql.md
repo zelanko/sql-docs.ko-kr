@@ -48,7 +48,7 @@ ms.locfileid: "68026415"
   
 이 함수는 ANSI SQL의 [GETDATE](../../t-sql/functions/getdate-transact-sql.md)와 동등합니다.
   
-[의 모든 날짜 및 시간 데이터 형식과 함수에 대한 개요는 ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)날짜 및 시간 데이터 형식과 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 참조하세요.
+[!INCLUDE[tsql](../../includes/tsql-md.md)]의 모든 날짜 및 시간 데이터 형식과 함수에 대한 개요는 [날짜 및 시간 데이터 형식과 함수](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)를 참조하세요.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>설명  
-[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 `CURRENT_TIMESTAMP`datetime**식을 참조할 수 있는 모든 곳에서**를 참조할 수 있습니다.
+[!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 **datetime** 식을 참조할 수 있는 모든 곳에서 `CURRENT_TIMESTAMP`를 참조할 수 있습니다.
   
 `CURRENT_TIMESTAMP`는 비결정 함수입니다. 이 열을 참조하는 뷰와 식은 인덱싱될 수 없습니다.
   

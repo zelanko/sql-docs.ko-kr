@@ -36,7 +36,7 @@ System.Data.Sql.SqlDataSourceEnumerator instance =
    System.Data.Sql.SqlDataSourceEnumerator.Instance  
 ```  
   
-정적 인스턴스를 검색한 후에는 사용 가능한 서버에 대한 정보가 포함된 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A>을 반환하는 <xref:System.Data.DataTable> 메서드를 호출할 수 있습니다.  
+정적 인스턴스를 검색한 후에는 사용 가능한 서버에 대한 정보가 포함된 <xref:System.Data.DataTable>을 반환하는 <xref:System.Data.Sql.SqlDataSourceEnumerator.GetDataSources%2A> 메서드를 호출할 수 있습니다.  
   
 ```csharp  
 System.Data.DataTable dataTable = instance.GetDataSources();  

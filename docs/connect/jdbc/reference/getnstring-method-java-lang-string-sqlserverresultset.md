@@ -43,7 +43,7 @@ public java.lang.String getNString(java.lang.String columnLabel)
 ## <a name="remarks"></a>설명  
  이 getNString 메서드는 java.sql.SQLServerResultSet 인터페이스의 getNString 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용하여 이 **SQLServerResultSet** 개체의 현재 행에서 **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** 또는 [xml](../../../connect/jdbc/reference/sqlserverresultset-class.md) 열의 값을 검색할 수 있습니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
+ 이 메서드를 사용하여 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 **nvarchar**, **nchar**, **nvarchar(max)** , **ntext** 또는 **xml** 열의 값을 검색할 수 있습니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNString 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

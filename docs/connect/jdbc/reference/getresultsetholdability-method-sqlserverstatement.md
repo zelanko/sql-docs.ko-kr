@@ -25,7 +25,7 @@ ms.locfileid: "67980320"
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체의 결과 집합 유지 기능을 검색합니다.  
+  이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 생성된 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 결과 집합 유지 기능을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

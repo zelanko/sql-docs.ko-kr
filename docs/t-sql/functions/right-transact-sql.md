@@ -48,9 +48,9 @@ RIGHT ( character_expression , integer_expression )
  반환될 *character_expression*의 문자 수를 지정하는 양의 정수입니다. *integer_expression*이 음수이면 오류가 반환됩니다. *integer_expression*이 **bigint** 형식이고 큰 값이 포함된 경우 *character_expression*은 **varchar(max)** 와 같은 큰 데이터 형식이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **character_expression**이 유니코드가 아닌 문자 데이터 형식인 경우 *varchar*를 반환합니다.  
+ *character_expression*이 유니코드가 아닌 문자 데이터 형식인 경우 **varchar**를 반환합니다.  
   
- **character_expression**이 유니코드 문자 데이터 형식인 경우 *nvarchar*를 반환합니다.  
+ *character_expression*이 유니코드 문자 데이터 형식인 경우 **nvarchar**를 반환합니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
  SC 데이터 정렬을 사용하는 경우 RIGHT 함수가 UTF-16 서로게이트 쌍을 단일 문자로 계산합니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  

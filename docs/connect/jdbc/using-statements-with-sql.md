@@ -21,7 +21,7 @@ ms.locfileid: "69025836"
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 인라인 SQL 문을 사용하여 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 데이터베이스의 데이터에 대한 작업을 수행하는 경우 다양한 클래스를 사용할 수 있습니다. 어떤 클래스를 사용할지는 실행하려는 SQL 문의 형식에 따라 달라집니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 및 인라인 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 대한 작업을 수행하는 경우 다양한 클래스를 사용할 수 있습니다. 어떤 클래스를 사용할지는 실행하려는 SQL 문의 형식에 따라 달라집니다.  
   
 SQL 문에 입력 매개 변수가 없는 경우 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스를 사용하고, 입력 매개 변수가 있는 경우 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스를 사용합니다.  
   

@@ -201,7 +201,7 @@ GO
 ```  
   
 ### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. 스칼라 반환 사용자 정의 함수가 결정적인지 확인  
- 다음 예에서는 `ufnGetProductDealerPrice`money**값을 반환하는 사용자 정의 스칼라 반환 함수**가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
+ 다음 예에서는 **money** 값을 반환하는 사용자 정의 스칼라 반환 함수 `ufnGetProductDealerPrice`가 결정적인지 여부를 테스트하는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  

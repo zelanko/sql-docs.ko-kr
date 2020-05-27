@@ -22,9 +22,9 @@ ms.locfileid: "69027908"
 
   결과 집합은 대개 쿼리의 결과로 데이터 원본에서 반환되는 데이터의 집합을 나타내는 개체입니다. 결과 집합은 요청한 데이터 요소를 보유하는 행과 열을 포함하며 커서를 사용하여 탐색합니다. 결과 집합은 업데이트할 수 있으므로 수정할 수 있을 뿐 아니라 이러한 수정 내용을 원래의 데이터 원본에 적용할 수도 있습니다. 또한 결과 집합에는 기본 데이터 원본의 변경 내용에 따른 중요도 수준이 다양하게 있습니다.  
   
- 결과 집합의 유형은 문을 만들 때 [SQLServerConnection](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 클래스의 [createStatement](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 호출하여 결정합니다. 결과 집합의 기본 역할은 Java 애플리케이션에 사용 가능한 데이터베이스 데이터의 표현을 제공하는 것입니다. 이는 대개 결과 집합 데이터 요소에 대해 형식화된 getter 및 setter 메서드를 사용하여 수행합니다.  
+ 결과 집합의 유형은 문을 만들 때 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 메서드를 호출하여 결정합니다. 결과 집합의 기본 역할은 Java 애플리케이션에 사용 가능한 데이터베이스 데이터의 표현을 제공하는 것입니다. 이는 대개 결과 집합 데이터 요소에 대해 형식화된 getter 및 setter 메서드를 사용하여 수행합니다.  
   
- [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스를 기반으로 하는 다음 예제에서는 [SQLServerStatement](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 클래스의 [executeQuery](../../connect/jdbc/reference/sqlserverstatement-class.md) 메서드를 호출하여 결과 집합을 만듭니다. 그런 다음, [SQLServerResultSet](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 클래스의 [getString](../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 사용하여 결과 집합의 데이터를 표시합니다.  
+ [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스를 기반으로 하는 다음 예제에서는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 메서드를 호출하여 결과 집합을 만듭니다. 그런 다음, [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 메서드를 사용하여 결과 집합의 데이터를 표시합니다.  
   
  [!code[JDBC#ManagingResultSets1](../../connect/jdbc/codesnippet/Java/managing-result-sets-with-t_1.java)]  
   

@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>예  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. 엔드포인트에 대한 VIEW DEFINITION 권한 거부  
- 다음 예에서는 `VIEW DEFINITION`로그인`Mirror7`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]엔드포인트에 대한 권한`ZArifin`을 거부합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인`ZArifin`에 대해 `VIEW DEFINITION`엔드포인트에 대한 권한`Mirror7`을 거부합니다.  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
- 다음 예에서는 `TAKE OWNERSHIP` 사용자 `Shipping83` 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 `PKomosinski`을 부여한 보안 주체에 대해 엔드포인트 `PKomosinski`에 대한 `TAKE OWNERSHIP` 권한을 거부합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `TAKE OWNERSHIP` 및 `Shipping83`가 `PKomosinski`을 부여한 보안 주체에 대해 엔드포인트 `PKomosinski`에 대한 `TAKE OWNERSHIP` 권한을 거부합니다.  
   
 ```  
 USE master;  

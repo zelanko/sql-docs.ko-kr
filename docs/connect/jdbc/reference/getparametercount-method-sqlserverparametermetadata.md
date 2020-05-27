@@ -25,7 +25,7 @@ ms.locfileid: "67980995"
 # <a name="getparametercount-method-sqlserverparametermetadata"></a>getParameterCount 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체에 포함된 정보와 관련된 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 개체의 매개 변수 수를 검색합니다.  
+  이 [SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 개체에 포함된 정보와 관련된 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 개체의 매개 변수 수를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

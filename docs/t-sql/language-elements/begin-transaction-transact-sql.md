@@ -68,7 +68,7 @@ BEGIN { TRAN | TRANSACTION }
  *transaction_name*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database
  
- 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*transaction_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
+ 트랜잭션에 할당된 이름입니다. *transaction_name*은 식별자 규칙을 따라야 하지만 32자보다 긴 식별자는 허용되지 않습니다. 중첩된 BEGIN...COMMIT 또는 BEGIN...ROLLBACK 문의 가장 바깥쪽 쌍에서만 트랜잭션 이름을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *transaction_name*은 항상 대/소문자를 구분합니다.  
   
  @*tran_name_variable*  
  **적용 대상:** SQL Server(2008부터), Azure SQL Database

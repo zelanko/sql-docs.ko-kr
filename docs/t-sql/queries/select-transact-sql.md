@@ -147,7 +147,7 @@ SELECT <select_criteria>
 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스를 사용합니다.
   
 ### <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. SELECT를 사용하여 행 및 열 검색  
- 이 섹션에서는 세 가지 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `*` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`DimEmployee` 사용)을 반환합니다.  
+ 이 섹션에서는 세 가지 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `DimEmployee` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`*` 사용)을 반환합니다.  
   
 ```sql  
 SELECT *  
@@ -163,7 +163,7 @@ FROM DimEmployee AS e
 ORDER BY LastName;  
 ```  
   
- 다음 예에서는 `FirstName` 데이터베이스의 `LastName` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`StartDate`, `DimEmployee`, `AdventureWorksPDW2012`)을 반환합니다. 세 번째 열 머리글 이름이 `FirstDay`로 변경됩니다.  
+ 다음 예에서는 `AdventureWorksPDW2012` 데이터베이스의 `DimEmployee` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 열의 하위 집합(`FirstName`, `LastName`, `StartDate`)을 반환합니다. 세 번째 열 머리글 이름이 `FirstDay`로 변경됩니다.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  
@@ -171,7 +171,7 @@ FROM DimEmployee
 ORDER BY LastName;  
 ```  
   
- 이 예제에서는 `DimEmployee`가 NULL이 아니며 `EndDate`가 'M'(기혼)인 `MaritalStatus`의 행만 반환합니다.  
+ 이 예제에서는 `EndDate`가 NULL이 아니며 `MaritalStatus`가 'M'(기혼)인 `DimEmployee`의 행만 반환합니다.  
   
 ```sql  
 SELECT FirstName, LastName, StartDate AS FirstDay  

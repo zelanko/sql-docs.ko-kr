@@ -247,7 +247,7 @@ BOUNDING_BOX
  > [!NOTE]
  > 경계 상자 좌표는 USING GEOMETRY_GRID 절 내에서만 적용됩니다.  
  >
- > *xmax*는 *xmin*보다 커야 하고 *ymax*는 *ymin*보다 커야 합니다. [xmax](../../t-sql/data-types/float-and-real-transact-sql.md)  xmin >  및 *ymax*  ymin > 이라고 가정할 때, 모든 유효한 *float* 값 표현을 지정할 수 있습니다. 그렇지 않으면 해당 오류가 발생합니다.  
+ > *xmax*는 *xmin*보다 커야 하고 *ymax*는 *ymin*보다 커야 합니다. *xmax* > *xmin* 및 *ymax* > *ymin*이라고 가정할 때, 모든 유효한 [float](../../t-sql/data-types/float-and-real-transact-sql.md) 값 표현을 지정할 수 있습니다. 그렇지 않으면 해당 오류가 발생합니다.  
  >
  > 기본값은 없습니다.  
  >
@@ -492,7 +492,7 @@ CREATE SPATIAL INDEX 문에는 각 옵션을 한 번씩만 지정할 수 있으�
 ## <a name="examples"></a>예  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. geometry 열에 공간 인덱스 만들기
-다음 예에서는 `SpatialTable`geometry**형식 열**을 포함하는 `geometry_col` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
+다음 예에서는 **geometry** 형식 열 `geometry_col`을 포함하는 `SpatialTable` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geometry_col1`에 공간 인덱스 `geometry_col`을 만듭니다. 이 예에서는 기본 공간 분할 구성표를 사용하며 경계 상자를 지정합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -538,7 +538,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. geography 열에 공간 인덱스 만들기
-다음 예에서는 `SpatialTable2`geography**형식 열**을 포함하는 `geography_col` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
+다음 예에서는 **geography** 형식 열 `geography_col`을 포함하는 `SpatialTable2` 테이블을 만듭니다. 그런 다음 `SIndx_SpatialTable_geography_col1`에 공간 인덱스 `geography_col`을 만듭니다. 이 예에서는 GEOGRAPHY_AUTO_GRID 공간 분할 구성표의 기본 매개 변수 값을 사용합니다.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  

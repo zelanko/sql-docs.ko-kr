@@ -23,7 +23,7 @@ ms.locfileid: "78896682"
 
 [!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
-LOB(Large Object) 데이터 형식은 최대 행 크기가 8KB를 초과하는 형식입니다. SQL Server는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 도입하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열과 Transact-SQL 변수는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. .NET에서는 `max`를 사용하여 새로운 `DataReader` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우 데이터를 증분 방식으로 검색하고 업데이트할 수 있습니다.  
+LOB(Large Object) 데이터 형식은 최대 행 크기가 8KB를 초과하는 형식입니다. SQL Server는 `max`, `varchar` 및 `nvarchar` 데이터 형식에 사용할 수 있는 `varbinary` 지정자를 도입하여 2^32바이트에 이르는 큰 값도 저장할 수 있습니다. 테이블 열과 Transact-SQL 변수는 `varchar(max)`, `nvarchar(max)` 또는 `varbinary(max)` 데이터 형식을 지정할 수 있습니다. .NET에서는 `DataReader`를 사용하여 새로운 `max` 데이터 형식을 가져올 수 있을 뿐 아니라 특별한 처리 없이도 입력 및 출력 매개 변수 값을 모두 지정할 수 있습니다. 큰 `varchar` 데이터 형식의 경우 데이터를 증분 방식으로 검색하고 업데이트할 수 있습니다.  
   
 `max` 데이터 형식을 사용하여 비교 및 연결 작업을 수행할 수 있으며, 비교를 수행할 경우에는 Transact-SQL 변수로 사용합니다. SELECT 문의 DISTINCT, ORDER BY, GROUP BY 절에서뿐 아니라 집계, 조인 및 하위 쿼리에도 사용할 수 있습니다.
 
@@ -110,10 +110,10 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>ADO.NET에서의 큰 값 형식 사용  
-ADO.NET에서는 <xref:Microsoft.Data.SqlClient.SqlParameter>에서 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체로 지정하여 결과 집합을 반환하거나 <xref:Microsoft.Data.SqlClient.SqlDataAdapter>를 사용하여 `DataSet`/`DataTable`을 채우는 방식으로 큰 값 형식을 사용할 수 있습니다. 큰 값 형식을 사용하는 방식과 이와 관련된 작은 값 데이터 형식을 사용하는 방법에는 차이가 없습니다.  
+ADO.NET에서는 <xref:Microsoft.Data.SqlClient.SqlDataReader>에서 <xref:Microsoft.Data.SqlClient.SqlParameter> 개체로 지정하여 결과 집합을 반환하거나 <xref:Microsoft.Data.SqlClient.SqlDataAdapter>를 사용하여 `DataSet`/`DataTable`을 채우는 방식으로 큰 값 형식을 사용할 수 있습니다. 큰 값 형식을 사용하는 방식과 이와 관련된 작은 값 데이터 형식을 사용하는 방법에는 차이가 없습니다.  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>GetSqlBytes를 사용하여 데이터 검색  
-`GetSqlBytes`의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드를 사용하여 `varbinary(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 <xref:Microsoft.Data.SqlClient.SqlCommand> 데이터를 선택하는 `cmd`라는 `varbinary(max)` 개체와 <xref:Microsoft.Data.SqlClient.SqlDataReader>로 데이터를 검색하는 `reader`라는 <xref:System.Data.SqlTypes.SqlBytes> 개체를 가정합니다.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader>의 `GetSqlBytes` 메서드를 사용하여 `varbinary(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 `varbinary(max)` 데이터를 선택하는 `cmd`라는 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체와 <xref:System.Data.SqlTypes.SqlBytes>로 데이터를 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -124,7 +124,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlchars-to-retrieve-data"></a>GetSqlChars를 사용하여 데이터 검색  
-`GetSqlChars`의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드를 사용하여 `varchar(max)` 또는 `nvarchar(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 <xref:Microsoft.Data.SqlClient.SqlCommand> 데이터를 선택하는 `cmd`라는 `nvarchar(max)` 개체와 데이터를 검색하는 <xref:Microsoft.Data.SqlClient.SqlDataReader>라는 `reader` 개체를 가정합니다.   
+<xref:Microsoft.Data.SqlClient.SqlDataReader>의 `GetSqlChars` 메서드를 사용하여 `varchar(max)` 또는 `nvarchar(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 `nvarchar(max)` 데이터를 선택하는 `cmd`라는 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체와 데이터를 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다.   
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -135,7 +135,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getsqlbinary-to-retrieve-data"></a>GetSqlBinary를 사용하여 데이터 검색  
-`GetSqlBinary`의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드를 사용하여 `varbinary(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 <xref:Microsoft.Data.SqlClient.SqlCommand> 데이터를 선택하는 `cmd`라는 `varbinary(max)` 개체와 <xref:Microsoft.Data.SqlClient.SqlDataReader> 스트림으로 데이터를 검색하는 `reader`라는 <xref:System.Data.SqlTypes.SqlBinary> 개체를 가정합니다.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader>의 `GetSqlBinary` 메서드를 사용하여 `varbinary(max)` 열의 내용을 검색할 수 있습니다. 다음 코드 조각에서는 테이블에서 `varbinary(max)` 데이터를 선택하는 `cmd`라는 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체와 <xref:System.Data.SqlTypes.SqlBinary> 스트림으로 데이터를 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다.  
   
 ```csharp  
 reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);  
@@ -146,7 +146,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getbytes-to-retrieve-data"></a>GetBytes를 사용하여 데이터 검색  
-`GetBytes`의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 지정된 열 오프셋의 바이트 스트림을 지정된 배열 오프셋에서 시작하는 바이트 배열로 읽어옵니다. 다음 코드 조각에서는 바이트를 바이트 배열로 검색하는 <xref:Microsoft.Data.SqlClient.SqlDataReader>라는 `reader` 개체를 가정합니다. `GetSqlBytes`와 달리 `GetBytes`에는 배열 버퍼의 크기가 필요합니다.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader>의 `GetBytes` 메서드는 지정된 열 오프셋의 바이트 스트림을 지정된 배열 오프셋에서 시작하는 바이트 배열로 읽어옵니다. 다음 코드 조각에서는 바이트를 바이트 배열로 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다. `GetSqlBytes`와 달리 `GetBytes`에는 배열 버퍼의 크기가 필요합니다.  
   
 ```csharp  
 while (reader.Read())  
@@ -157,7 +157,7 @@ while (reader.Read())
 ```  
   
 ### <a name="using-getvalue-to-retrieve-data"></a>GetValue를 사용하여 데이터 검색  
-`GetValue`의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 지정된 열 오프셋에서 배열로 값을 읽습니다. 다음 코드 조각에서는 첫 번째 열 오프셋에서 이진 데이터를 검색한 다음 두 번째 열 오프셋에서 문자열 데이터를 검색하는 <xref:Microsoft.Data.SqlClient.SqlDataReader>라는 `reader` 개체를 가정합니다.  
+<xref:Microsoft.Data.SqlClient.SqlDataReader>의 `GetValue` 메서드는 지정된 열 오프셋에서 배열로 값을 읽습니다. 다음 코드 조각에서는 첫 번째 열 오프셋에서 이진 데이터를 검색한 다음 두 번째 열 오프셋에서 문자열 데이터를 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다.  
   
 ```csharp  
 while (reader.Read())  
@@ -171,7 +171,7 @@ while (reader.Read())
 ```  
   
 ## <a name="converting-from-large-value-types-to-clr-types"></a>큰 값 형식에서 CLR 형식으로 변환  
-`varchar(max)` 같은 문자열 변환 메서드를 사용하여 `nvarchar(max)` 또는 `ToString` 열의 내용을 변환할 수 있습니다. 다음 코드 조각에서는 데이터를 검색하는 <xref:Microsoft.Data.SqlClient.SqlDataReader>라는 `reader` 개체를 가정합니다.  
+`ToString` 같은 문자열 변환 메서드를 사용하여 `varchar(max)` 또는 `nvarchar(max)` 열의 내용을 변환할 수 있습니다. 다음 코드 조각에서는 데이터를 검색하는 `reader`라는 <xref:Microsoft.Data.SqlClient.SqlDataReader> 개체를 가정합니다.  
   
 ```csharp  
 while (reader.Read())  
@@ -182,7 +182,7 @@ while (reader.Read())
 ```  
   
 ### <a name="example"></a>예제  
-다음 코드는 `LargePhoto` 데이터베이스의 `ProductPhoto` 테이블에서 이름 및 `AdventureWorks` 개체를 검색하여 파일에 저장합니다. 어셈블리는 <xref:System.Drawing> 네임스페이스에 대한 참조를 사용하여 컴파일해야 합니다.  <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A>의 <xref:Microsoft.Data.SqlClient.SqlDataReader> 메서드는 <xref:System.Data.SqlTypes.SqlBytes> 속성을 노출하는 `Stream` 개체를 반환합니다. 코드에서는 이 개체를 사용하여 새 `Bitmap` 개체를 만든 다음 Gif `ImageFormat`으로 저장합니다.  
+다음 코드는 `AdventureWorks` 데이터베이스의 `ProductPhoto` 테이블에서 이름 및 `LargePhoto` 개체를 검색하여 파일에 저장합니다. 어셈블리는 <xref:System.Drawing> 네임스페이스에 대한 참조를 사용하여 컴파일해야 합니다.  <xref:Microsoft.Data.SqlClient.SqlDataReader>의 <xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlBytes%2A> 메서드는 `Stream` 속성을 노출하는 <xref:System.Data.SqlTypes.SqlBytes> 개체를 반환합니다. 코드에서는 이 개체를 사용하여 새 `Bitmap` 개체를 만든 다음 Gif `ImageFormat`으로 저장합니다.  
   
 [!code-csharp[DataWorks SqlBytes_Stream#1](~/../sqlclient/doc/samples/SqlBytes_Stream.cs#1)]
   

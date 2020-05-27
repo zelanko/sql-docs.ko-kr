@@ -51,7 +51,7 @@ ms.locfileid: "68086151"
   
 ## <a name="arguments"></a>인수  
  *numeric_expression*  
- 숫자 데이터 형식 범주에서 [datetime](../../t-sql/language-elements/expressions-transact-sql.md) 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 **식**입니다.  
+ 숫자 데이터 형식 범주에서 **datetime** 및 **smalldatetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="result-types"></a>결과 형식  
  *numeric_expression*의 데이터 형식을 반환합니다.  

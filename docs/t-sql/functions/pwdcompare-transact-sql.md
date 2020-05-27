@@ -50,7 +50,7 @@ PWDCOMPARE ( 'clear_text_password'
  암호의 암호화 해시입니다. *password_hash*는 **varbinary(128)** 입니다.  
   
  *version*  
- *password_hash*가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
+ *password_hash*가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상으로 마이그레이션되었지만 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 시스템으로 변환되지 않은 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이전의 로그인 값을 나타내는 경우 1로 설정할 수 있으며 사용되지 않는 매개 변수입니다. *버전*은 **int**입니다.  
   
 > [!CAUTION]  
 >  이 매개 변수는 이전 버전과의 호환성을 위해 제공되지만 지금 암호 해시 BLOB이 해당 버전 설명을 포함하고 있으므로 무시됩니다. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  

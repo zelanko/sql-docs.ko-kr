@@ -50,7 +50,7 @@ DATALENGTH ( expression )
 임의 데이터 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
-**expression**의 데이터 형식이 *nvarchar(max)* , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
+*expression*의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
 ## <a name="remarks"></a>설명  
 `DATALENGTH`는 다음과 같이 가변 길이 데이터를 저장할 수 있는 데이터 형식과 함께 사용할 때 매우 유용합니다.

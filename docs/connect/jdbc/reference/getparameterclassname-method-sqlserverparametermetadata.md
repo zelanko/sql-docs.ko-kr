@@ -25,7 +25,7 @@ ms.locfileid: "67981015"
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerPreparedStatement](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 클래스의 [setObject](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 메서드에 인스턴스가 전달되는 Java 클래스의 정규화된 이름을 검색합니다.  
+  [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 [setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md) 메서드에 인스턴스가 전달되는 Java 클래스의 정규화된 이름을 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

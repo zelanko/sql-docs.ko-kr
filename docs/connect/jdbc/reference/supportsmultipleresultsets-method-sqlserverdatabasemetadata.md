@@ -25,7 +25,7 @@ ms.locfileid: "67969220"
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 데이터베이스에서 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [execute](../../../connect/jdbc/reference/execute-method.md) 메서드를 한 번 호출하여 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 개체를 가져올 수 있는지 여부를 검색합니다.  
+  이 데이터베이스에서 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 [execute](../../../connect/jdbc/reference/execute-method.md) 메서드를 한 번 호출하여 여러 개의 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 가져올 수 있는지 여부를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

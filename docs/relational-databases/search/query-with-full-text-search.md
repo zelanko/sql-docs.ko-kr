@@ -175,7 +175,7 @@ CONTAINS 또는 FREETEXT 조건자에 네 부분으로 된 이름을 사용하�
 ## <a name="specific-types-of-searches"></a><a name="examples_specific"></a> 특정 형식의 검색
 
 ###  <a name="search-for-a-specific-word-or-phrase-simple-term"></a><a name="Simple_Term"></a> 특정 단어 또는 구(단순 단어) 검색  
- [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 **데이터베이스의**ProductReview[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
+ [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md)을 사용하여 테이블에서 특정 단어 또는 구를 검색할 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 **ProductReview** 테이블을 검색하여 "학습 곡선"이라는 구가 포함된 제품 설명을 모두 찾으려면 CONTAINS 조건자를 다음과 같이 사용할 수 있습니다.  
   
 ```sql
 USE AdventureWorks2012  
@@ -227,7 +227,7 @@ GO
 ###  <a name="search-for-inflectional-forms-of-a-specific-word-generation-term"></a><a name="Inflectional_Generation_Term"></a> 특정 단어의 굴절형(생성 단어) 검색  
 [CONTAINS](../../t-sql/queries/contains-transact-sql.md), [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)또는 [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) 을 사용하여 동사의 여러 시제나 변화 또는 명사의 단수형과 복수형을 모두 검색(굴절형 검색)하거나, 특정 단어의 동의어 형태를 모두 검색(동의어 검색)할 수 있습니다.  
   
-다음 예제에서는 `Comments` 데이터베이스의 `ProductReview` 테이블에 있는 `AdventureWorks` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
+다음 예제에서는 `AdventureWorks` 데이터베이스의 `ProductReview` 테이블에 있는 `Comments` 열에서 "foot"의 모든 형태("foot", "feet" 등)를 검색합니다. 
   
 ```sql  
 USE AdventureWorks2012  

@@ -106,7 +106,7 @@ JSON 경로는 구문 분석을 위해 lax 또는 strict 모드를 지정할 수
 
 **JSON_QUERY**는 유효한 JSON 조각을 반환합니다. 결과적으로 **FOR JSON**은 **JSON_QUERY** 반환 값의 특수 문자를 이스케이프하지 않습니다.
 
-FOR JSON을 사용하여 결과를 반환하고 이미 JSON 형식인 데이터(열 또는 식의 결과)를 포함하는 경우 **path** 매개 변수 없이 *JSON_QUERY*로 JSON 데이터를 래핑하세요.
+FOR JSON을 사용하여 결과를 반환하고 이미 JSON 형식인 데이터(열 또는 식의 결과)를 포함하는 경우 *path* 매개 변수 없이 **JSON_QUERY**로 JSON 데이터를 래핑하세요.
 
 ## <a name="examples"></a>예  
   

@@ -75,7 +75,7 @@ JDBC 버전 6.0 및 일부 이후 버전에 대한 설명서도 여기에 있습
 |--------------------|-----------------|  
 |[ISQLServerCallableStatement 인터페이스](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|입력 및 출력 매개 변수와 함께 호출할 저장 프로시저 이름을 지정할 수 있도록 합니다.|  
 |[ISQLServerConnection 인터페이스](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 대한 JDBC 연결을 나타냅니다.|  
-|[SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ISQLServerConnection[ 개체를 사용하여 ](../../../connect/jdbc/reference/sqlserverconnection-class.md) 데이터베이스에 연결에 관련된 속성의 목록을 나타냅니다.|  
+|[SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|[ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결에 관련된 속성의 목록을 나타냅니다.|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|JDBC의 준비된 문 기능에 대한 기본 구현을 나타냅니다.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|JDBC 결과 집합을 나타냅니다.|  
 |[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|JDBC 문 기능의 기본 구현을 나타냅니다.|
@@ -94,7 +94,7 @@ JDBC 버전 6.0 및 일부 이후 버전에 대한 설명서도 여기에 있습
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|ISQLServerConnection을 구현합니다.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|연결 풀 관리자를 위한 실제 데이터베이스 연결을 나타냅니다.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|데이터베이스의 메타데이터를 나타냅니다.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]SQLServerConnection[ 개체를 사용하여 ](../../../connect/jdbc/reference/sqlserverconnection-class.md) 데이터베이스에 연결하는 경우와 관련된 속성 목록을 나타냅니다.|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 경우와 관련된 속성 목록을 나타냅니다.|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|JNDI(Java Naming and Directory Interface)의 데이터 원본을 구체화하기 위한 개체 팩터리를 나타냅니다.|  
 |[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|JDBC 드라이버를 나타냅니다. 이 클래스에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결하고 JDBC 드라이버에 대한 정보를 얻기 위한 메서드가 포함되어 있습니다.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|실패하거나 완료되지 않은 SQL 문 실행을 나타냅니다.|  

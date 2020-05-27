@@ -68,7 +68,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stdev"></a>1\. STDEV 사용  
- 다음 예에서는 `SalesPerson` 데이터베이스에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 보너스 값에 대한 표준 편차를 반환하는 방법을 보여 줍니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `SalesPerson` 테이블에 있는 모든 보너스 값에 대한 표준 편차를 반환하는 방법을 보여 줍니다.  
   
 ```  
 SELECT STDEV(Bonus)  

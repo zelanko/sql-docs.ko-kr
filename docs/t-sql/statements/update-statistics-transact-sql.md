@@ -284,14 +284,14 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-update-statistics-on-a-table"></a>E. 테이블에 대한 모든 통계 업데이트  
- 다음 예제에서는 `CustomerStats1` 테이블에서 `Customer` 통계를 업데이트합니다.  
+ 다음 예제에서는 `Customer` 테이블에서 `CustomerStats1` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer ( CustomerStats1 );  
 ```  
   
 ### <a name="f-update-statistics-by-using-a-full-scan"></a>F. 전체 검사를 사용하여 통계 업데이트  
- 다음 예제에서는 `CustomerStats1` 테이블의 모든 행 검사를 기반으로 `Customer` 통계를 업데이트합니다.  
+ 다음 예제에서는 `Customer` 테이블의 모든 행 검사를 기반으로 `CustomerStats1` 통계를 업데이트합니다.  
   
 ```sql  
 UPDATE STATISTICS Customer (CustomerStats1) WITH FULLSCAN;  

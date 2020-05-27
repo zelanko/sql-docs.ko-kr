@@ -25,7 +25,7 @@ ms.locfileid: "69025587"
 
 서버로의 반복 이동으로 인한 시간을 절약할 수 있으므로 클라이언트 코드에서 사용자 입력의 유효성 검사는 중요합니다. 또한 유효하지 않고 클라이언트측 유효성을 무시하는 입력을 catch하기 위해 서버의 저장 프로시저에 대한 매개 변수의 유효성 검사도 중요합니다.
 
-SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])"를 참조하세요.
+SQL 삽입 및 방지 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL 삽입"을 참조하세요. 저장 프로시저 매개 변수의 유효성 검사에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "저장 프로시저([!INCLUDE[ssDE](../../includes/ssde_md.md)])"를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

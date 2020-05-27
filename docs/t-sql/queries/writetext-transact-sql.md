@@ -36,7 +36,7 @@ ms.locfileid: "67948108"
   기존 **text**, **ntext** 또는 **image** 열의 최소 로깅 대화형 업데이트를 허용합니다. WRITETEXT는 영향을 받는 열에 있는 모든 기존 데이터를 덮어씁니다. WRITETEXT는 뷰 내의 **text**, **ntext** 및 **image** 열에서 사용할 수 없습니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 **UPDATE** 문의 [.](../../t-sql/queries/update-transact-sql.md)WRITE 절을 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 큰 값 데이터 형식 및 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문의 **.** WRITE 절을 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ WRITETEXT [BULK]
  업데이트할 테이블 및 **text**, **ntext** 또는 **image** 열의 이름입니다. 테이블 이름 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  
   
  *text_ptr*  
- **text**, **ntext** 또는 **image** 데이터에 대한 포인터를 저장하는 값입니다. *text_ptr*은 **이진(16)** 이어야 합니다. 텍스트 포인터를 만들려면 [text](../../t-sql/statements/insert-transact-sql.md), [ntext](../../t-sql/queries/update-transact-sql.md) 또는 **image** 열에 대해 Null이 아닌 데이터를 사용하여 **INSERT** 또는 **UPDATE** 문을 실행합니다.  
+ **text**, **ntext** 또는 **image** 데이터에 대한 포인터를 저장하는 값입니다. *text_ptr*은 **이진(16)** 이어야 합니다. 텍스트 포인터를 만들려면 **text**, **ntext** 또는 **image** 열에 대해 Null이 아닌 데이터를 사용하여 [INSERT](../../t-sql/statements/insert-transact-sql.md) 또는 [UPDATE](../../t-sql/queries/update-transact-sql.md) 문을 실행합니다.  
   
  WITH LOG  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 무시됩니다. 로깅은 데이터베이스에 영향을 주는 복구 모델에 의해 결정됩니다.  

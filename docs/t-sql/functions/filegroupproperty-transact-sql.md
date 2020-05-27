@@ -42,7 +42,7 @@ FILEGROUPPROPERTY ( filegroup_name, property )
   
 ## <a name="arguments"></a>인수  
  *filegroup_name*  
-명명된 속성 정보를 반환하는 **의 파일 그룹 이름을 나타내는** sysname`FILEGROUPPROPERTY` 형식의 식입니다.  
+명명된 속성 정보를 반환하는 `FILEGROUPPROPERTY`의 파일 그룹 이름을 나타내는 **sysname** 형식의 식입니다.  
   
  *property*  
 파일 그룹 속성의 이름을 반환하는 **varchar(128)** 형식의 식입니다. *Property*는 다음 값 중 하나를 반환할 수 있습니다.  

@@ -25,7 +25,7 @@ Java 프로그래밍 언어 데이터 형식을 [!INCLUDE[ssNoVersion](../../inc
 
 ## <a name="getter-method-conversions"></a>Getter 메서드 변환
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 다음 차트에는 \<SQLServerResultSet[ 클래스의 get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type>() 메서드에 대한 JDBC 드라이버의 변환 맵과 \<SQLServerCallableStatement[ 클래스의 get](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type> 메서드에서 지원되는 변환 등이 나와 있습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 기반으로 하는 다음 차트에는 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 get\<Type>() 메서드에 대한 JDBC 드라이버의 변환 맵과 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 get\<Type> 메서드에서 지원되는 변환 등이 나와 있습니다.
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -41,7 +41,7 @@ Java 프로그래밍 언어 데이터 형식을 [!INCLUDE[ssNoVersion](../../inc
 
 ## <a name="updater-method-conversions"></a>Updater 메서드 변환
 
-\<SQLServerResultSet[ 클래스의 update](../../connect/jdbc/reference/sqlserverresultset-class.md)Type>() 메서드에 전달되는 Java 형식 데이터의 경우 다음 변환이 적용됩니다.
+[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 update\<Type>() 메서드에 전달되는 Java 형식 데이터의 경우 다음 변환이 적용됩니다.
 
 ![JDBCUpdaterConversions](../../connect/jdbc/media/jdbc_jdbcupdatterconversions.gif "JDBCUpdaterConversions")
 
@@ -65,7 +65,7 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 ## <a name="setter-method-conversions"></a>Setter 메서드 변환
 
-\<SQLServerPreparedStatement[ 클래스 및 ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)SQLServerCallableStatement[ 클래스의 set](../../connect/jdbc/reference/sqlservercallablestatement-class.md)Type>() 메서드에 전달되는 Java 형식 데이터에 대해서는 다음과 같은 변환이 적용됩니다.
+[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 set\<Type>() 메서드에 전달되는 Java 형식 데이터에 대해서는 다음과 같은 변환이 적용됩니다.
 
 ![JDBCSetterConversions](../../connect/jdbc/media/jdbc_jdbcsetterconversions_v2.gif "JDBCSetterConversions")
 
@@ -96,7 +96,7 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 > [!NOTE]  
 > Microsoft JDBC Driver 4.2 for SQL Server 이상에서는 JDBC 4.1 및 4.2를 지원합니다. 4\.1 및 4.2 데이터 형식 매핑 및 변환에 대한 자세한 내용은 아래 정보 이외에도 [JDBC 드라이버의 JDBC 4.1 준수](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) 및 [JDBC 드라이버의 JDBC 4.2 준수](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md)를 참조하세요.
 
-\<SQLServerPreparedStatement[ 클래스의 setObject(](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)Type>) 메서드에 전달되는 Java 형식 데이터에 대해서는 다음과 같은 변환이 적용됩니다.
+[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 setObject(\<Type>) 메서드에 전달되는 Java 형식 데이터에 대해서는 다음과 같은 변환이 적용됩니다.
 
 ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")
 

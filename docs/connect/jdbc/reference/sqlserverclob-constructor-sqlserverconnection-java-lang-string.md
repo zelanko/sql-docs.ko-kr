@@ -25,10 +25,10 @@ ms.locfileid: "67971803"
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob 생성자(SQLServerConnection, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-class.md) 개체 및 데이터의 문자열이 지정된 경우 [SQLServerClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 새 인스턴스를 초기화합니다.  
+  [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체 및 데이터의 문자열이 지정된 경우 [SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md) 클래스의 새 인스턴스를 초기화합니다.  
   
 > [!NOTE]  
->  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 클래스의 [createClob](../../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 사용합니다.  
+>  JDBC 드라이버 버전 2.0에서는 이 메서드가 사용되지 않습니다. 대신 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createClob](../../../connect/jdbc/reference/createclob-method-sqlserverconnection.md) 메서드를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   

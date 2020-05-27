@@ -29,7 +29,7 @@ ms.locfileid: "69027340"
 
 ## <a name="using-local-transactions"></a>로컬 트랜잭션 사용
 
-트랜잭션이 1단계 트랜잭션이면 로컬 트랜잭션으로 간주하고 데이터베이스에서 직접 처리합니다. JDBC 드라이버는 [setAutoCommit](../../connect/jdbc/reference/sqlserverconnection-class.md), [commit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md) 및 [rollback](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 같은 [SQLServerConnection](../../connect/jdbc/reference/rollback-method.md) 클래스의 다양한 메서드를 사용하여 로컬 트랜잭션을 지원합니다. 일반적으로 로컬 트랜잭션은 애플리케이션에서 명시적으로 관리하거나 Java Platform, Enterprise Edition(Java EE) 애플리케이션 서버에서 자동으로 관리합니다.
+트랜잭션이 1단계 트랜잭션이면 로컬 트랜잭션으로 간주하고 데이터베이스에서 직접 처리합니다. JDBC 드라이버는 [setAutoCommit](../../connect/jdbc/reference/setautocommit-method-sqlserverconnection.md), [commit](../../connect/jdbc/reference/commit-method-sqlserverconnection.md) 및 [rollback](../../connect/jdbc/reference/rollback-method.md) 같은 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 다양한 메서드를 사용하여 로컬 트랜잭션을 지원합니다. 일반적으로 로컬 트랜잭션은 애플리케이션에서 명시적으로 관리하거나 Java Platform, Enterprise Edition(Java EE) 애플리케이션 서버에서 자동으로 관리합니다.
 
 다음 예제에서는`try` 블록에서 두 개의 개별 문으로 구성된 로컬 트랜잭션을 수행합니다. 이들 문은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스의 Production.ScrapReason 테이블에 대해 실행되고 예외가 발생하지 않을 경우 커밋됩니다. 예외가 발생하면 `catch` 블록의 코드에서 트랜잭션을 롤백합니다.
 

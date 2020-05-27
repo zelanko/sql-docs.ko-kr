@@ -49,7 +49,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  *style*  
  **TRY_CONVERT** 함수가 *expression*을 변환하는 방법을 지정하는 선택적 정수 식입니다.  
   
- *style*은 *CONVERT* 함수의 **style** 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
+ *style*은 **CONVERT** 함수의 *style* 매개 변수와 동일한 값을 허용합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)를 참조하세요.  
   
  허용되는 값 범위는 *data_type* 값에 따라 결정됩니다. *style*이 Null이면 **TRY_CONVERT**는 Null을 반환합니다.  
   

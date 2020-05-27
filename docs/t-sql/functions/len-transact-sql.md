@@ -48,7 +48,7 @@ LEN ( string_expression )
  계산할 문자열 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *string_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **식**의 데이터 형식이 *varchar(max)* , **nvarchar(max)** 또는 **varbinary(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
+ *식*의 데이터 형식이 **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 이면 **bigint**, 그렇지 않으면 **int**입니다.  
   
  SC 데이터 정렬을 사용하는 경우 반환되는 정수 값에서는 UTF-16 서로게이트 쌍이 단일 문자로 계산됩니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   

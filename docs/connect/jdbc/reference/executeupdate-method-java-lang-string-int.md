@@ -25,7 +25,7 @@ ms.locfileid: "67954752"
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate 메서드(java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정된 SQL 문을 실행하고 이 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]SQLServerStatement[ 개체에서 생성된 자동 생성 키를 검색에 사용할 수 있도록 해야 하는지 여부를 지정된 플래그로 ](../../../connect/jdbc/reference/sqlserverstatement-class.md)에 알립니다.  
+  지정된 SQL 문을 실행하고 이 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에서 생성된 자동 생성 키를 검색에 사용할 수 있도록 해야 하는지 여부를 지정된 플래그로 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   

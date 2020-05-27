@@ -23,7 +23,7 @@ ms.locfileid: "67971140"
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException 생성자(java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [개체](../../../connect/jdbc/reference/sqlserverexception-class.md), **문자열** 개체, **문자열** 개체 **int**, 및 **부울**이 주어진 경우 **SQLServerException** 클래스의 새 인스턴스를 초기화합니다.
+  **개체**, **문자열** 개체, **문자열** 개체 **int**, 및 **부울**이 주어진 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.
 
 ## <a name="syntax"></a>구문  
   

@@ -25,7 +25,7 @@ ms.locfileid: "68213662"
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 개체의 유지 기능을 변경합니다.  
+  이 [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) 개체를 사용하여 만든 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 유지 기능을 변경합니다.  
   
 ## <a name="syntax"></a>구문  
   

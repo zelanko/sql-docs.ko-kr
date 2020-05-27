@@ -249,7 +249,7 @@ MAXDOP = *max_degree_of_parallelism*
 ### <a name="examples-use-the-adventureworks-database"></a>예제에서는 AdventureWorks 데이터베이스를 사용합니다.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. CREATE STATISTICS에 SAMPLE number PERCENT 사용  
- 다음 예에서는 `ContactMail1` 데이터베이스의 `BusinessEntityID` 테이블에서 `EmailPromotion` 및 `Person` 열에 대해 5% 무작위 샘플을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 통계를 만듭니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `ContactMail1` 테이블에서 `BusinessEntityID` 및 `EmailPromotion` 열에 대해 5% 무작위 샘플을 사용하여 `Person` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS ContactMail1  
@@ -291,7 +291,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH
 ```  
 
 ### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
- 다음 예제에서는 `NamePurchase` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `Person` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
+ 다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -302,14 +302,14 @@ CREATE STATISTICS NamePurchase  
 ### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW 데이터베이스를 사용하는 예제입니다. 
   
 ### <a name="f-create-statistics-on-two-columns"></a>F. 두 열에 대한 통계 만들기  
- 다음 예제에서는 `CustomerStats1` 테이블의 `CustomerKey` 및 `EmailAddress` 열을 기반으로 `DimCustomer` 통계를 만듭니다. 통계는 `Customer` 테이블에 있는 행의 통계적으로 의미 있는 샘플링을 기반으로 작성됩니다.  
+ 다음 예제에서는 `DimCustomer` 테이블의 `CustomerKey` 및 `EmailAddress` 열을 기반으로 `CustomerStats1` 통계를 만듭니다. 통계는 `Customer` 테이블에 있는 행의 통계적으로 의미 있는 샘플링을 기반으로 작성됩니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. 전체 검사를 사용하여 통계 만들기  
- 다음 예제에서는 `CustomerStatsFullScan` 테이블의 모든 행 검사를 기반으로 `DimCustomer` 통계를 만듭니다.  
+ 다음 예제에서는 `DimCustomer` 테이블의 모든 행 검사를 기반으로 `CustomerStatsFullScan` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
@@ -317,7 +317,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;
 ```  
   
 ### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. 샘플 비율을 지정하여 통계 만들기  
- 다음 예제에서는 `CustomerStatsSampleScan` 테이블 행의 50% 검사를 기반으로 `DimCustomer` 통계를 만듭니다.  
+ 다음 예제에서는 `DimCustomer` 테이블 행의 50% 검사를 기반으로 `CustomerStatsSampleScan` 통계를 만듭니다.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 

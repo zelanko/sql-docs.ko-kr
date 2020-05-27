@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-stdevp"></a>A: STDEVP 사용  
- 다음은 `SalesPerson` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
+ 다음은 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `SalesPerson` 테이블에 있는 모든 보너스 값의 모집단에 대한 표준 편차를 반환하는 예입니다.  
   
 ```  
 SELECT STDEVP(Bonus)  
@@ -80,7 +80,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-using-stdevp"></a>B: STDEVP 사용  
- 다음 예에서는 `STDEVP` 테이블의 판매 할당량 값의 `dbo.FactSalesQuota`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
+ 다음 예에서는 `dbo.FactSalesQuota` 테이블의 판매 할당량 값의 `STDEVP`를 반환합니다. 첫 번째 열은 모든 고유 값의 표준 편차를 포함하고 두 번째 열은 중복 값을 포함한 모든 값의 표준 편차를 포함합니다.  
   
 ```  
 -- Uses AdventureWorks  

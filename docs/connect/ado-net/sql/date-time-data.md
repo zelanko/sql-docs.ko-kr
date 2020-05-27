@@ -68,9 +68,9 @@ SQL Server에서 날짜 및 시간 데이터를 해석하는 방법은 SQL Serve
 앞의 <xref:Microsoft.Data.SqlClient.SqlParameter> 열거형 중 하나를 사용하여 <xref:System.Data.SqlDbType>의 데이터 형식을 지정할 수 있습니다. 
 
 > [!NOTE]
-> `DbType`의 `SqlParameter` 속성을 `SqlDbType.Date`로 설정할 수 없습니다.
+> `SqlParameter`의 `DbType` 속성을 `SqlDbType.Date`로 설정할 수 없습니다.
 
-또한, <xref:Microsoft.Data.SqlClient.SqlParameter> 개체의 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 속성을 특정 `SqlParameter` 열거형 값으로 설정하면 일반적인 방식으로 <xref:System.Data.DbType>의 형식을 지정할 수 있습니다. <xref:System.Data.DbType> 및 `datetime2` 데이터 형식을 지원하기 위해 다음 열거형 값이 `datetimeoffset`에 추가되었습니다.  
+또한, `SqlParameter` 개체의 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 속성을 특정 <xref:System.Data.DbType> 열거형 값으로 설정하면 일반적인 방식으로 <xref:Microsoft.Data.SqlClient.SqlParameter>의 형식을 지정할 수 있습니다. `datetime2` 및 `datetimeoffset` 데이터 형식을 지원하기 위해 다음 열거형 값이 <xref:System.Data.DbType>에 추가되었습니다.  
   
 - DbType.DateTime2  
   
@@ -94,7 +94,7 @@ SQL Server에서 날짜 및 시간 데이터를 해석하는 방법은 SQL Serve
   
 |속성|Description|  
 |--------------|-----------------|  
-|<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|값이 null을 허용하는지 여부를 가져오거나 설정합니다. Null 매개 변수 값을 서버에 보낼 때 <xref:System.DBNull>(Visual Basic에서는 `null`) 대신 `Nothing`을 지정해야 합니다. 데이터베이스 null에 대한 자세한 내용은 [null 값 처리](handle-null-values.md)를 참조하세요.|  
+|<xref:Microsoft.Data.SqlClient.SqlParameter.IsNullable%2A>|값이 null을 허용하는지 여부를 가져오거나 설정합니다. Null 매개 변수 값을 서버에 보낼 때 `null`(Visual Basic에서는 `Nothing`) 대신 <xref:System.DBNull>을 지정해야 합니다. 데이터베이스 null에 대한 자세한 내용은 [null 값 처리](handle-null-values.md)를 참조하세요.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Precision%2A>|값을 나타내는 데 사용되는 최대 자릿수를 가져오거나 설정합니다. 날짜 및 시간 데이터 형식에 대해서는 이 설정이 무시됩니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Scale%2A>|`Time`, `DateTime2`, 및 `DateTimeOffset`의 날짜 부분 값이 확인되는 소수 자릿수를 가져오거나 설정합니다. 기본값은 0이며,이 값은 실제 소수 자릿수가 값에서 유추되고 서버로 전송됨을 의미합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlParameter.Size%2A>|날짜 및 시간 데이터 형식에 대해서는 무시됩니다.|  
@@ -105,7 +105,7 @@ SQL Server에서 날짜 및 시간 데이터를 해석하는 방법은 SQL Serve
 >  0보다 작거나 24시간보다 크거나 같은 시간 값은 <xref:System.ArgumentException>을 throw합니다.  
   
 ### <a name="creating-parameters"></a>매개 변수 만들기  
-<xref:Microsoft.Data.SqlClient.SqlParameter> 개체는 해당 생성자를 사용하여 만들거나 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 컬렉션에 추가하여 만들 수 있습니다(`Add`의 <xref:Microsoft.Data.SqlClient.SqlParameterCollection> 메서드를 호출). `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
+<xref:Microsoft.Data.SqlClient.SqlParameter> 개체는 해당 생성자를 사용하여 만들거나 <xref:Microsoft.Data.SqlClient.SqlCommand>.<xref:Microsoft.Data.SqlClient.SqlCommand.Parameters%2A> 컬렉션에 추가하여 만들 수 있습니다(<xref:Microsoft.Data.SqlClient.SqlParameterCollection>의 `Add` 메서드를 호출). `Add` 메서드는 생성자 인수 또는 기존 매개 변수 개체를 입력으로 사용합니다.  
   
 이 항목의 다음 섹션에서는 날짜 및 시간 매개 변수를 지정하는 방법에 대한 예제를 제공합니다.
   
@@ -150,7 +150,7 @@ parameter.Value = DateTimeOffset.Parse("1666-09-02 1:00:00+0");
 ```  
   
 ### <a name="addwithvalue"></a>AddWithValue  
-다음 코드 조각과 같이 `AddWithValue`의 <xref:Microsoft.Data.SqlClient.SqlCommand> 메서드를 사용하여 매개 변수를 제공할 수도 있습니다. 그러나 `AddWithValue` 메서드에서는 매개 변수에 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>를 지정할 수 없습니다.  
+다음 코드 조각과 같이 <xref:Microsoft.Data.SqlClient.SqlCommand>의 `AddWithValue` 메서드를 사용하여 매개 변수를 제공할 수도 있습니다. 그러나 `AddWithValue` 메서드에서는 매개 변수에 <xref:Microsoft.Data.SqlClient.SqlParameter.DbType%2A> 또는 <xref:Microsoft.Data.SqlClient.SqlParameter.SqlDbType%2A>를 지정할 수 없습니다.  
   
 ```csharp  
 command.Parameters.AddWithValue(   
@@ -177,7 +177,7 @@ command.Parameters.AddWithValue(
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>|필드에 대해 기본 공급자별 형식인 형식을 반환합니다. 새 날짜 및 시간 형식에 대해 `GetFieldType`과 동일한 형식을 반환합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>|지정한 열의 값을 검색합니다. 새 날짜 및 시간 형식에 대해 `GetValue`와 동일한 형식을 반환합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>|지정된 배열의 값을 검색합니다.|  
-|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|열 값을 <xref:System.Data.SqlTypes.SqlString>으로 검색합니다. 데이터를 <xref:System.InvalidCastException>으로 표현할 수 없는 경우 `SqlString`이 발생합니다.|  
+|<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlString%2A>|열 값을 <xref:System.Data.SqlTypes.SqlString>으로 검색합니다. 데이터를 `SqlString`으로 표현할 수 없는 경우 <xref:System.InvalidCastException>이 발생합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValue%2A>|열 데이터를 기본 `SqlDbType`으로 검색합니다. 새 날짜 및 시간 형식에 대해 `GetValue`와 동일한 형식을 반환합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetSqlValues%2A>|지정된 배열의 값을 검색합니다.|  
 |<xref:Microsoft.Data.SqlClient.SqlDataReader.GetString%2A>|Type System Version이 SQL Server 2005로 설정되어 있는 경우 열 값을 문자열로 검색합니다. 데이터를 문자열로 표현할 수 없는 경우 <xref:System.InvalidCastException>이 발생합니다.|  

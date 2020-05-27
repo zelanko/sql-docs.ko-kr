@@ -42,7 +42,7 @@ public void setFailoverPartner(java.lang.String serverName)
 ## <a name="remarks"></a>설명  
  이 메서드에서 설정한 값은 주 서버에 대한 초기 연결이 실패할 경우에 사용되며, 초기 연결이 만들어진 후에는 이 값이 무시됩니다. 또한 [setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md) 메서드를 이 메서드와 함께 사용해야 합니다. 그렇지 않으면 예외가 발생합니다.  
   
- 드라이버에서는 장애 조치(Failover) 서버의 이름이 설정된 경우 장애 조치(Failover) 서버의 포트 번호를 지정할 수 없습니다. 그러나 [setFailoverPartner](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) 메서드와 함께 [setServerName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) 메서드 및 [setInstanceName](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 메서드를 호출할 수는 있습니다.  
+ 드라이버에서는 장애 조치(Failover) 서버의 이름이 설정된 경우 장애 조치(Failover) 서버의 포트 번호를 지정할 수 없습니다. 그러나 [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) 메서드와 함께 [setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md) 메서드 및 [setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md) 메서드를 호출할 수는 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

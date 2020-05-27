@@ -43,7 +43,7 @@ public int getResultSetHoldability()
 ## <a name="remarks"></a>설명  
  이 getResultSetHoldability 메서드는 java.sql.DatabaseMetaData 인터페이스의 getResultSetHoldability 메서드에 의해 지정됩니다.  
   
- [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 데이터베이스와 함께 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용할 경우 이 메서드는 1을 반환합니다. 이 값은 ResultSet.HOLD_CURSORS_OVER_COMMIT 상수와 같습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 1을 반환합니다. 이 값은 ResultSet.HOLD_CURSORS_OVER_COMMIT 상수와 같습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

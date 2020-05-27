@@ -65,7 +65,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  이 문서에서는 하위 쿼리에 사용되는 경우의 ALL을 참조합니다. ALL은 [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) 및 [SELECT](../../t-sql/queries/select-transact-sql.md)에도 사용될 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예제에서는 하위 쿼리를 사용하여 특정 `DaysToManufacture`의 모든 구성 요소에 대한 `SalesOrderID` 값 수의 목록을 만든 다음, 모든 `DaysToManufacture`가 지정한 일 수 범위에 있는지 확인합니다.  
+ 다음 예에서는 `SalesOrderID` 데이터베이스에서 지정한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 모든 구성 요소를 지정된 기간 내에 제조할 수 있는지 여부를 결정하는 저장 프로시저를 만듭니다. 이 예제에서는 하위 쿼리를 사용하여 특정 `SalesOrderID`의 모든 구성 요소에 대한 `DaysToManufacture` 값 수의 목록을 만든 다음, 모든 `DaysToManufacture`가 지정한 일 수 범위에 있는지 확인합니다.  
   
 ```  
 -- Uses AdventureWorks  

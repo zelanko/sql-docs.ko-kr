@@ -353,7 +353,7 @@ GO
 ```  
   
 ### <a name="c-using-output-into-with-an-update-statement"></a>C. UPDATE 문과 함께 OUTPUT INTO 사용  
- 다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절은 `VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `deleted.VacationHours`의 값과 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
+ 다음 예에서는 `VacationHours` 테이블에 있는 처음 10개 행의 `Employee` 열을 25% 업데이트합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `VacationHours`의 값과 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  
   
  각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다.  
   
@@ -422,7 +422,7 @@ GO
 ```  
   
 ### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
- 다음 예제에서는 지정된 `ScrapReasonID` 및 `WorkOrder`가 있는 모든 작업 순서에 대해 `ProductID` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
+ 다음 예제에서는 지정된 `ProductID` 및 `ScrapReasonID`가 있는 모든 작업 순서에 대해 `WorkOrder` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
   
 ```  
 USE AdventureWorks2012;  

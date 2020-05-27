@@ -191,7 +191,7 @@ ALTER QUEUE ExpenseQueue
 ```  
   
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. 큐 판독기 수 변경  
- 다음 예에서는 이 큐에 대해 `7`가 시작하는 저장 프로시저 인스턴스의 최대 수를 [!INCLUDE[ssSB](../../includes/sssb-md.md)]로 설정합니다.  
+ 다음 예에서는 이 큐에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 시작하는 저장 프로시저 인스턴스의 최대 수를 `7`로 설정합니다.  
   
 ```  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  

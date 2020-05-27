@@ -185,7 +185,7 @@ sqlsrv_close( $conn );
 > [!NOTE]  
 > 배치 쿼리 또는 저장 프로시저에서 반환된 첫 번째(또는 유일한) 결과는 **sqlsrv_next_result**를 호출하지 않아도 활성화됩니다.  
   
-예제는 *AdventureWorks* 데이터베이스의 [Purchasing.ProductReview](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+예제는 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스의 *Purchasing.ProductReview* 테이블을 사용하며 이 데이터베이스가 서버에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
   
 ```  
 <?php  

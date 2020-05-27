@@ -138,7 +138,7 @@ FOR DATABASE_MIRRORING (
  FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING }  
  페이로드 유형을 지정합니다.  
   
- 현재 [!INCLUDE[tsql](../../includes/tsql-md.md)] 매개 변수에 전달할 `<language_specific_arguments>` 언어 관련 인수는 없습니다.  
+ 현재 `<language_specific_arguments>` 매개 변수에 전달할 [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 관련 인수는 없습니다.  
   
  **TCP 프로토콜 옵션**  
   

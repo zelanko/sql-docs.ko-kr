@@ -23,7 +23,7 @@ ms.locfileid: "69026900"
 
 호출할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저는 데이터를 저장 프로시저에 전달하는 데 사용할 수 있는 입력 매개 변수가 하나 이상인 저장 프로시저입니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 이러한 종류의 저장 프로시저를 호출하여 반환되는 데이터를 처리하는 데 사용할 수 있는 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스를 제공합니다.
 
-JDBC 드라이버를 사용하여 입력 매개 변수가 포함된 저장 프로시저를 호출하는 경우에는 `call` SQL 이스케이프 시퀀스와 [SQLServerConnection](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 클래스의 [prepareCall](../../connect/jdbc/reference/sqlserverconnection-class.md) 메서드를 함께 사용해야 합니다. 입력 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
+JDBC 드라이버를 사용하여 입력 매개 변수가 포함된 저장 프로시저를 호출하는 경우에는 `call` SQL 이스케이프 시퀀스와 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 함께 사용해야 합니다. 입력 매개 변수가 있는 `call` 이스케이프 시퀀스의 구문은 다음과 같습니다.
 
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 

@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  SET STATISTICS PROFILE과 SET STATISTICS XML은 서로 유사합니다. 전자는 텍스트 출력을 생성하고 후자는 XML 출력을 생성합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 새 쿼리 실행 계획 정보가 SET STATISTICS PROFILE 문이 아니라 SET STATISTICS XML 문을 통해서만 표시됩니다.  
   
 > [!NOTE]  
->  **에서** 실제 실행 계획 포함[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  SET STATISTICS XML을 사용하여 출력을 보려면 다음 권한이 있어야 합니다.  

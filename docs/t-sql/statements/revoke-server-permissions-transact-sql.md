@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. 로그인에서 사용 권한 취소  
- 다음 예에서는 `VIEW SERVER STATE` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `WanidaBenshoof` 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW SERVER STATE`에서 `WanidaBenshoof` 권한을 취소합니다.  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. WITH GRANT 옵션 취소  
- 다음 예에서는 `CONNECT SQL` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `JanethEsteves`을 부여할 수 있는 권한을 취소합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONNECT SQL`에서 `JanethEsteves`을 부여할 수 있는 권한을 취소합니다.  
   
 ```  
 USE master;  

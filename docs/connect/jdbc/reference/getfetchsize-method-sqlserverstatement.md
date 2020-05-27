@@ -35,7 +35,7 @@ public final int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>Return Value  
- **setFetchSize** 메서드로 지정된 가져오기 크기를 나타내는 [int](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md)입니다.  
+ [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) 메서드로 지정된 가져오기 크기를 나타내는 **int**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

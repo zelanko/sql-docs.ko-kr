@@ -40,13 +40,13 @@ ms.locfileid: "69027067"
 
 다음 예제의 샘플 코드에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 데이터베이스에 연결합니다. 그런 다음, Statement 개체를 만들고 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 메서드를 사용하여 Statement 개체가 지정된 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 래퍼인지 확인합니다. [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 메서드는 드라이버 관련 응답 버퍼링 메서드에 액세스하는 데 사용됩니다.
 
-다음으로, 샘플 코드는 **SQLServerStatement** 클래스의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 응답 버퍼링 모드를 “[adaptive](../../connect/jdbc/reference/sqlserverstatement-class.md)”로 설정하고 적응 버퍼링 모드를 가져오는 방법도 보여 줍니다.
+다음으로, 샘플 코드는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 응답 버퍼링 모드를 “**adaptive**”로 설정하고 적응 버퍼링 모드를 가져오는 방법도 보여 줍니다.
 
 그런 다음, SQL 문을 실행하고 반환된 데이터를 업데이트 가능한 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 배치합니다.
 
 마지막으로 샘플 코드는 결과 집합에 있는 데이터 행을 반복합니다. 빈 문서 요약이 발견되면 [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) 및 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드 조합을 사용하여 데이터 행을 업데이트하고 데이터베이스에 다시 보관합니다. 이미 데이터가 있으면 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 메서드를 사용하여 포함된 데이터 일부를 표시합니다.
 
-드라이버의 기본 동작은 “**adaptive**”입니다. 그러나 정방향 전용 업데이트 가능 결과 집합의 경우 및 결과 집합의 데이터가 애플리케이션 메모리보다 큰 경우에는 애플리케이션에서 [SQLServerStatement](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 클래스의 [setResponseBuffering](../../connect/jdbc/reference/sqlserverstatement-class.md) 메서드를 사용하여 명시적으로 적응 버퍼링 모드를 설정해야 합니다.
+드라이버의 기본 동작은 “**adaptive**”입니다. 그러나 정방향 전용 업데이트 가능 결과 집합의 경우 및 결과 집합의 데이터가 애플리케이션 메모리보다 큰 경우에는 애플리케이션에서 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) 메서드를 사용하여 명시적으로 적응 버퍼링 모드를 설정해야 합니다.
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 

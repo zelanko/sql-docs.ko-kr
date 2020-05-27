@@ -140,7 +140,7 @@ PRIVILEGES
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. 테이블에 대한 SELECT 권한 거부  
- 다음 예에서는 `SELECT` 테이블에 대해 사용자 `RosaQdM`의 `Person.Address` 권한을 거부합니다.  
+ 다음 예에서는 `Person.Address` 테이블에 대해 사용자 `RosaQdM`의 `SELECT` 권한을 거부합니다.  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  

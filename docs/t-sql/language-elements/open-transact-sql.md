@@ -31,7 +31,7 @@ ms.locfileid: "68121933"
 # <a name="open-transact-sql"></a>OPEN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  DECLARE CURSOR 또는 SET [!INCLUDE[tsql](../../includes/tsql-md.md)]cursor_variable[!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 지정된 *문을 실행하여* 서버 커서를 열고 커서를 채웁니다.  
+  DECLARE CURSOR 또는 SET *cursor_variable* 문에 지정된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서를 열고 커서를 채웁니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

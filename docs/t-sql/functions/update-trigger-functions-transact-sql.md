@@ -48,7 +48,7 @@ UPDATE ( column )
   
 ## <a name="arguments"></a>인수  
  *column*  
- INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [에서 지원되는 모든 ](../../t-sql/data-types/data-types-transact-sql.md)데이터 형식[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
+ INSERT 또는 UPDATE 동작 중 하나에 관해 테스트할 열의 이름입니다. 테이블 이름은 트리거의 ON 절에 지정되므로 열 이름 앞에 테이블 이름을 사용하지 마세요. 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 모든 [데이터 형식](../../t-sql/data-types/data-types-transact-sql.md)을 지정할 수 있습니다. 단, 계산 열은 이 컨텍스트에서 사용할 수 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  부울  

@@ -32,7 +32,7 @@ Microsoft SQL Server에는 **bcp**라는 많이 사용되는 명령줄 유틸리
 - 트랜잭션 내의 대량 복사 작업  
   
 > [!NOTE]
->  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 **개체를 사용하여 SQL Server Transact-SQL**BULK INSERT<xref:Microsoft.Data.SqlClient.SqlCommand> 문을 실행할 수 있습니다.  
+>  <xref:Microsoft.Data.SqlClient.SqlBulkCopy> 클래스를 지원하지 않는 .NET Framework 버전 1.1 이하를 사용하는 경우 <xref:Microsoft.Data.SqlClient.SqlCommand> 개체를 사용하여 SQL Server Transact-SQL **BULK INSERT** 문을 실행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [대량 복사 예제 설정](bulk-copy-example-setup.md)  

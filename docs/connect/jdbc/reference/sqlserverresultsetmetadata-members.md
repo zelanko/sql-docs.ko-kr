@@ -39,7 +39,7 @@ ms.locfileid: "67970526"
 |속성|Description|  
 |----------|-----------------|  
 |[getCatalogName](../../../connect/jdbc/reference/getcatalogname-method-sqlserverresultsetmetadata.md)|지정된 열이 포함된 테이블의 카탈로그 이름을 가져옵니다.|  
-|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 클래스의 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 열에서 값을 검색할 경우 인스턴스가 생성되는 Java 클래스의 정규화된 이름을 반환합니다.|  
+|[getColumnClassName](../../../connect/jdbc/reference/getcolumnclassname-method-sqlserverresultsetmetadata.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 메서드를 호출하여 열에서 값을 검색할 경우 인스턴스가 생성되는 Java 클래스의 정규화된 이름을 반환합니다.|  
 |[getColumnCount](../../../connect/jdbc/reference/getcolumncount-method-sqlserverresultsetmetadata.md)|결과 집합의 열 수를 반환합니다.|  
 |[getColumnDisplaySize](../../../connect/jdbc/reference/getcolumndisplaysize-method-sqlserverresultsetmetadata.md)|지정된 열의 표준 최대 너비(문자 수)를 반환합니다.|  
 |[getColumnLabel](../../../connect/jdbc/reference/getcolumnlabel-method-sqlserverresultsetmetadata.md)|지정된 열의 출력 및 표시에 사용되는 권장 제목을 가져옵니다.|  

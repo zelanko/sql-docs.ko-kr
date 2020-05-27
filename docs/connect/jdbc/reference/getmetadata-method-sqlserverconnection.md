@@ -25,7 +25,7 @@ ms.locfileid: "67981875"
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 개체가 나타내는 연결의 대상 데이터베이스에 대한 메타데이터가 들어 있는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체를 검색합니다.  
+  이 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 개체가 나타내는 연결의 대상 데이터베이스에 대한 메타데이터가 들어 있는 [SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 개체를 검색합니다.  
   
 ## <a name="syntax"></a>구문  
   

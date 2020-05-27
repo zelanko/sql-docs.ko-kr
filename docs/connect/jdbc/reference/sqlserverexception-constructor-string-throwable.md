@@ -23,7 +23,7 @@ ms.locfileid: "67971086"
 # <a name="sqlserverexception-constructor-javalangstring-javalangthrowable"></a>SQLServerException 생성자(java.lang.String, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [string](../../../connect/jdbc/reference/sqlserverexception-class.md) 개체 및 **throwable** 개체가 지정된 경우 **SQLServerException** 클래스의 새 인스턴스를 초기화합니다.
+  **string** 개체 및 **throwable** 개체가 지정된 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화합니다.
 
 ## <a name="syntax"></a>구문  
   

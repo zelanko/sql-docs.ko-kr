@@ -40,7 +40,7 @@ ms.locfileid: "69028457"
 
 ## <a name="example"></a>예제
 
-다음 예제 코드에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 데이터베이스에 연결한 다음, DataTypesTable 테스트 테이블에서 단일 데이터 행을 검색합니다. 검색한 후 사용자 지정 displayRow 메서드를 호출하여 \<SQLServerResultSet[ 클래스의 다양한 get](../../connect/jdbc/reference/sqlserverresultset-class.md)Type> 메서드를 사용하여 결과 집합의 모든 데이터를 표시합니다.
+다음 예제 코드에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 데이터베이스에 연결한 다음, DataTypesTable 테스트 테이블에서 단일 데이터 행을 검색합니다. 검색한 후 사용자 지정 displayRow 메서드를 호출하여 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 다양한 get\<Type> 메서드를 사용하여 결과 집합의 모든 데이터를 표시합니다.
 
 그런 다음, 샘플에서는 SQLServerResultSet 클래스의 다양한 update\<Type> 메서드를 사용하여 결과 집합의 데이터를 업데이트한 후, [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 호출하여 해당 데이터를 데이터베이스에 다시 보관합니다.
 

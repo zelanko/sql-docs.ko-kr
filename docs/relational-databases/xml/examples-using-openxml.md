@@ -156,7 +156,7 @@ LILAS      Carlos Gonzlez
   
  WITH 절에 있는 *SchemaDeclaration*에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 항목인 *ColPattern* 은 지정된 XPath 패턴이며 다음을 나타냅니다.  
   
--   행 집합의 **OrderID**, **CustomerID** 및 **OrderDate** 열은 *rowpattern*에 의해 식별되는 노드의 부모 노드 특성으로 매핑되고 *rowpattern*은 <`OrderDetail`> 노드를 식별합니다. 따라서 **CustomerID** 및 **OrderDate** 열은 < **> 요소의** CustomerID**및**OrderDate`Order` 특성으로 매핑됩니다.  
+-   행 집합의 **OrderID**, **CustomerID** 및 **OrderDate** 열은 *rowpattern*에 의해 식별되는 노드의 부모 노드 특성으로 매핑되고 *rowpattern*은 <`OrderDetail`> 노드를 식별합니다. 따라서 **CustomerID** 및 **OrderDate** 열은 <`Order`> 요소의 **CustomerID** 및 **OrderDate** 특성으로 매핑됩니다.  
   
 -   행 집합의 **ProdID** 및 **Qty** 열은 **rowpattern** 에서 식별된 노드의 **ProductID** 및 *Quantity*특성으로 매핑됩니다.  
   
@@ -282,10 +282,10 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- 특성 중심의 매핑은 **CustomerID**에 대해 적용됩니다. < **> 요소에는** ContactName`Customer` 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
+ 특성 중심의 매핑은 **CustomerID**에 대해 적용됩니다. <`Customer`> 요소에는 **ContactName** 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
   
 ### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>D. text() XPath 함수를 ColPattern으로 지정  
- 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 < **> 요소의** oid`Order` 특성, *rowpattern*으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
+ 이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 <`Order`> 요소의 **oid** 특성, *rowpattern*으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
@@ -475,11 +475,11 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 절에 있는 *SchemaDeclaration* 에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 사항인 *ColPattern* 은 다음을 나타내기 위해 지정된 XPath 패턴입니다.  
   
--   행 집합의**ProdID**열에 대해 *ColPattern* 으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 < **> 요소의** ProductID`OrderDetail` 특성입니다.  
+-   행 집합의**ProdID**열에 대해 *ColPattern* 으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
   
--   행 집합에 있는 *Qty* 열에 대해 지정된 **ColPattern\@,** ../**Quantity**는 컨텍스트 노드 **ProductID>의 노드인 부모 <** >의 `OrderDetail`Quantity\< 특성을 식별합니다.  
+-   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../\@Quantity**는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
   
--   이와 비슷하게 행 집합에 있는 *OID* 열에 지정된 **ColPattern\@,** ../../**OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 < **>의** OrderID`Order` 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
+-   이와 비슷하게 행 집합에 있는 **OID** 열에 지정된 *ColPattern*, **../../\@OrderID**는 컨텍스트 노드에 대한 부모 노드의 부모 <`Order`>의 **OrderID** 특성을 식별합니다. 부모 노드는 <`OrderDetail`>이고 컨텍스트 노드는 <`ProductID`>입니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -605,7 +605,7 @@ id  lname   xmlname                   OverFlow
 -   WITH 절에 있는 열이 형식화된 XML 열이고 XML 인스턴스가 스키마에 맞지 않는 경우 오류가 반환됩니다.  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. 다중 값 특성에서 개별 값 검색  
- XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 **Student> 요소의** attends\< 특성과 **Class>의** attendedBy\< 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
+ XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 \<Student> 요소의 **attends** 특성과 \<Class>의 **attendedBy** 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
   
  이 예제 XML 문서는 다음 요소로 구성됩니다.  
   
@@ -617,7 +617,7 @@ id  lname   xmlname                   OverFlow
   
      **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
- **Student>에 있는** attends\< 특성과 **Class>에 있는** attendedBy\< 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
+ \<Student>에 있는 **attends** 특성과 \<Class>에 있는 **attendedBy** 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   
  이 문서를 조각으로 나눈 후 다음과 같이 데이터베이스에 저장한다고 가정하십시오.  
   

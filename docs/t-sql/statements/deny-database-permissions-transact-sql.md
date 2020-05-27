@@ -201,7 +201,7 @@ GO
 
 ### <a name="c-denying-view-definition-with-cascade"></a>C. CASCADE를 지정하여 VIEW DEFINITION 거부
 
-다음 예에서는 사용자 `VIEW DEFINITION` 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]가 `CarmineEs` 권한을 부여한 모든 보안 주체에 대해 `CarmineEs` 데이터베이스의 `VIEW DEFINITION` 권한을 거부합니다.
+다음 예에서는 사용자 `CarmineEs` 및 `CarmineEs`가 `VIEW DEFINITION` 권한을 부여한 모든 보안 주체에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `VIEW DEFINITION` 권한을 거부합니다.
 
 ```sql
 USE AdventureWorks2012;

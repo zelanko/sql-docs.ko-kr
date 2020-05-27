@@ -124,7 +124,7 @@ SELECT 문은 CTAS와 CREATE TABLE 간의 기본적인 차이점입니다.
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>사용 권한  
-CTAS를 사용하려면 `SELECT`select_criteria*에 참조된 임의의 개체에 대한*  권한이 필요합니다.
+CTAS를 사용하려면 *select_criteria*에 참조된 임의의 개체에 대한 `SELECT` 권한이 필요합니다.
 
 테이블을 만들기 위한 권한은 CREATE TABLE의 [권한](https://msdn.microsoft.com/library/mt203953/#Permissions)을 참조하세요. 
   
@@ -171,7 +171,7 @@ CTAS를 사용하여 테이블을 만드는데 성능이 중요하지 않은 경
 
 `CTAS`의 매우 일반적인 사용 중 하나는 아마도 DDL(데이터 정의 언어)을 변경할 수 있도록 테이블의 복사본을 만드는 작업일 것입니다. 예를 들어 원래 테이블을 `ROUND_ROBIN`으로 만들었는데 이제 이 테이블을 열에 배포된 테이블로 만들려고 하는 경우 `CTAS`를 사용하여 분포 열을 변경합니다. 또한 `CTAS`를 사용하여 분할, 인덱싱 또는 열 형식을 변경할 수도 있습니다.
 
-`ROUND_ROBIN`에서 분포 열을 지정하지 않았으므로 배포된 `CREATE TABLE`의 기본 배포 유형을 사용하여 이 테이블을 만들었다고 생각해 보겠습니다.
+`CREATE TABLE`에서 분포 열을 지정하지 않았으므로 배포된 `ROUND_ROBIN`의 기본 배포 유형을 사용하여 이 테이블을 만들었다고 생각해 보겠습니다.
 
 ```sql
 CREATE TABLE FactInternetSales
@@ -529,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 
 <a name="ctas-replace-implicit-joins-bk"></a>
 
-### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS 및 암시적 조인을 사용하여 `FROM` 문의 `UPDATE` 절에서 ANSI 조인 바꾸기  
+### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS 및 암시적 조인을 사용하여 `UPDATE` 문의 `FROM` 절에서 ANSI 조인 바꾸기  
 적용 대상: Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스  
 
 ANSI 조인 구문을 사용하여 UPDATE 또는 DELETE를 수행하여 두 개 이상의 테이블을 함께 조인하는 복잡한 업데이트 작업이 있을 수 있습니다.
@@ -574,7 +574,7 @@ AND [acs].[CalendarYear]                = [fis].[CalendarYear]
 ;
 ```
 
-SQL Data Warehouse는 `FROM` 문의 `UPDATE` 절에서 ANSI 조인을 지원하지 않으므로 이 SQL Server 코드는 조금 변경해야 사용할 수 있습니다.
+SQL Data Warehouse는 `UPDATE` 문의 `FROM` 절에서 ANSI 조인을 지원하지 않으므로 이 SQL Server 코드는 조금 변경해야 사용할 수 있습니다.
 
 `CTAS`와 암시적 조인의 조합을 사용하여 이 코드를 대체할 수 있습니다.
 
@@ -736,7 +736,7 @@ from ctas_r
 
 두 결과 간에 차이가 나타나는 이유는 암시적 형 변환 때문입니다. 첫 번째 예제에서 테이블은 열 정의를 정의합니다. 행이 삽입되면 암시적 형 변환이 일어납니다. 두 번째 예제에서는 식이 열의 데이터 형식을 정의하기 때문에 암시적 형 변환이 없습니다. 또한 두 번째 예제의 열은 NULL을 허용하는 열로 정의된 데 비해 첫 번째 예제는 허용하지 않는다는 데 주의하십시오. 첫 번째 예제에서 테이블이 만들어질 때 열의 NULL 허용 여부를 명시적으로 정의했습니다. 두 번째 예제에서는 NULL 여부가 식에 따라서만 결정되기 때문에 기본적으로 이로 인해 NULL 정의가 있는 셈입니다.  
 
-이 문제를 해결하려면 `SELECT` 문의 `CTAS` 부분에서 형식 변환과 NULL 허용 여부를 명시적으로 설정해야 합니다. CREATE TABLE 부분에서는 이 속성을 설정할 수 없습니다.
+이 문제를 해결하려면 `CTAS` 문의 `SELECT` 부분에서 형식 변환과 NULL 허용 여부를 명시적으로 설정해야 합니다. CREATE TABLE 부분에서는 이 속성을 설정할 수 없습니다.
 
 아래 예제는 이 코드를 올바르게 수정하는 방법을 보여줍니다.
 
@@ -757,7 +757,7 @@ SELECT ISNULL(CAST(@d*@f AS DECIMAL(7,2)),0) as result
 - ISNULL의 두 번째 부분은 상수(즉, 0)
 
 > [!NOTE]
-> NULL 허용 여부를 올바르게 설정하려면 `ISNULL`를 사용하지 말고 `COALESCE`을 사용해야 합니다. `COALESCE`는 결정적 함수가 아니므로 식의 결과는 언제나 NULL을 허용합니다. `ISNULL`은 그와 다르며 결정적입니다. 그러므로 `ISNULL` 함수의 두 번째 부분이 상수 또는 리터럴이면 결과 값은 NOT NULL입니다.
+> NULL 허용 여부를 올바르게 설정하려면 `COALESCE`를 사용하지 말고 `ISNULL`을 사용해야 합니다. `COALESCE`는 결정적 함수가 아니므로 식의 결과는 언제나 NULL을 허용합니다. `ISNULL`은 그와 다르며 결정적입니다. 그러므로 `ISNULL` 함수의 두 번째 부분이 상수 또는 리터럴이면 결과 값은 NOT NULL입니다.
 
 이 팁은 계산의 데이터 무결성을 확보하는 데에만 유용한 것이 아니라 테이블 파티션 전환에도 중요합니다. 이 테이블을 자신의 사실로 정의했다고 가정해 보겠습니다.
 

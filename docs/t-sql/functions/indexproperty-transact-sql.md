@@ -80,7 +80,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEXPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 **데이터베이스에 있는** 테이블의 **인덱스에 대한**IsClustered **,** IndexDepth`PK_Employee_BusinessEntityID` 및 `Employee`IndexFillFactor[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 속성 값을 반환합니다.  
+ 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Employee` 테이블의 `PK_Employee_BusinessEntityID` 인덱스에 대한 **IsClustered**, **IndexDepth** 및 **IndexFillFactor** 속성 값을 반환합니다.  
   
 ```  
 SELECT   

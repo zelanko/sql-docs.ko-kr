@@ -148,7 +148,7 @@ data(/ns:root[1]) instance of sqltypes:varchar?')
 GO  
 ```  
   
- `instance of sqltypes:varchar?` 식은 <`root`> 요소 값이 **변수와 연결된 스키마에 따라**varchar`@var`로부터 파생된 유형이기 때문에 TRUE를 반환합니다.  
+ `instance of sqltypes:varchar?` 식은 <`root`> 요소 값이 `@var` 변수와 연결된 스키마에 따라 **varchar**로부터 파생된 유형이기 때문에 TRUE를 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  

@@ -110,7 +110,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 ### <a name="using-predict-in-a-from-clause"></a>FROM 절에 PREDICT 사용
 
-이 예제는 `PREDICT` 문의 `FROM`절에서 `SELECT` 함수를 참조합니다.
+이 예제는 `SELECT` 문의 `FROM`절에서 `PREDICT` 함수를 참조합니다.
 
 ```sql
 SELECT d.*, p.Score
@@ -118,7 +118,7 @@ FROM PREDICT(MODEL = @logit_model,
   DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
-**매개 변수에서 테이블 원본에 대해 지정된 별칭**d`DATA`를 사용하여 dbo.mytable에 속한 열을 참조합니다. **PREDICT** 함수에 대해 지정된 별칭 **p**를 사용하여 PREDICT 함수에서 반환된 열을 참조합니다.
+`DATA` 매개 변수에서 테이블 원본에 대해 지정된 별칭 **d**를 사용하여 dbo.mytable에 속한 열을 참조합니다. **PREDICT** 함수에 대해 지정된 별칭 **p**를 사용하여 PREDICT 함수에서 반환된 열을 참조합니다.
 
 ### <a name="combining-predict-with-an-insert-statement"></a>INSERT 문과 PREDICT 결합
 

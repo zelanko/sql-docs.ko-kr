@@ -170,7 +170,7 @@ ORDER BY ResellerName;
 |  허용 가능 매출 및 서비스  |     0.0000         |
   
 ### <a name="f-using-is-null-to-test-for-null-in-a-where-clause"></a>F. WHERE 절에서 NULL 테스트를 위해 IS NULL 사용  
- 다음 예에서는 `NULL` 열에 `Weight`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
+ 다음 예에서는 `Weight` 열에 `NULL`이 있는 모든 제품을 찾는 방법을 보여 줍니다. `IS`와 `NULL` 사이에 공백이 있습니다.  
   
 ```  
 -- Uses AdventureWorks  

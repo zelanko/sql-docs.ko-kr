@@ -44,7 +44,7 @@ public void updateDateTimeOffset(String columnName, microsoft.sql.DateTimeOffset
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>설명  
- [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md) 값을 검색할 수 있습니다.  
+ [SQLServerResultSet.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateDateTimeOffset&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)   

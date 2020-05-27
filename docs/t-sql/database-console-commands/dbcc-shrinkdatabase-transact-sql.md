@@ -116,7 +116,7 @@ DBCC SHRINKDATABASE는 파일 단위로 데이터 파일을 축소하지만 로�
   
 두 개의 로그 파일, 데이터 파일 및 **mydb**라는 데이터베이스가 있다고 가정합니다. 데이터 파일과 로그 파일은 각각 10MB이고 데이터 파일에는 6MB의 데이터가 포함됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 각 파일의 대상 크기를 계산합니다. 이 값은 파일을 축소할 크기입니다. DBCC SHRINKDATABASE에 _대상\_백분율_을 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 축소 후 파일에 _대상\_백분율_ 만큼의 여유 공간이 남도록 대상 크기를 계산합니다. 
 
-예를 들어 _mydb\_를 축소하기 위해_ 대상**백분율**을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
+예를 들어 **mydb**를 축소하기 위해 _대상\_백분율_을 25로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 데이터 파일의 대상 크기를 8MB(6MB의 데이터 + 2MB의 여유 공간)로 계산합니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 데이터 파일의 마지막 2MB에서 데이터 파일의 처음 8MB에 포함된 여유 공간으로 데이터를 이동한 다음, 파일을 축소합니다.
   
 **mydb**의 데이터 파일에 7MB의 데이터가 있다고 가정합니다. _대상\_백분율_을 30으로 지정하면 여유 공간이 30%만 남도록 이 데이터 파일이 축소됩니다. 그러나 _대상\_백분율_을 40으로 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 현재 데이터가 차지하는 용량보다 작은 크기로 파일을 축소할 수 없으므로 데이터 파일을 축소하지 않습니다. 
 
@@ -144,7 +144,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-이 오류는 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 **sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;** 동적 관리 뷰의 **transaction_sequence_num** 또는 [first_snapshot_sequence_num](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
+이 오류는 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
   
 문제를 해결하려면 다음 태스크 중 하나를 수행하십시오.
 -   축소 작업을 차단하는 트랜잭션을 종료합니다.  

@@ -25,7 +25,7 @@ ms.locfileid: "67952993"
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  [SQLServerResultSet](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 클래스의 [getObject](../../../connect/jdbc/reference/sqlserverresultset-class.md) 메서드를 호출하여 열에서 값을 검색할 경우 인스턴스가 생성되는 Java 클래스의 정규화된 이름을 반환합니다.  
+  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [getObject](../../../connect/jdbc/reference/getobject-method-sqlserverresultset.md) 메서드를 호출하여 열에서 값을 검색할 경우 인스턴스가 생성되는 Java 클래스의 정규화된 이름을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   

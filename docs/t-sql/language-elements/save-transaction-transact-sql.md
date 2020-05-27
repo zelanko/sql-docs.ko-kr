@@ -49,7 +49,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>인수  
  *savepoint_name*  
- 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. *인스턴스에서 대/소문자를 구분하지 않는 경우에도*savepoint_name[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 대/소문자를 구분합니다.  
+ 저장점에 할당된 이름입니다. 저장점 이름은 식별자에 적용되는 규칙을 준수해야 하지만 길이는 32자로 제한됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 대/소문자를 구분하지 않는 경우에도 *savepoint_name*은 항상 대/소문자를 구분합니다.  
   
  @*savepoint_variable*  
  유효한 저장점 이름이 포함된 사용자 정의 변수의 이름입니다. 변수는 **char**, **varchar**, **nchar** 또는 **nvarchar** 데이터 형식으로 선언해야 합니다. 변수에 32자 이상 전달할 수 있지만 전달된 문자의 처음부터 32자까지만 사용됩니다.  

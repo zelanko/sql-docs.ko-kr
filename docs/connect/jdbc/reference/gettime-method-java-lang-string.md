@@ -48,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>설명  
  이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정됩니다.  
   
- 이 메서드를 사용하여 검색할 수 있는 [ 데이터 형식을 보려면 ](../../../connect/jdbc/understanding-data-type-conversions.md)데이터 형식 변환 이해[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 “Getter 메서드 변환”이라는 차트를 참조하세요.  
+ 이 메서드를 사용하여 검색할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식을 보려면 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md)의 “Getter 메서드 변환”이라는 차트를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [getTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

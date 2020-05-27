@@ -145,7 +145,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. 로그인에 사용 권한 부여  
- 다음 예에서는 `CONTROL SERVER` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 `TerryEminhizer` 권한을 부여합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONTROL SERVER`에 대해 `TerryEminhizer` 권한을 부여합니다.  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. GRANT 권한이 있는 사용 권한 부여  
- 다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 `ALTER ANY EVENT NOTIFICATION` 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 `JanethEsteves`을 부여합니다.  
+ 다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `ALTER ANY EVENT NOTIFICATION`에 대해 `JanethEsteves`을 부여합니다.  
   
 ```  
 USE master;  

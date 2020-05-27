@@ -44,7 +44,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>설명  
- [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md) 값을 검색할 수 있습니다.  
+ [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)을 사용하여 [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 검색할 수 있습니다.  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)은 열의 서수를 사용합니다.  
   
