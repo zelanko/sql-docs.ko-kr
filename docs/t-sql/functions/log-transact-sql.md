@@ -30,7 +30,7 @@ ms.locfileid: "80215993"
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  **에서 지정된** float[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식의 자연 로그를 반환합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지정된 **float** 식의 자연 로그를 반환합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ LOG ( float_expression )
   
 ## <a name="arguments"></a>인수  
  *float_expression*  
- [float](../../t-sql/language-elements/expressions-transact-sql.md) 형식 또는 **float**로 암시적으로 변환되는 형식의 **식**입니다.  
+ **float** 형식 또는 **float**로 암시적으로 변환되는 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
  *base*  
  로그 밑을 설정하는 선택적 정수 인수입니다.  
@@ -70,7 +70,7 @@ LOG ( float_expression )
 ## <a name="examples"></a>예  
   
 ### <a name="a-calculating-the-logarithm-for-a-number"></a>A. 수의 로그를 계산합니다.  
- 다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
+ 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  
 DECLARE @var float = 10;  
@@ -106,7 +106,7 @@ SELECT LOG (EXP (10));
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-calculating-the-logarithm-for-a-number"></a>C. 수의 로그를 계산합니다.  
- 다음 예에서는 지정된 `LOG`float**식의**를 계산하는 방법을 보여 줍니다.  
+ 다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  
 SELECT LOG(10);  

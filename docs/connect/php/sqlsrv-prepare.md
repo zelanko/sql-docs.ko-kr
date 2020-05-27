@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> PHP에서는 [부동 소수점 숫자](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://php.net/manual/en/language.types.float.php)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
+> PHP에서는 [부동 소수점 숫자](https://php.net/manual/en/language.types.float.php)의 정밀도가 제한되어 있으므로 [decimal 또는 numeric 열](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)에 값을 바인딩할 때는 정밀도와 정확도를 보장하기 위해 문자열을 입력으로 사용하는 것이 좋습니다. bigint 열도 마찬가지이며, 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) 범위를 벗어나는 경우 특히 그렇습니다.
 
 ## <a name="example"></a>예제  
 이 코드 샘플에서는 10진수 값을 입력 매개 변수로 바인딩하는 방법을 보여 줍니다.  

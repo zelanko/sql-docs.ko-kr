@@ -318,7 +318,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 > [!NOTE]
 > 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.
 > [!TIP]
-> 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 **함수의**Updateability`DATABASEPROPERTYEX` 속성을 검사하여 결정할 수 있습니다.
+> 이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -397,7 +397,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가
 
-다음 예에서는 `Test1FG1` 데이터베이스에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
 
 ```sql
 USE master
@@ -846,7 +846,7 @@ READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 �
 > [!NOTE]
 > 키워드 `READWRITE`는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 새 개발 작업에서 `READWRITE`를 사용하지 않도록 하고 현재 `READWRITE`를 사용하는 애플리케이션을 `READ_WRITE`를 대신 사용하도록 수정하세요.
 
-이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 **함수의**Updateability`DATABASEPROPERTYEX` 속성을 검사하여 결정할 수 있습니다.
+이러한 옵션의 상태는 **sys.databases** 카탈로그 뷰의 **is_read_only** 열 또는 `DATABASEPROPERTYEX` 함수의 **Updateability** 속성을 검사하여 결정할 수 있습니다.
 
 ## <a name="remarks"></a>설명
 
@@ -878,7 +878,7 @@ GO
 
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. 데이터베이스에 두 개의 파일이 포함된 파일 그룹 추가
 
-다음 예에서는 `Test1FG1` 데이터베이스에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
+다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.
 
 ```sql
 USE master

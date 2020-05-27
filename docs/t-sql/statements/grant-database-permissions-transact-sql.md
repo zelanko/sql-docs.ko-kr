@@ -214,7 +214,7 @@ sysadmin 고정 서버 역할의 멤버와 같이 CONTROL SERVER 사용 권한�
 
 ### <a name="a-granting-permission-to-create-tables"></a>A. 테이블을 만들기 위한 사용 권한 부여
 
-다음 예에서는 사용자 `CREATE TABLE`에게 `AdventureWorks` 데이터베이스에 대한 `MelanieK` 권한을 부여합니다.
+다음 예에서는 사용자 `MelanieK`에게 `AdventureWorks` 데이터베이스에 대한 `CREATE TABLE` 권한을 부여합니다.
 
 ```sql
 USE AdventureWorks;
@@ -246,7 +246,7 @@ GO
 
 ### <a name="d-granting-control-permission-to-a-database-user"></a>D. 데이터베이스 사용자에게 CONTROL 권한 부여
 
- 다음 예에서는 데이터베이스 사용자 `CONTROL`에게 `AdventureWorks2012` 데이터베이스의 `Sarah` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
+ 다음 예에서는 데이터베이스 사용자 `Sarah`에게 `AdventureWorks2012` 데이터베이스의 `CONTROL` 권한을 부여합니다. 사용자가 데이터베이스에 존재해야 하며 컨텍스트가 데이터베이스로 설정되어야 합니다.
 
 ```sql
 USE AdventureWorks2012;
