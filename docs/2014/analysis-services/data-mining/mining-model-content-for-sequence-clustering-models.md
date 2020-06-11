@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083573"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521275"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 시퀀스 클러스터링 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -126,10 +125,10 @@ ms.locfileid: "66083573"
  이 값을 통해 전환에 제공되는 학습 사례 수를 알 수 있습니다.  
   
  MSOLAP_MODEL_COLUMN  
- 해당 없음  
+ 해당 사항 없음  
   
  MSOLAP_NODE_SCORE  
- 해당 없음  
+ 해당 사항 없음  
   
  MSOLAP_NODE_SHORT_CAPTION  
  NODE_DESCRIPTION과 같습니다.  
@@ -154,7 +153,7 @@ ms.locfileid: "66083573"
 ###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION 테이블  
  NODE_DISTRIBUTION 테이블은 특정 클러스터의 전환 및 시퀀스에 대한 자세한 확률 및 지지도 정보를 제공합니다.  
   
- 행은 항상 전환 테이블에 추가되어 가능한 `Missing` 값을 나타냅니다. 값이 의미 하는 `Missing` 내용과이 값이 계산에 미치는 영향에 대 한 자세한 내용은 [누락 값 &#40;Analysis Services-데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)를 참조 하세요.  
+ 행은 항상 전환 테이블에 추가되어 가능한 `Missing` 값을 나타냅니다. `Missing`값이 의미 하는 내용과이 값이 계산에 미치는 영향에 대 한 자세한 내용은 [누락 값 &#40;Analysis Services-데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)를 참조 하세요.  
   
  지지도 및 확률에 대한 계산은 해당 계산이 학습 사례에 적용되는지 완성된 모델에 적용되는지에 따라 달라집니다. 이는 기본 클러스터링 메서드인 EM(Expectation Maximization)이 모든 사례가 둘 이상의 클러스터에 속할 수 있다고 가정하기 때문입니다. 모델의 사례에 대한 지지도를 계산할 때 원시 개수와 원시 확률을 사용할 수 있습니다. 그러나 클러스터의 특정 시퀀스에 대한 확률은 가능한 모든 시퀀스 및 클러스터 조합에 의해 가중됩니다.  
   

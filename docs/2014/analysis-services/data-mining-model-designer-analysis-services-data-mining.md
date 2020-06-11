@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ad0b89687e24e5220e091cc39737aabf4c89e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525865"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>데이터 마이닝 모델 디자이너(Analysis Services - 데이터 마이닝)
   이 섹션에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 모델 디자이너에 대한 F1 도움말 항목을 제공합니다. 이 디자인 공간을 사용하여 데이터 마이닝 모델을 생성 및 관리하고 관련 작업을 수행할 수 있습니다.  

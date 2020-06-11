@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 867bd6d1abffb29ec3eb2a8a78e562e5cbcc5b29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526349"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>교차 유효성 검사 탭(마이닝 정확도 차트 뷰)
   교차 유효성 검사를 사용하면 마이닝 구조를 교집합 영역으로 분할하고 각 교집합 영역에 대해 모델을 반복적으로 학습 및 테스트할 수 있습니다. 데이터를 분할할 접기 수를 지정하면 각 접기가 테스트 데이터로 사용되고 나머지 데이터는 새 모델을 학습하는 데 사용됩니다. 그러면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]가 각 모델에 대해 표준 정확도 메트릭 집합을 생성합니다. 각 교집합 영역에 대해 생성된 모델의 메트릭을 비교하여 전체 데이터 집합에 대한 마이닝 모델의 안정성을 파악할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66086621"
   
 -   **결과 가져오기** 를 클릭하여 교차 유효성 검사의 결과를 표시합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **접기 개수**  
  만들 접기 또는 파티션의 수를 지정합니다. 최소값은 데이터 집합의 절반은 테스트에 사용되고 나머지 절반은 학습에 사용됨을 의미하는 2입니다.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66086621"
   
  예를 들어 특정 대상 상태에 대해 세 개의 예측을 만들었으며 각 예측의 확률이 0.05, 0.15 및 0.8이라고 가정합니다. 임계값을 0.5로 설정하면 한 예측만 올바른 것으로 간주됩니다. **대상** **임계값** 을 0.10으로 설정하면 두 예측이 올바른 것으로 간주됩니다.  
   
- **대상** **임계값** 을 기본값인로 `null`설정 하면 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
+ **대상** **임계값** 을 기본값인로 설정 하면 `null` 각 사례에 대해 가장 가능성이 높은 예측이 올바른 것으로 간주 됩니다. 위의 예에서 0.05, 0.15 및 0.8은 세 개의 사례에서 예측에 대한 확률입니다. 확률이 서로 많이 다르지만 각 사례는 하나의 예측만 생성하고 이러한 예측은 사례에 대한 최상의 예측이므로 각 예측은 올바른 것으로 간주됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝&#41;&#40;테스트 및 유효성 검사](data-mining/testing-and-validation-data-mining.md)   

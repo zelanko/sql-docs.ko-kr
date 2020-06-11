@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1e9f7969-0aa6-465a-b3ea-57b8d1c7a1fd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e2322553eef361f0131e3558cd591bc32525ef
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637523"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522169"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Microsoft 의사 결정 트리 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 트리를 만드는 여러 방법을 통합하며 회귀, 분류, 연결 등의 여러 분석 태스크를 지원하는 하이브리드 알고리즘입니다. Microsoft 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 모델링을 지원합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "73637523"
   
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 기능 선택에 사용되는 방법은 모델을 작성하는 데 사용된 알고리즘에 따라 달라집니다. 의사 결정 트리 모델의 기능 선택을 제어하는 알고리즘 매개 변수는 MAXIMUM_INPUT_ATTRIBUTES와 MAXIMUM_OUTPUT입니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|의견|  
 |---------------|------------------------|--------------|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않을 경우 기본 방법이나 지정된 방법이 사용됩니다.|  
 |선형 회귀|흥미도 점수|선형 회귀는 연속 열만 지원하므로 흥미도 점수만 사용합니다.|  
@@ -99,7 +98,7 @@ ms.locfileid: "73637523"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 결과 마이닝 모델의 성능 및 정확도에 영향을 주는 매개 변수를 지원합니다. 마이닝 모델 열이나 마이닝 구조 열에 모델링 플래그를 설정하여 데이터 처리 방식을 제어할 수도 있습니다.  
   
 > [!NOTE]  
->  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Microsoft 의사 결정 트리 알고리즘은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있지만 Microsoft 의사 결정 트리 알고리즘의 동작을 사용자 지정하는 고급 매개 변수는 특정 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요 https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다.  
@@ -149,7 +148,7 @@ ms.locfileid: "73637523"
  *SCORE_METHOD*  
  분할 점수를 계산하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
 |1|Entropy|  
 |3|Bayesian with K2 Prior|  
@@ -162,7 +161,7 @@ ms.locfileid: "73637523"
  *SPLIT_METHOD*  
  노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다.  
   
-|ID|이름|  
+|ID|속성|  
 |--------|----------|  
 |1|**Binary:** 특성의 실제 값 수에 관계없이 트리가 두 개의 분리로 분할됨을 나타냅니다.|  
 |2|**Complete:** 트리에서 특성 값 수만큼의 분할을 만들 수 있음을 나타냅니다.|  
@@ -183,7 +182,7 @@ ms.locfileid: "73637523"
   
  연속 숫자 데이터 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않았더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 자동으로 열을 잠재적 회귀 변수로 사용하고 데이터 세트를 의미 있는 패턴이 있는 영역으로 분할합니다.  
   
- 그러나 FORCE_REGRESSOR 매개 변수를 사용하면 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘에서만 사용할 수 있습니다. 모델링 플래그를 설정 하면 알고리즘은 a * C1 + b\*C2 + ... 형식의 회귀 수식을 찾으려고 합니다. 트리의 노드에 패턴을 맞추려면입니다. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
+ 그러나 FORCE_REGRESSOR 매개 변수를 사용하면 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘에서만 사용할 수 있습니다. 모델링 플래그를 설정 하면 알고리즘은 a * C1 + b \* C2 + ... 형식의 회귀 수식을 찾으려고 합니다. 트리의 노드에 패턴을 맞추려면입니다. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
   
  예를 들어 **Income** 을 특성으로 사용하여 고객의 구매 행동을 예측하며 열에 REGRESSOR 모델링 플래그를 설정하는 경우 알고리즘은 먼저 표준 회귀 수식을 사용하여 **Income** 값을 맞추려고 시도합니다. 편차가 너무 클 경우 회귀 수식이 중단되고 다른 특성에 따라 트리가 분할됩니다. 분할 후 의사 결정 트리 알고리즘은 먼저 각 분기에서 Income에 대한 회귀 변수를 맞추려고 시도합니다.  
   

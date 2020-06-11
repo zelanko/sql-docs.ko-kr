@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4f14a1f853a99ccb6b2dbbed72bd38b70f2ea7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889328"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535635"
 ---
 # <a name="ragged-hierarchies"></a>비정형 계층 구조
   비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
@@ -54,9 +53,9 @@ ms.locfileid: "68889328"
   
 2.  계층 내의 멤버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. `HideMemberIf`를 아래 설명된 값 중 하나로 설정합니다.  
   
-    |HideMemberIf 설정|Description|  
+    |HideMemberIf 설정|설명|  
     |--------------------------|-----------------|  
-    |`Never`|수준 멤버를 숨기지 않습니다. 기본값입니다.|  
+    |`Never`|수준 멤버를 숨기지 않습니다. 이것은 기본값입니다.|  
     |**OnlyChildWithNoName**|부모의 유일한 자식이고 이름이 Null 또는 빈 문자열인 수준 멤버를 숨깁니다.|  
     |**OnlyChildWithParentName**|부모의 유일한 자식이고 이름이 부모와 동일한 수준 멤버를 숨깁니다.|  
     |**NoName**|이름이 비어 있는 수준 멤버를 숨깁니다.|  
@@ -65,7 +64,7 @@ ms.locfileid: "68889328"
 ##  <a name="set-mdx-compatibility-to-determine-how-placeholders-are-represented-in-client-applications"></a><a name="bkmk_Mdx"></a>클라이언트 응용 프로그램에서 자리 표시 자가 표시 되는 방식을 결정 하기 위해 MDX 호환성 설정  
  계층 수준에서 `HideMemberIf`를 설정한 후 클라이언트 애플리케이션에서 전송된 연결 문자열에 `MDX Compatibility` 속성도 설정해야 합니다. `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
   
-|MDX 호환성 설정|Description|사용법|  
+|MDX 호환성 설정|설명|사용|  
 |-------------------------------|-----------------|-----------|  
 |**1**|자리 표시자 값을 표시합니다.|이 값은 Excel, SSDT 및 SSMS에서 사용되는 기본값입니다. 비정형 계층에서 빈 수준을 드릴다운할 때 서버에서 자리 표시자 값을 반환하도록 지시합니다. 자리 표시자 값을 클릭하면 자식(리프) 노드로 계속 드릴다운할 수 있습니다.<br /><br /> Excel은 Analysis Services에 연결하는 데 사용되는 연결 문자열을 소유하고 각 새 연결에 대해 `MDX Compatibility`을 항상 1로 설정합니다. 이 동작은 이전 버전과의 호환성을 유지됩니다.|  
 |**2**|자리 표시자 값(부모 수준의 null 값 또는 중복)을 숨기지만 관련 값을 가진 다른 수준 및 노드는 표시합니다.|`MDX Compatibility`=2는 일반적으로 비정형 계층의 개념으로 기본 설정으로 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 일부 타사 클라이언트 애플리케이션에서는 이 설정을 유지할 수 있습니다.|  

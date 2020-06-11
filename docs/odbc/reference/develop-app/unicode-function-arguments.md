@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a25dd6fe0a77aad5c5ec9ba15eaf12bd2ec3fc18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284293"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529742"
 ---
 # <a name="unicode-function-arguments"></a>유니코드 함수 인수
 ODBC 3.5 이상 드라이버 관리자는 해당 인수에서 문자 문자열 또는 SQLPOINTER에 대 한 포인터를 허용 하는 모든 함수의 ANSI 및 유니코드 버전을 모두 지원 합니다. 유니코드 함수는 매크로가 아니라 함수 ( *W*접두사 포함)로 구현 됩니다. *의 접미사*를 사용 하거나 사용 하지 않고 호출할 수 있는 ANSI 함수는 현재 ODBC API 함수와 동일 합니다.  
   
 ## <a name="remarks"></a>설명  
- 항상 문자열이 나 길이 인수를 반환 하거나 사용 하는 유니코드 함수는 문자 수로 전달 됩니다. 서버 데이터의 길이 정보를 반환 하는 함수의 경우 표시 크기와 전체 자릿수는 문자 수로 설명 됩니다. 길이 (데이터의 전송 크기)가 문자열 또는 문자열이 아닌 데이터를 참조할 수 있는 경우 길이는 8 진수 길이에 설명 되어 있습니다. 예를 들어 **SQLGetInfoW** 는 길이가 바이트 수로 계속 사용 되지만 **Sqlexecdirectw** 는 문자 수를 사용 합니다.  
+ 문자열이 나 길이 인수를 항상 반환 하거나 사용 하는 유니코드 함수의 경우 인수는 문자 수로 전달 됩니다. 서버 데이터의 길이 정보를 반환 하는 함수의 경우 표시 크기와 전체 자릿수는 문자 수로 설명 됩니다. 길이 (데이터의 전송 크기)가 문자열 또는 문자열이 아닌 데이터를 참조할 수 있는 경우 길이는 8 진수 길이에 설명 되어 있습니다. 예를 들어 **SQLGetInfoW** 는 길이가 바이트 수로 계속 사용 되지만 **Sqlexecdirectw** 는 문자 수를 사용 합니다.  
   
  문자 수는 ANSI 함수의 바이트 수 (8 진수)와 유니코드 함수의 WCHAR (16 비트 단어) 수를 나타냅니다. 특히 DBCS (더블 바이트 문자 시퀀스) 또는 MBCS (멀티 바이트 문자 시퀀스)를 여러 바이트로 구성할 수 있습니다. UTF-16 유니코드 문자 시퀀스는 여러 개의 WCHARs로 구성 될 수 있습니다.  
   

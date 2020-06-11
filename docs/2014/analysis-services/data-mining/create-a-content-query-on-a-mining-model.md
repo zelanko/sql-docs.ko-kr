@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085577"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524019"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>마이닝 모델에 내용 쿼리 만들기
   AMO 또는 XML/A를 사용하여 프로그래밍 방식으로 마이닝 모델 콘텐츠를 쿼리할 수 있지만 DMX를 사용하여 쿼리를 만드는 편이 더 쉽습니다. 또한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
@@ -40,11 +39,11 @@ ms.locfileid: "66085577"
   
      적절한 코드 편집기에서 **내용 쿼리** 템플릿이 열립니다. 메타데이터 창에는 현재 데이터베이스에서 사용할 수 있는 모델의 목록이 표시됩니다. 데이터베이스를 변경하려면 **사용 가능한 데이터베이스** 목록에서 다른 데이터베이스를 선택합니다.  
   
-5.  `FROM` *[\<마이닝 모델, 이름, mymodel>*]`.CONTENT`줄에 마이닝 모델의 이름을 입력 합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
+5.  [] 줄에 마이닝 모델의 이름을 입력 `FROM` *\<mining model, name, MyModel>* `.CONTENT` 합니다. 마이닝 모델 이름에 공백이 포함된 경우 이름을 대괄호로 묶어야 합니다.  
   
      이름을 입력하기가 불편하면 **개체 탐색기** 에서 마이닝 모델을 선택하고 템플릿에 끌어다 놓으면 됩니다.  
   
-6.  줄 `SELECT`에서 * \<목록, 식 \*목록을 차례로 선택 *하 여 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
+6.  줄에 `SELECT` *\<select list, expr list, \*>* 마이닝 모델 콘텐츠 스키마 행 집합의 열 이름을 입력 합니다.  
   
      마이닝 모델 내용 쿼리에서 반환할 수 있는 열의 목록을 보려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)에서 제공하는 DMV를 사용해 쿼리를 작성하는 방식으로 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들 수 있습니다.  
   

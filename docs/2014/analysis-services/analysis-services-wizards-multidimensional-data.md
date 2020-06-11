@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed0c5c3317d628c4202b09a56d810830523969d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062384"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528019"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services 마법사(다차원 데이터)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]및에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 제공 합니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및에서 사용할 마법사를 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 제공 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 합니다. 다음 표에서는 사용 가능한 마법사에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

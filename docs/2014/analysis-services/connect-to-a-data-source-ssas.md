@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c1114dd63b9082c6be7486ab5e576a6b8270485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fe7f7d5b31118369b8ce2a855b955e44f661dbc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087335"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527229"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>데이터 원본에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 관계형 데이터베이스, 데이터 피드, 파일 등과 같은 다양한 데이터 원본을 대상으로 새 데이터 원본 연결을 만들 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

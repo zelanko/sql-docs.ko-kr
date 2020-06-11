@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9778bfde1e63163c8fae89b93d0673cbde16a8cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a29cc4c248b1cdc4d671890f980cb7fe14c8414a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062746"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528169"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>집계 디자인 마법사 F1 도움말
-  집계는 각 쿼리에 대해 기본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산 된 합계를 검색할 수 있도록 하 여 성능 향상을 제공 합니다.  
+  집계는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 각 쿼리에 대해 기본 데이터 원본의 데이터를 다시 계산할 필요 없이 큐브 저장소에서 직접 미리 계산 된 합계를 검색할 수 있도록 하 여 성능 향상을 제공 합니다.  
   
  이러한 집계를 디자인하려면 집계 디자인 마법사를 사용합니다. 이 마법사는 다음 단계로 이루어져 있습니다.  
   

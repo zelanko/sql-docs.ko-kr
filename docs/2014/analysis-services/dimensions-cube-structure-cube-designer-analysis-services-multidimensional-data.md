@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb68b07a4e14e16a8df5acde7bea986733564253
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081701"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528559"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>차원(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **차원** 창을 사용하여 계층 및 특성을 포함한 큐브 차원을 보고 편집할 수 있습니다.  
@@ -26,12 +25,12 @@ ms.locfileid: "66081701"
  **계층 구조**  
  사용 가능한 큐브 차원 및 관련 큐브 계층을 표시하려면 클릭합니다.  
   
- 큐브 차원을 확장 하 고 차원 디자이너를 표시 하 고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집 하려면 차원 **>편집 \<** 을 선택 합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 큐브 차원을 확장 하 고 **편집 \<dimension> ** 을 선택 하 여 차원 디자이너를 표시 하 고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집 합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **특성**  
  사용 가능한 큐브 차원 및 관련 큐브 특성을 표시하려면 클릭합니다.  
   
- 큐브 차원을 확장 하 고 차원 디자이너를 표시 하 고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집 하려면 차원 **>편집 \<** 을 선택 합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+ 큐브 차원을 확장 하 고 **편집 \<dimension> ** 을 선택 하 여 차원 디자이너를 표시 하 고 큐브 차원의 기반이 되는 데이터베이스 차원을 편집 합니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  
  다음 옵션은 **차원** 창을 마우스 오른쪽 단추로 클릭하면 표시되는 상황에 맞는 메뉴를 통해 사용할 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66081701"
 > [!NOTE]  
 >  이 옵션은 차원을 선택한 경우에만 표시됩니다.  
   
- **Delete**  
+ **삭제**  
  큐브에서 선택한 큐브 차원을 제거하려면 클릭합니다.  
   
 > [!NOTE]  

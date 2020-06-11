@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d6aac37a1287e597f1c34936e8aae4af8571aa5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064415"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527839"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014에서 Analysis Services 기능의 주요 변경 내용
   이 항목에서는 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]의 주요 변경 내용에 대해 설명합니다. 이러한 변경 내용에 따라 이전 버전의 SQL Server을 기반으로 한 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다.  
@@ -49,14 +48,14 @@ ms.locfileid: "66064415"
 ##  <a name="breaking-changes-in-sssql11"></a><a name="bkmk_sql11"></a>의 주요 변경 내용[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  이 섹션에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]기능에 대해 보고된 주요 변경 내용을 설명합니다.  
   
-|문제|Description|  
+|문제|설명|  
 |-----------|-----------------|  
 |[!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 설치를 위한 설치 명령이 제거되었습니다.|설치 프로그램은 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]를 설치하지만 더 이상 구성하지는 않습니다. 이제 구성 동작에 사용되는 값을 수집하는 설치 명령이 제거되었습니다. 해당 명령으로는 /FARMACCOUNT, /FARMPASSWORD, /PASSPHRASE, /FARMADMINPORT 등이 있습니다.<br /><br /> 무인 설치를 위한 설치 스크립트를 만든 경우 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 설치를 위한 해당 스크립트를 수정해야 합니다. 또는 PowerShell cmdlet을 사용하여 무인 모드에서 서버를 구성하면 됩니다. 자세한 내용은 [명령 프롬프트에서 Powerpivot 설치](../../2014/sql-server/install/install-powerpivot-from-the-command-prompt.md) 및 [Windows PowerShell을 사용 하 여 powerpivot 구성](power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)을 참조 하세요.|  
   
 ##  <a name="breaking-changes-in-sskatmaisskilimanjaro"></a><a name="bkmk_sql10"></a>의 주요 변경 내용[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]/[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]  
  이 섹션에는 이전 릴리스에서 변경된 주요 변경 내용이 포함되어 있습니다. [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 업그레이드하는 경우, [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]에 도입된 주요 변경 내용을 검토해야 합니다.  
   
-|문제|Description|  
+|문제|설명|  
 |-----------|-----------------|  
 |열거된 멤버 또는 열거 집합의 크로스 조인이 들어 있는 명명된 집합에 대해 단순 Exists 함수의 동작이 달라졌습니다.|[!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]에서는 열거된 멤버 또는 열거 집합의 크로스 조인이 들어 있는 명명된 집합에 대해 단순 Exists 함수가 작동하지 않았습니다. [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]의 원래 릴리스 버전 및 SP1과 호환성을 유지하려면 "ConfigurationSettings\OLAP\Query\NamedSetShallowExistsMode" 구성 속성을 1로 설정하고, [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] SP2와 호환성을 유지하려면 2로 설정합니다.|  
 |VBA 함수에서 null 값과 비어 있는 값을 처리하는 방식이 [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]와 달라졌습니다.|[!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]에서는 null 값이나 빈 값을 인수로 사용하면 VBA 함수가 0이나 빈 문자열을 반환했지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 null을 반환합니다.|  

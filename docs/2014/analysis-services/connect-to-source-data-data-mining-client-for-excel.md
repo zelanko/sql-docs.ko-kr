@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087097"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527029"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>원본 데이터에 연결(Excel용 데이터 마이닝 클라이언트)
   이 항목에서는 데이터 마이닝 모델 저장 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 저장된 외부 데이터 액세스용 연결을 만들고 사용하는 방법에 대해 설명합니다.  
@@ -28,13 +27,13 @@ ms.locfileid: "66087097"
   
  **외부 데이터 원본 연결.** 모델을 작성하거나 결과를 저장할 때 외부 데이터에 대한 연결을 만들 수도 있습니다. 예를 들어 한 서버에 데이터 마이닝 모델을 만든 다음 다른 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스, Excel 데이터 테이블 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Access와 같은 외부 데이터 원본에 저장된 데이터를 사용하여 이 데이터 마이닝 모델에 대한 예측 쿼리를 수행할 수 있습니다. 새 데이터 원본에 액세스할 때마다 대화 상자를 사용하여 연결을 만들라는 메시지가 표시됩니다.  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> 전제 조건  
  이 버전의 추가 기능을 사용하려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스가 SQL Server 2012여야 합니다. 개별 버전의 추가 기능을 사용하여 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에 연결할 수도 있습니다. SQL Server 2005, SQL Server 2008 및 SQL Server 2008 R2를 지원하는 추가 기능 버전이 있습니다.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 연결하려면 해당 데이터베이스 서버에 대한 액세스 권한이 있어야 합니다. 또한 데이터 마이닝 세션이 활성화되어야 하며 서버에 저장된 데이터베이스 개체에 대한 읽기 또는 읽기/쓰기 권한이 있어야 합니다.  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>데이터 마이닝 서버 연결 만들기  
- Excel 용 데이터 마이닝 클라이언트 및 Excel 용 테이블 분석 도구에 있는 **연결** 그룹에서는 인스턴스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]대 한 연결을 관리 하기 위한 도구를 제공 합니다.  
+ Excel 용 데이터 마이닝 클라이언트 및 Excel 용 테이블 분석 도구에 있는 **연결** 그룹에서는 인스턴스에 대 한 연결을 관리 하기 위한 도구를 제공 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   추가 기능을 설치할 때 연결을 만들거나 나중에 추가할 수 있습니다.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087097"
 -   특정 시간에 하나의 연결만 활성화될 수 있습니다.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Excel 추가 기능에서 연결  
- Excel 용 데이터 마이닝 클라이언트 및 Excel 용 테이블 분석 도구에 있는 **연결** 그룹에서는 인스턴스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]대 한 연결을 관리 합니다.  
+ Excel 용 데이터 마이닝 클라이언트 및 Excel 용 테이블 분석 도구에 있는 **연결** 그룹에서는 인스턴스에 대 한 연결을 관리 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Excel 추가 기능에서 새 서버 연결 만들기  
   
 1.  **분석** 또는 **데이터 마이닝** 리본에서 **연결** 단추를 클릭 합니다.  
   
     > [!NOTE]  
-    >  단추의 텍스트는 연결이 존재하는지 여부를 나타냅니다. 워크시트에 연결 되지 않은 경우 단추에는 "\<no connection>" 텍스트가 포함 됩니다. 워크시트에 생성된 연결이 있는 경우에는 해당 연결의 이름이 단추에 표시됩니다.  
+    >  단추의 텍스트는 연결이 존재하는지 여부를 나타냅니다. 워크시트에 연결 되지 않은 경우 단추에는 "." 라는 텍스트가 포함 \<No connection> 됩니다. 이전에 통합 문서에서 연결을 만든 경우 해당 연결의 이름이 단추에 표시 됩니다.  
   
 2.  **Analysis Services 연결** 대화 상자에서 **새로 만들기**를 클릭 합니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087097"
   
 2.  연결 문자열을 수정하여 쿼리 제한 시간을 늘리거나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스와 관련된 다른 매개 변수를 추가해야 하는 경우 한 가지 옵션은 연결 문자열이 저장되는 .dmc 파일을 편집하는 것입니다.  
   
-     \<drive: > \Users\\<myusername\>\AppData\Local\Microsoft\Data 마이닝 추가 기능  
+     \<drive:>\Users \\<myusername \> \AppData\Local\Microsoft\Data 마이닝 추가 기능  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>외부 데이터 원본에 연결  
  **분석** 리본의 도구는 Excel의 데이터로만 작동 하지만 **데이터 마이닝** 리본의 도구를 사용 하면 외부 데이터 원본에 직접 연결 하 여 모델에 대 한 입력으로 사용 하거나 샘플링을 수행할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0e03c8d06d018390a3537ec15c4ab06c927bf4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063094"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527899"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 다이어그램(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성 관계** 탭의 도구 모음 바로 아래에 있는 창을 사용하여 특성 관계 다이어그램을 확인하고 특성 관계를 만들고 수정하고 삭제할 수 있습니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "66063094"
  **관계 유형**  
  관계 유형을 **유동** 또는 **고정**으로 설정합니다. 유연한 관계에서 멤버 간의 관계는 시간이 지나면서 달라질 수 있습니다. 고정된 관계에서는 멤버 간의 관계가 시간이 지나면서 달라지지 않습니다.  
   
- **Delete**  
+ **삭제**  
  특성 관계를 삭제합니다.  
   
  **속성**  

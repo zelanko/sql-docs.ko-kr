@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c8690a9b71f8a6fecf98e64007eecfbd339b82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a9f9214f7a23a86ad631717d68e178bf49fce3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064486"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527799"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>데이터 원본 뷰 찾아보기(데이터 마이닝 마법사)
   **데이터 원본 뷰 찾아보기** 대화 상자를 사용하여 마법사의 **데이터 원본 뷰 선택** 페이지에서 선택한 데이터 원본 뷰를 볼 수 있습니다.  

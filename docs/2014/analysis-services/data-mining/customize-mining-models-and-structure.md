@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523365"
 ---
 # <a name="customize-mining-models-and-structure"></a>마이닝 모델 및 구조 사용자 지정
   비즈니스 요구를 충족하는 알고리즘을 선택한 후 다음과 같은 방법으로 마이닝 모델을 사용자 지정하여 결과를 잠재적으로 향상시킬 수 있습니다.
@@ -61,7 +60,7 @@ ms.locfileid: "78174447"
 ### <a name="creating-aliases-for-model-columns"></a>모델 열의 별칭 만들기
  마이닝 모델을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 마이닝 구조에 있는 이름과 동일한 열 이름을 사용합니다. 마이닝 모델의 모든 열에 별칭을 추가할 수 있습니다. 이렇게 하면 열 내용 또는 사용법을 보다 쉽게 이해할 수 있으며 쿼리 작성 시 편리하도록 이름을 짧게 만들 수 있습니다. 별칭은 열의 복사본을 만들고 이해하기 쉬운 이름을 지정하려는 경우에도 유용합니다.
 
- 마이닝 모델 열의 `Name` 속성을 편집하여 별칭을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 계속 해 서 원래 이름을 열의 ID로 사용 하 고,에 `Name` 입력 하는 새 값이 열 별칭이 되어 표에 열 사용법 옆의 괄호 안에 표시 됩니다.
+ 마이닝 모델 열의 `Name` 속성을 편집하여 별칭을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 계속 해 서 원래 이름을 열의 ID로 사용 하 고,에 입력 하는 새 값 `Name` 이 열 별칭이 되어 표에 열 사용법 옆의 괄호 안에 표시 됩니다.
 
  ![마이닝 모델 열의 별칭](../media/modelcolumnalias-income.gif "마이닝 모델 열의 별칭")
 

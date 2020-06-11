@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 447b350aae97ded341788dd4b398441d6b1efdb2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084818"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522710"
 ---
 # <a name="data-mining-ssas"></a>데이터 마이닝(SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 마이닝을 통합하는 솔루션을 위한 통합 플랫폼을 제공합니다. 관계형 또는 큐브 데이터를 사용하여 예측 분석이 포함된 비즈니스 인텔리전스 솔루션을 만들 수 있습니다.  

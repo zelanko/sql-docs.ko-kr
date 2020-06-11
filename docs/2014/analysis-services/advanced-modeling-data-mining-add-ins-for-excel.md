@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 669fa1fcd9e4802a4d4102120a373dd615741017
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6de68fe97c61d90372f77f0fa318221f8f6e3ba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062743"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528244"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>고급 모델링(Excel용 데이터 마이닝 추가 기능)
   **고급** 데이터 모델링 옵션을 사용 하 여 사용자 지정 데이터 마이닝 구조 및 모델을 만들 수 있습니다 .이 구조는 마법사에서 만든 매개 변수와 다릅니다. 이 섹션에서 설명하는 두 가지 마법사를 사용하면 완전히 새로운 데이터 마이닝 구조 및 새로운 마이닝 모델을 만들어 기존 데이터 마이닝 구조에 적용할 수 있습니다.  

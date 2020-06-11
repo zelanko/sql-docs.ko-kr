@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088485"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527709"
 ---
 # <a name="browsing-a-forecasting-model"></a>예측 모델 찾아보기
-  **찾아보기**를 사용 하 여 예측 모델을 열면의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]시계열 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다. 이 뷰어에서는 추세를 살펴보고, 계열을 비교하고, 예측을 만들고, 모델 및 기본 데이터에 대한 정보를 확인할 수 있습니다.  
+  **찾아보기**를 사용 하 여 예측 모델을 열면의 시계열 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 이 뷰어에서는 추세를 살펴보고, 계열을 비교하고, 예측을 만들고, 모델 및 기본 데이터에 대한 정보를 확인할 수 있습니다.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>모델 탐색  
  예측 모델에 대 한 **찾아보기** 뷰어는 시간에 따른 추세를 표시 하 고 예측을 만들 수 있도록 하는 차트 뷰와 시계열을 의사 결정 트리 또는 회귀 트리로 나타내는 모델 뷰를 제공 합니다.  

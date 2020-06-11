@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faf96ad02005c0385ec56e1f8763da2e82f093ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be4a5f265d83c9346756e82f04d25616551b1af3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086827"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526500"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>폴링 쿼리 작성 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **폴링 쿼리 만들기** 대화 상자를 사용하여 **스토리지 옵션** 대화 상자의 **알림** 탭에서 폴링 쿼리를 만들 수 있습니다. 폴링 쿼리는 일반적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 테이블 또는 기타 관계형 개체가 변경되었는지 확인하는 데 사용할 수 있는 값을 반환하는 단일 쿼리입니다. **스토리지 옵션** 대화 상자 **알림** 탭의 **예약된 폴링** 옵션에 대한 표의 **폴링 쿼리** 열에서 줄임표 단추 (**...**)를 클릭하면 **폴링 쿼리 만들기** 대화 상자를 표시할 수 있습니다. **스토리지 옵션** 대화 상자의 **알림** 탭에 대한 자세한 내용은 [알림&#40;스토리지 옵션 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -65,7 +64,7 @@ ms.locfileid: "66086827"
 |**표 형태 창 표시/숨기기**|**표 형태 창을**표시 하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**SQL 창 표시/숨기기**|**SQL 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**결과 창 표시/숨기기**|**결과 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
-|**Run**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
+|**실행**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
 |**SQL 검증**|쿼리에서 SQL 문을 검증합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**오름차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 오름차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**내림차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 내림차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  

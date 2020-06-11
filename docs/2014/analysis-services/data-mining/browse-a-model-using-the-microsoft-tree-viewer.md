@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f7ac483e0883386f620a654d6257a49fa8baf52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d02a4111301dd880999bbcf9e6bea75062ef9599
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085934"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525292"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft 트리 뷰어를 사용하여 모델 찾아보기
-  의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트리 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용 하 여 작성 된 의사 결정 트리를 표시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)를 참조하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 트리 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용 하 여 작성 된 의사 결정 트리를 표시 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  

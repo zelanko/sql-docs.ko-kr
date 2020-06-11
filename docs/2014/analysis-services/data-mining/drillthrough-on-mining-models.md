@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084603"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522529"
 ---
 # <a name="drillthrough-on-mining-models"></a>마이닝 모델에서의 드릴스루
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
@@ -45,11 +44,11 @@ ms.locfileid: "66084603"
   
 |**알고리즘 이름**|**드릴스루에 대한 지원**|  
 |------------------------|----------------------------------|  
-|Microsoft Naïve Bayes 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 신경망 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 로지스틱 회귀 알고리즘|지원되지 않습니다.<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 선형 회귀 알고리즘|지원됩니다.<br /><br /> 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
-|Microsoft Time Series 알고리즘|지원됩니다.<br /><br /> 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> Microsoft Time Series 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝 속성&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용하는 것이 좋습니다.|  
+|Microsoft Naïve Bayes 알고리즘|지원 안 됨<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 신경망 알고리즘|지원 안 됨<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 로지스틱 회귀 알고리즘|지원 안 됨<br /><br /> 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 선형 회귀 알고리즘|지원됨.<br /><br /> 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
+|Microsoft Time Series 알고리즘|지원됨.<br /><br /> 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> Microsoft Time Series 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝 속성&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용하는 것이 좋습니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
  마이닝 모델에 드릴스루를 사용하는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  

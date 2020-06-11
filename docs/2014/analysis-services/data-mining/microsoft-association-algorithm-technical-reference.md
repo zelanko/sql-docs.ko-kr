@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084125"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522124"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 잘 알려진 Apriori 알고리즘을 간단하게 구현한 것입니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "66084125"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다.  
   
 ### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. AMO에서 <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> 컬렉션을 사용 하거나 XMLA의 [MiningModels 요소 &#40;&#41;요소](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 를 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너를 사용하여 언제든지 마이닝 모델의 매개 변수를 변경할 수 있습니다. <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A>AMO에서 컬렉션을 사용 하거나 XMLA의 [MiningModels 요소 &#40;&#41;요소](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) 를 사용 하 여 매개 변수를 프로그래밍 방식으로 변경할 수도 있습니다. 다음 표에서는 각 매개 변수에 대해 설명합니다.  
   
 > [!NOTE]  
 >  DMX 문을 사용 하 여 기존 모델의 매개 변수를 변경할 수 없습니다. DMX CREATE MODEL 또는 ALTER STRUCTURE ...에서 매개 변수를 지정 해야 합니다. 모델을 만들 때 모델을 추가 합니다.  

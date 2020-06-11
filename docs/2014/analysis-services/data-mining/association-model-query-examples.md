@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19eb2302639c7f13d48a8778969bbeca4fee18d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086117"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525433"
 ---
 # <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -224,7 +223,7 @@ ORDER BY NODE_SUPPORT DESC
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[IsInNode&#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
 |[PredictAdjustedProbability&#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  

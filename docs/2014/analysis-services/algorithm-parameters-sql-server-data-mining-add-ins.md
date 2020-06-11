@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062594"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528129"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>알고리즘 매개 변수(SQL Server 데이터 마이닝 추가 기능)
   Excel용 테이블 분석 도구를 사용하여 데이터 마이닝을 수행하는 경우 데이터 마이닝 알고리즘이나 매개 변수를 구성할 필요가 없습니다. 각 도구에서 데이터를 분석하여 최적의 매개 변수를 자동으로 선택합니다. 그러나 모델을 수정하거나 마이닝 모델을 새로 만들려는 경우 Excel용 데이터 마이닝 클라이언트는 사용자가 지정할 수 있는 몇 가지 옵션을 제공합니다.  
   
 -   **고급** 을 클릭 한 다음 **구조에 모델 추가**를 클릭 하 여 데이터 마이닝 모델을 수동으로 만듭니다.  
   
--   데이터 마이닝 클라이언트의 모델링 마법사 중 하나를 사용 하 고 **매개 변수** 를 클릭 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘의 동작을 제어 합니다.  
+-   데이터 마이닝 클라이언트의 모델링 마법사 중 하나를 사용 하 고 **매개 변수** 를 클릭 하 여 데이터 마이닝 알고리즘의 동작을 제어 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 -   **쿼리** 를 클릭 하 여 모델 쿼리 마법사를 연 다음 **고급** 을 클릭 하 여 **데이터 마이닝 고급 쿼리 편집기**를 엽니다. 이 편집기에서는 DMX 템플릿을 사용하여 모델을 작성할 수 있습니다.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66062594"
 |SPLIT_METHOD|Microsoft 의사 결정 트리 알고리즘|노드를 분할하는 데 사용되는 메서드를 결정합니다. 다음 옵션을 사용할 수 있습니다. Binary (1), Complete (2) 또는 Both (3).<br /><br /> 기본값은 3입니다.|  
 |STOPPING_TOLERANCE|Microsoft 클러스터링 알고리즘 기술 참조|일치 상태에 도달하고 알고리즘이 모델 작성을 마치는 시기를 결정하는 데 사용되는 값을 지정합니다. 클러스터 확률의 전체 변경 비율이 STOPPING_TOLERANCE  매개 변수를 모델 크기로 나눈 비율보다 작으면 일치 상태에 도달합니다.<br /><br /> 기본값은 10입니다.|  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>의견  
  알고리즘에 대한 자세한 내용은 SQL Server 온라인 설명서를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  

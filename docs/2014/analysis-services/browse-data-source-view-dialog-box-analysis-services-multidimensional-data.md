@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 488911c34df2722d4a4144df173a2975ae0f16f1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064455"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527783"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>데이터 원본 뷰 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
   데이터 원본 뷰 찾아보기 대화 상자는 선택한 데이터 원본 뷰를 간단한 그래픽 다이어그램으로 표시합니다. 또한 데이터 원본 뷰의 이름이 대화 상자의 제목으로 표시됩니다.  

@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에 부울 함수 사용 (SQLXML)
+description: XPath 쿼리에 SQLXML 4.0 부울 함수 true (), false () 및 not ()이 지정 되는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252585"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529885"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252585"
 ## <a name="examples"></a>예  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. not() 부울 함수 지정  
- 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
+ 이 쿼리는 **\<Customer>** 자식 요소가 없는 컨텍스트 노드의 모든 자식 요소를 반환 합니다 **\<Order>** .  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -79,7 +80,7 @@ ms.locfileid: "75252585"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. true() 및 false() 부울 함수 지정  
- 이 쿼리는 ** \<Order>** 자식 요소가 없는 컨텍스트 노드의 모든 ** \<Customer>** 요소 자식을 반환 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
+ 이 쿼리는 **\<Customer>** 자식 요소가 없는 컨텍스트 노드의 모든 요소 자식을 반환 **\<Order>** 합니다. 관계적인 측면으로 설명하면 이 쿼리는 주문을 하지 않은 모든 고객을 반환합니다.  
   
 ```  
 /child::Customer[child::Order=false()]  

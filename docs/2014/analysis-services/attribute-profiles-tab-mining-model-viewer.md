@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063167"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527919"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>특성 프로필 탭(마이닝 모델 뷰어)
   **특성 프로필** 탭을 사용하여 Naive Bayes 모델 상태의 입력 값 분포가 결과 특성의 각 상태에 주는 영향을 확인할 수 있습니다. 값의 분포는 색이 지정된 히스토그램으로 표시되고 모든 분포가 표 형식으로 제공되므로 보다 쉽게 값을 비교할 수 있습니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "66063167"
 |값|설명|  
 |-----------|-----------------|  
 |**특성**|마이닝 모델에 포함된 마이닝 모델 열을 나열합니다.|  
-|**상태**|필요에 따라 특성의 해당 행에 있는 색이 나타내는 상태를 설명하는 열입니다. **범례 표시** 확인란을 사용하여 추가하거나 제거합니다.|  
+|**없다고**|필요에 따라 특성의 해당 행에 있는 색이 나타내는 상태를 설명하는 열입니다. **범례 표시** 확인란을 사용하여 추가하거나 제거합니다.|  
 |**표본의**|전체 데이터 세트의 특성 배포를 표시합니다.|  
 |**예측 가능한 특성의 상태 열**|각 행이 모델의 입력 특성에 해당하는 예측 가능한 열의 각 상태에 대한 열을 표시합니다.|  
   

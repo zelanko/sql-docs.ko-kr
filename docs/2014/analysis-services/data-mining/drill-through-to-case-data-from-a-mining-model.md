@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084608"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522540"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>마이닝 모델에서 사례 데이터로 드릴스루
   모델 사례로 드릴스루할 수 있도록 마이닝 모델을 구성한 경우 모델을 찾을 때 모델을 만드는 데 사용된 사례에 대한 세부 정보를 검색할 수 있습니다. 또한 구조 사례로의 드릴스루를 허용하도록 기본 마이닝 구조를 구성했으며 적절한 권한이 있는 경우 마이닝 구조에서 정보를 반환할 수 있습니다. 여기에는 마이닝 모델에 포함되지 않은 열이 포함될 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66084608"
   
 |뷰어 이름|창 또는 탭 이름|노드 선택|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 트리 뷰어**|**의사 결정 트리** 탭|트리 노드를 클릭합니다.<br /><br /> **참고** 결과를 반환 하는 `All` 데 시간이 오래 걸릴 수 있으므로 노드에서 드릴스루를 사용 하지 마십시오.|  
+|**Microsoft 트리 뷰어**|**의사 결정 트리** 탭|트리 노드를 클릭합니다.<br /><br /> **참고** `All`결과를 반환 하는 데 시간이 오래 걸릴 수 있으므로 노드에서 드릴스루를 사용 하지 마십시오.|  
 |**Microsoft 클러스터 뷰어**|**클러스터 다이어그램**|클러스터 노드를 클릭합니다.|  
 |**Microsoft 클러스터 뷰어**|**클러스터 프로필**|클러스터 열의 아무 곳이나 클릭합니다.|  
 |**Microsoft 연결 뷰어**|**규칙** 탭|규칙 집합을 포함하는 행을 클릭합니다.|  

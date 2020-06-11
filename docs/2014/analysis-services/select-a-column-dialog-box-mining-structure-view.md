@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069922"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538445"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>열 선택 대화 상자(마이닝 구조 뷰)
   **열 선택** 대화 상자를 사용하여 마이닝 구조에 열을 추가할 수 있습니다. 이 대화 상자는 OLAP 마이닝 모델로 작업을 수행하는지, 아니면 관계형 마이닝 모델로 작업을 수행하는지에 따라 옵션이 달라집니다.  

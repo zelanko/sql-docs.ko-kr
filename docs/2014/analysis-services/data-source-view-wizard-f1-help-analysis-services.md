@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 01074111cd4944f9b74137dd371e00343e37f15b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd9d1497001269e7884f301c7ed6b409444dc668
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082513"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529039"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>데이터 원본 뷰 마법사 F1 도움말(Analysis Services)
   데이터 원본 뷰 마법사를 사용하여 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 다음 비즈니스 인텔리전스 프로젝트에 사용할 데이터 원본 뷰를 만듭니다.  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트가  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트가  
   
 -   보고서 모델 프로젝트  
   

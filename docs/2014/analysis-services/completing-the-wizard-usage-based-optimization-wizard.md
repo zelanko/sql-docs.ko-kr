@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3faf5983b452f436b4d3071fa542bfb2ccdd382e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527287"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>마법사 완료(사용 빈도 기반 최적화 마법사)
   **마법사 완료** 페이지를 사용하여 집계 디자인을 선택한 파티션에 저장하고 할당할 수 있습니다. 또한 필요에 따라 사용 빈도 기반 최적화 마법사에서 집계 디자인을 완료하고 저장한 다음 선택한 파티션을 처리할 수 있습니다.  

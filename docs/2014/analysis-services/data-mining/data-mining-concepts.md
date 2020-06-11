@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a054e59a830895d43d861e6d6533ad5bb876c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3de498bcd5643bb8f83d00c9536f57560d30b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174532"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523211"
 ---
 # <a name="data-mining-concepts"></a>데이터 마이닝 개념
   데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.
@@ -60,7 +59,7 @@ ms.locfileid: "78174532"
 
 6.  [모델 배포 및 업데이트](#DeployingandUpdatingModels)
 
- 다음 다이어그램에서는 프로세스의 각 단계 간 관계와 각 단계를 완료 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 데 사용할 수 있는 기술을 설명 합니다.
+ 다음 다이어그램에서는 프로세스의 각 단계 간 관계와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 단계를 완료 하는 데 사용할 수 있는 기술을 설명 합니다.
 
  ![데이터 마이닝 프로세스의 핵심 단계](../media/data-mining-process.gif "데이터 마이닝 프로세스의 핵심 단계")
 
@@ -93,7 +92,7 @@ ms.locfileid: "78174532"
 
  모델의 결과를 비즈니스 프로세스를 측정하는 데 사용되는 KPI(핵심 성과 지표)로 통합할 방법을 고려해야 할 수도 있습니다.
 
-##  <a name="preparing-data"></a><a name="PreparingData"></a> 데이터 준비
+##  <a name="preparing-data"></a><a name="PreparingData"></a>데이터 준비
  데이터 마이닝 프로세스의 두 번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 [문제 정의](#DefiningTheProblem) 단계에서 식별한 데이터를 통합하고 정리하는 것입니다.
 
  ![데이터 마이닝 2단계: 데이터 준비](../media/dmprocess-preparing.gif "데이터 마이닝 2단계: 데이터 준비")

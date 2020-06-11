@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088182"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527573"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>차트 탭(마이닝 모델 뷰어)
   **차트** 창을 사용하여 예측 값과 함께 시계열 모델의 학습에 사용되는 기록 데이터를 표시할 수 있습니다. 차트의 세로 축은 계열 값을 나타내고 가로 축은 시간을 나타냅니다. 미래 예측은 점선으로 나타납니다.  

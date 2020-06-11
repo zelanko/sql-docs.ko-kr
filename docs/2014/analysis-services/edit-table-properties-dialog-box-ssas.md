@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081443"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528449"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>테이블 속성 편집 대화 상자(SSAS)
   **테이블 속성 편집** 대화 상자에서는 테이블 가져오기 마법사를 사용하여 모델 디자이너로 가져온 테이블의 속성을 보고 수정할 수 있습니다. 모델 디자이너에서 이 대화 상자를 열려면 가져온 데이터의 테이블을 선택한 다음 **테이블** 메뉴를 클릭하고 **테이블 속성**을 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  이 대화 상자의 옵션은 데이터를 가져올 때 목록에서 테이블을 선택하는 방법을 사용했는지 SQL 쿼리를 사용했는지에 따라 다릅니다.  
   
 ## <a name="table-preview-mode"></a>테이블 미리 보기 모드  
@@ -47,7 +46,7 @@ ms.locfileid: "66081443"
  |||  
 |-|-|  
 |**원본**|현재 열 이름을 선택된 원본 테이블의 열 이름으로 바꾸려면 이 옵션을 선택합니다.|  
-|**모델링**|모델에 있는 대로 현재 열 이름을 사용하려면 이 옵션을 선택합니다.|  
+|**모델**|모델에 있는 대로 현재 열 이름을 사용하려면 이 옵션을 선택합니다.|  
   
  **미리 보기 새로 고침**  
  현재 선택된 원본 테이블의 데이터 열을 보려면 클릭합니다.  
@@ -89,7 +88,7 @@ ms.locfileid: "66081443"
  **Sql 문**  
  행을 검색하기 위해 현재 데이터 원본에 대해 실행된 SQL 문을 표시합니다. 기본적으로 모든 행이 검색되지만 필터를 디자인하거나 SQL 문을 직접 편집하여 행의 일부만 검색할 수 있습니다.  
   
- **유효성 검사**  
+ **유효화**  
  선택된 데이터 원본 및 공급자에 대해 문이 구문적으로 올바른지 확인하려면 클릭합니다.  
   
  **디자인**  

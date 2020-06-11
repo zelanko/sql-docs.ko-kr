@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d89de37de81311b1f4a884eeaf434e8247da633
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b5ace027c052090e2f0ce5bca77e02df9516da4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174472"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527269"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>SharePoint 2010용 PowerPivot 구성 또는 복구(PowerPivot 구성 도구)
   SharePoint 2010용 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot 설치를 구성하거나 복구하려면 PowerPivot 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2010용 PowerPivot 구성 도구뿐만 아니라 SharePoint 2013용 PowerPivot 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2010용 PowerPivot 구성 도구에 대해 설명합니다. SharePoint 2010에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2013 &#40;PowerPivot 구성 도구&#41;구성 또는 복구 ](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)를 참조 하세요.
@@ -88,7 +87,7 @@ ms.locfileid: "78174472"
 
  다음 표에서는 서버를 구성하는 데 사용되는 값에 대해 설명합니다.
 
-|호출|입력 값|원본|Description|
+|페이지|입력 값|원본|설명|
 |----------|-----------------|------------|-----------------|
 |**SharePoint용 PowerPivot 구성 또는 복구**|기본 계정|현재 사용자|기본 계정은 팜에서 공유 서비스를 프로비전하는 데 사용되는 도메인 Windows 사용자 계정입니다. 이 계정은 PowerPivot 서비스 애플리케이션, Secure Store Service, Excel 서비스, 웹 애플리케이션 풀 ID, 사이트 모음 관리자 및 PowerPivot 무인 데이터 새로 고침 계정을 프로비전하는 데 사용됩니다.<br /><br /> 기본적으로 도구는 현재 사용자의 도메인 계정을 입력합니다. 평가 목적으로 서버를 구성하는 경우가 아니면 이 계정을 다른 도메인 사용자 계정으로 바꿔야 합니다.<br /><br /> 중앙 관리를 사용하여 서비스 ID를 변경할 수도 있습니다.<br /><br /> PowerPivot 구성 도구에서 다음에 대한 전용 계정을 지정할 수도 있습니다.<br /><br /> **기본 웹 애플리케이션 만들기** 페이지를 사용하는 웹 애플리케이션(도구가 팜에 대한 웹 애플리케이션을 만든다고 가정)<br /><br /> 이 도구에서 **데이터 새로 고침을 위한 무인 계정 만들기** 페이지를 사용하는 PowerPivot 무인 데이터 새로 고침 계정|
 ||데이터베이스 서버|사용 가능한 경우 로컬 PowerPivot 명명된 인스턴스|데이터베이스 엔진 인스턴스가 PowerPivot 명명된 인스턴스로 설치되는 경우 이 도구는 데이터베이스 서버 필드를 이 인스턴스로 채웁니다. 데이터베이스 엔진을 설치하지 않은 경우 이 필드는 비어 있습니다. 인스턴스를 제공해야 합니다. 인스턴스는 SharePoint 팜에 대해 지원되는 모든 버전 또는 에디션의 SQL Server일 수 있습니다.|
@@ -181,7 +180,7 @@ ms.locfileid: "78174472"
  이후에 데이터 스토리지와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 두 번째 SharePoint용 PowerPivot 서버 인스턴스를 추가할 수 있습니다. 자세한 내용은 [배포 검사 목록: SharePoint 2010 팜에 PowerPivot 서버를 추가 하 여 확장](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)을 참조 하세요.
 
 ## <a name="additional-resources"></a>추가 리소스
- ![SharePoint 설정은](media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") Microsoft SQL Server 연결 ()https://connect.microsoft.com/SQLServer/Feedback) [을 통해 사용자 의견 및 연락처 정보를 제출](https://connect.microsoft.com/SQLServer/Feedback) 합니다.
+ ![SharePoint 설정은](media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server 연결 ()을 통해 사용자 의견 및 연락처 정보를 제출](https://connect.microsoft.com/SQLServer/Feedback) https://connect.microsoft.com/SQLServer/Feedback) 합니다.
 
 ## <a name="see-also"></a>참고 항목
  [PowerPivot Configuration Tools](power-pivot-sharepoint/power-pivot-configuration-tools.md) [중앙 관리에서 Powerpivot 구성 도구 powerpivot 서버 관리 및 구성](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)

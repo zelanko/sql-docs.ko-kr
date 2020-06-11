@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084885"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522735"
 ---
 # <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
   데이터 마이닝 솔루션은 하나 이상의 데이터 마이닝 프로젝트가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션입니다.  
   
- 이 섹션의 항목에서는를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]하 여 통합 데이터 마이닝 솔루션을 디자인 하 고 구현 하는 방법에 대 한 정보를 제공 합니다. 데이터 마이닝 디자인 프로세스와 관련 도구에 대한 개요는 [Data Mining Concepts](data-mining-concepts.md)를 참조하십시오.  
+ 이 섹션의 항목에서는를 사용 하 여 통합 데이터 마이닝 솔루션을 디자인 하 고 구현 하는 방법에 대 한 정보를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. 데이터 마이닝 디자인 프로세스와 관련 도구에 대한 개요는 [Data Mining Concepts](data-mining-concepts.md)를 참조하십시오.  
   
  데이터 마이닝에 유용한 추가 프로젝트 형식에 대한 자세한 내용은 [데이터 마이닝 솔루션 관련 프로젝트](data-mining-solutions.md)를 참조하세요.  
   

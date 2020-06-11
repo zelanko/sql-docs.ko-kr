@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6e0bf6c0c1126dff29107636e0956d92d4b314a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a73ce5a538756a740afd2db72d585fa54f03cae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086507"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525932"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>데이터 마이닝 알고리즘(SQL Server 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능은 다음과 같은 데이터 마이닝 알고리즘을 사용하여 분석 모델을 만드는 작업을 지원합니다. 모든 알고리즘은 잘 알려진 시스템 학습 방법을 기반으로 하며 Microsoft Research에서 구현되었습니다.  

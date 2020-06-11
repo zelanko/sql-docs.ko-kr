@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527429"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>테이블 형식 및 다차원 솔루션(SSAS) 비교
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 테이블 형식 및 다차원 데이터 모델링에 대 한 두 가지 고유한 방법을 제공 합니다. 두 방식 간에 중요한 공통점이 있지만 작업 진행 방식을 어떻게 결정할지에 영향을 미치는 중요한 차이점도 있습니다. 이 항목에서는 기능을 비교하고 각 접근 방식이 일반적인 프로젝트 요구 사항을 해결하는 방법을 설명합니다. 예를 들어 특정 데이터 원본을 지원하는 것이 가장 중요하게 고려되는 경우 데이터 원본에 대한 섹션이 사용할 모델링 방법을 결정하는 데 도움이 될 수 있습니다.  
@@ -101,13 +100,13 @@ ms.locfileid: "66087767"
 |집계 개체|[예](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|예|  
 |계산 측정값|[예](multidimensional-models/create-calculated-members.md)|예|  
 |사용자 지정 어셈블리|[예](multidimensional-models/multidimensional-model-assemblies-management.md)|예|  
-|사용자 지정 롤업|예|아니요|  
+|사용자 지정 롤업|예|예|  
 |Distinct Count|[예](multidimensional-models/use-aggregate-functions.md)|예 (DAX를 통해) *|  
 |드릴스루|[예](multidimensional-models/actions-in-multidimensional-models.md)|예|  
 |계층 구조|[예](multidimensional-models/user-defined-hierarchies-create.md)|예|  
 |KPI|[예](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|예|  
 |연결된 측정값 그룹|[예](multidimensional-models/linked-measure-groups.md)|예|  
-|다 대 다 관계|[예](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|예|  
+|다대다 관계|[예](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|예|  
 |부모-자식 계층 구조|[예](multidimensional-models/parent-child-dimension.md)|예(DAX를 통해)|  
 |파티션|[예](tabular-models/partitions-ssas-tabular.md)|  
 |큐브 뷰|[예](multidimensional-models/perspectives-in-multidimensional-models.md)|[예](tabular-models/partitions-ssas-tabular.md)|  
@@ -161,7 +160,7 @@ ms.locfileid: "66087767"
 ##  <a name="client-and-reporting-applications"></a><a name="bkmk_client"></a>클라이언트 및 보고 응용 프로그램  
  이전 릴리스에서는 사용자가 선택한 모델 유형이 사용할 수 있는 클라이언트 애플리케이션에 영향을 미치지만 시간이 지나면서 이러한 구분이 모호해졌습니다. 테이블 형식 및 다차원 형식은 Analysis Services 데이터에 연결하는 클라이언트 애플리케이션 관련하여 거의 동일한 지원을 제공합니다. 다음 표는 Analysis Services 데이터 모델과 함께 사용할 수 있는 Microsoft 클라이언트 애플리케이션의 목록입니다.  
   
-|**응용 프로그램**|**설명**|  
+|**애플리케이션**|**설명**|  
 |---------------------|---------------------|  
 |Excel 피벗 테이블 보고서|쓰기 저장(Excel 구현하는 Analysis Services 기능)은 다차원 모델에 대해서만 지원되지만 Excel 기능은 테이블 형식 및 다차원 모델 둘 다에서 동일합니다.|  
 |Reporting Services RDL 보고서|보고서 작성기 또는 보고서 디자이너에서 만든 RDL 보고서에는 SharePoint용 PowerPivot에 호스트되는 Excel 데이터 모델은 물론 모든 Analysis Services 모델을 사용할 수 있습니다.|  

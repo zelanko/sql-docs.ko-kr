@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522320"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>논리적 아키텍처(Analysis Services - 데이터 마이닝)
   데이터 마이닝은 여러 구성 요소와의 상호 작용을 수반하는 프로세스입니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66084272"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>데이터 마이닝 원본 데이터  
  데이터 마이닝에 사용하는 데이터는 데이터 마이닝 솔루션에 저장되지 않고 바인딩만 저장됩니다. 데이터는 이전 버전의 SQL Server 또는 CRM 시스템에서 만들거나 플랫 파일로 만든 데이터베이스에 있을 수도 있습니다. 구조나 모델을 처리하여 학습하는 경우 데이터의 통계 요약이 생성됩니다. 이 통계 요약은 이후 작업에 사용하도록 유지될 수 있는 캐시에 저장되거나 처리 후 삭제됩니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](mining-structures-analysis-services-data-mining.md)를 참조하세요.  
   
- 데이터 원본 위에 추상화 계층을 제공하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DSV(데이터 원본 뷰) 개체 내에서 서로 다른 데이터를 조합할 수 있습니다. 테이블 간의 조인을 지정하거나 다 대 일 관계를 갖는 테이블을 추가하여 중첩 테이블 열을 만들 수 있습니다. 이러한 개체의 정의, 데이터 원본 및 데이터 원본 뷰는 *.ds 및 \*.dsv 파일 이름 확장명으로 솔루션 내에 저장됩니다. 데이터 원본 및 데이터 원본 뷰를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 만들고 사용 하는 방법에 대 한 자세한 내용은 [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)를 참조 하세요.  
+ 데이터 원본 위에 추상화 계층을 제공하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DSV(데이터 원본 뷰) 개체 내에서 서로 다른 데이터를 조합할 수 있습니다. 테이블 간의 조인을 지정하거나 다 대 일 관계를 갖는 테이블을 추가하여 중첩 테이블 열을 만들 수 있습니다. 이러한 개체의 정의, 데이터 원본 및 데이터 원본 뷰는 *.ds 및 \*.dsv 파일 이름 확장명으로 솔루션 내에 저장됩니다. 데이터 원본 및 데이터 원본 뷰를 만들고 사용 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)를 참조 하세요.  
   
  AMO 또는 XMLA를 사용하여 데이터 원본 및 데이터 원본 뷰를 정의하고 변경할 수도 있습니다. 이러한 개체를 프로그래밍 방식으로 작업하는 방법에 대한 자세한 내용은 [논리 아키텍처 개요&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)를 참조하세요.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084575"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522549"
 ---
 # <a name="drillthrough-on-mining-structures"></a>마이닝 구조에서의 드릴스루
   *드릴스루* 는 마이닝 모델이나 마이닝 구조를 쿼리하고 모델에 표시되지 않는 세부 데이터를 가져오는 기능입니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66084575"
   
 -   드릴스루는 마이닝 구조를 처리할 때 캐시된 학습 사례에 대한 정보를 검색하는 방식으로 작동합니다. 따라서 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `ClearAfterProcessing`으로 변경하여 구조를 처리한 후 캐시된 데이터를 지울 경우에는 드릴스루가 작동하지 않습니다. 구조 열로 드릴스루할 수 있도록 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 속성을 `KeepTrainingCases`로 변경한 다음 구조를 다시 처리해야 합니다.  
   
--   마이닝 구조와 마이닝 모델 모두에 [Allowdrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 속성이로 `True`설정 되어 있는지 확인 합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다.  
+-   마이닝 구조와 마이닝 모델 모두에 [Allowdrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 속성이로 설정 되어 있는지 확인 `True` 합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다.  
   
 ## <a name="security-issues-for-drillthrough"></a>드릴스루의 보안 문제  
  드릴스루 권한은 구조와 모델에 개별적으로 설정됩니다. 모델 사용 권한이 있으면 구조에 대한 사용 권한이 없는 경우에도 모델에서 드릴스루할 수 있습니다. 구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다.  

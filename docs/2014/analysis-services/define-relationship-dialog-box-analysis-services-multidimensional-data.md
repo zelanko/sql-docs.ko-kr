@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d80be1c4898ae00dfdbb88e22771c071636cf73c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 134a6dc66ea80bf9bd3d89f1853f30a30e51bd9e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082097"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528799"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>관계 정의 대화 상자(Analysis Services - 다차원 데이터)
   **관계 정의** 대화 상자를 사용하여 큐브 디자이너에서 큐브 차원과 측정값 그룹 간의 관계를 정의할 수 있습니다. 큐브 디자이너 **차원 용도** 탭의 **표** 창에서 셀의 **...** 를 클릭하면 **관계 정의** 대화 상자를 표시할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66082097"
 |관계 유형|설명|옵션|  
 |-----------------------|-----------------|------------|  
 |**관계 없음**|관계를 정의하지 않으면 **세부 정보** 창에 옵션이 표시되지 않습니다.||  
-|**정규식**|일반 차원 관계를 지정합니다. **세부 정보** 창에는 다음 옵션이 표시됩니다.|**세분성 특성**: <br />                      차원과 관련하여 측정값 그룹의 세분성을 정의하는 특성을 선택합니다. 이 특성은 일반적으로 차원의 키 특성입니다.|  
+|**Regular**|일반 차원 관계를 지정합니다. **세부 정보** 창에는 다음 옵션이 표시됩니다.|**세분성 특성**: <br />                      차원과 관련하여 측정값 그룹의 세분성을 정의하는 특성을 선택합니다. 이 특성은 일반적으로 차원의 키 특성입니다.|  
 |||**차원 테이블**: 차원의 주 테이블을 표시합니다.|  
 |||**측정값 그룹 테이블**: 측정값 그룹의 팩트 테이블을 표시합니다.|  
 |||**관계**: 관계의 기반이 되는 차원 열과 측정값 그룹 열의 표를 표시합니다. 표에는 다음 열이 있습니다.<br /><br /> **차원 열**: 선택한 세분성 특성과 연결된 열을 표시합니다. 참고: 차원이 아직 생성되지 않은 경우 이 옵션은 **생성**으로 설정됩니다.<br />**측정값 그룹 열** :<br />                              측정값 그룹에서 차원 열과 관련된 열을 선택합니다.|  

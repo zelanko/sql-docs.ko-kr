@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083684"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521590"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -60,10 +59,10 @@ ms.locfileid: "66083684"
  NODE_TYPE  
  연결 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|유형|  
+|노드 유형 ID|Type|  
 |------------------|----------|  
 |1(모델)|루트 또는 부모 노드입니다.|  
-|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 를 실행하거나<br /><br /> `Gender = Male`.|  
+|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 또는<br /><br /> `Gender = Male`.|  
 |8(규칙)|항목 간의 관련 방식을 정의하는 규칙입니다.<br /><br /> 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  

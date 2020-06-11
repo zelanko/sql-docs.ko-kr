@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69f306df-8038-463f-91c3-5413503246c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7662514939526bd8cdc12d19e5b53e3a4a2f913d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33f77ae9b70046ff8391c7a260519d618e3ad43f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732038"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528659"
 ---
 # <a name="ole-db-for-data-mining"></a>데이터 마이닝용 OLE DB
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 기능은 6 월 2000에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 출시 된 데이터 마이닝 1.0 사양에 대 한 OLE DB를 준수 합니다.  
+  의 데이터 마이닝 기능은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 6 월 2000에 출시 된 데이터 마이닝 1.0 사양에 대 한 OLE DB를 준수 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 새로운 스키마 행 집합을 추가하고, 기존 스키마 행 집합에 열을 추가하며, 마이닝 구조를 만들고 관리하는 데 사용할 수 있는 DMX(Data Mining Extensions) 언어에 구문을 추가하여 사양을 확장하였습니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5650323524aa0b2146332f76b5582cc58950e203
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085246"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523699"
 ---
 # <a name="create-an-olap-mining-structure"></a>OLAP 마이닝 구조 만들기
   OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "66085246"
 ##  <a name="scenarios-for-use-of-data-mining-with-olap-data"></a><a name="bkmk_OLAP_Scenarios"></a>OLAP 데이터와 함께 데이터 마이닝 사용에 대 한 시나리오  
  OLAP 큐브에는 많은 멤버와 차원이 포함되는 경우가 많으므로 데이터 마이닝을 시작할 위치를 알기가 어려울 수 있습니다. 큐브에 포함된 패턴을 식별하려면 일반적으로 원하는 단일 차원을 식별한 다음 해당 차원과 관련된 패턴을 탐색합니다. 다음 표에서는 일반적인 몇 가지 OLAP 데이터 마이닝 태스크를 나열하고 각 작업을 적용할 수 있는 예제 시나리오를 설명하며 각 작업에 사용할 데이터 마이닝 알고리즘을 식별합니다.  
   
-|작업|샘플 시나리오|알고리즘|  
+|Task|샘플 시나리오|알고리즘|  
 |----------|---------------------|---------------|  
 |멤버를 클러스터로 그룹화|고객 멤버 속성, 고객이 구입한 제품, 고객이 지출한 금액을 기준으로 고객 차원을 세그먼트화합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘|  
 |주목할 만한 멤버 또는 비정상적인 멤버 찾기|판매, 수익, 매장 위치 및 매장 크기를 기준으로 Store 차원에서 주목할 만한 매장 또는 비정상적인 매장을 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521640"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series 알고리즘
   시계열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 시간에 따른 제품 판매량 같은 연속 값의 예측에 최적화 된 회귀 알고리즘을 제공 합니다. 의사 결정 트리와 같은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에서는 새 정보로 된 추가 열을 입력해야 추세를 예측할 수 있지만, 시계열 모델에서는 이런 열이 필요하지 않습니다. 시계열 모델은 이 모델을 만드는 데 사용되는 원래 데이터 세트만을 기반으로 추세를 예측할 수 있습니다. 또한 예측을 만들고 자동으로 새 데이터를 추세 분석에 통합하는 경우 시계열 모델에 새 데이터를 추가할 수도 있습니다.  
@@ -47,11 +46,11 @@ ms.locfileid: "66083765"
  이 회사는 각 분기마다 최신 판매량 데이터로 모델을 업데이트하고 이들의 예측을 업데이트하여 최신 추세로 모델링할 계획입니다. 판매량 데이터를 정확하거나 일관되게 업데이트하지 않는 점포의 문제를 해결하려면 일반 예측 모델을 만들고 이 모델을 사용하여 모든 지역에 대한 예측을 만듭니다.  
   
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
- 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]시계열 알고리즘 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 ARTXP 단일 알고리즘을 사용 했습니다. ARTXP 알고리즘은 단기 예측에 대해 최적화되었으므로 계열의 적절한 다음 값을 예측했습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 시계열 알고리즘은 ARTXP 알고리즘과 두 번째 알고리즘 ARIMA를 모두 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
+ 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 ARTXP 단일 알고리즘을 사용 했습니다. ARTXP 알고리즘은 단기 예측에 대해 최적화되었으므로 계열의 적절한 다음 값을 예측했습니다. 부터 시계열 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ARTXP 알고리즘과 두 번째 알고리즘 ARIMA를 모두 사용 합니다. ARIMA 알고리즘은 장기 예측에 대해 최적화되어 있습니다. ARTXP 및 ARIMA 알고리즘의 구현에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.  
   
  기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 패턴을 분석하고 예측을 수행할 때 알고리즘을 혼합하여 사용합니다. 알고리즘은 동일한 데이터에 대해 두 개의 개별 모델을 학습 합니다. 한 모델은 ARTXP 알고리즘을 사용 하 고 한 모델은 ARIMA 알고리즘을 사용 합니다. 그러면 알고리즘은 두 모델의 결과를 혼합하여 여러 개의 시간 조각에 대한 최상의 예측을 생성합니다. ARTXP는 단기 예측에 가장 적합하므로 일련의 예측이 시작되는 부분에서는 ARTXP에 더 비중을 둡니다. 그러나 예측하는 시간 조각이 보다 미래로 이동하면 ARIMA에 더 비중을 둡니다.  
   
- 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 표준부터 시계열 알고리즘이 다음 설정 중 하나를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용 하도록 지정할 수 있습니다.  
+ 알고리즘의 혼합을 제어하여 시계열에서 단기 예측 또는 장기 예측 중 하나를 우선시할 수도 있습니다. 표준부터 시계열 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘이 다음 설정 중 하나를 사용 하도록 지정할 수 있습니다.  
   
 -   단기 예측에 ARTXP만 사용합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083765"
   
 -   두 알고리즘의 혼합을 기본값으로 사용합니다.  
   
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]부터 시계열 알고리즘이 예측을 위해 모델을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 혼합 하는 방법을 사용자 지정할 수 있습니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
+ 부터 시계열 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘이 예측을 위해 모델을 혼합 하는 방법을 사용자 지정할 수 있습니다. 혼합 모델을 사용하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 두 가지 알고리즘을 다음과 같은 방식으로 혼합합니다.  
   
 -   처음 두 개의 예측을 수행하는 데 항상 ARTXP만 사용됩니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078106"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542015"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>수준 및 멤버(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   이 창을 사용하여 현재 선택한 계층 및 언어의 멤버를 찾아볼 수 있습니다. 찾아볼 계층 또는 언어를 선택하려면 **도구 모음** 창의 **계층** 및 **언어** 옵션을 사용합니다. 도구 모음 창에 대 한 자세한 내용은 [도구 모음 &#40;브라우저 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)를 참조 하세요.  
@@ -83,7 +82,7 @@ ms.locfileid: "66078106"
 > [!NOTE]  
 >  이 옵션은 쓰기 저장 모드가 설정된 경우에만 표시됩니다.  
   
- **Delete**  
+ **삭제**  
  선택한 멤버를 계층에서 제거합니다.  
   
 > [!NOTE]  

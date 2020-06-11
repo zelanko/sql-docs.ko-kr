@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 쪽 XML 서식 지정 (SQLXML)
+description: FOR XML 절을 사용 하 여 SQLXML 4.0의 클라이언트 쪽 XML 서식에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247018"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530017"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247018"
 > [!NOTE]  
 >  이 항목에서는 이미 FOR XML 절에 익숙한 사용자를 대상으로 클라이언트 쪽의 FOR XML 절 사용에 대한 추가 정보를 제공합니다. FOR xml에 대 한 자세한 내용은 [FOR xml을 사용 하 여 Xml 생성](../../../relational-databases/xml/for-xml-sql-server.md)을 참조 하세요.  
   
- **중요** 클라이언트 쪽 FOR XML 기능을 새 **xml** 데이터 형식과 함께 사용 하려면 클라이언트는 항상 SQLOLEDB 공급자 대신 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native client (SQLNCLI11) 데이터 공급자를 사용 해야 합니다. SQLNCLI11은 최신 버전의 SQL Server 공급자이며 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터 형식을 완전히 이해합니다. SQLOLEDB 공급자를 사용 하는 클라이언트 쪽 FOR XML의 동작은 **xml** 데이터 형식을 문자열로 처리 합니다.  
+ **중요** 클라이언트 쪽 FOR XML 기능을 새 **xml** 데이터 형식과 함께 사용 하려면 클라이언트는 항상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB 공급자 대신 NATIVE client (SQLNCLI11) 데이터 공급자를 사용 해야 합니다. SQLNCLI11은 최신 버전의 SQL Server 공급자이며 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터 형식을 완전히 이해합니다. SQLOLEDB 공급자를 사용 하는 클라이언트 쪽 FOR XML의 동작은 **xml** 데이터 형식을 문자열로 처리 합니다.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>클라이언트 쪽에서 XML 문서 서식 지정  
  클라이언트 애플리케이션에서 다음 쿼리를 실행하는 경우를 살펴보겠습니다.  
@@ -119,7 +120,7 @@ AS
      SQLXML 관리되는 클래스의 이 속성을 true로 설정하여 클라이언트 쪽 서식 지정을 지정할 수 있습니다.  
   
 ## <a name="enhanced-xml-template-support"></a>향상된 XML 템플릿 지원  
- [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] xml 템플릿은 **클라이언트 쪽 xml** 특성을 추가 하 여 향상 되었습니다. 이 특성을 true로 설정하면 XML 서식이 클라이언트에서 지정됩니다. 이 템플릿 특성은 SQLXMLOLEDB 공급자별 Clientside-by-side Xml 속성의 기능과 동일 합니다.  
+ 부터 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 의 xml 템플릿은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **클라이언트 쪽 xml** 특성을 추가 하 여 향상 되었습니다. 이 특성을 true로 설정하면 XML 서식이 클라이언트에서 지정됩니다. 이 템플릿 특성은 SQLXMLOLEDB 공급자별 Clientside-by-side Xml 속성의 기능과 동일 합니다.  
   
 > [!NOTE]  
 >  SQLXMLOLEDB 공급자를 사용 하는 ADO 응용 프로그램에서 XML 템플릿을 실행 하 고 템플릿에서 **클라이언트 쪽 xml** 특성과 공급자 clientside xml 속성을 둘 다 지정 하는 경우 템플릿에 지정 된 값이 우선 적용 됩니다.  

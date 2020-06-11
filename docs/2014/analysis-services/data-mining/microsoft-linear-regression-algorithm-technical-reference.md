@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20acb57a4c2ddb60d2daefc6733ac7ef52310f3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084057"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522009"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 선형 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 여러 쌍의 연속 특성을 모델링하는 데 최적화된 특수한 버전의 Microsoft 의사 결정 트리 알고리즘입니다. 이 항목에서는 알고리즘의 구현을 설명하고, 알고리즘 동작을 사용자 지정하는 방법을 설명하며, 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66084057"
 ### <a name="scoring-methods-and-feature-selection"></a>점수 매기기 방법 및 기능 선택  
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 선형 회귀 모델에서는 연속 열만 지원하므로 선형 회귀에서 기능 선택에 사용되는 방법은 흥미도 점수입니다. 다음 표에서는 참조를 위해 선형 회귀 알고리즘의 기능 선택과 의사 결정 트리 알고리즘의 기능 선택에 어떤 차이점이 있는지를 보여 줍니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|의견|  
 |---------------|------------------------|--------------|  
 |선형 회귀|흥미도 점수|기본값<br /><br /> 의사 결정 트리 알고리즘에 사용할 수 있는 다른 기능 선택 방법은 불연속 변수에만 적용되므로 선형 회귀 모델에는 적용되지 않습니다.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않을 경우 기본 방법이나 지정된 방법이 사용됩니다.|  
@@ -64,7 +63,7 @@ ms.locfileid: "66084057"
 ### <a name="regressors-in-linear-regression-models"></a>선형 회귀 모델의 회귀 변수  
  선형 회귀 모델은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않더라도 의사 결정 트리에 연속 특성에 대한 회귀를 나타내는 트리나 노드가 포함될 수 있습니다.  
   
- 연속 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 의미 있는 패턴을 포함하는 영역으로 데이터 세트를 분할합니다. 모델링 플래그를 설정 하면 알고리즘은 a * C1 + b\*C2 + ... 형식의 회귀 수식을 찾으려고 합니다. 트리의 노드에 패턴을 맞추려면입니다. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
+ 연속 열이 회귀 변수를 나타내도록 지정할 필요는 없습니다. 열에 REGRESSOR 플래그를 설정하지 않더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 의미 있는 패턴을 포함하는 영역으로 데이터 세트를 분할합니다. 모델링 플래그를 설정 하면 알고리즘은 a * C1 + b \* C2 + ... 형식의 회귀 수식을 찾으려고 합니다. 트리의 노드에 패턴을 맞추려면입니다. 잉여에 대한 합계가 계산되며 편차가 너무 클 경우 트리에서 강제로 분할이 수행됩니다.  
   
  예를 들어 **Income** 을 특성으로 사용하여 고객의 구매 행동을 예측하며 열에 REGRESSOR 모델링 플래그를 설정하는 경우 알고리즘은 먼저 표준 회귀 수식을 사용하여 **Income** 값을 맞추려고 시도합니다. 편차가 너무 클 경우 회귀 수식이 중단되고 다른 특성에 대해 트리가 분할됩니다. 분할 후 의사 결정 트리 알고리즘은 먼저 각 분기에서 Income에 대한 회귀 변수를 맞추려고 시도합니다.  
   

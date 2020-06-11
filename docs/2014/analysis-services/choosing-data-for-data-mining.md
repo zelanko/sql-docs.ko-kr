@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527589"
 ---
 # <a name="choosing-data-for-data-mining"></a>데이터 마이닝을 위한 데이터 선택
   데이터 마이닝을 시작할 때 "필요한 데이터의 양은 얼마 인가요?" 라는 메시지가 표시 될 수 있습니다. 또는 "데이터를 정리 또는 포맷할 때 알아야 하는 특별 한 요구 사항이 있나요?"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088032"
   
  일반적으로 키 열은 기록 추적 전용의 숫자 또는 텍스트 식별자로, 분석에 사용할 수 없습니다. 예외는 시계열 키와 시퀀스 키입니다.  
   
- **중첩 테이블 키** 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 뷰로 정의된 외부 데이터 원본에서 데이터를 가져올 때만 사용됩니다. 중첩 테이블에 대 한 자세한 내용은 다음 [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx)을 참조 하십시오.  
+ **중첩 테이블 키** 는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본 뷰로 정의된 외부 데이터 원본에서 데이터를 가져올 때만 사용됩니다. 중첩 테이블에 대 한 자세한 내용은 다음을 참조 하십시오 [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) .  
   
  이 내용 유형은 `Date`, `Double`, `Long` 및 `Text` 데이터 형식에서 지원합니다.  
   

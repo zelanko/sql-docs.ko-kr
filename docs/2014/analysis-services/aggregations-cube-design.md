@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e20da00-519e-40bb-a7b7-6233a0ec9a06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35c862d89d5f98bee968f0e980c784e35c43e74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ef1a6713ef90e04a2d507913a40fd5fd5294361
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062662"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528149"
 ---
 # <a name="aggregations-cube-design"></a>집계(큐브 디자인)
   큐브 디자이너의 **집계** 탭을 사용하여 집계 디자인을 만들고 수정할 수 있습니다.  

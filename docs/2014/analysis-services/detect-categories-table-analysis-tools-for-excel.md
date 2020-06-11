@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175232"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528709"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>범주 검색(Excel용 테이블 분석 도구)
   ![리본의 범주 검색 단추](media/tat-detectcat.gif "리본의 범주 검색 단추")
@@ -78,13 +77,13 @@ ms.locfileid: "78175232"
 >  **범주 검색** 도구를 사용 하면 원래 데이터 테이블에 새 열인 Category가 만들어집니다. 이 열을 데이터 테이블에 남겨두고 후속 데이터 마이닝 작업을 수행할 경우 이 열이 결과에 영향을 줄 수 있습니다. 이 열이 다른 작업에 영향을 주지 않도록 하려면 다른 데이터 마이닝 도구를 사용하기 전에 범주 열이 없는 데이터 테이블의 복사본을 만들어야 합니다.
 
 ## <a name="related-tools"></a>관련 도구
- **범주 검색** 도구는 데이터를 분석 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘을 사용 하 여 데이터 마이닝 구조 및 데이터 마이닝 모델을 만듭니다.
+ **범주 검색** 도구는 데이터를 분석 하는 경우 클러스터링 알고리즘을 사용 하 여 데이터 마이닝 구조 및 데이터 마이닝 모델을 만듭니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] .
 
  **주요 영향 요인 분석** 도구를 사용 하 여 데이터 마이닝 모델을 만든 후 Excel 용 데이터 마이닝 클라이언트를 사용 하 여 모델을 찾아보고 관계를 보다 자세히 탐색할 수 있습니다. Excel용 데이터 마이닝 클라이언트는 고급 데이터 마이닝 기능을 제공하는 별도의 추가 기능입니다. 자세한 내용은 [Excel에서 모델 찾아보기 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)를 참조 하세요.
 
  Excel 용 데이터 마이닝 클라이언트에서 데이터 모델링 기능을 사용 하는 방법에 대 한 자세한 내용은 [데이터 마이닝 모델 만들기](creating-a-data-mining-model.md)를 참조 하세요.
 
- **범주 검색** 도구에서 사용 하는 알고리즘에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Microsoft 클러스터링 알고리즘" 항목을 참조 하십시오.
+ **범주 검색** 도구에서 사용 하는 알고리즘에 대 한 자세한 내용은 온라인 설명서의 "Microsoft 클러스터링 알고리즘" 항목을 참조 하십시오 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
 
 ## <a name="see-also"></a>참고 항목
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)

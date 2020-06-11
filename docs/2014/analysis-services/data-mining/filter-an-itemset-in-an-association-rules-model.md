@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ed919ea-8598-45d2-a4a0-b1b3357a4ab1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bef576a32bebc1c80b2ded8ee4831696811ba819
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f841280a6dd39a5f824f2e6a10975b0f80ed0761
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084356"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522459"
 ---
 # <a name="filter-an-itemset-in-an-association-rules-model"></a>연결 규칙 모델에서 항목 집합 필터링
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 **연결 규칙 뷰어의** 항목 집합 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 탭에 표시되는 항목 집합을 필터링할 수 있습니다.  

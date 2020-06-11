@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 225f5d757ee6b1d1da5c57b457d599fe4bb42d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 185ea27c344ccb9e06f914507faca3fea9554dae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526442"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>처리 쿼리 만들기 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **처리 쿼리 만들기** 대화 상자를 사용하여 **스토리지 옵션** 대화 상자의 **알림** 탭에서 처리 쿼리를 만들 수 있습니다. 처리 쿼리는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 MOLAP(다차원 OLAP) 캐시를 증분 업데이트하기 위해 이 개체에 연결된 테이블이 마지막으로 폴링된 후에 이 테이블에 적용된 변경 내용을 포함하는 행 집합을 반환하는 쿼리입니다. Analysis Services에서는 폴링 쿼리를 사용하여 개체에 연결된 테이블을 폴링하고 테이블이 변경되었는지 여부를 확인합니다. 개체에 대한 MOLAP 캐시를 완전히 업데이트하는 경우에는 처리 쿼리가 필요하지 않습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "66086771"
 |**표 형태 창 표시/숨기기**|**표 형태 창을**표시 하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**SQL 창 표시/숨기기**|**SQL 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**결과 창 표시/숨기기**|**결과 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
-|**Run**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
+|**실행**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
 |**SQL 검증**|쿼리에서 SQL 문을 검증합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**오름차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 오름차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**내림차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 내림차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  

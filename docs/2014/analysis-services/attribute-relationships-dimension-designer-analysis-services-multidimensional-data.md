@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527879"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **특성 관계** 탭을 사용하여 선택한 차원의 특성 관계를 만들거나 수정하거나 삭제할 수 있습니다.  

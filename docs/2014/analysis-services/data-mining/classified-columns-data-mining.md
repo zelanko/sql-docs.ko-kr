@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bb1484ff3bad80979c9421e8d46ec4f46e866b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085693"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524813"
 ---
 # <a name="classified-columns-data-mining"></a>분류된 열(데이터 마이닝)
   분류된 열을 정의할 경우 마이닝 구조의 현재 열과 다른 열 간에 관계를 생성하게 됩니다. 분류된 열로 지정한 마이닝 구조 열의 데이터에는 마이닝 구조의 다른 열의 값을 설명하는 범주 정보가 포함됩니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66085693"
  **반대로**  
  이 열의 값은 관련 값의 분산입니다.  
   
- **않으려면**  
+ **STDEV**  
  이 열의 값은 관련 값의 표준 편차입니다.  
   
  **PROBABILITY_VARIANCE**  

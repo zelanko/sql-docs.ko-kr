@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174452"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521265"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.
@@ -79,7 +78,7 @@ ms.locfileid: "78174452"
 
 -   DMX ALTER STRUCTURE ADD MODEL 문 - 기존 구조에 새 마이닝 모델을 추가하는 데 사용할 수 있습니다. 동일한 데이터 집합을 기반으로 하는 다양한 모델을 시험하려면 이 방법을 사용합니다.
 
- AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 아래 항목을 참조하세요.
+ AMO 또는 XML/A를 사용하거나 Excel용 데이터 마이닝 클라이언트 등의 다른 클라이언트를 사용하여 프로그래밍 방식으로 마이닝 모델을 만들 수도 있습니다. 자세한 내용은 다음 항목을 참조하세요.
 
  [마이닝 모델 아키텍처](#bkmk_mdlArch)
 
@@ -90,7 +89,7 @@ ms.locfileid: "78174452"
 
  또한 각 마이닝 모델에는 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 및 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>라는 두 특수 속성이 있습니다.
 
--   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 에 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]된 알고리즘 목록은 [Analysis Services 데이터 마이닝&#41;&#40;데이터 마이닝 알고리즘 ](data-mining-algorithms-analysis-services-data-mining.md)을 참조 하세요. `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.
+-   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 에 포함 된 알고리즘 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [Analysis Services 데이터 마이닝&#41;&#40;데이터 마이닝 알고리즘 ](data-mining-algorithms-analysis-services-data-mining.md)을 참조 하세요. `Algorithm` 속성은 마이닝 모델에 적용되고 각 모델에 대해 한 번만 설정될 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.
 
 -   **Usage 속성** 모델에서 각 열이 사용되는 방법을 정의합니다. 열 사용을 `Input`, `Predict`, `Predict Only` 또는 `Key`로 정의할 수 있습니다. `Usage` 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 `Ignore`로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.
 
@@ -135,7 +134,7 @@ ms.locfileid: "78174452"
 ## <a name="related-tasks"></a>관련 작업
  다음 링크를 사용하여 데이터 마이닝 모델 작업에 대한 자세한 정보를 확인할 수 있습니다.
 
-|작업|링크|
+|Task|링크|
 |----------|----------|
 |마이닝 모델 추가 및 삭제|[기존 마이닝 구조에 마이닝 모델 추가](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [마이닝 구조에서 마이닝 모델 삭제](delete-a-mining-model-from-a-mining-structure.md)|
 |마이닝 모델 열 작업|[마이닝 모델에서 열 제외](exclude-a-column-from-a-mining-model.md)<br /><br /> [모델 열의 별칭 만들기](create-an-alias-for-a-model-column.md)<br /><br /> [마이닝 모델에서 열의 분할 변경](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)|

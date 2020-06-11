@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063072"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527929"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>특성 데이터 번역 대화 상자(Analysis Services - 다차원 데이터)
   **특성 데이터 번역** 대화 상자를 사용하여 번역 캡션 데이터가 포함된 열을 설정하고 번역된 데이터에 사용할 데이터 정렬 및 정렬 순서를 설정할 수 있습니다. 다음을 수행하여 **특성 데이터 번역** 대화 상자를 표시할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66063072"
 -   **차원 디자이너** 의 **번역** 탭에서 **번역 세부 정보** 창을 마우스 오른쪽 단추로 클릭한 다음 **새 캡션 열** 또는 **캡션 열 편집**을 선택합니다.  
   
 ## <a name="options"></a>옵션  
- **특성도**  
+ **특성**  
  선택한 특성을 표시합니다.  
   
  **언어**  
@@ -44,7 +43,7 @@ ms.locfileid: "66063072"
  **데이터 정렬 지정자**  
  선택한 특성에 대해 데이터 정렬 지정자를 설정합니다. 기본적으로 현재 Windows 데이터 정렬이 선택됩니다. 아래쪽 화살표를 클릭하여 사용 가능한 데이터 정렬에서 선택합니다.  
   
- **바이너리**  
+ **이진**  
  각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교하려면 이 옵션을 선택합니다. 이진 정렬 순서는 대/소문자(소문자가 대문자 앞에 와야 함) 및 악센트를 구분합니다. 이것은 가장 빠른 정렬 순서입니다.  
   
  이 옵션을 선택하지 않으면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙을 따릅니다.  

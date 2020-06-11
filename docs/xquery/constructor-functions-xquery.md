@@ -1,5 +1,6 @@
 ---
 title: 생성자 함수 (XQuery) | Microsoft Docs
+description: XSD의 기본 제공 또는 사용자 정의 원자성 형식의 인스턴스를 만들 수 있도록 하는 XQuery의 생성자 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038996"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529209"
 ---
 # <a name="constructor-functions-xquery"></a>생성자 함수(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 함수를 사용하여 이전 제품 설명 검색  
- 이 예에서는 **xml** 유형 변수에 샘플 xml 문서를 먼저 할당 합니다. 이 문서에는 <`ProductDescription` `DateCreated`> 자식 요소가 포함 된 세 개의 샘플 <> 요소가 포함 되어 있습니다.  
+ 이 예에서는 **xml** 유형 변수에 샘플 xml 문서를 먼저 할당 합니다. 이 문서에는 `ProductDescription` <> 자식 요소가 포함 된 세 개의 샘플 <> 요소가 포함 되어 있습니다 `DateCreated` .  
   
  그런 다음 변수를 쿼리하여 특정 날짜 이전에 생성된 제품 설명만 검색합니다. 비교를 위해 쿼리에서 **xs: dateTime ()** 생성자 함수를 사용 하 여 날짜를 입력 합니다.  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   ... WHERE 루프 구조를 사용 하 여 WHERE \<절에 지정 된 조건을 충족 하는 제품 설명> 요소를 검색 합니다.  
+-   ... Where 루프 구조는 \<ProductDescription> where 절에 지정 된 조건을 만족 하는 요소를 검색 하는 데 사용 됩니다.  
   
 -   **Datetime ()** 생성자 함수는 **datetime** 형식 값을 생성 하는 데 사용 되므로 적절 하 게 비교할 수 있습니다.  
   

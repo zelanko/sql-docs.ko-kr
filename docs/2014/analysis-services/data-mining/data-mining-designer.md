@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085107"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523171"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
-  데이터 마이닝 디자이너는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]마이닝 모델을 사용 하는 기본 환경입니다. 기존 마이닝 구조를 선택하거나 데이터 마이닝 마법사를 사용하여 새 마이닝 구조 및 마이닝 모델을 만들면 데이터 마이닝 디자이너에 액세스할 수 있습니다. 데이터 마이닝 디자이너를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
+  데이터 마이닝 디자이너는에서 마이닝 모델을 사용 하는 기본 환경입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 기존 마이닝 구조를 선택하거나 데이터 마이닝 마법사를 사용하여 새 마이닝 구조 및 마이닝 모델을 만들면 데이터 마이닝 디자이너에 액세스할 수 있습니다. 데이터 마이닝 디자이너를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   처음에 데이터 마이닝 마법사에서 생성된 마이닝 구조 및 마이닝 모델 수정  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731915"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528629"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 행 집합
   서버에서 현재 활성 상태인 XEvent 추적에 대한 정보를 제공합니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "62731915"
 ## <a name="rowset-columns"></a>행 집합 열  
  `DISCOVER_XEVENT_TRACE_DEFINITION` 행 집합에는 다음 열이 포함되어 있습니다.  
   
-|열 이름|유형 표시기|길이|Description|  
+|열 이름|유형 표시기|길이|설명|  
 |-----------------|--------------------|------------|-----------------|  
 |`Data`|`DBTYPE_WSTR`||XEvent 추적의 XML 정의입니다.|  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62731915"
   
  다음 표에서는 이 행 집합을 식별하는 GUID와 문자열 값을 제공합니다.  
   
-|인수|Value|  
+|인수|값|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  

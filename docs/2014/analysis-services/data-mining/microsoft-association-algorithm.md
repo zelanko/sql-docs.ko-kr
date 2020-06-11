@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174770"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522127"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft 연결 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 연결 알고리즘으로 추천 엔진에 유용합니다. 추천 엔진은 고객이 이미 구입한 항목 또는 관심을 나타낸 항목을 바탕으로 고객에게 제품을 추천합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 시장 바구니 분석에도 유용합니다. 시장 바구니 분석의 예는 데이터 마이닝 자습서의 [3 단원: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) 를 참조 하세요.
@@ -78,7 +77,7 @@ ms.locfileid: "78174770"
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.
 
 ## <a name="performance"></a>성능
- 항목 집합을 만들고 상관 관계 수를 계산하는 프로세스는 시간이 많이 걸릴 수 있습니다. 연결 규칙 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 최적화 기술을 사용 하 여 공간을 절약 하 고 처리 속도를 높일 수 있지만 다음과 같은 상황에서는 성능 문제가 발생할 수 있음을 알고 있어야 합니다.
+ 항목 집합을 만들고 상관 관계 수를 계산하는 프로세스는 시간이 많이 걸릴 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]연결 규칙 알고리즘은 최적화 기술을 사용 하 여 공간을 절약 하 고 처리 속도를 높일 수 있지만 다음과 같은 상황에서는 성능 문제가 발생할 수 있음을 알고 있어야 합니다.
 
 -   개별 항목을 많이 포함하여 데이터 집합이 클 경우
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175792"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536235"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>로컬 파티션 만들기 및 관리(Analysis Services)
   처리 성능 향상을 위해 측정값 그룹에 대한 추가 파티션을 만들 수 있습니다. 여러 개의 파티션이 있으면 로컬 서버뿐만 아니라 원격 서버의 해당하는 개수의 실제 데이터 파일에 팩트 데이터를 할당할 수 있습니다. Analysis Services에서는 파티션을 독립적으로 병렬 처리할 수 있어 서버에서 작업을 처리할 때 더 세부적으로 제어할 수 있습니다.
@@ -27,7 +26,7 @@ ms.locfileid: "78175792"
  모델을 디자인할 때 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 나 XMLA를 사용하여 솔루션을 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 파티션을 만들 수 있습니다. 한 가지 방법만 선택하는 것이 좋습니다. 도구를 번갈아 사용하면 이후에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 솔루션을 다시 배포할 때 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 배포된 데이터베이스에 대한 변경 내용이 덮어쓰기될 수도 있습니다.
 
 ## <a name="before-you-start"></a>시작하기 전에
- 가지고 있는 버전이 비즈니스 인텔리전스 버전인지 엔터프라이즈 버전인지 확인합니다. 스탠더드 버전에서는 여러 파티션을 지원하지 않습니다. 버전을 확인 하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 서버 노드를 마우스 오른쪽 단추로 클릭 하 고 **보고서** | **일반**을 선택 합니다. 기능 가용성에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.
+ 가지고 있는 버전이 비즈니스 인텔리전스 버전인지 엔터프라이즈 버전인지 확인합니다. 스탠더드 버전에서는 여러 파티션을 지원하지 않습니다. 버전을 확인 하려면에서 서버 노드를 마우스 오른쪽 단추로 클릭 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 고 **보고서**  |  **일반**을 선택 합니다. 기능 가용성에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.
 
  나중에 파티션을 병합하려는 경우 처음부터 해당 파티션이 같은 집계 디자인을 공유해야 합니다. 파티션은 집계 디자인과 스토리지 모드가 동일한 경우에만 병합할 수 있습니다.
 
@@ -108,7 +107,7 @@ ms.locfileid: "78175792"
 
 7.  마법사를 완료하는 마지막 페이지에서 파티션을 설명하는 이름을 제공합니다.
 
-8.  **마침**을 클릭합니다.
+8.  **Finish**를 클릭합니다.
 
 9. 다음 데이터 조각을 선택할 때마다 다른 명명된 쿼리를 선택하여 이전 단계를 반복해서 나머지 파티션을 만듭니다.
 

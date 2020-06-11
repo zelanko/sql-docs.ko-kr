@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535045"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot 관리 대시보드 및 사용량 현황 데이터
   PowerPivot 관리 대시보드는 SharePoint 중앙 관리의 미리 정의된 보고서 및 웹 파트 컬렉션으로 이를 통해 SharePoint용 SQL Server PowerPivot 배포를 관리할 수 있습니다. 관리 대시보드는 서버 상태, 통합 문서 작업 및 데이터 새로 고침과 관련된 정보를 제공합니다. 대시보드는 SharePoint 사용량 현황 데이터 컬렉션의 데이터를 사용합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66071115"
   
  [PowerPivot 관리 대시보드에 대한 사용자 지정 보고서 만들기](#reports)  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건  
  관리하는 PowerPivot 서비스 애플리케이션에 대해 PowerPivot 관리 대시보드를 열려면 서비스 관리자여야 합니다.  
   
 ##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a> 대시보드 섹션 개요  

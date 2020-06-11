@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085487"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523759"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
   단일 쿼리는 예측에 사용 하려는 모델이 있지만이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행 하지 않으려는 경우에 유용 합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  **mining model** 행에 **개체 탐색기**에 나타나는 마이닝 모델 목록에 있는 마이닝 모델의 이름을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 예제 코드의 경우 **마이닝 모델** 행이 이름으로 설정 되었습니다 `TM_Decision_Tree`.  
+     이 항목의 시작 부분에 표시 된 예제 코드의 경우 **마이닝 모델** 행이 이름으로 설정 되었습니다 `TM_Decision_Tree` .  
   
 6.  **value** 행에 예측을 수행할 새 데이터 값을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 샘플 코드의 경우, **value** 홈의 자녀 수를 `2` 기반으로 자전거 구매 동작을 예측 하기 위해 value 행이로 설정 되었습니다.  
+     이 항목의 시작 부분에 표시 된 샘플 코드의 경우, **value** `2` 홈의 자녀 수를 기반으로 자전거 구매 동작을 예측 하기 위해 value 행이로 설정 되었습니다.  
   
 7.  **column** 행에 새 데이터가 매핑되어야 하는 마이닝 모델의 열 이름을 입력합니다.  
   
-     이 항목의 시작 부분에 표시 된 예제 코드의 경우 **column** 행이로 `Number Children at Home`설정 되었습니다.  
+     이 항목의 시작 부분에 표시 된 예제 코드의 경우 **column** 행이로 설정 되었습니다 `Number Children at Home` .  
   
     > [!NOTE]  
     >  **템플릿 매개 변수 값 지정** 대화 상자를 사용할 때는 열 이름을 대괄호로 묶을 필요가 없습니다. 대괄호는 자동으로 추가됩니다.  
   
-8.  **입력 별칭** 을로 `t`그대로 둡니다.  
+8.  **입력 별칭** 을로 그대로 둡니다 `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

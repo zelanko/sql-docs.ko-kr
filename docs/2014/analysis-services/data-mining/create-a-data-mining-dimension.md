@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a21653e55088935539f8dedd4c94078c4c0ffdf9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085498"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523939"
 ---
 # <a name="create-a-data-mining-dimension"></a>데이터 마이닝 차원 만들기
   마이닝 구조가 OLAP 큐브를 기반으로 하는 경우에는 마이닝 모델의 내용을 포함하는 차원을 만들 수 있습니다. 그런 다음 차원을 다시 원본 큐브에 통합할 수 있습니다.  

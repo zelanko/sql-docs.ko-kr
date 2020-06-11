@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527682"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>비즈니스 인텔리전스 마법사 F1 도움말
   비즈니스 인텔리전스 마법사를 사용하여 비즈니스 인텔리전스 기능을 정의하고 큐브 및 차원에 대해 고급 옵션을 설정할 수 있습니다. 이 마법사는 기존 개체의 속성을 설정하고 새 개체를 만들며 MDX(Multidimensional Expressions) 스크립트를 생성하여 차원 인텔리전스 및 통화 변환과 같은 기능을 제공합니다.  

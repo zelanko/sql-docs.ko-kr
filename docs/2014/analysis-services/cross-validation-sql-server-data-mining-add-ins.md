@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526340"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>교차 유효성 검사(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본 메뉴, 교차 유효성 검사 단추](media/dmc-xvalid.gif "데이터 마이닝 리본 메뉴, 교차 유효성 검사 단추")  
@@ -75,7 +74,7 @@ ms.locfileid: "66086647"
  클러스터링 모델과 다른 유형의 모델을 동시에 지원하는 구조를 선택하는 경우 클러스터링 모델은 테스트되지 않습니다.  
   
 ## <a name="understanding-cross-validation-results"></a>교차 유효성 검사 결과 이해  
- 교차 유효성 검사의 결과는 **특성 이름>에 대 한 \<교차 유효성 검사 보고서 **라는 새 워크시트에 표시 됩니다. 새 워크시트에는 여러 섹션이 포함 되어 있습니다. 첫 번째 섹션은 테스트 된 모델에 대 한 중요 한 메타 데이터를 제공 하는 요약으로, 결과의 모델 또는 구조를 알 수 있습니다.  
+ 교차 유효성 검사의 결과는 **에 대 한 \<attribute name> 교차 유효성 검사 보고서 **라는 새 워크시트에 표시 됩니다. 새 워크시트에는 여러 섹션이 포함 되어 있습니다. 첫 번째 섹션은 테스트 된 모델에 대 한 중요 한 메타 데이터를 제공 하는 요약으로, 결과의 모델 또는 구조를 알 수 있습니다.  
   
  보고서의 두 번째 섹션은 원래 모델이 얼마나 정확한지를 나타내는 통계 요약입니다. 이 요약에서 각 접기에 대해 만들어진 모델 간의 차이점은 세 가지 주요 측정값 ( *제곱 평균 오차*, *평균 절대 오차*및 *로그 점수*)에 대해 분석 됩니다. 이 측정값은 데이터 마이닝뿐만 아니라 대부분의 통계 분석에서도 사용되는 표준 통계 측정값입니다.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72a3c52da21ca7af10103010500bb43fd46a10a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b942210e653bc3e0a7309a98a4e75e84c5f82168
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062607"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528139"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>알고리즘 매개 변수 대화 상자(마이닝 모델 뷰)
   **알고리즘 매개 변수** 대화 상자를 사용하여 선택한 모델에 해당하는 알고리즘 매개 변수를 조정할 수 있습니다. 알고리즘 매개 변수를 변경하면 항상 마이닝 모델의 결과가 변경됩니다. 각 매개 변수가 결과에 영향을 미치는 방식은 사용 중인 알고리즘과 데이터에 따라 달라집니다. 자세한 내용은 [마이닝 모델 및 구조 사용자 지정](data-mining/customize-mining-models-and-structure.md)을 참조하세요.  
@@ -30,12 +29,12 @@ ms.locfileid: "66062607"
   
  다음 목록에서는 사용 가능한 열에 대해 설명합니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |**매개 변수**|매개 변수의 이름을 나열합니다.|  
 |**값**|매개 변수의 기본값을 변경하려는 경우에만 값을 입력합니다.|  
-|**기본**|**값** 열에 값을 입력하지 않은 경우 알고리즘에서 사용할 매개 변수의 기본값을 나열합니다.|  
-|**벗어납니다**|**값** 열에 입력할 수 있는 값의 범위를 나열합니다. 범위는 다음 중 하나일 수 있습니다.<br /><br /> 1, 2, 3과 같은 불연속 목록<br /><br /> [0, 100]와 같은 포함 범위<br /><br /> (0,...)와 같은 배타적 범위<br /><br /> [0,...)와 같은 조합|  
+|**기본값**|**값** 열에 값을 입력하지 않은 경우 알고리즘에서 사용할 매개 변수의 기본값을 나열합니다.|  
+|**Range**|**값** 열에 입력할 수 있는 값의 범위를 나열합니다. 범위는 다음 중 하나일 수 있습니다.<br /><br /> 1, 2, 3과 같은 불연속 목록<br /><br /> [0, 100]와 같은 포함 범위<br /><br /> (0,...)와 같은 배타적 범위<br /><br /> [0,...)와 같은 조합|  
   
  **설명**  
  **매개 변수** 목록에서 선택한 매개 변수에 대해 설명합니다.  

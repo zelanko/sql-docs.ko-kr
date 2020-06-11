@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32d34df7de149c6e98946d1c038c1d3baf9f4b61
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521979"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 선형 회귀 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘은 종속 변수와 독립 변수 간의 선형 관계를 계산하고 이 관계를 예측에 사용하는 데 도움이 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘의 변형입니다.

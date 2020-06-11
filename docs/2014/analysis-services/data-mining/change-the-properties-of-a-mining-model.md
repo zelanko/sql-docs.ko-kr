@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44313ce14beee0390f12ed0e6566502327b17795
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085876"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525039"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>마이닝 모델의 속성 변경
   일부 마이닝 모델 속성은 모델 전체에 적용되고 다른 모델 속성은 개별 열에 적용됩니다. 모델 전체에 적용되는 속성의 예로는 사례 데이터를 쿼리에 사용할지 여부를 지정하는 `Drillthrough` 속성과 `Description` 속성이 있습니다. 열에 적용되는 속성으로는 모델 내에서 열의 데이터가 사용되는 방식을 제어하는 `Usage` 및 `ModelingFlags`가 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66085876"
 2.  화면 오른쪽에 있는 **속성** 창에서 변경할 속성에 해당하는 값을 강조 표시하고 새 값을 입력합니다.  
   
     > [!NOTE]  
-    >  열 사용법을로 `Ignore`설정 하면 해당 열에 대 한 **속성** 창이 비어 있습니다.  
+    >  열 사용법을로 설정 하면 해당 `Ignore` 열에 대 한 **속성** 창이 비어 있습니다.  
   
      디자이너에서 다른 요소를 선택하면 새 값이 적용됩니다.  
   

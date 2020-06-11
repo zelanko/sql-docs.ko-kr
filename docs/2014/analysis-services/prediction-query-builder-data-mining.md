@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 364de57cdf582123ad9d10e346b035856075ee5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070778"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540095"
 ---
 # <a name="prediction-query-builder-data-mining"></a>예측 쿼리 작성기(데이터 마이닝)
   **마이닝 모델 예측** 뷰를 사용하여 마이닝 구조에 포함된 마이닝 모델을 기반으로 예측을 만들 수 있습니다.  

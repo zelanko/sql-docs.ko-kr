@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b60acaf4254112a53d905340c2750dd1e2e6e8f7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086547"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526016"
 ---
 # <a name="currency-conversions-analysis-services"></a>통화 변환(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062617"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528105"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>분석 서버 속성 대화 상자(Analysis Services)
   **의** Analysis Server 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스의 일반, 언어/데이터 정렬 및 보안 설정을 지정할 수 있습니다. **개체 탐색기** 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **속성** 을 선택하여 **Analysis Server 속성** 대화 상자를 표시할 수 있습니다. **Analysis Server 속성** 대화 상자에는 다음 속성이 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66062617"
 ## <a name="information-properties"></a>정보 속성  
  이 페이지를 사용하여 서버 모드, 버전 및 호환성 수준을 봅니다. 각 인스턴스는 테이블 형식 또는 다차원 모델을 로드할 수 있는 기능과 함께 테이블 형식 또는 다차원 서버 모드에 설치됩니다. 두 모드를 모두 지원하려면 두 인스턴스를 설치해야 합니다.  
   
- **지원 되는 호환성 수준은** AMO의 `DefaultCompatibilityLevel` 속성과 같습니다. 설치 시 지정한 서버 배포 모드를 기반으로 읽기 전용입니다. 서버에서는 테이블 형식 서버 인스턴스에 테이블 형식 데이터베이스 백업을 복원하는 등 서버 모드 또는 버전에 따라 달라지는 작업을 수행할 때 이 속성을 확인합니다. 비슷한 이름 및 값을 가진 테이블 형식 또는 다차원 모델의 데이터베이스 호환성 모드와 혼동하지 마십시오. 이 서버 속성에 대한 유효한 값에는 다음이 포함됩니다.  
+ **지원 되는 호환성 수준은** `DefaultCompatibilityLevel` AMO의 속성과 같습니다. 설치 시 지정한 서버 배포 모드를 기반으로 읽기 전용입니다. 서버에서는 테이블 형식 서버 인스턴스에 테이블 형식 데이터베이스 백업을 복원하는 등 서버 모드 또는 버전에 따라 달라지는 작업을 수행할 때 이 속성을 확인합니다. 비슷한 이름 및 값을 가진 테이블 형식 또는 다차원 모델의 데이터베이스 호환성 모드와 혼동하지 마십시오. 이 서버 속성에 대한 유효한 값에는 다음이 포함됩니다.  
   
 -   **1100** 은 다차원 및 데이터 마이닝 모드의 경우 배포 모드 0에 대한 기본 호환성 수준입니다.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66062617"
   
 -   [기능 속성](server-properties/feature-properties.md)  
   
--   [FileStore 속성](server-properties/filestore-properties.md)  
+-   [파일 저장소 속성](server-properties/filestore-properties.md)  
   
 -   [잠금 관리자 속성](server-properties/lock-manager-properties.md)  
   

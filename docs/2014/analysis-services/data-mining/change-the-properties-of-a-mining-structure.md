@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c9ca227753b8ebbd80d4de0c672fc8cab5c1b56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b56fc1d00fe639d78d5f01fe44554b7fe2d7cc7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085858"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524959"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>마이닝 구조 속성 변경
   마이닝 구조에 대한 속성은 두 가지 종류가 있으며 이 두 가지 속성 모두 수정할 수 있습니다.  

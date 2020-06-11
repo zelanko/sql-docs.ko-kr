@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0081efe0-815d-4c55-9844-965db953aafe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd8a149582c15cfb9b216bf478d23e7d4de16a0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3b6261697d101242cae1052b5da1c30fde65661
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527389"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>마법사 완료(집계 디자인 마법사)
   **마법사 완료** 페이지를 사용하여 집계 디자인을 선택한 파티션에 저장할 수 있습니다. 집계 디자인 마법사에서 집계 디자인과 저장을 완료한 후 선택한 파티션을 선택적으로 배포 및 처리할 수도 있습니다.  

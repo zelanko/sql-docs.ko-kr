@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de859d94c2881b3c46997dac14d6309745db591
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086468"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526019"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>데이터 마이닝 디자이너 및 대화 상자
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터 마이닝 모델을 만들고, 보고, 테스트 하 고, 예측을 만드는 데 사용할 수 있는 디자인 도구를 제공 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 데이터 마이닝 모델을 만들고, 보고, 테스트 하 고, 예측을 만드는 데 사용할 수 있는 디자인 도구를 제공 합니다.  
   
  다음 표에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 데이터 마이닝 디자이너 및 도구에 대한 참조 항목을 보여 줍니다.  
   

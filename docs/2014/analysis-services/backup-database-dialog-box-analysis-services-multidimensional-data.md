@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96ddf88bd6f071c667a021678b6f5cd2613ae8db
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064377"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527831"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 백업 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **데이터베이스 백업** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백업 파일(.abf) 형식을 사용하는 백업 파일에 백업할 수 있습니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "66064377"
  **원격 파티션 백업 위치**  
  원격 파티션에 대한 데이터 및 메타데이터를 백업하는 데 사용된 원격 백업 파일을 비롯하여 선택한 데이터베이스와 연결된 원격 파티션의 위치를 표시합니다. 사용할 수 있는 열은 다음과 같습니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |**Server**|원격 파티션을 관리하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 표시합니다.|  
 |**Database**|원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 표시합니다.|  

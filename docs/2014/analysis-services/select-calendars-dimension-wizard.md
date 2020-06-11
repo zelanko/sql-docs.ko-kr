@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db6a51b44e9b467881c4aeaa8e0a63f48b617a22
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538325"
 ---
 # <a name="select-calendars-dimension-wizard"></a>달력 선택(차원 마법사)
   **달력 선택** 페이지를 사용하여 시간 차원에 대한 회계 달력, 보고 달력, 제조 달력 또는 ISO(International Standards Organization) 8601 달력을 나타내는 추가 계층을 만들 수 있습니다.  

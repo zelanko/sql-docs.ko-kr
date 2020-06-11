@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51e19ed19c78903be0565461871ccc0b00460002
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3668378a2711e3da42126f5d0e06ff557bafb1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082196"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528909"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>계정 인텔리전스 정의(비즈니스 인텔리전스 마법사)
   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 정의된 계정 유형을 계정 차원에 데이터를 제공하는 데이터 원본의 원본 테이블에서 정의한 계정 유형으로 매핑할 수 있습니다.  

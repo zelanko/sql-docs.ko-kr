@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085138"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523382"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>데이터 마이닝 알고리즘(Analysis Services - 데이터 마이닝)
   데이터 *마이닝 알고리즘* 은 데이터에서 데이터 마이닝 모델을 만드는 추론 및 계산 집합입니다. 모델을 만들기 위해 알고리즘은 제공된 데이터를 분석하여 특정 유형의 패턴 또는 추세를 찾습니다. 알고리즘은 이 분석 결과를 사용하여 마이닝 모델을 만들기 위한 최적의 매개 변수를 정의합니다. 그런 다음 이러한 매개 변수를 전체 데이터 집합에 적용하여 동작 가능한 패턴과 자세한 통계를 추출합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66085138"
   
 -   트랜잭션에서 제품이 그룹화되는 방법과 제품을 함께 구입할 확률을 설명하는 일련의 규칙  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 데이터 마이닝 솔루션에서 사용할 여러 알고리즘을 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. 이러한 알고리즘은 데이터 마이닝에 가장 많이 사용되는 몇 가지 방법을 구현한 것입니다. 제공된 API를 사용하거나 SQL Server Integration Services의 데이터 마이닝 구성 요소를 사용하여 모든 Microsoft 데이터 마이닝 알고리즘을 사용자 지정하고 프로그래밍할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 데이터 마이닝 솔루션에서 사용할 여러 알고리즘을 제공 합니다. 이러한 알고리즘은 데이터 마이닝에 가장 많이 사용되는 몇 가지 방법을 구현한 것입니다. 제공된 API를 사용하거나 SQL Server Integration Services의 데이터 마이닝 구성 요소를 사용하여 모든 Microsoft 데이터 마이닝 알고리즘을 사용자 지정하고 프로그래밍할 수 있습니다.  
   
  OLE DB for Data Mining 사양을 준수하는 타사 알고리즘을 사용하거나 서비스로 등록한 다음 SQL Server 데이터 마이닝 프레임워크에서 사용할 수 있는 사용자 지정 알고리즘을 개발할 수도 있습니다.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66085138"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|**항목**|**설명**|  
+|**뒷부분**|**설명**|  
 |---------------|---------------------|  
 |데이터 마이닝 모델에 사용되는 알고리즘 결정|[마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](query-the-parameters-used-to-create-a-mining-model.md)|  
 |사용자 지정 플러그 인 알고리즘 만들기|[플러그 인 알고리즘](plugin-algorithms.md)|  

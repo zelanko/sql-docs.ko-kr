@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521594"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -58,7 +57,7 @@ ms.locfileid: "66083637"
  NODE_TYPE  
  선형 회귀 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|유형|설명|  
+|노드 유형 ID|Type|설명|  
 |------------------|----------|-----------------|  
 |25|회귀 트리 루트|입력 및 출력 변수 간의 관계를 설명하는 수식을 포함합니다.|  
   
@@ -180,7 +179,7 @@ ms.locfileid: "66083637"
 #### <a name="intercept"></a>가로채기  
  일반적으로 회귀 수식의 *절편* (VALUETYPE = 11) 또는 *나머지* 는 입력 특성이 0인 지점의 예측 가능한 특성 값을 알려 줍니다. 대부분의 경우 입력 특성은 0일 수 없으며 0일 경우에는 예상치 않은 결과가 발생할 수 있습니다.  
   
- 예를 들어 연령별 수입을 예측하는 모델에서 연령이 0일 때의 수입을 확인하는 것은 의미가 없습니다. 실제 상황에서는 대개 평균값을 기준으로 선의 동작에 대해 알아보는 것이 더욱 유용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 따라서는 평균을 사용 하 여 각 회귀 변수를 표현 하도록 절편을 수정 합니다.  
+ 예를 들어 연령별 수입을 예측하는 모델에서 연령이 0일 때의 수입을 확인하는 것은 의미가 없습니다. 실제 상황에서는 대개 평균값을 기준으로 선의 동작에 대해 알아보는 것이 더욱 유용합니다. 따라서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 평균을 사용 하 여 각 회귀 변수를 표현 하도록 절편을 수정 합니다.  
   
  이러한 조정은 마이닝 모델 콘텐츠에서는 보기 어렵지만 **Microsoft 트리 뷰어** 의 **마이닝 범례**에서 전체 수식을 볼 경우에는 분명하게 나타납니다. 회귀 수식은 0 지점에서 평균을 나타내는 지점으로 이동합니다. 이는 현재 데이터를 보다 직관적으로 보여 줍니다.  
   

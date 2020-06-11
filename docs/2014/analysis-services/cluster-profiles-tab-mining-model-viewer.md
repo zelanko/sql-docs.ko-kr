@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31620135818f77db11938c67059319932e98fc51
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087866"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527439"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>클러스터 프로필 탭(마이닝 모델 뷰어)
   **클러스터 프로필** 탭을 사용하여 알고리즘이 클러스터링 모델 내에서 발견한 클러스터를 전체적으로 볼 수 있습니다. 이 탭에는 각 클러스터에서의 특성 분포와 함께 각 특성이 표시됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66087866"
  **특성**  
  클러스터링 모델에 있는 열을 나열합니다. 각 특성의 히스토그램에는 알고리즘으로 식별된 클러스터 간에 특성이 어떻게 분포되어 있는지 표시됩니다.  
   
- **상태**  
+ **없다고**  
  클러스터의 해당 행에서 각 상태를 나타내는 색을 지정하는 키를 제공하거나 연속 숫자 값의 분포를 나타내는 다이아몬드가 있는 슬라이더를 제공합니다. **범례 표시** 확인란을 사용하여 이 열을 표시하거나 숨길 수 있습니다.  
   
  **클러스터 프로필**  
