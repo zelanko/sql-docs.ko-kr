@@ -5,17 +5,17 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c15f708a6deb8da2b0ea32efc70635ef50124621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6afd452c04bf4fc3d735be597fb035a6435b885
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729290"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730667"
 ---
 # <a name="create-a-custom-workflow---example"></a>사용자 지정 워크플로 만들기 - 예제
 

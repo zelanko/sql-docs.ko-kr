@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1b951da1-f62d-43d2-b40b-270a4a9ab92c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c09c8984e964b4bdfa93b0fcebae2e613d484892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 242fefb2ca22d7b0129268a8a3ea8ed98e80bbe3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547615"
 ---
 # <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>외부 데이터 원본에 대한 연결을 설정하는 동안 오류가 발생했습니다. PowerPivot 데이터 연결을: PowerPivot 데이터
   이 오류는 SharePoint용 PowerPivot이 설치되어 있지 않은 서버에서 PowerPivot 데이터를 쿼리하면 발생합니다. 이 오류는 SQL Server Analysis Services(PowerPivot) 서비스가 중지되었거나 이전 버전에서 PowerPivot 데이터를 보려고 시도하는 경우에도 발생합니다.  

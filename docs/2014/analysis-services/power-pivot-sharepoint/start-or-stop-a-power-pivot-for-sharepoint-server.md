@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071044"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547765"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>PowerPivot for SharePoint 서버 시작 또는 중지
-  PowerPivot 시스템 서비스 및 인스턴스 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 는 동일한 로컬 응용 프로그램 서버에서 함께 작동 하 여 SharePoint 팜에서 통합 요청 및 데이터 처리를 지원 합니다.  
+  PowerPivot 시스템 서비스 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스는 동일한 로컬 응용 프로그램 서버에서 함께 작동 하 여 SharePoint 팜에서 통합 요청 및 데이터 처리를 지원 합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   

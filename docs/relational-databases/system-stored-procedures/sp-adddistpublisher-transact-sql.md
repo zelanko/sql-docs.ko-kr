@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627151"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,13 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>인수  
 `[ @publisher = ] 'publisher'`게시자 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+
+> [!NOTE]
+> 서버 이름은으로 지정할 수 있습니다 `<Hostname>,<PortNumber>` . 사용자 지정 포트를 사용 하 여 Linux 또는 Windows에 SQL Server를 배포할 때 연결에 대 한 포트 번호를 지정 해야 하며 browser 서비스를 사용할 수 없습니다.
   
 `[ @distribution_db = ] 'distribution_db'`배포 데이터베이스의 이름입니다. *distributor_db* 는 **sysname**이며 기본값은 없습니다. 이 매개 변수는 복제 에이전트가 게시자에 연결할 때 사용합니다.  
   
-`[ @security_mode = ] security_mode`는 구현 된 보안 모드입니다. 이 매개 변수는 복제 에이전트가 지연 업데이트 구독 또는 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자로 게시자에 연결 하는 데만 사용 됩니다. *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
+`[ @security_mode = ] security_mode`는 구현 된 보안 모드입니다. 이 매개 변수는 복제 에이전트가 지연 업데이트 구독 또는 이외 게시자로 게시자에 연결 하는 데만 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
   
-`[ @working_directory = ] 'working_directory'`게시에 대 한 데이터 및 스키마 파일을 저장 하는 데 사용 되는 작업 디렉터리의 이름입니다. *working_directory* 은 **nvarchar (255)** 이며 기본값은이 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대 한 repldata 폴더입니다 (예: `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`). 이름은 UNC 형식으로 지정해야 합니다.  
+`[ @working_directory = ] 'working_directory'`게시에 대 한 데이터 및 스키마 파일을 저장 하는 데 사용 되는 작업 디렉터리의 이름입니다. *working_directory* 은 **nvarchar (255)** 이며 기본값은이 인스턴스에 대 한 repldata 폴더입니다 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예:) `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . 이름은 UNC 형식으로 지정해야 합니다.  
 
- Azure SQL Database의 경우를 `\\<storage_account>.file.core.windows.net\<share>`사용 합니다.
+ Azure SQL Database의 경우를 사용 `\\<storage_account>.file.core.windows.net\<share>` 합니다.
 
 `[ @storage_connection_string = ] 'storage_connection_string'`SQL Database에 필요 합니다. 저장소 > 설정에서 Azure Portal의 액세스 키를 사용 합니다.
 
@@ -77,14 +80,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`*Encrypted_password* 설정은 더 이상 지원 되지 않습니다. 이 **비트** 매개 변수를 **1** 로 설정 하려고 하면 오류가 발생 합니다.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`게시자가 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우입니다. *thirdparty_flag* **bit**이며 다음 값 중 하나일 수 있습니다.  
+`[ @thirdparty_flag = ] thirdparty_flag`게시자가 인 경우입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* **bit**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
 |**0** (기본값)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**1**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 데이터베이스입니다.|  
   
-`[ @publisher_type = ] 'publisher_type'`게시자가가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]경우 게시자 유형을 지정 합니다. *publisher_type* 는 sysname 이며 다음 값 중 하나일 수 있습니다.  
+`[ @publisher_type = ] 'publisher_type'`게시자가가 아닌 경우 게시자 유형을 지정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* 는 sysname 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -103,7 +106,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistpublisher-tran_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistpublisher**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

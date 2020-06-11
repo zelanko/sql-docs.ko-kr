@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107623"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858595"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>보고서 작성기 옵션 대화 상자, 설정(보고서 작성기)
   **보고서 작성기** 단추를 클릭한 다음 **옵션** 을 클릭하여 최근 파일 및 연결 표시에 대한 옵션을 설정합니다. 기본 보고서 서버를 변경하고 기본값이 없는 경우 새로 추가할 수도 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **기본적으로 이 보고서 서버 또는 SharePoint 사이트 사용**  
  관리자가 이 옵션을 구성했을 수 있습니다. 값은 http:// 또는 https://로 시작되는 올바른 형식의 URL일 수 있습니다. 이 설정은 테이블/행렬 및 차트 마법사에 기본적으로 나타나는 데이터 원본 연결을 결정합니다. 또한 보고서는 이 서버에서 처리되며 이 서버의 리소스를 참조할 수 있습니다.  
   

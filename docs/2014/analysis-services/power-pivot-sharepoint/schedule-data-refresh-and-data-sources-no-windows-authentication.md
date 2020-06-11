@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071162"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547795"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약 및 Windows 인증을 지원하지 않는 데이터 원본(SharePoint용 PowerPivot)
   이 항목에서는 Windows 인증을 지원하지 **않는** 데이터 원본을 사용할 수 있는 SharePoint용 PowerPivot 데이터 새로 고침 예약 워크플로에 대해 설명합니다. 예를 들어 Oracle 또는 IDM DB2 데이터 원본의 경우입니다. 이 항목의 그림 및 단계는 Oracle 데이터 원본을 참조하지만 동일한 워크플로가 다른 데이터 원본에도 적용됩니다.  
@@ -100,9 +99,9 @@ ms.locfileid: "66071162"
   
 5.  **다음**을 클릭합니다.  
   
-6.  **자격 증명** 페이지에서 첫 번째 필드 이름을로 `Oracle User ID` 변경 하 고 **필드 형식을** 로 `User Name`변경 합니다.  
+6.  **자격 증명** 페이지에서 첫 번째 필드 이름을로 변경 하 `Oracle User ID` 고 **필드 형식을** 로 변경 합니다 `User Name` .  
   
-     두 번째 필드 이름을로 `Oracle Password` 변경 하 고 **필드 형식을** 로 `Password`변경 합니다.  
+     두 번째 필드 이름을로 변경 하 `Oracle Password` 고 **필드 형식을** 로 변경 합니다 `Password` .  
   
 7.  **다음**을 클릭합니다.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071162"
   
 11. Oracle 사용자 ID 및 Oracle 암호를 입력한 다음 **확인**을 클릭합니다.  
   
- 자세한 내용은 [SQL Server 인증으로 보안 저장소 사용 (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx))에서 "SQL Server 인증을 위한 대상 응용 프로그램을 만들려면" 섹션을 참조 하세요.  
+ 자세한 내용은 [SQL Server 인증으로 보안 저장소 사용 (SharePoint Server 2013) ()](https://technet.microsoft.com/library/gg298949.aspx) 에서 "SQL Server 인증을 위한 대상 응용 프로그램을 만들려면" 섹션을 참조 하세요 https://technet.microsoft.com/library/gg298949.aspx) .  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot 서비스 애플리케이션을 구성하려면  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071162"
   
 3.  동작 섹션에서 **서비스 애플리케이션 설정 구성** 을 클릭합니다.  
   
-4.  **데이터 새로 고침** 섹션에서 **PowerPivot 무인 데이터 새로 고침 계정을**로`PowerPivotDataRefresh` 설정 하 고 **확인**을 클릭 합니다.  
+4.  **데이터 새로 고침** 섹션에서 **PowerPivot 무인 데이터 새로 고침 계정을**로 설정 하 `PowerPivotDataRefresh` 고 **확인**을 클릭 합니다.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66071162"
   
 9. **데이터 원본에 로그온하려면 SSS(Secure Store Service)에 저장된 자격 증명을 사용하여 연결합니다. SSS ID 상자에 자격 증명을 조회하는 데 사용되는 ID를 입력합니다**.  
   
-10. **ID:** 상자에을 입력 `OracleAuthentication`합니다.  
+10. **ID:** 상자에을 입력 `OracleAuthentication` 합니다.  
   
 11. **확인**을 클릭합니다.  
   

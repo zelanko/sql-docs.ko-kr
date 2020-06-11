@@ -19,17 +19,17 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789113"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858705"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>진행률 페이지(AlwaysOn 가용성 그룹 마법사)
   이 대화 상자를 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 실행 중인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]마법사의 진행률을 볼 수 있습니다. 진행률 표시줄에는 마법사에서 수행 중인 단계의 상대적 진행률이 표시됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **자세한 내용**  
  아래쪽 화살표를 클릭하여 완료된 단계와 현재 진행 중인 작업을 순서대로 나열하는 진행률 표를 표시합니다. 표에는 다음 열이 있습니다.  
   

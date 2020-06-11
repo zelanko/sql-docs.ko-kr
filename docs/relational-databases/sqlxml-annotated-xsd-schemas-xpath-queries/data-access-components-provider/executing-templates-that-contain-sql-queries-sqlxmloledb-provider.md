@@ -1,5 +1,6 @@
 ---
 title: SQL 쿼리를 사용 하 여 템플릿 실행 (SQLXMLOLEDB)
+description: SQLXMLOLEDB 공급자를 사용 하 여 SQL 쿼리를 포함 하는 서버 쪽 XML 템플릿을 실행 하는 클라이언트 쪽 ADO 응용 프로그램의 예를 봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246666"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215655"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75246666"
   
  ClientSideXML 속성이 True로 설정 되어 있기 때문에 FOR XML 절이 없는 SELECT 문이 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
- XML 템플릿은 생성 되는 XML 문서에 대해 단일 최상위 루트\<요소 (root>)를 제공 합니다. 따라서 xml 루트 속성은 제공 되지 않습니다.  
+ Xml 템플릿은 생성 되는 XML 문서에 대해 단일 최상위 루트 요소 ()를 제공 \<ROOT> 하므로 xml 루트 속성이 제공 되지 않습니다.  
   
  XML 템플릿을 실행하려면 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}을 지정해야 합니다.  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 701d8fb43b468f6bbd33fbff9ff7cfc8deb386f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893833"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667192"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,12 +31,12 @@ PredictSupport(<scalar column reference>, [<predicted state>])
  스칼라 열  
   
 ## <a name="return-type"></a>반환 형식  
- 스칼라 열 참조 *\<**>* 로 지정 된 유형의 스칼라 값입니다.  
+ 스칼라 열 참조로 지정 된 유형의 스칼라 값입니다 *\<* *>* .  
   
 ## <a name="remarks"></a>설명  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \<예측 상태>를 **INCLUDE_NULL**로 설정 합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \< 예측 상태>를 **INCLUDE_NULL**로 설정 합니다.  
   
- 누락 된 상태에 대 한 지원을 반환 하려면 \<예측 상태>를 NULL로 설정 합니다.  
+ 누락 된 상태에 대 한 지원을 반환 하려면 \< 예측 상태>를 NULL로 설정 합니다.  
   
 > [!NOTE]  
 >  쿼리하는 모델 유형에 따라 지원 값이 다르게 계산되거나 다르게 해석될 수 있습니다. 특정 모델 유형에 대해 지원이 계산 되는 방법에 대 한 자세한 내용은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)에서 개별 알고리즘 유형을 참조 하세요.  

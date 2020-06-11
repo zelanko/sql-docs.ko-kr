@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718407"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857849"
 ---
 # <a name="error-list-window-management-studio"></a>오류 목록 창(Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **오류 목록**은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense 코드에서 생성된 구문 및 의미 체계 오류를 표시합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "82718407"
 > [!NOTE]  
 >  **오류 목록** 에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 오류만 표시되며 MDX, DMX 또는 XML/A 편집기의 오류는 표시되지 않습니다. 모든 MDX, DMX 및 XML/A 오류는 해당 편집기의 **메시지** 탭에 표시됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **오류 목록** 을 열면 다음 열에 정보가 표시됩니다.  
   
  **기본 순서**  

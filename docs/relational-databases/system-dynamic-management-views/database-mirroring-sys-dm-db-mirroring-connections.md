@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b5bf53dae1a86b41ac1a04435f02547fe7bb002
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819695"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203260"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>데이터베이스 미러링-sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "82819695"
 |**total_receives**|**bigint**|이 연결에서 수행한 총 네트워크 받기 요청 수입니다.|  
 |**peer_arbitration_id**|**uniqueidentifier**|엔드포인트의 내부 식별자입니다. NULL을 허용합니다.|  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
 ## <a name="physical-joins"></a>물리적 조인  

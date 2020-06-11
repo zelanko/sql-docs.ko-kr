@@ -3,9 +3,9 @@ title: sys. dm_resource_governor_resource_pools_history_ex (Transact-sql) | Micr
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04f0346e15043c105030b94eb96633e1f31b64d9
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247305"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627305"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-sql)
 
@@ -33,7 +33,7 @@ ms.locfileid: "75247305"
 
 Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 합계)에 대 한 스냅숏을 20 초 간격으로 반환 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
 |**name**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
@@ -99,7 +99,7 @@ Azure SQL Database에 대 한 리소스 풀 통계의 마지막 32 분 (128 개 
 |**max_session_percent**|decimal (5, 2)|풀의 한도에 따른 백분율로 최대 동시 세션|
 |||
 
-## <a name="permissions"></a>사용 권한
+## <a name="permissions"></a>권한
 
 이 보기에는 VIEW SERVER STATE 권한이 필요 합니다.
 

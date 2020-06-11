@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071232"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535205"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot Data Refresh with SharePoint 2013
-  Sharepoint 2013에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델 새로 고침을 위한 디자인에서는 Excel Services를 기본 구성 요소로 이용 하 여 sharepoint 모드에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 실행 중인 인스턴스의 데이터 모델을 로드 하 고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다.  
+  SharePoint 2013에서 데이터 모델 새로 고침을 위한 디자인에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel Services를 기본 구성 요소로 이용 하 여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint 모드에서 실행 중인 인스턴스의 데이터 모델을 로드 하 고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다.  
   
  이전의 데이터 새로 고침 아키텍처는 PowerPivot 시스템 서비스만 사용하여 SharePoint 모드 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 데이터 모델을 로드하고 새로 고쳤습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 PowerPivot 애플리케이션 서버에서 로컬로 실행되었습니다. 새로운 아키텍처에는 일정 정보를 문서 라이브러리에서 통합 문서 항목의 메타 데이터로 유지 관리하는 새로운 방법도 추가되었습니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
   
@@ -36,10 +35,10 @@ ms.locfileid: "66071232"
   
 -   [인증에 대한 추가 고려 사항](#datarefresh_additional_authentication)  
   
--   [자세한 내용](#bkmk_moreinformation)  
+-   [추가 정보](#bkmk_moreinformation)  
   
 ## <a name="background"></a>배경  
- Sharepoint Server 2013 excel 서비스는 excel 2013 통합 문서에 대 한 데이터 새로 고침을 관리 하 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint 모드에서 실행 중인 서버에서 데이터 모델 처리를 트리거합니다. Excel 2010 통합 문서의 경우 Excel Services에서 통합 문서와 데이터 모델의 로드 및 저장도 관리합니다. 그러나 Excel Services는 PowerPivot 시스템 서비스를 사용하여 데이터 모델에 처리 명령을 보냅니다. 다음 표에는 통합 문서 버전에 따라 데이터 새로 고침에 대한 처리 명령을 보내는 구성 요소가 요약되어 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 분석 서버를 사용하도록 SharePoint 2013 팜이 구성되어 있다고 가정합니다.  
+ SharePoint Server 2013 Excel 서비스는 Excel 2013 통합 문서에 대 한 데이터 새로 고침을 관리 하 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint 모드에서 실행 중인 서버에서 데이터 모델 처리를 트리거합니다. Excel 2010 통합 문서의 경우 Excel Services에서 통합 문서와 데이터 모델의 로드 및 저장도 관리합니다. 그러나 Excel Services는 PowerPivot 시스템 서비스를 사용하여 데이터 모델에 처리 명령을 보냅니다. 다음 표에는 통합 문서 버전에 따라 데이터 새로 고침에 대한 처리 명령을 보내는 구성 요소가 요약되어 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 분석 서버를 사용하도록 SharePoint 2013 팜이 구성되어 있다고 가정합니다.  
   
 ||||  
 |-|-|-|  
@@ -55,11 +54,11 @@ ms.locfileid: "66071232"
   
 |통합 문서 작성 환경|예약된 데이터 새로 고침|대화형 새로 고침|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot for Excel|지원되지 않습니다. 통합 문서 업그레이드 **(\*)**|지원되지 않습니다. 통합 문서 업그레이드 **(\*)**|  
-|2012 PowerPivot for Excel|지원 여부|지원되지 않습니다. 통합 문서 업그레이드 **(\*)**|  
-|Excel 2013|지원 여부|지원 여부|  
+|2008 R2 PowerPivot for Excel|지원 안 됨 통합 문서 업그레이드 **( \* )**|지원 안 됨 통합 문서 업그레이드 **( \* )**|  
+|2012 PowerPivot for Excel|지원됨|지원 안 됨 통합 문서 업그레이드 **( \* )**|  
+|Excel 2013|지원됨|지원됨|  
   
- **(\*)** 통합 문서 업그레이드에 대 한 자세한 내용은 [통합 문서 업그레이드 및 예약 된 데이터 새로 고침 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)를 참조 하세요.  
+ **( \* )** 통합 문서 업그레이드에 대 한 자세한 내용은 [통합 문서 업그레이드 및 예약 된 데이터 새로 고침 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)를 참조 하세요.  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  SharePoint Server 2013 Excel Services에서 대화형 또는 수동 데이터 새로 고침은 원래 데이터 원본의 데이터로 데이터 모델을 새로 고칠 수 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 등록하여 Excel Services 애플리케이션을 구성한 후에 대화형 데이터 새로 고침을 사용할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)를 참조하세요.  
@@ -94,7 +93,7 @@ ms.locfileid: "66071232"
   
  일반적인 사용자 환경: 고객이 PowerPivot 모델을 포함 하는 Excel 2013 통합 문서에서 "모든 연결 새로 고침"을 선택 하면 다음과 비슷한 오류 메시지가 표시 됩니다.  
   
--   **외부 데이터 새로 고침 실패:** 통합 문서의 데이터 모델에서 작업하는 동안 오류가 발생했습니다. 나중에 다시 시도하세요. 이 통합 문서에서 하나 이상의 데이터 연결을 새로 고칠 수 없습니다.  
+-   **외부 데이터 새로 고침 실패:** 통합 문서의 데이터 모델에서 작업하는 동안 오류가 발생했습니다. 다시 시도하세요. 이 통합 문서에서 하나 이상의 데이터 연결을 새로 고칠 수 없습니다.  
   
  사용하는 데이터 공급자에 따라 ULS 로그에 다음과 비슷한 메시지가 기록됩니다.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "66071232"
   
 1.  SharePoint 모드에서 실행 되는 Analysis Services 서버에서 Analysis Services 서비스 계정을 "**운영 체제의 일부로 작동**" 권한으로 추가 합니다.  
   
-    1.  "`secpol.msc`" 실행  
+    1.  " `secpol.msc` " 실행  
   
     2.  **로컬 보안 정책**, **로컬 정책**및 **사용자 권한 할당**을 차례로 클릭합니다.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071232"
   
  자세한 내용은 [운영 체제의 일부로 작동](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx)을 참조 하세요.  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>예약 된 데이터 새로 고침  
  **예약된 데이터 새로 고침의 핵심 사항**  
   
 -   SharePoint용 PowerPivot 추가 기능 배포가 필요합니다. 자세한 내용은 [SharePoint 2013&#41;&#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거 ](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조 하세요.  
@@ -166,7 +165,7 @@ ms.locfileid: "66071232"
  ![데이터 새로 고침 상황에 맞는 메뉴 관리](../media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴 관리")  
   
 > [!TIP]  
->  SharePoint online에서 통합 문서를 새로 고치는 방법에 대 한 자세한 내용은 [Sharepoint online에서 포함 된 PowerPivot 모델로 Excel 통합 문서 새로 고침 (백서)](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx))을 참조 하십시오.  
+>  SharePoint online에서 통합 문서를 새로 고치는 방법에 대 한 자세한 내용은 [Sharepoint online에서 포함 된 PowerPivot 모델로 Excel 통합 문서 새로 고침 (백서) ()](https://technet.microsoft.com/library/jj992650.aspx) 을 참조 하십시오 https://technet.microsoft.com/library/jj992650.aspx) .  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>SharePoint 2013의 예약 된 데이터 새로 고침 아키텍처  
  다음 그림에는 SharePoint 2013과 SQL Server 2012 SP1의 데이터 새로 고침 아키텍처가 요약되어 있습니다.  
@@ -229,7 +228,7 @@ ms.locfileid: "66071232"
   
  데이터 새로 고침 인증 및 자격 증명 사용에 대한 자세한 내용은 [SharePoint 2013에서 PowerPivot 데이터 새로 고침](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)을 참조하세요.  
   
-##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> 추가 정보  
+##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> 자세한 정보  
  [PowerPivot 데이터 새로고침 문제해결](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  [SharePoint 2013의 Excel Services](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/) 

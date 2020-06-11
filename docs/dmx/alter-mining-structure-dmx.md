@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889870"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669868"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>예제 2: 구조에 필터링 된 모델 추가  
- 다음 예에서는 **새 메일링** 마이닝 구조에 `Naive Bayes Women`마이닝 모델을 추가 합니다. 새 모델의 기본 구조는 예 1에서 추가한 마이닝 모델과 같지만 이 모델에서는 마이닝 구조의 사례를 51세 이상의 여성 고객으로 제한합니다.  
+ 다음 예에서는 `Naive Bayes Women` **새 메일링** 마이닝 구조에 마이닝 모델을 추가 합니다. 새 모델의 기본 구조는 예 1에서 추가한 마이닝 모델과 같지만 이 모델에서는 마이닝 구조의 사례를 51세 이상의 여성 고객으로 제한합니다.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

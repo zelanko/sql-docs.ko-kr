@@ -1,5 +1,6 @@
 ---
 title: 관계형 데이터를 처리 하는 XQueries | Microsoft Docs
+description: 'XQuery 확장 sql: column () 및 sql: variable ()을 사용 하 여 비 XML 관계형 데이터를 XML에 바인딩하는 방법에 대해 알아봅니다.'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946163"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689477"
 ---
 # <a name="xqueries-handling-relational-data"></a>관계형 데이터에 대한 XQuery 처리
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

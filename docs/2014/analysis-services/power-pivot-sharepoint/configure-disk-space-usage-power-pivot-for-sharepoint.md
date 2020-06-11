@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547561"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>디스크 공간 사용 구성(SharePoint용 PowerPivot)
   SharePoint용 PowerPivot 배포에서는 더욱 빠르게 다시 로드하기 위해 호스트 컴퓨터의 디스크 공간을 사용하여 PowerPivot 데이터베이스를 캐시합니다. 메모리에 로드되는 각 PowerPivot 데이터베이스는 이후에 새 요청을 처리하기 위해 신속하게 다시 로드될 수 있도록 디스크에 먼저 캐시됩니다. 기본적으로 SharePoint용 PowerPivot에서는 사용 가능한 모든 디스크 공간을 사용하여 해당 데이터베이스를 캐시하지만 사용되는 디스크 공간 크기를 제한하는 속성을 설정하여 이 동작을 수정할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66071804"
   
  백업 폴더는 로컬 컴퓨터의 메모리에 로드되는 PowerPivot 데이터베이스에 대한 공통 캐시 스토리지를 제공합니다. 팜에 여러 개의 PowerPivot 서비스 애플리케이션이 정의되어 있는 경우 그 중 한 애플리케이션이 로컬 서버를 사용하여 PowerPivot 데이터를 로드하고 이후에 해당 데이터를 캐시할 수 있습니다. 데이터 로드 및 캐시 모두 Analysis Services 서버 작업입니다. 따라서 총 디스크 공간 사용량은 Analysis Services 인스턴스 수준에서 백업 폴더에 대해 관리됩니다. 따라서 디스크 공간 사용량을 제한하는 구성 설정은 SharePoint 애플리케이션 서버에서 실행되는 SQL Server Analysis Services 인스턴스에 대해 설정됩니다.  
   
- 캐시에는 PowerPivot 데이터베이스만 포함됩니다. PowerPivot 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. PowerPivot 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. ** \<Serviceapplicationname>** 아래의 GUID 폴더는 PowerPivot 데이터베이스의 부모 폴더입니다. PowerPivot 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
+ 캐시에는 PowerPivot 데이터베이스만 포함됩니다. PowerPivot 데이터베이스는 단일 부모 폴더(백업 폴더) 아래의 여러 파일에 저장됩니다. PowerPivot 데이터베이스가 Excel 통합 문서의 내부 데이터로 사용되기 때문에 데이터베이스 이름은 설명이 포함되지 않은 GUID 기반 이름입니다. 아래의 GUID 폴더는 **\<serviceApplicationName>** PowerPivot 데이터베이스의 부모 폴더입니다. PowerPivot 데이터베이스가 서버에 로드되면 각 데이터베이스에 대한 추가 폴더가 만들어집니다.  
   
  PowerPivot 데이터가 팜의 모든 Analysis Services 인스턴스에 로드될 수 있기 때문에 동일한 데이터가 팜의 여러 컴퓨터에서 캐시될 수도 있습니다. 이는 디스크 공간 사용보다 성능에 도움이 되지만 데이터가 디스크에 이미 있는 경우 데이터에 더 빠르게 액세스할 수 있다는 이점이 있습니다.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071804"
   
  시스템 수준에서 디스크 공간이 부족할 때 알리는 전자 메일 경고를 만들 수 있습니다. Microsoft System Center에는 전자 메일 경고 기능이 포함되어 있습니다. 파일 서버 리소스 관리자, 작업 스케줄러 또는 PowerShell 스크립트를 사용하여 경고를 설정할 수도 있습니다. 부족한 디스크 공간에 대한 알림을 설정하는 데 대한 유용한 정보를 얻으려면  
   
--   [파일 서버 리소스 관리자의 새로운 기능](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
+-   [파일 서버 리소스 관리자의 새로운 기능](https://technet.microsoft.com/library/hh831746.aspx) ( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [파일 서버 리소스 관리자 Windows server 2008 r 2에 대 한 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=204875) ()https://go.microsoft.com/fwlink/?LinkID=204875)  
+-   [파일 서버 리소스 관리자 Windows server 2008 r 2에 대 한 단계별 가이드](https://go.microsoft.com/fwlink/?LinkID=204875) https://go.microsoft.com/fwlink/?LinkID=204875) ()  
   
--   https://go.microsoft.com/fwlink/?LinkID=204870) [Windows Server 2008 ()에서 디스크 공간 부족 경고 설정](https://go.microsoft.com/fwlink/?LinkID=204870)  
+-   [Windows Server 2008 ()에서 디스크 공간 부족 경고 설정](https://go.microsoft.com/fwlink/?LinkID=204870) https://go.microsoft.com/fwlink/?LinkID=204870)  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>캐시된 파일의 저장에 사용되는 디스크 공간 크기를 제한하는 방법  
   

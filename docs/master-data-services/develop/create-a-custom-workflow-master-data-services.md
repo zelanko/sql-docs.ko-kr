@@ -5,17 +5,17 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5d4d302aae5bbfe813bcda328989440b118dee3
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729324"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730798"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>사용자 지정 워크플로 만들기(Master Data Services)
 
@@ -82,7 +82,7 @@ ms.locfileid: "73729324"
     </setting>  
     ```  
   
-3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 다음은 그 예입니다.  
+3.  "ConnectionString" 설정 아래에 "WorkflowTypeExtenders" 설정을 추가하여 사용자 워크플로 처리기 어셈블리에 태그 이름을 연결합니다. 예를 들어:  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  

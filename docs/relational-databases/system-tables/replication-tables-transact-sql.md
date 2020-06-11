@@ -1,5 +1,6 @@
 ---
 title: 복제 테이블 (Transact-sql) | Microsoft Docs
+description: 복제 시스템 테이블은 복제 토폴로지를 지원 합니다. 복제는 게시자 또는 구독자로 구성 된 데이터베이스에 시스템 테이블을 추가 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb3b54989dec45a56c057cb472e1107e9e4e48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834174"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808150"
 ---
 # <a name="replication-tables-transact-sql"></a>복제 테이블(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

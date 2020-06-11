@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893923"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668193"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  사례 특성의 확률을 곱한 값인 사례의 원시 확률이 반환됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용 하 여 작성 된 모델입니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]클러스터링 및 시퀀스 클러스터링 알고리즘을 사용 하 여 작성 된 모델 [!INCLUDE[msCoName](../includes/msconame-md.md)] 입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  0에서 1 사이의 배정밀도 부동 소수점 숫자입니다. 1에 가까울수록 이 모델에 사례가 나타날 확률이 높음을 나타내고 0에 가까울수록 이 모델에 사례가 나타날 가능성이 낮음을 나타냅니다.  

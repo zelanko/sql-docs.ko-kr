@@ -1,21 +1,21 @@
 ---
-title: 모델&gt;에서 &lt;선택 합니다. 사례 (DMX) | Microsoft Docs
+title: 모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6753f90b76f70de9f7368a5656ba93b16a3740d1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892839"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669612"
 ---
-# <a name="select-from-ltmodelgtcases-dmx"></a>모델&gt;에서 &lt;선택 합니다. 사례 (DMX)
+# <a name="select-from-ltmodelgtcases-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 사례 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   드릴스루를 지원하며 모델 학습에 사용된 사례를 반환합니다. 또한 마이닝 구조와 마이닝 모델 모두에 드릴스루가 사용되도록 설정되어 있고 적절한 권한이 있으면 마이닝 모델에 포함되지 않은 구조 열도 반환할 수 있습니다.  
@@ -61,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  **Where** 절에서 [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) 함수를 사용 하면 스키마 행 집합의 NODE_UNIQUE_NAME 열에 지정 된 노드와 연결 된 사례만 반환 됩니다.  
   
 ## <a name="examples"></a>예  
- 다음 예는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 마이닝 구조 대상 메일링을 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조 하세요.  
+ 다음 예는 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스 및 연결 된 마이닝 모델을 기반으로 하는 마이닝 구조 대상 메일링을 기반으로 합니다. 자세한 내용은 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조 하세요.  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>예 1: 모델 사례 및 구조 열로 드릴스루  
  다음 예에서는 대상 메일 모델을 테스트하는 데 사용된 모든 사례에 대해 열을 반환합니다. 모델이 작성되는 마이닝 구조에 홀드아웃 테스트 데이터 집합이 없으면 이 쿼리는 0개의 사례를 반환합니다. 식 목록을 사용하여 필요한 열만 반환할 수 있습니다.  

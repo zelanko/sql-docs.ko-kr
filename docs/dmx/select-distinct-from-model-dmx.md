@@ -1,21 +1,21 @@
 ---
-title: 모델 &lt; &gt; 에서 고유 선택 (DMX) | Microsoft Docs
+title: 모델에서 고유 &lt; 선택 &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892536"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669625"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>모델 &lt; &gt; 에서 고유 선택 (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>모델에서 고유 &lt; 선택 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   모델에서 선택한 열에 대해 가능한 모든 상태를 반환합니다. 반환되는 값은 지정된 열에 불연속 값, 불연속화된 숫자 값 또는 연속 숫자 값이 들어 있는지 여부에 따라 다릅니다.  
@@ -30,7 +30,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>인수  
  *n*  
- 선택 사항입니다. 반환할 행 수를 지정하는 정수입니다.  
+ (선택 사항) 반환할 행 수를 지정하는 정수입니다.  
   
  *식 목록*  
  관련 열 식별자(모델에서 파생됨) 또는 식의 쉼표로 구분된 목록입니다.  
@@ -42,7 +42,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
+ (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  **SELECT DISTINCT FROM** 문은 단일 열 또는 관련 열 집합을 사용 하는 경우에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
@@ -53,13 +53,13 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- **SELECT DISTINCT FROM \<model>** 문의 결과는 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
+ **SELECT DISTINCT FROM \< model>** 문의 결과는 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
   
 |열 유형|출력|  
 |-----------------|------------|  
 |불연속|열의 고유 값|  
 |불연속화됨|열에서 불연속화된 각 버킷의 중간점|  
-|연속|열에서 값의 중간점|  
+|계속|열에서 값의 중간점|  
   
 ## <a name="discrete-column-example"></a>불연속 열의 예  
  다음 코드 예제는 `[TM Decision Tree]` [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 모델을 기반으로 합니다. 이 쿼리는 불연속 열 `Gender`에 있는 고유 값을 반환합니다.  
@@ -99,7 +99,7 @@ FROM [TM Decision Tree]
  또한 이 쿼리는 누락된 값을 나타내는 null 값의 행 하나를 반환합니다.  
   
 ## <a name="discretized-column-example"></a>불연속화된 열의 예  
- 다음 코드 예제는 [`Yearly Income]` 열의 알고리즘으로 작성된 각 버킷의 중간점, 최대값 및 최소값을 반환합니다. 이 예의 결과를 재현하려면 `[Targeted Mailing]`과 동일한 새 마이닝 구조를 만들어야 합니다. 마법사에서 `Yearly Income` 열의 내용 유형을 **연속** 에서 **불연속화**로 변경 합니다.  
+ 다음 코드 예제는 [`Yearly Income]` 열의 알고리즘으로 작성된 각 버킷의 중간점, 최대값 및 최소값을 반환합니다. 이 예의 결과를 재현하려면 `[Targeted Mailing]`과 동일한 새 마이닝 구조를 만들어야 합니다. 마법사에서 열의 내용 유형을 `Yearly Income` **연속** 에서 **불연속화**로 변경 합니다.  
   
 > [!NOTE]  
 >  기본 마이닝 자습서에서 만든 마이닝 모델을 변경하여 마이닝 구조 열인 [`Yearly Income]`을 불연속화할 수도 있습니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 [마이닝 모델에서 열의 불연속화 변경](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model)을 참조 하세요. 그러나 열의 분할을 변경하면 마이닝 구조가 다시 처리되어 해당 구조를 사용하여 작성한 다른 모델의 결과가 변경됩니다.  

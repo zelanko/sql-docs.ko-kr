@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4207f617b4f6fafde5392fdea013196c54501314
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547435"
 ---
 # <a name="restrict-rows-partition-wizard"></a>행 제한(파티션 마법사)
   **행 제한** 페이지를 사용하여 지정한 테이블에서 검색한 다음 집계하여 파티션에 포함시킬 행을 제한할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070209"
 > [!IMPORTANT]  
 >  WHERE 절을 지정하여 레코드 하위 집합을 이 파티션에 사용할 수 있습니다. 이것은 여러 개의 파티션이 단일 팩트 테이블을 기반으로 하는 경우 데이터 복제를 방지하기 위해 반드시 필요합니다.  
   
- **있는지**  
+ **확인**  
  **쿼리** 의 문이 유효한 SQL 문인지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  

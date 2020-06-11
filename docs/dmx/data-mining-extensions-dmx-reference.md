@@ -4,26 +4,26 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892879"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670406"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>DMX(Data Mining Extensions) 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  DMX (데이터 마이닝 확장)는에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]데이터 마이닝 모델을 만들고 작업 하는 데 사용할 수 있는 언어입니다. DMX를 사용하여 새 데이터 마이닝 모델의 구조를 만들고 이 모델을 학습하고 이 모델을 검색, 관리 및 예측할 수 있습니다. DMX는 DDL(데이터 정의 언어) 문, DML(데이터 조작 언어) 문, 함수 및 연산자로 구성됩니다.  
+  DMX (데이터 마이닝 확장)는에서 데이터 마이닝 모델을 만들고 작업 하는 데 사용할 수 있는 언어입니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . DMX를 사용하여 새 데이터 마이닝 모델의 구조를 만들고 이 모델을 학습하고 이 모델을 검색, 관리 및 예측할 수 있습니다. DMX는 DDL(데이터 정의 언어) 문, DML(데이터 조작 언어) 문, 함수 및 연산자로 구성됩니다.  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Microsoft OLE DB for Data Mining 사양  
- 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 기능은 데이터 마이닝 사양의 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB를 준수 하도록 빌드됩니다.  
+ 의 데이터 마이닝 기능은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB를 준수 하도록 빌드됩니다.  
   
- 데이터 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 사양의 OLE DB은 다음을 정의 합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]데이터 마이닝 사양의 OLE DB은 다음을 정의 합니다.  
   
 -   데이터 마이닝 모델을 정의하는 정보를 유지하기 위한 구조  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68892879"
   
  DMX의 데이터 조작 문을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
--   [INSERT INTO](../dmx/insert-into-dmx.md) 문을 사용 하 여 마이닝 모델을 학습 합니다. 마이닝 모델의 학습을 수행하면 실제 원본 데이터가 데이터 마이닝 모델 개체에 삽입되지 않는 대신에 알고리즘에서 만드는 마이닝 모델을 설명하는 추상화가 수행됩니다. INSERT INTO 문의 원본 쿼리는 [ \<원본 데이터 쿼리>](../dmx/source-data-query.md)에 설명 되어 있습니다.  
+-   [INSERT INTO](../dmx/insert-into-dmx.md) 문을 사용 하 여 마이닝 모델을 학습 합니다. 마이닝 모델의 학습을 수행하면 실제 원본 데이터가 데이터 마이닝 모델 개체에 삽입되지 않는 대신에 알고리즘에서 만드는 마이닝 모델을 설명하는 추상화가 수행됩니다. INSERT INTO 문의 원본 쿼리는 [ \< 원본 데이터 쿼리>](../dmx/source-data-query.md)에 설명 되어 있습니다.  
   
 -   SELECT 문을 확장 하 여 원본 데이터의 통계와 같이 모델 학습 중에 계산 되 고 데이터 마이닝 모델에 저장 되는 정보를 검색 합니다. SELECT 문의 기능을 확장 하기 위해 포함할 수 있는 절은 다음과 같습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68892879"
   
     -   [&#60;모델&#62;에서 선택 합니다. DMX&#41;DIMENSION_CONTENT &#40;](../dmx/select-from-model-dimension-content-dmx.md)  
   
--   SELECT 문의 [예측 조인](../dmx/select-from-model-prediction-join-dmx.md) 절을 사용 하 여 기존 마이닝 모델을 기반으로 예측을 만듭니다. 예측 조인 문의 원본 쿼리는 [ \<원본 데이터 쿼리>](../dmx/source-data-query.md)에 설명 되어 있습니다.  
+-   SELECT 문의 [예측 조인](../dmx/select-from-model-prediction-join-dmx.md) 절을 사용 하 여 기존 마이닝 모델을 기반으로 예측을 만듭니다. 예측 조인 문의 원본 쿼리는 [ \< 원본 데이터 쿼리>](../dmx/source-data-query.md)에 설명 되어 있습니다.  
   
 -   [DELETE &#40;DMX&#41;](../dmx/delete-dmx.md) 문을 사용 하 여 모델 또는 구조에서 학습 된 모든 데이터를 제거 합니다.  
   

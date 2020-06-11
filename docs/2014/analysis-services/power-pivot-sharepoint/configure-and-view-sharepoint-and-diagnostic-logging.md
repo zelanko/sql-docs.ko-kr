@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071848"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547585"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configure and View SharePoint Log Files  and Diagnostic Logging (PowerPivot for SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 작업, 이벤트 및 메시지가 SharePoint 로그 파일에 기록됩니다. 로깅 수준을 구성하고 로그 파일 정보를 보려면 이 항목의 정보를 사용합니다. 파일에 기록되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 이벤트를 제어할 수 있습니다. 또한 기록되는 메시지의 심각도를 제어할 수 있습니다. 자세한 내용은 [&#40;SharePoint용 PowerPivot에 대 한 사용 현황 데이터 수집 구성](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조 하세요.  
@@ -118,11 +117,11 @@ ms.locfileid: "66071848"
   
 |Process|영역|Category|Level|메시지|세부 정보|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|PowerPivot 서비스|사용법|자세히|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용량 현황 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
-|w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작\<=*경로*>|연결 요청이 수신되면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
+|w3wp.exe|PowerPivot 서비스|사용|자세히|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용량 현황 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
+|w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작\<*path*>|연결 요청이 수신되면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
 |w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|애플리케이션 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 할당되었습니다.|  
-|w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|\< *PowerPivotdata 원본*>에 대 한 요청을에 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]리디렉션합니다.|요청이 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
-|w3wp.exe|PowerPivot 서비스|요청 처리|자세히|사용자 이름\<*SharePoint 사용자*>에 대 한 요청을 데이터베이스에 리디렉션합니다.|SharePoint 사용자를 대신하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 대한 가장 연결을 만들었습니다.|  
+|w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|에 대 한 요청 \<*PowerPivotdata source*> 을로 리디렉션합니다 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|요청이 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
+|w3wp.exe|PowerPivot 서비스|요청 처리|자세히|데이터베이스에 대 한 사용자 이름 요청 \<*SharePoint user*> 을 리디렉션하는 중|SharePoint 사용자를 대신하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 대한 가장 연결을 만들었습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [PowerPivot 사용 현황 데이터 수집](power-pivot-usage-data-collection.md)   

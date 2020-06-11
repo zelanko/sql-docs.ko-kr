@@ -1,5 +1,6 @@
 ---
 title: 복제 저장 프로시저 (Transact-sql) | Microsoft Docs
+description: SQL Server 복제 시스템 저장 프로시저는 복제를 구현 하거나 배치 파일 및 스크립트에서 사용 하는 등의 일회성 작업을 수행할 수 있습니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f8865167aaddeed91a071992244754e307ba69e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770970"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807773"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>복제 저장 프로시저(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

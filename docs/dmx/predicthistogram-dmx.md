@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893856"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666794"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,10 +55,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability** 열은 데이터 마이닝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사양의 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB에 대 한 확장입니다.  
+     **$AdjustedProbability** 열은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB에 대 한 확장입니다.  
   
 ## <a name="cluster-columns"></a>클러스터 열  
- **PredictHistogram** 함수가 \<클러스터 열 참조> 대해 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
+ **PredictHistogram** 함수가 클러스터 열 참조> 대해 반환 하는 히스토그램은 \< 다음과 같은 열로 구성 됩니다.  
   
 -   **$Cluster** (클러스터 이름을 나타냄)  
   

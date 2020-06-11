@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributor (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771317"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627175"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [Sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) 테이블에 항목을 만들고 (없는 경우) 서버 항목을 배포자로 표시 하 고 속성 정보를 저장 합니다. 이 저장 프로시저는 서버를 배포자로 등록하고 표시하기 위해 master 데이터베이스의 배포자에서 실행됩니다. 원격 배포자의 경우도 마찬가지로, 원격 배포자를 등록하기 위해 master 데이터베이스의 게시자에서 실행됩니다.  
+  [sys.sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) 테이블에 항목을 만들고 (없는 경우) 서버 항목을 배포자로 표시 하 고 속성 정보를 저장 합니다. 이 저장 프로시저는 서버를 배포자로 등록하고 표시하기 위해 master 데이터베이스의 배포자에서 실행됩니다. 원격 배포자의 경우도 마찬가지로, 원격 배포자를 등록하기 위해 master 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="arguments"></a>인수  
 `[ @distributor = ] 'distributor'`배포 서버 이름입니다. *배포자* 는 **sysname**이며 기본값은 없습니다. 이 매개 변수는 원격 배포자를 설정할 때에만 사용합니다. Msdb .의 배포자 속성에 대 한 항목을 추가 **합니다. MSdistributor** 테이블.  
-  
+
+> [!NOTE]
+> 서버 이름은으로 지정할 수 있습니다 `<Hostname>,<PortNumber>` . 사용자 지정 포트를 사용 하 여 Linux 또는 Windows에 SQL Server를 배포할 때 연결에 대 한 포트 번호를 지정 해야 하며 browser 서비스를 사용할 수 없습니다.
+
 `[ @heartbeat_interval = ] heartbeat_interval`진행률 메시지를 기록 하지 않고 에이전트를 진행할 수 있는 최대 시간 (분)입니다. *heartbeat_interval* 은 **int**이며 기본값은 10 분입니다. 실행 중인 복제 에이전트의 상태를 확인하기 위해 이 간격으로 실행되는 SQL Server 에이전트 작업이 생성됩니다.  
   
 `[ @password = ] 'password']`**Distributor_admin** 로그인의 암호입니다. *password* 는 **sysname**이며 기본값은 NULL입니다. NULL 또는 빈 문자열인 경우 암호는 임의의 값으로 다시 설정됩니다. 암호는 첫 번째 원격 배포자가 추가될 때 구성되어야 합니다. 로컬 연결을 포함 하 여 *배포자* RPC 연결에 사용 되는 연결 된 서버 항목에 대 한 로그인 및 *암호* **distributor_admin** 저장 됩니다. *배포자* 가 로컬 이면 **distributor_admin** 의 암호가 새 값으로 설정 됩니다. 원격 배포자가 있는 게시자의 경우 게시자와 배포자에서 모두 **sp_adddistributor** 을 실행할 때 동일한 *password* 값을 지정 해야 합니다. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) 를 사용 하 여 배포자 암호를 변경할 수 있습니다.  
@@ -62,7 +65,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#AddDistPub](../../relational-databases/replication/codesnippet/tsql/sp-adddistributor-transa_1.sql)]  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  **Sysadmin** 고정 서버 역할의 멤버만 **sp_adddistributor**를 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

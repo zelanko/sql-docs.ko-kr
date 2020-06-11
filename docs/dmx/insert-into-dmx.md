@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 210ab8c5750fdcb38bcbca324d77eecd926042d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a66897fe02d33c3f614ad5a24e5b2f9a78e1e4c9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892723"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670086"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,9 +46,9 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>설명  
  **마이닝 모델** 또는 **마이닝 구조**를 지정 하지 않으면에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 기준으로 개체 유형을 검색 하 고 올바른 개체를 처리 합니다. 서버에 이름이 서로 동일한 마이닝 구조 및 마이닝 모델이 있는 경우에는 오류가 반환됩니다.  
   
- 두 번째 구문 형식을 사용 하 여*\<개체>* 를 삽입 합니다. COLUMN_VALUES 모델을 학습 하지 않고 모델 열에 직접 데이터를 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 세트으로 작업할 때 유용합니다.  
+ 두 번째 구문 형식을 사용 하 여* \< 개체>* 를 삽입 합니다. COLUMN_VALUES 모델을 학습 하지 않고 모델 열에 직접 데이터를 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 세트으로 작업할 때 유용합니다.  
   
- 마이닝 모델 또는 마이닝 구조와 함께 **INSERT INTO** 를 사용 하 고 \<매핑된 모델 열> 및 \<원본 데이터 쿼리> 인수를 그대로 유지 하는 경우이 문은 이미 존재 하는 바인딩을 사용 하 여 **processdefault**와 같이 동작 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. **Processdefault**에 대 한 자세한 내용은 [처리 옵션 및 설정 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)를 참조 하세요. 다음 예에서는 구문을 보여 줍니다.  
+ 마이닝 모델 또는 마이닝 구조와 함께 **INSERT INTO** 를 사용 하 고 \< 매핑된 모델 열> 및 \< 원본 데이터 쿼리> 인수를 그대로 유지 하는 경우이 문은 이미 존재 하는 바인딩을 사용 하 여 **processdefault**와 같이 동작 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. **Processdefault**에 대 한 자세한 내용은 [처리 옵션 및 설정 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)를 참조 하세요. 다음 예에서는 구문을 보여 줍니다.  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -60,14 +60,14 @@ INSERT INTO [MINING MODEL] <model>
   
 |인수를 제거합니다.|개체의 상태|결과|  
 |---------------|----------------------|------------|  
-|마이닝 모델*\<모델>에 삽입*|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
+|마이닝 모델* \< 모델>* 에 삽입|마이닝 구조가 처리됩니다.|마이닝 모델이 처리됩니다.|  
 ||마이닝 구조가 처리되지 않습니다.|마이닝 모델 및 마이닝 구조가 처리됩니다.|  
 ||마이닝 구조에 추가 마이닝 모델이 포함되어 있습니다.|프로세스가 실패합니다. 마이닝 구조 및 연결된 마이닝 모델을 다시 처리해야 합니다.|  
-|마이닝 구조*\<구조에 삽입>*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
-|원본 쿼리를 포함 하는 마이닝 모델*\<모델>* 에 삽입<br /><br /> 또는<br /><br /> 원본 쿼리를 포함 하는>마이닝 구조*\<구조* 에 삽입|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)를 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 합니다.|  
+|마이닝 구조 구조에 삽입* \<>*|마이닝 구조가 처리되거나 처리되지 않습니다.|마이닝 구조 및 연결된 마이닝 모델이 처리됩니다.|  
+|원본 쿼리를 포함 하는 마이닝 모델* \< 모델>* 에 삽입<br /><br /> 또는<br /><br /> 원본 쿼리를 포함 하는>마이닝 구조* \< 구조* 에 삽입|마이닝 구조 또는 모델에 이미 내용이 포함되어 있습니다.|프로세스가 실패합니다. [삭제 &#40;DMX&#41;](../dmx/delete-dmx.md)를 사용 하 여이 작업을 수행 하기 전에 개체를 지워야 합니다.|  
   
 ## <a name="mapped-model-columns"></a>매핑된 모델 열  
- \<매핑된 모델 열> 요소를 사용 하 여 데이터 원본의 열을 마이닝 모델의 열에 매핑할 수 있습니다. 매핑된 \<모델 열> 요소는 다음과 같은 형식입니다.  
+ \<매핑된 모델 열> 요소를 사용 하 여 데이터 원본의 열을 마이닝 모델의 열에 매핑할 수 있습니다. \<매핑된 모델 열> 요소는 다음과 같은 형식입니다.  
   
 ```  
 <column identifier> | SKIP | <table identifier> (<column identifier> | SKIP), ...  
@@ -80,7 +80,7 @@ INSERT INTO [MINING MODEL] <model>
  SKIP에 대한 구문을 사용하려면 입력 행 집합에서 해당하는 마이닝 구조 열이 없는 개별 열의 위치에 SKIP을 삽입해야 합니다. 예를 들어 아래 중첩 테이블 예에서는 OrderNumber가 RELATE 절에서 조인을 지정하는 데 사용될 수 있도록 APPEND 절에서 OrderNumber를 선택해야 합니다. 그러나 마이닝 구조의 중첩 테이블에 OrderNumber 데이터를 삽입하기를 원치 않습니다. 따라서 이 예에서는 INSERT INTO 인수에 OrderNumber를 사용하는 대신 SKIP 키워드를 사용합니다.  
   
 ## <a name="source-data-query"></a>원본 데이터 쿼리  
- 원본 \<데이터 쿼리> 요소에는 다음과 같은 데이터 원본 유형이 포함 될 수 있습니다.  
+ \<원본 데이터 쿼리> 요소에는 다음과 같은 데이터 원본 유형이 포함 될 수 있습니다.  
   
 -   **OPENQUERY**  
   
@@ -93,7 +93,7 @@ INSERT INTO [MINING MODEL] <model>
  데이터 원본 유형에 대 한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](../dmx/source-data-query.md)를 참조 하세요.  
   
 ## <a name="basic-example"></a>기본 예  
- 다음 예에서는 **OPENQUERY** 를 사용 하 여 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스의 타겟 메일링 데이터를 기반으로 Naive Bayes 모델을 학습 합니다.  
+ 다음 예에서는 **OPENQUERY** 를 사용 하 여 데이터베이스의 타겟 메일링 데이터를 기반으로 Naive Bayes 모델을 학습 합니다 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
   
 ```  
 INSERT INTO NBSample (CustomerKey, Gender, [Number Cars Owned],  

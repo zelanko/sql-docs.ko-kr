@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5d28ef26a24f65be180b73620cf3f665db24d3c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071085"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547815"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 사용량 현황 데이터 컬렉션
   사용량 현황 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용량 현황 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용량 현황 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다. PowerPivot 이벤트에 대 한 사용 현황 데이터 수집을 사용 하도록 설정 하 고 구성 하는 방법에 대 한 자세한 내용은 [&#40;SharePoint용 PowerPivot 사용 현황 데이터 수집 구성](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 참조 하세요.  
@@ -52,7 +51,7 @@ ms.locfileid: "66071085"
 ##  <a name="sources-of-usage-data"></a><a name="sources"></a> 사용량 현황 데이터의 원본  
  사용량 현황 데이터 수집이 사용되면 다음 서버 이벤트에 대한 데이터가 생성됩니다.  
   
-|이벤트|설명|구성 가능 여부|  
+|이벤트|Description|구성 가능 여부|  
 |-----------|-----------------|------------------|  
 |Connections|Excel 통합 문서에서 PowerPivot 데이터를 쿼리하는 사용자를 위해 서버 연결이 설정됩니다. 연결 이벤트는 PowerPivot 통합 문서에 대한 연결을 연 사용자를 식별합니다. 보고서에서 이 정보는 자주 사용하는 사용자, 동일한 사용자가 액세스하는 PowerPivot 데이터 원본 및 시간별 연결 추세를 식별하는 데 사용됩니다.|[&#40;SharePoint용 PowerPivot에 대해 사용 현황 데이터 수집 구성](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.|  
 |쿼리 응답 시간|완료하는 데 걸리는 시간을 기준으로 쿼리를 범주화하는 쿼리 응답 통계입니다. 쿼리 응답 통계는 서버가 쿼리 요청에 응답하는 데 걸리는 시간의 패턴을 보여 줍니다.|[&#40;SharePoint용 PowerPivot에 대해 사용 현황 데이터 수집 구성](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)을 사용 하거나 사용 하지 않도록 설정할 수 있습니다.|  
@@ -68,7 +67,7 @@ ms.locfileid: "66071085"
 |---------------|----------------------|-----------------|  
 |SharePoint Timer Service(SPTimerV4)||Windows 서비스는 팜의 모든 멤버 컴퓨터에서 로컬로 실행되며 팜 수준에서 정의된 모든 타이머 작업을 처리합니다.|  
 |Microsoft SharePoint Foundation 사용 데이터 가져오기(Microsoft SharePoint Foundation Usage Data Import)|SharePoint 2010에서 30분마다 SharePoint 2013에서 5분마다|이 타이머 작업은 팜 수준에서 전역적으로 구성되며, 로컬 사용 현황 로그 파일에서 중앙 사용량 현황 데이터 컬렉션 데이터베이스로 사용량 현황 데이터를 이동합니다. 데이터 가져오기 작업을 실행하기 위해 이 타이머 작업을 수동으로 실행할 수 있습니다.|  
-|Microsoft SharePoint Foundation 사용량 현황 데이터 처리 타이머 작업|매일 오전 3시|**(\*)** SQL Server 2012 SharePoint용 PowerPivot부터이 시간 작업은 이전 사용 데이터가 아직 SharePoint 사용 데이터베이스에 있는 업그레이드 또는 마이그레이션 시나리오에 대해 지원 됩니다. SQL Server 2012 SharePoint용 PowerPivot부터 PowerPivot 사용 현황 컬렉션 및 관리 대시보드 워크플로에 SharePoint 사용 데이터베이스가 사용되지 않습니다. 타이머 작업을 수동으로 실행하여 SharePoint 사용 데이터베이스의 나머지 PowerPivot 관련 데이터를 PowerPivot 서비스 애플리케이션 데이터베이스로 이동할 수 있습니다.<br /><br /> 이 타이머 작업은 팜 수준에서 전역적으로 구성되며, 중앙의 사용량 현황 데이터 컬렉션 데이터베이스에서 만료된 사용량 현황 데이터(즉, 30일이 지난 모든 레코드)를 확인합니다. 팜에 있는 PowerPivot 서버에 대해 이 타이머 작업은 PowerPivot 사용량 현황 데이터에 대한 추가 확인을 수행합니다. PowerPivot 사용량 현황 데이터가 감지되면 타이머 작업은 애플리케이션 식별자를 사용하여 데이터를 서비스 애플리케이션 데이터베이스로 이동하여 올바른 데이터베이스를 찾습니다.<br /><br /> 만료된 데이터 확인 또는 PowerPivot 서비스 애플리케이션 데이터베이스로 PowerPivot 사용량 현황 데이터의 데이터 가져오기를 실행하기 위해 이 타이머 작업을 수동으로 실행할 수 있습니다.|  
+|Microsoft SharePoint Foundation 사용량 현황 데이터 처리 타이머 작업|매일 오전 3시|**( \* )** SQL Server 2012 SharePoint용 PowerPivot부터이 시간 작업은 이전 사용 데이터가 아직 SharePoint 사용 데이터베이스에 있는 업그레이드 또는 마이그레이션 시나리오에 대해 지원 됩니다. SQL Server 2012 SharePoint용 PowerPivot부터 PowerPivot 사용 현황 컬렉션 및 관리 대시보드 워크플로에 SharePoint 사용 데이터베이스가 사용되지 않습니다. 타이머 작업을 수동으로 실행하여 SharePoint 사용 데이터베이스의 나머지 PowerPivot 관련 데이터를 PowerPivot 서비스 애플리케이션 데이터베이스로 이동할 수 있습니다.<br /><br /> 이 타이머 작업은 팜 수준에서 전역적으로 구성되며, 중앙의 사용량 현황 데이터 컬렉션 데이터베이스에서 만료된 사용량 현황 데이터(즉, 30일이 지난 모든 레코드)를 확인합니다. 팜에 있는 PowerPivot 서버에 대해 이 타이머 작업은 PowerPivot 사용량 현황 데이터에 대한 추가 확인을 수행합니다. PowerPivot 사용량 현황 데이터가 감지되면 타이머 작업은 애플리케이션 식별자를 사용하여 데이터를 서비스 애플리케이션 데이터베이스로 이동하여 올바른 데이터베이스를 찾습니다.<br /><br /> 만료된 데이터 확인 또는 PowerPivot 서비스 애플리케이션 데이터베이스로 PowerPivot 사용량 현황 데이터의 데이터 가져오기를 실행하기 위해 이 타이머 작업을 수동으로 실행할 수 있습니다.|  
 |PowerPivot 관리 대시보드 처리 타이머 작업|매일 오전 3시|이 타이머 작업은 PowerPivot 관리 대시보드에 관리 데이터를 제공하는 내부 PowerPivot 통합 문서를 업데이트합니다. 이 타이머 작업은 대시보드 보고서나 웹 파트에 나타나는 서버 이름, 사용자 이름, 애플리케이션 이름 및 파일 이름을 포함하여 SharePoint에서 관리하는 업데이트된 정보를 가져옵니다.|  
   
 ##  <a name="reporting-on-usage-data"></a><a name="reporting"></a> 사용량 현황 데이터에 대한 보고  

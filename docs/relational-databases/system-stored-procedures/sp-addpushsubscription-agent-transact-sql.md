@@ -1,7 +1,7 @@
 ---
 title: sp_addpushsubscription_agent (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627374"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 `[ @subscriber = ] 'subscriber'`구독자 인스턴스의 이름 또는 구독자 데이터베이스가 가용성 그룹인 경우 AG 수신기의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다. 
-  
+
+> [!NOTE]
+> 서버 이름은으로 지정할 수 있습니다 `<Hostname>,<PortNumber>` . 사용자 지정 포트를 사용 하 여 Linux 또는 Windows에 SQL Server를 배포할 때 연결에 대 한 포트 번호를 지정 해야 하며 browser 서비스를 사용할 수 없습니다.
+
 `[ @subscriber_db = ] 'subscriber_db'`구독 데이터베이스의 이름입니다. *subscriber_db* 는 **sysname**이며 기본값은 NULL입니다. SQL Server 이외 구독자의 경우 *subscriber_db*의 값 **(기본 대상)** 을 지정 합니다.  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`동기화 시 구독자에 연결할 때 사용 하는 보안 모드입니다. *subscriber_security_mode* 은 **int**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 합니다. **1** 은 Windows 인증을 지정 합니다.  
@@ -118,8 +121,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |값|설명|  
 |-----------|-----------------|  
-|**1** (기본값)|처음|  
-|**2**|초|  
+|**1** (기본값)|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
 |**20cm(8**|넷째|  
 |**x**|마지막|  
@@ -131,7 +134,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |값|Description|  
 |-----------|-----------------|  
 |**1**|한 번|  
-|**2**|초|  
+|**2**|Second|  
 |**4** (기본값)|Minute|  
 |**20cm(8**|시간|  
   

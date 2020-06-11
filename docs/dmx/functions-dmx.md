@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892761"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670185"
 ---
 # <a name="functions-dmx"></a>함수(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  DMX (데이터 마이닝 확장)를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]개체를 쿼리 하는 경우 함수를 사용 하 여 데이터 마이닝 모델 또는 입력 데이터 집합의 열 값 뿐만 아니라 추가 정보를 반환할 수 있습니다. 예를 들어 DMX 쿼리를 사용하여 열의 예측 값뿐만 아니라 예측의 정확성에 대한 확률도 반환할 수 있습니다. 또한 DMX 함수를 비롯하여 Microsoft VBA(Visual Basic for Applications), Microsoft Excel 및 저장 프로시저의 함수도 사용할 수 있습니다.  
+  DMX (데이터 마이닝 확장)를 사용 하 여에서 개체를 쿼리 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 함수를 사용 하 여 데이터 마이닝 모델 또는 입력 데이터 집합의 열 값 뿐만 아니라 추가 정보를 반환할 수 있습니다. 예를 들어 DMX 쿼리를 사용하여 열의 예측 값뿐만 아니라 예측의 정확성에 대한 확률도 반환할 수 있습니다. 또한 DMX 함수를 비롯하여 Microsoft VBA(Visual Basic for Applications), Microsoft Excel 및 저장 프로시저의 함수도 사용할 수 있습니다.  
   
 ## <a name="dmx-functions"></a>DMX 함수  
  DMX 함수를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  

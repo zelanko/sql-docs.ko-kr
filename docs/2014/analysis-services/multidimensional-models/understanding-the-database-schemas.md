@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9cf2e37d9a6ae6d0fa93012f72673642d11a2a4c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811050"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547455"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
   스키마 생성 마법사는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 및 측정값 그룹을 기반으로 주제 영역 데이터베이스에 대한 비정규 관계형 스키마를 생성합니다. 마법사는 각 차원에 대해 차원 데이터를 저장할 관계형 테이블(차원 테이블)과 각 측정값 그룹에 대해 팩트 데이터를 저장할 관계형 테이블(팩트 테이블)을 생성합니다. 이러한 관계형 테이블을 생성할 때 연결된 차원, 연결된 측정값 및 서버 시간 차원은 무시합니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "68811050"
  마법사는 측정값 그룹에서 번역 열이 필요한 속성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>데이터 형식 변환 및 기본 길이  
- 스키마 생성 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 데이터 형식을 사용 하는 열을 제외 하 고 모든 경우에 데이터 형식을 무시 합니다. `wchar` 데이터 크기는 `nvarchar` 데이터 형식으로 직접 변환됩니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
+ 스키마 생성 마법사는 데이터 형식을 사용 하는 열을 제외 하 고 모든 경우에 데이터 형식을 무시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` 합니다. `wchar` 데이터 크기는 `nvarchar` 데이터 형식으로 직접 변환됩니다. 그러나 `wchar` 크기를 사용하는 지정된 열의 길이가 4000바이트를 초과하면 스키마 생성 마법사에서 오류가 발생합니다.  
   
  특성에 대한 바인딩과 같은 데이터 항목에 대해 길이를 지정하지 않으면 해당 열에 다음 표의 기본 길이가 사용됩니다.  
   

@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078519"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669459"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "68078519"
 > [!NOTE]  
 >  ROUTINE_DEFINITION 열은 함수 또는 저장 프로시저를 만든 원본 문을 포함합니다. 이러한 원본 문은 중간 캐리지 리턴을 포함하는 경우가 많습니다. 결과를 텍스트 형식으로 표시하는 애플리케이션에 이 열을 반환하는 경우에는 ROUTINE_DEFINITION 결과의 중간 캐리지 리턴이 전체 결과 집합의 형식에 영향을 줄 수 있습니다. ROUTINE_DEFINITION 열을 선택하는 경우에는 반드시 중간 캐리지 리턴에 맞게 조정해야 합니다. 예를 들어 결과 집합을 표 형태로 반환하거나 ROUTINE_DEFINITION을 자체 입력란 형식으로 반환해야 합니다.  
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_CATALOG와 동일합니다.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|스키마의 특정 이름입니다.<br /><br /> ** \* 중요 \* \* ** INFORMATION_SCHEMA 뷰를 사용 하 여 개체의 스키마를 확인 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|스키마의 특정 이름입니다.<br /><br /> 중요 개체의 스키마를 확인 하는 데 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. ** \* \* \* \* ** INFORMATION_SCHEMA 뷰는 개체의 메타 데이터 하위 집합만을 나타냅니다. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|카탈로그의 특정 이름입니다. 이 이름은 ROUTINE_NAME과 동일합니다.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|함수의 카탈로그 이름입니다.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> ** \* 중요 \* \* ** INFORMATION_SCHEMA 뷰를 사용 하 여 개체의 스키마를 확인 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|이 함수를 포함하는 스키마의 이름입니다.<br /><br /> 중요 개체의 스키마를 확인 하는 데 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. ** \* \* \* \* ** INFORMATION_SCHEMA 뷰는 개체의 메타 데이터 하위 집합만을 나타냅니다. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|함수의 이름입니다.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|저장 프로시저의 경우에는 PROCEDURE를, 함수의 경우에는 FUNCTION을 반환합니다.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL 다음에 사용하도록 예약됩니다.|  

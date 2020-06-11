@@ -10,19 +10,19 @@ ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095327"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859580"
 ---
 # <a name="feature-review"></a>기능 검토
   기능 검토 페이지는 현재 준비되어 있고 앞으로 구성되어 이미지 완료 단계의 끝에 완성될 여러 가지 기능이 포함된 읽기 전용 목록입니다. 기능 목록은 이미지 준비 단계에서 선택되며 이미지 완료 단계에서는 수정할 수 없습니다. 준비 인스턴스에는 표시된 기능뿐만 아니라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client도 포함됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스 구성 작업을 완료한 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 준비 인스턴스에 포함되지 않은 다른 기능을 추가할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
   
 |구성 요소 그룹|구성 요소 및 기능|  
 |---------------------|-----------------------------|  

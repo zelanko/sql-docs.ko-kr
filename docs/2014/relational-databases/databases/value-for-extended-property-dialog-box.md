@@ -15,17 +15,17 @@ ms.assetid: cf0ba215-cf83-48e0-bd98-a8ddc8810eab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ac8dd7682ecfe8df3b317bba578bca8358b9b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61351e04ef5100e203ff0be098eddecb0500663a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916505"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859265"
 ---
 # <a name="value-for-extended-property-dialog-box"></a>확장 속성 값 대화 상자
   ‘**속성 이름’** 에 대한 값 *대화 상자를 사용하여 값을 입력하거나 확인할 수 있습니다.\<* 이 대화 상자는 여러 위치에서 열 수 있는 일반 대화 상자입니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **확장 속성 이름**  
  표시하거나 설정하는 확장 속성의 이름입니다.  
   

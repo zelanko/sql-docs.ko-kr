@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 840dc41afe689b7beb6af4b2272f1851fdde72e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13ec459afba8080b9708fa49a00ff945ce7e320b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008271"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667671"
 ---
 # <a name="-multiply-dmx"></a>*(곱하기)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ Numeric_Expression * Numeric_Expression
  *Numeric_Expression*  
  숫자 값을 반환하는 유효한 DMX(Data Mining Extensions) 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
 ## <a name="remarks"></a>설명  

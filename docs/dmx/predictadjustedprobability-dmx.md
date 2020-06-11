@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c2ae90886d6469802543f62bf5636ccaafeb32fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 610d304f2634a4de8f8578fff3258f4b1f2dbc67
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008093"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669296"
 ---
 # <a name="predictadjustedprobability-dmx"></a>PredictAdjustedProbability(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +34,11 @@ PredictAdjustedProbability(<scalar column reference>, [<predicted state>])
  스칼라 값  
   
 ## <a name="remarks"></a>설명  
- 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \<예측 상태>를 **INCLUDE_NULL**로 설정 합니다.  
+ 예측 상태를 생략하면 누락된 상태 버킷을 제외하고 예측 가능성이 가장 높은 상태가 사용됩니다. 누락 상태 버킷을 포함 하려면 \< 예측 상태>를 **INCLUDE_NULL**로 설정 합니다.  
   
- 누락 된 상태에 대 한 조정 된 확률을 반환 하려면 \<예측 상태>를 NULL로 설정 합니다.  
+ 누락 된 상태에 대 한 조정 된 확률을 반환 하려면 \< 예측 상태>를 NULL로 설정 합니다.  
   
- **PredictAdjustedProbability** 함수는 데이터 마이닝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사양의 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB에 대 한 확장입니다.  
+ **PredictAdjustedProbability** 함수는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 사양의 OLE DB에 대 한 확장입니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 자연 예측 조인을 사용하여 TM Decision Tree 마이닝 모델을 기반으로 개별 고객이 자전거를 구입할 가능성이 있는지 여부를 확인하고 예측의 조정된 확률도 확인합니다.  

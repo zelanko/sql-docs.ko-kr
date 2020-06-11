@@ -1,24 +1,24 @@
 ---
-title: 모델&gt;에서 &lt;선택 합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
+title: 모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928365"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669578"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>모델&gt;에서 &lt;선택 합니다. DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \<model>입니다. Dimension_CONTENT** 문은 차원으로 사용 하는 것과 관련 된 모델의 콘텐츠를 반환 합니다.  
+  OLAP 큐브에서 모델의 각 노드가 차원 멤버를 나타내도록 하여 마이닝 모델을 차원으로 사용할 수 있습니다. **SELECT FROM \< model>입니다. Dimension_CONTENT** 문은 차원으로 사용 하는 것과 관련 된 모델의 콘텐츠를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   

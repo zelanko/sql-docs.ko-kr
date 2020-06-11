@@ -1,7 +1,7 @@
 ---
 title: SQL Server 확장 이벤트 세션 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706602"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868350"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
@@ -30,9 +30,9 @@ ms.locfileid: "82706602"
   
 ## <a name="session-states"></a>세션 상태  
  다음 그림에서는 확장 이벤트 세션의 다양한 상태를 보여 줍니다.  
-  
- ![확장 이벤트 세션 상태](../../database-engine/media/xesessionstate.gif "확장 이벤트 세션 상태")  
-  
+
+![확장 이벤트 세션 상태](../../database-engine/media/xesessionstate.png "확장 이벤트 세션 상태")
+
  위 그림을 보면 이벤트 세션에 대해 다른 DDL 명령이 실행됨에 따라 세션 상태가 바뀜을 알 수 있습니다. 다음 표에서는 이러한 상태 변경을 설명합니다.  
   
 |그림 레이블|DDL 문|설명|  

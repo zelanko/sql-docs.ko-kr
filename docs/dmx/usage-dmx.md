@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893109"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670375"
 ---
 # <a name="usage-dmx"></a>사용법(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  DMX (데이터 마이닝 확장)를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]새 데이터 마이닝 모델을 정의 하는 경우 모델을 작성 하는 데이터 마이닝 알고리즘에서 각 열을 사용 하는 방법을 지정 해야 합니다. 다음 유형 중 하나로 열을 지정할 수 있습니다.  
+  DMX (데이터 마이닝 확장)를 사용 하 여에서 새 데이터 마이닝 모델을 정의 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델을 작성 하는 데이터 마이닝 알고리즘에서 각 열을 사용 하는 방법을 지정 해야 합니다. 다음 유형 중 하나로 열을 지정할 수 있습니다.  
   
 -   **키**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68893109"
   
  **Predict** 유형으로 지정 된 열은 입력 및 출력 열 모두로 사용 됩니다. **Predictonly** 로 지정 된 열은 출력 열로만 사용 됩니다. 특정 알고리즘에서는 Predict 열을 다른 방식으로 처리할 수 있습니다.  
   
- 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 열 사용 유형에 대 한 자세한 내용은 [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
+ 에서 지 원하는 열 사용 유형에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

@@ -12,17 +12,17 @@ ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: defc499412d059542262ec978d47f4c93c8bac23
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000615"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858615"
 ---
 # <a name="query-options-execution-general-page"></a>쿼리 옵션 실행(일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이 대화 상자에 액세스하려면 쿼리 편집기 창의 본문을 마우스 오른쪽 단추로 클릭한 다음 **쿼리 옵션**을 클릭합니다.  
   
-## <a name="uielement-list"></a>UI 요소 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **SET ROWCOUNT**  
  기본값 0은 모든 결과를 받을 때까지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 결과를 기다린다는 것을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 지정한 행 수를 받은 후 쿼리를 중단하려면 0보다 큰 값을 지정합니다. 모든 행이 반환될 수 있도록 이 옵션을 해제하려면 SET ROWCOUNT 0을 지정합니다.  
   

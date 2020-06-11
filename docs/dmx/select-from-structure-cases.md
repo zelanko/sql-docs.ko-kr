@@ -1,28 +1,28 @@
 ---
-title: 구조&gt;에서 &lt;선택 합니다. 사례 | Microsoft Docs
+title: 구조에서 &lt; 선택 &gt; 합니다. 사례 | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928290"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670098"
 ---
-# <a name="select-from-ltstructuregtcases"></a>구조&gt;에서 &lt;선택 합니다. 경우
+# <a name="select-from-ltstructuregtcases"></a>구조에서 &lt; 선택 &gt; 합니다. 경우
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   마이닝 구조를 만드는 데 사용된 사례를 반환합니다.  
   
  구조에 드릴스루가 사용되도록 설정되지 않은 경우에는 문이 실패합니다. 또한 사용자에게 마이닝 구조에 대한 드릴스루 권한이 없는 경우에도 문은 실패합니다.  
   
- 에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]새 마이닝 구조에 대 한 드릴스루를 기본적으로 사용할 수 있습니다. 특정 구조에 드릴스루를 사용할 수 있는지 확인 하려면 **Cachemode** 속성의 값이 **KeepTrainingCases**로 설정 되어 있는지 확인 합니다.  
+ 에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 새 마이닝 구조에 대 한 드릴스루를 기본적으로 사용할 수 있습니다. 특정 구조에 드릴스루를 사용할 수 있는지 확인 하려면 **Cachemode** 속성의 값이 **KeepTrainingCases**로 설정 되어 있는지 확인 합니다.  
   
  **Cachemode** 의 값이 **clearafterprocessing**으로 변경 되 면 구조 사례가 캐시에서 지워지고 드릴스루를 사용할 수 없습니다.  
   
@@ -39,7 +39,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
+ (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  쉼표로 구분된 식 목록입니다.  
@@ -53,7 +53,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
+ (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
  모델과 구조 모두에 드릴스루가 사용되도록 설정되어 있으면 마이닝 구조 및 모델에 대해 드릴스루 권한을 가지는 역할의 모든 멤버는 다음 구문을 사용하여 모델에 포함되지 않은 구조 열을 반환할 수 있습니다.  

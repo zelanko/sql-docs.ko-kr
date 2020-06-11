@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547715"
 ---
 # <a name="use-powerpivot-gallery"></a>PowerPivot 갤러리 사용
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 특수한 용도의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.
@@ -23,7 +22,7 @@ ms.locfileid: "78175692"
 > [!NOTE]
 >  해당 서버를 구성하는 방법에 따라 특정 문서에 대한 미리 보기 영역에서 경고 또는 오류 메시지가 표시될 수 있습니다. Excel 통합 문서를 열 때마다 해당 데이터를 자동으로 새로 고치도록 설정한 경우 메시지가 표시될 수 있습니다. Excel 서비스가 새로 고칠 때 경고 오류 메시지를 표시하도록 구성되어 있으면 데이터 새로 고침 경고 메시지가 미리 보기 이미지로 나타납니다. 팜 또는 서비스 관리자는 구성 설정을 수정하여 실제 워크시트의 미리 보기가 나타나도록 허용할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>항목 내용
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 항목 내용
 
 -   [PowerPivot 갤러리의 아이콘](#icons)
 
@@ -41,9 +40,9 @@ ms.locfileid: "78175692"
 
 -   [알려진 문제](#bkmk_known_issues)
 
- [전제 조건](#prereq)
+ [필수 구성 요소](#prereq)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건
 
 > [!NOTE]
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다. Microsoft Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭 한 다음 문서 라이브러리 보기를 **모든 문서**로 변경 합니다.  
@@ -148,14 +147,14 @@ ms.locfileid: "78175692"
 
 4.  **저장**을 클릭합니다. 문서를 저장하면 스냅샷 서비스에서 미리 보기 이미지를 다시 생성합니다.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>알려진 문제
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> 알려진 문제
 
 ### <a name="document-type-is-not-supported"></a>문서 유형이 지원되지 않습니다.
  **PowerPivot 갤러리 문서** 내용 유형은 지원되지 않습니다. 문서 라이브러리에 대해 **PowerPivot 갤러리 문서** 내용 유형을 사용하도록 설정하고 해당 유형의 새 문서를 만들려고 하면 다음 중 하나와 비슷한 오류 메시지가 표시됩니다.
 
 -   ' 새 문서 '를 사용 하려면 Microsoft Sharepoint Foundation 호환 응용 프로그램 및 웹 브라우저가 있어야 합니다. 문서 라이브러리에 문서를 추가 하려면 ' 문서 업로드 ' 단추를 클릭 합니다.
 
--   "인터넷 주소 ' http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template .xlsx '가 잘못 되었습니다." " Microsoft Excel에서 ' http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template. .xlsx ' 파일에 액세스할 수 없습니다. 원인은 다음과 같습니다.
+-   "인터넷 주소 ' http://[server name]/testSite/PowerPivot Gallery/ReportGallery/Forms/Template.xlsx '이 (가) 잘못 되었습니다." " Microsoft Excel에서 ' http://[server name]/testSite/PowerPivot 갤러리/ReportGallery/Forms/Template.xlsx ' 파일에 액세스할 수 없습니다. 원인은 다음과 같습니다.
 
  **PowerPivot 갤러리 문서** 내용 유형이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 내용 유형을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.
 

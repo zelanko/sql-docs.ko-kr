@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-sql) | Microsoft Docs
-ms.date: 10/28/2015
+description: 게시에 구독을 추가하고 구독자 상태를 설정합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행 됩니다.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833634"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627615"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*구독자*'  
  구독자의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
+
+> [!NOTE]
+> 서버 이름은으로 지정할 수 있습니다 `<Hostname>,<PortNumber>` . 사용자 지정 포트를 사용 하 여 Linux 또는 Windows에 SQL Server를 배포할 때 연결에 대 한 포트 번호를 지정 해야 하며 browser 서비스를 사용할 수 없습니다.
   
  [ @destination_db =] '*destination_db*'  
  복제된 데이터를 추가할 대상 데이터베이스의 이름입니다. *destination_db* 는 **sysname**이며 기본값은 NULL입니다. NULL 인 경우 *destination_db* 는 게시 데이터베이스의 이름으로 설정 됩니다. Oracle 게시자의 경우 *destination_db* 를 지정 해야 합니다. SQL Server 이외 구독자의 경우 *destination_db*의 값 (기본 대상)을 지정 합니다.  
@@ -159,8 +163,8 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |값|설명|  
 |-----------|-----------------|  
-|1|처음|  
-|2|초|  
+|1|첫째|  
+|2|Second|  
 |4|셋째|  
 |8|넷째|  
 |16|마지막|  
@@ -175,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |값|설명|  
 |-----------|-----------------|  
 |1|한 번|  
-|2|초|  
+|2|Second|  
 |4|Minute|  
 |8|시간|  
 |NULL||  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] '*password*'  
- 백업을 만들 때 암호를 설정한 경우 백업의 암호를 지정합니다. *password*는 **sysname**이며 기본값은 NULL입니다.  
+ 백업을 만들 때 암호를 설정한 경우 백업의 암호를 지정합니다. *password* 는 **sysname**이며 기본값은 NULL입니다.  
   
  [ @fileidhint =] *fileidhint*  
  복원할 백업 세트의 서수 값을 식별합니다. *fileidhint* 은 **int**이며 기본값은 NULL입니다.  
@@ -309,7 +313,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  **sync_type** 옵션 *replication support only*, *initialize with backup*또는 *initialize from lsn*을 선택할 때는 설치 스크립트가 배포 데이터베이스에 기록되도록 **sp_addsubscription**을 실행한 후 로그 판독기 에이전트를 실행해야 합니다. 로그 판독기 에이전트는 **sysadmin** 고정 서버 역할의 멤버인 계정으로 실행되어야 합니다. **sync_type** 옵션이 *Automatic*으로 설정된 경우 특별한 로그 판독기 에이전트 동작이 필요하지 않습니다.  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버만 sp_addsubscription을 실행할 수 있습니다. 끌어오기 구독의 경우 게시 액세스 목록의 로그인이 있는 사용자는 sp_addsubscription을 실행할 수 있습니다.  
   
 ## <a name="example"></a>예제  

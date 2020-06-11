@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05bb9bc1ad4dfeed1cf2747a8d5bb854fec8d9af
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008204"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669704"
 ---
 # <a name="operators---comparison"></a>연산자 - 비교
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]DMX (데이터 마이닝 확장) 식에서 스칼라 데이터에 비교 연산자를 사용할 수 있습니다. 비교 연산자는 Boolean 데이터 형식으로 평가되며 검사된 조건의 결과를 기준으로 TRUE 또는 FALSE를 반환합니다.  
+  의 DMX (데이터 마이닝 확장) 식에서 스칼라 데이터에 비교 연산자를 사용할 수 있습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 비교 연산자는 Boolean 데이터 형식으로 평가되며 검사된 조건의 결과를 기준으로 TRUE 또는 FALSE를 반환합니다.  
   
  다음 표에서는 DMX가 지원하는 비교 연산자를 설명합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[&#60; &#40;&#41; &#40;DMX&#41;](../dmx/less-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 작으면 TRUE를 반환하고 크거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  
 |[&#62; &#40;&#41; &#40;DMX&#41;](../dmx/greater-than-dmx.md)|인수가 Null이 아닌 값으로 계산되고 왼쪽의 인수 값이 오른쪽의 인수 값보다 크면 TRUE를 반환하고 작거나 같으면 FALSE를 반환합니다. 인수 중 하나 또는 둘 다가 Null 값으로 계산되면 연산자는 Null 값을 반환합니다.|  

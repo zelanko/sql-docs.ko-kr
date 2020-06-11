@@ -12,17 +12,17 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871989"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858544"
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
   이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)** 에 적용됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **데이터베이스 이름**  
  데이터베이스 이름을 추가하거나 표시합니다.  
   
