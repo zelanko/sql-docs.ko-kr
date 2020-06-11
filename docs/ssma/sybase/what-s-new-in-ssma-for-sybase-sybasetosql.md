@@ -1,24 +1,29 @@
 ---
 title: SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL) | Microsoft Docs
+description: 각 릴리스에 대 한 Sybase (SybaseToSQL)의 SQL Server Migration Assistant (SSMA) 변경에 대해 알아봅니다.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1124349e961de7b4dc384b2db67d503d82e305fe
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220678"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293701"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
 이 문서에서는 각 릴리스의 SAP ASE (이전에는 Sybase 용 SSMA) 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+SAP ASE 용 SSMA의 v 8.10 릴리스에는 약간의 성능 향상 및 버그 수정이 포함 되어 있습니다.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -324,6 +329,6 @@ Sybase 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이
 
 SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참조
 
 [Sybase &#40;SybaseToSQL&#41;용 SSMA 시작](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

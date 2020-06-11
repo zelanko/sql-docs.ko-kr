@@ -1,5 +1,6 @@
 ---
 title: 액세스용 SQL Server Migration Assistant 설치 (AccessToSQL) | Microsoft Docs
+description: SSMA (SQL Server Migration Assistant)의 설치 필수 구성 요소에 대해 알아보고 설치, 라이선스, 업그레이드 및 제거 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,26 +23,26 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79111902"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293760"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>액세스용 SQL Server Migration Assistant 설치 (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ACCESS 용 ssma (Migration Assistant)는 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 설치 필수 구성 요소, 최신 버전의 SSMA 링크 및 SSMA 설치, 라이선스, 제거 및 업그레이드에 대 한 지침을 제공 합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access 용 SSMA (Migration Assistant)는 Windows Installer 기반 마법사를 사용 하 여 설치 됩니다. 이 항목에서는 설치 필수 구성 요소, 최신 버전의 SSMA 링크 및 SSMA 설치, 라이선스, 제거 및 업그레이드에 대 한 지침을 제공 합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
 SSMA를 설치 하기 전에 시스템이 다음과 같은 요구 사항을 충족 하는지 확인 합니다.  
   
 -   Windows 7 이상 버전 또는 Windows Server 2008 이상 버전  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3.1 이상 버전  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 버전 4.0 이상 버전입니다. .NET Framework 버전 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 디스크 및 [Microsoft .NET 가이드](https://docs.microsoft.com/dotnet/framework/)의 정보를 사용 하 여 확인할 수 있습니다.
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)].NET Framework 버전 4.0 이상 버전입니다. .NET Framework 버전 4.0은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품 디스크 및 [Microsoft .NET 가이드](https://docs.microsoft.com/dotnet/framework/)의 정보를 사용 하 여 확인할 수 있습니다.
   
--   데이터베이스 개체와 데이터를 마이그레이션하려는 SQL Azure DB의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대상 인스턴스를 호스트 하는 컴퓨터에 대 한 액세스 권한이 있어야 합니다.  
+-   데이터베이스 개체와 데이터를 마이그레이션하려는 SQL Azure DB의 대상 인스턴스를 호스트 하는 컴퓨터에 대 한 액세스 권한이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있어야 합니다.  
   
 -   Microsoft DAO (Data Access Object) 공급자 버전 12.0 또는 14.0입니다. Microsoft Office 2010/2007 제품에서 DAO 공급자를 설치 하거나 Microsoft 웹 사이트에서 다운로드할 수 있습니다.  
   
@@ -87,7 +88,7 @@ Access 용 SSMA의 이후 버전으로 업그레이드 하려면 먼저 액세�
   
 Access 용 SSMA의 이전 버전에서 만든 프로젝트를 여는 경우 SSMA는 프로젝트를 최신 버전으로 변환할지 묻는 메시지를 표시 합니다. 최신 버전의 SSMA에서 프로젝트를 사용 하려면 **예** 를 클릭 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
 [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server로 Access 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [SQL Server에 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  

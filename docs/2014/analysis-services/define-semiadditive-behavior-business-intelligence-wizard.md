@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e57080ba-ce96-40f8-bca7-6701d1725b3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4931c3aff70758113b6a0250319d6dec722d8650
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081999"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528759"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>반가산적 동작 정의(비즈니스 인텔리전스 마법사)
   **반가산적 동작 정의** 페이지를 사용하여 측정값에 대한 반가산적 동작을 설정 또는 해제할 수 있습니다. 반가산적 동작은 큐브에 포함된 측정값이 시간 차원에 대해 집계되는 방법을 결정합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66081999"
  **반가산적 동작 해제**  
  큐브에 포함된 모든 측정값의 반가산적 동작을 해제합니다.  
   
- **마법사에서 반 가산적 멤버가 \<포함 된 차원 이름> account 차원을 검색 했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
+ **마법사에서 \<dimension name> 반 가산적 멤버가 포함 된 계정 차원을 검색 했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
  반가산적 멤버를 포함하는 계정 차원에 대한 반가산적 동작을 설정합니다. 이 옵션을 선택하면 계정 차원을 참조하는 측정값 그룹의 모든 측정값 집계 함수가 `ByAccount`로 설정됩니다.  
   
  계정 차원에 대한 자세한 내용은 [부모-자식 유형 차원의 재무 계정 만들기](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)를 참조하세요.  
@@ -37,7 +36,7 @@ ms.locfileid: "66081999"
  **개별 측정값에 대한 반가산적 동작 정의**  
  반가산적 동작을 설정하고 특정 측정값에 대한 반가산적 집계 함수를 지정합니다. 이 집계 함수는 해당 측정값을 포함하는 측정값 그룹이 참조하는 모든 차원에 적용됩니다.  
   
- **측정값 그룹**  
+ **측정값**  
  큐브에 포함된 측정값의 이름을 표시합니다.  
   
  **반 가산적 함수**  

@@ -1,5 +1,6 @@
 ---
 title: SSMA 프로젝트 작업 (OracleToSQL) | Microsoft Docs
+description: 설정 및 연결 정보와 함께, SQL Server 마이그레이션할 Oracle 데이터베이스에 대 한 메타 데이터가 포함 된 SSMA 프로젝트를 만드는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,28 +13,28 @@ ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 285665d1720b941523871d00fed9a0d2239c7d78
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266358"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294040"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 작업(OracleToSQL)
-Oracle 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하려면 먼저 ssma 프로젝트를 만듭니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
+Oracle 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 SSMA 프로젝트를 만듭니다. 프로젝트는 다음 정보를 포함 하는 파일입니다.  
   
--   마이그레이션하려는 Oracle 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
+-   마이그레이션하려는 Oracle 데이터베이스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.  
   
--   마이그레이션된 개체와 데이터를 받을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 대상 인스턴스에 대 한 메타 데이터입니다.  
+-   마이그레이션된 개체와 데이터를 받을의 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 정보입니다.  
   
 -   프로젝트 설정.  
   
-프로젝트를 열면 Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결이 끊어집니다. 이를 통해 오프 라인으로 작업할 수 있습니다. 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다시 연결 하는 방법에 대 한 자세한 내용은 [SQL Server &#40;OracleToSQL&#41;에 연결 ](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)을 참조 하세요.  
+프로젝트를 열면 Oracle 및에서 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이를 통해 오프 라인으로 작업할 수 있습니다. 에 다시 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server &#40;OracleToSQL&#41;에 연결 ](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)을 참조 하세요.  
   
 ## <a name="reviewing-default-project-settings"></a>기본 프로젝트 설정 검토  
-SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 마이그레이션하고, SSMA를 Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 동기화 하기 위한 여러 설정이 포함 되어 있습니다. 기본 설정은 대부분의 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 설정을 검토 해야 합니다. 원하는 경우 모든 새 프로젝트에 사용 되는 기본 설정을 변경할 수 있습니다.  
+SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 마이그레이션하고, SSMA를 Oracle 및와 동기화 하기 위한 여러 설정이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 기본 설정은 대부분의 사용자에 게 적합 합니다. 그러나 새 SSMA 프로젝트를 만들기 전에 설정을 검토 해야 합니다. 원하는 경우 모든 새 프로젝트에 사용 되는 기본 설정을 변경할 수 있습니다.  
   
 **기본 프로젝트 설정을 검토 하려면**  
   
@@ -51,14 +52,14 @@ SSMA에는 데이터베이스 개체를 변환 및 로드 하 고, 데이터를 
   
     -   시스템 개체 설정에 대 한 자세한 내용은 [프로젝트 설정&#40;시스템 개체 로드&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)를 참조 하세요.  
   
-    -   로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 동기화 설정에 대 한 자세한 내용은 [프로젝트 설정&#40;동기화&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)를 참조 하세요.  
+    -   로의 동기화 설정에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [프로젝트 설정&#40;동기화&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)를 참조 하세요.  
   
     -   GUI 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)를 참조 하세요.  
   
     -   데이터 형식 매핑 설정에 대 한 자세한 내용은 [프로젝트 설정 &#40;형식 매핑&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)을 참조 하세요.  
   
 ## <a name="creating-new-projects"></a>새 프로젝트 만들기  
-Oracle 데이터베이스에서로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 마이그레이션하려면 먼저 프로젝트를 만들어야 합니다.  
+Oracle 데이터베이스에서로 데이터를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 먼저 프로젝트를 만들어야 합니다.  
   
 **프로젝트를 만들려면**  
   
@@ -70,7 +71,7 @@ Oracle 데이터베이스에서로 [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 3.  **위치** 상자에서 프로젝트에 대 한 폴더를 입력 하거나 선택한 다음 **확인**을 클릭 합니다.  
   
-4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 선택 합니다. 제공되는 옵션은 다음과 같습니다.  
+4.  **마이그레이션** 드롭다운에서 마이그레이션에 사용 되는 대상 버전을 선택 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 제공되는 옵션은 다음과 같습니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -105,7 +106,7 @@ Oracle 데이터베이스에서로 [!INCLUDE[ssNoVersion](../../includes/ssnover
         SSMA는 Oracle 스키마를 구문 분석 하 고 메타 데이터를 프로젝트 파일에 저장 합니다.  
   
 ## <a name="opening-projects"></a>프로젝트 열기  
-프로젝트를 열면 Oracle과의 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 이를 통해 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드 합니다. 데이터를 마이그레이션하려면 Oracle 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 다시 연결 해야 합니다.  
+프로젝트를 열면 Oracle과의 연결이 끊어집니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이를 통해 오프 라인으로 작업할 수 있습니다. 메타 데이터를 업데이트 하려면 데이터베이스 개체를에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 데이터를 마이그레이션하려면 Oracle 및에 다시 연결 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **프로젝트를 열려면**  
   
@@ -117,7 +118,7 @@ Oracle 데이터베이스에서로 [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 2.  Oracle에 다시 연결 하려면 **파일** 메뉴에서 **Oracle에 다시 연결**을 클릭 합니다.  
   
-3.  에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다시 연결 하려면 **파일** 메뉴에서 **다시 연결**을 클릭 하 여 SQL Server 합니다.  
+3.  에 다시 연결 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **파일** 메뉴에서 **다시 연결**을 클릭 하 여 SQL Server 합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계는 [Oracle Database (OracleToSQL)에 연결](https://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)하는 것입니다.  

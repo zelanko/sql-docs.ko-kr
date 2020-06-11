@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071739"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547525"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>사용량 현황 데이터 수집 구성(SharePoint용 PowerPivot)
   사용량 현황 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용량 현황 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용량 현황 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "66071739"
     > [!NOTE]  
     >  서버 상태 및 데이터 새로 고침 작업에서도 사용량 현황 데이터를 생성하지만 이러한 프로세스와 연관된 이벤트가 없습니다.  
   
-5.  로그 파일 위치를 업데이트할 수도 있습니다. 자세한 내용은 다음 섹션을 참조하세요.  
+5.  로그 파일 위치를 업데이트할 수도 있습니다. 자세한 내용은 다음 단원을 참조하세요.  
   
 6.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
@@ -179,9 +178,9 @@ ms.locfileid: "66071739"
   
  다음 표에서는 사용량 현황 데이터 컬렉션 구성의 기본값을 보여 줍니다.  
   
-|설정|기본값|유형|유효 범위|  
+|설정|기본값|Type|유효 범위|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 사용 이벤트**(연결, 로드, 언로드, 요청)|\<사용>|부울|이러한 값이 사용되거나 사용되지 않습니다.|  
+|**Analysis Services 사용 이벤트**(연결, 로드, 언로드, 요청)|\<enabled>|부울|이러한 값이 사용되거나 사용되지 않습니다.|  
 |**쿼리 보고 간격**|300(초)|정수|1부터 임의의 양의 정수입니다. 기본값은 5분입니다.|  
 |**Usage data history**|365(일)|정수|0은 제한이 없음을 지정하지만 기록 데이터를 만료할 상한을 설정하고 이 데이터가 자동으로 삭제되도록 할 수도 있습니다. 제한된 보존 기간에 유효한 값은 1 ~ 5000(일)입니다.|  
 |간단한 응답 상한값|500(밀리초)|정수|간단한 요청-응답 교환을 정의하는 상한을 설정합니다. 0밀리초에서 500밀리초 사이에 완료되는 모든 요청은 간단한 요청으로, 보고에서 무시됩니다.|  

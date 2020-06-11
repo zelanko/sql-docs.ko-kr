@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2bb0825175ac10c3dcf2dfbd4d5d28bb3dc884ba
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000850"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858637"
 ---
 # <a name="new-full-text-catalog-general-page"></a>새 전체 텍스트 카탈로그(일반 페이지)
   이 대화 상자를 사용하여 새 전체 텍스트 카탈로그를 만들 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000850"
   
 -   [전체 텍스트 카탈로그 만들기 및 관리](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
-## <a name="uielement-list"></a>UI 요소 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **전체 텍스트 카탈로그 이름**  
  전체 텍스트 카탈로그의 이름입니다.  
   

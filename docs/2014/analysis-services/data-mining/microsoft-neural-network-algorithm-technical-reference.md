@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7db49fd2b6a86e9b113dbede785379f910b978
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521769"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론* 으로 구성된 *다중 계층 퍼셉트론*신경망( *역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "66083855"
   
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 신경망 모델의 기능 선택에 사용되는 방법은 특성의 데이터 형식에 따라 달라집니다. 다음 표에서는 참조를 위해 신경망 모델에 사용되는 기능 선택 방법과 신경망 알고리즘을 기반으로 하는 로지스틱 회귀 알고리즘에 사용되는 기능 선택 방법을 보여 줍니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|의견|  
 |---------------|------------------------|--------------|  
 |신경망|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|데이터에 연속 열이 포함된 경우 신경망 알고리즘에서는 Entropy 기반 및 Bayesian 점수 매기기 방법을 모두 사용할 수 있습니다.<br /><br /> 기본값|  
 |로지스틱 회귀|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이 알고리즘에 매개 변수를 전달하여 기능 선택 동작을 제어할 수 없기 때문에 기본값이 사용됩니다. 그러므로 모든 특성이 불연속 또는 분할된 특성일 경우 기본값은 BDEU입니다.|  
@@ -177,7 +176,7 @@ ms.locfileid: "66083855"
 ### <a name="distribution-flags"></a>분산 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘에서 지원되는 분산 플래그는 다음과 같습니다. 이 플래그는 모델에 대해서만 힌트로 사용됩니다. 알고리즘에서는 다른 분산을 발견할 경우 힌트에 제공된 분산이 아니라 발견된 분산을 사용합니다.  
   
- 정상  
+ 보통  
  열 내의 값이 정규 가우스 분포를 나타내는 것처럼 처리되어야 함을 나타냅니다.  
   
  Uniform  

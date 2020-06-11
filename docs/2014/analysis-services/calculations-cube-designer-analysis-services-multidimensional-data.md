@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603d5ea6f1e71abd469738b9f116927ca0b69e7d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088286"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527599"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>계산(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭을 사용하여 선택한 큐브에 대한 계산 멤버, 명명된 집합 및 MDX(Multidimensional Expressions) 스크립트 명령을 포함한 계산을 보고 편집할 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리를 포함 하는 템플릿 실행 (SQLXMLOLEDB)
+description: SQLXMLOLEDB 공급자를 사용 하 여 XPath 쿼리를 포함 하는 템플릿을 실행 하는 ADO 응용 프로그램의 예를 봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d746b898aaf0ea050409585b88e8c6861b4fa2e
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257296"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215644"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "75257296"
   
 -   매핑 스키마  
   
- 이 예제 ADO 응용 프로그램에서 XPath 쿼리 (루트)로 구성 된 XML 템플릿은 [xpath 쿼리 실행 &#40;SQLXMLOLEDB 공급자&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)에 설명 된 XSD 매핑 스키마 (myschema.xml)에 대해 지정 됩니다.  
+ 이 예제 ADO 응용 프로그램에서 XPath 쿼리 (루트)로 구성 된 XML 템플릿은 xpath 쿼리 [실행 &#40;SQLXMLOLEDB Provider&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md)에 설명 된 XSD 매핑 스키마 (MySchema.xml)에 대해 지정 됩니다.  
   
  매핑 스키마 속성은 XPath 쿼리가 실행 되는 XSD 매핑 스키마를 제공 합니다. 기본 경로 속성은 매핑 스키마에 대 한 파일 경로를 제공 합니다.  
   

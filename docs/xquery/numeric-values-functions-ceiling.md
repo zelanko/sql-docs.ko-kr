@@ -1,5 +1,6 @@
 ---
 title: 천장 함수 (XQuery) | Microsoft Docs
+description: XQuery 천장 () 함수를 사용 하 여 함수 인수 값 보다 작지 않은 소수 부분이 없는 가장 작은 수를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946573"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689767"
 ---
 # <a name="numeric-values-functions---ceiling"></a>숫자 값 함수 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **명령은** **xml** 유형 열입니다. 따라서 [query () 메서드 (XML 데이터 형식)](../t-sql/xml/query-method-xml-data-type.md) 는 XQuery를 지정 하는 데 사용 됩니다. XQuery 문은 쿼리 메서드에 대한 인수로 지정됩니다.  
   
--   **... return** 은 루프 구문입니다. 쿼리에서 **for** 루프는 요소> \<위치 목록을 식별 합니다. **For** 루프의 **return** 문은 각 작업 센터 위치에 대해 생성 될 XML을 설명 합니다.  
+-   **... return** 은 루프 구문입니다. 쿼리에서 **for** 루프는 \< 요소> 위치 목록을 식별 합니다. **For** 루프의 **return** 문은 각 작업 센터 위치에 대해 생성 될 XML을 설명 합니다.  
   
-    -   LocationID 및 LaborHrs 특성이 있는 \<위치> 요소입니다. 중괄호({ }) 안에 있는 해당 식은 문서에서 필요한 값을 검색합니다.  
+    -   \<LocationID 및 LaborHrs 특성이 있는 위치> 요소입니다. 중괄호({ }) 안에 있는 해당 식은 문서에서 필요한 값을 검색합니다.  
   
-    -   {$i/@LotSize } 식은 문서에서 LotSize 특성 (있는 경우)을 검색 합니다.  
+    -   {$ i/@LotSize } 식은 문서에서 LotSize 특성 (있는 경우)을 검색 합니다.  
   
     -   다음은 결과입니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에서 부울 조건자 지정 (SQLXML)
+description: XPath 쿼리에서 부울 값 조건자를 지정 하는 방법의 예 (SQLXML 4.0)를 참조 하십시오.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acf43b7fd863690259719a81ec60b136f9f4996d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8f2f4a80b6e4ab47245c55aa9fa2f2716ea39f7
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252571"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215394"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 반환 조건자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,13 +92,13 @@ ms.locfileid: "75252571"
     ```  
   
 ### <a name="b-specify-successive-and-nested-predicates"></a>B. 연속 및 중첩된 조건자 지정  
- 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성 값이 277이 고 값이 3 인 **TerritoryID** 특성을 모두 포함 하는 context 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
+ 다음 쿼리에서는 연속 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **\<Customer>** **SalesPersonID** 특성 값이 277이 고 **TerritoryID** 특성이 3 인 컨텍스트 노드의 모든 자식 요소를 반환 합니다.  
   
 ```  
 /child::Customer[attribute::SalesPersonID="277"][attribute::TerritoryID="3"]  
 ```  
   
- 이 쿼리는 조건자에 지정 된 조건을 모두 충족 하는 ** \<고객>** 요소를 반환 합니다.  
+ 이 쿼리는 **\<Customer>** 조건자에 지정 된 조건을 모두 충족 하는 요소를 반환 합니다.  
   
  **특성** 축에 대 한 바로 가기 (@)를 지정할 수 있으며, **자식** 축이 기본값 이므로 쿼리에서 생략할 수 있습니다.  
   
@@ -105,7 +106,7 @@ ms.locfileid: "75252571"
 /Customer[@SalesPersonID="277"][@TerritoryID="3"]  
 ```  
   
- 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **SalesPersonID** 특성 값이 2 인 ** \<order>** 요소를 하나 이상 포함 하는 ** \<order>** 자식 요소를 포함 하는 컨텍스트 노드의 모든 ** \<고객>** 자식 요소를 반환 합니다.  
+ 다음 XPath 쿼리에서는 중첩된 조건자를 사용하는 방법을 보여 줍니다. 이 쿼리는 **\<Customer>** **\<Order>** **\<Order>** **SalesPersonID** 특성 값이 2 인 요소를 하나 이상 포함 하는 자식 요소를 포함 하는 컨텍스트 노드의 모든 자식 요소를 반환 합니다.  
   
 ```  
 /Customer[Order[@SalesPersonID=2]]  
@@ -168,7 +169,7 @@ ms.locfileid: "75252571"
 ```  
   
 ### <a name="c-specify-a-top-level-predicate"></a>C. 최상위 조건자 지정  
- 다음 쿼리는 ** \<Order>** 요소 자식이 있는 컨텍스트 노드의 ** \<Customer>** 자식 요소 노드를 반환 합니다. 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
+ 다음 쿼리는 **\<Customer>** 요소 자식이 있는 컨텍스트 노드의 자식 요소 노드를 반환 합니다 **\<Order>** . 이 쿼리에서는 위치 경로를 최상위 조건자로 테스트합니다.  
   
 ```  
 /child::Customer[child::Order]  

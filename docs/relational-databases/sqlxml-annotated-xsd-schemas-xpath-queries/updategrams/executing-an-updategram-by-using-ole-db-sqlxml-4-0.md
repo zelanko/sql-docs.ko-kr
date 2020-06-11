@@ -1,5 +1,6 @@
 ---
 title: OLE DB (SQLXML)를 사용 하 여 Updategram 실행
+description: SQLXML 4.0에서 OLE DB를 사용 하 여 updategram를 실행 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241276"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215261"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241276"
 </Schema>  
 ```  
   
- 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하 여 ** \<contact>** 요소는 AdventureWorks 데이터베이스의 person. contact 테이블에 매핑됩니다.  
+ 쿼리에서 모든 직원 요소를 반환합니다. 기본 매핑을 사용 하는 경우 **\<Person.Contact>** 요소는 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑됩니다.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML을 명령으로 설정하고 결과를 XML 문서로 검색하려면  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리에는 매개 변수 (@Title)의 값이 필요 합니다. 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
+ 템플릿에는 SQL 쿼리가 들어 있습니다. 쿼리에는 매개 변수 ()의 값이 필요 @Title 합니다. 매개 변수 값을 전달하지 않으면 기본값("Mr.")이 사용됩니다.  
   
  매개 변수 값을 템플릿에 전달하는 경우 매개 변수 이름과 값을 모두 지정해야 합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: 기본 식 (XQuery) | Microsoft Docs
+description: 리터럴, 변수 참조, 컨텍스트 항목 식, 생성자 및 함수 호출을 포함 하는 XQuery 기본 식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200519"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529788"
 ---
 # <a name="primary-expressions-xquery"></a>기본 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "74200519"
 ## <a name="literals"></a>리터럴  
  XQuery 리터럴은 숫자 또는 문자열 리터럴이 될 수 있습니다. 문자열 리터럴에는 미리 정의된 엔터티 참조를 포함할 수 있는데 엔터티 참조는 문자 시퀀스입니다. 이 시퀀스는 구문상의 의미를 내포할 수도 있는 단일 문자를 나타내는 앰퍼샌드로 시작됩니다. 다음은 XQuery에 대해 미리 정의된 엔터티 참조입니다.  
   
-|EntityReference|나타내는 대상|  
+|EntityReference|표현|  
 |----------------------|----------------|  
 |`&lt;`|\<|  
 |`&gt;`|>|  
@@ -42,7 +43,7 @@ ms.locfileid: "74200519"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- 문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 예를 들어 유로 기호는 문자 참조 "&\#8364;"으로 나타낼 수 있습니다.  
+ 문자열 리터럴은 문자 참조 즉 유니코드 문자에 대한 XML 스타일의 참조도 포함할 수 있습니다. 이 참조는 해당 10진수 또는 16진수 코드 포인트로 식별됩니다. 예를 들어 유로 기호는 문자 참조 "&8364;"으로 나타낼 수 있습니다 \# .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 구문을 분석할 때 기본적으로 XML 버전 1.0을 사용합니다.  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>컨텍스트 항목 식  
  컨텍스트 항목은 현재 경로 식의 컨텍스트에서 처리 중인 항목입니다. 이 항목 식은 문서 노드가 있는 NULL이 아닌 XML 데이터 형식 인스턴스에서 초기화됩니다. 또한 XPath 식 또는 [] 조건자의 컨텍스트에서 nodes () 메서드를 통해 변경할 수 있습니다.  
   
- 컨텍스트 항목은 점(.)이 포함된 식에 의해 반환됩니다. 예를 들어 다음 쿼리는 특성 `a` `attr`의 존재 여부에 대해> <각 요소를 평가 합니다. 특성이 존재하면 요소가 반환됩니다. 조건부의 조건은 컨텍스트 노드가 하나의 마침표로 지정되도록 지정합니다.  
+ 컨텍스트 항목은 점(.)이 포함된 식에 의해 반환됩니다. 예를 들어 다음 쿼리는 `a` 특성의 존재 여부에 대해> <각 요소를 평가 합니다 `attr` . 특성이 존재하면 요소가 반환됩니다. 조건부의 조건은 컨텍스트 노드가 하나의 마침표로 지정되도록 지정합니다.  
   
 ```  
 DECLARE @var XML  

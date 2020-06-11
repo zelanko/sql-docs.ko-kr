@@ -1,7 +1,7 @@
 ---
 title: 동적 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/03/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56419723540114f122be2582f0de7c7e7d0c54f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306691"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423257"
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 정적 SQL은 많은 상황에서 잘 작동 하지만 데이터 액세스를 미리 확인할 수 없는 응용 프로그램 클래스가 있습니다. 예를 들어 스프레드시트를 사용 하 여 스프레드시트에서 데이터를 검색 하기 위해 DBMS로 보내는 쿼리를 입력할 수 있습니다. 스프레드시트 프로그램을 작성할 때 프로그래머에 게이 쿼리의 내용을 명확히 알 수 없습니다.  
@@ -39,4 +39,4 @@ ms.locfileid: "81306691"
   
 3.  프로그램은 동적 문이 실행 될 때마다 다른 매개 변수 값을 제공 하 여 EXECUTE 문을 반복적으로 사용할 수 있습니다.  
   
- 준비 된 실행은 여전히 정적 SQL과 동일 하지 않습니다. 정적 SQL에서 SQL 문을 처리 하는 처음 네 단계는 컴파일 타임에 발생 합니다. 준비 된 실행에서는 이러한 단계가 런타임에 발생 하지만 한 번만 수행 됩니다. 실행을 호출 하는 경우에만 계획 실행이 수행 됩니다. 이렇게 하면 동적 SQL의 아키텍처에 내재 된 성능상의 단점을 제거 하는 데 도움이 됩니다. 다음 그림에서는 정적 SQL, 즉시 실행을 사용 하는 동적 SQL 및 준비 된 실행의 동적 SQL 간의 차이점을 보여 줍니다.
+ 준비 된 실행은 여전히 정적 SQL과 동일 하지 않습니다. 정적 SQL에서 SQL 문을 처리 하는 처음 네 단계는 컴파일 타임에 발생 합니다. 준비 된 실행에서는 이러한 단계가 런타임에 발생 하지만 한 번만 수행 됩니다. 실행을 호출 하는 경우에만 계획 실행이 수행 됩니다. 이렇게 하면 동적 SQL의 아키텍처에 내재 된 성능상의 단점을 제거 하는 데 도움이 됩니다.

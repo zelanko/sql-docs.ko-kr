@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082796"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520421"
 ---
 # <a name="testing-and-validation-data-mining"></a>테스트 및 유효성 검사(데이터 마이닝)
   유효성 검사는 실제 데이터에 대한 마이닝 모델의 성능을 평가하는 프로세스입니다. 마이닝 모델을 프로덕션 환경으로 배포하기 전에 품질과 특징을 이해하여 마이닝 모델의 유효성을 검사하는 것이 중요합니다.  
   
- 이 섹션에서는 모델 품질과 관련 된 몇 가지 기본 개념을 소개 하 고에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]제공 된 모델 유효성 검사에 대 한 전략을 설명 합니다. 대규모 데이터 마이닝 프로세스에서 모델 유효성 검사를 수행하는 방법에 대한 개요는 [데이터 마이닝 솔루션](data-mining-solutions.md)을 참조하세요.  
+ 이 섹션에서는 모델 품질과 관련 된 몇 가지 기본 개념을 소개 하 고에 제공 된 모델 유효성 검사에 대 한 전략을 설명 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 대규모 데이터 마이닝 프로세스에서 모델 유효성 검사를 수행하는 방법에 대한 개요는 [데이터 마이닝 솔루션](data-mining-solutions.md)을 참조하세요.  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>데이터 마이닝 모델의 테스트 및 유효성 검사 방법  
  데이터 마이닝 모델의 품질과 특징을 평가하는 데에는 여러 가지 방법이 있습니다.  

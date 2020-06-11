@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174236"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527733"
 ---
 # <a name="browsing-a-neural-network-model"></a>신경망 모델 찾아보기
   **찾아보기**를 사용하여 신경망 또는 로지스틱 회귀 모델을 열면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 신경망 모델 뷰어와 비슷한 대화형 뷰어에 모델이 표시됩니다. 이 뷰어에서는 상관 관계를 탐색하고 모델 및 기본 데이터의 패턴에 대한 정보를 얻을 수 있습니다.
@@ -89,7 +88,7 @@ ms.locfileid: "78174236"
 
 1.  특정 그룹을 대상으로 한다고 가정하고 해당 그룹에서 구매에 가장 큰 영향을 미치는 요인을 확인합니다.
 
-     **입력** 창에서 **특성**아래의 ** \<모두>** 셀을 클릭 하 고 **Age**를 선택 합니다.
+     **입력** 창에서 **\<All>** **특성**아래의 셀을 클릭 하 고 **Age**를 선택 합니다.
 
      **값**에 대해 가장 어린 연령 범주를 선택합니다.
 

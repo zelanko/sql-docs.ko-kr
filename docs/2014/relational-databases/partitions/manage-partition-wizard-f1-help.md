@@ -23,12 +23,12 @@ ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49625e9ef5311b261bc309a90cfa9d6b315953f6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249675"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858865"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>파티션 관리 마법사 F1 도움말
   **파티션 관리 마법사** 를 사용하여 파티션 전환이나 슬라이딩 윈도우(Sliding Window) 시나리오의 구현을 통해 기존 파티션 테이블을 관리하고 수정할 수 있습니다. 이 마법사는 파티션 관리를 용이하게 하고 테이블로 또는 테이블로부터의 정기적인 데이터 마이그레이션을 단순화합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "63249675"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 선택하고 파티션을 만들려는 테이블을 마우스 오른쪽 단추로 클릭하고 **스토리지**를 가리킨 후 **파티션 관리**를 클릭합니다.  
   
-     `Note`**파티션 관리** 를 사용할 수 없는 경우에는 파티션이 없는 테이블을 선택 했을 수 있습니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기**를 클릭하고 **파티션 작성 마법사**를 사용합니다.  
+     `Note`**파티션 관리** 를 사용할 수 없는 경우에는 파티션이 없는 테이블을 선택 했을 수 있습니다. 테이블에 파티션을 만들려면 **스토리지** 하위 메뉴에서 **파티션 만들기** 를 클릭하고 **파티션 작성 마법사** 를 사용합니다.  
   
  파티션과 인덱스에 대한 자세한 내용은 [Partitioned Tables and Indexes](partitioned-tables-and-indexes.md)를 참조하십시오.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63249675"
 ### <a name="sliding-window-scenario"></a>슬라이딩 윈도우(Sliding Window) 시나리오  
  슬라이딩 윈도우(Sliding Window) 시나리오에서 파티션을 관리하려면 **슬라이딩 윈도우 시나리오에서 분할된 데이터 관리**를 선택합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **파티션 전환용 준비 테이블 만들기**  
  분할된 기존 테이블로 또는 분할된 기존 테이블에서 내부 전환하거나 외부 전환할 데이터의 준비 테이블을 만듭니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63249675"
 ##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> 파티션 내부 전환 옵션 선택 페이지  
  **파티션 내부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블로 내부 전환할 준비 테이블을 선택할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **모든 파티션 표시**  
  분할된 테이블의 현재 파티션을 포함한 모든 파티션을 표시하려면 선택합니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63249675"
 ##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> 파티션 외부 전환 옵션 선택 페이지  
  **파티션 외부 전환 옵션 선택** 페이지를 사용하여 분할된 테이블에서 외부 전환할 분할된 데이터를 저장하기 위한 파티션 및 준비 테이블을 선택할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **파티션 표**  
  선택한 파티션의 파티션 이름, **왼쪽 경계**, **오른쪽 경계**, **파일 그룹**및 **행 개수** 를 표시합니다.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63249675"
   
  원본 파티션에 존재하는 준비 테이블에 동일한 인덱스를 만들 수도 있습니다. 준비 테이블에는 원본 파티션의 요소를 기반으로 하는 제약 조건이 자동으로 포함됩니다. 이 제약 조건은 일반적으로 원본 파티션의 경계 값에서 생성됩니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **준비 테이블 이름**  
  준비 테이블에 대한 이름을 만들거나 입력란에 표시되는 기본 이름을 사용합니다.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "63249675"
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  **요약** 페이지를 사용하여 이전 페이지에서 선택한 옵션을 검토할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **선택 항목 검토**  
  마법사의 각 페이지에서 사용자가 선택한 항목을 표시합니다. 이전에 선택한 옵션을 확장하고 보려면 노드를 클릭합니다.  
   

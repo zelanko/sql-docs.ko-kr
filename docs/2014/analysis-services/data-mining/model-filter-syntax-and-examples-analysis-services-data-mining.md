@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521076"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>모델 필터 구문 및 예(Analysis Services - 데이터 마이닝)
   이 섹션에서는 샘플 식과 함께 모델 필터 구문에 대한 자세한 정보를 제공합니다.  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> 예 7: 복잡한 필터 조합  
- 이 모델의 시나리오는 예 4의 시나리오와 비슷하지만 훨씬 더 복잡합니다. 중첩 테이블 **ProductsOnSale**에는 필터 조건이 `(OnSale)` 있습니다 .이는 **Onsale** 의 값이 **ProductName**에 나열 `true` 된 제품에 대 한 값 이어야 함을 의미 합니다. 여기서 **OnSale** 은 구조 열입니다.  
+ 이 모델의 시나리오는 예 4의 시나리오와 비슷하지만 훨씬 더 복잡합니다. 중첩 테이블 **ProductsOnSale**에는 필터 조건이 있습니다 .이는 `(OnSale)` **Onsale** 의 값이 `true` **ProductName**에 나열 된 제품에 대 한 값 이어야 함을 의미 합니다. 여기서 **OnSale** 은 구조 열입니다.  
   
- **ProductsNotOnSale**에 대 한 필터의 두 번째 부분은이 구문을 반복 하지만 **onsale** 의 값이 인 `not true``(!OnSale)`제품에 대 한 필터입니다.  
+ **ProductsNotOnSale**에 대 한 필터의 두 번째 부분은이 구문을 반복 하지만 **onsale** 의 값이 인 제품에 대 한 필터입니다 `not true``(!OnSale)` .  
   
  마지막으로 조건을 조합하고 하나의 추가 제한 사항을 사례 테이블에 추가합니다. 그 결과 26세 이상의 모든 고객에 대해 **ProductsNotOnSale** 목록에 포함된 사례를 기반으로 **ProductsOnSale** 목록의 제품 구매를 예측할 수 있습니다.  
   

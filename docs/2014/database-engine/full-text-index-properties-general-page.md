@@ -12,19 +12,19 @@ ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000943"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858685"
 ---
 # <a name="full-text-index-properties-general-page"></a>전체 텍스트 인덱스 속성(일반 페이지)
   **전체 텍스트 인덱스의 수정 가능한 속성을 보거나 변경하려면**  
   
 -   [전체 텍스트 인덱스 관리](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>UI 요소 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **전체 텍스트 카탈로그**  
  전체 텍스트 인덱스와 연결된 전체 텍스트 카탈로그의 이름을 표시합니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "83000943"
 |-|-|  
 |**전체**|테이블에 대해 전체 채우기를 수행하는 동안 모든 행에 대해 인덱스 항목이 작성됩니다.|  
 |**대비**|증분 채우기는 마지막 채우기 후 또는 마지막 채우기를 진행 중인 동안 추가, 삭제 또는 수정된 행에 대해 전체 텍스트 인덱스를 업데이트합니다. 증분 채우기를 수행하려면 기본 테이블에 `timestamp` 데이터 형식의 열이 포함되어 있어야 합니다.|  
-|**업데이트**|기본 테이블의 데이터가 수정될 때마다 전체 텍스트 인덱스가 업데이트됩니다.|  
+|**Update**|기본 테이블의 데이터가 수정될 때마다 전체 텍스트 인덱스가 업데이트됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [전체 텍스트 검색 시작](../relational-databases/search/get-started-with-full-text-search.md)  

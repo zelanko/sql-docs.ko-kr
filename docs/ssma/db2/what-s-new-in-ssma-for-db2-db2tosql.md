@@ -1,24 +1,29 @@
 ---
 title: D b 2 용 SSMA의 새로운 기능 (DB2ToSQL) | Microsoft Docs
+description: 각 릴리스에 대 한 DB2 (DB2ToSQL)에 대 한 변경 SQL Server Migration Assistant 내용에 대해 알아봅니다.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220090"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293980"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
 이 문서에서는 각 릴리스의 DB2 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+D b 2 용 SSMA의 v 8.10 릴리스는 외래 키 검색에서 회귀를 해결 하 고 약간의 성능 향상을 포함 합니다.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -52,7 +57,7 @@ D b 2 용 SSMA의 v2.0 릴리스에는 새 DB2 구문 파서 뿐만 아니라 �
 * MQ 테이블의 함수에 대 한 변환 기능이 향상 `COUNT` 되었습니다.
 * 문을 변환 `SAVEPOINT` 합니다.
 * 절에서 값에 대 한 DB2's 동작을 에뮬레이트하는 변환입니다 `NULL` `ORDER BY` .
-* RESULT SET 문 연결에 대 한 구문 분석 지원.
+* 문에 대 한 구문 분석 지원 `ASSOCIATE RESULT SET` .
 
 > [!IMPORTANT]
 > SSMA v 8.5 이상에서 .NET 4.7.2는 설치 필수 구성 요소입니다. 이 버전을 설치 해야 하는 경우 [여기](https://dotnet.microsoft.com/download/dotnet-framework/net472)에서 런타임 파일을 다운로드할 수 있습니다.

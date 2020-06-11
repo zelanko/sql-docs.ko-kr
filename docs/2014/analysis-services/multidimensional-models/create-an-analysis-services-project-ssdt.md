@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076234"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536355"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 애플리케이션 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 애플리케이션에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
@@ -115,7 +114,7 @@ ms.locfileid: "66076234"
   
 |폴더|설명|  
 |------------|-----------------|  
-|솔루션 탐색기|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
+|Data Sources|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본을 포함합니다. 데이터 원본 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 디자이너에서 편집합니다.|  
 |데이터 원본 뷰|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 데이터 원본 뷰를 포함합니다. 데이터 원본 뷰 마법사를 사용하여 이러한 개체를 만들고 데이터 원본 뷰 디자이너에서 편집합니다.|  
 |큐브|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 큐브를 포함합니다. 큐브 마법사를 사용하여 이러한 개체를 만들고 큐브 디자이너에서 편집합니다.|  
 |차원|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 차원을 포함합니다. 차원 마법사 또는 큐브 마법사를 사용하여 이러한 개체를 만들고 차원 디자이너에서 편집합니다.|  
@@ -150,7 +149,7 @@ ms.locfileid: "66076234"
   
  다음 표에 나열된 항목 템플릿은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 새 항목 추가 **대화 상자의** 프로젝트 항목 범주에서 사용할 수 있습니다.  
   
-|범주|항목 템플릿|설명|  
+|Category|항목 템플릿|설명|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 항목|Cube|큐브 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 큐브를 추가합니다.|  
 ||데이터 원본|데이터 원본 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터 원본을 추가합니다.|  

@@ -1,5 +1,6 @@
 ---
 title: DB2 데이터베이스를 SQL Server로 마이그레이션 (DB2ToSQL) | Microsoft Docs
+description: 이 권장 프로세스를 사용 하 여 DB2 데이터베이스를 SQL Server으로 마이그레이션하거나 SSMA (SQL Server Migration Assistant)를 사용 하 여 Azure SQL Database 합니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79cc961148add0bf2096a716b669199360a565b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084651"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293680"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>DB2 데이터베이스를 SQL Server로 마이그레이션 (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant)는 DB2 데이터베이스를 또는 Azure SQL DB로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. D b 2 용 SSMA를 사용 하면 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고, 데이터베이스 개체를 또는 AZURE sql db로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션한 다음, 또는 azure sql db로 데이터를 마이그레이션할 수 있습니다. SYS 및 SYSTEM DB2 스키마는 마이그레이션할 수 없습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]D b 2 용 SSMA (Migration Assistant)는 DB2 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL DB로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. D b 2 용 SSMA를 사용 하면 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE SQL db로 마이그레이션한 다음, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 AZURE sql db로 데이터를 마이그레이션할 수 있습니다. SYS 및 SYSTEM DB2 스키마는 마이그레이션할 수 없습니다.  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
-DB2 데이터베이스에서 또는 Azure SQL DB로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 데이터를 성공적으로 마이그레이션하려면 다음 프로세스를 사용 합니다.  
+DB2 데이터베이스에서 또는 Azure SQL DB로 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.  
   
 1.  [새 SSMA 프로젝트](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)입니다.  
   
@@ -40,7 +41,7 @@ DB2 데이터베이스에서 또는 Azure SQL DB로 [!INCLUDE[ssNoVersion](../..
   
     다음 방법 중 하나를 수행 하 여이 작업을 수행할 수 있습니다.  
   
-    -   스크립트를 저장 하 고에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]실행 합니다.  
+    -   스크립트를 저장 하 고에서 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
     -   데이터베이스 개체를 동기화 합니다.  
   

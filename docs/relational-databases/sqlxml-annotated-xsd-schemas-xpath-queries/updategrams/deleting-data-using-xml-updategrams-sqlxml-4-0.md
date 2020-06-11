@@ -1,5 +1,6 @@
 ---
 title: XML Updategrams을 사용 하 여 데이터 삭제 (SQLXML)
+description: SQLXML 4.0에서 XML updategram를 사용 하 여 데이터를 삭제 하는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad537d8b2ce247d45e8e7a94216006023373c13c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f32c1107d886b7bc84590abbd6bab5343d2a2b8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252425"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529832"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삭제(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Updategram **는 \<after>** 블록에 해당 레코드가 없는 ** \<이전>** 블록에 레코드 인스턴스가 나타날 때 삭제 작업을 나타냅니다. 이 경우 updategram는 데이터베이스에서 ** \<이전>** 블록의 레코드를 삭제 합니다.  
+  Updategram는 레코드 인스턴스가 블록에 **\<before>** 해당 레코드가 없는 블록에 표시 되는 경우 삭제 작업을 나타냅니다 **\<after>** . 이 경우 updategram는 데이터베이스에서 블록의 레코드를 삭제 합니다 **\<before>** .  
   
  삭제 작업에 대한 Updategram 형식은 다음과 같습니다.  
   
@@ -43,9 +44,9 @@ ms.locfileid: "75252425"
 </ROOT>  
 ```  
   
- Updategram는 삭제 작업만 수행 하는 경우 ** \<after>** 태그를 생략할 수 있습니다. 선택적 **매핑 스키마** 특성을 지정 하지 않으면 updategram에 지정 된 ** \<ElementName>** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
+ **\<after>** Updategram가 삭제 작업만 수행 하는 경우 태그를 생략할 수 있습니다. 선택적 **매핑 스키마** 특성을 지정 하지 않으면 **\<ElementName>** updategram에 지정 된가 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
   
- Updategram에 지정 된 요소가 테이블에서 둘 이상의 행과 일치 하거나 행과 일치 하지 않는 경우 updategram는 오류를 반환 하 고 전체 ** \<sync>** 블록을 취소 합니다. Updategram의 요소는 한 번에 하나의 레코드만 삭제할 수 있습니다.  
+ Updategram에 지정 된 요소가 테이블에서 둘 이상의 행과 일치 하거나 행과 일치 하지 않는 경우 updategram는 오류를 반환 하 고 전체 블록을 취소 합니다 **\<sync>** . Updategram의 요소는 한 번에 하나의 레코드만 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  이 섹션의 예에서는 기본 매핑을 사용합니다. 즉, Updategram에 매핑 스키마가 지정되어 있지 않습니다. 매핑 스키마를 사용 하는 updategram의 추가 예제는 [Updategram &#40;SQLXML 4.0&#41;에서 주석이 추가 된 매핑 스키마 지정 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)을 참조 하세요.  
@@ -57,7 +58,7 @@ ms.locfileid: "75252425"
   
  이러한 예에서 Updategram은 매핑 스키마를 지정하지 않으므로 요소 이름은 테이블 이름에 매핑되고 특성 또는 하위 요소는 열에 매핑되는 기본 매핑을 사용합니다.  
   
- 이 첫 번째 updategram은 특성 중심 이며 ** \<before>** 블록의 두 교대 교대 (야간 및 야간 시간)을 식별 합니다. After>블록에는 해당 레코드가 없기 때문에이는 삭제 작업입니다. ** \<**  
+ 이 첫 번째 updategram는 특성 중심 이며 블록에서 두 교대 교대 (야간 및 야간 시간)을 식별 **\<before>** 합니다. 블록에 해당 레코드가 없기 때문에 **\<after>** 이는 삭제 작업입니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -84,7 +85,7 @@ ms.locfileid: "75252425"
   
 1.  [XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)에서 예제 B ("updategram를 사용 하 여 여러 레코드 삽입")를 완료 합니다.  
   
-2.  위의 updategram을 메모장에 복사 하 고 [Xml Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)에서 완료 하는 데 사용한 것과 동일한 폴더 ("updategram를 사용 하 여 여러 레코드 삽입")에 Updategram-RemoveShifts로 저장 합니다.  
+2.  위의 updategram을 메모장에 복사 하 고 [XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)에서 완료 하는 데 사용한 것과 동일한 폴더 ("updategram를 사용 하 여 여러 레코드 삽입")에 Updategram-RemoveShifts.xml로 저장 합니다.  
   
 3.  SQLXML 4.0 테스트 스크립트(Sqlxml4test.vbs)를 만든 다음 이 스크립트를 사용하여 Updategram을 실행합니다.  
   

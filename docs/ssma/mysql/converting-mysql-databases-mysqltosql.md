@@ -1,5 +1,6 @@
 ---
 title: MySQL 데이터베이스 변환 (MySQLToSQL) | Microsoft Docs
+description: 프로젝트 및 데이터 매핑 옵션을 연결 하 고 설정한 후에는 MySQL 데이터베이스 개체를 SSMA를 사용 하 SQL Server 또는 Azure SQL Database 개체로 변환 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51604ba389e103798ab067245f210bd565a719e7
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103065"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293670"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 변환(MySQLToSQL)
-MySQL에 연결 하 고,에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하거나 SQL Azure 하 고, 프로젝트 및 데이터 매핑 옵션을 설정 하 고 나면 mysql 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 변환 하거나 데이터베이스 개체를 SQL Azure 수 있습니다.  
+MySQL에 연결 하 고,에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 하 고, 프로젝트 및 데이터 매핑 옵션을 설정 하 고 나면 mysql 데이터베이스 개체를로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 데이터베이스 개체를 SQL Azure 수 있습니다.  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-데이터베이스 개체를 변환 하는 것은 MySQL의 개체 정의를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하 여 유사 하거나 SQL Azure 개체로 변환한 후 ssma 메타 데이터에이 정보를 로드 합니다. 인스턴스에 정보를 로드 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 그런 다음 또는 SQL Azure 메타 데이터 탐색기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 개체 및 해당 속성을 볼 수 있습니다.  
+데이터베이스 개체를 변환 하는 것은 MySQL의 개체 정의를 사용 하 여 유사 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 개체로 변환한 후 SSMA 메타 데이터에이 정보를 로드 합니다. 인스턴스에 정보를 로드 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그런 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기를 사용 하 여 개체 및 해당 속성을 볼 수 있습니다.  
   
 변환 하는 동안 SSMA는 출력 창에 출력 메시지를 인쇄 하 고 오류 목록 창에 오류 메시지를 출력 합니다. 출력 및 오류 정보를 사용 하 여 원하는 변환 결과를 얻기 위해 MySQL 데이터베이스 또는 변환 프로세스를 수정 해야 하는지 여부를 결정할 수 있습니다.  
   
@@ -28,13 +29,13 @@ MySQL에 연결 하 고,에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 개체를 변환 하기 전에 **프로젝트 설정** 대화 상자에서 프로젝트 변환 옵션을 검토 합니다. 이 대화 상자를 사용 하 여 SSMA가 테이블과 인덱스를 변환 하는 방법을 설정할 수 있습니다. 자세한 내용은 [프로젝트 설정 &#40;변환&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md) 을 참조 하십시오.  
   
 ## <a name="conversion-results"></a>변환 결과  
-다음 표에서는 변환 된 MySQL 개체 및 결과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 보여 줍니다.  
+다음 표에서는 변환 된 MySQL 개체 및 결과 개체를 보여 줍니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |||  
 |-|-|  
 |**MySQL 개체**|**결과 SQL Server 개체**|  
-|인덱스와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다. 테이블은 모든 인덱스 및 제약 조건으로 변환 됩니다. 인덱스는 별도의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체로 변환 됩니다.<br /><br />**공간 데이터 형식 매핑은** 테이블 노드 수준 에서만 수행할 수 있습니다.<br /><br />테이블 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
-|Functions|함수를 Transact-sql로 직접 변환할 수 있는 경우 SSMA는 함수를 만듭니다. 경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 프로젝트 설정에서 **함수 변환을** 사용 하 여이 작업을 수행할 수 있습니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.<br /><br />**지정 된 항목:**<br /><br />프로젝트 설정에 따라 변환<br /><br />함수로 변환<br /><br />저장 프로시저로 변환<br /><br />함수 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
+|인덱스와 같은 종속 개체가 있는 테이블|SSMA는 종속 개체가 있는 테이블을 만듭니다. 테이블은 모든 인덱스 및 제약 조건으로 변환 됩니다. 인덱스는 별도의 개체로 변환 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br />**공간 데이터 형식 매핑은** 테이블 노드 수준 에서만 수행할 수 있습니다.<br /><br />테이블 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
+|함수|함수를 Transact-sql로 직접 변환할 수 있는 경우 SSMA는 함수를 만듭니다. 경우에 따라 함수를 저장 프로시저로 변환 해야 합니다. 프로젝트 설정에서 **함수 변환을** 사용 하 여이 작업을 수행할 수 있습니다. 이 경우 SSMA는 저장 프로시저와 저장 프로시저를 호출 하는 함수를 만듭니다.<br /><br />**지정 된 항목:**<br /><br />프로젝트 설정에 따라 변환<br /><br />함수로 변환<br /><br />저장 프로시저로 변환<br /><br />함수 변환 설정에 대 한 자세한 내용은 [변환 설정](conversion-settings-mysqltosql.md) 을 참조 하세요.|  
 |절차|프로시저를 Transact-sql로 직접 변환할 수 있으면 SSMA에서 저장 프로시저를 만듭니다. 경우에 따라 저장 프로시저를 자치 트랜잭션에서 호출 해야 합니다. 이 경우 SSMA는 두 개의 저장 프로시저를 만듭니다. 하나는 프로시저를 구현 하 고 다른 하나는 구현 하는 저장 프로시저를 호출 하는 데 사용 됩니다.|  
 |데이터베이스 변환|MySQL 개체인 데이터베이스는 MySQL 용 SSMA에서 직접 변환 되지 않습니다. MySQL 데이터베이스는 스키마 이름과 유사 하 게 처리 되며, 모든 물리적 매개 변수는 변환 중에 손실 됩니다. MySQL 용 SSMA는 mysql 데이터베이스 매핑을 사용 하 여 [MySQLToSQL&#41;&#40;SQL Server 스키마를](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md) 사용 하 여 mysql 데이터베이스의 개체를 적절 한 SQL Server 데이터베이스/스키마 쌍에 매핑합니다.|  
 |트리거 변환|**SSMA는 다음 규칙에 따라 트리거를 만듭니다.**<br /><br />Instead of 트리거는 T-sql 트리거 대신로 변환 됩니다.<br /><br />AFTER 트리거는 행 마다 반복을 사용 하거나 사용 하지 않고 T-sql 트리거 후에로 변환 됩니다.|  
@@ -103,7 +104,7 @@ MySQL 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 �
   
 -   MySQL 데이터베이스에서 개체를 수정 하 여 문제가 있는 코드를 제거 하거나 수정할 수 있습니다. 업데이트 된 코드를 SSMA에 로드 하려면 메타 데이터를 업데이트 해야 합니다. 자세한 내용은 [MySQL에 연결 &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md) 을 참조 하세요.  
   
--   마이그레이션할 때 개체를 제외할 수 있습니다. 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 메타 데이터 탐색기 및 Mysql 메타 데이터 탐색기에서 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 취소 하거나 mysql에서 데이터를 SQL Azure 및 마이그레이션합니다.  
+-   마이그레이션할 때 개체를 제외할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 SQL Azure 메타 데이터 탐색기 및 Mysql 메타 데이터 탐색기에서 개체를 로드 하기 전에 항목 옆에 있는 확인란의 선택을 취소 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 mysql에서 데이터를 SQL Azure 및 마이그레이션합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 마이그레이션 프로세스의 다음 단계에서는 변환 된 [데이터베이스 개체를 SQL Server &#40;MySQLToSQL&#41;로드](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md) 합니다.  

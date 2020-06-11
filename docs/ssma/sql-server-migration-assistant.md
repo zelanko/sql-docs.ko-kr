@@ -1,5 +1,6 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
+description: Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화 하는 도구인 SQL Server Migration Assistant에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294030"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
@@ -68,7 +69,7 @@ SSMA에 대해 지원 되는 대상 버전은 다음과 같습니다.
   
   - 개발자를 SQL Server 하는 데 유용한 [SQL Server Developer 센터 커뮤니티](https://go.microsoft.com/fwlink/?LinkId=42456) -뉴스 그룹, 포럼 및 기타 커뮤니티 리소스  
   
-- **지원 지원** -로 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 이동 하 여 ' SQL Server Migration Assistant '을 검색 합니다.  버전을 선택 하 고 "요청 시작"을 선택 합니다.  보조 지원은 SQL Server Migration Assistant 도구에 포함 됩니다.  
+- **지원 지원** -로 이동 [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) 하 여 ' SQL Server Migration Assistant '을 검색 합니다.  버전을 선택 하 고 "요청 시작"을 선택 합니다.  보조 지원은 SQL Server Migration Assistant 도구에 포함 됩니다.  
   
 - **프리미어 지원** -프리미어 계약이 있는 경우 프리미어 [온라인 포털](https://premier.microsoft.com/)에서 프리미어 지원을 받을 수 있습니다.  
   

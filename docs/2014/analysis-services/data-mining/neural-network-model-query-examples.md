@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083288"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520905"
 ---
 # <a name="neural-network-model-query-examples"></a>신경망 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 신경망 모델에 대한 내용 쿼리에서는 숨겨진 계층 수와 같은 모델 메타데이터를 검색할 수 있습니다. 또한 예측 쿼리는 입력에 따른 분류를 제안하고 선택적으로 각 분류에 대한 확률을 제공할 수 있습니다.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>예제 쿼리 5: 단일 예측 만들기  
  신경망 모델에 대한 예측 쿼리를 작성하는 가장 쉬운 방법은 **와** 의 데이터 마이닝 디자이너에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에 제공되는 예측 쿼리 작성기를 사용하는 것입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어에서 모델을 찾아서 관심 있는 특성을 필터링하고 추세를 확인한 다음 **마이닝 모델 예측** 탭으로 전환하여 쿼리를 만들고 해당 추세에 대한 새 값을 예측할 수 있습니다.  
   
- 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이렇게 하려면 뷰어에서 모델을 열고 **입력**에서 ** \<모든>** 를 선택 합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
+ 예를 들어 콜 센터 모델을 찾아서 주문량과 다른 특성 간의 상관 관계를 확인할 수 있습니다. 이렇게 하려면 뷰어에서 모델을 열고 **입력**에 대해를 선택 **\<All>** 합니다.  그런 다음 **출력**에서 **Number of Orders**를 선택합니다. **값 1**에서 가장 많은 주문 횟수를 나타내는 범위를 선택하고 **값 2**에서 가장 적은 주문 횟수를 나타내는 범위를 선택합니다. 그러면 해당 모델에서 주문량과 상관 관계가 있는 모든 특성을 한눈에 볼 수 있습니다.  
   
  뷰어에서 결과를 보면 특정 요일에 주문량이 적고 운영자의 수를 늘릴수록 판매량이 많아지는 상관 관계가 있다는 것을 알 수 있습니다. 그런 다음 모델에 대한 예측 쿼리를 사용하여 "가상 분석" 가설을 테스트하고 주문량이 적은 요일의 수준 2 운영자 수를 늘리면 주문이 늘어날지 예측할 수 있습니다. 이렇게 하려면 다음과 같은 쿼리를 만듭니다.  
   
@@ -210,7 +209,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[PredictAdjustedProbability&#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
 |[PredictHistogram&#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  

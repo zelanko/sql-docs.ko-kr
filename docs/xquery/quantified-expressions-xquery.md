@@ -1,5 +1,6 @@
 ---
 title: 정량화 된 식 (XQuery) | Microsoft Docs
+description: XQuery에서 정량화 된 식을 사용 하 여 하나 이상의 시퀀스에 대해 존재 또는 universal 정량화를 식에 적용 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946370"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215246"
 ---
 # <a name="quantified-expressions-xquery"></a>정량화된 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946370"
   
  쿼리에 이러한 식을 사용하여 하나 이상의 시퀀스에서 존재 또는 범용 정량화를 명시적으로 식에 적용할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `satisfies` 절에 있는 식의 결과가 노드 시퀀스, 빈 시퀀스 또는 부울 값 중 하나여야 합니다. 식의 결과에 알맞은 부울 값이 정량화에 사용됩니다. **일부** 를 사용 하는 존재 정량화는 수량자에 의해 바인딩된 값 중 하나 이상이 만족 식에 true 결과가 있는 경우 true를 반환 합니다. **모든** 를 사용 하는 universal 정량화은 수량자로 바인딩된 모든 값에 대해 True 여야 합니다.  
   
- 예를 들어 다음 쿼리는 모든 \<위치> 요소를 검사 하 여 locationid 특성이 있는지 여부를 확인 합니다.  
+ 예를 들어 다음 쿼리는 모든 요소를 검사 \<Location> 하 여 LocationID 특성이 있는지 여부를 확인 합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- LocationID는 \<Location> 요소의 필수 특성이 기 때문에 예상 결과를 수신 합니다.  
+ LocationID는 요소의 필수 특성이 기 때문에 \<Location> 예상 결과를 받게 됩니다.  
   
 ```  
 <Result>All work centers have Location ID</Result>   

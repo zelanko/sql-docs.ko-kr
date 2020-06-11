@@ -4,23 +4,23 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938112"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670006"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리&gt; -셰이프
+# <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리 &gt; -셰이프
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   여러 데이터 원본으로부터 단일 계층 구조의 테이블(중첩 테이블이 있는 테이블)로 쿼리를 결합합니다. 이 테이블은 마이닝 모델의 사례 테이블이 됩니다.  
   
- **SHAPE** 명령의 전체 구문은 MDAC ( [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 액세스 구성 요소) SDK (소프트웨어 개발 키트)에 설명 되어 있습니다.  
+ **SHAPE** 명령의 전체 구문은 [!INCLUDE[msCoName](../includes/msconame-md.md)] MDAC (데이터 액세스 구성 요소) SDK (소프트웨어 개발 키트)에 설명 되어 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

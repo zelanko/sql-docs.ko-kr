@@ -14,17 +14,17 @@ ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999547"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859215"
 ---
 # <a name="name-not-found-dialog-box"></a>찾을 수 없는 이름 대화 상자
   대화 상자에 있는 개체 이름 중 하나 이상을 찾을 수 없습니다. 계속하려면 옵션을 선택합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **정보를 수정하고 다시 검색합니다.**  
  **개체 유형 선택**, **개체 유형**및 **개체 이름 입력** 영역을 사용할 수 있도록 하려면 선택합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "62999547"
  **개체 이름 입력**  
  찾을 수 없는 개체 이름이 들어 있습니다. 개체 이름을 수정하거나 새 개체 이름을 입력합니다.  
   
- **Remove** **선택 항목에서** *\<개체 이름>* 제거      
+ **선택 항목에서** * \< 개체 이름>* **제거**      
  **이름을 찾을 수 없음** 대화 상자를 닫고 **개체 선택** 대화 상자에서 항목을 제거하려면 선택합니다.  
   
   

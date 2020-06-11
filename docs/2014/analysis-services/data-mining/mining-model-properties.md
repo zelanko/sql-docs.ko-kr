@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083509"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521235"
 ---
 # <a name="mining-model-properties"></a>마이닝 모델 속성
   마이닝 모델의 속성은 다음과 같습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "66083509"
 |**이름**|마이닝 모델 열의 이름을 설정합니다. 새 이름을 입력하여 마이닝 모델 열의 별칭을 제공할 수 있습니다.|  
 |**ModelingFlags**|열에 대해 알고리즘별 플래그를 설정합니다.|  
 |**SourceColumnID**|모델 열의 기반이 되는 마이닝 구조 열의 이름을 나타냅니다.<br /><br /> 이 속성은 읽기 전용입니다.|  
-|**사용법**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
+|**사용 현황**|마이닝 모델에서 열을 사용하는 방법을 설정합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 모델 열](mining-model-columns.md)   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fad74c354d4560a00718292616d842b4ffc7e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151835"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527159"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>보고서 또는 데이터 피드에 연결(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 데이터 피드에 연결할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "70151835"
  **계정 키**  
  Azure Marketplace 데이터 집합 구독에 액세스 하는 데 사용 되는 계정 키를 지정 합니다.  
   
- **찾아낼**  
+ **찾기**  
  Windows Live 계정과 연결된 계정 키를 찾습니다.  
   
  **내 계정 키 저장**  

@@ -1,5 +1,6 @@
 ---
 title: 오류 처리 (XQuery) | Microsoft Docs
+description: XQuery의 오류 처리에 대해 알아보고 동적 오류를 처리 하는 예제를 확인 합니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038957"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305915"
 ---
 # <a name="error-handling-xquery"></a>오류 처리(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038957"
  동적 오류가 조건자 내에서 발생하는 경우에는 오류가 발생하지 않아도 ()가 False로 매핑되기 때문에 의미가 변경되지 않는 경우가 많습니다. 하지만 일부 경우 동적 오류 대신 ()를 반환하면 예기치 않은 결과가 발생할 수 있습니다. 다음은 이를 보여 주는 예입니다.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>예: avg () 함수를 문자열에 사용  
- 다음 예에서는 [avg 함수](../xquery/aggregate-functions-avg.md) 를 호출 하 여 세 값의 평균을 계산 합니다. 이들 값 중 하나는 문자열입니다. 이 경우 XML 인스턴스는 형식화되지 않았기 때문에 이 인스턴스의 모든 데이터는 형식화되지 않은 원자 유형입니다. **Avg ()** 함수는 평균을 계산 하기 전에 먼저 이러한 값을 **xs: double** 로 캐스팅 합니다. 그러나 값 `"Hello"`을 **xs: double** 로 캐스팅 하 고 동적 오류를 만들 수는 없습니다. 이 경우 동적 오류를 반환 `"Hello"` 하는 대신 **xs: double** 로 캐스팅 하면 빈 시퀀스가 발생 합니다. **Avg ()** 함수는이 값을 무시 하 고, 다른 두 값의 평균을 계산 하 고, 150을 반환 합니다.  
+ 다음 예에서는 [avg 함수](../xquery/aggregate-functions-avg.md) 를 호출 하 여 세 값의 평균을 계산 합니다. 이들 값 중 하나는 문자열입니다. 이 경우 XML 인스턴스는 형식화되지 않았기 때문에 이 인스턴스의 모든 데이터는 형식화되지 않은 원자 유형입니다. **Avg ()** 함수는 평균을 계산 하기 전에 먼저 이러한 값을 **xs: double** 로 캐스팅 합니다. 그러나 값을 `"Hello"` **xs: double** 로 캐스팅 하 고 동적 오류를 만들 수는 없습니다. 이 경우 동적 오류를 반환 하는 대신 `"Hello"` **xs: double** 로 캐스팅 하면 빈 시퀀스가 발생 합니다. **Avg ()** 함수는이 값을 무시 하 고, 다른 두 값의 평균을 계산 하 고, 150을 반환 합니다.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>예: not 함수 사용  
- 조건자 `/SomeNode[not(Expression)]`에서 [not 함수](../xquery/functions-on-boolean-values-not-function.md) 를 사용 하 고 식에서 동적 오류를 발생 시키는 경우 오류 대신 빈 시퀀스가 반환 됩니다. **Not ()** 을 빈 시퀀스에 적용 하면 오류가 아닌 True가 반환 됩니다.  
+ 조건자에서 [not 함수](../xquery/functions-on-boolean-values-not-function.md) 를 사용 하 `/SomeNode[not(Expression)]` 고 식에서 동적 오류를 발생 시키는 경우 오류 대신 빈 시퀀스가 반환 됩니다. **Not ()** 을 빈 시퀀스에 적용 하면 오류가 아닌 True가 반환 됩니다.  
   
 ### <a name="example-casting-a-string"></a>예: 문자열 캐스팅  
  다음 예에서 리터럴 문자열 "NaN"은 xs:string으로 캐스팅된 다음 xs:double로 캐스팅됩니다. 결과는 빈 행 집합입니다. 문자열 "NaN"은 xs:double로 성공적으로 캐스팅할 수 없지만 문자열이 먼저 xs:string으로 캐스팅되기 때문에 런타임 전까지는 이를 확인할 수 없습니다.  

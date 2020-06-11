@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3d046e63-bcb1-4ab1-9c37-652463fa68c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdc4a0245ffa98dd89840a8746e828fd1660706
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527319"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>차원 특성 구성(비즈니스 인텔리전스 마법사)
   **차원 특성 구성** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 계정 차원에 대한 특성을 식별하는 데 사용하는 특성 유형으로 차원 특성을 매핑할 수 있습니다.  
@@ -27,12 +26,12 @@ ms.locfileid: "66087453"
  선택한 차원 유형을 표시합니다.  
   
 > [!NOTE]  
->  차원의 `Type` 속성을 계정 차원에 대 한 *계정* 이외의 값으로 변경할 수 없으므로이 옵션을 사용할 수 없습니다.  
+>  `Type`차원의 속성을 계정 차원에 대 한 *계정* 이외의 값으로 변경할 수 없으므로이 옵션을 사용할 수 없습니다.  
   
  **차원 특성**  
  차원의 기존 차원 특성으로 매핑할 수 있는 유효한 특성 유형을 표시합니다.  
   
- **되어야**  
+ **포함**  
  확인란을 선택하여 차원에 해당 특성 유형을 포함시킬 수 있습니다.  
   
  **특성 유형**  

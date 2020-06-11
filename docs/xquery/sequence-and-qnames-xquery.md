@@ -1,5 +1,6 @@
 ---
 title: Sequence 및 Qname (XQuery) | Microsoft Docs
+description: XQuery에서 시퀀스 및 Qname의 기본 개념에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380784"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305822"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 XQuery의 다음 기본 개념에 대해 설명합니다.  
   
--   시퀀스  
+-   순서  
   
 -   QName 및 미리 정의된 네임스페이스  
   
-## <a name="sequence"></a>시퀀스  
+## <a name="sequence"></a>순서  
  XQuery에서 식 결과는 XML 노드 목록 및 XSD 원자 유형의 인스턴스로 구성된 시퀀스입니다. 시퀀스의 개별 항목은 항목으로 참조됩니다. 시퀀스의 항목은 다음 중 하나일 수 있습니다.  
   
 -   요소, 특성, 텍스트, 처리 명령, 주석 또는 문서와 같은 노드  
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  식(`/Root/a`)에서 `Root` 및 `a`는 QName입니다.  
   
- 다음 예에서는 형식화 된 **xml** 열에 대해 쿼리가 지정 됩니다. 이 쿼리는 첫 번째 \<workcenter 위치에서 모든 단계> 요소를 반복 합니다.  
+ 다음 예에서는 형식화 된 **xml** 열에 대해 쿼리가 지정 됩니다. 이 쿼리는 \<step> 첫 번째 workcenter 위치에서 모든 요소를 반복 합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  사용자가 만드는 모든 데이터베이스에는 **sys** XML 스키마 컬렉션이 있습니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
   
 > [!NOTE]  
->  이 구현은의 http://www.w3.org/2004/07/xquery-local-functionsXQuery 사양에 `local` 설명 된 대로 접두사를 지원 하지 않습니다.  
+>  이 구현은 `local` 의 XQuery 사양에 설명 된 대로 접두사를 지원 하지 않습니다 http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>참고 항목  
  [XQuery 기초](../xquery/xquery-basics.md)  

@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728096"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732471"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Master Data Services에 대한 고가용성 및 재해 복구
 
@@ -323,7 +323,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    그림 18
 
-9. **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. 계속하려면 **다음**을 클릭합니다. 그림 19를 참조하세요.
+9. **데이터 동기화 선택** 페이지에서 **전체**를 클릭하고 모든 노드가 액세스할 수 있는 네트워크 공유를 지정합니다. **다음** 을 클릭하여 계속합니다. 그림 19를 참조하세요.
 
    이 네트워크 공유는 데이터베이스 백업을 저장하여 보조 복제본을 만드는 데 사용됩니다. 이를 조직에서 사용할 수 없는 경우 다른 데이터 동기화 기본 설정을 선택합니다. 다른 옵션을 사용 하 여 보조 복제본을 만드는 방법은 [SQL Server 2016 Always On 가용성 그룹](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 을 참조 하세요. 또한 그림 17에 다른 옵션이 나열되어 있습니다.
 
@@ -331,7 +331,7 @@ AG는 기존 데이터베이스에서만 만들 수 있습니다. 따라서 한 
 
    그림 19 
 
-10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. 계속하려면 **다음**을 클릭합니다.
+10. **유효성 검사** 페이지에서 모든 유효성 검사를 성공적으로 전달하고 오류를 수정했는지 확인합니다. **다음** 을 클릭하여 계속합니다.
 
 11. **요약** 페이지에서 모든 구성 설정을 검토하고 **마침**을 클릭합니다. 그러면 가용성 그룹이 만들어지고 구성됩니다.
 

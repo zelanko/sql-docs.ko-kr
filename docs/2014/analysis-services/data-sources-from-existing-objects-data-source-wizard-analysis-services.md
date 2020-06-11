@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5576e997023e5a00cdecc3c2079ce387c7062ebb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5884cd7315ce7d2ab88a38900f9bb8b5ae22508
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082374"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528979"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>기존 개체의 데이터 원본(데이터 원본 마법사)(Analysis Services)
   **기존 개체의 데이터 원본** 페이지를 사용하여 새 데이터 원본의 기반으로 사용할 기존 데이터 원본 또는 프로젝트를 지정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66082374"
  프로젝트별로 그룹화된 데이터 원본 목록에서 새 데이터 원본의 기반으로 사용할 데이터 원본을 선택합니다.  
   
  **Analysis Services 프로젝트를 기반으로 데이터 원본 만들기**  
- 현재 솔루션의 다른 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 참조 하는 새 데이터 원본을 만들려면 선택 합니다. 새 데이터 원본은 선택한 프로젝트의 `TargetServer` 및 `TargetDatabase` 속성에서 설정을 가져옵니다. 새 데이터 원본을 사용하는 프로젝트를 작성 또는 배포하거나 새로 고치면 새 데이터 원본은 이 옵션을 선택할 때 지정한 데이터 원본에서 설정을 가져옵니다.  
+ 현재 솔루션의 다른 프로젝트를 참조 하는 새 데이터 원본을 만들려면 선택 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다. 새 데이터 원본은 선택한 프로젝트의 `TargetServer` 및 `TargetDatabase` 속성에서 설정을 가져옵니다. 새 데이터 원본을 사용하는 프로젝트를 작성 또는 배포하거나 새로 고치면 새 데이터 원본은 이 옵션을 선택할 때 지정한 데이터 원본에서 설정을 가져옵니다.  
   
  **프로젝트**  
  새 데이터 원본에서 참조할 프로젝트를 선택합니다.  

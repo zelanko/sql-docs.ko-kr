@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ce064e08e28e4a5245c2cf18d110797e3ebce4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076282"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535995"
 ---
 # <a name="create-calculated-members"></a>계산 멤버 만들기
   큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "66076282"
   
 -   숫자  
   
--   함수  
+-   Functions  
   
  **계산 도구** 창의 **메타데이터** 탭에서 큐브 구성 요소를 끌어오거나 복사하여 식에 간편하게 추가할 수 있습니다.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66076282"
  Format String  
  계산 멤버를 기반으로 셀 값의 형식을 지정합니다. 이 속성은 측정값의 `Display Format` 속성과 같은 값을 받아들입니다. 표시 형식에 대한 자세한 내용은 [측정값 속성 구성](configure-measure-properties.md)을 참조하세요.  
   
- Visible  
+ 표시  
  큐브 메타데이터를 검색할 때 계산 멤버를 표시할 것인지 숨길 것인지 결정합니다. 계산 멤버를 숨길 경우 MDX 식, 문 및 스크립트에서 계산 멤버를 사용할 수는 있지만 클라이언트 사용자 인터페이스에서 선택 가능한 개체로 표시되지 않습니다.  
   
  Non-empty Behavior  

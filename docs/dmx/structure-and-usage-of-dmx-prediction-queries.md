@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938064"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669994"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 예측 쿼리의 구조 및 사용법
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]데이터 마이닝 확장 (DMX)의 예측 쿼리를 사용 하 여 마이닝 모델의 결과를 기반으로 새 데이터 집합에서 알 수 없는 열 값을 예측할 수 있습니다.  
+  에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 확장 (DMX)의 예측 쿼리를 사용 하 여 마이닝 모델의 결과를 기반으로 새 데이터 집합에서 알 수 없는 열 값을 예측할 수 있습니다.  
   
  사용하는 쿼리 유형은 모델로부터 얻으려는 정보에 따라 다릅니다. 웹 사이트를 방문하는 고객에게서 자전거 구매 가능성이 있는지 파악하는 경우처럼 간단한 예측을 실시간으로 만들려는 경우에는 단일 쿼리를 사용합니다. 데이터 원본에 포함되어 있는 사례 집합에서 예측 일괄 처리를 만들려면 일반 예측 쿼리를 사용합니다.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "67938064"
   
 -   **SELECT [평면화]**  
   
--   **맨 위로 이동**  
+-   **맨 위로**  
   
--   **FROM***\<모델>* **예측 조인** 에서      
+-   **FROM*** \< 모델>* **예측 조인** 에서      
   
--   **SIGN-ON**  
+-   **ON**  
   
 -   **위치**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938064"
   
 -   데이터 열을 반환하는 함수  
   
- **FROM** *FROM \<model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
+ **FROM** * \< model>* **예측 조인** 요소는 예측을 만드는 데 사용 되는 원본 데이터를 정의 합니다. 단일 쿼리의 경우 이 요소는 열에 할당된 일련의 값입니다. 빈 예측 조인의 경우 이 요소는 빈 상태가 됩니다.  
   
  **ON** 요소는 마이닝 모델에 정의 된 열을 외부 데이터 집합의 열에 매핑합니다. 빈 예측 조인 쿼리나 자연 예측 조인을 만드는 경우에는 이 요소를 포함하지 않아도 됩니다.  
   

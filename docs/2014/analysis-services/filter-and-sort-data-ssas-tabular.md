@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558be08d129a1d6d86454cfe20ffb1da1dbbeccd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081257"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528329"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>데이터 필터링 및 정렬(SSAS 테이블 형식)
   테이블 형식 모델에서 테이블에 대한 작업을 수행할 때 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬할 수 있습니다. 또한 계산 안에 필터를 만들어 데이터의 열이나 테이블에서 사용되는 데이터를 제어할 수도 있습니다. 각 필터 유형은 해당 창에서만 작동합니다.  
