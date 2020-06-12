@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065391"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669985"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  사례 또는 중첩 테이블 마이닝 구조 열의 이름입니다.  
   
 ## <a name="result-type"></a>결과 형식  
- 반환 되는 유형은 \<구조 열 이름> 매개 변수에서 참조 되는 열 유형에 따라 달라 집니다. 예를 들어 참조되는 마이닝 구조 열에 스칼라 값이 포함되어 있으면 스칼라 값이 반환됩니다.  
+ 반환 되는 유형은 \< 구조 열 이름> 매개 변수에서 참조 되는 열 유형에 따라 달라 집니다. 예를 들어 참조되는 마이닝 구조 열에 스칼라 값이 포함되어 있으면 스칼라 값이 반환됩니다.  
   
  참조되는 마이닝 구조 열이 중첩 테이블이면 테이블 값이 반환됩니다. 반환된 테이블 값은 하위 SELECT 문의 FROM 절에 사용할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  이 함수는 다형성을 갖고 있으며 SELECT 식 목록, WHERE 조건 식, ORDER BY 식 등의 식을 허용하는 문의 어디에서나 사용할 수 있습니다.  
   
- 마이닝 구조의 열 이름은 문자열 값 이며 작은따옴표로 묶어야 합니다. 예를 `StructureColumn('`들어 **열 1**`')`입니다. 동일한 이름의 열이 여러 개 있으면 이름이 바깥쪽 SELECT 문의 컨텍스트에서 확인됩니다.  
+ 마이닝 구조의 열 이름은 문자열 값 이며 작은따옴표로 묶어야 합니다. 예를 들어 `StructureColumn('` **열 1** `')` 입니다. 동일한 이름의 열이 여러 개 있으면 이름이 바깥쪽 SELECT 문의 컨텍스트에서 확인됩니다.  
   
  **StructureColumn** 함수를 사용 하 여 쿼리에서 반환 되는 결과는 모델에 필터가 있는 경우에 영향을 받습니다. 즉, 모델 필터에 의해 마이닝 모델에 포함되어 있는 사례가 제어됩니다. 따라서 구조 열에 대한 쿼리는 마이닝 모델에 사용된 사례만 반환할 수 있습니다. 마이닝 모델 필터가 사례 테이블과 중첩 테이블에 미치는 영향을 보여 주는 코드 예는 이 항목의 예 섹션을 참조하십시오.  
   
@@ -115,7 +115,7 @@ WHERE StructureColumn('Occupation') = 'Architect'
  이 예에서는 직업이 '건축가'인 고객으로 사례를 제한하는 필터(`WHERE StructureColumn('Occupation') = 'Architect'`)가 구조 열에 적용됩니다. 모델을 만들면 모델 필터 조건이 사례에 항상 적용되기 때문에 `Products` 테이블에 한정하는 행이 적어도 하나 이상 있는 사례만 모델 사례에 포함됩니다. 따라서 `Products` 중첩 테이블의 필터와 `('Occupation')` 사례의 필터가 둘 다 적용됩니다.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>예제 쿼리 3: 중첩 테이블에서 열 선택  
- 다음 예제 쿼리에서는 모델의 학습 사례로 사용된 고객의 이름을 반환할 뿐만 아니라 각 고객의 구매 정보가 포함된 중첩 테이블도 반환합니다. 모델에 `ProductName` 열이 포함 되어 있지만 모델에서는 `ProductName` 열 값을 사용 하지 않습니다. 모델은 제품이 일반 (`NOT``OnSale`) 가격으로 구매 되었는지 확인 합니다. 이 쿼리에서는 제품 이름을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 구매 수량도 반환합니다.  
+ 다음 예제 쿼리에서는 모델의 학습 사례로 사용된 고객의 이름을 반환할 뿐만 아니라 각 고객의 구매 정보가 포함된 중첩 테이블도 반환합니다. 모델에 열이 포함 되어 있지만 `ProductName` 모델에서는 열 값을 사용 하지 않습니다 `ProductName` . 모델은 제품이 일반 () 가격으로 구매 되었는지 확인 `NOT``OnSale` 합니다. 이 쿼리에서는 제품 이름을 반환할 뿐만 아니라 모델에 포함되어 있지 않은 구매 수량도 반환합니다.  
   
 ```  
 SELECT CustomerName,    

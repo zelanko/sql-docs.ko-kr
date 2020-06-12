@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02bcccd0-99e1-4a08-9401-f1f1147d184b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c0e42f289c5d5aa0aebf546e1adeb0a31683d82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80eddefc7b4bafb28a1f4e4f166bfac1169632c2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062542"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528049"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Analysis Services 기능 및 태스크
   Analysis Services 기본 설명서는 설치된 모드에서 사용 가능한 도구, 태스크 및 기능에만 사용자가 전념할 수 있도록 모델링 및 서버 모드별로 구성됩니다. 서버 인스턴스에서 여러 모드에 걸쳐 있는 서버 관리 태스크를 찾을 수 있습니다.  

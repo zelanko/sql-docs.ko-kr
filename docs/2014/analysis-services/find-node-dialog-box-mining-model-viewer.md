@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 220ebca3-3339-4b32-9770-4293fe8e70a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c202ae84546cfdfde917a3d4ff9d98df74d7afd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d0bfb5f5542a73d769f279be4dd6e9bb02e6590
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544433"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>노드 찾기 대화 상자(마이닝 모델 뷰어)
   모델의 **종속성 네트워크** 탭에서 사용할 수 있는 **노드 찾기** 대화 상자를 사용하여 특정 노드를 찾을 수 있습니다. 이 기능은 많은 노드 또는 항목 집합이 포함된 복잡한 다이어그램에서 유용합니다.  

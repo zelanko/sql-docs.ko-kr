@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1051981ddcac948a447e814c278fab4fb61496
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076113"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547203"
 ---
 # <a name="cubes-in-multidimensional-models"></a>다차원 모델의 큐브
   큐브는 분석 목적의 정보를 포함하는 다차원 구조이며, 큐브의 주요 구성 요소는 차원과 측정값입니다. 차원은 조각화 및 분석에 사용할 큐브의 구조를 정의하고, 측정값은 최종 사용자에게 의미가 있는 집계된 숫자 값을 제공합니다. 논리적 구조인 큐브를 사용하면 클라이언트 애플리케이션에서는 마치 값이 큐브의 셀에 포함되어 있고 가능한 모든 요약된 값에 대해 셀이 정의되어 있는 것처럼 측정값의 값을 검색할 수 있습니다. 큐브의 셀은 차원 멤버의 교차에 의해 정의되며 해당 특정 교차 지점에 있는 측정값의 집계된 값을 포함합니다.  
@@ -40,12 +39,12 @@ ms.locfileid: "66076113"
 |계층 구조|[사용자 정의 계층 만들기](user-defined-hierarchies-create.md)|  
 |동작|[다차원 모델의 동작](actions-in-multidimensional-models.md)|  
 |KPI(핵심 성과 지표)|[다차원 모델의 KPI&#40;핵심 성과 지표&#41;](key-performance-indicators-kpis-in-multidimensional-models.md)|  
-|새 명명된 집합|[다차원 모델의 계산](calculations-in-multidimensional-models.md)|  
+|계산|[다차원 모델의 계산](calculations-in-multidimensional-models.md)|  
 |Translations|[다차원 모델의 번역](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[큐브 마법사를 사용하여 큐브 만들기](create-a-cube-using-the-cube-wizard.md)|큐브 마법사를 사용하여 큐브, 차원, 차원 특성 및 사용자 정의 계층을 정의하는 방법에 대해 설명합니다.|  
 |[다차원 모델의 측정값 및 측정값 그룹 만들기](create-measures-and-measure-groups-in-multidimensional-models.md)|측정값 그룹을 정의하는 방법에 대해 설명합니다.|  

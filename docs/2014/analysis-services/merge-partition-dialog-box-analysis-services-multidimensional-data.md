@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07fb8bf093d4a6e0dfa7f73e771bd667a6383a79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077825"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545495"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>병합 파티션 대화 상자(Analysis Services - 다차원 데이터)
   **SQL Server Management Studio** 의 **파티션 병합** 대화 상자를 사용하여 큐브에 있는 측정값 그룹의 파티션을 병합할 수 있습니다. **개체 탐색기** 에서 파티션 폴더 또는 파티션을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **파티션 병합** 을 선택하면 **파티션 병합** 대화 상자를 표시할 수 있습니다.  
@@ -40,9 +39,9 @@ ms.locfileid: "66077825"
   
  표에는 다음 열이 있습니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
-|**결합**|원본 파티션을 대상 파티션에 병합하려면 선택합니다.|  
+|**병합**|원본 파티션을 대상 파티션에 병합하려면 선택합니다.|  
 |**파티션 이름**|원본 파티션 이름을 표시합니다.|  
 |**마지막 처리**|원본 파티션을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
   

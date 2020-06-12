@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084717"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522569"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>데이터 마이닝 솔루션 배포
   데이터 마이닝 프로세스의 마지막 단계는 모델을 프로덕션 환경에 배포하는 것입니다. 배포 작업을 수행해야 사용자가 모델을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  

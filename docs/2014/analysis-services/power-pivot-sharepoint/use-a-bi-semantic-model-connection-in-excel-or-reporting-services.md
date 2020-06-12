@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070928"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547725"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용
   이 항목에서는 다른 항목의 지침을 사용하여 만든 BI 의미 체계 모델 연결을 사용하는 방법에 대해 설명합니다. BI 의미 체계 모델을 아직 만들지 않은 경우 [PowerPivot 통합 문서에 대 한 Bi 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) 및 [테이블 형식 모델 데이터베이스에 대 한 Bi 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)를 참조 하세요.  
@@ -39,7 +38,7 @@ ms.locfileid: "66070928"
   
 2.  **Analysis Services** 를 클릭하고 데이터 연결 마법사를 사용하여 데이터를 가져옵니다.  
   
-3.  BI 의미 체계 모델 연결 파일의 SharePoint URL을 입력 합니다 (예: ** http://mysharepoint/shared documents/myData. bism**). 기본 로그온 자격 증명 옵션인 **Windows 인증 사용**을 사용합니다. **다음**을 클릭합니다.  
+3.  BI 의미 체계 모델 연결 파일의 SharePoint URL을 입력 합니다 (예: ** http://mysharepoint/shared Documents/myData. bism**). 기본 로그온 자격 증명 옵션인 **Windows 인증 사용**을 사용합니다. **다음**을 클릭합니다.  
   
 4.  다음 페이지에서 **다음** 을 다시 클릭합니다. 데이터베이스를 선택하라는 메시지가 표시되지만 BI 의미 체계 모델 연결에 지정된 한 데이터베이스만 사용할 수 있습니다.  
   

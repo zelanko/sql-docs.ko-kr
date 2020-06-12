@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b04669080a9dedd84d3e7c218f6360486076fdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7589a98636e56e8c592cef213785544e18f4ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546205"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>MDX를 사용하여 다차원 데이터 쿼리
-  MDX (multidimensional Expressions)는에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]다차원 데이터를 처리 하 고 검색 하는 데 사용 하는 쿼리 언어입니다. MDX는에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]특정 확장을 포함 하는 XML for Analysis (XMLA) 사양을 기반으로 합니다. MDX에서 사용되는 식은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 집합 또는 멤버와 같은 개체나 문자열 또는 숫자와 같은 스칼라 값을 검색하기 위해 평가할 수 있는 식별자, 값, 문, 함수 및 연산자로 구성됩니다.  
+  MDX (multidimensional Expressions)는에서 다차원 데이터를 처리 하 고 검색 하는 데 사용 하는 쿼리 언어입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . MDX는에 대 한 특정 확장을 포함 하는 XML for Analysis (XMLA) 사양을 기반으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다. MDX에서 사용되는 식은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서 집합 또는 멤버와 같은 개체나 문자열 또는 숫자와 같은 스칼라 값을 검색하기 위해 평가할 수 있는 식별자, 값, 문, 함수 및 연산자로 구성됩니다.  
   
- 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] MDX 쿼리 및 식은 다음을 수행 하는 데 사용 됩니다.  
+ 의 MDX 쿼리 및 식은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음을 수행 하는 데 사용 됩니다.  
   
--   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 큐브의 클라이언트 응용 프로그램 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 데이터를 반환 합니다.  
+-   큐브의 클라이언트 응용 프로그램에 데이터를 반환 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다.  
   
 -   쿼리 결과의 형식을 지정할 수 있습니다.  
   
@@ -41,9 +40,9 @@ ms.locfileid: "66073918"
   
 |항목|설명|  
 |-----------|-----------------|  
-|[MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|Mdx (multidimensional expressions)를 사용 하 여 다차원 데이터를 쿼리하거나 큐브 내에서 사용할 mdx 식을 만들 수 있지만 먼저 차원 개념과 용어를 이해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 해야 합니다.|  
+|[MDX의 주요 개념&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)|MDX (Multidimensional Expressions)를 사용 하 여 다차원 데이터를 쿼리하거나 큐브 내에서 사용할 MDX 식을 만들 수 있지만 먼저 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 차원 개념과 용어를 이해 해야 합니다.|  
 |[MDX 쿼리 기본 사항&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)|MDX(Multidimensional Expressions)를 사용하면 큐브와 같은 다차원 개체를 쿼리하여 큐브의 데이터를 포함하는 다차원 셀 집합을 반환할 수 있습니다. 이 항목 및 하위 항목에서는 MDX 쿼리에 대한 개요를 제공합니다.|  
-|[MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]mdx (Multidimensional expressions) 스크립트는 계산으로 큐브를 채우는 하나 이상의 mdx 식 또는 문으로 구성 됩니다.<br /><br /> MDX 스크립트는 큐브의 계산 프로세스를 정의합니다. MDX 스크립트는 또한 큐브 자체의 일부로 간주됩니다. 따라서 큐브와 관련된 MDX 스크립트를 변경하면 해당 큐브의 계산 프로세스가 즉시 변경됩니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 큐브 디자이너에서 MDX 스크립트를 작성할 수 있습니다.|  
+|[MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)|에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Mdx (Multidimensional expressions) 스크립트는 계산으로 큐브를 채우는 하나 이상의 mdx 식 또는 문으로 구성 됩니다.<br /><br /> MDX 스크립트는 큐브의 계산 프로세스를 정의합니다. MDX 스크립트는 또한 큐브 자체의 일부로 간주됩니다. 따라서 큐브와 관련된 MDX 스크립트를 변경하면 해당 큐브의 계산 프로세스가 즉시 변경됩니다.<br /><br /> [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 큐브 디자이너에서 MDX 스크립트를 작성할 수 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Mdx 구문 요소 &#40;MDX&#41;](/sql/mdx/mdx-syntax-elements-mdx)   

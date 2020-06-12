@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087909"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527489"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>클러스터 다이어그램 연습(데이터 마이닝 추가 기능)
   클러스터링 모델을 만든 후에는 **Cluster** 셰이프를 사용 하 여 Visio로 가져온 다음 계속 해 서 레이아웃을 사용자 지정 하 고 향상 시킬 수 있습니다. **Visio 용 데이터 마이닝 셰이프** 는 데이터 마이닝 다이어그램을 사용 하기 위한 다음과 같은 사용자 지정 컨트롤을 포함 합니다.  
@@ -43,13 +42,13 @@ ms.locfileid: "66087909"
   
 1.  **셰이프** 목록에 **Microsoft 데이터 마이닝 셰이프가** 표시 되지 않는 경우 **추가 셰이프**를 클릭 하 고, **스텐실 열기**를 선택 하 고, 기본 설치 위치에서 템플릿을 엽니다.  
   
-     \<드라이브>: files\Microsoft SQL Server 2012 DM 추가 기능  
+     \<drive>: Files\Microsoft SQL Server 2012 DM 추가 기능  
   
 2.  **클러스터** 셰이프를 페이지로 끌어옵니다.  
   
 3.  **클러스터 Visio 셰이프 마법사**의 시작 페이지에서 **다음**을 클릭 합니다.  
   
-4.  **클러스터 마법사**의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **데이터 원본 선택** 페이지에서 시각화할 데이터 마이닝 모델을 포함 하는 서버에 대 한 연결을 선택 합니다.  
+4.  **클러스터 마법사**의 **데이터 원본 선택** 페이지에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 시각화할 데이터 마이닝 모델을 포함 하는 서버에 대 한 연결을 선택 합니다.  
   
 5.  적절 한 마이닝 모델을 선택 하 고 **다음**을 클릭 합니다.  
   

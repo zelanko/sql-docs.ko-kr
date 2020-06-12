@@ -1,5 +1,6 @@
 ---
 title: 확장 됨-QName (XQuery) | Microsoft Docs
+description: 확장 된 QName () 함수를 사용 하 여 QName의 네임 스페이스 URI 및 로컬 이름 부분을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004587"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689337"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +48,10 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 xs:QName 유형을 다른 유형으로 변환할 수 없습니다. 이로 인해 확장 된 **QName ()** 함수를 XML 생성에 사용할 수 없습니다. 예를 들어 `<e> expanded-QName(...) </e>`과 같은 노드를 생성할 때 값은 형식화되지 않아야 합니다. 형식화되면 `expanded-QName()`이 반환한 xs:QName 유형 값을 xdt:untypedAtomic으로 변환해야 하기 때문입니다. 앞에서 말했듯이 변환 기능은 지원되지 않습니다. 해결 방법은 이 항목 뒷부분의 예에 나와 있습니다.  
   
--   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` 는> <`e` 요소의 값을 **확장 된 qname ()** 함수에서 반환 된 qname과 비교 합니다.  
+-   기존의 QName 유형 값을 수정하거나 비교할 수 있습니다. 예를 들어는 `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")`> <요소의 값을 확장 된 `e` **qname ()** 함수에서 반환 된 qname과 비교 합니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 유형 노드 값 바꾸기  
  이 예에서는 QName 유형 요소 노드의 값을 수정하는 방법을 보여 줍니다. 이 예에서는 다음을 수행합니다.  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- 다음 쿼리에서는 표시 된 것 처럼 `ElemQN` xml 데이터 형식의 **modify ()** 메서드와 xml DML의 replace 값을 사용 하 여 <> 요소 값을 대체 합니다.  
+ 다음 쿼리에서는 `ElemQN` 표시 된 것 처럼 xml 데이터 형식의 **modify ()** 메서드와 xml DML의 replace 값을 사용 하 여 <> 요소 값을 대체 합니다.  
   
 ```  
 -- the value.  
@@ -113,7 +114,7 @@ SELECT * from T
 go  
 ```  
   
- 다음은 결과입니다. QName 형식의 <`ElemQN`> 요소에는 이제 새 값이 있습니다.  
+ 다음은 결과입니다. QName 형식의 <> 요소에는 `ElemQN` 이제 새 값이 있습니다.  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- 이에 대 한 해결 방법은 먼저 <`root`> 요소에 대 한 값을 사용 하 여 인스턴스를 삽입 한 다음 수정 하는 것입니다. 이 예제에서는 <`root`> 요소가 삽입 될 때 nil 초기 값이 사용 됩니다. 이 예의 XML 스키마 컬렉션은 <`root`> 요소에 대 한 nil 값을 허용 합니다.  
+ 이에 대 한 해결 방법은 먼저 <> 요소에 대 한 값을 사용 하 여 인스턴스를 삽입 한 다음 수정 하는 것입니다 `root` . 이 예제에서는 <> 요소가 삽입 될 때 nil 초기 값이 사용 됩니다 `root` . 이 예의 XML 스키마 컬렉션은 <> 요소에 대 한 nil 값을 허용 합니다 `root` .  
   
 ```  
 update T SET xmlCol.modify('  
@@ -186,7 +187,7 @@ go
   
  `<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p1="http://ns">p1:someLocalName</root>`  
   
- 다음 쿼리와 같이 QName 값을 비교할 수 있습니다. 이 쿼리는 **확장 된 qname ()** 함수에서 반환 된 qname 형식 값과 일치 하는 값을 가진 <`root`> 요소만 반환 합니다.  
+ 다음 쿼리와 같이 QName 값을 비교할 수 있습니다. 이 쿼리는 `root` **확장 된 qname ()** 함수에서 반환 된 qname 형식 값과 일치 하는 값을 가진 <> 요소만 반환 합니다.  
   
 ```  
 SELECT xmlCol.query('  

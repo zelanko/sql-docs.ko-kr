@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fab8618e18b6a6983f98cca58bc2b2c55d63fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077277"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544751"
 ---
 # <a name="define-custom-member-formulas"></a>사용자 지정 멤버 수식 정의
   사용자 지정 멤버 수식이라고 하는 MDX(Multidimensional Expression) 식을 정의하여 지정된 특성의 멤버에 값을 제공할 수 있습니다. 데이터 원본 뷰의 테이블 열은 특성의 각 멤버에 값을 지정하는 데 사용되는 식을 제공합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66077277"
   
  특성에서 `CustomRollupColumn` 속성은 특성의 멤버에 대한 사용자 지정 멤버 수식을 포함하는 열을 지정합니다. 열의 행이 비어 있으면 멤버의 셀 값이 정상적으로 반환됩니다. 열의 수식이 유효하지 않으면 멤버를 사용하는 셀 값이 검색될 때마다 런타임 오류가 발생합니다.  
   
- 특성을 포함하는 차원 테이블이나 직접 관련된 테이블에 사용자 지정 멤버 수식을 저장할 문자열 열이 있어야만 특성에 대한 사용자 지정 멤버 수식을 지정할 수 있습니다. 이 경우 특성에 대 한 속성을 `CustomRollupColumn` 수동으로 설정 하거나 비즈니스 인텔리전스 마법사의 사용자 지정 멤버 수식 설정 향상 기능을 사용 하 여 특성에 대 한 사용자 지정 멤버 수식을 사용 하도록 설정할 수 있습니다. 이 향상 기능을 사용하는 방법에 대한 자세한 내용은 [차원에 특성의 사용자 지정 멤버 수식 설정](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)을 참조하세요.  
+ 특성을 포함하는 차원 테이블이나 직접 관련된 테이블에 사용자 지정 멤버 수식을 저장할 문자열 열이 있어야만 특성에 대한 사용자 지정 멤버 수식을 지정할 수 있습니다. 이 경우 `CustomRollupColumn` 특성에 대 한 속성을 수동으로 설정 하거나 비즈니스 인텔리전스 마법사의 사용자 지정 멤버 수식 설정 향상 기능을 사용 하 여 특성에 대 한 사용자 지정 멤버 수식을 사용 하도록 설정할 수 있습니다. 이 향상 기능을 사용하는 방법에 대한 자세한 내용은 [차원에 특성의 사용자 지정 멤버 수식 설정](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)을 참조하세요.  
   
 ## <a name="evaluating-custom-member-formulas"></a>사용자 지정 멤버 수식 평가  
  사용자 지정 멤버 수식은 계산 멤버와 다릅니다. 사용자 지정 멤버 수식은 차원 테이블에 있는 멤버에 적용되며 멤버의 값만 제공합니다. 이와 달리 계산 멤버는 차원 테이블에 저장되지 않으며 계산 멤버 식은 차원이나 계층에 포함된 추가 멤버에 대해 데이터와 메타데이터를 모두 정의합니다.  

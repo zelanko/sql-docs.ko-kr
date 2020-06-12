@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087353"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527239"
 ---
 # <a name="connect-to-a-data-mining-server"></a>데이터 마이닝 서버에 연결
   ![연결 단추](media/misc-connection.gif "연결 단추")  
   
- **연결** 단추를 클릭 하 여 기존 연결을 선택 하거나 인스턴스에 대 한 새 연결을 만듭니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ **연결** 단추를 클릭 하 여 기존 연결을 선택 하거나 인스턴스에 대 한 새 연결을 만듭니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **서버에 연결해야 하는 이유는 무엇입니까?**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66087353"
   
  **"연결을 찾을 수 없습니다." 라는 메시지가 표시 됩니다.**  
   
- 단추의 아래쪽에 있는 텍스트가 **연결 안 함**이라고 표시 되는 경우에는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대 한 연결을 만들지 않았거나 연결에 실패 했음을 의미 합니다. Excel에서 Access을 비롯한 기타 원본의 데이터를 계속 사용할 수 있지만 데이터 마이닝 모델을 만들거나 예측 쿼리를 실행하려면 활성 연결이 필요합니다.  
+ 단추의 아래쪽에 있는 텍스트가 **연결 안 함**이라고 표시 되는 경우에는 데이터베이스에 대 한 연결을 만들지 않았거나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 연결에 실패 했음을 의미 합니다. Excel에서 Access을 비롯한 기타 원본의 데이터를 계속 사용할 수 있지만 데이터 마이닝 모델을 만들거나 예측 쿼리를 실행하려면 활성 연결이 필요합니다.  
   
  **서버를 사용할 수 있는 권한이 없다고 가정해 보겠습니다.**  
   

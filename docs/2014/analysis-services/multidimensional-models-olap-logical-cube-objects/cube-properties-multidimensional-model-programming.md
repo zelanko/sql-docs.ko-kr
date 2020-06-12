@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27d4202774107795eaddf76c27e21010d534d977
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545255"
 ---
 # <a name="cube-properties"></a>큐브 속성
   큐브에는 큐브 차원 동작에 영향을 주기 위해 설정할 수 있는 많은 속성이 있습니다. 다음 표에서는 이러한 속성을 요약하여 설명합니다.  
@@ -58,13 +57,13 @@ ms.locfileid: "62727649"
 |`Language`|큐브의 기본 언어 식별자를 지정합니다.|  
 |`Name`|큐브의 이름을 지정합니다.|  
 |`ProactiveCaching`|큐브에 대한 자동 관리 캐싱 설정을 정의합니다.|  
-|`ProcessingMode`|인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다. 옵션은 **regular** 또는 `lazy`입니다.|  
+|`ProcessingMode`|인덱싱 및 집계를 처리 중에 수행할지 아니면 처리 후에 수행할지를 나타냅니다. 옵션은 **regular** 또는 `lazy` 입니다.|  
 |`ProcessingPriority`|지연 집계 및 지연 인덱싱과 같이 백그라운드 작업 중의 큐브 처리 우선 순위를 결정합니다. 기본값은 **0**입니다.|  
-|`ScriptCacheProcessingMode`|스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다. 옵션은 **일반** 및 `lazy`입니다.|  
+|`ScriptCacheProcessingMode`|스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다. 옵션은 **일반** 및 `lazy` 입니다.|  
 |`ScriptErrorHandlingMode`|오류 처리를 결정합니다. 사용할 수 있는 옵션은 `IgnoreNone` 또는 `IgnoreAll`입니다.|  
 |`Source`|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
 |`StorageLocation`|큐브의 파일 시스템 스토리지 위치를 지정합니다. 아무 위치도 지정하지 않으면 큐브 개체를 포함하는 데이터베이스에서 위치를 상속받습니다.|  
-|`StorageMode`|큐브의 스토리지 모드를 지정합니다. 값은 `MOLAP`, `ROLAP`또는입니다.`HOLAP``.`|  
+|`StorageMode`|큐브의 스토리지 모드를 지정합니다. 값은 `MOLAP` , `ROLAP` 또는입니다.`HOLAP``.`|  
 |`Visible`|큐브의 표시 여부를 결정합니다.|  
   
 > [!NOTE]  

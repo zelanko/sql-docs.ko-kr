@@ -1,5 +1,6 @@
 ---
 title: SQLXMLOLEDB 공급자 소개 (SQLXML)
+description: ADO(ActiveX Data Objects) (ADO)를 통해 SQLXML 기능을 노출 하는 OLE DB 공급자 인 SQLXMLOLEDB 공급자에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246682"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215893"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

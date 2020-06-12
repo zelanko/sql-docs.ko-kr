@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165924"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627397"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-sql)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74165924"
 
 현재 데이터베이스 또는 탄력적 풀의 리소스 거 버 넌 스 메커니즘에서 사용 되는 실제 구성 및 용량 설정을 반환 합니다.
   
-|열 이름|데이터 형식|설명|  
+|열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|int|Azure SQL Database 서버 내에서 고유한 데이터베이스의 ID입니다.|
 |**logical_database_guid**|uniqueidentifier|사용자 데이터베이스의 수명 동안 유지 되는 사용자 데이터베이스의 논리적 GUID입니다.  데이터베이스의 이름을 바꾸거나 서비스 수준 목표를 변경 해도이 값은 변경 되지 않습니다.|
@@ -61,7 +61,7 @@ ms.locfileid: "74165924"
 |**initial_db_file_size_in_mb**|bigint|새 데이터 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
 |**log_size_in_mb**|bigint|새 로그 파일의 기본 크기 (MB)입니다. [Database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)를 참조 하세요.|
 |**instance_cap_cpu**|int|내부적으로만 사용됩니다.|
-|**instance_max_log_rate**|bigint|SQL Server 인스턴스의 로그 생성 률 한도 (바이트/초)입니다. 및 기타 시스템 데이터베이스를 포함 `tempdb` 하 여 인스턴스에 의해 생성 된 모든 로그에 적용 됩니다. 탄력적 풀에서는 풀에 있는 모든 데이터베이스에 의해 생성 된 로그에 적용 됩니다.|
+|**instance_max_log_rate**|bigint|SQL Server 인스턴스의 로그 생성 률 한도 (바이트/초)입니다. 및 기타 시스템 데이터베이스를 포함 하 여 인스턴스에 의해 생성 된 모든 로그에 적용 됩니다 `tempdb` . 탄력적 풀에서는 풀에 있는 모든 데이터베이스에 의해 생성 된 로그에 적용 됩니다.|
 |**instance_max_worker_threads**|int|SQL Server 인스턴스에 대 한 작업자 스레드 제한입니다.|
 |**replica_type**|int|복제본 유형 (0은 Primary, 1은 보조)입니다.|
 |**max_transaction_size**|bigint|모든 트랜잭션에서 사용 되는 최대 로그 공간 (KB)입니다.|

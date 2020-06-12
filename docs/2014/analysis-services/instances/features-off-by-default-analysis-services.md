@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9529edf-337e-4fdd-9a13-99cfe96b4fa1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59c27d5f34d6e5a3f33e0f153a9077995bd99650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a71a43eaced5100d48a386c60d39254b1266aaef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080017"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543925"
 ---
 # <a name="features-off-by-default-analysis-services"></a>기본적으로 해제되어 있는 기능(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스는 기본적으로 보안되도록 디자인되었습니다. 따라서 보안을 손상시킬 수 있는 기능은 기본적으로 비활성화됩니다. 다음 기능은 기본적으로 비활성화된 상태로 설치되며 이러한 기능을 사용하려면 별도로 활성화해야 합니다.  

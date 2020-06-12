@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6b9ab6db9fc50b09b752b5deaa59d42c4664bd5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070753"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539995"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>처리 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 처리 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체를 처리할 수 있습니다. 다음과 같은 방법으로 **에서** 처리 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 표시할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66070753"
  **개체 이름**  
  처리할 개체의 이름을 표시합니다. 이름 왼쪽에 있는 아이콘은 개체 유형을 나타냅니다.  
   
- **Type**  
+ **형식**  
  처리할 개체 유형을 표시합니다.  
   
  **처리 옵션**  
@@ -60,7 +59,7 @@ ms.locfileid: "66070753"
  **설정 변경**  
  **설정 변경** 대화 상자를 열고 일괄 처리 설정, 쓰기 저장 설정 및 차원 키 오류 설정을 포함하여 선택한 개체의 처리를 제어하는 설정을 변경하려면 클릭합니다. **설정 변경** 대화 상자에 대한 자세한 내용은 [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](change-settings-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
- **Run**  
+ **실행**  
  개체를 처리하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

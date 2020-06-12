@@ -12,17 +12,17 @@ ms.assetid: 641a10a1-ae52-4d26-8f1c-a032a4aeff02
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa6f1df8858f5ba9bf302eb6a415182cfa9442c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eb4eb049bfe700a83d58e05a3af1ee4f6f41a6
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095787"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859703"
 ---
 # <a name="database-engine-configuration---filestream"></a>데이터베이스 엔진 구성 - Filestream
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. FILESTREAM은 `varbinary(max)` BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
   

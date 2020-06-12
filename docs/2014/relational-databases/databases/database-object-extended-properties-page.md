@@ -12,17 +12,17 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917208"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859447"
 ---
 # <a name="database-object-extended-properties-page"></a>데이터베이스 개체(확장 속성 페이지)
   확장 속성을 사용하여 데이터베이스 개체에 사용자 지정 속성을 추가할 수 있습니다. 이 페이지를 사용하여 선택한 개체의 확장 속성을 확인하거나 수정할 수 있습니다. 모든 데이터베이스 개체 유형의 **확장 속성** 페이지는 동일합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **Database**  
  선택한 데이터베이스의 이름을 표시합니다. 이 필드는 읽기 전용입니다.  
   

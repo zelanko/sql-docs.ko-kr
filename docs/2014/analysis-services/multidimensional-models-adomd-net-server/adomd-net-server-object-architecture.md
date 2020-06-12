@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b57155285b4758e37af43b0fb4f079d660b97fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8454d2cbe9153c6a547ae2813c85bf1e45f269ad
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387923"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537392"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 서버 개체 아키텍처
-  ADOMD.NET 서버 개체는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]udf (사용자 정의 함수) 또는 저장 프로시저를 만드는 데 사용할 수 있는 도우미 개체입니다.  
+  ADOMD.NET 서버 개체는에서 Udf (사용자 정의 함수) 또는 저장 프로시저를 만드는 데 사용할 수 있는 도우미 개체입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
 >  `Microsoft.AnalysisServices.AdomdServer` 네임스페이스 및 이러한 개체를 사용하려면 msmgdsrv.dll에 대한 참조를 UDF 프로젝트 또는 저장 프로시저에 추가해야 합니다.  

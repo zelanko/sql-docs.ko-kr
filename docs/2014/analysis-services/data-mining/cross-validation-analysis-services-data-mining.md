@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809848"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523649"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
   *교차 유효성 검사* 는 분석의 표준 도구 이며 데이터 마이닝 모델 개발 및 미세 조정에 도움이 되는 중요 한 기능입니다. 마이닝 구조 및 관련 마이닝 모델을 만든 후 교차 유효성 검사를 사용하여 모델의 유효성을 확인합니다.  교차 유효성 검사는 다음과 같이 적용됩니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "68809848"
 ### <a name="choosing-models-and-columns-to-validate"></a>유효성을 검사할 모델 및 열 선택  
  데이터 마이닝 디자이너의 **교차 유효성 검사** 탭을 사용할 때는 먼저 목록에서 예측 가능한 열을 선택해야 합니다. 일반적으로 마이닝 구조는 여러 마이닝 모델을 지원할 수 있으며 이러한 모델 중 일부는 같은 예측 가능한 열을 사용하지 않을 수 있습니다. 교차 유효성 검사를 실행할 때는 같은 예측 가능한 열을 사용하는 모델만 보고서에 포함될 수 있습니다.  
   
- 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 대상 특성이 중첩 열 또는 중첩 테이블의 열인 경우 중첩 테이블 이름> (키) 형식 \<으로 중첩 열의 이름을 입력 해야 합니다. \<중첩 열>입니다. 중첩 테이블에서 사용 되는 유일한 열이 키 열인 경우 중첩 테이블 이름> ( \<키)를 사용할 수 있습니다.  
+ 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 대상 특성이 중첩 열 또는 중첩 테이블의 열인 경우 형식 \<Nested Table Name> (key) .를 사용 하 여 중첩 열의 이름을 입력 해야 \<Nested Column> 합니다. 중첩 테이블에서 사용 되는 유일한 열이 키 열인 경우 (key)를 사용할 수 있습니다 \<Nested Table Name> .  
   
  예측 가능한 특성을 선택하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 동일한 예측 가능한 특성을 사용하는 모든 모델을 자동으로 테스트합니다. 대상 특성에 불연속 값이 포함되어 있는 경우에는 예측 가능한 열을 선택한 후 예측할 특정 값이 있으면 필요에 따라 대상 상태를 입력할 수 있습니다.  
   

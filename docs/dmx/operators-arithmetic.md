@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149cd67594cac64fc8ad315b2fca9bb1cda373d5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008207"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669308"
 ---
 # <a name="operators---arithmetic"></a>연산자 - 산술
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  더하기, 빼기, 곱하기 및 나누기 등의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]산술 계산을 위해 DMX (Data 마이닝 확장)에서 산술 연산자를 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 더하기, 빼기, 곱하기 및 나누기 등의 산술 계산을 위해 DMX (Data 마이닝 확장)에서 산술 연산자를 사용할 수 있습니다.  
   
  다음 표에서는 DMX에서 지원하는 산술 연산자를 설명합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[+ &#40;&#41; &#40;DMX&#41;를 추가 합니다.](../dmx/add-dmx.md)|두 수를 더합니다.|  
 |[-&#40;&#41; &#40;DMX&#41;빼기](../dmx/subtract-dmx.md)|한 수에서 다른 수를 뺍니다.|  

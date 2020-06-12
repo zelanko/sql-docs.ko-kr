@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892803"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670269"
 ---
 # <a name="export-dmx"></a>EXPORT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *개체 이름*  
  (선택 사항) 내보낼 개체 이름입니다.  
   
- *이름도*  
+ *filename*  
  문자열로 내보낼 파일의 이름과 위치입니다.  
   
 ## <a name="remarks"></a>설명  
  문에서 마이닝 모델을 지정하는 경우 결과 파일에는 연결된 마이닝 구조도 포함됩니다. 문에서 **종속성**을 지정 하는 경우 개체를 처리 하는 데 필요한 모든 개체 (예: 데이터 원본 및 데이터 원본 뷰)는 .abf 파일에 포함 됩니다.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 내보내거나 가져오려면 데이터베이스 관리자 또는 서버 관리자 여야 합니다.  
+ 데이터베이스에서 개체를 내보내거나 가져오려면 데이터베이스 관리자 또는 서버 관리자 여야 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="export-mining-structure-example"></a>마이닝 구조 내보내기 예  
  다음 예에서는 Targeted Mailing 및 Forecasting 마이닝 구조와 Association 마이닝 모델을 특정 파일 위치로 내보냅니다. Association 모델은 Market Basket 마이닝 구조의 일부이므로 이 예에서는 Market Basket 구조도 내보냅니다. **마이닝 구조가**아닌 **마이닝 모델**을 사용 하 여 연결 모델을 내보냈지만 시장 바구니 마이닝 구조의 일부로 존재할 수 있는 다른 모든 마이닝 모델은 내보내지지 않습니다.  

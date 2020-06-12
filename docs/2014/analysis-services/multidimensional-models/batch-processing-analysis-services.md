@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076937"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544625"
 ---
 # <a name="batch-processing-analysis-services"></a>일괄 처리(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 일괄 처리 명령을 사용하여 여러 처리 명령을 단일 요청으로 서버에 보낼 수 있습니다. 일괄 처리를 사용하여 처리할 개체와 처리 순서를 제어할 수 있습니다. 또한 일괄 처리는 일련의 독립 실행형 작업으로 실행되거나 한 프로세스가 실패하면 완료된 일괄 처리가 롤백되는 트랜잭션으로 실행될 수 있습니다.  

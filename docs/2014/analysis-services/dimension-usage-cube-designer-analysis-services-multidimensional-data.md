@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10858ca8d245a9a63169b555674941bf29a6363a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081673"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528569"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>차원 용도(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **차원 용도** 탭을 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66081673"
 |창|정의|  
 |----------|----------------|  
 |**]**|도구 모음을 사용 하 여이 탭에서 일반적인 작업을 수행할 수 있습니다. 이 창에 대 한 자세한 내용은 [도구 모음 &#40;차원 용도 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;를 ](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)참조 하세요.|  
-|**표**|표를 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [표&#40;차원 용도 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
+|**눈금**|표를 사용하여 큐브의 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 이 창에 대한 자세한 내용은 [표&#40;차원 용도 탭, 큐브 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

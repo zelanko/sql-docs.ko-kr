@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d22d6201c48ac77de5ab1e86ebed276478de683
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084383"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522419"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드 찾기
-  마이닝 모델의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종속성 네트워크는 많은 노드를 포함 하 여 관심 있는 데이터를 찾기 어려울 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
+  마이닝 모델의 종속성 네트워크는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 많은 노드를 포함 하 여 관심 있는 데이터를 찾기 어려울 수 있습니다. 이 문제를 해결하려면 데이터 마이닝 디자이너의 **종속성 네트워크** 탭에서 **노드 찾기** 대화 상자를 사용하여 특정 노드를 검색합니다.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>종속성 네트워크에서 특정 노드를 찾으려면  
   

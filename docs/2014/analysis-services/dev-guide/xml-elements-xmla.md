@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1e5b046bfa57302baefc43a4da989be9c70e08
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528657"
 ---
 # <a name="xml-elements-xmla"></a>XML 요소(XMLA)
-  다음 항목에서는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]지 원하는 XMLA (다양 한 XML for Analysis) 요소 범주에 대해 설명 합니다.  
+  다음 항목에서는에서 지 원하는 XMLA (다양 한 XML for Analysis) 요소 범주에 대해 설명 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |[XMLA &#40;헤더&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|프로토콜 수준의 기능을 관리하기 위해 애플리케이션 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 SOAP Envelope의 SOAP 헤더에서 전송되는 요소를 설명합니다.|  
 |[XMLA &#40;메서드&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|데이터 또는 메타데이터를 검색하거나 인스턴스에 대한 동작을 수행하기 위해 애플리케이션에 의해 SOAP Envelope에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 전송되는 최상위 요소를 설명합니다.|  

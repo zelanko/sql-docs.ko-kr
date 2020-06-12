@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26cdba5b-5bf1-439e-80a3-8759774e918b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b63a6d6da0cb1d489ecac418e2682590ea2164e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10f0dff6db48300b276ea586ec358e2f15089e14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522449"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>연결 규칙 모델에서 규칙 필터링
   연결 모델에 필터링을 사용하여 보고자 하는 연결로만 결과를 제한할 수 있습니다. 예를 들어 특정 제품이 포함된 규칙만 표시하도록 규칙을 필터링할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085715"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524209"
 ---
 # <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
@@ -192,7 +191,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  결과 예:  
   
-|특성|값|빈도|고객 지원팀|  
+|특성|값|빈도|지원|  
 |----------------|------------|---------------|-------------|  
 |Number Children at Home|0|0.999999829076798|899|  
 |지역|북아메리카|0.999852875241508|899|  
@@ -216,12 +215,12 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  결과 예:  
   
-|특성|값|점수 매기기|  
+|특성|값|점수|  
 |----------------|------------|-----------|  
 |지역|북아메리카|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
 |지역|유럽|-72.5041051379789|  
-|English Occupation|Manual|-69.6503163202722|  
+|English Occupation|설명서|-69.6503163202722|  
   
  첫 번째 드롭다운 목록에서 클러스터 9를 선택하고 두 번째 드롭다운 목록에서 클러스터 7을 선택한 경우 이는 **클러스터 판별** 뷰어의 차트에 표시되는 정보와 동일합니다. 클러스터 9를 나머지 클러스터와 비교하려면 다음 예에서와 같이 두 번째 매개 변수에 빈 문자열을 사용하십시오.  
   
@@ -328,7 +327,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |클러스터 2|0.397918596951617|  
   
- **참고** 기본적으로이 함수 `ClusterProbability` 는 가장 가능성이 높은 클러스터의 확률을 반환 합니다. 그러나 `ClusterProbability('cluster name')`구문을 사용하여 다른 클러스터를 지정할 수 있습니다. 이 경우 각 예측 함수의 결과는 다른 결과에 대해 독립적입니다. 따라서 두 번째 열의 확률 점수는 첫 번째 열에 명명된 클러스터가 아닌 다른 클러스터를 참조할 수 있습니다.  
+ **참고** 기본적으로이 `ClusterProbability` 함수는 가장 가능성이 높은 클러스터의 확률을 반환 합니다. 그러나 `ClusterProbability('cluster name')`구문을 사용하여 다른 클러스터를 지정할 수 있습니다. 이 경우 각 예측 함수의 결과는 다른 결과에 대해 독립적입니다. 따라서 두 번째 열의 확률 점수는 첫 번째 열에 명명된 클러스터가 아닌 다른 클러스터를 참조할 수 있습니다.  
   
  [맨 위로 돌아가기](#bkmk_top2)  
   
@@ -369,7 +368,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[Cluster&#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
 |[ClusterDistance&#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  
 |[ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  

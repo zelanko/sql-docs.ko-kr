@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7f373dfa85e80de6bfd3a0bb33e9b28ab33a697
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087416"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527249"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 무인 데이터 새로 고침 계정 구성(SharePoint용 PowerPivot)
   PowerPivot 무인 데이터 새로 고침 계정은 SharePoint 팜에서 PowerPivot 데이터 새로 고침 작업을 실행할 용도로 지정된 계정입니다. 구성 하 여 데이터 새로 고침 일정 페이지에서 **관리자가 구성한 데이터 새로 고침 계정 사용** 옵션을 사용 하도록 설정 합니다 (아래 참조). 데이터 새로 고침을 예약한 통합 문서 만든 이가 PowerPivot 무인 데이터 새로 고침 계정을 사용하여 데이터 새로 고침 작업을 실행하려는 경우 이 옵션을 선택할 수 있습니다. 데이터 새로 고침 일정에서 자격 증명 옵션을 확인 하는 방법에 대 한 자세한 내용은 [데이터 새로 고침 예약 &#40;SharePoint용 PowerPivot&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)를 참조 하세요.  
@@ -46,7 +45,7 @@ ms.locfileid: "66087416"
   
  [기존의 PowerPivot 무인 데이터 새로 고침 계정에 사용되는 자격 증명 업데이트](#bkmk_editUA)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  보안 저장소 서비스를 사용하도록 설정하고 구성해야 하며 마스터 키를 생성해야 합니다. 이 작업을 수행 하는 방법에 대 한 지침은 [SharePoint 2010에서 PowerPivot 데이터 새로 고침](powerpivot-data-refresh-with-sharepoint-2010.md) 을 참조 하세요.  
   
  PowerPivot 무인 데이터 새로 고침 계정으로 사용할 Windows 도메인 사용자 계정을 미리 결정해야 합니다. 무인 데이터 새로 고침 용도로 만들어진 계정이어야 합니다. 그래야 계정이 사용되는 방식을 모니터링할 수 있습니다.  

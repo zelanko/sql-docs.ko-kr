@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076334"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536265"
 ---
 # <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
   파워 뷰를 다차원 모델에 연결하려면 SharePoint 라이브러리에서 .rsds 파일이라는 공유 보고서 데이터 원본 정의를 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66076334"
   
 1.  라이브러리 리본 메뉴에 있는 **문서** 탭을 클릭합니다.  
   
-2.  **새 문서** > **보고서 데이터 원본**을 클릭 합니다.  
+2.  **새 문서**  >  **보고서 데이터 원본**을 클릭 합니다.  
   
     > [!NOTE]  
     >  메뉴에 **보고서 데이터 원본** 항목이 표시되지 않는 경우 이 라이브러리에 대해 보고서 데이터 원본의 콘텐츠 형식이 설정되어 있지 않은 것입니다. 자세한 내용은 [SharePoint 통합 모드&#41;에서 &#40;Reporting Services 라이브러리에 보고서 서버 콘텐츠 형식 추가 ](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)를 참조 하세요.  

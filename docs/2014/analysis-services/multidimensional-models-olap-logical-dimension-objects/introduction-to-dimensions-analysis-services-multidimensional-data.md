@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387903"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545125"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>차원 소개(Analysis Services - 다차원 데이터)
   모든 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원은 데이터 원본 뷰에서 테이블이 나 뷰의 열을 기반으로 하는 특성 그룹입니다. 차원은 큐브와 독립적으로 존재하며 여러 큐브에서 사용되거나 단일 큐브에서 여러 번 사용되고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 간에 연결될 수 있습니다. 큐브와 독립적으로 존재하는 차원을 데이터베이스 차원이라고 하며 큐브 내의 데이터베이스 차원 인스턴스를 큐브 차원이라고 합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "81387903"
 ## <a name="dimension-based-on-a-star-schema-design"></a>별모양 스키마 디자인을 기반으로 하는 차원  
  차원의 구조는 기본 차원 테이블의 구조에 의해 크게 좌우됩니다. 가장 간단한 구조를 별모양 스키마라고 하는데 이러한 구조에서 각 차원은 기본 키 - 외래 키 관계에 따라 팩트 테이블에 직접 연결되어 있는 단일 차원 테이블을 기반으로 합니다.  
   
- 다음 다이어그램에서는 FactResellerSales 팩트 테이블이 두 개의 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] 차원 테이블 ( **FactResellerSales** **재판매인** 및 **shpromotion**)과 관련 된 예제 데이터베이스의 하위 섹션을 보여 줍니다. **FactResellerSales** 팩트 테이블의 **ResellerKey** 열은 **Sh재판매인** 차원 테이블의 **ResellerKey** 기본 키 열에 대 한 외래 키 관계를 정의 합니다. 마찬가지로 **FactResellerSales** 팩트 테이블의 **PromotionKey** 열은 **Shpromotion** 차원 테이블의 **PromotionKey** 기본 키 열에 대 한 외래 키 관계를 정의 합니다.  
+ 다음 다이어그램에서는 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] FactResellerSales 팩트 테이블이 두 개의 차원 테이블 ( **FactResellerSales** **재판매인** 및 **shpromotion**)과 관련 된 예제 데이터베이스의 하위 섹션을 보여 줍니다. **FactResellerSales** 팩트 테이블의 **ResellerKey** 열은 **Sh재판매인** 차원 테이블의 **ResellerKey** 기본 키 열에 대 한 외래 키 관계를 정의 합니다. 마찬가지로 **FactResellerSales** 팩트 테이블의 **PromotionKey** 열은 **Shpromotion** 차원 테이블의 **PromotionKey** 기본 키 열에 대 한 외래 키 관계를 정의 합니다.  
   
  ![팩트 차원 관계에 대한 논리 스키마](../../analysis-services/dev-guide/media/dimfactrelationship.gif "팩트 차원 관계에 대한 논리 스키마")  
   

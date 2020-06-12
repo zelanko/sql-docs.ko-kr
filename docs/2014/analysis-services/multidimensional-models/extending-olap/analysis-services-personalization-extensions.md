@@ -11,39 +11,38 @@ helpviewer_keywords:
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cddb6b604e0fc397e6640637db7320898d2beb5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62726119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546765"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services 개인 설정 확장 프로그램
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 플러그 인 아키텍처를 구현 하는 개념을 기반으로 합니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 다음을 달성할 수 있도록 하는 기능을 제공 합니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램은 플러그 인 아키텍처를 구현 하는 개념을 기반으로 합니다. 플러그 인 아키텍처에서는 동적으로 새 큐브 개체 및 기능을 개발하여 다른 개발자와 손쉽게 공유할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 다음을 달성할 수 있도록 하는 기능을 제공 합니다.  
   
--   **동적 디자인 및 배포** 사용자는 개인 설정 확장 프로그램 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 을 디자인 하 고 배포 하는 즉시 다음 사용자 세션이 시작 될 때 개체와 기능에 액세스할 수 있습니다.  
+-   **동적 디자인 및 배포** 사용자는 개인 설정 확장 프로그램을 디자인 하 고 배포 하는 즉시 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 사용자 세션이 시작 될 때 개체와 기능에 액세스할 수 있습니다.  
   
--   **인터페이스 독립성** 사용자는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램을 만드는 데 사용 하는 인터페이스에 관계 없이 모든 인터페이스를 사용 하 여 개체와 기능에 액세스할 수 있습니다.  
+-   **인터페이스 독립성** 사용자는 개인 설정 확장 프로그램을 만드는 데 사용 하는 인터페이스에 관계 없이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모든 인터페이스를 사용 하 여 개체와 기능에 액세스할 수 있습니다.  
   
--   **세션 컨텍스트** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 기존 인프라에서 영구 개체가 아니므로 큐브를 다시 처리 하지 않아도 됩니다. 이러한 프로그램은 사용자가 데이터베이스에 연결하는 시점에 사용자에 대해 노출 및 생성되며 해당 사용자 세션 동안 사용 가능한 상태로 유지됩니다.  
+-   **세션 컨텍스트** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램은 기존 인프라에서 영구적 개체가 아니므로 큐브를 다시 처리 하지 않아도 됩니다. 이러한 프로그램은 사용자가 데이터베이스에 연결하는 시점에 사용자에 대해 노출 및 생성되며 해당 사용자 세션 동안 사용 가능한 상태로 유지됩니다.  
   
--   **신속한 배포** 다른 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 소프트웨어 개발자와 개인 설정 확장 프로그램을 공유 하 여이 확장 기능을 찾을 수 있는 위치 또는 방법에 대 한 자세한 사양을 고려해 서는 안 됩니다.  
+-   **신속한 배포** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]다른 소프트웨어 개발자와 개인 설정 확장 프로그램을 공유 하 여이 확장 기능을 찾을 수 있는 위치 또는 방법에 대 한 자세한 사양을 고려해 서는 안 됩니다.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 용도는 많습니다. 예를 들어 회사의 영업에 여러 통화가 관련된 경우가 있습니다. 큐브에 액세스하는 사람에 해당하는 지역 통화로 통합된 영업을 반환하는 계산 멤버를 만들 수 있습니다. 이 멤버를 개인 설정 확장 프로그램으로 만듭니다. 그런 다음 이 계산 멤버를 사용자 그룹과 공유합니다. 공유하면 이러한 사용자들은 서버에 연결한 즉시 계산 멤버에 액세스할 수 있게 됩니다. 사용자가 사용하는 인터페이스가 계산 멤버를 만들 때 사용된 인터페이스와 다른 경우에도 액세스할 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램은 기존 관리 되는 어셈블리 아키텍처를 간단 하 고 세련 되 게 수정 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 하 여 개체 모델, MDX (Multidimensional Expressions) 구문 및 스키마 행 집합 전체에 노출 됩니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램은 기존 관리 되는 어셈블리 아키텍처를 간단 하 고 세련 되 게 수정 하 여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> 개체 모델, MDX (Multidimensional Expressions) 구문 및 스키마 행 집합 전체에 노출 됩니다.  
   
 ## <a name="logical-architecture"></a>논리 아키텍처  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개인 설정 확장 프로그램의 아키텍처는 관리 어셈블리 아키텍처와 다음 네 가지의 기본 요소를 기반으로 합니다.  
   
  [PlugInAttribute] 사용자 지정 특성  
- 서비스를 시작할 때에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 필요한 어셈블리를 로드 하 고 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성이 있는 클래스를 확인 합니다.  
+ 서비스를 시작할 때에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 필요한 어셈블리를 로드 하 고 사용자 지정 특성이 있는 클래스를 확인 합니다 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> .  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 MSDN의 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 개발자 가이드에서 "[특성 개요](https://go.microsoft.com/fwlink/?LinkId=82929)" 항목을 참조 하십시오.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]는 사용자 지정 특성을 정의하여 코드를 설명하고 런타임 동작에 영향을 미칩니다. 자세한 내용은 MSDN의 개발자 가이드에서 "[특성 개요](https://go.microsoft.com/fwlink/?LinkId=82929)" 항목을 참조 하십시오 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] .  
   
- <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> 사용자 지정 특성이 있는 모든 클래스에 대해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은 해당 기본 생성자를 호출 합니다. 시작 시에 모든 생성자를 호출하면 새 개체를 만들 수 있는, 모든 사용자 동작으로부터 독립적인 공통된 장소가 제공됩니다.  
+ 사용자 지정 특성이 있는 모든 클래스에 대해 <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 은 해당 기본 생성자를 호출 합니다. 시작 시에 모든 생성자를 호출하면 새 개체를 만들 수 있는, 모든 사용자 동작으로부터 독립적인 공통된 장소가 제공됩니다.  
   
  클래스 생성자는 개인 설정 확장 프로그램의 제작 및 관리 정보를 위한 작은 캐시를 만드는 것 외에 일반적으로 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> 및 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> 이벤트를 구독합니다. 이러한 이벤트를 구독하지 못할 경우 CLR(공용 언어 런타임) 가비지 수집기에 의해 클래스가 부적절하게 정리 대상으로 표시될 수 있습니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62726119"
   
  클라이언트와 서버 간의 통신은 특정 이벤트를 통해 이루어집니다. 이러한 이벤트를 통해 클라이언트는 클라이언트의 개체 생성으로 이어지는 상황을 인식합니다. 클라이언트의 환경은 세션 이벤트와 큐브 이벤트, 두 개의 이벤트 집합을 사용하여 동적으로 만들어집니다.  
   
- 세션 이벤트는 서버 개체와 연관됩니다. 클라이언트는 서버에 로그온 할 때 세션을 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 만들고 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> 이벤트를 트리거합니다. 클라이언트는 서버에서 세션을 종료 하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> 이벤트를 트리거합니다.  
+ 세션 이벤트는 서버 개체와 연관됩니다. 클라이언트는 서버에 로그온 할 때 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 세션을 만들고 이벤트를 트리거합니다 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> . 클라이언트는 서버에서 세션을 종료 하면 이벤트를 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 트리거합니다 <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing> .  
   
  큐브 이벤트는 연결 개체와 연관됩니다. 큐브에 연결하면 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened> 이벤트가 트리거됩니다. 큐브를 닫거나 다른 큐브로 변경하여 큐브에 대한 연결을 닫으면 <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeClosing> 이벤트가 트리거됩니다.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175772"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536055"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>다차원 모델의 측정값 및 측정값 그룹 만들기
   *측정값* 은 합계, 개수, 최소값, 최대값, 평균 또는 사용자가 만드는 사용자 지정 MDX 식과 같은 숫자 데이터 값의 집계입니다. *측정값 그룹* 은 하나 이상의 측정이 포함된 컨테이너입니다. 모든 측정값은 측정값이 하나만 있더라도 측정값 그룹에 포함됩니다. 큐브는 하나 이상의 측정값과 측정값 그룹을 포함해야 합니다.
@@ -49,7 +48,7 @@ ms.locfileid: "78175772"
 
 |||
 |-|-|
-|**원본**|대부분의 측정값은 AdventureWorks 데이터 웨어하우스에 있는 Internet Sales 및 Reseller Sales 테이블의 Sales Amount 열과 같이 외부 데이터 웨어하우스에 있는 팩트 테이블의 숫자 열에서 가져오지만 전적으로 사용자가 정의한 계산을 기반으로 새 측정값을 만들 수도 있습니다.<br /><br /> 차원 테이블의 특성 열을 사용하여 측정값을 정의할 수도 있지만 이러한 측정값은 일반적으로 집계 동작 면에서 반가산적이거나 비가산적입니다. 반가산적 동작에 대한 자세한 내용은 [반가산적 동작 정의](define-semiadditive-behavior.md)를 참조하세요.|
+|**source**|대부분의 측정값은 AdventureWorks 데이터 웨어하우스에 있는 Internet Sales 및 Reseller Sales 테이블의 Sales Amount 열과 같이 외부 데이터 웨어하우스에 있는 팩트 테이블의 숫자 열에서 가져오지만 전적으로 사용자가 정의한 계산을 기반으로 새 측정값을 만들 수도 있습니다.<br /><br /> 차원 테이블의 특성 열을 사용하여 측정값을 정의할 수도 있지만 이러한 측정값은 일반적으로 집계 동작 면에서 반가산적이거나 비가산적입니다. 반가산적 동작에 대한 자세한 내용은 [반가산적 동작 정의](define-semiadditive-behavior.md)를 참조하세요.|
 |**aggregation**|기본적으로 측정값이 각 차원에 따라 합계되지만 그러나 `AggregateFunction` 속성을 사용하여 이 동작을 수정할 수 있습니다. 목록은 [Use Aggregate Functions](use-aggregate-functions.md) 을 참조하세요.|
 |**속성**|추가 속성 설명은 [Configure Measure Properties](configure-measure-properties.md) 을 참조하세요.|
 

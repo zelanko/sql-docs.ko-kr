@@ -12,17 +12,17 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283654"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859825"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>옵션 (디자이너-테이블 및 데이터베이스 디자이너 페이지)
   이 페이지를 사용하여 디자이너의 기본 동작을 결정할 수 있습니다. 이 설정에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너** 폴더를 확장한 다음 **테이블 디자이너**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **테이블 디자이너 업데이트에 대한 연결 문자열 제한 시간 값 재정의**  
  테이블 디자이너의 동작에 대해 새 제한 시간 값을 설정하도록 허용합니다. 이 옵션은 테이블 디자이너가 수정하는 데 시간이 많이 걸리는 대형 테이블에 대한 작업을 수행하는 경우에 유용합니다.  
   

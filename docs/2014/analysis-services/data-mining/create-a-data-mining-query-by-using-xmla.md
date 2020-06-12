@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085551"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523969"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>XMLA를 사용하여 데이터 마이닝 쿼리 만들기
   AMO, DMX 또는 XML/A를 사용하여 데이터 마이닝 개체에 대한 다양한 쿼리를 만들 수 있습니다.  
@@ -44,9 +43,9 @@ ms.locfileid: "66085551"
   
      현재 인스턴스에서 사용할 수 있는 모든 행 집합에 대한 행 집합 이름 및 행 집합 열이 포함된 스키마 행 집합 목록이 **결과** 창에 반환됩니다.  
   
-2.  **쿼리** 창에서 ** \<제한 목록>** 뒤에 커서를 놓고 enter 키를 눌러 새 줄을 추가 합니다.  
+2.  **쿼리** 창에서 뒤에 커서를 놓고 **\<Restriction List>** enter 키를 눌러 새 줄을 추가 합니다.  
   
-3.  빈 줄에 커서를 놓고 ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</schemaname를 입력>**  
+3.  빈 줄에 커서를 놓고 형식 ** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      제한에 대한 전체 섹션은 다음과 같아야 합니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66085551"
   
      다음 줄로 바꿉니다.  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</requesttype>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  제한 목록에 새 조건을 추가하여 이름으로 마이닝 모델을 지정하도록 제한 목록을 변경합니다.  
   

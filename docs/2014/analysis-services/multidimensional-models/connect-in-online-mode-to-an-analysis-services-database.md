@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520bf86abe448b444c653f61849640f0b1a7789f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076567"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536985"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>온라인 모드로 Analysis Services 데이터베이스에 연결
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 직접 연결 하 여 해당 데이터베이스 내의 개체를 직접 수정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 직접 연결하면 개체 변경이 즉시 수행되며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트가 생성되지 않습니다.  
+  기존 데이터베이스에 직접 연결 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 데이터베이스 내의 개체를 직접 수정할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 직접 연결하면 개체 변경이 즉시 수행되며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트가 생성되지 않습니다.  
   
 ### <a name="to-connect-directly-to-an-analysis-services-database-by-using-sql-server-data-tools"></a>SQL Server Data Tools를 사용하여 Analysis Services 데이터베이스에 직접 연결하려면  
   

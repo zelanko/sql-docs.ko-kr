@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ab42604fabaa188a74858038e35a8b90a105df8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7d5ed5c2f8882cbc0c47a1c711748d26e0193c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071214"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535075"
 ---
 # <a name="powerpivot-data-refresh"></a>PowerPivot 데이터 새로 고침
   PowerPivot 데이터가 포함된 통합 문서를 만든 후 통합 문서를 만들기 위해 원래 사용했던 원본의 업데이트된 정보를 가져오기 위해 쿼리나 명령을 다시 실행하여 정기적으로 데이터를 새로 고칠 수 있습니다. 이 프로세스를 `data refresh`라고 하며, [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 요청 시 또는 SharePoint 팜의 애플리케이션 서버에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로세스로 실행되는 예약된 작업으로 데이터를 새로 고칠 수 있습니다. 자세한 내용은 다음을 참조하세요.  

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 104d9dedafafedce505f63a9b8c17291d631ca54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74684090"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540605"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Create a trusted location for PowerPivot sites in Central Administration
   Excel 서비스에서는 SharePoint 서버에서 연 통합 문서에 올바른 리포지토리인 위치를 지정할 수 있습니다. 이러한 위치를 '신뢰할 수 있는 위치'라고 하며 사용자가 만든 신뢰할 수 있는 위치 각각에 대해 다른 구성 설정을 사용할 수 있습니다. SharePoint용 PowerPivot을 배포하는 경우 팜의 나머지 부분에는 기본 설정을 계속 사용하면서 PowerPivot 데이터 액세스에 가장 적합한 설정을 적용할 수 있도록 PowerPivot 통합 문서를 포함하는 사이트에 대한 신뢰할 수 있는 위치를 만드는 것을 고려할 수 있습니다.  
   
   
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  URL을 신뢰할 수 있는 위치로 지정하려면 팜이나 서비스 관리자여야 합니다.  
   
  PowerPivot 갤러리나 통합 문서를 저장하는 기타 라이브러리를 포함하는 SharePoint 사이트의 URL 주소를 알아야 합니다. 주소를 가져오려면 라이브러리가 포함 된 사이트를 열고 **PowerPivot 갤러리**를 마우스 오른쪽 단추로 클릭 하 고 **속성**을 선택한 다음 서버 이름과 사이트 경로가 포함 된 주소 (URL)의 첫 부분을 복사 합니다.  

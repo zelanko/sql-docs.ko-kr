@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7cf1e6cea8df00b632e114a5a8756373738ca6e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074639"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546525"
 ---
 # <a name="managing-scope-and-context-mdx"></a>범위 및 컨텍스트 관리(MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]MDX (Multidimensional Expressions) 스크립트는 스크립트 실행 내의 특정 지점에서 전체 큐브나 큐브의 특정 부분에 적용 될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
+  에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] MDX (Multidimensional Expressions) 스크립트는 스크립트 실행 내의 특정 지점에서 전체 큐브나 큐브의 특정 부분에 적용 될 수 있습니다. MDX 스크립트는 계산 패스를 사용하여 큐브 내에서의 계산에 계층화된 방법을 취할 수 있습니다.  
   
 > [!NOTE]  
 >  계산 패스가 계산에 미치는 영향에 대한 자세한 내용은 [패스 순서 및 계산 순서 이해&#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)를 참조하세요.  
@@ -58,7 +57,7 @@ SCOPE([Customer].&[Redmond].MEMBERS,
 END SCOPE;  
 ```  
   
- `This` 함수 구문에 대 한 자세한 내용은 [이 &#40;MDX&#41;](/sql/mdx/this-mdx)를 참조 하세요.  
+ 함수 구문에 대 한 자세한 내용은 `This` [이 &#40;MDX&#41;](/sql/mdx/this-mdx)를 참조 하세요.  
   
 ## <a name="using-the-scope-statement"></a>SCOPE 문 사용  
  SCOPE 문은 MDX 스크립트 내의 다른 MDX 식과 문을 포함하고 해당 범위를 지정하는 현재 하위 큐브를 정의합니다. MDX는 하위 큐브의 컨텍스트 내에서 `This` 함수와 CALCULATE 문을 포함하여 이런 다른 MDX 식과 문을 계산합니다.  

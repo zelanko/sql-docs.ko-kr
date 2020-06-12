@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077405"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544795"
 ---
 # <a name="configure-attribute-types"></a>특성 유형 구성
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]특성 유형은 비즈니스 기능 측면에서 특성을 분류 하는 데 도움이 됩니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 애플리케이션에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
+  에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 특성 유형은 비즈니스 기능 측면에서 특성을 분류 하는 데 도움이 됩니다. 다양한 특성 유형이 있으며 이들 대부분은 클라이언트 애플리케이션에서 특성을 표시하거나 지원하는 용도로 사용됩니다. 하지만 일부 특성 유형이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 특정한 의미를 지니기도 합니다. 예를 들어 일부 특성 유형은 시간 차원에 대한 다양한 달력의 기간을 나타내는 특성을 식별합니다.  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> 특성 유형 설정  
  특성에 대한 `Type` 속성의 값이 해당 특성에 대한 특성 유형을 결정합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 마법사는 차원이나 특성을 정의할 때 특성 유형을 설정합니다. 이러한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 차원에 기능을 추가할 때도 특성 유형을 설정합니다. 예를 들어 비즈니스 인텔리전스 마법사는 차원에 있는 계정의 이름, 코드, 번호 및 구조가 포함된 특성을 식별하기 위해 계정 인텔리전스를 추가할 때 차원의 특성에 여러 특성 유형을 적용합니다. 비즈니스 인텔리전스 마법사에서도 통화 변환 등에 특성 유형을 사용합니다. 자세한 내용은 [통화 유형 차원 만들기](database-dimensions-create-a-currency-type-dimension.md)를 참조하세요.  

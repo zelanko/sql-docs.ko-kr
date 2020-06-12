@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074706"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546571"
 ---
 # <a name="cube-space"></a>큐브 공간
   큐브 공간은 큐브 특성 계층의 멤버와 큐브의 측정값을 곱하여 생성된 공간입니다. 따라서 큐브 공간은 큐브의 모든 특성 계층 멤버와 큐브의 측정값을 곱한 결과의 조합으로 결정되며 큐브의 최대 크기를 정의합니다. 실제로는 조합이 불가능한 것으로 간주될 수도 있지만(예: 도시는 파리이고 국가는 잉글랜드, 스페인, 일본 또는 인도인 조합의 경우) 이 공간은 특성 계층 멤버의 가능한 모든 조합을 포함합니다.  
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  결과 집합의 메타데이터는 다르지만 반환되는 셀 값은 동일합니다. 예를 들어 앞의 쿼리를 사용할 경우 Country 계층은 WHERE 절을 통해 slicer 축으로 이동되므로 결과 집합에 명시적으로 나타나지 않습니다.  
   
- 위의 세 쿼리는 각각에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]자동 존재 동작의 효과를 보여 줍니다.  
+ 위의 세 쿼리는 각각에서 자동 존재 동작의 효과를 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>사용자 정의 계층 및 큐브 공간  
  이 항목의 앞에 나온 예제에서는 특성 계층을 사용하여 큐브 공간 내의 위치를 정의합니다. 그러나 차원의 특성 계층에 따라 정의한 사용자 정의 계층을 사용하여 큐브 공간 내의 위치를 정의할 수도 있습니다. 사용자 정의 계층은 사용자가 큐브 데이터를 쉽게 찾을 수 있도록 디자인된 특성 계층의 한 계층입니다.  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  `WITH` 키워드는 [CURRENTMEMBER (Mdx)](/sql/mdx/current-mdx) 및 [Name (mdx)](/sql/mdx/members-string-mdx) 함수와 함께 쿼리에 사용할 계산 멤버를 만드는 데 사용 됩니다. 자세한 내용은 [기본 MDX 쿼리&#40;MDX&#41;](mdx-query-the-basic-query.md)를 참조하세요.  
+>  `WITH`키워드는 [currentmember (mdx)](/sql/mdx/current-mdx) 및 [Name (mdx)](/sql/mdx/members-string-mdx) 함수와 함께 쿼리에 사용할 계산 멤버를 만드는 데 사용 됩니다. 자세한 내용은 [기본 MDX 쿼리&#40;MDX&#41;](mdx-query-the-basic-query.md)를 참조하세요.  
   
  앞의 쿼리에서는 State 특성 계층의 각 멤버와 관련된 Country 특성 계층의 멤버 이름이 반환됩니다. 이 경우 City 특성과 Country 특성 간의 특성 관계가 정의되어 있으므로 예상한 Country 멤버가 나타납니다. 그러나 동일한 차원의 특성 계층 간에 특성 관계가 정의되어 있지 않으면 (All) 멤버가 반환됩니다. 다음 쿼리에서는 이를 보여 줍니다.  
   

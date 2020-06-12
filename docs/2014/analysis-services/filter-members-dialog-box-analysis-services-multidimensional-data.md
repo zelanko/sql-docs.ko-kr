@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66980b1afe9d4eed353ae18c37ed1fdd052e62b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081161"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544467"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>멤버 필터 대화 상자(Analysis Services - 다차원 데이터)
   **의** 멤버 필터 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하면 **차원 디자이너** 의 **브라우저**탭에서 차원을 찾아보는 동안 현재 수준에 대한 값 열 값, 키 열 값, 멤버 고유 이름, 멤버 이름 또는 멤버 캡션별로 차원 멤버를 필터링할 수 있습니다.  

@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928455"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669655"
 ---
 # <a name="reserved-keywords-dmx"></a>예약어(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] 는 단독 사용을 위해 특정 키워드를 예약 합니다. 예약어는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 DMX 언어 참조에서 정의한 위치가 아닌 다른 DMX(Data Mining Extensions) 문 위치에서는 사용할 수 없습니다. 이러한 제한된 DMX 키워드에는 다음 멤버가 포함됩니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]는 단독 사용을 위해 특정 키워드를 예약 합니다. 예약어는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 DMX 언어 참조에서 정의한 위치가 아닌 다른 DMX(Data Mining Extensions) 문 위치에서는 사용할 수 없습니다. 이러한 제한된 DMX 키워드에는 다음 멤버가 포함됩니다.  
   
 -   모든 데이터 정의 문은 [DMX 데이터 정의 문](../dmx/dmx-statements-data-definition.md)항목에 나와 있습니다.  
   

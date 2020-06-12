@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064667"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527749"
 ---
 # <a name="browsing-a-decision-trees-model"></a>의사 결정 트리 모델 찾아보기
-  **찾아보기**를 사용 하 여 분류 모델을 열면의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의사 결정 트리 뷰어와 비슷한 대화형 의사 결정 트리 뷰어에 모델이 표시 됩니다. 뷰어에는 데이터 그룹을 구별하는 조건을 강조 표시하는 그래프로 분류 결과가 표시됩니다. 트리의 개별 하위 집합으로 드릴다운하고 기본 데이터를 검색할 수도 있습니다.  
+  **찾아보기**를 사용 하 여 분류 모델을 열면의 의사 결정 트리 뷰어와 비슷한 대화형 의사 결정 트리 뷰어에 모델이 표시 됩니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 뷰어에는 데이터 그룹을 구별하는 조건을 강조 표시하는 그래프로 분류 결과가 표시됩니다. 트리의 개별 하위 집합으로 드릴다운하고 기본 데이터를 검색할 수도 있습니다.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>모델 탐색  
  의사 결정 트리 알고리즘을 기반으로 하는 모델에는 검토할 만한 중요한 정보가 많습니다. **찾아보기** 창에는 그래프를 사용 하 여 패턴을 학습 하 고 결과를 예측 하는 데 도움이 되는 다음과 같은 탭과 창이 있습니다.  
@@ -87,13 +86,13 @@ ms.locfileid: "66064667"
   
      음영의 강도만으로 관심 있는 몇몇 그룹에 초점을 맞추고 비교를 위한 그룹별 세부 정보를 얻을 수 있습니다. 예를 들어, 다음 그룹은 자전거를 구입할 확률이 매우 높습니다.  
   
-    -   Age >= 32, \< 53 및 연간 소득 >= 26000 및 Children = 0  
+    -   Age >= 32 및 \< 53 and Yearly Income > = 26000 및 Children = 0  
   
          총 사례: 1150  
   
          자전거 구매자 확률: 18%  
   
-    -   Age >= 32 및 \< 53 및 연간 수입 >= 26000 및 자식 not = 0, 결혼 상태 = ' Single '  
+    -   Age >= 32 and \< 53 and Yearly Income > = 26000 And Children not = 0, 결혼 상태 = ' Single '  
   
          총 사례: 402  
   

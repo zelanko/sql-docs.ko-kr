@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1855150cdfbb4d2132c1edc7c08604dd90b87a9d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088013"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527459"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>클러스터 다이어그램 탭(마이닝 모델 뷰어)
   **클러스터 다이어그램** 탭은 클러스터링 모델에 포함된 모든 클러스터를 그래픽으로 표시합니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "66088013"
  **음영 변수**  
  클러스터 다이어그램에 나타낼 특성을 선택합니다.  
   
- **State**  
+ **상태**  
  클러스터 다이어그램에서 사용할 **음영 변수** 의 단일 상태를 선택합니다.  
   
  **링크**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085378"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523709"
 ---
 # <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
   대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  

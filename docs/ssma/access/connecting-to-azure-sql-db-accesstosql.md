@@ -1,5 +1,6 @@
 ---
 title: Azure SQL DB에 연결 (AccessToSQL) | Microsoft Docs
+description: Azure SQL Database의 대상 인스턴스에 연결 하 여 Access 데이터베이스를 마이그레이션하는 방법에 대해 알아봅니다. SSMA는 Azure SQL Database의 데이터베이스에 대 한 메타 데이터를 가져옵니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f07d63387a6abd55aa2a130f2809681b00a71b19
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006658"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293130"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB에 연결 (AccessToSQL)
 Access 데이터베이스를 SQL Azure로 마이그레이션하려면 SQL Azure의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Azure 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Azure 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Azure의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -35,7 +36,7 @@ SQL Azure 인스턴스에 대 한 메타 데이터는 자동으로 동기화 되
 ## <a name="required-sql-azure-permissions"></a>필요한 SQL Azure 권한  
 SQL Azure에 연결 하는 데 사용 되는 계정에는 해당 계정에서 수행 하는 작업에 따라 다른 사용 권한이 필요 합니다.  
   
--   Access 개체를 구문으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환 하거나, SQL Azure에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
+-   Access 개체를 구문으로 변환 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하거나, SQL Azure에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Azure 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
   
 -   데이터베이스 개체를 SQL Azure 로드 하려면 최소 권한 요구 사항이 대상 데이터베이스에서 **db_owner** 데이터베이스 역할의 멤버 자격 이어야 합니다.  
   

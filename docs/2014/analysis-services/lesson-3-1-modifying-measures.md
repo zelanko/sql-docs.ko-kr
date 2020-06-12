@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078897"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543435"
 ---
 # <a name="modifying-measures"></a>측정값 수정
   **FormatString** 속성을 사용하여 측정값이 사용자에게 표시되는 방식을 제어하는 서식 설정을 정의할 수 있습니다. 이 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 통화 및 백분율 측정값에 대한 서식 속성을 지정하는 방법에 대해 설명합니다.  
@@ -56,13 +55,13 @@ ms.locfileid: "66078897"
   
 7.  제목 표시줄 바로 아래의 속성 창 맨 위에 있는 드롭다운 목록에서 **Unit Price Discount Pct**측정값을 선택한 다음 **FormatString** 목록에서 **Percent** 를 선택합니다.  
   
-8.  속성 창에서 **Unit Price 할인 Pct** 측정값의 `Unit Price Discount Percentage` **Name** 속성을로 변경 합니다.  
+8.  속성 창에서 **Unit Price 할인 Pct** 측정값의 **Name** 속성을로 변경 `Unit Price Discount Percentage` 합니다.  
   
-9. **측정값** 창에서 **세금 Amt** 를 클릭 하 고이 측정값의 이름을로 `Tax Amount`변경 합니다.  
+9. **측정값** 창에서 **세금 Amt** 를 클릭 하 고이 측정값의 이름을로 변경 `Tax Amount` 합니다.  
   
 10. 속성 창에서 **자동 숨기기** 아이콘을 클릭하여 속성 창을 숨긴 다음 **큐브 구조** 탭의 도구 모음에서 **측정값 트리 표시** 를 클릭합니다.  
   
-11. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.  
+11. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [Customer 차원 수정](lesson-3-2-modifying-the-customer-dimension.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527660"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>계산 멤버 폼 편집기(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **계산 멤버 폼 편집기** 창을 사용하여 계산 멤버를 만들거나 수정할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088367"
   
  **참고** 이 옵션은 **부모 계층** 이 MEASURES 이외의 계층을 지정하는 경우에만 사용할 수 있습니다.  
   
- **변화**  
+ **변경**  
  **부모 멤버 선택** 대화 상자를 표시하여 **부모 멤버**에 대한 멤버를 선택하려면 이 옵션을 선택합니다. **부모 멤버 선택** 대화 상자에 대한 자세한 내용은 [부모 멤버 선택 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **식**  
@@ -58,14 +57,14 @@ ms.locfileid: "66088367"
   
  MDX 형식 문자열에 대한 자세한 내용은 [FORMAT_STRING 내용&#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)을 참조하세요.  
   
- **되**  
+ **표시**  
  계산 멤버를 클라이언트 애플리케이션에 표시하려면 **True** 를 선택합니다.  
   
  **비어 있지 않은 동작**  
  계산 멤버에 대해 MDX로 NON EMPTY 쿼리를 해결하는 데 사용하는 측정값의 이름을 선택합니다. **비어 있지 않은 동작** 속성이 비어 있는 경우 계산 멤버를 반복적으로 계산하여 멤버가 비어 있는지 확인해야 합니다. **비어 있지 않은 동작** 속성에 측정값의 이름이 있는 경우 지정한 측정값이 비어 있으면 계산 멤버도 비어 있는 것으로 처리됩니다.  
   
 > [!WARNING]  
->  이 속성은 더 이상 사용되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](deprecated-analysis-services-features-in-sql-server-2014.md) 을 참조 하세요.  
+>  이 속성은 사용되지 않습니다. 이 속성을 설정하지 마세요. 자세한 내용은 [SQL Server 2014에서 사용 되지 않는 Analysis Services 기능](deprecated-analysis-services-features-in-sql-server-2014.md) 을 참조 하세요.  
   
  **색 식**  
  **전경색** 및 **배경색** 옵션을 보려면 확장합니다.  

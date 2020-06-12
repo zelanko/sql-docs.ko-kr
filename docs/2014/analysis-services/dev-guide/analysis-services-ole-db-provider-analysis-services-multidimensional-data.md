@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0348a23a6def4c3cdbd083354083947ce1390b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732189"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528667"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Analysis Services OLE DB 공급자(Analysis Services - 다차원 데이터)
-  Analysis Services OLE DB Provider는와 상호 작용 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 응용 프로그램에 대 한 인터페이스입니다. 다차원 데이터와 상호 작용하는 클라이언트 애플리케이션을 구축하는 데 사용됩니다. 또한 이 공급자는 다차원 데이터 및 관계형 데이터의 온/오프라인 데이터 마이닝 분석을 제공하며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 일부로 포함됩니다. 타사 클라이언트 애플리케이션에서 재배포할 수 있습니다.  
+  Analysis Services OLE DB Provider는와 상호 작용 하는 응용 프로그램에 대 한 인터페이스입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 다차원 데이터와 상호 작용하는 클라이언트 애플리케이션을 구축하는 데 사용됩니다. 또한 이 공급자는 다차원 데이터 및 관계형 데이터의 온/오프라인 데이터 마이닝 분석을 제공하며 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 일부로 포함됩니다. 타사 클라이언트 애플리케이션에서 재배포할 수 있습니다.  
   
  Analysis Services OLE DB 공급자는 큐브 또는 데이터 마이닝 모델에 연결하고, 큐브 또는 데이터 마이닝 모델을 쿼리하고, 스키마 정보를 검색하는 등의 태스크를 수행하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 상호 작용하는 주요한 방법입니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 33d20da736308b4436c40a50b8b01da7445663c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 546448bd05f3af45b7093acb2dbb9d1e1a8f1bd5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081462"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528519"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>드릴스루 동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에 있는 **드릴스루 동작 폼 편집기** 창을 사용하여 **작업 구성 도우미** 창에서 선택한 드릴스루 작업을 수정할 수 있습니다. 드릴스루 동작에 대한 자세한 내용은 [작업&#40;Analysis Services - 다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -48,7 +47,7 @@ ms.locfileid: "66081462"
   
  표에는 다음 열이 있습니다.  
   
-|열|Description|  
+|열|설명|  
 |------------|-----------------|  
 |**차원**|반환 특성이 파생되는 차원을 선택합니다. 측정값을 드릴스루하려면 MEASURES를 선택합니다.|  
 |**반환 열**|선택한 차원에서 동작 실행 시 반환할 특성 또는 측정값을 선택합니다.|  
@@ -56,10 +55,10 @@ ms.locfileid: "66081462"
  **추가 속성**  
  확장하면 **기본값**, **최대 행 수**, **호출**, **애플리케이션**, **설명**, **캡션**및 **MDX 캡션** 옵션이 표시됩니다.  
   
- **기본**  
+ **기본값**  
  이 드릴스루 동작을 기본 드릴스루 동작으로 포함하려면 **True** 를 선택합니다. 포함하지 않으려면 **False**를 선택합니다.  
   
- 클라이언트 응용 `RETURN` 프로그램에서 실행 한 MDX `DRILLTHROUGH` 문에서 절을 생략 하면 인스턴스는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모든 기본 드릴스루 동작을 평가 하 고 비어 있지 않은 집합을 반환 하는 첫 번째 기본 드릴스루 동작을 실행 합니다. MDX `DRILLTHROUGH` 문에 대 한 자세한 내용은 [&#40;mdx&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)를 참조 하세요.  
+ `RETURN` `DRILLTHROUGH` 클라이언트 응용 프로그램에서 실행 한 MDX 문에서 절을 생략 하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스는 모든 기본 드릴스루 동작을 평가 하 고 비어 있지 않은 집합을 반환 하는 첫 번째 기본 드릴스루 동작을 실행 합니다. MDX 문에 대 한 자세한 내용은 `DRILLTHROUGH` [&#40;mdx&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)를 참조 하세요.  
   
 > [!NOTE]  
 >  이 옵션은 이전 버전과의 호환성을 위해 사용됩니다.  
@@ -78,10 +77,10 @@ ms.locfileid: "66081462"
 |값|설명|  
 |-----------|-----------------|  
 |Batch|동작이 일괄 처리 작업이나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 태스크의 일부로 실행됩니다.|  
-|Interactive (대화형)|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
+|대화형|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
 |열 때|큐브를 처음으로 열 때 동작이 실행됩니다.|  
   
- **응용 프로그램**  
+ **애플리케이션**  
  드릴스루 동작을 실행할 수 있는 애플리케이션 이름을 입력합니다.  
   
  이 옵션을 사용하여 이 동작을 가장 많이 사용하는 클라이언트 애플리케이션을 식별하고 팝업 메뉴에서 해당 작업 옆에 적절한 아이콘을 표시할 수도 있습니다.  

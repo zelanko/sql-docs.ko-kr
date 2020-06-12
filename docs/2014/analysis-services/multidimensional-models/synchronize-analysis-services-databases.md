@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072846"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547355"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  

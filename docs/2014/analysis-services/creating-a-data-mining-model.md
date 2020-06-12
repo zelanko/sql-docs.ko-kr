@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526474"
 ---
 # <a name="creating-a-data-mining-model"></a>데이터 마이닝 모델 만들기
   데이터 모델링은 데이터에 *알고리즘* 을 적용 하 여 패턴 및 추세를 작성 하는 데이터 마이닝 단계입니다. 이러한 패턴을 사용하여 나중에 분석하거나 예측할 수 있습니다.  
   
  Office용 데이터 마이닝 추가 기능은 모델을 간단히 만들 수 있는 마법사를 통해 데이터 마이닝을 지원합니다. 이 마법사는 데이터를 분석하고 상관 관계를 식별하며 모든 변수의 통계적 의미를 계산하고 자동으로 최상의 모델을 선택합니다.  
   
- 이 기능은 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 제공 하는 데이터 마이닝 도구 만큼 강력 하기는 하지만 마법사와 친숙 한 Excel 인터페이스를 함께 사용 하면 데이터 마이닝을 쉽게 만들고 수정 하 고 사용할 수 있습니다.  
+ 이 기능은 및에서 제공 하는 데이터 마이닝 도구 만큼 강력 하기는 하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 마법사와 친숙 한 Excel 인터페이스를 함께 사용 하면 데이터 마이닝을 쉽게 만들고 수정 하 고 사용할 수 있습니다.  
   
 ## <a name="advanced-data-mining"></a>고급(데이터 마이닝)  
- 고급 마법사를 사용 하면의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]데이터 마이닝 알고리즘 중 하나를 사용 하 여 Excel에 저장 된 데이터를 기반으로 새 데이터 마이닝 모델을 만들 수 있습니다.  
+ 고급 마법사를 사용 하면의 데이터 마이닝 알고리즘 중 하나를 사용 하 여 Excel에 저장 된 데이터를 기반으로 새 데이터 마이닝 모델을 만들 수 있습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="create-mining-structure"></a>마이닝 구조 만들기  
  마이닝 구조 만들기 마법사를 사용하면 여러 마이닝 모델의 기반으로 사용할 수 있는 새로운 데이터 마이닝 구조를 작성할 수 있습니다. 마법사에는 테스트 집합으로 사용할 데이터 부분을 따로 지정할 수 있는 옵션이 있으므로 일관된 테스트 표준에 따라 같은 데이터를 사용하는 모든 모델을 평가할 수 있습니다.  

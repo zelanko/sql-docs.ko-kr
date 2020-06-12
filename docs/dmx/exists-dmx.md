@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df52a83c2e60395e72b6f81903d0372d1dc05614
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889045"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670245"
 ---
 # <a name="exists-dmx"></a>Exists(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>인수  
  *하위 쿼리*  
- Select * FROM \<열 name> [WHERE \<predicate LIST>] 형식의 select 문입니다.  
+ Select * FROM \< 열 name> [WHERE \< predicate list>] 형식의 select 문입니다.  
   
 ## <a name="result-type"></a>결과 형식  
  하위 쿼리에서 반환 된 결과 집합에 하나 이상의 행이 포함 된 경우 **true** 를 반환 합니다. 그렇지 않으면 **false**를 반환 합니다.  

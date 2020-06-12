@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18312c8c597c783ad3f30dab0bdd386f7e560de6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543355"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>3단원: 측정값, 특성 및 계층 수정
   처음 큐브를 정의한 후에는 큐브를 보다 유용하고 친숙하게 사용할 수 있습니다. 이렇게 하려면 다양한 수준에서 탐색 및 집계를 지원하는 계층을 추가하고 특정 측정값에 형식을 적용하고 계산 및 관계를 정의해야 합니다.  

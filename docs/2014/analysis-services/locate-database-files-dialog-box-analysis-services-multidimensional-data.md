@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d98cba034ecb77f88b63f9adb46bea2ae76eb68d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541875"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 파일 찾기 대화 상자(Analysis Services - 다차원 데이터)
   **데이터베이스 파일 찾기** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대해 정의된 로그 및 데이터 폴더에서 사용 가능한 파일 목록을 표시합니다. 나열된 파일 중 하나를 선택하거나 필요한 경우 다른 폴더 및 파일을 지정할 수 있습니다. 다음을 수행하여 **데이터베이스 파일 찾기** 대화 상자를 표시할 수 있습니다.  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081655"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528589"
 ---
 # <a name="dimension-wizard-f1-help"></a>차원 마법사 F1 도움말
-  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 차원 마법사를 사용 하 여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 데이터베이스 차원을 만들 수 있습니다. 데이터베이스 차원을 만든 후 차원 디자이너를 사용하여 속성을 수정할 수 있습니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
+  의 차원 마법사를 사용 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 하 여 프로젝트에 데이터베이스 차원을 만들 수 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 있습니다. 데이터베이스 차원을 만든 후 차원 디자이너를 사용하여 속성을 수정할 수 있습니다. 차원 디자이너에 대한 자세한 내용은 [차원 디자이너&#40;Analysis Services - 다차원 데이터&#41;](dimension-designer-analysis-services-multidimensional-data.md)를 참조하세요.  
   
  **차원 마법사를 열려면**  
   

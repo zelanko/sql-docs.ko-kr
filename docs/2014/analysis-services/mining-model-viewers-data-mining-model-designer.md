@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175808"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537615"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>마이닝 모델 뷰어(데이터 마이닝 모델 디자이너)
   **마이닝 모델 뷰어** 탭을 사용하여 마이닝 구조에 포함된 마이닝 모델을 탐색할 수 있습니다.
@@ -31,7 +30,7 @@ ms.locfileid: "78175808"
 
  **마이닝 모델** 현재 마이닝 구조에서 볼 마이닝 모델을 선택합니다. 마이닝 모델은 연결된 사용자 지정 뷰어에서 먼저 열립니다.
 
- **뷰어** 선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록에는 각 마이닝 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 모델에 대해 제공 하는 뷰어 [!INCLUDE[msCoName](../includes/msconame-md.md)] , 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함 되어 있습니다.
+ **뷰어** 선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 이 목록 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 각 마이닝 모델에 대해 제공 하는 뷰어, [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어 및 모든 플러그 인 뷰어가 포함 되어 있습니다.
 
  다음 다이어그램에서는 같은 모델에 대해 사용자 지정 뷰어와 일반 뷰어를 보여 줍니다.
 

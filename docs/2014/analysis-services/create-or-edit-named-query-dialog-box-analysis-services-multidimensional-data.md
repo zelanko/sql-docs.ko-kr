@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086805"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526599"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>명명된 쿼리 만들기 또는 편집 대화 상자(Analysis Services - 다차원 데이터)
   **의** 명명된 쿼리 만들기/편집 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 **데이터 원본 뷰 디자이너**에서 명명된 쿼리를 생성 또는 편집할 수 있습니다. 명명된 쿼리를 다른 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 기반으로 사용할 수 있는 테이블로 처리할 수 있습니다. 다음을 수행하여 **명명된 쿼리 만들기/편집** 대화 상자를 표시할 수 있습니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "66086805"
 |**표 형태 창 표시/숨기기**|**표 형태 창을**표시 하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**SQL 창 표시/숨기기**|**SQL 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**결과 창 표시/숨기기**|**결과 창**을 표시하거나 숨깁니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
-|**Run**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
+|**실행**|쿼리를 실행합니다. 결과는 **결과 창**에 표시됩니다.|  
 |**SQL 검증**|쿼리에서 SQL 문을 검증합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**오름차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 오름차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  
 |**내림차순 정렬**|**표 형태 창**에서 선택한 열의 출력 행을 내림차순으로 정렬합니다.<br /><br /> 참고: 이 옵션은 **VDT 쿼리 작성기로 전환** 을 선택할 경우에만 표시됩니다.|  

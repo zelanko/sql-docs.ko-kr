@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b479564984727e47432754d0a660e6aa979244b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072004"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547635"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>중앙 관리에서 사이트 모음에 대해 PowerPivot 기능 통합 활성화
   기존 팜 설치 옵션을 사용하여 SQL Server SharePoint용 PowerPivot을 설치한 경우 특정 사이트 모음에 대해 PowerPivot 기능 통합을 활성화해야 합니다. 새 서버 옵션을 사용해 SharePoint용 PowerPivot을 설치한 경우에는 SQL Server 설치 프로그램에서 배포를 구성할 때 루트 사이트 모음에 대해 PowerPivot 기능 통합을 이미 활성화했기 때문에 이 태스크를 건너뛰어도 됩니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072004"
   
 1.  SharePoint  사이트에서 **사이트 작업**을 클릭합니다.  
   
-     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<컴퓨터 이름> 입력 하 여 루트 사이트 모음을 열면 SharePoint 사이트에 자주 액세스할 수 있습니다.  
+     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<computer name>을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   

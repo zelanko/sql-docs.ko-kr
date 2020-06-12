@@ -1,5 +1,6 @@
 ---
 title: 로컬 이름-QName (XQuery) | Microsoft Docs
+description: 로컬 이름-QName () 함수를 사용 하 여 QName의 로컬 이름 부분을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004564"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689367"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames 관련 함수 - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  로컬 이름이 추출되어야 하는 QName입니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
  다음 예제에서는 로컬 이름- **qname ()** 함수를 사용 하 여 qname 형식 값에서 로컬 이름 및 네임 스페이스 URI 부분을 검색 합니다. 이 예에서는 다음을 수행합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3888642f73fc0898c12ed471c7bc09d678303989
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217072"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544025"
 ---
 # <a name="connection-string-properties-analysis-services"></a> 연결 문자열 속성(Analysis Services)
   이 항목에서는 디자이너 또는 관리 도구 중 하나에서 설정하거나 Analysis Services 데이터에 연결하고 쿼리하는 클라이언트 애플리케이션에 의해 작성된 연결 문자열에 표시될 수 있는 연결 문자열 속성에 대해 설명합니다. 여기에서는 사용 가능한 속성의 일부만 다룹니다. 전체 목록에는 다양한 서버 및 데이터베이스 속성이 포함되어 있으므로 인스턴스나 데이터베이스가 서버에서 구성된 방식과 관계없이 특정 애플리케이션에 대한 연결을 사용자 지정할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "79217072"
 |--------------|-----------------|-------------|  
 |`Data Source` 또는 `DataSource`|서버 인스턴스를 지정합니다. 이 속성은 모든 연결에 필요합니다. 유효한 값에는 서버의 네트워크 이름 또는 IP 주소, 로컬 연결에 대한 local 또는 localhost, 서버가 HTTP 또는 HTTPS 액세스에 대해 구성된 경우 URL, 로컬 큐브 파일(.cub)의 이름이 포함됩니다.|`Data source=AW-SRV01` - 기본 인스턴스 및 포트(TCP 2383)에 사용됩니다.<br /><br /> `Data source=AW-SRV01$Finance:8081` - 명명된 인스턴스($Finance) 및 고정된 포트에 사용됩니다.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` - 정규화된 도메인 이름에 사용되며 기본 인스턴스 및 포트를 가정합니다.<br /><br /> `Data source=172.16.254.1` - 서버의 IP 주소에 사용되며 DNS 서버 조회를 우회합니다. 연결 문제를 해결하는 데 유용합니다.|  
 |`Initial Catalog` 또는 `Catalog`|연결할 Analysis Services 데이터베이스의 이름을 지정합니다. 데이터베이스가 Analysis Services에 배포되어야 하며 데이터베이스에 연결할 권한이 있어야 합니다. 이 속성은 AMO 연결의 경우 선택적이지만 ADOMD.NET의 경우에는 필수입니다.|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|유효한 값으로는 MSOLAP 또는 MSOLAP가 있습니다. \<버전> \<버전>은 3, 4 또는 5입니다. 파일 시스템에서 데이터 공급자 이름은 SQL Server 2012 버전의 경우 msolap110.dll이고, SQL Server 2008 및 2008 R2의 경우 msolap100.dll이며, SQL Server 2005의 경우 msolap90.dll입니다.<br /><br /> 현재 버전은 MSOLAP.5입니다. 이 속성은 선택 사항입니다. 기본적으로 클라이언트 라이브러리는 레지스트리에서 OLE DB 공급자의 현재 버전을 읽습니다. SQL Server 2008 인스턴스에 연결하는 경우와 같이 특정 버전의 데이터 공급자가 필요한 경우에만 이 속성을 설정해야 합니다.<br /><br /> 데이터 공급자는 SQL Server의 버전에 해당합니다. 조직에서 현재 및 이전 버전의 Analysis Services를 사용하는 경우 수동으로 만드는 연결 문자열에서 사용할 공급자를 지정해야 할 수 있습니다. 필요한 버전이 없는 컴퓨터에서 특정 버전의 데이터 공급자를 다운로드하고 설치해야 할 수도 있습니다. 다운로드 센터의 SQL Server 기능 팩 페이지에서 OLE DB 공급자를 다운로드할 수 있습니다. SQL Server 2012용 Analysis Services OLE DB 공급자를 다운로드하려면 [Microsoft SQL Server 2012 기능 팩](https://go.microsoft.com/fwlink/?LinkId=296473) 으로 이동하십시오.<br /><br /> MSOLAP.4는 SQL Server 2008과 SQL Server 2008 R2에서 릴리스되었습니다. 2008 R2 버전은 PowerPivot 통합 문서를 지원하며 경우에 따라 SharePoint 서버에 수동으로 설치되어야 합니다. 이러한 버전을 구분하려면 공급자의 파일 속성에서 빌드 번호를 확인해야 합니다. Program files\Microsoft Analysis Services\AS OLEDB\10으로 이동합니다. msolap110.dll을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **세부 정보**를 클릭합니다. 파일 버전 정보를 봅니다. 버전에는 10.50이 포함 되어야 합니다. \<SQL Server 2008 R2의 buildnumber>입니다. 자세한 내용은 [SharePoint Server에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 및 [Analysis Services 연결에 사용되는 데이터 공급자](data-providers-used-for-analysis-services-connections.md)를 참조하세요.<br /><br /> MSOLAP. 3은 SQL Server 2005에서 릴리스 되었습니다.<br /><br /> M s o l a p. 4는 SQL Server 2008에서 릴리스 되었으며 다시 SQL Server 2008 R2<br /><br /> MSOLAP. 5는 SQL Server 2012에서 릴리스 되었습니다.|`Provider=MSOLAP.3`은 Analysis Services OLE DB 공급자의 SQL Server 2005 버전이 필요한 연결에 사용됩니다.|  
+|`Provider`|유효한 값은 MSOLAP 또는 MSOLAP를 포함 합니다. \<version> 여기서 \<version> 은 3, 4 또는 5입니다. 파일 시스템에서 데이터 공급자 이름은 SQL Server 2012 버전의 경우 msolap110.dll이고, SQL Server 2008 및 2008 R2의 경우 msolap100.dll이며, SQL Server 2005의 경우 msolap90.dll입니다.<br /><br /> 현재 버전은 MSOLAP.5입니다. 이 속성은 선택 사항입니다. 기본적으로 클라이언트 라이브러리는 레지스트리에서 OLE DB 공급자의 현재 버전을 읽습니다. SQL Server 2008 인스턴스에 연결하는 경우와 같이 특정 버전의 데이터 공급자가 필요한 경우에만 이 속성을 설정해야 합니다.<br /><br /> 데이터 공급자는 SQL Server의 버전에 해당합니다. 조직에서 현재 및 이전 버전의 Analysis Services를 사용하는 경우 수동으로 만드는 연결 문자열에서 사용할 공급자를 지정해야 할 수 있습니다. 필요한 버전이 없는 컴퓨터에서 특정 버전의 데이터 공급자를 다운로드하고 설치해야 할 수도 있습니다. 다운로드 센터의 SQL Server 기능 팩 페이지에서 OLE DB 공급자를 다운로드할 수 있습니다. SQL Server 2012용 Analysis Services OLE DB 공급자를 다운로드하려면 [Microsoft SQL Server 2012 기능 팩](https://go.microsoft.com/fwlink/?LinkId=296473) 으로 이동하십시오.<br /><br /> MSOLAP.4는 SQL Server 2008과 SQL Server 2008 R2에서 릴리스되었습니다. 2008 R2 버전은 PowerPivot 통합 문서를 지원하며 경우에 따라 SharePoint 서버에 수동으로 설치되어야 합니다. 이러한 버전을 구분하려면 공급자의 파일 속성에서 빌드 번호를 확인해야 합니다. Program files\Microsoft Analysis Services\AS OLEDB\10으로 이동합니다. msolap110.dll을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **세부 정보**를 클릭합니다. 파일 버전 정보를 봅니다. 버전에는 10.50이 포함 되어야 합니다.\<buildnumber> SQL Server 2008 R2 자세한 내용은 [SharePoint Server에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 및 [Analysis Services 연결에 사용되는 데이터 공급자](data-providers-used-for-analysis-services-connections.md)를 참조하세요.<br /><br /> MSOLAP. 3은 SQL Server 2005에서 릴리스 되었습니다.<br /><br /> M s o l a p. 4는 SQL Server 2008에서 릴리스 되었으며 다시 SQL Server 2008 R2<br /><br /> MSOLAP. 5는 SQL Server 2012에서 릴리스 되었습니다.|`Provider=MSOLAP.3`은 Analysis Services OLE DB 공급자의 SQL Server 2005 버전이 필요한 연결에 사용됩니다.|  
 |`Cube`|큐브 이름 또는 큐브 뷰 이름입니다. 데이터베이스에는 여러 개의 큐브와 큐브 뷰가 포함될 수 있습니다. 여러 대상이 가능한 경우 연결 문자열에 큐브 또는 큐브 뷰 이름을 포함하십시오.|`Cube=SalesPerspective` 는 Cube 연결 문자열 속성을 사용하여 큐브 이름이나 큐브 뷰 이름을 지정할 수 있음을 보여 줍니다.|  
   
 ##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>인증 및 보안  
@@ -120,7 +119,7 @@ ms.locfileid: "79217072"
   
 -   디버그 모드  
   
--   Mode  
+-   모드  
   
 -   SQLCompatibility  
   
@@ -166,11 +165,11 @@ ms.locfileid: "79217072"
   
  **PowerPivot 통합 문서(.xlsx, .xlsb 또는 .xlsm 파일)에 대한 http(s) 연결**  
   
- `Data Source=<URL>`, 여기서 URL은 SharePoint 라이브러리에 게시된 PowerPivot 통합 문서에 대한 SharePoint 경로입니다. 예를 들어 "Data Source =<http://localhost/Shared> Documents/Sales .xlsx"입니다.  
+ `Data Source=<URL>`, 여기서 URL은 SharePoint 라이브러리에 게시된 PowerPivot 통합 문서에 대한 SharePoint 경로입니다. 예를 들어 "Data Source = <http://localhost/Shared> Documents/Sales.xlsx"입니다.  
   
  **BI 의미 체계 모델 연결 파일에 대한 http(s) 연결**  
   
- `Data Source=<URL>` , 여기서 URL은 .bism 파일에 대한 SharePoint 경로입니다. 예를 들어 "Data Source =<http://localhost/Shared> Documents/Sales. bism"입니다.  
+ `Data Source=<URL>` , 여기서 URL은 .bism 파일에 대한 SharePoint 경로입니다. 예를 들어 "Data Source = <http://localhost/Shared> Documents/Sales. bism"입니다.  
   
  **포함된 PowerPivot 연결**  
   

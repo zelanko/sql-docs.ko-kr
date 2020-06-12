@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062954"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528269"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>동작 폼 편집기(동작 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **작업** 탭에서 동작 폼 편집기 창을 사용하여 표준 작업을 생성 및 수정할 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66062954"
  **동작 내용**  
  **유형** 및 **동작 식** 옵션을 보려면 확장합니다.  
   
- **Type**  
+ **형식**  
  작업을 실행할 때의 동작 유형을 선택합니다. 사용할 수 있는 동작 유형은 다음과 같습니다.  
   
 |값|설명|  
@@ -84,10 +83,10 @@ ms.locfileid: "66062954"
 |값|설명|  
 |-----------|-----------------|  
 |Batch|동작이 일괄 처리 작업이나 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 태스크의 일부로 실행됩니다.|  
-|Interactive (대화형)|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
+|대화형|사용자가 작업을 호출할 때 동작이 실행됩니다.|  
 |열 때|큐브를 처음으로 열 때 동작이 실행됩니다.|  
   
- **응용 프로그램**  
+ **애플리케이션**  
  **동작 식**에서 반환한 문자열을 해석할 수 있는 애플리케이션의 이름을 입력합니다.  
   
  이 옵션을 사용하여 이 동작을 가장 많이 사용하는 클라이언트 애플리케이션을 식별하고 팝업 메뉴에서 해당 작업 옆에 적절한 아이콘을 표시할 수도 있습니다.  

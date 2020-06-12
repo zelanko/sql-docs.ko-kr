@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf560d489a1631e31f470134d497d3d897f6f35e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98b677aab756d4fd2b35c6751e925c463665441
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175682"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540475"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>PowerPivot Availability and Disaster Recovery (SQL Server 2014)
-  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 가용성 및 재해 복구 계획은 주로 SharePoint 팜 디자인, 다른 구성 요소에 허용되는 작동 중단 시간 및 SharePoint 가용성에 구현하는 도구 및 최선의 방법에 따라 달라집니다. 이 항목에서는 기술을 요약 하 고 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 대 한 가용성 및 재해 복구를 계획할 때 고려할 예제 토폴로지 다이어그램을 포함 합니다.
+  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 가용성 및 재해 복구 계획은 주로 SharePoint 팜 디자인, 다른 구성 요소에 허용되는 작동 중단 시간 및 SharePoint 가용성에 구현하는 도구 및 최선의 방법에 따라 달라집니다. 이 항목에서는 기술을 요약 하 고 배포에 대 한 가용성 및 재해 복구를 계획할 때 고려할 예제 토폴로지 다이어그램을 포함 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 합니다.
 
 ||
 |-|
@@ -47,7 +46,7 @@ ms.locfileid: "78175682"
 
 -   **(3)** Excel 계산 서비스는 애플리케이션 서버를 각각 하나씩 실행하고 서비스 애플리케이션을 애플리케이션 서버 간에 실행할 수 있도록 합니다. 따라서 단일 애플리케이션 서버가 오프라인이 되는 경우 Excel 계산 서비스를 여전히 사용할 수 있습니다.
 
--   **(4)** 및 **(6)** sharepoint 모드 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 인스턴스는 sharepoint 팜 외부의 서버에서 실행 됩니다. 여기에는 Windows 서비스 **SQL Server Analysis Services (POWERPIVOT)** 이 포함 됩니다. 이러한 각각의 인스턴스는 Excel Services **(3)** 에 등록되어 있습니다. Excel Services는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버 요청의 부하 분산을 관리합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 아키텍처를 사용하면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 여러 서버를 가질 수 있으므로 필요한 만큼 더 많은 인스턴스를 쉽게 추가할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)를 참조하세요.
+-   **(4)** 및 **(6)** sharepoint 모드의 인스턴스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sharepoint 팜 외부의 서버에서 실행 됩니다. 여기에는 Windows 서비스 **SQL Server Analysis Services (POWERPIVOT)** 이 포함 됩니다. 이러한 각각의 인스턴스는 Excel Services **(3)** 에 등록되어 있습니다. Excel Services는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서버 요청의 부하 분산을 관리합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 아키텍처를 사용하면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에 대한 여러 서버를 가질 수 있으므로 필요한 만큼 더 많은 인스턴스를 쉽게 추가할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx)를 참조하세요.
 
 -   **(5)** 콘텐츠, 구성 및 애플리케이션 데이터베이스에 사용되는 SQL Server 데이터베이스입니다. 여기에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스가 포함됩니다. DR 계획에는 데이터베이스 계층이 포함되어야 합니다. 이 디자인에서 데이터베이스는 **(4)**[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스 중 하나와 동일한 서버에서 실행됩니다. **(4)** 및 **(5)** 는 다른 서버에 있을 수도 있습니다.
 
@@ -77,12 +76,12 @@ ms.locfileid: "78175682"
 ##  <a name="powerpivot-service-application-database-and-sql-server-availability-and-recovery-technologies"></a><a name="bkmk_sql_server_technologies"></a>PowerPivot 서비스 응용 프로그램 데이터베이스 및 SQL Server 가용성 및 복구 기술
  SharePoint 고가용성 계획에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 서비스 애플리케이션 데이터베이스를 포함합니다. 이 데이터베이스 기본 이름은 `DefaultPowerPivotServiceApplicationDB-<GUID>`입니다. 다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가용성 기술과, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 데이터베이스에 사용할 때의 권장 사항에 대한 요약입니다. 자세한 내용은 [SharePoint 데이터베이스에 지원되는 고가용성 및 재해 복구 옵션(SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)을 참조하세요.
 
-||주석|
+||의견|
 |-|--------------|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (4) [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 동기화 미러링.|지원되나 이 옵션은 사용하지 않는 것이 좋습니다. 동기-커밋 모드에서 AlwaysOn을 사용 하는 것이 좋습니다.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 동기-커밋 모드에서|지원 및 권장합니다.|
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 비동기 미러링 또는 재해 복구를 위해 다른 팜으로 로그 전달.|지원됩니다.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 재해 복구를 위한 비동기 커밋 사용|지원됨|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]동기-커밋 모드에서|지원 및 권장합니다.|
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 비동기 미러링 또는 재해 복구를 위해 다른 팜으로 로그 전달.|지원됨.|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]재해 복구를 위한 비동기 커밋 사용|지원됨|
 
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]
 
@@ -91,7 +90,7 @@ ms.locfileid: "78175682"
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 사용하여 코드 대기 시나리오를 계획하는 방법에 대한 자세한 내용은 [PowerPivot 재해 복구](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx)를 참조하세요.
 
 ## <a name="verification"></a>확인
- 재해 복구 주기 전후에 배포를 확인 하 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 는 데 도움이 되는 지침과 스크립트는 [검사 목록: PowerShell을 사용 하 여 SharePoint용 PowerPivot 확인](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)을 참조 하세요.
+ 재해 복구 주기 전후에 배포를 확인 하는 데 도움이 되는 지침과 스크립트는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] [검사 목록: PowerShell을 사용 하 여 SharePoint용 PowerPivot 확인](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)을 참조 하세요.
 
 ##  <a name="links-to-more-information"></a><a name="bkmk_more_resources"></a>추가 정보에 대 한 링크
 

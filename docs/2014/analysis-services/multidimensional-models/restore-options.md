@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 75c73802-f321-4671-afc7-54505d62c013
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a754ac9650c94511e8576a8a05e0b81fb38138a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa8da816e656521fb04ae7beb1127786e04e178
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545747"
 ---
 # <a name="restore-options"></a>복원 옵션
-  여러 가지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 방법으로 데이터베이스를 복원할 수 있습니다 .이 경우에는 모두 서버 컴퓨터와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대 한 관리자 권한이 있어야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 경우 **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적합한 옵션 구성을 선택한 다음 대화 상자에서 복원을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다. 이 방식으로 다음 섹션에 설명된 것과 같이 XMLA를 사용하여 복원을 완료합니다.  
+  여러 가지 방법으로 데이터베이스를 복원할 수 있습니다 .이 경우에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모두 서버 컴퓨터와 데이터베이스에 대 한 관리자 권한이 있어야 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 경우 **에서** 데이터베이스 복원 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 열고 적합한 옵션 구성을 선택한 다음 대화 상자에서 복원을 실행할 수 있습니다. 또는 파일에 이미 지정된 설정을 사용하는 스크립트를 만들어 저장하고 필요할 때마다 스크립트를 실행할 수 있습니다. 이 방식으로 다음 섹션에 설명된 것과 같이 XMLA를 사용하여 복원을 완료합니다.  
   
 ## <a name="restoring-databases-using-xmla"></a>XMLA를 사용하여 데이터베이스 복원  
  XMLA 복원 명령은 .abf 파일을 기반으로 복원을 실행하여 복원 프로세스를 자동화하기 위한 방법입니다. 복원 명령에는 보안 정의, 원격 파티션을 저장할 위치 및 관계형 OLAP(ROLAP) 개체의 재할당을 지정하도록 설정할 수 있는 여러 속성이 있습니다. 자세한 내용은 [Restore 요소&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)를 참조하세요.  

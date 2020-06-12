@@ -3,7 +3,6 @@ title: sys. external_languages (Transact-sql)-SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
-ms.reviewer: dphansen
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - sys.external_languages catalog view
 author: nelgson
 ms.author: negust
+ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 053a7cdcf21775525b0eb8d46bbbfdf03098e03c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65995121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627279"
 ---
 # <a name="sysexternal_languages-transact-sql"></a>sys. external_languages (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "65995121"
 
 카탈로그 뷰 sys. external_languages는 데이터베이스의 각 외부 언어에 대 한 행을 나열 합니다.
 
-|열 이름 |데이터 형식 | 설명|
+|열 이름 |데이터 형식 | Description|
 |------|------|------|
 |external_language_id |int | 외부 언어의 ID입니다.|
-|언어 |sysname |외부 언어의 이름입니다. 데이터베이스 내에서 고유합니다. R 및 Python은 인스턴스당 예약 된 이름입니다.|
+|language |sysname |외부 언어의 이름입니다. 데이터베이스 내에서 고유합니다. R 및 Python은 인스턴스당 예약 된 이름입니다.|
 |create_date |datetime2 |만든 날짜 및 시간|
 |principal_id |int |이 외부 라이브러리를 소유 하는 보안 주체의 ID입니다.|
 

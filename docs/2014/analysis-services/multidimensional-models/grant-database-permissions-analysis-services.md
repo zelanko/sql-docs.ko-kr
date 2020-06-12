@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175735"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546685"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.
@@ -72,10 +71,10 @@ ms.locfileid: "78175735"
 5.  **확인** 을 클릭하여 역할 만들기를 마칩니다.
 
 ## <a name="process-database"></a>Process Database
- 데이터베이스 사용 권한을 부여 하는 역할을 정의 하는 경우 `Full Control` 를 건너뛰고 간단히 `Process Database`선택할 수 있습니다. 이 사용 권한은 데이터베이스 수준에서 설정되며, 데이터베이스 내 모든 개체에 대한 처리를 허용합니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ 데이터베이스 사용 권한을 부여 하는 역할을 정의 하는 경우를 건너뛰고 `Full Control` 간단히 선택할 수 있습니다 `Process Database` . 이 사용 권한은 데이터베이스 수준에서 설정되며, 데이터베이스 내 모든 개체에 대한 처리를 허용합니다. 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Read Definition
- 와 `Process Database`마찬가지로 데이터베이스 `Read Definition` 수준에서 사용 권한을 설정 하면 데이터베이스 내 다른 개체에 연계 효과가 적용 됩니다. 정의 읽기 권한을 더욱 세밀한 수준으로 설정하려는 경우 일반 창에서 데이터베이스 속성인 정의 읽기 선택을 취소해야 합니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.
+ 와 마찬가지로 `Process Database` `Read Definition` 데이터베이스 수준에서 사용 권한을 설정 하면 데이터베이스 내 다른 개체에 연계 효과가 적용 됩니다. 정의 읽기 권한을 더욱 세밀한 수준으로 설정하려는 경우 일반 창에서 데이터베이스 속성인 정의 읽기 선택을 취소해야 합니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
  [Analysis Services &#40;&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [프로세스 권한 부여 &#40;Analysis Services](grant-process-permissions-analysis-services.md) 를 사용 하 여 서버 관리자 권한을 부여 합니다&#41;

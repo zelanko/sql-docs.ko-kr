@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087705"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527369"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>마법사 완료(데이터 마이닝 마법사)
   **마법사 완료** 페이지를 사용하여 마법사 완료 시에 만들어지는 마이닝 구조를 검토할 수 있습니다. 마이닝 구조의 이름을 설정할 수도 있습니다.  

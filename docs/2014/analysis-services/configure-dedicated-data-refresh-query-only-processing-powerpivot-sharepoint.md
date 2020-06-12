@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087505"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527299"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>전용 데이터 새로 고침 또는 쿼리만 처리 구성(SharePoint용 PowerPivot)
   SharePoint 통합 모드에서 Analysis Services 서버 인스턴스를 데이터 새로 고침 또는 쿼리만 처리와 같이 처리 요청의 특정 유형을 지원하도록 구성할 수 있습니다. 기본적으로 두 가지 유형의 로드 요청이 모두 설정됩니다. 한 가지 유형을 해제하여 전용 쿼리 엔진이나 데이터 새로 고침 서버를 만들 수 있습니다.  

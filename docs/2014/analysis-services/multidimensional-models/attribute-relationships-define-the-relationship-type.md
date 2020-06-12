@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d30cc8f7dd64af79617c2f4ffd06e584f3c6e85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 605ba513b7cd47d9e719a619de4ebfb745360ba6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077077"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544655"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>특성 관계의 관계 유형 정의
   **에서 액세스할 수 있는 차원 디자이너의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭을 사용하여 특성 관계의 관계 유형을 정의할 수 있습니다.  

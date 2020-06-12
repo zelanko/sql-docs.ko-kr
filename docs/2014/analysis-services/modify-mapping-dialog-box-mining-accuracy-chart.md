@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537455"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>매핑 수정 대화 상자(마이닝 정확도 차트)
-  **매핑 수정** 대화 상자를 사용하여 입력 열이 마이닝 모델의 열에 조인되는 방법을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 열 이름과 데이터 형식에 따라 열을 자동으로 매핑하며이 대화 상자를 사용 하 여 열 매핑을 변경할 수 있습니다. 변경하려면 외부 데이터 원본의 열이 테스트하는 마이닝 모델의 열과 데이터 형식 및 내용 유형이 일치하는지 확인해야 합니다.  
+  **매핑 수정** 대화 상자를 사용하여 입력 열이 마이닝 모델의 열에 조인되는 방법을 변경할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 열 이름과 데이터 형식에 따라 열을 자동으로 매핑하며이 대화 상자를 사용 하 여 열 매핑을 변경할 수 있습니다. 변경하려면 외부 데이터 원본의 열이 테스트하는 마이닝 모델의 열과 데이터 형식 및 내용 유형이 일치하는지 확인해야 합니다.  
   
 ## <a name="options"></a>옵션  
  **마이닝 구조 열**  

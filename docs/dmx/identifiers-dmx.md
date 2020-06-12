@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074812"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670388"
 ---
 # <a name="identifiers-dmx"></a>식별자(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  의 모든 개체 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 식별자가 있어야 합니다. 개체의 이름은 해당 개체의 식별자입니다. 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 마이닝 모델과 같은 데이터베이스 개체, 서버 및 데이터베이스에는 식별자가 있습니다.  
+  의 모든 개체에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 식별자가 있어야 합니다. 개체의 이름은 해당 개체의 식별자입니다. 데이터 원본, 데이터 원본 뷰, 큐브, 차원 및 마이닝 모델과 같은 데이터베이스 개체, 서버 및 데이터베이스에는 식별자가 있습니다.  
   
  DMX(데이터 마이닝 확장)에는 다음과 같은 두 가지 식별자 클래스가 있습니다.  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   개체 이름 또는 개체 이름의 일부로 예약어를 사용하는 경우  
   
-     예약된 키워드는 개체 이름에 사용하지 않는 것이 좋습니다. 이전 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 버전의에서 업그레이드 하는 데이터베이스에는 이전 버전의에서는 예약 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 되지 않았지만에[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 예약어 인 단어가 포함 된 식별자가 포함 될 수 있습니다. 개체 이름을 변경할 때까지 구분 식별자를 사용하여 이러한 개체를 참조할 수 있습니다.  
+     예약된 키워드는 개체 이름에 사용하지 않는 것이 좋습니다. 이전 버전의에서 업그레이드 하는 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 이전 버전의에서는 예약 되지 않았지만에는 예약어 인 단어가 포함 된 식별자가 포함 될 수 있습니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 개체 이름을 변경할 때까지 구분 식별자를 사용하여 이러한 개체를 참조할 수 있습니다.  
   
 -   정규화된 식별자가 아닌 문자를 사용하는 경우  
   

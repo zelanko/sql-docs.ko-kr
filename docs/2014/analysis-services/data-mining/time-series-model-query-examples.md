@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082745"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520329"
 ---
 # <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  기본 주기 힌트는 {1}이고 모든 모델에 나타납니다. 이 예제 모델은 최종 모델에 존재하지 않을 수도 있는 추가 힌트를 사용하여 만들어졌습니다.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  예를 들어 기존 모델에 6개월에 상당하는 데이터가 있다고 가정해 보겠습니다. 지난 3개월 동안의 판매 수치를 추가하여 이 모델을 확장하려고 합니다. 또한 이와 동시에 다음 3개월에 대한 예측을 수행하고자 합니다. 새 데이터를 추가하는 경우 새 예측만 구하려면 시작 지점을 시간 조각 4로, 끝 지점을 시간 조각 7로 지정합니다. 총 6개의 예측을 요청할 수도 있지만 처음 3개에 대한 시간 조각은 방금 추가한 새 데이터와 겹칩니다.  
   
- 쿼리 예제 및 및 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES`사용에 대 한 자세한 내용은 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조 하세요.  
+ 쿼리 예제 및 및 사용에 대 한 자세한 내용은 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조 하세요.  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> EXTEND_MODEL_CASES로 예측 수행  
  예측 동작은 모델 사례를 확장하느냐, 대체하느냐에 따라 달라집니다. 모델을 확장하는 경우 새 데이터가 계열의 끝에 추가되며 학습 집합의 크기가 증가합니다. 그러나 예측 쿼리에 사용된 시간 조각은 항상 원래 계열의 끝에서 시작됩니다. 따라서 3개의 새 데이터 지점을 추가하고 6개의 예측을 요청할 경우 반환되는 첫 3개의 예측은 새 데이터와 겹칩니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모든 새 데이터 지점이 사용될 때까지 예측을 수행하지 않고 실제 새 데이터 지점을 반환합니다. 그런 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 복합 계열을 기반으로 예측을 수행합니다.  
@@ -184,7 +183,7 @@ AND NODE_TYPE = 15
   
  예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
   
- 다른 예를 살펴보겠습니다. 3개월 분량의 새 데이터를 추가하고 3개의 새로운 예측을 수행하려면 다음과 같이 합니다.  
+ 또는 다음과 같은 예도 있습니다. 3개월 분량의 새 데이터를 추가하고 3개의 새로운 예측을 수행하려면 다음과 같이 합니다.  
   
 -   시계열 모델에 `PREDICTION JOIN`을 만들고 `REPLACE_MODEL_CASE` 인수를 사용합니다.  
   
@@ -198,17 +197,17 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  타임스탬프 1에서 시작하는 REPLACE_MODEL_CASES를 사용하면 이전 학습 데이터를 대체하는 새 데이터에 기반한 새 예측을 얻게 됩니다.  
   
- 쿼리 예제 및 및 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES`사용에 대 한 자세한 내용은 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조 하세요.  
+ 쿼리 예제 및 및 사용에 대 한 자세한 내용은 `REPLACE_MODEL_CASES` `EXTEND_MODEL_CASES` [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)를 참조 하세요.  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>시계열 모델의 누락 된 값 대체  
- `PREDICTION JOIN` 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 세트에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. `EXTEND_MODEL_CASES`를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. 를 `REPLACE_MODEL_CASES` [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하는 경우은 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락 된 값을 대체 합니다.  
+ `PREDICTION JOIN` 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 세트에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. `EXTEND_MODEL_CASES`를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. 를 사용 하는 경우 `REPLACE_MODEL_CASES` [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락 된 값을 대체 합니다.  
   
 ## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[Lag&#40;DMX&#41;](/sql/dmx/lag-dmx)|현재 사례의 날짜와 학습 집합의 마지막 날짜 간의 시간 조각을 여러 개 반환합니다.<br /><br /> 이 함수는 일반적으로 최근 학습 사례를 식별하여 해당 사례에 대한 자세한 데이터를 검색하는 데 사용됩니다.|  
 |[PredictNodeId&#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|지정된 예측 가능한 열의 노드 ID를 반환합니다.<br /><br /> 이 함수는 일반적으로 특정 예측 값을 생성한 노드를 식별하여 노드와 관련된 사례를 검토하거나 수식 및 다른 세부 정보를 검색하는데 사용됩니다.|  
 |[PredictStdev&#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|지정된 예측 가능한 열에서 예측의 표준 편차를 반환합니다.<br /><br /> 이 함수는 시계열 모델을 지원하지 않는 INCLUDE_STATISTICS 인수를 대체합니다.|  

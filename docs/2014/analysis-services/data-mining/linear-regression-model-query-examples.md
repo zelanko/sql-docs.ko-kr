@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d4b7309d7b5ea3d6295089f0fb2e778b1c9b4b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084295"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522340"
 ---
 # <a name="linear-regression-model-query-examples"></a>선형 회귀 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 내용 쿼리는 회귀 수식에 대한 추가 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 모델에 맞는지 여부를 알려 줍니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
@@ -189,7 +188,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[IsInNode&#40;DMX&#41;](/sql/dmx/isinnode-dmx)|지정한 노드에 현재 사례가 포함되었는지 여부를 나타냅니다.|  
 |[PredictHistogram&#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  

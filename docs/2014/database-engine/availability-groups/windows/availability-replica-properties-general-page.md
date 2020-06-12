@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791907"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858919"
 ---
 # <a name="availability-replica-properties-general-page"></a>가용성 복제본 속성(일반 페이지)
   이 대화 상자를 사용하여 가용성 복제본의 속성을 확인할 수 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "62791907"
   
 -   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **가용성 그룹 이름**  
  가용성 그룹의 이름으로, WSFC(Windows Server 장애 조치(failover) 클러스터) 내에서 고유해야 하는 사용자 지정 이름입니다.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "62791907"
  이 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서버 이름(기본 인스턴스가 아닌 경우에는 인스턴스 이름)입니다.  
   
  **역할**  
- **주**  
+ **기본**  
  현재 주 복제본입니다.  
   
- **보조**  
+ **담보**  
  현재 보조 복제본입니다.  
   
  **확인**  
@@ -73,7 +73,7 @@ ms.locfileid: "62791907"
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
  **읽기/쓰기 연결 허용**  
- 응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정 된 연결은 허용 되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다.  
+ 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다.  
   
  **읽을 수 있는 보조**  
  보조 역할을 수행하는 가용성 복제본,  즉 보조 복제본이 클라이언트로부터의 연결을 허용할 수 있는지 여부를 나타내며,  다음 중 하나입니다.  

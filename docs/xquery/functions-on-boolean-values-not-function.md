@@ -1,5 +1,6 @@
 ---
 title: not 함수 (XQuery) | Microsoft Docs
+description: XQuery not () 함수를 부울 값과 함께 사용 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038908"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524416"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>부울 값 함수 - not 함수 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +44,8 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 함수를 사용 하 여 카탈로그 설명에 \<사양> 요소가 포함 되지 않은 제품 모델을 찾을 수 있습니다.  
- 다음 쿼리는 카탈로그 설명에 <`Specifications`> 요소가 포함 되지 않은 제품 모델에 대 한 제품 모델 id를 포함 하는 XML을 생성 합니다.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 함수를 사용 하 여 카탈로그 설명에 요소가 포함 되지 않은 제품 모델을 찾습니다 \<Specifications> .  
+ 다음 쿼리는 카탈로그 설명에 <> 요소가 포함 되지 않은 제품 모델에 대 한 제품 모델 Id를 포함 하는 XML을 생성 합니다 `Specifications` .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -65,14 +66,14 @@ WHERE CatalogDescription.exist('
   
 -   그런 다음 쿼리는 <`Product`> 요소와 해당 **제품 modelid** 특성을 포함 하는 XML을 생성 합니다.  
   
--   WHERE 절은 [exist () 메서드 (XML 데이터 형식)](../t-sql/xml/exist-method-xml-data-type.md) 를 사용 하 여 행을 필터링 합니다. **Exist ()** 메서드는> 자식 요소가 \< \<지정 되지 않은 요소> 제품 설명이 있는 경우 True를 반환 합니다. **Not ()** 함수를 사용 합니다.  
+-   WHERE 절은 [exist () 메서드 (XML 데이터 형식)](../t-sql/xml/exist-method-xml-data-type.md) 를 사용 하 여 행을 필터링 합니다. **Exist ()** 메서드는 \<ProductDescription> 자식 요소가 없는 요소가 있으면 True를 반환 합니다 \<Specification> . **Not ()** 함수를 사용 합니다.  
   
- 각 제품 모델 카탈로그 설명에> 요소가 포함 되어 \<있으므로이 결과 집합은 비어 있습니다.  
+ 각 제품 모델 카탈로그 설명에 요소가 포함 되어 있으므로이 결과 집합은 비어 있습니다 \<Specifications> .  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. not() XQuery 함수를 사용하여 MachineHours 특성이 없는 작업 센터 위치 검색  
  다음 쿼리는 Instructions 열에 대해 지정되었습니다. 이 열에는 제품 모델에 대한 제조 지침이 저장됩니다.  
   
- 특정 제품 모델에 대해 이 쿼리는 MachineHours를 지정하지 않는 작업 센터 위치를 검색합니다. 즉, \<Location> 요소에 대 한 특성 **machinehours** 가 지정 되지 않았습니다.  
+ 특정 제품 모델에 대해 이 쿼리는 MachineHours를 지정하지 않는 작업 센터 위치를 검색합니다. 즉, 요소에 대 한 특성 **Machinehours** 가 지정 되지 않았습니다 \<Location> .  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -91,7 +92,7 @@ WHERE ProductModelID=7
   
 -   [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 의 **Declarenamespace** 는 놀이 Works 제조 지침 네임 스페이스 접두사를 정의 합니다. 제조 지침 문서에 사용된 동일 네임스페이스를 나타냅니다.  
   
--   쿼리에서 **not (@MachineHours)** 조건자는 **machinehours** 특성이 없는 경우 True를 반환 합니다.  
+-   쿼리에서 **not ( @MachineHours )** 조건자는 **machinehours** 특성이 없는 경우 True를 반환 합니다.  
   
  다음은 결과입니다.  
   

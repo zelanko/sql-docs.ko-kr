@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a610f3aed7f520163dc4e2b30651d8b0397ef644
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf7389ee0097428bd5825c81abd36f3bdc5c02d2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893936"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83667947"
 ---
 # <a name="modeling-flags-dmx"></a>모델링 플래그(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68893936"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 모델링 플래그를 지원합니다.  
   
- **NOT NULL**  
+ **NULL이 아님**  
  특성 열 값에는 Null 값을 포함할 수 없습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다. 이 플래그는 마이닝 구조 열에 정의됩니다.  
   
  **회귀 변수**  
@@ -44,7 +44,7 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  NOT NULL,REGRESSOR  
   
 ## <a name="specifying-modeling-flags-on-a-mining-model"></a>마이닝 모델에 모델링 플래그 지정  
- 에서 마이닝 구조 열에 플래그 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 를 지정 하는 데 지원 되는 구문의 예는 [CREATE 마이닝 structure &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)을 참조 하세요.  
+ 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 마이닝 구조 열에 플래그를 지정 하는 데 지원 되는 구문의 예는 [CREATE 마이닝 STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)을 참조 하세요.  
   
  마이닝 모델 열에서 모델링 플래그를 지정 하는 구문에 대 한 예는 [ALTER 마이닝 STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)를 참조 하세요.  
   

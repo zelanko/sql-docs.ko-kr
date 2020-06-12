@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073168"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545737"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Analysis Services 배포에 대한 요구 사항 및 고려 사항
   솔루션의 성능과 가용성은 기본 하드웨어의 기능, 서버 배포 토폴로지, 해당 솔루션의 특성(예: 여러 서버에 분산된 파티션을 갖는가 또는 관계형 엔진에 직접 액세스해야 하는 ROLAP 스토리지를 사용하는가), SLA(서비스 수준 계약) 및 데이터 모델의 복잡성을 포함하여 여러 요인에 따라 달라질 수 있습니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "66073168"
  원본 데이터에 대한 증분 업데이트를 투명하게 처리하려면 자동 관리 캐싱을 사용합니다. 자동 관리 캐싱은 수동 처리 없이 큐브 가용성에 영향을 주지 않고 새 원본 데이터로 큐브를 업데이트합니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)을 참조하세요.  
   
 ##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>확장성 고려 사항  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 여러 인스턴스가 동일한 컴퓨터에서 성능 문제를 일으킬 수 있습니다. 이러한 문제를 해결하는 방법 중 하나는 서버의 프로세서, 메모리 및 디스크 리소스를 늘리는 것입니다. 그러나 여러 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 확장해야 할 수도 있습니다.  
+ 및의 여러 인스턴스가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 동일한 컴퓨터에서 성능 문제를 일으킬 수 있습니다. 이러한 문제를 해결하는 방법 중 하나는 서버의 프로세서, 메모리 및 디스크 리소스를 늘리는 것입니다. 그러나 여러 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 확장해야 할 수도 있습니다.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>여러 컴퓨터에 Analysis Services 확장  
  여러 컴퓨터에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 확장하는 방법은 다양합니다. 다음 목록에서는 이러한 방법에 대해 설명합니다.  

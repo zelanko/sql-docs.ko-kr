@@ -1,5 +1,6 @@
 ---
 title: DB2 데이터베이스에 연결 (DB2ToSQL) | Microsoft Docs
+description: Db2 데이터베이스의 대상 인스턴스에 연결 하 여 DB2 데이터베이스를 마이그레이션하는 방법에 대해 알아봅니다. SSMA는 모든 DB2 스키마에 대 한 메타 데이터를 가져옵니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d31a20aa0aa4b00feaf7d0af5aeb13b5b73c381d
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68141066"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292947"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 데이터베이스에 연결 (DB2ToSQL)
-DB2 데이터베이스를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션하려면 마이그레이션할 db2 데이터베이스에 연결 해야 합니다. 연결할 때 SSMA는 모든 DB2 스키마에 대 한 메타 데이터를 가져온 후 DB2 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
+DB2 데이터베이스를로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션할 db2 데이터베이스에 연결 해야 합니다. 연결할 때 SSMA는 모든 DB2 스키마에 대 한 메타 데이터를 가져온 후 DB2 메타 데이터 탐색기 창에 표시 합니다. SSMA는 데이터베이스 서버에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
   
 데이터베이스에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 데이터베이스에 대 한 활성 연결을 원하는 경우 다시 연결 해야 합니다.  
   
@@ -31,7 +32,7 @@ DB2 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 
 -   데이터 마이그레이션에 대 한 데이터 액세스에 DATAACCESS 필요  
   
 ## <a name="establishing-a-connection-to-db2"></a>D b 2에 대 한 연결 설정  
-데이터베이스에 연결 하는 경우 SSMA는 데이터베이스 메타 데이터를 읽은 다음이 메타 데이터를 프로젝트 파일에 추가 합니다. 이 메타 데이터는 SSMA에서 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문으로 변환 하는 경우와 데이터를로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]마이그레이션할 때 사용 됩니다. DB2 메타 데이터 탐색기 창에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
+데이터베이스에 연결 하는 경우 SSMA는 데이터베이스 메타 데이터를 읽은 다음이 메타 데이터를 프로젝트 파일에 추가 합니다. 이 메타 데이터는 SSMA에서 개체를 구문으로 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 데이터를로 마이그레이션할 때 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . DB2 메타 데이터 탐색기 창에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
   
 > [!IMPORTANT]  
 > 연결을 시도 하기 전에 데이터베이스 서버가 실행 중이 고 연결을 허용할 수 있는지 확인 합니다.  
@@ -77,7 +78,7 @@ DB2 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 
     자세한 내용은 [Connect To Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)을 참조 하세요.  
   
 ## <a name="reconnecting-to-db2"></a>DB2에 다시 연결  
-데이터베이스 서버에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 데이터베이스에 대 한 활성 연결을 원하는 경우 다시 연결 해야 합니다. 메타 데이터를 업데이트 하 고, 데이터베이스 개체를에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로드 하 고, 데이터를 마이그레이션할 때까지 오프 라인으로 작업할 수 있습니다.  
+데이터베이스 서버에 대 한 연결은 프로젝트를 닫을 때까지 활성 상태로 유지 됩니다. 프로젝트를 다시 열 때 데이터베이스에 대 한 활성 연결을 원하는 경우 다시 연결 해야 합니다. 메타 데이터를 업데이트 하 고, 데이터베이스 개체를에 로드 하 고, 데이터를 마이그레이션할 때까지 오프 라인으로 작업할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="refreshing-db2-metadata"></a>DB2 메타 데이터 새로 고침  
 DB2 데이터베이스에 대 한 메타 데이터는 자동으로 새로 고쳐지지 않습니다. DB2 메타 데이터 탐색기의 메타 데이터는 처음 연결 될 때 또는 메타 데이터를 마지막으로 새로 고친 시간에 메타 데이터에 대 한 스냅숏입니다. 모든 스키마, 단일 스키마 또는 개별 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  
