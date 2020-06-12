@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 895d4a86ed359e0737641e83ea17e77a6c70cb4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 179bb9eed94cd0dbb579bdb06d630b213339d12f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536481"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>다차원 데이터 원본이 포함된 파워 뷰 보고서 만들기
   다차원 모델을 기반으로 Power View 보고서를 만드는 것은 PowerPivot 통합 문서나 Analysis Services 테이블 형식 모델을 기반으로 보고서를 만드는 것과 같습니다. 파워 뷰 보고서는 SharePoint 라이브러리의 보고서 데이터 원본 연결 파일(.rsds)에서 만들어집니다. .rsds를 만드는 방법에 대한 자세한 내용은 [Create a Report Data Source](create-a-report-data-source.md)를 참조하십시오.  

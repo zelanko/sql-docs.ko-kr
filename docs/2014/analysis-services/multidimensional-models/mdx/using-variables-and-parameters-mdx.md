@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: a4754d16-d9c4-49f6-9be0-392180b912e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb258266c489056994d8f78f80a6856602a174a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd01cf78ea5e3284aa51cad7dc848176a5dc9298
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073707"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546165"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>변수 및 매개 변수 사용(MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]MDX (Multidimensional Expressions) 문을 매개 변수화 할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
+  에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] MDX (Multidimensional Expressions) 문을 매개 변수화 할 수 있습니다. 매개 변수가 있는 문을 사용하면 런타임에 사용자 정의가 가능한 범용 문을 만들 수 있습니다.  
   
- 매개 변수가 있는 문을 만들 때 매개 변수 이름은 이름 앞에 @ 부호를 붙여 식별합니다. 예 @Year 를 들어는 유효한 매개 변수 이름입니다.  
+ 매개 변수가 있는 문을 만들 때 매개 변수 이름은 이름 앞에 @ 부호를 붙여 식별합니다. 예를 들어는 @Year 유효한 매개 변수 이름입니다.  
   
  MDX는 리터럴 또는 스칼라 값을 위한 매개 변수만 지원합니다. 멤버, 집합 또는 튜플을 참조하는 매개 변수를 만들려면 [StrToMember](/sql/mdx/strtomember-mdx) 또는 [StrToSet](/sql/mdx/strtoset-mdx)와 같은 함수를 사용해야 합니다.  
   
- 다음 XML for Analysis (XMLA) 예에서 매개 변수는 @CountryName 고객 데이터가 검색 되는 국가를 포함 합니다.  
+ 다음 XML for Analysis (XMLA) 예에서 @CountryName 매개 변수는 고객 데이터가 검색 되는 국가를 포함 합니다.  
   
 ```  
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">  

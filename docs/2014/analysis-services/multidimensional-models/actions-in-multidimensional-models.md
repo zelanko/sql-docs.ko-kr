@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 825343c58feeb7ffb217a8b1c8c53d8f81ae7441
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19754c99e87c50121fc79b80649d7555b79ca59e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077499"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544877"
 ---
 # <a name="actions-in-multidimensional-models"></a>다차원 모델의 동작
   동작이란 선택한 큐브 또는 큐브의 일부분에 대해 최종 사용자가 시작하는 동작입니다. 작업은 선택한 항목을 매개 변수로 애플리케이션을 시작하거나 선택한 항목에 대한 정보를 검색할 수 있습니다. 동작에 대한 자세한 내용은 [동작&#40;Analysis Services - 다차원 데이터&#41;](actions-analysis-services-multidimensional-data.md)을 참조하세요.  
@@ -57,7 +56,7 @@ ms.locfileid: "66077499"
  **동작 내용**  
  동작의 유형을 선택합니다. 다음 표에는 사용 가능한 유형이 요약되어 있습니다.  
   
-|유형|설명|  
+|Type|설명|  
 |----------|-----------------|  
 |데이터 집합|데이터 세트를 검색합니다.|  
 |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
@@ -72,10 +71,10 @@ ms.locfileid: "66077499"
   
 |속성|Description|  
 |--------------|-----------------|  
-|**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> Batch<br /><br /> Interactive (대화형)<br /><br /> 열 때|  
-|**응용 프로그램**|동작의 애플리케이션을 나타냅니다.|  
+|**호출**|동작 실행 방법을 지정합니다. 기본값인 대화형은 사용자가 개체에 액세스할 때 동작이 실행되도록 지정합니다. 가능한 설정은 아래와 같습니다.<br /><br /> Batch<br /><br /> 대화형<br /><br /> 열 때|  
+|**애플리케이션**|동작의 애플리케이션을 나타냅니다.|  
 |**설명**|동작에 대한 설명입니다.|  
-|**캡션의**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 인 경우 **캡션에 mdx**를 `True` 지정 합니다.|  
+|**캡션의**|동작에 대해 표시되는 캡션을 제공합니다. 캡션이 MDX 인 경우 `True` **캡션에 mdx**를 지정 합니다.|  
 |**MDX 캡션**|캡션이 MDX이면 `True`를 지정하고 그렇지 않으면 `False`를 지정합니다.|  
   
 > [!NOTE]  

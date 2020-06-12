@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4fb4b20fcccdabdf29aaf57dab65b1604a80a9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077862"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541605"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>측정값 그룹 바인딩 대화 상자(Analysis Services - 다차원 데이터)
   **관계 정의** 대화 상자에서 액세스할 수 있는 **측정값 그룹 바인딩** 대화 상자를 사용하여 큐브 차원의 모든 특성에 대해 Null 처리 옵션을 지정할 수 있을 뿐만 아니라 일반 차원 관계에 대해 큐브 차원의 비세분성 특성과 측정값 그룹 열 간의 직접 관계를 생성 및 수정할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66077862"
 |**특성 이름**|특성 이름을 표시합니다.|  
 |**차원 테이블**|특성이 기준으로 하는 차원 테이블의 이름을 표시합니다.|  
   
- **관계만**  
+ **관계**  
  선택한 특성에 대한 차원 테이블 열과 선택한 측정값 그룹에 대한 팩트 테이블 열 간의 관계와 이 관계에 대한 Null 처리 옵션을 나타내는 표를 표시합니다. 표에는 다음 열이 있습니다.  
   
 |옵션|정의|  

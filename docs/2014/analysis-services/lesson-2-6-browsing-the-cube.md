@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62d688230a43305ae0c652891213ba529a378e70
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078976"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543482"
 ---
 # <a name="browsing-the-cube"></a>큐브 찾아보기
   큐브를 배포하면 큐브 디자이너의 **브라우저** 탭에 큐브 데이터가 표시되고 차원 디자이너의 **브라우저** 탭에 차원 데이터가 표시됩니다. 큐브 및 차원 데이터 검색을 통해 작업을 증분 확인할 수 있습니다. 개체가 처리된 후 속성, 관계 및 기타 개체에 대한 약간의 변경으로 원하는 결과를 얻었는지 확인할 수 있습니다. 브라우저 탭을 사용하여 큐브 데이터와 차원 데이터 모두를 확인할 수 있지만 이 탭에서는 검색하려는 개체에 따라 다른 기능을 제공합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66078976"
   
 1.  **에서 Product 차원에 대한** 차원 디자이너 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]로 전환합니다. 이렇게 하려면 솔루션 탐색기의 **차원** 노드에서 **Product** 차원을 두 번 클릭합니다.  
   
-2.  **브라우저** 탭을 클릭 하 여 `Product Key` 특성 계층의 **All** 멤버를 표시 합니다. 3단원에서는 차원을 탐색할 수 있도록 Product 차원에 대한 사용자 계층을 정의합니다.  
+2.  **브라우저** 탭을 클릭 하 여 특성 계층의 **All** 멤버를 표시 합니다 `Product Key` . 3단원에서는 차원을 탐색할 수 있도록 Product 차원에 대한 사용자 계층을 정의합니다.  
   
 3.  **에서** 큐브 디자이너 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]로 전환합니다. 이렇게 하려면 솔루션 탐색기의 **큐브** 노드에서 **Analysis Services Tutorial** 큐브를 두 번 클릭합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b28fb295525821aa2ee8fbbf07db16dc2d06286
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530835"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542105"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
   이 단원에서는 큐브 뷰 및 번역을 정의하는 방법을 배웁니다. 큐브 뷰를 정의하여 큐브의 복잡성을 줄이고 사용자들이 선택한 언어로 큐브 메타데이터를 볼 수 있도록 하는 번역을 정의할 수 있습니다.  

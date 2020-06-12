@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174296"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543558"
 ---
 # <a name="granting-process-database-permissions"></a>데이터베이스 처리 권한 부여
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 설치하면 해당 인스턴스에 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버 관리자 역할의 모든 멤버가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스 내에서 모든 태스크를 수행할 수 있는 서버 차원의 사용 권한을 갖습니다. 기본적으로 어떠한 사용자에게도 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스의 개체를 관리하거나 볼 수 있는 권한이 없습니다.
@@ -30,7 +29,7 @@ ms.locfileid: "78174296"
 
 2.  **데이터베이스 처리** 확인란을 클릭합니다.
 
-3.  속성 창에서이 새 역할에 대 한 **이름** 속성을로 `Process Database Objects Role`변경 합니다.
+3.  속성 창에서이 새 역할에 대 한 **이름** 속성을로 변경 `Process Database Objects Role` 합니다.
 
      ![역할 디자이너](../../2014/tutorials/media/l10-security-1.png "역할 디자이너")
 

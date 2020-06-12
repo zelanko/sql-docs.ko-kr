@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 112696db-3838-4b50-91bd-d2ce5fa04ee5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bfc4b3a0890ebf662fd5a4ac2697aa3c63464c6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543525"
 ---
 # <a name="defining-a-dimension"></a>차원 정의
   다음 태스크에서는 차원 마법사를 사용하여 Date 차원을 구축합니다.  
@@ -45,13 +44,13 @@ ms.locfileid: "66079093"
   
     -   **English Month Name**  
   
-    -   **Calendar Quarter**  
+    -   **일정 분기**  
   
-    -   **Calendar Year**  
+    -   **역 년**  
   
     -   **Calendar Semester**  
   
-8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. 그런 다음 **날짜** > **달력** > **날짜**를 클릭 합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
+8.  **Full Date Alternate Key** 특성의 **특성 유형** 열 설정을 **일반** 에서 **날짜**로 변경합니다. 이렇게 하려면 **특성 유형** 열에서 **일반** 을 클릭합니다. 그런 다음 화살표를 클릭하여 옵션을 확장합니다. 그런 다음 **날짜**  >  **달력**  >  **날짜**를 클릭 합니다. **확인**을 클릭합니다. 이 단계를 반복하여 특성의 특성 유형을 다음과 같이 변경합니다.  
   
     -   **English Month Name** 에서 **Month**  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66079093"
   
      솔루션 탐색기의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트에서 Date 차원은 **차원** 폴더에 표시됩니다. 차원 디자이너는 개별 환경의 가운데에 Date 차원을 표시합니다.  
   
-12. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.  
+12. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [큐브 정의](lesson-2-2-defining-a-cube.md)  

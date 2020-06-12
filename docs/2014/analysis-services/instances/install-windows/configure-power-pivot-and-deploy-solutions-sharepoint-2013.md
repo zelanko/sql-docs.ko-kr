@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26faf2ef80f416858665893e14e405eab7254d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493977"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543905"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configure PowerPivot and Deploy Solutions (SharePoint 2013)
   이 항목에서는 PowerPivot 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함하여 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]의 PowerPivot 기능에 대한 중간 계층 향상 배포 및 구성에 대해 설명합니다. **SharePoint 2013용 PowerPivot 구성** 도구를 실행하여 다음을 수행합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "69493977"
   
 -   PowerPivot 서비스 애플리케이션 만들기  
   
--   SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하도록 Excel Services 애플리케이션을 구성합니다. 백 엔드 서비스 및 SharePoint 모드에서 서버 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조 하세요.  
+-   SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하도록 Excel Services 애플리케이션을 구성합니다. 백 엔드 서비스 및 SharePoint 모드에서 서버를 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [SharePoint용 PowerPivot 2013 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)를 참조 하세요.  
   
  SharePoint용 PowerPivot 2013 구성 도구를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint 2013 &#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013) 를 참조 하십시오&#41;  
   
@@ -79,7 +78,7 @@ ms.locfileid: "69493977"
  자세한 내용은 [SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구 구성 또는 복구](../../configure-repair-powerpivot-sharepoint-2010.md) 를 참조 하세요&#41;  
   
 ##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>PowerPivot 구성 확인  
- **서비스**  
+ **서비스:**  
   
 1.  중앙 관리의 시스템 설정에서 **서버의 서비스 관리**를 클릭 합니다.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "69493977"
   
 5.  **확인**을 클릭합니다.  
   
- 데이터 새로 고침 문제를 해결 하는 방법에 대 한 자세한 내용은 [PowerPivot 데이터 새로 고침 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)을 참조 하세요.  
+ 데이터 새로 고침 문제를 해결 하는 방법에 대 한 자세한 내용은 [PowerPivot 데이터 새로 고침 문제 해결](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (을 참조 https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) 하세요.  
   
  구성 도구에 대한 자세한 내용은 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하세요.  
   

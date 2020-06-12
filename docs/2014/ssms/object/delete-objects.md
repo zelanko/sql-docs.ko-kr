@@ -14,17 +14,17 @@ ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8912b0e3cac7ccde8f89c1818fd9737c29ebc0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e1326a00a940b488487f9d602595e6528cb048
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211244"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856536"
 ---
 # <a name="delete-objects"></a>개체 삭제
   이 대화 상자를 사용하여 데이터베이스나 데이터베이스 개체를 삭제할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **삭제할 개체**  
  삭제하려고 하는 개체의 이름, 유형, 소유자 및 상태와 실행하는 동안 발생한 오류에 대한 메시지를 표시합니다.  
   

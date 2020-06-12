@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00ccbf26d040eb5285595a43a9eead93d1eeddbb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082109"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528809"
 ---
 # <a name="define-new-measures-cube-wizard"></a>새 측정값 정의(큐브 마법사)
   **새 측정값 정의** 페이지를 사용하여 데이터 원본을 사용하지 않고 만드는 큐브에 대한 새 측정값을 만들 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **집계**  
+ **요약**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  
@@ -83,7 +82,7 @@ ms.locfileid: "66082109"
   
  데이터 형식을 변경하려면 해당 데이터 형식을 클릭한 다음 목록에서 데이터 형식을 선택합니다.  
   
- **집계**  
+ **요약**  
  측정값에 대한 집계를 나열합니다.  
   
  집계를 변경하려면 해당 집계를 클릭한 다음 목록에서 집계를 선택합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 36d53770-294f-43ab-8850-15d5351ff60c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 51fe8dc2a7ec38c9e2a71d9b2678e7c3e4ba6f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fea2cc5315bc7e2daca21b4de5b1e305e02e4f7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542295"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>7단원: KPI(핵심 성과 지표) 정의
   이 단원에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서 KPI(핵심 성과 지표)를 정의하는 방법을 배웁니다. KPI는 비즈니스를 측정하는 서버 쪽 계산을 정의하기 위한 프레임워크를 제공하며 결과 정보의 표시 방식을 표준화합니다. KPI는 보고서, 포털 및 대시보드에 표시할 수 있으며 데이터 액세스 API, [!INCLUDE[msCoName](../includes/msconame-md.md)] 도구 및 타사 도구를 통해 표시할 수 있습니다. KPI는 정규 측정값 및 기타 MDX(Multidimensional Expressions) 식에 대한 메타데이터 래퍼입니다. 자세한 내용은 [다차원 모델의 KPI&#40;핵심 성과 지표&#41;](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)를 참조하세요.  

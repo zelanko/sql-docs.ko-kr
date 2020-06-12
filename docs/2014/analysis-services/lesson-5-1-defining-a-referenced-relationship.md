@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175302"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542925"
 ---
 # <a name="defining-a-referenced-relationship"></a>참조 관계 정의
   이 자습서의 이전 단원에서는 정의한 각 큐브 차원은 기본 키와 외래 키의 관계를 통해 측정값 그룹의 팩트 테이블에 직접 연결된 테이블을 기반으로 하였습니다. 이 항목의 태스크에서는 **Geography** 차원을 **참조 차원** 이라고 하는 *Reseller*차원을 통해 대리점 판매에 대한 팩트 테이블에 연결하는 방법을 설명합니다. 이를 통해 사용자는 지리별로 대리점 판매 차원을 구분할 수 있습니다. 자세한 내용은 [참조 관계 및 참조 관계 속성 정의](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조하세요.
@@ -88,7 +87,7 @@ ms.locfileid: "78175302"
 
      Reseller 차원의 Geography Key 특성은 Geography 차원을 Reseller Sales 팩트 테이블에 연결하는 데만 사용됩니다. 이 특성은 찾아보기에는 사용되지 않으므로 이 특성 계층을 표시하도록 정의하는 값은 없습니다. 또한 특성 계층 정렬 및 최적화는 처리 성능에 부정적 영향만 미칩니다. 그러나 두 차원 간 링크로 기능하려면 해당 특성이 설정되어 있어야 합니다.
 
-4.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대 한 큐브 디자이너로 전환 하 고 **차원 용도** 탭을 클릭 한 다음 **재판매인 Sales** 측정값 그룹과 **Geography** 큐브 차원의 교집합에서 줄임표 단추 (**...**)를 클릭 합니다.
+4.  Tutorial 큐브에 대 한 큐브 디자이너로 전환 하 고 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **차원 용도** 탭을 클릭 한 다음 **재판매인 Sales** 측정값 그룹과 **Geography** 큐브 차원의 교집합에서 줄임표 단추 (**...**)를 클릭 합니다.
 
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175302"
 
 9. **차원 용도** 탭의 **차원** 목록에서 **Geography**를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.
 
-10. 이 큐브 차원의 이름을로 `Reseller Geography`변경 합니다.
+10. 이 큐브 차원의 이름을로 변경 `Reseller Geography` 합니다.
 
      이제 이 큐브 차원이 **Reseller Sales** 측정값 그룹에 연결되었으므로 사용자는 큐브에서 해당 차원의 용도를 명시적으로 정의하여 사용자 혼동을 방지할 수 있습니다.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175302"
 
 2.  배포가 성공적으로 완료되면 **Tutorial 큐브에 대한 큐브 디자이너에서** 브라우저 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭을 클릭한 다음 **다시 연결** 단추를 클릭합니다.
 
-3.  메타 데이터 창에서를 확장 `Reseller Geography`하 고 영역을 마우스 오른쪽 **단추로 클릭 한**다음 **행 영역에 추가**를 클릭 합니다.
+3.  메타 데이터 창에서를 확장 `Reseller Geography` 하 고 영역을 **Geographies**마우스 오른쪽 단추로 클릭 한 다음 **행 영역에 추가**를 클릭 합니다.
 
      다음 그림에 표시된 것처럼 이제 **Reseller Sales-Sales Amount** 측정값은 **Geographies** 사용자 정의 계층의 **Country-Region** 특성별로 차원이 제대로 구분됩니다.
 

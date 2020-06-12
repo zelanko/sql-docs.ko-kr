@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8431de73b450179592bda39066c72550991a393c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0537d9e23eaf77cb1645de9ac7e0fb8fe49e4af3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217073"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544065"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>IIS(인터넷 정보 서비스) 8.0에서 Analysis Services에 대한 HTTP 액세스 구성
   이 문서에서는 Analysis Services 인스턴스에 액세스하기 위한 HTTP 엔드포인트를 설정하는 방법에 설명합니다. IIS(인터넷 정보 서비스)에서 실행되면서 클라이언트 애플리케이션 및 Analysis Services 서버로 데이터를 펌프하고 다시 반대로 펌프하는 ISAPI 확장인 MSMDPUMP.dll을 구성하여 HTTP 액세스를 사용하도록 설정할 수 있습니다. 이 방법은 BI 솔루션에서 다음과 같은 기능을 필요로 할 때 Analysis Services에 연결하는 대체 방법을 제공합니다.  
@@ -65,30 +64,30 @@ ms.locfileid: "79217073"
   
  다음 표에는 여러 시나리오에 대해 HTTP 액세스를 사용하도록 설정할 때 추가적으로 고려해야 하는 목록이 나와 있습니다.  
   
-|시나리오|구성|  
+|시나리오|Configuration|  
 |--------------|-------------------|  
 |동일한 컴퓨터의 IIS와 Analysis Services 비교|이 구성은 기본 구성(서버 이름이 localhost), 로컬 Analysis Services OLE DB 공급자 및 NTLM과의 Windows 통합 보안을 사용하도록 허용하므로 가장 간단한 구성입니다. 클라이언트도 같은 도메인에 있다고 가정하므로 인증은 추가 작업을 수행하지 않아도 사용자가 인식하지 못하는 사이에 이루어집니다.|  
 |서로 다른 컴퓨터의 IIS와 Analysis Services 비교|이 토폴로지의 경우 웹 서버에 Analysis Services OLE DB 공급자를 설치해야 합니다. 또한 원격 컴퓨터에서 Analysis Services 인스턴스의 위치를 지정하도록 msmdpump.ini 파일을 편집해야 합니다.<br /><br /> 이 토폴로지는 이중 홉 인증 단계를 추가합니다. 즉, 자격 증명이 클라이언트에서 웹 서버로 진행되고 다시 백 엔드 Analysis Services 서버로 진행됩니다. Windows 자격 증명 및 NTLM을 사용하는 경우 NTLM에서 두 번째 서버로의 클라이언트 자격 증명 위임을 허용하지 않으므로 오류가 발생합니다. 가장 일반적인 솔루션은 SSL(Secure Sockets Layer)과 함께 기본 인증을 사용하는 것이지만 MSMDPUMP 가상 디렉터리에 액세스할 때 사용자가 사용자 이름과 암호를 입력해야 합니다. 더 간단한 방법은 사용자가 자연스러운 방식으로 Analysis Services에 액세스할 수 있도록 Kerberos를 사용하도록 설정하고 Analysis Services 제한된 위임을 구성하는 것입니다. 자세한 내용은 [Configure Analysis Services for Kerberos constrained delegation](configure-analysis-services-for-kerberos-constrained-delegation.md) 를 참조하세요.<br /><br /> Windows 방화벽에서 차단 해제할 포트를 고려합니다. IIS의 웹 애플리케이션 및 원격 서버의 Analysis Services에 대한 액세스를 허용하도록 두 서버 모두에서 포트를 차단 해제해야 합니다.|  
 |클라이언트 연결이 신뢰할 수 없는 도메인 또는 엑스트라넷 연결에서 시작됩니다.|신뢰할 수 없는 도메인에서 시작된 클라이언트 연결의 경우 인증 제한 사항이 더 많아집니다. 기본적으로 Analysis Services는 사용자가 서버와 같은 도메인에 있도록 요구하는 Windows 통합 인증을 사용합니다. 도메인 외부에서 IIS에 연결하는 엑스트라넷 사용자가 있는 경우 서버가 기본 설정을 사용하도록 구성되면 해당 사용자에게 연결 오류가 발생합니다.<br /><br /> 해결 방법으로 도메인 자격 증명을 사용하여 VPN을 통해 엑스트라넷 사용자를 연결할 수 있습니다. 하지만 IIS 웹 사이트에서 기본 인증과 SSL을 사용하도록 설정하는 것이 더 나을 수 있습니다.|  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  이 문서의 지침에서는 IIS가 이미 구성되어 있고 Analysis Services가 이미 설치되어 있다고 가정합니다. Windows Server 2012에는 시스템에서 사용하도록 설정할 수 있는 서버 역할로 IIS 8.x가 포함되어 있습니다.  
   
  **IIS 8.0의 추가 구성**  
   
  IIS 8.0의 기본 구성에는 HTTP를 통한 Analysis Services 액세스에 필요한 구성 요소가 없습니다. **웹 서버(IIS)** 역할의 **보안** 및 **애플리케이션 개발** 기능 영역에 나오는 이러한 구성 요소에는 다음이 포함되어 있습니다.  
   
--   **보안** | **Windows 인증**또는 **기본 인증과**데이터 액세스 시나리오에 필요한 기타 보안 기능입니다.  
+-   **보안**  |  **Windows 인증**또는 **기본 인증과**데이터 액세스 시나리오에 필요한 기타 보안 기능입니다.  
   
--   **응용 프로그램 개발** | **CGI**  
+-   **응용 프로그램 개발**  |  **CGI**  
   
--   **응용 프로그램 개발** | **ISAPI 확장**  
+-   **응용 프로그램 개발**  |  **ISAPI 확장**  
   
- 이러한 구성 요소를 확인 하거나 추가 하려면 **서버 관리자** | **관리** | **역할 및 기능 추가**를 사용 합니다. **서버 역할**에 도달할 때까지 마법사를 진행합니다. 아래로 스크롤하여 **웹 서버(IIS)** 를 찾습니다.  
+ 이러한 구성 요소를 확인 하거나 추가 하려면 **서버 관리자**  |  **관리**  |  **역할 및 기능 추가**를 사용 합니다. **서버 역할**에 도달할 때까지 마법사를 진행합니다. 아래로 스크롤하여 **웹 서버(IIS)** 를 찾습니다.  
   
-1.  **웹 서버** | **보안** 을 열고 인증 방법을 선택 합니다.  
+1.  **웹 서버**  |  **보안** 을 열고 인증 방법을 선택 합니다.  
   
-2.  **웹 서버** | **응용 프로그램 개발** 을 열고 **CGI** 및 **ISAPI 확장**을 선택 합니다.  
+2.  **웹 서버**  |  **응용 프로그램 개발** 을 열고 **CGI** 및 **ISAPI 확장**을 선택 합니다.  
   
      ![웹 서버 역할의 기능 추가 페이지](../media/ssas-httpaccess-isapicgi.png "웹 서버 역할의 기능 추가 페이지")  
   
@@ -112,21 +111,21 @@ ms.locfileid: "79217073"
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
   
-1.  다음 파일을 복사 합니다 SQL Server \<\\ .>: \OLAP\bin\isapi: MSMDPUMP<instance\>:에 있습니다. DLL, MSMDPUMP. INI 및 Resources 폴더  
+1.  다음 파일을 복사 합니다. 여기서는 \<drive> Files\Microsoft SQL Server \\<instance \> \OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더에 있습니다.  
   
      ![복사할 파일을 보여 주는 파일 탐색기](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "복사할 파일을 보여 주는 파일 탐색기")  
   
-2.  웹 서버에서 새 폴더를 만듭니다. \<drive>: \inetpub\wwwroot\\**OLAP**  
+2.  웹 서버에서 새 폴더: \<drive> : \Inetpub\wwwroot \\ **OLAP** 을 만듭니다.  
   
 3.  이전에 복사한 파일을 이 새 폴더에 붙여 넣습니다.  
   
 4.  웹 서버의 \inetpub\wwwroot\OLAP 폴더에 MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더가 있는지 확인합니다. 폴더 구조는 다음과 같이 표시됩니다.  
   
-    -   \<드라이브>: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<드라이브>: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<드라이브>: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="step-2-create-an-application-pool-and-virtual-directory-in-iis"></a><a name="bkmk_appPool"></a> 2단계: IIS에 애플리케이션 풀 및 가상 디렉터리 만들기  
  다음으로 애플리케이션 풀과 PUMP에 대한 엔드포인트를 만듭니다.  
@@ -215,7 +214,7 @@ ms.locfileid: "79217073"
   
      ![기능 페이지의 처리기 매핑 아이콘](../media/ssas-httpaccess-handlermapping.png "기능 페이지의 처리기 매핑 아이콘")  
   
-7.  페이지의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **스크립트 매핑 추가**를 선택합니다. 스크립트 매핑 추가 대화 상자에서 ** \*.dll** 을 요청 경로로 지정 하 고 파일로 c:\inetpub\wwwroot\olap\msmdpump.dll를 실행 파일로 지정 하 고 이름으로 **OLAP** 을 입력 합니다. 이 스크립트 맵과 연결된 모든 기본 제한 사항을 유지합니다.  
+7.  페이지의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **스크립트 매핑 추가**를 선택합니다. 스크립트 매핑 추가 대화 상자에서 ** \* .dll** 을 요청 경로로 지정 하 고 c:\inetpub\wwwroot\OLAP\msmdpump.dll를 실행 파일로 지정 하 고 이름으로 **OLAP** 을 입력 합니다. 이 스크립트 맵과 연결된 모든 기본 제한 사항을 유지합니다.  
   
      ![스크립트 매핑 추가 대화 상자의 스크린 샷](../media/ssas-httpaccess-addscript.png "스크립트 매핑 추가 대화 상자의 스크린 샷")  
   
@@ -237,16 +236,16 @@ ms.locfileid: "79217073"
   
 ```  
   
- HTTP 액세스를 구성하는 Analysis Services 인스턴스가 로컬 컴퓨터에 있고 기본 인스턴스로 설치된 경우 이 설정을 변경할 이유가 없습니다. 그렇지 않으면 서버 이름을 지정 해야 합니다 (예: \<SERVERNAME>ADWRKS-SRV01\</dserver>). 명명 된 인스턴스로 설치 된 서버의 경우 인스턴스 이름을 추가 해야 합니다 (예: \<servername>ADWRKS-SRV01\Tabular\</servername>).  
+ HTTP 액세스를 구성하는 Analysis Services 인스턴스가 로컬 컴퓨터에 있고 기본 인스턴스로 설치된 경우 이 설정을 변경할 이유가 없습니다. 그렇지 않으면 서버 이름을 지정 해야 합니다 (예: \<ServerName> ADWRKS-SRV01 \</ServerName> ). 명명 된 인스턴스로 설치 된 서버의 경우 인스턴스 이름 (예: ADWRKS-SRV01\Tabular)을 추가 해야 \<ServerName> \</ServerName> 합니다.  
   
- 기본적으로 Analysis Services는 TCP/IP 포트 2383에서 수신합니다. Analysis Services를 기본 인스턴스로 설치한 경우 Analysis Services에서 포트 2383에서 자동으로 수신 하는 방법을 알 \<수 있으므로 ServerName>에서 포트를 지정할 필요가 없습니다. 하지만 Windows 방화벽에서 해당 포트에 대한 인바운드 연결을 허용해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+ 기본적으로 Analysis Services는 TCP/IP 포트 2383에서 수신합니다. Analysis Services를 기본 인스턴스로 설치한 경우 \<ServerName> Analysis Services에서 포트 2383에서 자동으로 수신 하는 방법을 알고 있으므로에서 포트를 지정할 필요가 없습니다. 하지만 Windows 방화벽에서 해당 포트에 대한 인바운드 연결을 허용해야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
- 고정 포트에서 수신 하도록 Analysis Services의 명명 된 인스턴스 또는 기본 인스턴스를 구성한 경우 서버 이름에 포트 번호를 추가 해야 합니다 (예: \<SERVERNAME>AW-SRV01:55555\</servername>) .이 포트에 대 한 Windows 방화벽의 인바운드 연결을 허용 해야 합니다.  
+ 고정 포트에서 수신 하도록 Analysis Services의 명명 된 인스턴스 또는 기본 인스턴스를 구성한 경우 서버 이름에 포트 번호를 추가 해야 합니다 (예 \<ServerName> : AW-SRV01:55555 \</ServerName> ) .이 포트에 대 한 Windows 방화벽의 인바운드 연결을 허용 해야 합니다.  
   
 ## <a name="step-5-grant-data-access-permissions"></a>5단계: 데이터 액세스 권한 부여  
  앞에서 설명한 대로 Analysis Services 인스턴스에 대한 권한을 부여해야 합니다. 각 데이터베이스 개체에는 지정된 수준의 권한(읽기 또는 읽기/쓰기)을 제공하는 역할이 있으며 각 역할에는 Windows 사용자 ID로 구성된 멤버가 있습니다.  
   
- SQL Server Management Studio를 사용하여 사용 권한을 설정할 수 있습니다. **데이터베이스** | **역할** 폴더에서 역할을 만들고 데이터베이스 권한을 지정 하 고 Windows 사용자 또는 그룹 계정에 멤버 자격을 할당 한 다음 특정 개체에 대 한 읽기 또는 쓰기 권한을 부여할 수 있습니다. 일반적으로 큐브에 대한 **읽기** 권한은 모델 데이터를 사용하지만 업데이트하지 않는 클라이언트 연결의 경우 충분합니다.  
+ SQL Server Management Studio를 사용하여 사용 권한을 설정할 수 있습니다. **데이터베이스**  |  **역할** 폴더에서 역할을 만들고 데이터베이스 권한을 지정 하 고 Windows 사용자 또는 그룹 계정에 멤버 자격을 할당 한 다음 특정 개체에 대 한 읽기 또는 쓰기 권한을 부여할 수 있습니다. 일반적으로 큐브에 대한 **읽기** 권한은 모델 데이터를 사용하지만 업데이트하지 않는 클라이언트 연결의 경우 충분합니다.  
   
  역할 할당은 인증을 구성한 방법에 따라 달라집니다.  
   
@@ -261,7 +260,7 @@ ms.locfileid: "79217073"
 ##  <a name="step-6-test-your-configuration"></a><a name="bkmk_test"></a> 6단계: 구성 테스트  
  MSMDPUMP의 연결 문자열 구문은 MSMDPUMP.dll 파일에 대한 URL입니다.  
   
- 웹 응용 프로그램이 고정 포트에서 수신 대기 하는 경우 서버 이름 또는 IP 주소에 포트 번호를 추가 합니다 (예: `http://my-web-srv01:8080/OLAP/msmdpump.dll` 또는 `http://123.456.789.012:8080/OLAP/msmdpump.dll`).  
+ 웹 응용 프로그램이 고정 포트에서 수신 대기 하는 경우 서버 이름 또는 IP 주소에 포트 번호를 추가 합니다 (예: `http://my-web-srv01:8080/OLAP/msmdpump.dll` 또는) `http://123.456.789.012:8080/OLAP/msmdpump.dll` .  
   
  연결을 빠르게 테스트하기 위해 Microsoft Excel 또는 SQL Server Management Studio를 사용하여 연결을 열 수 있습니다.  
   

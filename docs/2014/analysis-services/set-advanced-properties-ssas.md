@@ -12,17 +12,17 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068829"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858043"
 ---
 # <a name="set-advanced-properties-ssas"></a>고급 속성 설정(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 데이터 원본 연결에 대한 속성 설정을 추가로 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **공급자**  
  데이터 원본 연결에 사용할 공급자를 선택합니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: Updategrams에 매개 변수 전달 (SQLXML)
+description: SQLXML 4.0에서 updategram에 매개 변수를 전달 하는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e109543de3b45b5af0930a14541bf3e89c66edc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 462b9b2b8cd5239e6185b59dfabc028c4d7d8d6a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252406"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529811"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Updategram에 매개 변수 전달(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252406"
  Updategram을 사용하면 NULL을 매개 변수 값으로 전달할 수 있습니다. NULL 매개 변수 값을 전달 하려면 **nullvalue** 특성을 지정 합니다. 그러면 **nullvalue** 특성에 할당 된 값이 매개 변수 값으로 제공 됩니다. Updategram은 이 값을 NULL로 처리합니다.  
   
 > [!NOTE]  
->  ** \<Sql: header>** 및 ** \<updg: 헤더>** 에서 **nullvalue** 를 정규화 되지 않은 값으로 지정 해야 합니다. 반면 ** \<updg: sync>** 에서는 **nullvalue** 를 정규화 된 값으로 지정 합니다 (예 **: updg: nullvalue**).  
+>  **\<sql:header>** 및에서는 **\<updg:header>** **nullvalue** 를 정규화 되지 않은 값으로 지정 해야 합니다. 반면에서는 **\<updg:sync>** **nullvalue** 를 정규화 된 값으로 지정 합니다 (예 **: updg: nullvalue**).  
   
 ## <a name="examples"></a>예  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
@@ -64,7 +65,7 @@ ms.locfileid: "75252406"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramWithParameters.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 `cmd.Properties("Output Stream").Value = outStream`쿼리를 실행 하 여 updategram를 실행 합니다.  
+2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
 
     ```  
     cmd.NamedParameters = True  
@@ -99,7 +100,7 @@ ms.locfileid: "75252406"
   
 1.  위의 Updategram을 메모장에 복사하고 UpdategramPassingNullvalues.xml로 파일에 저장합니다.  
   
-2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 `cmd.Properties("Output Stream").Value = outStream`쿼리를 실행 하 여 updategram를 실행 합니다.  
+2.  다음 줄을 추가 하 여 sqlxml4test.vbs를 실행 하는 데 [ADO를 사용 하 여 sqlxml](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md) 4.0 테스트 스크립트 ()를 준비 하 고 Sqlxml 4.0 쿼리를 실행 하 여 updategram를 실행 합니다 `cmd.Properties("Output Stream").Value = outStream` .  
   
     ```  
     cmd.NamedParameters = True  

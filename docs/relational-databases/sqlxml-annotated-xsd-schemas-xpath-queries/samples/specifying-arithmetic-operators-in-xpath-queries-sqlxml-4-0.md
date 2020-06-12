@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에 산술 연산자 사용 (SQLXML)
+description: SQLXML 4.0 XPath 쿼리에서 산술 연산자를 지정 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252628"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529892"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 산술 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252628"
 ## <a name="examples"></a>예  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. * 산술 연산자 지정  
- 이 XPath 쿼리는 지정 된 조건자를 충족 하는 ** \<orderdetail>** 요소를 반환 합니다.  
+ 이 XPath 쿼리 **\<OrderDetail>** 는 지정 된 조건자를 충족 하는 요소를 반환 합니다.  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- `child` 쿼리에서는 축 이며 `OrderDetail` 노드 테스트 ( **orderdetail** 이 ** \<요소>노드인 **경우 TRUE)입니다. ** \<요소>** 노드가 **자식** 축에 대 한 주 노드인지 때문입니다. 모든 ** \<orderdetail>** element 노드에 대해 조건자의 테스트가 적용 되며 조건을 충족 하는 노드만 반환 됩니다.  
+ 쿼리에서는 `child` 축 이며 `OrderDetail` 노드 테스트 ( **orderdetail** 이 이면 **\<element node>** **\<element>** 노드가 **자식** 축에 대 한 주 노드인지 때문에 TRUE)입니다. 모든 **\<OrderDetail>** 요소 노드에 대해 조건자의 테스트가 적용 되며 조건을 충족 하는 노드만 반환 됩니다.  
   
 > [!NOTE]  
 >  XPath의 숫자는 배정밀도 부동 소수점 숫자이며 이 예와 같이 부동 소수점 숫자를 비교하면 반올림됩니다.  

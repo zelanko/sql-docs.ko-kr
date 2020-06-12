@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 2a500f75-6cb7-42bc-8d98-019841fa924b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 333a812963bf58ada0450243d3fced6891f08915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2495d6159a2fd76e0278ea101eb35d770b9162e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086559"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526139"
 ---
 # <a name="cube-wizard-f1-help"></a>큐브 마법사 F1 도움말
-  큐브 마법사를 사용 하 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 여에서 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트에 대 한 큐브를 만들 수 있습니다.  
+  큐브 마법사를 사용 하 여에서 프로젝트에 대 한 큐브를 만들 수 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 있습니다.  
   
  **큐브 마법사를 열려면**  
   

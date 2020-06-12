@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535793"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>사용자 정의 계층 추가 또는 삭제
   **의 차원 디자이너에 있는** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭의 차원에서 사용자 정의 계층을 추가하거나 제거할 수 있습니다.  
@@ -53,11 +52,11 @@ ms.locfileid: "66072586"
   
 -   **차원 구조** 탭의 **계층** 창에서 제거할 사용자 정의 계층을 클릭합니다. 도구 모음에서 **삭제**를 클릭합니다.  
   
-     - 또는-  
+     - 또는  
   
 -   **계층** 창에서 제거할 사용자 정의 계층을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-     - 또는-  
+     - 또는  
   
 -   사용자 정의 계층을 디자인 화면 밖으로 끕니다.  
   

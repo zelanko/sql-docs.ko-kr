@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725387"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545931"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services의 데이터 형식
-  모든 <xref:Microsoft.AnalysisServices.DataItem> 개체에 대해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는의 `System.Data.OleDb.OleDbType`다음 하위 집합을 지원 합니다. 데이터 형식을 설정 하거나 읽으려면 [DataItem 데이터 형식 &#40;&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)를 사용 합니다.  
+  모든 개체에 대해는 <xref:Microsoft.AnalysisServices.DataItem> [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 의 다음 하위 집합을 지원 합니다 `System.Data.OleDb.OleDbType` . 데이터 형식을 설정 하거나 읽으려면 [DataItem 데이터 형식 &#40;&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)를 사용 합니다.  
   
 ## <a name="supported-data-types"></a>지원되는 데이터 형식  
   

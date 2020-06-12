@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31aeb271-47a1-433b-a8a5-120bcb4584d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 250c1ec9e384eaac7613cb15ae51d0bf9c982245
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542705"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>5단원: 차원과 측정값 그룹의 관계 정의
   이 자습서의 이전 단원에서는 큐브에 추가한 데이터베이스 차원을 하나 이상의 큐브 차원에 대한 기준으로 사용하는 방법에 대해 설명했습니다. 이 단원에서는 큐브 차원과 측정값 그룹 간에 서로 다른 유형의 관계를 정의하고 이 관계의 속성을 지정하는 방법에 대해 설명합니다.  

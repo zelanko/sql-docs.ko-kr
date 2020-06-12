@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef011559-9ab9-4a19-b5da-265064fea521
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 860025d25b106964add87b77e95e1e4107af2ef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da5921f6a1a3b7fa628ca8ee694837978fd987ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072495"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535575"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>차원 디자이너에서 트리, 목록 또는 표 형태로 특성 보기
   이 절차에서는 차원 디자이너의 특성 표시 방식을 변경하는 방법을 설명합니다.  

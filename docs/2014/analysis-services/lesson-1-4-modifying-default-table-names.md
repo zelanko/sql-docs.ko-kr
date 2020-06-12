@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079228"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543615"
 ---
 # <a name="modifying-default-table-names"></a>기본 테이블 이름 수정
   데이터 원본 뷰에서 개체에 대한 **FriendlyName** 속성의 값을 변경하여 알아보기 쉽고 사용이 간편한 이름을 지정할 수 있습니다.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079228"
   
      속성 창이 계속 열려 있으면 데이터 원본 뷰에 있는 각 테이블에 대한 속성을 보다 쉽게 변경할 수 있습니다. **자동 숨기기** 단추를 사용하여 속성 창을 계속 열어 놓지 않으면 **다이어그램** 창에서 다른 개체를 클릭할 때 창이 닫힙니다.  
   
-3.  **FactInternetSales** 개체에 대 한 **FriendlyName** 속성을로 *`InternetSales`* 변경 합니다.  
+3.  **FactInternetSales** 개체에 대 한 **FriendlyName** 속성을로 변경 합니다 *`InternetSales`* .  
   
      **FriendlyName** 속성의 셀에서 떨어진 곳을 클릭하면 변경 내용이 적용됩니다. 다음 단원에서는 이 팩트 테이블을 기반으로 하는 측정값 그룹을 정의합니다. 이 단원에서 수행한 변경 작업으로 인해 팩트 테이블의 이름은 FactInternetSales가 아닌 InternetSales가 됩니다.  
   
-4.  **테이블** 창에서 **DimProduct** 를 클릭합니다. 속성 창에서 **FriendlyName** 속성을로 *`Product`* 변경 합니다.  
+4.  **테이블** 창에서 **DimProduct** 를 클릭합니다. 속성 창에서 **FriendlyName** 속성을로 변경 합니다 *`Product`* .  
   
 5.  데이터 원본 뷰에 있는 나머지 테이블 각각의 **FriendlyName** 속성도 같은 방법으로 변경합니다. 즉 "**Dim**" 접두사를 제거합니다.  
   

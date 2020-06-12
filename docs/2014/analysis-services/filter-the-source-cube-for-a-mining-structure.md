@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081144"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544455"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>마이닝 구조에 대한 원본 큐브 필터링
   다차원 모델 (OLAP 큐브)의 데이터를 기반으로 하는 마이닝 구조를 만드는 경우 마이닝 구조의 기반이 되는 큐브를 *분할할* 수 있습니다. 조각화하면 마이닝 모델 학습에 사용되는 데이터에 대한 일종의 필터로 데이터 하위 집합을 만들 수 있습니다.  
   
 ### <a name="to-slice-a-cube"></a>큐브를 조각화하려면  
   
-1.  의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]데이터 마이닝 디자이너에서 **마이닝 구조** 탭 이나 **마이닝 모델** 탭을 선택 합니다.  
+1.  의 데이터 마이닝 디자이너에서 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] **마이닝 구조** 탭 이나 **마이닝 모델** 탭을 선택 합니다.  
   
 2.  **마이닝 모델** 메뉴에서 **마이닝 구조 큐브 조각 정의**를 선택 합니다.  
   

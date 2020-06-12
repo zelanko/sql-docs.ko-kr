@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7feff5a0c905e3975aeb840ab6a1883a5084b31e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072077"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540705"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>파티션(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **파티션** 탭을 사용하여 큐브의 각 측정값 그룹에 대한 스토리지, 자동 관리 캐싱 및 쓰기 저장(writeback) 설정을 포함하여 파티션을 생성 및 수정할 수 있습니다.  

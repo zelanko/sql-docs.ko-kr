@@ -1,5 +1,6 @@
 ---
 title: 'Sql: is 상수 (SQLXML)를 사용 하 여 상수 요소 만들기'
+description: 'SQLXML 4.0에서 sql: is 상수 주석을 사용 하 여 데이터베이스 테이블 또는 열에 매핑되지 않는 XSD 스키마에 상수 요소를 만드는 방법에 대해 알아봅니다.'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524914"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
 
@@ -35,17 +36,17 @@ ms.locfileid: "75257484"
   
 -   XML 문서에 최상위 요소 추가. XML 문서에는 단일 최상위 요소(root 요소)가 필요합니다.  
   
--   모든 주문을 래핑하는 ** \<orders>** 요소와 같은 컨테이너 요소 만들기  
+-   **\<Orders>** 모든 주문을 래핑하는 요소와 같은 컨테이너 요소 만들기  
   
- **Sql: is 상수** 주석은 ** \<complexType>** 요소에 추가할 수 있습니다.  
+ **Sql: is 상수** 주석은 요소에 추가할 수 있습니다 **\<complexType>** .  
   
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 컨테이너 요소를 추가하는 sql:is-constant 지정  
- 주석이 추가 된이 XSD 스키마에서 ** \<customerorders>** 은 값이 1 인 **sql: is 상수** 특성을 지정 하 여 상수 요소로 정의 됩니다. 따라서 ** \<customerorders>** 은 데이터베이스 테이블 또는 열에 매핑되지 않습니다. 이 상수 요소는 ** \<자식 요소>순서 대로** 구성 됩니다.  
+ 주석이 추가 된이 XSD 스키마에서 **\<CustomerOrders>** 은 값이 1 인 **sql: is 상수** 특성을 지정 하 여 상수 요소로 정의 됩니다. 따라서 **\<CustomerOrders>** 는 데이터베이스 테이블 또는 열에 매핑되지 않습니다. 이 상수 요소는 **\<Order>** 자식 요소로 구성 됩니다.  
   
- ** \<Customerorders>** 는 어떠한 데이터베이스 테이블이 나 열에도 매핑되지 않지만 결과 XML에는 자식 요소 ** \<>순서** 를 포함 하는 컨테이너 요소로 표시 됩니다.  
+ **\<CustomerOrders>** 는 어떠한 데이터베이스 테이블이 나 열에도 매핑되지 않지만 결과 XML에는 자식 요소를 포함 하는 컨테이너 요소로 표시 됩니다 **\<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86ba3b79638c73c403b208158ceb72500eaf5bf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079447"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543672"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 폼 편집기(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭에 있는 **KPI 폼 편집기** 창을 사용하여 선택한 KPI(핵심 성과 지표)를 생성하거나 수정할 수 있습니다.  
@@ -106,7 +105,7 @@ ms.locfileid: "66079447"
 > [!IMPORTANT]  
 >  MDX 식은 **관련된 측정값 그룹**에서 지정한 측정값 그룹과 관련된 시간 차원 내에서 멤버의 고유 이름을 반환해야 합니다.  
   
- **무게**  
+ **Weight**  
  KPI의 가중 요인에 대한 MDX 식을 보거나 편집하려면 확장합니다.  
   
  **계산 도구** 창에서 선택한 요소를 이 옵션으로 끌어서 놓으면 선택한 요소의 MDX 구문을 포함시킬 수 있습니다.  

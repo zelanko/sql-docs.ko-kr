@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e7712b7a7e861eb3d588f5217baa02bf26746fd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67343901"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528904"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2014)
 DAX (Data Analysis Expression language)를 사용 하 여 Analysis Services 테이블 형식 모델, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Excel 통합 문서의 데이터 모델 및 Power BI Desktop 데이터 모델에서 사용할 측정값 및 기타 사용자 지정 수식을 만들 수 있습니다. 대부분의 측면에서 이러한 환경에서 만드는 모델은 동일 하며 동일한 측정값, 관계 및 Kpi 등을 사용할 수 있습니다. 그러나 Analysis Services 테이블 형식 모델을 작성 하 고 DirectQuery 모드에서 배포 하는 경우 사용할 수 있는 수식에 몇 가지 제한 사항이 있습니다. 이 항목에서는 이러한 차이점에 대 한 개요를 제공 하 고 호환성 수준 1100 또는 1103 및 DirectQuery 모드에서 SQL Server 2014 Analysis Services tabulars 모델에서 지원 되지 않는 함수를 나열 하 고, 지원 되지만 다른 결과를 반환할 수 있는 함수를 나열 합니다.  
@@ -55,7 +54,7 @@ DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모�
   
 메모리 내 모델에서는 문자열로 표현된 숫자가 다른 숫자와의 비교를 위해 숫자 데이터 형식으로 암시적으로 캐스팅되므로 결과가 **true** 가 됩니다. SQL에서도 텍스트 숫자를 숫자 데이터 형식과 비교하기 위해 암시적으로 숫자로 캐스팅합니다.  
   
-이는 첫 번째 버전의 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]동작 변경을 나타냅니다 .이는 텍스트 "2"가 항상 모든 숫자 보다 큰 것으로 간주 되기 때문에 **false**를 반환 합니다.  
+이는 첫 번째 버전의 동작 변경을 나타냅니다 .이는 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 텍스트 "2"가 항상 모든 숫자 보다 큰 것으로 간주 되기 때문에 **false**를 반환 합니다.  
   
 **텍스트와 부울 비교**  
 예: `"VERDADERO" = TRUE`  
@@ -85,7 +84,7 @@ DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및
 **문자열에서 날짜/시간으로 캐스팅**  
 DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datetime** 값으로 캐스팅하는 동작은 SQL Server에서와 동일합니다.  
   
-모델의 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 문자열에서 **datetime** 데이터 형식으로의 캐스트를 관리 하는 규칙에 대 한 자세한 내용은 [DAX 구문 참조](/dax/dax-syntax-reference)를 참조 하세요.
+모델의 문자열에서 **datetime** 데이터 형식으로의 캐스트를 관리 하는 규칙에 대 한 자세한 내용은 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] [DAX 구문 참조](/dax/dax-syntax-reference)를 참조 하세요.
   
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
@@ -155,7 +154,7 @@ Excel 및 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델에서도 0으�
 `BLANK/BLANK` 식은 메모리 내 모델과 DirectQuery 모드 모두에서 `BLANK` 를 반환하는 특수한 경우입니다.  
   
 ### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>지원되는 숫자 및 날짜-시간 범위  
-및 테이블 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 형식 모델의 수식은 실수 및 날짜에 대 한 최대 허용 값과 관련 하 여 Excel과 동일한 제한 사항이 적용 됩니다. 그러나 계산 또는 쿼리에서 최대값이 반환되거나 값에 변환, 캐스팅, 반올림 또는 잘림이 적용되는 경우에는 차이점이 있을 수 있습니다.  
+[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]및 테이블 형식 모델의 수식은 실수 및 날짜에 대 한 최대 허용 값과 관련 하 여 Excel과 동일한 제한 사항이 적용 됩니다. 그러나 계산 또는 쿼리에서 최대값이 반환되거나 값에 변환, 캐스팅, 반올림 또는 잘림이 적용되는 경우에는 차이점이 있을 수 있습니다.  
   
 -   **Currency** 및 **Real** 형식의 값을 곱할 경우 결과가 가능한 최대값보다 크면 DirectQuery 모드에서는 오류가 발생하지 않고 Null이 반환됩니다.  
   
@@ -215,7 +214,7 @@ DirectQuery 모드에서는 SQL Server 규칙에 따라 결과가 잘리고 식�
 **SQL Time 데이터 형식이 지원되지 않음**  
 메모리 내 모델은 새로운 SQL **Time** 데이터 형식의 사용을 지원하지 않습니다. DirectQuery 모드에서 이 데이터 형식의 열을 참조하는 수식은 오류를 반환합니다. Time 데이터 열은 메모리 내 모델로 가져올 수 없습니다.  
   
-[!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 그러나 캐시 된 모델에서는 엔진이 시간 값을 허용 가능한 데이터 형식으로 캐스팅 하 고 수식에서 결과를 반환 하는 경우가 있습니다.  
+그러나 캐시 된 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 모델에서는 엔진이 시간 값을 허용 가능한 데이터 형식으로 캐스팅 하 고 수식에서 결과를 반환 하는 경우가 있습니다.  
   
 이 동작은 날짜 열을 매개 변수로 사용하는 모든 함수에 적용됩니다.  
   
@@ -311,7 +310,7 @@ DirectQuery 모드에서는 이 제한이 적용되지 않습니다.
   
 입력 텍스트가 **varchar** 또는 **nvarchar**일 경우 수식 결과는 항상 동일합니다.  
   
-그러나 텍스트가 고정 길이 문자이 고 * &lt;num_chars&gt; * 값이 대상 문자열의 길이 보다 크면 DirectQuery 모드에서는 결과 문자열의 끝에 공백이 추가 됩니다.  
+그러나 텍스트가 고정 길이 문자이 고 * &lt; num_chars &gt; * 값이 대상 문자열의 길이 보다 크면 DirectQuery 모드에서는 결과 문자열의 끝에 공백이 추가 됩니다.  
   
 메모리 내 모델에서는 결과가 패딩 없이 마지막 문자열 문자에서 끝납니다.  
   

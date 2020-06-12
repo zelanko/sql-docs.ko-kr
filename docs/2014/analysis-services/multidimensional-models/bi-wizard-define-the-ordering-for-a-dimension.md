@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05e75eb726d67e992a0a9320be8d23bbc547bedb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cd5ea148e374c18c530ba0a15c80dbb23983020
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076857"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544585"
 ---
 # <a name="define-the-ordering-for-a-dimension"></a>차원 순서 정의
   큐브나 차원에 특성 순서 지정 기능을 추가하여 특성 멤버의 순서 지정 방식을 지정할 수 있습니다. 특성의 이름이나 키 또는 특성 관계를 기반으로 하는 다른 특성의 이름이나 키를 기준으로 멤버 순서를 지정할 수 있습니다. 기본적으로 멤버는 이름을 기준으로 순서가 지정됩니다. 이 기능은 차원의 특성에 대한 `OrderBy` 및 `OrderByAttributeID` 속성 설정을 변경합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66076857"
 ## <a name="specifying-ordering"></a>순서 지정  
  마법사의 두 번째 **특성 순서 지정** 페이지에서 차원에 있는 모든 특성의 순서를 지정하는 방식을 지정합니다.  
   
- **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버를 정렬 하는 데 사용 하려는 특성이 목록에 없는 경우 목록에서 아래로 스크롤한 다음 ** \<새 특성 ... >** 를 선택 하 여 차원 테이블의 열을 선택할 수 있는 **열 선택** 대화 상자를 엽니다. **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
+ **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버를 정렬 하는 데 사용 하려는 특성이 목록에 없는 경우 목록을 아래로 스크롤하여 선택한 다음 **\<New attribute...>** **열** 선택 대화 상자를 열어 차원 테이블의 열을 선택할 수 있습니다. **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
   
  그런 다음 **조건** 열에서 **키** 또는 **이름**을 중에서 어떤 기준으로 특성 멤버의 순서를 지정할 것인지 선택합니다.  
   

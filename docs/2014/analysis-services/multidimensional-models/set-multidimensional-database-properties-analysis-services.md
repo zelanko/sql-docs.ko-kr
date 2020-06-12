@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45379f12358b5e25d4f576bd01f11f777d688c64
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072999"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545663"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>다차원 데이터베이스 속성 설정(Analysis Services)
-  데이터베이스 디자이너에서는 다양 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 한 데이터베이스 속성을 구성할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 디자이너에서는 다양 한 데이터베이스 속성을 구성할 수 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  이 디자이너에서는 다음과 같은 유형의 태스크를 수행할 수 있습니다.  
   

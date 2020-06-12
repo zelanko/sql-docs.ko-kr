@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c56b0a70-cdec-427f-990e-425290344e7d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12e2d2f543694a1da418f5e8eb4b900eaa123d97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8620c54970ea14a2ac01c85262a372d2b3db0d68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546265"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Slicer 축의 내용 지정(MDX)
   slicer 축은 지정된 멤버와 교차되는 데이터만 반환되도록 반환 데이터를 제한하여 MDX SELECT 문에 의해 반환된 데이터를 필터링합니다. slicer 축은 표시되지 않는 쿼리의 추가 축으로 간주할 수 있으며 MDX에서 SELECT 문의 WHERE 절에 정의됩니다.  

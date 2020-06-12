@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에 변환 함수 사용 (SQLXML)
+description: SQLXML 4.0 XPath 쿼리에 명시적 변환 함수 문자열 () 및 숫자 ()를 지정 하는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252560"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529903"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252560"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 명시적 변환 함수 사용  
  **Number ()** 함수는 인수를 숫자로 변환 합니다.  
   
- **ContactID** 의 값이 숫자가 아닌 경우 다음 쿼리는 **ContactID** 를 숫자로 변환 하 고 값 4와 비교 합니다. 그런 다음 쿼리는 숫자 값이 4 인 **ContactID** 특성을 사용 하 여 컨텍스트 노드의 모든 ** \<Employee>** 요소 자식을 반환 합니다.  
+ **ContactID** 의 값이 숫자가 아닌 경우 다음 쿼리는 **ContactID** 를 숫자로 변환 하 고 값 4와 비교 합니다. 그런 다음 쿼리는 **\<Employee>** 숫자 값이 4 인 **ContactID** 특성을 사용 하 여 컨텍스트 노드의 모든 요소 자식을 반환 합니다.  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -81,7 +82,7 @@ ms.locfileid: "75252560"
 ### <a name="b-use-the-string-explicit-conversion-function"></a>B. string() 명시적 변환 함수 사용  
  **String ()** 함수는 인수를 문자열로 변환 합니다.  
   
- 다음 쿼리는 **ContactID** 을 문자열로 변환 하 고 문자열 값 "4"와 비교 합니다. 이 쿼리는 **ContactID** 를 사용 하 여 컨텍스트 노드의 모든 ** \<Employee>** 요소 자식을 반환 합니다.  
+ 다음 쿼리는 **ContactID** 을 문자열로 변환 하 고 문자열 값 "4"와 비교 합니다. 이 쿼리는 **\<Employee>** 문자열 값이 "4" 인 **ContactID** 를 사용 하 여 컨텍스트 노드의 모든 요소 자식을 반환 합니다.  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

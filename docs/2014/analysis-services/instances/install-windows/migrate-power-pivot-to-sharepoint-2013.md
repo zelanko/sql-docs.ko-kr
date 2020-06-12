@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175242"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543898"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrate PowerPivot to SharePoint 2013
 
@@ -52,7 +51,7 @@ ms.locfileid: "78175242"
 
 2.  새로 SharePoint Server 2013 팜을 설치합니다.
 
-3.  SharePoint 모드에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 인스턴스를 설치 합니다. 자세한 내용은 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)을 참조하세요.
+3.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] SharePoint 모드에서 서버 인스턴스를 설치 합니다. 자세한 내용은 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)을 참조하세요.
 
 4.  SharePoint 팜의 각 서버에서 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 설치 패키지 **spPowerPivot.msi** 를 실행합니다. 자세한 내용은 [SharePoint 2013&#41;&#40;SharePoint용 PowerPivot 추가 기능 설치 또는 제거 ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)를 참조 하세요.
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175242"
 5.  **데이터베이스를 읽기/쓰기로 설정:****데이터베이스가 읽기 전용** 을 **False**로 설정합니다.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) 웹 응용 프로그램 준비 및 콘텐츠 데이터베이스 탑재
- 다음 절차에 대 한 자세한 설명은 [sharepoint 2010에서 sharepoint 2013으로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) ()https://go.microsoft.com/fwlink/p/?LinkId=256690)를 참조 하세요.
+ 다음 절차에 대 한 자세한 설명은 [sharepoint 2010에서 sharepoint 2013으로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) ()를 참조 하세요 https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **데이터베이스를 오프라인 상태로 만들기:**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175242"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     자세한 내용은 [콘텐츠 데이터베이스 연결 또는 분리 (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx))를 참조 하세요.
+     자세한 내용은 [콘텐츠 데이터베이스 연결 또는 분리 (SharePoint Server 2010) ()](https://technet.microsoft.com/library/ff628582.aspx) 를 참조 하세요 https://technet.microsoft.com/library/ff628582.aspx) .
 
      **단계가 완료된 상태:**  탑재 작업이 완료되면 사용자가 이전 콘텐츠 데이터베이스에 있는 파일을 볼 수 있습니다. 따라서 사용자는 문서 라이브러리에서 통합 문서를 보고 열 수 있습니다.
 
@@ -129,7 +128,7 @@ ms.locfileid: "78175242"
 
 -   **일정 옵션 1 마이그레이션: SharePoint 팜 관리자**
 
-    1.  SharePoint 2013 관리에서 `Set-PowerPivotServiceApplication` cmdlet을 `-StartMigratingRefreshSchedules` 스위치와 함께 실행 하 여 자동 주문형 일정 마이그레이션 ![PowerShell 관련 콘텐츠](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")를 사용 하도록 설정 합니다. 다음 Windows PowerShell 스크립트는 PowerPivot 서비스 애플리케이션이 한 개만 있다고 가정합니다.
+    1.  SharePoint 2013 관리에서 `Set-PowerPivotServiceApplication` cmdlet을 스위치와 함께 실행 `-StartMigratingRefreshSchedules` 하 여 자동 주문형 일정 마이그레이션 ![PowerShell 관련 콘텐츠](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")를 사용 하도록 설정 합니다. 다음 Windows PowerShell 스크립트는 PowerPivot 서비스 애플리케이션이 한 개만 있다고 가정합니다.
 
         ```powershell
         $app = Get-PowerPivotServiceApplication
@@ -170,8 +169,8 @@ ms.locfileid: "78175242"
 
 -   [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [SharePoint 2013에 대 한 업그레이드 프로세스 개요](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [SharePoint 2013에 대 한 업그레이드 프로세스 개요](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [SharePoint 2013로 업그레이드 하기 전에 정리 준비](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [SharePoint 2013로 업그레이드 하기 전에 정리 준비](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Sharepoint 2010에서 sharepoint 2013로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Sharepoint 2010에서 sharepoint 2013로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

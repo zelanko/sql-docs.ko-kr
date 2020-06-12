@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 606d453235529fbfed4dc0f07178ce2ae7132067
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062883"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528259"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>구조에 모델 추가(Excel용 데이터 마이닝 추가 기능)
   ![구조에 모델 추가 단추](media/dmc-addmodel.gif "구조에 모델 추가 단추")  
@@ -86,15 +85,15 @@ ms.locfileid: "66062883"
   
 ### <a name="related-options"></a>관련 옵션  
   
-|옵션|설명|  
+|옵션|의견|  
 |------------|--------------|  
 |**구조 또는 모델 선택** 대화 상자|새로운 모델을 작성하기 위한 기반으로 사용할 기존 마이닝 구조를 선택합니다.  선택한 구조는 현재 연결에 있어야 합니다. 그렇지 않은 경우에는 [원본 데이터에 연결 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](connect-to-source-data-data-mining-client-for-excel.md) 도구를 사용 하 여 연결을 변경 합니다.|  
-|**마이닝 알고리즘 선택** 대화 상자|데이터 마이닝 알고리즘의 목록은 연결되어 있는 서버에 따라 달라집니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 Standard 및 Enterprise 버전에서 서로 다른 알고리즘을 제공합니다. 관리자가 사용자 지정 알고리즘을 추가했을 수도 있습니다.<br /><br /> 알고리즘이 표시 되지 않으면 인스턴스에 연결 되어 있는지 확인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]합니다.|  
+|**마이닝 알고리즘 선택** 대화 상자|데이터 마이닝 알고리즘의 목록은 연결되어 있는 서버에 따라 달라집니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]는 Standard 및 Enterprise 버전에서 서로 다른 알고리즘을 제공합니다. 관리자가 사용자 지정 알고리즘을 추가했을 수도 있습니다.<br /><br /> 알고리즘이 표시 되지 않으면 인스턴스에 연결 되어 있는지 확인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 합니다.|  
 |**알고리즘 매개 변수** 대화 상자|이러한 설정에서 분석 방법과 관련된 매개 변수를 사용하여 각 알고리즘을 사용자 지정할 수 있습니다. 또한 모델의 결과가 여러 학습 패스에서 재현될 수 있도록 하기 위해 초기값을 설정할 수도 있습니다.<br /><br /> 자세한 내용은 [데이터 마이닝 추가 기능을&#41;SQL Server &#40;알고리즘 매개 변수 ](algorithm-parameters-sql-server-data-mining-add-ins.md)를 참조 하세요.|  
 |**열 모델 플래그 설정** 대화 상자|모델링 플래그는 누락된 데이터가 처리될 방법을 지정하여 모델을 향상시킬 수 있습니다. 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](data-mining/modeling-flags-data-mining.md)를 참조하세요.|  
   
 ###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>열 사용법 설정  
- 기존 마이닝 구조에 새 모델을 추가할 때 마이닝 구조에 있는 각 데이터 열의 사용법을 지정해야 합니다. 이 마법사의 옵션이 마이닝 구조의 옵션 보다 훨씬 더 자세히 관찰 되는 것을 알 수 있습니다. 그 이유는  
+ 기존 마이닝 구조에 새 모델을 추가할 때 마이닝 구조에 있는 각 데이터 열의 사용법을 지정해야 합니다. 이 마법사의 옵션이 마이닝 구조의 옵션 보다 훨씬 더 자세히 관찰 되는 것을 알 수 있습니다. 이유  
   
  마법사를 사용하여 모델과 구조를 함께 만들 때 알고리즘에서 데이터를 사용하는 방식을 제어하는 많은 옵션이 자동으로 설정되기 때문입니다. 그러나 기존 구조에 새 모델을 추가할 때는 이러한 옵션을 수동으로 확인하고 데이터가 분석에 사용되어야 하는지 여부, 데이터 형식이 올바른지 여부 등을 지정해야 합니다.  
   

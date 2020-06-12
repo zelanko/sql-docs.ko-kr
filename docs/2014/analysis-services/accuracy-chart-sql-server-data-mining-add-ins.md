@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 303973b4-71c0-4cfc-b7bc-92218b52509d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebe159aed7b27bf00ef47a110de1c7ec5ee70adb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15ba71b6beb46280f1fc3ad972c6252f95842eaa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062986"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528287"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>정확도 차트(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본 메뉴의 정확도 차트 단추](media/dmc-accchart.gif "데이터 마이닝 리본 메뉴의 정확도 차트 단추")  

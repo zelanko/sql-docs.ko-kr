@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493786"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542245"
 ---
 # <a name="defining-and-browsing-translations"></a>번역 정의 및 찾아보기
   번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름을 특정 언어로 나타내는 것을 말합니다. 개체에는 측정값 그룹, 측정값, 차원, 특성, 계층, KPI, 동작 및 계산 멤버가 포함됩니다. 번역은 여러 언어를 지원할 수 있는 클라이언트 애플리케이션에 대한 서버 지원을 제공합니다. 클라이언트는 이러한 클라이언트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 LCID(로캘 식별자)를 전달합니다. 그러면 해당 Analysis Services 인스턴스는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 메타데이터를 제공할 때 사용할 번역 집합을 결정합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 해당 언어에 대한 번역이나 지정된 개체에 대한 번역이 없을 경우 기본 언어가 개체 메타데이터를 클라이언트에게 다시 반환하는 데 사용됩니다. 예를 들어 프랑스의 비즈니스 사용자가 프랑스어로 로캘이 설정된 워크스테이션에서 큐브에 액세스하는 경우 프랑스어 번역이 있다면 이 비즈니스 사용자에게는 멤버 캡션과 멤버 속성 값이 프랑스어로 표시됩니다. 그러나 독일의 비즈니스 사용자가 독일어로 로캘이 설정된 워크스테이션에서 동일한 큐브에 액세스하면 해당 캡션 이름과 멤버 속성 값이 독일어로 표시됩니다. 자세한 내용은 [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [번역 &#40;Analysis Services&#41;](translations-analysis-services.md)를 참조 하세요.  
@@ -40,9 +39,9 @@ ms.locfileid: "69493786"
   
      프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 `Fecha` 합니다.  
+5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 `Fecha` **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 합니다.  
   
-6.  **Month Name** 특성에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열을 입력 하 고 `Mois d'Année` **프랑스어 (프랑스)** 번역 열에을 입력 `Mes del Año` 합니다.  
+6.  **Month Name** 특성에 대 한 **Caption** 개체의 행에서 `Mes del Año` **스페인어 (스페인)** 번역 열을 입력 하 고 `Mois d'Année` **프랑스어 (프랑스)** 번역 열에을 입력 합니다.  
   
      이러한 번역을 입력 하면 줄임표 (**...**)가 나타납니다. 이 줄임표를 클릭하면 특성 계층의 각 멤버에 대한 번역을 제공하는 기본 테이블의 열을 지정할 수 있습니다.  
   
@@ -80,11 +79,11 @@ ms.locfileid: "69493786"
   
      프랑스어 번역을 정의할 수 있는 또 다른 언어 열이 나타납니다.  
   
-5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 `Fecha` 합니다.  
+5.  **Date** 차원에 대 한 **Caption** 개체의 행에서 `Fecha` **스페인어 (스페인)** 번역 열과 `Temps` **프랑스어 (프랑스)** 번역 열에을 입력 합니다.  
   
-6.  **Internet Sales** 측정값 그룹에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Ventes D'Internet` **프랑스어 (프랑스)** 번역 열을 입력 `Ventas del lnternet` 합니다.  
+6.  **Internet Sales** 측정값 그룹에 대 한 **Caption** 개체의 행에서 `Ventas del lnternet` **스페인어 (스페인)** 번역 열과 `Ventes D'Internet` **프랑스어 (프랑스)** 번역 열을 입력 합니다.  
   
-7.  Internet Sales-Sales Amount 측정값에 대 한 **Caption** 개체의 행에서 **스페인어 (스페인)** 번역 열과 `Quantité de Ventes d'Internet` **프랑스어 (프랑스)** 번역 열을 입력 `Cantidad de las Ventas del Internet` 합니다.  
+7.  Internet Sales-Sales Amount 측정값에 대 한 **Caption** 개체의 행에서 `Cantidad de las Ventas del Internet` **스페인어 (스페인)** 번역 열과 `Quantité de Ventes d'Internet` **프랑스어 (프랑스)** 번역 열을 입력 합니다.  
   
      이 절차의 단계는 큐브 개체에 대한 메타데이터 번역을 정의하는 과정을 보여 줍니다.  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493786"
   
 5.  도구 모음의 **언어** 목록에서 **스페인어(스페인)** 를 선택합니다.  
   
-     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신, 다음 이미지에 표시 된 것 처럼 이라는 `Ventas del lnternet`새 표시 폴더에 스페인어로 표시 됩니다.  
+     메타데이터 창의 항목이 다시 채워집니다. 메타데이터 창의 항목이 다시 채워지면 인터넷 판매 표시 폴더에 Internet Sales-Sales Amount 측정값이 더 이상 나타나지 않습니다. 대신 `Ventas del lnternet` , 다음 이미지에 표시 된 것 처럼 이라는 새 표시 폴더에 스페인어로 표시 됩니다.  
   
      ![다시 채워진 메타데이터 창](../../2014/tutorials/media/l9-translations-6.gif "다시 채워진 메타데이터 창")  
   
-6.  메타 데이터 창에서를 마우스 오른쪽 단추로 `Cantidad de las Ventas del Internet` 클릭 하 고 **쿼리에 추가를**선택 합니다.  
+6.  메타 데이터 창에서를 마우스 오른쪽 단추로 클릭 하 `Cantidad de las Ventas del Internet` 고 **쿼리에 추가를**선택 합니다.  
   
-7.  메타 데이터 `Fecha`창에서 **Fecha**를 확장 하 고 **Fecha**를 마우스 오른쪽 단추로 클릭 한 다음 **필터에 추가**를 선택 합니다.  
+7.  메타 데이터 창에서 Fecha를 확장 하 고 `Fecha` **Fecha**를 마우스 오른쪽 단추로 클릭 한 다음 **Fecha.Calendar Date** **필터에 추가**를 선택 합니다.  
   
 8.  **필터** 창에서 **CY 2007** 을 필터 식으로 선택합니다.  
   

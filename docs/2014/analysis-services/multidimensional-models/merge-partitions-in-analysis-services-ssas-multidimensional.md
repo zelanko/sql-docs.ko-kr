@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073646"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546085"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services의 파티션 병합(SSAS - 다차원 데이터)
   기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 파티션을 병합하여 같은 측정값 그룹의 여러 파티션에 있는 팩트 데이터를 통합할 수 있습니다.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073646"
   
 1.  개체 탐색기에서 병합할 파티션이 포함된 큐브의 **측정값 그룹** 노드를 확장하고 **파티션**을 확장한 다음 병합 작업의 대상 파티션을 마우스 오른쪽 단추로 클릭합니다. 예를 들어 연간 팩트 데이터를 저장하는 파티션에 분기별 팩트 데이터를 이동하는 경우 연간 팩트 데이터가 들어 있는 파티션을 선택합니다.  
   
-2.  파티션 **병합** 을 클릭 하 여 파티션 ** \<파티션 이름 병합>** 대화 상자를 엽니다.  
+2.  파티션 **병합** 을 클릭 하 여 **파티션 \<partition name> 병합** 대화 상자를 엽니다.  
   
 3.  **원본 파티션**에서 대상 파티션과 병합할 각 원본 파티션 옆의 확인란을 선택하고 **확인**을 클릭합니다.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66073646"
   
 4.  누적된 데이터를 포함하는 파티션을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  속성을 `Source` 열고 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. `Source` 속성은 자동으로 업데이트 되지 않습니다. 를 `Source`먼저 업데이트 하지 않고 다시 처리 하면 필요한 데이터를 모두 가져올 수 없습니다.  
+5.  속성을 열고 `Source` 방금 병합 한 파티션 데이터를 포함 하도록 WHERE 절을 수정 합니다. `Source`속성은 자동으로 업데이트 되지 않습니다. 를 먼저 업데이트 하지 않고 다시 처리 하면 `Source` 필요한 데이터를 모두 가져올 수 없습니다.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> XMLA를 사용하여 파티션을 병합하는 방법  
  자세한 내용은 [파티션 병합&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md) 항목을 참조하세요.  

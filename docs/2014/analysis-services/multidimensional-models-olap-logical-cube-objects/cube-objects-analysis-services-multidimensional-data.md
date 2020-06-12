@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 5cee362e-3f95-4467-bc6c-29b1518ecbf3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9b813f5310acad9d6dfa2b844adae6168fc1f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6dfb75be696ab26893e668b99dc36c7340f86c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545315"
 ---
 # <a name="cube-objects-analysis-services---multidimensional-data"></a>큐브 개체(Analysis Services - 다차원 데이터)
     
 ## <a name="introducing-cube-objects"></a>큐브 개체 소개  
  단순 <xref:Microsoft.AnalysisServices.Cube> 개체는 기본 정보, 차원 및 측정값 그룹으로 구성 됩니다. 기본 정보에는 큐브의 이름, 큐브의 기본 측정값, 데이터 원본, 스토리지 모드 등이 포함됩니다.  
   
- Dimensions 컬렉션에는 데이터베이스 차원 컬렉션의 큐브에 사용되는 실제 차원 집합이 포함되어 있습니다. 모든 차원은 큐브에서 참조되기 전에 데이터베이스의 차원 컬렉션에 정의되어야 합니다. 전용 차원은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용할 수 없습니다.  
+ Dimensions 컬렉션에는 데이터베이스 차원 컬렉션의 큐브에 사용되는 실제 차원 집합이 포함되어 있습니다. 모든 차원은 큐브에서 참조되기 전에 데이터베이스의 차원 컬렉션에 정의되어야 합니다. 전용 차원은에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  측정값 그룹은 큐브에 있는 측정값의 집합으로, 공용 데이터 원본 뷰와 차원의 공통 집합이 있는 측정값의 컬렉션입니다. 측정값 그룹은 측정값의 처리 단위이므로 개별적으로 처리하고 검색할 수 있습니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "62702638"
 |항목||  
 |[동작&#40;Analysis Services - 다차원 데이터&#41;](../multidimensional-models/actions-analysis-services-multidimensional-data.md)||  
 |[Aggregations and Aggregation Designs](aggregations-and-aggregation-designs.md)||  
-|[새 명명된 집합](calculations.md)||  
+|[계산](calculations.md)||  
 |[큐브 셀 Analysis Services 다차원 데이터를 &#40;&#41;](cube-cells-analysis-services-multidimensional-data.md)||  
 |[큐브 속성](cube-properties-multidimensional-model-programming.md)||  
 |[큐브 저장소 &#40;Analysis Services 다차원 데이터&#41;](cube-storage-analysis-services-multidimensional-data.md)||  

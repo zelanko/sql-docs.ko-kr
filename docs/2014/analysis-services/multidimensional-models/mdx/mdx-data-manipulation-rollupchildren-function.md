@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546355"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>RollupChildren 함수 작업(MDX)
   MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) [Search 및 Replace 스크립팅] 함수는 멤버의 자식을 롤업 하 고 각 자식에 다른 단항 연산자를 적용 하 고이 롤업 값을 숫자로 반환 합니다. 자식 멤버와 관련된 멤버 속성에서 단항 연산자를 제공하거나 함수에 직접 제공되는 문자열 식이 단항 연산자가 될 수 있습니다.  
@@ -64,7 +63,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  이 함수를 호출하면 멤버 속성에 저장된 연산자를 사용하여 각 자식의 값을 합계에 적용합니다. 국내 및 해외 수입에 대한 멤버를 무시하고 `RollupChildren` 함수가 반환한 롤업 합계에 1.1을 곱합니다.  
   
 ### <a name="using-the-iif-function"></a>IIf 함수 사용  
- 예를 들어 작업이 일반적이 지 않거나 연산이 하나의 MDX 쿼리에만 적용 되는 경우 [IIf](/sql/mdx/iif-mdx) 함수를 `RollupChildren` 함수와 함께 사용 하 여 동일한 결과를 제공할 수 있습니다. 다음 MDX 쿼리를 이용하면 사용자 지정 멤버 속성을 사용하지 않고도 앞선 예로 든 MDX와 같은 결과가 나옵니다.  
+ 예를 들어 작업이 일반적이 지 않거나 연산이 하나의 MDX 쿼리에만 적용 되는 경우 [IIf](/sql/mdx/iif-mdx) 함수를 함수와 함께 사용 `RollupChildren` 하 여 동일한 결과를 제공할 수 있습니다. 다음 MDX 쿼리를 이용하면 사용자 지정 멤버 속성을 사용하지 않고도 앞선 예로 든 MDX와 같은 결과가 나옵니다.  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

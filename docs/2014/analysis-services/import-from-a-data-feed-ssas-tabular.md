@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080567"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544225"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>데이터 피드에서 가져오기(SSAS 테이블 형식)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 XML 데이터 스트림입니다. 테이블 가져오기 마법사를 사용하여 데이터 피드의 데이터를 모델로 가져올 수 있습니다.  
@@ -122,7 +121,7 @@ ms.locfileid: "66080567"
   
 3.  **데이터 피드에 연결** 페이지에서 액세스하는 피드를 설명하는 이름을 입력합니다. 피드 또는 데이터 원본을 여러 개 가져오는 경우 연결을 설명하는 이름을 사용하면 연결이 사용되는 방식을 기억하는 데 도움이 됩니다.  
   
-4.  데이터 피드 URL에 목록 데이터 서비스의 주소를 입력 하 고 서버 이름 \<>을 SharePoint 서버의 실제 이름으로 바꿉니다.  
+4.  데이터 피드 URL에 목록 데이터 서비스의 주소를 \<server-name> SharePoint 서버의 실제 이름으로 바꿉니다.  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -156,7 +155,7 @@ ms.locfileid: "66080567"
   
 4.  **찾아보기** 를 클릭하고 보고서 서버를 선택합니다.  
   
-     보고서 서버에서 보고서를 정기적으로 사용하는 경우 해당 서버가 **최근에 사용한 사이트 및 서버**에 나열되어 있을 수 있습니다. 그렇지 않으면 이름에 보고서 서버의 주소를 입력하고 **열기** 를 클릭하여 보고서 서버 사이트에서 폴더를 찾습니다. 보고서 서버에 대 한 주소 예는 http://\<computername>/reportserver 일 수 있습니다.  
+     보고서 서버에서 보고서를 정기적으로 사용하는 경우 해당 서버가 **최근에 사용한 사이트 및 서버**에 나열되어 있을 수 있습니다. 그렇지 않으면 이름에 보고서 서버의 주소를 입력하고 **열기** 를 클릭하여 보고서 서버 사이트에서 폴더를 찾습니다. 보고서 서버에 대 한 주소 예는 http:///reportserver 수 있습니다. \<computername>  
   
 5.  보고서를 선택하고 **열기**를 클릭합니다. 또는 **이름** 입력란에 전체 경로와 보고서 이름을 포함하여 보고서 링크를 붙여 넣을 수 있습니다. 테이블 가져오기 마법사를 통해 보고서에 연결되고 미리 보기 영역에서 보고서가 렌더링됩니다.  
   

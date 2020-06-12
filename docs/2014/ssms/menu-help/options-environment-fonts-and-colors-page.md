@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211252"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859385"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>옵션(환경: 글꼴 및 색 페이지)
   **옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
   
  색 구성표 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스를 열고 변경 내용이 적용될 만한 상황을 만들어 색 변경 내용을 평가할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **설정 표시**  
  글꼴과 색 구성표를 변경할 수 있는 모든 사용자 인터페이스 요소를 나열합니다. 이 목록에서 항목을 선택한 후에는 **표시 항목**에서 선택한 항목의 색 설정을 사용자 지정할 수 있습니다.  
   

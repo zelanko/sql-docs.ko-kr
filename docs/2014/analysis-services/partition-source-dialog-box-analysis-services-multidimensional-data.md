@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c414dabe-9bad-49b7-9a3c-dfca87fef92b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2102d28a61a99ed9ed6786dd8f2dee196066045c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6732e8f00dc0d01e0d3b708794a1d9c497ae4cf5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072145"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540955"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>파티션 원본 대화 상자(Analysis Services - 다차원 데이터)
   **의** 파티션 원본 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 파티션에 대한 팩트 테이블 데이터의 원본을 지정할 수 있습니다. 다음을 수행하여 **파티션 원본** 대화 상자를 표시할 수 있습니다.  

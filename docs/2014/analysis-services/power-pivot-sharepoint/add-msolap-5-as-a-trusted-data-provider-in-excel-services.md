@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1f40fa4-de6d-41ee-8124-14b4d65988f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9095c1fa767e1854c300df1ad08bf5d1900af860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e12c9b4001f0b07deafda8278ac634d595d807a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071932"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547625"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가
   MSOLAP.5는 SQL Server 2012용 Analysis Services OLE DB 공급자를 나타냅니다. Excel 서비스가 서버에서 PowerPivot 데이터를 사용할 수 있도록 하는 연결 요청을 만들려면 이 공급자를 신뢰해야 합니다.  

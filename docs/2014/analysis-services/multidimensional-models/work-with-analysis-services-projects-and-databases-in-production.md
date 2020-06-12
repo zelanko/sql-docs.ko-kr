@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f46a518acb4ba647b5b7bf5503ef76af7b6b90d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9a2555511c422e5553662e2fcd292a5a2ec7c67
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541405"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>프로덕션 환경에서 Analysis Services 프로젝트 및 데이터베이스 작업
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 개발하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 배포한 다음에는 배포된 데이터베이스의 개체 변경 방법을 결정해야 합니다. 보안 역할, 분할 및 스토리지 설정과 관련된 변경 내용 등 특정 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 변경할 수 있습니다. 특성 추가나 사용자 정의 계층과 같은 기타 설정은 프로젝트 모드나 온라인 모드의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서만 변경할 수 있습니다.  

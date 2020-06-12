@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079871"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543845"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>SharePoint용 PowerPivot 설치 확인
   SharePoint 팜에 설치하는 SharePoint용 PowerPivot 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 PowerPivot 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 PowerPivot 통합 문서가 있어야 합니다. 테스트를 위해 이미 PowerPivot 데이터가 포함된 예제 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "66079871"
 ## <a name="verify-integration-at-the-site-level"></a>사이트 수준에서 통합 확인  
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소> http://\<your computer name을 지정할 수 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용한 경우 URL 주소에 http://를 지정할 수 있습니다 \<your computer name> .  
   
 2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079871"
   
 6.  시작 메뉴의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 프로그램 그룹에서 SQL Server Management Studio를 시작합니다. 이 도구가 서버에 설치되어 있지 않으면 마지막 단계로 건너뛰어 캐시된 파일이 있는지 확인하면 됩니다.  
   
-7.  서버 유형에서 **Analysis  Services**를 선택합니다.  
+7.  서버 유형에서 **Analysis Services**를 선택 합니다.  
   
-8.  서버 이름에 서버 이름 ** \<> \powerpivot**을 입력 합니다. 여기서 ** \<server-name>** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
+8.  서버 이름에 ** \<server-name> \powerpivot)** 을 입력 **\<server-name>** 합니다. 여기서은 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.  
   
 9. **연결**을 클릭합니다. Analysis Services 서버를 사용할 수 있는지 확인합니다.  
   
 10. 개체 탐색기에서 **데이터베이스** 를 클릭 하 여 로드 된 PowerPivot 데이터 파일 목록을 볼 수 있습니다.  
   
-11. 컴퓨터 파일 시스템의 다음 폴더에서 파일이 디스크로 캐시되었는지 확인합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시를 보려면 드라이브>: 파일 \ \<Files\Microsoft SQL Server\MSAS11.로 이동 합니다. POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 서비스 응용 프로그램 폴더입니다. 캐시된 각 데이터베이스는 고유 이름을 사용하도록 GUID 기반 명명 규칙을 사용하여 고유 폴더에 저장됩니다.  
+11. 컴퓨터 파일 시스템의 다음 폴더에서 파일이 디스크로 캐시되었는지 확인합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시를 보려면 \<drive> : FILES\MICROSOFT SQL Server\MSAS11.로 이동 합니다. POWERPIVOT\OLAP\Backup\Sandboxes\Default PowerPivot 서비스 응용 프로그램 폴더입니다. 캐시된 각 데이터베이스는 고유 이름을 사용하도록 GUID 기반 명명 규칙을 사용하여 고유 폴더에 저장됩니다.  
   
   

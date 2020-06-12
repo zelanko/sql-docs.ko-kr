@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543625"
 ---
 # <a name="defining-a-data-source"></a>데이터 원본 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 만든 후 일반적으로 프로젝트에 사용할 하나 이상의 데이터 원본을 정의하여 프로젝트 작업을 시작합니다. 데이터 원본을 정의하면 데이터 원본에 연결하는 데 사용할 연결 문자열 정보가 정의됩니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
@@ -34,9 +33,9 @@ ms.locfileid: "66079341"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 **공급자** 목록에 표시된 다른 공급자도 지원합니다.  
   
-5.  **서버 이름** 텍스트 상자에을 입력 `localhost`합니다.  
+5.  **서버 이름** 텍스트 상자에을 입력 `localhost` 합니다.  
   
-     로컬 컴퓨터의 명명 된 인스턴스에 연결 하려면 **localhost\\<인스턴스 이름\>** 을 입력 합니다. 로컬 컴퓨터 대신 특정 컴퓨터에 연결하려면 컴퓨터 이름 또는 IP 주소를 입력합니다.  
+     로컬 컴퓨터의 명명 된 인스턴스에 연결 하려면 **localhost \\<인스턴스 이름 \> **을 입력 합니다. 로컬 컴퓨터 대신 특정 컴퓨터에 연결하려면 컴퓨터 이름 또는 IP 주소를 입력합니다.  
   
 6.  **Windows 인증 사용** 이 선택되어 있는지 확인합니다. **데이터베이스 이름 선택 또는 입력** 목록에서 **AdventureWorksDW2012**를 선택합니다.  
   

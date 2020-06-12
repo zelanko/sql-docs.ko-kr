@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac6494a438f8ecd9c1fb48cc7c2a588cfab9bd9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a7f27629025974b0cffcf5c031a861b8e41fa7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083166"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520927"
 ---
 # <a name="plugin-algorithms"></a>플러그 인 알고리즘
-  에서 제공 하 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 알고리즘 외에도 다양 한 알고리즘을 사용 하 여 데이터 마이닝을 수행할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는에서 제공 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 알고리즘의 모든 기능이 있습니다.  
+  에서 제공 하는 알고리즘 외에도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다양 한 알고리즘을 사용 하 여 데이터 마이닝을 수행할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는에서 제공 하는 알고리즘의 모든 기능이 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 플러그 인 알고리즘과 통신하는 데 사용하는 인터페이스에 대한 전체 설명을 보려면 [CodePlex](https://go.microsoft.com/fwlink/?LinkID=87843) 웹 사이트에 게시된 사용자 지정 알고리즘 및 사용자 지정 모델 뷰어를 만드는 예제를 참조하십시오.  
   

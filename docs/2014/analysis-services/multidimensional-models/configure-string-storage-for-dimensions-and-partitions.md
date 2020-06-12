@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076538"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536947"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 스토리지 구성
   문자열 스토리지에 대한 4GB 파일 크기 제한을 초과하는 차원 특성 또는 파티션의 매우 큰 문자열을 수용할 수 있도록 문자열 저장소를 다시 구성할 수 있습니다. 차원 또는 파티션이 이 크기의 문자열 저장소를 포함하는 경우, 연결된(로컬 또는 원격) 개체는 물론 로컬 개체에 대해 차원 또는 파티션 수준에서 **StringStoresCompatibilityLevel** 속성을 변경하여 파일 크기 제한을 해결할 수 있습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66076538"
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|Value|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1050**|저장소당 최대 파일 크기가 4GB인 기본 문자열 스토리지 아키텍처를 지정합니다.|  
 |**1100**|저장소당 최대 40억 개의 고유 문자열을 지원하는 더 큰 문자열 스토리지를 지정합니다.|  
@@ -54,7 +53,7 @@ ms.locfileid: "66076538"
   
  실제 파일의 크기를 제한하는 기본 문자열 스토리지 아키텍처와 달리, 더 큰 문자열 스토리지는 최대 문자열 수를 기반으로 합니다. 더 큰 문자열 스토리지의 최대 제한은 40억 개의 고유 문자열 또는 40억 개의 레코드 중 먼저 발생하는 것입니다. 더 큰 문자열 스토리지는 짝수 크기의 레코드를 만들며 각 레코드는 64K페이지입니다. 단일 레코드에 맞지 않는 매우 긴 문자열이 있는 경우 효과적인 제한은 40억 개의 문자열 미만입니다.  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 있어야 합니다.  
   
  차원 및 파티션은 MOLAP 스토리지를 사용해야 합니다.  

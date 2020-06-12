@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070476"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539575"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>쿼리(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본, 모델 쿼리 단추](media/dmc-query.gif "데이터 마이닝 리본, 모델 쿼리 단추")  

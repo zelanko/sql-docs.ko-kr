@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080759"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544297"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>예외 강조 표시(Excel용 테이블 분석 도구)
   ![리본의 예외 강조 표시 단추](media/tat-highlightex.gif "리본의 예외 강조 표시 단추")  
@@ -39,7 +38,7 @@ ms.locfileid: "66080759"
   
 3.  **실행**을 클릭합니다.  
   
-4.  찾은 이상 값의 \<요약을 보려면 테이블 이름> 이상 값 이라는 워크시트를 엽니다.  
+4.  이상 값 이라는 제목의 워크시트를 열어 찾은 이상 값 \<table name> 의 요약을 확인 합니다.  
   
 5.  강조 표시 수를 변경 하려면 **예외 강조 표시 보고서**의 **예외 임계값** 행에서 위쪽 및 아래쪽 화살표를 클릭 합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66080759"
 ## <a name="related-tools"></a>관련 도구  
  데이터 마이닝을 위한 준비 과정에 데이터를 정리 또는 검토할 때 Excel용 데이터 마이닝 클라이언트의 데이터 탐색 기능을 사용할 수 있습니다. 이 추가 기능은 이상값 검색, 데이터 레이블 재지정 또는 데이터 분포 확인을 지원하는 여러 고급 도구를 제공합니다. Excel 용 데이터 마이닝 클라이언트의 데이터 탐색 도구에 대 한 자세한 내용은 [데이터 탐색 및 정리](exploring-and-cleaning-data.md)를 참조 하세요.  
   
- **예외 강조 표시** 도구는 클러스터링 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘을 사용 합니다. 클러스터링 모델은 비슷한 특성을 공유하는 행 그룹을 검색합니다. Excel 용 데이터 마이닝 클라이언트는 그래프 및 특성 프로필을 사용 하 여 클러스터링으로 만든 데이터 마이닝 모델을 탐색할 수 있는 **찾아보기** 창을 제공 합니다. **예외 강조 표시** 도구에서 만든 클러스터링 모델을 검색 하는 방법에 대 한 자세한 내용은 [모델 찾아보기 (Excel 용 데이터 마이닝 클라이언트)](highlight-exceptions-table-analysis-tools-for-excel.md)를 참조 하세요.  
+ **예외 강조 표시** 도구는 클러스터링 알고리즘을 사용 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] . 클러스터링 모델은 비슷한 특성을 공유하는 행 그룹을 검색합니다. Excel 용 데이터 마이닝 클라이언트는 그래프 및 특성 프로필을 사용 하 여 클러스터링으로 만든 데이터 마이닝 모델을 탐색할 수 있는 **찾아보기** 창을 제공 합니다. **예외 강조 표시** 도구에서 만든 클러스터링 모델을 검색 하는 방법에 대 한 자세한 내용은 [모델 찾아보기 (Excel 용 데이터 마이닝 클라이언트)](highlight-exceptions-table-analysis-tools-for-excel.md)를 참조 하세요.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 알고리즘에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "Microsoft 클러스터링 알고리즘" 항목을 참조하십시오.  
   

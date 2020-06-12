@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98c6db6e3c7af6f66f4d7a1496bf955a65dd5bb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1a68d36c46d4d3b25bdb75736679d355051f003
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543575"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>10단원: 관리자 역할 정의
   이 단원에서는 관리 태스크에 대한 보안 역할 정의 방법을 배웁니다.  

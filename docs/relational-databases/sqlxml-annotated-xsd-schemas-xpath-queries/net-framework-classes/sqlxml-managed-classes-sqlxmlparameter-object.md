@@ -1,5 +1,6 @@
 ---
 title: SqlXmlParameter 개체 (SQLXML)
+description: SqlXmlParameter 개체, SQLXML 관리 되는 클래스에서 지 원하는 속성에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5570b159f45bc06efd0fee082101e0c9b0f9fc5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252616"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529908"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML 관리되는 클래스 - SqlXmlParameter 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SqlXmlParameter 개체는 다음 속성을 지원 합니다.  
   
- 속성  
+ Name  
  매개 변수의 이름입니다. 명령에 매개 변수가 전달될 수 있습니다. SqlXmlCommand 개체의 CreateParameter 메서드를 호출 하면 매개 변수 개체가 만들어집니다.  
   
  값  

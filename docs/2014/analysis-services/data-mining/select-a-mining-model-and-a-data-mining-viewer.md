@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082874"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520441"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>마이닝 모델 및 데이터 마이닝 뷰어 선택
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 있는 뷰어 중 하나를 사용하여 마이닝 모델을 탐색할 수 있습니다. 손쉽게 모델 간에 전환하거나 사용 중인 뷰어를 변경할 수 있습니다.  

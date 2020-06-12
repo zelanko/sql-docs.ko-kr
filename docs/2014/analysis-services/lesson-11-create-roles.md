@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543565"
 ---
 # <a name="lesson-12-create-roles"></a>12단원: 역할 만들기
   이 단원에서는 역할을 만듭니다. 역할은 역할 멤버인 Windows 사용자로만 액세스를 제한함으로써 모델 데이터베이스 개체 및 데이터에 보안을 제공합니다. 각 역할은 단일 사용 권한(없음, 읽기, 읽기 및 프로세스, 프로세스 또는 관리자)으로 정의됩니다. 모델을 제작하는 중에 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]의 역할 관리자 대화 상자를 사용하여 역할을 정의할 수 있습니다. 모델을 배포한 후 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](tabular-models/roles-ssas-tabular.md)을 참조하세요.  
@@ -48,7 +47,7 @@ ms.locfileid: "66079264"
   
      권한이 없는 새 역할이 목록에 추가됩니다.  
   
-3.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 `Internet Sales Manager`바꿉니다.  
+3.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 바꿉니다 `Internet Sales Manager` .  
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 후 **읽기** 권한을 선택합니다.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079264"
   
      권한이 없는 새 역할이 목록에 추가됩니다.  
   
-3.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 `Internet Sales US`바꿉니다.  
+3.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 바꿉니다 `Internet Sales US` .  
   
 4.  **사용 권한** 열에서 드롭다운 목록을 클릭한 후 **읽기** 권한을 선택합니다.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079264"
   
 1.  **역할 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 `Internet Sales Administrator`바꿉니다.  
+2.  새 역할을 클릭 한 다음 **이름** 열에서 역할의 이름을로 바꿉니다 `Internet Sales Administrator` .  
   
 3.  **사용 권한** 열에서 드롭다운 목록을 클릭한 다음 **관리자** 권한을 선택합니다.  
   

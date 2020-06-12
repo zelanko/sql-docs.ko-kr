@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6327f7e825906635864777e9c993ae16790e6116
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000513"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528395"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 
@@ -37,7 +36,7 @@ ms.locfileid: "83000513"
   
  [고유 인덱스 디자인 지침](#Unique)  
   
- [필터링된 인덱스 디자인 지침](#Filtered)  
+ [필터링 된 인덱스 디자인 지침](#Filtered)  
   
  [추가 참고 자료](#Additional_Reading)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "83000513"
   
      또는 클러스터형 인덱스와 비클러스터형 인덱스가 여러 파일 그룹에 하나의 파티션 구성표를 사용할 수 있습니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하고 관리하는 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블이나 인덱스를 보다 쉽게 관리할 수 있습니다. 자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요. 분할을 고려할 때 인덱스를 맞춰야 하는지, 즉 본질적으로 테이블과 같은 방식으로 분할해야 하는지 또는 독립적으로 분할해야 하는지 파악합니다.  
   
-##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a>일반 인덱스 디자인 지침  
+##  <a name="general-index-design-guidelines"></a><a name="General_Design"></a> 일반 인덱스 디자인 지침  
 
  경험이 많은 데이터베이스 관리자는 인덱스를 잘 디자인할 수 있습니다. 그러나 데이터베이스와 작업이 조금만 복잡해져도 이 태스크는 복잡하고 시간이 많이 걸리며 오류가 쉽게 발생할 수 있습니다. 데이터베이스, 쿼리 및 데이터 열의 특성을 이해하면 최적의 인덱스를 디자인할 수 있습니다.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "83000513"
   
  FILLFACTOR 같은 옵션을 설정하면 인덱스의 초기 스토리지 특성을 사용자 지정하여 성능이나 유지 관리를 최적화할 수도 있습니다. 또한 파일 그룹이나 파티션 구성표를 사용하면 인덱스 스토리지 위치를 확인하여 성능을 최적화할 수 있습니다.  
   
-###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a>파일 그룹 또는 파티션 구성표의 인덱스 배치  
+###  <a name="index-placement-on-filegroups-or-partitions-schemes"></a><a name="Index_placement"></a> 파일 그룹의 인덱스 배치 또는 파티션 구성표  
 
  인덱스 디자인 전략을 개발할 때는 데이터베이스와 관련된 파일 그룹에 인덱스를 배치해야 합니다. 파일 그룹이나 파티션 구성표를 주의 깊게 선택하면 쿼리 성능을 향상시킬 수 있습니다.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "83000513"
   
  자세한 내용은 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
-###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a>인덱스 정렬 순서 디자인 지침  
+###  <a name="index-sort-order-design-guidelines"></a><a name="Sort_Order"></a> 인덱스 정렬 순서 디자인 지침  
 
  인덱스를 정의할 때 인덱스 키 열의 데이터를 오름차순으로 저장할지 또는 내림차순으로 저장할지 고려해야 합니다. 오름차순이 기본값이며 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]와의 호환성을 유지합니다. CREATE INDEX, CREATE TABLE 및 ALTER TABLE 문의 구문은 인덱스와 제약 조건의 개별 열에서 ASC(오름차순) 및 DESC(내림차순) 키워드를 지원합니다.  
   
@@ -200,7 +199,7 @@ ON Purchasing.PurchaseOrderDetail
   
  [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a>클러스터형 인덱스 디자인 지침  
+##  <a name="clustered-index-design-guidelines"></a><a name="Clustered"></a> 클러스터형 인덱스 디자인 지침  
 
  클러스터형 인덱스는 그 키 값에 기반하여 테이블에 데이터 행을 정렬하고 저장합니다. 데이터 행은 자체적으로 하나의 순서로만 정렬될 수 있으므로 테이블당 클러스터형 인덱스가 하나만 있을 수 있습니다. 일부 예외를 제외하고는 각 테이블에서 클러스터형 인덱스가 정의된 열은 다음과 같은 특성을 가져야 합니다.  
   
@@ -343,7 +342,7 @@ ON Purchasing.PurchaseOrderDetail
   
      1과 0만으로 구성되는 경우와 같이 고유 값이 매우 적으면 대개 테이블 검색이 더 효율적이므로 대부분의 쿼리에서 인덱스를 사용하지 않습니다. 이 데이터 형식의 경우 적은 수의 행에서만 발생하는 고유 값에 필터링된 인덱스를 만듭니다. 예를 들어 대부분의 값이 0인 경우 쿼리 최적화 프로그램에서는 1을 포함하는 데이터 행에 대해 필터링된 인덱스를 사용합니다.  
   
-####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a>포괄 열을 사용 하 여 비클러스터형 인덱스 확장  
+####  <a name="use-included-columns-to-extend-nonclustered-indexes"></a><a name="Included_Columns"></a> 포괄 열을 사용하여 비클러스터형 인덱스 확장  
 
  비클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하여 비클러스터형 인덱스의 기능을 확장할 수 있습니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
   
@@ -481,7 +480,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  [이 가이드의](#Top) ![맨 위 링크와 함께 사용 되는 화살표 아이콘](media/uparrow16x16.gif "맨 위로 이동 링크와 함께 사용되는 화살표 아이콘")  
   
-##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a>필터링 된 인덱스 디자인 지침  
+##  <a name="filtered-index-design-guidelines"></a><a name="Filtered"></a> 필터링된 인덱스 디자인 지침  
 
  필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 비용과 인덱스 스토리지 비용을 줄일 수 있습니다.  
   

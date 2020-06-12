@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7bfc77c-e0a4-4bd0-9358-ee1d5562a7f3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b698a6c216d4179de414f236fb7d41d6366e470d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b04929a5d5466ef04aae346b41823be90b545b80
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077652"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545407"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>마이닝 모델 뷰(데이터 마이닝 모델 디자이너)
   **마이닝 모델** 뷰를 사용하여 마이닝 모델을 만들거나 마이닝 구조에 포함된 마이닝 모델을 수정할 수 있습니다.  

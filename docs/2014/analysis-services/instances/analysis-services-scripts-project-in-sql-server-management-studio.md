@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dc10280e2ee957cd2245bb6a4993d7dcf536680
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080361"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544130"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio의 Analysis Services 스크립트 프로젝트
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 분석 서버 스크립트 프로젝트를 만들어 개발, 관리 및 원본 제어를 위해 관련 스크립트를 그룹화할 수 있습니다. 현재 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 솔루션이 로드되어 있지 않은 경우 새 분석 서버 스크립트 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 그렇지 않은 경우 새 분석 서버 스크립트 프로젝트를 기존 솔루션에 추가하거나 새 솔루션에 만들 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080361"
 |XMLA 스크립트 파일(.xmla)|프로젝트에 포함된 XMLA 스크립트를 포함합니다.|  
   
 ## <a name="analysis-services-templates"></a>Analysis Services 템플릿  
- 새 MDX, DMX 또는 XMLA 스크립트를 분석 서버 스크립트 프로젝트에 추가하는 경우 템플릿 탐색기를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 템플릿을 찾을 수 있습니다. 이러한 템플릿은 지정한 동작을 수행하는 방법을 보여 주는 미리 정의된 스크립트 또는 문의 모음입니다. 템플릿 탐색기는 **보기** 메뉴에서 사용할 수 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]및 [!INCLUDE[ssEW](../../includes/ssew-md.md)]에 대 한 템플릿을 포함 합니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
+ 새 MDX, DMX 또는 XMLA 스크립트를 분석 서버 스크립트 프로젝트에 추가하는 경우 템플릿 탐색기를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 템플릿을 찾을 수 있습니다. 이러한 템플릿은 지정한 동작을 수행하는 방법을 보여 주는 미리 정의된 스크립트 또는 문의 모음입니다. 템플릿 탐색기는 **보기** 메뉴에서 사용할 수 있으며, 및에 대 한 템플릿을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 합니다. 자세한 내용은 [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Data Tools &#40;SSDT&#41;를 사용 하 여 다차원 모델 만들기](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   

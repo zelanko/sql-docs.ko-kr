@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a79cd87f-2a55-4020-90f7-9ee627379588
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 871f985333e1681eadfeed53544ed0fb5c1f18dc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069746"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538425"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>데이터 원본 뷰 선택(큐브 마법사)
   **데이터 원본 뷰 선택** 페이지를 사용하여 빈 큐브에 사용할 데이터 원본 뷰를 선택할 수 있습니다.  

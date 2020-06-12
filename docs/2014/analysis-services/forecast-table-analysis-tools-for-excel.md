@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081052"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544493"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>예측(Excel용 테이블 분석 도구)
   ![테이블 분석 도구 리본의 예측 단추](media/tat-forecast.gif "테이블 분석 도구 리본의 예측 단추")  
@@ -41,11 +40,11 @@ ms.locfileid: "66081052"
   
 3.  예측할 열을 지정합니다. 이 도구는 연속 숫자 데이터와 같은 예측 가능한 데이터 형식의 열을 자동으로 선택 합니다. Null 값 또는 0 값이 열에 여러 번 포함되는 경우 누락된 데이터가 결과에 영향을 줄 수 있으므로 이 도구는 연속 숫자 데이터가 있는 일부 열을 선택하지 않을 수 있습니다. 이 문제가 발생 하는 경우 [레이블 재지정 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](relabel-sql-server-data-mining-add-ins.md) 도구를 사용 하 여 데이터를 수정할 수 있습니다.  
   
-4.  열에 날짜, 시간 또는 기타 계열 식별자가 포함되도록 지정합니다. ** \<타임>스탬프 없음** 옵션을 선택 하는 경우 도구에서 원본 데이터의 행 순서를 기반으로 계열을 만듭니다.  
+4.  열에 날짜, 시간 또는 기타 계열 식별자가 포함되도록 지정합니다. 옵션을 선택 하는 경우 **\<no time stamp>** 이 도구는 원본 데이터의 행 순서를 기반으로 계열을 만듭니다.  
   
 5.  수행할 예측 수를 지정합니다.  
   
-6.  선택적으로 알고리즘에 대한 힌트, 즉 데이터 반복 주기가 매주인지, 매월인지 또는 다른 기간인지를 제공합니다. 데이터가 지정 된 패턴에 맞지 않거나 패턴을 인식 하지 못하는 경우 ** \<자동>으로 검색** 을 선택 하 여 도구가 반복 되는 기간을 찾도록 합니다.  
+6.  선택적으로 알고리즘에 대한 힌트, 즉 데이터 반복 주기가 매주인지, 매월인지 또는 다른 기간인지를 제공합니다. 데이터가 지정 된 패턴에 맞지 않거나 패턴을 인식 하지 못하는 경우 **\<detect automatically>** 도구가 반복 되는 기간을 찾도록 선택 합니다.  
   
 7.  이 마법사는 예측을 원본 테이블에 추가하고 새 워크시트에 예측 보고서를 만듭니다.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66081052"
 ## <a name="related-tools"></a>관련 도구  
  Excel용 데이터 마이닝 클라이언트는 고급 데이터 마이닝 기능을 제공하는 별도의 추가 기능이며 예측을 위한 마법사를 포함합니다.  
   
- Excel 용 테이블 분석 도구에 있는 **예측** 도구와 Excel 용 데이터 마이닝 클라이언트의 **예측 마법사는** 시계열 알고리즘을 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사용 합니다.  
+ Excel 용 테이블 분석 도구에 있는 **예측** 도구와 Excel 용 데이터 마이닝 클라이언트의 **예측 마법사는** 시계열 알고리즘을 사용 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 -   **예측** 도구는 데이터에 가장 적합 한 설정을 사용 하도록 알고리즘을 자동으로 구성 하므로 더 쉽게 사용할 수 있습니다.  
   

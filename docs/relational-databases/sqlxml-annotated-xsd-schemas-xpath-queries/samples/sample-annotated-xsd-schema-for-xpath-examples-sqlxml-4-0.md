@@ -1,5 +1,6 @@
 ---
 title: XPath에 대해 주석이 추가 된 샘플 XSD 스키마 (SQLXML)
+description: SQLXML 4.0의 XPath 쿼리를 보여 주기 위해이 섹션의 예제에서 사용 하는 주석이 추가 된 XSD 스키마를 확인 합니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 127e98b36465d196bc20cf6888e56b20a93dad59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fa3bca11d4fa510dbf64cd4bda5c2cd1349ff61c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252635"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529914"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 예에 대한 주석이 추가된 예제 XSD 스키마(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

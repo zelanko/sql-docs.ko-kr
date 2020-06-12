@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c2a376df410f900bece968b7476c048182d484
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083106"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520843"
 ---
 # <a name="process-a-mining-structure"></a>마이닝 구조 처리
   마이닝 구조와 연결된 마이닝 모델을 검색하거나 사용하려면 먼저 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 배포하고 마이닝 구조와 마이닝 모델을 처리해야 합니다. 마이닝 구조나 마이닝 모델을 변경하는 경우 이를 다시 배포하고 처리하라는 메시지가 나타납니다. **의 데이터 마이닝 디자이너에 있는** 마이닝 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에서 구조를 처리하면 연결된 모델이 모두 처리됩니다.  
@@ -38,13 +37,13 @@ ms.locfileid: "66083106"
   
      구조를 변경하는 경우 모델을 처리하기 전에 구조를 다시 배포하라는 메시지가 나타납니다. **예**를 클릭합니다.  
   
-2.  **마이닝 구조 처리- \<구조>** 대화 상자에서 **실행** 을 클릭 합니다.  
+2.  **마이닝 구조 처리 \<structure> -** 대화 상자에서 **실행** 을 클릭 합니다.  
   
      **처리 진행률** 대화 상자가 열리고 모델 처리 세부 정보를 표시합니다.  
   
 3.  모델 처리가 완료되면 **처리 진행률** 대화 상자에서 **닫기** 를 클릭합니다.  
   
-4.  **마이닝 구조 처리- \<구조>** 대화 상자에서 **닫기** 를 클릭 합니다.  
+4.  **마이닝 구조 처리 \<structure> -** 대화 상자에서 **닫기** 를 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [마이닝 구조 태스크 및 방법](mining-structure-tasks-and-how-tos.md)  

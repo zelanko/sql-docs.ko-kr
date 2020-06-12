@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175662"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540255"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  PowerPivot 구성 도구를 사용 하 여을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 구성, 복구 또는 제거 합니다.
+  PowerPivot 구성 도구를 사용 하 여을 구성, 복구 또는 제거 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 합니다.
 
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 두 가지 도구의 일반적인 용도와 차이점을 설명합니다.
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175662"
 |SharePoint 2013용 PowerPivot 구성|PowerPivot 구성 도구|
 |--------------------------------------------------|-----------------------------------|
 |주 페이지에는 **Excel Services용 PowerPivot 서버**의 새 옵션이 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대해 새로운 아키텍처를 지원하는 옵션입니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 하나 이상 사용하도록 Excel Services를 구성합니다.<br /><br /> ![새 구성 도구의 PowerPivot 서버](../media/as-powerpivot-configtool-differences-new-mainpage.gif "새 구성 도구의 PowerPivot 서버")||
-||2010 도구에는 로컬 인스턴스를 구성 하는 **로컬 서버의 페이지 등록 SQL Server Analysis Services (PowerPivot)** 이 포함 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]되어 있습니다. 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구의 AS 서비스 계정](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구의 AS 서비스 계정")|
+||2010 도구에는 로컬 인스턴스를 구성 하는 **로컬 서버의 페이지 등록 SQL Server Analysis Services (PowerPivot)** 이 포함 되어 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구의 AS 서비스 계정](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구의 AS 서비스 계정")|
 ||**PowerPivot 서비스 애플리케이션 만들기** 페이지에는 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.** 에 대한 다른 옵션이 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서 업그레이드")|
 |2013 도구에는 새로운 **PowerPivot 서버 구성**페이지가 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 새로운 아키텍처를 지원하는 페이지입니다. 기본적으로 주 페이지의 **Excel Services용 PowerPivot 서버**입력란에 입력한 서버 이름이 **PowerPivot 서버 구성**에도 표시됩니다.<br /><br /> ![PowerPivot 서버 새 구성 도구 등록](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot 서버 새 구성 도구 등록")||
 |2013 도구에는 새로운 **PowerPivot 추가 기능을 Excel Services 사용 추적기로 등록**페이지가 있습니다. SharePoint 2010 Excel Services는 PowerPivot에 대한 사용량 현황 데이터를 추적하지 않습니다.||
@@ -91,11 +90,11 @@ ms.locfileid: "78175662"
 
 1.  **시작** 화면에서 다음을 입력 합니다.`powerpivot`
 
-     **시작** 화면에서 또는를 입력 `powerpivot` 하 고 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**을 차례로 클릭 한 후 다음 중 하나를 클릭 합니다.
+     **시작** 화면에서 또는를 입력 `powerpivot` 하 고 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , **구성 도구**을 차례로 클릭 한 후 다음 중 하나를 클릭 합니다.
 
     -   **PowerPivot 구성 도구**입니다.
 
-    -   **디스크나**
+    -   **OR**
 
     -   **SharePoint 2013용 PowerPivot 구성**
 

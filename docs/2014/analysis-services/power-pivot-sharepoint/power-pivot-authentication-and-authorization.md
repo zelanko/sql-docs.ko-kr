@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826331"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540325"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot 인증 및 권한 부여
   SharePoint 2010 팜에서 실행되는 SharePoint용 PowerPivot 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 PowerPivot 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 PowerPivot 관련 작업은 팜의 PowerPivot 공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 PowerPivot 콘텐츠 및 작업까지 포함합니다. PowerPivot 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  
@@ -100,15 +99,15 @@ ms.locfileid: "67826331"
 > [!NOTE]  
 >  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 PowerPivot 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
-|영역|설정|Description|  
+|영역|설정|설명|  
 |----------|-------------|-----------------|  
 |웹 애플리케이션|Windows 인증 공급자|PowerPivot이 Excel 서비스에서 가져오는 클레임 토큰을 Windows 사용자 ID로 변환합니다. Excel 서비스를 리소스로 사용하는 웹 애플리케이션은 Windows 인증 공급자를 사용하도록 구성해야 합니다.|  
 |신뢰할 수 있는 위치|위치 유형|이 값은 **Microsoft SharePoint Foundation**으로 설정해야 합니다. PowerPivot 서버는 .xlsx 파일의 복사본을 검색하여 팜의 Analysis Services 서버에 로드합니다. 서버는 콘텐츠 라이브러리에서 .xlsx 파일만 검색할 수 있습니다.|  
 ||외부 데이터 허용|이 값은 **신뢰할 수 있는 데이터 연결 라이브러리 및 포함 라이브러리**로 설정해야 합니다. PowerPivot 데이터 연결은 통합 문서에 포함됩니다. 포함된 연결을 허용하지 않을 경우 사용자는 피벗 테이블 캐시를 볼 수 있지만 PowerPivot 데이터와 상호 작용할 수는 없습니다.|  
 ||새로 고칠 때 경고|PowerPivot 갤러리를 사용하여 통합 문서 및 보고서를 저장하는 경우 이 값을 사용하지 않도록 설정해야 합니다. PowerPivot 갤러리에는 열 때마다 새로 고침 및 새로 고칠 때 경고가 모두 해제되어 있을 경우 가장 잘 작동하는 문서 미리 보기 기능이 있습니다.|  
 |신뢰할 수 있는 데이터 공급자|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4는 기본적으로 포함되지만 PowerPivot 데이터에 액세스하려면 MSOLAP.4 공급자가 SQL Server 2008 R2 버전이어야 합니다.<br /><br /> MSOLAP.5는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 SharePoint용 PowerPivot과 함께 설치됩니다.<br /><br /> 신뢰할 수 있는 데이터 공급자 목록에서 이 공급자를 제거하지 마십시오. 경우에 따라 팜의 다른 SharePoint 서버에 이 공급자에 대한 복사본을 추가로 설치해야 할 수도 있습니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조하세요.|  
-|신뢰할 수 있는 데이터 연결 라이브러리|선택 사항입니다.|PowerPivot 통합 문서에서 Office 데이터 연결 파일(.odc)을 사용할 수 있습니다. .odc 파일을 사용하여 로컬 PowerPivot 통합 문서에 연결 정보를 제공할 경우 동일한 .odc 파일을 이 라이브러리에 추가할 수 있습니다.|  
-|사용자 정의 함수 어셈블리|해당 없음|SharePoint용 PowerPivot은 Excel 서비스용으로 빌드하고 배포한 사용자 정의 함수 어셈블리를 무시합니다. 특정 동작에 대해 사용자 정의 어셈블리를 사용해야 할 경우에도 PowerPivot 쿼리는 사용자 정의 함수를 사용하지 않고 처리됩니다.|  
+|신뢰할 수 있는 데이터 연결 라이브러리|(선택 사항)|PowerPivot 통합 문서에서 Office 데이터 연결 파일(.odc)을 사용할 수 있습니다. .odc 파일을 사용하여 로컬 PowerPivot 통합 문서에 연결 정보를 제공할 경우 동일한 .odc 파일을 이 라이브러리에 추가할 수 있습니다.|  
+|사용자 정의 함수 어셈블리|해당 사항 없음|SharePoint용 PowerPivot은 Excel 서비스용으로 빌드하고 배포한 사용자 정의 함수 어셈블리를 무시합니다. 특정 동작에 대해 사용자 정의 어셈블리를 사용해야 할 경우에도 PowerPivot 쿼리는 사용자 정의 함수를 사용하지 않고 처리됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md)   

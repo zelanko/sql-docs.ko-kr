@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 705d5492-b58f-45d9-94d7-ed57b7025823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07617e2a49d784352911088f7c5e09bc727ab7d0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070096"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539015"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>규칙 탭(마이닝 모델 뷰어)
   연결 모델의 **규칙** 창을 사용하여 알고리즘이 데이터에서 추출한 규칙을 볼 수 있습니다. 규칙은 항목이 어떻게 서로 관련되어 있는지를 설명하며 권장 항목을 만드는 데 사용할 수 있습니다.  

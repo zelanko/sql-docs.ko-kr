@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070314"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539365"
 ---
 # <a name="lesson-3-rename-columns"></a>3단원: 열 이름 바꾸기
   이 단원에서는 가져온 각 테이블에 있는 여러 열의 이름을 바꿉니다. 열 이름을 바꾸면 모델 디자이너에서 열을 명확하게 식별하고 탐색할 수 있을 뿐 아니라 사용자는 클라이언트 애플리케이션에서 필드를 손쉽게 선택할 수 있습니다. 자세한 내용은 [테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md)를 참조하세요.  
@@ -36,7 +35,7 @@ ms.locfileid: "66070314"
   
      탭을 클릭하면 해당 테이블이 모델 디자이너 창에서 활성화됩니다.  
   
-2.  **Customerkey** 열 이름을 두 번 클릭 하 고를 `Customer  Id`입력 한 다음 enter 키를 누릅니다.  
+2.  **Customerkey** 열 이름을 두 번 클릭 하 고를 입력 한 `Customer  Id` 다음 enter 키를 누릅니다.  
   
     > [!TIP]  
     >  열의 **속성** 창이 나 다이어그램 뷰에서 열 **이름** 속성의 열 이름을 바꿀 수도 있습니다.  
@@ -65,11 +64,11 @@ ms.locfileid: "66070314"
     |NumberCarsOwned|Number of Cars Owned|  
     |AddressLine1|Address Line 1|  
     |AddressLine2|Address Line 2|  
-    |Phone|전화 번호|  
+    |전화|전화 번호|  
     |DateFirstPurchase|Date of First Purchase|  
     |CommuteDistance|Commute Distance|  
   
-     **날짜**  
+     **Date**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "66070314"
     |PostalCode|우편 번호|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **제품은**  
+     **제품**  
   
     |원본 이름|친숙한 이름|  
     |-----------------|-------------------|  

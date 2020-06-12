@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4053c7a15d0131773b72f347caab7cbc42d6044
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071855"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547535"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot 서비스 계정 구성
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services(PowerPivot)** 서비스는 애플리케이션 서버에서 PowerPivot 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
@@ -101,9 +100,9 @@ ms.locfileid: "66071855"
   
 |요구 사항|Description|  
 |-----------------|-----------------|  
-|프로비전 요구 사항|설치 마법사의 **Analysis Services 구성 페이지** 를 사용 하거나 명령줄 설치의 `ASSVCACCOUNT` 설치 매개 변수를 사용 하 여 SQL Server 설치 하는 동안이 계정을 지정 해야 합니다.<br /><br /> 중앙 관리, PowerShell 또는 PowerPivot 구성 도구를 사용하여 사용자 이름 또는 암호를 수정할 수 있습니다. 다른 도구를 사용하여 계정과 암호를 변경할 수는 없습니다.|  
+|프로비전 요구 사항|설치 마법사의 **Analysis Services 구성 페이지** 를 사용 하거나 `ASSVCACCOUNT` 명령줄 설치의 설치 매개 변수를 사용 하 여 SQL Server 설치 하는 동안이 계정을 지정 해야 합니다.<br /><br /> 중앙 관리, PowerShell 또는 PowerPivot 구성 도구를 사용하여 사용자 이름 또는 암호를 수정할 수 있습니다. 다른 도구를 사용하여 계정과 암호를 변경할 수는 없습니다.|  
 |도메인 사용자 계정 요구 사항|이 계정은 Windows 도메인 사용자 계정이어야 합니다. 기본 제공 컴퓨터 계정(예: 네트워크 서비스 또는 로컬 서비스)은 사용할 수 없습니다. SQL Server 설치 프로그램에서는 컴퓨터 계정이 지정되어 있으면 설치를 차단함으로써 도메인 사용자 계정 요구 사항을 강제 적용합니다.|  
-|사용 권한 요구 사항|이 계정은 로컬 컴퓨터의 SQLServerMSASUser $\<server>$PowerPivot 보안 그룹 및 WSS_WPG 보안 그룹의 멤버 여야 합니다. 이러한 사용 권한은 자동으로 부여됩니다. 권한을 확인 하거나 부여 하는 방법에 대 한 자세한 내용은이 항목의 [PowerPivot 서비스 계정 관리 권한 부여](#updatemanually) 및 [초기 구성 &#40;SharePoint용 PowerPivot&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)를 참조 하세요.|  
+|사용 권한 요구 사항|이 계정은 \<server> 로컬 컴퓨터의 SQLServerMSASUser $ $PowerPivot 보안 그룹 및 WSS_WPG 보안 그룹의 멤버 여야 합니다. 이러한 사용 권한은 자동으로 부여됩니다. 권한을 확인 하거나 부여 하는 방법에 대 한 자세한 내용은이 항목의 [PowerPivot 서비스 계정 관리 권한 부여](#updatemanually) 및 [초기 구성 &#40;SharePoint용 PowerPivot&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)를 참조 하세요.|  
 |확장 요구 사항|팜에 여러 SharePoint용 PowerPivot 서버 인스턴스를 설치할 경우 모든 Analysis Services 서버 인스턴스가 동일한 도메인 사용자 계정으로 실행되어야 합니다. 예를 들어 첫 번째 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스가 Contoso\ssas-srv01로 실행되도록 구성한 경우 이후에 동일한 팜에 배포하는 모든 추가 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스도 Contoso\ssas-srv01(또는 어떤 계정이든 현재 계정)로 실행되어야 합니다.<br /><br /> 모든 서비스 인스턴스가 동일한 계정으로 실행되도록 구성하면 PowerPivot 시스템 서비스에서 쿼리 처리 또는 데이터 새로 고침 작업을 팜에 있는 모든 Analysis Services 서비스 인스턴스에 할당할 수 있습니다. 또한 Analysis Services 서버 인스턴스에 대해 중앙 관리의 관리 계정 기능을 사용할 수 있습니다. 모든 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에 동일한 계정을 사용하는 경우 한 번만 계정이나 암호를 변경하면 해당 자격 증명을 사용하는 모든 서비스 인스턴스가 자동으로 업데이트됩니다.<br /><br /> SQL Server 설치 프로그램은 동일한 계정 요구 사항을 강제 적용합니다. 이미 설치된 SharePoint용 PowerPivot 인스턴스가 있는 SharePoint 팜에 스케일 아웃 배포하는 경우 지정한 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 계정이 팜에서 이미 사용 중인 계정과 다른 경우 설치 프로그램에서 새 설치를 차단합니다.|  
   
 #### <a name="powerpivot-service-application-pool"></a>PowerPivot 서비스 애플리케이션 풀  
@@ -124,11 +123,11 @@ ms.locfileid: "66071855"
   
 3.  **지금 실행**을 클릭 합니다.  
   
- 마지막 수단으로 PowerPivot 서비스 응용 프로그램에 Analysis Services 시스템 관리 권한을 부여 하 여 올바른 사용 권한을 확인 한 다음, 특히 서비스 응용 프로그램 id를 SQLServerMSASUser $\<servername>$PowerPivot Windows 보안 그룹에 추가할 수 있습니다. SharePoint 팜에 통합되는 모든 Analysis Services 인스턴스에 대해 이 단계를 반복해야 합니다.  
+ 마지막 수단으로 PowerPivot 서비스 응용 프로그램에 Analysis Services 시스템 관리 권한을 부여 하 여 올바른 사용 권한을 확인 한 다음 서비스 응용 프로그램 id를 SQLServerMSASUser $ \<servername> $PowerPivot Windows 보안 그룹에 추가할 수 있습니다. SharePoint 팜에 통합되는 모든 Analysis Services 인스턴스에 대해 이 단계를 반복해야 합니다.  
   
  Windows 보안 그룹을 업데이트하려면 로컬 관리자여야 합니다.  
   
-1.  SQL Server Management Studio에서 Analysis Services 인스턴스에 서버 이름으로 \<연결> \powerpivot.  
+1.  SQL Server Management Studio에서 \POWERPIVOT.로 Analysis Services 인스턴스에 연결 합니다. \<server name>  
   
 2.  서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -144,7 +143,7 @@ ms.locfileid: "66071855"
   
 8.  **그룹**을 엽니다.  
   
-9. SQLServerMSASUser $\<servername>$PowerPivot를 두 번 클릭 합니다.  
+9. SQLServerMSASUser $ $PowerPivot를 두 번 클릭 \<servername> 합니다.  
   
 10. **추가**를 클릭합니다.  
   

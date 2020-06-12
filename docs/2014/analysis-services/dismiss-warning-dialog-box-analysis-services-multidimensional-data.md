@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c75289571216568a440fdfb863a1a1633ecb86ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081639"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528529"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>경고 해제 대화 상자(Analysis Services - 다차원 데이터)
   **경고 해제** 대화 상자를 사용하여 경고의 특정 인스턴스를 해제할 수 있습니다.  

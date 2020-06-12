@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 보안 고려 사항
+description: SQLXML 4.0 보안 고려 사항에 대 한 정보를 봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bacd3ecf628d6f79eb1bd74e7159b0e158175743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 949d9bfe16efa15bae9cf171e976d2924158214b
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252454"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306002"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

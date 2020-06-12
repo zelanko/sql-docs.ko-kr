@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088123"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527581"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>기능 선택(비즈니스 인텔리전스 마법사)
   **기능 선택** 페이지를 사용하여 큐브 또는 차원에 추가할 비즈니스 인텔리전스 기능을 선택할 수 있습니다.  

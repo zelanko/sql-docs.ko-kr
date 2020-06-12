@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078575"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542911"
 ---
 # <a name="lesson-5-create-relationships"></a>5단원: 관계 만들기
   이 단원에서는 데이터를 가져올 때 자동으로 생성된 관계를 확인하고 다양한 테이블 간에 새 관계를 추가합니다. 관계는 두 테이블에 있는 데이터의 상관 관계를 설정하기 위한 테이블 간 연결입니다. 예를 들어 Product 테이블과 Product Subcategory 테이블은 각 제품이 하위 범주에 속한다는 점에서 관련되어 있습니다. 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](tabular-models/relationships-ssas-tabular.md)를 참조하세요.  

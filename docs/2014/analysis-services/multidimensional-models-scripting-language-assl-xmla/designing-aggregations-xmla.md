@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 632cc071605cff6e42adec4acd32c9bd9949fc77
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702127"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545045"
 ---
 # <a name="designing-aggregations-xmla"></a>집계 디자인(XMLA)
   집계 디자인은 특정 측정값 그룹의 파티션과 연결되어 해당 파티션에서 집계를 저장할 때 동일한 구조를 사용하도록 합니다. 파티션에 동일한 저장소 구조를 사용 하면 나중에 [mergepartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) 명령을 사용 하 여 병합할 수 있는 파티션을 쉽게 정의할 수 있습니다. 집계 디자인에 대 한 자세한 내용은 집계 [및 집계 디자인](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)을 참조 하세요.  
@@ -31,7 +30,7 @@ ms.locfileid: "62702127"
  집계 디자인의 집계를 정의 하려면 XML for Analysis (XMLA)에서 [designaggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) 명령을 사용 하면 됩니다. `DesignAggregations` 명령에는 참조로 사용할 집계 디자인과 해당 참조에 따라 디자인 프로세스를 제어할 방법을 식별하는 속성이 있습니다. `DesignAggregations` 명령과 해당 속성을 사용하면 반복적으로 또는 일괄 처리로 집계를 디자인한 다음 결과 디자인 통계를 보고 디자인 프로세스를 평가할 수 있습니다.  
   
 ## <a name="specifying-an-aggregation-design"></a>집계 디자인 지정  
- `DesignAggregations` 명령의 [object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성에는 기존 집계 디자인에 대 한 개체 참조가 포함 되어야 합니다. 개체 참조는 데이터베이스 식별자, 큐브 식별자, 측정값 그룹 식별자 및 집계 디자인 식별자를 포함합니다. 집계 디자인이 아직 없으면 오류가 발생합니다.  
+ 명령의 [object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성에는 `DesignAggregations` 기존 집계 디자인에 대 한 개체 참조가 포함 되어야 합니다. 개체 참조는 데이터베이스 식별자, 큐브 식별자, 측정값 그룹 식별자 및 집계 디자인 식별자를 포함합니다. 집계 디자인이 아직 없으면 오류가 발생합니다.  
   
 ## <a name="controlling-the-design-process"></a>디자인 프로세스 제어  
  `DesignAggregations` 명령의 다음 속성을 사용하여 집계 디자인의 집계를 정의하는 데 사용되는 알고리즘을 제어할 수 있습니다.  
@@ -40,16 +39,16 @@ ms.locfileid: "62702127"
   
 -   [Time](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/time-element-xmla) 속성은 `DesignAggregations` 명령이 클라이언트 응용 프로그램에 제어를 반환 하기 전까지 걸리는 시간 (밀리초)을 결정 합니다.  
   
--   [최적화](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) 속성은 `DesignAggregations` 명령이 달성할 수 있는 성능 향상의 예상 비율을 결정 합니다. 집계를 반복적으로 디자인할 경우 첫 번째 명령에서만 이 속성을 보내면 됩니다.  
+-   [최적화](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/optimization-element-xmla) 속성은 명령이 달성할 수 있는 성능 향상의 예상 비율을 결정 합니다 `DesignAggregations` . 집계를 반복적으로 디자인할 경우 첫 번째 명령에서만 이 속성을 보내면 됩니다.  
   
--   [저장소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) 속성은 `DesignAggregations` 명령에 사용 되는 디스크 저장소의 예상 크기 (바이트)를 결정 합니다. 집계를 반복적으로 디자인할 경우 첫 번째 명령에서만 이 속성을 보내면 됩니다.  
+-   [저장소](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/storage-element-xmla) 속성은 명령에 사용 되는 디스크 저장소의 예상 크기 (바이트)를 결정 합니다 `DesignAggregations` . 집계를 반복적으로 디자인할 경우 첫 번째 명령에서만 이 속성을 보내면 됩니다.  
   
 -   [구체화](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/materialize-element-xmla) 속성은 `DesignAggregations` 명령이 디자인 프로세스 중에 정의 된 집계를 만들어야 하는지 여부를 결정 합니다. 집계를 반복적으로 디자인할 경우 디자인된 집계를 저장할 준비가 될 때까지 이 속성을 false로 설정해야 합니다. 이 속성을 true로 설정하면 현재 디자인 프로세스가 종료되고 정의된 집계가 지정된 집계 디자인에 추가됩니다.  
   
 ## <a name="specifying-queries"></a>쿼리 지정  
- DesignAggregations `Query` [쿼리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) 속성에 하나 이상의 요소를 포함 하 여 사용 빈도 기반 최적화 명령을 지원 합니다. 속성 `Queries` 에는 하나 이상의 [쿼리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) 요소가 포함 될 수 있습니다. `Queries` 속성에 `Query` 요소가 없는 경우 `Object` 요소에 지정된 집계 디자인은 일반적인 집계 집합을 포함하는 기본 구조를 사용합니다. 이 일반적인 집계 집합은 `Optimization` 명령의 `Storage` 및 `DesignAggregations` 속성에 지정된 조건을 충족하도록 디자인되었습니다.  
+ DesignAggregations `Query` [쿼리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/queries-element-xmla) 속성에 하나 이상의 요소를 포함 하 여 사용 빈도 기반 최적화 명령을 지원 합니다. 속성에는 `Queries` 하나 이상의 [쿼리](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla) 요소가 포함 될 수 있습니다. `Queries` 속성에 `Query` 요소가 없는 경우 `Object` 요소에 지정된 집계 디자인은 일반적인 집계 집합을 포함하는 기본 구조를 사용합니다. 이 일반적인 집계 집합은 `Optimization` 명령의 `Storage` 및 `DesignAggregations` 속성에 지정된 조건을 충족하도록 디자인되었습니다.  
   
- 각 `Query` 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 사용자 고유의 목표 쿼리를 지정 하거나, 인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의해 저장 된 정보를 쿼리 로그에 사용 하 여 가장 자주 사용 되는 쿼리에 대 한 정보를 검색할 수 있습니다. 사용 빈도 기반 최적화 마법사는 `DesignAggregations` 명령을 보낼 때 쿼리 로그를 사용하여 시간, 사용 빈도 또는 지정된 사용자를 기준으로 목표 쿼리를 검색합니다. 자세한 내용은 [사용 빈도 기반 최적화 마법사 F1 도움말](../usage-based-optimization-wizard-f1-help.md)을 참조 하세요.  
+ 각 `Query` 요소는 가장 자주 사용하는 쿼리를 대상으로 하는 집계를 정의하기 위해 디자인 프로세스에서 사용하는 목표 쿼리를 나타냅니다. 사용자 고유의 목표 쿼리를 지정 하거나, 인스턴스에 의해 저장 된 정보를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 쿼리 로그에 사용 하 여 가장 자주 사용 되는 쿼리에 대 한 정보를 검색할 수 있습니다. 사용 빈도 기반 최적화 마법사는 `DesignAggregations` 명령을 보낼 때 쿼리 로그를 사용하여 시간, 사용 빈도 또는 지정된 사용자를 기준으로 목표 쿼리를 검색합니다. 자세한 내용은 [사용 빈도 기반 최적화 마법사 F1 도움말](../usage-based-optimization-wizard-f1-help.md)을 참조 하세요.  
   
  반복적으로 집계를 디자인하는 경우 첫 번째 `DesignAggregations` 명령에서만 목표 쿼리를 전달하면 됩니다. 이는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 이러한 목표 쿼리를 저장하여 후속 `DesignAggregations` 명령 중에 사용하기 때문입니다. 반복 프로세스의 첫 번째 `DesignAggregations` 명령에서 목표 쿼리를 전달하면 `DesignAggregations` 속성에 목표 쿼리를 포함하는 모든 후속 `Queries` 명령은 오류를 생성합니다.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62702127"
  *Frequency*,*Dataset*[,*Dataset*...]  
   
  *빈도*  
- 쿼리가 이전에 실행된 횟수에 해당하는 가중 요인입니다. `Query` 요소가 새 쿼리를 나타내는 경우 *Frequency* 값은 쿼리를 평가 하기 위해 디자인 프로세스에 사용 되는 가중치 계수를 나타냅니다. 빈도 값이 증가하면서 디자인 프로세스 중 쿼리에 적용되는 가중치도 증가합니다.  
+ 쿼리가 이전에 실행된 횟수에 해당하는 가중 요인입니다. `Query`요소가 새 쿼리를 나타내는 경우 *Frequency* 값은 쿼리를 평가 하기 위해 디자인 프로세스에 사용 되는 가중치 계수를 나타냅니다. 빈도 값이 증가하면서 디자인 프로세스 중 쿼리에 적용되는 가중치도 증가합니다.  
   
  *데이터 세트*  
  쿼리에 포함될 차원 특성을 지정하는 숫자 문자열입니다. 이 문자열에는 차원의 특성 수와 같은 문자 수가 있어야 합니다. 영(0)은 지정된 서수 위치의 특성이 지정된 차원의 쿼리에 포함되지 않음을 나타내고 일(1)은 지정된 서수 위치의 특성이 지정된 차원의 쿼리에 포함됨을 나타냅니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "62702127"
 > [!NOTE]  
 >  일부 특성은 데이터 세트에서 고려되지 않습니다. 제외 된 특성에 대 한 자세한 내용은 [쿼리 요소 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/query-element-xmla)를 참조 하세요.  
   
- 집계 디자인을 포함 하는 측정값 그룹의 각 차원은 `Query` 요소의 *데이터 집합* 값으로 표현 됩니다. *Dataset* 값의 순서는 측정값 그룹에 포함된 차원의 순서와 일치해야 합니다.  
+ 집계 디자인을 포함 하는 측정값 그룹의 각 차원은 요소의 *데이터 집합* 값으로 표현 됩니다 `Query` . *Dataset* 값의 순서는 측정값 그룹에 포함된 차원의 순서와 일치해야 합니다.  
   
 ## <a name="designing-aggregations-using-iterative-or-batch-processes"></a>반복 또는 일괄 처리를 사용하여 집계 디자인  
  디자인 프로세스에 필요한 상호 작용에 따라 반복 처리나 일괄 처리의 일부로 `DesignAggregations` 명령을 사용할 수 있습니다.  
@@ -101,12 +100,12 @@ ms.locfileid: "62702127"
 ## <a name="returning-design-statistics"></a>디자인 통계 반환  
  `DesignAggregations` 명령은 클라이언트 애플리케이션에 제어를 반환할 때 해당 명령에 대한 디자인 통계를 나타내는 단일 행이 들어 있는 행 집합을 반환합니다. 행 집합에는 다음 표에 나열된 열이 들어 있습니다.  
   
-|열|데이터 형식|설명|  
+|열|데이터 형식|Description|  
 |------------|---------------|-----------------|  
 |단계|정수|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에서 수행하는 단계 수입니다.|  
-|시간|정수(Long)|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에서 소요되는 시간(밀리초)입니다.|  
-|Optimization|Double|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에 의해 달성되는 예상 성능 향상률입니다.|  
-|스토리지|정수(Long)|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에서 사용하는 예상 바이트 수입니다.|  
+|Time|정수(Long)|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에서 소요되는 시간(밀리초)입니다.|  
+|최적화|Double|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에 의해 달성되는 예상 성능 향상률입니다.|  
+|Storage|정수(Long)|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에서 사용하는 예상 바이트 수입니다.|  
 |Aggregations|정수(Long)|클라이언트 애플리케이션에 제어를 반환하기 전에 해당 명령에 의해 정의되는 집계 수입니다.|  
 |LastStep|부울|행 집합의 데이터가 디자인 프로세스의 마지막 단계를 나타내는지 여부를 나타냅니다. 명령의 `Materialize` 속성이 true로 설정되어 있으면 이 열 값은 true로 설정됩니다.|  
   

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37939fea1188c18079fc7e619cee6a336876e24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541855"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>모델 관리(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본, 모델 관리 단추](media/dmc-manage.gif "데이터 마이닝 리본, 모델 관리 단추")  
   
- **모델 관리** 대화 상자를 사용 하면 현재 연결 되어 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 서버에 저장 된 기존 마이닝 모델 및 마이닝 구조와 상호 작용할 수 있습니다. 또한 현재 세션 중에 만든 임시 구조 및 모델을 보고 관리할 수도 있습니다. 세션 모델 및 서버에 저장된 모델을 모두 사용한 경우 둘 다 대화 상자에 표시됩니다.  
+ **모델 관리** 대화 상자를 사용 하면 현재 연결 되어 있는 서버에 저장 된 기존 마이닝 모델 및 마이닝 구조와 상호 작용할 수 있습니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 또한 현재 세션 중에 만든 임시 구조 및 모델을 보고 관리할 수도 있습니다. 세션 모델 및 서버에 저장된 모델을 모두 사용한 경우 둘 다 대화 상자에 표시됩니다.  
   
 ## <a name="using-the-manage-models-wizard"></a>모델 관리 마법사 사용  
  **모델 관리**를 클릭 하면 기존 데이터 마이닝 모델 및 구조를 관리 하는 다음 기능에 대 한 액세스를 제공 하는 **마이닝 구조 및 모델 관리** 대화 상자가 열립니다.  

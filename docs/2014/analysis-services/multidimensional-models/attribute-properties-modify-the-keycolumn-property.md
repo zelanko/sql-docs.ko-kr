@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077247"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544765"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>특성의 KeyColumn 속성 수정
   특성의 **KeyColumns** 속성을 수정할 수 있습니다. 예를 들어 단일 키 대신 복합 키를 특성 키로 지정할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66077247"
   
          또는  
   
-    -   큐브 디자이너의 **큐브 구조** 탭에 있는 **차원** 창에서 큐브 차원을 확장 하 고 ** \<차원>편집 **을 클릭 합니다.  
+    -   큐브 디자이너의 **큐브 구조** 탭에 있는 **차원** 창에서 큐브 차원을 확장 하 고 **편집 \<dimension> **을 클릭 합니다.  
   
 3.  **차원 구조** 탭의 **특성** 창에서 수정할 **KeyColumns** 속성이 있는 특성을 클릭합니다.  
   

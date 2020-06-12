@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cc298c022c8da056bf2135ecd0e3b4c1e519cc9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546785"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>큐브, 파티션 및 차원 처리에 대한 오류 구성(SSAS - 다차원)
   큐브, 파티션 또는 차원 개체의 오류 구성 속성에 따라 처리 중에 데이터 무결성 오류가 발생하는 경우 서버가 응답하는 방법이 결정됩니다. 일반적으로 키 열의 중복 키, 누락된 키 및 Null 값에 의해 이러한 오류가 트리거되며, 오류의 원인이 되는 레코드가 데이터베이스에 추가되지 않지만 다음에 발생하는 작업을 결정하는 속성을 설정할 수 있습니다. 기본적으로 처리가 중지됩니다. 그러나 큐브를 개발하는 중에 오류가 발생하는 경우 가져온 데이터로 큐브 동작을 테스트할 수 있도록 처리를 계속할 수 있습니다(가져온 데이터가 완전하지 않은 경우 포함).  
@@ -86,12 +85,12 @@ ms.locfileid: "66075097"
 |`CalculationError`<br /><br /> 오류 구성을 초기화할 때 발생합니다.|`IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다.|`ReportAndContinue`는 오류를 기록하고 오류 수를 계산합니다.<br /><br /> `ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.|  
 |`KeyNotFound`<br /><br /> 팩트 테이블의 외래 키에 관련 차원 테이블의 일치하는 기본 키가 없는 경우(예: Sales 팩트 테이블에 제품 ID가 Product 차원 테이블에 없는 레코드가 있는 경우) 발생합니다. 이 오류는 눈송이 차원의 차원 처리 또는 파티션 처리 중에 발생할 수 있습니다.|`ReportAndContinue`는 오류를 기록하고 오류 수를 계산합니다.|`ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.<br /><br /> `IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다. 이 오류를 트리거하는 레코드는 기본적으로 알 수 없는 멤버로 변환되지만 대신 해당 레코드를 삭제하도록 `KeyErrorAction` 속성을 변경할 수 있습니다.|  
 |`KeyDuplicate`<br /><br /> 차원에 중복 특성 키가 있는 경우 발생합니다. 대부분의 경우 중복 특성 키를 포함하도록 허용되지만 이 오류는 특성 간에 일관성 없는 관계를 발생시킬 수 있는 차원의 디자인 결함을 확인할 수 있도록 중복 사실을 알려 줍니다.|`IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다.|`ReportAndContinue`는 오류를 기록하고 오류 수를 계산합니다.<br /><br /> `ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.|  
-|`NullKeyNotAllowed`<br /><br /> 차원 특성에 대해 `Error` 가 설정 되어 있거나 멤버를 고유 하 게 식별 하는 데 사용 되는 특성 키 열에 null 값이 있는 경우 발생 합니다. `NullProcessing`  = |`ReportAndContinue`는 오류를 기록하고 오류 수를 계산합니다.|`ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.<br /><br /> `IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다. 이 오류를 트리거하는 레코드는 기본적으로 알 수 없는 멤버로 변환되지만 대신 해당 레코드를 삭제하도록 `KeyErrorAction` 속성을 설정할 수 있습니다.|  
-|`NullKeyConvertedToUnknown`<br /><br /> Null 값이 이후에 알 수 없는 멤버로 변환되는 경우 발생합니다. 차원 `NullProcessing`  =  `ConvertToUnknown` 특성에 대해를 설정 하면이 오류가 트리거됩니다.|`IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다.|이 오류가 도움이 되는 정보라고 판단되면 기본값을 유지하십시오. 그렇지 않으면 `ReportAndContinue`를 선택하여 처리 창에 오류를 보고하고 오류 제한에 오류 수를 계산할 수 있습니다.<br /><br /> `ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.|  
+|`NullKeyNotAllowed`<br /><br /> `NullProcessing`  =  `Error` 차원 특성에 대해가 설정 되어 있거나 멤버를 고유 하 게 식별 하는 데 사용 되는 특성 키 열에 null 값이 있는 경우 발생 합니다.|`ReportAndContinue`는 오류를 기록하고 오류 수를 계산합니다.|`ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.<br /><br /> `IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다. 이 오류를 트리거하는 레코드는 기본적으로 알 수 없는 멤버로 변환되지만 대신 해당 레코드를 삭제하도록 `KeyErrorAction` 속성을 설정할 수 있습니다.|  
+|`NullKeyConvertedToUnknown`<br /><br /> Null 값이 이후에 알 수 없는 멤버로 변환되는 경우 발생합니다. `NullProcessing`  =  `ConvertToUnknown` 차원 특성에 대해를 설정 하면이 오류가 트리거됩니다.|`IgnoreError`는 오류를 기록하거나 오류 수를 계산하지 않습니다. 오류 수가 최대 제한 미만이면 처리가 계속됩니다.|이 오류가 도움이 되는 정보라고 판단되면 기본값을 유지하십시오. 그렇지 않으면 `ReportAndContinue`를 선택하여 처리 창에 오류를 보고하고 오류 제한에 오류 수를 계산할 수 있습니다.<br /><br /> `ReportAndStop`은 오류 제한에 관계없이 오류를 보고하고 즉시 처리를 중지합니다.|  
   
  **일반 속성**  
   
-|**속성**|**값**|  
+|**Property**|**값**|  
 |------------------|----------------|  
 |`KeyErrorAction`|`KeyNotFound` 오류가 발생하는 경우 서버에서 수행하는 동작입니다. 이 오류에 대한 유효한 응답에는 `ConvertToUnknown` 또는 `DiscardRecord`가 포함됩니다.|  
 |`KeyErrorLogFile`|서비스 계정이 읽기-쓰기 권한을 가지고 있는 폴더에 있는 사용자 정의 파일 이름이며, 이 파일의 확장명은 .log여야 합니다. 이 로그 파일에는 처리 중에 생성된 오류만 포함됩니다. 보다 자세한 정보가 필요한 경우 비행 레코더를 사용하십시오.|  
@@ -113,19 +112,19 @@ ms.locfileid: "66075097"
   
 1.  솔루션 탐색기에서 차원 또는 큐브를 두 번 클릭합니다. `ErrorConfiguration`아래 창의 속성에 나타납니다.  
   
-2.  또는 단일 차원에 대해서만 솔루션 탐색기 `Process`에서 차원을 마우스 오른쪽 단추로 클릭 하 고 차원 처리 대화 상자에서 **설정 변경** 을 선택 합니다. 차원 키 오류 탭에 오류 구성 옵션이 나타납니다.  
+2.  또는 단일 차원에 대해서만 솔루션 탐색기에서 차원을 마우스 오른쪽 단추로 클릭 하 `Process` 고 차원 처리 대화 상자에서 **설정 변경** 을 선택 합니다. 차원 키 오류 탭에 오류 구성 옵션이 나타납니다.  
   
 ##  <a name="missing-keys-keynotfound"></a><a name="bkmk_missing"></a>누락 된 키 (KeyNotFound)  
  키 값이 누락된 레코드는 데이터베이스에 추가할 수 없습니다. 오류가 무시되거나 오류 제한이 무제한인 경우에도 마찬가지입니다.  
   
  팩트 레코드의 테이블에 외래 키 값이 포함되어 있지만 외래 키에 관련 차원 테이블의 해당 레코드가 없는 경우 서버는 파티션 처리 중에 `KeyNotFound` 오류를 생성합니다. 한 차원의 레코드가 관련 차원에 없는 외래 키를 지정하는 관련된 차원 테이블 또는 눈송이 차원 테이블을 처리할 때도 이 오류가 발생합니다.  
   
- `KeyNotFound` 오류가 발생하면 오류가 발생한 레코드가 알 수 없는 멤버에 할당됩니다. 이 동작은 추가 조사를 위해 할당 된 레코드를 볼 `ConvertToUnknown`수 있도록로 설정 된 **키 동작**을 통해 제어 됩니다.  
+ `KeyNotFound` 오류가 발생하면 오류가 발생한 레코드가 알 수 없는 멤버에 할당됩니다. 이 동작은 추가 조사를 위해 할당 된 레코드를 볼 수 있도록로 설정 된 **키 동작**을 통해 제어 됩니다 `ConvertToUnknown` .  
   
 ##  <a name="null-foreign-keys-in-a-fact-table-keynotfound"></a><a name="bkmk_nullfact"></a> 팩트 테이블의 Null 외래 키(KeyNotFound)  
  기본적으로 팩트 테이블의 외래 키 열에 있는 Null 값은 0으로 변환됩니다. 0이 유효한 외래 키 값이 아니라고 가정하면 `KeyNotFound` 오류가 기록되고 기본적으로 0인 오류 제한에 오류 수가 계산됩니다.  
   
- 처리가 계속되도록 하기 위해, Null이 변환되고 오류가 확인되기 전에 Null을 처리할 수 있습니다. 이렇게 하려면를로 `NullProcessing` `Error`설정 합니다.  
+ 처리가 계속되도록 하기 위해, Null이 변환되고 오류가 확인되기 전에 Null을 처리할 수 있습니다. 이렇게 하려면 `NullProcessing` 를로 설정 `Error` 합니다.  
   
 #### <a name="set-nullprocessing-property-on-a-measure"></a>측정값에 대한 NullProcessing 속성 설정  
   
@@ -133,18 +132,18 @@ ms.locfileid: "66075097"
   
 2.  측정값 창에서 측정값을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-3.  속성에서 **소스** 를 보려면 `NullProcessing` 속성을 확장 합니다. 이 속성은 **자동** 으로 기본 설정되어 있으므로 OLAP 항목에 대해 숫자 데이터를 포함하는 필드의 경우 Null을 0으로 변환합니다.  
+3.  속성에서 **소스** 를 보려면 속성을 확장 `NullProcessing` 합니다. 이 속성은 **자동** 으로 기본 설정되어 있으므로 OLAP 항목에 대해 숫자 데이터를 포함하는 필드의 경우 Null을 0으로 변환합니다.  
   
-4.  Null 값이 있는 `Error` 레코드를 제외 하 고 null을 숫자로 변환 하는 것을 방지 하려면 값을로 변경 합니다. 이렇게 수정 하면 키 열의 값이 0 인 여러 레코드와 관련 된 중복 키 오류가 발생 하지 않고, 값 `KeyNotFound` 이 0 인 외래 키에 관련 차원 테이블의 기본 키가 없는 경우 오류가 발생 하지 않습니다.  
+4.  Null `Error` 값이 있는 레코드를 제외 하 고 null을 숫자로 변환 하는 것을 방지 하려면 값을로 변경 합니다. 이렇게 수정 하면 키 열의 값이 0 인 여러 레코드와 관련 된 중복 키 오류가 발생 하지 않고, `KeyNotFound` 값이 0 인 외래 키에 관련 차원 테이블의 기본 키가 없는 경우 오류가 발생 하지 않습니다.  
   
 ##  <a name="null-keys-in-a-dimension"></a><a name="bkmk_nulldim"></a> 차원의 Null 키  
  눈송이 차원의 외래 키에 Null 값이 있는 경우 처리를 계속하려면 먼저 차원 속성의 `NullProcessing`에서 `KeyColumn`을 설정하여 Null 값을 처리하십시오. 그러면 `KeyNotFound` 오류가 발생하기 전에 레코드가 삭제되거나 변환됩니다.  
   
  차원 특성의 Null을 처리하기 위한 두 가지 옵션이 있습니다.  
   
--   Null `NullProcessing` = `UnknownMember` 값이 있는 레코드를 알 수 없는 멤버에 할당 하도록 설정 합니다. 그러면 `NullKeyConvertedToUnknown` 오류가 생성되며 이 오류는 기본적으로 무시됩니다.  
+-   `NullProcessing` = `UnknownMember` Null 값이 있는 레코드를 알 수 없는 멤버에 할당 하도록 설정 합니다. 그러면 `NullKeyConvertedToUnknown` 오류가 생성되며 이 오류는 기본적으로 무시됩니다.  
   
--   Null `NullProcessing` = `Error` 값이 있는 레코드를 제외 하도록 설정 합니다. 그러면 `NullKeyNotAllowed` 오류가 생성됩니다. 이 오류는 기록되고 키 오류 제한에 오류 수가 계산됩니다. **Null 키** 에 대 한 오류 구성 속성을로 `IgnoreError` 설정 하 여 처리를 계속할 수 있습니다.  
+-   `NullProcessing` = `Error` Null 값이 있는 레코드를 제외 하도록 설정 합니다. 그러면 `NullKeyNotAllowed` 오류가 생성됩니다. 이 오류는 기록되고 키 오류 제한에 오류 수가 계산됩니다. **Null 키** 에 대 한 오류 구성 속성을로 설정 하 여 처리를 계속할 수 있습니다 `IgnoreError` .  
   
  MDX 쿼리는 Null이 0으로 해석되는지 공백으로 해석되는지에 따라 다른 값을 반환하므로 키가 아닌 필드의 경우 Null이 문제가 될 수 있습니다. 이러한 이유로, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 원하는 변환 동작을 미리 정의할 수 있도록 Null 처리 옵션을 제공합니다. 자세한 내용은 [알 수 없는 멤버 및 Null 처리 속성 정의](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 및 <xref:Microsoft.AnalysisServices.NullProcessing> 를 참조하세요.  
   
@@ -156,9 +155,9 @@ ms.locfileid: "66075097"
   
 3.  속성에서 **KeyColumns** 를 확장 하 여 `NullProcessing` 속성을 확인 합니다. 이 속성은 **자동** 으로 기본 설정되어 있으므로 숫자 데이터를 포함하는 필드의 경우 Null을 0으로 변환합니다. 값을 `Error` 또는 `UnknownMember`중 하나로 변경합니다.  
   
-     이렇게 수정 하면 오류가 확인 되기 전에 레코드 `KeyNotFound` 를 삭제 하거나 변환 하 여 트리거하는 기본 조건이 제거 됩니다.  
+     이렇게 수정 `KeyNotFound` 하면 오류가 확인 되기 전에 레코드를 삭제 하거나 변환 하 여 트리거하는 기본 조건이 제거 됩니다.  
   
-     오류 구성에 따라 이러한 동작 중 하나로 인해 보고 및 계산되는 오류가 발생할 수 있습니다. 이러한 오류가 보고 및 계산 될 때 처리를 계속할 수 `KeyNotFound` 있도록 `ReportAndContinue` 또는 `KeyErrorLimit` 를 0이 아닌 값으로 설정 하는 등의 추가 속성을 조정 해야 할 수도 있습니다.  
+     오류 구성에 따라 이러한 동작 중 하나로 인해 보고 및 계산되는 오류가 발생할 수 있습니다. `KeyNotFound` `ReportAndContinue` `KeyErrorLimit` 이러한 오류가 보고 및 계산 될 때 처리를 계속할 수 있도록 또는를 0이 아닌 값으로 설정 하는 등의 추가 속성을 조정 해야 할 수도 있습니다.  
   
 ##  <a name="duplicate-keys-resulting-inconsistent-relationships-keyduplicate"></a><a name="bkmk_dupe"></a> 일관성 없는 관계를 발생시키는 중복 키(KeyDuplicate)  
  기본적으로 중복 키가 있다고 해서 처리가 중지되지는 않지만 오류가 무시되고 중복 레코드가 데이터베이스에서 제외됩니다.  
@@ -166,9 +165,9 @@ ms.locfileid: "66075097"
  이 동작을 변경하려면 `KeyDuplicate`을 `ReportAndContinue` 또는 `ReportAndStop`으로 설정하여 오류를 보고하십시오. 그러면 오류를 검사하여 차원 디자인의 잠재적 결함을 확인할 수 있습니다.  
   
 ##  <a name="change-the-error-limit-or-error-limit-action"></a><a name="bkmk_limit"></a> 오류 제한 또는 오류 제한 동작 변경  
- 처리 중에 더 많은 오류가 허용되도록 오류 제한을 높일 수 있습니다. 오류 제한을 높이는 데 대한 지침은 없으며 시나리오에 따라 적합한 값이 달라집니다. `KeyErrorLimit` 오류 제한은의 속성 `ErrorConfiguration` [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서로 지정 되거나의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]차원, 큐브 또는 측정값 그룹의 속성에 대 한 오류 구성 탭의 오류 **수** 로 지정 됩니다.  
+ 처리 중에 더 많은 오류가 허용되도록 오류 제한을 높일 수 있습니다. 오류 제한을 높이는 데 대한 지침은 없으며 시나리오에 따라 적합한 값이 달라집니다. 오류 제한은의 `KeyErrorLimit` 속성에서로 지정 `ErrorConfiguration` [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 되거나의 차원, 큐브 또는 측정값 그룹의 속성에 대 한 오류 구성 탭의 오류 **수** 로 지정 됩니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- 오류 제한에 도달하면 처리가 중지되거나 로깅이 중지되도록 지정할 수 있습니다. 예를 들어 오류 제한 100에 대한 동작을 `StopLogging`으로 설정했다고 가정해 보겠습니다. 101번째 오류가 발생할 경우 처리는 계속되지만 더 이상 오류가 기록되거나 오류 수가 계산되지 않습니다. 오류 제한 `KeyErrorLimitAction` 동작은의 속성 `ErrorConfiguration` [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서로 지정 되거나의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]차원, 큐브 또는 측정값 그룹의 속성에 대 한 오류 구성 탭에서 **오류 발생 시 동작** 으로 지정 됩니다.  
+ 오류 제한에 도달하면 처리가 중지되거나 로깅이 중지되도록 지정할 수 있습니다. 예를 들어 오류 제한 100에 대한 동작을 `StopLogging`으로 설정했다고 가정해 보겠습니다. 101번째 오류가 발생할 경우 처리는 계속되지만 더 이상 오류가 기록되거나 오류 수가 계산되지 않습니다. 오류 제한 동작은의 `KeyErrorLimitAction` 속성에서로 지정 `ErrorConfiguration` [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 되거나의 차원, 큐브 또는 측정값 그룹의 속성에 대 한 오류 구성 탭에서 **오류 발생 시 동작** 으로 지정 됩니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ##  <a name="set-the-error-log-path"></a><a name="bkmk_log"></a>오류 로그 경로 설정  
  처리 중에 보고되는 키 관련 오류 메시지를 저장할 파일을 지정할 수 있습니다. 기본적으로 오류는 대화형 처리 중에 처리 창에 표시된 다음 창 또는 세션을 종료할 경우 삭제됩니다. 로그는 처리 대화 상자에서 보고된 오류와 동일한 키와 관련된 오류 정보만 포함합니다.  

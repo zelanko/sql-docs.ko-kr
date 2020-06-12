@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcaf18ea2df3bbd3b227c8948d2fb15f54828853
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624348"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537925"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>차원 특성 선택(차원 마법사)
   **차원 특성 선택** 페이지를 사용하여 차원에 대해 만들 특성을 선택하고 수정할 수 있습니다.  

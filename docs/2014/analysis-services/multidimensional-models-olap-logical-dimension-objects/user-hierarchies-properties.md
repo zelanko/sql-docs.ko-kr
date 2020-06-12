@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4f40703f0e86874e8eef75a28696c63c4104526
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727318"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545055"
 ---
 # <a name="user-hierarchy-properties"></a>사용자 계층 속성
   다음 표에서는 사용자 정의 계층의 속성을 설명합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "62727318"
 |DisplayFolder|사용자에 대한 계층을 나열할 폴더를 지정합니다.|  
 |ID|계층의 고유 ID를 포함합니다.|  
 |MemberNamesUnique|계층에서 멤버 이름이 고유해야 하는지 여부를 결정합니다. 사용 가능한 값은 True와 False입니다. 기본값은 False입니다.|  
-|이름|계층 이름을 포함합니다.|  
+|Name|계층 이름을 포함합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 계층](user-hierarchies.md)   

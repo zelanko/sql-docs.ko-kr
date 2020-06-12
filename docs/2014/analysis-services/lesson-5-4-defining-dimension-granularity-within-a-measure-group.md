@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d1b643ce53be3b263ea493a8594f8db7ff11c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078462"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542836"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>측정값 그룹의 차원 세분성 정의
   사용자는 다양한 목적에 맞게 팩트 데이터의 차원을 세밀하게 또는 구체적으로 구분할 수 있습니다. 예를 들어 대리점이나 인터넷 판매의 판매 데이터는 매일 기록하고 판매 할당량 정보는 월별 또는 분기별로 기록할 수 있습니다. 이러한 시나리오에서 사용자는 서로 다른 팩트 테이블 각각에 대해 수준이 다양한 시간 차원을 사용할 수 있습니다. 새 데이터베이스 차원을 이러한 다른 수준을 가진 시간 차원으로 정의할 수 있지만 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 더 쉬운 방법이 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66078462"
   
 1.  **Adventure Works DW 2012** 데이터 원본 뷰로 전환합니다.  
   
-2.  **다이어그램 구성 도우미** 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 `Sales Quotas`다음 다이어그램의 이름을로 지정한 다음  
+2.  **다이어그램 구성 도우미** 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 다음 다이어그램의 이름을로 지정한 다음 `Sales Quotas`  
   
 3.  **직원**, **영업 지역**및 `Date` 테이블을 **테이블** 창에서 **다이어그램** 창으로 끌어옵니다.  
   
@@ -44,33 +43,33 @@ ms.locfileid: "66078462"
   
      이 테이블의 데이터 수준은 FactSalesQuota 테이블의 최하위 수준인 분기입니다.  
   
-6.  데이터 원본 뷰 디자이너에서 **FactSalesQuota** 테이블 `SalesQuotas`의 **FriendlyName** 속성을로 변경 합니다.  
+6.  데이터 원본 뷰 디자이너에서 **FactSalesQuota** 테이블의 **FriendlyName** 속성을로 변경 합니다 `SalesQuotas` .  
   
 7.  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브로 전환한 다음 **큐브 구조** 탭을 클릭합니다.  
   
-8.  **측정값** 창의 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 **고 새 측정값 그룹**을 `SalesQuotas` 클릭 한 다음 **새 측정값 그룹** 대화 상자를 클릭 하 고 **확인**을 클릭 합니다.  
+8.  **측정값** 창의 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 측정값 그룹**을 클릭 한 `SalesQuotas` 다음 **새 측정값 그룹** 대화 상자를 클릭 하 고 **확인**을 클릭 합니다.  
   
-     `Sales Quotas` 측정값 그룹이 **측정값** 창에 표시 됩니다. **차원** 창에는 `Date` `Date` 데이터베이스 차원을 기반으로 새 큐브 차원도 정의 되어 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 Sales Quotas 측정값 그룹의 기반이 되는 **FactSalesQuota** 팩트 테이블의 **DateKey** 열과 관련된 기존 시간 관련 큐브 차원을 인식하지 못하므로 새 시간 관련 큐브 차원이 정의됩니다. 이 항목의 다른 태스크에서 이 큐브 차원을 변경합니다.  
+     측정값 `Sales Quotas` 그룹이 **측정값** 창에 표시 됩니다. **차원** 창에는 `Date` 데이터베이스 차원을 기반으로 새 큐브 차원도 정의 되어 있습니다 `Date` . [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 Sales Quotas 측정값 그룹의 기반이 되는 **FactSalesQuota** 팩트 테이블의 **DateKey** 열과 관련된 기존 시간 관련 큐브 차원을 인식하지 못하므로 새 시간 관련 큐브 차원이 정의됩니다. 이 항목의 다른 태스크에서 이 큐브 차원을 변경합니다.  
   
-9. 측정값 그룹 `Sales Quotas` 을 확장 합니다.  
+9. `Sales Quotas`측정값 그룹을 확장 합니다.  
   
 10. **측정값** 창에서 **Sales Amount Quota**를 선택한 다음 속성 창에서 **FormatString** 속성 값을 **Currency** 로 설정합니다.  
   
-11. **Sales 할당량 Count** 측정값을 선택한 다음 속성 창의 `#,#` **FormatString** 속성 값으로을 입력 합니다.  
+11. **Sales 할당량 Count** 측정값을 선택한 다음 `#,#` 속성 창의 **FormatString** 속성 값으로을 입력 합니다.  
   
-12. 측정값 그룹에서 **Calendar Quarter** 측정값을 삭제 합니다. `Sales Quotas`  
+12. 측정값 그룹에서 **Calendar Quarter** 측정값을 삭제 `Sales Quotas` 합니다.  
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 Calendar Quarter 측정값의 기반이 되는 열을 측정값이 포함된 열로 감지합니다. 그러나 이 열과 CalendarYear 열은 이 항목의 뒷부분에서 Sales Quotas 측정값 그룹을 Date 차원에 연결하는 데 사용할 값을 포함합니다.  
   
-13. **측정값** 창에서 `Sales Quotas` 측정값 그룹을 마우스 오른쪽 단추로 클릭 한 다음 **새 측정값**을 클릭 합니다.  
+13. **측정값** 창에서 측정값 그룹을 마우스 오른쪽 단추로 클릭 한 `Sales Quotas` 다음 **새 측정값**을 클릭 합니다.  
   
      **합계** 사용 유형을 사용하는 측정값에 사용 가능한 원본 열이 포함되어 있는 **새 측정값**대화 상자가 열립니다.  
   
-14. **새 측정값** 대화 상자의 **사용법** 목록에서 **고유 카운트** 를 선택 하 고 **원본 테이블** 목록에서 `SalesQuotas` 가 선택 되어 있는지 확인 한 다음 **원본 열** 목록에서 **EmployeeKey** 를 선택 하 고 **확인**을 클릭 합니다.  
+14. **새 측정값** 대화 상자의 **사용법** 목록에서 **고유 카운트** 를 선택 하 고 `SalesQuotas` **원본 테이블** 목록에서가 선택 되어 있는지 확인 한 다음 **원본 열** 목록에서 **EmployeeKey** 를 선택 하 고 **확인**을 클릭 합니다.  
   
      **Sales Quotas 1**이라는 새 측정값 그룹에 측정값이 생성됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 고유 카운트 측정값이 자체 측정값 그룹에 생성되므로 처리 성능을 극대화합니다.  
   
-15. **Employee Key Distinct Count** 측정값 `Sales Person Count`의 **Name** 속성 값을로 변경 하 고 **FormatString** 속성 값으로을 `#,#` 입력 합니다.  
+15. **Employee Key Distinct Count** 측정값의 **Name** 속성 값을로 변경 하 `Sales Person Count` 고 `#,#` **FormatString** 속성 값으로을 입력 합니다.  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Sales Quota 측정값 그룹에서 날짜별로 측정값 찾아보기  
   
@@ -100,13 +99,13 @@ ms.locfileid: "66078462"
   
      ![North America 선택을 위한 필터 창](../../2014/tutorials/media/l5-granularity-1b.png "North America 선택을 위한 필터 창")  
   
-9. 피벗 테이블 필드 목록에서를 확장 `Date`합니다.  
+9. 피벗 테이블 필드 목록에서를 확장 `Date` 합니다.  
   
 10. **Date.Fiscal Date** 사용자 계층을 행 레이블로 끌어옵니다.  
   
 11. 피벗 테이블에서 행 레이블 옆에 있는 아래쪽 화살표를 클릭합니다. **FY 2008**을 제외한 모든 연도를 선택 취소합니다.  
   
-     **월** 수준의 월 2007 년 7 월, **2007**, **2007**및 **2007 9** 월 멤버 대신 **월 수준의** **7 월** 멤버만 표시 되 고,이 경우에는 31 일이 아니라 해당 `Date` 수준의 **7 월 2007 1** 일 멤버만 나타납니다. 이 동작은 팩트 테이블의 데이터 수준이 분기이 고 `Date` 차원의 수준이 매일 이기 때문에 발생 합니다. 이 항목의 다음 태스크에서는 이 동작을 변경하는 방법에 대해 설명합니다.  
+     월 수준의 월 2007 년 7 월, **2007**, **2007**및 **2007 9** 월 멤버 대신 **월 수준의** **7 월** 멤버만 표시 되 고,이 경우에 **Month** 는 31 일이 아니라 해당 수준의 **7 월 2007 1** 일 멤버만 `Date` 나타납니다. 이 동작은 팩트 테이블의 데이터 수준이 분기이 고 차원의 수준이 매일 이기 때문에 발생 합니다 `Date` . 이 항목의 다음 태스크에서는 이 동작을 변경하는 방법에 대해 설명합니다.  
   
      월 및 일 수준의 **Sales Amount Quota** 값도 분기 수준의 값과 같은 $13,733,000.00가 됩니다. Sales Quotas 측정값 그룹의 데이터 최하위 수준이 분기 수준이기 때문입니다. 6단원에서는 이 동작을 변경하는 방법을 설명합니다.  
   
@@ -122,11 +121,11 @@ ms.locfileid: "66078462"
   
      이 특성은 **Sales 지역** 차원을 `Sales Quotas` 및 **sales 할당량 1** 측정값 그룹에 참조 차원으로 연결 하는 데 필요 합니다.  
   
-3.  Tutorial 큐브에 대 한 큐브 디자이너에서 **차원 용도** 탭을 클릭 한 다음 `Sales Quotas` 및 **Sales 할당량 1** 측정값 그룹 내의 차원 용도를 검토 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+3.  Tutorial 큐브에 대 한 큐브 디자이너에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **차원 용도** 탭을 클릭 한 다음 `Sales Quotas` 및 **Sales 할당량 1** 측정값 그룹 내의 차원 용도를 검토 합니다.  
   
      **직원** 및 `Date` 큐브 차원은 일반 관계를 통해 **sales Quotasand sales 할당량 1** 측정값 그룹에 연결 됩니다. **Sales Territory** 큐브 차원은 이러한 측정값 그룹에 연결되어 있지 않습니다.  
   
-4.  **Sales 영토** 차원과 `Sales Quotas` 측정값 그룹의 교집합에서 셀을 클릭 한 다음 찾아보기 단추 (**...**)를 클릭 합니다. **관계 정의** 대화 상자가 열립니다.  
+4.  **Sales 영토** 차원과 측정값 그룹의 교집합에서 셀을 클릭 한 `Sales Quotas` 다음 찾아보기 단추 (**...**)를 클릭 합니다. **관계 정의** 대화 상자가 열립니다.  
   
 5.  **관계 유형 선택** 목록에서 **참조**를 선택합니다.  
   
@@ -154,15 +153,15 @@ ms.locfileid: "66078462"
   
 17. **확인**을 클릭합니다.  
   
-18. `Date` 큐브 차원을 삭제 합니다.  
+18. `Date`큐브 차원을 삭제 합니다.  
   
-     4 개의 시간 관련 큐브 차원이 아니라 `Sales Quotas` 측정값 그룹의 **Order date** 큐브 차원을 차원에 대 한 기준으로 사용할 날짜로 사용 합니다. 또한 이 큐브 차원을 큐브의 주 날짜 차원으로 사용합니다.  
+     4 개의 시간 관련 큐브 차원이 아니라 측정값 그룹의 **Order date** 큐브 차원을 차원에 `Sales Quotas` 대 한 기준으로 사용할 날짜로 사용 합니다. 또한 이 큐브 차원을 큐브의 주 날짜 차원으로 사용합니다.  
   
-19. **차원** 목록에서 **Order Date** 큐브 차원의 이름을으로 `Date`바꿉니다.  
+19. **차원** 목록에서 **Order Date** 큐브 차원의 이름을으로 바꿉니다 `Date` .  
   
-     **Order Date** 큐브 차원의 이름을로 `Date` 바꾸면 사용자가 해당 역할을이 큐브의 주 날짜 차원으로 쉽게 이해할 수 있습니다.  
+     **Order Date** 큐브 차원의 이름을로 바꾸면 `Date` 사용자가 해당 역할을이 큐브의 주 날짜 차원으로 쉽게 이해할 수 있습니다.  
   
-20. `Sales Quotas` 측정값 그룹과 `Date` 차원의 교집합에 있는 셀에서 찾아보기 단추 (**...**)를 클릭 합니다.  
+20. **...** `Sales Quotas` 측정값 그룹과 차원의 교집합에 있는 셀에서 찾아보기 단추 (...)를 클릭 합니다. `Date`  
   
 21. **관계 정의** 대화 상자의 **관계 유형 선택** 목록에서 **일반** 을 선택합니다.  
   
@@ -179,9 +178,9 @@ ms.locfileid: "66078462"
   
 ## <a name="defining-attribute-relationships-between-the-calendar-quarter-attribute-and-the-other-dimension-attributes-in-the-date-dimension"></a>Date 차원의 Calendar Quarter 특성과 다른 차원 특성 간의 특성 관계 정의  
   
-1.  차원에 대 한 **차원 디자이너** 로 전환한 다음 **특성 관계** 탭을 클릭 합니다. `Date`  
+1.  차원에 대 한 **차원 디자이너** 로 전환한 `Date` 다음 **특성 관계** 탭을 클릭 합니다.  
   
-     Calendar **Year** 는 calendar **반기** 특성을 통해 calendar **Quarter** 에 연결 되지만 회계 달력 특성은 서로만 연결 됩니다. **Calendar Quarter** 특성에 연결 되지 않으므로 `Sales Quotas` 측정값 그룹에서 제대로 집계 되지 않습니다.  
+     Calendar **Year** 는 calendar **반기** 특성을 통해 calendar **Quarter** 에 연결 되지만 회계 달력 특성은 서로만 연결 됩니다. **Calendar Quarter** 특성에 연결 되지 않으므로 측정값 그룹에서 제대로 집계 되지 않습니다 `Sales Quotas` .  
   
 2.  다이어그램에서 **Calendar Quarter** 특성을 마우스 오른쪽 단추로 클릭한 다음 **새 특성 관계**를 선택합니다.  
   
@@ -189,11 +188,11 @@ ms.locfileid: "66078462"
   
 4.  **확인**을 클릭합니다.  
   
-     키가 아닌 특성이 세분성 특성으로 사용 될 `Date` 경우 데이터가 집계 되지 않을 수 있는 하나 이상의 중복 특성 관계가 차원에 포함 되어 있음을 나타내는 경고 메시지가 표시 됩니다.  
+     `Date`키가 아닌 특성이 세분성 특성으로 사용 될 경우 데이터가 집계 되지 않을 수 있는 하나 이상의 중복 특성 관계가 차원에 포함 되어 있음을 나타내는 경고 메시지가 표시 됩니다.  
   
 5.  **Month Name** 특성과 **Fiscal Quarter** 특성 간의 특성 관계를 삭제합니다.  
   
-6.  **파일** 메뉴에서 **모두 저장**을 클릭 합니다.  
+6.  **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
 ## <a name="browsing-the-measures-in-the-sales-quota-measure-group-by-date"></a>Sales Quota 측정값 그룹에서 날짜별로 측정값 찾아보기  
   

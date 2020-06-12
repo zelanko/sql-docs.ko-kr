@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541895"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>리프트 차트 탭(마이닝 정확도 차트 뷰)
   **리프트 차트** 창을 사용하여 선택한 마이닝 구조에서 선택한 모든 마이닝 모델을 비교하는 차트를 볼 수 있습니다.  

@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f1c802f6503b84ff4f6879c18d3bffebb46d7ad
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521081"
 ---
 # <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
-  에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모델링 플래그를 사용 하 여 사례 테이블에 정의 된 데이터에 대 한 추가 정보를 데이터 마이닝 알고리즘에 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
+  에서 모델링 플래그를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하 여 사례 테이블에 정의 된 데이터에 대 한 추가 정보를 데이터 마이닝 알고리즘에 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어 `NOT NULL` 모델링 플래그는 마이닝 구조 열에 사용됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   
@@ -102,7 +101,7 @@ WHERE MODEL_NAME = '<model name>'
 ## <a name="related-tasks"></a>관련 작업  
  모델링 플래그 사용에 대해 자세히 알아보려면 다음 링크를 사용하십시오.  
   
-|작업|항목|  
+|Task|항목|  
 |----------|-----------|  
 |데이터 마이닝 디자이너를 사용하여 모델링 플래그 편집|[모델링 플래그 확인 또는 변경&#40;데이터 마이닝&#41;](modeling-flags-data-mining.md)|  
 |가능성이 높은 회귀 변수를 권장하기 위해 알고리즘에 대한 힌트 지정|[모델에서 회귀 변수로 사용할 열 지정](specify-a-column-to-use-as-regressor-in-a-model.md)|  

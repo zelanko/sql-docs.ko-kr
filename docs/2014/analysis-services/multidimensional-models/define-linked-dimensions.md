@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547014"
 ---
 # <a name="define-linked-dimensions"></a>연결된 차원 정의
   연결된 차원은 동일한 버전 및 호환성 수준의 다른 Analysis Services 데이터베이스에서 만들어지고 저장된 차원을 기반으로 합니다. 연결된 차원을 통해 하나의 데이터베이스에 차원을 만들고 저장하고 유지 관리할 수 있으며 이와 동시에 여러 데이터베이스의 사용자가 이 차원을 사용하도록 할 수 있습니다. 연결된 차원은 사용자에게 다른 차원과 동일하게 나타납니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075583"
   
 2.  연결 관리자에서 공급자가 **Native OLE DB\Microsoft OLE DB Provider for Analysis Services 11.0**으로 설정되어 있는지 확인합니다.  
   
-3.  서버 이름 (명명 된 인스턴스에 대해 *servername*\\*instancename* <sup>사용)을</sup> 입력 하거나 **localhost** 를 입력 하 여 같은 컴퓨터에서 실행 되는 Analysis Services 서버에 연결 합니다.  
+3.  서버 이름 (명명 된 인스턴스에 대해 *servername* \\ *instancename* 사용)을 입력 하거나 **localhost** 를 입력 하 여 같은 컴퓨터에서 실행 되는 Analysis Services 서버에 연결 합니다.<sup>1</sup>  
   
 4.  연결을 위해 Windows 인증을 사용합니다.  
   

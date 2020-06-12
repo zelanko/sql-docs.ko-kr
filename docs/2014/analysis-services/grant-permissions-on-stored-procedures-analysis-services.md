@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080726"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544315"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>저장 프로시저 관련 사용 권한 부여(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 저장 프로시저 또는 어셈블리는 [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET 프로그래밍 언어로 작성된 외부 루틴이며 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]기능을 확장합니다. 개발자는 어셈블리를 사용하여 언어 간 통합, 예외 처리, 버전 관리 지원, 배포 지원 및 디버깅 지원을 이용할 수 있습니다.  

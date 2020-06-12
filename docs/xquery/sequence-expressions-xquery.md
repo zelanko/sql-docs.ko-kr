@@ -1,5 +1,6 @@
 ---
 title: 시퀀스 식 (XQuery) | Microsoft Docs
+description: 항목 시퀀스를 구성 하 고 필터링 하 고 결합 하는 XQuery 시퀀스 식에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946303"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529767"
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>예 3  
- 다음 쿼리는 Contact 테이블에 있는 **xml** 유형의 Additionalbooks.xml info 열에 대해 지정 됩니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. TelephoneNumber \<>, \<호출기> 및 기타 노드는 문서 어디에 나 나타날 수 있습니다. 이 쿼리는 컨텍스트 노드의 모든 \<telephoneNumber> 자식을 포함 하는 시퀀스를 생성 하 고 그 뒤에 \<페이저> 자식을 포함 합니다. `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
+ 다음 쿼리는 Contact 테이블에 있는 **xml** 유형의 Additionalbooks.xml info 열에 대해 지정 됩니다. 이 열에는 하나 이상의 추가 전화 번호, 호출기 번호 및 주소와 같은 추가 연락 정보가 저장됩니다. \<telephoneNumber>, \<pager> 및 기타 노드는 문서의 어느 위치에 나 나타날 수 있습니다. 이 쿼리는 컨텍스트 노드의 모든 자식 항목을 포함 하는 시퀀스를 생성 합니다 \<telephoneNumber> \<pager> . `($a//act:telephoneNumber, $a//act:pager)` 반환 식에서 사용된 쉼표 시퀀스 연산자에 유의하십시오.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -131,7 +132,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>시퀀스 필터링  
- 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 [XQuery&#41;&#40;경로 식 ](../xquery/path-expressions-xquery.md)을 참조 하세요. 예를 들어 다음 쿼리는 3 개의 <`a`> element 노드 시퀀스를 반환 합니다.  
+ 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 [XQuery&#41;&#40;경로 식 ](../xquery/path-expressions-xquery.md)을 참조 하세요. 예를 들어 다음 쿼리는 3 개의 <> element 노드 시퀀스를 반환 합니다 `a` .  
   
 ```  
 declare @x xml  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- AttrA 특성을 포함 `a` 하는 <> 요소만 검색 하려면 조건자에서 필터를 지정할 수 있습니다. 결과 시퀀스에는 <`a`> 요소가 하나만 있습니다.  
+ `a`AttrA 특성을 포함 하는 <> 요소만 검색 하려면 조건자에서 필터를 지정할 수 있습니다. 결과 시퀀스에는 <`a`> 요소가 하나만 있습니다.  
   
 ```  
 declare @x xml  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 다음 예에서는 조건자 필터가 적용됩니다. 이 식은 요소 <`a` `b` `c`>를 포함 하는 <> 및 <>를 찾습니다.  
+ 다음 예에서는 조건자 필터가 적용됩니다. `a` `b` 이 식은 요소 <>를 포함 하는 <> 및 <>를 찾습니다 `c` .  
   
 ```  
 declare @x xml  

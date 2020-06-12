@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 147664030dd6e52c4bfaf17efd6fa7aea35d53ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00bbdf6063bc0451244792ee423825b4f74cc40
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782776"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543865"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>SharePoint 2013용 PowerPivot의 최소 권한 구성 예
   이 항목은 최소 권한을 사용한 SharePoint 2013용 PowerPivot 구성 예에 대해 설명합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
   
 ## <a name="summary-of-accounts"></a>계정 요약  
- SharePoint 2013용 PowerPivot은 Analysis Services 서비스 계정에 네트워크 서비스 계정 사용을 지원합니다. 네트워크 서비스 계정은 SharePoint 2010에서 지원하는 시나리오가 아닙니다. 서비스 계정에 대 한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (https://msdn.microsoft.com/library/ms143504.aspx)을 참조 하세요.  
+ SharePoint 2013용 PowerPivot은 Analysis Services 서비스 계정에 네트워크 서비스 계정 사용을 지원합니다. 네트워크 서비스 계정은 SharePoint 2010에서 지원하는 시나리오가 아닙니다. 서비스 계정에 대 한 자세한 내용은 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (을 참조 https://msdn.microsoft.com/library/ms143504.aspx) 하세요.  
   
  다음 표에는 최소 권한 구성에 대한 이 예에서 사용된 세 계정이 요약되어 있습니다.  
   
-|범위|속성|  
+|범위|Name|  
 |-----------|----------|  
 |SharePoint 관리자 계정|**SPAdmin**|  
 |SharePoint 팜 계정|**SPFarm**|  

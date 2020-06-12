@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea9d02f2-a668-4547-ade5-e3d077a2e1bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79497b0fd84116ab69187bd7d1733101357ffbce
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073728"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546105"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>보이는 값 합계 및 보이지 않는 값 합계
   보이는 값 합계는 열이나 행에서 볼 수 있는 모든 항목이 더해지는 열이나 행의 끝에 있는 합계입니다. 이 동작은 표시된 대부분의 테이블에서 기본 동작입니다. 그러나 사용자가 테이블의 특정 열만 표시하고 표시되지 않은 열을 포함하여 전체 행에 대한 합계를 유지하려는 경우가 있습니다. 이러한 경우를 `Non Visual Totals`라고 하는데 이는 보이는 값과 보이지 않는 값 모두에서 합계가 제공되기 때문입니다.  
@@ -36,11 +35,11 @@ ms.locfileid: "66073728"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**All Products**|**Accessories**|**Bikes**|**구**|**구성 요소**|  
+||**All Products**|**액세서리**|**자전거**|**의류**|**Components**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
 |**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
-|**웨어하우스와**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
+|**웨어하우스**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>행과 열에 대한 보이지 않는 값 합계  
  Accessories 및 Clothing 제품과 Value Added Reseller 및 Warehouse 대리점에 대한 데이터만 포함된 테이블을 만들고 전체 합계를 유지하려면 NON VISUAL을 사용하여 다음과 같이 문을 작성할 수 있습니다.  
@@ -61,10 +60,10 @@ ms.locfileid: "66073728"
   
 |||||  
 |-|-|-|-|  
-||**All Products**|**Accessories**|**구**|  
+||**All Products**|**액세서리**|**의류**|  
 |**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
 |**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
-|**웨어하우스와**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
+|**웨어하우스**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>행에 대한 보이지 않는 값 합계  
  열에는 보이는 값 합계만 포함하고 행 합계에는 모든 [Category]의 순 합계를 표시하는 테이블을 만들려면 다음과 같은 쿼리를 실행해야 합니다.  
@@ -89,7 +88,7 @@ ms.locfileid: "66073728"
   
 |||||  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
+||All Products|액세서리|의류|  
 |All Resellers|$73,694,430.80|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

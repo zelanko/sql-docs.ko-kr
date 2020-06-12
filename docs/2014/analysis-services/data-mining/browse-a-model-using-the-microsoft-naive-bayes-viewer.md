@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525452"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
-  의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용 하 여 작성 된 마이닝 모델을 표시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 알고리즘을 사용 하 여 작성 된 마이닝 모델을 표시 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
   
  Naive Bayes 모델의 주 목적 중 하나는 데이터 세트의 데이터를 빨리 탐색하는 방법을 제공하는 것이기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 예측 가능한 특성과 입력 특성 간의 상호 작용을 표시하는 여러 가지 방법을 제공합니다.  
   
@@ -74,16 +73,16 @@ ms.locfileid: "66086027"
 ##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a> 특성 판별  
  **특성 판별** 탭을 사용하려면 **특성**, **값 1**및 **값 2** 목록에서 예측 가능한 특성과 두 가지 상태를 선택합니다. 그러면 **특성 판별** 탭에 있는 표의 열에 다음 정보가 표시됩니다.  
   
- **특성도**  
+ **특성**  
  예측 가능한 특성의 한 가지 상태와 유사성이 큰 상태가 포함된 데이터 세트의 다른 특성을 나열합니다.  
   
  **값**  
  **특성** 열의 특성 값을 보여 줍니다.  
   
- **값 \<1에 우선>**  
+ **우위\<value 1>**  
  특성 값이 **값 1**에 표시된 예측 가능한 특성 값과 얼마나 유사한지 나타내는 색이 지정된 막대를 표시합니다.  
   
- **값 \<2>에 우선 합니다.**  
+ **우위\<value 2>**  
  특성 값이 **값 2**에 표시된 예측 가능한 특성 값과 얼마나 유사한지 나타내는 색이 지정된 막대를 표시합니다.  
   
  [맨 위로 이동](#BKMK_ViewerTabs)  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 535d1e05fc82882e0a2b5ea43ac9b2147e62338b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b60d721a69213ad52536830b49b40d6bb82a3811
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545935"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 엔진 서버 구성 요소
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 구성 요소는 Windows 서비스로 실행 되는 **msmdsrv.ini** 응용 프로그램입니다. 이 애플리케이션은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.
+  의 서버 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Windows 서비스로 실행 되는 **msmdsrv.exe** 응용 프로그램입니다. 이 애플리케이션은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.
 
 -   클라이언트로부터 수신한 문 구문 분석
 
@@ -51,13 +50,13 @@ ms.locfileid: "81388011"
  ![Analysis Services 시스템 아키텍처 다이어그램](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services 시스템 아키텍처 다이어그램")
 
 ## <a name="xmla-listener"></a>XMLA 수신기
- XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 파일의 구성 설정을 사용 하 여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스가 수신 하는 포트를 지정할 수 있습니다. 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.
+ XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port` msmdsrv.ini 파일의 구성 설정을 사용 하 여 인스턴스가 수신 하는 포트를 지정할 수 있습니다 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.
 
-|포트|설명|
+|포트|Description|
 |----------|-----------------|
-|2383|의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]기본 인스턴스|
-|2382|의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]다른 인스턴스에 대 한 리디렉터|
-|서버 시작 시 동적으로 할당됩니다.|의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]명명 된 인스턴스입니다.|
+|2383|의 기본 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]|
+|2382|의 다른 인스턴스에 대 한 리디렉터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]|
+|서버 시작 시 동적으로 할당됩니다.|의 명명 된 인스턴스입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|
 
  자세한 내용은 [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성을](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 참조 하세요.
 

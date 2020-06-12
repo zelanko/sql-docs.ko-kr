@@ -1,5 +1,6 @@
 ---
 title: .NET 환경에서 SQLXML 대량 로드 사용
+description: .NET 환경에서 SQLXML 4.0 대량 로드 COM 개체를 사용 하 여 XML 데이터를 데이터베이스에 대량으로 로드 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252447"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529836"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0 .NET Framework 지원 - 대량 로드 사용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -141,7 +142,7 @@ ms.locfileid: "75252447"
 9. 앞에서 만든 테이블에 XML을 로드하려면 프로젝트를 빌드하고 실행합니다.  
   
     > [!NOTE]  
-    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 다음은 그 예입니다.  
+    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 예를 들어:  
   
     ```  
     c:\>tlbimp xblkld4.dll  

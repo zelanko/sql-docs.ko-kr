@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c9da6edef576a6ab25c183cbc87ff95cc056845
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727759"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545383"
 ---
 # <a name="calling-stored-procedures"></a>저장 프로시저 호출
   저장 프로시저는 서버나 클라이언트 애플리케이션에서 호출할 수 있습니다. 어느 경우에나 저장 프로시저는 항상 서버에서 서버나 데이터베이스의 컨텍스트로 실행됩니다. 저장 프로시저를 실행하는 데 필요한 특별 권한은 없습니다. 어셈블리를 사용하여 서버 또는 데이터베이스 컨텍스트에 저장 프로시저를 추가한 후에는 저장 프로시저에서 수행하는 동작이 허가된 역할의 사용자는 모두 저장 프로시저를 실행할 수 있습니다.  

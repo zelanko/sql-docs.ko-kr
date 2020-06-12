@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfd8e0dcb72850dccb2cc6840f3e68baf37528b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493901"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543092"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>보조 특성을 기준으로 특성 멤버 정렬
   3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  

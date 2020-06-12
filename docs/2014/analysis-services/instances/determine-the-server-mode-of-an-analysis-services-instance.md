@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 587205c3c3d25b8d513792aee58bf15b845df2ef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080058"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543975"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Analysis Services 인스턴스의 서버 모드 확인
   Analysis Services는 다차원 및 데이터 마이닝(기본값), SharePoint용 PowerPivot, 테이블 형식 중 한 가지 서버 모드로 설치할 수 있습니다. Analysis Services 인스턴스의 서버 모드는 설치 중에 서버 설치 옵션을 선택할 때 결정됩니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66080058"
   
 |값|설명|  
 |-----------|-----------------|  
-|0|기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
 |1|SharePoint용 PowerPivot 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 PowerPivot 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. 모드를 변경하면 PowerPivot 데이터가 서버에서 더 이상 실행되지 않습니다.|  
 |2|메모리 내 스토리지나 DirectQuery 스토리지를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   

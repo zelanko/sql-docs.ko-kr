@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fecbf093-65ea-4e1b-b637-f04876f1cb0f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d13675196f3e6cf755033e85213b20220b20918d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 391f4abe953184470be60cca41d53ee20e965423
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078018"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541755"
 ---
 # <a name="mdx-builder-analysis-services---multidimensional-data"></a>MDX 작성기( Analysis Services - 다차원 데이터)
   **또는** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] MDX 작성기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 MDX(Multidimensional Expression) 식을 작성할 수 있습니다. **역할 디자이너**의 **셀 데이터** 페이지에서 **큐브 내용을 읽을 수** 있습니다 옵션, **셀 보안 설정에 따라 셀 내용을** 읽을**수 있습니다 옵션**또는 **큐브 내용을 읽고 쓸** 수 있음 옵션을 클릭 하 여 **mdx 작성기** 대화 **상자를 표시할** 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66078018"
 |용어|정의|  
 |----------|----------------|  
 |**식**|사용할 MDX 식을 입력합니다.|  
-|**있는지**|**식** 에서 정의한 MDX 식을 테스트하려면 **확인**을 클릭합니다.|  
+|**확인**|**식** 에서 정의한 MDX 식을 테스트하려면 **확인**을 클릭합니다.|  
 |**메타데이터**|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 식 **에서 정의한 MDX 식에 포함시킬 수 있는 현재**개체에 대한 메타데이터를 표시합니다.<br /><br /> 선택한 항목을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **복사** 를 선택하거나 선택한 항목을 **식**으로 끌어서 해당 항목에 대한 MDX 구문을 복사할 수 있습니다.|  
 |**함수**|현재 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 사용 가능한 MDX 함수를 표시합니다. 나열된 항목은 MDSCHEMA_FUNCTIONS 스키마 행 집합에서 검색된 것입니다.<br /><br /> 선택한 항목을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **복사** 를 선택하거나 선택한 항목을 **식**으로 끌어서 해당 항목에 대한 MDX 구문을 복사할 수 있습니다.|  
   

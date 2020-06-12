@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce717071-193b-4c99-9654-c7a613e16327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a1564a2b190703e011624162ad4bc25fd5de794
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 509f44565a1535e1502cb3862250cf04f654711e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079186"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543545"
 ---
 # <a name="lesson-13-analyze-in-excel"></a>13단원: 도구 모음
   이 단원에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 에서 Excel에서 분석 기능을 사용하여 Microsoft Excel을 열고, 모델 작업 영역에 자동으로 데이터 원본을 연결하고, 워크시트에 피벗 테이블을 자동으로 추가합니다. Excel에서 분석 기능은 모델을 배포하기 전에 모델 디자인의 효율성을 테스트하기 위한 쉽고 빠른 방법을 제공합니다. 이 단원에서는 데이터 분석을 수행하지 않습니다. 이 단원의 목적은 모델 작성자인 사용자가 모델 디자인을 테스트하는 데 사용할 수 있는 도구를 습득하게 하는 것입니다. 모델 작성자를 위한 Excel에서 분석 기능을 사용하는 것과 달리 최종 사용자는 Excel 또는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 와 같은 클라이언트 보고 애플리케이션을 사용하여 배포된 모델 데이터에 연결하고 해당 데이터를 검색합니다.  

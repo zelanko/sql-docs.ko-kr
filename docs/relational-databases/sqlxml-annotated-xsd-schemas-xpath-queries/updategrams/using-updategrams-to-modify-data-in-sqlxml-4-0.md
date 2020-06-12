@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0에서 updategram을 사용하여 데이터 수정
+description: Updategram 및 SQLXML 4.0에서 데이터를 수정 하는 데 사용 되는 방법에 대 한 정보 및 예제를 봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,16 +26,16 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56a1d4b0243645c1d54b47145740f84fda29e841
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85df62ad3d31bdddbb37540c0c386ad2bcd260e5
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247114"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215270"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0에서 updategram을 사용하여 데이터 수정
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Updategram 또는 OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] 함수를 사용 하 여 기존 XML 문서에서 데이터베이스를 수정 (삽입, 업데이트 또는 삭제) 할 수 있습니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATEGRAM 또는 OPENXML 함수를 사용 하 여 기존 XML 문서에서 데이터베이스를 수정 (삽입, 업데이트 또는 삭제) 할 수 있습니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  이 섹션에서는 updategram에 대해 설명하고 updategram 사용 예를 보여 줍니다.  
   

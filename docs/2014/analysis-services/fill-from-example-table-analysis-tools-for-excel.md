@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081305"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528349"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>예제로 채우기(Excel용 테이블 분석 도구)
   ![테이블 분석 도구의 예제로 채우기 단추](media/tat-fillex.gif "테이블 분석 도구의 예제로 채우기 단추")  
@@ -70,7 +69,7 @@ ms.locfileid: "66081305"
 > [!NOTE]  
 >  **상대적 영향은** 음영이 있는 막대로 표시 됩니다. 막대가 길수록 해당 규칙이 채운 값을 예측할 확률이 높아집니다.  
   
- 또한이 도구는 원래 데이터 테이블에 새 열을 추가 하 고 \<열 이름> 확장 합니다.  
+ 또한이 도구는 확장 이라는 원래 데이터 테이블에 새 열을 추가 합니다 \<column name> .  
   
  원래 데이터 열에 값이 있으면 해당 값은 새 열에 복사됩니다. 원래 열에 빈 셀이 있으면 새 열에는 마법사에서 예측한 값이 포함됩니다.  
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076286"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536485"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>시간 테이블을 생성하여 시간 차원 만들기
-  에서는의 차원 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 마법사를 사용 하 여 원본 데이터베이스에서 사용할 수 있는 시간 테이블이 없을 때 시간 차원을 만들 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이렇게 하려면 **생성 방법 선택** 페이지에서 다음 옵션 중 하나를 선택하세요.  
+  에서는의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원 마법사를 사용 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 하 여 원본 데이터베이스에서 사용할 수 있는 시간 테이블이 없을 때 시간 차원을 만들 수 있습니다. 이렇게 하려면 **생성 방법 선택** 페이지에서 다음 옵션 중 하나를 선택하세요.  
   
 -   **데이터 원본에 시간 테이블 생성** 기본 데이터 원본에 개체를 만들 수 있는 권한이 있으면 이 옵션을 선택합니다. 그러면 마법사가 시간 테이블을 생성하고 이 시간 테이블을 데이터 원본에 저장한 다음 이 시간 테이블을 기반으로 시간 차원을 만듭니다.  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 568ec549-5ddc-493a-b9f8-3bdc548b562e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3146f5a9f3e22753cc86c07b609d997be580b9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 051cc6ed0a85c0900cf1a12eb173100390b4d384
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543855"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>SQL Server 프로파일러를 사용한 Analysis Services 모니터링 소개
-  를 사용 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 하 여 인스턴스에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]생성 된 이벤트를 모니터링할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용 하 여 인스턴스에서 생성 된 이벤트를 모니터링할 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스의 성능을 모니터링합니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66079802"
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 중지하고 다시 시작하면 추적을 계속할 수 있습니다.  
   
     > [!NOTE]  
-    >  암호는 추적 이벤트에 표시 되지 않지만 이벤트에서로 \* \* \* \* \* \* 바뀝니다.  
+    >  암호는 추적 이벤트에 표시 되지 않지만 \* \* \* \* \* \* 이벤트에서로 바뀝니다.  
   
  최적의 성능을 위해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 가장 관심 있는 이벤트만 모니터링하십시오. 너무 많은 이벤트를 모니터링하면 오버헤드가 발생하며 특히 장기간 모니터링을 수행할 경우 추적 파일이나 테이블이 너무 커질 수 있습니다. 또한 수집된 데이터 양을 제한하고 추적이 너무 커지지 않도록 방지하기 위해 필터링을 사용하십시오.  
   

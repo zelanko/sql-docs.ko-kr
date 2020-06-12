@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079376"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543675"
 ---
 # <a name="languages-and-collations-analysis-services"></a>언어 및 데이터 정렬(Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 제공하는 언어 및 데이터 정렬을 지원합니다. `Language` 및 `Collation` 속성은 처음에는 설치 중 인스턴스 수준에서 설정되지만 나중에 개체 계층 구조의 서로 다른 수준에서 변경할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079376"
 -   [Analysis Services에서의 GB18030 지원](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>언어 및 데이터 정렬 속성을 지 원하는 개체  
- `Language`및 `Collation` 속성은 종종 함께 노출 됩니다 .를 설정할 `Language`수 있는 경우를 설정할 `Collation`수도 있습니다.  
+ `Language`및 `Collation` 속성은 종종 함께 노출 됩니다 .를 설정할 수 있는 경우를 `Language` 설정할 수도 있습니다 `Collation` .  
   
  다음 개체들에서 `Language`와 `Collation`을 설정할 수 있습니다.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079376"
   
      설정한 언어와 데이터 정렬이 무엇이든 간에 큐브는 큐브에 포함된 모든 측정값 및 차원에 의해 사용됩니다. 데이터 정렬 속성을 더욱 상세한 수준으로 설정하는 유일한 방법은 차원 특성에서 번역을 만드는 경우입니다. 그렇지 않고 특성 수준에서 번역이 없는 것으로 가정하면 큐브당 하나의 데이터 정렬이 존재하게 됩니다.  
   
- 또한 **번역** 개체를 단독 `Language`으로 설정할 수도 있습니다.  
+ 또한 번역 개체를 단독으로 설정할 수도 있습니다 `Language` . **Translation**  
   
  번역 개체는 큐브나 차원에 번역을 추가할 때 생성됩니다. `Language`는 번역 정의의 일부입니다. 반면에 `Collation`은 큐브 이상의 수준에서 설정되며 모든 번역에서 공유됩니다. 이것은 여러 언어 속성(각 번역에 대해 하나)과 오직 한 데이터 정렬이 표시되는 번역이 포함된 큐브의 XMLA에서 명백히 나타납니다. 차원 특성 번역에 대한 한 가지 예외가 있습니다. 이 예외에서는 원본 열과 일치하는 특성 데이터 정렬을 지정하기 위해 큐브 데이터 정렬을 재정의합니다. (데이터베이스 엔진에서는 개별 열에 대한 데이터 정렬 설정을 지원하며, 다른 원본 열에서 멤버 데이터를 가져오도록 개별 번역을 구성하는 것은 일반적입니다.) 하지만 그렇지 않으면 다른 모든 번역에 대해 `Language`에 상관없이 `Collation`가 단독으로 사용됩니다. 자세한 내용은 [번역&#40;Analysis Services&#41;](translations-analysis-services.md)을 참조하세요.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66079376"
   
  Analysis Services에 언어가 이름별로 나열되더라도 속성에 대해 저장된 실제 값은 LCID입니다. 언어 속성을 프로그래밍 방식이나 msmdsrv.ini 파일을 통해 설정할 때에는 [LCID(로캘 식별자)](http://en.wikipedia.org/wiki/Locale) 를 값으로 사용하세요. LCID는 언어 ID, 정렬 ID 및 특정 언어를 식별하는 예약된 비트로 구성된 32비트 값입니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 및 개체에 대해 선택할 언어를 지정합니다.  
   
- 16진수나 10진수 형식을 사용하여 LCID를 설정할 수 있습니다. `Language` 속성에 유효한 값에 대 한 몇 가지 예는 다음과 같습니다.  
+ 16진수나 10진수 형식을 사용하여 LCID를 설정할 수 있습니다. 속성에 유효한 값에 대 한 몇 가지 예는 `Language` 다음과 같습니다.  
   
 -   0x0409 또는 1033 - **영어(미국)**  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079376"
   
 -   데이터 정렬이 업데이트된 후에는 파티션 및 차원은 다시 처리합니다.  
   
- SQL Server Management Studio나 AMO PowerShell을 사용하면 서버 수준에서 기본 언어나 데이터 정렬을 변경할 수 있습니다. 또는 언어의 LCID를 지정 하 여 msmdsrv.ini 파일에서 ** \<언어>** 및 ** \<CollationName>** 설정을 수정할 수 있습니다.  
+ SQL Server Management Studio나 AMO PowerShell을 사용하면 서버 수준에서 기본 언어나 데이터 정렬을 변경할 수 있습니다. 또는 **\<Language>** **\<CollationName>** 언어의 LCID를 지정 하 여 msmdsrv.ini 파일에서 및 설정을 수정할 수 있습니다.  
   
-1.  Management Studio에서 서버 이름 |을 마우스 오른쪽 단추로 클릭 합니다. **속성** | **언어/데이터 정렬**입니다.  
+1.  Management Studio에서 서버 이름 |을 마우스 오른쪽 단추로 클릭 합니다. **속성**  |  **언어/데이터 정렬**  
   
 2.  정렬 옵션을 선택합니다. **이진** 와 **이진 2**중 하나를 선택하려면 우선 **악센트 구분**확인란의 선택을 취소하세요.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079376"
   
  XMLA를 사용하여 기존 데이터베이스를 수정하기 전에 데이터베이스와 데이터베이스 빌드에 사용되는 원본 파일 간에 불일치가 생기지 않도록 확인합니다. 예를 들어 개념 증명 테스트를 위해 XMLA를 사용하여 언어나 데이터 정렬을 신속하게 변경한 후에 원본 파일을 변경하여( [큐브에서의 언어 또는 데이터 정렬 변경](#bkmk_cube)참조) 이미 마련된 기존 운영 절차를 사용하여 솔루션을 다시 배포할 수 있습니다.  
   
-1.  Management Studio에서 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다. **데이터베이스** | **를** | **새 쿼리 편집기 창**으로 스크립팅 합니다.  
+1.  Management Studio에서 데이터베이스를 마우스 오른쪽 단추로 클릭 합니다. **데이터베이스 스크립팅**  |  **ALTER**  |  **새 쿼리 편집기 창**  
   
 2.  기존 언어 또는 데이터 정렬을 검색하고 대체 값으로 바꿉니다.  
   

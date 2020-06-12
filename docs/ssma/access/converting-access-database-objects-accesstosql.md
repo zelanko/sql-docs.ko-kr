@@ -1,5 +1,6 @@
 ---
 title: Access 데이터베이스 개체 변환 (AccessToSQL) | Microsoft Docs
+description: SQL Server/Azure SQL Database에 연결한 다음 스키마를 SQL Server/SQL Database 스키마로 변환 하 여 데이터베이스 개체에 액세스를 선택 하는 방법을 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -29,21 +30,21 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006624"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84302808"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access 데이터베이스 개체 변환 (AccessToSQL)
-Access 데이터베이스를 추가 하 고 SQL Azure 또는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 하 고 나면 ssma에서 access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure database 개체에 대 한 메타 데이터를 표시 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 스키마로 변환할 수 있습니다.  
+Access 데이터베이스를 추가 하 고 SQL Azure 또는에 연결 하 고 나면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA에서 access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure database 개체에 대 한 메타 데이터를 표시 합니다. 이제 데이터베이스 개체에 액세스를 선택한 다음 스키마를 또는 SQL Azure 스키마로 변환할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="the-conversion-process"></a>변환 프로세스  
-데이터베이스 개체를 변환 하면 액세스 메타 데이터의 개체 정의를 가져와 동일한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문으로 변환한 다음 프로젝트에이 정보를 로드 합니다. 그런 다음 또는 SQL Azure 메타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 탐색기를 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 또는 SQL Azure 개체와 해당 속성을 볼 수 있습니다.  
+데이터베이스 개체를 변환 하면 액세스 메타 데이터의 개체 정의를 가져와 동일한 구문으로 변환한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 다음 프로젝트에이 정보를 로드 합니다. 그런 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기를 사용 하 여 또는 SQL Azure 개체와 해당 속성을 볼 수 있습니다.  
   
 > [!IMPORTANT]  
-> 개체를 변환 해도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체는 생성 되지 않습니다. 개체 정의를 변환 하 고 정보를 SSMA 프로젝트에 저장 합니다.  
+> 개체를 변환 해도 또는 SQL Azure 개체는 생성 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 개체 정의를 변환 하 고 정보를 SSMA 프로젝트에 저장 합니다.  
   
 변환 하는 동안 SSMA는 출력 창에 상태를 인쇄 하 고, 오류, 경고 및 정보 메시지를 오류 목록 창에 인쇄 합니다. 이 정보를 사용 하 여 원하는 변환 결과를 얻기 위해 액세스 데이터베이스 또는 변환 프로세스를 수정 해야 하는지 여부를 결정할 수 있습니다. [마이그레이션에 대 한 액세스 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md) 항목의 정보를 사용 하 여 변환 되지 않을 항목을 확인할 수도 있습니다.  
   
@@ -87,7 +88,7 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 
   
     -   개별 테이블을 변환 하거나 생략 하려면 데이터베이스를 확장 하 고 **테이블**을 확장 한 다음 테이블 옆의 확인란을 선택 하거나 선택 취소 합니다.  
   
-3.  다음 중 하나를 수행합니다.  
+3.  다음 작업 중 하나를 수행합니다.  
   
     -   스키마를 변환 하려면 **데이터베이스** 를 마우스 오른쪽 단추로 클릭 하 고 **스키마 변환**을 선택 합니다.  
   
@@ -100,11 +101,11 @@ Access 데이터베이스 개체를 변환 하려면 먼저 변환할 개체를 
 4.  **출력** 창의 메시지와 **오류 목록** 창에서 발생 하는 오류 및 경고를 검토 합니다.  
   
 ## <a name="altering-tables-and-indexes"></a>테이블 및 인덱스 변경  
-액세스 메타 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터로 변환 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 개체를 로드 하기 전에 테이블 및 인덱스를 변경 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 SQL Azure 수 있습니다.  
+액세스 메타 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터로 변환 하 고 또는 SQL Azure 개체를 로드 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 인덱스를 변경 하거나 SQL Azure 수 있습니다.  
   
 **테이블 또는 인덱스 속성을 변경 하려면**  
   
-1.  또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure Metadata 탐색기에서 변경 하려는 테이블이 나 인덱스를 선택 합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또는 SQL Azure Metadata 탐색기에서 변경 하려는 테이블이 나 인덱스를 선택 합니다.  
   
 2.  **테이블** 탭에서 변경할 속성을 클릭 한 다음 새 설정을 입력 하거나 선택 합니다. 예를 들어 nvarchar (15)를 nvarchar (20)로 변경 하거나 확인란을 선택 하 여 테이블 열을 nullable로 설정할 수 있습니다.  
   

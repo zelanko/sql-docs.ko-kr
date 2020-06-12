@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a48211455a8ac3de9ef0f4b0c7e2fb3cba5f473
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071578"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540506"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>중앙 관리에서 PowerPivot 서비스 애플리케이션 만들기 및 구성
   PowerPivot 서비스 애플리케이션은 PowerPivot 시스템 서비스의 공유 서비스 인스턴스입니다. 각 서비스 애플리케이션은 고유한 애플리케이션 ID, 구성 설정, 속성 및 내부 데이터 스토리지를 포함합니다.  
@@ -57,13 +56,13 @@ ms.locfileid: "66071578"
   
 3.  **SQL Server PowerPivot 서비스 애플리케이션**을 선택합니다. 이 응용 프로그램이 목록에 표시되지 않으면 SharePoint용 PowerPivot이 올바르게 설치되거나 구성되지 않은 것입니다.  
   
-4.  **새 PowerPivot 서비스 애플리케이션 만들기** 페이지에 애플리케이션의 이름을 입력합니다. 기본값은 Get-powerpivotserviceapplication\<number>입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
+4.  **새 PowerPivot 서비스 애플리케이션 만들기** 페이지에 애플리케이션의 이름을 입력합니다. 기본값은 Get-powerpivotserviceapplication \<number> 입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
   
 5.  애플리케이션 풀에서 애플리케이션에 대해 새 애플리케이션 풀을 만듭니다(권장). 애플리케이션 풀에 대한 관리 계정을 선택하거나 만듭니다. 도메인 사용자 계정을 지정하세요. 도메인 사용자 계정을 사용하면 SharePoint의 관리되는 계정 기능을 사용할 수 있으므로 암호 및 계정 정보를 한 곳에서 업데이트할 수 있습니다. 같은 ID로 실행할 추가 서비스 인스턴스를 포함하도록 배포를 확장할 계획인 경우에도 도메인 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다. 이 서버를 사용하거나 다른 SQL Server를 선택할 수 있습니다.  
   
-7.  **데이터베이스 이름**에서 기본값은 guid> PowerPivotServiceApplication1_\<입니다. 각 PowerPivot 서비스 애플리케이션에 대해 고유한 데이터베이스를 만들어야 합니다. 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+7.  **데이터베이스 이름**에서 기본값은 PowerPivotServiceApplication1_입니다 \<guid> . 각 PowerPivot 서비스 애플리케이션에 대해 고유한 데이터베이스를 만들어야 합니다. 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66071578"
      로드 제한 시간 또는 할당 방법 변경 사항은 새로 수신되는 요청에만 적용됩니다. 이미 진행 중인 요청에는 요청을 받았을 때 유효했던 값이 적용됩니다.  
   
 ##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 할당  
- PowerPivot 서비스 애플리케이션을 구성한 후에는 이를 웹 애플리케이션의 서비스 애플리케이션 연결 목록에 추가하여 웹 애플리케이션에 할당할 수 있습니다. 여기에는 두 가지 방법이 있습니다.  
+ PowerPivot 서비스 애플리케이션을 구성한 후에는 이를 웹 애플리케이션의 서비스 애플리케이션 연결 목록에 추가하여 웹 애플리케이션에 할당할 수 있습니다. 이 작업을 수행하는 방법에는 다음 두 가지가 있습니다.  
   
 -   **기본** 연결 그룹에 PowerPivot 서비스 응용 프로그램을 추가합니다. *기본 연결 그룹* 은 이를 참조하는 모든 웹 애플리케이션에서 사용할 수 있는 서비스 애플리케이션 연결 모음입니다. 이 목록에 PowerPivot 서비스 애플리케이션을 추가해야 합니다.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e574aaf4ab748ad61dc47984360e531ca98a3238
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083087"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520629"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>수익 차트(Analysis Services - 데이터 마이닝)
   수익 차트는 마이닝 모델 사용과 관련된 예상 수익성을 표시합니다. 예를 들어 비즈니스 시나리오에서 회사가 연락 해야 하는 고객을 모델에서 예측 하는 경우를 가정해 보겠습니다. 이 경우 수익 차트 정보에 타겟 메일링 캠페인 수행 비용을 추가합니다. 그런 다음 완성된 차트에서 고객에게 무작위로 연락하는 시나리오와 비교하여 고객을 올바르게 타게팅할 때 예상되는 수익을 확인할 수 있습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "66083087"
   
      이 대화 상자에서 타겟 메일링 캠페인과 연관된 비용 및 이익을 지정합니다. 이러한 예제의 차트에는 다음 값을 사용했습니다.  
   
-    |설정|값|설명|  
+    |설정|값|의견|  
     |-------------|-----------|--------------|  
     |**표본의**|20,000|총 대상 모집단에 대한 값 설정<br /><br /> 데이터베이스에 많은 고객이 있을 수 있지만 발송 비용을 절약하려면 응답할 가능성이 가장 높은 고객 20,000명만 타게팅해야 할 수 있습니다. 이 목록은 예측 쿼리를 실행하고 예측 모델별로 확률 결과를 정렬하여 얻을 수 있습니다.|  
     |**고정 비용**|500|20,000명의 고객들에게 타겟 메일링 캠페인을 한 번 제공할 때 드는 비용을 입력합니다. 여기에는 인쇄 또는 전자 메일 캠페인 설정 비용이 포함될 수 있습니다.|  

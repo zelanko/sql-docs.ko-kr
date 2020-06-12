@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddd54c22af1e7130940fb8ff3073de0821f4fc90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525464"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536025"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 Microsoft SQL Server 2014의 다차원 모델용 Power View 기능에 대해 설명하고, 조직에서 다차원 모델용 Power View를 구현하려고 하는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "79525464"
   
  ![다차원 모델 아키텍처에 대 한 파워 뷰](../media/daxmd-architecture.gif "다차원 모델 아키텍처에 대 한 파워 뷰")  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  **서버 요구 사항**  
   
 -   다차원 모드에서 실행하는 Analysis Service와 SQL Server 2014 Enterprise 또는 Business Intelligence Edition.  

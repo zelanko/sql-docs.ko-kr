@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080804"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544288"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>표(차원 용도 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너에서 **차원 용도** 탭의 **표** 창을 사용하여 큐브 차원과 측정값 그룹 간의 차원 관계를 보고 편집할 수 있습니다. 각 차원 관계는 표에 셀로 표시되며 측정값 그룹과 차원은 각각 열과 행에 표시됩니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66080804"
 |**잘라내기**|참고:이 옵션은 사용할 수 없습니다.|  
 |**복사**|참고:이 옵션은 사용할 수 없습니다.|  
 |**붙여넣기**|참고:이 옵션은 사용할 수 없습니다.|  
-|**Delete**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계를 큐브에서 삭제하려면 선택합니다.|  
+|**삭제**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계를 큐브에서 삭제하려면 선택합니다.|  
 |**이름 바꾸기**|선택한 큐브 차원, 측정값 그룹 또는 차원 관계의 이름을 바꾸려면 선택합니다.|  
 |**속성**|**에 선택한 큐브 차원, 측정값 그룹 또는 차원 관계에 대한** 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 표시하려면 선택합니다.|  
   

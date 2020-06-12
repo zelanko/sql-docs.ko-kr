@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb5c593d07d0df235fb173c02229bcf784847306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00bcf528f8f2c9a1541016d716d9d41c2ea7ee62
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081746"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528585"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>차원 구조(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **차원 구조** 페이지를 사용하여 선택한 차원의 특성, 계층 및 수준을 수정할 수 있습니다. **차원 구조** 페이지에는 도구 모음과 세 개의 창이 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66081746"
   
      기본적으로 **차원 구조** 페이지는 차원 디자이너에서 차원을 처음 열 때 나타납니다.  
   
-## <a name="toolbar"></a>도구 모음  
+## <a name="toolbar"></a>Toolbar  
  차원 디자이너의 **차원 구조** 페이지에 있는 일반 동작을 수행하려면 도구 모음을 사용합니다. 이 창에 대한 자세한 내용은 [도구 모음&#40;차원 구조 탭, 차원 디자이너&#41;&#40;Analysis Services - 다차원 데이터&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)을 참조하세요.  
   
 ## <a name="panes"></a>창  

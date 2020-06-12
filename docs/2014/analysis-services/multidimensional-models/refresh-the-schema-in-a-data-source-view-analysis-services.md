@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5d11ac65a565df23332f24eef8a3e4ddb4e476a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5427978b2ef09238763efb5f50dd579456e99244
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175712"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545785"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 스키마 새로 고침(Analysis Services)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스에 데이터 원본 뷰(DSV)를 정의한 후 기본 데이터 원본의 스키마가 변경될 수 있습니다. 이러한 변경 내용은 배포 프로젝트에서 자동으로 감지되거나 업데이트되지 않습니다. 또한 프로젝트를 서버에 배포했을 경우 Analysis Services에서 더 이상 외부 데이터 원본에 연결할 수 없다는 처리 오류가 발생하게 됩니다.

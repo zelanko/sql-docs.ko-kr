@@ -1,5 +1,6 @@
 ---
 title: 경로 식 단계에서 조건자 지정 | Microsoft Docs
+description: XML 노드 시퀀스를 필터링 하기 위해 XQuery 경로 식의 축 단계에 조건자를 지정 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45837533806f2294665abbb242627a39d041e6d6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529807"
 ---
 # <a name="path-expressions---specifying-predicates"></a>경로 식 - 조건자 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +71,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- 각 경우에 조건자는 적용되는 경로 식의 노드에 바인딩됩니다. 예를 들어 첫 번째 경로 식은 각/People/Person 노드 내의 `Name` 첫 번째 <> 요소를 선택 하 고, 제공 된 XML 인스턴스를 사용 하 여 다음을 반환 합니다.  
+ 각 경우에 조건자는 적용되는 경로 식의 노드에 바인딩됩니다. 예를 들어 첫 번째 경로 식은 `Name` 각/People/Person 노드 내의 첫 번째 <> 요소를 선택 하 고, 제공 된 XML 인스턴스를 사용 하 여 다음을 반환 합니다.  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- 그러나 두 번째 경로 식은 첫 번째/People/Person 노드 `Name` 아래에 있는 모든 <> 요소를 선택 합니다. 따라서 다음을 반환합니다.  
+ 그러나 두 번째 경로 식은 `Name` 첫 번째/People/Person 노드 아래에 있는 모든 <> 요소를 선택 합니다. 따라서 다음을 반환합니다.  
   
 ```  
 <Name>John</Name>  
@@ -123,7 +124,7 @@ WHERE ProductModelID=7
   
 1.  조건자 식의 값이 비어 있는 시퀀스인 경우 해당 조건자의 진리 값은 False입니다.  
   
-     다음은 그 예입니다.  
+     예를 들어:  
   
     ```  
     SELECT Instructions.query('  
@@ -134,11 +135,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     이 쿼리의 경로 식은 LotSize 특성을 지정 하는 `Location` <> 요소 노드만 반환 합니다. 조건자가 특정 <`Location`>에 대해 빈 시퀀스를 반환 하는 경우 해당 작업 센터 위치는 결과에 반환 되지 않습니다.  
+     이 쿼리의 경로 식은 `Location` LotSize 특성을 지정 하는 <> 요소 노드만 반환 합니다. 조건자가 특정 <>에 대해 빈 시퀀스를 반환 하는 경우 `Location` 해당 작업 센터 위치는 결과에 반환 되지 않습니다.  
   
-2.  조건자 값은 xs: integer, xs: Boolean 또는 node\*만 될 수 있습니다. 노드의\*경우 조건자는 노드가 있는 경우 True로 평가 되 고 빈 시퀀스에 대해서는 False가 됩니다. double 및 float 유형과 같은 다른 모든 숫자 유형은 정적 형식 지정 오류를 발생시킵니다. 식의 조건자 진리 값은 결과 정수가 컨텍스트 위치의 값과 동일한 경우에만 True입니다. 또한 정수 리터럴 값과 **last ()** 함수는 필터링 된 단계 식의 카디널리티를 1로 줄입니다.  
+2.  조건자 값은 xs: integer, xs: Boolean 또는 node만 될 수 \* 있습니다. 노드의 경우 \* 조건자는 노드가 있는 경우 True로 평가 되 고 빈 시퀀스에 대해서는 False가 됩니다. double 및 float 유형과 같은 다른 모든 숫자 유형은 정적 형식 지정 오류를 발생시킵니다. 식의 조건자 진리 값은 결과 정수가 컨텍스트 위치의 값과 동일한 경우에만 True입니다. 또한 정수 리터럴 값과 **last ()** 함수는 필터링 된 단계 식의 카디널리티를 1로 줄입니다.  
   
-     예를 들어 다음 쿼리는 <`Features`> 요소의 세 번째 자식 요소 노드를 검색 합니다.  
+     예를 들어 다음 쿼리는 <> 요소의 세 번째 자식 요소 노드를 검색 `Features` 합니다.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -156,11 +157,11 @@ WHERE ProductModelID=7
   
     -   세 번째 단계는 또한 노드 테스트의 모든 노드를 나타내는 와일드카드 문자(*)를 지정합니다. 하지만 조건자는 노드를 필터링하고 세 번째 위치에 있는 노드만 반환합니다.  
   
-    -   이 쿼리는 문서 루트의 <`Features` `ProductDescription`> 요소 자식의 <> 요소 자식의 세 번째 자식 요소 노드를 반환 합니다.  
+    -   이 쿼리는 `Features` `ProductDescription` 문서 루트의 <> 요소 자식의 <> 요소 자식의 세 번째 자식 요소 노드를 반환 합니다.  
   
 3.  조건자 식의 값이 부울 유형의 간단한 유형 값인 경우 조건자 진리 값은 조건자 식의 값과 동일합니다.  
   
-     예를 들어 다음 쿼리는 XML 인스턴스, 고객 설문 조사 XML 인스턴스를 포함 하는 **xml**유형 변수에 대해 지정 됩니다. 쿼리는 자식이 있는 고객을 검색합니다. 이 쿼리에서는>1 \<\</Haschildren> haschildren입니다.  
+     예를 들어 다음 쿼리는 XML 인스턴스, 고객 설문 조사 XML 인스턴스를 포함 하는 **xml**유형 변수에 대해 지정 됩니다. 쿼리는 자식이 있는 고객을 검색합니다. 이 쿼리에서는 \<HasChildren> 1 \</HasChildren> 입니다.  
   
     ```  
     declare @x xml  
@@ -193,7 +194,7 @@ WHERE ProductModelID=7
   
     -   **For** 루프의 식에는 두 단계가 있으며 두 번째 단계에서는 조건자를 지정 합니다. 이 조건자의 값은 부울 유형의 값입니다. 이 값이 True이면 조건자의 진리 값도 True입니다.  
   
-    -   이 쿼리는 문서 루트 `Customer` 의 \<설문 조사> 요소 자식의 설문 조사에 대 한 조건자 값이 True 인 <> 요소 자식을 반환 합니다. 다음은 결과입니다.  
+    -   이 쿼리는 `Customer` \<Survey> 문서 루트의 요소 자식에 대 한 조건자 값이 True 인 <> 요소 자식을 반환 합니다. 다음은 결과입니다.  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   

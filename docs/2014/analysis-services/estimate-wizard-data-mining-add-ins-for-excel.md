@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081249"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528371"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>추정 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 추정 마법사](media/dmc-estimate.gif "데이터 마이닝 리본의 추정 마법사")  

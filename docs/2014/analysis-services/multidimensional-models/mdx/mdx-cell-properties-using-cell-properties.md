@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8888414e3ceefa237cb4f2317d3d78926765d691
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546455"
 ---
 # <a name="using-cell-properties-mdx"></a>셀 속성 사용(MDX)
   MDX의 셀 속성은 큐브와 같은 다차원 데이터 원본의 셀 내용 및 형식에 대한 정보를 포함합니다.  
@@ -56,14 +55,14 @@ SELECT [<axis_specification>
 |**FONT_NAME**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 데 사용할 글꼴입니다.|  
 |**FONT_SIZE**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 데 사용할 글꼴 크기입니다.|  
 |**FORE_COLOR**|`VALUE` 또는 `FORMATTED_VALUE` 속성을 표시하는 전경색입니다. 자세한 내용은 [FORE_COLOR 및 BACK_COLOR 내용&#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)을 참조하세요.|  
-|`FORMAT`|`FORMAT_STRING`와 같습니다.|  
+|`FORMAT`|`FORMAT_STRING`와 동일합니다.|  
 |`FORMAT_STRING`|`FORMATTED_VALUE` 속성 값을 만드는 데 사용된 형식 문자열입니다. 자세한 내용은 [FORMAT_STRING 내용&#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)을 참조하세요.|  
 |`FORMATTED_VALUE`|`VALUE` 속성의 형식이 지정된 표시를 나타내는 문자열입니다.|  
 |`LANGUAGE`|`FORMAT_STRING`이 적용될 로캘입니다. `LANGUAGE`는 대개 통화 변환을 위해 사용됩니다.|  
 |`UPDATEABLE`|셀을 업데이트할 수 있는지 여부를 나타내는 값입니다. 이 속성 값은 다음 중 하나일 수 있습니다.<br /><br /> `MD_MASK_ENABLED`(0x00000000) 셀을 업데이트할 수 있습니다.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) 셀을 업데이트할 수 없습니다.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) 셀 집합에서 셀을 업데이트할 수 있습니다.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) update 문을 사용 하 여 셀을 업데이트할 수 있습니다. 쓰기가 허용되지 않은 리프 셀을 업데이트하면 업데이트에 실패할 수 있습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) 셀의 좌표 사이에 계산 멤버가 있으므로 셀을 업데이트할 수 없습니다. where 절에서 집합을 사용 하 여 셀을 검색 했습니다. 수식이 셀 값에 영향을 주거나 계산 셀이 셀 값(집계 경로상의 한 곳)에 있더라도 셀을 업데이트할 수 있습니다. 이 시나리오에서는 계산이 결과에 영향을 주므로 최종 셀 값은 업데이트된 값이 아닐 수 있습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) 합계를 따르지 않는 측정값 (개수, 최소값, 최대값, 고유 카운트, 반 가산적 측정값)은 업데이트할 수 없으므로 셀을 업데이트할 수 없습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) 셀이 측정값 및 측정값의 측정값 그룹과 관련이 없는 차원 멤버의 교차에 있기 때문에 업데이트할 수 없습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) 셀에 보안이 설정 되어 있으므로 셀을 업데이트할 수 없습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) 나중에 사용 하도록 예약 되어 있습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) 내부 이유로 셀을 업데이트할 수 없습니다.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) 마이닝 모델, 간접 또는 데이터 마이닝 차원에서는 업데이트가 지원 되지 않으므로 셀을 업데이트할 수 없습니다.|  
 |`VALUE`|형식이 지정되지 않은 셀 값입니다.|  
   
- `CELL_ORDINAL`, `FORMATTED_VALUE` 및 `VALUE` 셀 속성만 필요합니다. 모든 셀 속성(고유 또는 공급자별)은 해당 데이터 형식 및 공급자 지원을 포함해 `PROPERTIES` 스키마 행 집합에 정의되어 있습니다. `PROPERTIES` 스키마 행 집합에 대 한 자세한 내용은 [MDSCHEMA_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)을 참조 하세요.  
+ `CELL_ORDINAL`, `FORMATTED_VALUE` 및 `VALUE` 셀 속성만 필요합니다. 모든 셀 속성(고유 또는 공급자별)은 해당 데이터 형식 및 공급자 지원을 포함해 `PROPERTIES` 스키마 행 집합에 정의되어 있습니다. 스키마 행 집합에 대 한 자세한 내용은 `PROPERTIES` [MDSCHEMA_PROPERTIES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)을 참조 하세요.  
   
  기본적으로 `CELL PROPERTIES` 키워드를 사용하지 않으면 `VALUE`, `FORMATTED_VALUE`, 및 `CELL_ORDINAL` 순서로 셀 속성이 반환됩니다. `CELL PROPERTIES` 키워드를 사용하면 키워드로 명시적으로 지정한 셀 속성만 반환됩니다.  
   
@@ -80,7 +79,7 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORMAT_STRING, FORE_COLOR, BACK_COLOR
  일반 행 집합을 반환하는 MDX 쿼리는 셀 속성을 반환하지 않습니다. 이 경우에 각 셀은 `FORMATTED_VALUE` 셀 속성만 반환되는 것처럼 표시됩니다.  
   
 ## <a name="setting-cell-properties"></a>셀 속성 설정  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다양 한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
+ 에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다양 한 위치에서 셀 속성을 설정할 수 있습니다. 예를 들어 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 있는 큐브 편집기의 큐브 구조 탭에서 일반 측정값에 대해 Format String 속성을 설정할 수 있습니다. 또한 큐브 편집기의 계산 탭에서 큐브에 정의된 계산 측정값에 대해서도 동일한 속성을 설정할 수 있습니다. 쿼리의 WITH 절에 정의된 계산 측정값에도 형식 문자열이 정의됩니다. 다음 쿼리에서는 계산 측정값에 대해 셀 속성을 설정하는 방법을 보여 줍니다.  
   
 ```  
 WITH MEMBER MEASURES.CELLPROPERTYDEMO AS [Measures].[Internet Sales Amount]  

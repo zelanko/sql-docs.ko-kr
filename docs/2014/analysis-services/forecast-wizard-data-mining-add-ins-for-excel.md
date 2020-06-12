@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081028"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544425"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>예측 마법사(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본의 연결 마법사](media/dmc-forecast.gif "데이터 마이닝 리본의 연결 마법사")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081028"
   
 3.  **예측** 페이지에서 **타임 스탬프**에 대해 사례 계열로 사용할 수 있는 고유 숫자 값 (날짜 및 시간 값 포함)이 포함 된 열을 선택 합니다. 데이터 원본은 이 열을 기준으로 오름차순으로 정렬되어야 합니다.  
   
-     데이터에 이러한 열이 없는 경우> 타임 스탬프 없음 옵션 \<을 사용할 수 있습니다. 마법사는 입력 데이터에 대한 고유 순서 열을 추가합니다. 따라서 마법사를 실행하고 이 옵션을 선택하기 전에 데이터가 원하는 순서로 정렬되어 있는지 확인해야 합니다.  
+     데이터에 이러한 열이 없으면 옵션을 사용할 수 있습니다 \<no time stamp> . 마법사는 입력 데이터에 대한 고유 순서 열을 추가합니다. 따라서 마법사를 실행하고 이 옵션을 선택하기 전에 데이터가 원하는 순서로 정렬되어 있는지 확인해야 합니다.  
   
 4.  필요에 따라 **매개 변수** 를 클릭 하 고 마이닝 모델의 동작을 사용자 지정할 수 있습니다.  
   

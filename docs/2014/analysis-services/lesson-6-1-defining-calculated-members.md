@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9be99e5f5107491e2bac14c3a1590ccb1e1c778f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493881"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542845"
 ---
 # <a name="defining-calculated-members"></a>계산 멤버 정의
   계산 멤버는 큐브 데이터, 산술 연산자, 숫자 및 함수 조합을 기반으로 정의되는 차원 또는 측정값 그룹의 멤버입니다. 예를 들어 큐브에 있는 두 개의 물리적 측정값 합계를 계산하는 계산 멤버를 만들 수 있습니다. 계산 멤버 정의는 큐브에 저장되지만 해당 값은 쿼리 시간에 계산됩니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493881"
   
      ![계산 식 창 양식](../../2014/tutorials/media/l6-calculatedmembers-02.gif "계산 식 창 양식")  
   
-3.  **이름** 상자에서 계산 측정값의 이름을로 `[Total Sales Amount]`변경 합니다.  
+3.  **이름** 상자에서 계산 측정값의 이름을로 변경 `[Total Sales Amount]` 합니다.  
   
      계산 멤버의 이름에 공백이 들어 있으면 계산 멤버 이름을 대괄호로 묶어야 합니다.  
   
@@ -85,9 +84,9 @@ ms.locfileid: "69493881"
   
      ![계산 식 창의 스크립트](../../2014/tutorials/media/l6-calculatedmembers-04.gif "계산 식 창의 스크립트")  
   
-12. **계산** 탭의 도구 모음에서 **폼 보기**를 클릭 하 고 `[Total Sales Amount]` **스크립트 구성 도우미** 창에서가 선택 되어 있는지 확인 한 다음 **새 계산 멤버**를 클릭 합니다.  
+12. **계산** 탭의 도구 모음에서 **폼 보기**를 클릭 하 `[Total Sales Amount]` 고 **스크립트 구성 도우미** 창에서가 선택 되어 있는지 확인 한 다음 **새 계산 멤버**를 클릭 합니다.  
   
-13. 이 새 계산 멤버의 이름을로 `[Total Product Cost]`변경 하 고 **식** 상자에 다음 식을 만듭니다.  
+13. 이 새 계산 멤버의 이름을로 변경 하 `[Total Product Cost]` 고 **식** 상자에 다음 식을 만듭니다.  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -103,7 +102,7 @@ ms.locfileid: "69493881"
   
 1.  `[Total Product Cost]` **스크립트 구성 도우미** 창에서가 선택 되어 있는지 확인 한 다음 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭 합니다.  
   
-2.  **이름** 상자에서이 새 계산 측정값의 이름을로 `[Internet GPM]`변경 합니다.  
+2.  **이름** 상자에서이 새 계산 측정값의 이름을로 변경 `[Internet GPM]` 합니다.  
   
 3.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "69493881"
   
 6.  **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-7.  **이름** 상자에서이 새 계산 측정값의 이름을로 `[Reseller GPM]`변경 합니다.  
+7.  **이름** 상자에서이 새 계산 측정값의 이름을로 변경 `[Reseller GPM]` 합니다.  
   
 8.  **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "69493881"
   
 11. **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-12. **이름** 상자에서이 계산 측정값의 이름을로 `[Total GPM]`변경 합니다.  
+12. **이름** 상자에서이 계산 측정값의 이름을로 변경 `[Total GPM]` 합니다.  
   
 13. **식** 상자에서 다음 MDX 식을 만듭니다.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "69493881"
   
 16. **계산** 탭의 도구 모음에서 **스크립트 보기** 를 클릭하고 계산 스크립트에 방금 추가한 3개의 계산을 검토합니다.  
   
-17. 계산 스크립트에서 `[Internet GPM]` 계산 바로 앞에 새 줄을 추가한 후 다음 텍스트를 별도의 줄로 스크립트에 추가 합니다.  
+17. 계산 스크립트에서 계산 바로 앞에 새 줄을 추가한 `[Internet GPM]` 후 다음 텍스트를 별도의 줄로 스크립트에 추가 합니다.  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -167,11 +166,11 @@ ms.locfileid: "69493881"
   
 1.  **계산** 탭의 도구 모음에서 **폼 보기**를 클릭합니다.  
   
-2.  **스크립트 구성 도우미** 창에서를 선택한 `[Total GPM]`다음 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭 합니다.  
+2.  **스크립트 구성 도우미** 창에서를 선택한 `[Total GPM]` 다음 **계산** 탭의 도구 모음에서 **새 계산 멤버** 를 클릭 합니다.  
   
      **새 계산 멤버** 를 클릭하기 전에 **스크립트 구성 도우미** 창에서 최종 계산 멤버를 클릭하면 새 계산 멤버가 스크립트 끝에 삽입됩니다. 스크립트는 **스크립트 구성 도우미** 창에 나타난 순서대로 실행됩니다.  
   
-3.  이 새 계산 멤버의 이름을로 `[Internet Sales Ratio to All Products]`변경 합니다.  
+3.  이 새 계산 멤버의 이름을로 변경 `[Internet Sales Ratio to All Products]` 합니다.  
   
 4.  **식** 입력란에 다음 식을 입력합니다.  
   
@@ -194,7 +193,7 @@ ms.locfileid: "69493881"
   
 7.  **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-8.  이 계산 멤버의 이름을로 `[Reseller Sales Ratio to All Products]`변경 합니다.  
+8.  이 계산 멤버의 이름을로 변경 `[Reseller Sales Ratio to All Products]` 합니다.  
   
 9. **식** 입력란에 다음 식을 입력합니다.  
   
@@ -215,7 +214,7 @@ ms.locfileid: "69493881"
   
 12. **계산** 탭의 도구 모음에서 **새 계산 멤버**를 클릭합니다.  
   
-13. 이 계산 멤버의 이름을로 `[Total Sales Ratio to All Products]`변경 합니다.  
+13. 이 계산 멤버의 이름을로 변경 `[Total Sales Ratio to All Products]` 합니다.  
   
 14. **식** 입력란에 다음 식을 입력합니다.  
   
@@ -236,7 +235,7 @@ ms.locfileid: "69493881"
   
 17. **계산** 탭의 도구 모음에서 **스크립트 보기**를 클릭하고 계산 스크립트에 방금 추가한 3개의 계산을 검토합니다.  
   
-18. 계산 스크립트에서 `[Internet Sales Ratio to All Products]` 계산 바로 앞에 새 줄을 추가한 후 다음 텍스트를 별도의 줄로 스크립트에 추가 합니다.  
+18. 계산 스크립트에서 계산 바로 앞에 새 줄을 추가한 `[Internet Sales Ratio to All Products]` 후 다음 텍스트를 별도의 줄로 스크립트에 추가 합니다.  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  

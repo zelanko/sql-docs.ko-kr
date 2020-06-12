@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544415"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>일반(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio에서 **파티션 속성** 대화 상자의 **일반** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 있는 큐브에 대해 측정값 그룹 내 파티션의 일반 속성을 설정할 수 있습니다.  
@@ -37,13 +36,13 @@ ms.locfileid: "66081069"
 |**마지막 처리**|파티션을 마지막으로 처리한 날짜와 시간을 표시합니다.|  
 |**최종 스키마 업데이트**|파티션의 메타데이터가 마지막으로 업데이트된 날짜와 시간을 표시합니다.|  
 |**이름**|파티션 이름을 표시합니다.|  
-|**처리 모드**|파티션의 처리 모드를 선택합니다. 개체의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 처리 모드에 대 한 자세한 내용은 [다차원 모델 개체 처리](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.|  
+|**처리 모드**|파티션의 처리 모드를 선택합니다. 개체의 처리 모드에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [다차원 모델 개체 처리](multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조 하세요.|  
 |**원격 데이터 원본 ID**|파티션의 원본 데이터를 검색할 원격 데이터 원본의 식별자를 표시합니다.<br /><br /> 참고: 이 속성은 원격 파티션에 대한 값만 포함합니다.|  
 |**조각**|파티션이 나타내는 데이터 조각을 식별하는 식을 표시합니다.|  
 |**원본**|파티션에 대한 원본 데이터를 제공하는 테이블 또는 쿼리를 표시합니다.|  
-|**State**|파티션의 현재 처리 상태를 표시합니다.|  
+|**상태**|파티션의 현재 처리 상태를 표시합니다.|  
 |**저장소 위치**|파티션에 대한 데이터가 저장된 폴더를 표시합니다.<br /><br /> 참고: 이 속성은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대해 기본 스토리지 위치 이외의 스토리지 위치가 지정된 경우에만 값을 포함합니다.|  
-|**Type**|파티션의 유형을 표시합니다.|  
+|**형식**|파티션의 유형을 표시합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [파티션 &#40;Analysis Services 다차원 데이터&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

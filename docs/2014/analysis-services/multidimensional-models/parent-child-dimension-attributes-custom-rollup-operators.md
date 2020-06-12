@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3ddd9fc-5fa3-4227-9322-8c45a5b5c2c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 20f25474b15ecf58c45383a8290bb13f956a5db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db12ccc6703ee4863dd3b6bd598d2317b54fce6a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545865"
 ---
 # <a name="custom-rollup-operators-in-parent-child-dimensions"></a>부모-자식 차원의 사용자 지정 롤업 연산자
   사용자 지정 롤업 연산자는 부모-자식 계층에서 멤버 값이 부모 값으로 롤업되는 방식을 제어할 수 있는 간단한 방법을 제공합니다. 부모-자식 관계를 포함하는 차원에서 부모 특성의 모든 계산되지 않는 멤버에 대한 롤업을 지정하는 단항 연산자가 있는 열을 지정합니다. 그러면 부모 멤버의 값이 계산될 때마다 멤버에 단항 연산자가 적용됩니다.  

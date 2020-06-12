@@ -1,5 +1,5 @@
 ---
-title: sysjobsteps (Transact-sql) | Microsoft Docs
+title: dbo.sysjobsteps (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827324"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423404"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827324"
 |**step_id**|**int**|작업 단계의 ID입니다.|  
 |**step_name**|**sysname**|작업 단계의 이름입니다.|  
 |**하위**|**nvarchar(40)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 작업 단계를 실행하는 데 사용하는 하위 시스템의 이름입니다.|  
-|**명령**|**nvarchar(max)**|**하위 시스템**에서 실행할 명령입니다.|  
+|**command**|**nvarchar(max)**|**하위 시스템**에서 실행할 명령입니다.|  
 |**flags**|**int**|예약되어 있습니다.|  
 |**additional_parameters**|**ntext**|예약되어 있습니다.|  
 |**cmdexec_success_code**|**int**|성공을 표시 하기 위해 **CmdExec** 하위 시스템 단계에서 반환 되는 오류 수준 값입니다.|  
-|**on_success_action**|**tinyint**|단계가 성공적으로 실행되었을 때 수행되는 동작입니다.|  
+|**on_success_action**|**tinyint**|단계가 성공적으로 실행되었을 때 수행되는 동작입니다.<br /><br /> **1** = (기본값) 성공으로 종료<br /><br /> **2** = 실패로 종료<br /><br /> **3** = 다음 단계로 이동<br /><br /> **4** = 단계로 이동 _on_success_step_id_|
 |**on_success_step_id**|**int**|단계가 성공적으로 실행되었을 때 다음으로 실행되는 단계의 ID입니다.|  
-|**on_fail_action**|**tinyint**|단계가 성공적으로 실행되지 않았을 때 수행되는 동작입니다.|  
+|**on_fail_action**|**tinyint**|단계가 성공적으로 실행되지 않았을 때 수행되는 동작입니다.<br /><br /> **1** = 성공으로 종료<br /><br /> **2** = (기본값) 실패로 종료<br /><br /> **3** = 다음 단계로 이동<br /><br /> **4** = 단계로 이동 _on_fail_step_id_|
 |**on_fail_step_id**|**int**|단계가 성공적으로 실행되지 않았을 때 다음으로 실행되는 단계의 ID입니다.|  
-|**서버인**|**sysname**|예약되어 있습니다.|  
+|**server**|**sysname**|예약되어 있습니다.|  
 |**database_name**|**sysname**|**하위 시스템이** TSQL 인 경우 **명령이** 실행 되는 데이터베이스의 이름입니다.|  
 |**database_user_name**|**sysname**|단계를 실행할 때 그 계정을 사용할 데이터베이스 사용자의 이름입니다.|  
 |**retry_attempts**|**int**|단계가 실패했을 때 재시도하는 횟수입니다.|  

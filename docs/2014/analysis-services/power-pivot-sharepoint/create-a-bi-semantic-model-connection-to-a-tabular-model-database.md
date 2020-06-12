@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37ce07dd3ae9cbd46a6ddd1860c3178fe154513a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071657"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535191"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Create a BI Semantic Model Connection to a Tabular Model Database
   SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 model 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071657"
   
  이 항목은 다음과 같은 섹션으로 구성됩니다. 지정된 순서로 각 태스크를 수행하십시오.  
   
- [필수 조건 검토](#bkmk_prereq)  
+ [필수 구성 요소 검토](#bkmk_prereq)  
   
  [공유 서비스 애플리케이션에 Analysis Services 관리 권한 부여](#bkmk_ssas)  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66071657"
   
  [다음 단계](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> 필수 구성 요소 검토  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>필수 조건 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
  BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)를 참조 하세요.  

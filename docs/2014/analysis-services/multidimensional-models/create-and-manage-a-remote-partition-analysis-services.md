@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076260"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536155"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>원격 파티션 만들기 및 관리(Analysis Services)
   측정값 그룹을 분할할 때 원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보조 데이터베이스를 파티션 스토리지로 구성할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66076260"
   
  전용 보조 데이터베이스는 단 하나의 master 데이터베이스에 대한 원격 파티션을 저장할 수 있지만 모든 보조 데이터베이스가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 동일한 원격 인스턴스에 있는 경우 master 데이터베이스는 여러 보조 데이터베이스를 사용할 수 있습니다. 원격 파티션 전용 데이터베이스의 차원은 연결된 차원으로 생성됩니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  원격 파티션을 만들기 전에 다음 조건이 충족되어야 합니다.  
   
 -   파티션을 저장하려면 두 번째 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 전용 데이터베이스가 있어야 합니다. 보조 데이터베이스는 master 데이터베이스에 원격 파티션 스토리지를 제공하는 한 가지 용도로 사용됩니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "66076260"
 -   재해 복구 계획이 원격 파티션의 백업 및 복원에 적합한지 확인해야 합니다. 원격 파티션을 사용하면 백업 및 복원 작업이 복잡해질 수 있습니다. 필요한 데이터를 복원할 수 있도록 계획을 철저히 테스트해야 합니다.  
   
 ## <a name="configure-remote-partitions"></a>원격 파티션 구성  
- 인스턴스를 실행 하는 별개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 두 컴퓨터는 각각 한 컴퓨터를 마스터 서버로 지정 하 고 다른 컴퓨터는 하위 서버로 지정 하는 원격 파티션 배열을 만드는 데 필요 합니다.  
+ 인스턴스를 실행 하는 별개의 두 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 각각 한 컴퓨터를 마스터 서버로 지정 하 고 다른 컴퓨터는 하위 서버로 지정 하는 원격 파티션 배열을 만드는 데 필요 합니다.  
   
  다음 절차에서는 마스터 서버에 배포된 큐브 데이터베이스가 있는 두 개의 서버 인스턴스가 있다고 가정합니다. 이 절차에서는 큐브 데이터베이스를 db 마스터라고 합니다. 원격 파티션을 포함하는 스토리지 데이터베이스는 db 스토리지라고 합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076260"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>원격 서버에서 MasterDataSourceID 데이터베이스 속성 설정(SSMS)  
   
-1.  종속 서버: 저장소 데이터베이스인 db 저장소를 마우스 오른쪽 단추로 클릭 하 고 **데이터베이스** | 스크립팅**ALTER** | **새 쿼리 편집기 창**을 가리킵니다.  
+1.  종속 서버: 저장소 데이터베이스인 db 저장소를 마우스 오른쪽 단추로 클릭 하 고 **데이터베이스 스크립팅**  |  **ALTER**  |  **새 쿼리 편집기 창**을 가리킵니다.  
   
 2.  XMLA에 **MasterDataSourceID** 를 추가한 다음 큐브 데이터베이스(db 마스터) ID를 값으로 지정합니다. XMLA는 다음과 비슷해야 합니다.  
   

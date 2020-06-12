@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062435"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528039"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
   이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북아메리카, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66062435"
 -   정보는 감사하기가 어렵습니다. 재무 부서에서는 대량 쿼리할 데이터 원본으로 현재 **AdventureWorksDW2012** 데이터베이스만 사용합니다. 데이터를 개별 스프레드시트에 다운로드하고 데이터 준비와 스프레드시트 조작에 상당한 시간을 소비합니다. 따라서 회사 전체에서 기업 재무 보고서를 준비, 감사 및 관리하기가 어렵습니다.  
   
 ## <a name="the-solution"></a>솔루션  
- 최근 데이터 웨어하우스 팀은 현재 분석 시스템의 설계를 검토했습니다. 검토에는 현재의 문제와 향후 요구 사항에 대한 차이점 분석이 포함됩니다. 데이터 웨어하우스 팀은 **AdventureWorksDW2012** 데이터베이스가 일치된 차원과 대리 키가 있는 잘 설계된 차원 데이터베이스임을 확인했습니다. 일치된 차원이 제공되므로 시간 차원이나 제품 차원과 같은 여러 데이터 마트에 차원을 사용할 수 있습니다. 대리 키는 차원과 팩트 테이블을 연결하는 인공 키로 고유성을 확보하고 성능을 향상시키는 데 사용됩니다. 또한 데이터 웨어하우스 팀은 현재 **AdventureWorksDW2012** 데이터베이스의 기준 테이블을 로드하고 관리하는 데 큰 문제가 없음을 확인했습니다. 따라서 팀은를 사용 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 하 여 다음을 수행 하기로 결정 했습니다.  
+ 최근 데이터 웨어하우스 팀은 현재 분석 시스템의 설계를 검토했습니다. 검토에는 현재의 문제와 향후 요구 사항에 대한 차이점 분석이 포함됩니다. 데이터 웨어하우스 팀은 **AdventureWorksDW2012** 데이터베이스가 일치된 차원과 대리 키가 있는 잘 설계된 차원 데이터베이스임을 확인했습니다. 일치된 차원이 제공되므로 시간 차원이나 제품 차원과 같은 여러 데이터 마트에 차원을 사용할 수 있습니다. 대리 키는 차원과 팩트 테이블을 연결하는 인공 키로 고유성을 확보하고 성능을 향상시키는 데 사용됩니다. 또한 데이터 웨어하우스 팀은 현재 **AdventureWorksDW2012** 데이터베이스의 기준 테이블을 로드하고 관리하는 데 큰 문제가 없음을 확인했습니다. 따라서 팀은를 사용 하 여 다음을 수행 하기로 결정 했습니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   분석적인 분석 및 보고를 위해 공통 메타데이터 계층을 통해 통합된 데이터 액세스를 제공합니다.  
   

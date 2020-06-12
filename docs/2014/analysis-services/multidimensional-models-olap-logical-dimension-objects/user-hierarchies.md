@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811596"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545115"
 ---
 # <a name="user-hierarchies"></a>사용자 계층
   사용자 정의 계층은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원의 멤버를 계층 구조로 구성 하 고 큐브에서 탐색 경로를 제공 하는 데 사용 되는 특성의 사용자 정의 계층입니다. 예를 들어 다음 표에서는 시간 차원에 대한 차원 테이블을 정의합니다. 차원 테이블은 Year, Quarter 및 Month라는 3가지 특성을 지원합니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "72811596"
  Province 수준은 CountryRegion 수준의 다른 멤버와 연결된 멤버로 채워지고 City 수준의 멤버는 Province 수준의 해당 멤버와 연결됩니다. 그러나 CountryRegion 수준의 Vatican City 멤버에게는 Province 수준의 연결된 멤버가 없기 때문에 City 수준의 멤버가 CountryRegion 수준의 Vatican City 멤버에 직접 연결되어야 합니다. 이러한 변경으로 인해 이 차원은 비정형 계층 구조가 됩니다. CountryRegion의 Vatican City가 City의 Vatican City 부모가 되는데 이것은 City 수준에서 Vatican City 멤버 바로 위에 있는 수준에 있지 않습니다. 자세한 내용은 [비정형 계층 구조](../multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md)를 참조하세요.  
   
 ### <a name="parent-child-hierarchies"></a>부모-자식 계층 구조  
- 차원의 부모-자식 계층 구조는 멤버 상호 간의 관련 방식을 결정하는 부모 특성이라고 하는 특수한 특성을 사용하여 정의합니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 차원 스키마는 차원 주 테이블에 있는 자체 참조 관계에 따라 다릅니다. 예를 들어 다음 다이어그램에서는 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예제 데이터베이스의 나이 **조 직** 차원 주 테이블을 보여 줍니다.  
+ 차원의 부모-자식 계층 구조는 멤버 상호 간의 관련 방식을 결정하는 부모 특성이라고 하는 특수한 특성을 사용하여 정의합니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 차원 스키마는 차원 주 테이블에 있는 자체 참조 관계에 따라 다릅니다. 예를 들어 다음 다이어그램에서는 예제 데이터베이스의 나이 **조 직** 차원 주 테이블을 보여 줍니다 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  ![DimOrganization 테이블의 자체 참조 조인](../dev-guide/media/dimorganization.gif "DimOrganization 테이블의 자체 참조 조인")  
   

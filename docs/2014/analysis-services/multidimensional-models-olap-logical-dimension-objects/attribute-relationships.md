@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728519"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545210"
 ---
 # <a name="attribute-relationships"></a>의 차원 디자이너에 있는 차원 구조 뷰의
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]차원 내의 특성은 항상 키 특성과 직접 또는 간접적으로 관련이 있습니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.  
+  에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원 내의 특성은 항상 키 특성과 직접 또는 간접적으로 관련이 있습니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.  
   
 -   키 특성과 주 차원 테이블의 열에 바인딩된 각각의 키가 아닌 특성 간  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62728519"
   
 -   성별  
   
--   메일  
+-   Email  
   
 -   City  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728519"
   
  수준 차원의 `SourceAttribute` 속성은 수준을 설명하는 데 사용되는 특성을 결정합니다. 특성에 대한 `KeyColumns` 속성은 멤버를 공급하는 데이터 원본 뷰의 열을 지정합니다. 특성에 대한 `NameColumn` 속성은 멤버에 대해 다른 이름 열을 지정할 수 있습니다.  
   
- 를 사용 하 여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]사용자 정의 계층에 수준을 정의 하려면 **차원 디자이너** 를 사용 하 여 차원 특성, 차원 테이블의 열 또는 큐브의 데이터 원본 뷰에 포함 된 관련 테이블의 열을 선택할 수 있습니다. 사용자 정의 계층을 만드는 방법에 대 한 자세한 내용은 [사용자 정의 계층 만들기](../multidimensional-models/user-defined-hierarchies-create.md)를 참조 하세요.  
+ 를 사용 하 여 사용자 정의 계층에 수준을 정의 하려면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **차원 디자이너** 를 사용 하 여 차원 특성, 차원 테이블의 열 또는 큐브의 데이터 원본 뷰에 포함 된 관련 테이블의 열을 선택할 수 있습니다. 사용자 정의 계층을 만드는 방법에 대 한 자세한 내용은 [사용자 정의 계층 만들기](../multidimensional-models/user-defined-hierarchies-create.md)를 참조 하세요.  
   
  Analysis Services에서는 멤버의 내용에 대해 대체로 하나의 가정이 이루어집니다. 리프 멤버에는 하위 멤버가 없으며 기본 데이터 원본에서 파생된 데이터가 포함됩니다. 리프가 아닌 멤버에는 하위 멤버가 있고 자식 멤버에 대해 수행된 집계에서 파생된 데이터가 포함됩니다. 집계된 수준에서 멤버는 종속 수준의 집계를 기반으로 합니다. 따라서 수준에 대한 원본 특성에서 `IsAggregatable` 속성을 `False`로 설정한 경우 집계 가능한 특성을 상위 수준으로 추가하면 안 됩니다.  
   

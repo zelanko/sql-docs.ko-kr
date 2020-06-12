@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ab618eaa2d8d54b08e3d01fa238d19451084eff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3fd3d7607cad8c8e721e21f4e5ad00255817792
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069614"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538265"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>변환 유형 선택(비즈니스 인텔리전스 마법사)
   **변환 유형 선택** 페이지를 사용하여 여러 통화로 저장된 트랜잭션에 대해 현지 통화와 보고 통화 간의 관계를 정의할 수 있습니다. 현지 통화는 **측정값 선택** 페이지에서 선택한 측정값에 대한 트랜잭션이 저장되는 통화입니다. 보고 통화는 **측정값 선택** 페이지에서 선택한 트랜잭션이 번역되는 통화입니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81a72e0009659e06fd27e9c402f17ddab259d228
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540185"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>통합 문서에서 데이터 연결에 대한 데이터를 새로 고칠 수 없습니다. 다시 시도하거나 시스템 관리자에게 문의하십시오. PowerPivot 데이터 연결을: PowerPivot 데이터
   Excel Services는 PowerPivot 서버에 연결 요청을 제출하고 이 요청이 실패하는 경우 PowerPivot 데이터를 포함하는 Excel 통합 문서에 대해 이 오류를 반환합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "66070938"
   
  열려는 통합 문서가 SQL Server 2008 R2 버전의 PowerPivot for Excel에서 작성되었을 수 있습니다. 이는 대개 데이터 연결 문자열에 지정된 Analysis Services 데이터 공급자가 요청을 처리할 컴퓨터에 없는 경우에 해당합니다.  
   
- 이 경우 ULS 로그에 "통합 문서\<에 대 한 ' PowerPivot 데이터 '를 새로 고치지 못했습니다> '"과 "연결을 가져올 수 없습니다." 라는 메시지가 표시 됩니다.  
+ 이 경우 ULS 로그에 "통합 문서 ' '의 ' PowerPivot 데이터 '를 새로 고치지 못했습니다." \<URL to workbook> 를 입력 하 고 "연결을 가져올 수 없습니다." 라는 메시지가 표시 됩니다.  
   
  통합 문서의 버전을 확인하려면 Excel에서 해당 통합 문서를 열고 연결 문자열에 지정된 데이터 공급자를 확인합니다. SQL Server 2008 R2 통합 문서는 MSOLAP.4를 데이터 공급자로 사용합니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66070938"
   
  이 문제를 해결하려면 컴퓨터를 PowerPivot 서버와 같은 도메인에 참가시키거나 로컬 컴퓨터에 도메인 컨트롤러를 설치합니다. 두 번째 해결 방법인 도메인 컨트롤러 설치를 수행하려면 모든 서비스 및 사용자에 대해 로컬 도메인 계정을 만들어야 합니다. 정의한 계정에 대해 서비스 계정 및 SharePoint 권한을 구성해야 합니다.  
   
- 오프라인 상태로 SharePoint용 PowerPivot을 사용하는 것이 목적인 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. PowerPivot 오프 라인을 사용 하는 방법에 대 한 자세한 내용은의 [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)"네트워크에서 powerpivot 서버 사용"에 대 한 블로그 항목을 참조 하세요.  
+ 오프라인 상태로 SharePoint용 PowerPivot을 사용하는 것이 목적인 경우 컴퓨터에 도메인 컨트롤러를 설치하면 유용합니다. PowerPivot 오프 라인을 사용 하는 방법에 대 한 자세한 내용은의 "네트워크에서 PowerPivot 서버 사용"에 대 한 블로그 항목을 참조 하세요 [http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241) .  
   
  **시나리오 4: 서버가 불안정한 경우**  
   

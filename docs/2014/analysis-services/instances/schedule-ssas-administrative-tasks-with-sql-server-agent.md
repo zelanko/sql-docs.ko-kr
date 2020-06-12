@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd751efccc038c131bc61338d7adcd8e10a67d93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079680"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543775"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server 에이전트를 사용하여 SSAS 관리 태스크 예약
   SQL Server 에이전트 서비스를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리 작업을 예약하여 필요한 순서 및 시간에 실행할 수 있습니다. 예약된 태스크를 사용하면 정기적으로 또는 예측 가능한 주기에 따라 프로세스가 자동으로 실행되도록 할 수 있습니다. 비즈니스 활동을 수행하지 않는 시간 동안 큐브 처리 등의 관리 태스크가 실행되도록 예약할 수 있습니다. 또한 SQL Server 에이전트 작업 내에 작업 단계를 만들어 태스크 실행 순서를 지정할 수 있습니다. 예를 들어 큐브를 처리한 다음 큐브 백업을 수행할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66079680"
 ## <a name="prerequisites"></a>사전 요구 사항  
  SQL Server 에이전트 서비스가 설치되어 있어야 합니다.  
   
- 기본적으로 서비스 계정으로 작업이 실행됩니다. 에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SQL Server 에이전트의 기본 계정은 NT Service\SQLAgent $\<instancename>입니다. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services&#41;&#40;서버 관리자 권한 부여 ](grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조 하세요.  
+ 기본적으로 서비스 계정으로 작업이 실행됩니다. 에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SQL Server 에이전트의 기본 계정은 NT Service\SQLAgent $입니다 \<instancename> . 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services&#41;&#40;서버 관리자 권한 부여 ](grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조 하세요.  
   
  또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 대 한 샘플 데이터 및 프로젝트 설치](../install-sample-data-and-projects.md)를 참조 하세요.  
   
@@ -81,9 +80,9 @@ ms.locfileid: "66079680"
   
 6.  **새 작업 단계** 대화 상자에서 **단계 이름**에 단계 이름을 입력합니다.  
   
-7.  **서버**에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스에 대해 **localhost**를 입력하고 명명된 인스턴스에 대해 **localhost\\**\<*instance name*>를 입력합니다.  
+7.  **서버**에의 기본 인스턴스에 대해 **localhost** 를 입력 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하 고 명명 된 인스턴스의 경우 ** \\ localhost** 를 입력 \<*instance name*> 합니다.  
   
-     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. 기본 인스턴스의 경우 \< *서버 이름* \<> 형식을, 명명 된 인스턴스의 경우 *서버 이름*>\\<*인스턴스 이름*>을 사용 합니다.  
+     원격 컴퓨터에서 작업을 실행하려는 경우 작업을 실행할 서버 이름과 인스턴스 이름을 사용합니다. \<*server name*>명명 된 인스턴스에 대 한 기본 인스턴스 및 \<*server name*> \\ < *인스턴스 이름*> 형식을 사용 합니다.  
   
 8.  **유형**에서 **SQL Server Analysis Services 명령**을 선택합니다.  
   
@@ -213,7 +212,7 @@ ms.locfileid: "66079680"
   
      이 단계에서 일요일 오전 12시 일정을 만듭니다. 다음 단계에서는 수동으로 작업을 실행하는 방법을 보여 줍니다. 모니터링할 때 작업을 실행할 일정을 선택할 수도 있습니다.  
   
-14. **확인**을 클릭하여 대화 상자를 닫습니다.  
+14. **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 15. **개체 탐색기**에서 **작업**을 확장하고 만들어진 작업을 마우스 오른쪽 단추로 클릭한 후 **작업 시작 단계**를 선택합니다.  
   

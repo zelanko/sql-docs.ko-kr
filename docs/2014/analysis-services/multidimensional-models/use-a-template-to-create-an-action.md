@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e861532cfd185d07d94bd3b62659303e8162696
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072684"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541367"
 ---
 # <a name="use-a-template-to-create-an-action"></a>템플릿을 사용하여 동작 만들기
   큐브 디자이너의 **동작** 뷰에는 일반적인 동작을 만드는 데 사용할 수 있는 수많은 템플릿이 들어 있습니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다.  

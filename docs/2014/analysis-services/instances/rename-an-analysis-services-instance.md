@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079616"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543785"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services 인스턴스 이름 바꾸기
-  **인스턴스 이름 바꾸기** 대화 상자를 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하 여의 기존 인스턴스 이름을 바꿀 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **인스턴스 이름 바꾸기** 대화 상자를 사용 하 여의 기존 인스턴스 이름을 바꿀 수 있습니다.  
   
 > [!IMPORTANT]  
 >  인스턴스의 이름을 바꾸는 동안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름 바꾸기 도구는 승격된 권한으로 실행되어 해당 인스턴스와 연결된 레지스트리 항목, Windows 서비스 이름 및 보안 계정을 업데이트합니다. 이러한 동작이 수행되도록 하려면 이 도구를 로컬 시스템 관리자로 실행하십시오.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079616"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Analysis Services의 인스턴스 이름을 변경하려면  
   
-1.  C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio에서 **인스턴스 이름 바꾸기** 도구인 asinstancerename.exe를 시작 합니다 **.**  
+1.  C:\Program Files\Microsoft SQL Server\110\tools\binn\managementstudio에서 **인스턴스 이름 바꾸기** 도구인 **asinstancerename.exe**를 시작 합니다.  
   
 2.  **인스턴스 이름 바꾸기** 대화 상자의 **이름을 바꿀 인스턴스** 목록에서 이름을 바꿀 인스턴스를 선택합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079616"
   
      다음 예제에서 이에 대해 설명합니다. 기본 가상 계정을 사용 하 여 "Tabular" 라는 인스턴스로 테이블 형식 모드 서버를 설치 했다고 가정 합니다. 그러면 다음과 같은 구성이 생성 됩니다.  
   
-    1.  인스턴스 이름 = \<서버> \tabular  
+    1.  인스턴스 이름 = \<server> \Tabular  
   
     2.  Service name = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079616"
   
      이제 인스턴스의 이름을 "TAB2"로 변경 한다고 가정 합니다. 이름을 변경하면 구성이 다음과 같이 변경됩니다.  
   
-    1.  인스턴스 이름 = \<서버> \TAB2  
+    1.  인스턴스 이름 = \<server> \Tab2  
   
     2.  Service name = MSOLAP$TAB2  
   

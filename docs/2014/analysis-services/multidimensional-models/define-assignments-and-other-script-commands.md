@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa3b6f49ce778b78f066abf687a3a51b61cc487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 184c998bb4bd27d077cca78e792a7e7712f87666
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075818"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547055"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>할당 및 기타 스크립트 명령 정의
   큐브 디자이너의 **계산** 탭에서 도구 모음의 **새 스크립트 명령** 아이콘을 클릭하여 빈 스크립트를 만듭니다. 새 스크립트를 만들면 처음에 계산 탭의 **스크립트 구성 도우미** 창에 빈 제목과 함께 해당 스크립트가 표시 됩니다. 계산 식 창에 입력 한 문자는 **스크립트 구성 도우미**의 항목 이름으로 표시 됩니다. 따라서 첫 줄에 설명이 포함된 이름을 입력하여 **스크립트 구성 도우미** 창에서 해당 스크립트를 보다 쉽게 식별할 수 있습니다. 자세한 내용은 [Microsoft SQL Server 2005의 MDX 스크립팅 소개(Introduction to MDX Scripting in Microsoft SQL Server 2005)](https://go.microsoft.com/fwlink/?LinkId=81892)를 참조하십시오. MDX 쿼리 및 계산과 관련 된 성능 문제에 대 한 자세한 내용은 [SQL Server 2005 Analysis Services 성능 가이드](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide)의 "효율적인 MDX 작성" 섹션을 참조 하십시오.  

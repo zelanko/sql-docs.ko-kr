@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65840066d3e95571db511a2015a1bee64aa8d922
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702040"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544955"
 ---
 # <a name="merging-partitions-xmla"></a>파티션 병합(XMLA)
   파티션의 집계 디자인 및 구조가 동일한 경우 XML for Analysis (XMLA)에서 [Mergepartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) 명령을 사용 하 여 파티션을 병합할 수 있습니다. 파티션 병합은 파티션을 관리할 때 수행하는 중요한 동작으로, 특히 날짜별로 파티션된 기록 데이터가 들어 있는 파티션을 관리하는 데 유용합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62702040"
  두 파티션에 사용된 스토리지 설정은 서로 다르지만 집계 디자인은 같습니다. 연말에 기록 데이터를 연도별로 처리하는 방식으로 큐브를 처리하는 대신 `MergePartitions` 명령을 사용하여 올해의 파티션을 작년의 파티션에 병합할 수 있습니다. 이렇게 하면 많은 시간이 소요될 수 있는 전체 큐브 처리 작업을 수행하지 않고도 집계 데이터를 유지할 수 있습니다.  
   
 ## <a name="specifying-partitions-to-merge"></a>병합할 파티션 지정  
- `MergePartitions` 명령이 실행 되 면 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) 속성에 지정 된 원본 파티션에 저장 된 집계 데이터가 [대상](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) 속성에 지정 된 대상 파티션에 추가 됩니다.  
+ `MergePartitions`명령이 실행 되 면 [source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) 속성에 지정 된 원본 파티션에 저장 된 집계 데이터가 [대상](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) 속성에 지정 된 대상 파티션에 추가 됩니다.  
   
 > [!NOTE]  
 >  `Source` 속성은 둘 이상의 파티션 개체 참조를 가질 수 있지만 `Target` 속성은 그럴 수 없습니다.  
@@ -45,8 +44,8 @@ ms.locfileid: "62702040"
   
 ## <a name="examples"></a>예  
   
-### <a name="description"></a>설명  
- 다음 예에서는 **놀이 works DW** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 예제 데이터베이스에 있는 **어드벤처 works** 큐브의 **Customer 개수** 측정값 그룹에 있는 모든 파티션을 **Customers_2004** 파티션에 병합 합니다.  
+### <a name="description"></a>Description  
+ 다음 예에서는 **놀이 works DW** 예제 데이터베이스에 있는 **어드벤처 works** 큐브의 **Customer 개수** 측정값 그룹에 있는 모든 파티션을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Customers_2004** 파티션에 병합 합니다.  
   
 ### <a name="code"></a>코드  
   

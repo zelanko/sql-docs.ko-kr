@@ -14,12 +14,12 @@ ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d63f314fd72ba91985d8e2f16759ef05ed9fc2
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67412703"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859255"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>기록 정리 태스크(유지 관리 계획)
 
@@ -27,7 +27,7 @@ ms.locfileid: "67412703"
   
  이 문은 **sp_purge_jobhistory** 문과 **sp_delete_backuphistory** 문을 사용합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

@@ -1,5 +1,6 @@
 ---
 title: max 함수 (XQuery) | Microsoft Docs
+description: 시퀀스에서 다른 항목 보다 큰 값을 가진 한 항목을 반환 하는 XQuery max () 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b2a7449da7c255d0ddbbed71fef3561f77e294d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985957"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529988"
 ---
 # <a name="aggregate-functions---max"></a>집계 함수 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  **Max ()** 함수는 시퀀스에서 입력 시퀀스의 다른 값 보다 큰 하나의 값을 반환 합니다. xs:string 값의 경우 기본 Unicode Codepoint Collation이 사용됩니다. Xdt: untypedAtomic 값을 xs: double로 캐스팅할 수 없는 경우 값은 *$arg*입력 시퀀스에서 무시 됩니다. 입력이 동적으로 계산된 빈 시퀀스이면 빈 시퀀스가 반환됩니다.  
   
 ## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. max() XQuery 함수를 사용하여 제조 프로세스에서 근무 시간이 가장 많은 작업 센터 위치 찾기  
  [Min 함수 (XQuery)](../xquery/aggregate-functions-min.md) 에 제공 된 쿼리를 다시 작성 하 여 **max ()** 함수를 사용할 수 있습니다.  

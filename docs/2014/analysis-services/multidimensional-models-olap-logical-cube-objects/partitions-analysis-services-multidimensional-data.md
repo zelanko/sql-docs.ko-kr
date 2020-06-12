@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86057c14655b3fd2f0322387beb16a4a94717b68
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702615"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545266"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>파티션(Analysis Services - 다차원 데이터)
   파티션은 측정값 그룹 데이터 부분의 컨테이너입니다. MDX 쿼리는 파티션을 표시하지 않으므로 측정값 그룹에 대해 정의된 파티션 수에 관계없이 모든 MDX 쿼리는 측정값 그룹의 전체 콘텐츠를 반영합니다. 파티션의 데이터 콘텐츠는 파티션의 쿼리 바인딩과 조각화 식에 의해 정의됩니다.  

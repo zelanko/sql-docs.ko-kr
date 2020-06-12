@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544215"
 ---
 # <a name="import-data-ssas-tabular"></a>데이터 가져오기(SSAS 테이블 형식)
   다양한 원본의 데이터를 테이블 형식 모델로 가져올 수 있습니다. 이 섹션의 항목에서는 데이터 가져오기 마법사를 사용하여 데이터를 가져올 모델 프로젝트에 연결하고 가져올 데이터를 선택하는 방법에 대해 설명합니다.  

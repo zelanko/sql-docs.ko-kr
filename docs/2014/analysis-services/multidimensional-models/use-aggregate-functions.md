@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072723"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541285"
 ---
 # <a name="use-aggregate-functions"></a>집계 함수 사용
   차원을 사용하여 측정값을 분할하는 경우 측정값은 해당 차원에 포함된 계층에서 요약됩니다. 이러한 요약 동작은 측정값에 대해 지정된 집계 함수에 따라 달라집니다. 숫자 데이터가 포함된 대부분 측정값의 경우 집계 함수는 `Sum`입니다. 측정값은 활성 상태인 계층의 수준에 따라 다른 금액으로 합계됩니다.  
   
- Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의 된 집계 `Sum`유형 `Min`으로 `Max`는 `Count`,,,, **고유 카운트**및 몇 가지 기타 특수 함수가 있습니다. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)을 참조하세요.  
+ Analysis Services에서 만드는 모든 측정값은 측정값의 연산을 결정하는 집계 함수에 의해 지원됩니다. 미리 정의 된 집계 유형 `Sum` 으로는,, `Min` `Max` , `Count` , **고유 카운트**및 몇 가지 기타 특수 함수가 있습니다. 또는 복잡한 수식이나 사용자 지정 수식을 기반으로 한 집계가 필요한 경우 미리 작성된 집계 함수를 사용하는 대신 MDX 계산을 작성할 수 있습니다. 예를 들어 백분율 값에 대한 측정값을 정의하려는 경우 MDX에서 계산된 측정값을 사용하여 정의할 수 있습니다. [CREATE MEMBER 문&#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)을 참조하세요.  
   
  큐브 마법사를 통해 만들어진 측정값은 측정값 정의의 일부로 집계 유형이 할당됩니다. 원본 열에 숫자 데이터가 포함되었다고 가정하면 집계 유형은 항상 `Sum`입니다. `Sum`은 원본 열의 데이터 형식과 관계없이 할당됩니다. 예를 들어 큐브 마법사를 사용하여 측정값을 만든 경우 팩트 테이블의 모든 열을 가져오면 원본이 날짜 시간 열이더라도 모든 결과 측정값의 집계가 `Sum`임을 알 수 있습니다. 마법사를 통해 만든 측정값의 미리 할당된 집계 방법을 항상 검토하여 집계 함수가 적합한지 확인하세요.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66072723"
 ##  <a name="aggregate-functions"></a><a name="AggFunction"></a>집계 함수  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 측정값 그룹에 포함된 차원에 따라 측정값을 집계하는 함수를 제공합니다. 집계 함수의 *가산성* 은 큐브에 있는 모든 차원에서 측정값이 집계되는 방식을 결정합니다. 집계 함수의 가산성 수준은 다음과 같이 세 가지로 구분됩니다.  
   
- 더하기  
+ 가산적  
  완전 가산적 측정값이라고도 하는 가산적 측정값은 아무런 제한 없이 측정값이 포함된 측정값 그룹 내의 모든 차원에 따라 집계할 수 있습니다.  
   
  반가산적  
@@ -44,8 +43,8 @@ ms.locfileid: "66072723"
   
 |집계 함수|가산성|반환 값|  
 |--------------------------|----------------|--------------------|  
-|`Sum`|더하기|모든 자식 멤버의 값 합계를 계산합니다. 이것은 기본 집계 함수입니다.|  
-|`Count`|더하기|모든 자식 멤버 수를 검색합니다.|  
+|`Sum`|가산적|모든 자식 멤버의 값 합계를 계산합니다. 이것은 기본 집계 함수입니다.|  
+|`Count`|가산적|모든 자식 멤버 수를 검색합니다.|  
 |`Min`|반가산적|모든 자식 멤버의 최소값을 검색합니다.|  
 |`Max`|반가산적|모든 자식 멤버의 최대값을 검색합니다.|  
 |`DistinctCount`|비가산적|모든 고유 자식 멤버의 수를 검색합니다. 자세한 내용은 다음 섹션의 [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) 를 참조하세요.|  

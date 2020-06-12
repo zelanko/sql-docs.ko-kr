@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: b1524b18-b9f1-46d2-a34e-dd7c91ca4684
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f2ac3dbc81731cf9bb23cf02a8c3bebc931f69
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062464"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528089"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Analysis Services MDX 쿼리 디자이너(PowerPivot)
-  Analysis Services mdx (Multidimensional Expression) 쿼리 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 원본에 대 한 mdx 쿼리를 만드는 데 도움이 되는 그래픽 사용자 인터페이스를 제공 합니다. MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
+  Analysis Services mdx (Multidimensional Expression) 쿼리 디자이너는 데이터 원본에 대 한 mdx 쿼리를 만드는 데 도움이 되는 그래픽 사용자 인터페이스를 제공 합니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . MDX 그래픽 쿼리 디자이너에는 디자인 모드와 쿼리 모드의 두 가지 모드가 있습니다. 각 모드는 메타데이터 창을 제공하는 데 이 창에서는 선택한 큐브에서 멤버를 끌어 사용할 데이터를 검색하는 MDX 쿼리를 작성할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "66062464"
 |![빈 셀 표시 설정/해제](media/rsqdicon-showemptycells.gif "빈 셀 표시 설정/해제")|데이터 창에서 빈 셀을 표시하거나 표시하지 않는 기능 사이를 전환합니다. 이것은 MDX에 NON EMPTY 절을 사용하는 것과 동일합니다.|  
 |![쿼리 자동 실행](media/rsqdicon-autoexecute.gif "쿼리 자동 실행")|변경이 수행될 때마다 쿼리를 자동으로 실행하고 결과를 표시합니다. 결과는 데이터 창에 표시됩니다.|  
 |![집계 표시 단추](media/rsqdicon-showaggregations.gif "집계 표시 단추")|데이터 창에서 집계를 표시합니다.|  
-|![Delete](media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
+|![삭제](media/rsqdicon-delete.gif "DELETE")|데이터 창의 선택된 열을 쿼리에서 삭제합니다.|  
 |![쿼리 매개 변수 대화 상자 아이콘](media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자 아이콘")|**쿼리 매개 변수** 대화 상자를 표시합니다. 쿼리 매개 변수의 값을 지정하면 같은 이름의 매개 변수가 자동으로 만들어집니다.|  
 |![쿼리 준비 단추](media/rsqdicon-preparequery.gif "쿼리 준비 단추")|쿼리를 준비합니다.|  
 |![쿼리 실행](media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 데이터 창에 결과를 표시합니다.|  

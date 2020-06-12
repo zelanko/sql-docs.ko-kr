@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217160"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545451"
 ---
 # <a name="adomdnet-server-programming"></a>ADOMD.NET 서버 프로그래밍
-  ADOMD.NET의 ADOMD.NET 서버 구성 요소는 `Microsoft.AnalysisServices.AdomdServer` 네임스페이스(msmgdsrv.dll) 안에 있습니다. 이러한 서버 구성 요소를 사용 하 여의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에서 실행 되는 사용자 지정 MDX (Multidimensional Expressions) 함수 및 저장 프로시저를 만들 수 있습니다. 서버 개체는 큐브 및 마이닝 모델을 쿼리하고 지정된 컨텍스트에서 식을 평가하는 기능을 제공합니다. 사용자 지정 함수 및 저장 프로시저를 만들면 실행 속도가 빨라지고 중앙 집중식 배포가 가능하며 관리가 용이해집니다.  
+  ADOMD.NET의 ADOMD.NET 서버 구성 요소는 `Microsoft.AnalysisServices.AdomdServer` 네임스페이스(msmgdsrv.dll) 안에 있습니다. 이러한 서버 구성 요소를 사용 하 여의 인스턴스에서 실행 되는 사용자 지정 MDX (Multidimensional Expressions) 함수 및 저장 프로시저를 만들 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 서버 개체는 큐브 및 마이닝 모델을 쿼리하고 지정된 컨텍스트에서 식을 평가하는 기능을 제공합니다. 사용자 지정 함수 및 저장 프로시저를 만들면 실행 속도가 빨라지고 중앙 집중식 배포가 가능하며 관리가 용이해집니다.  
   
  다음 표에서는 ADOMD.NET 서버 애플리케이션을 개발하는 데 도움이 되는 항목을 보여 줍니다.  
   
