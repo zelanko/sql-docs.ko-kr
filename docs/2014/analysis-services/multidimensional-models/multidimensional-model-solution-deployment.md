@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9ec674c1eb64f2e5191df600864fa38aa3da0749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21bbf20dfdc15470adc6277149679d2e5b403d9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073545"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546027"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>다차원 모델 솔루션 배포
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  

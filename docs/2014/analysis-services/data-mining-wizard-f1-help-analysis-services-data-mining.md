@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd7290f48c995ae9cfc92476f1a33fbdc0e8be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1164689720cbe65d406160b457b3016998000f0c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525740"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>데이터 마이닝 마법사 F1 도움말(Analysis Services - 데이터 마이닝)
   **데이터 마이닝 마법사** 를 사용하여 새 마이닝 구조 및 선택적으로 연결된 마이닝 모델을 만들 수 있습니다.  

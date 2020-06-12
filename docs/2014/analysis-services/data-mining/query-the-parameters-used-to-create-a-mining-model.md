@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69301cf56a4102acd54d11b9f5849ea58b141e03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d24d3316275e649a62e2c66d01e683a20b7a640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083041"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520589"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>마이닝 모델을 만드는 데 사용한 매개 변수 쿼리
   마이닝 모델의 컴퍼지션은 학습 사례의 영향을 받을 뿐만 아니라 모델을 만들 때 설정한 매개 변수의 영향도 받습니다. 따라서 기존 모델의 매개 변수 설정을 검색하면 모델의 동작을 보다 잘 이해할 수 있습니다. 매개 변수 검색은 해당 모델의 특정 버전을 문서화하는 데도 유용합니다.  

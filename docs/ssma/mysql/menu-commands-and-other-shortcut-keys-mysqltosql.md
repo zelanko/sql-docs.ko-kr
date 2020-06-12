@@ -1,5 +1,6 @@
 ---
 title: 메뉴 명령 및 기타 바로 가기 키 (MySQLToSQL) | Microsoft Docs
+description: MySQL 용 SSMA 응용 프로그램의 다양 한 대화 상자에서 사용 되는 메뉴 명령 및 기타 바로 가기 키에 액세스 하기 위한 바로 가기 키에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908807"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293604"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>메뉴 명령 및 기타 바로 가기 키(MySQLToSQL)
 다음 섹션에서는 메뉴 명령에 액세스 하는 바로 가기 키와 MySQL 용 SSMA 응용 프로그램의 다양 한 대화 상자에서 사용 되는 기타 바로 가기 키에 대해 설명 합니다.  

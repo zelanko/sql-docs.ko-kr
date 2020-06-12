@@ -1,5 +1,6 @@
 ---
 title: 네임 스페이스 uri 함수 (XQuery) | Microsoft Docs
+description: XQuery에서 네임 스페이스 uri 함수를 사용 하 여 지정 된 QName의 네임 스페이스 URI를 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929948"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306062"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>노드 함수 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  지정된 QName에 네임스페이스 URI 부분이 없고 로컬 이름 부분만 있는 경우 결과는 길이가 0인 문자열입니다.  
   
- 다음 쿼리는 명령으로 형식화 된 **xml** 열에 대해 지정 됩니다. 식 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`은 <`Location` `root`> 요소의 첫 번째 <> 요소 자식의 네임 스페이스 URI를 반환 합니다.  
+ 다음 쿼리는 명령으로 형식화 된 **xml** 열에 대해 지정 됩니다. 식은 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` `Location` <> 요소의 첫 번째 <> 요소 자식의 네임 스페이스 URI를 반환 합니다 `root` .  
   
 ```  
 SELECT Instructions.query('  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 이전 쿼리의 네임스페이스 URI를 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 그런 다음 확장 된 QName의 네임 스페이스 URI 부분을 `ProductDescription` `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`포함 하는 <> 요소의 모든 요소 노드 자식을 받게 됩니다.  
+ 이전 쿼리의 네임스페이스 URI를 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 그런 다음 `ProductDescription` 확장 된 QName의 네임 스페이스 URI 부분을 포함 하는 <> 요소의 모든 요소 노드 자식을 받게 됩니다 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` .  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  

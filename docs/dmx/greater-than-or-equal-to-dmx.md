@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3615dc8b5de0e5057e2dedaa0077aae51ed87ebe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 158cb4ed1f02133597e9ed5470d20b5864139d03
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074796"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669717"
 ---
 # <a name="gt-greater-than-or-equal-to-dmx"></a>&gt;= (크거나 같음) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ DMX_Expression >= DMX_Expression
  *DMX_Expression*  
  유효한 DMX 식입니다.  
   
-## <a name="return-value"></a>Return Value  
+## <a name="return-value"></a>반환 값  
  두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 크거나 같으면 부울 값에 TRUE가 포함됩니다. 두 매개 변수가 Null이 아니고 첫 번째 매개 변수 값이 두 번째 매개 변수 값보다 작으면 부울 값에 FALSE가 포함됩니다. 매개 변수 중 하나 또는 둘 모두가 Null 값으로 계산되면 부울 값에 Null 값이 포함됩니다.  
   
 ## <a name="see-also"></a>참고 항목  

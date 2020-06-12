@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e17a27190891ea9e00be21d5013d0767d61ac148
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070523"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539669"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>쿼리 창(마이닝 모델 예측 뷰)
   **쿼리** 창에서는 예측 쿼리 작성기로 만든 DMX(Data Mining Extensions) 문을 표시합니다. 문을 수정한 다음 **쿼리 결과 뷰로 전환** 단추를 클릭하여 결과를 반환합니다. 다시 **디자인** 뷰로 전환하면 문에 적용한 변경 내용이 손실됩니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 404fe5fe-3ba2-4b9b-8780-0d02343d467f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70049092909b625a1f304f16f153bf4287d5bcdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30affebc143184c6287858f60b5d4f5d089c322a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084555"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522502"
 ---
 # <a name="exclude-a-column-from-a-mining-model"></a>마이닝 모델에서 열 제외
   새 마이닝 모델을 만들 때 모델의 기반이 되는 마이닝 구조의 일부 열만 사용할 수도 있습니다. 예를 들어 드릴스루를 위해 고객 이름 열을 추가 했지만 모델링에는 사용 하지 않으려는 경우가 있습니다. 또는 여러 다른 불연속화가 있는 열의 여러 복사본을 만든 후 각 모델에 해당 복사본 중 하나만 사용하고 나머지는 무시할 수 있습니다. 여러 다른 모델에 입력 열을 선택적으로 추가하여 추가된 변수가 출력 열에 영향을 주는 방식을 확인할 수도 있습니다.  

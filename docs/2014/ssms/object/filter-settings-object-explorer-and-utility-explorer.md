@@ -13,17 +13,17 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277078"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859225"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>필터 설정(개체 탐색기 및 유틸리티 탐색기)
   이 대화 상자를 사용하여 필터를 지정할 수 있습니다. 필터를 사용하면 특정 조건에 맞는 항목만 표시하도록 개체 탐색기 및 유틸리티 탐색기를 구성할 수 있습니다. 예를 들어 필터를 사용하여 이름에 "Maintenance"라는 단어가 포함된 작업만 표시할 수 있습니다. **필터 설정** 대화 상자의 머리글에는 서버 이름이나 데이터베이스 이름이 포함될 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **속성**  
  필터링할 속성을 표시합니다.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "63277078"
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 사용](../sql-server-management-studio-ssms.md)   
- [SQL Server 유틸리티 기능 및 태스크](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [SQL Server 유틸리티 기능 및 작업](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

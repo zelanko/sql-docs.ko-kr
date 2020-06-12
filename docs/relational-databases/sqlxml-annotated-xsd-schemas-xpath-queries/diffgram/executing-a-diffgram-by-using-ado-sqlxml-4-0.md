@@ -1,5 +1,6 @@
 ---
 title: ADO를 사용 하 여 DiffGram 실행 (SQLXML)
+description: ADO (SQLXML 4.0)를 사용 하 여 Microsoft Visual Basic 응용 프로그램에서 DiffGram 파일을 실행 하 Microsoft SQL Server 인스턴스에 대 한 연결을 설정 하는 방법에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246648"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306219"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246648"
   
 -   명령의 출력 스트림은 **Strmout** 개체 (**ADODB. Stream**)을 클릭 하 여 반환 된 데이터를 수신 합니다.  
   
--   SQLOLEDB 공급자를 사용하면 기본적으로 Sqlxmlx.dll에서 제공되는 Microsoft SQLXML 기능을 사용할 수 있게 됩니다. SQLOLEDB 공급자와 함께 Sqlxml4.msi을 사용 하려면 SQLOLEDB 공급자 **연결** 개체에서 **sqlxml 버전** 속성을 **sqlxml. 4.0** 으로 설정 해야 합니다.  
+-   SQLOLEDB 공급자를 사용하면 기본적으로 Sqlxmlx.dll에서 제공되는 Microsoft SQLXML 기능을 사용할 수 있게 됩니다. SQLOLEDB 공급자와 Sqlxml4.dll를 사용 하려면 SQLOLEDB 공급자 **연결** 개체에서 **sqlxml 버전** 속성을 **sqlxml. 4.0** 으로 설정 해야 합니다.  
   
 -   명령(DiffGram)이 실행됩니다.  
   

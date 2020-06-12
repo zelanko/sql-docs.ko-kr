@@ -1,5 +1,6 @@
 ---
 title: SQL Server에 연결 (MySQLToSQL) | Microsoft Docs
+description: SQL Server의 대상 인스턴스에 연결 하 여 MySQL 데이터베이스를 마이그레이션하는 방법에 대해 알아봅니다. SSMA는 SQL Server의 데이터베이스에 대 한 메타 데이터를 가져옵니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103134"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293960"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)
 MySQL 데이터베이스를 SQL Server로 마이그레이션하려면 SQL Server의 대상 인스턴스에 연결 해야 합니다. 연결할 때 SSMA는 SQL Server 인스턴스의 모든 데이터베이스에 대 한 메타 데이터를 가져오고 SQL Server 메타 데이터 탐색기에 데이터베이스 메타 데이터를 표시 합니다. SSMA는 연결 된 SQL Server의 인스턴스에 대 한 정보를 저장 하지만 암호를 저장 하지는 않습니다.  
@@ -29,7 +30,7 @@ SQL Server 인스턴스에 대 한 메타 데이터는 자동으로 동기화 �
 ## <a name="required-sql-server-permissions"></a>필요한 SQL Server 권한  
 SQL Server에 연결 하는 데 사용 되는 계정에는 해당 계정에서 수행 하는 작업에 따라 다른 사용 권한이 필요 합니다.  
   
--   MySQL 개체를 구문으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변환 하거나, SQL Server에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Server 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
+-   MySQL 개체를 구문으로 변환 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하거나, SQL Server에서 메타 데이터를 업데이트 하거나, 변환 된 구문을 스크립트로 저장 하려면 계정에 SQL Server 인스턴스에 로그온 할 수 있는 권한이 있어야 합니다.  
   
 -   데이터베이스 개체를 SQL Server 로드 하려면 최소 권한 요구 사항이 대상 데이터베이스에서 **db_owner** 데이터베이스 역할의 멤버 자격 이어야 합니다.  
   
@@ -67,13 +68,13 @@ MySQL 데이터베이스 개체를 SQL Server 구문으로 변환 하기 전에 
   
 더 높은 버전의 SQL Server에 연결 하거나 다시 연결할 수 있습니다.  
   
-1.  만든 프로젝트가 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 2008 또는 2012 또는 2014 또는 2016에 연결할 수 있습니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 프로젝트가 2005 인 경우 2008 또는 2012 또는 2014 또는 2016에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 프로젝트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 이지만 더 낮은 버전 (예: 2005 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )에 연결할 수 없는 경우에는 2012 또는 2014 또는 2016에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 프로젝트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 이지만 더 낮은 버전 (예: 2005)에 연결할 수 없는 경우에는 2012 또는 2014 또는 2016에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-3.  만든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로젝트가 2012 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 2012 또는 2014 또는 2016에 연결할 수 있습니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 프로젝트가 2012 인 경우 2012 또는 2014 또는 2016에 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-4.  만든 프로젝트가 2014 인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우에는 2014 또는 2016에만 연결할 수 있습니다.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만든 프로젝트가 2014 인 경우에는 2014 또는 2016에만 연결할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  "SQL Azure"에 대 한 버전 호환성이 더 이상 유효 하지 않습니다.  
   
@@ -88,7 +89,7 @@ MySQL 데이터베이스 개체를 SQL Server 구문으로 변환 하기 전에 
 |SQL Azure||||||예|  
   
 > [!IMPORTANT]  
-> 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만에 연결 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전에 따라 수행 되지 않습니다. 2005 프로젝트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 더 높은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)에 연결 된 경우에도 2005 당 변환이 수행 됩니다.  
+> 데이터베이스 개체의 변환은 프로젝트 형식에 따라 수행 되지만에 연결 된의 버전에 따라 수행 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005 프로젝트의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 더 높은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016)에 연결 된 경우에도 2005 당 변환이 수행 됩니다.  
   
 ## <a name="synchronizing-sql-server-metadata"></a>SQL Server 메타 데이터 동기화  
 SQL Server 데이터베이스에 대 한 메타 데이터는 자동으로 업데이트 되지 않습니다. SQL Server 메타 데이터 탐색기의 메타 데이터는 SQL Server에 처음 연결 하거나 마지막으로 메타 데이터를 마지막으로 업데이트 한 경우 메타 데이터의 스냅숏입니다. 모든 데이터베이스 또는 단일 데이터베이스 또는 데이터베이스 개체에 대 한 메타 데이터를 수동으로 업데이트할 수 있습니다.  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889075"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669477"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 ```  
   
 ## <a name="arguments"></a>인수  
- *모델링*  
+ *model*  
  모델의 고유 이름입니다.  
   
  *열 정의 목록*  
@@ -50,7 +50,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  [DMSCHEMA_MINING_SERVICES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)을 사용 하 여 현재 공급자가 지 원하는 알고리즘 목록을 검색할 수 있습니다. 현재 인스턴스에서 지원 되는 알고리즘을 보려면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝 속성](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)을 참조 하세요.  
   
  *매개 변수 목록*  
- 선택 사항입니다. 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
+ (선택 사항) 알고리즘에 대해 공급자가 정의한 매개 변수의 쉼표로 구분된 목록입니다.  
   
  *XML 문자열*  
  (고급 사용에만 해당) XML로 인코딩된 모델 (PMML)입니다. 문자열을 작은따옴표(')로 묶어야 합니다.  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   데이터 형식(필수)  
   
--   배포  
+-   분포  
   
 -   모델링 플래그 목록  
   
@@ -102,7 +102,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [모델링 플래그&#40;데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 \<열 관계> 절을 사용할 수 있습니다.  
+ 문에 절을 추가하여 두 열 간의 관계를 설명할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서는 다음과 같은 \< 열 관계> 절을 사용할 수 있습니다.  
   
  **관련 항목**  
  이 형식은 값 계층 구조를 나타냅니다. RELATED TO 열의 대상은 중첩 테이블의 키 열, 사례 행의 불연속 값 열 또는 RELATED TO 절이 있는 다른 열(중첩된 열을 나타냄)일 수 있습니다.  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  다음 예에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 ARTxp 알고리즘을 사용함으로써 새 마이닝 모델을 만듭니다. ReportingDate는 시계열의 키 열이고 ModelRegion은 데이터 계열의 키 열입니다. 이 예에서는 데이터 주기를 매 12개월로 가정하므로 따라서 *PERIODICITY_HINT* 매개 변수는 12로 설정 됩니다.  
   
 > [!NOTE]  
->  중괄호 문자를 사용 하 여 *PERIODICITY_HINT* 매개 변수를 지정 해야 합니다. 또한 값이 문자열 이기 때문에 "{\<numeric value>}" 작은따옴표로 묶어야 합니다.  
+>  중괄호 문자를 사용 하 여 *PERIODICITY_HINT* 매개 변수를 지정 해야 합니다. 또한 값이 문자열 이기 때문에 "{ \< numeric value>}" 작은따옴표로 묶어야 합니다.  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

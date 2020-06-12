@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 088006037fc9941021270287011f42d8d4bd4299
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082137"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528819"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>차원 인텔리전스 정의(비즈니스 인텔리전스 마법사)
   **차원 인텔리전스 정의** 페이지를 사용하여 기존 차원 특성을 지정한 차원 유형의 특성 유형으로 매핑할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66082137"
  **차원 특성**  
  지정한 차원 유형에 사용할 수 있는 특성 유형을 표시하고 특성 유형을 적용할 차원 특성을 지정할 수 있게 합니다.  
   
- **되어야**  
+ **포함**  
  차원에 해당 특성 유형을 포함하려면 선택합니다.  
   
  **특성 유형**  

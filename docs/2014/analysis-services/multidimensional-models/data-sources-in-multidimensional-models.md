@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076038"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547185"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>다차원 모델의 데이터 원본
   다차원 모델로 가져오거나 로드하는 모든 데이터는 외부 데이터 원본에서 생성됩니다. 일반적으로 원본 데이터는 보고용으로 디자인된 데이터 웨어하우스의 데이터이지만 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지와 같은 매개자를 통해 직접 또는 간접으로 액세스되는 관계형 데이터베이스의 데이터일 수도 있습니다.  

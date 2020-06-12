@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62703086"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545455"
 ---
 # <a name="creating-stored-procedures"></a>저장 프로시저 만들기
-  모든 저장 프로시저는 CLR(공용 언어 런타임) 또는 COM(구성 요소 개체 모델) 클래스와 연결되어야 사용할 수 있습니다. 이 클래스는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ACTIVEX® DLL (동적 연결 라이브러리) 형식으로 서버에 설치 되 고 서버나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 어셈블리로 등록 되어야 합니다.  
+  모든 저장 프로시저는 CLR(공용 언어 런타임) 또는 COM(구성 요소 개체 모델) 클래스와 연결되어야 사용할 수 있습니다. 이 클래스는 일반적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® DLL (동적 연결 라이브러리) 형식으로 서버에 설치 되 고 서버나 데이터베이스에 어셈블리로 등록 되어야 합니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- 저장 프로시저는 서버나 데이터베이스에 등록됩니다. 서버 저장 프로시저는 모든 쿼리 컨텍스트에서 호출할 수 있지만 데이터베이스 저장 프로시저는 데이터베이스 컨텍스트가 저장 프로시저가 정의되어 있는 데이터베이스인 경우에만 액세스할 수 있습니다. 한 어셈블리의 함수에서 다른 어셈블리의 함수를 호출하는 경우 두 어셈블리를 모두 동일한 컨텍스트(서버 또는 데이터베이스)에 등록해야 합니다. 서버 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 배포 된 데이터베이스의 경우를 사용 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 하 여 어셈블리를 등록할 수 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 디자이너를 사용하여 프로젝트에 어셈블리를 등록할 수 있습니다.  
+ 저장 프로시저는 서버나 데이터베이스에 등록됩니다. 서버 저장 프로시저는 모든 쿼리 컨텍스트에서 호출할 수 있지만 데이터베이스 저장 프로시저는 데이터베이스 컨텍스트가 저장 프로시저가 정의되어 있는 데이터베이스인 경우에만 액세스할 수 있습니다. 한 어셈블리의 함수에서 다른 어셈블리의 함수를 호출하는 경우 두 어셈블리를 모두 동일한 컨텍스트(서버 또는 데이터베이스)에 등록해야 합니다. 서버 또는 서버에 배포 된 데이터베이스의 경우를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 사용 하 여 어셈블리를 등록할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 디자이너를 사용하여 프로젝트에 어셈블리를 등록할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  COM 어셈블리는 보안 위험을 내포할 수 있습니다. 이러한 위험 및 기타 고려 사항으로 인해 COM 어셈블리는 [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]에서 더 이상 사용되지 않습니다. COM 어셈블리는 후속 릴리스에서 지원되지 않을 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62703086"
   
 ### <a name="to-create-a-server-assembly"></a>서버 어셈블리를 만들려면  
   
-1.  개체 탐색기 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 인스턴스를 확장 하 고 **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리**를 클릭 합니다. 그러면 **서버 어셈블리 등록** 대화 상자가 표시 됩니다.  
+1.  개체 탐색기에서 인스턴스를 확장 하 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 고 **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리**를 클릭 합니다. 그러면 **서버 어셈블리 등록** 대화 상자가 표시 됩니다.  
   
 2.  **유형** 에 대해 어셈블리 유형을 지정 합니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "62703086"
   
 ### <a name="to-create-a-database-assembly-on-a-server"></a>서버에서 데이터베이스 어셈블리를 등록하려면  
   
-1.  개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 인스턴스를 확장 하 고 **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리**를 클릭 합니다. **데이터베이스 어셈블리 등록** 대화 상자가 표시 됩니다.  
+1.  개체 탐색기에서 데이터베이스 인스턴스를 확장 하 고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리**를 클릭 합니다. **데이터베이스 어셈블리 등록** 대화 상자가 표시 됩니다.  
   
 2.  **유형** 에 대해 어셈블리 유형을 지정 합니다.  
   
@@ -82,11 +81,11 @@ ms.locfileid: "62703086"
   
 ### <a name="to-create-a-database-assembly-in-an-analysis-service-project"></a>Analysis Service 프로젝트에서 데이터베이스 어셈블리를 만들려면  
   
-1.  개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 인스턴스를 확장 하 고 **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리 참조**를 클릭 합니다. **참조 추가** 대화 상자가 표시 됩니다. **참조 추가** 대화 상자의 **.net** 탭에는 기존 .net (CLR) 어셈블리가 나열 되 고 **프로젝트** 탭에는 프로젝트가 나열 됩니다.  
+1.  개체 탐색기에서 데이터베이스 인스턴스를 확장 하 고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **어셈블리** 폴더를 마우스 오른쪽 단추로 클릭 한 다음 **새 어셈블리 참조**를 클릭 합니다. **참조 추가** 대화 상자가 표시 됩니다. **참조 추가** 대화 상자의 **.net** 탭에는 기존 .net (CLR) 어셈블리가 나열 되 고 **프로젝트** 탭에는 프로젝트가 나열 됩니다.  
   
-2.  기존 구성 요소나 프로젝트를 클릭 한 다음 **추가** 를 클릭 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 추가할 수 있습니다. COM DLL에 대 한 참조를 추가 하려면 **찾아보기** 탭을 클릭 하 여 파일을 찾습니다. **선택한 프로젝트 및 구성 요소** 목록에는 프로젝트에 추가할 각 구성 요소의 이름, 유형, 버전 및 위치가 표시 됩니다.  
+2.  기존 구성 요소나 프로젝트를 클릭 한 다음 **추가** 를 클릭 하 여 프로젝트에 추가할 수 있습니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . COM DLL에 대 한 참조를 추가 하려면 **찾아보기** 탭을 클릭 하 여 파일을 찾습니다. **선택한 프로젝트 및 구성 요소** 목록에는 프로젝트에 추가할 각 구성 요소의 이름, 유형, 버전 및 위치가 표시 됩니다.  
   
-3.  추가할 구성 요소를 모두 선택 했으면 **확인** 을 클릭 하 여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 추가 합니다.  
+3.  추가할 구성 요소를 모두 선택 했으면 **확인** 을 클릭 하 여 프로젝트에 추가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다.  
   
 ## <a name="script-format-for-an-assembly"></a>어셈블리 스크립트 형식  
  .NET 어셈블리 등록 과정은 매우 단순합니다. .NET 어셈블리는 다음 형식을 사용하여 이진 형식으로 데이터베이스에 추가됩니다.  

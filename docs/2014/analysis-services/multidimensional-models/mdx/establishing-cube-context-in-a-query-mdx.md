@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79d6a1e8-2825-4eb9-97df-5071aecae8f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f0f960c531fac8bae8f03479bacd507ffc3078
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ae6e19f879651feb47841d70b444e9f845c74e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074597"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546515"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>쿼리에 큐브 컨텍스트 설정(MDX)
   모든 MDX 쿼리는 지정된 큐브 컨텍스트 내에서 실행됩니다. 이 컨텍스트는 쿼리 내의 식에 의해 계산되는 멤버를 정의합니다.  

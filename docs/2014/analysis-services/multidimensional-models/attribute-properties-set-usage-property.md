@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7b0ebc58-94b9-4523-8994-e7bc796b0bd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c01db1cdafc0a3e624cc8e92815a791c08ee4188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077171"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544715"
 ---
 # <a name="set-usage-property"></a>Usage 속성 설정
   **에서 액세스하는 차원 디자이너의** 차원 구조 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 특성 사용법을 설정할 수 있습니다.  
@@ -33,11 +32,11 @@ ms.locfileid: "66077171"
   
 2.  **특성**에서 사용법을 설정할 특성을 마우스 오른쪽 단추로 클릭하고 **특성 사용법 설정**을 가리킨 다음 아래 옵션 중 하나를 클릭합니다.  
   
-    -   **정규식**  
+    -   **Regular**  
   
     -   **키**  
   
-    -   **Parent**  
+    -   **부모**  
   
 ## <a name="see-also"></a>참고 항목  
  [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

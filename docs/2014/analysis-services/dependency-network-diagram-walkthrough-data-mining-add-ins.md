@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081965"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528779"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>종속성 네트워크 다이어그램 연습(데이터 마이닝 추가 기능)
   몇 가지 유형의 데이터 마이닝 모델은 데이터에서 관계를 탐색하는 수단으로 네트워크 그래프를 사용합니다. **종속성 네트워크** 셰이프를 사용 하 여 이러한 모델을 Visio로 가져온 다음 계속 해 서 레이아웃을 사용자 지정 하 고 향상 시킬 수 있습니다. **Visio 용 데이터 마이닝 셰이프에** 는 종속성 네트워크 다이어그램을 사용 하기 위한 다음과 같은 사용자 지정 컨트롤이 포함 되어 있습니다.  
@@ -43,13 +42,13 @@ ms.locfileid: "66081965"
   
 1.  **셰이프** 목록에 **Microsoft 데이터 마이닝 셰이프가** 표시 되지 않는 경우 **추가 셰이프**를 클릭 하 고, **스텐실 열기**를 선택 하 고, 기본 설치 위치에서 템플릿을 엽니다.  
   
-     \<드라이브>: 파일 \ x85) \Microsoft SQL Server 2012 DM 추가 기능  
+     \<drive>: Filefiles (x85) \Microsoft SQL Server 2012 DM 추가 기능  
   
 2.  **종속성 네트워크** 셰이프를 페이지로 끌어 마법사를 시작 합니다. **다음**을 클릭합니다.  
   
 3.  **종속성 네트워크 Visio 셰이프 마법사**의 시작 페이지에서 **다음**을 클릭 합니다.  
   
-4.  **종속성 네트워크 Visio 셰이프 마법사**의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **데이터 원본 선택** 페이지에서 시각화할 모델이 있는 서버에 대 한 연결을 선택 합니다.  
+4.  **종속성 네트워크 Visio 셰이프 마법사**의 **데이터 원본 선택** 페이지에서 시각화할 모델이 있는 서버에 대 한 연결을 선택 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 5.  적절 한 마이닝 모델을 선택 하 고 **다음**을 클릭 합니다.  
   

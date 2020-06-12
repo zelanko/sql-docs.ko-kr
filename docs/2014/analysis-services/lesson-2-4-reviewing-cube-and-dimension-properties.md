@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e30096bcd23f517e640903b0c9036633ad5427d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078997"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543505"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>큐브 및 차원 속성 검토
   큐브를 정의한 후에는 큐브 디자이너를 사용하여 결과를 검토할 수 있습니다. 다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 큐브 구조를 검토합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "66078997"
   
 9. 솔루션 탐색기의 **큐브** 노드에서 **Analysis Services Tutorial** 을 마우스 오른쪽 단추로 클릭한 다음 **코드 보기**를 클릭합니다. 기다려야 할 수도 있습니다.  
   
-     Tutorial 큐브에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] XML 코드가 ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial [XML]** 탭에 표시 됩니다. 이는 배포 하 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 동안 인스턴스에서 큐브를 만드는 데 사용 되는 실제 코드입니다. 자세한 내용은 [Analysis Services 프로젝트에 대한 XML 보기&#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)를 참조하세요.  
+     Tutorial 큐브에 대 한 XML 코드가 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial [XML]** 탭에 표시 됩니다. 이는 배포 하는 동안 인스턴스에서 큐브를 만드는 데 사용 되는 실제 코드입니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 자세한 내용은 [Analysis Services 프로젝트에 대한 XML 보기&#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md)를 참조하세요.  
   
 10. XML 코드 탭을 닫습니다.  
   

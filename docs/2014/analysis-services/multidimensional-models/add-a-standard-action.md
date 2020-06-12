@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077459"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544865"
 ---
 # <a name="add-a-standard-action"></a>표준 동작 추가
   큐브 디자이너의 동작 뷰를 사용하여 데이터베이스에 동작을 추가합니다. 이 뷰는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후 관련 큐브를 다시 처리하면 사용자가 동작을 사용할 수 있게 됩니다. 자세한 내용은 [Processing Analysis Services Objects](processing-analysis-services-objects.md)을 참조하세요.  
@@ -47,7 +46,7 @@ ms.locfileid: "66077459"
   
     -   **유형** 드롭다운 목록에서 만들 동작의 유형을 선택합니다. 다음 표에서는 사용 가능한 동작의 유형을 보여 줍니다.  
   
-        |유형|설명|  
+        |Type|설명|  
         |----------|-----------------|  
         |데이터 세트|데이터 세트를 검색합니다.|  
         |소유|이 표에 나열되지 않은 인터페이스를 사용하여 작업을 수행합니다.|  
@@ -63,7 +62,7 @@ ms.locfileid: "66077459"
   
         |옵션|Description|  
         |------------|-----------------|  
-        |Interactive (대화형)|동작은 사용자 상호 작용에 의해 트리거됩니다.|  
+        |대화형|동작은 사용자 상호 작용에 의해 트리거됩니다.|  
         |Batch|동작이 일괄 처리 작업으로 실행됩니다.|  
         |열 때|사용자가 큐브를 열 때 동작이 실행됩니다.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077459"
         > [!NOTE]  
         >  클라이언트 애플리케이션이 **애플리케이션**에 지정된 이름과 일치하는 동작만 반환하도록 스키마 행 집합을 명시적으로 제한하지 않으면 소유 동작이 서버에 반환되지 않습니다.  
   
-    -   **작업 콘텐츠에서**URL 형식을 사용 하는 경우 인터넷 주소를 따옴표로 묶습니다 (예: "http://www.adventure-works.com").  
+    -   **작업 콘텐츠에서**URL 형식을 사용 하는 경우 인터넷 주소를 따옴표로 묶습니다 (예: " http://www.adventure-works.com ").  
   
     -   **설명**에 동작에 대한 설명을 입력합니다.  
   

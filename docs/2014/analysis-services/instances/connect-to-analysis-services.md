@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a019de00f932a8992b9adde426d1b9d953acb49f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544015"
 ---
 # <a name="connect-to-analysis-services"></a>Analysis Services에 연결
   이 섹션의 정보를 참조하여 연결 문자열 속성, 연결에 사용되는 클라이언트 라이브러리, Analysis Services에서 지원하는 인증 방법, 서버가 오프라인 상태가 되기 전에 연결을 설정 또는 해제하는 방법 등을 알아봅니다.  

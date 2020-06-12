@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 754b2b61fc3b55cda694bcdad7cb492abe490188
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072154"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541015"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>파티션 속성 대화 상자(SSMS)
   SQL Server Management Studio의 **파티션 속성** 대화 상자를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 큐브에 대한 파티션 속성을 설정할 수 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "66072154"
   
  **파티션 속성** 대화 상자에는 다음과 같은 페이지가 있습니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>Pages  
   
 |호출|Description|  
 |----------|-----------------|  

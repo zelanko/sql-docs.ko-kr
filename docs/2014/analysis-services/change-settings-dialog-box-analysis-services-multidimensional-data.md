@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088247"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527649"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>설정 변경 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 설정 변경 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 **처리** 대화 상자에 나열된 개체의 처리를 제어하는 설정을 변경할 수 있습니다. **처리** 대화 상자에서 **설정 변경** 을 클릭하여 **설정 변경** 대화 상자를 표시할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66088247"
  **처리 옵션**  
  이 탭을 사용하여 처리 순서, 쓰기 저장 테이블 및 처리 작업에 영향을 받는 개체와 관련된 설정을 수정할 수 있습니다. 탭에는 다음 옵션이 있습니다.  
   
- **평행선**  
+ **Parallel**  
  개체를 병렬로 처리하려면 클릭합니다.  
   
  **최대 병렬 태스크 수**  

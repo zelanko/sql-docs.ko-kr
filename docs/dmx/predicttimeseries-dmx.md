@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893878"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666688"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>인수  
- 테이블 열 참조>, * \< * * \<스칼라 열 참조할>*  
+ * \< 테이블 열 참조>*, * \< 스칼라 열 참조할>*  
  예측할 열의 이름을 지정합니다. 열에는 스칼라 또는 테이블 형식 데이터가 포함될 수 있습니다.  
   
  *n*  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  사용자 모델의 결과는 다를 수 있습니다. 아래 예의 결과는 결과 형식을 보여 주기 위한 것입니다.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>예제 1: 많은 시간 조각 예측  
- 다음 예에서는 **PredictTimeSeries** 함수를 사용 하 여 다음 세 시간 단계에 대 한 예측을 반환 하 고 유럽 및 태평양 지역의 M200 시리즈에 대 한 결과를 제한 합니다. 이 특정 모델에서 예측 가능한 특성은 Quantity 이므로 PredictTimeSeries 함수에 대 한 `[Quantity]` 첫 번째 인수로를 사용 해야 합니다.  
+ 다음 예에서는 **PredictTimeSeries** 함수를 사용 하 여 다음 세 시간 단계에 대 한 예측을 반환 하 고 유럽 및 태평양 지역의 M200 시리즈에 대 한 결과를 제한 합니다. 이 특정 모델에서 예측 가능한 특성은 Quantity 이므로 `[Quantity]` PredictTimeSeries 함수에 대 한 첫 번째 인수로를 사용 해야 합니다.  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- 쿼리에서는 *EXTEND_MODEL_CASES* 옵션을 사용 하기 때문 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에에서 예측에 대해 다음 작업을 수행 합니다.  
+ 쿼리에서는 *EXTEND_MODEL_CASES* 옵션을 사용 하기 때문에에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 예측에 대해 다음 작업을 수행 합니다.  
   
 -   2개월에 상당하는 새 데이터를 모델에 추가하여 학습 사례의 전체 크기를 늘립니다.  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>예 4: 시계열 예측에서 통계 반환  
  **PredictTimeSeries** 함수는 매개 변수로 *INCLUDE_STATISTICS* 을 지원 하지 않습니다. 그러나 다음 쿼리를 사용하면 시계열 쿼리에 대한 예측 통계를 반환할 수 있습니다. 이 방법은 중첩 테이블 열이 있는 모델에도 사용할 수 있습니다.  
   
- 이 특정 모델에서 예측 가능한 특성은 Quantity 이므로 PredictTimeSeries 함수에 대 한 `[Quantity]` 첫 번째 인수로를 사용 해야 합니다. 모델에서 다른 예측 가능한 특성을 사용하는 경우 다른 열 이름으로 대체할 수 있습니다.  
+ 이 특정 모델에서 예측 가능한 특성은 Quantity 이므로 `[Quantity]` PredictTimeSeries 함수에 대 한 첫 번째 인수로를 사용 해야 합니다. 모델에서 다른 예측 가능한 특성을 사용하는 경우 다른 열 이름으로 대체할 수 있습니다.  
   
 ```  
 SELECT FLATTENED [Model Region],  

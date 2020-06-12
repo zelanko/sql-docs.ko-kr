@@ -1,5 +1,6 @@
 ---
 title: 경로 식에 약식 구문 사용 | Microsoft Docs
+description: XQuery 경로 식에서 약식 구문을 사용 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946411"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306014"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>경로 식 - 축약형 구문 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [XQuery의 경로 식 이해](../xquery/path-expressions-xquery.md) 의 모든 예에서는 경로 식에 대해 축약 되지 않은 구문을 사용 합니다. 경로 식의 축 단계에 대해 축약하지 않은 구문은 축 이름과 노드 테스트를 포함하고 두 개의 콜론으로 분리되며 뒤에 0개 이상의 단계 한정자가 옵니다.  
   
- 다음은 그 예입니다.  
+ 예를 들어:  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   **자식** 축이 기본 축입니다. 따라서 식의 단계에서 **child::** axis를 생략할 수 있습니다. 예를 들어 `/child::ProductDescription/child::Summary`를 `/ProductDescription/Summary`로 쓸 수 있습니다.  
   
--   **특성** 축은로 약식으로 @지정할 수 있습니다. 예를 들어 `/child::ProductDescription[attribute::ProductModelID=10]`를 `/ProudctDescription[@ProductModelID=10]`로 쓸 수 있습니다.  
+-   **특성** 축은로 약식으로 지정할 수 있습니다 @ . 예를 들어 `/child::ProductDescription[attribute::ProductModelID=10]`를 `/ProudctDescription[@ProductModelID=10]`로 쓸 수 있습니다.  
   
 -   **/Descendant-or-self:: node ()/** 는//로 약식으로 지정할 수 있습니다. 예를 들어 `/descendant-or-self::node()/child::act:telephoneNumber`를 `//act:telephoneNumber`로 쓸 수 있습니다.  
   
-     이전 쿼리는 Contact 테이블의 AdditionalContactInfo 열에 저장된 모든 전화 번호를 검색합니다. Additional> \<telephoneNumber info에 대 한 스키마는 문서 어디에 나 표시할 수 있는 방식으로 정의 됩니다. 따라서 전화 번호를 모두 검색하려면 문서의 모든 노드를 검색해야 합니다. 검색은 문서의 루트에서 시작되어 모든 하위 노드로 진행됩니다.  
+     이전 쿼리는 Contact 테이블의 AdditionalContactInfo 열에 저장된 모든 전화 번호를 검색합니다. Additional된 정보에 대 한 스키마는 \<telephoneNumber> 요소가 문서 어디에 나 나타날 수 있는 방식으로 정의 됩니다. 따라서 전화 번호를 모두 검색하려면 문서의 모든 노드를 검색해야 합니다. 검색은 문서의 루트에서 시작되어 모든 하위 노드로 진행됩니다.  
   
      다음 쿼리에서는 특정 고객 연락처에 대한 모든 전화 번호를 검색합니다.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56bac170-6777-472a-8a09-549b2ee0d909
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5ac09961db83c8c0f8906f2bd04ea20638e39b22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d5940acf827ee8cff73527d211f6bb8249a6e19
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070513"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539565"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>데이터 원본 뷰 새로 고침 대화 상자
   **의** 데이터 원본 뷰 새로 고침 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰 새로 고침의 결과로 발생하는 변경 내용을 적용하거나 취소할 수 있습니다. 이 대화 상자는 기본 데이터 원본을 변경한 결과로 인해 데이터 원본 뷰에서 변경될 내용을 표시합니다. **확인** 을 클릭하여 변경 내용을 적용하고 데이터 원본 뷰를 새로 고치거나, **취소** 를 클릭하여 변경 내용을 무시하고 데이터 원본 뷰를 변경되지 않은 상태로 그대로 둡니다. 다음 방법으로 **데이터 원본 뷰 새로 고침** 대화 상자를 표시할 수 있습니다.  

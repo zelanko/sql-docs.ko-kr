@@ -12,17 +12,17 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b14a78839ac49a76a8745d74f04f3b6c9a37b82
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067889"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858987"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>CHECK 제약 조건 식 대화 상자(Visual Database Tools)
   CHECK 제약 조건을 테이블이나 열에 연결하려면 SQL 식을 포함해야 합니다. 제공된 입력란에 CHECK 제약 조건 식을 입력합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  식  
  식을 입력합니다.  
   

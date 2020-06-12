@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 199de07778a153cd1bc40b5033d364e5e0055bd3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546435"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>세션 범위 계산 셀 만들기
     
@@ -75,12 +74,12 @@ FOR String_Expression AS 'MDX_Expression'
   
  `String_Expression` 값은 다음 표에 나열된 집합의 범주 중 하나로 확인되어야 하는 직각의 단일 차원 MDX 집합 식 목록을 포함합니다.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
 |수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 *Level_Expression*입니다.`Members` MDX 함수. 계산 멤버를 포함 하려면 *Level_Expression*을 사용 합니다.`AllMembers` MDX 함수.<br /><br /> 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
-|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
+|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이에 대 한 예는 `Descendants` (*Member_Expression*, *Level_Expression*, *Desc_Flag*) MDX 함수입니다.<br /><br /> 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  
  [MDX로 셀 계산 작성&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082984"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520609"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>데이터 마이닝 솔루션 관련 프로젝트
   데이터 마이닝 솔루션에 필요한 최소 사항은 데이터 원본, 데이터 원본 뷰, 마이닝 구조 및 마이닝 모델을 정의하는 데이터 마이닝 프로젝트입니다. 하지만 일상적인 의사 결정 과정에서 데이터 마이닝 모델을 사용하는 경우 데이터 마이닝이 예측 분석 솔루션의 다른 부분과 통합되어야 하는데 여기에는 다음과 같은 프로세스와 구성 요소가 포함될 수 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "66082984"
   
 -   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [데이터 프로파일링 태스크](../../integration-services/control-flow/data-profiling-task.md)  
   

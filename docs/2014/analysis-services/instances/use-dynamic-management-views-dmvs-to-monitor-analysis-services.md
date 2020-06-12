@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543718"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
@@ -98,9 +97,9 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  지정 된 행 집합에 대해 DMV를 사용할 수 없는 경우 서버는 " \<t> 요청 유형을 서버에서 인식할 수 없습니다." 라는 오류를 반환 합니다. 다른 모든 오류는 구문 문제를 가리킵니다.  
+>  지정 된 행 집합에 대해 DMV를 사용할 수 없는 경우 서버는 " \<schemarowset> 서버에서 요청 유형을 인식할 수 없습니다." 라는 오류를 반환 합니다. 다른 모든 오류는 구문 문제를 가리킵니다.  
   
-|행 집합|Description|  
+|행 집합|설명|  
 |------------|-----------------|  
 |[DBSCHEMA_CATALOGS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-catalogs-rowset)|현재 연결의 Analysis Services 데이터베이스 목록을 반환합니다.|  
 |[DBSCHEMA_COLUMNS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-columns-rowset)|현재 데이터베이스에 있는 모든 열 목록을 반환합니다. 이 목록을 사용하여 DMV 쿼리를 생성할 수 있습니다.|  

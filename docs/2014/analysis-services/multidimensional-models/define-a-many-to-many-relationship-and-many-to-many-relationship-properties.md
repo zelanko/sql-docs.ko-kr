@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547085"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>다 대 다 관계 및 다 대 다 관계 속성 정의
   이 항목에서는 Analysis Services의 다 대 다 차원에 대해 설명하고 이러한 차원을 사용하는 경우와 만드는 방법도 살펴봅니다.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075777"
   
 1.  프로젝트를 배포한 다음 큐브를 탐색하여 집계가 유효한지 확인합니다.  
   
-2.  Excel의**Analysis Services에서****기타 원본의** |  **데이터** | 를 클릭 합니다. 서버의 이름을 입력하고 데이터베이스와 큐브를 선택합니다.  
+2.  Excel의 **Data**  |  Analysis Services에서**기타 원본의**데이터를 클릭  |  **From Analysis Services**합니다. 서버의 이름을 입력하고 데이터베이스와 큐브를 선택합니다.  
   
 3.  다음과 같은 피벗 테이블을 만듭니다.  
   

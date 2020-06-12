@@ -1,5 +1,6 @@
 ---
 title: Sybase ASE 데이터베이스를 SQL Server로 마이그레이션-Azure SQL DB | Microsoft Docs
+description: 이 권장 프로세스를 사용 하 여 SAP 적응 서버 엔터프라이즈 데이터베이스를 SQL Server로 마이그레이션하거나 SSMA (SQL Server Migration Assistant)를 사용 하 여 Azure SQL Database 합니다.
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c3735e03e3196f899ab33ca152364244e3331ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028854"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292820"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>SAP ASE 데이터베이스를 SQL Server-Azure SQL Database로 마이그레이션 (SybaseToSQL)
-SAP 적응 서버 엔터프라이즈 (ASE) 용 SSMA (SQL Server Migration Assistant)는 SAP ASE 데이터베이스를 또는 Azure SQL Database으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다. SAP ASE 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 데이터베이스 개체를 또는 Azure SQL Database 마이그레이션하고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 또는 Azure SQL Database로 마이그레이션할 수 있습니다.  
+SAP 적응 서버 엔터프라이즈 (ASE) 용 SSMA (SQL Server Migration Assistant)는 SAP ASE 데이터베이스를 또는 Azure SQL Database으로 신속 하 게 마이그레이션하는 데 도움이 되는 포괄적인 환경입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . SAP ASE 용 SSMA를 사용 하 여 데이터베이스 개체 및 데이터를 검토 하 고, 마이그레이션을 위해 데이터베이스를 평가 하 고, 데이터베이스 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 마이그레이션하고, 데이터를 또는 Azure SQL Database로 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="recommended-migration-process"></a>권장 마이그레이션 프로세스  
-SAP ASE 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 개체 및 데이터를 성공적으로 마이그레이션하려면 다음 프로세스를 사용 합니다.  
+SAP ASE 데이터베이스에서 또는 Azure SQL Database 개체 및 데이터를 성공적으로 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 프로세스를 사용 합니다.  
   
 1.  [새 SSMA 프로젝트를 만듭니다](working-with-ssma-projects-sybasetosql.md).  
   
@@ -38,13 +39,13 @@ SAP ASE 데이터베이스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 7.  [변환 된 데이터베이스 개체를 SQL Server/Azure SQL Database 로드](https://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)합니다.  
   
-    스크립트를 저장 하 고 또는 Azure SQL Database에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 하거나 데이터베이스 개체를 동기화 합니다.  
+    스크립트를 저장 하 고 또는 Azure SQL Database에서 실행 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체를 동기화 합니다.  
   
 8.  [SQL Server/Azure SQL Database으로 데이터를 마이그레이션합니다](https://msdn.microsoft.com/54a39f5e-9250-4387-a3ae-eae47c799811).  
   
 9. 필요한 경우 데이터베이스 응용 프로그램을 업데이트 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참조  
 [SAP ASE 용 SSMA 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [SAP ASE 용 SSMA를 시작 하는 방법 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892876"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669834"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  테이블입니다.  
   
 ## <a name="remarks"></a>설명  
- **BottomPercent** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 rank 식의 \<계산 된 값을 기준으로 하 여 각 행에 대 한 값> 값의 \<합계가 적어도 \<percent> 인수로 지정 된 비율 이상> 합니다. **BottomPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
+ **BottomPercent** 함수는 최하위 행을 차수 보다 오름차순으로 반환 합니다. Rank는 rank 식의 계산 된 값을 기준으로 하 여 \< 각 행에 대 한 \< 값> 값의 합계가 적어도 \< percent> 인수로 지정 된 비율 이상> 합니다. **BottomPercent** 는 지정 된 백분율 값을 충족 하는 동안 가능한 가장 작은 수의 요소를 반환 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [기본 데이터 마이닝 자습서](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 연결 모델에 대 한 예측 쿼리를 만듭니다.  

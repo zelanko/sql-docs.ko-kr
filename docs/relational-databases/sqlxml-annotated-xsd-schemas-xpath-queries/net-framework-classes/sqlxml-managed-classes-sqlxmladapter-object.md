@@ -1,5 +1,6 @@
 ---
 title: SqlXmlAdapter 개체 (SQLXML)
+description: .NET Framework에서 데이터 집합과의 상호 작용을 용이 하 게 하는 메서드를 제공 하는 SqlXmlAdapter 개체에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f1361babe25e8546b120bed352e31c7fa87d133
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abc83952a57d27ab6ec6053d7d9b1b50ec29fba7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251400"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529922"
 ---
 # <a name="sqlxml-managed-classes---sqlxmladapter-object"></a>SQLXML 관리되는 클래스 - SqlXmlAdapter 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

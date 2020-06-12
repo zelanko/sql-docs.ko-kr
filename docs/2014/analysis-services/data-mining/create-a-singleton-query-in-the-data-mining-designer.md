@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fa1d14c1a96a89cbd890dbf4d133d84897b9197
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085304"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523679"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
   단일 쿼리는 단일 사례에 대한 예측을 만들려는 경우 유용합니다. 단일 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리](data-mining-queries.md)를 참조하세요.  
@@ -57,7 +56,7 @@ AS [t]
   
 4.  **단일 쿼리 입력** 테이블의 **값** 열에서 값을 선택하여 예측을 만들 사례를 설명합니다.  
   
-     예를 들어 **Number Children In Home**에 대해 **2** 를 선택한 다음 **Age**에 대해를 입력 `45` 합니다.  
+     예를 들어 **Number Children In Home**에 대해 **2** 를 선택한 다음 `45` **Age**에 대해를 입력 합니다.  
   
 5.  **마이닝 모델** 테이블의 예측 가능한 열을 탭의 아래쪽에 있는 **원본** 열로 끌어다 놓습니다. 필요에 따라 열에 대 한 별칭을 입력할 수 있습니다.  
   

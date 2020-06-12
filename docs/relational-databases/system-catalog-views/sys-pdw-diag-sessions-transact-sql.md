@@ -11,19 +11,19 @@ ms.assetid: 4d23688a-cddb-4eed-8231-ecde2a0b0e65
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fa06005679e31381f723b30b9f68e5ce0d89ae1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1771f9cb3a922854b2556477eb100a14b593e1a
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627341"
 ---
 # <a name="syspdw_diag_sessions-transact-sql"></a>sys. pdw_diag_sessions (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   시스템에 생성 된 다양 한 진단 세션에 대 한 정보를 저장 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**name**|**nvarchar(255)**|진단 세션의 이름입니다.<br /><br /> 이 보기의 키입니다.||  
 |**xml_data**|**nvarchar(4000)**|세션을 설명 하는 XML 페이로드입니다.||  

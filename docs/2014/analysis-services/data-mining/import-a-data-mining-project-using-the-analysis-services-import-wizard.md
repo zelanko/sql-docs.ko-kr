@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63034ac9d8ba601070f716830b3b9173575a8775
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522336"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기
   이 항목에서는 **의**서버에서 가져오기(다차원 및 데이터 마이닝) 프로젝트 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]템플릿을 사용하여 다른 서버의 기존 데이터 마이닝 프로젝트에서 메타데이터를 가져와 새로운 데이터 마이닝 프로젝트를 만드는 방법을 설명합니다.  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081924"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528729"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 배포 및 확장(Excel용 데이터 마이닝 추가 기능)
-  **모델 사용** 및 **관리** 그룹의 도구는 기존 마이닝 모델을 관리 하 고 검색 하는 데 도움이 됩니다. 이러한 도구를 사용 하 여 추가 기능을 사용 하 여 만든 모델 뿐만 아니라 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 저장 된 모든 모델을 볼 수 있습니다.  
+  **모델 사용** 및 **관리** 그룹의 도구는 기존 마이닝 모델을 관리 하 고 검색 하는 데 도움이 됩니다. 이러한 도구를 사용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 추가 기능을 사용 하 여 만든 모델 뿐만 아니라 인스턴스에 저장 된 모든 모델을 볼 수 있습니다.  
   
  필요한 권한이 있는 경우 Excel을 벗어나지 않고도 기존 마이닝 모델 및 구조를 삭제, 수정, 이름 변경 또는 처리할 수 있습니다.  
   

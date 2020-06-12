@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50e3afbc-7789-46b1-bcd3-50497f5b493f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3da39338fd5f5e86de083ec30cd0ce4bbe531f30
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062900"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528209"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>동작(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **동작** 탭을 사용하여 선택한 큐브에 대한 드릴스루 작업 및 보고 작업을 포함한 작업을 보고 편집할 수 있습니다.  

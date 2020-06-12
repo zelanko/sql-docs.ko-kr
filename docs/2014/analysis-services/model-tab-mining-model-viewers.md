@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537365"
 ---
 # <a name="model-tab-mining-model-viewers"></a>모델 탭(마이닝 모델 뷰어)
   Microsoft 시계열 뷰어의 **모델** 탭에는 의사 결정 트리 모델에서 사용되는 것과 유사하게 그래프의 노드로 시계열이 표시됩니다.  

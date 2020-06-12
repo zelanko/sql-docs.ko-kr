@@ -1,5 +1,6 @@
 ---
 title: min 함수 (XQuery) | Microsoft Docs
+description: 다른 모든 항목의 값이 작은 시퀀스에서 한 항목을 반환 하는 XQuery min () 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985755"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529977"
 ---
 # <a name="aggregate-functions---min"></a>집계 함수 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   XQuery 프롤로그의 **namespace** 키워드는 네임 스페이스 접두사를 정의 합니다. 그러면 이 접두사는 XQuery 본문에 사용됩니다.  
   
- XQuery 본문은 WCID 및 **LaborHrs** 특성을 사용 \<하 여 위치> 요소가 있는 XML을 생성 합니다.  
+ XQuery 본문은 \<Location> WCID 및 **LaborHrs** 특성을 사용 하는 요소가 있는 XML을 생성 합니다.  
   
 -   또한 이 쿼리는 ProductModelID 및 이름 값을 검색합니다.  
   

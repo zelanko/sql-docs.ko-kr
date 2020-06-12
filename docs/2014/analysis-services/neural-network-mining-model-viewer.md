@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69c7efb919a01e6e9d704c4f0fe2ef3d7c25799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072314"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541165"
 ---
 # <a name="neural-network-mining-model-viewer"></a>신경망(마이닝 모델 뷰어)
   **신경망** 뷰어를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] 신경망 알고리즘 또는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 로지스틱 회귀 알고리즘을 기반으로 하는 마이닝 모델을 탐색할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66072314"
   
 |값|설명|  
 |-----------|-----------------|  
-|**특성도**|목록에서 입력 특성을 선택합니다. 선택 영역을 기본값인 ** \<모든>** 로 두면 예측 가능한 특성에 대 한 영향을 기준으로 순위가 지정 된 모든 입력 특성의 목록이 차트에 표시 됩니다.|  
+|**특성**|목록에서 입력 특성을 선택합니다. 선택 영역을 기본값으로 두면 **\<All>** 차트에 모든 입력 특성의 목록이 예측 가능한 특성에 대 한 영향을 기준으로 표시 됩니다.|  
 |**값**|입력 특성의 값을 선택합니다.|  
   
  **출력**  
@@ -56,10 +55,10 @@ ms.locfileid: "66072314"
   
 |값|설명|  
 |-----------|-----------------|  
-|**특성도**|**특성**에서 선택한 입력 특성의 이름을 보여 줍니다.|  
+|**특성**|**특성**에서 선택한 입력 특성의 이름을 보여 줍니다.|  
 |**값**|선택한 입력 특성의 값을 보여 줍니다.|  
-|**값 \<1에 우선>**|이 특정 특성-값 조합이 **값 1**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
-|**값 \<2>에 우선 합니다.**|이 특정 특성-값 조합이 **값 2**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
+|**우위\<Value 1>**|이 특정 특성-값 조합이 **값 1**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
+|**우위\<Value 2>**|이 특정 특성-값 조합이 **값 2**에서 선택한 대상 결과에 얼마나 많은 영향을 주는지를 나타내는 막대를 표시합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

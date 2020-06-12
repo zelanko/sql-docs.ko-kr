@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4a8124d929faa22ec9429ca8bf15e4f0148ab71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8abee369a99bb2fa7d0590ca85d87c1bda76ba2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085927"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525079"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>데이터 마이닝 뷰어에서 사용되는 색 변경
   데이터 마이닝 뷰어에서 데이터 계열, 노드 또는 클러스터를 표시하는 데 사용되는 색을 변경할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 옵션을 설정하여 이 작업을 수행할 수 있습니다. 설정을 변경한 후에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 보는 모든 모델에 색 선택이 적용되지만 새 색을 보기 위해서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 닫고 뷰어에서 모델을 다시 열어야 합니다.  

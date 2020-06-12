@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d114e9aa025f3c3967372e8cb026a278b45f492e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064474"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527857"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성** 목록을 사용하여 특성 관계 다이어그램에서 특정 특성을 찾거나 새 특성 관계를 정의할 수 있습니다. 이 창은 특성 관계 다이어그램이 있는 창 바로 아래에 나타납니다.  

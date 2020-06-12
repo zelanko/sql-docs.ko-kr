@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081556"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528516"
 ---
 # <a name="dmx-templates"></a>DMX 템플릿
   데이터 마이닝 템플릿을 사용하면 정교한 쿼리를 신속하게 작성할 수 있습니다. DMX 쿼리의 일반 구문이 잘 설명되어 있더라도 템플릿을 사용하면 인수 및 데이터 원본을 클릭하고 가리켜서 쿼리를 보다 쉽게 작성할 수 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "66081556"
   
  **만들기**  
   
- 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 마법사에서 지 원하는 모델만 사용할 수 있는 것은 아닙니다. 플러그 인 알고리즘을 포함 하 여 연결 된 인스턴스에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지원 되는 데이터 마이닝 알고리즘을 사용할 수 있습니다.  
+ 이러한 템플릿을 사용하면 사용자 지정 모델 또는 데이터 구조를 작성할 수 있습니다. 마법사에서 지 원하는 모델만 사용할 수 있는 것은 아닙니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 플러그 인 알고리즘을 포함 하 여 연결 된 인스턴스에서 지원 되는 데이터 마이닝 알고리즘을 사용할 수 있습니다.  
   
 -   마이닝 모델  
   

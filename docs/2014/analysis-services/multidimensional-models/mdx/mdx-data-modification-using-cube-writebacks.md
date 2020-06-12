@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ac43e9206619117c1fc090a594ca32ccbeeeb31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074223"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546335"
 ---
 # <a name="using-cube-writebacks-mdx"></a>큐브 쓰기 저장(Writeback) 사용(MDX)
   큐브를 업데이트하는 데는 [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) 문을 사용합니다. 이 문은 특정 값을 가진 튜플을 업데이트할 수 있도록 해줍니다. 큐브 업데이트에 UPDATE CUBE 문을 효과적으로 사용하기 위해서는 문의 구문, 발생할 수 있는 오류 조건 및 업데이트로 인한 큐브의 영향을 이해해야 합니다.  

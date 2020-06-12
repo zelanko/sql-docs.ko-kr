@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 089b99663753a9e9424e991ca5245c73ea577e49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cad4c1f70743cafcc428835b3dcd11e2fa26ee79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175763"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546776"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
   큐브 파티션은 **에서 큐브 디자이너의** 파티션 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]탭을 사용하여 수정됩니다. **파티션** 탭에서는 큐브에 있는 모든 측정값 그룹의 파티션을 나열합니다. 또한 쓰기 저장(writeback)이 설정된 쓰기 저장 파티션을 나열합니다.

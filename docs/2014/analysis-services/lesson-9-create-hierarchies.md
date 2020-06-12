@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b57669eed30abf010b9d2775950bf0cd6c6e67
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078186"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542155"
 ---
 # <a name="lesson-10-create-hierarchies"></a>10단원: 계층 만들기
   이 단원에서는 계층을 만듭니다. 계층은 수준별로 정렬된 열 그룹입니다. 예를 들어 Geography 계층에는 Country, State, County 및 City에 대한 하위 수준이 포함될 수 있습니다. 계층은 보고 클라이언트 애플리케이션 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다. 자세한 내용은 [계층 구조&#40;SSAS 테이블 형식&#41;](tabular-models/hierarchies-ssas-tabular.md)를 참조하세요.  
@@ -31,27 +30,27 @@ ms.locfileid: "66078186"
   
 #### <a name="to-create-a-category-hierarchy-in-the-product-table"></a>Product 테이블에서 Category 계층을 만들려면  
   
-1.  모델 디자이너에서 `Model` 메뉴를 클릭 하 고 **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭 합니다.  
+1.  모델 디자이너에서 메뉴를 클릭 하 고 `Model` **모델 뷰**를 가리킨 다음 **다이어그램 뷰**를 클릭 합니다.  
   
     > [!TIP]  
     >  모델 디자이너 오른쪽 위 모퉁이에 있는 미니맵 컨트롤을 사용하여 다이어그램 뷰에서의 개체 표시 방식을 변경할 수 있습니다. 다이어그램 뷰에서 개체 위치를 변경하면 프로젝트를 저장할 때 해당 뷰가 유지됩니다.  
   
-2.  모델 디자이너에서 `Product` 테이블을 마우스 오른쪽 단추로 클릭 한 다음 **계층 만들기**를 클릭 합니다. 새 계층이 테이블 창의 아래쪽에 표시됩니다.  
+2.  모델 디자이너에서 테이블을 마우스 오른쪽 단추로 클릭 한 `Product` 다음 **계층 만들기**를 클릭 합니다. 새 계층이 테이블 창의 아래쪽에 표시됩니다.  
   
-3.  계층 이름에서를 입력 `Category`하 여 계층 이름을 바꾸고 enter 키를 누릅니다.  
+3.  계층 이름에서를 입력 하 여 계층 이름을 바꾸고 `Category` enter 키를 누릅니다.  
   
-4.  테이블에서 **Product Category Name** 열을 클릭 한 다음 `Category` 계층으로 끌고 `Category` 이름 위에 놓습니다. `Product`  
+4.  테이블에서 `Product` **Product Category Name** 열을 클릭 한 다음 계층으로 끌고 `Category` 이름 위에 놓습니다 `Category` .  
   
-5.  계층에서 **Product Category Name** 열을 마우스 오른쪽 단추로 클릭 한 다음 **이름 바꾸기**를 클릭 하 고을 `Category`입력 합니다. `Category`  
+5.  계층에서 `Category` **Product Category Name** 열을 마우스 오른쪽 단추로 클릭 한 다음 **이름 바꾸기**를 클릭 하 고을 입력 `Category` 합니다.  
   
     > [!NOTE]  
     >  계층에서 열 이름을 바꿔도 테이블의 열 이름은 바뀌지 않습니다. 계층의 열은 테이블 열에 대한 표현일 뿐입니다.  
   
-6.  테이블에서 **Product 하위 범주 이름** 열을 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 **계층에 추가**를 가리킨 다음를 클릭 `Category`합니다. `Product`  
+6.  테이블에서 `Product` **Product 하위 범주 이름** 열을 마우스 오른쪽 단추로 클릭 하 고 상황에 맞는 메뉴에서 **계층에 추가**를 가리킨 다음를 클릭 `Category` 합니다.  
   
-7.  **Product 하위 범주 이름을** 으로 `Subcategory`바꿉니다.  
+7.  **Product 하위 범주 이름을** 으로 바꿉니다 `Subcategory` .  
   
-8.  클릭 및 끌기를 사용 하거나 상황에 맞는 메뉴에서 **계층에 추가** 명령을 사용 하 여 **모델 이름** 및 **product name** 열을 순서 대로 추가 하 고 **product 하위 범주 이름** 열 아래에 놓습니다. 이러한 열의 `Model` 이름을 각각 `Product`로 바꿉니다.  
+8.  클릭 및 끌기를 사용 하거나 상황에 맞는 메뉴에서 **계층에 추가** 명령을 사용 하 여 **모델 이름** 및 **product name** 열을 순서 대로 추가 하 고 **product 하위 범주 이름** 열 아래에 놓습니다. 이러한 열의 이름을 `Model` `Product` 각각로 바꿉니다.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>Date 테이블에서 계층을 만들려면  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66078186"
     |열|바꾼 후 이름|  
     |------------|----------------|  
     |Calendar Year|Year|  
-    |Week Number Of Year|Week|  
+    |Week Number Of Year|주|  
     |Day Of Week|일|  
   
 ## <a name="next-steps"></a>다음 단계  

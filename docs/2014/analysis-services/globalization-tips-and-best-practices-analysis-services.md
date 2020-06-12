@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544347"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** 다차원 전용  
@@ -102,7 +101,7 @@ ms.locfileid: "70874408"
   
 -   연결 문자열에 `Locale Identifier=1036` 를 추가합니다. 파일을 저장하고 닫습니다.  
   
--   Excel 열기 | **데이터** | **기존 연결**. 목록을 이 컴퓨터에 있는 연결 파일로 필터링합니다. Adventure Works용 연결을 찾습니다. 이름을 주의 깊게 살펴보세요. 두 개 이상 있을 수 있습니다. 연결을 엽니다.  
+-   Excel 열기 | **데이터**  |  **기존 연결**. 목록을 이 컴퓨터에 있는 연결 파일로 필터링합니다. Adventure Works용 연결을 찾습니다. 이름을 주의 깊게 살펴보세요. 두 개 이상 있을 수 있습니다. 연결을 엽니다.  
   
      Adventure Works 샘플 데이터베이스에 프랑스어 번역이 표시되어야 합니다.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874408"
   
  Management Studio에서는 서버 연결에 있는 로캘 식별자를 지정할 수 있습니다.  
   
--   개체 탐색기 | **연결** | **Analysis Services**Analysis Services | **옵션**에서 **추가 연결 매개 변수** 탭을 클릭 합니다.  
+-   개체 탐색기 | **연결**  |  **Analysis Services**  |  **옵션**에서 **추가 연결 매개 변수** 탭을 클릭 합니다.  
   
 -   `Local Identifier=1036` 을 입력하고 **연결**을 클릭합니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082316"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528939"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>데이터베이스 속성 대화 상자(SSAS - 다차원)
   **의** 데이터베이스 속성 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 데이터베이스 속성을 설정할 수 있습니다. 개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하면 **데이터베이스 속성**대화 상자가 표시됩니다.  

@@ -1,5 +1,6 @@
 ---
 title: Xml 데이터 형식에 대 한 XQuery 함수 | Microsoft Docs
+description: Xml 데이터 형식에 대해 사용 하도록 지원 되는 XQuery 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,47 +17,47 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945992"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305723"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>xml 데이터 형식에 대한 XQuery 함수
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  이 항목 및 하위 항목에서는 **xml** 데이터 형식에 대해 XQuery를 지정할 때 사용할 수 있는 함수에 대해 설명 합니다. W3C 사양에 대해서는을 [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873)참조 하십시오.  
+  이 항목 및 하위 항목에서는 **xml** 데이터 형식에 대해 XQuery를 지정할 때 사용할 수 있는 함수에 대해 설명 합니다. W3C 사양에 대해서는을 참조 하십시오 [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
  XQuery 함수는 http://www.w3.org/2004/07/xpath-functions 네임 스페이스에 속합니다. W3C 사양에서는 "fn:" 네임스페이스 접두사를 사용하여 이러한 함수를 기술합니다. 함수를 사용할 때는 "fn:" 네임스페이스 접두사를 명시적으로 지정할 필요가 없습니다. 이러한 이유로 인해 그리고 가독성을 위해 네임스페이스 접두사는 일반적으로 이 설명서에서 사용되지 않습니다.  
   
  다음 표에서는 **xml**데이터 형식에 대해 지원 되는 XQuery 함수를 보여 줍니다.  
   
-|범주|함수 이름|  
+|Category|함수 이름|  
 |--------------|-------------------|  
 |[숫자 값에 대 한 함수](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[ceiling](../xquery/numeric-values-functions-ceiling.md)|  
 ||[평면](../xquery/numeric-values-functions-floor.md)|  
 ||[둥근](../xquery/numeric-values-functions-round.md)|  
-|[문자열 값의 XQuery 함수](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[사용한](../xquery/functions-on-string-values-concat.md)|  
-||[에서는](../xquery/functions-on-string-values-contains.md)|  
-||[부분](../xquery/functions-on-string-values-substring.md)|  
+|[문자열 값의 XQuery 함수](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
+||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[낮은 case 함수 &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[문자열 길이](../xquery/functions-on-string-values-string-length.md)|  
 ||[대문자 함수 &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
-|부울 값 함수|[나타내지](../xquery/functions-on-boolean-values-not-function.md)|  
+|부울 값 함수|[not](../xquery/functions-on-boolean-values-not-function.md)|  
 |[노드의 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[local-name 함수(XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[namespace-uri 함수(XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[컨텍스트 함수](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[최신](../xquery/context-functions-last-xquery.md)|  
-||[놓을](../xquery/context-functions-position-xquery.md)|  
-|[시퀀스 함수](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[비우려면](../xquery/functions-on-sequences-empty.md)|  
+|[컨텍스트 함수](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
+|[시퀀스 함수](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id 함수(XQuery)](../xquery/functions-on-sequences-id.md)|  
 |[집계 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[매출](../xquery/aggregate-functions-avg.md)|  
-||[일별](../xquery/aggregate-functions-min.md)|  
+||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[총합](../xquery/aggregate-functions-sum.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[생성자 함수는 XQuery를 &#40;&#41;](../xquery/constructor-functions-xquery.md)|[생성자 함수](../xquery/constructor-functions-xquery.md)|  
 |[데이터 접근자 함수](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[데이터](../xquery/data-accessor-functions-data-xquery.md)|  

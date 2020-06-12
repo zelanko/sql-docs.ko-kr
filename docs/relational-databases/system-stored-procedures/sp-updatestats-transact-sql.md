@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808954"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806849"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="remarks"></a>설명  
  **sp_updatestats** `UPDATE STATISTICS` 은 `ALL` 데이터베이스의 모든 사용자 정의 및 내부 테이블에 대해 키워드를 지정 하 여 실행 합니다. sp_updatestats 진행률을 나타내는 메시지를 표시 합니다. 업데이트가 완료되면 모든 테이블에 대해 통계가 업데이트되었다고 보고합니다.  
   
-sp_updatestats는 비활성화된 비클러스터형 인덱스에 대한 통계는 업데이트하며 비활성화된 클러스터형 인덱스에 대한 통계는 업데이트하지 않습니다.  
+**sp_updatestats** 는 비활성화 된 비클러스터형 인덱스에 대 한 통계를 업데이트 하 고 비활성화 된 클러스터형 인덱스에 대 한 통계를 업데이트 하지 않습니다.  
   
 디스크 기반 테이블의 경우 **sp_updatestats** 는 **dm_db_stats_properties** 카탈로그 뷰의 **modification_counter** 정보에 따라 통계를 업데이트 하 여 하나 이상의 행이 수정 된 통계를 업데이트 합니다. **Sp_updatestats**를 실행 하면 메모리 최적화 테이블에 대 한 통계가 항상 업데이트 됩니다. 따라서 **sp_updatestats** 필요 이상으로 실행 되지 않습니다.  
   
@@ -58,7 +58,8 @@ sp_updatestats는 비활성화된 비클러스터형 인덱스에 대한 통계�
 호환성 수준이 90 미만인 데이터베이스의 경우 **sp_updatestats** 를 실행 해도 특정 통계에 대 한 최신 NORECOMPUTE 설정이 유지 되지 않습니다. 호환성 수준이 90 이상인 데이터베이스의 경우 sp_updatestats는 특정 통계에 대 한 최신 NORECOMPUTE 옵션을 유지 합니다. 통계 업데이트를 비활성화하고 다시 활성화하는 방법은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
 ## <a name="permissions"></a>권한  
- **Sysadmin** 고정 서버 역할의 멤버 자격 또는 데이터베이스 (**dbo**)의 소유권이 필요 합니다.  
+
+**Sp_updatestats**를 실행 하려면 사용자가 데이터베이스의 소유자 ( `dbo` 역할의 멤버가 아니라 `db_owner` ) 이거나 sysadmin 고정 서버 역할의 멤버 여야 합니다.
 
 ## <a name="examples"></a>예  
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 테이블에 대한 통계를 업데이트합니다.  

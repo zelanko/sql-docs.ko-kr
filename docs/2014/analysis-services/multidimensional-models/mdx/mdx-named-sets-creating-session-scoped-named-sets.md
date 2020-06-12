@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35bd61dcc59eca8bcb920ed99f2e791631047c7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074053"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546285"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>세션 범위 명명된 집합 만들기(MDX)
   MDX 세션에서 사용할 수 있는 명명된 집합을 만들려면 [CREATE SET](/sql/mdx/mdx-data-definition-create-set) 문을 사용하세요. CREATE SET 문으로 작성한 명명된 집합은 MDX 세션이 종료된 뒤에도 제거되지 않습니다.  

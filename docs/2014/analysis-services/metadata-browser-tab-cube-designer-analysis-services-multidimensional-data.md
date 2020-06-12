@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcca1e1e5eec19c81c26fd917e3f557006926233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077852"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545505"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>메타데이터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **브라우저** 탭에 있는 **메타데이터** 창을 사용하여 큐브 구조를 찾아보고, 관련 측정값을 확인하고, 차원을 보거나 만들 수 있습니다. 계층을 드릴다운하고, 사용 가능한 측정값 및 KPI 목록을 보고, 개체의 정규화된 이름을 복사할 수 있습니다.  

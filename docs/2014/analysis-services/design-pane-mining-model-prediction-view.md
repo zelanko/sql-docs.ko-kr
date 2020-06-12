@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32ac73a2d6fde38d15d1f45a8439293695749ea4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528699"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>디자인 창(마이닝 모델 예측 뷰)
   **디자인** 창에는 데이터 마이닝 예측을 작성할 때 사용할 수 있는 예측 쿼리 작성기가 있습니다. 데이터 원본 뷰에서 입력 데이터의 테이블을 사용하는 예측 쿼리를 디자인하여 대량 예측을 생성하거나 개별 값을 제공할 수 있는 단일 예측 쿼리를 만들 수 있습니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "66081846"
  **필드**  
  원본 테이블에서 파생된 열 목록에서 열을 선택합니다. **원본** 에서 **예측 함수**를 선택한 경우 여기에는 선택한 마이닝 모델에 사용할 수 있는 예측 함수가 포함되어 있습니다.  
   
- **그룹**  
+ **그룹화**  
  **및/또는** 열과 함께 사용하여 식을 그룹화할 수 있습니다. 예: `(expr1 Or expr2) And expr3`.  
   
  **및/또는**  

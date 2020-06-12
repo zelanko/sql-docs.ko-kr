@@ -14,17 +14,17 @@ ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70531800a43b0c8680dac3b0c5bd2633e5c09bce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1d0efb6669a5b001793712bfe6f6e5990e0c5b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809154"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858716"
 ---
 # <a name="sql-server-properties-filestream-page"></a>SQL Server 속성(FILESTREAM 페이지)
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **Transact-SQL 액세스에 FILESTREAM 사용**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에 FILESTREAM을 사용하도록 설정하려면 선택합니다. 다른 컨트롤 옵션을 사용하려면 먼저 이 컨트롤을 선택해야 합니다.  
   

@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085656"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524039"
 ---
 # <a name="content-types-data-mining"></a>내용 유형(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]마이닝 구조의 열에 대 한 실제 데이터 형식과 모델에 사용 될 때 열에 대 한 논리적 내용 유형을 모두 정의할 수 있습니다.  
+  에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마이닝 구조의 열에 대 한 실제 데이터 형식과 모델에 사용 될 때 열에 대 한 논리적 내용 유형을 모두 정의할 수 있습니다.  
   
  *데이터 형식* 은 마이닝 모델을 만들 때 알고리즘이 이 열의 데이터를 처리하는 방법을 결정합니다. 열의 데이터 형식을 정의하면 열의 데이터 처리 방법 및 해당 데이터 형식에 대한 알고리즘 정보를 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 각 데이터 형식은 데이터 마이닝에 대해 하나 이상의 내용 유형을 지원합니다.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66085656"
   
  `Discrete` 내용 유형은 모든 데이터 마이닝 데이터 형식에서 지원합니다.  
   
-## <a name="continuous"></a>연속  
+## <a name="continuous"></a>계속  
  *Continuous* 는 열에 중간 값을 허용하는 소수 자릿수의 숫자 데이터를 나타내는 값이 포함되어 있음을 의미합니다. 한정된 개수의 데이터를 나타내는 불연속 열과는 달리 연속 열은 조정 가능한 측정을 나타내며 데이터가 무한 개의 소수 값을 포함합니다. 연속 특성 열의 예로는 Temperatures 열이 있습니다.  
   
  열에 연속 숫자 데이터가 있고 데이터 배포 방법을 알고 있는 경우 값의 예상 분포를 지정하여 분석의 정확도를 향상시킬 수 있습니다. 마이닝 구조의 수준에서 열 배포를 지정합니다. 따라서 이 설정은 구조를 기반으로 하는 모든 모델에 적용됩니다. 자세한 내용은 [열 배포&#40;데이터 마이닝&#41;](column-distributions-data-mining.md)를 참조하세요.  
@@ -67,7 +66,7 @@ ms.locfileid: "66085656"
   
  `Discretized` 내용 유형은 `Date`, `Double`, `Long` 및 `Text` 데이터 형식에서 지원합니다.  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>키  
  *Key* 내용 유형은 열이 행을 고유하게 식별함을 의미합니다. 사례 테이블에서 키 열은 일반적으로 숫자 또는 텍스트 식별자입니다. 내용 유형을 `key`로 설정하면 열을 분석에 사용해서는 안 되고 레코드 추적용으로만 사용해야 함을 나타냅니다.  
   
  중첩 테이블에도 키가 있지만 중첩 테이블 키의 사용법은 약간 다릅니다. 열이 분석하려는 특성일 경우 중첩 테이블에서 내용 유형을 `key`로 설정하십시오. 중첩 테이블 키의 값은 각 사례에 대해 고유해야 하지만 사례 집합 전체에서는 중복될 수 있습니다.  

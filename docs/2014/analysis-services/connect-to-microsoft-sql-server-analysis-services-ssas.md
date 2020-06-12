@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526969"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Microsoft SQL Server Analysis Services에 연결(SSAS)
   **테이블 가져오기 마법사** 의이 페이지에서는 SharePoint에서 호스팅되는 PowerPivot 통합 문서나 Microsoft SQL Server Analysis Services 큐브에서 데이터를 가져오기 위한 설정을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087031"
 > [!NOTE]  
 >  이 페이지에서 데이터베이스를 선택하는 경우 현재 사용자의 자격 증명이 사용됩니다. 하지만 가장 정보 페이지에 지정된 사용자에게 선택한 데이터베이스를 읽을 수 있는 권한이 없는 경우에는 가져오기 작업이 실패합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **연결 이름**  
  이 데이터 원본 연결의 고유 이름을 입력합니다. 이 이름은 반드시 입력해야 합니다.  
   

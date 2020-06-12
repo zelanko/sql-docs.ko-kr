@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085786"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524836"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>분류 행렬(Analysis Services - 데이터 마이닝)
   *분류 행렬* 은 예측된 값이 실제 값과 일치하는지 여부에 따라 모델의 모든 사례를 해당 범주로 분류합니다. 그런 다음 각 범주의 모든 사례 수가 계산되고 행렬에 합계가 표시됩니다. 분류 행렬은 통계 모델을 평가하기 위한 표준 도구로 *혼동 행렬*이라고도 합니다.  

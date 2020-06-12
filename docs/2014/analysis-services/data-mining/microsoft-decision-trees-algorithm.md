@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174703"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522165"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 의사 결정 트리 알고리즘
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 특성과 연속 특성 모두의 예측 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 모델링에 사용 하기 위해에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 제공 하는 분류 및 회귀 알고리즘입니다.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]의사 결정 트리 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 불연속 특성과 연속 특성 모두의 예측 모델링에 사용 하기 위해에서 제공 하는 분류 및 회귀 알고리즘입니다.
 
  불연속 특성의 경우 알고리즘은 데이터 세트 내 입력 열 간의 관계를 기반으로 예측합니다. 이 알고리즘은 해당 열의 값인 상태를 사용하여 사용자가 예측 가능으로 지정하는 열의 상태를 예측합니다. 특히 알고리즘은 예측 가능한 열과 상관 관계에 있는 입력 열을 식별합니다. 예를 들어 자전거를 구입할 가능성이 높은 고객을 예측하는 시나리오에서 청년층 고객의 경우 10명 중 9명이 자전거를 구입한 반면 중장년층 고객의 경우 10명 중 2명만이 자전거를 구입했다면 알고리즘은 자전거 구입에 있어 연령이 좋은 지표가 될 수 있음을 유추합니다. 의사 결정 트리에서는 이러한 경향을 기반으로 특정 결과를 예측합니다.
 

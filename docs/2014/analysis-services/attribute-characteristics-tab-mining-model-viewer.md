@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35cf7db00effb5ce700a1ac883877f67650d3cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62e42dc1cc405f5515e40b0b050036b673a7b89
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063044"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527949"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>특성 특징 탭(마이닝 모델 뷰어)
   **특성 특징** 창을 사용하여 Naïve Bayes 모델의 입력 특성과 결과 간의 관계를 탐색할 수 있습니다. 대상 특성의 값을 선택한 다음 결과에 가장 강한 영향을 주는 입력 특성의 목록을 볼 수 있습니다.  
@@ -34,13 +33,13 @@ ms.locfileid: "66063044"
  **뷰어**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 각 모델에 대해 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 선택할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어도 이 목록에 나타납니다.  
   
- **특성도**  
+ **특성**  
  분석하려는 예측 가능한 특성을 선택합니다.  
   
  **값**  
  **특성**에서 설정한 예측 가능한 특성의 상태를 선택합니다. Naïve Bayes 모델은 연속 변수를 지원하지 않으므로 모든 대상 특성에는 불연속 또는 불연속화된 결과가 있습니다. 누락된 특성은 항상 자동으로 목록에 추가됩니다.  
   
- **예측 가능한 \<상태에 대 한 특성>**  
+ **특성\<predictable state>**  
  이 그래프에는 입력 특성의 상태와 선택한 예측 가능한 특성 상태 간의 관계를 설명하는 다음 열이 포함되어 있습니다.  
   
 |값|설명|  

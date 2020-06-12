@@ -3,8 +3,8 @@ title: sys. pdw_diag_event_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,19 +12,19 @@ ms.assetid: e3944f48-8074-43aa-9840-3d5230faedd3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fc14e2f03deb833d18a0d68be05deefe69842cf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cdd74a5044603b869b38dc1c8b94e2c1049be7f
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915005"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627535"
 ---
 # <a name="syspdw_diag_event_properties-transact-sql"></a>sys. pdw_diag_event_properties (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   진단 이벤트와 연결 된 속성에 대 한 정보를 저장 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**event_name**|**nvarchar(255)**|특정 진단 이벤트의 이름입니다.||  
 |**property_name**|**nvarchar(255)**|이벤트의 속성 이름입니다.||  

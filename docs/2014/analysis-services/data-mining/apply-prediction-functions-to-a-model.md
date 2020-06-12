@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41c7c447af3eb7e0f40c10b98be827caa59867e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde9de00adaa1712a9db6e18aabc6a83dd660efb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086139"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525322"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>모델에 예측 함수 적용
   예측 쿼리를 만들려면 먼저 쿼리의 기반이 될 마이닝 모델을 선택해야 합니다. 현재 프로젝트에 있는 모든 마이닝 모델을 선택할 수 있습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "66086139"
   
     |||  
     |-|-|  
-    |**\<모델 이름>**|마이닝 모델의 값을 출력에 포함하려면 이 옵션을 선택합니다. 예측 가능한 열만 추가할 수 있습니다.<br /><br /> 모델에서 열을 추가하면 해당 열의 고유하지 않은 값 목록이 결과로 반환됩니다.<br /><br /> 이 옵션을 사용하여 추가한 열은 결과 DMX 문의 SELECT 부분에 포함됩니다.|  
+    |**\<model name>**|마이닝 모델의 값을 출력에 포함하려면 이 옵션을 선택합니다. 예측 가능한 열만 추가할 수 있습니다.<br /><br /> 모델에서 열을 추가하면 해당 열의 고유하지 않은 값 목록이 결과로 반환됩니다.<br /><br /> 이 옵션을 사용하여 추가한 열은 결과 DMX 문의 SELECT 부분에 포함됩니다.|  
     |**Prediction Function**|예측 함수 목록을 찾아보려면 이 옵션을 선택합니다.<br /><br /> 선택한 값 또는 함수는 결과 DMX 문의 SELECT 부분에 추가됩니다.<br /><br /> 예측 함수 목록은 선택한 모델 유형에 의해 제한되거나 필터링되지 않습니다. 따라서 함수가 현재 모델 유형에 대해 지원되는지 잘 모를 경우 해당 함수를 목록에 추가하고 오류가 발생하는지 확인하면 됩니다.<br /><br /> $가 앞에 오는 목록 항목(예: $AdjustedProbability)은 `PredictHistogram` 함수를 사용할 때의 출력인 중첩 테이블의 열을 나타냅니다. 이는 중첩 테이블이 아니라 단일 열을 반환하는 데 사용할 수 있는 간편한 방법입니다.|  
     |**사용자 지정 식**|사용자 지정 식을 입력한 다음 출력에 별칭을 할당하려면 이 옵션을 선택합니다.<br /><br /> 사용자 지정 식은 결과 DMX 예측 쿼리의 SELECT 부분에 추가됩니다.<br /><br /> 이 옵션은 각 행과 함께 출력 텍스트를 추가하거나, VB 함수를 호출하거나, 사용자 지정 저장 프로시저를 호출하려는 경우에 유용합니다.<br /><br /> DMX에서 VBA 및 Excel 함수를 사용하는 방법은 [MDX 및 DAX의 VBA 함수](/sql/mdx/vba-functions-in-mdx-and-dax)를 참조하세요.|  
   
@@ -92,9 +91,9 @@ ms.locfileid: "66086139"
   
 5.  표 형태 창에서 **원본**에 대해 TM_Clustering 마이닝 모델을 선택하고 [Bike Buyer] 열을 추가합니다.  
   
-6.  **원본**에 대해 **예측 함수**를 선택 하 고 함수를 `Cluster`추가 합니다.  
+6.  **원본**에 대해 **예측 함수**를 선택 하 고 함수를 추가 `Cluster` 합니다.  
   
-7.  **원본**에 대해 **예측 함수**를 선택 하 고 함수 `PredictSupport`를 추가한 다음 모델 열 [자전거 구매자]를 **조건/인수** 상자로 끕니다. **별칭** 열에 **Support** 를 입력합니다.  
+7.  **원본**에 대해 **예측 함수**를 선택 하 고 함수를 추가한 `PredictSupport` 다음 모델 열 [자전거 구매자]를 **조건/인수** 상자로 끕니다. **별칭** 열에 **Support** 를 입력합니다.  
   
      **조건/인수** 상자에서 예측 함수 및 열 참조를 나타내는 식을 복사합니다.  
   

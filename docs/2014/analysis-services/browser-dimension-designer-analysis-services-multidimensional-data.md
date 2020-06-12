@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064626"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527769"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>브라우저(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **브라우저** 탭을 사용하여 차원에 대한 차원 데이터 및 메타데이터를 검색할 수 있습니다. 현재 선택한 차원에 대해 차원 쓰기 저장(writeback)이 설정되어 있는 경우 이 뷰를 사용하여 해당 차원에 대한 멤버 데이터를 변경할 수 있습니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c4d8581374c9805c28ce577249995427fd5c7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a2a9a4f564bc33cc7a1b41a1a4c766c7a76a2cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546225"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 쿼리 기본 사항(Analysis Services)
   MDX를 사용하면 큐브와 같은 다차원 개체를 쿼리하여 큐브의 데이터를 포함하는 다차원 셀 집합을 반환할 수 있습니다. 이 항목 및 하위 항목에서는 MDX 쿼리에 대한 개요를 제공합니다.  

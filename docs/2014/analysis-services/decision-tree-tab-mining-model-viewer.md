@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13eb819edc2a33117d45954423466343f5de18a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528879"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>의사 결정 트리 탭(마이닝 모델 뷰어)
   **의사 결정 트리** 창에서는 의사 결정 트리 모델에서 만들어진 의사 결정 규칙을 시각적으로 표현합니다. 의사 결정 규칙은 특정 결과로 가는 경로를 설명합니다.  

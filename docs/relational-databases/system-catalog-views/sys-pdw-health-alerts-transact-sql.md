@@ -3,26 +3,26 @@ title: sys. pdw_health_alerts (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127540"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627447"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   시스템에서 발생할 수 있는 다양 한 경고에 대 한 속성을 저장 합니다. 이는 경고에 대 한 카탈로그 테이블입니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|경고의 고유 식별자입니다.<br /><br /> 이 보기의 키입니다.|NOT NULL|  
 |component_id|**int**|이 경고가 적용 되는 구성 요소의 ID입니다. 구성 요소는 "전원 공급 장치"와 같은 일반적인 구성 요소 식별자 이며 설치에 한정 되지 않습니다. [Pdw_health_components &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)을 참조 하십시오.|NOT NULL|  

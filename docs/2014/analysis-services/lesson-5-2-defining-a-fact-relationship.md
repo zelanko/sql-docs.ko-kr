@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8b43e36072e7151570c0b0fa610c3b7e4709616a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2473157bed334345f6c18177f97ac0415612232
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175282"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542785"
 ---
 # <a name="defining-a-fact-relationship"></a>팩트 관계 정의
   사용자는 팩트 테이블에 있는 데이터 항목별로 측정값 차원을 구분하거나 특정 판매 팩트에 관련된 송장 번호나 구매 주문 번호와 같은 특정 추가 관련 정보를 팩트 테이블에서 쿼리할 수 있습니다. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.
@@ -61,7 +60,7 @@ ms.locfileid: "78175282"
 
 12. **마법사 완료** 페이지에서 이름을 **Internet Sales Order Details** 로 바꾼 후 **마침** 을 클릭하여 마법사를 완료합니다.
 
-13. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.
+13. **파일** 메뉴에서 **모두 저장**을 클릭합니다.
 
 14. **Internet Sales Order Details** 차원에 대 한 차원 디자이너의 **특성** 창에서 **Sales order Number**를 선택한 후 속성 창의 **이름** 속성을로 변경 합니다.`Item Description.`
 
@@ -69,9 +68,9 @@ ms.locfileid: "78175282"
 
 16. **데이터 원본 뷰** 창에서 **InternetSales** 테이블의 **SalesOrderNumber** 열을 **특성** 창으로 끌어다 놓아 **Sales Order Number** 특성을 차원에 추가합니다.
 
-17. 새 **Sales Order Number** 특성 `Order Number`의 **Name** 속성을로 변경 하 고 **OrderBy** 속성을 **Key**로 변경 합니다.
+17. 새 **Sales Order Number** 특성의 **Name** 속성을로 변경 하 `Order Number` 고 **OrderBy** 속성을 **Key**로 변경 합니다.
 
-18. **계층** 창에서 `Order Number` 및 **항목 설명** 수준을 순서 대로 포함 하는 **Internet Sales Orders** 사용자 계층을 만듭니다.
+18. **계층** 창에서 및 항목 설명 수준을 순서 대로 포함 하는 **Internet Sales Orders** 사용자 계층을 만듭니다 `Order Number` **Item Description** .
 
 19. **특성** 창에서 **Internet Sales Order Details**를 선택한 다음 속성 창에서 **StorageMode** 속성 값을 검토합니다.
 

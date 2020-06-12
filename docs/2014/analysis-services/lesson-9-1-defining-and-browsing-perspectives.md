@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493771"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542275"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
   큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "69493771"
   
      ![큐브 뷰 이름 열의 새 큐브 뷰](../../2014/tutorials/media/l9-perspectives-2.gif "큐브 뷰 이름 열의 새 큐브 뷰")  
   
-3.  큐브 뷰 이름을로 `Internet Sales`변경 합니다.  
+3.  큐브 뷰 이름을로 변경 `Internet Sales` 합니다.  
   
 4.  다음 행에서 DefaultMeasure를 **Internet Sales-Sales Amount**로 설정합니다.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493771"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  새 큐브 뷰의 이름을로 `Reseller Sales`변경 합니다.  
+2.  새 큐브 뷰의 이름을로 변경 `Reseller Sales` 합니다.  
   
 3.  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493771"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  새 큐브 뷰의 이름을로 `Sales Summary`변경 합니다.  
+2.  새 큐브 뷰의 이름을로 변경 `Sales Summary` 합니다.  
   
     > [!NOTE]  
     >  계산 측정값은 기본 측정값으로 지정할 수 없습니다.  
@@ -182,7 +181,7 @@ ms.locfileid: "69493771"
   
 7.  메타데이터 창에서 **Measures**를 확장합니다.  
   
-     `Internet Sales` 측정값 그룹만 **internet Gpm** 및 **Internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다.  
+     `Internet Sales`측정값 그룹만 **internet gpm** 및 **Internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다.  
   
 8.  모델에서 Excel을 다시 선택합니다. `Sales Summary`를 선택합니다.  
   

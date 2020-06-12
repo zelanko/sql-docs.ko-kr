@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,17 +11,18 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844406"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627487"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  그러면에서 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 네트워크 자격 증명을 저장 하 고 서버에 연결 합니다. 예를 들어이 저장 프로시저를 사용 하 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 여 대상 서버에서 데이터베이스 백업 및 복원 작업을 수행 하거나 tde에 사용 되는 인증서의 백업을 만들 수 있도록 적절 한 읽기/쓰기 권한을 부여할 수 있습니다.  
+  그러면에서 네트워크 자격 증명 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 을 저장 하 고 서버에 연결 합니다. 예를 들어이 저장 프로시저를 사용 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 대상 서버에서 데이터베이스 백업 및 복원 작업을 수행 하거나 TDE에 사용 되는 인증서의 백업을 만들 수 있도록 적절 한 읽기/쓰기 권한을 부여할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  제어 노드와 모든 계산 노드에서 자격 증명 추가에 성공 하지 못하면 오류가 발생 합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 이 저장 프로시저는에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService 계정에 네트워크 자격 증명을 추가 합니다. NetworkService 계정은 제어 노드와 계산 노드에서 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 되는 경우 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 대 한 읽기 및 쓰기 권한을 얻게 됩니다.  
+ 이 저장 프로시저는에 대 한 NetworkService 계정에 네트워크 자격 증명을 추가 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. NetworkService 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드와 계산 노드에서 SMP의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 되는 경우 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 대 한 읽기 및 쓰기 권한을 얻게 됩니다.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

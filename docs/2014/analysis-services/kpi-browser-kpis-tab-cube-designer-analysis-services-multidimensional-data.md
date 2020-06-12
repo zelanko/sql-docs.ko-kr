@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079496"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543729"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI 브라우저(KPI 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
-  큐브 디자이너의 **KPI** 탭에 있는 **KPI 브라우저** 창을 사용하여 KPI(핵심 성과 지표)의 결과를 보고 테스트할 수 있습니다. 검색 하기 전에 먼저 kpi를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 배포 해야 합니다.  
+  큐브 디자이너의 **KPI** 탭에 있는 **KPI 브라우저** 창을 사용하여 KPI(핵심 성과 지표)의 결과를 보고 테스트할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 검색 하기 전에 먼저 kpi를 인스턴스에 배포 해야 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
 >  이 창은 브라우저 보기에만 표시됩니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66079496"
  **하위 큐브 표**  
  하위 큐브를 정의하고 **결과** 창에 표시할 KPI 결과를 제한하려면 사용합니다. 표에는 다음 열이 있습니다.  
   
- **차원**  
+ **치수나**  
  이 필터를 적용할 차원을 선택합니다.  
   
  **계층**  
@@ -44,7 +43,7 @@ ms.locfileid: "66079496"
 |**같지 않음**|**필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**진행**|**필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
 |**속하지 않음**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
-|**에서는**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
+|**포함**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
 |**시작 문자**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
 |**범위(포함)**|**필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
 |**범위(제외)**|**필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  
@@ -65,7 +64,7 @@ ms.locfileid: "66079496"
  **값**  
  KPI 값을 표시합니다.  
   
- **목표**  
+ **Goal**  
  KPI의 목표 값을 표시합니다.  
   
  **상태**  
@@ -74,7 +73,7 @@ ms.locfileid: "66079496"
  **추세**  
  KPI의 추세 그래픽을 표시합니다.  
   
- **무게**  
+ **Weight**  
  KPI의 가중치 요인을 표시합니다.  
   
  **한**  

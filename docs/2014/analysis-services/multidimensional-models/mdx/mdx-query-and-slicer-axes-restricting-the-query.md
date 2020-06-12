@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed4d50aa40d2915c60f887e64cdc3ef8a6d52c5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074036"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546275"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>쿼리 및 Slicer 축으로 쿼리 제한(MDX)
   MDX(Multidimensional Expressions) SELECT 쿼리를 구성할 때 애플리케이션에서는 일반적으로 큐브를 검토하고 계층 집합을 다음과 같이 두 개의 하위 집합으로 나눕니다.  

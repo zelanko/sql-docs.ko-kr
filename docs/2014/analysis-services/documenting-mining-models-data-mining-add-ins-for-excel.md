@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081586"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528489"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>마이닝 모델 문서화(Excel용 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본, 모델 문서화 단추](media/dmc-docmodel.gif "데이터 마이닝 리본, 모델 문서화 단추")  
@@ -57,7 +56,7 @@ ms.locfileid: "66081586"
 |-|-|-|  
 |**메타데이터**|모델 이름<br /><br /> 모델 설명<br /><br /> 알고리즘 이름<br /><br /> 마지막 처리 날짜||  
 |**모델 결과**|연결|항목 집합 수<br /><br /> 규칙 수|  
-||클러스터링|클러스터 수<br /><br /> 각 클러스터 지원|  
+||Clustering|클러스터 수<br /><br /> 각 클러스터 지원|  
 ||의사 결정 트리|트리 수<br /><br /> 각 트리의 노드 수|  
 ||선형 회귀|트리 수(항상 1)<br /><br /> 노드 수(항상 1)|  
 ||Naïve Bayes|중요한 특성|  
@@ -70,7 +69,7 @@ ms.locfileid: "66081586"
 ||||  
 |-|-|-|  
 |**메타데이터**|모델 메타데이터|알고리즘 매개 변수 및 값|  
-||열 메타데이터|열 이름<br /><br /> 사용법<br /><br /> 데이터 형식<br /><br /> 콘텐츠 유형<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
+||열 메타데이터|열 이름<br /><br /> 사용<br /><br /> 데이터 형식<br /><br /> 내용 유형<br /><br /> 값(불연속 값 목록 또는 값 범위)|  
 |**모델 통계**|연속 열|평균값<br /><br /> 최소값<br /><br /> 최대값<br /><br /> 제곱 평균 오차<br /><br /> 절대 평균 오차<br /><br /> 로그 점수<br /><br /> 회귀 수식(선형 회귀 모델만 해당)|  
 ||불연속 열|전달 횟수<br /><br /> 실패 횟수<br /><br /> 로그 점수<br /><br /> 리프트|  
   

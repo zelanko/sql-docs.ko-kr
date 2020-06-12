@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088464"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527739"
 ---
 # <a name="browsing-an-association-rules-model"></a>연결 규칙 모델 찾아보기
-  **찾아보기**를 사용 하 여 연결 모델을 열면의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]연결 규칙 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다.  이 뷰어에서는 서로 연관된 항목을 한 눈에 확인할 수 있으며 예측 또는 제안에 사용할 수 있는 규칙이 표시됩니다.  
+  **찾아보기**를 사용 하 여 연결 모델을 열면의 연결 규칙 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  이 뷰어에서는 서로 연관된 항목을 한 눈에 확인할 수 있으며 예측 또는 제안에 사용할 수 있는 규칙이 표시됩니다.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>모델 탐색  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용 하 여 만든 마이닝 모델을 열 때 **찾아보기** 창에는 모델의 다른 측면을 탐색할 수 있도록 설계 된 다음 뷰가 포함 되어 있습니다.  
+ 연결 규칙 알고리즘을 사용 하 여 만든 마이닝 모델을 열 때 [!INCLUDE[msCoName](../includes/msconame-md.md)] **찾아보기** 창에는 모델의 다른 측면을 탐색할 수 있도록 설계 된 다음 뷰가 포함 되어 있습니다.  
   
 -   [항목 집합](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088464"
   
  **최소 지원** 및 **최대 행** 수 값을 변경 하 여 탭에 표시 되는 항목 집합 수를 필터링 할 수 있습니다. **최소 지원** 값을 늘리면 목록에 항목 집합 더 작은 값이 표시 되지만 항목 집합는 입력 데이터에서 더 일반적인 것입니다. 공통 여부는 중요 한 질문입니다. 다른 질문은 **규칙** 탭을 사용 하 여 탐색할 수 있습니다.  
   
- **항목 집합** 탭에서 지원 값 또는 기타 컨트롤을 변경 하면 표시 되는 항목만 변경 되며 기본 모델에는 영향을 주지 않습니다. 항목 집합을 더 많이 생성 하거나 크기를 제한 하려는 경우 **알고리즘 매개 변수** 대화 상자에서 사용할 수 있는 및 `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT`매개 변수를 사용 해야 합니다.  
+ **항목 집합** 탭에서 지원 값 또는 기타 컨트롤을 변경 하면 표시 되는 항목만 변경 되며 기본 모델에는 영향을 주지 않습니다. 항목 집합을 더 많이 생성 하거나 크기를 제한 하려는 경우 `MINIMUM_SUPPORT` `MAXIMUM_SUPPORT` **알고리즘 매개 변수** 대화 상자에서 사용할 수 있는 및 매개 변수를 사용 해야 합니다.  
   
 ##### <a name="explore-the-itemsets-list"></a>항목 집합 목록 탐색  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088464"
   
 2.  원하는 특정 항목 집합에 초점을 맞추기 위해 가능한 한 많은 수의 조합에 초점을 맞추기 위해 항목 **집합 필터** 상자에 텍스트를 입력 합니다.  
   
-     여기서는를 `Gloves`입력 했습니다. 필터를 적용하면 목록이 새로 고쳐지고 gloves가 포함된 항목 집합만 표시됩니다. 그러면 고객이 다른 항목과 함께 장갑을 구입한 트랜잭션만 확인할 수 있습니다.  
+     여기서는를 입력 했습니다 `Gloves` . 필터를 적용하면 목록이 새로 고쳐지고 gloves가 포함된 항목 집합만 표시됩니다. 그러면 고객이 다른 항목과 함께 장갑을 구입한 트랜잭션만 확인할 수 있습니다.  
   
      **항목 집합 필터** 옵션에서는 이전에 사용한 필터 목록도 표시합니다.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088464"
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>연결 모델에 대한 추가 정보  
- **찾아보기** 기능을 사용 하 여 Microsoft 연결 규칙 알고리즘을 사용 하 여 만든 모델을 열고 탐색할 수 있습니다. 여기에는 시장 [바구니 분석 &#40;테이블 AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) 도구, **테이블 분석 도구** 리본 또는의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 사용 하 여 작성 된 모델이 포함 됩니다.  
+ **찾아보기** 기능을 사용 하 여 Microsoft 연결 규칙 알고리즘을 사용 하 여 만든 모델을 열고 탐색할 수 있습니다. 여기에는 시장 [바구니 분석 &#40;테이블 AnalysisTools For Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) 도구, **테이블 분석 도구** 리본 또는의를 사용 하 여 작성 된 모델이 포함 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  시장 바구니 분석 도구를 사용하여 연결 규칙 모델을 만들면 많은 고급 옵션이 자동으로 구성됩니다.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "66088464"
   
 -   **항목 집합:** 모델을 만들 때 MINIMUM_PROBABILITY 매개 변수에 값을 할당 하 여 생성 되는 항목 집합 수를 제어할 수도 있습니다. 이 매개 변수는 알고리즘 매개 변수 대화 상자에서 사용할 수 있습니다.  
   
--   **규칙:** 연결 [!INCLUDE[msCoName](../includes/msconame-md.md)] 규칙 알고리즘은 확률 값을 사용 하 여 생성 되는 규칙 수를 제한 합니다. `MINIMUM_PROBABILITY` 또는 `MINIMUM _IMPORTANCE` 매개 변수를 설정해서 규칙 수를 제어할 수 있습니다.  
+-   **규칙:** [!INCLUDE[msCoName](../includes/msconame-md.md)]연결 규칙 알고리즘은 확률 값을 사용 하 여 생성 되는 규칙 수를 제한 합니다. `MINIMUM_PROBABILITY` 또는 `MINIMUM _IMPORTANCE` 매개 변수를 설정해서 규칙 수를 제어할 수 있습니다.  
   
  고급 매개 변수를 구성 하는 방법에 대 한 자세한 내용은 데이터 마이닝 [알고리즘 &#40;SQL Server 데이터 마이닝 추가 기능&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)를 참조 하세요.  
   

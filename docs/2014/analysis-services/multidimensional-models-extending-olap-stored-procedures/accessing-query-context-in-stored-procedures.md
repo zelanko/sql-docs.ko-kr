@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da8ddb223ed03c0208fe524ea5cd7195a039c97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702664"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545374"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>저장 프로시저의 쿼리 컨텍스트 액세스
   저장 프로시저의 실행 컨텍스트는 ADOMD.NET 서버 개체 모델의 `Context` 개체로 저장 프로시저 코드 내에서 사용할 수 있습니다. 이것은 읽기 전용 컨텍스트이며 저장 프로시저로 수정할 수 없습니다. 이 개체에 다음 속성을 사용할 수 있습니다.  
   
-|속성|유형|설명|  
+|속성|Type|설명|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|현재 쿼리 컨텍스트에 대한 큐브입니다.|  
 |**CurrentDatabaseName**|String|현재 데이터베이스의 식별자입니다.|  

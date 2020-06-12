@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543055aaed5d8991ed2c913a6ae46575c774e216
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083122"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520894"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
   일반적인 데이터 마이닝 프로젝트의 목표는 마이닝 모델을 사용하여 예측을 수행하는 것입니다. 예를 들어 서버의 특정 클러스터에 대해 예상 작동 중단 시간의 양을 예측하거나, 고객의 세그먼트가 광고 캠페인에 응답할 가능성이 있는지 여부를 표시하는 점수를 생성할 수 있습니다. 이러한 작업을 모두 수행하기 위해 예측 쿼리를 만들 수 있습니다.  

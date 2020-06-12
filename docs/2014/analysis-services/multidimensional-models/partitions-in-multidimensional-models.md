@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26e01dc7-fa49-4b1f-99eb-7799d1b4dcd2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a36489037607ad046689e55825f5958cb9ee611
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073326"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545842"
 ---
 # <a name="partitions-in-multidimensional-models"></a>다차원 모델의 파티션
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 *파티션* 은 로드된 팩트 데이터의 실제 스토리지를 측정값 그룹에 제공합니다. 각 측정값 그룹에 대해 단일 파티션이 자동으로 만들어지지만 더욱 효율적으로 처리하고 쿼리 성능이 빨라지도록 데이터를 추가로 분할하는 추가 파티션을 만드는 것이 일반적입니다.  

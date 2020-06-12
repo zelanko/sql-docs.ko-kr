@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082595"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520219"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>시계열 모델에 대한 수식 보기(데이터 마이닝)
-  시계열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 뷰어 Indata 마이닝 디자이너는 시계열 모델에 사용 되는 회귀 수식의 세부 정보를 보는 가장 쉬운 방법을 제공 합니다.  
+  시계열 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 뷰어 inData 마이닝 디자이너는 시계열 모델에 사용 되는 회귀 수식의 세부 정보를 보는 가장 쉬운 방법을 제공 합니다.  
   
  모델 콘텐츠를 쿼리하여 시계열 모델의 회귀 수식을 추출할 수 있습니다. 그러나 complete ARTXP 또는 ARIMA 수식을 보려면 모든 상수를 읽을 수 있는 형식으로 제공 하는 [Microsoft 시계열 뷰어](browse-a-model-using-the-microsoft-time-series-viewer.md)의 **마이닝 범례** 를 사용 하는 것이 좋습니다.  
   

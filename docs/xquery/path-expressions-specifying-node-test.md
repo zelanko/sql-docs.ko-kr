@@ -1,5 +1,6 @@
 ---
 title: 경로 식 단계에서 노드 테스트 지정 | Microsoft Docs
+description: XQuery 경로 식의 축 단계에서 노드 테스트를 지정 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946421"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524560"
 ---
 # <a name="path-expressions---specifying-node-test"></a>경로 식 - 노드 테스트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "67946421"
 >  XQuery 경로 식에 지정된 노드 이름은 Transact-SQL 쿼리와 같은 데이터 정렬 구분 규칙이 적용되지 않고 항상 대/소문자를 구분합니다.  
   
 ## <a name="node-name-as-node-test"></a>노드 테스트로서의 노드 이름  
- 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 다음은 그 예입니다.  
+ 경로 식 단계에서 노드 테스트로 노드 이름을 지정할 때는 주 노드 종류의 개념을 이해해야 합니다. 모든 축(child, parent 또는 attribute)에는 주 노드 종류가 있습니다. 예를 들어:  
   
 -   attribute 축은 특성만 포함할 수 있습니다. 따라서 특성 노드는 attribute 축의 주 노드 종류입니다.  
   
@@ -69,9 +70,9 @@ child::ProductDescription
   
  경로 식 `/child::PD:ProductDescription/child::PD:Features/descendant::*,`에는 세 가지 단계가 있습니다. 이러한 단계는 child 축과 descendant 축을 지정합니다. 각 단계에서 노드 이름은 노드 테스트로 지정됩니다. 세 번째 단계의 와일드카드 문자(`*`)는 주 노드 종류가 descendant 축인 모든 노드를 나타냅니다. 축의 주 노드 종류는 선택된 노드의 유형 및 노드에서 선택한 노드 이름 필터를 확인합니다.  
   
- 결과적으로이 식이 제품 **모델** 테이블의 제품 카탈로그 XML 문서에 대해 실행 되는 경우이 식은 제품 설명> 요소의 요소 노드 자식 \< \<> 기능에 대 한 모든 요소 노드 자식을 검색 합니다.  
+ 결과적으로이 식이 제품 **모델** 테이블의 제품 카탈로그 XML 문서에 대해 실행 될 때 요소의 요소 노드 자식에 대 한 모든 요소 노드 자식을 검색 \<Features> \<ProductDescription> 합니다.  
   
- 경로 식 `/child::PD:ProductDescription/attribute::ProductModelID`는 두 단계로 구성 됩니다. 이 두 단계는 노드 테스트로 노드 이름을 지정합니다. 또한 두 번째 단계에서는 attribute 축을 사용합니다. 그러므로 각 단계는 노드 테스트로 이름이 지정된 축의 주 노드 종류인 노드를 선택합니다. 따라서 식은 \<제품 설명> element 노드에 대 한 **제품의 modelid** 특성 노드를 반환 합니다.  
+ 경로 식는 `/child::PD:ProductDescription/attribute::ProductModelID` 두 단계로 구성 됩니다. 이 두 단계는 노드 테스트로 노드 이름을 지정합니다. 또한 두 번째 단계에서는 attribute 축을 사용합니다. 그러므로 각 단계는 노드 테스트로 이름이 지정된 축의 주 노드 종류인 노드를 선택합니다. 따라서 식은 element 노드의 **제품 Modelid** 특성 노드를 반환 합니다 \<ProductDescription> .  
   
  노드 테스트에 대해 노드의 이름을 지정할 때 다음 예에서처럼 와일드카드 문자(*)를 사용하여 노드의 로컬 이름 또는 그 네임스페이스 접두사를 지정할 수 있습니다.  
   
@@ -92,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>노드 테스트로서의 노드 유형  
  요소 노드가 아닌 노드 유형을 쿼리하려면 노드 유형 테스트를 사용합니다. 다음 표에 표시된 것처럼 사용 가능한 노드 유형 테스트는 네 가지입니다.  
   
-|노드 형식|반환|예제|  
+|노드 형식|반환 값|예제|  
 |---------------|-------------|-------------|  
 |`comment()`|주석 노드에 대해 True|`following::comment()`는 컨텍스트 노드 다음에 나타나는 모든 주석 노드를 선택합니다.|  
 |`node()`|모든 종류의 노드에 대해 True|`preceding::node()`는 컨텍스트 노드 이전에 나타나는 모든 노드를 선택합니다.|  
@@ -105,7 +106,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- 마찬가지로는 `/child::ProductDescription/child::Features/child::comment()` \< \<제품 설명> element 노드의 기능> 요소 노드 자식을 검색 합니다.  
+ 마찬가지로는 `/child::ProductDescription/child::Features/child::comment()` \<Features> 요소 노드의 요소 노드 자식에 대 한 주석 노드 자식을 검색 \<ProductDescription> 합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 노드 이름과 노드 종류를 비교합니다.  
@@ -169,7 +170,7 @@ select @x.query('
 /child::a/child::b/descendant::node()  
 ```  
   
- 는 `node()` 노드 형식 이므로 하위 축의 모든 노드를 받게 됩니다. 다음은 결과입니다.  
+ `node()`는 노드 형식 이므로 하위 축의 모든 노드를 받게 됩니다. 다음은 결과입니다.  
   
 ```  
 text1  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. 노드 테스트에서 노드 이름 지정  
  다음 예에서는 모든 경로 식에서 노드 테스트로 노드 이름을 지정합니다. 그 결과 모든 식에서 노드 테스트에 지정된 노드 이름이 있는 축에 대한 주 노드 종류의 노드를 반환합니다.  
   
- 다음 쿼리 식은 `Production.ProductModel` 테이블에 저장 된 `Warranty` 제품 카탈로그 XML 문서에서 <> 요소를 반환 합니다.  
+ 다음 쿼리 식은 `Warranty` 테이블에 저장 된 제품 카탈로그 XML 문서에서 <> 요소를 반환 합니다 `Production.ProductModel` .  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   축 단계의 선택적 단계 한정자 부분은 식의 어느 단계에서도 지정되지 않습니다.  
   
- 이 쿼리는 <`Warranty` `Features` `ProductDescription`> 요소의 <> 요소 자식의 <> 요소 자식을 반환 합니다.  
+ 이 쿼리는 `Warranty` `Features` <> 요소의 <> 요소 자식의 <> 요소 자식을 반환 합니다 `ProductDescription` .  
   
  다음은 결과입니다.  
   
@@ -244,7 +245,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 와일드카드 문자는 노드 이름에 대해 지정됩니다. 따라서 쿼리는 <`Features` `ProductDescription`> element 노드의 <> 요소 노드 자식에 대 한 모든 요소 노드 자식을 반환 합니다.  
+ 와일드카드 문자는 노드 이름에 대해 지정됩니다. 따라서 쿼리는 `Features` <`ProductDescription`> element 노드의 <> 요소 노드 자식에 대 한 모든 요소 노드 자식을 반환 합니다.  
   
  다음 쿼리는 이전 쿼리와 비슷하지만 와일드카드 문자와 함께 네임스페이스가 지정되어 있다는 점이 다릅니다. 그 결과 해당 네이스페이스의 모든 요소 노드 자식이 반환됩니다. <`Features`> 요소는 다른 네임 스페이스의 요소를 포함할 수 있습니다.  
   
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 이 쿼리는 제품 카탈로그 `Maintenance` XML 문서에서 모든 네임 스페이스의 <> 요소 노드 자식을 반환 합니다.  
+ 이 쿼리는 `Maintenance` 제품 카탈로그 XML 문서에서 모든 네임 스페이스의 <> 요소 노드 자식을 반환 합니다.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. 노드 테스트에서 노드 종류 지정  
  다음 예에서는 모든 경로 식에서 노드 테스트로 노드 종류를 지정합니다. 그 결과 모든 식은 노드 테스트에 지정된 종류의 노드를 반환합니다.  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   처음 두 단계는 노드 테스트로 노드 이름을 지정하고 세 번째 단계는 노드 테스트로 노드 종류를 지정합니다.  
   
--   식은 <`Features` `ProductDescription`> element 노드의 <> 요소 자식의 텍스트 노드 자식을 반환 합니다.  
+-   식은 `Features` <> element 노드의 <> 요소 자식의 텍스트 노드 자식을 반환 합니다 `ProductDescription` .  
   
  텍스트 노드 하나만 반환됩니다. 다음은 결과입니다.  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 다음 쿼리는 <`ProductDescription`> 요소의 주석 노드 자식을 반환 합니다.  
+ 다음 쿼리는 <> 요소의 주석 노드 자식을 반환 합니다 `ProductDescription` .  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   두 번째 단계는 노드 테스트로 노드 종류를 지정합니다.  
   
--   결과적으로이 식은 <`ProductDescription`> element 노드의 주석 노드 자식을 반환 합니다.  
+-   결과적으로이 식은 <> element 노드의 주석 노드 자식을 반환 합니다 `ProductDescription` .  
   
  다음은 결과입니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082742"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520349"
 ---
 # <a name="training-and-testing-data-sets"></a>데이터 집합 학습 및 테스트
   데이터를 학습 집합과 테스트 집합으로 분할하는 작업은 데이터 마이닝 모델 평가의 중요한 부분입니다. 데이터 집합을 학습 집합과 테스트 집합으로 분리할 경우 일반적으로 대부분의 데이터가 학습에 사용되고 나머지 데이터가 테스트에 사용되지만, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 테스트 및 학습 집합의 크기가 비슷하게 되도록 데이터를 무작위로 샘플링합니다. 학습 및 테스트에 유사한 데이터를 사용하면 데이터 불일치의 영향을 최소화하고 모델의 특징을 보다 잘 이해할 수 있습니다.  

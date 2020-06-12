@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773755"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857855"
 ---
 # <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
   유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  정책 탭 - 정책 탭을 사용하여 전역 모니터링 정책을 보거나 지정할 수 있습니다.  
   
  전역 데이터 계층 애플리케이션의 모니터링 정책을 설정합니다. 이 옵션의 값 목록을 확장하려면 정책 이름 옆에 있는 화살표를 클릭하거나 정책 제목을 클릭합니다.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773755"
  매우 불안정한 리소스에 의해 발생하는 정책 위반 노이즈를 줄입니다. 이 기능의 컨트롤을 확장하려면 오른쪽에 표시되는 아래쪽 화살표를 클릭합니다.  
  자세한 내용은 [CPU 사용 정책에서 노이즈 줄이기 &#40;SQL Server 유틸리티](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md) 를 참조 하세요&#41;  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  보안 탭 - UCP를 관리하거나 읽을 수 있는 권한이 있는 로그인 이름을 표시합니다.  
   
  Utility 읽기 역할에 추가될 UCP에서 로그인을 선택합니다.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773755"
   
  유틸리티 관리자가 되려면 SQL Server 인스턴스에 대한 sysadmin 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP에 대한 사용자 계정을 추가하거나 변경하려면 SSMS의 개체 탐색기를 사용하여 SQL Server UCP 인스턴스의 서버 로그인에 사용자를 추가합니다. 자세한 내용은 [sp_addlogin&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)을 참조하세요.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  데이터 웨어하우스 탭 - 유틸리티 관리 데이터 웨어하우스에 대한 구성 세부 정보를 표시합니다.  
   
  데이터 보존  

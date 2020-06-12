@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084833"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522959"
 ---
 # <a name="data-mining-tools"></a>데이터 마이닝 도구
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음과 같은 도구를 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음과 같은 도구를 제공 합니다.  
   
 -   **** 의 데이터 마이닝 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66084833"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 배포된 기존 데이터 마이닝 솔루션을 관리하는 인터페이스입니다. 구조와 모델을 다시 처리하여 구조와 모델의 데이터를 업데이트할 수 있습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터를 정리 하 고, 예측 생성, 모델 업데이트 등의 태스크를 자동화 하 고, 텍스트 마이닝 솔루션을 만드는 데 사용할 수 있는 도구가 포함 되어 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터를 정리 하 고, 예측 생성, 모델 업데이트 등의 태스크를 자동화 하 고, 텍스트 마이닝 솔루션을 만드는 데 사용할 수 있는 도구가 포함 되어 있습니다.  
   
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 마이닝 도구에 대한 추가 정보를 제공합니다.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66084833"
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에는 DMX(Data Mining Extensions) 쿼리를 디자인하고 실행하거나 XMLA를 사용하여 데이터 마이닝 개체로 작업하는 데 사용할 수 있는 쿼리 편집기도 포함되어 있습니다.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 데이터 마이닝 태스크 및 변환  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 마이닝을 지 원하는 많은 구성 요소를 제공 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 데이터 마이닝을 지 원하는 많은 구성 요소를 제공 합니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어:  
   

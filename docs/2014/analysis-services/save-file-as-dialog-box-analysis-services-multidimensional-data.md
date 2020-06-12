@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e2099ba-c5b0-4940-8e48-7d696485fa4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 007e37c7e093828cb3ea452a2bea5972f9ee5b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 247f5153189cdfa5943e42b2d922ed0cc40d5dd7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070046"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538905"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>다른 이름으로 파일 저장 대화 상자(Analysis Services - 다차원 데이터)
   **다른 이름으로 파일 저장** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대해 정의된 로그 및 데이터 폴더에서 사용 가능한 파일 목록을 표시합니다. 나열된 파일 중 하나를 선택하거나 필요한 경우 다른 폴더 및 파일을 지정할 수 있습니다. 다음을 수행하여 **다른 이름으로 파일 저장** 대화 상자를 표시할 수 있습니다.  

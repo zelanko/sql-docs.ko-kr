@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8cd8da4cc1128d125009c0f3bd9d6e62c468d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217144"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546175"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>다차원 모델 데이터 액세스(Analysis Services - 다차원 데이터)
   이 항목에서는 네트워크의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 대한 연결을 기본적으로 지원하는 클라이언트 애플리케이션, 프로그래밍 방법 또는 스크립트를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터에 액세스하는 방법에 대해 설명합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
- [클라이언트 응용 프로그램](#bkmk_clientapps)  
+ [클라이언트 애플리케이션](#bkmk_clientapps)  
   
  [쿼리 언어](#bkmk_querylang)  
   

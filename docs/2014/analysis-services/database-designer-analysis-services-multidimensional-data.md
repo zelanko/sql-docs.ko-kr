@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3173e382cfc2dbbba8eabf5b84db9bd95725c4bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082405"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528949"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>데이터베이스 디자이너(Analysis Services - 다차원 데이터)
-  의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 데이터베이스 디자이너를 사용 하 여의 속성을 변경 하 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 고 데이터베이스에 의해 생성 된 경고를 검토할 수 있습니다.  
+  의 데이터베이스 디자이너를 사용 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 하 여의 속성을 변경 하 고 데이터베이스에 의해 생성 된 경고를 검토할 수 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 있습니다.  
   
 ## <a name="tabs"></a>탭  
  데이터베이스 디자이너에는 다음과 같은 탭이 있습니다.  

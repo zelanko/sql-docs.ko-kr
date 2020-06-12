@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082156"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528859"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>계정 인텔리전스 정의(차원 마법사)
   **계정 인텔리전스 정의** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에서 정의한 계정 유형을 차원의 **계정 유형** 특성 유형과 연결된 차원 특성에서 정의한 계정 유형으로 매핑할 수 있습니다.  

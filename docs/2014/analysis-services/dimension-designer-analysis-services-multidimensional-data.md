@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70ff168f2be759c7c5bb405868d7e569362f8430
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081774"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528613"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>차원 디자이너(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 차원에 포함된 데이터를 찾아보고 특성, 계층, 수준, 특성 관계, 번역 등을 포함하여 기존 차원의 다양한 속성을 수정할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66081774"
   
     -   차원을 두 번 클릭합니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>Pages  
  차원 디자이너에는 다음과 같은 페이지가 있습니다.  
   
  [차원 구조](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  

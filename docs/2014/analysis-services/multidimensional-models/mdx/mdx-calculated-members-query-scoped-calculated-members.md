@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c0b3e7184f3cc6abd189344bbce1b6e1f948ebb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074526"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546477"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>쿼리 범위 계산 멤버 만들기(MDX)
   단일 MDX 쿼리에만 계산 멤버가 필요한 경우 WITH 키워드를 사용하여 해당 계산 멤버를 정의할 수 있습니다. WITH 키워드를 사용하여 만든 계산 멤버는 쿼리 실행이 종료된 다음에는 더 이상 존재하지 않습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079055"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543515"
 ---
 # <a name="defining-a-cube"></a>큐브 정의
   큐브 마법사를 통해 큐브에 대한 측정값 그룹과 차원을 정의할 수 있습니다. 다음 태스크에서는 큐브 마법사를 사용하여 큐브를 만듭니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079055"
   
 11. **다음**을 클릭합니다.  
   
-12. **마법사 완료** 페이지에서 큐브 이름을로 `Analysis Services Tutorial`변경 합니다. 미리 보기 창에서 **InternetSales** 측정값 그룹 및 이 그룹의 측정값을 볼 수 있습니다. **Date**, **Customer** 및 **Product** 차원도 볼 수 있습니다.  
+12. **마법사 완료** 페이지에서 큐브 이름을로 변경 `Analysis Services Tutorial` 합니다. 미리 보기 창에서 **InternetSales** 측정값 그룹 및 이 그룹의 측정값을 볼 수 있습니다. **Date**, **Customer** 및 **Product** 차원도 볼 수 있습니다.  
   
 13. **마침**을 클릭하여 마법사를 완료합니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66079055"
   
 14. 큐브 구조 탭의 도구 모음에서 큐브의 차원 및 팩트 테이블을 보다 쉽게 볼 수 있도록 **확대/축소** 수준을 50%로 변경합니다. 팩트 테이블은 노란색, 차원 테이블은 파란색으로 표시됩니다.  
   
-15. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.  
+15. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [차원에 특성 추가](lesson-2-3-adding-attributes-to-dimensions.md)  

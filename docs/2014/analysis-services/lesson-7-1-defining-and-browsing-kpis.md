@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a95c5819d88013a0e4f0e0be0aa21c11c1949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6044c22f84abdc17adf7015804627266ccff09b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175252"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542445"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI 정의 및 찾아보기
   KPI(핵심 성과 지표)를 정의하려면 먼저 KPI 이름 및 KPI와 연관된 측정값 그룹을 정의합니다. KPI는 모든 측정값 그룹 또는 단일 측정값 그룹과 연관될 수 있습니다. 그런 후 KPI의 다음 요소를 정의합니다.
@@ -67,7 +66,7 @@ ms.locfileid: "78175252"
 
      ![표시 창의 빈 KPI 템플릿](../../2014/tutorials/media/l7-kpi-2.gif "표시 창의 빈 KPI 템플릿")
 
-3.  **이름** 상자에를 입력 `Reseller Revenue`한 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.
+3.  **이름** 상자에를 입력 한 `Reseller Revenue` 다음 **관련 된 측정값 그룹** 목록에서 **재판매인 Sales** 를 선택 합니다.
 
 4.  **계산 도구** 창의 **메타데이터** 탭에서 **Measures**, **Reseller Sales**를 차례로 확장한 후 **Reseller Sales-Sales Amount** 측정값을 **값 식** 상자로 끌어옵니다.
 
@@ -152,7 +151,7 @@ ms.locfileid: "78175252"
 
 1.  **KPI** 탭의 도구 모음에서 **폼 보기** 단추를 클릭한 후 **새 KPI** 단추를 클릭합니다.
 
-2.  **이름** 상자에를 입력 `Product Gross Profit Margin`하 고 ** \<모든>** 이 **관련 된 측정값 그룹** 목록에 나타나는지 확인 합니다.
+2.  **이름** 상자에를 입력 한 `Product Gross Profit Margin` 다음 **\<All>** 관련 된 **측정값 그룹** 목록에가 나타나는지 확인 합니다.
 
 3.  **계산 도구** 창의 **메타데이터** 탭에서 **Total GPM** 측정값을 **값 식** 상자로 끌어옵니다.
 
@@ -261,7 +260,7 @@ ms.locfileid: "78175252"
 
 2.  배포가 성공적으로 완료되면 **KPI** 탭의 도구 모음에서 **브라우저 보기** 를 클릭한 후 **다시 연결**을 클릭합니다.
 
-     Kpi가 나타나고 **Q3 CY 2007** 및 북아메리카 판매 지역에 대 한 kpi 값이 표시 됩니다. **North America** `Product Gross Profit Margin`
+     `Product Gross Profit Margin`Kpi가 나타나고 **Q3 CY 2007** 및 **북아메리카** 판매 지역에 대 한 kpi 값이 표시 됩니다.
 
 3.  **필터** 창의 **차원** 목록에서 **Product** 를, **계층** 목록에서 **Category** 를, **연산자** 목록에서 **같음** 을, **필터 식** 목록에서 **Bikes** 를 선택한 다음 **확인**을 클릭합니다.
 

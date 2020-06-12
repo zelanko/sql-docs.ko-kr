@@ -1,5 +1,6 @@
 ---
 title: 스키마 캐싱 (SQLXML)
+description: 레지스트리 키를 사용 하 여 스키마 캐싱을 명시적으로 제어 하 고 SQLXML 4.0에서 XPath 쿼리의 성능을 개선 하는 방법에 대해 알아봅니다.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32a825f4cfc0a90ce9cba879b6b64856effabe6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca7eb937f75575dd34e1857209605aeb74a2d1d6
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257310"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215796"
 ---
 # <a name="schema-caching-sqlxml-40"></a>스키마 캐싱(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

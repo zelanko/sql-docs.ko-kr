@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa501e2a5b23f32fbd10d244788b1e6e938e938b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070535"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539735"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>쿼리 및 필터(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너 **브라우저** 탭의 이 영역에는 찾아보기 또는 쿼리에서 사용할 데이터를 큐브에서 선택할 수 있는 쿼리 및 필터 영역이 포함되어 있습니다. 원하는 수의 큐브 개체를 추가한 다음 데이터 영역에서 결과를 보거나 Excel에서 분석을 사용하여 결과를 보고서로 내보내 최종 사용자에게 데이터가 어떻게 표시되는지 확인할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070535"
  기본적으로 쿼리를 실행할 때 **가장 정보** 페이지에 지정된 자격 증명이 아니라 현재 사용자의 자격 증명을 사용하여 데이터 원본에 연결합니다. 하지만 **도구 모음** 에서 **사용자 변경**을 클릭하여 쿼리 또는 보고서의 사용자 컨텍스트를 변경할 수도 있습니다.  
   
 ## <a name="options"></a>옵션  
- **차원**  
+ **치수나**  
  하위 큐브를 조각화할 차원을 선택합니다.  
   
  **계층**  
@@ -43,7 +42,7 @@ ms.locfileid: "66070535"
 |**같지 않음**|**필터 식**에서 정의한 집합에서 제외된 멤버로 결과가 제한됩니다.|  
 |**진행**|**필터 식**에서 선택한 명명된 집합으로 결과가 제한됩니다.|  
 |**속하지 않음**|**필터 식**에서 선택한 명명된 집합에서 제외된 멤버로 결과가 제한됩니다.|  
-|**에서는**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
+|**포함**|이름에 **필터 식**의 문자열이 포함된 멤버로 결과가 제한됩니다.|  
 |**시작 문자**|이름이 **필터 식**의 문자열로 시작하는 멤버로 결과가 제한됩니다.|  
 |**범위(포함)**|**필터 식**에서 선택한 범위로 결과가 제한됩니다.|  
 |**범위(제외)**|**필터 식**에서 선택한 범위에서 제외된 멤버로 결과가 제한됩니다.|  

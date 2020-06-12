@@ -5,17 +5,17 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72c8ec8fb062566c3d071c0e62a1acf6775d3700
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729309"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730756"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>사용자 지정 워크플로 만들기 - XML 설명
 
@@ -65,7 +65,7 @@ ms.locfileid: "73729309"
   
  다음 표에서는 이 XML에 포함되는 태그 일부에 대해 설명합니다.  
   
-|태그|Description|  
+|태그|설명|  
 |---------|-----------------|  
 |\<Type>|로드할 사용자 지정 워크플로 어셈블리를 식별하기 위해 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **워크플로 유형** 입력란에 입력한 텍스트입니다.|  
 |\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에서 **메시지에 멤버 데이터 포함** 확인란으로 제어하는 부울 값입니다. 값 1을 지정하면 \<MemberData> 섹션이 전송되고, 다른 값을 지정하면 \<MemberData> 섹션이 전송되지 않습니다.|  

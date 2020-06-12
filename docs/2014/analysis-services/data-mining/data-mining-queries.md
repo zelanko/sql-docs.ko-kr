@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523114"
 ---
 # <a name="data-mining-queries"></a>데이터 마이닝 쿼리
-  데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음과 같습니다.  
+  데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음을 수행할 수 있습니다.  
   
 -   새 데이터에 모델을 적용하여 단일 또는 여러 예측을 수행합니다. 매개 변수나 일괄 처리로 입력 값을 제공할 수 있습니다.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66084966"
   
  다음 목록에서는 쿼리에서 사용할 수 있는 함수에 대한 요약을 제공합니다.  
   
--   **일반 예측 함수:** 함수 `Predict` 는 다형성 이며 모든 모델 형식에서 작동 합니다. 이 함수는 작업하고 있는 모델의 유형을 자동으로 검색하고 추가 매개 변수를 묻는 메시지를 표시합니다. 자세한 내용은 [예측&#40;DMX&#41;](/sql/dmx/predict-dmx)을 참조하세요.  
+-   **일반 예측 함수:** `Predict`함수는 다형성 이며 모든 모델 형식에서 작동 합니다. 이 함수는 작업하고 있는 모델의 유형을 자동으로 검색하고 추가 매개 변수를 묻는 메시지를 표시합니다. 자세한 내용은 [예측&#40;DMX&#41;](/sql/dmx/predict-dmx)을 참조하세요.  
   
     > [!WARNING]  
     >  일부 모델만 예측을 수행하는 데 사용됩니다. 예를 들어 예측 가능한 특성이 없는 클러스터링 모델을 만들 수 있습니다. 그러나 모델에 예측 가능한 특성이 없는 경우에도 모델에서 다른 유형의 유용한 정보를 반환하는 예측 쿼리를 만들 수 있습니다.  
@@ -164,7 +163,7 @@ ms.locfileid: "66084966"
 |Management Studio에서 제공하는 DMX 및 XMLA 쿼리 템플릿 사용|[템플릿에서 단일 예측 쿼리 작성](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio에서 Analysis Services 템플릿 사용](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |내용 쿼리에 대한 자세한 정보 및 예제 참조|[마이닝 모델에 내용 쿼리 만들기](create-a-content-query-on-a-mining-model.md)<br /><br /> [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](content-queries-data-mining.md)|  
 |쿼리 옵션 설정과 쿼리 권한 및 문제 해결|[데이터 마이닝 쿼리에 대한 제한 시간 값 변경](data-mining-queries.md)|  
-|Integration Services에서 데이터 마이닝 구성 요소 사용|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [데이터 마이닝 쿼리 변환](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Integration Services에서 데이터 마이닝 구성 요소 사용|[데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [데이터 마이닝 쿼리 변환](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining-algorithms-analysis-services-data-mining.md)   

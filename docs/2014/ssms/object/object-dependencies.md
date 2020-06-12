@@ -12,12 +12,12 @@ ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd5d242d0b2cdd6ccedb8c8f46e8047a72050d40
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032413"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859205"
 ---
 # <a name="object-dependencies"></a>개체 종속성
   일부 데이터베이스 개체는 다른 데이터베이스 개체에 대해 종속적입니다. 예를 들어 뷰와 저장 프로시저는 뷰나 프로시저에서 반환한 데이터가 들어 있는 테이블의 존재 여부에 종속됩니다. 현재 개체의 **개체 종속성(일반 페이지)** 에는 해당 개체가 정상적으로 작동하는 데 반드시 필요한 다른 데이터베이스 개체와 선택한 개체에 종속된 개체가 모두 표시됩니다. 정의에서 다른 개체를 참조하고 시스템 카탈로그에 해당 정의가 저장되어 있으면 이 엔터티를 *참조 엔터티*라고 합니다. 다른 개체에 의해 참조되는 개체는 *참조된 엔터티*라고 합니다.  
@@ -26,15 +26,15 @@ ms.locfileid: "63032413"
   
  선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
-## <a name="uielement-list"></a>UIElement 목록  
- **Objects that depend on**_\<선택한 개체에 종속 된 개체>_    
+## <a name="ui-element-list"></a>UI 요소 목록  
+ _ \< 선택한 개체_ **에 종속 된 개체**>   
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
- **Objects on which**_\<선택한 개체가 _ **종속** 된 개체>     
+ _ \< 선택한 개체가 _ **종속** **된 개체**>     
  이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
  **종속성**  
- _ \<선택한 개체>_ **에 종속 된 개체** 를 클릭 하면 선택한 개체에 종속 된 개체의 계층 뷰가 표시 됩니다. **Objects on which** _선택한 개체>종속 된 개체를 클릭 하면 선택한 개체가 종속 된 개체의 계층 뷰가 표시 \<_ 됩니다. **depends**  
+ _ \< 선택한 개체>_ **에 종속 된 개체** 를 클릭 하면 선택한 개체에 종속 된 개체의 계층 뷰가 표시 됩니다. _ \< 선택한 개체>_ **종속** 된 **개체** 를 클릭 하면 선택한 개체가 종속 된 개체의 계층 뷰가 표시 됩니다.  
   
  **이름**  
  위의 **종속성** 트리 뷰에서 선택한 개체의 이름을 표시합니다.  

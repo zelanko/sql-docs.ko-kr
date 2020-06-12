@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c31a3952e98c1d4a7f5dd1e42f6e34a86c0432d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520140"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용
   외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트할 때 마이닝 모델에 중첩 테이블이 포함되어 있으면 외부 데이터에도 사례 테이블 및 연결된 중첩 테이블이 포함되어 있어야 합니다.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797623"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545297"
 ---
 # <a name="dimension-relationships"></a>차원 관계
   차원 용도는 큐브 차원과 큐브에 있는 측정값 그룹 간의 관계를 정의합니다. 큐브 차원은 특정 큐브에 사용되는 데이터베이스 차원의 인스턴스입니다. 큐브에는 측정값 그룹에 직접 관련되어 있지 않지만 다른 차원 또는 측정값 그룹을 통해 측정값 그룹에 간접적으로 관련될 수 있는 큐브 차원이 있을 수 있습니다. 큐브에 데이터베이스 차원이 나 측정값 그룹을 추가 하면에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브의 데이터 원본 뷰에 있는 차원 테이블과 팩트 테이블 간 관계를 검토 하 고 차원의 특성 간 관계를 검토 하 여 차원 용도를 결정 하려고 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 감지할 수 있는 관계에 대해 차원 용도 설정을 자동으로 지정합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "72797623"
  참조 관계에 대 한 자세한 내용은 참조 [관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조 하세요.  
   
 ## <a name="fact-dimension-relationships"></a>팩트 차원 관계  
- 중복 제거 차원이라고 통칭되는 팩트 차원은 차원 테이블의 특성 열이 아닌 팩트 테이블의 특성 열에서 생성되는 표준 차원입니다. 중복을 줄이기 위해 유용한 차원 데이터가 팩트 테이블에 저장되는 경우가 있습니다. 예를 들어 다음 다이어그램에서는 예제 데이터베이스의 **FactResellerSales** 팩트 테이블 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 을 보여 줍니다.  
+ 중복 제거 차원이라고 통칭되는 팩트 차원은 차원 테이블의 특성 열이 아닌 팩트 테이블의 특성 열에서 생성되는 표준 차원입니다. 중복을 줄이기 위해 유용한 차원 데이터가 팩트 테이블에 저장되는 경우가 있습니다. 예를 들어 다음 다이어그램에서는 예제 데이터베이스의 **FactResellerSales** 팩트 테이블을 보여 줍니다 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] .  
   
  ![팩트 테이블의 열은 차원을 지원함](../../analysis-services/dev-guide/media/as-factdim.gif "팩트 테이블의 열은 차원을 지원함")  
   
@@ -76,7 +75,7 @@ ms.locfileid: "72797623"
   
  ![논리 스키마/다 대 다 차원 관계](../../analysis-services/dev-guide/media/as-many-dimension1.gif "논리 스키마/다 대 다 차원 관계")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원과 팩트 테이블 간에 다 대 다 관계를 정의할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]차원과 팩트 테이블 간에 다 대 다 관계를 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다 대 다 차원 관계를 지원하려면 위의 다이어그램과 같이 데이터 원본 뷰에서 관련된 모든 테이블 간에 외래 키 관계를 설정해야 합니다. 그렇지 않으면 차원 디자이너의 **차원 용도** 탭에서 관계를 설정할 때 올바른 중간 측정값 그룹을 선택할 수 없게 됩니다.  

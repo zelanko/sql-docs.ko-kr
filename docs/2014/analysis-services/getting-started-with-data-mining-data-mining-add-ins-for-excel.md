@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1578e071f0ca0f511e6443f7b4462520adcda6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080942"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544355"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>데이터 마이닝 시작하기(Excel용 데이터 마이닝 추가 기능)
   데이터 마이닝은 데이터에서 의미 있는 패턴을 발견하기 위한 프로세스입니다. 데이터 마이닝은 기존의 BI를 통해 데이터를 탐색 및 파악하는 프로세스를 자연스럽게 보완합니다. 컴퓨터 알고리즘을 사용해서 매우 많은 양의 데이터를 처리하고 숨겨져 있는 패턴 및 추세를 검색할 수 있습니다.  

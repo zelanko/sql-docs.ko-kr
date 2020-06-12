@@ -6,17 +6,17 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 685758e8671455103c0510db254381eecefaf676
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 2003443e41ace15cb8cdd16a887d3bdfa68800bc
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606765"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731687"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 애플리케이션 연결
 
@@ -24,7 +24,7 @@ ms.locfileid: "83606765"
 
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결하여 웹 작업에 사용할 데이터베이스를 지정할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
   
 -   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "83606765"
   
 ### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스 및 웹 애플리케이션을 연결하려면  
   
-1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 엽니다.  
+1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
 2.  왼쪽 창에서 **웹 구성**을 클릭합니다.  
   

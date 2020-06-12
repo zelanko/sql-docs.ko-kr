@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리 실행(SQLXMLOLEDB 공급자)
+description: XPath 쿼리를 실행할 때 SQLXMLOLEDB 공급자별 속성을 사용 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175c2e82b29c9c7c3895b8764e835db11295ebdb
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246628"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306238"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "75246628"
   
 -   **매핑 스키마**  
   
- 이 예제 ADO 애플리케이션에서는 XPath 쿼리(루트)를 XSD 매핑 스키마(MySchema.xml)에 대해 지정합니다. 이 스키마에는 **ContactID**, **FirstName**및 **LastName** 특성을 포함 하는 ** \<Contacts>** 요소가 있습니다. 이 스키마에서는 기본 매핑이 수행됩니다. 즉, 요소 이름은 같은 이름의 테이블에 매핑되고 단순 유형의 특성은 같은 이름의 열에 매핑됩니다.  
+ 이 예제 ADO 애플리케이션에서는 XPath 쿼리(루트)를 XSD 매핑 스키마(MySchema.xml)에 대해 지정합니다. 스키마에는 **\<Contacts>** **ContactID**, **FirstName**및 **LastName** 특성이 포함 된 요소가 있습니다. 이 스키마에서는 기본 매핑이 수행됩니다. 즉, 요소 이름은 같은 이름의 테이블에 매핑되고 단순 유형의 특성은 같은 이름의 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

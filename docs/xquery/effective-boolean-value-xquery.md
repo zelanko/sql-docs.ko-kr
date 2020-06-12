@@ -1,5 +1,6 @@
 ---
 title: 유효한 부울 값 (XQuery) | Microsoft Docs
+description: XQuery의 유효한 부울 값에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 282f88f92d8ed5e0bb811783363e05b456bc37c8
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929953"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305852"
 ---
 # <a name="effective-boolean-value-xquery"></a>유효한 부울 값(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ go
   
  형식화 된 **xml** 열 또는 변수를 쿼리할 때 부울 유형의 노드를 가질 수 있습니다. 이 경우 **데이터 ()** 는 부울 값을 반환 합니다. 쿼리 식이 부울 값 True를 반환하는 경우 유효한 부울 값은 다음 예에서와 같이 True입니다. 이 예에는 다음 내용에 대해서도 설명됩니다.  
   
--   XML 스키마 컬렉션이 생성됩니다. 컬렉션의 \<요소 b>은 부울 형식입니다.  
+-   XML 스키마 컬렉션이 생성됩니다. 컬렉션의 요소는 \<b> 부울 형식입니다.  
   
 -   형식화 된 **xml** 변수를 만들고 쿼리 합니다.  
   
 -   `data(/b[1])` 식은 부울 값 True를 반환합니다. 따라서 이 경우 유효한 부울 값은 True입니다.  
   
--   식 `data(/b[2])` 에서 부울 false 값을 반환 합니다. 따라서 이 경우 유효한 부울 값은 False입니다.  
+-   식에서 `data(/b[2])` 부울 false 값을 반환 합니다. 따라서 이 경우 유효한 부울 값은 False입니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527519"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>분류표(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 마이닝 리본, 분류표 단추](media/dmc-cmatrix.gif "데이터 마이닝 리본, 분류표 단추")  

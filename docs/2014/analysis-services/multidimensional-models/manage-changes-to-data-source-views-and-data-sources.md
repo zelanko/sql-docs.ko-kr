@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f558ce6aaf9e57576d5773322352d33b81a3392
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074764"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546585"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>데이터 원본 뷰 및 데이터 원본에 대한 변경 내용 관리
   스키마 생성 마법사는 다시 실행될 때 원래 생성에 사용한 것과 동일한 데이터 원본 및 데이터 원본 뷰를 다시 사용합니다. 사용자가 추가하는 데이터 원본이나 데이터 원본 뷰는 사용되지 않습니다. 처음 생성 후 원래 데이터 원본이나 데이터 원본 뷰를 삭제하는 경우에는 마법사를 처음부터 실행해야 합니다. 마법사의 이전 설정도 모두 삭제됩니다. 삭제된 데이터 원본이나 데이터 원본 뷰에 바인딩된 기본 데이터베이스의 기존 개체는 다음에 스키마 생성 마법사를 실행할 때 사용자가 만든 개체로 처리됩니다.  

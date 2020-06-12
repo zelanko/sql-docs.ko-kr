@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f936f3f4e0b8f65326e9a6e84f75e6f4e82657f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083711"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521610"
 ---
 # <a name="mining-model-columns"></a>마이닝 모델 열
   데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 구조와 마찬가지로 마이닝 모델에는 열이 포함됩니다. 마이닝 모델은 마이닝 구조 내에 포함되며 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다.  

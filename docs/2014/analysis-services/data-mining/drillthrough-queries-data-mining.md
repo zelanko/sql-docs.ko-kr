@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084546"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522513"
 ---
 # <a name="drillthrough-queries-data-mining"></a>드릴스루 쿼리(데이터 마이닝)
   *드릴스루 쿼리* 를 사용하면 마이닝 모델로 쿼리를 전송하여 기본 사례 또는 구조 데이터에서 세부 사항을 검색할 수 있습니다. 드릴스루는 모델 학습에 사용된 사례와 모델 테스트에 사용된 사례를 비교해서 보거나 사례 데이터에서 추가 정보를 확인하려는 경우에 유용합니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "66084546"
 -   드릴스루가 마이닝 구조에서는 허용되지 않지만 마이닝 모델에서는 허용되는 경우 마이닝 구조가 아닌 모델 사례에서만 정보를 볼 수 있습니다.  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a>드릴스루의 보안 문제  
- 모델의 구조 사례로 드릴스루 하려는 경우 마이닝 구조와 마이닝 모델 모두에서 [Allowdrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 속성이로 `True`설정 되어 있는지 확인 해야 합니다. 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 디자이너&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)를 참조하세요. 다음을 참조하십시오.  
+ 모델의 구조 사례로 드릴스루 하려는 경우 마이닝 구조와 마이닝 모델 모두에서 [Allowdrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) 속성이로 설정 되어 있는지 확인 해야 합니다 `True` . 또한 사용자가 구조와 모델 모두에 대한 드릴스루 권한이 있는 역할의 멤버여야 합니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 디자이너&#40;Analysis Services - 다차원 데이터&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx)를 참조하세요. 다음을 참조하십시오.  
   
  드릴스루 권한은 구조와 모델에 개별적으로 설정됩니다. 모델 사용 권한이 있으면 구조에 대한 사용 권한이 없는 경우에도 모델에서 드릴스루할 수 있습니다. 구조에 대한 드릴스루 권한이 있으면 추가적으로 [StructureColumn&#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) 함수를 사용하여 모델에서 드릴스루 쿼리에 구조 열을 포함할 수도 있습니다.  
   
@@ -82,16 +81,16 @@ ms.locfileid: "66084546"
   
 |알고리즘 이름|문제|  
 |--------------------|-----------|  
-|Microsoft Naïve Bayes 알고리즘|지원되지 않습니다. 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 신경망 알고리즘|지원되지 않습니다. 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 로지스틱 회귀 알고리즘|지원되지 않습니다. 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
-|Microsoft 선형 회귀 알고리즘|지원됩니다. 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
-|Microsoft Time Series 알고리즘|지원됩니다. 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> [Lag&#40;DMX&#41;](/sql/dmx/lag-dmx) 함수를 사용하여 모델의 사례에서 날짜를 반환할 수도 있습니다.<br /><br /> Microsoft Time Series 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용합니다.|  
+|Microsoft Naïve Bayes 알고리즘|지원 안 됨 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 신경망 알고리즘|지원 안 됨 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 로지스틱 회귀 알고리즘|지원 안 됨 이러한 알고리즘은 콘텐츠의 특정 노드에 사례를 할당하지 않습니다.|  
+|Microsoft 선형 회귀 알고리즘|지원됨. 그러나 모델은 단일 노드인 `All`을 만들기 때문에 드릴스루 시 모델에 대한 모든 학습 사례가 반환됩니다. 학습 집합이 큰 경우 결과를 로드하는 데 시간이 많이 소요될 수 있습니다.|  
+|Microsoft Time Series 알고리즘|지원됨. 그러나 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 를 사용하여 구조 또는 사례 데이터로 드릴스루할 수 없습니다. 대신 DMX 쿼리를 만들어야 합니다.<br /><br /> 특정 노드로 드릴스루하거나 DMX 쿼리를 작성하여 시계열 모델의 특정 노드에 있는 사례를 검색할 수도 없습니다. 날짜 또는 특성 값과 같은 다른 기준을 사용하여 모델이나 구조에서 사례 데이터를 검색할 수 있습니다.<br /><br /> [Lag&#40;DMX&#41;](/sql/dmx/lag-dmx) 함수를 사용하여 모델의 사례에서 날짜를 반환할 수도 있습니다.<br /><br /> Microsoft Time Series 알고리즘에 의해 생성된 ARTXP 및 ARIMA 노드에 대한 세부 정보를 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 사용합니다.|  
   
 ##  <a name="related-tasks"></a><a name="bkmk_Tasks"></a> 관련 작업  
  특정 시나리오에서 드릴스루를 사용하려면 다음 링크를 사용하십시오.  
   
-|작업|링크|  
+|Task|링크|  
 |----------|----------|  
 |데이터 마이닝 디자이너의 드릴스루 사용을 설명하는 절차|[마이닝 모델에서 사례 데이터로 드릴스루](drill-through-to-case-data-from-a-mining-model.md)|  
 |드릴스루를 허용하도록 기존 마이닝 모델 변경|[마이닝 모델에 드릴스루 사용](enable-drillthrough-for-a-mining-model.md)|  

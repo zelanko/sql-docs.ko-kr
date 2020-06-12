@@ -1,5 +1,6 @@
 ---
 title: 'sql: 오버플로 필드 (SQLXML)'
+description: 'Sql: 오버플로 필드 주석을 사용 하 여 XML 문서에서 사용 되지 않은 모든 데이터를 수신 하는 오버플로 열로 열을 식별 하는 방법에 대해 알아봅니다.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246808"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689235"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>주석 해석 - sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246808"
   
  오버플로 열에 데이터를 저장 하는 경우 XML 대량 로드는 **sql: 오버플로 필드가** 정의 된 부모 요소의 여는 태그와 닫는 태그를 저장 합니다.  
   
- 예를 들어 다음 스키마는 ** \<고객>** 및 ** \<CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
+ 예를 들어 다음 스키마는 ** \< 고객>** 및 ** \< CustOrder>** 요소에 대해 설명 합니다. 이러한 각 요소는 오버플로 열을 식별합니다.  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246808"
 </xsd:schema>  
 ```  
   
- 스키마에서 ** \<Customer>** 요소는 Cust 테이블에 매핑되고 ** \<Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
+ 스키마에서 ** \< Customer>** 요소는 Cust 테이블에 매핑되고 ** \< Order>** 요소는 CustOrder 테이블에 매핑됩니다.  
   
- ** \<Customer>** 와 ** \<Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \<Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
+ ** \< Customer>** 와 ** \< Order>** 요소는 모두 오버플로 열을 식별 합니다. 따라서 XML 대량 로드는 CustOrder 테이블의 오버플로 열에 있는 ** \< Order>** 요소의 모든 하위 요소와 특성 및 모든 소비 되지 않은 자식 요소와 특성을 ** \<>** 해당 테이블의 오버플로 열에 저장 합니다.  
   
 ### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

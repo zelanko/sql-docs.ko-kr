@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: da8a5e5602b877c12284d8410f6b2a1c7da6bc58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f5496247bb817d4ea7da08f95fe4a1b54dea5d
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889151"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669790"
 ---
 # <a name="content-types-dmx"></a>내용 유형(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68889151"
   
  각 알고리즘마다 특정한 내용 유형을 지원합니다. 예를 들어 [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 알고리즘에서는 연속 열을 사용할 수 없습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes 모델에서 연속 열을 사용하려면 열의 데이터를 불연속화해야 합니다. 일부 알고리즘이 올바르게 실행되기 위해서는 특정한 내용 유형이 필요합니다. 예를 들어 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시계열 알고리즘에서는 데이터가 수집된 시간을 식별하기 위한 Key Time 열이 필요합니다.  
   
- 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 콘텐츠 형식에 대 한 자세한 설명은 [데이터 마이닝&#41;&#40;콘텐츠 형식 ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)을 참조 하세요.  
+ 에서 지 원하는 콘텐츠 형식에 대 한 자세한 설명은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] [데이터 마이닝&#41;&#40;콘텐츠 형식 ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   

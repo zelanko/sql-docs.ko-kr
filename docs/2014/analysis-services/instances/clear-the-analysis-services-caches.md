@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e35ee4b59c77c3d1b47db360d11a9b838106c1b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bf3dbf1658686738403bc9bfe4a5dd8941c75a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080297"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544078"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services 캐시 지우기
   Analysis Services는 데이터를 캐시하여 쿼리 성능을 향상시킵니다. 이 항목에서는 XMLA ClearCache 명령을 사용하여 MDX 쿼리에 대한 응답으로 만들어진 캐시를 지우는 데 대한 권장 사항을 제공합니다. ClearCache의 실행 효과는 테이블 형식 모델을 사용하는지 다차원 모델을 사용하는지에 따라 달라집니다.  

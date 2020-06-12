@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05bc721be827fc9f72317874d32de8815a38a412
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069627"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538165"
 ---
 # <a name="select-creation-method-cube-wizard"></a>생성 방법 선택(큐브 마법사)
   **생성 방법 선택** 페이지를 사용하여 큐브를 만드는 방법을 지정할 수 있습니다.  

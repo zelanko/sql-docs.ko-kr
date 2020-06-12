@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0275a071c5548de7086844e48cec7eff3bb72d31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30dc6562ec394065cf2f177608d4e5679cbd7df3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074536"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546490"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>계산 멤버를 MDX로 작성(MDX)
   MDX에서 계산 멤버는 값을 반환하기 위해 MDX 식을 계산하여 확인되는 멤버입니다. 이러한 정의에는 놀랄 만한 개념이 포함되어 있습니다. MDX 쿼리에서 계산 멤버를 구성하고 사용할 수 있으면 다차원 데이터에 대한 상당한 조작 기능을 활용할 수 있습니다.  

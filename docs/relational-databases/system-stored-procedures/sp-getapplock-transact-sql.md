@@ -19,12 +19,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833251"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423187"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  애플리케이션 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode =] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared**또는 **Exclusive**중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode* 는 **varchar (32)** 이며 기본값은 없습니다. 값은 **Shared**, **Update**, **intentshared**, **intentshared**또는 **Exclusive**중 하나일 수 있습니다. 자세한 내용은 [잠금 모드](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes)를 참조 하세요.
   
  [ @LockOwner =] '*lock_owner*'  
- 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
+ 잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner* 는 **varchar (32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. *Lock_owner* 값이 **transaction**이면 기본적으로 또는 명시적으로 지정 된 sp_getapplock 트랜잭션 내에서 실행 되어야 합니다.  
   
  [ @LockTimeout =] '*value*'  
  잠금 제한 시간 값(밀리초)입니다. 기본값은 @에서 반환 하는 값과 같습니다 @LOCK_TIMEOUT . 요청을 즉시 허용할 수 없을 때 잠금 요청에서 잠금 대기 대신-1의 반환 코드를 반환 해야 함을 나타내려면 0을 지정 합니다.  

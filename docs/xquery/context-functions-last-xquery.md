@@ -1,5 +1,6 @@
 ---
 title: last 함수 (XQuery) | Microsoft Docs
+description: 시퀀스에서 마지막 항목의 정수 인덱스를 반환 하는 XQuery last () 함수에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038997"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529707"
 ---
 # <a name="context-functions---last-xquery"></a>컨텍스트 함수 - last(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 위의 쿼리에서 **last ()** 함수는 제조 단계 수를`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 반환 합니다. 이 값은 업무 센터 위치에서 마지막 제조 단계를 검색하는 데 사용됩니다.  
+ 위의 쿼리에서 **last ()** 함수는 `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` 제조 단계 수를 반환 합니다. 이 값은 업무 센터 위치에서 마지막 제조 단계를 검색하는 데 사용됩니다.  
   
  다음은 결과입니다.  
   

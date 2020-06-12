@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7e8d9593cd45ec5a92ea07051fe424698d8ece6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a03f1580b525707ccadbd018d9d270b0cc7740
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063129"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527915"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>특성 판별 탭(마이닝 모델 뷰어)
   **특성 판별** 탭을 사용하여 입력 특성의 상태를 비교하고 결과 특성과의 관련성을 확인할 수 있습니다. 선택한 두 예측 가능한 특성 간의 가장 큰 차이를 나타내는 특성 값이 먼저 나열됩니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66063129"
  **뷰어**  
  선택한 마이닝 모델을 탐색하는 데 사용할 뷰어를 선택합니다. 각 모델에 대해 사용자 지정 뷰어나 [!INCLUDE[msCoName](../includes/msconame-md.md)] 마이닝 콘텐츠 뷰어를 선택할 수 있습니다. 또한 사용 가능한 경우 플러그 인 뷰어를 사용할 수 있습니다.  
   
- **특성도**  
+ **특성**  
  예측 가능한 특성을 선택합니다.  
   
  **값 1**  
@@ -43,15 +42,15 @@ ms.locfileid: "66063129"
  **값 2**  
  **값 1**에 포함된 상태와 비교할 예측 가능한 특성의 상태를 선택합니다. **다른 모든 상태** 를 선택 하 여 **값 1** 의 값을 보수, 즉 값 1을 제외한 다른 모든 값과 비교할 수도 있습니다.  
   
- **값 1> \<및 \<값 2에 대 한 판별 점수>**  
+ **및에 대 한 판별 점수 \<Value 1>\<Value 2>**  
  그래프에는 대상 특성이 입력 특성의 특정 상태와 어떠한 관련이 있는지를 설명하는 다음 열이 포함되어 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |**특성**|마이닝 모델의 입력 특성입니다.|  
 |**값**|**특성**에 나열된 특성의 상태입니다.|  
-|**값 \<1에 우선>**|막대는 현재 특성과 값이 **값 1**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
-|**값 \<2>에 우선 합니다.**|막대는 현재 특성과 값이 **값 2**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
+|**우위\<Value 1>**|막대는 현재 특성과 값이 **값 1**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
+|**우위\<Value 2>**|막대는 현재 특성과 값이 **값 2**에서 선택한 대상 결과와 유사한지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 마이닝 알고리즘 &#40;Analysis Services 데이터 마이닝&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

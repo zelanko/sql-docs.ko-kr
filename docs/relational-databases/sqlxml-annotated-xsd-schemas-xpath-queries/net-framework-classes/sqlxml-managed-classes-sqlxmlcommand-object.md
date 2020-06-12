@@ -1,5 +1,6 @@
 ---
 title: SqlXmlCommand 개체 (SQLXML)
+description: SqlXmlCommand 개체의 메서드 및 속성에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252647"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306162"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 관리되는 클래스 - SqlXmlCommand 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252647"
 public SqlXmlCommand(string cnString)  
 ```  
   
- 여기서 `cnString` 는 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열입니다 (예:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ 여기서 `cnString` 는 서버, 데이터베이스 및 로그인 정보를 식별 하는 ADO 또는 OLEDB 연결 문자열입니다 (예:) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  연결 문자열에서 `Provider`는 SQLOLEDB여야 하고 `Data Provider`는 공급자 문자열에 포함되면 안 됩니다.  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  쿼리 결과를 기존 스트림에 씁니다. 이 메서드는 결과를 추가 해야 하는 스트림이 있는 경우에 유용 합니다 (예: 쿼리 결과가 OutputStream에 기록 되도록 하려면). 작업 예제는 [SQL 쿼리 실행 &#40;SQLXML 관리 되는 클래스&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)를 참조 하세요.  
   
  XmlReader ExecuteXmlReader ()  
- XmlReader 개체를 반환 합니다. 이 메서드를 사용 하 여 XmlReader 개체의 데이터를 직접 조작 하거나 System.xml의 연결 가능한 아키텍처에 연결할 수 있습니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 설명서를 참조하십시오. 작업 예제는 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
+ XmlReader 개체를 반환 합니다. 이 메서드를 사용 하 여 XmlReader 개체의 데이터를 직접 조작 하거나 System.Xml 연결 가능한 아키텍처에 연결할 수 있습니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 설명서를 참조하십시오. 작업 예제는 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
   
  TheSqlXmlCommand 개체는 다음과 같은 추가 메서드도 지원 합니다.  
   
@@ -108,7 +109,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  명령의 형식을 식별합니다. 이 속성은 실행할 명령의 형식을 지정하는 데 사용됩니다. 명령 형식은 다음 표에 나와 있는 값에 따라 결정됩니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL 명령(예: `SELECT * FROM Employees FOR XML AUTO`)을 실행합니다.|  
 |SqlXmlCommandType XPath|XPath 명령(예: `Employees[@EmployeeID=1]`)을 실행합니다.|  

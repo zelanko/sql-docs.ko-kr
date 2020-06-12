@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bcfdde8b3536bbbf8b2429d51a9ee9aecf0d437
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547505"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>파일이 나 어셈블리 &#39;b77a5c561934e089, Version = 3.5.0.0, Culture = 중립, PublicKeyToken =&#39; 또는 해당 종속성 중 하나를 로드할 수 없습니다. 시스템은 지정된 파일을 찾을 수 없습니다.
   SharePoint용 PowerPivot이 설치된 SharePoint 2010 환경에서는 데이터 피드 내보내기를 시도할 때 시스템에 필요한 Microsoft ADO.NET Data Services 버전이 없으면 이 오류가 발생합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66071625"
   
 ## <a name="user-action"></a>사용자 동작  
   
-1.  SharePoint 2010에 대 한 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인 (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734))으로 이동 합니다.  
+1.  SharePoint 2010에 대 한 하드웨어 및 소프트웨어 요구 사항 설명서 [하드웨어 및 소프트웨어 요구 사항 확인 (SharePoint 2010) ()](https://go.microsoft.com/fwlink/?LinkId=169734) 으로 이동 https://go.microsoft.com/fwlink/?LinkId=169734) 합니다.  
   
 2.  **소프트웨어 필수 구성 요소 설치**에서 현재 사용 중인 운영 체제(Windows Server 2008 SP2 또는 Windows Server 2008 R2)에 맞는 ADO.NET Data Services 3.5의 링크를 찾습니다.  
   
