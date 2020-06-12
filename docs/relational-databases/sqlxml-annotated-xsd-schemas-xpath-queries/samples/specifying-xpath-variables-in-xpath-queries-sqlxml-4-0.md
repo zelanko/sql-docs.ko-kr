@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에 XPath 변수 지정 (SQLXML)
+description: SQLXML 4.0 XPath 쿼리에서 XPath 변수를 지정 하는 방법의 예를 봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73bb6880fb19f3e49387d9d3d0bb57100ffdf42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56169fafb9d5705360899fb38757abaf599f96a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252534"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529867"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 XPath 변수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "75252534"
 ## <a name="examples"></a>예  
   
 ### <a name="a-use-the-xpath-variables"></a>A. XPath 변수 사용  
- 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 기본값이 지정 된 두 매개 변수는 ** \<sql: header>** 에 지정 됩니다.  
+ 샘플 템플릿은 XPath 쿼리 두 개로 구성되며 각 XPath 쿼리는 하나의 매개 변수를 사용합니다. 템플릿에는 이러한 매개 변수의 기본값도 지정되어 있습니다. 기본값은 매개 변수 값을 지정하지 않은 경우에 사용됩니다. 에는 기본값이 지정 된 두 개의 매개 변수가 지정 됩니다 **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

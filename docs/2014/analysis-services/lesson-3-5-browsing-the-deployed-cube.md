@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493983"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543405"
 ---
 # <a name="browsing-the-deployed-cube"></a>배포된 큐브 찾아보기
   다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 찾아봅니다. 분석할 때 여러 차원 간에 측정값을 비교하므로 Excel 피벗 테이블을 사용하여 데이터를 찾습니다. 피벗 테이블을 사용하면 Internet Sales가 특정 기간, 고객 인구 통계 및 제품 라인에 표시될 때 어떻게 변경되는지 볼 수 있도록 고객, 날짜 및 제품 정보를 각각 다른 축에 배치할 수 있습니다.  
   
 ### <a name="to-browse-the-deployed-cube"></a>배포된 큐브를 찾아보려면  
   
-1.  에서 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]큐브 디자이너로 전환 하려면 솔루션 탐색기의 **큐브** 폴더에서 ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** 큐브를 두 번 클릭 합니다.  
+1.  에서 큐브 디자이너로 전환 하려면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 솔루션 탐색기의 **큐브** 폴더에서 ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** 큐브를 두 번 클릭 합니다.  
   
 2.  **브라우저** 탭을 연 다음 디자이너 도구 모음에서 **다시 연결** 단추를 클릭합니다.  
   

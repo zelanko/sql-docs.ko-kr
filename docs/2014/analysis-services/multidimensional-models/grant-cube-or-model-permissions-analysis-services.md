@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546715"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
   큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "66075033"
   
 #### <a name="step-3-set-cube-permissions"></a>3단계: 큐브 사용 권한 설정  
   
-1.  **큐브 창에서** 큐브를 선택한 다음 또는 **읽기/쓰기** 액세스 `Read` 를 클릭 합니다.  
+1.  **큐브 창에서** 큐브를 선택한 다음 `Read` 또는 **읽기/쓰기** 액세스를 클릭 합니다.  
   
      `Read`대부분의 작업에는 액세스 만으로도 충분 합니다. **읽기/쓰기** 권한은 쓰기 저장에만 사용되며 처리에는 사용되지 않습니다. 이 기능에 대한 자세한 내용은 [Set Partition Writeback](set-partition-writeback.md) 을 참조하세요.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66075033"
   
 2.  SSMS에서 **역할** 폴더로 이동한 후 기존 역할을 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **파일****에 만들기** |  **역할** | 스크립팅을 선택 합니다.  
+3.  파일 **Script Role as**  |  **에 만들기**역할 스크립팅을 선택  |  **file**합니다.  
   
 4.  파일을 .xmla 파일 확장명으로 저장합니다. 스크립트를 테스트하려면 현재 역할을 삭제하고 SSMS에서 파일을 열고 F5 키를 눌러 스크립트를 실행합니다.  
   

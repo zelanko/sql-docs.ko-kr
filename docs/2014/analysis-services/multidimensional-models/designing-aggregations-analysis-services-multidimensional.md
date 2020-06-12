@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 307d2ff0419cf5def9f422f08daf349b80bcad2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be0997335faab5ddebe189f9c4460879941cd198
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075204"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546805"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
   집계는 큐브 데이터의 미리 계산된 요약으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 신속한 쿼리 응답을 제공할 수 있도록 도와 줍니다.  

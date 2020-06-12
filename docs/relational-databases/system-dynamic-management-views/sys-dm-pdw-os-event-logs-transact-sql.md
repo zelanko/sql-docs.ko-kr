@@ -3,8 +3,8 @@ title: sys. dm_pdw_os_event_logs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,19 +12,19 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed27e25a1aa977c8fc78186ae2bc9f96ee0e231e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b410cd5a710e0f18bb7afa139e9ef08cfa466ae8
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819349"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627326"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   다른 노드에 있는 다른 Windows 이벤트 로그에 대 한 정보를 저장 합니다.  
   
-|열 이름|데이터 형식|설명|범위|  
+|열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|이 로그를 가져온 어플라이언스 노드입니다.<br /><br /> pdw_node_id 및 log_name이 보기의 키를 구성 합니다.||  
 |log_name|**nvarchar(255)**|Windows 이벤트 로그 이름입니다.<br /><br /> pdw_node_id 및 log_name이 보기의 키를 구성 합니다.||  

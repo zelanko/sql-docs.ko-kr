@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d61e3213356146e1cf9e452e0b62e02c96bd4902
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546045"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>데이터베이스 개체(Analysis Services - 다차원 데이터)
-  인스턴스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 OLAP (온라인 분석 처리) 및 데이터 마이닝에 사용할 데이터베이스 개체와 어셈블리를 포함 합니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 OLAP (온라인 분석 처리) 및 데이터 마이닝에 사용할 데이터베이스 개체와 어셈블리를 포함 합니다.  
   
 -   데이터베이스에는 OLAP와 데이터 원본, 데이터 원본 뷰, 큐브, 측정값, 측정값 그룹, 차원, 특성, 계층, 마이닝 구조, 마이닝 모델 및 역할과 같은 데이터 마이닝 개체가 포함됩니다.  
   

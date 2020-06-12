@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175342"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543395"
 ---
 # <a name="automatically-grouping-attribute-members"></a>자동으로 특성 멤버 그룹화
-  큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 형식의 특성을 사용 하면 특성 계층 내에서 멤버의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 분포에 따라 특성 멤버 그룹을 자동으로 만드는 것이 유용 합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.
+  큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 형식의 특성을 사용 하면 특성 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만드는 것이 유용 합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.
 
  **DiscretizationMethod** 속성은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 그룹화 생성 여부 및 수행되는 그룹화 유형을 결정합니다. 기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 그룹화를 수행하지 않습니다. 자동 그룹화를 사용하면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 구조에 따라 최적의 그룹화 방법을 자동으로 결정하도록 허용하거나 다음 목록에서 그룹화 알고리즘 중 하나를 선택하여 그룹화 방법을 지정할 수 있습니다.
 
- **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 그룹 범위를 만들어 차원 멤버의 전체 채우기가 그룹 전체에 동일 하 게 분산 되도록 합니다.
+ **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 전체 채우기가 그룹 전체에 동일 하 게 분산 되도록 그룹 범위를 만듭니다.
 
- **클러스터** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 가우스 분포를 사용 하 여 K 수단 클러스터링 메서드를 사용 하 여 입력 값에 단일 차원 클러스터링을 수행 하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.
+ **클러스터** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 는 가우스 분포를 사용 하 여 K-수단 클러스터링 메서드를 사용 하 여 입력 값에 단일 차원 클러스터링을 수행 하는 방식으로 그룹을 만듭니다. 이 옵션은 숫자 열에만 유효합니다.
 
  그룹화 방법을 지정한 후에 **DiscretizationBucketCount** 속성을 사용하여 그룹 수를 지정해야 합니다. 자세한 내용은 [특성 멤버 그룹화 &#40;](multidimensional-models/attribute-properties-group-attribute-members.md) 분할을 참조 하세요&#41;
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175342"
 
 4.  **특성** 창에서 **Yearly Income**을 선택합니다.
 
-5.  속성 창에서 **DiscretizationMethod** 속성 값을 **Automatic** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.
+5.  속성 창에서 **DiscretizationMethod** 속성 값을 **Automatic** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 변경 `5` 합니다.
 
      다음 그림에서는 **Yearly Income**의 수정된 속성을 보여 줍니다.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175342"
 
 4.  **특성** 창에서 **Sick Leave Hours**를 선택합니다.
 
-5.  속성 창에서 **DiscretizationMethod** 속성의 값을 **클러스터** 로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.
+5.  속성 창에서 **DiscretizationMethod** 속성의 값을 **클러스터** 로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 변경 `5` 합니다.
 
 6.  **특성** 창에서 **Vacation Hours**를 선택합니다.
 
-7.  속성 창에서 **DiscretizationMethod** 속성의 값을 **동일한 영역** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.
+7.  속성 창에서 **DiscretizationMethod** 속성의 값을 **동일한 영역** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 변경 `5` 합니다.
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>수정된 특성 계층 찾아보기
 

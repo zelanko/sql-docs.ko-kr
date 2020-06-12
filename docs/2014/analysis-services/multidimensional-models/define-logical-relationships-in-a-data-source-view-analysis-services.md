@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a20d6dae-e769-4131-8a59-7ef56f174220
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a356fa721f6e95289ab92579bbc580900f32f507
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075617"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546975"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 관계 정의(Analysis Services)
   데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너에서는 기본 데이터베이스 관계 또는 지정한 이름 일치 조건을 기반으로 데이터 원본 뷰(DSV)에 추가된 테이블 간의 관계를 자동으로 정의합니다.  

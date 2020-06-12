@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e6907913bd5e068f30cea2e652ccdad5247d965
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074855"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546615"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
   MDX(Multidimensional Expressions)를 사용하여 다차원 데이터를 쿼리하거나 큐브 내에 MDX 식을 만들기 전에 다차원의 개념과 용어를 이해하는 것이 도움이 됩니다.  

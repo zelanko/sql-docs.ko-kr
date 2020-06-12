@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 35482dc6206f0ad8807cb0f9a3e46902d14061ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6ae3a34da62ed24d1971540e825f9f8347f413f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074802"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546645"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>다차원 모델의 KPI(핵심 성과 지표)
   비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66074802"
   
  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 성취도를 평가하기 위한 정량 측정값을 나타냅니다. KPI는 주로 시간에 따라 평가됩니다. 예를 들어 조직의 영업부에서는 월별 매출 총 이익을 KPI로 사용하고 인사부에서는 분기별 직원 전직률을 KPI로 사용할 수 있습니다. 각각은 KPI의 예에 해당합니다. 경영진은 비즈니스 성과표에 그룹화된 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 정확한 요약 정보를 얻습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]KPI는 큐브의 측정값 그룹과 관련 된 계산 모음으로, 비즈니스 성공을 평가 하는 데 사용 됩니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 및 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
+ 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] KPI는 큐브의 측정값 그룹과 관련 된 계산 모음으로, 비즈니스 성공을 평가 하는 데 사용 됩니다. 일반적으로 이러한 계산은 MDX(Multidimensional Expression) 식 및 계산 멤버의 조합입니다. 또한 KPI에는 클라이언트 애플리케이션의 KPI 계산 결과 표시 방법에 대한 정보를 제공하는 추가적인 메타데이터가 포함됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 KPI는 여러 클라이언트 애플리케이션에서 사용할 수 있는 서버 기반 KPI라는 주요 이점이 있습니다. 여러 클라이언트 애플리케이션에서 생성되는 여러 사실 버전과 달리 서버 기반 KPI는 단일 사실 버전을 제공합니다. 또한 각 클라이언트 컴퓨터 대신 서버에서 복잡한 계산을 수행하므로 성능상의 이점이 있습니다.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66074802"
   
 |용어|정의|  
 |----------|----------------|  
-|목표|KPI의 목표 값을 반환하는 MDX 숫자 식 또는 계산입니다.|  
+|Goal|KPI의 목표 값을 반환하는 MDX 숫자 식 또는 계산입니다.|  
 |값|KPI의 실제 값을 반환하는 MDX 숫자 식입니다.|  
 |상태|지정된 기간의 KPI 상태를 나타내는 MDX 식입니다.<br /><br /> 상태 MDX 식은 -1과 1 사이의 정규화된 값을 반환해야 합니다. 값이 -1 이하이면 "불량"이나 "낮음"으로 해석됩니다. 값 영(0)은 "허용됨"이나 "보통"으로 해석됩니다. 1 이상의 값은 "양호"나 "높음"으로 해석됩니다.<br /><br /> 중간 값을 제한 없이 선택적으로 반환할 수 있으며 클라이언트 애플리케이션에서 지원하는 경우 이러한 값을 사용하여 추가 상태를 원하는 만큼 표시할 수 있습니다.|  
 |추세|시간이 지남에 따라 KPI 값을 계산하는 MDX 식. 추세는 특정 비즈니스 컨텍스트에서 유용한 시간 기반 조건입니다.<br /><br /> 추세 MDX 식을 사용하여 비즈니스 사용자는 KPI가 시간에 따라 향상되는지 또는 저하되는지 여부를 확인할 수 있습니다.|  

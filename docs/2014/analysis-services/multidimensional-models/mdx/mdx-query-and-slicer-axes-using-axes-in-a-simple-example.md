@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85bcb26f-5971-4153-b334-61f8d8b475b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 53f48d8f23ef8809f9392b1a2c7ede65239e4985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 324f082fd6659592e56af65680bd4aa623c625d9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546235"
 ---
 # <a name="using-query-and-slicer-axes-in-a-simple-example-mdx"></a>간단한 예에서 쿼리 및 Slicer 축 사용(MDX)
   이 항목에 제시된 예에서는 쿼리 및 slicer 축을 지정 및 사용하는 기본적인 방법을 설명합니다.  

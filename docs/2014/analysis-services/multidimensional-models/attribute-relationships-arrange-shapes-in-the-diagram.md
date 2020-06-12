@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c3a1e5e72f13546f971bedba4af14e4e2d4264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077137"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544695"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>특성 관계 다이어그램의 셰이프 정렬
   **의 차원 디자이너에 있는 차원 구조 뷰의** 특성 관계 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 셰이프의 레이아웃을 변경할 수 있습니다.  

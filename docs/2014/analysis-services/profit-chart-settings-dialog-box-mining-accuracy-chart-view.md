@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539875"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>수익 차트 설정 대화 상자(마이닝 정확도 차트 뷰)
   **수익 차트 설정** 대화 상자를 사용하여 수익 차트 생성을 위한 설정을 구성할 수 있습니다. 수익 차트에 대한 자세한 내용은 [리프트 차트&#40;Analysis Services - 데이터 마이닝&#41;](data-mining/lift-chart-analysis-services-data-mining.md)를 참조하세요.  

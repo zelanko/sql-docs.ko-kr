@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4e32a40946eb9e513ad22cd837773187843151
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c79dcdccf6225b8e75144f8b090dcab7506c10
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084778"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522692"
 ---
 # <a name="delete-a-mining-model-from-a-mining-structure"></a>마이닝 구조에서 마이닝 모델 삭제
   데이터 마이닝 디자이너, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 DMX 문을 사용하여 마이닝 모델을 삭제할 수 있습니다.  

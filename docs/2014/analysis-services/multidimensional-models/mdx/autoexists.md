@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd35958a364456c12d58392afe3754f6adcf97b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546595"
 ---
 # <a name="autoexists"></a>AUTOEXIST
   *AUTOEXIST* 개념에서는 동일한 계층의 특성 계층 멤버로 만들 수 있는 모든 조합의 결과로 존재하는 셀이 아니라 큐브에서 실제로 존재하는 셀로 큐브 공간을 제한합니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
@@ -85,7 +84,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  결과 집합의 메타데이터는 다르지만 반환되는 셀 값은 동일합니다. 예를 들어 앞의 쿼리를 사용할 경우 Country 계층은 WHERE 절을 통해 slicer 축으로 이동되므로 결과 집합에 명시적으로 나타나지 않습니다.  
   
- 위의 세 쿼리는 각각에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]자동 존재 동작의 효과를 보여 줍니다.  
+ 위의 세 쿼리는 각각에서 자동 존재 동작의 효과를 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="deep-and-shallow-autoexists"></a>전체 및 단순 AUTOEXIST  
  AUTOEXIST는 식에 전체 또는 단순 적용될 수 있습니다. `Deep Autoexists`는 slicer 식, 축의 하위 선택 식 등을 적용한 후 가능한 가장 범위가 큰 공간에 맞게 모든 식이 계산됨을 의미합니다. `Shallow Autoexists`는 현재 식과 해당 결과가 현재 식에 전달되기 전에 외부 식이 계산됨을 의미합니다. 기본 설정은 전체 AUTOEXIST입니다.  

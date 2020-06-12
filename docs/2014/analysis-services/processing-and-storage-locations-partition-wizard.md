@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dda2dc57-923d-4db9-93a7-38e95770f3df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73340613b14c8f0e90340b589c8b97bad7cd5599
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60294db73475d97c487b33d41dd6f9637ae94ba1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539985"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>처리 및 스토리지 위치(파티션 마법사)
   **처리 및 스토리지 위치** 페이지를 사용하여 파티션에 대한 데이터를 저장하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스뿐만 아니라 해당 파티션을 소유하는 큐브의 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스도 지정할 수 있습니다. 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 또는 기본 스토리지 위치 이외의 스토리지 위치를 지정하여 파티션을 원격 파티션으로 정의할 수 있습니다. 원격 파티션에 대한 자세한 내용은 [원격 파티션](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)을 참조하세요.  
@@ -34,7 +33,7 @@ ms.locfileid: "66070645"
 > [!NOTE]  
 >  `Initial Catalog` 연결 문자열 속성이 유효한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스로 설정되어 있지 않은 데이터 원본을 선택하거나 `Initial Catalog` 연결 문자열 속성에서 지정한 데이터베이스가 원격 파티션을 지원하지 않는 경우, 즉 지정한 데이터베이스의 `MasterDatasourceID` 속성이 유효한 값으로 설정되어 있지 않은 경우 오류가 발생합니다.  
   
- **신규**  
+ **새 항목**  
  파티션을 처리할 원격 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 나타내는 새 데이터 원본을 만듭니다.  
   
 ## <a name="storage-location-options"></a>스토리지 위치 옵션  

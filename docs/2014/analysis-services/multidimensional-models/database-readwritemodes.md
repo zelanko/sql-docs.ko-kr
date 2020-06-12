@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075868"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547115"
 ---
 # <a name="database-readwritemodes"></a>ReadWriteMode 데이터베이스
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)는 읽기/쓰기 데이터베이스를 읽기 전용 데이터베이스로, 또는 이와 반대로 변경해야 하는 경우가 종종 있습니다. 이러한 상황은 솔루션 확장 및 성능 개선을 위해 여러 서버에서 동일한 데이터베이스 폴더를 공유하는 것과 같이 대부분 비즈니스 요구 사항에 의해 발생합니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `ReadWriteMode` 데이터베이스 속성을 사용하여 데이터베이스 운영 모드를 손쉽게 변경할 수 있습니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66075868"
 ## <a name="readwritemode-usage"></a>ReadWriteMode 사용법  
  `ReadWriteMode` 데이터베이스 속성은 `Attach` 데이터베이스 명령의 일부로 사용됩니다. `Attach` 명령을 사용하여 데이터베이스 속성을 `ReadWrite` 또는 `ReadOnly` 중 하나로 설정할 수 있습니다. `ReadWriteMode` 데이터베이스 속성은 읽기 전용으로 정의되어 있으므로 이 속성 값을 직접 업데이트할 수 없습니다. `ReadWriteMode` 속성이 `ReadWrite`로 설정된 경우에 데이터베이스를 만들 수 있습니다. 읽기 전용 모드에서는 데이터베이스를 만들 수 없습니다.  
   
- 및 `ReadWriteMode` `ReadOnly` `Detach/Attach` 간에 `ReadWrite` 데이터베이스 속성을 전환 하려면 일련의 명령을 실행 해야 합니다.  
+ `ReadWriteMode`및 간에 데이터베이스 속성을 전환 `ReadWrite` 하려면 `ReadOnly` 일련의 명령을 실행 해야 합니다 `Detach/Attach` .  
   
  `Attach`를 제외한 모든 데이터베이스 작업은 `ReadWriteMode` 데이터베이스 속성을 현재 상태로 유지합니다. 예를 들어 `Alter`, `Backup`, `Restore`, `Synchronize` 등의 작업은 `ReadWriteMode` 값을 유지합니다.  
   

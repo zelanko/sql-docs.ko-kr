@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98d363ab09e75905b13503687fe425a981c790e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91296f8c5d47afb15c67f0b60435c7f961734573
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546305"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>명명된 집합을 MDX로 작성(MDX)
   식 집합은 길고 복잡한 선언이 될 수 있으므로 이해하기 어려울 수 있습니다. 또는 식 집합이 너무 자주 사용되어 반복적으로 집합을 정의하는 작업이 부담이 될 수 있습니다. 이렇게 길고, 복잡하며, 일상적으로 사용되는 식을 쉽게 만들기 위해 MDX에서는 *명명된 집합*이라는 식을 사용할 수 있습니다.  

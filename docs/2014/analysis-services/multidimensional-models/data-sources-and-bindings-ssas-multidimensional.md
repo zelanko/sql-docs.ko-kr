@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076074"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547195"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>데이터 원본 및 바인딩(SSAS 다차원)
   큐브, 차원 및 기타 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체는 데이터 원본에 바인딩될 수 있습니다. 데이터 원본은 다음 개체 중 하나일 수 있습니다.  
@@ -168,7 +167,7 @@ ms.locfileid: "66076074"
   
  아웃오브 라인 바인딩은 옵션인 `Bindings` 컬렉션 개체를 처리 명령으로 포함하여 지정합니다. 옵션인 `Bindings` 컬렉션에는 다음 요소가 포함됩니다.  
   
-|속성|카디널리티|유형|설명|  
+|속성|카디널리티|Type|설명|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|새 바인딩의 컬렉션을 제공합니다.|  
 |`DataSource`|0-1|`DataSource`|사용되었을 수 있는 서버의 `DataSource`를 대체합니다.|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076074"
  아웃오브 라인 바인딩과 관련된 모든 요소는 선택 사항입니다. 지정되지 않은 요소에 대해 ASSL은 지속형 개체의 DDL에 포함된 사양을 사용합니다. `DataSource` 명령에서 `DataSourceView` 또는 `Process` 지정은 선택 사항입니다. `DataSource` 또는 `DataSourceView`가 지정된 경우 이는 인스턴스화되지 않으며 `Process` 명령이 완료된 후 지속되지 않습니다.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>아웃오브 라인 바인딩 유형 정의  
- 아웃오브 라인 `Bindings` 컬렉션 내에서 ASSL은 각 `Binding`당 여러 개체에 대한 바인딩 컬렉션을 허용합니다. 각 `Binding`에는 확장 개체 참조가 있습니다. 확장 개체 참조는 개체 참조와 비슷하지만 보조 개체(예: 차원 특성 및 측정값 그룹 특성)도 참조할 수 있습니다. 이 개체는 *개체*> `Process` \<\<*/개체*> 태그가 없다는 `Object` 점을 제외 하면 명령의 요소에 일반적인 플랫 형태를 사용 합니다.  
+ 아웃오브 라인 `Bindings` 컬렉션 내에서 ASSL은 각 `Binding`당 여러 개체에 대한 바인딩 컬렉션을 허용합니다. 각 `Binding`에는 확장 개체 참조가 있습니다. 확장 개체 참조는 개체 참조와 비슷하지만 보조 개체(예: 차원 특성 및 측정값 그룹 특성)도 참조할 수 있습니다. 이 개체는 `Object` 태그가 없다는 점을 제외 하면 명령의 요소에 일반적인 플랫 형식을 취합니다 `Process` \<*Object*> \<*/Object*> .  
   
- 바인딩이 지정 되는 각 개체는 폼 \< *개체* 의 XML 요소>ID (예: `DimensionID`)로 식별 됩니다. \< *개체>ID* 를 사용 하 여 개체를 가능한 한 명확 하 게 식별 한 후에는 바인딩이 지정 되는 요소를 식별 합니다 .이는 일반적으로 `Source`입니다. 한 가지 일반적인 경우는 `Source`가 `DataItem`의 속성인 경우로, 특성의 열 바인딩이 이에 해당합니다. 이 경우에는 `DataItem` 태그를 지정하지 않고 바인딩할 열에 바로 있는 것처럼 `Source` 속성만 지정합니다.  
+ 바인딩이 지정 되는 각 개체는 폼 ID의 XML 요소로 식별 됩니다 \<*object*> (예: `DimensionID` ). 개체를 폼 ID를 사용 하 여 가능한 한 명확 하 게 식별 한 후 \<*object*> 에는 바인딩이 지정 되는 요소를 식별 합니다 .이는 일반적으로 `Source` 입니다. 한 가지 일반적인 경우는 `Source`가 `DataItem`의 속성인 경우로, 특성의 열 바인딩이 이에 해당합니다. 이 경우에는 `DataItem` 태그를 지정하지 않고 바인딩할 열에 바로 있는 것처럼 `Source` 속성만 지정합니다.  
   
  `KeyColumns`는 `KeyColumns` 컬렉션 내의 순서에 의해 식별됩니다. 여기에서는 예를 들어 특성의 첫 번째와 세 번째 키 열만 지정할 수는 없습니다. 두 번째 키 열을 건너뛴다는 점을 나타낼 방법이 없기 때문입니다. 모든 키 열은 차원 특성에 대한 아웃오브 라인 바인딩에 있어야 합니다.  
   

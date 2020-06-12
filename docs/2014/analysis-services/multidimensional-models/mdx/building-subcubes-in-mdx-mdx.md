@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653b4d30aa86f52179c7b13619ac4347aa65c339
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546557"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
   하위 큐브는 기본 데이터의 필터링된 뷰를 나타내는 큐브의 하위 집합입니다. 큐브를 하위 큐브로 제한하여 쿼리 성능을 높일 수 있습니다.  

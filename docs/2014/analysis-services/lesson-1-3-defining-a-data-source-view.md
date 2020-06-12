@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079283"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543659"
 ---
 # <a name="defining-a-data-source-view"></a>데이터 원본 뷰 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에 사용할 데이터 원본을 정의한 후 수행해야 할 다음 단계는 일반적으로 프로젝트에 대한 데이터 원본 뷰를 정의하는 것입니다. 데이터 원본 뷰는 프로젝트에서 데이터 원본에 의해 정의되는 뷰와 지정된 테이블의 메타데이터에 대한 단일 통합 뷰입니다. 메타데이터를 데이터 원본 뷰로 저장하면 기본 데이터 원본에 대한 연결이 열려 있지 않아도 개발 중에 메타데이터를 사용할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
@@ -50,7 +49,7 @@ ms.locfileid: "66079283"
   
     -   **FactInternetSales (dbo)**  
   
-5.  선택한 **>** 테이블을 **포함 된 개체** 목록에 추가 하려면 클릭 합니다.  
+5.  **>** 선택한 테이블을 **포함 된 개체** 목록에 추가 하려면 클릭 합니다.  
   
 6.  **다음**을 클릭합니다.  
   

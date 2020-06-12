@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079837"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543875"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
   이 항목은 이전 PowerPivot 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 PowerPivot 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대해 자세히 알아보려면 [PowerPivot의 새로운](https://go.microsoft.com/fwlink/?LinkID=203917)기능을 참조 하세요.  

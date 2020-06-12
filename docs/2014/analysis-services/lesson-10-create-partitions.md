@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079195"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543585"
 ---
 # <a name="lesson-11-create-partitions"></a>11단원: 파티션 만들기
   이 단원에서는 다른 파티션과 독립적으로 처리(새로 고침)할 수 있도록 파티션을 만들어 Internet Sales 테이블을 더 작은 논리적 부분으로 나눕니다. 기본적으로 모델에 포함 된 모든 테이블에는 테이블의 열과 행이 모두 포함 된 하나의 파티션이 있습니다. Internet Sales 테이블의 경우 데이터를 연도별로 나누려고 합니다. 각 테이블의 5 년에 대해 하나의 파티션입니다.  이렇게 하면 각 파티션을 독립적으로 처리할 수 있습니다. 자세한 내용은 [파티션&#40;SSAS 테이블 형식&#41;](tabular-models/partitions-ssas-tabular.md)을 참조하세요.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079195"
   
 2.  **파티션 관리자** 대화 상자의 **파티션**에서 **Internet Sales** 파티션을 클릭 합니다.  
   
-3.  **파티션 이름**에서 이름을로 `Internet Sales 2005`변경 합니다.  
+3.  **파티션 이름**에서 이름을로 변경 `Internet Sales 2005` 합니다.  
   
     > [!TIP]  
     >  다음 단계로 진행하기 전에 테이블 미리 보기 창을 보면 열 이름에 모델 테이블(선택됨)에 포함된 열이 원본의 열 이름과 함께 표시되는 것을 확인할 수 있습니다. 이는 테이블 미리 보기 창에 모델 테이블의 열이 아니라 원본 테이블의 열이 표시되기 때문입니다.  
@@ -83,9 +82,9 @@ ms.locfileid: "66079195"
   
 #### <a name="to-create-a-partition-for-the-2006-year-in-the-internet-sales-table"></a>Internet Sales 테이블에서 2006 년에 대 한 파티션을 만들려면  
   
-1.  **파티션 관리자** 대화 상자의 **파티션에서 방금**만든 `Internet Sales 2005` 파티션을 클릭 한 다음 **복사**를 클릭 합니다.  
+1.  **파티션 관리자** 대화 상자의 **파티션에서** `Internet Sales 2005` 방금 만든 파티션을 클릭 한 다음 **복사**를 클릭 합니다.  
   
-2.  **파티션 이름**에을 입력 `Internet Sales 2006`합니다.  
+2.  **파티션 이름**에을 입력 `Internet Sales 2006` 합니다.  
   
 3.  SQL 문에서 파티션에 2006 년에 해당 하는 행만 포함 하도록 하려면 WHERE 절을 다음과 같이 바꿉니다.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079195"
   
 1.  **파티션 관리자** 대화 상자에서 **복사**를 클릭합니다.  
   
-2.  **파티션 이름**에을 입력 `Internet Sales 2007`합니다.  
+2.  **파티션 이름**에을 입력 `Internet Sales 2007` 합니다.  
   
 3.  **전환 대상**에서 **쿼리 편집기**를 선택 합니다.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079195"
   
 1.  **파티션 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  **파티션 이름**에을 입력 `Internet Sales 2008`합니다.  
+2.  **파티션 이름**에을 입력 `Internet Sales 2008` 합니다.  
   
 3.  **전환 대상**에서 **쿼리 편집기**를 선택 합니다.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079195"
   
 1.  **파티션 관리자** 대화 상자에서 **새로 만들기**를 클릭합니다.  
   
-2.  **파티션 이름**에을 입력 `Internet Sales 2009`합니다.  
+2.  **파티션 이름**에을 입력 `Internet Sales 2009` 합니다.  
   
 3.  **전환 대상**에서 **쿼리 편집기**를 선택 합니다.  
   

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546545"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
   이전 릴리스에서는 계산 멤버가 하위 SELECT 또는 하위 큐브에서 허용되지 않았습니다. 그러나 SQL Server 2008부터 계산 멤버가 허용되며 연결 속성에 의해 활성화됩니다. 또한 하위 SELECT 및 하위 큐브의 계산 멤버에 대한 새 동작이 SQL Server 2008 R2에서 도입되었습니다.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버  
- 의 `SubQueries` <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 연결 문자열 속성 또는 `DBPROPMSMDSUBQUERIES` [지원 되는 xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 의 속성은 하위 select 또는 하위 큐브에서 계산 멤버 또는 계산 집합의 동작이 나 허용을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
+ `SubQueries`의 연결 문자열 속성 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 `DBPROPMSMDSUBQUERIES` [지원 되는 xmla 속성 &#40;xmla&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 의 속성은 하위 select 또는 하위 큐브에서 계산 멤버 또는 계산 집합의 동작이 나 허용을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
   
  SubQueries 속성은 다음 값을 허용합니다.  
   

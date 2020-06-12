@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073359"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545797"
 ---
 # <a name="multidimensional-model-object-processing"></a>다차원 모델 개체 처리
   처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 스토리지를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 스토리지의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 스토리지를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66073359"
   
  [개체 다시 처리](#bkmk_reproc)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
   
 -   처리하려면 Analysis Services 인스턴스에 대한 관리 권한이 필요합니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]로부터 대화식으로 처리할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 서버 관리자 역할의 멤버여야 합니다. SQL Server 에이전트를 통해 예약하는 SSIS 패키지를 사용하는 경우같이 수동으로 실행되는 처리의 경우 패키지 실행에 사용되는 계정이 서버 관리자 역할의 멤버여야 합니다. 관리자 권한 설정에 대 한 자세한 내용은 [Analysis Services&#41;&#40;서버 관리자 권한 부여 ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조 하세요.  
   

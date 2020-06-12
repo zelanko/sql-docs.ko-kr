@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de0d2fea002beda0eca480bd27140bdd202fcb83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546200"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>기본 MDX 스크립트(MDX)
-  MDX (Multidimensional Expressions) 스크립트는의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]큐브에 대 한 계산 프로세스를 정의 합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
+  MDX (Multidimensional Expressions) 스크립트는의 큐브에 대 한 계산 프로세스를 정의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다. 다음과 같은 두 가지 유형의 MDX 스크립트가 있습니다.  
   
  **기본 MDX 스크립트**  
  큐브를 만드는 시점에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 해당 큐브에 대해 기본 MDX 스크립트를 만듭니다. 이 스크립트는 전체 큐브에 대한 계산 패스를 정의합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66073807"
   
 -   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
+-   [고정](/sql/mdx/mdx-scripting-freeze)  
   
 -   [범위](/sql/mdx/mdx-scripting-scope)  
   

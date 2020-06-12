@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ebeb4d4e357c8c56ad1c9b26e123a49d78875b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528479"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>드릴스루 대화 상자(마이닝 모델 뷰어)
   데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭을 사용하여 마이닝 모델을 볼 때 모델에 드릴스루가 사용되도록 설정되어 있으면 사례 데이터에 대한 세부 정보로 드릴스루할 수 있습니다. 또한 기본 마이닝 구조에서도 드릴스루를 사용하도록 설정하면 마이닝 구조에서 마이닝 모델에 포함되지 않은 열도 볼 수 있습니다. 열 목록의 구조 열에는 접두사로 "Structure" 레이블이 붙습니다.  
@@ -36,12 +35,12 @@ ms.locfileid: "66081490"
   
  **참고** 구조 열은 마이닝 구조에서 드릴스루를 사용할 수 있고 **모델 및 구조 열**옵션을 선택한 경우에만 표시됩니다. 또한 마이닝 모델과 마이닝 구조 모두에 대해 열을 볼 수 있는 드릴스루 권한이 있어야 합니다.  
   
- 모델에 포함 되지 않은 구조 열은 구조로 표시 됩니다 **.\< 열 이름>** 입니다.  
+ 모델에 포함 되지 않은 구조 열은 **structure. \<column name> **로 표시 됩니다.  
   
 > [!NOTE]  
 >  표 형태의 창을 아무 곳이나 마우스 오른쪽 단추로 클릭하고 **모두 복사**를 선택하여 드릴스루 데이터를 탭 구분 형식으로 클립보드에 복사할 수 있습니다. 복사된 데이터에는 사례 데이터만 포함되고 노드 정의는 포함되지 않습니다.  
   
- **Play**  
+ **재생**  
  데이터를 새로 고치려면 녹색 화살표 단추를 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

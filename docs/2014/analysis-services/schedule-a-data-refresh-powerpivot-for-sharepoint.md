@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cfbd8496a700f03ae91e81f1fcf442c1a12bcfa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070009"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538925"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>데이터 새로 고침 예약(SharePoint용 PowerPivot)
   SharePoint 사이트에 게시한 Excel 통합 문서 내의 PowerPivot 데이터가 자동으로 업데이트되도록 데이터 새로 고침을 예약할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66070009"
 > [!NOTE]  
 >  PowerPivot 데이터 새로 고침은 SharePoint 팜에서 Analysis Services 서버 인스턴스에 의해 수행되며, Excel 서비스에서 제공되는 데이터 새로 고침 기능과는 관련이 없습니다. PowePivot 데이터 새로 고침 예약 기능은 PowerPivot 데이터 이외의 데이터는 새로 고치지 않습니다.  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건  
  데이터 새로 고침 일정을 만들려면 통합 문서에 대해 참가 수준의 이상의 권한이 있어야 합니다.  
   
  데이터 새로 고침 중에 액세스하는 외부 데이터 원본을 사용할 수 있어야 하며 일정에서 지정하는 자격 증명에는 그러한 데이터 원본에 대한 액세스 권한이 있어야 합니다. 예약된 데이터 새로 고침을 실행하려면 네트워크 연결을 통해 액세스할 수 있는 데이터 원본 위치가 필요합니다(예: 워크스테이션의 로컬 폴더가 아닌 네트워크 파일 공유).  

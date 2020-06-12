@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 257f6decac024126228d0da2462bc1615be58d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072128"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547645"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>파티션 마법사 F1 도움말(Analysis Services - 다차원 데이터)
   파티션 마법사를 사용하여 측정값 그룹에 대한 파티션을 큐브에 정의할 수 있습니다. 기본적으로 큐브의 각 측정값 그룹에 대해 단일 파티션이 정의됩니다. 그러나 파티션이 크면 액세스 및 처리 성능이 저하될 수 있습니다. 각각 측정값 그룹의 일부 데이터를 포함하는 여러 파티션을 만들면 측정값 그룹의 액세스 및 처리 성능을 향상시킬 수 있습니다.  

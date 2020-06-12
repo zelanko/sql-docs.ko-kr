@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081317"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528359"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>데이터 탐색(SQL Server 데이터 마이닝 추가 기능)
   ![데이터 탐색 마법사](media/dmc-explore.gif "데이터 탐색 마법사")  

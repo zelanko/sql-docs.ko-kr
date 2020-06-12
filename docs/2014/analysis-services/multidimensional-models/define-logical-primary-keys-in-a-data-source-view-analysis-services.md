@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fde91a51fd3dcde87da2ede2b0c936256c718fc0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075641"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547013"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 기본 키 정의(Analysis Services)
   데이터 원본 뷰 마법사와 데이터 원본 뷰 디자이너는 기본 데이터베이스 테이블을 기반으로 데이터 원본 뷰에 추가되는 테이블의 기본 키를 자동으로 정의합니다.  

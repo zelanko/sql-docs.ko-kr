@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546945"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>데이터 원본 뷰 정의(Analysis Services)
-  데이터 원본 뷰는 큐브, 차원 및 마이닝 구조와 같은 다차원 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 개체에서 사용 하는 스키마의 논리 모델을 포함 합니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  
+  데이터 원본 뷰는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 큐브, 차원 및 마이닝 구조와 같은 다차원 데이터베이스 개체에서 사용 하는 스키마의 논리 모델을 포함 합니다. 데이터 원본 뷰는 UDM(Unified Dimensional Model)과 마이닝 구조에서 사용하는 이러한 스키마 요소의 메타데이터 정의이며 XML 형식으로 저장됩니다. 데이터 원본 뷰의 특성은 다음과 같습니다.  
   
 -   스키마 생성에 대한 하향식 접근 방식을 사용할 경우 여러 기본 데이터 원본에서 선택한 개체를 나타내는 메타데이터 또는 기본 관계형 데이터 저장소를 생성하는 데 사용될 메타데이터를 포함합니다.  
   

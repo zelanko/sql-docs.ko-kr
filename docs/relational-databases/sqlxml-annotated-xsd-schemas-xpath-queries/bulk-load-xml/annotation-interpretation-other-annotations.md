@@ -1,5 +1,6 @@
 ---
 title: 기타 주석 (SQLXML)
+description: XML 대량 로드에서 각 항목을 해석 하는 방법에 대 한 설명이 포함 된 SQLXML 주석 목록을 봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e59d3fc049d56e8142f241dc5c75c054db837c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246828"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306262"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>주석 해석 - 기타 주석
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

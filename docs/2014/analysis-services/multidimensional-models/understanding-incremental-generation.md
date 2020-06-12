@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f302a41612b19e9412fc52fbe6813c4e8ee2d26
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547308"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
   처음 스키마를 생성한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브 및 차원 정의를 변경하고 스키마 생성 마법사를 다시 실행할 수 있습니다. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  

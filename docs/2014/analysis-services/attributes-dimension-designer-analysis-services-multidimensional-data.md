@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064397"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527856"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   이 창을 사용하여 선택한 차원과 연결된 특성을 관리할 수 있습니다. 이 창에서 **계층** 창으로 특성을 끌어서 계층 및 수준을 만들 수 있습니다. 자세한 내용은 [계층 &#40;차원 구조 탭, 차원 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;를 ](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)참조 하세요.  
@@ -52,17 +51,17 @@ ms.locfileid: "66064397"
  **이름**  
  특성 이름을 표시합니다.  
   
- **사용법**  
+ **사용 현황**  
  선택한 특성의 사용법을 설정합니다. 아래쪽 화살표를 클릭하여 다음 선택 항목 중에서 선택합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|일반|일반 특성을 식별합니다.|  
-|Key|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
+|Regular|일반 특성을 식별합니다.|  
+|키|차원의 키 특성을 식별합니다. 이는 차원의 리프 멤버에 해당합니다. 차원 하나에 키 특성이 하나씩만 있을 수 있습니다. 수정하려면**속성**창의 **KeyColumns** 속성 옆에 있는 줄임표 단추( **...** )를 클릭합니다.|  
 |Parent|부모-자식 관계의 부모 특성을 나타냅니다. 이 관계에서 자식 특성은 항상 키 특성이어야 합니다.|  
 |AccountType|계정 유형 특성을 나타냅니다. 이 값은 측정값에 대한 집계 함수를 "by account"로 설정한 경우 서버 또는 엔진에 사용됩니다.|  
   
- **Type**  
+ **형식**  
  특성 유형을 설정합니다. 아래쪽 화살표를 클릭하여 사용 가능한 선택 항목 중에서 선택합니다.  
   
  **키 열**  

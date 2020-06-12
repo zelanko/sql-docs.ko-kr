@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3975bee14daad82291b5d343999ef4ebca7e6fbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e315d21eb6e7b8d5e590ca4cfb655ce232ddf945
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085075"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523191"
 ---
 # <a name="data-mining-architecture"></a>데이터 마이닝 아키텍처
   이 섹션에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에서 호스팅되는 데이터 마이닝 솔루션의 아키텍처에 대해 설명합니다. 이 섹션의 항목에서는 데이터 마이닝을 지원하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 논리적 아키텍처와 물리적 아키텍처에 대해 설명하고, 데이터 마이닝 서버와 통신하는 데 사용하고 데이터 마이닝 개체에 대해 로컬 또는 원격으로 작업하는 데 사용할 수 있는 프로토콜, 클라이언트 및 공급자에 대한 정보를 제공합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84f857105cd2bb5695fbcc0d0337d028e3fa297
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077586"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544895"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>동작(Analysis Services - 다차원 데이터)
   동작에는 여러 유형이 있을 수 있으므로 동작을 만들려면 이러한 유형을 고려해야 합니다. 다음과 같은 유형의 동작이 있을 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66077586"
   
  유형은 실행할 동작의 종류입니다. <xref:Microsoft.AnalysisServices.Action> 은 추상 클래스이므로 이 동작을 실행하려면 파생 클래스 중 하나를 사용해야 합니다. 두 가지 동작, 드릴스루와 보고는 미리 정의되어 있는데 해당 파생 클래스로 각각 <xref:Microsoft.AnalysisServices.DrillThroughAction> 및 <xref:Microsoft.AnalysisServices.ReportAction>을 참조하세요. 나머지 동작은 <xref:Microsoft.AnalysisServices.StandardAction> 클래스에서 처리됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]작업은 클라이언트 응용 프로그램에 제공 되어 사용 될 수 있는 저장 된 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 애플리케이션에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 애플리케이션을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
+ 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 작업은 클라이언트 응용 프로그램에 제공 되어 사용 될 수 있는 저장 된 MDX 문입니다. 즉, 동작은 서버에 정의되고 저장되는 클라이언트 명령입니다. 동작에는 클라이언트 애플리케이션에서 MDX 문을 표시하고 처리해야 하는 시기 및 방법을 지정하는 정보도 들어 있습니다. 작업이 지정하는 동작은 작업의 정보를 매개 변수로 사용하여 애플리케이션을 시작하거나 작업이 제공하는 조건을 기반으로 정보를 검색할 수 있습니다.  
   
  업무용 사용자는 동작을 통해 분석 결과에 대한 작업을 수행할 수 있습니다. 동작을 저장하여 다시 사용하면 비즈니스 인텔리전스 애플리케이션을 큐브 범위 밖으로 확장할 수 있으므로 최종 사용자가 데이터를 표시하는 일반적인 분석 이상의 작업을 수행할 수 있으며 발견된 문제와 결함을 해결할 수 있습니다. 동작은 클라이언트 애플리케이션을 복잡한 데이터 렌더링 도구에서 기업 운영 체제의 필수 부분으로 바꿀 수 있습니다. 최종 사용자는 데이터를 작업용 애플리케이션의 입력 항목으로 보내는 작업에 초점을 맞추는 대신 의사 결정 과정을 "마무리"할 수 있습니다. 분석 데이터를 의사 결정으로 변환하는 이 기능은 성공적인 비즈니스 인텔리전스 애플리케이션에 매우 중요합니다.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "66077586"
   
 |액션 유형|설명|  
 |-----------------|-----------------|  
-|명령줄|명령 프롬프트에서 명령을 실행합니다.|  
+|CommandLine|명령 프롬프트에서 명령을 실행합니다.|  
 |데이터 세트|데이터 세트를 클라이언트 애플리케이션으로 반환합니다.|  
 |드릴스루|행 집합을 반환하기 위해 클라이언트가 실행하는 드릴스루 문을 식으로 반환합니다.|  
 |Html|인터넷 브라우저에서 HTML 스크립트를 실행합니다.|  

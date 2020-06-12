@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082353"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528919"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>데이터 원본 뷰(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **데이터 원본 뷰** 창을 사용하여 선택한 차원과 연결된 데이터 원본 뷰의 테이블 및 열을 볼 수 있습니다. **데이터 원본 뷰** 창에서 **특성** 또는 **계층 및 수준** 창으로 열을 끌어서 특성, 멤버 속성, 계층 및 수준을 만들 수 있습니다.  

@@ -1,5 +1,6 @@
 ---
 title: 네임 스페이스를 사용 하 여 XPath 쿼리 실행 (SQLXMLOLEDB)
+description: SQLXMLOLEDB 공급자를 사용 하 여 XPath 쿼리를 실행할 때 SQLXML 4.0에서 네임 스페이스를 지정 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257300"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215866"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>네임스페이스가 있는 XPath 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75257300"
   
  SQLXML 4.0에서는 와일드카드 문자(*)를 사용할 수 없으므로 네임스페이스 접두사를 사용하여 XPath 쿼리를 지정해야 합니다. 이 접두사를 확인 하려면 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 합니다.  
   
- 다음 예의 XPath 쿼리는 와일드 카드 문자 (\*)와 로컬 이름 () 및 네임 스페이스 uri () XPath 함수를 사용 하 여 네임 스페이스를 지정 합니다. 이 XPath 쿼리는 로컬 이름이 Contact이 고 네임 스페이스 URI가 **urn: myschema.xml:** **Contact** 인 모든 요소를 반환 합니다.  
+ 다음 예의 XPath 쿼리는 와일드 카드 문자 ( \* )와 로컬 이름 () 및 네임 스페이스 uri () XPath 함수를 사용 하 여 네임 스페이스를 지정 합니다. 이 XPath 쿼리는 로컬 이름이 Contact이 고 네임 스페이스 URI가 **urn: myschema.xml:** **Contact** 인 모든 요소를 반환 합니다.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

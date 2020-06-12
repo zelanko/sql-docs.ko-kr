@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080407"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544140"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>함수 삽입 대화 상자(SSAS)
   **함수 삽입** 대화 상자를 사용하면 수식을 작성할 때 사용할 수 있는 함수가 포함된 목록에서 함수를 선택할 수 있습니다. 모델 디자이너에서 이 대화 상자에 액세스하려면 각 테이블 위에 있는 수식 입력줄에서 함수(**fx**) 단추를 클릭합니다. 수식에 사용할 함수를 선택하는 방법은 DAX 소개 및 수식 작성을 참조하십시오.  

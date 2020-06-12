@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084228"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522229"
 ---
 # <a name="logistic-regression-model-query-examples"></a>로지스틱 회귀 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터를 사용한 예측을 만드는 예측 쿼리를 작성할 수 있습니다.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>콜 센터 마이닝 구조 및 모델의 불연속 버전을 만들려면  
   
-1.  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]솔루션 탐색기에서 **마이닝 구조**를 확장 합니다.  
+1.  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 솔루션 탐색기에서 **마이닝 구조**를 확장 합니다.  
   
 2.  Call Center.dmm을 마우스 오른쪽 단추로 클릭하고 **복사**를 선택합니다.  
   
@@ -157,7 +156,7 @@ NATURAL PREDICTION JOIN
   
 6.  **마이닝 구조** 탭에서 Service Grade에 대한 열을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-7.  속성을 **연속** 에서 불연속화로 변경 합니다. **Discretized** `Content` `DiscretizationMethod` 속성을 **클러스터**로 변경 합니다. Discretization BucketCount에 **3**을 입력합니다.  
+7.  속성을 `Content` **연속** 에서 **불연속화**로 변경 합니다. 속성을 `DiscretizationMethod` **클러스터**로 변경 합니다. Discretization BucketCount에 **3**을 입력합니다.  
   
     > [!NOTE]  
     >  이러한 매개 변수는 프로세스에 대한 이해를 돕기 위해 사용된 것일 뿐 이러한 매개 변수를 통해 유효한 모델이 반드시 생성되는 것은 아닙니다.  
@@ -193,7 +192,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant&#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[PredictAdjustedProbability&#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
 |[PredictHistogram&#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  

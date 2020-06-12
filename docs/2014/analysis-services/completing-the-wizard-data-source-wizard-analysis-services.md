@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed1e65402c5ca59f349c28b2b9236ef02678114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087666"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527314"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>마법사 완료(데이터 원본 마법사)(Analysis Services)
   마법사의 **마법사 완료** 페이지를 사용하여 연결 문자열을 검토하고 새 데이터 원본의 이름을 지정할 수 있습니다.  

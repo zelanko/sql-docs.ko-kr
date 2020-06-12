@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547705"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>데이터 피드 사용(SharePoint용 PowerPivot)
   데이터 피드는 온라인 데이터 원본에서 생성되어 대상 문서 또는 애플리케이션으로 스트리밍되는 하나 이상의 데이터 스트림입니다. PowerPivot for Excel을 사용 중인 경우 데이터 피드를 통해 임의 데이터 원본의 기존 회사 또는 비즈니스 데이터를 Excel 2010 통합 문서의 PowerPivot 창으로 쉽게 가져올 수 있습니다. 통합 문서로 데이터 피드를 가져온 후 SharePoint 서버에서 예약한 데이터 새로 고침 작업에서 나중에 참조할 수 있습니다.  
   
  데이터 피드의 사용 방법은 Atom 데이터 피드를 지원하는 애플리케이션의 기본 내보내기 기능을 사용하는지 또는 사용자 지정 데이터 서비스를 만들어 사용하는지에 따라 달라집니다. Atom XML 데이터를 게시하고 읽을 수 있는 애플리케이션은 데이터 피드 및 데이터 서비스의 메커니즘을 사용자에게 숨기는 원활한 데이터 전송 기능을 제공합니다. 사용자는 단순히 한 애플리케이션에서 다른 애플리케이션으로 데이터를 이동하기만 하면 됩니다.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 Microsoft SharePoint 2010은 PowerPivot 통합 문서에서 사용할 수 있는 데이터 피드를 제공 합니다. 이 항목의 정보를 사용하여 기존의 보고서 및 목록에서 데이터 피드에 액세스하는 방법을 배울 수 있습니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 Microsoft SharePoint 2010은 PowerPivot 통합 문서에서 사용할 수 있는 데이터 피드를 제공 합니다. 이 항목의 정보를 사용하여 기존의 보고서 및 목록에서 데이터 피드에 액세스하는 방법을 배울 수 있습니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -34,10 +33,10 @@ ms.locfileid: "66070911"
   
  [데이터 서비스 문서에서 데이터 피드 만들기](#dsdoc)  
   
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건  
  데이터 피드를 Excel 2010으로 가져오려면 PowerPivot for Excel이 있어야 합니다.  
   
- Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010는 모두이 형식의 데이터를 제공할 수 있습니다.  
+ Atom 1.0 형식으로 데이터를 제공하는 웹 서비스나 데이터 서비스가 필요합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 SharePoint 2010는 모두이 형식의 데이터를 제공할 수 있습니다.  
   
  SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070911"
   
     1.  **기준 URL** 은 선택 사항입니다. 데이터 서비스 문서에서 여러 피드를 제공하는 경우 기준 URL을 지정해야 합니다. 기준 URL에서는 모든 피드에 공통되는 URL 부분(예: 서버 이름 및 사이트)을 지정해야 합니다. Reporting Services 보고서에 대한 데이터 서비스 문서를 만들 경우 기준 URL은 보고서 서버 URL 및 보고서입니다.  
   
-    2.  **웹 서비스 URL** 은 필수입니다. 기준 URL이 없을 경우 이 값은 http:// 또는 https://를 주소에 포함해야 합니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL이 인 경우 http://adventure-works/inventory/today.aspx기본 url http://adventure-works/inventory은이 고 웹 서비스 url은/today.aspx입니다.  
+    2.  **웹 서비스 URL** 은 필수입니다. 기준 URL이 없을 경우 이 값은 http:// 또는 https://를 주소에 포함해야 합니다. 기준 URL을 지정한 경우 웹 서비스 URL은 기준 URL 다음에 오는 부분입니다. 예를 들어 전체 URL이 인 경우 http://adventure-works/inventory/today.aspx 기본 url은이 http://adventure-works/inventory 고 웹 서비스 url은/today.aspx입니다.  
   
          웹 서비스 URL은 데이터 하위 집합을 필터링하거나 선택하는 매개 변수를 포함할 수 있습니다. 피드를 제공하는 애플리케이션이나 서비스는 URL에 지정된 매개 변수를 지원해야 합니다.  
   

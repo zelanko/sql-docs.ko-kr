@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 590383cd-30b3-4e3f-a1cf-3f9ec7ba48e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98a69e87c21d48e42627e4fe95df0d41196c41f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082617"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520189"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>데이터 샘플 뷰어 대화 상자(Analysis Services - 다차원 데이터)
   **의** 데이터 샘플 뷰어 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 새 큐브에 대한 측정값을 제공하는 데 사용될 팩트 테이블의 처음 1000개의 레코드를 볼 수 있습니다.  

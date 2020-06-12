@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8d74b932-2174-4e1f-8414-636455880b6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ce5bf2a376712d603be3099f7ccefa0e6b799219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afa68ebcfa8f4136bcd4a131842c852665ee9851
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728494"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545150"
 ---
 # <a name="dimension-storage"></a>차원 스토리지
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원은 다음 두 가지 저장소 모드를 지원 합니다.  
+  의 차원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다음 두 가지 저장소 모드를 지원 합니다.  
   
 -   ROLAP(관계형 OLAP)  
   

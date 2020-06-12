@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759830666c3da1faa8deccb754fc2955b47e5bd7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085345"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523719"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
   BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성**옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66085345"
   
 -   **쿼리**  
   
--   **만들어집니다**  
+-   **결과**  
   
  **디자인** 모드에서는 입력 데이터를 선택하고, 해당 데이터를 모델로 매핑한 다음 작성하는 문에 표를 통해 예측 함수를 추가하여 예측 쿼리를 작성할 수 있습니다. 디자인 표에는 세 가지 구성 요소가 포함되어 있습니다.  
   
@@ -39,13 +38,13 @@ ms.locfileid: "66085345"
  **필드**  
  **원본** 열에서 선택한 내용과 연결된 특정 열 또는 함수를 결정합니다.  
   
- **앤티앨리어스**  
+ **Alias**  
  결과 집합에서 열의 이름을 지정하는 방법을 결정합니다.  
   
  **표시**  
  **원본** 열에서 선택한 내용을 결과에 표시할지 여부를 결정합니다.  
   
- **그룹**  
+ **그룹화**  
  **및/또는** 열과 함께 괄호를 사용하여 식을 그룹화합니다. 예를 들어 (expr1 또는 expr2) 및 expr3입니다.  
   
  **및/또는**  

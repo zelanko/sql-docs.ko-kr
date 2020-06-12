@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +13,18 @@ ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7068beee49260db17e7b8f704e5aba316deb6ea3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844435"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627566"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  네트워크 파일 공유에 액세스 하기 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 위해에 저장 된 네트워크 자격 증명을 제거 합니다. 예를 들어이 저장 프로시저를 사용 하 여에 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 대 한 사용 권한을 제거 하 여 자체 네트워크 내에 있는 서버에서 백업 및 복원 작업을 수행할 수 있습니다.  
+  네트워크 파일 공유에 액세스 하기 위해에 저장 된 네트워크 자격 증명 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 을 제거 합니다. 예를 들어이 저장 프로시저를 사용 하 여에 대 한 사용 권한을 제거 하 여 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 자체 네트워크 내에 있는 서버에서 백업 및 복원 작업을 수행할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="arguments"></a>인수  
  '*target_server_name*'  
- 대상 서버 호스트 이름 또는 IP 주소를 지정 합니다. 이 서버에 액세스 하기 위한 자격 증명은 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에서 제거 됩니다. 이는 자신의 팀에서 관리 하는 실제 대상 서버에 대 한 사용 권한을 변경 하거나 제거 하지 않습니다.  
+ 대상 서버 호스트 이름 또는 IP 주소를 지정 합니다. 이 서버에 액세스 하기 위한 자격 증명은에서 제거 됩니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . 이는 자신의 팀에서 관리 하는 실제 대상 서버에 대 한 사용 권한을 변경 하거나 제거 하지 않습니다.  
   
  *target_server_name* 은 nvarchar (337)로 정의 됩니다.  
   
@@ -52,7 +52,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  제어 노드와 모든 계산 노드에서 자격 증명 제거에 실패 하는 경우 오류가 발생 합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 이 저장 프로시저는에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService 계정에서 네트워크 자격 증명을 제거 합니다. NetworkService 계정은 제어 노드와 계산 노드에서 SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 될 때 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 액세스 합니다.  
+ 이 저장 프로시저는에 대 한 NetworkService 계정에서 네트워크 자격 증명을 제거 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. NetworkService 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제어 노드와 계산 노드에서 SMP의 각 인스턴스를 실행 합니다. 예를 들어 백업 작업이 실행 될 때 제어 노드와 각 계산 노드는 NetworkService 계정 자격 증명을 사용 하 여 대상 서버에 액세스 합니다.  
   
 ## <a name="metadata"></a>메타데이터  
  모든 자격 증명을 나열 하 고 자격 증명이 제거 되었는지 확인 하려면 [dm_pdw_network_credentials &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md)를 사용 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a9c9d529bfeb26b959b2521e4ce3c3d7f10d082
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546447"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>쿼리 범위 셀 계산 만들기(MDX)
   MDX에서 `WITH` 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. `WITH` 키워드는 다음 구문을 가집니다.  
@@ -29,12 +28,12 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` 값은 계산 셀의 이름입니다. `String_Expression` 값에는 직각의 단일 차원 MDX 집합 식 목록이 들어 있습니다. 이들 각각의 집합 식은 다음 테이블에 나열된 범주 중 하나로 확인되어야 합니다.  
   
-|범주|설명|  
+|Category|설명|  
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
 |수준 멤버 집합|단일 수준의 멤버로 확인되는 MDX 집합 식입니다. 이러한 집합 식의 예는 *Level_Expression*입니다.`Members` MDX 함수. 계산 멤버를 포함 하려면 *Level_Expression*을 사용 합니다.`AllMembers` MDX 함수. 자세한 내용은 [AllMembers&#40;MDX&#41;](/sql/mdx/allmembers-mdx)를 참조하세요.|  
-|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이러한 집합 식의 예 `Descendants`는 (*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX 함수입니다. 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
+|하위 항목 집합|지정된 멤버의 하위 항목으로 확인되는 MDX 집합 식입니다. 이러한 집합 식의 예는 `Descendants` (*Member_Expression*, *Level_Expresion*, *Desc_Flag*) MDX 함수입니다. 자세한 내용은 [Descendants&#40;MDX&#41;](/sql/mdx/descendants-mdx)를 참조하세요.|  
   
  `String_Expression` 인수가 차원을 설명하지 않으면 MDX는 계산 하위 큐브를 만들 목적으로 모든 멤버가 포함되는 것으로 가정합니다. 따라서 `String_Expression` 인수가 NULL이면 계산 셀 정의는 전체 큐브에 적용됩니다.  
   

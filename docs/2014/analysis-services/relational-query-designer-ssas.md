@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3bd6b89713edad4429dc0a93aa96cf041a9562a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251213"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539685"
 ---
 # <a name="relational-query-designer-ssas"></a>관계형 쿼리 디자이너(SSAS)
-  관계형 쿼리 디자이너를 사용 하면 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 관계형 데이터베이스와 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 검색할 데이터를 지정 하는 쿼리를 만들 수 있습니다. 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고 쿼리를 대화형으로 작성하며 쿼리 결과를 볼 수 있습니다.  텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
+  관계형 쿼리 디자이너를 사용 하면 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 관계형 데이터베이스와에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] 검색할 데이터를 지정 하는 쿼리를 만들 수 있습니다 [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] . 그래픽 쿼리 디자이너를 사용하여 메타데이터를 탐색하고 쿼리를 대화형으로 작성하며 쿼리 결과를 볼 수 있습니다.  텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
   
  원하는 경우 텍스트 기반 편집기를 사용하여 SQL 언어로 쿼리를 작성할 수 있습니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집**을 클릭합니다. 텍스트 기반 쿼리 디자이너에서 쿼리를 편집한 후에는 그래픽 쿼리 디자이너를 더 이상 사용할 수 없습니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "72251213"
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
-|창|기능|  
+|창|함수|  
 |----------|--------------|  
 |[데이터베이스 뷰](#DatabaseView)|데이터베이스 스키마별로 구성된 테이블,  뷰,  저장 프로시저 및 테이블 반환 함수의 계층 뷰를 표시합니다.|  
 |[선택한 필드](#SelectedFields)|데이터베이스 뷰 창에서 선택된 항목의 데이터베이스 필드 이름 목록을 표시합니다. 이러한 필드는 데이터 세트에 대한 필드 컬렉션이 됩니다.|  
@@ -80,13 +79,13 @@ ms.locfileid: "72251213"
   
  집계는 데이터에 대한 요약을 제공하며 데이터는 요약 데이터를 전달하는 집계를 지원하도록 그룹화됩니다. 쿼리에 집계를 사용하는 경우 쿼리에서 반환되는 다른 필드는 모두 자동으로 그룹화되며 쿼리에는 SQL  GROUP  BY  절이 포함됩니다. **그룹화 및 집계** 목록에서 **그룹화 기준** 옵션만 사용하면 집계를 추가하지 않고 데이터를 요약할 수 있습니다. 대부분의 집계에는 DISTINCT  키워드를 사용하는 버전이 포함됩니다. DISTINCT를 포함하면 중복 값이 제거됩니다.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 를 [!INCLUDE[DWsql](../includes/dwsql-md.md)]사용 합니다. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 [!INCLUDE[tsql](../includes/tsql-md.md)] 및를 사용 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] [!INCLUDE[DWsql](../includes/dwsql-md.md)] 합니다. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
   
  다음 표에서는 집계를 나열하고 각 집계에 대한 간단한 설명을 제공합니다.  
   
-|집계|Description|  
+|집계|설명|  
 |---------------|-----------------|  
 |Avg|그룹에 속한 값의 평균을 반환합니다. SQL  AVG  집계를 구현합니다.|  
 |개수|그룹에 포함된 항목 개수를 반환합니다. SQL COUNT 집계를 구현합니다.|  
@@ -175,7 +174,7 @@ ms.locfileid: "72251213"
 ### <a name="graphical-query-designer-toolbar"></a>그래픽 쿼리 디자이너 도구 모음  
  그래픽 쿼리 디자이너 도구 모음은 쿼리 결과를 지정하거나 보는 데 사용할 수 있는 다음 단추를 제공합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|자동으로 생성된 쿼리를 보거나 쿼리를 수정할 수 있도록 텍스트 기반 쿼리 디자이너로 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. .sql  및 .rdl  파일 형식이 지원됩니다.|  
@@ -198,7 +197,7 @@ ms.locfileid: "72251213"
 ### <a name="text-based-query-designer-toolbar"></a>텍스트 기반 쿼리 디자이너 도구 모음  
  텍스트 쿼리 디자이너는 모든 명령 유형을 위한 단일 도구 모음을 제공합니다. 다음 표에서는 도구 모음에 있는 각 단추와 해당 기능을 나열합니다.  
   
-|단추|Description|  
+|단추|설명|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 모든 데이터 원본 유형에서 그래픽 쿼리 디자이너를 지원하는 것은 아닙니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 sql 및 rdl만 지원됩니다.|  
@@ -212,7 +211,7 @@ ms.locfileid: "72251213"
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
-|창|기능|  
+|창|함수|  
 |----------|--------------|  
 |쿼리|SQL 쿼리 텍스트를 표시합니다. 이 창을 사용하여 SQL 쿼리를 작성하거나 편집할 수 있습니다.|  
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  
@@ -235,7 +234,7 @@ SELECT Name FROM ContactType
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
-|창|기능|  
+|창|함수|  
 |----------|--------------|  
 |쿼리|저장 프로시저의 이름 및 입력 매개 변수(있는 경우)를 표시합니다.|  
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  

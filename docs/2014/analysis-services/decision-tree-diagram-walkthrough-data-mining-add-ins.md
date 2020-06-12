@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082276"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528870"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>의사 결정 트리 다이어그램 연습 (데이터 마이닝 추가 기능)
   의사 결정 트리 모델을 만든 경우 의사 결정 트리 셰이프 또는 종속성 네트워크 셰이프를 사용하여 Visio에서 사용자 지정된 다이어그램을 만들 수 있습니다. 이 항목에서는 **의사 결정 트리** 셰이프 및 다음 컨트롤을 사용 하 여 수행할 수 있는 사용자 지정에 대해 설명 합니다.  
@@ -40,13 +39,13 @@ ms.locfileid: "66082276"
   
 1.  **셰이프** 목록에 **Microsoft 데이터 마이닝 셰이프가** 표시 되지 않는 경우 **추가 셰이프**를 클릭 하 고, **스텐실 열기**를 선택 하 고, 기본 설치 위치에서 템플릿을 엽니다.  
   
-     \<드라이브>: 파일 \ x85) \Microsoft SQL Server 2012 DM 추가 기능  
+     \<drive>: Filefiles (x85) \Microsoft SQL Server 2012 DM 추가 기능  
   
 2.  **의사 결정 트리** 셰이프를 페이지로 끌어옵니다.  
   
 3.  **의사 결정 트리 Visio 셰이프 마법사**의 시작 페이지에서 **다음**을 클릭 합니다.  
   
-4.  **클러스터 마법사**의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] **데이터 원본 선택** 페이지에서 시각화할 모델이 있는 서버에 대 한 연결을 선택 합니다.  
+4.  **클러스터 마법사**의 **데이터 원본 선택** 페이지에서 시각화할 모델이 있는 서버에 대 한 연결을 선택 합니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 5.  적절 한 마이닝 모델을 선택 하 고 **다음**을 클릭 합니다.  
   

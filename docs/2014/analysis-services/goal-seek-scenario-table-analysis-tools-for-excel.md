@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080734"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544365"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>목표 검색 시나리오(Excel용 테이블 분석 도구)
   ![테이블 분석 도구의 목표 검색 단추](media/tat-goalseek.gif "테이블 분석 도구의 목표 검색 단추")  
@@ -99,7 +98,7 @@ ms.locfileid: "66080734"
 ## <a name="related-tools"></a>관련 도구  
  고급 데이터 마이닝 기능을 제공하는 별도의 추가 기능인 Excel용 데이터 마이닝 클라이언트에는 행위를 예측하는 데이터 마이닝 모델을 만들기 위한 마법사가 포함되어 있습니다. 자세한 내용은 [데이터 마이닝 모델 만들기](creating-a-data-mining-model.md)를 참조 하세요.  
   
- **목표 검색** 시나리오 도구에서 사용 하는 알고리즘에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오.  
+ **목표 검색** 시나리오 도구에서 사용 하는 알고리즘에 대 한 자세한 내용은 온라인 설명서의 "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  

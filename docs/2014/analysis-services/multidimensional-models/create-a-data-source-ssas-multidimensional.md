@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536736"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>데이터 원본 만들기(SSAS 다차원)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에서 데이터 원본 개체는 데이터를 처리하거나 가져올 데이터 원본에 대한 연결을 나타냅니다. 다차원 모델은 적어도 하나 이상의 데이터 원본 개체를 포함해야 하지만 더 추가하여 여러 데이터 웨어하우스의 데이터를 결합할 수 있습니다. 이 항목의 지침에 따라 모델에 대한 데이터 원본 개체를 만들 수 있습니다. 이 개체의 속성 설정에 대한 자세한 내용은 [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](set-data-source-properties-ssas-multidimensional.md)을 참조하세요.  
@@ -82,11 +81,11 @@ ms.locfileid: "70175919"
   
      새 연결의 기본 공급자는 네이티브 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자입니다. 이 공급자는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스에 연결하는 데 사용됩니다. SQL Server 관계형 데이터베이스에 대한 연결의 경우 네이티브 OLE DB\SQL Server Native Client 11.0을 사용하면 다른 공급자를 사용할 때보다 더 빠른 경우가 많습니다.  
   
-     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]지 원하는 공급자 및 관계형 데이터베이스의 목록은 [SSAS 다차원&#41;&#40;지원 되는 데이터 원본 ](supported-data-sources-ssas-multidimensional.md)을 참조 하세요.  
+     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 에서 지 원하는 공급자 및 관계형 데이터베이스의 목록은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [SSAS 다차원&#41;&#40;지원 되는 데이터 원본 ](supported-data-sources-ssas-multidimensional.md)을 참조 하세요.  
   
 5.  기본 데이터 원본에 연결하기 위해 선택한 공급자가 요청한 정보를 입력합니다. **네이티브 OLE DB\SQL Server Native Client** 공급자를 선택한 경우 다음 정보를 입력합니다.  
   
-    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된 경우 인스턴스 이름 (예: computername>\< \\<instancename\>)을 포함 해야 합니다.  
+    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된 경우 인스턴스 이름 (예: \<computername> \\ instancename<)을 포함 해야 합니다 \> .  
   
     2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지 원하는 Azure SQL 데이터베이스 또는 SQL Server 인스턴스에 대해 데이터베이스 사용자 로그인을 지정 합니다.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "70175919"
   
 8.  **다음**을 클릭합니다.  **마법사 완료**에서 데이터 원본 이름을 입력하거나 기본 이름을 사용합니다. 기본 이름은 연결에 지정된 데이터베이스의 이름입니다. **미리 보기** 창에 새 데이터 원본의 연결 문자열이 표시됩니다.  
   
-9. **마침**을 클릭합니다.  솔루션 탐색기의 **데이터 원본** 폴더에 새 데이터 원본이 나타납니다.  
+9. **Finish**를 클릭합니다.  솔루션 탐색기의 **데이터 원본** 폴더에 새 데이터 원본이 나타납니다.  
   
 ##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>기존 연결을 사용 하 여 데이터 원본 만들기  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 작업을 수행하는 경우 데이터 원본은 솔루션의 기존 데이터 원본이나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 기반으로 만들 수 있습니다. 데이터 원본 마법사는 같은 프로젝트의 기존 연결을 사용하는 방법을 포함하여 데이터 원본 개체를 만들기 위한 몇 가지 옵션을 제공합니다.  

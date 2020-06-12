@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 221f6d0c51b3c0a688a8bf3f002bfd4d31c04a45
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174302"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527789"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>브라우저(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **브라우저** 탭을 사용하여 큐브의 차원, 측정값 및 KPI를 탐색할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브 브라우저는 MDX 쿼리 디자이너에 통합되어 MDX 쿼리를 만들고, 큐브를 필터링하거나 조각화하고, 계층을 드릴다운하는 데 도움이 되는 그래픽 사용자 인터페이스를 제공합니다.

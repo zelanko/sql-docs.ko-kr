@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175632"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547695"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010에서 PowerPivot 데이터 새로 고침
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터 새로 고침은 예약된 서버 쪽 작업으로서, 외부 데이터 원본을 쿼리하여 콘텐츠 라이브러리에 저장된 Excel 2010 통합 문서의 포함된 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 데이터를 업데이트합니다.
@@ -75,7 +74,7 @@ ms.locfileid: "78175632"
 
 5.  **데이터베이스**에 이 서비스 애플리케이션에 대한 데이터베이스를 호스팅할 SQL Server 인스턴스를 지정합니다. 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다.
 
-6.  **데이터베이스 이름**에 서비스 애플리케이션 데이터베이스의 이름을 입력합니다. 기본값은 guid> Secure_Store_Service_DB_\<입니다. 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.
+6.  **데이터베이스 이름**에 서비스 애플리케이션 데이터베이스의 이름을 입력합니다. 기본값은 Secure_Store_Service_DB_입니다 \<guid> . 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.
 
 7.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. SQL 인증을 선택하는 경우 팜에서 이 인증 유형을 사용하는 방법에 대한 지침을 SharePoint 관리자 설명서에서 참조하십시오.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175632"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 생성 된 대상 응용 프로그램은 PowerPivotDataRefresh_\<guid> 명명 규칙을 사용 하 여 생성 됩니다. 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.
+ 이 자격 증명 옵션은 기본적으로 사용하도록 설정되어 있습니다. 이 자격 증명 옵션을 사용하도록 설정하면 PowerPivot System Service에서 Secure Store Service에 일정 소유자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션을 생성합니다. 생성 된 대상 응용 프로그램은 PowerPivotDataRefresh_ 명명 규칙을 사용 하 여 만들어집니다 \<guid> . 각 Windows 자격 증명 집합에 대해 하나의 대상 애플리케이션이 만들어집니다. PowerPivot System Service에서 소유하고 일정을 정의하는 사용자가 입력한 사용자 이름 및 암호를 저장하는 대상 애플리케이션이 이미 있는 경우에는 PowerPivot System Service에서 대상 애플리케이션을 만들지 않고 해당 대상 애플리케이션을 사용합니다.
 
  이 자격 증명 옵션을 사용할 경우의 가장 큰 이점은 사용 편의성과 단순성입니다. 대상 애플리케이션이 자동으로 만들어지므로 추가 작업이 최소화됩니다. 또한 일정 소유자(통합 문서를 만든 사람과 거의 동일함)의 자격 증명으로 데이터 새로 고침을 실행하면 권한 요구 사항 다운스트림이 간소화됩니다. 대부분 이 사용자에게는 대상 데이터베이스에 대한 권한이 이미 있습니다. 이 사용자의 Windows 사용자 id로 데이터 새로 고침이 실행 되는 경우 ' 현재 사용자 '를 지정 하는 모든 데이터 연결이 자동으로 작동 합니다.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175632"
 
  연결 문자열에 **Integrated Security=SSPI** 가 있으면 연결 문자열에서 자격 증명을 재정의할 수 없습니다. 이 경우 연결에서는 항상 현재 사용자를 사용하며, 사용자가 제공한 자격 증명은 모두 무시됩니다.
 
- **Persist\*\*\*\*\*\*\*\*Security Info =\*False, Password =\*, UserID =\<userlogin>가 표시 되 면 자격 증명 재정의를 허용 하는 연결 문자열이 있습니다.\* ** 연결 문자열에 표시된 자격 증명(예: UserID 및 Password)은 Windows 자격 증명이 아니라 데이터베이스 로그인 또는 기타 대상 데이터 원본에 유효한 로그인 계정입니다.
+ **보안 정보 유지 = False, Password = \* \* \* \* \* \* \* \* \* \* \* , UserID = \<userlogin> **가 표시 되 면 자격 증명 재정의를 허용 하는 연결 문자열이 있습니다. 연결 문자열에 표시된 자격 증명(예: UserID 및 Password)은 Windows 자격 증명이 아니라 데이터베이스 로그인 또는 기타 대상 데이터 원본에 유효한 로그인 계정입니다.
 
  **연결 문자열에서 자격 증명을 재정의하는 방법**
 

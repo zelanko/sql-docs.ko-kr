@@ -1,7 +1,7 @@
 ---
 title: sys. dm_db_partition_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eff14464f5913508d8d95fec8a11a70438f95880
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a947396f3706c877770a10259838f6b860ab34b9
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828036"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454426"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82828036"
   현재 데이터베이스의 모든 파티션에 대해 페이지 및 행 수 정보를 반환합니다.  
   
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_partition_stats**을 사용 합니다. Dm_pdw_nodes_db_partition_stats의 partition_id은 Azure SQL Data Warehouse에 대 한 sys. 파티션 카탈로그 뷰의 partition_id와 다릅니다.
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_db_partition_stats**을 사용 합니다. Dm_pdw_nodes_db_partition_stats의 partition_id은 Azure SQL Data Warehouse에 대 한 sys. 파티션 카탈로그 뷰의 partition_id와 다릅니다.
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -66,14 +66,14 @@ ms.locfileid: "82828036"
  개별 테이블이나 인덱스에 대한 총 수는 관련된 모든 파티션에 대한 수를 더하여 얻을 수 있습니다.  
   
 ## <a name="permissions"></a>권한  
- **sys.dm_db_partition_stats** 동적 관리 뷰를 쿼리하려면 VIEW DATABASE STATE 권한이 필요합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
+ `VIEW DATABASE STATE` `VIEW DEFINITION` **Dm_db_partition_stats** 동적 관리 뷰를 쿼리하려면 및 권한이 필요 합니다. 동적 관리 뷰 사용 권한에 대 한 자세한 내용은 [동적 관리 뷰 및 함수 &#40;transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수를 표시합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats;  
@@ -83,7 +83,7 @@ GO
 ### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. 테이블과 테이블 인덱스의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 `HumanResources.Employee` 테이블과 해당 인덱스의 모든 파티션에 대한 모든 개수를 표시합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT * FROM sys.dm_db_partition_stats   
@@ -94,7 +94,7 @@ GO
 ### <a name="c-returning-total-used-pages-and-total-number-of-rows-for-a-heap-or-clustered-index"></a>C. 힙 또는 클러스터형 인덱스에 대해 사용된 총 페이지 및 총 행 수 반환  
  다음 예에서는 `HumanResources.Employee` 테이블의 힙이나 클러스터형 인덱스에 대해 사용된 총 페이지와 총 행 수를 반환합니다. `Employee` 테이블은 기본적으로 분할되지 않기 때문에 합계에는 하나의 파티션만 포함됩니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT SUM(used_page_count) AS total_number_of_used_pages,   

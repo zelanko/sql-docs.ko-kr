@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073211"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545773"
 ---
 # <a name="remote-processing-analysis-services"></a>원격 처리(Analysis Services)
   원격 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대해 예약된 처리 또는 무인 모드 처리를 실행할 수 있습니다. 여기서 처리 요청은 한 컴퓨터에서 시작되지만 동일한 네트워크상의 다른 컴퓨터에서 실행됩니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "66073211"
   
  다음 링크를 사용하여 권한을 설정하세요.  
   
--   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
+-   [SQL Server 에이전트 구성](../../ssms/agent/configure-sql-server-agent.md)  
   
 -   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) 는 **sysadmin** 권한을 부여하는 것이 불가능한 경우 대체 고정 서버 역할을 제안합니다.  
   

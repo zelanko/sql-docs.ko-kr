@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071639"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547485"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
   동일한 팜의 PowerPivot 통합 문서로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 사용합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071639"
   
  이 항목은 다음과 같은 섹션으로 구성됩니다. 지정된 순서로 각 태스크를 수행하십시오.  
   
- [필수 조건 검토](#bkmk_prereq)  
+ [필수 구성 요소 검토](#bkmk_prereq)  
   
  [연결 만들기](#bkmk_create)  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66071639"
   
  [다음 단계](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> 필수 구성 요소 검토  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>필수 조건 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
  BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가 &#40;SharePoint용 PowerPivot&#41;](add-bi-semantic-model-connection-content-type-to-library.md)를 참조 하세요.  
   
- BI 의미 체계 모델 연결을 설정할 PowerPivot 통합 문서의 URL (예: http://adventure-works/shared documents/myworkbook .xlsx)을 알아야 합니다. 통합 문서는 동일한 팜에 있어야 합니다.  
+ BI 의미 체계 모델 연결을 설정할 PowerPivot 통합 문서의 URL (예: http://adventure-works/shared documents/myworkbook.xlsx)을 알아야 합니다. 통합 문서는 동일한 팜에 있어야 합니다.  
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071639"
   
      ![SharePoint 라이브러리의 새 문서 하위 메뉴](../media/ssas-bismconnection-new.gif "SharePoint 라이브러리의 새 문서 하위 메뉴")  
   
-2.  **서버** 속성을 PowerPivot 통합 문서의 SharePoint URL (예: ** http://mysharepoint/shared documents/myworkbook .xlsx**)로 설정 합니다. SharePoint용 PowerPivot 배포에서는 팜의 모든 서버에 데이터가 로드될 수 있습니다. 이러한 이유로 PowerPivot 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. 데이터를 로드하는 서버는 PowerPivot 시스템 서비스에서 결정합니다.  
+2.  **서버** 속성을 PowerPivot 통합 문서의 SharePoint URL (예: ** http://mysharepoint/shared documents/myWorkbook.xlsx**로 설정 합니다. SharePoint용 PowerPivot 배포에서는 팜의 모든 서버에 데이터가 로드될 수 있습니다. 이러한 이유로 PowerPivot 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. 데이터를 로드하는 서버는 PowerPivot 시스템 서비스에서 결정합니다.  
   
      **데이터베이스** 속성을 사용 하지 마십시오. PowerPivot 통합 문서의 위치를 지정 하는 경우에는 사용 되지 않습니다.  
   

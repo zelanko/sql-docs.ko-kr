@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 626211f974b41ce44655d0b79cf82eb9cb8373ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074956"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546665"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>차원에 대한 권한 부여(Analysis Services)
   차원 보안은 데이터가 아닌 차원 개체에 대한 권한을 설정하는 데 사용됩니다. 일반적으로, 차원에 대한 권한을 설정할 때 기본 목표는 처리 작업에 대한 액세스를 허용하거나 거부하는 것입니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "66074956"
 ## <a name="set-permissions-on-a-database-dimension"></a>데이터베이스 차원에 대한 권한 설정  
  데이터베이스 차원은 데이터베이스 내의 독립적인 개체로, 동일한 모델 내에서 차원 재사용이 가능합니다. 모델에서 여러 번 사용되는 DATE 데이터베이스 차원의 예로 주문일, 운송일 및 기한 큐브 차원을 생각해 볼 수 있습니다. 큐브 및 데이터베이스 차원은 데이터베이스의 피어 개체이므로, 각 개체에 대해 독립적으로 처리 권한을 설정할 수 있습니다.  
   
-1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결 하 고 개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
+1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결 하 고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 탐색기에서 해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
   
 2.  **차원** 창에서 차원 집합은 **모든 데이터베이스 차원**으로 설정해야 합니다.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "66074956"
 ## <a name="set-permissions-on-a-cube-dimension"></a>큐브 차원에 대한 권한 설정  
  큐브 차원은 큐브에 추가된 데이터베이스 차원입니다. 따라서 연결된 측정값 그룹에 구조적으로 종속됩니다. 이러한 개체를 개별적으로 처리할 수 있지만 권한 부여의 측면에서 큐브 및 큐브 차원을 단일 개체로 처리하는 것이 좋습니다.  
   
-1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결 하 고 개체 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
+1.  에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결 하 고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 탐색기에서 해당 데이터베이스에 대 한 **역할** 을 확장 한 다음 데이터베이스 역할을 클릭 하거나 새 데이터베이스 역할을 만듭니다.  
   
-2.  **차원** 창에서 차원 집합을 큐브 이름> \< **큐브 차원**으로 변경 합니다.  
+2.  **차원 창에서** 차원 집합을 \<cube-name> **큐브 차원**으로 변경 합니다.  
   
      기본적으로 권한은 해당 데이터베이스 차원에서 상속됩니다. **상속** 확인란 선택을 취소하여 **읽기** 에서 **읽기/쓰기**로 사용 권한을 변경합니다. **읽기/쓰기**를 사용하기 전에 앞의 섹션에 나와 있는 참고 사항을 읽어보시기 바랍니다.  
   

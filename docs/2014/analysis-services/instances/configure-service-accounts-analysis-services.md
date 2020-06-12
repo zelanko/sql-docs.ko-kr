@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c48dbe2f224b9b7e2d5e47f6771105adc0524ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080184"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544055"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>서비스 계정 구성(Analysis Services)
   제품 전체의 계정 프로비전은 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)에 자세히 설명되어 있으며, 이 항목에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 비롯한 모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]서비스에 대한 포괄적인 서비스 계정 정보를 제공합니다. 올바른 계정 유형, 설치 프로그램에서 할당한 Windows 권한, 파일 시스템 권한, 레지스트리 권한 등에 대한 자세한 내용은 이 항목을 참조하세요.  
@@ -49,7 +48,7 @@ ms.locfileid: "66080184"
   
  로컬 보안 설정에서 이 보안 그룹을 확인할 수 있습니다.  
   
--   Compmgmt.msc를 실행 합니다. **로컬 사용자 및 그룹** | **그룹** | `SQLServerMSASUser$`\<서버-이름>`$MSSQLSERVER` (기본 인스턴스의 경우).  
+-   Compmgmt.msc를 실행 합니다. **로컬 사용자 및 그룹**  |  **Groups**  |  `SQLServerMSASUser$` 그룹 \<server-name> `$MSSQLSERVER` (기본 인스턴스의 경우).  
   
 -   구성원을 볼 보안 그룹을 두 번 클릭합니다.  
   
@@ -68,13 +67,13 @@ ms.locfileid: "66080184"
 |-|-|  
 |**프로세스 작업 집합 향상** (SeIncreaseWorkingSetPrivilege)|이 권한은 기본적으로 **사용자** 보안 그룹을 통해 모든 사용자가 사용할 수 있습니다. 이 그룹의 권한을 제거하여 서버를 잠근 경우 Analysis Services가 "클라이언트에 필수 권한이 없습니다." 오류를 로깅하며 시작하지 못할 수 있습니다. 이 오류가 발생하는 경우 해당 Analysis Services 보안 그룹에 권한을 부여하여 Analysis Services에 대한 권한을 복원합니다.|  
 |**프로세스에 대한 메모리 할당량 조정** (SeIncreaseQuotaSizePrivilege)|이 권한은 프로세스가 실행을 완료하기에 충분한 리소스를 보유하지 못한 경우 인스턴스용으로 설정된 메모리 임계값에 따라 추가 메모리를 요청하는 데 사용됩니다.|  
-|**메모리의 페이지 잠금** (SeLockMemoryPrivilege)|이 권한은 페이징이 완전히 해제된 경우에만 필요합니다. 기본적으로 테이블 형식 서버 인스턴스는 Windows 페이징 파일을 사용하지만 `VertiPaqPagingPolicy`를 0으로 설정하면 해당 인스턴스의 Windows 페이징 사용을 방지할 수 있습니다.<br /><br /> `VertiPaqPagingPolicy`를 1(기본값)로 설정하면 테이블 형식 서버 인스턴스가 Windows 페이징 파일을 사용합니다. 할당은 잠기지 않으므로 필요에 따라 Windows에서 페이지 아웃할 수 있습니다. 페이징을 사용하기 때문에 메모리에서 페이지를 잠글 필요가 없습니다. 따라서 기본 구성 (여기서 `VertiPaqPagingPolicy` = 1)의 경우 테이블 형식 인스턴스에 **메모리의 페이지 잠금** 권한을 부여할 필요가 없습니다.<br /><br /> `VertiPaqPagingPolicy`0입니다. Analysis Services에 대한 페이징을 해제한 경우 할당이 잠기며, **메모리의 페이지 잠금** 권한이 테이블 형식 인스턴스에 부여된 것으로 가정합니다. 이 설정 및 **메모리의 페이지 잠금** 권한이 지정된 경우 시스템의 메모리가 부족할 때 Analysis Services에 할당된 메모리를 Windows에서 페이지 아웃할 수 없습니다. Analysis Services는 **메모리의 페이지 잠금** 권한을 = 0 뒤 `VertiPaqPagingPolicy` 의 적용으로 사용 합니다. Windows 페이징을 해제하지 않는 것이 좋습니다. 페이징을 해제하면 페이징이 허용된 경우에 제대로 수행될 수도 있는 작업의 메모리 부족 오류 비율이 증가합니다. 에 대 한 `VertiPaqPagingPolicy`자세한 내용은 [메모리 속성](../server-properties/memory-properties.md) 을 참조 하세요.|  
+|**메모리의 페이지 잠금** (SeLockMemoryPrivilege)|이 권한은 페이징이 완전히 해제된 경우에만 필요합니다. 기본적으로 테이블 형식 서버 인스턴스는 Windows 페이징 파일을 사용하지만 `VertiPaqPagingPolicy`를 0으로 설정하면 해당 인스턴스의 Windows 페이징 사용을 방지할 수 있습니다.<br /><br /> `VertiPaqPagingPolicy`를 1(기본값)로 설정하면 테이블 형식 서버 인스턴스가 Windows 페이징 파일을 사용합니다. 할당은 잠기지 않으므로 필요에 따라 Windows에서 페이지 아웃할 수 있습니다. 페이징을 사용하기 때문에 메모리에서 페이지를 잠글 필요가 없습니다. 따라서 기본 구성 (여기서 `VertiPaqPagingPolicy` = 1)의 경우 테이블 형식 인스턴스에 **메모리의 페이지 잠금** 권한을 부여할 필요가 없습니다.<br /><br /> `VertiPaqPagingPolicy`0입니다. Analysis Services에 대한 페이징을 해제한 경우 할당이 잠기며, **메모리의 페이지 잠금** 권한이 테이블 형식 인스턴스에 부여된 것으로 가정합니다. 이 설정 및 **메모리의 페이지 잠금** 권한이 지정된 경우 시스템의 메모리가 부족할 때 Analysis Services에 할당된 메모리를 Windows에서 페이지 아웃할 수 없습니다. Analysis Services는 **메모리의 페이지 잠금** 권한을 = 0 뒤의 적용으로 사용 합니다 `VertiPaqPagingPolicy` . Windows 페이징을 해제하지 않는 것이 좋습니다. 페이징을 해제하면 페이징이 허용된 경우에 제대로 수행될 수도 있는 작업의 메모리 부족 오류 비율이 증가합니다. 에 대 한 자세한 내용은 [메모리 속성](../server-properties/memory-properties.md) 을 참조 `VertiPaqPagingPolicy` 하세요.|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>서비스 계정에서 Windows 권한을 보거나 추가하려면  
   
 1.  GPEDIT.msc | 로컬 컴퓨터 정책 | 컴퓨터 구성 | Windows 설정 | 보안 설정 | 로컬 정책 | 사용자 권한 지정을 실행합니다.  
   
-2.  가 포함 `SQLServerMSASUser$`된 기존 정책을 검토 합니다. 이 계정은 Analysis Services가 설치된 컴퓨터에 있는 로컬 보안 그룹입니다. Windows 권한과 파일 폴더 사용 권한이 모두 이 보안 그룹에 부여됩니다. **서비스로 로그온** 정책을 두 번 클릭하여 시스템에서 보안 그룹이 어떻게 지정되어 있는지 확인합니다. 보안 그룹의 전체 이름은 Analysis Services를 명명된 인스턴스로 설치했는지 여부에 따라 다릅니다. 계정 권한을 추가할 경우 실제 서비스 계정을 사용하지 않고 이 보안 그룹을 사용합니다.  
+2.  가 포함 된 기존 정책을 검토 `SQLServerMSASUser$` 합니다. 이 계정은 Analysis Services가 설치된 컴퓨터에 있는 로컬 보안 그룹입니다. Windows 권한과 파일 폴더 사용 권한이 모두 이 보안 그룹에 부여됩니다. **서비스로 로그온** 정책을 두 번 클릭하여 시스템에서 보안 그룹이 어떻게 지정되어 있는지 확인합니다. 보안 그룹의 전체 이름은 Analysis Services를 명명된 인스턴스로 설치했는지 여부에 따라 다릅니다. 계정 권한을 추가할 경우 실제 서비스 계정을 사용하지 않고 이 보안 그룹을 사용합니다.  
   
 3.  GPEDIT에서 계정 권한을 추가하려면 **프로세스 작업 집합 향상** 을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66080184"
   
  데이터 파일, 프로그램 실행 파일, 구성 파일, 로그 파일 및 임시 파일에 대한 사용 권한 소유자는 SQL Server 설치 프로그램에서 만든 로컬 보안 그룹입니다.  
   
- 설치하는 인스턴스마다 하나의 보안 그룹이 있습니다. 보안 그룹의 이름은 인스턴스 권한은 기본 인스턴스에 대해 **SQLServerMSASUser $ MSSQLSERVER** 를, `SQLServerMSASUser$` \<명명 된 인스턴스의 경우 servername>$\<instancename> 중 하나입니다. 설치 프로그램은 서버 작업 수행에 필요한 파일 권한으로 이 보안 그룹을 프로비전합니다. \MSAS12.MSSQLSERVER\OLAP\BIN 디렉터리에서 보안 권한을 확인하면 보안 그룹(서비스 계정 또는 서비스별 SID가 아님)이 해당 디렉터리에 대한 권한 보유지임을 알 수 있습니다.  
+ 설치하는 인스턴스마다 하나의 보안 그룹이 있습니다. 보안 그룹은 인스턴스가 기본 인스턴스에 대해 **SQLServerMSASUser $ MSSQLSERVER** 를 권한은 `SQLServerMSASUser$` \<servername> $ \<instancename> 명명 된 인스턴스에 대해 이름이 지정 됩니다. 설치 프로그램은 서버 작업 수행에 필요한 파일 권한으로 이 보안 그룹을 프로비전합니다. \MSAS12.MSSQLSERVER\OLAP\BIN 디렉터리에서 보안 권한을 확인하면 보안 그룹(서비스 계정 또는 서비스별 SID가 아님)이 해당 디렉터리에 대한 권한 보유지임을 알 수 있습니다.  
   
  보안 그룹에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 시작 계정의 서비스별 SID(보안 식별자)만 멤버로 포함되어 있습니다. 설치 프로그램에서 서비스별 SID를 로컬 보안 그룹에 추가합니다. SID 멤버 자격이 있는 로컬 보안 그룹을 사용할 경우 데이터베이스 엔진과 비교하여 SQL Server 설치 프로그램이 Analysis Services를 프로비전하는 방식에서 작지만 분명한 차이점이 있습니다.  
   
@@ -118,14 +117,14 @@ ms.locfileid: "66080184"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  **컴퓨터 관리자** | **로컬 사용자 및 그룹** | **그룹** 을 사용 하 여 SQLServerMSASUser $\<servername>$\<instancename> 보안 그룹의 멤버 자격을 검사 합니다.  
+2.  **컴퓨터 관리자**  |  **로컬 사용자 및 그룹**  |  **그룹** 을 사용 하 여 SQLServerMSASUser $ \<servername> $ 보안 그룹의 멤버 자격을 검사 합니다 \<instancename> .  
   
      구성원 SID가 1단계의 서비스별 SID와 일치해야 합니다.  
   
-3.  **Windows 탐색기** | **프로그램 파일** | **Microsoft SQL Server** 사용 MSASxx. MSSQLServer | 폴더 보안 속성을 확인 하기 위한 **OLAP** | **bin** 은 2 단계에서 보안 그룹에 부여 됩니다.  
+3.  **Windows 탐색기**  |  **프로그램 파일**  |  **Microsoft SQL Server** 사용 MSASxx. MSSQLServer | **OLAP**  |  **bin** 폴더 보안 속성을 확인 하려면 2 단계에서 보안 그룹에 부여 합니다.  
   
 > [!NOTE]  
->  SID를 제거하거나 수정하지 마세요. 실수로 삭제 된 서비스별 SID를 복원 하려면를 참조 [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)하십시오.  
+>  SID를 제거하거나 수정하지 마세요. 실수로 삭제 된 서비스별 SID를 복원 하려면를 참조 하십시오 [https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201) .  
   
  **서비스별 SID에 대한 추가 정보**  
   

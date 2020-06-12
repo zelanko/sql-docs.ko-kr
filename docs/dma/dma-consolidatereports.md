@@ -14,18 +14,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886170"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868382"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>엔터프라이즈 평가 및 DMA에 평가 보고서 통합
 
 다음 단계별 지침은 Data Migration Assistant를 사용 하 여 온-프레미스 SQL Server 또는 Azure Vm에서 실행 되는 SQL Server를 업그레이드 하거나 Azure SQL Database로 마이그레이션하기 위한 성공적으로 확장 된 평가를 수행 하는 데 도움이 됩니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>사전 요구 사항
 
 - DMA가 시작 되는 네트워크의 도구 컴퓨터를 지정 합니다. 이 컴퓨터가 SQL Server 대상에 연결 되어 있는지 확인 합니다.
 - 다운로드 및 설치:
@@ -33,7 +33,7 @@ ms.locfileid: "82886170"
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 이상
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 이상
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 이상.
-  - [데스크톱을 Power BI](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)합니다.
+  - [데스크톱을 Power BI](/power-bi/fundamentals/desktop-get-the-desktop)합니다.
   - [Azure PowerShell 모듈](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - 다운로드 및 추출:
   - [DMA 보고서 Power BI 템플릿입니다](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
@@ -263,7 +263,7 @@ Power BI 보고서에 표시 되는 세부 정보는 다음 섹션에 나와 있
 
 - InstanceDatabase
 - ChangeCategory
-- title
+- 제목
 - ObjectType
 - ImpactedObjectName
 

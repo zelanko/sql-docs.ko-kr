@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546365"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>기본 멤버 속성(MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에서는 차원 멤버의 기본 속성을 표시합니다. 이러한 기본 속성을 쿼리에 포함하면 사용자 지정 애플리케이션에 사용할 추가 데이터 또는 메타데이터를 반환하거나 모델을 간편하게 검토 또는 생성할 수 있습니다. SQL Server 클라이언트 도구를 사용하는 경우 SSMS(SQL Server Management Studio)에서 기본 속성을 볼 수 있습니다.  
@@ -29,12 +28,12 @@ ms.locfileid: "66074212"
  차원 멤버 속성을 사용하고 보는 방법에 대한 개요를 보려면 [SSMS에서 MDX 쿼리 창에서 SSAS 멤버 속성 보기](https://go.microsoft.com/fwlink/?LinkId=317362)를 참조하십시오.  
   
 > [!NOTE]  
->  1999 년 3 월 (2.6) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 에 설명 된 OLE DB 사양의 OLAP 섹션을 준수 하는 공급자는이 항목에 나열 된 기본 멤버 속성을 지원 합니다.  
+>  1999 년 3 월 (2.6)에 설명 된 OLE DB 사양의 OLAP 섹션을 준수 하는 공급자는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이 항목에 나열 된 기본 멤버 속성을 지원 합니다.  
 >   
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 이외의 공급자가 기본 멤버 속성을 추가로 지원할 수도 있습니다. 다른 공급자가 지원하는 기본 멤버 속성에 대한 자세한 내용은 해당 공급자가 제공하는 설명서를 참조하십시오.  
   
 ## <a name="types-of-member-properties"></a>멤버 속성의 유형  
- 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 지 원하는 기본 멤버 속성은 다음 두 가지 유형입니다.  
+ 에서 지 원하는 기본 멤버 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 두 가지 유형입니다.  
   
  상황에 맞는 멤버 속성  
  이 유형의 멤버 속성은 특정 계층 또는 수준의 컨텍스트에서 사용해야 하고 지정한 차원 또는 수준의 각 멤버에 대한 값을 제공합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66074212"
   
 -   `PROPERTIES` 키워드를 사용하여 속성에 대해 쿼리합니다.  
   
- 다음 섹션에서는에서 사용할 수 있는 다양 한 상황에 맞는 기본 멤버 속성과 상황에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]맞지 않는 기본 멤버 속성을 모두 설명 `PROPERTIES` 하 고 각 속성 형식에 키워드를 사용 하는 방법에 대해 설명 합니다.  
+ 다음 섹션에서는에서 사용할 수 있는 다양 한 상황에 맞는 기본 멤버 속성과 상황에 맞지 않는 기본 멤버 속성을 모두 설명 하 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 고 `PROPERTIES` 각 속성 형식에 키워드를 사용 하는 방법에 대해 설명 합니다.  
   
 ## <a name="context-sensitive-member-properties"></a>상황에 맞는 멤버 속성  
  모든 차원 멤버와 수준 멤버는 상황에 맞는 기본 멤버 속성 목록을 지원합니다. 다음 표에서는 이러한 상황에 맞는 속성을 나열합니다.  
@@ -84,10 +83,10 @@ ms.locfileid: "66074212"
 ## <a name="non-context-sensitive-member-properties"></a>상황에 맞지 않는 멤버 속성  
  모든 멤버가 컨텍스트에 상관없이 동일한 기본 멤버 속성 목록을 지원합니다. 이러한 속성들은 사용자에게 보다 나은 경험을 주기 위해 애플리케이션에서 사용할 수 있는 정보를 추가로 제공합니다.  
   
- 다음 표에서는에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]지 원하는 상황에 맞지 않는 기본 속성을 보여 줍니다.  
+ 다음 표에서는에서 지 원하는 상황에 맞지 않는 기본 속성을 보여 줍니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. `MEMBERS` 스키마 행 집합에 대 한 자세한 내용은 [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)을 참조 하세요.  
+>  MEMBERS 스키마 행 집합의 열은 다음 표에 나열된 기본 멤버 속성을 지원합니다. 스키마 행 집합에 대 한 자세한 내용은 `MEMBERS` [MDSCHEMA_MEMBERS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)을 참조 하세요.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074212"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- 이 문은 축 차원의 각 멤버에 대한 설명을 반환합니다. *차원* `.DESCRIPTION` 또는 *수준*`.DESCRIPTION`에서와 같이 차원이 나 수준으로 속성을 정규화 하 려 한 경우이 문은 유효성을 검사 하지 않습니다.  
+ 이 문은 축 차원의 각 멤버에 대한 설명을 반환합니다. 차원 또는 수준 *에서와* 같이 차원이 나 수준으로 속성을 정규화 하 려 한 경우이 `.DESCRIPTION` *Level* `.DESCRIPTION` 문은 유효성을 검사 하지 않습니다.  
   
 ### <a name="example"></a>예제  
  다음 예에서는 기본 속성을 반환하는 MDX 쿼리를 보여 줍니다.  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: be36e8fc-f46e-4553-8623-b27d695c330b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0ebb99e8368254e085cc9a4f4b0dc9a040b24c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075443"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546960"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>비즈니스 인텔리전스 마법사를 사용하여 시간 인텔리전스 계산 정의
   시간 인텔리전스 기능은 선택한 계층에 시간 계산(또는 시간 보기)을 추가하는 큐브 기능입니다. 이 기능은 다음과 같은 계산 범주를 지원합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66075443"
   
  시간 차원이 있는 큐브에 시간 인텔리전스를 적용합니다. 시간 차원은 차원의 `Type` 속성이 `Time`으로 설정되어 있는 차원입니다. 또한 해당 차원의 시간 특성에는 관련 `Type` 속성에 대한 적절한 설정(예: Years 또는 Months)이 있어야 합니다. 차원 마법사를 사용하여 시간 차원을 만들면 차원과 차원의 특성 모두에 대한 `Type` 속성이 올바르게 설정됩니다.  
   
- 큐브에 시간 인텔리전스를 추가하려면 비즈니스 인텔리전스 마법사의 **기능 선택** 페이지에서 **시간 인텔리전스 정의** 옵션을 선택합니다. 그런 다음 마법사의 안내를 따라 시간 인텔리전스를 추가할 계층을 선택하고 계층에서 시간 인텔리전스를 적용할 멤버를 지정합니다. 마법사의 마지막 페이지에서 선택한 시간 인텔리전스를 추가 하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 적용 되는 변경 내용을 확인할 수 있습니다.  
+ 큐브에 시간 인텔리전스를 추가하려면 비즈니스 인텔리전스 마법사의 **기능 선택** 페이지에서 **시간 인텔리전스 정의** 옵션을 선택합니다. 그런 다음 마법사의 안내를 따라 시간 인텔리전스를 추가할 계층을 선택하고 계층에서 시간 인텔리전스를 적용할 멤버를 지정합니다. 마법사의 마지막 페이지에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 선택한 시간 인텔리전스를 추가 하기 위해 데이터베이스에 적용 되는 변경 내용을 확인할 수 있습니다.  
   
 ## <a name="selecting-a-time-hierarchy"></a>시간 계층 선택  
  **대상 계층 및 계산 선택** 페이지에서 시간 기능을 적용할 시간 계층을 선택합니다. 비즈니스 인텔리전스 마법사를 실행할 때마다 시간 계층 하나에만 시간 기능을 적용할 수 있습니다. 여러 시간 계층에 기능을 적용하려면 마법사를 다시 실행해야 합니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "66075443"
 ## <a name="viewing-the-time-intelligence-enhancement"></a>시간 인텔리전스 기능 보기  
  비즈니스 인텔리전스 마법사의 마지막 페이지에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 변경 사항을 확인할 수 있습니다. 시간 인텔리전스 기능의 경우 다음 표에서 설명하는 것처럼 마법사에서 선택한 시간 차원, 연결된 데이터 원본 뷰 및 연결된 큐브를 변경합니다.  
   
-|Object|변화|  
+|Object|변경|  
 |------------|------------|  
 |시간 차원|각 계산(또는 보기)에 특성을 추가합니다.|  
 |데이터 원본 뷰|시간 차원의 각 새 특성에 대한 시간 테이블에 계산 열을 추가합니다.|  

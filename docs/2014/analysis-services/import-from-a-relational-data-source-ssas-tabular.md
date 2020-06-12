@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9504ae981e301c6f602a5930eecef47fc6667630
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544205"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>관계형 데이터 원본에서 가져오기(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 다양한 관계형 데이터베이스에서 데이터를 가져올 수 있습니다. 마법사는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]모델 **메뉴의** 에서 사용할 수 있습니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다. 지원되는 데이터 원본 및 공급자에 대한 자세한 내용은 [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](tabular-models/data-sources-supported-ssas-tabular.md)을 참조하세요.  

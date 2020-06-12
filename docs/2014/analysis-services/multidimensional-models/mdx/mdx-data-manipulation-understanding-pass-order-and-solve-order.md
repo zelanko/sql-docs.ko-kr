@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229425"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546385"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>패스 순서 및 계산 순서 이해(MDX)
   MDX 스크립트 결과로 계산될 때 큐브는 사용되는 여러 계산 관련 기능에 따라 여러 계산 단계를 거칠 수 있습니다. 이러한 각 단계를 계산 패스라고 합니다.  

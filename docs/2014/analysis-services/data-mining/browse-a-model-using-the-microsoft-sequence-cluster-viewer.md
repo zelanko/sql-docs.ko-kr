@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086128"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525279"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기
-  시퀀스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용 하 여 작성 된 마이닝 모델을 표시 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]시퀀스 클러스터 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시퀀스 클러스터링 알고리즘을 사용 하 여 작성 된 마이닝 모델을 표시 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 경로, 즉 *시퀀스*를 따라 연결할 수 있는 이벤트가 포함된 데이터 탐색 시 사용되는 시퀀스 분석 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft 시퀀스 클러스터링 알고리즘](microsoft-sequence-clustering-algorithm.md)을 참조하세요.  
   
 > [!NOTE]  
 >  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)를 참조하세요.  
@@ -61,7 +60,7 @@ ms.locfileid: "66086128"
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>클러스터 프로필  
- **클러스터 프로필** 탭을 사용하여 모델의 알고리즘에서 만드는 클러스터를 전체적으로 볼 수 있습니다. 표에서 **채우기** 열 뒤에 있는 각 열은 해당 모델에 의해 검색된 클러스터를 나타냅니다. \<>. samples 행은 클러스터에 있는 다른 데이터 시퀀스를 나타내고, 특성> 행은 \<클러스터에 포함 된 모든 항목과 전체 배포를 설명 합니다.  
+ **클러스터 프로필** 탭을 사용하여 모델의 알고리즘에서 만드는 클러스터를 전체적으로 볼 수 있습니다. 표에서 **채우기** 열 뒤에 있는 각 열은 해당 모델에 의해 검색된 클러스터를 나타냅니다. \<attribute>Samples 행은 클러스터에 있는 다른 데이터 시퀀스를 나타내고, \<attribute> 행은 클러스터에 포함 된 모든 항목과 전체 배포를 설명 합니다.  
   
  **히스토그램 막대** 옵션은 히스토그램에 표시되는 막대의 수를 제어합니다. 선택한 것보다 더 많은 막대가 있는 경우 중요성이 가장 높은 막대가 유지되고 나머지 막대는 모두 회색 버킷으로 그룹화됩니다.  
   

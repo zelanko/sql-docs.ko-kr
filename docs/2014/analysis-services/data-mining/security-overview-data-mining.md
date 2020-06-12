@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35bc4a4fdb62373b7ae3fb42199c8717405ea14e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520530"
 ---
 # <a name="security-overview-data-mining"></a>보안 개요(데이터 마이닝)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로세스는 여러 수준에서 발생 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
+  보안 프로세스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 여러 수준에서 발생 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
   
 ##  <a name="security-architecture"></a><a name="bkmk_Architecture"></a>보안 아키텍처  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 액세스 인증에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 인증을 사용하는 방법을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스의 기본 보안 아키텍처에 대한 자세한 내용은 다음 리소스를 참조하십시오.  

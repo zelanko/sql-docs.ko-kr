@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544245"
 ---
 # <a name="impersonation-information"></a>가장 정보
   **가장 정보** 페이지를 사용하여 Analysis Services에서 데이터 원본에 연결하는 데 사용할 자격 증명을 지정할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66080650"
  **사용자 이름**  
  선택한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에서 사용할 사용자 계정의 도메인과 이름을 입력합니다. 이때 다음 형식을 사용합니다.  
   
- 도메인 이름>* \<* **\\** 사용자 계정 이름>* \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  이 옵션은 **특정 사용자 이름 및 암호 사용** 을 선택한 경우에만 사용할 수 있습니다.  
   

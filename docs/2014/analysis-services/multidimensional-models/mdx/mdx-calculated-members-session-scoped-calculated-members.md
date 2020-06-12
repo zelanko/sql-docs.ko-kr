@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe7a9f137d8b74eaa5bad104dbfdb471dd14588
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074545"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546465"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>세션 범위 계산 멤버 만들기(MDX)
   MDX 세션 전체에서 사용할 수 있는 계산 멤버를 만들려면 [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) 문을 사용합니다. CREATE MEMBER 문을 사용하여 만든 계산 멤버는 MDX 세션이 닫힌 후까지 제거되지 않습니다.  

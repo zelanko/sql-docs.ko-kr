@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075363"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546888"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>배포 유틸리티를 사용하여 모델 솔루션 배포
   **Microsoft.AnalysisServices.Deployment** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 엔진을 시작할 수 있습니다. 입력 파일로서 이 유틸리티는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 구축하여 생성된 XML 출력 파일을 사용합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 배포를 사용자 지정할 수 있도록 이 입력 파일을 쉽게 수정할 수 있습니다. 그런 다음 생성된 배포 스크립트를 즉시 실행하거나 나중에 배포할 때 사용할 수 있도록 저장할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "66075363"
  **/s**  
  자동 모드에서 유틸리티를 실행하며 대화 상자를 표시하지 않습니다. 모드에 대한 자세한 내용은 이 항목 뒷부분에 나오는 [모드](#Modes)섹션을 참조하십시오.  
   
- *logfile*  
+ *로그 파일*  
  로그 파일의 전체 경로 및 파일 이름입니다. 추적 이벤트는 지정된 로그 파일에 기록됩니다. 로그 파일이 이미 있을 경우 파일 내용이 바뀝니다.  
   
  **/a**  
@@ -68,7 +67,7 @@ ms.locfileid: "66075363"
 ##  <a name="modes"></a><a name="Modes"></a> 모드  
  다음 표에 나열된 모드에서 유틸리티를 실행할 수 있습니다.  
   
-|Mode|설명|  
+|모드|설명|  
 |----------|-----------------|  
 |자동 모드|사용자 인터페이스는 표시되지 않으며 배포에 필요한 모든 정보는 입력 파일에서 제공됩니다. 자동 모드에서 실행되는 유틸리티는 진행률을 표시하지 않습니다. 대신 나중에 검토할 수 있도록 로그 파일(옵션)을 사용하여 진행률 및 오류 정보를 캡처할 수 있습니다.|  
 |응답 모드|배포 마법사 사용자 인터페이스가 표시되며 사용자 응답은 나중에 배포할 때 사용할 수 있도록 지정된 입력 파일에 저장됩니다. 응답 모드에서는 배포가 이루어지지 않습니다. 응답 모드는 사용자 응답 캡처 전용 모드입니다.|  

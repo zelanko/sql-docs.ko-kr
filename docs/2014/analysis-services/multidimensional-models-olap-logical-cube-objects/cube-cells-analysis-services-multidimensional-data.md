@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387913"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545311"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>큐브 셀(Analysis Services - 다차원 데이터)
   큐브는 셀로 이루어져 있으며 셀은 측정값 그룹과 차원으로 구성됩니다. 셀은 큐브의 모든 차원에서 한 멤버 큐브의 고유한 논리적 교집합을 나타냅니다. 예를 들어 아래 다이어그램의 큐브는 Source, Route 및 Time이라는 세 차원으로 이루어지며 두 측정값을 갖는 측정값 그룹을 하나 포함합니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "81387913"
   
  ![빈 셀을 식별하는 큐브 다이어그램](../../analysis-services/dev-guide/media/as-cubeintro7.gif "빈 셀을 식별하는 큐브 다이어그램")  
   
- 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]빈 셀은 특별 한 품질이 있는 셀입니다. 빈 셀은 크로스 조인, 카운트 등의 결과를 달라지게 할 수 있으므로 많은 MDX 함수가 계산을 위한 목적으로 빈 셀을 무시할 수 있는 기능을 제공합니다. 자세한 내용은 mdx [&#40;mdx&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)및 [mdx &#40;Analysis Services&#41;에 대 한 주요 개념 ](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)을 참조 하세요.  
+ 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 빈 셀은 특별 한 품질이 있는 셀입니다. 빈 셀은 크로스 조인, 카운트 등의 결과를 달라지게 할 수 있으므로 많은 MDX 함수가 계산을 위한 목적으로 빈 셀을 무시할 수 있는 기능을 제공합니다. 자세한 내용은 mdx [&#40;mdx&#41; 참조](/sql/mdx/multidimensional-expressions-mdx-reference)및 [mdx &#40;Analysis Services&#41;에 대 한 주요 개념 ](../multidimensional-models/key-concepts-in-mdx-analysis-services.md)을 참조 하세요.  
   
 ## <a name="security"></a>보안  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 셀 데이터에 대한 액세스는 역할 수준에서 관리되며 MDX 식을 사용하여 정밀하게 제어할 수 있습니다. 자세한 내용은 [차원 데이터에 대 한 사용자 지정 액세스 권한 부여 &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)을 참조 하 고 [셀 데이터 &#40;Analysis Services&#41;에 대 한 사용자 지정 액세스 권한 부여 ](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)를 참조 하세요.  

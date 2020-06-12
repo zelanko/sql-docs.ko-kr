@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3cc874831f9f96c2540d58f2ffe3b89f8c4dc7aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e2c52ec93b46418b82b681fbacc1d31338a0d88
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077273"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544785"
 ---
 # <a name="group-attribute-members-discretization"></a>특성 멤버 그룹화(불연속화)
-  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]특성의 멤버를 불연속화 라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화 할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
+  멤버 그룹은 시스템에서 생성된 연속적인 차원 멤버의 모음입니다. 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 특성의 멤버를 불연속화 라는 프로세스를 통해 여러 개의 멤버 그룹으로 그룹화 할 수 있습니다. 계층의 수준에는 멤버 그룹이나 멤버 중 하나만 포함됩니다. 비즈니스 사용자가 멤버 그룹을 포함하는 수준을 탐색하는 경우 해당 멤버 그룹의 이름 및 셀 값이 표시됩니다. 멤버 그룹을 지원하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 생성하는 멤버를 그룹화 멤버라고 하며 이는 일반 멤버와 유사합니다.  
   
  특성에 대한 `DiscretizationMethod` 속성은 멤버의 그룹화 방식을 제어합니다.  
   

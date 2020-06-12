@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bcae1b3cb2f1ba25a810b409c8dc796cd6c6c25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086936"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526689"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>특성 관계 만들기 및 특성 관계 편집 대화 상자(특성 관계 디자이너 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **특성 관계 만들기** 대화 상자를 사용하여 새 특성 관계를 정의하고, **특성 관계 편집** 대화 상자를 사용하여 특성 관계를 변경할 수 있습니다. 자세한 내용은 [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)를 참조하세요.  

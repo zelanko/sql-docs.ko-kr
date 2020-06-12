@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545651"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 스토리지 설정(Analysis Services - 다차원)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대 한 몇 가지 표준 저장소 구성을 제공 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대 한 몇 가지 표준 저장소 구성을 제공 합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 스토리지를 지정할 수 있습니다.  
   

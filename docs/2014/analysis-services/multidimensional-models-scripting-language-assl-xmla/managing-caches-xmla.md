@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544986"
 ---
 # <a name="managing-caches-xmla"></a>캐시 관리(XMLA)
   XML for Analysis (XMLA)의 [clearcache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) 명령을 사용 하 여 지정 된 차원 또는 파티션의 캐시를 지울 수 있습니다. 캐시를 지우면 강제로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 해당 개체에 대 한 캐시를 다시 빌드합니다.  
   
 ## <a name="specifying-objects"></a>개체 지정  
- `ClearCache` 명령의 [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성은 다음 개체 중 하나에 대 한 개체 참조만 포함할 수 있습니다. 따라서 다음 개체 이외의 다른 개체에 대한 개체 참조인 경우 오류가 발생합니다.  
+ 명령의 [개체](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) 속성은 `ClearCache` 다음 개체 중 하나에 대 한 개체 참조만 포함할 수 있습니다. 따라서 다음 개체 이외의 다른 개체에 대한 개체 참조인 경우 오류가 발생합니다.  
   
  데이터베이스  
  데이터베이스 내의 모든 차원 및 파티션에 대한 캐시를 지웁니다.  

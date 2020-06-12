@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28db322a38ae90206ae0c43db1c8c039e6395b8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075126"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546745"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 데이터 탐색(Analysis Services)
   **의 데이터 원본 뷰 디자이너에 있는** 데이터 탐색 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 DSV(데이터 원본 뷰)에서 테이블, 뷰 또는 명명된 쿼리의 데이터를 찾아볼 수 있습니다. 데이터 원본 뷰 디자이너에서 데이터를 탐색하면 선택한 테이블, 뷰 또는 명명된 쿼리에 있는 각 데이터 열의 내용을 볼 수 있습니다. 실제 내용을 보면 모든 열이 필요한지 여부, 사용자에게 친숙함과 유용성을 높이기 위해 명명된 계산이 필요한지 여부 및 기존의 명명된 계산이나 명명된 쿼리에서 예상된 값을 반환하는지 여부를 확인할 수 있습니다.  
@@ -38,15 +37,15 @@ ms.locfileid: "66075126"
   
 3.  확인할 데이터가 포함된 테이블, 뷰 또는 명명된 쿼리를 마우스 오른쪽 단추로 클릭한 다음 **데이터 탐색**을 클릭합니다.  
   
-     데이터 원본 뷰에서 테이블, 뷰 또는 명명 된 쿼리의 기반이 되는 데이터 원본은 쿼리이 고, ** \<개체 이름> 테이블** 탭에 결과가 나타납니다.  
+     데이터 원본 뷰의 테이블, 뷰 또는 명명 된 쿼리를 기반으로 하는 데이터 원본은 쿼리이 고 결과는 ** \<object name> 테이블 탐색** 탭에 나타납니다.  
   
-4.  **개체 이름> \<테이블 탐색** 모음에서 **샘플링 옵션** 아이콘을 클릭 합니다.  
+4.  ** \<object name> 테이블 탐색** 도구 모음에서 **샘플링 옵션** 아이콘을 클릭 합니다.  
   
      **데이터 탐색 옵션** 대화 상자가 열립니다. 이 대화 상자에서 샘플링 방법(기본 샘플링 크기인 5000행보다 많거나 적은 레코드) 또는 샘플 개수를 지정할 수 있습니다.  
   
 5.  필요에 따라 **확인** 또는 **취소** 를 클릭합니다.  
   
-6.  데이터를 다시 샘플링 하려면 ** \<개체 이름> 테이블** 도구 모음에서 **데이터 다시 샘플링** 을 클릭 합니다.  
+6.  데이터를 다시 샘플링 하려면 ** \<object name> 테이블 탐색** 도구 모음에서 **데이터 다시 샘플링** 을 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  

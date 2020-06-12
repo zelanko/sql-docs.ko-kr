@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b08641e9ba17e6ad2e2f4112e01073d448aa8564
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073392"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545855"
 ---
 # <a name="parent-child-hierarchy"></a>부모-자식 계층
   부모-자식 계층은 부모 특성이 포함된 표준 차원의 계층입니다. 부모 특성은 차원 주 테이블 내의 *자체 참조 관계*또는 *셀프 조인*을 설명합니다. 부모-자식 계층은 단일 부모 특성에서 생성됩니다. 계층에 존재하는 수준은 부모 특성과 관련된 멤버 간 부모-자식 관계에서 가져오므로 부모-자식 계층에는 하나의 수준만 할당됩니다. 부모-자식 계층의 멤버 위치는 부모 특성의 `KeyColumns` 및 `RootMemberIf` 속성에 의해 결정되지만 한 수준의 멤버 위치는 부모 특성의 `OrderBy` 속성에 의해 결정됩니다. 특성 속성에 대한 자세한 내용은 [특성 및 특성 계층](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)을 참조하세요.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545325"
 ---
 # <a name="partition-storage-modes-and-processing"></a>파티션 스토리지 모드 및 처리
   파티션의 스토리지 모드는 파티션과 해당 부모 측정값 그룹 및 큐브의 쿼리 및 처리 성능, 스토리지 요구 사항, 스토리지 위치 등에 영향을 줍니다. 선택한 스토리지 모드는 처리 선택 사항에도 영향을 줍니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727579"
   
 -   HOLAP(하이브리드 OLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 세 가지 기본 저장소 모드를 모두 지원 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다. 또한 자동 관리 캐싱을 지원하므로 ROLAP과 MOLAP 스토리지의 특성을 적절히 조합하여 데이터를 즉시 검색하고 쿼리 성능을 향상시킬 수 있습니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](partitions-proactive-caching.md)을 참조하세요.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 세 가지 기본 저장소 모드를 모두 지원 합니다. 또한 자동 관리 캐싱을 지원하므로 ROLAP과 MOLAP 스토리지의 특성을 적절히 조합하여 데이터를 즉시 검색하고 쿼리 성능을 향상시킬 수 있습니다. 자세한 내용은 [자동 관리 캐싱&#40;파티션&#41;](partitions-proactive-caching.md)을 참조하세요.  
   
 ## <a name="molap"></a>MOLAP  
  MOLAP 스토리지 모드에서는 파티션을 처리할 때 파티션 집계와 해당 원본 데이터의 복사본이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 다차원 구조로 저장됩니다. 이 MOLAP 구조는 최적의 쿼리 성능을 얻을 수 있도록 최적화된 구조입니다. 스토리지 위치는 파티션이 정의된 컴퓨터나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 실행 중인 다른 컴퓨터일 수 있습니다. 원본 데이터 복사본이 다차원 구조에 있으므로 파티션의 원본 데이터에 액세스하지 않고 쿼리를 해결할 수 있습니다. 집계를 사용하면 쿼리 응답 시간이 훨씬 줄어들 수 있습니다. 파티션의 MOLAP 구조에 있는 데이터는 파티션에서 가장 최근에 처리 중인 데이터입니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "62727579"
 -   인덱싱된 뷰를 만드는 세션에는 다음 옵션을 OFF로 설정 해야 합니다. NUMERIC_ROUNDABORT 이 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 지정할 수 있습니다.  
   
 ## <a name="holap"></a>HOLAP  
- HOLAP 스토리지 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 HOLAP은 파티션의 집계가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 다차원 구조에 저장 되도록 합니다. HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 원본 데이터에 액세스 하는 쿼리 (예: 집계 데이터가 없는 원자 큐브 셀로 드릴 다운 하려는 경우) 관계형 데이터베이스에서 데이터를 검색 해야 하며 원본 데이터가 MOLAP 구조로 저장 된 경우의 속도와는 차이가 없습니다. HOLAP 스토리지 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
+ HOLAP 스토리지 모드는 MOLAP과 ROLAP의 특성을 모두 포함합니다. MOLAP과 마찬가지로 HOLAP은 파티션의 집계가 인스턴스의 다차원 구조에 저장 되도록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . HOLAP 모드에서는 원본 데이터 복사본이 저장되지 않습니다. 파티션의 집계에 포함된 요약 데이터에만 액세스하는 쿼리의 경우 HOLAP이 MOLAP과 동일합니다. 원본 데이터에 액세스 하는 쿼리 (예: 집계 데이터가 없는 원자 큐브 셀로 드릴 다운 하려는 경우) 관계형 데이터베이스에서 데이터를 검색 해야 하며 원본 데이터가 MOLAP 구조로 저장 된 경우의 속도와는 차이가 없습니다. HOLAP 스토리지 모드에서는 일반적으로 캐시 또는 집계에서 쿼리를 해결할 수 있는지 또는 원본 데이터 자체에서 해결할 수 있는지에 따라 쿼리 시간에 큰 차이가 있습니다.  
   
  HOLAP으로 저장된 파티션은 원본 데이터를 포함하지 않으므로 동일한 MOLAP 파티션보다 크기가 작으며 요약 데이터를 사용하는 쿼리에 대해 ROLAP 파티션보다 응답 속도가 빠릅니다. HOLAP 스토리지 모드는 일반적으로 방대한 원본 데이터를 기반으로 하는 요약에 대해 신속한 쿼리 응답이 필요한 큐브의 파티션에 적합합니다. 그러나 중앙값 계산과 같이 리프 수준 데이터에 액세스해야 하는 쿼리를 생성하는 경우에는 대개 MOLAP을 사용하는 것이 더 낫습니다.  
   

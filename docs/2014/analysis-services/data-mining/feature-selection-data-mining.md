@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02eb89db44e08daf7de5d89a932a097df277b961
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522512"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
   *기능 선택* 은 처리 및 분석을 위해 입력을 관리 하기 쉬운 크기로 줄이는 데 사용할 수 있는 도구와 기법을 설명 하기 위해 데이터 마이닝에 일반적으로 사용 되는 용어입니다. 기능 선택은 모델을 작성할 때 고려할 수 있는 특성의 수에 대해 임의 또는 미리 정의 된 *구분을 설정*하는 것을 의미 하며,이는 분석가 또는 모델링 도구가 분석에 대 한 유용성을 기준으로 적극적으로 특성을 선택 하거나 삭제 하는 특성을 선택 하는 것을 의미 합니다.  
@@ -103,13 +102,13 @@ ms.locfileid: "66084423"
 ### <a name="feature-selection-methods-used-by-analysis-services-algorithms"></a>Analysis Services 알고리즘에서 사용하는 기능 선택 방법  
  다음 표에서는 기능 선택을 지원하는 알고리즘, 알고리즘에서 사용하는 기능 선택 방법 및 기능 선택 동작을 제어하기 위해 설정하는 매개 변수를 보여 줍니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|의견|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft Naïve Bayes 알고리즘은 불연속 특성 또는 불연속화된 특성을 허용하므로 흥미도 점수를 사용할 수 없습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm Technical Reference](microsoft-naive-bayes-algorithm-technical-reference.md)를 참조하십시오.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않으면 기본 기능 선택 방법이 사용되거나 모델을 만들 때 지정한 방법이 사용됩니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm Technical Reference](microsoft-decision-trees-algorithm-technical-reference.md)를 참조하십시오.|  
 |신경망|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|데이터에 연속 열이 포함된 경우 Microsoft 신경망 알고리즘에서는 Bayesian 및 Entropy 기반 방법을 모두 사용할 수 있습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)를 참조하십시오.|  
 |로지스틱 회귀|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft 로지스틱 회귀 알고리즘이 Microsoft 신경망 알고리즘을 기반으로 하지만 로지스틱 회귀 모델을 사용자 지정하여 기능 선택 동작을 제어할 수 없습니다. 따라서 기능 선택은 항상 기본적으로 특성에 가장 적합한 방법으로 설정됩니다.<br /><br /> 모든 특성이 불연속 특성 또는 불연속화된 특성인 경우 기본값은 BDEU입니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md)를 참조하십시오.|  
-|클러스터링|흥미도 점수|Microsoft 클러스터링 알고리즘은 불연속 데이터 또는 불연속화된 데이터를 사용할 수 있습니다. 그러나 각 특성의 점수가 거리로 계산되고 연속 숫자로 표현되기 때문에 흥미도 점수를 사용해야 합니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)를 참조하십시오.|  
+|Clustering|흥미도 점수|Microsoft 클러스터링 알고리즘은 불연속 데이터 또는 불연속화된 데이터를 사용할 수 있습니다. 그러나 각 특성의 점수가 거리로 계산되고 연속 숫자로 표현되기 때문에 흥미도 점수를 사용해야 합니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)를 참조하십시오.|  
 |선형 회귀|흥미도 점수|Microsoft 선형 회귀 알고리즘은 연속 열만 지원하므로 흥미도 점수만 사용할 수 있습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md)를 참조하십시오.|  
 |연결 규칙<br /><br /> 시퀀스 클러스터링|사용되지 않음|기능 선택은 이러한 알고리즘을 통해 호출되지 않습니다.<br /><br /> 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어하고 필요한 경우 입력 데이터의 크기를 줄일 수 있습니다.<br /><br /> 자세한 내용은 [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) 및 [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)를 참조하세요.|  
 |시계열|사용되지 않음|기능 선택은 시계열 모델에 적용되지 않습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)(Microsoft Time Series 알고리즘 기술 참조)를 참조하십시오.|  

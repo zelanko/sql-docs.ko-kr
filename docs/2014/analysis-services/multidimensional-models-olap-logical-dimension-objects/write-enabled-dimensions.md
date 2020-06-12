@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727450"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545095"
 ---
 # <a name="write-enabled-dimensions"></a>쓰기 가능 차원
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 차원의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대한 차원을 쓰기 가능으로 설정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]차원을 쓰기 가능으로 설정 하면 비즈니스 사용자가 차원의 내용을 수정 하 고 차원의 계층에 대 한 변경 내용의 즉각적인 영향을 확인할 수 있습니다. 단일 테이블을 기반으로 하는 모든 차원을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능한 차원에서는 비즈니스 사용자와 관리자가 차원 내의 특성 멤버를 변경, 이동, 추가 및 삭제할 수 있습니다. 이러한 업데이트는 *차원 쓰기 저장(writeback)* 으로 통칭됩니다.  
+ 차원의 데이터는 일반적으로 읽기 전용입니다. 그러나 특정 시나리오에 대한 차원을 쓰기 가능으로 설정할 수 있습니다. 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원을 쓰기 가능으로 설정 하면 비즈니스 사용자가 차원의 내용을 수정 하 고 차원의 계층에 대 한 변경 내용의 즉각적인 영향을 확인할 수 있습니다. 단일 테이블을 기반으로 하는 모든 차원을 쓰기 가능으로 설정할 수 있습니다. 쓰기 가능한 차원에서는 비즈니스 사용자와 관리자가 차원 내의 특성 멤버를 변경, 이동, 추가 및 삭제할 수 있습니다. 이러한 업데이트는 *차원 쓰기 저장(writeback)* 으로 통칭됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 모든 차원 특성에서 차원 쓰기 저장을 지원하며 차원의 멤버는 수정될 수 있습니다. 쓰기 가능 큐브 또는 파티션의 경우 업데이트 내용이 큐브의 원본 테이블과는 별개의 쓰기 저장 테이블에 저장됩니다. 그러나 쓰기 가능 차원의 경우에는 업데이트 내용이 차원 테이블에 직접 기록됩니다. 또한 쓰기 가능 차원이 여러 파티션으로 구성된 큐브에 포함되어 있고 파티션의 전체 또는 일부 데이터 원본에 차원 테이블의 복사본이 있는 경우 쓰기 저장 과정에서 원본 차원 테이블만 업데이트됩니다.  
   

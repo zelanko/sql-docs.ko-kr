@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da1bc2b1ac0af7576cfe3c3593b451f78d6a9fae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077458"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544855"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 테이블이나 뷰 추가 또는 제거(Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 데이터 원본 뷰(DSV)를 만든 후 데이터 원본 뷰 디자이너에서 다른 데이터 원본의 테이블과 열을 비롯하여 테이블 및 열을 추가하거나 제거해서 데이터 원본 뷰(DSV)를 수정할 수 잇습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66077458"
   
  DSV에 테이블을 추가하거나 DSV에서 테이블을 제거하면 DSV에서 현재 선택된 다이어그램에서도 테이블이 추가되거나 제거됩니다. 다이어그램에 대한 자세한 내용은 [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)을 참조하세요.  
   
- **테이블 추가/제거** 대화 상자의 **포함된 개체** 목록에 테이블을 이동한 다음에는 모든 관련 테이블을 추가할 수 있습니다. 이 작업에서는 데이터 원본의 FOREIGN KEY 제약 조건(있는 경우)에 따라 테이블을 추가합니다. FOREIGN KEY 제약 조건이 없는 경우 데이터 원본 뷰의 `NameMatchingCriteria` 속성을 통해 관계 생성을 위한 테이블의 열 이름 일치 조건을 지정하여 관계를 결정할 수 있습니다. 데이터 원본 `NameMatchingCriteria`뷰에 대해 속성이 지정 된 경우 **관련 테이블 추가** 를 클릭 하 여 열 이름이 일치 하는 데이터 원본의 테이블을 추가 합니다. 속성을 설정 하는 `NameMatchingCriteria` 방법에 대 한 자세한 내용은 [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)를 참조 하세요.  
+ **테이블 추가/제거** 대화 상자의 **포함된 개체** 목록에 테이블을 이동한 다음에는 모든 관련 테이블을 추가할 수 있습니다. 이 작업에서는 데이터 원본의 FOREIGN KEY 제약 조건(있는 경우)에 따라 테이블을 추가합니다. FOREIGN KEY 제약 조건이 없는 경우 데이터 원본 뷰의 `NameMatchingCriteria` 속성을 통해 관계 생성을 위한 테이블의 열 이름 일치 조건을 지정하여 관계를 결정할 수 있습니다. `NameMatchingCriteria`데이터 원본 뷰에 대해 속성이 지정 된 경우 **관련 테이블 추가** 를 클릭 하 여 열 이름이 일치 하는 데이터 원본의 테이블을 추가 합니다. 속성을 설정 하는 방법에 대 한 자세한 내용은 `NameMatchingCriteria` [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)를 참조 하세요.  
   
 > [!NOTE]  
 >  데이터 원본 뷰에서 개체를 추가 또는 제거해도 기본 데이터 원본에는 영향을 주지 않습니다.  

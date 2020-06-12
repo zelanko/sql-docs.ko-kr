@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079433"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543637"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI(큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **KPI** 탭을 사용하여 선택한 큐브에 대한 KPI(핵심 성과 지표)를 보고 편집할 수 있습니다.  

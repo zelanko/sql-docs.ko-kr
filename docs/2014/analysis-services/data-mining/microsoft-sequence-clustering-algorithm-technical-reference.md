@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083843"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521705"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Microsoft 시퀀스 클러스터링 알고리즘 기술 참조
   Microsoft 시퀀스 클러스터링 알고리즘은 Markov 체인 분석을 사용하여 정렬된 시퀀스를 식별하고, 이 분석 결과를 클러스터링 기술과 결합하여 모델의 시퀀스 및 기타 특성에 따라 클러스터를 생성하는 하이브리드 알고리즘입니다. 이 항목에서는 알고리즘의 구현, 알고리즘을 사용자 지정하는 방법 및 시퀀스 클러스터링 모델에 대한 특수한 요구 사항을 설명합니다.  
@@ -46,10 +45,10 @@ ms.locfileid: "66083843"
 ### <a name="feature-selection-in-a-sequence-clustering-model"></a>시퀀스 클러스터링 모델의 기능 선택  
  시퀀스를 작성할 때는 기능 선택이 호출되지 않지만 클러스터링 단계에서 기능 선택이 적용됩니다.  
   
-|모델 형식|기능 선택 방법|설명|  
+|모델 형식|기능 선택 방법|의견|  
 |----------------|------------------------------|--------------|  
 |시퀀스 클러스터링|사용되지 않음|기능 선택이 호출되지 않습니다. 그러나 MINIMUM_SUPPORT 및 MINIMUM_PROBABILIITY 매개 변수의 값을 설정하여 알고리즘의 동작을 제어할 수 있습니다.|  
-|클러스터링|흥미도 점수|클러스터링 알고리즘은 불연속 또는 불연속화된 알고리즘을 사용할 수 있지만 각 특성의 점수는 거리로 계산되며 연속적입니다. 따라서 흥미도 점수가 사용됩니다.|  
+|Clustering|흥미도 점수|클러스터링 알고리즘은 불연속 또는 불연속화된 알고리즘을 사용할 수 있지만 각 특성의 점수는 거리로 계산되며 연속적입니다. 따라서 흥미도 점수가 사용됩니다.|  
   
  자세한 내용은 [Feature Selection](../../sql-server/install/feature-selection.md)을 참조하세요.  
   
@@ -99,7 +98,7 @@ ms.locfileid: "66083843"
  기본값은 64입니다.  
   
  MAXIMUM_STATES  
- 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 시퀀스가 아닌 특성의 상태 수가 최대 상태 수보다 크면 알고리즘은 특성의 가장 인기 있는 상태를 사용 하 고 나머지 상태를로 `Missing`처리 합니다.  
+ 알고리즘이 지원하는 비시퀀스 특성에 대한 최대 상태 수를 지정합니다. 시퀀스가 아닌 특성의 상태 수가 최대 상태 수보다 크면 알고리즘은 특성의 가장 인기 있는 상태를 사용 하 고 나머지 상태를로 처리 `Missing` 합니다.  
   
  기본값은 100입니다.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "66083843"
   
 ## <a name="remarks"></a>설명  
   
--   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용합니다. 시퀀스 예측을 지 원하는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 자세한 내용은 [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요.https://go.microsoft.com/fwlink/?linkid=232473)  
+-   시퀀스 예측에 대한 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용합니다. 시퀀스 예측을 지 원하는 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) 을 참조 하세요 https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘에서는 PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 없습니다.  
   

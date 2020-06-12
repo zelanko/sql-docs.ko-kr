@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493856"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528309"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>사용자 정의 계층의 특성 간 특성 관계 지정
   이 자습서에서 이미 설명한 대로 특성 계층을 사용자 계층 안에 수준으로 구성하여 큐브 사용자를 위한 탐색 경로를 제공할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493856"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     관계가 중복되기 때문에 다이어그램에 경고 아이콘이 표시됩니다. 관계 **전체 이름** -> **Geography**-> **우편** 번호는 이미 존재 하며, 관계 **전체 이름** -> **우편**번호를 만들었습니다. 이제 관계 **지리**-> **우편 번호가** 중복 되어 제거 됩니다.  
+     관계가 중복되기 때문에 다이어그램에 경고 아이콘이 표시됩니다. 관계 **전체 이름**  ->  **Geography** ->  **우편** 번호는 이미 존재 하며, 관계 **전체 이름**  ->  **우편**번호를 만들었습니다. 이제 관계 **지리** ->  **우편 번호가** 중복 되어 제거 됩니다.  
   
 6.  **특성 관계** 창에서 **Geography**-> **Postal Code** 를 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493856"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     이제 관계 **지리**-> **도시가** 중복 되어 삭제 됩니다.  
+     이제 관계 **지리** ->  **도시가** 중복 되어 삭제 됩니다.  
   
-11. 특성 관계 창에서 **Geography**-> **City** 를 마우스 오른쪽 단추로 클릭 한 다음 **삭제**를 클릭 합니다.  
+11. 특성 관계 창에서 **Geography**City를 마우스 오른쪽 단추로 클릭 한 ->  **City** 다음 **삭제**를 클릭 합니다.  
   
 12. **개체 삭제** 대화 상자가 나타나면 **확인**을 클릭합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493856"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. 특성 관계 창에서 **Geography**-> **Country-region** 을 마우스 오른쪽 단추로 클릭 한 다음 **삭제**를 클릭 합니다.  
+21. 특성 관계 창에서 **Geography** ->  **Country-region** 을 마우스 오른쪽 단추로 클릭 한 다음 **삭제**를 클릭 합니다.  
   
 22. **개체 삭제** 대화 상자가 나타나면 **확인**을 클릭합니다.  
   
@@ -176,7 +175,7 @@ ms.locfileid: "69493856"
   
 12. **AttributeHierarchyOptimizedState** 속성을 **NotOptimized**로, **AttributeHierarchyOrdered** 속성을 **False**로, **AttributeHierarchyVisible** 속성을 **False**로 설정합니다.  
   
-13. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.  
+13. **파일** 메뉴에서 **모두 저장**을 클릭합니다.  
   
 14. **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   

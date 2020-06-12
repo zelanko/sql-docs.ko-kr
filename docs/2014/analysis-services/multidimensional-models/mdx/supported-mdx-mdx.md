@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93baa6beffcb75e11c0ac389b7f0f5172c30d770
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17e8df6a2aa6da6b88a07a2abdef99d6ea03d8eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073871"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546161"
 ---
 # <a name="supported-mdx-mdx"></a>지원되는 MDX(MDX)
   MDX 스크립트 내에서는 다음 문과 함수가 지원됩니다.  

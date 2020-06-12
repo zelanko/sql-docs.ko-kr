@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892781"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668964"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX 자습서(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68892781"
   
  이 자습서에서는 동시에 구입되는 경향이 있는 제품을 예측하는 마이닝 모델을 만드는 방법을 배웁니다. 또한 데이터 마이닝에서 중첩 테이블을 사용하는 방법을 보여 줍니다.  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>참고  
  [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)  

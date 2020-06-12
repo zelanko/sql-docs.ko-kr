@@ -1,21 +1,21 @@
 ---
-title: 모델&gt;에서 &lt;선택 합니다. 콘텐츠 (DMX) | Microsoft Docs
+title: 모델에서 &lt; 선택 &gt; 합니다. 콘텐츠 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892837"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669596"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>모델&gt;에서 &lt;선택 합니다. 콘텐츠 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>모델에서 &lt; 선택 &gt; 합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 데이터 마이닝 모델의 마이닝 모델 스키마 행 집합을 반환합니다.  
@@ -46,14 +46,14 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **SELECT FROM** _ \<model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model>를 사용할 수 있습니다. **모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
+ **SELECT FROM** _ \< model>_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM model>를 사용할 수 있습니다 \< . **모델의 NODE_RULE 열에서 값을 반환 하는 내용 문입니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
 >  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)를 참조 하세요.  
   
-|CONTENT 행 집합 열|Description|  
+|CONTENT 행 집합 열|설명|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|카탈로그 이름입니다. 공급자가 카탈로그를 지원하지 않을 경우 NULL입니다.|  
 |MODEL_SCHEMA|정규화되지 않은 스키마 이름입니다. 공급자가 스키마를 지원하지 않을 경우 NULL입니다.|  

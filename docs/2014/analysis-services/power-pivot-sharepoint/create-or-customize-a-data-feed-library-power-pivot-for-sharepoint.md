@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b67fffa3bac581382112d9c37fb84c31ea5a5ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175642"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540496"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>데이터 피드 라이브러리 만들기 또는 사용자 지정(SharePoint용 PowerPivot)
   *데이터 피드 라이브러리* 는 Atom 데이터 서비스 문서(.atomsvc)를 등록 및 공유할 수 있도록 해 주는 특수 용도의 SharePoint 라이브러리입니다. 이러한 문서는 Atom 데이터 피드 형식을 지원하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서나 기타 클라이언트 애플리케이션에 XML 데이터 피드를 제공합니다. 데이터 피드 라이브러리는 다음과 같은 기능을 제공하므로 다른 SharePoint 라이브러리와 다릅니다.
@@ -33,13 +32,13 @@ ms.locfileid: "78175642"
 
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.
 
- [전제 조건](#prereq)
+ [필수 구성 요소](#prereq)
 
  [새 데이터 피드 라이브러리 만들기](#createlib)
 
  [모든 라이브러리에 데이터 피드 콘텐츠 형식 추가](#addtolib)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합을 활성화해야 합니다. 데이터 피드 라이브러리 템플릿 유형을 사용할 수 없는 경우 이 사전 요구 사항이 충족되지 않았을 수 있습니다. 자세한 내용은 [중앙 관리에서 사이트 모음에 대 한 PowerPivot 기능 통합 활성화](activate-power-pivot-integration-for-site-collections-in-ca.md)를 참조 하세요.
 
  라이브러리를 만들려면 사이트 소유자여야 합니다.

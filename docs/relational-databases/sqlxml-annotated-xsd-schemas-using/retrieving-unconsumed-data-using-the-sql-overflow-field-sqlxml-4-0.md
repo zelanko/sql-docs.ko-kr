@@ -1,5 +1,6 @@
 ---
 title: 'Sql: 오버플로 필드 (SQLXML)를 사용 하 여 데이터 가져오기'
+description: 'SQLXML 4.0에서 sql: 오버플로 필드를 사용 하 여 OPENXML 함수에서 사용 되지 않은 데이터를 검색 하는 방법을 알아봅니다.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,16 +19,16 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 172d500e0b16f192eaea438b58b4dbcb8b710c29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257402"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524579"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>sql:overflow-field를 사용하여 사용되지 않은 데이터 검색(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색 하는 경우 **sql: 오버플로 필드** 특성을 지정 하 여 오버플로 데이터가 저장 되는 테이블의 열을 식별할 수 있습니다. **Sql: 오버플로 필드** 특성은 ** \<요소>** 에 지정할 수 있습니다.  
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 함수를 사용하여 XML 문서에서 데이터베이스로 레코드를 삽입하는 경우 원본 XML 문서에서 사용되지 않은 모든 데이터를 한 열에 저장할 수 있습니다. 주석이 추가 된 스키마를 사용 하 여 데이터베이스에서 데이터를 검색 하는 경우 **sql: 오버플로 필드** 특성을 지정 하 여 오버플로 데이터가 저장 되는 테이블의 열을 식별할 수 있습니다. **Sql: 오버플로 필드** 특성은에 지정할 수 있습니다 **\<element>** .  
   
  이 데이터는 다음과 같은 방법으로 검색할 수 있습니다.  
   

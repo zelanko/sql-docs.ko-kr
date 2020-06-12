@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 561cbbb64734c117b295ca6d97420b6980fa5428
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0495ed563585a5b7427655428a257174673fc02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725497"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545920"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>최대 용량 사양(Analysis Services)
   다음 표에서는 여러 다른 서버 배포 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  

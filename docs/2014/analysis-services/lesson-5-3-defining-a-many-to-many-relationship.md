@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542855"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>다 대 다 관계 정의
   차원을 정의할 경우 일반적으로 각 팩트는 하나의 차원 멤버에만 조인되지만 단일 차원 멤버는 여러 팩트와 연결될 수 있습니다. 예를 들어 각 고객은 여러 개의 주문을 가질 수 있지만 각 주문은 단일 컴퓨터에 속합니다. 관계형 데이터베이스 용어에서이 *관계를 일 대 다 관계*라고 합니다. 그러나 단일 팩트가 여러 차원 멤버에 조인될 수도 있습니다. 관계형 데이터베이스 용어에서 이 관계를 *다 대 다 관계*라고 합니다. 예를 들어 고객이 구매하는 데는 여러 이유가 있고 구매 이유는 여러 구매와 연결될 수 있습니다. 조인 테이블을 사용하여 각 구매와 관련된 판매 이유를 정의합니다. 그러므로 이러한 관계에서 생성된 Sales Reason 차원에는 단일 판매 트랜잭션과 관련된 여러 멤버가 포함됩니다. 다 대 다 차원은 차원 모델을 표준 별모양 스키마 이상으로 확장하고 차원이 팩트 테이블에 직접 관련되지 않는 경우 복잡한 분석을 지원합니다.
@@ -35,7 +34,7 @@ ms.locfileid: "78175292"
 
 1.  **Adventure Works DW 2012** 데이터 원본 뷰에 대한 데이터 원본 뷰 디자이너를 엽니다.
 
-2.  **다이어그램 구성 도우미** 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 다음 새 다이어그램의 이름으로를 지정 `Internet Sales Order Reasons` 합니다.
+2.  **다이어그램 구성 도우미** 창에서 아무 곳 이나 마우스 오른쪽 단추로 클릭 하 고 **새 다이어그램**을 클릭 한 다음 `Internet Sales Order Reasons` 새 다이어그램의 이름으로를 지정 합니다.
 
 3.  **테이블** 창에서 **InternetSales** 테이블을 **다이어그램** 창으로 끌어옵니다.
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175292"
 
 6.  **서식** 메뉴에서 **자동 레이아웃**을 가리킨 다음 **다이어그램**을 클릭합니다.
 
-7.  속성 창에서 **Dimsalesreason** 테이블 `SalesReason`의 **friendlyname** 속성을로 변경 하 고 **FactInternetSalesReason** 테이블의 `InternetSalesReason` **friendlyname** 속성을로 변경 합니다.
+7.  속성 창에서 **Dimsalesreason** 테이블의 **friendlyname** 속성을로 변경 하 `SalesReason` 고 **FactInternetSalesReason** 테이블의 **friendlyname** 속성을로 변경 합니다 `InternetSalesReason` .
 
 8.  **테이블** 창에서 **InternetSalesReason(dbo.FactInternetSalesReason)** 을 확장하고 **SalesOrderNumber**를 클릭한 다음 속성 창에서 이 데이터 열의 **DataType** 속성을 검토합니다.
 
      **SalesOrderNumber** 열의 데이터 형식은 문자열 데이터 형식입니다.
 
-9. `InternetSalesReason` 테이블의 다른 열에 대 한 데이터 형식을 검토 합니다.
+9. 테이블의 다른 열에 대 한 데이터 형식을 검토 `InternetSalesReason` 합니다.
 
      이 테이블의 다른 두 개의 열에 대한 데이터 형식은 숫자 데이터 형식입니다.
 
@@ -99,7 +98,7 @@ ms.locfileid: "78175292"
 
 4.  **원본 정보 지정** 페이지에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 데이터 원본 뷰가 선택되어 있는지 확인합니다.
 
-5.  **주 테이블** 목록에서을 선택 `SalesReason`합니다.
+5.  **주 테이블** 목록에서을 선택 `SalesReason` 합니다.
 
 6.  **키 열** 목록에 **SalesReasonKey** 가 있는지 확인합니다.
 
@@ -107,25 +106,25 @@ ms.locfileid: "78175292"
 
 8.  **다음**을 클릭합니다.
 
-9. **차원 특성 선택** 페이지에서 키 특성인 **Sales Reason Key** 특성이 자동으로 선택됩니다. **Sales Reason Reason Type** 특성 옆에 있는 확인란을 선택 하 고 이름을로 `Sales Reason Type`변경한 후 **다음**을 클릭 합니다.
+9. **차원 특성 선택** 페이지에서 키 특성인 **Sales Reason Key** 특성이 자동으로 선택됩니다. **Sales Reason Reason Type** 특성 옆에 있는 확인란을 선택 하 고 이름을로 변경한 `Sales Reason Type` 후 **다음**을 클릭 합니다.
 
 10. **마법사 완료** 페이지에서 **마침** 을 클릭하여 Sales Reason 차원을 만듭니다.
 
-11. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.
+11. **파일** 메뉴에서 **모두 저장**을 클릭합니다.
 
 12. **Sales reason** 차원에 대 한 차원 디자이너의 **특성** 창에서 **sales reason Key**를 선택한 다음 속성 창의 **이름** 속성을로 변경 합니다.`Sales Reason.`
 
-13. 차원 디자이너의 **계층** 창에서 `Sales Reason Type` 수준 및 **sales Reason** 수준을 해당 순서로 포함 하는 **sales** Reason 사용자 계층을 만듭니다.
+13. 차원 디자이너의 **계층** 창에서 **Sales Reasons** `Sales Reason Type` 수준 및 **sales Reason** 수준을 해당 순서로 포함 하는 sales Reason 사용자 계층을 만듭니다.
 
-14. 속성 창에서 Sales 이유가 계층 `All Sales Reasons` 의 **AllMemberName** 속성에 대 한 값으로를 정의 합니다.
+14. 속성 창에서 `All Sales Reasons` Sales 이유가 계층의 **AllMemberName** 속성에 대 한 값으로를 정의 합니다.
 
-15. Sales `All Sales Reasons` Reason 차원의 **AttributeAllMemberName** 속성에 대 한 값으로 정의 합니다.
+15. `All Sales Reasons`Sales Reason 차원의 **AttributeAllMemberName** 속성에 대 한 값으로 정의 합니다.
 
 16. 새로 만들어진 차원을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 큐브 차원으로 추가하려면 **큐브 디자이너**로 전환합니다. **큐브 구조** 탭에서 **차원** 창을 마우스 오른쪽 단추로 클릭하고 **큐브 차원 추가**를 선택합니다.
 
 17. **큐브 차원 추가** 대화 상자에서 **Sales Reason** 을 선택한 후 **확인**을 클릭합니다.
 
-18. **파일** 메뉴에서 **모두 저장**을 클릭 합니다.
+18. **파일** 메뉴에서 **모두 저장**을 클릭합니다.
 
 ## <a name="defining-the-many-to-many-relationship"></a>다 대 다 관계 정의
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175292"
 
 5.  메타데이터 창에서 **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**, **Australia**를 차례로 확장하고 **Queensland**를 마우스 오른쪽 단추로 클릭한 다음 **필터에 추가**를 클릭합니다.
 
-6.  `Sales Reason Type` 수준의 각 멤버를 확장 하 여 Queensland의 고객이 인터넷을 통해 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품을 구매 하는 데 제공한 각 이유와 관련 된 달러 값을 검토 합니다.
+6.  수준의 각 멤버를 확장 `Sales Reason Type` 하 여 Queensland의 고객이 인터넷을 통해 제품을 구매 하는 데 제공한 각 이유와 관련 된 달러 값을 검토 합니다 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] .
 
      각 판매 이유와 연결된 합계가 총 판매량보다 크며 이는 일부 고객이 여러 구매 이유를 언급했기 때문입니다.
 

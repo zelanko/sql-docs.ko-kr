@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e02f4624dc0ec25ee0c3d8950c83550ca3d9ed57
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175272"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542735"
 ---
 # <a name="defining-named-sets"></a>명명된 집합 정의
   명명된 집합은 차원 멤버 집합을 반환하는 MDX(Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 애플리케이션에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 애플리케이션의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.
@@ -32,11 +31,11 @@ ms.locfileid: "78175272"
 
      **계산** 탭에서 새 계산을 정의할 때 계산은 **스크립트 구성 도우미** 창에 나타나는 순서대로 수행된다는 사실에 유의하세요. 새 계산을 만들 때 해당 창 내의 포커스에 따라 계산 실행 순서가 결정됩니다. 즉, 새로운 계산은 포커스된 계산 바로 다음에 정의됩니다.
 
-3.  **이름** 상자에서 새 명명 된 집합의 이름을로 `[Core Products]`변경 합니다.
+3.  **이름** 상자에서 새 명명 된 집합의 이름을로 변경 합니다 `[Core Products]` .
 
      **스크립트 구성 도우미** 창에는 스크립트 명령이나 계산 멤버에서 명명된 집합을 구분할 수 있는 고유 아이콘이 표시됩니다.
 
-4.  **계산 도구** 창의 **메타 데이터** 탭에서 **Product**, **Category**, `Members`를 차례로 확장 한 다음 **All Products**를 확장 합니다.
+4.  **계산 도구** 창의 **메타 데이터** 탭에서 **Product**, **Category**,를 차례로 확장 한 `Members` 다음 **All Products**를 확장 합니다.
 
     > [!NOTE]
     >  **계산 도구** 창에 메타데이터가 표시되지 않으면 도구 모음에서 **다시 연결** 을 클릭합니다. 이 옵션을 사용할 수 없으면 큐브를 처리하거나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 시작해야 할 수 있습니다.
@@ -49,9 +48,9 @@ ms.locfileid: "78175272"
 
 1.  `[Core Products]` **스크립트 구성 도우미** 창을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 집합**을 클릭 합니다.
 
-2.  **이름** 상자에서이 명명 된 집합의 이름을로 `[Large Resellers]`변경 합니다.
+2.  **이름** 상자에서이 명명 된 집합의 이름을로 변경 `[Large Resellers]` 합니다.
 
-3.  **식** 상자에를 입력 `Exists()`합니다.
+3.  **식** 상자에를 입력 `Exists()` 합니다.
 
      Exists 함수를 사용하여 직원 수 특성 계층에서 직원 수가 가장 많은 멤버 집합과 공통되는 Reseller Name 특성 계층의 멤버 집합을 반환합니다.
 
@@ -69,29 +68,29 @@ ms.locfileid: "78175272"
 
      이제 Exists 집합 식에 대 한 첫 번째 집합을 정의 했으므로 직원 수가 가장 많은 대리점 차원의 멤버 집합을 추가할 준비가 되었습니다.
 
-7.  **계산 도구** 창의 **메타 데이터** 탭에서 재판매인 차원의 **직원 수** 를 확장 하 고를 확장 `Members`한 다음 **모든 대리점**을 확장 합니다.
+7.  **계산 도구** 창의 **메타 데이터** 탭에서 재판매인 차원의 **직원 수** 를 확장 하 `Members` 고를 확장 한 다음 **모든 대리점**을 확장 합니다.
 
      이 특성 계층의 멤버는 그룹화되지 않습니다.
 
 8.  **Reseller** 차원에 대한 차원 디자이너를 열고 **특성** 창에서 **Number of Employees** 를 클릭합니다.
 
-9. 속성 창에서 `DiscretizationMethod` 속성을 **자동**으로 변경 하 고 `DiscretizationBucketCount` 속성을로 `5`변경 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.
+9. 속성 창에서 속성을 자동으로 변경 하 `DiscretizationMethod` 고 속성을로 변경 **Automatic** `DiscretizationBucketCount` `5` 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.
 
 10. **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.
 
 11. 배포가 성공적으로 완료되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환한 후 **계산** 탭의 도구 모음에서 **다시 연결** 을 클릭합니다.
 
-12. **계산 도구** 창의 **메타 데이터** 탭에서 **재판매인** 차원의 `Members` **직원 수** 를 확장 하 고를 확장 한 다음 **모든 대리점**을 확장 합니다.
+12. **계산 도구** 창의 **메타 데이터** 탭에서 **재판매인** 차원의 **직원 수** 를 확장 하 `Members` 고를 확장 한 다음 **모든 대리점**을 확장 합니다.
 
      이제 이 특성 계층의 멤버는 0번부터 4번까지의 5개 그룹에 포함됩니다. 그룹 번호를 확인하려면 해당 그룹 위에 포인터를 잠시 올려놓고 정보 팁을 봅니다. `2 -17`범위의 정보 팁에는 `[Reseller].[Number of Employees].&[0]`가 포함되어야 합니다.
 
-     DiscretizationBucketCount 속성이로 `5` 설정 되 고 DiscretizationMethod 속성이 **Automatic**으로 설정 되어 있으므로이 특성 계층의 멤버는 그룹화 됩니다.
+     DiscretizationBucketCount 속성이로 설정 되 `5` 고 DiscretizationMethod 속성이 **Automatic**으로 설정 되어 있으므로이 특성 계층의 멤버는 그룹화 됩니다.
 
 13. **식** 상자의 Exists 집합 식에서 Members 함수 뒤, 닫는 괄호 앞에 쉼표를 추가한 후 **메타데이터** 창에서 **83 - 100** 을 끌어다 쉼표 뒤에 놓습니다.
 
      이제 Large Resellers 명명된 집합을 축 위에 놓았을 때 지정된 두 집합, 즉 모든 대리점의 집합 및 직원 수가 83명에서 100명 사이인 대리점의 집합과 공통되는 멤버 집합을 반환하는 Exists 집합 식이 완성되었습니다.
 
-     다음 그림에서는 `[Large Resellers]` 명명 된 집합에 대 한 **계산 식** 창을 보여 줍니다.
+     다음 그림에서는 명명 된 집합에 대 한 **계산 식** 창을 보여 줍니다 `[Large Resellers]` .
 
      ![[대형 대리점]에 대한 계산 식 창](../../2014/tutorials/media/l6-named-set-02.gif "[대형 대리점]에 대한 계산 식 창")
 

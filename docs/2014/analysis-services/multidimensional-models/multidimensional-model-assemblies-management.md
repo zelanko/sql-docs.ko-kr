@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073533"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546075"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 MDX (Multidimensional Expressions) 및 DMX (Data 마이닝 확장) 언어와 함께 사용할 수 있는 다양 한 내장 함수를 제공 하 여 표준 통계 계산에서 계층의 멤버를 트래버스하는 모든 작업을 수행 하도록 설계 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 되었습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX (Multidimensional Expressions) 및 DMX (Data 마이닝 확장) 언어와 함께 사용할 수 있는 다양 한 내장 함수를 제공 하 여 표준 통계 계산에서 계층의 멤버를 트래버스하는 모든 작업을 수행 하도록 설계 되었습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
   
  따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 어셈블리를 추가할 수 있습니다. 어셈블리를 사용하면 Microsoft Visual Basic .NET 또는 Microsoft Visual C#과 같은 CLR(공용 언어 런타임) 언어를 사용하여 사용자 정의 외부 함수를 만들 수 있습니다. 또한 Microsoft Visual Basic 또는 Microsoft Visual C++와 같은 COM(구성 요소 개체 모델) 자동화 언어도 사용할 수 있습니다.  
   
@@ -105,7 +104,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   중간에 EXECUTE AS가 있어서 컨텍스트가 원래 호출자의 컨텍스트와 다르게 변경된 경우에는 외부 리소스에 액세스할 수 없습니다.  
   
- `ImpersonationMode` 속성은 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`로 설정할 수 있습니다. 기본 설정 `ImpersonateCurrentUser`는 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행합니다. `ImpersonateAnonymous` 설정이 사용 되는 경우 실행 컨텍스트는 서버의*servername* IUSER_ Windows 로그인 사용자 계정에 해당 합니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
+ `ImpersonationMode` 속성은 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`로 설정할 수 있습니다. 기본 설정 `ImpersonateCurrentUser`는 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행합니다. 설정이 사용 되는 경우 `ImpersonateAnonymous` 실행 컨텍스트는 서버의*Servername* IUSER_ Windows 로그인 사용자 계정에 해당 합니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
   
 ### <a name="application-domains"></a>애플리케이션 도메인  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 애플리케이션 도메인을 직접 노출시키지 않습니다. 동일한 애플리케이션 도메인에서 실행되는 어셈블리 집합으로 인해 애플리케이션 도메인은 .NET Framework의 `System.Reflection` 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 애플리케이션을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  

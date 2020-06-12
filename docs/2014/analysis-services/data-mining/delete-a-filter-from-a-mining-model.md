@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084727"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522599"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>마이닝 모델에서 필터 삭제
   마이닝 모델에 대한 필터를 정의할 때 데이터 원본 뷰에서 데이터의 하위 집합에 대한 모델을 만들 수 있습니다. 필터는 원래 데이터의 하위 집합에 대한 모델의 정확도를 테스트하는 데에도 유용합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66084727"
   
 1.  솔루션 탐색기에서 필터가 포함된 마이닝 모델을 클릭합니다.  
   
-2.  **속성** 창에서 `Filter` 속성의 필터 텍스트를 마우스 오른쪽 단추로 클릭 하 고 **모두 선택**을 선택 합니다.  
+2.  **속성** 창에서 속성의 필터 텍스트를 마우스 오른쪽 단추로 클릭 `Filter` 하 고 **모두 선택**을 선택 합니다.  
   
 3.  백스페이스 또는 Delete 키를 누릅니다.  
   

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a248721ee64ff815c1b5b73a81d3b29fc5d2b84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070215"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547405"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>집계 사용 검토(집계 디자인 마법사)
   **집계 사용 검토** 페이지를 사용하여 집계 사용 설정을 구성할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **기본**  
+ **기본값**  
  특성의 집계 사용 설정을 기본값으로 설정하려면 선택합니다. 이 설정을 사용하면 디자이너에서 특성 및 차원의 유형을 기반으로 기본 규칙을 적용합니다.  
   
  `Full`  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546425"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>FORMATED_VALUE에 대한 LANGUAGE 및 FORMAT_STRING
   FORMATTED_VALUE 속성은 셀의 VALUE, FORMAT_STRING 속성 및 LANGUAGE 속성의 상호 작용을 기반으로 합니다. 이 항목에서는 이러한 속성이 상호 작용하여 FORMATTED_VALUE 속성을 작성하는 방법에 대해 설명합니다.  
@@ -85,7 +84,7 @@ ms.locfileid: "66074395"
 |E|5,04E+03|FORMAT_STRING이 `Scientific` 으로 설정되었고 LANGUAGE가 명시적으로 `1034,` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.|  
 |F|50.40%|FORMAT_STRING이 `Percent` 로 설정되었고 LANGUAGE가 `1033`(시스템 로캘 값에서 상속)으로 설정되었으므로 `.` (점)이 소수 구분 기호입니다.<br /><br /> VALUE가 5040에서 0.5040으로 변경되었습니다.|  
 |G|50,40%|FORMAT_STRING이 `Percent`(F에서 상속)로 설정되었고 LANGUAGE가 명시적으로 `1034` 로 설정되었으므로 `,` (쉼표)가 소수 구분 기호입니다.<br /><br /> VALUE가 F 값에서 상속되었습니다.|  
-|H|아니요|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. 영어 NO와 스페인어 NO 사이의 차이가 없으므로 사용자는 FORMATTED_VALUE의 차이점을 발견할 수 없습니다.|  
+|H|예|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. 영어 NO와 스페인어 NO 사이의 차이가 없으므로 사용자는 FORMATTED_VALUE의 차이점을 발견할 수 없습니다.|  
 |I|SI|FORMAT_STRING이 `YES/NO`로 설정되었고 VALUE가 59로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. YES/NO 형식 지정에 대해 정의된 대로 0과 다른 값은 YES이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 SI입니다.|  
 |J|Desactivado|FORMAT_STRING이 `ON/OFF`로 설정되었고 VALUE가 0으로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. ON/OFF 형식 지정에 대해 정의된 대로 0과 같은 값은 OFF이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 Desactivado입니다.|  
 |K|Activado|FORMAT_STRING이 `ON/OFF`로 설정되었고 VALUE가 -312로 설정되었고 LANGUAGE가 명시적으로 `1034`로 설정되었습니다. ON/OFF 형식 지정에 대해 정의된 대로 0과 다른 값은 ON이고 언어가 스페인어로 설정되었으므로 FORMATTED_VALUE가 Activado입니다.|  

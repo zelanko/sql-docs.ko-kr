@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4e3e06280ad91c59984b91e7383213f73f95343
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 838d96fc7db5ae4bf1930d159c7fee56d0a0408f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175332"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543375"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>부모-자식 계층의 부모 특성 속성 정의
   부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.
@@ -73,7 +72,7 @@ ms.locfileid: "78175332"
 
      **수준 명명 템플릿** 대화 상자에서 사용자가 큐브를 찾아볼 때 표시되는 부모-자식 계층의 수준 이름을 지정하는 수준 명명 템플릿을 정의합니다.
 
-4.  두 번째 행의 **\*** 행에서 **이름** 열에 **Employee Level \* ** 을 입력 한 다음 세 번째 행을 클릭 합니다.
+4.  두 번째 행의 행에서 **\*** **이름** 열에 **Employee Level \* ** 을 입력 한 다음 세 번째 행을 클릭 합니다.
 
      **결과** 아래에서 순차적으로 증가하는 번호 다음에 나오는 각 수준의 이름이 "Employee Level"이 됩니다.
 

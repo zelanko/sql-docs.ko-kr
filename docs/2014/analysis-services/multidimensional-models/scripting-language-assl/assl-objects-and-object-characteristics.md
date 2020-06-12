@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545700"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL 개체 및 개체 특징
   ASSL(Analysis Services Scripting Language)의 개체는 개체 그룹, 상속, 명명, 확장 및 처리에 관한 특정 지침을 따릅니다.  
   
 ## <a name="object-groups"></a>개체 그룹  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모든 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체에는 XML 표현이 있습니다. 개체는 다음과 같은 두 그룹으로 나뉩니다.  
+ 모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체에는 XML 표현이 있습니다. 개체는 다음과 같은 두 그룹으로 나뉩니다.  
   
  **주요 개체**  
  주요 개체는 독립적으로 만들고 변경하고 삭제할 수 있습니다. 주요 개체는 다음과 같습니다.  
@@ -75,7 +74,7 @@ ms.locfileid: "62736618"
   
 -   특성  
   
--   측정값 그룹  
+-   측정값  
   
 -   마이닝 모델 열  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736618"
 ## <a name="object-expansion"></a>개체 확장  
  `ObjectExpansion` 제한은 서버에서 반환된 ASSL XML의 확장 수준을 제어하는 데 사용할 수 있습니다. 이 제한에는 다음 표에 나열된 옵션이 포함됩니다.  
   
-|열거형 값|Alter> \<에 대해 허용 됨|설명|  
+|열거형 값|허용 된\<Alter>|설명|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|아니요|요청된 개체와 포함된 모든 주요 개체에 대한 이름, ID 및 타임스탬프만을 재귀적으로 반환합니다.|  
 |*ObjectProperties*|예|요청된 개체와 포함된 보조 개체를 확장합니다. 그러나 포함된 주요 개체를 반환하지는 않습니다.|  

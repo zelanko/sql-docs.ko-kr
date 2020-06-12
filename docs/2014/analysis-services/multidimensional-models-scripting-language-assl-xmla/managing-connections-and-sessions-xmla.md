@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701992"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544945"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>연결 및 세션 관리(XMLA)
   *상태 저장* 는 서버에서 메서드 호출 사이에 클라이언트의 id와 컨텍스트를 유지 하는 조건입니다. *상태 비저장* 는 서버에서 메서드 호출이 완료 된 후 클라이언트의 id와 컨텍스트를 기억할 수 없는 조건입니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "62701992"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  공급자의 SOAP 응답 메시지에는 XMLA 헤더 태그 \<SessionId>를 사용 하 여 반환 헤더 영역에 세션 ID가 포함 됩니다.  
+2.  공급자의 SOAP 응답 메시지는 XMLA 헤더 태그를 사용 하 여 반환 헤더 영역에 세션 ID를 포함 합니다 \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701992"
     </SOAP-ENV:Header>  
     ```  
   
-4.  세션이 완료 되 면 관련 된 세션 \<ID 값을 포함 하는 endsession> 태그가 사용 됩니다.  
+4.  세션이 완료 되 면 \<EndSession> 관련 된 세션 ID 값을 포함 하는 태그가 사용 됩니다.  
   
     ```  
     <SOAP-ENV:Header>  

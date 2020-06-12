@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6279c738ada597984465ff0c1c3db6fa8fbaeb38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076896"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544599"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>차원에 계정 인텔리전스 추가
-  계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 분류를 사용 하 여 시간에 따른 계정을 집계할 수 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 있습니다.  
+  계정 특성의 멤버에 대해 수입 및 비용과 같은 표준 계정 분류를 할당하려면 큐브나 차원에 향상된 계정 인텔리전스 기능을 추가합니다. 이러한 향상된 기능을 사용하면 Asset, Liability 등의 계정 유형을 식별할 수 있으며 각 계정 유형에 적절한 집계를 할당할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 분류를 사용 하 여 시간에 따른 계정을 집계할 수 있습니다.  
   
 > [!NOTE]  
 >  계정 인텔리전스는 기존 데이터 원본 기반의 차원에만 사용할 수 있습니다. 데이터 원본을 사용하지 않고 만든 차원의 경우 계정 인텔리전스를 추가하기 전에 스키마 생성 마법사를 실행하여 데이터 원본 뷰를 만들어야 합니다.  

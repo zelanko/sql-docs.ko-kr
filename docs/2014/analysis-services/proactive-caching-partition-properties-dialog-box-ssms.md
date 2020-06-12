@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070710"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540249"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>자동 관리 캐싱(파티션 속성 대화 상자)(SSMS)
   SQL Server Management Studio에서 **파티션 속성** 대화 상자의 **자동 관리 캐싱** 페이지를 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 내 큐브에 대한 측정값 그룹에 있는 파티션의 스토리지 및 자동 관리 캐싱 속성을 설정할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66070710"
  **표준 설정 슬라이더**  
  다음 표에 나열된 미리 정의된 설정 중 하나를 설정합니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |**실시간 ROLAP**|다음 스토리지 및 자동 관리 캐싱 설정을 사용하려면 선택합니다.<br /><br /> ROLAP 스토리지 모드<br /><br /> 자동 관리 캐싱을 설정합니다.<br /><br /> 대기 시간을 0초로 두고 오래된 캐시를 삭제합니다.<br /><br /> 개체를 즉시 온라인 상태로 만듭니다.|  
 |**실시간 HOLAP**|다음 스토리지 및 자동 관리 캐싱 설정을 사용하려면 선택합니다.<br /><br /> HOLAP 스토리지 모드<br /><br /> 자동 관리 캐싱을 설정합니다.<br /><br /> 대기 시간을 0초로 두고 오래된 캐시를 삭제합니다.<br /><br /> 데이터 변경 시 대체 간격 없이 대기 간격을 0초로 두고 캐시를 업데이트합니다.<br /><br /> 개체를 즉시 온라인 상태로 만듭니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "66070710"
  **사용자 지정 설정**  
  스토리지 모드, 자동 관리 캐싱 및 알림 옵션을 명시적으로 설정하려면 선택합니다.  
   
- **옵션**  
+ **Options**  
  스토리지 모드, 자동 관리 캐싱 및 알림 옵션을 명시적으로 설정할 수 있는 ** 옵션** 대화 상자를 표시하려면 클릭합니다. **스토리지 옵션** 대화 상자에 대한 자세한 내용은 [스토리지 옵션 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](storage-options-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

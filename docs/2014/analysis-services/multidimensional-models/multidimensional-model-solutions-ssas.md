@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 703080418566b761741575c69fb6be6a7572988e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ab0103a32ef674a3521f7ce13be721a8ea60df8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073564"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546015"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>다차원 모델 솔루션(SSAS)
     
@@ -44,6 +43,6 @@ ms.locfileid: "66073564"
  기존 관계형 스키마 없이 다차원 데이터베이스 개체를 디자인하는 방법에 대해 설명합니다.  
   
  [Analysis Services 개인 설정 확장 프로그램](extending-olap/analysis-services-personalization-extensions.md)  
- 에 대 한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]개인 설정 확장 프로그램을 디자인 하는 방법을 설명 합니다.  
+ 에 대 한 개인 설정 확장 프로그램을 디자인 하는 방법을 설명 합니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
   

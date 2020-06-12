@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f31773ad871ef7e3fc8f99d57e7a9099335b899
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728529"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545161"
 ---
 # <a name="dimension-translations"></a>차원 번역
   번역은 표시된 레이블과 캡션을 한 언어에서 다른 언어로 변경하는 간단한 메커니즘입니다. 각 번역은 한 쌍의 값인 번역된 텍스트가 있는 문자열과 언어 ID가 있는 번호로 정의됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 있는 모든 개체를 번역할 수 있으며 차원의 특성 값도 번역할 수 있습니다. 클라이언트 애플리케이션에서는 사용자가 정의한 언어 설정과 이 언어로 모든 캡션 및 레이블을 표시하는 스위치를 찾아야 합니다. 개체는 원하는 만큼 다양하게 번역할 수 있습니다.  
   
  단순 <xref:Microsoft.AnalysisServices.Translation> 개체는 언어 ID 번호와 번역된 캡션으로 구성되어 있습니다. 언어 ID 번호는 언어 ID가 있는 `Integer`이고 번역된 캡션은 번역된 텍스트입니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]차원 번역은 차원 이름, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 이름 또는 캡션, 멤버 또는 계층 수준 등의 멤버 중 하나에 대 한 언어별 표현입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 큐브 개체의 번역도 지원 합니다.  
+ 에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원 번역은 차원 이름, 개체의 이름 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 캡션, 멤버 또는 계층 수준 등의 멤버 중 하나에 대 한 언어별 표현입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 큐브 개체의 번역도 지원 합니다.  
   
  번역은 여러 언어를 지원할 수 있는 클라이언트 애플리케이션에 대한 서버 지원을 제공합니다. 여러 나라의 사용자가 큐브와 해당 차원을 보는 경우가 많습니다. 이러한 사용자가 큐브를 보고 이해할 수 있도록 큐브와 해당 차원의 여러 요소를 다른 언어로 번역할 수 있으면 매우 유용합니다. 예를 들어 프랑스에 있는 비즈니스 사용자는 프랑스어 로캘이 설정된 워크스테이션에서 큐브에 액세스하여 프랑스어로 개체 속성 값을 볼 수 있습니다. 이와 동시에 독일에 있는 비즈니스 사용자는 독일어 로캘이 설정된 워크스테이션에서 동일한 큐브에 액세스하여 독일어로 동일한 개체 속성 값을 볼 수 있습니다.  
   

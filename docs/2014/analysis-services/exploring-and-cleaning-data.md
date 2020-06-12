@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a31ed2e8e79e6f3ebf6cbecfeac14d24b56bf303
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528339"
 ---
 # <a name="exploring-and-cleaning-data"></a>데이터 탐색 및 지우기
   데이터 준비는 데이터 정리보다 훨씬 많이 수행됩니다. 데이터가 준비되는 방식은 결과가 결국 해석되는 방식에도 영향을 미칩니다. 데이터 준비는 다음과 같은 태스크로 이루어집니다.  

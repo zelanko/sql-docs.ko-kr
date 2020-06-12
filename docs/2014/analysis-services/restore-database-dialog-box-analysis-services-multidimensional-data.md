@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070254"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539155"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>데이터베이스 복원 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]의 **데이터베이스 복원** 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 백업 파일(.abf) 형식을 사용하는 백업 파일에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스를 복원할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66070254"
   
  **데이터베이스 복원** 대화 상자에는 다음 페이지가 있습니다.  
   
-## <a name="pages"></a>페이지  
+## <a name="pages"></a>Pages  
  **일반**  
  이 페이지를 사용하여 데이터베이스 복원 중에 사용할 일반 옵션 및 암호를 비롯하여 복원할 데이터베이스, 데이터베이스를 복원할 백업 파일을 선택할 수 있습니다. 이 페이지에 대한 자세한 내용은 [일반&#40;데이터베이스 복원 대화 상자&#41;&#40;Analysis Services - 다차원 데이터&#41;](general-restore-database-dialog-box-analysis-services-multidimensional-data.md)을 참조하세요.  
   

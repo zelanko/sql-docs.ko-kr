@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41c7501b85776fbba61ab9fd8159ac5ce25a0fa7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074775"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546605"
 ---
 # <a name="linked-measure-groups"></a>연결된 측정값 그룹
   연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072858"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547339"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>지원 되는 데이터 원본 (SSAS 다차원)
   이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
@@ -46,9 +45,9 @@ ms.locfileid: "66072858"
   
  <sup>1</sup> ODBC 데이터 원본은 다차원 솔루션에서 지원 되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
   
- <sup>2</sup> 자세한 내용은 azure.microsoft.com의를 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]참조 하세요 [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [azure.microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856)의를 참조 하세요.  
   
- <sup>3</sup> PDW에 대 한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 자세한 내용은 [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)를 참조 하세요.  
+ <sup>3</sup> PDW에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895)를 참조 하세요.  
   
  <sup>4</sup> 경우에 따라 MSDAORA OLE DB 공급자를 사용 하면 특히 최신 버전의 Oracle을 사용 하는 연결 오류가 발생할 수 있습니다. 오류가 발생할 경우 Oracle용으로 제시된 다른 공급자 중 하나를 사용해 보세요.  
   

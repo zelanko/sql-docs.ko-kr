@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175672"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540615"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot 갤러리 만들기 및 사용자 지정
   PowerPivot 갤러리는 특수한 유형의 SharePoint 문서 라이브러리로서 PowerPivot 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 풍부한 미리 보기와 문서 관리 기능을 제공합니다.
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>항목 내용
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> 항목 내용
 
--   [전제 조건](#prereq)
+-   [필수 구성 요소](#prereq)
 
 -   [개요](#overview)
 
@@ -34,7 +33,7 @@ ms.locfileid: "78175672"
 
 -   [극장식 보기 또는 갤러리 보기로 전환](#switch)
 
-##  <a name="prerequisites"></a><a name="prereq"></a> 필수 조건
+##  <a name="prerequisites"></a><a name="prereq"></a> 전제 조건
 
 -   Silverlight가 있어야 합니다. Silverlight는 Microsoft Update를 통해 다운로드하여 설치할 수 있습니다. Silverlight가 없는 브라우저를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 보는 경우 페이지의 링크를 클릭하여 Silverlight를 설치합니다. 설치한 다음에는 브라우저를 닫은 후 다시 열어야 합니다.
 
@@ -131,7 +130,7 @@ ms.locfileid: "78175672"
 
  다음 표에서는 각 미리 보기 페이지의 축소판 그림 스케치를 표시하는 데 사용할 수 있는 여러 레이아웃을 설명합니다.
 
-|보기|설명|
+|View|설명|
 |----------|-----------------|
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|

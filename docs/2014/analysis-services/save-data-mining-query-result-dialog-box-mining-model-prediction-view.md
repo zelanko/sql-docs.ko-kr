@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0838c90f0797a0db9c8a66cd8c5f877aaecdad0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070015"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538935"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>데이터 마이닝 쿼리 결과 저장 대화 상자(마이닝 모델 예측 뷰)
   **데이터 마이닝 쿼리 결과 저장** 대화 상자를 사용하여 데이터 마이닝 쿼리 결과를 새 테이블에 저장할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66070015"
  **데이터 원본**  
  현재 프로젝트에서 데이터 원본을 선택합니다. 올바른 데이터 원본이 없는 경우 **새로 만들기** 를 클릭하여 새 데이터 원본을 만들 수 있습니다.  
   
- **신규**  
+ **새 항목**  
  **데이터 원본 마법사**를 엽니다.  
   
  **표 이름**  

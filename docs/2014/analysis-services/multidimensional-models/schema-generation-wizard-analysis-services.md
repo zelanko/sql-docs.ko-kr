@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 513873fdf808ff62058ad765983cb1ebd512cd2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073068"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545710"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>스키마 생성 마법사(Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 OLAP 개체를 정의할 때 두 가지 관계형 스키마 작업 방법을 지원합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  

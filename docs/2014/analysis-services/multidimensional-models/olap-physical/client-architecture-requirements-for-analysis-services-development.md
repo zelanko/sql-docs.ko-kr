@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1dae97cc76eb09ce0ac4ef9d61d571a6d10c1bc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545965"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 배포의 클라이언트 아키텍처 요구 사항
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 씬 클라이언트 아키텍처를 지원 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 계산 엔진은 완전히 서버를 기반으로 하므로 모든 쿼리가 서버에서 확인 됩니다. 결과적으로 각 쿼리에는 클라이언트와 서버 간의 단일 왕복만이 필요하여 쿼리가 복잡해짐에 따라 성능이 확장될 수 있습니다.
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 씬 클라이언트 아키텍처를 지원 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]계산 엔진은 완전히 서버를 기반으로 하므로 모든 쿼리가 서버에서 확인 됩니다. 결과적으로 각 쿼리에는 클라이언트와 서버 간의 단일 왕복만이 필요하여 쿼리가 복잡해짐에 따라 성능이 확장될 수 있습니다.
 
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 네이티브 프로토콜은 XML/A(XML for Analysis)입니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 클라이언트 애플리케이션에 여러 데이터 액세스 인터페이스를 제공하지만 이러한 구성 요소는 모두 XML/A를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 통신합니다.
 
@@ -53,7 +52,7 @@ ms.locfileid: "81388029"
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>테이블 형식 또는 SharePoint 모드의 Analysis Services
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서는 SharePoint 사이트에 게시된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 테이블 형식 데이터베이스에 대해 xVelocity 메모리 내 분석 엔진(VertiPaq) 모드로 서버를 시작할 수 있습니다.
 
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 SharePoint 또는 테이블 형식 모드 각각을 사용하는 메모리 내 데이터베이스 만들고 쿼리하기 위해 지원되는 유일한 클라이언트 환경입니다. Excel 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 도구를 사용 하 여 만드는 포함 된 PowerPivot 데이터베이스는 excel 통합 문서 내에 포함 되며 excel .xlsx 파일의 일부로 저장 됩니다.
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]는 SharePoint 또는 테이블 형식 모드 각각을 사용하는 메모리 내 데이터베이스 만들고 쿼리하기 위해 지원되는 유일한 클라이언트 환경입니다. Excel 및 도구를 사용 하 여 만드는 포함 된 PowerPivot 데이터베이스는 excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서 내에 포함 되며 excel .xlsx 파일의 일부로 저장 됩니다.
 
  그러나 큐브 데이터를 통합 문서에 가져올 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서는 기존 큐브에 저장된 데이터를 사용할 수 있습니다. SharePoint 사이트에 게시된 경우 다른 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 가져올 수도 있습니다.
 
@@ -64,7 +63,7 @@ ms.locfileid: "81388029"
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]Analysis Services에 대해 설정 된 인터페이스와 언어를 사용 하 여 통합 문서 내에서 xVelocity 메모리 내 분석 엔진 (VertiPaq) 저장소 엔진과 상호 작용 합니다. AMO와 ADOMD.NET 및 MDX 및 XMLA를 사용 합니다. 추가 기능 내에서 측정값은 Excel, DAX(Data Analysis Expressions)와 유사한 수식 언어를 사용하여 정의됩니다. DAX 식은 in-process 서버에 보낸 XMLA 메시지 내에 포함됩니다.
 
 ### <a name="providers"></a>공급자
- 와 Excel [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 간의 통신에서는 MSOLAP OLEDB 공급자 (버전 11.0)를 사용 합니다. MSOLAP 공급자 내에는 클라이언트와 서버 간에 메시지를 보내는 데 사용할 수 있는 네 가지 모듈 또는 전송이 있습니다.
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]와 Excel 간의 통신에서는 MSOLAP OLEDB 공급자 (버전 11.0)를 사용 합니다. MSOLAP 공급자 내에는 클라이언트와 서버 간에 메시지를 보내는 데 사용할 수 있는 네 가지 모듈 또는 전송이 있습니다.
 
  **TCP/IP** 일반 클라이언트-서버 연결에 사용 됩니다.
 

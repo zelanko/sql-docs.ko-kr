@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075534"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546935"
 ---
 # <a name="define-semiadditive-behavior"></a>반가산적 동작 정의
   다양한 비즈니스 시나리오에서 모든 차원에 대해 균일하게 집계되지 않는 반가산적 측정값이 있는 경우가 많습니다. 시간에 따른 균형에 대한 스냅샷을 기반으로 하는 모든 큐브에서 이 문제가 발생합니다. 보안, 잔액, 예산, 인력 관리, 보험 정책, 지불 청구 및 기타 비즈니스 분야를 처리하는 애플리케이션에서 이러한 스냅샷을 찾을 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "66075534"
   
 -   없음  
   
- 이 옵션 `Sum`은,,, 또는 `Min` `Max` `Count` `Distinct``Count`등의 일반 집계 함수로 측정값을 변경 하지 않습니다.  
+ 이 옵션은,,, `Sum` 또는 등의 일반 집계 함수로 측정값을 변경 하지 않습니다 `Min` `Max` `Count` `Distinct``Count` .  
   
  **마법사에서 반 가산적 멤버가 포함 된 ' Account ' 계정 차원을 검색 했습니다. 서버는 각 계정 유형에 지정 된 반 가산적 동작에 따라이 차원의 멤버를 집계 합니다.**  
  시스템에서 계정 유형 차원별로 차원이 구분된 측정값 그룹의 모든 측정값을 By Account 집계 함수로 설정하도록 하며 서버는 각 계정 유형에 지정된 반가산적 동작에 따라 차원의 멤버를 집계합니다.  

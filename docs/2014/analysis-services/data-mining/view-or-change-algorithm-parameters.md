@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd144d3adba59fd179ab756f95223ea5e0e2968c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520289"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
   데이터 마이닝 모델을 작성하여 모델 결과를 사용자 지정하는 데 사용하는 알고리즘과 함께 제공되는 매개 변수를 변경할 수 있습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 제공 하는 알고리즘 매개 변수는 모델의 속성만 변경 합니다. 이러한 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경 하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
+ 에서 제공 하는 알고리즘 매개 변수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모델의 속성만 변경 합니다. 이러한 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경 하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
   
 -   클러스터링 메서드와 같은 분석 방법을 변경합니다.  
   

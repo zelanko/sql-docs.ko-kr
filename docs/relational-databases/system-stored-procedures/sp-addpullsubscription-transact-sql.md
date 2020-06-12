@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c983f72d3ba08f3ffc70991a13e312947ee77378
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627117"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,6 +45,9 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>인수  
 `[ @publisher = ] 'publisher'`게시자의 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
+
+> [!NOTE]
+> 서버 이름은으로 지정할 수 있습니다 `<Hostname>,<PortNumber>` . 사용자 지정 포트를 사용 하 여 Linux 또는 Windows에 SQL Server를 배포할 때 연결에 대 한 포트 번호를 지정 해야 하며 browser 서비스를 사용할 수 없습니다.
   
 `[ @publisher_db = ] 'publisher_db'`게시자 데이터베이스의 이름입니다. *publisher_db* 는 **sysname**이며 기본값은 NULL입니다. Oracle 게시자는 *publisher_db* 무시 됩니다.  
   

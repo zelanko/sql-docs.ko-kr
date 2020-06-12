@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 216721a187d86e56154d5d25c5e3174d231f7f36
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547545"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 상태 규칙 - 구성
   SharePoint용 PowerPivot에는 서버 가용성과 구성 문제를 모니터링하고 해결하는 데 유용한 SharePoint 상태 규칙이 포함되어 있습니다. SharePoint용 PowerPivot에 적용되는 상태 규칙은 규칙 정의 검토 페이지에 나타납니다.  
@@ -42,7 +41,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [애플리케이션 안정성을 평가하는 데 사용되는 상태 규칙 구성(PowerPivot 서비스 애플리케이션)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  Analysis Services 인스턴스 및 PowerPivot 서비스 애플리케이션의 구성 속성을 변경하려면 서비스 애플리케이션 관리자여야 합니다.  
   
 ##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>PowerPivot 상태 규칙 보기  

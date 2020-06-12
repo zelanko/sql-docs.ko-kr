@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 471a65cb8f7560b409e6ddf8f73969d83d42a346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f67a4bdf699bbc6443fc76ce54bcfb35831827
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547095"
 ---
 # <a name="define-a-fact-relationship-and-fact-relationship-properties"></a>팩트 관계 및 팩트 관계 속성 정의
   새 큐브 차원이나 새 측정값 그룹을 정의하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 팩트 차원 관계가 존재하는지 확인한 후 차원 용도 설정을 `Fact`로 지정하려고 합니다. 큐브 디자이너의 **차원 용도** 탭에서 팩트 차원 관계를 보거나 편집할 수 있습니다. 차원과 측정값 그룹 간의 팩트 관계에는 다음과 같은 제약 조건이 있습니다.  

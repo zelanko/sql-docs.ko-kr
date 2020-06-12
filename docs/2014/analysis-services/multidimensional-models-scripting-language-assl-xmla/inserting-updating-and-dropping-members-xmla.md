@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727167"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544977"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>멤버 삽입, 업데이트 및 삭제(XMLA)
   XML for Analysis (XMLA)의 [insert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)및 [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) 명령을 사용 하 여 쓰기 가능 차원에서 멤버를 각각 삽입, 업데이트 또는 삭제할 수 있습니다. 쓰기 가능 차원에 대 한 자세한 내용은 [쓰기 가능 차원](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)을 참조 하세요.  
@@ -75,13 +74,13 @@ ms.locfileid: "62727167"
     > [!NOTE]  
     >  `Attribute` 요소의 모든 속성이 포함되어야 합니다. 그렇지 않으면 오류가 발생할 수 있습니다.  
   
--   멤버가 [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) 업데이트 되는 특성을 제한 하는 `Attribute` 하나 이상의 요소를 포함 하는 Where 속성입니다. `Where` 속성은 `Update` 명령을 멤버의 특정 인스턴스로 제한하는 데 유용하게 사용됩니다. `Where` 속성을 지정 하지 않으면 지정 된 멤버의 모든 인스턴스가 업데이트 됩니다. 예를 들어, 세 명의 고객에 대한 도시 이름을 Redmond에서 Bellevue로 변경하려고 합니다. 도시 이름을 변경하려면 변경해야 하는 City 특성의 멤버에 대해 Customer 특성의 세 멤버를 식별하는 `Where` 속성을 제공해야 합니다. 이 `Where` 속성을 제공하지 않으면 `Update` 명령 실행 후에 도시 이름이 현재 Redmond로 되어 있는 모든 고객의 도시 이름이 Bellevue로 변경됩니다.  
+-   멤버가 업데이트 되는 특성을 제한 하는 하나 이상의 요소를 포함 하는 [Where](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/where-element-xmla) 속성입니다 `Attribute` . `Where` 속성은 `Update` 명령을 멤버의 특정 인스턴스로 제한하는 데 유용하게 사용됩니다. 속성을 `Where` 지정 하지 않으면 지정 된 멤버의 모든 인스턴스가 업데이트 됩니다. 예를 들어, 세 명의 고객에 대한 도시 이름을 Redmond에서 Bellevue로 변경하려고 합니다. 도시 이름을 변경하려면 변경해야 하는 City 특성의 멤버에 대해 Customer 특성의 세 멤버를 식별하는 `Where` 속성을 제공해야 합니다. 이 `Where` 속성을 제공하지 않으면 `Update` 명령 실행 후에 도시 이름이 현재 Redmond로 되어 있는 모든 고객의 도시 이름이 Bellevue로 변경됩니다.  
   
     > [!NOTE]  
     >  `Update` 명령에서는 새 멤버를 제외하고 `Where` 절에 포함되지 않은 특성의 특성 키 값만을 업데이트할 수 있습니다. 예를 들어, 고객을 업데이트하는 경우 도시 이름을 업데이트할 수 없습니다. 이렇게 하지 않으면 모든 고객의 도시 이름이 변경됩니다.  
   
 ### <a name="updating-members-in-parent-attributes"></a>부모 특성의 멤버 업데이트  
- 부모 특성을 지원 하기 위해 `Update` 명령에는 선택적 [movewithdescendants 항목](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants 속성이 있습니다. `MoveWithDescendants` 속성을 true로 설정하면 부모 멤버의 식별자가 변경될 때 부모 멤버의 하위 항목도 부모 멤버와 함께 이동합니다. 이 값을 false로 설정한 경우 부모 멤버를 이동하면 해당 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
+ 부모 특성을 지원 하기 위해 `Update` 명령에는 선택적 [Movewithdescendants 항목](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/movewithdescendants-element-xmla)MovewithDescedants 속성이 있습니다. `MoveWithDescendants` 속성을 true로 설정하면 부모 멤버의 식별자가 변경될 때 부모 멤버의 하위 항목도 부모 멤버와 함께 이동합니다. 이 값을 false로 설정한 경우 부모 멤버를 이동하면 해당 부모 멤버의 직계 하위 항목이 부모 멤버의 이전 수준으로 승격됩니다.  
   
  부모 특성의 멤버를 업데이트할 때 `Update` 명령은 다른 특성의 멤버를 업데이트할 수 없습니다.  
   

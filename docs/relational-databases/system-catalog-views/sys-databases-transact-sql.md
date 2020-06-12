@@ -1,7 +1,7 @@
 ---
 title: sys. 데이터베이스 (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 06/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0cc6509f3bdd5a7ca64dc739bf4db24dc96c709
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828184"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529380"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases(Transact-SQL)
 
@@ -93,8 +93,8 @@ ms.locfileid: "82828184"
 |**log_reuse_wait_desc**|**nvarchar(60)**|트랜잭션 로그 공간 다시 사용을 마지막 검사점을 기다리는지에 대한 설명입니다.|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION이 ON입니다.<br /> 0 = DATE_CORRELATION_OPTIMIZATION이 OFF입니다.|  
 |**is_cdc_enabled**|**bit**|1 = 데이터베이스에 변경 데이터 캡처가 설정되어 있습니다. 자세한 내용은 [sp_cdc_enable_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)을 참조 하십시오.|  
-|**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정 된 상태를 반영 `ALTER DATABASE SET ENCRYPTION` 합니다. 다음 값 중 하나일 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면에서 `is_encrypted` 0 값을 표시 합니다. [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
-|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정한 상태를 반영 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 합니다. 다음 값 중 하나일 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 기본적으로 복원 되거나 연결 된 데이터베이스의 broker 우선 순위는 off입니다.|  
+|**is_encrypted**|**bit**|데이터베이스가 암호화 되었는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정 된 상태를 반영 `ALTER DATABASE SET ENCRYPTION` 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = 암호화됨<br /> 0 = 암호화되지 않음<br /> 데이터 암호화에 대한 자세한 내용은 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하십시오.<br /> 데이터베이스의 암호를 해독 하는 중이면에서 `is_encrypted` 0 값을 표시 합니다. [Dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용 하 여 암호화 프로세스의 상태를 볼 수 있습니다.|  
+|**is_honor_broker_priority_on**|**bit**|데이터베이스에서 대화 우선 순위를 준수 하는지 여부를 나타냅니다 .는 절을 사용 하 여 마지막으로 설정한 상태를 반영 `ALTER DATABASE SET HONOR_BROKER_PRIORITY` 합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /> 1 = HONOR_BROKER_PRIORITY가 ON입니다.<br /> 0 = HONOR_BROKER_PRIORITY가 OFF입니다.<br /> 기본적으로 복원 되거나 연결 된 데이터베이스의 broker 우선 순위는 off입니다.|  
 |**replica_id**|**uniqueidentifier**|데이터베이스가 참여하는 가용성 그룹(있는 경우)의 로컬 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 가용성 복제본에 대한 고유 식별자입니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|데이터베이스가 참여 하는 Always On 가용성 그룹 (있는 경우) 내의 데이터베이스에 대 한 고유 식별자입니다. 주 복제본의이 데이터베이스와 데이터베이스가 가용성 그룹에 조인 된 모든 보조 복제본에 대 한 **group_database_id** 동일 합니다.<br /> NULL = 데이터베이스가 가용성 그룹에 포함된 가용성 복제본의 일부가 아닙니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|이 데이터베이스에 매핑되는 리소스 풀의 ID입니다. 이 리소스 풀은 이 데이터베이스에서 메모리 최적화 테이블을 사용할 수 있는 총 메모리를 제어합니다.<br /> **적용**대상: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상|  
@@ -102,9 +102,9 @@ ms.locfileid: "82828184"
 |**default_language_name**|**nvarchar(128)**|포함된 데이터베이스의 기본 언어를 나타냅니다.<br /> 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_lcid**|**int**|포함 된 데이터베이스의 기본 전체 텍스트 언어의 lcid (로캘 id)를 나타냅니다.<br /> **참고:** 의 기본 [전체 텍스트 언어 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-default-full-text-language-server-configuration-option.md) 으로 작동 `sp_configure` 합니다. 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**default_fulltext_language_name**|**nvarchar(128)**|포함된 데이터베이스의 기본 전체 텍스트 언어를 나타냅니다.<br /> 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_nested_triggers_on**|**bit**|포함된 데이터베이스에서 중첩 트리거가 허용되는지 여부를 나타냅니다.<br /> 0 = 중첩 트리거가 허용되지 않습니다.<br /> 1 = 중첩 트리거가 허용됩니다.<br /> **참고:** 의 [nested Triggers 서버 구성 옵션을 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) 하는 함수 `sp_configure` 입니다. 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 을 참조 하세요.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
-|**is_transform_noise_words_on**|**bit**|포함된 데이터베이스에서 의미 없는 단어가 변환되는지 여부를 나타냅니다.<br /> 0 = 의미 없는 단어가 변환되지 않습니다.<br /> 1 = 의미 없는 단어가 변환됩니다.<br /> **참고:** 의 의미 없는 [단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) 으로 작동 `sp_configure` 합니다. 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 을 참조 하세요.<br /> **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상|  
-|**two_digit_year_cutoff**|**smallint**|두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 숫자 값을 나타냅니다.<br /> **참고:** 의 [두 자리 연도 구분 서버 구성 옵션을 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) 하는 함수입니다 `sp_configure` . 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [&#41;&#40;transact-sql](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 을 참조 하세요.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_nested_triggers_on**|**bit**|포함된 데이터베이스에서 중첩 트리거가 허용되는지 여부를 나타냅니다.<br /> 0 = 중첩 트리거가 허용되지 않습니다.<br /> 1 = 중첩 트리거가 허용됩니다.<br /> **참고:** 의 [nested Triggers 서버 구성 옵션을 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md) 하는 함수 `sp_configure` 입니다. 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 를 참조 하세요.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_transform_noise_words_on**|**bit**|포함된 데이터베이스에서 의미 없는 단어가 변환되는지 여부를 나타냅니다.<br /> 0 = 의미 없는 단어가 변환되지 않습니다.<br /> 1 = 의미 없는 단어가 변환됩니다.<br /> **참고:** 의 의미 없는 [단어 변환 서버 구성 옵션](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md) 으로 작동 `sp_configure` 합니다. 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 를 참조 하세요.<br /> **적용**대상: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상|  
+|**two_digit_year_cutoff**|**smallint**|두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 숫자 값을 나타냅니다.<br /> **참고:** 의 [두 자리 연도 구분 서버 구성 옵션을 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) 하는 함수입니다 `sp_configure` . 포함 되지 않은 데이터베이스의 경우이 값은 **null** 입니다. 자세한 내용은 [sys.configurations &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) 를 참조 하세요.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**제한**|**tinyint not null**|데이터베이스의 포함 상태를 나타냅니다.<br />  0 = 데이터베이스가 포함되지 않습니다. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 1 = 데이터베이스가 부분 포함에 **적용**됩니다. 이상에 적용 됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
 |**containment_desc**|**nvarchar (60) null이 아님**|데이터베이스의 포함 상태를 나타냅니다.<br /> NONE = 레거시 데이터베이스입니다(containment = 0).<br /> PARTIAL = 부분적으로 포함된 데이터베이스입니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**target_recovery_time_in_seconds**|**int**|데이터베이스 복구 예상 시간(초)입니다. Null을 허용합니다.<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
@@ -117,10 +117,11 @@ ms.locfileid: "82828184"
 |**is_temporal_retention_enabled**|**bit**|임시 보존 정책 정리 태스크를 사용할 수 있는지 여부를 나타냅니다.<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|카탈로그 데이터 정렬 설정:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|카탈로그 데이터 정렬 설정:<br />COLLATE<br />SQL_Latin_1_General_CP1_CI_AS<br /> **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**physical_database_name**|**nvarchar(128)**|SQL Server의 경우 데이터베이스의 물리적 이름입니다. Azure SQL Database의 경우 서버의 데이터베이스에 대 한 일반 id입니다. <br />**적용**대상: SQL Server 2019 (15. x) 이상 및 Azure SQL Database|
 |**is_result_set_caching_on**|**bit**|1 = is_result_set_caching_on on입니다.</br>0 = is_result_set_caching_on 꺼짐</br>**적용**대상: Azure SQL Data Warehouse Gen2. 이 기능을 모든 지역에 롤아웃하는 동안 인스턴스에 배포 된 버전 및 기능 가용성에 대 한 최신 [AZURE SQL DW 릴리스 정보](/azure/sql-data-warehouse/release-notes-10-0-10106-0) 를 확인 하세요.|
-|**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 메모리 내 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />**적용 대상**: SQL Server 2019 (15. x)|
+|**is_memory_optimized_enabled**|**bit**|[하이브리드 버퍼 풀](../../database-engine/configure-windows/hybrid-buffer-pool.md)과 같은 특정 메모리 내 기능을 데이터베이스에 사용할 수 있는지 여부를 나타냅니다. 는 [메모리 내 OLTP](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)의 가용성 또는 구성 상태를 반영 하지 않습니다. <br />**적용**대상: SQL Server 2019 (15. x) 이상 및 Azure SQL Database|
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
  의 호출자 `sys.databases` 가 데이터베이스의 소유자가 아니고 데이터베이스가 또는이 아닌 경우 `master` `tempdb` 해당 행을 보는 데 필요한 최소 권한은 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 데이터베이스의 서버 수준 권한 또는 `CREATE DATABASE` 사용 권한 `master` 입니다. 호출자가 연결 된 데이터베이스는 항상에서 볼 수 있습니다 `sys.databases` .  
   
