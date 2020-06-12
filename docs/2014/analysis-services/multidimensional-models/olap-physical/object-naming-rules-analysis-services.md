@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6adfd4b23b6fe9129641271fc3c2381e161119ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545891"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
   이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  
@@ -80,9 +79,9 @@ ms.locfileid: "69530887"
   
 |서버 모드 및 데이터베이스 호환성 수준|예약 문자 허용 여부|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP(모든 버전)|아니요|  
-|테이블 형식 - 1050|아니요|  
-|테이블 형식 - 1100|아니요|  
+|MOLAP(모든 버전)|예|  
+|테이블 형식 - 1050|예|  
+|테이블 형식 - 1100|예|  
 |테이블 형식-1130 이상|예|  
   
  데이터베이스 기본 ModelType을 가질 수 있습니다. 기본값은 다차원과 같으므로 열 이름에 예약 문자를 사용할 수 없습니다.  

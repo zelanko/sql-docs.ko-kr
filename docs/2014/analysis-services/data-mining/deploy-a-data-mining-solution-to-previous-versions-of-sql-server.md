@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084681"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522704"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
   이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "66084681"
   
  SQL Server 2005 Analysis Services에서 마이닝 구조를 열면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 오류가 발생하고 홀드아웃 파티션이 제거된 구조가 다시 생성됩니다.  
   
- 구조를 다시 작성 한 후에는 홀드 아웃 파티션의 크기를 더 이상 속성 창에서 사용할 수 없습니다. 그러나 ddl100_100: HoldoutMaxPercent \<>30\</ddl100_100: HoldoutMaxPercent>) 값은 계속 해 서이 파일에 있을 수 있습니다.  
+ 구조를 다시 작성 한 후에는 홀드 아웃 파티션의 크기를 더 이상 속성 창에서 사용할 수 없습니다. 그러나 값 \<ddl100_100:HoldoutMaxPercent> 30)은 \</ddl100_100:HoldoutMaxPercent> 계속 해 서이 파일에 있을 수 있습니다.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> 필터가 있는 모델 배포  
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 를 사용하여 마이닝 모델에 필터를 적용하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있지만 필터는 적용되지 않습니다.  

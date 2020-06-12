@@ -1,5 +1,6 @@
 ---
 title: 로컬 이름 함수 (XQuery) | Microsoft Docs
+description: XQuery 함수 로컬 이름 ()을 사용 하 여 노드의 로컬 이름 부분을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038875"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689569"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 조건자에서 인수가 없는 로컬 이름 사용  
- 다음 쿼리는 제품 모델 테이블의 명령 열, 형식화 된 **xml** 열에 대해 지정 됩니다. 이 식은 QName의 로컬 이름 부분이 "Location" `root` 인 <> 요소의 모든 요소 자식을 반환 합니다. **로컬 이름 ()** 함수는 조건자에 지정 되 고 함수는 컨텍스트 노드를 사용 하는 인수를 포함 하지 않습니다.  
+ 다음 쿼리는 제품 모델 테이블의 명령 열, 형식화 된 **xml** 열에 대해 지정 됩니다. `root`이 식은 QName의 로컬 이름 부분이 "Location" 인 <> 요소의 모든 요소 자식을 반환 합니다. **로컬 이름 ()** 함수는 조건자에 지정 되 고 함수는 컨텍스트 노드를 사용 하는 인수를 포함 하지 않습니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- 이 쿼리는 <`Location` `root`> 요소의 모든 <> 요소 자식을 반환 합니다.  
+ 이 쿼리는 `Location` <> 요소의 모든 <> 요소 자식을 반환 합니다 `root` .  
   
 ## <a name="see-also"></a>참고 항목  
  [노드의 함수](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

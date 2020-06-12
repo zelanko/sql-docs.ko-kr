@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2bb5ad7c-2962-4559-8c95-cf7148bd2e72
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9af22f47531f468c3ba43d119644790af0c48457
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540975"
 ---
 # <a name="object-binding-dialog-box"></a>개체 바인딩 대화 상자
   **의** 개체 바인딩 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체 속성과 데이터 원본 뷰의 테이블 또는 열 속성 간의 바인딩을 정의할 수 있습니다. **의** 속성 **창에서** 개체의 다음 속성 값에 대한 드롭다운 목록에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (새로 만들기) **를 선택하면** 개체 바인딩 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 표시할 수 있습니다.  

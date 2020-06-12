@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493823"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542325"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493823"
   
      ![표시 창의 빈 동작 템플릿](../../2014/tutorials/media/l8-action2.gif "표시 창의 빈 동작 템플릿")  
   
-3.  **이름** 상자에서이 작업의 이름을로 `Internet Sales Details Drillthrough Action`변경 합니다.  
+3.  **이름** 상자에서이 작업의 이름을로 변경 `Internet Sales Details Drillthrough Action` 합니다.  
   
 4.  **측정값 그룹 멤버** 목록에서 **Internet Sales**를 선택합니다.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493823"
   
      ![추가 속성 상자](../../2014/tutorials/media/l8-action4.gif "추가 속성 상자")  
   
-8.  **최대 행** 상자에를 입력 `10`합니다.  
+8.  **최대 행** 상자에를 입력 `10` 합니다.  
   
-9. **캡션** 상자에를 입력 `Drillthrough to Order Details...`합니다.  
+9. **캡션** 상자에를 입력 `Drillthrough to Order Details...` 합니다.  
   
      이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 애플리케이션 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493823"
   
     -   ShipDateKey  
   
-6.  **Order Date Key** 특성의 `Order Date` **name** 속성을로 변경한 다음 **name column** 속성의 찾아보기 단추를 클릭 하 고 **이름 열** 대화 상자에서 원본 테이블로 **Date** 를 선택 하 고 원본 열로 SimpleDate를 선택 합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  **Order Date Key** 특성의 **name** 속성을로 변경한 `Order Date` 다음 **name column** 속성의 찾아보기 단추를 클릭 하 고 **이름 열** 대화 상자에서 원본 테이블로 **Date** 를 선택 하 고 원본 열로 SimpleDate를 선택 합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  **기한 키** 특성 `Due Date`의 **이름** 속성을로 변경 하 고 **Order date key** 특성과 동일한 메서드를 사용 하 여이 특성의 **name Column** 속성을 **SimpleDate (WChar)** 로 변경 합니다.  
+7.  **기한 키** 특성의 **이름** 속성을로 변경 하 `Due Date` 고 **Order date key** 특성과 동일한 메서드를 사용 하 여이 특성의 **name Column** 속성을 **SimpleDate (WChar)** 로 변경 합니다.  
   
-8.  **운송 날짜 키** 특성 `Ship Date`의 **이름** 속성을로 변경 하 고이 특성의 **name Column** 속성을 **SimpleDate (WChar)** 로 변경 합니다.  
+8.  **운송 날짜 키** 특성의 **이름** 속성을로 변경 하 `Ship Date` 고이 특성의 **Name Column** 속성을 **SimpleDate (WChar)** 로 변경 합니다.  
   
 9. **Tutorial 큐브에 대한 큐브 디자이너의** 동작 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭으로 전환합니다.  
   

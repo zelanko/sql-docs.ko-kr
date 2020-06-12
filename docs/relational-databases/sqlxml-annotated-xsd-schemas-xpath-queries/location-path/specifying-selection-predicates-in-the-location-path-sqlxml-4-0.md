@@ -1,5 +1,6 @@
 ---
 title: 위치 경로에서 선택 조건자 설정 (SQLXML)
+description: XPath (SQLXML 4.0) 쿼리의 위치 경로 식에서 선택 조건자를 지정 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3f62aa328573011d61a4a650aeb117516c3f9a6
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75256003"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306203"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>위치 경로에서 선택 조건자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,13 +36,13 @@ ms.locfileid: "75256003"
 >  Xpath의 xpath 구현에 대 한 제한 사항 및이를 W3C 사양 간의 차이점에 대 한 자세한 내용은 [&#40;Xpath 쿼리 사용 소개&#41;SQLXML 4.0 ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)을 참조 하세요.  
   
 ## <a name="selection-predicate-example-1"></a>선택 조건자: 예 1  
- 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 ALFKI 값이 인 **CustomerID** 특성이 있는 모든 ** \<Customer>** 요소 자식을 선택 합니다.  
+ 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 **\<Customer>** ALFKI 값이 인 **CustomerID** 특성이 있는 모든 요소 자식을 선택 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer``Customer` 는 노드 테스트 (는 요소가 `child` 축에 대 한 주 노드 유형 ** \<>** 이므로가 ** \<>요소 노드인 **경우 TRUE)입니다. `attribute::CustomerID="ALFKI"`는 조건자입니다. `attribute` 조건자에서 `CustomerID` 는 축이 고는 노드 테스트 (특성 ** \<>** 는 **특성** 축의 주 노드 유형 이므로 **CustomerID** 가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
+ 이 XPath 쿼리에서 `child` 및 `attribute`는 축 이름이고, `Customer`는 노드 테스트 (가 `Customer` **\<element node>** **\<element>** 축의 주 노드 유형 이므로가 인 경우 TRUE `child` )입니다. `attribute::CustomerID="ALFKI"`는 조건자입니다. 조건자에서는 `attribute` 축이 고 `CustomerID` 는 노드 테스트 ( **CustomerID** **\<attribute>** 는 **특성** 축의 주 노드 유형 이므로 CustomerID가 컨텍스트 노드의 특성인 경우 TRUE)입니다.  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "75256003"
 ```  
   
 ## <a name="selection-predicate-example-2"></a>선택 조건자: 예 2  
- 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 값이 1 인 **SalesOrderID** 특성이 있는 모든 ** \<Order>** 손자를 선택 합니다.  
+ 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 **\<Order>** 값이 1 인 **SalesOrderID** 특성이 있는 모든 손자를 선택 합니다.  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
@@ -65,17 +66,17 @@ ms.locfileid: "75256003"
 ```  
   
 ## <a name="selection-predicate-example-3"></a>선택 조건자: 예제 3  
- 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 ** \<ContactName>** 자식이 하나 이상 있는 모든 ** \<고객>** 자식을 선택 합니다.  
+ 다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 **\<Customer>** 하나 이상의 자식을 포함 하는 모든 자식을 선택 합니다 **\<ContactName>** .  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- 이 예에서는 ** \<ContactName>** 가 주석이 추가 된 XSD 스키마에서 *요소 중심 매핑* 이라고 하는 XML 문서의 ** \<Customer>** 요소에 대 한 자식 요소인 것으로 가정 합니다.  
+ 이 예에서는이 **\<ContactName>** XML 문서에서 요소의 자식 요소 라고 가정 합니다 .이 요소는 **\<Customer>** 주석이 추가 된 XSD 스키마에서 *요소 중심의 매핑* 이라고 합니다.  
   
- 이 XPath 식에서 `child`는 축 이름이고, `Customer`는 노드 테스트 `Customer` (가 `child` ** \<요소>** 노드인 경우 TRUE)입니다. ** \<요소>** 는 축에 대 한 주 노드 형식 이기 때문입니다. `child::ContactName`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 ** \<요소>** 노드) `ContactName` 인 경우 TRUE입니다.  
+ 이 XPath 식에서 `child`는 축 이름이고, `Customer`는 노드 테스트 (가 `Customer` **\<element>** **\<element>** 축에 대 한 주 노드 유형 이므로가 노드인 경우 TRUE `child` )입니다. `child::ContactName`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 **\<element>** .  
   
- 이 **식은 \<ContactName>** 요소 자식이 있는 컨텍스트 노드의 ** \<Customer>** 요소 자식만 반환 합니다.  
+ 이 식은 **\<Customer>** 요소 자식이 있는 컨텍스트 노드의 요소 자식만 반환 합니다 **\<ContactName>** .  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -84,15 +85,15 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>선택 조건자: 예제 4  
- 다음 XPath 식은 ** \<ContactName>** 요소 자식이 없는 컨텍스트 노드의 ** \<Customer>** 요소 자식을 선택 합니다.  
+ 다음 XPath 식은 **\<Customer>** 요소 자식이 없는 컨텍스트 노드의 요소 자식을 선택 합니다 **\<ContactName>** .  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- 이 예에서는 ** \<ContactName>** 이 XML 문서에서 ** \<Customer>** 요소의 자식 요소이 고 데이터베이스에 ContactName 필드가 필요 하지 않다고 가정 합니다.  
+ 이 예에서는이 **\<ContactName>** **\<Customer>** XML 문서에서 요소의 자식 요소이 고 ContactName 필드가 데이터베이스에 필요 하지 않다고 가정 합니다.  
   
- 이 예에서 `child`는 축이고, `Customer`노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. `not(child::ContactName)`는 조건자입니다. 조건자에서는 축 `child` 이 고 `ContactName` 는 노드 테스트 (가 `ContactName` \<요소> 노드) 인 경우 TRUE입니다.  
+ 이 예에서 `child`는 축이고, `Customer`노드 테스트 (가 노드인 경우 TRUE `Customer` )입니다 \<element> . `not(child::ContactName)`는 조건자입니다. 조건자에서는 `child` 축이 고 `ContactName` 는 노드 테스트 ( `ContactName` 가 노드인 경우 TRUE)입니다 \<element> .  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   
@@ -101,13 +102,13 @@ Customer[not(ContactName)]
 ```  
   
 ## <a name="selection-predicate-example-5"></a>선택 조건자: 예제 5  
- 다음 XPath 식은 현재 컨텍스트 노드에서 **CustomerID** 특성이 있는 모든 ** \<고객>** 자식을 선택 합니다.  
+ 다음 XPath 식은 CustomerID 특성이 있는 모든 자식을 현재 컨텍스트 노드에서 선택 합니다 **\<Customer>** . **CustomerID**  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- 이 예제 `child` 에서는 축과 `Customer` 노드 테스트 (가 `Customer` \<요소> 노드) 인 경우 TRUE입니다. `attribute::CustomerID`는 조건자입니다. 조건자에서는 축 `attribute` 이 고 `CustomerID` 는 조건자 (가 ** \<특성>** 노드) `CustomerID` 인 경우 TRUE입니다.  
+ 이 예제에서는 `child` 축과 `Customer` 노드 테스트 ( `Customer` 가 노드인 경우 TRUE)입니다 \<element> . `attribute::CustomerID`는 조건자입니다. 조건자에서는 `attribute` 축이 고 `CustomerID` 는 조건자 ( `CustomerID` 가 노드인 경우 TRUE)입니다 **\<attribute>** .  
   
  축약형 구문을 사용하여 XPath 쿼리를 다음과 같이 지정할 수도 있습니다.  
   

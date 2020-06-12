@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5edbd0ab8f713d227e4ef06307090b6079390869
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076686"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537135"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>다차원 데이터베이스의 호환성 수준 설정(Analysis Services)
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터베이스 호환성 수준 속성은 데이터베이스의 기능 수준을 결정합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어의 `1100` 호환성 수준은 데이터베이스가 다차원 인지 또는 테이블 형식 인지에 따라 의미가 다릅니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터베이스 호환성 수준 속성은 데이터베이스의 기능 수준을 결정합니다. 호환성 수준은 각 모델 유형에 고유합니다. 예를 들어의 호환성 수준은 `1100` 데이터베이스가 다차원 인지 또는 테이블 형식 인지에 따라 의미가 다릅니다.  
   
  이 항목에서는 다차원 데이터베이스의 호환성 수준에 대해서만 설명합니다. 테이블 형식 솔루션에 대 한 자세한 내용은 [호환성 수준 &#40;SSAS 테이블 형식 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조 하세요.  
   
 > [!NOTE]  
->  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준 `1103`은 다차원 모델에 없습니다. 테이블 형식 솔루션 `1103` 에 대 한 자세한 내용은 [SQL Server 2012 SP1 및 호환성 수준에서 테이블 형식 모델의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=301727) 을 참조 하세요.  
+>  테이블 형식 모델은 다차원 모델에 적용되지 않는 추가 데이터베이스 호환성 수준이 있습니다. 호환성 수준 `1103`은 다차원 모델에 없습니다. 테이블 형식 솔루션에 대 한 자세한 내용은 [SQL Server 2012 SP1 및 호환성 수준에서 테이블 형식 모델의 새로운 기능](https://go.microsoft.com/fwlink/?LinkId=301727) 을 참조 하세요 `1103` .  
   
  **다차원 데이터베이스의 호환성 수준**  
   
@@ -31,13 +30,13 @@ ms.locfileid: "66076686"
   
  다차원 데이터베이스에 대해 유효한 `CompatibilityLevel` 속성 값은 다음과 같습니다.  
   
-|설정|Description|  
+|설정|설명|  
 |-------------|-----------------|  
 |`1050`|이 값은 스크립트나 도구에 표시되지 않지만 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]또는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 만든 데이터베이스에 해당됩니다. `CompatibilityLevel`이 명시적으로 설정되지 않은 모든 데이터베이스는 `1050` 수준에서 암시적으로 실행됩니다.|  
-|`1100`|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 스토리지 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> 가 추가 속성 `CompatibilityLevel` `1100` `StringStoresCompatibilityLevel`을 가져오도록 설정 된 데이터베이스는 파티션 및 차원에 대 한 대체 문자열 저장소를 선택할 수 있습니다.|  
+|`1100`|이 값은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 만드는 새 데이터베이스의 기본값입니다. 이 호환성 수준에서만 지원되는 기능(즉, 차원 특성의 증가된 문자열 스토리지 또는 문자열 데이터가 포함된 고유 카운트 측정값)을 사용할 수 있도록 이전 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 만든 데이터베이스에 대해 이 값을 지정할 수도 있습니다.<br /><br /> 가 `CompatibilityLevel` 추가 속성을 가져오도록 설정 된 데이터베이스는 `1100` `StringStoresCompatibilityLevel` 파티션 및 차원에 대 한 대체 문자열 저장소를 선택할 수 있습니다.|  
   
 > [!WARNING]  
->  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을로 `1100`높인 후에는 계속 해 서 새 서버에서 데이터베이스를 실행 해야 합니다. 로 `1050`롤백할 수 없습니다. 또는 `1100` [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]보다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전인 서버 버전에서는 데이터베이스를 연결 하거나 복원할 수 없습니다.  
+>  데이터베이스 호환성 수준을 더 높여서 설정하는 경우 되돌릴 수 없습니다. 호환성 수준을로 높인 후에 `1100` 는 계속 해 서 새 서버에서 데이터베이스를 실행 해야 합니다. 로 롤백할 수 없습니다 `1050` . 또는 보다 이전 버전인 서버 버전에서는 데이터베이스를 연결 하거나 복원할 수 없습니다 `1100` [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  데이터베이스 호환성 수준은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 도입되었습니다. 데이터베이스 호환성 수준을 보거나 설정하려면 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 이상이 있어야 합니다.  
@@ -84,7 +83,7 @@ ms.locfileid: "66076686"
   
 1.  다른 데이터베이스에서 파티션을 병합하는 경우 두 데이터베이스의 호환성 수준이 같아야 합니다.  
   
-2.  다른 데이터베이스의 연결된 차원을 사용하려면 호환성 수준이 같아야 합니다. 예 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 를 들어 데이터베이스의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스에서 연결 된 차원을 사용 하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 데이터베이스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 서버로 이식 하 고 호환성 수준을로 `1100`설정 해야 합니다.  
+2.  다른 데이터베이스의 연결된 차원을 사용하려면 호환성 수준이 같아야 합니다. 예를 들어 데이터베이스의 데이터베이스에서 연결 된 차원을 사용 하려면 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스를 서버로 이식 하 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 고 호환성 수준을로 설정 해야 합니다 `1100` .  
   
 3.  서버 동기화는 동일한 버전과 데이터베이스 호환성 수준을 공유하는 서버에 대해서만 지원됩니다.  
   

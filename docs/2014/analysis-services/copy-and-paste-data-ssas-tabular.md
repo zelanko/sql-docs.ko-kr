@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086965"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526839"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>데이터 복사 및 붙여넣기(SSAS 테이블 형식)
   외부 애플리케이션에서 테이블 형식의 데이터를 복사하여 모델 디자이너의 신규 또는 기존 테이블에 붙여넣을 수 있습니다. Excel 또는 Word에서 복사한 데이터와 같은 클립보드에서 붙여넣는 데이터는 HTML 형식이어야 합니다. 모델 디자이너는 데이터 형식을 자동으로 감지하여 붙여넣은 데이터에 적용합니다. 사용자가 직접 열의 데이터 형식이나 서식을 수정할 수도 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66086965"
   
 -   [붙여넣기 미리 보기 대화 상자](#bkmk_paste_preview)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prerequisites"></a> 전제 조건  
  데이터를 붙여넣을 때 몇 가지 제한 사항이 있습니다.  
   
 -   붙여넣은 테이블은 10,000개 이상의 행을 가질 수 없습니다.  

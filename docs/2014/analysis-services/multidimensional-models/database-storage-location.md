@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075896"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547105"
 ---
 # <a name="database-storage-location"></a>데이터베이스 스토리지 위치
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 특정 데이터베이스를 서버 데이터 폴더 외부에 두어야 하는 경우가 종종 있습니다. 대개 성능 향상이나 스토리지 확장과 같은 비즈니스 요구 사항에 따라 특정 데이터베이스를 서버 데이터 폴더 외부에 둡니다. 이러한 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA는 `DbStorageLocation` 데이터베이스 속성을 사용하여 데이터베이스 위치를 로컬 디스크나 네트워크 디바이스에 지정할 수 있습니다.  
@@ -36,10 +35,10 @@ ms.locfileid: "66075896"
  `DbStorageLocation`은 모든 데이터베이스 데이터 및 메타데이터 파일이 위치할 폴더를 지정하는 반면 `StorageLocation`은 하나 이상의 큐브 파티션이 위치할 폴더를 지정합니다. `StorageLocation`은 `DbStorageLocation`과 별개로 설정할 수 있습니다. 이는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA가 예상 결과에 따라 결정하며 두 속성을 함께 사용하는 경우가 많습니다.  
   
 ## <a name="dbstoragelocation-usage"></a>DbStorageLocation 사용  
- 데이터베이스 `DbStorageLocation` 속성은 데이터베이스 명령 시퀀스 `Detach` / `Attach` `Backup` / `Create` `Restore` , 데이터베이스 명령 시퀀스 또는 `Synchronize` 데이터베이스 명령에서 데이터베이스 명령의 일부로 사용 됩니다. `DbStorageLocation` 데이터베이스 속성을 변경하면 데이터베이스 개체의 구조가 변경됩니다. 따라서 모든 메타데이터를 다시 만들고 데이터를 다시 처리해야 합니다.  
+ 데이터베이스 속성은 데이터베이스 명령 시퀀스, 데이터베이스 명령 `DbStorageLocation` `Create` `Detach` / `Attach` `Backup` / `Restore` 시퀀스 또는 `Synchronize` 데이터베이스 명령에서 데이터베이스 명령의 일부로 사용 됩니다. `DbStorageLocation` 데이터베이스 속성을 변경하면 데이터베이스 개체의 구조가 변경됩니다. 따라서 모든 메타데이터를 다시 만들고 데이터를 다시 처리해야 합니다.  
   
 > [!IMPORTANT]  
->  `Alter` 명령을 사용하여 데이터베이스 스토리지 위치를 변경해서는 안 됩니다. `Detach` / 대신 `Attach` 데이터베이스 명령 시퀀스를 사용 하는 것이 좋습니다 ( [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md), [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)참조).  
+>  `Alter` 명령을 사용하여 데이터베이스 스토리지 위치를 변경해서는 안 됩니다. 대신 데이터베이스 명령 시퀀스를 사용 하는 것이 좋습니다 `Detach` / `Attach` ( [Analysis Services 데이터베이스 이동](move-an-analysis-services-database.md), [Analysis Services 데이터베이스 연결 및 분리](attach-and-detach-analysis-services-databases.md)참조).  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070856"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547675"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>예측 계산기(Excel용 테이블 분석 도구)
   ![예측 계산기 도구](media/tat-predcal.gif "예측 계산기 도구")  
@@ -73,7 +72,7 @@ ms.locfileid: "66070856"
 -   이 섹션에서는 각 보고서에 있는 정보 및 여러 보고서 옵션 사용법에 대해 설명합니다.  
   
 ### <a name="prediction-report-with-graphs"></a>그래프가 포함된 예측 보고서  
- 첫 번째 예측 보고서에는 **대상 특성>의 \< \<대상 상태>에 대 한 예측 계산기 보고서 **라는 제목의 제목이 있습니다. 이 보고서에는 분석에서 파생된 요인의 테이블과 특정 분석의 재무 효과를 평가하는 데 사용할 수 있는 도구가 들어 있습니다.  
+ 첫 번째 예측 보고서는 ** \<target state> 의 \<target attribute> 에 대 한 예측 계산기 보고서 **라는 제목의 제목을 갖습니다. 이 보고서에는 분석에서 파생된 요인의 테이블과 특정 분석의 재무 효과를 평가하는 데 사용할 수 있는 도구가 들어 있습니다.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>비용 및 수익을 지정할 수 있는 테이블  
  보고서의 왼쪽 위에 있는 이 보고서의 첫 번째 도구는 값을 올바르게 또는 잘못 예측하는 것과 관련된 비용과 수익을 지정할 수 있는 테이블입니다.  이러한 비용/수익은 계산기의 최적 점수 임계값을 계산하는 데 필요합니다.  
@@ -97,7 +96,7 @@ ms.locfileid: "66070856"
   
  **상대적 영향** 열의 값은 백분율로 표시 되는 확률입니다. 이 값이 결과에 미치는 영향을 시각적으로 나타내기 위해 셀에 음영이 표시됩니다.  
   
-|attribute|값|상대적 영향|  
+|특성|값|상대적 영향|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Single|71|  
@@ -120,14 +119,14 @@ ms.locfileid: "66070856"
  예를 들어 첫 번째 차트를 보면 모델에서 예측한 최상위 500명의 고객을 대상으로 하는 것이 수익을 최대화할 수 있는 방법이지만 두 번째 차트를 보고 대상 고객을 잘못 선정하는 비용이 너무 크다고 생각되면 마케팅 캠페인 대상을 처음 400명의 고객으로 한정하는 결정을 내릴 수 있습니다.  
   
 ### <a name="interactive-prediction-calculator"></a>대화형 예측 계산기  
- 예측 계산기 도구에서 만든 두 번째 워크시트는 대상 **특성>의 \< \<대상 상태>에 대 한 예측 계산기 **제목입니다. 이 워크시트는 개별 점수를 계산하는 데 사용할 수 있는 대화형 워크시트입니다. 이 워크시트는 모델에 저장된 패턴 및 통계를 사용하므로 여러 가지 값을 테스트하여 이 값이 예측 점수에 미치는 영향을 확인해 볼 수 있습니다. 이 보고서에는 두 개의 섹션도 있습니다. 하나는 대화형 이며 하나는 참조로 제공 됩니다.  
+ 예측 계산기 도구에서 만든 두 번째 워크시트는 ** \<target state> 의 \<target attribute> 에 대 한 예측 계산기 **제목입니다. 이 워크시트는 개별 점수를 계산하는 데 사용할 수 있는 대화형 워크시트입니다. 이 워크시트는 모델에 저장된 패턴 및 통계를 사용하므로 여러 가지 값을 테스트하여 이 값이 예측 점수에 미치는 영향을 확인해 볼 수 있습니다. 이 보고서에는 두 개의 섹션도 있습니다. 하나는 대화형 이며 하나는 참조로 제공 됩니다.  
   
 #### <a name="first-table"></a>첫 번째 테이블  
  테이블의 **값** 열에서 새 값을 선택 하거나 입력 하 여 값 변경이 점수에 미치는 영향을 확인할 수 있습니다.  
   
  예를 들어 보고서에 다음 값이 있는 경우 Cars의 값을 1로 변경했다가 다시 0으로 변경하여 이에 따라 고객의 구매 동작이 어떻게 변경되는지 확인할 수 있습니다. **자동차** 값을 0으로 변경 하면 아래쪽의 예측이 TRUE로 변경 됩니다.  
   
-|attribute|값|상대적 영향|  
+|특성|값|상대적 영향|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |성별|Male|0|  
@@ -152,11 +151,11 @@ ms.locfileid: "66070856"
  이 테이블은 입력 열의 가능한 각 상태에 대한 개별 점수 및 이 점수가 결과에 미치는 상대적인 영향을 보여 줍니다. 이 테이블은 정적이며 참조용으로만 사용됩니다.  
   
 ### <a name="printable-prediction-calculator"></a>인쇄 가능한 예측 계산기  
- 예측 계산기 도구에서 만든 세 번째 워크시트는 대상 **특성>의 \< \<대상 상태>에 대해 printableprediction 계산기 **라는 제목의 제목입니다. 이 점수표를 인쇄하여 컴퓨터를 사용하지 않고 직접 점수를 계산할 수 있습니다.  
+ 예측 계산기 도구에서 만든 세 번째 워크시트의 제목은 ** \<target state> 의 \<target attribute> 에 대 한 Printableprediction 계산기 **입니다. 이 점수표를 인쇄하여 컴퓨터를 사용하지 않고 직접 점수를 계산할 수 있습니다.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>예측 계산기에서 생성된 점수 계산 보고서를 인쇄하고 사용하려면  
   
-1.  **특성>의 \<인쇄 가능한 예측 계산기 **탭을 클릭 합니다.  
+1.  **에 대해 \<attribute> 인쇄 가능한 예측 계산기 **탭을 클릭 합니다.  
   
 2.  Excel 파일 메뉴에서 **인쇄 미리 보기**를 선택 합니다.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070856"
 8.  시트의 **합계** 행 바로 다음에 인쇄 된 조건을 사용 하 여 점수를 예측 된 결과로 변환 합니다.  
   
 ## <a name="related-tools"></a>관련 도구  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에는 이러한 종류의 분석에 사용할 수 있는 Microsoft 로지스틱 회귀 알고리즘이 제공됩니다. 로지스틱 회귀를 이미 잘 알고 있는 경우 Excel 용 데이터 마이닝 클라이언트의 **고급** 옵션을 사용 하 여 로지스틱 회귀 모델을 쉽게 만들 수 있습니다. 자세한 내용은 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)을 참조 하세요. 로지스틱 회귀 모델에 대 한 옵션 및 매개 변수에 대 한 자세한 내용은 온라인 설명서의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에는 이러한 종류의 분석에 사용할 수 있는 Microsoft 로지스틱 회귀 알고리즘이 제공됩니다. 로지스틱 회귀를 이미 잘 알고 있는 경우 Excel 용 데이터 마이닝 클라이언트의 **고급** 옵션을 사용 하 여 로지스틱 회귀 모델을 쉽게 만들 수 있습니다. 자세한 내용은 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)을 참조 하세요. 로지스틱 회귀 모델에 대 한 옵션 및 매개 변수에 대 한 자세한 내용은 온라인 설명서의 "Microsoft 로지스틱 회귀 알고리즘" 항목을 참조 하십시오 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [Excel용 테이블 분석 도구](table-analysis-tools-for-excel.md)  

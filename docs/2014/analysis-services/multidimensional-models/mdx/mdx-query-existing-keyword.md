@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115444c832fe8fe9b258a0c23b97b97553f32e8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546215"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 키워드(MDX)
   지정한 집합이 현재 컨텍스트 내에서 계산되도록 합니다.  
@@ -39,7 +38,7 @@ Existing Set_Expression
  기본적으로 집합은 집합의 멤버가 포함된 큐브의 컨텍스트 내에서 계산됩니다. 그러나 `Existing` 키워드는 지정된 집합이 현재 컨텍스트 내에서 계산되도록 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 `Aggregate` 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. 그러나 [Hierarchize&#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 및 [DrilldownLevel(MDX)](/sql/mdx/drilldownlevel-mdx) 함수는 Product 차원의 제품 범주에 대해 판매량 감소 값을 반환하는 데 사용됩니다. 키워드 `Existing` 는 현재 컨텍스트에서 (즉, `Filter` 시/도 특성 계층의 워싱턴 및 Oregon 멤버에 대 한) 함수의 집합을 강제로 계산 합니다.  
+ 다음 예에서는 사용자가 선택한 State-Province 멤버에 대해 `Aggregate` 함수를 사용하여 계산한 값에 따라 이전 기간에 비해 판매량이 감소한 대리점의 수를 반환합니다. 그러나 [Hierarchize&#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 및 [DrilldownLevel(MDX)](/sql/mdx/drilldownlevel-mdx) 함수는 Product 차원의 제품 범주에 대해 판매량 감소 값을 반환하는 데 사용됩니다. `Existing`키워드는 `Filter` 현재 컨텍스트에서 (즉, 시/도 특성 계층의 워싱턴 및 Oregon 멤버에 대 한) 함수의 집합을 강제로 계산 합니다.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

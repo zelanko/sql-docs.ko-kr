@@ -1,5 +1,6 @@
 ---
 title: Access 데이터베이스 파일 추가 및 제거 (AccessToSQL) | Microsoft Docs
+description: SQL Server 또는 Azure SQL Database 액세스 데이터를 마이그레이션하기 위해 SSMA 프로젝트에서 또는에서 Access 데이터베이스를 추가 하거나 제거 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,21 +29,21 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6806792fa828a5ebb4ea3a7a5a7e813626bff523
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104208"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293690"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access 데이터베이스 파일 추가 및 제거 (AccessToSQL)
-액세스 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 ssma 프로젝트에 하나 이상의 access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 97 이상 버전에 액세스 해야 합니다. 이전 버전의 Access에서 데이터베이스를 사용 하는 경우 데이터베이스를 최신 버전으로 변환 해야 합니다. 이렇게 하려면 SSMA에 추가 하기 전에 Access 97 이상 버전에서 데이터베이스를 열고 저장 합니다.  
+액세스 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 SSMA 프로젝트에 하나 이상의 access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 97 이상 버전에 액세스 해야 합니다. 이전 버전의 Access에서 데이터베이스를 사용 하는 경우 데이터베이스를 최신 버전으로 변환 해야 합니다. 이렇게 하려면 SSMA에 추가 하기 전에 Access 97 이상 버전에서 데이터베이스를 열고 저장 합니다.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>Access 데이터베이스 파일을 추가 하면 어떻게 되나요?  
-SSMA 프로젝트에 Access 데이터베이스를 추가 하는 경우 SSMA는 데이터베이스 메타 데이터를 읽은 다음이 메타 데이터를 프로젝트 파일에 추가 합니다. 이 메타 데이터는 데이터베이스 및 해당 개체에 대해 설명 합니다. SSMA는 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 구문으로 변환 하는 경우와 데이터를 또는 SQL Azure으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션하는 경우 메타 데이터를 사용 합니다. 액세스 메타 데이터 탐색기에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
+SSMA 프로젝트에 Access 데이터베이스를 추가 하는 경우 SSMA는 데이터베이스 메타 데이터를 읽은 다음이 메타 데이터를 프로젝트 파일에 추가 합니다. 이 메타 데이터는 데이터베이스 및 해당 개체에 대해 설명 합니다. SSMA는 개체를 또는 SQL Azure 구문으로 변환 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 데이터를 또는 SQL Azure으로 마이그레이션하는 경우 메타 데이터를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 액세스 메타 데이터 탐색기에서이 메타 데이터를 찾아보고 개별 데이터베이스 개체의 속성을 검토할 수 있습니다.  
   
 > [!NOTE]  
-> Access 데이터베이스는 테이블이 포함 된 백 엔드 데이터베이스와 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기를 포함 하는 프런트 엔드 데이터베이스 등 여러 파일로 분할할 수 있습니다. 분할 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 프런트 엔드 데이터베이스를 ssma에 추가 합니다.  
+> Access 데이터베이스는 테이블이 포함 된 백 엔드 데이터베이스와 쿼리, 폼, 보고서, 매크로, 모듈 및 바로 가기를 포함 하는 프런트 엔드 데이터베이스 등 여러 파일로 분할할 수 있습니다. 분할 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 프런트 엔드 데이터베이스를 SSMA에 추가 합니다.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>SSMA에 필요한 사용 권한  
 Access 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션하려면 Users 그룹과 Admin 사용자에 게 관리자 권한이 있어야 합니다. 작업 그룹 보호를 사용 하 여 데이터베이스를 마이그레이션하는 방법에 대 한 자세한 내용은 [마이그레이션을 위해 Access 데이터베이스 준비](preparing-access-databases-for-migration-accesstosql.md)를 참조 하세요.  

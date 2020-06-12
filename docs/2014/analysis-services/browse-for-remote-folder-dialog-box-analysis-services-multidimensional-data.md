@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a4b8978c895d1da2b9e63f4e66a39f2f0fff478
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527819"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>원격 폴더 찾아보기 대화 상자(Analysis Services - 다차원 데이터)
   **원격 폴더 찾아보기** 대화 상자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 대해 정의된 사용 가능한 로그 및 데이터 폴더 목록을 표시합니다. 나열된 폴더 중 하나를 선택하거나 필요한 경우 다른 폴더를 지정할 수 있습니다. **원격 폴더 찾아보기** 대화 상자는 다음 단계 중 하나를 수행하면 표시됩니다.  

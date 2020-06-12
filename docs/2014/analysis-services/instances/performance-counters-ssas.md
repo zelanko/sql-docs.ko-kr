@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079706"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543835"
 ---
 # <a name="performance-counters-ssas"></a>성능 카운터(SSAS)
   성능 모니터를 사용하면 성능 카운터를 사용하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 성능을 모니터링할 수 있습니다.  
@@ -30,13 +29,13 @@ ms.locfileid: "66079706"
   
 ## <a name="counters-by-groups"></a>그룹별 카운터  
   
-|그룹|설명|  
+|그룹화|설명|  
 |-----------|-----------------|  
 |[캐시](#bkmk_Cache)|Analysis  Services  집계 캐시와 관련된 통계입니다.|  
 |[연결](#bkmk_Connection)|Microsoft  Analysis  Services  연결과 관련된 통계입니다.|  
 |[데이터 마이닝 예측](#bkmk_DataMiningPrediction)|데이터 마이닝 모델 처리와 관련된 통계입니다.|  
 |[데이터 마이닝 모델 처리](#bkmk_DataMiningModelProcessing)|데이터 마이닝 모델에서 예측을 만드는 것과 관련된 통계입니다.|  
-|[잠금](#bkmk_Locks)|Microsoft  Analysis  Services  내부 서버 잠금과 관련된 통계입니다.|  
+|[중지](#bkmk_Locks)|Microsoft  Analysis  Services  내부 서버 잠금과 관련된 통계입니다.|  
 |[MDX](#bkmk_MDX)|Microsoft  Analysis  Services  MDX  계산과 관련된 통계입니다.|  
 |[메모리](#bkmk_Memory)|Microsoft  Analysis  Services  내부 서버 메모리와 관련된 통계입니다.|  
 |[자동 관리 캐싱](#bkmk_ProactiveCaching)|Microsoft  Analysis  Services  자동 관리 캐싱과 관련된 통계입니다.|  
@@ -49,7 +48,7 @@ ms.locfileid: "66079706"
 ###  <a name="cache"></a><a name="bkmk_Cache"></a>캐시  
  Microsoft  Analysis  Services  집계 캐시와 관련된 통계입니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |Current  KB|집계 캐시에서 사용하는 현재 메모리(KB)입니다.|  
 |KB  added/sec|캐시에 추가된 메모리 속도(KB/초)입니다.|  
@@ -71,7 +70,7 @@ ms.locfileid: "66079706"
 ###  <a name="connection"></a><a name="bkmk_Connection"></a>연결  
  Microsoft  Analysis  Services  연결과 관련된 통계입니다.  
   
-|카운터|설명|  
+|카운터|Description|  
 |-------------|-----------------|  
 |현재 연결|현재 설정된 클라이언트 연결 수입니다.|  
 |요청/초|도착한 연결 요청  연결 요청 수입니다.|  
@@ -318,7 +317,7 @@ ms.locfileid: "66079706"
 |Aggregation  lookups/sec|집계 조회 비율입니다.|  
 |Aggregation  hits/sec|집계 적중 비율입니다.|  
   
-###  <a name="threads"></a><a name="bkmk_Threads"></a>임계값  
+###  <a name="threads"></a><a name="bkmk_Threads"></a> 스레드  
  Microsoft  Analysis  Services  스레드와 관련된 통계입니다.  
   
 |카운터|설명|  

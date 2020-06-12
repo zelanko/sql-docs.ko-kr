@@ -12,17 +12,17 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e995fcdb128f7b9f67bb75ae41222c7d6d022d3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283176"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859841"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>옵션 (디자이너-유지 관리 계획 페이지)
   **옵션** 대화 상자를 사용하여 디자인 화면에 새 셰이프를 추가할 때의 디자이너 기본 동작을 결정할 수 있습니다. **도구** 메뉴에서 **옵션**을 클릭하고 **디자이너**를 확장한 다음 **유지 관리 계획**을 선택합니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **기본적으로 선택한 셰이프에 새 셰이프 연결**  
  이 확인란을 선택하면 디자인 화면에 새 셰이프를 추가할 때 해당 셰이프가 다른 셰이프에 자동으로 연결됩니다. 이 확인란의 선택을 취소하면 추가한 새 셰이프가 기존 셰이프에 연결되지 않습니다. 이 확인란을 선택하면 다음 상자가 활성화됩니다.  
   

@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: HT
+ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
+ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68213531"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721368"
 ---
 ## <a name="specifying-application-intent"></a>애플리케이션 의도 지정
 
@@ -54,5 +54,5 @@ ms.locfileid: "68213531"
 
 읽기 전용 라우팅을 사용하는 여러 연결 중 일부가 동일한 읽기 전용 복제본에 연결되지 않을 수 있습니다. 데이터베이스 동기화를 변경하거나 서버 라우팅 구성을 변경하면 클라이언트를 다른 읽기 전용 복사본에 연결할 수 있습니다. 모든 읽기 전용 요청이 동일한 읽기 전용 복제본에 연결되도록 할 수 있습니다. 가용성 그룹 수신기를 **서버** 연결 문자열 키워드에 전달하지 *않음*으로써 이 동일성을 확인합니다. 대신, 읽기 전용 인스턴스의 이름을 지정합니다.
 
-읽기 전용 라우팅은 주 복제본에 연결하는 것보다 시간이 더 오래 걸릴 수 있습니다. 대기 시간이 긴 이유는 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음, 가장 잘 읽을 수 있는 보조 복제본을 찾기 때문입니다. 이러한 여러 단계때문에 로그인 제한 시간을 30초 이상으로 늘려야 합니다.
+읽기 전용 라우팅은 주 복제본에 연결하는 것보다 시간이 더 오래 걸릴 수 있습니다. 대기 시간이 긴 이유는 읽기 전용 라우팅은 먼저 주 복제본에 연결한 다음, 가장 잘 읽을 수 있는 보조 복제본을 찾기 때문입니다. 이러한 여러 단계로 인해 로그인 제한 시간을 30 초 이상으로 늘려야 합니다.
 

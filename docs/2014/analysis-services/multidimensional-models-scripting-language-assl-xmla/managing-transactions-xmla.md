@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: f5112e01-82f8-4870-bfb7-caa00182c999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff1c60addd25b222905e33bc33e77dd85e88803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727235"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544965"
 ---
 # <a name="managing-transactions-xmla"></a>트랜잭션 관리(XMLA)
-  인스턴스로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 전송 되는 모든 XML for Analysis (XMLA) 명령은 현재 암시적 또는 명시적 세션의 트랜잭션 컨텍스트 내에서 실행 됩니다. 이러한 각 트랜잭션을 관리 하려면 [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [Committransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)및 [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) 명령을 사용 합니다. 이러한 명령을 사용하여 암시적 또는 명시적 트랜잭션을 만들거나 트랜잭션 참조 횟수를 변경하거나 트랜잭션을 시작, 커밋 또는 롤백할 수 있습니다.  
+  인스턴스로 전송 되는 모든 XML for Analysis (XMLA) 명령은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 현재 암시적 또는 명시적 세션의 트랜잭션 컨텍스트 내에서 실행 됩니다. 이러한 각 트랜잭션을 관리 하려면 [BeginTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/begintransaction-element-xmla), [Committransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/committransaction-element-xmla)및 [RollbackTransaction](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/rollbacktransaction-element-xmla) 명령을 사용 합니다. 이러한 명령을 사용하여 암시적 또는 명시적 트랜잭션을 만들거나 트랜잭션 참조 횟수를 변경하거나 트랜잭션을 시작, 커밋 또는 롤백할 수 있습니다.  
   
 ## <a name="implicit-and-explicit-transactions"></a>암시적 트랜잭션 및 명시적 트랜잭션  
  트랜잭션은 암시적이거나 명시적입니다.  
   
  **암시적 트랜잭션**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]명령이 트랜잭션 시작을 지정 하지 않는 경우 XMLA 명령에 대 한 암시적 트랜잭션을 만듭니다. *implicit* `BeginTransaction` [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 명령이 성공하는 경우 항상 암시적 트랜잭션을 커밋하고 명령이 실패하는 경우 암시적 트랜잭션을 롤백합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]*implicit* `BeginTransaction` 명령이 트랜잭션 시작을 지정 하지 않는 경우 XMLA 명령에 대 한 암시적 트랜잭션을 만듭니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 명령이 성공하는 경우 항상 암시적 트랜잭션을 커밋하고 명령이 실패하는 경우 암시적 트랜잭션을 롤백합니다.  
   
  **명시적 트랜잭션**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]명령이 트랜잭션의 시작 인 경우 명시적 트랜잭션을 만듭니다. *explicit* `BeginTransaction` 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 `CommitTransaction` 명령이 전송된 경우에만 명시적 트랜잭션을 커밋하고 `RollbackTransaction` 명령이 전송된 경우에는 명시적 트랜잭션을 롤백합니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]명령이 트랜잭션의 시작 인 경우 *명시적* 트랜잭션을 만듭니다 `BeginTransaction` . 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 `CommitTransaction` 명령이 전송된 경우에만 명시적 트랜잭션을 커밋하고 `RollbackTransaction` 명령이 전송된 경우에는 명시적 트랜잭션을 롤백합니다.  
   
  또한 활성 트랜잭션이 완료되기 전에 현재 세션이 끝나면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 암시적 트랜잭션과 명시적 트랜잭션을 모두 롤백합니다.  
   

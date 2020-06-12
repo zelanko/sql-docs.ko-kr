@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088087"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527539"
 ---
 # <a name="choosing-a-model"></a>모델 선택
   **마이닝 알고리즘:** 데이터 마이닝 *알고리즘* 은 데이터에서 패턴을 만드는 메커니즘입니다. 알고리즘은 데이터의 수를 세는 방법, 관계가 파생되는 방법 및 패턴을 저장하는 방법을 정의합니다. 분석할 데이터의 형식에 따라 선택할 알고리즘이 어느 정도는 달라집니다. 예를 들어 연속 숫자에서만 작동하는 알고리즘이 있는 반면 제한된 수의 고유 값에서 최상의 성능을 제공하는 알고리즘이 있습니다.  
@@ -104,7 +103,7 @@ ms.locfileid: "66088087"
 ## <a name="list-of-supported-algorithms"></a>지원되는 알고리즘 목록  
  다음은 기본적으로 제공되는 알고리즘입니다.  
   
-|알고리즘 이름|설명|사용 대상|  
+|알고리즘 이름|Description|사용 대상|  
 |--------------------|-----------------|-------------|  
 |Microsoft 연결 규칙|트랜잭션 내에 함께 나타날 가능성이 높은 항목을 설명하는 규칙을 작성합니다.|[Excel 용 데이터 마이닝 클라이언트 &#40;마법사 연결&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [시장 바구니 분석 &#40;Table AnalysisTools for Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft 클러스터링|일시적인 관찰만으로는 논리적으로 이끌어 내지 못할 수 있는 데이터 세트 내 관계를 식별합니다. 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 레코드를 그룹화합니다.|[Excel 용 테이블 분석 도구 &#40;범주 검색&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [클러스터 마법사는 Excel 용 데이터 마이닝 추가 기능을 &#40;&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

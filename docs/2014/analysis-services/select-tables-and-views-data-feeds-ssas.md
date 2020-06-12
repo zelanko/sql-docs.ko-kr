@@ -12,12 +12,12 @@ ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee72d4347e85851388b4a4ab1f4d29b33a89134
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069277"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858128"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>테이블 및 뷰 선택(데이터 피드)(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 가져올 데이터가 포함되어 있는 테이블과 뷰를 선택할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069277"
   
  Windows 인증을 사용하는 데이터 원본의 경우 현재 사용자의 자격 증명을 사용하여 테이블 및 뷰 선택 대화 상자에서 테이블 및 뷰를 가져옵니다. 기타 데이터 원본의 경우 연결 문자열에 제공된 자격 증명을 사용하여 데이터를 가져옵니다.  
   
-## <a name="uielement-list"></a>UIElement 목록  
+## <a name="ui-element-list"></a>UI 요소 목록  
  **데이터 피드 URL**  
  선택한 데이터 피드의 URL을 표시합니다.  
   

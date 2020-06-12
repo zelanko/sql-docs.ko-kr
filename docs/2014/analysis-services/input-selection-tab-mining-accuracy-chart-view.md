@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4331773f9c80fee37de1c145beeafd37cee2466d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080418"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544155"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>입력 선택 탭(마이닝 정확도 차트 뷰)
   **마이닝 정확도 차트** 디자이너의 **입력 선택** 탭을 사용하여 모델을 테스트하고 정확도 차트를 작성하는 데 사용되는 데이터 원본을 지정할 수 있습니다.  

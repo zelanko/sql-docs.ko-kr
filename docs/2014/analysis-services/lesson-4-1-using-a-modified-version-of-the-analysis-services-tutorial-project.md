@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6c55141db6491fe1532dfcdc37a6d7a688c7274
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543365"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services Tutorial 프로젝트의 수정된 버전 사용
   이 자습서의 나머지 단원은 처음 세 단원에서 완료한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 향상된 버전을 기반으로 합니다. 추가 테이블과 명명된 계산이 **Adventure Works DW 2012** 데이터 원본 뷰에 추가되고 추가 차원이 프로젝트에 추가되었으며 이러한 새 차원이 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 추가되었습니다. 또한 두 번째 팩트 테이블에서 가져온 측정값을 포함하는 두 번째 측정값 그룹이 추가되었습니다. 이 향상된 프로젝트를 사용하면 이미 배운 기술을 반복하지 않아도 비즈니스 인텔리전스 애플리케이션에 기능을 추가하는 방법을 계속 익힐 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "69493940"
 ### <a name="data-source-view"></a>데이터 원본 뷰  
  향상된 프로젝트의 데이터 원본 뷰에는 추가 팩트 테이블 하나와 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스에서 가져온 추가 차원 테이블 4개가 포함됩니다.  
   
- 데이터 원본 뷰에서 10 개의 테이블을 사용 하면 모든 테이블> \<다이어그램의 내용이 가득 차게 됩니다. 이렇게 되면 테이블 간의 관계를 파악하고 특정 테이블을 찾기가 어려워집니다. 이 문제를 해결하기 위해 테이블은 두 개의 논리적 다이어그램인 **Internet Sales** 다이어그램과 **Reseller Sales** 다이어그램으로 구성됩니다. 이러한 다이어그램은 하나의 팩트 테이블 주위에 각각 구성됩니다. 논리적 다이어그램을 만들면 항상 하나의 다이어그램에서 모든 테이블과 관계를 보는 대신 데이터 원본 뷰에서 특정 테이블 하위 집합을 보면서 작업할 수 있습니다.  
+ 데이터 원본 뷰의 테이블이 10개가 되면 \<All Tables> 다이어그램이 복잡해지기 시작합니다. 이렇게 되면 테이블 간의 관계를 파악하고 특정 테이블을 찾기가 어려워집니다. 이 문제를 해결하기 위해 테이블은 두 개의 논리적 다이어그램인 **Internet Sales** 다이어그램과 **Reseller Sales** 다이어그램으로 구성됩니다. 이러한 다이어그램은 하나의 팩트 테이블 주위에 각각 구성됩니다. 논리적 다이어그램을 만들면 항상 하나의 다이어그램에서 모든 테이블과 관계를 보는 대신 데이터 원본 뷰에서 특정 테이블 하위 집합을 보면서 작업할 수 있습니다.  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales 다이어그램  
  **Internet Sales** 다이어그램에는 인터넷을 통해 고객과 직접 이루어지는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 제품 판매와 관련된 테이블이 있습니다. 다이어그램의 테이블은 1단원에서 **Adventure Works DW 2012** 데이터 원본 뷰에 추가한 차원 테이블 4개와 팩트 테이블 1개입니다. 이러한 테이블은 다음과 같습니다.  
@@ -67,7 +66,7 @@ ms.locfileid: "69493940"
   
 -   **Date**  
   
--   **제품은**  
+-   **제품**  
   
 -   **InternetSales**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "69493940"
   
 -   **Date**  
   
--   **제품은**  
+-   **제품**  
   
 -   **Employee**  
   

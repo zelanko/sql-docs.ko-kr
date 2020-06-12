@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f3bd5278-3a83-4fd9-9903-e81bdd4b6892
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4720d361fdd9a7d93d91f5e8fe873473816c2ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96e3e434e8f4ff3d8df4b4837bffb0d96649741
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070674"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540005"
 ---
 # <a name="process-progress-dialog-box-analysis-services---multidimensional-data"></a>처리 진행률 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 처리 진행률 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서의 처리 상황을 모니터링할 수 있습니다. **처리 진행률** 대화 상자는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체 처리를 시작할 때 표시됩니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7501cf316773ffc2aa8cc13cadb27cf16b50df90
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082004"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528749"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>기간 정의(데이터 원본)(차원 마법사)
   **기간 정의** 페이지를 사용하여 **차원 유형 선택** 페이지에서 지정한 테이블의 열로 시간 차원의 기간을 나타내는 특성을 정의할 수 있습니다.  

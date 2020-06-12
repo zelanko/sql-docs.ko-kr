@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 494b3a6e4c05a88e68da34aca34bfbdce2944fbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069928"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538565"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>스크립트 구성 도우미(계산 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **계산** 탭에 있는 **스크립트 구성 도우미** 창을 사용하여 지정한 큐브에 대한 큐브 스크립트에 포함된 계산 멤버, 명명된 집합 및 스크립트 명령에 액세스하고 다시 정렬할 수 있습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66069928"
   
  계산의 실행 순서를 변경하려면 **도구 모음** 창 또는 상황에 맞는 메뉴에서 **위로 이동** 또는 **아래로 이동** 을 클릭합니다.  
   
- **Type**  
+ **형식**  
  계산을 계산 멤버, 명명된 집합 또는 스크립트 명령으로 식별하는 아이콘을 표시합니다.  
   
  **명령**  
@@ -49,7 +48,7 @@ ms.locfileid: "66069928"
 |**새 스크립트 명령**|**스크립트 편집기** 를 표시하고 새 스크립트 명령을 만들려면 선택합니다. **스크립트 편집기**에 대 한 자세한 내용은 [스크립트 편집기 &#40;계산 탭, 큐브 디자이너&#41; &#40;Analysis Services-다차원 데이터&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md)를 참조 하세요.|  
 |**위로 이동**|선택한 계산을 한 단계 위로 이동하려면 선택합니다.<br /><br /> 참고: 선택한 계산을 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
 |**아래로 이동**|선택한 계산을 한 단계 아래로 이동하려면 선택합니다.<br /><br /> 참고: 선택한 계산을 더 이상 이동할 수 없는 경우 이 옵션을 사용할 수 없습니다.|  
-|**Delete**|선택한 계산을 삭제하려면 선택합니다.|  
+|**삭제**|선택한 계산을 삭제하려면 선택합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [큐브 디자이너 &#40;Analysis Services 다차원 데이터&#41;](cube-designer-analysis-services-multidimensional-data.md)   

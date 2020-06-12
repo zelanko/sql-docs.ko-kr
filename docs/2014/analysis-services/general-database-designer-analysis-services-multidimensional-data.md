@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081078"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544491"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>일반(데이터베이스 디자이너)(Analysis Services - 다차원 데이터)
   **일반** 탭을 사용하여 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스의 속성을 변경할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "66081078"
  **언어**  
  지정한 트랜잭션의 언어를 선택합니다.  
   
- 새 번역을 표에 추가 하려면 ** \<새 번역 추가>** 를 클릭 합니다.  
+ 표에 새 번역을 추가 하려면를 클릭 **\<Add new translation>** 합니다.  
   
  **번역 된 캡션**  
  번역에 해당하는 언어로 데이터베이스 캡션을 입력합니다. 공백인 경우 기본 데이터베이스 캡션이 사용됩니다.  
@@ -67,9 +66,9 @@ ms.locfileid: "66081078"
  **이름**  
  계정 유형의 이름을 입력합니다.  
   
- 새 계정 유형을 추가 하려면 ** \<새 계정 유형 추가>** 를 클릭 합니다.  
+ 새 계정 유형을 추가 하려면를 클릭 **\<Add new account type>** 합니다.  
   
- **앤티앨리어스**  
+ **Alias**  
  비즈니스 인텔리전스 마법사에서 사용할 계정 유형의 기본 이름을 설정합니다. 이 열을 비워 두면 **이름** 열의 기본값이 사용됩니다.  
   
  **집계 함수**  

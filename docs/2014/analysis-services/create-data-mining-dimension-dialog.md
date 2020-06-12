@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 607eb9cf7f42c1118c1e9fd3dfd2a20b3bbfd6e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086957"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526729"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>데이터 마이닝 차원 만들기 대화 상자
   **데이터 마이닝 차원 만들기** 대화 상자를 사용하여 OLAP 마이닝 모델을 기반으로 하는 새 데이터 마이닝 차원을 만들 수 있습니다.  

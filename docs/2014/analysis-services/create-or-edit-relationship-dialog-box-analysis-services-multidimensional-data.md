@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b18a0b6c79a3787af4a55a473e5203daf9c7308f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086783"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526487"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>관계 만들기 또는 편집 대화 상자(Analysis Services - 다차원 데이터)
   **의** 관계 만들기/편집 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 데이터 원본 뷰에서 관계를 정의하거나 수정할 수 있습니다. 다음과 같은 방법으로 **관계 만들기/편집** 대화 상자를 표시할 수 있습니다.  

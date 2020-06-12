@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d34bd76a4e5a0ecb183d8e8db5b96bf3e98114
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074884"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546655"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>처리 권한 부여(Analysis Services)
   관리자는 Analysis Services 처리 작업의 전용 역할을 만들어, 다른 사용자 또는 자동 일정 처리를 위해 사용되는 애플리케이션에 특정 작업을 위임할 수 있습니다. 처리 권한은 데이터베이스,  큐브,  차원 및 마이닝 구조 수준에서 부여할 수 있습니다. 대규모 큐브 또는 테이블 형식 데이터베이스에서 작업하지 않는다면 서로 종속된 개체를 비롯한 모든 개체를 포함하여 데이터베이스 수준에서 처리 권한을 부여하는 것이 좋습니다.  
@@ -35,9 +34,9 @@ ms.locfileid: "66074884"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
-2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
+2.  **역할**  |  **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
   
-3.  **일반** 창에서 `Process Database` 확인란을 선택 합니다. 또한를 선택 `Read Definition` 하 여와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]같은 SQL Server 도구 중 하나를 통해 대화형 처리를 사용 하도록 설정 합니다.  
+3.  **일반** 창에서 확인란을 선택 `Process Database` 합니다. 또한를 선택 `Read Definition` 하 여와 같은 SQL Server 도구 중 하나를 통해 대화형 처리를 사용 하도록 설정 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.  
   
 4.  **멤버 자격** 창에서 이 데이터베이스의 모든 개체를 처리할 수 있는 권한을 가진 Windows 사용자 및 그룹 계정을 추가합니다.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66074884"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
-2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
+2.  **역할**  |  **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다.  
   
-3.  **일반** 창에서 `Process Database` 확인란의 선택을 취소 합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
+3.  **일반** 창에서 확인란의 선택을 취소 `Process Database` 합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
   
-     기술적으로, 전용 처리 역할의 경우 데이터베이스 권한은 필요하지 않습니다. 그러나 데이터베이스 `Read Definition` 수준에서가 없으면에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스를 볼 수 없으므로 테스트가 더 어려워집니다.  
+     기술적으로, 전용 처리 역할의 경우 데이터베이스 권한은 필요하지 않습니다. 그러나 `Read Definition` 데이터베이스 수준에서가 없으면에서 데이터베이스를 볼 수 없으므로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 테스트가 더 어려워집니다.  
   
 4.  처리할 개별 개체를 선택합니다.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "66074884"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>데이터 마이닝 구조에 대한 처리 권한 설정  
  데이터 마이닝 구조를 처리할 수 있는 권한을 부여하는 역할을 만들 수 있습니다. 여기에는 모든 마이닝 모델의 처리가 포함됩니다.  
   
- **Drill Through** 마이닝 모델 및 `Read Definition` 구조를 검색 하는 데 사용 되는 드릴스루 및 사용 권한은 원자성 이며 동일한 역할에 추가 하거나 다른 역할로 구분할 수 있습니다.  
+ **Drill Through** `Read Definition` 마이닝 모델 및 구조를 검색 하는 데 사용 되는 드릴스루 및 사용 권한은 원자성 이며 동일한 역할에 추가 하거나 다른 역할로 구분할 수 있습니다.  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 데이터베이스 폴더를 열고 데이터베이스를 선택합니다.  
   
-2.  **역할** | **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다. **일반** 창에서 데이터베이스 권한 확인란을 선택 취소합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
+2.  **역할**  |  **새 역할**을 마우스 오른쪽 단추로 클릭 합니다. 이름 및 설명을 입력합니다. **일반** 창에서 데이터베이스 권한 확인란을 선택 취소합니다. 데이터베이스 권한은 역할 옵션을 회색으로 표시하거나 선택하지 못하도록 설정하여 하위 수준의 개체에 대한 권한을 설정하는 기능을 재정의합니다.  
   
 3.  **마이닝 구조** 창에서 각 마이닝 구조에 대한 **처리** 확인란을 선택합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078426"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542565"
 ---
 # <a name="lesson-7-create-measures"></a>7단원: 측정값 만들기
   이 단원에서는 모델에 포함할 측정값을 만듭니다. 이전 단원에서 만든 계산 열과 마찬가지로 측정값은 기본적으로 DAX 수식을 사용해 만든 계산입니다. 그러나 계산 열과는 달리 측정값은 사용자가 선택한 *필터*를 기반으로 계산됩니다. 피벗 테이블의 행 레이블 필드에 추가된 특정 열이나 슬라이서를 예로 들 수 있습니다.   그러면 필터의 각 셀에 대한 값이 적용된 측정값으로 계산됩니다. 측정값은 숫자 데이터에 대해 동적 계산을 수행하기 위해 대부분의 테이블 형식 모델에 포함할 수 있는 강력하고 유연한 계산입니다. 자세한 내용은 [측정값&#40;SSAS 테이블 형식&#41;](tabular-models/measures-ssas-tabular.md)을 참조하세요.  
@@ -49,7 +48,7 @@ ms.locfileid: "66078426"
   
      이제 왼쪽 위 셀에 **Measure 1**이라는 측정값 이름과 **30**이라는 결과 값이 표시됩니다. 측정값 이름은 수식 입력줄의 수식 앞에도 표시됩니다.  
   
-5.  측정값의 이름을 바꾸려면 수식 입력줄에서 **measure 1**을 강조 표시 한 다음를 입력 `Days Current Quarter to Date`하 고 enter 키를 누릅니다.  
+5.  측정값의 이름을 바꾸려면 수식 입력줄에서 **measure 1**을 강조 표시 한 다음를 입력 하 `Days Current Quarter to Date` 고 enter 키를 누릅니다.  
   
     > [!TIP]  
     >  수식 입력줄에서 수식을 입력할 때 먼저 측정값 이름을 입력한 다음 콜론(:), 공백, 수식을 차례로 입력해도 됩니다. 이 방법을 사용하면 측정값 이름을 바꿀 필요가 없습니다.  
@@ -88,7 +87,7 @@ ms.locfileid: "66078426"
   
 1.  자동 합계 기능을 사용하여 다음 측정값을 만들고 이름을 지정합니다.  
   
-    |측정값 이름|열|자동 합계(∑)|수식|  
+    |측정값 이름|열|자동 합계(∑)|Formula|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|개수|=COUNT([Sales Order Line Number])|  
     |Internet Total Units|Order Quantity|합계|=SUM([Order Quantity])|  
@@ -104,7 +103,7 @@ ms.locfileid: "66078426"
     > [!IMPORTANT]  
     >  다음 측정값에서 뒤에 나오는 측정값의 수식은 이전 측정값을 참조하므로 순서대로 측정값을 만들어야 합니다.  
   
-    |측정값 이름|수식|  
+    |측정값 이름|Formula|  
     |------------------|-------------|  
     |Internet Previous Quarter Margin|=CALCULATE([Internet Total Margin],PREVIOUSQUARTER('Date'[Date]))|  
     |Internet Current Quarter Margin|=TOTALQTD([Internet Total Margin],'Date'[Date])|  

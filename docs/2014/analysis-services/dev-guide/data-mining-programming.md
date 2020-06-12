@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd4bd48b5914d5fda89f94c0a959e670ffec3321
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732269"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528679"
 ---
 # <a name="data-mining-programming"></a>데이터 마이닝 프로그래밍
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 제공 도구 및 뷰어가 사용자의 요구 사항을 충족시키지 못할 경우 사용자 고유의 확장을 코딩하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 에서는 클라이언트 응용 프로그램과의 통신을 위한 프로토콜로 XMLA (XML for Analysis)를 지원 합니다. 추가 명령은 XML for Analysis 사양을 확장한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지원됩니다.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서는 클라이언트 응용 프로그램과의 통신을 위한 프로토콜로 XMLA (XML for Analysis)를 지원 합니다. 추가 명령은 XML for Analysis 사양을 확장한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지원됩니다.  
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 정의, 데이터 조작 및 데이터 제어 지원을 위해 XMLA를 사용하므로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 비주얼 도구를 사용하여 마이닝 구조 및 마이닝 모델을 만든 다음 DMX(Data Mining Extensions) 및 ASSL(Analysis Services Scripting Language) 스크립트를 사용하여 만든 데이터 마이닝 개체를 확장할 수 있습니다.  
   
      데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 애플리케이션에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
   
--   **AMO(Analysis Management Object) (AMO)**  
+-   **AMO(Analysis Management Objects)**  
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 또한 타사 데이터 마이닝 공급자가 데이터 마이닝 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 통합할 수 있도록 하는 완전한 프레임워크를 제공합니다.  
   

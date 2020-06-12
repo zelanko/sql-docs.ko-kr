@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543495"
 ---
 # <a name="adding-attributes-to-dimensions"></a>차원에 특성 추가
   이제 차원을 정의했으므로 차원의 각 데이터 요소를 나타내는 특성으로 차원을 채울 수 있습니다. 일반적으로 특성은 데이터 원본 뷰의 필드를 기반으로 합니다. 차원에 특성을 추가할 때 데이터 원본 뷰에 있는 테이블의 필드를 포함할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079027"
   
     -   **NumberCarsOwned**  
   
-    -   **Phone**  
+    -   **전화**  
   
     -   **DateFirstPurchase**  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079027"
   
     -   **StandardCost**  
   
-    -   **색**  
+    -   **색상**  
   
     -   **SafetyStockLevel**  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66079027"
   
     -   **SizeRange**  
   
-    -   **무게**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072891"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547345"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>ReadOnly 모드와 ReadWrite 모드 간 Analysis Services 데이터베이스 전환
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA(데이터베이스 관리자)가 테이블 형식 또는 다차원 데이터베이스의 읽기/쓰기 모드를 변경해야 하는 경우가 종종 있습니다. 대개 사용자 경험 개선을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버의 풀에서 데이터베이스를 공유하는 것과 같은 비즈니스 요구 사항에 따라 데이터베이스의 읽기/쓰기 모드를 변경합니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072891"
   
 4.  분리되는 데이터베이스에 암호를 할당한 후 **확인** 을 클릭하여 분리 명령을 실행합니다.  
   
-5.  의 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]왼쪽 또는 오른쪽 창에서 **데이터베이스** 폴더를 찾습니다.  
+5.  의 왼쪽 또는 오른쪽 창에서 **데이터베이스** 폴더를 찾습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭 하 고 **연결** ...을 선택 합니다.  
   

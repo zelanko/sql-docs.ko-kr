@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb2a149c9e96af29b32f41153b340c2ab653c968
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075986"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547161"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>차원 디자이너에서 차원 데이터 찾아보기
   **에서 액세스하는 차원 디자이너의** 브라우저 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]뷰를 사용하여 차원에 있는 데이터를 찾아볼 수 있습니다.  

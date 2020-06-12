@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2915b0214b5b1a53392f025fbb4cce6eb3d14674
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075609"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547035"
 ---
 # <a name="define-database-dimensions"></a>데이터베이스 차원 정의
-  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 차원 디자이너를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
+  의 차원 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용 하 여 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
   
 -   차원 수준 속성 구성  
   

@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription (Transact-sql) | Microsoft Docs
+description: 게시자에서 아티클, 게시 또는 구독에 대 한 구독을 삭제 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행 됩니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831171"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807967"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

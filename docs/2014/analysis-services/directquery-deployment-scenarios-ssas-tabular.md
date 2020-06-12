@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2aaf5cb8-294b-4031-94b3-fe605d7fc4c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23f7debc1d2253938f235461279f39bb085c2b2f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081647"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528549"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery 배포 시나리오(SSAS 테이블 형식)
   이 항목에서는 DirectQuery 모델에 대한 디자인 및 배포 프로세스를 연습할 수 있습니다. 관계형 데이터만 사용하도록 DirectQuery를 구성하거나(DirectQuery 전용) 전환을 통해 캐시된 데이터만 사용하거나 관계형 데이터만 사용하도록 모델을 구성할 수 있습니다(혼합 모드). 이 항목에서는 두 모드에 대한 구현 프로세스에 대해 설명하고 모드와 보안 구성에 따라 달라질 수 있는 쿼리 결과에 대해 살펴봅니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66081647"
   
  기본적으로 DirectQuery는 사용하지 않도록 설정되어 있습니다. 따라서 DirectQuery 모드를 지원하도록 디자인 환경을 구성해야 합니다.  
   
- 솔루션 탐색기에서 **model.bim** 노드를 마우스 오른쪽 단추로 클릭 하 고 **DirectQuery 모드**속성을로 `On`설정 합니다.  
+ 솔루션 탐색기에서 **model.bim** 노드를 마우스 오른쪽 단추로 클릭 하 고 **DirectQuery 모드**속성을로 설정 `On` 합니다.  
   
  언제든지 DirectQuery를 설정할 수 있지만, DirectQuery 모드와 호환되지 않는 수식이나 열을 만들지 않으려면 처음부터 DirectQuery 모드를 사용하도록 설정하는 것이 좋습니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**DirectQuery 전용**|선택 사항입니다. DirectQuery 전용 모델은 파티션이 필요하지 않습니다.<br /><br /> 그러나 디자인 단계 동안 모델에서 파티션을 만든 경우 파티션 중 하나만 데이터 원본으로 사용될 수 있습니다. 기본적으로 첫 번째로 만든 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> 모델에 필요한 모든 데이터를 DirectQuery 파티션에서 사용할 수 있도록 하려면 DirectQuery 파티션을 선택한 다음 전체 데이터 집합을 가져오도록 SQL 문을 편집합니다.|  
+|**DirectQuery 전용**|(선택 사항) DirectQuery 전용 모델은 파티션이 필요하지 않습니다.<br /><br /> 그러나 디자인 단계 동안 모델에서 파티션을 만든 경우 파티션 중 하나만 데이터 원본으로 사용될 수 있습니다. 기본적으로 첫 번째로 만든 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> 모델에 필요한 모든 데이터를 DirectQuery 파티션에서 사용할 수 있도록 하려면 DirectQuery 파티션을 선택한 다음 전체 데이터 집합을 가져오도록 SQL 문을 편집합니다.|  
 |**혼합 모드**|모델의 테이블에 파티션이 여러 개 있는 경우 파티션 중 하나를 *DirectQuery 파티션*으로 선택해야 합니다. 파티션을 할당하지 않을 경우 기본적으로 처음 만들어진 파티션이 DirectQuery 파티션으로 사용됩니다.<br /><br /> DirectQuery를 제외한 모든 파티션에 대한 처리 옵션을 설정합니다. 데이터가 관계형 원본에서 전달되므로 일반적으로 DirectQuery 파티션은 처리되지 않습니다.<br /><br /> 자세한 내용은 [파티션 및 DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](tabular-models/define-partitions-in-directquery-models-ssas-tabular.md)을 참조 하세요.|  
   
  **6 단계. 가장 구성**  
@@ -111,8 +110,8 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**캐시가 없는 DirectQuery**|캐시에 로드되는 데이터가 없습니다. 모델을 처리할 수 없습니다.<br /><br /> 모델은 DAX 쿼리를 지원하는 클라이언트를 통해서만 쿼리할 수 있습니다. 쿼리 결과는 항상 원래 데이터 원본에서 반환됩니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **DirectQuery**|  
-|**캐시에 대한 쿼리만 있는 Directquery**|배포에 실패하며 이 구성은 지원되지 않습니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **메모리 내**|  
+|**캐시가 없는 DirectQuery**|캐시에 로드되는 데이터가 없습니다. 모델을 처리할 수 없습니다.<br /><br /> 모델은 DAX 쿼리를 지원하는 클라이언트를 통해서만 쿼리할 수 있습니다. 쿼리 결과는 항상 원래 데이터 원본에서 반환됩니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **DirectQuery**|  
+|**캐시에 대한 쿼리만 있는 Directquery**|배포에 실패하며 이 구성은 지원되지 않습니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **메모리 내**|  
   
  **혼합 모드**  
  혼합 모드에서 모델을 배포하면 여러 가지 이점이 있습니다. 즉, 필요한 경우 SQL Server 데이터 원본에서 최신 데이터를 가져올 수 있지만 캐시를 유지하면 보고서를 디자인하거나 모델을 테스트하는 동안 성능을 높이도록 메모리에서 데이터를 사용할 수 있습니다.  
@@ -123,8 +122,8 @@ ms.locfileid: "66081647"
   
 |||  
 |-|-|  
-|**캐시가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 쿼리는 기본적으로 캐시를 사용합니다.  클라이언트가 DirectQuery 원본을 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **QueryMode** = **DirectQuery를 사용 하는 메모리 내** querymode|  
-|**DirectQuery가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 그러나 쿼리는 기본적으로 Directquery를 사용합니다. 클라이언트가 캐시된 데이터를 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다. 모델에서 테이블이 분할되면 캐시의 주 파티션도 **In-Memory with DirectQuery**로 설정됩니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode** = **DirectQuery (메모리 내)**|  
+|**캐시가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 쿼리는 기본적으로 캐시를 사용합니다.  클라이언트가 DirectQuery 원본을 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **DirectQuery를 사용 하는 메모리 내**|  
+|**DirectQuery가 기본 설정된 혼합 모드**|모델을 처리하고 캐시에 데이터를 로드할 수 있습니다. 그러나 쿼리는 기본적으로 Directquery를 사용합니다. 클라이언트가 캐시된 데이터를 사용하려는 경우 연결 문자열에 매개 변수를 삽입해야 합니다. 모델에서 테이블이 분할되면 캐시의 주 파티션도 **In-Memory with DirectQuery**로 설정됩니다.<br /><br /> **DirectQueryMode** = `On`<br /><br /> **Querymode**  =  **DirectQuery (메모리 내)**|  
   
 ## <a name="see-also"></a>참고 항목  
  [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](tabular-models/directquery-mode-ssas-tabular.md)   

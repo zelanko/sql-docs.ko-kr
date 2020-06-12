@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5972d690f89374e02cc18ac4aa13fcbae9de87c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f85a1933b0b3c08f2295b92ee58f71426fb6ea2d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062765"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528159"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>고급 뷰(집계 탭, 큐브 디자이너)
   집계 디자이너의 **고급 뷰** 를 사용하여 집계 디자인과 개별 집계를 수동으로 만들고 수정할 수 있습니다. 이 뷰는 고급 사용자만 사용해야 합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66062765"
 |옵션|설명|  
 |------------|-----------------|  
 |**새 집계**|새 집계를 만들려면 클릭합니다.|  
-|**Delete**|선택한 집계나 선택한 집계 디자인을 삭제하려면 클릭합니다.|  
+|**삭제**|선택한 집계나 선택한 집계 디자인을 삭제하려면 클릭합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [큐브 디자인&#41;&#40;집계](aggregations-cube-design.md)  

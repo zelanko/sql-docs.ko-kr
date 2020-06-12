@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082886"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520513"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office용 데이터 마이닝 추가 기능은 Excel의 데이터를 사용하여 예측, 권장 또는 탐색을 위한 분석 모델을 작성할 수 있도록 지원하는 일련의 간단한 예측 분석 도구 집합입니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66082886"
   
 -   **탐색하고 시각화합니다.** 데이터 마이닝은 완전히 자동화할 수 있는 활동이 아닙니다. 의미 있는 작업을 수행 하기 위해 결과를 탐색 하 고 이해 해야 합니다. 추가 기능은 Excel의 대화형 뷰어, 모델 다이어그램을 사용자 지정할 수 있는 Visio 템플릿, 추가 필터링이나 수정을 위해 차트와 테이블을 Excel로 내보내는 기능을 제공하므로 탐색하는 데 도움이 됩니다.  
   
--   **배포하고 통합합니다.** 유용한 모델을 만든 경우 관리 도구를 사용 하 여 실험 서버에서 다른 인스턴스로 모델을 내보내 프로덕션에 모델을 배치 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
+-   **배포하고 통합합니다.** 유용한 모델을 만든 경우 관리 도구를 사용 하 여 실험 서버에서 다른 인스턴스로 모델을 내보내 프로덕션에 모델을 배치 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 합니다.  
   
      또는 모델을 만든 서버에 모델을 그대로 두되 학습 데이터를 새로 고치고 Integration Services 또는 DMX 스크립트를 사용하여 예측을 실행할 수도 있습니다.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66082886"
   
 -   비즈니스 인텔리전스  
   
--   Standard  
+-   표준  
   
  연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2014 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하십시오.  
   

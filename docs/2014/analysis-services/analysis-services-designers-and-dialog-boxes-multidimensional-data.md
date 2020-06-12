@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 50d634d8-fe29-4d65-a00a-9939dd6870d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88b11a66ab33d8eebc0c00b0471c1a31d343ed94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1820ec0deb0c990cb50924999b8c8ffc6fa90d3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062557"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528119"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-multidimensional-data"></a>Analysis Services 디자이너 및 대화 상자(다차원 데이터)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]및에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용할 디자이너 및 대화 상자를 제공 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 및에서 사용할 디자이너 및 대화 상자를 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 제공 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [다차원 데이터를 &#40;마법사 Analysis Services&#41;](analysis-services-wizards-multidimensional-data.md)   

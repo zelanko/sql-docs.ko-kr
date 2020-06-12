@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064676"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527759"
 ---
 # <a name="browsing-a-clustering-model"></a>클러스터링 모델 찾아보기
-  **찾아보기**를 사용 하 여 클러스터링 모델을 열면의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]클러스터링 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다. 이 뷰어는 만들어진 클러스터를 탐색하고 클러스터의 특징을 이해하는 데 도움이 됩니다. 또한 개별 세그먼트를 다른 세그먼트 또는 모집단과 비교하고 대조할 수도 있습니다.  
+  **찾아보기**를 사용 하 여 클러스터링 모델을 열면의 클러스터링 뷰어와 비슷한 대화형 뷰어에 모델이 표시 됩니다 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . 이 뷰어는 만들어진 클러스터를 탐색하고 클러스터의 특징을 이해하는 데 도움이 됩니다. 또한 개별 세그먼트를 다른 세그먼트 또는 모집단과 비교하고 대조할 수도 있습니다.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>모델 탐색  
  **찾아보기** 창에는 클러스터링 모델을 이해 하 고 기본 데이터 그룹의 특성을 탐색 하는 데 도움이 되는 다음과 같은 도구가 포함 되어 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "66064676"
   
 5.  이제 **음영 변수** 드롭다운 목록을 클릭 하 고 **Age** 변수를 선택 합니다. 이렇게 하면 값 목록이 **상태** 텍스트 상자에 나타납니다.  
   
-     이 모델의 입력으로 사용되는 Age 열에는 연속 숫자 값이 포함되어 있지만 클러스터링 목적을 위해 알고리즘에서 항상 숫자를 불연속화합니다. 여기서는 "매우 낮음 (\<= 27)" 및 "매우 높음 (>= 63)"과 같이 알고리즘이 생성 된 bin 또는 그룹을 볼 수 있습니다.  
+     이 모델의 입력으로 사용되는 Age 열에는 연속 숫자 값이 포함되어 있지만 클러스터링 목적을 위해 알고리즘에서 항상 숫자를 불연속화합니다. 여기서는 "매우 낮음 ( \<=27)" and "Very High (> = 63)"과 같이 알고리즘이 만든 bin 또는 그룹을 볼 수 있습니다.  
   
 6.  **상태** 드롭다운 목록에서 **매우 높음** 을 선택 하 고 다이어그램이 어떻게 변경 되는지 확인 합니다.  
   

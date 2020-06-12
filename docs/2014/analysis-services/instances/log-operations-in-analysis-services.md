@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289141"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543825"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services의 로그 작업
   Analysis Services 인스턴스는 설치 하는 각 인스턴스에 대해 서버 알림, 오류 및 경고를 msmdsrv.ini 파일에 기록 합니다. 관리자는 이 로그에서 루틴 및 비정상적 이벤트에 대한 정보를 참조합니다. 최신 릴리스에서는 더 많은 정보를 포함하도록 로깅이 향상되었습니다. 이제 로그 레코드에는 제품 버전과 버전 정보, 프로세서, 메모리, 연결, 차단 이벤트 등이 모두 포함되어 있습니다. 전체 변경 목록은 [로깅 개선 사항](https://support.microsoft.com/kb/2965035)에서 확인할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "79289141"
   
 -   [미니 덤프(.mdmp) 파일](#bkmk_mdmp)  
   
--   [팁과 모범 사례](#bkmk_tips)  
+-   [팁 및 모범 사례](#bkmk_tips)  
   
 > [!NOTE]  
 >  로깅에 대한 정보를 찾는 경우 처리 및 쿼리 실행 경로를 보여주는 추적 작업에도 관심을 가질 수 있습니다. 임시 및 지속적인 추적(예: 큐브 액세스 감사)에 대한 추적 개체와 비행 레코더, SQL Server Profiler 및 xEvent를 최대한 활용하는 방법에 대한 권장 사항은 [Analysis Services 인스턴스 모니터](monitor-an-analysis-services-instance.md)페이지의 링크를 통해 확인할 수 있습니다.  
@@ -42,11 +41,11 @@ ms.locfileid: "79289141"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>로그의 위치 및 유형  
  Analysis Services에서는 아래 설명된 로그를 제공합니다.  
   
-|파일 이름 또는 위치|유형|사용 목적|기본적으로 설정|  
+|파일 이름 또는 위치|Type|사용 대상|기본적으로 설정|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|오류 로그|일상 모니터링 및 기본 문제 해결|예|  
-|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|아니요|  
-|SQLDmp\<guid> mdmp 파일|충돌 및 예외|상세한 문제 해결|아니요|  
+|관계형 데이터베이스의 OlapQueryLog 테이블|쿼리 로그|사용 최적화 마법사에 대한 입력 수집|예|  
+|SQLDmp \<guid> .mdmp 파일|충돌 및 예외|상세한 문제 해결|예|  
   
  이 항목에서 다루지 않는 추가 정보는 [Microsoft 지원의 초기 데이터 수집 팁](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)링크를 참조하세요.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "79289141"
 ##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>MSMDSRV.INI 서비스 로그 파일  
  Analysis Services에서는 \program files\Microsoft SQL Server\\<instance\>\Olap\Log에 있는 msmdsrv.log 파일에 서버 작업을 인스턴스별로 하나씩 기록합니다.  
   
- 이 로그 파일은 각 서비스를 다시 시작하면 비워집니다. 이전 릴리스에서는 관리자가 로그 파일이 사용할 수 없을 정도로 커지기 전에 로그 파일을 플러시하기 위해 종종 서비스를 다시 시작했습니다. 이제 더 이상 그럴 필요가 없습니다. SQL Server 2012 SP2 이상에 도입된 구성 설정을 사용하면 로그 파일의 크기와 기록을 제어할 수 있습니다.  
+ 이 로그 파일은 각 서비스를 다시 시작하면 비워집니다. 이전 릴리스에서는 관리자가 로그 파일이 사용할 수 없을 정도로 커지기 전에 로그 파일을 플러시하기 위해 종종 서비스를 다시 시작했습니다. 이것이 더 이상 필요 합니다. SQL Server 2012 SP2 이상에 도입된 구성 설정을 사용하면 로그 파일의 크기와 기록을 제어할 수 있습니다.  
   
 -   `MaxFileSizeMB`는 최대 로그 파일 크기(MB)를 지정합니다. 기본값은 256입니다. 유효한 대체 값은 양의 정수여야 합니다. `MaxFileSizeMB`에 도달하면 Analysis Services에서 현재 파일의 이름을 msmdsrv{current timestamp}.log 파일로 변경하고 새 msmdsrv.log 파일을 시작합니다.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289141"
   
 2.  Analysis Services 서비스 계정에 데이터베이스에 대한 권한을 부여합니다. 이 계정에는 테이블을 만들고, 테이블에 쓰고, 테이블에서 읽을 수 있는 권한이 필요합니다.  
   
-3.  SQL Server Management Studio에서 **Analysis Services** | **속성** | **일반**을 마우스 오른쪽 단추로 클릭 하 고 **createquerylogtable** 을 true로 설정 합니다.  
+3.  SQL Server Management Studio에서 **Analysis Services**속성 일반을 마우스 오른쪽 단추로 클릭 하  |  **Properties**  |  **General**고 **createquerylogtable** 을 true로 설정 합니다.  
   
 4.  필요에 따라 쿼리를 다른 속도로 샘플링하거나 테이블에 다른 이름을 사용하려면 **QueryLogSampling** 또는 **QueryLogTableName** 을 변경합니다.  
   

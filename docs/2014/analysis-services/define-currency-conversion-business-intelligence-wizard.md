@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 37dd65b7-9d8d-44ad-b316-96a92c622472
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3131b38ad76f9b8cc51fac7cea2f82fbd788e086
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082146"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528829"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>통화 변환 정의(비즈니스 인텔리전스 마법사)
   **통화 변환 정의** 페이지를 사용하여 비즈니스 인텔리전스 마법사에서 생성된 통화 변환 기능이 포함된 MDX(Multidimensional Expressions) 스크립트를 검토할 수 있습니다. 그런 다음 마법사에서 생성된 이 MDX 스크립트를 사용하여 큐브의 MDX 스크립트에 이전에 정의한 통화 변환 기능을 덮어쓰거나 추가할 수 있습니다.  

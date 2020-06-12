@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086403"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525779"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Visio용 데이터 마이닝 셰이프
   Visio용 데이터 마이닝 셰이프는 데이터 마이닝 모델을 표시하기 위해 사용자 지정된 템플릿을 제공합니다. 이러한 템플릿을 사용하여, 사용자가 만든 모델에 연결할 수 있으며 데이터 마이닝의 결과를 보여 주기 위한 대화형 프레젠테이션을 만들 수 있습니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086403"
 -   **클러스터 다이어그램:** 이 마법사를 사용 하 여 조각화 모델에 대 한 다채로운 그래프를 만들 수 있습니다. 특성 판별, 클러스터 프로필 및 종속성과 같은 뷰 사이를 전환하고 클러스터의 모양을 사용자 지정할 수 있습니다.  
   
 ## <a name="installation"></a>설치  
- Visio 용 데이터 마이닝 템플릿을 설치 하는 경우 기본적으로 다음 파일은> s o s \<t o r Files\Microsoft SQL SERVER 2012 Dm 추가 기능 (또는 \<드라이브> \ 또는 Program files (x86) \Microsoft SQL Server 2012 DM 추가 기능)에 설치 됩니다.  
+ Visio 용 데이터 마이닝 템플릿을 설치 하는 경우 기본적으로 다음 파일은 \<drive> Files\Microsoft SQL Server 2012 Dm 추가 기능 (또는 \<drive> \ 또는 Program files (x86) \Microsoft SQL SERVER 2012 Dm 추가 기능)에 설치 됩니다.  
   
 -   **Microsoft 데이터 마이닝. v m s** 이 템플릿에는 데이터 마이닝 셰이프를 사용 하는 데 도움이 되는 미리 디자인 된 서식 지정, 레이아웃 및 마법사가 포함 되어 있습니다.  
   

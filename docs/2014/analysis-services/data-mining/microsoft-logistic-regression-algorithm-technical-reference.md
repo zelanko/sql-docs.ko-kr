@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174525"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521859"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 로지스틱 회귀 알고리즘 기술 참조
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 분석 알고리즘은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘의 변형으로, *HIDDEN_NODE_RATIO* 매개 변수가 0으로 설정됩니다. 이렇게 설정하면 숨겨진 계층을 포함하지 않으므로 로지스틱 회귀와 동등한 신경망 모델이 생성됩니다.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  이 쿼리는 각 출력 값에 대해 다시 관련 입력 노드를 가리키는 계수 및 ID를 반환합니다. 또한 출력 값과 절편이 들어 있는 행을 반환합니다. 각 입력 X에는 고유한 계수 (Ci)가 있지만 중첩 테이블에는 다음 수식에 따라 계산 된 "자유" 계수 (Co)도 포함 되어 있습니다.
 
- F (X) = X1 * C1 + X2\*C2 + ... + Xn\*Cn + X0
+ F (X) = X1 * C1 + X2 \* C2 + ... + Xn \* Cn + X0
 
  Activation: exp(F(X)) / (1 + exp(F(X)) )
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  마이닝 구조 열에 적용됩니다.
 
- MODEL_EXISTENCE_ONLY은 열이 및 `Missing` `Existing`이라는 두 가지 가능한 상태를 갖는 것으로 처리 됨을 의미 합니다. Null은 누락 값입니다.
+ MODEL_EXISTENCE_ONLY은 열이 및 이라는 두 가지 가능한 상태를 갖는 것으로 처리 됨을 의미 합니다. `Missing` `Existing` Null은 누락 값입니다.
 
  마이닝 모델 열에 적용됩니다.
 

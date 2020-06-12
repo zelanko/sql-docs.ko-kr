@@ -1,5 +1,6 @@
 ---
 title: SQLXML 4.0 s p 1의 새로운&#39;기능
+description: SQLXML 4.0 s p 1의 업데이트 및 향상 된 기능에 대 한 요약을 보고 자세한 정보에 대 한 링크를 제공 합니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64d531dc8eeee5a55cb0bcabbee14c06e1e5db93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 684711a9fc1fbab2d4556868d051df0b503eac23
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252163"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689791"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 s p 1의 새로운&#39;기능
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "75252163"
   
 -   SQLXML 4.0 재배포  
   
--   Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대 한 지원  
+-   Native Client에 대 한 지원 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 도입된 데이터 형식 지원  
   
@@ -84,11 +85,11 @@ ms.locfileid: "75252163"
  애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하는 경우 이 프로그램도 재배포해야 합니다. 자세한 내용은 [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)(SQL Server Native Client 설치)를 참조하세요.  
   
 ## <a name="support-for-sql-server-native-client"></a>SQL Server Native Client 지원  
- SQLXML 4.0은 SQLOLEDB 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 모두 지원 합니다. Native client는 동일한 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 native client 공급자를 사용 하는 것 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 좋으며 Native client는에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **Date, Time**, **DateTime2**및 **dateTimeOffset** 데이터 형식과 같은 서버에 제공 되는 새로운 데이터 형식을 지원 하도록 개발 되었으므로 native client에서 지원 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 됩니다.  
+ SQLXML 4.0은 SQLOLEDB 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 모두 지원 합니다. Native client는 동일한 버전의 native Client 공급자를 사용 하는 것이 좋으며 native client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는에서 **Date, Time**, **DateTime2**및 **dateTimeOffset** 데이터 형식과 같은 서버에 제공 되는 새로운 데이터 형식을 지원 하도록 개발 되었으므로 native [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] client에서 지원 됩니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 처음 도입된 데이터 액세스 기술입니다. 이 기술은 SQLOLEDB 공급자와 SQLODBC 드라이버를 하나의 네이티브 DLL(동적 링크 라이브러리)로 조합한 것이며 MDAC(Microsoft Data Access Components)와는 분리된 고유한 새 기능을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 애플리케이션을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 애플리케이션을 향상시킬 수도 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for xml 같은 클라이언트 쪽 SQLXML 기능에서 **xml** 데이터 형식을 사용 하려면 Native Client가 필요 합니다. 자세한 내용은 [클라이언트 쪽 XML 서식 &#40;sqlxml 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [ADO를 사용 하 여 Sqlxml 4.0 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)및 [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 애플리케이션을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 애플리케이션을 향상시킬 수도 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FOR xml 같은 클라이언트 쪽 SQLXML 기능에서 **xml** 데이터 형식을 사용 하려면 Native Client가 필요 합니다. 자세한 내용은 [클라이언트 쪽 XML 서식 &#40;sqlxml 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md), [ADO를 사용 하 여 Sqlxml 4.0 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)및 [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md)을 참조 하세요.  
   
 > [!NOTE]  
 >  SQLXML 4.0은 SQLXML 3.0과 완전히 호환되지 않습니다. 일부 버그 수정 및 기타 기능 변경, 특히 SQLXML ISAPI 지원 제거로 인해 SQLXML 4.0에서는 IIS 가상 디렉터리를 사용할 수 없습니다. 대부분의 애플리케이션은 약간만 수정해도 실행되지만 SQLXML 4.0과 함께 프로덕션에 배치하기 전에 테스트해야 합니다.  
@@ -146,7 +147,7 @@ ms.locfileid: "75252163"
   
      이 키는 데이터의 공백 문자를 유지할 수 있도록 도입되었습니다. 이 레지스트리 키를 추가하고 해당 값을 0으로 설정하면 특성 값의 경우 XML의 공백 문자(LF, CR 및 탭)가 인코딩되어 반환됩니다. 요소 값의 경우 CR만 인코딩되어 반환됩니다.  
   
-     예를 들면 다음과 같습니다.  
+     예를 들어:  
   
     ```  
     CREATE TABLE T( Col1 int, Col2 nvarchar(100));  
@@ -199,15 +200,15 @@ ms.locfileid: "75252163"
  자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>SQL Server 2005에서 도입된 데이터 형식 및 SQLXML 3.0 ISAPI 지원 가능성  
- SQLXML 4.0에서 ISAPI 지원이 제거 되었으므로 솔루션에 [xml 데이터 형식](../../t-sql/xml/xml-transact-sql.md) 또는 [udt (사용자 정의 데이터 형식)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) , [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 웹 기반 액세스 등의 향상 된 데이터 형식 지정 기능이 필요한 경우 [sqlxml 관리 되는 클래스](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) 와 같은 다른 솔루션이 나 SQL Server 2005 용 네이티브 xml 웹 서비스와 같은 다른 유형의 HTTP 처리기를 사용 해야 합니다.  
+ SQLXML 4.0에서 ISAPI 지원이 제거 되었으므로 솔루션에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [xml 데이터 형식](../../t-sql/xml/xml-transact-sql.md) 또는 [udt (사용자 정의 데이터 형식)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) , 웹 기반 액세스 등의 향상 된 데이터 형식 지정 기능이 필요한 경우 [sqlxml 관리 되는 클래스](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) 와 같은 다른 솔루션이 나 SQL Server 2005 용 네이티브 XML 웹 서비스와 같은 다른 유형의 HTTP 처리기를 사용 해야 합니다.  
   
- 또는 이러한 형식 확장이 필요 하지 않은 경우 SQLXML 3.0을 계속 사용 하 여 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 설치에 연결할 수 있습니다. SQLXML 3.0 ISAPI 지원은 이러한 이후 버전에서 작동 하지만에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]도입 된 **xml** 데이터 형식 또는 UDT 유형 지원을 지원 하거나 인식 하지 않습니다.  
+ 또는 이러한 형식 확장이 필요 하지 않은 경우 SQLXML 3.0을 계속 사용 하 여 및 설치에 연결할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . SQLXML 3.0 ISAPI 지원은 이러한 이후 버전에서 작동 하지만에서 도입 된 **xml** 데이터 형식 또는 UDT 유형 지원을 지원 하거나 인식 하지 않습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>임시 파일에 대한 XML 대량 로드 보안 변경  
  SQLXML 4.0 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 XML 대량 로드 파일 권한이 대량 로드 작업을 실행하는 사용자에게 부여됩니다. 읽기 및 쓰기 권한은 파일 시스템에서 상속됩니다. SQLXML 및 SQL Server의 이전 버전에서는 SQLXML 하의 XML 대량 로드 시 보안이 유지되지 않고 모든 사용자가 읽을 수 있는 임시 파일이 만들어졌습니다.  
   
 ### <a name="migration-issues-for-client-side-for-xml"></a>클라이언트 쪽 FOR XML에 대한 마이그레이션 문제  
- 실행 엔진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경으로 인해에서 기본 테이블에 대 한 메타 데이터의 다른 값을 반환 하는 경우에는 for XML 쿼리가 실행 될 때 반환 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]됩니다. 이 경우 FOR XML 쿼리 결과에 대한 클라이언트 쪽 형식 지정으로 인해 쿼리가 실행되는 버전에 따라 다른 출력이 생성됩니다.  
+ 실행 엔진의 변경으로 인해에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 테이블에 대 한 메타 데이터의 다른 값을 반환 하는 경우에는 FOR XML 쿼리가 실행 될 때 반환 됩니다 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . 이 경우 FOR XML 쿼리 결과에 대한 클라이언트 쪽 형식 지정으로 인해 쿼리가 실행되는 버전에 따라 다른 출력이 생성됩니다.  
   
  **Xml** 데이터 형식 열에 대해 SQLXML 3.0을 사용 하 여 FOR xml 쿼리가 클라이언트 쪽에서 실행 되는 경우 결과의 데이터는 완전히 엔터티 화 문자열로 반환 됩니다. SQLXML 4.0에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 공급자로 지정하면 데이터가 XML로 반환됩니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530823"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544120"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
@@ -98,7 +97,7 @@ ms.locfileid: "69530823"
   
      2012 자습서를 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
   
-     "Analysis Services 자습서 SQL Server 2012 .zip" 파일은 컴퓨터의 다운로드 폴더에 저장 됩니다.  
+     "Analysis Services 자습서 SQL Server 2012.zip" 파일은 컴퓨터의 다운로드 폴더에 저장 됩니다.  
   
 2.  .zip 파일을 루트 드라이브 바로 아래 폴더(예: C:\Tutorial)로 이동합니다. 이 단계에서는 다운로드 폴더에서 파일의 압축을 푸는 경우에 발생 하는 "경로가 너무 깁니다." 오류를 완화 합니다.  
   

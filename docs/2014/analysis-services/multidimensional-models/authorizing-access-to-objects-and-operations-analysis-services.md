@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077017"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544668"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>개체 및 작업에 대한 액세스 승인(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 내의 큐브, 차원 및 마이닝 모델에 대한 비관리자 사용자 액세스는 하나 이상의 데이터베이스 역할의 구성원 자격을 통해 부여됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자는 이러한 데이터베이스 역할을 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체에 대한 읽기 또는 읽기/쓰기 권한을 부여한 다음 각 역할에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 및 그룹을 추가합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66077017"
 ## <a name="list-roles-defined-for-your-database"></a>데이터베이스에 대해 정의된 역할 나열  
  관리자는 SQL Server Management Studio에서 간단한 DMV 쿼리를 실행하여 서버에 정의된 모든 역할의 목록을 가져올 수 있습니다.  
   
-1.  SSMS에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 **새 쿼리** | **MDX**를 선택 합니다.  
+1.  SSMS에서 데이터베이스를 마우스 오른쪽 단추로 클릭 하 고 **새 쿼리**  |  **MDX**를 선택 합니다.  
   
 2.  다음 쿼리를 입력하고 F5 키를 눌러 실행합니다.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083363"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521222"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>누락 값(Analysis Services - 데이터 마이닝)
   *누락 값* 을 올바르게 처리하는 것은 효과적인 모델링을 위해 매우 중요합니다. 이 섹션에서는 누락 값의 정의를 알아보고, 데이터 마이닝 구조와 마이닝 모델을 빌드할 때 누락 값을 처리하기 위한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기능을 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "66083363"
   
  마이닝 모델을 만들 때 모든 불연속 열에 대해 `Missing` 상태가 자동으로 모델에 추가됩니다. 예를 들어 [Gender] 입력 열에 Male과 Female의 두 가지 값을 입력할 수 있는 경우, `Missing` 값을 나타내는 세 번째 값이 자동으로 추가되며 이 열에 대한 모든 값의 분포를 보여 주는 히스토그램에 `Missing` 값이 있는 사례의 수가 항상 포함됩니다. Gender 열에 누락된 값이 없는 경우 히스토그램은 0개의 사례에서 누락 상태가 발견되었음을 보여 줍니다.  
   
- 데이터에 가능한 값의 예가 모두 포함되지 않을 수도 있다고 생각하고, 데이터에 예가 없다는 이유만으로 모델에서 가능성을 배제하려고 하지 않는 경우에는 기본적으로 `Missing` 상태를 포함하는 것이 좋습니다. 예를 들어 어떤 매장의 판매 데이터에서 특정 제품을 구입한 고객 전체가 여성임을 나타낸다고 해서 여성만 해당 제품을 구입할 수 있다고 예측하는 모델을 만들려고 하지는 않을 것입니다. 대신, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가능한 다른 상태를 수용 하는 방법으로 이라는 `Missing`추가 알 수 없는 값에 대 한 자리 표시자를 추가 합니다.  
+ 데이터에 가능한 값의 예가 모두 포함되지 않을 수도 있다고 생각하고, 데이터에 예가 없다는 이유만으로 모델에서 가능성을 배제하려고 하지 않는 경우에는 기본적으로 `Missing` 상태를 포함하는 것이 좋습니다. 예를 들어 어떤 매장의 판매 데이터에서 특정 제품을 구입한 고객 전체가 여성임을 나타낸다고 해서 여성만 해당 제품을 구입할 수 있다고 예측하는 모델을 만들려고 하지는 않을 것입니다. 대신, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가능한 다른 상태를 수용 하는 방법으로 이라는 추가 알 수 없는 값에 대 한 자리 표시자를 추가 `Missing` 합니다.  
   
  예를 들어 다음 표에서는 Bike Buyer 자습서에서 사용하기 위해 만든 의사 결정 트리 모델에 있는 (All) 노드에 대한 값의 분포를 보여 줍니다. 예제 시나리오에서 [Bike Buyer] 열은 예측 가능한 특성이며, 여기서 1은 "예"를 나타내고 0은 "아니요"를 나타냅니다.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66083363"
 |1|9098|  
 |Missing|0|  
   
- 이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 `Missing` 값의 수가 0입니다. 그러나 [자전거 구매자] 필드에 null이 있는 경우에는 해당 행이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Missing` 값을 갖는 사례로 계산 됩니다.  
+ 이 분포는 고객의 절반 정도는 자전거를 구입했고 나머지 절반은 구입하지 않았음을 보여 줍니다. 이 특정 데이터 집합은 아주 간결하여 모든 사례의 [Bike Buyer] 열에 값이 있고 `Missing` 값의 수가 0입니다. 그러나 [자전거 구매자] 필드에 null이 있는 경우에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 해당 행이 값을 갖는 사례로 계산 됩니다 `Missing` .  
   
  입력이 연속 열인 경우 모델은 특성에 대한 `Existing` 및 `Missing`의 두 가지 가능한 상태를 표 형식으로 만듭니다. 즉, 열에 숫자 데이터 형식 값이 포함되거나 값이 포함되지 않습니다. 값이 있는 사례의 경우 모델은 평균, 표준 편차 및 기타 의미 있는 통계를 계산합니다. 값이 없는 사례의 경우에는 모델에서 `Missing` 값의 수를 제공하고 그에 따라 예측을 조정합니다. 예측을 조정하는 방법은 알고리즘에 따라 다르며 다음 섹션에 설명되어 있습니다.  
   

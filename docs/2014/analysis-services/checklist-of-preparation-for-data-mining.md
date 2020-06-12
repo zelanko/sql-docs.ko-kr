@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088148"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527559"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>데이터 마이닝 준비 검사 목록
   마이닝 추가 기능을 사용하여 쉽고 재미있게 모델을 만들고 시험해 볼 수 있지만 반복 및 실행 가능한 결과가 필요한 경우 기본 비즈니스 요구 사항을 공식화하고 데이터를 구하고 준비하는 데 충분한 시간을 가져야 합니다. 이 단원에서는 검사 활동을 계획하기 위한 검사 목록을 다루며, 일반적인 문제에 대해 설명합니다.  

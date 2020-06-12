@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543955"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 애플리케이션 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.
@@ -32,7 +31,7 @@ ms.locfileid: "78174352"
 
 |||
 |-|-|
-|[PowerShell 환경 준비](#bkmk_prerequisites)<br /><br /> [증상 및 권장 되는 작업](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 서비스](#bkmk_windows_service)<br /><br /> **(B)** [get-powerpivotsystemservice and get-powerpivotengineservice](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot 서비스 애플리케이션 및 프록시](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [데이터베이스](#bkmk_databases)<br /><br /> [SharePoint 기능](#bkmk_features)<br /><br /> [타이머 작업](#bkmk_timer_jobs)<br /><br /> [상태 규칙](#bkmk_health_rules)<br /><br /> **(E)** [Windows 및 ULS 로그](#bkmk_logs)<br /><br /> [MSOLAP 공급자](#bkmk_msolap)<br /><br /> [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd)<br /><br /> [상태 데이터 수집 규칙](#bkmk_health_collection)<br /><br /> [솔루션](#bkmk_solutions)<br /><br /> [수동 확인 단계](#bkmk_manual)<br /><br /> [추가 리소스](#bkmk_more_resources)<br /><br /> [전체 PowerShell 스크립트](#bkmk_full_script)|![PowerPivot의 PowerShell 확인](../../../sql-server/install/media/ssas-powershell-component-verification.png "PowerPivot의 PowerShell 확인")|
+|[PowerShell 환경 준비](#bkmk_prerequisites)<br /><br /> [증상 및 권장 되는 작업](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 서비스](#bkmk_windows_service)<br /><br /> **(B)** [get-powerpivotsystemservice and get-powerpivotengineservice](#bkmk_engine_and_system_service)<br /><br /> **(C)** [PowerPivot 서비스 애플리케이션 및 프록시](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [데이터베이스](#bkmk_databases)<br /><br /> [SharePoint 기능](#bkmk_features)<br /><br /> [타이머 작업](#bkmk_timer_jobs)<br /><br /> [상태 규칙](#bkmk_health_rules)<br /><br /> **(E)** [Windows 및 ULS 로그](#bkmk_logs)<br /><br /> [MSOLAP 공급자](#bkmk_msolap)<br /><br /> [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd)<br /><br /> [상태 데이터 수집 규칙](#bkmk_health_collection)<br /><br /> [해결책이](#bkmk_solutions)<br /><br /> [수동 확인 단계](#bkmk_manual)<br /><br /> [추가 리소스](#bkmk_more_resources)<br /><br /> [전체 PowerShell 스크립트](#bkmk_full_script)|![PowerPivot의 PowerShell 확인](../../../sql-server/install/media/ssas-powershell-component-verification.png "PowerPivot의 PowerShell 확인")|
 
 ##  <a name="prepare-your-powershell-environment"></a><a name="bkmk_prerequisites"></a> PowerShell 환경 준비
  이 섹션의 단계에서는 PowerShell 환경을 준비합니다. 현재 스크립트 환경에 구성된 방법에 따라 단계를 수행하지 않아도 될 수 있습니다.
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |데이터 새로 고침이 실행되지 않음|[Timer Jobs](#bkmk_timer_jobs) 섹션을 참조하여 **PowerPivot 데이터 새로 고침 타이머 작업** 이 온라인인지 확인합니다.|
 |관리 대시보드 데이터가 오래됨|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **관리 대시보드 처리 타이머 작업** 이 온라인인지 확인합니다.|
 |관리 대시보드의 일부|Excel Services 또는 SharePoint용 PowerPivot이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 PowerPivot을 설치하는 경우, PowerPivot 관리 대시보드의 모든 기본 제공 보고서에 액세스하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 PowerPivot 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)항목을 참조하세요.|
-|\<이후 콘텐츠>||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a> Analysis Services Windows 서비스
  이 섹션의 스크립트는 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 확인합니다. 서비스가 **실행 중**인지 확인합니다.
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  다음 코드 샘플은 먼저 기본 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 서비스 애플리케이션의 applicationpool 속성을 반환합니다. 이름은 문자열에서 구문 처리되고 애플리케이션 풀 개체 상태를 가져오는 데 사용됩니다.
 > 
->  상태가 **온라인**인지 확인 합니다. 사이트를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 검색할 때 상태가 온라인이 아니거나 "http 오류"가 표시 되는 경우 IIS 응용 프로그램 풀의 id 자격 증명이 올바른지 확인 합니다. IIS 풀 이름은 Get-SPServiceApplicationPool 명령에서 반환되는 ID 속성 값입니다.
+>  상태가 **온라인**인지 확인 합니다. 사이트를 검색할 때 상태가 온라인이 아니거나 "http 오류"가 표시 되는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] IIS 응용 프로그램 풀의 id 자격 증명이 올바른지 확인 합니다. IIS 풀 이름은 Get-SPServiceApplicationPool 명령에서 반환되는 ID 속성 값입니다.
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -319,7 +318,7 @@ Message     : EXCEPTION: System.TimeoutException: The request channel timed out 
 ```
 
 ##  <a name="msolap-provider"></a><a name="bkmk_msolap"></a> MSOLAP 공급자
- MSOLAP 공급자를 확인합니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]및 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 는 MSOLAP. 5를 요구 합니다.
+ MSOLAP 공급자를 확인합니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]및는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] MSOLAP. 5를 요구 합니다.
 
 ```powershell
 $excelApp = Get-SPExcelServiceApplication

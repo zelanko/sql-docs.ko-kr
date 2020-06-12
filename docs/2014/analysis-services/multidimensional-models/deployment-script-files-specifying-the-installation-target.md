@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075215"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546830"
 ---
 # <a name="specifying-the-installation-target"></a>설치 대상 지정
-  배포 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 마법사는 \< *프로젝트 이름*> deploymenttargets 파일에서 설치 대상 정보를 읽습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 빌드할 때이 파일을 만듭니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]**Deployment** \< *프로젝트 이름>속성 페이지 대화 상자의 배포 페이지에 지정 된 데이터베이스 및 서버를 사용 하 여 프로젝트 이름> .targets \<* 파일을 만듭니다. **Properties Pages** *project name*  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]배포 마법사는 deploymenttargets 파일에서 설치 대상 정보를 읽습니다. \<*project name*> [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]프로젝트를 빌드할 때이 파일을 만듭니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]속성 페이지 대화 상자의 **배포** 페이지에 지정 된 데이터베이스 및 서버를 사용 하 여 *\<project name>* **Properties Pages** \<*project name*> .targets 파일을 만듭니다.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>배포를 위한 설치 대상 수정  
  일부 경우에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 페이지에 지정된 것과 다른 데이터베이스 또는 **인스턴스에** 프로젝트를 배포해야 할 수 있습니다. 예를 들어 배포 전에 테스트를 위해 서버에 프로젝트를 배포한 다음 테스트를 마친 후에 프로덕션 서버에 배포할 수 있습니다. 또한 네트워크 로드 균형 조정 클러스터의 여러 프로덕션 서버나 준비 서버(staging server) 및 프로덕션 서버에 완료되고 테스트를 마친 프로젝트를 배포할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66075215"
   
      또는  
   
--   텍스트 편집기 \<를 사용 하 여 *프로젝트 이름*> deploymenttargets 파일을 수정 합니다.  
+-   \<*project name*>텍스트 편집기를 사용 하 여 deploymenttargets 파일을 수정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [파티션 및 역할 배포 옵션 지정](deployment-script-files-partition-and-role-deployment-options.md)   

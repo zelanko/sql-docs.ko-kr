@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f5971fe611f06a413ca48b2bc91237a8c87ee8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545395"
 ---
 # <a name="debugging-stored-procedures"></a>저장 프로시저 디버깅
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저는 실제로 C#이나 다른 CLR 또는 COM 언어로 작성되는 CLR 또는 COM 라이브러리(대개 DLL)입니다. 따라서 저장 프로시저를 디버깅하는 것은 Visual Studio 디버깅 환경에서 다른 애플리케이션을 디버깅하는 것과 매우 유사합니다. 통합된 디버깅 기능을 사용하여 Visual Studio 개발 환경에서 저장 프로시저를 디버깅합니다. 이를 통해 프로시저 위치에서 중지하고 메모리와 레지스터 값을 검사하고 변수를 변경하고 메시지 트래픽을 관찰하고 코드 작동 방식을 자세히 살펴볼 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62727749"
   
     2.  **연결 toProcess** 대화 상자에서 **모든 사용자의 프로세스 표시**를 선택 합니다.  
   
-    3.  **사용 가능한 프로세스** 목록의 **프로세스** 열에서 **msmdsrv.ini**을 클릭 합니다. 서버에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 여러 개인 경우 사용할 인스턴스의 ID로 프로세스를 식별해야 합니다.  
+    3.  **사용 가능한 프로세스** 목록의 **처리** 열에서 **Msmdsrv.exe**를 클릭 합니다. 서버에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 여러 개인 경우 사용할 인스턴스의 ID로 프로세스를 식별해야 합니다.  
   
     4.  **연결 대상** 입력란에서 적절 한 프로그램 유형이 선택 되어 있는지 확인 합니다. CLR DLL의 경우 **선택**을 클릭 하 고 다음 **코드 형식 디버깅**을 클릭 한 다음 **관리**를 클릭 하 고 **확인**을 클릭 합니다. COM DLL의 경우 **선택**을 클릭 하 고 다음 **코드 형식 디버깅**을 클릭 한 다음 **네이티브**를 클릭 하 고 **확인**을 클릭 합니다.  
   

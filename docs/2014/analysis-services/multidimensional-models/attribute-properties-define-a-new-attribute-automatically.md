@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 208a050a-5e2f-470c-b645-8d835e123db7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9ae1f00dd0a6520c6d1b06111864fba02e8f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544808"
 ---
 # <a name="define-a-new-attribute-automatically"></a>자동으로 새 특성 정의
   차원 디자이너에서 끌어서 놓기 편집을 사용하여 차원에 새 특성을 만들 수 있습니다.  

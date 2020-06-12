@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bcc40c0b8ca91c621c9e269b4d19af0de4e1af7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079907"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543885"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>테이블 형식 모드에서 Analysis Services 설치
   새로운 테이블 형식 모델링 기능을 사용하기 위해 Analysis Services를 설치하는 경우 모델 유형을 지원하는 서버 모드에서 Analysis Services를 설치해야 합니다. 서버 모드는 테이블 형식이고 설치 동안 구성됩니다.  
@@ -55,7 +54,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |값|설명|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|기본값입니다. `ASSERVERMODE`를 설정하지 않은 경우 서버는 다차원 서버 모드에 설치됩니다.|  
+|MULTIDIMENSIONAL|이것은 기본값입니다. `ASSERVERMODE`를 설정하지 않은 경우 서버는 다차원 서버 모드에 설치됩니다.|  
 |POWERPIVOT|이 값은 선택 사항입니다. 실제로 `ROLE` 매개 변수를 설정한 경우 서버 모드는 자동으로 1로 설정되며 `ASSERVERMODE`를 SharePoint용 PowerPivot 설치에 대한 옵션으로 만듭니다. 자세한 내용은 [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md)를 참조하십시오.|  
 |TABULAR|명령줄 설치를 사용하여 테이블 형식 모드에 Analysis Services를 설치하는 경우 이 값이 필요합니다.|  
   

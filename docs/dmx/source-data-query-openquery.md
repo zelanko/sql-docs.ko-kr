@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887723"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670037"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;원본 데이터 쿼리&gt; -OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;원본 데이터 쿼리 &gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   원본 데이터 쿼리를 기존 데이터 원본에 대한 쿼리로 바꿉니다. INSERT, SELECT FROM 예측 조인 및 SELECT FROM 자연 예측 조인 문에서 **OPENQUERY**를 지원 합니다.  
@@ -29,7 +29,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>인수  
  *명명 된 데이터 원본*  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 있는 데이터 원본입니다.  
+ 데이터베이스에 있는 데이터 원본 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 입니다.  
   
  *쿼리 구문*  
  행 집합을 반환하는 쿼리 구문입니다.  
@@ -44,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 이미 정의 되어 있는 myds 데이터 원본을 사용 하 여 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 데이터베이스에 대 한 연결을 만들고 **vtargetmail** 뷰를 쿼리 합니다.  
+ 다음 예에서는 데이터베이스에 이미 정의 되어 있는 MyDS 데이터 원본을 사용 하 여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 대 한 연결을 만들고 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] **vtargetmail** 뷰를 쿼리 합니다.  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

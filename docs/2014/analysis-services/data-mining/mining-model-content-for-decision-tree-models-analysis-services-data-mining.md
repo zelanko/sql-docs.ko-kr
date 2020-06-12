@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083667"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521600"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠에 대한 일반적인 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](mining-model-content-analysis-services-data-mining.md)를 참조하세요. Microsoft 의사 결정 트리 알고리즘은 매우 다양한 함수로 모델을 만들 수 있는 하이브리드 알고리즘이라는 사실을 기억해야 합니다. 의사 결정 트리는 연결, 규칙 또는 선형 회귀를 나타낼 수 있습니다. 트리의 구조는 기본적으로 동일하지만 정보를 해석하는 방법은 모델을 만든 목적에 따라 달라집니다.  
@@ -189,7 +188,7 @@ ms.locfileid: "66083667"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|특정 노드를 부모 노드를 기준으로 구별하는 특성을 표시합니다. 노드 캡션은 분할 조건을 기반으로 모집단의 하위 세그먼트를 정의합니다. 예를 들어 분할이 [Age]이 고 3 방향 분할 인 경우 세 개의 자식 노드에 대 한 노드 캡션은 "[Age] < 40", "40 <= [Age] \< 50", "[age] >= 50"이 될 수 있습니다.|  
+|**NODE_CAPTION**|특정 노드를 부모 노드를 기준으로 구별하는 특성을 표시합니다. 노드 캡션은 분할 조건을 기반으로 모집단의 하위 세그먼트를 정의합니다. 예를 들어 분할이 [Age]이 고 3 방향 분할 인 경우 세 개의 자식 노드에 대 한 노드 캡션은 "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50" 일 수 있습니다.|  
 |**NODE_DESCRIPTION**|모델 부모 노드에서 시작하여 해당 노드를 다른 노드와 구별해 주는 특성의 전체 목록을 포함합니다. 예를 들어 Product name = Apple 및 Color = Red 특성이 있습니다.|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> 노드 규칙 및 한계 규칙  
@@ -198,7 +197,7 @@ ms.locfileid: "66083667"
  XML 조각으로 표현되는 특성은 단순한 특성이거나 복잡한 특성일 수 있습니다. 단순한 특성에는 모델 열의 이름과 특성 값이 포함됩니다. 모델 열에 중첩 테이블이 들어 있는 경우 중첩 테이블 특성은 테이블 이름, 키 값 및 특성의 연결로 표현됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 중첩 테이블 사용을 지원 하기 위한 확장과 함께 PMML 표준 버전 2.0을 지원 합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 중첩 테이블 사용을 지원 하기 위한 확장과 함께 PMML 표준 버전 2.0을 지원 합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
   
 ###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>불연속 특성에 대 한 노드 분포  
  의사 결정 트리 모델에서 NODE_DISTRIBUTION 테이블에는 유용한 통계가 들어 있습니다. 그러나 통계의 유형은 트리가 불연속 특성을 예측하는지 연속 특성을 예측하는지에 따라 달라집니다. 이 섹션에서는 불연속 특성에 대한 노드 분포 통계의 의미를 설명합니다.  
@@ -208,7 +207,7 @@ ms.locfileid: "66083667"
   
  불연속 데이터 형식의 경우 특성 값 필드에는 예측 가능한 열의 가능한 값과 `Missing` 값이 나열됩니다.  
   
-#### <a name="support"></a>고객 지원팀  
+#### <a name="support"></a>지원  
  각 노드의 지지도 값은 이 노드에 포함된 사례 수를 나타냅니다. (All) 수준에서는 모델을 학습하는 데 사용된 사례의 총 수가 표시됩니다. 트리에 있는 각 분할의 경우 지지도 값은 트리의 해당 노드로 그룹화된 사례 수입니다. 리프 노드에 있는 사례의 합계는 반드시 트리의 부모 노드에 있는 사례 수와 같습니다.  
   
  연속 특성을 나타내는 노드의 경우 데이터에 Null이 있으면 예상치 않은 결과가 발생할 수 있습니다. 예를 들어 m개의 사례가 있는 경우 평균값은 합계(모든 사례)/n으로 계산됩니다. 여기서 n은 m보다 작은 숫자이고 m-n은 누락 값이 있는 사례의 수를 나타냅니다. 지지도는 n으로도 표현됩니다.  
@@ -225,7 +224,7 @@ ms.locfileid: "66083667"
 |Age < 30|40|Age < 30 and Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 and Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각각의 값 또는 값 범위는 상태 (예: Age \<30, age = 30 및 age >30)로 표현 되 고 확률은 다음과 같이 계산 됩니다. 상태 있음 (값 = 1), 다른 상태 존재 (값 = 0), 상태는 `Missing`입니다. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각각의 값 또는 값 범위는 상태 (예: Age 30)로 표현 되 \<30, Age = 30, and Age > 고 확률은 다음과 같이 계산 됩니다. 상태 존재 (값 = 1), 일부 다른 상태 존재 (값 = 0), 상태는 `Missing` 입니다. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
  각 노드에 대한 확률은 다음과 같이 분포에서 거의 직접 계산됩니다.  
   
@@ -245,7 +244,7 @@ ms.locfileid: "66083667"
   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 열거형의 유형 중 다음 유형이 분류 트리에 사용됩니다.  
   
-|값 유형|설명|  
+|값 형식|설명|  
 |----------------|-----------------|  
 |1(누락)|누락 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
 |4 (Discrete)|불연속 또는 불연속화된 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
@@ -275,7 +274,7 @@ ms.locfileid: "66083667"
   
 |분할 조건|노드의 결과|  
 |---------------------|--------------------|  
-|n \< 5 인 경우|관계를 수식 1로 표현할 수 있습니다.|  
+|n 5 인 경우 \<|관계를 수식 1로 표현할 수 있습니다.|  
 |n이 5와 10 사이에 있는 경우|수식 없음|  
 |n > 10일 경우|관계를 수식 2로 표현할 수 있습니다.|  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b206f39e-5fa3-4b5c-babf-c604c0dfd82a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7326ce8711893b01eae06558a638efe894fd0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070115"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539035"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>최적화될 쿼리 확인(사용 빈도 기반 최적화 마법사)
   **최적화될 쿼리 확인** 페이지를 사용하여 사용 빈도 기반 최적화 마법사에서 선택한 파티션에 대한 집계를 디자인하는 데 사용할 쿼리 로그에서 검색된 쿼리를 표시하고 선택할 수 있습니다.  

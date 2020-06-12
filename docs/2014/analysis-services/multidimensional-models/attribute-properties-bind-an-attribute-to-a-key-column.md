@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6fb2888ba5cba2d3ab2701d934f83dc55cf362ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f909dae8db02007ee69a240d0b29c6c5cc566d8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077434"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544845"
 ---
 # <a name="bind-an-attribute-to-a-key-column"></a>키 열에 특성 바인딩
   이 절차에서는 차원에서 특성의 `Name` 속성 설정을 변경하는 방법에 대해 설명합니다.  
@@ -35,6 +34,6 @@ ms.locfileid: "66077434"
 4.  새 이름을 입력합니다.  
   
     > [!NOTE]  
-    >  의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **속성** 창에서 선택한 `Name` 특성의 속성을 설정할 수도 있습니다.  
+    >  `Name`의 **속성** 창에서 선택한 특성의 속성을 설정할 수도 있습니다 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
   

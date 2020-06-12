@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f753564c3be308f986a48e8a40203b7d338292f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087985"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527469"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>클러스터 특징 탭(마이닝 모델 뷰어)
   **클러스터 특징** 탭에서는 클러스터링 모델에 있는 클러스터의 특징이나 모델에 있는 모든 사례 집합의 특징을 탐색할 수 있습니다. 이 그래프에는 다른 클러스터와 비교한 각 특성-값 쌍의 중요도가 클러스터를 정의하는 특징으로 표시됩니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66087985"
  **클러스터**  
  보려는 클러스터를 선택하거나 모델의 특성 분포를 전체적으로 보려면 **채우기(모두)** 를 선택합니다.  
   
- **\<클러스터>특징**  
+ **특성\<cluster>**  
  이 그래프에는 선택한 클러스터의 특징을 설명하는 다음 열이 포함됩니다.  
   
 |값|설명|  

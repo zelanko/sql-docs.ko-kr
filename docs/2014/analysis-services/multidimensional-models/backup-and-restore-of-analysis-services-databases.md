@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077024"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544645"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "66077024"
   
 -   [Analysis Services 데이터베이스 복원](#bkmk_restore)  
   
-##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 필수 조건  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> 전제 조건  
  Analysis Services 인스턴스에 대한 관리 권한이나 백업하려는 데이터베이스에 대한 모든 권한(관리자)을 가지고 있어야 합니다.  
   
  복원 위치는 백업이 수행된 인스턴스와 동일한 버전 또는 상위 버전인 Analysis Services 인스턴스여야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스의 데이터베이스를 이전 버전의 Analysis Services로 복원할 수는 없지만 최신 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스에서 SQL Server 2012와 같은 이전 버전의 데이터베이스를 복원하는 것은 일반적인 일입니다.  

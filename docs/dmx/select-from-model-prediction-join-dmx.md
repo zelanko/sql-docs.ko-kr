@@ -1,21 +1,21 @@
 ---
-title: 모델&gt; 예측 &lt;조인 (DMX)에서 선택 Microsoft Docs
+title: '&lt;모델 &gt; 예측 조인 (DMX)에서 선택 Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928338"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670134"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>모델&gt; 예측 &lt;조인에서 선택 (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>&lt;모델 &gt; 예측 조인에서 선택 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   마이닝 모델을 사용하여 외부 데이터 원본에 있는 열의 상태를 예측합니다. **예측 조인** 문은 원본 쿼리의 각 사례를 모델에 대응 시킵니다.  
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  예측 조인에 대한 원본 쿼리는 테이블 또는 단일 쿼리일 수 있습니다.  
   
- \< *Select 식 목록* 에서 테이블 식을 반환 하지 않는 예측 함수> 및 \< *조건 식*>를 지정할 수 있습니다.  
+ Select 식 목록에서 테이블 식을 반환 하지 않는 예측 함수 \< *select expression list*> 및 \< *조건 식*>를 지정할 수 있습니다.  
   
  **자연 예측 조인은** 모델의 열 이름과 일치 하는 원본 쿼리의 열 이름을 자동으로 매핑합니다. **자연 예측**을 사용 하는 경우 ON 절을 생략할 수 있습니다.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
- 다음 예에서는 외부 데이터 세트에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블이 인스턴스에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]정의 된 데이터 원본 뷰의 일부 이기 때문에 쿼리는 [OPENQUERY](../dmx/source-data-query-openquery.md) 를 사용 하 여 데이터를 검색할 수 있습니다. 테이블의 열 이름은 마이닝 모델의 열과 다르므로 **ON** 절을 사용 하 여 테이블의 열을 모델의 열에 매핑해야 합니다.  
+ 다음 예에서는 외부 데이터 세트에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블이 인스턴스에 정의 된 데이터 원본 뷰의 일부 이기 때문에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 쿼리는 [OPENQUERY](../dmx/source-data-query-openquery.md) 를 사용 하 여 데이터를 검색할 수 있습니다. 테이블의 열 이름은 마이닝 모델의 열과 다르므로 **ON** 절을 사용 하 여 테이블의 열을 모델의 열에 매핑해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  
   

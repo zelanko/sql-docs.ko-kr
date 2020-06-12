@@ -1,5 +1,6 @@
 ---
 title: XQuery의 형식 캐스팅 규칙 | Microsoft Docs
+description: XQuery에서 한 데이터 형식에서 다른 데이터 형식으로 명시적 또는 암시적으로 캐스팅할 때 적용 되는 규칙에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946210"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520130"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery의 캐스트 규칙
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946210"
   
  이 항목에서는 다음 중 한 가지 방법으로 유형 간 변환할 때 적용되는 캐스트 규칙에 대해 설명합니다.  
   
--   **Cast as** 또는 형식 생성자 함수 (예:)를 `xs:integer("5")`사용 하 여 수행 하는 명시적 캐스팅  
+-   **Cast as** 또는 형식 생성자 함수 (예:)를 사용 하 여 수행 하는 명시적 캐스팅 `xs:integer("5")`  
   
 -   유형 승격 중 발생하는 암시적 캐스트  
   
@@ -95,7 +96,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 다음 쿼리는 문서 인스턴스에> 요소가 <`root` 최상위 수준 수를 알 수 없기 때문에 정적 오류를 반환 합니다.  
+ 다음 쿼리는 `root` 문서 인스턴스에> 요소가 <최상위 수준 수를 알 수 없기 때문에 정적 오류를 반환 합니다.  
   
 ```  
 declare @x xml(myCollection)  
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 식에 singleton <`root`> 요소를 지정 하면 쿼리가 성공 합니다. 이 쿼리는 xs:string으로 형식화된 단순 유형 값의 시퀀스를 반환합니다.  
+ 식에 singleton <> 요소를 지정 하면 `root` 쿼리가 성공 합니다. 이 쿼리는 xs:string으로 형식화된 단순 유형 값의 시퀀스를 반환합니다.  
   
 ```  
 declare @x xml(myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  문자열 또는 untypedAtomic 유형에서 xs:base64Binary 또는 xs:hexBinary와 같은 이진 유형으로 캐스팅할 때 입력 값은 각각 Base64 또는 16진수 인코딩이어야 합니다.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>문자열 또는 untypedAtomic 유형으로 값 캐스팅  
- 문자열 또는 untypedAtomic 유형으로 캐스팅하면 값이 XQuery 정식 어휘 표현으로 변환됩니다. 이는 특히 입력 중 특정 패턴이나 기타 제약 조건에 맞는 값이 해당 제약 조건에 따라 표현되지 않음을 의미합니다.  이에 대 한 정보를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자에 게 알리기 위해 해당 형식이 스키마 컬렉션에 로드 될 때 경고를 제공 하 여 형식 제약 조건이 문제가 될 수 있는 형식에 플래그를 지정할 수 있습니다.  
+ 문자열 또는 untypedAtomic 유형으로 캐스팅하면 값이 XQuery 정식 어휘 표현으로 변환됩니다. 이는 특히 입력 중 특정 패턴이나 기타 제약 조건에 맞는 값이 해당 제약 조건에 따라 표현되지 않음을 의미합니다.  이에 대 한 정보를 사용자에 게 알리기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 해당 형식이 스키마 컬렉션에 로드 될 때 경고를 제공 하 여 형식 제약 조건이 문제가 될 수 있는 형식에 플래그를 지정할 수 있습니다.  
   
  xs:float 유형 또는 xs:double 유형이나 그 하위 유형 중 하나의 값을 문자열 또는 untypedAtomic 유형으로 캐스팅할 때 해당 값은 과학적 표기법으로 표시됩니다. 이는 해당 값의 절대값이 1.0E-6 미만이거나 1.0E6 이상일 때만 수행됩니다. 즉, 과학적 표기법에 따라 0이 0.0E0으로 직렬화됩니다.  
   
