@@ -8,7 +8,6 @@ ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
-dev_langs: TSQL
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
@@ -16,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 3c6b3ab849836bb4252e4b672c4304de0baeeacd
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767139"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779475"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
 
@@ -75,7 +74,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 
 `[ @subsystem = ] 'subsystem'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트 서비스에서 *명령을*실행 하는 데 사용 하는 하위 시스템입니다. *하위 시스템* 은 **nvarchar (40)** 이며 다음 값 중 하나일 수 있습니다.
 
-|값|설명|
+|값|Description|
 |-----------|-----------------|
 |'**ActiveScripting**'|액티브 스크립트<br /><br /> ** \* \* \* 중요 \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|
 |'**CmdExec**'|운영 체제 명령 또는 실행 프로그램|
@@ -93,7 +92,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 `[ @command = ] 'command'`*하위 시스템*을 통해 **SQLServerAgent** 서비스에서 실행할 명령입니다. *명령은* **nvarchar (max)** 이며 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.
 
 > [!IMPORTANT]
-> 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 예를 들어:
+> 작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 다음은 그 예입니다.
 >
 > `$(ESCAPE_` *macro name* `(DATE))`  
 
@@ -151,8 +150,8 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
 |**2**|출력 파일에 추가합니다.|  
 |**4**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계 출력을 단계 기록에 씁니다.|  
-|**20cm(8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
-|**x**|테이블에 로그를 씁니다(기존 기록에 추가).|  
+|**8**|테이블에 로그를 씁니다(기존 기록을 덮어씀).|  
+|**16**|테이블에 로그를 씁니다(기존 기록에 추가).|  
 |**32**|모든 출력을 작업 기록에 씁니다.|  
 |**64**|중단할 Cmd jobstep에 대한 신호로 사용할 Windows 이벤트를 만듭니다.|  
 
@@ -178,7 +177,7 @@ SQL Server Management Studio는 작업 구조를 만들고 관리할 수 있는 
 
 프록시는 *proxy_name* 또는 *proxy_id*로 식별할 수 있습니다.
 
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.
 
@@ -192,7 +191,7 @@ SQL Server Management Studio는 작업 구조를 만들고 관리할 수 있는 
 
 작업 단계의 생성자는 작업 단계에 대한 프록시에 액세스할 수 있어야 합니다. **Sysadmin** 고정 서버 역할의 멤버는 모든 프록시에 액세스할 수 있습니다. 다른 사용자에게는 프록시에 대한 액세스 권한을 명시적으로 부여해야 합니다.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 다음 예에서는 Sales 데이터베이스에 대한 액세스 권한을 읽기 전용으로 변경하는 작업 단계를 만듭니다. 또한 이 예에서는 다시 시도 횟수를 5로 지정하고 각 다시 시도는 5분 대기한 후에 발생하도록 지정합니다.
 

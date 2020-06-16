@@ -1,5 +1,6 @@
 ---
 title: 명명 된 파이프를 사용 하 여 유효한 연결 문자열 만들기 | Microsoft Docs
+description: 명명 된 파이프 프로토콜을 사용 하 여 SQL Server 인스턴스에 연결할 때 유효한 연결 문자열을 만드는 방법에 대해 알아봅니다. 올바른 파이프 이름의 예를 봅니다.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001033"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716710"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>명명된 파이프를 사용하여 유효한 연결 문자열 만들기
   사용자가 변경 하지 않은 경우의 기본 인스턴스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명명 된 파이프 프로토콜에서 수신 하는 경우를 `\\.\pipe\sql\query` 파이프 이름으로 사용 합니다. 마침표는 컴퓨터가 로컬 컴퓨터임을 나타내고 `pipe` 는 연결이 명명된 파이프임을 나타내며 `sql\query` 는 파이프의 이름입니다. 기본 파이프에 연결하려면 별칭의 파이프 이름으로 `\\<computer_name>\pipe\sql\query` 를 지정해야 합니다. 다른 파이프에서 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 구성한 경우 파이프 이름으로 해당 파이프를 사용해야 합니다. 예를 들어, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 `\\.\pipe\unit\app` 를 파이프로 사용하는 경우 별칭의 파이프 이름은 `\\<computer_name>\pipe\unit\app` 여야 합니다.  
@@ -54,7 +55,7 @@ WHERE session_id = @@SPID;
   
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  서버 이름으로 기본 파이프에 연결  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: Oracle 용 SSMA의 새로운 기능 (OracleToSQL) | Microsoft Docs
 description: 각 릴리스에 대 한 Oracle (OracleToSQL)에 대 한 변경 SQL Server Migration Assistant 내용에 대해 알아봅니다.
-authors: HJToland3;nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 6/2/2020
@@ -9,13 +9,13 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-ms.author: jtoland;alexiva
-ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.author: alexiva
+ms.openlocfilehash: 5d1a12d41d7d25154998f39be136266631b6d421
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294070"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779560"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 

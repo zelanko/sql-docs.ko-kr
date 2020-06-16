@@ -1,18 +1,19 @@
 ---
 title: CLR UDT를 통해 레코드 및 컬렉션 에뮬레이트
 description: Oracle 용 SSMA (SQL Server Migration Assistant)에서 SQL Server CLR (공용 언어 런타임) UDT (사용자 정의 데이터 형식)를 사용 하 여 Oracle 레코드 및 컬렉션을 에뮬레이트하는 방법에 대해 설명 합니다.
-authors: nahk-ivanov
-ms.service: ssma
+author: nahk-ivanov
+ms.prod: sql
+ms.technology: ssma
 ms.devlang: sql
 ms.topic: article
 ms.date: 1/22/2020
 ms.author: alexiva
-ms.openlocfilehash: 39a7e8d59425db7ce2d7e81083012321caac35ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73991999cf0a6e7bd2c8cd541ec58a37d1f18f09
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76762817"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779383"
 ---
 # <a name="emulating-records-and-collections-via-clr-udt"></a>CLR UDT를 통해 레코드 및 컬렉션 에뮬레이트
 
@@ -26,7 +27,7 @@ SSMA는 세 가지 CLR 기반 Udt를 만듭니다.
 * `CollectionIndexString`
 * `Record`
 
-`CollectionIndexInt` 형식은 정수 (예: `VARRAY`s, 중첩 테이블 및 정수 키 기반 결합형 배열)로 인덱싱된 컬렉션을 에뮬레이트 하기 위한 것입니다. `CollectionIndexString` 형식은 문자 키로 인덱싱된 결합형 배열에 사용 됩니다. Oracle 레코드 기능은 형식에 `Record` 의해 에뮬레이션 됩니다.
+`CollectionIndexInt`형식은 정수 (예: `VARRAY` s, 중첩 테이블 및 정수 키 기반 결합형 배열)로 인덱싱된 컬렉션을 에뮬레이트 하기 위한 것입니다. `CollectionIndexString`형식은 문자 키로 인덱싱된 결합형 배열에 사용 됩니다. Oracle 레코드 기능은 형식에 의해 에뮬레이션 됩니다 `Record` .
 
 레코드 또는 컬렉션 형식의 모든 선언은 다음 Transact-sql 선언으로 변환 됩니다.
 
@@ -101,7 +102,7 @@ BEGIN
 END
 ```
 
-여기서는 `Manager` 테이블이 숫자 인덱스 (`INDEX BY PLS_INTEGER`)와 연결 되어 있기 때문에 사용 되는 해당 t-sql 선언은 형식 `@CollectionIndexInt$TYPE`입니다. 테이블이 문자 집합 인덱스 `VARCHAR2`와 연결 된 경우 해당 t-sql 선언은 다음과 같은 형식 `@CollectionIndexString$TYPE`입니다.
+여기서 `Manager` 는 테이블이 숫자 인덱스 ()와 연결 되어 있기 때문에 `INDEX BY PLS_INTEGER` 사용 되는 해당 t-sql 선언은 형식입니다 `@CollectionIndexInt$TYPE` . 테이블이 문자 집합 인덱스와 연결 된 경우 `VARCHAR2` 해당 t-sql 선언은 다음과 같은 형식입니다 `@CollectionIndexString$TYPE` .
 
 ```sql
 -- Oracle
@@ -112,13 +113,13 @@ TYPE Manager_table is TABLE OF Manager INDEX BY VARCHAR2(40);
     ' TABLE INDEX BY STRING OF ( RECORD ( MGRID INT , MGRNAME STRING , HIREDATE DATETIME ) )'
 ```
 
-Oracle 레코드 기능은 형식에 `Record` 의해서만 에뮬레이션 됩니다.
+Oracle 레코드 기능은 형식에 의해서만 에뮬레이션 됩니다 `Record` .
 
-`CollectionIndexInt`각 형식 `CollectionIndexString`,, 및 `Record`에는 빈 인스턴스를 반환 하는 `[Null]` 정적 속성이 있습니다. 메서드 `SetType` 는 위의 예제에서 볼 수 있듯이 특정 형식의 빈 개체를 수신 하기 위해 호출 됩니다.
+각 형식,, 및에는 `CollectionIndexInt` `CollectionIndexString` `Record` 빈 인스턴스를 반환 하는 정적 속성이 있습니다 `[Null]` . `SetType`메서드는 위의 예제에서 볼 수 있듯이 특정 형식의 빈 개체를 수신 하기 위해 호출 됩니다.
 
 ## <a name="constructor-call-conversions"></a>생성자 호출 변환
 
-생성자 표기법은 중첩 테이블 및 `VARRAY`에만 사용할 수 있으므로 모든 명시적 생성자 호출은 `CollectionIndexInt` 형식을 사용 하 여 변환 됩니다. 빈 생성자 호출은의 `SetType` `CollectionIndexInt`null 인스턴스에 대해 호출 된 호출을 통해 변환 됩니다. 속성 `[Null]` 은 null 인스턴스를 반환 합니다. 생성자에 요소 목록이 포함 되어 있으면 특수 메서드 호출이 순차적으로 적용 되어 컬렉션에 값을 추가 합니다.
+생성자 표기법은 중첩 테이블 및에만 사용할 수 `VARRAY` 있으므로 모든 명시적 생성자 호출은 형식을 사용 하 여 변환 됩니다 `CollectionIndexInt` . 빈 생성자 호출은 `SetType` 의 null 인스턴스에 대해 호출 된 호출을 통해 변환 됩니다 `CollectionIndexInt` . `[Null]`속성은 null 인스턴스를 반환 합니다. 생성자에 요소 목록이 포함 되어 있으면 특수 메서드 호출이 순차적으로 적용 되어 컬렉션에 값을 추가 합니다.
 
 다음은 그 예입니다.
 
@@ -166,7 +167,7 @@ END
 
 ## <a name="referencing-and-assigning-record-and-collection-elements"></a>레코드 및 컬렉션 요소 참조 및 할당
 
-각 Udt에는 다양 한 데이터 형식의 요소를 사용 하는 일련의 메서드가 있습니다. 예를 들어 메서드 `SetDouble` 는 레코드 또는 `float(53)` 컬렉션에 값을 할당 하 고 `GetDouble` 이 값을 읽을 수 있습니다. 다음은 전체 메서드 목록입니다.
+각 Udt에는 다양 한 데이터 형식의 요소를 사용 하는 일련의 메서드가 있습니다. 예를 들어 `SetDouble` 메서드는 `float(53)` 레코드 또는 컬렉션에 값을 할당 하 고 `GetDouble` 이 값을 읽을 수 있습니다. 다음은 전체 메서드 목록입니다.
 
 ```sql
 GetCollectionIndexInt(@key <KeyType>) returns CollectionIndexInt;
@@ -255,14 +256,14 @@ TRIM (n) | `TrimN(@count int) returns <UDT_type>`
 
 ## <a name="bulk-collect-operation"></a>대량 수집 작업
 
-SSMA는 `BULK COLLECT INTO` 문을 SQL Server `SELECT ... FOR XML PATH` 문으로 변환 합니다. 그 결과는 다음 함수 중 하나로 래핑됩니다.
+SSMA `BULK COLLECT INTO` 는 문을 SQL Server 문으로 변환 합니다 `SELECT ... FOR XML PATH` . 그 결과는 다음 함수 중 하나로 래핑됩니다.
 
 * `ssma_oracle.fn_bulk_collect2CollectionSimple`
 * `ssma_oracle.fn_bulk_collect2CollectionComplex`
 
-선택은 대상 개체의 형식에 따라 달라 집니다. 이러한 함수는, `CollectionIndexInt` `CollectionIndexString` 및 `Record` 형식으로 구문 분석할 수 있는 XML 값을 반환 합니다. 특수 `AssignData` 함수는 XML 기반 컬렉션을 UDT에 할당 합니다.
+선택은 대상 개체의 형식에 따라 달라 집니다. 이러한 함수는, 및 형식으로 구문 분석할 수 있는 XML 값을 반환 `CollectionIndexInt` `CollectionIndexString` `Record` 합니다. 특수 `AssignData` 함수는 XML 기반 컬렉션을 UDT에 할당 합니다.
 
-SSMA는 세 가지 종류 `BULK COLLECT INTO` 의 문을 인식 합니다.
+SSMA는 세 가지 종류의 `BULK COLLECT INTO` 문을 인식 합니다.
 
 ### <a name="the-collection-contains-elements-with-scalar-types-and-the-select-list-contains-one-column"></a>컬렉션에 스칼라 형식의 요소가 포함 되어 있고 목록에 `SELECT` 열이 하나 포함 되어 있습니다.
 
@@ -279,7 +280,7 @@ SET @<collection_name_1> =
             (SELECT column_name_1 FROM <data_source> FOR XML PATH)))
 ```
 
-### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>컬렉션에는 레코드 형식이 포함 된 요소가 포함 되 `SELECT` 고 목록에는 하나의 열이 포함 됩니다.
+### <a name="the-collection-contains-elements-with-record-types-and-the-select-list-contains-one-column"></a>컬렉션에는 레코드 형식이 포함 된 요소가 포함 되 고 목록에는 `SELECT` 하나의 열이 포함 됩니다.
 
 ```sql
 -- Oracle
@@ -340,4 +341,4 @@ SELECT
 
 ## <a name="select-into-record"></a>SELECT INTO 레코드
 
-Oracle 쿼리 결과가 PL/SQL record 변수에 저장 되 면 레코드 변환의 ssma 설정에 따라 **구분 된 변수 목록** ( **도구** 메뉴에서 사용 가능, **프로젝트 설정**, **일반** -> **변환**)에 따라 두 가지 옵션이 제공 됩니다. 이 설정의 값이 **예** (기본값) 이면 Ssma는 레코드 형식의 인스턴스를 만들지 않습니다. 대신 각 레코드 필드 마다 별도의 Transact-sql 변수를 만들어 레코드를 백업을 위해 필드로 분할 합니다. 설정이 **아니요**인 경우 레코드는 인스턴스화되고 메서드를 사용 하 여 `Set` 각 필드에 값이 할당 됩니다.
+Oracle 쿼리 결과가 PL/SQL record 변수에 저장 되 면 레코드 변환의 ssma 설정에 따라 **구분 된 변수 목록** ( **도구** 메뉴에서 사용 가능, **프로젝트 설정**, **일반**  ->  **변환**)에 따라 두 가지 옵션이 제공 됩니다. 이 설정의 값이 **예** (기본값) 이면 Ssma는 레코드 형식의 인스턴스를 만들지 않습니다. 대신 각 레코드 필드 마다 별도의 Transact-sql 변수를 만들어 레코드를 백업을 위해 필드로 분할 합니다. 설정이 **아니요**인 경우 레코드는 인스턴스화되고 메서드를 사용 하 여 각 필드에 값이 할당 됩니다 `Set` .

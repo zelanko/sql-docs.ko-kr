@@ -1,7 +1,7 @@
 ---
 title: SQLGetCursorName 함수 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285551"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779065"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 함수(SQLGetCursorName Function)
 **규칙**  
@@ -54,10 +54,10 @@ SQLRETURN SQLGetCursorName(
  *CursorName* 가 NULL 인 경우 *NameLengthPtr* 는 *CursorName*가 가리키는 버퍼에서 반환 하는 데 사용할 수 있는 문자 데이터의 NULL 종료 문자를 제외한 총 문자 수를 반환 합니다.  
   
  *BufferLength*  
- 입력 \* *CursorName*의 길이 (문자)입니다. * \*CursorName* 의 값이 유니코드 문자열이 면 ( **SQLGetCursorNameW**호출 시) *bufferlength* 인수는 짝수 여야 합니다.  
+ 입력 \* *CursorName*의 길이 (문자)입니다. 
   
  *NameLengthPtr*  
- 출력 \* *CursorName*에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 메모리에 대 한 포인터입니다. 반환할 수 있는 문자 수가 *bufferlength*보다 크거나 같으면 \* *CursorName* 의 커서 이름이 *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
+ 출력 CursorName에서 반환 하는 데 사용할 수 있는 총 문자 수 (null 종결 문자 제외)를 반환할 메모리에 대 한 포인터입니다 \* *CursorName*. 반환할 수 있는 문자 수가 *Bufferlength*보다 크거나 같으면 CursorName의 커서 이름이 \* *CursorName* *bufferlength* 에서 null 종료 문자의 길이를 뺀 값으로 잘립니다.  
   
 ## <a name="returns"></a>반환  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
@@ -69,7 +69,7 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
 |01004|문자열 데이터, 오른쪽이 잘렸습니다.|버퍼 \* *CursorName* 는 전체 커서 이름을 반환할 만큼 크지 않으므로 커서 이름이 잘렸습니다. 잘린 커서 이름의 길이는 **NameLengthPtr*에서 반환 됩니다. 함수는 SQL_SUCCESS_WITH_INFO를 반환 합니다.|  
-|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. MessageText 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다. * \**|  
+|HY000|일반 오류|특정 SQLSTATE가 없고 구현 별 SQLSTATE가 정의 되지 않은 오류가 발생 했습니다. * \* MessageText* 버퍼에서 **SQLGetDiagRec** 에 의해 반환 되는 오류 메시지는 오류 및 해당 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류|드라이버에서 함수 실행 또는 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류|(DM) *StatementHandle*연결 된 연결 핸들에 대해 비동기적으로 실행 되는 함수가 호출 되었습니다. **SQLGetCursorName** 함수가 호출 될 때이 비동기 함수는 계속 실행 중입니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**또는 **SQLMoreResults** 가 *StatementHandle* 에 대해 호출 되 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 이 함수는 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에 호출 되었습니다.<br /><br /> (DM) *StatementHandle* 에 대해 비동기적으로 실행 되는 함수가 호출 되었으며이 함수가 호출 될 때 여전히 실행 되 고 있습니다.<br /><br /> (DM) **Sqlexecute**, **sqlexecdirect**, **SQLBulkOperations**또는 **SQLSetPos** 가 *StatementHandle* 에 대해 호출 되 고 SQL_NEED_DATA 반환 되었습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대해 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류|메모리 부족 상태로 인해 기본 메모리 개체에 액세스할 수 없기 때문에 함수 호출을 처리할 수 없습니다.|  

@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eece83b3c1fcde0d33a515c85eeb2cdac0a72cf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61cc363e15a200ed23de4ac94aba64680e1bc4a6
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827883"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716780"
 ---
 # <a name="sysdm_os_memory_objects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,27 +38,27 @@ ms.locfileid: "82827883"
 |**parent_address**|**varbinary(8)**|상위 메모리 개체의 주소입니다. Null을 허용합니다.|  
 |**pages_allocated_count**|**int**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 개체에서 할당한 페이지 수입니다. Null을 허용하지 않습니다.|  
 |**pages_in_bytes**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 메모리 개체의 이 인스턴스에서 할당하는 메모리의 양(바이트)입니다. Null을 허용하지 않습니다.|  
-|**creation_options**|**int**|내부 전용입니다. Null을 허용합니다.|  
-|**bytes_used**|**bigint**|내부 전용입니다. Null을 허용합니다.|  
+|**creation_options**|**int**|내부적으로만 사용됩니다. Null을 허용합니다.|  
+|**bytes_used**|**bigint**|내부적으로만 사용됩니다. Null을 허용합니다.|  
 |**type**|**nvarchar(60)**|메모리 개체의 유형입니다.<br /><br /> 이 메모리 개체가 속한 구성 요소 또는 메모리 개체의 기능을 나타냅니다. Null을 허용합니다.|  
-|**name**|**varchar(128)**|내부 전용입니다. Null을 허용합니다.|  
+|**name**|**varchar(128)**|내부적으로만 사용됩니다. Null을 허용합니다.|  
 |**memory_node_id**|**smallint**|이 메모리 개체에서 사용하고 있는 메모리 노드의 ID입니다. Null을 허용하지 않습니다.|  
-|**creation_time**|**datetime**|내부 전용입니다. Null을 허용합니다.|  
+|**creation_time**|**datetime**|내부적으로만 사용됩니다. Null을 허용합니다.|  
 |**max_pages_allocated_count**|**int**|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]까지<br /><br /> 이 메모리 개체에서 할당한 최대 페이지 수입니다. Null을 허용하지 않습니다.|  
 |**page_size_in_bytes**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상<br /><br /> 이 개체에서 할당한 페이지의 크기(바이트)입니다. Null을 허용하지 않습니다.|  
 |**max_pages_in_bytes**|**bigint**|이 메모리 개체에서 사용한 최대 메모리 양입니다. Null을 허용하지 않습니다.|  
 |**page_allocator_address**|**varbinary(8)**|페이지 할당자의 메모리 주소입니다. Null을 허용하지 않습니다. 자세한 내용은 [dm_os_memory_clerks &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)을 참조 하십시오.|  
-|**creation_stack_address**|**varbinary(8)**|내부 전용입니다. Null을 허용합니다.|  
-|**sequence_num**|**int**|내부 전용입니다. Null을 허용합니다.|  
-|**partition_type**|**int**|파티션 유형입니다.<br /><br /> 0-분할 되지 않은 메모리 개체<br /><br /> 1-분할 된 메모리 개체 (현재 분할 되지 않음)<br /><br /> 2-NUMA 노드에 의해 분할 된 분할 된 메모리 개체입니다. 단일 NUMA 노드가 있는 환경에서는 1과 같습니다.<br /><br /> 3-CPU로 분할 된 분할 된 메모리 개체입니다.|  
-|**contention_factor**|**real**|이 메모리 개체에 대 한 경합을 지정 하는 값으로 0은 경합이 없음을 의미 합니다. 지정 된 수의 메모리 할당이 해당 기간 동안 경합을 반영 하는 경우 값이 업데이트 됩니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.|  
-|**waiting_tasks_count**|**bigint**|이 메모리 개체의 대기 수입니다. 이 카운터는 메모리가이 메모리 개체에서 할당 될 때마다 증가 합니다. 이 증가값은 현재이 메모리 개체에 대 한 액세스를 대기 중인 작업의 수입니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다. 이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
-|**exclusive_access_count**|**bigint**|이 메모리 개체에 단독으로 액세스 한 빈도를 지정 합니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.  이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
+|**creation_stack_address**|**varbinary(8)**|내부적으로만 사용됩니다. Null을 허용합니다.|  
+|**sequence_num**|**int**|내부적으로만 사용됩니다. Null을 허용합니다.|  
+|**partition_type**|**int**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 파티션 유형입니다.<br /><br /> 0-분할 되지 않은 메모리 개체<br /><br /> 1-분할 된 메모리 개체 (현재 분할 되지 않음)<br /><br /> 2-NUMA 노드에 의해 분할 된 분할 된 메모리 개체입니다. 단일 NUMA 노드가 있는 환경에서는 1과 같습니다.<br /><br /> 3-CPU로 분할 된 분할 된 메모리 개체입니다.|  
+|**contention_factor**|**real**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체에 대 한 경합을 지정 하는 값으로 0은 경합이 없음을 의미 합니다. 지정 된 수의 메모리 할당이 해당 기간 동안 경합을 반영 하는 경우 값이 업데이트 됩니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.|  
+|**waiting_tasks_count**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체의 대기 수입니다. 이 카운터는 메모리가이 메모리 개체에서 할당 될 때마다 증가 합니다. 이 증가값은 현재이 메모리 개체에 대 한 액세스를 대기 중인 작업의 수입니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다. 이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
+|**exclusive_access_count**|**bigint**|**적용 대상**: [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] 이상<br /><br /> 이 메모리 개체에 단독으로 액세스 한 빈도를 지정 합니다. 스레드로부터 안전한 메모리 개체에만 적용 됩니다.  이 값은 정확성을 보장 하지 않는 최상의 노력입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
  **partition_type**, **contention_factor**, **waiting_tasks_count**및 **exclusive_access_count** 은에서 아직 구현 되지 않았습니다 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
@@ -71,7 +71,7 @@ ms.locfileid: "82827883"
 > [!NOTE]  
 >  페이지 크기는 최대 할당이 아닙니다. 대신에 페이지 크기는 페이지 할당자에서 지원하고 메모리 클럭에서 구현하는 할당 세분성을 지원합니다. 메모리 개체에서 8KB보다 큰 할당을 요청할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 각 메모리 개체 유형에서 할당한 메모리를 반환합니다.  
   
 ```  

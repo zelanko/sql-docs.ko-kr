@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829305"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748729"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,19 +52,19 @@ ms.locfileid: "82829305"
 |**parent_task_address**|**varbinary(8)**|개체의 부모인 태스크의 메모리 주소입니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포가 설정 된 노드의 식별자입니다.|  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
 
 ## <a name="examples"></a>예  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. 병렬 요청 모니터링  
- 병렬로 실행 되는 요청의 경우 동일한 조합 ( \< **session_id**>, \< **request_id**>)에 대해 여러 행이 표시 됩니다. 다음 쿼리를 사용 하 여 모든 활성 요청에 대 한 [최대 병렬 처리 수준 서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 을 찾을 수 있습니다.  
+ 병렬로 실행 되는 요청의 경우 동일한 조합 (,)에 대해 여러 행이 표시 됩니다 \<**session_id**> \<**request_id**> . 다음 쿼리를 사용 하 여 모든 활성 요청에 대 한 [최대 병렬 처리 수준 서버 구성 옵션](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 을 찾을 수 있습니다.  
   
 > [!NOTE]  
 >  **Request_id** 는 세션 내에서 고유 합니다.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>B. Windows 스레드와 세션 ID 연결  
  다음 쿼리를 사용하여 세션 ID 값을 Windows 스레드 ID와 연결할 수 있습니다. 그런 다음 Windows 성능 모니터에서 스레드의 성능을 모니터링할 수 있습니다. 다음 쿼리는 중지 상태인 세션에 대한 정보를 반환하지 않습니다.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,7 +94,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
 ## <a name="see-also"></a>참고 항목  
 [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)     

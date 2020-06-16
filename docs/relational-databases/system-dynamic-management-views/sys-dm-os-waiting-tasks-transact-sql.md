@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811760"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748250"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82811760"
   특정 리소스에서 대기 중인 태스크의 대기 큐에 대한 정보를 반환합니다. 작업에 대 한 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
    
 > [!NOTE]  
->  또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_waiting_tasks**을 사용 합니다.  
+> 또는에서이를 호출 하려면 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 이름 **sys. dm_pdw_nodes_os_waiting_tasks**을 사용 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "82811760"
   
  **스레드 풀 리소스 소유자:**  
   
--   threadpool id = scheduler \< 16 진수 주소>  
+-   threadpool id = scheduler\<hex-address>  
   
  **병렬 쿼리 리소스 소유자:**  
   
--   exchangeEvent id = {Port | Pipe} \< hex> WaitType = \< exchange-wait-Type> nodeId = \< exchange-node-id>  
+-   exchangeEvent id = {Port | Pipe} \<hex-address> WaitType = \<exchange-wait-type> nodeId =\<exchange-node-id>  
   
  **Exchange-wait-type:**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "82811760"
   
  **잠금 리소스 소유자:**  
   
--   \<유형별-설명> id = lock \< lock-address> mode = \< Mode> associatedObjectId = \< 연결 된 obj-id>  
+-   \<type-specific-description>id = lock \<lock-hex-address> mode = \<mode> associatedObjectId =\<associated-obj-id>  
   
-     **\<유형별 설명> 다음이 될 수 있습니다.**  
+     **\<type-specific-description>다음이 될 수 있습니다.**  
   
-    -   데이터베이스: databaselock subresource = \< databaselock-subresource> dbid = \< db-id>  
+    -   데이터베이스: databaselock subresource = \<databaselock-subresource> dbid =\<db-id>  
   
-    -   파일: filelock fileid = \< 파일 id> subresource = \< filelock-subresource> dbid = \< db-id>  
+    -   FILE: filelock fileid = \<file-id> subresource = \<filelock-subresource> dbid =\<db-id>  
   
-    -   개체: objectlock lockPartition = \< objid = obj-id> = \< obj> subresource = \< objectlock-subresource> dbid = \< db-id>  
+    -   개체: objectlock lockPartition = \<lock-partition-id> objid = \<obj-id> subresource = \<objectlock-subresource> dbid =\<db-id>  
   
-    -   PAGE lock fileid = \< file-id> pageid = \< page-id> dbid = \< db-id> subresource = \< pagelock-subresource>  
+    -   PAGE: pagelock fileid = \<file-id> pageid = \<page-id> dbid = \<db-id> subresource =\<pagelock-subresource>  
   
-    -   키: 키잠금을 hobtid = \< hobt> dbid = \< db-id>  
+    -   키: 키잠금을 hobtid = \<hobt-id> dbid =\<db-id>  
   
-    -   익스텐트의 경우: extentlock fileid = \< 파일 id> pageid = \< 페이지 id> dbid = \< db-id>  
+    -   익스텐트의 경우: extentlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   RID: ridlock fileid = \< 파일 id> pageid = \< 페이지 id> dbid = \< db-id>  
+    -   For RID: ridlock fileid = \<file-id> pageid = \<page-id> dbid =\<db-id>  
   
-    -   응용 프로그램의 경우: applicationlock hash = \< hash> databasePrincipalId = \< 역할-id> dbid = \< db-id>  
+    -   응용 프로그램의 경우: applicationlock hash = \<hash> databaseprincipalid = \<role-id> dbid =\<db-id>  
   
-    -   메타 데이터: metadatalock subresource = \< METADATA-subresource> classid = \< metadatalock-description> dbid = \< db-id>  
+    -   메타 데이터: metadatalock subresource = \<metadata-subresource> classid = \<metadatalock-description> dbid =\<db-id>  
   
-    -   HOBT: hobtlock hobtid = \< HOBT> subresource = \< HOBT-subresource> dbid = \< db-id>  
+    -   HOBT: hobtlock hobtid = \<hobt-id> subresource = \<hobt-subresource> dbid =\<db-id>  
   
-    -   ALLOCATION_UNIT: allocunit lock hobtid = \< hobt> 하위 리소스 = \< 할당-단위-하위 리소스> dbid = \< db-id>  
+    -   ALLOCATION_UNIT: allocunitlock hobtid = \<hobt-id> subresource = \<alloc-unit-subresource> dbid =\<db-id>  
   
-     **\<모드> 다음이 될 수 있습니다.**  
+     **\<mode>다음이 될 수 있습니다.**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **외부 리소스 소유자:**  
   
--   외부 ExternalResource = \< 대기 유형>  
+-   외부 ExternalResource =\<wait-type>  
   
  **일반 리소스 소유자:**  
   
--   TransactionMutex Transactionmutex 작업 영역 = \< 작업 영역 id>  
+-   TransactionMutex Transactionmutex 작업 영역 =\<workspace-id>  
   
 -   Mutex  
   
@@ -128,24 +128,56 @@ ms.locfileid: "82811760"
   
  **래치 리소스 소유자:**  
   
--   \<db-library>: \< 파일-id>: \< 페이지 내 파일>  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
 -   \<GUID>  
   
--   \<래치 클래스> ( \< 래치 주소>)  
+-   \<latch-class> (\<latch-address>)  
   
-## <a name="permissions"></a>권한
+## <a name="permissions"></a>사용 권한
 
 에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 는 `VIEW SERVER STATE` 권한이 필요 합니다.   
 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]Premium 계층에서는 데이터베이스에 대 한 권한이 필요 합니다 `VIEW DATABASE STATE` . [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다.   
  
 ## <a name="example"></a>예제
-이 예에서는 차단 된 세션을 식별 합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 쿼리를 실행 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 합니다.
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A. 차단 세션에서 작업을 식별 합니다. 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
-``` 
+```   
+
+### <a name="b-view-waiting-tasks-per-connection"></a>B. 연결당 대기 작업 보기
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>C. 추가 정보를 사용 하 여 모든 사용자 프로세스에 대 한 대기 작업 보기
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+    owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+    owt.resource_description, es.program_name, est.text,
+    est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+    es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
   
 ## <a name="see-also"></a>참고 항목  
 [Transact-sql&#41;&#40;운영 체제 관련 동적 관리 뷰 SQL Server](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      

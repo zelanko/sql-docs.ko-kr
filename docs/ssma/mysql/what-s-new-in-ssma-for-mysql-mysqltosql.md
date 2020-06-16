@@ -1,7 +1,7 @@
 ---
 title: MySQL 용 SSMA의 새로운 기능 (MySQLToSql) | Microsoft Docs
 description: 각 릴리스에 대 한 MySQL (MySQLToSQL)에 대 한 변경 SQL Server Migration Assistant 내용에 대해 알아봅니다.
-authors: HJToland3;nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 6/2/2020
@@ -9,13 +9,13 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-ms.author: jtoland;alexiva
-ms.openlocfilehash: 46f7cd640c0ad3767594122cc34536b925be7bb8
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.author: alexiva
+ms.openlocfilehash: ce77e0e9a3421fab7f1fc031bbf55e8a84c235df
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293890"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778065"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 

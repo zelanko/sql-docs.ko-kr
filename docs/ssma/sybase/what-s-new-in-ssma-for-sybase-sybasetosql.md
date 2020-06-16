@@ -1,7 +1,7 @@
 ---
 title: SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL) | Microsoft Docs
 description: 각 릴리스에 대 한 Sybase (SybaseToSQL)의 SQL Server Migration Assistant (SSMA) 변경에 대해 알아봅니다.
-authors: HJToland3;nahk-ivanov
+author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
 ms.date: 6/2/2020
@@ -9,13 +9,13 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
-ms.author: jtoland;alexiva
-ms.openlocfilehash: 1124349e961de7b4dc384b2db67d503d82e305fe
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.author: alexiva
+ms.openlocfilehash: ce526f0ae42ac3d44e21f57d0542409d4a3dec0a
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293701"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84778955"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE 용 SSMA의 새로운 기능 (SybaseToSQL)
 
@@ -329,6 +329,6 @@ Sybase 용 SSMA의 11 월 2006 릴리스에는 다음과 같은 변경 내용이
 
 SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>참고 항목
 
 [Sybase &#40;SybaseToSQL&#41;용 SSMA 시작](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
