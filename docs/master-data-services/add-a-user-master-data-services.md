@@ -1,5 +1,6 @@
 ---
 title: 사용자 추가
+description: 마스터 데이터 관리자에서 사용자 목록에 사용자를 추가 하는 방법에 대해 알아봅니다. 사용자를 추가 하 여 웹 응용 프로그램에 사용 권한을 할당 하는 프로세스를 시작 해야 합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729814"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796601"
 ---
 # <a name="add-a-user-master-data-services"></a>사용자 추가(Master Data Services)
 
@@ -37,7 +38,7 @@ ms.locfileid: "73729814"
   
 2.  **사용자** 페이지에서 **사용자 추가**를 클릭합니다.  
   
-3.  *도메인*\\*user_name* 또는 *computer \ user_name*와 같이 Active Directory 도메인 이름이 나 서버 컴퓨터 이름으로 앞에 사용자 이름을 입력 합니다.  
+3.  *도메인* \\ *user_name* 또는 *computer \ user_name*와 같이 Active Directory 도메인 이름이 나 서버 컴퓨터 이름으로 앞에 사용자 이름을 입력 합니다.  
   
 4.  또는 **이름 확인**을 클릭합니다.  
   

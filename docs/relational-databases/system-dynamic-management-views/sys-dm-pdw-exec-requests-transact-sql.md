@@ -12,18 +12,18 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087563"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796524"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  현재 또는 최근에 활성 상태인 모든 요청에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]정보를 저장 합니다. 요청/쿼리 당 한 개의 행을 나열 합니다.  
+  현재 또는 최근에 활성 상태인 모든 요청에 대 한 정보를 저장 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 합니다. 요청/쿼리 당 한 개의 행을 나열 합니다.  
   
 |열 이름|데이터 형식|Description|범위|  
 |-----------------|---------------|-----------------|-----------|  
@@ -38,13 +38,13 @@ ms.locfileid: "82087563"
 |label|**nvarchar(255)**|일부 SELECT 쿼리 문과 연결 된 선택적 레이블 문자열입니다.|' A-z ', ' a-z ', ' 0-9 ', ' _ '를 포함 하는 문자열입니다.|  
 |error_id|**nvarchar (36)**|요청과 관련 된 오류의 고유 ID입니다 (있는 경우).|[Dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);을 참조 하세요. 오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
 |database_id|**int**|명시적 컨텍스트에서 사용 되는 데이터베이스의 식별자입니다 (예: DB_X 사용).|[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)에서 ID를 참조 하십시오.|  
-|command|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 저장 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. 4000 바이트 보다 긴 쿼리는 잘립니다.|  
+|명령을 사용합니다.|**nvarchar(4000)**|사용자가 제출한 요청의 전체 텍스트를 저장 합니다.|모든 유효한 쿼리 또는 요청 텍스트입니다. 4000 바이트 보다 긴 쿼리는 잘립니다.|  
 |resource_class|**nvarchar (20)**|이 요청에 사용 되는 작업 그룹입니다. |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>동적 리소스 클래스</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance|**nvarchar(128)**|요청을 실행 하는 중요도를 설정 합니다.  이 작업 그룹 및 공유 리소스에 대 한 작업 그룹에 있는 요청의 상대적 중요도입니다.  분류자에 지정 된 중요도는 작업 그룹 중요도 설정을 재정의 합니다.</br>적용 대상: Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>보통 (기본값)</br>above_normal</br>high|
 |group_name|**sysname** |리소스를 활용 하는 요청의 경우 group_name은 요청을 실행 중인 작업 그룹의 이름입니다.  요청에서 리소스를 사용 하지 않는 경우 group_name은 null입니다.</br>적용 대상: Azure SQL Data Warehouse|
 |classifier_name|**sysname**|리소스를 활용 하는 요청의 경우 리소스 및 중요도를 할당 하는 데 사용 되는 분류자의 이름입니다.||
 |resource_allocation_percentage|**decimal (5, 2)**|요청에 할당 된 리소스의 비율입니다.</br>적용 대상: Azure SQL Data Warehouse|
-|result_cache_hit|**16 진수**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 값 = 결과 집합 캐싱이 사용 되지 않은 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
+|result_cache_hit|**decimal**|완료 된 쿼리가 결과 집합 캐시를 사용 했는지 여부를 자세히 나타냅니다.  </br>적용 대상: Azure SQL Data Warehouse| 1 = 결과 집합 캐시 적중 </br> 0 = 결과 집합 캐시 누락 </br> 음수 값 = 결과 집합 캐싱이 사용 되지 않은 이유입니다.  자세한 내용은 설명 부분을 참조 하세요.|
 ||||
   
 ## <a name="remarks"></a>설명 

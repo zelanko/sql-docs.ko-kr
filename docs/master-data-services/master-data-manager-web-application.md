@@ -1,5 +1,6 @@
 ---
 title: 마스터 데이터 관리자 웹 애플리케이션
+description: 마스터 데이터 관리자 웹 응용 프로그램을 사용 하 여 MDS(Master Data Services)에 대 한 관리 작업을 수행 하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ce1a7470b6304b924f3fcc7ae0fcec70b08b634
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729094"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796590"
 ---
 # <a name="master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션
 

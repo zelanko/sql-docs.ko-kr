@@ -1,5 +1,6 @@
 ---
 title: 유효성 검사 저장 프로시저
+description: Mdm.udpvalidatemodel 저장 프로시저를 사용 하 여 MDS(Master Data Services)에서 모델 버전의 모든 멤버에 비즈니스 규칙을 적용 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5a9210db5a2594f03b7916d06ed975d69882b513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a00666051071791ddb0ab80648680269c66b4cff
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727808"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796464"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>유효성 검사 저장 프로시저(Master Data Services)
 

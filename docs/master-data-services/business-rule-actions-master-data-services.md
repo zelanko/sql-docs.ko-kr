@@ -1,5 +1,6 @@
 ---
 title: 비즈니스 규칙 동작
+description: MDS(Master Data Services) 비즈니스 규칙은 작업을 발생 시킵니다. 기본값 작업, 값 변경 작업, 유효성 검사 동작 및 외부 동작에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 3aa704289844143dc07f63a384269a1ff45f31b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729739"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796551"
 ---
 # <a name="business-rule-actions-master-data-services"></a>비즈니스 규칙 동작(Master Data Services)
 
@@ -51,7 +52,7 @@ ms.locfileid: "73729739"
 |유효성 검사 이름|Description|  
 |---------------------|-----------------|  
 |**필수**|선택한 특성이 **필수**입니다. 즉, Null이거나 비어 있을 수 없습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
-|**잘못됨**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
+|**유효 하지 않음**|선택한 특성이 **잘못되었습니다**.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.|  
 |**패턴을 포함해야 함**|선택한 특성이 지정된 **패턴을 포함해야** 합니다. 패턴은 .NET Framework 정규식을 사용하여 지정할 수 있습니다.<br /><br /> 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](https://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.<br /><br /> 이 동작은 텍스트 및 링크 값에 유효합니다.|  
 |**고유해야 함**|선택한 특성이 정의된 특성에 대해 별도로 또는 특성과 조합하여 **고유해야** 합니다.<br /><br /> **최선의 구현 방법:** 이 동작을 필수 조건과 함께 사용하면 구독 시스템의 인덱스 필드 유효성을 확인할 수 있습니다.<br /><br /> 이 동작은 텍스트, 숫자, 날짜 및 링크 값에 유효합니다.<br /><br /> **참고**: 첫 번째 특성이 날짜/시간 형식이면 숫자 또는 텍스트 형식의 특성과 함께 사용할 수 없습니다. 첫 번째 특성이 숫자 형식이면 날짜/시간 형식의 특성과 함께 사용할 수 없습니다.|  
 |**다음 값 중 하나가 있어야 함**|선택한 특성에 목록에 지정된 **값 중 하나가 있어야** 합니다.<br /><br /> 이 동작은 텍스트 값에 유효합니다.|  

@@ -1,5 +1,6 @@
 ---
 title: 설치 및 구성
+description: Windows Server 2012 R2 컴퓨터에 MDS(Master Data Services)를 설치 하 고, MDS 데이터베이스 및 웹 사이트를 구성 하 고, 샘플 모델 및 데이터를 배포 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289781"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796284"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -29,12 +30,12 @@ ms.locfileid: "79289781"
 
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [MDS(Master Data Services) 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.     
   
- 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]새로운 기능에 대 한 자세한 내용은 [MDS(Master Data Services) &#40;MDS&#41;의 새로운 ](../master-data-services/what-s-new-in-master-data-services-mds.md)기능을 참조 하세요.  
+ 의 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [MDS(MASTER DATA SERVICES) &#40;MDS&#41;의 새로운 ](../master-data-services/what-s-new-in-master-data-services-mds.md)기능을 참조 하세요.  
  
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 알아보는 데 유용한 동영상 및 기타 학습 리소스의 링크는 [Master Data Services에 대해 알아보기](../master-data-services/learn-sql-server-master-data-services.md)를 참조하세요. 
   
 > **다운로드**  
-> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]을(를) 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
+> -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** 로 이동하세요.  
 > -   Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 로 이동하여 SQL Server가 이미 설치된 가상 머신을 실행해 보세요.  
 > 
 > **MDS 웹 사이트를 만들 수 없는 경우**
@@ -46,7 +47,7 @@ ms.locfileid: "79289781"
 - 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-기본적으로, [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 가 이미 설치 된 Azure 가상 컴퓨터를 실행 하면도 설치 됩니다. 
+기본적으로,가 이미 설치 된 Azure 가상 컴퓨터를 실행 하면 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 도 설치 됩니다. 
 
 다음 단계는 IIS(인터넷 정보 서비스)를 설치하는 것입니다. [IIS 설치 및 구성](#InstallIIS) 섹션을 참조하세요. 
 
@@ -129,16 +130,16 @@ ms.locfileid: "79289781"
   
 3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. `xxxxxx.xxxxxx.database.windows.net`)을 입력합니다.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. 예들 들어 `xxxxxx.xxxxxx.database.windows.net`입니다.
 
 4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
-    >의 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]경우 관리 되는 인스턴스에 Azure SQL Database 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
+    >의 경우 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] 관리 되는 인스턴스에 Azure SQL Database 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
     >
     >- Azure Active Directory 통합 인증: **현재 사용자 – Active Directory 통합**
     >- SQL Server 인증: **SQL Server 계정**.
     >
-    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 `sysadmin` 고정 서버 역할의 멤버 여야 합니다.
+    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 고정 서버 역할의 멤버 여야 합니다 `sysadmin` .
 
     > [!NOTE]  
     >  인증 유형으로 **현재 사용자 통합 보안** 을 선택 하는 경우 **사용자 이름** 상자는 읽기 전용 이며 컴퓨터에 로그온 한 Windows 사용자 계정의 이름을 표시 합니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 
@@ -203,7 +204,7 @@ ms.locfileid: "79289781"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소는 https://*server name*/*웹 응용 프로그램*/입니다. 
+15. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소는 https://*server name* / *웹 응용 프로그램*/입니다. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ ms.locfileid: "79289781"
   
     1.  설정한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 사이트로 이동합니다. [데이터베이스 및 웹 사이트 설정](#SetUpWeb) 섹션을 참조하세요.  
   
-         웹 사이트 주소는 https://*server name*/*웹 응용 프로그램*/입니다.  
+         웹 사이트 주소는 https://*server name* / *웹 응용 프로그램*/입니다.  
   
     2.  **모델** 목록 상자에서 모델을 선택하고 **탐색기**를 클릭합니다.  
   

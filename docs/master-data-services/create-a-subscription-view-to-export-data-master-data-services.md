@@ -1,5 +1,6 @@
 ---
 title: 구독 뷰를 만들어 데이터 내보내기
+description: 구독 뷰를 만들어 데이터의 뷰를 만드는 구독 시스템으로 MDS(Master Data Services) 데이터를 내보내는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728475"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796427"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
 
@@ -68,7 +69,7 @@ ms.locfileid: "73728475"
 |열|Description|  
 |------------|-----------------|  
 |상태|보기 상태입니다.<br /><br /> **저장**을 클릭 하면 뷰가 업데이트 되 고 있음을 나타내는 ![상태 업데이트 이미지 아이콘이](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 표시 됩니다.<br /><br /> 뷰를 만들거나 편집할 때 오류가 발생 하면 ![오류 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 이며 ![ok 상태 이미지 아이콘이](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘") 표시 됩니다.|  
-|속성|구독 뷰 이름입니다.|  
+|Name|구독 뷰 이름입니다.|  
 |모델|모델 이름입니다.|  
 |버전|버전 이름입니다.|  
 |버전|버전 플래그 이름입니다.|  

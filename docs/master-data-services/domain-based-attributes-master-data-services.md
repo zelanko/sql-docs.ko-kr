@@ -1,5 +1,6 @@
 ---
 title: 도메인 기반 특성
+description: 다른 엔터티에서 값이 채워지는 MDS(Master Data Services)의 도메인 기반 특성에 대해 알아봅니다. 사용자는 목록에서 값을 선택 해야 합니다.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60cfdaed3e62cddba5d4351a6a0ec11920f174b7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728265"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796341"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>도메인 기반 특성(Master Data Services)
 

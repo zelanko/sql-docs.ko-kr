@@ -1,5 +1,6 @@
 ---
-title: Administrators
+title: 관리자
+description: 모델 관리자, 엔터티 관리자 및 슈퍼 사용자 MDS(Master Data Services)의 관리자 유형에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729796"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796606"
 ---
 # <a name="administrators-master-data-services"></a>관리자(Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "73729796"
   이 문서에서는 모델 관리자, 엔터티 관리자, 슈퍼 사용자 등 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 관리자 유형을 설명합니다.  
   
 ## <a name="model-administrators"></a>모델 관리자  
- 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 대 한 **관리자** 권한이 할당 된 사용자입니다. 사용자에 게 특정 모델에 대 한 관리자 권한이 있는 경우 모델의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 모델 **관리자** 권한으로 있으면 효과적으로 무시 됩니다.  
+ 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 모델 관리자는 **모델 개체** 탭의 최상위 모델 개체에 대 한 **관리자** 권한이 할당 된 사용자입니다. 사용자에 게 특정 모델에 대 한 관리자 권한이 있는 경우 모델의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 모델 **관리자** 권한으로 있으면 효과적으로 무시 됩니다.  
   
 -   **탐색기** 기능 영역에 대한 액세스 권한을 가진 사용자는 이 영역에서 모든 마스터 데이터를 추가하고, 삭제하고, 업데이트할 수 있습니다.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73729796"
  사용자는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 또는 프로그래밍 방식으로 모델 관리자로 구성될 수 있습니다. 자세한 내용은 [모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)를 참조하세요.  
   
 ## <a name="entity-administrators"></a>엔터티 관리자  
- 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]엔터티 관리자는 모델 개체 탭의 엔터티 개체에 대 한 관리자 권한이 할당 된 사용자입니다. 사용자에 게 엔터티에 대 한 관리자 권한이 있는 경우 엔터티의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 관리자 권한으로 대체 되며 무시 됩니다.  
+ 에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 엔터티 관리자는 모델 개체 탭의 엔터티 개체에 대 한 관리자 권한이 할당 된 사용자입니다. 사용자에 게 엔터티에 대 한 관리자 권한이 있는 경우 엔터티의 자식 개체에 대 한 다른 모든 사용 권한 (모델 개체 및 멤버 권한)은 관리자 권한으로 대체 되며 무시 됩니다.  
   
 -   **탐색기** 기능 영역에 대한 액세스 권한을 가진 사용자는 이 영역에서 모든 마스터 데이터를 추가하고, 삭제하고, 업데이트할 수 있습니다.  
   

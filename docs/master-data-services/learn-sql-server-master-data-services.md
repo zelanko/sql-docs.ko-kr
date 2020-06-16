@@ -1,5 +1,6 @@
 ---
 title: SQL Server Master Data Services에 대해 알아보기
+description: 자가 학습 교육, 비디오, 샘플 및 SQL Server 인증을 통해 SQL Server 2019 MDS(Master Data Services)의 기능을 살펴봅니다.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487890"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796624"
 ---
 # <a name="learn-sql-server-master-data-services"></a>SQL Server Master Data Services에 대해 알아보기
 
@@ -26,8 +27,8 @@ ms.locfileid: "81487890"
   
   
 ## <a name="training"></a>학습  
-* 에 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도입 된 새로운 기능을 살펴보려면 [자체 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs) 사용해 보세요 (Microsoft 계정 로그인 해야 함).  
-* Excel 용 추가 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능 및를 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]사용 하 여 지리 데이터의 마스터 목록을 저장 하 고 관리 하는 솔루션을 개발 하려면 [자가 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs)사용해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
+* 에 도입 된 새로운 기능을 살펴보려면 자체 학습 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] [랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs) 사용해 보세요 (Microsoft 계정 로그인 해야 함).  
+* [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]Excel 용 추가 기능 및를 사용 하 여 지리 데이터의 마스터 목록을 저장 하 고 관리 하는 솔루션을 개발 하려면 [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] [자가 학습 랩을](https://www.microsoft.com/handsonlabs/selfpacedlabs)사용해 보세요. 이 가상 랩에서는 엔터티와 계층을 만들고 [!INCLUDE[ssIS_md](../includes/ssis-md.md)] 를 사용하여 차원 테이블에 데이터를 입력합니다.  
   
 ## <a name="videos"></a>동영상  
 * [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]릴리스에 포함된 새로운 기능에 대해 알아보려면 [**이 비디오를 시청**](https://www.youtube.com/watch?v=cKA72FpOVxI)하세요.  

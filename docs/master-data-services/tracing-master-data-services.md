@@ -1,5 +1,6 @@
 ---
 title: 추적
+description: Web.config 파일에는 SQL Server 2016 MDS(Master Data Services)의 새로운 추적 섹션이 포함 되어 있습니다. 기본 추적 동작에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0af3075f66eefff2de2199d18710de0bf7e62e71
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727851"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796486"
 ---
 # <a name="tracing-master-data-services"></a>추적(Master Data Services)
 
@@ -62,7 +63,7 @@ ms.locfileid: "73727851"
   
     |요소|Description|  
     |-------------|-----------------|  
-    |시간|추적 항목이 생성된 시간입니다.|  
+    |Time|추적 항목이 생성된 시간입니다.|  
     |CorrelationID|요청마다 상관 관계 ID 하나가 할당됩니다. 하나의 요청에 의해 트리거되는 모든 추적은 같은 상관 관계 ID를 공유합니다.<br /><br /> UI에서 오류가 발생하면 오류 메시지에 상관 관계 ID가 표시됩니다.|  
     |작업(Operation)|요청 작업 이름입니다. 웹 UI 요청의 경우 작업 이름은 URL입니다. API 요청의 경우 작업 이름은 서비스 이름입니다.|  
     |Level|이 추적 항목의 수준입니다.|  

@@ -1,5 +1,6 @@
 ---
 title: 엔터티 만들기
+description: MDS(Master Data Services)에서 멤버와 해당 특성을 포함 하는 엔터티를 만드는 방법에 대해 알아봅니다. 시스템 관리 영역에 대 한 권한이 있어야 합니다.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728468"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796403"
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
 
@@ -69,10 +70,10 @@ ms.locfileid: "73728468"
 ## <a name="grid-columns"></a>표 형태의 열  
  생성되는 각 엔터티에 대해 열이 13개 포함된 행이 표에 추가됩니다. 이러한 열은 다음과 같습니다.  
   
-|속성|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
-|속성|엔터티 이름입니다.|  
+|Name|엔터티 이름입니다.|  
 |Description|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
 |트랜잭션 로그 유형|엔터티의 트랜잭션 로그 유형입니다.|  
@@ -80,7 +81,7 @@ ms.locfileid: "73728468"
 |Data Compression|엔터티에 대해 데이터 압축을 사용할지 여부를 지정합니다.|  
 |동기화 대상|엔터티가 동기화 관계의 대상인지 여부를 지정합니다.|  
 |계층 사용|명시적 계층에 엔터티를 사용할지 여부를 지정합니다. 엔터티에 대해 명시적 계층을 하나 이상 만들면 이 열에는 예가 표시됩니다.|  
-|만든 사람|엔터티를 만든 사용자의 사용자 이름입니다.|  
+|작성자|엔터티를 만든 사용자의 사용자 이름입니다.|  
 |만든 날짜|엔터티를 만든 날짜와 시간입니다.|  
 |업데이트한 사람|엔터티를 마지막으로 업데이트한 사용자의 사용자 이름입니다.|  
 |Updated On|엔터티를 마지막으로 업데이트한 날짜 및 시간입니다.|  
