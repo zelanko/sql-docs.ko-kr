@@ -1,5 +1,6 @@
 ---
 title: 원자화 (XQuery) | Microsoft Docs
+description: 항목의 형식화 된 값이 추출 되는 XQuery의 원자화 프로세스에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886888"
 ---
 # <a name="atomization-xquery"></a>원자화(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ SELECT @x.query('sum(/ROOT/Location/@LaborHours)')
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다. 연산자 **+** 에는 원자 값이 필요 하며, **데이터 ()** 가 암시적으로 적용 되어 LaborHours 특성의 원자성 값을 검색 합니다. 이 쿼리는 제품 모델 테이블에서 **xml** 유형의 명령 열에 대해 지정 됩니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
+ 암시적 원자화의 다른 예는 산술 연산자를 사용할 경우입니다. 연산자에는 **+** 원자 값이 필요 하며, **데이터 ()** 가 암시적으로 적용 되어 LaborHours 특성의 원자성 값을 검색 합니다. 이 쿼리는 제품 모델 테이블에서 **xml** 유형의 명령 열에 대해 지정 됩니다. 다음 쿼리는 LaborHours 특성을 3번 반환합니다. 쿼리에서 다음에 유의하십시오.  
   
 -   OrignialLaborHours 특성을 구성할 때 원자화는 (`$WC/@LaborHours`)에서 반환된 단일 시퀀스에 암시적으로 적용됩니다. LaborHours 특성의 유형 값은 OrignialLaborHours에 할당됩니다.  
   
--   UpdatedLaborHoursV1 특성을 구성할 때 산술 연산자에 원자 값이 필요합니다. 따라서 **data ()** 는 (`$WC/@LaborHours`)에 의해 반환 되는 LaborHours 특성에 암시적으로 적용 됩니다. 그런 다음 원자 값 1이 추가됩니다. UpdatedLaborHoursV2 특성을 생성 하면 데이터의 명시적 응용 프로그램 **()** 이 표시 되지만 반드시 필요한 것은 아닙니다.  
+-   UpdatedLaborHoursV1 특성을 구성할 때 산술 연산자에 원자 값이 필요합니다. 따라서 **data ()** 는 ()에 의해 반환 되는 LaborHours 특성에 암시적으로 적용 됩니다 `$WC/@LaborHours` . 그런 다음 원자 값 1이 추가됩니다. UpdatedLaborHoursV2 특성을 생성 하면 데이터의 명시적 응용 프로그램 **()** 이 표시 되지만 반드시 필요한 것은 아닙니다.  
   
 ```  
 SELECT Instructions.query('  

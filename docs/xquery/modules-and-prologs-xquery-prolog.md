@@ -1,5 +1,6 @@
 ---
 title: XQuery 프롤로그 | Microsoft Docs
+description: 쿼리 처리에 필요한 환경을 만드는 일련의 선언과 정의가 포함 된 XQuery 프롤로그에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881667"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>모듈 및 프롤로그 - XQuery 프롤로그
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery 쿼리는 프롤로그와 본문으로 구성됩니다. XQuery 프롤로그는 쿼리 처리에 필요한 환경을 만드는 일련의 선언 및 정의로 구성됩니다. SQL Server에서 XQuery 프롤로그에는 네임스페이스 선언이 포함될 수 있습니다. XQuery 본문은 의도된 쿼리 결과를 지정하는 일련의 식으로 구성됩니다.  
   
- 예를 들어 다음 XQuery는 제조 지침을 XML로 저장 하는 **xml** 유형의 명령 열에 대해 지정 됩니다. 이 쿼리는 작업 센터 위치 `10`에 대한 제조 지침을 검색합니다. Xml `query()` 데이터 형식의 메서드 **xml** 는 XQuery를 지정 하는 데 사용 됩니다.  
+ 예를 들어 다음 XQuery는 제조 지침을 XML로 저장 하는 **xml** 유형의 명령 열에 대해 지정 됩니다. 이 쿼리는 작업 센터 위치 `10`에 대한 제조 지침을 검색합니다. `query()` **Xml** 데이터 형식의 메서드는 XQuery를 지정 하는 데 사용 됩니다.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   XQuery 프롤로그에는 네임 스페이스 접두사 (AWMI) 선언이 `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`포함 되어 있습니다.  
+-   XQuery 프롤로그에는 네임 스페이스 접두사 (AWMI) 선언이 포함 되어 `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` 있습니다.  
   
 -   `declare namespace` 키워드는 나중에 쿼리 본문에서 사용되는 네임스페이스 접두사를 정의합니다.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 634ad200cc8c46282eeb6146a8a590811e6d69a3
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 6709c8fb5a4e0eda8b973582ae51fe9458f6377a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84537375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880289"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "84537375"
 |[10단원: 관리자 역할 정의](lesson-10-defining-administrative-roles.md)|15분|  
   
 > [!NOTE]  
->  이 자습서에서 만들 큐브 데이터베이스는 codeplex 사이트에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 프로젝트의 단순화된 버전입니다. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
+>  이 자습서에서 만들 큐브 데이터베이스는 codeplex 사이트에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 프로젝트의 단순화된 버전입니다. 놀이 Works 다차원 데이터베이스의 자습서 버전은 바로 개선 하고자 하는 특정 기술에 더 집중 하는 데 도움이 됩니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
   
 ## <a name="next-step"></a>다음 단계  
  자습서를 시작하려면 첫 번째 단원인 [Lesson 1: Defining a Data Source View within an Analysis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)로 이동하십시오.  

@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832747"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818213"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,6 +59,7 @@ ms.locfileid: "82832747"
 |**is_nonsql_subscriber**|**bit**|서버가 SQL Server 이외 복제 구독자입니다.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|1로 설정하면 원격 저장 프로시저를 호출하여 분산 트랜잭션이 시작하고 MS DTC를 사용하여 이 트랜잭션을 참여시킵니다. 자세한 내용은 [sp_serveroption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)의 데이터에 액세스하는 방법을 보여 줍니다.|  
 |**modify_date**|**datetime**|서버 정보가 마지막으로 변경된 날짜입니다.|  
+|**is_rda_server**|**bit**|서버에서 원격 데이터 보관 사용 (스트레치 사용)입니다. 자세한 내용은 [서버에서 Stretch Database 사용](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer)을 참조 하세요. SQL Server 2016 이상에 적용 됩니다.|
   
 ## <a name="permissions"></a>사용 권한  
  호출자에 게 ALTER ANY 연결 된 서버 권한이 없으면 **provider_string** 의 값은 항상 NULL입니다.  

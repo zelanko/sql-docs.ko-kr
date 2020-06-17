@@ -1,5 +1,6 @@
 ---
 title: Order를 포함 하는 XQueries | Microsoft Docs
+description: 노드가 문서에 표시 되는 순서를 기반으로 하는 XQueries의 예를 볼 수 있습니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880517"
 ---
 # <a name="xqueries-involving-order"></a>정렬 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리하고 첫 번째 \<Customer> 요소를 검색할 수 있습니다. 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
+  관계형 데이터베이스에는 시퀀스 개념이 없습니다. 예를 들어 "데이터베이스에서 첫 번째 고객 가져오기"와 같은 요청은 수행할 수 없습니다. 그러나 XML 문서를 쿼리하고 첫 번째 요소를 검색할 수 있습니다 \<Customer> . 그런 다음에는 항상 같은 고객을 검색할 수 있습니다.  
   
  이 항목에서는 문서에 노드가 표시되는 시퀀스에 기반한 쿼리에 대해 설명합니다.  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   **@\*** 두 번째 작업 센터 위치의 모든 특성을 검색 합니다.  
   
--   FLWOR 반복 (... RETURN)는 두 번째 작업 `step` 센터 위치의 자식 요소> 모든 <를 검색 합니다.  
+-   FLWOR 반복 (... RETURN)는 `step` 두 번째 작업 센터 위치의 자식 요소> 모든 <를 검색 합니다.  
   
 -   [Sql: column () 함수 (XQuery)](../xquery/xquery-extension-functions-sql-column.md) 는 생성 되는 XML에 관계형 값을 포함 합니다.  
   
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   이 쿼리는 <Loca`tion`> 요소를 생성 하 고 데이터베이스에서 해당 특성 값을 검색 합니다.  
+-   이 쿼리는 <Loca `tion`> 요소를 생성 하 고 데이터베이스에서 해당 특성 값을 검색 합니다.  
   
 -   여기에서는 두 개의 FLWOR (for...return) 반복문이 사용되며, 이 중 하나는 도구를 검색하고 다른 하나는 사용된 자재를 검색합니다.  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. 제품 카탈로그에서 처음 두 개의 제품 기능 설명 검색  
- 특정 제품 모델의 경우이 쿼리는 제품 모델 카탈로그의 <`Features`> 요소에서 처음 두 개의 기능 설명을 검색 합니다.  
+ 특정 제품 모델의 경우이 쿼리는 `Features` 제품 모델 카탈로그의 <> 요소에서 처음 두 개의 기능 설명을 검색 합니다.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  이전 쿼리에서 다음을 유의하세요.  
   
- 쿼리 본문은 제품을 포함 하는 <`ProductModel`> 요소를 포함 하는 XML을 생성 합니다.  
+ 쿼리 본문은 제품을 포함 하는 <> 요소를 포함 하는 XML을 생성 합니다 `ProductModel` .  
   
 -   쿼리에서 ...를 사용 합니다. 반환 루프를 통해 제품 모델 기능 설명을 검색 합니다. **Position ()** 함수는 처음 두 기능을 검색 하는 데 사용 됩니다.  
   

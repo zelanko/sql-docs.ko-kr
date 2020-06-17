@@ -1,5 +1,6 @@
 ---
 title: 소문자 함수 (XQuery) | Microsoft Docs
+description: 지정 된 문자열의 각 문자를 해당 하는 소문자로 변환 하는 XQuery 함수 소문자 ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886590"
 ---
 # <a name="functions-on-string-values---lower-case"></a>문자열 값 함수 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 ## <a name="examples"></a>예  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. 문자열을 대문자로 변경  
- 다음 예에서는 입력 문자열 ' abcDEF! @4' 소문자로 변환할 수 있습니다.  
+ 다음 예에서는 입력 문자열 ' abcDEF! '를 변경 합니다. @4 소문자로  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

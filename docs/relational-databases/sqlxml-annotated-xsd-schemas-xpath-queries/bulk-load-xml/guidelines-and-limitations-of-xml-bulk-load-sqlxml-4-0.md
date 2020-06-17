@@ -1,5 +1,6 @@
 ---
 title: XML 대량 로드에 대 한 지침 및 제한 사항 (SQLXML)
+description: SQLXML 4.0에서 XML 대량 로드를 사용 하는 방법에 대 한 지침 및 제한 사항에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec3b70c4a37382bb3fa8641e4224750a4337c28d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 846ba2d77f399192d3e2c2e6ea00f704f0b1fa4d
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882975"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>XML 대량 로드에 대한 지침 및 제한 사항(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "75246757"
   
 -   모든 XML 프롤로그 정보는 무시됩니다.  
   
-     Xml 대량 로드는 XML 문서에서 \<루트> 요소 앞뒤의 모든 정보를 무시 합니다. 예를 들어 모든 XML 선언, 내부 DTD 정의, 외부 DTD 참조, 주석 등은 무시됩니다.  
+     XML 대량 로드는 XML 문서에서 요소 앞과 뒤에 있는 모든 정보를 무시 \<root> 합니다. 예를 들어 모든 XML 선언, 내부 DTD 정의, 외부 DTD 참조, 주석 등은 무시됩니다.  
   
--   두 테이블(예: Customer 테이블과 CustOrder 테이블) 간의 기본 키/외래 키 관계를 정의하는 매핑 스키마가 있는 경우, 스키마에서 기본 키가 들어 있는 테이블 설명이 먼저 나오고 외래 키 열이 들어 있는 테이블이 그 다음에 나와야 합니다. 그 이유는 스키마에서 테이블이 식별 되는 순서는 데이터베이스에 로드 하는 데 사용 되는 순서 이기 때문입니다. 예를 들어 다음 XDR 스키마는 ** \<Order>** 요소가 ** \<Customer>** 요소 보다 먼저 설명 되기 때문에 XML 대량 로드에서 사용 되는 경우 오류를 생성 합니다. 여기서 CustOrder의 CustomerID 열은 Cust 테이블의 CustomerID 기본 키 열을 참조하는 외래 키 열입니다.  
+-   두 테이블(예: Customer 테이블과 CustOrder 테이블) 간의 기본 키/외래 키 관계를 정의하는 매핑 스키마가 있는 경우, 스키마에서 기본 키가 들어 있는 테이블 설명이 먼저 나오고 외래 키 열이 들어 있는 테이블이 그 다음에 나와야 합니다. 그 이유는 스키마에서 테이블이 식별 되는 순서는 데이터베이스에 로드 하는 데 사용 되는 순서 이기 때문입니다. 예를 들어 다음 XDR 스키마는 요소 앞에 요소를 설명 하므로 XML 대량 로드에서 사용 하는 경우 오류를 생성 합니다 **\<Order>** **\<Customer>** . 여기서 CustOrder의 CustomerID 열은 Cust 테이블의 CustomerID 기본 키 열을 참조하는 외래 키 열입니다.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -79,7 +80,7 @@ ms.locfileid: "75246757"
   
 -   스키마가 **sql: 오버플로 필드** 주석을 사용 하 여 오버플로 열을 지정 하지 않는 경우 Xml 대량 로드는 xml 문서에 있는 모든 데이터를 무시 하지만 매핑 스키마에는 설명 되지 않습니다.  
   
-     XML 대량 로드는 알려진 태그가 XML 데이터 스트림에서 발견될 때마다 사용자가 지정한 매핑 스키마를 적용합니다. 그러나 XML 문서에는 포함되었지만 스키마에 설명되지 않은 데이터는 무시합니다. 예를 들어 ** \<고객>** 요소를 설명 하는 매핑 스키마가 있다고 가정 합니다. XML 데이터 파일에는 모든 ** \<고객>** 요소를 포함 하는 ** \<allcustomers>** 루트 태그 (스키마에 설명 되어 있지 않음)가 있습니다.  
+     XML 대량 로드는 알려진 태그가 XML 데이터 스트림에서 발견될 때마다 사용자가 지정한 매핑 스키마를 적용합니다. 그러나 XML 문서에는 포함되었지만 스키마에 설명되지 않은 데이터는 무시합니다. 예를 들어 요소를 설명 하는 매핑 스키마가 있다고 가정 **\<Customer>** 합니다. XML 데이터 파일에는 **\<AllCustomers>** 모든 요소를 포함 하는 루트 태그 (스키마에 설명 되어 있지 않음)가 있습니다 **\<Customer>** .  
   
     ```  
     <AllCustomers>  
@@ -89,9 +90,9 @@ ms.locfileid: "75246757"
     </AllCustomers>  
     ```  
   
-     이 경우 XML 대량 로드는 ** \<allcustomers>** 요소를 무시 하 고 ** \<Customer>** 요소에서 매핑을 시작 합니다. XML 대량 로드는 XML 문서에는 있지만 스키마에는 설명되어 있지 않은 모든 요소를 무시합니다.  
+     이 경우 XML 대량 로드는 요소를 무시 **\<AllCustomers>** 하 고 요소에 대 한 매핑을 시작 **\<Customer>** 합니다. XML 대량 로드는 XML 문서에는 있지만 스키마에는 설명되어 있지 않은 모든 요소를 무시합니다.  
   
-     ** \<Order>** 요소를 포함 하는 다른 XML 원본 데이터 파일을 고려 합니다. 이러한 요소는 매핑 스키마에 설명되어 있지 않습니다.  
+     요소가 포함 된 다른 XML 원본 데이터 파일을 고려 **\<Order>** 합니다. 이러한 요소는 매핑 스키마에 설명되어 있지 않습니다.  
   
     ```  
     <AllCustomers>  
@@ -107,11 +108,11 @@ ms.locfileid: "75246757"
     </AllCustomers>  
     ```  
   
-     XML 대량 로드는 이러한 ** \<순서>** 요소를 무시 합니다. 그러나 스키마에서 **sql: 오버플로 필드**주석을 사용 하 여 열을 오버플로 열로 식별 하는 경우 XML 대량 로드는이 열에 사용 되지 않은 모든 데이터를 저장 합니다.  
+     XML 대량 로드는 이러한 **\<Order>** 요소를 무시 합니다. 그러나 스키마에서 **sql: 오버플로 필드**주석을 사용 하 여 열을 오버플로 열로 식별 하는 경우 XML 대량 로드는이 열에 사용 되지 않은 모든 데이터를 저장 합니다.  
   
 -   CDATA 섹션과 엔터티 참조는 데이터베이스에 저장되기 전에 해당하는 문자열로 변환됩니다.  
   
-     이 예에서 CDATA 섹션은 ** \<City>** 요소에 대 한 값을 래핑합니다. XML 대량 로드는 ** \<도시>** 요소를 데이터베이스에 삽입 하기 전에 문자열 값 (")을 추출 합니다.  
+     이 예제에서 CDATA 섹션은 요소에 대 한 값을 래핑합니다 **\<City>** . XML 대량 로드는 요소를 데이터베이스에 삽입 하기 전에 문자열 값 ("요소")을 추출 합니다 **\<City>** .  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -144,7 +145,7 @@ ms.locfileid: "75246757"
     </Schema>  
     ```  
   
-     이 XML 데이터에서 **HireDate** 특성은 두 번째 ** \<고객>** 요소에 없습니다. XML 대량 로드는 두 번째 ** \<고객>** 요소를 데이터베이스에 삽입 하 고 스키마에 지정 된 기본값을 사용 합니다.  
+     이 XML 데이터에서 두 번째 요소에는 **HireDate** 특성이 없습니다 **\<Customers>** . XML 대량 로드는 데이터베이스에 두 번째 **\<Customers>** 요소를 삽입할 때 스키마에 지정 된 기본값을 사용 합니다.  
   
     ```  
     <ROOT>  
@@ -161,7 +162,7 @@ ms.locfileid: "75246757"
   
 -   SchemaGen 속성 (예: SchemaGen = true)을 지정 하면 매핑 스키마에서 식별 된 테이블이 생성 됩니다. 그러나 SchemaGen은 다음과 같은 한 가지 예외를 제외 하 고 이러한 테이블에 제약 조건 (예: PRIMARY KEY/FOREIGN KEY 제약 조건)을 만들지 않습니다. 관계의 기본 키를 구성 하는 XML 노드가 ID의 XML 유형 (즉, XSD의 경우 **type = "xsd: ID"** )으로 정의 되 고 SGUseID 속성이 True로 설정 된 경우에는 id로 형식화 된 노드에서 생성 되는 기본 키가 아니라 기본 키/외래 키 관계가 매핑 스키마 관계에서 생성 됩니다.  
   
--   SchemaGen은 XSD 스키마 패싯 및 확장을 사용 하 여 관계형 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스키마를 생성 하지 않습니다.  
+-   SchemaGen은 XSD 스키마 패싯 및 확장을 사용 하 여 관계형 스키마를 생성 하지 않습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   대량 로드에서 SchemaGen 속성 (예: SchemaGen = true)을 지정 하면 지정 된 테이블 (공유 이름의 뷰 아님)만 업데이트 됩니다.  
   

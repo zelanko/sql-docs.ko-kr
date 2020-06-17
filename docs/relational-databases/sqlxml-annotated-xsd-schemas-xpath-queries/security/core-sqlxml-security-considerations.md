@@ -1,5 +1,6 @@
 ---
 title: 핵심 SQLXML 보안 고려 사항
+description: 데이터 액세스에 SQLXML을 사용 하기 위한 핵심 보안 지침에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d897d81f0f2079e06c481d62f069e4626126da1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eafd432d96ad17a3ec0187c6c0e58103a7c9c6b1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883580"
 ---
 # <a name="core-sqlxml-security-considerations"></a>핵심 SQLXML 보안 고려 사항
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252517"
   
 -   SQLXML을 통해 사용자는 원하는 모든 SQL 쿼리를 데이터베이스에 대해 실행할 수 있습니다. 보안되지 않은 원본이나 제어되지 않은 원본에는 이 기능을 노출하면 안 됩니다. 그렇지 않으면 프로비전 없이 SQL 데이터베이스가 모든 사용자에게 열리게 됩니다.  
   
--   Updategrams을 실행할 때 SQLXML은 **updg: sync** 블록을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 DELETE, UPDATE 및 INSERT 명령으로 변환 합니다. 이 명령은 기존 데이터에만 적용됩니다. SQLXML에서 생성된 명령은 데이터베이스를 변경하지 않습니다. 데이터베이스 구조를 변경하려면 사용자는 명시적인 명령을 실행해야 합니다. 예를 들어, 템플릿의 **sql: 쿼리** 블록에 포함 합니다.  
+-   Updategrams을 실행할 때 SQLXML은 **updg: sync** 블록을 인스턴스에 대해 DELETE, UPDATE 및 INSERT 명령으로 변환 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 이 명령은 기존 데이터에만 적용됩니다. SQLXML에서 생성된 명령은 데이터베이스를 변경하지 않습니다. 데이터베이스 구조를 변경하려면 사용자는 명시적인 명령을 실행해야 합니다. 예를 들어, 템플릿의 **sql: 쿼리** 블록에 포함 합니다.  
   
 -   DiffGram을 실행하는 경우 SQLXML은 DiffGram을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 DELETE, UPDATE 및 INSERT 명령으로 변환합니다. 이 명령은 기존 데이터에만 적용됩니다. SQLXML에서 생성된 명령은 데이터베이스를 변경하지 않습니다. 데이터베이스 구조를 변경하려면 사용자는 명시적인 명령을 실행해야 합니다. 예를 들어, 템플릿의 **sql: 쿼리** 블록에 포함 합니다.  
   

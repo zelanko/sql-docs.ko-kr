@@ -1,5 +1,6 @@
 ---
 title: ADO를 사용하여 SQLXML 4.0 쿼리 실행
+description: SQLXML 확장을 사용 하 여 ADO (ADO(ActiveX Data Objects))를 사용 하 여 COM 기반 응용 프로그램에서 SQLXML 4.0 쿼리를 실행 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 12/15/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 436ec564e4cf5de21647eb5cd667741ce246e99d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75254137"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882101"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>ADO를 사용하여 SQLXML 4.0 쿼리 실행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -121,9 +122,9 @@ ms.locfileid: "75254137"
     3.  현재 설치 된 프로그램 목록에서 **Microsoft SQL Server Native Client** 가 목록에 나타나는지 확인 합니다.  
   
         > [!NOTE]  
-        >  Native Client를 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 하는 경우 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
+        >  Native Client를 설치 해야 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 경우 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)를 참조 하세요.  
   
-2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인 해야 하는 경우 Microsoft 웹 사이트에서 무료 다운로드로 제공 되는 MDAC 구성 요소 검사기 도구를 사용할 수 있습니다 [http://www.microsoft.com](https://www.microsoft.com). 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
+2.  클라이언트 컴퓨터에 대해 설치된 MDAC 버전이 2.6 이상인지 확인합니다. MDAC 버전 정보를 확인 해야 하는 경우 Microsoft 웹 사이트에서 무료 다운로드로 제공 되는 MDAC 구성 요소 검사기 도구를 사용할 수 있습니다 [http://www.microsoft.com](https://www.microsoft.com) . 자세한 내용을 보려면 Microsoft 웹 사이트에서 "MDAC Component Checker"를 검색하십시오.  
   
 3.  스크립트를 실행합니다.  
   

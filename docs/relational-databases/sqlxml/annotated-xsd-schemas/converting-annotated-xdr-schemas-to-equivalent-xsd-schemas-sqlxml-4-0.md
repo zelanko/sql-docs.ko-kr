@@ -1,5 +1,6 @@
 ---
 title: 주석이 추가 된 XDR 스키마를 XSD로 변환 (SQLXML)
+description: SQLXML 4.0의 XDR to XSD 변환기 도구를 사용 하 여 주석이 추가 된 XDR 스키마를 해당 XSD 스키마로 변환 하는 방법에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10c85b4c4f2e08518703a67256bd169afb2d0455
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e0932bc7a7bd1b40f260d0eda130aea0711d069
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883045"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>주석이 추가된 XDR 스키마를 해당 XSD 스키마로 변환(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

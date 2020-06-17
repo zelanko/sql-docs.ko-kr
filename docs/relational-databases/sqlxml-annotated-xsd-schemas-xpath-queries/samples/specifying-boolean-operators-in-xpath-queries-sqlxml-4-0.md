@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리에 부울 연산자 사용 (SQLXML)
+description: SQLXML 4.0 XPath 쿼리에서 부울 연산자를 사용 하는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884182"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 연산자 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252576"
 ## <a name="examples"></a>예  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. OR 부울 연산자 지정  
- 이 XPath 쿼리는 **CustomerID** ** \<** CustomerID 특성 값이 13 또는 31 인 컨텍스트 노드의 Customer>요소 자식을 반환 합니다.  
+ 이 XPath 쿼리는 **\<Customer>** **CustomerID** 특성 값이 13 또는 31 인 컨텍스트 노드의 요소 자식을 반환 합니다.  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252576"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- 조건자 `attribute` 에서는 축이 고 `CustomerID` 는 노드 테스트입니다. **CustomerID** 가 ** \<특성>** 노드인 경우 TRUE이 고, 특성 ** \<>** 노드가 **특성** 축의 주 노드인지 때문입니다. 조건자는 ** \<Customer>** 요소를 필터링 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
+ 조건자에서 `attribute` 는 축이 고 `CustomerID` 는 노드 테스트 ( **CustomerID** **\<attribute>** 해당 **\<attribute>** 노드가 **특성** 축에 대 한 주 노드인지 때문에 CustomerID가 노드인 경우 TRUE)입니다. 조건자는 요소를 필터링 **\<Customer>** 하 고 조건자에 지정 된 조건을 만족 하는 요소만 반환 합니다.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>매핑 스키마에 대해 XPath 쿼리를 테스트하려면  
   

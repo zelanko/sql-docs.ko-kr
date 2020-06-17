@@ -1,5 +1,6 @@
 ---
 title: 식 컨텍스트 및 쿼리 평가 (XQuery) | Microsoft Docs
+description: XQuery 식의 정적 및 동적 컨텍스트에서 정보를 분석 하 고 평가 하는 데 사용 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881900"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038924"
   
     -   WITH XMLNAMESPACES를 사용하여 정의된 모든 네임스페이스. 자세한 내용은 [WITH XMLNAMESPACES를 사용 하 여 쿼리에 네임 스페이스 추가](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)를 참조 하세요.  
   
-    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 XMLNAMESPACES는 네임 스페이스 (`https://someURI`)에 바인딩하는 접두사 (pd)를 선언 합니다. 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
+    -   쿼리 프롤로그에 정의된 모든 네임스페이스. 프롤로그에 있는 네임스페이스 선언은 WITH XMLNAMESPACES에 있는 네임스페이스 선언을 무효화할 수 있습니다. 예를 들어 다음 쿼리에서 XMLNAMESPACES는 네임 스페이스 ()에 바인딩하는 접두사 (pd)를 선언 `https://someURI` 합니다. 하지만 WHERE 절에서 쿼리 프롤로그가 이 바인딩을 무효화합니다.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -119,7 +120,7 @@ ms.locfileid: "68038924"
   
 2.  식에 지정된 함수 및 유형 이름 확인  
   
-3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 예를 들어 다음 쿼리는 연산자에 **+** 숫자 기본 형식 인수가 필요 하기 때문에 정적 오류를 반환 합니다.  
+3.  쿼리에 대한 정적 형식 지정. 이 작업은 쿼리가 안전한 유형인지 확인합니다. 예를 들어 다음 쿼리는 **+** 연산자에 숫자 기본 형식 인수가 필요 하기 때문에 정적 오류를 반환 합니다.  
   
     ```  
     declare @x xml  
@@ -127,7 +128,7 @@ ms.locfileid: "68038924"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     다음 예제에서 **value ()** 연산자에는 단일 항목이 필요 합니다. XML 스키마에 지정 된 대로 여러 \<Elem> 요소가 있을 수 있습니다. 식에 대한 정적 분석은 식의 안정성 여부와 정적 오류의 반환 여부를 확인합니다. 오류를 확인하려면 단일 항목(`data(/x:Elem)[1]`)을 명시적으로 지정하도록 식을 다시 작성해야 합니다.  
+     다음 예제에서 **value ()** 연산자에는 단일 항목이 필요 합니다. XML 스키마에 지정 된 대로 여러 요소가 있을 수 있습니다 \<Elem> . 식에 대한 정적 분석은 식의 안정성 여부와 정적 오류의 반환 여부를 확인합니다. 오류를 확인하려면 단일 항목(`data(/x:Elem)[1]`)을 명시적으로 지정하도록 식을 다시 작성해야 합니다.  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

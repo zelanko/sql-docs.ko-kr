@@ -1,5 +1,6 @@
 ---
 title: 개요
+description: MDS(Master Data Services)의 주요 데이터 구성 및 관리 기능에 대해 알아봅니다. MDS(Master Data Services)를 사용 하 여 데이터의 마스터 집합을 관리할 수 있습니다.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729046"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800520"
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
 

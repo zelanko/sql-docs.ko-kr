@@ -1,5 +1,6 @@
 ---
 title: 유형 시스템 (XQuery) | Microsoft Docs
+description: XML 스키마의 기본 제공 유형과 xpath 데이터 형식 네임 스페이스에 정의 된 유형을 포함 하는 XQuery 유형 시스템에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,21 +24,21 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946208"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886554"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery는 유형 지정이 엄격한 언어이며 형식화되지 않은 데이터에 대해서는 유형 지정이 엄격하지 않은 언어입니다. XQuery의 미리 정의된 유형에는 다음이 포함됩니다.  
   
--   **http://www.w3.org/2001/XMLSchema** 네임 스페이스에 있는 XML 스키마의 기본 제공 형식입니다.  
+-   네임 스페이스에 있는 XML 스키마의 기본 제공 형식 **http://www.w3.org/2001/XMLSchema** 입니다.  
   
--   **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스에 정의 된 형식입니다.  
+-   네임 스페이스에 정의 된 형식 **http://www.w3.org/2004/07/xpath-datatypes** 입니다.  
   
  이 항목에서는 다음에 대해서도 설명합니다.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946208"
 ## <a name="built-in-types-of-xml-schema"></a>XML 스키마의 기본 제공 유형  
  XML 스키마의 기본 제공 유형에는 xs의 미리 정의된 네임스페이스 접두사가 있습니다. 이러한 형식 중 일부에는 **xs: integer** 및 **xs: string**이 포함 됩니다. 이러한 모든 기본 제공 유형이 지원됩니다. 이러한 유형은 XML 스키마 컬렉션을 만들 때 사용할 수 있습니다.  
   
- 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 형식에 대 한 자세한 내용은 [XQuery&#41;&#40;식 컨텍스트 및 쿼리 평가 ](../xquery/expression-context-and-query-evaluation-xquery.md)를 참조 하세요. 예를 들어 다음 쿼리는 형식화 된 **xml** 열에 대해 지정 됩니다`Instructions`(). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
+ 형식화된 XML을 쿼리할 때 노드의 정적 및 동적 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 결정됩니다. 정적 및 동적 형식에 대 한 자세한 내용은 [XQuery&#41;&#40;식 컨텍스트 및 쿼리 평가 ](../xquery/expression-context-and-query-evaluation-xquery.md)를 참조 하세요. 예를 들어 다음 쿼리는 형식화 된 **xml** 열에 대해 지정 됩니다 ( `Instructions` ). 이 식에서는 `instance of`를 사용하여 반환된 `LotSize` 특성의 형식화된 값이 `xs:decimal` 유형인지 확인합니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ WHERE ProductModelID=7
  이 유형 지정 정보는 열과 연결된 XML 스키마 컬렉션에 의해 제공됩니다.  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath 데이터 형식 네임스페이스에 정의된 유형  
- **http://www.w3.org/2004/07/xpath-datatypes** 네임 스페이스에 정의 된 형식에는 미리 정의 된 **xdt**접두사가 있습니다. 이러한 유형에는 다음이 적용됩니다.  
+ 네임 스페이스에 정의 된 형식에는 **http://www.w3.org/2004/07/xpath-datatypes** 미리 정의 된 **xdt**접두사가 있습니다. 이러한 유형에는 다음이 적용됩니다.  
   
 -   XML 스키마 컬렉션을 만들 때는 이러한 유형을 사용할 수 없습니다. 이러한 형식은 XQuery 형식 시스템에서 사용 되며 [xquery 및 정적 형식화](../xquery/xquery-and-static-typing.md)에 사용 됩니다. **Xdt** 네임 스페이스의 원자성 형식 (예 **: xdt: untypedAtomic**)으로 캐스팅할 수 있습니다.  
   
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   [문자열 함수 &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) 는 노드의 문자열 값을 반환 합니다.  
   
- 다음 XML 스키마 컬렉션에서는 정수 형식의 <`root`> 요소가 정의 됩니다.  
+ 다음 XML 스키마 컬렉션에서는 `root` 정수 형식의 <> 요소가 정의 됩니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- 다음 예에서는 `LaborHours` 특성의 합계를 계산합니다. 함수 `data()` 는 제품 모델에 대 한 `LaborHours` 모든 <`Location`> 요소에서 특성의 형식화 된 값을 검색 합니다. `Instruction` 열과 연결 된 XML 스키마에 따라 `LaborHours` 은 **xs: decimal** 형식입니다.  
+ 다음 예에서는 `LaborHours` 특성의 합계를 계산합니다. `data()`함수는 `LaborHours` `Location` 제품 모델에 대 한 모든 <> 요소에서 특성의 형식화 된 값을 검색 합니다. 열과 연결 된 XML 스키마에 따라 `Instruction` `LaborHours` 은 **xs: decimal** 형식입니다.  
   
 ```  
 SELECT Instructions.query('   

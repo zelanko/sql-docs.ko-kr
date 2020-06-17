@@ -1,5 +1,6 @@
 ---
 title: 서버 쪽 XML 서식 지정 (SQLXML)
+description: Microsoft SQL Server 데이터베이스에 대해 실행 된 SQLXML 4.0 쿼리에서 생성 된 문서의 서버 쪽 XML 서식에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec84fdfad468124f59cefde73486d5b19a5a4110
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be657e9fa17be6c6ea2b0441d852f51efa6882be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882139"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "75255897"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 데이터베이스 테이블에 XML 문서를 저장하거나 데이터베이스 테이블에서 XML 문서를 검색할 수 있습니다. XML 문서를 검색하려면 SELECT 쿼리에서 FOR XML 쿼리 확장을 사용합니다.  
   
- 예를 들어 클라이언트 응용 프로그램이 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리로 구성 된에 대해 명령을 실행 한다고 가정 합니다.  
+ 예를 들어 클라이언트 응용 프로그램이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 쿼리로 구성 된에 대해 명령을 실행 한다고 가정 합니다 [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ```  
 SELECT FirstName, LastName  

@@ -1,5 +1,6 @@
 ---
 title: data 함수 (XQuery) | Microsoft Docs
+description: XQuery 함수 data ()를 사용 하 여 지정 된 항목 시퀀스의 각 항목에 대해 형식화 된 값을 반환 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881872"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 - data(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ set @x = ''
 select @x.query('data(<SomeNode>value</SomeNode>)')  
 ```  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  다음 예에서는 **data ()** 함수가 필요한 인스턴스를 보여 줍니다.  
   
- 다음 쿼리에서 **$pd/p1: 사양/자료** 는 <`Material`> 요소를 반환 합니다. 또한 <`Material`>는 형식화 되지 않았기 때문에 **데이터 ($Pd/p1: 사양/재질)** 는 xdt: untypedAtomic로 형식화 된 문자 데이터를 반환 합니다. 입력이 형식화 되지 않은 경우 **data ()** 의 결과는 **xdt: untypedAtomic**로 형식화 됩니다.  
+ 다음 쿼리에서 **$pd/p1: 사양/자료** 는 <> 요소를 반환 합니다 `Material` . 또한 <>는 형식화 되지 않았기 때문에 **데이터 ($pd/p1: 사양/재질)** 는 Xdt: untypedAtomic로 형식화 된 문자 데이터를 반환 합니다. `Material` 입력이 형식화 되지 않은 경우 **data ()** 의 결과는 **xdt: untypedAtomic**로 형식화 됩니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- 다음 쿼리에서는 <`Warranty`> 복합 형식 요소 이기 때문에 **데이터 ($Pd/p1: Features/wm: 보증)** 에서 정적 오류를 반환 합니다.  
+ 다음 쿼리에서는 <> 복합 형식 요소 이기 때문에 **데이터 ($pd/p1: Features/wm: 보증)** 에서 정적 오류를 반환 합니다 `Warranty` .  
   
 ```  
 WITH XMLNAMESPACES (  

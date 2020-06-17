@@ -1,5 +1,6 @@
 ---
 title: 축 지정 (SQLXML)
+description: SQLXML 4.0 XPath 쿼리에서 축을 지정 하는 방법에 대해 알아봅니다. 위치 단계에서 선택한 노드와 컨텍스트 노드 간의 트리 관계를 지정 합니다.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882181"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>축 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253060"
   
      컨텍스트 노드의 자식을 포함합니다.  
   
-     다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 모든 ** \<고객>** 자식을 선택 합니다.  
+     다음 XPath 식 (위치 경로)은 현재 컨텍스트 노드에서 모든 자식을 선택 합니다 **\<Customer>** .  
   
     ```  
     child::Customer  
@@ -47,7 +48,7 @@ ms.locfileid: "75253060"
   
      컨텍스트 노드의 부모를 포함합니다.  
   
-     다음 XPath 식은 ** \<Order>** 자식의 모든 ** \<고객>** 부모를 선택 합니다.  
+     다음 XPath 식은 자식의 모든 부모를 선택 합니다 **\<Customer>** **\<Order>** .  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253060"
   
      컨텍스트 노드 자신을 포함합니다.  
   
-     다음 XPath 식은 ** \<Order>** 노드인 경우 현재 노드를 선택 합니다.  
+     다음 XPath 식은 노드인 경우 현재 노드를 선택 합니다 **\<Order>** .  
   
     ```  
     self::Order  

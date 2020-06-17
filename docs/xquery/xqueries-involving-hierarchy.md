@@ -1,5 +1,6 @@
 ---
 title: 계층 구조와 관련 된 XQueries | Microsoft Docs
+description: 계층 구조와 관련 된 XQueries의 예를 봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880633"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "67946103"
 ## <a name="examples"></a>예  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 제조 지침 문서에서 작업 센터 위치와 해당 위치의 첫 번째 제조 단계 검색  
- 제품 모델 7의 경우 쿼리는 `ManuInstr` <> 요소를 포함 하는 XML을 생성 하며,이는 상품 **Modelid** 및 **제품 modelname** 특성과 하나 이상의 `Location` <> 자식 요소입니다.  
+ 제품 모델 7의 경우 쿼리는 <> 요소를 포함 하는 XML을 생성 하며,이는 상품 `ManuInstr` **modelid** 및 **제품 modelname** 특성과 하나 이상의 <`Location`> 자식 요소입니다.  
   
  각 <`Location`> 요소에는 고유한 특성 집합과 하나의 <`step`> 자식 요소가 있습니다. 이 <`step`> 자식 요소가 작업 센터 위치의 첫 번째 제조 단계입니다.  
   
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   <`Location`> 요소를 생성할 때 $wc/@ *는 모든 작업 센터 위치 특성을 검색 합니다.  
   
--   **String ()** 함수는 <`step`> 요소에서 문자열 값을 반환 합니다.  
+-   **String ()** 함수는 <> 요소에서 문자열 값을 반환 합니다 `step` .  
   
  다음은 결과의 일부입니다.  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. AdditionalContactInfo 열에서 모든 전화 번호 찾기  
- 다음 쿼리는 <`telephoneNumber`> 요소에 대 한 전체 계층 구조를 검색 하 여 특정 고객 연락처에 대 한 추가 전화 번호를 검색 합니다. <`telephoneNumber`> 요소는 계층의 아무 곳에 나 나타날 수 있으므로 쿼리는 검색에서 하위 항목 및 self 연산자 (//)를 사용 합니다.  
+ 다음 쿼리는 <> 요소에 대 한 전체 계층 구조를 검색 하 여 특정 고객 연락처에 대 한 추가 전화 번호를 검색 합니다 `telephoneNumber` . <`telephoneNumber`> 요소는 계층의 아무 곳에 나 나타날 수 있으므로 쿼리는 검색에서 하위 항목 및 self 연산자 (//)를 사용 합니다.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  

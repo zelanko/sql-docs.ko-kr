@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 쪽 및 서버 쪽 XML 서식 지정 (SQLXML)
+description: SQLXML 4.0에서 클라이언트 쪽 및 서버 쪽 XML 서식의 일반적인 차이점에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882898"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>클라이언트 쪽 서식에서 지원되지 않는 여러 행 집합 쿼리  
- 클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. Sql: query>블록에 두 개의 SELECT 문이 있는이 샘플 템플릿을 살펴보겠습니다. ** \<**  
+ 클라이언트 쪽 XML 서식을 사용하는 경우 여러 행 집합을 생성하는 쿼리는 지원되지 않습니다. 예를 들어 가상 디렉터리에 클라이언트 쪽 서식을 지정했다고 가정합니다. 블록에 SELECT 문이 두 개 있는이 샘플 템플릿을 살펴보겠습니다 **\<sql:query>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,7 +43,7 @@ ms.locfileid: "75247007"
 </ROOT>  
 ```  
   
- 애플리케이션 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 별도의 두 ** \<sql: query>** 블록으로 쿼리를 지정 하는 경우 원하는 결과를 얻을 수 있습니다.  
+ 애플리케이션 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 별도의 두 블록에 쿼리를 지정 하는 경우 **\<sql:query>** 원하는 결과를 얻을 수 있습니다.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
  서버 쪽 XML 서식에서 **timestamp** 형식의 데이터베이스 열은 i8 XDR 형식 (쿼리에서 XMLDATA 옵션이 지정 된 경우)에 매핑됩니다.  

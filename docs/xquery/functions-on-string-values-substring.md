@@ -1,5 +1,6 @@
 ---
 title: substring 함수 (XQuery) | Microsoft Docs
+description: 소스 문자열의 지정 된 부분을 반환 하는 XQuery 함수 substring ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004646"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881919"
 ---
 # <a name="functions-on-string-values---substring"></a>문자열 값 함수 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +69,8 @@ fn:substring($sourceString as xs:string?,
   
  SQL Server는 ()에 매핑되는 동적 오류의 결과로 빈 시퀀스가 가능한 값 이기 때문에 *$startingLoc* 및 *$length* 빈 시퀀스가 될 수 있습니다.  
   
-## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+## <a name="examples"></a>예제  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. substring() XQuery 함수를 사용하여 부분 요약 제품 모델 설명 검색  
  이 쿼리는 제품 모델을 설명 하는 텍스트의 처음 50 문자를 검색 하 고 `Summary` 문서의 <> 요소를 검색 합니다.  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   **String ()** 함수는<`Summary`> 요소의 문자열 값을 반환 합니다. 이 함수는 <`Summary`> 요소에 텍스트와 하위 요소 (html 서식 요소)가 모두 포함 되어 있고, 이러한 요소를 건너뛰고 모든 텍스트를 검색 하기 때문에 사용 됩니다.  
+-   **String ()** 함수는<> 요소의 문자열 값을 반환 합니다 `Summary` . 이 함수는 <`Summary`> 요소에 텍스트와 하위 요소 (html 서식 요소)가 모두 포함 되어 있고, 이러한 요소를 건너뛰고 모든 텍스트를 검색 하기 때문에 사용 됩니다.  
   
 -   **Substring ()** 함수는 **문자열 ()** 에 의해 검색 된 문자열 값에서 처음 50 문자를 검색 합니다.  
   

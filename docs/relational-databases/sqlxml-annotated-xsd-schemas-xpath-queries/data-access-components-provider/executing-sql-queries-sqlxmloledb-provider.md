@@ -1,5 +1,6 @@
 ---
 title: SQL 쿼리 실행(SQLXMLOLEDB 공급자)
+description: 클라이언트 쪽 SQL 쿼리를 실행할 때 SQLXMLOLEDB 공급자의 Clientside Xml 및 xml 루트 속성을 사용 하는 방법에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f716d9e682c3b98fe35ea80dd4b630486d7e836
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad97db8811bf62342963f95fbf5feb3951c4d9c0
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882451"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 쪽 및 서버 쪽 서식 지정 (SQLXML)
+description: Microsoft SQL Server 데이터베이스에 대해 실행 된 SQLXML 4.0 쿼리에서 생성 된 문서의 클라이언트 쪽 및 서버 쪽 XML 서식에 대해 알아봅니다.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27bf8d7c69755bc0745773fd6c0e3defd6bc03c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cf289d7f34cdfa0226464e67b5894b02d982f02
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882904"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>클라이언트 쪽 및 서버 쪽 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75247027"
   
 -   클라이언트 쪽 서식 지정  
   
- 이 섹션에서는의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]데이터베이스에 대해 실행 되는 쿼리에서 생성 된 행 집합에서 클라이언트 쪽 이나 서버 쪽에서 XML 문서에 서식을 지정 하는 방법에 대 한 정보를 제공 합니다.  
+ 이 섹션에서는의 데이터베이스에 대해 실행 되는 쿼리에서 생성 된 행 집합에서 클라이언트 쪽 이나 서버 쪽에서 XML 문서에 서식을 지정 하는 방법에 대 한 정보를 제공 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [클라이언트 쪽 및 서버 쪽 XML 서식 &#40;SQLXML 4.0&#41;의 아키텍처](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  

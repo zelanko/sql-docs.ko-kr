@@ -1,5 +1,6 @@
 ---
 title: string 함수 (XQuery) | Microsoft Docs
+description: 문자열로 표현 된 인수의 값을 반환 하는 XQuery 함수 문자열 ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881890"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>데이터 접근자 함수 - string(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +52,11 @@ fn:string($arg as item()?) as xs:string
   
 -   인수가 없는 **fn: string ()** 구현은 컨텍스트 종속 조건자의 컨텍스트에서만 사용할 수 있습니다. 특히 사용 시 대괄호([])로 묶어야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-string-function"></a>A. 문자열 함수 사용  
- 다음 쿼리는 <`Features` `ProductDescription`> 요소의 <> 자식 요소 노드를 검색 합니다.  
+ 다음 쿼리는 `Features` <> 요소의 <> 자식 요소 노드를 검색 `ProductDescription` 합니다.  
   
 ```  
 SELECT CatalogDescription.query('  

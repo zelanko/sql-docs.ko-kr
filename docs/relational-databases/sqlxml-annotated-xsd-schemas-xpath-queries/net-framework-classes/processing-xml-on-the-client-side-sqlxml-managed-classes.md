@@ -1,5 +1,6 @@
 ---
 title: 클라이언트 쪽에서 XML 처리 (SQLXML)
+description: SQLXML 관리 되는 클래스에 있는 SqlXmlCommand 개체의 Clientside Xml 속성을 사용 하 여 클라이언트 쪽에서 XML을 처리 하는 방법에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 54063c371489aaf8928a4c3cad290e4a0961c229
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dca939b5d3180e3a0d61b94797610b44344a73a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251482"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884237"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>클라이언트 쪽에서 XML 처리(SQLXML 관리되는 클래스)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

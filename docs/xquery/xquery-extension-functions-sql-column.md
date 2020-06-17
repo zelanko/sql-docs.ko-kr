@@ -1,5 +1,6 @@
 ---
 title: 'sql: column () 함수 (XQuery) | Microsoft Docs'
+description: 'XQuery 함수 sql: column ()을 사용 하 여 xml 내에 비 XML 관계형 데이터를 바인딩하고 관계형 및 XML 데이터를 함께 가져오는 방법에 대해 알아봅니다.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881500"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 확장 함수 - sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ sql:column("columnName")
 ## <a name="remarks"></a>설명  
  XQuery 내의 **sql: column ()** 함수에 지정 된 열에 대 한 참조는 처리 중인 행의 열을 참조 합니다.  
   
- 에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]xml DML insert 문의 원본 식 컨텍스트에서만 **xml** 인스턴스를 참조할 수 있습니다. 그렇지 않으면 **xml** 형식의 열 또는 CLR 사용자 정의 형식을 참조할 수 없습니다.  
+ 에서는 xml [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DML insert 문의 원본 식 컨텍스트에서만 **xml** 인스턴스를 참조할 수 있습니다. 그렇지 않으면 **XML** 형식의 열 또는 CLR 사용자 정의 형식 열을 참조할 수 없습니다.  
   
  **Sql: column ()** 함수는 조인 작업에서 지원 되지 않습니다. 대신 APPLY 연산을 사용할 수 있습니다.  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- 다음 쿼리는 제품의 특정 정보가 포함된 XML을 생성합니다. 이 정보에는 ProductID, ProductName, ProductPrice와 가능한 경우 특정 제품 모델 ProductModelID=19에 해당하는 모든 제품의 ProductModelName이 포함됩니다. @x **XML 형식의 변수에** xml이 할당 됩니다.  
+ 다음 쿼리는 제품의 특정 정보가 포함된 XML을 생성합니다. 이 정보에는 ProductID, ProductName, ProductPrice와 가능한 경우 특정 제품 모델 ProductModelID=19에 해당하는 모든 제품의 ProductModelName이 포함됩니다. Xml 형식의 변수에 XML이 할당 됩니다 @x . **xml**  
   
 ```sql
 declare @x xml  

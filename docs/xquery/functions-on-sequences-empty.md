@@ -1,5 +1,6 @@
 ---
 title: empty 함수 (XQuery) | Microsoft Docs
+description: 지정 된 항목 시퀀스가 비어 있는지 여부를 나타내는 값을 반환 하는 XQuery 함수 empty ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881837"
 ---
 # <a name="functions-on-sequences---empty"></a>시퀀스 함수 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="remarks"></a>설명  
  **Fn: exists ()** 함수는 지원 되지 않습니다. 대신 **not ()** 함수를 사용할 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. empty() XQuery 함수를 사용하여 특성이 있는지 확인  

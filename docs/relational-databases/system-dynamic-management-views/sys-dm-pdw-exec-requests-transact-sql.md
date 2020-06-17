@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796524"
+ms.locfileid: "84818051"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-sql)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796524"
 |start_time|**datetime**|요청 실행이 시작 된 시간입니다.|대기 중인 요청에 대해 NULL입니다. 그렇지 않으면 유효한 **날짜/** 시간이 현재 시간 보다 작거나 같습니다.|  
 |end_compile_time|**datetime**|엔진이 요청 컴파일을 완료 한 시간입니다.|아직 컴파일되지 않은 요청의 경우 NULL입니다. 그렇지 않으면 start_time 보다 작은 유효한 **날짜/** 시간이 현재 시간 보다 작거나 같습니다.|
 |end_time|**datetime**|요청 실행이 완료, 실패 또는 취소 된 시간입니다.|대기 중이거나 활성 요청의 경우 Null입니다. 그렇지 않으면 현재 시간 보다 작거나 같은 유효한 **날짜/** 시간입니다.|  
-|total_elapsed_time|**int**|요청이 시작 된 이후 실행에서 경과한 시간 (밀리초)입니다.|0과 end_time 사이의 차이를 start_time 합니다.</br></br> Total_elapsed_time 정수에 대 한 최대값을 초과 하는 경우 total_elapsed_time는 최대 값으로 계속 됩니다. 이 경우 "최 댓 값이 초과 되었습니다." 라는 경고가 생성 됩니다.</br></br> 최대 값 (밀리초)은 24.8 일입니다.|  
+|total_elapsed_time|**int**|요청이 시작 된 이후 실행에서 경과한 시간 (밀리초)입니다.|0과 end_time 사이의 차이를 submit_time 합니다.</br></br> Total_elapsed_time 정수에 대 한 최대값을 초과 하는 경우 total_elapsed_time는 최대 값으로 계속 됩니다. 이 경우 "최 댓 값이 초과 되었습니다." 라는 경고가 생성 됩니다.</br></br> 최대 값 (밀리초)은 24.8 일입니다.|  
 |label|**nvarchar(255)**|일부 SELECT 쿼리 문과 연결 된 선택적 레이블 문자열입니다.|' A-z ', ' a-z ', ' 0-9 ', ' _ '를 포함 하는 문자열입니다.|  
 |error_id|**nvarchar (36)**|요청과 관련 된 오류의 고유 ID입니다 (있는 경우).|[Dm_pdw_errors &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md);을 참조 하세요. 오류가 발생 하지 않은 경우 NULL로 설정 합니다.|  
 |database_id|**int**|명시적 컨텍스트에서 사용 되는 데이터베이스의 식별자입니다 (예: DB_X 사용).|[&#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)에서 ID를 참조 하십시오.|  

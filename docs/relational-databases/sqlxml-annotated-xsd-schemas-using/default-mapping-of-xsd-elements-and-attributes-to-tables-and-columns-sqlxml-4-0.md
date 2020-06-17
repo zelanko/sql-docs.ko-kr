@@ -1,5 +1,6 @@
 ---
 title: 테이블/열에 대 한 기본 XSD 매핑 (SQLXML)
+description: 기본적으로 SQLXML 4.0의 테이블 및 열에 XSD 스키마의 요소 및 특성이 매핑되는 방법에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,22 +28,22 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a1c2ec82a539eb509950580ddea0b8164167bb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cabf0e7eb0fd65121cab717ffc2b94b22b4cc354
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257447"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885457"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 기본 매핑(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   기본적으로 주석이 추가된 XSD 스키마에서 복합 유형의 요소는 지정된 데이터베이스에 있는 같은 이름의 테이블(뷰)에 매핑되고 단순 유형의 요소 또는 특성은 테이블에 있는 같은 이름의 열에 매핑됩니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-default-mapping"></a>A. 기본 매핑 지정  
- 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. Person. contact>요소는 복합 유형 이므로 기본적으로 AdventureWorks 데이터베이스의 Person. contact 테이블에 매핑됩니다. ** \<** Person. contact>요소의 모든 특성 (ContactID, FirstName, LastName)은 단순 유형 이며 기본적으로 person. contact 테이블에서 이름이 같은 열에 매핑됩니다. ** \<**  
+ 이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. **\<Person.Contact>** 요소는 복합 유형 이므로 기본적으로 AdventureWorks 데이터베이스의 Person. Contact 테이블에 매핑됩니다. 요소의 모든 특성 (ContactID, FirstName, LastName) **\<Person.Contact>** 은 단순 형식 이며 기본적으로 Person. Contact 테이블에서 이름이 같은 열에 매핑됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -93,7 +94,7 @@ ms.locfileid: "75257447"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. XML 요소를 데이터베이스 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. Person. Contact>요소는 복합 유형이 며 데이터베이스에 있는 같은 이름의 테이블에 매핑됩니다. ** \<** FirstName>및 ** \<LastName>** 와 **EmployeeID** 특성은 단순 유형 이므로 같은 이름의 열에 매핑됩니다. ** \<** 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Person.Contact>** 요소는 복합 유형이 며 데이터베이스에 있는 같은 이름의 테이블에 매핑됩니다. 요소 **\<FirstName>** 와 **\<LastName>** 및 **EmployeeID** 특성은 단순 유형 이므로 같은 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은 요소가 FirstName 및 LastName 필드 매핑에 사용된다는 것입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -147,7 +148,7 @@ ms.locfileid: "75257447"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. XML 요소를 XML 데이터 형식 열에 매핑  
- 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. Production 모델>요소는 복합 유형이 며 데이터베이스에 있는 같은 이름의 테이블에 매핑됩니다. ** \<** **제품 Modelid** 특성은 단순 유형 이므로 같은 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은 ** \<명령>** 요소가 **xsd: anyType** type을 사용 하 여 **xml** 데이터 형식을 사용 하는 열에 매핑되는 것입니다.  
+ 이 예에서는 주석이 사용되지 않기 때문에 기본 매핑이 수행합니다. **\<Production.ProductModel>** 요소는 복합 유형이 며 데이터베이스에 있는 같은 이름의 테이블에 매핑됩니다. **제품 Modelid** 특성은 단순 유형 이므로 같은 이름의 열에 매핑됩니다. 이 예와 이전 예의 유일한 차이점은 **\<Instructions>** 요소가 **Xsd: anyType** type을 사용 하 여 **xml** 데이터 형식을 사용 하는 열에 매핑되는 것입니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -163,7 +164,7 @@ ms.locfileid: "75257447"
 </xsd:schema>  
 ```  
   
- **Xml** 데이터 형식은에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]도입 되었습니다.  
+ **Xml** 데이터 형식은에서 도입 되었습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   

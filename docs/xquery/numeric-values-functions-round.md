@@ -1,5 +1,6 @@
 ---
 title: round 함수 (XQuery) | Microsoft Docs
+description: 지정 된 인수와 가장 가까운 소수 부분이 없는 숫자를 반환 하는 XQuery 함수 round ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1927d6e483683699196cfc7e87928f27bf23446a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881481"
 ---
 # <a name="numeric-values-functions---round"></a>숫자 값 함수 - round
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ fn:round ( $arg as numeric?) as numeric?
   
  다른 유형을 사용하면 정적 오류가 발생합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
  **Round ()** xquery 함수에 대 한 [천장 함수 (XQuery)](../xquery/numeric-values-functions-ceiling.md) 에서 작업 예제를 사용할 수 있습니다. 쿼리의 **상한은 ()** 함수를 **round ()** 함수로 바꾸어야 합니다.  

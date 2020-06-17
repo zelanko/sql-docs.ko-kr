@@ -1,5 +1,6 @@
 ---
 title: 레코드 생성 프로세스 (SQLXML)
+description: SQLXML 4.0에서 XML 대량 로드 레코드 생성 프로세스에 대 한 세부 정보를 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5b1919afda67f421146d028ef0d5247977175a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c4d5ed47b77d32fed9d8775bc43f9e052ce6fcb
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882881"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>레코드 생성 프로세스(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +79,7 @@ ms.locfileid: "75246698"
 </xsd:schema>  
 ```  
   
- 스키마는 **CustomerID** 및 **CompanyName** 특성이 포함 된 ** \<Customer>** 요소를 지정 합니다. **Sql: relation** 주석은 ** \<customer>** 요소를 Customers 테이블에 매핑합니다.  
+ 스키마는 **\<Customer>** **CustomerID** 및 **CompanyName** 특성이 있는 요소를 지정 합니다. **Sql: relation** 주석은 **\<Customer>** 요소를 Customers 테이블에 매핑합니다.  
   
  다음 XML 문서 조각을 고려하십시오.  
   
@@ -90,19 +91,19 @@ ms.locfileid: "75246698"
   
  XML 대량 로드에 이전 단락에서 설명한 스키마와 XML 데이터가 입력으로 제공되면 XML 대량 로드는 원본 데이터에서 다음과 같은 방식으로 노드(요소와 특성)를 처리합니다.  
   
--   첫 번째 ** \<Customer>** 요소의 시작 태그는 해당 요소를 범위에 가져옵니다. 이 노드는 Customers 테이블에 매핑되므로 XML 대량 로드는 Customers 테이블에 대한 레코드를 생성합니다.  
+-   첫 번째 요소의 시작 태그는 **\<Customer>** 해당 요소를 범위에 가져옵니다. 이 노드는 Customers 테이블에 매핑되므로 XML 대량 로드는 Customers 테이블에 대한 레코드를 생성합니다.  
   
--   스키마에서 ** \<Customer>** 요소의 모든 특성은 Customers 테이블의 열에 매핑됩니다. 이러한 특성의 범위가 시작되면 XML 대량 로드는 해당 값을 부모 범위에 의해 미리 생성된 고객 레코드에 복사합니다.  
+-   스키마에서 요소의 모든 특성 **\<Customer>** 은 Customers 테이블의 열에 매핑됩니다. 이러한 특성의 범위가 시작되면 XML 대량 로드는 해당 값을 부모 범위에 의해 미리 생성된 고객 레코드에 복사합니다.  
   
--   XML 대량 로드가 ** \<Customer>** 요소의 끝 태그에 도달 하면 요소는 범위를 벗어날 것입니다. 그러면 XML 대량 로드는 레코드가 완료된 것으로 간주하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 해당 레코드를 보냅니다.  
+-   XML 대량 로드가 요소의 끝 태그에 도달 하면 **\<Customer>** 요소는 범위를 벗어날 것입니다. 그러면 XML 대량 로드는 레코드가 완료된 것으로 간주하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 해당 레코드를 보냅니다.  
   
- XML 대량 로드는 이후의 ** \<각 Customer>** 요소에 대해이 프로세스를 따릅니다.  
+ XML 대량 로드는 각 후속 요소에 대해이 프로세스를 따릅니다 **\<Customer>** .  
   
 > [!IMPORTANT]  
 >  이 모델에서는 끝 태그에 도달할 때(또는 노드가 범위를 벗어날 때) 레코드가 삽입되므로 레코드와 관련된 모든 데이터를 노드 범위 내에 정의해야 합니다.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>레코드 하위 집합 및 키 순서 지정 규칙  
- ** \<Sql: relationship>** 를 사용 하는 매핑 스키마를 지정 하는 경우 하위 집합 용어는 관계의 외래 쪽에서 생성 되는 레코드 집합을 나타냅니다. 다음 예에서는 CustOrder 레코드가 외부에 있습니다. ** \<sql: relationship>** 합니다.  
+ 에서 사용 하는 매핑 스키마를 지정 하는 경우 **\<sql:relationship>** 하위 집합 용어는 관계의 외래 쪽에서 생성 되는 레코드 집합을 나타냅니다. 다음 예제에서 CustOrder 레코드는 외래 쪽에 **\<sql:relationship>** 있습니다.  
   
  예를 들어 데이터베이스에 다음과 같은 테이블이 포함된다고 가정합니다.  
   
@@ -112,7 +113,7 @@ ms.locfileid: "75246698"
   
  CustOrder 테이블의 CustomerID는 Cust 테이블의 CustomerID 기본 키를 참조하는 외래 키입니다.  
   
- 이제 다음과 같은 주석이 추가된 XSD 스키마에 지정된 XML 뷰를 고려해 보십시오. 이 스키마는 ** \<sql: relationship>** 를 사용 하 여 Cust 테이블과 CustOrder 테이블 간의 관계를 지정 합니다.  
+ 이제 다음과 같은 주석이 추가된 XSD 스키마에 지정된 XML 뷰를 고려해 보십시오. 이 스키마는 **\<sql:relationship>** 를 사용 하 여 Cust 테이블과 CustOrder 테이블 간의 관계를 지정 합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -148,19 +149,19 @@ ms.locfileid: "75246698"
   
  예제 XML 데이터와 작업 예제를 만드는 단계는 아래에 지정되어 있습니다.  
   
--   Xml 데이터 파일의 ** \<Customer>** 요소 노드가 범위에 들어가면 xml 대량 로드가 Cust 테이블에 대 한 레코드를 생성 합니다. 그런 다음 XML 대량 로드는 ** \<customerid>**, ** \<companyname>** 및 ** \<city>** 자식 요소가 범위에 입력 될 때 필요한 열 값 (customerid, companyname 및 city)을 복사 합니다.  
+-   **\<Customer>** Xml 데이터 파일의 요소 노드가 범위에 들어가면 Xml 대량 로드가 Cust 테이블에 대 한 레코드를 생성 합니다. 그러면 XML 대량 로드에서 필요한 열 값 (CustomerID, CompanyName 및 City) **\<CustomerID>** 을, **\<CompanyName>** 및 **\<City>** 자식 요소에서 범위에 입력 하는 자식 요소에 복사 합니다.  
   
--   Order>요소 노드가 범위에 들어가면 XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 합니다. ** \<** XML 대량 로드는 **OrderID** 특성의 값을이 레코드에 복사 합니다. Customerid 열에 필요한 값은 ** \<Customer>** 요소의 ** \<customerid>** 자식 요소에서 가져옵니다. XML 대량 로드는 ** \<Order>** 요소에 **customerid** 특성을 지정 하지 않은 경우 ** \<sql: relationship>** 에 지정 된 정보를 사용 하 여이 레코드에 대 한 customerid 외래 키 값을 가져옵니다. 일반 규칙은 자식 요소가 외래 키 특성에 대 한 값을 명시적으로 지정 하는 경우 XML 대량 로드에서 해당 값을 사용 하 고 지정 ** \<된 sql: relationship>** 를 사용 하 여 부모 요소에서 값을 가져오지 않는다는 것입니다. 이 ** \<순서>** 요소 노드가 범위를 벗어나면 XML 대량 로드는 레코드를에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보낸 다음 동일한 방식으로 모든 후속 ** \<Order>** 요소 노드를 처리 합니다.  
+-   **\<Order>** 요소 노드가 범위에 들어가면 XML 대량 로드는 CustOrder 테이블에 대 한 레코드를 생성 합니다. XML 대량 로드는 **OrderID** 특성의 값을이 레코드에 복사 합니다. CustomerID 열에 필요한 값은 **\<CustomerID>** 요소의 자식 요소에서 가져옵니다 **\<Customer>** . XML 대량 로드는 요소에 Customerid 특성을 지정 하지 않은 경우에 지정 된 정보를 사용 하 여 **\<sql:relationship>** 이 레코드 **CustomerID** 에 대 한 customerid 외래 키 값을 가져옵니다 **\<Order>** . 일반 규칙은 자식 요소가 외래 키 특성에 대 한 값을 명시적으로 지정 하는 경우 XML 대량 로드에서 해당 값을 사용 하 고 지정 된을 사용 하 여 부모 요소에서 값을 가져오지 않는다는 것입니다 **\<sql:relationship>** . 이 **\<Order>** 요소 노드가 범위를 벗어나면 XML 대량 로드는 레코드를에 보낸 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다음 동일한 방식으로 모든 후속 **\<Order>** 요소 노드를 처리 합니다.  
   
--   마지막으로 ** \<Customer>** 요소 노드는 범위를 벗어났습니다. 이 시점에서 XML 대량 로드가 고객 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다. XML 대량 로드는 XML 데이터 스트림의 모든 후속 고객에 대해 이 프로세스를 따릅니다.  
+-   마지막으로 **\<Customer>** 요소 노드가 범위를 벗어났습니다. 이 시점에서 XML 대량 로드가 고객 레코드를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 보냅니다. XML 대량 로드는 XML 데이터 스트림의 모든 후속 고객에 대해 이 프로세스를 따릅니다.  
   
  여기서 매핑 스키마에 대한 두 가지 사항을 확인할 수 있습니다.  
   
--   스키마가 "포함" 규칙을 충족 하는 경우 (예: 고객 및 주문과 관련 된 모든 데이터가 연결 ** \<된 고객>** 및 ** \<order>** 요소 노드의 범위 내에서 정의 된 경우) 대량 로드는 성공 합니다.  
+-   스키마가 "포함" 규칙을 충족 하는 경우 (예: 고객과 관련 된 모든 데이터와 해당 주문이 연결 된 및 요소 노드의 범위 내에서 정의 된 **\<Customer>** 경우 **\<Order>** ) 대량 로드에 성공 합니다.  
   
--   Customer>요소를 설명 하는 경우 해당 자식 요소가 적절 한 순서로 지정 됩니다. ** \<** 이 경우 ** \<CustomerID>** 자식 요소가 ** \<Order>** 자식 요소 앞에 지정 됩니다. 즉, 입력 XML 데이터 파일에서 ** \<CustomerID>** 요소 값은 ** \<Order>** 요소가 범위에 들어가면 외래 키 값으로 사용할 수 있습니다. 키 특성이 먼저 지정되므로 이것은 "키 순서 지정 규칙"입니다.  
+-   요소를 설명 하는 경우 **\<Customer>** 해당 자식 요소가 적절 한 순서로 지정 됩니다. 이 경우 자식 요소는 **\<CustomerID>** 자식 요소 앞에 지정 됩니다 **\<Order>** . 즉, 입력 XML 데이터 파일에서 요소가 **\<CustomerID>** 범위에 들어가면 요소 값을 외래 키 값으로 사용할 수 있습니다 **\<Order>** . 키 특성이 먼저 지정되므로 이것은 "키 순서 지정 규칙"입니다.  
   
-     Order>자식 요소 다음에 ** \<CustomerID>** 자식 요소를 지정 하는 경우 ** \<order>** 요소가 범위에 들어가면 값을 사용할 수 없습니다. ** \<** 그런 다음 ** \</order>** end 태그를 읽으면 CustOrder 테이블의 레코드가 완료 된 것으로 간주 되 고 CustOrder 테이블에는 CustomerID 열에 대해 NULL 값이 있는 것으로 간주 되며이는 원하는 결과가 아닙니다.  
+     자식 요소 다음에 자식 요소를 지정 하는 경우 **\<CustomerID>** **\<Order>** **\<Order>** 요소가 범위에 들어가면 값을 사용할 수 없습니다. **\</Order>** 그런 다음 끝 태그를 읽으면 CustOrder 테이블의 레코드가 완료 된 것으로 간주 되 고 CustOrder 테이블에는 CustomerID 열에 대해 NULL 값이 있는 것으로 간주 되며이는 원하는 결과가 아닙니다.  
   
 #### <a name="to-create-a-working-sample"></a>작업 예제를 만들려면  
   
@@ -220,7 +221,7 @@ ms.locfileid: "75246698"
 ## <a name="exceptions-to-the-record-generation-rule"></a>레코드 생성 규칙의 예외  
  노드가 IDREF 또는 IDREFS 형식인 경우 XML 대량 로드는 범위가 시작될 때 노드에 대한 레코드를 생성하지 않습니다. 따라서 스키마의 특정 위치에 레코드의 완전한 설명이 존재해야 합니다. **Dt: type = "nmtokens"** 주석은 IDREFS 형식이 무시 되는 것과 마찬가지로 무시 됩니다.  
   
- 예를 들어 ** \<고객>** 및 ** \<주문>** 요소를 설명 하는 다음 XSD 스키마를 살펴보세요. ** \<Customer>** 요소는 IDREFS 유형의 **orderlist** 특성을 포함 합니다. ** \<Sql: relationship>** 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정 합니다.  
+ 예를 들어 및 요소를 설명 하는 다음 XSD 스키마를 살펴보세요 **\<Customer>** **\<Order>** . **\<Customer>** 요소는 IDREFS 유형의 **orderlist** 특성을 포함 합니다. **\<sql:relationship>** 태그는 고객과 주문 목록 간의 일 대 다 관계를 지정 합니다.  
   
  스키마는 다음과 같습니다.  
   
@@ -261,9 +262,9 @@ ms.locfileid: "75246698"
 </xsd:schema>  
 ```  
   
- 대량 로드는 IDREFS 유형의 노드를 무시 하므로 **Orderlist** 특성 노드가 범위에 들어가면 레코드를 생성할 수 없습니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에서 ** \<order>** 요소를 지정 하면 XML 대량 로드가 주문 레코드를 Orders 테이블에 추가 합니다. ** \<Order>** 요소는 CustOrder 테이블에 대 한 레코드를 채우는 데 필요한 모든 특성을 설명 합니다.  
+ 대량 로드는 IDREFS 유형의 노드를 무시 하므로 **Orderlist** 특성 노드가 범위에 들어가면 레코드를 생성할 수 없습니다. 따라서 Orders 테이블에 주문 레코드를 추가하려면 스키마의 특정 위치에서 해당 주문을 설명해야 합니다. 이 스키마에서 요소를 지정 하면 **\<Order>** XML 대량 로드에서 주문 레코드를 Orders 테이블에 추가 합니다. **\<Order>** 요소는 CustOrder 테이블에 대 한 레코드를 채우는 데 필요한 모든 특성을 설명 합니다.  
   
- Customer>요소의 **CustomerID** 및 **OrderID** 값이 ** \<Order>** 요소의 값과 일치 하는지 확인 해야 합니다. ** \<** 참조 무결성을 유지하는 책임은 사용자에게 있습니다.  
+ 요소의 **CustomerID** 및 **OrderID** 값이 **\<Customer>** 요소의 값과 일치 하는지 확인 해야 합니다 **\<Order>** . 참조 무결성을 유지하는 책임은 사용자에게 있습니다.  
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   

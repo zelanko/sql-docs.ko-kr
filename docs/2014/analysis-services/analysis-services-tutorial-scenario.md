@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880659"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services Tutorial 시나리오
   이 자습서는 가상 회사인 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]를 기반으로 합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 북아메리카, 유럽 및 아시아 시장에서 금속 및 합성 소재 자전거를 생산하고 판매하는 대규모 다국적 제조 회사입니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 의 본사는 워싱턴 주 보셀에 위치하고 있으며 직원 수는 500명입니다. 또한 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 는 판매 시장에 전반에 걸쳐 몇몇 지역에 영업 팀을 운영하고 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528039"
 ## <a name="current-analysis-environment"></a>현재 분석 환경  
  판매와 마케팅 팀 및 경영 관리에 필요한 데이터 분석을 지원하기 위해 이 회사는 현재 [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] 데이터베이스의 트랜잭션 데이터 및 판매 할당량과 같은 스프레드시트의 비트랜잭션 정보를 가져오고 이 정보를 **AdventureWorksDW2012** 관계형 데이터 웨어하우스로 통합합니다. 그러나 관계형 데이터 웨어하우스에는 다음과 같은 문제가 있습니다.  
   
--   보고서가 정적입니다. 사용자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 피벗 테이블을 사용하여 수행할 수 있는 작업처럼 자세한 정보를 얻기 위해 보고서의 데이터를 대화형으로 탐색할 수 없습니다. 많은 사용자에게는 미리 정의된 보고서의 기존 세트로 충분하지만 보다 고급 사용자에게는 대화형 쿼리와 특수한 보고서 작성을 위해 데이터베이스에 대한 직접 쿼리 액세스가 필요합니다. 그러나 **AdventureWorksDW2012** 데이터베이스의 복잡성 때문에 사용자가 효과적인 쿼리 작성 방법에 익숙해지는 데 상당한 시간이 필요합니다.  
+-   보고서가 정적입니다. 사용자는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 피벗 테이블을 사용하여 수행할 수 있는 작업처럼 자세한 정보를 얻기 위해 보고서의 데이터를 대화형으로 탐색할 수 없습니다. 많은 사용자에게는 미리 정의된 보고서의 기존 세트로 충분하지만 보다 고급 사용자에게는 대화형 쿼리와 특수한 보고서 작성을 위해 데이터베이스에 대한 직접 쿼리 액세스가 필요합니다. 그러나 **AdventureWorksDW2012** 데이터베이스의 복잡성 때문에 사용자가 효과적인 쿼리를 만드는 방법을 배우는 데 너무 많은 시간이 필요 합니다.  
   
 -   쿼리 성능은 크게 다릅니다. 예를 들어 일부 쿼리는 몇 초만에 빠르게 결과를 반환하지만 다른 쿼리는 결과 반환에 몇 분이 걸립니다.  
   

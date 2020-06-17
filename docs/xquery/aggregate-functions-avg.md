@@ -1,5 +1,6 @@
 ---
 title: avg 함수 (XQuery) | Microsoft Docs
+description: 지정 된 숫자 시퀀스의 평균을 반환 하는 XQuery 함수 avg ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882032"
 ---
 # <a name="aggregate-functions---avg"></a>집계 함수 - avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
   
- **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 예를 들면 다음과 같습니다.  
+ **Avg ()** 함수는 계산 된 숫자의 평균을 반환 합니다. 다음은 그 예입니다.  
   
  **sum(** *$arg* **) div count(** *$arg* **)**  
   
@@ -53,7 +54,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
  다른 모든 경우 함수는 정적 오류를 반환합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
 ### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. avg() XQuery 함수를 사용하여 제조 과정에서 근로 시간이 모든 작업 센터 위치의 평균보다 큰 경우의 작업 센터 위치 찾기  

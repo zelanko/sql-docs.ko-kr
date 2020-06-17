@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dcaf10a680540a533e539783a1fc9ed289998a40
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151975"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818140"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,6 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
     [ , [ @schedule_id = ] schedule_id OUTPUT ]
-    [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -65,8 +64,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |-----------|-----------------|  
 |**1**|한 번|  
 |**4**|매일|  
-|**20cm(8**|매주|  
-|**x**|매월|  
+|**8**|매주|  
+|**16**|매월|  
 |**32**|매월, *freq_interval* 기준|  
 |**64**|SQL 에이전트 서비스를 시작할 때 실행|  
 |**128**|컴퓨터가 유휴 상태일 때 실행 됩니다 ( [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)에서 지원 되지 않음). |  
@@ -98,11 +97,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
-|**1**|처음|  
-|**2**|초|  
+|**1**|첫째|  
+|**2**|Second|  
 |**4**|셋째|  
-|**20cm(8**|넷째|  
-|**x**|마지막|  
+|**8**|넷째|  
+|**16**|마지막|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`예약 된 작업 실행 사이에 발생 하는 주 또는 월 수입니다. *freq_recurrence_factor* 는 *freq_type* 이 **8**, **16**또는 **32**인 경우에만 사용 됩니다. *freq_recurrence_factor* 은 **int**이며 기본값은 **0**입니다.  
   

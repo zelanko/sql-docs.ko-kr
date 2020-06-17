@@ -1,5 +1,6 @@
 ---
 title: DiffGram 예 (SQLXML)
+description: 데이터베이스에 대 한 삽입, 업데이트 및 삭제 작업을 수행 하는 SQLXML 4.0의 diffgram 예를 봅니다.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e2ac740e844f06ce35416077f4568e19ffb6f52f
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257260"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882449"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram 예(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +102,7 @@ ms.locfileid: "75257260"
 </ROOT>  
 ```  
   
- ** \<** **Before \<>** 블록에는 Order>요소 (**diffgr: id = "Order1"**)와 ** \<Customer>** 요소 (**diffgr: id = "Customer1"**)가 있습니다. 이러한 요소는 데이터베이스의 기존 레코드를 나타냅니다. ** \<Datainstance>** 요소에 해당 하는 레코드 ( **diffgr: id**가 같음)가 없습니다. 이는 삭제 작업임을 나타냅니다.  
+ 블록에 **\<before>** 는 **\<Order>** 요소 (**diffgr: Id = "Order1"**)와 **\<Customer>** 요소 (**Diffgr: id = "Customer1"**)가 있습니다. 이러한 요소는 데이터베이스의 기존 레코드를 나타냅니다. 요소에 해당 하는 **\<DataInstance>** 레코드 ( **diffgr: id**가 같음)가 없습니다. 이는 삭제 작업임을 나타냅니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
@@ -168,7 +169,7 @@ ms.locfileid: "75257260"
 </ROOT>  
 ```  
   
- 이 DiffGram에서 ** \<이전>** 블록을 지정 하지 않았습니다 (기존 데이터베이스 레코드는 확인 되지 않음). 각각 Cust 및 Ord 테이블에 매핑되는 ** \<고객>** 및 ** \<** ** \<datainstance>** 블록의 요소>요소에 의해 식별 되는 두 개의 레코드 인스턴스가 있습니다. 이러한 두 요소는 모두 **diffgr: haschanges** 특성을 지정 합니다 (**haschanges = "inserted"**). 이는 삽입 작업임을 나타냅니다. 이 DiffGram에서 **Haschanges = "modified"** 를 지정 하는 경우 존재 하지 않는 레코드를 수정 하 고 오류가 발생 함을 나타냅니다.  
+ 이 DiffGram에서 **\<before>** 블록이 지정 되지 않았습니다 (기존 데이터베이스 레코드를 식별 하지 않음). **\<Customer>** **\<Order>** **\<DataInstance>** 각각 Cust 및 Ord 테이블에 매핑되는 두 개의 레코드 인스턴스 (블록의 및 요소로 식별 됨)가 있습니다. 이러한 두 요소는 모두 **diffgr: haschanges** 특성을 지정 합니다 (**haschanges = "inserted"**). 이는 삽입 작업임을 나타냅니다. 이 DiffGram에서 **Haschanges = "modified"** 를 지정 하는 경우 존재 하지 않는 레코드를 수정 하 고 오류가 발생 함을 나타냅니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
@@ -240,7 +241,7 @@ ms.locfileid: "75257260"
 </ROOT>  
 ```  
   
- ** \<Before>** 블록은 ** \<Customer>** 요소 (**diffgr: id = "Customer1"**)를 포함 합니다. ** \<Datainstance>** 블록에는 동일한 **id**를 가진 해당 ** \<Customer>** 요소가 포함 됩니다. Newdataset>의 ** \<customer>** 요소는 **diffgr: haschanges = "modified"** 도 지정 합니다. ** \<** 이는 업데이트 작업을 나타내며,이에 따라 **Cust** 테이블의 고객 레코드가 업데이트 됩니다. **Diffgr: hasChanges** 특성이 지정 되지 않은 경우 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트를 수행 하지 않습니다.  
+ **\<before>** 블록에는 **\<Customer>** 요소 (**diffgr: Id = "Customer1"**)가 포함 됩니다. 블록에는 **\<DataInstance>** **\<Customer>** **id가**같은 해당 요소가 포함 됩니다. **\<customer>** 의 요소는 **\<NewDataSet>** **Diffgr: haschanges = "modified"** 도 지정 합니다. 이는 업데이트 작업을 나타내며,이에 따라 **Cust** 테이블의 고객 레코드가 업데이트 됩니다. **Diffgr: hasChanges** 특성이 지정 되지 않은 경우 DiffGram 처리 논리는이 요소를 무시 하 고 업데이트를 수행 하지 않습니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
@@ -341,15 +342,15 @@ ms.locfileid: "75257260"
   
  DiffGram 논리는 이 DiffGram을 다음과 같이 처리합니다.  
   
--   DiffGram 처리 논리에 따라 매핑 스키마에 설명 된 ** \<것 처럼 이전>** 블록의 모든 최상위 요소가 해당 테이블에 매핑됩니다.  
+-   DiffGram 처리 논리에 따라 블록의 모든 최상위 요소는 **\<before>** 매핑 스키마에 설명 된 대로 해당 테이블에 매핑됩니다.  
   
--   ** \<Before>** 블록에는 ** \<Order>** 요소 (**dffgr: id = "Order1"**) 및 ** \<Customer>** 요소 (**diffgr: id = "Customer1"**)가 있습니다 .이 요소에는 ** \<datainstance>** 블록에 해당 하는 요소가 없습니다 (동일한 id로). 이는 삭제 작업임을 나타내며 Cust 테이블과 Ord 테이블에서 레코드가 삭제됩니다.  
+-   블록에는 **\<before>** **\<Order>** 요소 (**dffgr: Id = "Order1"**)와 요소 **\<Customer>** (**Diffgr: id = "Customer1"**)가 있습니다 .이 요소에는 블록에 해당 하는 요소가 없습니다 **\<DataInstance>** (id는 동일 함). 이는 삭제 작업임을 나타내며 Cust 테이블과 Ord 테이블에서 레코드가 삭제됩니다.  
   
--   ** \<** ** \<** ** \<** **Before \<>** 블록에는 동일한 id를 가진 datainstance>블록에 해당 customer>요소가 있는 customer>요소 (**diffgr: id = "Customer2"**)가 있습니다. Datainstance>블록의 요소는 **diffgr: haschanges = "modified"** 를 지정 합니다. ** \<** 이는 customer ANATR의 경우 ** \<datainstance>** 블록에 지정 된 값을 사용 하 여 Cust 테이블에서 CompanyName 및 ContactName 정보가 업데이트 되는 업데이트 작업입니다.  
+-   블록 **\<before>** **\<Customer>** 에는 동일한 id를 가진 블록에 해당 요소가 있는 요소 (**diffgr: Id = "Customer2"**)가 있습니다 **\<Customer>** **\<DataInstance>** . 블록의 요소는 **\<DataInstance>** **diffgr: haschanges = "modified"** 를 지정 합니다. 이 업데이트 작업은 고객 ANATR에 게 블록에 지정 된 값을 사용 하 여 Cust 테이블에서 CompanyName 및 ContactName 정보가 업데이트 되는 업데이트 작업입니다 **\<DataInstance>** .  
   
--   ** \<** ** \<Datainstance>** 블록에는 Customer>요소 (**diffgr: id = "예제의 customer3"**) 및 ** \<Order>** 요소 (**diffgr: id = "Order3"**)가 있습니다. 이러한 요소는 모두 **diffgr: hasChanges** 특성을 지정 하지 않습니다. 따라서 DiffGram 처리 논리에서 이러한 요소는 무시됩니다.  
+-   블록에는 **\<DataInstance>** **\<Customer>** 요소 (**diffgr: Id = "예제의 customer3"**)와 **\<Order>** 요소 (**Diffgr: id = "Order3"**)가 있습니다. 이러한 요소는 모두 **diffgr: hasChanges** 특성을 지정 하지 않습니다. 따라서 DiffGram 처리 논리에서 이러한 요소는 무시됩니다.  
   
--   ** \<** \< ** \<** ** \<Datainstance>** 블록에는 before> 블록에 해당 요소가 없는 Customer>요소 (**diffgr: id = "Customer4"**) 및 Order>요소 (**diffgr: id = "Order4"**)가 있습니다. ** \<Datainstance>** 블록의 이러한 요소는 **diffgr: haschanges = "inserted"** 를 지정 합니다. 따라서 Cust 테이블과 Ord 테이블에 새 레코드가 추가됩니다.  
+-   블록 **\<DataInstance>** **\<Customer>** 에는 요소 (**diffgr: Id = "Customer4"**)와 **\<Order>** 블록에 해당 요소가 없는 요소 (**Diffgr: id = "Order4"**)가 있습니다 \<before> . 블록의 이러한 요소는 **\<DataInstance>** **diffgr: haschanges = "inserted"** 를 지정 합니다. 따라서 Cust 테이블과 Ord 테이블에 새 레코드가 추가됩니다.  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram을 테스트하려면  
   
@@ -392,7 +393,7 @@ ms.locfileid: "75257260"
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. diffgr:parentID 주석이 지정된 DiffGram을 사용하여 업데이트 적용  
- 이 예에서는 DiffGram의 ** \<before>** 블록에 지정 된 **parentID** 주석을 업데이트를 적용 하는 데 사용 하는 방법을 보여 줍니다.  
+ 이 예에서는 DiffGram의 블록에 지정 된 **parentID** 주석을 **\<before>** 업데이트를 적용 하는 데 사용 하는 방법을 보여 줍니다.  
   
 ```  
 <NewDataSet />  
@@ -413,6 +414,6 @@ ms.locfileid: "75257260"
 </diffgr:diffgram>  
 ```  
   
- 이전>블록만 있으므로이 DiffGram은 삭제 작업을 지정 합니다. ** \<** DiffGram에서 **parentID** 주석은 주문 및 주문 세부 정보 간에 부모-자식 관계를 지정 하는 데 사용 됩니다. SQLXML에서 레코드를 삭제할 때 이 관계를 통해 식별된 자식 테이블에서 레코드가 삭제되고 해당 부모 테이블에서도 레코드가 삭제됩니다.  
+ 이 DiffGram은 블록만 있으므로 삭제 작업을 지정 합니다 **\<before>** . DiffGram에서 **parentID** 주석은 주문 및 주문 세부 정보 간에 부모-자식 관계를 지정 하는 데 사용 됩니다. SQLXML에서 레코드를 삭제할 때 이 관계를 통해 식별된 자식 테이블에서 레코드가 삭제되고 해당 부모 테이블에서도 레코드가 삭제됩니다.  
   
   

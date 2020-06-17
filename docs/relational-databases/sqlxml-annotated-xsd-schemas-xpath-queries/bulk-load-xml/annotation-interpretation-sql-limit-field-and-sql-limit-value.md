@@ -1,5 +1,6 @@
 ---
 title: 'sql: limit 필드 및 sql: limit 값 (SQLXML)'
+description: 'XML 대량 로드를 사용할 때 SQLXML 주석 sql: limit 필드 및 sql: limit 값을 사용 하 여 데이터를 필터링 하는 방법에 대해 알아봅니다.'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3e4936f662e5b557ee8ab44962c2b1fcde761d74
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884753"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>주석 해석 - sql:limit-field 및 sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

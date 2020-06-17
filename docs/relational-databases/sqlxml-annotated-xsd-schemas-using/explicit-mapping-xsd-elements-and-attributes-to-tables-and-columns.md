@@ -1,5 +1,6 @@
 ---
 title: 테이블/열에 대 한 사용자 지정 XSD 매핑 (SQLXML)
+description: XSD 스키마의 요소와 특성과 관계형 데이터베이스의 테이블 및 열 간에 SQLXML XPath 쿼리에서 사용자 지정 매핑을 만드는 방법에 대해 알아봅니다.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885599"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>테이블/열에 대 한 사용자 지정 XSD 매핑 (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257430"
   
  요소에 **sql: relation** 을 지정 하는 경우이 주석의 범위는 해당 요소의 복합 형식 정의에 설명 된 모든 특성 및 자식 요소에 적용 되므로 주석을 작성 하는 바로 가기를 제공 합니다.  
   
- **Sql: relation** 주석은에서 유효한 식별자가 XML에서 유효 하지 않은 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에도 유용 합니다. 예를 들어 "Order Details"는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 유효한 테이블 이름이지만 XML에서는 유효하지 않습니다. 이러한 경우 **sql: relation** 주석을 사용 하 여 매핑을 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
+ **Sql: relation** 주석은에서 유효한 식별자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML에서 유효 하지 않은 경우에도 유용 합니다. 예를 들어 "Order Details"는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 유효한 테이블 이름이지만 XML에서는 유효하지 않습니다. 이러한 경우 **sql: relation** 주석을 사용 하 여 매핑을 지정할 수 있습니다. 예를 들면 다음과 같습니다.  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -56,13 +57,13 @@ ms.locfileid: "75257430"
 ## <a name="sql-field"></a>sql-field  
  **Sql 필드** 주석은 요소나 특성을 데이터베이스 열에 매핑합니다. **Sql: field** 주석이 추가 되어 스키마의 XML 노드를 데이터베이스 열에 매핑합니다. 빈 콘텐츠 요소에는 **sql: field** 를 지정할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 및 sql:field 주석 지정  
- 이 예에서 XSD 스키마는 ** \<FName>** 및 ** \<LName>** 자식 요소와 **ContactID** 특성을 포함 하는 복합 형식의 ** \<Contact>** 요소로 구성 됩니다.  
+ 이 예에서 XSD 스키마는 **\<Contact>** **\<FName>** 및 **\<LName>** 자식 요소와 **ContactID** 특성을 포함 하는 복합 형식의 요소로 구성 됩니다.  
   
- **Sql: relation** 주석은 ** \<contact>** 요소를 AdventureWorks 데이터베이스의 Person. contact 테이블에 매핑합니다. **Sql: field** annotation은 ** \<FName>** 요소를 FirstName 열에 매핑하고 ** \<LName>** 요소를 LastName 열에 매핑합니다.  
+ **Sql: relation** 주석은 **\<Contact>** AdventureWorks 데이터베이스의 Person. Contact 테이블에 요소를 매핑합니다. **Sql: field** 주석은 **\<FName>** 요소를 FirstName 열에 매핑하고 요소를 **\<LName>** LastName 열에 매핑합니다.  
   
  **ContactID** 특성에는 주석이 지정 되지 않습니다. 따라서 이름이 같은 열에 특성을 매핑하는 기본 매핑이 수행됩니다.  
   

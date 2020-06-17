@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670006"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881800"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리 &gt; -셰이프
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,30 +26,30 @@ ms.locfileid: "83670006"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>인수  
- *마스터 쿼리*  
+ *기본 쿼리*  
  부모 테이블을 반환하는 쿼리  
   
  *자식 테이블 쿼리*  
  중첩 테이블을 반환하는 쿼리  
   
- *마스터 열*  
+ *기본 열*  
  자식 테이블 쿼리 결과에서 자식 행을 식별하는 부모 테이블의 열  
   
  *자식 열*  
- master query 결과에서 부모 행을 식별하는 자식 테이블의 열  
+ 기본 쿼리 결과에서 부모 행을 식별 하는 자식 테이블의 열입니다.  
   
  *열 테이블 이름*  
  중첩 테이블의 부모 테이블에서 새로 추가된 열 이름  
@@ -57,7 +57,7 @@ APPEND ({ <child table query> }
 ## <a name="remarks"></a>설명  
  부모 테이블 및 자식 테이블에 관련되는 열을 기준으로 쿼리를 정렬해야 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) 문 내에서 다음 예를 사용 하 여 중첩 테이블을 포함 하는 모델을 학습 시킬 수 있습니다. **SHAPE** 문 내의 두 테이블은 **ordernumber** 열을 통해 관련 됩니다.  
   
 ```  

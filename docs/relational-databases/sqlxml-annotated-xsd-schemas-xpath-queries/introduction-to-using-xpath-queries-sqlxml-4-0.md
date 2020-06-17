@@ -1,5 +1,6 @@
 ---
 title: XPath 쿼리 사용 소개 (SQLXML)
+description: SQLXML 4.0에서 XPath 쿼리를 사용 하는 기본 사항에 대해 알아봅니다.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f82c330e2d18f05d0f358171a4ffeabc63ac9c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882248"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath 쿼리 사용 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,17 +48,17 @@ ms.locfileid: "75246590"
 </root>  
 ```  
   
- 이 문서에서 ** \<Customer>** 는 요소 노드이 고 **cid** 는 특성 노드이며 **"Important"** 는 텍스트 노드입니다.  
+ 이 문서에서 **\<Customer>** 는 요소 노드이 고 **cid** 는 Attribute 노드이며 **"Important"** 는 텍스트 노드입니다.  
   
- XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 ** \<고객>** 노드 집합이 지정 된 경우 XPath는 **date** 특성 값이 **"7/14/1999"** 인 모든 ** \<Order>** 노드를 선택할 수 있습니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
+ XPath는 XML 문서에서 노드 집합을 선택하는 데 사용되는 그래프 탐색 언어입니다. 각 XPath 연산자는 이전 XPath 연산자에서 선택한 노드 집합을 기반으로 노드 집합을 선택합니다. 예를 들어 노드 집합이 지정 된 경우 **\<Customer>** XPath는 **\<Order>** **date** 특성 값이 **"7/14/1999"** 인 모든 노드를 선택할 수 있습니다. 결과 노드 집합에는 주문 날짜가 1999년 7월 14일인 모든 주문이 포함됩니다.  
   
- XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0은에 http://www.w3.org/TR/1999/PR-xpath-19991008.html있는 W3C XPath 사양의 하위 집합을 구현 합니다.  
+ XPath 언어는 W3C(World Wide Web Consortium)에서 표준 탐색 언어로 정의됩니다. SQLXML 4.0은에 있는 W3C XPath 사양의 하위 집합을 구현 http://www.w3.org/TR/1999/PR-xpath-19991008.html 합니다.  
   
  다음은 W3C XPath 구현과 SQLXML 4.0 구현 간의 주요 차이점입니다.  
   
 -   **루트 쿼리**  
   
-     SQLXML 4.0은 루트 쿼리(/)를 지원하지 않습니다. 모든 XPath 쿼리는 스키마의 최상위 ** \<ElementType>** 에서 시작 해야 합니다.  
+     SQLXML 4.0은 루트 쿼리(/)를 지원하지 않습니다. 모든 XPath 쿼리는 스키마의 최상위 수준에서 시작 해야 합니다 **\<ElementType>** .  
   
 -   **오류 보고**  
   
@@ -95,7 +96,7 @@ ms.locfileid: "75246590"
 |-------------|----------|----------------------------|  
 |Axes|**특성**, **자식**, **부모**및 **자체** 축|[XPath 쿼리에 축 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |연속 및 중첩 조건자를 포함하는 부울 값 조건자||[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
-|모든 관계 연산자|=,! =, <, \<=, >, >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
+|모든 관계 연산자|=,! =, <, \<=, > , >=|[XPath 쿼리에 관계형 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |산술 연산자|+, -, *, div|[XPath 쿼리에 산술 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
 |명시적 변환 함수|**number ()**, **string ()**, **Boolean ()**|[XPath 쿼리에 명시적 변환 함수 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md)|  
 |부울 연산자|AND, OR|[XPath 쿼리에 부울 연산자 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md)|  

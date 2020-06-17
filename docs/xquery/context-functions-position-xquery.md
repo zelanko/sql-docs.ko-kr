@@ -1,5 +1,6 @@
 ---
 title: position 함수 (XQuery) | Microsoft Docs
+description: 항목 시퀀스 내에서 컨텍스트 항목의 위치를 나타내는 정수 값을 반환 하는 XQuery 함수 위치 ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881930"
 ---
 # <a name="context-functions---position-xquery"></a>컨텍스트 함수 - position(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ fn:position() as xs:integer
 ## <a name="remarks"></a>설명  
  에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **fn: position ()** 은 컨텍스트 종속 조건자의 컨텍스트에서만 사용할 수 있습니다. 특히 사용 시 대괄호([ ])로 묶어야 합니다. 이 함수와 비교하면 정적 유형 유추 중에 카디널리티가 감소하지 않습니다.  
   
-## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+## <a name="examples"></a>예제  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. position() XQuery 함수를 사용하여 처음 두 개 제품 기능 검색  
- 다음 쿼리는 제품 모델 카탈로그 설명에서 처음 두 개의 기능 <`Features`> 요소의 처음 두 개 요소를 검색 합니다. 더 많은 기능이 있는 경우 <`there-is-more/`> 요소를 결과에 추가 합니다.  
+ 다음 쿼리는 `Features` 제품 모델 카탈로그 설명에서 처음 두 개의 기능 <> 요소의 처음 두 개 요소를 검색 합니다. 더 많은 기능이 있는 경우 <`there-is-more/`> 요소를 결과에 추가 합니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   [XQuery 프롤로그](../xquery/modules-and-prologs-xquery-prolog.md) 의 **namespace** 키워드는 쿼리 본문에 사용 되는 네임 스페이스 접두사를 정의 합니다.  
   
--   쿼리 본문은 \<product> **요소와 제품** 에 대 한 구성 요소를 포함 하는 XML을 생성 하며, **이 특성에** 는 자식 요소로 반환 된 제품 기능이 있습니다.  
+-   쿼리 본문은 \<Product> 상품 **modelid** 및 제품 **modelname** 특성이 있는 요소가 있고 자식 요소로 반환 된 제품 기능을 포함 하는 XML을 생성 합니다.  
   
--   **Position ()** 함수는 컨텍스트에서 자식 요소> \<기능 위치를 확인 하는 데 사용 됩니다. 이것이 첫 번째 기능이거나 두 번째 기능인 경우 반환됩니다.  
+-   **Position ()** 함수는 조건자에서 컨텍스트에서 자식 요소의 위치를 결정 하는 데 사용 됩니다 \<Features> . 이것이 첫 번째 기능이거나 두 번째 기능인 경우 반환됩니다.  
   
--   IF 문은 제품 카탈로그에 \<두 개 이상의 기능이 있는 경우 더 많은/> 요소를 결과에 추가 합니다.  
+-   제품 카탈로그에 세 개 이상의 기능이 있는 경우 IF 문은 \<there-is-more/> 결과에 요소를 추가 합니다.  
   
 -   일부 제품 모델만 해당 카탈로그 설명이 테이블에 저장되어 있으므로 WHERE 절을 사용하여 CatalogDescriptions가 NULL인 행을 무시합니다.  
   

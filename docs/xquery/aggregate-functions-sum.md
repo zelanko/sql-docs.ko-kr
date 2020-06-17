@@ -1,5 +1,6 @@
 ---
 title: sum 함수 (XQuery) | Microsoft Docs
+description: 숫자 시퀀스의 합을 반환 하는 XQuery 함수 sum ()에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886929"
 ---
 # <a name="aggregate-functions---sum"></a>집계 함수 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +48,8 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
   
  이 함수는 오버플로 또는 범위 초과 예외가 발생하는 경우 런타임 오류를 반환합니다.  
   
-## <a name="examples"></a>예  
- 이 항목에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 Xml 인스턴스에 대 한 XQuery 예를 제공 합니다.  
+## <a name="examples"></a>예제  
+ 이 항목에서는 데이터베이스의 다양 한 **xml** 유형 열에 저장 된 xml 인스턴스에 대 한 XQuery 예를 제공 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 합니다.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 함수를 사용하여 제조 프로세스의 모든 작업 센터 위치에 대한 총 근로 시간 검색  
  다음 쿼리에서는 제조 지침이 저장된 모든 제품 모델에 대해 제조 프로세스에 포함된 모든 작업 센터 위치에 대한 총 근로 시간을 검색합니다.  

@@ -1,5 +1,6 @@
 ---
 title: XQuery 식 | Microsoft Docs
+description: 각 식 유형 및 사용 방법에 대 한 설명을 포함 하는 XQuery 식에 대 한 정보를 봅니다.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7a6f6131099cdccdb5d2217c3fd548f722aa93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881827"
 ---
 # <a name="xquery-expressions"></a>XQuery 식
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
