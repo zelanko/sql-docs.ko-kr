@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90cd6d3e-a271-4cb8-81f2-fc555b2d3cab
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c4079ea4213d7ecbec0165c32c82b3449bbb5aee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6d68237b2b46147b5e9e5180b7796b5cdb02cee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054831"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 팜에 도메인 계정이 필요함(업그레이드 관리자)
   팜 환경용으로 구성되는 SharePoint 제품에서는 도메인 계정을 사용해야 합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "71952515"
  "보고서 서버가 SharePoint 팜 설치에서 지원되지 않는 기본 제공 NT AUTHORITY\NETWORK SERVICE 계정으로 실행되고 있습니다. 도메인 계정으로 실행되도록 보고서 서버를 다시 구성하십시오."  
   
 ## <a name="corrective-action"></a>수정 동작  
- 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이전 버전의 경우 Reporting Services 구성 관리자를 사용 하 여 보고서 서버 서비스 계정으로 할당 된 계정을 변경 합니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 이전 버전의 경우 Reporting Services 구성 관리자를 사용 하 여 보고서 서버 서비스 계정으로 할당 된 계정을 변경 합니다.  
   
 #### <a name="to-change-the-service-account-from-configuration-manager"></a>구성 관리자에서 서비스 계정을 변경하려면  
   

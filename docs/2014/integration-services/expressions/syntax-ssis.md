@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11b503817096f76a501aace2ba0825c7986d736a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969023"
 ---
 # <a name="syntax-ssis"></a>구문(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 구문은 C 언어와 C# 언어에서 사용하는 구문과 유사합니다. 식별자(열과 변수), 리터럴, 연산자, 함수 등의 요소가 식에 포함됩니다. 이 항목에서는 각 식 요소에 적용되는 식 계산기 구문의 고유 요구 사항을 요약해서 보여 줍니다.  

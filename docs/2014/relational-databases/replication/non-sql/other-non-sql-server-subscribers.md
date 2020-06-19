@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96b8beb9-38e8-4ce4-97ca-c0f8656b73b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 135d317d74a720d51c966ed92f1c305f8c04b838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e6a01bfc16041db89ea6160c36af1a7536290ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068550"
 ---
 # <a name="other-non-sql-server-subscribers"></a>다른 SQL Server 이외 구독자
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 지원하는 -[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 목록은 [SQL Server 이외 구독자](non-sql-server-subscribers.md)를 참조하세요. 이 항목에는 ODBC 드라이버 및 OLE DB 공급자에 대한 요구 사항 정보가 포함되어 있습니다.  
@@ -89,7 +88,7 @@ ms.locfileid: "63021942"
   
 -   **ICommandWithParameters**  
   
- **IAccessor** 는 매개 변수 접근자를 만들기 위해 필요합니다. 공급자가 **IColumnRowset**를 지 원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 경우는 해당 인터페이스를 사용 하 여 열이 id 열인지 여부를 확인 합니다.  
+ **IAccessor** 는 매개 변수 접근자를 만들기 위해 필요합니다. 공급자가 **IColumnRowset**를 지 원하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 해당 인터페이스를 사용 하 여 열이 id 열인지 여부를 확인 합니다.  
   
 ### <a name="rowset-object-interfaces"></a>Rowset 개체 인터페이스  
  필요한 인터페이스는 다음과 같습니다.  

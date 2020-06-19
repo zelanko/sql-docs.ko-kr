@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb706fb8be1864b8da12c91fc4ce1e767355f93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023076"
 ---
 # <a name="utility-explorer-f1-help"></a>유틸리티 탐색기 F1 도움말
   다음 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 기능 및 이와 관련된 작업에 대해 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "62467857"
   
  [유틸리티 관리&#40;SQL Server 유틸리티&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>참고  
+## <a name="reference"></a>참조  
  [SQL Server 유틸리티 제어 지점 만들기&#40;SQL Server 유틸리티&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [SQL Server 유틸리티에 연결](connect-to-a-sql-server-utility.md)  

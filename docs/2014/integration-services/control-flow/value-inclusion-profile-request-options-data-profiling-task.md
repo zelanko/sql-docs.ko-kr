@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e524fcb3a107384853a5c6fa2114cadb58f80636
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829470"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917783"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>값 포함 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **값 포함 프로필 요청** 의 옵션을 설정할 수 있습니다. 값 포함 프로필은 두 개의 열 또는 열 집합 간에 겹치는 값을 계산합니다. 따라서 이 프로필은 열 또는 열 집합이 선택한 테이블 간의 외래 키 역할을 수행하기에 적합한지 여부도 확인할 수 있습니다. 또한 이 프로필을 사용하면 잘못된 값과 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 값 포함 프로필을 사용하여 Sales 테이블의 ProductID 열을 프로파일링하는 중 프로필이 Products 테이블의 ProductID 열에 없는 값이 열에 포함되어 있음을 검색할 수 있습니다.  
@@ -91,7 +90,7 @@ ms.locfileid: "62829470"
  자세한 내용은 이 항목의 앞부분에 나오는 "InclusionColumns 속성에 대한 열 선택 이해" 섹션을 참조하십시오.  
   
  **IsWildcard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(** )**를 선택한 경우 \*True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
@@ -100,7 +99,7 @@ ms.locfileid: "62829470"
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
   
 > [!NOTE]  
->  **ColumnName\*에 대해** ( **)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  

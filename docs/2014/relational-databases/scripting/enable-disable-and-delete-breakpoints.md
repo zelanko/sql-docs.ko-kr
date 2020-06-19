@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 438e5eacfc2bb1fc2e3e20fbb95ff2d3c768c49a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f9ab795149344eec1d7cbbdf88cbd749bd6d73e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068482"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>중단점 설정, 해제 및 삭제
   열려 있는 모든 중단점을 보고 관리하려면 **중단점** 창을 사용합니다. 이 창을 사용하여 중단점 정보를 보고 중단점 삭제, 해제, 설정 등과 같은 동작을 수행할 수 있습니다.  

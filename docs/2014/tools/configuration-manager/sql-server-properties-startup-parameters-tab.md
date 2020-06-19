@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f45a017ab1d04643b4bc85454f9dfe0db0d17792
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62679181"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000523"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>SQL Server 속성(시작 매개 변수 탭)
   이 대화 상자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 시작 매개 변수를 추가하거나 제거할 수 있습니다. 시작 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 많은 영향을 미칠 수 있습니다. 시작 매개 변수를 추가하거나 변경하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 시작 옵션 사용" 항목을 참조하십시오.  

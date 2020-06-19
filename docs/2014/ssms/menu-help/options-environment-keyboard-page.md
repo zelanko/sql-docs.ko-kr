@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2237c11e848d25a4b081f68a1969a2b496b3dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062081"
 ---
 # <a name="options-environment-keyboard-page"></a>Options (Environment-Keyboard Page)
   **옵션** 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 키보드 구성표를 사용자 지정할 수 있습니다. 이 옵션을 사용하여 키보드 구성표를 선택할 수 있습니다. 이 페이지를 표시하려면 **도구** 메뉴의 **옵션** 을 클릭하고 **환경** 폴더를 선택한 다음 **키보드**를 클릭합니다.  

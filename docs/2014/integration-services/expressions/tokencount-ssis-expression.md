@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e90b37f594bf2dd80963d7acf7357a050a3e290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df34c21e200f5a9f4a9242a3280913acf14adf76
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968974"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT(SSIS 식)
   지정된 구분 기호로 구분된 토큰을 포함하는 문자열의 토큰 수를 반환합니다.  

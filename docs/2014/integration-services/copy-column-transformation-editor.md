@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8e70541-d563-4ce4-bf66-bc888a0d3026
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03d8cdb35372ed9850f3329f26e2647e018d9583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 317748ee2e5df7f64c15afd5f4d5661a739f4f88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060299"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917513"
 ---
 # <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
   **열 복사 변환 편집기** 대화 상자를 사용하여 복사할 열을 선택하고 새 출력 열의 이름을 할당할 수 있습니다.  

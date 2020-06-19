@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e037bd27-cc87-4ee9-9e5f-83f6d717cfa4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce20813bcde670b5987624fa4b26b5c1fa633717
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cff23206923825d0e86e47ad6921c19f45e68b35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068631"
 ---
 # <a name="start-the-replication-monitor"></a>복제 모니터 시작
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 인스턴스에 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]나 명령 프롬프트에서 복제 모니터를 시작할 수 있습니다. 복제 모니터를 시작한 후 모니터링할 하나 이상의 게시자를 추가합니다. 자세한 내용은 [복제 모니터에서 게시자 추가 및 제거](add-and-remove-publishers-from-replication-monitor.md)를 참조하세요.  

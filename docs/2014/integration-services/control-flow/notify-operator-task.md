@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f2534aef1fedb2a7991c5d2e0341e46711cc7b55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ee8ee285d395425e925f2d5ec1e8a169d4ac5fa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918413"
 ---
 # <a name="notify-operator-task"></a>운영자에게 알림 태스크
   운영자에게 알림 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자에게 알림 메시지를 보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 운영자는 전자 알림을 받을 수 있는 사람 또는 그룹의 별칭입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영자에 대한 자세한 내용은 [운영자](../../ssms/agent//operators.md)를 참조하세요.  

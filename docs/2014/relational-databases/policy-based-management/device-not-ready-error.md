@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2801eb44acca5241ad051904747c370f5ef2b24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bd9a95b114e21b8b7bd4e8267b765f7abe983bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068818"
 ---
 # <a name="device-not-ready-error"></a>디바이스 준비 안 됨 오류
   이 규칙은 시스템 이벤트 로그에서 EventId 15를 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 이와 관련된 문제로 인해 발생할 수 있습니다.  

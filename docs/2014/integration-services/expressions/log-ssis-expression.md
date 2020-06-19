@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1345b1dfb7962bfcc153a6ac40c7abc5b63f036e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969293"
 ---
 # <a name="log-ssis-expression"></a>LOG(SSIS 식)
   숫자 식의 상용 로그를 반환합니다.  

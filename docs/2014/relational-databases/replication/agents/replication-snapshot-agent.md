@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a26aca7b33a7355500350572ea5e8ed21bddeacb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068720"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
   복제 스냅샷 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 스냅샷 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
@@ -138,7 +137,7 @@ ms.locfileid: "63250593"
  자세한 내용은 [SQL Server 복제 보안](../security/view-and-modify-replication-security-settings.md)을 참조 하세요.  
   
  **-FieldDelimiter** _field_delimiter_  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 필드 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<x$3>\n입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 필드 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n \<x$3> \n  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  스냅샷 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
@@ -181,7 +180,7 @@ ms.locfileid: "63250593"
  관련이 없는 삭제 작업을 구독자에 보낼지 여부를 나타냅니다. 관련이 없는 삭제 작업은 구독자의 파티션에 속하지 않는 행에 대해 구독자에게 보내지는 DELETE 명령입니다. 관련이 없는 삭제 작업은 데이터 무결성 또는 일치성에 영향을 주지 않지만 불필요한 네트워크 트래픽을 초래할 수 있습니다. **MaxNetworkOptimization** 의 기본값은 **0**입니다. **MaxNetworkOptimization** 을 **1** 로 설정하면 관련이 없는 삭제 작업이 최소화되므로 네트워크 트래픽이 줄어들고 네트워크 성능은 최대화됩니다. 이 매개 변수를 **1** 로 설정하면 메타데이터 스토리지 공간이 늘어나며 여러 수준의 조인 필터와 복잡한 하위 집합 필터가 있는 경우 성능이 저하됩니다. 복제 토폴로지를 신중하게 평가한 후 관련이 없는 삭제 작업으로 인해 네트워크 트래픽이 허용 불가능한 수준으로 높아지는 경우에만 **MaxNetworkOptimization** 을 **1** 로 설정해야 합니다.  
   
 > [!NOTE]
->  이 매개 변수를 **1** 로 설정 하는 것은 병합 게시의 동기화 최적화 옵션이 **true** 로 설정 된 경우에 **@keep_partition_changes** 만 유용 합니다 ( [transact-sql&#41;&#40;sp_addmergepublication ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 매개 변수).  
+>  이 매개 변수를 **1** 로 설정 하는 것은 병합 게시의 동기화 최적화 옵션이 **true** 로 설정 된 경우에만 유용 합니다 ( **@keep_partition_changes** [transact-sql&#41;&#40;sp_addmergepublication ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 매개 변수).  
   
  **-Output** _output_path_and_file_name_  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
@@ -243,10 +242,10 @@ ms.locfileid: "63250593"
  복제 유형을 지정합니다. 값 **1** 은 트랜잭션 복제를 나타내며 값 **2** 는 병합 복제를 나타냅니다.  
   
  **-RowDelimiter** _row_delimiter_  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 행 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<,@g>\n입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 행 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n \<,@g> \n  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 스냅숏 에이전트 동시에 실행 중인 동적 스냅숏 프로세스의 수가 **@max_concurrent_dynamic_snapshots** [sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 속성으로 설정 된 제한에 도달한 경우 대기 하는 최대 시간 (초)입니다. 최대 시간(초)에 도달한 경우 스냅샷 에이전트가 계속 대기 중이면 해당 스냅샷 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
+ 스냅숏 에이전트 동시에 실행 중인 동적 스냅숏 프로세스의 수가 **@max_concurrent_dynamic_snapshots** [Sp_addmergepublication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 속성으로 설정 된 제한에 도달한 경우 대기 하는 최대 시간 (초)입니다. 최대 시간(초)에 도달한 경우 스냅샷 에이전트가 계속 대기 중이면 해당 스냅샷 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  이 매개 변수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  

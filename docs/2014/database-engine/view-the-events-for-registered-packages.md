@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e3665a695bd3f40407a8680872c9b0dc79fbc53
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927406"
 ---
 # <a name="view-the-events-for-registered-packages"></a>등록된 패키지에 대한 이벤트 보기
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 확장 이벤트 세션을 만들기 전에 등록된 패키지에서 사용할 수 있는 이벤트를 확인하는 것이 좋습니다. 자세한 내용은 [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)을 참조하세요.  

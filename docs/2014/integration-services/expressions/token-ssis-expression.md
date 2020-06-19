@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969003"
 ---
 # <a name="token--ssis-expression"></a>TOKEN(SSIS 식)
   문자열에서 토큰을 구분하는 지정된 구분 기호와 반환할 토큰을 나타내는 토큰 번호를 기반으로 문자열에서 토큰(부분 문자열)을 반환합니다.  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 <character_expression> 문자열을 <delimiter_string>에 지정된 구분 기호로 구분된 토큰 집합으로 분할한 다음 N번째 토큰을 반환합니다. 여기서 N은 \<occurrence> 매개 변수로 지정된 토큰의 발생 횟수입니다. 이 함수의 샘플 사용법은 예 섹션을 참조하십시오.  
+ 이 함수는 <character_expression> 문자열을 <delimiter_string>에 지정 된 구분 기호로 구분 된 토큰 집합으로 분할 한 다음 N 번째 토큰을 반환 합니다. 여기서 N은 매개 변수로 지정 된 토큰의 발생 횟수입니다 \<occurrence> . 이 함수의 샘플 사용법은 예 섹션을 참조하십시오.  
   
  다음 설명은 TOKEN 함수에 적용됩니다.  
   
 -   구분 기호 문자열은 하나 이상의 구분 기호 문자를 포함할 수 있습니다.  
   
--   \<occurrence> 매개 변수 값이 문자열의 총 토큰 수보다 큰 경우 이 함수는 NULL을 반환합니다.  
+-   \<occurrence>매개 변수 값이 문자열의 총 토큰 수보다 큰 경우이 함수는 NULL을 반환 합니다.  
   
 -   선행 구분 기호는 생략합니다.  
   

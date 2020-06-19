@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849601"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927954"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Azure에 SQL Server 관리 백업 문제 해결
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 작업 중 발생할 수 있는 오류를 해결하는 데 사용할 수 있는 태스크 및 도구에 대해 설명합니다.  
@@ -102,7 +101,7 @@ ms.locfileid: "82849601"
 ### <a name="troubleshooting-system-issues"></a>시스템 문제 해결  
  시스템(SQL Server, SQL Server 에이전트)에 문제가 있는 몇 가지 시나리오와 해당 문제가 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 미치는 영향은 다음과 같습니다.  
   
--   ** [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 실행 하면 sqlservr.exe가 응답을 중지 하거나 작동** 을 중지 합니다. SQL Server 작동이 중지 되 면 sql 에이전트가 정상적으로 종료 되 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 고, 중지 되며, 이벤트가 sql agent. out 파일에 기록 됩니다.  
+-   **Sqlservr.exe [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 가 실행 될 때 응답을 중지 하거나 작동** 을 중지 합니다. SQL Server 작동이 중지 되 면 sql 에이전트가 정상적으로 종료 되 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 고, 중지 되며, 이벤트가 sql agent. out 파일에 기록 됩니다.  
   
      SQL Server가 응답하지 않는 경우 이벤트가 관리 채널에 기록됩니다.  이벤트 로그의 예:  
   

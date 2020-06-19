@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03e4182cee09771ac3667b57a69f64cee3cf1ecc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e161f219340120198a76957a63d3176280754ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068441"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
   [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af4229037b9c34bbc9a0316ef073f294209be6d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e91505bacf67f7f4628bd1b3f6b2cc78a6bc4c3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068731"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
   복제된 데이터베이스의 경우 데이터를 백업 및 복원할 때 특별히 주의를 기울여야 합니다. 이 항목에서는 각 복제 유형의 백업 및 복원 전략에 대한 기초 정보와 추가 정보 링크를 제공합니다.  

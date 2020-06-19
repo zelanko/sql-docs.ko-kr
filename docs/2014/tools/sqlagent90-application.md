@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf72b26a7b5649b8d48a3d1da6dd6eab8d6c264a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07371d910608c210d917da9201394fa356c2530b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007099"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 애플리케이션
   **sqlagent90** 애플리케이션을 사용하면 명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작할 수 있습니다. 일반적으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 통해 또는 애플리케이션에서 SQL-DMO 메서드를 사용하여 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에이전트를 실행해야 합니다. **에이전트를 진단하거나 주 지원 공급자가 지정하는 경우에만 명령 프롬프트에서** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 실행할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054701"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>명령 프롬프트에서 PowerPivot 설치
   명령줄에서 설치 프로그램을 실행하여 SQL Server SharePoint용 PowerPivot를 설치할 수 있습니다. 명령에 `/ROLE` 매개 변수를 포함하고 `/FEATURES` 매개 변수는 제외해야 합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "72798333"
  이전 릴리스와 달리 모든 서버 구성 태스크는 설치 후 태스크로 수행됩니다. 설치 및 구성 단계를 자동화하는 경우 PowerShell을 사용하여 서버를 구성할 수 있습니다. 자세한 내용은 [Windows PowerShell을 사용한 PowerPivot 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)을 참조 하세요.  
   
 ## <a name="example-commands"></a>예제 명령  
- 다음 예제는 각 옵션의 사용법을 보여 줍니다. 예제 1은 `SPI_AS_ExistingFarm`을 보여 줍니다.  
+ 다음 예제는 각 옵션의 사용법을 보여 줍니다. 예제 1은 `SPI_AS_ExistingFarm` 을 보여 줍니다.  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Domain\username> 및 \<StrongPassword \<>에 대 한 자리 표시자를 올바른 사용자 계정 및 암호로 바꿉니다.  
+3.  및에 대 한 자리 표시자를 \<domain\username> \<StrongPassword> 유효한 사용자 계정 및 암호로 바꿉니다.  
   
-     `/assvaccount` 및 **/assvcpassword** 매개 변수는 응용 프로그램 서버에서 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스를 구성 하는 데 사용 됩니다. 이들 자리 표시자는 올바른 계정 정보로 바꿉니다.  
+     `/assvaccount`및 **/assvcpassword** 매개 변수는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 응용 프로그램 서버에서 인스턴스를 구성 하는 데 사용 됩니다. 이들 자리 표시자는 올바른 계정 정보로 바꿉니다.  
   
      **/Assysadminaccounts** 매개 변수는 SQL Server 설치 프로그램을 실행 하는 사용자의 id로 설정 해야 합니다. 시스템 관리자는 한 명 이상 지정해야 합니다. SQL Server 설치 프로그램은 기본 제공 관리자 그룹 멤버에 대해 자동 sysadmin 권한을 더 이상 부여하지 않습니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8fb5a27e9087044b1049106ca5abd071db74af9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b446c3300b2c8a440a092084f01c55105c9be95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63240207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068670"
 ---
 # <a name="microsoft-com-based-resolvers"></a>Microsoft COM-Based Resolvers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 와 함께 제공되는 모든 COM 기반 해결 프로그램은 업데이트 충돌을 처리하고 표시가 된 곳에서 삽입 및 삭제 충돌도 처리합니다. 모든 해결 프로그램은 열 추적을 처리하며 대부분의 경우 행 추적도 처리합니다. 이러한 해결 프로그램 및 다른 모든 COM 기반 해결 프로그램은 처리할 수 있는 충돌 유형을 선언하며 병합 에이전트는 다른 모든 충돌 유형에 대해 기본 해결 프로그램을 사용합니다.  

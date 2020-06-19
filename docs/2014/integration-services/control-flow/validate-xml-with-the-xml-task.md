@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917943"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   XML 태스크의 `ValidationDetails` 속성을 사용하도록 설정하여 XML 문서의 유효성을 검사하고 풍부한 오류 출력을 가져올 수 있습니다.
@@ -32,7 +31,7 @@ ms.locfileid: "78176503"
  대형 XML 문서 및 많은 수의 오류에 사용할 수 있도록 XML 유효성 검사 기능을 쉽게 확장할 수 있습니다. 출력 파일 자체가 XML 형식이므로 출력을 쿼리하고 분석할 수 있습니다. 예를 들어 출력에 오류가 많이 포함되어 있으면 이 항목에서 설명하는 대로 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리를 사용하여 오류를 그룹화할 수 있습니다.
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) 서비스 팩 `ValidationDetails` 2의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 속성을 도입 했습니다. 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 SQL Server 2016에서 사용할 수도 있습니다.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) `ValidationDetails` 서비스 팩 2의 속성을 도입 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 했습니다. 속성은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 SQL Server 2016에서 사용할 수도 있습니다.
 
 ## <a name="sample-output-for-xml-thats-valid"></a>유효한 XML의 샘플 출력
  아래에는 유효한 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다.
@@ -54,7 +53,7 @@ ms.locfileid: "78176503"
 ```
 
 ## <a name="sample-output-for-xml-thats-not-valid"></a>유효하지 않은 XML의 샘플 출력
- 아래에는 오류가 많지 않은 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다. 코드를 쉽게 확인할 수 있도록 \<error> 요소의 텍스트에 줄 바꿈이 적용되었습니다.
+ 아래에는 오류가 많지 않은 XML 파일의 유효성 결과가 포함된 샘플 출력 파일이 나와 있습니다. \<error>가독성을 위해 요소의 텍스트가 래핑되어 있습니다.
 
 ```xml
 

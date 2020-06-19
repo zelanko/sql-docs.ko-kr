@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d95a6a5fd8646ea44db80c4dbefe9da14b9daf34
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969303"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt;(보다 작음)(SSIS 식)
   첫 번째 식이 두 번째 식보다 작은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  

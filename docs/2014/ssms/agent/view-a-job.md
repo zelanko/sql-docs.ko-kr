@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 50ed3ac0703429f7848a7eb7b4fc9413a0f3e5cf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 22cb99da1e842ef435840643d05a4c546264aecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062141"
 ---
 # <a name="view-a-job"></a>View a Job
-  이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 에이전트 작업을 보는 방법에 대해 설명 합니다.  
+  이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는을 사용 하 여에서 에이전트 작업을 보는 방법에 대해 설명 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **항목 내용**  
   

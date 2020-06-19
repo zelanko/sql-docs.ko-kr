@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a08d1354-cc91-4ab7-a73f-3ad815af3d5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 617ceb4a94af69877ad2c79dd01f23ccd2dab799
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753955"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933794"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 사용되지 않는 관리 도구 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 관리 도구 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8e19977300bc32bf832028b0d7e060fbaeb1665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062133"
 ---
 # <a name="specify-job-responses"></a>작업 응답 지정
   작업 응답은 작업이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 수행할 동작을 지정합니다. 작업 응답은 데이터베이스 관리자에게 작업 완료 시점과 작업 실행 간격을 알립니다. 일반적인 작업 응답은 다음과 같습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "63246003"
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |운영자에게 작업 상태를 알리는 방법에 대해 설명합니다.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
 |Windows 애플리케이션 로그에 작업 상태를 기록하는 방법에 대해 설명합니다.|[Windows 애플리케이션 로그에 작업 상태 쓰기](../../reporting-services/report-server/windows-application-log.md)|  
   

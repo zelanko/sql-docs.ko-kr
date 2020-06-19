@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78f3dbabe5d9671d243b7c6f9a295146a047daba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63066311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068655"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   사용자 지정 해결 프로그램은 기본 해결 메커니즘보다 더 높은 유연성을 제공하며 복제된 데이터를 사용하여 애플리케이션에 필요한 비즈니스 논리를 구현할 수 있습니다. COM 기반 사용자 지정 해결 프로그램은 DLL(동적 연결 라이브러리)이며 **ICustomResolver** COM 인터페이스, 해당 메서드 및 속성, 그리고 충돌 해결을 위해 특별히 디자인된 다른 지원 인터페이스 및 유형 정의를 구현합니다.  

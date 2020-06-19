@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9344f3b0858050441452238800758a769bcf3d27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023366"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server 유틸리티 기능 및 태스크
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경을 통합적으로 관리하기를 원했으며 이 릴리스에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 애플리케이션 및 다중 서버 관리 개념을 통해 이러한 고객의 요구 사항을 해결했습니다.  

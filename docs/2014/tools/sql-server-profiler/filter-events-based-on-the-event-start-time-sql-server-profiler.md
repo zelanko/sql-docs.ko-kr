@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cd08ce16341022072c76fc1bf073d1a469d9273
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e263b0e38da7e5f5aa422f898f2118469b2ed4c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000371"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>이벤트 시작 시간을 기준으로 이벤트 필터링(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이벤트 시작 시간을 기준으로 추적 이벤트를 필터링하는 방법에 대해 설명합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "63192907"
   
 5.  **이벤트 선택**탭에서 **StartTime** 열 머리글을 클릭합니다. 열 머리글을 마우스 오른쪽 단추로 클릭한 다음 **열 필터 편집** 을 클릭하여 **필터 편집** 대화 상자를 시작할 수도 있습니다.  
   
-6.  보다 **큼** 또는 **보다 작음**을 확장 한 다음 비교 연산자 `datetime` 아래에 나타나는 필드에 값을 입력 합니다.  
+6.  보다 **큼** 또는 **보다 작음**을 확장 한 다음 `datetime` 비교 연산자 아래에 나타나는 필드에 값을 입력 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server Profiler](sql-server-profiler.md)  

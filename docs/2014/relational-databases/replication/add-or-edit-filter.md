@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5d4f03ead294ee591e0a478d15e3d5f10747a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068810"
 ---
 # <a name="add-or-edit-filter"></a>필터 추가 또는 편집
   **필터 추가** 및 **필터 편집** 대화 상자를 사용하여 정적 행 필터 및 매개 변수가 있는 행 필터를 추가 및 편집할 수 있습니다.  

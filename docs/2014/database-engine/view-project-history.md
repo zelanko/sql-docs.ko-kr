@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a595df602a6506f96d9f645dadecb14c5d5f4b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927387"
 ---
 # <a name="view-project-history"></a>프로젝트 기록 보기
   [!INCLUDE[msCoName](../includes/msconame-md.md)] VSS(Visual SourceSafe) 프로젝트의 기록에는 파일 작성, 추가, 삭제, 복구 등을 비롯하여 각 프로젝트 파일에서 수행된 모든 동작의 목록이 포함됩니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62773499"
   
 2.  **파일** 메뉴에서 **소스 제어** 를 가리킨 다음 **기록 보기**를 클릭 합니다.  
   
-3.  Project> **의** \<기록 대화 상자에서 다음 작업 중 하나를 수행 합니다.  
+3.  **기록** \<Project> 대화 상자에서 다음 작업 중 하나를 수행 합니다.  
   
     -   선택한 파일에 대한 원본 제어 시스템의 복사본을 확인합니다.  
   

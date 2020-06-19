@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29cafc7e9669ca322571ff171961dd64cab114cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cd46a08037bcb6eee178a96d84bdab358e5350d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933964"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
   데이터베이스를 백업하면 TRUSTWORTHY 데이터베이스 속성이 OFF로 설정됩니다. 따라서 새 미러 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다. 장애 조치(Failover) 후 데이터베이스를 신뢰할 수 있어야 하는 경우에는 미러링이 시작된 다음 추가 설정 단계가 필요합니다.  
