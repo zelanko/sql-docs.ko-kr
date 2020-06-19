@@ -49,13 +49,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935541"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 서비스는 Windows를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업의 인증을 관리하는 프로세스 또는 프로세스 집합을 나타냅니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
@@ -134,15 +133,15 @@ ms.locfileid: "83269412"
 ##  <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 설치되는 서비스  
  사용자가 설치하도록 선택한 구성 요소에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 다음 서비스를 설치합니다.  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서비스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스입니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe입니다.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 서비스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 서비스입니다. 실행 파일을 \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe 합니다.  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일 경로는 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe입니다.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트** - 작업을 실행하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링하고 경고를 발생시키고 일부 관리 태스크의 자동화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 제공되지만 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]인스턴스에서 해제됩니다. 실행 파일을 \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe 합니다.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-비즈니스 인텔리전스 응용 프로그램에 대 한 OLAP (온라인 분석 처리) 및 데이터 마이닝 기능을 제공 합니다. 실행 파일 경로는 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe입니다.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**-비즈니스 인텔리전스 응용 프로그램에 대 한 OLAP (온라인 분석 처리) 및 데이터 마이닝 기능을 제공 합니다. 실행 파일을 \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe 합니다.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-보고서를 관리, 실행, 작성, 예약 및 배달 합니다. 실행 파일 경로는 \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**-보고서를 관리, 실행, 작성, 예약 및 배달 합니다. 실행 파일은 \<MSSQLPATH> \Reporting Services\ReportServer\Bin\ReportingServicesService.exe입니다.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-패키지 저장 및 실행을 위한 관리 지원을 제공 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 합니다. 실행 파일 경로는 \< MSSQLPATH> \120\dts\binn\msdtssrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**-패키지 저장 및 실행을 위한 관리 지원을 제공 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 합니다. 실행 파일 경로는 \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - 클라이언트 컴퓨터에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 정보를 제공하는 이름 확인 서비스입니다. 실행 경로는 c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe입니다.  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269412"
   
 -   <a name="VA_Desc"></a>**가상 계정**  
   
-     (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 서비스 계정에 기본값을 사용하는 경우 인스턴스 이름을 서비스 이름으로 사용하는 가상 계정이 **NT SERVICE\\** _\<SERVICENAME>_ 형식으로 사용됩니다. 가상 계정으로 실행되는 서비스는 _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](register-a-service-principal-name-for-kerberos-connections.md#Manual)을 참조하세요.  
+     (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. 설치 하는 동안 서비스 계정에 기본값이 사용 되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름을 서비스 이름으로 사용 하는 가상 계정이 **NT service \\ **형식으로 사용 됩니다 _\<SERVICENAME>_ . 가상 계정으로 실행되는 서비스는 _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](register-a-service-principal-name-for-kerberos-connections.md#Manual)을 참조하세요.  
   
     > [!NOTE]  
     >  가상 계정은 클러스터의 각 노드에서 SID가 동일하지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 대해 사용할 수 없습니다.  
@@ -301,7 +300,7 @@ ms.locfileid: "83269412"
 -   [명명된 파이프](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> 서비스 구성 및 액세스 제어  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 서비스 SID는 **NT Service\MSSQL$** _\<InstanceName>_ 일 수 있습니다. 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 각 서비스에 대해 서비스별 SID로 서비스 격리 및 철저한 방어 기능을 제공하도록 지원합니다. 서비스별 SID는 서비스 이름에서 파생되며 서비스마다 고유합니다. 예를 들어 서비스에 대 한 서비스 SID 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] **NT Service\MSSQL $** 일 수 있습니다 _\<InstanceName>_ . 서비스 격리는 높은 권한 수준의 계정에서 실행되거나 개체의 보안을 약화시키지 않고도 특정 개체에 액세스할 수 있도록 해줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 서비스 SID가 포함된 액세스 제어 항목을 사용하여 해당 리소스에 대한 액세스를 제한할 수 있습니다.  
   
 > [!NOTE]  
 >  Windows 7 및 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2(이후 버전)에서 서비스별 SID는 서비스에서 사용되는 가상 계정일 수 있습니다.  
@@ -402,17 +401,17 @@ ms.locfileid: "83269412"
 ||80\tools|읽기, 실행|  
 ||120\sdk|읽기|  
 ||Microsoft SQL Server\120\Setup Bootstrap|읽기, 실행|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\(빈 디렉터리)|읽기, 실행, 폴더 내용 보기|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|\<ToolsDir>\DReplayController\Log\ (빈 디렉터리)|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|읽기, 실행, 폴더 내용 보기|  
-||\<ToolsDir>\DReplayController\resources\|읽기, 실행, 폴더 내용 보기|  
-||\<ToolsDir>\DReplayController\\{모든 dll}|읽기, 실행, 폴더 내용 보기|  
+||\<ToolsDir>\DReplayController\resources \| 읽기, 실행, 폴더 내용 보기|  
+||\<ToolsDir>\DReplayController \\ {모든 dll}|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log\|R읽기, 실행, 폴더 내용 보기|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|\<ToolsDir>\DReplayClient\Log \| 읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|읽기, 실행, 폴더 내용 보기|  
-||\<ToolsDir>\DReplayClient\resources\|읽기, 실행, 폴더 내용 보기|  
-||\<ToolsDir>\DReplayClient\(모든 dll)|읽기, 실행, 폴더 내용 보기|  
+||\<ToolsDir>\DReplayClient\resources \| 읽기, 실행, 폴더 내용 보기|  
+||\<ToolsDir>\DReplayClient\ (모든 dll)|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|읽기, 실행, 폴더 내용 보기|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|읽기, 실행, 폴더 내용 보기|  
@@ -432,11 +431,11 @@ ms.locfileid: "83269412"
 ||관리자 전용|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|모든 권한|  
 ||관리자, 시스템|\tools\binn\schemas\sqlserver\2004\07\showplan|모든 권한|  
 ||사용자|\tools\binn\schemas\sqlserver\2004\07\showplan|읽기, 실행|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||보고서 서버 Windows 서비스 계정, 모든 사람|* \<>* \reporting Services\ReportManager을 설치 하 고, \reporting>Services\ReportManager\Pages * \<>* 를 설치 하 고, \\ \* \* * \< * \\ \* \* * \<>* \reporting services\reportmanager\ webctrl_client \ 1_0 \\ *를 설치 합니다.\*|읽기, 실행|  
-||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer|읽기|  
-||보고서 서버 Windows 서비스 계정|*\<설치>* \Reporting Services\ReportServer\global.asax|전체|  
-||모든 사람|*\<설치>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||보고서 서버 Windows 서비스 계정, 모든 사람|*\<install>* \Reporting Services\ReportManager, *\<install>* \reporting Services\ReportManager\Pages., \reporting \\ \* \* *\<install>* Services\ReportManager\Styles \\ \* . \* , *\<install>* \reporting services\reportmanager\ webctrl_client \ 1_0 \\ *.\*|읽기, 실행|  
+||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer|읽기|  
+||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer\global.asax|전체|  
+||모든 사람|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||보고서 서버 Windows 서비스 계정|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||모든 사람|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> 읽기 제어|  
 ||터미널 서비스 사용자|보고서 서버 키(Instid 하이브)|값 쿼리<br /><br /> 값 설정<br /><br /> 하위 키 만들기<br /><br /> 하위 키 열거<br /><br /> 알림<br /><br /> DELETE<br /><br /> 읽기 제어|  

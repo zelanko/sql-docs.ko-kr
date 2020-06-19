@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd75fdae7fc871101aa07785561c8277783a424f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063061"
 ---
 # <a name="tracing-and-replaying-events"></a>이벤트 추적 및 재생
   SMO에서 <xref:Microsoft.SqlServer.Management.Trace> 네임스페이스의 `Trace` 및 `Replay` 개체는 [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] 기능에 대한 프로그래밍 방식 액세스를 제공합니다. 이 기능은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 모니터링하는 데 사용됩니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 프로시저가 너무 늦게 실행되어 성능 저하를 유발하는지 확인할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.locfileid: "62724793"
   
 -   추적 파일 또는 추적 테이블을 재생합니다.  
   
- 및 개체의 추적 데이터는 SMO 응용 프로그램에서 사용 하거나 SQL Server Profiler를 사용 하 여 수동으로 검사할 수 있습니다. [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md) `Trace` `Replay` 추적 데이터는 추적 기능을 제공하는 [SQL Trace](../../sql-trace/sql-trace.md) 저장 프로시저에서도 사용할 수 있습니다.  
+ 및 개체의 추적 데이터 `Trace` 는 `Replay` SMO 응용 프로그램에서 사용 하거나 [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)를 사용 하 여 수동으로 검사할 수 있습니다. 추적 데이터는 추적 기능을 제공하는 [SQL Trace](../../sql-trace/sql-trace.md) 저장 프로시저에서도 사용할 수 있습니다.  
   
  SMO 추적 개체는 Microsoft.SQLServer.ConnectionInfo.dll 파일에 대한 참조가 필요한 <xref:Microsoft.SqlServer.Management.Trace> 네임스페이스에 있습니다.  
   

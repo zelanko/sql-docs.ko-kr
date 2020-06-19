@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969923"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>오류 및 이벤트 참조(데이터베이스 엔진)
 
 이 섹션에는 추가 설명이 필요한 데이터베이스 엔진 오류 메시지가 포함 되어 있습니다.
   
 ## <a name="in-this-section"></a>섹션 내용  
- [이벤트 및 오류 데이터베이스 엔진](database-engine-events-and-errors.md) 오류 메시지의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 형식을 설명 하 고 오류 메시지를 보고 오류 메시지를 응용 프로그램에 반환 하는 방법을 설명 합니다.  
+ [이벤트 및 오류 데이터베이스 엔진](database-engine-events-and-errors.md) 오류 메시지의 형식을 설명 하 고 오류 메시지를 보고 오류 메시지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 응용 프로그램에 반환 하는 방법을 설명 합니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 메시지, 가능한 원인, 문제 해결을 위해 수행할 수 있는 동작에 대해 설명합니다.  
   

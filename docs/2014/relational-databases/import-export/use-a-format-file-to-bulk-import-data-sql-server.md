@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026454"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>서식 파일을 사용하여 데이터 대량 가져오기(SQL Server)
-  이 항목에서는 대량 가져오기 작업에서 서식 파일을 사용하는 방법에 대해 설명합니다. 서식 파일은 데이터 파일의 필드를 테이블 열에 매핑합니다.  비 XML 서식 파일 또는 XML 서식 파일을 사용 하 여 **bcp** 명령을 사용 하거나 BULK INSERT 하거나 INSERT ...를 사용 하 여 데이터를 대량으로 가져올 수 있습니다. SELECT * FROM OPENROWSET (BULK ...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.  
+  이 항목에서는 대량 가져오기 작업에서 서식 파일을 사용하는 방법에 대해 설명합니다. 서식 파일은 데이터 파일의 필드를 테이블 열에 매핑합니다.  비 XML 서식 파일 또는 XML 서식 파일을 사용 하 여 **bcp** 명령을 사용 하거나 BULK INSERT 하거나 INSERT ...를 사용 하 여 데이터를 대량으로 가져올 수 있습니다. SELECT * FROM OPENROWSET (BULK ...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령.  
   
 > [!IMPORTANT]  
 >  유니코드 문자 데이터 파일에 서식 파일을 사용하려면 모든 입력 필드가 유니코드 텍스트 문자열(고정 크기 또는 문자 종료 유니코드 문자열)이어야 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66011764"
 > [!NOTE]  
 >  SQLXML 데이터를 대량으로 내보내거나 가져오려면 서식 파일에서 다음 데이터 형식 중 하나를 사용합니다. SQLCHAR 또는 SQLVARYCHAR(데이터 정렬에 의해 포함된 코드 페이지나 클라이언트 코드 페이지로 데이터가 전송됨), SQLNCHAR 또는 SQLNVARCHAR(데이터가 유니코드로 전송됨), SQLBINARY 또는 SQLVARYBIN(데이터가 변환되지 않고 전송됨) 데이터 형식 중 하나를 사용합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 섹션의 예에서는 **bcp** 명령과 BULK INSERT를 사용 하 여 데이터를 대량으로 가져오기 위해 서식 파일을 사용 하는 방법을 보여 줍니다. SELECT * FROM OPENROWSET (BULK ...) 문 대량 가져오기 예를 실행하려면 먼저 예제 테이블, 데이터 파일 및 서식 파일을 만들어야 합니다.  
   
 ### <a name="sample-table"></a>예제 테이블  

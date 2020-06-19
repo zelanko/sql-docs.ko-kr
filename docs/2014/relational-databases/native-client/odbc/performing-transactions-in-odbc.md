@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5a87fa5-827a-4e6f-a0d9-924bac881eb0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa86a6e08fffb4c417a450d19b569e9d0b696140
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 386b248edfdb6e0ac5eb97b3aeb6c0bbc505a5a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055820"
 ---
 # <a name="transactions-in-odbc"></a>ODBC의 트랜잭션
   ODBC의 트랜잭션은 연결 수준에서 관리됩니다. 애플리케이션에서는 트랜잭션이 완료되면 해당 연결에서 모든 문 핸들을 통해 완료한 모든 작업을 커밋하거나 롤백합니다. 애플리케이션에서는 트랜잭션을 커밋하거나 롤백할 때 COMMIT 또는 ROLLBACK 문을 전송하는 대신 [SQLEndTran](../../native-client-odbc-api/sqlendtran.md) 을 호출해야 합니다.  

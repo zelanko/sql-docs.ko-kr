@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bed1ec3eeb3dffe1ff1174d83050cd2e09af4caf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a912cf4a89f208543605cc84f480b63955214ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935394"
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>데이터베이스 엔진이 설치 및 시작되었는지 확인
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 설치에 성공하면 파일 시스템에 파일이 설치되고 레지스트리에 항목이 생성되며 여러 가지 도구가 설치됩니다. 이 항목에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 설치 및 시작되었는지 여부를 확인하는 방법에 대해 설명합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62782636"
   
      **시작** 메뉴에 이러한 항목이 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 올바르게 설치되지 않은 것입니다. 설치 프로그램을 실행하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 설치합니다.  
   
-2.  **SQL Server 구성 관리자**의 왼쪽 창에서 **SQL Server 서비스**를 클릭합니다. 오른쪽 창에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 여러 가지 서비스가 표시됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 설치되어 있으면 기본 인스턴스인 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스가 **SQL Server(MSSQLSERVER)** 로 표시되고 **이 명명된 인스턴스로 설치된 경우**\<*SQL Server(* >**instance_name**) [!INCLUDE[ssDE](../../includes/ssde-md.md)] 로 표시됩니다. 인스턴스 이름을 변경하지 않으면 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 **SQLEXPRESS**라는 이름의 명명된 인스턴스로 설치됩니다. 녹색 삼각형 아이콘은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 실행되고 있음을 나타냅니다. 빨간색 정사각형 아이콘은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 중지되었음을 나타냅니다.  
+2.  **SQL Server 구성 관리자**의 왼쪽 창에서 **SQL Server 서비스**를 클릭합니다. 오른쪽 창에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 여러 가지 서비스가 표시됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 설치 되어 있으면 서비스는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기본 인스턴스인 경우 **SQL Server (MSSQLSERVER)** 로 표시 되 고, **SQL Server (** \<*instance_name*> **)** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 가 명명 된 인스턴스로 설치 된 경우에는 SQL Server ()로 표시 됩니다. 인스턴스 이름을 변경하지 않으면 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 **SQLEXPRESS**라는 이름의 명명된 인스턴스로 설치됩니다. 녹색 삼각형 아이콘은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 실행되고 있음을 나타냅니다. 빨간색 정사각형 아이콘은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 중지되었음을 나타냅니다.  
   
 3.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 시작하려면 오른쪽 창에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 마우스 오른쪽 단추로 클릭한 다음 **시작**을 클릭합니다.  
   

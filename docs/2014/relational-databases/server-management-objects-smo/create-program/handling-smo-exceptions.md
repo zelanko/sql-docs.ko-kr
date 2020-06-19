@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 595da161660b60845c02d71e22411a2a4eba009c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e96ef9eb6c4dd1537413b50c808673c47904b39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063123"
 ---
 # <a name="handling-smo-exceptions"></a>SMO 예외 처리
   관리 코드에서 오류가 발생하면 예외가 throw됩니다. SMO 메서드와 속성은 반환 값에 성공 또는 실패를 보고하지 않습니다. 대신 예외 처리기에서 예외를 catch하고 처리할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "63192110"
  예외는 일반 예외나 특정 예외일 수 있습니다. 일반 예외에는 특정 예외 집합이 포함됩니다. 여러 개의 `Catch` 문을 사용하여 예상 오류를 처리하고 나머지 오류가 일반 예외 처리 코드로 이동되게 할 수 있습니다. 예외는 연계 시퀀스로 발생하는 경우가 많습니다. 대체로 SQL 예외로 인해 SMO 예외가 발생했을 수 있습니다. 이를 검색하려면 연속해서 `InnerException` 속성을 사용하여 최종 최상위 예외를 발생시킨 원래 예외를 확인합니다.  
   
 > [!NOTE]  
->  예외 `SQLException` 는 **system.object** 네임 스페이스에서 선언 됩니다.  
+>  `SQLException`예외는 **system.object** 네임 스페이스에서 선언 됩니다.  
   
  ![예외 수준을 보여 주는 다이어그램](../../../database-engine/dev-guide/media/exception-flow.gif "예외 수준을 보여 주는 다이어그램")  
   

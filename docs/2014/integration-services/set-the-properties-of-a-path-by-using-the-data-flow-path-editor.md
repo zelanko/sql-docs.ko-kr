@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963156"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로의 속성 설정
   경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로 메타데이터를 설정하려면 데이터 흐름에 적어도 두 개 이상의 연결된 데이터 흐름 구성 요소가 있어야 합니다. 자세한 내용은 [데이터 흐름에서 구성 요소 추가 또는 삭제](data-flow/add-or-delete-a-component-in-a-data-flow.md) 및 [데이터 흐름의 구성 요소 연결](data-flow/connect-components-in-a-data-flow.md)을 참조하세요.  

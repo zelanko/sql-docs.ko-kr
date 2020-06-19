@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a7597e5ebf967bd9da590057a085a72ee8b1a17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919924"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **후보 키 프로필 요청** 의 옵션을 설정할 수 있습니다. 후보 키 프로필은 열 또는 열 집합이 선택한 테이블에 대해 키, 아니면 근사 키인지 보고합니다. 또한 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터 문제를 식별할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62832958"
   
 -   **KeyColumns**에서 여러 열을 선택하면 태스크에서는 선택한 모든 열로 구성된 복합 키의 키 수준을 계산합니다.  
   
--   **KeyColumns\*에서 와일드카드 문자** ( **)** 를 선택하면 태스크에서는 테이블 또는 뷰에 있는 각 열의 키 수준을 계산합니다.  
+-   **KeyColumns**에서 와일드카드 문자 **(\*)** 를 선택하면 태스크에서는 테이블 또는 뷰에 있는 각 열의 키 수준을 계산합니다.  
   
  예를 들어 열 A, B, C를 포함하는 예제 테이블의 경우 **KeyColumns**에 대해 다음과 같이 선택합니다.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62832958"
  자세한 내용은 이 항목의 앞부분에 나오는 "KeyColumns 속성에 대한 열 선택 이해" 섹션을 참조하십시오.  
   
  **IsWildcard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(** )**를 선택한 경우 \*True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "62832958"
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
   
 > [!NOTE]  
->  **ColumnName\*에 대해** ( **)** 와일드카드를 사용하는 경우 **CompareOptions**는 읽기 전용이며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**는 읽기 전용이며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  

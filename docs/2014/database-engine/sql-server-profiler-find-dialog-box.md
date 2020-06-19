@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 81ed454290a5ca62093fe9bdb619179106ca9985
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 141cfe63151f65e171550beda1c20e232a6205e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928684"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server 프로파일러 - 찾기 대화 상자
   **찾기** 대화 상자를 사용하여 추적에서 특정 문자 또는 단어를 검색할 수 있습니다. 진행 중인 검색을 취소하려면 Esc 키를 누릅니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66088862"
  검색할 텍스트를 입력합니다. 검색은 지정한 문자열을 포함하는 모든 문자열과 일치합니다. 예를 들어 "Completed"에 대한 검색은 "SQL:BatchCompleted"와 일치합니다. 와일드카드 문자(*, ? 등)는 지원되지 않습니다.  
   
  **열에서 검색**  
- 검색할 데이터 열을 클릭 하거나 ** \<모든 열>** 를 클릭 하 여 추적에서 모든 데이터 열을 검색 합니다.  
+ 검색할 데이터 열을 클릭 하거나 **\<All columns>** 추적에서 모든 데이터 열을 검색 하려면 클릭 합니다.  
   
  **대/소문자 구분**  
  **찾을 내용** 상자에 입력한 텍스트와 대/소문자가 같은 텍스트를 찾습니다. 추적에서 대문자 및 소문자 텍스트로 이루어진 예를 모두 찾으려면 이 확인란의 선택을 취소합니다.  

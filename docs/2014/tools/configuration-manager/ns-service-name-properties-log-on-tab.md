@@ -1,5 +1,5 @@
 ---
-title: NS $&lt;service name&gt; 속성 (로그온 탭) | Microsoft Docs
+title: NS $ &lt; service name &gt; 속성 (로그온 탭) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008014"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;service name&gt; 속성(탭의 로그)
   **Notification Services 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  

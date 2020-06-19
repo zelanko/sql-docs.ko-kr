@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 786101d76185c21763787ab11fd29600938be198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055808"
 ---
 # <a name="running-stored-procedures-ole-db"></a>저장 프로시저 실행(OLE DB)
   문을 실행할 때 클라이언트 애플리케이션에서 직접 문을 실행하거나 준비하는 대신 데이터 원본의 저장 프로시저를 호출하면 다음과 같은 장점이 있습니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea211e607425d82a980cafc778647efca39773ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f91fd3914fb807eb1a9a2d9c8ee1f2082174a61f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000537"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928424"
 ---
 # <a name="technical-reference-database-engine"></a>기술 참조(데이터베이스 엔진)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에 대한 도구, 언어 및 관리 프로그래밍 참조 설명서를 찾습니다.

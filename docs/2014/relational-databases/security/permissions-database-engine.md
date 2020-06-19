@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063180"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. 이 항목에서는 다음 정보를 제공합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "81487162"
   
 -   [사용 권한 검사 알고리즘](#_algorithm)  
   
--   [예제](#_examples)  
+-   [예](#_examples)  
   
 ##  <a name="permissions-naming-conventions"></a><a name="_conventions"></a>사용 권한 명명 규칙  
  다음은 사용 권한 이름 지정에 대한 일반적인 규칙 설명입니다.  
@@ -49,11 +48,11 @@ ms.locfileid: "81487162"
   
      특정 보안 개체의 소유권을 제외한 속성을 변경할 수 있는 사용 권한을 줍니다. 범위에 부여된 경우 ALTER는 또한 해당 범위 내에 포함된 임의의 보안 개체를 변경하고, 만들고, 삭제할 수 있는 기능을 부여합니다. 예를 들어 스키마의 ALTER 권한에는 스키마에서 개체를 만들고, 변경하고, 삭제할 수 있는 기능이 포함됩니다.  
   
--   서버 보안 \<개체는 임의의 서버 보안 개체 *일 수 있는* 모든 *서버* 보안 개체>를 변경 합니다.  
+-   ALTER ANY \<*Server Securable*> , 여기서 *server 보안* 개체는 임의의 서버 보안 개체 일 수 있습니다.  
   
      *Server Securable*의 개별 항목을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY LOGIN은 인스턴스의 모든 로그인을 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
--   데이터베이스 보안 개체는 데이터베이스 수준에서 임의의 보안 개체 *일 수 있는* *데이터베이스 보안* 개체>를 변경 합니다. \<  
+-   ALTER ANY \<*Database Securable*> (데이터베이스 *보안* 개체는 데이터베이스 수준에서 임의의 보안 개체 일 수 있음)  
   
      *Database Securable*의 개별 항목을 만들거나(CREATE) 변경하거나(ALTER) 삭제(DROP)할 수 있는 기능을 제공합니다. 예를 들어 ALTER ANY SCHEMA는 데이터베이스의 모든 스키마를 만들거나 변경하거나 삭제할 수 있는 기능을 제공합니다.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487162"
   
      피부여자가 부여된 보안 개체의 소유권을 갖도록 합니다.  
   
--   \< *로그인* 가장>  
+-   가장\<*Login*>  
   
      피부여자가 로그인을 가장하도록 합니다.  
   
--   \< *사용자* 가장>  
+-   가장\<*User*>  
   
      피부여자가 사용자를 가장하도록 합니다.  
   
--   \< *서버 보안* 개체 만들기>  
+-   만드십시오\<*Server Securable*>  
   
      피부여자에게 *Server Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   \< *데이터베이스 보안* 개체 만들기>  
+-   만드십시오\<*Database Securable*>  
   
      피부여자에게 *Database Securable*을 만들 수 있는 기능을 제공합니다.  
   
--   \< *스키마에 포함 된 보안* 개체 만들기>  
+-   만드십시오\<*Schema-contained Securable*>  
   
      스키마가 포함된 보안 개체를 만들 수 있는 기능을 제공합니다. 하지만 특정 스키마에 보안 개체를 만들려면 스키마에 대한 ALTER 권한이 필요합니다.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "81487162"
      개체에 대한 REFERENCES 권한은 해당 개체를 참조하는 `WITH SCHEMABINDING` 절을 사용하여 FUNCTION 또는 VIEW를 만드는 데 필요합니다.  
   
 ## <a name="chart-of-sql-server-permissions"></a>SQL Server 사용 권한 차트  
- Pdf 형식의 모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용 권한에 대 한 포스터 크기 차트를 보려면을 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)참조 하십시오.  
+ Pdf 형식의 모든 사용 권한에 대 한 포스터 크기 차트를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보려면을 참조 하십시오 [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>특정 보안 개체에 적용 가능한 사용 권한  
  다음 표에서는 주요 사용 권한 클래스와 사용 권한이 적용될 수 있는 보안 개체 종류를 나열합니다.  
@@ -102,7 +101,7 @@ ms.locfileid: "81487162"
 |SELECT|동의어<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수, [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR(공용 언어 런타임) 및 열<br /><br /> 뷰 및 열|  
 |VIEW CHANGE TRACKING|테이블<br /><br /> 스키마|  
 |UPDATE|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
-|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 유형<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
+|REFERENCES|스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] 큐<br /><br /> 테이블 및 열<br /><br /> 테이블 반환 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR) 및 열<br /><br /> 형식<br /><br /> 뷰 및 열<br /><br /> 시퀀스 개체|  
 |INSERT|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |Delete|동의어<br /><br /> 테이블 및 열<br /><br /> 뷰 및 열|  
 |CREATE 문을 실행하기 전에|프로시저([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 스칼라 및 집계 함수([!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR)<br /><br /> 동의어<br /><br /> CLR 유형|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487162"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> 참고:에만 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487162"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 참고:에만 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487162"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]만 적용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> 참고:에만 적용 됩니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -278,40 +277,40 @@ ms.locfileid: "81487162"
 |SCHEMA|UPDATE|UP|DATABASE|UPDATE|  
 |SCHEMA|VIEW CHANGE TRACKING|VWCT|DATABASE|VIEW CHANGE TRACKING|  
 |SCHEMA|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 없음|해당 없음|  
-|SERVER|ALTER ANY CONNECTION|ALCO|해당 없음|해당 없음|  
-|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 없음|해당 없음|  
-|SERVER|ALTER ANY DATABASE|ALDB|해당 없음|해당 없음|  
-|SERVER|ALTER ANY ENDPOINT|ALHE|해당 없음|해당 없음|  
-|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 없음|해당 없음|  
-|SERVER|ALTER ANY EVENT SESSION|AAES|해당 없음|해당 없음|  
-|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 없음|해당 없음|  
-|SERVER|ALTER ANY LOGIN|ALLG|해당 없음|해당 없음|  
-|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 없음|해당 없음|  
-|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 없음|해당 없음|  
-|SERVER|ALTER AVAILABILITY GROUP|ALAG|해당 없음|해당 없음|  
-|SERVER|ALTER RESOURCES|ALRS|해당 없음|해당 없음|  
-|SERVER|ALTER SERVER STATE|ALSS|해당 없음|해당 없음|  
-|SERVER|ALTER SETTINGS|ALST|해당 없음|해당 없음|  
-|SERVER|ALTER TRACE|ALTR|해당 없음|해당 없음|  
-|SERVER|AUTHENTICATE SERVER|AUTH|해당 없음|해당 없음|  
-|SERVER|CONNECT ANY DATABASE|CADB|해당 없음|해당 없음|  
-|SERVER|CONNECT SQL|COSQ|해당 없음|해당 없음|  
-|SERVER|CONTROL SERVER|CL|해당 없음|해당 없음|  
-|SERVER|CREATE ANY DATABASE|CRDB|해당 없음|해당 없음|  
-|SERVER|CREATE AVAILABILTITY GROUP|CRAC|해당 없음|해당 없음|  
-|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 없음|해당 없음|  
-|SERVER|CREATE ENDPOINT|CRHE|해당 없음|해당 없음|  
-|SERVER|CREATE SERVER ROLE|CRSR|해당 없음|해당 없음|  
-|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 없음|해당 없음|  
-|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 없음|해당 없음|  
-|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 없음|해당 없음|  
-|SERVER|SELECT ALL USER SECURABLES|SUS|해당 없음|해당 없음|  
-|SERVER|SHUTDOWN|SHDN|해당 없음|해당 없음|  
-|SERVER|UNSAFE ASSEMBLY|XU|해당 없음|해당 없음|  
-|SERVER|VIEW ANY DATABASE|VWDB|해당 없음|해당 없음|  
-|SERVER|VIEW ANY DEFINITION|VWAD|해당 없음|해당 없음|  
-|SERVER|VIEW SERVER STATE|VWSS|해당 없음|해당 없음|  
+|SERVER|ADMINISTER BULK OPERATIONS|ADBO|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY CONNECTION|ALCO|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY CREDENTIAL|ALCD|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY DATABASE|ALDB|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY ENDPOINT|ALHE|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY EVENT NOTIFICATION|ALES|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY EVENT SESSION|AAES|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY LINKED SERVER|ALLS|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY LOGIN|ALLG|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY SERVER AUDIT|ALAA|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER ANY SERVER ROLE|ALSR|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER AVAILABILITY GROUP|ALAG|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER RESOURCES|ALRS|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER SERVER STATE|ALSS|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER SETTINGS|ALST|해당 사항 없음|해당 사항 없음|  
+|SERVER|ALTER TRACE|ALTR|해당 사항 없음|해당 사항 없음|  
+|SERVER|AUTHENTICATE SERVER|AUTH|해당 사항 없음|해당 사항 없음|  
+|SERVER|CONNECT ANY DATABASE|CADB|해당 사항 없음|해당 사항 없음|  
+|SERVER|CONNECT SQL|COSQ|해당 사항 없음|해당 사항 없음|  
+|SERVER|CONTROL SERVER|CL|해당 사항 없음|해당 사항 없음|  
+|SERVER|CREATE ANY DATABASE|CRDB|해당 사항 없음|해당 사항 없음|  
+|SERVER|CREATE AVAILABILTITY GROUP|CRAC|해당 없음|해당 사항 없음|  
+|SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|해당 없음|해당 사항 없음|  
+|SERVER|CREATE ENDPOINT|CRHE|해당 없음|해당 사항 없음|  
+|SERVER|CREATE SERVER ROLE|CRSR|해당 없음|해당 사항 없음|  
+|SERVER|CREATE TRACE EVENT NOTIFICATION|CRTE|해당 없음|해당 사항 없음|  
+|SERVER|EXTERNAL ACCESS ASSEMBLY|XA|해당 없음|해당 사항 없음|  
+|SERVER|IMPERSONATE ANY LOGIN|IAL|해당 없음|해당 사항 없음|  
+|SERVER|SELECT ALL USER SECURABLES|SUS|해당 없음|해당 사항 없음|  
+|SERVER|SHUTDOWN|SHDN|해당 없음|해당 사항 없음|  
+|SERVER|UNSAFE ASSEMBLY|XU|해당 없음|해당 사항 없음|  
+|SERVER|VIEW ANY DATABASE|VWDB|해당 없음|해당 사항 없음|  
+|SERVER|VIEW ANY DEFINITION|VWAD|해당 없음|해당 사항 없음|  
+|SERVER|VIEW SERVER STATE|VWSS|해당 없음|해당 사항 없음|  
 |SERVER ROLE|ALTER|AL|SERVER|ALTER ANY SERVER ROLE|  
 |SERVER ROLE|CONTROL|CL|SERVER|CONTROL SERVER|  
 |SERVER ROLE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  

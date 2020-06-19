@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c688d41a1f27c6f3d620e9395d2a908d9b9cddd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd49c2d32a5a3035bb76aa73a56d31e00a95549a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955097"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 개체
   `SqlDataRecord` 개체는 관련 메타데이터와 함께 하나의 데이터 행을 나타냅니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d978b53754d8b233f1f8b7e58b30d806c0bfdb26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055797"
 ---
 # <a name="stored-procedures"></a>저장 프로시저
   저장 프로시저([저장 프로시저&#40;데이터베이스 엔진&#41;](../../stored-procedures/stored-procedures-database-engine.md))는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4444f67ea4e843a3abb45ed078483904a1fa5116
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0b14fad61e66602495341354330f78d6fcea536d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055919"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>IRow::Open 및 ISequentialStream을 사용하여 BLOB 데이터 인출
   **IRow::Open**은 DBGUID_STREAM 및 DBGUID_NULL 개체 유형만 열 수 있습니다.  
