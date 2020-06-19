@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ebd2a138451f3ebb7da267284f110790f2db058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35644891b2dca8359d6dc68fbddb67288d241cb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068335"
 ---
 # <a name="create-a-trace-transact-sql"></a>추적 만들기(Transact-SQL)
   이 항목에서는 저장 프로시저를 사용하여 추적을 만드는 방법에 대해 설명합니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069258"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940804"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>사례 키 선택(데이터 마이닝 마법사)
   **사례 키 선택** 페이지를 사용하여 마이닝 구조의 키로 지정할 원본 큐브 차원의 특성을 선택할 수 있습니다. 이 특성은 계층 내에 있어야 하며 그렇지 않은 경우 해당 특성 계층을 설정해야 합니다.  

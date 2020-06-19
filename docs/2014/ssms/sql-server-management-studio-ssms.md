@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0644d2bfc49ecd34869c134f163897990c147713
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061985"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]는 SQL Server 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]는 SQL Server 인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 또한 데이터 계층 구성 요소(예: 애플리케이션에 사용되는 데이터 웨어하우스 및 데이터베이스)를 배포, 모니터링 및 업그레이드하는 도구와 쿼리 및 스크립트를 작성하는 도구를 제공합니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "63155007"
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
-|설명|항목|  
+|Description|항목|  
 |-----------------|-----------|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 사용하여 수행하는 바로 가기 키 사용자 지정, 속성 페이지 보기 등과 같은 일반적인 태스크에 대해 설명합니다.|[SQL Server Management Studio 사용](../database-engine/use-sql-server-management-studio.md)|  
 |**개체 탐색기** 를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스에서 모든 개체를 보고 관리하는 방법에 대해 설명합니다.|[개체 탐색기](object/object-explorer.md)|  

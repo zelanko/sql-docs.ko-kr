@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee3411a65d7e2b5f91e503b1314aa004b6a12bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023177"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>유틸리티 탐색기를 사용하여 SQL Server 유틸리티 관리
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 구성 요소인 유틸리티 탐색기는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 모든 개체를 트리 방식으로 표시합니다. 유틸리티 탐색기 내용 창에서는 다양한 방법을 사용하여 SQL Server의 관리되는 인스턴스 상태에 대한 요약 및 자세한 데이터를 통해 볼 수 있습니다. 또한 유틸리티 탐색기는 정책 정의를 보고 관리하기 위한 사용자 인터페이스를 제공합니다. 유틸리티 탐색기의 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 있는 개체에 따라 조금씩 다르지만 일반적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 관리되는 개체, 데이터 및 정책을 포함합니다. 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](sql-server-utility-features-and-tasks.md)를 참조하세요.  
@@ -45,7 +44,7 @@ ms.locfileid: "63191704"
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **배포된 데이터 계층 애플리케이션** 노드를 마우스 오른쪽 단추로 클릭합니다.  
   
--   **유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서**관리되는 인스턴스[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티 내용 창의 목록 뷰 데이터에 액세스하려면 트리 뷰에서 **관리되는 인스턴스** 노드를 클릭합니다. 내용 창 아래에 있는 자세히 탭에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티의 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 관리되는 인스턴스 정책 정의와 속성 정보는 물론 CPU와 스토리지 볼륨 사용에 대한 데이터를 제공합니다. 자세한 내용은 [관리되는 인스턴스 세부 정보&#40;SQL Server 유틸리티&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)를 참조하세요.  
   
      필터 설정에 액세스하거나 목록 뷰의 데이터를 새로 고치려면 트리 뷰에서 **관리되는 인스턴스** 노드를 마우스 오른쪽 단추로 클릭하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리되는 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에 추가합니다.  
   

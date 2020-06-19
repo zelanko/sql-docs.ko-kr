@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2423afc2a16751ddb60c6ca679a2ee21121d238
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918285"
 ---
 # <a name="select-objects-to-transfer"></a>전송할 개체 선택
   이 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전송 태스크를 통해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스 간에서 전송할 개체를 선택할 수 있습니다.  

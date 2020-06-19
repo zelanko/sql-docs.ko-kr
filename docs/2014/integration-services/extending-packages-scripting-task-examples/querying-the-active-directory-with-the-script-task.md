@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bbcea29ad75eb84b9c8099e5998e307ecbd7943c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 142cef139d315d3db492651716c2ec8fb9b6e03c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968493"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지와 같은 엔터프라이즈 데이터 처리 애플리케이션에서는 Active Directory에 저장된 직원의 직급, 직함 또는 기타 특징에 따라 데이터를 각기 다르게 처리해야 하는 경우가 종종 있습니다. Active Directory는 사용자에 대한 메타데이터뿐 아니라 컴퓨터 및 프린터와 같은 조직의 기타 자산에 대한 메타데이터도 저장하는 중앙 저장소를 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 디렉터리 서비스입니다. Microsoft .NET Framework의 `System.DirectoryServices` 네임스페이스에서는 Active Directory에 저장된 정보에 따라 데이터 처리 워크플로를 제어할 수 있도록 Active Directory 작업을 위한 클래스를 제공합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "62895032"
   
 1.  `email`, `name` 및 `title`이라는 세 개의 문자열 변수를 만듭니다. `email` 변수 값으로 올바른 회사 전자 메일 주소를 입력합니다.  
   
-2.  **스크립트 태스크 편집기**의 `email` **스크립트** 페이지에서 `ReadOnlyVariables` 속성에 변수를 추가 합니다.  
+2.  **스크립트 태스크 편집기**의 **스크립트** 페이지에서 `email` 속성에 변수를 추가 `ReadOnlyVariables` 합니다.  
   
 3.  `ReadWriteVariables` 속성에 `name` 및 `title` 변수를 추가합니다.  
   

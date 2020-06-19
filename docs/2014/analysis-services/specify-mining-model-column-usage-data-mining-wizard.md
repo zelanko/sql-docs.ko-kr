@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e7701d755b42dbbd94bcc53480bcc25a83bf1e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940384"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>마이닝 모델 열 사용법 지정(데이터 마이닝 마법사)
   **마이닝 모델 열 사용법 지정** 페이지를 사용하여 마이닝 모델 열이 사용되는 방법을 지정하고 중첩 테이블을 추가할 수 있습니다.  

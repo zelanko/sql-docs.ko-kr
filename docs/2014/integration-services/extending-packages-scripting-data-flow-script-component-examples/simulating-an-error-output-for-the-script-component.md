@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b7e2324fcfce6c560000bfef798aa966102d674b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17f6ed6fd86bb7440f795268e63aa7b9ba418afb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895512"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968546"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>스크립트 구성 요소의 오류 출력 시뮬레이션
   오류 행의 자동 처리를 위해 스크립트 구성 요소의 출력을 오류 출력으로 직접 구성할 수는 없지만 적절할 때 추가 출력을 만들고 스크립트에 조건부 논리를 사용하여 행을 이 출력으로 전송하는 방식으로 기본 제공 오류 출력의 기능을 재현할 수 있습니다. 오류 번호와 오류가 발생한 열의 ID를 받는 두 개의 출력 열을 추가하여 기본 제공 오류 출력의 동작을 시뮬레이션할 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "62895512"
   
 7.  **입력 열** 페이지에서 스크립트 변환에서 처리할 열을 선택합니다. 이 예에서는 CountryRegionName 열만 사용합니다. 사용 가능한 입력 열 중 선택하지 않은 열은 데이터 흐름에서 변경되지 않은 상태로 전달됩니다.  
   
-8.  **입/출력** 페이지에서 두 번째의 새 출력을 추가 하 고 해당 `SynchronousInputID` 값을 입력의 ID로 설정 합니다 .이 값은 기본 출력의 `SynchronousInputID` 속성 값 이기도 합니다. 두 출력 모두의 `ExclusionGroup` 속성을 0이 아닌 동일한 값(예: 1)으로 설정하여 각 행이 두 출력 중 하나로만 전송되도록 합니다. 새 오류 출력에 "MyErrorOutput"과 같이 알기 쉬운 이름을 지정합니다.  
+8.  **입/출력** 페이지에서 두 번째의 새 출력을 추가 하 고 해당 값을 `SynchronousInputID` 입력의 ID로 설정 합니다 .이 값은 `SynchronousInputID` 기본 출력의 속성 값 이기도 합니다. 두 출력 모두의 `ExclusionGroup` 속성을 0이 아닌 동일한 값(예: 1)으로 설정하여 각 행이 두 출력 중 하나로만 전송되도록 합니다. 새 오류 출력에 "MyErrorOutput"과 같이 알기 쉬운 이름을 지정합니다.  
   
 9. 오류 코드, 오류가 발생한 열의 ID, 오류 설명 등 원하는 오류 정보를 캡처하는 출력 열을 새 오류 출력에 추가합니다. 이 예에서는 ErrorColumn 및 ErrorMessage라는 새 열을 만듭니다. 개발자 고유의 구현에서 미리 정의된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류를 catch하려는 경우 오류 번호에 대한 ErrorCode 열을 추가해야 합니다.  
   

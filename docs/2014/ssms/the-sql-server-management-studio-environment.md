@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73f4db18-6b4e-4b72-9dce-449bd5de8eab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8d448e0af854cab5944062368f2f13e1d81efc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d53db591f9e82ce7dbe8d5c222df8b6d2b33a38d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061921"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>SQL Server Management Studio 환경
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 쿼리를 관리 및 개발하기 위한 풍부한 환경을 제공합니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e15293-94e2-4163-a0f2-758d1440b82c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee6e9e60fc15bfddd0f3f99a8036f933ac1c09af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069399"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940934"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>누락 차원 키 선택(큐브 마법사)
   새 차원에 해당 기본 테이블에 대해 정의된 키가 없으면 **누락 차원 키 선택** 페이지를 사용하여 키 열을 선택할 수 있습니다.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 709c9b8e-2f3f-441e-97e1-7fd8341b64b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfb3da0ec66274110dbfb2f884d63c6e39bfc4bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061806"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>데이터 형식 변경 필요 대화 상자(Visual Database Tools)
   이 대화 상자는 관계에 참여하고 있는 열의 데이터 형식, 길이, 소수 자릿수, 전체 자릿수 또는 데이터 정렬을 변경하는 경우에 나타납니다.  

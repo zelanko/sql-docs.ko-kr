@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc3fdb873a567bef9326232e5435cea5649b041
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054881"
 ---
 # <a name="database-ssrs-native-mode"></a>데이터베이스(SSRS 기본 모드)
   데이터베이스 페이지에서는 하나 이상의 보고서 서버 인스턴스에 내부 스토리지를 제공하는 보고서 서버 데이터베이스를 만들어 구성할 수 있습니다. 원격 보고서 서버 데이터베이스를 사용하도록 보고서 서버를 구성하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
  보고서 서버 데이터베이스를 만들고 연결을 구성하려면 여러 단계를 수행해야 합니다. 이 페이지에서는 각 유형의 태스크에 대한 단계를 안내하는 마법사를 제공합니다. 사용 권한과 로그인은 자동으로 생성되거나 업데이트됩니다. 각 단계의 상태는 진행률 페이지에서 모니터링할 수 있습니다. 오류가 발생할 경우 오류를 클릭하면 해결 방법을 볼 수 있습니다.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "71952315"
  보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 자격 증명을 지정합니다. 지정할 수 있는 자격 증명 유형은 서비스 계정, Windows 도메인 사용자, Windows 로컬 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인입니다. 자격 증명을 선택 하는 방법에 대 한 자세한 내용은 [보고서 서버 데이터베이스 연결 구성 &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)를 참조 하세요.  
   
  **사용자 이름**  
- Windows 자격 증명을 사용하는 경우 도메인 사용자 계정을 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. Windows 자격 증명을 사용 하는 경우 * \<도메인>\\<계정\>* 형식으로 지정 합니다.  
+ Windows 자격 증명을 사용하는 경우 도메인 사용자 계정을 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. Windows 자격 증명을 사용 하는 경우 * \<domain> \\<계정 \> *형식으로 지정 합니다.  
   
  **암호**  
  계정의 암호를 지정합니다.  

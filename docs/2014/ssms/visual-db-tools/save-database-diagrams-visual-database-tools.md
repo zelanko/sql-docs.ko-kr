@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70cf3a1a0edb8cb38d59a2b79ef1891d3bdd0e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044220"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
   데이터베이스 다이어그램을 저장하면 테이블, 열 및 기타 데이터베이스 개체에 대한 변경 내용을 비롯하여 데이터베이스에 대한 모든 변경 내용을 저장할 수 있습니다.  
   
 ### <a name="to-save-the-database-diagram"></a>데이터베이스 다이어그램을 저장하려면  
   
-1.  **파일** 메뉴에서 **<*`tablename`* 저장 **을 선택 합니다.  
+1.  **파일** 메뉴에서 **<*`tablename`* > 저장 **을 선택 합니다.  
   
 2.  저장하려는 다이어그램을 이전에 한번도 저장한 적이 없으면 **다른 이름으로 저장** 대화 상자가 열립니다. 다이어그램의 이름을 입력합니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b249b3603b23884e218e893ae6e7a7bc0c93be1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940994"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>연결 정의 방법 선택(데이터 원본 마법사)(Analysis Services)
   **연결 정의 방법 선택** 페이지를 사용하여 데이터 원본에 대한 데이터 연결을 생성 또는 선택할 수 있습니다.  

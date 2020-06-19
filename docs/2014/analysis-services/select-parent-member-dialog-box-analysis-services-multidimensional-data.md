@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 943e47693f30e9fa98a8830e6772b6e56fd8e169
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940894"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>부모 멤버 선택 대화 상자(Analysis Services - 다차원 데이터)
   **의** 부모 멤버 선택 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 대화 상자를 사용하여 계산 멤버의 부모 멤버를 선택할 수 있습니다. 큐브 디자이너의 **계산** 탭에서 **계산 멤버 폼 편집기** 창의 **변경** 을 클릭하여 **부모 멤버 선택** 대화 상자를 표시할 수 있습니다.  
