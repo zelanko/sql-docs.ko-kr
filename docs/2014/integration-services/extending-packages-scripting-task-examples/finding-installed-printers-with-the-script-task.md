@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 956a73f76e113eb0a50f628150e47ed33791cc97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdb702c890097965b8058258f78c8572ad911a72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968513"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. 에서 `System.Drawing.Printing` [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임 스페이스는 프린터 작업을 위한 클래스를 제공 합니다.
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 변환된 데이터의 최종 대상은 인쇄된 보고서인 경우가 종종 있습니다. `System.Drawing.Printing`에서 네임 스페이스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 프린터 작업을 위한 클래스를 제공 합니다.
 
 > [!NOTE]
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.
@@ -45,7 +44,7 @@ ms.locfileid: "78176242"
 
 3.  스크립트 프로젝트에서 **System.Drawing** 네임스페이스에 대한 참조를 추가합니다.
 
-4.  코드에서 문을 사용 `Imports` 하 여 **system.object** 와 `System.Drawing.Printing` 네임 스페이스를 가져옵니다.
+4.  코드에서 `Imports` 문을 사용 하 여 **system.object** 와 `System.Drawing.Printing` 네임 스페이스를 가져옵니다.
 
 ### <a name="code"></a>코드
 

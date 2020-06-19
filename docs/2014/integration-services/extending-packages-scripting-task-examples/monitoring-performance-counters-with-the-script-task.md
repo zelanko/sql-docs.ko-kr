@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd8b10fb17288806234db923e2ed087f2bd27c8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968505"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62768509"
   
 #### <a name="to-configure-this-script-task-example"></a>이 스크립트 태스크 예를 구성하려면  
   
--   코드에서 `Imports` 문을 사용 하 여 **Diagnostics** 네임 스페이스를 가져옵니다.  
+-   `Imports`코드에서 문을 사용 하 여 **Diagnostics** 네임 스페이스를 가져옵니다.  
   
 ### <a name="example-code"></a>코드 예  
   

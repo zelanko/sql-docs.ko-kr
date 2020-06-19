@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068596"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle 테이블스페이스 관리
   테이블스페이스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 파일 그룹과 개념이 거의 동일한 데이터베이스 스토리지 단위입니다. 테이블스페이스를 사용하면 개별 그룹 내에서 데이터베이스 개체를 스토리지하고 관리할 수 있습니다. 자세한 내용은 Oracle 설명서를 참조하십시오.  
@@ -31,15 +30,15 @@ ms.locfileid: "63022293"
   
 -   [sp_changearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 사용합니다. **sp_changearticle**을 사용하려면 다음을 지정하십시오.  
   
-    -   매개 변수에 **@publisher**대 한 Oracle 게시자의 이름입니다.  
+    -   매개 변수에 대 한 Oracle 게시자의 이름 **@publisher** 입니다.  
   
-    -   매개 변수에 **@publication**대 한 Oracle 게시의 이름입니다.  
+    -   매개 변수에 대 한 Oracle 게시의 이름 **@publication** 입니다.  
   
-    -   매개 변수에 **@article**대 한 아티클의 이름입니다.  
+    -   매개 변수에 대 한 아티클의 이름 **@article** 입니다.  
   
-    -   매개 변수에 **@property**대 한 ' 테이블 스페이스 ' 값입니다.  
+    -   매개 변수에 대 한 ' 테이블 스페이스 ' 값입니다 **@property** .  
   
-    -   매개 변수에 **@value**대 한 테이블 스페이스의 이름입니다.  
+    -   매개 변수에 대 한 테이블 스페이스의 이름 **@value** 입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Oracle 게시자 구성](configure-an-oracle-publisher.md)   

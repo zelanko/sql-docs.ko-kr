@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f0c7a9c9b78455059550d4b75ad5f4da8c68d7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968553"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비동기 변환 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 변환 구성 요소를 사용하여 데이터가 원본에서 대상으로 전달될 때 데이터를 수정하고 분석할 수 있습니다. 동기 출력을 사용하는 변환에서는 각 입력 행이 이 구성 요소를 통해 전달될 때 이를 처리합니다. 비동기 출력을 사용하는 변환에서는 입력 행을 모두 받을 때까지 기다렸다가 처리를 완료하거나 입력 행을 모두 받기 전에 일부 행을 출력할 수 있습니다. 이 항목에서는 비동기 변환에 대해 설명합니다. 처리에 동기 변환이 필요한 경우에는 [스크립트 구성 요소를 사용하여 동기 변환 만들기](../data-flow/transformations/script-component.md)를 참조하세요. 동기 구성 요소와 비동기 구성 요소 간 차이에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.
@@ -70,32 +69,32 @@ ms.locfileid: "78176253"
 ### <a name="adding-variables"></a>변수 추가
  스크립트에 사용하려는 값을 포함하는 기존 변수가 있는 경우 **스크립트 변환 편집기**의 **스크립트** 페이지에서 ReadOnlyVariables 및 ReadWriteVariables 속성 필드에 해당 변수를 추가할 수 있습니다.
 
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 및 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 `ReadOnlyVariables` `ReadWriteVariables` 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
 
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.
 
  **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../script-transformation-editor-script-page.md)를 참조하세요.
 
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>코드 디자인 모드에서 비동기 변환 구성 요소 스크립팅
- 구성 요소에 대한 메타데이터를 모두 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]스크립트[!INCLUDE[msCoName](../../includes/msconame-md.md)] 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 **Visual Basic 또는** Visual C# 중에서 선택한 언어에 따라 달라집니다.
+ 구성 요소에 대한 메타데이터를 모두 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.
 
  스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 중요한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하세요.
 
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
  변환 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 ProcessInputRow 및 CreateNewOutputRows 메서드에 대 한 스텁을 사용 하 여 코드 편집기에 표시 됩니다. 이 ScriptMain 클래스에서 사용자 지정 코드를 작성해야 하며 ProcessInputRow는 변환 구성 요소에서 가장 중요한 메서드입니다. `CreateNewOutputRows` 메서드는 원본 구성 요소에서 보다 일반적으로 사용되는데 이는 두 구성 요소가 모두 개별적인 출력 행을 만들어야 한다는 점에서 비동기 변환과 비슷합니다.
 
- VSTA **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. ScriptMain 클래스는 `ComponentWrapper` 프로젝트 항목의 usercomponent 클래스에서 상속 됩니다.
+ VSTA **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 프로젝트 항목도 생성 한 것을 볼 수 있습니다 `ComponentWrapper` . ScriptMain 클래스는 프로젝트 항목의 UserComponent 클래스에서 상속 `ComponentWrapper` 됩니다.
 
- 런타임에 데이터 흐름 엔진은 `UserComponent` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 부모 클래스의 메서드를 재정의 하는 클래스의 PrimeOutput 메서드를 호출 합니다. PrimeOutput 메서드는 차례로 CreateNewOutputRows 메서드를 호출합니다.
+ 런타임에 데이터 흐름 엔진은 `UserComponent` <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 부모 클래스의 메서드를 재정의 하는 클래스의 PrimeOutput 메서드를 호출 합니다 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> . PrimeOutput 메서드는 차례로 CreateNewOutputRows 메서드를 호출합니다.
 
- 다음으로, 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 UserComponent 클래스의 ProcessInput 메서드를 호출합니다. 그러면 ProcessInput 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 ProcessInputRow 메서드를 한 번씩 호출합니다.
+ 다음으로, 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 메서드를 재정의하는 UserComponent 클래스의 ProcessInput 메서드를 호출합니다. 그러면 ProcessInput 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 ProcessInputRow 메서드를 한 번씩 호출합니다.
 
 ### <a name="writing-your-custom-code"></a>사용자 지정 코드 작성
  사용자 지정 비동기 변환 구성 요소 만들기를 마치려면 재정의된 ProcessInputRow 메서드를 사용하여 입력 버퍼의 각 행에 있는 데이터를 처리해야 합니다. 출력은 입력과 동기적으로 이루어지지 않으므로 데이터 행을 출력에 명시적으로 써야 합니다.
 
  비동기 변환에서는 ProcessInputRow 또는 ProcessInput 메서드 내에서 AddRow 메서드를 사용하여 출력에 행을 적절하게 추가할 수 있습니다. CreateNewOutputRows 메서드를 사용할 필요가 없습니다. 집계 결과와 같은 결과를 특정 출력에 한 행으로 작성하려는 경우 먼저 CreateNewOutputRows 메서드를 사용하여 출력 행을 만들고 나중에 모든 입력 행을 처리한 후에 해당 값을 채울 수 있습니다. 그러나 스크립트 구성 요소에서는 입력 또는 출력에 현재 행만 사용할 수 있으므로 CreateNewOutputRows 메서드에서 여러 행을 만드는 것은 유용하지 않습니다. CreateNewOutputRows 메서드는 처리할 입력 행이 없는 원본 구성 요소에서 보다 중요합니다.
 
- ProcessInput 메서드 자체를 재정의할 수도 있으므로 입력 버퍼를 반복하고 각 행에 대해 ProcessInputRow를 호출하기 전이나 그 후에 예비 또는 최종 처리를 추가로 수행할 수 있습니다. 예를 들어이 항목의 코드 예제 중 하나는 ProcessInput을 재정의 하 여 특정 도시의 주소 수를 계산 하 여 행`.` 을 반복 하 고,이 예에서는 모든 행이 처리 된 후에 두 번째 출력에 요약 값을 기록 합니다. PostExecute가 호출되면 출력 버퍼를 더 이상 사용할 수 없으므로 이 예에서는 ProcessInput에서 출력을 완료합니다.
+ ProcessInput 메서드 자체를 재정의할 수도 있으므로 입력 버퍼를 반복하고 각 행에 대해 ProcessInputRow를 호출하기 전이나 그 후에 예비 또는 최종 처리를 추가로 수행할 수 있습니다. 예를 들어이 항목의 코드 예제 중 하나는 ProcessInput을 재정의 하 여 특정 도시의 주소 수를 계산 하 여 행을 반복 하 고,이 `.` 예에서는 모든 행이 처리 된 후에 두 번째 출력에 요약 값을 기록 합니다. PostExecute가 호출되면 출력 버퍼를 더 이상 사용할 수 없으므로 이 예에서는 ProcessInput에서 출력을 완료합니다.
 
  요구 사항에 따라 ScriptMain 클래스에서 사용할 수 있는 PreExecute 및 PostExecute 메서드에서 스크립트를 작성하여 예비 또는 최종 처리를 수행할 수도 있습니다.
 

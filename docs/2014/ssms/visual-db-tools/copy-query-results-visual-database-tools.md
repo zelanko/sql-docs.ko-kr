@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f54dd4ea82b9d46cde0c83f645f378d13f32849
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269902"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061841"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>쿼리 결과 복사(Visual Database Tools)
   **결과** 창에서 탭으로 구분된 텍스트로 결과 집합을 복사할 수 있습니다. 전체 결과 집합, 연속된 모든 숫자 또는 연속되지 않은 행이나 셀을 복사할 수 있습니다.  

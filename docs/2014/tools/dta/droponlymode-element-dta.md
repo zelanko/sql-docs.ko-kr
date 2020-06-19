@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72c3ada0e524287073f1ecf0d5a2fa633566a6c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000314"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 요소(DTA)
   데이터베이스 엔진 튜닝 관리자가 튜닝 세션 동안에 기존 인덱스, 인덱싱된 뷰 또는 파티션을 삭제하는 것만 고려해야 하도록 지정합니다. 이 튜닝 옵션을 지정하면 새 물리적인 디자인 구조는 고려되지 않습니다.  
@@ -36,11 +35,11 @@ ms.locfileid: "62659581"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**내용과**|선택 사항입니다. 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다. `TuningOptions` 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.<br /><br /> [FeatureSet 요소&#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 요소&#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 요소&#40;DTA&#41;](keepexisting-element-dta.md)는 **ALL**로 설정됨|  
+|**발생 빈도**|(선택 사항) 각 `TuningOptions` 요소에 한 번만 사용할 수 있습니다. `TuningOptions` 요소에 다음 요소를 지정한 경우 사용할 수 없습니다.<br /><br /> [FeatureSet 요소&#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning 요소&#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting 요소&#40;DTA&#41;](keepexisting-element-dta.md)는 **ALL**로 설정됨|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

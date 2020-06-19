@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4fa946-a0d9-4d3b-b90b-53503c40fba2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 251e4c6e2e2adc60c838c7875d5d7d99aee64b54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068519"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>게시 정보, 모든 구독(병합 게시)
   **모든 구독** 탭은 선택한 병합 게시에 대한 모든 구독 정보를 표시합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "63022012"
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
  **표시**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당 됩니다. 선택한 구독 유형에 대해 표시할 구독 상태를 선택합니다. 예를 들어 오류가 있는 구독만 표시하도록 선택할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]이상 버전에만 해당 됩니다. 선택한 구독 유형에 대해 표시할 구독 상태를 선택합니다. 예를 들어 오류가 있는 구독만 표시하도록 선택할 수 있습니다.  
   
  **상태**  
  병합 에이전트의 상태에 의해 결정되는 각 구독의 상태입니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "63022012"
   
  성능 등급은 다음 값 중 하나입니다.  
   
--   최고  
+-   우수  
   
 -   좋음  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63022012"
  **마지막 동기화**  
  병합 에이전트가 마지막으로 실행된 시간입니다. 마지막 동기화 중에 변경 내용이 처리될 수도 있고 처리되지 않을 수도 있습니다. 동기화가 진행 중이면 백분율로 진행 상황을 표시합니다.  
   
- **작업**  
+ **기간**  
  마지막 동기화 중에 병합 에이전트가 실행된 시간입니다. 병합 에이전트가 현재 동기화 중이면 이 시간은 경과된 시간을 나타내고 병합 에이전트가 이전에 동기화된 경우에는 총 시간을 나타냅니다.  
   
  **연결**  

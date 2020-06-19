@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482621"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961163"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서는 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]참조 데이터의 마스터 목록을 조직에서 Excel을 사용 하는 모든 사용자에 게 배포할 수 있습니다. 데이터 사용자의 보기 및 업데이트 권한은 보안에 따라 결정됩니다.  
+  에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 참조 데이터의 마스터 목록을 조직에서 Excel을 사용 하는 모든 사용자에 게 배포할 수 있습니다. 데이터 사용자의 보기 및 업데이트 권한은 보안에 따라 결정됩니다.  
   
  MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf46b4f6fd8e7af55e1930ef6063c4754673fa79
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934094"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>미러 데이터베이스의 미러링 준비(SQL Server)
   데이터베이스 미러링 세션을 시작하기 전에 데이터베이스 소유자나 시스템 관리자는 미러 데이터베이스가 생성되었으며 미러링 준비가 완료되었는지 확인해야 합니다. 새 미러 데이터베이스를 만들려면 최소한 주 데이터베이스의 전체 백업과 후속 로그 백업이 필요하며 WITH NORECOVERY를 사용하여 두 백업을 모두 미러 서버 인스턴스로 복원해야 합니다.  
@@ -118,7 +117,7 @@ ms.locfileid: "62754780"
   
     -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  데이터베이스 미러링 세션이 시작되기 전에 미러 데이터베이스를 만들어야 합니다. 이 작업은 미러링 세션을 시작하기 직전에 수행해야 합니다.  
   
  이 예에서는 기본적으로 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다.  

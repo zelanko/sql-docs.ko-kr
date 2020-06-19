@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee713086be138a204ca5b79f3ec172f8e376ea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917683"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
   WMI 이벤트 감시자 태스크는 WQL(WMI Query Language) 이벤트 쿼리를 사용하여 특정 이벤트를 지정하기 위해 WMI(Windows Management Instrumentation) 이벤트를 감시합니다. WMI 이벤트 감시자 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -75,7 +74,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   태스크가 이벤트에 대응하는 방법을 정의합니다. 이벤트에 따라 태스크가 성공 또는 실패하도록 구성하거나 단지 태스크에서 이벤트를 다시 감시하도록 할 수 있습니다.  
   
--   WMI 쿼리 시간이 초과 될 때 태스크에서 수행 하는 동작을 지정 합니다. 제한 시간 및 시간 제한 이후의 상태를 기록 하거나, WMI 이벤트가 시간 초과 되어 시간 제한 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제한 시간 상태를 기록 함을 나타내는 사용자 지정 이벤트를 발생 시킬 수 있습니다.  
+-   WMI 쿼리 시간이 초과 될 때 태스크에서 수행 하는 동작을 지정 합니다. 제한 시간 및 시간 제한 이후의 상태를 기록 하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , WMI 이벤트가 시간 초과 되어 시간 제한 및 제한 시간 상태를 기록 함을 나타내는 사용자 지정 이벤트를 발생 시킬 수 있습니다.  
   
 -   태스크가 시간 초과에 응답 하는 방법을 정의 합니다. 태스크가 성공 또는 실패 하도록 구성 하거나 태스크에서 이벤트를 다시 감시 하도록 할 수 있습니다.  
   

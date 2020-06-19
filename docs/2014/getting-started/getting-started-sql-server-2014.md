@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5148c993-6cd4-42f0-9109-1ec08d8e798c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 81445fd27a030321c4ca45bb0b2bee22a223b4ea
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 52183f6407bb2d0e22d03ec8794a39bb3e247cd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926814"
 ---
 # <a name="getting-started-sql-server-2014"></a>시작(SQL Server 2014)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 정보, 시스템 요구 사항, 설치 지침 등의 원본을 살펴봅니다.  

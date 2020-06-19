@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b833fe2710ce04cb4a0c8b08fedc9a882c19add
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3297e1e931b024aa765d451b9acd2d0fbe31e98
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940674"
 ---
 # <a name="general-properties"></a>일반 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -99,9 +98,9 @@ ms.locfileid: "66069026"
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|0|기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|0|이것은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 스토리지를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
 |1|SharePoint용 PowerPivot 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 PowerPivot 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. 모드를 변경하면 PowerPivot 데이터가 서버에서 더 이상 실행되지 않습니다.|  
 |2|메모리 내 스토리지나 DirectQuery 스토리지를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   

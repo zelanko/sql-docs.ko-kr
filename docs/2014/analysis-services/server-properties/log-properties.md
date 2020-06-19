@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940656"
 ---
 # <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -76,7 +75,7 @@ ms.locfileid: "66068915"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
 ## <a name="error-log"></a>오류 로그  
- 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 자세한 내용은 [&#41;&#40;큐브, 파티션 및 차원 처리에 대 한 오류 구성](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 을 참조 하세요.  
+ 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 자세한 내용은 [&#41;&#40;큐브, 파티션 및 차원 처리에 대 한 오류 구성](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 을 참조 하세요 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> .  
   
  **ErrorLog\ErrorLogFileName**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -200,7 +199,7 @@ ms.locfileid: "66068915"
 > [!NOTE]  
 >  쿼리 로그를 구성 하는 방법에 대 한 자세한 내용은 [Analysis Services의 로그 작업](../instances/log-operations-in-analysis-services.md)을 참조 하세요.  
   
-## <a name="trace"></a>Trace  
+## <a name="trace"></a>추적  
  **Trace\TraceBackgroundDistributionPeriod**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   

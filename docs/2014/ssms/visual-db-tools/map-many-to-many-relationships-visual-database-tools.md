@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a943d0ed7cfb0932f7eec757b40fef4d8de6504c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a32f4dbd0455f9d60154cde9d78bbb222e7f3cc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044381"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>다 대 다 관계 매핑(Visual Database Tools)
   다 대 다 관계를 사용하면 한 테이블의 각 행을 다른 테이블의 여러 행에 연결하거나 그 반대로 행을 연결할 수 있습니다. 예를 들어, 각 작가를 해당 작가의 모든 저서에 연결하고 각 도서를 모든 해당 작가에 연결하도록 `authors` 테이블과 `titles` 테이블 사이에 다 대 다 관계를 만들 수 있습니다. 각 테이블에서 일 대 다 관계를 만드는 것만으로는 모든 도서가 한 명의 작가에게만 연결되거나 모든 작가가 한 권의 책만 쓴 것으로 잘못 표시될 수 있습니다.  

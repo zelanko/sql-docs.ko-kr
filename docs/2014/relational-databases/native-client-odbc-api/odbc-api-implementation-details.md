@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022930"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API 구현 정보
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 동작을 수행하는 ODBC 함수에 대해 설명합니다. 여기에서 모든 ODBC 함수를 설명하는 것은 아닙니다. 개별 항목에서는 ODBC 함수의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 문제에 대해서만 설명합니다. 즉 ODBC 함수에 대한 완전한 참조 자료가 아닙니다.  

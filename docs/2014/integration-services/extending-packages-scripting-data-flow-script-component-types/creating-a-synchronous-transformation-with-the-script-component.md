@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176263"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968570"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>스크립트 구성 요소를 사용하여 동기 변환 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 변환 구성 요소를 사용하여 데이터가 원본에서 대상으로 전달될 때 데이터를 수정하고 분석할 수 있습니다. 동기 출력을 사용하는 변환에서는 각 입력 행이 이 구성 요소를 통해 전달될 때 이를 처리합니다. 그러나 비동기 출력을 사용하는 변환에서는 입력 행을 모두 받을 때까지 기다렸다가 처리를 완료합니다. 이 항목에서는 동기 변환에 대해 설명합니다. 비동기 변환에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 비동기 변환 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)를 참조하세요. 동기 구성 요소와 비동기 구성 요소 간의 차이점에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.
@@ -58,7 +57,7 @@ ms.locfileid: "78176263"
 -   예기치 않은 값이 포함된 행에 대한 시뮬레이션된 오류 출력과 같은 추가 출력을 하나 이상 만들 수 있습니다. 동기 변환 구성 요소의 출력을 관리하려면 **출력 추가** 및 **출력 제거** 단추를 사용합니다. 각 행을 한 출력 또는 다른 출력으로 리디렉션하도록 지정하지 않은 경우에는 모든 입력 행이 사용 가능한 모든 출력으로 전송됩니다. 출력의 `ExclusionGroup` 속성에 0이 아닌 정수 값을 지정하면 행을 리디렉션하도록 지정할 수 있습니다. 출력을 식별하기 위해 `ExclusionGroup`에 입력하는 특정 정수 값은 중요하지 않지만 지정한 출력 그룹에는 일관되게 동일한 정수를 사용해야 합니다.
 
     > [!NOTE]
-    >  모든 행을 출력하지 않으려는 경우 단일 출력과 함께 0이 아닌 `ExclusionGroup` 속성 값을 사용할 수도 있습니다. 그러나 이 경우 출력으로 보낼 각 행에 대해 **DirectRowTo\<outputbuffer>** 메서드를 명시적으로 호출해야 합니다.
+    >  모든 행을 출력하지 않으려는 경우 단일 출력과 함께 0이 아닌 `ExclusionGroup` 속성 값을 사용할 수도 있습니다. 그러나이 경우 출력으로 보낼 각 행에 대해 **Directrowto \<outputbuffer> ** 메서드를 명시적으로 호출 해야 합니다.
 
 -   입력 및 출력에 보다 알기 쉬운 이름을 지정할 수 있습니다. 스크립트 구성 요소에서는 이러한 이름을 사용하여 스크립트에서 입력 및 출력을 참조하는 데 사용할 형식화된 접근자 속성을 생성합니다.
 
@@ -69,23 +68,23 @@ ms.locfileid: "78176263"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.
 
 ### <a name="adding-variables"></a>변수 추가
- 스크립트에서 `ReadOnlyVariables` 기존 변수를 사용 하려는 경우 스크립트 **변환 편집기**의 **스크립트** 페이지에서 및 `ReadWriteVariables` 속성 필드에 해당 변수를 추가할 수 있습니다.
+ 스크립트에서 기존 변수를 사용 하려는 경우 스크립트 `ReadOnlyVariables` `ReadWriteVariables` **변환 편집기**의 **스크립트** 페이지에서 및 속성 필드에 해당 변수를 추가할 수 있습니다.
 
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 및 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 `ReadOnlyVariables` `ReadWriteVariables` 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
 
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.
 
  **스크립트 변환 편집기**의 **스크립트** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../script-transformation-editor-script-page.md)를 참조하세요.
 
 ## <a name="scripting-a-synchronous-transformation-component-in-code-design-mode"></a>코드 디자인 모드에서 동기 변환 구성 요소 스크립팅
- 구성 요소에 대한 메타데이터를 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]스크립트[!INCLUDE[msCoName](../../includes/msconame-md.md)] 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 **Visual Basic 또는** Visual C# 중에서 선택한 언어에 따라 달라집니다.
+ 구성 요소에 대한 메타데이터를 구성한 후에는 사용자 지정 스크립트를 작성할 수 있습니다. **스크립트 변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집**을 클릭하여 사용자 지정 스크립트를 추가할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] VSTA([!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications) IDE를 엽니다. 사용하는 스크립트 언어는 **스크립트** 페이지에서 **ScriptLanguage** 속성에 대한 스크립트 언어로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 중에서 선택한 언어에 따라 달라집니다.
 
  스크립트 구성 요소를 사용하여 만든 모든 종류의 구성 요소에 적용되는 중요한 정보는 [스크립트 구성 요소 코딩 및 디버깅](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.
 
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
  변환 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 `ProcessInputRow` 메서드에 대한 스텁과 함께 코드 편집기에 나타납니다. 이 `ScriptMain` 클래스에서 사용자 지정 코드를 작성해야 하며 `ProcessInputRow`는 변환 구성 요소에서 가장 중요한 메서드입니다.
 
- VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
+ VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 프로젝트 항목도 생성 한 것을 볼 수 있습니다 `ComponentWrapper` . `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
 
  런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.
 
@@ -130,13 +129,13 @@ else
 }
 ```
 
- 이 예에서 스크립트 구성 요소는 개발자가 구성한 출력의 이름을 따라 **DirectRowTo\<OutputBufferX>** 메서드를 자동으로 생성합니다. 비슷한 코드를 사용하여 오류 출력을 시뮬레이션된 오류 출력으로 전송할 수 있습니다.
+ 이 예에서 스크립트 구성 요소는 사용자가 구성한 출력의 이름을 기준으로 사용자를 위해 **Directrowto \<OutputBufferX> ** 메서드를 생성 합니다. 비슷한 코드를 사용하여 오류 출력을 시뮬레이션된 오류 출력으로 전송할 수 있습니다.
 
 ## <a name="examples"></a>예
  이 예에서는 `ScriptMain` 클래스에서 동기 변환 구성 요소를 만드는 데 필요한 사용자 지정 코드를 보여 줍니다.
 
 > [!NOTE]
->  이 `AdventureWorks` 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **intaddressid** 와 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
+>  이 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 `AdventureWorks` 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **intaddressid** 와 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
 
 ### <a name="single-output-synchronous-transformation-example"></a>단일 출력 동기 변환 예
  이 예에서는 단일 출력을 사용하는 동기 변환 구성 요소를 보여 줍니다. 이 변환에서는 **AddressID** 열을 전달하고 **City** 열을 대문자로 변환합니다.
@@ -145,7 +144,7 @@ else
 
 1.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.
 
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력은 **Addressid** 및 **City** 열이 포함 된 `AdventureWorks` 예제 데이터베이스의 **Person. Address** 테이블에서 데이터를 제공 해야 합니다.
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력은 **Person.Address** `AdventureWorks` **addressid** 및 **City** 열이 포함 된 예제 데이터베이스의 Person. Address 테이블에서 데이터를 제공 해야 합니다.
 
 3.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다. **City** 열을 읽기/쓰기로 표시합니다.
 
@@ -153,7 +152,7 @@ else
 
 5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
 
-6.  **대상이나**스크립트 구성 요소를 사용하여 대상 만들기**에서 보여 준 예제 대상 구성 요소와 같이** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [City](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 출력을 대상 구성 요소에 연결합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 출력을 대상 구성 요소에 연결합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스에서 다음 `AdventureWorks` 명령을 실행하여 대상 테이블을 만들 수 있습니다.
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -197,7 +196,7 @@ public class ScriptMain:
 
 1.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.
 
-2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력은 적어도 **Addressid** 및 **City** 열이 포함 된 `AdventureWorks` 예제 데이터베이스의 **Person. Address** 테이블에서 데이터를 제공 해야 합니다.
+2.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력은 **Person.Address** `AdventureWorks` 적어도 **addressid** 및 **City** 열이 포함 된 예제 데이터베이스의 Person. Address 테이블에서 데이터를 제공 해야 합니다.
 
 3.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다. **City** 열을 읽기/쓰기로 표시합니다.
 
@@ -207,7 +206,7 @@ public class ScriptMain:
 
 6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
 
-7.  **대상, 플랫 파일 대상 또는**스크립트 구성 요소를 사용하여 대상 만들기**에서 보여 준 예제 대상 구성 요소와 같이** AddressID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [City](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) 열을 필요로 하는 두 개의 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 각 출력을 대상 구성 요소 중 하나에 연결합니다. `AdventureWorks` 데이터베이스에서 다음과 같이 고유한 테이블 이름으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상, 플랫 파일 대상 또는 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 두 개의 대상 구성 요소를 만들고 구성합니다. 그런 다음 변환의 각 출력을 대상 구성 요소 중 하나에 연결합니다. `AdventureWorks` 데이터베이스에서 다음과 같이 고유한 테이블 이름으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행하여 대상 테이블을 만들 수 있습니다.
 
     ```
     CREATE TABLE [Person].[Address2](

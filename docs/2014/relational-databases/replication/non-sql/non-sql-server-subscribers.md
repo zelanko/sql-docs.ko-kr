@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068584"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅샷 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022243"
   
 -   복제는 테이블 및 인덱싱된 뷰를[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 테이블로 게시하는 기능을 지원합니다. 인덱싱된 뷰는 인덱싱된 뷰로 복제될 수 없습니다.  
   
--   새 게시 마법사에서 게시를 만든 다음 게시 속성 대화 상자를 사용 하 여 SQL Server 이외 구독자에 대해 게시 속성 대화 상자를 사용 하 여 해당 게시를 사용 하도록 설정 하면 이외[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우 구독 데이터베이스에 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 모든 개체의 소유자가 지정 되지 않지만 구독자의 경우에는 게시 데이터베이스의 해당 개체 소유자로 설정 됩니다.  
+-   새 게시 마법사에서 게시를 만든 다음 게시 속성 대화 상자를 사용 하 여 SQL Server 이외 구독자에 대해 게시 속성 대화 상자를 사용 하 여 해당 게시를 사용 하도록 설정 하면 이외 구독자의 경우 구독 데이터베이스에 있는 모든 개체의 소유자가 지정 되지 않지만 구독자의 경우에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시 데이터베이스의 해당 개체 소유자로 설정 됩니다.  
   
 -   게시에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자가 있는 경우[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대한 구독을 만들기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에서 게시를 사용할 수 있도록 설정해야 합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 24a52b9dd190032a55306c1fe738c3c1e1787dad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d8e0c835cfcb47adbf837c1322b51a7b30c2e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054785"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "79112210"
   
  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  SharePoint 설치 프로그램에서 서버 팜 설치 옵션을 사용하여 SharePoint 서버를 설치해야 합니다. 기본 제공 데이터베이스를 사용하는 독립 실행형 SharePoint 서버는 지원되지 않습니다. 자세한 내용은 [SharePoint 2010 팜에서 SQL SERVER BI 기능 사용에 대 한 지침](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
@@ -103,13 +102,13 @@ ms.locfileid: "79112210"
   
 3.  **SQL Server PowerPivot 서비스 애플리케이션**을 선택합니다. 이 응용 프로그램이 목록에 표시되지 않으면 SharePoint용 PowerPivot이 설치되지 않았거나 솔루션이 배포되지 않은 것입니다.  
   
-4.  **새 PowerPivot 서비스 애플리케이션 만들기** 페이지에 애플리케이션의 이름을 입력합니다. 기본값은 Get-powerpivotserviceapplication\<number>입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
+4.  **새 PowerPivot 서비스 애플리케이션 만들기** 페이지에 애플리케이션의 이름을 입력합니다. 기본값은 Get-powerpivotserviceapplication \<number> 입니다. 여러 PowerPivot 서비스 애플리케이션을 만드는 경우 설명이 포함된 이름을 사용하면 다른 관리자가 애플리케이션 사용 방식을 이해하는 데 도움이 됩니다.  
   
 5.  애플리케이션 풀에서 새 애플리케이션 풀을 만들고 해당 풀에 대한 보안 계정을 선택합니다. 도메인 사용자 계정이 필요합니다.  
   
 6.  **데이터베이스 서버**에서 서비스 애플리케이션 데이터베이스를 만들 데이터베이스 서버를 선택합니다. 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다.  
   
-7.  **데이터베이스 이름**에서 기본값은 guid> PowerPivotServiceApplication1_\<입니다. 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+7.  **데이터베이스 이름**에서 기본값은 PowerPivotServiceApplication1_입니다 \<guid> . 기본 데이터베이스 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 8.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. **SQL  인증**을 선택하는 경우 SharePoint  배포에서 이 인증 유형을 사용하는 최선의 구현 방법을 SharePoint  관리자 설명서에서 참조하십시오.  
   
@@ -170,7 +169,7 @@ ms.locfileid: "79112210"
   
 5.  **데이터베이스**에 이 서비스 애플리케이션에 대한 데이터베이스를 호스팅할 SQL Server 인스턴스를 지정합니다. 기본값은 팜 구성 데이터베이스를 호스팅하는 SQL Server 데이터베이스 엔진 인스턴스입니다.  
   
-6.  **데이터베이스 이름**에 서비스 애플리케이션 데이터베이스의 이름을 입력합니다. 기본값은 guid> Secure_Store_Service_DB_\<입니다. 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
+6.  **데이터베이스 이름**에 서비스 애플리케이션 데이터베이스의 이름을 입력합니다. 기본값은 Secure_Store_Service_DB_입니다 \<guid> . 기본 이름은 서비스 애플리케이션의 기본 이름에 해당합니다. 고유한 서비스 애플리케이션 이름을 입력한 경우 함께 관리할 수 있도록 데이터베이스 이름에 대해 비슷한 명명 규칙을 따릅니다.  
   
 7.  **데이터베이스 인증**에서 기본값은 Windows  인증입니다. SQL 인증을 선택하는 경우 팜에서 이 인증 유형을 사용하는 방법에 대한 지침을 SharePoint 관리자 설명서에서 참조하십시오.  
   
@@ -208,7 +207,7 @@ ms.locfileid: "79112210"
   
 1.  SharePoint  사이트에서 **사이트 작업**을 클릭합니다.  
   
-     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<컴퓨터 이름> 입력 하 여 루트 사이트 모음을 열면 SharePoint 사이트에 자주 액세스할 수 있습니다.  
+     기본적으로 SharePoint 웹 애플리케이션은 포트 80을 통해 액세스됩니다. 즉, http://\<computer name>을 입력하여 루트 사이트 모음을 열어서 SharePoint 사이트에 액세스할 수 있습니다.  
   
 2.  **사이트 설정**을 클릭합니다.  
   
@@ -227,7 +226,7 @@ ms.locfileid: "79112210"
   
  공급자를 설치하면 데이터 연결 문자열에서 MSOLAP.4를 참조하는 통합 문서가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot 서버에서 정상적으로 작동할 수 있습니다. 이전 버전의 PowerPivot for Excel에서 만든 통합 문서를 업그레이드하는 다른 방법으로는 SQL Server 2008 R2 OLE DB 공급자를 설치하는 방법이 있습니다.  
   
- 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://www.microsoft.com/download/details.aspx?id=44272)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 다음 `SQLServer2008_ASOLEDB10.msi` 설치 프로그램의 x64 패키지를 다운로드 합니다.  
+ 이 공급자는 [SQL Server 2008 R2 기능 팩 페이지](https://www.microsoft.com/download/details.aspx?id=44272)에서 다운로드할 수 있습니다. Microsoft **® SQL Server® 2008 R2 Analysis Services OLE DB Provider microsoft®**를 찾은 다음 설치 프로그램의 x64 패키지를 다운로드 `SQLServer2008_ASOLEDB10.msi` 합니다.  
   
  확인 단계를 포함 하 여 공급자를 설치 하는 방법에 대 한 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)를 참조 하세요.  
   
@@ -236,7 +235,7 @@ ms.locfileid: "79112210"
   
  SharePoint 사이트와 PowerPivot의 통합을 확인하려면 다음을 수행하십시오.  
   
-1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용 하는 경우 URL 주소> http://\<your computer name을 지정할 수 있습니다.  
+1.  앞서 만든 웹 애플리케이션을 브라우저에서 엽니다. 기본값을 사용한 경우 URL 주소에 http://를 지정할 수 있습니다 \<your computer name> .  
   
 2.  PowerPivot 데이터 액세스 및 처리 기능을 애플리케이션에서 사용할 수 있는지 확인합니다. 이렇게 하려면 PowerPivot 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
@@ -254,9 +253,9 @@ ms.locfileid: "79112210"
   
 4.  시작 메뉴의 Microsoft SQL Server 2008 R2 프로그램 그룹에서 SQL Server Management Studio를 시작합니다. 이 도구가 서버에 설치되어 있지 않으면 마지막 단계로 건너뛰어 캐시된 파일이 있는지 확인하면 됩니다.  
   
-5.  서버 유형에서 **Analysis  Services**를 선택합니다.  
+5.  서버 유형에서 **Analysis Services**를 선택 합니다.  
   
-6.  서버 이름에 서버 이름 ** \<> \powerpivot**을 입력 합니다. 여기서 ** \<server-name>** 은 SharePoint용 PowerPivot가 설치 된 컴퓨터의 이름입니다.  
+6.  서버 이름에 ** \<server-name> \powerpivot)** 을 입력 **\<server-name>** 합니다. 여기서은 SharePoint용 PowerPivot 설치 된 컴퓨터의 이름입니다.  
   
 7.  **연결**을 클릭합니다.  
   

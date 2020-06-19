@@ -56,13 +56,12 @@ helpviewer_keywords:
 ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ed1c47faafeb0c680e6afb6f8e509c426760da2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940724"
 ---
 # <a name="data-mining-properties"></a>데이터 마이닝 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 데이터 마이닝 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
