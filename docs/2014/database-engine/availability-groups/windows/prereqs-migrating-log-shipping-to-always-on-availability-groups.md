@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c517850e7dfc7dfb134389b50feee77b3d1cbfbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936634"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>로그 전달에서 AlwaysOn 가용성 그룹(SQL Server)으로 마이그레이션하기 위한 사전 요구 사항
   이 항목에서는 하나 이상의 보조 데이터베이스와 함께 로그 전달 주 데이터베이스를 AlwaysOn 주 데이터베이스 및 보조 데이터베이스로 변환하기 위한 사전 요구 사항에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "82922030"
 |가용성 그룹의 자동화된 백업 기본 설정|주 복제본에만|  
 |주 복제본의 백업 우선 순위|>0|  
   
- **자세한 내용:**  
+ **자세한 내용은 다음을 참조하세요.**  
   
  [가용성 그룹 속성 보기&#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "82922030"
   
  가용성 그룹에 대해 모든 보조 데이터베이스를 만든 후에는 보조 복제본에서 백업을 수행할 경우 가용성 그룹의 자동화된 백업 기본 설정을 다시 구성해야 합니다.  
   
- **자세한 내용:**  
+ **자세한 내용은 다음을 참조하세요.**  
   
  [로그 전달 구성을 가용성 그룹으로 변환](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (SQL Server 블로그)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "82922030"
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>참고 항목  
- [로그 전달 &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
+ [로그 전달 정보&#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   

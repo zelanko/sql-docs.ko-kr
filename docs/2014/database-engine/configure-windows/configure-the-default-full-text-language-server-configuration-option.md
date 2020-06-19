@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec0736326a4da0708d125bfc480996d54bb86c8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935734"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>default full-text language 서버 구성 옵션 구성
-  이 `default full-text language` 항목에서는 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용 하 여에서 서버 구성 옵션을 구성 하는 방법에 대해 설명 합니다. 옵션 `default full-text language` 은 전체 텍스트 인덱스에 대 한 기본 언어 값을 지정 합니다. 언어 분석은 전체 텍스트 인덱싱된 모든 데이터에 대해 수행되고 해당 데이터 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]지역화 된 버전에서는 적절 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 일치 항목이 `default full-text language` 있는 경우 설치 프로그램에서 옵션을 서버 언어로 설정 합니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 경우 `default full-text language` 옵션이 영어입니다.  
+  이 항목에서는 또는을 사용 하 `default full-text language` 여에서 서버 구성 옵션을 구성 하는 방법에 대해 설명 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] . `default full-text language`옵션은 전체 텍스트 인덱스에 대 한 기본 언어 값을 지정 합니다. 언어 분석은 전체 텍스트 인덱싱된 모든 데이터에 대해 수행되고 해당 데이터 언어에 따라 달라집니다. 이 옵션의 기본값은 서버의 언어입니다. 의 지역화 된 버전에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `default full-text language` 적절 한 일치 항목이 있는 경우 설치 프로그램에서 옵션을 서버 언어로 설정 합니다. 지역화되지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 경우 `default full-text language` 옵션이 영어입니다.  
   
  **항목 내용**  
   
@@ -45,13 +44,13 @@ ms.locfileid: "62787069"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   `default full-text language` 옵션 값은 전체 텍스트 인덱스에 사용 됩니다 .이 옵션은 전체 텍스트 인덱스 만들기 또는 ALTER 전체 텍스트 인덱스 문에 language **language_term** 옵션을 통해 지정 된 언어가 없습니다. 기본 전체 텍스트 언어가 지원되지 않거나 언어 분석 패키지를 사용할 수 없으면 CREATE 또는 ALTER 작업이 실패하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지정된 언어가 올바르지 않다는 내용의 오류 메시지를 반환합니다.  
+-   옵션 값은 `default full-text language` 전체 텍스트 인덱스에 사용 됩니다 .이 옵션은 전체 텍스트 인덱스 만들기 또는 ALTER 전체 텍스트 인덱스 문에 language **language_term** 옵션을 통해 지정 된 언어가 없습니다. 기본 전체 텍스트 언어가 지원되지 않거나 언어 분석 패키지를 사용할 수 없으면 CREATE 또는 ALTER 작업이 실패하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지정된 언어가 올바르지 않다는 내용의 오류 메시지를 반환합니다.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> 권장 사항  
   
 -   이 옵션은 고급 옵션으로, 숙련된 데이터베이스 관리자나 공인된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술 지원 담당자만 변경해야 합니다.  
   
--   옵션 `default full-text language` 에는 LCID 값이 필요 합니다. 지원되는 LCID 및 해당 관련 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)서버 구성 옵션을 구성하는 방법을 설명합니다. ISV(Independent Software Vendor) 등에서 제공하는 다른 언어를 사용할 수도 있습니다. 특정 언어를 찾을 수 없으면 전체 텍스트 검색 엔진에서 주 언어로 자동 전환합니다.  
+-   옵션에는 `default full-text language` LCID 값이 필요 합니다. 지원되는 LCID 및 해당 관련 언어 목록을 보려면 [sys.fulltext_languages&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)서버 구성 옵션을 구성하는 방법을 설명합니다. ISV(Independent Software Vendor) 등에서 제공하는 다른 언어를 사용할 수도 있습니다. 특정 언어를 찾을 수 없으면 전체 텍스트 검색 엔진에서 주 언어로 자동 전환합니다.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8d483b6ed67c67b901fcd25a4eeb76a550ce385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 161eae146ce0b6e80eee3e2a94b55350ee7415f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62666604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995220"
 ---
 # <a name="delete-operator"></a>운영자 삭제
   이 페이지를 사용하여 운영자를 삭제할 수 있습니다.  

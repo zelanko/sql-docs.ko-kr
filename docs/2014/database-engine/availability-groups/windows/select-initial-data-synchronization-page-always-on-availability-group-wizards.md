@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad98184856d2860316be35f0b83acbd53b3234a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936504"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>초기 데이터 동기화 페이지 선택(AlwaysOn 가용성 그룹 마법사)
   AlwaysOn **초기 데이터 동기화 선택** 페이지를 사용하여 새 보조 데이터베이스의 초기 데이터 동기화에 대한 기본 설정을 표시합니다. 이 페이지는 세 가지 마법사([!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]및 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)])에서 공유됩니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "62789473"
   
 -   RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 최신 데이터베이스 백업을 수동으로 복원한 다음 RESTORE WITH NORECOVERY를 사용하여 각 후속 로그 백업을 복원합니다. 주 데이터베이스와 보조 데이터베이스의 파일 경로가 다른 경우에는 WITH MOVE 옵션을 사용해야 합니다. 가용성 그룹의 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 이 복원 시퀀스를 수행합니다.  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 및 PowerShell을 사용하여 이러한 백업 및 복원 작업을 수행할 수 있습니다.  
   
-     **자세한 내용:**  
+     **자세한 내용은 다음을 참조하세요.**  
   
      [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62789473"
     > [!NOTE]  
     >  가용성 그룹에 대해 모든 보조 데이터베이스를 만든 후에는 보조 복제본에서 백업을 수행할 경우 가용성 그룹의 자동화된 백업 기본 설정을 다시 구성해야 합니다.  
   
-     **자세한 내용:**  
+     **자세한 내용은 다음을 참조하세요.**  
   
      [로그 전달에서 AlwaysOn 가용성 그룹 &#40;SQL Server로 마이그레이션하기 위한 필수 구성 요소&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   

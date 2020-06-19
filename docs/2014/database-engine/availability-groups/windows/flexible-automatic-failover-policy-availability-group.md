@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd4dd62d8b30e2041415e0b9be5682ce4b01d1f6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936784"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>가용성 그룹 자동 장애 조치에 대한 유연한 장애 조치(Failover) 정책(SQL Server)
   유연한 장애 조치 (failover) 정책은 가용성 그룹에 대해 [자동 장애 조치 (failover)](failover-and-failover-modes-always-on-availability-groups.md) 를 발생 시키는 조건을 세부적으로 제어 합니다. 자동 장애 조치를 트리거하는 오류 상태 및 상태 확인 빈도를 변경하여 자동 장애 조치가 수행될 가능성을 높이거나 줄임으로써 고가용성에 대한 SLA를 지원할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "62789895"
   
 |Level|오류 상태|[!INCLUDE[tsql](../../../includes/tsql-md.md)] 값|PowerShell 값|  
 |-----------|-----------------------|------------------------------|----------------------|  
-|1|서버 작동 중지 시. 제한 수준이 가장 낮은 상태입니다. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server AlwaysOn 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)을 참조하십시오.|1|`OnServerDown`|  
+|하나|서버 작동 중지 시. 제한 수준이 가장 낮은 상태입니다. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 다운된 경우<br /><br /> 서버 인스턴스로부터 ACK를 받지 못해 WSFC 클러스터에 연결할 가용성 그룹의 임대가 만료된 경우. 자세한 내용은 [작동 방법: SQL Server AlwaysOn 임대 시간 제한](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)을 참조하십시오.|1|`OnServerDown`|  
 |2|서버 응답 없음 발생 시. 다음과 같은 경우 자동 장애 조치를 시작하도록 지정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 클러스터에 연결되어 있지 않고 가용성 그룹의 사용자 지정 상태 확인 제한 시간 임계값이 초과된 경우<br /><br /> 가용성 복제본이 오류 상태에 있는 경우|2|`OnServerUnresponsive`|  
 |3|중대 서버 오류 발생 시. 분리된 스핀 잠금, 중대한 쓰기 액세스 위반 또는 과도한 덤프와 같이 심각한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치를 시작하도록 지정합니다. 이 값은 기본 수준입니다.|3|`OnCriticalServerError`|  
 |4|일반 서버 오류 발생 시. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 리소스 풀에서 지속적인 메모리 부족 상태와 같은 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 내부 오류가 발생할 경우 자동 장애 조치를 시작하도록 지정합니다.|4|`OnModerateServerError`|  

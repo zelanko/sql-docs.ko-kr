@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ca7b0508907b4d86c9ee627438a3f18e1b01fdc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936217"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 사용하여 AlwaysOn 가용성 그룹에 대한 가용성 복제본 속성을 보는 방법에 대해 설명합니다.  

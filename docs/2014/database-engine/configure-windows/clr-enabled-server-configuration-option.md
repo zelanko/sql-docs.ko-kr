@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b83cd0e00bdd32c8b44667209544c8e81b1e90c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935828"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>clr enabled 서버 구성 옵션
   clr enabled 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 어셈블리를 실행할 수 있는지 여부를 지정합니다. clr enabled 옵션은 다음 값을 제공합니다.  

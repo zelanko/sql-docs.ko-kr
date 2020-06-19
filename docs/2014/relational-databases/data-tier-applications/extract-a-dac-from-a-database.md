@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 37bb440288ccbc832d89180855566a969830e2ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc5a8eb0317e53b51927402608a8d9b1a09a76f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970237"
 ---
 # <a name="extract-a-dac-from-a-database"></a>데이터베이스에서 DAC 추출
   **데이터 계층 애플리케이션 추출 마법사** 나 Windows PowerShell 스크립트를 사용하여 기존 SQL Server 데이터베이스에서 DAC(데이터 계층 애플리케이션) 패키지를 추출할 수 있습니다. 추출이 끝나면 데이터베이스 개체의 정의 및 이와 관련된 인스턴스 수준 요소를 포함하는 DAC 패키지 파일이 생성됩니다. 예를 들어 DAC 패키지 파일에는 데이터베이스 테이블, 저장 프로시저, 뷰, 사용자, 그리고 데이터베이스 사용자에 매핑되는 로그인이 포함됩니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "72797989"
 -   **DAC를 추출 하려면**[데이터 계층 응용 프로그램 추출 마법사](#UsingDACExtractWizard), [PowerShell](#ExtractDACPowerShell) 을 사용 합니다.    
   
 ## <a name="before-you-begin"></a>시작하기 전에  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스는에 `msdb` 등록 된 DAC (의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**master** )를 참조 하지 않습니다. 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](register-a-database-as-a-dac.md)을 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 4 이상의 인스턴스에 있는 데이터베이스에서 DAC를 추출할 수 있습니다. DAC에서 배포된 데이터베이스에 대해 추출 프로세스를 실행하는 경우 데이터베이스에서 개체 정의만 추출됩니다. 프로세스는에 등록 된 DAC `msdb` (의**master** )를 참조 하지 않습니다 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . 추출 프로세스에서는 데이터베이스 엔진의 현재 인스턴스에 DAC 정의를 등록하지 않습니다. DAC를 등록하는 방법은 [Register a Database As a DAC](register-a-database-as-a-dac.md)을 참조하세요.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상에서만 데이터베이스에서 DAC를 추출할 수 있습니다. DAC 또는 포함된 사용자가 지원하지 않는 개체가 데이터베이스에 있는 경우 DAC를 추출할 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
@@ -86,9 +85,9 @@ ms.locfileid: "72797989"
   
  **이름** - 이 이름은 DAC를 식별합니다. DAC 이름은 DAC 패키지 파일의 이름과 다를 수 있으며 애플리케이션 특징을 기술해야 합니다. 예를 들어 데이터베이스가 재무 애플리케이션에 사용되는 경우 DAC Finance라는 이름을 지정할 수 있습니다.  
   
- **버전(xx.xx.xx.xx 사용, x는 숫자)** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우 버전은 `msdb` 데이터베이스에 저장 되 고 나중에의 **Data-tier Applications** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터 계층 응용 프로그램 노드에서 볼 수 있습니다.  
+ **버전(xx.xx.xx.xx 사용, x는 숫자)** - DAC의 버전을 식별하는 숫자 값입니다. DAC 버전은 Visual Studio에서 개발자가 작업 중인 DAC의 버전을 식별하는 데 사용됩니다. DAC를 배포 하는 경우 버전은 데이터베이스에 저장 되 `msdb` 고 나중에의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
- **설명:** - 선택 사항입니다. DAC에 대해 설명합니다. DAC를 배포할 때 설명은 `msdb` 데이터베이스에 저장 되며 나중에의 **Data-tier Applications** [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]데이터 계층 응용 프로그램 노드에서 볼 수 있습니다.  
+ **설명:** - 선택 사항입니다. DAC에 대해 설명합니다. DAC를 배포할 때 설명은 데이터베이스에 저장 `msdb` 되며 나중에의 **데이터 계층 응용 프로그램** 노드에서 볼 수 있습니다 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
  **DAC 패키지 파일에 저장(파일 이름에 .dacpac 확장명 포함):** - DAC를 확장명이 .dacpac인 DAC 패키지 파일에 저장합니다. 파일의 이름과 위치를 지정하려면 **찾아보기** 단추를 클릭합니다.  
   

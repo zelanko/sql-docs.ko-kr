@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a552b5847f1abda254da1d6c7348088ee0e8a03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97cf01d12e56b238b02d1c36c14cf8094dfd74d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76923036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936428"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
   이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
@@ -115,7 +114,7 @@ ms.locfileid: "76923036"
  **보조만**  
  백업이 주 복제본에서 수행되지 않도록 지정합니다. 주 복제본이 유일한 온라인 복제본인 경우에는 백업이 수행되지 않아야 합니다.  
   
- **주**  
+ **Primary**  
  백업이 항상 주 복제본에서 수행되도록 지정합니다. 이 옵션은 백업이 보조 복제본에서 실행될 때 지원되지 않는 차등 백업 만들기와 같은 백업 기능이 필요한 경우에 유용합니다.  
   
  **임의의 복제본**  
@@ -146,7 +145,7 @@ ms.locfileid: "76923036"
  다음과 같이 이 가용성 그룹에 대한 수신기 기본 설정을 지정합니다.  
   
  **수신기 DNS 이름**  
- 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유 해야 하며 모든 순서로 영숫자, 대시 (**-**) 및 하이픈 (**_**)만 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
+ 수신기의 네트워크 이름을 지정합니다. 이 이름은 도메인에서 고유 해야 하며 모든 순서로 영숫자, 대시 ( **-** ) 및 하이픈 (**_**)만 포함할 수 있습니다. **수신기** 탭을 사용하여 지정한 경우 DNS 이름은 15자까지 가능합니다.  
   
 > [!IMPORTANT]  
 >  **수신기** 탭에 잘못된 DNS 수신기 이름(또는 포트 번호)을 입력하면 **복제본 지정** 페이지에서 **다음** 단추를 사용할 수 없습니다.  
@@ -177,7 +176,7 @@ ms.locfileid: "76923036"
  **제거**  
  표에서 현재 선택되어 있는 서브넷을 제거하려면 클릭합니다.  
   
- **인터페이스**  
+ **DHCP**  
  수신기가 단일 서브넷에서 수신하고 DHCP(동적 호스트 구성 프로토콜)를 실행하는 서버에서 할당되는 동적 IPv4 주소를 사용하도록 하려는 경우에 선택합니다. DHCP는 가용성 그룹의 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 공통되는 단일 서브넷으로 제한됩니다.  
   
 > [!IMPORTANT]  
@@ -200,7 +199,7 @@ ms.locfileid: "76923036"
   
 -   [가용성 그룹에 복제본 추가 마법사 사용&#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
--   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [데이터베이스 미러링 엔드포인트에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -210,7 +209,7 @@ ms.locfileid: "76923036"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Transact-sql&#41;&#40;가용성 그룹 만들기](/sql/t-sql/statements/create-availability-group-transact-sql)   
+ [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 필수 조건, 제한 사항 및 권장 사항&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176843"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063318"
 ---
 # <a name="full-text-search"></a>전체 텍스트 검색
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다. 테이블에 대해 전체 텍스트 쿼리를 실행하려면 먼저 데이터베이스 관리자가 해당 테이블에 대한 전체 텍스트 인덱스를 만들어야 합니다. 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열의 데이터 형식은 `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` 또는 `varbinary(max)` 및 FILESTREAM 중 하나일 수 있습니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.
@@ -49,7 +48,7 @@ ms.locfileid: "78176843"
 
  전체 텍스트 쿼리는 대/소문자를 구분하지 않습니다. 예를 들어 "Aluminum" 또는 "aluminum"을 검색하면 동일한 결과가 반환됩니다.
 
- 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 예를 들면 다음과 같습니다.
+ 전체 텍스트 쿼리는 일부 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE) 집합을 사용합니다. 그러나 전체 텍스트 쿼리의 구조는 지정된 비즈니스 시나리오의 검색 목표에 따라 달라집니다. 다음은 그 예입니다.
 
 -   e-비즈니스 - 웹 사이트에서 제품 검색
 
@@ -134,7 +133,7 @@ ms.locfileid: "78176843"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>전체 텍스트 인덱싱 프로세스
  탐색이라고도 하는 전체 텍스트 채우기가 시작되면 전체 텍스트 엔진은 대용량 데이터 일괄 처리를 메모리에 밀어 넣고 필터 데몬 호스트에 알립니다. 호스트가 데이터를 필터링하고 데이터의 단어를 분리하며 변환된 데이터를 반전된 단어 목록으로 변환합니다. 그런 다음 전체 텍스트 검색은 변환된 데이터를 단어 목록에서 끌어오고 데이터를 처리하여 중지 단어를 제거하며 하나의 일괄 처리에 대한 단어 목록을 하나 이상의 반전된 인덱스를 통해 유지합니다.
 
- `varbinary(max)` 또는 `image` 열에 저장 된 데이터를 인덱싱할 때 **IFilter** 인터페이스를 구현 하는 필터는 해당 데이터의 지정 된 파일 형식 (예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word)을 기준으로 텍스트를 추출 합니다. 경우에 따라 필터 구성 요소에는 `varbinary(max)`, 또는 `image` 데이터를 메모리에 밀어 넣는 대신 filterdata 폴더에 써야 합니다.
+ 또는 열에 저장 된 데이터를 인덱싱할 때 `varbinary(max)` `image` **IFilter** 인터페이스를 구현 하는 필터는 해당 데이터의 지정 된 파일 형식 (예: Word)을 기준으로 텍스트를 추출 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다. 경우에 따라 필터 구성 요소에는 `varbinary(max)` , 또는 `image` 데이터를 메모리에 밀어 넣는 대신 filterdata 폴더에 써야 합니다.
 
  수집된 텍스트 데이터는 처리 중에 단어 분리기를 통과하여 텍스트가 개별 토큰 또는 키워드로 분리됩니다. 토큰화에 사용되는 언어는 열 수준에서 지정되거나 필터 구성 요소로 `varbinary(max)`, `image` 또는 `xml` 데이터 내에서 식별할 수 있습니다.
 

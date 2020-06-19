@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924908"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936354"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>AlwaysOn 가용성 그룹 구성 문제 해결(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용할 수 없거나, 계정이 잘못 구성되거나, 데이터베이스 미러링 엔드포인트가 없거나, 엔드포인트에 액세스할 수 없거나(SQL Server 오류 1418), 네트워크 액세스 권한이 없거나, 데이터베이스 조인 명령이 실패(SQL Server 오류 35250)하는 경우가 일반적인 구성 문제에 해당합니다.
@@ -29,7 +28,7 @@ ms.locfileid: "82924908"
 
  **항목 내용:**
 
-|섹션|설명|
+|섹션|Description|
 |-------------|-----------------|
 |[AlwaysOn 가용성 그룹을 사용할 수 없음](#IsHadrEnabled)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 인스턴스를 사용할 수 없는 경우 해당 인스턴스는 가용성 그룹 만들기를 지원하지 않고 가용성 복제본을 호스팅할 수 없습니다.|
 |[계정](#Accounts)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 실행되고 있는 계정을 올바르게 구성하기 위한 요구 사항에 대해 설명합니다.|
@@ -130,7 +129,7 @@ ms.locfileid: "82924908"
 ##  <a name="read-only-routing-is-not-working-correctly"></a><a name="ROR"></a>읽기 전용 라우팅이 올바르게 작동 하지 않습니다.
  다음 구성 값 설정을 확인하고 필요한 경우 수정합니다.
 
-||On...|작업|의견|링크|
+||On...|작업|주석|링크|
 |------|---------|------------|--------------|----------|
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|가용성 그룹 수신기가 온라인 상태인지 확인합니다.|**수신기가 온라인 상태인지 여부를 확인하려면:**<br /><br /> `SELECT * FROM sys.dm_tcp_listener_states;`<br /><br /> **오프라인 수신기를 다시 시작하려면:**<br /><br /> `ALTER AVAILABILITY GROUP myAG RESTART LISTENER 'myAG_Listener';`|[sys.dm_tcp_listener_states&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|현재 주 복제본|READ_ONLY_ROUTING_LIST에 읽기 가능한 보조 복제본을 호스팅하는 서버 인스턴스만 포함되어 있는지 확인합니다.|**읽기 가능한 보조 복제본을 확인하려면:** sys.availability_replicas(**secondary_role_allow_connections_desc** 열)<br /><br /> **읽기 전용 라우팅 목록을 보려면:** sys.availability_read_only_routing_lists<br /><br /> **읽기 전용 라우팅 목록을 변경하려면:** ALTER AVAILABILITY GROUP|[sys.availability_replicas&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)<br /><br /> [sys.availability_read_only_routing_lists&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)<br /><br /> [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)|

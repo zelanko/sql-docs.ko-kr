@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d9d912a092e581fad7d3d53504309f63ba1806
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970023"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>데이터베이스 스냅샷 삭제(Transact-SQL)
   데이터베이스 스냅샷을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 스냅샷이 삭제되고 스냅샷에 사용된 스파스 파일도 삭제됩니다. 또한 데이터베이스 스냅샷에 대한 모든 사용자 연결이 종료됩니다.  

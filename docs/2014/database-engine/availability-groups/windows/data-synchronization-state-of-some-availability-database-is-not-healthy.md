@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89f95d15-33c6-4768-bccd-9dbf8c4f49a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 45f1479d96838ce69a7bde35cd2a2fbd9c7e684d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d128d38a1123e89b45dc3fdcaa0343aa5fd3d5b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936871"
 ---
 # <a name="data-synchronization-state-of-some-availability-database-is-not-healthy"></a>일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아님
     
@@ -28,11 +27,11 @@ ms.locfileid: "62814251"
 |||  
 |-|-|  
 |**정책 이름**|가용성 복제본 데이터 동기화 상태|  
-|**문제**|일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다.|  
+|**문제점**|일부 가용성 데이터베이스의 데이터 동기화 상태가 정상이 아닙니다.|  
 |**범주**|**Warning**|  
 |**패싯에**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 데이터베이스("데이터베이스 복제본"이라고도 함)의 데이터 동기화 상태를 확인합니다. 데이터 동기화 상태가 NOT SYNCHRONIZING이거나 동기 커밋 데이터베이스 복제본에 대한 상태가 SYNCHRONIZED 상태가 아닌 경우 정책은 비정상 상태에 있습니다.  
   
 > [!NOTE]  

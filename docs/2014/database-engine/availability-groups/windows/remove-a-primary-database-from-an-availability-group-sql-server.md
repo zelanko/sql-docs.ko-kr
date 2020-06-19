@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b6fafaf6464431d68f8cfdf9dc9d8fa844a42a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936602"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>가용성 그룹에서 주 데이터베이스 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 주 데이터베이스와 해당 보조 데이터베이스를 모두 제거하는 방법에 대해 설명합니다.  

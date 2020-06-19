@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962953"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
   **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  

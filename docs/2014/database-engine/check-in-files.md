@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 052859e4605162daa87789b5c61d2ef9d33d4177
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936044"
 ---
 # <a name="check-in-files"></a>파일 체크 인
   수정한 원본 제어 파일을 다른 사용자가 사용할 수 있게 만들려면 파일을 원본 제어로 체크 인해야 합니다. 파일을 체크 인하면 체크 인한 버전이 원본 제어 공급자에 기록되며 파일의 최신 버전이 됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "62812587"
   
 2.  **체크 인** 대화 상자가 나타나면 적절한 옵션을 선택한 다음 **확인**을 클릭합니다.  
   
-     **체크 인**  
+     **체크인**  
      선택한 항목을 모두 체크 인합니다.  
   
      **열**  
@@ -50,7 +49,7 @@ ms.locfileid: "62812587"
      **이름**  
      체크 인할 항목의 이름을 표시합니다. 항목은 옆에 있는 확인란이 선택된 상태로 나타납니다. 특정 항목을 체크 인하지 않으려면 확인란의 선택을 취소합니다.  
   
-     **옵션**  
+     **Options**  
      단추 오른쪽의 화살표를 클릭하면 원본 제어 플러그 인의 체크 인 옵션이 표시됩니다.  
   
      **정렬**  

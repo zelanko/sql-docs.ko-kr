@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4b6aabb1f44c2a25704b7079074a5600c4d52d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b3f78748ec380a40cd5dbd234a5a02ee58bc660
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919985"
 ---
 # <a name="back-up-database-task"></a>데이터베이스 백업 태스크
   데이터베이스 백업 태스크는 여러 가지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업을 수행합니다. 자세한 내용은 [SQL Server Database 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하세요.  

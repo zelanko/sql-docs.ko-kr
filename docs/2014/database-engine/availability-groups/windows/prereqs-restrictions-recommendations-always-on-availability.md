@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 078f38058c612037a8013f7955349e94d6db610e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936664"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>온라인 설명서의 AlwaysOn 가용성 그룹(SQL Server)에 대한 필수 구성 요소, 제한 사항 및 권장 사항
   이 항목에서는 호스트 컴퓨터, WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터, 서버 인스턴스 및 가용성 그룹에 대한 필수 구성 요소, 제한 사항 및 권장 사항을 비롯하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 배포할 때 고려해야 할 사항에 대해 설명합니다. 이러한 각 구성 요소에 대한 보안 고려 사항과 필요한 권한이 있는 경우 알려줍니다.  
@@ -65,11 +64,11 @@ ms.locfileid: "82925024"
 |------|---------------------------------|------------------------------------|------------------------------|-----------------|------------|----------|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**최적의 WSFC 쿼럼 구성**|각 WSFC 노드에 기술 자료 문서 2494036에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스는 자동이 아닌 장애 조치(Failover) 대상에 대한 최적의 쿼럼 구성을 지원합니다. 이 기능을 사용하면 투표할 노드를 선택할 수 있으므로 다중 사이트 클러스터가 향상됩니다.|KB 2494036:  [Windows Server 2008 및 Windows Server 2008 R2에서 쿼럼 투표가 없는 클러스터 노드를 구성하는 데 사용할 수 있는 핫픽스](https://support.microsoft.com/kb/2494036)<br /><br /> 쿼럼 투표에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**보다 효율적인 네트워크 대역폭 사용**|각 WSFC 노드에 기술 자료 문서 2616514에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스가 없으면 클러스터 서비스가 클러스터 노드 간에 불필요한 레지스트리 알림을 보냅니다. 이 동작은 네트워크 대역폭을 제한하며 [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]에 심각한 문제가 됩니다.|KB 2616514:  [Windows Server 2008 또는 Windows Server 2008 R2에서 클러스터 서비스가 클러스터 노드 간에 불필요한 레지스트리 키 변경 알림을 보낸다](https://support.microsoft.com/kb/2616514)|  
-|![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||예|해당 사항 없음|**일부 WSFC 노드에서 사용할 수 없는 디스크에 대한 VPD 스토리지 테스트**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행 중일 때 WSFC 클러스터의 모든 노드에 사용할 수 없는 온라인 상태의 디스크에서 이 서비스 팩을 잘못 실행한 후 SCSI 디바이스 VPD(Vital Product Data) 유효성 검사 스토리지 테스트가 실패할 경우 기술 자료 문서 2531907에 설명되어 있는 핫픽스를 설치해야 합니다.<br /><br /> 이 핫픽스를 사용하면 디스크가 온라인 상태일 때 유효성 검사 보고서에 잘못된 경고나 오류가 나타나지 않습니다.|KB 2531907: [Windows Server 2008 R2 SP1을 설치한 후 SCSI 디바이스 VPD(Vital Product Data) 유효성 검사 테스트가 실패함](https://support.microsoft.com/kb/2531907)|  
+|![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||예|적용할 수 없음|**일부 WSFC 노드에서 사용할 수 없는 디스크에 대한 VPD 스토리지 테스트**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행 중일 때 WSFC 클러스터의 모든 노드에 사용할 수 없는 온라인 상태의 디스크에서 이 서비스 팩을 잘못 실행한 후 SCSI 디바이스 VPD(Vital Product Data) 유효성 검사 스토리지 테스트가 실패할 경우 기술 자료 문서 2531907에 설명되어 있는 핫픽스를 설치해야 합니다.<br /><br /> 이 핫픽스를 사용하면 디스크가 온라인 상태일 때 유효성 검사 보고서에 잘못된 경고나 오류가 나타나지 않습니다.|KB 2531907: [Windows Server 2008 R2 SP1을 설치한 후 SCSI 디바이스 VPD(Vital Product Data) 유효성 검사 테스트가 실패함](https://support.microsoft.com/kb/2531907)|  
 |![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")||예|예|**로컬 복제본으로의 장애 조치(Failover) 성능 향상**|WSFC 노드에서 Windows Server 2008 R2 SP1(서비스 팩 1)을 실행하는 경우 기술 자료 문서 KB 2687741에 설명되어 있는 핫픽스가 설치되어 있는지 확인합니다.<br /><br /> 이 핫픽스를 사용하면 로컬 복제본으로의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 장애 조치(Failover) 성능이 향상됩니다.|KB 2687741:  [SQL Server 2012에 포함된 "AlwaysOn 가용성 그룹" 기능의 성능을 향상시키는 핫픽스를 Windows Server 2008 R2에 사용할 수 있음](https://support.microsoft.com/KB/2687741)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**FCIs (장애 조치 (Failover) 클러스터 인스턴스)에 대 한 비대칭 저장소**|FCI(장애 조치(Failover) 클러스터 인스턴스)가 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 설정되어 있는 경우 Windows Server 2008 핫픽스 976097을 설치해야 합니다.<br /><br /> 이 핫픽스를 사용 하면 장애 조치 (Failover) 클러스터 관리 MMC (Microsoft Management Console) 스냅인에서 일부 WSFC 노드에서만 사용할 수 있는 비대칭 저장소 공유 디스크를 지원할 수 있습니다.|KB 976097:  [Windows Server 2008 또는 Windows Server 2008 R2를 실행 중인 장애 조치(failover) 클러스터를 위한 장애 조치(Failover) 클러스터 관리 MMC 스냅인에 비대칭 스토리지에 대한 지원을 추가하는 핫픽스](https://support.microsoft.com/kb/976097)<br /><br /> [AlwaysOn 아키텍처 가이드: 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹을 사용하여 고가용성 및 재해 복구 솔루션 구축](https://technet.microsoft.com/library/jj215886.aspx)|  
-|![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|해당 사항 없음|**IPsec(인터넷 프로토콜 보안)**|IPsec 연결을 사용하는 환경에서는 클라이언트 컴퓨터에서 가상 네트워크 이름(이 컨텍스트의 경우 가용성 그룹 수신기)에 대한 IPSec 연결을 다시 설정할 때 시간이 많이 지연(약 2-3분)될 수 있습니다. IPsec 연결을 사용하는 경우 기술 자료 문서(KB 980915)에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 980915:  [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행 중인 컴퓨터에서 IPSec를 다시 연결할 때 긴 시간 지연 발생](https://support.microsoft.com/kb/980915)|  
-|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**Ipv6)**|IPv6을 사용하는 경우 Windows Server 운영 체제에 따라 기술 자료 문서 2578103 또는 2578113에 설명된 특정 시나리오를 검토하는 것이 좋습니다.<br /><br /> Windows Server 토폴로지에서 IP 버전 6(IPv6)을 사용하는 경우 WSFC 클러스터 서비스가 IPv6 IP 주소를 장애 조치(Failover)하는 데 30초 정도 걸립니다. 따라서 클라이언트에서 IPv6 IP 주소에 다시 연결하려면 약 30초 동안 기다려야 합니다.|KB 2578103(Windows Server 2008):  [클러스터 서비스가 Windows Server 2008에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113(Windows Server 2008 R2):  **Windows Server 2008 R2:** [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림](https://support.microsoft.com/kb/2578113)|  
+|![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|적용할 수 없음|**IPsec(인터넷 프로토콜 보안)**|IPsec 연결을 사용하는 환경에서는 클라이언트 컴퓨터에서 가상 네트워크 이름(이 컨텍스트의 경우 가용성 그룹 수신기)에 대한 IPSec 연결을 다시 설정할 때 시간이 많이 지연(약 2-3분)될 수 있습니다. IPsec 연결을 사용하는 경우 기술 자료 문서(KB 980915)에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 980915:  [Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 또는 Windows Server 2008 R2를 실행 중인 컴퓨터에서 IPSec를 다시 연결할 때 긴 시간 지연 발생](https://support.microsoft.com/kb/980915)|  
+|![확인란](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**IPv6**|IPv6을 사용하는 경우 Windows Server 운영 체제에 따라 기술 자료 문서 2578103 또는 2578113에 설명된 특정 시나리오를 검토하는 것이 좋습니다.<br /><br /> Windows Server 토폴로지에서 IP 버전 6(IPv6)을 사용하는 경우 WSFC 클러스터 서비스가 IPv6 IP 주소를 장애 조치(Failover)하는 데 30초 정도 걸립니다. 따라서 클라이언트에서 IPv6 IP 주소에 다시 연결하려면 약 30초 동안 기다려야 합니다.|KB 2578103(Windows Server 2008):  [클러스터 서비스가 Windows Server 2008에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림](https://support.microsoft.com/kb/2578103)<br /><br /> KB 2578113(Windows Server 2008 R2):  **Windows Server 2008 R2:** [클러스터 서비스가 Windows Server 2008 R2에서 IPv6 IP 주소를 장애 조치하는 데 30초 정도 걸림](https://support.microsoft.com/kb/2578113)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|예|예|예|**클러스터 및 애플리케이션 서버 간에 라우터가 없음**|장애 조치(Failover) 클러스터와 애플리케이션 서버 사이에 라우터가 없는 경우 클러스터 서비스가 네트워크 관련 리소스를 느리게 장애 조치(Failover)합니다. 이에 따라 가용성 그룹이 장애 조치된 후 클라이언트 재연결이 지연됩니다. 라우터가 없으면 해당 환경에 적용 가능한 경우 기술 자료 문서 2582281에 설명된 특정 시나리오를 검토하는 것이 좋습니다.|KB 2582281:  [클러스터와 애플리케이션 서버 사이에 라우터가 없는 경우 장애 조치(Failover) 작업이 느려진다](https://support.microsoft.com/kb/2582281)|  
   
 ###  <a name="recommendations-for-computers-that-host-availability-replicas-windows-system"></a><a name="ComputerRecommendations"></a>가용성 복제본을 호스팅하는 컴퓨터에 대 한 권장 사항 (Windows 시스템)  
@@ -99,7 +98,7 @@ ms.locfileid: "82925024"
   
 3.  다음과 같이 `Get-ClusterResource` Cmdlet을 사용하여 네트워크 이름 리소스를 찾은 다음 `Set-ClusterParameter` Cmdlet을 사용하여 `HostRecordTTL` 값을 설정합니다.  
   
-     Get-clusterresource "* \< networkresourcename>*" | HostRecordTTL * \< TimeInSeconds>* 을 설정 합니다.  
+     Get-clusterresource " *\<NetworkResourceName>* " | HostRecordTTL 매개 변수를 설정 합니다.*\<TimeInSeconds>*  
   
      다음 PowerShell 예에서는 "`SQL Network Name (SQL35)`"이라는 네트워크 이름 리스스에 대해 HostRecordTTL을 300초로 설정합니다.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "82925024"
   
 ###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a>검사 목록: 필수 구성 요소 (서버 인스턴스)  
   
-||필수 조건|링크|  
+||필수 요소|링크|  
 |-|------------------|-----------|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|호스트 컴퓨터는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 노드여야 합니다. 지정된 가용성 그룹의 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 단일 WSFC 클러스터의 개별 노드에 있어야 합니다. 유일한 예외는 다른 WSFC 클러스터로 마이그레이션되는 동안 가용성 그룹이 일시적으로 두 클러스터에 걸쳐 있는 경우입니다.|[SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [장애 조치 (Failover) 클러스터링 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹이 Kerberos로 작동하도록 하려는 경우:<br /><br /> 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스는 동일한 SQL Server 서비스 계정을 사용해야 합니다.<br /><br /> 도메인 관리자는 가용성 그룹 수신기의 VNN(가상 네트워크 이름)에 대해 SQL Server 서비스 계정에서 Active Directory에 SPN(서비스 사용자 이름)을 수동으로 등록해야 합니다. SQL Server 서비스 계정이 아닌 다른 계정에 SPN이 등록된 경우 인증이 실패합니다.<br /><br /> 중요 SQL Server 서비스 계정을 변경 하면 도메인 관리자가 SPN을 수동으로 다시 등록 해야 합니다. ** \* \* \* \* **|[Kerberos 연결의 서비스 사용자 이름 등록](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **간략한 설명:**<br /><br /> Kerberos 및 SPN은 상호 인증을 강제 적용합니다. SPN은 SQL Server 서비스를 시작하는 Windows 계정에 매핑됩니다. SPN이 올바르게 등록되지 않았거나 실패하면, Windows 보안 계층이 SPN과 연결된 계정을 확인할 수 없으며, Kerberos 인증을 사용할 수 없습니다.<br /><br /> 참고: NTLM에는 이러한 요구 사항이 없습니다.|  
@@ -218,7 +217,7 @@ ms.locfileid: "82925024"
   
 ###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a>검사 목록: 필수 구성 요소 (FCIs)  
   
-||필수 조건|링크|  
+||필수 요소|링크|  
 |-|------------------|----------|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|FCI를 사용하여 가용성 복제본을 호스팅하기 전에 시스템 관리자가 기술 자료 문서 KB 976097에 설명된 Windows Server 2008 핫픽스를 설치했는지 확인합니다. 이 핫픽스를 사용 하면 장애 조치 (Failover) 클러스터 관리 MMC (Microsoft Management Console) 스냅인에서 일부 WSFC 노드에서만 사용할 수 있는 비대칭 저장소 공유 디스크를 지원할 수 있습니다.|KB 976097:  [Windows Server 2008 또는 Windows Server 2008 R2를 실행 중인 장애 조치(failover) 클러스터를 위한 장애 조치(Failover) 클러스터 관리 MMC 스냅인에 비대칭 스토리지에 대한 지원을 추가하는 핫픽스](https://support.microsoft.com/kb/976097)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|각 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스)에 SQL Server FCI(장애 조치(Failover) 클러스터 인스턴스 설치별로 필요한 공유 스토리지가 있는지 확인합니다.||  

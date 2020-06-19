@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6d0d9249a5cfb801e07a85132060bb4d1781346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f49ac00114065e971c0893f9217ab883eb2d7f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63251096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047903"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, Latches 개체
   Microsoft **의** SQLServer:Latches [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 래치라고 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 리소스 잠금을 모니터링하는 카운터를 제공합니다. 래치를 모니터링하면 사용자 동작 및 리소스 사용을 확인해 성능 병목 상태를 찾아낼 때 유용합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dff347bd0aee1211093d9e3406a24670a80e7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db2f56befe6905b9c3de6bd1ab6a2e5a4a00b1b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928484"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>가용성 그룹을 오프라인 상태로 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[tsql](../includes/tsql-md.md)] 이상 버전에서 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 을 사용하여 AlwaysOn 가용성 그룹을 ONLINE 상태에서 OFFLINE 상태로 변경하는 방법에 대해 설명합니다. 동기 커밋 복제본이 동기화되지 않을 경우 OFFLINE 작업이 오류를 발생시키고 가용성 그룹을 ONLINE 상태로 유지하기 때문에 동기 커밋 데이터베이스의 데이터는 손실되지 않습니다. 가용성 그룹을 온라인 상태로 유지하면 데이터 손실이 발생하지 않도록 동기화되지 않은 동기화 커밋 데이터베이스가 보호됩니다. 가용성 그룹이 오프라인 상태로 전환된 후에는 클라이언트에서 해당 데이터베이스를 사용할 수 없게 되고 사용자가 가용성 그룹을 다시 온라인 상태로 전환할 수 없습니다. 따라서 WSFC 클러스터 간에 가용성 그룹 리소스를 마이그레이션하려는 경우에만 가용성 그룹을 오프라인으로 전환해야 합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "75228167"
 > [!CAUTION]  
 >  OFFLINE 옵션은 가용성 그룹 리소스의 클러스터 간 마이그레이션에만 사용합니다.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
   
 -   OFFLINE 명령을 입력하는 서버 인스턴스에서 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 이상(Enterprise Edition 이상)을 실행해야 합니다.  
   

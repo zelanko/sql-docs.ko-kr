@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812302"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935864"
 ---
 # <a name="change-server-authentication-mode"></a>서버 인증 모드 변경
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 서버 인증 모드를 변경하는 방법에 대해 설명합니다. 설치하는 동안 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 **Windows 인증 모드** 또는 **SQL Server 및 Windows 인증 모드**로 설정됩니다. 설치 후 언제든지 인증 모드를 변경할 수 있습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "62812302"
   
 #### <a name="to-enable-the-sa-login"></a>sa 로그인을 사용하려면  
   
-1.  개체 탐색기에서 **보안**, 로그인을 차례로 확장 하 고를 마우스 `sa`오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+1.  개체 탐색기에서 **보안**, 로그인을 차례로 확장 하 고를 마우스 오른쪽 단추로 클릭 한 `sa` 다음 **속성**을 클릭 합니다.  
   
 2.  **일반** 페이지에서 로그인에 대한 암호를 만들고 확인할 수 있습니다.  
   

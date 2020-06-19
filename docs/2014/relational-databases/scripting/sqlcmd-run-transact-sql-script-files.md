@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ba44f1bf0906dfd4265ce07cf6f7dd5d350ee5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703682"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063411"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행
   `sqlcmd`를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, `sqlcmd` 명령 및 스크립팅 변수의 조합을 포함할 수 있는 텍스트 파일입니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "82703682"
  출력이 명령 프롬프트 창에 반환되는 대신 EmpAdds.txt 파일에 보내집니다. EmpAdds.txt 파일을 열어서 이 출력을 확인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
+ [sqlcmd 유틸리티 시작](sqlcmd-start-the-utility.md)   
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)  
   
   

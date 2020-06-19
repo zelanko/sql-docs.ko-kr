@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91ac39b10cc5670a7b6a8a5243c19334d15989f3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955117"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전에서는 결과나 출력 매개 변수를 호출 클라이언트로 보내는 저장 프로시저(또는 확장 저장 프로시저)를 작성하는 것이 일반적이었습니다.  

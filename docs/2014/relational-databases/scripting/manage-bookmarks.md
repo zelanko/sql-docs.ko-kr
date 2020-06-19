@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9e42b6b4bd33bc3c0212615bc9e89f2d06426e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c20b7008ca447e278dd07e9c483a3147117dbf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063397"
 ---
 # <a name="manage-bookmarks"></a>책갈피 관리
   코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936726"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹, 복제본 및 연결된 데이터베이스를 모니터링할 수 있도록 여러 카탈로그 및 동적 관리 뷰와 서버 속성을 제공합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문을 사용하여 뷰를 통해 가용성 그룹과 해당 복제본 및 데이터베이스를 모니터링할 수 있습니다. 지정된 가용성 그룹에 대해 반환되는 정보는 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 주 복제본을 호스팅 중인지 아니면 보조 복제본을 호스팅 중인지에 따라 다릅니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "62789822"
 > [!NOTE]  
 >  또한 나중에 이 항목에 있는 [가용성 복제본 모니터링](#AvReplicas) 섹션에서 **sys.dm_hadr_availability_replica_cluster_nodes** 및 **sys.dm_hadr_availability_replica_cluster_states**를 참조하고 [가용성 데이터베이스 모니터링](#AvDbs) 섹션에서 **sys.availability_databases_cluster** 및 **sys.dm_hadr_database_replica_cluster_states**를 참조하세요.  
   
- WSFC 클러스터 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대 한 자세한 내용은 [Windows Server 장애 조치 (failover) 클러스터링 &#40;wsfc&#41; SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 및 [장애 조치 (failover) 클러스터링 및 AlwaysOn 가용성 그룹 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;을 참조 하세요.  
+ WSFC 클러스터 및에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] [Windows Server 장애 조치 (Failover) 클러스터링 &#40;wsfc&#41; SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) 및 [장애 조치 (failover) 클러스터링 및 AlwaysOn 가용성 그룹 &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;을 참조 하세요.  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>가용성 그룹 모니터링  
  서버 인스턴스가 가용성 복제본을 호스팅하는 가용성 그룹을 모니터링하려면 다음 뷰를 사용합니다.  
@@ -148,7 +147,7 @@ ms.locfileid: "62789822"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다. 데이터베이스가 가용성 복제본에 속하는 경우 해당 데이터베이스의 행에 복제본의 GUID와 가용성 그룹 내의 데이터베이스에 대한 고유 식별자가 표시됩니다.  
   
- 열 이름: replica_id, group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 열 이름:** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  서버 인스턴스가 모든 가용성 그룹에 대해 호스팅하는 가용성 복제본의 모든 가용성 데이터베이스에 대해 수행하는 자동 페이지 복구 시도당 한 개의 행을 반환합니다. 이 뷰에는 지정된 주 데이터베이스 또는 보조 데이터베이스의 최신 자동 페이지 복구 시도에 대한 행이 포함됩니다(데이터베이스당 최대 100개 행). 데이터베이스가 최대값에 도달하는 즉시 다음 자동 페이지 복구 시도에 대한 행이 기존 항목 중 하나를 대체합니다.  

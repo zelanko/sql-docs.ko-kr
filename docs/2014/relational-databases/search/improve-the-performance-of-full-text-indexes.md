@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011256"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063245"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
   전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "66011256"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>전체 텍스트 인덱스의 성능 튜닝  
  전체 텍스트 인덱스의 성능을 극대화하려면 다음과 같은 방법을 구현하는 것이 가장 좋습니다.  
   
--   모든 프로세서 또는 코어를 최대로 사용 하려면 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`'를 시스템의 cpu 수로 설정 합니다. 이 구성 옵션에 대한 자세한 내용은 [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)을 참조하세요.  
+-   모든 프로세서 또는 코어를 최대로 사용 하려면 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` '를 시스템의 cpu 수로 설정 합니다. 이 구성 옵션에 대한 자세한 내용은 [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)을 참조하세요.  
   
 -   기본 테이블에 클러스터형 인덱스가 있는지 확인합니다. 클러스터형 인덱스의 첫 번째 열에 정수 데이터 형식을 사용합니다. 클러스터형 인덱스의 첫 번째 열에 GUID를 사용하지 않아야 합니다. 클러스터형 인덱스에 다중 범위 채우기가 있을 경우 채우기 속도가 가장 빨라질 수 있습니다. 전체 텍스트 키로 사용하는 열을 정수 데이터 형식으로 설정하는 것이 좋습니다.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66011256"
   
  필터 데몬 호스트에서 사용되는 메모리(바이트)는 다음 수식을 사용하여 대략적으로 계산할 수 있습니다.  
   
- *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \` ism_size '*max_outstanding_isms* \* 2  
   
  이 수식에서 변수 기본값은 다음과 같습니다.  
   
@@ -126,12 +125,12 @@ ms.locfileid: "66011256"
 > [!IMPORTANT]  
 >  수식에 대 한 필수 정보는 아래의 <sup>1</sup>, <sup>2</sup>, <sup>3</sup>을 참조 하세요.  
   
-|플랫폼|Fdhost 메모리 요구 사항 예상 (MB)-*F*<sup>1</sup>|최대 서버 메모리 계산 수식-*M*<sup>2</sup>|  
+|플랫폼|MB 단위로 fdhost.exe 메모리 요구 사항 예측-*F*<sup>1</sup>|최대 서버 메모리 계산 수식-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _탐색 범위 수_ **&#42;** 50|_M_ **= 최소 (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_F_ **=** _탐색 범위 수_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** _탐색 범위 수_ **&#42;** 50|_M_ **= 최소 (** _T_ **,** 2000 **)- *`F`* - ** 500|  
+|X64|_F_ **=** _탐색 범위 수_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> 여러 전체 채우기가 진행 중인 경우 *F1*, *F2*등을 통해 각각의 fdhost 메모리 요구 사항을 개별적으로 계산 합니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
+ <sup>1</sup> 전체 채우기가 여러 개 있는 경우 각각의 fdhost.exe 메모리 요구 사항을 *F1*, *F2*등으로 개별적으로 계산 합니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
   
  <sup>2</sup> 500는 시스템의 다른 프로세스에 필요한 예상 메모리 크기입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011256"
   
  `F = 8*10*8=640`  
   
- 다음 계산은 `max server memory` - *M*에 대 한 최적 값을 구합니다. *T*이 시스템에서 사용 가능한 총 실제 메모리 (*MB)입니다* `8192`.  
+ 다음 계산은 M에 대 한 최적 값을 구합니다 `max server memory` - *M*. *T*이 시스템에서 사용 가능한 총 실제 메모리 (*MB)입니다* `8192` .  
   
  `M = 8192-640-500=7052`  
   
  **예: 최대 서버 메모리 설정**  
   
- 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 하 여 `max server memory` 를 앞의 예제에서 *M* 에 대해 계산 된 값 `7052`으로 설정 합니다.  
+ 이 예에서는 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) 및 [RECONFIGURE](/sql/t-sql/language-elements/reconfigure-transact-sql) 문을 사용 하 여를 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 앞의 `max server memory` 예제에서 *M* 에 대해 계산 된 값으로 설정 합니다 `7052` .  
   
 ```  
 USE master;  
@@ -179,7 +178,7 @@ GO
   
      다음 표에서는 몇 가지 흥미로운 대기 유형을 설명합니다.  
   
-    |대기 유형|설명|가능한 해결 방법|  
+    |대기 유형|Description|가능한 해결 방법|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH(_EX 또는 _UP)|IO 병목 상태를 나타내며, 이 경우 일반적으로 평균 디스크 큐 길이가 깁니다.|전체 텍스트 인덱스를 다른 디스크의 다른 파일 그룹으로 이동하면 IO 병목 상태가 줄어들 수 있습니다.|  
     |PAGELATCH_EX(또는 _UP)|동일한 데이터베이스 파일에 쓰기를 시도하고 있는 스레드 간에 경합이 많이 발생하고 있음을 나타냅니다.|전체 텍스트 인덱스가 상주하는 파일 그룹에 파일을 추가하면 이러한 경합을 완화할 수 있습니다.|  
@@ -203,7 +202,7 @@ GO
   
  보안상의 이유로 필터는 필터 데몬 호스트 프로세스에 의해 로드됩니다. 서버 인스턴스는 모든 다중 스레드 필터에 대해 다중 스레드 프로세스를 사용하고 모든 단일 스레드 필터에 대해 단일 스레드 프로세스를 사용합니다. 다중 스레드 필터를 사용하는 문서에 단일 스레드 필터를 사용하는 포함 문서가 있을 경우 전체 텍스트 엔진은 해당 포함 문서에 대해 단일 스레드 프로세스를 시작합니다. 예를 들어 PDF 문서가 포함된 Word 문서가 있을 경우 전체 텍스트 엔진은 Word 콘텐츠에 대해 다중 스레드 프로세스를 사용하고 PDF 콘텐츠에 대해 단일 스레드 프로세스를 시작합니다. 그러나 이러한 환경에서는 단일 스레드 필터가 제대로 작동하지 않을 수 있으며 이로 인해 필터링 프로세스가 불안정해질 수 있습니다. 이러한 포함 작업이 자주 수행되는 특정 환경에서는 필터링 프로세스 불안정화로 인해 해당 프로세스가 충돌할 수 있습니다. 충돌이 발생하면 전체 텍스트 엔진은 실패한 문서(예: 포함된 PDF 콘텐츠가 있는 Word 문서)를 단일 스레드 필터링 프로세스로 모두 다시 라우팅합니다. 다시 라우팅 작업이 자주 발생하면 전체 텍스트 인덱싱 프로세스의 성능이 저하됩니다.  
   
- 이 문제를 해결하려면 컨테이너 문서(이 경우 Word)의 필터를 단일 스레드 필터로 표시합니다. 필터 레지스트리 값을 변경하여 지정된 필터를 단일 스레드 필터로 표시할 수 있습니다. 필터를 단일 스레드 필터로 표시 하려면 필터에 대 한 **ThreadingModel** 레지스트리 값을로 `Apartment Threaded`설정 해야 합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](https://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
+ 이 문제를 해결하려면 컨테이너 문서(이 경우 Word)의 필터를 단일 스레드 필터로 표시합니다. 필터 레지스트리 값을 변경하여 지정된 필터를 단일 스레드 필터로 표시할 수 있습니다. 필터를 단일 스레드 필터로 표시 하려면 필터에 대 한 **ThreadingModel** 레지스트리 값을로 설정 해야 `Apartment Threaded` 합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](https://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
   
   
   

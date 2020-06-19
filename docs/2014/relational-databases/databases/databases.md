@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea3da64ce6da8cbcb32b5854f14e8d24349c0c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154580"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970085"
 ---
 # <a name="databases"></a>데이터베이스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "70154580"
 |||  
 |-|-|  
 |[시스템 데이터베이스](system-databases.md)|[데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)|  
-|[포함 된 데이터베이스](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
+|[포함된 데이터베이스](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
 |[Azure의 SQL Server 데이터 파일](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
 |[데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)|[데이터베이스 이름 바꾸기](rename-a-database.md)|  
 |[데이터베이스 상태](database-states.md)|[단일 사용자 모드로 데이터베이스 설정](set-a-database-to-single-user-mode.md)|  
@@ -57,7 +56,7 @@ ms.locfileid: "70154580"
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../indexes/indexes.md)  
   
- [보기](../views/views.md)  
+ [뷰](../views/views.md)  
   
  [저장 프로시저&#40;데이터베이스 엔진&#41;](../stored-procedures/stored-procedures-database-engine.md)  
   

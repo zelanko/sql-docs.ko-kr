@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936804"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 시작(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 지원하도록 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 구성하고, 가용성 그룹을 만들고 관리하고 모니터링하기 위한 단계를 소개합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "75228761"
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**보조 복제본을 가용성 그룹에 조인 합니다.** 보조 복제본을 호스팅하는 각 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 인스턴스에 연결한 다음 로컬 보조 복제본을 가용성 그룹에 조인합니다.|[가용성 그룹에 보조 복제본 조인](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> 팁: 새 가용성 그룹 마법사를 사용하는 경우 이 단계가 자동으로 수행됩니다.|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**보조 데이터베이스를 준비합니다.** 보조 복제본을 호스팅하는 각 서버 인스턴스에서 RESTORE WITH NORECOVERY를 사용하여 주 데이터베이스의 백업을 복원합니다.|[보조 데이터베이스 수동 준비](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> 팁: 새 가용성 그룹 마법사는 보조 데이터베이스를 자동으로 준비할 수 있습니다. 자세한 내용은 [초기 데이터 동기화 선택 페이지&#40;AlwaysOn 가용성 그룹 마법사&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)에서 "전체 초기 데이터 동기화를 사용하기 위한 필수 조건"을 참조하세요.|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**가용성 그룹에 보조 데이터베이스를 조인합니다.** 보조 복제본을 호스팅하는 모든 서버 인스턴스에서 각 로컬 보조 데이터베이스를 가용성 그룹에 조인합니다. 가용성 그룹을 조인하면 지정된 보조 데이터베이스가 해당 주 데이터베이스와의 데이터 동기화를 시작합니다.|[가용성 그룹에 보조 데이터베이스 조인](join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> 팁: 모든 보조 복제본에 모든 보조 데이터베이스가 있는 경우 새 가용성 그룹 마법사가 이 단계를 수행할 수 있습니다.|  
-||**가용성 그룹 수신기를 만듭니다.**  이 단계는 가용성 그룹을 만드는 중 가용성 그룹 수신기를 아직 만들지 않은 경우에 필요합니다.|[SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)|  
+||**가용성 그룹 수신기를 만듭니다.**  이 단계는 가용성 그룹을 만드는 중 가용성 그룹 수신기를 아직 만들지 않은 경우에 필요합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**애플리케이션 개발자에 수신기의 DNS 이름을 제공합니다.**  개발자가 연결 요청을 가용성 그룹 수신기에 연결하기 위해서는 연결 문자열에 이 DNS 이름을 지정해야 합니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)를 참조하세요.|“후속 작업: 가용성 그룹 수신기를 만든 후”( [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|**백업 작업 위치를 구성합니다.**  보조 데이터베이스에서 백업을 수행하려면 자동화된 백업 기본 설정을 고려하는 백업 작업 스크립트를 만들어야 합니다. 가용성 그룹의 가용성 복제본을 호스팅하는 각 서버 인스턴스에서 가용성 그룹의 각 데이터베이스에 대해 스크립트를 만듭니다.|"후속 작업: 보조 복제본에 백업을 구성한 후"([가용성 복제본에 백업 구성&#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md))|  
   
@@ -98,7 +97,7 @@ ms.locfileid: "75228761"
  [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 서버 인스턴스 구성&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
- [SQL Server&#41;&#40;가용성 그룹 만들기 및 구성](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 Transact-sql 문 개요&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server에 대 한 PowerShell Cmdlet 개요&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

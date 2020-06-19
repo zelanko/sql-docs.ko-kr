@@ -18,19 +18,18 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936624"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>진행률 페이지(AlwaysOn 가용성 그룹 마법사)
   이 대화 상자를 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 실행 중인 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]마법사의 진행률을 볼 수 있습니다. 진행률 표시줄에는 마법사에서 수행 중인 단계의 상대적 진행률이 표시됩니다.  
   
 ## <a name="ui-element-list"></a>UI 요소 목록  
- **자세한 내용**  
+ **자세한 정보**  
  아래쪽 화살표를 클릭하여 완료된 단계와 현재 진행 중인 작업을 순서대로 나열하는 진행률 표를 표시합니다. 표에는 다음 열이 있습니다.  
   
  **이름**  
@@ -39,7 +38,7 @@ ms.locfileid: "83858705"
  **상태**  
  완료된 단계의 결과와 현재 단계의 완료 비율을 다음과 같이 나타냅니다.  
   
-|결과|설명|  
+|결과|Description|  
 |------------|-----------------|  
 |**오류**|이 단계의 작업에서 오류가 발생했음을 나타냅니다. 오류를 설명하는 메시지 대화 상자를 표시하려면 링크를 클릭합니다.|  
 |**진행 중 (** *% 완료* **)**|작업이 지금 수행되고 있음을 나타내고 이 단계의 완료율을 추정합니다.|  

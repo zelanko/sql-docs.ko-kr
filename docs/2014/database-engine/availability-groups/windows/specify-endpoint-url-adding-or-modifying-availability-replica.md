@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1eb2bacd4d5a2f7d0b2a623343f62b5e89597d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936402"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>가용성 복제본 추가 또는 수정 시 엔드포인트 URL 지정(SQL Server)
   가용성 그룹에 대한 가용성 복제본을 호스팅하려면 서버 인스턴스에서 데이터베이스 미러링 엔드포인트를 처리해야 합니다. 서버 인스턴스는 이 엔드포인트를 사용하여 다른 서버 인스턴스에서 호스팅하는 가용성 복제본의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 메시지를 수신합니다. 가용성 그룹에 대한 가용성 복제본을 정의하려면 복제본을 호스팅하는 서버 인스턴스의 엔드포인트 URL을 지정해야 합니다. *끝점 URL* 은 데이터베이스 미러링 끝점의 전송 프로토콜인 TCP, 서버 인스턴스의 시스템 주소, 끝점과 연결 된 포트 번호를 식별 합니다.  
@@ -39,11 +38,11 @@ ms.locfileid: "72797973"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a> 엔드포인트 URL의 구문  
  엔드포인트 URL의 구문은 다음 형식을 사용합니다.  
   
- TCP:<strong>//</strong>*\<시스템 주소>* <strong>:</strong>*\<포트>*  
+ TCP:<strong>//</strong> *\<system-address>* <strong>:</strong>*\<port>*  
   
- where  
+ 라는 설치 관리자 실행 파일에 포함됩니다. 여기서  
   
--   시스템 주소>는 대상 컴퓨터 시스템을 명확 하 게 식별 하는 문자열입니다. * \<* 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
+-   *\<system-address>* 는 대상 컴퓨터 시스템을 명확 하 게 식별 하는 문자열입니다. 일반적으로 서버 주소는 시스템 이름(시스템이 같은 도메인에 있는 경우), 정규화된 도메인 이름 또는 IP 주소입니다.  
   
     -   WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드는 같은 도메인에 있으므로 컴퓨터 시스템의 이름(예: `SYSTEM46`)을 사용할 수 있습니다.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "72797973"
   
          도메인 세그먼트의 내용과 개수는 회사 또는 조직 내에서 결정됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [정규화된 도메인 이름 찾기](#Finding_FQDN)를 참조하세요.  
   
--   port>는 파트너 서버 인스턴스의 미러링 끝점에서 사용 하는 포트 번호입니다. * \<*  
+-   *\<port>* 파트너 서버 인스턴스의 미러링 끝점에서 사용 하는 포트 번호입니다.  
   
      데이터베이스 미러링 엔드포인트는 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 각 포트 번호는 하나의 엔드포인트에만 연결되어야 하고 각 엔드포인트는 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 엔드포인트에서 수신합니다. 따라서 가용성 복제본을 지정할 때 엔드포인트 URL에서 지정하는 포트는 항상 들어오는 메시지를 엔드포인트가 해당 포트와 연결된 서버 인스턴스로 지정합니다.  
   
@@ -151,6 +150,6 @@ ms.locfileid: "72797973"
 -   [고가용성 및 재해 복구를 위한 Microsoft SQL Server AlwaysOn 솔루션 가이드](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server&#41;&#40;가용성 그룹 만들기 및 구성](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  

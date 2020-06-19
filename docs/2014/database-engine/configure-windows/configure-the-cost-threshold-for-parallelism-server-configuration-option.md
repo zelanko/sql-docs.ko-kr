@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae87ebd3afa2ee49b55471be4d955cbb4d894ca7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 675055a753e84ace3a4fcb44b41b8c914326c5c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935774"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>cost threshold for parallelism 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 병렬 처리에 대한 비용 임계값 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **cost threshold for parallelism** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 쿼리에 대한 병렬 계획을 만들고 실행하는 임계값을 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 동일한 쿼리의 직렬 계획을 실행하는 데 드는 예상 비용이 **병렬 처리에 대한 비용 임계값**에 설정된 값보다 높은 경우에만 해당 쿼리에 대한 병렬 계획을 만들고 실행합니다. 이 비용은 특정 하드웨어 구성에서 직렬 계획을 실행하는 데 필요한 예상 경과 시간(초)을 참조합니다. **병렬 처리에 대한 비용 임계값** 옵션은 0에서 32767 사이의 모든 값으로 설정할 수 있으며 기본값은 5입니다.  
@@ -113,9 +112,9 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)   
- [Transact-sql&#41;&#40;쿼리 힌트](/sql/t-sql/queries/hints-transact-sql-query)   
+ [쿼리 힌트&#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
  [ALTER 작업 그룹 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-workload-group-transact-sql)   
- [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
+ [선호도 마스크 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [서버 구성 옵션&#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fc8b4e5a5d6741dd11faf4c846db7862a7254db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032328"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027607"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 함수
   지정된 공유 이름을 사용하여 컴퓨터의 다른 사용자와 함께 지정된 SQL Server Express LocalDB 인스턴스를 공유합니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f96be882208a9570c36ef8da63f1efb265f752f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027256"
 ---
 # <a name="use-the-system_health-session"></a>system_health 세션 사용
   system_health 세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 기본적으로 포함된 확장 이벤트 세션입니다. 이 세션은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 이 시작될 때 자동으로 시작되며 성능에 별다른 영향을 주지 않고 실행됩니다. 이 세션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 성능 문제를 해결하는 데 사용할 수 있는 시스템 데이터를 수집합니다. 따라서 이 세션은 중지하거나 삭제하지 않는 것이 좋습니다.  
@@ -70,7 +69,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-system_health-session"></a>system_health 세션 복원  
  system_health 세션을 삭제한 경우 쿼리 편집기에서 **u_tables.sql** 파일을 실행하여 세션을 복원할 수 있습니다. 이 파일은 다음 폴더에 있으며 여기서 C:는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램 파일을 설치한 드라이브를 나타냅니다.  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *instanceid*> \mssql\install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \<*instanceid*> \MSSQL\Install  
   
  세션을 복원한 후에는 ALTER EVENT SESSION 문을 사용하거나 개체 탐색기에서 **확장 이벤트** 노드를 사용하여 세션을 시작해야 합니다. 그렇지 않으면 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작할 때 세션이 자동으로 시작됩니다.  
   

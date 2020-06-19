@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5bd2489-097a-490e-8ea1-34fe48378ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39ee8bfc079445e177aa9b175019ae385b9f9f36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c38c2d59a46b15fc9a1dca77ae6a67e8e59e1b80
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936767"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 조인(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 보조 복제본을 조인하는 방법에 대해 설명합니다. AlwaysOn 가용성 그룹에 보조 복제본을 추가한 후에는 보조 복제본을 가용성 그룹에 조인해야 합니다. 복제본 조인 작업은 보조 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 수행해야 합니다.  
@@ -125,6 +124,6 @@ ms.locfileid: "72797662"
 2.  가용성 그룹에 각 보조 데이터베이스를 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server&#41;&#40;가용성 그룹 만들기 및 구성](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [삭제&#41;SQL Server AlwaysOn 가용성 그룹 구성 &#40;문제 해결](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955363"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
   FileTable이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 기능과 함께 작동하는 방식에 대해 설명합니다.  
@@ -80,14 +79,14 @@ ms.locfileid: "66010148"
 -   관리 작업이나 데이터베이스 충돌로 인해 Win32 핸들이 명시적으로 중지된 경우와 같이 Win32 핸들이 비정상적으로 종료된 경우에는 이 비정상적으로 종료된 Win32 애플리케이션에서 FILESTREAM 내용을 변경했더라도 복구 작업 중 사용자 트리거가 실행되지 않습니다.  
   
 ##  <a name="views-and-filetables"></a><a name="OtherViews"></a>뷰 및 Filetable  
- **보기**  
+ **뷰**  
  다른 테이블과 마찬가지로 FileTable에서도 뷰를 만들 수 있습니다. 그러나 FileTable에서 만든 뷰에는 다음 고려 사항이 적용됩니다.  
   
 -   뷰에는 FileTable 의미 체계가 없습니다. 즉, 파일 특성 열을 비롯한 뷰의 열은 특별한 의미 체계가 없는 일반적인 뷰 열처럼 동작하며, 이는 파일/디렉터리를 나타내는 행에도 동일하게 적용됩니다.  
   
 -   "업데이트 가능한 뷰" 의미 체계에 따라 뷰를 업데이트할 수 있지만 테이블에서와 마찬가지로 기본 테이블 제약 조건에 따라 업데이트가 거부될 수 있습니다.  
   
--   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 예를 들어:  
+-   파일의 경로를 뷰의 명시적 열로 추가하여 뷰에 시각화할 수 있습니다. 다음은 그 예입니다.  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

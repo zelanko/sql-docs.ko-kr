@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3644ecee04dd177c792efcb02ad75f91baa46c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928298"
 ---
 # <a name="trace-properties-events-selection-tab"></a>추적 속성(이벤트 선택 탭)
   **추적 속성** 대화 상자의 **이벤트 선택** 탭을 사용하여 추적된 이벤트 및 데이터 열의 속성을 확인하거나 지정할 수 있습니다.  

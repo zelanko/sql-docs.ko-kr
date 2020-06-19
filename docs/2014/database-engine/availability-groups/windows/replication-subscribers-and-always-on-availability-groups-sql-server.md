@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8985a8758f3e9be0bf15f48283f20220a47ece84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936545"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>복제 구독자 및 AlwaysOn 가용성 그룹(SQL Server)
   복제 구독자인 데이터베이스를 포함하는 AlwaysOn 가용성 그룹이 장애 조치(Failover)되면 복제 구독은 실패할 수 있습니다. 트랜잭션 복제 밀어넣기 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었다면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 트랜잭션 복제 풀 구독자의 경우 AG 수신기 이름을 사용하여 구독이 생성되었고 원래 구독자 서버가 실행 중이라면 장애 조치(failover) 후에 배포 에이전트가 자동으로 계속 복제합니다. 이는 배포 에이전트 작업이 원래 구독자 서버(AG의 주 복제본)에서만 생성되기 때문입니다. 병합 구독자의 경우 복제 관리자가 복제를 다시 만들어 수동으로 구독자를 다시 구성해야 합니다.  

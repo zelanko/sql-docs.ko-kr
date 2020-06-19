@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d15db702cb196842a5ddba25dbc3fa9cc18df5f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 017a8b10376279af6a8c89dda08452b0f61a9d73
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970103"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅샷(SQL Server)
   데이터베이스 스냅샷은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스( *원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅샷은 스냅샷을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅샷은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅샷도 업데이트됩니다. 따라서 데이터베이스 스냅샷을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
@@ -192,7 +191,7 @@ ms.locfileid: "62917150"
     > [!NOTE]  
     >  데이터베이스 스냅샷에 대해 실행되는 SELECT 문에는 FILESTREAM 열을 지정하지 말아야 합니다. 그렇지 않으면 다음 오류 메시지가 반환됩니다. `Could not continue scan with NOLOCK due to data movement.`  
   
--   읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [통계](../statistics/statistics.md)를 참조 하세요.  
+-   읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [통계](../statistics/statistics.md)를 참조하세요.  
   
 ###  <a name="disk-space-requirements"></a><a name="DiskSpace"></a>디스크 공간 요구 사항  
  데이터베이스 스냅샷은 디스크 공간을 사용합니다. 데이터베이스 스냅샷이 디스크 공간을 모두 소모하면 스냅샷이 주의 대상으로 표시되어 삭제해야 합니다. 그러나 원본 데이터베이스는 영향을 받지 않으며 정상적으로 동작이 계속됩니다. 그러나 데이터베이스의 전체 복사본과 비교할 때 스냅샷은 공간을 매우 효율적으로 사용합니다. 스냅샷은 사용 기간 동안 변경되는 페이지를 스토리지할 수 있는 공간만 필요로 합니다. 일반적으로 스냅샷은 제한된 시간 동안 보관되므로 크기는 중요한 문제가 아닙니다.  

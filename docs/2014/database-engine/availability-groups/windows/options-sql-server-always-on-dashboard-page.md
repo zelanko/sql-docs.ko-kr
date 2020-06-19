@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936685"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>옵션(SQL Server AlwaysOn, 대시보드 페이지)
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **옵션** 대화 상자의 **alwayson 대시보드 SQL Server** 페이지를 사용 하 여 alwayson 대시보드를 구성할 수 있습니다.  
+  옵션 대화 상자의 **Alwayson 대시보드 SQL Server** 페이지 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] **Options** 를 사용 하 여 alwayson 대시보드를 구성할 수 있습니다.  
   
  **이 페이지에 액세스하려면**  
   

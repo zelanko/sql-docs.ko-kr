@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12404ab8ac8fe6bd29c1f0a653d4228e57e1b3bf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936835"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 있는 암호화된 데이터베이스(SQL Server)
   이 항목에는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 현재 암호화되었거나 최근에 암호 해독된 데이터베이스 사용에 대한 정보가 포함되어 있습니다.  

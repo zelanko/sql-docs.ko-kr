@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175979"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970253"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
   DAC(데이터 계층 애플리케이션) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "70175979"
 ##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 데이터 계층 애플리케이션 내보내기 마법사의 단계에 대해 설명합니다.  
   
- **옵션**  
+ **Options**  
   
  **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "70175979"
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 내보내기 작업을 완료하려면 **마침**을 클릭합니다. 내보내기 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>진행률 페이지  
+##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
 ##  <a name="results-page"></a><a name="Results"></a>결과 페이지  

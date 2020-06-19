@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae89ee9f60e740a4e20486e7dcbe99316fd4ed04
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935404"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 운영 체제 서비스로 실행되는 `sqlservr.exe` 실행 파일의 복사본입니다. 각 인스턴스는 여러 시스템 데이터베이스와 하나 이상의 사용자 데이터베이스를 관리합니다. 각 컴퓨터에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 여러 인스턴스를 실행할 수 있습니다. 애플리케이션은 인스턴스가 관리하는 데이터베이스에서 작업을 수행하기 위해 인스턴스에 연결합니다.  
