@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1f3ad2a94ffe3e0f1db19a8e66f85497e7143dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026486"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
   *파일 스토리지 유형* 은 데이터 파일에서 데이터가 저장되는 방법을 설명합니다. 데이터는 데이터베이스 테이블 형식(네이티브 형식), 문자 표시(문자 형식) 또는 암시적 변환을 지원하는 모든 데이터 형식의 데이터 파일로 내보낼 수 있습니다. 예를 들어 `smallint`를 `int`로 복사할 수 있습니다. 사용자 정의 데이터 형식은 해당 기본 형식으로 내보내집니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "66011817"
   
     |파일 스토리지 유형|명령 프롬프트에 입력할 내용|  
     |-----------------------|-----------------------------|  
-    |`char`<sup>1</sup>|`c`[`har`]|  
+    |`char` <sup>1</sup>|`c`[`har`]|  
     |`varchar`|`c[har]`|  
     |`nchar`|`w`|  
     |`nvarchar`|`w`|  
@@ -73,16 +72,16 @@ ms.locfileid: "66011817"
     |`UDT`(사용자 정의 데이터 형식)|`U`|  
     |`XML`|`X`|  
   
-     <sup>1</sup> 필드 길이, 접두사 길이 및 종결자의 상호 작용은 `char` 파일 저장 유형으로 내보낸 문자가 아닌 데이터에 대 한 데이터 파일에 할당 되는 저장 공간의 크기를 결정 합니다.  
+     <sup>1</sup> 필드 길이, 접두사 길이 및 종결자의 상호 작용은 파일 저장 유형으로 내보낸 문자가 아닌 데이터에 대 한 데이터 파일에 할당 되는 저장 공간의 크기를 결정 합니다 `char` .  
   
-     <sup>2</sup> `ntext`, `text`및 `image` 데이터 형식은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거 될 예정입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 대신 `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)`를 사용해야 합니다.  
+     <sup>2</sup> `ntext` , `text` 및 `image` 데이터 형식은 이후 버전의에서 제거 될 예정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하십시오. 대신 `nvarchar(max)`, `varchar(max)` 및 `varbinary(max)`를 사용해야 합니다.  
   
 ## <a name="native-file-storage-types"></a>네이티브 파일 스토리지 유형  
  각 네이티브 파일 스토리지 유형은 해당 호스트 파일 데이터 형식으로 서식 파일에 기록됩니다.  
   
 |파일 스토리지 유형|호스트 파일 데이터 형식|  
 |-----------------------|-------------------------|  
-|`char`<sup>1</sup>|SQLCHAR|  
+|`char` <sup>1</sup>|SQLCHAR|  
 |`varchar`|SQLCHAR|  
 |`nchar`|SQLNCHAR|  
 |`nvarchar`|SQLNCHAR|  
@@ -109,16 +108,16 @@ ms.locfileid: "66011817"
 |`timestamp`|SQLBINARY|  
 |UDT(사용자 정의 데이터 형식)|SQLUDT|  
   
- <sup>1</sup> 문자 형식으로 저장 된 데이터 파일은 파일 `char` 저장 유형으로 사용 됩니다. 그러므로 문자 데이터 파일의 경우 SQLCHAR는 서식 파일에 나타나는 유일한 데이터 형식입니다.  
+ <sup>1</sup> 문자 형식으로 저장 된 데이터 파일은 `char` 파일 저장 유형으로 사용 됩니다. 그러므로 문자 데이터 파일의 경우 SQLCHAR는 서식 파일에 나타나는 유일한 데이터 형식입니다.  
   
- <sup>2</sup> 기본값을 가진, 및 `text` `ntext` `image` 열로 데이터를 대량으로 가져올 수 없습니다.  
+ <sup>2</sup> `text` `ntext` 기본값을 가진, 및 열로 데이터를 대량으로 가져올 수 없습니다 `image` .  
   
 ## <a name="additional-considerations-for-file-storage-types"></a>파일 스토리지 유형에 대한 추가 고려 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에서 데이터 파일로 데이터를 대량으로 내보내는 경우 다음을 고려하십시오.  
   
 -   `char`를 항상 파일 스토리지 유형으로 지정할 수 있습니다.  
   
--   잘못 된 암시적 변환을 나타내는 파일 저장 유형을 입력 하면 **bcp** 가 실패 합니다. 예 `int` 를 들어 `smallint` 데이터에 대해를 지정할 수는 있지만 `smallint` `int` 데이터를 지정 하는 경우 오버플로 오류가 발생 합니다.  
+-   잘못 된 암시적 변환을 나타내는 파일 저장 유형을 입력 하면 **bcp** 가 실패 합니다. 예를 들어 데이터에 대해를 지정할 수는 있지만 `int` `smallint` 데이터를 지정 하는 경우 `smallint` `int` 오버플로 오류가 발생 합니다.  
   
 -   `float`, `money`, `datetime` 또는 `int`와 같이 문자가 아닌 데이터 형식이 데이터베이스 형식으로 저장되면 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 형식으로 데이터 파일에 기록됩니다.  
   

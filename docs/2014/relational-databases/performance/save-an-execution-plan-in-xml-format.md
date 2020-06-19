@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84ed341d186993ed77260e8361156b324c597839
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150860"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047892"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 실행 계획을 XML 파일로 저장하고 열어서 볼 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "63150860"
   
      SHOWPLAN_XML은 쿼리에 대한 컴파일 시간 쿼리 실행 계획 정보를 생성하지만 쿼리를 실행하지는 않습니다. STATISTICS XML은 쿼리에 대한 런타임 쿼리 실행 계획 정보를 생성하고 쿼리를 실행합니다.  
   
-3.  쿼리를 실행합니다. 예:  
+3.  쿼리를 실행합니다. 예제:  
   
     ```  
     USE AdventureWorks2012;  
@@ -65,9 +64,9 @@ ms.locfileid: "63150860"
   
 4.  **결과** 창에서 쿼리 계획을 포함하는 **Microsoft SQL Server XML Showplan** 을 마우스 오른쪽 단추로 클릭한 다음 **다른 이름으로 결과 저장**을 클릭합니다.  
   
-5.  **저장** \<표 또는 텍스트> **결과** 대화 상자의 파일 **형식** 상자에서 **모든 파일 (\*.\*)** 을 클릭 합니다.  
+5.  **Save** \<Grid or Text> **결과** 저장 대화 상자의 파일 **형식** 상자에서 **모든 파일 ( \* . \* )** 을 클릭 합니다.  
   
-6.  **파일 이름** 상자에서 이름 \<**>. sqlplan**형식으로 이름을 입력 한 다음 **저장**을 클릭 합니다.  
+6.  **파일 이름** 상자에 \<name**> . sqlplan * * 형식의 이름을 입력 한 다음 **저장**을 클릭 합니다.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio 옵션을 사용하여 실행 계획을 저장하려면  
   
@@ -79,7 +78,7 @@ ms.locfileid: "63150860"
   
 3.  **다른 이름으로 저장** 대화 상자에서 **파일 형식**이 **실행 계획 파일(\*.sqlplan)** 로 설정되어 있는지 확인합니다.  
   
-4.  **파일 이름** 상자에서 이름 \<**>. sqlplan**형식으로 이름을 입력 한 다음 **저장**을 클릭 합니다.  
+4.  **파일 이름** 상자에 \<name**> . sqlplan * * 형식의 이름을 입력 한 다음 **저장**을 클릭 합니다.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>SQL Server Management Studio에서 저장된 XML 쿼리 계획을 열려면  
   

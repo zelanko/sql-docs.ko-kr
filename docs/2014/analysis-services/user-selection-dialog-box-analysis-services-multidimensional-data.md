@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cae7cb0c9219a49bb22537b632fa9f1686eb7e6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f02f01e4f578dbe80f4b13ab2f324e0b8519ce8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938184"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>사용자 선택 대화 상자(Analysis Services - 다차원 데이터)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 **사용자 선택** 대화 상자를 사용하여 사용 빈도 기반 최적화 마법사에 대한 쿼리 로그에 저장된 쿼리를 필터링할 사용자를 선택할 수 있습니다.  

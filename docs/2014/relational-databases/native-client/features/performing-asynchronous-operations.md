@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05c636b29b57e898aa3579fc104cc8b044489fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b88b8616ee822a3811afe993936edd8747961506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047912"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 사용하면 애플리케이션에서 비동기 데이터베이스 작업을 수행할 수 있습니다. 비동기 처리는 호출 스레드를 차단하지 않고 메서드를 즉시 반환할 수 있도록 합니다. 이를 통해 개발자는 명시적으로 스레드를 만들거나 동기화를 처리하지 않고도 보다 강력하고 유연한 다중 스레딩을 구현할 수 있습니다. 데이터베이스 연결을 초기화하거나 명령의 실행 결과를 초기화할 때 애플리케이션에서는 비동기 처리를 요청합니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "82707260"
   
  명령 실행이 완료 되 면 IMultipleResults를 정상적으로 사용할 수 있습니다 .이 경우에는 **IMultipleResults** 가 반환 될 수 있습니다 .이 경우 **Idbasynchstatus** 또는 **ISSAsynchStatus** 를 사용 하 여 작업이 완료 된 시간을 확인할 수 있습니다 DB_S_ASYNCHRONOUS.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예에서는 애플리케이션에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut*으로 지정한 시간이 경과될 때까지 내부 이벤트 개체를 기다립니다.  
   
 ```  

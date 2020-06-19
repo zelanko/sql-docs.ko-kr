@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481151"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938054"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
   이 항목에서는 DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "65481151"
   
 10. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다.  
   
-11. 쿼리 편집기 창에서 다음 SQL 문을 복사 하 고 데이터베이스 마스터 키에 대해 DQS 설치 중에 제공한 암호로 * \<password>* 를 바꿉니다.  
+11. 쿼리 편집기 창에서 다음 SQL 문을 복사 하 고를 *\<PASSWORD>* DQS 설치 중에 데이터베이스 마스터 키에 대해 제공한 암호로 바꿉니다.  
   
     ```  
     USE [DQS_MAIN]  

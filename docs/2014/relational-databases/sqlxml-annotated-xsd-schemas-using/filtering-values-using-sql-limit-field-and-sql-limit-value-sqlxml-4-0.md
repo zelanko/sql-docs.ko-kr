@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062995"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field와 sql:limit-value를 사용하여 값 필터링(SQLXML 4.0)
   데이터베이스 쿼리를 통해 반환되는 행을 어떤 제한 값을 기준으로 제한할 수 있습니다. `sql:limit-field` 및 `sql:limit-value` 주석은 제한 값이 포함된 데이터베이스 열을 식별하고 반환되는 데이터를 필터링하는 데 사용할 특정 제한 값을 지정하는 데 사용됩니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "82703585"
 > [!NOTE]  
 >  매핑되는 SQL 열이 `sql:limit-field` 형식인 경우에 `real`를 사용하면 SQLXML 4.0에서는 XML 스키마에 지정된 대로 `sql:limit-value`를 지정된 `nvarchar` 값으로 변환합니다. 이 경우 공학용 표기법을 사용하여 10진수 제한 값을 지정해야 합니다. 자세한 내용은 아래 2번 예를 참조하십시오.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이러한 예를 사용하여 작업 예제를 만들려면 다음과 같은 제품이 설치되어 있어야 합니다.  
   
 -   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  

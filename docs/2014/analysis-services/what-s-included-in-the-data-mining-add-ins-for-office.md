@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065325"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938094"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Office 용 데이터 마이닝 추가 기능에 포함 된&#39;
   Office 2013용 데이터 마이닝 추가 기능을 설치할 때 모든 설치 옵션을 선택하면 다음과 같은 도구 모음과 템플릿이 추가됩니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "66065325"
   
      데이터 마이닝을 처음 접하는 경우 도구를 사용 하 여 시험해 보려는 경우 추가 기능과 함께 설치 되는 샘플 데이터의 통합 문서를 사용 하는 것이 좋습니다. 이 데이터를 살펴보면 시계열 모델 또는 연결 모델에 대 한 데이터를 준비 하는 방법에 대 한 예제도 확인할 수 있습니다.  
   
-     **예제 데이터**  
+     **샘플 데이터**  
   
      예제 통합 문서의 데이터는 각 마법사 및 도구를 쉽게 사용해 볼 수 있도록 미리 형식이 지정되어 있습니다.  
   
@@ -56,9 +55,9 @@ ms.locfileid: "66065325"
   
      예제 통합 문서의 기본 위치는 설치한 버전에 따라 달라집니다.  
   
-    -   \<드라이브>: Files\Microsoft SQL Server 2014 DM 추가 기능  
+    -   \<drive>: Files\Microsoft SQL Server 2014 DM 추가 기능  
   
-    -   \<drive>: filefiles (x86) \Microsoft SQL Server 2014 DM 추가 기능  
+    -   \<drive>: Filefiles (x86) \Microsoft SQL Server 2014 DM 추가 기능  
   
 ## <a name="see-also"></a>참고 항목  
  [Excel 용 데이터 마이닝 추가 기능을 사용 하 여 데이터 마이닝 &#40;시작&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

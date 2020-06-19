@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957613"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>데이터를 복원하지 않고 데이터베이스 복구(Transact-SQL)
   일반적으로 데이터베이스가 복구되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 모든 데이터가 복원됩니다. 하지만 예를 들어 데이터베이스와 일치하는 읽기 전용 파일을 복원할 경우 복원 작업에서 백업을 실제로 복원하지 않고 데이터베이스를 복구할 수 있습니다. 이 작업을 *복구 전용 복원*이라고 합니다. 오프라인 데이터가 데이터베이스와 이미 일치하고 사용 가능한 상태로만 만들면 되는 경우 복구 전용 복원 작업은 데이터베이스 복구를 완료하고 데이터를 온라인으로 전환합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "62921818"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  From **=** \< *backup_device>* 절은 백업이 필요 하지 않기 때문에 복구 전용 복원에 사용 되지 않습니다.  
+>  FROM **=** \<*backup_device> * 절은 백업이 필요 없으므로 복구 전용 복원에 사용 되지 않습니다.  
   
  **예제**  
   
@@ -76,23 +75,23 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>복구 전용 복원을 통한 증분 복원 시나리오 완료의 예  
  **단순 복구 모델**  
   
--   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **전체 복구 모델**  
   
--   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>참고 항목  
- [온라인 복원 &#40;SQL Server&#41;](online-restore-sql-server.md)   
- [증분 &#40;SQL Server 복원&#41;](piecemeal-restores-sql-server.md)   
- [파일 복원 &#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
- [파일 복원이 전체 복구 모델 &#40;&#41;](file-restores-full-recovery-model.md)   
+ [온라인 복원&#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+ [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
+ [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9cab378f66a5d5b0603144ca3dafb5f544ce4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938274"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>번역(차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너의 **번역** 탭을 사용하여 차원에 대한 계층 및 특성을 비롯하여 차원에 대한 번역을 정의 및 관리할 수 있습니다.  

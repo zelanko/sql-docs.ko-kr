@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708217"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026787"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)
 
@@ -74,11 +73,11 @@ ms.locfileid: "71708217"
 
 ## <a name="see-also"></a>참고 항목
 
-[INSERT &#40;transact-sql&#41;](/sql/t-sql/statements/insert-transact-sql) 
+[&#40;transact-sql&#41;삽입](/sql/t-sql/statements/insert-transact-sql) 
  [SELECT 절 &#40;transact-sql&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
- [bcp 유틸리티](../../tools/bcp-utility.md)   
-[데이터를 대량으로 가져오기 &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
- [BULK INSERT &#40;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- 
-&#41;[데이터 &#40;대량 가져오기 및 내보내기 ](bulk-import-and-export-of-data-sql-server.md)SQL Server&#41;[OPENROWSET ](/sql/t-sql/functions/openrowset-transact-sql) 
-&#40;&#41;&#40;[형식 파일을 만듭니다](create-a-format-file-sql-server.md) SQL Server
+ [Bcp 유틸리티](../../tools/bcp-utility.md)   
+[SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+ &#40;대량으로 데이터 가져오기 준비 [Transact-sql&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
+ BULK INSERT &#40;[데이터 &#40;SQL Server 대량 가져오기 및 내보내기&#41;](bulk-import-and-export-of-data-sql-server.md) 
+ [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [SQL Server&#41;&#40;서식 파일 만들기](create-a-format-file-sql-server.md)
