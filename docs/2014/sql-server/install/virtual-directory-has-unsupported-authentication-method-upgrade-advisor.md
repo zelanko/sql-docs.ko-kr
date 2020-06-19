@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3394181111267c01e9baaa13bd1b6d64339dd5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952014"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054650"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>가상 디렉터리에 지원되지 않는 인증 방법이 있음(업그레이드 관리자)
   업그레이드 관리자가 보고서 관리자 또는 보고서 서버 가상 디렉터리에서 지원되지 않는 인증 방법을 검색했습니다. 업그레이드를 지원하지 않는 인증 방법에는 익명, 다이제스트 및 .NET Passport가 있습니다.  

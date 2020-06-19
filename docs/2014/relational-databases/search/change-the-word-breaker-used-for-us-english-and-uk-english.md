@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5401bea3c42674a1e85cd823570e2abfb30491b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068396"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 영어용 단어 분리기 및 형태소 분석기의 새 버전(버전 14.0.4999.1038)을 설치하여 이전 버전(버전 12.0.6828.0)의 해당 구성 요소를 대체합니다. 새 구성 요소의 변경된 동작에 대한 자세한 내용은 [전체 텍스트 검색의 동작 변경](full-text-search.md)을 참조하세요. 이 항목에서는 이러한 새 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다. 클러스터 설치의 경우 이러한 변경은 모든 주 노드 및 패시브 노드에서 수행해야 합니다.  

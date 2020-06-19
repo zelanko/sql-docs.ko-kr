@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b194f3b713cfb90317e8841cb150a90ee529b28
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 870bf3b2d01f9e7cbf630175567741c1f1887bf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044021"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>상호 Kerberos 인증 가져오기
   이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC를 사용하여 상호 Kerberos 인증을 가져오는 방법을 보여 줍니다.  

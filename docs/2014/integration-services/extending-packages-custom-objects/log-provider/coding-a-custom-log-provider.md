@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768588"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968733"
 ---
 # <a name="coding-a-custom-log-provider"></a>사용자 지정 로그 공급자 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>로그 항목 기록  
- <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드는 패키지의 개체가 이벤트 인터페이스 중 하나에서 Fire\<event> 메서드를 호출하여 이벤트를 발생시킬 때마다 호출됩니다. 각 이벤트가 발생할 때는 해당 컨텍스트에 대한 정보와 설명 메시지도 포함됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 호출할 때마다 모든 메서드 매개 변수에 대한 정보가 포함되는 것은 아닙니다. 예를 들어 이름이 설명 역할을 하는 표준 이벤트는 MessageText를 제공하지 않으며 DataCode와 DataBytes는 선택적인 추가 정보를 위한 것입니다.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>메서드는 패키지의 개체가 \<event> 이벤트 인터페이스 중 하나에서 Fire 메서드를 호출 하 여 이벤트를 발생 시킬 때마다 호출 됩니다. 각 이벤트가 발생할 때는 해당 컨텍스트에 대한 정보와 설명 메시지도 포함됩니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 호출할 때마다 모든 메서드 매개 변수에 대한 정보가 포함되는 것은 아닙니다. 예를 들어 이름이 설명 역할을 하는 표준 이벤트는 MessageText를 제공하지 않으며 DataCode와 DataBytes는 선택적인 추가 정보를 위한 것입니다.  
   
  다음 코드 예에서는 <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> 메서드를 구현하고 이전 섹션에서 연 스트림에 이벤트를 기록합니다.  
   

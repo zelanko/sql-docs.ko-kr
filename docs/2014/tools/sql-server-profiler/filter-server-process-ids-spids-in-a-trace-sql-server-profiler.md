@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5945c39-be6b-4632-91cb-92066c80e188
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6e740159d06a18d1ae2ef4fa9788246a4ca60e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 321f857f22f8551056dfec78485e5c372bbdc9e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000155"
 ---
 # <a name="filter-server-process-ids-spids-in-a-trace-sql-server-profiler"></a>추적의 SPID(서버 프로세스 ID) 필터링(SQL Server Profiler)
   이 항목은 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에서 SPID(서버 프로세스 식별자)를 필터링하는 방법을 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "63250873"
      **추적 속성**대화 상자가 표시됩니다.  
   
     > [!NOTE]  
-    >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
+    >  연결한 **후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작 됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   

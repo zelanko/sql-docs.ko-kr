@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5cf83aa10e758479d3bd7b2dff6a829515e8c39d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fddaf9b23f5a67548a47ffc8cccc30baa7df5478
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068455"
 ---
 # <a name="toggle-a-breakpoint"></a>중단점 설정/해제
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 중단점을 설정하는 작업을 중단점 설정/해제라고 합니다.  

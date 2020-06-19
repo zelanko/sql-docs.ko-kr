@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062008"
 ---
 # <a name="save-as"></a>다른 이름으로 저장
-  이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 **파일** 메뉴에서 **다른 이름으로** * \<>파일* **저장** 을 클릭 합니다 (여기서 * \<file>* 은 현재 항목의 이름). 또는 코드 편집기에서 ALT + F, A를 누릅니다.  
+  이 대화 상자를 사용하여 지정한 파일 형식으로 지정한 위치에 현재 항목의 인스턴스를 저장할 수 있습니다. 이 대화 상자를 표시 하려면 **Save** *\<file>* **파일** 메뉴에서 다른 이름 **으로** 저장을 클릭 *\<file>* 하거나 코드 편집기에서 ALT + F, A를 누릅니다.  
   
 ## <a name="central-panel"></a>중앙 창  
  **저장 위치**  

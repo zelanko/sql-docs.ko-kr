@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968614"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>스크립트 구성 요소를 사용하여 비표준 텍스트 파일 형식의 구문 분석
   원본 데이터가 비표준 형식으로 정렬된 경우 여러 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 변환을 함께 결합하는 것보다 모든 구문 분석 논리를 단일 스크립트에 통합하는 것이 더 쉬울 수 있습니다.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769019"
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. **스크립트 변환 편집기**의 `SynchronousInputID` **입/출력** 페이지에서 출력 0을 선택 하 고을 None으로 설정 합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택 하 고 `SynchronousInputID` 을 None으로 설정 합니다. 길이가 32이고 문자열 유형이 모두 [DT_STR]인 5개의 출력 열을 만듭니다.  
   
     -   FirstName  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769019"
   
     -   StateProvince  
   
-13. 스크립트 **변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집** 을 클릭 하 고 예제의 `ScriptMain` 클래스에 표시 된 코드를 입력 합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
+13. 스크립트 **변환 편집기**의 **스크립트** 페이지에서 **스크립트 편집** 을 클릭 하 고 예제의 클래스에 표시 된 코드를 입력 `ScriptMain` 합니다. 스크립트 개발 환경과 **스크립트 변환 편집기**를 닫습니다.  
   
 14. 데이트 흐름에 SQL Server 대상을 추가합니다. SQL Server 대상이 OLE DB 연결 관리자와 RowDelimitedData 테이블을 사용하도록 구성합니다. 이 대상에 스크립트 구성 요소의 출력을 연결합니다.  
   
@@ -253,7 +252,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지에서 사용 가능한 단일 입력 열을 선택합니다.  
   
-12. **스크립트 변환 편집기**의 `SynchronousInputID` **입/출력** 페이지에서 출력 0을 선택 하 고,이 이름을 Parentrecords로 바꾸고,을 None으로 설정 합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
+12. **스크립트 변환 편집기**의 **입/출력** 페이지에서 출력 0을 선택 하 고,이 이름을 parentrecords로 바꾸고, `SynchronousInputID` 을 None으로 설정 합니다. 다음과 같이 2개의 출력 열을 만듭니다.  
   
     -   부호 있는 4바이트 정수 [DT_I4] 형식의 ParentID(기본 키)  
   

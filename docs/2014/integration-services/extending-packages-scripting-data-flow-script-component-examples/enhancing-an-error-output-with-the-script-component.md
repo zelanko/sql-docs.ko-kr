@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd935387e8d6e4a95a25d21eb5d5d229f9599bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2846fed91174f0703e5d195b13a36c2207a03c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968593"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>스크립트 구성 요소를 사용하여 오류 출력 향상
   기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 출력의 추가 열인 ErrorCode 및 ErrorColumn에는 오류 번호를 나타내는 숫자 코드와 오류가 발생한 열의 ID만 포함됩니다. 이러한 숫자 값은 해당 오류 설명이 없으므로 사용이 제한적일 수 있습니다.  
   
- 이 항목에서는 스크립트 구성 요소를 사용하여 데이터 흐름의 기존 오류 출력 데이터에 오류 설명을 추가하는 방법을 설명합니다. 예에서는 스크립트 구성 요소의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 속성을 통해 사용할 수 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 메서드를 사용하여 미리 정의된 특정 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 오류 코드에 해당하는 오류 설명을 추가합니다.  
+ 이 항목에서는 스크립트 구성 요소를 사용하여 데이터 흐름의 기존 오류 출력 데이터에 오류 설명을 추가하는 방법을 설명합니다. 예에서는 스크립트 구성 요소의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> 속성을 통해 사용할 수 있는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> 인터페이스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> 메서드를 사용하여 미리 정의된 특정 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 코드에 해당하는 오류 설명을 추가합니다.  
   
 > [!NOTE]  
 >  여러 데이터 흐름 태스크 및 여러 패키지에서 쉽게 다시 사용할 수 있는 구성 요소를 만들려면 이 스크립트 구성 요소 예제에 있는 코드를 바탕으로 사용자 지정 데이터 흐름 구성 요소를 만들어 보십시오. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)을 참조하세요.  
@@ -51,7 +50,7 @@ ms.locfileid: "62895492"
   
 7.  스크립트 변환 편집기의 **입력 열** 페이지에서 ErrorCode 열을 선택 합니다.  
   
-8.  **입/출력** 페이지에서 `String` **ErrorDescription**이라는 형식의 새 출력 열을 추가 합니다. 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
+8.  **입/출력** 페이지에서 ErrorDescription 이라는 형식의 새 출력 열을 추가 합니다 `String` . **ErrorDescription** 긴 메시지를 지원할 수 있도록 새 열의 기본 길이를 255로 늘립니다.  
   
 9. **스크립트 변환 편집기**를 닫습니다.  
   

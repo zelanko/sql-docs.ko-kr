@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73f1242b9756828b330d0386d93e3c8e8e4f2220
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917613"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>패키지 배포 모델로 변환 대화 상자
   **패키지 배포 모델로 변환** 명령을 사용하면 프로젝트 및 프로젝트의 각 패키지에서 해당 모델과의 호환성을 검사한 후 패키지를 패키지 배포 모델로 변환할 수 있습니다. 패키지에 매개 변수와 같이 프로젝트 배포 모델에 고유한 기능이 사용된 경우 패키지를 변환할 수 없습니다.  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068381"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리
-  Azure Key Vault [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 커넥터를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 암호화를 사용 하면 암호화 키를 보호 하기 위해 [EKM&#41;공급자로 확장 가능 키 관리 &#40;](extensible-key-management-ekm.md) Azure Key Vault 서비스를 활용할 수 있습니다.
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Azure Key Vault 용 커넥터를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하 여 암호화를 사용 하면 암호화 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 키를 보호 하기 위해 [EKM&#41;공급자로 확장 가능 키 관리 &#40;](extensible-key-management-ekm.md) Azure Key Vault 서비스를 활용할 수 있습니다.
 
  이 항목의 내용:
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289451"
 
     -   **** 암호화에 사용된 키의 래핑 해제를 위해 자격 증명 모음에 액세스하기 위해 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 또 다른 서비스 사용자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 필요로 하게 됩니다.
 
-     애플리케이션을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 [Azure Key Vault 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문)의 **Register an Application with Azure Active Directory(Azure Active Directory로 애플리케이션 등록)** 섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **애플리케이션 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. `CREATE CREDENTIAL` 문에서 사용 하는 경우 **클라이언트 ID**에서 하이픈을 제거 해야 합니다. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.
+     애플리케이션을 등록하고 서비스 사용자를 생성하는 방법에 대한 자세한 내용은 [Azure Key Vault 시작](https://go.microsoft.com/fwlink/?LinkId=521402)(영문)의 **Register an Application with Azure Active Directory(Azure Active Directory로 애플리케이션 등록)** 섹션을 참조하세요. 등록 프로세스에서는 각 Azure Active Directory **서비스 사용자** 에 대해 **애플리케이션 ID**( **클라이언트 ID** 라고도 함) 및 **인증 키**( **비밀**이라고도 함)를 반환합니다. 문에서 사용 하는 경우 `CREATE CREDENTIAL` **클라이언트 ID**에서 하이픈을 제거 해야 합니다. 아래의 스크립트에서 사용할 수 있도록 기록해 두세요.
 
     -   **sysadmin** 로그인용 **서비스 사용자** : **CLIENTID_sysadmin_login** 및 **SECRET_sysadmin_login**
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289451"
 2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 시나리오를 설정 및 관리하려면 키 자격 증명 모음을 사용하도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리자 로그인용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명을 설정합니다.
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL` 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요 합니다. `CREATE CREDENTIAL` 의 **secret** 인수에는 * \<클라이언트 ID>* (하이픈이 없는)와 * \<비밀>* 사이에 공백 없이 함께 전달 되어야 합니다.
+    >  의 **IDENTITY** 인수에는 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. 의 **SECRET** 인수에 `CREATE CREDENTIAL` 는 *\<Client ID>* (하이픈이 없는)와 *\<Secret>* 사이에 공백 없이 함께 전달 해야 합니다.
 
-     다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈을 제거 하 고 문자열로 `EF5C8E094D2A4A769998D93440D8115D` 입력 되며 **암호** 는 *SECRET_sysadmin_login*문자열로 표시 됩니다.
+     다음 예제에서 **클라이언트 ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` )는 하이픈을 제거 하 고 문자열로 입력 `EF5C8E094D2A4A769998D93440D8115D` 되며 **암호** 는 *SECRET_sysadmin_login*문자열로 표시 됩니다.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289451"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     `CREATE CREDENTIAL` 인수에 대 한 변수를 사용 하 고 클라이언트 ID에서 하이픈을 프로그래밍 방식으로 제거 하는 예는 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)를 참조 하세요.
+     인수에 대 한 변수를 사용 하 `CREATE CREDENTIAL` 고 클라이언트 ID에서 하이픈을 프로그래밍 방식으로 제거 하는 예는 [CREATE CREDENTIAL &#40;transact-sql&#41;](/sql/t-sql/statements/create-credential-transact-sql)를 참조 하세요.
 
 3.  섹션 3 의 1단계에서 설명한 대로 비대칭 키를 가져온 경우, 다음 예제에서 키 이름을 제공하여 키를 엽니다.
 
@@ -212,7 +211,7 @@ ms.locfileid: "79289451"
 
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>예 A: Key Vault에서 비대칭 키를 사용 하 여 투명한 데이터 암호화
  위의 단계를 완료했으면 자격 증명과 로그인을 만들고, 키 자격 증명 모음에 비대칭 키로 보호되는 데이터베이스 암호화 키를 만듭니다. 데이터베이스 암호화 키를 사용하여 TDE로 데이터베이스를 암호화합니다.
@@ -224,9 +223,9 @@ ms.locfileid: "79289451"
 1.  데이터베이스 로드 동안 키 자격 증명 모음 EKM에 액세스할 때 사용할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 자격 증명을 만듭니다.
 
     > [!IMPORTANT]
-    >  `CREATE CREDENTIAL` 의 **IDENTITY** 인수에는 키 자격 증명 모음 이름이 필요 합니다. `CREATE CREDENTIAL` 의 **secret** 인수에는 * \<클라이언트 ID>* (하이픈이 없는)와 * \<비밀>* 사이에 공백 없이 함께 전달 되어야 합니다.
+    >  의 **IDENTITY** 인수에는 `CREATE CREDENTIAL` 키 자격 증명 모음 이름이 필요 합니다. 의 **SECRET** 인수에 `CREATE CREDENTIAL` 는 *\<Client ID>* (하이픈이 없는)와 *\<Secret>* 사이에 공백 없이 함께 전달 해야 합니다.
 
-     다음 예제에서 **클라이언트 ID** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`)는 하이픈을 제거 하 고 문자열로 `EF5C8E094D2A4A769998D93440D8115D` 입력 되며 **암호** 는 *SECRET_DBEngine*문자열로 표시 됩니다.
+     다음 예제에서 **클라이언트 ID** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` )는 하이픈을 제거 하 고 문자열로 입력 `EF5C8E094D2A4A769998D93440D8115D` 되며 **암호** 는 *SECRET_DBEngine*문자열로 표시 됩니다.
 
     ```sql
     USE master;

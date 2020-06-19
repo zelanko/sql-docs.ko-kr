@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84ff925f2aa68ee81268eaca2faa3920f3ec407b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b5d363e7f68ba735168ef17eeff8e9605c54b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068451"
 ---
 # <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
   중단점은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하도록 지정하여 사용자가 해당 지점에 있는 코드 요소의 상태를 확인할 수 있게 해 줍니다.  

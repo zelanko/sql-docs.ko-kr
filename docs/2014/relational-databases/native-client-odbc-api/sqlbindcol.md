@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f4a04d7851a79ab461711cfc173d40a0a83ef6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d0ca1b0fbad144117e409019d8d2247bbf918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022946"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   일반적으로 **SQLBindCol** 를 사용 하 여 데이터를 변환 하는 경우의 의미를 고려 하십시오. 바인딩 변환은 클라이언트 프로세스입니다. 예를 들어 문자 열에 바인딩된 부동 소수점 값을 검색하면 행이 인출될 때 드라이버가 부동 소수점 수에서 문자로의 변환을 로컬로 수행합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT 함수를 사용하면 데이터 변환 비용을 서버가 부담하도록 할 수 있습니다.  

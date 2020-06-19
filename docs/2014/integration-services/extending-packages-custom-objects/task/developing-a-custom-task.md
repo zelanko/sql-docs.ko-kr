@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f597ee3a063da534267f7d4674a024a8fcc02f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9322c7e497259695f97933fe9be8a512be6bbe7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968663"
 ---
 # <a name="developing-a-custom-task"></a>사용자 지정 태스크 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서는 태스크를 사용하여 데이터의 추출, 변환 및 로드를 지원하는 작업 단위를 수행합니다. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 SQL 문 실행부터 FTP 사이트의 파일 다운로드에 이르기까지 가장 자주 사용되는 동작을 수행하는 다양한 태스크가 포함되어 있습니다. 포함된 태스크와 지원되는 동작이 요구 사항을 완전히 충족시키지 못할 경우에는 사용자 지정 태스크를 만들 수 있습니다.  

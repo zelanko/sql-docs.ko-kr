@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043892"
 ---
 # <a name="data-source-objects-ole-db"></a>데이터 원본 개체(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client는와 같은 데이터 저장소에 대 한 링크를 설정 하는 데 사용 되는 OLE DB 인터페이스 집합에 대해 데이터 원본 이라는 용어를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. Native Client 소비자의 첫 번째 작업은 공급자의 데이터 원본 개체의 인스턴스를 만드는 것입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

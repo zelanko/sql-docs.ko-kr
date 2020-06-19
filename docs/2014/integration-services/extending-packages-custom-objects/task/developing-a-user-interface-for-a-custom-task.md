@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e4246898e5b054af8cbbdc86aff41cb7ea087e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968643"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>사용자 지정 태스크의 사용자 인터페이스 개발
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 개체 모델을 사용하면 사용자 지정 태스크 개발자가 태스크의 사용자 지정 사용자 인터페이스를 쉽게 만들 수 있으며 이러한 태스크는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에 통합 및 표시될 수 있습니다. 사용자 인터페이스는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 사용자에게 유용한 정보를 제공하고 사용자 지정 태스크의 속성 및 설정을 올바르게 구성할 수 있도록 안내해 줍니다.  

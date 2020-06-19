@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3cc4c44e00e4c16a6211086b16861f3e9233357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661855"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061904"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio 도구 창
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 모든 단계의 개발 및 관리를 위한 강력한 여러 도구 창을 제공합니다. 일부 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에서 사용할 수 있지만 일부 도구는 특정 구성 요소에 대해서만 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 모든 구성 요소에서 사용할 수 있는 도구를 설명합니다.  

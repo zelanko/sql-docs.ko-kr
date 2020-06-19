@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af647a446366ea03063ea0deb84603a3f8f90dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 566f7ab8bc23eee58b133acb2e740cab1647b0ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968621"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>사용자 지정 태스크에서 이벤트 발생 및 정의
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진에서는 태스크의 유효성 검사 및 실행 시 태스크의 진행 상태에 대한 정보를 제공하는 이벤트의 컬렉션을 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스는 이러한 이벤트를 정의하며 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> 메서드에 대한 매개 변수로 태스크에 제공됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "62896131"
   
  다음 코드 예제에서는 두 개의 사용자 지정 이벤트를 만들고 해당 속성을 설정하는 사용자 지정 태스크의 `InitializeTask` 메서드를 보여 줍니다. 그런 다음 새 이벤트를 <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> 컬렉션에 추가합니다.  
   
- 첫 번째 사용자 지정 이벤트에는 "*OnBeforeIncrement*"라는 **eventName**과 "*Fires after the initial value is updated.* "라는 **description**이 있습니다. 다음 매개 변수인 `true` 값은 이 이벤트에서 이벤트를 처리하기 위한 이벤트 처리기 컨테이너가 만들어지는 것을 허용해야 함을 나타냅니다. 이벤트 처리기는 패키지, 시퀀스, ForLoop, ForEachLoop 등의 다른 컨테이너와 같이 태스크에 패키지의 구조와 서비스를 제공하는 컨테이너입니다. *AllowEventHandlers* 매개 변수가 이면 `true`이벤트에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 대 한 개체가 생성 됩니다. 그러면 해당 이벤트에 대해 정의된 모든 매개 변수를 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>의 변수 컬렉션에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 사용할 수 있습니다.  
+ 첫 번째 사용자 지정 이벤트에는 "**OnBeforeIncrement**"라는 *eventName*과 "**Fires after the initial value is updated.**"라는 *description*이 있습니다. 다음 매개 변수인 `true` 값은 이 이벤트에서 이벤트를 처리하기 위한 이벤트 처리기 컨테이너가 만들어지는 것을 허용해야 함을 나타냅니다. 이벤트 처리기는 패키지, 시퀀스, ForLoop, ForEachLoop 등의 다른 컨테이너와 같이 태스크에 패키지의 구조와 서비스를 제공하는 컨테이너입니다. *AllowEventHandlers* 매개 변수가 이면 `true` <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 이벤트에 대 한 개체가 생성 됩니다. 그러면 해당 이벤트에 대해 정의된 모든 매개 변수를 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>의 변수 컬렉션에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 사용할 수 있습니다.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  

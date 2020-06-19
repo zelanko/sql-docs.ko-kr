@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933854"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
   이 항목에는 데이터베이스 미러링에 대해 경고 임계값을 구성하고 관리할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 대한 정보가 포함되어 있습니다. 데이터베이스 미러링 모니터 서버 또는 **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**및 **sp_dbmmonitordropalert** 저장 프로시저를 사용할 수 있습니다. 또한 이 항목에는 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 방법에 대한 정보도 포함되어 있습니다.  
@@ -66,14 +65,14 @@ ms.locfileid: "62754036"
   
      다음 시스템 저장 프로시저 집합을 사용하면 관리자가 한 번에 한 파트너의 미러된 데이터베이스에 대해 경고 임계값을 설정하고 관리할 수 있습니다.  
   
-    |절차|설명|  
+    |절차|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitorchangealert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|지정한 미러링 성능 메트릭에 대해 경고 임계값을 추가하거나 변경합니다.|  
     |[sp_dbmmonitorhelpalert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|여러 가지 주요 데이터베이스 미러링 모니터 성능 메트릭 중 하나 또는 모두에 대한 경고 임계값 정보를 반환합니다.|  
     |[sp_dbmmonitordropalert&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|지정한 성능 메트릭에 대한 경고를 삭제합니다.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
- 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달 하면 업데이트 프로시저 **sp_dbmmonitorupdate**에서 메트릭에 대 한 정보 이벤트 ( *성능 임계값 이벤트*)를 생성 하 고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 이벤트를 기록 합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
+ 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달 하면 업데이트 프로시저 **sp_dbmmonitorupdate**에서 메트릭에 대 한 정보 이벤트 ( *성능 임계값 이벤트*)를 생성 하 고 Windows 이벤트 로그에 이벤트를 기록 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
   
 |성능 메트릭|이벤트 ID|  
 |------------------------|--------------|  

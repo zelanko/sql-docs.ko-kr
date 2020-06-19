@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce118ee5-70e2-472e-8e09-7ed3bfed59fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39e84cf00810a45e48d1d1210bca54cd30ddfff6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62634277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061887"
 ---
 # <a name="change-the-environment-layout"></a>환경 레이아웃 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 구성 요소는 서로 화면 공간을 차지하려고 합니다. 공간을 더 확보하려는 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 구성 요소를 닫거나 숨기거나 이동할 수 있습니다. 이 페이지의 연습에서는 구성 요소를 다른 위치로 이동합니다.  

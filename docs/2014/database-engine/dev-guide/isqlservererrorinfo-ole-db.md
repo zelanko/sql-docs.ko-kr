@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8323b5c-686a-4235-a8d2-bda43617b3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d15b7ca5ed84f2cc828696c6a7fe8b8771e8a374
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222349bcaa88058dea1d9c5302883667c22d4092
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933531"
 ---
 # <a name="isqlservererrorinfo-ole-db"></a>ISQLServerErrorInfo(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 **ISQLServerErrorInfo** 오류 인터페이스를 정의합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류의 심각도 및 상태를 비롯하여 오류에 대한 자세한 정보를 반환합니다.  

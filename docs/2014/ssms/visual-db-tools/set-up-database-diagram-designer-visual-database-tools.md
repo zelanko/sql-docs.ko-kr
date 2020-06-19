@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d71ea2d6a10755ef52e0cac37ddcd2385d82d9cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d59fa2ed197a410de6b68e388e76d2bf21c334d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994657"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)
   데이터베이스 다이어그램 디자이너를 사용하려면 먼저 **db_owner** 역할의 멤버가 이 디자이너를 설정하여 다이어그램에 대한 액세스를 제어해야 합니다.  
@@ -60,6 +59,6 @@ ms.locfileid: "63067623"
 ## <a name="see-also"></a>참고 항목  
  [Visual Database Tools를 &#40;데이터베이스 다이어그램 소유권 이해&#41;](visual-database-tools.md)   
  [Visual Database Tools&#41;&#40;이전 버전에서 데이터베이스 다이어그램 업그레이드](upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)   
- [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
+ [ALTER AUTHORIZATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-authorization-transact-sql)  
   
   

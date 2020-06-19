@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 224093839e8e464f731040d3634c8b252796cfed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933604"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 시작
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET의 공용 런타임 라이브러리에서 지원하는 관리되는 프로그래밍 언어 중 하나입니다. 이 설명서의 예제는 대부분 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET으로 작성됩니다. [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 및 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 를 사용하여 SMO 애플리케이션을 개발할 수 있습니다.  

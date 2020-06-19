@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bb0555485927076a2f0b845d4fd06b194ea60ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933755"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>CLR UDF에서 네이티브 코드 액세스
   이 예에서는 데이터베이스의 어셈블리에 있는 사용자 정의 함수에서 네이티브(비관리) C++ 코드의 함수를 호출하는 방법을 보여 줍니다.  

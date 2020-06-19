@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c864e95a075477b80bdbbe06912be37bba33fadf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478917"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961147"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>로드하기 전 데이터 필터링(Excel용 MDS 추가 기능)
-  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Excel로 로드 하는 데이터의 크기나 범위를 제한 하려는 경우 데이터를 필터링 합니다.  
+  에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] Excel로 로드 하는 데이터의 크기나 범위를 제한 하려는 경우 데이터를 필터링 합니다.  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  

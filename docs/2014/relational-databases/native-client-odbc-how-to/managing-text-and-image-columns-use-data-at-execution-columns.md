@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3137ed1b63ef1cbd4664548624da84d6d3f9a24a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d75b9c23eee00e6c41da020b00ba3494da0f7d22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043999"
 ---
 # <a name="use-data-at-execution-columns-odbc"></a>실행 시 데이터 열 사용(ODBC)
     

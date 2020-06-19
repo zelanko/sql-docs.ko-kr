@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a43d803913faed9f7a63397b0b5784ca15e7ff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022907"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
   `SQLBindParameter`는 Native Client ODBC 드라이버에 대 한 데이터를 제공 하는 데 사용 될 때 데이터 변환 부담을 없앨 수 있으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램의 클라이언트 및 서버 구성 요소 모두에서 성능이 크게 향상 됩니다. 이 외에도 근사치 데이터 형식을 삽입하거나 업데이트할 경우의 전체 자릿수 손실을 줄일 수 있습니다.  

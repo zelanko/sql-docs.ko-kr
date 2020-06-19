@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a48c6620d4395cd44aac6f43cd1817cfebf785e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 807473ab743ed63acea8f18075f21ec09249bd45
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933914"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>데이터베이스 미러링 모니터 시작(SQL Server Management Studio)
   데이터베이스 미러링 모니터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 시작한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]모니터의 일부입니다.  

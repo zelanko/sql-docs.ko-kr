@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0a811b88537d784c9e1db892003391914d50f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17cba78488e1149d491402c6bc63c54fedd9ea6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62895183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968533"
 ---
 # <a name="developing-specific-types-of-script-components"></a>특정 유형의 스크립트 구성 요소 개발
   스크립트 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 원본, 변환 및 대상이 충족시키지 않는 거의 모든 요구 사항을 충족시키기 위해 패키지의 데이터 흐름에서 사용할 수 있는 구성 가능한 도구입니다. 이 섹션에는 스크립트 구성 요소를 구성하는 네 가지 옵션을 보여 주는 스크립트 구성 요소 코드 예제가 들어 있습니다.  

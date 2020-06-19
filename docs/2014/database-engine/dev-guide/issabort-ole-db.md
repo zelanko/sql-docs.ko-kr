@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 7c4df482-4a83-4da0-802b-3637b507693a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 801eb84df08837ec8e49b6bb0e28fc1f1115e674
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7195311fefe3f0f1b7b4d6d789aa8d8487bc3bfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933506"
 ---
 # <a name="issabort-ole-db"></a>ISSAbort(OLE DB)
-  Native Client OLE DB 공급자에 노출 되는 ISSAbort 인터페이스는 현재 행 집합을 취소 하는 데 사용 되는 [ISSAbort:: Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) 메서드와, 처음에 행 집합을 생성 한 명령을 사용 하 여 일괄 처리 되 고 아직 실행이 완료 되지 않은 모든 명령을 제공 합니다. **ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+  Native Client OLE DB 공급자에 노출 되는 **ISSAbort** 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 행 집합을 취소 하는 데 사용 되는 [ISSAbort:: Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) 메서드와, 처음에 행 집합을 생성 한 명령을 사용 하 여 일괄 처리 되 고 아직 실행이 완료 되지 않은 모든 명령을 제공 합니다.  
   
- **ISSAbort** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 **ICommand:: Execute** 또는 **Iopenrowset:: OpenRowset**에서 반환 된 **IMultipleResults** 개체에 대해 **QueryInterface** 를 사용 하 여 사용할 수 있는 Native Client 공급자별 인터페이스입니다.  
+ **ISSAbort** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ICommand:: Execute** 또는 **iopenrowset:: OpenRowset**에서 반환 된 **IMultipleResults** 개체에 대해 **QueryInterface** 를 사용 하 여 사용할 수 있는 Native Client 공급자별 인터페이스입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

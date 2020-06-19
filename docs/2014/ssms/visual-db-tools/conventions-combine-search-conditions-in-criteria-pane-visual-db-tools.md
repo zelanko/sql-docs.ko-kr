@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 926a410ce7b91c5c4683856729a01353b2d37d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061879"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>조건 창의 검색 조건 결합 규칙(Visual Database Tools)
   AND와 OR 연산자를 여러 개 연결하여 다수의 검색 조건을 포함하는 쿼리를 만들 수 있습니다. AND 절과 OR 절을 조합하여 만든 쿼리는 복잡할 수 있으므로 쿼리 실행 시 쿼리를 해석하는 방법 및 [조건 창](visual-database-tools.md)과 [SQL 창](sql-pane-visual-database-tools.md)에서 쿼리를 나타내는 방법을 이해하면 도움이 됩니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0658c567cca7acc2f045c2246118e52b4e7ac004
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994699"
 ---
 # <a name="connecting-with-query-editor"></a>쿼리 편집기와 연결
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 서버와의 연결이 끊긴 동안에도 코드를 쓰거나 편집할 수 있습니다. 이 기능은 서버를 사용할 수 없을 때나 부족한 서버 또는 네트워크 리소스를 보존하고자 할 때 유용합니다. 또한 새 쿼리 편집기 창을 열거나 코드를 다시 입력하지 않고도 쿼리 편집기의 연결을 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경할 수 있습니다.  

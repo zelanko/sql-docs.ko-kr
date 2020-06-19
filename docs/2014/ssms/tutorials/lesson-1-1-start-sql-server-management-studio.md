@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061970"
 ---
 # <a name="start-sql-server-management-studio"></a>SQL Server Management Studio 시작
   이 자습서를 시작하기 전에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 간단히 살펴봅니다.  
@@ -24,12 +23,12 @@ ms.locfileid: "78288989"
   
 #### <a name="to-open-sql-server-management-studio"></a>SQL Server Management Studio를 열려면  
   
-1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]을 차례로 가리킨 다음 **SQL Server Management Studio**을 클릭 합니다.  
+1.  **시작** 메뉴에서 **모든 프로그램**,을 차례로 가리킨 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] 다음 **SQL Server Management Studio**을 클릭 합니다.  
   
     > [!NOTE]  
     >  기본적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 설치되지 않습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용할 수 없으면 설치 프로그램을 실행하여 설치합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에서 사용할 수 없습니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=14630)에서 무료로 다운로드할 수 있지만이 자습서에 설명 된 것과 다른 사용자 인터페이스가 있습니다.  
   
-2.  **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결 하려면 **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치 된 컴퓨터의 이름을 포함 해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 명명 된 인스턴스인 경우 **서버 이름** 상자에 \< *computer_name*>\\<*instance_name*> 형식의 인스턴스 이름도 포함 되어야 합니다.  
+2.  **서버에 연결** 대화 상자에서 기본 설정을 확인한 다음 **연결**을 클릭합니다. 연결 하려면 **서버 이름** 상자에가 설치 된 컴퓨터의 이름을 포함 해야 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 명명 된 인스턴스인 경우 **서버 이름** 상자에는 \<*computer_name*> \\ <> *instance_name* 형식으로 인스턴스 이름도 포함 되어야 합니다.  
   
 ## <a name="management-studio-components"></a>Management Studio 구성 요소  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 는 유형에 따른 전용 창에 정보를 나타냅니다. 데이터베이스 정보는 개체 탐색기 및 문서 창에 표시됩니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933514"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 통합 보안의 링크
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 코드 조각이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 관리 언어 중 하나로 상호 호출하는 방법을 설명합니다. 개체 간의 이러한 관계를 링크라고 합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "62781072"
  테이블 액세스 링크는 테이블, 뷰 또는 테이블 반환 함수의 값을 검색하거나 수정하는 것에 해당합니다. 테이블 액세스 링크는 SELECT, INSERT, UPDATE 및 DELETE 권한에 따라 액세스를 보다 세부적으로 제어한다는 점을 제외하고는 호출 링크와 유사합니다.  
   
 ## <a name="gated-links"></a>게이트 링크  
- 게이트 링크는 권한이 설정된 후에는 실행하는 동안 전체 개체 관계에서 권한을 확인하지 않는다는 것을 의미합니다. 두 개체 (예: 개체 **x** 및 개체 **y**) 간에 제어 된 링크가 있는 경우 개체 **y** 에 대 한 사용 권한과 개체 y에서 액세스 하는 다른 개체는 개체 **x**를 만들 때만 **확인 됩니다.** 개체 **x**를 만들 때 **x**의 소유자 `REFERENCE` 에 대해 **y** 에 대해 사용 권한을 확인 합니다. 실행 시 (예: 누군가가 개체 **x**를 호출 하는 경우), **y** 또는 정적으로 참조 하는 다른 개체에 대해 확인 된 사용 권한이 없습니다. 실행 시 개체 **x** 자체에 대해 적절 한 사용 권한이 확인 됩니다.  
+ 게이트 링크는 권한이 설정된 후에는 실행하는 동안 전체 개체 관계에서 권한을 확인하지 않는다는 것을 의미합니다. 두 개체 (예: 개체 **x** 및 개체 **y**) 간에 제어 된 링크가 있는 경우 개체 **y** 에 대 한 사용 권한과 개체 y에서 액세스 하는 다른 개체는 개체 **x**를 만들 때만 **확인 됩니다.** 개체 **x**를 만들 때 `REFERENCE` **x**의 소유자에 대해 **y** 에 대해 사용 권한을 확인 합니다. 실행 시 (예: 누군가가 개체 **x**를 호출 하는 경우), **y** 또는 정적으로 참조 하는 다른 개체에 대해 확인 된 사용 권한이 없습니다. 실행 시 개체 **x** 자체에 대해 적절 한 사용 권한이 확인 됩니다.  
   
  게이트 링크는 항상 두 개체 사이의 메타데이터 종속성과 함께 사용됩니다. 이 메타데이터 종속성은 다른 개체가 종속되어 있는 경우 개체를 삭제하지 못하게 하는 관계로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에서 설정합니다.  
   

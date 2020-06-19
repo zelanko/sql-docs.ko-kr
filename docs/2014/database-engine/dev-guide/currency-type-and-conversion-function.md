@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933657"
 ---
 # <a name="currency-type-and-conversion-function"></a>통화 형식 및 변환 함수
   이 예에서는 C#을 사용하여 Currency 사용자 정의 데이터 형식을 정의합니다. 이 사용자 정의 데이터 형식에서는 금액과 culture를 모두 캡슐화하여 금액을 해당 culture의 통화 값으로 렌더링하는 올바른 방법을 결정하는 데 도움을 줍니다. 이 예에서는 Currency 사용자 정의 데이터 형식의 인스턴스를 반환하는 통화 변환 함수도 제공합니다. AdventureWorks 데이터베이스에 미국 달러(USD)를 지정된 culture와 연관된 통화로 변환하는 환율이 있는 경우 변환 함수는 변환된 환율 및 요청 culture와 일치하는 culture와 함께 Currency 사용자 정의 데이터 형식을 반환합니다. 그렇지 않으면 Currency 사용자 정의 데이터 형식은 `en-us` culture인 미국 달러(USD) 단위의 원래 금액과 함께 반환됩니다. 이 예에서는 Transact-SQL을 사용하여 CLR(공용 언어 런타임) 메서드 및 어셈블리를 등록 및 등록 해제하는 방법도 보여 줍니다.  
@@ -23,7 +22,7 @@ ms.locfileid: "73637640"
 > [!CAUTION]  
 >  이 예제에서 사용하는 환율은 실제 환율이 아니므로 실제 금융 거래에 사용할 수 없습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  

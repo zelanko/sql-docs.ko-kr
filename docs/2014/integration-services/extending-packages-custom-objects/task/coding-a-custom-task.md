@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ac0429b744f9ba14798ca1f402261f16aae34a8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968683"
 ---
 # <a name="coding-a-custom-task"></a>사용자 지정 태스크 코딩
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스에서 상속된 클래스를 만들고 이 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 특성을 적용한 후에는 기본 클래스의 속성 및 메서드 구현을 재정의하여 사용자 지정 기능을 제공해야 합니다.
@@ -57,7 +56,7 @@ ms.locfileid: "78176283"
 #### <a name="user-interface-considerations-during-validation"></a>유효성 검사 중 사용자 인터페이스 고려 사항
  <xref:Microsoft.SqlServer.Dts.Runtime.Task>에는 `Validate` 메서드에 대한 매개 변수로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스가 포함됩니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> 인터페이스에는 태스크에서 런타임 엔진에 이벤트를 발생시키기 위해 호출하는 메서드가 포함되어 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> 및 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A> 메서드는 유효성 검사 중 경고 또는 오류 조건이 발생할 때 호출됩니다. 두 경고 메서드에는 동일한 매개 변수가 필요하며 이러한 매개 변수에는 오류 코드, 원본 구성 요소, 설명, 도움말 파일, 및 도움말 컨텍스트 정보가 포함됩니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서는 이 정보를 사용하여 디자인 화면에 시각적 표시를 제공합니다. 디자이너에서 제공하는 시각적 표시로는 디자이너 화면에서 태스크 옆에 나타나는 느낌표 아이콘이 있습니다. 이 시각적 표시는 실행을 계속하기 전에 태스크에 추가 구성이 필요함을 나타냅니다.
 
- 느낌표 아이콘에는 오류 메시지가 포함된 도구 설명도 표시됩니다. 오류 메시지는 태스크에서 이벤트의 설명 매개 변수로 제공됩니다. 오류 메시지는 **의** 태스크 목록[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 창에도 표시되어 사용자에게 모든 유효성 검사 오류를 볼 수 있는 중앙 위치를 제공합니다.
+ 느낌표 아이콘에는 오류 메시지가 포함된 도구 설명도 표시됩니다. 오류 메시지는 태스크에서 이벤트의 설명 매개 변수로 제공됩니다. 오류 메시지는 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]의 **태스크 목록** 창에도 표시되어 사용자에게 모든 유효성 검사 오류를 볼 수 있는 중앙 위치를 제공합니다.
 
 #### <a name="validation-example"></a>유효성 검사 예
  다음 코드 예에서는 `UserName` 속성을 사용하는 태스크를 보여 줍니다. 이 속성은 유효성 검사를 성공적으로 수행하기 위한 필수 항목으로 지정되었습니다. 이 속성이 설정되어 있지 않으면 태스크에서는 오류를 게시하고 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure> 열거형의 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult>를 반환합니다. `Validate` 메서드는 try/catch 블록에 래핑되며 예외가 발생하면 유효성 검사가 실패합니다.
@@ -157,7 +156,7 @@ End Class
  이 섹션에서는 태스크에서 상속하고 재정의한 `Execute` 메서드의 사용 방법을 보여 주며, 태스크 실행 결과에 대한 정보를 제공하는 다양한 방법에 대해 설명합니다.
 
 ### <a name="execute-method"></a>Execute 메서드
- 패키지에 포함된 태스크는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에서 해당 `Execute` 메서드를 호출하면 실행됩니다. 태스크는이 메서드에서 핵심 비즈니스 논리 및 기능을 구현 하 고, 메시지를 게시 하 고, <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 열거형에서 값을 반환 하 고, `get` `ExecutionValue` 속성의 속성을 재정의 하 여 실행 결과를 제공 합니다.
+ 패키지에 포함된 태스크는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임에서 해당 `Execute` 메서드를 호출하면 실행됩니다. 태스크는이 메서드에서 핵심 비즈니스 논리 및 기능을 구현 하 고, 메시지를 게시 하 고, 열거형에서 값을 반환 하 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 고, 속성의 속성을 재정의 하 여 실행 결과를 제공 합니다 `get` `ExecutionValue` .
 
  <xref:Microsoft.SqlServer.Dts.Runtime.Task> 기본 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 메서드의 기본 구현을 제공합니다. 사용자 지정 태스크에서는 이 메서드를 재정의하여 해당 태스크의 런타임 기능을 정의합니다. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> 개체는 태스크를 런타임 엔진과 패키지의 다른 개체에서 격리하여 해당 태스크를 래핑합니다. 이 격리로 인해 태스크는 실행 순서와 관련된 패키지 내에서의 태스크 위치를 알 수 없으므로 런타임에서 호출될 때만 실행됩니다. 이 아키텍처를 통해 실행 중 태스크에서 패키지를 수정할 때 발생할 수 있는 문제를 방지할 수 있습니다. 격리된 태스크에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> 메서드에 매개 변수로 지정된 개체를 통해서만 패키지의 다른 개체에 액세스할 수 있습니다. 태스크에서는 이러한 매개 변수를 통해 패키지의 안정성을 보장하는 데 필요한 격리 상태를 유지하면서 이벤트를 발생시키고, 이벤트 로그에 항목을 기록하고, 변수 컬렉션에 액세스하고, 데이터 원본에 대한 연결을 트랜잭션에 참여시킬 수 있습니다.
 

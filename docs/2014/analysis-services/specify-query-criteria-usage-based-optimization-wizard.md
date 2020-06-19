@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba9e131a8986b01a6bb897e35b2e45b2bb70ccd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940348"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>쿼리 조건 지정(사용 빈도 기반 최적화 마법사)
   최적화할 쿼리를 식별하기 위해 **쿼리 조건 지정** 페이지를 사용하여 하나 이상의 필터 옵션을 선택할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66068218"
 |용어|정의|  
 |----------|----------------|  
 |**총 쿼리**|선택한 파티션에 대한 쿼리 로그에 저장된 총 쿼리 수를 표시합니다.|  
-|**고유한 쿼리**|선택한 파티션에 대한 쿼리 로그에 저장된 고유한 쿼리 수를 표시합니다.|  
+|**고유 쿼리**|선택한 파티션에 대한 쿼리 로그에 저장된 고유한 쿼리 수를 표시합니다.|  
 |**고유한 사용자**|선택한 파티션에 대한 쿼리 로그에 저장된 쿼리와 연결된 고유한 사용자의 총 수를 표시합니다.|  
 |**평균 응답 시간**|선택한 파티션에 대한 쿼리 로그에 저장된 쿼리의 평균 응답 시간을 표시합니다.|  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c1e96d37ae3d140eb2efddd6d3df5c656cc3afd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15db59b43731b9a39ff4bef78e3a6cb6929e9b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068356"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>SRID(Spatial Reference Identifier)
   각 공간 인스턴스에는 SRID(spatial reference identifier)가 있습니다. SRID는 평면 지구 매핑 또는 둥근 지구 매핑에 사용되는 특정 타원면을 기준으로 하는 공간 참조 시스템에 해당합니다.  

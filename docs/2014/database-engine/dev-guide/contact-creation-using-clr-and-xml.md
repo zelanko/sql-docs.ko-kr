@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 364d155ce61dd452e63112b6182b6ff9653ef261
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 380dcccbea9c108f77f9f054e82fd002f85bee59
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637680"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933676"
 ---
 # <a name="contact-creation-using-clr-and-xml"></a>CLR 및 XML을 사용한 연락처 만들기
   SQL Server의 연락처 예제는 기본 AdventureWorks2012 예제 데이터베이스의 맨 위에 추가 기능 계층을 형성하는 몇 가지 유용한 유틸리티를 제공합니다. 첫 번째 유틸리티는 AdventureWorks2012 데이터베이스와 관련이 있는 여러 부류의 사람에 대한 연락처 레코드를 만듭니다. 연락처 정보는 XML을 사용하여 지정하고 C# 기반 또는 VB 저장 프로시저로 전달되어 XML을 만들고 이 XML을 데이터베이스의 적합한 테이블에 배치합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637680"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

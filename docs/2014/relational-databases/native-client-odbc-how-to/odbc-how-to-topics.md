@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700402"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043937"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버를 사용하려면 ODBC 데이터 원본을 만들고 서버에 올바른 버전의 카탈로그 저장 프로시저가 있는지 확인할 수 있어야 합니다. SQL Server를 사용하는 ODBC 애플리케이션의 코드를 작성하려면 ODBC 핸들을 할당하고 특성을 설정하고 SQL Server의 인스턴스에 연결하고 쿼리를 실행하고 결과를 처리하는 방법을 알아야 합니다.  

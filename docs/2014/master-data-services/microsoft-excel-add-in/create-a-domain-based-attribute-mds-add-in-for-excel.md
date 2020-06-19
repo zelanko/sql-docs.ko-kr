@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93a22979296e397ebe9c28a014913ca9da592ee6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961323"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 열에 있는 값을 특정 값 집합으로 제약하려는 경우 도메인 기반 특성을 만들 수 있습니다.  

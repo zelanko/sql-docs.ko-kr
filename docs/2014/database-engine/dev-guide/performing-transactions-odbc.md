@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f431191a-5762-4f0b-85bb-ac99aff29724
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8abc09c9395225dd653a072fd6c25dadce0849b2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933460"
 ---
 # <a name="performing-transactions-odbc"></a>트랜잭션 수행(ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC API 트랜잭션 관리 함수를 지원합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]는 개별 서버에서의 로컬 트랜잭션을 완벽하게 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 트랜잭션을 관리하는 ODBC API 함수를 지원하는 데 이러한 기능을 사용합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968587"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>스크립트 구성 요소를 사용하여 원본 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 원본 구성 요소를 사용하여 데이터 원본의 데이터를 로드하고 다운스트림 변환 및 대상에 전달할 수 있습니다. 일반적으로 데이터 원본에 연결하는 데는 기존 연결 관리자를 사용합니다.
@@ -60,7 +59,7 @@ ms.locfileid: "78176273"
 -   예기치 않은 값이 포함된 행에 대한 시뮬레이션된 오류 출력과 같은 추가 출력을 하나 이상 만들 수 있습니다. 원본 구성 요소의 출력을 관리하려면 **출력 추가** 및 **출력 제거** 단추를 사용합니다. 각 행을 동일한 `ExclusionGroup` 값을 공유하는 출력 중 하나로만 전송하려는 경우 사용 가능한 모든 출력의 `ExclusionGroup` 속성에 0이 아닌 동일한 값을 지정하지 않으면 모든 입력 행이 사용 가능한 모든 출력으로 전송됩니다. `ExclusionGroup`을 식별하기 위해 선택한 특정 정수 값은 중요하지 않습니다.
 
     > [!NOTE]
-    >  모든 행을 출력하지 않으려는 경우 단일 출력과 함께 0이 아닌 `ExclusionGroup` 속성 값을 사용할 수도 있습니다. 그러나 이 경우 출력으로 보낼 각 행에 대해 **DirectRowTo\<outputbuffer>** 메서드를 명시적으로 호출해야 합니다.
+    >  모든 행을 출력하지 않으려는 경우 단일 출력과 함께 0이 아닌 `ExclusionGroup` 속성 값을 사용할 수도 있습니다. 그러나이 경우 출력으로 보낼 각 행에 대해 **Directrowto \<outputbuffer> ** 메서드를 명시적으로 호출 해야 합니다.
 
 -   출력에 이름을 지정할 수 있습니다. 나중에 스크립트에서는 자동 생성 코드에서 만들어진 형식화된 접근자 속성을 사용하여 출력을 이름으로 참조합니다.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176273"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.
 
 ### <a name="adding-variables"></a>변수 추가
- 스크립트에 `ReadOnlyVariables` 사용 하려는 값이 포함 된 기존 변수가 있는 경우 스크립트 **변환 편집기**의 **스크립트** 페이지에서 및 `ReadWriteVariables` 속성 필드에 해당 변수를 추가할 수 있습니다.
+ 스크립트에 사용 하려는 값이 포함 된 기존 변수가 있는 경우 스크립트 `ReadOnlyVariables` `ReadWriteVariables` **변환 편집기**의 **스크립트** 페이지에서 및 속성 필드에 해당 변수를 추가할 수 있습니다.
 
- 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 고 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 입력할 수도 있습니다.
+ 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. 및 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 하 `ReadOnlyVariables` `ReadWriteVariables` 고 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 입력할 수도 있습니다.
 
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176273"
 
  `ScriptMain` 클래스에는 `CreateNewOutputRows` 메서드에 대한 스텁이 포함되어 있습니다. `CreateNewOutputRows`는 원본 구성 요소에서 가장 중요한 메서드입니다.
 
- VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
+ VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 프로젝트 항목도 생성 한 것을 볼 수 있습니다 `ComponentWrapper` . `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
 
  런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `PrimeOutput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `PrimeOutput` 메서드는 다음 메서드를 호출합니다.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176273"
  다음 예에서는 `ScriptMain` 클래스에서 원본 구성 요소를 만드는 데 필요한 사용자 지정 코드를 보여 줍니다.
 
 > [!NOTE]
->  이 `AdventureWorks` 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **intaddressid** 와 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
+>  이 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 `AdventureWorks` 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **intaddressid** 와 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
 
 ### <a name="adonet-source-example"></a>ADO.NET 원본 예
  이 예에서는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 데이터 흐름으로 로드하는 원본 구성 요소를 보여 줍니다.
@@ -134,7 +133,7 @@ ms.locfileid: "78176273"
 
 5.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
 
-6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. `AdventureWorks` 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행 하 여 대상 테이블을 만들 수 있습니다.
+6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같이 **AddressID** 및 **City** 열을 필요로 하는 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 데이터베이스에서 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` .
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,
@@ -255,7 +254,7 @@ ms.locfileid: "78176273"
 
  이 예제 코드를 실행하려면 다음과 같이 패키지와 구성 요소를 구성해야 합니다.
 
-1.  가져오기 및 내보내기 마법사를 사용 하 여 `AdventureWorks` 예제 데이터베이스의 **Person. Address** 테이블을 쉼표로 구분 된 플랫 파일로 내보냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 예제에서는 파일 이름으로 ExportedAddresses.txt를 사용합니다.
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가져오기 및 내보내기 마법사를 사용 하 여 예제 데이터베이스의 **Person. Address** 테이블을 `AdventureWorks` 쉼표로 구분 된 플랫 파일로 내보냅니다. 이 예제에서는 파일 이름으로 ExportedAddresses.txt를 사용합니다.
 
 2.  내보낸 데이터 파일에 연결하는 플랫 파일 연결 관리자를 만듭니다.
 
@@ -267,7 +266,7 @@ ms.locfileid: "78176273"
 
 6.  **스크립트** 페이지에서 **스크립트 편집**을 클릭하고 다음 스크립트를 입력합니다. 그런 다음 스크립트 개발 환경 및 **스크립트 변환 편집기**를 닫습니다.
 
-7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. `AdventureWorks` 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령을 실행 하 여 대상 테이블을 만들 수 있습니다.
+7.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상이나 [스크립트 구성 요소를 사용하여 대상 만들기](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)에서 보여 준 예제 대상 구성 요소와 같은 대상 구성 요소를 만들고 구성합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 데이터베이스에서 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] `AdventureWorks` .
 
     ```
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,

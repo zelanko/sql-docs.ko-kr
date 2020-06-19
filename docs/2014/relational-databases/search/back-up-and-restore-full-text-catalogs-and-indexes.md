@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c0df49c03325da375427c6566799f374fcc9dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012819"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068431"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>전체 텍스트 카탈로그와 인덱스 백업 및 복원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 전체 텍스트 인덱스를 백업 및 복원하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 상주하는 것은 아닙니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그에 속한 전체 텍스트 인덱스가 포함된 모든 파일 그룹을 식별해야 합니다. 그런 다음 해당 파일 그룹을 하나씩 백업해야 합니다.  

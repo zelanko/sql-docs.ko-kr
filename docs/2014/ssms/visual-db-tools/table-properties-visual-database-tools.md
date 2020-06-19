@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044200"
 ---
 # <a name="table-properties-visual-database-tools"></a>테이블 속성(Visual Database Tools)
   테이블 디자이너 내부를 마우스 오른쪽 단추로 클릭한 다음 속성을 선택하는 경우 속성 창에 이러한 속성이 나타납니다. 별도로 언급하지 않는 한 테이블을 선택할 때 속성 창에서 이러한 속성을 편집할 수 있습니다.  

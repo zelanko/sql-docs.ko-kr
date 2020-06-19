@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c578b2ebb686c28fc34b2f99e5215bdd54154aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061726"
 ---
 # <a name="activity-monitor"></a>작업 모니터
   작업 모니터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 이러한 프로세스가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 미치는 영향에 대한 정보를 표시합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "63249335"
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |작업 모니터를 여는 방법 및 작업 모니터 새로 고침 간격을 설정하는 방법에 대해 설명합니다.|[작업 모니터 열기&#40;SQL Server Management Studio&#41;](../performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |서버 성능 및 작업 모니터링 관련 항목을 연결합니다.|[서버 성능 및 작업 모니터링](../performance/server-performance-and-activity-monitoring.md)|  
   

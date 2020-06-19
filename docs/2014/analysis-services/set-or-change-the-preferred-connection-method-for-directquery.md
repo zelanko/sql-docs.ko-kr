@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0513b300939b935dbf138d2bd8484e86740f31c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940534"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>DirectQuery의 기본 연결 방법 설정 또는 변경
   DirectQuery 모드에서 사용할 모델을 만들 때는 먼저 디자인 환경에서 DirectQuery 사용을 지원하도록 구성해야 합니다. 이렇게 하려면 [SSAS 테이블 형식&#41;&#40;DirectQuery 디자인 모드 사용 ](tabular-models/enable-directquery-mode-in-ssdt.md)을 참조 하세요.  

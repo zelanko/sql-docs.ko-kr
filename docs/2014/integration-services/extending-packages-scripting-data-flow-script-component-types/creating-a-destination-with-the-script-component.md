@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968581"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 대상 만들기
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 데이터 흐름에서 대상 구성 요소를 사용하여 업스트림 원본 및 변환에서 받은 데이터를 데이터 원본에 저장할 수 있습니다. 일반적으로 대상 구성 요소는 기존 연결 관리자를 통해 데이터 원본에 연결합니다.
@@ -66,9 +65,9 @@ ms.locfileid: "78176298"
  **스크립트 변환 편집기**의 **입/출력** 페이지에 대한 자세한 내용은 [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../script-transformation-editor-inputs-and-outputs-page.md)를 참조하세요.
 
 ### <a name="adding-variables"></a>변수 추가
- 스크립트에서 `ReadOnlyVariables` 기존 변수를 사용 하려는 경우 스크립트 **변환 편집기**의 **스크립트** 페이지에서 및 `ReadWriteVariables` 속성 필드에 해당 변수를 추가할 수 있습니다.
+ 스크립트에서 기존 변수를 사용 하려는 경우 스크립트 `ReadOnlyVariables` `ReadWriteVariables` **변환 편집기**의 **스크립트** 페이지에서 및 속성 필드에 해당 변수를 추가할 수 있습니다.
 
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. `ReadOnlyVariables` 및 `ReadWriteVariables` 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 및 속성 필드 옆의 줄임표 (**...**) 단추를 클릭 한 `ReadOnlyVariables` `ReadWriteVariables` 다음 **변수 선택** 대화 상자에서 변수를 선택 하 여 여러 개의 변수를 선택할 수도 있습니다.
 
  스크립트 구성 요소에서 변수를 사용하는 방법에 대한 일반적인 내용은 [스크립트 구성 요소에서 변수 사용](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)을 참조하세요.
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176298"
 ### <a name="understanding-the-auto-generated-code"></a>자동 생성 코드 이해
  대상 구성 요소를 만들고 구성한 후 VSTA IDE를 열면 편집 가능한 `ScriptMain` 클래스가 `ProcessInputRow` 메서드에 대한 스텁과 함께 코드 편집기에 나타납니다. 이 `ScriptMain` 클래스에서 사용자 지정 코드를 작성해야 하며 `ProcessInputRow`는 대상 구성 요소에서 가장 중요한 메서드입니다.
 
- VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 `ComponentWrapper` 프로젝트 항목도 생성 한 것을 볼 수 있습니다. `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
+ VSTA에서 **프로젝트 탐색기** 창을 열면 스크립트 구성 요소가 읽기 전용 `BufferWrapper` 및 프로젝트 항목도 생성 한 것을 볼 수 있습니다 `ComponentWrapper` . `ScriptMain` 클래스는 `UserComponent` 프로젝트 항목의 `ComponentWrapper` 클래스에서 상속됩니다.
 
  런타임에 데이터 흐름 엔진은 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 부모 클래스의 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 메서드를 재정의하는 `ProcessInput` 클래스의 `UserComponent` 메서드를 호출합니다. 그러면 `ProcessInput` 메서드는 입력 버퍼의 행을 반복하고 각 행에 대해 `ProcessInputRow` 메서드를 한 번씩 호출합니다.
 
@@ -101,7 +100,7 @@ ms.locfileid: "78176298"
  다음 예에서는 `ScriptMain` 클래스에서 대상 구성 요소를 만드는 데 필요한 코드를 보여 줍니다.
 
 > [!NOTE]
->  이 `AdventureWorks` 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **int * addressid*** 및 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
+>  이 예에서는 예제 데이터베이스의 **Person. Address** 테이블을 사용 `AdventureWorks` 하 여 데이터 흐름을 통해 첫 번째 및 네 번째 열인 **int * addressid*** 및 **nvarchar (30) City** 열을 전달 합니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.
 
 ### <a name="adonet-destination-example"></a>ADO.NET 대상 예
  이 예제에서는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 사용하여 데이터 흐름의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 저장하는 대상 구성 요소를 보여 줍니다.
@@ -119,7 +118,7 @@ ms.locfileid: "78176298"
 
 3.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 대상으로 구성합니다.
 
-4.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 이 출력은 적어도 **Addressid** 및 **City** 열이 포함 된 `AdventureWorks` 예제 데이터베이스의 **Person. Address** 테이블에서 데이터를 제공 해야 합니다.
+4.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 이 출력은 **Person.Address** `AdventureWorks` 적어도 **addressid** 및 **City** 열이 포함 된 예제 데이터베이스의 Person. Address 테이블에서 데이터를 제공 해야 합니다.
 
 5.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 입력 열을 선택합니다.
 
@@ -236,7 +235,7 @@ public class ScriptMain:
 
 2.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 대상으로 구성합니다.
 
-3.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 이 출력은 `AdventureWorks` 예제 데이터베이스의 **Person. Address** 테이블에서 데이터를 제공 해야 하며, 적어도 **addressid** 및 **City** 열을 포함 해야 합니다.
+3.  업스트림 원본 또는 변환의 출력을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 대상 구성 요소에 연결합니다. 변환을 사용 하지 않고 소스를 대상에 직접 연결할 수 있습니다. 이 출력은 예제 데이터베이스의 **Person. Address** 테이블에서 데이터를 제공 해야 `AdventureWorks` 하며, 적어도 **addressid** 및 **City** 열을 포함 해야 합니다.
 
 4.  **스크립트 변환 편집기**를 엽니다. **입력 열** 페이지에서 **AddressID** 및 **City** 열을 선택합니다.
 
