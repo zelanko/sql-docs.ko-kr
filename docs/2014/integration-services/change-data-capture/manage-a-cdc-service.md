@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddb505dbbad4b7980ae7a210e71116c5027b22e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922764"
 ---
 # <a name="manage-a-cdc-service"></a>CDC Service 관리
   CDC Designer 콘솔을 사용하면 CDC Service 구성 콘솔로 만든 서비스를 보고 Oracle CDC Service의 모든 인스턴스를 관리할 수 있습니다.  

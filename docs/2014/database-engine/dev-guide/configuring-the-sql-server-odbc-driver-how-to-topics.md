@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e26fbc87-9483-4a2e-99f1-bf52a58360db
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f3510f0ddae4cc6b375421255ef46e76c82466c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933669"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>SQL Server ODBC 드라이버 구성 방법 도움말 항목
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 ODBC 애플리케이션을 사용하려면 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 카탈로그 저장 프로시저의 버전을 업그레이드하는 방법과 데이터 원본을 추가, 삭제 및 테스트하는 방법을 알아 두어야 합니다.  

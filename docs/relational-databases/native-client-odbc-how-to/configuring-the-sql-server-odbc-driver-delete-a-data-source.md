@@ -1,5 +1,6 @@
 ---
 title: 데이터 원본 삭제 (ODBC) | Microsoft Docs
+description: SQL Server 2005 이상에서 ODBC 응용 프로그램을 사용 하기 전에 ODBC 관리자를 사용 하 여 프로그래밍 방식으로 또는 파일을 사용 하 여 데이터 원본을 삭제 하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c8abf66fdd5a54b021008229b3218f1299ccf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967623"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>SQL Server ODBC 드라이버 구성 - 데이터 원본 삭제
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755252"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933700"
 ---
 # <a name="clr-triggers"></a>CLR 트리거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR(공용 언어 런타임)과의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 통합으로 인해 모든 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 언어를 사용하여 CLR 트리거를 만들 수 있습니다. 이 섹션에서는 CLR 통합을 사용하여 구현된 트리거와 관련된 정보를 제공합니다. 트리거에 대 한 자세한 설명은 [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)를 참조 하세요.  
@@ -49,7 +48,7 @@ ms.locfileid: "62755252"
   
 -   DDL 문 실행의 영향을 받는 데이터베이스 개체에 대한 정보 액세스  
   
- 이러한 기능은 쿼리 언어에서 기본적으로 또는 `SqlTriggerContext` 클래스에 의해 제공됩니다. CLR 통합의 장점 및 관리 코드와 [!INCLUDE[tsql](../../includes/tsql-md.md)]관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [clr 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)를 참조 하세요.  
+ 이러한 기능은 쿼리 언어에서 기본적으로 또는 `SqlTriggerContext` 클래스에 의해 제공됩니다. CLR 통합의 장점 및 관리 코드와 관리 코드를 선택 하는 방법에 대 한 자세한 내용은 [!INCLUDE[tsql](../../includes/tsql-md.md)] [Clr 통합 개요](../../relational-databases/clr-integration/clr-integration-overview.md)를 참조 하세요.  
   
 ## <a name="using-the-sqltriggercontext-class"></a>SqlTriggerContext 클래스 사용  
  `SqlTriggerContext` 클래스는 공개적으로 생성할 수 없으며, CLR 트리거 본문 내에서 `SqlContext.TriggerContext` 속성에 액세스해야만 얻을 수 있습니다. `SqlTriggerContext` 클래스는 `SqlContext` 속성을 호출하여 활성 `SqlContext.TriggerContext`에서 얻을 수 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "62755252"
 ### <a name="using-the-inserted-and-deleted-tables"></a>Inserted 및 Deleted 테이블 사용  
  DML 트리거 문에는 **inserted** 테이블과 **deleted** 테이블 이라는 두 개의 특수 테이블이 사용 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 하지만 테이블의 데이터를 직접 변경할 수는 없습니다.  
   
- CLR 트리거는 CLR in-process 공급자를 통해 **inserted** 및 **deleted** 테이블에 액세스할 수 있습니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 예를 들어:  
+ CLR 트리거는 CLR in-process 공급자를 통해 **inserted** 및 **deleted** 테이블에 액세스할 수 있습니다. 이 작업을 수행하려면 SqlContext 개체에서 `SqlCommand` 개체를 얻습니다. 다음은 그 예입니다.  
   
  C#  
   
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- 에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트리거를 만드는 문은 다음과 같습니다 .에서는 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 **sqlclrtest** 어셈블리가 이미 등록 되어 있다고 가정 합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트리거를 만드는 문은 다음과 같습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .에서는 현재 데이터베이스에 **sqlclrtest** 어셈블리가 이미 등록 되어 있다고 가정 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 CREATE TRIGGER EmailAudit  

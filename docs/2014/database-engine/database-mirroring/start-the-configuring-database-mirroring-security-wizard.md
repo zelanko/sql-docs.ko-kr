@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c846950-0a2d-45df-b0d5-193e455f7cd5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fab3a0a48633f70a91d4e65bd31b7d3f9c314ca3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754439"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933864"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>데이터베이스 미러링 보안 구성 마법사 시작(SQL Server Management Studio)
   데이터베이스 미러링 보안 구성 마법사는 미러링과 관련된 일부 또는 모든 서버 인스턴스에서 보안 설정을 초기 구성하는 데 사용할 수 있습니다. 이 마법사는 **데이터베이스 속성** 대화 상자의 **미러링** 페이지와 함께 작동합니다.  

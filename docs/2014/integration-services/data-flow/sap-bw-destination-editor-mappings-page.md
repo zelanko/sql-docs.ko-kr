@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56d267e6cc1e3343dc92dac6cc247b9308ba072d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914483"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
   **SAP BW 대상 편집기** 의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "62770879"
  **입력 열**  
  선택한 입력 열을 표시합니다.  
   
- 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거하려면 **\<무시>** 를 선택하여 해당 입력 열을 출력에서 제외합니다.  
+ 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거 하려면를 선택 하 여 **\<ignore>** 입력 열을 출력에서 제외 합니다.  
   
  **대상 열**  
  열의 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  

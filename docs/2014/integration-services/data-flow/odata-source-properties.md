@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26be406c26c362f1bd7fc5880e7c889fbd450ad6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915187"
 ---
 # <a name="odata-source-properties"></a>OData 원본 속성
   데이터 흐름에서 **OData 원본** 을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하면 **속성** 창에 **OData 원본** 구성 요소의 속성이 표시됩니다.  
   
 |||  
 |-|-|  
-|속성|설명|  
+|속성|Description|  
 |CollectionName|OData 서비스에서 검색할 컬렉션의 이름입니다. **CollectionName** 속성은 **UseResourcePath** 가 False인 경우 사용됩니다.<br /><br /> 이 속성에는 식이 적용될 수 있으므로 속성 값이 런타임에 설정될 수 있습니다. 그러나 컬렉션의 메타데이터가 디자인 타임에 사용된 메타데이터와 일치하지 않는 경우 유효성 검사 오류가 발생하여 데이터 흐름 실행이 실패합니다.|  
 |DefaultStringLength|이 값은 최대 길이가 없는 문자열 열의 기본 길이를 지정합니다.<br /><br /> **기본값:** 4000|  
 |쿼리|OData 쿼리 매개 변수입니다. 이 속성에는 식이 적용될 수 있으므로 속성 값이 런타임에 설정될 수 있습니다.|  

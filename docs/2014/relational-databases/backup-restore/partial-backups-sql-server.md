@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe6b6bb1-38d0-46c4-bab8-31df14e8999c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4213bcee1d17d27bf63da9eb286b21dea4cc5a02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c03cf2fb4d3af6fe87459e881e26c48cfacc232
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921932"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957813"
 ---
 # <a name="partial-backups-sql-server"></a>부분 백업(SQL Server)
   모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복구 모델은 부분 백업을 지원하므로 이 항목에서는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 그러나 부분 백업은 하나 이상의 읽기 전용 파일 그룹을 포함하는 초대형 데이터베이스를 백업할 경우의 유연성 향상을 위해 단순 복구 모델에서 사용하도록 디자인되었습니다.  
@@ -45,9 +44,9 @@ ms.locfileid: "62921932"
   
  **복원 시퀀스에서 부분 백업을 사용하려면**  
   
--   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   

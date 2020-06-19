@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 9333c239504a79184e08776acb3f1d845f06cc4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940484"
 ---
 # <a name="specify-a-connection-string-ssas"></a>연결 문자열 지정(SSAS)
   **테이블 가져오기 마법사** 의 이 페이지에서는 OLE DB 또는 ODBC 데이터 원본에 연결하기 위한 연결 문자열을 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 마법사에 액세스하려면 **모델** 메뉴에서 **데이터 원본에서 가져오기**를 클릭합니다.  

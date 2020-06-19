@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754201"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933774"
 ---
 # <a name="allowing-partially-trusted-callers"></a>부분적으로 신뢰할 수 있는 호출자 허용
   코드 라이브러리 공유는 CLR(공용 언어 런타임) 통합에서의 일반적인 시나리오입니다. 이 경우 사용자 정의 형식, 저장 프로시저, 사용자 정의 함수, 사용자 정의 집계, 트리거 또는 유틸리티 클래스가 포함된 어셈블리를 다른 어셈블리나 애플리케이션에서 액세스하는 경우가 많습니다. 여러 애플리케이션에서 공유할 코드 라이브러리는 강력한 이름으로 서명되어야 합니다.  
@@ -45,7 +44,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  많은 서버 쪽 CLR 통합 애플리케이션에 유용한 유틸리티 클래스가 있다고 가정합니다. 예를 들어 이 클래스는 쿼리 호출 결과를 나타내는 클래스일 수 있습니다. 이 구성 요소를 공유할 수 있도록 이 유틸리티 클래스는 별도의 어셈블리에 배치됩니다. 그러면 CLR 통합 개체가 포함된 다른 여러 어셈블리에서 해당 어셈블리가 참조됩니다. 이 유틸리티 클래스는 다양한 서버 애플리케이션에서 사용되므로 신중하게 검토되고 모든 보안 문제가 해결됩니다. 그런 후에 이 유틸리티 클래스가 포함된 어셈블리에 `AllowPartiallyTrustedCallers` 특성이 적용되어 `SAFE` 또는 `EXTERNAL_ACCESS` 권한 집합으로 표시된 어셈블리에 포함된 CLR 통합 개체에서 유틸리티 클래스와 메서드가 별도의 어셈블리에 있는 경우에도 사용할 수 있게 합니다.  
   
  경우에 따라서는 쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 것이 유용할 수 있습니다. ADO.NET 2.0의 MARS(Multiple Active Result Set)는 이러한 작업을 가능하게 하는 기술입니다. 현재로서는 서버 쪽 프로그래밍에 사용되는 in-process 공급자에는 MARS가 구현되지 않습니다. 서버 쪽 커서를 사용하면 이러한 제한을 해결할 수 있습니다. 이 예제는 서버 쪽 커서를 사용하여 서버 쪽 프로그래밍을 지원하지 않는 MARS의 한계를 극복하는 방법을 보여 줍니다.  
@@ -60,7 +59,7 @@ Microsoft.Samples.SqlServer.TestResultSet.Test()
   
  이 예제는 "부분적으로 신뢰하는 호출자 허용" 특성을 사용하여 결과 집합 어셈블리가 다른 어셈블리에서 안전하게 호출될 수 있는 라이브러리임을 나타내는 방법도 보여 줍니다. 이 방법은 안전하지 않은 권한을 사용하여 호출 어셈블리를 등록하는 것보다 좀 더 복잡하지만 훨씬 안전합니다. 호출 어셈블리를 안전한 어셈블리로 등록하면 호출 어셈블리가 서버의 리소스에 영향을 주지 않도록 제한하고 서버의 무결성에 손상을 주지 않도록 하므로 더 안전합니다.  
   
- 이 예제에 대한 작성 지침에서는 원본 코드 파일이 c:\samples라는 디렉터리에 있다고 가정합니다.  다른 디렉터리를 사용하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 수정해야 합니다. 스크립트 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에는 AdventureWorks 데이터베이스도 필요 합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다.  
+ 이 예제에 대한 작성 지침에서는 원본 코드 파일이 c:\samples라는 디렉터리에 있다고 가정합니다.  다른 디렉터리를 사용하는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 수정해야 합니다. 스크립트에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] AdventureWorks 데이터베이스도 필요 합니다. AdventureWorks 샘플 데이터베이스는 [Microsoft SQL Server 샘플 및 커뮤니티 프로젝트](https://go.microsoft.com/fwlink/?LinkID=85384) 홈 페이지에서 다운로드할 수 있습니다.  
   
  예제를 빌드하고 실행하려면 첫 번째 코드 목록을 ResultSet.cs라는 파일에 붙여 넣고 csc /target:library ResultSet.cs를 사용하여 컴파일합니다.  
   

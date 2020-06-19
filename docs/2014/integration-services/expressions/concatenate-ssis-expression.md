@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 288e4aedc6112640aa511712ad90912b1d41b2fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 124071d10424e9b8ee33d1d8966bc6f543533efb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769373"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967441"
 ---
 # <a name="-concatenate-ssis-expression"></a>+(연결)(SSIS 식)
   두 식을 하나의 식으로 연결합니다.  

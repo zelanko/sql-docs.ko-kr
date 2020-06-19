@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933684"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기
   이 섹션에서는 간단한 SMO 콘솔 애플리케이션을 빌드하는 방법을 설명합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "62753350"
   
 2.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다. **새 프로젝트** 대화 상자가 나타납니다.  
   
-3.  **프로젝트 형식** 대화 상자에서 **Visual Basic**를 선택한 다음 **Windows**를 선택 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 설치 된 템플릿 창에서 **콘솔 응용 프로그램을 선택 합니다.**  
+3.  **프로젝트 형식** 대화 상자에서 **Visual Basic**를 선택한 다음 **Windows**를 선택 합니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]설치 된 템플릿 창에서 **콘솔 응용 프로그램을 선택 합니다.**  
   
 4.  필드 **이름** 필드에 새 응용 프로그램의 이름을 입력 합니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c92cbb557484e3bd879e9712121b2bbc52d4732
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835631"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922914"
 ---
 # <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
   CDC Designer 콘솔을 사용하여 직접 만든 인스턴스에 대한 정보를 보고 인스턴스 작업을 관리할 수 있습니다.  
@@ -103,17 +102,17 @@ ms.locfileid: "62835631"
     -   **기록된 변경**: SQL Server 변경 테이블에 기록된 변경 사항의 수입니다.  
   
  **Oracle**  
- CDC 인스턴스 및 Oracle 데이터베이스에 대한 연결 관련 정보를 표시합니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스 및 Oracle 데이터베이스에 대한 연결 관련 정보를 표시합니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하거나 오른쪽 창 **에서 속성을 클릭 하** 여 \<instance> 속성 대화 상자를 엽니다.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)을 참조하십시오.  
   
  **테이블**  
- CDC 인스턴스에 포함된 테이블에 대한 정보를 표시합니다. 여기에서 열 정보도 사용할 수 있습니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스에 포함된 테이블에 대한 정보를 표시합니다. 여기에서 열 정보도 사용할 수 있습니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하거나 오른쪽 창 **에서 속성을 클릭 하** 여 \<instance> 속성 대화 상자를 엽니다.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit Tables](edit-tables.md)을 참조하십시오.  
   
  **고급**  
- CDC 인스턴스에 대한 고급 속성과 속성 값을 표시합니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스에 대한 고급 속성과 속성 값을 표시합니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 **속성** 을 선택 하거나 오른쪽 창 **에서 속성을 클릭 하** 여 \<instance> 속성 대화 상자를 엽니다.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit the Advanced Properties](edit-the-advanced-properties.md)을 참조하십시오.  
   

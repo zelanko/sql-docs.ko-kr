@@ -1,5 +1,6 @@
 ---
 title: 저장 프로시저 결과 처리 | Microsoft Docs
+description: 저장 프로시저에서 응용 프로그램에 데이터를 반환 하는 데 사용 하 SQL Server 메커니즘에 대해 알아봅니다. 응용 프로그램은 이러한 모든 형식을 처리할 수 있어야 합니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 788ef2a4-17de-4526-960b-46bf29aafc9f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d246756161e129f3f1d4c6efe5192ce39ff777d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3027c2624d34d685491d00fe9e5d84109a0322d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967554"
 ---
 # <a name="processing-stored-procedure-results"></a>저장 프로시저 결과 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "81304547"
   
 -   프로시저에는 정수 반환 코드가 있을 수 있습니다.  
   
- 애플리케이션은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다. CALL 또는 EXECUTE 문에는 반환 코드 및 출력 매개 변수에 대한 매개 변수 표식이 포함되어야 합니다. [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 사용 하 여 모두 출력 매개 변수로 바인딩하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 경우 Native Client ODBC 드라이버는 출력 값을 바인딩된 변수에 전송 합니다. 출력 매개 변수 및 반환 코드는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]클라이언트로 반환 되는 마지막 항목입니다. [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 가 SQL_NO_DATA 반환 될 때까지 응용 프로그램에 반환 되지 않습니다.  
+ 애플리케이션은 저장 프로시저의 이러한 모든 출력을 처리할 수 있어야 합니다. CALL 또는 EXECUTE 문에는 반환 코드 및 출력 매개 변수에 대한 매개 변수 표식이 포함되어야 합니다. [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) 를 사용 하 여 모두 출력 매개 변수로 바인딩하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 출력 값을 바인딩된 변수에 전송 합니다. 출력 매개 변수 및 반환 코드는에서 클라이언트로 반환 되는 마지막 항목 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 입니다. [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 가 SQL_NO_DATA를 반환할 때까지 응용 프로그램에 반환 되지 않습니다.  
   
  ODBC는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서 매개 변수를 바인딩하는 기능을 제공하지 않습니다. 출력 커서 매개 변수가 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 실행하기 전에 모든 출력 매개 변수를 바인딩해야 하므로 ODBC 애플리케이션은 이를 호출할 수 없습니다.  
   

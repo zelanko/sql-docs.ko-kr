@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: badbd6ac-20aa-4891-a14f-48d38e7f30de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad3536bacef0859fa2a3701bc6cd3f2bc2532c50
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62752970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933594"
 ---
 # <a name="fetching-blob-data-using-irow"></a>IRow를 사용하여 BLOB 데이터 인출
   **IRow:: GetColumns**또는 **IRow:: Open** 및 **ISequentialStream**를 사용 하 여 행 개체의 BLOB 열을 검색할 수 있습니다.  

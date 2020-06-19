@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175977"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958073"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>미디어 세트, 미디어 패밀리 및 백업 세트(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 처음 접하는 사용자를 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 백업 미디어를 사용하는 형식, 백업 미디어와 백업 디바이스 간의 관계, 백업 미디어에서의 백업 구성, 미디어 세트 및 미디어 패밀리에 대한 몇 가지 고려 사항에 대해 설명합니다. 이 항목에서는 백업 미디어를 처음 사용하기 전에 초기화하거나 포맷하는 방법과 기존 미디어 세트를 새로운 미디어 세트로 교체하는 방법, 미디어 세트의 기존 백업 세트를 덮어쓰는 방법 및 미디어 세트에 새로운 백업 세트를 추가하는 방법에 대해서도 설명합니다.
@@ -86,7 +85,7 @@ ms.locfileid: "78175977"
 -   미디어 설명에 MTF 미디어 레이블이나 미디어 설명이 포함되는지 여부
 
     > [!NOTE]
-    >  백업 또는 복원 작업에 사용 되는 모든 미디어는 다른 응용 프로그램에서 작성 한 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블은 쓰지 않는 표준 백업 형식을 사용 합니다.
+    >  백업 또는 복원 작업에 사용 되는 모든 미디어는 [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] 다른 응용 프로그램에서 작성 한 모든 MTF 미디어 레이블을 유지 하지만 MTF 미디어 레이블은 쓰지 않는 표준 백업 형식을 사용 합니다.
 
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 미디어 레이블 또는 자유형 텍스트로 된 미디어 설명
 
@@ -137,7 +136,7 @@ WITH
 
  ![3개 미디어 세트 테이프에 분산된 두 번째 백업 세트](../../database-engine/media/bnr-mediaset-appendedto.gif "3개 미디어 세트 테이프에 분산된 두 번째 백업 세트")
 
- 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 전체 데이터베이스 백업을 **=** 복원한 다음 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원할 때 파일 _backup_set_file_number_ 절을 사용 하는 방법을 보여 줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.
+ 백업을 복원할 때 FILE 옵션을 사용하여 사용할 백업을 지정할 수 있습니다. 다음 예제에서는 **=** _데이터베이스의 전체 데이터베이스 백업을 복원한 후 동일한 미디어 세트에서 차등 데이터베이스 백업을 복원하는 경우 FILE_ backup_set_file_number [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 절의 사용을 보여 줍니다. 미디어 세트는 `\\.\tape0`, `tape1`및 `tape2`의 테이프 드라이브에 있는 세 개의 백업 테이프를 사용합니다.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -244,7 +243,7 @@ GO
 
      미디어 시퀀스 번호는 미디어 패밀리 안의 실제 미디어 순서를 나타냅니다. 초기 백업 미디어의 시퀀스 번호는 1로 지정되어 1로 태그를 붙이고 두 번째 미디어(첫 번째 연속 미디어)는 2로 태그를 붙이며 나머지 미디어도 이와 같은 순서로 태그를 붙입니다. 백업을 복원하는 운영자는 백업 세트를 복원할 때 미디어 시퀀스 번호를 사용하여 올바른 순서로 정확하게 미디어를 탑재할 수 있습니다.
 
-###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>여러 장치
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> 여러 디바이스
  테이프 드라이브나 디스크 파일을 여러 개 사용할 때는 다음 사항을 고려해야 합니다.
 
 -   백업의 경우

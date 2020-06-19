@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b42115278e6866063639c7ce2fc596749ad2d39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e51592134e626647577bf69319e452a77359ff0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967403"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
   지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다. *datepart* 매개 변수는 비교할 날짜 및 시간 범위를 식별합니다.  
@@ -81,7 +80,7 @@ DATEDIFF("dd", (DT_DBTIMESTAMP)"8/1/2003", (DT_DBTIMESTAMP)"8/8/2003")
 DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())  
 ```  
   
- 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. **YearEndDate** 에 `date` 데이터 형식이 있는 경우에는 명시적 캐스팅이 필요 하지 않습니다.  
+ 이 예에서는 **ModifiedDate** 열의 날짜와 **YearEndDate** 변수 사이의 주 수를 반환합니다. **YearEndDate** 에 데이터 형식이 있는 경우에는 `date` 명시적 캐스팅이 필요 하지 않습니다.  
   
 ```  
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  

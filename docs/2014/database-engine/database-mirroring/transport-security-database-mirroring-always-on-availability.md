@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 944f66f3a08ff008720d78802aadfb0fee3801e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754292"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933896"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>데이터베이스 미러링 및 AlwaysOn 가용성 그룹에 대한 전송 보안(SQL Server)
   전송 보안에는 데이터베이스 간에 교환되는 메시지의 인증과 암호화(선택적)가 포함됩니다. 데이터베이스 미러링 및 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우 데이터베이스 미러링 엔드포인트에 인증과 암호화가 구성됩니다. 데이터베이스 미러링 엔드포인트에 대한 개요를 보려면 [데이터베이스 미러링 엔드포인트&#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)을 참조하세요.  
@@ -63,9 +62,9 @@ ms.locfileid: "62754292"
   
  필요에 따라 CREATE ENDPOINT 문 또는 ALTER ENDPOINT 문의 ALGORITHM 옵션에 다음 값 중 하나를 지정하여 엔드포인트에서 사용할 수 있는 암호화 알고리즘을 제어할 수 있습니다.  
   
-|ALGORITHM 값|설명|  
+|ALGORITHM 값|Description|  
 |---------------------|-----------------|  
-|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 이것이 기본값입니다.<br /><br /> 참고: RC4 알고리즘은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
+|RC4|엔드포인트가 반드시 RC4 알고리즘을 사용하도록 지정합니다. 기본값입니다.<br /><br /> 참고: RC4 알고리즘은 더 이상 사용 되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.|  
 |AES|엔드포인트가 반드시 AES 알고리즘을 반드시 사용하도록 지정합니다.|  
 |AES RC4|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 AES 알고리즘에 우선권을 주도록 지정합니다.|  
 |RC4 AES|두 엔드포인트가 암호화 알고리즘에 대해 협상하고 이 엔드포인트가 RC4 알고리즘에 우선권을 주도록 지정합니다.|  
@@ -95,7 +94,7 @@ ms.locfileid: "62754292"
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [DROP ENDPOINT &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대 한 Security Center](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터를 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [데이터베이스 미러링 끝점은 SQL Server을 &#40;&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [database_mirroring_endpoints &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [dm_db_mirroring_connections &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   

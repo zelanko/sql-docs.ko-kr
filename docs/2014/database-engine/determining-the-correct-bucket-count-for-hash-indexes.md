@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933784"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>해시 인덱스에 대한 올바른 버킷 수 결정
   메모리 최적화 테이블을 만들 때 `BUCKET_COUNT` 매개 변수 값을 지정해야 합니다. 이 항목에서는 적절한 `BUCKET_COUNT` 매개 변수 값을 결정하기 위한 권장 사항을 안내합니다. 정확한 버킷 수를 확인할 수 없으면 대신 비클러스터형 인덱스를 사용합니다.  잘못된 `BUCKET_COUNT` 값, 특히 너무 낮은 값을 사용하면 데이터베이스 복구 시간과 작업 성능에 큰 영향을 줄 수 있습니다. 버킷 수를 더 많이 추정하는 것이 좋습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754245"
   
  비클러스터형 해시 인덱스에 대한 자세한 내용은 [Hash Indexes](hash-indexes.md) 및 [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)을 참조하세요.  
   
- 메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 인덱스에 할당 된 해시 테이블의 크기는 [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql) 또는 `BUCKET_COUNT` [CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)매개 변수에 의해 지정 됩니다. 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
+ 메모리 최적화 테이블에서 각 해시 인덱스에 대해 한 해시 테이블이 할당됩니다. 인덱스에 할당 된 해시 테이블의 크기는 `BUCKET_COUNT` [CREATE TABLE &#40;transact-sql&#41;](/sql/t-sql/statements/create-table-transact-sql) 또는 [CREATE TYPE &#40;transact-sql&#41;](/sql/t-sql/statements/create-type-transact-sql)매개 변수에 의해 지정 됩니다. 버킷 수는 내부적으로 다음 2의 제곱 수로 반올림됩니다. 예를 들어, 버킷 수를 300,000개로 지정하면 실제 버킷 수가 524,288개가 됩니다.  
   
  버킷 수와 관련한 문서 및 비디오에 대한 링크를 보려면 [해시 인덱스(메모리 내 OLTP)에 대한 올바른 버킷 수를 결정하는 방법](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)(영문)을 참조하세요.  
   
@@ -177,7 +176,7 @@ GO
 -   성능이 중요한 작업이 전체 인덱스 검색인 경우 실제 인덱스 키 값 수에 가까운 버킷 수를 사용합니다.  
   
 ### <a name="big-tables"></a>큰 테이블  
- 큰 테이블의 경우 메모리 사용률이 관심사가 될 수 있습니다. 예를 들어 4 개의 해시 인덱스가 있는 2억5000만 행 테이블을 사용 하는 경우 각각의 버킷 수가 10억 인 경우 해시 테이블에 대 한 오버 헤드는 4 개의 인덱스 \* * 10억 버킷 8 바이트 = 32 gb의 메모리 사용률입니다. 각 인덱스에 대해 2억 5천만 개의 버킷 수를 선택할 때 해시 테이블의 총 오버헤드는 8기가바이트가 됩니다. 이는 8 바이트의 메모리 사용량 외에도 각 인덱스는이 시나리오에서 8gb 인 각 개별 행에 추가 됩니다. 4 개의 인덱스 \* 8 바이트 \* 2억5000만 행입니다.  
+ 큰 테이블의 경우 메모리 사용률이 관심사가 될 수 있습니다. 예를 들어 4 개의 해시 인덱스가 있는 2억5000만 행 테이블을 사용 하는 경우 각각의 버킷 수가 10억 인 경우 해시 테이블에 대 한 오버 헤드는 4 개의 인덱스 * 10억 버킷 \* 8 바이트 = 32 gb의 메모리 사용률입니다. 각 인덱스에 대해 2억 5천만 개의 버킷 수를 선택할 때 해시 테이블의 총 오버헤드는 8기가바이트가 됩니다. 이는 8 바이트의 메모리 사용량 외에도 각 인덱스는이 시나리오에서 8gb 인 각 개별 행에 추가 됩니다. 4 개의 인덱스 \* 8 바이트 \* 2억5000만 행입니다.  
   
  일반적으로 전체 테이블 검색은 OLTP 작업에서 성능이 중요한 경로에 해당되지 않습니다. 따라서 포인트 조회 및 삽입 작업 성능과 메모리 사용률 간에 다음과 같이 선택합니다.  
   

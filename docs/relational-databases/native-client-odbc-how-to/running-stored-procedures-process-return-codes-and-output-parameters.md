@@ -1,5 +1,6 @@
 ---
 title: 반환 코드 및 출력 매개 변수 처리 (ODBC) | Microsoft Docs
+description: SQL Server Native Client ODBC 드라이버에서 경고 또는 오류의 원인에 대 한 자세한 정보를 제공 하는 SQLSTATE에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967602"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>저장 프로시저 실행 - 반환 코드 및 출력 매개 변수 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81282010"
   
  이 예제는 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 명명된 인스턴스에 연결하려면 ODBC 데이터 원본의 정의를 변경하여 server\namedinstance 형식으로 인스턴스를 지정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 는 명명된 인스턴스에 설치됩니다.  
   
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 저장 프로시저를 만듭니다.  
+ 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 저장 프로시저를 만듭니다.  
   
  odbc32.lib를 사용하여 두 번째(C++) 코드 목록을 컴파일합니다. 그리고 나서 프로그램을 실행합니다.  
   
- 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은이 예제에서 사용 하는 저장 프로시저를 삭제 합니다.  
+ 세 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) 코드 목록은이 예제에서 사용 하는 저장 프로시저를 삭제 합니다.  
   
 ```  
 use AdventureWorks  

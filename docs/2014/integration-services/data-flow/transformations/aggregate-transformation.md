@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f97259e9388575c8a300ad6e4d1284e55443a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913950"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915213"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>런타임에 OData 원본 쿼리 수정
   데이터 흐름 태스크의 **[OData Source].[Query]** 속성에 식을 추가하여 런타임에 OData 원본 쿼리를 수정할 수 있습니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901190"
   
 1.  **데이터 흐름 태스크**를 마우스 오른쪽 단추로 클릭하고 **매개 변수화...** 옵션을 선택합니다.  
   
-2.  **매개 변수화** 대화 상자에서 **속성\<에 대한** [**OData 원본 구성 요소 이름>].[Query]** 를 선택합니다.  
+2.  **매개 변수화** 대화 상자에서 **[ \<Name of the OData Source Component> ]. [를 선택 합니다. Query]** 를 **등록**합니다.  
   
 3.  **새 매개 변수 만들기** 또는 **기존 매개 변수 사용**중에서 하나를 선택합니다.  
   

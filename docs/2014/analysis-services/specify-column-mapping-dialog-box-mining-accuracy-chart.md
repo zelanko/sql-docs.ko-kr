@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 68e9e2d2-173f-4363-a515-fc60bfee3af0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 625a3f2870590b77db84b3266ebf90f5081152d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940412"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>열 매핑 지정 대화 상자(마이닝 정확도 차트)
   **열 매핑 지정** 탭을 사용하여 외부 데이터 원본에서 테이블을 선택하고 열을 데이터 마이닝 모델에 매핑할 수 있습니다. 그런 다음 외부 데이터를 사용하여 마이닝 모델의 정확도를 테스트하고 결과를 정확도 차트에 표시할 수 있습니다.  

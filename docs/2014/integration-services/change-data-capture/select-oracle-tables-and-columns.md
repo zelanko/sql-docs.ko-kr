@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be592319f63bca6d0de8c5e19def97849a0ec355
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922479"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
   Oracle 테이블 및 열 선택 페이지를 사용하여 변경이 캡처되는 Oracle 원본 데이터베이스에서 테이블을 선택할 수 있습니다. 이 페이지는 다음과 같은 요소로 구성되어 있습니다.  

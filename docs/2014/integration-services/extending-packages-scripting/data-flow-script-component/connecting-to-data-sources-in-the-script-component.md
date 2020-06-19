@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb6ccc97c2f0f5a3a69d2caa61ca67327015415
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768459"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967283"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>스크립트 구성 요소에서 데이터 원본에 연결
   연결 관리자는 특정 유형의 데이터 원본에 연결하는 데 필요한 정보를 캡슐화하고 저장하는 편리한 단위입니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -50,7 +49,7 @@ ms.locfileid: "62768459"
 > [!IMPORTANT]  
 >  스크립트 구성 요소에서 관리 코드를 작성하는 경우 OLE DB 연결 관리자 및 Excel 연결 관리자와 같이 관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드는 호출할 수 없습니다. 그러나 이러한 연결 관리자의 ConnectionString 속성을 읽고 **System.Data.OleDb** 네임스페이스에서 OLEDB **connection**의 연결 문자열을 사용하여 코드에서 직접 데이터 원본에 연결할 수 있습니다.  
 >   
->  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 ADO.NET 연결 관리자를 사용합니다. ADO.NET 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 .NET Framework Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드는 관리 되지 않는 개체 `System.Data.OleDb.OleDbConnection` 대신을 반환 합니다. ADO.NET 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 `Excel 8.0`연결 관리자**대화 상자의**모두**페이지에서 Microsoft OLE DB Provider for Jet를 선택하고 Excel 통합 문서를 지정한 다음**확장 속성**값으로**(Excel 97 이상의 경우)을 입력합니다.  
+>  관리되지 않는 개체를 반환하는 연결 관리자의 AcquireConnection 메서드를 호출해야 하는 경우에는 ADO.NET 연결 관리자를 사용합니다. ADO.NET 연결 관리자에서 OLE DB 공급자를 사용하도록 구성할 경우 이 연결 관리자는 .NET Framework Data Provider for OLE DB를 사용하여 연결합니다. 이 경우 AcquireConnection 메서드는 `System.Data.OleDb.OleDbConnection` 관리 되지 않는 개체 대신을 반환 합니다. ADO.NET 연결 관리자를 Excel 데이터 원본에 사용할 수 있도록 구성하려면 **연결 관리자** 대화 상자의 **모두** 페이지에서 Microsoft OLE DB Provider for Jet를 선택하고 Excel 통합 문서를 지정한 다음 **확장 속성** 값으로 `Excel 8.0`(Excel 97 이상의 경우)을 입력합니다.  
   
  스크립트 구성 요소에 연결 관리자를 사용하는 방법에 대한 자세한 내용은 [스크립트 구성 요소를 사용하여 원본 만들기](../../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) 및 [스크립트 구성 요소를 사용하여 대상 만들기](../../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)를 참조하세요.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876197"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957843"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
   온라인 복원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다. 이 버전에서 기본적으로 파일, 페이지 또는 증분 복원은 온라인 상태입니다. 이 항목에서는 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우 및 단순 복구 모델에서 데이터베이스에 읽기 전용 파일 그룹만 있는 경우와 관련된 내용을 다룹니다.  
@@ -59,12 +58,12 @@ ms.locfileid: "62876197"
     > [!NOTE]  
     >  복원 시퀀스 전에 파일을 수동으로 오프라인 상태로 만들 수도 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 또는 파일을 오프라인 상태로 만들기"를 참조하세요.  
   
-##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>데이터베이스 또는 파일을 오프 라인 상태로 만들기  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> 데이터베이스 또는 파일을 오프라인 상태로 만들기  
  온라인 복원을 사용하지 않으려면 복원 시퀀스를 시작하기 전에 다음 방법 중 하나를 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
   
 -   복구 모델에서 다음 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문을 사용하여 데이터베이스를 오프라인 상태로 만들 수 있습니다.  
   
-     ALTER DATABASE *database_name* 오프 라인으로 설정  
+     ALTER DATABASE *database_name* SET OFFLINE  
   
 -   또는 전체 복구 모델에서 다음 [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) 문을 사용하여 데이터베이스를 복원 중인 상태로 설정하여 파일이나 페이지 복원을 강제로 오프라인 상태로 만들 수 있습니다.  
   
@@ -77,19 +76,19 @@ ms.locfileid: "62876197"
 > [!NOTE]  
 >  온라인 복원 시퀀스의 구문은 오프라인 복원 시퀀스의 구문과 동일합니다.  
   
--   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [예제: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [예: 읽기 전용 파일의 온라인 복원&#40;단순 복구 모델&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [예: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [예: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [예: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [예: 읽기 전용 파일의 온라인 복원&#40;전체 복구 모델&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
@@ -104,10 +103,10 @@ ms.locfileid: "62876197"
 -   [존재하지 않는 파일 그룹 제거&#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [파일 복원이 전체 복구 모델 &#40;&#41;](file-restores-full-recovery-model.md)   
- [파일 복원 &#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
- [Restore Pages &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [증분 &#40;SQL Server 복원&#41;](piecemeal-restores-sql-server.md)   
+ [파일 복원&#40;전체 복구 모델&#41;](file-restores-full-recovery-model.md)   
+ [파일 복원&#40;단순 복구 모델&#41;](file-restores-simple-recovery-model.md)   
+ [페이지 복원&#40;SQL Server&#41;](restore-pages-sql-server.md)   
+ [증분 복원&#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

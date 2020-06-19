@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50dfafd0d15dc64962ba7ee1fb4e171b2aaf71b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915513"
 ---
 # <a name="flat-file-destination"></a>플랫 파일 대상
   플랫 파일 대상은 데이터를 텍스트 파일에 기록합니다. 텍스트 파일은 구분 기호로 분리된 형식, 고정 폭 형식, 행 구분 기호가 있는 고정 폭 형식 또는 왼쪽 정렬 형식일 수 있습니다.  

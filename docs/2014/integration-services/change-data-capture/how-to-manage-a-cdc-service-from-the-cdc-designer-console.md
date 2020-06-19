@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 807f3df9f83454a55e4b112f05731c3f56b463f3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922994"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC Service를 관리하는 방법에 대해 설명합니다.  

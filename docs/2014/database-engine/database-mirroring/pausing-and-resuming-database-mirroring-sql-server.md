@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c231876b11303992e0e3300c9cb73c0cf53b3af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934072"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>데이터베이스 미러링 일시 중지 및 재개(SQL Server)
   데이터베이스 소유자는 데이터베이스 미러링 세션을 일시 중지하고 나중에 언제든지 재개할 수 있습니다. 일시 중지하면 미러링을 일시 중지하는 동안 세션 상태가 유지됩니다. 병목 상태에서 일시 중지는 주 서버의 성능을 높이는 데 유용할 수 있습니다.  

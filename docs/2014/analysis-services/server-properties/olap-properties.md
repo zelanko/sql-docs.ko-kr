@@ -94,13 +94,12 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627aae71f32230ccbd78e7ee1c042ca78ba71985
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940621"
 ---
 # <a name="olap-properties"></a>OLAP 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 OLAP 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법은 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)을 참조하세요.  
@@ -196,7 +195,7 @@ ms.locfileid: "66068867"
  `PartitionLatencyAccuracy`  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>프로세스  
  `AggregationMemoryLimitMax`  
  실제 메모리의 백분율로 표시된 집계 처리 전용으로 할당된 최대 메모리 양을 정의하는 부호 있는 64비트 배정밀도 부동 소수점 수 속성입니다.  
   

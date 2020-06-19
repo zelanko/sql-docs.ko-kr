@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb8b61bf8cfa9a2b26646df19810a94705a30d14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922154"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Oracle CDC Service 작업
   이 섹션에서는 Oracle CDC Service의 몇 가지 중요한 개념에 대해 설명합니다. 이 섹션에서 설명하는 개념은 다음과 같습니다.  
@@ -108,7 +107,7 @@ ms.locfileid: "62771183"
 |ref_count|이 항목은 동일한 Oracle CDC Service가 설치된 컴퓨터의 수를 계산합니다. 이 항목은 동일한 이름의 Oracle 서비스가 추가될 때마다 하나씩 증가하며 이러한 서비스가 제거될 때마다 하나씩 감소합니다. 카운터가 0이 되면 이 행이 삭제됩니다.|  
 |active_service_node|CDC Service를 현재 처리하는 Windows 노드의 이름입니다. 서비스가 올바르게 중지되면 이 열은 더 이상 활성 서비스가 없음을 나타내는 null로 설정됩니다.|  
 |active_service_heartbeat|이 항목은 현재 CDC Service를 추적하여 아직 활성인지를 확인합니다.<br /><br /> 이 항목은 활성 CDC Service에 대한 현재 데이터베이스 UTC 타임스탬프를 사용하여 정기적인 간격으로 업데이트됩니다. 기본 간격은 30초이지만 간격을 구성할 수 있습니다.<br /><br /> 보류 중인 CDC Service에서 구성된 간격이 경과한 후 하트비트가 업데이트되지 않았음을 발견하면 보류 중인 서비스는 활성 CDC Service 역할을 넘겨 받으려고 시도합니다.|  
-|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]** 형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에 사용할 수 있는 값은 다음과 같습니다.<br /><br /> true<br /><br /> On<br /><br /> false<br /><br /> 끄기<br /><br /> \<class name>[,class name>]<br /><br /> 기본 값은 **false**입니다.<br /><br /> <br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
+|옵션|이 항목은 추적 또는 튜닝과 같은 보조 옵션을 지정합니다. 이 항목은 **이름[=값][; ]** 형태로 기록됩니다. 옵션 문자열은 ODBC 연결 문자열과 동일한 의미 체계를 사용합니다. 옵션이 부울인 경우(예/아니오 값 사용) 값에는 이름만 포함될 수 있습니다.<br /><br /> 추적에 사용할 수 있는 값은 다음과 같습니다.<br /><br /> true<br /><br /> On<br /><br /> false<br /><br /> 끄기<br /><br /> \<class name>[, 클래스 이름>]<br /><br /> 기본 값은 **false**입니다.<br /><br /> <br /><br /> **service_heartbeat_interval** 은 서비스에서 active_service_heartbeat 열을 업데이트하는 시간 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **service_config_polling_interval** 은 CDC Service에서 구성 변경을 확인하는 폴링 간격(초)입니다. 기본값은 **30**입니다. 최대값은 **3600**입니다.<br /><br /> **sql_command_timeout** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 명령 제한 시간입니다. 기본값은 **1**입니다. 최대값은 **3600**입니다.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>MSXDBCDC 데이터베이스 저장 프로시저  
@@ -157,7 +156,7 @@ ms.locfileid: "62771183"
 ###  <a name="dboxcbcdc_add_servicesvcnamesqlusr"></a><a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  **dbo.xcbcdc_add_service** 프로시저는 **MSXDBCDC.xdbcdc_services** 테이블에 항목을 추가하고 **MSXDBCDC.xdbcdc_services** 테이블의 서비스 이름에 대한 ref_count 열에 증가분 하나를 추가합니다. **ref_count**가 0이면 행이 삭제됩니다.  
   
- **dbo.xcbcdc_add_service\<service name, username>** 프로시저를 사용하려면 사용자는 이름 지정되는 CDC 인스턴스 데이터베이스에 대한 **db_owner** 데이터베이스 역할의 멤버이거나 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버여야 합니다.  
+ **Xcbcdc_add_service \<service name, username> ** 프로시저를 사용 하려면 사용자가 이름이 지정 된 CDC 인스턴스 데이터베이스의 **db_owner** 데이터베이스 역할의 멤버 이거나 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버 여야 합니다.  
   
 ###  <a name="dboxdbcdc_startdbname"></a><a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  **dbo.xdbcdc_start** 프로시저는 선택한 CDC 인스턴스를 처리하는 CDC Service에 시작 요청을 전송하여 변경 처리를 시작합니다.  

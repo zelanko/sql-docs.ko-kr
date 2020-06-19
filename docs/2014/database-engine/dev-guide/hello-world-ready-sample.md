@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933571"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 예제
   Hello World Ready 예제는 간단한 World Ready CLR(공용 언어 런타임) 통합 기반 저장 프로시저 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. World Ready 구성 요소는 구성 요소의 원본 코드를 변경할 필요 없이 세계 곳곳의 다양한 시장에서 다양한 언어로 쉽게 지역화할 수 있습니다. 또한 이 예제에서는 저장 프로시저에 의해 동적으로 생성되고 클라이언트로 반환되는 레코드 및 출력 매개 변수를 통해 데이터를 반환하는 방법을 보여 줍니다. 이 예제는 Hello World 예제와 거의 동일하지만 훨씬 더 쉽고 안전하게 이 애플리케이션을 지역화할 수 있습니다. 지역화된 텍스트를 변경하려면 다음을 수행해야 합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "73637652"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   
@@ -78,7 +77,7 @@ ms.locfileid: "73637652"
   
 4.  c:\MySample에서 `messages.resx` 파일을 만들고 예제 코드를 파일에 복사합니다.  
   
-5.  C:\MySample에서 줄을 변경한 후 `messages.de.resx` 파일 `messages.resx` 을로 `messages.de.resx` 저장 하 여 파일을 만듭니다.  
+5.  C:\MySample에서 `messages.de.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.de.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -86,7 +85,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  C:\MySample에서 줄을 변경한 후 `messages.es.resx` 파일 `messages.resx` 을로 `messages.es.resx` 저장 하 여 파일을 만듭니다.  
+6.  C:\MySample에서 `messages.es.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.es.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  C:\MySample에서 줄을 변경한 후 `messages.fr.resx` 파일 `messages.resx` 을로 `messages.fr.resx` 저장 하 여 파일을 만듭니다.  
+7.  C:\MySample에서 `messages.fr.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.fr.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -102,7 +101,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  C:\MySample에서 줄을 변경한 후 `messages.fr-FR.resx` 파일 `messages.resx` 을로 `messages.fr-FR.resx` 저장 하 여 파일을 만듭니다.  
+8.  C:\MySample에서 `messages.fr-FR.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.fr-FR.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. C:\MySample에서 줄을 변경한 후 `messages.it.resx` 파일 `messages.resx` 을로 `messages.it.resx` 저장 하 여 파일을 만듭니다.  
+9. C:\MySample에서 `messages.it.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.it.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -118,7 +117,7 @@ ms.locfileid: "73637652"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. C:\MySample에서 줄을 변경한 후 `messages.ja.resx` 파일 `messages.resx` 을로 `messages.ja.resx` 저장 하 여 파일을 만듭니다.  
+10. C:\MySample에서 `messages.ja.resx` `messages.resx` 줄을 변경한 후 파일을로 저장 하 여 파일을 만듭니다. `messages.ja.resx`  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   

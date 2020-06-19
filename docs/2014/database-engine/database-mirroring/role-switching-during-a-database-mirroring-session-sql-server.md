@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934024"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 중 역할 전환(SQL Server)
   데이터베이스 미러링 세션에서는 *역할 전환*프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다. 역할 전환 시 미러 서버는 주 서버에 대한 *장애 조치(Failover) 파트너* 역할을 하며 주 역할을 넘겨 받아 해당 데이터베이스 복사본을 복원하고 새로운 주 데이터베이스로 사용할 수 있도록 온라인 상태로 만듭니다. 이전 주 서버는 가능할 경우 미러 서버 역할을 맡으며 이 서버의 데이터베이스는 새 미러 데이터베이스가 됩니다. 여러 오류에 대한 응답이나 관리 용도로 역할이 전환될 수 있습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "62754484"
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |자동 장애 조치(automatic failover)|아니요|예|예|  
 |수동 장애 조치(failover)|예|예|yes|  
-|강제 서비스|예|yes|아니요|  
+|강제 서비스|예|yes|예|  
   
  역할 전환 후 모든 데이터베이스 사용자가 새로운 주 데이터베이스에 액세스할 수 있게 하려면 특정 메타데이터가 두 파트너에 모두 있어야 합니다. 또한 데이터베이스가 정기적인 일정에 따라 계속 백업되게 하려면 새로운 주 서버에서 백업 작업을 만들어야 합니다. 자세한 내용은 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62754484"
   
  다음 그림에서는 데이터베이스 서버 인스턴스를 업그레이드하는 동안 데이터베이스 가용성을 유지하기 위해 수동 장애 조치를 사용하는 예를 설명합니다. 업그레이드가 완료되면 관리자는 필요에 따라 원래 서버 인스턴스로 장애 조치를 수행할 수 있습니다. 이는 관리자가 미러링 세션을 중지하고 미러 서버를 다른 곳에서 사용하려는 경우에 유용합니다. 이러한 방법으로 일련의 데이터베이스 서버 인스턴스를 업데이트할 때 단일 서버 인스턴스를 반복적으로 사용할 수 있습니다.  
   
- ![계획 된 수동 장애 조치](../media/dbm-failovmanuplanned.gif "계획된 수동 장애 조치(Failover)")  
+ ![계획된 수동 장애 조치(Failover)](../media/dbm-failovmanuplanned.gif "계획된 수동 장애 조치(Failover)")  
   
 ###  <a name="conditions-required-for-a-manual-failover"></a><a name="ConditionsForManualFo"></a> 수동 장애 조치에 필요한 조건  
  수동 장애 조치를 수행하려면 트랜잭션 보안이 FULL(보호 우선 모드)로 설정되어야 합니다. 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다.  
@@ -292,7 +291,7 @@ ms.locfileid: "62754484"
  [데이터베이스 미러링 중 발생할 수 있는 오류](possible-failures-during-database-mirroring.md)   
  [SQL Server&#41;&#40;데이터베이스 미러링 세션에 클라이언트를 연결 합니다.](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](database-mirroring-witness.md)   
- [전체 데이터베이스 복원 &#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [데이터베이스 미러링 운영 모드](database-mirroring-operating-modes.md)   
  [미러링 상태&#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

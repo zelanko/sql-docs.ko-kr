@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6497e3e28f5ea3347cc735292cc3502a42301ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754393"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933994"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>서비스 계정(데이터베이스 미러링 보안 구성 마법사)
   Windows 인증을 사용할 때 서버 인스턴스가 다른 계정을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 서비스 계정을 지정합니다. 이러한 서비스 계정은 모두 같은 도메인 또는 트러스트된 도메인에 있는 도메인 계정이어야 합니다.  
@@ -37,17 +36,17 @@ ms.locfileid: "62754393"
  **원칙**  
  주 서버 인스턴스의 서비스 계정을 지정합니다. 도메인 이름을 대문자로 입력합니다.  
   
- *DOMAINNAME*\\*사용자 이름*  
+ *DOMAINNAME* \\ *사용자 이름*  
   
  **미러**  
  미러 서버 인스턴스의 서비스 계정을 지정합니다. 도메인 이름을 대문자로 입력합니다.  
   
- *DOMAINNAME*\\*사용자 이름*  
+ *DOMAINNAME* \\ *사용자 이름*  
   
  **미러링 모니터**  
  미러링 모니터 서버 인스턴스의 서비스 계정을 지정합니다. 도메인 이름을 대문자로 입력합니다.  
   
- *DOMAINNAME*\\*사용자 이름*  
+ *DOMAINNAME* \\ *사용자 이름*  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 속성 &#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

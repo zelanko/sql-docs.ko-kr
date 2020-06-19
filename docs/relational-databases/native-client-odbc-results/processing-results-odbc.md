@@ -1,5 +1,6 @@
 ---
 title: 결과 처리 (ODBC) | Microsoft Docs
+description: ODBC 응용 프로그램에서 SQL 문을 제출할 때 SQL Server 반환 되는 데이터 처리에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39dafbb865ef951356bb01c4fd8f646bf943346b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c7b25cfe1429e18ee944f296ca8ebe6b50ce17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967578"
 ---
 # <a name="processing-results-odbc"></a>결과 처리(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,9 +38,9 @@ ms.locfileid: "81304606"
   
  각 INSERT, UPDATE 및 DELETE 문은 수정 내용이 적용되는 행 수만 포함된 결과 집합을 반환합니다. 이 개수는 응용 프로그램이 [Sqlrowcount](../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출할 때 사용할 수 있습니다. ODBC 3. *x* 응용 프로그램은 **sqlrowcount** 를 호출 하 여 결과 집합을 검색 하거나 [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) 를 호출 하 여 취소 해야 합니다. 응용 프로그램이 여러 INSERT, UPDATE 또는 DELETE 문을 포함 하는 일괄 처리 또는 저장 프로시저를 실행 하는 경우 각 수정 문의 결과 집합을 **Sqlrowcount** 를 사용 하 여 처리 하거나 **SQLMoreResults**를 사용 하 여 취소 해야 합니다. 일괄 처리나 저장 프로시저에 SET NOCOUNT ON 문을 포함하여 이 개수를 취소할 수 있습니다.  
   
- Transact-SQL에는 SET NOCOUNT 문이 포함되어 있습니다. NOCOUNT 옵션을 on으로 설정 하면 SQL Server는 문의 영향을 받는 행 수를 반환 하지 않으며 **Sqlrowcount** 는 0을 반환 합니다. Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버 버전은 NOCOUNT 옵션의 설정 또는 해제 여부를 보고 하는 드라이버 관련 [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 옵션인 SQL_SOPT_SS_NOCOUNT_STATUS를 소개 합니다. **Sqlrowcount** 가 0을 반환할 때마다 응용 프로그램이 SQL_SOPT_SS_NOCOUNT_STATUS를 테스트 해야 합니다. SQL_NC_ON 반환 되는 경우 **Sqlrowcount** 의 값이 0 이면 SQL Server 행 개수가 반환 되지 않았음을 나타냅니다. SQL_NC_OFF 반환 되는 경우에는 NOCOUNT가 OFF이 고 **Sqlrowcount** 의 값 0은 문이 행에 영향을 주지 않았음을 나타냅니다. SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF 되 면 응용 프로그램에서 **Sqlrowcount** 값을 표시 해서는 안 됩니다. 큰 일괄 처리나 저장 프로시저에는 여러 개의 SET NOCOUNT 문이 포함될 수 있으므로 프로그래머는 SQL_SOPT_SS_NOCOUNT_STATUS가 일정하게 유지된다고 가정할 수 없습니다. **Sqlrowcount** 가 0을 반환할 때마다이 옵션을 테스트 해야 합니다.  
+ Transact-SQL에는 SET NOCOUNT 문이 포함되어 있습니다. NOCOUNT 옵션을 on으로 설정 하면 SQL Server는 문의 영향을 받는 행 수를 반환 하지 않으며 **Sqlrowcount** 는 0을 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버 버전은 NOCOUNT 옵션의 설정 또는 해제 여부를 보고 하는 드라이버 관련 [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 옵션인 SQL_SOPT_SS_NOCOUNT_STATUS를 소개 합니다. **Sqlrowcount** 가 0을 반환할 때마다 응용 프로그램이 SQL_SOPT_SS_NOCOUNT_STATUS를 테스트 해야 합니다. SQL_NC_ON 반환 되는 경우 **Sqlrowcount** 의 값이 0 이면 SQL Server 행 개수가 반환 되지 않았음을 나타냅니다. SQL_NC_OFF 반환 되는 경우에는 NOCOUNT가 OFF이 고 **Sqlrowcount** 의 값 0은 문이 행에 영향을 주지 않았음을 나타냅니다. SQL_SOPT_SS_NOCOUNT_STATUS SQL_NC_OFF 되 면 응용 프로그램에서 **Sqlrowcount** 값을 표시 해서는 안 됩니다. 큰 일괄 처리나 저장 프로시저에는 여러 개의 SET NOCOUNT 문이 포함될 수 있으므로 프로그래머는 SQL_SOPT_SS_NOCOUNT_STATUS가 일정하게 유지된다고 가정할 수 없습니다. **Sqlrowcount** 가 0을 반환할 때마다이 옵션을 테스트 해야 합니다.  
   
- 다른 몇 개의 Transact-SQL 문은 데이터를 결과 집합이 아닌 메시지로 반환합니다. Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 이러한 메시지를 받을 때 정보 메시지를 사용할 수 있다는 것을 응용 프로그램에 알리기 위해 SQL_SUCCESS_WITH_INFO를 반환 합니다. 그런 다음 응용 프로그램은 **SQLGetDiagRec** 를 호출 하 여 이러한 메시지를 검색할 수 있습니다. 이런 방식으로 작동하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 다음과 같습니다.  
+ 다른 몇 개의 Transact-SQL 문은 데이터를 결과 집합이 아닌 메시지로 반환합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 이러한 메시지를 받을 때 정보 메시지를 사용할 수 있다는 것을 응용 프로그램에 알리기 위해 SQL_SUCCESS_WITH_INFO를 반환 합니다. 그런 다음 응용 프로그램은 **SQLGetDiagRec** 를 호출 하 여 이러한 메시지를 검색할 수 있습니다. 이런 방식으로 작동하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 다음과 같습니다.  
   
 -   DBCC  
   
@@ -51,7 +52,7 @@ ms.locfileid: "81304606"
   
 -   RAISERROR  
   
- Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 심각도가 11 이상인 RAISERROR에 SQL_ERROR를 반환 합니다. RAISERROR의 심각도가 19이면 연결도 삭제됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 심각도가 11 이상인 RAISERROR에 SQL_ERROR를 반환 합니다. RAISERROR의 심각도가 19이면 연결도 삭제됩니다.  
   
  SQL 문의 결과 집합을 처리하기 위해 애플리케이션은 다음 작업을 수행합니다.  
   

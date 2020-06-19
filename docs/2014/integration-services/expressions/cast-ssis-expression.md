@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967483"
 ---
 # <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.
@@ -54,8 +53,8 @@ ms.locfileid: "78176443"
 |DT_STR|*charcount*<br /><br /> *코드 페이지*|(DT_STR,30,1252)는 1252 코드 페이지를 사용하여 30바이트 또는 30자의 단일 문자를 DT_STR 데이터 형식으로 캐스팅합니다.|
 |DT_WSTR|*Charcount*|(DT_WSTR,20)은 20바이트 쌍 또는 20자의 유니코드 문자를 DT_WSTR 데이터 형식으로 캐스팅합니다.|
 |DT_BYTES|*Bytecount*|(DT_BYTES,50)은 50바이트를 DT_BYTES 데이터 형식으로 캐스팅합니다.|
-|DT_DECIMAL|*규모*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|
-|DT_NUMERIC|*정밀도*<br /><br /> *규모*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|
+|DT_DECIMAL|*크기 조정*|(DT_DECIMAL,2)는 소수 자릿수 2를 사용하여 숫자 값을 DT_DECIMAL 데이터 형식으로 캐스팅합니다.|
+|DT_NUMERIC|*정밀도*<br /><br /> *크기 조정*|(DT_NUMERIC,10,3)은 전체 자릿수 10, 소수 자릿수 3을 사용하여 숫자 값을 DT_NUMERIC 데이터 형식으로 캐스팅합니다.|
 |DT_TEXT|*코드 페이지*|(DT_TEXT,1252)는 1252 코드 페이지를 사용하여 값을 DT_TEXT 데이터 형식으로 캐스팅합니다.|
 
  문자열을 DT_DATE로 캐스팅하거나 그 반대의 경우 변환 로캘이 사용됩니다. 단, 로캘 기본 설정이 ISO 형식을 사용하는지 여부에 관계없이 날짜는 ISO 형식 YYYY-MM-DD로 설정됩니다.

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 019c4ea2744ec27aa7dc24d5065c176551e8cbeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068386"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940394"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>차원 키 및 유형 지정(차원 마법사)
   **차원 키 및 유형 지정** 페이지를 사용하여 차원의 키 특성을 정의하고 차원이 SCD(느린 변경 차원)인지 여부를 나타낼 수 있습니다.  

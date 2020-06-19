@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933744"
 ---
 # <a name="array-parameter-sample"></a>배열 매개 변수 예제
   데이터베이스에서 행 집합을 생성, 업데이트 또는 삭제해야 하는 경우가 있습니다. 이러한 작업을 수행하는 방법은 여러 가지가 있습니다. 그 중 한 가지는 CLR(공용 언어 런타임) 통합 사용자 정의 데이터 형식을 사용하여 클라이언트에서 서버의 CLR 통합 저장 프로시저로 정보 배열을 전달하는 것입니다. 서버에 제공되는 데이터의 크기는 이러한 사용자 정의 데이터 형식의 특성으로 인해 8000바이트로 제한됩니다. 따라서 이 방법은 크거나 복잡한 데이터의 경우에는 적합하지 않습니다. 조작 중인 데이터가 작고 단순한 경우에는 각 행에 대해 저장 프로시저를 호출하는 것보다 이 방법이 훨씬 더 효율적일 수 있습니다. 배열을 전달함으로써 순서가 중요한 애플리케이션에 대해 데이터의 순서가 유지됩니다. 이 예제에는 다음이 포함되어 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "74055911"
   
 3.  `TestArrayParameter` 콘솔 애플리케이션. 이 프로그램은 전달된 명령줄 매개 변수를 기반으로 `ContactTypeNames` 사용자 정의 데이터 형식 인스턴스를 만든 다음 이 사용자 정의 데이터 형식 인스턴스를 매개 변수로 전달하여 `usp_EnsureContactTypeNames` 저장 프로시저를 호출합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/download/details.aspx?id=42299)에서 무료로 구할 수 있습니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "74055911"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

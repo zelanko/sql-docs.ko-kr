@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957953"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 테이블은 [msdb 데이터베이스](../databases/msdb-database.md)에 상주합니다.  
   
  [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  
   
--   디스크 오류(특정 하드웨어 오류)와 같이 운영 체제에서 실행되는 CRC(순환 중복 검사)로 인해 발생하는 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md)  
+-   디스크 오류 (특정 하드웨어 오류)와 같이 운영 체제에서 실행 되는 CRC (순환 중복 검사)로 인해 발생 한 [823 오류](../errors-events/mssqlserver-823-database-engine-error.md) 입니다.  
   
--   조각난 페이지(논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
+-   조각난 페이지 (논리적 오류)와 같은 [824 오류](../errors-events/mssqlserver-824-database-engine-error.md)  
   
  모든 주의 대상 페이지의 페이지 ID는 **suspect_pages** 테이블에 기록됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 다음과 같은 정상적인 처리 중에 발생하는 모든 주의 대상 페이지를 기록합니다.  
   
