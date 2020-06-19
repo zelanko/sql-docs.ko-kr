@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936054"
 ---
 # <a name="change-source-control"></a>소스 제어 변경
   로컬에 저장된 솔루션 또는 프로젝트를 원본 제어 데이터베이스 폴더로 연결하는 연결 및 바인딩을 만들고 관리합니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "62812759"
 |----------------|---------------------|  
 |Valid|항목이 올바르게 바인딩되었으며 항목이 속하는 서버 폴더에 제대로 연결되었습니다.|  
 |올바르지 않음|항목이 잘못 바인딩되었거나 항목이 속하는 폴더에서 연결이 끊어졌습니다. 이 항목에 대해 **바인딩** 대신 **소스 제어에 추가** 명령을 사용하십시오.|  
-|Unknown|소스 제어 항목의 상태를 아직 확인하지 못했습니다.|  
+|알 수 없음|소스 제어 항목의 상태를 아직 확인하지 못했습니다.|  
 |제어 안 함|소스 제어에서 항목을 사용하고 있지 않습니다.|  
   
  **바인딩 해제**  

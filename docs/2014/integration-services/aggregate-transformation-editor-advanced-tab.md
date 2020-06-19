@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925614"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>집계 변환 편집기(고급 탭)
   **집계 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 구성 요소 속성을 설정하고, 집계를 지정하고, 입력 및 출력 열의 속성을 설정할 수 있습니다.  
@@ -35,11 +34,11 @@ ms.locfileid: "66061587"
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |Unspecified|**키 배율** 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 키를 쓸 수 있습니다.|  
-|보통|집계에서 약 5,000,000개의 키를 쓸 수 있습니다.|  
+|중간|집계에서 약 5,000,000개의 키를 쓸 수 있습니다.|  
 |높음|집계에서 25,000,000개 이상의 키를 쓸 수 있습니다.|  
   
  **키 수**  
@@ -48,11 +47,11 @@ ms.locfileid: "66061587"
  **고유 수 배율**  
  필요에 따라 집계에서 쓸 수 있는 고유한 값의 수를 대략적으로 지정합니다. 이 옵션의 기본값은 **Unspecified**입니다. **고유 수 배율** 과 **고유 키 수** 를 모두 지정하면 **고유 키 수** 가 우선 적용됩니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |Unspecified|CountDistinctScale 속성이 사용되지 않습니다.|  
 |낮음|집계에서 약 500,000개의 고유한 값을 쓸 수 있습니다.|  
-|보통|집계에서 약 5,000,000개의 고유한 값을 쓸 수 있습니다.|  
+|중간|집계에서 약 5,000,000개의 고유한 값을 쓸 수 있습니다.|  
 |높음|집계에서 25,000,000개 이상의 고유한 값을 쓸 수 있습니다.|  
   
  **고유 키 수**  

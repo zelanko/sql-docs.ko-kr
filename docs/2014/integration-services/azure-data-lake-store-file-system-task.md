@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 02b9edd7-6ef9-463e-abbf-e1830bcae875
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30002ff43f841aa52ed809f217d3549cc64a768b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925362"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Azure Data Lake Store 파일 시스템 태스크
 

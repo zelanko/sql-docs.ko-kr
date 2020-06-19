@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963085"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>사용자 정의 변수의 속성 설정
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 사용자 정의 변수의 속성을 설정하려면 다음 기능 중 하나를 사용합니다.  
@@ -34,21 +33,21 @@ ms.locfileid: "66055649"
   
  **속성** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성은로 `False` 설정 되 고 변수 값은 value 속성으로 설정 됩니다. 식을 사용 하 여 값을 설정 하려면 먼저 EvaluateAsExpression를로 `True`설정한 다음 expression 속성에 식을 제공 해야 합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
+-   변수 값은 Value 또는 Expression 속성에서 설정할 수 있습니다. 기본적으로 EvaluateAsExpression 속성은로 설정 되 `False` 고 변수 값은 value 속성으로 설정 됩니다. 식을 사용 하 여 값을 설정 하려면 먼저 EvaluateAsExpression를로 설정한 `True` 다음 expression 속성에 식을 제공 해야 합니다. Value 속성은 이 식의 계산 결과로 자동으로 설정됩니다.  
   
--   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 예를 들어 값이 0이 고 ValueType 속성이 **Int32** 를 포함 하는 경우 식을 GETDATE ()로 설정 하면 Value에 현재 날짜와 시간이 포함 되 고 ValueType은 `DateTime`로 설정 됩니다.  
+-   ValueType 속성에는 Value 속성에 있는 값의 데이터 형식이 포함됩니다. Value가 식에서 설정된 경우 ValueType은 해당 식의 계산 결과와 호환되는 데이터 형식으로 자동으로 업데이트됩니다. 예를 들어 값이 0이 고 ValueType 속성이 **Int32** 를 포함 하는 경우 식을 GETDATE ()로 설정 하면 Value에 현재 날짜와 시간이 포함 되 고 ValueType은로 설정 됩니다 `DateTime` .  
   
 -   변수에 대한 **속성** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
  **변수** 창을 사용하여 사용자 정의 변수의 식을 설정하는 경우 다음을 참조하세요.  
   
--   식을 사용 하 여 변수 값을 설정 하려면 먼저 변수 데이터 형식이 식의 계산 결과와 호환 되는지 확인 한 다음 `Expression` **변수** 창의 열에 식을 제공 합니다. **속성** 창의 EvaluateAsExpression 속성은 자동으로로 `True`설정 됩니다.  
+-   식을 사용 하 여 변수 값을 설정 하려면 먼저 변수 데이터 형식이 식의 계산 결과와 호환 되는지 확인 한 다음 `Expression` **변수** 창의 열에 식을 제공 합니다. **속성** 창의 EvaluateAsExpression 속성은 자동으로로 설정 됩니다 `True` .  
   
 -   변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
   
 -   변수에 대한 **변수** 창에서 **식 작성기** 대화 상자에 액세스할 수 있습니다. 이 도구를 사용하여 식 작성, 유효성 검사 및 계산을 수행할 수 있습니다. 자세한 내용은 [식 작성기](expressions/expression-builder.md) 및 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.  
   
- 변수에 식을 할당 하 고 **Properties** `EvaluateAsExpression` 가로 `True`설정 된 경우 **변수 및** 속성 창에서 변수 데이터 형식을 변경할 수 없습니다.  
+ **변수에 식을** 할당 하 고가로 설정 된 경우 변수 및 **속성** 창에서 `EvaluateAsExpression` `True` 변수 데이터 형식을 변경할 수 없습니다.  
   
  **네임스페이스 및 이름 속성 설정**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055649"
   
 4.  필요에 따라 **변수** 창에서 **표 옵션**을 클릭하고 **변수** 창에 표시할 열을 선택한 다음 변수 목록에 적용할 필터를 선택합니다.  
   
-5.  목록에서 변수를 `Name`선택한 다음, **데이터 형식**, `Value` `Namespace`,, **변경 이벤트 발생**, **설명** 및 `Expression` 열에서 값을 업데이트 합니다.  
+5.  목록에서 변수를 선택한 다음 `Name` , **데이터 형식**,,, `Value` `Namespace` **변경 이벤트 발생**, **설명** 및 열에서 값을 업데이트 `Expression` 합니다.  
   
 6.  목록에서 변수를 선택하고 **변수 이동** 을 클릭하여 범위를 변경합니다.  
   

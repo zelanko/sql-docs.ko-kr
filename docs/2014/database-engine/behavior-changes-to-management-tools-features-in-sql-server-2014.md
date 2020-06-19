@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274ff0379ea7b745949d3e45dcc000db61bfc58d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936135"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>SQL Server 2014에서 관리 도구 기능의 동작 변경 내용
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 관리 도구 기능의 동작 변경 내용을 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  

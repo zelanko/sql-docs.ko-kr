@@ -12,21 +12,20 @@ f1_keywords:
 ms.assetid: 699d80d1-8b0e-4324-8f8d-5fefa3f2af00
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa37f7c80f2aa3c371ad823bb7c22ee2ad4819ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1284571f499146692c552d8fc5990410eff6e646
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926034"
 ---
 # <a name="add-new-destination-dialog-box"></a>새 대상 추가 대화 상자
   다음 표에서는 새 대상 추가 대화 상자에서 사용 가능한 옵션을 보여 줍니다.  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |유형|연결할 대상 유형을 선택합니다.|  
-|연결 관리자|기존 연결 관리자를 선택 하거나 ** \<새>** 를 클릭 하 여 새 연결 관리자를 만듭니다.|  
+|연결 관리자|기존 연결 관리자를 선택 하거나 클릭 **\<New>** 하 여 새 연결 관리자를 만듭니다.|  
 |설치된 항목만 표시|설치된 대상만 볼 것인지 여부를 지정합니다.|  
 |확인|변경 내용을 저장하고 모든 후속 대화 상자를 열어 추가 옵션을 구성하려면 클릭합니다.|  
   

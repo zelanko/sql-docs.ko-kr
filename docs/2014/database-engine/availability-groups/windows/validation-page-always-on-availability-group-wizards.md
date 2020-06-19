@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e912ca16cdbd626e8d8d84f9f68734b73ea052e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812994"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936234"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>유효성 검사 페이지(AlwaysOn 가용성 그룹 마법사)
   이 도움말 항목에서는 **유효성 검사** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. 이 페이지를 사용하여 사용자 환경에서 마법사의 이전 페이지에서 선택한 모든 구성 항목을 지원하는지 확인할 수 있습니다.  
@@ -33,13 +32,13 @@ ms.locfileid: "62812994"
  **이름**  
  특정 단계를 설명하는 문구를 표시합니다.  
   
- **만들어집니다**  
+ **결과**  
  다음 하이퍼링크 텍스트 중 하나를 표시합니다. 지정된 유효성 검사 단계의 결과에 대한 자세한 내용을 보려면 하이퍼링크를 클릭하십시오.  
   
-|결과|설명|  
+|결과|Description|  
 |------------|-----------------|  
 |**오류**|유효성 검사 단계가 실패했음을 나타냅니다. 오류 메시지를 보려면 링크를 클릭합니다.|  
-|**건너뜁니다**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  
+|**생략**|선택 항목에 필요하지 않아 유효성 검사 단계를 건너뛰었음을 나타냅니다. 단계를 건너뛴 이유를 보려면 링크를 클릭합니다.|  
 |**Success**|유효성 검사 단계가 완료되었음을 나타냅니다.|  
 |**Warning**|가용성 그룹 구성에 대한 잠재적 문제를 나타냅니다.  경고 메시지를 보려면 링크를 클릭합니다.|  
   

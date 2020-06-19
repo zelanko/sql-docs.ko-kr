@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936283"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>AlwaysOn 대시보드 사용(SQL Server Management Studio)
   데이터베이스 관리자는 AlwaysOn 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹과 해당 가용성 복제본 및 데이터베이스의 상태 개요를 확인할 수 있습니다. AlwaysOn 대시보드의 일반적인 용도는 다음과 같습니다.  
@@ -123,7 +122,7 @@ ms.locfileid: "62788730"
  **이름**  
  가용성 복제본을 호스팅하는 서버 인스턴스의 이름입니다. 이 열은 기본적으로 표시됩니다.  
   
- **역할**  
+ **Role**  
  가용성 복제본의 현재 역할( **주** 또는 **보조**)을 나타냅니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 역할에 대한 자세한 내용은 [AlwaysOn 가용성 그룹 개요&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)를 참조하세요. 이 열은 기본적으로 표시됩니다.  
   
  **장애 조치(Failover) 모드**  
@@ -134,7 +133,7 @@ ms.locfileid: "62788730"
 -   **수동**. 자동 장애 조치 모드인 복제본이 없음을 나타냅니다.  
   
  **동기화 상태**  
- 보조 복제본이 주 복제본에 현재 동기화되어 있는지 여부를 나타냅니다. 이 열은 기본적으로 표시됩니다. 가능한 값은 다음과 같습니다.  
+ 보조 복제본이 주 복제본에 현재 동기화되어 있는지 여부를 나타냅니다. 이 열은 기본적으로 표시됩니다. 사용 가능한 값은  
   
 -   **동기화되지 않음**. 복제본에 있는 하나 이상의 데이터베이스가 동기화되지 않았거나 가용성 그룹에 아직 조인되지 않았습니다.  
   
@@ -151,7 +150,7 @@ ms.locfileid: "62788730"
  문제 이름을 나열합니다. 이 값은 기본적으로 표시됩니다. 모든 AlwaysOn 정책 문제 목록은 [AlwaysOn 가용성 그룹의 작동 문제에 대 한 Alwayson 정책 (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md)을 참조 하세요.  
   
  **가용성 모드**  
- 각 가용성 복제본에 대해 별도로 설정한 복제본 속성을 나타냅니다. 이 값은 기본적으로 숨겨집니다. 가능한 값은 다음과 같습니다.  
+ 각 가용성 복제본에 대해 별도로 설정한 복제본 속성을 나타냅니다. 이 값은 기본적으로 숨겨집니다. 사용 가능한 값은  
   
 -   **비동기**. 보조 복제본이 주 복제본과 동기화되지 않습니다.  
   
@@ -164,7 +163,7 @@ ms.locfileid: "62788730"
  보조 복제본에 연결하는 데 사용되는 모드를 나타냅니다.  이 값은 기본적으로 숨겨집니다.  
   
  **연결 상태**  
- 보조 복제본이 주 복제본에 현재 연결되어 있는지 여부를 나타냅니다. 이 열은 기본적으로 숨겨집니다. 가능한 값은 다음과 같습니다.  
+ 보조 복제본이 주 복제본에 현재 연결되어 있는지 여부를 나타냅니다. 이 열은 기본적으로 숨겨집니다. 사용 가능한 값은  
   
 -   **연결 끊김**. 원격 가용성 복제본의 경우 로컬 가용성 복제본에서 연결이 끊어져 있는지를 나타냅니다. 연결이 끊긴 상태에 대한 로컬 복제본의 응답은 역할별로 다음과 같이 다릅니다.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "62788730"
 -   **연결**되었습니다. 로컬 복제본에 현재 연결되어 있는 원격 가용성 복제본입니다.  
   
  **작동 상태**  
- 보조 복제본의 현재 작동 상태를 나타냅니다. 이 값은 기본적으로 숨겨집니다. 가능한 값은 다음과 같습니다.  
+ 보조 복제본의 현재 작동 상태를 나타냅니다. 이 값은 기본적으로 숨겨집니다. 사용 가능한 값은  
   
  **0**. 장애 조치(failover) 보류 중  
   

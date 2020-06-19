@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c687b82433a8491fbdd1b54b9f92d9de62ad418
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962673"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>SQL 대상 편집기(매핑 페이지)
   **SQL 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  

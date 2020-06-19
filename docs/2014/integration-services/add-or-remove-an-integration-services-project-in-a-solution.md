@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925969"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>솔루션에서 Integration Services 프로젝트 추가 또는 제거
   다음 절차에서는 솔루션에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 추가 또는 제거하는 방법에 대해 설명합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 솔루션을 볼 수 있는 경우에만 해당 솔루션에 프로젝트를 추가하거나 솔루션에서 프로젝트를 제거할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 에서 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **솔루션 항상 표시** 옵션을 선택한 경우 솔루션이 하나의 프로젝트만 포함 하는 경우에도에서 솔루션을 표시 합니다. 그렇지 않은 경우 솔루션은 두 개 이상의 프로젝트를 포함하는 경우에만 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에 표시됩니다. 추가 프로젝트는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 프로젝트이거나 다른 형식의 프로젝트일 수 있습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 솔루션을 볼 수 있는 경우에만 해당 솔루션에 프로젝트를 추가하거나 솔루션에서 프로젝트를 제거할 수 있습니다. 에서 **솔루션 항상 표시** 옵션을 선택한 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 솔루션이 하나의 프로젝트만 포함 하는 경우에도에서 솔루션을 표시 합니다. 그렇지 않은 경우 솔루션은 두 개 이상의 프로젝트를 포함하는 경우에만 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에 표시됩니다. 추가 프로젝트는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 프로젝트이거나 다른 형식의 프로젝트일 수 있습니다.  
   
 ## <a name="adding-an-integration-services-project"></a>Integration Services 프로젝트 추가  
  프로젝트를 추가할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 새로운 빈 프로젝트를 만들도록 하거나 다른 솔루션용으로 이미 만든 프로젝트를 추가할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 솔루션을 볼 수 있는 경우에만 해당 솔루션에 프로젝트를 추가할 수 있습니다.  

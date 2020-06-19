@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf1a25aabde1e684407218da7365ae7a2b4265a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67419033"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936164"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 데이터베이스 엔진 기능의 주요 변경
-  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의에 대 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]한 주요 변경 내용에 대해 설명 합니다. 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 이전 버전의에 대 한 주요 변경 내용에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 이러한 변경 내용에 따라 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 기반을 둔 애플리케이션, 스크립트 또는 기능을 사용하지 못할 수도 있습니다. 이러한 문제는 업그레이드할 때 발생할 수 있습니다. 자세한 내용은 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)을 참조하세요.  
   
 ##  <a name="breaking-changes-in-sssql14"></a><a name="SQL14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]의 주요 변경 내용  
  새로운 문제가 없습니다.  
@@ -30,26 +29,26 @@ ms.locfileid: "67419033"
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |NEXT라는 테이블 또는 열에서 선택|시퀀스는 ANSI 표준 NEXT VALUE FOR 함수를 사용합니다. 테이블이 나 열 이름이 NEXT이 고 테이블 또는 열이 값으로 별칭이 지정 되 고 ANSI 표준 AS가 생략 된 경우에는 결과 문으로 인해 오류가 발생할 수 있습니다. 이 문제를 해결하려면 ANSI 표준 AS 키워드를 포함합니다. 예를 들어 `SELECT NEXT VALUE FROM Table` 은 `SELECT NEXT AS VALUE FROM Table` 로 다시 작성하고, `SELECT Col1 FROM NEXT VALUE` 는 `SELECT Col1 FROM NEXT AS VALUE`로 다시 작성합니다.|  
 |PIVOT 연산자|데이터베이스 호환성 수준이 110으로 설정되어 있는 경우 재귀 CTE(공통 테이블 식) 쿼리에 PIVOT 연산자를 사용할 수 없습니다. 쿼리를 다시 작성하거나 호환성 수준을 100 이하로 변경해야 합니다. 그룹화당 두 개 이상의 행이 있는 경우 재귀 CTE 쿼리에 PIVOT을 사용하면 잘못된 결과가 생성됩니다.|  
 |sp_setapprole 및 sp_unsetapprole|현재 `OUTPUT`에 대한 쿠키 `sp_setapprole` 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(50)`입니다. 애플리케이션은 계속해서 `varbinary(8000)`를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다. 자세한 내용은 [sp_setapprole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)을 참조하세요.|  
 |EXECUTE AS|현재 EXECUTE AS에 대한 쿠키 OUTPUT 매개 변수는 정확한 최대 길이인 `varbinary(8000)`로 정의되어 있습니다. 그러나 현재 구현은 `varbinary(100)`입니다. 애플리케이션은 계속해서 `varbinary(8000)`를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다. 자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)를 참조하세요.|  
 |sys.fn_get_audit_file 함수|사용자 정의 감사 이벤트를 지원할 수 있도록 두 개의 열(**user_defined_event_id** 및 **user_defined_information**)이 추가되었습니다. 이름으로 열을 선택하지 않는 애플리케이션에서는 예상보다 많은 열이 반환될 수 있습니다. 이름으로 열을 선택하거나, 이러한 추가 열을 허용하도록 애플리케이션을 조정해야 합니다.|  
-|WITHIN 예약 키워드|WITHIN은 이제 예약 키워드입니다. 따라서 이름이 'within'인 개체 또는 열에 대한 참조는 실패합니다. 개체 또는 열의 이름을 바꾸거나 대괄호 또는 따옴표를 사용하여 이름을 구분합니다.  예: `SELECT * FROM [within]`.|  
+|WITHIN 예약 키워드|WITHIN은 이제 예약 키워드입니다. 따라서 이름이 'within'인 개체 또는 열에 대한 참조는 실패합니다. 개체 또는 열의 이름을 바꾸거나 대괄호 또는 따옴표를 사용하여 이름을 구분합니다.  `SELECT * FROM [within]`)을 입력합니다.|  
 |`time` 또는 `datetime2` 형식의 계산 열에 대한 CAST 및 CONVERT 연산|이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 `time` 및 `datetime2` 데이터 형식 중 하나가 계산 열 식에서 사용되는 경우를 제외하고 이러한 데이터 형식에 대한 CAST 및 CONVERT 연산의 기본 스타일이 121입니다. 계산 열의 경우 기본 스타일은 0입니다. 이 동작은 자동 매개 변수화와 관련된 쿼리에서 이러한 연산이 만들어지고 사용될 때 또는 제약 조건 정의에 사용될 때 계산 열에 영향을 줍니다.<br /><br /> 호환성 수준 110에서 `time` 및 `datetime2` 데이터 형식의 CAST 및 CONVERT 연산에 대한 기본 스타일은 항상 121입니다. 쿼리에 이전 동작이 적용되는 경우 110보다 낮은 호환성 수준을 사용하거나, 해당 쿼리에서 스타일 0을 명시적으로 지정해야 합니다.<br /><br /> 데이터베이스를 호환성 수준 110으로 업그레이드할 경우 디스크에 저장된 사용자 데이터는 변경되지 않습니다. 수동으로 이 데이터를 적절하게 수정해야 합니다. 예를 들어 SELECT INTO를 사용하여 위에서 설명한 계산 열 식이 포함된 원본에서 테이블을 만든 경우 계산 열 정의 자체가 아니라 스타일 0을 사용하는 데이터가 저장됩니다. 스타일 121과 일치하도록 이 데이터를 수동으로 업데이트해야 합니다.|  
 |ALTER TABLE|ALTER TABLE 문에는 두 부분(schema.object)으로 구성된 테이블 이름만 허용됩니다. 이제 다음 형식을 사용 하 여 테이블 이름을 지정 하면 컴파일 시 오류 117이 발생 합니다.<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 이전 버전에서는 server.database.schema.table 형식을 지정할 경우 오류 4902가 반환되었습니다. 그러나 .database.schema.table 또는 ..schema.table 형식을 지정하면 작업이 성공했습니다. 이 문제를 해결하려면 네 부분으로 구성된 접두사를 사용하지 않아야 합니다.|  
 |메타데이터 찾아보기|이제 FOR BROWSE 또는 SET NO_BROWSETABLE ON을 사용하여 뷰를 쿼리하면 기본 개체의 메타데이터가 아니라 뷰의 메타데이터가 반환됩니다. 현재 이 동작은 메타데이터를 찾아보는 다른 방법과 일치합니다.|  
 |SOUNDEX|데이터베이스 호환성 수준 110에서는 SOUNDEX 함수가 새 규칙을 구현하므로 이 함수에서 계산된 값과 이전 호환성 수준에서 계산된 값이 달라질 수 있습니다. 호환성 수준 110으로 업그레이드한 후 SOUNDEX 함수를 사용하는 인덱스, 힙 또는 CHECK 제약 조건을 다시 작성해야 할 수 있습니다. 자세한 내용은 [SOUNDEX &#40;transact-sql&#41;](/sql/t-sql/functions/soundex-transact-sql) 를 참조 하세요.
 |실패한 DML 문에 대한 행 개수 메시지|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 는 DML 문이 실패할 경우 클라이언트에 RowCount가 0인 TDS DONE 토큰을 지속적으로 보냅니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 실패한 문이 TRY-CATCH 블록에 포함되어 있고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 의해 자동으로 매개 변수가 지정되거나 TRY-CATCH 블록이 실패한 문과 동일한 수준에 있지 않은 경우 잘못된 값 -1이 클라이언트에 보내집니다. 예를 들어 TRY-CATCH 블록에서 저장 프로시저를 호출할 경우 프로시저의 DML 문이 실패하면 클라이언트는 잘못된 값 -1을 받게 됩니다.<br /><br /> 이 잘못된 동작이 적용되는 애플리케이션에서는 오류가 발생합니다.|  
-|SERVERPROPERTY (' 버전 ')|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]인스턴스의 설치된 제품 버전입니다. 이 속성 값을 사용하여 설치된 제품에서 지원하는 기능 및 최대 CPU 수와 같은 제한을 확인합니다.<br /><br /> 설치 된 엔터프라이즈 버전에 따라 ' Enterprise Edition ' 또는 ' Enterprise Edition: Core 기반 라이선스 '를 반환할 수 있습니다. Enterprise 버전은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스별 최대 컴퓨팅 용량에 따라 다릅니다. 의 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]계산 용량 제한에 대 한 자세한 내용은 [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조 하세요.|  
-|CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '` *password* Password`' HASHED` 옵션은 7 또는 그 이전 버전에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 만든 해시와 함께 사용할 수 없습니다.|  
+|SERVERPROPERTY (' 버전 ')|[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]인스턴스의 설치된 제품 버전입니다. 이 속성 값을 사용하여 설치된 제품에서 지원하는 기능 및 최대 CPU 수와 같은 제한을 확인합니다.<br /><br /> 설치 된 엔터프라이즈 버전에 따라 ' Enterprise Edition ' 또는 ' Enterprise Edition: Core 기반 라이선스 '를 반환할 수 있습니다. Enterprise 버전은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스별 최대 컴퓨팅 용량에 따라 다릅니다. 의 계산 용량 제한에 대 한 자세한 내용은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [SQL Server의 버전별 계산 용량 제한](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)을 참조 하세요.|  
+|CREATE LOGIN|`CREATE LOGIN WITH PASSWORD = '` *Password* `' HASHED` 옵션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 또는 그 이전 버전에서 만든 해시와 함께 사용할 수 없습니다.|  
 |`datetimeoffset`에 대한 CAST 및 CONVERT 연산|날짜 및 시간 형식에서 `datetimeoffset`으로 변환할 때 지원되는 유일한 스타일은 0 또는 1입니다. 다른 모든 변환 스타일은 오류 9809를 반환합니다. 예를 들어 다음 코드는 오류 9809를 반환합니다.<br /><br /> `SELECT CONVERT(date, CAST('7070-11-25 16:25:01.00986 -02:07' as datetimeoffset(5)), 107);`|  
   
 ### <a name="dynamic-management-views"></a>동적 관리 뷰  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |sys.dm_exec_requests|명령 열이 `nvarchar(16)`에서 `nvarchar(32)`로 변경됩니다.|  
 |sys.dm_os_memory_cache_counters|다음 열의 이름이 바뀌었습니다.<br /><br /> 현재 single_pages_kb: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           현재: pages_in_use_kb|  
@@ -62,14 +61,14 @@ ms.locfileid: "67419033"
   
 ### <a name="catalog-views"></a>카탈로그 뷰  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|새로운 열인 is_system이 sys.data_spaces 및 sys.partition_functions에 추가되었습니다. sys.partition_schemes 및 sys.filegroups는 sys.data_spaces의 열을 상속합니다.<br /><br /> 이 열의 값이 1이면 개체가 전체 텍스트 인덱스 조각에 사용됨을 나타냅니다.<br /><br /> sys.partition_functions, sys.partition_schemes 및 sys.filegroups에서 새 열은 마지막 열이 아닙니다. 따라서 이러한 카탈로그 뷰에서 반환된 열의 순서에 의존하는 기존 쿼리를 수정해야 합니다.|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR 데이터 형식(geometry, geography 및 hierarchyid)  
  공간 데이터 형식 및 hierarchyid 형식을 포함하는 **Microsoft.SqlServer.Types.dll**어셈블리가 버전 10.0에서 버전 11.0으로 업그레이드되었습니다. 이 어셈블리를 참조하는 사용자 지정 애플리케이션에서는 다음 조건에 해당될 때 오류가 발생할 수 있습니다.  
   
--   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 사용자 지정 응용 프로그램을 이동 하는 경우 SqlTypes 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. **SqlTypes** [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
+-   가 설치 된 컴퓨터에가 설치 되어 있는 컴퓨터에서 사용자 지정 응용 프로그램을 이동 하는 경우 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **SqlTypes** 어셈블리의 참조 된 버전 10.0이 없기 때문에 응용 프로그램이 실패 합니다. `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`라는 오류 메시지가 나타날 수 있습니다.  
   
 -   **SqlTypes** 어셈블리 버전 11.0을 참조 하 고 버전 10.0도 설치 되 면 다음 오류 메시지가 표시 될 수 있습니다.`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -153,10 +152,10 @@ ms.locfileid: "67419033"
   
 -   **fn:concat** 그러나 부분 서로게이트 쌍이 값으로 전달될 경우 **concat** 는 잘못된 서로게이트 쌍이나 부분 서로게이트 쌍을 생성할 수 있습니다.  
   
--   비교 연산자 및 **order by** 절. 비교 연산자에는 + \<,, > \<, =, >= `eq`, `lt` `gt` `le`,,,, `ge`등이 포함 됩니다.  
+-   비교 연산자 및 **order by** 절. 비교 연산자에는 +, \<, > , =,,,, \<=, > `eq` `lt` `gt` `le` 및가 `ge` 포함 됩니다.  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>시스템 프로시저에 대한 분산 쿼리 호출  
- `OPENQUERY`를 통한 일부 시스템 프로시저에 대한 분산 쿼리 호출은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서버에서 다른 서버로 호출될 경우 실패합니다. 이는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 프로시저에 대한 메타데이터를 검색할 수 없는 경우에 발생합니다. 예: `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`.  
+ `OPENQUERY`를 통한 일부 시스템 프로시저에 대한 분산 쿼리 호출은 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 서버에서 다른 서버로 호출될 경우 실패합니다. 이는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 프로시저에 대한 메타데이터를 검색할 수 없는 경우에 발생합니다. `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`)을 입력합니다.  
   
 #### <a name="isolation-level-and-sp_reset_connection"></a>격리 수준 및 sp_reset_connection  
  연결의 격리 수준은 클라이언트 드라이버에 의해 다음과 같은 방식으로 처리됩니다.  
@@ -186,7 +185,7 @@ ms.locfileid: "67419033"
   
  **함수의 기본 네임스페이스 URI에 따라 달라지는 새로운 동작**  
   
- 다음 함수는 기본 네임 스페이스 URI가 최종 권장 사항의 네임 스페이스 (즉, [http://www.w3.org/2005/xpath-functions](http://www.w3.org/2005/xpath-functions))와 일치 하는 경우에만 위에 설명 된 새 동작을 보여 줍니다. 호환성 수준이 110 이상인 경우 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서는 기본적으로 이 네임스페이스에 기본 함수 네임스페이스를 바인딩합니다. 그러나 이러한 함수는 호환성 수준에 상관없이 이 네임스페이스가 사용되는 경우 새 동작을 보여 줍니다.  
+ 다음 함수는 기본 네임 스페이스 URI가 최종 권장 사항의 네임 스페이스 (즉,)와 일치 하는 경우에만 위에 설명 된 새 동작을 보여 줍니다 [http://www.w3.org/2005/xpath-functions](http://www.w3.org/2005/xpath-functions) . 호환성 수준이 110 이상인 경우 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서는 기본적으로 이 네임스페이스에 기본 함수 네임스페이스를 바인딩합니다. 그러나 이러한 함수는 호환성 수준에 상관없이 이 네임스페이스가 사용되는 경우 새 동작을 보여 줍니다.  
   
 -   **fn:string-length**  
   
@@ -197,41 +196,41 @@ ms.locfileid: "67419033"
   
 ### <a name="collations"></a>데이터 정렬  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |새로운 데이터 정렬|Windows Server 2008에서 제공하는 것과 똑같은 데이터 정렬이 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에 도입되었습니다. 이러한 80개의 새로운 데이터 정렬은 언어 정확도가 향상되었으며 *_100 버전 참조로 표시되어 있습니다. 서버 또는 데이터베이스에서 새 데이터 정렬을 사용하도록 선택할 경우 이전 클라이언트 드라이버가 설치된 클라이언트에서 이러한 데이터 정렬을 인식하지 못할 수 있으므로 주의해야 합니다. 데이터 정렬이 인식되지 못할 경우 애플리케이션이 오류를 반환하고 실패할 수 있습니다. 다음과 같은 해결 방법을 고려해 보십시오.<br /><br /> 클라이언트 운영 체제를 업그레이드하여 기본 시스템 데이터 정렬을 업데이트합니다.<br /><br /> 클라이언트에 데이터베이스 클라이언트 소프트웨어가 설치되어 있는 경우에는 해당 데이터베이스 클라이언트 소프트웨어에 서비스 업데이트를 적용하는 것이 좋습니다.<br /><br /> 클라이언트의 코드 페이지에 매핑되는 기존 데이터 정렬을 선택합니다.|  
   
 ### <a name="common-language-runtime-clr"></a>CLR(공용 언어 런타임)  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |CLR 어셈블리|데이터베이스를 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]로 업그레이드하면 새로운 데이터 형식을 지원하는 `Microsoft.SqlServer.Types` 어셈블리가 자동으로 설치됩니다. 업그레이드 관리자 규칙에서는 이름이 충돌하는 사용자 형식이나 어셈블리를 검색합니다. 업그레이드 관리자는 충돌하는 어셈블리의 이름을 바꾸고 충돌하는 형식의 이름을 바꾸거나 코드에서 두 부분으로 된 이름을 사용하여 기존 사용자 형식을 참조하도록 알려 줍니다.<br /><br /> 데이터베이스 업그레이드에서 이름이 충돌하는 사용자 어셈블리가 발견되면 해당 어셈블리의 이름이 자동으로 바뀌고 데이터베이스가 주의 대상 모드로 설정됩니다.<br /><br /> 업그레이드 중에 이름이 충돌하는 사용자 형식이 발견된 경우에는 특별한 조치가 취해지지 않습니다. 업그레이드 후에는 기존 사용자 형식과 새 시스템 형식이 모두 존재하게 됩니다. 사용자 형식은 두 부분으로 된 이름을 통해서만 사용할 수 있습니다.|  
 |CLR 어셈블리|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]은 GAC(전역 어셈블리 캐시)의 라이브러리를 업데이트하는 .NET Framework 3.5 SP1을 설치합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 지원되지 않는 라이브러리가 등록되어 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 업그레이드하면 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]애플리케이션이 작동을 중지할 수 있습니다. 이는 GAC의 라이브러리를 제공하거나 업그레이드해도 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]내부의 어셈블리는 업데이트되지 않기 때문입니다. 어셈블리가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 GAC에 모두 포함되어 있는 경우 해당 어셈블리의 두 복사본이 정확하게 일치해야 합니다. 일치하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR 통합에서 해당 어셈블리를 사용할 때 오류가 발생합니다. 자세한 내용은 [Supported .NET Framework Libraries](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)을 참조하세요.<br /><br /> 데이터베이스를 업그레이드한 후 ALTER ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 내부의 어셈블리 복사본을 제공하거나 업그레이드합니다. 자세한 내용은 [기술 자료 문서 949080](https://go.microsoft.com/fwlink/?LinkId=154563)을 참조하십시오.<br /><br /> 애플리케이션에서 사용 중인 .NET Framework 라이브러리가 지원되는지 여부를 확인하려면 데이터베이스에서 다음 쿼리를 실행합니다.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
-|CLR 루틴|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]로 업그레이드한 후 CLR 사용자 정의 함수, 사용자 정의 집계 또는 UDT(사용자 정의 형식) 내에 가장을 사용하면 애플리케이션이 오류 6522와 함께 실패할 수 있습니다. 다음 시나리오는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 에서는 성공하지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 실패합니다. 해결 방법은 각 시나리오별로 설명되어 있습니다.<br /><br /> 가장을 사용 `nvarchar(max)`하는 CLR 사용자 정의 함수, 사용자 정의 집계 또는 udt 메서드에는, `varchar(max)`, `varbinary(max)`, `ntext` `text` `image`,, 또는 형식의 매개 변수가 있으며 메서드에 **dataaccesskind.read** 특성이 없습니다. 이 문제를 해결하려면 메서드에 **DataAccessKind.Read** 특성을 추가하고 어셈블리를 다시 컴파일한 후 루틴 및 어셈블리를 다시 배포하십시오.<br /><br /> 가장을 수행하는 **Init** 메서드가 있는 CLR 테이블 반환 함수 이 문제를 해결 하려면 메서드에 **dataaccesskind.read** 특성을 추가 하 고 어셈블리를 다시 컴파일한 후 루틴 및 어셈블리를 다시 배포 합니다.<br /><br /> 가장을 수행하는 **FillRow** 메서드가 있는 CLR 테이블 반환 함수 이 문제를 해결하려면 **FillRow** 메서드에서 가장을 제거하십시오. **FillRow** 메서드를 사용하여 외부 리소스에 액세스해서는 안 됩니다. 대신 **Init** 메서드를 사용해서 외부 리소스에 액세스하십시오.|  
+|CLR 루틴|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]로 업그레이드한 후 CLR 사용자 정의 함수, 사용자 정의 집계 또는 UDT(사용자 정의 형식) 내에 가장을 사용하면 애플리케이션이 오류 6522와 함께 실패할 수 있습니다. 다음 시나리오는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 에서는 성공하지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 실패합니다. 해결 방법은 각 시나리오별로 설명되어 있습니다.<br /><br /> 가장을 사용 하는 CLR 사용자 정의 함수, 사용자 정의 집계 또는 udt 메서드에는,,,,, 또는 형식의 매개 변수가 `nvarchar(max)` `varchar(max)` `varbinary(max)` `ntext` `text` `image` 있으며 메서드에 **dataaccesskind.read** 특성이 없습니다. 이 문제를 해결하려면 메서드에 **DataAccessKind.Read** 특성을 추가하고 어셈블리를 다시 컴파일한 후 루틴 및 어셈블리를 다시 배포하십시오.<br /><br /> 가장을 수행하는 **Init** 메서드가 있는 CLR 테이블 반환 함수 이 문제를 해결 하려면 메서드에 **dataaccesskind.read** 특성을 추가 하 고 어셈블리를 다시 컴파일한 후 루틴 및 어셈블리를 다시 배포 합니다.<br /><br /> 가장을 수행하는 **FillRow** 메서드가 있는 CLR 테이블 반환 함수 이 문제를 해결하려면 **FillRow** 메서드에서 가장을 제거하십시오. **FillRow** 메서드를 사용하여 외부 리소스에 액세스해서는 안 됩니다. 대신 **Init** 메서드를 사용해서 외부 리소스에 액세스하십시오.|  
   
 ### <a name="dynamic-management-views"></a>동적 관리 뷰  
   
-|보기|설명|  
+|보기|Description|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|cpu_ticks_in_ms 및 sqlserver_start_time_cpu_ticks 열은 제거되었습니다.|  
 |dm_exec_query_resource_semaphoressys. dm_exec_query_memory_grants|resource_semaphore_id 열은 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 고유한 ID가 아닙니다. 이러한 변경 내용은 쿼리 실행 문제를 해결하는 데 영향을 줄 수 있습니다. 자세한 내용은 [dm_exec_query_resource_semaphores &#40;transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)을 참조 하십시오.|  
   
 ### <a name="errors-and-events"></a>오류 및 이벤트  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |로그인 오류|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 SQL 로그인을 사용하여 Windows 인증만 사용하도록 구성된 서버에 연결하면 오류 18452가 반환됩니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 대신 오류 18456이 반환됩니다.|  
   
 ### <a name="showplan"></a>Showplan  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
-|실행 계획 XML 스키마|새 **SeekPredicateNew** 요소가 실행 계획 XML 스키마에 추가 되 고 바깥쪽 xsd 시퀀스 (**SqlPredicatesType**)가 ** \<xsd: choice>** 항목으로 변환 됩니다. 이제 실행 계획 XML에 하나 이상의 **SeekPredicate** 요소 대신 하나 이상의 **SeekPredicateNew** 요소가 표시될 수 있습니다. 이러한 두 요소는 함께 사용할 수 없습니다. **SeekPredicate** 는 이전 버전과의 호환성을 위해 실행 계획 XML 스키마에 유지되지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 에서 생성된 쿼리 계획에는 **SeekPredicateNew** 요소가 포함될 수 있습니다. **SeekPredicate** 요소가 없을 경우 ShowPlanXML/BatchSequence/Batch/Statements/StmtSimple/QueryPlan/RelOp/IndexScan/SeekPredicates 노드에서 **SeekPredicate** 자식만 검색해야 하는 애플리케이션은 실패할 수 있습니다. 이 노드에서 **SeekPredicate** 또는 **SeekPredicateNew** 요소를 사용하도록 애플리케이션을 다시 작성하십시오. 자세한 내용은 을(를) 참조하세요.|  
+|실행 계획 XML 스키마|새 **SeekPredicateNew** 요소가 실행 계획 XML 스키마에 추가 되 고 바깥쪽 xsd 시퀀스 (**SqlPredicatesType**)가 항목으로 변환 됩니다 **\<xsd:choice>** . 이제 실행 계획 XML에 하나 이상의 **SeekPredicate** 요소 대신 하나 이상의 **SeekPredicateNew** 요소가 표시될 수 있습니다. 이러한 두 요소는 함께 사용할 수 없습니다. **SeekPredicate** 는 이전 버전과의 호환성을 위해 실행 계획 XML 스키마에 유지되지만 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 에서 생성된 쿼리 계획에는 **SeekPredicateNew** 요소가 포함될 수 있습니다. **SeekPredicate** 요소가 없을 경우 ShowPlanXML/BatchSequence/Batch/Statements/StmtSimple/QueryPlan/RelOp/IndexScan/SeekPredicates 노드에서 **SeekPredicate** 자식만 검색해야 하는 애플리케이션은 실패할 수 있습니다. 이 노드에서 **SeekPredicate** 또는 **SeekPredicateNew** 요소를 사용하도록 애플리케이션을 다시 작성하십시오. 자세한 내용은 을(를) 참조하세요.|  
 |실행 계획 XML 스키마|실행 계획 XML 스키마의 **ObjectType** 복합 유형에 새로운 **IndexKind** 특성이 추가되었습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스키마에 대해 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 계획의 유효성을 엄격하게 검사하는 애플리케이션은 실패합니다.|  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|기능|Description|  
+|기능|설명|  
 |-------------|-----------------|  
 |ALTER_AUTHORIZATION_DATABASE DDL 이벤트|[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 DDL 이벤트 ALTER_AUTHORIZATION_DATABASE가 실행되면 DDL(데이터 정의 언어) 작업에서 보안 개체의 엔터티 유형이 개체인 경우 EVENTDATA xml의 **ObjectType** 요소에 값 'object'가 반환됩니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서는 실제 유형(예: 'table' 또는 'function')이 반환됩니다.|  
 |CONVERT|CONVERT 함수에 잘못된 스타일이 전달되는 경우 변환 유형이 이진에서 문자 또는 문자에서 이진이면 오류가 반환됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 잘못된 스타일이 이진에서 문자 및 문자에서 이진 변환의 기본 스타일로 설정됩니다.|  

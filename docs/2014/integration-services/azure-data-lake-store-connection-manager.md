@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66462692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925414"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
   **Azure Data Lake Store 연결 관리자** 를 사용하면 두 가지 인증 유형 즉, Azure AD 사용자 ID와 Azure AD 서비스 ID를 통해 SSIS 패키지를 Azure Data Lake Store 서비스에 연결할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66462692"
   
 1.  **SSIS 연결 관리자 추가** 대화 상자에서 **AzureDataLake**를 선택하고 **추가**를 클릭합니다.   
   
-2.  Azure Data Lake Store 연결 관리자 편집기 대화 상자에서 **ADLS 호스트** 필드에 Azure Data Lake Store 호스트 URL을 입력합니다. 예: https:\//test.azuredatalakestore.net 또는 test.azuredatalakestore.net.
+2.  Azure Data Lake Store 연결 관리자 편집기 대화 상자에서 **ADLS 호스트** 필드에 Azure Data Lake Store 호스트 URL을 입력합니다. 예: https: \/ /test.azuredatalakestore.net 또는 test.azuredatalakestore.net.
   
 3.  해당 인증 유형을 선택하여 Azure Data Lake Store 데이터에 액세스합니다.
 
@@ -49,7 +48,7 @@ ms.locfileid: "66462692"
     
         4. **연결 테스트** 단추를 클릭하여 연결을 테스트합니다.  
   
-4.  **확인**을 클릭하여 대화 상자를 닫습니다.  
+4.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
     작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.  
   

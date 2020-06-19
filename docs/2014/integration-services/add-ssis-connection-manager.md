@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 549ab9aa3a447c13939e352233acc42b974d92af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d3ffccf359e96583ba6d480b1ae46947c5e468b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925855"
 ---
 # <a name="add-ssis-connection-manager"></a>SSIS 연결 관리자 추가
   **SSIS 연결 관리자 추가** 대화 상자를 사용하여 패키지에 추가할 연결 형식을 선택할 수 있습니다.  

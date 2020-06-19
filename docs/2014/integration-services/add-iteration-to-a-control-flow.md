@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926064"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>제어 흐름에 반복 추가
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에서 조건에 따라 반복되는 루프를 간단하게 포함시킬 수 있는 제어 흐름 요소인 For 루프 컨테이너가 포함됩니다. 자세한 내용은 [For 루프 컨테이너](control-flow/for-loop-container.md)가 될 때까지 워크플로를 반복합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66061978"
   
  식에는 변수가 포함될 수 있습니다. 변수를 사용하면 런타임 시 값을 업데이트하여 패키지를 보다 유연하고 쉽게 관리할 수 있습니다. 식의 최대 길이는 4000자입니다.  
   
- 식에서 변수를 지정할 때는 변수 이름 앞에 @ 기호를 사용해야 합니다. 예를 들어 라는 `Counter`변수의 경우 for 루프 컨테이너 @Counter 에서 사용 하는 식을 입력 합니다. 변수에 네임스페이스 속성을 포함시키려면 변수와 네임스페이스를 괄호로 묶어야 합니다. 예를 들어 `Counter` `MyNamespace` 네임 스페이스에 있는 변수의 경우 [@MyNamespace::Counter]를 입력 합니다.  
+ 식에서 변수를 지정할 때는 변수 이름 앞에 @ 기호를 사용해야 합니다. 예를 들어 라는 변수의 경우 `Counter` @Counter for 루프 컨테이너에서 사용 하는 식을 입력 합니다. 변수에 네임스페이스 속성을 포함시키려면 변수와 네임스페이스를 괄호로 묶어야 합니다. 예를 들어 `Counter` 네임 스페이스에 있는 변수의 경우 `MyNamespace` []를 입력 @MyNamespace::Counter 합니다.  
   
  For 루프 컨테이너에서 사용되는 변수는 For 루프 컨테이너의 범위 또는 패키지 컨테이너 계층에서 높은 수준의 컨테이너 범위에 정의되어 있어야 합니다. 예를 들어 For 루프 컨테이너는 자체 범위에 정의된 변수와 패키지 범위에 정의된 변수를 사용할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../../2014/integration-services/use-variables-in-packages.md)을 참조하세요.  
   

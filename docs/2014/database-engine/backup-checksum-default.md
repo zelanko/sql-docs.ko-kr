@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.assetid: a3b70885-47d7-4bd0-b28b-5a44947ae83c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 986ab44295d8227e485aa003c54c64c214a65c7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936159"
 ---
 # <a name="backup-checksum-default"></a>백업 체크섬 기본값
   백업 체크섬 기본 설정을 사용하여 백업 및 복원 중에 백업 체크섬을 사용하거나 사용하지 않도록 설정할 수 있습니다.  

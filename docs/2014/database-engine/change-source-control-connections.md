@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077a09cdca0c0aff777184f04467ca39592690aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812792"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936077"
 ---
 # <a name="change-source-control-connections"></a>원본 제어 연결 변경
   소스 제어에서 솔루션을 처음 추가하거나 열면 원본 제어 공급자는 로컬 솔루션 디렉터리의 루트 폴더와 해당 서버 폴더 간에 연결을 설정합니다.  

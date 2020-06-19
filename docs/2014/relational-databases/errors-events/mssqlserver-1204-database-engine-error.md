@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de6ece78-79de-484d-9224-ca0f7645815f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee0544c14bbf3e05fcb59e16a9bb3e0d8e61e33b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34b77db95ed4409682b42c0245cf229692b5029a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969743"
 ---
 # <a name="mssqlserver_1204"></a>MSSQLSERVER_1204
     
@@ -35,7 +34,7 @@ ms.locfileid: "62916104"
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 리소스를 잠글 수 없습니다. 이 오류는 다음과 같은 문제로 인해 발생할 수 있습니다.  
   
--   다른 프로세스가 사용 중이거나 서버가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]max server memory**옵션이 구성된 상태로 동작 중이어서**가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
+-   다른 프로세스가 사용 중이거나 서버가 **max server memory** 옵션이 구성된 상태로 동작 중이어서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 운영 체제에서 더 많은 메모리를 할당할 수 없습니다.  
   
 -   잠금 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용 가능한 메모리의 60% 이상을 사용하지 않습니다.  
   

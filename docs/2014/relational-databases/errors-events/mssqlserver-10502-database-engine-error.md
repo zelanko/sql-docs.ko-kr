@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26d9b64d-4299-4b55-92d0-0a32a3688c0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42b4a39678e4b85e581bca7e1b9e085c6f4620f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeec3a3adf318cadc96501938f8a5565f1c07670
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870675"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969843"
 ---
 # <a name="mssqlserver_10502"></a>MSSQLSERVER_10502
     
@@ -40,7 +39,7 @@ ms.locfileid: "62870675"
   
 ## <a name="see-also"></a>참고 항목  
  [계획 지침](../performance/plan-guides.md)   
- [Transact-sql&#41;sp_create_plan_guide &#40;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935962"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 서버 구성 옵션
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814037"
   
  존재하지 않는 CPU로 매핑을 시도하는 선호도 마스크를 지정하면 RECONFIGURE 명령은 클라이언트 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 모두 오류 메시지를 보고합니다. 이 경우 RECONFIGURE WITH OVERRIDE 옵션을 사용해도 영향을 미치지 않으며 동일한 구성 오류가 다시 보고됩니다.  
   
- Windows 2000 또는 Windows Server 2003 운영 체제에 의해 특정 작업이 할당된 프로세서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 제외할 수도 있습니다. 프로세서를 나타내는 비트를 1로 설정하면 스레드를 할당하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진이 해당 프로세서를 선택합니다. 를 0 ( `affinity mask` 기본값)으로 설정 하면 Microsoft windows 2000 또는 windows Server 2003 일정 알고리즘이 스레드의 선호도를 설정 합니다. `affinity mask`를 0이 아닌 값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선호도가 이 값을 선택에 맞는 프로세서를 지정하는 비트 마스크로 해석합니다.  
+ Windows 2000 또는 Windows Server 2003 운영 체제에 의해 특정 작업이 할당된 프로세서에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업을 제외할 수도 있습니다. 프로세서를 나타내는 비트를 1로 설정하면 스레드를 할당하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진이 해당 프로세서를 선택합니다. `affinity mask`를 0 (기본값)으로 설정 하면 Microsoft windows 2000 또는 Windows Server 2003 일정 알고리즘이 스레드의 선호도를 설정 합니다. `affinity mask`를 0이 아닌 값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선호도가 이 값을 선택에 맞는 프로세서를 지정하는 비트 마스크로 해석합니다.  
   
  특정 프로세서에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스레드를 분리하면 Microsoft Windows 2000 또는 Windows Server 2003에서는 시스템의 Windows 관련 프로세스 처리를 보다 잘 평가할 수 있습니다. 예를 들어 인스턴스 A와 인스턴스 B라는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하고 CPU가 8개인 서버에서 시스템 관리자는 선호도 마스크 옵션을 사용하여 CPU 4개로 이루어진 첫째 집합을 인스턴스 A에 할당하고 둘째 집합을 인스턴스 B에 할당할 수 있습니다. 32개보다 많은 프로세서를 구성하려면 affinity mask 및 affinity64 mask를 모두 설정해야 합니다. `affinity mask`의 값은 다음과 같습니다.  
   
@@ -114,7 +113,7 @@ GO
 |127|01111111|0, 1, 2, 3, 4, 5, 6|  
 |255|11111111|0, 1, 2, 3, 4, 5, 6, 7|  
   
- affinity mask는 고급 옵션입니다. Sp_configure 시스템 저장 프로시저를 사용 하 여 설정을 변경 하는 경우 **show advanced options** 를 `affinity mask` 1로 설정할 때만 변경할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 명령을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하지 않더라도 새 설정이 즉시 적용됩니다.  
+ affinity mask는 고급 옵션입니다. Sp_configure 시스템 저장 프로시저를 사용 하 여 설정을 변경 하는 경우 `affinity mask` **show advanced options** 를 1로 설정할 때만 변경할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 명령을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하지 않더라도 새 설정이 즉시 적용됩니다.  
   
 ## <a name="non-uniform-memory-access-numa"></a>NUMA(Non-uniform Memory Access)  
  하드웨어 기반 NUMA(Non-uniform Memory Access)를 사용하고 affinity mask가 설정되어 있으면 노드의 모든 스케줄러에서 선호도가 해당 CPU로 설정됩니다. affinity mask가 설정되어 있지 않으면 각 스케줄러의 선호도는 NUMA 노드 내의 CPU 그룹으로 설정되고 NUMA 노드 N1로 매핑된 스케줄러에서 노드의 모든 CPU 작업을 예약할 수 있지만 다른 노드와 연결된 CPU 작업은 예약할 수 없습니다.  

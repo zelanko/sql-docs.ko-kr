@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925540"
 ---
 # <a name="audit-transformation-editor"></a>감사 변환 편집기
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 이 정보를 제공하는 시스템 변수가 포함되어 있습니다.  
@@ -33,17 +32,17 @@ ms.locfileid: "66061414"
  **감사 유형**  
  감사 정보를 제공할 사용 가능한 시스템 변수를 선택합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**실행 인스턴스 GUID**|패키지의 실행 인스턴스를 고유하게 식별하는 GUID를 삽입합니다.|  
 |**패키지 ID**|패키지를 고유하게 식별하는 GUID를 삽입합니다.|  
 |**패키지 이름**|패키지 이름을 삽입합니다.|  
 |**버전 ID**|패키지 버전을 고유하게 식별하는 GUID를 삽입합니다.|  
 |**실행 시작 시간**|패키지 실행이 시작된 시간을 삽입합니다.|  
-|**컴퓨터 이름**|패키지가 시작된 컴퓨터 이름을 삽입합니다.|  
+|**머신 이름**|패키지가 시작된 컴퓨터 이름을 삽입합니다.|  
 |**사용자 이름**|패키지를 시작한 사용자의 로그인 이름을 삽입합니다.|  
 |**작업 이름**|감사 변환이 연결된 데이터 흐름 태스크의 이름을 삽입합니다.|  
-|**태스크 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
+|**작업 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)  

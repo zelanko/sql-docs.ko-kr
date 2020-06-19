@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96eea051fbf4a34257d61ff8eaf4f796debf49a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936014"
 ---
 # <a name="collations-and-code-pages"></a>데이터 정렬 및 코드 페이지
   [!INCLUDE[hek_2](../includes/hek-2-md.md)]에는 메모리 최적화 테이블의 (var)char 열에 대해 지원되는 코드 페이지와 인덱스 및 고유하게 컴파일된 저장 프로시저에 사용되는 지원되는 데이터 정렬에 대한 제한 사항이 있습니다.  
@@ -82,7 +81,7 @@ GO
   
 -   고유하게 컴파일된 저장 프로시저 내의 모든 식과 정렬 작업은 BIN2 데이터 정렬을 사용해야 합니다. 즉, 모든 비교 및 정렬 작업이 문자(이진 표현)의 유니코드 코드 포인트를 기반으로 합니다. 예를 들어 모든 정렬이 대/소문자를 구분합니다('Z'가 'a' 앞에 옴). 필요한 경우 대/소문자를 구분하지 않는 정렬 및 비교를 위해 해석된 [!INCLUDE[tsql](../includes/tsql-md.md)]을 사용합니다.  
   
--   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 데이터 정렬에 _SC 속성이 *있는 경우 n* < (var) char (*n*) 값*을 n (* var) char (*i*) 형식으로 변환할 수 없습니다. 예를 들어 다음은 지원되지 않습니다.  
+-   UTF-16 데이터의 잘림은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 즉, 데이터 정렬에 _SC 속성이 있는 경우 n (var) char (*n*) 값 *을 n (* var) char (*i*) 형식으로 변환할 수 없습니다  <  *n*. 예를 들어 다음은 지원되지 않습니다.  
   
     ```sql  
     -- column definition using an _SC collation  

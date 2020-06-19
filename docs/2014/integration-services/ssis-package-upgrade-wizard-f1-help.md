@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 56aa708d39756932d28c8a94da534cb758916fcd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f141b220284e758a8c7b3038ccc6cc064bd527f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962526"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
-  SSIS 패키지 업그레이드 마법사를 사용 하 여 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지 및 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 패키지를의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]현재 릴리스에 대 한 패키지 형식으로 업그레이드할 수 있습니다.  
+  SSIS 패키지 업그레이드 마법사를 사용 하 여 [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] 패키지 및 [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] 패키지를의 현재 릴리스에 대 한 패키지 형식으로 업그레이드할 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 있습니다.  
   
  **SSIS 패키지 업그레이드 마법사를 실행하려면**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 692cde14a9cc8add332a4bbf6abe9518d3de642f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 732919f8a6f9de24bbbd5ac9aeb378b24086ccb1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962143"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>용어 조회 변환 편집기(고급 탭)
   **용어 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 조회에서 대/소문자를 구분할지 여부를 지정할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee3c73e6875c65ab5204d122cda2db4144df8e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061765"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925888"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 대상 편집기(오류 출력 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66061765"
  **입력 또는 출력**  
  입력 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  사용되지 않습니다.  
   
  **오류**  

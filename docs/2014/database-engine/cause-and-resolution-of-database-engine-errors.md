@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e24edbf9c988081e7d36539f325e903626ae791
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ea86bbaa7c998d6f32b48ac1b9a43a0366e36fd9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001001"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936064"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>데이터베이스 엔진 오류의 원인 및 해결 방법
   이 항목에는 [!INCLUDE[ssDE](../includes/ssde-md.md)]과 관련한 몇 가지 오류의 원인 및 해결 방법 정보가 포함되어 있습니다.  

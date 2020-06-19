@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963134"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>선행 제약 조건의 속성 설정
   선행 제약 조건의 속성을 설정하려면 다음 도구 중 하나를 사용하면 됩니다.  
@@ -43,14 +42,14 @@ ms.locfileid: "66055737"
   
 5.  **평가 작업** 드롭다운 목록에서 평가 작업을 선택합니다.  
   
-6.  `Value` 드롭다운 목록에서 선행 실행 파일의 실행 결과를 선택 합니다.  
+6.  `Value`드롭다운 목록에서 선행 실행 파일의 실행 결과를 선택 합니다.  
   
-7.  계산 작업에 식이 사용 되는 경우 `Expression` 상자에 식을 입력 하 고 **테스트** 를 클릭 하 여 식을 계산 합니다.  
+7.  계산 작업에 식이 사용 되는 경우 상자에 식을 `Expression` 입력 하 고 **테스트** 를 클릭 하 여 식을 계산 합니다.  
   
     > [!NOTE]  
     >  변수 이름은 대소문자를 구분합니다.  
   
-8.  제약 조건이 지정 된 실행 파일에 여러 태스크 또는 컨테이너가 연결 된 경우에는 **논리적 AND** 를 선택 하 여 모든 선행 실행 파일의 실행 `true`결과가로 계산 되어야 하도록 지정 합니다. 단일 실행 결과만로 `true`계산 되도록 지정 하려면 **논리적 OR** 을 선택 합니다.  
+8.  제약 조건이 지정 된 실행 파일에 여러 태스크 또는 컨테이너가 연결 된 경우에는 **논리적 AND** 를 선택 하 여 모든 선행 실행 파일의 실행 결과가로 계산 되어야 하도록 지정 합니다 `true` . 단일 실행 결과만로 계산 되도록 지정 하려면 **논리적 OR** 을 선택 합니다 `true` .  
   
 9. **확인** 을 클릭하여 **선행 제약 조건 편집기**를 닫습니다.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "66055737"
   
     |읽기/쓰기 속성|구성 동작|  
     |--------------------------|--------------------------|  
-    |설명|설명을 제공합니다.|  
+    |Description|설명을 제공합니다.|  
     |EvalOp|계산 작업을 선택합니다. `Expression`, **Expressionandconstant**또는 **expressionandconstant** 작업을 선택할 경우 식을 지정할 수 있습니다.|  
     |식|계산 작업에 식이 포함된 경우 식을 제공합니다. 식은 부울로 계산되어야 합니다. 식 언어에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 식](expressions/integration-services-ssis-expressions.md)을 참조하세요.|  
-    |LogicalAnd|선행 `LogicalAnd` 제약 조건이 다른 선행 제약 조건과 함께 계산 되는지 여부를 지정 하려면 설정 하 고, 여러 실행 파일이 제약 조건이 있는 실행 파일에 연결 된 경우|  
-    |이름|선행 제약 조건의 이름을 업데이트합니다.|  
+    |LogicalAnd|`LogicalAnd`선행 제약 조건이 다른 선행 제약 조건과 함께 계산 되는지 여부를 지정 하려면 설정 하 고, 여러 실행 파일이 제약 조건이 있는 실행 파일에 연결 된 경우|  
+    |속성|선행 제약 조건의 이름을 업데이트합니다.|  
     |ShowAnnotation|사용할 주석의 유형을 지정합니다. 주석을 사용하지 않으려면 **Never** 를 선택하고, 요청 시 주석을 사용하려면 **AsNeeded** 를 선택하고, Name 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintName** 을 선택합니다. 또한 Description 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintDescription** 을 선택하고, Value 및 Expression 속성의 값을 사용하여 자동으로 주석을 달려면 **ConstraintOptions** 를 선택합니다.|  
     |값|EvalOP 속성에 지정된 계산 작업에 제약 조건이 포함된 경우 제약 조건이 지정된 실행 개체의 실행 결과를 선택합니다.|  
   

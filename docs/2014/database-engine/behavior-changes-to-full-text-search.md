@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: cbe807237651bd8bb81fa1c9f028847654b97889
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001086"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936184"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>전체 텍스트 검색의 동작 변경
   이 항목에서는 전체 텍스트 검색의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용은 이전 버전의 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 와 비교해서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기능이 작동하고 상호 작용하는 방법에 영향을 줍니다.  
