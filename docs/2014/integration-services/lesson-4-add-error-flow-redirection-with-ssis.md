@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a97a07c4854fc1e25913aff7b6e966be79032e86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951563"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>4단원: 오류 Flow 리디렉션 추가
-  변환 프로세스에서 발생할 수 있는 오류를 처리 하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 변환할 수 없는 데이터를 처리 하는 방법을 구성 요소 단위 및 열 단위로 결정 하는 기능을 제공 합니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  
+  변환 프로세스에서 발생할 수 있는 오류를 처리 하기 위해에서는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 변환할 수 없는 데이터를 처리 하는 방법을 구성 요소 단위 및 열 단위로 결정 하는 기능을 제공 합니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  
   
  변환 중에 처리 오류가 발생할 수 있으므로 오류로 인해 패키지 실행이 중지되지 않도록 발생 가능한 처리 오류를 구성하고 해결하는 것이 좋습니다. 패키지가 성공적으로 실행되도록 오류를 무시할 수 있지만 대부분의 경우 데이터와 오류를 유지하여 나중에 조사하고 재처리할 수 있는 다른 처리 경로로 오류가 발생한 행을 리디렉션하는 것이 좋습니다.  
   

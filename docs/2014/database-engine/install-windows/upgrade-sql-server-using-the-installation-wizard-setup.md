@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931834"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>설치 마법사를 사용하여 SQL Server 2014로 업그레이드(설치 프로그램)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 구성 요소를 업그레이드할 수 있는 단일 기능 트리를 제공합니다. 또한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 이전 버전과 함께 설치하거나 기존 데이터베이스 및 구성 설정을 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 마이그레이션하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 적용할 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "62775423"
 -   [SQL Server 데이터베이스 엔진의 이전 버전과의 호환성](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료 된 후의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 된 인스턴스에 기능을 추가 하는 방법에 대 한 자세한 내용은 [SQL Server 2014 &#40;설정&#41;인스턴스에 기능 추가 ](add-features-to-an-instance-of-sql-server-setup.md)를 참조 하세요.  
+>  업그레이드할 기능은 변경할 수 없으며, 업그레이드 작업 중에 기능을 추가할 수도 없습니다. 업그레이드 작업이 완료 된 후의 업그레이드 된 인스턴스에 기능을 추가 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [SQL Server 2014 &#40;설정&#41;인스턴스에 기능 추가 ](add-features-to-an-instance-of-sql-server-setup.md)를 참조 하세요.  
   
 ## <a name="procedure"></a>절차  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775423"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다.  
   
-2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 업그레이드 하려면 왼쪽 탐색 영역에서 **설치** 를 클릭 한 후, ** [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 업그레이드 **를 클릭 합니다.  
+2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 인스턴스를 업그레이드 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 왼쪽 탐색 영역에서 **설치** 를 클릭 한 후 **,, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는에서 업그레이드 **를 클릭 합니다.  
   
 3.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전으로 업그레이드할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지를 나타내는 옵션을 클릭합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [지원 되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)를 참조 하세요.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775423"
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
     > [!NOTE]  
-    >  **인스턴스 선택** 페이지에서 공유 기능만 ** \<업그레이드>** 선택 하 여 공유 기능을 업그레이드 하도록 선택한 경우 기능 선택 페이지에서 모든 공유 기능이 미리 선택 되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
+    >  인스턴스 선택 페이지에서 공유 기능을 업그레이드 하도록 선택한 경우 **\<Upgrade shared features only>** 기능 선택 **Select Instance** 페이지에서 모든 공유 기능이 미리 선택 되어 있습니다. 모든 공유 구성 요소는 동시에 업그레이드됩니다.  
   
 12. 인스턴스 구성 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 인스턴스 ID를 지정합니다.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "62775423"
   
 -   **통계 업데이트** - 쿼리 성능을 최적화하려면 업그레이드 후에 모든 데이터베이스에 대한 통계를 업데이트하는 것이 좋습니다. `sp_updatestats` 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 있는 사용자 정의 테이블의 통계를 업데이트할 수 있습니다.  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 설치 구성** -시스템의 공격 받을 수 노출 영역을 줄이고 키 서비스 및 기능 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 선택적으로 설치 하 고 사용 하도록 설정 합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
+-   **새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 구성** -시스템의 공격 받을 수 노출 영역을 줄이고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 키 서비스 및 기능을 선택적으로 설치 하 고 사용 하도록 설정 합니다. 노출 영역 구성 도구에 대한 자세한 내용은 이 릴리스의 추가 정보 파일을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2014로 업그레이드](upgrade-sql-server.md)   

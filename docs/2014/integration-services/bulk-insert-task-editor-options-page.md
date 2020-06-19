@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924674"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>대량 삽입 태스크 편집기(옵션 페이지)
-  **대량 삽입 태스크 편집기** 대화 상자의 **옵션** 페이지를 사용하여 대량 삽입 작업에 대한 옵션을 설정할 수 있습니다. 대량 삽입 태스크는 많은 양의 데이터 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 테이블 또는 뷰로 복사 합니다.  
+  **대량 삽입 태스크 편집기** 대화 상자의 **옵션** 페이지를 사용하여 대량 삽입 작업에 대한 옵션을 설정할 수 있습니다. 대량 삽입 태스크는 많은 양의 데이터를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블 또는 뷰로 복사 합니다.  
   
  대량 삽입 작업에 대한 자세한 내용은 [대량 삽입 태스크](control-flow/bulk-insert-task.md) 및 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
 ## <a name="options"></a>옵션  
- **코드 페이지**  
+ **CodePage**  
  데이터 파일에서 데이터의 코드 페이지를 지정합니다.  
   
  **DataFileType**  
@@ -42,7 +41,7 @@ ms.locfileid: "66061186"
  **FirstRow**  
  복사를 시작할 처음 행을 지정합니다.  
   
- **옵션**  
+ **Options**  
  |용어|정의|  
 |----------|----------------|  
 |**CHECK 제약 조건**|테이블 및 열 제약 조건을 확인하려면 선택합니다.|  

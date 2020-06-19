@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d8196a46437975a2b8e00bb2fbe8d183540025c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55ed3c5e5910438a601a649d80706967cf415e8e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972553"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>SQL Server Management Studio에서 Integration Services 패키지 보기(SSIS 서비스)
     

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4092257bb593439ef4851eca8b554f0f5ae7ade
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483527"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972003"
 ---
 # <a name="change-tracking-master-data-services"></a>변경 내용 추적(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 변경 내용 추적 그룹을 사용하여 특성 값이 변경될 때 동작을 수행할 수 있습니다. 새 값이 무엇인지 모르지만 대신 변경이 발생했는지 알고 싶으면 변경 내용 추적을 사용합니다.  

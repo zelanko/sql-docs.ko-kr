@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931974"
 ---
 # <a name="upgrade-database-engine"></a>데이터베이스 엔진 업그레이드
   이 항목에서는 업그레이드 프로세스를 준비하고 이해하는 데 필요한 다음과 같은 정보를 제공합니다.  
@@ -102,7 +101,7 @@ ms.locfileid: "62774984"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 업그레이드할 수 있습니다.  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>업그레이드 후 데이터베이스 호환성 수준  
- 업그레이드 후에 `tempdb`는, `model` `msdb` 및 **리소스** 데이터베이스의 호환성 수준이 120로 설정 됩니다. `master` 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.  
+ `tempdb`업그레이드 후에는, `model` 및 리소스 데이터베이스의 호환성 수준이 `msdb` 120로 설정 됩니다. **Resource** `master` 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.  
   
  사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다. 업그레이드 이전에 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.  
   
@@ -163,7 +162,7 @@ EXEC sp_fulltext_service 'pause_indexing', 0;
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [지원 되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)   
+ [지원되는 버전 및 에디션 업그레이드](supported-version-and-edition-upgrades.md)   
  [SQL Server의 여러 버전 및 인스턴스 작업](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [이전 버전과의 호환성](../../getting-started/backward-compatibility.md)   
  [복제된 데이터베이스 업그레이드](upgrade-replicated-databases.md)  

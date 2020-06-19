@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063241"
 ---
 # <a name="install-and-configure-semantic-search"></a>의미 체계 검색 설치 및 구성
   통계 의미 체계 검색을 위한 필수 구성 요소와 이러한 필수 구성 요소의 설치 또는 확인 방법에 대해 설명합니다.  
@@ -61,9 +60,9 @@ GO
   
     -   **설치 미디어에서** SemanticLanguageDatabase.msi [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 라는 Windows Installer 패키지를 찾습니다. 대상 시스템에 따라 32비트 또는 64비트 버전의 설치 관리자 패키지를 찾습니다. 포함된 폴더의 이름으로 파일의 32비트 버전과 64비트 버전을 식별하며, 파일 이름은 두 버전 모두 동일합니다.  
   
-    -   Microsoft?에서 설치 관리자 패키지를 다운로드 합니다. [ SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=296743) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 다운로드 센터의 의미 체계 언어 통계 페이지  
+    -   Microsoft?에서 설치 관리자 패키지를 다운로드 합니다. [ SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=296743) 다운로드 센터의 의미 체계 언어 통계 페이지 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-2.  **Semanticlanguagedatabase.msi** Windows installer 패키지를 실행 하 여 데이터베이스 및 로그 파일을 추출 합니다.  
+2.  **SemanticLanguageDatabase.msi** Windows installer 패키지를 실행 하 여 데이터베이스 및 로그 파일을 추출 합니다.  
   
      필요에 따라 대상 디렉터리를 변경할 수 있습니다. 기본적으로 설치 관리자는 32 비트 또는 64 비트 Program Files 폴더에 있는 **Microsoft 의미 체계 언어 데이터베이스** 라는 폴더에 파일을 추출 합니다. MSI 파일에는 압축된 데이터베이스 파일 및 로그 파일이 포함되어 있습니다.  
   

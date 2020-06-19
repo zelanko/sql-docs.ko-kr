@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a994ee7b9e01b310ba9d90c5acf35ba93877c0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939113"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>데이터 마이닝 쿼리 변환 편집기(마이닝 모델 탭)
   **데이터 마이닝 쿼리 변환 편집기** 대화 상자의 **마이닝 모델** 탭을 사용하여 데이터 마이닝 구조 및 해당 마이닝 모델을 선택할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66059766"
  **연결**  
  목록 상자를 사용하여 기존 Analysis Services 연결을 선택하거나 아래에 설명된 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하면 새 연결을 만들 수 있습니다.  
   
  **마이닝 구조**  

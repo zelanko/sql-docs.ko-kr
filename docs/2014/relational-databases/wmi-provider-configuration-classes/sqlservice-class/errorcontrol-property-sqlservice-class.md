@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c916be21b62e2e3b920f14da6fb88722e60e1501
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060989"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002210"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl 속성(SqlService 클래스)
   시스템을 시작할 때 서비스가 시작되지 않은 경우 오류의 심각도를 가져오거나 설정합니다.  
@@ -55,7 +54,7 @@ object
  위험  
  올바른 구성으로 시스템을 다시 시작합니다.  
   
- Unknown  
+ 알 수 없음  
  심각도를 알 수 없습니다.  
   
 ## <a name="remarks"></a>설명  

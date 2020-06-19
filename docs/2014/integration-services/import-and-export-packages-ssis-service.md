@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965683"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>패키지 가져오기 및 내보내기(SSIS 서비스)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058146"
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지는 다음과 같은 위치에서 가져오거나 내보낼 수 있습니다.  
   
--   인스턴스 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장 된 패키지를 가져올 수 있습니다. 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
+-   인스턴스 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 파일 시스템 또는 패키지 저장소에 저장 된 패키지를 가져올 수 있습니다 [!INCLUDE[ssIS](../includes/ssis-md.md)] . 가져온 패키지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소의 폴더에 저장됩니다.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스, 파일 시스템 또는 [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 저장소에 저장된 패키지를 다른 스토리지 형식 또는 위치로 내보낼 수 있습니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66058146"
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력 하거나 ** \<더 찾아보기 ... >** 를 클릭 하 여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에서 서버 이름을 입력 하거나를 클릭 하 여 **\<Browse for more...>** 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66058146"
   
     -   **서버 유형** 상자에서 **Integration Services**를 선택합니다.  
   
-    -   **서버 이름** 상자에 서버 이름을 입력 하거나 ** \<더 찾아보기 ... >** 를 클릭 하 여 사용할 서버를 찾습니다.  
+    -   **서버 이름** 상자에서 서버 이름을 입력 하거나를 클릭 하 여 **\<Browse for more...>** 사용할 서버를 찾습니다.  
   
 3.  개체 탐색기가 열려 있지 않으면 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
-4.  개체 탐색기에서 **저장 된 패키지** 폴더를 확장 합니다.  
+4.  개체 탐색기에서 **저장된 패키지** 폴더를 확장합니다.  
   
 5.  하위 폴더를 확장하고 내보내려는 패키지를 찾습니다.  
   

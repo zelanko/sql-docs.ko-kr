@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972583"
 ---
 # <a name="variable-grid-options"></a>가변 눈금 옵션
   **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](integration-services-ssis-variables.md)를 참조하세요.  
@@ -44,7 +43,7 @@ ms.locfileid: "66054682"
   
 -   **값**  
   
--   **Namespace**  
+-   **네임스페이스**  
   
 -   **변수 값 변경 시 이벤트 발생**  
   

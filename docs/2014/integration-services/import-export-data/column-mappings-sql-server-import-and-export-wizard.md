@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965636"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>열 매핑(SQL Server 가져오기 및 내보내기 마법사)
   **열 매핑** 대화 상자를 사용 하 여 변환 매개 변수를 편집할 수 있습니다.  
   
 > [!NOTE]  
->  테이블 복사 옵션을 선택할 경우 테이블의 모든 열을 복사하지 않아도 됩니다. 건너 뛰 려는 열에 대해이 대화 상자의 **대상** 열에서 ** \<>무시** 를 선택 합니다.  
+>  테이블 복사 옵션을 선택할 경우 테이블의 모든 열을 복사하지 않아도 됩니다. **\<ignore>** 이 대화 상자의 **대상** 열에서 건너 뛰 려는 열을 선택 합니다.  
   
  이 마법사에 대해 자세히 알아보려면 [SQL Server 가져오기 및 내보내기 마법사](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조 하세요. 마법사 시작 옵션 및 마법사를 성공적으로 실행 하는 데 필요한 사용 권한에 대 한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 실행](start-the-sql-server-import-and-export-wizard.md)을 참조 하세요.  
   
@@ -63,9 +62,9 @@ ms.locfileid: "62893044"
  변환 매개 변수를 설정할 수 있는 각 원본 열을 봅니다.  
   
  **대상**  
- 복사 작업 중에 특정 열을 무시할지 여부를 지정합니다. 건너 뛰 려는 열에 대해이 열에서 ** \<>무시** 를 선택 하 여 열의 하위 집합만 복사할 수 있습니다. 열을 매핑하기 전에 매핑하지 않을 열은 모두 무시해야 합니다.  
+ 복사 작업 중에 특정 열을 무시할지 여부를 지정합니다. **\<ignore>** 건너 뛰 려는 열에 대해이 열에서를 선택 하 여 열의 하위 집합만 복사할 수 있습니다. 열을 매핑하기 전에 매핑하지 않을 열은 모두 무시해야 합니다.  
   
- **Type**  
+ **형식**  
  열에 대한 데이터 형식을 선택합니다.  
   
  **Null 허용**  
@@ -77,7 +76,7 @@ ms.locfileid: "62893044"
  **정밀도**  
  표시된 데이터의 전체 자릿수(숫자의 자릿수)를 지정합니다.  
   
- **규모**  
+ **크기 조정**  
  표시된 데이터의 소수 자릿수(소수점 이하 자릿수)를 지정합니다.  
   
   

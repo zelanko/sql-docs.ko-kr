@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931144"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014로 로그 전달 업그레이드(Transact-SQL)
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 로그 전달 구성을 유지할 수 있습니다. 이 항목에서는 로그 전달 구성을 업그레이드하기 위한 다양한 시나리오와 최선의 구현 방법에 대해 설명합니다.
@@ -181,7 +180,7 @@ ms.locfileid: "78175422"
 5.  클라이언트를 원래 주 서버(서버 A)에서 온라인 보조 서버(서버 B)로 리디렉션하여 데이터베이스를 장애 조치합니다.
 
     > [!IMPORTANT]
-    >  새 주 데이터베이스로 장애 조치할 때는 해당 메타데이터가 원래 주 데이터베이스의 메타데이터와 일치하는지 확인해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.
+    >  새 주 데이터베이스로 장애 조치할 때는 해당 메타데이터가 원래 주 데이터베이스의 메타데이터와 일치하는지 확인해야 합니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>여러 보조 서버 인스턴스 업그레이드
  다음 그림에서는 주 서버 인스턴스 A와 두 개의 보조 서버 인스턴스 B와 C로 구성된 이러한 구성을 보여 줍니다.

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c785ce482a1fd631a2775b7cc224ab0f737ea6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939424"
 ---
 # <a name="merge-transformation"></a>병합 변환
   병합 변환은 두 개의 정렬된 데이터 세트를 단일 데이터 세트로 결합합니다. 각 데이터 세트의 행은 해당 키 열의 값을 기반으로 출력에 삽입됩니다.  

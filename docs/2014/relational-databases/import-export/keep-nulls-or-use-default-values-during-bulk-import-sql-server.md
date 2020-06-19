@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026694"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>대량 가져오기 수행 중 Null 유지 또는 기본값 사용(SQL Server)
   기본적으로 데이터를 테이블로 가져올 때 **bcp** 명령 및 BULK INSERT 문은 해당 테이블의 열에 대해 정의된 기본값을 유지합니다. 예를 들어 데이터 파일에 null 필드가 있으면 열의 기본값이 대신 로드됩니다. **bcp** 명령 및 BULK INSERT 문을 사용하면 Null 값을 유지하도록 지정할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "66011897"
  이 항목의 예를 실행하려면 예제 테이블 및 데이터 파일을 만들어야 합니다.  
   
 ### <a name="sample-table"></a>예제 테이블  
- 이 예에서는 **dbo** 스키마의 **AdventureWorks** 예제 데이터베이스에서 **MyTestDefaultCol2** 라는 이름의 테이블을 만들어야 합니다. 이 테이블을 만들려면 쿼리 편집기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 다음을 실행 합니다.  
+ 이 예에서는 **dbo** 스키마의 **AdventureWorks** 예제 데이터베이스에서 **MyTestDefaultCol2** 라는 이름의 테이블을 만들어야 합니다. 이 테이블을 만들려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기에서 다음을 실행 합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -89,7 +88,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
  자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md) 및 [BULK INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)를 참조하세요.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  이 섹션의 예에서는 **bcp** 또는 BULK INSERT를 사용하여 대량 가져오기를 수행하고 Null 값을 유지합니다.  
   
  두 번째 테이블 열 **Col2**는 기본값을 가집니다. 데이터 파일의 해당되는 필드에는 빈 문자열이 포함됩니다. 기본적으로 **bcp** 또는 BULK INSERT를 사용하여 이 데이터 파일에서 **MyTestDefaultCol2** 테이블로 데이터를 가져오면 **Col2** 의 기본값이 삽입되어 다음과 같은 결과가 생성됩니다.  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- "" 대신`NULL``Default value of Col2`""을 삽입 하려면 다음 **bcp** 및 BULK INSERT 예제에서 `-k` 보여 주는 것 처럼 switch 또는 keepnull 옵션을 사용 해야 합니다.  
+ "" 대신 ""을 삽입 하려면 `NULL` `Default value of Col2` `-k` 다음 **bcp** 및 BULK INSERT 예제에서 보여 주는 것 처럼 switch 또는 keepnull 옵션을 사용 해야 합니다.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>bcp 사용 및 Null 값 유지  
  다음 예에서는 **bcp** 명령에서 Null 값을 유지하는 방법을 설명합니다. **Bcp** 명령에는 다음 스위치가 포함 됩니다.  
@@ -144,7 +143,7 @@ GO
 > [!NOTE]  
 >  자세한 내용은 sql [&#41;&#40;INSERT ](/sql/t-sql/statements/insert-transact-sql)를 참조 하 고 transact-sql [&#41;&#40;Transact-sql ](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;transact-sql&#41;](/sql/t-sql/functions/openrowset-transact-sql)및 [테이블 힌트 &#40;transact-sql](/sql/t-sql/queries/hints-transact-sql-table)&#41;  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  다음 INSERT ... SELECT * FROM OPENROWSET (BULK ...) 예제에서는 데이터를 대량으로 가져오고 기본값을 유지 합니다.  
   
  이 예를 실행하려면 **MyTestDefaultCol2** 예제 테이블과 `MyTestEmptyField2-c.Dat` 데이터 파일을 만들고 `MyTestDefaultCol2-f-c.Fmt`서식 파일을 사용해야 합니다. 이러한 예제를 만드는 방법은 이 항목의 앞 부분에 있는 "예제 테이블 및 데이터 파일"을 참조하십시오.  

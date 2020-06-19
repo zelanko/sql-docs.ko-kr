@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aad4cf16c39897bc0796f4fb161eaf39abdb5fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874495"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938604"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 스토리지 및 데이터 정렬
   테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "70874495"
 |트리|  
 |PlAnT|  
 |trEE|  
-|트리|  
+|tree|  
 |PlAnT|  
 |trEE|  
   

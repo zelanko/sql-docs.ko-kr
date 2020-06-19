@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939280"
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "62770319"
 |참조 용어|Windows, Windows 7 Professional|  
 |출력|Windows|  
   
- 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘ 등이 특수 문자에 해당합니다.  
+ 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. 특수 문자는 다음과 같습니다:%, @, &, $, #, \* ,:,;,.,, **,** !,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "및 '.  
   
 ## <a name="data-types"></a>데이터 형식  
  용어 조회 변환에서는 데이터 형식이 DT_WSTR 또는 DT_NTEXT인 열만 사용할 수 있습니다. 열에 텍스트가 있지만 데이터 형식이 다른 경우 데이터 변환으로 데이터 흐름에 DT_WSTR 또는 DT_NTEXT 데이터 형식의 열을 추가하고 열 값을 새 열로 복사할 수 있습니다. 그런 다음 데이터 변환의 출력을 용어 조회 변환에 대한 입력으로 사용할 수 있습니다. 자세한 내용은 [Data Conversion Transformation](data-conversion-transformation.md)을 참조하세요.  

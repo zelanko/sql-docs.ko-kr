@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939726"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>SQL Server Data Tools에서 배포(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 배포 명령을 사용하여 테이블 형식 모델 솔루션을 배포하려면 이 항목의 태스크를 사용합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66067297"
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **솔루션 탐색기**에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
-2.  프로젝트 이름> 속성 대화 상자의 **배포 옵션**에서 기본 설정과 다른 경우 속성 설정을 지정 합니다. ** \<**  
+2.  ** \<project name> 속성** 대화 상자의 **배포 옵션**에서 기본 설정과 다른 경우 속성 설정을 지정 합니다.  
   
     > [!NOTE]  
     >  캐시된 모드의 모델의 경우 **쿼리 모드** 는 항상 **메모리 내**입니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66067297"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>테이블 형식 모델 솔루션을 배포하려면  
   
--   의 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] **빌드** 메뉴에서 **프로젝트 이름 배포 \<>** 를 클릭 합니다.  
+-   의 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] **빌드** 메뉴에서 **배포 \<project name> **를 클릭 합니다.  
   
      처리 옵션 속성이 처리 안 함으로 설정되지 않았으면 **배포** 대화 상자에 메타데이터 배포 및 모델에 포함된 각 테이블의 처리 상태가 표시됩니다. 배포 프로세스가 완료된 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 Analysis Services 인스턴스에 연결하고 새 model 데이터베이스 개체가 만들어졌는지 확인하거나, 클라이언트 보고 애플리케이션을 사용하여 배포 모델에 연결합니다.  
   

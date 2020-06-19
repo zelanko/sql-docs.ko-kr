@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890718"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939124"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>데이터 마이닝 쿼리 태스크 편집기(쿼리 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **쿼리** 탭을 사용하여 마이닝 모델을 기반으로 하는 예측 쿼리를 만들 수 있습니다. 또한 이 대화 상자에서 매개 변수 및 결과 집합을 변수에 바인딩할 수 있습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "68890718"
  **변수 이름**  
  목록에서 결과 집합에 매핑할 변수를 선택합니다.  
   
- **결과 유형**  
+ **결과 형식**  
  단일 행을 반환할지, 아니면 전체 결과 집합을 반환할지 여부를 나타냅니다.  
   
  **추가**  

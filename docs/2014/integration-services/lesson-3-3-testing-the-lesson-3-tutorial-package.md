@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965177"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>3단계: 3단원 자습서 패키지 테스트
   이 태스크에서는 Lesson 3.dtsx 패키지를 실행합니다. 패키지를 실행하면 이벤트 로그 창에 로그 파일에 기록된 로그 항목이 나열됩니다. 패키지 실행을 끝낸 후 로그 공급자가 생성한 로그 파일 내용을 확인합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "62891591"
   
 -   메모장이나 다른 텍스트 편집기를 사용하여 TutorialLog.log 파일을 엽니다.  
   
--   `PipelineExecutionPlan` 및 `PipelineExecutionTrees` 이벤트에 대해 생성 된 정보의 의미 체계가이 자습서의 범위를 벗어나기는 하지만 **SSIS 로그 구성** 대화 상자의 **자세히** 탭에 지정 된 정보 필드가 첫 번째 줄에 표시 되는 것을 확인할 수 있습니다. 또한 Foreach 루프가 반복될 때마다 선택한 두 이벤트 PipelineExecutionPlan과 PipelineExecutionTrees가 로그되어 있는 것을 확인할 수 있습니다.  
+-   및 이벤트에 대해 생성 된 정보의 의미 체계가 `PipelineExecutionPlan` `PipelineExecutionTrees` 이 자습서의 범위를 벗어나기는 하지만 **SSIS 로그 구성** 대화 상자의 **자세히** 탭에 지정 된 정보 필드가 첫 번째 줄에 표시 되는 것을 확인할 수 있습니다. 또한 Foreach 루프가 반복될 때마다 선택한 두 이벤트 PipelineExecutionPlan과 PipelineExecutionTrees가 로그되어 있는 것을 확인할 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
  [4단원: 오류 Flow 리디렉션 추가](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

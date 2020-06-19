@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972663"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>패키지 업그레이드(SSIS 패키지 업그레이드 마법사)
   **패키지 업그레이드** 페이지를 사용하여 패키지 업그레이드의 진행률을 보고 업그레이드 프로세스를 중단할 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지 업그레이드 마법사는 선택된 패키지를 하나씩 업그레이드합니다.  
@@ -34,19 +33,19 @@ ms.locfileid: "66054742"
  **메시지 창**  
  업그레이드 프로세스 중 진행 메시지 및 요약 정보를 표시합니다.  
   
- **작업**  
+ **동작**  
  업그레이드 동작을 봅니다.  
   
  **상태**  
  각 동작의 결과를 봅니다.  
   
- **메시지**  
+ **Message**  
  각 동작에서 생성된 오류 메시지를 봅니다.  
   
  **중지**  
  패키지 업그레이드를 중지합니다.  
   
- **보고서**  
+ **Report**  
  패키지 업그레이드 결과가 포함된 보고서의 처리 옵션을 선택합니다.  
   
 -   보고서를 온라인으로 봅니다.  

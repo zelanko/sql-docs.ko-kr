@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767893"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965493"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>SSIS 패키지 업그레이드 마법사를 사용하여 Integration Services 패키지 업그레이드
   이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 만들어진 패키지를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용되는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 형식으로 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 이 과정을 돕는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 업그레이드 마법사를 제공합니다. 원래 패키지를 백업하도록 마법사를 구성할 수 있으므로 업그레이드에 문제가 있을 경우 원래 패키지를 계속 사용할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767893"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>명령 프롬프트에서 마법사를 실행하려면  
   
--   명령 프롬프트에서 **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn** 폴더에 있는의 ssisupgrade.exe 파일을 실행 합니다.  
+-   명령 프롬프트에서 **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn** 폴더에 있는 SSISUpgrade.exe 파일을 실행 합니다.  
   
 ## <a name="backing-up-the-original-packages"></a>원래 패키지 백업  
  원래 패키지를 백업하려면 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되어 있어야 합니다. 마법사를 실행하는 방법에 따라 이 스토리지 위치는 자동으로 선택될 수 있습니다.  

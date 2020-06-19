@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c76256e03a7ad9a14f877ee1220a8dd6ced2ed8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067267"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939744"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>열 삭제(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 테이블에서 열을 삭제하는 방법에 대해 설명합니다.  

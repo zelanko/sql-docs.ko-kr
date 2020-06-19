@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72d3091d9d247dbe1faa7e94d6c6f66ec164409c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4036e8d1b5419737af8de4de6fa92a0eabd53f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063476"
 ---
 # <a name="bookmarks-f1-help"></a>책갈피 F1 도움말
 

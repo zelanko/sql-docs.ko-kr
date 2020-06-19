@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938485"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(브라우저 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **도구 모음** 에 있는 기능을 사용하여 큐브 또는 해당 개체를 디자인하거나 찾아보는 동안, 또는 MDX 쿼리를 만드는 동안 일반적인 작업을 수행할 수 있습니다. 디자인 타임과 쿼리 뷰에 공통적인 작업에는 사용자 컨텍스트 설정, 개체 처리 및 기본 언어 설정 등이 있습니다.
@@ -53,11 +52,11 @@ ms.locfileid: "78175582"
 
 ## <a name="options"></a>옵션
 
-|옵션|설명|
+|옵션|Description|
 |------------|-----------------|
-|**프로세스**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다. **처리** 대화 상자에 대한 자세한 내용은 [처리 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](process-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|
+|**Process**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다. **처리** 대화 상자에 대한 자세한 내용은 [처리 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](process-dialog-box-analysis-services-multidimensional-data.md)를 참조하세요.|
 |**사용자 변경**|**보안 컨텍스트** 대화 상자를 표시 하 고 **브라우저** 탭에서 사용 되는 사용자 및 역할을 변경 하려면 클릭 합니다. **보안 컨텍스트** 대화 상자에 대 한 자세한 내용은 [Analysis Services 다차원 데이터&#41;&#40;보안 컨텍스트 대화 상자 ](security-context-dialog-box-analysis-services-multidimensional-data.md)를 참조 하세요.|
-|**연결할**|**브라우저** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 계산 **탭을 큐브가 포함된** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|
+|**다시 연결**|**브라우저** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 인해 끊긴 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 계산 **탭을 큐브가 포함된** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.|
 |**새로 고침**|**메타데이터** 및 **보고서** 창을 새로 고치려면 클릭합니다.|
 |**오름차순 정렬**|**보고서** 창에서 선택한 행의 형제를 **언어**에서 지정한 언어에 대해 오름차순으로 정렬하려면 클릭합니다.<br /><br /> **참고** 이 옵션은 **보고서** 창에서 셀을 선택한 경우에만 사용할 수 있습니다.|
 |**내림차순 정렬**|**보고서** 창에서 선택한 행의 형제를 **언어**에서 지정한 언어에 대해 내림차순으로 정렬하려면 클릭합니다.<br /><br /> 참고:이 옵션은 **보고서** 창에서 셀을 선택한 경우에만 사용할 수 있습니다.|

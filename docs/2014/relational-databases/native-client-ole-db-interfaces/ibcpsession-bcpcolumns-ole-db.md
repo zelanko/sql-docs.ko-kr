@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c338abe8-9e30-4853-a7c6-b1a6c00095e1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f18437b807c9cc45b54841255d2b7bb4ba98b45c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 262641572cad4c765533e1c44dc882155f329386
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048051"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 열에 바인딩될 필드의 개수를 설정합니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b84725765042623bf6430898fdeff0d2173fd829
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924291"
 ---
 # <a name="project-versions-dialog-box"></a>프로젝트 버전 대화 상자
   **프로젝트 버전** 대화 상자를 사용하여 프로젝트 버전을 확인하고 이전 버전으로 복원할 수 있습니다.  

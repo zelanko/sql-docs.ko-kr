@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a904ebd4330c1207fe2f5b0cbef6756d6370b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938474"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>기술 참조(Excel용 데이터 마이닝 추가 기능)
   Office용 데이터 마이닝 추가 기능에는 프로그래머와 고급 데이터 마이너에게 유용한 기능이 포함되어 있습니다.  

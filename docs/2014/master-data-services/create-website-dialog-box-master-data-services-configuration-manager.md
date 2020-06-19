@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f5354ff3b4e461196a9f84e6efc2ff755cf40c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63e18bfd9c907e5604f82d0e5462b80d07279556
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971673"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>웹 사이트 만들기 대화 상자(Master Data Services 구성 관리자)
   **웹 사이트 만들기** 대화 상자를 사용하여 로컬 컴퓨터에서 새 웹 사이트를 만들 수 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 웹 사이트를 만든 경우 해당 사이트는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션으로 구성된 루트 애플리케이션이 있는 로컬 컴퓨터의 IIS(인터넷 정보 서비스)에 추가됩니다. 또한 새 애플리케이션 풀이 만들어지고 웹 애플리케이션이 해당 애플리케이션 풀에 배치됩니다.  
   
 ## <a name="web-site"></a>웹 사이트  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |**웹 사이트 이름**|웹 사이트 이름을 입력하거나 기본 이름을 사용합니다. 이 이름은 IIS에서 사이트를 식별하는 데에만 사용되는 이름이며, 웹 브라우저에서 사이트에 액세스하는 데 사용되지 않습니다.<br /><br /> 이름은 로컬 컴퓨터의 IIS에 있는 모든 사이트 간에 고유해야 합니다.|  
 |**프로토콜**|**http**를 표시합니다. 클라이언트와 서버 간에 암호화된 채널을 통한 통신이 필요하지 않은 경우 HTTP(Hypertext Transfer Protocol)를 사용합니다.<br /><br /> 참고: [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서는 HTTPS 사이트를 만들 수 없습니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 프로토콜로서, 기밀한 데이터 또는 개인 데이터를 교환하거나 사용자가 개인 정보를 전송하기 전에 서버의 ID를 확인하도록 하려는 경우에 유용합니다. 서버와 클라이언트 간에 암호화된 채널을 통해 정보를 전송해야 하는 경우 IIS 관리자와 같은 IIS 도구를 사용하여 HTTPS 바인딩으로 사이트를 구성하고 웹 사이트 바인딩을 서버 인증서와 연결해야 합니다. 이러한 작업은 웹 브라우저에서 웹 사이트를 열기 위해 반드시 필요한 작업입니다. 서버 인증서에 대한 자세한 내용은 [TechNet의](https://go.microsoft.com/fwlink/?LinkId=163220) IIS 7에서 서버 인증서 구성 [!INCLUDE[msCoName](../includes/msconame-md.md)] 을 참조하십시오.|  
@@ -34,7 +33,7 @@ ms.locfileid: "80380744"
   
 ## <a name="application-pool"></a>애플리케이션 풀  
   
-|컨트롤 이름|설명|  
+|컨트롤 이름|Description|  
 |------------------|-----------------|  
 |**이름**|새 애플리케이션 풀의 고유 이름을 입력하거나 제공된 기본 이름을 사용합니다. 이 웹 사이트의 루트 웹 애플리케이션은 이 애플리케이션 풀에서 실행됩니다.<br /><br /> 애플리케이션 풀은 한 애플리케이션 풀의 애플리케이션이 다른 애플리케이션 풀의 애플리케이션에 영향을 주지 못하도록 하는 경계를 제공합니다.|  
 |**사용자 이름**|Active Directory의 도메인 및 사용자 이름을 입력합니다. 이 계정은 웹 애플리케이션이 실행되는 애플리케이션 풀의 ID입니다.<br /><br /> 이 계정은 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 [데이터베이스 로그인, 사용자 및 역할&#40;Master Data Services&#41;](database-logins-users-and-roles-master-data-services.md)을 참조하세요. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] MDSTempDir **에 대한 사용 권한이 부여되는**Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../2014/master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  

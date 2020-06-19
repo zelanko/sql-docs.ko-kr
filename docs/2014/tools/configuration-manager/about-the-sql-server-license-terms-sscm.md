@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b75762a1cb2cebc3834852f258c4b23b88435fbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008362"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server 사용 조건 정보 (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]소프트웨어 사용 조건은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 로컬 컴퓨터에 복사됩니다. 동일한 버전 및 언어의 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 같은 컴퓨터에 설치하는 경우 해당 버전 및 언어의 모든 인스턴스에 단일 사용 조건 복사본이 적용됩니다. 파일은 다음에 기록 됩니다.:%ProgramFiles%\Microsoft SQL Server\110\license terms\ ts\ 또는% ProgramFiles (x86)% \ Microsoft SQL Server\110\license terms\ 약관 \\ .  

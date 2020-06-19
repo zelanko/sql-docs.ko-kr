@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 90eaa75179bddd107db46aa197afb5c929097151
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96274fe0b256bb6e547ec876a1b83eb4f9824570
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914143"
 ---
 # <a name="source-assistant"></a>원본 길잡이
   원본 길잡이 구성 요소는 원본 구성 요소 및 연결 관리자 만들기를 도와줍니다. 이 구성 요소는 SSIS 도구 상자의 **즐겨찾기** 섹션에 있습니다.  

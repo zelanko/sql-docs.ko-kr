@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0f48c3a6cebe079d93601f53698afafb350587e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f9e37d3062bba763f44e0eef14b216972b29f1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057391"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965113"
 ---
 # <a name="numeric-data-formats"></a>숫자 데이터 형식
   빠른 구문 분석에서는 데이터 구문 분석을 위해 로캘을 구분하지 않는 신속하고 간단한 루틴을 제공합니다. 빠른 구문 분석은 일부 제한된 정수 데이터 형식만 지원합니다.  
