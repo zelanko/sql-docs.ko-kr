@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74f82d621d7f0375a6a3ca604abba00f83fc6024
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935524"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>remote query timeout 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 원격 쿼리 제한 시간 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **원격 쿼리 제한 시간** 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제한 시간이 초과될 때까지 원격 작업을 수행할 수 있는 시간(초)을 지정합니다. 이 옵션의 기본값은 600이며, 10분 동안 대기할 수 있습니다. 이 값은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 시작된 나가는 연결에 원격 쿼리로 적용됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 수신된 쿼리에는 이 값이 적용되지 않습니다. 제한 시간을 사용하지 않으려면 값을 0으로 설정합니다. 쿼리는 완료될 때까지 대기합니다.  

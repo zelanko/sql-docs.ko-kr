@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063635"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
   이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다. 이 단계에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문을 실행하는 작업이 포함되어 있습니다.  
@@ -263,16 +262,16 @@ ms.locfileid: "68212009"
         >  이러한 최선의 구현 방법을 따르는 것이 좋습니다. 문제가 발생하여 최선의 구현 방법을 따를 수 없는 경우에는 Microsoft 지원 센터에 문의하여 향후 발생할 수 있는 문제를 예방하는 것이 좋습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Resource Governor](resource-governor.md)   
- [Resource Governor 사용](enable-resource-governor.md)   
- [Resource Governor 리소스 풀](resource-governor-resource-pool.md)   
- [작업 그룹 Resource Governor](resource-governor-workload-group.md)   
- [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
- [Resource Governor 속성 보기](view-resource-governor-properties.md)   
- [ALTER RESOURCE GOVERNOR &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [Transact-sql&#41;&#40;리소스 풀 만들기](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Transact-sql&#41;&#40;작업 그룹 만들기](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [Transact-sql&#41;함수 &#40;만들기](/sql/t-sql/statements/create-function-transact-sql)   
+ [리소스 관리자](resource-governor.md)   
+ [리소스 관리자 사용](enable-resource-governor.md)   
+ [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
+ [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
+ [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   
+ [리소스 관리자 속성 보기](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

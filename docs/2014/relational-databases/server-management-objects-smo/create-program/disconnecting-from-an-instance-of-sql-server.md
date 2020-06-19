@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3430048a52b3dce5e82d6b7af2d6a8162841d062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063159"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 연결 끊기
   수동으로 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체를 닫고 연결을 끊을 필요는 없습니다. 필요에 따라 연결이 열리고 닫힙니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "63192078"
 ## <a name="disconnecting-from-an-instance-of-sql-server-for-rmo"></a>RMO에 대해 SQL Server 인스턴스에서 연결 끊기  
  RMO를 사용하여 프로그래밍할 때 서버 연결을 닫는 방법은 SMO와는 약간 다릅니다.  
   
- Rmo 개체에 대 한 서버 연결이 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 의해 유지 관리 되기 때문에 rmo를 사용 하 여 프로그래밍할 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 때 인스턴스에서 연결을 끊을 때도이 개체가 사용 됩니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 연결을 닫으려면 RMO 개체의 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 메서드를 호출합니다. 연결이 닫힌 후에는 RMO 개체를 사용할 수 없습니다.  
+ RMO 개체에 대 한 서버 연결이 개체에 의해 유지 관리 되기 때문에 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rmo를 사용 하 여 프로그래밍할 때 인스턴스에서 연결을 끊을 때도이 개체가 사용 됩니다. <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용하여 연결을 닫으려면 RMO 개체의 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 메서드를 호출합니다. 연결이 닫힌 후에는 RMO 개체를 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

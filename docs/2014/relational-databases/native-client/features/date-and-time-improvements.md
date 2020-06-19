@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 66f417b943f5f7c2472120076f5fd45d09f94427
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047976"
 ---
 # <a name="date-and-time-improvements"></a>날짜 및 시간 기능 향상
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 추가된 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]Native Client의 date 및 time 데이터 형식 지원에 대해 설명합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "82707300"
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
-## <a name="usage"></a>사용량  
+## <a name="usage"></a>사용  
  다음 섹션에서는 새 date 및 time 형식을 사용하는 다양한 방법에 대해 설명합니다.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>고유 데이터 형식으로 Date 사용  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b81c0f-d5e0-483b-81b2-73800a6945ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10b14aa8a1f68b32c00ecb321c1af36fb15b868e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e181a0d4ebdb2acde1709b18e452f5a290f13c8f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913882"
 ---
 # <a name="aggregate-values-in-a-dataset-by-using-the-aggregate-transformation"></a>집계 변환을 사용하여 데이터 세트의 값 집계
   집계 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "62900956"
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  
   
-12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계에 `Group By` 작업이 포함 된 경우 키 **배율** 열에서 키 값 그룹화의 대략적인 개수를 선택 하거나 키 열에서 정확 하 게 그룹화 된 키 값 수를 지정할 수 **Keys** 있습니다.  
+12. 선택적으로 **고급** 을 클릭하여 집계 변환 출력의 이름을 업데이트합니다. 집계에 작업이 포함 된 경우 키 `Group By` **배율** 열에서 키 값 그룹화의 대략적인 개수를 선택 하거나 키 열에서 정확 하 게 그룹화 된 키 값 수를 지정할 수 **Keys** 있습니다.  
   
     > [!NOTE]  
     >  정확하게든 또는 대략적으로든 고유 값 수를 제공하면 변환을 통해 작업을 수행할 수 있도록 해당 메모리 양을 미리 할당할 수 있으므로 성능이 최적화됩니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955248"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 개체
   프로시저 또는 함수를 호출하거나, CLR(공용 언어 런타임) 사용자 정의 형식의 메서드를 호출하거나, 사용자의 동작이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 언어로 정의된 트리거를 발생시키면 서버에서 관리 코드가 호출됩니다. 이러한 코드 실행은 사용자 연결의 일부로 요청되므로 서버에서 실행되는 코드에서 호출자의 컨텍스트에 대한 액세스가 필요합니다. 또한 특정 데이터 액세스 작업은 호출자의 컨텍스트에서 실행해야만 유효합니다. 예를 들어 트리거 작업에서 사용된 삽입되거나 삭제된 의사 테이블에 대한 액세스는 호출자의 컨텍스트에서만 유효합니다.  
@@ -28,9 +27,9 @@ ms.locfileid: "62920049"
   
  `SqlContext`는 다음 구성 요소에 대한 액세스를 제공합니다.  
   
--   `SqlPipe`: 개체 `SqlPipe` 는 결과가 클라이언트로 흐르는 "파이프"를 나타냅니다. `SqlPipe` 개체에 대 한 자세한 내용은 [SqlPipe 개체](sqlpipe-object.md)를 참조 하세요.  
+-   `SqlPipe`: `SqlPipe` 개체는 결과가 클라이언트로 흐르는 "파이프"를 나타냅니다. 개체에 대 한 자세한 내용은 `SqlPipe` [SqlPipe 개체](sqlpipe-object.md)를 참조 하세요.  
   
--   `SqlTriggerContext`: 개체 `SqlTriggerContext` 는 CLR 트리거 내 에서만 검색할 수 있습니다. 이 개체는 트리거를 발생시킨 작업에 대한 정보와 업데이트된 열의 맵을 제공합니다. `SqlTriggerContext` 개체에 대 한 자세한 내용은 [sqltriggercontext 개체](sqltriggercontext-object.md)를 참조 하세요.  
+-   `SqlTriggerContext`: `SqlTriggerContext` 개체는 CLR 트리거 내 에서만 검색할 수 있습니다. 이 개체는 트리거를 발생시킨 작업에 대한 정보와 업데이트된 열의 맵을 제공합니다. 개체에 대 한 자세한 내용은 `SqlTriggerContext` [Sqltriggercontext 개체](sqltriggercontext-object.md)를 참조 하세요.  
   
 -   `IsAvailable`: `IsAvailable` 속성은 컨텍스트 가용성을 확인 하는 데 사용 됩니다.  
   

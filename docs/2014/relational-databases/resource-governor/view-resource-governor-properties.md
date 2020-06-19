@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063523"
 ---
 # <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
@@ -126,10 +125,10 @@ ms.locfileid: "63209689"
 2.  Resource Governor 엔터티의 현재 구성을 보려면 [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql)를 사용하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Resource Governor](resource-governor.md)   
- [Resource Governor 사용](enable-resource-governor.md)   
- [Resource Governor 리소스 풀](resource-governor-resource-pool.md)   
- [작업 그룹 Resource Governor](resource-governor-workload-group.md)   
+ [리소스 관리자](resource-governor.md)   
+ [리소스 관리자 사용](enable-resource-governor.md)   
+ [리소스 관리자 리소스 풀](resource-governor-resource-pool.md)   
+ [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
  [리소스 관리자 분류자 함수](resource-governor-classifier-function.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: c2ef4a0546dfced643fb50900e6b56002b617e09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928804"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>Azure에 SQL Server 관리 백업 - 보존 및 스토리지 설정
   이 항목에서는 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 구성하고 인스턴스에 대한 기본 설정을 구성하는 기본 단계에 대해 설명합니다. 이 항목에서는 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 서비스를 일시 중지하고 다시 시작하는 데 필요한 단계에 대해 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "82849817"
   
 -   현재 유지 관리 계획 또는 로그 전달을 사용하는 데이터베이스에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 을 설정하지 마세요. 다른 SQL Server 기능과의 상호 운용성 및 공존 성에 대 한 자세한 내용은 [Azure에 대 한 Managed Backup SQL Server: 상호 운용성 및 공존 성](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md) 을 참조 하세요.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
   
 -   SQL Server 에이전트가 실행 중이어야 합니다.  
   

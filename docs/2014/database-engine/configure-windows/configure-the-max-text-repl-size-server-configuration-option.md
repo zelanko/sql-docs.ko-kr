@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af0cf426583ee328f0a484de1c3539836c0d8af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935644"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>max text repl size 서버 구성 옵션 구성
-  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 최대 텍스트 복제 크기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **Max text repl size** 옵션은 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 `text`복제 `ntext`된 `varchar(max)`열 `nvarchar(max)`또는 `varbinary(max)`캡처된 `xml`열에 `image` 추가할 수 있는,,,,, 및 데이터의 최대 크기 (바이트)를 지정 합니다. 기본값은 65536바이트입니다. 값이 -1이면 데이터 형식에서 요구하는 한도 이외의 크기 제한이 없음을 나타냅니다.  
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 최대 텍스트 복제 크기 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **Max text repl size** 옵션은 `text` `ntext` `varchar(max)` `nvarchar(max)` `varbinary(max)` `xml` `image` 단일 INSERT, UPDATE, WRITETEXT 또는 UPDATETEXT 문에서 복제 된 열 또는 캡처된 열에 추가할 수 있는,,,,, 및 데이터의 최대 크기 (바이트)를 지정 합니다. 기본값은 65536바이트입니다. 값이 -1이면 데이터 형식에서 요구하는 한도 이외의 크기 제한이 없음을 나타냅니다.  
   
  **항목 내용**  
   

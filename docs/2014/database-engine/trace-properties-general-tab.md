@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089528"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928304"
 ---
 # <a name="trace-properties-general-tab"></a>추적 속성(일반 탭)
   **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66089528"
  **최대 파일 크기 설정(MB)**  
  추적 데이터를 파일에 저장하려면 추적 파일의 최대 크기를 지정해야 합니다. 기본값은 5MB입니다. 최대 크기는 파일이 저장된 파일 시스템이 NTFS인지 FAT인지에 따라 달라집니다.  
   
- \<그래픽> 다른 **이름으로 저장**  
+ \<Graphic>**다른 이름으로 저장**  
  파일을 저장하려고 선택한 후에는 이 아이콘을 선택하여 파일 이름을 변경할 수 있습니다.  
   
  **파일 롤오버 사용**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089528"
  **테이블에 저장**  
  추적 데이터를 데이터베이스 테이블에 캡처합니다. 추적 데이터를 저장하면 나중에 검토 및 분석 작업에 유용합니다. 추적 데이터를 테이블에 저장하면 추적이 저장될 서버에 상당한 오버헤드가 발생할 수 있습니다. 가능하면 추적되는 서버에 추적 테이블을 저장하지 않도록 합니다.  
   
- \<그래픽> **대상 테이블**  
+ \<Graphic>**대상 테이블**  
  추적 데이터를 데이터베이스 테이블에 저장하도록 선택한 후에는 이 아이콘을 선택하여 테이블 이름을 변경할 수 있습니다.  
   
  **최대 행 수 설정(천 단위)**  

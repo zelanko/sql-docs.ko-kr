@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f83cf140b370783d21ee2254e7361a2ae3467424
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915543"
 ---
 # <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  

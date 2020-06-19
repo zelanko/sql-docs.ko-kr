@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9e936c25db4522a949fb97257e136ba6799697f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092e0a2b5cfc30fd2d2362645fc1242bf4a1651e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935664"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>media retention 서버 구성 옵션 구성
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 미디어 보존 기간 [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **미디어 보존 기간** 옵션을 사용하여 각 백업 세트를 보존하는 기간을 지정할 수 있습니다. 이 옵션을 통해 지정된 일수가 경과하기 전에 백업을 덮어쓰지 않도록 보호할 수 있습니다. **미디어 보존 기간** 옵션을 구성한 후 백업을 수행할 때마다 시스템 백업을 보존할 기간을 지정할 필요는 없습니다. 기본값은 0일이고, 최대값은 365일입니다.  

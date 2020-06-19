@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935894"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 도입된 버퍼 풀 확장은 I/O 처리량을 크게 향상하기 위해 비휘발성 RAM(즉, 반도체 드라이브) 확장을 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버퍼 풀에 원활하게 통합할 수 있는 기능을 제공합니다. 버퍼 풀 확장은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 제공됩니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.
@@ -46,11 +45,11 @@ ms.locfileid: "78175438"
 
  SSD (반도체 드라이브) 반도체 드라이브는 메모리 (RAM)에 데이터를 영구적으로 저장 합니다. 자세한 내용은 [이 정의](http://en.wikipedia.org/wiki/Solid-state_drive)를 참조하십시오.
 
- 버퍼에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버퍼는 데이터 또는 인덱스 페이지와 크기가 같은 메모리의 8kb 페이지입니다. 따라서 버퍼 캐시는 8KB 페이지로 나누어집니다. 페이지는 버퍼 관리자에 더 많은 데이터를 읽어 올 버퍼 영역이 필요할 때까지 버퍼 캐시에 남아 있습니다. 데이터는 수정되는 경우에만 다시 디스크에 쓰여집니다. 이러한 메모리 내의 수정된 페이지를 더티 페이지라고 합니다. 디스크에 있는 해당 데이터베이스 이미지와 동일한 페이지를 클린 페이지라고 합니다. 버퍼 캐시의 데이터는 여러 번 수정한 후 디스크에 다시 쓸 수 있습니다.
+ 버퍼에서 버퍼는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 또는 인덱스 페이지와 크기가 같은 메모리의 8kb 페이지입니다. 따라서 버퍼 캐시는 8KB 페이지로 나누어집니다. 페이지는 버퍼 관리자에 더 많은 데이터를 읽어 올 버퍼 영역이 필요할 때까지 버퍼 캐시에 남아 있습니다. 데이터는 수정되는 경우에만 다시 디스크에 쓰여집니다. 이러한 메모리 내의 수정된 페이지를 더티 페이지라고 합니다. 디스크에 있는 해당 데이터베이스 이미지와 동일한 페이지를 클린 페이지라고 합니다. 버퍼 캐시의 데이터는 여러 번 수정한 후 디스크에 다시 쓸 수 있습니다.
 
  버퍼 풀은 버퍼 캐시 라고도 합니다. 버퍼 풀은 캐시된 데이터 페이지를 저장하기 위해 모든 데이터베이스에서 공유하는 전역 리소스입니다. 버퍼 풀 캐시의 최대 및 최소 크기는 시작하는 동안 결정되거나 SQL Server 인스턴스가 sp_configure를 사용하여 동적으로 다시 구성될 때 결정됩니다. 이 크기에 따라 실행 중인 인스턴스에서 언제든지 버퍼 풀에 캐시할 수 있는 최대 페이지 수가 결정됩니다.
 
- 검사점 검사점은 예기치 않은 종료 또는 충돌 후 복구 하 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 동안에서 트랜잭션 로그에 포함 된 변경 내용을 적용 하기 시작할 수 있는 알려진 올바른 지점을 만듭니다. 검사점은 메모리 내의 더티 페이지와 트랜잭션 로그 정보를 디스크에 쓰고 트랜잭션 로그에 대한 정보도 기록합니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.
+ 검사점 검사점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 예기치 않은 종료 또는 충돌 후 복구 하는 동안에서 트랜잭션 로그에 포함 된 변경 내용을 적용 하기 시작할 수 있는 알려진 올바른 지점을 만듭니다. 검사점은 메모리 내의 더티 페이지와 트랜잭션 로그 정보를 디스크에 쓰고 트랜잭션 로그에 대한 정보도 기록합니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.
 
 ## <a name="buffer-pool-extension-details"></a>버퍼 풀 확장 세부 정보
  SSD 스토리지는 디스크 스토리지 하위 시스템보다는 메모리 하위 시스템에 대한 확장으로 사용됩니다. 즉, 버퍼 풀 확장 파일을 통해 버퍼 풀 관리자는 DRAM 및 NAND 플래시 메모리를 둘 다 사용하여 SSD에서 지원하는 비휘발성 RAM에서 비활성화된 페이지에 대해 훨씬 더 큰 버퍼 풀을 유지 관리할 수 있습니다. 그러면 SSD에서 L1(수준 1)이 DRAM이고 L2(수준)가 버퍼 풀 확장 파일인 여러 수준 캐싱 계층이 만들어집니다. L2 캐시에는 클린 페이지만 기록되므로 데이터 안전을 유지할 수 있습니다. 버퍼 관리자는 L1 캐시와 L2 캐시 간의 클린 페이지 이동을 처리합니다.
@@ -81,7 +80,7 @@ ms.locfileid: "78175438"
 
  다음과 같은 Xevent를 사용할 수 있습니다.
 
-|XEvent|설명|매개 변수|
+|XEvent|Description|매개 변수|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|페이지 또는 페이지 그룹을 버퍼 풀에서 제거하여 버퍼 풀 확장 파일에 쓸 때 발생합니다.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|페이지를 버퍼 풀 확장 파일에서 가져와서 버퍼 풀에 쓸 때 발생합니다.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
@@ -92,7 +91,7 @@ ms.locfileid: "78175438"
 
 |||
 |-|-|
-|**태스크 설명**|**항목**|
+|**태스크 설명**|**뒷부분**|
 |버퍼 풀 확장을 사용하도록 설정하고 구성합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |버퍼 풀 확장 구성을 수정합니다.|[ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
 |버퍼 풀 확장 구성을 봅니다.|[sys.dm_os_buffer_pool_extension_configuration&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|

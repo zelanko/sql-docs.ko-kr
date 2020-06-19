@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c358973ad93360d7b9cd54efa0e70d9114bbc7de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ecbee10f53ca2a45513bc3386940d96b7e82dce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027602"
 ---
 # <a name="determine-which-queries-are-holding-locks"></a>잠금을 보유한 쿼리 파악
   데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  

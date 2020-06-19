@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2fcb0f6a7e31908d4286cdcb1fbd7ba9ffc47913
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 36ba98d8c2257a55c7c61ed5d93125bc1957d576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055947"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns 및 ISequentialStream을 사용하여 BLOB 데이터 인출
   다음 함수는 **IRow::GetColumns** 및 **ISequentialStream**을 사용하여 대형 데이터를 인출합니다.  

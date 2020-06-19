@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d624f5cbfd72a68541890e39674bc5bcad50716
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955183"
 ---
 # <a name="filetable-schema"></a>FileTable 스키마
   FileTable의 미리 정의된 고정 스키마에 대해 설명합니다.  
@@ -25,8 +24,8 @@ ms.locfileid: "66010116"
 |파일 특성 이름|type|크기|기본값|Description|파일 시스템 접근성|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
 |**path_locator**|`hierarchyid`|변수|이 항목의 위치를 식별하는 `hierarchyid`입니다.|계층적 FileNamespace에서 이 노드의 위치입니다.<br /><br /> 테이블의 기본 키입니다.|Windows 경로 값을 설정하여 만들고 수정할 수 있습니다.|  
-|**stream_id**|**[uniqueidentifier] rowguidcol**||`NEWID()` 함수에서 반환되는 값|FILESTREAM 데이터의 고유 ID입니다.|해당 없음|  
-|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|변수|NULL|FILESTREAM 데이터를 포함합니다.|해당 없음|  
+|**stream_id**|**[uniqueidentifier] rowguidcol**||`NEWID()` 함수에서 반환되는 값|FILESTREAM 데이터의 고유 ID입니다.|해당 사항 없음|  
+|**file_stream**|`varbinary(max)`<br /><br /> `filestream`|변수|NULL|FILESTREAM 데이터를 포함합니다.|해당 사항 없음|  
 |**file_type**|`nvarchar(255)`|변수|NULL<br /><br /> 파일 시스템에서 만들기 또는 이름 바꾸기 작업을 수행하면 해당 이름에서 파일 확장명 값이 채워집니다.|파일의 유형을 나타냅니다.<br /><br /> 전체 텍스트 인덱스를 만들 때 이 열을 `TYPE COLUMN`으로 사용할 수 있습니다.<br /><br /> **file_type** 은 지속형 계산 열입니다.|자동으로 계산되며, 수동으로 설정할 수 없습니다.|  
 |**이름**|`nvarchar(255)`|변수|GUID 값|파일 또는 디렉터리 이름입니다.|Windows API를 사용하여 만들거나 수정할 수 있습니다.|  
 |**parent_path_locator**|`hierarchyid`|변수|이 항목을 포함하는 디렉터리를 식별하는 `hierarchyid`입니다.|포함 디렉터리의 `hierarchyid`입니다.<br /><br /> **parent_path_locator** 는 지속형 계산 열입니다.|자동으로 계산되며, 수동으로 설정할 수 없습니다.|  

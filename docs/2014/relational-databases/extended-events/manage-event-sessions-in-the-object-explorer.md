@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027568"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
   이 항목에서는 **개체 탐색기** 에서 수행할 수 있는 확장 이벤트에 영향을 주는 동작에 대해 설명합니다.  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  **템플릿** 드롭다운 상자를 확장합니다.  
   
-5.  ** \< 파일 시작 ...을 클릭 >여** 가져올 세션 (XML 파일)을 찾습니다.  
+5.  ** \<File From ...> 열기** 를 클릭 하 고 가져올 세션 (XML 파일)을 찾습니다.  
   
  해당 세션이 **세션** 노드에 표시됩니다. 기본적으로 세션은 시작되지 않습니다.  
   

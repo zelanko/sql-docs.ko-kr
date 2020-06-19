@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063571"
 ---
 # <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 리소스 풀은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타냅니다. 리소스 관리자를 사용하면 들어오는 애플리케이션 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 각 리소스 풀에는 하나 이상의 작업 그룹이 포함될 수 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고 세션은 작업 그룹에 할당된 리소스를 사용하여 실행해야 합니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "63209873"
   
 -   공유 % = 유효한 MAX % - MIN %  
   
-|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|설명|  
+|풀 이름|MIN % 설정|MAX % 설정|계산된 유효한 MAX %|계산된 공유 %|의견|  
 |---------------|-------------------|-------------------|--------------------------------|-------------------------|-------------|  
 |internal|0|100|100|0|유효 MAX % 및 공유 %는 내부 풀에 적용할 수 없습니다.|  
 |default|0|100|30|30|유효 MAX 값은 min(100,100-(20+50)) = 30으로 계산됩니다. 계산된 공유 백분율(%)은 유효 MAX - MIN = 30입니다.|  
@@ -117,10 +116,10 @@ ms.locfileid: "63209873"
 |리소스 풀을 삭제하는 방법에 대해 설명합니다.|[리소스 풀 삭제](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [Resource Governor](resource-governor.md)   
- [작업 그룹 Resource Governor](resource-governor-workload-group.md)   
+ [리소스 관리자](resource-governor.md)   
+ [리소스 관리자 작업 그룹](resource-governor-workload-group.md)   
  [Resource Governor 분류자 함수](resource-governor-classifier-function.md)   
- [템플릿을 사용 하 여 Resource Governor 구성](configure-resource-governor-using-a-template.md)   
+ [템플릿을 사용하여 리소스 관리자 구성](configure-resource-governor-using-a-template.md)   
  [리소스 관리자 속성 보기](view-resource-governor-properties.md)  
   
   

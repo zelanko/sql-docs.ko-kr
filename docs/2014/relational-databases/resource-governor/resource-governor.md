@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72d392837da4abd28aaf48ed460113c561bd688d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063590"
 ---
 # <a name="resource-governor"></a>관리
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. Resource Governor를 사용하면 CPU, 물리적 IO, 들어오는 애플리케이션 요청에 사용할 수 있는 메모리 양의 한도를 지정할 수 있습니다.  
@@ -54,11 +53,11 @@ ms.locfileid: "62704884"
 ## <a name="resource-concepts"></a>리소스 개념  
  다음은 리소스 관리자를 이해하고 사용하기 위한 세 가지 기본 개념입니다.  
   
--   **리소스 풀.** 리소스 풀은 서버의 물리적 리소스를 나타냅니다. 풀은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내부의 가상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴트로 간주할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 리소스 풀(내부 및 기본)이 만들어집니다. 또한 리소스 관리자는 사용자 정의 리소스 풀을 지원합니다. 자세한 내용은 [Resource Governor Resource Pool](resource-governor-resource-pool.md)을(를) 참조하세요.  
+-   **리소스 풀** 리소스 풀은 서버의 물리적 리소스를 나타냅니다. 풀은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 내부의 가상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴트로 간주할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 리소스 풀(내부 및 기본)이 만들어집니다. 또한 리소스 관리자는 사용자 정의 리소스 풀을 지원합니다. 자세한 내용은 [Resource Governor Resource Pool](resource-governor-resource-pool.md)을(를) 참조하세요.  
   
--   **작업 그룹.** 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 리소스 풀에 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 작업 그룹(내부 및 기본)이 만들어지고 해당 리소스 풀에 매핑됩니다. 또한 리소스 관리자는 사용자 정의 작업 그룹을 지원합니다. 자세한 내용은 [Resource Governor Workload Group](resource-governor-workload-group.md)를 참조하세요.  
+-   **작업 그룹** 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 리소스 풀에 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 작업 그룹(내부 및 기본)이 만들어지고 해당 리소스 풀에 매핑됩니다. 또한 리소스 관리자는 사용자 정의 작업 그룹을 지원합니다. 자세한 내용은 [Resource Governor Workload Group](resource-governor-workload-group.md)를 참조하세요.  
   
--   **유형을.** 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다. 또한 리소스 관리자는 분류 규칙을 구현하는 분류자 사용자 정의 함수를 지원합니다. 자세한 내용은 [Resource Governor Classifier Function](resource-governor-classifier-function.md)을(를) 참조하세요.  
+-   **분류** 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다. 또한 리소스 관리자는 분류 규칙을 구현하는 분류자 사용자 정의 함수를 지원합니다. 자세한 내용은 [Resource Governor Classifier Function](resource-governor-classifier-function.md)을(를) 참조하세요.  
   
 > [!NOTE]  
 >  리소스 관리자는 DAC(관리자 전용 연결)를 제어하지 않습니다. 내부 작업 그룹과 리소스 풀에서 실행되는 DAC 쿼리는 분류할 필요가 없습니다.  

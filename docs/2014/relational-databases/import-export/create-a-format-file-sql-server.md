@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026886"
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 대량 가져오기를 수행하거나 테이블에서 데이터를 대량 내보내기를 수행할 때는 서식 파일을 사용하여 다른 데이터 형식과 맞추기 위한 편집 작업이 거의 필요 없는 데이터 파일을 작성하거나 다른 소프트웨어 프로그램에서 데이터 파일을 읽는 작업을 유연하게 수행할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66265157"
  일반적으로 XML 서식 파일과 비 XML 서식 파일은 서로 전환이 가능하지만 새 서식 파일에는 비 XML 서식 파일에 비해 여러 가지 장점이 있는 XML 구문을 사용하는 것이 좋습니다.  
   
 > [!NOTE]  
->  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **를 들어 bcp는** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp**에서 생성 된 버전 10.0 서식 파일을 읽을 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]수 있지만 bcp는 bcp에서 **bcp** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]생성 된 버전 11.0 형식 파일을 읽을 수 없습니다. **bcp**  
+>  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp는** bcp에서 생성 된 버전 10.0 서식 파일을 읽을 수 있지만 bcp는 bcp [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** 에서 생성 된 버전 11.0 형식 파일을 읽을 수 없습니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp**.  
   
  이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션( **-n**, **-c**, **-w**또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66265157"
   
  비 XML 서식 파일의 구조 및 필드에 대한 자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](xml-format-files-sql-server.md)에서 원래 지원했던 서식 파일입니다.  
   
-### <a name="examples"></a>예  
+### <a name="examples"></a>예제  
  이 섹션에는 **bcp** 명령을 사용하여 비 XML 서식 파일을 만드는 방법을 보여 주는 다음 예가 포함되어 있습니다.  
   
 -   A. 네이티브 데이터용 비 XML 서식 파일 만들기  

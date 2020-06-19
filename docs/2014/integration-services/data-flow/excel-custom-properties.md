@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d8d556a199b608659a9ceaaeb3b7036155886d6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e321ddacd2e033880420f427145c99d30ff88
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827236"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915733"
 ---
 # <a name="excel-custom-properties"></a>Excel 사용자 지정 속성
   **원본 사용자 지정 속성**  
@@ -26,7 +25,7 @@ ms.locfileid: "62827236"
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|정수|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **행 집합 열기**, **변수를 사용한 행 집합 열기**, 변수를 `SQL Command`사용한 **SQL 명령**입니다. 기본값은 **행 집합 열기**입니다.|  
+|AccessMode|정수|데이터베이스에 액세스하는 데 사용되는 모드입니다. 가능한 값은 **행 집합 열기**, **변수를 사용한 행 집합 열기**, 변수를 사용한 `SQL Command` **SQL 명령**입니다. 기본값은 **행 집합 열기**입니다.|  
 |CommandTimeout|정수|명령이 종료되기 전의 제한 시간(초)입니다.  값 0은 제한 시간이 없음을 나타냅니다.<br /><br /> **참고** 이 속성은 **Excel 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
 |OpenRowset|String|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름입니다.|  
 |OpenRowsetVariable|String|행 집합을 여는 데 사용되는 데이터베이스 개체의 이름이 포함된 변수입니다.|  
@@ -52,9 +51,9 @@ ms.locfileid: "62827236"
 |FastLoadKeepNulls|부울|데이터를 로드할 때 Null 값을 복사할지 여부를 지정하는 값입니다. 이 속성은 빠른 로드 옵션 중 하나와 함께 사용해야 합니다. 이 속성의 기본값은 **False**입니다.|  
 |FastLoadMaxInsertCommitSize|정수|Excel 대상에서 빠른 로드 작업을 수행하는 동안 커밋을 시도하는 일괄 처리 크기를 지정하는 값입니다. 기본값은 **2147483647**입니다. **0** 값은 모든 행이 처리된 후의 단일 커밋 작업을 나타냅니다.|  
 |FastLoadOptions|String|빠른 로드 옵션 모음입니다. 빠른 로드 옵션에는 테이블 잠금 및 제약 조건 검사가 포함됩니다. 둘 다 또는 둘 중 하나를 지정하거나 아무 것도 지정하지 않을 수 있습니다.<br /><br /> 참고: 이 속성의 일부 옵션은 **Excel 대상 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
-|OpenRowset|String|AccessMode가 인 `OpenRowset`경우 Excel 대상에서 액세스 하는 테이블 또는 뷰의 이름입니다.|  
-|OpenRowsetVariable|String|AccessMode가 인 `OpenRowset from Variable`경우 Excel 대상에서 액세스 하는 테이블 또는 뷰의 이름이 포함 된 변수의 이름입니다.|  
-|SqlCommand|String|AccessMode가 인 `SQL Command`경우 Excel 대상에서 데이터의 대상 열을 지정 하는 데 사용 하는 transact-sql 문입니다.|  
+|OpenRowset|String|AccessMode가 인 경우 `OpenRowset` Excel 대상에서 액세스 하는 테이블 또는 뷰의 이름입니다.|  
+|OpenRowsetVariable|String|AccessMode가 인 경우 `OpenRowset from Variable` Excel 대상에서 액세스 하는 테이블 또는 뷰의 이름이 포함 된 변수의 이름입니다.|  
+|SqlCommand|String|AccessMode가 인 경우 `SQL Command` Excel 대상에서 데이터의 대상 열을 지정 하는 데 사용 하는 transact-sql 문입니다.|  
   
  Excel 대상의 입력 및 입력 열에는 사용자 지정 속성이 없습니다.  
   

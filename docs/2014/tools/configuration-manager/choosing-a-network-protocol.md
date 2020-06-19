@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008200"
 ---
 # <a name="choosing-a-network-protocol"></a>네트워크 프로토콜 선택
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에 연결하려면 네트워크 프로토콜을 사용할 수 있어야 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 동시에 여러 프로토콜에 대 한 요청을 처리 합니다. 클라이언트에서는 단일 프로토콜을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결합니다. 클라이언트 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 수신하는 프로토콜을 알지 못하는 경우 여러 프로토콜을 순서대로 시도하도록 클라이언트를 구성하십시오. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 네트워크 프로토콜을 설정, 해제 및 구성할 수 있습니다.  

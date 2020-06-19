@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c013a531fe5e432da690bf10c6c1463d375af1ee
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915503"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
   플랫 파일 원본은 텍스트 파일에서 데이터를 읽습니다. 텍스트 파일은 구분 기호로 분리됨, 고정 폭 또는 혼합 형식 중 하나일 수 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "62902478"
   
  플랫 파일 원본 출력의 출력 열에는 FastParse 속성이 포함됩니다. FastParse는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용할지 또는 로캘을 구분하는 표준 구문 분석 루틴을 사용할지를 나타냅니다. 자세한 내용은 [Fast Parse](../fast-parse.md) 및 [Standard Parse](../standard-parse.md)를 참조하세요.  
   
- 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은로 `false`설정 됩니다. 이진 형식을 사용 하려면 UseBinaryFormat을로 `true` 설정 하 고 출력 열의 데이터 형식을로 `DT_BYTES`설정 합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 `DT_BYTES` 데이터를 다른 데이터 형식에 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. 캐스팅할 `DT_BYTES` 수 있는 데이터 형식에 대 한 자세한 내용은 [Cast &#40;SSIS Expression&#41;](../expressions/cast-ssis-expression.md)를 참조 하세요.  
+ 또한 출력 열에는 UseBinaryFormat 속성이 포함되어 있습니다. 이 속성을 사용하여 압축된 10진수 형식이 있는 데이터와 같은 이진 데이터에 대한 지원을 파일에서 구현할 수 있습니다. 기본적으로 UseBinaryFormat은로 설정 됩니다 `false` . 이진 형식을 사용 하려면 UseBinaryFormat을로 설정 하 `true` 고 출력 열의 데이터 형식을로 설정 `DT_BYTES` 합니다. 이렇게 설정할 경우 플랫 파일 원본은 데이터 변환을 건너뛰고 데이터를 있는 그대로 출력 열에 전달합니다. 그런 다음 파생 열 또는 데이터 변환과 같은 변환을 사용하여 `DT_BYTES` 데이터를 다른 데이터 형식에 캐스팅하거나 스크립트 변환에서 사용자 지정 스크립트를 작성하여 데이터를 해석할 수 있습니다. 또한 사용자 지정 데이터 흐름 구성 요소를 작성하여 데이터를 해석할 수 있습니다. 캐스팅할 수 있는 데이터 형식에 대 한 자세한 내용은 `DT_BYTES` [CAST &#40;SSIS Expression&#41;](../expressions/cast-ssis-expression.md)를 참조 하세요.  
   
  이 원본은 플랫 파일 연결 관리자를 사용하여 텍스트 파일에 액세스합니다. 플랫 파일 연결 관리자의 속성을 설정하여 파일과 해당 파일의 각 열에 대한 정보를 제공하고 플랫 파일에서 텍스트 파일의 데이터를 처리하는 방법을 지정할 수 있습니다. 예를 들어 파일의 열과 행을 구분하는 문자와 각 열의 데이터 형식 및 길이를 지정할 수 있습니다. 자세한 내용은 [Flat File Connection Manager](../connection-manager/file-connection-manager.md)을 참조하세요.  
   

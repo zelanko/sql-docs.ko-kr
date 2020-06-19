@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707291"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047987"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
   FILESTREAM은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 Windows 파일 시스템에 대한 직접 액세스를 통해 큰 이진 값을 저장하고 액세스하는 방법을 제공합니다. 큰 이진 값은 2GB보다 큰 값입니다. 향상된 FILESTREAM 지원에 대한 자세한 내용은 [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)를 참조하세요.  
@@ -27,7 +26,7 @@ ms.locfileid: "82707291"
   
  Windows 파일 시스템 API를 사용하여 FILESTREAM 열에 액세스하고 업데이트할 수도 있습니다.  
   
- 자세한 내용은 다음 항목을 참조하세요.  
+ 자세한 내용은 아래 항목을 참조하세요.  
   
 -   [FILESTREAM Support &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "82707291"
   
  FILESTREAM 열을 만들거나 FILESTREAM 열이 있는 기존 열을 검색 하려면 `is_filestream` [sys. columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) 카탈로그 뷰의 열을 사용 하면 됩니다.  
   
- 다음은 이에 대한 예입니다.  
+ 다음은 예입니다.  
   
 ```  
 -- Create a table with a FILESTREAM column.  

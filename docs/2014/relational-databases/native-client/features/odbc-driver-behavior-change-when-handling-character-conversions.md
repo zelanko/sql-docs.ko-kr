@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f4ec8a9538cead097402c046e2f9f91c95faa01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047928"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>문자 변환을 처리 시 ODBC 드라이버 동작 변경
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 드라이버 (SQLNCLI11)가 SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max)) 및 SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (max)) 변환의 수행 방법을 변경 했습니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Native CLIENT ODBC 드라이버 (SQLNCLI11.dll)는 SQL_WCHAR * (NCHAR/nvarchar/nvarchar (max)) 및 SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (max)) 변환의 수행 방법을 변경 했습니다. SQLGetData, SQLBindCol, SQLBindParameter와 같은 ODBC 함수는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client ODBC 드라이버 사용 시 길이/표시기 매개 변수로 (-4) SQL_NO_TOTAL을 반환합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 드라이버는 길이 값을 반환했으며 이는 부정확할 수 있습니다.  
   
 ## <a name="sqlgetdata-behavior"></a>SQLGetData 동작  
  여러 가지 Windows 기능을 사용하여 버퍼 크기를 0으로 지정할 수 있고 반환된 길이가 반환된 데이터의 크기가 됩니다. 다음 패턴은 Windows 프로그래머에 공통적입니다.  
@@ -52,7 +51,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|6|드라이버는 CHAR를 WCHAR로 변환하면 길이 * 2로 수행될 수 있다고 잘못 가정합니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|드라이버는 더 이상 CHAR에서 WCHAR로 또는 WCHAR에서 CHAR로의 변환이 (곱하기) \* 2 또는 (나누기)/2 동작 이라고 가정 하지 않습니다.<br /><br /> **SQLGetData** 를 호출 하면 더 이상 예상한 변환의 길이가 반환 되지 않습니다. 드라이버가 CHAR에서 WCHAR 또는 WCHAR에서 CHAR로 변환을 검색하고 잘못될 수 있는 *2 또는 /2 동작 대신 (-4) SQL_NO_TOTAL을 반환합니다.|  
@@ -81,7 +80,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|20|-   **Sqlfetch** 는 데이터 우변에 잘림이 있음을 보고 합니다.<br />-Length는 저장 된 데이터가 아니라 반환 되는 데이터의 길이입니다 (문자 모양에 대해 잘못 될 수 있는 * 2 문자를 WCHAR로 변환 한다고 가정).<br />-버퍼에 저장 된 데이터는 123 \ 0입니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|-   **Sqlfetch** 는 데이터 우변에 잘림이 있음을 보고 합니다.<br />-길이는-4 (SQL_NO_TOTAL)를 나타내며 나머지 데이터는 변환 되지 않았습니다.<br />-버퍼에 저장 된 데이터는 123 \ 0입니다. - 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
@@ -95,7 +94,7 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters  
 ```  
   
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|설명|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 버전|길이 또는 표시기 결과|Description|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 이하|2468|-   **Sqlfetch** 는 더 이상 사용할 수 있는 데이터를 반환 하지 않습니다.<br />-   **SQLMoreResults** 는 더 이상 사용할 수 있는 데이터를 반환 하지 않습니다.<br />-Length는 버퍼에 저장 되지 않고 서버에서 반환 되는 데이터의 크기를 나타냅니다.<br />-원래 버퍼에는 63 바이트와 NULL 종결자가 포함 됩니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client(버전 11.0.2100.60) 이상|-4(SQL_NO_TOTAL)|-   **Sqlfetch** 는 더 이상 사용할 수 있는 데이터를 반환 하지 않습니다.<br />-   **SQLMoreResults** 는 더 이상 사용할 수 있는 데이터를 반환 하지 않습니다.<br />-Length는 (-4) SQL_NO_TOTAL의 나머지 데이터가 변환 되지 않았기 때문에이를 나타냅니다.<br />-원래 버퍼에는 63 바이트와 NULL 종결자가 포함 됩니다. 버퍼는 NULL로 끝나지 않을 수 있습니다.|  

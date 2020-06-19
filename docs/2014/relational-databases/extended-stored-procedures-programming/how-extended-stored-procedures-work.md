@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027129"
 ---
 # <a name="how-extended-stored-procedures-work"></a>확장 저장 프로시저 작동 원리
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512995"
   
  확장 저장 프로시저가 작동하는 프로세스는 다음과 같습니다.  
   
-1.  클라이언트에서 확장 저장 프로시저를 실행 하면 요청이 TDS (tabular data stream) 또는 SOAP (Simple Object Access Protocol) 형식으로 클라이언트 응용 프로그램에서로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 됩니다.  
+1.  클라이언트에서 확장 저장 프로시저를 실행 하면 요청이 TDS (tabular data stream) 또는 SOAP (Simple Object Access Protocol) 형식으로 클라이언트 응용 프로그램에서로 전송 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 확장 저장 프로시저와 연결된 DLL을 검색하고 아직 로드되지 않은 경우 DLL을 로드합니다.  
   

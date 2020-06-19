@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935806"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성
   이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 데이터베이스 엔진 액세스에 대한 Windows 방화벽을 구성하는 방법에 대해 설명합니다. 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 컴퓨터에서 액세스를 허용하도록 방화벽을 구성해야 합니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "62812305"
   
 3.  **규칙 유형** 대화 상자에서 **포트**를 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 인스턴스의 포트 번호를 입력 합니다. 예 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 `1433` 들어 기본 인스턴스의 포트 번호를 입력 합니다. **다음**을 클릭합니다.  
+4.  **프로토콜 및 포트** 대화 상자에서 **TCP**를 선택합니다. **특정 로컬 포트**를 선택한 다음 인스턴스의 포트 번호를 입력 합니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 기본 인스턴스의 포트 번호를 입력 합니다 `1433` . **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택한 다음 **다음**을 클릭합니다.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62812305"
   
 3.  **규칙 유형** 대화 상자에서 **프로그램**을 선택한 다음 **다음**을 클릭합니다.  
   
-4.  **프로그램** 대화 상자에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 클릭하여 방화벽을 통해 액세스할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 찾은 다음 **열기**를 클릭합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **C:\Program Files\Microsoft SQL Server\MSSQL12.에 있습니다. MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. **다음**을 클릭합니다.  
+4.  **프로그램** 대화 상자에서 **다음 프로그램 경로**를 선택합니다. **찾아보기**를 클릭하여 방화벽을 통해 액세스할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 찾은 다음 **열기**를 클릭합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 **C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**에 있습니다. **다음**을 클릭합니다.  
   
 5.  **동작** 대화 상자에서 **연결 허용**을 선택한 다음 **다음**을 클릭합니다.  
   

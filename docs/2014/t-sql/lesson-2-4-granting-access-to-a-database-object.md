@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22bd0bb1f01e59ec30f7cf1bbf128c890d3d5d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008436"
 ---
 # <a name="granting-access-to-a-database-object"></a>데이터베이스 개체에 대한 액세스 권한 부여
    관리자는 **Products** 테이블 및 **vw_Names** 뷰에서 SELECT를 실행하고 **pr_Names** 프로시저를 실행할 수 있지만 Mary는 이러한 작업을 수행할 수 없습니다. Mary에게 필요한 사용 권한을 부여하려면 GRANT 문을 사용합니다.  

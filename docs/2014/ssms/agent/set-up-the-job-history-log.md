@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001765"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 기록 로그를 설정 하는 방법에 대해 설명 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "63033583"
   
 3.  **SQL Server 에이전트 속성** 대화 상자에서 **기록** 페이지를 선택합니다.  
   
-4.  다음 옵션 중에서 선택합니다.  
+4.  다음 옵션 중에서 선택 합니다.  
   
     1.  **작업 기록 로그 크기 제한**을 선택한 다음 작업 기록 로그의 최대 행 수와 작업당 최대 행 수를 입력합니다.  
   

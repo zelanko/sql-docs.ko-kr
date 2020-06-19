@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063419"
 ---
 # <a name="use-the-sqlcmd-utility"></a>sqlcmd 유틸리티 사용
   `sqlcmd` 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. `sqlcmd`를 대화형으로 사용하거나 `sqlcmd`를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 `sqlcmd` 유틸리티는 다음과 같은 방법으로 사용됩니다.  
@@ -215,7 +214,7 @@ ms.locfileid: "82703690"
   
 -   메모장과 같은 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 텍스트 파일을 만들 수 있습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
   
 ### <a name="a-running-a-script-by-using-sqlcmd"></a>A. sqlcmd를 사용하여 스크립트 실행  
  메모장을 시작하고 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 입력합니다.  
@@ -563,7 +562,7 @@ SQLCMD -E -N -C
 ## <a name="see-also"></a>참고 항목  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](sqlcmd-use-with-scripting-variables.md)   
- [쿼리 편집기를 사용 하 여 SQLCMD 스크립트 편집](edit-sqlcmd-scripts-with-query-editor.md)   
+ [쿼리 편집기로 SQLCMD 스크립트 편집](edit-sqlcmd-scripts-with-query-editor.md)   
  [작업 단계 관리](../../ssms/agent/manage-job-steps.md)   
  [CmdExec 작업 단계 만들기](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
