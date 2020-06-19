@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926957"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>SQL Server 2014 도구 및 추가 기능 구성 요소에 대한 설명서
     
@@ -33,7 +32,7 @@ ms.locfileid: "82706941"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|SAP BW용 Microsoft Connector 1.1은 SAP Netweaver BW 버전 7 시스템에서 데이터를 추출하거나 해당 시스템으로 데이터를 로드할 수 있도록 지원하는 3가지 구성 요소 집합으로 구성됩니다.|  
 |[업그레이드 도우미용 Playback Capture](https://go.microsoft.com/fwlink/?LinkId=299182)|업그레이드 도우미의 Capture Playback 워크플로는 나중에 재생하는 데 사용할 작업 추적 캡처 프로세스를 자동화합니다.|  
 |[Windows의 Microsoft ODBC Driver 11 for SQL Server](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 for Windows는 Microsoft Windows에 대한 표준 ODBC 인터페이스를 구현하는 API(애플리케이션 프로그래밍 인터페이스)를 제공하는 독립 실행형 드라이버입니다.|  
-|[SharePoint용 PowerPivot](https://go.microsoft.com/fwlink/?LinkId=299184)|SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 Analysis Services 서버입니다.|  
+|[SharePoint 용 파워 피벗](https://go.microsoft.com/fwlink/?LinkId=299184)|SharePoint용 PowerPivot은 SharePoint 모드에서 실행되는 Analysis Services 서버입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 2014 설명서](../2014-toc/index.yml)  

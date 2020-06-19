@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938314"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   차원 디자이너에서 **번역** 탭의 **번역 세부 정보** 창을 사용하여 현재 선택한 차원의 번역을 정의하고 관리할 수 있습니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66065850"
   
      `Caption` 속성  
   
- **\<언어>**  
+ **\<Language>**  
  차원 개체의 속성 값을 선택한 언어로 입력하거나 선택합니다. 줄임표 단추(**...**)를 클릭하면 편집 중인 속성에 따라 추가 대화 상자가 열립니다.  
   
 -   `NamingTemplate` 속성  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4219830c82710861ee7b079ce78d1b5859681753
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b489db3e5324febe26da10c980814d5dd50f8f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971503"
 ---
 # <a name="entity-permissions-master-data-services"></a>엔터티 권한(Master Data Services)
   엔터티 권한은 다음에 적용됩니다.  
@@ -34,11 +33,11 @@ ms.locfileid: "65479532"
 > [!NOTE]  
 >  이러한 사용 권한은 사용자 인터페이스의 **탐색기** 기능 영역에만 적용됩니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|엔터티가 표시되지만 사용자가 멤버를 추가, 제거 또는 변경할 수 없습니다.|  
 |**업데이트**|엔터티가 표시되고 사용자가 멤버를 추가, 제거 및 변경할 수 있습니다.|  
-|**차단할**|엔터티가 표시되지 않습니다.|  
+|**거부**|엔터티가 표시되지 않습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](assign-model-object-permissions-master-data-services.md)   

@@ -1,5 +1,6 @@
 ---
 title: 쿼리 알림 사용 | Microsoft Docs
+description: 쿼리 알림을 사용 하면 쿼리의 기본 데이터가 SQL Server Native Client 변경 될 때 시간 제한 기간 동안 알림을 요청할 수 있습니다.
 ms.custom: ''
 ms.date: 05/24/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8561d6c0e48e37dba7e22939fd868376c0ebdc9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948843"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "81303241"
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- 예를 들면 다음과 같습니다.  
+ 다음은 그 예입니다.  
   
  `service=mySSBService;local database=mydb`  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81303241"
   
  알림은 한 번만 전달됩니다. 데이터 변경을 연속해서 알리려면 각 알림이 처리된 후 쿼리를 다시 실행하여 새 구독을 만들어야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]일반적으로 네이티브 클라이언트 응용 프로그램은 알림 옵션 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에 지정 된 서비스와 연결 된 큐에서 알림을 읽도록 [receive](../../../t-sql/statements/receive-transact-sql.md) 명령을 사용 하 여 알림을 받습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]일반적으로 네이티브 클라이언트 응용 프로그램은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 알림 옵션에 지정 된 서비스와 연결 된 큐에서 알림을 읽도록 [receive](../../../t-sql/statements/receive-transact-sql.md) 명령을 사용 하 여 알림을 받습니다.  
   
 > [!NOTE]  
 >  쿼리에서 알림이 필요한 테이블 이름을 정규화해야 합니다(예: `dbo.myTable`). 두 부분으로 구성된 이름을 사용하여 테이블 이름을 정규화해야 합니다. 세 부분이나 네 부분으로 구성된 이름을 사용하면 구독이 유효하지 않습니다.  
@@ -67,23 +68,23 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  서비스에서 위에 표시된 미리 정의된 계약 `https://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`을 사용해야 합니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 행 집합 수정에 대 한 소비자 알림을 지원 합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 행 집합 수정에 대 한 소비자 알림을 지원 합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.  
   
 > [!NOTE]  
 >  **ICommand:: Execute** 를 사용 하 여 서버에 알림 쿼리를 전달 하는 것은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하 여 쿼리 알림을 구독 하는 유일한 유효한 방법입니다.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 속성 집합  
- OLE DB를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통해 쿼리 알림을 지원 하기 위해 Native Client는 DBPROPSET_SQLSERVERROWSET 속성 집합에 다음과 같은 새 속성을 추가 합니다.  
+ OLE DB를 통해 쿼리 알림을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERROWSET 속성 집합에 다음과 같은 새 속성을 추가 합니다.  
   
-|속성|유형|설명|  
+|속성|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.<br /><br /> 기본값은 432000초(5일)입니다. 최소값은 1초이고 최대값은 2^31-1초입니다.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|알림의 메시지 메시지입니다. 사용자가 정의하며 미리 정의된 형식은 없습니다.<br /><br /> 기본값은 빈 문자열입니다. 1-2000자를 사용하여 메시지를 지정할 수 있습니다.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|쿼리 알림 옵션입니다. 이러한 값은 *이름*=*값* 구문을 사용 하 여 문자열로 지정 됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다.<br /><br /> 기본값은 빈 문자열입니다.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|쿼리 알림 옵션입니다. 이러한 값은 *이름* = *값* 구문을 사용 하 여 문자열로 지정 됩니다. 사용자가 서비스를 만들고 큐에서 알림을 읽어야 합니다.<br /><br /> 기본값은 빈 문자열입니다.|  
   
  구독 알림은 문이 사용자 트랜잭션 또는 자동 커밋에서 실행되었는지 여부나 문이 실행된 트랜잭션이 커밋 또는 롤백되었는지 여부에 관계없이 항상 커밋됩니다. 서버 알림은 잘못된 알림 조건, 즉 기본 데이터 또는 스키마 변경이나 제한 시간에 도달한 경우 중 더 빠른 시간에 발생합니다. 알림 등록은 발생하는 즉시 삭제됩니다. 따라서 알림을 받을 때 애플리케이션에서 추가 업데이트를 가져오려는 경우 다시 구독해야 합니다.  
   
- 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 예를 들면 다음과 같습니다.  
+ 다른 연결이나 스레드에서 알림의 대상 큐를 확인할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -107,7 +108,7 @@ RECEIVE * FROM MyQueue
  DBPROPSET_SQLSERVERROWSET 속성 집합에 대 한 자세한 내용은 [행 집합 속성 및 동작](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)을 참조 하세요.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client ODBC 드라이버는 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 및 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 함수에 세 개의 새 특성을 추가 하 여 쿼리 알림을 지원 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) 및 [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) 함수에 세 개의 새 특성을 추가 하 여 쿼리 알림을 지원 합니다.  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   

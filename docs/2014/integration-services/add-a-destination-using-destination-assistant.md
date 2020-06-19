@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66e48903776824b0e540b854a5704ceef3a9782e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c6ffb11f208236ccf95371e8162550d8f221cfb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926402"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>대상 길잡이를 사용하여 대상 추가
   이 항목에서는 대상 길잡이를 사용하여 새 대상을 추가하는 단계를 제공하며, 대상 길잡이를 SSIS 디자이너에 끌어 놓으면 나타나는 **새 대상 추가** 대화 상자에서 사용할 수 있는 옵션을 보여 줍니다.  
@@ -28,10 +27,10 @@ ms.locfileid: "66062066"
   
 3.  **유형** 목록에서 대상의 유형을 선택합니다.  
   
-4.  **연결** 관리자 목록에서 기존 연결 관리자를 선택 하거나 ** \<새>** 를 선택 하 여 새 연결 관리자를 만듭니다.  
+4.  **연결** 관리자 목록에서 기존 연결 관리자를 선택 하거나 선택 **\<New>** 하 여 새 연결 관리자를 만듭니다.  
   
 5.  기본 연결 관리자를 선택한 경우 **확인** 을 클릭하여 **새 대상 추가** 대화 상자를 닫습니다. 데이터 흐름에 추가된 대상 및 연결 관리자가 표시됩니다.  
   
-6.  ** \<새>** 을 클릭 하 여 새 연결 관리자를 만들 경우 연결에 대 한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 표시 됩니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
+6.  **\<New>** 를 클릭 하 여 새 연결 관리자를 만들 경우 연결에 대 한 매개 변수를 지정할 수 있는 **연결 관리자** 대화 상자가 표시 됩니다. 새 연결 관리자 만들기 작업을 마치면 SSIS 디자이너에 대상 및 연결 관리자가 표시됩니다.  
   
   

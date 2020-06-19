@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970506"
 ---
 # <a name="data-collection"></a>데이터 수집
   데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.
@@ -59,7 +58,7 @@ ms.locfileid: "78175986"
  자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)를 참조하세요.
 
 ## <a name="data-collector-terminology"></a>데이터 수집기 용어
- 데이터 컬렉션을 지 원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 대상으로 합니다. 지원 되는 버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)의 "관리 효율성" 섹션을 참조 하세요.
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]데이터 컬렉션을 지 원하는 버전의 인스턴스를 대상으로 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 지원 되는 버전에 대 한 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)의 "관리 효율성" 섹션을 참조 하세요.
 
  *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175986"
 
  데이터 공급자 수집기 형식에 데이터를 제공 하는 알려진 데이터 원본으로, 대상 유형에 해당 합니다.
 
- 수집기 데이터를 수집 하 고 관리 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 웨어하우스에 업로드 하는 실제 메커니즘을 제공 하는 패키지에 대 한 논리적 래퍼를 입력 합니다.
+ 수집기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터를 수집 하 고 관리 데이터 웨어하우스에 업로드 하는 실제 메커니즘을 제공 하는 패키지에 대 한 논리적 래퍼를 입력 합니다.
 
  컬렉션 항목 수집기 형식의 인스턴스입니다. 컬렉션 항목은 컬렉션 빈도 및 입력 속성의 특정 집합을 사용하여 만듭니다.
 

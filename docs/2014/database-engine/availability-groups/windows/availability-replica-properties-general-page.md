@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fb7e75fd1e25d8f4089d14688096afd0aa4dea8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937049"
 ---
 # <a name="availability-replica-properties-general-page"></a>가용성 복제본 속성(일반 페이지)
   이 대화 상자를 사용하여 가용성 복제본의 속성을 확인할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "83858919"
  **서버 인스턴스**  
  이 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서버 이름(기본 인스턴스가 아닌 경우에는 인스턴스 이름)입니다.  
   
- **역할**  
+ **Role**  
  **기본**  
  현재 주 복제본입니다.  
   

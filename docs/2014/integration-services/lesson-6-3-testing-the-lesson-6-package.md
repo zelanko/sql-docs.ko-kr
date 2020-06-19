@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c78ccd21b39cd882c037f44c0b37c5deb3bc06d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951483"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>3단계: 6단원 패키지 테스트
   런타임에서 패키지는 VarFolderName 매개 변수로부터 Directory 속성 값을 가져옵니다.  

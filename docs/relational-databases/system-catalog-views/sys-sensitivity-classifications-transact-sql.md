@@ -23,19 +23,19 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939044"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 데이터베이스의 각 분류 된 항목에 대해 행을 반환 합니다.
 
-|열 이름|데이터 형식|설명|
+|열 이름|데이터 형식|Description|
 |-----------------|---------------|-----------------|  
 |**class**|**int**|분류가 존재 하는 항목의 클래스를 식별 합니다. 항상 값 1 (열을 나타냄)이 있습니다.|  
 |**class_desc**|**varchar (16)**|분류가 존재 하는 항목의 클래스에 대 한 설명입니다. 에는 항상 값이 포함 됩니다 *OBJECT_OR_COLUMN*|  
@@ -58,7 +58,7 @@ ms.locfileid: "77903912"
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. 모든 분류 된 열 및 해당 분류 나열
 
-다음 예에서는 데이터베이스의 각 분류 된 열에 대 한 테이블 이름, 열 이름, 레이블, 레이블 ID, 정보 유형, 정보 유형 ID를 나열 하는 테이블을 반환 합니다.
+다음 예에서는 데이터베이스의 각 분류 된 열에 대 한 테이블 이름, 열 이름, 레이블, 레이블 ID, 정보 유형, 정보 유형 ID, 순위 및 순위 설명을 나열 하는 테이블을 반환 합니다.
 
 > [!NOTE]
 > Label은 Azure SQL Data Warehouse에 대 한 키워드입니다.

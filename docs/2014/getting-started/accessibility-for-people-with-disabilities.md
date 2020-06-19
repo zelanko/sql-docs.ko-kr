@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc4a3e976fb504839215e48096d5b6c024324dd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927285"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>기능 제약을 느끼는 사용자를 위한 내게 필요한 옵션
   [!INCLUDE[msCoName](../includes/msconame-md.md)]는 모든 사용자가 보다 편리하게 사용할 수 있는 제품과 서비스를 제공하기 위해 최선을 다하고 있습니다. 이 항목에서는 장애가 있는 사용자가 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server 제품군에 속하는 제품을 보다 쉽게 사용할 수 있도록 도와 주는 다음과 같은 기능, 제품 및 서비스에 대한 정보를 제공합니다.  

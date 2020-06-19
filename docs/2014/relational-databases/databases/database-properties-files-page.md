@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970173"
 ---
 # <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
   이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)** 에 적용됩니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "83858544"
  Filestream 데이터 파일 그룹에 파일 (컨테이너)을 추가하려면 FILESTREAM을 사용해야 합니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md) 대화 상자를 사용하여 FILESTREAM을 설정할 수 있습니다.  
   
  **파일 그룹**  
- 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. **\<새 파일 그룹>** 을 선택하고 **새 파일 그룹** 대화 상자에 파일 그룹에 대한 정보를 입력하여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
+ 목록에서 파일이 속한 파일 그룹을 선택합니다. 기본 파일 그룹은 PRIMARY입니다. 새 파일 그룹 **\<new filegroup>** 대화 상자에서 파일 그룹에 대 한 정보를 선택 하 고 **New Filegroup** 입력 하 여 새 파일 그룹을 만들 수 있습니다. 새 파일 그룹은 **파일 그룹** 페이지에서도 만들 수 있습니다. 기존 파일의 파일 그룹은 수정할 수 없습니다.  
   
  메모리 최적화 파일 그룹에 파일(컨테이너)을 추가할 경우 **파일 그룹** 필드에 데이터베이스의 메모리 최적화 파일 그룹 이름이 채워집니다.  
   

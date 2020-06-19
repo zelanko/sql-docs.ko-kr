@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936024"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server에 대한 클라우드 어댑터
-  클라우드 어댑터 서비스는 Azure VM에서 프로 비전 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 일부로 생성 됩니다. 클라우드 어댑터 서비스는 첫 번째 실행 중에 자체 서명된 SSL 인증서를 생성한 다음 **로컬 시스템** 계정으로 실행됩니다. 이 서비스는 자체적으로 구성하는 데 사용되는 구성 파일을 생성합니다. 클라우드 어댑터는 기본 포트 11435에서 들어오는 TCP 연결을 허용하도록 Windows 방화벽 규칙도 생성합니다.  
+  클라우드 어댑터 서비스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AZURE VM에서 프로 비전의 일부로 생성 됩니다. 클라우드 어댑터 서비스는 첫 번째 실행 중에 자체 서명된 SSL 인증서를 생성한 다음 **로컬 시스템** 계정으로 실행됩니다. 이 서비스는 자체적으로 구성하는 데 사용되는 구성 파일을 생성합니다. 클라우드 어댑터는 기본 포트 11435에서 들어오는 TCP 연결을 허용하도록 Windows 방화벽 규칙도 생성합니다.  
   
  클라우드 어댑터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 온-프레미스 인스턴스에서 메시지를 수신하는 상태 비저장 동기 서비스입니다. 클라우드 어댑터 서비스가 중지되면 원격 액세스 클라우드 어댑터가 중지되고 SSL 인증서가 바인딩 해제되며 Windows 방화벽 규칙이 사용되지 않습니다.  
   
@@ -51,19 +50,19 @@ ms.locfileid: "70176012"
   
         -   \<appSettings>  
   
-            -   \<add key = "WebServicePort" value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<add key = "WebServiceCertificate" value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<add key = "ExposeExceptionDetails" value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
         -   \</appSettings>  
   
-    -   \</구성>  
+    -   \</configuration>  
   
 -   **인증서 세부 정보** -인증서의 값은 다음과 같습니다.  
   
-    -   Subject-"CN = CloudAdapter\<VMName>, dc = SQL SERVER, Dc = Microsoft"  
+    -   주체-"CN = CloudAdapter \<VMName> , dc = SQL Server, dc = Microsoft"  
   
     -   인증서에는 서버 인증 EKU만 사용해야 합니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "70176012"
 |설정|값|기본값|주석|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|지정되지 않은 경우 11435를 사용합니다.|  
-|WebServiceCertificate|지문|Empty|비어 있는 경우 새로운 자체 서명된 인증서가 생성됩니다.|  
+|WebServiceCertificate|Thumbprint|Empty|비어 있는 경우 새로운 자체 서명된 인증서가 생성됩니다.|  
 |ExposeExceptionDetails|True/False|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>클라우드 어댑터 문제 해결  
@@ -84,7 +83,7 @@ ms.locfileid: "70176012"
   
 -   **추적, 이벤트** -모든 이벤트는 응용 프로그램 이벤트 로그에 기록 됩니다.  
   
--   **Control, configuration** -: C:\PROGRAM Files\Microsoft SQL Server\120\Tools\CloudAdapter\\에 있는 구성 파일을 사용 합니다.  
+-   **Control, configuration** -: C:\PROGRAM Files\Microsoft SQL Server\120\Tools\CloudAdapter에 있는 구성 파일을 사용 \\ 합니다.  
   
 |Error|오류 ID|원인|해결 방법|  
 |-----------|--------------|-----------|----------------|  
@@ -93,7 +92,7 @@ ms.locfileid: "70176012"
 |인증서 저장소에서 SSL 인증서 [{지문}]를 찾지 못했습니다.|45564|인증서 지문은 구성 파일에 있지만 서비스에 대한 개인 인증서 저장소에는 인증서가 들어 있지 않습니다.<br /><br /> 사용 권한 부족|인증서가 서비스에 대한 개인 인증서 저장소에 있는지 확인합니다.<br /><br /> 서비스가 저장소에 대한 올바른 사용 권한이 있는지 확인합니다.|  
 |웹 서비스를 시작하지 못했습니다. {예외 텍스트}.|45570|예외에서 설명됩니다.|ExposeExceptionDetails를 사용하고 예외에서 확장된 정보를 사용합니다.|  
 |[{Thumbprint}] 인증서가 만료되었습니다.|45565|구성 파일에서 만료된 인증서가 참조되었습니다.|유효한 인증서를 추가하고 지문을 사용하여 구성 파일을 업데이트합니다.|  
-|웹 서비스 오류: {0}|45571|예외에서 설명됩니다.|ExposeExceptionDetails를 사용하고 예외에서 확장된 정보를 사용합니다.|  
+|웹 서비스 {0} 오류:|45571|예외에서 설명됩니다.|ExposeExceptionDetails를 사용하고 예외에서 확장된 정보를 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Microsoft Azure 가상 머신에 SQL Server 데이터베이스 배포](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

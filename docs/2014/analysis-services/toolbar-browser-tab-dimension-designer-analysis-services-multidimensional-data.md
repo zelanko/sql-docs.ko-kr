@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066161"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938444"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(브라우저 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   **도구 모음** 창을 사용하여 **차원 디자이너** 의 **브라우저**탭에서 일반 작업을 수행할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
- **프로세스**  
+ **Process**  
  **처리** 대화 상자를 열고 선택한 차원을 처리하려면 클릭합니다.  
   
- **연결할**  
+ **다시 연결**  
  **브라우저** 탭에 대한 세션의 연결이 연결 오류나 제한 시간 초과 등의 이유로 끊긴 경우 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 브라우저 **탭을 차원이 포함된** 인스턴스 및 데이터베이스에 다시 연결하려면 클릭합니다.  
   
  **새로 고침**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 118fe59e76f23089ce56371ea4ba981bb4ab1f7f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93555bbbc6c7a10955e8fc869f6ddadc38572830
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706958"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927134"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
 
@@ -34,7 +33,7 @@ ms.locfileid: "82706958"
   
  [확장성 및 성능](#Scalability)  
   
- [Security](#Enterprise_security)  
+ [보안](#Enterprise_security)  
   
  [복제](#Replication)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "82706958"
   
  [개발 도구](#Dev_tools)  
   
- [프로그래밍](#Programmability)  
+ [프로그래밍 기능](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -82,9 +81,9 @@ ms.locfileid: "82706958"
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |단일 인스턴스에서 사용되는 최대 컴퓨팅 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진)<sup>1</sup>|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |단일 인스턴스에서 사용되는 최대 컴퓨팅 용량(Analysis Services, Reporting Services)<sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
-|최대 메모리 사용량( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진의 인스턴스당)|운영 체제가 지원하는 최대 크기|128GB|128GB|64GB|1GB|1GB|1GB|  
+|최대 메모리 사용량( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진의 인스턴스당)|운영 체제가 지원하는 최대 크기|128GB|128GB|64GB|1 GB|1 GB|1 GB|  
 |최대 메모리 사용량( [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|해당 없음|해당 없음|해당 없음|해당 없음|  
-|최대 메모리 사용량( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|64GB|4GB|해당 없음|해당 없음|  
+|최대 메모리 사용량( [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|64GB|4 GB|해당 없음|해당 없음|  
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|524PB|10GB|10GB|10GB|  
   
  <sup>1</sup> SERVER + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 인스턴스당 최대 20 개의 코어로 제한 됩니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
@@ -109,7 +108,7 @@ ms.locfileid: "82706958"
 |Hot Add 메모리 및 CPU<sup>2</sup>|예|||||||  
 |데이터베이스 복구 관리자|예|예|예|예|예|예|예|  
 |암호화된 백업|예|예|예|||||  
-|스마트 백업|예|예|예|아니요||||  
+|스마트 백업|예|예|예|예||||  
   
  <sup>1</sup> Server Core에 설치 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [server core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조 하세요.  
   
@@ -166,8 +165,8 @@ ms.locfileid: "82706958"
 |SQL CMD(명령 프롬프트 도구)|예|예|예|예|예|예|예|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|예|예|예|예|예|예||  
 |Distributed Replay - 관리 도구|예|예|예|예|예|예||  
-|Distributed Replay - 클라이언트|예|아니요|예|예||||  
-|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니요|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
+|Distributed Replay - 클라이언트|예|예|예|예||||  
+|Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|예|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
 |SQL 프로파일러|예|예|예|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|예|예|예|예||||  
 |Microsoft System Center Operations Manager 관리 팩|예|예|예|예||||  
@@ -277,7 +276,7 @@ ms.locfileid: "82706958"
 > [!NOTE]  
 >  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]는 Business Intelligence 및 Enterprise 64비트 버전에서만 사용할 수 있습니다.  
   
-|기능|엔터프라이즈|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
+|기능|Enterprise|비즈니스 인텔리전스|Standard|웹|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스|예|예||||||  
 |[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션|예|예||||||  
@@ -415,7 +414,7 @@ ms.locfileid: "82706958"
 |데이터 기반 보고서 구독|예|예||||||  
 |확장 배포(웹 팜)|예|예||||||  
 |경고<sup>2</sup>|예|예||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|예|예||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|예|예||||||  
   
  <sup>1</sup> 에서 지원 되는 데이터 원본에 대 한 자세한 내용은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] [SSRS&#41;&#40;Reporting Services에서 지 원하는 데이터 원본 ](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조 하세요.  
   
@@ -426,7 +425,7 @@ ms.locfileid: "82706958"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
-|엔터프라이즈|Standard, Business Intelligence Enterprise 버전(로컬 또는 원격)|  
+|Enterprise|Standard, Business Intelligence Enterprise 버전(로컬 또는 원격)|  
 |비즈니스 인텔리전스|Standard, Business Intelligence Enterprise 버전(로컬 또는 원격)|  
 |Standard|Standard, Enterprise Edition(로컬 또는 원격)|  
 |웹|Web Edition(로컬 전용)|  

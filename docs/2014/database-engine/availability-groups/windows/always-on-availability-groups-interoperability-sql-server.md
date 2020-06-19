@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: daf87f90-2623-42ca-912c-b8f07d210510
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55e19c050d0dd5d0a07c12f88076c423ade3281a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937221"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 가용성 그룹: 상호 운용성(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 다른 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]기능과의 상호 운용성에 대해 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "62815753"
 |기능|추가 정보|  
 |-------------|----------------------|  
 |변경 데이터 캡처|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
-|변경 내용 추적|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
+|Change tracking|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |포함된 데이터베이스|[AlwaysOn 가용성 그룹에 포함된 데이터베이스(SQL Server)](always-on-availability-groups-sql-server.md)|  
 |데이터베이스 암호화|[AlwaysOn 가용성 그룹 &#40;SQL Server를 사용 하는 암호화 된 데이터베이스&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
 |데이터베이스 스냅샷|[AlwaysOn 가용성 그룹 &#40;SQL Server를 사용 하는 데이터베이스 스냅숏&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  

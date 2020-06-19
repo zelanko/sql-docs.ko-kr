@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789845"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937274"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>가용성 복제본에 대한 클라이언트 연결 액세스 정보(SQL Server)
   AlwaysOn 가용성 그룹에서 보조 역할 즉, 보조 복제본으로 실행되는 동안 읽기 전용 연결을 허용하도록 하나 이상의 가용성 복제본을 구성할 수 있습니다. 주 역할 즉, 주 복제본으로 실행되는 동안 읽기 전용 연결을 허용하거나 제외하도록 각 가용성 복제본을 구성할 수도 있습니다.  
@@ -53,11 +52,11 @@ ms.locfileid: "62789845"
  사용자 연결이 허용되지 않습니다. 보조 데이터베이스를 읽기 액세스에 사용할 수 없습니다. 이 항목은 보조 역할의 기본 동작입니다.  
   
  읽기 전용 연결만  
- `Application Intent` 연결 속성이 (*읽기 전용 연결*)로 `ReadOnly` 설정 된 연결에만 보조 데이터베이스를 사용할 수 있습니다.  
+ `Application Intent`연결 속성이 `ReadOnly` (*읽기 전용 연결*)로 설정 된 연결에만 보조 데이터베이스를 사용할 수 있습니다.  
   
  이 연결 속성에 대한 자세한 내용은 [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조하세요.  
   
- 읽기 전용 연결 허용  
+ 모든 읽기 전용 연결을 허용  
  모든 보조 데이터베이스는 읽기 액세스 연결에 사용할 수 있습니다. 이 옵션을 선택하면 낮은 버전의 클라이언트가 연결할 수 있습니다.  
   
  자세한 내용은 [&#40;SQL Server&#41;가용성 복제본에 대 한 읽기 전용 액세스 구성 ](configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조 하세요.  
@@ -69,7 +68,7 @@ ms.locfileid: "62789845"
  주 데이터베이스에 읽기/쓰기 및 읽기 전용 연결이 모두 허용됩니다. 이 항목은 주 역할의 기본 동작입니다.  
   
  읽기/쓰기 연결만 허용  
- `Application Intent` Connection 속성이 **ReadWrite** 로 설정 되거나 설정 되지 않은 경우에는 연결이 허용 됩니다. `Application Intent` 연결 문자열 키워드가로 `ReadOnly` 설정 된 연결은 허용 되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
+ `Application Intent`Connection 속성이 **ReadWrite** 로 설정 되거나 설정 되지 않은 경우에는 연결이 허용 됩니다. `Application Intent`연결 문자열 키워드가로 설정 된 연결은 `ReadOnly` 허용 되지 않습니다. 읽기/쓰기 연결을 허용하면 고객이 읽기 전용 작업 로드를 주 복제본에 실수로 연결하지 않도록 할 수 있습니다.  
   
  이 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -80,13 +79,13 @@ ms.locfileid: "62789845"
   
 |복제본 역할|복제본에서 지원되는 연결 액세스|연결 의도|연결 시도 결과|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|보조|모두|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
+|보조|모두|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|Success|  
 |보조|없음(기본 보조 동작)|읽기 전용, 읽기/쓰기 또는 연결 의도가 지정되지 않음|실패|  
-|보조|읽기 전용만|읽기 전용|성공|  
+|보조|읽기 전용만|읽기 전용|Success|  
 |보조|읽기 전용만|읽기/쓰기 또는 연결 의도가 지정되지 않음|실패|  
-|주|모두(기본 주 동작)|읽기 전용, 읽기/쓰기, 또는 연결 의도가 지정되지 않음|성공|  
-|주|읽기/쓰기|읽기 전용만|실패|  
-|주|읽기/쓰기|읽기/쓰기 또는 연결 의도가 지정되지 않음|성공|  
+|기본|모두(기본 주 동작)|읽기 전용, 읽기/쓰기, 또는 연결 의도가 지정되지 않음|Success|  
+|기본|읽기/쓰기|읽기 전용만|실패|  
+|기본|읽기/쓰기|읽기/쓰기 또는 연결 의도가 지정되지 않음|Success|  
   
  해당 복제본에 대한 클라이언트 연결을 허용하도록 가용성 그룹을 구성하는 방법은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)을 참조하세요.  
   
@@ -97,8 +96,8 @@ ms.locfileid: "62789845"
   
 |복제본|커밋 모드|초기 역할|보조 역할에 대한 연결 액세스|주 역할에 대한 연결 액세스|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|동기|주|None|읽기/쓰기|  
-|Replica2|동기|보조|없음|읽기/쓰기|  
+|Replica1|동기|기본|None|읽기/쓰기|  
+|Replica2|동기|보조|None|읽기/쓰기|  
 |Replica3|비동기|보조|읽기 전용만|읽기/쓰기|  
 |Replica4|비동기|보조|읽기 전용만|읽기/쓰기|  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62789845"
   
 ## <a name="see-also"></a>참고 항목  
  [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치 (Failover) &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [통계](../../../relational-databases/statistics/statistics.md)  
   
   

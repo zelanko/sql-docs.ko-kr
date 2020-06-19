@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936734"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>가용성 그룹의 강제 수동 장애 조치(Failover) 수행(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 강제 장애 조치(failover)(데이터 손실 가능)를 수행하는 방법에 대해 설명합니다. 강제 장애 조치(failover)는 [예정된 수동 장애 조치(failover)](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 가 가능하지 않을 때 재해 복구용으로만 사용하기 위한 수동 장애 조치(failover)의 한 형태입니다. 동기화되지 않은 보조 복제본으로 강제 장애 조치(failover)를 수행하면 데이터 손실이 발생할 수 있습니다. 따라서 서비스를 즉시 가용성 그룹으로 복원해야 하고 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
@@ -151,7 +150,7 @@ ms.locfileid: "72782877"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
  **강제 장애 조치(failover)를 수행하려면(데이터가 손실될 수 있음)**  
   
-1.  장애 조치 (`cd`failover) 해야 하는 가용성 그룹의 보조 또는 해결 상태에 역할이 있는 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경 합니다 ().  
+1.  `cd`장애 조치 (failover) 해야 하는 가용성 그룹의 보조 또는 해결 상태에 역할이 있는 복제본을 호스팅하는 서버 인스턴스로 디렉터리를 변경 합니다 ().  
   
 2.  다음 형식 중 하나로 `Switch-SqlAvailabilityGroup` Cmdlet을 `AllowDataLoss` 매개 변수와 함께 사용합니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45ad2e961c9f53067b3e998dc2efcec8fb31b51d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33c44106a091f1d970b156a4b29a45738ee81169
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938154"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>자세히 보기 대화 상자(Analysis Services - 다차원 데이터)
   **및** 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 자세히 보기 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 메시지 또는 작업에 대한 자세한 정보를 볼 수 있습니다. 다음을 수행하여 **자세히 보기** 대화 상자를 표시할 수 있습니다.  

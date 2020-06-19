@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 691196697b7131cfaaf5ed5e41aea33f76ddc698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057803"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951203"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑
 
@@ -55,16 +54,16 @@ ms.locfileid: "66057803"
   
      매개 변수가 있는 SQL 문에서 사용하는 매개 변수 표식은 SQL 실행 태스크에서 사용하는 연결 형식에 따라 다릅니다.  
   
-    |연결 유형|매개 변수 표식|  
+    |연결 형식|매개 변수 표식|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL 및 OLE DB|?|  
   
      다음 표에서는 연결 관리자 유형별 SELECT 명령의 예를 나열합니다. 매개 변수는 WHERE 절에 필터 값을 제공합니다. 이 예에서는 SELECT를 사용하여 **의** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 테이블에서 **ProductID** 가 두 매개 변수로 지정된 값보다 크고 작은 제품을 반환합니다.  
   
-    |연결 유형|SELECT 구문|  
+    |연결 형식|SELECT 구문|  
     |---------------------|-------------------|  
     |EXCEL, ODBC 및 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -80,10 +79,10 @@ ms.locfileid: "66057803"
   
      사용하는 매개 변수 이름은 SQL 실행 태스크에 사용하는 연결 형식에 따라 다릅니다.  
   
-    |연결 유형|매개 변수 이름|  
+    |연결 형식|매개 변수 이름|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, ...|  
-    |ADO.NET 및 SQLMOBILE|@\<매개 변수 이름>|  
+    |ADO.NET 및 SQLMOBILE|@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL 및 OLE DB|0, 1, 2, 3, ...|  
   

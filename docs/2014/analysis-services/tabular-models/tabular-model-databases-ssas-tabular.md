@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 669d39c3f76cc8e925932b238bd7b0fd1c1a89c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066417"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938574"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>테이블 형식 model 데이터베이스(SSAS 테이블 형식)
   테이블 형식 model 데이터베이스는 Analysis Services 테이블 형식 모델 프로젝트 템플릿을 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 만드는 Analysis Services 데이터베이스입니다. 이 템플릿에서는 테이블과 관계가 데이터를 나타내기 위한 기본 구조입니다.  

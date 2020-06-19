@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971853"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>파일 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 값을 파일로 채우려면 파일 특성을 만듭니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479997"
   
 9. **탐색기** 표에 표시할 특성 열의 너비를 **표시 픽셀 폭** 상자에 입력합니다.  
   
-10. **파일 확장명** 목록에서 사용자가 업로드할 수 있는 파일 형식을 하나 이상 선택 하거나 기본값 (*.\*)을 그대로 사용 하 여 모든 파일 형식을 허용 합니다.  
+10. **파일 확장명** 목록에서 사용자가 업로드할 수 있는 파일 형식을 하나 이상 선택 하거나 기본값 (*. \* )을 그대로 사용 하 여 모든 파일 형식을 허용 합니다.  
   
 11. 또는 특성 그룹의 변경 내용을 추적하려면 **변경 내용 추적 설정** 을 선택합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
   

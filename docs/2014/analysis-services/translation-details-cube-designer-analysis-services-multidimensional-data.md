@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938306"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>번역 세부 정보(번역 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **번역** 탭에 있는 **번역 세부 정보** 창을 사용하여 현재 선택한 큐브의 번역을 정의 및 관리할 수 있습니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "66065856"
   
      `Caption` 속성  
   
- **\<언어>**  
+ **\<Language>**  
  선택한 언어로 큐브 개체의 속성 값을 입력합니다.  
   
 ## <a name="context-menu"></a>상황에 맞는 메뉴  

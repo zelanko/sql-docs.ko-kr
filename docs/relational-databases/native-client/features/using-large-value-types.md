@@ -1,5 +1,6 @@
 ---
 title: 큰 값 형식 사용 | Microsoft Docs
+description: SQL Server Native Client에서 이전에 특별 한 처리가 필요한 대량 값 데이터 형식을 처리 하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aa7dc9aa82ac11f727ce8e19a0e8930bcab61175
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a4d9e7b429d7f77ffbf1439bf5bb6027345e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950531"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,17 +42,17 @@ ms.locfileid: "81303213"
 >  데이터를 복제 하는 경우 [최대 텍스트 복제 크기 서버 구성 옵션](../../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) 을-1로 구성 해야 할 수 있습니다.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 공급자  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client OLE DB 공급자는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR으로 노출 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR으로 노출 합니다.  
   
  **max** 크기가 무제한으로 설정된 열의 **varchar(max)**, **varbinary(max)** 및 **nvarchar(max)** 데이터 형식은 열 데이터 형식을 반환하는 핵심 OLE DB 스키마 행 집합과 인터페이스를 통해 ISLONG으로 표시됩니다.  
   
- 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN로 바인딩을 허용 하도록 변경 되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
+ 명령 개체의 **IAccessor** 구현이 DBTYPE_IUNKNOWN으로의 바인딩을 허용하도록 변경되었습니다. 소비자가 DBTYPE_IUNKNOWN을 지정하고 *pObject*를 Null로 설정하면 소비자가 출력 변수에서 **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터를 스트리밍할 수 있도록 공급자가 **ISequentialStream** 인터페이스를 소비자에게 반환합니다.  
   
  스트리밍된 출력 매개 변수 값은 결과 행 뒤에 반환됩니다. 애플리케이션이 반환된 모든 출력 매개 변수 값을 사용하지 않고 **IMultipleResults::GetResult**를 호출하여 다음 결과 집합으로 이동하면 DB_E_OBJECTOPEN이 반환됩니다.  
   
- 스트리밍을 지원 하기 위해 Native Client OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)**, **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
+ 스트리밍을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 가변 길이 매개 변수를 순차적인 순서로 액세스 해야 합니다. 즉, **varchar(max)** , **nvarchchar(max)** 또는 **varbinary(max)** 열이나 출력 매개 변수가 DBTYPE_IUNKNOWN에 바인딩되어 있을 때마다 DBPROP_ACCESSORDER를 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 또는 DBPROPVAL_AO_SEQUENTIAL로 설정해야 합니다. 이 액세스 순서 제한을 따르지 않으면 DBSTATUS_E_UNAVAILABLE로 인해 **IRowset::GetData**에 대한 호출이 실패합니다. DBTYPE_IUNKNOWN을 사용한 출력 바인딩이 없을 경우에는 이 제한이 적용되지 않습니다.  
   
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] client OLE DB 공급자는 또한 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 출력 매개 변수를 바인딩할 수 있습니다 .이 경우 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN 표시 되는 반환 값으로 많은 값 형식을 반환 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native client OLE DB 공급자는 또한 대량 값 데이터 형식에 대 한 DBTYPE_IUNKNOWN로 출력 매개 변수를 바인딩할 수 있습니다 .이 경우 저장 프로시저에서 클라이언트에 DBTYPE_IUNKNOWN 표시 되는 반환 값으로 많은 값 형식을 반환 합니다.  
   
  이러한 형식으로 작업하기 위해 애플리케이션에는 다음 옵션이 있습니다.  
   
@@ -61,7 +62,7 @@ ms.locfileid: "81303213"
   
 -   DBTYPE_IUNKNOWN으로 바인딩하고 스트리밍을 사용합니다.  
   
- 열의 최대 크기를 보고할 때 Native Client OLE DB 공급자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다음을 보고 합니다.  
+ 열의 최대 크기를 보고할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 보고 합니다.  
   
 -   예를 들어 **varchar (** 2000 **)** 열에 대해 정의 된 최대 크기는 2000입니다.  
   
@@ -689,10 +690,10 @@ _ExitProcessResultSet:
 }  
 ```  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 많은 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 [Blob 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 많은 값 데이터 형식을 노출 하는 방법에 대 한 자세한 내용은 [BLOB 및 OLE 개체](../../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)를 참조 하세요.  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>SQL Server Native Client ODBC 드라이버  
- Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client odbc 드라이버는 **varchar (max)**, **varbinary (max)** 및 **nvarchar (MAX)** 형식을 odbc API 함수에서 odbc SQL 데이터 형식을 허용 하거나 반환 하는 SQL_VARCHAR, SQL_VARBINARY 및 SQL_WVARCHAR 제공 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT odbc 드라이버는 **varchar (max)**, **varbinary (max)** 및 **NVARCHAR (max)** 형식을 odbc API 함수에서 odbc SQL 데이터 형식을 허용 하거나 반환 하는 SQL_VARCHAR, SQL_VARBINARY 및 SQL_WVARCHAR 제공 합니다.  
   
  열의 최대 크기를 보고할 때 드라이버는 다음 중 하나를 보고합니다.  
   

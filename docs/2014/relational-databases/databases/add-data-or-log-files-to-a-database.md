@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952373"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법에 대해 설명합니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "62917730"
   
 6.  데이터 또는 로그 중에서 원하는 파일 형식을 선택합니다.  
   
-7.  데이터 파일을 선택한 경우 파일을 포함할 파일 그룹을 목록에서 선택하거나 **\<새 파일 그룹>** 을 선택하여 새 파일 그룹을 만듭니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
+7.  데이터 파일의 경우 목록에서 파일을 포함할 파일 그룹을 선택 하거나 **\<new filegroup>** 새 파일 그룹을 만들려면 선택 합니다. 트랜잭션 로그는 파일 그룹에 포함할 수 없습니다.  
   
 8.  파일의 처음 크기를 지정합니다. 데이터베이스에서 예상되는 최대 데이터 양을 고려하여 데이터 파일의 크기를 최대한 크게 지정합니다.  
   

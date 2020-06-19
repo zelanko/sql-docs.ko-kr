@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6445fd53-6844-4170-a86b-7fe76a9f64cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 418827b496cc7e35f11b893ee2c50b96571c419d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: da1243ffeb06f7c4868bc847ece550adf2589f39
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706869"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926634"
 ---
 # <a name="sql-server-2014-product-specifications"></a>SQL Server 2014 제품 사양
   다음 표의 항목에서는 이 릴리스에 대한 제품 사양 정보를 제공합니다.  

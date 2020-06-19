@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951544"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>2단계: 패키지 구성 설정 및 구성
   이 작업에서는 프로젝트를 패키지 배포 모델로 변환하고 패키지 구성 마법사를 사용하여 패키지 구성을 설정합니다. 이 마법사를 사용하여 Foreach 루프 컨테이너의 `Directory` 속성에 대한 구성 설정을 포함하는 XML 구성 파일을 생성합니다. 런타임에 업데이트할 수 있는 새 패키지 수준 변수에서 Directory 속성 값을 제공합니다. 또한 테스트하는 동안 사용할 새로운 예제 데이터 폴더를 채웁니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62891072"
   
 8.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 **Expressions**를 클릭한 다음, 줄임표 단추 **(...)** 를 클릭합니다.  
   
-9. **속성 식 편집기**에서 **속성** 목록을 클릭 하 고를 선택 `Directory`합니다.  
+9. **속성 식 편집기**에서 **속성** 목록을 클릭 하 고를 선택 `Directory` 합니다.  
   
 10. **식** 상자에서 줄임표 단추 **(...)** 를 클릭 합니다.  
   
@@ -83,26 +82,26 @@ ms.locfileid: "62891072"
   
 14. **마법사 완료** 페이지에서 **SSIS Tutorial Directory configuration**등의 구성 이름을 입력합니다. 이 구성 이름은 **패키지 구성 도우미** 대화 상자에 표시됩니다.  
   
-15. **Finish**를 클릭합니다.  
+15. **마침**을 클릭합니다.  
   
 16. **닫기**를 클릭합니다.  
   
-17. 마법사에서 열거자의 `value` `Directory` 속성을 설정 하는 변수의에 대 한 구성 설정을 포함 하는 ssistutorial 입력 라는 구성 파일을 만듭니다.  
+17. 마법사에서 `value` `Directory` 열거자의 속성을 설정 하는 변수의에 대 한 구성 설정을 포함 하는 ssistutorial 입력 라는 구성 파일을 만듭니다.  
   
     > [!NOTE]  
     >  일반적으로 구성 파일에는 패키지 속성에 대한 복잡한 정보가 있지만 이 자습서에서는 구성 정보만 있어야 합니다.  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.Variables [User:: varFolderName]. 속성 [Value] "ValueType =" String "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \</구성> 합니다.  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>새 예제 데이터 폴더를 만들고 채우려면  
   
-1.  Windows 탐색기의 드라이브 루트 수준 (예: C:\\)에서 라는 `New Sample Data`새 폴더를 만듭니다.  
+1.  Windows 탐색기의 드라이브 루트 수준 (예: C: \\ )에서 라는 새 폴더를 만듭니다 `New Sample Data` .  
   
 2.  컴퓨터에서 예제 파일을 찾아 폴더에서 3개의 파일을 복사합니다.  
   
-3.  `New Sample Data` 폴더에 복사한 파일을 붙여넣습니다.  
+3.  폴더에 `New Sample Data` 복사한 파일을 붙여넣습니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [3단계: Directory 속성 구성 값 수정](lesson-5-3-modifying-the-directory-property-configuration-value.md)  

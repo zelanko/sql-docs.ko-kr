@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e08fd0455e42717a5efcc33f9cb9757e81867ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970747"
 ---
 # <a name="retrieving-udt-data"></a>UDT 데이터 검색
   클라이언트에서 UDT(사용자 정의 형식)를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 UDT로 등록된 어셈블리를 클라이언트 애플리케이션에서 사용할 수 있어야 합니다. UDT 어셈블리는 애플리케이션과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  
@@ -157,10 +156,10 @@ static void Main()
 ```  
   
 ## <a name="binding-udts-as-bytes"></a>UDT를 바이트로 바인딩  
- UDT 열에서 원시 데이터를 검색하려는 경우가 있습니다. 로컬에서 데이터의 형식을 사용할 수 없거나 UDT의 인스턴스를 인스턴스화하지 않으려는 경우가 그러한 예입니다. 의 **GetBytes** 메서드를 사용 하 여 바이트 배열로 원시 바이트를 읽을 수 있습니다 `SqlDataReader`. 이 메서드는 지정한 열 오프셋의 바이트 스트림을 지정한 버퍼 오프셋에서 시작하는 배열의 버퍼로 읽어 들입니다. 또 다른 옵션은 **Getsqlbytes** 또는 **GetSqlBinary** 메서드 중 하나를 사용 하 고 단일 작업으로 모든 내용을 읽습니다. 어느 경우에나 UDT 개체는 인스턴스화되지 않으므로 클라이언트 어셈블리에서 UDT에 대한 참조를 설정하지 않아도 됩니다.  
+ UDT 열에서 원시 데이터를 검색하려는 경우가 있습니다. 로컬에서 데이터의 형식을 사용할 수 없거나 UDT의 인스턴스를 인스턴스화하지 않으려는 경우가 그러한 예입니다. 의 **GetBytes** 메서드를 사용 하 여 바이트 배열로 원시 바이트를 읽을 수 있습니다 `SqlDataReader` . 이 메서드는 지정한 열 오프셋의 바이트 스트림을 지정한 버퍼 오프셋에서 시작하는 배열의 버퍼로 읽어 들입니다. 또 다른 옵션은 **Getsqlbytes** 또는 **GetSqlBinary** 메서드 중 하나를 사용 하 고 단일 작업으로 모든 내용을 읽습니다. 어느 경우에나 UDT 개체는 인스턴스화되지 않으므로 클라이언트 어셈블리에서 UDT에 대한 참조를 설정하지 않아도 됩니다.  
   
 ### <a name="example"></a>예제  
- 이 예제에서는를 `SqlDataReader`사용 하 여 바이트 배열에 **지점** 데이터를 원시 바이트로 검색 하는 방법을 보여 줍니다. 이 코드는 `System.Text.StringBuilder`를 사용하여 원시 바이트를 콘솔 창에 표시될 문자열 표현으로 변환합니다.  
+ 이 예제에서는를 사용 하 여 바이트 배열에 **지점** 데이터를 원시 바이트로 검색 하는 방법을 보여 줍니다 `SqlDataReader` . 이 코드는 `System.Text.StringBuilder`를 사용하여 원시 바이트를 콘솔 창에 표시될 문자열 표현으로 변환합니다.  
   
 ```vb  
 Option Explicit On  
@@ -374,7 +373,7 @@ class GetRawBytes
  사용자의 ADO.NET 코드에서 UDT를 입력 및 출력 매개 변수 모두로 사용할 수 있습니다.  
   
 ## <a name="using-udts-in-query-parameters"></a>쿼리 매개 변수에 UDT 사용  
- `SqlParameter` 개체의 `System.Data.SqlClient.SqlCommand`를 설정할 때 UDT를 매개 변수 값으로 사용할 수 있습니다. `SqlDbType.Udt` 컬렉션에 대해 `SqlParameter` 메서드를 호출할 때는 매개 변수가 UDT임을 나타내기 위해 `Add` 개체의 `Parameters` 열거형을 사용합니다. `SqlCommand` 개체 `UdtTypeName` 의 속성을 사용 하 여 데이터베이스에서 UDT의 정규화 된 이름을 *schema_name. object_name* 구문을 사용 하 여 지정 합니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
+ `SqlParameter` 개체의 `System.Data.SqlClient.SqlCommand`를 설정할 때 UDT를 매개 변수 값으로 사용할 수 있습니다. `SqlDbType.Udt` 컬렉션에 대해 `SqlParameter` 메서드를 호출할 때는 매개 변수가 UDT임을 나타내기 위해 `Add` 개체의 `Parameters` 열거형을 사용합니다. `UdtTypeName`개체의 속성을 `SqlCommand` 사용 하 여 데이터베이스에서 UDT의 정규화 된 이름을 *schema_name. object_name* 구문을 사용 하 여 지정 합니다. 꼭 필요한 것은 아니지만 정규화된 이름을 사용하면 코드가 명확해집니다.  
   
 > [!NOTE]  
 >  클라이언트 프로젝트에서 UDT 어셈블리의 로컬 복사본을 사용할 수 있어야 합니다.  

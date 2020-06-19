@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970877"
 ---
 # <a name="manage-filetables"></a>FileTable 관리
   FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
@@ -62,7 +61,7 @@ GO
   
      ALTER DATABASE 명령이 취소되거나 시간 초과로 종료된 경우에는 트랜잭션 액세스 수준이 변경되지 않습니다.  
   
--   WITH \<termination> 절(ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT)이 포함된 ALTER DATABASE 문을 호출하면 열려 있는 모든 비트랜잭션 파일 핸들이 중지됩니다.  
+-   WITH 절을 사용 하 여 ALTER DATABASE 문을 호출 하는 경우 \<termination> ([초] 정수 뒤에 ROLLBACK) 즉시 롤백 | NO_WAIT)를 클릭 하면 열려 있는 모든 비트랜잭션 파일 핸들이 중지 됩니다.  
   
 > [!WARNING]  
 >  열려 있는 파일 핸들을 중지하면 저장하지 않은 데이터가 손실될 수 있습니다. 이 동작은 파일 시스템 자체의 동작과 일치합니다.  
@@ -192,7 +191,7 @@ GO
  FileTable이 보유한 대부분의 잠금은 애플리케이션에서 연 파일에 해당합니다.  
   
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
- 동적 관리 뷰 **sys.dm_tran_locks&#40;Transact-SQL&#41;** 의 [request_owner_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) 필드와 **sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;** 의 [fcb_id](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
+ 동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
   
 ```sql  
 SELECT opened_file_name  

@@ -1,5 +1,6 @@
 ---
 title: 분산 트랜잭션 만들기 | Microsoft Docs
+description: 응용 프로그램은 MSDTC를 사용 하 여 여러 SQL Server 인스턴스에서 트랜잭션을 확장 하거나 배포할 수 있습니다. .NET 클래스는 트랜잭션을 배포할 수도 있습니다.
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950465"
 ---
 # <a name="create-a-distributed-transaction"></a>분산 트랜잭션 만들기
 
@@ -38,7 +39,7 @@ The following includes .md file is Empty, as of long before 2019/May/13.
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>ODBC 드라이버가 SQL Server 온-프레미스에 대 한 MSDTC를 호출 합니다.
 
-MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 사용 하면 응용 프로그램에서 둘 이상의 인스턴스에서 트랜잭션을 확장 하거나 _배포할_ 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 분산 트랜잭션은 두 인스턴스가 별도의 컴퓨터에서 호스팅되는 경우에도 작동 합니다.
+MSDTC (Microsoft DTC(Distributed Transaction Coordinator))를 사용 하면 응용 프로그램에서 둘 이상의 인스턴스에서 트랜잭션을 확장 하거나 _배포할_ 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 분산 트랜잭션은 두 인스턴스가 별도의 컴퓨터에서 호스팅되는 경우에도 작동 합니다.
 
 MSDTC는 Microsoft SQL Server 온-프레미스에 대해 설치 되지만 Microsoft Azure SQL Database 클라우드 서비스에는 사용할 수 없습니다.
 
@@ -57,7 +58,7 @@ _(1)_ ODBC 없이 MSDTC를 호출할 수 있습니다. 이 경우 MSDTC는 트�
 
 ### <a name="only-one-distributed-transaction"></a>하나의 분산 트랜잭션만
 
-C + + Native Client ODBC 응용 프로그램이 분산 트랜잭션에 참여 한다고 가정 합니다. 그런 다음 응용 프로그램은 두 번째 분산 트랜잭션에 참여 합니다. 이 경우 Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 드라이버는 원래 분산 트랜잭션을 떠나 새 분산 트랜잭션에 참여 시킵니다.
+C + + Native Client ODBC 응용 프로그램이 분산 트랜잭션에 참여 한다고 가정 합니다. 그런 다음 응용 프로그램은 두 번째 분산 트랜잭션에 참여 합니다. 이 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 원래 분산 트랜잭션을 떠나 새 분산 트랜잭션에 참여 시킵니다.
 
 자세한 내용은 [DTC 프로그래머 참조](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\))를 참조 하세요.
 

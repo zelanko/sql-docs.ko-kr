@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970753"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>DataAdapter로 UDT 열 업데이트
   UDT(사용자 정의 형식)는 데이터를 검색하고 수정하기 위해 `System.Data.DataSet` 및 `System.Data.SqlClient.SqlDataAdapter`를 사용하여 지원됩니다.  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- 다음 ADO.NET 코드 조각은 올바른 연결 문자열을 검색 하 고 새 `SqlDataAdapter`를 만든 다음 **Points** 테이블의 `System.Data.DataTable` 데이터 행으로를 채웁니다.  
+ 다음 ADO.NET 코드 조각은 올바른 연결 문자열을 검색 하 고 새를 만든 다음 `SqlDataAdapter` `System.Data.DataTable` **Points** 테이블의 데이터 행으로를 채웁니다.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,9 +84,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  다음 ADO.NET 예에는 두 개의 메서드가 있습니다.  
   
--   `UserProvidedCommands``InsertCommand`, 및 `UpdateCommand` `DeleteCommand` 개체를 제공 하 여 열을 `Point` `timestamp` 포함 하지 않는 **Points** 테이블에서 UDT를 업데이트 하는 방법을 보여 줍니다.  
+-   `UserProvidedCommands`, 및 개체를 제공 하 `InsertCommand` 여 `UpdateCommand` `DeleteCommand` `Point` 열을 포함 하지 않는 **Points** 테이블에서 UDT를 업데이트 `timestamp` 하는 방법을 보여 줍니다.  
   
--   `CommandBuilder`는 `timestamp` 열이 포함 된 **Points_ts** 테이블 `SqlCommandBuilder` 에서를 사용 하는 방법을 보여 줍니다.  
+-   `CommandBuilder`는 `SqlCommandBuilder` 열이 포함 된 **Points_ts** 테이블에서를 사용 하는 방법을 보여 줍니다 `timestamp` .  
   
 ```vb  
 Imports System  

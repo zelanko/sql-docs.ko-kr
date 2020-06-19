@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059715"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951837"
 ---
 # <a name="data-profile-viewer-f1-help"></a>데이터 프로필 뷰어 F1 도움말
   데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 볼 수 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059715"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>프로필 유형 = 열 길이 분포 프로필  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>열 길이 분포 프로필 - \<column> 창  
+#### <a name="column-length-distribution-profile---column-pane"></a>열 길이 분포 프로필- \<column> 창  
  **최소 길이**  
  이 열의 값에 대한 최소 길이를 표시합니다.  
   
@@ -69,12 +68,12 @@ ms.locfileid: "66059715"
  **Count**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행 수를 표시합니다.  
   
- **백분율**  
+ **나타낸**  
  프로파일링된 열의 값에 **길이** 열에 표시된 길이가 지정된 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-null-ratio-profile"></a>프로필 유형 = 열 Null 비율 프로필  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>열 Null 비율 프로필 - \<column> 창  
+#### <a name="column-null-ratio-profile---column-pane"></a>열 Null 비율 프로필- \<column> 창  
  **Null 개수**  
  프로파일링된 열에 Null 값이 있는 행 수를 표시합니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059715"
   
 ### <a name="profile-type--column-pattern-profile"></a>프로필 유형 = 열 패턴 프로필  
   
-#### <a name="column-pattern-profile---column-pane"></a>열 패턴 프로필 - \<column> 창  
+#### <a name="column-pattern-profile---column-pane"></a>열 패턴 프로필 \<column> 창  
  **행 개수**  
  테이블 또는 뷰의 행 수를 표시합니다.  
   
@@ -94,19 +93,19 @@ ms.locfileid: "66059715"
  **패턴**  
  프로파일링된 열에 대해 계산된 패턴을 표시합니다.  
   
- **백분율**  
+ **나타낸**  
  값이 **패턴** 열에 표시된 패턴과 일치하는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--column-statistics-profile"></a>프로필 유형 = 열 통계 프로필  
   
-#### <a name="column-statistics-profile---column-pane"></a>열 통계 프로필 - \<column> 창  
- **최대**  
+#### <a name="column-statistics-profile---column-pane"></a>열 통계 프로필- \<column> 창  
+ **최소**  
  프로파일링된 열에서 찾은 최소값을 표시합니다.  
   
- **최대화**  
+ **Maximum**  
  프로파일링된 열에서 찾은 최대값을 표시합니다.  
   
- **평균**  
+ **되었음을**  
  프로파일링된 열에서 찾은 값의 평균을 표시합니다.  
   
  **표준 편차**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059715"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>프로필 유형 = 열 값 분포 프로필  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>열 값 분포 프로필 - \<column> 창  
+#### <a name="column-value-distribution-profile---column-pane"></a>열 값 분포 프로필- \<column> 창  
  **고유 값 수**  
  프로파일링된 열에서 찾은 고유 값의 개수를 표시합니다.  
   
@@ -128,12 +127,12 @@ ms.locfileid: "66059715"
  **Count**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행 수를 표시합니다.  
   
- **백분율**  
+ **나타낸**  
  프로파일링된 열에 **값** 열에 표시된 값이 있는 행의 비율을 표시합니다.  
   
 ### <a name="profile-type--candidate-key-profile"></a>프로필 유형 = 후보 키 프로필  
   
-#### <a name="candidate-key-profile---table-pane"></a>후보 키 프로필 - \<table> 창  
+#### <a name="candidate-key-profile---table-pane"></a>후보 키 프로필- \<table> 창  
  **키 열**  
  프로파일링에 대해 후보 키로 선택된 열을 표시합니다.  
   
@@ -164,17 +163,17 @@ ms.locfileid: "66059715"
 > [!NOTE]  
 >  데이터에서 잘못된 값의 비율이 높으면 함수 종속성 프로필에서 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 Postal Code 값 "98052"에 대한 State 값이 행의 90%에 대해 "WI"인 경우 프로필은 올바른 주 값 "WA"를 포함하는 행을 위반으로 보고합니다.  
   
- **\<결정 열 이름>**  
+ **\<determinant column name>**  
  이 함수 종속성 위반 인스턴스에서 결정 열 또는 열 조합의 값을 표시합니다.  
   
- **\<종속 열 이름>**  
+ **\<dependent column name>**  
  이 함수 종속성 위반 인스턴스에서 종속 열의 값을 표시합니다.  
   
  **지원 개수**  
  결정 열 값이 종속 열을 결정하는 행 수를 표시합니다.  
   
  **위반 개수**  
- 결정 열 값이 종속 열을 결정하지 않는 행 수를 표시합니다. 종속 값이 ** \<종속 열 이름>** 열에 표시 된 값인 행입니다.  
+ 결정 열 값이 종속 열을 결정하지 않는 행 수를 표시합니다. 이는 종속 값이 열에 표시 된 값인 행입니다 **\<dependent column name>** .  
   
  **지원 백분율**  
  결정 열이 종속 열을 결정하는 행의 비율을 표시합니다.  

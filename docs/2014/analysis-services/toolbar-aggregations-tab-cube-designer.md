@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8105ded62017fad035b1b2d756f0c797f6b94154
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938454"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>도구 모음(집계 탭, 큐브 디자이너)
   **도구 모음** 창을 사용하여 큐브 디자이너의 **집계** 탭에서 일반 동작을 수행할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
   
-|옵션|설명|  
+|옵션|Description|  
 |------------|-----------------|  
 |**집계 디자인**|**집계 디자인 마법사**를 표시하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 집계 디자이너의 표준 뷰에만 표시됩니다.|  
 |**사용 빈도 기반 최적화**|**사용 빈도 기반 최적화 마법사**를 표시하려면 클릭합니다.<br /><br /> 참고: 이 옵션은 집계 디자이너의 표준 뷰에만 표시됩니다.|  

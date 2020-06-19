@@ -8,13 +8,12 @@ ms.technology: analysis-services
 ms.topic: conceptual
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0ec03cf9cdf8ce0f86d321126fc0bea11efc587
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f3f0c765ad6a9f50695a7d57adf4e03c1a6103
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938264"
 ---
 # <a name="ui-designers-and-dialogs-for-data-mining-analysis"></a>데이터 마이닝 분석을 위한 UI 디자이너 및 대화 상자
 

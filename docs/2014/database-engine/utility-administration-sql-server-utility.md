@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927694"
 ---
 # <a name="utility-administration-sql-server-utility"></a>유틸리티 관리(SQL Server 유틸리티)
   유틸리티 관리 탭을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티의 정책, 보안 및 데이터 웨어하우스 설정을 관리할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개념에 대한 자세한 내용은 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요.  
@@ -89,11 +88,11 @@ ms.locfileid: "83857855"
  유틸리티 데이터 웨어하우스 구성 정보  
  다음 구성 설정은 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]릴리스에서 구성할 수 없습니다.  
   
--   UMDW 이름: Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW name: Sysutility_mdw_ \<GUID> _DATA입니다.  
   
 -   컬렉션 집합 업로드 빈도: 15분마다.  
   
- UMDW 디렉터리는 구성할 수 있으며 \<시스템 드라이브>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<시스템 드라이브>는 일반적으로 C:\ 드라이브입니다. 로그 파일 UMDW_\<GUID>_LOG는 같은 디렉터리에 있습니다.  
+ UMDW 디렉터리는 구성 가능 합니다.: \<System drive> Files\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \mssql\data입니다. \\ 여기서 \<System drive> 는 일반적으로 C:\입니다. 드라이브나. 로그 파일 UMDW_ _LOG는 \<GUID> 동일한 디렉터리에 있습니다.  
   
 > [!NOTE]  
 >  UMDW(sysutility_mdw) 파일 위치는 detach/attach 또는 ALTER DATABASE를 사용하여 변경할 수 있으며 ALTER DATABASE를 사용하는 것이 좋습니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)를 참조하세요.  

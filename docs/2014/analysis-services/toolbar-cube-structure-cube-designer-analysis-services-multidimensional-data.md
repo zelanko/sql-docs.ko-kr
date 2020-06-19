@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bb13932-350d-4c6c-96f7-893d6cbdf449
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d44311bc2622bbf93a8bb42afbc05f740ac36e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b925452094fc283e871c2998c7068b60d635c7dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066024"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938424"
 ---
 # <a name="toolbar-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>도구 모음(큐브 구조 탭, 큐브 디자이너)(Analysis Services - 다차원 데이터)
   큐브 디자이너의 **큐브 구조** 탭에 있는 **도구 모음** 창을 사용하여 처리 또는 새 측정값 그룹 생성과 같은 일반 동작을 수행할 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "66066024"
 |용어|정의|  
 |----------|----------------|  
 |**비즈니스 인텔리전스 추가**|**비즈니스 인텔리전스 마법사** 를 표시하고 비즈니스 인텔리전스 기능을 큐브에 추가하려면 클릭합니다.|  
-|**프로세스**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.|  
+|**Process**|**처리** 대화 상자를 표시하고 큐브를 처리하려면 클릭합니다.|  
 |**새 측정값 추가**|**새 측정값** 대화 상자를 표시하고 현재 **측정값** 창에서 선택한 측정값 그룹에 새 측정값을 추가하려면 클릭합니다.|  
 |**새 측정값 그룹**|**새 측정값 그룹** 대화 상자를 표시하고 **측정값** 창에 새 측정값 그룹을 추가하려면 클릭합니다.|  
 |**측정값 표시**|다음 옵션 간에 전환하거나 하나를 선택하여 **측정값** 창의 뷰를 변경하려면 클릭합니다.<br /><br /> **트리**: 측정값 그룹과 측정값을 트리 뷰에 표시 합니다.<br /><br /> **표**: 측정값 그룹과 측정값을 표에 표시 합니다.|  
