@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62a6b3a1f92723d43fde32060c6d4ccbbfc14a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0549e6b4980dd0e0e0e569b9dd95cf404b216c29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62699005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053335"
 ---
 # <a name="audit-database-object-access-event-class"></a>Audit Database Object Access 이벤트 클래스
   **Audit Database Object Access** 이벤트 클래스는 스키마 등의 데이터베이스 개체에 액세스하면 발생합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28261014-342c-442a-bd89-6d04b8d4e8b7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcbff0c10d6e58e12474ce3c514a38e74c7119f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937134"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음
     
@@ -28,11 +27,11 @@ ms.locfileid: "62791867"
 |||  
 |-|-|  
 |**정책 이름**|가용성 그룹 자동 장애 조치(Failover) 준비|  
-|**문제**|가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음|  
-|**범주**|**위험**|  
+|**문제점**|가용성 그룹에 대해 자동 장애 조치(Failover)가 준비되지 않음|  
+|**범주**|**심각**|  
 |**패싯에**|가용성 그룹|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 그룹에 장애 조치(failover)가 준비된 보조 복제본이 하나 이상 있는지 확인합니다. 주 복제본의 장애 조치(Failover) 모드가 자동이지만 가용성 그룹에 장애 조치(Failover)가 준비된 보조 복제본이 하나도 없는 경우 이 정책은 비정상 상태이며 경고가 발생합니다.  
   
  적어도 하나의 보조 복제본이 자동 장애 조치(Failover)가 준비된 상태이면 정책은 정상 상태입니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d14371c1db5273d66fee327cc03d2b2e2de3edb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930215"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>옵션 (쿼리 실행-SQL Server-일반 페이지)
   이 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리를 실행하는 옵션을 지정할 수 있습니다. 이러한 옵션의 변경 사항은 새로운 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리에만 적용됩니다. 현재 쿼리에 대한 옵션을 변경하려면 **쿼리** 메뉴에서 **쿼리 옵션** 을 클릭하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 창에서 마우스 오른쪽 단추를 클릭한 다음 **쿼리 옵션**을 선택합니다.  

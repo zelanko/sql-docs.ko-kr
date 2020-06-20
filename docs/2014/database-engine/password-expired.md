@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929694"
 ---
 # <a name="password-expired"></a>암호 만료
-  인증을 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 여 서버에 연결할 때 제공한 암호가 올바르지만 만료 된 경우에 나타납니다. **다음 로그인할 때 반드시 암호 변경** 옵션을 사용하여 만든 새 계정으로 서버에 연결할 때도 나타납니다. **암호 만료** 대화 상자를 사용하여 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인의 암호를 변경할 수 있습니다.  
+  인증을 사용 하 여 서버에 연결할 때 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제공한 암호가 올바르지만 만료 된 경우에 나타납니다. **다음 로그인할 때 반드시 암호 변경** 옵션을 사용하여 만든 새 계정으로 서버에 연결할 때도 나타납니다. **암호 만료** 대화 상자를 사용하여 이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증 로그인의 암호를 변경할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **로그인**  

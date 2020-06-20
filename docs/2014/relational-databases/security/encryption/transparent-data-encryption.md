@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060248"
 ---
 # <a name="transparent-data-encryption-tde"></a>TDE(투명한 데이터 암호화)
   *투명한 데이터 암호화* (TDE)는 사용하지 않는 데이터 암호화라고 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 데이터 파일을 암호화합니다. 보안 시스템 설계, 중요한 자산 암호화 및 데이터베이스 서버 방화벽 구축과 같은 데이터베이스 보호에 도움이 되는 몇 가지 예방 조치를 취할 수 있습니다. 그러나 물리적 미디어(예: 드라이브 또는 백업 테이프)가 도난되는 시나리오에서는 악의적인 사용자가 데이터베이스를 단순히 복원하거나 연결하여 데이터를 찾아 볼 수 있습니다. 한 가지 해결 방법은 데이터베이스의 중요한 데이터를 암호화하고 인증서와 함께 데이터를 암호화하는 데 사용된 키를 보호하는 것입니다. 이 경우 키가 없으면 누구도 데이터를 사용할 수 없지만 이러한 보호 방법은 사전에 계획해야 합니다.
@@ -36,19 +35,19 @@ ms.locfileid: "78176763"
 >  **관련 항목:**
 > 
 >  -   [Azure SQL Database를 사용한 투명한 데이터 암호화](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)
-> -   [TDE로 보호 되는 데이터베이스를 다른 SQL Server 이동](move-a-tde-protected-database-to-another-sql-server.md)
+> -   [다른 SQL Server로 TDE 보호 데이터베이스 이동](move-a-tde-protected-database-to-another-sql-server.md)
 > -   [EKM을 사용 하 여 TDE 사용](enable-tde-on-sql-server-using-ekm.md)
 
 ## <a name="about-tde"></a>TDE 정보
  데이터베이스 파일의 암호화는 페이지 수준에서 수행됩니다. 암호화된 데이터베이스의 페이지는 암호화된 후 디스크에 작성되고 메모리로 읽어 들일 때 암호가 해독됩니다. TDE로 암호화된 데이터베이스의 크기가 증가되지는 않습니다.
 
- **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 적용되는 정보**
+ **적용 되는 정보[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
 
  [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([일부 지역에서는 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))에서 TDE를 사용하는 경우, master 데이터베이스에 저장된 서버 수준 인증서가 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에 의해 자동으로 생성됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 TDE 데이터베이스를 이동하려면 데이터베이스 암호를 해독하고, 데이터베이스를 이동한 후, 대상 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 TDE를 다시 사용하도록 해야 합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 TDE에 대한 단계별 지침은 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)를 참조하십시오.
 
  TDE 상태 미리보기는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 의 버전 제품군 V12가 현재 일반 가용성 상태에 있다고 알려진 지역의 하위 집합에도 적용됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 TDE는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 이(가) TDE가 미리보기에서 GA로 승격되었음을 알릴 때까지 제품 데이터베이스에서 사용하기 위한 것이 아닙니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12에 대한 자세한 내용은 [Azure SQL Database의 새로운 소식](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)을 참조합니다.
 
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되는 정보**
+ **적용 되는 정보[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  보안이 설정된 후 올바른 인증서를 사용하여 데이터베이스를 복원할 수 있습니다. 인증서에 대한 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)를 참조하십시오.
 
@@ -110,9 +109,9 @@ GO
 
 |명령 또는 함수|목적|
 |-------------------------|-------------|
-|[CREATE DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 만듭니다.|
-|[ALTER DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 변경합니다.|
-|[DROP DATABASE ENCRYPTION KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|데이터베이스 암호화에 사용한 키를 제거합니다.|
+|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 만듭니다.|
+|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|데이터베이스 암호화에 사용할 키를 변경합니다.|
+|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|데이터베이스 암호화에 사용한 키를 제거합니다.|
 |[ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|TDE를 설정하는 데 사용된 `ALTER DATABASE` 옵션에 대해 설명합니다.|
 
 ## <a name="catalog-views-and-dynamic-management-views"></a>카탈로그 뷰 및 동적 관리 뷰

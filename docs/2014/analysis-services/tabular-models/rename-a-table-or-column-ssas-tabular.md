@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7d0fa1fde56ab4293e7733a974ec57d77c55151
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066685"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938684"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>테이블 또는 열 이름 바꾸기(SSAS 테이블 형식)
   가져오기 프로세스 동안 **테이블 가져오기 마법사** 의 **테이블 및 뷰 선택** 페이지에서 **이름**을 입력하여 테이블 이름을 변경할 수 있습니다. **테이블 가져오기 마법사** 의 **SQL 쿼리 지정**페이지에서 쿼리를 지정하여 데이터를 가져오는 경우 테이블 및 열 이름을 변경할 수도 있습니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "66066685"
   
 -   제어 문자  
   
--   Analysis Services 개체의 이름에 사용할 수 없는 다음 문자는.,; ':/ \\*|? &% $! + = () []{}<>  
+-   Analysis Services 개체의 이름에 사용할 수 없는 다음 문자는.,; ':/ \\ *|? &% $! + = () [] {}<>  
   
 -   MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 함수 이름과 연산자를 비롯한 Analysis Services의 예약된 키워드  
   

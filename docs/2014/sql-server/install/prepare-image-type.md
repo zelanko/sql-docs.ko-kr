@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b61a6d14-eabb-4b09-ab18-683a037f8ca4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73c0e6e5f5c423876191a536083b149c01ba3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041826"
 ---
 # <a name="prepare-image-type"></a>이미지 유형 준비
   **설치 마법사의** 이미지 유형 준비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 인스턴스를 설치할지 아니면 기존 인스턴스에 기능을 추가할지 지정할 수 있습니다.  

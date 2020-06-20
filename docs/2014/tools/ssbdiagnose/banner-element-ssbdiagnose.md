@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db804d25ce3129ebb177b021a64f5a63d0620940
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006794"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
   **ssbdiagnose** 출력 XML 파일을 생성한 유틸리티를 식별합니다.  
@@ -44,11 +43,11 @@ ms.locfileid: "63186872"
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**내용과**|**ssbdiagnose** 출력 XML 파일당 한 번|  
+|**발생 빈도**|**ssbdiagnose** 출력 XML 파일당 한 번|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

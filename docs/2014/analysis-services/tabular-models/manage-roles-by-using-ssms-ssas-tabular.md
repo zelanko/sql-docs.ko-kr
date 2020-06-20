@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d8efab57dd195993ab9ab12c0cb9b3f167bd796
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938844"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS를 사용하여 역할 관리(SSAS 테이블 형식)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델에 대한 역할을 생성, 편집 및 관리할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "66067043"
   
 4.  **이 역할에 대한 데이터베이스 권한 설정**에서 다음 사용 권한 옵션 중 하나를 선택합니다.  
   
-    |사용 권한|설명|  
+    |사용 권한|Description|  
     |----------------|-----------------|  
     |**모든 권한(관리자)**|멤버는 모델 스키마를 수정할 수 있으며 모든 데이터를 볼 수 있습니다.|  
     |**Process Database**|멤버는 처리 및 모두 처리 작업을 실행할 수 있습니다. 모델 스키마를 수정할 수 없으며 데이터를 볼 수 없습니다.|  
@@ -58,12 +57,12 @@ ms.locfileid: "66067043"
   
 6.  **멤버 자격 설정 창에서 추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 멤버로 추가할 Windows 사용자 또는 그룹을 추가합니다.  
   
-7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가 하려면 **역할 속성- \<rolename>** 대화 상자의 **페이지 선택**에서 **행 필터**를 클릭 합니다.  
+7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가 하려면 **역할 속성- \<rolename> ** 대화 상자의 **페이지 선택**에서 **행 필터**를 클릭 합니다.  
   
-8.  행 필터 창에서 테이블을 선택한 다음 **Dax 필터** 필드를 클릭 하 고 **dax 필터 \<-tablename>** 필드에서 dax 수식을 입력 합니다.  
+8.  행 필터 창에서 테이블을 선택한 다음 **Dax 필터** 필드를 클릭 하 고 **dax \<tablename> 필터** 필드에 dax 수식을 입력 합니다.  
   
     > [!NOTE]  
-    >  DAX 필터- \<tablename> 필드에 자동 완성 쿼리 편집기나 insert function 기능이 포함 되어 있지 않습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
+    >  DAX 필터 필드에는 \<tablename> 자동 완성 쿼리 편집기나 삽입 함수 기능이 포함 되어 있지 않습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
   
 9. **확인** 을 클릭 하 여 역할을 저장 합니다.  
   

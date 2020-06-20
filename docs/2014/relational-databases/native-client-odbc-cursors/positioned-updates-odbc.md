@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb6ed6d38d4294884092ae5c038b5e83d23c6b97
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c9f21d5679e3bc926fc9a824ba11d8283dc9dad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020751"
 ---
 # <a name="positioned-updates-odbc"></a>위치 지정 업데이트(ODBC)
   ODBC는 커서에서 위치 지정 업데이트를 수행하는 두 가지 방법을 지원합니다.  

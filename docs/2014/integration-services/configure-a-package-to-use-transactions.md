@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d16473832d321e252753fa79e8b3178f2c2dcf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921942"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>트랜잭션을 사용하도록 패키지 구성
   트랜잭션을 사용하도록 패키지를 구성할 때는 다음과 같은 두 가지 옵션을 사용할 수 있습니다.  
@@ -29,9 +28,9 @@ ms.locfileid: "66060857"
  다음 절차에서는 위의 두 옵션을 구성하는 방법에 대해 설명합니다.  
   
 ## <a name="configuring-a-single-transaction"></a>단일 트랜잭션 구성  
- 이 옵션에서는 패키지 자체에서 단일 트랜잭션을 시작합니다. 패키지의 TransactionOption 속성을로 `Required`설정 하 여이 트랜잭션을 시작 하도록 패키지를 구성 합니다.  
+ 이 옵션에서는 패키지 자체에서 단일 트랜잭션을 시작합니다. 패키지의 TransactionOption 속성을로 설정 하 여이 트랜잭션을 시작 하도록 패키지를 구성 합니다 `Required` .  
   
- 그런 다음 이 단일 트랜잭션에 특정 태스크와 컨테이너를 등록합니다. 트랜잭션에 태스크 또는 컨테이너를 등록 하려면 해당 태스크 또는 컨테이너의 TransactionOption 속성을로 `Supported`설정 합니다.  
+ 그런 다음 이 단일 트랜잭션에 특정 태스크와 컨테이너를 등록합니다. 트랜잭션에 태스크 또는 컨테이너를 등록 하려면 해당 태스크 또는 컨테이너의 TransactionOption 속성을로 설정 `Supported` 합니다.  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>단일 트랜잭션을 사용하도록 패키지를 구성하려면  
   
@@ -43,11 +42,11 @@ ms.locfileid: "66060857"
   
 4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-5.  **속성** 창에서 TransactionOption 속성을로 `Required`설정 합니다.  
+5.  **속성** 창에서 TransactionOption 속성을로 설정 `Required` 합니다.  
   
 6.  **제어 흐름** 탭의 디자인 화면에서 트랜잭션에 등록할 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-7.  **속성** 창에서 TransactionOption 속성을로 `Supported`설정 합니다.  
+7.  **속성** 창에서 TransactionOption 속성을로 설정 `Supported` 합니다.  
   
     > [!NOTE]  
     >  트랜잭션에 연결을 참여시키려면 트랜잭션에서 해당 연결을 사용하는 태스크를 등록합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
@@ -55,9 +54,9 @@ ms.locfileid: "66060857"
 8.  트랜잭션에 등록할 각 태스크와 컨테이너에 대해 6-7단계를 반복합니다.  
   
 ## <a name="configuring-multiple-transactions"></a>여러 트랜잭션 구성  
- 이 옵션에서는 패키지 자체에서 트랜잭션을 지원하지만 트랜잭션을 시작하지는 않습니다. 패키지의 TransactionOption 속성을로 `Supported`설정 하 여 트랜잭션을 지원 하도록 패키지를 구성 합니다.  
+ 이 옵션에서는 패키지 자체에서 트랜잭션을 지원하지만 트랜잭션을 시작하지는 않습니다. 패키지의 TransactionOption 속성을로 설정 하 여 트랜잭션을 지원 하도록 패키지를 구성 `Supported` 합니다.  
   
- 그런 다음 패키지에 포함된 태스크와 컨테이너 중에서 원하는 태스크와 컨테이너를 트랜잭션을 시작하거나 트랜잭션에 참여하도록 구성합니다. 트랜잭션을 시작 하도록 태스크 나 컨테이너를 구성 하려면 해당 태스크 또는 컨테이너의 TransactionOption 속성을로 `Required`설정 합니다.  
+ 그런 다음 패키지에 포함된 태스크와 컨테이너 중에서 원하는 태스크와 컨테이너를 트랜잭션을 시작하거나 트랜잭션에 참여하도록 구성합니다. 트랜잭션을 시작 하도록 태스크 나 컨테이너를 구성 하려면 해당 태스크 또는 컨테이너의 TransactionOption 속성을로 설정 `Required` 합니다.  
   
 #### <a name="to-configure-a-package-to-use-multiple-transactions"></a>여러 트랜잭션을 사용하도록 패키지를 구성하려면  
   
@@ -69,18 +68,18 @@ ms.locfileid: "66060857"
   
 4.  제어 흐름 디자인 화면 배경의 아무 위치나 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-5.  **속성** 창에서 TransactionOption 속성을로 `Supported`설정 합니다.  
+5.  **속성** 창에서 TransactionOption 속성을로 설정 `Supported` 합니다.  
   
     > [!NOTE]  
     >  패키지는 트랜잭션을 지원하지만 트랜잭션은 패키지의 태스크나 컨테이너에 의해 시작됩니다.  
   
 6.  **제어 흐름** 탭의 디자인 화면에서 트랜잭션을 시작할 패키지에서 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-7.  **속성** 창에서 TransactionOption 속성을로 `Required`설정 합니다.  
+7.  **속성** 창에서 TransactionOption 속성을로 설정 `Required` 합니다.  
   
 8.  트랜잭션이 컨테이너에 의해 시작되는 경우 트랜잭션에 등록할 태스크 또는 컨테이너를 마우스 오른쪽 단추로 클릭한 후 **속성**을 클릭합니다.  
   
-9. **속성** 창에서 TransactionOption 속성을로 `Supported`설정 합니다.  
+9. **속성** 창에서 TransactionOption 속성을로 설정 `Supported` 합니다.  
   
     > [!NOTE]  
     >  트랜잭션에 연결을 참여시키려면 트랜잭션에서 해당 연결을 사용하는 태스크를 등록합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](connection-manager/integration-services-ssis-connections.md)을 참조하세요.  

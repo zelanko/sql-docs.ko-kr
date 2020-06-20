@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084055a3-5fd3-43f3-b620-ac6afab42a3d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b40598eaa81ce0a1d890ef8ec37a12fada0fa458
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971903"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>통합 사용 권한(Master Data Services)
   통합 사용 권한은 엔터티의 모든 통합 멤버에 대한 특성 값에 적용됩니다.  
@@ -33,20 +32,20 @@ ms.locfileid: "66054107"
   
 -   **이름** 및 **코드** 특성에 할당된 사용 권한은 적용되지 않습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|통합 멤버가 표시되지만 사용자가 이를 추가, 제거 또는 변경할 수 없습니다.|  
 |**업데이트**|통합 멤버가 표시되고 사용자가 이를 추가, 제거 및 변경할 수 있습니다.|  
-|**차단할**|엔터티의 통합 멤버가 표시되지 않습니다.|  
+|**거부**|엔터티의 통합 멤버가 표시되지 않습니다.|  
   
 ## <a name="attribute-permissions"></a>특성 사용 권한  
  특성 사용 권한은 특정 엔터티의 특성 값에 적용됩니다. 특성 사용 권한만 있는 사용자는 멤버를 추가하거나 제거할 수 없습니다.  
   
-|사용 권한|설명|  
+|사용 권한|Description|  
 |----------------|-----------------|  
 |**읽기 전용**|특성이 표시되지만 사용자가 특성 값을 변경할 수 없습니다.|  
 |**업데이트**|특성이 표시되고 사용자가 특성 값을 변경할 수 있습니다.|  
-|**차단할**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
+|**거부**|특성이 표시되지 않습니다.<br /><br /> 참고: 이름 및 코드 특성에 대한 액세스를 명시적으로 거부할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [모델 개체 사용 권한 할당 &#40;MDS(Master Data Services)&#41;](assign-model-object-permissions-master-data-services.md)   

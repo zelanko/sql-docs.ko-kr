@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f4e96f2a7fe017aadaeb71ed05f546dabfa6540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053309"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation 이벤트 클래스
-  **Audit Database Principal Impersonation** 이벤트 클래스는 데이터베이스 범위 내에 EXECUTE AS \<*user*> 또는 SETUSER 등의 가장이 있는 경우에 발생합니다.  
+  **Audit Database Principal 가장** 이벤트 클래스는 데이터베이스 범위 내에서 EXECUTE AS 또는 SETUSER와 같은 가장이 발생 하는 경우에 발생 합니다 \<*user*> .  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Audit Database Principal Impersonation 이벤트 클래스 데이터 열  
   

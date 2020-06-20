@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920894"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
@@ -35,13 +34,13 @@ ms.locfileid: "62833823"
  연결 관리자를 사용하는 플랫 파일 원본을 추가 및 구성한 후에 플랫 파일 연결 관리자에서 열 길이를 업데이트한 경우에는 플랫 파일 원본에서 출력 열의 크기를 수동으로 조정하지 않아도 됩니다. **플랫 파일 원본** 대화 상자를 열면 플랫 파일 원본에 열 메타데이터를 동기화하는 옵션이 제공됩니다.  
   
 ## <a name="configuration-of-the-flat-file-connection-manager"></a>플랫 파일 연결 관리자 구성  
- 패키지에 플랫 파일 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 플랫 파일 연결로 확인 되는 연결 관리자를 만들고, 플랫 파일 연결 속성을 설정 하 고, 플랫 파일 연결 관리자를 패키지의 `Connections` 컬렉션에 추가 합니다.  
+ 패키지에 플랫 파일 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 플랫 파일 연결로 확인 되는 연결 관리자를 만들고, 플랫 파일 연결 속성을 설정 하 고, 플랫 파일 연결 관리자를 `Connections` 패키지의 컬렉션에 추가 합니다.  
   
  연결 관리자의 `ConnectionManagerType` 속성이 `FLATFILE`로 설정됩니다.  
   
  기본적으로 플랫 파일 연결 관리자는 따옴표로 표시되지 않은 데이터에서 항상 행 구분자를 검사하고 행 구분자를 찾으면 새 행을 시작합니다. 그러면 연결 관리자가 열 필드가 누락된 행을 사용하여 파일을 올바르게 구문 분석할 수 있습니다.  
   
- 일부 경우에는 이 기능을 비활성화해야 패키지 성능이 향상될 수 있습니다. 플랫 파일 연결 관리자 속성인 **AlwaysCheckForRowDelimiters**을로 `False`설정 하 여이 기능을 사용 하지 않도록 설정할 수 있습니다.  
+ 일부 경우에는 이 기능을 비활성화해야 패키지 성능이 향상될 수 있습니다. 플랫 파일 연결 관리자 속성인 **AlwaysCheckForRowDelimiters**을로 설정 하 여이 기능을 사용 하지 않도록 설정할 수 있습니다 `False` .  
   
  다음과 같은 방법으로 플랫 파일 연결 관리자를 구성할 수 있습니다.  
   

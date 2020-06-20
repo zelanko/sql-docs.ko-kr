@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4be24c64-2d52-4cb4-b4d7-36efbe4555b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4117013b671ee9c5d5acf1fcde94ab382468dc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64e1a836995fe8738bb5c2ff0cb4de10d84d1f29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62914481"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054007"
 ---
 # <a name="mssqlserver_3176"></a>MSSQLSERVER_3176
     
@@ -42,7 +41,7 @@ ms.locfileid: "62914481"
  데이터베이스 파일을 다른 위치로 복원합니다. RESTORE 문에서 WITH MOVE 절을 사용하여 각 파일을 이동합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **데이터베이스 복원 옵션** 대화 상자의 **데이터베이스 파일을 다음으로 복원** 표에서 파일 위치를 변경합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server &#40;새 위치로 데이터베이스를 복원&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [SQL Server&#41;&#40;새 위치로 파일을 복원 합니다.](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   

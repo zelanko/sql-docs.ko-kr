@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938884"
 ---
 # <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
   이 항목에서는 테이블 형식의 모델 작성자를 대상으로 데이터 원본에 연결하여 데이터를 가져오고 처리(새로 고침)할 때 로그온 자격 증명이 Analysis Services에서 사용되는 방법에 대해 설명합니다.  
   
- 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 자료에는 다음과 같은 섹션이 포함되어 있습니다.  
   
 -   [이점](#bkmk_how_imper)  
   
--   [옵션](#bkmk_imp_info_options)  
+-   [Options](#bkmk_imp_info_options)  
   
 -   [보안](#bkmk_impers_sec)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66067057"
   
 -   [가장 구성](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> 이점  
  *가장* 은 Analysis Services와 같은 서버 애플리케이션이 클라이언트 애플리케이션의 ID를 가장하는 기능입니다. Analysis Services는 서비스 계정을 사용하여 실행되지만 서버에서 데이터 원본에 연결을 설정하는 경우에는 데이터 가져오기 및 처리에 대한 액세스 검사를 수행할 수 있도록 가장을 사용합니다.  
   
  가장에 사용되는 자격 증명은 현재 로그온한 사용자의 자격 증명과 다릅니다. 로그온한 사용자의 자격 증명은 모델을 작성할 때 특정 클라이언트 쪽 작업에 사용됩니다.  
@@ -65,9 +64,9 @@ ms.locfileid: "66067057"
 ##  <a name="options"></a><a name="bkmk_imp_info_options"></a>옵션  
  가장을 구성하는 경우나 Analysis Services에서 기존 데이터 원본 연결의 속성을 편집하는 경우 다음 옵션 중 하나를 지정할 수 있습니다.  
   
-|옵션|ImpersonationMode<sup>1</sup>|설명|  
+|옵션|ImpersonationMode<sup>1</sup>|Description|  
 |------------|-----------------------------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 사용자 계정의 도메인과 이름은 다음 형식을 사용 합니다.**\<도메인 이름>\\<사용자 계정 이름\>** 입니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호** <sup>2</sup>|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 사용자 계정의 도메인과 이름은 다음 형식을 사용 합니다.** \<Domain name> \\ 사용자 계정 이름 \><** 합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
 |**서비스 계정**|ImpersonateServiceAccount|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
  <sup>1</sup> ImpersonationMode는 데이터 원본에서 [DataSourceImpersonationInfo 요소 &#40;&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) 속성의 값을 지정 합니다.  
@@ -90,7 +89,7 @@ ms.locfileid: "66067057"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a> 가장 구성  
  모델이 있는 위치 및 컨텍스트에 따라 가장 정보를 구성하는 방법이 달라집니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 작성되는 모델의 경우 테이블 가져오기 마법사의 **가장 정보** 페이지를 사용하거나 **기존 연결** 대화 상자에서 데이터 원본 연결을 편집하여 가장 정보를 구성할 수 있습니다. 기존 연결을 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 **모델** 메뉴에서 **기존 연결**을 클릭합니다.  
   
- Analysis Services 서버에 배포 된 모델의 경우의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **데이터베이스 속성** 대화 상자에서 **데이터 원본 가장 정보** 속성의 줄임표 (...)를 클릭 하 여 가장 정보를 구성할 수 있습니다.  
+ Analysis Services 서버에 배포 된 모델의 경우의 **데이터베이스 속성** 대화 상자에서 **데이터 원본 가장 정보** 속성의 줄임표 (...)를 클릭 하 여 가장 정보를 구성할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="see-also"></a>참고 항목  
  [DirectQuery 모드 &#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)   

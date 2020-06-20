@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e29e7e8d02c2857322b3488bc209648630ed44b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042966"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>여러 행의 데이터를 처리하기 위한 DML 트리거 만들기
   DML 트리거 코드를 작성할 때는 트리거를 실행시키는 단일 문이 여러 행의 데이터에 영향을 줄 수 있다는 점을 고려해야 합니다. 이 동작은 여러 행에 영향을 줄 수 있는 UPDATE 및 DELETE 트리거의 경우에 일반적입니다. 기본 INSERT 문은 한 행만 추가하기 때문에 INSERT 트리거의 경우에는 일반적이지 않습니다. 그러나 INSERT INTO (*table_name*) SELECT 문으로 INSERT 트리거를 실행할 수 있기 때문에 여러 행을 삽입하는 경우 단일 트리거를 호출할 수도 있습니다.  

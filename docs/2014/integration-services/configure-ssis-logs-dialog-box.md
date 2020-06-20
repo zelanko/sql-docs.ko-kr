@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921674"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>SSIS 로그 구성 대화 상자
   **SSIS 로그 구성** 대화 상자를 사용하여 패키지에 대한 로깅 옵션을 정의할 수 있습니다.  
   
- **수행 작업**  
+ **원하는 작업을 선택하세요.**  
   
 1.  [SSIS 로그 구성 대화 상자 열기](#open_dialog)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66060590"
  설명 필드는 편집할 수 있습니다. 클릭한 다음 로그의 기본 설명을 수정합니다.  
   
  **구성**  
- 목록에서 기존 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
+ 목록에서 기존 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결 관리자를 만듭니다. 로그 공급자의 유형에 따라 OLE DB 연결 관리자 또는 파일 연결 관리자를 구성할 수 있습니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 이벤트 로그의 로그 공급자에는 연결이 필요하지 않습니다.  
   
  관련 항목: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) , [File Connection Manager](connection-manager/file-connection-manager.md)  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66060590"
  **고급**  
  로깅할 이벤트를 선택하거나 선택을 취소하고, 각 이벤트에 대해 로깅할 정보를 선택하거나 선택을 취소합니다. 이벤트 목록을 제외한 모든 로깅 세부 정보를 숨기려면 **기본** 을 클릭합니다. 다음은 로깅에 사용할 수 있는 정보입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**컴퓨터**|로깅된 이벤트가 발생한 컴퓨터의 이름입니다.|  
 |**연산자**|패키지를 시작한 사람의 사용자 이름입니다.|  
@@ -103,7 +102,7 @@ ms.locfileid: "66060590"
 |**MessageText**|로그 항목과 연결된 메시지입니다.|  
 |**DataBytes**|다음에 사용하도록 예약됩니다.|  
   
- **Basic**  
+ **기본**  
  로깅할 이벤트를 선택하거나 선택을 취소합니다. 이 옵션은 이벤트 목록을 제외한 로깅 세부 정보를 숨깁니다. 이벤트를 선택한 경우 해당 이벤트에 대한 모든 로깅 세부 정보가 기본적으로 선택됩니다. 로깅 세부 정보를 모두 표시하려면 **고급** 을 클릭합니다.  
   
  **로드**  

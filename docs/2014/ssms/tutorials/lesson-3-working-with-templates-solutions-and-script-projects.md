@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: edac948a-18bb-4301-9504-945056727f63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8a1825f00676618b9bcc98c774e7facd6f0e078
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfbe5679a530c569d4e39b7405740506d2293a30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067267"
 ---
 # <a name="lesson-3-working-with-templates-solutions-and-script-projects"></a>3단원: 템플릿, 솔루션 및 스크립트 프로젝트 작업
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 사용자 지정 템플릿을 만들고 솔루션 및 스크립트 프로젝트를 만들 수 있습니다.  
