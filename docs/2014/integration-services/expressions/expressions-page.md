@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898035"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969333"
 ---
 # <a name="expressions-page"></a>식 페이지
   **식** 페이지를 사용하여 속성 식을 편집하고 **속성 식 편집기** 및 **식 작성기** 대화 상자에 액세스할 수 있습니다.  
@@ -32,11 +31,11 @@ ms.locfileid: "62898035"
  **식(...)**  
  **속성 식 편집기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Property Expressions Editor](property-expressions-editor.md)를 참조하세요.  
   
- **\<속성 이름>**  
+ **\<property name>**  
  **식 작성기** 대화 상자를 열려면 줄임표를 클릭합니다. 자세한 내용은 [Expression Builder](expression-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Integration Services&#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS&#41; 변수](../integration-services-ssis-variables.md)   
  [시스템 변수](../system-variables.md)   
  [Integration Services&#40;SSIS&#41; 식](integration-services-ssis-expressions.md)  
   

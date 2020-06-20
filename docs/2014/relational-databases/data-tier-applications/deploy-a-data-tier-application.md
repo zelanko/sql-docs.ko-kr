@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783067"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970293"
 ---
 # <a name="deploy-a-data-tier-application"></a>데이터 계층 애플리케이션 배포
   마법사 또는 PowerShell 스크립트를 사용하여 DAC 패키지의 DAC(데이터 계층 애플리케이션)를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 의 기존 인스턴스에 배포할 수 있습니다. 배포 프로세스에서는 **msdb** 시스템 데이터베이스(**의** master [!INCLUDE[ssSDS](../../includes/sssds-md.md)])에 DAC 정의를 저장하여 DAC 인스턴스를 등록하고 데이터베이스를 만든 다음 DAC에 정의된 모든 데이터베이스 개체로 데이터베이스를 채웁니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "72783067"
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> 제한 사항  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]SP4(서비스 팩 4) 이상을 실행하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 DAC를 배포할 수 있습니다. 이후 버전을 사용하여 DAC를 만드는 경우 DAC에 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 지원되지 않는 개체가 포함될 수 있습니다. 이러한 DAC를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]인스턴스에 배포할 수 없습니다.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 패키지에 포함된 악성 코드가 의도하지 않은 Transact-SQL 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 패키지를 사용하려면 먼저 DAC의 압축을 풀고 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하세요. 이러한 검사를 수행하는 방법은 [Validate a DAC Package](validate-a-dac-package.md)를 참조하세요.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
@@ -107,7 +106,7 @@ ms.locfileid: "72783067"
   
  **설명** - DAC를 만들거나 데이터베이스에서 추출할 때 작성된 설명을 표시하는 읽기 전용 입력란입니다.  
   
- 이전- **소개** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** - **소개** 페이지로 돌아갑니다.  
   
  **다음 >** - 선택한 파일이 유효한 DAC 패키지인지 마법사에서 확인하는 동안 진행률 표시줄이 표시됩니다.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783067"
   
  **DAC 내용의 유효성을 검사하고 있습니다** - 유효성 검사의 현재 상태를 보고하는 진행률 표시줄입니다.  
   
- 이전- **패키지 선택** 페이지의 초기 상태로 돌아갑니다. ** \< **  
+ ** \< 이전** - **패키지 선택** 페이지의 초기 상태로 돌아갑니다.  
   
  **다음 >** - **패키지 선택** 페이지의 최종 버전으로 진행합니다.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783067"
   
  **정책 위반을 무시합니다.** - 정책 조건이 한 개 이상 위반되더라도 배포를 진행하려면 이 확인란을 사용합니다. 실패한 모든 조건이 DAC 작동에 영향을 주지 않는 것이 확실한 경우에만 이 옵션을 선택합니다.  
   
- 이전- **패키지 선택** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** - **패키지 선택** 페이지로 돌아갑니다.  
   
  **다음 >** - **구성 업데이트** 페이지로 진행합니다.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783067"
   
  **로그 파일 경로 및 이름:** - 로그 파일의 전체 경로와 파일 이름을 지정합니다. 입력란은 기본 경로와 파일 이름으로 채워집니다. 입력란의 문자열을 편집하여 기본값을 변경하거나 **찾아보기** 단추를 사용하여 로그 파일이 있는 폴더를 탐색할 수 있습니다.  
   
- 이전- **DAC 패키지 선택** 페이지로 돌아갑니다. ** \< **  
+ ** \< 이전** - **DAC 패키지 선택** 페이지로 돌아갑니다.  
   
  **다음 >** - **요약** 페이지로 진행합니다.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783067"
   
  **DAC를 배포하는 데 사용되는 설정은 다음과 같습니다.** - 표시된 정보를 검토하여 수행할 동작이 올바른지 확인합니다. 창에는 선택한 DAC 패키지와 배포하도록 선택한 DAC 인스턴스 이름이 표시됩니다. 창에는 DAC와 연결된 데이터베이스를 만들 때 사용되는 설정도 표시됩니다.  
   
- 이전- **구성 업데이트** 페이지로 돌아가 선택 항목을 변경 합니다. ** \< **  
+ ** \< 이전** - **구성 업데이트** 페이지로 돌아가 선택 항목을 변경 합니다.  
   
  **다음 >** - DAC를 배포하고 **DAC 배포** 페이지에 결과를 표시합니다.  
   

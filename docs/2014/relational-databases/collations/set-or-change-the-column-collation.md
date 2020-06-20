@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05b8211569b6ce83faaec043e5eb527a60f0ddab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970563"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
   특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 `char`, `varchar`, `text`, `nchar`, `nvarchar` 및 `ntext` 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
   
--   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 및 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)의 COLLATE 절 예를 들어:  
+-   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 및 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)의 COLLATE 절 다음은 그 예입니다.  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -38,7 +37,7 @@ ms.locfileid: "62918968"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 자세한 내용은 [Collation and Unicode Support](collation-and-unicode-support.md)을 참조하십시오.  
   
--   SMO ( `Column.Collation` Management Objects [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )에서 속성 사용.  
+-   `Column.Collation` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (Management Objects)에서 속성 사용.  
   
  다음 중 하나가 현재 참조하고 있는 열의 데이터 정렬은 변경할 수 없습니다.  
   
@@ -68,7 +67,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어:  
+ 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 다음은 그 예입니다.  
   
 ```  
 USE TestDB;  
@@ -81,7 +80,7 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어:  
+ 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 다음은 그 예입니다.  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81bb8b079142b2b6c4597fa2fdfeddd034841f93
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968983"
 ---
 # <a name="developing-a-custom-destination-component"></a>사용자 지정 대상 구성 요소 개발
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 개발자가 사용자 지정 데이터 원본에 연결하여 데이터를 저장할 수 있는 사용자 지정 대상 구성 요소를 작성할 수 있습니다. 사용자 지정 대상 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 기존 원본 구성 요소 중 하나를 사용하여 액세스할 수 없는 데이터 원본에 연결해야 하는 경우에 유용합니다.
@@ -38,7 +37,7 @@ ms.locfileid: "78176413"
  대상 구성 요소의 디자인 타임 기능을 구현하려면 외부 데이터 원본에 대한 연결을 지정하고 구성 요소가 올바르게 구성되었는지 확인해야 합니다. 정의에 따라 대상 구성 요소에는 하나의 입력이 있으며 하나의 오류 출력이 있을 수 있습니다.
 
 ### <a name="creating-the-component"></a>구성 요소 만들기
- 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 [!INCLUDE[ssIS](../../includes/ssis-md.md)]의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.
+ 대상 구성 요소는 패키지에 정의된 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 개체를 사용하여 외부 데이터 원본에 연결합니다. 대상 구성 요소는 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>의 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> 컬렉션에 요소를 추가하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너와 구성 요소 사용자에게 연결 관리자가 필요함을 나타냅니다. 이 컬렉션은 두 가지 용도로 사용됩니다. 첫 번째는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 연결 관리자가 필요함을 알리는 것이고, 다른 하나는 사용자가 연결 관리자를 선택하거나 만든 후 구성 요소에서 사용하는 패키지에 해당 연결 관리자에 대한 참조를 저장하는 것입니다. 컬렉션에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100>을 추가하면 **고급 편집기**에 **연결 속성** 탭이 표시되어 사용자가 구성 요소에서 사용할 패키지에서 연결을 선택하거나 만들도록 요구합니다.
 
  다음 코드 예제에서는 입력을 추가한 다음 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>에 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> 개체를 추가하는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>의 구현을 보여 줍니다.
 

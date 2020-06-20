@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a22c5d032ca42b64536bb765b037d2cad02a27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050360"
 ---
 # <a name="application-level-partitioning"></a>애플리케이션 수준 분할
   이 샘플은 날짜 지정 전 또는 후에 내려진 명령에 따라 메모리 최적화 테이블 또는 디스크 기반 테이블에 데이터가 저장되는 애플리케이션 수준의 파티션을 보여줍니다. *hotDate* 이후의 모든 명령은 메모리 최적화 테이블에 저장되며, *hotDate* 보다 앞선 날짜의 모든 명령은 디스크 기반 테이블에 저장됩니다. 동시 트랜잭션이 많이 있는 극단적인 OLTP 작업을 가정합니다. 여러 개의 동시 트랜잭션이 *hotDate*를 변경하려고 하는 경우에도 이 비즈니스 규칙(메모리 최적화 테이블에 있는 최근 주문)을 적용해야 합니다.  

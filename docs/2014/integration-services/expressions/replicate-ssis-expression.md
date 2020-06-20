@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 349a100a295ef00b19b2de69214fdd7af8bd2d32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe793403fe480c5d3afe7833798e25c519c58cd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969093"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
   지정한 횟수만큼 복제된 문자 식을 반환합니다. *times* 인수는 정수여야 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a43a437b277c0fcc090a4ebd52d9deb14bec9fd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c928062169ed7feb03f1031362530474109976a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970331"
 ---
 # <a name="unicode-compression-implementation"></a>유니코드 압축 구현
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SCSU(Standard Compression Scheme for Unicode) 알고리즘 구현을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다. 이러한 압축 개체의 경우 `nchar(n)` 및 `nvarchar(n)` 열에 유니코드 압축이 자동으로 설정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 로캘에 관계없이 유니코드 데이터가 2바이트로 저장됩니다. 이 방식을 UCS-2 인코딩이라고 합니다. 일부 로캘의 경우 SQL Server에서 SCSU 압축을 구현하면 스토리지 공간을 최대 50% 절약할 수 있습니다.  

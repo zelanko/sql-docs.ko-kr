@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918814"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970513"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
   이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 스토리지를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)을 참조하세요.  
@@ -93,7 +92,7 @@ ms.locfileid: "62918814"
   
  로그인에 대한 **매핑** 확인란을 선택하여 로그인을 지정합니다.  
   
- **데이터베이스 역할 멤버 자격:** ‘*데이터 웨어하우스 이름>’\<*  
+ **데이터베이스 역할 멤버 자격:**  *\<data warehouse name>*  
  다음 중 하나 이상의 옵션 옆에 있는 확인란을 클릭하여 로그인이 매핑되는 관리 데이터 웨어하우스 역할을 선택합니다.  
   
 -   **mdw_admin**  

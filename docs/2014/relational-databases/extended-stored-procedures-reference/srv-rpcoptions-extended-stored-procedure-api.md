@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c97262ab6b3ee42b070511a813fcb4498b78d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 861c27e94d3717a4dbeba1fe5f2633c2604ee7c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050607"
 ---
 # <a name="srv_rpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions(확장 저장 프로시저 API)
     
@@ -54,9 +53,9 @@ srvproc
 ## <a name="remarks"></a>설명  
  다음 표에서는 각 런타임 플래그에 대해 설명합니다.  
   
-|런타임 플래그|설명|  
+|런타임 플래그|Description|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|클라이언트가 메타데이터 정보를 사용하지 않고 결과를 요청했습니다. 이 플래그는 클라이언트가 인스턴스와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]통신 하는 경우에만 사용 됩니다. 확장 저장 프로시저 API 애플리케이션은 메타데이터 정보를 생략할 수 없습니다.|  
+|SRV_NOMETADATA|클라이언트가 메타데이터 정보를 사용하지 않고 결과를 요청했습니다. 이 플래그는 클라이언트가 인스턴스와 통신 하는 경우에만 사용 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 확장 저장 프로시저 API 애플리케이션은 메타데이터 정보를 생략할 수 없습니다.|  
 |SRV_RECOMPILE|클라이언트가 원격 저장 프로시저를 실행하기 전에 재컴파일하도록 요청했습니다. 이 플래그는 확장 저장 프로시저 API 애플리케이션에 적용되지 않을 수 있습니다.|  
   
 > [!IMPORTANT]  

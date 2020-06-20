@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f666bf30ebddbc173f6f23f13b1eca4c2d9024a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73353f0d8d00d27e2a03d87f603d2859fc8d38d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066331"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>쿼리와 연관된 연결 변경
   쿼리에 사용되는 연결을 변경하여 다른 여러 개의 서버나 데이터베이스에 대해 쿼리를 실행할 수 있습니다.  

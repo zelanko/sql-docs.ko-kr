@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 785ca6c05bc221e1449607b9dc3deaa93aa667bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a52068b0539ca77eed88d88ecce55a1615b89a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968913"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
   동기 출력을 사용하는 변환 구성 요소는 업스트림 구성 요소에서 행을 받고, 이러한 행을 다운스트림 구성 요소에 전달할 때 해당 행의 열 값을 읽거나 수정합니다. 또한 업스트림 구성 요소가 제공한 열에서 파생된 추가 출력 열도 정의할 수 있지만 데이터 흐름에 행을 추가하지는 않습니다. 동기 구성 요소와 비동기 구성 요소 간의 차이점에 대한 자세한 내용은 [동기 및 비동기 변환 이해](../understanding-synchronous-and-asynchronous-transformations.md)를 참조하세요.  
@@ -120,7 +119,7 @@ End Class
 |DT_STR|0보다 크고 8000보다 작습니다.|0|0|0이 아니며 올바른 코드 페이지가 아닙니다.|  
 |DT_WSTR|0보다 크고 4000보다 작습니다.|0|0|0|  
   
- 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스에서는 관리되는 구성 요소 개발자가 관리되는 형식의 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 및 [!INCLUDE[ssIS](../../includes/ssis-md.md)]을 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
+ 데이터 형식 속성에 대한 제한 사항은 출력 열의 데이터 형식을 기준으로 하므로 관리되는 형식을 사용할 때는 올바른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 선택해야 합니다. 기본 클래스에서는 관리되는 구성 요소 개발자가 관리되는 형식의 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식을 선택하는 데 도움이 되는 세 개의 도우미 메서드 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>, <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> 및 <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>을 제공합니다. 이러한 메서드는 관리되는 데이터 형식을 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식으로 변환하거나 그 반대로 변환합니다.  
   
 ## <a name="run-time"></a>런타임  
  일반적으로 구성 요소의 런타임 부분에 대한 구현은 버퍼에서 구성 요소의 입력 및 출력 열을 찾는 태스크와 들어오는 버퍼 행에서 이러한 열의 값을 읽거나 쓰는 태스크로 분류됩니다.  

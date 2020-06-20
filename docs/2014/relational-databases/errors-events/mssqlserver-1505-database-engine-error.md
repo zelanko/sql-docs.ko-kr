@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969527"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727735"
   
  오류 메시지 1505는 고유성 제약 조건을 위반한 첫 번째 행을 반환하므로 테이블에 다른 중복 행이 있을 수 있습니다. 모든 중복 행을 찾으려면 지정된 테이블을 쿼리하고 GROUP BY 및 HAVING 절을 사용하여 중복 행을 반환하십시오. 예를 들어 다음 쿼리는 **Employee** 테이블에서 이름과 성이 중복되는 행을 반환합니다.  
   
- Dbo에서 LastName, FirstName, count\*()를 선택 합니다. LastName 별 직원 그룹, 개수 (\*)를 포함 하는 FirstName > 1;  
+ Dbo에서 LastName, FirstName, count ()를 선택 \* 합니다. LastName 별 직원 그룹, 개수 ()를 포함 하는 FirstName \* > 1;  
   
 ## <a name="user-action"></a>사용자 동작  
  다음과 같은 해결 방법을 고려해 보십시오.  

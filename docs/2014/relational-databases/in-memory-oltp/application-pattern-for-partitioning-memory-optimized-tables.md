@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 298ba469c565765b524b17a58f464b5a3ee909c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050387"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 애플리케이션 패턴
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 디스크에서 자주 액세스하지 않는 데이터를 처리하는 동안 제한된 양의 활성 데이터를 메모리 최적화 테이블에 유지하는 패턴을 지원합니다. 일반적으로, 이는 `datetime` 키를 기준으로 데이터가 저장되는 시나리오가 될 것입니다.  

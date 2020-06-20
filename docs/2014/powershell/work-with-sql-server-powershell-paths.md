@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b93ffb3ff99a973a4d44e6f190aef26b8c46940
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959913"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 작업
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 공급자 경로의 노드로 이동한 후에는 노드에 연결된 [!INCLUDE[ssDE](../includes/ssde-md.md)] 관리 개체에서 메서드 및 속성을 사용하여 작업을 수행하거나 정보를 검색할 수 있습니다.  
@@ -74,7 +73,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- 이 예에서는 SMO **script** 메서드를 사용 하 여 AdventureWorks2012에서 뷰를 `CREATE VIEW` 다시 만드는 데 필요한 문이 포함 된 스크립트를 생성 합니다.  
+ 이 예에서는 SMO **script** 메서드를 사용 하 여 `CREATE VIEW` AdventureWorks2012에서 뷰를 다시 만드는 데 필요한 문이 포함 된 스크립트를 생성 합니다.  
   
 ```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  

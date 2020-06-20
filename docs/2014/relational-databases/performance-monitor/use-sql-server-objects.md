@@ -29,18 +29,17 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c073b0f438ec022e1b05f481652d6f08ef34cc53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066111"
 ---
 # <a name="use-sql-server-objects"></a>SQL Server 개체 사용
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 실행하는 컴퓨터의 작업을 모니터링하기 위해 시스템 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다. 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금이나 Windows 프로세스와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스를 말합니다. 각 개체에는 모니터링할 개체의 여러 요소를 결정하는 하나 이상의 카운터가 포함됩니다. 예를 들어 **SQL Server Locks** 개체에는 **Number of Deadlocks/sec** 및 **Lock Timeouts/sec**이라는 카운터가 포함됩니다.  
   
- 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스용 카운터는 **SQLServer:** _\<개체 이름>_ 형식으로 표시됩니다. 명명된 인스턴스용 카운터는 **MSSQL$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 또는**SQLAgent$** _\<인스턴스 이름>_ **:** _\<카운터 이름>_ 형식으로 표시됩니다.  
+ 지정된 유형의 리소스가 컴퓨터에 여러 개 존재할 경우 일부 개체는 여러 인스턴스를 갖습니다. 예를 들어 **Processor** 개체 유형은 시스템에 프로세서가 여러 개 있는 경우 인스턴스를 여러 개 갖게 됩니다. **Databases** 개체 유형은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 각 데이터베이스에 대해 인스턴스를 하나씩 갖습니다. 일부 개체 유형(예: **Memory Manager** 개체)은 인스턴스를 하나만 갖습니다. 개체 유형이 인스턴스를 여러 개 가지는 경우 카운터를 추가해 각 인스턴스의 통계를 추적할 수 있고, 대부분의 경우 모든 인스턴스를 한 번에 추적할 수 있습니다. 기본 인스턴스에 대 한 카운터는 **SQLServer:** 형식으로 표시 _\<object name>_ 됩니다. 명명 된 인스턴스에 대 한 카운터는 **MSSQL $** _\<instance name>_ **:** _\<counter name>_ 또는 **SQLAgent $**: 형식으로 표시 _\<instance name>_ **:** _\<counter name>_ 됩니다.  
   
  카운터를 차트에 추가하거나 제거하고 차트 설정을 저장하면 시스템 모니터가 시작될 때 모니터링되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 및 카운터를 지정할 수 있습니다.  
   
@@ -63,29 +62,29 @@ ms.locfileid: "63151171"
   
 -   [필요한 권한](#RequiredPermissions)  
   
-##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a>SQL Server 에이전트 성능 개체  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> SQL Server 에이전트 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 사용하는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](sql-server-agent-alerts-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대한 정보를 제공합니다.|  
 |[SQLAgent:Jobs](sql-server-agent-jobs-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 정보를 제공합니다.|  
 |[SQLAgent:JobSteps](sql-server-agent-jobsteps-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계에 대한 정보를 제공합니다.|  
 |[SQLAgent:Statistics](sql-server-agent-statistics-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대한 일반적인 정보를 제공합니다.|  
   
-##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a>Service Broker 성능 개체  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Service Broker 성능 개체  
  다음 표에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 사용하는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](sql-server-broker-activation-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 활성화한 태스크에 대한 정보를 제공합니다.|  
 |[SQLServer:Broker Statistics](sql-server-broker-statistics-object.md)|일반적인 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 정보를 제공합니다.|  
 |[SQLServer:Broker Transport](sql-server-broker-dbm-transport-object.md)|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹에 대한 정보를 제공합니다.|  
   
-##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a>SQL Server 성능 개체  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> SQL Server 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 대해 설명합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](sql-server-access-methods-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체의 할당(예: 인덱스 검색 수 또는 인덱스 및 데이터에 할당된 페이지 수)을 검색하고 측정합니다.|  
 |[SQLServer:Backup Device](sql-server-backup-device-object.md)|백업 디바이스의 처리량과 같은 백업 및 복원 작업에 사용되는 백업 디바이스에 관한 정보를 제공합니다.|  
@@ -105,25 +104,25 @@ ms.locfileid: "63151171"
 |[SQLServer:Locks](sql-server-locks-object.md)|잠금 제한 시간 및 교착 상태와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 개별 잠금 요청에 관한 정보를 제공합니다. 이 개체에는 인스턴스가 여러 개 있을 수 있습니다.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|현재 할당된 총 잠금 구조 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 사용에 관한 정보를 제공합니다.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|저장 프로시저, 트리거, 쿼리 계획과 같은 개체를 저장할 때 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 캐시에 관한 정보를 제공합니다.|  
-|[SQLServer:Resource Pool Stats](sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: Resource Pool Stats](sql-server-resource-pool-stats-object.md)|리소스 관리자 리소스 풀 통계에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 정보를 제공합니다.|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 받은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 일괄 처리 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]쿼리 상태에 관한 정보를 제공합니다.|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|전체 트랜잭션 수 및 스냅샷 트랜잭션 수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 활성 트랜잭션에 대한 정보를 제공합니다.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|사용자 지정 모니터링을 수행합니다. 각 카운터는 사용자 지정 저장 프로시저 또는 모니터링할 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 될 수 있습니다.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
-|[SQLServer:Workload Group Stats](sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
+|[SQLServer: 대기 통계](sql-server-wait-statistics-object.md)|대기 정보를 제공합니다.|  
+|[SQLServer: Workload Group Stats](sql-server-workload-group-stats-object.md)|리소스 관리자 작업 그룹 통계에 대한 정보를 제공합니다.|  
   
-##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a>SQL Server 복제 성능 개체  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> SQL Server 복제 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에서 사용되는 성능 개체를 나열합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> 자세한 내용은 [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md)을 참조하세요.|복제 에이전트 작업에 대한 정보를 제공합니다.|  
   
-##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a>SSIS 파이프라인 카운터  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> SSIS 파이프라인 카운터  
  **SSIS Pipeline** 카운터는 [성능 카운터](../../integration-services/performance/performance-counters.md)를 참조하세요.  
   
-##  <a name="required-permissions"></a><a name="RequiredPermissions"></a>필요한 권한  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> 필요한 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLAgent:Alerts **를 제외한**개체의 사용은 Windows 권한에 따라 달라집니다. **SQLAgent:Alerts** 를 사용하려면 **sysadmin**고정 서버 역할의 멤버여야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
