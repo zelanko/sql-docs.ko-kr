@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2776452e0da93cb1f170b6ee3356d95158df6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005382"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
-  Oracle 데이터베이스에서의 게시는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 게시 하는 것과 거의 동일 하 게 작동 하도록 설계 되었습니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
+  Oracle 데이터베이스에서의 게시는 데이터베이스에서 게시 하는 것과 거의 동일 하 게 작동 하도록 설계 되었습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
   
 -   Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅샷 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "63022520"
   
 -   배포자에서 게시자로 스냅샷 에이전트와 로그 판독기 에이전트를 연결하는 계정은 다음 중 한 가지 방법으로 지정됩니다.  
   
-    -   **@security_mode** [Transact-sql&#41;&#40;sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 매개 변수 (Oracle 인증을 사용 하는 경우 및 **@login** **@password** 에 대 한 값도 지정)  
+    -   **@security_mode** [Transact-sql&#41;&#40;sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 매개 변수 (Oracle 인증을 사용 하는 경우 및에 대 한 값도 지정 **@login** **@password** )  
   
     -   **배포자에서 Oracle 게시자를 구성할 때 사용하는 SQL Server Management Studio의** 서버에 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대화 상자에서 지정합니다.  
   
@@ -157,11 +156,11 @@ ms.locfileid: "63022520"
   
 -   스냅샷 에이전트와 로그 판독기 에이전트가 연결되는 계정은 [sp_changedistpublisher&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 또는 속성 시트를 통해 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
--   Sp_adddistpublisher **@security_mode** 매개 변수에 대해 1 (Windows 통합 인증) 값을 지정 하는 경우 [transact-sql&#41;&#40;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)합니다.  
+-   Sp_adddistpublisher 매개 변수에 대해 1 (Windows 통합 인증) 값을 지정 하는 경우 **@security_mode** [transact-sql&#41;&#40;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)합니다.  
   
-    -   스냅숏 에이전트 및 로그 판독기 에이전트에 사용 된 프로세스 계정 및 암호 **@job_login** **@job_password** ( [sp_addpublication_snapshot &#40;Transact-sql](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)&#41;및 [Sp_addlogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql))는 Oracle 게시자에 연결 하는 데 사용 된 계정 및 암호와 동일 해야 합니다.  
+    -   스냅숏 에이전트 및 로그 판독기 에이전트에 사용 된 프로세스 계정 및 암호 ( **@job_login** **@job_password** [sp_addpublication_snapshot &#40;transact-sql](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)&#41;및 [sp_addlogreader_agent &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql))는 Oracle 게시자에 연결 하는 데 사용 된 계정 및 암호와 동일 해야 합니다.  
   
-    -   Transact-sql&#41;또는 **@job_login** [sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)을 [sp_changepublication_snapshot &#40;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 매개 변수를 변경할 수 없지만 암호는 변경할 수 있습니다.  
+    -   Transact-sql **@job_login**&#41;또는 [Sp_changelogreader_agent &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql)을 [sp_changepublication_snapshot &#40;](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql) 매개 변수를 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
  복제 보안에 대 한 자세한 내용은 [SQL Server 복제 보안](../security/view-and-modify-replication-security-settings.md)을 참조 하세요.  
   

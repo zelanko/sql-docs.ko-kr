@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: beef30273e7d3ad3b0273c10ebbb3d589b7187a7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c4aab04b1fbeaf9d0875a22c3e3e713c698a9b9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018132"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>결과 처리 방법 도움말 항목(OLE DB)
   OLE DB 애플리케이션에서 결과를 처리하려면 먼저 결과 집합의 특징을 확인한 다음 데이터를 프로그램 변수로 가져와야 합니다. 명령에서 저장 프로시저를 실행하는 경우 저장 프로시저의 반환 코드 및 출력 매개 변수를 처리하는 방법도 알아야 합니다.  

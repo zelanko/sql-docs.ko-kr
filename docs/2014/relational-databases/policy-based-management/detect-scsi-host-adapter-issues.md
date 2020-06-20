@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4762b2aec13821402c8b38bd5da207855fd1ea76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eda91751ecde2dd1282453759ba66f8483b755f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62705110"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068863"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>SCSI 호스트 어댑터 문제 검색
   이 규칙은 시스템 이벤트 로그에서 EventId 1066을 검사합니다. 이 오류는 SCSI 호스트 어댑터 구성 문제 또는 디바이스 오작동으로 인해 발생합니다.  

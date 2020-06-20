@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19fee33c63b1287e43077640f381d4b57f489535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdac65caf3f4fcbb4d62146c0b0fc0441c5150df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038437"
 ---
 # <a name="sql-server-replication-publication-properties"></a>SQL Server 복제 게시 속성 
   이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대 한 정보를 제공 합니다. 
@@ -107,7 +106,7 @@ ms.locfileid: "80380724"
  **테이블 찾기**  
  병합 게시에만 사용할 수 있습니다. **테이블 찾기** 를 클릭하여 복잡한 필터 트리에서 테이블을 찾을 수 있습니다. 관계가 복잡하게 설정된 데이터베이스에서는 한 테이블이 여러 테이블에 조인될 수 있으므로 필터 트리에서 두 개 이상의 위치에 표시될 수 있습니다.  
   
- 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시되며 해당 노드를 확장하면 **\<tablename>에 대한 테이블을 보려면 [테이블 찾기]를 클릭하십시오.** 라는 텍스트가 표시됩니다.  
+ 실제 테이블은 트리의 한 위치에만 표시되고 나머지 위치에서는 바로 가기로 표시됩니다. 테이블 바로 가기는 테이블에 대한 참조일 뿐이므로 해당 테이블의 자식 노드는 표시되지 않습니다. 바로 가기 노드는 바로 가기 화살표로 표시 되며 해당 노드를 확장 하면 **표 \<tablename> 를 참조 하는 테이블 찾기를 클릭 **하 여 테이블을 볼 수 있습니다.  
   
  창에서 바로 가기 노드를 선택하고 **테이블 찾기** 를 클릭하면 창이 확장되고 테이블이 강조 표시됩니다. 바로 가기 노드를 선택하지 않고 **테이블 찾기** 를 클릭하면 **테이블 찾기** 대화 상자가 시작됩니다.  
   

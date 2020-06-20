@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2c9399472c6e67c9e2121a008f9283ba05943da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045921"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63224623"
   
 ##  <a name="before-you-start"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  

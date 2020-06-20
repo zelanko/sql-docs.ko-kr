@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d079c1ad9810f86935777159d0ff2e855c6df3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038619"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
   Microsoft **의** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 사용하면 사용자 지정 카운터 인스턴스를 만들 수 있습니다. 사용자 지정 카운터 인스턴스를 사용하여 사용자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 고유한 구성 요소 같이 기존 카운터로 모니터링할 수 없는 서버 측면(예: 로그된 고객의 주문 수나 제품 정보)를 모니터링할 수 있습니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cda0be25f07ed2ee283b9707884041e7c6e4692f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014473"
 ---
 # <a name="logon-triggers"></a>LOGON 트리거
   LOGON 트리거는 LOGON 이벤트에 대한 응답으로 저장 프로시저를 실행합니다. 이 이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용자 세션이 설정된 경우 발생합니다. LOGON 트리거는 로그인의 인증 단계가 완료되었지만 사용자 세션이 실제로 설정되기 전에 발생합니다. 따라서 오류 메시지 및 PRINT 문의 메시지와 같이 일반적으로 사용자에게 전달되는 모든 트리거 내 발생 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그로 전달됩니다. 인증에 실패할 경우 LOGON 트리거는 실행되지 않습니다.  

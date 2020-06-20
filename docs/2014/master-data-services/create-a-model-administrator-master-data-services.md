@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971823"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>모델 관리자 만들기(Master Data Services)
-  에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]그룹이 나 사용자에 게 하나 이상의 모델에 있는 모든 개체에 대 한 **업데이트** 권한을 부여 하려면 모델 관리자를 만듭니다.  
+  에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 그룹이 나 사용자에 게 하나 이상의 모델에 있는 모든 개체에 대 한 **업데이트** 권한을 부여 하려면 모델 관리자를 만듭니다.  
   
 > [!TIP]  
 >  관리를 간소화 하려면 Windows 또는 로컬 그룹을 만들고이를 모델 관리자로 구성 합니다. 그러면 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스하지 않고 그룹에서 사용자를 추가하고 제거할 수 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  

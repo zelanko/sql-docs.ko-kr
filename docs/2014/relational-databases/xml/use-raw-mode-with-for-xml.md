@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 06054f9a107e2aaf9fea83cb3879ef672a8520b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2908a98336ec8a6e12029ad471f22a33d7a4dcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061193"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>FOR XML에서 RAW 모드 사용
-  RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자 \<row>가 있는 XML 요소 또는 선택적으로 제공된 요소 이름으로 변환합니다. 기본적으로 행 집합에서 NULL이 아닌 각 열 값은 \<row> 요소의 특성으로 매핑됩니다. ELEMENTS 지시어가 FOR XML 절에 추가된 경우 각 열 값은 \<row> 요소의 하위 요소로 매핑됩니다. ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 xsi:nil=`"`true`"`특성이 있는 요소로 매핑할 수 있습니다.  
+  RAW 모드는 쿼리 결과 집합의 각 행을 일반 식별자가 있는 XML 요소 \<row> 또는 선택적으로 제공 된 요소 이름으로 변환 합니다. 기본적으로 NULL이 아닌 행 집합의 각 열 값은 요소의 특성에 매핑됩니다 \<row> . ELEMENTS 지시어가 FOR XML 절에 추가 된 경우 각 열 값은 요소의 하위 요소로 매핑됩니다 \<row> . ELEMENTS 지시어와 함께 선택적으로 XSINIL 옵션을 지정하여 결과 집합의 NULL 열 값을 xsi:nil=`"`true`"`특성이 있는 요소로 매핑할 수 있습니다.  
   
  결과 XML에 대한 스키마를 요청할 수 있습니다. XMLDATA 옵션을 지정하면 인라인 XDR 스키마가 반환됩니다. XMLSCHEMA 옵션을 지정하면 인라인 XSD 스키마가 반환됩니다. 스키마는 데이터 시작 부분에 표시됩니다. 결국 모든 최상위 요소에 대해 스키마 네임스페이스 참조가 반복됩니다.  
   

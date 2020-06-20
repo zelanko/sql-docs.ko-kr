@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972493"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>데이터 흐름 경로 편집기를 사용하여 경로 메타데이터 보기
   경로는 두 개의 데이터 흐름 구성 요소를 연결합니다. 경로 메타데이터를 보려면 데이터 흐름에 적어도 두 개 이상의 연결된 데이터 흐름 구성 요소가 있어야 합니다. 자세한 내용은 [데이터 흐름에서 구성 요소 추가 또는 삭제](data-flow/add-or-delete-a-component-in-a-data-flow.md) 및 [데이터 흐름의 구성 요소 연결](data-flow/connect-components-in-a-data-flow.md)을 참조하세요.  

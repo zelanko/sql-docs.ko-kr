@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1cd70c38c03e0a60cfe5060f15e2ecc6655e72a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962363"
 ---
 # <a name="technical-reference-integration-services"></a>기술 참조(Integration Services)
-  의에 대 한 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]도구, 언어 및 프로그래밍 참조 설명서를 찾습니다.  
+  의에 대 한 도구, 언어 및 프로그래밍 참조 설명서를 찾습니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
  ![작은 파일 폴더 아이콘](media/filefolder-small.gif "작은 파일 폴더 아이콘") **변경 데이터 캡처 서비스 및 디자이너**  
  [Attunity Oracle CDC Service](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  

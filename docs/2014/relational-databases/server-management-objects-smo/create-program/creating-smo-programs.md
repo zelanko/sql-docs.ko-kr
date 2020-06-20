@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7d2f0bcf-f1ae-45b8-bc3f-7aea4fae7e45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccf26cf30c53e3a336e842cbbffc1ff517075fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da7f9159a1dbe888dde3ecfe59ae25c56fdd5bf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055288"
 ---
 # <a name="creating-smo-programs"></a>SMO 프로그램 만들기
   SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체의 일반적인 프로그래밍에는 메서드 실행, 속성 설정 및 컬렉션 조작과 같이 모든 개체가 공유하는 공통적인 영역이 포함됩니다.  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[SQL Server 인스턴스에 연결](connecting-to-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 연결을 설정하는 가장 기본적인 SMO 프로그램입니다. Windows 인증과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 수행하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 및 원격 인스턴스에 연결하는 방법을 보여 주는 예제도 포함되어 있습니다.|  
 |[SQL Server 인스턴스에서 연결 끊기](disconnecting-from-an-instance-of-sql-server.md)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 끊는 방법을 보여 주는 프로그램입니다.|  

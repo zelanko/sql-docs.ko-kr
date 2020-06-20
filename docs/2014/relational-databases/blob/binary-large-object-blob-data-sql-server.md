@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f549f1c851ff09b165dae055b8bb18f01a66fcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a663dedf34d75a21ee8df6b97979548c04abf7ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955843"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>BLOB(Binary Large Object) 데이터(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하면 데이터베이스 또는 원격 스토리지 디바이스에 파일 및 문서를 스토리지할 수 있습니다.  
   
-##  <a name="in-this-section"></a><a name="section"></a>섹션 항목  
+##  <a name="in-this-section"></a><a name="section"></a> 섹션 내용  
  [BLOB 저장 옵션 비교&#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  
  FILESTREAM, FileTable 및 Remote Blob Store의 장점을 비교합니다.  
   

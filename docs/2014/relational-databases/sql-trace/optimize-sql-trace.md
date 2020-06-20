@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b29965c33270bbf8d9173c55e96af48b9c4f749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 831875218423bdb9106d7d84995af1e788da44db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068259"
 ---
 # <a name="optimize-sql-trace"></a>SQL 추적 최적화
   SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  

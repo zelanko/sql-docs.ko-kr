@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e73e200fb47c1ad54066f66396c887c1604a09c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b8a70b014f0813bb8364509207922b3f2a84329
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017408"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>SQL Server 2005 Native Client에서 애플리케이션 업데이트
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 이후에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client에 대해 이루어진 주요 변경 사항을 설명합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "82704407"
   
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]와 함께 제공되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와 함께 제공되는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client 10.5. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]와 함께 제공되는 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client 11.0.  
   
-|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|설명|  
+|[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후에 SQL Server Native Client에서 변경된 동작|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB가 정의된 배율로만 패딩됩니다.|변환된 데이터가 서버로 전송되는 변환의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]부터 해당)는 데이터의 후행 0을 `datetime` 값의 최대 길이까지만 패딩합니다. 9자리까지 패딩된 SQL Server Native Client 9.0입니다.|  
 |ICommandWithParameter::SetParameterInfo에 대한 DBTYPE_DBTIMESTAMP의 유효성을 검사합니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (부터 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] )는 DBTYPE_DBTIMESTAMP에 대 한 소수 자릿수 초의 소수 자릿수를 설정 하기 위해 ICommandWithParameter:: SetParameterInfo의 *bscale* 에 대 한 OLE DB 요구 사항을 구현 합니다.|  

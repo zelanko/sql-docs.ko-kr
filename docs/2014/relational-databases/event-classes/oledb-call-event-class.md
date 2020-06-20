@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2250847ee35210c63a4ac9ed5e1e41bab33a08ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a26781a34b75893dfb8aad54cea8e7f6d2c2e4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052870"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
   **OLEDB Call** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분산 쿼리 및 원격 저장 프로시저를 위해 OLE DB 공급자를 호출할 때 발생합니다.  
@@ -34,12 +33,12 @@ ms.locfileid: "62956364"
 |ClientProcessID|`Int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`Int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|Duration|`Bigint`|OLE DB Call 이벤트를 완료하는 데 소요되는 시간입니다.|13|아니요|  
+|Duration|`Bigint`|OLE DB Call 이벤트를 완료하는 데 소요되는 시간입니다.|13|예|  
 |EndTime|`Datetime`|이벤트가 종료된 시간입니다.|15|예|  
 |Error|`int`|지정된 이벤트의 오류 번호입니다. 종종 sys.messages 카탈로그 뷰에 저장된 오류 번호를 나타냅니다.|31|예|  
-|EventClass|`Int`|이벤트 유형 = 119|27|아니요|  
+|EventClass|`Int`|이벤트 유형 = 119|27|예|  
 |EventSequence|`Int`|일괄 처리 내의 OLE DB 이벤트 클래스 시퀀스입니다.|51|예|  
-|EventSubClass|`Int`|0=시작<br /><br /> 1=완료|21|아니요|  
+|EventSubClass|`Int`|0=시작<br /><br /> 1=완료|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|yes|  
@@ -54,7 +53,7 @@ ms.locfileid: "62956364"
 |SessionLoginName|`nvarchar`|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 `SessionLoginName`은 Login1을 표시하고 `LoginName`은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|yes|  
 |SPID|`Int`|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
-|TextData|`nvarchar`|OLE DB 호출에서 주고 받는 매개 변수입니다.|1|아니요|  
+|TextData|`nvarchar`|OLE DB 호출에서 주고 받는 매개 변수입니다.|1|예|  
 |TransactionID|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
   
 ## <a name="see-also"></a>참고 항목  

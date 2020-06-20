@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962388"
 ---
 # <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수를 제공합니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "62927232"
 |`ExecutionInstanceGUID`|String|실행 중인 패키지의 고유 식별자입니다.|  
 |`FailedConfigurations`|String|실패한 패키지 구성 이름입니다.|  
 |`IgnoreConfigurationsOnLoad`|부울|패키지를 로드할 때 패키지 구성을 무시할지 여부를 지정합니다.|  
-|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용 하 여 패키지를 실행 하는 경우 속성이로 `False`설정 됩니다.|  
+|**InteractiveMode**|부울|패키지가 대화형 모드에서 실행 중인지 여부를 나타냅니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 실행 중인 경우 이 속성은 `True`로 설정됩니다. **DTExec** 명령 프롬프트 유틸리티를 사용 하 여 패키지를 실행 하는 경우 속성이로 설정 됩니다 `False` .|  
 |`LocaleId`|Int32|패키지에서 사용되는 로캘입니다.|  
 |**MachineName**|String|패키지가 실행 중인 컴퓨터 이름입니다.|  
 |**OfflineMode**|부울|패키지가 오프라인 모드인지 여부를 나타냅니다. 오프라인 모드에서는 데이터 원본에 연결하지 않습니다.|  
@@ -59,14 +58,14 @@ ms.locfileid: "62927232"
 ## <a name="system-variables-for-containers"></a>컨테이너의 시스템 변수  
  다음 표에서는 For 루프, Foreach 루프 및 시퀀스 컨테이너에 대해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|설명|컨테이너|  
+|시스템 변수|데이터 형식|Description|컨테이너|  
 |---------------------|---------------|-----------------|---------------|  
 |`LocaleId`|Int32|컨테이너에서 사용되는 로캘입니다.|For 루프 컨테이너<br /><br /> Foreach 루프 컨테이너<br /><br /> 시퀀스 컨테이너|  
   
 ## <a name="system-variables-for-tasks"></a>태스크의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 태스크에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
-|시스템 변수|데이터 형식|설명|  
+|시스템 변수|데이터 형식|Description|  
 |---------------------|---------------|-----------------|  
 |**CreationName**|String|작업의 이름입니다.|  
 |`LocaleId`|Int32|태스크에서 사용되는 로캘입니다.|  
@@ -77,7 +76,7 @@ ms.locfileid: "62927232"
 ## <a name="system-variables-for-event-handlers"></a>이벤트 처리기의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 이벤트 처리기에 대해 제공하는 시스템 변수에 대해 설명합니다. 일부 변수는 특정 이벤트 처리기에서만 사용할 수 있습니다.  
   
-|시스템 변수|데이터 형식|설명|이벤트 처리기|  
+|시스템 변수|데이터 형식|Description|이벤트 처리기|  
 |---------------------|---------------|-----------------|-------------------|  
 |**취소**|부울|오류, 경고 또는 쿼리 취소가 발생할 때 이벤트 처리기 실행이 중지되는지 여부를 나타냅니다.|OnError 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기<br /><br /> OnQueryCancel 이벤트 처리기|  
 |**ErrorCode**|Int32|오류 식별자입니다.|OnError 이벤트 처리기<br /><br /> OnInformation 이벤트 처리기<br /><br /> OnWarning 이벤트 처리기|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 19c0c3b044943e51c6d791e962fa830f0b6d0144
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa63445b81ec89b87523fa29c50817e128d48515
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043562"
 ---
 # <a name="sql-server-message-results"></a>SQL Server 메시지 결과
   다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 행 집합 또는 실행 시 영향을 받는 행의 수를 생성 하지 않습니다.  

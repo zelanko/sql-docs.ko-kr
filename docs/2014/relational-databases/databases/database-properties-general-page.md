@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a29d99ebbb0ce0d12096ee92f833278ebda15e7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970133"
 ---
 # <a name="database-properties-general-page"></a>데이터베이스 속성(일반 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 123cc4cc977e52334b085691caa74e853d5f3fb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39c5dda7122cf6d4020a5d2977553f43c7cd5d2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053183"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Audit Object Derived Permission 이벤트 클래스
   **Audit Object Derived Permission** 이벤트 클래스는 특정 개체에 대해 CREATE, ALTER 또는 DROP 명령이 실행된 경우 이를 기록합니다. 이 이벤트는 해당 개체에 직접 연결된 권한이나 소유자가 없는 경우에만 발생합니다.  

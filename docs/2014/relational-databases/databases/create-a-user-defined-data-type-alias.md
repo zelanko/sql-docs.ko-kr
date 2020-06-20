@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917458"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970243"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "62917458"
      `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 길이가 표시되지 않습니다.  
   
      **이름**  
-     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 `sysname` 데이터 형식과 일치 해야 합니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
+     새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 최대 문자 수는 시스템 데이터 형식과 일치 해야 합니다 `sysname` . 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
   
      **규칙**  
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙을 선택합니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "62917458"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     및 데이터 형식의 경우 저장소 값은 항상 길이 값의 두 배입니다. **Length** `nchar` `nvarchar`  
+     `nchar`및 `nvarchar` 데이터 형식의 경우 저장소 값은 항상 **길이**값의 두 배입니다.  
   
      `nvarchar(max)`, `varchar(max)` 또는 `varbinary(max)` 데이터 형식의 경우에는 스토리지가 표시되지 않습니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e25a33c3d0bb5511f3dcae72442f2f3a9ed4eb93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998691"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>저장 프로시저 실행(ODBC CALL 구문 사용) 및 반환 코드와 출력 매개 변수 처리(OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 저장 프로시저는 정수 반환 코드 및 출력 매개 변수를 사용할 수 있습니다. 반환 코드와 출력 매개 변수는 서버의 마지막 패킷으로 전달되지 않으므로 행 집합이 완전히 해제될 때까지 애플리케이션에서 사용할 수 없습니다. 명령이 여러 결과를 반환하는 경우 `IMultipleResults::GetResult`에서 DB_S_NORESULT를 반환하거나 `IMultipleResults` 인터페이스가 완전히 해제될 때 출력 매개 변수 데이터를 사용할 수 있습니다.  

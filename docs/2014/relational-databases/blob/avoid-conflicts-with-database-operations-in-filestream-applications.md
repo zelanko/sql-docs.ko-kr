@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa9321cffd3b6b5edb7ac90fac67867804637b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955853"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 애플리케이션에서 데이터베이스 작업과의 충돌 방지
   FILESTREAM BLOB 데이터를 읽거나 쓰기 위해 SqlOpenFilestream()을 사용하여 Win32 파일 핸들을 여는 애플리케이션은 공통된 트랜잭션에서 관리되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과의 충돌 오류가 발생할 수 있습니다. 여기에는 실행 시간이 오래 걸리는 MARS 쿼리 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이 포함됩니다. 이러한 유형의 충돌을 방지하도록 애플리케이션을 신중하게 디자인해야 합니다.  
@@ -141,7 +140,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [OpenSqlFilestream을 사용 하 여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)   
+ [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](access-filestream-data-with-opensqlfilestream.md)   
  [MARS&#40;Multiple Active Result Sets&#41; 사용](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1b0daf439816b2a5ee9ba852b95f0628d2c863
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051613"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 이벤트 클래스
   SP:StmtCompleted 이벤트 클래스는 저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 완료되었음을 나타냅니다.  
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>SP:StmtCompleted 이벤트 클래스 데이터 열  
   
-|데이터 열 이름|`Data type`|설명|열 ID|필터 가능|  
+|데이터 열 이름|`Data type`|Description|열 ID|필터 가능|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|인스턴스에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
+|ApplicationName|`nvarchar`|인스턴스에 대 한 연결을 만든 클라이언트 응용 프로그램의 이름입니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |CPU|`int`|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|18|예|  
 |DatabaseID|`int`|저장 프로시저가 실행되는 데이터베이스의 ID입니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|예|  
 |EndTime|`datetime`|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 45|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 45|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

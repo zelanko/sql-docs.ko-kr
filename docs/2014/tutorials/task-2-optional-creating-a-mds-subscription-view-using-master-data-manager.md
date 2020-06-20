@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006532"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>태스크 2(선택 사항): 마스터 데이터 관리자를 사용하여 MDS 구독 뷰 만들기
   이 태스크에서는 **공급자** 모델의 **공급자** 엔터티를 다른 응용 프로그램에 노출 하는 구독 뷰를 만듭니다. 현재 버전의 자습서에서는 이 뷰를 사용하지 않습니다.  
   
-1.  위쪽에서 **SQL Server 2012 MDS(Master Data Services)** 를 **Master Data Manager** 클릭 하`http://localhost/MDS`여 마스터 데이터 관리자 ()의 기본 페이지로 전환 합니다.  
+1.  **Master Data Manager** `http://localhost/MDS` 위쪽에서 **SQL Server 2012 MDS(Master Data Services)** 를 클릭 하 여 마스터 데이터 관리자 ()의 기본 페이지로 전환 합니다.  
   
 2.  **Integration Management**를 클릭 합니다.  
   

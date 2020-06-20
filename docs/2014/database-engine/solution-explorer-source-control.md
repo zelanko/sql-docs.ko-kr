@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6373adb8-3d81-4945-a9fc-1d0d5799d29a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44843764b7eed26bfd424ee61f2534aae42b9a73
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843115"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928994"
 ---
 # <a name="solution-explorer-source-control"></a>솔루션 탐색기 원본 제어
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 솔루션 탐색기 별도의 원본 제어 시스템에 통합할 수 있습니다. 솔루션 또는 프로젝트가 원본 제어 시스템에 통합된 경우 프로젝트에서 스크립트 및 쿼리에 대한 파일 액세스와 버전을 제어할 수 있습니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]솔루션 탐색기 별도의 원본 제어 시스템에 통합할 수 있습니다. 솔루션 또는 프로젝트가 원본 제어 시스템에 통합된 경우 프로젝트에서 스크립트 및 쿼리에 대한 파일 액세스와 버전을 제어할 수 있습니다.  
   
 ## <a name="solution-and-project-source-control"></a>솔루션 및 프로젝트 원본 제어  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62843115"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[원본 제어 기본 사항](../../2014/database-engine/source-control-basics.md)|기본 원본 제어 용어를 정의하고 원본 제어 서비스를 사용할 경우 프로젝트에 어떤 이점이 있는지에 대해 설명합니다.|  
 |[원본 제어에 솔루션 및 프로젝트 추가](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경을 사용하여 솔루션과 프로젝트를 원본 제어에 추가하는 방법에 대해 설명합니다.|  

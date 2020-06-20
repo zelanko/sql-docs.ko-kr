@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80b4fa79-243f-442c-9f22-74ad66186501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3758409cef566c41f55dc90d3f508a12bb3236a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4df25909cf156957908abf0691964fd66a76343a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015928"
 ---
 # <a name="caching-templates-xsl-and-schemas-sqlxml-40"></a>템플릿, XSL 및 스키마 캐싱(SQLXML 4.0)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0은 성능 개선을 위해 템플릿, XSL 및 스키마 캐싱을 지원합니다.  

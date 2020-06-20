@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970773"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 사용자 정의 함수
   사용자 정의 함수는 매개 변수를 사용하여 계산이나 다른 동작을 수행한 다음 결과를 반환하는 루틴입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#과 같은 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 프로그래밍 언어를 사용하여 사용자 정의 함수를 작성할 수 있습니다.  

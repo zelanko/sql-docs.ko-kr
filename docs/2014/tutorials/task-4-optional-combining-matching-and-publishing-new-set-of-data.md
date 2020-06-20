@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061110"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>태스크 4(선택 사항): 새 데이터 세트 결합, 일치 및 게시
   시간이 지날수록 MDS 저장소에 추가하는 데이터가 늘어나게 됩니다. 데이터를 추가 하기 전에 MDS에서 이미 관리 되는 데이터와 새 데이터를 비교 하 여 중복 되거나 부정확 한 데이터를 추가 하지 않도록 하는 것이 유용할 수 있습니다. Excel용 Master Data Services 추가 기능에서는 데이터를 MDS에 게시하기 전에 두 워크시트의 데이터를 결합하고 데이터를 비교해서 중복된 항목을 식별하고 제거할 수 있습니다. MDS Excel 추가 기능의 일치 기능에는 데이터에서 일치 항목을 식별하기 위해 DQS 일치 기능이 사용됩니다. 이 작업에서는 MDS에 데이터를 게시하기 전에 두 워크시트의 데이터를 하나로 결합한 후 일치 작업을 수행해서 중복된 항목을 식별하고 제거합니다. 자세한 내용은 Excel용 MDS 추가 기능 및 [데이터 결합](https://msdn.microsoft.com/library/hh548680.aspx) 항목 [의 데이터 품질 일치](https://msdn.microsoft.com/library/hh548681.aspx) 를 참조 하세요.  
@@ -38,7 +37,7 @@ ms.locfileid: "65489276"
   
 7.  맨 아래에 있는 **sheet2** 를 클릭 하 여 **sheet2** 탭으로 전환 합니다. **Sheet2**가 표시 되지 않으면 새 워크시트를 추가 합니다.  
   
-8.  **Suppliers** 파일 (자습서 파일에 포함 된 원본 입력 파일)을 열고 **CombineAndCleanse** 워크시트의 모든 행 (3 개)을 **Sheet2**로 복사 합니다.  
+8.  **Suppliers.xls** 파일 (자습서 파일에 포함 된 원본 입력 파일)을 열고 **CombineAndCleanse** 워크시트의 모든 행 (3 개)을 **Sheet2**로 복사 합니다.  
   
 9. **MDS**에 연결 된 **Microsoft excel** ( **정리 및 일치 하는 공급자 목록** Excel이 아님)의 **공급 업체** 시트로 다시 전환 합니다.  
   

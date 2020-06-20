@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766346"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962403"
 ---
 # <a name="ssis-toolbox"></a>SSIS 도구 상자
   SQL Server 2008 및 2008 R2용으로 작성된 타사 구성 요소를 포함하여 로컬 컴퓨터에 설치되는 모든 구성 요소는 이제 새 **SSIS 도구 상자**에 자동으로 표시됩니다. 추가 구성 요소를 설치할 때는 도구 상자 내부를 마우스 오른쪽 단추로 클릭한 다음 **도구 상자 새로 고침** 을 클릭하여 구성 요소를 추가합니다.  

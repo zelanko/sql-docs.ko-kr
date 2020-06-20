@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a735b4c2b51e1c680c8129647733ce1efd9f9984
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055036"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>자습서: hierarchyid 데이터 형식 사용
   이 자습서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 경험은 있지만 `hierarchyid` 데이터 형식은 처음 사용하는 사용자를 위해 제공됩니다.  

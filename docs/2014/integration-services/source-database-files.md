@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb40764ee279d98b6b63906ed08b26afe156aee4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055543"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962863"
 ---
 # <a name="source-database-files"></a>원본 데이터베이스 파일
   **원본 데이터베이스 파일** 대화 상자를 사용하여 원본 서버의 데이터베이스 파일 이름 및 위치를 보거나 데이터베이스 전송 태스크에 대한 네트워크 파일 공유 위치를 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](control-flow/transfer-database-task.md)를 참조하세요.  

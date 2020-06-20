@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4256d62bdeac2d79c51e5f3792c991e0e3b15096
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016314"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 보안 주체에 권한을 부여하는 방법에 대해 설명합니다.  

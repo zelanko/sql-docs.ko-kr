@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936698"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067230"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>색 대화 상자(Visual Database Tools)
   **색 대화 상자** 에서는 사용자가 선택한 색의 RGB 값을 반환합니다. 사용자는 디스플레이 드라이버에 의해 결정된 기본 색 집합이나 사용자 지정 색 집합에서 선택할 수 있습니다. 기본 색에서 선택하거나 사용자 지정 색을 만듭니다. 색 매트릭스에서 클릭하거나 **색상**, **채도**, **명도**, **빨강**, **녹색**및 **파랑** 상자에 입력하여 색을 정의합니다.  

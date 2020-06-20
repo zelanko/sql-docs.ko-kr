@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0535fce-2bf5-4f6d-b517-ffe6fa13738d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0389221e869d13b277502d60500ff2df1c00610c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006202"
 ---
 # <a name="task-9-configuring-a-reference-data-service"></a>태스크 9: 참조 데이터 서비스 구성
   이 태스크에서는 Azure Marketplace에서 참조 데이터 서비스를 사용 하도록 DQS를 구성 합니다. 다음 태스크에서는이 서비스를 사용 하도록 **주소 유효성 검사** 도메인을 구성 합니다. 런타임에 정리 작업을 수행 하는 동안 DQS는 **주소 유효성 검사** 도메인의 도메인 값을 정리를 위해 서비스에 전달 합니다. 자세한 내용은 [참조 데이터를 사용 하도록 DQS 구성을](https://msdn.microsoft.com/library/hh213070.aspx) 참조 하세요.  

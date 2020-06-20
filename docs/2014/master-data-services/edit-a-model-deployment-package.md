@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 82f3e362643df17d9105ad6987a851211bd22865
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c02b4053906aa89e40e82857bda173049463cc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479506"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961773"
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
   이 항목에서는 MDS에서 전체 모델 대신 모델의 선택한 부분을 배포하는 방법에 대해 설명합니다. 이렇게 하려면 모델 패키지 편집기를 사용하여 MDS 모델 패키지를 편집하면 됩니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "65479506"
   
 6.  **찾아보기**를 클릭하여 부분 패키지를 저장할 폴더로 이동한 다음 부분 패키지의 파일 이름(확장명은 .pkg)을 입력합니다. **저장**을 클릭합니다.  
   
-7.  **Finish**를 클릭합니다.  
+7.  **마침**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f96d90f620f563877e554c282d9443313bad1b14
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5596a8d4d4bad18c1adc03a5280e199d0fe91e0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046328"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
   이 항목에서는의 데이터 형식에 대 한 장점과 제한 사항을 설명 하 `xml` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 XML 데이터를 저장 하는 방법을 선택 하는 데 도움을 줍니다.  
@@ -114,7 +113,7 @@ ms.locfileid: "82702239"
  네이티브 XML 스토리지는 구조 범위가 포함된 XML 문서가 있거나 관계형 구조로 매핑하기 어려운 여러 스키마 또는 복잡한 스키마에 해당하는 XML 문서가 있는 경우에 유용합니다.  
   
 #### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
- 각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 따라서 \<section>은 재귀적 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
+ 각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 결과적으로 \<section> 는 재귀 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
   
  XML 문서에 적합한 스토리지 모델은 `xml` 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "82702239"
   
 -   **sql_variant** 인스턴스의 하위 유형으로 사용될 수 없습니다.  
   
--   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용합니다.  
+-   `text` 또는 `ntext`로의 캐스트 또는 변환을 지원하지 않습니다. 대신 `varchar(max)` 또는 `nvarchar(max)`를 사용하십시오.  
   
 -   비교 또는 정렬할 수 없습니다. 즉, `xml` 데이터 형식은 GROUP BY 문에서 사용할 수 없습니다.  
   

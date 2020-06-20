@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0978452104eb9a55d49dfa9f851ef7578489db26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006478"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>태스크 7: Data Flow에 DQS 정리 변환 추가
   이 작업에서는 데이터 흐름에 DQS 정리 변환을 추가하여 DQS를 사용해서 입력 공급자 데이터를 정리합니다. 변환에 대 한 자세한 내용은 **[Dqs 정리 변환](https://msdn.microsoft.com/library/ee677619.aspx)** 을 참조 하세요.  
@@ -34,7 +33,7 @@ ms.locfileid: "65488939"
   
 6.  **연결 테스트** 를 클릭 하 여 DQS 서버에 대 한 연결을 테스트 합니다.  
   
-7.  **확인**을 클릭하여 대화 상자를 닫습니다.  
+7.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 8.  **데이터 품질 기술 자료**에 대해 **Suppliers** 를 선택 합니다.  
   

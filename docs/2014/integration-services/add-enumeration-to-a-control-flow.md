@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cad9c6a3537fb523a13f0206eed6c8eee837ed06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff127798f7c36340a85fa72cebfdc9a012c0676
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926104"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>제어 흐름에 열거 추가
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 패키지의 제어 흐름에 파일 및 개체를 열거하는 루핑 구성을 간단하게 포함시킬 수 있는 제어 흐름 요소인 Foreach 루프 컨테이너가 포함됩니다. 자세한 내용은 [Foreach 루프 컨테이너](control-flow/foreach-loop-container.md)을 참조하십시오.  

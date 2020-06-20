@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2f16ebe4df94be0d3c9135de508f9743e0336799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c20dc0af07c43dca1c2441a87e7c0ff427f236cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017710"
 ---
 # <a name="supporting-local-transactions"></a>로컬 트랜잭션 지원
   세션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 로컬 트랜잭션에 대 한 트랜잭션 범위를 구분 합니다. 소비자의 방향으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native client OLE DB 공급자가 연결 된 인스턴스에 요청을 전송 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 요청은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native client OLE DB 공급자에 대 한 작업 단위를 구성 합니다. 로컬 트랜잭션은 항상 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 세션에서 하나 이상의 작업 단위를 래핑합니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "82704480"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 다음과 **같이 ITransactionLocal:: starttransaction** 매개 변수를 지원 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*isoLevel*[in]|이 트랜잭션에 사용할 격리 수준입니다. 로컬 트랜잭션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음을 지원 합니다.<br /><br /> -ISOLATIONLEVEL_UNSPECIFIED<br />-ISOLATIONLEVEL_CHAOS<br />-ISOLATIONLEVEL_READUNCOMMITTED<br />-ISOLATIONLEVEL_READCOMMITTED<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_CURSORSTABILITY<br />-ISOLATIONLEVEL_REPEATABLEREAD<br />-ISOLATIONLEVEL_SERIALIZABLE<br />-ISOLATIONLEVEL_ISOLATED<br />-ISOLATIONLEVEL_SNAPSHOT **Note:** 부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 대해 버전 관리가 사용 되는지 여부에 관계 없이 *isoLevel* 인수에 ISOLATIONLEVEL_SNAPSHOT를 사용할 수 있습니다. 그러나 버전 관리가 설정되어 있지 않거나 데이터베이스가 읽기 전용이 아닌 상태에서 사용자가 문을 실행하려고 하면 오류가 발생합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 버전에 연결할 때 ISOLATIONLEVEL_SNAPSHOT을 *isoLevel*로 지정하면 XACT_E_ISOLATIONLEVEL 오류가 발생합니다.|  
 |*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 0 이외의 값에 대해 오류를 반환 합니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "82704480"
   
  로컬 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransaction:: Abort** 매개 변수를 구현 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*pboidReason*[in]|설정된 경우 무시됩니다. NULL이어도 안전합니다.|  
 |*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
@@ -50,7 +49,7 @@ ms.locfileid: "82704480"
   
  로컬 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransaction:: Commit** 매개 변수를 구현 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*fRetaining*[in]|TRUE인 경우 해당 세션을 위한 새 트랜잭션이 암시적으로 시작됩니다. 이 트랜잭션은 소비자가 커밋 또는 종료해야 합니다. FALSE 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 세션에 대해 자동 커밋 모드로 되돌립니다.|  
 |*grfTC*[in]|Native Client OLE DB 공급자는 비동기 및 1 단계 반환을 지원 하지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 XACTTC_SYNC 이외의 값에 대해 XACT_E_NOTSUPPORTED을 반환 합니다.|  

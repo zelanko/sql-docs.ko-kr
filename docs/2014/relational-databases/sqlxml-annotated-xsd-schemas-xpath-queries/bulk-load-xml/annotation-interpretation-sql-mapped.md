@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068229"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped(SQLXML 4.0)
   XML 대량 로드는 `sql:mapped` XSD 스키마의 주석을 예상 대로 처리 합니다. 즉, 매핑 스키마가 `sql:mapped="false"` 요소 또는 특성에 대해를 지정 하는 경우 Xml 대량 로드는 관련 데이터를 해당 열에 저장 하지 않습니다.  

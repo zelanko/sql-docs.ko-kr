@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972762"
 ---
 # <a name="debugging-control-flow"></a>제어 흐름 디버깅
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지에서 제어 흐름 문제를 해결하는 데 사용할 수 있는 기능과 도구가 포함되어 있습니다.
@@ -50,7 +49,7 @@ ms.locfileid: "78176611"
 |태스크나 컨테이너가 `OnTaskFailed` 이벤트를 받을 때|태스크 호스트가 실패할 때 해당 태스크 호스트에 의해 호출됩니다.|
 |태스크나 컨테이너가 `OnProgress` 이벤트를 받을 때|태스크 실행에 대한 진행률을 업데이트하기 위해 호출됩니다.|
 |태스크나 컨테이너가 `OnQueryCancel` 이벤트를 받을 때|태스크 처리 중 실행을 취소할 수 있는 모든 시점에 호출됩니다.|
-|태스크나 컨테이너가 `OnVariableValueChanged` 이벤트를 받을 때|변수 값이 변경될 때 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 시 호출됩니다. 이 이벤트를 발생 시키려면 변수의 RaiseChangeEvent을로 `true` 설정 해야 합니다.<br /><br /> **&#42;&#42;경고&#42;&#42;** 이 중단점과 연결된 변수는 **컨테이너** 범위에서 정의되어야 합니다. 변수가 패키지 범주로 정의된 경우 중단점이 적중되지 않습니다.|
+|태스크나 컨테이너가 `OnVariableValueChanged` 이벤트를 받을 때|변수 값이 변경될 때 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 시 호출됩니다. 이 이벤트를 발생 시키려면 변수의 RaiseChangeEvent을로 설정 해야 합니다 `true` .<br /><br /> **&#42;&#42;경고&#42;&#42;** 이 중단점과 연결된 변수는 **컨테이너** 범위에서 정의되어야 합니다. 변수가 패키지 범주로 정의된 경우 중단점이 적중되지 않습니다.|
 |태스크나 컨테이너가 `OnCustomEvent` 이벤트를 받을 때|사용자 지정 태스크 정의 이벤트를 발생시키기 위해 태스크에 의해 호출됩니다.|
 
  모든 태스크 및 컨테이너에 대해 사용할 수 있는 중단 조건 외에도 일부 태스크 및 컨테이너에는 중단점 설정을 위한 특수한 중단 조건이 포함됩니다. 예를 들어 For 루프 컨테이너에 중단 조건을 설정하여 반복되는 각 루프가 시작될 때 실행을 일시 중지하도록 중단점을 설정할 수 있습니다.
