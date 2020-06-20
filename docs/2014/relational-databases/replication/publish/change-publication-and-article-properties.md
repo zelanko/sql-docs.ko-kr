@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038063"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
   게시 생성 후 대부분의 게시 및 아티클 속성을 변경할 수 있지만 일부 속성을 변경하려면 스냅샷을 다시 생성하거나 구독을 다시 초기화해야 합니다. 이 항목에서는 변경 시 이러한 두 가지 동작 중 하나 또는 모두가 필요한 모든 속성에 대한 정보를 제공합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "73882342"
 |INSERT, UPDATE 또는 DELETE 명령을 변경합니다.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 이름을 변경합니다.|**sp_changearticle**|**dest_table**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |대상 테이블 소유자(스키마)를 변경합니다.|**sp_changearticle**|**destination_owner**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
-|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|**\@입력할**<br /><br /> **\@길이**<br /><br /> **\@전체 자릿수**<br /><br /> **\@배율을**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
+|데이터 형식 매핑을 변경합니다. Oracle 게시에만 적용됩니다.|**sp_changearticlecolumndatatype**|**\@입력할**<br /><br /> **\@길이**<br /><br /> **\@소수**<br /><br /> **\@배율을**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>병합 복제에 대한 게시 속성  
   
@@ -73,7 +72,7 @@ ms.locfileid: "73882342"
 |조인 필터 또는 논리적 레코드를 변경합니다.|**sp_changemergefilter**|**\@속성**<br /><br /> **\@기본값**|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |매개 변수가 있는 필터의 사용을 해제합니다. 매개 변수가 있는 필터 사용 시 특별한 조치는 필요하지 않습니다.|**sp_changemergepublication**|**false** 에 대한 **false**값|새 스냅샷<br /><br /> 구독을 다시 초기화합니다.|  
 |사전 계산 파티션 사용을 설정 또는 해제합니다.|**sp_changemergepublication**|**use_partition_groups**|새 스냅샷|  
-|파티션 최적화를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 사용 하거나 사용 하지 않도록 설정 합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
+|파티션 최적화를 사용 하거나 사용 하지 않도록 설정 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 합니다.|**sp_changemergepublication**|**keep_partition_changes**|구독을 다시 초기화합니다.|  
 |구독자 파티션 유효성 검사를 설정 또는 해제합니다.|**sp_changemergepublication**|**validate_subscriber_info**|구독을 다시 초기화합니다.|  
 |게시 호환성 수준을 80sp3 이하로 변경합니다.|**sp_changemergepublication**|**publication_compatibility_level**|새 스냅샷|  
   

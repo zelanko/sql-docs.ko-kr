@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a90d9de052399f47ac0f62a13fbb6e65a6077c97
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 54f9fb551cf8a53d8184ca22812c7ce01822d41c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048989"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 보안 고려 사항
   이 섹션에서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML의 보안 관련 고려 사항에 대한 정보를 제공합니다.  

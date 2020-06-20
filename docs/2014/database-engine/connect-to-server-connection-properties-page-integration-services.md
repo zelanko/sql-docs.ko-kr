@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934664"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>서버에 연결(연결 속성 페이지) Integration Services
-  등록 된 서버에 연결 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 하거나 [!INCLUDE[ssIS](../includes/ssis-md.md)] **등록 된 서버**에 등록할 때이 탭을 사용 하 여 옵션을 확인 하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssIS](../includes/ssis-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../includes/ssis-md.md)] **등록 된 서버에 연결 하거나 등록 된 서버**에 등록할 때이 탭을 사용 하 여 옵션을 확인 하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 연결 시에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssIS](../includes/ssis-md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
 ## <a name="options"></a>옵션  
  **포트 번호**  
  [!INCLUDE[ssIS](../includes/ssis-md.md)]에서 사용하는 포트 번호를 입력합니다.  
   
- **연결 제한 시간**  
+ **연결 시간 제한**  
  제한 시간이 초과 되기 전까지 연결이 설정 될 때까지 대기 하는 시간 (초)을 입력 합니다. 기본값은 15 초입니다.  
   
  **실행 제한 시간**  
@@ -39,7 +38,7 @@ ms.locfileid: "62755247"
  **연결**  
  목록에 있는 값을 사용하여 연결을 시도합니다.  
   
- **옵션**  
+ **Options**  
  대화 상자를 변경하고 암호 저장과 같은 추가 서버 연결 옵션을 숨기려면 클릭합니다.  
   
  **테스트**  

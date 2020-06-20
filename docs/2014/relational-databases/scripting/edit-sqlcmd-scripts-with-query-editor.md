@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703956"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065756"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>쿼리 편집기로 SQLCMD 스크립트 편집
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 편집기를 사용하여 쿼리를 SQLCMD 스크립트로 작성 및 편집할 수 있습니다. 같은 스크립트에서 Windows 시스템 명령과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리해야 하는 경우 SQLCMD 스크립트를 사용합니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "82703956"
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>데이터베이스 엔진 쿼리 편집기 창을 SQLCMD 모드로 전환하려면  
   
-1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭하여 새[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 엽니다.  
+1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리[!INCLUDE[ssDE](../../includes/ssde-md.md)]를 클릭하여 새** 쿼리 편집기 창을 엽니다.  
   
 2.  **쿼리** 메뉴에서 **SQLCMD 모드**를 클릭합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "82703956"
   
     -   (6개 행 적용됨)  
   
-    -   \<디렉터리 정보>  
+    -   \<The directory information>  
   
     -   (4개 행 적용됨)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703956"
 > [!NOTE]  
 >  `:error` 및 `:out`모두에서 `stderr` 및 `stdout` 은 출력을 메시지 탭으로 보냅니다.  
   
- 위에 나열되지 않은 SQLCMD 명령은 쿼리 편집기에서 지원되지 않습니다. 지원되지 않은 SQLCMD 키워드가 포함된 스크립트가 실행되면 쿼리 편집기는 지원되지 않는 각 키워드의 대상에 "Ignoring command *\<무시된 명령*>" 메시지를 보냅니다. 스크립트가 성공적으로 실행되지만 지원되지 않은 명령은 무시됩니다.  
+ 위에 나열되지 않은 SQLCMD 명령은 쿼리 편집기에서 지원되지 않습니다. 지원 되지 않는 SQLCMD 키워드가 포함 된 스크립트가 실행 되 면 쿼리 편집기는 \<ignored command*> 지원 되지 않는 각 키워드의 대상에 "명령 무시 *" 메시지를 보냅니다. 스크립트가 성공적으로 실행되지만 지원되지 않은 명령은 무시됩니다.  
   
 > [!CAUTION]  
 >  SQLCMD를 명령줄에서 시작하지 않기 때문에 SQLCMD 모드에서 쿼리 편집기를 실행할 때 몇 가지 제한 사항이 있습니다. 변수와 같은 명령줄 매개 변수를 전달할 수 없으며, 쿼리 편집기는 운영 체제 프롬프트에 응답하는 기능이 없으므로 대화형 문을 실행하지 않도록 주의해야 합니다.  

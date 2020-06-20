@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb29b1514ca415003aaac483c089b292adf78a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055272"
 ---
 # <a name="calling-methods"></a>메서드 호출
-  메서드는 데이터베이스에서을 `Checkpoint` 실행 하거나 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대해 열거 된 로그온 목록을 요청 하는 등 개체와 관련 된 특정 태스크를 수행 합니다.  
+  메서드는 `Checkpoint` 데이터베이스에서을 실행 하거나 인스턴스에 대해 열거 된 로그온 목록을 요청 하는 등 개체와 관련 된 특정 태스크를 수행 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 합니다.  
   
  메서드는 개체에 대해 작업을 수행하며 매개 변수를 사용할 수 있고 반환 값을 갖는 경우도 있습니다. 반환 값은 단순한 데이터 형식, 복잡한 개체 또는 여러 멤버가 포함된 구조일 수 있습니다.  
   
  메서드가 성공적으로 실행되었는지 여부를 확인하려면 예외 처리를 사용합니다. 자세한 내용은 [Handling SMO Exceptions](handling-smo-exceptions.md)을 참조하세요.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
 ## <a name="using-a-simple-smo-method-in-visual-basic"></a>Visual Basic에서 간단한 SMO 메서드 사용  

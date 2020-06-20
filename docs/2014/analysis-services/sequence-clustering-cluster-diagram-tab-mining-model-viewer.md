@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940754"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>시퀀스 클러스터링 클러스터 다이어그램 탭(마이닝 모델 뷰어)
   **Microsoft 시퀀스 클러스터링 뷰어** 의 **클러스터 다이어그램** 탭에는 시퀀스 클러스터링 모델에 포함된 모든 클러스터가 그래픽으로 표시됩니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "66069109"
  **음영 변수**  
  클러스터 다이어그램에 음영을 지정하는 데 사용할 특성을 마이닝 모델에서 선택합니다.  
   
- **State**  
+ **상태**  
  **음영 변수**에 해당하는 상태를 선택합니다. 예를 들어 특정 제품이 포함된 시퀀스를 보려면 [Product] 열을 **음영 변수**의 특성으로 선택하고 특정 제품 이름을 **상태** 값으로 선택할 수 있습니다.  
   
  **링크**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70d9b3f9d243531e13d3d5a46693c80288815881
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2f0b748ee8c639c6e64a2f530bfe1f05418dada
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806926"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934234"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-sql-server-management-studio"></a>Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(SQL Server Management Studio)
     
@@ -60,8 +59,8 @@ ms.locfileid: "62806926"
     |옵션|미러링 모니터 여부|설명|  
     |------------|--------------|-----------------|  
     |**성능 우선(비동기)**|Null(있어도 사용되지 않지만 세션에 쿼럼이 필요함)|성능을 최대화하기 위해 미러 데이터베이스는 항상 주 데이터베이스와 시간 간격을 두며 앞서가지 않습니다. 그러나 두 데이터베이스의 시간 간격은 일반적으로 크지 않습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 세션에 권장된 미러링 모니터 서버가 없거나 미러링 모니터 서버가 미러 서버에 연결되어 있으면 웜 대기로 미러 서버에 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> <br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
-    |**자동 장애 조치(Failover)가 없는 보호 우선(동기)**|아니요|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다.<br /><br /> 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 웜 대기로 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
-    |**자동 장애 조치(Failover)가 있는 보호 우선(동기)**|예(필수)|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다. 자동 장애 조치를 지원하도록 미러링 모니터 서버 인스턴스를 포함하여 가용성을 최대화합니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 옵션을 선택할 수 있습니다. 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 미러링 모니터 서버가 있을 경우 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> -주 서버 인스턴스를 사용할 수 없게 되 면 자동 장애 조치가 수행 됩니다. 미러 서버 인스턴스가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.<br /><br /> -미러 서버 인스턴스를 사용할 수 없게 되 면 주 서버가 계속 됩니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.<br /><br /> ** \* 중요 \* \* ** 미러링 모니터 서버의 연결이 끊어지면 파트너가 서로 연결 되어 있어야 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.|  
+    |**자동 장애 조치(Failover)가 없는 보호 우선(동기)**|예|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다.<br /><br /> 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 웜 대기로 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
+    |**자동 장애 조치(Failover)가 있는 보호 우선(동기)**|예(필수)|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다. 자동 장애 조치를 지원하도록 미러링 모니터 서버 인스턴스를 포함하여 가용성을 최대화합니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 옵션을 선택할 수 있습니다. 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 미러링 모니터 서버가 있을 경우 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> -주 서버 인스턴스를 사용할 수 없게 되 면 자동 장애 조치가 수행 됩니다. 미러 서버 인스턴스가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.<br /><br /> -미러 서버 인스턴스를 사용할 수 없게 되 면 주 서버가 계속 됩니다.<br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.<br /><br /> 중요 미러링 모니터 서버의 연결이 끊어지면 파트너가 서로 연결 되어 있어야 데이터베이스를 사용할 수 있습니다. ** \* \* \* \* ** 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.|  
   
 7.  다음 조건을 모두 만족하면 **미러링 시작** 을 클릭하여 미러링을 시작합니다.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "62806926"
  [데이터베이스 미러링 &#40;SQL Server&#41;제거](database-mirroring-sql-server.md)   
  [역할 전환 후 로그인 및 작업 관리 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [데이터베이스 미러링 &#40;SQL Server&#41;설정](setting-up-database-mirroring-sql-server.md)   
- [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터를 관리 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   

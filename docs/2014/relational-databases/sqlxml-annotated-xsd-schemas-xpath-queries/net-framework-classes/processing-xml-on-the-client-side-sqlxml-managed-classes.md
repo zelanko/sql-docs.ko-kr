@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e7ecf18-66fc-49ff-bc50-83635cd7ac0b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc166322bd65342567ebb160766a530da939ad8e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22c8b5e11ced4cdff95a6cc2d8aeeaa7e25a4d90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015311"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>클라이언트 쪽에서 XML 처리(SQLXML 관리되는 클래스)
   이 예에서는 ClientSideXml 속성을 사용 하는 방법을 보여 줍니다. 애플리케이션은 서버에서 저장 프로시저를 실행합니다. 클라이언트 쪽에서 저장 프로시저의 결과(두 개의 열로 이루어진 행 집합)가 처리되어 XML 문서를 생성합니다.  

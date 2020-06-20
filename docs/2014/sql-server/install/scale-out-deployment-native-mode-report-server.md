@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a04a0d0e08804724def9e586c05bb4b6e72cdbd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058941"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>확장 배포(기본 모드 보고서 서버)
   **구성 관리자에서** 스케일 아웃 배포 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 사용하여 스케일 아웃 배포의 초기화 상태를 보거나 보고서 서버를 스케일 아웃 배포에 조인할 수 있습니다. *스케일 아웃 배포* 는 단일 보고서 서버 데이터베이스를 공유하는 두 개 이상의 보고서 서버 인스턴스를 말합니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
  *초기화된 보고서 서버* 는 보고서 서버 데이터베이스에 저장된 중요한 데이터를 암호화 및 해독할 수 있는 서버입니다(저장된 자격 증명 및 연결 문자열은 암호화되어 데이터베이스에 저장됨). 보고서 서버 작업을 위해서는 보고서 서버 초기화가 필요합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "71952421"
   
 ## <a name="options"></a>옵션  
  **SQL Server 이름**  
- 보고서 서버 데이터베이스를 호스팅하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 는 인스턴스의 이름을 지정 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 호스팅하는 인스턴스의 이름을 지정 합니다.  
   
  **데이터베이스 이름**  
  현재 보고서 서버 인스턴스에 연결된 데이터베이스 이름을 지정합니다.  

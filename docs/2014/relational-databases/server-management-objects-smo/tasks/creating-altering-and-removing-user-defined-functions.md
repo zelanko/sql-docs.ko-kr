@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5094900a0efdbd25973ccf0763facd1de18d5233
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037669"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>사용자 정의 함수 생성, 변경 및 제거
-  개체 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> 는 사용자가에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있도록 하는 기능을 제공 합니다. 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>개체는 사용자가에서 사용자 정의 함수를 프로그래밍 방식으로 관리할 수 있도록 하는 기능을 제공 합니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 사용자 정의 함수는 입력 및 출력 매개 변수를 지원하며 테이블 열에 대한 직접 참조도 지원합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 저장 프로시저, 사용자 정의 함수, 트리거 및 사용자 정의 데이터 형식에서 어셈블리를 사용할 수 있으려면 먼저 데이터베이스에 어셈블리를 등록해야 합니다. SMO는 <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> 개체에서 이 기능을 지원합니다.  
   

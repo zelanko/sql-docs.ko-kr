@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767585"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966093"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>1단계: 배포 유틸리티 빌드
   이 태스크에서는 Deployment Tutorial 프로젝트를 위한 배포 유틸리티를 구성 및 작성합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767585"
   
 4.  **Deployment Tutorial 속성 페이지** 대화 상자에서 구성 속성을 확장하고 배포 유틸리티를 클릭합니다.  
   
-5.  **Deployment Tutorial 속성 페이지** 대화 상자의 오른쪽 창에서 `AllowConfigurationChanges` `true`가로 설정 되어 있는지 확인 하 고를로 `CreateDeploymentUtility` `true`설정한 다음 필요에 따라의 `DeploymentOutputPath`기본값을 업데이트 합니다.  
+5.  **Deployment Tutorial 속성 페이지** 대화 상자의 오른쪽 창에서 `AllowConfigurationChanges` 가로 설정 되어 있는지 확인 하 고를 `true` 로 설정한 `CreateDeploymentUtility` `true` 다음 필요에 따라의 기본값을 업데이트 `DeploymentOutputPath` 합니다.  
   
 6.  **확인**을 클릭합니다.  
   

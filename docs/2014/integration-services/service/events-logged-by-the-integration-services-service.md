@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dedffe0f30c62399e4d694f7ee1bf5247222e87d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 851320618ad8eec3e1f8a7de9bfe2d6d379c65d1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889279"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963510"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 Windows 애플리케이션 로그에 다양한 메시지를 기록합니다. 이러한 메시지는 서비스가 시작되거나 중지될 때 또는 특정 문제가 발생할 때 기록됩니다.  

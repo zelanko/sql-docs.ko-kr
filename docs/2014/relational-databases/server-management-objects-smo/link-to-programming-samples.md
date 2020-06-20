@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54b382d3e5623c6fdc43f0b8f4825fc5535b5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055257"
 ---
 # <a name="link-to-programming-samples"></a>프로그래밍 예제 링크
-  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 디렉터리에서 사용할 수 있는 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] Management Objects(SMO) 프로그래밍 예제를 나열합니다. 이러한 샘플은 및 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .net에서 모두 사용할 수 있습니다.  
+  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 디렉터리에서 사용할 수 있는 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] Management Objects(SMO) 프로그래밍 예제를 나열합니다. 이러한 샘플은 및 .Net에서 모두 사용할 수 있습니다 [!INCLUDE[csprcs](../../includes/csprcs-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
   
  예제를 설치 하는 방법에 대 한 자세한 내용은 [SQL Server 2012에 대 한 AdventureWorks](https://msftdbprodsamples.codeplex.com/releases/view/55330)를 참조 하십시오.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "75244524"
 |DatabaseSearch|데이터베이스의 모든 개체를 표시합니다.|  
 |DependencyExplorer|종속성 트리 및 속성 표시 창을 구현합니다.|  
 |IndexSizes|선택한 데이터베이스의 인덱스 이름 및 크기를 표시합니다.|  
-|LoadRegAssembly|[!INCLUDE[msCoName](../../includes/msconame-md.md)] .Net 어셈블리를 로드 하 고에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]등록 하는 방법을 보여 줍니다. UtilityConversion 어셈블리를 사용합니다.|  
+|LoadRegAssembly|.Net 어셈블리를 로드 하 고에 등록 하는 방법을 보여 줍니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . UtilityConversion 어셈블리를 사용합니다.|  
 |ManageDatabases|데이터베이스 만들기, 변경 및 삭제하는 방법을 설명합니다. 새 파일 그룹 및 로그 파일 추가도 포함됩니다.|  
 |ManageDatabaseUsers|사용자를 추가, 수정 및 제거하는 방법을 설명합니다.|  
 |ManageTables|테이블 만들기, 변경 및 삭제하는 방법을 설명합니다.|  

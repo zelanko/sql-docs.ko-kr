@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a237fac7322ed1529a8962b096c6b918ffee33b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968213"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>3단계: 플랫 파일 연결 관리자 수정
   이 태스크에서는 1단원에서 만들어 구성한 플랫 파일 연결 관리자를 수정합니다. 처음 만든 플랫 파일 연결 관리자는 파일 하나를 정적으로 로드하도록 구성되어 있습니다. 플랫 파일 연결 관리자를 사용하여 반복적으로 파일을 로드하려면 런타임에 로드할 파일의 경로를 포함하는 사용자 정의 변수 `User:varFileName`을 허용하도록 연결 관리자의 ConnectionString 속성을 수정해야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "62767435"
   
 2.  속성 창에서 **식**에 대해 빈 셀을 클릭 한 다음 줄임표 단추 **(...)** 를 클릭 합니다.  
   
-3.  **속성 식 편집기** 대화 상자의 **속성** 열에서를 입력 하거나 선택 `ConnectionString`합니다.  
+3.  **속성 식 편집기** 대화 상자의 **속성** 열에서를 입력 하거나 선택 `ConnectionString` 합니다.  
   
 4.  **식** 열에서 줄임표 단추 **(...)** 를 클릭 하 여 **식 작성기** 대화 상자를 엽니다.  
   

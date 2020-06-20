@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046762"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>XML 데이터 직렬화 정의
   xml 데이터 형식을 명시적이나 암시적으로 SQL 문자열 또는 이진 유형으로 캐스팅할 때 xml 데이터 형식의 콘텐츠는 이 항목에 설명된 규칙에 따라 직렬화됩니다.  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>직렬화 중 XML 문자 엔터티화  
  직렬화된 모든 XML 구조는 다시 구문 분석될 수 있어야 합니다. 따라서 일부 문자는 XML 파서의 정규화 단계를 통해 문자의 왕복 기능을 보존할 수 있도록 엔터티화된 방식으로 직렬화되어야 합니다. 하지만 일부 문자는 문서가 잘 작성되고 따라서 구문 분석될 수 있도록 엔터티화되어야 합니다. 다음은 직렬화 중에 적용되는 엔터티화 규칙입니다.  
   
--   &, \< 및 > 문자는 특성 값이나 요소 콘텐츠 내에 있는 경우 항상 &amp;, &lt; 및 &gt;로 매핑됩니다.  
+-   & 문자는 \<, and > &amp; &lt; &gt; 특성 값 이나 요소 콘텐츠 내에서 발생 하는 경우 항상, 및로 엔터티 화 됩니다.  
   
 -   SQL Server는 특성 값을 묶을 때 따옴표(U+0022)를 사용하기 때문에 특성 값에 있는 따옴표는 &quot;로 엔터티화됩니다.  
   

@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0354f0e55111e078f1682e38c3fb51aea8c365b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055350"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
   데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 ***Windows 운영 체제의*** 그룹 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 과 같습니다. 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "63011727"
   
  다음 표에서는 고정 데이터베이스 수준 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다.  
   
-|데이터베이스 수준 역할 이름|설명|  
+|데이터베이스 수준 역할 이름|Description|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 데이터베이스를 삭제할 수도 있습니다.|  
 |**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 멤버는 역할 멤버 자격을 수정하고 사용 권한을 관리할 수 있습니다. 이 역할에 보안 주체를 추가하면 원하지 않는 권한 상승이 설정될 수 있습니다.|  
@@ -79,7 +78,7 @@ ms.locfileid: "63011727"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|이러한 데이터베이스 역할의 멤버는 데이터 수집기를 관리 및 사용할 수 있습니다. 자세한 내용은 [Data Collection](../../data-collection/data-collection.md)을 참조하세요.|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 데이터베이스 역할의 멤버는 정책 기반 관리 정책 및 조건의 모든 구성 및 유지 관리 작업을 수행할 수 있습니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|이러한 데이터베이스 역할의 멤버는 등록된 서버 그룹을 관리 및 사용할 수 있습니다.|  
-|**dbm_monitor**|첫 번째 데이터베이스가 `msdb` 데이터베이스 미러링 모니터에 등록 될 때 데이터베이스에 생성 됩니다. **dbm_monitor** 역할은 시스템 관리자가 사용자를 할당할 때까지 멤버를 가지지 않습니다.|  
+|**dbm_monitor**|`msdb`첫 번째 데이터베이스가 데이터베이스 미러링 모니터에 등록 될 때 데이터베이스에 생성 됩니다. **dbm_monitor** 역할은 시스템 관리자가 사용자를 할당할 때까지 멤버를 가지지 않습니다.|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 및 dc_admin 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 db_ssisadmin 및 dc_admin 역할에 sysadmin 멤버만 추가합니다.  
@@ -87,7 +86,7 @@ ms.locfileid: "63011727"
 ## <a name="working-with-database-level-roles"></a>데이터베이스 수준 역할 작업  
  다음 표에서는 데이터베이스 수준 역할 작업을 위한 명령, 뷰 및 함수에 대해 설명합니다.  
   
-|기능|Type|설명|  
+|기능|Type|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpdbfixedrole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|메타데이터|고정 데이터베이스 역할의 목록을 반환합니다.|  
 |[sp_dbfixedrolepermission&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|메타데이터|고정 데이터베이스 역할에 대한 사용 권한을 표시합니다.|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8cc5eb38cf23b82f61d48941fbf828ff494f3049
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f72bcde1cf180b321c25cff7d3185b540083c0f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067855"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>예제: 제품 모델 정보를 XML로 검색
   다음 쿼리는 제품 모델 정보를 반환합니다. `RAW` 모드는 `FOR XML` 절에서 지정됩니다.  

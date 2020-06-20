@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdc9f1f8ce97941d111cd187b4228fd498fbfe8c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe41085c78077477a495e9cc136c30857938310a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048824"
 ---
 # <a name="enumeration-facets"></a>열거 패싯
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 패턴 패싯 형식이나 이러한 패싯을 위반하는 열거형의 XML 스키마를 거부합니다.  

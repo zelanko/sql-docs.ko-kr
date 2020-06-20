@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 903c33c2679d4869bd26e95392e6eb5dcd2f9fb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c33ed9c41577c02b6d37f21db0ceca91a5449f1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059595"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty 클래스
   [SqlServiceAdvancedProperty 클래스](sqlserviceadvancedproperty-class.md) 는 [sqlservice 클래스](../sqlservice-class/sqlservice-class.md) 개체에서 참조 하는 서비스의 고급 속성을 나타냅니다.  

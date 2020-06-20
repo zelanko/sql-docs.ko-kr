@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066060"
 ---
 # <a name="considerations-for-using-test-servers"></a>테스트 서버 사용 시 고려 사항
   테스트 서버를 사용하여 프로덕션 서버의 데이터베이스를 튜닝하는 것은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 중요한 장점입니다. 이 기능을 사용하여 프로덕션 서버의 실제 데이터를 테스트 서버로 복사하지 않고도 튜닝 오버헤드를 테스트 서버에 오프로드할 수 있습니다.  

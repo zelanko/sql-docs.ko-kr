@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5cc9190c77f506b13ba8b5fba0e32d5a925570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63058099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065870"
 ---
 # <a name="login-for-updatable-subscriptions"></a>업데이트할 수 있는 구독에 대한 로그인
   이 마법사의 **업데이트할 수 있는 구독** 페이지에서 **복제** 를 선택한 경우 즉시 업데이트 구독을 위해 게시자에 연결할 때 사용할 계정을 구독자에 지정해야 합니다. 이 연결은 구독자에서 발생되는 트리거에 사용되고 게시자로 변경 내용을 전파합니다. 기본적으로 새 구독 마법사는 필요에 따라 즉시 업데이트로 전환할 수 있는 기능을 사용하여 지연 업데이트를 구성하기 때문에 이 계정은 **업데이트할 수 있는 구독** 페이지에서 **변경 내용 대기 및 가능 시 커밋** 을 선택한 경우에도 필요합니다.  
   
 > [!IMPORTANT]  
->  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. _\<Hexadecimalnumber>>_ **syncobj_** 형식으로 명명 된 게시 데이터베이스의 보기에 대 한 사용 권한을 각 구독자에서 구성한 계정에 부여 합니다.  
+>  연결에 대해 지정된 계정에는 복제가 게시 데이터베이스에 만드는 뷰에서 데이터를 삽입, 업데이트 및 삭제할 수 있는 사용 권한만 부여하고 다른 추가 사용 권한은 부여하지 않습니다. **syncobj_** _\<HexadecimalNumber>_ 각 구독자에서 구성한 계정에 syncobj_ 형식으로 명명 된 게시 데이터베이스의 보기에 대 한 사용 권한을 부여 합니다.  
   
  연결 유형에 대해 3가지 옵션을 사용할 수 있습니다.  
   
@@ -33,14 +32,14 @@ ms.locfileid: "63058099"
   
 -   복제가 만드는 연결된 서버 - 구독자에서 변경 내용을 적용하는 사용자의 자격 증명으로 연결합니다.  
   
- 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)사용 하는 경우에만 지정할 수 있습니다. 매개 변수의 **@security_mode**값을 **1** 로 지정 합니다.  
+ 처음 두 가지 옵션은 이 마법사에서 지정할 수 있습니다. 마지막 옵션은 [sp_link_publication &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)사용 하는 경우에만 지정할 수 있습니다. 매개 변수의 값을 **1** 로 지정 **@security_mode** 합니다.  
   
 ## <a name="options"></a>옵션  
  **다음 SQL Server 인증을 사용하여 연결되는 연결된 서버 만들기**  
  복제는 **로그인** 및 **암호** 필드에 지정된 자격 증명을 사용하여 연결된 서버를 만듭니다.  
   
  **로그인**  
- 이 항목 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 설명 된 사용 권한만 있는 로그인을 입력 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 항목에 설명 된 사용 권한만 있는 로그인을 입력 합니다.  
   
  **암호**  
  **로그인**에서 지정한 로그인에 대한 강력한 암호를 입력합니다.  

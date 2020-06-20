@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047219"
 ---
 # <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
   동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  스키마 바운드 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
 ## <a name="getting-information-about-synonyms"></a>동의어에 대한 정보 가져오기  
- sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. `sys.synonyms` 카탈로그 뷰에 대 한 자세한 내용은 [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)를 참조 하세요.  
+ sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. 카탈로그 뷰에 대 한 자세한 내용은 `sys.synonyms` [&#40;transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)를 참조 하세요.  
   
  확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 애플리케이션은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)를 참조하세요.  
   

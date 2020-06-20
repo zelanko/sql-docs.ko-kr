@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8f2e75eb5272f30153814e923048b4f5c4f8b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016207"
 ---
 # <a name="server-level-roles"></a>서버 수준 역할
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 서버에 대한 사용 권한을 쉽게 관리할 수 있도록 서버 수준 역할을 제공합니다. 서버 역할은 다른 보안 주체를 그룹화하는 보안 주체입니다. 서버 수준 역할은 서버 측 사용 권한 범위에 속합니다. *역할* 은 Windows 운영 체제의 *그룹* 과 같습니다.  
@@ -41,11 +40,11 @@ ms.locfileid: "63011920"
 ## <a name="fixed-server-level-roles"></a>고정 서버 수준 역할  
  다음 표에서는 고정 서버 수준 역할과 해당 기능을 보여 줍니다.  
   
-|고정 서버 수준 역할|설명|  
+|고정 서버 수준 역할|Description|  
 |------------------------------|-----------------|  
 |sysadmin|sysadmin 고정 서버 역할의 멤버는 서버에서 모든 작업을 수행할 수 있습니다.|  
 |serveradmin|serveradmin 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.|  
-|securityadmin|securityadmin 고정 서버 역할의 멤버는 로그인 및 해당 속성을 관리합니다. 이러한 멤버는 서버 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 데이터베이스에 대한 액세스 권한이 있는 경우 데이터베이스 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수도 있습니다. 또한 이 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로그인 암호를 다시 설정할 수 있습니다.<br /><br /> ** \* \* 보안 \* 정보** 에 대 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 한 액세스 권한을 부여 하 고 사용자 권한을 구성 하는 기능을 통해 보안 관리자는 대부분의 서버 사용 권한을 할당할 수 있습니다. 역할 `securityadmin` 은 `sysadmin` 역할과 동일 하 게 처리 되어야 합니다.|  
+|securityadmin|securityadmin 고정 서버 역할의 멤버는 로그인 및 해당 속성을 관리합니다. 이러한 멤버는 서버 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 데이터베이스에 대한 액세스 권한이 있는 경우 데이터베이스 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수도 있습니다. 또한 이 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로그인 암호를 다시 설정할 수 있습니다.<br /><br /> ** \* \* 보안 \* 정보 \* ** 보안 관리자는에 대 한 액세스 권한을 부여 하 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 고 사용자 권한을 구성할 수 있으므로 대부분의 서버 사용 권한을 할당할 수 있습니다. 역할은 `securityadmin` 역할과 동일 하 게 처리 되어야 합니다 `sysadmin` .|  
 |processadmin|processadmin 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에서 실행 중인 프로세스를 종료할 수 있습니다.|  
 |setupadmin|setupadmin 고정 서버 역할의 멤버는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 연결된 서버를 추가하거나 제거할 수 있습니다. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 사용할 때 sysadmin 멤버 자격이 필요합니다.|  
 |bulkadmin|bulkadmin 고정 서버 역할의 멤버는 BULK INSERT 문을 실행할 수 있습니다.|  
@@ -57,7 +56,7 @@ ms.locfileid: "63011920"
  각 고정 서버 역할에는 관련된 특정 사용 권한이 있습니다. 서버 역할에 할당된 사용 권한의 차트는 [데이터베이스 엔진 고정 서버 및 고정 데이터베이스 역할](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(영문)을 참조하세요.  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER` 권한은 `sysadmin` 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: `CONTROL SERVER`는 `sysadmin` 고정 서버 역할의 멤버 자격을 의미 하지 않습니다.) 그러나 경우에 따라 역할과 이와 동등한 권한 사이에서 가장할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 멤버 자격이 필요한 `sysadmin` 171 시스템 저장 프로시저 목록은 Andreas WOLTER [CONTROL SERVER 및 sysadmin/sa: 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)블로그 게시물을 참조 하세요.  
+>  `CONTROL SERVER` 권한은 `sysadmin` 고정 서버 역할과 유사하지만 동일하지는 않습니다. 권한이 역할 멤버 자격을 의미하지 않으며 역할 멤버 자격이 있다고 해서 사용 권한이 부여되는 것도 아닙니다. (예: `CONTROL SERVER`는 고정 서버 역할의 멤버 자격을 의미 하지 않습니다 `sysadmin` .) 그러나 경우에 따라 역할과 이와 동등한 권한 사이에서 가장할 수 있습니다. 대부분의 `DBCC` 명령 및 많은 시스템 절차를 수행하려면 `sysadmin` 고정 서버 역할의 멤버 자격이 필요합니다. 멤버 자격이 필요한 171 시스템 저장 프로시저 목록은 `sysadmin` Andreas Wolter [CONTROL SERVER 및 sysadmin/sa: 권한, 시스템 프로시저, DBCC, 자동 스키마 생성 및 권한 에스컬레이션-주의](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)블로그 게시물을 참조 하세요.  
   
 ## <a name="server-level-permissions"></a>서버 수준 사용 권한  
  사용자 정의 서버 역할에는 서버 수준 사용 권한만 추가할 수 있습니다. 서버 수준 사용 권한을 나열하려면 다음 문을 실행하세요. 서버 수준 사용 권한은 다음과 같습니다.  
@@ -71,7 +70,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>서버 수준 역할 작업  
  다음 표에서는 서버 수준 역할을 통해 사용할 수 있는 명령, 뷰 및 함수를 보여 줍니다.  
   
-|기능|Type|설명|  
+|기능|Type|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|메타데이터|서버 수준 역할의 목록을 반환합니다.|  
 |[sp_helpsrvrolemember&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|메타데이터|서버 수준 역할의 멤버에 대한 정보를 반환합니다.|  

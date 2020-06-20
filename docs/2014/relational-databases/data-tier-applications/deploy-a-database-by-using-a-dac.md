@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970282"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
   **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "62873054"
 ##  <a name="introduction-page"></a><a name="Introduction"></a> 소개 페이지  
  이 페이지에서는 **데이터베이스 배포** 마법사의 단계를 설명합니다.  
   
- **옵션**  
+ **Options**  
   
 -   **이 페이지를 다시 표시 안 함** - 앞으로 소개 페이지가 표시되지 않도록 하려면 이 확인란을 클릭합니다.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62873054"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]데이터베이스 설정:**  
   
--   버전-드롭다운 메뉴 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 버전을 선택 합니다. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 버전** - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 드롭다운 메뉴에서 버전을 선택 합니다.  
   
 -   **최대 데이터베이스 크기** – 드롭다운 메뉴에서 최대 데이터베이스 크기를 선택합니다.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873054"
 ##  <a name="summary-page"></a><a name="Summary"></a> 요약 페이지  
  이 페이지에서 작업에 대해 지정한 원본 및 대상 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>진행률 페이지  
+##  <a name="progress-page"></a><a name="Progress"></a> 진행률 페이지  
  이 페이지에는 작업 상태를 나타내는 진행률 표시줄이 표시됩니다. 자세한 상태를 보려면 **자세히 보기** 옵션을 클릭합니다.  
   
 ##  <a name="results-page"></a><a name="Results"></a>결과 페이지  

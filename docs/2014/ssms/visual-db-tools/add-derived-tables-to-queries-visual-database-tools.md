@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72169654b878f404950788b468bb6603035fd540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63311934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044454"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>쿼리에 파생 테이블 추가(Visual Database Tools)
   파생 테이블은 쿼리에서 테이블 원본으로 사용되는 결과 집합입니다. **다이어그램 창**에서 파생 테이블을 쿼리에 추가할 수 있습니다.  

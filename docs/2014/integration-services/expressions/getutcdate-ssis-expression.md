@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 946d728d57210149b84850ca640edb4cafa57195
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a124f6149a56240b62f72e06281ebbc1405d9e3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966603"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE(SSIS 식)
   DT_DBTIMESTAMP 형식을 사용하여 현재 시스템 날짜를 UTC 시간(국제 표준시 또는 그리니치 표준시)으로 반환합니다. GETUTCDATE 함수는 인수가 필요 없습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 737a2e6c837baea373262e586e528a7307b1db6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940924"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>중첩 테이블 열 선택(새 중첩 테이블 추가 마법사)
   **중첩 테이블 열 선택** 페이지를 사용하여 중첩 테이블에 포함시킬 특성 및 측정값을 선택하고 마이닝 모델에서 해당 특성 및 측정값을 사용하는 방식을 정의할 수 있습니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cef657960da876b25003a6fc1017a372abe410a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2e85b77997e0bba765a1c877311e1336364eaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63074018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044977"
 ---
 # <a name="implement-jobs"></a>작업 구현
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 사용하여 일상적인 관리 태스크를 자동화하고 정기적으로 실행함으로써 좀 더 효율적인 관리를 할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "63074018"
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |작업을 만들고 소유권을 할당하는 방법에 대해 설명합니다.|[작업 만들기](create-jobs.md)|  
 |범주에 작업을 구성하는 방법에 대해 설명합니다.|[작업 구성](organize-jobs.md)|  
 |사용자가 만들 수 있는 작업 단계의 여러 가지 종류와 관리하는 방법에 대해 설명합니다.|[작업 단계 관리](manage-job-steps.md)|  

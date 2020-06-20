@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c220dcc-4014-4bfd-b997-6685902e6f67
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1d0b1d2ef6eed113061cd0f79508a637ec078495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 549bab6484613bbd313d0938dd1e744047b26257
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037139"
 ---
 # <a name="checklists-for-installing-bi-features-with-sharepoint"></a>SharePoint와 함께 SQL BI 기능을 설치하기 위한 검사 목록
   이 섹션에서는 SQL Server BI 기능을 다양한 조합 또는 확장된 토폴로지로 설치하기 위한 검사 목록을 제공합니다. 이미 BI 기능을 설치하기 위한 설치 프로그램 실행 방법을 알고 있는 경우, 검사 목록은 권장 설치 순서를 이해하고, 기능 통합 시나리오를 활성화하기 위해 추가 구성 변경 내용이 필요한지 여부를 이해하기 위한 다음 단계입니다.  

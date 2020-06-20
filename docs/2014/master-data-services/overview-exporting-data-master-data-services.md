@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3449aa76e596eebc77ad56e9c38ab2c0b0a0d615
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960754"
 ---
 # <a name="exporting-data-master-data-services"></a>데이터 내보내기(Master Data Services)
   구독 뷰를 만들어 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터를 구독 시스템으로 내보낼 수 있습니다. 그러면 임의의 구독 시스템에서 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 게시된 데이터를 볼 수 있습니다. 보기에 대한 자세한 내용은 [보기](../relational-databases/views/views.md)를 참조하십시오.  
@@ -53,6 +52,6 @@ ms.locfileid: "65482846"
   
 -   [구독 뷰 형식&#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
--   [보기](../relational-databases/views/views.md)  
+-   [뷰](../relational-databases/views/views.md)  
   
   

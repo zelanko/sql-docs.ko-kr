@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b18de84c0b218866f456f50916c9b6882ac947
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811258"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052761"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Online Index Operation 이벤트 클래스
   Progress Report: Online Index Operation 이벤트 클래스는 온라인 인덱스 작성 작업을 진행하는 동안 온라인 인덱스 작성 진행률을 나타냅니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "68811258"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|예|  
 |EndTime|`datetime`|온라인 인덱스 작업이 완료된 시간입니다.|15|예|  
-|EventClass|`int`|이벤트 유형 = 190|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 190|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=시작<br /><br /> 2=단계 1 실행 시작<br /><br /> 3=단계 1 실행 종료<br /><br /> 4=2단계 실행 시작<br /><br /> 5=2단계 실행 종료<br /><br /> 6=삽입된 행 수<br /><br /> 7=완료<br /><br /> 1단계는 기준 개체(클러스터형 인덱스 또는 힙)를 참조하거나 인덱스 작업에 하나의 비클러스터형 인덱스만 포함될 경우 수행됩니다. 2단계는 인덱스 빌드 작업에 원래의 다시 빌드과 추가 비클러스터형 인덱스가 모두 포함될 경우에 사용됩니다.  예를 들어 개체에 하나의 클러스터형 인덱스와 7개의 비클러스터형 인덱스가 있을 경우 'rebuild all' 명령은 모든 인덱스를 다시 빌드합니다. 기준 개체(클러스터형 인덱스)는 1단계에서 다시 작성되며 그런 다음 2단계에서 모든 비클러스터형 인덱스가 다시 작성됩니다.|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

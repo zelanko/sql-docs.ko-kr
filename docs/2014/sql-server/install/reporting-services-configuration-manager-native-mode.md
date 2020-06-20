@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3dc4e2b2df66b9670bf00e39e6f4a2624c4105e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059059"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 구성 관리자(기본 모드)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 설치를 구성할 수 있습니다. 파일 전용 설치 옵션을 사용하여 보고서 서버를 설치한 경우, 이를 사용할 수 있으려면 먼저 구성 관리자를 사용해서 서버를 구성해야 합니다. 기본 구성 설치 옵션을 사용하여 보고서 서버를 설치한 경우에는 구성 관리자를 사용하여 설치 중에 지정된 설정을 확인하거나 수정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하면 로컬 또는 원격 보고서 서버 인스턴스를 구성할 수 있습니다.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]기본 모드입니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스부터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자가 SharePoint 모드 보고서 서버를 관리하도록 디자인되지 않았습니다. SharePoint 모드는 SharePoint 중앙 관리 및 PowerShell 스크립트를 사용하여 관리 및 구성됩니다. 자세한 내용은 sharepoint [모드 설치 &#40;sharepoint 2010 및 sharepoint 2013&#41;Reporting Services ](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조 하세요.  
@@ -87,7 +86,7 @@ ms.locfileid: "71952489"
   
 -   보고서 서버 전자 메일 구성 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 SMTP(Simple Mail Transport Protocol)를 통해 보고서 또는 보고서 처리 알림을 전자 사서함에 배달하는 메일 배달 확장 프로그램이 포함되어 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 네트워크에서 전자 메일 배달에 사용할 SMTP 서버나 게이트웨이를 지정할 수 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 전체 배포를 사용 하려면를 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 하 여 추가 기능을 활성화 하거나 기본값을 수정 하 고 보고서 관리자 서버에 대 한 사용자 액세스 권한을 부여 해야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버 내용을 관리하거나 추가 기능을 활성화하거나 서버에 대한 액세스 권한을 부여할 수는 없습니다. 전체 배포를 사용 하려면를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 추가 기능을 활성화 하거나 기본값을 수정 하 고 보고서 관리자 서버에 대 한 사용자 액세스 권한을 부여 해야 합니다.  
   
 ##  <a name="requirements"></a><a name="bkmk_requirements"></a> 요구 사항  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 버전별로 다릅니다. 이 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 구성할 수 없습니다. 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 이전 버전과 최신 버전이 함께 실행되고 있는 경우 각 버전과 함께 제공되는 Reporting Services 구성 관리자를 사용하여 각 인스턴스를 구성해야 합니다.  

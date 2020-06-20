@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b77aaffe4e6f0f0163978ba346abdd31cdc61ce8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b0e1d2c91bf7c66065fc8c5a3bcee03e8475c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62897309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966583"
 ---
 # <a name="sign-ssis-expression"></a>SIGN(SSIS 식)
   숫자 식의 양수(+1), 음수(-1) 또는 영(0) 부호를 반환합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7fbc3754121418ea2059ea511f3b247dcff8dd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d38237b53ed994fd3272f9e129564320f88c6e37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706099"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022404"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
   ODBC 3.0 이상에서는**SQLFreeStmt** 가 권장되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 *SQLFreeStmt* 에 대해 정의된 모든 **Option**값을 지원합니다. 하지만 [SQLFreeStmt](sqlclosecursor.md)의 기능을 대체하거나 동일한 기능을 수행하는 [SQLCloseCursor](sqlbindparameter.md), [SQLBindParameter](sqlbindcol.md), **SQLBindCol**, [SQLSetDescField](sqlfreehandle.md) 및 **SQLFreeHandle** 을 대신 사용해야 합니다.  

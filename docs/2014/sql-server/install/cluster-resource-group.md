@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 69a6582f-f1a8-40fe-a991-c3ca42d62540
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6599a087efa16a1fa83a37e1a26b362b971cbc6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb057c6deaec85ffae2c69fde0bf5f6419bedc88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037107"
 ---
 # <a name="cluster-resource-group"></a>클러스터 리소스 그룹
   클러스터 리소스 그룹 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 서버 리소스를 저장할 디스크를 지정할 수 있습니다.  

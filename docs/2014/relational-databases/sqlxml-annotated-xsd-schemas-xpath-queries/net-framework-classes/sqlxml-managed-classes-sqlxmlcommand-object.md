@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015143"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand 개체(SQLXML 관리되는 클래스)
   SqlXmlCommand 개체에 대 한 생성자입니다.  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  쿼리 결과를 기존 스트림에 씁니다. 이 메서드는 결과를 추가 해야 하는 스트림이 있는 경우에 유용 합니다 (예: 쿼리 결과가 OutputStream에 기록 되도록 하려면). 작업 예제는 [SQL 쿼리 실행 &#40;SQLXML 관리 되는 클래스&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)를 참조 하세요.  
   
  XmlReader ExecuteXmlReader ()  
- XmlReader 개체를 반환 합니다. 이 메서드를 사용 하 여 XmlReader 개체의 데이터를 직접 조작 하거나 System.xml의 연결 가능한 아키텍처에 연결할 수 있습니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 설명서를 참조하십시오. 작업 예제는 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
+ XmlReader 개체를 반환 합니다. 이 메서드를 사용 하 여 XmlReader 개체의 데이터를 직접 조작 하거나 System.Xml 연결 가능한 아키텍처에 연결할 수 있습니다. 자세한 내용은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 설명서를 참조하십시오. 작업 예제는 [ExecuteXMLReader 메서드를 사용 하 여 SQL 쿼리 실행](executing-sql-queries-by-using-the-executexmlreader-method.md)을 참조 하세요.  
   
  TheSqlXmlCommand 개체는 다음과 같은 추가 메서드도 지원 합니다.  
   
@@ -106,7 +105,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  명령의 형식을 식별합니다. 이 속성은 실행할 명령의 형식을 지정하는 데 사용됩니다. 명령 형식은 다음 표에 나와 있는 값에 따라 결정됩니다. 작업 예제는 [.Net 환경에서 SQLXML 기능에 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)를 참조 하세요.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |SqlXmlCommandType .Sql|SQL 명령(예: `SELECT * FROM Employees FOR XML AUTO`)을 실행합니다.|  
 |SqlXmlCommandType XPath|XPath 명령(예: `Employees[@EmployeeID=1]`)을 실행합니다.|  
