@@ -1,5 +1,6 @@
 ---
 title: SQL Server 속성 (AlwaysOn 고가용성 탭) | Microsoft Docs
+description: 2014 SQL Server에서 AlwaysOn 가용성 그룹 기능을 설정 하거나 해제 하는 방법에 대해 알아봅니다. 서버 인스턴스가이 기능에 대해 충족 해야 하는 필수 구성 요소를 확인 합니다.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857745"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939094"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>SQL Server 속성(AlwaysOn 고가용성 탭)
   **** 구성 관리자에서 **SQL Server 속성** 대화 상자의 AlwaysOn 고가용성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 AlwaysOn 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 AlwaysOn 가용성 그룹을 사용하도록 설정해야 합니다.  

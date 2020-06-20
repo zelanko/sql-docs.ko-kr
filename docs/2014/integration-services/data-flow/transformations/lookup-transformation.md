@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900259"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939494"
 ---
 # <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 세트의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900259"
 -   불일치 항목 출력. 불일치 항목 출력은 참조 데이터 세트와 하나의 항목도 일치하지 않는 입력 행을 처리합니다. 일치하는 항목이 없는 행을 오류로 처리하도록 조회 변환을 구성하면 해당 행이 오류 출력으로 리디렉션됩니다. 그렇지 않으면 변환이 이러한 행을 불일치 항목 출력으로 리디렉션합니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)를 참조 하세요.  
+    >  [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]에서는 조회 변환에 하나의 출력만 제공합니다. 에서 만든 조회 변환을 실행 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] [조회 변환 업그레이드](../../../sql-server/install/upgrade-lookup-transformations.md)를 참조 하세요.  
   
 -   오류 출력.  
   

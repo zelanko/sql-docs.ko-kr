@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938664"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>열 데이터 형식 설정(SSAS 테이블 형식)
   모델에 데이터를 가져오거나 붙여넣을 때 모델 디자이너에서 자동으로 데이터 형식을 감지하고 적용합니다. 모델에 데이터를 추가한 후 열의 데이터 형식을 수동으로 수정하여 데이터가 저장되는 방법을 변경할 수 있습니다. 원하는 경우 데이터 저장 방식은 변경하지 않고 데이터 표시 방식의 형식만 변경할 수도 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "66066607"
   
 |모델 데이터 형식|  
 |----------------------|  
-|텍스트<br /><br /> 10진수<br /><br /> 정수<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> 날짜|  
+|텍스트<br /><br /> 10진수<br /><br /> 정수<br /><br /> 통화<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  데이터의 데이터 형식이 잘못되었거나 적어도 하나 이상의 데이터 형식이 원하는 형식과 다를 경우 다음과 같은 여러 가지 옵션 중에서 선택할 수 있습니다.  
   

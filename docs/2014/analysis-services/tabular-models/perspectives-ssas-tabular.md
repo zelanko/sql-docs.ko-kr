@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1f78c3a1-ce2c-4e7f-a277-71a657692bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fcd6e438327d88b79a88b5026f28e24e19fffb5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9aa139c33a3d72b5a628ba6354488b8cef81c0a0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938794"
 ---
 # <a name="perspectives-ssas-tabular"></a>큐브 뷰(SSAS 테이블 형식)
   테이블 형식 모델에서 큐브 뷰는 모델의 보기 가능한 하위 집합을 정의하는데, 이를 통해 모델을 집중해서 보거나 비즈니스 또는 애플리케이션의 관점에서 파악할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066875"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 이점  
  테이블 형식 모델은 너무 복잡해서 사용자가 탐색하기 어려울 수 있습니다. 단일 모델이 여러 개의 테이블, 측정값 및 차원을 포함하는 전체 데이터 웨어하우스의 내용을 나타낼 수 있습니다. 이러한 복잡성은 주로 비즈니스 인텔리전스 및 보고 요구 사항을 충족하기 위해 모델의 일부만 사용하는 사용자에게는 부담이 될 수 있습니다.  
   
  큐브 뷰에서 테이블, 열 및 측정값(KPI 포함)은 필드 개체로 정의됩니다. 각 큐브 뷰에 대해 보기 가능한 필드를 선택할 수 있습니다. 예를 들어 단일 모델에 제품, 판매, 재무, 직원 및 지리 데이터가 포함되어 있는데, 영업부에는 제품, 판매, 홍보 및 지리 데이터가 필요한 반면 직원 및 재무 데이터는 필요하지 않을 수 있습니다. 마찬가지로 인사부에는 판매 홍보 및 지리 데이터가 필요하지 않습니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "66066875"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[큐브 뷰 만들기 및 관리&#40;SSAS 테이블 형식&#41;](perspectives-ssas-tabular.md)|모델 디자이너의 큐브 뷰 대화 상자를 사용하여 큐브 뷰를 만들고 관리하는 방법에 대해 설명합니다.|  
   

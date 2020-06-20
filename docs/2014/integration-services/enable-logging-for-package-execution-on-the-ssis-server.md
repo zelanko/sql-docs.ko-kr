@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3e62f4c3b2549fbeac0302e7ea5d97a510bfc4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966913"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>SSIS 서버에서 패키지 실행에 대한 로깅 설정
   이 절차에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 실행할 때 패키지의 로깅 수준을 설정하거나 변경하는 방법에 대해 설명합니다. 패키지를 실행할 때 설정하는 로깅 수준에 따라 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]를 사용하여 구성하는 패키지 로깅이 재정의됩니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) 을 참조하세요.  
@@ -42,12 +41,12 @@ ms.locfileid: "66059364"
   
  다음 로깅 수준을 사용할 수 있습니다.  
   
-|로깅 수준|설명|  
+|로깅 수준|Description|  
 |-------------------|-----------------|  
-|없음|로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
-|Basic|사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 기본값입니다.|  
+|None|로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.|  
+|Basic|사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 이것은 기본값입니다.|  
 |성능|성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **실행 성능** 보고서에는 패키지 데이터 흐름 구성 요소의 활성 시간 및 총 시간이 표시됩니다. 이 정보는 마지막 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에 사용할 수 있습니다. 자세한 내용은 [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md)을(를) 참조하세요.<br /><br /> [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) 뷰에는 각 실행 단계의 데이터 흐름 구성 요소에 대한 시작 시간과 종료 시간이 표시됩니다. 이 뷰에서는 패키지 실행의 로깅 수준이 **성능** 또는 **자세히**로 설정된 경우에만 해당 구성 요소에 대해 이 정보를 표시합니다.|  
-|자세히|사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 진단 이벤트의 한 예로 DiagnosticEx 이벤트가 있습니다. 이 이벤트는 패키지 실행 태스크가 자식 패키지를 실행할 때마다 기록됩니다. 이 이벤트 메시지는 자식 패키지에 전달된 매개 변수 값으로 구성됩니다.<br /><br /> DiagnosticEx에 대한 메시지 열 값은 XML 텍스트입니다. . 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) 뷰를 쿼리합니다.<br /><br /> 참고: 사용자 지정 이벤트에는 태스크에 의해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 기록 되는 이벤트가 포함 됩니다. 자세한 내용은 [로깅할 사용자 지정 메시지](../../2014/integration-services/custom-messages-for-logging.md)를 참조 하세요.<br /><br /> [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) 뷰는 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 뷰에서 이 정보를 캡처하려면 로깅 수준을 **자세히** 로 설정해야 합니다.|  
+|자세히|사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 진단 이벤트의 한 예로 DiagnosticEx 이벤트가 있습니다. 이 이벤트는 패키지 실행 태스크가 자식 패키지를 실행할 때마다 기록됩니다. 이 이벤트 메시지는 자식 패키지에 전달된 매개 변수 값으로 구성됩니다.<br /><br /> DiagnosticEx에 대한 메시지 열 값은 XML 텍스트입니다. . 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database) 뷰를 쿼리합니다.<br /><br /> 참고: 사용자 지정 이벤트에는 태스크에 의해 기록 되는 이벤트가 포함 됩니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . 자세한 내용은 [로깅할 사용자 지정 메시지](../../2014/integration-services/custom-messages-for-logging.md)를 참조 하세요.<br /><br /> [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) 뷰는 패키지 실행에 대해 데이터 흐름 구성 요소가 다운스트림 구성 요소에 데이터를 전송할 때마다 행을 표시합니다. 뷰에서 이 정보를 캡처하려면 로깅 수준을 **자세히** 로 설정해야 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Integration Services &#40;SSIS&#41; 로깅](performance/integration-services-ssis-logging.md)   

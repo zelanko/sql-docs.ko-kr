@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932394"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다.  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE = Normal /ACTION = INSTALL  
   
-2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. 을 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 방법에 대 한 자세한 내용은 설치 [마법사 &#40;설치&#41;에서 SQL Server 2014 설치 ](install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
+2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. 을 설치 하는 방법에 대 한 자세한 내용은 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [마법사 &#40;설치&#41;에서 SQL Server 2014 설치 ](install-sql-server-from-the-installation-wizard-setup.md)를 참조 하세요.  
   
 3.  설치를 실제로 완료하지는 않고 INI 파일을 생성하기 위해 설치를 취소합니다.  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 방법  
   
--   명령 프롬프트에서 설치를 실행하고 *ConfigurationFile* 매개 변수를 사용하여 ConfigurationFile.ini를 입력합니다.  
+-   명령 프롬프트를 통해 설치를 실행 하 고 *Configurationfile* 매개 변수를 사용 하 여 ConfigurationFile.ini을 제공 합니다.  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(SysPrep)의 이미지를 준비하고 완료하는 방법  
   

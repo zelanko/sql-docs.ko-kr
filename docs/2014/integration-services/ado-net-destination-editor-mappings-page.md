@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925885"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>ADO NET 대상 편집기(매핑 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "66061751"
  사용 가능한 대상 열의 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 대상 열을 입력 열에 매핑합니다.  
   
  **입력 열**  
- 선택한 입력 열을 표시합니다. 출력에서 열을 제외 하려면 ** \<>무시** 를 선택 하 여 매핑을 제거할 수 있습니다.  
+ 선택한 입력 열을 표시합니다. **\<ignore>** 출력에서 열을 제외 하도록 선택 하 여 매핑을 제거할 수 있습니다.  
   
  **대상 열**  
  매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  

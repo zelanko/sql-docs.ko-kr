@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594d3461-34d2-41e7-8ad4-bd2753601ab6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0781ab267556b9869412d24d95ffdf94b8b11aaf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2ecc836f8e8042b9fd18c4c6d6548cf01cd25292
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707387"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056171"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow(OLE DB)
   대량 복사 행 집합에 행을 추가합니다. 샘플은 [IRowsetFastLoad를 사용한 데이터 대량 복사&#40;OLE DB&#41;](../native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) 및 [IROWSETFASTLOAD와 ISEQUENTIALSTREAM을 사용하여 SQL SERVER로 BLOB 데이터 전송&#40;OLE DB&#41;](../native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)을 참조하세요.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3e50e89-f85d-485b-a271-1e0550520212
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 823d35b71fca52b2f1892d6e7dbfc940688f0ae6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938874"
 ---
 # <a name="hierarchies-ssas-tabular"></a>계층(SSAS 테이블 형식)
   테이블 형식 모델에서 계층은 테이블에서 두 개 이상의 열 간의 관계를 정의하는 메타데이터입니다. 계층은 보고 클라이언트 필드 목록에서 다른 열과는 별도로 표시되므로 클라이언트 사용자가 손쉽게 탐색하여 보고서에 포함할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66067076"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  테이블에는 비정상적인 열 이름을 갖는 수십 또는 수백 개의 열이 일정한 순서 없이 포함될 수 있습니다. 따라서 보고 클라이언트 필드 목록이 순서 없이 표시되므로 사용자가 데이터를 찾아서 보고서에 포함하기가 어려울 수 있습니다. 계층을 통해 복잡한 데이터 구조를 간단하고 직관적으로 볼 수 있습니다.  
   
  예를 들어 날짜 테이블에서 달력 계층을 만들 수 있습니다. 이때 역년이 최상위 부모 수준으로 사용되고 월, 주 및 일은 자식 수준으로 포함됩니다(역년->월->주->일). 이 계층은 역년에서 일까지의 논리적 관계를 보여 줍니다. 클라이언트 사용자는 필드 목록에서 Calendar Year를 선택하여 피벗 테이블에 모든 수준을 포함하거나, 계층을 확장하고 피벗 테이블에 포함할 특정 수준만 선택할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "66067076"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|작업|설명|  
+|작업|Description|  
 |----------|-----------------|  
 |[계층 만들기 및 관리&#40;SSAS 테이블 형식&#41;](hierarchies-ssas-tabular.md)|다이어그램 뷰에서 모델 디자이너를 사용하여 계층을 만들고 관리하는 방법에 대해 설명합니다.|  
   

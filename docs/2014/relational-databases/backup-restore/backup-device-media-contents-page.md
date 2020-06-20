@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58665371fc8315452d674cf72bb9609cf1612c36
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959340"
 ---
 # <a name="backup-device-media-contents-page"></a>백업 디바이스(미디어 내용 페이지)
   **백업 디바이스** 대화 상자를 사용하여 백업 정보를 볼 수 있습니다. 이 정보에는 디바이스, 미디어, 미디어 세트 및 백업 세트에 대한 설명이 포함됩니다.  
@@ -58,8 +57,8 @@ ms.locfileid: "62876695"
 |헤더|값|  
 |------------|------------|  
 |**이름**|백업 세트의 이름입니다.|  
-|**형식**|백업된 개체입니다. 데이터베이스, 파일 또는 *\<비어 있음>* (트랜잭션 로그의 경우)이 될 수 있습니다.|  
-|**구성 요소**|수행된 백업 유형입니다. 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
+|**형식**|백업 된 개체: 데이터베이스, 파일 또는 *\<blank>* (트랜잭션 로그의 경우)입니다.|  
+|**구성 요소**|수행된 백업 유형: 전체, 차등 또는 트랜잭션 로그일 수 있습니다.|  
 |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**Database**|백업한 데이터베이스 이름입니다.|  
 |**위치**|볼륨에 있는 백업 세트의 위치입니다.|  

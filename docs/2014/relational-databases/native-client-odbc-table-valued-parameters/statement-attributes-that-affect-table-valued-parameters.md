@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9edfe0286492602025a2b63b116e35084626fab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2effcc9a70057be72ab576b929c3bb3c311aeba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056453"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>테이블 반환 매개 변수에 영향을 주는 문 특성
   다음 표에서는 설명자 필드의 특성을 설명합니다.  
   
-|특성 이름|형식|설명|  
+|특성 이름|Type|Description|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|SQL_SS_PARAM_FOCUS에 대 한 자세한 내용은 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)를 참조 하세요.|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|SQL_SS_NAME_SCOPE에 대 한 자세한 내용은 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)를 참조 하세요.|  

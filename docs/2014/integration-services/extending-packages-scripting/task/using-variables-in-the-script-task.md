@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a15edc663d5f855a5aa217400e1c38376e292f4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55122ec1323c0e95816af4e6129f324041ab2eda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967163"
 ---
 # <a name="using-variables-in-the-script-task"></a>스크립트 태스크에서 변수 사용
   스크립트 태스크에서는 변수를 통해 패키지의 다른 개체와 데이터를 교환할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services-ssis-variables.md)을 참조하세요.  
@@ -35,7 +34,7 @@ ms.locfileid: "62894594"
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 클래스의 <xref:Microsoft.SqlServer.Dts.Runtime.Variable> 속성은 `Object` 형식을 사용합니다. 스크립트 태스크에는 `Option Strict`가 설정되어 있으므로 스크립트 태스크를 사용하려면 먼저 <xref:Microsoft.SqlServer.Dts.Runtime.Variable.Value%2A> 속성을 적절한 형식으로 캐스팅해야 합니다.  
   
- <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A>스크립트 태스크 편집기<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A>의 **및** 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 `Value` 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
+ **스크립트 태스크 편집기**의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadOnlyVariables%2A> 및 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptTask.ReadWriteVariables%2A> 목록에 기존 변수를 추가하여 사용자 지정 스크립트에서 해당 변수를 사용할 수 있게 할 수 있습니다. 변수 이름은 대/소문자를 구분합니다. 스크립트 내에서는 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 속성을 통해 두 유형의 변수에 액세스합니다. 개별 변수를 읽고 쓰는 데는 `Value` 속성을 사용합니다. 스크립트 태스크에서는 스크립트가 변수 값을 읽고 수정할 때 잠금을 투명하게 관리합니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Variables.Contains%2A> 속성에서 반환된 <xref:Microsoft.SqlServer.Dts.Runtime.Variables> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A> 메서드를 사용하여 코드에서 변수를 사용하기 전에 해당 변수가 있는지 여부를 확인할 수 있습니다.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62894594"
  열거 된 항목을 변수에 매핑한 후에는 스크립트 `ReadOnlyVariables` **태스크 편집기** 의 **스크립트** 페이지에 있는 속성에 매핑된 변수를 추가 하 여 스크립트에서 사용할 수 있도록 해야 합니다. 폴더의 이미지 파일을 처리하는 Foreach 루프 컨테이너 내에서의 스크립트 태스크에 대한 예제는 [스크립트 태스크를 사용한 이미지 작업](../../extending-packages-scripting-task-examples/working-with-images-with-the-script-task.md)을 참조하세요.  
   
 ## <a name="variables-example"></a>변수 예  
- 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. `CustomerCount` 이 샘플에서는 및 `MaxRecordCount` 라는 정수 변수를 만들고 `ReadOnlyVariables` **스크립트 태스크 편집기**에서 컬렉션에 추가 했다고 가정 합니다. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
+ 다음 예에서는 스크립트 태스크에서 변수에 액세스하고 이를 사용하여 패키지 워크플로의 경로를 확인하는 방법을 보여 줍니다. 이 샘플에서는 및 라는 정수 변수를 만들고 `CustomerCount` `MaxRecordCount` `ReadOnlyVariables` **스크립트 태스크 편집기**에서 컬렉션에 추가 했다고 가정 합니다. `CustomerCount` 변수에는 가져올 고객 레코드 수가 들어 있습니다. 이 값이 `MaxRecordCount` 값보다 크면 스크립트 태스크에서 실패가 보고됩니다. `MaxRecordCount` 임계값 초과로 인해 실패할 경우 워크플로의 오류 경로에서 필요한 정리 작업을 구현할 수 있습니다.  
   
  이 예제를 컴파일하려면 Microsoft.SqlServer.ScriptTask 어셈블리에 대한 참조를 추가해야 합니다.  
   

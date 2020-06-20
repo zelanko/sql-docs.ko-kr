@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2d847adf-4b3d-4949-a195-ef43de275077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a1938f2389f64d7a869ae924690b8b22fa209f82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 212688d5dddaa84b1b7c6aee3fe4ebbb6415e8a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916867"
 ---
 # <a name="data-flow-taps"></a>데이터 흐름 탭
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]에는 런타임에 패키지의 데이터 흐름 경로에서 데이터 탭을 추가하고, 데이터 탭의 출력을 외부 파일에 전달할 수 있는 새로운 기능이 도입되었습니다. 이 기능을 사용하려면 프로젝트 배포 모델을 사용하여 SSIS 프로젝트를 SSIS 서버에 배포해야 합니다. 서버에 패키지를 배포한 후에는 패키지를 실행하기 전에 SSISDB 데이터베이스에 대해 T-SQL 스크립트를 실행하여 데이터 탭을 추가해야 합니다. 다음은 예제 시나리오입니다.  
@@ -51,7 +50,7 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
   
  add_data_tap 저장 프로시저의 dataflow_path_id_string 매개 변수는 데이터 탭을 추가할 데이터 흐름 경로의 IdentificationString 속성에 해당합니다. dataflow_path_id_string을 가져오려면 데이터 흐름 경로(데이터 흐름의 태스크 사이에 있는 화살표)를 클릭하고 속성 창에서 **IdentificationString** 속성 값을 확인합니다.  
   
- 스크립트를 실행하면 출력 파일은 \<Program Files>\Microsoft SQL Server\110\DTS\DataDumps에 저장됩니다. 해당 이름을 가진 파일이 이미 있으면 접미사(예: output[1].txt)로 새 파일이 만들어집니다.  
+ 스크립트를 실행 하면 출력 파일이 \<Program Files> \MICROSOFT SQL server\110\dts\datadumps에 저장 됩니다. 해당 이름을 가진 파일이 이미 있으면 접미사(예: output[1].txt)로 새 파일이 만들어집니다.  
   
  앞에서 설명한 대로 add_data_tap 저장 프로시저를 사용하는 대신 [catalog.add_data_tap_by_guid](/sql/integration-services/system-stored-procedures/catalog-add-data-tap-by-guid)저장 프로시저를 사용할 수도 있습니다. 이 저장 프로시저는 task_package_path 대신 데이터 흐름 태스크의 ID를 매개 변수로 사용합니다. Visual Studio의 속성 창에서 데이터 흐름 태스크의 ID를 가져올 수 있습니다.  
   

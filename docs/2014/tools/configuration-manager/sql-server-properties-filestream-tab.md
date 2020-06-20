@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07ca5ac6-a68a-4e85-bc6f-fa7ccf9f1c10
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22205936807ca316e7b0541d59b6f0b1d8068f96
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 088f9ad4314c8facc4c624f4bb9ed134d81583f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057817"
 ---
 # <a name="sql-server-properties-filestream-tab"></a>SQL Server 속성(FILESTREAM 탭)
   이 페이지를 사용하여 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다.  

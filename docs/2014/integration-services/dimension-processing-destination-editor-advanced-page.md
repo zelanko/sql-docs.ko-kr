@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966962"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>차원 처리 대상 편집기(고급 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 방법을 구성할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66059492"
  **키 오류 동작**  
  사용할 수 없는 키 값이 있는 레코드의 처리 방법을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|사용할 수 없는 키 값을 `UnknownMember` 값으로 변환합니다.|  
 |**DiscardRecord**|레코드를 삭제합니다.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66059492"
  **오류 시 수행할 동작**  
  **오류 발생 시 중지**를 선택한 경우 오류 임계값에 도달했을 때 수행할 동작을 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|처리를 중지합니다.|  
 |**StopLogging**|오류 기록을 중지합니다.|  
@@ -58,7 +57,7 @@ ms.locfileid: "66059492"
  **키를 찾을 수 없는 경우**  
  키를 찾을 수 없을 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -67,7 +66,7 @@ ms.locfileid: "66059492"
  **중복 키**  
  중복 키 오류가 발생할 때 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66059492"
  **Null 키가 알 수 없음으로 변환 되었습니다.**  
  Null 키가 `UnknownMember` 값으로 변환된 경우 수행할 동작을 지정합니다. 기본적으로 이 값은 **IgnoreError**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  
@@ -85,7 +84,7 @@ ms.locfileid: "66059492"
  **Null 키가 허용 되지 않습니다.**  
  Null 키가 허용되지 않는데 Null 키가 있는 경우에 수행할 동작을 지정합니다. 기본적으로 이 값은 **ReportAndContinue**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|오류를 무시하고 처리를 계속합니다.|  
 |**ReportAndContinue**|오류를 보고하고 처리를 계속합니다.|  

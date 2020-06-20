@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176185"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967233"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>스크립트 태스크 코딩 및 디버깅
   **스크립트 태스크 편집기**에서 스크립트 태스크를 구성한 후에 스크립트 태스크 개발 환경에서 사용자 지정 코드를 작성합니다.
@@ -49,9 +48,9 @@ ms.locfileid: "78176185"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>스크립트 태스크 프로젝트의 프로젝트 항목 및 클래스
  기본적으로 VSTA 프로젝트 탐색기 창에 표시되는 스크립트 태스크 프로젝트에는 `ScriptMain`이라는 단일 항목이 포함되어 있으며, 이 `ScriptMain` 항목에는 역시 `ScriptMain`이라는 단일 클래스가 포함되어 있습니다. 클래스의 코드 요소는 스크립트 태스크용으로 선택한 프로그래밍 언어에 따라 다릅니다.
 
--   스크립트 태스크가 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 프로그래밍 언어에 대해 구성 된 경우 `ScriptMain` 클래스에는 공용 서브루틴가 `Main`있습니다. `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.
+-   스크립트 태스크가 프로그래밍 언어에 대해 구성 된 경우 [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] 클래스에는 `ScriptMain` 공용 서브루틴가 `Main` 있습니다. `ScriptMain.Main` 서브루틴은 개발자가 스크립트 태스크를 실행할 때 런타임에서 호출하는 메서드입니다.
 
-     기본적으로 새 스크립트의 `Main` 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄뿐입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. 속성 `Dts.TaskResult` 은 [스크립트 태스크에서 결과 반환](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)에 설명 되어 있습니다.
+     기본적으로 새 스크립트의 `Main` 서브루틴에 있는 유일한 코드는 `Dts.TaskResult = ScriptResults.Success` 줄뿐입니다. 이 줄은 태스크가 작업에 성공했음을 런타임에 알립니다. `Dts.TaskResult`속성은 [스크립트 태스크에서 결과 반환](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)에 설명 되어 있습니다.
 
 -   스크립트 태스크가 Visual C# 프로그래밍 언어를 사용하도록 구성된 경우 `ScriptMain` 클래스에는 `Main`이라는 공용 메서드가 있습니다. 이 메서드는 스크립트 태스크가 실행될 때 호출됩니다.
 

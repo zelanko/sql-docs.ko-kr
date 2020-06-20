@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056472"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>실행 시 데이터를 사용하여 테이블 반환 매개 변수로 데이터 전송(ODBC)
   이는 [모든 메모리 내](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) 프로시저와 유사 하지만 테이블 반환 매개 변수에 대해 실행 시 데이터를 사용 합니다.  
@@ -183,8 +182,8 @@ from @Items
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
- 이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
+### <a name="description"></a>Description  
+ 이 예제에서는 BCP.exe를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사한 방법으로, ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
   
@@ -371,8 +370,8 @@ EXIT:
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>설명  
- 이 샘플에서는 BCP를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사 하 게 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 여러 행의 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
+### <a name="description"></a>Description  
+ 이 예제에서는 BCP.exe를 사용 하 여 데이터베이스에 데이터를 로드 하는 방법과 유사한 방법으로 ODBC TVP를 사용 하 여 SQLPutData에 대 한 호출 당 여러 행을 포함 하는 행 스트리밍을 사용할 수 있음을 보여 줍니다.  
   
  예제를 빌드하기 전에 연결 문자열의 서버 이름을 변경합니다.  
   

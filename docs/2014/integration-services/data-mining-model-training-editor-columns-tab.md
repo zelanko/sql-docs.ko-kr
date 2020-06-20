@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c081064f3a0bcb2733f58df7e1b5550bf135c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9495343fca6da023dbf54bcf69dff6b9bb3e2b9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939154"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>데이터 마이닝 모델 학습 편집기(열 탭)
   **데이터 마이닝 모델 학습 편집기** 대화 상자의 **열** 페이지를 사용하여 입력 열을 마이닝 구조의 열에 매핑할 수 있습니다.  

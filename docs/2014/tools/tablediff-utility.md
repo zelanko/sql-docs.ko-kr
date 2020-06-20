@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057631"
 ---
 # <a name="tablediff-utility"></a>tablediff 유틸리티
   **tablediff** 유틸리티는 두 테이블에 포함된 데이터의 불일치 여부를 비교하는 데 사용되며, 복제 토폴로지의 데이터 불일치 문제를 해결하는 데 특히 유용합니다. 명령 프롬프트나 배치 파일에서 이 유틸리티를 사용하여 다음 태스크를 수행할 수 있습니다.  
@@ -76,8 +75,8 @@ ms.locfileid: "68185967"
  [ **-?** ]  
  지원되는 매개 변수 목록을 반환합니다.  
   
- **-sourceerver** *source_server_name*[**\\**_instance_name_]  
- 원본 서버의 이름입니다. 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기본 인스턴스에 대 한 _\_원본\_서버 이름을_ 지정 합니다. 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]명명 된 인스턴스에 대 한 _원본\_서버\_이름__\__ **\\**인스턴스 이름을 지정 합니다.  
+ **-sourceerver** *source_server_name*[ **\\** _instance_name_]  
+ 원본 서버의 이름입니다. 의 기본 인스턴스에 대 한 _원본 \_ 서버 \_ 이름을_ 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다. 의 명명 된 인스턴스에 대 한 _원본 \_ 서버 \_ 이름_ **\\** _인스턴스 \_ 이름을_ 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다.  
   
  **-sourcedatabase** *source_database*  
  원본 데이터베이스의 이름입니다.  
@@ -100,8 +99,8 @@ ms.locfileid: "68185967"
  **-sourcelocked**  
  비교를 수행하는 동안 TABLOCK 및 HOLDLOCK 테이블 힌트를 사용하여 원본 테이블이 잠깁니다.  
   
- **-destinationserver** *destination_server_name*[**\\**_instance\_name_]  
- 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]명명 된 인스턴스에 대 한 _대상\_서버\_이름__\__ **\\**인스턴스 이름을 지정 합니다.  
+ **-destinationserver** *destination_server_name*[ **\\** _instance \_ name_]  
+ 대상 서버의 이름입니다. *의 기본 인스턴스에 대해* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]을 지정합니다. 의 명명 된 인스턴스에 대 한 _대상 \_ 서버 \_ 이름_ **\\** _인스턴스 \_ 이름을_ 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다.  
   
  **-destinationdatabase** *subscription_database*  
  대상 데이터베이스의 이름입니다.  
@@ -169,7 +168,7 @@ ms.locfileid: "68185967"
 |**2**|테이블 차이|  
   
 ## <a name="remarks"></a>설명  
- **이외 서버에서는** tablediff[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티를 사용할 수 없습니다.  
+ 비 서버에서는 **tablediff** 유틸리티를 사용할 수 없습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  데이터 형식이 `sql_variant`인 열이 있는 테이블은 지원되지 않습니다.  
   

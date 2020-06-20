@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064123"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>전처리 옵션(Distributed Replay Utility Administration Tool)
-  Distributed Replay 관리 도구인 `DReplay.exe`는 Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 항목에서는 **preprocess** 명령줄 옵션과 해당 구문에 대해 설명합니다.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인는 `DReplay.exe` Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 항목에서는 **preprocess** 명령줄 옵션과 해당 구문에 대해 설명합니다.
 
  **프로세스** 옵션은 전처리 단계를 시작합니다. 이 단계 동안 컨트롤러는 대상 서버에 대해 재생할 입력 추적 데이터를 준비합니다.
 
@@ -37,7 +36,7 @@ ms.locfileid: "78177343"
 
  **-m** 매개 변수를 지정하지 않으면 로컬 컴퓨터가 사용됩니다.
 
- **-i** *input_trace_file* 컨트롤러에서 입력 추적 파일의 전체 경로를 지정 합니다 (예:) `D:\Mytrace.trc`. **-i** 매개 변수는 필수 항목입니다.
+ **-i** *input_trace_file* 컨트롤러에서 입력 추적 파일의 전체 경로를 지정 합니다 (예:) `D:\Mytrace.trc` . **-i** 매개 변수는 필수 항목입니다.
 
  같은 디렉터리에 롤오버 파일이 있으면 자동으로 로드되어 사용됩니다. 파일은 파일 롤오버 명명 규칙을 따라야 합니다(예: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, `Mytrace_n.trc`).
 
@@ -73,7 +72,7 @@ ms.locfileid: "78177343"
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir
 ```
 
- 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 예를 들면 다음과 같습니다.
+ 이 예에서는 전처리 단계가 시작되고 수정한 전처리 구성 파일이 지정됩니다. 위의 예와는 달리 수정한 구성 파일을 다른 위치에 저장한 경우 **-c** 매개 변수를 사용하여 해당 위치를 가리켜야 합니다. 다음은 그 예입니다.
 
 ```
 dreplay preprocess -m localhost -i c:\mytrace.trc -d c:\WorkingDir -c c:\DReplay.exe.preprocess.config

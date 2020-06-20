@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939214"
 ---
 # <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
   레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 `Object` 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
@@ -121,7 +120,7 @@ ms.locfileid: "62900003"
   
 5.  **레코드 집합 대상 편집기**를 열고 다음과 같이 대상을 구성합니다.  
   
-    1.  **구성 요소 속성** 탭에서 속성에 `VariableName` 대해를 선택 `User::BonusRecordset`합니다.  
+    1.  **구성 요소 속성** 탭에서 속성에 대해 `VariableName` 를 선택 `User::BonusRecordset` 합니다.  
   
     2.  **입력 열** 탭에서 사용 가능한 열 세 개를 모두 선택합니다.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62900003"
   
 2.  **Foreach 루프 편집기**를 열고 다음과 같이 컨테이너를 구성합니다.  
   
-    1.  **컬렉션** 페이지에서 **열거자**에 대해 **Foreach ado 열거자**를 선택 하 고 **ADO 개체 원본 변수**에 대해를 선택 `User::BonusRecordset`합니다.  
+    1.  **컬렉션** 페이지에서 **열거자**에 대해 **Foreach ado 열거자**를 선택 하 고 **ADO 개체 원본 변수**에 대해를 선택 `User::BonusRecordset` 합니다.  
   
-    2.  **변수 매핑** 페이지에서 인덱스 0, `User::EmailAddress` `User::FirstName` 인덱스 1 및 `User::Bonus` 인덱스 2로 매핑합니다.  
+    2.  **변수 매핑** 페이지에서 인덱스 `User::EmailAddress` 0, 인덱스 `User::FirstName` 1 및 `User::Bonus` 인덱스 2로 매핑합니다.  
   
 3.  **제어 흐름** 탭에서 Foreach 루프 컨테이너 내에 메일 보내기 태스크를 추가합니다.  
   

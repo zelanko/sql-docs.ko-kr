@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9cc81d957c754eb792ca589d445f32f2bcd076b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056997"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
-  이전 버전과의 호환성 섹션의 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 버전 간의 동작 변경 내용에 대해 설명 합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  
+  이전 버전과의 호환성 섹션의 항목에서는 복제 버전 간의 동작 변경 내용에 대해 설명 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 업그레이드를 계획 중이거나 복제 토폴로지에 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다.  
   
  [SQL Server 복제에서 사용되지 않는 기능](deprecated-features-in-sql-server-replication.md)  
- 이전 버전과의 호환성을 위해에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 는 유지 되었지만 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거 될 복제 기능입니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이전 버전과의 호환성을 위해에는 유지 되었지만 이후 버전의에서 제거 될 복제 기능입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [SQL Server 복제의 주요 변경 내용](breaking-changes-in-sql-server-replication.md)  
  애플리케이션을 변경해야 할 수도 있는 복제 기능 변경 내용  

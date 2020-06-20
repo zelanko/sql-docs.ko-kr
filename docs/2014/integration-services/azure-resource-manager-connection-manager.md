@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2db468ae6a9bc90c492a9c4557d248f7f7ef81d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925230"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Azure Resource Manager 연결 관리자
 **Azure Resource Manager 연결 관리자**를 통해 SSIS 패키지는 [서비스 사용자](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal)를 사용하여 Azure 리소스를 관리할 수 있습니다.
@@ -27,5 +26,5 @@ ms.locfileid: "66061354"
 
 1. **SSIS 연결 관리자 추가** 대화 상자에서 **AzureResourceManager**를 선택하고 **추가**를 클릭합니다.
 2. **Azure Resource Manager 연결 관리자 편집기** 대화 상자에서 서비스 사용자에 대한 **애플리케이션 ID**, **애플리케이션 키** 및 **테넌트 ID**를 지정합니다. 이러한 속성에 대한 자세한 내용은 [이](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) 문서를 참조하세요.
-3. **확인**을 클릭하여 대화 상자를 닫습니다.
+3. **확인** 을 클릭하여 대화 상자를 닫습니다.
 4. 작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.

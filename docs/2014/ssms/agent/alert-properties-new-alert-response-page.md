@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c4c93464d7144c8edce9c38464c2f750d7068e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056593"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>경고 속성-새 경고 (응답 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고에 대 한 응답으로 실행할 작업을 지정 하 고 알림을 받을 운영자 목록을 가져올 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 경고에 대 한 응답으로 실행할 작업을 지정 하 고 알림을 받을 운영자 목록을 가져올 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>옵션  
  **작업 실행**  

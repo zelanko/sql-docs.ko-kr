@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 720ea095343abefb0b56f4f1f47bbd853d72378e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ecf72f0015d9ed197b3b7a33d4f9bb3246134b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056161"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad(OLE DB)
   `IRowsetFastLoad`인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 기반 대량 복사 작업에 대 한 지원을 노출 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 인터페이스를 사용 하 여 기존 테이블에 데이터를 빠르게 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "82707339"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|메서드|설명|  
+|방법|Description|  
 |------------|-----------------|  
 |[IRowsetFastLoad::Commit&#40;OLE DB&#41;](irowsetfastload-commit-ole-db.md)|일괄 삽입되는 행의 끝을 표시하고 행을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 씁니다.|  
 |[IRowsetFastLoad::InsertRow&#40;OLE DB&#41;](irowsetfastload-insertrow-ole-db.md)|대량 복사 행 집합에 행을 추가합니다.|  

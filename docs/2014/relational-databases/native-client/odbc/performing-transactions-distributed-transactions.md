@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2baaa43fdf638dcd1f6794eaa9f5cf76df424c06
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ec23fd1883749e35e67f888e26bdf031ccf7fb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055871"
 ---
 # <a name="performing-distributed-transactions"></a>분산 트랜잭션 수행
   MS DTC(Microsoft Distributed Transaction Coordinator)를 사용하면 애플리케이션이 둘 이상의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 트랜잭션을 확장할 수 있습니다. 또한 애플리케이션이 Open Group DTP XA 표준을 준수하는 트랜잭션 관리자가 관리하는 트랜잭션에 참가할 수 있습니다.  

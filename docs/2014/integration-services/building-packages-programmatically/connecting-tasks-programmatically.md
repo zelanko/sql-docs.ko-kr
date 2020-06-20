@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23668e88-cef4-4009-a9cf-38e607eab7a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5343ecb97f631e7e9dd3dbf5e2600008dc0f8fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93c50b2947e3a5174c19555dad903b34a7bea184
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924884"
 ---
 # <a name="connecting-tasks-programmatically"></a>프로그래밍 방식으로 태스크 연결
   개체 모델에서 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint> 클래스가 나타내는 선행 제약 조건은 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 개체가 실행되는 순서를 설정합니다. 선행 제약 조건을 사용하면 패키지의 컨테이너 및 태스크 실행이 이전 태스크 또는 컨테이너의 실행 결과에 따라 결정되도록 할 수 있습니다. 선행 제약 조건은 컨테이너 개체에서 <xref:Microsoft.SqlServer.Dts.Runtime.Executable> 컬렉션의 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints.Add%2A> 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraints> 개체 쌍 간에 설정됩니다. 두 개의 실행 개체 사이에 제약 조건을 만든 후 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint.Value%2A> 속성을 설정하여 제약 조건에 정의된 두 번째 실행 파일을 실행하기 위한 조건을 지정합니다.  
