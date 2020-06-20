@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 326f675a-bead-48d3-9088-539e9f9c3fc9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5594aab7f7d21f10b3b20d42c61558984e71193
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e152fc2950ab6f3cf605bec3b7e595d5e105d00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065349"
 ---
 # <a name="installation-progress"></a>설치 진행률
   **설치 마법사의** 설치 진행률 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 상태를 모니터링합니다.  

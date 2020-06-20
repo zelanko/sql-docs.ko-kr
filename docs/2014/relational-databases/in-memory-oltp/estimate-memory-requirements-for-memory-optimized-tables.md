@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050197"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
-  메모리 최적화 테이블을 새로 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 만들거나 기존 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하는 경우에는 충분 한 메모리를 사용 하 여 서버를 프로 비전 할 수 있도록 각 테이블의 메모리 요구 사항을 적절 하 게 예측 하는 것이 중요 합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
+  메모리 최적화 테이블을 새로 만들거나 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 기존 디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하는 경우에는 충분 한 메모리를 사용 하 여 서버를 프로 비전 할 수 있도록 각 테이블의 메모리 요구 사항을 적절 하 게 예측 하는 것이 중요 합니다. 이 섹션에서는 메모리 최적화 테이블의 데이터를 저장하는 데 필요한 메모리 양을 예측하는 방법에 대해 설명합니다.  
   
  디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션을 고려하는 경우 이 항목을 진행하기 전에 마이그레이션에 가장 적합한 테이블에 대한 지침에 대해 [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 항목을 참조하세요. [메모리 내 OLTP로 마이그레이션](migrating-to-in-memory-oltp.md) 아래의 모든 항목은 디스크 기반 테이블에서 메모리 최적화 테이블로 마이그레이션하는 지침을 제공합니다.  
   
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **해시 인덱스 배열 크기 설정**  
   
- 해시 배열 크기는에 의해 `(bucket_count= <value>)` 설정 됩니다 \<. 여기서 값>은 0 보다 큰 정수 값입니다. \<값> 2의 거듭제곱이 아니면 실제 bucket_count은 가장 가까운 다음 2의 제곱으로 반올림 됩니다.  예제 테이블 (bucket_count = 500만)에서 500만은 2의 거듭제곱이 아니기 때문에 실제 버킷 수는 8388608 (2<sup>23</sup>)로 반올림 됩니다.  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
+ 해시 배열 크기는 `(bucket_count= <value>)` 에 의해 설정됩니다. 여기서 \<value> 는 0보다 큰 정수 값입니다. \<value> 가 2의 제곱이 아니면 실제 bucket_count는 가장 가까운 다음 2의 제곱으로 반올림됩니다.  예제 테이블 (bucket_count = 500만)에서 500만은 2의 거듭제곱이 아니기 때문에 실제 버킷 수는 8388608 (2<sup>23</sup>)로 반올림 됩니다.  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
   
  따라서 이 예제에서 각 해시 배열에 필요한 메모리는 다음과 같습니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736366"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065662"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
   프로시저 매개 변수를 지정하여 호출 프로그램이 값을 프로시저 본문에 전달할 수 있습니다. 이러한 값은 프로시저 실행 시 다양한 목적으로 쓰일 수 있습니다. 프로시저 매개 변수는 매개 변수가 OUTPUT 매개 변수로 표시된 경우 호출 프로그램에 값을 반환할 수도 있습니다.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 그러나 매개 변수 ** \@=**_value_형식에 매개 변수를 제공 하지 않으면 다섯 번째 매개 변수가 포함 된 경우에는 네 번째 매개 변수를 건너뛸 수 없습니다.  
+ 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 그러나 매개 변수 ** \@ =**_value_형식에 매개 변수를 제공 하지 않으면 다섯 번째 매개 변수가 포함 된 경우에는 네 번째 매개 변수를 건너뛸 수 없습니다.  
   
 ## <a name="specifying-parameter-direction"></a>매개 변수 방향 지정  
  매개 변수의 방향은 프로시저 본문으로 전달되는 값을 의미하는 입력 또는 프로시저가 호출 프로그램에 값을 반환함을 의미하는 출력입니다. 기본값은 입력 매개 변수입니다.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. 출력 매개 변수 ** \@cost** 및 ** \@compareprices** **메시지** 창에서 메시지를 반환 하기 위해 흐름 제어 언어와 함께 사용 됩니다.  
+ `usp_GetList` 를 실행하여 가격이 $700 미만인 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 제품(자전거) 목록을 반환합니다. 출력 매개 변수 ** \@ cost** 및 ** \@ compareprices** **메시지** 창에서 메시지를 반환 하기 위해 흐름 제어 언어와 함께 사용 됩니다.  
   
 > [!NOTE]  
->  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 그러나 ** \@listprice =** _variable_ 을 사용 하지 않는 경우 데이터 형식과 매개 변수 위치는 일치 해야 합니다.  
+>  OUTPUT 변수는 프로시저를 만들 때와 변수를 사용할 때 정의되어야 합니다. 매개 변수 이름과 변수 이름은 일치하지 않아도 되지만 그러나 ** \@ listprice =** _variable_ 을 사용 하지 않는 경우 데이터 형식과 매개 변수 위치는 일치 해야 합니다.  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

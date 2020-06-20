@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921939"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 오류 출력 구성
   많은 데이터 흐름 구성 요소가 오류 출력을 지원하며 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너는 구성 요소에 따라 오류 출력을 다르게 구성할 수 있는 방법을 제공합니다. 오류 출력을 구성하는 것 외에도 오류 출력의 열을 구성할 수도 있습니다. 이 작업에는 구성 요소에서 추가한 **ErrorCode** 및 **ErrorColumn** 열의 구성이 포함됩니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "66060822"
   
 4.  구성하려는 오류 출력 열이 있는 구성 요소를 마우스 오른쪽 단추로 클릭하고 **고급 편집기 표시**를 클릭합니다.  
   
-5.  **입력 및 출력 속성** 탭을 클릭 하 고 ** \<구성 요소 이름> 오류 출력** 을 확장 한 다음 **출력 열**을 확장 합니다.  
+5.  **입/출력 속성** 탭을 클릭 하 고 ** \<component name> 오류 출력** 을 확장 한 다음 **출력 열**을 확장 합니다.  
   
 6.  열을 클릭하고 속성을 업데이트합니다.  
   

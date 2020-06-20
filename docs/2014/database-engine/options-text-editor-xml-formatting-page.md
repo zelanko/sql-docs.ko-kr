@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ba863207c367e15f72e68885c6011ef485f6201
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929622"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>옵션(텍스트 편집기 - XML - 서식 페이지)
 
@@ -26,7 +25,7 @@ ms.locfileid: "83000635"
   
 ## <a name="attributes"></a>특성  
  **특성 수동 서식 유지**  
- 특성 서식을 다시 설정하지 마십시오. 이것이 기본값입니다.  
+ 특성 서식을 다시 설정하지 마십시오. 기본값입니다.  
   
 > [!NOTE]  
 >  특성이 여러 줄로 된 경우 편집기에서 상위 요소의 들여쓰기에 맞게 특성의 각 줄을 들여씁니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "83000635"
   
 ## <a name="mixed-content"></a>혼합 내용  
  **기본값으로 혼합된 콘텐츠 서식 지정**  
- `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 이것이 기본값입니다.  
+ `xml:space="preserve"` 범위에 콘텐츠가 있을 때를 제외하고 혼합된 콘텐츠 서식을 다시 설정하려고 합니다. 기본값입니다.  
   
  요소에 텍스트와 마크업이 혼합되어 있으면 콘텐츠가 혼합된 콘텐츠로 간주됩니다. 다음은 혼합된 콘텐츠가 있는 요소의 예입니다.  
   

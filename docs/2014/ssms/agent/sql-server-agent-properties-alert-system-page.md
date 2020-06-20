@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058731"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server 에이전트 속성(경고 시스템 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고가 보낸 메시지의 설정을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 경고가 보낸 메시지의 설정을 확인 하 고 수정할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **메일 세션**  
@@ -36,7 +35,7 @@ ms.locfileid: "63245748"
 >  전자 메일 시스템을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 다시 시작해야만 변경 내용이 적용됩니다.  
   
  **메일 프로필**  
- 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프로필을 설정합니다. ** \<새 데이터베이스 메일 프로필 ... >** 를 선택 하 여 새 프로필을 만들 수도 있습니다.  
+ 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프로필을 설정합니다. 새 프로필을 만들도록 선택할 수도 있습니다 **\<new Database Mail profile...>** .  
   
  **호출기 전자 메일**  
  이 섹션의 옵션을 사용하여 호출 시스템에서 사용하는 호출기 주소로 보낼 전자 메일 메시지를 구성할 수 있습니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "63245748"
  **호출기**  
  접두사와 접미사 사이에 메시지의 전자 메일 주소를 포함합니다.  
   
- **접미어**  
+ **접미사**  
  호출기로 전송되는 메시지의 **받는 사람** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **참조 줄**  
@@ -65,7 +64,7 @@ ms.locfileid: "63245748"
  **호출기**  
  접두사와 접미사 사이에 메시지의 전자 메일 주소를 포함합니다.  
   
- **접미어**  
+ **접미사**  
  호출기로 전송되는 메시지의 **참조** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **Subject**  
@@ -74,7 +73,7 @@ ms.locfileid: "63245748"
  **접두사**  
  호출기로 전송되는 메시지의 **제목** 줄 시작 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
- **접미어**  
+ **접미사**  
  호출기로 전송되는 메시지의 **제목** 줄 끝 부분에 표시되어야 할 고정 텍스트를 입력합니다.  
   
  **알림 메시지에 전자 메일 본문 포함**  

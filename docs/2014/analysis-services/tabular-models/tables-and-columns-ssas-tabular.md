@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938591"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066507"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  테이블 형식 모델에서 테이블은 열 및 기타 메타데이터가 정의되는 프레임 워크를 제공합니다. 테이블에는 다음이 포함됩니다.  
   
  **테이블 정의**  
@@ -57,7 +56,7 @@ ms.locfileid: "66066507"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[테이블에 열 추가&#40;SSAS 테이블 형식&#41;](add-columns-to-a-table-ssas-tabular.md)|원본 열을 테이블 정의에 추가하는 방법을 설명합니다.|  
 |[열 삭제&#40;SSAS 테이블 형식&#41;](delete-a-column-ssas-tabular.md)|모델 디자이너 또는 테이블 속성 대화 상자를 사용하여 모델 테이블 열을 삭제하는 방법에 대해 설명합니다.|  

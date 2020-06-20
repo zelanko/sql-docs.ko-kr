@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 92eb3669930407b359b8eeed4d3df2e802bdacdf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930961"
 ---
 # <a name="manage-full-text-indexes"></a>전체 텍스트 인덱스 관리
      
@@ -46,7 +45,7 @@ ms.locfileid: "83000883"
   
  다음 표에서는 인덱싱된 테이블 및 열과 관련한 전체 텍스트 속성과 관련 [!INCLUDE[tsql](../includes/tsql-md.md)] 함수를 보여 줍니다.  
   
-|속성|설명|함수|  
+|속성|Description|함수|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|열의 문서 유형 정보를 보관하는 테이블의 TYPE COLUMN입니다.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|열에 대한 전체 텍스트 인덱싱 설정 여부를 나타냅니다.|COLUMNPROPERTY|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1048ecf02da0df649043034c2d9db5071284017b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 344cb09fe30997a9261e03e67bf8d2ab548e8be9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000523"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929161"
 ---
 # <a name="server-properties-f1-help"></a>서버 속성 F1 도움말
   이 섹션에서는 SQL Server Management Studio의 **서버 속성** 페이지에 대한 F1 도움말 항목을 제공합니다.  

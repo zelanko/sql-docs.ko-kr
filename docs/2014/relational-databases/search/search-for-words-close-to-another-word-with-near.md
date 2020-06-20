@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003997"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR를 사용하여 근접 단어 검색
-  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 함수에서 근접 단어(NEAR)를 사용하여 단어나 구를 검색할 수 있습니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 단어나 구를 순서에 관계 없이 검색하거나 지정한 순서로 검색할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 이전에 사용 되지 않는 [일반 근접 단어](#Generic_NEAR)와의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]새로운 인 [사용자 지정 근접 단어](#Custom_NEAR)를 모두 지원 합니다.  
+  [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 조건자 또는 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 함수에서 근접 단어(NEAR)를 사용하여 단어나 구를 검색할 수 있습니다. 첫 번째 검색 단어와 마지막 검색 단어를 분리하는 검색 대상이 아닌 단어의 최대 수를 지정할 수도 있습니다. 또한 단어나 구를 순서에 관계 없이 검색하거나 지정한 순서로 검색할 수 있습니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 이전에 사용 되지 않는 [일반 근접 단어](#Generic_NEAR)와의 새로운 인 [사용자 지정 근접 단어](#Custom_NEAR)를 모두 지원 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 합니다.  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>사용자 지정 근접 단어  
  사용자 지정 근접 단어는 다음과 같은 새로운 기능을 제공합니다.  
@@ -89,7 +88,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>사용자 지정 근접 단어와 기타 단어 결합  
- 사용자 지정 근접 단어를 일부 다른 단어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어:  
+ 사용자 지정 근접 단어를 일부 다른 단어와 결합할 수 있습니다. AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 사용자 지정 근접 단어를 다른 사용자 지정 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 다음은 그 예입니다.  
   
 -   CONTAINS('NEAR((*term1*,*term2*),5) AND *term3*')  
   
@@ -174,7 +173,7 @@ GO
  자세한 내용은 이 항목의 뒷부분에 나오는 "[근접 검색에 대한 추가 고려 사항](#Additional_Considerations)"을 참조하십시오.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>일반 근접 단어와 기타 단어 결합  
- AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 일반 근접 단어를 다른 일반 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 예를 들어:  
+ AND(&), OR(|) 또는 AND NOT(&!)을 사용하여 일반 근접 단어를 다른 일반 근접 단어, 단순 단어 또는 접두사 단어와 결합할 수 있습니다. 다음은 그 예입니다.  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- 일반 근접 단어를 가중치 단어 (ISABOUT ...) 또는 세대 term ( `NEAR((term1,term2),5)`양식 ...)과 같은 사용자 지정 근접 단어와 결합할 수 없습니다.  
+ 일반 근접 단어를 `NEAR((term1,term2),5)` 가중치 단어 (ISABOUT ...) 또는 세대 term (양식 ...)과 같은 사용자 지정 근접 단어와 결합할 수 없습니다.  
   
 ### <a name="example-using-the-generic-proximity-term"></a>예제: 일반 근접 단어 사용  
  다음 예에서는 일반 근접 단어를 사용하여 "bracket"이라는 단어와 동일한 문서에서 "reflector"라는 단어를 검색합니다.  

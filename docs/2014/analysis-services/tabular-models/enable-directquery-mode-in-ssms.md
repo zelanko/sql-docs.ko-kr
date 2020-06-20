@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5d439a9-5be1-4145-90e8-90777d80e98b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55a1a296e6a7b2a2155dea590be9321b22e73451
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 145d5a0d32384a0bcea1d60d00dcf3988642229c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938914"
 ---
 # <a name="configure-in-memory-or-directquery-access-for-a-tabular-model-database"></a>테이블 형식 모델 데이터베이스에 대해 메모리 내 또는 DirectQuery 액세스 구성
   이 항목에서는 직접 쿼리 모드에서 모델을 사용할 수 있도록 이미 배포된 테이블 형식 모델의 연결 속성을 변경하는 방법에 대해 설명합니다.  

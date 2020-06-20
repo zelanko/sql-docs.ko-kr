@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54eeeec995e390b71ce8871b680c26138fc88783
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762415"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951953"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
   데이터베이스의 데이터 및 트랜잭션 로그 파일은 분리할 수 있으며 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다. 데이터베이스 분리 및 연결은 데이터베이스를 같은 컴퓨터의 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 변경하거나 데이터베이스를 이동하는 경우 유용합니다.  
@@ -85,14 +84,14 @@ ms.locfileid: "62762415"
 3.  데이터베이스를 다시 분리합니다.  
   
 ##  <a name="attaching-a-database"></a><a name="AttachDb"></a> 데이터베이스 연결  
- 복사 또는 분리한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결할 수 있습니다. [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] 서버 인스턴스를 연결 하는 경우에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결 됩니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../search/upgrade-full-text-search.md)를 참조하세요.  
+ 복사 또는 분리한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 연결할 수 있습니다. 서버 인스턴스를 연결 하는 경우 [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] 에서와 같이 다른 데이터베이스 파일과 함께 이전 위치에서 카탈로그 파일이 연결 됩니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . 자세한 내용은 [전체 텍스트 검색 업그레이드](../search/upgrade-full-text-search.md)를 참조하세요.  
   
  데이터베이스를 연결할 경우 모든 데이터 파일(MDF 및 NDF 파일)이 사용 가능해야 합니다. 데이터베이스가 처음 생성되었을 때 또는 마지막으로 연결되었을 때와 경로가 다른 데이터 파일이 있으면 해당 파일의 현재 경로를 지정해야 합니다.  
   
 > [!NOTE]  
 >  연결되는 주 데이터 파일이 읽기 전용일 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 해당 데이터베이스를 읽기 전용으로 가정합니다.  
   
- 암호화 된 데이터베이스가 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]처음 연결 된 경우 데이터베이스 소유자는 OPEN MASTER KEY 해독은 by PASSWORD = **'*`password`*'** 문을 실행 하 여 데이터베이스의 마스터 키를 열어야 합니다. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
+ 암호화 된 데이터베이스가 인스턴스에 처음 연결 된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 소유자는 OPEN MASTER KEY 해독은 BY PASSWORD = **' *`password`* '** 문을 실행 하 여 데이터베이스의 마스터 키를 열어야 합니다. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
   
  로그 파일 연결 요구 사항은 데이터베이스가 읽기/쓰기인지 아니면 읽기 전용인지에 따라 다음과 같이 달라집니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62762415"
 > [!IMPORTANT]  
 >  최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 만든 데이터베이스를 이전 버전에서 연결할 수 없습니다.  
   
- 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타 데이터 관리 &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)를 참조 하세요.  
+ 데이터베이스를 다른 서버 인스턴스에 연결하는 경우 사용자와 애플리케이션에 일관된 환경을 제공하려면 로그인, 작업 등 데이터베이스의 일부 또는 모든 메타데이터를 다른 서버 인스턴스에서 다시 만들어야 할 수도 있습니다. 자세한 내용은 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md)을 참조하세요.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
  **데이터베이스를 분리하려면**  

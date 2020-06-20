@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059101"
 ---
 # <a name="rename-user-sys"></a>sys 사용자 이름을 바꿉니다.
   업그레이드 관리자가 데이터베이스에서 **sys** 사용자 이름을 검색했습니다. 이 이름은 예약되어 있습니다. 업그레이드하기 전에 사용자 이름을 바꾸십시오. 사용자 이름을 바꾸지 않으면 업그레이드 후 데이터베이스가 주의 대상 상태가 되며 온라인 상태가 될 때까지 데이터베이스를 사용할 수 없습니다.  

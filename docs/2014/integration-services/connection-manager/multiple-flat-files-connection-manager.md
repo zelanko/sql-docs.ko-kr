@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7235f5f333ac7bb4520a6244e103baafba343ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920655"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
   
- 패키지에 다중 플랫 파일 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 다중 플랫 파일 연결로 확인 되는 연결 관리자를 만들고, 다중 플랫 파일 연결 관리자에 대 한 속성을 설정 하 고, 다중 플랫 파일 연결 관리자를 패키지의 `Connections` 컬렉션에 추가 합니다.  
+ 패키지에 다중 플랫 파일 연결 관리자를 추가 하면에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 다중 플랫 파일 연결로 확인 되는 연결 관리자를 만들고, 다중 플랫 파일 연결 관리자에 대 한 속성을 설정 하 고, 다중 플랫 파일 연결 관리자를 패키지의 컬렉션에 추가 합니다 `Connections` .  
   
  연결 관리자의 `ConnectionManagerType` 속성이 `MULTIFLATFILE`로 설정됩니다.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "62833706"
   
  다중 플랫 파일 연결 관리자에서 다중 파일을 참조하는 경우 파일의 경로는 세로줄 문자(|)로 구분됩니다. 연결 관리자의 `ConnectionString` 속성은 다음 형식을 갖습니다.  
   
- \<*경로*>|\<*경로*>  
+ \<*path*>|\<*path*>  
   
- 또한 와일드카드 문자를 사용하여 다중 파일을 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조 하려면 `ConnectionString` 속성의 값을 c:\\* .txt로 설정할 수 있습니다.  
+ 또한 와일드카드 문자를 사용하여 다중 파일을 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조 하려면 속성의 값을 `ConnectionString` c: * .txt로 설정할 수 있습니다 \\ .  
   
  다중 플랫 파일 연결 관리자에서 다중 파일을 참조하는 경우 모든 파일은 형식이 동일해야 합니다.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65512a212290db4cc9a470402e2ae75175c23cb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d7ff1f5f516d438ed07a203223acf32970a7961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882313"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065770"
 ---
 # <a name="define-an-article"></a>아티클 정의
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 아티클을 정의하는 방법에 대해 설명합니다.  
@@ -48,13 +47,13 @@ ms.locfileid: "73882313"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ', \,/, \< >입니다. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
+-   아티클 이름에는 %, *, [,], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ' , \ , / , \< , >. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
   
 ##  <a name="security"></a><a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 **게시 속성 - \<게시>** 대화 상자에서 게시 속성을 보고 수정합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md)를 참조하세요.  
+ 새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 게시 **속성- \<Publication> ** 대화 상자에서 게시 속성을 보고 수정 합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md)를 참조하세요.  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
@@ -103,7 +102,7 @@ ms.locfileid: "73882313"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@게시**에 대해 아티클이 속한 게시의 이름, ** \@아티클의**아티클 이름, ** \@source_object**에 대해 게시 되는 데이터베이스 개체 및 기타 선택적 매개 변수를 지정 합니다. **Dbo**가 아닌 경우 ** \@source_owner** 를 사용 하 여 개체의 스키마 소유권을 지정 합니다. 로그 기반 테이블 아티클이 아닌 경우 ** \@형식**에 대 한 아티클 유형을 지정 합니다. 자세한 내용은 [&#40;복제 Transact-sql 프로그래밍&#41;문서 유형 지정 ](specify-article-types-replication-transact-sql-programming.md)을 참조 하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. ** \@ 게시**에 대해 아티클이 속한 게시의 이름, ** \@ 아티클의**아티클 이름, ** \@ source_object**에 대해 게시 되는 데이터베이스 개체 및 기타 선택적 매개 변수를 지정 합니다. **Dbo**가 아닌 경우 ** \@ source_owner** 를 사용 하 여 개체의 스키마 소유권을 지정 합니다. 아티클이 로그 기반 테이블 아티클이 아닌 경우 ** \@ 유형에**대 한 아티클 유형을 지정 합니다. 자세한 내용은 [복제 Transact-sql&#41;프로그래밍 &#40;아티클 유형 지정 ](specify-article-types-replication-transact-sql-programming.md)을 참조 하세요.  
   
 2.  테이블의 행을 행 필터링하거나 아티클을 보려면 [sp_articlefilter](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql) 를 사용하여 필터 절을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "73882313"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. ** \@게시에 대**한 게시 이름, ** \@아티클의**아티클 이름 이름 및 ** \@source_object**에 대해 게시 되는 개체를 지정 합니다. 테이블 행을 행 필터링 하려면 ** \@subset_filterclause**의 값을 지정 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [정적 행 필터 정의 및 수정](define-and-modify-a-static-row-filter.md)를 참조하세요. 아티클이 테이블 아티클이 아닌 경우 ** \@유형**의 아티클 유형을 지정 합니다. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. 게시에 대 한 게시 이름, ** \@ ** ** \@ 아티클의**아티클 이름 이름 및 ** \@ source_object**에 대해 게시 되는 개체를 지정 합니다. 테이블 행을 행 필터링 하려면 ** \@ subset_filterclause**의 값을 지정 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 및 [정적 행 필터 정의 및 수정](define-and-modify-a-static-row-filter.md)를 참조하세요. 아티클이 테이블 아티클이 아닌 경우 ** \@ 유형**의 아티클 유형을 지정 합니다. 자세한 내용은 [아티클 유형 정의&#40;복제 Transact-SQL 프로그래밍&#41;](specify-article-types-replication-transact-sql-programming.md)를 참조하세요.  
   
 2.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   

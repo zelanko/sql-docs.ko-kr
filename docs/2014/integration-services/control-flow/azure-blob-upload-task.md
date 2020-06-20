@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a39652e37144de604f277e37c81b1bb3e59cb32b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919969"
 ---
 # <a name="azure-blob-upload-task"></a>Azure Blob 업로드 태스크
   SSIS 패키지는 Azure Blob 업로드 태스크를 통해 Azure Blob 저장소에 파일을 업로드할 수 있습니다.   

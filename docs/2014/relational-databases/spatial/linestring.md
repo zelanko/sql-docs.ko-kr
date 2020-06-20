@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a0f77959cfe4492eca6c38951ba2868452d41ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996327"
 ---
 # <a name="linestring"></a>LineString
   `LineString`은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.

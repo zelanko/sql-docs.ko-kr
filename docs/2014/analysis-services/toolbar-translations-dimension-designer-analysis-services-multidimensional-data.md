@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065997"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938354"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(번역 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   도구 모음 단추를 사용하여 **차원 디자이너** 의 **번역**뷰에서 일반적인 작업을 수행할 수 있습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66065997"
  **비즈니스 인텔리전스 추가**  
  비즈니스 인텔리전스 기능을 추가할 수 있는 **비즈니스 인텔리전스 마법사** 가 표시됩니다.  
   
- **프로세스**  
+ **Process**  
  개체를 처리할 수 있는 **처리** 대화 상자가 표시됩니다.  
   
  **새 번역**  

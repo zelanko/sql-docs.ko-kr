@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c3543f3-3eb9-455d-a9bf-f17e9506ad21
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a6e3ca5dccb1fe429b0baf3d6d027ec7850b4f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931966"
 ---
 # <a name="upgrade-master-data-services"></a>MDS(Master Data Services) 업그레이드
   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2로 업그레이드하는 데는 네 가지 시나리오가 있습니다. 해당 상황에 적합한 시나리오를 선택하십시오.  
@@ -32,15 +31,15 @@ ms.locfileid: "62774663"
 >  -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP1 릴리스에서 CTP2 릴리스로 업그레이드할 수는 없습니다.  
 > -   업그레이드를 수행하기 전에 데이터베이스를 백업합니다.  
 > -   업그레이드 프로세스는 저장 프로시저를 다시 만들고 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]에서 사용되는 테이블을 업그레이드합니다. 이러한 구성 요소에 사용자 지정된 내용은 손실될 수 있습니다.  
-> -   모델 배포 패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 사용할 수 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / 에서 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 만든 모델 배포 패키지는에 배포할 수 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]없습니다.  
+> -   모델 배포 패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 사용할 수 있습니다. 에서 만든 모델 배포 패키지는에 배포할 수 없습니다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
 > -   MDS(Master Data Services) 및 Data Quality Services를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] CTP2로 업그레이드한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능을 계속 사용할 수 있습니다. 하지만 SQL Server 2014 CTP2로 업그레이드한 후에는 이전 버전의 Excel용 MDS(Master Data Services) 추가 기능이 모두 작동하지 않습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 버전의 Excel용 MDS(Master Data Services) 추가 기능은 [여기](https://go.microsoft.com/fwlink/?LinkId=328664)서 다운로드할 수 있습니다.  
   
 ##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>데이터베이스 엔진 업그레이드 없이 업그레이드  
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 가 둘 다 동일한 컴퓨터 또는 별도의 컴퓨터에 병렬로 설치 되기 때문에이 시나리오는 side-by-side 설치로 간주할 수 있습니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및가 둘 다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 동일한 컴퓨터 또는 별도의 컴퓨터에 병렬로 설치 되기 때문에이 시나리오는 side-by-side 설치로 간주할 수 있습니다.  
   
  이 시나리오에서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 계속 사용하여 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 애플리케이션에서 더 이상 액세스할 수 없습니다.  
   
- 이전 버전의 SQL Server ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])을 같은 컴퓨터에 설치 하도록 선택한 경우 파일이 다른 위치에 설치 되기 때문에이 작업을 수행할 수 있습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이전 버전의 SQL Server ()을 같은 컴퓨터에 설치 하도록 선택한 경우 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 파일이 다른 위치에 설치 되기 때문에이 작업을 수행할 수 있습니다.  
   
 -   기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 경우 파일은 *드라이브*:\Program Files\Microsoft SQL Server\120\Master Data Services에 설치됩니다.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62774663"
   
     2.  왼쪽 창에서 **데이터베이스 구성**을 클릭합니다.  
   
-    3.  오른쪽 창에서 **데이터베이스 선택** 을 클릭 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 인스턴스에 대 한 정보를 지정 합니다.  
+    3.  오른쪽 창에서 **데이터베이스 선택** 을 클릭 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 데이터베이스 인스턴스에 대 한 정보를 지정 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62774663"
   
     4.  마법사를 완료합니다.  
   
-3.  **에 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 만**해당: 업그레이드가 완료 되 면 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 기능을 추가 합니다.  
+3.  **에 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 만**해당: 업그레이드가 완료 되 면 기능을 추가 **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** 합니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 엽니다.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "62774663"
     3.  **적용**을 클릭합니다.  
   
 ##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> 두 컴퓨터에서의 업그레이드 시나리오  
- 이 시나리오에는 SQL Server이 설치 된 컴퓨터와 SQL Server 2008 R2 또는 SQL Server 2012의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]두 컴퓨터에 설치 된 시스템을 업그레이드 하는 것이 포함 됩니다.  
+ 이 시나리오에는 SQL Server이 설치 된 컴퓨터와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] SQL Server 2008 R2 또는 SQL Server 2012의 두 컴퓨터에 설치 된 시스템을 업그레이드 하는 것이 포함 됩니다.  
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]가 설치된 경우 계속 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 각각 사용하여 한 컴퓨터에서 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 사용하여 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 애플리케이션에서 더 이상 액세스할 수 없습니다.  
   
@@ -205,7 +204,7 @@ ms.locfileid: "62774663"
   
     2.  왼쪽 창에서 **데이터베이스 구성**을 클릭합니다.  
   
-    3.  또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 가 다른 컴퓨터에 설치 되어 있는 경우 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 오른쪽 창에서 **데이터베이스 선택** 을 클릭 하 고 다른 컴퓨터의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 인스턴스에 대 한 정보를 지정 합니다.  
+    3.  **Select Database** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 가 다른 컴퓨터에 설치 되어 있는 경우 오른쪽 창에서 데이터베이스 선택을 클릭 하 고 다른 컴퓨터의 또는 데이터베이스 인스턴스에 대 한 정보를 지정 합니다.  
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
@@ -268,7 +267,7 @@ ms.locfileid: "62774663"
   
     2.  왼쪽 창에서 **데이터베이스 구성**을 클릭합니다.  
   
-    3.  오른쪽 창에서 **데이터베이스 선택** 을 클릭 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 데이터베이스 인스턴스에 대 한 정보를 지정 합니다.  
+    3.  오른쪽 창에서 **데이터베이스 선택** 을 클릭 하 고 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 데이터베이스 인스턴스에 대 한 정보를 지정 합니다 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
@@ -298,9 +297,9 @@ ms.locfileid: "62774663"
     3.  **적용**을 클릭합니다.  
   
 ## <a name="troubleshooting"></a>문제 해결  
- **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환 되지 않습니다." 라는 오류 메시지가 표시 됩니다.  
+ **문제:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 열 때 "클라이언트 버전이 데이터베이스 버전과 호환 되지 않습니다." 라는 오류 메시지가 표시 됩니다.  
   
- **해결 방법:** 이 문제는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 마스터 데이터 관리자 웹 응용 프로그램에서 MDS(Master Data Services)로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 된 데이터베이스에 액세스 하려고 할 때 발생 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 대신 사용해야 합니다.  
+ **해결 방법:** 이 문제는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 마스터 데이터 관리자 웹 응용 프로그램에서 MDS(Master Data Services)로 업그레이드 된 데이터베이스에 액세스 하려고 할 때 발생 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 대신 사용해야 합니다.  
   
  MDS 데이터베이스 스키마를 업그레이드할 때 IIS에서 **MDS 애플리케이션 풀** 을 정지하고 다시 시작하지 않은 경우에도 이 문제가 발생할 수 있습니다. **MDS 애플리케이션 풀** 을 다시 시작하여 문제를 해결합니다.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938614"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>계산 열(SSAS 테이블 형식)
   테이블 형식 모델에서 계산 열을 사용하여 새 데이터를 모델에 추가할 수 있습니다. 열에 값을 붙여 넣거나 가져오는 대신 열의 행 수준 값을 정의 하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "67284888"
   
 -   [관련 작업](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> 이점  
  계산 열의 수식은 Excel의 수식과 매우 비슷합니다. 하지만 Excel과는 달리, 테이블의 행마다 서로 다른 수식을 만들 수 없습니다. 대신 DAX 수식이 전체 열에 자동으로 적용됩니다.  
   
  열에 수식이 있으면 각 행에 대해 값이 계산됩니다. 유효한 수식을 입력하면 열에 대해 결과가 계산됩니다. 그런 다음 내부 데이터가 새로 고쳐지는 경우와 같이 필요에 따라 열 값이 다시 계산됩니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "67284888"
   
 ##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[계산 열 만들기&#40;SSAS 테이블 형식&#41;](ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
   

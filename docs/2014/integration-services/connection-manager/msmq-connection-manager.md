@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920744"
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 연결 관리자
   MSMQ 연결 관리자를 사용하면 패키지에서 MSMQ(메시지 큐)를 사용하는 메시지 큐에 연결할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 포함된 메시지 큐 태스크에서는 MSMQ 연결 관리자가 사용됩니다.  
@@ -37,8 +36,8 @@ ms.locfileid: "62833662"
   
 |큐 유형|샘플 경로|  
 |----------------|-----------------|  
-|공용|\<컴퓨터 이름>\\<큐 이름\>|  
-|프라이빗|\<컴퓨터 이름>\Private$\\<큐 이름\>|  
+|공용|\<computer name>\\<큐 이름\>|  
+|프라이빗|\<computer name>\Private $ \\<큐 이름\>|  
   
  마침표(.)를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe6baff391f108e14a401a0d3b9dcacefa6da406
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065514"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938144"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio에서 데이터 마이닝 모델 보기(데이터 마이닝 추가 기능)
   데이터 마이닝용 Visio 셰이프를 사용하여 서버에 연결하고 기존 데이터 마이닝 모델을 나타내는 다이어그램을 만들 수 있습니다. 그런 다음 Visio 컨트롤을 사용하여 다이어그램을 사용자 지정할 수 있지만, 데이터로 드릴다운하고, 일부 기본 통계를 노출하고, 기본 모델을 사용할 수도 있습니다.  

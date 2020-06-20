@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7f6e8bda35964b03bf171ac62db7ff3119aa6e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938695"
 ---
 # <a name="relationships-ssas-tabular"></a>관계(SSAS 테이블 형식)
   테이블 형식 모델에서 관계는 두 데이터 테이블 간의 연결입니다. 관계는 두 테이블의 데이터 간에 상관 관계를 설정합니다. 예를 들어 Customers 테이블과 Orders 테이블을 연결하여 각 주문에 연결된 고객 이름을 표시할 수 있습니다.  
@@ -43,10 +42,10 @@ ms.locfileid: "66066694"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="what"></a>아니라  
+##  <a name="benefits"></a><a name="what"></a> 이점  
  관계는 각 테이블에 있는 하나 이상의 열에 기반을 둔 두 데이터 테이블 간의 연결입니다. 관계가 어떤 점에서 유용한지 궁금하다면 여러분이 기업에서 고객 주문 데이터를 추적하는 업무를 담당하고 있다고 가정해 보십시오. 관계를 사용하면 다음과 같은 구조를 지닌 단일 테이블에서 모든 데이터를 추적할 수 있습니다.  
   
-|CustomerID|이름|EMail|DiscountRate|OrderID|OrderDate|Product|수량|  
+|CustomerID|속성|EMail|DiscountRate|OrderID|OrderDate|제품|수량|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -56,7 +55,7 @@ ms.locfileid: "66066694"
   
 ### <a name="customers"></a>고객  
   
-|[CustomerID]|이름|메일|  
+|[CustomerID]|속성|Email|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -70,7 +69,7 @@ ms.locfileid: "66066694"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|수량|  
+|[CustomerID]|OrderID|OrderDate|제품|수량|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -98,7 +97,7 @@ ms.locfileid: "66066694"
   
  다음 표에서는 세 테이블 간의 관계를 보여 줍니다.  
   
-|관계|유형|조회 열|열|  
+|관계|Type|조회 열|열|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|일 대 일|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|일 대 다|Customers.CustomerID|Orders.CustomerID|  
@@ -112,7 +111,7 @@ ms.locfileid: "66066694"
 ### <a name="single-active-relationship-between-tables"></a>테이블 간 단일 활성 관계  
  관계가 여러 개 있으면 테이블 간의 종속성이 모호해질 수 있습니다. 정확한 계산을 만들려면 한 테이블에서 다음 테이블로 연결되는 단일 경로가 필요합니다. 따라서 각 테이블 쌍 사이에는 하나의 활성 관계만 있을 수 있습니다. 예를 들어 AdventureWorks DW 2012에서 DimDate 테이블에는 FactInternetSales 테이블의 세 가지 다른 열인 OrderDate, DueDate 및 ShipDate와 관련된 DateKey 열이 포함되어 있습니다. 이러한 테이블을 가져오려는 경우 첫 번째 관계는 성공적으로 만들어지지만 같은 열에 적용되는 연속된 관계에 대해 다음 오류가 나타나게 됩니다.  
   
- \*관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블 \<테이블 1>와 \<테이블 2> 간에 관계를 만들 수 없습니다. 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
+ \*관계: 테이블 [열 1]-> 테이블 [열 2]-상태: 오류-이유: 테이블과 간의 관계를 만들 수 없습니다 \<table 1> . \<table 2> 두 테이블 간에는 하나의 직접 또는 간접 관계만 존재합니다.  
   
  테이블이 두 개 있고 이 테이블 간에 여러 관계가 있는 경우 조회 열을 포함하는 테이블의 여러 복사본을 가져와서 각 테이블 쌍 간에 하나의 관계를 만들어야 합니다.  
   
@@ -184,7 +183,7 @@ ms.locfileid: "66066694"
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[두 테이블 간에 관계 만들기&#40;SSAS 테이블 형식&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|두 테이블 간의 관계를 수동으로 만드는 방법을 설명합니다.|  
 |[관계 삭제&#40;SSAS 테이블 형식&#41;](relationships-ssas-tabular.md)|관계를 삭제하는 방법과 관계를 삭제할 경우에 발생하는 결과를 설명합니다.|  

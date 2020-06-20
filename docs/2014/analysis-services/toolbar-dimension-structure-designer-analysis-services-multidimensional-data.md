@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1770b9ab0284d203f7a5954dd369c5391984c12b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938414"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>도구 모음(차원 구조 탭, 차원 디자이너)(Analysis Services - 다차원 데이터)
   도구 모음을 사용하여 **차원 디자이너** 의 **차원 구조**페이지에서 일반적인 작업을 수행할 수 있습니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "66066045"
  **비즈니스 인텔리전스 추가**  
  비즈니스 인텔리전스 기능을 추가할 수 있는 **비즈니스 인텔리전스 마법사** 가 표시됩니다.  
   
- **프로세스**  
+ **Process**  
  개체를 처리할 수 있는 **처리** 대화 상자가 표시됩니다.  
   
  **특성을 목록/트리/표 형태로 표시**  
@@ -32,7 +31,7 @@ ms.locfileid: "66066045"
   
 -   목록  
   
-     현재 차원에 대한 특성 목록을 표시합니다. 이것이 기본값입니다.  
+     현재 차원에 대한 특성 목록을 표시합니다. 기본값입니다.  
   
 -   트리  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66066045"
   
      현재 차원과 연결된 테이블 및 열의 다이어그램을 표시합니다.  
   
--   트리 뷰  
+-   트리 보기  
   
      현재 차원과 연결된 테이블 및 열이 포함된 트리 뷰를 표시합니다.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034974"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -85,13 +84,13 @@ ms.locfileid: "62869598"
   
  이 문제를 해결하려면 연결 문자열에 `TRUSTED_CONNECTION = TRUE`를 포함합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  이 예에서 인증 오류 상태는 8이며 암호가 잘못되었음을 나타냅니다.  
   
-|날짜|원본|메시지|  
+|Date|원본|메시지|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|로그온|오류: 18456, 심각도: 14, 상태: 8.|  
-|2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: \<ip 주소>]|  
+|2007-12-05 20:12:56.34|로그온|사용자 '<user_name>'이(가) 로그인하지 못했습니다. [클라이언트: \<ip address>]|  
   
 > [!NOTE]  
 >  Windows 인증 모드를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하고 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 인증 모드로 변경하면 처음에는 **sa** 로그인을 사용할 수 없습니다. 이로 인해 상태 7 오류가 발생 합니다. "사용자 ' sa '가 로그인 하지 못했습니다." **Sa** 로그인을 사용 하도록 설정 하려면 [서버 인증 모드 변경](../../database-engine/configure-windows/change-server-authentication-mode.md)을 참조 하세요.  

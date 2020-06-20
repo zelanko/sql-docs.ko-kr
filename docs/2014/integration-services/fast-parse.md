@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bac087d9f4b086f2e50faef319208b52de19d766
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967143"
 ---
 # <a name="fast-parse"></a>Fast Parse
   빠른 구문 분석에서는 데이터 구문 분석을 위한 신속하고 간단한 루틴을 제공합니다. 이러한 루틴은 로캘을 구분하지 않으며 날짜, 시간 및 정수 형식의 하위 집합만 지원합니다.  

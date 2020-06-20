@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011680"
 ---
 # <a name="client-protocols-properties-order-tab"></a>클라이언트 프로토콜 속성(순서 탭)
   **클라이언트 프로토콜 속성**대화 상자의 **순서** 페이지를 사용하여 클라이언트 프로토콜을 확인하고 설정할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63044182"
  설치되어 있지만 현재 사용되지 않는 프로토콜을 나열합니다.  
   
  **사용 안 함**  
- 이 컴퓨터의 클라이언트에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용할 수 있는 프로토콜을 나열 합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]이 컴퓨터의 클라이언트에 사용할 수 있는 프로토콜을 나열 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
   
  **>**  
  **사용할 수 없는 프로토콜** 상자에서 선택한 프로토콜을 **사용할 수 있는 프로토콜** 상자로 이동하여 사용할 수 있도록 만듭니다.  

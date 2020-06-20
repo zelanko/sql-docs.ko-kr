@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937924"
 ---
 # <a name="create-a-domain-rule"></a>도메인 규칙 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
@@ -109,7 +108,7 @@ ms.locfileid: "65481028"
   
  도메인 규칙을 만들 때 대체 방법 중 하나를 선택할 수 있습니다. 예를 들어 값이 A, B 또는 C 문자로 시작하는지 확인하려면 복잡한 조건이 하나 있는 단순한 규칙(예: 파이프 문자가 있는 정규식)을 만들거나 단순한 조건이 여러 개 포함된 복잡한 규칙을 만들면 됩니다. 첫 번째 규칙의 예는 "값이 다음을 포함 정규식 (^A|^B|^C)"입니다. 두 번째 규칙의 예는 "'값이 다음으로 시작 A' OR '값이 다음으로 시작 B' OR '값이 다음으로 시작 C'"입니다.  
   
-|조건|설명|예제|  
+|조건|Description|예제|  
 |---------------|-----------------|-------------|  
 |길이가 다음 값과 같음|피연산자에 지정된 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 크거나 같음|피연산자에 지정된 문자 수 또는 그보다 큰 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, BBAA<br /><br /> 유효하지 않은 값: AA|  

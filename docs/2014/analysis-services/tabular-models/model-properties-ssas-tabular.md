@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4106377f2aadfec9173076ece3cf8bf4bc7d183
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938804"
 ---
 # <a name="model-properties-ssas-tabular"></a>모델 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 속성에 대해 설명합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트 각각에는 제작하는 모델의 빌드 방식, 백업 방식 및 작업 영역 데이터베이스의 저장 방식에 영향을 주는 모델 속성이 있습니다. 여기서 설명하는 모델 속성은 이미 배포된 모델에는 적용되지 않습니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66066962"
 ##  <a name="model-properties"></a><a name="bkmk_model_properties"></a>모델 속성  
  **고급**  
   
-|속성|기본 설정|설명|  
+|속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
 |**빌드 작업**|Compile|이 속성은 파일이 빌드 및 배포 프로세스에 관련되는 방식을 지정합니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **Compile** -정상적인 빌드 동작이 발생 합니다. 모델 개체에 대한 정의는 .asdatabase 파일에 기록됩니다.<br /><br /> **None** -asdatabase 파일의 출력이 비어 있게 됩니다.|  
 |**출력 디렉터리에 복사**|복사 안 함|이 속성은 출력 디렉터리에 복사될 원본 파일을 지정합니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **복사 안 함** -출력 디렉터리에 복사본이 만들어지지 않습니다.<br /><br /> **항상 복사** -출력 디렉터리에 복사본이 항상 만들어집니다.<br /><br /> **변경된 내용만 복사** - model.bim 파일에 변경 내용이 있을 경우에만 출력 디렉터리에 복사본이 만들어집니다.|  
@@ -45,12 +44,12 @@ ms.locfileid: "66066962"
 > [!NOTE]  
 >  작업 영역 서버, 작업 영역 보존 및 데이터 백업 속성은 새 모델 프로젝트를 만들 때 적용되는 기본 설정을 가지고 있습니다. 도구\옵션 대화 상자의 Analysis Server 설정에서 데이터 모델링 페이지를 사용하여 새 모델의 기본 설정을 변경할 수 있습니다. 속성 창에서 각 모델에 대해 이러한 속성 및 기타 속성을 설정할 수도 있습니다. 자세한 내용은 [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](properties-ssas-tabular.md)을 참조하세요.  
   
-|속성|기본 설정|설명|  
+|속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
 |**데이터 정렬**|Visual Studio가 설치된 컴퓨터의 기본 데이터 정렬입니다.|모델에 대한 데이터 정렬 지정자입니다.|  
 |**호환성 수준**|기본 수준 또는 프로젝트를 만들 때 선택한 다른 수준입니다.|SQL Server 2012 Analysis Services SP1 이상에 적용됩니다. 이 모델에 사용할 수 있는 기능과 설정을 지정합니다. 자세한 내용은 [호환성 수준 &#40;SSAS 테이블 형식 SP1&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)을 참조 하세요.|  
 |**데이터 백업**|디스크에 백업 안 함|모델 데이터의 백업이 백업 파일에 유지되는지 여부를 지정합니다. 도구 \ 옵션 대화 상자의 Analysis Server 설정에서 데이터 모델링 페이지를 통해이 속성의 기본 설정을 변경할 수 있습니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **디스크에 백업** - 모델 데이터의 백업을 디스크에 유지하도록 지정합니다. 모델을 저장하면 데이터가 백업 파일(ABF)에도 저장됩니다. 이 옵션을 선택하면 모델 저장 및 로드 시간이 길어질 수 있습니다.<br /><br /> **디스크에 백업 안 함** - 모델 데이터의 백업을 디스크에 유지하지 않도록 지정합니다. 이 옵션을 사용하면 저장 및 모델 로드 시간이 최소화됩니다.|  
-|**DirectQuery 모드**|해제|이 모델이 DirectQuery 모드에서 작동하는지 여부를 지정합니다. 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)를 참조하세요.|  
+|**DirectQuery 모드**|끄기|이 모델이 DirectQuery 모드에서 작동하는지 여부를 지정합니다. 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)를 참조하세요.|  
 |**파일 이름**|Model.bim|.bim 파일의 이름을 지정합니다. 파일 이름은 변경할 수 없습니다.|  
 |**전체 경로**|프로젝트를 만들 때 지정한 경로입니다.|model.bim 파일 위치입니다. 이 속성은 속성 창에서 설정할 수 없습니다.|  
 |**언어**|영어|모델의 기본 언어입니다. Visual Studio 언어에 따라 결정되는 기본 언어입니다. 이 속성은 속성 창에서 설정할 수 없습니다.|  

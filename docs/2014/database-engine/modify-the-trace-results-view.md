@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089437"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930664"
 ---
 # <a name="modify-the-trace-results-view"></a>추적 결과 보기 수정
   이 항목에서는 다음 작업을 수행하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에서 확장 이벤트 세션에 대한 추적 결과 뷰를 수정하는 방법에 대해 설명합니다.  
@@ -229,7 +228,7 @@ ms.locfileid: "66089437"
   
     -   **세부 정보**. **확장 이벤트에서 찾기** 대화 상자를 열기 전에 선택한 추적 창에서 승격 된 모든 열 (승격 된 열 및 승격 되지 않은 열)을 검색 하려면이 옵션을 사용 합니다.  
   
-    -   이벤트 열 이름>입니다. ** \< ** 드롭다운 목록의 특정 이벤트 열에서 검색하려면 이 옵션을 사용합니다.  
+    -   **\<Event column name>**. 드롭다운 목록의 특정 이벤트 열에서 검색하려면 이 옵션을 사용합니다.  
   
 5.  검색을 정의하는 방법을 지정하려면 다음 옵션을 사용하세요.  
   

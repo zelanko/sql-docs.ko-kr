@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034921"
 ---
 # <a name="query-options-execution-advanced-page"></a>쿼리 옵션 실행(고급 페이지)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199330"
 
 **PARSEONLY 설정** 각 쿼리의 구문을 검사 하지만 쿼리를 실행 하지는 않습니다. 이 옵션은 기본적으로 선택 취소되어 있습니다.  
 
-**CONCAT_NULL_YIELDS_NULL 설정** 이 확인란을 선택 하면 기존 값을와 `NULL`연결 하는 쿼리는 항상를 `NULL` 결과로 반환 합니다. 이 확인란의 선택을 취소하면 `NULL`에 연결된 기존 값이 기존 값을 반환합니다. 이 옵션은 기본적으로 선택됩니다.
+**CONCAT_NULL_YIELDS_NULL 설정** 이 확인란을 선택 하면 기존 값을와 연결 하는 쿼리는 `NULL` 항상를 `NULL` 결과로 반환 합니다. 이 확인란의 선택을 취소하면 `NULL`에 연결된 기존 값이 기존 값을 반환합니다. 이 옵션은 기본적으로 선택됩니다.
 
-**ARITHABORT 설정** 이 확인란을 선택 하면 식을 평가 하는 `INSERT`동안 `DELETE` , `UPDATE` 또는 문에 산술 오류 (오버플로, 0으로 나누기 또는 도메인 오류)가 발생할 때 쿼리 또는 일괄 처리가 종료 됩니다. 이 확인란의 선택을 취소하면 가능한 경우 해당 값으로 `NULL` 이 제공되고 쿼리가 계속된 다음 결과에 메시지가 포함됩니다. 이 동작에 대한 자세한 설명은 온라인 설명서를 참조하십시오. 이 옵션은 기본적으로 선택됩니다.
+**ARITHABORT 설정** 이 확인란을 선택 하면 식을 평가 하는 `INSERT` `DELETE` 동안, 또는 `UPDATE` 문에 산술 오류 (오버플로, 0으로 나누기 또는 도메인 오류)가 발생할 때 쿼리 또는 일괄 처리가 종료 됩니다. 이 확인란의 선택을 취소하면 가능한 경우 해당 값으로 `NULL` 이 제공되고 쿼리가 계속된 다음 결과에 메시지가 포함됩니다. 이 동작에 대한 자세한 설명은 온라인 설명서를 참조하십시오. 이 옵션은 기본적으로 선택됩니다.
   
 **SHOWPLAN_TEXT 설정** 이 확인란을 선택 하면 각 쿼리를 사용 하 여 쿼리 계획이 텍스트 형식으로 반환 됩니다. 이 옵션은 기본적으로 선택 취소되어 있습니다.
   
