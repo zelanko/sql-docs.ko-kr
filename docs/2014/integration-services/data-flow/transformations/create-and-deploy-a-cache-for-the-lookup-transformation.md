@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900648"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939662"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>조회 변환에 대한 캐시 만들기 및 배포
   조회 변환에 대한 캐시 파일(.caw)을 만들고 배포할 수 있습니다. 참조 데이터 세트는 캐시 파일에 저장됩니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900648"
   
 4.  배치 유틸리티를 만들도록 프로젝트를 구성한 다음 프로젝트를 빌드합니다. 자세한 내용은 [Create a Deployment Utility](../../create-a-deployment-utility.md)를 참조하세요.  
   
-     매니페스트 파일인 \<*프로젝트 이름*>.SSISDeploymentManifest.xml이 만들어집니다. 이 파일은 프로젝트, 패키지 및 패키지 구성에 기타 파일을 나열합니다.  
+     \<*project name*>프로젝트의 기타 파일, 패키지 및 패키지 구성을 나열 하는.SSISDeploymentManifest.xml 매니페스트 파일이 생성 됩니다.  
   
 5.  파일 시스템에 패키지를 배포합니다. 자세한 내용은 [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md)를 참조하세요.  
   

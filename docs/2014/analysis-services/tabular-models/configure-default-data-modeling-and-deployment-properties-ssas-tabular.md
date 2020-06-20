@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d1e2e6f4e4bca69b093aeb9c259db59d503083
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939864"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 각각의 새로운 테이블 형식 모델 프로젝트에 대해 미리 정의될 수 있는 기본 호환성 수준, 배포 및 작업 영역 데이터베이스 속성 설정을 구성하는 방법에 대해 설명합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  

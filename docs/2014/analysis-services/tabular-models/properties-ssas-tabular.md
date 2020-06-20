@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1d8c77ffbe8e185e15b716819498fe48295348e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938713"
 ---
 # <a name="properties-ssas-tabular"></a>속성(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트에는 프로젝트, 모델, 보고 및 배포를 위한 동작을 정의하는 다양한 속성이 있습니다. 속성 설정은 Model.bim 파일에 XML 형식으로 저장되지만, 이 섹션에서 설명하는 모든 속성은 **의** 속성 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창에서 구성할 수 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[파워 뷰 보고 속성&#40;SSAS 테이블 형식&#41;](power-view-reporting-properties-ssas-tabular.md)|이 섹션의 항목에서는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]에 연결되고 여기서 검색되는 테이블 형식 모델에 대한 설명과 구성 옵션을 제공합니다.|  
 |[프로젝트 속성&#40;SSAS 테이블 형식&#41;](project-properties-ssas-tabular.md)|프로젝트 속성에 대해 설명합니다. 프로젝트 속성에는 프로젝트 파일 및 배포 옵션 설정이 포함됩니다.|  

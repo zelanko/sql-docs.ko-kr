@@ -1,5 +1,6 @@
 ---
 title: 대량 복사 작업 수행 (ODBC) | Microsoft Docs
+description: SQL Server Native Client ODBC 드라이버가 SQL Server 대량 복사 작업을 수행 하는 DB-LIBRARY 함수를 지 원하는 방법에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45e7ac1eb4497c055f5dfdce1057541b42f4015b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785049"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967710"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

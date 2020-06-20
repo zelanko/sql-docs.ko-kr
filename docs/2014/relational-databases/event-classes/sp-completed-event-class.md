@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50a4fc1d3fdc5feacd13e516cfe3b5ddd02277bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028407"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 이벤트 클래스
   SP:Completed 이벤트 클래스는 저장 프로시저 실행이 완료되었음을 나타냅니다.  
@@ -34,8 +33,8 @@ ms.locfileid: "63050969"
 |DatabaseName|`nvarchar`|저장 프로시저가 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|이벤트에 의해 사용된 시간(마이크로초)입니다.|13|yes|  
 |EndTime|`datetime`|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다.|15|yes|  
-|EventClass|`int`|이벤트 유형 = 43|27|아니요|  
-|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 43|27|예|  
+|EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IsSystem|`int`|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  

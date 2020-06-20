@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5c992253304d2a1c493f52a9e24cf569ff29883
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb372d403135106345925ccffe5ebaba6b70dabf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939174"
 ---
 # <a name="xml-source-custom-properties"></a>XML 원본 사용자 지정 속성
   XML 원본에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  

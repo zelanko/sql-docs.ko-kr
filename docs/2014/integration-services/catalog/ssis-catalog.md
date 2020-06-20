@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924301"
 ---
 # <a name="ssis-catalog"></a>SSIS 카탈로그
   `SSISDB`카탈로그는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 SSIS () 프로젝트의 작업을 수행할 수 있는 중앙 위치입니다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . 예를 들어 프로젝트 및 패키지 매개 변수를 설정하고, 패키지의 런타임 값을 지정하기 위한 환경을 구성하고, 패키지를 실행하거나 문제를 해결하고, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버 작업을 관리할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "82921712"
 >  데이터베이스의 이름을 바꿀 수 없습니다 `SSISDB` .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` 데이터베이스가 연결 된 인스턴스가 중지 되거나 응답 하지 않는 경우 ISServerExec 프로세스가 종료 됩니다. 메시지는 Windows 이벤트 로그에 기록됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `SSISDB` 데이터베이스가 연결 된 인스턴스가 중지 되거나 응답 하지 않는 경우 ISServerExec.exe 프로세스가 종료 됩니다. 메시지는 Windows 이벤트 로그에 기록됩니다.  
 >   
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 클러스터 장애 조치(Failover)의 일부로 장애 조치(Failover)되는 경우에는 실행 중인 패키지가 다시 시작되지 않습니다. 검사점을 사용하여 패키지를 다시 시작할 수 있습니다. 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921712"
 ### <a name="folder-project-environment"></a>폴더, 프로젝트, 환경  
  폴더, 프로젝트 또는 환경의 이름을 바꿀 때 고려할 규칙은 다음과 같습니다.  
   
--   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
+-   잘못 된 문자에는 ASCII/유니코드 문자 1 ~ 31, 따옴표 ("), 보다 작음 ( \<), greater than (> ), 파이프 (|), 백스페이스 (\b), null (\ 0) 및 탭 (\t)이 포함 됩니다.  
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921712"
 ### <a name="environment-variable"></a>환경 변수  
  환경 변수 이름을 지정할 때 고려할 규칙은 다음과 같습니다.  
   
--   ASCII/유니코드 문자 1~31, 따옴표("), 보다 작음(\<), 보다 큼(>), 파이프(|), 백스페이스(\b), null(\0) 및 탭(\t)은 올바른 문자가 아닙니다.  
+-   잘못 된 문자에는 ASCII/유니코드 문자 1 ~ 31, 따옴표 ("), 보다 작음 ( \<), greater than (> ), 파이프 (|), 백스페이스 (\b), null (\ 0) 및 탭 (\t)이 포함 됩니다.  
   
 -   이름은 선행 또는 후행 공백을 포함할 수 없습니다.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921712"
   
  암호화 알고리즘을 변경하는 작업에는 시간이 많이 소비됩니다. 먼저 서버에서 이전에 지정된 알고리즘을 사용하여 모든 구성 값의 암호를 해독해야 합니다. 그런 다음 새 알고리즘을 사용하여 값을 다시 암호화해야 합니다. 그 동안 서버에서 다른 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업을 수행할 수 없습니다. 따라서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 작업을 중단 없이 지속되게 하려면 암호화 알고리즘이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 대화 상자에서 읽기 전용 값으로 지정되어야 합니다.  
   
- **암호화 알고리즘** 속성 설정을 변경 하려면 `SSISDB` 데이터베이스를 단일 사용자 모드로 설정한 다음 catalog. configure_catalog 저장 프로시저를 호출 합니다. *property_name* 인수에 ENCRYPTION_ALGORITHM을 사용합니다. 지원되는 속성 값에 대한 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 참조하세요.  
+ **암호화 알고리즘** 속성 설정을 변경 하려면 `SSISDB` 데이터베이스를 단일 사용자 모드로 설정한 다음 catalog.configure_catalog 저장 프로시저를 호출 합니다. *property_name* 인수에 ENCRYPTION_ALGORITHM을 사용합니다. 지원되는 속성 값에 대한 자세한 내용은 [catalog.catalog_properties&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database)를 참조하세요. 저장 프로시저에 대한 자세한 내용은 [catalog.configure_catalog&#40;SSISDB 데이터베이스&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database)를 참조하세요.  
   
  단일 사용자 모드에 대한 자세한 내용은 [단일 사용자 모드로 데이터베이스 설정](../../relational-databases/databases/set-a-database-to-single-user-mode.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 암호화 및 암호화 알고리즘에 대한 자세한 내용은 [SQL Server 암호화](../../relational-databases/security/encryption/sql-server-encryption.md)섹션의 항목을 참조하세요.  
   

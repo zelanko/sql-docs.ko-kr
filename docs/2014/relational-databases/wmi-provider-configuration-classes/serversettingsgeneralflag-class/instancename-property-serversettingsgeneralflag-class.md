@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3fe78e6b1ed4513fff8d6ea6fafc15b8f90c43c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87a57487431dd217ba0a875b0dbd4e7c50a0a442
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056683"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName 속성(ServerSettingsGeneralFlag 클래스)
-  인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]이름을 가져옵니다.  
+  인스턴스의 이름을 가져옵니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>구문  
   

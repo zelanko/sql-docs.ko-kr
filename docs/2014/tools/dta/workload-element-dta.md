@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064091"
 ---
 # <a name="workload-element-dta"></a>Workload 요소(DTA)
   튜닝 세션에 사용할 작업을 지정합니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "62678721"
  각 튜닝 세션에 대해 하나의 작업을 지정해야 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예에서는 `Workload` 요소에 대 한 **Mydatabase. TuningTable001** 추적 테이블을 지정 합니다. **TuningTable001** 은 SQL Server 프로파일러로 튜닝 템플릿을 사용하여 추적 결과를 테이블로 저장하는 방식으로 작성되었습니다.  
+ 다음 코드 예에서는 요소에 대 한 **Mydatabase. TuningTable001** 추적 테이블을 지정 합니다. `Workload` **TuningTable001** 은 SQL Server 프로파일러로 튜닝 템플릿을 사용하여 추적 결과를 테이블로 저장하는 방식으로 작성되었습니다.  
   
 ```  
 <DTAXML ...>  

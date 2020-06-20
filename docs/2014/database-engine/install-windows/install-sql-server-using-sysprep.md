@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35b8f27dc0ef6a1deb40bd86ed193973c2c40b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932532"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>SysPrep을 사용하여 SQL Server 2014 설치
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 관련 설치 동작에 액세스할 수 있습니다. **설치 센터**의 **고급** 페이지에는 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이미지 준비**와 **독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스의 이미지 완료**라는 두 옵션이 있습니다. [준비](#prepare) 및 [완료](#complete) 섹션에서는 설치 프로세스에 대해 자세히 설명합니다. 자세한 내용은 [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
@@ -29,7 +28,7 @@ ms.locfileid: "62775306"
 ## <a name="prerequisites"></a>사전 요구 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 [SQL Server 설치 계획](../../sql-server/install/planning-a-sql-server-installation.md)을 검토하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 및 하드웨어 및 소프트웨어 요구 사항에 대 한 자세한 내용은 [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전 및 하드웨어 및 소프트웨어 요구 사항에 대 한 자세한 내용은 [SQL Server 2014을 설치 하기 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조 하세요.  
   
 > [!IMPORTANT]  
 >  다음 항목은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep에서 지원되지 않습니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "62775306"
   
 3.  Windows 장애 조치(Failover) 클러스터를 만듭니다.  
   
-4.  모든 노드에서 `/ACTION=PrepareFailoverCluster`를 사용하여 setup.exe를 실행합니다. 예를 들어:  
+4.  모든 노드에서 `/ACTION=PrepareFailoverCluster`를 사용하여 setup.exe를 실행합니다. 다음은 그 예입니다.  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -115,7 +114,7 @@ ms.locfileid: "62775306"
   
      컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 구성되지 않은 기존 준비 인스턴스가 있는 경우에만 **이미지 유형 준비** 페이지가 표시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 새 인스턴스를 준비하거나, 컴퓨터에 이미 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 sys prep 지원 기능을 추가하도록 선택할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 준비 인스턴스에 기능을 추가하는 방법은 [준비 인스턴스에 기능 추가](#AddFeatures)를 참조하십시오.  
   
-8.  사용 **조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건에 동의 하는 확인란을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
+8.  **사용 조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
   
 9. **기능 선택** 페이지에서 설치할 구성 요소를 선택 합니다.  
   
@@ -129,17 +128,17 @@ ms.locfileid: "62775306"
   
 10. **이미지 준비 규칙** 페이지에서 시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
-11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. 계속하려면 **다음**을 클릭합니다.  
+11. 인스턴스 구성 페이지에서 해당 인스턴스의 인스턴스 ID를 지정합니다. **다음** 을 클릭하여 계속합니다.  
   
-     인스턴스 **id** -인스턴스 id는 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다.  
+     인스턴스 **id** -인스턴스 id는 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 지정한 대로 유지됩니다.  
   
-     **인스턴스 루트 디렉터리** -기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다.  
+     **인스턴스 루트 디렉터리** -기본적으로 인스턴스 루트 디렉터리는 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] 입니다. 기본 위치가 아닌 루트 디렉터리를 지정하려면 제공된 필드를 사용하거나 **찾아보기** 를 클릭하여 설치 폴더를 찾습니다. 준비 단계에서 지정된 디렉터리는 완료 단계의 구성 작업에 사용됩니다.  
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩 및 업그레이드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 구성 요소에 적용됩니다.  
   
-     **설치 된 인스턴스** -설치 프로그램을 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중인 컴퓨터에 있는 인스턴스가 표 형식으로 표시 됩니다.  
+     **설치 된 인스턴스** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행 중인 컴퓨터에 있는 인스턴스가 표 형식으로 표시 됩니다.  
   
-12. **디스크 공간 요구 사항** 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산 합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다.  
+12. **디스크 공간 요구 사항** 페이지에서는 지정한 기능에 필요한 디스크 공간을 계산합니다. 그런 다음 사용 가능한 디스크 공간과 필요한 디스크 공간을 비교합니다.  
   
 13. 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 준비 규칙을 실행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "62775306"
   
 5.  **제품 키** 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 PID 키가 있는 제품의 프로덕션 버전을 설치할지를 나타내는 옵션 단추를 선택합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요. Evaluation Edition을 설치하는 경우 이 단계를 완료하면 180일의 무료 사용 기간이 시작됩니다.  
   
-6.  사용 **조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건에 동의 하는 확인란을 선택 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
+6.  **사용 조건** 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다.  
   
 7.  **준비 인스턴스 선택** 페이지의 드롭다운 상자에서 완료할 준비 인스턴스를 선택합니다. **인스턴스 ID** 목록에서 구성되지 않은 인스턴스를 선택합니다.  
   
@@ -178,9 +177,9 @@ ms.locfileid: "62775306"
     > [!NOTE]  
     >  설치하는 제품 버전에 사용할 수 있는 기능을 추가할 수 있습니다. 자세한 내용은 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md) 을 참조 하세요.  
   
-9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. 계속하려면 **다음**을 클릭합니다.  
+9. 인스턴스 구성 페이지에서 준비 인스턴스의 인스턴스 이름을 지정합니다. 이것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성을 완료한 인스턴스의 이름입니다. **다음** 을 클릭하여 계속합니다.  
   
-     인스턴스 **id** -인스턴스 id는 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다.  
+     인스턴스 **id** -인스턴스 id는 인스턴스의 설치 디렉터리 및 레지스트리 키를 식별 하는 데 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 이는 기본 인스턴스와 명명된 인스턴스에 모두 해당됩니다. 준비 인스턴스가 완료 단계 중에 기본 인스턴스로 완료되면 MSSQLSERVER가 인스턴스 이름을 덮어쓰고 인스턴스 ID는 준비 단계에서 지정한 대로 유지됩니다.  
   
      **인스턴스 루트 디렉터리** -준비 단계에서 지정한 디렉터리가 사용 되 고이 단계에서 수정할 수 없습니다.  
   
@@ -190,7 +189,7 @@ ms.locfileid: "62775306"
   
 10. 이 항목의 나머지 부분에 대한 워크플로는 준비 단계에서 선택한 기능에 따라 달라집니다. 선택 항목에 따라 일부 페이지가 표시되지 않을 수도 있습니다.  
   
-11. **서버 구성** -서비스 계정 페이지에서 서비스에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정을 지정 합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
+11. **서버 구성** -서비스 계정 페이지에서 서비스에 대 한 로그인 계정을 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
   
      모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 서비스 계정을 개별적으로 구성하여 각 서비스에 대해 최소한의 권한만 제공할 것을 권장합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에서 태스크를 완료하는 데 필요한 최소한의 권한만 부여할 수 있습니다. 자세한 내용은 [서버 구성 - 서비스 계정](../../sql-server/install/server-configuration-service-accounts.md) 및 [Windows 서비스 계정 및 권한 구성](../configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
@@ -200,7 +199,7 @@ ms.locfileid: "62775306"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 정보 지정을 완료하면 **다음**을 클릭합니다.  
   
-12. **서버 구성-데이터 정렬** 탭을 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본이 아닌 데이터 정렬을 지정 합니다. 자세한 내용은 [서버 구성 - 데이터 정렬](../../sql-server/install/server-configuration-collation.md)을 참조하세요.  
+12. **서버 구성-데이터 정렬** 탭을 사용 하 여 및에 기본이 아닌 데이터 정렬을 지정 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . 자세한 내용은 [서버 구성 - 데이터 정렬](../../sql-server/install/server-configuration-collation.md)을 참조하세요.  
   
 13. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - 계정 프로비전 페이지를 사용하여 다음을 지정합니다.  
   
@@ -223,7 +222,7 @@ ms.locfileid: "62775306"
   
 16. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 페이지를 사용하여 만들 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 유형을 지정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 모드에 대한 자세한 내용은 [Reporting Services 구성 옵션&#40;SSRS&#41;](../../sql-server/install/reporting-services-configuration-options-ssrs.md)을 참조하세요.  
   
-17. **오류 보고** 페이지에서를 개선 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하는 데 도움이 되도록에 보낼 정보를 지정 합니다. 오류 보고 옵션은 기본적으로 사용됩니다.  
+17. **오류 보고** 페이지에서를 개선 하는 데 도움이 되도록에 보낼 정보를 지정 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 오류 보고 옵션은 기본적으로 사용됩니다.  
   
 18. **이미지 완료 규칙** 페이지에서 시스템 구성 검사기는 사용자가 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성에 따라 컴퓨터 구성의 유효성을 검사하기 위해 이미지 완료 규칙을 실행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
@@ -281,7 +280,7 @@ ms.locfileid: "62775306"
   
 4.  **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다.  
   
-5.  **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. 계속하려면 **다음**을 클릭합니다.  
+5.  **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음** 을 클릭하여 계속합니다.  
   
 6.  작업을 성공적으로 완료할 수 있는지 확인하기 위해 제거 규칙이 실행됩니다.  
   
@@ -303,7 +302,7 @@ ms.locfileid: "62775306"
   
 4.  **인스턴스 선택** 페이지에서 수정할 준비 인스턴스를 선택합니다. PreparedInstanceID 인스턴스를 선택하면 준비 인스턴스의 이름이 "구성되지 않은 PreparedInstanceID"로 표시됩니다.  
   
-5.  **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. 계속하려면 **다음**을 클릭합니다.  
+5.  **기능 선택** 페이지가 나타나면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 제거할 기능을 지정합니다. **다음** 을 클릭하여 계속합니다.  
   
 6.  **제거 규칙** 페이지에서 작업을 성공적으로 완료할 수 있는지 확인하기 위해 설치 프로그램이 규칙을 실행합니다.  
   
@@ -316,7 +315,7 @@ ms.locfileid: "62775306"
 10. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 모든 구성 요소가 제거될 때까지 1-9단계를 반복합니다.  
   
 ##  <a name="modifying-or-uninstalling-a-completed-instance-of-ssnoversion"></a><a name="bk_Modifying_Uninstalling"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 완료된 인스턴스 수정 또는 제거  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 아래 항목을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 완료된 인스턴스를 제거하거나 기능을 추가 또는 제거하는 작업은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 설치된 인스턴스에 대한 작업과 프로세스가 비슷합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [SQL Server 2014 &#40;설치 프로그램의 인스턴스에 기능을 추가&#41;](add-features-to-an-instance-of-sql-server-setup.md)  
   

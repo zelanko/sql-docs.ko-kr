@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eba2d2d28c06a60cc8269a349996646726f59142
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e953cf4c8b3001b199523a747f934283e60473b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827953"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916263"
 ---
 # <a name="create-infosource"></a>InfoSource 만들기
   **InfoSource 만들기** 대화 상자에서는 새 InfoSource를 만들 수 있습니다. 새 InfoSource를 만들려면 **트랜잭션 데이터용 InfoSource 만들기** 또는 **마스터 데이터용 InfoSource 만들기** 대화 상자를 사용합니다.  

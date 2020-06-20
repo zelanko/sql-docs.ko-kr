@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056911"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
   피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "68811233"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<인스턴스> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
+2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<INSTANCE> \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ ".  
   
 3.  을 찾습니다 **. **테이블에 대 한 sch-m 파일을 만들고 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
   

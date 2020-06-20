@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264d288881d7996ee52bd28aa841be8948dfe56e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923304"
 ---
 # <a name="edit-tables"></a>테이블 편집
   **테이블** 탭을 사용하여 Oracle 원본 데이터베이스에서 선택한 테이블과 열을 변경할 수 있습니다. 이 탭은 다음과 같은 요소로 구성되어 있습니다.  

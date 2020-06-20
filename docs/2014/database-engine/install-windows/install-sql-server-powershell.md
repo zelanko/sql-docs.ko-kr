@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd603a59a1ddb2ede3d3c779d31f13424342edc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932584"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell 설치
   사용자가 PowerShell 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 선택했지만 Windows PowerShell 2.0이 설치되지 않은 것으로 감지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 중지됩니다. Windows 관리 프레임워크를 사용하여 PowerShell을 설치하고 설치 프로그램을 다시 실행해야 합니다.  
@@ -23,13 +22,13 @@ ms.locfileid: "62775443"
 ## <a name="installing-ssnoversion-powershell-support"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 지원 설치  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 사용하여 Windows PowerShell에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원을 제공하는 소프트웨어를 설치해야 합니다. PowerShell 지원이 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 선택한 경우 Windows PowerShell 2.0이 설치되어 있는지 확인합니다. PowerShell 2.0이 있으면 설치 프로그램이 다음과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 구성 요소를 설치합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인. 스냅인은에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]두 가지 유형의 Windows PowerShell 지원을 구현 하는 dll 파일입니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell 스냅인. 스냅인은에 대 한 두 가지 유형의 Windows PowerShell 지원을 구현 하는 dll 파일입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet 집합. Cmdlet은 특정 동작을 구현하는 명령입니다. 예를 들어 **Invoke-Sqlcmd** 는 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **유틸리티를 사용하여 실행할 수도 있는** 또는 XQuery 스크립트를 실행하고 **Invoke-PolicyEvaluation** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체가 정책 기반 관리 정책을 준수하는지 여부를 보고합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자입니다. 공급자를 사용하여 파일 시스템 경로와 유사한 경로로 표시되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 계층 구조를 탐색할 수 있습니다. 각 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델의 클래스와 관련되어 있습니다. 클래스의 메서드 및 속성을 사용하여 개체에 대한 작업을 수행할 수 있습니다. 예를 들어 경로에서 databases 개체로 cd를 수행하는 경우 Microsoft.SqlServer.Managment.SMO.Database 클래스의 메서드와 속성을 사용하여 해당 데이터베이스를 관리할 수 있습니다.  
   
--   스냅인을 로드 하기 위해 Windows PowerShell 2.0 세션으로 가져온 sqlps 모듈입니다. **sqlps** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   스냅인을 로드 하기 위해 Windows PowerShell 2.0 세션으로 가져온 **sqlps** 모듈입니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   사용 되지 않는 **sqlps** 유틸리티는 Windows PowerShell 2.0 세션을 시작 하 고 **sqlps** 모듈을 가져옵니다.  
   

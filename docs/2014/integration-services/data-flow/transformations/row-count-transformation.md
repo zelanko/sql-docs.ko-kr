@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b68293b9-a68c-40be-9d81-77342da1be29
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d991ee94e04be0ea72450b8e3e4649c339d1c2a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15521c2be7ddaad50431691088c233a7ddf946ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939404"
 ---
 # <a name="row-count-transformation"></a>행 개수 변환
   행 개수 변환은 행이 데이터 흐름을 통과할 때 행 수를 세어 최종 개수를 변수에 저장합니다.  

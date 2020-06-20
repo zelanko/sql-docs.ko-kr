@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a0d610b6541439124d2c289dfd319811c1e0d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029361"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered 이벤트 클래스
   Object:Altered 이벤트 클래스는 ALTER INDEX, ALTER TABLE 또는 ALTER DATABASE 문 등에 의해 개체가 변경되었음을 나타냅니다. 이 이벤트 클래스는 개체가 변경되었는지 확인하는 데 사용할 수 있습니다. 예를 들어 임시 저장 프로시저를 자주 만드는 ODBC 애플리케이션의 경우 개체가 자주 변경될 수 있으므로 이 이벤트 클래스를 사용하면 유용합니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62662247"
 |ClientProcessID|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |DatabaseID|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에 ServerName 데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
-|EventClass|`int`|이벤트 유형 = 164|27|아니요|  
+|EventClass|`int`|이벤트 유형 = 164|27|예|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 0=시작<br /><br /> 1=커밋<br /><br /> 2=롤백|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

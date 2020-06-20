@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916643"
 ---
 # <a name="cdc-source"></a>CDC 원본
   CDC 원본은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 변경 테이블에서 특정 범위의 변경 데이터를 읽고 변경 내용을 다른 SSIS 다운스트림 구성 요소로 배달합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "62828125"
   
 -   CDC 처리 범위 결정의 기준이 되는 CDC 상태 패키지 변수의 이름. CDC 원본은 해당 변수를 수정하지 않습니다.  
   
- CDC 원본에 의해 반환되는 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 함수인 **cdc.fn_cdc_get_all_changes_\<capture-instance-name>** 또는 **cdc.fn_cdc_get_net_changes_\<capture-instance-name>** (사용 가능한 경우)에 의해 반환되는 데이터와 같습니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../control-flow/cdc-control-task.md)를 참조하십시오.  
+ CDC 원본에서 반환 되는 데이터는 cdc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 함수 **cdc. fn_cdc_get_all_changes_ \<capture-instance-name> ** 또는 **cdc. fn_cdc_get_net_changes_ \<capture-instance-name> ** (사용 가능한 경우)에서 반환 된 데이터와 동일 합니다. 현재 처리 범위가 테이블의 초기 로드와 겹칠 수 있는지 여부를 나타내는 **__$initial_processing** 열만 선택적으로 추가될 수 있습니다. 초기 처리에 대한 자세한 내용은 [CDC Control Task](../control-flow/cdc-control-task.md)를 참조하십시오.  
   
  CDC 원본에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  여기서  
   
--   \<cdc-enabled-database-name>은 변경 테이블을 포함하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름입니다.  
+-   \<cdc-enabled-database-name>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]변경 테이블이 포함 된 데이터베이스의 이름입니다.  
   
--   \<value-from-state-cs>는 CDC 상태 변수에 CS/\<value-from-state-cs>/로 나타나는 값입니다. CS는 현재 처리 범위 시작을 의미합니다.  
+-   \<value-from-state-cs>CDC 상태 변수에 표시 되는 값입니다. cs/ \<value-from-state-cs> /(cs는 현재 처리 범위 시작)을 나타냅니다.  
   
--   \<value-from-state-ce>는 CDC 상태 변수에 CE/\<value-from-state-cs>/로 나타나는 값입니다. CE는 현재 처리 범위 끝을 의미합니다.  
+-   \<value-from-state-ce>는 CDC 상태 변수에 CE//로 표시 되는 값입니다 \<value-from-state-cs> (ce는 현재 처리 범위 끝을 나타냄).  
   
--   \<mode>는 CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
+-   \<mode>CDC 처리 모드입니다. 처리 모드에는 **모두**, **이전 값이 포함된 모두**, **순**, **업데이트 마스크를 사용한 순 변경 내용**, **병합을 사용한 순 변경 내용**중 하나의 값이 지정됩니다.  
   
  이 스크립트는 오류를 식별하고 재현하기가 쉬운 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 문제를 재현하여 문제를 격리하는 데 도움이 됩니다.  
   
 #### <a name="sql-server-error-message"></a>SQL Server 오류 메시지  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 메시지가 반환될 수 있습니다.  
   
- **프로시저 또는 함수 cdc.fn_cdc_get_net_changes_\<..>** 에 제공된 인수 개수가 부족합니다.  
+ **프로시저 또는 함수 cdc. fn_cdc_get_net_changes_에 제공 된 인수 개수가 \<..> 부족 합니다.**  
   
  이 오류는 인수가 누락되었음을 나타내지 않습니다. 대신 CDC 상태 변수의 시작 또는 끝 LSN 값이 잘못되었음을 의미합니다.  
   

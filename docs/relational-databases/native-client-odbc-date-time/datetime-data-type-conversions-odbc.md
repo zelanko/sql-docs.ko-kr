@@ -1,5 +1,6 @@
 ---
 title: datetime 데이터 형식 변환 (ODBC) | Microsoft Docs
+description: Odbc의 데이터 형식 변환에 대 한 자세한 내용은 odbc에 의해 이미 정의 되었거나 일관 된 ODBC 확장입니다.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eba3d21b1f063c5f8a989d6d387538a4d15c8412
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09a018250887ecf88e6a48c49222046699a14763
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967670"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime 데이터 형식 변환(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

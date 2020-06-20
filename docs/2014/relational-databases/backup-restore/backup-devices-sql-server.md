@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb3f6b8dd16eed44568051e1ef183c0ac8123a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8abbba087679d263c00484764ecf445d6e5a006
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959343"
 ---
 # <a name="backup-devices-sql-server"></a>백업 디바이스(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 백업 작업 중에 백업되는 데이터인 *백업*은 물리적 백업 디바이스에 기록됩니다. 이 물리적 백업 디바이스는 미디어 세트의 첫 번째 백업을 디바이스에 기록할 때 초기화됩니다. 하나 이상의 백업 디바이스 세트에서의 백업이 미디어 세트 하나를 구성합니다.  
@@ -86,9 +85,9 @@ ms.locfileid: "70155052"
   
  BACKUP DATABASE *database_name*  
   
- **=** 디스크 { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ } (으)로  
+ TO DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -100,7 +99,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- **=** 디스크 { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }에서  
+ FROM DISK **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
  예를 들면 다음과 같습니다.  
   
@@ -136,9 +135,9 @@ GO
     >  네트워크를 통해 데이터를 백업하면 네트워크 오류가 발생하기 쉬우므로 원격 디스크를 사용하는 경우 완료 후에 백업 작업을 확인하는 것이 좋습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)를 참조하세요.  
   
 #### <a name="specifying-a-universal-naming-convention-unc-name"></a>UNC(Universal Naming Convention) 이름 지정  
- 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC 파일 이름을 사용해야 합니다. UNC ** \\ **이름의 형식은 _Systemname_**\\**_ShareName_**\\**_Path_Path**\\**_FileName_입니다.  
+ 백업이나 복원 명령에서 네트워크 공유를 지정하려면 백업 디바이스에 정규화된 UNC 파일 이름을 사용해야 합니다. UNC 이름은 **\\\\** _Systemname_ **\\** _ShareName_ **\\** _Path_ **\\** _FileName_.  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -174,9 +173,9 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- **=** 테이프 { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ } (으)로  
+ TO TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
- 다음은 그 예입니다.  
+ 다음은 그 예입니다.   
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -188,7 +187,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- **=** 테이프 { **'**_physical_backup_device_name_**'** | **@**_physical_backup_device_name_var_ }에서  
+ FROM TAPE **=** { **'** _physical_backup_device_name_ **'**  |  **@** _physical_backup_device_name_var_ }  
   
 ###  <a name="tape-specific-backup-and-restore-options-transact-sql"></a><a name="TapeOptions"></a>테이프 특정 BACKUP 및 RESTORE 옵션 (Transact-sql)  
  테이프를 편리하게 관리할 수 있도록 BACKUP 문은 다음과 같은 테이프 관련 옵션을 제공합니다.  
@@ -207,7 +206,7 @@ GO
 ###  <a name="managing-open-tapes"></a><a name="OpenTapes"></a>열려 있는 테이프 관리  
  열려 있는 테이프 디바이스 목록 및 탑재 요청 상태를 보려면 [sys.dm_io_backup_tapes](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql) 동적 관리 뷰를 쿼리합니다. 이 뷰는 다음 BACKUP 또는 RESTORE 작업을 기다리는 동안 일시적으로 유휴 상태에 있는 사용 중인 테이프를 비롯하여 열려 있는 모든 테이프를 표시합니다.  
   
- 테이프가 실수로 열려 있는 경우 테이프를 해제 하는 가장 빠른 방법은 restore REWINDONLY FROM tape **=** _backup_device_name_명령을 사용 하는 것입니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
+ 테이프를 실수로 열어 놓은 경우 테이프를 해제하는 가장 빠른 방법은 RESTORE REWINDONLY FROM TAPE **=** _backup_device_name_ 명령을 사용하는 것입니다. 자세한 내용은 [RESTORE REWINDONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-rewindonly-transact-sql)를 참조하세요.  
   
 ## <a name="using-the-azure-blob-storage-service"></a>Azure Blob Storage 서비스 사용  
  Azure Blob Storage 서비스에 SQL Server 백업을 작성할 수 있습니다.  백업에 Azure Blob storage 서비스를 사용 하는 방법에 대 한 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
@@ -296,11 +295,11 @@ GO
  [SQL Server, Backup Device 개체](../performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [유지 관리 계획](../maintenance-plans/maintenance-plans.md)   
- [미디어 세트, 미디어 패밀리 및 백업 세트는 SQL Server &#40;&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [RESTORE LABELONLY Transact-sql&#41;&#40;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
- [backup_devices &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
- [dm_io_backup_tapes &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
+ [RESTORE LABELONLY&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   
+ [sys.backup_devices&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-backup-devices-transact-sql)   
+ [sys.dm_io_backup_tapes&#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql)   
  [미러된 백업 미디어 세트&#40;SQL Server&#41;](mirrored-backup-media-sets-sql-server.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: SQLDriverConnect | Microsoft Docs
+description: SQL Server Native Client ODBC 드라이버에서 고가용성/재해 복구 및 Spn에 대 한 SQLDriverConnect 연결 특성 및 지원에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,25 +15,25 @@ ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1455f0b91313ea137ec9c13a2d318fba0807b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b2df8cd200acec558e2fb522bfbc43f3a4975d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302554"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967740"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열 키워드를 대체하거나 개선하는 연결 특성을 정의합니다. 몇 가지 연결 문자열 키워드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버가 지정한 기본값이 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버에서 사용할 수 있는 키워드 목록은 [SQL Server Native Client와 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
+ Native Client ODBC 드라이버에서 사용할 수 있는 키워드 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server Native Client와 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
   
- 연결 특성 및 드라이버 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 동작에 대 한 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]연결 특성 및 드라이버 기본 동작에 대 한 자세한 내용은 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)를 참조 하세요.  
   
- Native Client에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유효한 연결 문자열 키워드에 대 한 설명은 [SQL Server Native Client 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
+ Native Client에 유효한 연결 문자열 키워드에 대 한 설명은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server Native Client 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조 하세요.  
   
- **SQLDriverConnect Drivercompletion**_DriverCompletion_ 매개 변수 값이 SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED 인 경우 Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버는 표시 된 대화 상자에서 키워드 값을 검색 합니다. 키워드 값이 연결 문자열에서 전달되었고 사용자가 대화 상자에서 키워드 값을 변경하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열의 값을 사용합니다. 키워드 값이 연결 문자열에서 설정되지 않았고 사용자가 대화 상자에서 키워드 값을 지정하지 않은 경우 드라이버는 기본값을 사용합니다.  
+ **SQLDriverConnect Drivercompletion**_DriverCompletion_ 매개 변수 값이 SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_COMPLETE_REQUIRED 인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 표시 된 대화 상자에서 키워드 값을 검색 합니다. 키워드 값이 연결 문자열에서 전달되었고 사용자가 대화 상자에서 키워드 값을 변경하지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 연결 문자열의 값을 사용합니다. 키워드 값이 연결 문자열에서 설정되지 않았고 사용자가 대화 상자에서 키워드 값을 지정하지 않은 경우 드라이버는 기본값을 사용합니다.  
   
  *Drivercompletion* 값에는 드라이버의 연결 대화 상자를 표시 해야 하거나 필요한 경우 **SQLDriverConnect** 에 올바른 *WindowHandle* 를 지정 해야 합니다. 잘못된 핸들을 지정하면 SQL_ERROR가 반환됩니다.  
   
@@ -47,7 +48,7 @@ ms.locfileid: "81302554"
  *Drivercompletion* 매개 변수 값이 SQL_DRIVER_COMPLETE 또는 SQL_DRIVER_PROMPT이 고 언어나 데이터베이스가 잘못 된 경우 **SQLDriverConnect** 는 대화 상자를 더 합니다.  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQLDriverConnect 지원  
- **SQLDriverConnect** 를 사용 하 여 클러스터에 연결 하는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 방법에 대 한 자세한 내용은 [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ **SQLDriverConnect** 를 사용 하 여 클러스터에 연결 하는 방법에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SPN(서비스 사용자 이름)에 대한 SQLDriverConnect 지원  
  SQLDDriverConnect는 프롬프트를 사용 하도록 설정 하면 ODBC 로그인 대화 상자를 사용 합니다. 이를 통해 주 서버 및 해당 장애 조치(Failover) 파트너 모두에 대한 SPN이 입력되도록 할 수 있습니다.  

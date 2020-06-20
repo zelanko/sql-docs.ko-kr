@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 65f57b330a2b007f8f02df4404597d91fb143fcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67ae47197636af037f3eb9e648a2d8ce6c4a63a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176456"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939684"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
   느린 변경 차원 마법사는 느린 변경 차원 변환에 대한 편집기 역할을 수행합니다. 느린 변경 차원 데이터에 대한 데이터 흐름의 작성 및 구성은 복잡한 태스크일 수 있습니다. 느린 변경 차원 마법사를 사용하면 열을 매핑하고, 비즈니스 키 열을 선택하고, 열 변경 특성을 설정하고, 유추 차원 멤버에 대한 지원을 구성하는 단계별 안내에 따라 가장 쉬운 방법으로 느린 변경 차원 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다.

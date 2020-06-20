@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932379"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 설치
  ## <a name="download-sql-server-2014-express"></a>[SQL Server 2014 Express 다운로드](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228407"
   
 -   연결 구성 요소  
   
- 각 구성 요소를 개별적으로 설치하거나 위에 나열된 구성 요소 조합을 선택할 수 있습니다. 에서 사용할 수 있는 버전과 구성 요소 중에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가장 적합 한 항목을 선택 하려면 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 32비트 및 64비트 버전으로 제공됩니다.
+ 각 구성 요소를 개별적으로 설치하거나 위에 나열된 구성 요소 조합을 선택할 수 있습니다. 에서 사용할 수 있는 버전과 구성 요소 중에서 가장 적합 한 항목을 선택 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 32비트 및 64비트 버전으로 제공됩니다.
  
  **사용해 보기:**  
   

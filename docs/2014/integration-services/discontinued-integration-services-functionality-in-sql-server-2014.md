@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 915cb42726d27526342870ca39abd7012166270a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c4618c7d985c28497a5e8a30f7865dedd10351
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059378"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966957"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 Integration Services 기능
-  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 더 이상 사용할 수 없는 기능에 대해 설명 합니다.  
+  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 현재 릴리스의에서 더 이상 사용할 수 없는 기능에 대해 설명 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  SQL Server 2014에서는 Integration Services 기능이 지원되지 않습니다.  
   

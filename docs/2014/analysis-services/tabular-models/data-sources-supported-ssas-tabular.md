@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067376"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939774"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>지원되는 데이터 원본 (SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
   
- 이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 자료에는 다음과 같은 섹션이 포함되어 있습니다.  
   
--   [지원되는 데이터 원본](#bkmk_supported_ds)  
+-   [지원 되는 데이터 원본](#bkmk_supported_ds)  
   
 -   [지원 되지 않는 원본](#bkmk_unsupported_ds)  
   

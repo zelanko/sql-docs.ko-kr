@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 305817b7-4d23-49fb-9e6c-4d34359877bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1982d7941fd42eeac8a2d6eaa0bb78260c24317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c36ff25c87dd834862d28b9fcdceecfbd38e59f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064013"
 ---
 # <a name="derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler"></a>추적 파일 또는 추적 테이블에서 템플릿 파생(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 기존 추적 파일이나 테이블에서 추적 템플릿을 만드는 방법에 대해 설명합니다.  

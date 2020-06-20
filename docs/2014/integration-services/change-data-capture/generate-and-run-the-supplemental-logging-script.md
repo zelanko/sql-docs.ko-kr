@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5bfbff70d29e2b7b18c82b323d3ab34a3c6c60e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946b0a722ff0f0200c08404568bbeb385095b5f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923190"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>보완 로깅 스크립트 생성 및 실행
   변경 사항을 캡처하기 위한 테이블 선택 페이지를 사용하여 보완 로깅을 설정할 Oracle 원본 데이터베이스에서 스크립트를 실행할 수 있습니다.  

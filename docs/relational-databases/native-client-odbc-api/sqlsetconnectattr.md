@@ -1,5 +1,6 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
+description: SQL Server Native Client ODBC 드라이버에서 설정 된 값과 가능한 값을 포함 하 여 SQLSetConnectAttr의 연결 특성에 대해 알아봅니다.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a63a481837894addbd8b626fac015025314099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3008664916a8863a00dd36772e4b83cf27e845d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967741"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -49,22 +50,22 @@ ms.locfileid: "81301944"
 |SQL_COPT_SS_BROWSE_CONNECT|이전|  
 |SQL_COPT_SS_BROWSE_SERVER|이전|  
 |SQL_COPT_SS_CONCAT_NULL|이전|  
-|SQL_COPT_SS_CONNECTION_DEAD|After|  
+|SQL_COPT_SS_CONNECTION_DEAD|이러한|  
 |SQL_COPT_SS_ENCRYPT|이전|  
-|SQL_COPT_SS_ENLIST_IN_DTC|After|  
-|SQL_COPT_SS_ENLIST_IN_XA|After|  
+|SQL_COPT_SS_ENLIST_IN_DTC|이러한|  
+|SQL_COPT_SS_ENLIST_IN_XA|이러한|  
 |SQL_COPT_SS_FALLBACK_CONNECT|이전|  
 |SQL_COPT_SS_FAILOVER_PARTNER|이전|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|이전|  
 |SQL_COPT_SS_MARS_ENABLED|이전|  
 |SQL_COPT_SS_MULTISUBNET_FAILOVER|이전|  
 |SQL_COPT_SS_OLDPWD|이전|  
-|SQL_COPT_SS_PERF_DATA|After|  
-|SQL_COPT_SS_PERF_DATA_LOG|After|  
-|SQL_COPT_SS_PERF_DATA_LOG_NOW|After|  
-|SQL_COPT_SS_PERF_QUERY|After|  
-|SQL_COPT_SS_PERF_QUERY_INTERVAL|After|  
-|SQL_COPT_SS_PERF_QUERY_LOG|After|  
+|SQL_COPT_SS_PERF_DATA|이러한|  
+|SQL_COPT_SS_PERF_DATA_LOG|이러한|  
+|SQL_COPT_SS_PERF_DATA_LOG_NOW|이러한|  
+|SQL_COPT_SS_PERF_QUERY|이러한|  
+|SQL_COPT_SS_PERF_QUERY_INTERVAL|이러한|  
+|SQL_COPT_SS_PERF_QUERY_LOG|이러한|  
 |SQL_COPT_SS_PRESERVE_CURSORS|이전|  
 |SQL_COPT_SS_QUOTED_IDENT|여기서는|  
 |SQL_COPT_SS_TRANSLATE|여기서는|  
@@ -102,7 +103,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 지원에 대 한 자세한 내용은 [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ 기본값은 **ReadWrite**입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +137,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |값|Description|  
 |-----------|-----------------|  
-|컴퓨터 이름|**SQLBrowseConnect** 는 지정 된 컴퓨터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있는 인스턴스 목록을 반환 합니다. 서버 이름에\\\\는 이중 백슬래시 ()를 사용 하지 않아야 합니다. 예를 들어 \\\myserver, MyServer를 사용 해야 합니다.|  
+|컴퓨터 이름|**SQLBrowseConnect** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지정 된 컴퓨터에 있는 인스턴스 목록을 반환 합니다. \\ \\ 서버 이름에는 이중 백슬래시 ()를 사용 하지 않아야 합니다. 예를 들어 \\ \Myserver, MyServer를 사용 해야 합니다.|  
 |NULL|기본값 **SQLBrowseConnect** 는 도메인에 있는 모든 서버에 대 한 정보를 반환 합니다.|  
 
 <a name="sqlcoptssconcatnull"></a>
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ag 지원에 대 한 자세한 내용은 [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client의 ag 지원에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] [고가용성, 재해 복구를 위한 SQL Server Native Client 지원](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)을 참조 하세요.  
   
 |값|Description|  
 |-----------|-----------------|  

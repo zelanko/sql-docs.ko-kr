@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938724"
 ---
 # <a name="roles-ssas-tabular"></a>역할(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. 각 역할에는 Windows 사용자 이름 또는 Windows 그룹별 멤버와 권한(읽기, 프로세스, 관리자)이 포함됩니다. 역할의 멤버는 모델에 대해 역할 권한에 정의된 동작을 수행할 수 있습니다. 또한 읽기 권한을 갖도록 정의된 역할은 행 수준 필터를 사용하여 행 수준에서 추가적인 보안을 제공할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284851"
 -   [관련 작업](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>역할 이해  
- 역할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은에서 및 데이터의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안을 관리 하는 데 사용 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 다음과 같은 두 가지 유형의 역할이 있습니다.  
+ 역할은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 데이터의 보안을 관리 하는 데 사용 됩니다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에는 다음과 같은 두 가지 유형의 역할이 있습니다.  
   
 -   서버 역할 - 관리자에게 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 대한 액세스 권한을 제공하는 고정 역할  
   
@@ -62,12 +61,12 @@ ms.locfileid: "67284851"
   
  각 역할은 다음 중 하나의 권한을 가질 수 있습니다.  
   
-|사용 권한|설명|DAX를 사용하는 행 필터|  
+|사용 권한|Description|DAX를 사용하는 행 필터|  
 |-----------------|-----------------|----------------------------|  
-|없음|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
+|None|멤버는 model 데이터베이스 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 데이터가 이 역할의 사용자에게 표시되지 않습니다.|  
 |읽기|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있지만 SSMS의 model 데이터베이스를 볼 수 없으며, model 데이터베이스 스키마를 변경할 수 없고, 사용자가 모델을 처리할 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 사용자에게 표시됩니다.|  
 |읽기 및 처리|멤버는 행 수준 필터를 기반으로 데이터를 쿼리할 수 있고 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있지만 데이터베이스를 변경할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 model 데이터베이스를 볼 수 없습니다.|행 필터를 적용할 수 있습니다. 행 필터 DAX 수식에 지정된 데이터만 쿼리할 수 있습니다.|  
-|Process|멤버는 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있습니다. model 데이터베이스 스키마를 수정할 수 없습니다. 데이터를 쿼리할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 model 데이터베이스를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 이 역할에서는 데이터를 쿼리할 수 없습니다.|  
+|프로세스|멤버는 처리 명령을 포함하는 스크립트 또는 패키지를 실행하여 처리 작업을 실행할 수 있습니다. model 데이터베이스 스키마를 수정할 수 없습니다. 데이터를 쿼리할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 model 데이터베이스를 쿼리할 수 없습니다.|행 필터는 적용되지 않습니다. 이 역할에서는 데이터를 쿼리할 수 없습니다.|  
 |관리자|멤버는 모델 스키마를 수정할 수 있으며 모델 디자이너, 보고 클라이언트 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모든 데이터를 쿼리할 수 있습니다.|행 필터는 적용되지 않습니다. 이 역할에서는 모든 데이터를 쿼리할 수 있습니다.|  
   
 ##  <a name="row-filters"></a><a name="bkmk_rowfliters"></a>행 필터  
@@ -83,7 +82,7 @@ ms.locfileid: "67284851"
 |-----------|--------------------|  
 |지역|=Region[Country]="USA"|  
 |ProductCategory|=ProductCategory[Name]="Bicycles"|  
-|의|=Transactions[Year]=2008|  
+|트랜잭션|=Transactions[Year]=2008|  
   
  Transactions 테이블에 이러한 사용 권한이 적용되면 멤버는 고객이 USA에 있고, 제품 범주가 Bicycles이며, 연도가 2008년에 해당하는 데이터 행을 쿼리할 수 있습니다. 사용자는 해당 사용 권한이 부여된 다른 역할의 멤버가 아닌 한 미국 이외의 국가에서 발생한 거래, Bicycles 범주가 아닌 거래 또는 2008년에 발생하지 않은 거래를 쿼리할 수 없습니다.  
   
@@ -120,20 +119,20 @@ ms.locfileid: "67284851"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|회사|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
-|4|제조|  
+|4|제조업|  
 |5|품질 보증|  
 |6|연구 및 개발|  
-|7|Sales and Marketing|  
+|7|영업 및 마케팅|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>역할 테스트  
  모델 프로젝트를 제작할 때 Excel의 분석 기능을 사용하여 정의한 역할의 효율성을 테스트할 수 있습니다. 모델 디자이너의 **모델** 메뉴에서 **Excel에서 분석**을 클릭하면 Excel이 열리기 전에 **자격 증명 및 큐브 뷰 선택** 대화 상자가 나타납니다. 이 대화 상자에서 현재 사용자 이름, 다른 사용자 이름, 역할, 데이터 원본으로 작업 영역 모델에 연결하는 데 사용할 큐브 뷰를 지정할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Excel에서 분석&#40;SSAS 테이블 형식&#41;](analyze-in-excel-ssas-tabular.md)에서 역할 관리자 대화 상자를 사용하여 역할을 정의하는 테이블 형식 모델 작성자를 위한 것입니다.  
   
 ##  <a name="related-tasks"></a><a name="bkmk_rt"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](create-and-manage-roles-ssas-tabular.md)|이 항목의 태스크에서는 **역할 관리자** 대화 상자를 사용하여 역할을 만들고 관리하는 방법을 설명합니다.|  
   

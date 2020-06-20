@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 174c7275-5b15-42a9-b172-5ff30de575a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c5575f73ff75ef9276bab52571e8670f28e0be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 426c842b85d6404ba101b57a9b572107dbc76bb5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064255"
 ---
 # <a name="update-table-dialog-box-visual-database-tools"></a>테이블 업데이트 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 업데이트할 테이블을 지정할 수 있습니다.  

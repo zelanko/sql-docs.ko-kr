@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf93e424-3dac-462d-b3da-92e7d0b064d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d58f3121cc55a05a564eaeb0975a8154e51a12c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd55294966448f8976dc20198381918e163cc0d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029036"
 ---
 # <a name="oledb-event-category"></a>OLEDB 이벤트 범주
   **OLEDB** 이벤트 범주는 일반적인 OLEDB 이벤트를 포함합니다.  

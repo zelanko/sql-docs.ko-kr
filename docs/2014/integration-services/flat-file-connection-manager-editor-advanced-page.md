@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967123"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>플랫 파일 연결 관리자 편집기(고급 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 Integration Services가 플랫 파일에 있는 데이터를 읽고 쓰는 방법을 지정하는 속성을 설정할 수 있습니다. 사용자는 플랫 파일에 있는 열 이름을 바꿀 수 있고 파일의 각 열에 대해 데이터 형식 및 구분 기호를 포함하는 속성을 설정할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "66058787"
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다. 자세한 내용은 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조 하세요.|  
 |**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 문자 수로 표시됩니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|  
   
- **신규**  
+ **새 항목**  
  **새로 만들기**를 클릭하여 새 열을 추가합니다. 기본적으로 **새로 만들기** 단추는 목록 끝에 새 열을 추가합니다. 이 단추에는 드롭다운 목록에서 사용할 수 있는 다음 옵션도 있습니다.  
   
 |값|설명|  

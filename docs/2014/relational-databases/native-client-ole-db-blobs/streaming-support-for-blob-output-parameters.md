@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0635342e73edc8567299fbcdb719bd7106b27c9e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39e21f3e56380ed4ccd96fb6f2ffa9d969c2ad0a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056396"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 출력 매개 변수에 대한 스트리밍 지원
   이 항목에서는 BLOB 출력 매개 변수를 ISequentialStreams로 바인딩하는 BLOB 출력 매개 변수에 대한 스트리밍 지원을 보여 주는 예제를 제공합니다.  

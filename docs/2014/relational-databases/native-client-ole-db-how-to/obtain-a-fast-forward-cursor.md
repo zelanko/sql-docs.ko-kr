@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 931a28c3-8ea1-45d6-9ca1-2b8388c4d8b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33bef36a351a492613ce0068b781dba335ee6513
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3caa5d0e7e032a1d9d98b01cfa4bb26d207babf9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056265"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>FAST_FORWARD 커서 가져오기
   정방향 전용, 읽기 전용 커서를 가져오려면 행 집합 속성 DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT 및 DBPROP_OWNUPDATEDELETE를 VARIANT_TRUE로 설정합니다.  

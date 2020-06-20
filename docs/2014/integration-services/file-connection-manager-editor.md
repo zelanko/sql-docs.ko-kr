@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967153"
 ---
 # <a name="file-connection-manager-editor"></a>파일 연결 관리자 편집기
   **파일 연결 관리자 편집기** 대화 상자를 사용하여 파일이나 폴더에 연결할 때 사용할 속성을 지정할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66058815"
  **사용 유형**  
  **파일 연결 관리자** 가 기존 파일 또는 폴더에 연결하는지 또는 새 파일 또는 폴더에 연결하는지 여부를 지정합니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |파일 만들기|런타임에 새 파일을 만듭니다.|  
 |기존 파일|기존 파일을 사용합니다.|  

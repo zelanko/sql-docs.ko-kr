@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0d9486134e0a9103239853d8378e29aea688c7fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 508167dcb0f263e319a2cf2f90c2eda3fbe2a714
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67046659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932134"
 ---
 # <a name="drop-a-sql-server-2014-installation"></a>SQL Server 2014 설치 삭제
   복구 작업은 다음 시나리오에서 사용할 수 있습니다.  

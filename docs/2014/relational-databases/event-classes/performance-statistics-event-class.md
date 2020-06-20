@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028999"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 이벤트 클래스
   Performance Statistics 이벤트 클래스는 실행 중인 쿼리, 저장 프로시저 및 트리거의 성능을 모니터링하는 데 사용할 수 있습니다. 6개의 각 이벤트 하위 클래스는 시스템 내의 쿼리, 저장 프로시저 및 트리거의 유효 기간에 있는 이벤트를 나타냅니다. 이 이벤트 하위 클래스 및 관련 sys.dm_exec_query_stats, sys.dm_exec_procedure_stats 및 sys.dm_exec_trigger_stats 동적 관리 뷰를 조합하여 사용하면 지정된 쿼리, 저장 프로시저 또는 트리거의 성능 기록을 다시 구성할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "62827196"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|`image`|컴파일된 계획의 이진 XML입니다.|2|yes|  
@@ -72,7 +71,7 @@ ms.locfileid: "62827196"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|`image`|컴파일된 계획의 이진 XML입니다.|2|예|  
@@ -95,7 +94,7 @@ ms.locfileid: "62827196"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|이 계획을 다시 컴파일한 누적 횟수입니다.|52|예|  
 |BinaryData|`image`|NULL|2|예|  
@@ -115,7 +114,7 @@ ms.locfileid: "62827196"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|예|  
 |BinaryData|`image`|NULL|2|예|  
@@ -135,7 +134,7 @@ ms.locfileid: "62827196"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
+|데이터 열 이름|데이터 형식|Description|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|예|  
 |BinaryData|`image`|NULL|2|예|  

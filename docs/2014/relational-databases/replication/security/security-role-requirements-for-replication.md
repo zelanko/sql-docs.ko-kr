@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 52eed41a8b44147c13ed8dbc63dbda46ed625f51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 481d036e9ccae092438aa0f90a6443ff29f3a067
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063781"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   복제는 사용자의 로그인이 매핑된 역할에 따라 해당 사용자가 수행할 수 있는 동작을 제한합니다. 복제는 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 및 PAL(게시 액세스 목록)에 있는 로그인에 대해 특정 사용 권한을 허가합니다.  

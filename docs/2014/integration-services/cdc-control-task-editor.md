@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a24369829ae8b6fb45098e6ebc0be2f0e676e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924164"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 제어 태스크 편집기
   **CDC 제어 태스크 편집기** 대화 상자를 사용하여 CDC 제어 태스크를 구성할 수 있습니다. CDC 제어 태스크 구성에는 CDC 데이터베이스, CDC 태스크 작업 및 상태 관리 정보에 대한 연결을 정의하는 작업이 포함됩니다.  

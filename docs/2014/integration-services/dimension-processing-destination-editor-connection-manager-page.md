@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb6c1a4fb5095e387bed9ca2b88b66e62c0bd9a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966983"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>차원 처리 대상 편집기(연결 관리자 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 지정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66059443"
  **연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **Analysis Services 연결 관리자 추가** 대화 상자를 사용하면 새 연결을 만들 수 있습니다.  
   
  **사용 가능한 차원 목록**  
@@ -39,10 +38,10 @@ ms.locfileid: "66059443"
  **처리 방법**  
  목록에서 선택한 차원에 적용할 처리 방법을 선택합니다. 이 옵션의 기본값은 **전체**입니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**추가(증분)**|차원의 증분 처리를 수행합니다.|  
-|**차지**|차원의 전체 처리를 수행합니다.|  
+|**전체**|차원의 전체 처리를 수행합니다.|  
 |**업데이트**|차원의 업데이트 처리를 수행합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

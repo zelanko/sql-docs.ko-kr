@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c3e325cd99276e04a178b89c19b233289edc09fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056141"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo(OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]오류 정보가 포함 된 Native Client OLE DB PROVIDER SSERRORINFO 구조체에 대 한 포인터를 반환 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

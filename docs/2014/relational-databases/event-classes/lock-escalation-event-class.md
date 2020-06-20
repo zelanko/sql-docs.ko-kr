@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029427"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 이벤트 클래스
   **Lock:Escalation** 이벤트 클래스는 행 잠금이 개체 잠금으로 변환되는 것과 같이 미세 잠금이 성긴 잠금으로 변환되었음을 나타냅니다. 에스컬레이션 이벤트 클래스는 이벤트 ID 60입니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "62662375"
 |**NTUserName**|`nvarchar`|Windows 사용자 이름입니다.|6|예|  
 |**ObjectID**|`int`|잠금 에스컬레이션이 트리거된 테이블의 시스템 할당 ID입니다.|22|예|  
 |**ObjectID2**|`bigint`|관련 개체 또는 엔터티의 ID입니다. 즉, 잠금 에스컬레이션이 트리거된 HoBT ID입니다.|56|예|  
-|**이동**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 시작 오프셋입니다.|61|yes|  
+|**Offset**|`int`|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 시작 오프셋입니다.|61|yes|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|예|  
 |**요청**|`int`|문을 포함하는 요청의 ID입니다.|49|예|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|`nvarchar`|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|예|  
@@ -58,7 +57,7 @@ ms.locfileid: "62662375"
 |**StartTime**|`datetime`|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|yes|  
 |**TextData**|`ntext`|잠금 에스컬레이션을 발생시킨 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 텍스트입니다.|1|예|  
 |**TransactionID**|`bigint`|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
-|**Type**|`int`|잠금 에스컬레이션 세분성:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT(테이블 수준)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|예|  
+|**형식**|`int`|잠금 에스컬레이션 세분성:<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT(테이블 수준)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|예|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `sp_trace_create` 프로시저를 사용하여 추적을 만들고 `sp_trace_setevent` 를 사용하여 추적에 잠금 에스컬레이션 열을 추가한 다음 `sp_trace_setstatus` 를 추적을 시작합니다. `EXEC sp_trace_setevent @TraceID, 60, 22, 1`과 같은 문에서 숫자 `60` 은 에스컬레이션 이벤트 클래스를 나타내고, `22` 는 **ObjectID** 열을 나타내며, `1` 은 추적 이벤트를 ON으로 설정합니다.  

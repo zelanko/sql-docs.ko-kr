@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b153dfbe9dfdbb5741304153bd7b3dfd1d0d1b3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938674"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot에서 복원
   SQL Server Management Studio의 PowerPivot 기능에서 복원을 사용하여 테이블 형식 모드에서 실행되는 Analysis Services 인스턴스에서 새 테이블 형식 model 데이터베이스를 만들거나 PowerPivot 통합 문서(.xlsx)에서 기존 데이터베이스를 복원할 수 있습니다.  

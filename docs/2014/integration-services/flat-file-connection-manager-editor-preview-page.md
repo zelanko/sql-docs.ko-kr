@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff01832b565b0cca2e1a2550606307552ee63a33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967093"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 노드를 사용하여 원본 파일의 내용을 테이블 형식으로 볼 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923274"
 ---
 # <a name="error-handling"></a>오류 처리
   Oracle CDC 인스턴스는 단일 Oracle 원본 데이터베이스에서 변경 사항을 마이닝하고(Oracle RAC 클러스터가 단일 데이터베이스로 간주됨) 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 CDC 데이터베이스에 있는 변경 테이블에 커밋된 변경 내용을 기록합니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "62835654"
   
 -   MSXDBCDC.dbo.xdbcdc_trace 테이블: Oracle CDC Service 주 프로세스의 일반 로깅 및 추적에 사용됩니다.  
   
--   \<cdc-database>.cdc.xdbcdc_trace 테이블: Oracle CDC 인스턴스의 일반 로깅 및 추적에 사용됩니다. 특정 Oracle CDC 인스턴스 관련 오류가 해당 인스턴스의 추적 테이블에 기록된다는 것을 의미합니다.  
+-   \<cdc-database>ORACLE Cdc 인스턴스의 일반 로깅 및 추적에 사용 되는 xdbcdc_trace 테이블입니다. 특정 Oracle CDC 인스턴스 관련 오류가 해당 인스턴스의 추적 테이블에 기록된다는 것을 의미합니다.  
   
  다음과 같은 경우에 Oracle CDC Service에 의해 정보가 기록됩니다.  
   

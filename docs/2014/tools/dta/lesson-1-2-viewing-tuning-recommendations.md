@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0ab03b5152b0fe3f12de5e31b091b49d86cd4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048362"
 ---
 # <a name="viewing-tuning-recommendations"></a>튜닝 권장 구성 보기
-   이 태스크에서는 [작업 튜닝](lesson-1-1-tuning-a-workload.md)에서 만든 튜닝 세션을 사용합니다. MyScript [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 사용 하 여 데이터베이스를 튜닝 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장** 구성 탭에 해당 결과가 표시 됩니다. 다음 태스크에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 GUI (그래픽 사용자 인터페이스)의 **권장** 구성 탭을 소개 하 고 튜닝 세션 결과에 대해 제공 하는 정보를 탐색 하는 과정을 안내 합니다.  
+   이 태스크에서는 [작업 튜닝](lesson-1-1-tuning-a-workload.md)에서 만든 튜닝 세션을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]MyScript 스크립트를 사용 하 여 데이터베이스를 튜닝 하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자의 **권장** 구성 탭에 해당 결과가 표시 됩니다. 다음 태스크에서는 **Recommendations** [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자 GUI (그래픽 사용자 인터페이스)의 권장 구성 탭을 소개 하 고 튜닝 세션 결과에 대해 제공 하는 정보를 탐색 하는 과정을 안내 합니다.  
   
 ### <a name="view-tuning-recommendations"></a>튜닝 권장 구성 보기  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66110175"
   
 7.  **동작** 메뉴에서 **권장 구성 평가**를 클릭합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자에서 MySession의 원래 권장 구성의 하위 집합을 평가할 수 있는 새 튜닝 세션이 만들어집니다.  
   
-8.  새 `EvaluateMySession` **세션 이름**으로를 입력 하 고 도구 모음에서 **분석 시작** 단추를 클릭 합니다. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
+8.  `EvaluateMySession`새 **세션 이름**으로를 입력 하 고 도구 모음에서 **분석 시작** 단추를 클릭 합니다. 이 새 튜닝 세션에 대해 2단계와 3단계를 반복하여 해당 권장 구성을 볼 수 있습니다.  
   
 ## <a name="summary"></a>요약  
  MySession 튜닝 세션에 대한 **권장 구성** 탭의 내용을 보고 새 EvaluateMySession 튜닝 세션에서 해당 권장 구성의 하위 집합을 평가했습니다.  
