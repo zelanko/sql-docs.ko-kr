@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e37ed20eb1babf85df0bea191ea3c302e7968f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c9abee95a8d2ce52a3f9f25b5e629aad0bfed1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017417"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client에 대한 지원 정책
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 함께 여러 데이터 액세스 구성 요소를 사용하는 방법에 대해 설명합니다.  

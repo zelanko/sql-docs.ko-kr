@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e3d832fccbab849d0646c761964aee9266181e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006212"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>태스크 9: 마스터 데이터 관리자를 사용하여 파생 계층 만들기
   이 작업에서는 마스터 데이터 관리자를 사용하여 파생 계층을 만듭니다. 이 파생 계층은 **공급자** 와 **상태** 엔터티 간의 도메인 기반 특성 관계에서 파생 됩니다.  

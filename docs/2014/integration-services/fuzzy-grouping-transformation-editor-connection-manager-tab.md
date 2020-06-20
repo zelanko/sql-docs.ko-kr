@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7cfee2c2a79410d73eb6ca4da47f0fd361a24fb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b06f9202bc158d1f64a11c9814792c7fe63ee9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966343"
 ---
 # <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>유사 항목 그룹화 변환 편집기(연결 관리자 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **연결 관리자** 탭을 사용하여 기존 연결을 선택하거나 새 연결을 만들 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66058335"
  **OLE DB 연결 관리자**  
  목록 상자를 사용하여 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  

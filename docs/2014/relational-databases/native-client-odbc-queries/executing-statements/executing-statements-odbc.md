@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 063fc40d-ff81-490d-9c9b-2faefb729f37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a367d5ee7def19ffdfd40e24860ebf95f642fae9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 01dc4298855fd3418029164dea3ed089185da934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018420"
 ---
 # <a name="executing-statements-odbc"></a>문 실행(ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 데이터베이스에서 SQL 문을 실행 하는 다양 한 방법을 제공 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

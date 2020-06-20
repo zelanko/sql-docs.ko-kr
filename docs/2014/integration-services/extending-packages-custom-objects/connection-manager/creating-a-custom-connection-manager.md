@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966533"
 ---
 # <a name="creating-a-custom-connection-manager"></a>사용자 지정 연결 관리자 만들기
   사용자 지정 연결 관리자를 만들 때 수행해야 하는 단계는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]의 다른 사용자 지정 개체를 만들 때의 단계와 비슷합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "62768929"
  강력한 이름 키 파일을 사용하여 빌드 시 생성될 어셈블리에 서명하도록 두 프로젝트를 구성합니다.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>DtsConnection 특성 적용  
- 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용하여 해당 클래스를 연결 관리자로 식별합니다. 이 특성은 연결 관리자의 이름, 설명 및 연결 유형 같은 디자인 타임 정보를 제공합니다. 및 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> `Description` 속성은에서 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]패키지에 대 한 `Description` 연결을 구성할 때 표시 되는 **SSIS 연결 관리자 추가** 대화 상자에 표시 되는 **유형** 및 열에 해당 합니다.  
+ 앞에서 만든 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 특성을 적용하여 해당 클래스를 연결 관리자로 식별합니다. 이 특성은 연결 관리자의 이름, 설명 및 연결 유형 같은 디자인 타임 정보를 제공합니다. <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A>및 `Description` 속성은에서 패키지에 **Type** `Description` 대 한 연결을 구성할 때 표시 되는 **SSIS 연결 관리자 추가** 대화 상자에 표시 되는 유형 및 열에 해당 합니다 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> 속성을 사용하여 연결 관리자를 사용자 지정 사용자 인터페이스에 연결합니다. 이 속성에 필요한 공개 키 토큰을 가져오려면 **sn.exe -t**를 사용하여 사용자 인터페이스 어셈블리 서명에 사용할 키 쌍(.snk) 파일의 공개 키 토큰을 표시할 수 있습니다.  
   

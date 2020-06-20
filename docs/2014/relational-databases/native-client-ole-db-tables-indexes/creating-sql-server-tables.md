@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 67a0dd1c4ab55b1417e30271a841aecb450c63db
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3d11a26c2f5d27f28a60effdb26978edd07409
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017979"
 ---
 # <a name="creating-sql-server-tables"></a>SQL Server 테이블 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **Itabledefinition:: CreateTable** 함수를 제공 하 여 소비자가 테이블을 만들 수 있도록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 소비자는 **CreateTable** 을 사용 하 여 소비자 이름 영구 테이블을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 생성 한 고유한 이름을 가진 영구 또는 임시 테이블을 만듭니다.  

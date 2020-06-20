@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9f6e50ab-dec4-4b03-bfa3-876330ace170
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c36f5cdfc096dd9f233ad868868b2f633548647
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4f6f7b7305e1a15aafd09f6a0f4ae2927dc6fd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037040"
 ---
 # <a name="complete---upgrade"></a>완료 - 업그레이드
   완료(업그레이드) 페이지를 사용하여 완료된 업그레이드를 확인할 수 있습니다.  

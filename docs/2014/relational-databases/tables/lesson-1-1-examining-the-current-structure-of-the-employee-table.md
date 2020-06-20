@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5561d0f2398a0a1adc12ae30a7cd7527fdd5d45
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068100"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Employee 테이블의 현재 구조 검사
-   예제 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources. EmployeeDemo** 테이블을 쿼리하여 `hierarchyid` 데이터 형식을 사용 하지 않고 테이블에서 데이터를 구조화 하는 방법을 검토 합니다.  
+   예제 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에는 **HumanResources** 스키마에 **Employee** 테이블이 있습니다. 원래 테이블이 변경되지 않도록 이 단계에서는 **EmployeeDemo** 라는 **Employee**테이블의 복사본을 만듭니다. 예를 단순화하기 위해 원래 테이블에서 5개의 열만 복사합니다. 그런 다음 **HumanResources. EmployeeDemo** 테이블을 쿼리하여 데이터 형식을 사용 하지 않고 테이블에서 데이터를 구조화 하는 방법을 검토 합니다 `hierarchyid` .  
   
 ### <a name="to-copy-the-employee-table"></a>Employee 테이블을 복사하려면  
   

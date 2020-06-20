@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f670ed5ea57bc61f0509afd58432888c1fdae13
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014666"
 ---
 # <a name="ddl-events"></a>DDL 이벤트
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트를 나열합니다. 각 이벤트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 저장 프로시저에 해당하며 키워드 사이에 밑줄(_)을 포함하도록 문 구문이 수정됩니다.  

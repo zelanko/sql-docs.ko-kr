@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48610bb0bbb40a5a8385468e355cbca40420fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966387"
 ---
 # <a name="for-loop-editor"></a>For 루프 편집기
   **For 루프 편집기** 대화 상자의 **For 루프** 페이지를 사용하여 지정한 조건이 False로 평가될 때까지 워크플로를 반복하는 루프를 구성할 수 있습니다.  

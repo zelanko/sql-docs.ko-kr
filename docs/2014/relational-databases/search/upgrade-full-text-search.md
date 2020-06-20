@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2bdf0bdee452101bbafb8108426faf6604e7626
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016509"
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "66010955"
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 각 전체 텍스트 인덱스가 파일 그룹에 속하는 전체 텍스트 카탈로그에 있고 실제 경로를 가지며 데이터베이스 파일로 처리됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 전체 텍스트 카탈로그는 전체 텍스트 인덱스의 그룹을 포함하는 논리적 개체 또는 가상 개체입니다. 따라서 새로운 전체 텍스트 카탈로그는 실제 경로가 있는 데이터베이스 파일로 취급되지 않습니다. 그러나 데이터 파일이 들어 있는 전체 텍스트 카탈로그를 업그레이드할 때는 같은 디스크에 새 파일 그룹이 만들어집니다. 따라서 업그레이드 후에도 이전의 디스크 I/O 동작이 유지됩니다. 루트 경로가 있으면 해당 카탈로그의 전체 텍스트 인덱스가 새 파일 그룹에 배치됩니다. 이전 전체 텍스트 카탈로그 경로가 유효하지 않으면 업그레이드 과정에서 전체 텍스트 인덱스가 기본 테이블과 같은 파일 그룹에 유지되며, 테이블이 분할된 경우에는 주 파일 그룹에 유지됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 전체 텍스트 카탈로그를 지정 하는 DDL 문은 계속 올바르게 작동 합니다.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)]전체 텍스트 카탈로그를 지정 하는 DDL 문은 계속 올바르게 작동 합니다.  
   
 ##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>전체 텍스트 업그레이드 옵션  
  서버 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 사용자 인터페이스를 통해 다음과 같은 전체 텍스트 업그레이드 옵션 중 하나를 선택할 수 있습니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "66010955"
   
  전체 텍스트 인덱스를 가져오는 데 따르는 영향에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "전체 텍스트 업그레이드 옵션 선택 시 고려 사항"을 참조하십시오.  
   
- 다시 작성  
+ 다시 빌드  
  향상된 새로운 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 작성합니다. 인덱스를 다시 작성하면 시간이 오래 걸릴 수 있으며 업그레이드 후 CPU 및 메모리가 많이 필요할 수 있습니다.  
   
  다시 설정  
@@ -150,7 +149,7 @@ ms.locfileid: "66010955"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](https://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](https://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
   
- 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 그러나 대상 디렉터리에서 기본 이름이 이미 사용 되 고 있는 경우 새 데이터베이스 파일의 이름은 `ftrow_` *catalog-name*`{`*guid*`}.ndf`입니다. 여기서 *guid* 는 새 파일의 전역 고유 식별자입니다.  
+ 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 그러나 대상 디렉터리에서 기본 이름이 이미 사용 되 고 있는 경우 새 데이터베이스 파일의 이름은 `ftrow_` *catalog-name* `{` *guid*입니다 `}.ndf` . 여기서 *guid* 는 새 파일의 전역 고유 식별자입니다.  
   
  카탈로그를 가져온 후 **sys.database_files** 및 **sys.master_files**가 업데이트되어 카탈로그 항목이 제거되고 **sys.fulltext_catalogs** 의 **path** 열이 NULL로 설정됩니다.  
   
@@ -171,7 +170,7 @@ ms.locfileid: "66010955"
   
 -   데이터베이스 파일인 `ftdb1.mdf`는 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL12.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`로 이동합니다.  
   
--   `ftdb1_log.ldf`로그 파일인는 로그 디스크 드라이브의 로그 디렉터리인 *log_drive*`:\`*log_directory*`\ftdb1_log.ldf`으로 이동 됩니다.  
+-   로그 파일인는 로그 `ftdb1_log.ldf` 디스크 드라이브의 로그 디렉터리인 *log_drive*log_directory으로 이동 됩니다 `:\` *log_directory* `\ftdb1_log.ldf` .  
   
 -   `sysft_cat90` 카탈로그에 해당하는 카탈로그 파일은 `C:\temp`로 이동합니다. 가져온 전체 텍스트 인덱스는 데이터베이스 파일인 C:\ftrow_sysft_cat90.ndf에 자동으로 배치되고 C:\temp는 삭제됩니다.  
   

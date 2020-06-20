@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e1d21a69105dbc419ad7c596a7ae0cc6ae4ceb57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cd9d22b7de3b078629f275cb648a9fe5fc70c938
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707033"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017346"
 ---
 # <a name="sparse-columns-support-odbc"></a>스파스 열 지원(ODBC)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC의 스파스 열 지원에 대해 설명합니다. 스파스 열에 대 한 ODBC 지원을 보여 주는 샘플은 [스파스 열이 있는 테이블에 대해 Sqlcolumns 호출](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)을 참조 하세요. 스파스 열에 대한 자세한 내용은 [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md)을 참조하십시오.  

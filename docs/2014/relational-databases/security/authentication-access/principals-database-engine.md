@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016237"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
   *보안 주체* 는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 요청할 수 있는 엔터티입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한 부여 모델의 다른 구성 요소와 같이 보안 주체는 계층으로 정렬될 수 있습니다. 보안 주체의 영향 범위는 보안 주체의 정의 범위인 Windows, 서버 및 데이터베이스와 보안 주체가 분해 불가능하거나 컬렉션인지 여부에 따라 달라집니다. 분해 불가능한 보안 주체의 예로는 Windows 로그인을 들 수 있으며 Windows 그룹은 컬렉션인 보안 주체입니다. 모든 보안 주체에는 SID(보안 식별자)가 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "63011911"
   
 -   Windows 로컬 로그인  
   
- **SQL Server**-**수준** **보안 주체**  
+ **SQL Server** - **수준** **보안 주체**  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011911"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 사용자  
- 각 데이터베이스에는 **guest**가 포함되어 있습니다. **guest** 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. **게스트** 사용자는 삭제할 수 없지만 `CONNECT` 사용 권한을 취소 하 여 사용 하지 않도록 설정할 수 있습니다. Master `CONNECT` 또는 tempdb 이외의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST` 를 실행 하 여 사용 권한을 해지할 수 있습니다.  
+ 각 데이터베이스에는 **guest**가 포함되어 있습니다. **guest** 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. **게스트** 사용자는 삭제할 수 없지만 사용 권한을 취소 하 여 사용 하지 않도록 설정할 수 있습니다 `CONNECT` . `CONNECT` `REVOKE CONNECT FROM GUEST` Master 또는 tempdb 이외의 데이터베이스 내에서를 실행 하 여 사용 권한을 해지할 수 있습니다.  
   
 ## <a name="client-and-database-server"></a>클라이언트 및 데이터베이스 서버  
  정의에 따르면 클라이언트 및 데이터베이스 서버는 보안 주체이며 보안을 설정할 수 있습니다. 이러한 항목은 보안 네트워크 연결이 설정되기 전에 상호 인증될 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 클라이언트가 네트워크 인증 서비스와 상호 작용 하는 방법을 정의 하는 [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) 인증 프로토콜을 지원 합니다.  

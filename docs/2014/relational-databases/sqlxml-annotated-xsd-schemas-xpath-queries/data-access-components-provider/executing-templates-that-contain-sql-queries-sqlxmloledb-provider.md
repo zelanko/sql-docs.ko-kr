@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6fc8be573e6aab92b06405bb3ac41ec6cbac238a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703262"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015652"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
   이 예제에서는 SQLXMLOLEDB 공급자별 속성 Clientside-by-side Xml을 사용 하는 방법을 보여 줍니다. 이 클라이언트 쪽 ADO 예제 애플리케이션에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
   
  ClientSideXML 속성이 True로 설정 되어 있기 때문에 FOR XML 절이 없는 SELECT 문이 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   
- XML 템플릿은 \< 생성 되는 xml 문서에 대해 단일 최상위 루트 요소 (루트>)를 제공 하므로 xml 루트 속성이 제공 되지 않습니다.  
+ Xml 템플릿은 생성 되는 XML 문서에 대해 단일 최상위 루트 요소 ()를 제공 \<ROOT> 하므로 xml 루트 속성이 제공 되지 않습니다.  
   
  XML 템플릿을 실행하려면 언어 {5d531cb2-e6ed-11d2-b252-00c04f681b71}을 지정해야 합니다.  
   

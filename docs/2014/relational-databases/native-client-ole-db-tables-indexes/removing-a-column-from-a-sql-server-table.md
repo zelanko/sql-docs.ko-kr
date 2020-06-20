@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8cde1faf93713a72f9fa69f056250b4e5357c538
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d416514ed627556b1716fba2ee4be8861fdabad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017852"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server 테이블에서 열 제거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 **Itabledefinition::D ropcolumn** 함수를 노출 합니다. 이 함수를 사용하여 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 열을 제거할 수 있습니다.  

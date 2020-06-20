@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 17c77a69804cd290ab1b7f5e21372b6c4a79975a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856614"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037177"
 ---
 # <a name="check-files-in-use"></a>사용 중인 파일 확인
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트를 설치한 후 Windows가 다시 시작되지 않도록 하려면 사용 중인 파일 검사 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업데이트 설치 프로그램에 필요한 파일을 사용 중인 프로세스를 확인합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "83856614"
   
 ## <a name="ui-element-list"></a>UI 요소 목록  
   
-|Name|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |프로세스|업데이트해야 할 파일을 사용하고 있는 프로세스의 전체 이름을 표시합니다.|  
 |Type|프로세스의 유형을 표시합니다.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 21f158c47cc289b583eebc31d9f4893e2c0c6a88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019019"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC 드라이버를 사용한 대량 복사 방법 도움말 항목(ODBC)
   Microsoft SQL Server 2005와 함께 사용 하는 경우 SQL Server ODBC 드라이버는 DB-LIBRARY API에서 지원 되는 것과 동일한 대량 복사 기능을 지원 합니다.  

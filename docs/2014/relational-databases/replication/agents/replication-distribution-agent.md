@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bd0b61626f4af268f93043114d5945d00a37b5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210745"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061593"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
   복제 배포 에이전트는 스냅샷(스냅샷 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  

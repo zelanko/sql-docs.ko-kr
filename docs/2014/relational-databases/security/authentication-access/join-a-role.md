@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d1c846f7ed60bbecac64021e9a881312e1f1f64c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58e8c071672c8c3afba8d6c424488899dcf76be7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016384"
 ---
 # <a name="join-a-role"></a>역할 조인
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인 및 데이터베이스 사용자에 역할을 할당하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 역할을 사용하면 사용 권한을 효율적으로 관리할 수 있습니다. 역할에 사용 권한을 할당하고 사용자와 로그인을 역할에 추가하거나 제거합니다. 역할을 사용하면 각 사용자의 사용 권한을 개별적으로 유지 관리할 필요가 없습니다.  
@@ -62,7 +61,7 @@ ms.locfileid: "63011351"
 ###  <a name="security"></a><a name="Security"></a> 보안  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
- 데이터베이스 `ALTER ANY ROLE` 에 대 한 사용 권한 `ALTER` , 역할에 대 한 사용 권한 또는 **db_securityadmin**의 멤버 자격이 필요 합니다.  
+ `ALTER ANY ROLE`데이터베이스에 대 한 사용 권한, `ALTER` 역할에 대 한 사용 권한 또는 **db_securityadmin**의 멤버 자격이 필요 합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   

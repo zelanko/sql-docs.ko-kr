@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058162"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965679"
 ---
 # <a name="implementation-of-the-parent-package"></a>부모 패키지 구현
   여러 서버에서 SSIS 패키지의 로드 균형을 조정할 때 자식 패키지를 만들어 배포하고 이러한 패키지를 실행하기 위한 원격 SQL Server 에이전트 작업을 만든 다음에는 부모 패키지를 만들어야 합니다. 부모 패키지에는 많은 SQL Server 에이전트 작업 실행 태스크가 포함되며 각 태스크는 자식 패키지 중 하나를 실행하는 서로 다른 SQL Server 에이전트 작업을 호출합니다. 그러면 부모 패키지의 SQL Server 에이전트 작업 실행 태스크가 다양한 SQL Server 에이전트 작업을 실행합니다. 부모 패키지의 각 태스크에는 원격 서버 연결 방법 및 해당 서버에서 실행할 작업과 같은 정보가 포함되어 있습니다. 자세한 내용은 [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md)을 참조하세요.  

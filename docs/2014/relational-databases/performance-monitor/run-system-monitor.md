@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5516ee5200f6af36461184cc095992ac4d288722
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd0baf32402d69e36dc5120d0259b2f8d689897
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032117"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998220"
 ---
 # <a name="run-system-monitor"></a>시스템 모니터 실행
   시스템 모니터는 RPC(원격 프로시저 호출)를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 정보를 수집할 수 있습니다. Microsoft Windows에서 시스템 모니터를 실행할 권한을 가진 모든 사용자는 시스템 모니터를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 모니터링할 수 있습니다.  

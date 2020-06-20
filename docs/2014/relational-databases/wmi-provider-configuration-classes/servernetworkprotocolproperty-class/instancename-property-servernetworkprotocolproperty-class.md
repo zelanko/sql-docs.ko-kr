@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3f24bf0-6b02-496b-b08e-327f7b320bc5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8bf094914e087379ac72f23afcbf034a8248b30e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2d09d85e7b041e2899d69556bcccd2a2aa8ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059759"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>InstanceName 속성(ServerNetworkProtocolProperty 클래스)
-  서버 네트워크 프로토콜이 설치 된 인스턴스의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이름을 가져옵니다.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 네트워크 프로토콜이 설치 된 인스턴스의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   

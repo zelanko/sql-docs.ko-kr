@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965333"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>2단계: 플랫 파일 연결 관리자 추가 및 구성
   이 태스크에서는 플랫 파일 연결 관리자를 방금 작성한 패키지에 추가합니다. 플랫 파일 연결 관리자를 통해 패키지가 플랫 파일에서 데이터를 추출할 수 있습니다. 플랫 파일 연결 관리자를 사용하여 패키지가 플랫 파일에서 데이터를 추출할 때 적용할 열 구분 기호를 포함한 파일 형식, 파일 이름과 위치 및 로캘과 코드 페이지를 지정할 수 있습니다. 또한 개별 열의 데이터 형식을 수동으로 지정하거나 **열 유형 제안** 대화 상자를 사용하여 추출된 데이터 열을 자동으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑할 수 있습니다.  
@@ -62,13 +61,13 @@ ms.locfileid: "62891795"
   
 2.  속성 창에서 다음 내용을 변경합니다.  
   
-    -   **열 0** 이름 속성을로 `AverageRate`변경 합니다.  
+    -   **열 0** 이름 속성을로 변경 `AverageRate` 합니다.  
   
-    -   **열 1** 이름 속성을로 `CurrencyID`변경 합니다.  
+    -   **열 1** 이름 속성을로 변경 `CurrencyID` 합니다.  
   
-    -   **열 2** 이름 속성을로 `CurrencyDate`변경 합니다.  
+    -   **열 2** 이름 속성을로 변경 `CurrencyDate` 합니다.  
   
-    -   **열 3** 이름 속성을로 `EndOfDayRate`변경 합니다.  
+    -   **열 3** 이름 속성을로 변경 `EndOfDayRate` 합니다.  
   
     > [!NOTE]  
     >  기본적으로 4개의 열이 모두 초기에 `OutputColumnWidth`가 50인 문자열 데이터 형식 [DT_STR]로 설정되어 있습니다.  
@@ -90,11 +89,11 @@ ms.locfileid: "62891795"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|date|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|float|  
   
-     `CurrencyID` 열에 제안 된 데이터 형식이 대상 테이블에 있는 필드의 데이터 형식과 호환 되지 않습니다. 의 `DimCurrency.CurrencyAlternateKey` 데이터 형식은 nchar (3) 이므로 문자열 [DT_STR `CurrencyID` ]에서 문자열 [DT_WSTR]로 변경 해야 합니다. 또한 필드 `DimDate.FullDateAlternateKey` 는 날짜 데이터 형식으로 정의 됩니다. `CurrencyDate` 따라서 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경 해야 합니다.  
+     열에 제안 된 데이터 형식이 `CurrencyID` 대상 테이블에 있는 필드의 데이터 형식과 호환 되지 않습니다. 의 데이터 형식은 `DimCurrency.CurrencyAlternateKey` nchar (3) 이므로 `CurrencyID` 문자열 [DT_STR]에서 문자열 [DT_WSTR]로 변경 해야 합니다. 또한 필드는 `DimDate.FullDateAlternateKey` 날짜 데이터 형식으로 정의 되므로 `CurrencyDate` 날짜 [DT_Date]에서 데이터베이스 날짜 [DT_DBDATE]로 변경 해야 합니다.  
   
-2.  목록에서 CurrencyID 열을 선택 하 고 속성 창에서 열의 `CurrencyID` 데이터 형식을 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경 합니다.  
+2.  목록에서 CurrencyID 열을 선택 하 고 속성 창에서 열의 데이터 형식을 `CurrencyID` 문자열 [DT_STR]에서 유니코드 문자열 [DT_WSTR]로 변경 합니다.  
   
-3.  속성 창에서 열의 `CurrencyDate` 데이터 형식을 날짜 [DT_DATE]에서 데이터베이스 날짜 [DT_DBDATE]로 변경 합니다.  
+3.  속성 창에서 열의 데이터 형식을 `CurrencyDate` 날짜 [DT_DATE]에서 데이터베이스 날짜 [DT_DBDATE]로 변경 합니다.  
   
 4.  **확인**을 클릭합니다.  
   

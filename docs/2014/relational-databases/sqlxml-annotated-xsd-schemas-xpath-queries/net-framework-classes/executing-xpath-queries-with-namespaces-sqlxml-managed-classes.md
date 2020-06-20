@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6fc46d8-6b42-4992-a8f1-a8d4b8886e6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: afa994d7bda334e946a837f078d1efef1b78ac0a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7d5e937cead8fa86fd249d782fa570639a403493
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015288"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>네임스페이스가 포함된 XPath 쿼리 실행(SQLXML 관리되는 클래스)
   XPath 쿼리에는 네임스페이스가 포함될 수 있습니다. 스키마 요소가 네임스페이스로 한정된 경우 즉, 스키마 요소에서 대상 네임스페이스를 사용하는 경우 스키마에 대한 XPath 쿼리에서 해당 네임스페이스를 지정해야 합니다.  

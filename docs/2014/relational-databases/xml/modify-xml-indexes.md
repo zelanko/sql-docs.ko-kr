@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea282f462ab33454f262ae4de57df3c48abfb600
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c67470fc9aaaeefe49e5ccb1a8602e082c4054
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013174"
 ---
 # <a name="modify-xml-indexes"></a>XML 인덱스 수정
   [ALTER INDEX&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문은 기존의 XML 인덱스와 비 XML 인덱스를 수정하는 데 사용할 수 없습니다. 그러나 모든 ALTER INDEX 옵션을 XML 인덱스에 사용할 수 있는 것은 아닙니다. XML 인덱스를 수정할 때 다음 옵션은 유효하지 않습니다.  

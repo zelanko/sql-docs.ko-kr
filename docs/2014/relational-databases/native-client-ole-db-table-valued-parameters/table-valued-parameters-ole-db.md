@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a759ed6729ce066cbbd5b8c38043402195b62b98
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0eaa7ce325115c073420d014b1ec6254da266db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018021"
 ---
 # <a name="table-valued-parameters-ole-db"></a>테이블 반환 매개 변수(OLE DB)
   이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 테이블 반환 매개 변수 지원에 대해 설명합니다. 추가 개요 정보는 [SQL Server Native Client&#41;&#40;테이블 반환 매개 변수 ](../native-client/features/table-valued-parameters-sql-server-native-client.md)를 참조 하세요. 샘플은 [테이블 반환 매개 변수 사용&#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)을 참조하세요.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69b24c96e4833a45038bfcae20f0a5fecd0d2340
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4363a526ada3694e92d18cac0d7abe8a26f6a92f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016942"
 ---
 # <a name="xtp-in-memory-oltp-performance-counters"></a>XTP(메모리 내 OLTP) 성능 카운터
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리 내 OLTP 작업을 모니터링하기 위해 성능 모니터에서 사용할 수 있는 개체 및 카운터를 제공합니다.  
@@ -23,7 +22,7 @@ ms.locfileid: "63151131"
 ##  <a name="xtp-in-memory-oltp-performance-objects"></a><a name="SQLServerPOs"></a>XTP (메모리 내 OLTP) 성능 개체  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체에 대해 설명합니다.  
   
-|성능 개체|설명|  
+|성능 개체|Description|  
 |------------------------|-----------------|  
 |[XTP 커서](../cursors.md)|XTP 커서 성능 개체에는 내부 XTP 엔진 커서와 관련된 카운터가 포함됩니다. 커서는 XTP 엔진이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 처리하기 위해 사용하는 하위 수준의 기본 구성 요소입니다. 따라서 사용자는 일반적으로 이를 직접 제어하지 않습니다.|  
 |[XTP 가비지 수집](sql-server-xtp-garbage-collection.md)|XTP 가비지 수집 성능 개체에는 XTP 엔진의 가비지 수집기와 관련된 카운터가 포함됩니다.|  
