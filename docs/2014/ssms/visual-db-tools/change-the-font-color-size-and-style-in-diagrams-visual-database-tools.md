@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8a50e450e009a9d584adc54b4c52cd8b7da457e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066257"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>다이어그램의 글꼴 색, 크기 및 스타일 변경(Visual Database Tools)
   글꼴 색, 크기 및 스타일을 변경하여 데이터베이스 다이어그램에 나타나는 텍스트 모양을 사용자 지정할 수 있습니다. 변경 내용은 새 다이어그램과 수정 시 기존 다이어그램에 적용됩니다.  

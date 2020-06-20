@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940334"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>보고 통화 지정(비즈니스 인텔리전스 마법사)
   **보고 통화 지정** 페이지를 사용하여 **변환 유형 선택** 페이지에서 지정한 다 대 다 또는 일 대 다 변환 유형에 적용되는 통화 변환 기능에 대해 보고 통화를 정의할 수 있습니다. 보고 통화는 **측정값 선택** 페이지에서 선택한 측정값의 값이 변환되는 통화입니다. 통화 차원에서 선택한 멤버는 비즈니스 인텔리전스 마법사에서 생성된 통화 변환에 대한 보고 통화 차원을 정의합니다.  

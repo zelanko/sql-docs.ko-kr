@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890d87b22e4d91fd50793b5f3cf5ac697fdf8b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050749"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen(확장 저장 프로시저 API)
     
@@ -58,7 +57,7 @@ n
 ## <a name="returns"></a>반환  
  매개 변수 데이터의 최대 길이(바이트)입니다. *n*번째 매개 변수가 없거나 원격 저장 프로시저가 없으면 -1이 반환됩니다.  
   
- 매개 변수가 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다.  
+ 매개 변수가 다음 데이터 형식 중 하나 이면이 함수는 다음 값을 반환 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |새 데이터 형식|입력 데이터 길이|  
 |--------------------|-----------------------|  
@@ -69,7 +68,7 @@ n
 |`BIGVARBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
 ## <a name="remarks"></a>설명  
  각 원격 저장 프로시저 매개 변수에는 실제 데이터 길이와 최대 데이터 길이가 있습니다. Null 값을 사용할 수 없는 고정 길이의 표준 데이터 형식의 경우 실제 길이와 최대 길이가 같습니다. 가변 길이의 데이터 형식의 경우 데이터 길이가 다를 수 있습니다. 예를 들어 **varchar(30)** 로 선언한 매개 변수의 데이터 길이는 최대 10바이트입니다. 이 매개 변수의 실제 길이는 10이고 최대 길이는 30입니다. **srv_parammaxlen** 함수는 원격 저장 프로시저의 최대 데이터 길이를 가져옵니다. 매개 변수의 실제 길이를 가져오려면 **srv_paramlen**을 사용합니다.  

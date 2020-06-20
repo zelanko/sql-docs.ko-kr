@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf6fd1f328366333e5464cb226a8a8ab8e275395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935308"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
   이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62782281"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>메모리의 페이지 잠금 옵션을 설정하려면  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc` 합니다.  
   
 2.  **로컬 그룹 정책 편집기** 콘솔에서 **컴퓨터 구성**을 확장한 다음 **Windows 설정**을 확장합니다.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b1b878935ffc0dee51c112581a130dde99043e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940814"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>테이블 및 뷰 선택(데이터 원본 뷰 마법사)(Analysis Services)
   **테이블 및 뷰 선택** 페이지를 사용하여 데이터 원본 뷰에 포함시킬 데이터 원본의 테이블 또는 뷰를 선택할 수 있습니다.  

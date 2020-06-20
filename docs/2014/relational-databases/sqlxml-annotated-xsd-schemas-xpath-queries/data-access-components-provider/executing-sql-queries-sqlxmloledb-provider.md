@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50334cf5-9c87-4c00-9beb-e08577c4fa82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c00bcec67d7e04738e4684ed7883074e1a2012
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8410a4a0ecc8d522a38e22315746cb45295e6bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015818"
 ---
 # <a name="executing-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리 실행(SQLXMLOLEDB 공급자)
   이 예에서는 다음 SQLXMLOLEDB 공급자별 속성을 사용하는 방법을 보여 줍니다.  

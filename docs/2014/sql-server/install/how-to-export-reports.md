@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059295"
 ---
 # <a name="how-to-export-reports"></a>방법: 보고서 내보내기
   업그레이드 관리자 보고서 뷰어를 사용하여 보고서의 플랫 파일 버전을 내보낼 수 있습니다. 이렇게 하면 스프레드시트나 워드 프로세싱 문서에서 정보를 처리하거나 전자 메일로 정보를 다른 사용자에게 보낼 수 있습니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 827f060b309a7a620fd448554b074f45d78d3cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059135"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>예약 된 날짜 및 시간 데이터 형식에 해당 하는 UDT&#39;s를 제거 합니다.
   업그레이드 관리자가 `date` 또는 `time` 데이터 형식용으로 예약된 용어를 따서 명명된 UDT(사용자 정의 형식)를 발견했습니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acfab7fa03a2f811e161b1e1cd3f38c0708ef5ec
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4e54d543ca97612cff08013e26c8fb8088f10f28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068240"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field 및 sql:limit-value (SQLXML 4.0)
   XML 대량 로드는 해당 정의별로 `sql:limit-field` 및 `sql:limit-value` 주석을 처리합니다. 자세한 내용은 [sql을 사용 하 여 값 필터링: limit 필드 및 sql: limit 값 &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)를 참조 하세요.  

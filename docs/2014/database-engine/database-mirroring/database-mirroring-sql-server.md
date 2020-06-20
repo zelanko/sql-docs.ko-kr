@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934294"
 ---
 # <a name="database-mirroring-sql-server"></a>데이터베이스 미러링(SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807930"
 > [!NOTE]  
 >  미러된 데이터베이스는 서로 독립적이므로 여러 데이터베이스에 대한 장애 조치를 하나의 그룹으로 처리할 수 없습니다.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>클라이언트 연결  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> 클라이언트 연결  
  데이터베이스 미러링 세션에 대한 클라이언트 연결 지원은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].NET Data Provider에서 제공합니다. 자세한 내용은 [데이터베이스 미러링 세션에 클라이언트 연결&#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>주 트랜잭션 로그에서 세션을 일시 중지할 경우의 영향  
@@ -229,11 +228,11 @@ ms.locfileid: "62807930"
   
 -   [전체 텍스트 카탈로그](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [복제](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>섹션 항목  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> 섹션 내용  
  [데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  데이터베이스 미러링을 설정하기 위한 사전 요구 사항과 권장 사항에 대해 설명합니다.  
   
@@ -276,7 +275,7 @@ ms.locfileid: "62807930"
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
- **Transact-sql 사용**  
+ **Transact-SQL 사용**  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 엔드포인트에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   

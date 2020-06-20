@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 987ac05f-57c0-49a9-9903-9889717aae4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd26a49b87615114b36c3fe57c7c6b50fbdbe7b0
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 5c61cb1660290e356e7dfc59434a4a9985356b48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934555"
 ---
 # <a name="continue-with-restore"></a>복원 계속
   **복원 계속** 대화 상자를 사용하여 다음 백업 세트를 복원할지 여부를 나타낼 수 있습니다. 예를 들어 테이프를 바꾸기 위해 복원 작업을 지연하려면 계속할 준비가 될 때까지 기다렸다가 **확인**을 클릭합니다.  

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b0345303-6e9a-4078-8148-6e1bce207b8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108a9b981debc95e182b16847c39a03d4b242088
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012213"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 애플리케이션을 수정합니다.
-  sysperfinfo cntr_value 열 `bigint` 에 대 한 값을 반환 합니다.  
+  sysperfinfo `bigint` cntr_value 열에 대 한 값을 반환 합니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

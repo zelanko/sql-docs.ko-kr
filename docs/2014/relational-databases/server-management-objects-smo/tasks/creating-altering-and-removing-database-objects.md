@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dd0c0175a23f809fc925c5104ac15ac408805b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188628"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996932"
 ---
 # <a name="working-with-database-objects"></a>데이터베이스 개체 작업
   SMO 개체를 만드는 단계는 다음과 같습니다.  

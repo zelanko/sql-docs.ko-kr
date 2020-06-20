@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaa81c35dc13c60a06196d1c61ab4dce9106f9b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b376167d65515acbbaf52d5ecdcc18db2b2aaa8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066300"
 ---
 # <a name="copy-items-in-a-solution"></a>솔루션에서 항목 복사
   솔루션 탐색기나 Windows 탐색기를 사용하여 항목을 복사할 수 있습니다.  

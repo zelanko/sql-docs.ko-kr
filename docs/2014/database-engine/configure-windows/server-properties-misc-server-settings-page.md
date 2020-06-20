@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d726e1e79b1a3e24aea074c0821e1f8773b233c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef24f7e2a02140e776cf113089ec083d06a86aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934909"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>서버 속성(기타 서버 설정 페이지)
   이 페이지를 사용하여 서버 설정을 확인하거나 수정할 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927574"
 ---
 # <a name="view-a-list-of-modified-files"></a>수정된 파일의 목록 보기
   **보류 중인 체크 인** 창을 사용 하 여 현재 솔루션의 체크 아웃 된 파일 목록을 항상 표시 하 고 한 번의 단추 클릭으로 이러한 파일을 체크 인할 수 있습니다.  
@@ -30,15 +29,15 @@ ms.locfileid: "62773434"
   
 1.  **보기** 메뉴에서 **보류 중인 체크 인**을 클릭 합니다.  
   
-2.  선택한 파일을 체크 인하려면 **체크**인을 클릭 합니다. 또는 작업을 마치면 파일을 체크 인할 수 있도록 **보류 중인 체크 인** 창을 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 환경의 오른쪽에 도킹할 수 있습니다.  
+2.  선택한 파일을 체크 인하려면 **체크**인을 클릭 합니다. 또는 작업을 마치면 파일을 체크 인할 수 있도록 **보류 중인 체크 인** 창을 환경의 오른쪽에 도킹할 수 있습니다 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-     **체크 인**  
+     **체크인**  
      솔루션을 체크 인합니다.  
   
      **설명**  
      일반 텍스트 설명을 보류 중인 체크 인에 연결합니다. 만들어진 설명은 각 버전의 프로젝트와 연결되며 원본 제어 데이터베이스에 저장됩니다.  
   
-     **옵션**  
+     **Options**  
      **체크 인** 단추를 클릭할 때 원본 제어에서 수행 해야 하는 동작을 지정 합니다.  
   
     -   **모든 체크 아웃 유지**  

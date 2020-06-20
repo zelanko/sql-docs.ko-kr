@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f15e1e55f0646f2cd42fe5a7154a606684961af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842402"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928434"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 시스템 보기, 저장 프로시저, DMV 및 대기 형식
   이 항목은 메모리 내 OLTP를 지원하는 많은 데이터베이스 개체에 대한 간략한 설명과 링크를 제공합니다.  
   
 ### <a name="system-views"></a>시스템 뷰  
   
-|시스템 뷰|설명|메모리 내 OLTP 기능|  
+|시스템 뷰|Description|메모리 내 OLTP 기능|  
 |-----------------|-----------------|-----------------------------|  
 |[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|파일 그룹에 메모리 최적화 데이터가 있는지 확인 합니다.|다음 열에는 **형식** 및 **type_desc**추가 값이 표시 됩니다.|  
 |[sys.indexes&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|인덱스가 메모리 최적화 테이블에 있는지 확인합니다.|다음 열에는 **형식** 및 **type_desc**추가 값이 표시 됩니다.|  
@@ -35,14 +34,14 @@ ms.locfileid: "62842402"
   
 ### <a name="metadata-functions"></a>메타데이터 함수  
   
-|메타 데이터 함수|설명|메모리 내 OLTP 기능|  
+|메타 데이터 함수|Description|메모리 내 OLTP 기능|  
 |-----------------------|-----------------|-----------------------------|  
 |[OBJECTPROPERTYEX&#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|데이터베이스 개체가 메모리 최적화되었는지 확인합니다.|**ExecIsWithNativeCompilation** 및 **Tableismemoryoptimized** 된 속성입니다.<br /><br /> **Isschemabound** 속성은 프로시저 개체 유형을 지원 합니다. NULL 대신 프로시저의 경우 0을 반환 합니다.|  
 |[SERVERPROPERTY&#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|서버에서 메모리 내 OLTP를 지원하는지 확인합니다.|**Isxtpsupported** 속성입니다.|  
   
 ### <a name="system-stored-procedures"></a>시스템 저장 프로시저  
   
-|저장 프로시저|설명|  
+|저장 프로시저|Description|  
 |----------------------|-----------------|  
 |[sys.sp_xtp_bind_db_resource_pool&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|메모리 내 OLTP 데이터베이스를 리소스 풀로 바인딩합니다.|  
 |[sp_xtp_checkpoint_force_garbage_collection &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|메모리 내 OLTP 데이터베이스에서 가비지 수집을 시작합니다.|  

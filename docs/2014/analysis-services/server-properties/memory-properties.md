@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1ffd3bd5a41b141e81fcb37b064e5cc4f35f84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940644"
 ---
 # <a name="memory-properties"></a>메모리 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 다음 표에 나열된 서버 메모리 속성을 사용할 수 있습니다. 이 속성 설정에 대한 지침을 보려면 [SQL Server 2008 R2 Analysis Services 작업 가이드](https://go.microsoft.com/fwlink/?LinkID=225539)를 참조하세요.  

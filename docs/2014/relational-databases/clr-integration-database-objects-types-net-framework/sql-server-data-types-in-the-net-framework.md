@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe0ed680e7050c58738301256575e4138f21276f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970813"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework의 SQL Server 데이터 형식
   `SqlTypes` 라이브러리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 기본 클래스 라이브러리의 일부로, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터 형식과 의미 체계 및 전체 자릿수가 동일한 데이터 형식을 제공하도록 디자인되었습니다. 이 항목에서는 .NET Framework 프로그래머를 대상으로 새로운 의미 체계에 대해 설명하고 `System.Data.SqlTypes` 라이브러리에 포함된 `System.Data` 네임스페이스에서 구현하는 형식을 소개합니다.  

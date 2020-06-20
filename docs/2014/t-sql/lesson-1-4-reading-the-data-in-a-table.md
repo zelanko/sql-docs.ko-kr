@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 532232c9-3d41-45cd-9150-de67a1cbfcf5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bdaaeeddf8f35792c536624abfe6ff11b2dbd2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68187295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011712"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>테이블의 데이터 읽기(자습서)
   SELECT 문을 사용하여 테이블의 데이터를 읽을 수 있습니다. SELECT 문은 가장 중요한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 중 하나이며 구문은 다양하게 변형되어 사용됩니다. 이 자습서에서는 5개의 간단한 버전을 사용합니다.  
@@ -80,7 +79,7 @@ ms.locfileid: "68187295"
   
 |||  
 |-|-|  
-|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Transact-sql&#41;&#40;날짜 및 시간 데이터 형식 및 함수](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
 |[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  

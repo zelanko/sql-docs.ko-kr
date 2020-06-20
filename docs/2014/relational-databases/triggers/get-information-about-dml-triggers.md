@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014530"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML 트리거에 대한 정보 가져오기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 DML 트리거에 대한 정보를 얻는 방법에 대해 설명합니다. 이 정보에는 테이블에 있는 트리거의 유형, 이름, 소유자 및 작성 또는 수정 날짜가 포함될 수 있습니다. 트리거를 만들었을 때 암호화하지 않은 경우 트리거의 정의를 얻을 수 있습니다. 이 정의를 사용하여 테이블에 정의된 트리거가 해당 테이블에 어떠한 영향을 주는지를 이해할 수 있습니다. 또한 특정 트리거가 사용하는 개체를 찾을 수 있습니다. 이 정보를 사용하면 데이터베이스에서 변경되거나 삭제될 때 트리거에 영향을 주는 개체를 식별할 수 있습니다.  
@@ -71,9 +70,9 @@ ms.locfileid: "62698736"
   
 3.  **트리거**를 확장하고 원하는 트리거를 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
-4.  **개체 종속성** 창에서 DML 트리거에 종속되는 개체를 보려면 **\<DML 트리거 이름>에 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다.  
+4.  **개체 종속성** 창에서 DML 트리거에 종속 되는 개체를 보려면 **에 \<DML trigger name> 종속 된 개체 **를 선택 합니다. 개체가 **종속성** 영역에 나타납니다.  
   
-     DML이 종속되는 개체를 보려면 **\<DML 트리거 이름>이(가) 종속된 개체**를 선택합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
+     DML이 종속 된 개체를 보려면가 ** \<DML trigger name> 종속 된 개체**를 선택 합니다. 개체가 **종속성** 영역에 나타납니다. 각 노드를 확장하여 모든 개체를 표시합니다.  
   
 5.  **종속성** 영역에 나타나는 개체에 대한 정보를 얻으려면 개체를 클릭합니다. **선택한 개체** 필드에서 **이름**, **유형**및 **종속성 유형** 상자에 정보가 제공됩니다.  
   

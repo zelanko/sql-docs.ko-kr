@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 451b79659ff0909baf7d373dcca37ae509a94079
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc2e24304679a7648f18148eb45f33b9bf719a9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015460"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>SQLXML 4.0에서 DiffGram을 사용하여 데이터 수정
   DiffGram 형식은 .NET Framework의 **데이터 집합** 구성 요소에 도입 됩니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . .NET Framework 내에서 DiffGram을 만들고 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에 있는 데이터를 수정할 수 있습니다.  

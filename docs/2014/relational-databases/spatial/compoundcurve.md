@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015997"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   `CompoundCurve`는 geometry 또는 geography 유형의 연속적인 `CircularString` 또는 `LineString` 인스턴스가 하나 이상 포함된 컬렉션입니다.
 
 > [!IMPORTANT]
->  `CompoundCurve` 하위 유형을 포함 하 여이 릴리스의 새로운 공간 기능에 대 한 자세한 설명 및 예를 보려면 [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.
+>  하위 유형을 포함 하 여이 릴리스의 새로운 공간 기능에 대 한 자세한 설명 및 예를 보려면 `CompoundCurve` [SQL Server 2012의 새로운 공간 기능](https://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드 하세요.
 
  빈 `CompoundCurve` 인스턴스를 인스턴스화할 수 있지만 `CompoundCurve`가 유효한 인스턴스가 되려면 다음 조건을 충족해야 합니다.
 
@@ -29,7 +28,7 @@ ms.locfileid: "78176683"
 
 2.  `CircularString` 또는 `LineString` 인스턴스의 시퀀스는 연속적이어야 합니다.
 
- 에 `CompoundCurve` 여러 `CircularString` 및 `LineString` 인스턴스의 시퀀스가 포함 된 경우 마지막 인스턴스를 제외한 모든 인스턴스의 종료 끝점은 시퀀스에서 다음 인스턴스의 시작 끝점 이어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. `CircularString`의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. `CompoundCurve` 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.
+ 에 `CompoundCurve` 여러 및 인스턴스의 시퀀스가 포함 된 `CircularString` 경우 `LineString` 마지막 인스턴스를 제외한 모든 인스턴스의 종료 끝점은 시퀀스에서 다음 인스턴스의 시작 끝점 이어야 합니다. 즉, 시퀀스에서 이전 인스턴스의 끝 점이 (4 3 7 2)인 경우 시퀀스에서 다음 인스턴스의 시작 점은 (4 3 7 2)여야 합니다. 점의 Z(높이) 및 M(측정값) 값도 동일해야 합니다. 두 점이 다른 경우 `System.FormatException` 이 발생합니다. `CircularString`의 점은 Z 또는 M 값을 가지고 있지 않아도 됩니다. 이전 인스턴스의 종료 점에 대해 Z 또는 M 값이 지정되지 않은 경우 다음 인스턴스의 시작 점은 Z 또는 M 값을 포함할 수 없습니다. 이전 시퀀스의 종료 점이 (4 3)이면 다음 시퀀스의 시작 점은 (4 3)이어야 하지 (4 3 7 2)일 수는 없습니다. `CompoundCurve` 인스턴스의 모든 점은 Z 값을 가지고 있지 않거나 같은 Z 값을 가지고 있어야 합니다.
 
 ## <a name="compoundcurve-instances"></a>CompoundCurve 인스턴스
  다음 그림에서는 유효한 `CompoundCurve` 형식을 보여 줍니다.
@@ -79,7 +78,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- `CircularString` 인스턴스가 유효하므로 `@g3`은 유효합니다. `CircularString` 인스턴스의 유효성에 대 한 자세한 내용은 [CircularString](circularstring.md)를 참조 하세요.
+ `CircularString` 인스턴스가 유효하므로 `@g3`은 유효합니다. 인스턴스의 유효성에 대 한 자세한 내용은 `CircularString` [CircularString](circularstring.md)를 참조 하세요.
 
  다음 예에서는 유효하지 않은 `CompoundCurve` 인스턴스를 보여 줍니다.
 
@@ -90,9 +89,9 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` 은 잘못되었습니다. `LineString` 인스턴스가 잘못되었기 때문에 `@g2`은 잘못되었습니다. `CircularString` 인스턴스가 잘못되었기 때문에 `@g3`은 잘못되었습니다. 유효한 `CircularString` 및 `LineString` 인스턴스에 대 한 자세한 내용은 [CircularString](circularstring.md) 및 [LineString](linestring.md)를 참조 하세요.
+ `@g1` 은 잘못되었습니다. `LineString` 인스턴스가 잘못되었기 때문에 `@g2`은 잘못되었습니다. `CircularString` 인스턴스가 잘못되었기 때문에 `@g3`은 잘못되었습니다. 유효한 및 인스턴스에 대 한 자세한 내용은 `CircularString` `LineString` [CircularString](circularstring.md) 및 [LineString](linestring.md)를 참조 하세요.
 
-## <a name="examples"></a>예
+## <a name="examples"></a>예제
 
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. 빈 CompooundCurve를 사용하여 기하 도형 인스턴스 인스턴스화
  다음 예에서는 빈 `CompoundCurve` 인스턴스를 만드는 방법을 보여 줍니다.

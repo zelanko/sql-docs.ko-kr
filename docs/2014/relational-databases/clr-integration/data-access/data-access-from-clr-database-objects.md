@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970650"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR 데이터베이스 개체에서 데이터 액세스
-  CLR (공용 언어 런타임) 루틴은 실행 되는 인스턴스에 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] 저장 된 데이터 뿐만 아니라 원격 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다. 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. 관리 되는 클라이언트 및 중간 계층 응용 프로그램의 데이터에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET Framework Data Provider를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스 합니다. 따라서 클라이언트 및 중간 계층 애플리케이션에서 ADO.NET 및 `SqlClient`에 대한 지식을 활용할 수 있습니다.  
+  CLR (공용 언어 런타임) 루틴은 실행 되는 인스턴스에 저장 된 데이터 뿐만 아니라 원격 인스턴스에 저장 된 데이터에 쉽게 액세스할 수 있습니다 [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] . 루틴을 사용하여 액세스할 수 있는 특정 데이터는 해당 코드가 실행 중인 사용자 컨텍스트에 의해 결정됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]관리 되는 클라이언트 및 중간 계층 응용 프로그램의 데이터에 대 한 .NET Framework Data Provider를 사용 하 여 CLR 데이터베이스 개체 내에서 데이터에 액세스 합니다. 따라서 클라이언트 및 중간 계층 애플리케이션에서 ADO.NET 및 `SqlClient`에 대한 지식을 활용할 수 있습니다.  
   
 > [!NOTE]  
 >  기본적으로 사용자 정의 형식 메서드 및 사용자 정의 함수를 사용하여 데이터 액세스를 수행할 수는 없습니다. UDT(사용자 정의 형식) 메서드 또는 사용자 정의 함수를 사용하여 읽기 전용 데이터에 액세스하려면 `DataAccess` 또는 `SqlMethodAttribute`의 `SqlFunctionAttribute` 속성을 `DataAccessKind.Read`로 설정해야 합니다. 데이터 수정 작업은 UDT 또는 사용자 정의 함수를 통해 수행할 수 없으며 이를 시도할 경우 실행 시에 예외가 throw됩니다.  

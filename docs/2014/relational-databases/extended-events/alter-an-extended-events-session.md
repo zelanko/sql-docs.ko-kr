@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66108d50898610949cb5cab7fb3bdd2dcc726801
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14be41e48262bc7ebc8aeeaf55185f5e35d0c72e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050926"
 ---
 # <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
   확장 이벤트 세션을 만든 후 **SQL Server 확장 이벤트 마법사**를 사용하여 필요한 대로 변경할 수 있습니다.  

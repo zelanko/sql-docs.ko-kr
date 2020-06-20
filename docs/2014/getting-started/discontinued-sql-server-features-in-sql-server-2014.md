@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf9e3f3e7bf2d170faf0eaab2be18098a24b52cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d8b1b10e2da693bb2cd5c66bf44eda248b05037
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706976"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927116"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 SQL Server 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 더 이상 사용할 수 없는 기능에 대해 설명합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "82706976"
 ### <a name="discontinued-active-directory-helper-service"></a>지원되지 않는 Active Directory Helper 서비스  
  Active Directory Helper 서비스 및 관련 구성 요소가 제거되었습니다. 다음 표에서는 이와 관련하여 제거된 구성 요소를 보여 줍니다.  
   
-|범주|지원되지 않는 기능|대체 기능|  
+|Category|지원되지 않는 기능|대체 기능|  
 |--------------|--------------------------|-----------------|  
 |시스템 저장 프로시저|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|사용 가능한 대체 항목 없음|  
   

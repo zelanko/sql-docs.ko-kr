@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a37f7b086f33719d7e55826ff40f2202093119a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004604"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>SQL Server 복제 구독 속성 
 이 섹션에서는 **구독 속성** 대화 상자에 대 한 정보를 제공 합니다. 

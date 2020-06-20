@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036716"
 ---
 # <a name="server-configuration---service-accounts"></a>서버 구성 - 서비스 계정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 페이지에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 로그인 계정을 할당할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다.  
   
-시작 및 실행 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 사용 되는 시작 계정은 도메인 사용자 계정, 로컬 사용자 계정, 관리 서비스 계정, 가상 계정 또는 기본 제공 시스템 계정일 수 있습니다.  
+시작 및 실행에 사용 되는 시작 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 사용자 계정, 로컬 사용자 계정, 관리 서비스 계정, 가상 계정 또는 기본 제공 시스템 계정일 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 동일한 로그인 계정을 할당하거나 각 서비스 계정을 따로 구성할 수 있습니다. 서비스 시작 유형을 자동 또는 수동으로 지정하거나 서비스의 해제 여부도 지정할 수 있습니다. 대부분의 설치에 기본 계정을 사용하는 것이 좋습니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "76921136"
   
  도메인 계정을 사용하도록 서비스를 구성한 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 은 서비스 계정을 개별적으로 구성하여 각 서비스에 대해 최소한의 권한을 제공하도록 권장합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에는 태스크를 완료하는 데 필요한 최소한의 권한만 부여됩니다. 계정 유형 설명을 포함하여 자세한 내용은 [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하십시오.  
   
- **개별적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 서비스 계정 구성 (권장)**  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]개별적으로 서비스 계정 구성 (권장)**  
  표를 사용하여 로그온 사용자 이름과 암호를 개별 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 제공하고 서비스 시작 유형을 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에는 기본 제공 시스템 계정, 로컬 계정, 로컬 그룹, 도메인 그룹 또는 도메인 사용자 계정을 사용할 수 있습니다.  
   
  다음 서비스를 선택하여 해당 설정을 사용자 지정할 수 있습니다.  

@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058711"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server 에이전트 속성(일반 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 일반 속성을 확인 하 고 수정할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 서비스의 일반 속성을 확인 하 고 수정할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **서비스 상태**  
@@ -32,7 +31,7 @@ ms.locfileid: "63245777"
  **SQL Server 에이전트가 갑자기 작동을 멈추면 자동으로 다시 시작**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 갑자기 중지되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 다시 시작합니다.  
   
- **이름도**  
+ **파일 이름**  
  오류 로그 파일의 이름을 지정합니다.  
   
  **...**  

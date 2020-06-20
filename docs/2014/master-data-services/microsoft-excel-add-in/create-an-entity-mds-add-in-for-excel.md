@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ad6b25d347de4c832097c05f27854bacbebaf6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961313"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>엔터티 만들기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 새 엔터티를 만들어 데이터를 저장할 수 있습니다. 엔터티를 만들 때 엔터티에 저장할 데이터의 샘플을 로드해야 합니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "65478940"
   
 10. **코드** 목록에서 고유 식별자가 포함된 열을 선택하거나 코드가 자동으로 생성되도록 둡니다.  
   
-11. 선택 사항입니다. **이름** 목록에서 각 멤버의 이름이 포함된 열을 선택합니다.  
+11. (선택 사항) **이름** 목록에서 각 멤버의 이름이 포함된 열을 선택합니다.  
   
 12. **확인**을 클릭합니다. 엔터티가 만들어지면 새 머리글 행이 표시되고 셀이 강조 표시되며 엔터티 이름과 일치하도록 시트 이름이 업데이트됩니다.  
   

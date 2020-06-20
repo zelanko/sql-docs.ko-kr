@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
-ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
+ms.openlocfilehash: 6aab8f1203c34ab65b394ee2355b340f17ba8198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "83868350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050878"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "83868350"
 
  위 그림을 보면 이벤트 세션에 대해 다른 DDL 명령이 실행됨에 따라 세션 상태가 바뀜을 알 수 있습니다. 다음 표에서는 이러한 상태 변경을 설명합니다.  
   
-|그림 레이블|DDL 문|설명|  
+|그림 레이블|DDL 문|Description|  
 |------------------------|-------------------|-----------------|  
 |만들기|CREATE EVENT SESSION|호스트 프로세스는 CREATE EVENT SESSION 문에서 제공된 메타데이터가 포함된 세션 개체를 만듭니다. 호스트 프로세스는 세션 정의 및 사용자 권한 수준을 검사하고 master 데이터베이스에 메타데이터를 저장합니다. 이 시점에서 세션은 활성 상태가 아닙니다.|  
 |변경|ALTER EVENT SESSION, STATE=START|호스트 프로세스가 세션을 시작합니다. 호스트 프로세스는 저장된 메타데이터를 읽고 세션 정의를 검사하며 사용자 권한 수준을 확인하고 세션을 만듭니다. 이벤트 및 대상과 같은 세션 개체가 로드되며 이벤트 처리는 활성 상태입니다.|  
