@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637692"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933229"
 ---
 # <a name="unused-assembly-cleanup"></a>사용하지 않는 어셈블리 정리
   `AssemblyCleanup` 예제에는 메타데이터 카탈로그를 쿼리하여 현재 데이터베이스에서 사용되지 않는 어셈블리를 정리하는 .NET 저장 프로시저가 포함되어 있습니다. 유일한 매개 변수인 `visible_assemblies`는 사용되지 않으면서 표시되는 어셈블리를 삭제할지 여부를 지정하는 데 사용됩니다. 값 'false'는 기본적으로 사용되지 않으면서 표시되지 않는 어셈블리만 삭제함을 나타냅니다. 다른 값은 사용되지 않는 모든 어셈블리를 삭제합니다. 사용되지 않는 어셈블리 집합은 진입점이 정의되어 있지 않으며(루틴/유형 및 집계) 해당 어셈블리를 직접 또는 간접적으로 참조하는 사용되는 어셈블리가 없는 어셈블리입니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637692"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

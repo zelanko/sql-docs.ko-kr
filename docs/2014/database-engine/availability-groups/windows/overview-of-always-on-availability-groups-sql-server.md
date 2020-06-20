@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c13b66a5ffe594589c325bc7d8001451161f054
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed55a83d0458687a887f70dd5eb4c3acb915c910
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175502"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936714"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹 개요(SQL Server)
   이 항목에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 하나 이상의 가용성 그룹을 구성하고 관리하는 데 중심이 되는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]개념을 소개합니다. 가용성 그룹에서 제공하는 이점의 요약과 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 용어의 개요는 [AlwaysOn 가용성 그룹&#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)을 참조하세요.
@@ -68,7 +67,7 @@ ms.locfileid: "78175502"
 >  장애 조치(Failover) 도중과 같이 가용성 복제본의 역할이 불확실할 때 데이터베이스는 일시적으로 NOT SYNCHRONIZING 상태에 있습니다. 가용성 복제본의 역할이 확인될 때까지 데이터베이스의 역할은 RESOLVING으로 설정됩니다. 가용성 복제본이 주 역할로 확인되면 해당 데이터베이스는 주 데이터베이스가 됩니다. 가용성 복제본이 보조 역할로 확인되면 해당 데이터베이스는 보조 데이터베이스가 됩니다.
 
 ##  <a name="availability-modes"></a><a name="AvailabilityModes"></a>가용성 모드
- 가용성 모드는 각 가용성 복제본의 속성입니다. 가용성 모드는 지정된 보조 복제본이 트랜잭션 로그 레코드를 디스크에 쓸 때까지(로그 확정) 주 복제본이 데이터베이스에서 트랜잭션을 커밋하기 위해 기다리는지 여부를 결정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]는*비동기-커밋 모드* 및 *동기-커밋 모드*의 두 가지 가용성 모드를 지원 합니다.
+ 가용성 모드는 각 가용성 복제본의 속성입니다. 가용성 모드는 지정된 보조 복제본이 트랜잭션 로그 레코드를 디스크에 쓸 때까지(로그 확정) 주 복제본이 데이터베이스에서 트랜잭션을 커밋하기 위해 기다리는지 여부를 결정합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]는 *비동기-커밋 모드* 및 *동기-커밋 모드*라는 두 가지 가용성 모드를 지원합니다.
 
 -   **Asynchronous-commit mode**
 
@@ -87,7 +86,7 @@ ms.locfileid: "78175502"
 
 -   동기-커밋 모드는 대상 보조 복제본이 현재 avt1와 동기화 되어 있는 경우 장애 조치 (failover)*계획 수동 장애* 조치 및 *자동 장애*조치 (failover)의 두 가지 형태를 지원 합니다. 이러한 형태의 장애 조치(Failover)에 대한 지원은 장애 조치(Failover) 파트너에서 *장애 조치(Failover) 모드 속성* 의 설정에 따라 다릅니다. 주 복제본 또는 보조 복제본에서 장애 조치(Failover) 모드가 "수동"으로 설정된 경우 해당 보조 복제본에 대해 수동 장애 조치(Failover)만 지원됩니다. 주 복제본과 보조 복제본에서 모두 장애 조치(Failover) 모드가 "자동"으로 설정된 경우 해당 보조 복제본에서는 자동 및 수동 장애 조치(Failover)가 모두 지원됩니다.
 
-    -   **계획 된 수동 장애 조치** (데이터 손실 없음)
+    -   **계획된 수동 장애 조치(Failover)** (데이터가 손실되지 않음)
 
          수동 장애 조치(Failover)는 데이터베이스 관리자가 장애 조치(Failover) 명령을 실행한 후에 수행되며 결과적으로 동기화된 보조 복제본이 주 역할(데이터 보호 보장)로 전환되고 주 복제본이 보조 역할로 전환됩니다. 수동 장애 조치(Failover)를 수행하려면 주 복제본과 대상 보조 복제본이 모두 동기-커밋 모드에서 실행 중이어야 하며 보조 복제본은 항상 동기화되어야 합니다.
 
@@ -105,7 +104,7 @@ ms.locfileid: "78175502"
 
  자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.
 
-##  <a name="client-connections"></a><a name="ClientConnections"></a>클라이언트 연결
+##  <a name="client-connections"></a><a name="ClientConnections"></a> 클라이언트 연결
  가용성 그룹 수신기를 만들어 지정된 가용성 그룹의 주 복제본에 대한 클라이언트 연결을 제공할 수 있습니다. *가용성 그룹 수신기* 는 지정된 가용성 그룹에 연결된 리소스 집합을 해당 가용성 복제본에 대한 직접 클라이언트 연결에 제공합니다.
 
  가용성 그룹 수신기는 VNN(가상 네트워크 이름) 역할을 하는 고유의 DNS 이름, 하나 이상의 VIP(가상 IP 주소) 및 TCP 포트 번호와 연결됩니다. 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)를 참조하세요.
@@ -129,7 +128,7 @@ ms.locfileid: "78175502"
 ##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a>세션 제한 시간
  세션 제한 시간은 다른 가용성 복제본과의 연결이 얼마 동안 비활성으로 유지되면 연결이 종료되는지를 결정하는 가용성 복제본 속성입니다. 주 복제본과 보조 복제본은 활성 상태임을 알리기 위해 서로 ping합니다. 제한 시간 내에 다른 복제본으로부터 ping을 받으면 연결이 아직 열려 있고 서버 인스턴스가 통신하고 있음을 나타냅니다. ping을 받으면 가용성 복제본은 해당 연결에서의 세션 제한 시간 카운터를 다시 설정합니다.
 
- 세션 제한 시간은 각 복제본이 다른 복제본으로부터 ping을 받기 위해 무기한 대기하는 것을 방지합니다. 세션 제한 시간 내에 다른 복제본 으로부터 ping을 받지 못하면 복제본의 시간이 초과 됩니다. 해당 연결이 닫히고 시간 초과 된 복제본이 연결이 끊어진 상태로 전환 됩니다. 연결이 끊어진 복제본이 동기 커밋 모드로 구성되어 있더라도 트랜잭션에서는 해당 복제본이 다시 연결되어 다시 동기화될 때까지 대기하지 않습니다.
+ 세션 제한 시간은 각 복제본이 다른 복제본으로부터 ping을 받기 위해 무기한 대기하는 것을 방지합니다. 세션 제한 시간 내 다른 복제본으로부터 ping을 받지 못하면 이 복제본은 시간 초과됩니다. 그러면 연결이 닫히고 시간 초과된 복제본은 DISCONNECTED 상태로 됩니다. 연결이 끊어진 복제본이 동기 커밋 모드로 구성되어 있더라도 트랜잭션에서는 해당 복제본이 다시 연결되어 다시 동기화될 때까지 대기하지 않습니다.
 
  각 가용성 복제본의 기본 세션 제한 시간은 10초입니다. 이 값은 사용자가 구성할 수 있으며 최소값은 5초입니다. 일반적으로 제한 시간을 10초 이상으로 유지하는 것이 좋습니다. 10초 미만의 값을 설정하면 로드가 많은 시스템에서 잘못된 실패를 선언할 수 있습니다.
 
@@ -155,7 +154,7 @@ ms.locfileid: "78175502"
 
      [CSS SQL Server 엔지니어 블로그](https://blogs.msdn.com/b/psssql/)
 
--   **비디오**
+-   **비디오:**
 
      [Microsoft SQL Server 코드 이름 "Denali" AlwaysOn 시리즈, 1부: 차세대 고가용성 솔루션 소개](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be74494f3cf06732ff49bcfd7c268df723fd957b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937602"
 ---
 # <a name="grant-dqs-roles-to-users"></a>사용자에게 DQS 역할 부여
   이 항목에서는 Windows 보안 주체를 기반으로 SQL 로그인을 만들고 사용자에게 DQS_MAIN 데이터베이스에 대한 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 역할을 부여하는 방법에 대해 설명합니다.  

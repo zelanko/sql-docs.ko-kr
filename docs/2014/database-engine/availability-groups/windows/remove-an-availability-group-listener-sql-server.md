@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 057b9c137cb4d8bbbdd03be61df600f7e59b264c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782861"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936575"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>가용성 그룹 수신기 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 PowerShell을 사용하여 AlwaysOn 가용성 그룹에서 가용성 그룹 수신기를 제거하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전 주의 사항:**  
   
-     [전제 조건](#Prerequisites)  
+     [필수 구성 요소](#Prerequisites)  
   
      [권장 사항](#Recommendations)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "72782861"
   
 2.  다음과 같은 [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 문을 사용합니다.  
   
-     ALTER AVAILABILITY GROUP *GROUP_NAME* LISTENER **'*`dns_name`*'** 제거  
+     ALTER AVAILABILITY GROUP *GROUP_NAME* LISTENER **' *`dns_name`* '** 제거  
   
      여기서 *group_name* 은 가용성 그룹의 이름이고, *dns_name* 은 가용성 그룹 수신기의 DNS 이름입니다.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "72782861"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> 관련 작업  
   
--   [SQL Server&#41;&#40;가용성 그룹 수신기 만들기 또는 구성](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [가용성 그룹 수신기 속성 보기&#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   

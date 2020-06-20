@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964133"
 ---
 # <a name="schema-restrictions-dialog-box"></a>스키마 제한 대화 상자
   **스키마 제한** 대화 상자를 사용하여 Foreach ADO.NET 스키마 행 집합 열거자에 적용할 스키마 제한을 설정할 수 있습니다.  

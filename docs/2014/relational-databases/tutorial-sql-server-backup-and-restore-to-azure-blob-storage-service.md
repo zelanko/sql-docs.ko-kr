@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176118"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002494"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>자습서: Azure Blob Storage Service로 SQL Server 백업 및 복원
   Azure Blob Storage 서비스를 사용 하 여 SQL Server 백업 및 복원 자습서를 시작 합니다. 이 자습서는 Azure Blob Storage 서비스에서 백업을 작성하고 복원하는 방법을 이해하도록 도와줍니다.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176118"
 ## <a name="what-you-will-learn"></a>학습 내용  
  이 자습서에서는 Windows 스토리지 계정과 blob 컨테이너를 만들어서 스토리지 계정에 액세스할 자격 증명을 만들고 Blob 서비스에 백업을 작성하며 간단한 복원을 수행할 수 있는 방법을 보여 줍니다. 이 자습서는 다음 네 단원으로 이루어져 있습니다.  
   
- [1단원: Azure Storage 개체 만들기](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [1 단원: Azure Storage 개체 만들기](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  이 단원에서는 Azure 스토리지 계정 및 blob 컨테이너를 만듭니다.  
   
  [2단원: SQL Server 자격 증명 만들기](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -51,6 +50,6 @@ ms.locfileid: "70176118"
   
 1.  [Azure Blob Storage Service로 SQL Server 백업 및 복원](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [URL에 SQL Server 백업 모범 사례 및 문제 해결](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

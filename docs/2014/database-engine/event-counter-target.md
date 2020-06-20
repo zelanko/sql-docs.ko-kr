@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f540f39176ec638cdc9236b315e306ecebfdcb1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064916"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933074"
 ---
 # <a name="event-counter-target"></a>이벤트 카운터 대상
   이벤트 카운터 대상은 확장 이벤트 세션 동안 발생하는 모든 이벤트를 계산합니다. 이벤트 카운터 대상을 사용하면 전체 이벤트 컬렉션의 오버헤드를 추가하지 않고도 작업 특성에 대한 정보를 얻을 수 있습니다. 이 대상에는 사용자 지정할 수 있는 매개 변수가 없습니다.  

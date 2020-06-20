@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3b5d76c06096dd2dab13bd6dcf7ff59fbd612302
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22ee1b502487ac191cf5e39c5908a1e44dee969c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972313"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>컬렉션에 멤버 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 컬렉션에 리프 멤버 및 통합 멤버를 추가할 수 있습니다.  

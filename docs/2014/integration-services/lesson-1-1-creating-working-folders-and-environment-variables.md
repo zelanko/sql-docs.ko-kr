@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965364"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>1단계: 작업 폴더 및 환경 변수 만들기
   이 태스크에서는 이후의 자습서 태스크에서 사용할 작업 폴더(C:\DeploymentTutorial)와 새 시스템 환경 변수(`DataTransfer` 및 `LoadXMLData`)를 만듭니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "62767659"
   
 3.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음 **폴더**를 클릭합니다.  
   
-4.  새 폴더의 이름을 `DeploymentTutorial`로 바꿉니다.  
+4.  새 폴더의 이름을로 바꿉니다 `DeploymentTutorial` .  
   
 ### <a name="to-create-local-environment-variables"></a>로컬 환경 변수를 만들려면  
   
@@ -52,7 +51,7 @@ ms.locfileid: "62767659"
   
 6.  **확인**을 클릭합니다.  
   
-7.  **새로 만들기** 를 다시 클릭 하 `LoadXMLData` 고 **변수 이름** 상자 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` 에를 입력 하 고 **변수 값** 상자에를 입력 합니다.  
+7.  **새로 만들기** 를 다시 클릭 하 고 `LoadXMLData` **변수 이름** 상자에를 입력 하 고 `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` **변수 값** 상자에를 입력 합니다.  
   
 8.  **확인** 을 클릭하여 **환경 변수** 대화 상자를 종료합니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62767659"
   
 6.  **확인**을 클릭합니다.  
   
-7.  **새로 만들기** 를 다시 클릭 하 `LoadXMLData` 고 **변수 이름** 상자 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` 에를 입력 하 고 **변수 값** 상자에를 입력 합니다.  
+7.  **새로 만들기** 를 다시 클릭 하 고 `LoadXMLData` **변수 이름** 상자에를 입력 하 고 `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` **변수 값** 상자에를 입력 합니다.  
   
 8.  **확인** 을 클릭하여 **환경 변수** 대화 상자를 종료합니다.  
   

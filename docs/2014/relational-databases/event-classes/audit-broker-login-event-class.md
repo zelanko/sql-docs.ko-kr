@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 200ef467f5c1fc64e4d5056cb60fc442ec998f77
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053391"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Login** 이벤트를 만들어 Service Broker 전송 보안과 관련된 감사 메시지를 보고합니다.  

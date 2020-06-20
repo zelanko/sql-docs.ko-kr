@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb374c8af950973d61ad99dc6d3ef896dcc21939
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060494"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921514"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services 서비스 구성(SSIS 서비스)
     
 > [!IMPORTANT]  
 >  이 항목에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 관리하는 Windows 서비스인 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에 대해 설명합니다. [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 는 이전 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]버전과의 호환성을 위한 서비스를 지원합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]부터는 Integration Services 서버의 패키지와 같은 개체를 관리할 수 있습니다.  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 구성 파일을 사용하여 해당 설정을 구성합니다. 기본적으로이 구성 파일의 이름은 MsDtsSrvr. .ini .xml이 고 파일 은%ProgramFiles%\Microsoft SQL Server\120\dts\binn입니다. 폴더에 있습니다.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 구성 파일을 사용하여 해당 설정을 구성합니다. 기본적으로이 구성 파일의 이름은 MsDtsSrvr.ini.xml이 고 파일 은%ProgramFiles%\Microsoft SQL Server\120\dts\binn입니다. 폴더에 있습니다.  
   
  일반적으로 이 구성 파일이나 이 구성 파일의 위치는 변경하지 않아도 되지만 패키지가 명명된 인스턴스, [!INCLUDE[ssDE](../includes/ssde-md.md)]의 원격 인스턴스 또는 여러 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 저장되는 경우에는 이 구성 파일을 수정해야 합니다. 또한 이 구성 파일을 기본 위치 이외의 다른 위치로 이동할 경우 파일 위치를 지정하는 레지스트리 키도 수정해야 합니다.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66060494"
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 개체 탐색기에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에 대해 표시할 루트 폴더는 MSDB와 파일 시스템 폴더입니다.  
   
--   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리 하는 파일 시스템의 패키지 는%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.에 있습니다.  
+-   서비스에서 관리 하는 파일 시스템의 패키지는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] %PROGRAMFILES%\MICROSOFT SQL Server\120\DTS\Packages.에 있습니다.  
   
  이 구성 파일은 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스에서 관리할 패키지가 들어 있는 msdb 데이터베이스도 지정합니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 와 동시에 설치되는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]인스턴스의 msdb 데이터베이스에 있는 패키지를 관리하도록 구성됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스가 동시에 설치되지 않는 경우 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 로컬 기본 인스턴스에 있는 msdb 데이터베이스에 저장된 패키지를 관리하도록 구성됩니다.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66060494"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>구성 파일 위치 수정  
-레지스트리 키 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** 는 서비스에서 사용 하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 파일의 위치와 이름을 지정 합니다. 레지스트리 키의 기본값은 **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**입니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로의 버전 번호 (SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]의 경우 120)는 SQL Server 버전에 따라 달라 집니다. 
+레지스트리 키 **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\ServiceConfigFile** 는 서비스에서 사용 하는 구성 파일의 위치와 이름을 지정 합니다 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . 레지스트리 키의 기본값은 **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**입니다. 이 레지스트리의 값을 업데이트하여 구성 파일의 이름과 위치를 변경할 수 있습니다. 경로의 버전 번호 (SQL Server의 경우 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] )는 SQL Server 버전에 따라 달라 집니다. 
   
   
 > [!CAUTION]  

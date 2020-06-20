@@ -32,16 +32,15 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c448d4092ff08b6682b5e9785874cfca53e2091
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0e6cc3a63f5fd542215d04cd3858d743af9d3f85
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002894"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
-  Updategram는 레코드 인스턴스가 ** \< after>** 블록에 표시 되 고 해당 ** \<>블록 앞** 에는 없는 경우 삽입 작업을 나타냅니다. 이 경우 updategram는 ** \< after>** 블록의 레코드를 데이터베이스에 삽입 합니다.  
+  Updategram는 레코드 인스턴스가 블록에 나타나지만 **\<after>** 해당 블록에는 없는 경우 삽입 작업을 나타냅니다 **\<before>** . 이 경우 updategram은 블록의 레코드를 **\<after>** 데이터베이스에 삽입 합니다.  
   
  삽입 작업에 대한 Updategram 형식은 다음과 같습니다.  
   
@@ -64,13 +63,13 @@ ms.locfileid: "82717471"
 </ROOT>  
 ```  
   
-## <a name="before-block"></a>\<> 블록 이전  
- 삽입 작업에 대해 ** \< before>** 블록을 생략할 수 있습니다. 선택적 특성을 `mapping-schema` 지정 하지 않으면 updategram에 지정 된 ** \< ElementName>** 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
+## <a name="before-block"></a>\<before>거부  
+ **\<before>** 삽입 작업에 대해 블록을 생략할 수 있습니다. 선택적 특성을 `mapping-schema` 지정 하지 않으면 **\<ElementName>** updategram에 지정 된가 데이터베이스 테이블에 매핑되고 자식 요소 또는 특성은 테이블의 열에 매핑됩니다.  
   
-## <a name="after-block"></a>\<> 블록 이후  
- ** \< After>** 블록에서 하나 이상의 레코드를 지정할 수 있습니다.  
+## <a name="after-block"></a>\<after>거부  
+ 블록에서 하나 이상의 레코드를 지정할 수 있습니다 **\<after>** .  
   
- ** \< After>** 블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 추가 된 스키마에 지정 된 기본값을 사용 합니다 (스키마가 지정 된 경우). 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적 `updg:returnid` 특성은 IDENTITY 유형 열이 있는 테이블에 레코드가 추가될 때 시스템에서 생성하는 ID 값을 반환하는 데 사용됩니다.  
+ **\<after>** 블록이 특정 열에 대 한 값을 제공 하지 않으면 updategram는 주석이 지정 된 스키마 (스키마가 지정 된 경우)에 지정 된 기본값을 사용 합니다. 스키마가 열의 기본값을 지정 하지 않는 경우 updategram는이 열에 명시적 값을 지정 하지 않고 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값 (지정 된 경우)을이 열에 할당 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기본값이 없고 열에서 NULL 값을 허용하는 경우 Updategram에서 열 값을 NULL로 설정합니다. 열에 기본값이 없고 NULL 값을 허용하지도 않는 경우 명령이 실패하고 Updategram에서 오류를 반환합니다. 선택적 `updg:returnid` 특성은 IDENTITY 유형 열이 있는 테이블에 레코드가 추가될 때 시스템에서 생성하는 ID 값을 반환하는 데 사용됩니다.  
   
 ## <a name="updgid-attribute"></a>updg:id 특성  
  Updategram에서 레코드만 삽입하는 경우에는 `updg:id` 특성이 필요하지 않습니다. 에 대 한 자세한 내용은 `updg:id` [XML Updategrams을 사용 하 여 데이터 업데이트 &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)를 참조 하세요.  
@@ -79,9 +78,9 @@ ms.locfileid: "82717471"
  Updategram은 IDENTITY 유형 열이 있는 테이블에 레코드를 삽입할 때 선택적 `updg:at-identity` 특성을 사용하여 시스템에서 할당된 값을 캡처할 수 있습니다. Updategram은 이 값을 이후 작업에 사용할 수 있습니다. Updategram을 실행할 때 `updg:returnid` 특성을 지정하여 생성된 ID 값을 반환할 수 있습니다.  
   
 ## <a name="updgguid-attribute"></a>updg:guid 특성  
- `updg:guid` 특성은 GUID(Globally Unique Identifier)를 생성하는 선택적 특성입니다. 이 값은 지정 된 전체 ** \< 동기화>** 블록의 범위 내에 유지 됩니다. ** \< Sync>** 블록의 어디에서 나이 값을 사용할 수 있습니다. 특성은 함수를 호출 `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 고유 식별자를 생성 합니다.  
+ `updg:guid` 특성은 GUID(Globally Unique Identifier)를 생성하는 선택적 특성입니다. 이 값은 지정 된 전체 블록의 범위 내에 유지 됩니다 **\<sync>** . 블록의 아무 곳에서 나이 값을 사용할 수 있습니다 **\<sync>** . 특성은 함수를 호출 `NEWGUID()` [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 여 고유 식별자를 생성 합니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예제를 사용 하 여 작업 예제를 만들려면 [SQLXML 예를 실행 하기 위한 요구 사항](../../sqlxml/requirements-for-running-sqlxml-examples.md)에 지정 된 요구 사항을 충족 해야 합니다.  
   
  Updategram 예를 사용하기 전에 다음 사항을 확인하십시오.  
@@ -157,7 +156,7 @@ ms.locfileid: "82717471"
 ```  
   
 ### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Updategram을 사용하여 여러 레코드 삽입  
- 이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram ** \<>블록 앞** 에는 옵션을 지정 하지 않습니다.  
+ 이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram는 선택적 블록을 지정 하지 않습니다 **\<before>** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -184,7 +183,7 @@ ms.locfileid: "82717471"
   
      자세한 내용은 [ADO를 사용 하 여 SQLXML 4.0 쿼리 실행](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)을 참조 하세요.  
   
- 이 예제의 또 다른 버전은 두 개의 직원을 삽입 하는 한 블록 대신 ** \<>** 블록 두 개를 사용 하는 updategram입니다. 이 작업은 유효하며 다음과 같이 인코딩할 수 있습니다.  
+ 이 예제의 또 다른 버전은 **\<after>** 두 개의 직원을 삽입 하는 한 블록 대신 별도의 두 블록을 사용 하는 updategram입니다. 이 작업은 유효하며 다음과 같이 인코딩할 수 있습니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -248,7 +247,7 @@ ms.locfileid: "82717471"
 ### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>D. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
  다음 Updategram은 두 개의 레코드를 삽입합니다. 하나는 Sales.SalesOrderHeader 테이블에 삽입하고 다른 하나는 Sales.SalesOrderDetail 테이블에 삽입합니다.  
   
- 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서 이 레코드를 테이블에 추가할 때 Updategram은 `at-identity` 특성을 사용하여 할당된 SalesOrderID 값을 "x"(자리 표시자 값)로 캡처합니다. 그런 다음 `at-identity` UpdatSalesOrderDetail> 요소에서이 변수를 SalesOrderID 특성의 값으로 지정 합니다 \< .  
+ 먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서 이 레코드를 테이블에 추가할 때 Updategram은 `at-identity` 특성을 사용하여 할당된 SalesOrderID 값을 "x"(자리 표시자 값)로 캡처합니다. 그런 다음 updategam은이 `at-identity` 변수를 요소에 있는 SalesOrderID 특성의 값으로 지정 합니다 \<Sales.SalesOrderDetail> .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -382,7 +381,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
  이 Updategram에는 XSD 스키마가 지정됩니다. 즉, Updategram 요소 및 특성의 기본 매핑이 없습니다. 스키마는 데이터베이스 테이블과 열에 필요한 요소 및 특성의 매핑을 제공합니다.  
   
- 다음 스키마 (Custorderschema.xml)는 **OrderID** 및 **EmployeeID** 특성으로 구성 된 ** \< CustOrder>** 요소를 설명 합니다. 스키마를 더 흥미롭게 만들려면 **EmployeeID** 특성에 기본값이 할당 됩니다. Updategram은 삽입 작업에 대해서만 및 Updategram에서 해당 특성을 지정하지 않는 경우에만 특성의 기본값을 사용합니다.  
+ 다음 스키마 (CustOrderSchema.xml)는 **\<CustOrder>** **OrderID** 및 **EmployeeID** 특성으로 구성 된 요소에 대해 설명 합니다. 스키마를 더 흥미롭게 만들려면 **EmployeeID** 특성에 기본값이 할당 됩니다. Updategram은 삽입 작업에 대해서만 및 Updategram에서 해당 특성을 지정하지 않는 경우에만 특성의 기본값을 사용합니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -481,7 +480,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </xsd:schema>  
 ```  
   
- XSD 스키마는 ** \< fname>** 요소에 대해 **nillable = "true"** 를 지정 합니다. 다음 Updategram은 이 스키마를 사용합니다.  
+ XSD 스키마는 요소에 대해 **nillable = "true"** 를 지정 합니다 **\<fname>** . 다음 Updategram은 이 스키마를 사용합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql"  
@@ -501,7 +500,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </ROOT>  
 ```  
   
- Updategram는 `xsi:nil` ** \< after>** 블록에서 ** \< fname>** 요소에 대해를 지정 합니다. 따라서 이 Updategram을 실행하면 테이블의 first_name 열에 대해 NULL 값이 삽입됩니다.  
+ Updategram는 `xsi:nil` 블록의 요소에 대해를 지정 합니다 **\<fname>** **\<after>** . 따라서 이 Updategram을 실행하면 테이블의 first_name 열에 대해 NULL 값이 삽입됩니다.  
   
 ##### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   
@@ -529,7 +528,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 ### <a name="h-specifying-namespaces-in-an-updategram"></a>H. Updategram에 네임스페이스 지정  
  Updategram에는 Updategram의 동일한 요소에서 선언된 네임스페이스에 속하는 요소가 있을 수 있습니다. 이 경우 해당 스키마에서도 동일한 네임스페이스를 선언해야 하며 요소가 대상 네임스페이스에 속해야 합니다.  
   
- 예를 들어 다음 updategram (Updategram-elementhavingnamespace.xml)에서 ** \< Order>** 요소는 요소에 선언 된 네임 스페이스에 속합니다.  
+ 예를 들어 다음 updategram (UpdateGram-ElementHavingNamespace.xml)에서 **\<Order>** 요소는 요소에 선언 된 네임 스페이스에 속합니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -616,7 +615,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
 -   `xml` 열에 삽입된 XML 조각의 범위에 있는 네임스페이스가 유지되고 해당 네임스페이스 선언이 삽입된 조각의 최상위 요소에 추가됩니다.  
   
- 예를 들어 다음 updategram (Sampleupdategram.xml)에서 ** \< Desc>** 요소는 샘플 데이터베이스의 Production>제품 모델 테이블에서 제품 설명 열을 업데이트 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 합니다. 이 updategram의 결과는 제품 설명 열의 XML 콘텐츠가 ** \< Desc>** 요소의 xml 내용으로 업데이트 된다는 것입니다.  
+ 예를 들어 다음 updategram (SampleUpdateGram.xml)에서 **\<Desc>** 요소는 샘플 데이터베이스의 Production>제품 모델 테이블에서 제품 설명 열을 업데이트 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 합니다. 이 updategram의 결과는 제품 설명 열의 XML 콘텐츠가 요소의 XML 내용으로 업데이트 된다는 것입니다 **\<Desc>** .  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964593"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 서버를 위한 보고서
   현재 릴리스의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66056438"
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|설명|  
+|섹션|Description|  
 |-------------|-----------------|  
 |**실행 정보**|지난 24시간 동안 서로 다른 상태의 여러 실행 개수를 보여 줍니다(실패, 실행 중, 성공 등).|  
 |**패키지 정보**|지난 24시간 동안 실행된 총 패키지 수를 보여 줍니다.|  
@@ -45,7 +44,7 @@ ms.locfileid: "66056438"
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|설명|  
+|섹션|Description|  
 |-------------|-----------------|  
 |Assert|보고서에 적용된 현재 필터(예: 시작 시간 범위)를 보여 줍니다.|  
 |실행 정보|각 패키지 실행의 시작 시간, 종료 시간 및 기간을 보여 줍니다. 패키지 실행 태스크를 사용하여 자식 패키지에 전달된 값과 같이 패키지 실행과 함께 사용된 매개 변수 값의 목록을 볼 수도 있습니다. 매개 변수 목록을 보려면 개요를 클릭합니다.|  
@@ -59,7 +58,7 @@ ms.locfileid: "66056438"
   
  보고서에는 다음과 같은 정보 섹션이 표시됩니다.  
   
-|섹션|설명|  
+|섹션|Description|  
 |-------------|-----------------|  
 |Assert|보고서에 적용된 현재 필터(예: 지정된 문자열이 있는 연결 및 **마지막으로 실패한 시간** 범위)를 보여 줍니다.<br /><br /> **마지막으로 실패한 시간** 범위를 설정하면 특정 날짜 범위 동안 발생한 연결 실패만 표시됩니다. 날짜 범위는 수 일, 수 개월 또는 수 년으로 지정할 수 있습니다.|  
 |세부 정보|연결 문자열, 연결 실패 기간 동안의 실행 수 및 연결이 마지막으로 실패한 날짜를 보여 줍니다.|  
@@ -71,7 +70,7 @@ ms.locfileid: "66056438"
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ## <a name="custom-reports"></a>사용자 지정 보고서  
- **Integration Services 카탈로그** 노드 아래의 **SSISDB**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스>.\<소유자>.\<개체>입니다. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ **Integration Services 카탈로그** 노드 아래의 **SSISDB**[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 \<database> 규칙은 ... \<owner> \<object> 예를 들면 SSISDB.internal.exe있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  

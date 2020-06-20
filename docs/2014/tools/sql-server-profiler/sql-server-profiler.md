@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040238"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 풍부한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
@@ -114,7 +113,7 @@ ms.locfileid: "68211041"
  **템플릿**  
  템플릿은 추적의 기본 구성을 정의합니다. 특히 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]로 모니터링하려는 이벤트 클래스가 템플릿에 포함됩니다. 예를 들어 사용할 이벤트, 데이터 열 및 필터를 지정하는 템플릿을 만들 수 있습니다. 템플릿은 실행되지 않으며 .tdf 확장명을 가진 파일로 저장됩니다. 템플릿을 저장한 후에는 템플릿에 기반한 추적이 시작될 때 캡처된 추적 데이터를 제어할 수 있습니다.  
   
- **Trace**  
+ **추적**  
  추적은 선택한 이벤트 클래스, 데이터 열 및 필터에 기초하여 데이터를 캡처합니다. 예를 들어 예외 오류를 모니터링하는 추적을 만들 수 있습니다. 이 작업을 수행하려면 **Exception** 이벤트 클래스를 선택하고 **Error**, **State**및 **Severity** 데이터 열을 선택합니다. 추적 결과에서 의미 있는 데이터를 제공하려면 이 3열의 데이터를 수집해야 합니다. 그런 다음 구성된 방식으로 추적을 실행하고 서버에서 발생하는 모든 **Exception** 이벤트에 대한 데이터를 수집합니다. 추적 데이터를 즉시 분석에 사용하거나 저장한 후 나중에 분석할 수 있습니다. 나중에 추적을 재생할 수 있지만 **Exception** 이벤트와 같은 특정 이벤트는 재생할 수 없습니다. 또한 추적을 템플릿으로 저장하여 나중에 유사한 추적을 구성할 수 있습니다.  
   
  SQL Server는 SQL Server 인스턴스를 추적하는 두 가지 방법을 제공합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적하거나 시스템 저장 프로시저를 사용하여 추적할 수 있습니다.  

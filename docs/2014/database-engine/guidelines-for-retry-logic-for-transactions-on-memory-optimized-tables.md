@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cebe052a91dbf414f63f82efdfca88c64faabd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779217"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932892"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침
   메모리 최적화 테이블에 액세스하는 트랜잭션에서 발생하는 오류 조건이 있습니다.  

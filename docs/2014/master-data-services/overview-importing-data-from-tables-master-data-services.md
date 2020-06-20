@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971173"
 ---
 # <a name="data-import-master-data-services"></a>데이터 가져오기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 데이터에 대한 모델을 만들면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터 추가를 시작하고 데이터를 변경할 수 있습니다.   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 준비 표, 저장 프로시저 및 마스터 데이터 관리자를 사용할 수 있습니다.
 
- 를 사용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]하 여 데이터를 MDS 리포지토리 ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스)에 추가할 수도 있습니다. [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 자세한 내용은 [Excel용 MDS 추가 기능&#41;&#40;게시 데이터 ](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)를 참조 하세요.
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 를 사용 하 여 데이터를 MDS 리포지토리 (데이터베이스)에 추가할 수도 있습니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . 자세한 내용은 [Excel용 MDS 추가 기능&#41;&#40;게시 데이터 ](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)를 참조 하세요.
 
  데이터를 추가 및 업데이트할 때 다음을 수행할 수 있습니다.
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175992"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 다음 유형의 준비 저장 프로시저를 포함합니다.
 
--   stg.udp_\<name>_Leaf
+-   stg. udp_ \<name> _Leaf
 
--   stg.udp_\<name>_Consolidated
+-   stg. udp_ \<name> _Consolidated
 
--   stg.udp_\<name>_Relationship
+-   stg. udp_ \<name> _Relationship
 
  모델의 각 엔터티에는 리프 멤버, 통합 멤버 및 관계 준비 표에 해당하는 3개의 저장 프로시저가 있습니다.  다음 이미지는 통화, 고객 및 제품 엔터티에 대한 준비 저장 프로시저를 보여 줍니다.
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ceaab6fad6b5c1ff09000046e347ef537645c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971260"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>특성 그룹을 사용자에게 표시되도록 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 특성 그룹이 사용자나 그룹에 표시되도록 설정하여 **탐색기** 기능 영역의 표 위에 탭이 나타나도록 할 수 있습니다.  

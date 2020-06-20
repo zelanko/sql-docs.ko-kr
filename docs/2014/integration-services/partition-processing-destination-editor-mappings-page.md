@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 16f08d9b10bd0f29593695b8d7ea44c329b6a3a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42663cf447b2fe974e7cbe655f726f741fa0dab8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964721"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>파티션 처리 대상 편집기(매핑 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 파티션 열에 매핑할 수 있습니다.  

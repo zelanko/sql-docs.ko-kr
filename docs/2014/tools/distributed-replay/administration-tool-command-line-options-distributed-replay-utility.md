@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c01b0ed3-67e4-4561-92d2-a8fbb086aca8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f53c456832e89aa96c0f7c9a1decd9fabbe96360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 506be071f44937d82902585e5a0621212083dfa5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007833"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>관리 도구 명령줄 옵션(Distributed Replay Utility)
-  Distributed Replay 관리 도구인 `DReplay.exe`는 Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 관리 도구인는 `DReplay.exe` Distributed Replay controller와 통신 하는 데 사용할 수 있는 명령줄 도구입니다. 이 관리 도구를 사용하여 컨트롤러에서 작업을 시작, 모니터링 및 취소할 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/media/topic-link.gif "항목 링크 아이콘") 관리 도구 구문에서 사용되는 구문 표기 규칙에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql)을 참조하세요.  
   

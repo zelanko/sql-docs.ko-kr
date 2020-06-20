@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fea7ae5abbd6aa2824d5a53244a8dc3c2cb5ea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481272"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937614"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   기존 DQS 설치의 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 의 모든 기술 자료를 한 번에 DQS 백업 파일(.dqsb)로 내보낸 다음 나중에 명령 프롬프트에서 DQSInstaller.exe 파일을 실행하여 .dqsb 파일을 통해 다른 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 로 모든 기술 자료를 한 번에 가져올 수 있습니다. 명령 프롬프트에서 DQSInstaller.exe를 실행하는 방법은 [명령 프롬프트에서 DQSInstaller.exe 실행](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt)에서 [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)을 참조하십시오.  
@@ -55,7 +54,7 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 에 가져오려는 기술 자료와 이름이 같은 기술 자료가 이미 있는 경우 가져온 기술 자료의 이름에 밑줄(_)과 함께 1부터 시작되는 정수 값이 추가됩니다. 예를 들어 "CompanyName" 도메인이 중복된 경우 가져온 도메인 이름은 "CompanyName_1"이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Dqsinstaller.exe를 실행 하 여 Data Quality 서버 설치 완료](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [DQSInstaller.exe를 실행 하 여 Data Quality 서버 설치 완료](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Data Quality Services 설치](install-data-quality-services.md)   
  [기술 자료를 dqs 파일로 내보내기](../export-a-knowledge-base-to-a-dqs-file.md)   
  [.dqs 파일에서 기술 자료 가져오기](../import-a-knowledge-base-from-a-dqs-file.md)  

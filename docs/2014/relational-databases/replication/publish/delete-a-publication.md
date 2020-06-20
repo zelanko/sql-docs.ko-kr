@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d2b39a326d59333868b4f8015eb9a2e59d59e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060615"
 ---
 # <a name="delete-a-publication"></a>게시 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 삭제하는 방법에 대해 설명합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "73882285"
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `tran` ** \@형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `tran` ** \@ 형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
         >  **\@force**에 값 **1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
@@ -73,7 +72,7 @@ ms.locfileid: "73882285"
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_dropmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `merge` ** \@형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 을 실행합니다. `merge` ** \@ 형식**에 값을 지정 합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **\@force**에 값 **1**을 지정합니다. (옵션) 게시 데이터베이스에서 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)이 실행되지 않은 경우 **\@dbname**에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
         >  **\@force**에 값 **1**을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  

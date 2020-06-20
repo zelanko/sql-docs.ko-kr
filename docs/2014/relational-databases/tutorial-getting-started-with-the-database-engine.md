@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aaa1fb21c026d064c2b14db73aadc2b82e9c15d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996062"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 시작 자습서를 시작합니다. 이 자습서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 처음으로 사용하는 사용자 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]를 설치한 사용자를 위해 작성되었습니다. 이 간단한 자습서를 사용하면 [!INCLUDE[ssDE](../includes/ssde-md.md)]을 처음 사용하는 경우 도움이 됩니다.  

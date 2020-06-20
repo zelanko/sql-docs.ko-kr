@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1ae88554-f291-45bc-a186-6f41d9cd0fca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a8e0ab728c1fee0033ef86dbf6b7dfc22bdc8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 525c1c3bd6e631044b8bc7f17b2c2a01aeb1ef8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62867847"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053886"
 ---
 # <a name="mssqlserver_4186"></a>MSSQLSERVER_4186
     
@@ -67,7 +66,7 @@ GO
   
  **함수에 의해 정의되는 뷰 열**  
   
- 다음 예제에서는 열 `dbo.ufnGetStock`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `CurrentInventory`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
+ 다음 예제에서는 열 `CurrentInventory`를 정의하기 위해 선택 목록에 있는 데이터 액세스 스칼라 함수 `dbo.ufnGetStock`을 사용하는 뷰를 만듭니다. 그러면 UPDATE 문이 OUTPUT 절의 `CurrentInventory` 열을 참조합니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98d3bf43707caedd8c9d0a01349f36d5a5bfbcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028420"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001467"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하면 전체 텍스트 인덱스를 만들어 데이터베이스 테이블에서 텍스트 기반 열에 대해 전체 텍스트 검색을 수행할 수 있습니다. 전체 텍스트 인덱스는 일반 인덱스를 기반으로 하므로 먼저 일반 인덱스를 만들어야 합니다. 일반 인덱스는 null이 아닌 단일 열에 대해 작성해야 하며, 값이 큰 열보다 값이 작은 열을 선택하는 것이 좋습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8019f762d6d80ced2688f0e93f7ad0e0a29bd3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c55300150e64060cc06594fc4b8847fdb5132151
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001079"
 ---
 # <a name="print-dialog-box"></a>인쇄 대화 상자
   **인쇄** 대화 상자에서 옵션을 선택하여 원하는 문서 인쇄 방법을 지정할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "63313017"
  선택한 프린터에 대한 추가 정보를 포함합니다.  
   
  **속성**  
- \<*printer name properties*> 대화 상자를 열려면 클릭합니다.  
+ 대화 상자를 열려면 클릭 \<*printer name properties*> 합니다.  
   
  **파일로 인쇄**  
  프린터 대신 파일로 문서를 인쇄합니다.  

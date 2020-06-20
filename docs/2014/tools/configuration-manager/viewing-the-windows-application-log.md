@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f900a0b203e652bbc9cc6e9638711d138756c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007924"
 ---
 # <a name="viewing-the-windows-application-log"></a>Windows 애플리케이션 로그 보기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Microsoft Windows 애플리케이션 로그를 사용하도록 구성된 경우 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션은 이 로그에 새 이벤트를 씁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 때마다 새 애플리케이션 로그가 생성되지는 않습니다.  

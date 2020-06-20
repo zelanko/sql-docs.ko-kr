@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f1442011ddbdb010e5f498dbf3b42fa9ba333ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a5d0283837d9344eaf529cf9818e6629cdc68065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703656"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060170"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>sql:use-cdata를 사용하여 CDATA 섹션 만들기(SQLXML 4.0)
   XML에서 CDATA 섹션은 태그 문자로 인식될 문자가 포함된 텍스트 블록을 이스케이프하는 데 사용됩니다.  
   
- Microsoft의 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서에서 태그 문자로 처리 되는 문자가 포함 될 수 있습니다. 예를 들어 꺾쇠 괄호 ( \< 및 >), 작거나 같음 기호 (<=) 및 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
+ Microsoft의 데이터베이스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML 파서에서 태그 문자로 취급 되는 문자가 포함 될 수 있습니다. 예를 들어 꺾쇠 괄호 ( \< and > ), 작거나 같음 기호 (<=), 앰퍼샌드 (&)는 태그 문자로 처리 됩니다. 하지만 이러한 유형의 특수 문자를 CDATA 섹션에 래핑하여 태그 문자로 처리되지 않도록 할 수 있습니다. CDATA 섹션 내의 텍스트는 XML 파서에서 일반 텍스트로 처리됩니다.  
   
  `sql:use-cdata` 주석은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 반환된 데이터를 CDATA 섹션에 래핑하도록 지정하는 데 사용됩니다. 즉, `sql:field`로 지정된 열의 값을 CDATA 섹션에 포함할지 여부를 나타냅니다. `sql:use-cdata` 주석은 데이터베이스 열에 매핑되는 요소에만 지정할 수 있습니다.  
   
@@ -37,11 +36,11 @@ ms.locfileid: "82703656"
   
  `sql:url-encode`나 ID, IDREF, IDREFS, NMTOKEN 및 NMTOKENS 특성 유형에는 이 주석을 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. 요소에 sql:use-cdata 지정  
- 다음 스키마에서 `sql:use-cdata` 는 ** \< Address>** 요소 내의 ** \< AddressLine1>** 에 대해 1 (True)로 설정 됩니다. 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
+ 다음 스키마에서는 `sql:use-cdata` 요소 내의에 대해 1 (True)로 설정 됩니다 **\<AddressLine1>** **\<Address>** . 따라서 데이터가 CDATA 섹션으로 반환됩니다.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

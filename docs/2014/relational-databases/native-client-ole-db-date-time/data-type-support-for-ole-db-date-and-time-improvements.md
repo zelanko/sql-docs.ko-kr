@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 54cf3ae9f20f66e3930e6eadc197e09275fceacd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1559b96f382abd86246553e26173c1eca0d3abca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043742"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식을 지원하는 OLE DB([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) 유형에 대한 정보를 제공합니다.  
@@ -170,7 +169,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
  다음 형식 매핑은 ITableDefinition::CreateTable에서 사용되는 DBCOLUMNDESC 구조체와 함께 사용됩니다.  
   
-|OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
+|OLE DB 데이터 형식(*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식|메모|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|`datetime2`(p)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 DBCOLUMDESC *bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6baee70f-848c-4e86-b20d-78875c0f82cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2656c53dd151825cd10e54e5b63e5ac0a2cee1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937144"
 ---
 # <a name="availability-database-is-suspended"></a>가용성 데이터베이스가 일시 중지됨
     
@@ -28,11 +27,11 @@ ms.locfileid: "62815768"
 |||  
 |-|-|  
 |**정책 이름**|가용성 데이터베이스 일시 중지 상태|  
-|**문제**|가용성 데이터베이스가 일시 중지됨|  
+|**문제점**|가용성 데이터베이스가 일시 중지됨|  
 |**범주**|**Warning**|  
 |**패싯에**|가용성 데이터베이스|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 보조 데이터베이스("보조 데이터베이스 복제본"이라고도 함)의 데이터 이동 상태를 확인합니다. 데이터 이동이 일시 중지되는 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

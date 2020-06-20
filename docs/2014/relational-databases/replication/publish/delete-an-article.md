@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082f90d33c2b8dedfae34dcada9b3935bed134ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060557"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 아티클을 삭제하는 방법에 대해 설명합니다. 아티클을 삭제할 수 있는 조건 및 아티클 삭제로 인해 새 스냅샷 또는 구독 다시 초기화가 필요한지 여부에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
@@ -35,22 +34,22 @@ ms.locfileid: "73882278"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에서 아티클을 삭제하려면  
   
-1.  [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. ** \@Force_invalidate_snapshot**에 값 **1** 을 지정 합니다.  
+1.  [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. ** \@ Force_invalidate_snapshot**에 값 **1** 을 지정 합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>병합 게시에서 아티클을 삭제하려면  
   
-1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. 필요한 경우 ** \@force_invalidate_snapshot** 에 값 **1** 을 지정 하 고 ** \@force_reinit_subscription**값으로 **1** 을 지정 합니다.  
+1.  [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)을 실행하여 **\@publication**로 지정된 게시에서 **\@article**으로 지정된 아티클을 삭제합니다. 필요한 경우 ** \@ force_invalidate_snapshot** 에 값 **1** 을 지정 하 고 ** \@ force_reinit_subscription**값으로 **1** 을 지정 합니다.  
   
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
- 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이 변경으로 인해 기존 스냅숏이 무효화 되므로 ** \@force_invalidate_snapshot** 매개 변수에 **1** 값이 지정 됩니다.  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
+ 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이 변경으로 인해 기존 스냅숏이 무효화 되므로 ** \@ force_invalidate_snapshot** 매개 변수에 **1** 값이 지정 됩니다.  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이러한 변경으로 인해 기존 스냅숏이 무효화 되므로 ** \@force_invalidate_snapshot** 매개 변수에 **1** 값이 지정 됩니다.  
+ 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이러한 변경으로 인해 기존 스냅숏이 무효화 되므로 ** \@ force_invalidate_snapshot** 매개 변수에 **1** 값이 지정 됩니다.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  

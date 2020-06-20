@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c5b17b45b50634806c60e5064efc6ebd9d03f8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a89c66ca5c3b420fff14c087bd604b16c641369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996548"
 ---
 # <a name="implement-event-notifications"></a>이벤트 알림 구현
   이벤트 알림을 구현하려면 먼저 이벤트 알림을 받을 대상 서비스를 만든 다음 이벤트 알림을 만들어야 합니다.  

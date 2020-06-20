@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6e25752cd1f12143f4d05b8b4b02f138784a72a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6936bcbe6ef59434f0812ac3c25581eb0c1787f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053631"
 ---
 # <a name="mssqlserver_846"></a>MSSQLSERVER_846
     
@@ -35,7 +34,7 @@ ms.locfileid: "70874569"
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 버퍼 래치 오류를 쓸 때 컴퓨터가 응답하지 않거나, 시간이 초과되거나, 일반 작업의 다른 장애가 발생할 수 있습니다.  
   
- 메시지의 상태 필드에 값 0x04가 설정되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 I/O 작업을 기다리고 있는 것입니다. [ 오류 로그에 ](mssqlserver-833-database-engine-error.md)MSSQLSERVER_833[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메시지가 표시될 수도 있습니다.  
+ 메시지의 상태 필드에 값 0x04가 설정되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 I/O 작업을 기다리고 있는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) 메시지가 표시될 수도 있습니다.  
   
  메시지의 상태 필드에 값 0x04가 해제되어 있는 경우 페이지에 경합 문제가 있는 것입니다. 개체가 데이터 페이지인 경우 이 오류는 비효율적인 코드 디자인으로 인해 발생할 수 있습니다. 페이지가 데이터가 아닌 경우에는 부족한 하드웨어 리소스 등으로 인해 서버 병목 현상이 일어나 이 오류가 발생할 수 있습니다.  
   

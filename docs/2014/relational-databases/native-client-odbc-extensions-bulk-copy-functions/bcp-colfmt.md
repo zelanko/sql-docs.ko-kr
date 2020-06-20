@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9bcf209096b1929938affcec6a12ce608e54f799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019726"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
   사용자 파일에 있는 데이터의 원본 또는 대상 형식을 지정합니다. 원본 형식으로 사용될 경우 **bcp_colfmt** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로의 대량 복사에서 데이터 원본으로 사용되는 기존 데이터 파일의 형식을 지정합니다. 대상 형식으로 사용될 경우에는 데이터 파일이 **bcp_colfmt**에 지정된 열 형식을 사용하여 만들어집니다.  

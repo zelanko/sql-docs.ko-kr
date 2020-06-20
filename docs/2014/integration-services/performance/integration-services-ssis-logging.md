@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964713"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지, 컨테이너 및 태스크에서의 로깅 구현을 위해 사용할 수 있는 로그 공급자가 포함되어 있습니다. 로깅을 사용하면 패키지에 대한 런타임 정보를 캡처하여 패키지가 실행될 때마다 패키지를 감사하고 문제를 해결하는 데 활용할 수 있습니다. 예를 들어 로그를 사용하여 패키지를 실행한 운영자의 이름과 패키지가 시작 및 종료된 시간을 캡처할 수 있습니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889815"
     > [!NOTE]  
     >  64비트 모드로 실행 중인 패키지에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 로그 공급자를 사용할 수 없습니다.  
   
--   로그 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 `sysssislog` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블에 로그 항목을 기록 합니다.  
+-   로그 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 `sysssislog` 데이터베이스의 테이블에 로그 항목을 기록 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Windows 이벤트 로그 공급자는 로컬 컴퓨터의 Windows 이벤트 로그에서 애플리케이션 로그에 항목을 기록합니다.  
   

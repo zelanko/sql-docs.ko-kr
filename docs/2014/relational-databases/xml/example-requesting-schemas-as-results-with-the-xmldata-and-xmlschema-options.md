@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c757db5cd8a5513f80233ba4ba4d6be3cc53dd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1dd81612526ca17c5100485d1d27d246b5a8abfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061255"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
   다음 쿼리는 문서 구조를 설명하는 XMLDATA 스키마를 반환합니다.  

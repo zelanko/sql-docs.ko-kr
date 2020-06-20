@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ba330636d325a992389fdc54c1a6516546f717e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63284468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040698"
 ---
 # <a name="save-queries-visual-database-tools"></a>쿼리 저장(Visual Database Tools)
   나중에 다시 사용할 수 있도록 쿼리를 저장합니다. 쿼리를 실행해도 변경 내용은 저장되지 않습니다.  

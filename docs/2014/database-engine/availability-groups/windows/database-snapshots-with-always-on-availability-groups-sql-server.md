@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e4307653b5b8150d71019a373ee073d15123f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936822"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅샷(SQL Server)
   가용성 그룹의 주 데이터베이스 또는 보조 데이터베이스에서 데이터베이스 스냅샷을 만들 수 있습니다. 복제본 역할은 RESOLVING 상태가 아닌 PRIMARY 또는 SECONDARY 상태여야 합니다.  

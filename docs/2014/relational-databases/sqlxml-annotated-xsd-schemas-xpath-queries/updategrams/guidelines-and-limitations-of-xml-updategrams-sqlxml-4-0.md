@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c525b22c68313fb47bd7db4fc5e547735435839
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2e28f4258aef27403c107158dd13efe5ada02c03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996244"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
   XML updategram 사용 시 다음 사항에 유의하십시오.  
   
--   ** \<>** ** \<>이전** 에 단일 쌍만 포함 하는 삽입 작업에 대해 updategram를 사용 하는 경우 ** \< 이전>** 블록을 생략할 수 있습니다. 반대로 삭제 작업의 경우 ** \< after>** 블록을 생략할 수 있습니다.  
+-   Updategram를 사용 하 여 단일 쌍의 and 블록만 포함 하는 삽입 작업을 수행 하는 경우에는 **\<before>** **\<after>** 블록을 **\<before>** 생략할 수 있습니다. 반대로 삭제 작업의 경우에는 **\<after>** 블록을 생략할 수 있습니다.  
   
--   ** \<>이전** 에 updategram를 여러 개 사용 하 고 ** \< sync>** 태그에서 ** \<>** 블록을 사용 하는 경우 ** \<>블록 이전** 및 ** \<>블록 뒤에는** 를 지정 하 여>** \< 앞** 에 ** \<>쌍을** 형성 해야 합니다.  
+-   태그에서 여러 개의 및 블록을 사용 하는 updategram를 사용 하는 경우에는 **\<before>** **\<after>** **\<sync>** **\<before>** 블록과 블록을 모두 **\<after>** 형성 하 고 쌍으로 지정 해야 합니다 **\<before>** **\<after>** .  
   
 -   Updategram의 업데이트는 XML 스키마에서 제공한 XML 뷰에 적용됩니다. 따라서 기본 매핑이 성공하려면 updategram에서 스키마 파일 이름을 지정하거나, 파일 이름을 지정하지 않을 경우 요소 및 특성 이름이 데이터베이스의 테이블 및 열 이름과 일치해야 합니다.  
   
@@ -44,9 +43,9 @@ ms.locfileid: "82717496"
   
 -   Updategram은 업데이트 중 `image` 형식 데이터를 매개 변수로 전달하는 것을 허용하지 않습니다.  
   
--   및 이미지와 같은 BLOB (Binary large object) 형식은 `text/ntext` 동시성 제어에 사용 하기 위해이를 포함 하기 때문에 updategrams으로 작업할 때의 ** \< 이전>** 블록에서 사용 하면 안 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 BLOB 형식 비교에 대한 제한으로 인해 문제가 발생할 수 있습니다. 예를 들어 LIKE 키워드는 `text` 데이터 형식의 열을 비교하기 위해 WHERE 절에 사용되지만 BLOB 형식의 데이터 크기가 8K 이상이면 비교 작업이 실패합니다.  
+-   Updategrams으로 작업할 때는 및 이미지와 같은 BLOB (Binary large object) 형식을 `text/ntext` 블록에 사용 하면 안 **\<before>** 됩니다. 동시성 제어에 사용 하기 위해 이러한 형식을 포함 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 BLOB 형식 비교에 대한 제한으로 인해 문제가 발생할 수 있습니다. 예를 들어 LIKE 키워드는 `text` 데이터 형식의 열을 비교하기 위해 WHERE 절에 사용되지만 BLOB 형식의 데이터 크기가 8K 이상이면 비교 작업이 실패합니다.  
   
--   SQLXML 4.0에서는 BLOB 형식 비교에 대한 제한으로 인해 `ntext` 데이터에 특수 문자가 있으면 문제가 발생할 수 있습니다. 예를 들어 형식의 열에 대 한 동시성 검사에 사용 될 때 updategram의 ** \< before>** 블록에 "[Serializable]"을 사용 하는 경우 `ntext` 다음 SQLOLEDB 오류 설명과 함께 실패 합니다.  
+-   SQLXML 4.0에서는 BLOB 형식 비교에 대한 제한으로 인해 `ntext` 데이터에 특수 문자가 있으면 문제가 발생할 수 있습니다. 예를 들어 **\<before>** 형식의 열에 대 한 동시성 검사에 사용 될 때 updategram의 블록에 "[Serializable]"을 사용 하면 `ntext` 다음과 같은 SQLOLEDB 오류 설명과 함께 실패 합니다.  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917083"
 ---
 # <a name="data-conversion-transformation-editor"></a>데이터 변환 편집기
   **데이터 변환 편집기** 대화 상자를 사용하여 변환할 열을 선택하고, 열이 변환될 데이터 형식을 선택하고, 변환 특성을 설정할 수 있습니다.  
   
 > [!NOTE]  
->  데이터 `FastParse` 변환의 출력 열 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 데이터 변환 섹션을 참조하십시오.  
+>  데이터 변환 `FastParse` 의 출력 열 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 데이터 변환 섹션을 참조하십시오.  
   
  데이터 변환에 대한 자세한 내용은 [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md)을 참조하십시오.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66060048"
  **정밀도**  
  숫자 데이터의 전체 자릿수를 설정합니다.  
   
- **규모**  
+ **크기 조정**  
  숫자 데이터의 소수 자릿수를 설정합니다.  
   
  **코드 페이지**  

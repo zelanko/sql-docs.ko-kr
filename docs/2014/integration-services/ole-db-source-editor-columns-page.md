@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb65c49a1a7c24f579c49fd5340c6137e09190b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964953"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>OLE DB 원본 편집기(열 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **열** 페이지를 사용하여 출력 열을 각 외부(원본) 열에 매핑할 수 있습니다.  

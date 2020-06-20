@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7039bebb-1f25-4cf3-81f1-393dfb78da12
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5eff9cb3139e1e1043f99ba63d11160b1010c27
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936148"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함
   이 규칙은 데이터베이스 파일이 백업 파일과 별개의 디바이스에 있는지 검사합니다. 데이터베이스 파일과 백업 파일이 동일한 디바이스에 있는 경우 해당 디바이스에 오류가 발생하면 데이터베이스와 백업을 모두 사용할 수 없게 됩니다. 또한 데이터베이스 파일과 백업 파일을 별개의 디바이스에 두면 데이터베이스의 프로덕션 사용과 백업 작성에 대한 I/O 성능이 모두 최적화됩니다.  

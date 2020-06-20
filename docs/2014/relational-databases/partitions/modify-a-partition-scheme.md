@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060905"
 ---
 # <a name="modify-a-partition-scheme"></a>파티션 구성표 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 분할된 테이블에 추가되는 다음 파티션을 보관할 파일 그룹을 지정하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파티션 구성표를 수정할 수 있습니다. 이렇게 하려면 파일 그룹에 NEXT USED 속성을 할당합니다. 빈 파일 그룹이나 파티션이 이미 있는 파일 그룹에 NEXT USED 속성을 할당할 수 있습니다. 즉, 파일 그룹에 한 개 이상의 파티션을 보관할 수 있습니다.  

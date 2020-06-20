@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67a992d1-7524-4f4b-b3d8-ebd9e5ea82a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d752b84506ea3e9275e5f16903c19288c6ff92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5498dfcd7ae18fc504784593212f54249b7f221
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924184"
 ---
 # <a name="view-the-list-of-packages-on-the-integration-services-server"></a>Integration Services 서버의 패키지 목록 보기
   다음 두 가지 방법 중 하나를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 저장된 패키지 목록을 볼 수 있습니다.  

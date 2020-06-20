@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8d837e4ddf74256e4bae70f772557ec8ff67f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780322"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933254"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>테이블 반환 매개 변수 형식 검색
-  소비자 즉, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용 하는 클라이언트 응용 프로그램은 명령 텍스트가 OLE DB 공급자에 지정 된 경우 각 명령 매개 변수의 형식을 검색할 수 있습니다. 테이블 반환 매개 변수의 형식이 확인되면 소비자가 테이블 반환 매개 변수의 개별 열에 대한 메타데이터 정보를 검색할 수 있습니다.  
+  소비자 즉, Native Client OLE DB 공급자를 사용 하는 클라이언트 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 명령 텍스트가 OLE DB 공급자에 지정 된 경우 각 명령 매개 변수의 형식을 검색할 수 있습니다. 테이블 반환 매개 변수의 형식이 확인되면 소비자가 테이블 반환 매개 변수의 개별 열에 대한 메타데이터 정보를 검색할 수 있습니다.  
   
- 프로시저 매개 변수의 형식 정보는 대부분의 매개 변수 형식에서 ICommandWithParameters::GetParameterInfo를 통해 지원됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 사용자 정의 형식 및 `xml` 데이터 형식이 도입 됨에 따라 GetParameterInfo 메서드는 ICommandWithParameters를 통해 사용자 정의 형식 정보 (이름, 스키마 및 카탈로그)를 제공할 수 없기 때문에이 용도로 충분 하지 않습니다. 따라서 확장된 형식 정보를 제공하기 위해 새로운 인터페이스인 ISSCommandWithParameters가 정의되었습니다.  
+ 프로시저 매개 변수의 형식 정보는 대부분의 매개 변수 형식에서 ICommandWithParameters::GetParameterInfo를 통해 지원됩니다. 부터 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 사용자 정의 형식 및 데이터 형식이 도입 됨에 따라 `xml` GetParameterInfo 메서드는 ICommandWithParameters를 통해 사용자 정의 형식 정보 (이름, 스키마 및 카탈로그)를 제공할 수 없기 때문에이 용도로 충분 하지 않습니다. 따라서 확장된 형식 정보를 제공하기 위해 새로운 인터페이스인 ISSCommandWithParameters가 정의되었습니다.  
   
  테이블 반환 매개 변수의 경우 ISSCommandWithParameters 인터페이스를 사용하여 자세한 정보를 검색할 수도 있습니다. 명령 개체를 준비하고 나면 클라이언트가 ISSCommandWithParameters::GetParameterInfo를 호출합니다. 테이블 반환 매개 변수의 경우 공급자에 의해 DBPARAMINFO 구조의 *wType* 멤버가 DBTYPE_TABLE로 설정됩니다. DBPARAMINFO 구조의 *ulParamSize* 필드 값은 ~0입니다.  
   

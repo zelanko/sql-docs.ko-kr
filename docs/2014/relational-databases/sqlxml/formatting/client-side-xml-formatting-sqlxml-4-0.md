@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ac825cf6fa86e6a1f4970cffafc20d2873558b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702889"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996052"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XML 서식 지정(SQLXML 4.0)
   이 항목에서는 클라이언트 쪽 XML 서식 지정에 대한 정보를 제공합니다. 클라이언트 쪽 서식 지정은 중간 계층의 XML 서식 지정을 의미합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9906aa967f98b41df8eabf63e11fe6e518a3734
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b520629654452bbce138f5564b2139e6504870
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972253"
 ---
 # <a name="annotations-master-data-services"></a>주석(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 주석은 트랜잭션에 대한 세부 정보를 제공하기 위해 입력하는 설명입니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52c3a38488117c55de497442dd138a55cc8b32e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228205"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932854"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저에서 OR 연산자 구현
   OR 연산자는 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않습니다. NOT 연산자도 고유하게 컴파일된 저장 프로시저의 쿼리 조건자에서 지원되지 않으므로 동등한 논리 연산자만 사용하여 OR 연산자를 시뮬레이션할 수 없습니다. 그러나 메모리 최적화 테이블 변수를 통해 OR 연산자의 효과를 시뮬레이션할 수 있습니다.  

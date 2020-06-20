@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f4f7c1003db22721d9140c166b1ed03e72b9ab0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7bd22c713f0ec877c5abf12a72ab08056ab71971
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937414"
 ---
 # <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
   참조 데이터는 신뢰할 수 있는 공용 도메인에서 또는 고급 상용 콘텐츠 공급자를 통해 사용할 수 있는 관련 또는 분류된 전역 데이터(엔터프라이즈의 경계를 벗어남)의 정확하고 완전한 집합을 의미합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "70154435"
   
  Marketplace와 DQS 간의 원활한 통합은 DQS 내 데이터 품질 프로젝트에 대한 정보 검색, 탐색 및 가져오기와 관련된 단계를 간소화합니다. DQS에서 데이터를 가져올 수 있으므로 DQS 사용자는 DQS, Marketplace 및 참조 데이터 서비스 공급자를 혁신적인 방식으로 결합하여 고품질 데이터를 얻을 수 있습니다.  
   
- DQS에서 Marketplace의 참조 데이터를 정리 작업에 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 것은 무료이며 유료 데이터 세트를 구독하는 경우에만 요금이 청구됩니다. 무료 데이터 세트를 구독하고 사용하는 경우에는 요금이 청구되지 않습니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()https://go.microsoft.com/fwlink/?LinkId=212936)를 참조 하세요.  
+ DQS에서 Marketplace의 참조 데이터를 정리 작업에 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 것은 무료이며 유료 데이터 세트를 구독하는 경우에만 요금이 청구됩니다. 무료 데이터 세트를 구독하고 사용하는 경우에는 요금이 청구되지 않습니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 [계정 만들기](https://go.microsoft.com/fwlink/?LinkId=212936) ()를 참조 하세요 https://go.microsoft.com/fwlink/?LinkId=212936) .  
   
  또한 DQS 내에서 다음과 같은 Marketplace 작업을 수행할 수 있습니다.  
   

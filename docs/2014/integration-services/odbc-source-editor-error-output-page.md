@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057125"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965003"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>ODBC 원본 편집기(오류 출력 페이지)
   **ODBC 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "66057125"
 ### <a name="truncation"></a>잘림  
  ODBC 원본에서 흐름의 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
   
-### <a name="description"></a>설명  
+### <a name="description"></a>Description  
  사용되지 않습니다.  
   
 ### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  
@@ -60,7 +59,7 @@ ms.locfileid: "66057125"
  다음 옵션을 사용하여 ODBC 원본에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
   
 ### <a name="fail-component"></a>구성 요소 실패  
- 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 기본 동작입니다.  
+ 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 이것은 기본적인 동작입니다.  
   
 ### <a name="ignore-failure"></a>오류 무시  
  오류 또는 잘림이 무시됩니다.  

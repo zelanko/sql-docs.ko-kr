@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999796"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler 템플릿
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적에 포함할 이벤트 클래스와 데이터 열을 정의하는 템플릿을 만들 수 있습니다. 템플릿을 정의하고 저장한 후 선택한 각 이벤트 클래스에 대한 데이터를 기록하는 추적을 실행할 수 있습니다. 하나의 템플릿을 많은 추적에 사용할 수 있지만 템플릿 자체는 실행되지 않습니다.  

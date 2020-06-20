@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965643"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>변환 검사를 수행하지 않고 형식 변환(SQL Server 가져오기 및 내보내기 마법사)
   마법사에서 **데이터 형식 변환 및 매핑 파일을 하나 이상 찾을 수 없는 경우** 변환 검사를 수행하지 않고 형식 변환 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 페이지를 사용하여 마법사에서 수행하는 매핑을 검토할 수 있습니다. 이 페이지에는 누락된 파일을 식별하는 데 도움이 되는 정보가 포함되어 있습니다.  

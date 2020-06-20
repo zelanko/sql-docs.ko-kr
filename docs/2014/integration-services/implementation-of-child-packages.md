@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965713"
 ---
 # <a name="implementation-of-child-packages"></a>자식 패키지 구현
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 로그 균형 조정을 구현하면 사용 가능한 CPU 또는 서버 시간을 사용할 다른 서버에 자식 패키지가 설치됩니다. 자식 패키지를 만들고 실행하려면 다음 단계를 수행하십시오.  
@@ -51,7 +50,7 @@ ms.locfileid: "66058187"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>SQL Server 에이전트 작업 및 자식 패키지 디버깅  
  다음 방법 중 하나를 사용하여 SQL Server 에이전트 작업 및 해당 자식 패키지를 테스트할 수 있습니다.  
   
--   **디버깅 하지 않고 시작** **디버그** / 를 클릭 하 여 SSIS 디자이너에서 각 자식 패키지를 실행 합니다.  
+-   **Debug**  /  **디버깅 하지 않고 시작**디버그를 클릭 하 여 SSIS 디자이너에서 각 자식 패키지를 실행 합니다.  
   
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 원격 컴퓨터에서 개별 SQL Server 에이전트 작업을 실행하여 패키지가 실행되는지 확인합니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f44caf9a9968c35c8beeff9c218de6fb05f333a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936334"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>실패한 파일 추가 작업 문제 해결(AlwaysOn 가용성 그룹)
   일부 AlwaysOn 가용성 그룹 배포의 경우 주 복제본을 호스팅하는 시스템과 보조 복제본을 호스팅하는 시스템 간의 파일 경로가 다릅니다. 파일 추가 작업의 파일 경로가 보조 복제본에 존재하지 않는 경우 파일 추가 작업이 기본 데이터베이스에서 성공합니다. 하지만 파일 추가 작업으로 인해 보조 데이터베이스가 일시 중지될 수 있습니다. 이로 인해 보조 복제본이 NOT SYNCHRONIZING 상태가 됩니다.  

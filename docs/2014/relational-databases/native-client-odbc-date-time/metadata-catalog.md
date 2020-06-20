@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 783843e9bc25b0f6f1771fe7459de85b8cb56431
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b37c86616aa1a8077f147fa9bc64b24bcaf17b42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020180"
 ---
 # <a name="catalog-metadata"></a>카탈로그 메타데이터
   이 항목에서는 `SQLColumns` 및 `SQLProcedureColumns`에서 반환하는 열 메타데이터와 `SQLGetTypeInfo`에서 반환하는 데이터 형식 메타데이터에 대해 설명합니다.  

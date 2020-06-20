@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996520"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>공간 인덱스 만들기, 수정 및 삭제
   공간 인덱스는 `geometry` 또는 `geography` 데이터 형식의 열 ( *공간 열*)에서 특정 작업을 보다 효율적으로 수행할 수 있습니다. 하나의 공간 열에 두 개 이상의 공간 인덱스가 지정될 수 있습니다. 예를 들어 이 기능은 단일 열에 다른 공간 분할 매개 변수를 인덱싱할 경우에 유용합니다.  
@@ -54,7 +53,7 @@ ms.locfileid: "66014273"
   
 7.  인덱싱하려는 공간 열을 지정하려면 **추가**를 클릭합니다.  
   
-8.  * \<테이블 이름* **에서 열 선택**>대화 상자에서 해당 확인란을 선택 하 여 또는 `geometry` `geography` 형식의 열을 선택 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
+8.  **에서 열 선택** *\<table name>* 대화 상자에서 해당 확인란을 선택 하 여 또는 형식의 열을 선택 `geometry` `geography` 합니다. 그러면 다른 공간 열이 편집할 수 없게 됩니다. 다른 공간 열을 선택하려면 먼저 현재 선택된 열의 선택을 취소해야 합니다. 완료되었으면 **확인**을 클릭합니다.  
   
 9. **인덱스 키 열** 표에서 열 선택 사항을 확인합니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014273"
   
 11. **공간** 페이지에서 인덱스의 공간 속성에 사용할 값을 지정합니다.  
   
-     유형 열에 인덱스를 만들 때 경계 상자의 ***`X-min`*(,*`Y-min`*)** 및 ***`X-max`*(,*`Y-max`*)** 좌표를 지정 해야 합니다. `geometry` 유형 열의 인덱스의 경우 지리 표 공간 분할 구성표를 지정 하면 지리 표 공간 분할이 경계 상자를 사용 하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다. **Geography grid** `geography`  
+     유형 열에 인덱스를 만들 때 `geometry` 경계 상자의 **( *`X-min`* , *`Y-min`* )** 및 **( *`X-max`* , *`Y-max`* )** 좌표를 지정 해야 합니다. 유형 열의 인덱스의 경우 지리 `geography` 표 공간 분할 구성표를 지정 하면 지리 표 공간 분할이 경계 상자를 **Geography grid** 사용 하지 않으므로 경계 상자 필드는 읽기 전용이 됩니다.  
   
      필요에 따라 공간 분할(tessellation) 구성표의 모든 수준에서 표 밀도 및 **개체당 셀 수** 필드에 대해 기본값이 아닌 값을 지정할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상의 경우 개체당 기본 셀 수는 각각 16과 8이고, 기본 표 밀도는 **의 경우** 보통 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]입니다.  
   

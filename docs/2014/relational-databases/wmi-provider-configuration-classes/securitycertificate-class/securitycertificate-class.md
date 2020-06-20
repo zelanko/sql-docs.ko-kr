@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270766"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060031"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate 클래스
-  [SecurityCertificate Class] securitycertificate-class.md)는 보안 인증서를 나타냅니다. 인증서는 해당 개인 키를 보유 하는 인스턴스에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]공개 키 값을 바인딩하는 디지털 서명 된 문입니다. 인증서는 인증 기관에서 발급합니다.  
+  [SecurityCertificate Class] securitycertificate-class.md)는 보안 인증서를 나타냅니다. 인증서는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 해당 개인 키를 보유 하는 인스턴스에 공개 키 값을 바인딩하는 디지털 서명 된 문입니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . 인증서는 인증 기관에서 발급합니다.  
   
  [SecurityCertificate Class] securitycertificate-class.md)를 사용 하 여 다음 작업을 수행할 수 있습니다.  
   

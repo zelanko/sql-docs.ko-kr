@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964694"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>비율 샘플링 변환 편집기
   **비율 샘플링 변환 편집기** 대화 상자에서 지정한 행의 백분율을 사용하여 입력 부분을 샘플로 분할할 수 있습니다. 이 변환으로 인해 입력이 두 개의 별도 출력으로 나뉩니다.  

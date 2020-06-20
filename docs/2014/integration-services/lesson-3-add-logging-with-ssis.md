@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f08b13232b7ae90c7b1eacfe55a98a1f1ca283
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67046767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965221"
 ---
 # <a name="lesson-3-adding-logging"></a>3단원: 로깅 추가
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에는 태스크 및 컨테이너 이벤트 추적을 제공하여 패키지 실행을 모니터링하고 문제를 해결할 수 있는 로깅 기능이 포함되어 있습니다. 로깅 기능은 융통성이 있으므로 패키지 수준 또는 패키지 내의 개별 태스크와 컨테이너에서 사용할 수 있습니다. 로깅하려는 이벤트를 선택하고 단일 패키지에 대해 여러 개의 로그를 만들 수 있습니다.  

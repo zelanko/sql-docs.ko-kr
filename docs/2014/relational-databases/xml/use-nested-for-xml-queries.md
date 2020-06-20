@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6abc209e200be39fe79209d89cfb6f3a492e0e6a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 60c4198697f8d19c9b2e5bc1b415e0787861d40a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061227"
 ---
 # <a name="use-nested-for-xml-queries"></a>중첩 FOR XML 쿼리 사용
   For `xml` xml 쿼리의 데이터 형식 및 [형식 지시어](type-directive-in-for-xml-queries.md) 를 사용 하면 for xml 쿼리에 의해 반환 된 xml을 서버 및 클라이언트에서 처리할 수 있습니다.  

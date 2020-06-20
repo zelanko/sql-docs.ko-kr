@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2dbe1aad203dfdc83e438d5b7f4ed19c15038c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933114"
 ---
 # <a name="edit-checked-in-files"></a>체크 인 파일 편집
-  일반적으로 원본 제어 파일을 편집하려면 먼저 해당 파일을 체크 아웃해야 합니다. 그러나 체크 아웃 하지 않은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 파일을 수정할 수 있도록를 구성할 수 있습니다. 이렇게 하면 파일을 저장할 때까지 변경 내용이 메모리에 유지 됩니다. 그런 다음 소스 제어에서 파일을 체크 아웃하라는 메시지가 나타납니다.  
+  일반적으로 원본 제어 파일을 편집하려면 먼저 해당 파일을 체크 아웃해야 합니다. 그러나 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 체크 아웃 하지 않은 파일을 수정할 수 있도록를 구성할 수 있습니다. 이렇게 하면 파일을 저장할 때까지 변경 내용이 메모리에 유지 됩니다. 그런 다음 소스 제어에서 파일을 체크 아웃하라는 메시지가 나타납니다.  
   
  팀에서 작업하는 중이면 소스 제어 공급자가 로컬 버전 및 서버 버전 체크 아웃을 모두 지원하지 않을 경우에는 체크 인한 파일을 편집할 수 있도록 허용하는 것이 권장되지 않습니다. 대부분의 공급자는 로컬 버전 체크 아웃을 지원하지 않습니다. 공급자가 로컬 버전 체크 아웃을 지원하지 않는 상태에서 체크 인한 파일을 편집하려는 경우 파일을 체크 인하려면 메모리 내 버전과 서버 버전을 수동으로 병합해야 합니다. 이 상황에서 자동 및 공급자 지원 병합은 지원되지 않습니다.  
   

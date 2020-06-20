@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b11aa11f942e6f0f801de36c7d15e17cae4141b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e64cc8961b4a576e0b67a290e84afc699b4a73ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965803"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>데이터베이스 게시(SQL Server Management Studio)
   **스크립트 생성 및 게시 마법사** 를 사용하여 전체 데이터베이스 또는 개별 데이터베이스 개체를 웹 호스팅 공급자에 게시할 수 있습니다.  

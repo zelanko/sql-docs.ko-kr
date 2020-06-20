@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921094"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 연결 관리자
   SSIS 패키지는 Azure Storage 연결 관리자를 통해 속성으로 지정된 값(스토리지 계정 이름 및 계정 키)을 사용하여 Azure Storage 계정에 연결할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62833561"
   
     2.  HTTP 대신 HTTPS를 사용하여 Azure Storage 서비스에 연결하려면 **HTTPS 사용**을 선택합니다.  
   
-4.  **확인**을 클릭하여 대화 상자를 닫습니다.  
+4.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 5.  작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.  
   

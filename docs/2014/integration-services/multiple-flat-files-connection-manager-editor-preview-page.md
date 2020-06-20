@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f16df0120e58b987009f0e8e674901e27bbfbe43
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057492"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965133"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>다중 플랫 파일 연결 관리자 편집기(미리 보기 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **미리 보기** 페이지를 사용하여 첫 번째로 선택한 원본 파일의 내용을 정의할 때 해당 내용을 열로 구분해서 볼 수 있습니다.  

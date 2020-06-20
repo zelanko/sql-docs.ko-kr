@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6cffd5ec-239a-4b21-a14c-15899ada3d27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80f13a2818810c71703fb5cccb82a1066361c3c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcb855ffda34bb1e407117a4b3efcc4a875f3aae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154646"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061133"
 ---
 # <a name="open-an-existing-solution"></a>기존 솔루션 열기
   솔루션 탐색기에서는 솔루션을 한 번에 하나만 열 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ab13081396aff46d193c1b0449d6b93042ee60d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936964"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
   기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 AlwaysOn 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법에 대해 설명합니다.  
@@ -76,7 +75,7 @@ ms.locfileid: "82922039"
          주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
          **읽기/쓰기 연결 허용**  
-         응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 따라서 고객이 읽기 전용 작업을 실수로 주 복제본에 연결하는 것을 방지할 수 있습니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+         애플리케이션 의도 속성이 **ReadWrite** 로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 따라서 고객이 읽기 전용 작업을 실수로 주 복제본에 연결하는 것을 방지할 수 있습니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -111,7 +110,7 @@ ms.locfileid: "82922039"
      각 항목이 나타내는 의미는 다음과 같습니다.  
   
      READ_WRITE  
-     응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정 된 연결은 허용 되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정 되었거나 응용 프로그램 의도 연결 속성이 설정 되지 않은 경우에는 연결이 허용 됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+     애플리케이션 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  애플리케이션 의도 속성이 **ReadWrite** 로 설정되었거나 애플리케이션 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 애플리케이션 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
      ALL  
      주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
@@ -186,7 +185,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 -   클라이언트 애플리케이션을 읽을 수 있는 보조 복제본에 연결할 수 있도록 설정하려면:  
   
-    ||필수 조건|링크|  
+    ||필수 요소|링크|  
     |-|------------------|----------|  
     |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
     |![상자](../../media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)|  

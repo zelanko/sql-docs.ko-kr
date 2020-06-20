@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37cd18427de07aa039d18b0878924b7a37104741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268498"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001117"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
   사용자가 데이터 원본 개체에 액세스하는 데 필요한 사용 권한은 Visual Database Tools가 아니라 데이터 원본에 부여됩니다. 데이터 원본 개체에 부여된 액세스 권한은 설치 환경의 보안 정책을 통해 제어됩니다. 특정 데이터베이스 개체에 액세스할 수 있는 권한이 없는 경우 데이터베이스 관리자에게 문의하십시오.  

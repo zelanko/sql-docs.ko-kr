@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ae62c014baffec44c856587b99410b9c7228e6a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965273"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>1단계: 2단원 패키지 복사
   이 태스크에서는 2단원에서 만든 Lesson 2.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 2단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 3단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -36,9 +35,9 @@ ms.locfileid: "62767465"
   
 6.  **제어 흐름** 탭 배경의 아무 곳이나 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-7.  속성 창에서 `Name` 속성을로 `Lesson 3`업데이트 합니다.  
+7.  속성 창에서 속성을로 업데이트 `Name` `Lesson 3` 합니다.  
   
-8.  **Id** 속성 상자를 클릭 한 다음 목록에서 ** \<새 id 생성>** 를 클릭 합니다.  
+8.  **ID** 속성 상자를 클릭한 다음 목록에서 **\<Generate New ID>** 를 클릭합니다.  
   
 ### <a name="to-add-the-completed-lesson2-package"></a>완성된 2단원 패키지를 추가하려면  
   
