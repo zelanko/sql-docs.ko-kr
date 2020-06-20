@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054555"
 ---
 # <a name="deleting-database-objects"></a>데이터베이스 개체 삭제
   이 자습서의 모든 추적 내용을 제거하려면 데이터베이스를 삭제하기만 하면 됩니다. 그러나 이 항목에서는 자습서에서 수행한 모든 동작을 되돌리는 단계를 진행합니다.  
@@ -109,7 +108,7 @@ ms.locfileid: "63063123"
  [DROP PROCEDURE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [DROP VIEW &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE&#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

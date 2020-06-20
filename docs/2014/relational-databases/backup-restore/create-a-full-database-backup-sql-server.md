@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f406464680a1669133dc87bdfb231c644d33fbdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958917"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "72798026"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다 . 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -83,13 +82,13 @@ ms.locfileid: "72798026"
   
 #### <a name="to-back-up-a-database"></a>데이터베이스를 백업하려면  
   
-1.  의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭 하 여 서버 트리를 확장 합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 후 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  데이터베이스 **를 확장 하**고 데이터베이스에 따라 사용자 데이터베이스를 선택 하거나 **시스템** 데이터베이스를 확장 하 고 시스템 데이터베이스를 선택 합니다.  
+2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
-4.  `Database` 목록 상자에서 데이터베이스 이름을 확인 합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
+4.  `Database`목록 상자에서 데이터베이스 이름을 확인 합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
   
 5.  모든 복구 모델(**전체**, **대량 로그**또는 **단순**)에서 데이터베이스 백업을 수행할 수 있습니다.  
   
@@ -102,11 +101,11 @@ ms.locfileid: "72798026"
     > [!NOTE]  
     >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
   
-8.  **백업 구성 요소**에 대해 `Database`를 클릭 합니다.  
+8.  **백업 구성 요소**에 대해를 클릭 `Database` 합니다.  
   
 9. **이름** 입력란에 제시된 기본 백업 세트 이름을 사용하거나 다른 이름을 입력합니다.  
   
-10. 필요할 경우 **설명** 텍스트 상자에 백업 세트에 대한 설명을 입력합니다.  
+10. 필요에 따라 **설명** 입력란에 백업 세트에 대한 설명을 입력합니다.  
   
 11. **디스크**, **테이프** 또는 **URL**을 클릭하여 백업 대상의 유형을 선택합니다. **추가**를 클릭하면 단일 미디어 세트를 포함하는 디스크나 테이프 드라이브에 대한 경로를 64개까지 선택할 수 있습니다. 선택한 경로는 **백업 대상** 목록 상자에 표시됩니다.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "72798026"
   
     -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후** (기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
   
-         기본값은 데이터베이스 설정 페이지에 있는 **서버 속성** 대화 상자의 **백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자 (데이터베이스 설정 페이지)의 **백업 미디어 기본 보존 기간 (일)** 옵션에 설정 되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
     -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
@@ -184,15 +183,15 @@ ms.locfileid: "72798026"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
-    |옵션|설명|  
+    |옵션|Description|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> {DISK &#124; TAPE} **=** _physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.|  
-    |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
+    |*backup_device* [ **,** ...*n* ]|백업 작업에 사용할 1-64개의 백업 디바이스 목록을 지정합니다. 물리적 백업 디바이스를 지정하거나, 이미 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](backup-devices-sql-server.md)를 참조하세요.|  
+    |WITH *with_options* [ **,** ...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)을 참조하세요.  
   
@@ -204,10 +203,10 @@ ms.locfileid: "72798026"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.  
   
-         설명 **=** { **'*`text`*'** | **@**_text_variable_ }  
+         설명 **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
-         이름 **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         이름 **=** { *backup_set_name*  |  **@** _backup_set_name_var_ }  
          백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.  
   
     -   기본 백업 세트 WITH 옵션  
@@ -216,13 +215,13 @@ ms.locfileid: "72798026"
   
          또는 백업 미디어의 형식을 지정하기 위해 FORMAT 옵션을 사용합니다.  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media_name_variable_ }] [ **,** mediadescription **=** { *text* | **@**_text_variable_ }]  
+         FORMAT [ **,** MEDIANAME **=** { *media_name*  |  **@** _media_name_variable_ }] [ **,** mediadescription **=** { *text*  |  **@** _text_variable_ }]  
          미디어를 처음 사용하거나 기존의 모든 데이터를 덮어쓰려고 하는 경우 FORMAT 절을 사용합니다. 필요에 따라 새 미디어에 미디어 이름과 설명을 지정합니다.  
   
         > [!IMPORTANT]  
         >  BACKUP 문의 FORMAT 절을 사용하는 경우 백업 미디어에 이전에 저장된 백업이 모두 삭제되므로 각별히 주의해야 합니다.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>A. 디스크 디바이스에 백업  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.  
@@ -272,7 +271,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  `Backup-SqlDatabase` cmdlet을 사용합니다. 전체 데이터베이스 백업 임을 명시적으로 나타내기 위해 **-backupaction** 매개 변수를 기본값인로 지정 `Database`합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
+1.  `Backup-SqlDatabase` cmdlet을 사용합니다. 전체 데이터베이스 백업 임을 명시적으로 나타내기 위해 **-backupaction** 매개 변수를 기본값인로 지정 `Database` 합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
   
      다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예에서는 `-BackupAction Database`를 지정합니다.  
   
@@ -302,11 +301,11 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [트랜잭션 로그 백업은 SQL Server를 &#40;&#41;](transaction-log-backups-sql-server.md)   
- [미디어 세트, 미디어 패밀리 및 백업 세트는 SQL Server &#40;&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [Transact-sql&#41;sp_addumpdevice &#40;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [트랜잭션 로그 백업&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [sp_addumpdevice&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [데이터베이스 &#40;일반 페이지&#41;백업](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [데이터베이스 백업 &#40;백업 옵션 페이지&#41;](back-up-database-backup-options-page.md)   
- [차등 백업 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [데이터베이스 백업&#40;일반 페이지&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [데이터베이스 백업&#40;백업 옵션 페이지&#41;](back-up-database-backup-options-page.md)   
+ [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)  

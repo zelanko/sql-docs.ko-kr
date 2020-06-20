@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 078e125136643958a1cd9203d07f632c3023a9de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662921"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053079"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 이벤트 클래스
   **Deadlock Graph** 이벤트 클래스는 교착 상태의 XML에 대해 설명합니다. 이 클래스는 **Lock:Deadlock** 이벤트 클래스와 동시에 발생합니다.  

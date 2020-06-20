@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 155fb8e9dca4f95496196ad167f7976115cef1f6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052969"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings 이벤트 클래스
   Execution Warnings 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문이나 저장 프로시저를 실행하는 동안 발생한 메모리 부여 경고를 나타냅니다. 이 이벤트 클래스를 모니터링하여 계속하기 전에 쿼리가 1초 이상 메모리를 기다려야 하는지 또는 메모리를 가져오려는 초기 시도가 실패했는지 여부를 확인할 수 있습니다. 쿼리 대기 기간에 대한 정보를 통해 성능에 영향을 미칠 수 있는 시스템이 경합 문제를 확인할 수 있습니다.  
@@ -34,8 +33,8 @@ ms.locfileid: "62662416"
 |DatabaseName|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|`bigint`|쿼리가 필요한 메모리를 가져오기 위해 기다려야 했던 밀리초 단위의 시간입니다. EventSubClass = 1(쿼리 대기)일 경우에만 유효합니다.|13|예|  
 |Error|`int`|사용되지 않습니다.|31|예|  
-|EventClass|`int`|이벤트 유형 = 67|27|아니요|  
-|EventSequence|`int`|추적 내의 지정된 이벤트 시퀀스입니다.|51|아니요|  
+|EventClass|`int`|이벤트 유형 = 67|27|예|  
+|EventSequence|`int`|추적 내의 지정된 이벤트 시퀀스입니다.|51|예|  
 |EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=쿼리 대기<br /><br /> 2=쿼리 제한 시간|21|예|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  

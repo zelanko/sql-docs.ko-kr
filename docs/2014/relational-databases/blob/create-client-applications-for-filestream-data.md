@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 77f7144231bda8be36334513584df16cf9c0e22b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7170ff88c0c7c9fd40c372467d2e3fd407a90cf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955618"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>FILESTREAM 데이터용 클라이언트 애플리케이션 만들기
   Win32를 사용하여 FILESTREAM BLOB의 데이터를 읽고 쓸 수 있습니다. 다음 단계가 필요합니다.  

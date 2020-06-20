@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a16d7565bb36eb7895db94da088927be7595f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28bbed5e92bf6301ad50486c5679e468c626e572
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63043948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062016"
 ---
 # <a name="delete-a-solution"></a>솔루션 삭제
   솔루션을 삭제하면 솔루션의 파일 항목뿐만 아니라 물리적 스토리지의 파일도 영구적으로 삭제됩니다.  

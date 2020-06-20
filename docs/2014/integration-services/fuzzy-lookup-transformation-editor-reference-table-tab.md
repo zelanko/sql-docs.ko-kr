@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966279"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>유사 항목 조회 변환 편집기(참조 테이블 탭)
   **유사 항목 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 조회 시 사용할 원본 테이블 및 인덱스를 지정할 수 있습니다. 참조 데이터 원본은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 있는 테이블이어야 합니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "66058313"
 >  유사 항목 조회 변환은 참조 테이블의 작업 복사본을 만듭니다. 아래에서 설명하는 인덱스는 일반 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인덱스가 아닌 특수 테이블을 사용하여 이 작업 테이블에 생성됩니다. **저장된 인덱스 유지 관리**를 선택하지 않으면 변환에서 기존 원본 테이블을 수정하지 않습니다. 이 경우 변환에서는 참조 테이블에 대한 변경 내용을 기반으로 작업 테이블 및 조회 인덱스 테이블을 업데이트하는 트리거를 참조 테이블에 만듭니다.  
   
 > [!NOTE]  
->  유사 `Exhaustive` 항목 조회 `MaxMemoryUsage` 변환의 및 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 또한에 대 한 `MaxOutputMatchesPerInput` 100 보다 큰 값은 **고급 편집기**에서만 지정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
+>  유사 `Exhaustive` `MaxMemoryUsage` 항목 조회 변환의 및 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용 하 여 설정할 수 있습니다. 또한에 대 한 100 보다 큰 값은 `MaxOutputMatchesPerInput` **고급 편집기**에서만 지정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
   
  유사 항목 조회 변환에 대한 자세한 내용은 [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058313"
  **OLE DB 연결 관리자**  
  목록에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
   
  **새 인덱스 생성**  

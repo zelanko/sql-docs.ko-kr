@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5699ba1f3ef8582cbdbbd41a5f849ff02440d9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704496"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017718"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자 소비자는 **ITransactionJoin:: JoinTransaction** 메서드를 사용 하 여 MS DTC (Microsoft DTC(Distributed Transaction Coordinator))에서 조정 하는 분산 트랜잭션에 참여할 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "82704496"
   
  분산 트랜잭션의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 다음과 같이 **ITransactionJoin:: JoinTransaction** 매개 변수를 구현 합니다.  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 트랜잭션 개체에 대한 포인터입니다.|  
 |*IsoLevel*|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자가 무시 합니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  

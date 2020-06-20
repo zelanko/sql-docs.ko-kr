@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965847"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 데이터베이스를 이동하는 방법에 대해 설명합니다. 시스템 데이터베이스 이동은 다음과 같은 경우에 유용할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62871540"
 > [!IMPORTANT]  
 >  시스템 데이터베이스를 이동한 다음 나중에 master 데이터베이스를 다시 작성하는 경우 다시 작성 작업에서 모든 시스템 데이터베이스를 기본 위치에 설치하기 때문에 시스템 데이터베이스를 다시 이동해야 합니다.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **항목 내용**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**항목 내용**  
   
 -   [계획된 재배치 및 예약된 디스크 유지 관리 절차](#Planned)  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62871540"
   
 -   [후속 작업: 모든 시스템 데이터베이스를 이동한 후](#Follow)  
   
--   [예제](#Examples)  
+-   [예](#Examples)  
   
 ##  <a name="planned-relocation-and-scheduled-disk-maintenance-procedure"></a><a name="Planned"></a>계획 된 재배치 및 예약 된 디스크 유지 관리 절차  
  계획된 재배치 또는 예약된 유지 관리 작업의 일부로 시스템 데이터베이스 데이터나 로그 파일을 이동하려면 다음 단계를 따릅니다. 이 절차는 master 및 리소스 데이터베이스를 제외한 모든 시스템 데이터베이스에 적용됩니다.  
@@ -194,7 +193,7 @@ ms.locfileid: "62871540"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>리소스 데이터베이스 이동  
- Resource 데이터베이스의 위치는 \<*드라이브*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\입니다. 데이터베이스는 이동할 수 없습니다.  
+ 리소스 데이터베이스의 위치는 \<*drive*> FILES\MICROSOFT SQL Server\MSSQL \<version> 입니다. \<*instance_name*> \MSSQL\Binn \\ . 데이터베이스는 이동할 수 없습니다.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>후속 작업: 모든 시스템 데이터베이스를 이동한 후  
  모든 시스템 데이터베이스를 새 드라이브 또는 볼륨으로 이동했거나 다른 드라이브 문자를 사용하는 다른 서버에 이동한 경우 다음과 같이 업데이트하세요.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871540"
   
 2.  **오류 로그** 를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
   
-3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log\\입니다.  
+3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ 입니다.  
   
 #### <a name="change-the-database-default-location"></a>데이터베이스 기본 위치 변경  
   
@@ -264,7 +263,7 @@ ms.locfileid: "62871540"
 5.  원래 위치에서 `tempdb.mdf` 및 `templog.ldf` 파일을 삭제합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [리소스 데이터베이스](resource-database.md)   
+ [Resource 데이터베이스](resource-database.md)   
  [tempdb 데이터베이스](tempdb-database.md)   
  [master 데이터베이스](master-database.md)   
  [msdb 데이터베이스](msdb-database.md)   

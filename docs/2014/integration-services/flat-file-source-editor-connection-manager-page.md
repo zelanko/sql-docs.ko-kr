@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966430"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>플랫 파일 원본 편집기(연결 관리자 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 플랫 파일 원본이 사용할 연결 관리자를 선택할 수 있습니다. 플랫 파일 원본은 구분 기호로 분리된 텍스트 파일, 고정 폭 텍스트 파일 또는 혼합 형식의 텍스트 파일에서 데이터를 읽을 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66058688"
  **플랫 파일 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결 관리자를 만듭니다.  
   
- **신규**  
+ **새 항목**  
  **플랫 파일 연결 관리자 편집기** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
   
  **원본의 Null 값을 데이터 흐름의 Null 값으로 유지**  
@@ -49,6 +48,6 @@ ms.locfileid: "66058688"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [플랫 파일 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [플랫 파일 원본 편집기 &#40;오류 출력 페이지&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
   

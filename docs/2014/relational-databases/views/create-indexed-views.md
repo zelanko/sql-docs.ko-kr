@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196431"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061518"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱싱된 뷰를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
@@ -116,7 +115,7 @@ ms.locfileid: "68196431"
     |개수|ROWSET 함수(OPENDATASOURCE, OPENQUERY, OPENROWSET 및 OPENXML)|OUTER 조인(LEFT, RIGHT 또는 FULL)|  
     |파생 테이블(FROM 절에서 SELECT 문을 지정하여 정의)|자체 조인|SELECT \* 또는 SELECT *table_name*을 사용하여 열 지정*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP 또는 AVG|CTE(공통 테이블 식)|  
-    |`float`\*`XML` `filestream` ,,,, 또는 열 `text` `ntext` `image`|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
+    |`float`\*,,,, `text` `ntext` `image` `XML` 또는 `filestream` 열|하위 쿼리|순위 함수 또는 집계 창 함수를 포함하는 OVER 절|  
     |전체 텍스트 조건자(CONTAIN, FREETEXT)|Null 허용 식을 참조하는 SUM 함수|ORDER BY|  
     |CLR 사용자 정의 집계 함수|맨 위로 이동|CUBE, ROLLUP 또는 GROUPING SETS 연산자|  
     |MIN, MAX|UNION, EXCEPT 또는 INTERSECT 연산자|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196431"
     |스파스 열 집합|인라인 또는 다중 문 테이블 반환 함수|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*인덱싱된 뷰에는 열이 `float` 포함 될 수 있습니다. 그러나 이러한 열은 클러스터형 인덱스 키에 포함 될 수 없습니다.  
+     \*인덱싱된 뷰에는 열이 포함 될 수 있지만 `float` 이러한 열은 클러스터형 인덱스 키에 포함 될 수 없습니다.  
   
 -   GROUP BY가 있는 경우 VIEW 정의는 COUNT_BIG(*)을 포함해야 하며 HAVING은 포함할 수 없습니다. 이러한 GROUP BY 제약 조건은 인덱싱된 뷰 정의에만 적용됩니다. 쿼리는 이러한 GROUP BY 제약 조건을 충족하지 않는 경우에도 실행 계획에 인덱싱된 뷰를 사용할 수 있습니다.  
   

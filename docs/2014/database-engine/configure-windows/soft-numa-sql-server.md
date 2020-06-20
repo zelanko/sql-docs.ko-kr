@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934860"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>소프트 NUMA를 사용하도록 SQL Server 구성(SQL Server)
 최신 프로세서는 소켓당 여러 개에서 많은 코어를 가지고 있습니다. 일반적으로 각 소켓은 단일 NUMA 노드로 표시됩니다. SQL Server 데이터베이스 엔진은 여러 내부 구조를 분할하며 NUMA 노드에 따라 서비스 스레드를 분할합니다. 소켓 당 10 개 이상의 코어가 포함 된 프로세서의 경우 소프트웨어 NUMA (소프트 NUMA)를 사용 하 여 하드웨어 NUMA 노드를 분할 하면 일반적으로 확장성 및 성능이 향상 됩니다.   
@@ -84,7 +83,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      다음 예제에서는 DL580 G9 서버가 있고 4개의 소켓에서 소켓당 18개의 코어가 있으며 각 소켓은 자체 K 그룹에 있다고 가정합니다. 만들 수 있는 소프트 NUMA 구성은 다음과 유사할 것입니다. (노드당 6개의 코어, 그룹당 3개의 노드, 4개의 그룹).  
   
-    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|형식|값 이름|값 데이터|  
+    |K 그룹이 여러 개인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 서버의 예|Type|값 이름|값 데이터|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -113,7 +112,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
      추가 예:  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|형식|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -125,7 +124,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     > [!TIP]  
     >  CPU 60 - 63을 지정하려면 QWORD 값 F000000000000000 또는 BINARY 값 1111000000000000000000000000000000000000000000000000000000000000을 사용합니다.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|형식|값 이름|값 데이터|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|값 이름|값 데이터|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -134,7 +133,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008 R2|형식|값 이름|값 데이터|  
+    |SQL Server 2008 R2|Type|값 이름|값 데이터|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|그룹|0|  
@@ -143,13 +142,13 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|그룹|0|  
   
-    |SQL Server 2008|형식|값 이름|값 데이터|  
+    |SQL Server 2008|Type|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|형식|값 이름|값 데이터|  
+    |SQL Server 2005|Type|값 이름|값 데이터|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
@@ -157,7 +156,7 @@ SQL Server 2014 서비스 팩 2부터 시작 시 데이터베이스 엔진 서�
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server&#41;&#40;NUMA 노드에 TCP IP 포트 매핑](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [affinity mask 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
+ [선호도 마스크 서버 구성 옵션](affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058935"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966723"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>열 내보내기 변환 편집기(오류 출력 페이지)
   **열 내보내기 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 방법을 지정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058935"
  **입/출력**  
  출력의 이름을 확인합니다. 이름을 클릭하여 열을 포함할 뷰를 확장할 수 있습니다.  
   
- **열의**  
+ **열**  
  **열 내보내기 변환 편집기** 대화 상자의 **열** 페이지에서 선택한 출력 열을 표시합니다.  
   
  **오류**  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038288"
 ---
 # <a name="replication-agent-profiles"></a>복제 에이전트 프로필
   복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 웹 동기화를 사용하는 병합 구독의 경우 구독자에서 프로필을 다운로드하고 저장합니다. 프로필이 변경되면 다음에 병합 에이전트가 실행될 때 구독자에 있는 프로필이 업데이트됩니다. 웹 동기화에 대한 자세한 내용은 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)를 참조하십시오.  

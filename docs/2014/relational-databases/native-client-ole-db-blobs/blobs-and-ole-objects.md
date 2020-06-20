@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1bdea3453c38303dc6aaa6989f905db243d0be90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e96267a04c12c1a27684009d6cb206415a9b7a1f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998839"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ISequentialStream** Native Client OLE DB 공급자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar (max)**, **nvarchar (max**), **varbinary (max)** 및 xml 데이터 형식에 대 한 소비자 액세스를 blob (binary large object)로 지원 하기 위해 ISequentialStream 인터페이스를 노출 합니다. **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  

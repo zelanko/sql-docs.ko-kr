@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72f15886e7105dde8d0e15dd0598a7474ed7e39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038130"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
   게시가 생성된 후에는 아티클을 추가 및 삭제할 수 있습니다. 아티클 추가 작업은 언제든지 수행할 수 있지만 아티클 삭제에 필요한 동작은 복제 유형과 아티클 삭제 시기에 따라 다릅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "73882336"
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅샷을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
 > [!NOTE]
->  병합 게시에 아티클을 추가 하 고 기존 아티클이 새 아티클에 종속 된 경우 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)의 ** \@processing_order** 매개 변수를 사용 하 여 두 아티클에 대 한 처리 순서를 지정 해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가 하는 경우: **sp_addmergearticle**의 ** \@processing_order** 매개 변수에 값 **1** 을 지정 합니다. 매개 **변수 \@아티클의**테이블 이름을 지정 하 여 **sp_changemergearticle**의 ** \@processing_order** 매개 변수에 값 **2** 를 지정 합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+>  병합 게시에 아티클을 추가 하 고 기존 아티클이 새 아티클에 종속 된 경우 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 및 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)의 ** \@ processing_order** 매개 변수를 사용 하 여 두 아티클에 대 한 처리 순서를 지정 해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가 하는 경우: **sp_addmergearticle**의 ** \@ processing_order** 매개 변수에 값 **1** 을 지정 하 고 매개 변수 ** \@ 아티클의**테이블 이름을 지정 하 여 **sp_changemergearticle**의 ** \@ processing_order** 매개 변수에 값 **2** 를 지정 합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "73882336"
 ## <a name="dropping-articles"></a>아티클 삭제  
  언제든지 아티클을 게시에서 삭제할 수 있지만 다음 동작을 고려해야 합니다.  
   
--   게시에서 아티클을 삭제해도 해당 개체가 게시 데이터베이스에서 삭제되거나 구독 데이터베이스의 해당 개체가 삭제되지 않습니다. 필요한 경우 DROP \<Object>를 사용하여 이러한 개체를 제거합니다. 외래 키 제약 조건을 통해 다른 게시된 아티클과 관련된 아티클을 삭제하는 경우에는 테이블을 구독자에서 수동으로 삭제하거나, 적절한 DROP \<Object> 문이 포함된 스크립트를 지정하고 요청 시 실행하여 테이블을 삭제하는 것이 좋습니다. 자세한 내용은 [동기화 중 스크립트 실행&#40;복제 Transact-SQL 프로그래밍&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)을 참조하세요.  
+-   게시에서 아티클을 삭제해도 해당 개체가 게시 데이터베이스에서 삭제되거나 구독 데이터베이스의 해당 개체가 삭제되지 않습니다. \<Object>필요한 경우 DROP을 사용 하 여 이러한 개체를 제거 합니다. Foreign key 제약 조건을 통해 다른 게시 된 아티클과 관련 된 아티클을 삭제 하는 경우 구독자에서 수동으로 또는 요청 시 스크립트 실행을 사용 하 여 테이블을 삭제 하는 것이 좋습니다. 적절 한 DROP 문을 포함 하는 스크립트를 지정 \<Object> 합니다. 자세한 내용은 [동기화 중 스크립트 실행&#40;복제 Transact-SQL 프로그래밍&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md)을 참조하세요.  
   
 -   호환성 수준이 90RTM 이상인 병합 게시의 경우에는 언제든지 아티클을 삭제할 수 있지만 새 스냅샷이 필요합니다. 또한 다음 작업도 수행해야 합니다.  
   

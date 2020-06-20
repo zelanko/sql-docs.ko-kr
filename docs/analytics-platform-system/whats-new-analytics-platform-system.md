@@ -2,7 +2,6 @@
 title: 새로운 기능
 description: MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 확장 온-프레미스 어플라이언스 인 Microsoft Analytics Platform System의 새로운 기능을 참조 하세요.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039829"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>확장 MPP 데이터 웨어하우스의 분석 플랫폼 시스템의 새로운 기능
 최신 어플라이언스 업데이트 Microsoft Analytics Platform System (APS)의 새로운 기능을 참조 하세요. APS는 MPP SQL Server 병렬 데이터 웨어하우스를 호스팅하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -131,7 +130,7 @@ from cte;
 릴리스 날짜-7 월 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>DBCC 명령은 동시성 슬롯을 사용 하지 않습니다 (동작 변경).
-APS는 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)와 같은 t-sql [DBCC 명령의](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 하위 집합을 지원 합니다. 이러한 명령은 이전에 실행될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)을 사용했습니다. 그러면 `DBCC` 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이 실행 됩니다.
+APS는 [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql)와 같은 t-sql [DBCC 명령의](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) 하위 집합을 지원 합니다. 이러한 명령은 이전에 실행될 수 있는 사용자 로드/쿼리 수를 줄이는 [동시성 슬롯](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots)을 사용했습니다. `DBCC`그러면 전체 쿼리 실행 성능을 향상 시키는 사용자 동시성 슬롯을 사용 하지 않는 로컬 큐에서 명령이 실행 됩니다.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>일부 메타 데이터 호출을 카탈로그 개체로 바꿉니다.
 SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개체를 사용 하는 경우 APS의 성능이 개선 되었습니다. CU 7.1부터 이러한 메타 데이터 호출 중 일부는 이제 기본적으로 카탈로그 개체를 사용 합니다. 메타 데이터 쿼리를 사용 하는 고객이 문제를 해결 하는 경우이 동작은 [기능 전환](appliance-feature-switch.md) 에 의해 해제 될 수 있습니다.
@@ -139,7 +138,7 @@ SMO를 사용 하는 대신 메타 데이터 호출에 대해 카탈로그 개�
 ### <a name="bug-fixes"></a>버그 수정
 Microsoft는 APS CU 7.1을 사용 하 여 SQL Server 2016 SP2 CU2로 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| 제목 | 설명 |
+| 제목 | Description |
 |:---|:---|
 | **잠재적 튜플 이동 교착 상태** |업그레이드는 분산 트랜잭션과 튜플 이동 기 백그라운드 스레드에서 교착 상태의 긴 가능성을 수정 합니다. CU 7.1을 설치한 후 TF634를 사용 하 여 시작 매개 변수 또는 전역 추적 플래그로 SQL Server 튜플 이동 기를 중지 하는 고객은이를 안전 하 게 제거할 수 있습니다. | 
 | **특정 지연/리드 쿼리 실패** |오류가 발생 하는 중첩 된 지연/리드 함수를 사용 하는 CCI 테이블의 특정 쿼리는 이제이 업그레이드로 수정 되었습니다. | 
@@ -155,7 +154,7 @@ APS 2016은 AU7로 업그레이드 하기 위한 필수 구성 요소입니다. 
 APS AU7는 기본적으로 통계를 자동으로 만들고 업데이트 합니다. 통계 설정을 업데이트 하기 위해 관리자는 [Configuration Manager](appliance-configuration.md#CMTasks)의 새로운 기능 스위치 메뉴 항목을 사용할 수 있습니다. [기능 스위치](appliance-feature-switch.md) 는 통계의 자동 생성, 자동 업데이트 및 비동기 업데이트 동작을 제어 합니다. [ALTER DATABASE (병렬 데이터 웨어하우스)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) 문을 사용 하 여 통계 설정을 업데이트할 수도 있습니다.
 
 ### <a name="t-sql"></a>T-SQL
-이제 @var 선택이 지원 됩니다. 자세한 내용은 [지역 변수 선택](/sql/t-sql/language-elements/select-local-variable-transact-sql) 을 참조 하세요. 
+@var이제 선택이 지원 됩니다. 자세한 내용은 [지역 변수 선택](/sql/t-sql/language-elements/select-local-variable-transact-sql) 을 참조 하세요. 
 
 이제 쿼리 힌트 해시 및 순서 그룹이 지원 됩니다. 자세한 내용은 [힌트 (transact-sql)-쿼리](/sql/t-sql/queries/hints-transact-sql-query) 를 참조 하세요.
 
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [bcp 유틸리티]:/sql/tools/bcp-utility
 [없으면]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[번호]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [행 또는 범위]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

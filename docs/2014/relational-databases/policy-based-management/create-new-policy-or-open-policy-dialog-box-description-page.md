@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005737"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책에 대한 추가 정보 및 설명을 추가할 수 있습니다.  

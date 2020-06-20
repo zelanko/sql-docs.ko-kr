@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c88949dd81ccfd438c9403a1b640bc9c78b03a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4691cb0a700137ec9571717031639f4ebb8f3cdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704926"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039355"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
   이 예제에서는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정의 암호를 변경하는 방법을 보여 줍니다.  

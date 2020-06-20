@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058624"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966413"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>플랫 파일 원본 편집기(오류 출력 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열의 속성을 설정할 수 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66058624"
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
- **열의**  
+ **열**  
  **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
   
  **오류**  
@@ -54,6 +53,6 @@ ms.locfileid: "66058624"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [플랫 파일 원본 편집기 &#40;연결 관리자 페이지&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [플랫 파일 원본 편집기 &#40;열 페이지&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Flat File Connection Manager](connection-manager/file-connection-manager.md)  
+ [플랫 파일 연결 관리자](connection-manager/file-connection-manager.md)  
   
   

@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929911"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965973"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리(SQL Server)
   이 항목에는 다음과 관련된 내용이 포함되어 있습니다.  
@@ -354,8 +353,8 @@ ms.locfileid: "76929911"
   
 ## <a name="see-also"></a>참고 항목  
  [포함 된 데이터베이스](contained-databases.md)   
- [다른 서버에 데이터베이스 복사](copy-databases-to-other-servers.md)   
- [데이터베이스 분리 및 연결 &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [데이터베이스를 다른 서버로 복사](copy-databases-to-other-servers.md)   
+ [데이터베이스 분리 및 연결&#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [로그 전달 보조 &#40;로 장애 조치 (Failover) SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [데이터베이스 미러링 세션 중 역할 전환 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [암호화 된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038072"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시를 만드는 방법에 대해 설명합니다.  
@@ -45,13 +44,13 @@ ms.locfileid: "73882330"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> 제한 사항  
   
--   게시 및 아티클 이름에는 %, \*, [, ], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ', \,/, \< >입니다. 이러한 문자를 포함하는 데이터베이스 개체를 복제하려면 마법사의 **아티클** 페이지에서 사용할 수 있는 **아티클 속성 - \<아티클>** 대화 상자에서 개체 이름과 다른 아티클 이름을 지정해야 합니다.  
+-   게시 및 아티클 이름에는 %, \*, [, ], |, :, ", ? 등의 문자를 포함할 수 없습니다. , ' , \ , / , \< , >. 이러한 문자를 포함 하는 데이터베이스 개체를 복제 하려면 마법사의 **아티클** 페이지에서 사용할 수 있는 **아티클 속성- \<Article> ** 대화 상자에서 개체 이름과 다른 아티클 이름을 지정 해야 합니다.  
   
 ###  <a name="security"></a><a name="Security"></a> 보안  
  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 를 사용합니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 **게시 속성 - \<게시>** 대화 상자에서 게시 속성을 보고 수정합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md)를 참조하세요.  
+ 새 게시 마법사를 사용하여 게시를 만들고 아티클을 정의할 수 있습니다. 게시를 만든 후 게시 **속성- \<Publication> ** 대화 상자에서 게시 속성을 보고 수정 합니다. Oracle 데이터베이스에서 게시를 만드는 방법에 대한 자세한 내용은 [Oracle 데이터베이스에서 게시 만들기](create-a-publication-from-an-oracle-database.md)를 참조하세요.  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73882330"
   
     -   결과 집합이 비어 있으면 로그 판독기 에이전트 작업을 만듭니다. 게시자에서 [sp_addlogreader_agent&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql)를 실행합니다. **\@job_name** 및 **\@password**에 에이전트가 실행되는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 자격 증명을 지정합니다. 에이전트가 게시자에 연결할 때 SQL Server 인증을 사용하는 경우에도 **\@publisher_security_mode**에 대해 값 **0**을 지정하고 **\@publisher_login** 및 **\@publisher_password**에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다. 3단계로 진행합니다.  
   
-3.  게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. ** \@게시**에 대 한 게시 이름을 지정 하 고 ** \@repl_freq** 매개 변수에 대해 스냅숏 게시 `snapshot` 에 값을 지정 하거나 트랜잭션 게시 `continuous` 에 값을 지정 합니다. 다른 게시 옵션을 지정합니다. 이렇게 하면 게시가 정의됩니다.  
+3.  게시자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. ** \@ 게시**에 대 한 게시 이름을 지정 하 고 ** \@ repl_freq** 매개 변수에 대해 `snapshot` 스냅숏 게시에 값을 지정 하거나 트랜잭션 게시에 값을 지정 합니다 `continuous` . 다른 게시 옵션을 지정합니다. 이렇게 하면 게시가 정의됩니다.  
   
     > [!NOTE]  
     >  게시 이름은 다음과 같은 문자를 포함할 수 없습니다:  

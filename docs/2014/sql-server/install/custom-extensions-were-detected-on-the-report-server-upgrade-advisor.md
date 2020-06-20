@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059380"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>보고서 서버에서 사용자 지정 확장 프로그램이 검색됨(업그레이드 관리자)
   업그레이드 관리자가 구성 파일에서 사용자 지정 확장 프로그램 설정을 검색했으며, 이는 데이터 처리, 배달, 렌더링, 보안 또는 인증을 위한 하나 이상의 사용자 지정 확장이 사용자 설치에 포함되어 있음을 나타냅니다. 업그레이드 관리자는 업그레이드된 보고서 서버와 함께 확장 프로그램 구성 설정을 이동합니다. 그러나 사용자 지정 확장 프로그램이 기존 보고서 서버 설치 폴더에 설치되어 있으면 업그레이드 프로세스 중 해당 사용자 지정 확장 프로그램에 대한 어셈블리 파일이 새 설치 폴더로 이동되지 않습니다. 이 경우 업그레이드가 완료된 후 어셈블리 파일을 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 폴더로 이동해야 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "71952592"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증을 위한 사용자 지정 확장 프로그램을 만들 수 있도록 하는 확장 가능한 아키텍처를 제공 합니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개발자가 데이터 처리, 배달, 렌더링, 보안 및 인증을 위한 사용자 지정 확장 프로그램을 만들 수 있도록 하는 확장 가능한 아키텍처를 제공 합니다.  
   
  사용자 지정 확장 프로그램 또는 어셈블리가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에서 사용되는 경우 설치 프로그램을 사용하여 업그레이드를 수행할 수 있지만 업그레이드가 완료된 후 확장 프로그램을 새 설치 위치로 이동하거나 업그레이드 전 단계를 수행해야 합니다.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952592"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>사용자 지정 데이터 처리 또는 배달 확장 프로그램에 대해 수행할 업그레이드 후 단계  
   
-1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더는 Files\Microsoft SQL Server \ MSRS10_50에 있습니다. \<> \report server를 *instance_name* 합니다.  
+1.  확장 프로그램 파일을 새 보고서 서버 프로그램 폴더로 이동합니다. 기본적으로 보고서 서버 프로그램 폴더는 Files\Microsoft SQL Server \ MSRS10_50에 있습니다. \<*instance_name*> \report server  
   
  자세한 내용은 SQL Server 온라인 설명서의 "데이터 처리 확장 프로그램 배포" 및 "배달 확장 프로그램 구현"을 참조하십시오.  
   

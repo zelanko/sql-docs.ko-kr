@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86d2627354fcf3ec6ed80675abeb552f3ff888da
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b843710b9418cfd3f40411e49a30a1c23b7b8113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039134"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns/IRow::Open 및 ISequentialStream을 사용하여 열 인출
   대형 데이터는 `ISequentialStream` 인터페이스를 사용하여 바인딩하거나 검색할 수 있습니다. 바인딩된 열에서 상태 플래그 DBSTATUS_S_TRUNCATED는 데이터가 잘렸음을 나타냅니다.  

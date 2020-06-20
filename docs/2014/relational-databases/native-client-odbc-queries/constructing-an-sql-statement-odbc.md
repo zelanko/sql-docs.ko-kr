@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee3dbc4c685337a930a8d7aa5ce741b2e0b876b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e9bfe0a51ec33b310dae0c73f51ff72687811d02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018608"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL 문 생성(ODBC)
   ODBC 애플리케이션에서는 거의 모든 데이터베이스 액세스를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 수행합니다. 이러한 문의 형식은 애플리케이션의 요구 사항에 따라 달라집니다. SQL 문은 다음과 같은 방법으로 생성할 수 있습니다.  

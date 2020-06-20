@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037806"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 인증서 및 비대칭 키
   PKI(퍼블릭 키 암호화)는 사용자가 *퍼블릭* 키 및 *프라이빗* 키를 만드는 메시지 비밀화의 형식입니다. 프라이빗 키는 비밀을 유지하지만 퍼블릭 키는 다른 사람에게 배포할 수 있습니다. 키가 수학적으로 서로 연관되어 있더라도 퍼블릭 키로 프라이빗 키를 쉽게 이끌어 낼 수 없습니다. 퍼블릭 키는 데이터를 암호화하는 데 사용되고 프라이빗 키는 데이터의 암호를 해독하는 데 사용됩니다. 퍼블릭 키를 사용하여 암호화된 메시지는 올바른 프라이빗 키를 사용해야만 암호를 해독할 수 있습니다. 따라서 서로 다른 두 개의 키가 있을 경우 이러한 키는 *비대칭*입니다.  
@@ -67,8 +66,8 @@ ms.locfileid: "75244510"
 |||  
 |-|-|  
 |도구|목적|  
-|[makecert.exe](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|인증서를 만듭니다.|  
-|[sn.exe](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|대칭 키에 대한 강력한 이름을 만듭니다.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|인증서를 만듭니다.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|대칭 키에 대한 강력한 이름을 만듭니다.|  
   
 ## <a name="related-tasks"></a>관련 작업  
  [암호화 알고리즘 선택](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +77,6 @@ ms.locfileid: "75244510"
  [CREATE CERTIFICATE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>참고 항목  
- [sys. 인증서 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [투명한 데이터 암호화&#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

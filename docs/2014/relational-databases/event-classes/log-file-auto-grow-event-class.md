@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7e2df6f0c16ce747617af7db180398042fbb30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052899"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow 이벤트 클래스
   **Log File Auto Grow** 이벤트 클래스는 로그 파일이 자동으로 증가했음을 나타냅니다. 이 이벤트는 ALTER DATABASE 문의 명시적인 실행으로 로그 파일이 증가하는 경우에는 트리거되지 않습니다.  

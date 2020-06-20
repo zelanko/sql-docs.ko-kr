@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4bfaa4ba101a31f6834595e2b2241a7ea6e15b36
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c1919d516c8ad12b9e89eb4759186d8ddde752d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018954"
 ---
 # <a name="add-a-data-source-odbc"></a>데이터 원본 추가(ODBC)
   ODBC 관리자를 사용 하 여 프로그래밍 방식으로 ( [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md)사용) 또는 파일을 만들어 데이터 원본을 추가할 수 있습니다.  

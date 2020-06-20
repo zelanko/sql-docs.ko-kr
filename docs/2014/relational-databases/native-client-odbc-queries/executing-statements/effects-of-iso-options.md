@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdbf37ee386cb31e8d8dcf29ff1f45d0f21a681f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 79deff1d77f4020aa7484629bac78d360ed7691f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999179"
 ---
 # <a name="effects-of-iso-options"></a>ISO 옵션의 효과
   ODBC 표준은 ISO 표준과 거의 일치하며, ODBC 애플리케이션은 ODBC 드라이버가 표준 동작을 수행할 것으로 예상합니다. Native Client ODBC 드라이버는 해당 동작이 ODBC 표준에 정의 된 것과 더 밀접 하 게 일치 하도록 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 항상 연결 하는 SQL Server 버전에서 사용할 수 있는 ISO 옵션을 사용 합니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eee3452c109bcd519cb24ba96b621ec25c0110df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4ebbf6e83524988822b6158b3524d7fff4bb40e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018213"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>테이블 반환 매개 변수 행 집합 만들기
   소비자는 테이블 반환 매개 변수에 대해 모든 행 집합 개체를 제공할 수 있지만 일반적으로 행 집합 개체는 백 엔드 데이터 저장소에 대해 구현되므로 성능이 제한되는 경우가 많습니다. 이러한 이유로 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자를 사용하여 메모리 내 데이터에 대해 특수화된 행 집합 개체를 만들 수 있습니다. 이 특수 한 메모리 내 행 집합 개체는 테이블 반환 매개 변수 행 집합 이라는 새 COM 개체입니다. 이 개체는 매개 변수 집합과 비슷한 기능을 제공합니다.  

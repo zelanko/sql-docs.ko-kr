@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b143b0a96045bd9d442beb225047d674c569c92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022650"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005372"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
   Oracle 데이터 형식 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식이 항상 정확히 일치하지는 않습니다. Oracle 테이블을 게시할 때 가능한 일치하는 데이터 형식이 자동으로 선택됩니다. 단일 데이터 형식 매핑이 명확하지 않으면 대체 데이터 형식 매핑이 제공됩니다. 대체 매핑을 선택하는 방법은 아래의 "대체 데이터 형식 매핑 지정" 섹션을 참조하십시오.  

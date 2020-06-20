@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 84672ddf6a9b2912f3d53eef8d40727369376ba5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44bf9789e98c29f89644a6cd1a191d4b8fa7eef7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062409"
 ---
 # <a name="microsoft-sharepoint-2007-is-installed-upgrade-advisor"></a>Microsoft SharePoint 2007이 설치됨(업그레이드 관리자)
   업그레이드 관리자가 지원되지 않는 버전의 SharePoint 제품 또는 기술을 발견했습니다.  
@@ -28,7 +27,7 @@ ms.locfileid: "71952087"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SharePoint 2007에서 업그레이드 하거나 설치 하지 않습니다. 업그레이드가 차단됩니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 SharePoint 2007에서 업그레이드 하거나 설치 하지 않습니다. 업그레이드가 차단됩니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  업그레이드를 계속하려면 SharePoint 2007을 제거하거나 SharePoint 2007을 SharePoint 2010 제품으로 업그레이드해야 합니다. SharePoint 설치를 업데이트한 후 업그레이드 관리자를 다시 실행하여 다른 업그레이드 문제가 없는지 확인합니다.  

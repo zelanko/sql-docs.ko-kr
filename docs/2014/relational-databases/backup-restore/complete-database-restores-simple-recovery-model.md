@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958993"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>전체 데이터베이스 복원(단순 복구 모델)
   전체 데이터베이스 복원의 목적은 전체 데이터베이스를 복원하는 것입니다. 복원하는 동안 전체 데이터베이스는 오프라인 상태가 됩니다. 데이터베이스의 일부를 온라인에 연결하기 전에 데이터베이스의 모든 부분의 지정 시간이 같고 커밋되지 않은 트랜잭션이 없는 일치하는 지점으로 모든 데이터를 복구합니다.  
@@ -60,7 +59,7 @@ ms.locfileid: "62877147"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="example-transact-sql"></a><a name="Example"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> 예(Transact-SQL)  
  다음 예에서는 먼저 [BACKUP](/sql/t-sql/statements/backup-transact-sql) 문을 사용하여 전체 데이터베이스 백업과 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 차등 데이터베이스 백업을 만드는 방법을 보여 줍니다. 그런 다음 이러한 백업을 차례로 복원합니다. 데이터베이스는 차등 데이터베이스 백업이 완료된 시점의 상태로 복원됩니다.  
   
  이 예에서는 전체 데이터베이스 복원 시나리오에 따른 복원 시퀀스의 중요 옵션을 보여 줍니다. *복원 순서* 는 하나 이상의 복원 단계를 통해 데이터를 이동시키는 하나 이상의 복원 작업으로 구성됩니다. 이 용도와 관련 없는 구문 및 세부 사항은 생략됩니다. 데이터베이스를 복구할 때 명확성을 위해 RECOVERY 옵션(기본값)을 명시적으로 지정하는 것이 좋습니다.  
@@ -116,9 +115,9 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [RESTORE&#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Transact-sql&#41;sp_addumpdevice &#40;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [SQL Server&#41;&#40;전체 데이터베이스 백업](full-database-backups-sql-server.md)   
- [차등 백업 &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [sp_addumpdevice&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [전체 데이터베이스 백업&#40;SQL Server&#41;](full-database-backups-sql-server.md)   
+ [차등 백업&#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [백업 개요&#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   

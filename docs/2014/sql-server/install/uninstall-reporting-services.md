@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c764a00-d4bc-465d-b32e-e4efce052ce4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4ef45498efdd86f5abe885108e4b140ba930cc58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e15832efb29258c451036397f8224e71990b8faa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062383"
 ---
 # <a name="uninstall-reporting-services"></a>Reporting Services 제거
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 제거해도 사용자가 만든 콘텐츠나 수정한 구성은 제거되지 않습니다. 그러나 제거를 완료한 후에도 필요한 콘텐츠가 있는 경우 제거 프로세스를 시작하기 전에 콘텐츠를 복사하는 것이 좋습니다.
@@ -40,7 +39,7 @@ ms.locfileid: "78172234"
 -   **보고서 서버 경고 데이터베이스:** ReportingService_7f616e2d253040e8ab5653b3c09a065e_Alerting
 
 ### <a name="uninstall-the-add-in-for-sharepoint-products"></a>SharePoint 제품을 위한 추가 기능을 제거합니다.
- 컴퓨터에서 추가 기능을 제거할 때는 파일만 제거하거나 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능도 제거할지를 선택할 수 있습니다. SharePoint 제품용 추가 기능을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 제거 하는 방법에 대 한 자세한 내용은 sharepoint [2010 및 sharepoint 2013&#41;&#40;Reporting Services 추가 기능 설치 또는 제거 ](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조 하세요.
+ 컴퓨터에서 추가 기능을 제거할 때는 파일만 제거하거나 팜에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능도 제거할지를 선택할 수 있습니다. SharePoint 제품용 추가 기능을 제거 하는 방법에 대 한 자세한 내용은 sharepoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [2010 및 sharepoint 2013&#41;&#40;Reporting Services 추가 기능 설치 또는 제거 ](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조 하세요.
 
 ## <a name="uninstall-native-mode"></a>기본 모드 제거
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드를 제거하면 설치 후에 **만들었거나** 또는 **수정한** 내용은 그대로 남아 있습니다. 예를 들어 데이터베이스 파일, 로그 파일, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일 및 보고서와 데이터 원본 파일과 같은 콘텐츠 항목이 포함됩니다.

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b693cb7a73f63cfbb72bffe45f47360fc503961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068543"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Oracle 게시자를 위한 성능 튜닝
   Oracle 게시 아키텍처는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시 아키텍처와 유사하므로 성능을 개선하기 위한 Oracle 복제 튜닝의 첫 단계는 [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md)의 일반 튜닝 권장 사항을 따르는 것입니다.  

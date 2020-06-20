@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7aa2eb52-b6b7-4dd3-8483-8ef00d9f0435
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35399614c69d63f3d7daae2a64f670d7ccfbaef0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f3a9bd579441c1838d911ffdca94dd7c1ac16bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068500"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>게시 정보, 경고(스냅샷 게시, SQL Server 2005 이상)
   **경고** 탭은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 실행하는 배포자에서 사용할 수 있습니다. **경고** 탭을 사용하면 선택한 게시에 대해 다음 태스크를 수행할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c4c97e61191da4d51830b1bc8d44bfc98f698a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997954"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독)
   **배포자에서 구독자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 배포 에이전트에 대한 자세한 정보를 표시합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "62630553"
  **종료 시간**  
  세션의 종료 시간입니다. 에이전트가 중지되지 않은 경우 이 필드는 비어 있습니다.  
   
- **작업**  
+ **기간**  
  이 세션에서 배포 에이전트가 실행된 시간입니다. 에이전트가 현재 실행되고 있는 경우 이 시간은 경과된 시간을 나타내고 에이전트 세션이 종료된 경우에는 총 세션 시간을 나타냅니다.  
   
  **오류 메시지**  

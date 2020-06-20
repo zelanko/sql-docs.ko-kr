@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9544d2d2b2c505e3557d9cd0ae348b41bec5e821
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5491f3c4dfd47cac4047d0409c78001be80d6f13
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871704"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965836"
 ---
 # <a name="move-database-files"></a>데이터베이스 파일 이동
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문의 FILENAME 절에 새 파일 위치를 지정하여 시스템 및 사용자 데이터베이스를 이동할 수 있습니다. 데이터, 로그 및 전체 텍스트 카탈로그 파일도 이런 식으로 이동할 수 있습니다. 이 방법은 다음과 같은 경우 유용합니다.  

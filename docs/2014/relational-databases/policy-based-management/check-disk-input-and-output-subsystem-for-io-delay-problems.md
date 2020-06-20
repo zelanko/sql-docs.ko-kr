@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5cdcc410cc83d7f7fa53d937f6011ad2624655fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 627e48ef015a4b31d7fe7b514da330d68c6f72c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068995"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>Check Disk Input and Output Subsystem for IO Delay Problems
   이 규칙은 이벤트 로그에서 오류 메시지 833을 검사합니다. 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 읽기 또는 쓰기 요청을 실행하여 해당 요청이 반환되는 데 15초 이상 소요되었음을 나타냅니다. 이 오류는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 보고하며 디스크 I/O 하위 시스템에 문제가 있음을 나타냅니다. 이렇게 긴 시간의 지연이 발생하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 환경의 성능이 심각하게 저하될 수 있습니다.  

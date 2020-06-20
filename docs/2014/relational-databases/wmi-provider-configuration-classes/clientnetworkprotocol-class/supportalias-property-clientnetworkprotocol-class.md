@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061413"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>SupportAlias 속성(ClientNetworkProtocol 클래스)
   [Setordervalue 메서드 (ClientNetworkProtocol 클래스)](clientnetworkprotocol-class.md) 에서 지정한 현재 네트워크 프로토콜이 별칭을 지원 하는지 여부를 지정 하는 부울 속성을 가져옵니다.  

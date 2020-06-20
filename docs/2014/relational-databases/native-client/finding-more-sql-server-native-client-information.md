@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667189cc614f04dca0b5a5043bfbac9512779d94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038882"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>SQL Server Native Client 추가 정보 찾기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 및 다른 데이터 액세스 프로그래밍 유형에 대한 자세한 내용은 다음 온라인 리소스를 참조하십시오.  

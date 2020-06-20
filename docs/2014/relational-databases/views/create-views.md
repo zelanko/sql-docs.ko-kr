@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8280f6d65d7252cad423abef849207111492c044
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211662"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061509"
 ---
 # <a name="create-views"></a>뷰 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 뷰를 만들 수 있습니다. 뷰는 다음과 같은 용도로 사용할 수 있습니다.  

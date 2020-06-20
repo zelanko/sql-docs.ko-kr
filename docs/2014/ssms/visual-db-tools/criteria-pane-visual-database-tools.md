@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061829"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>조건 창(Visual Database Tools)
   조건 창에서 스프레드시트 모양의 표 형태에 선택한 항목을 입력하여 표시할 데이터 열, 결과 정렬 방법, 선택할 행 등의 쿼리 옵션을 지정할 수 있습니다. 조건 창에서 지정할 수 있는 내용은 다음과 같습니다.  

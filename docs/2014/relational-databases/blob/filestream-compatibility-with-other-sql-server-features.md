@@ -12,24 +12,23 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53bb99ea094261fd96f2a821dfaa5203e9796d8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955493"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
   FILESTREAM 데이터는 파일 시스템에 있으므로 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 기능과 함께 FILESTREAM을 사용할 경우 몇 가지 고려 사항, 지침 및 제한 사항에 대해 설명합니다.  
   
 -   [SSIS(SQL Server Integration Services)](#ssis)  
   
--   [분산 쿼리 및 연결 된 서버](#distqueries)  
+-   [분산 쿼리 및 연결된 서버](#distqueries)  
   
 -   [암호화](#encryption)  
   
--   [데이터베이스 스냅숏](#DatabaseSnapshot)  
+-   [데이터베이스 스냅샷](#DatabaseSnapshot)  
   
 -   [복제](#Replication)  
   
@@ -39,11 +38,11 @@ ms.locfileid: "66010189"
   
 -   [전체 텍스트 인덱싱](#FullText)  
   
--   [장애 조치(failover) 클러스터링](#FailoverClustering)  
+-   [장애 조치(Failover) 클러스터링](#FailoverClustering)  
   
 -   [SQL Server Express](#SQLServerExpress)  
   
--   [포함 된 데이터베이스](#contained)  
+-   [포함된 데이터베이스](#contained)  
   
 ##  <a name="sql-server-integration-services-ssis"></a><a name="ssis"></a> SSIS(SQL Server Integration Services)  
  SSIS(SQL Server Integration Services)는 DT_IMAGE SSIS 데이터 형식을 사용하여 다른 BLOB 데이터와 마찬가지로 데이터 흐름의 FILESTREAM 데이터를 처리합니다.  
@@ -51,13 +50,13 @@ ms.locfileid: "66010189"
  열 가져오기 변환을 사용하여 파일 시스템에서 FILESTREAM 열로 파일을 로드할 수 있습니다. 열 내보내기 변환을 사용하여 FILESTREAM 열에서 파일 시스템의 다른 위치로 파일을 추출할 수도 있습니다.  
   
 ##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a> 분산 쿼리 및 연결된 서버  
- 데이터를 데이터로 `varbinary(max)` 처리 하 여 분산 쿼리 및 연결 된 서버를 통해 FILESTREAM 데이터에 대 한 작업을 수행할 수 있습니다. 네 부분으로 된 이름을 사용하는 분산 쿼리에는 FILESTREAM **PathName()** 함수를 사용할 수 없습니다. 해당 이름이 로컬 서버를 참조하는 경우에도 마찬가지입니다. 그러나 **OPENQUERY()** 를 사용하는 통과 쿼리의 내부 쿼리에는 **PathName()** 을 사용할 수 있습니다.  
+ 데이터를 데이터로 처리 하 여 분산 쿼리 및 연결 된 서버를 통해 FILESTREAM 데이터에 대 한 작업을 수행할 수 있습니다 `varbinary(max)` . 네 부분으로 된 이름을 사용하는 분산 쿼리에는 FILESTREAM **PathName()** 함수를 사용할 수 없습니다. 해당 이름이 로컬 서버를 참조하는 경우에도 마찬가지입니다. 그러나 **OPENQUERY()** 를 사용하는 통과 쿼리의 내부 쿼리에는 **PathName()** 을 사용할 수 있습니다.  
   
-##  <a name="encryption"></a><a name="encryption"></a>암호화  
+##  <a name="encryption"></a><a name="encryption"></a> 암호화  
  투명한 데이터 암호화를 사용하는 경우에도 FILESTREAM 데이터는 암호화되지 않습니다.  
   
-##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>데이터베이스 스냅숏  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 FILESTREAM 파일 그룹에 대 한 [데이터베이스 스냅숏을](../databases/database-snapshots-sql-server.md) 지원 하지 않습니다. FILESTREAM 파일 그룹이 CREATE DATABASE ON 절에 들어 있으면 이 문이 실패하고 오류가 발생합니다.  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a> 데이터베이스 스냅샷  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 FILESTREAM 파일 그룹에 대해 [데이터베이스 스냅샷](../databases/database-snapshots-sql-server.md) 을 지원하지 않습니다. FILESTREAM 파일 그룹이 CREATE DATABASE ON 절에 들어 있으면 이 문이 실패하고 오류가 발생합니다.  
   
  FILESTREAM을 사용할 경우 FILESTREAM이 아닌 표준 파일 그룹의 데이터베이스 스냅샷을 만들 수 있습니다. FILESTREAM 파일 그룹은 이러한 데이터베이스 스냅샷에 대해 오프라인으로 표시됩니다.  
   
@@ -65,8 +64,8 @@ ms.locfileid: "66010189"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="replication"></a><a name="Replication"></a> 복제  
- 게시자에서 FILESTREAM 특성을 사용할 수 있는 `varbinary(max)` 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열의 복제 방법을 지정하려면 **아티클 속성 - \<Article>** 대화 상자를 사용하거나 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 또는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)의 @schema_option 매개 변수를 사용합니다. FILESTREAM 특성이 없는 `varbinary(max)` 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 지정 된 스키마 옵션에 상관 없이 구독자에 [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] 데이터를 복제 하는 것이 지원 되지 않는 한 FILESTREAM 특성을 복제 하는 것이 좋습니다.  
+##  <a name="replication"></a><a name="Replication"></a> Replication  
+ 게시자에서 FILESTREAM 특성을 사용할 수 있는 `varbinary(max)` 열을 FILESTREAM 특성을 사용하거나 사용하지 않고 구독자로 복제할 수 있습니다. 열을 복제 하는 방법을 지정 하려면 **아티클 속성- \<Article> ** 대화 상자 또는 @schema_option [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) 또는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)의 매개 변수를 사용 합니다. FILESTREAM 특성이 없는 `varbinary(max)` 열에 복제된 데이터는 해당 데이터 형식에 대해 2GB 제한을 초과할 수 없습니다. 초과할 경우 런타임 오류가 발생합니다. 지정 된 스키마 옵션에 상관 없이 구독자에 데이터를 복제 하는 것이 지원 되지 않는 한 FILESTREAM 특성을 복제 하는 것이 좋습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자로 대형 데이터 값을 복제하면 최대 256MB 데이터 값으로 제한됩니다. 자세한 내용은 [SQL Server 2005의 최대 용량 사양](https://go.microsoft.com/fwlink/?LinkId=103810)을 참조하십시오.  
@@ -100,21 +99,21 @@ ms.locfileid: "66010189"
 ##  <a name="log-shipping"></a><a name="LogShipping"></a> 로그 전달  
  [로그 전달](../../database-engine/log-shipping/about-log-shipping-sql-server.md) 은 FILESTREAM을 지원합니다. 주 서버 및 보조 서버는 모두 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이상 버전을 실행해야 하고 FILESTREAM이 설정되어 있어야 합니다.  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>데이터베이스 미러링  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> 데이터베이스 미러링  
  데이터베이스 미러링은 FILESTREAM을 지원하지 않습니다. 주 서버에서 FILESTREAM 파일 그룹을 만들 수 없습니다. FILESTREAM 파일 그룹이 포함된 데이터베이스에 대해 데이터베이스 미러링을 구성할 수 없습니다.  
   
-##  <a name="full-text-indexing"></a><a name="FullText"></a>전체 텍스트 인덱싱  
- [전체 텍스트 인덱싱은](../indexes/indexes.md) `varbinary(max)` 열과 함께 사용 하는 것과 동일한 방식으로 FILESTREAM 열과 함께 작동 합니다. FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../search/query-with-full-text-search.md), [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md), [sys.fulltext_document_types&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)를 참조하세요.  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> 전체 텍스트 인덱싱  
+ [전체 텍스트 인덱싱은](../indexes/indexes.md) 열과 함께 사용 하는 것과 동일한 방식으로 FILESTREAM 열과 함께 작동 합니다 `varbinary(max)` . FILESTREAM 테이블에는 각 FILESTREAM BLOB에 대한 파일 이름 확장명을 포함하는 열이 있어야 합니다. 자세한 내용은 [전체 텍스트 검색을 사용한 쿼리](../search/query-with-full-text-search.md), [검색 필터 구성 및 관리](../search/configure-and-manage-filters-for-search.md), [sys.fulltext_document_types&#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql)를 참조하세요.  
   
  전체 텍스트 엔진은 FILESTREAM BLOB의 내용을 인덱싱합니다. 이미지와 같은 인덱싱 파일은 유용하지 않을 수도 있습니다. FILESTREAM BLOB이 업데이트되면 인덱스가 다시 작성됩니다.  
   
-##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>장애 조치 (Failover) 클러스터링  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a> 장애 조치(Failover) 클러스터링  
  장애 조치(failover) 클러스터링의 경우 FILESTREAM 파일 그룹이 공유 디스크에 있어야 합니다. FILESTREAM은 FILESTREAM 인스턴스를 호스팅할 클러스터의 각 노드에 설정되어 있어야 합니다. 자세한 내용은 [장애 조치(failover) 클러스터에서 FILESTREAM 설정](set-up-filestream-on-a-failover-cluster.md)을 참조하세요.  
   
-##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 은 FILESTREAM을 지원합니다. 10GB의 데이터베이스 크기 제한에는 FILESTREAM 데이터 컨테이너가 포함되지 않습니다.  
   
-##  <a name="contained-databases"></a><a name="contained"></a>포함 된 데이터베이스  
+##  <a name="contained-databases"></a><a name="contained"></a> 포함된 데이터베이스  
  FILESTREAM 기능을 사용하려면 데이터베이스 외부에서의 몇 가지 구성이 필요합니다. 따라서 FILESTREAM 또는 FileTable을 사용하는 데이터베이스는 완전히 포함되지 않습니다.  
   
  포함된 사용자와 같은 포함된 데이터베이스의 특정 기능을 사용하려면 데이터베이스 포함 옵션을 PARTIAL로 설정하면 됩니다. 그러나 이 경우 일부 데이터베이스 설정은 데이터베이스에 포함되지 않으며 데이터베이스를 이동할 때 자동으로 이동되지 않는다는 것을 알고 있어야 합니다.  
