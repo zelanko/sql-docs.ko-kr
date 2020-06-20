@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94cce7c3debc467d2c06f97d9a390455245f5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020148"
 ---
 # <a name="parameter-and-result-metadata"></a>매개 변수 및 결과 메타데이터
   이 항목에서는 날짜 및 시간 데이터 형식에 대해 IPD(구현 매개 변수 설명자) 및 IRD(구현 행 설명자) 필드에서 반환되는 내용에 대해 설명합니다.  

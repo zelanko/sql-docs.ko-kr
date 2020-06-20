@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51500ee3-3d78-47ec-b90f-ebfc55642e06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3d8c392312f98140f2a75becb175fab26c4e590
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4c03cf62dd274f9bcca213d33fb8969b26c9d980
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704952"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043522"
 ---
 # <a name="sql-server-error-detail"></a>SQL Server 오류 세부 정보
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 공급자는 공급자별 오류 인터페이스 [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 세부 정보를 반환하며 명령 실행이나 행 집합 작업이 실패할 경우에 유용합니다.  

@@ -23,23 +23,22 @@ helpviewer_keywords:
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8e0417ddf5c4c09cfffa07b7b76918a89622aec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c54c3fe00842122b4b2fdeb4eb6c7bcbb38cf0a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771809"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924824"
 ---
 # <a name="handling-events-programmatically"></a>프로그래밍 방식으로 이벤트 처리
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 런타임에서는 패키지의 유효성 검사 및 실행 전후와 도중에 발생하는 이벤트 컬렉션을 제공합니다. 이러한 이벤트는 두 가지 방법으로 캡처할 수 있습니다. 첫 번째 방법은 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하고 해당 클래스를 패키지의 `Execute` 및 `Validate` 메서드에 대한 매개 변수로 지정하는 것입니다. 두 번째 방법은 태스크 및 루프와 같이 다른 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> 개체를 포함할 수 있으며 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에서 이벤트가 발생할 때 실행되는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 개체를 만드는 것입니다. 이 섹션에서는 이러한 두 가지 방법에 대해 설명하고 각 사용 방법을 보여 주는 코드 예를 제공합니다.  
+  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 런타임에서는 패키지의 유효성 검사 및 실행 전후와 도중에 발생하는 이벤트 컬렉션을 제공합니다. 이러한 이벤트는 두 가지 방법으로 캡처할 수 있습니다. 첫 번째 방법은 클래스에 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하고 해당 클래스를 패키지의 `Execute` 및 `Validate` 메서드에 대한 매개 변수로 지정하는 것입니다. 두 번째 방법은 태스크 및 루프와 같이 다른 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체를 포함할 수 있으며 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>에서 이벤트가 발생할 때 실행되는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 개체를 만드는 것입니다. 이 섹션에서는 이러한 두 가지 방법에 대해 설명하고 각 사용 방법을 보여 주는 코드 예를 제공합니다.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>IDTSEvents 콜백 받기  
  프로그래밍 방식으로 패키지를 만들고 실행하는 개발자는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 사용하여 유효성 검사 및 실행 중에 이벤트 알림을 받을 수 있습니다. 이렇게 하려면 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 구현하는 클래스를 만들고 이 클래스를 패키지의 `Validate` 및 `Execute` 메서드에 대한 매개 변수로 지정합니다. 그러면 이벤트가 발생할 때 런타임 엔진에 의해 해당 클래스의 메서드가 호출됩니다.  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> 클래스는 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> 인터페이스를 이미 구현하는 클래스이므로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>를 직접 구현하는 다른 방법은 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 만들고 응답할 특정 이벤트를 재정의하는 것입니다. 그런 다음 해당 클래스를 <xref:Microsoft.SqlServer.Dts.Runtime.Package>의 `Validate` 및 `Execute` 메서드에 대한 매개 변수로 지정하여 이벤트 콜백을 받을 수 있습니다.  
   
- 다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 보여 주고 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 메서드를 재정의합니다. 그런 다음 클래스는 패키지의 `Validate` 및 `Execute` 메서드에 대 한 aparameter로 제공 됩니다.  
+ 다음 코드 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>의 파생 클래스를 보여 주고 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A> 메서드를 재정의합니다. 그런 다음 클래스는 `Validate` 패키지의 및 메서드에 대 한 aparameter로 제공 됩니다 `Execute` .  
   
 ```csharp  
 using System;  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007712"
 ---
 # <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
   사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.  
@@ -38,18 +37,18 @@ ms.locfileid: "63149846"
   
 ## <a name="element-attributes"></a>요소 특성  
   
-|Column 특성|설명|  
+|Column 특성|Description|  
 |----------------------|-----------------|  
-|`Type`|선택 사항입니다. 인덱스 열 유형을 지정합니다. **string** 데이터 형식을 사용하여 허용된 다음 값 중 하나로 이 특성을 지정할 수 있습니다.<br /><br /> `KeyColumn`:<br />                  인덱스 키에서 열을 참조하도록 지정합니다. 다음 구문을 사용하여 이 특성을 설정합니다.<br />`<Column Type="KeyColumn">`<br />자세한 내용은 [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)를 참조하세요.<br /><br /> `IncludedColumn`: 열이 키 열 대신 포괄 열 임을 지정 합니다. 다음 구문을 사용하여 이 특성을 설정합니다.<br />`<Column Type="IncludedColumn">`<br />키가 아닌 열 포함에 대한 자세한 내용은 [포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조하세요.|  
-|`SortOrder`|선택 사항입니다. 열의 정렬 순서를 지정합니다. 다음과 같이 **string** 데이터 형식을 사용하여 **"Ascending"** 또는 **"Descending"** 정렬 순서를 지정할 수 있습니다.<br /><br /> `<Column SortOrder="Ascending">`|  
+|`Type`|(선택 사항) 인덱스 열 유형을 지정합니다. **string** 데이터 형식을 사용하여 허용된 다음 값 중 하나로 이 특성을 지정할 수 있습니다.<br /><br /> `KeyColumn`:<br />                  인덱스 키에서 열을 참조하도록 지정합니다. 다음 구문을 사용하여 이 특성을 설정합니다.<br />`<Column Type="KeyColumn">`<br />자세한 내용은 [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)를 참조하세요.<br /><br /> `IncludedColumn`: 열이 키 열 대신 포괄 열 임을 지정 합니다. 다음 구문을 사용하여 이 특성을 설정합니다.<br />`<Column Type="IncludedColumn">`<br />키가 아닌 열 포함에 대한 자세한 내용은 [포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조하세요.|  
+|`SortOrder`|(선택 사항) 열의 정렬 순서를 지정합니다. 다음과 같이 **string** 데이터 형식을 사용하여 **"Ascending"** 또는 **"Descending"** 정렬 순서를 지정할 수 있습니다.<br /><br /> `<Column SortOrder="Ascending">`|  
   
 ## <a name="element-characteristics"></a>요소 특징  
   
-|특성|설명|  
+|특성|Description|  
 |--------------------|-----------------|  
 |**데이터 형식 및 길이**|없음|  
 |**기본값**|없음|  
-|**내용과**|`Index` 요소에 최대 1024개의 열을 지정할 수 있습니다.|  
+|**발생 빈도**|`Index` 요소에 최대 1024개의 열을 지정할 수 있습니다.|  
   
 ## <a name="element-relationships"></a>요소 관계  
   

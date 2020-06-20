@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f79745bdb8699d288797f41d69b53fd1b6998589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929647"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   이 대화 상자를 사용하여 XML 문서를 편집하는 데 사용되는 XML 편집기의 일반 편집 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션** 을 클릭하고 **XML** 하위 폴더를 확장한 다음 **일반**을 클릭합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a82e0c98-efaa-4b0b-9582-3c879ee42444
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 907840b051a4230a06525e8c3d6574aee4f40bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81605229acc7dccdcd77a3b3f001bf13fc6bf273
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008208"
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>분석 서버 속성(로그온 탭)
   **분석 서버 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssAS](../../includes/ssas-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  

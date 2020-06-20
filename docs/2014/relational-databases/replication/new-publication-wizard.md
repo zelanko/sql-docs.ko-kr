@@ -42,13 +42,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a76bb95fb3689e6dc7f6de71373152ce36ebd14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fddd9efeea8d0cb00bbe421e5638b60cc508d832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060646"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
   이 섹션에서는 새 게시 마법사의 다음 페이지에 대한 정보를 제공합니다.  

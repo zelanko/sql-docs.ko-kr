@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8de36a4d7929ddba4fcb2a7e046ee81db8d08520
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b78d41895c6e2f12f167bd9567f4a9105d7a1a5c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971223"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>멤버에 대한 모든 주석 또는 트랜잭션 보기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 시간별 데이터 업데이트를 보려는 경우 데이터(멤버) 행에 대한 주석(설명) 및 트랜잭션을 확인합니다.  

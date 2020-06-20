@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925094"
 ---
 # <a name="adding-tasks-programmatically"></a>프로그래밍 방식으로 태스크 추가
   런타임 엔진에서 다음과 같은 유형의 개체에 태스크를 추가할 수 있습니다.  

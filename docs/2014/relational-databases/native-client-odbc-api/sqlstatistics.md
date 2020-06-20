@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e60101ae-a5f5-432f-a32a-d8e6fb0cbde8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 412dea0c99c8351e8f7747b0acbd09a3116d468f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fcae3e323f735d93bc0cc6024595ec597089b1e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021498"
 ---
 # <a name="sqlstatistics"></a>SQLStatistics
   **SQLStatistics** 는 정적 커서에 대해 실행할 수 있습니다. 업데이트 가능한 커서(키 집합 또는 동적 커서)에 대해 **SQLStatistics** 를 실행하려고 하면 커서 유형이 변경되었음을 나타내는 SQL_SUCCESS_WITH_INFO가 반환됩니다.  

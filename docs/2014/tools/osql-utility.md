@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95782afe0de8567781316e3478d04a090f968ed5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63017185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007546"
 ---
 # <a name="osql-utility"></a>osql 유틸리티
   **osql** 유틸리티를 사용하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다. 이 유틸리티에서는 ODBC를 사용하여 서버와 통신합니다.  
@@ -93,8 +92,8 @@ C:\>osql
  **-E**  
  암호를 요구하지 않고 트러스트된 연결을 사용합니다.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 있는 명명 된 인스턴스에 연결 하려면 _server_name_**\\**_instance_name_ 를 지정 합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스를 지정합니다. 해당 서버 컴퓨터에 있는 기본 *인스턴스에 연결하려면* server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 지정합니다. _server_name_ **\\** 해당 서버에 있는 명명 된 인스턴스에 연결 하려면 server_name_instance_name_ 를 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 합니다. 서버를 지정하지 않으면 **osql** 은 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터에서 **osql** 을 실행할 때 이 옵션이 필요합니다.  
   
  **-H** _wksta_name_  
  워크스테이션 이름입니다. 워크스테이션 이름은 **sysprocesses.hostname** 에 저장되고 **sp_who**에 의해 표시됩니다. 이 옵션을 지정하지 않으면 현재 컴퓨터 이름이 사용됩니다.  
@@ -112,7 +111,7 @@ C:\>osql
  열 머리글 사이에 출력할 행의 수를 지정합니다. 기본적으로 각 쿼리 결과 집합마다 머리글을 한 번 출력합니다. 머리글을 출력하지 않으려면 -1을 사용합니다. -1을 사용하는 경우는 **-h -1**이 아니라 **-h-1**과 같이 매개 변수와 설정 사이에 공백이 없어야 합니다.  
   
  **-s** _col_separator_  
- 열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에서 특별 한 의미를 갖는 문자 (예: |; & \< >)를 사용 하려면 해당 문자를 큰따옴표 (")로 묶습니다.  
+ 열 구분 기호 문자를 지정합니다. 기본값은 공백입니다. 운영 체제에서 특별 한 의미를 갖는 문자 (예: |; &)를 사용 하려면 \< > 해당 문자를 큰따옴표 (")로 묶습니다.  
   
  **-w** _column_width_  
  출력에 사용할 화면의 너비를 설정할 수 있습니다. 기본값은 80자입니다. 출력 줄이 최대 화면 너비에 도달하면 여러 줄로 나뉘어집니다.  
@@ -194,7 +193,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>설명  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
   
- **Osql**을 시작할 때 사용자 이름을 지정 하지 않으면에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 환경 변수를 확인 하 고이 변수를 사용 합니다 (예: **osqluser = (*`user`*)** 또는 **osqlserver = (*`server`*))**. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
+ **Osql**을 시작할 때 사용자 이름을 지정 하지 않으면에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 환경 변수를 확인 하 고이 변수를 사용 합니다 (예: **osqluser = ( *`user`* )** 또는 **osqlserver = ( *`server`* ))**. 환경 변수를 설정하지 않으면 워크스테이션 사용자 이름이 사용됩니다. 서버를 지정하지 않으면 워크스테이션 이름이 사용됩니다.  
   
  **-U** 또는 **-P** 옵션을 사용하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 인증 모드를 사용하여 연결을 시도합니다. 인증은 [!INCLUDE[msCoName](../includes/msconame-md.md)] osql **을 실행하는 사용자의**Windows 계정에 기반합니다.  
   
@@ -294,7 +293,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  일괄 처리를 실행한 다음 종료하며 값을 반환하지 않습니다.  
   
--   EXIT **(*`query`*)**  
+-   EXIT **( *`query`* )**  
   
 > [!NOTE]  
 >  쿼리를 포함한 일괄 처리를 실행하며 쿼리 결과를 반환한 다음 종료합니다.  
@@ -325,7 +324,7 @@ RAISERROR(50001, 10, 127)
      반환 값을 선택할 때 변환 오류가 발생했습니다.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>money 및 smallmoney 데이터 형식 표시  
- **osql** 은 두 `money` 개의 `smallmoney` 소수 자릿수로 및 데이터 형식을 표시 하지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 내부적으로 네 개의 소수 자릿수로 값을 저장 합니다. 예를 들어, 다음과 같습니다.  
+ **osql** 은 `money` 두 개의 소수 자릿수로 및 `smallmoney` 데이터 형식을 표시 하지만는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 내부적으로 네 개의 소수 자릿수로 값을 저장 합니다. 예를 들어, 다음과 같습니다.  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

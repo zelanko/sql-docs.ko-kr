@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69956f6a24ec6f373343cebb4e60fa4ad9fea320
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c485317d1343958f9c430b73d858130097d44d75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740471"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007308"
 ---
 # <a name="replay-traces"></a>추적 재생
   재생은 추적에 캡처된 작업을 재현하는 기능입니다. 추적을 만들거나 편집할 때 추적을 파일에 저장하면 나중에 재생할 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 단일 컴퓨터의 추적 작업만 재생할 수 있습니다. 대규모 작업의 경우 Distributed Replay Utility를 사용하면 여러 컴퓨터의 추적 데이터를 재생할 수 있습니다.  

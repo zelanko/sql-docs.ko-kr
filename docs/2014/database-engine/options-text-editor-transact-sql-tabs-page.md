@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5a713b3c3f98d2510fa63ddd6a58e2f48f3b3495
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929704"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>옵션 (텍스트 편집기-Transact-sql-탭 페이지)
   이 대화 상자를 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 스크립트를 프로그래밍하는 데 사용되는 [!INCLUDE[tsql](../includes/tsql-md.md)] 쿼리 편집기의 탭 이동 동작을 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 클릭하고 **텍스트 편집기** 폴더와 **Transact-SQL** 하위 폴더를 차례로 확장한 다음 **탭**을 클릭합니다.  

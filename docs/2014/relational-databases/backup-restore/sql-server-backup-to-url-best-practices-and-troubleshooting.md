@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d46820f3542e562f43fc4ae4c4d4ee1f91fcdf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956473"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 Azure Blob service로 SQL Server를 백업하고 복원하는 모범 사례 및 문제 해결 팁이 포함되어 있습니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "70175969"
   
     -   다음 형식으로 추적 플래그 3051을 설정하여 특정 오류 로그 로깅을 활성화합니다.  
   
-         BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log(여기서 \<action>은 다음 중 하나임)  
+         BackupToUrl- \<instname> - \<dbname> -action- \<PID> .log는 \<action> 다음 중 하나입니다.  
   
         -   `DB`  
   
@@ -94,7 +93,7 @@ ms.locfileid: "70175969"
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   
     -   **SqlException 3284이 발생 했습니다. 심각도: 16 상태: 5**  
-        **'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 장치의 메시지 파일 마크가 정렬 되지 않았습니다. Backupset를 만드는 데 사용 된 것과 동일한 블록 크기의 Restore 문을 다시 실행 하세요. ' 65536 '은 가능한 값과 같습니다.**  
+        **' ' 장치의 메시지 파일 마크가 https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak 정렬 되지 않았습니다. Backupset를 만드는 데 사용 된 것과 동일한 블록 크기의 Restore 문을 다시 실행 하세요. ' 65536 '은 가능한 값과 같습니다.**  
   
          이 오류를 해결하려면 `BACKUP`을 지정하여 `BLOCKSIZE = 65536` 문을 다시 실행하십시오.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "70175969"
   
  프록시 서버에는 분당 연결 수를 제한하는 설정이 있을 수 있습니다. URL에 대한 백업 프로세스는 다중 스레드 프로세스이므로 이 제한을 초과할 수 있습니다. 이러한 경우 프록시 서버는 연결을 해제합니다. 이 문제를 해결하려면 SQL Server에서 프록시를 사용하지 않도록 프록시 설정을 변경합니다.   다음은 오류 로그에 표시될 수 있는 오류 메시지 유형의 몇 가지 예입니다.  
   
--   "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"에 쓰지 못했습니다. URL 백업이 원격 끝점에서 예외를 수신 했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
+-   ""에 쓰지 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak 못했습니다. URL 백업이 원격 끝점에서 예외를 수신 했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
 -   파일 “http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:”에서 복구할 수 없는 오류가 발생했습니다. 원격 엔드포인트에서 오류를 수집할 수 없습니다.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "70175969"
   
      백업 데이터베이스가 비정상적으로 종료됩니다.  
   
--   BackupIoRequest:: ReportIoError: 백업 장치 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'에서 쓰기 오류가 발생 했습니다. 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
+-   BackupIoRequest:: ReportIoError: 백업 장치 ' '에서 쓰기 오류가 발생 했습니다 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak . 운영 체제 오류 URL 백업 수행 시 원격 엔드포인트에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
  추적 플래그 3051을 사용하여 자세한 로깅을 설정하는 경우 로그에 다음과 같은 메시지도 표시될 수 있습니다.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "70175969"
   
  **기본 프록시 설정이 선택되지 않음:**  
   
- 경우에 따라 기본 설정이 선택 되지 않아 아래와 같은 프록시 인증 오류가 발생 합니다.*"http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" 파일에서 복구할 수 없는 i/o 오류가 발생 했습니다. URL 백업에서 원격 끝점에서 예외를 수신 했습니다. 예외 메시지: 원격 서버에서 오류를 반환 했습니다. (407)* **프록시 인증이 필요**합니다.  
+ 경우에 따라 기본 설정이 선택 되지 않아 아래와 같은 프록시 인증 오류가 발생 합니다.*"" 파일에서 복구할 수 없는 i/o 오류가 발생 했습니다. http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: URL 백업에서 원격 끝점에서 예외를 수신 했습니다. 예외 메시지: 원격 서버에서 오류를 반환 했습니다. (407)* **프록시 인증이 필요**합니다.  
   
  이 문제를 해결하려면 다음 단계를 사용하여 URL에 대한 백업 프로세스에서 기본 프록시 설정을 사용하도록 허용하는 구성 파일을 만듭니다.  
   
@@ -151,9 +150,9 @@ ms.locfileid: "70175969"
   
     ```  
   
-2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 컴퓨터의 C 드라이브에 내 SQL Server가 설치 된 경우 구성 파일을 *C:\Program FILES\MICROSOFT SQL Server\MSSQL12.\< 에 저장 합니다. InstanceName> \MSSQL\Binn*입니다.  
+2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 컴퓨터의 C 드라이브에 내 SQL Server가 설치 된 경우 구성 파일을 *C:\Program FILES\MICROSOFT SQL Server\MSSQL12. \<InstanceName> 에 저장 합니다. \MSSQL\Binn*.  
   
-## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Azure에 대 한 관리 되는 백업 SQL Server 문제 해결  
+## <a name="troubleshooting-sql-server-managed-backup-to-azure"></a>Azure에 SQL Server 관리 백업 문제 해결  
  SQL Server 관리되는 백업이 URL에 대한 백업을 기반으로 하므로 이전 섹션에서 설명한 문제 해결 팁이 SQL Server 관리되는 백업을 사용하는 데이터베이스나 인스턴스에 적용됩니다.  Azure에 대 한 관리 되는 백업 SQL Server 문제 해결에 대 한 자세한 내용은 [azure로 관리 되는 백업 문제 SQL Server 해결](sql-server-managed-backup-to-microsoft-azure.md)에서 자세히 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

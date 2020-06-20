@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: db2e2fb2a174e73cfbe139c3ee15529af72e5b7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc21d76da82598059cf33d49bde243f6bd9f7850
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971263"
 ---
 # <a name="master-data-services"></a>Master  Data  Services
   MDS([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] )는 마스터 데이터 관리용 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. MDM(마스터 데이터 관리)은 조직에서 유지 가능한 마스터 목록을 컴파일할 목적으로 비트랜잭션 데이터 목록을 검색 및 정의하기 위해 수행하는 작업을 의미합니다. MDM 프로젝트에는 일반적으로 MDM 기술 구현과 함께 내부 비즈니스 프로세스의 평가 및 재구성 과정이 포함됩니다. 성공적인 MDM 솔루션의 결과로 분석 가능한 신뢰할 수 있는 중앙 집중식 데이터를 얻게 되므로 비즈니스 의사 결정의 효율성을 높일 수 있습니다.
@@ -34,7 +33,7 @@ ms.locfileid: "78176042"
 
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스 - 개발자가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 대한 사용자 지정 솔루션을 확장하거나 개발하는 데 사용할 수 있습니다.
 
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]-데이터를 관리 하 고 새 엔터티 및 특성을 만드는 데 사용 합니다.
+-   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]- [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 데이터를 관리 하 고 새 엔터티 및 특성을 만드는 데 사용 합니다.
 
  MDS 리소스에 대 한 요약은 [SQL Server Master Data Services 포털](https://go.microsoft.com/fwlink/?LinkID=214272)을 참조 하세요.
 

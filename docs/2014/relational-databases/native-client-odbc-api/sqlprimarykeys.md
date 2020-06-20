@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 67a932996ccbf52f5ab21fd6aa62381184ebc510
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021812"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   테이블에는 고유한 행 식별자로 사용할 수 있는 열이 있을 수 있으며, PRIMARY KEY 제약 조건 없이 만든 테이블은 SQLPrimaryKeys에 빈 결과 집합을 반환 합니다. ODBC 함수 [SQLSpecialColumns](sqlspecialcolumns.md) 는 기본 키가 없는 테이블에 대 한 행 식별자 후보를 보고 합니다.  

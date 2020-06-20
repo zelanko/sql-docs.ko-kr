@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 432dfc5f41d5333bf9e6cb9111464e1dcb01f579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706030"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022306"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
   이 항목에서는 Native Client와 관련 된 SQLGetDescRec 기능에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa5518ee9ebcaca287b76636d6eeea8af2f4ea5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6781840e6a6c84773f40a6cd0557ccb79b676eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060151"
 ---
 # <a name="create-a-stored-procedure"></a>저장 프로시저 만들기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저를 만드는 방법에 대해 설명합니다.  

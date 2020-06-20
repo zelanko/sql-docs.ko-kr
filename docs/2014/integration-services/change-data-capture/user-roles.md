@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e11eea40558a8e44232eed22f08d9a60bcd7742b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df6ab109451fbe7cf8df1b7c615f68a6cbad02f0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771089"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922234"
 ---
 # <a name="user-roles-for-change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service for Oracle by Attunity에 대한 사용자 역할
   이 섹션에서는 Attunity Oracle CDC Service의 사용자 역할에 대해 설명합니다. 여기서 설명하는 역할은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할, Windows 역할 또는 Oracle 데이터베이스 역할입니다.  
@@ -139,7 +138,7 @@ ms.locfileid: "62771089"
   
  다음 목록에서는 로그 마이닝 사용자에게 부여되어야 할 필수 권한에 대해 설명합니다.  
   
--   \<any-captured-table>에 대한 SELECT 권한  
+-   SELECT on\<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

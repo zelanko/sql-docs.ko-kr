@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5be296ceca85eb2032f2a409beefaed603c63f98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6e33f83d4eb80e0b04869967b245cd3e8e30059
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971763"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>텍스트 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 텍스트 문자열을 특성 값으로 입력할 수 있도록 하려면 텍스트 특성을 만듭니다.  

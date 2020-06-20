@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042441"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>방법: 업그레이드 관리자 보고서 보기
   업그레이드 관리자는 사용자가 분석하도록 선택한 각 구성 요소에 대해 보고서를 작성합니다. 이 항목에서는 업그레이드 관리자 시작 페이지에서 업그레이드 관리자 보고서를 보는 방법을 설명합니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66094803"
   
 ### <a name="to-view-a-report"></a>보고서를 보려면  
   
-1.  **시작**, **모든 프로그램**, **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 을 차례로 클릭 한 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
+1.  **시작**, **모든 프로그램**,을 차례로 클릭 한 **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** 다음 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 업그레이드 관리자**를 클릭 합니다.  
   
 2.  업그레이드 관리자 시작 페이지에서 **업그레이드 관리자 보고서 뷰어 시작**을 클릭 합니다.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66094803"
   
     -   **중요도**-문제를 해결 하는 것이 얼마나 중요 한지 나타냅니다.  
   
-    -   을 **수정 하는 경우**, 응용 프로그램이 나 데이터를 마이그레이션하기 전이나 후 또는 언제 든 지로 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]업그레이드 전이나 후에 문제를 해결 해야 하는지 여부를 나타냅니다.  
+    -   을 **수정 하는 경우**, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 응용 프로그램이 나 데이터를 마이그레이션하기 전이나 후 또는 언제 든 지로 업그레이드 전이나 후에 문제를 해결 해야 하는지 여부를 나타냅니다.  
   
     -   문제에 대한 간단한 설명  
   

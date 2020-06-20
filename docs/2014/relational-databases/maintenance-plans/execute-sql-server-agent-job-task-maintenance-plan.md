@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ed75956-ebb8-4d8c-9c16-fc0eb00bd3a0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff7f60ce2ed883c47ef608c0964703bd1b98518d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b997d5144b113102ba0ed2d9d1df59b6707acbee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024548"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)
   **SQL Server 에이전트 작업 실행 태스크** 대화 상자를 사용하여 유지 관리 계획 내의 Microsoft SQL Server 에이전트 작업을 실행할 수 있습니다. 선택한 연결에 SQL Server 에이전트 작업이 없으면 이 옵션을 사용할 수 없습니다.  

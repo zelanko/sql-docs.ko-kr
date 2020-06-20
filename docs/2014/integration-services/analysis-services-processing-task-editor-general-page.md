@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061448"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925554"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Analysis Services 처리 태스크 편집기(일반 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 Analysis Services 처리 태스크를 명명 및 설명할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44c6036de909ed8c18a120ec3de1108fb92cfb6e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 599480f9ee9f4d07dcdae30861aa0784e5f7203b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706317"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022736"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 데이터 원본 구성 특성 문자열에 대한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]관련 키워드/값 쌍을 지원합니다.  

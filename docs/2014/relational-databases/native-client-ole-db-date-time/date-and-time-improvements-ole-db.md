@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d206de44f9408e932d91a0097c1228b112b05ba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 16bb9e98691aea829eb71a16ddabddb371d7bcf3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043748"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>날짜 및 시간 기능 향상(OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에는 새로운 날짜 및 시간 데이터 형식이 도입되었습니다. 이 섹션에서는 이러한 새로운 형식이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 확장에서 어떤 방식으로 나타나는지 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 날짜 및 시간 데이터 형식에 대 한 Native Client 지원의 개요는 [날짜 및 시간 기능 향상](../native-client/features/date-and-time-improvements.md)을 참조 하세요. 샘플은 [향상된 날짜 및 시간 기능 사용&#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)을 참조하세요.  

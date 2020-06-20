@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964833"
 ---
 # <a name="deployment-of-projects-and-packages"></a>프로젝트 및 패키지 배포
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 프로젝트 배포 모델 및 패키지 배포 모델의 두 가지 배포 모델을 지원합니다. 프로젝트 배포 모델을 사용하면 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다.  

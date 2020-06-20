@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023431"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>UCP를 한 SQL Server 인스턴스에서 다른 인스턴스로 이동(SQL Server 유틸리티)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 UCP(유틸리티 제어 지점)를 한 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에서 다른 인스턴스로 이동하는 방법에 대해 설명합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "62640331"
   
 3.  이전 UCP에서 모든 관리되는 인스턴스를 제거합니다. 자세한 내용은 [SQL Server 유틸리티에서 SQL Server 인스턴스 제거](remove-an-instance-of-sql-server-from-the-sql-server-utility.md)를 참조하세요.  
   
-4.  이전 UCP에서 UMDW(유틸리티 관리 데이터 웨어하우스)를 백업합니다. 파일 이름은 Sysutility_mdw_\<GUID>_DATA이며 데이터베이스 기본 위치는 \<시스템 드라이브>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\입니다. 여기서 \<시스템 드라이브>는 일반적으로 C:\ 드라이브입니다. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
+4.  이전 UCP에서 UMDW(유틸리티 관리 데이터 웨어하우스)를 백업합니다. 파일 이름은 Sysutility_mdw_ \<GUID> _DATA 이며 데이터베이스 기본 위치는 \<System drive> : \Files\Microsoft SQL Server \ MSSQL10_50 <UCP_Name>입니다. \\ 여기서 \<System drive> 는 일반적으로 C:\입니다. 드라이브나. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
 5.  UMDW 백업을 새 UCP로 복원합니다. 자세한 내용은 [백업 및 복원으로 데이터베이스 복사](../databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   

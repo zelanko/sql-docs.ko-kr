@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d242351927276120b8d8f67c94eab9d60db7fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060630"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle 게시자에 대한 관리 고려 사항
   Oracle 게시자를 구성하고 복제 변경 내용 추적 메커니즘을 설정한 후에도 Oracle 데이터베이스 시스템의 관리자는 표준 Oracle 데이터베이스 유틸리티를 사용하고 일반 시스템 관리 태스크를 수행할 수 있습니다. 그러나 특정 관리 태스크 수행 시 게시된 데이터에 미치는 영향을 알아두어야 합니다.  

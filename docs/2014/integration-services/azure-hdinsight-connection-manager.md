@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925252"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Azure HDInsight 연결 관리자
 **Azure HDInsight 연결 관리자**를 통해 SSIS 패키지는 Azure HDInsight 클러스터에 연결할 수 있습니다.
@@ -27,5 +26,5 @@ ms.locfileid: "66061364"
 
 1. **SSIS 연결 관리자 추가** 대화 상자에서 **AzureHDInsight**를 선택하고 **추가**를 클릭합니다.
 2. **Azure HDInsight 연결 관리자 편집기** 대화 상자에서 연결할 HDInsight 클러스터에 대한 **클러스터 DNS 이름**(프로토콜 접두사 없이), **사용자 이름** 및 **암호**를 지정합니다.
-3. **확인**을 클릭하여 대화 상자를 닫습니다.
+3. **확인** 을 클릭하여 대화 상자를 닫습니다.
 4. 작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eba957ad1b5b9648bdc6676cd33a33afedc8c158
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022886"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   `SQLColAttribute`를 사용 하 여 준비 또는 실행 된 ODBC 문에 대 한 결과 집합 열의 특성을 검색할 수 있습니다. `SQLColAttribute`준비 된 문에서를 호출 하면로 라운드트립이 발생 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native CLIENT ODBC 드라이버는 문 실행의 일부로 결과 집합 열 데이터를 수신 하므로 `SQLColAttribute` **Sqlexecute** 또는 **sqlexecdirect** 를 완료 한 후에 호출 하면 서버 왕복이 수반 되지 않습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "82706343"
 > [!NOTE]  
 >  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합에는 ODBC 열 식별자 특성을 사용할 수 없습니다.  
   
-|필드 식별자|설명|  
+|필드 식별자|Description|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
 |SQL_DESC_BASE_COLUMN_NAME|서버 커서를 생성하는 문에서 검색된 결과 집합 또는 FOR BROWSE 절을 포함하는 실행된 SELECT 문에서 사용할 수 있습니다.|  
@@ -76,7 +75,7 @@ ms.locfileid: "82706343"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 각각 XML 스키마 컬렉션 이름, 스키마 이름 및 카탈로그 이름을 나타내는 추가 정보를 제공 하는 드라이버별 설명자 필드가 도입 되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 카탈로그의 이름입니다. 카탈로그 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 레코드 필드에서 반환됩니다.|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|CharacterAttributePtr|XML 스키마 컬렉션 이름이 정의된 스키마의 이름입니다. 스키마 이름을 찾을 수 없는 경우 이 변수에는 빈 문자열이 포함됩니다.<br /><br /> 이 정보는 읽기/쓰기 필드인 IRD의 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 레코드 필드에서 반환됩니다.|  
@@ -84,7 +83,7 @@ ms.locfileid: "82706343"
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 결과 집합의 UDT(사용자 정의 형식) 열 또는 저장 프로시저나 매개 변수가 있는 쿼리의 UDT 매개 변수에 대한 추가 정보를 제공하기 위한 새 드라이버 관련 설명자 필드도 도입되었습니다. 이러한 속성에는 영숫자가 아닌 문자가 포함된 경우 따옴표나 이스케이프 문자가 필요하지 않습니다. 다음 표에는 새로 도입된 설명자 필드가 나와 있습니다.  
   
-|열 이름|형식|설명|  
+|열 이름|Type|Description|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|UDT가 포함된 카탈로그의 이름입니다.|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|UDT가 포함된 스키마의 이름입니다.|  

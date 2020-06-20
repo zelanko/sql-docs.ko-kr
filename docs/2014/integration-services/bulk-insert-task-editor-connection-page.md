@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061216"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924644"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>대량 삽입 태스크 편집기(연결 페이지)
   **대량 삽입 태스크 편집기** 대화 상자의 **연결** 페이지를 사용하여 대량 삽입 태스크의 원본 및 대상과 사용할 서식을 지정할 수 있습니다.  
@@ -28,23 +27,23 @@ ms.locfileid: "66061216"
   
 ## <a name="options"></a>옵션  
  **연결**  
- 목록에서 OLE DB 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결을 만듭니다.  
+ 목록에서 OLE DB 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결을 만듭니다.  
   
  **관련 항목:** [OLE DB 연결 관리자](connection-manager/ole-db-connection-manager.md), [OLE DB 연결 관리자 구성](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **DestinationTable**  
  대상 테이블 또는 뷰의 이름을 입력하거나 목록에서 테이블 또는 뷰를 선택합니다.  
   
- **형식과**  
+ **Format**  
  대량 삽입을 위한 서식의 원본을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |**파일 사용**|서식 지정을 포함하는 파일을 선택합니다. 이 옵션을 선택하면 동적 옵션 **FormatFile**이 표시됩니다.|  
-|**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션 및 `RowDelimiter` `ColumnDelimiter`가 표시 됩니다.|  
+|**지정**|서식을 지정합니다. 이 옵션을 선택 하면 동적 옵션 및가 표시 됩니다 `RowDelimiter` `ColumnDelimiter` .|  
   
  **최근에 사용한 파일**  
- 목록에서 파일 또는 플랫 파일 연결 관리자를 선택 하거나 \< **새 연결** ...>을 클릭 하 여 새 연결을 만듭니다.  
+ 목록에서 파일 또는 플랫 파일 연결 관리자를 선택 하거나 \<**New connection...**> 를 클릭 하 여 새 연결을 만듭니다.  
   
  파일 위치는 이 태스크를 위해 연결 관리자에 지정된 SQL Server 데이터베이스 엔진의 상대적 위치입니다. 텍스트 파일은 서버의 로컬 하드 드라이브에서 또는 SQL Server에 매핑된 드라이브 또는 공유 드라이브를 통해 SQL Server 데이터베이스 엔진이 액세스할 수 있어야 합니다. 이 파일은 SSIS 런타임으로 액세스되지 않습니다.  
   

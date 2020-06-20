@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78dee169-df0c-4c95-9af7-bf033bc9fdc6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93235916075c02f1aa1f756a0f3f6affe6ea6e10
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f046eab684ece1d6a6a8b5f38db8965d277db897
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930864"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>서비스 관리 방법 도움말 항목(SQL Server 구성 관리자)
   [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트는 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 운영 체제에서 서비스로 실행됩니다. 서비스에 대한 자세한 내용은 [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md)를 참조하십시오.  

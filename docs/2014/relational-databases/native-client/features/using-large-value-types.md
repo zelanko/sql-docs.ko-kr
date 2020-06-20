@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4782a640d38c4f7a282f37fecb4765ce7677f93e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8a2e93ee36eb4bfadf18c5b78f552380d1c94266
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043547"
 ---
 # <a name="using-large-value-types"></a>큰 값 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이전에 큰 값 데이터 형식으로 작업하려면 특별한 처리가 필요했습니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 **varchar**, **nvarchar** 및 **varbinary** 데이터 형식에 대 한 **max** 지정자를 도입 하 여 값을 2 ^ 31-1 바이트로 저장할 수 있습니다. 테이블 열 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 변수는 **varchar (max)**, **nvarchar (max)** 또는 **varbinary (max)** 데이터 형식을 지정할 수 있습니다.  

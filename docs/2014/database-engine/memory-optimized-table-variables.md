@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774430"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930847"
 ---
 # <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
   효율적인 데이터 액세스를 위한 메모리 최적화 테이블 및 효율적인 쿼리 처리 및 비즈니스 논리 실행을 위한 고유하게 컴파일된 저장 프로시저 이외에 [!INCLUDE[hek_2](../includes/hek-2-md.md)]은 메모리 최적화 테이블 형식이라는 세 번째 개체를 도입했습니다. 메모리 최적화 테이블 형식을 사용하여 만든 테이블 변수가 메모리 최적화 테이블 변수입니다.  

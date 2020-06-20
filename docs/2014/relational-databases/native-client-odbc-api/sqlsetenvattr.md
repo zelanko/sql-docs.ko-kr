@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4114571-feca-4330-b2e4-7bfd1050b812
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 113c4508489e0f1dad8d134db7f86fc42371b456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f0dbd4d01de9ca769c46a93f810f0149f5b86981
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702156"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021601"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
   [ODBC 프로그래머 참조(ODBC Programmer's Reference)](https://go.microsoft.com/fwlink/?LinkId=45250) 에는 ODBC 2. **x** 또는 ODBC 3.*x* API를 사용하도록 작성된 애플리케이션에서 ODBC 드라이버가*SQLSetEnvAttr* 특성 사양을 해석하는 방법이 정의되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 이러한 규칙을 준수합니다.  

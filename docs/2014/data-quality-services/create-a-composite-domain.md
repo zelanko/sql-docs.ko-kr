@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ad2a12ba8775fe2c35947bf8783f1bf359fca896
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8918da2943e81adbe2e28eb81b37586c8d81f28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937954"
 ---
 # <a name="create-a-composite-domain"></a>복합 도메인 만들기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  

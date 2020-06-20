@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c912d4417842bc332262549cc604b97eaa50a44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde55936feb7a18bd7f9a0330721016fcffe7184
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964817"
 ---
 # <a name="package-deployment-ssis"></a>패키지 배포(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 패키지를 배포 컴퓨터에서 프로덕션 서버나 다른 컴퓨터로 손쉽게 배포할 수 있는 도구와 마법사가 포함되어 있습니다.  

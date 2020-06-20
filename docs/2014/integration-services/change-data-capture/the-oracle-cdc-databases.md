@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289271"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922337"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
@@ -45,7 +44,7 @@ ms.locfileid: "79289271"
  CDC 데이터베이스가 만들어지고 CDC 원본 Oracle 테이블이 설정된 경우 CDC 데이터베이스 소유자는 미러 테이블의 SELECT 권한을 부여하고 SQL Server CDC 제어 역할을 정의하여 변경 데이터에 액세스하는 사용자를 제어할 수 있습니다.  
   
 ## <a name="mirror-tables"></a>미러 테이블  
- Oracle 원본 데이터베이스의 각 캡처된 테이블(\<schema-name>.\<table-name>)에 대해 동일한 스키마와 테이블 이름을 가진 유사한 빈 테이블이 CDC 데이터베이스에 만들어집니다. `cdc` 의 `cdc` 스키마는 SQL Server CDC용으로 예약되어 있으므로 스키마 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (대/소문자 구분 없음)인 Oracle 원본 데이터베이스를 캡처할 수 없습니다.  
+ Oracle 원본 데이터베이스의 각 캡처된 테이블에 대해 \<schema-name> \<table-name> 동일한 스키마와 테이블 이름을 가진 유사한 빈 테이블이 CDC 데이터베이스에 만들어집니다. `cdc` 의 `cdc` 스키마는 SQL Server CDC용으로 예약되어 있으므로 스키마 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (대/소문자 구분 없음)인 Oracle 원본 데이터베이스를 캡처할 수 없습니다.  
   
  미러 테이블은 비어 있고 데이터가 저장되어 있지 않습니다. 미러 테이블은 Oracle CDC 인스턴스에 사용되는 표준 SQL Server CDC 인프라를 사용하도록 설정하는 데 사용됩니다. 미러 테이블에서 데이터가 삽입되거나 업데이트되지 않도록 모든 UPDATE, DELETE 및 INSERT 작업이 PUBLIC에 대해 거부됩니다. 따라서 미러 테이블에서 데이터를 수정할 수 없습니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "79289271"
 ###  <a name="change-tables-_ct"></a><a name="bkmk_change_tables_ct"></a> 변경 테이블(_CT)  
  변경 테이블은 미러 테이블에서 만들어집니다. 변경 테이블은 Oracle 데이터베이스에서 캡처되는 변경 데이터를 포함합니다. 테이블은 다음 규칙에 따라 이름이 지정됩니다.  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]. [ \<capture-instance> _CT]**  
   
  `<schema-name>.<table-name>`테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289271"
   
 |속성|기본값|최소값|최대값|정적|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|추적|False|-|-|False|사용 가능한 값:<br /><br /> **True**<br /><br /> **허위**<br /><br /> **on**<br /><br /> **해제**|  
+|추적|False|-|-|False|사용 가능한 값:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **해제**|  
 |cdc_update_state_interval|10|1|120|False|트랜잭션에 대해 할당된 메모리 청크의 크기(KB)입니다. 트랜잭션 하나가 둘 이상의 청크를 할당할 수 있습니다. [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) 테이블의 memory_limit 열을 참조하세요.|  
 |target_max_batched_transactions|100|1|1000|True|SQL Server CT 테이블 업데이트에서 하나의 트랜잭션으로 처리될 수 있는 최대 Oracle 트랜잭션 수입니다.|  
 |target_idle_lsn_update_interval|10|0|1|False|캡처된 테이블에서 활동이 없을 때 **lsn_time_mapping** 테이블을 업데이트하는 간격(초)입니다.|  

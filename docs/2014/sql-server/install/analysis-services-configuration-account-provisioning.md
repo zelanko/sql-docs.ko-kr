@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 169b1af2-6fe2-467f-8ca4-919f24c620ce
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 033c1ec1b0ad478e525f3ea9e8f172c5e5e31eef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 109b5d9ddddf2b78c0bb8947cfa876d233f804ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042712"
 ---
 # <a name="analysis-services-configuration---account-provisioning"></a>Analysis Services 구성 - 계정 프로비전
   이 페이지를 사용하여 서버 모드를 설정하고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 제한 없이 액세스해야 하는 사용자나 서비스에 관리 권한을 부여할 수 있습니다. 설치 마법사에서는 로컬 Windows Group BUILTIN\Administrators를 설치할 인스턴스의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버 관리자 역할에 자동으로 추가하지 않습니다. 로컬 Administrators 그룹을 서버 관리자 역할에 추가하려면 해당 그룹을 명시적으로 지정해야 합니다.  
   
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 서버 배포를 담당하는 SharePoint 팜 관리자 또는 서비스 관리자에게 관리 권한을 부여해야 합니다. 설치 및 서비스 계정 [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)] 요구 사항에 대 한 자세한 내용은 [SharePoint를 사용 하 &#40;SQL Server BI 기능 설치 PowerPivot 및 Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)를 참조 하세요.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 시에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] 서버 배포를 담당하는 SharePoint 팜 관리자 또는 서비스 관리자에게 관리 권한을 부여해야 합니다. [!INCLUDE[ssGeminiMTS](../../includes/ssgeminimts-md.md)]설치 및 서비스 계정 요구 사항에 대 한 자세한 내용은 [SharePoint를 사용 하 &#40;SQL Server BI 기능 설치 PowerPivot 및 Reporting Services&#41;](../../../2014/sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)를 참조 하세요.  
   
 ## <a name="options"></a>옵션  
  **서버 모드** - 서버 모드는 서버에 배포할 수 있는 Analysis Services 데이터베이스의 유형을 지정합니다. 서버 모드는 설치 중에 결정되며 나중에 수정할 수 없습니다. 각 모드는 함께 사용할 수 없습니다. 즉, 기존의 OLAP 및 테이블 형식 모델 솔루션을 모두 지원하려면 각각 서로 다른 모드에 맞게 구성된 두 개의 Analysis Services 인스턴스가 필요합니다.  

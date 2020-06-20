@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938836"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI(SSAS 테이블 형식)
   테이블 형식 모델에서 *KPI* (핵심 성과 지표)는 측정값 또는 절대값으로 정의된 *대상* 값에 대해 *기본* 측정값으로 정의된 값의 성능을 측정하는 데 사용됩니다. 이 항목은 테이블 형식 모델 작성자에게 테이블 형식 모델에서 KPI에 대한 기본적인 이해를 제공합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66066999"
   
 -   [관련 작업](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>아니라  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> 이점  
  비즈니스 용어에서 KPI(핵심 성과 지표)는 비즈니스 목표를 평가하기 위한 정량 측정값입니다. KPI는 주로 시간에 따라 평가됩니다. 예를 들어 조직의 영업부에서는 KPI를 사용하여 월별 예상 매출 총 이익 대비 매출 총 이익을 계산할 수 있습니다. 회계부에서는 월별 수익 대비 지출을 계산하여 비용을 평가하고, 인사부에서는 분기별 직원 전직률을 계산할 수 있습니다. 각각은 KPI의 예에 해당합니다. 경영진은 비즈니스 성과표에 그룹화된 KPI를 사용하여 비즈니스 성취도에 대한 빠르고 정확한 요약 정보를 얻거나 추세를 확인합니다.  
   
  테이블 형식 모델의 KPI에는 다음이 포함됩니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "66066999"
  **상태 임계값**  
  상태 임계값은 낮은 임계값과 높은 임계값 간의 범위 또는 고정 값으로 정의됩니다. 상태 임계값은 그래픽과 함께 표시되므로 대상 값과 비교한 기본 값의 상태를 손쉽게 확인할 수 있습니다.  
   
-##  <a name="example"></a><a name="bkmk_example"></a>예 들어  
+##  <a name="example"></a><a name="bkmk_example"></a> 예  
  Adventure Works의 영업 관리자는 영업 직원이 특정 기간(년) 동안 자신의 판매 할당량을 달성하고 있는지 여부를 빠르게 표시하는 데 사용할 수 있는 피벗 테이블을 만들려고 합니다. 각 영업 직원에 대해 실제 판매액(달러)과 판매 할당액(달러)이 표시되고 각 영업 직원이 현재 자신의 판매 할당액을 달성했는지 그 이하 또는 이상인지를 보여 주는 간단한 그래픽이 표시되는 피벗 테이블을 만들려고 합니다. 또한 데이터를 연도별로 분류할 수 있도록 하려고 합니다.  
   
  이렇게 하기 위해 영업 관리자는 조직의 BI 솔루션 개발자의 도움을 받아 AdventureWorks 테이블 형식 모델에 Sales KPI를 추가 합니다. 그런 다음 영업 관리자는 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 을 사용하여 Adventure Works 테이블 형식 모델에 데이터 원본으로 연결하고 필드(측정값 및 KPI)와 슬라이서가 포함된 피벗 테이블을 만들어 영업 직원이 자신의 할당액을 달성하고 있는지 여부를 분석하려고 합니다.  
@@ -81,7 +80,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 ##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> 관련 작업  
   
-|항목|설명|  
+|항목|Description|  
 |-----------|-----------------|  
 |[KPI 만들기 및 관리&#40;SSAS 테이블 형식&#41;](kpis-ssas-tabular.md)|기본 측정값, 대상 측정값 및 상태 임계값을 사용하여 KPI를 만드는 방법을 설명합니다.|  
   

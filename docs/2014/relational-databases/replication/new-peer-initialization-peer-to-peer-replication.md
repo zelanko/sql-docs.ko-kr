@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 050c00e1-78bd-4d9c-affe-40e22feb4d94
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51e5ec3832d497f342c4fc3132a75261f6c3c154
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3f20d6757b056abe925e087e81e07ad6358696
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060658"
 ---
 # <a name="new-peer-initialization-peer-to-peer-replication"></a>새 피어 초기화(피어 투 피어 복제)
   **새 피어 초기화** 페이지를 사용하여 피어 데이터베이스가 초기화된 방법을 지정할 수 있습니다. 이 마법사를 완료 하기 전에 피어를 초기화 해야 합니다. 피어는 수동으로 초기화 되거나 트랜잭션 복제에서 제공 하는 **initialize with backup** 기능을 사용 하 여 초기화 됩니다. 피어 투 피어 트랜잭션 복제는 스냅숏을 사용한 피어 초기화를 지원 하지 않습니다. 다른 메서드를 사용 하 여 다른 피어를 초기화 해야 하는 경우 마법사를 여러 번 실행 하 여 개별적으로 피어를 추가 해야 합니다.  
@@ -37,12 +36,12 @@ ms.locfileid: "63022683"
     |새 노드|첫 번째 노드|추가 노드|옵션|  
     |--------------|----------------|----------------------|------------|  
     |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|사용 안 함|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|없음|사용 안 함|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|사용 안 함|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|사용 안 함|  
-    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|없음|사용|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|없음|사용|  
+    |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|사용|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|None|사용|  
     |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|사용|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|없음|사용|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|None|사용|  
   
 ## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리 &#40;복제 Transact-sql 프로그래밍&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

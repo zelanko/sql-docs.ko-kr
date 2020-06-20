@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921754"
 ---
 # <a name="configure-data-viewer-general-tab"></a>데이터 뷰어 구성(일반 탭)
   데이터 뷰어에서는 패키지를 실행하는 동안 두 개의 데이터 흐름 구성 요소를 연결하는 경로를 통해 이동하면서 데이터를 표시합니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66060664"
  **이름**  
  데이터 뷰어에 사용할 고유 이름을 제공합니다.  
   
- **Type**  
+ **형식**  
  데이터 뷰어의 유형을 나열합니다. 예제 차트를 표시하려면 유형을 클릭합니다.  
   
  **설명**  

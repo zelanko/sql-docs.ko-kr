@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df41f9ae623053a61691076f9c96247f7a41564f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938014"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>복합 도메인의 데이터 정리
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 복합 도메인 정리에 대한 정보를 제공합니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 복합 도메인의 개별 도메인은 서로 공통된 정보 영역이 있어야 합니다. 복합 도메인에 대한 자세한 내용은 [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
@@ -54,7 +53,7 @@ ms.locfileid: "65481144"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서 이 선언적 도메인 간 규칙이 100% 신뢰도의 데이터를 변경하고, **이유** 열에 규칙 '*\<<Cross-Domain Rule Name>*’에 의해 수정됨 메시지가 표시됩니다. 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
+ 선언적 *Then* 도메인 간 규칙 **값이 다음 값과 같음**을 테스트하면 **복합 도메인 규칙 테스트** 대화 상자에 올바른 데이터를 표시하는 새 열 **다음으로 수정**이 포함됩니다. 정리 데이터 품질 프로젝트에서이 명확한 도메인 간 규칙은 데이터를 100% 신뢰도로 변경 하 고 **이유** 열에는 규칙 ' '에 의해 수정 된 다음 메시지가 표시 됩니다. *\<Cross-Domain Rule Name>* 도메인 간 규칙에 대한 자세한 내용은 [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md)를 참조하세요.  
   
 > [!NOTE]  
 >  선언적 도메인 간 규칙은 참조 데이터 서비스에 연결된 복합 도메인에 대해 작동하지 않습니다.  
