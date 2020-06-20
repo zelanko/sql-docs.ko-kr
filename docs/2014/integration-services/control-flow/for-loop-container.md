@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 991223c373113b465c3182f552e5f5d157efef9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9544f7ae00d3a0eda732b43e9485cafa23536ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831613"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918984"
 ---
 # <a name="for-loop-container"></a>For 루프 컨테이너
   For 루프 컨테이너는 패키지의 반복 제어 흐름을 정의합니다. 루프 구현은 프로그래밍 언어에서의 **For** 루프 구조와 유사합니다. For 루프 컨테이너는 각 루프를 반복할 때마다 식을 계산하고 식이 `False`가 될 때까지 워크플로를 반복합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "62831613"
   
  식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 유효한 식이어야 합니다.  
   
- 초기화 식과 대입 식을 만들려면 대입 연산자(=)를 사용할 수 있습니다. 이 연산자는 Integration Services 식 문법에서 다른 용도로 지원되지 않으며 For 루프 컨테이너의 초기화 및 대입 식 유형에만 사용할 수 있습니다. 대입 연산자를 사용하는 식의 구문은 `@Var = <expression>`이어야 합니다. 여기서 **Var**은 런타임 변수이고 \<expression>은 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 식 구문의 규칙을 따르는 식입니다. 식은 변수, 리터럴 및 SSIS 식 문법에서 지원하는 모든 연산자와 함수를 포함할 수 있습니다. 변수의 데이터 형식으로 캐스팅할 수 있는 데이터 형식으로 식이 계산되어야 합니다.  
+ 초기화 식과 대입 식을 만들려면 대입 연산자(=)를 사용할 수 있습니다. 이 연산자는 Integration Services 식 문법에서 다른 용도로 지원되지 않으며 For 루프 컨테이너의 초기화 및 대입 식 유형에만 사용할 수 있습니다. 대입 연산자를 사용 하는 식에는 구문이 있어야 합니다 `@Var = <expression>` . 여기서 **Var** 은 런타임 변수이 고 \<expression> 은 식 구문의 규칙을 따르는 식입니다 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] . 식은 변수, 리터럴 및 SSIS 식 문법에서 지원하는 모든 연산자와 함수를 포함할 수 있습니다. 변수의 데이터 형식으로 캐스팅할 수 있는 데이터 형식으로 식이 계산되어야 합니다.  
   
  For 루프 컨테이너는 하나의 계산 식만 포함할 수 있습니다. 따라서 For 루프 컨테이너는 모든 제어 흐름 요소를 동일한 횟수만큼 실행합니다. For 루프 컨테이너에 다른 For 루프 컨테이너가 포함될 수 있으므로 중첩 루프를 만들고 패키지에 복잡한 루프를 구현할 수 있습니다.  
   

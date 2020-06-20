@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ffd1d2529dd13e42689bcf168c972d757fb5499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874876"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956543"
 ---
 # <a name="select-backup-destination"></a>백업 대상 선택
   **백업 대상 선택** 대화 상자를 사용하여 디바이스를 백업 대상으로 선택할 수 있습니다. 디스크 또는 논리적 백업 디바이스를 백업 대상으로 사용할 수 있습니다.  

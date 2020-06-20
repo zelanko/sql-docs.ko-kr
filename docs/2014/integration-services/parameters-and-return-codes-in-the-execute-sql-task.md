@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964773"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 실행 태스크의 매개 변수 및 반환 코드
   SQL 문과 저장 프로시저에서는 일반적으로 `input` 매개 변수, `output` 매개 변수 및 반환 코드를 사용합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 SQL 실행 태스크는 `Input`, `Output` 및 `ReturnValue` 매개 변수 유형을 지원합니다. 입력 매개 변수에는 `Input` 유형, 출력 매개 변수에는 `Output` 유형, 반환 코드에는 `ReturnValue` 유형을 사용합니다.  
@@ -45,16 +44,16 @@ ms.locfileid: "66056784"
 -   [SQL 실행 태스크 편집기에서 매개 변수 및 반환 코드 구성](#Configure_parameters_and_return_codes)  
   
 ##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>매개 변수 이름 및 표식 사용  
- SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형을 사용 하려면 SQL 명령에 형식 ** \@varparameter**의 매개 변수 표식을 사용 해야 하지만 OLE DB 연결 형식에는 물음표 (?) 매개 변수 표식을 사용 해야 합니다.  
+ SQL 실행 태스크가 사용하는 연결 형식에 따라 SQL 명령 구문이 사용하는 매개 변수 표식이 달라집니다. 예를 들어 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형을 사용 하려면 SQL 명령에 형식 ** \@ varparameter**의 매개 변수 표식을 사용 해야 하지만 OLE DB 연결 형식에는 물음표 (?) 매개 변수 표식을 사용 해야 합니다.  
   
  변수와 매개 변수 간 매핑에 매개 변수 이름으로 사용할 수 있는 이름도 연결 관리자 유형에 따라 달라집니다. 예를 들어 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자 유형에는 \@ 접두사가 있는 사용자 정의 이름을 사용하지만 OLE DB 연결 관리자 유형에는 0부터 시작하는 서수의 숫자 값을 매개 변수 이름으로 사용해야 합니다.  
   
  다음 표에서는 SQL 실행 태스크가 사용할 수 있는 연결 관리자 유형에 대한 SQL 명령 요구 사항을 요약합니다.  
   
-|연결 유형|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
+|연결 형식|매개 변수 표식|매개 변수 이름|SQL 명령 예|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<매개 변수 이름>|\@\<매개 변수 이름>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 및 OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66056784"
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>ADO.NET 및 ADO 연결 관리자의 날짜 및 시간 매개 변수 사용  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 형식인 `time` 및 `datetimeoffset` 데이터를 읽을 때는 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 또는 ADO 연결 관리자를 사용하는 SQL 실행 태스크에 다음과 같은 요구 사항이 추가로 적용됩니다.  
   
--   데이터 `time` 의 경우 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용 하려면 매개 변수 유형이 `Input` 또는 `Output`이 고 데이터 형식이 인 매개 변수에이 데이터를 저장 해야 합니다. `string`  
+-   데이터의 경우 `time` [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용 하려면 매개 변수 유형이 `Input` 또는이 `Output` 고 데이터 형식이 인 매개 변수에이 데이터를 저장 해야 합니다 `string` .  
   
 -   `datetimeoffset` 데이터의 경우 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결 관리자를 사용하려면 다음과 같은 매개 변수 중 하나에 이 데이터가 저장되어야 합니다.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66056784"
   
  다음 표에서는 연결 관리자 유형별 SELECT 명령의 예를 나열합니다. INSERT, UPDATE 및 DELETE 문도 이와 비슷합니다. 이 예에서는 SELECT를 사용하여 **의** Product [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 테이블에서 **ProductID** 가 두 매개 변수로 지정된 값보다 크고 작은 제품을 반환합니다.  
   
-|연결 유형|SELECT 구문|  
+|연결 형식|SELECT 구문|  
 |---------------------|-------------------|  
 |EXCEL, ODBC 및 OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
 |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -154,12 +153,12 @@ ms.locfileid: "66056784"
   
  다음 표에서는 연결 관리자 유형별 EXEC 명령의 예를 나열합니다. 이 예에서는 **의** uspGetBillOfMaterials [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]저장 프로시저를 실행합니다. 저장 프로시저는 `@StartProductID` 및 `@CheckDate` `input` 매개 변수를 사용 합니다.  
   
-|연결 유형|EXEC 구문|  
+|연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
-|ADO|IsQueryStoredProcedure가로 `False`설정 된 경우`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure가로 `True`설정 된 경우`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoredProcedure가로 `False`설정 된 경우`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure가로 `True`설정 된 경우`uspGetBillOfMaterials`|  
+|ADO|IsQueryStoredProcedure `False` 가로 설정 된 경우`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> IsQueryStoredProcedure `True` 가로 설정 된 경우`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|IsQueryStoredProcedure `False` 가로 설정 된 경우`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> IsQueryStoredProcedure `True` 가로 설정 된 경우`uspGetBillOfMaterials`|  
   
  출력 매개 변수를 사용하려면 구문에서 각 매개 변수 표식 다음에 OUTPUT 키워드가 와야 합니다. 올바른 출력 매개 변수 구문의 예로 `EXEC myStoredProcedure ? OUTPUT`을 들 수 있습니다.  
   
@@ -168,18 +167,18 @@ ms.locfileid: "66056784"
 ##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>반환 코드 값 가져오기  
  저장 프로시저는 반환 코드라고 하는 정수 값을 반환하여 프로시저의 실행 상태를 나타낼 수 있습니다. SQL 실행 태스크에 반환 코드를 구현하려면 `ReturnValue` 유형의 매개 변수를 사용합니다.  
   
- 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 `input` 매개 변수를 사용합니다. 매개 변수 표식 및 매개 변수 이름을 사용 하는 방법에 대 한 규칙은 모든 매개 변수`Input`형식 `Output`, 및 `ReturnValue`에 대해 동일 합니다.  
+ 다음 표에서는 반환 코드를 구현하는 EXEC 명령의 몇 가지 예를 연결 형식별로 나열합니다. 모든 예에서는 `input` 매개 변수를 사용합니다. 매개 변수 표식 및 매개 변수 이름을 사용 하는 방법에 대 한 규칙은 모든 매개 변수 형식, 및에 대해 동일 합니다 `Input` `Output` `ReturnValue` .  
   
  일부 구문은 매개 변수 리터럴을 지원하지 않습니다. 이러한 경우 변수를 사용하여 매개 변수 값을 제공해야 합니다.  
   
-|연결 유형|EXEC 구문|  
+|연결 형식|EXEC 구문|  
 |---------------------|-----------------|  
 |EXCEL 및 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> ODBC 호출 구문에 대한 자세한 내용은 MSDN Library의 ODBC 프로그래머 참조에서 [프로시저 매개 변수](https://go.microsoft.com/fwlink/?LinkId=89462)항목을 참조하십시오.|  
-|ADO|IsQueryStoreProcedure가로 `False`설정 된 경우`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure가로 `True`설정 된 경우`myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure는로 `True`설정 됩니다.<br /><br /> `myStoredProcedure`|  
+|ADO|IsQueryStoreProcedure `False` 가로 설정 된 경우`EXEC ? = myStoredProcedure 1`<br /><br /> IsQueryStoreProcedure `True` 가로 설정 된 경우`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure는로 설정 됩니다 `True` .<br /><br /> `myStoredProcedure`|  
   
- 위의 표에 나와 있는 구문에서 SQL 실행 태스크는 **직접 입력** 원본 유형을 사용하여 저장 프로시저를 실행합니다. 이 SQL 실행 태스크는 **파일 연결** 원본 유형을 사용하여 저장 프로시저를 실행할 수도 있습니다. SQL 실행 태스크에서 **직접 입력** 또는 **파일 연결** 원본 유형을 사용 하는지 여부에 관계 없이 `ReturnValue` 형식의 매개 변수를 사용 하 여 반환 코드를 구현 합니다. SQL 실행 태스크에서 실행하는 SQL 문의 원본 유형 구성 방법에 대한 자세한 내용은 [SQL 실행 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)를 참조하세요.  
+ 위의 표에 나와 있는 구문에서 SQL 실행 태스크는 **직접 입력** 원본 유형을 사용하여 저장 프로시저를 실행합니다. 이 SQL 실행 태스크는 **파일 연결** 원본 유형을 사용하여 저장 프로시저를 실행할 수도 있습니다. SQL 실행 태스크에서 **직접 입력** 또는 **파일 연결** 원본 유형을 사용 하는지 여부에 관계 없이 형식의 매개 변수를 사용 `ReturnValue` 하 여 반환 코드를 구현 합니다. SQL 실행 태스크에서 실행하는 SQL 문의 원본 유형 구성 방법에 대한 자세한 내용은 [SQL 실행 태스크 편집기&#40;일반 페이지&#41;](general-page-of-integration-services-designers-options.md)를 참조하세요.  
   
  Transact-SQL 저장 프로시저에서 반환 코드 사용에 대한 자세한 내용은 [RETURN&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)을 참조하세요.  
   

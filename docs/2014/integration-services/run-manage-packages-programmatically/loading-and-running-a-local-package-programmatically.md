@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964513"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>프로그래밍 방식으로 로컬 패키지 로드 및 실행
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]패키지 실행[에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 ](../packages/run-integration-services-ssis-packages.md) 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
+  [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
   
  이 항목에서는 다음과 같은 주제를 다룹니다.  
   
@@ -59,12 +58,12 @@ ms.locfileid: "62766895"
   
 2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭하고 **Microsoft.SqlServer.ManagedDTS.dll**에 대한 참조를 추가합니다. **확인**을 클릭합니다.  
   
-3.  Visual Basic `Imports` 문 또는 c # `using` 문을 사용 하 여 **Microsoft sql server Runtime** 네임 스페이스를 가져옵니다.  
+3.  Visual Basic `Imports` 문 또는 c # 문을 사용 `using` 하 여 **Microsoft sql server Runtime** 네임 스페이스를 가져옵니다.  
   
 4.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 애플리케이션은 다음 예와 같습니다.  
   
     > [!NOTE]  
-    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 메서드를 호출하여 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
+    >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 메서드를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
   
 5.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 콘솔 창에 표시됩니다.  
   

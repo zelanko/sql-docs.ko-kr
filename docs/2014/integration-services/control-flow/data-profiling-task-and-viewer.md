@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10996e4e988970c8d4b4354bbe1f2532aa2f8829
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919394"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
   데이터 프로파일링 태스크는 데이터 추출, 변환 및 로드 프로세스 내에서 데이터 프로파일링 기능을 제공합니다. 데이터 프로파일링 태스크를 사용하면 다음과 같은 이점이 있습니다.  

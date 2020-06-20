@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009657"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  
@@ -125,7 +124,7 @@ ms.locfileid: "82703789"
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 sqlcmd 기능을 사용하는 방법에 대해 설명합니다.|[쿼리 편집기로 SQLCMD 스크립트 편집](edit-sqlcmd-scripts-with-query-editor.md)|  
 |사용자가 입력하는 개체 이름 자동 완성, 유효한 위치에 중단점 배치 등과 같은 IntelliSense 기능을 사용하는 방법에 대해 설명합니다.|[IntelliSense&#40;SQL Server Management Studio&#41;](intellisense-sql-server-management-studio.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 코드 조각을 사용하는 방법에 대해 설명합니다. 코드 조각은 일반적으로 사용되는 문 또는 블록에 대한 템플릿이며, 사이트별 코드 조각을 포함하도록 사용자 지정하거나 확장할 수 있습니다.|[Transact-SQL 코드 조각](transact-sql-code-snippets.md)|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 처리하고 변수 및 매개 변수 값과 같은 디버깅 정보를 보는 방법에 대해 설명합니다.|[Transact-sql 디버거](transact-sql-debugger.md)|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 처리하고 변수 및 매개 변수 값과 같은 디버깅 정보를 보는 방법에 대해 설명합니다.|[Transact-SQL 디버거](transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스별로 사용자 지정 색을 설정하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 상태 표시줄의 배경색을 설정하는 방법에 대해 설명합니다.|[상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](status-bar-database-engine-query-editor.md)|  
   
 ## <a name="see-also"></a>참고 항목  

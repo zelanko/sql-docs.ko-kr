@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067655"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939894"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>테이블 형식 모델 데이터베이스에 연결(SSAS)
   테이블 형식 모델을 빌드하여 Analysis Services 테이블 형식 모드 서버로 배포한 후 클라이언트 애플리케이션에서 사용할 수 있도록 권한을 설정해야 합니다. 이 항목에서는 사용 권한을 부여하는 방법과 클라이언트 애플리케이션에서 데이터베이스에 연결하는 방법에 대해 설명합니다.  
@@ -23,7 +22,7 @@ ms.locfileid: "66067655"
 > [!NOTE]  
 >  기본적으로 방화벽을 구성해야만 Analysis Services에 대한 원격 연결을 사용할 수 있습니다. 클라이언트 연결에 대해 명명된 인스턴스 또는 기본 인스턴스를 구성하는 경우 적절한 포트를 열어야 합니다. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 항목에는 다음과 같은 단원이 포함되어 있습니다.  
   
  [데이터베이스에 대 한 사용자 권한](#bkmk_userpermissions)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "66067655"
   
 2.  **Analysis Services**를 선택합니다.  
   
-3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 서버가 명명 된 인스턴스로 설치 된 경우 \<servername>\\<instancename\>형식으로 이름을 지정 해야 합니다.  
+3.  **서버 이름**에서 해당 데이터베이스를 호스팅하는 Analysis Services 인스턴스를 지정합니다. 서버 이름은 대개 서버 소프트웨어를 실행하는 컴퓨터의 이름입니다. 서버가 명명 된 인스턴스로 설치 된 경우 \<servername> \\<instancename 형식으로 이름을 지정 해야 \> 합니다.  
   
      서버 인스턴스는 독립 실행형 테이블 형식 배포를 사용하도록 구성되어야 하며 서버 인스턴스에는 액세스를 허용하는 인바운드 규칙이 있어야 합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) 및 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
@@ -94,14 +93,14 @@ ms.locfileid: "66067655"
 ##  <a name="connect-from-sharepoint"></a><a name="bkmk_sharepoint"></a> SharePoint에서 연결  
  SharePoint용 PowerPivot을 사용하는 경우 Analysis Services 테이블 형식 모드 서버에서 실행되는 데이터베이스에 대한 리디렉션을 제공하는 BI 의미 체계 모델 연결 파일을 SharePoint에서 만들 수 있습니다. BI 의미 체계 모델 연결은 데이터베이스에 대한 HTTP 엔드포인트를 제공합니다. 또한 BI 의미 체계 모델 연결을 사용하면 SharePoint 사이트에서 문서를 정기적으로 사용하는 지식 근로자가 테이블 형식 모델에 쉽게 액세스할 수 있습니다. 지식 근로자는 BI 의미 체계 모델 연결 파일의 위치 또는 해당 URL만 알면 테이블 형식 모델 데이터베이스에 액세스할 수 있습니다. 서버 위치 또는 데이터베이스 이름 정보는 BI 의미 체계 모델 연결에 캡슐화됩니다. BI 의미 체계 모델 연결 파일을 만들고 사용 하는 방법에 대 한 자세한 내용은 [POWERPIVOT Bi 의미 체계 모델 연결 &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) 및 [테이블 형식 모델 데이터베이스에 대 한 BI 의미 체계 모델 연결 만들기](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)를 참조 하세요.  
   
-##  <a name="troubleshooting-connection-problems"></a><a name="bkmk_Tshoot"></a> 연결 문제 해결  
+##  <a name="troubleshooting-connection-problems"></a><a name="bkmk_Tshoot"></a>연결 문제 해결  
  이 섹션에서는 테이블 형식 모델 데이터베이스에 연결하는 동안 발생하는 문제에 대한 원인과 해결 단계를 제공합니다.  
   
  **데이터 연결 마법사가 지정한 데이터 원본에서 데이터베이스 목록을 가져올 수 없습니다.**  
   
  데이터를 가져올 때 마법사를 사용하여 원격 Analysis Services 서버에 있는 테이블 형식 모델 데이터베이스에 연결하려고 하지만 권한이 부족한 경우 이 Microsoft Excel 오류가 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   
- **외부 데이터 원본에 대 한 연결을 설정 하는 동안 오류가 발생 했습니다. 다음 연결을 새로 고치지 못했습니다. \<모델 이름> 샌드박스**  
+ **외부 데이터 원본에 대 한 연결을 설정 하는 동안 오류가 발생 했습니다. 다음 연결을 새로 고치지 못했습니다. \<model name> Sandbox**  
   
  SharePoint에서 모델 데이터를 사용하는 피벗 테이블에서 데이터 필터링과 같은 데이터 상호 작용을 시도할 때 이 Microsoft Excel 오류가 발생합니다. 이 오류는 원격 Analysis Services 서버에 대한 충분한 사용 권한이 없기 때문에 발생합니다. 이 오류를 해결하려면 데이터베이스에 대한 사용자 액세스 권한이 있어야 합니다. 이 항목의 앞부분에 있는 데이터에 대한 사용자 액세스 권한 부여 지침을 참조하십시오.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0123027ac9aa87d616b52ac5cc26f36a20f7e1e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b31a8bc38968733de0a23f67a71772721c8baedd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009003"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 다중 서버 관리 구성에서 여러 대상 서버를 제거하는 방법에 대해 설명합니다. 이 절차는 마스터 서버에서 실행하십시오.  
@@ -46,6 +45,6 @@ ms.locfileid: "62524017"
 ## <a name="see-also"></a>참고 항목  
  [다중 서버 환경 만들기](create-a-multiserver-environment.md)   
  [엔터프라이즈에서 자동화 된 관리](automated-administration-across-an-enterprise.md)   
- [마스터 서버에서 대상 서버 제거](defect-a-target-server-from-a-master-server.md)  
+ [Defect a Target Server from a Master Server](defect-a-target-server-from-a-master-server.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7e9294de10be0df9ef470c75d0934e9f8787b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047246"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>테이블에 열 추가(데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블에 새 열을 추가하는 방법에 대해 설명합니다.  
@@ -78,7 +77,7 @@ ms.locfileid: "62856129"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예에서는 `dbo.doc_exa`테이블에 두 개의 열을 추가합니다. 다음 예를 복사 하 여 쿼리 창에 붙여넣고 **실행** 을 클릭 합니다.  
+3.  다음 예에서는 `dbo.doc_exa`테이블에 두 개의 열을 추가합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  

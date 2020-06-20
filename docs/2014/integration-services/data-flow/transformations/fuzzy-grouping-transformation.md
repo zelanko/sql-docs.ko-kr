@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939564"
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900562"
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 지원하지 않습니다.  
   
 ## <a name="row-comparison"></a>행 비교  
- 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. 전체 속성을로 `true`설정 하는 경우 변환에서는 입력의 모든 행을 입력의 다른 모든 행과 비교 합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지 하려면 패키지를 개발 하는 동안에만 철저 `true` 한 속성을로 설정 하는 것이 좋습니다.  
+ 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. 전체 속성을로 설정 하는 경우 `true` 변환에서는 입력의 모든 행을 입력의 다른 모든 행과 비교 합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지 하려면 패키지를 개발 하는 동안에만 철저 한 속성을로 설정 하는 것이 좋습니다 `true` .  
   
 ## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 그룹화 변환에서는 런타임에 변환에서 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 테이블 및 인덱스와 같은 크기가 큰 임시 개체를 만듭니다. 테이블 및 인덱스의 크기는 변환 입력 내 행의 수 및 유사 항목 그룹화 변환에서 만든 토큰의 수에 비례합니다.  

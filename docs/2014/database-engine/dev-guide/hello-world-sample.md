@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933572"
 ---
 # <a name="hello-world-sample"></a>Hello World 예제
   Hello World 예제는 간단한 CLR(공용 언어 런타임) 통합 기반 저장 프로시저의 만들기, 배포 및 테스트와 관련된 기본 작업을 보여 줍니다. 이 예제는 저장 프로시저에 의해 동적으로 생성되고 호출자로 반환되는 레코드를 통해 데이터를 반환하는 방법도 보여 줍니다.  
   
- 저장 `HelloWorld` 프로시저는 "Hello 세계!" 문자열을 반환 합니다. 한 행으로 구성 된 결과 집합 이 예제 [에서는 클래스의](https://go.microsoft.com/fwlink/?LinkID=193572)몇 가지 사용 예를 보여 줍니다. [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) 및 microsoft. d s. [파이프](https://go.microsoft.com/fwlink/?LinkID=193571).  
+ `HelloWorld`저장 프로시저는 "Hello 세계!" 문자열을 반환 합니다. 한 행으로 구성 된 결과 집합 이 예제 [에서는 클래스의](https://go.microsoft.com/fwlink/?LinkID=193572)몇 가지 사용 예를 보여 줍니다. [SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) 및 microsoft. d s. [파이프](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  

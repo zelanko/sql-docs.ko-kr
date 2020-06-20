@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6aa5dcb3ff23c5a9a57124e59b50b70969fddd68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 05e14ccb0fadb4f1cf05f965c79cf8c05c71f93a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022820"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   SQL 문의 매개 변수를 설명 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT odbc 드라이버는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 준비 된 ODBC 문 핸들에 대해 SQLDescribeParam가 호출 될 때 SELECT 문을 작성 하 고 실행 합니다. 결과 집합의 메타데이터에 따라 준비된 문의 매개 변수 특징이 결정됩니다. SQLDescribeParam는 SQLExecute 또는 SQLExecDirect에서 반환할 수 있는 오류 코드를 반환할 수 있습니다.  

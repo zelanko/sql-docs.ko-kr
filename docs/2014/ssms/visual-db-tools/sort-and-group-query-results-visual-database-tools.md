@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bf1b08abe58c8f46cc8f48d87115281d3d72bad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33ea59dfce0dc29080d08792b662c5fd8293f56f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63070883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000979"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>쿼리 결과 정렬 및 그룹화(Visual Database Tools)
   쿼리 결과의 각 결과 행이 원본 데이터의 전체 행 그룹에 대응하는 쿼리 결과를 만들 수 있습니다.  

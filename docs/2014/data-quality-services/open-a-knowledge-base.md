@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0f55065d3c62d87b51af83a411e2ba302fcf0528
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac4f773ac783515a0eaea1684d70866f159e1372
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481297"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937464"
 ---
 # <a name="open-a-knowledge-base"></a>기술 자료 열기
   이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 기존 기술 자료를 열어 도메인 관리, 기술 자료 검색 또는 일치 정책 추가를 수행할 준비를 갖추는 방법에 대해 설명합니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "65481297"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a> 기술 자료의 상태  
  상태 필드는 기술 자료에 대한 현재 작업 단계를 나타냅니다. 기술 자료를 열면 해당 단계에서 기술 자료가 열립니다.  
   
--   빈>: 도메인 관리 작업에서 **게시** 를 클릭 하 고 **예-기술 자료를 게시 하 고 종료**를 클릭 하 여 기술 자료를 게시 한 경우 기술 자료에 대 한 상태 필드가 비어 있습니다. ** \< **  
+-   **\<Empty>**: 도메인 관리 작업에서 **게시** 를 클릭 한 다음 **예-기술 자료를 게시 하 고 종료**를 클릭 하 여 기술 자료를 게시 한 경우 기술 자료에 대 한 상태 필드가 비어 있습니다.  
   
 -   **작업**중: 도메인 관리 작업에서 **게시** 를 클릭 하 고 **기술 자료에 대 한 작업을 저장 하지 않고 종료**를 클릭 하 여 기술 자료에 대 한 작업을 저장 했습니다.  
   

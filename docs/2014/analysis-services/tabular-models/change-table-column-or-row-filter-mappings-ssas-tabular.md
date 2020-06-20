@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb9da478e240a357fdb38b103db8fb4cab6f3d0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067641"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939914"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>테이블, 열 또는 행 필터 매핑 변경(SSAS 테이블 형식)
   이 항목에서는 **에서** 테이블 속성 편집 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]대화 상자를 사용하여 테이블, 열 또는 행 필터 매핑을 변경하는 방법에 대해 설명합니다.  

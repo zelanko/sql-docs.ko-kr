@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009293"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>SQLXML 4.0의 xml 데이터 형식 지원
   부터는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하 여 XML 형식의 데이터를 지원 `xml` 합니다. 이 항목에서는 SQLXML 4.0에서 `xml` 데이터 형식의 인스턴스를 인식하고 이러한 인스턴스에 대한 지원을 구현하는 방법에 대해 설명합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "82702810"
 ## <a name="working-with-xml-data-types"></a>xml 데이터 형식 작업  
  SQL 테이블을 사용하여 `xml` 데이터 형식 열을 구현하는 방법에 대한 자세한 내용은 다음 예를 참조하십시오.  
   
-|작업|예제|항목|  
+|Task|예제|항목|  
 |----------|-------------|-----------|  
 |XML 뷰에서 `xml` 열을 매핑하고 포함하는 방법|"XML 요소를 XML 데이터 형식 열에 매핑"|[SQLXML 4.0 &#40;테이블 및 열에 대 한 XSD 요소 및 특성의 기본 매핑&#41;](../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)|  
 |Updategram을 사용하여 `xml` 열에 데이터를 삽입하는 방법|"XML 데이터 형식 열에 데이터 삽입"|[XML Updategrams &#40;SQLXML 4.0&#41;를 사용 하 여 데이터 삽입](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md)|  
@@ -34,7 +33,7 @@ ms.locfileid: "82702810"
   
 ## <a name="guidelines-and-limitations"></a>지침 및 제한 사항  
   
--   ** \< xsd: 모든>** 데이터 형식을 포함 한 열에 매핑할 수 없습니다 `xml` . SQLXML에서는 `sql:overflow-field` 주석을 통해 이 문제를 해결할 수 있습니다. 또는 `xml` 데이터 형식 필드를 `xsd:anyType`의 요소로 매핑하여 이 문제를 해결할 수도 있습니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
+-   **\<xsd:any>** 데이터 형식을 포함 한 열에 매핑할 수 없습니다 `xml` . SQLXML에서는 `sql:overflow-field` 주석을 통해 이 문제를 해결할 수 있습니다. 또는 `xml` 데이터 형식 필드를 `xsd:anyType`의 요소로 매핑하여 이 문제를 해결할 수도 있습니다. 이 해결 방법은 위의 테이블에 나와 있는 "XML 요소를 XML 데이터 형식 열에 매핑" 예에서 보여 줍니다.  
   
 -   `xml` 데이터 형식 열의 내용에 대한 XPath 쿼리는 지원되지 않습니다.  
   

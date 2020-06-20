@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a70eed8c362411a3b1b87c66b9277da8aeac1ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021276"
 ---
 # <a name="using-data-files-and-format-files"></a>데이터 파일 및 서식 파일 사용
   가장 간단한 대량 복사 프로그램은 다음을 수행합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54fc088cd867e9ed250835ca821e5cac8e598e85
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 68b270f18cb4dbc2724c5a062afae54fa711acec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922017"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956553"
 ---
 # <a name="restoring-from-backups-stored-in-azure"></a>Azure에 저장된 백업 복원
   이 항목에서는 Azure Blob Storage 서비스에 저장된 백업을 사용하여 데이터베이스를 복원할 때의 고려 사항에 대해 간단히 설명합니다. 이 내용은 URL에 대한 SQL Server 백업이나 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 만들어진 백업에 적용됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "82922017"
   
  복원 시간을 단축하기 위해서는 압축된 백업을 사용하는 것이 좋습니다.  25GB를 초과하는 백업 크기에 대해서는 [AzCopy 유틸리티](https://docs.microsoft.com/archive/blogs/windowsazurestorage/azcopy-uploadingdownloading-files-for-windows-azure-blobs) (영문)를 사용하여 로컬 드라이브로 다운로드한 후 복원을 수행하세요. 기타 백업 모범 사례 및 권장 사항에 대해서는 [SQL Server Backup to URL Best Practices and Troubleshooting](sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.  
   
- 추적 플래그 3051을 설정하여 복원을 수행할 때 자세한 로그를 생성할 수도 있습니다. 이 로그 파일은 로그 디렉터리에 배치되며 BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log 형식을 사용하여 이름이 지정됩니다. 로그 파일에는 문제 진단에 도움이 될 수 있는 시간을 비롯하여 각각의 Azure Storage 왕복에 대한 정보가 포함됩니다.  
+ 추적 플래그 3051을 설정하여 복원을 수행할 때 자세한 로그를 생성할 수도 있습니다. 이 로그 파일은 로그 디렉터리에 배치 되며 BackupToUrl- \<instancename> - \<dbname> -action- \<PID> .log 형식을 사용 하 여 이름이 지정 됩니다. 로그 파일에는 문제 진단에 도움이 될 수 있는 시간을 비롯하여 각각의 Azure Storage 왕복에 대한 정보가 포함됩니다.  
   
 ### <a name="topics-on-performing-restore-operations"></a>복원 작업 수행에 대한 항목  
   

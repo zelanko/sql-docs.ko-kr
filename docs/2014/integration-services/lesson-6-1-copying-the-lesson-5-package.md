@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890759"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951443"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>1단계: 5단원 패키지 복사
   이 태스크에서는 5단원에서 만든 Lesson 5.dtsx 패키지의 복사본을 만듭니다. 또는 자습서에 포함되어 있는 완성된 5단원 패키지를 프로젝트에 추가한 다음 복사할 수도 있습니다. 6단원의 나머지 부분에서 이 새 복사본을 사용합니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890759"
   
 7.  속성 창에서 Name 속성을 Lesson 6으로 업데이트합니다.  
   
-8.  ID 속성 상자를 클릭 한 다음 드롭다운 화살표를 클릭 하 고 새 ID> 생성 \<을 클릭 합니다.  
+8.  ID 속성 상자를 클릭하고 드롭다운 화살표를 클릭한 다음 \<Generate New ID>를 클릭합니다.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>완성된 5단원 패키지를 추가하려면  
   

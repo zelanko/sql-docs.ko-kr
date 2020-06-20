@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 630733cc001e905497ee9145e2879b579ac1b2cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55422fa7201213477426c7bc25c45ff05acf8945
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009362"
 ---
 # <a name="search-and-replace"></a>찾기 및 바꾸기
   텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 및 바꾸기** 는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기**또는 **파일에서 바꾸기**의 네 가지 선택 사항을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  

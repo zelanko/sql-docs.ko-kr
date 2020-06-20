@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 627c21a9c2220bcaea76f771624f79618dcf56fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054299"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>3단원: Azure Blob Storage Service로 전체 데이터베이스 백업 작성
   이 단원에서는 tsql 문을 사용 하 여 Azure Blob storage 서비스에 대 한 전체 데이터베이스 백업을 수행 하는 방법을 보여 줍니다.  

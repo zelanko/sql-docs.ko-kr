@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ddd96d178ebec3d69de184ab06829616b0198f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000042"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>추적 중 값 또는 데이터 열 찾기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 실행 중에 추적 출력에서 특정 값이나 데이터 열을 검색하는 방법에 대해 설명합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e3b7b2099aabaa763fb6f6642bcc6267ebe6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a25a9c376b7443bb23520c26be545c027da0bde6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067359"
 ---
 # <a name="connect-to-an-instance-from-object-explorer"></a>개체 탐색기에서 인스턴스에 연결
   개체 탐색기를 사용하여 개체를 관리하려면 먼저 개체가 포함된 인스턴스에 개체 탐색기를 연결해야 합니다. 동시에 여러 인스턴스에 개체 탐색기를 연결할 수 있습니다.  

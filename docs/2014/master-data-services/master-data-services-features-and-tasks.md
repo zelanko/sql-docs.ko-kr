@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ca1c22abff9c86d53d1c502d776709df80b49fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971233"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 기능 및 태스크
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]을(를) 사용하여 조직의 마스터 데이터를 관리하는 방법에 대해 알아봅니다. 데이터를 위한 컨테이너인 모델 개체를 만들고 조작하는 방법에 대해 알아봅니다. 마스터 데이터를 구성하고 유지 관리하는 방법에 대해 알아봅니다. 마스터 데이터를 가져오고 내보내는 방법, 그리고 테스트 환경과 프로덕션 환경 간에 모델을 공유하는 방법에 대해 알아봅니다. 마지막으로 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 서비스에 액세스하는 사용자 지정 애플리케이션을 개발하는 방법에 대해 알아봅니다.  

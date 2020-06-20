@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fcdca4d57b21855a959a876c0c9c9344487046b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022661"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060670"
 ---
 # <a name="new-agent-profile"></a>새 에이전트 프로필
-  **새 에이전트 프로필** 대화 상자를 사용하여 새 프로필을 만들 수 있습니다. 새 프로필은 항상 기존 프로필에 기반하지만 이를 애플리케이션 요구 사항에 맞게 수정할 수 있습니다. 만든 프로필은 **에이전트 프로필** 대화 상자에서 기존 및 후속 에이전트 작업에 적용할 수 있습니다. \<**AgentProfileName> 속성** 대화 상자에서 에이전트 매개 변수 값을 편집할 수 있습니다.  
+  **새 에이전트 프로필** 대화 상자를 사용하여 새 프로필을 만들 수 있습니다. 새 프로필은 항상 기존 프로필에 기반하지만 이를 애플리케이션 요구 사항에 맞게 수정할 수 있습니다. 만든 프로필은 **에이전트 프로필** 대화 상자에서 기존 및 후속 에이전트 작업에 적용할 수 있습니다. 에이전트 매개 변수 값은 \<**AgentProfileName> 속성 * * 대화 상자에서 편집할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **이름**  

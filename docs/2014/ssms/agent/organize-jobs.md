@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 53e0424f15818903e913fc41e4a5a4a3fdade41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efe5e4ebed309c191cce5f498d5c9f80d146e7b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067688"
 ---
 # <a name="organize-jobs"></a>작업 구성
   작업 범주를 사용하면 작업을 쉽게 필터링하고 그룹화할 수 있게 구성할 수 있습니다. 예를 들어 데이터베이스 유지 관리 범주에 있는 모든 데이터베이스 백업 작업을 구성할 수 있습니다. 사용자 고유의 작업 범주를 만들 수도 있습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "63316547"
   
 |||  
 |-|-|  
-|**설명**|**항목**|  
+|**설명**|**뒷부분**|  
 |작업 범주를 만드는 방법에 대해 설명합니다.|[작업 범주 만들기](create-a-job-category.md)|  
 |작업 범주를 삭제하는 방법에 대해 설명합니다.|[작업 범주 삭제](delete-a-job-category.md)|  
 |작업 범주에 작업을 할당하는 방법에 대해 설명합니다.|[작업 범주에 작업 할당](assign-a-job-to-a-job-category.md)|  

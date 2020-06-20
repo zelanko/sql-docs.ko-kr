@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 272a33f69edc6f5152b22e6ffb0c8c3bf8ebbb85
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933532"
 ---
 # <a name="interfaces-ole-db"></a>인터페이스(OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 MDAC (Microsoft Data Access Components)에서 제공 하는 핵심 OLE DB 인터페이스 외에 다음과 같은 추가 OLE DB 인터페이스를 구현 합니다.  
+  Native Client OLE DB 공급자는 MDAC (Microsoft Data Access Components)에서 제공 하는 핵심 OLE DB 인터페이스 외에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음과 같은 추가 OLE DB 인터페이스를 구현 합니다.  
   
--   [IBCPSession&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
+-   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
 -   [IBCPSession2&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession2-ole-db.md)  
   

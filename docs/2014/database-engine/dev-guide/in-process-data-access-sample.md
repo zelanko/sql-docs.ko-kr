@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933551"
 ---
 # <a name="in-process-data-access-sample"></a>In-Process 데이터 액세스 예제
   `InProcessDataAccess` 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 몇 가지 간단한 함수가 포함되어 있습니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>사전 요구 사항  
  이 프로젝트를 만들고 실행하려면 다음 소프트웨어가 설치되어 있어야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 설명서 및 예제 [웹 사이트](https://www.microsoft.com/sql-server/sql-server-editions-express)에서 무료로 구할 수 있습니다.  
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`)에서는이 샘플에 정의 된 저장 프로시저 및 함수를 연습 하 여 예제를 테스트 합니다.  
+ 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` )에서는이 샘플에 정의 된 저장 프로시저 및 함수를 연습 하 여 예제를 테스트 합니다.  
   
 ```  
 USE AdventureWorks;  

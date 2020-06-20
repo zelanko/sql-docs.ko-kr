@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951253"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -49,7 +48,7 @@ Microsoft Access 2016 *런타임*이 아닌 Access 데이터베이스 엔진 201
 
 컴퓨터에 32비트 버전의 Office가 이미 설치되어 있는 경우 32비트 버전의 구성 요소를 설치해야 합니다. 또한 32비트 모드에서 SSIS 패키지를 실행하거나 가져오기 및 내보내기 마법사의 32비트 버전을 실행하는지 확인해야 합니다.
 
-Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 예를 들어:
+Office 365 구독이 있는 경우 설치 관리자를 실행할 때 오류 메시지가 나타날 수 있습니다. 오류는 Office 간편 실행 구성 요소와 함께 다운로드를 설치할 수 없음을 나타냅니다. 이 오류 메시지를 무시하려면 명령 프롬프트 창을 열고 `/quiet` 스위치를 통해 다운로드한 .EXE 파일을 실행하여 자동 모드에서 설치를 실행합니다. 다음은 그 예입니다.
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -81,7 +80,7 @@ SSIS에서 Excel 연결 관리자를 만들어 Excel 원본 또는 대상 파일
 
 -   로컬 컴퓨터의 파일은 **C:\\TestData.xlsx**입니다.
 
--   네트워크 공유 ** \\ \\\\\\**에 있는 파일의 경우 Sales Data TestData.
+-   네트워크 공유에 있는 파일의 경우 ** \\ \\ 판매 \\ 데이터가 \\TestData.xlsx**.
 
 또는 **찾아보기**를 클릭하고 **열기** 대화 상자를 사용하여 스프레드시트를 찾습니다.  
   

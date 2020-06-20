@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0390447c63bcc66428b886595e8c27a795a89f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044886"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>외부 도구를 도구 메뉴에 추가(SQL Server Management Studio)
   [!INCLUDE[msCoName](../includes/msconame-md.md)]에서 모든 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 또는 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 애플리케이션을 시작할 수 있습니다. 외부 애플리케이션은 **도구** 메뉴에 추가하여 실행할 수 있습니다.  

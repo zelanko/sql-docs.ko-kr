@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 203d02a2-aa09-462b-a489-a2cdd6f6023b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 967e2db04a4cf03aa826d5b9f8c3cb1d07417689
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2bbbbcec3f5e5df5bb5d8629329aae6d43599eb9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021652"
 ---
 # <a name="sqlsetdescrec"></a>SQLSetDescRec
   이 항목에서는 Native Client와 관련 된 SQLSetDescRec 기능에 대해 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "82702173"
   
 |매개 변수|테이블 반환 매개 변수 열을 포함 하 여 비 테이블 반환 매개 변수 형식에 대 한 관련 특성|테이블 반환 매개 변수에 대한 관련 특성|  
 |---------------|--------------------------------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Type*|SQL_DESC_TYPE|SQL_SS_TABLE|  
+|*형식*|SQL_DESC_TYPE|SQL_SS_TABLE|  
 |*하위 형식*|무시됨|SQL_DATETIME 또는 SQL_INTERVAL 유형의 레코드에 대해 이 값을 SQL_DESC_DATETIME_INTERVAL_CODE로 설정합니다.|  
 |*길이*|SQL_DESC_OCTET_LENGTH|테이블 반환 매개 변수 유형 이름의 길이입니다. 유형 이름이 null로 끝나는 경우 SQL_NTS이고, 테이블 반환 매개 변수 유형 이름이 필요하지 않은 경우 0입니다.|  
 |*정밀도*|SQL_DESC_PRECISION|SQL_DESC_ARRAY_SIZE|  
@@ -43,7 +42,7 @@ ms.locfileid: "82702173"
 ## <a name="sqlsetdescrec-support-for-enhanced-date-and-time-features"></a>향상된 날짜 및 시간 기능에 대한 SQLSetDescRec 지원  
  날짜/시간 유형에 대해 허용되는 값은 다음과 같습니다.  
   
-||*Type*|*하위 형식*|*길이*|*정밀도*|*크기 조정*|  
+||*형식*|*하위 형식*|*길이*|*정밀도*|*크기 조정*|  
 |-|------------|---------------|--------------|-----------------|-------------|  
 |Datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  

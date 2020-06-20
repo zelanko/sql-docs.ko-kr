@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060107"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>.NET 환경에서 SQLXML 대량 로드 사용
   이 항목에서는 .NET 환경에서 XML 대량 로드 기능을 사용하는 방법에 대해 설명합니다. XML 대량 로드에 대 한 자세한 내용은 [Xml 데이터 대량 로드 수행 &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)를 참조 하세요.  
@@ -139,7 +138,7 @@ ms.locfileid: "82717555"
 9. 앞에서 만든 테이블에 XML을 로드하려면 프로젝트를 빌드하고 실행합니다.  
   
     > [!NOTE]  
-    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 예:  
+    >  대량 로드 구성 요소(xblkld4.dll)에 대한 참조는 .NET Framework에 포함된 tlbimp.exe 도구를 사용하여 추가할 수도 있습니다. 이 도구는 네이티브 DLL(xblkld4.dll)에 대한 관리되는 래퍼를 만들며 이 래퍼는 모든 .NET 프로젝트에서 사용할 수 있습니다. 다음은 그 예입니다.  
   
     ```  
     c:\>tlbimp xblkld4.dll  

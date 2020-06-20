@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc3b1eb4e73b3d77b49cc9f485e0a6fc456a8875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: baa716eec75925c97f987656d11e39ba947918d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951373"
 ---
 # <a name="manage-the-integration-services-service"></a>Integration Services 서비스 관리
     
@@ -28,7 +27,7 @@ ms.locfileid: "66057785"
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]구성 요소를 설치할 때 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스도 함께 설치됩니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스는 기본적으로 시작되며 서비스의 시작 유형은 자동으로 설정됩니다. 그러나 서비스를 사용하여 저장 및 실행 중인 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 패키지를 관리하려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 도 설치해야 합니다.  
   
 > [!NOTE]  
->  버전 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의에서는 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 서비스의 인스턴스에 연결할 수 없습니다 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. 즉, **서버에 연결** 대화 상자에서 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 서비스의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전만 실행 중인 서버의 이름을 입력할 수 없습니다. 그러나 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전부터는 서비스의 구성 파일을 편집할 수 있기 때문에 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]인스턴스에 저장된 패키지를 관리할 수 있습니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
+>  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전의에서는 서비스의 인스턴스에 연결할 수 없습니다 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] . 즉, **서버에 연결** 대화 상자에서 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 서비스의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 버전만 실행 중인 서버의 이름을 입력할 수 없습니다. 그러나 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 의 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 버전부터는 서비스의 구성 파일을 편집할 수 있기 때문에 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]인스턴스에 저장된 패키지를 관리할 수 있습니다. 자세한 내용은 [Integration Services 서비스 구성&#40;SSIS 서비스&#41;](service/integration-services-service-ssis-service.md)버전과의 호환성을 위한 서비스를 지원합니다.  
   
  컴퓨터에는 하나의 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 서비스 인스턴스만 설치할 수 있습니다. 서비스는 특정 [!INCLUDE[ssDE](../includes/ssde-md.md)]인스턴스에 국한되지 않습니다. 서비스가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
   

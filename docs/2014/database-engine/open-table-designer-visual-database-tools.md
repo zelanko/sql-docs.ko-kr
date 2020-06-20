@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3850cbd99eca927983731ad941f611901d26e6ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774190"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930199"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>테이블 디자이너 열기(Visual Database Tools)
   테이블 디자이너는 연결할 데이터베이스 테이블을 디자인하고 시각화할 수 있게 하는 비주얼 도구입니다. 테이블 디자이너를 사용하여 테이블, 열, 키, 인덱스, 관계, 제약 조건 등을 만들거나 편집하거나 삭제할 수 있습니다.  
