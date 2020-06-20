@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26f19f7e1b31d566fd70e4d8b1dbd55a40fa677f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1a9d683fe57d489fdb9922b53d2c5c6825835216
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065432"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  

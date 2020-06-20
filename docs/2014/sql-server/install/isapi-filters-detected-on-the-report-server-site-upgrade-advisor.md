@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a2b811955839eb22e3325d64c55454b92a6b1b8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bff1834ddf1b8f90787a47a8fd58a240d2b715d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059231"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>ISAPI 필터가 보고서 서버 사이트에서 검색됨(업그레이드 관리자)
-  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터는에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]지원 되지 않습니다.  
+  업그레이드 관리자가 보고서 서버와 보고서 관리자 가상 디렉터리를 호스팅하는 웹 사이트에서 하나 이상의 ISAPI 필터를 발견했습니다. ISAPI 필터는에서 지원 되지 않습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  

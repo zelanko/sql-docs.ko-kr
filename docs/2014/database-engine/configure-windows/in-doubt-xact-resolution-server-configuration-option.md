@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 648f142eb80607412e13151098418c22e45f04bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b8db57ef2a4ee85d65e8c25de28ff7ada7994e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781939"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935265"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution 서버 구성 옵션
   **미결 트랜잭션 확인** 옵션을 사용하여 MS DTC( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 해결할 수 없는 트랜잭션의 기본 결과를 조정합니다. MS DTC가 꺼진 경우나 복구 시 알 수 없는 트랜잭션 결과가 있는 경우에는 트랜잭션을 해결할 수 없습니다.  

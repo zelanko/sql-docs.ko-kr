@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76a5ebe7018fdc58f02a4d2454d40f172c752c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094243"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059269"
 ---
 # <a name="integration-services-parameters"></a>Integration Services 매개 변수
-  의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]경우 컴퓨터의 패키지나 파일 시스템 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 파일을 분석 하도록 결정할 수 있습니다. 파일 시스템에 있는 파일을 분석할 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 폴더의 경로를 제공합니다.  
+  의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 컴퓨터의 패키지나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 파일 시스템의 패키지 파일을 분석 하도록 결정할 수 있습니다. 파일 시스템에 있는 파일을 분석할 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지가 들어 있는 폴더의 경로를 제공합니다.  
   
 ## <a name="options"></a>옵션  
  **컴퓨터에 있는 SSIS 패키지 분석**  

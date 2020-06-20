@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 6077b7e8-cb3e-4480-a5de-bb602cf9d69a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed120bedfd236dcb55780982f0f611368147f813
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62795344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939974"
 ---
 # <a name="understanding-the-tabular-object-model"></a>테이블 형식 개체 모델 이해
   테이블 형식 모델은 테이블, 관계, 계층, 큐브 뷰, 측정값 및 핵심 성과의 논리적 표현입니다. 이 섹션에서는 AMO를 사용한 내부 구현에 대해 소개합니다. AMO를 이전에 사용 하지 않은 경우 [AMO(Analysis Management Object) &#40;amo&#41;를 사용 하 여 개발을](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) 참조 하세요.  

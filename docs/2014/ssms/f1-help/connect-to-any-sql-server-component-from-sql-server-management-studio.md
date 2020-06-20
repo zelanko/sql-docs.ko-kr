@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 342624645e9bd88d0a7afd08b3c18225fc2c14ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dac1363ce1c2f9ec1a82f7bb1b699b0f23240f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058636"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 구성 요소를 관리하기 위한 기능을 제공합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 다음과 연결할 수 있습니다.  

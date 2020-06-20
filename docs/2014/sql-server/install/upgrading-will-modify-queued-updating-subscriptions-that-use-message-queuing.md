@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d44cbad43d75634cbf8660110cc879522265c54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091409"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058858"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>업그레이드하면 메시지 큐를 사용하는 지연 업데이트 구독이 수정됩니다.
   업그레이드 관리자가 MSMQ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing)를 사용하는 지연 업데이트 구독이 하나 이상 있을 수 있음을 감지했습니다. 복제는 메시지 큐를 더 이상 지원하지 않습니다. 따라서 구독은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐를 사용하도록 수정됩니다.  

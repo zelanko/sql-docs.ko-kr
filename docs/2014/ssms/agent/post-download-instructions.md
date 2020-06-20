@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067670"
 ---
 # <a name="post-download-instructions"></a>다운로드 명령 게시
   이 페이지를 사용하여 대상 서버에 대한 다운로드 명령을 지정할 수 있습니다.  

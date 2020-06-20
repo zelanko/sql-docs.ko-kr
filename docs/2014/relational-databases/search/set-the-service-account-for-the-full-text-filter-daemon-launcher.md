@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010943"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003774"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>전체 텍스트 필터 데몬 시작 관리자 서비스 계정 설정
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스(MSSQLFDLauncher)에 대한 서비스 계정을 설정하는 방법에 대해 설명합니다. 전체 텍스트 검색 ssNoVersionto에서 전체 텍스트 검색 필터링 및 단어 분리를 처리하는 필터 데몬 호스트 프로세스를 시작하기 위해 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스가 사용됩니다. 전체 텍스트 검색을 사용하려면 이 서비스를 실행해야 합니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010943"
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 고 **SQL 전체 텍스트 필터 데몬 시작 관리자*`instance name`*()** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server Services**를 클릭 하 고 **SQL 전체 텍스트 필터 데몬 시작 관리자 ( *`instance name`* )** 를 마우스 오른쪽 단추로 클릭 한 다음 **속성**을 클릭 합니다.  
   
 3.  대화 상자의 **로그온** 탭을 클릭한 다음 SQL 전체 텍스트 필터 데몬 시작 관리자 서비스에서 만든 각 프로세스를 실행할 계정을 선택하거나 입력합니다.  
   

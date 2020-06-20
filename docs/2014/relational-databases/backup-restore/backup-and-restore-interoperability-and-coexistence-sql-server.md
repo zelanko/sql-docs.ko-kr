@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922438"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959484"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다. 이러한 기능에는 파일 복원 및 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링, 증분 복원 및 전체 텍스트 인덱스가 포함됩니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "62922438"
   
  데이터베이스 시작 중에 문제가 발생하면 복구에 실패하고 데이터베이스가 주의 대상으로 표시됩니다. 문제를 한 파일이나 몇 개의 파일로 격리시킬 수 있는 경우 데이터베이스 관리자는 해당 파일을 오프라인 상태로 만들고 데이터베이스를 다시 시작할 수 있습니다. 파일을 오프라인 상태로 만들려면 다음 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) 문을 실행합니다.  
   
- ALTER database *database_name* MODIFY 파일 (이름 **= '*`filename`*'**, 오프 라인)  
+ ALTER database *database_name* MODIFY 파일 (이름 **= ' *`filename`* '**, 오프 라인)  
   
  데이터베이스가 성공적으로 시작되면 오프라인 파일을 포함하는 모든 파일 그룹은 오프라인 상태로 남게 됩니다.  
   

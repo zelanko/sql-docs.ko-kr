@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d0e4798caf545c84f97cd05075d455980083bf4d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d2c4a0cd87d42db9e17097932b6530936a2b83eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059479"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
   `xml` 유형 열을 사용하여 뷰를 만들 수 있습니다. 다음 예에서는 `xml` 데이터 형식의 `value()` 메서드를 사용하여 `xml` 유형 열의 값을 검색하는 뷰를 만듭니다.  

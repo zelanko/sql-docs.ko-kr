@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103b5024368c5ca239856580e9b45473aabf6a92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997652"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
   전체 텍스트 인덱스가 너무 확장되지 않도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 검색에 도움이 되지 않지만 자주 사용되는 문자열을 무시하는 메커니즘이 있습니다. 이렇게 무시된 문자열을 *중지 단어*라고 합니다. 인덱스를 만드는 동안 전체 텍스트 엔진은 전체 텍스트 인덱스에서 중지 단어를 생략합니다. 즉, 전체 텍스트 쿼리는 중지 단어에서 검색하지 않습니다.  

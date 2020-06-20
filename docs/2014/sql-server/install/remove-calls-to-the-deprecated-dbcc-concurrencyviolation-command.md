@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cc9f6ff-de36-4e94-bd04-59f5c45c4911
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0110d4bc138ad0da953eb83d3c81ec265d2fd3ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde04ebfc2ea9996d1c9ed233123e5b66f6e81fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093212"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065210"
 ---
 # <a name="remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command"></a>더 이상 사용되지 않는 DBCC CONCURRENCYVIOLATION 명령에 대한 호출을 제거합니다.
   업그레이드 관리자가 DBCC CONCURRENCYVIOLATION 명령 사용을 발견했습니다. 이 명령은 더 이상 사용할 수 없습니다. 이 명령을 실행하면 오류 2526이 반환됩니다.  

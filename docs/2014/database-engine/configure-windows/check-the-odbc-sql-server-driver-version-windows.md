@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dbb275d8ced2855b1842bba9a1c11e5543d6a838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd1c926add50f10c08fc013779032edd7d47392
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935847"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>ODBC SQL Server 드라이버 버전 검사(Windows)
   사용자 컴퓨터에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 나 다른 회사에서 제공하는 다양한 ODBC 드라이버가 사용될 수 있습니다. 이 항목에서는 Windows **ODBC 데이터 원본 관리자** 를 사용하여 설치된 ODBC 드라이버의 버전을 확인하는 방법에 대해 설명합니다.  

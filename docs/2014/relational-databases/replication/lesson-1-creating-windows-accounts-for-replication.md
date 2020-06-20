@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5d5e35ef1c3f860c58e036f5335e09165acddfb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000473"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065969"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>1단원: 복제용 Windows 계정 만들기
   이 단원에서는 복제 에이전트를 실행할 Windows 계정을 만들며 다음 에이전트에 대해 로컬 서버에 별도의 Windows 계정을 만듭니다.  
   
 |에이전트|위치|계정 이름|  
 |-----------|--------------|------------------|  
-|스냅샷 에이전트|Publisher|\<*machine_name*> \ repl_snapshot|  
-|로그 판독기 에이전트|Publisher|\<*machine_name*> \ repl_logreader|  
-|배포 에이전트|게시자 및 구독자|\<*machine_name*> \ repl_distribution|  
-|병합 에이전트|게시자 및 구독자|\<*machine_name*> \ repl_merge|  
+|스냅샷 에이전트|Publisher|\<*machine_name*>\ repl_snapshot|  
+|로그 판독기 에이전트|Publisher|\<*machine_name*>\ repl_logreader|  
+|배포 에이전트|게시자 및 구독자|\<*machine_name*>\ repl_distribution|  
+|병합 에이전트|게시자 및 구독자|\<*machine_name*>\ repl_merge|  
   
 > [!NOTE]  
 >  복제 자습서에서는 게시자 및 배포자가 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 공유합니다. 게시자와 구독자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 같은 인스턴스를 공유할 수 있지만 반드시 이렇게 해야 하는 것은 아닙니다. 게시자와 구독자가 같은 인스턴스를 공유하는 경우 구독자에서는 계정을 만드는 단계를 수행하지 않아도 됩니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a18cc68954ba9427169458fc4f972f9ee878d822
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919535"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>열 값 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **열 값 분포 프로필 요청** 의 옵션을 설정할 수 있습니다. 열 값 분포 프로필은 선택한 열에 있는 모든 고유 값 및 각 값이 나타내는 테이블 내 행의 비율을 보고합니다. 또한 프로필은 테이블에서 지정된 행 비율을 초과하는 값을 보고할 수 있습니다. 이 프로필을 사용하면 열에 포함된 잘못된 고유 값 수와 같은 데이터 문제를 식별할 수 있습니다. 예를 들어 미국의 주가 포함된 열을 프로파일링하는 중 50개를 초과하는 고유 값이 검색될 수 있습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "62832428"
   
 #### <a name="column-options"></a>열 옵션  
  **IsWildCard**  
- **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(** )**를 선택한 경우 \*True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
+ **(\*)** 와일드카드가 선택되었는지 여부를 지정합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 **True**로 설정됩니다. 프로파일링할 개별 열을 선택한 경우에는 **False** 로 설정됩니다. 이 옵션은 읽기 전용입니다.  
   
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)** 를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "62832428"
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
   
 > [!NOTE]  
->  **ColumnName\*에 대해** ( **)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
+>  **ColumnName**에 대해 **(\*)** 와일드카드를 사용하는 경우 **CompareOptions**가 읽기 전용이 되며 **Default** 설정으로 설정됩니다.  
   
 |값|Description|  
 |-----------|-----------------|  

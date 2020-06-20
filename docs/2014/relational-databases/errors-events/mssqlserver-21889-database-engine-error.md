@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ae199540-7986-4cc2-b782-cd22793236d3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 262b2c795da92b2ef32c6956d9a2deda0e45a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c152a542550d7b81af880545f526037baeb4644e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034644"
 ---
 # <a name="mssqlserver_21889"></a>MSSQLSERVER_21889
     
@@ -36,6 +35,6 @@ ms.locfileid: "62915230"
  게시자 데이터베이스를 호스팅하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 복제 게시자여야 합니다. `sp_validate_redirected_publisher`는 원격 서버에서 `sp_helpdistributor`를 호출하여 서버가 복제 게시자인지 여부를 확인합니다. 이 오류는 `sp_helpdistributor` 저장 프로시저를 실행할 때 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 복제 게시자가 아닌 것으로 나타난 경우에 반환됩니다.  
   
 ## <a name="user-action"></a>사용자 동작  
- 게시자 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 `sp_adddistributor`를 실행하십시오. 올바른 배포자를 지정하여 `sp_adddistributor`를 실행하십시오. 처음에 배포자에서를 실행할 *@password* 때 `sp_adddistributor` 사용 된 매개 변수와 동일한 값을 사용 합니다.  
+ 게시자 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 `sp_adddistributor`를 실행하십시오. 올바른 배포자를 지정하여 `sp_adddistributor`를 실행하십시오. *@password* `sp_adddistributor` 처음에 배포자에서를 실행할 때 사용 된 매개 변수와 동일한 값을 사용 합니다.  
   
   

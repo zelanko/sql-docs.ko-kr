@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4c48d26814b606b4be18ae0c0c21c73f8bf6b1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767755"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968293"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Microsoft Connector for 1.1 SAP BW 설치
   SAP BW용 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 및 해당 설명서를 설치하려면 SQL Server 기능 팩 웹 페이지에서 Windows Installer 패키지를 다운로드하고 실행합니다.  

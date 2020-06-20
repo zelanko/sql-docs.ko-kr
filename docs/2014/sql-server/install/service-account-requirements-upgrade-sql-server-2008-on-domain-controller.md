@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 574245b6-11e2-4849-b0ca-836d673ecd0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bb703e42edcbf128ff78ca294e08fc487f06d8f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0680e09548e38760f6ac317fec63152486a4e5fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036514"
 ---
 # <a name="service-account-requirements-for-upgrading-to-sql-server-2008-on-a-domain-controller"></a>도메인 컨트롤러에서 SQL Server 2008로 업그레이드하기 위한 서비스 계정 요구 사항
-  업그레이드 관리자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 도메인 컨트롤러의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 서비스 또는 로컬 서비스 계정에서 실행 중인 인스턴스를 검색 했습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 컨트롤러에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]가 설치되어 있으면 로컬 서비스 계정 또는 네트워크 서비스 계정 권한으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  
+  업그레이드 관리자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 도메인 컨트롤러의 네트워크 서비스 또는 로컬 서비스 계정에서 실행 중인 인스턴스를 검색 했습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도메인 컨트롤러에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]가 설치되어 있으면 로컬 서비스 계정 또는 네트워크 서비스 계정 권한으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  

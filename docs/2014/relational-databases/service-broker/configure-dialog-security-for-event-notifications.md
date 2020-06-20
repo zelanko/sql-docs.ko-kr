@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996563"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>이벤트 알림에 대한 대화 보안 구성
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성해야 합니다. 대화 보안은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 의 높은 수준의 대화 보안 모델에 따라 수동으로 구성해야 합니다. 높은 수준의 보안 모델은 원격 서버와 주고 받는 메시지의 암호화 및 암호 해독을 가능하게 합니다. 이벤트 알림은 한 방향으로 전송되지만 오류와 같은 다른 메시지는 반대 방향으로도 반환됩니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920614"
 ---
 # <a name="multiple-files-connection-manager"></a>다중 파일 연결 관리자
   다중 파일 연결 관리자를 사용하면 패키지에서 기존 파일 및 폴더를 참조하거나 런타임에 파일 및 폴더를 만들 수 있습니다.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833642"
   
  다중 파일 연결 관리자에서 다중 파일 및 폴더를 참조하는 경우 파일 및 폴더의 경로는 세로줄 문자(|)로 구분됩니다. 연결 관리자의 `ConnectionString` 속성은 다음 형식을 갖습니다.  
   
- \<*경로*>|\<*경로*>  
+ \<*path*>|\<*path*>  
   
- 또한 와일드카드 문자를 사용하여 다중 파일이나 폴더를 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조 하려면 `ConnectionString` 속성의 값을 c:\\* .txt로 설정할 수 있습니다.  
+ 또한 와일드카드 문자를 사용하여 다중 파일이나 폴더를 지정할 수 있습니다. 예를 들어 C 드라이브의 모든 텍스트 파일을 참조 하려면 속성의 값을 `ConnectionString` c: * .txt로 설정할 수 있습니다 \\ .  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   

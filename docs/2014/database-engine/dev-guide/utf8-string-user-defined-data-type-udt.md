@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9676f321604516dd369cfffbdf449acc55c25f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933184"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>UTF8 문자열 UDT(사용자 정의 데이터 형식)
   SQL Server에 대한 UTF8String 예제는 사용자 정의 데이터 형식을 구현하는 방법을 보여 줍니다. UTF8로 인코딩된 값을 스토리지할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UTF8 사용자 정의 데이터 형식의 구현 방법을 보여 줍니다. 이 형식은 유니코드 문자열과 UTF8 간의 상호 변환 코드도 구현합니다.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637628"
   
 -   사용하고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 AdventureWorks 데이터베이스를 설치해야 합니다.  
   
--   사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 관리자가 아닌 경우 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
+-   사용 중인 인스턴스의 관리자가 아닌 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 완료 하려면 관리자에 게 **createassembly** 권한을 부여 해야 합니다.  
   
 ## <a name="building-the-sample"></a>예제 빌드  
   

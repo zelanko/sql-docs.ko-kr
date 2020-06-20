@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06d17a4feaec0db614f61fb7761b37ea415efc24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: def6be137aecbab7f2730fa4c2bf210b374a3a7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934731"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>데이터 및 로그 파일의 기본 위치 보기 또는 변경(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 새 데이터 및 로그 파일의 기본 위치를 보고 변경하는 방법에 대해 설명합니다. 기본 경로는 레지스트리에서 가져옵니다. 위치를 변경하면 다른 위치를 지정하지 않는 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 만들어지는 모든 새 데이터베이스가 해당 위치를 사용합니다.  

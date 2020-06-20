@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807466"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934344"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
   데이터베이스 미러링은 게시 데이터베이스의 가용성을 제공하기 위해 복제와 함께 사용될 수 있습니다. 데이터베이스 미러링에는 일반적으로 서로 다른 컴퓨터에 있는 두 개의 단일 데이터베이스 복사본이 사용됩니다. 클라이언트는 항상 하나의 데이터베이스 복사본만 사용할 수 있습니다. 이 복사본을 주 데이터베이스라고 합니다. 클라이언트가 주 데이터베이스에 수행한 업데이트는 미러 데이터베이스라고 하는 다른 데이터베이스 복사본에 적용됩니다. 미러링에는 주 데이터베이스에 대해 수행된 모든 삽입, 업데이트 또는 삭제 작업의 트랜잭션 로그를 미러 데이터베이스에 적용하는 작업이 포함됩니다.  
@@ -71,9 +70,9 @@ ms.locfileid: "62807466"
   
 3.  미러 서버에 대한 배포를 구성합니다. 게시자로 미러 이름을 지정하고 주 서버에서 사용되는 것과 같은 배포자 및 스냅샷 폴더를 지정합니다. 예를 들어 저장 프로시저로 복제를 구성하는 경우 배포자에서 [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) 를 실행한 다음 미러에서 [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) 를 실행합니다. **sp_adddistpublisher**의 경우 다음과 같이 합니다.  
   
-    -   **@publisher** 매개 변수의 값을 미러 서버의 네트워크 이름으로 설정 합니다.  
+    -   **@publisher**매개 변수의 값을 미러 서버의 네트워크 이름으로 설정 합니다.  
   
-    -   **@working_directory** 매개 변수의 값을 주 서버에서 사용 하는 스냅숏 폴더로 설정 합니다.  
+    -   **@working_directory**매개 변수의 값을 주 서버에서 사용 하는 스냅숏 폴더로 설정 합니다.  
   
 4.  **–PublisherFailoverPartner** 에이전트 매개 변수에 대한 미러 이름을 지정합니다. 이 에이전트 매개 변수는 다음 에이전트에서 장애 조치 후 미러 서버를 식별하는 데 필요합니다.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "62807466"
   
      배포 에이전트 및 배포 ActiveX 컨트롤은 게시자에 연결되지 않기 때문에 이 매개 변수가 없습니다.  
   
-     에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다. 에이전트 프로필 및 명령 프롬프트에서 매개 변수를 지정할 수 있습니다. 자세한 내용은 다음을 참조하세요.  
+     에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다. 에이전트 프로필 및 명령 프롬프트에서 매개 변수를 지정할 수 있습니다.    자세한 내용은 다음을 참조하세요.  
   
     -   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "62807466"
   
      게시 데이터베이스가 미러된 경우 미러된 데이터베이스에 저장된 복제 메타데이터는 주 데이터베이스에 저장된 메타데이터와 동일합니다. 따라서 주 서버에서 복제용으로 설정된 게시 데이터베이스의 경우 미러 서버에서 시스템 테이블에 저장된 게시자 이름은 미러 서버가 아닌 주 서버의 이름입니다. 이러한 방식은 게시 데이터베이스가 미러 서버로 장애 조치되는 경우 복제 구성 및 유지 관리에 영향을 줍니다. 예를 들어 장애 조치 (failover) 후에 미러 서버에서 저장 프로시저를 사용 하 여 복제를 구성 하는 경우 주 서버에서 사용 하도록 설정 된 게시 데이터베이스에 끌어오기 구독을 추가 하려면 **@publisher** **sp_addpullsubscription** 또는 **sp_addmergepullsubscription**의 매개 변수에 대 한 미러 이름이 아닌 사용자 이름을 지정 해야 합니다.  
   
-     미러 서버로 장애 조치 (failover) 후 미러에서 게시 데이터베이스를 사용 하도록 설정 하면 시스템 테이블에 저장 된 게시자 인스턴스 이름이 미러 서버의 이름이 됩니다. 이 경우 **@publisher** 매개 변수에 대 한 미러 이름을 사용 합니다.  
+     미러 서버로 장애 조치 (failover) 후 미러에서 게시 데이터베이스를 사용 하도록 설정 하면 시스템 테이블에 저장 된 게시자 인스턴스 이름이 미러 서버의 이름이 됩니다. 이 경우 매개 변수에 대 한 미러 이름을 사용 **@publisher** 합니다.  
   
     > [!NOTE]  
     >  **sp_addpublication**과 같은 일부 경우에는 **@publisher** 매개 변수가 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해서만 지원되며, 이 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 미러링과는 관련이 없습니다.  

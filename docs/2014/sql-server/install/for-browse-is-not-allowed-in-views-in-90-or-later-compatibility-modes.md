@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f49b1c1-d877-4c46-b988-f8cdd8ac0925
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4811a3df80257b1e2d0e903fad562568eeec4ea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 251e0ae2ff6f19dfcff3b0f8056f6697c1bfc40d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012618"
 ---
 # <a name="for-browse-is-not-allowed-in-views-in-90-or-later-compatibility-modes"></a>FOR BROWSE는 90 이상 호환성 모드의 뷰에서 허용되지 않습니다.
   업그레이드 관리자가 뷰에서 FOR BROWSE 절이 사용되는 것을 감지했습니다. 데이터베이스 호환성 모드가 80으로 설정되어 있는 경우 FOR BROWSE 절은 뷰에서 허용 및 무시됩니다. 데이터베이스 호환성 모드가 90 이상으로 설정된 경우에는 뷰에 FOR BROWSE 절이 허용되지 않습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940264"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>학습 데이터 지정(데이터 마이닝 마법사)
   **학습 데이터 지정** 페이지를 사용하여 마이닝 구조에 포함할 열을 확인할 수 있습니다. 모든 모델에서 열을 사용하지 않는 경우에도 열을 선택하여 구조에 포함할 수 있습니다. 예를 들어 마이닝 모델에서 열로 드릴스루하려는 경우 모델이 아닌 구조에 열을 포함할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66068073"
  **테이블/열**  
  마법사의 이전 페이지에서 선택한 테이블 및 열을 표시합니다.  
   
- **\<확인란>**  
+ **\<check box>**  
  마이닝 구조에 포함할 열을 선택합니다.  
   
  데이터 원본에 중첩 테이블 또는 여러 뷰가 포함된 경우 열 목록을 확장하여 중첩 테이블을 볼 수 있습니다.  

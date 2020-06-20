@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 364515afaea17ce403f8eb38cb10bbe6003dfe2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037338"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 대량 로드 개체 모델(SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 대량 로드 개체 모델은 SQLXMLBulkLoad 개체로 구성 됩니다. 이 개체는 다음 메서드 및 속성을 지원합니다.  

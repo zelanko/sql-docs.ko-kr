@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951653"
 ---
 # <a name="derived-column-transformation-editor"></a>파생 열 변환 편집기
   **파생 열 변환 편집기** 대화 상자를 사용하여 새 열 또는 대체 열을 채우는 식을 만들 수 있습니다.  
@@ -55,7 +54,7 @@ ms.locfileid: "66059566"
  **정밀도**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 전체 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
- **규모**  
+ **크기 조정**  
  새 열에 데이터를 추가하는 경우 **파생 열 변환 편집기** 대화 상자가 데이터 형식을 기반으로 숫자 데이터의 소수 자릿수를 자동으로 설정합니다. 이 열의 값은 읽기 전용입니다.  
   
  **코드 페이지**  

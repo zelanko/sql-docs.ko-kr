@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754925"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934397"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션에서 트랜잭션 보안 변경(Transact-SQL)
   트랜잭션 보안은 세션의 운영 모드를 제어하는 특성입니다. 그러나 데이터베이스 소유자는 언제든지 트랜잭션 보안을 변경할 수 있습니다. 기본적으로 트랜잭션 보안의 수준은 FULL(동기 운영 모드)로 설정되어 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62754925"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     여기서 * \<database>* 은 미러된 데이터베이스의 이름입니다.  
+     여기서 *\<database>* 은 미러된 데이터베이스의 이름입니다.  
   
 ### <a name="to-turn-off-transaction-safety"></a>트랜잭션 보안을 해제하려면  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62754925"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     여기서 * \<database>* 은 미러된 데이터베이스입니다.  
+     여기서 *\<database>* 는 미러된 데이터베이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE 데이터베이스 미러링 &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   

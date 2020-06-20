@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b76d727657530cfd872b04535f9413f86ff32b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 541e214399a0f91c63c5cf053f5a99dafe9fb837
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013344"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
   이 예에서는 EXPLICIT 모드를 사용하는 `SELECT` 문에서 `XMLTEXT` 지시어를 사용하여 오버플로 열의 데이터 주소를 지정하는 방법을 보여 줍니다.  

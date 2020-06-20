@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4d6df52-9e68-4003-9e28-ece6716ba7f1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f5459373689c17e0a55d8df0f02507bf24989ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d846b13ac75ac1c0f4eb4ca2abe8cf7fb6e99440
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245065"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013939"
 ---
 # <a name="setnumericalvalue-method-clientnetworkprotocolproperty-class"></a>SetNumericalValue 메서드(ClientNetworkProtocolProperty 클래스)
   [Propertyidx 속성 (ClientNetworkProtocolProperty 클래스)](clientnetworkprotocolproperty-class.md) 값에서 참조 하는 현재 속성의 숫자 값을 설정 합니다.  
@@ -38,11 +37,11 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 사용 하는 네트워크 프로토콜의 특성을 나타내는 [clientnetworkprotocolproperty 클래스](clientnetworkprotocolproperty-class.md) 개체입니다.  
+ 클라이언트에서 사용 하는 네트워크 프로토콜의 특성을 나타내는 [Clientnetworkprotocolproperty 클래스](clientnetworkprotocolproperty-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |*value*|참조된 속성의 숫자 값을 지정하는 `uint32` 값입니다.|  
   

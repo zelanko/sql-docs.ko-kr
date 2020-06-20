@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b57ca40b08718cda5095249991e0d424e6593a24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959908"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "72783116"
 ####  <a name="permissions"></a><a name="Permissions"></a> 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다 . 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
+ 백업 디바이스의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 디바이스를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 디바이스에 대한 항목을 추가하는 [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)는 파일 액세스 권한을 확인하지 않습니다. 백업 디바이스의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -74,7 +73,7 @@ ms.locfileid: "72783116"
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
-3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
 4.  **데이터베이스** 목록 상자에서 데이터베이스 이름을 확인합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
   
@@ -89,13 +88,13 @@ ms.locfileid: "72783116"
   
 8.  **이름** 입력란에 제시된 기본 백업 세트 이름을 사용하거나 다른 이름을 입력합니다.  
   
-9. 필요할 경우 **설명** 텍스트 상자에 백업 세트에 대한 설명을 입력합니다.  
+9. 필요에 따라 **설명** 입력란에 백업 세트에 대한 설명을 입력합니다.  
   
 10. 백업 세트가 만료될 시기를 다음과 같이 지정합니다.  
   
     -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후** (기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
   
-         기본값은 **서버 속성** 대화 상자 (**데이터베이스 설정** 페이지)의 **백업 미디어 기본 보존 기간 (일)** 옵션에 설정 되어 있습니다. 이 대화 상자에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의**백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 대화 상자에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
     -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "72783116"
   
      백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거**를 클릭합니다. 백업 대상의 내용을 보려면 선택한 다음 **내용**을 클릭합니다.  
   
-12. 고급 옵션을 보거나 선택 하려면 **페이지 선택** 창에서 **옵션** 을 클릭 합니다.  
+12. 고급 옵션을 보거나 선택하려면 **페이지 선택** 창에서 **옵션** 을 클릭합니다.  
   
 13. 다음 중 하나를 클릭하여 **미디어 덮어쓰기** 옵션을 선택합니다.  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72783116"
   
     -   트랜잭션 로그 백업이 기록될 백업 디바이스  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
   
 > [!IMPORTANT]  
 >  이 예에서는 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다. 로그 백업을 허용하기 위해 전체 데이터베이스를 백업하기 전에 전체 복구 모델을 사용하도록 데이터베이스를 설정했습니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
@@ -200,6 +199,6 @@ SQL Server PowerShell 공급자를 설정 하 고 사용 하려면 [SQL Server P
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [SQL Server&#41;&#40;트랜잭션 로그 백업 적용](transaction-log-backups-sql-server.md)   
+ [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [유지 관리 계획](../maintenance-plans/maintenance-plans.md)   
  [전체 파일 백업&#40;SQL Server&#41;](full-file-backups-sql-server.md)  

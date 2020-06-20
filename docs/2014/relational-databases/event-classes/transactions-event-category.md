@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 076e68de4dc5d4e25f6cabe6b39ac4a61a05033a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b68a91fb166797c220cb0c4f5cf2607ca267538
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051322"
 ---
 # <a name="transactions-event-category"></a>Transactions 이벤트 범주
   **Transactions** 이벤트 클래스를 사용하면 트랜잭션 상태를 모니터링할 수 있습니다. 접두사 **TM:** 으로 시작되는 이벤트 클래스 이름은 트랜잭션 관리 인터페이스를 통해 전송되는 트랜잭션 관련 작업을 추적하는 데 사용됩니다.  

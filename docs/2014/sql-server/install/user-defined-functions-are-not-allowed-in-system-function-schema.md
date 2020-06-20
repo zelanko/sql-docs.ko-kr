@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058781"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>system_function_schema에서 사용자 정의 함수가 허용되지 않습니다.
   업그레이드 관리자가 문서화 되지 않은 사용자 **system_function_schema**소유 하 고 있는 사용자 정의 함수를 검색 했습니다. 이 사용자를 지정해서는 사용자 정의 시스템 함수를 만들 수 없습니다. **System_function_schema** 사용자 이름이 존재 하지 않으며이 이름과 연결 된 사용자 ID (UID = 4)는 **sys** 스키마에 예약 되어 있으며 내부 에서만 사용 하도록 제한 됩니다.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091327"
   
  이러한 변경 사항은 사용자 정의 시스템 함수에 다음과 같은 영향을 줍니다.  
   
--   **System_function_schema** 를 참조 하는 DDL (데이터 정의 언어) 문이 실패 합니다. `CREATE FUNCTION system`예를 들어 _`function` \_ `schema.fn` \_ `MySystemFunction` ... 문을 사용할 경우 성공 하지 않습니다.  
+-   **System_function_schema** 를 참조 하는 DDL (데이터 정의 언어) 문이 실패 합니다. 예를 들어 `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... 문을 사용할 경우 성공 하지 않습니다.  
   
--   로 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]업그레이드 한 후 **system_function_schema** 에서 소유 하는 기존 개체는 **master** 데이터베이스의 **sys** 스키마에만 포함 됩니다. 시스템 개체는 수정할 수 없으므로 이러한 함수는 **master** 데이터베이스에서 변경 되거나 삭제 되지 않습니다. 또한 이러한 함수는 다른 데이터베이스에서 한 부분으로 된 함수 이름을 지정하여 호출할 수 없습니다.  
+-   로 업그레이드 한 후 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **system_function_schema** 에서 소유 하는 기존 개체는 **master** 데이터베이스의 **sys** 스키마에만 포함 됩니다. 시스템 개체는 수정할 수 없으므로 이러한 함수는 **master** 데이터베이스에서 변경 되거나 삭제 되지 않습니다. 또한 이러한 함수는 다른 데이터베이스에서 한 부분으로 된 함수 이름을 지정하여 호출할 수 없습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  업그레이드하기 전에 다음 태스크를 완료합니다.  

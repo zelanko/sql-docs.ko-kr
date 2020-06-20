@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 17d2e52175022afd9be34c4200158bfb2ed1ec12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702300"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013042"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 선언의 값
   다음 표에서는 인식된 모든 XSD 단순 유형 열거를 기반으로 적용되는 제한 사항에 대해 간단하게 설명합니다.  
   
- 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **\<xsd:simpleType>** 선언에 NaN 값을 지원하지 않습니다. NaN 값이 포함된 스키마는 서버에서 거부됩니다.  
+ 또한는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 선언에서 NaN 값을 지원 하지 않습니다 **\<xsd:simpleType>** . NaN 값이 포함된 스키마는 서버에서 거부됩니다.  
   
 |단순 유형|제한 사항|  
 |-----------------|----------------|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45d02cbb57459a4c1c11330446021c32dc897353
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919625"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953824"
 ---
 # <a name="dropping-an-assembly"></a>어셈블리 삭제
   CREATE ASSEMBLY 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록한 어셈블리에서 제공하는 기능이 더 이상 필요 없는 경우 이 어셈블리를 삭제할 수 있습니다. 어셈블리를 삭제하면 데이터베이스에서 어셈블리뿐 아니라 디버그 파일 등의 모든 관련 파일이 제거됩니다. 어셈블리를 삭제하려면 DROP ASSEMBLY 문을 다음 구문으로 사용합니다.  
@@ -43,7 +42,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   데이터베이스에 WITH SCHEMABINDING 절로 만든 함수, 저장 프로시저 또는 트리거가 있고 이러한 루틴이 UDT의 변수 또는 매개 변수를 사용하는 경우  
   
 ### <a name="finding-udt-dependencies"></a>UDT 종속성 찾기  
- 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 **ADVENTUREWORKS** 데이터베이스에서 UDT를 사용 하는 모든 열과 매개 변수를 찾습니다.  
+ 따라서 먼저 모든 종속 개체를 삭제한 다음 DROP TYPE 문을 실행해야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 쿼리는 **AdventureWorks** 데이터베이스에서 UDT를 사용 하는 모든 열과 매개 변수를 찾습니다.  
   
 ```  
 USE Adventureworks;  

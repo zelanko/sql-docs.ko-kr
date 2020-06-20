@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cc1e8de30fa582898ef8516b9767dec14c4fa81
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050458"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 *테이블에 데이터를 대량으로 가져오는 데 사용할* XML 형식 파일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 작성하기 위한 구문을 정의하는 XML 스키마를 제공합니다. XML 서식 파일은 XSDL(XML Schema Definition Language)에 정의되어 있는 이 스키마에 충실해야 합니다. XML 서식 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
@@ -55,36 +54,36 @@ ms.locfileid: "66011563"
 ##  <a name="structure-of-xml-format-files"></a><a name="StructureOfXmlFFs"></a> XML 서식 파일의 구조  
  비 XML 서식 파일과 마찬가지로 XML 서식 파일도 데이터 파일의 데이터 필드 형식과 구조를 정의하며 해당 데이터 필드를 단일 대상 테이블의 열에 매핑합니다.  
   
- XML 서식 파일에는 두 개의 주요 구성 요소 \<RECORD>와 \<ROW>가 있습니다.  
+ XML 서식 파일에는 및 라는 두 가지 주요 구성 요소가 \<RECORD> \<ROW> 있습니다.  
   
--   \<RECORD>는 데이터 파일에 저장되어 있는 데이터를 설명합니다.  
+-   \<RECORD>데이터 파일에 저장 되는 데이터에 대해 설명 합니다.  
   
-     각 \<RECORD> 요소는 하나 이상의 \<FIELD> 요소 집합을 포함합니다. 이러한 요소는 데이터 파일의 필드에 해당합니다. 기본 구문은 다음과 같습니다.  
+     각 \<RECORD> 요소는 하나 이상의 요소 집합을 포함 \<FIELD> 합니다. 이러한 요소는 데이터 파일의 필드에 해당합니다. 기본 구문은 다음과 같습니다.  
   
      \<RECORD>  
   
-     \<FIELD .../> [ ...*n* ]  
+     \<FIELD .../>[ ... *n* ]  
   
      \</RECORD>  
   
-     각 \<FIELD> 요소는 특정 데이터 필드의 콘텐츠를 설명합니다. 필드 하나는 테이블의 열 하나에만 매핑할 수 있지만 모든 필드를 열에 매핑해야 하는 것은 아닙니다.  
+     각 \<FIELD> 요소는 특정 데이터 필드의 내용을 설명 합니다. 필드 하나는 테이블의 열 하나에만 매핑할 수 있지만 모든 필드를 열에 매핑해야 하는 것은 아닙니다.  
   
      데이터 파일의 필드는 고정/가변 길이이거나 종료된 문자일 수 있습니다. *필드 값* 은 문자(1바이트 표현 사용), 와이드 문자(유니코드 2바이트 표현 사용), 네이티브 데이터베이스 형식 또는 파일 이름으로 표현될 수 있습니다. 필드 값이 파일 이름으로 표현되는 경우 파일 이름은 대상 테이블의 BLOB 열 값이 포함된 파일을 가리킵니다.  
   
--   \<ROW>는 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 가져올 때 데이터 파일의 데이터 행을 구성하는 방법을 설명합니다.  
+-   \<ROW>파일의 데이터를 테이블로 가져올 때 데이터 파일에서 데이터 행을 생성 하는 방법을 설명 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     \<ROW> 요소에는 \<COLUMN> 열 집합이 포함됩니다. 이러한 요소는 테이블 열에 해당합니다. 기본 구문은 다음과 같습니다.  
+     \<ROW>요소는 요소 집합을 포함 \<COLUMN> 합니다. 이러한 요소는 테이블 열에 해당합니다. 기본 구문은 다음과 같습니다.  
   
      \<ROW>  
   
-     \<COLUMN .../> [ ...*n* ]  
+     \<COLUMN .../>[ ... *n* ]  
   
      \</ROW>  
   
-     각 \<COLUMN> 요소는 데이터 파일의 필드 하나에만 매핑할 수 있습니다. \<ROW> 요소에서 \<COLUMN> 요소의 순서에 따라 대량 작업에서 반환되는 순서가 정의됩니다. XML 서식 파일은 각 \<COLUMN> 요소에 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 지정합니다.  
+     각 \<COLUMN> 요소는 데이터 파일의 한 필드에만 매핑될 수 있습니다. 요소의 순서는 \<COLUMN> \<ROW> 대량 작업에서 반환 하는 순서를 정의 합니다. XML 서식 파일은 \<COLUMN> 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 각 요소에 할당 합니다.  
   
 ##  <a name="schema-syntax-for-xml-format-files"></a><a name="SchemaSyntax"></a> XML 서식 파일의 스키마 구문  
- 이 섹션에서는 XML 형식 파일의 XML 스키마 요소 및 특성에 대한 요약을 제공합니다. 서식 파일의 구문은 작업 방향과는 무관합니다. 즉, 대량 내보내기와 대량 가져오기의 구문은 동일합니다. 또한 이 섹션에서는 대량 가져오기에서 \<ROW> 및 \<COLUMN> 요소를 사용하는 방법과 요소의 xsi:type 값을 데이터 집합에 포함시키는 방법에 대해 설명합니다.  
+ 이 섹션에서는 XML 형식 파일의 XML 스키마 요소 및 특성에 대한 요약을 제공합니다. 서식 파일의 구문은 작업 방향과는 무관합니다. 즉, 대량 내보내기와 대량 가져오기의 구문은 동일합니다. 또한이 섹션에서는 대량 가져오기에서 및 요소를 사용 하는 방법과 \<ROW> \<COLUMN> 요소의 xsi: type 값을 데이터 집합에 저장 하는 방법을 고려 합니다.  
   
  구문이 실제 XML 형식 파일과 일치하는지 보려면 이 항목 뒷부분에 있는 [예제 XML 형식 파일](#SampleXmlFFs)을 참조하세요.  
   
@@ -94,7 +93,7 @@ ms.locfileid: "66011563"
   
   
 ###  <a name="basic-syntax-of-the-xml-schema"></a><a name="BasicSyntax"></a> XML 스키마의 기본 구문  
- 이 문의 구문에서는 요소(\<BCPFORMAT>, \<RECORD>, \<FIELD>, \<ROW>, \<COLUMN>) 및 그 기본 특성만 보여 줍니다.  
+ 이 구문 문은 요소 ( \<BCPFORMAT> , \<RECORD> , \<FIELD> , \<ROW> 및 \<COLUMN> )와 해당 기본 특성만 표시 합니다.  
   
  \<BCPFORMAT ...>  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66011563"
  \</BCPFORMAT>  
   
 > [!NOTE]  
->  \<FIELD> 또는 \<COLUMN> 요소의 xsi:type 값과 연관된 추가 특성은 이 항목의 뒷부분에서 설명합니다.  
+>  또는 요소의 xsi: type 값과 연관 된 추가 특성 \<FIELD> \<COLUMN> 은이 항목의 뒷부분에 설명 되어 있습니다.  
   
 
   
@@ -128,65 +127,65 @@ ms.locfileid: "66011563"
  지정된 데이터 파일의 레코드 구조와 테이블 행의 열과의 일치를 정의하는 서식 파일 요소입니다.  
   
  \<RECORD .../>  
- 하나 이상의 \<FIELD> 요소를 포함하는 복잡한 요소를 정의합니다. 서식 파일에서 필드가 선언되는 순서는 이들 필드가 데이터 파일에 나열되는 순서입니다.  
+ 하나 이상의 요소를 포함 하는 복잡 한 요소를 정의 \<FIELD> 합니다. 서식 파일에서 필드가 선언되는 순서는 이들 필드가 데이터 파일에 나열되는 순서입니다.  
   
  \<FIELD .../>  
  데이터를 포함하는 데이터 파일의 필드를 정의합니다.  
   
- 이 요소의 특성은 이 항목의 뒷부분에 나오는 [\<FIELD> 요소의 특성](#AttrOfFieldElement)에서 설명합니다.  
+ 이 요소의 특성은이 항목의 뒷부분에 나오는 [ \<FIELD> 요소의 특성](#AttrOfFieldElement)에서 설명 합니다.  
   
  \<ROW .../>  
- 하나 이상의 \<COLUMN> 요소를 포함하는 복잡한 요소를 정의합니다. \<COLUMN> 요소의 순서는 RECORD 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다. 반면, 서식 파일에 있는 \<COLUMN> 요소의 순서는 결과 행 집합의 열 순서를 결정합니다. 데이터 필드는 해당 \<COLUMN> 요소가 \<COLUMN> 요소에서 선언되는 순서대로 로드됩니다.  
+ 하나 이상의 요소를 포함 하는 복잡 한 요소를 정의 \<COLUMN> 합니다. 요소의 순서는 \<COLUMN> \<FIELD> 레코드 정의의 요소 순서와는 독립적입니다. 대신 \<COLUMN> 서식 파일의 요소 순서는 결과 행 집합의 열 순서를 결정 합니다. 데이터 필드는 요소에서 해당 요소가 선언 된 순서 대로 로드 됩니다 \<COLUMN> \<COLUMN> .  
   
- 자세한 내용은 뒷부분의 [대량 가져오기의 \<ROW> 요소 사용 방법](#HowUsesROW)을 참조하세요.  
+ 자세한 내용은이 항목의 뒷부분에 나오는 [대량 가져오기에서 \<ROW> 요소를 사용 하는 방법](#HowUsesROW)을 참조 하세요.  
   
  \<COLUMN>  
- 열을 요소(\<COLUMN>)로 정의합니다. 각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  
+ 열을 요소로 정의 \<COLUMN> 합니다 (). 각 \<COLUMN> 요소는 요소의 \<FIELD> SOURCE 특성에 지정 된 ID를 갖는 요소에 해당 \<COLUMN> 합니다.  
   
- 이 요소의 특성은 이 항목의 뒷부분에 나오는 [\<COLUMN> 요소의 특성](#AttrOfColumnElement)에서 설명합니다. 자세한 내용은 뒷부분의 [대량 가져오기의 \<COLUMN> 요소를 사용하는 방법](#HowUsesColumn)을 참조하세요.  
+ 이 요소의 특성은이 항목의 뒷부분에 나오는 [ \<COLUMN> 요소의 특성](#AttrOfColumnElement)에서 설명 합니다. 또한이 항목의 뒷부분에 나오는 [대량 가져오기에서 \<COLUMN> 요소를 사용 하는 방법](#HowUsesColumn)을 참조 하세요.  
   
  \</BCPFORMAT>  
  서식 파일을 끝내는 데 필요합니다.  
   
-####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<FIELD> 요소의 특성  
- 이 섹션에서는 \<FIELD> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
+####  <a name="attributes-of-the-field-element"></a><a name="AttrOfFieldElement"></a>\<FIELD>요소의 특성  
+ 이 섹션에서는 \<FIELD> 다음 스키마 구문에 요약 된 요소의 특성에 대해 설명 합니다.  
   
  <FIELD  
   
- ID **= "*`fieldID`*"**  
+ ID **= " *`fieldID`* "**  
   
- xsi **:** type **= "*`fieldType`*"**  
+ xsi **:** type **= " *`fieldType`* "**  
   
  [ LENGTH **="*`n`*"** ]  
   
- [PREFIX_LENGTH **= "*`p`*"** ]  
+ [PREFIX_LENGTH **= " *`p`* "** ]  
   
- [MAX_LENGTH **= "*`m`*"** ]  
+ [MAX_LENGTH **= " *`m`* "** ]  
   
- [COLLATION **= "*`collationName`*"** ]  
+ [COLLATION **= " *`collationName`* "** ]  
   
- [종결자 **= "*`terminator`*"** ]  
+ [종결자 **= " *`terminator`* "** ]  
   
  />  
   
- 각 \<FIELD> 요소는 다른 요소와는 독립적입니다. 필드는 다음 특성에 따라 설명됩니다.  
+ 각 \<FIELD> 요소는 다른 요소와 별개입니다. 필드는 다음 특성에 따라 설명됩니다.  
   
 |FIELD 특성|Description|선택 /<br /><br /> 필수|  
 |---------------------|-----------------|------------------------------|  
-|ID **= "*`fieldID`*"**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> <FIELD ID **= "*`fieldID`*"**/> <열 SOURCE **=*`fieldID`*""** 에 매핑됩니다./>|필수|  
-|xsi: type **= "*`fieldType`*"**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
-|LENGTH **="*`n`*"**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
-|PREFIX_LENGTH **= "*`p`*"**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
-|MAX_LENGTH **= "*`m`*"**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 스토리지를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|Optional|  
-|COLLATION **= "*`collationName`*"**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)을 참조하세요.|옵션|  
-|종결자 **= "*`terminator`*"**|이 특성은 데이터 필드의 종결자를 지정합니다. 종결자는 어떠한 문자도 가능합니다. 종결자는 데이터의 일부가 아닌 고유 문자여야 합니다.<br /><br /> 기본적으로 필드 종결자는 탭 문자(\t로 표시)입니다. 단락 기호를 표시하려면 \r\n을 사용하세요.|이 특성이 필요한 문자 데이터의 xsi:type에만 사용됩니다.|  
+|ID **= " *`fieldID`* "**|데이터 파일에서 필드의 논리적 이름을 지정합니다. 필드의 ID는 필드를 참조하는 데 사용되는 키입니다.<br /><br /> <FIELD ID **= " *`fieldID`* "**/> <열 SOURCE **= " *`fieldID`* "** 에 매핑됩니다./>|필수|  
+|xsi: type **= " *`fieldType`* "**|요소의 인스턴스 유형을 식별하는 XML 구문(특성처럼 사용)입니다. *fieldType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.|필수(데이터 형식에 따라 다름)|  
+|LENGTH **= " *`n`* "**|이 특성은 고정 길이 데이터 형식의 인스턴스 길이를 정의합니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
+|PREFIX_LENGTH **= " *`p`* "**|이 특성은 이진 데이터 표현의 접두사 길이를 정의합니다. PREFIX_LENGTH 값인 *p*는 1, 2, 4 또는 8 중 하나를 사용해야 합니다.|선택(xsi:type 값에서 필요로 하지 않는 경우)|  
+|MAX_LENGTH **= " *`m`* "**|이 특성은 지정된 필드에 저장할 수 있는 최대 바이트 수입니다. 대상 테이블이 없는 경우 열의 최대 길이를 알 수 없습니다. MAX_LENGTH 특성은 출력 문자 열의 최대 길이를 제한하여 열 값에 할당된 스토리지를 제한합니다. 특히 SELECT FROM 절에서 OPENROWSET 함수의 BULK 옵션을 사용할 때 편리합니다.<br /><br /> *m* 값은 양의 정수여야 합니다. 기본적으로 최대 길이는 **char** 열의 경우 8000자, **nchar** 열의 경우 4000자입니다.|선택 사항|  
+|COLLATION **= " *`collationName`* "**|COLLATION은 문자 필드에서만 사용할 수 있습니다. SQL 데이터 정렬 이름 목록은 [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)을 참조하세요.|옵션|  
+|종결자 **= " *`terminator`* "**|이 특성은 데이터 필드의 종결자를 지정합니다. 종결자는 어떠한 문자도 가능합니다. 종결자는 데이터의 일부가 아닌 고유 문자여야 합니다.<br /><br /> 기본적으로 필드 종결자는 탭 문자(\t로 표시)입니다. 단락 기호를 표시하려면 \r\n을 사용하세요.|이 특성이 필요한 문자 데이터의 xsi:type에만 사용됩니다.|  
   
-#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>\<FIELD> 요소의 xsi:type 값  
+#####  <a name="xsitype-values-of-the-field-element"></a><a name="XsiTypeValuesOfFIELD"></a>요소의 Xsi: type 값 \<FIELD>  
  xsi:type 값은 요소 인스턴스의 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. xsi:type 값의 사용 방법은 이 섹션의 뒷부분에 나오는 "데이터 집합에 xsi:type 값 넣기"를 참조하세요.  
   
- \<FIELD> 요소의 xsi:type 값은 다음 데이터 형식을 지원합니다.  
+ 요소의 xsi: type 값은 \<FIELD> 다음 데이터 형식을 지원 합니다.  
   
-|\<FIELD> xsi:type 값|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
+|\<FIELD>xsi: type 값|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
 |**NativeFixed**|`LENGTH`|없음|  
 |**NativePrefix**|`PREFIX_LENGTH`|MAX_LENGTH|  
@@ -199,8 +198,8 @@ ms.locfileid: "66011563"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)을 참조하세요.  
   
-####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<COLUMN> 요소의 특성  
- 이 섹션에서는 \<COLUMN> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
+####  <a name="attributes-of-the-column-element"></a><a name="AttrOfColumnElement"></a>\<COLUMN>요소의 특성  
+ 이 섹션에서는 \<COLUMN> 다음 스키마 구문에 요약 된 요소의 특성에 대해 설명 합니다.  
   
  \<요소의 Xsi:type 값  
   
@@ -226,20 +225,20 @@ ms.locfileid: "66011563"
   
 |COLUMN 특성|Description|선택 /<br /><br /> 필수|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **= "*`fieldID`*"**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> <열 원본 **= "*`fieldID`*"**/> <필드 ID **=*`fieldID`*""** 에 매핑됩니다./>|필수|  
+|SOURCE **= " *`fieldID`* "**|열에 매핑되는 필드의 ID를 지정합니다.<br /><br /> <열 원본 **= " *`fieldID`* "**/> <필드 ID **= " *`fieldID`* "** 에 매핑됩니다./>|필수|  
 |NAME = "*columnName*"|서식 파일에 의해 표현된 행 집합의 열 이름을 지정합니다. 이 열 이름은 결과 집합에서 열을 식별하는 데 사용되며 대상 테이블에서 사용되는 열 이름과 일치할 필요는 없습니다.|필수|  
-|xsi **:** type **= "*`ColumnType`*"**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType* 의 가능한 값 및 관련 특성은 다음 표에 나와 있습니다.|Optional|  
-|LENGTH **="*`n`*"**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
+|xsi **:** type **= " *`ColumnType`* "**|요소의 인스턴스 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. *ColumnType* 값은 지정한 인스턴스에서 필요한 옵션 특성(아래)을 결정합니다.<br /><br /> 참고: *ColumnType* 의 가능한 값 및 관련 특성은 다음 표에 나와 있습니다.|선택 사항|  
+|LENGTH **= " *`n`* "**|고정 길이 데이터 형식의 인스턴스 길이를 정의합니다. LENGTH는 xsi:type이 문자열 데이터 형식인 경우에만 사용됩니다.<br /><br /> *n* 값은 양의 정수여야 합니다.|선택(xsi:type이 문자열 데이터 형식인 경우에만 사용 가능)|  
 |PRECISION **="*`n`*"**|숫자의 전체 자릿수를 나타냅니다. 예를 들어 123.45의 전체 자릿수는 5입니다.<br /><br /> 값은 양의 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
-|SCALE **= "*`int`*"**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
+|SCALE **= " *`int`* "**|숫자에서 소수점 이하 자릿수를 나타냅니다. 예를 들어 123.45의 소수 자릿수는 2입니다.<br /><br /> 값은 정수여야 합니다.|선택(xsi:type이 가변 숫자 데이터 형식인 경우에만 사용 가능)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|열이 NULL 값을 허용하는지 여부를 나타냅니다. 이 특성은 FIELDS와는 독립적입니다. 그러나 열이 NULLABLE이 아닌 경우 필드에서 NULL을 지정하면(아무 값도 지정하지 않음) 런타임 오류가 발생합니다.<br /><br /> NULLABLE 특성은 일반 SELECT FROM OPENROWSET(BULK...) 문의 경우에만 사용됩니다.|선택 사항(모든 데이터 형식에 사용 가능)|  
   
-#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>\<COLUMN> 요소의 xsi:type 값  
+#####  <a name="xsitype-values-of-the-column-element"></a><a name="XsiTypeValuesOfCOLUMN"></a>요소의 Xsi: type 값 \<COLUMN>  
  xsi:type 값은 요소 인스턴스의 데이터 형식을 식별하는 XML 구문(특성처럼 사용)입니다. xsi:type 값의 사용 방법은 이 섹션의 뒷부분에 나오는 "데이터 집합에 xsi:type 값 넣기"를 참조하세요.  
   
- \<COLUMN> 요소는 다음과 같이 원시 SQL 데이터 형식을 지원합니다.  
+ 요소는 다음과 \<COLUMN> 같이 원시 SQL 데이터 형식을 지원 합니다.  
   
-|형식 범주|\<COLUMN> 데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
+|형식 범주|\<COLUMN>데이터 형식|데이터 형식의<br /><br /> 선택적 XML 특성|데이터 형식의<br /><br /> 선택적 XML 특성|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
 |수정됨|`SQLBIT`, `SQLTINYINT`, `SQLSMALLINT`, `SQLINT`, `SQLBIGINT`, `SQLFLT4`, `SQLFLT8`, `SQLDATETIME`, `SQLDATETIM4`, `SQLDATETIM8`, `SQLMONEY`, `SQLMONEY4`, `SQLVARIANT` 및 `SQLUNIQUEID`|없음|NULLABLE|  
 |가변 숫자|`SQLDECIMAL` 및 `SQLNUMERIC`|없음|NULLABLE, PRECISION, SCALE|  
@@ -253,24 +252,24 @@ ms.locfileid: "66011563"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)을 참조하세요.  
   
-###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a> 대량 가져오기에서 \<ROW> 요소를 사용하는 방법  
- 일부 컨텍스트에서는 \<ROW> 요소가 무시됩니다. \<ROW> 요소가 대량 가져오기 작업에 영향을 주는지 여부는 작업 수행 방법에 따라 달라질 수 있습니다.  
+###  <a name="how-bulk-import-uses-the-row-element"></a><a name="HowUsesROW"></a>대량 가져오기에서 요소를 사용 하는 방법 \<ROW>  
+ \<ROW>일부 컨텍스트에서는 요소가 무시 됩니다. \<ROW>요소가 대량 가져오기 작업에 영향을 주는지 여부는 작업 수행 방법에 따라 달라 집니다.  
   
 -   **bcp** 명령  
   
-     데이터가 대상 테이블에 로드되면 **bcp**는 \<ROW> 구성 요소를 무시합니다. 대신 **bcp** 는 대상 테이블의 열 유형을 기반으로 하는 데이터를 로드합니다.  
+     데이터가 대상 테이블에 로드 되 면 **bcp** 는 \<ROW> 구성 요소를 무시 합니다. 대신 **bcp** 는 대상 테이블의 열 유형을 기반으로 하는 데이터를 로드합니다.  
   
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문(BULK INSERT 및 OPENROWSET의 대량 행 집합 공급자)  
   
-     대량의 데이터를 테이블로 가져오는 경우 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 \<ROW> 구성 요소를 사용하여 입력 행 집합을 생성합니다. 또한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 \<ROW>에서 지정된 열 유형과 대상 테이블에 있는 해당 열에 따라 적절한 형식 변환을 수행합니다. 서식 파일에서 지정된 열 유형과 대상 테이블에서 지정된 열 유형이 일치하지 않는 경우 추가 형식 변환이 수행됩니다. **bcp**와 비교할 때 이 추가 형식 변환으로 인해 BULK INSERT 또는 OPENROWSET의 대량 행 집합 공급자 동작에서 다소 불일치(전체 자릿수 손실)가 발생할 수 있습니다.  
+     테이블에 데이터를 대량으로 가져올 때 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 \<ROW> 구성 요소를 사용 하 여 입력 행 집합을 생성 합니다. 또한 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은에 지정 된 열 유형과 \<ROW> 대상 테이블의 해당 열에 따라 적절 한 형식 변환을 수행 합니다. 서식 파일에서 지정된 열 유형과 대상 테이블에서 지정된 열 유형이 일치하지 않는 경우 추가 형식 변환이 수행됩니다. **bcp**와 비교할 때 이 추가 형식 변환으로 인해 BULK INSERT 또는 OPENROWSET의 대량 행 집합 공급자 동작에서 다소 불일치(전체 자릿수 손실)가 발생할 수 있습니다.  
   
-     \<ROW> 요소의 정보를 사용하면 추가 정보 없이 행을 생성할 수 있습니다. 따라서 SELECT 문(SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*)을 사용하여 행 집합을 생성할 수 있습니다.  
+     요소의 정보를 \<ROW> 사용 하면 추가 정보를 요구 하지 않고 행을 생성할 수 있습니다. 따라서 SELECT 문(SELECT \* FROM OPENROWSET(BULK *datafile* FORMATFILE=*xmlformatfile*)을 사용하여 행 집합을 생성할 수 있습니다.  
   
     > [!NOTE]  
     >  OPENROWSET BULK 절에는 서식 파일이 필요합니다. XML 서식 파일을 사용해야만 필드 데이터 형식에서 열 데이터 형식으로 변환할 수 있습니다.  
   
-###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a> 대량 가져오기에서 \<COLUMN> 요소를 사용하는 방법  
- 대량의 데이터를 테이블로 가져오는 경우 서식 파일의 \<COLUMN> 요소는 다음을 지정하여 데이터 파일 필드를 테이블 열에 매핑합니다.  
+###  <a name="how-bulk-import-uses-the-column-element"></a><a name="HowUsesColumn"></a>대량 가져오기에서 요소를 사용 하는 방법 \<COLUMN>  
+ 테이블에 데이터를 대량으로 가져오는 경우 \<COLUMN> 서식 파일의 요소는 다음을 지정 하 여 데이터 파일 필드를 테이블 열에 매핑합니다.  
   
 -   데이터 파일의 행 내의 각 필드 위치  
   
@@ -278,7 +277,7 @@ ms.locfileid: "66011563"
   
  열이 필드에 매핑되지 않으면 해당 필드는 생성된 행에 복사되지 않습니다. 이 동작을 통해 데이터 파일은 다른 열(다른 테이블)을 포함하는 행을 생성할 수 있습니다.  
   
- 마찬가지로 테이블에서 데이터를 대량으로 내보내는 경우 서식 파일의 각 \<COLUMN>은 입력 테이블 행의 열을 출력 데이터 파일의 해당 필드에 매핑합니다.  
+ 마찬가지로 테이블에서 데이터를 대량으로 내보내는 경우 \<COLUMN> 서식 파일의 각 열은 입력 테이블 행의 열을 출력 데이터 파일의 해당 필드에 매핑합니다.  
   
 ###  <a name="putting-the-xsitype-value-into-a-data-set"></a><a name="PutXsiTypeValueIntoDataSet"></a> 데이터 집합에 xsi:type 값 넣기  
  XSD(XML 스키마 정의) 언어를 통해 XML 문서의 유효성이 검사된 경우 xsi:type 값을 데이터 집합에 넣을 수 없습니다. 그러나 다음 코드 조각의 설명과 같이 XML 서식 파일을 XML 문서(예: `myDoc`)에 로드하여 xsi:type 정보를 데이터 집합에 넣을 수 있습니다.  
@@ -310,7 +309,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
- **데이터 파일(레코드):** Age\<tab>Firstname\<tab>Lastname\<return>  
+ **데이터 파일 (레코드):** 사용 기간 \<tab> 이름 \<tab> 성\<return>  
   
  다음 XML 서식 파일은 데이터 파일의 데이터를 테이블로 읽어 옵니다.  
   
@@ -348,7 +347,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **테이블(행):** Person(Age int, FirstName varchar(20), LastName varchar(30))  
   
- **데이터 파일**(레코드): Age\<tab>Lastname\<tab>Firstname\<return>  
+ **데이터 파일** (레코드): Age \<tab> Lastname \<tab> Firstname\<return>  
   
  서식 파일은 `<RECORD>` 요소에서 3개의 필드에 있는 데이터 값을 문자 데이터로 표현합니다.  
   
@@ -383,7 +382,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  **테이블(행):** Person(Age int, FirstName Varchar(20), LastName Varchar(30))  
   
- **데이터 파일(레코드):** Age\<tab>employeeID\<tab>Firstname\<tab>Lastname\<return>  
+ **데이터 파일 (레코드):** Age \<tab> employeeID \<tab> Firstname \<tab> Lastname\<return>  
   
  서식 파일은 `<RECORD>` 요소에서 4개의 필드에 있는 데이터 값을 문자 데이터로 표현합니다. 각 필드에서 TERMINATOR 특성은 데이터 값 다음에 오는 종결자를 나타냅니다.  
   
@@ -417,7 +416,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 > [!NOTE]  
 >  해당하는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제는 [서식 파일을 사용하여 데이터 필드 건너뛰기&#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)를 참조하세요.  
   
-###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> 4. \<FIELD> xsi:type을 \<COLUMN> xsi:type에 매핑  
+###  <a name="d-mapping-field-xsitype-to-column-xsitype"></a><a name="MapXSItype"></a> 4. Xsi: type \<FIELD> 을 \<COLUMN> xsi: type으로 매핑  
  다음 예에서는 다양한 형식의 필드와 함께 해당 필드와 열의 매핑을 보여 줍니다.  
   
 ```  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 098e1443-a8a0-425c-9311-0a479b1370ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78e6a175ce7757a9e9808a5a993bec6a44a3db2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da01e5e701948bcc5bd8d8e16ee151ef788a8a7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053069"
 ---
 # <a name="database-suspect-data-page-event-class"></a>Database Suspect Data Page 이벤트 클래스
   **Database Suspect Data Page** 이벤트 클래스는 [msdb](/sql/relational-databases/system-tables/suspect-pages-transact-sql) 의 [suspect_pages](../databases/msdb-database.md)테이블에 페이지가 추가되었음을 나타냅니다. 주의 대상 페이지의 발생을 모니터링하는 추적에 이 이벤트 클래스를 포함합니다.  

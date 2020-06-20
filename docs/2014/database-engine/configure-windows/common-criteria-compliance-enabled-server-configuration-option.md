@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6722d05351b8b9e80240abb4edef0633a97b6da0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935814"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled 서버 구성 옵션
   common criteria compliance enabled 옵션은 Common Criteria에 필요한 다음 요소를 사용할 수 있게 합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 373b2b9d90512293e1776d06ab5797faaf47a210
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5663ff72d643cb1488bbf2b2866e2cdd94a0f56f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960533"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
   SQL Server 구분 식별자에 Windows PowerShell 경로 이름에서 지원되지 않는 문자가 사용되는 경우가 있습니다. 이러한 문자는 16진수 값을 인코딩하여 지정할 수 있습니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "72797773"
 2.  **특수 문자를 처리하려면:**  [식별자 인코딩](#EncodeIdent), [식별자 디코딩](#DecodeIdent)  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
- Windows PowerShell 경로 이름에서 지원 되지 않는 문자는 "%" 문자 뒤에 문자를 나타내는 비트 패턴의 16 진수 값 ("**%** xx")으로 표시 되거나 인코딩될 수 있습니다. 인코딩은 Windows PowerShell 경로에 지원되지 않는 모든 문자를 처리하는 데 사용할 수 있습니다.  
+ Windows PowerShell 경로 이름에서 지원 되지 않는 문자는 "%" 문자 뒤에 문자를 나타내는 비트 패턴의 16 진수 값 ("xx")으로 표시 되거나 인코딩될 수 있습니다 **%** . 인코딩은 Windows PowerShell 경로에 지원되지 않는 모든 문자를 처리하는 데 사용할 수 있습니다.  
   
  **Encode-SqlName** cmdlet은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용합니다. Windows PowerShell 언어에서 지원하지 않는 모든 문자를 "%xx"로 인코딩하여 문자열을 출력합니다. **Decode-SqlName** cmdlet은 인코딩된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 식별자를 입력으로 사용하고 원래 식별자를 반환합니다.  
   

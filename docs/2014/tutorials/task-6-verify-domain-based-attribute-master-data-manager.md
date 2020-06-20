@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e90517a-910c-4c33-8f11-92ac3cff4fdc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 56418adbefec0dc996fd83ce70415e86ec9509a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 056241a30261e5cbd2244eeaefc3e13b83f0d54b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035202"
 ---
 # <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>태스크 6: 마스터 데이터 관리자를 사용하여 도메인 기반 특성이 생성되었는지 확인
   이 작업에서는 **마스터 데이터 관리자** 를 사용해서 **State** 엔터티가 **MDS** 에 만들어졌고 **Supplier** 엔터티의 **State** 특성이 **State**엔터티에 종속된 도메인 기반 특성인지 확인합니다.
@@ -38,7 +37,7 @@ ms.locfileid: "78171663"
 
 8.  다른 지역에 대해서도 위 단계를 반복합니다.
 
-    |코드|Name|
+    |코드|속성|
     |----------|----------|
     |CA|캘리포니아|
     |CO|Colorado|
@@ -55,7 +54,7 @@ ms.locfileid: "78171663"
     |NV|Nevada|
     |NY|뉴욕|
     |OH|Ohio|
-    |확인|Oklahoma|
+    |정상|Oklahoma|
     |또는|Oregon|
     |PA|Pennsylvania|
     |SC|South Carolina|

@@ -23,19 +23,18 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b12a6d599a9d740dc78f8b1545fb0dbf029cbde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935250"
 ---
 # <a name="manage-the-database-engine-services"></a>데이터베이스 엔진 서비스 관리
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 운영 체제에서 서비스로 실행됩니다. 서비스는 시스템 백그라운드에서 실행되는 일종의 애플리케이션입니다. 서비스는 일반적으로 웹 지원, 이벤트 로깅 또는 파일 지원 등 운영 체제의 중요한 기능을 제공합니다. 서비스는 컴퓨터 바탕 화면에 사용자 인터페이스를 표시하지 않고 실행할 수 있습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 여러 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소가 서비스로 실행됩니다. 이러한 서비스는 일반적으로 운영 체제를 시작할 때 함께 시작되지만 설치 시 지정된 설정에 따라 달라질 수 있으며 일부 서비스는 기본적으로 시작되지 않습니다. 이 섹션에서는 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 관리에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 로그인하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작, 중지, 일시 중지, 재개 및 다시 시작하는 방법에 대해 알아야 합니다. 로그인한 후에 서버 관리 또는 데이터베이스 쿼리와 같은 태스크를 수행할 수 있습니다.  
   
 ## <a name="using-the-sql-server-service"></a>SQL Server 서비스 사용  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스를 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작한 후 사용자는 서버에 새 연결을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 로컬 또는 원격에서 서비스로 시작 및 중지될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 기본 인스턴스인 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)로, 명명된 인스턴스인 경우 MSSQL$ *\<instancename>* 으로 참조됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스를 시작하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 시작됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 시작한 후 사용자는 서버에 새 연결을 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스는 로컬 또는 원격에서 서비스로 시작 및 중지될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 인스턴스인 경우 (MSSQLSERVER) 또는 *\<instancename>* 명명 된 인스턴스인 경우 MSSQL $ 이라고 합니다.  
   
 ## <a name="using-sql-server-configuration-manager"></a>SQL Server 구성 관리자 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하면 다양한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 중지, 시작 또는 일시 중지할 수 있습니다.  

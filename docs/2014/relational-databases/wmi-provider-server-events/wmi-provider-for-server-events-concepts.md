@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 922ae033b30894d62d5e356b0ee3d395cf552180
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013604"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>서버 이벤트용 WMI 공급자 개념
   서버 이벤트용 WMI 공급자를 통해 WMI(Windows Management Instrumentation)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이벤트를 모니터링할 수 있습니다.  
