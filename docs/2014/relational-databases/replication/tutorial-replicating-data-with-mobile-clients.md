@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c36eae0ca3d9613dfdaf13bce3a5e748f91b123f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8c9e2d0f20a91bb11c0d5e08aff00c27785818e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047594"
 ---
 # <a name="tutorial-replicating-data-with-mobile-clients"></a>자습서: 모바일 클라이언트와의 데이터 복제
   복제는 가끔 연결되는 중앙 서버와 모바일 클라이언트간에 데이터를 이동할 때 발생하는 문제를 해결하는 좋은 방법입니다. 복제 마법사를 사용하면 복제 토폴로지를 쉽게 구성하고 관리할 수 있습니다. 이 자습서에서는 모바일 클라이언트에 대해 복제 토폴로지를 구성하는 방법에 대해 설명합니다.  

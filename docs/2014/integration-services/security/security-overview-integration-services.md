@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53cce2807c1bd241a06551dd9eda1e7f5e19a497
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927092"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963918"
 ---
 # <a name="security-overview-integration-services"></a>보안 개요(Integration Services)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 보안은 풍부하고 유연한 보안 환경을 제공하는 여러 계층으로 구성되어 있습니다. 이러한 보안 계층에서는 디지털 서명, 패키지 속성, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할 및 운영 체제 권한을 사용합니다. 이러한 보안 기능은 대부분 ID 및 액세스 제어라는 범주에 해당합니다.  

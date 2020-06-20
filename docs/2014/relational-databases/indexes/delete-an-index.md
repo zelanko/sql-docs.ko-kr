@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 092d6e9432f22ef43a155d2a7d3ff03299bcd131
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4552ba701782e5790f95f54c0c1c66f82573f1e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162326"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025618"
 ---
 # <a name="delete-an-index"></a>인덱스 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스를 삭제하는 방법에 대해 설명합니다.  
@@ -82,7 +81,7 @@ ms.locfileid: "63162326"
   
 7.  **닫기**를 클릭합니다.  
   
-8.  **파일** 메뉴에서 **table_name**_저장_을 선택합니다.  
+8.  **파일** 메뉴에서 _table_name_**저장**을 선택합니다.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Transact-SQL 사용  
   

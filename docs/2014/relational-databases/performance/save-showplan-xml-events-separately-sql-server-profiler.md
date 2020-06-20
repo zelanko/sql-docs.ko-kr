@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c92c08349a473aa4a83205cc539eec3577619109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 858e74ce3b39a24d4faeecd889a35b56952c993c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047836"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Showplan XML 이벤트를 개별적으로 저장(SQL Server 프로파일러)
   이 항목에서는 **를 사용하여 추적에서 캡처된** Showplan XML [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이벤트를 개별 .SQLPLan 파일에 저장하는 방법에 대해 설명합니다. **에서** Showplan XML [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]이벤트 파일을 열면 각 이벤트에 대한 그래픽 실행 계획을 볼 수 있습니다.  
@@ -31,13 +30,13 @@ ms.locfileid: "63150425"
      **추적 속성**대화 상자가 표시됩니다.  
   
     > [!NOTE]  
-    >  연결한 **후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작 됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
+    >  **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성**대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구**메뉴에서 **옵션**을 클릭한 다음 **연결한 후 즉시 추적 시작** 확인란의 선택을 취소합니다.  
   
 2.  **추적 속성** 대화 상자에서 **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
 3.  **템플릿 사용** 목록에서 추적의 기반이 되는 추적 템플릿을 선택하거나 템플릿을 사용하지 않을 경우 **비어 있음** 을 선택합니다.  
   
-4.  다음 중 하나를 수행합니다.  
+4.  다음 작업 중 하나를 수행합니다.  
   
     -   추적을 데이터베이스 테이블에 캡처하려면**파일에 저장** 확인란을 선택하면 추적이 파일에 캡처됩니다. **최대 파일 크기 설정**에 대한 값을 지정합니다. 또는 **파일 롤오버 사용** 및 **서버에서 추적 데이터 처리** 확인란을 선택합니다.  
   

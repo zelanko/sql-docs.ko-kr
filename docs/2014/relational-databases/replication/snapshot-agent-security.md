@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bfd64cea8d661b2d1d5b1b4c7e581d2f4e413a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055663"
 ---
 # <a name="snapshot-agent-security"></a>스냅샷 에이전트 보안
   **스냅샷 에이전트 보안** 대화 상자를 사용하여 다음을 지정할 수 있습니다.  

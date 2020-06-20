@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c1869cf7-9030-4d18-85d6-0e419a4e9af7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: eaf7057130cc3d13c0025b92b207efbace339e74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264a2b3ab1e6f3f0bda97bfe89a4438aa641577d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025846"
 ---
 # <a name="natively-compiled-stored-procedures-and-execution-set-options"></a>고유하게 컴파일된 저장 프로시저 및 Execution Set 옵션
   ATOMIC 블록에서 Session 옵션은 고정됩니다. 저장 프로시저 실행은 세션의 SET 옵션의 영향을 받지 않습니다. 하지만 SET NOEXEC, SET SHOWPLAN_XML과 같은 일부 SET 옵션은 저장 프로시저(고유하게 컴파일된 저장 프로시저 포함)가 실행되지 않도록 합니다.  

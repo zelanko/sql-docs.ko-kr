@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055570"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 배포자 및 게시자 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "68212024"
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **배포자 속성**을 클릭합니다.  
   
-3.  **배포자 속성 - \<Distributor>** 대화 상자에서 속성을 보고 수정합니다.  
+3.  **배포자 속성- \<Distributor> ** 대화 상자에서 속성을 보고 수정 합니다.  
   
     -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추(**...**)를 클릭합니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212024"
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **게시자 속성**을 클릭합니다.  
   
-3.  **게시자 속성- \< 게시자 >** 대화 상자에서 속성을 보고 수정 합니다.  
+3.  **게시자 속성- \< Publisher > ** 대화 상자에서 속성을 보고 수정 합니다.  
   
     -   **sysadmin** 고정 서버 역할의 사용자는 **게시 데이터베이스** 페이지에서 복제에 사용할 데이터베이스를 설정할 수 있습니다. 데이터베이스를 설정한다고 해서 그 데이터베이스가 게시되는 것은 아닙니다. 데이터베이스를 설정하면 설정된 데이터베이스에 대한 **db_owner** 고정 데이터베이스 역할의 사용자가 그 데이터베이스에 하나 이상의 게시를 만들 수 있습니다.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68212024"
   
 4.  배포자를 사용하는 게시자의 속성을 변경하려면 배포자에서 [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) 를 실행합니다.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트 예에서는 배포자와 배포자 데이터베이스에 대한 정보를 반환합니다.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -173,7 +172,7 @@ ms.locfileid: "68212024"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> 메서드를 호출합니다. *password* 매개 변수에 대해 새 암호 값을 전달합니다.  
   
     > [!IMPORTANT]  
-    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 합니다.  
+    >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다.  
   
 6.  (옵션) 다음 단계를 수행하여 이 배포자를 사용하는 각 원격 게시자에서 암호를 변경합니다.  
   

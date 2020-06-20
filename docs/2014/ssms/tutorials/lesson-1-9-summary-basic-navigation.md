@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: de4e9430-7290-4ce5-be9e-f247539460e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f25cc02e61fceb42a8c02919d4deaab42c0ab586
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e43fd061d6547133ce07f72520d697c4c6172e03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048652"
 ---
 # <a name="summary-basic-navigation"></a>요약: 기본 탐색
   개인적인 취향과 작업 요구 사항에 맞게 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 디자인 화면을 사용자 지정할 수 있습니다.  

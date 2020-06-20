@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010419"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화
   사전 계산 파티션을 필터링된 병합 게시에 사용하여 성능을 최적화할 수 있습니다. 또한 사전 계산 파티션은 필터링된 게시에서 논리 레코드를 사용하기 위한 요구 사항입니다. 논리적 레코드에 대한 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   
  구독자가 게시자와 동기화되면 게시자는 구독자의 필터를 평가하여 그 구독자의 파티션이나 데이터 집합에 속하는 행을 확인해야 합니다. 게시자에서 필터링된 데이터 세트를 수신하는 각 구독자에 대한 변경 내용의 파티션 멤버 자격을 결정하는 이 과정을 *파티션 평가*라고 합니다. 사전 계산 파티션을 사용하지 않을 경우 특정 구독자에 대해 병합 에이전트를 마지막으로 실행한 이후에 게시자에서 필터링된 열의 각 변경 내용에 대해 파티션 평가를 수행해야 합니다. 게시자와 동기화하는 모든 구독자에 대해 이 프로세스를 반복합니다.  
   
- 그러나 게시자와 구독자가 이상 버전에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 실행 중이 고 사전 계산 파티션을 사용 하는 경우 게시자의 모든 변경 내용에 대 한 파티션 멤버 자격은 사전 계산 되 고 변경 내용이 적용 될 때 유지 됩니다. 결과적으로 구독자가 게시자와 동기화할 때 파티션 평가 과정을 거치지 않고도 파티션과 관련된 변경 내용을 즉시 다운로드할 수 있습니다. 이 기능을 통해 게시에 변경 내용, 구독자 또는 아티클이 많을 경우 성능이 크게 향상될 수 있습니다.  
+ 그러나 게시자와 구독자가 이상 버전에서 실행 중이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 고 사전 계산 파티션을 사용 하는 경우 게시자의 모든 변경 내용에 대 한 파티션 멤버 자격은 사전 계산 되 고 변경 내용이 적용 될 때 유지 됩니다. 결과적으로 구독자가 게시자와 동기화할 때 파티션 평가 과정을 거치지 않고도 파티션과 관련된 변경 내용을 즉시 다운로드할 수 있습니다. 이 기능을 통해 게시에 변경 내용, 구독자 또는 아티클이 많을 경우 성능이 크게 향상될 수 있습니다.  
   
  사전 계산 파티션을 사용하는 것 외에도 스냅샷을 미리 생성하거나 구독자가 처음 동기화될 때 스냅샷의 생성과 적용을 요청하도록 합니다. 이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅샷을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63250545"
   
 ### <a name="database-collation"></a>데이터베이스 정렬  
   
--   사전 계산 파티션을 사용할 경우 비교 시 테이블 또는 열의 데이터 정렬이 아닌 데이터베이스의 데이터 정렬을 항상 사용합니다. 다음과 같은 시나리오를 고려해 보세요.  
+-   사전 계산 파티션을 사용할 경우 비교 시 테이블 또는 열의 데이터 정렬이 아닌 데이터베이스의 데이터 정렬을 항상 사용합니다. 다음 시나리오를 고려하세요.  
   
     -   데이터 정렬이 대/소문자를 구분하는 데이터베이스에 대/소문자를 구분하지 않는 테이블이 들어 있습니다.  
   

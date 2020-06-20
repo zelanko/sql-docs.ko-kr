@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cab7101480099ce462585b658cb1acb023399b4c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cd1de7eb6e2512af4966001feb58be6120a3085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003273"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
   주석이 추가된 XSD 스키마에서 특성(또는 요소)이 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 BLOB 열에 매핑된 경우 XML 내의 Base 64 인코딩 형식으로 데이터가 반환됩니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "82703538"
 > [!NOTE]  
 >  BLOB 유형의 열은 키 또는 외래 키의 일부로 사용할 수 없습니다.  
   
-## <a name="examples"></a>예  
+## <a name="examples"></a>예제  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예를 실행 하기 위한 요구 사항](../sqlxml/requirements-for-running-sqlxml-examples.md)을 참조 하세요.  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  

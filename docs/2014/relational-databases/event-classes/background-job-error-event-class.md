@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b95db663ea56f8dd43ed1091169f8117292033c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11aeaa058209eebd93b83fc812db2173167bf65a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030773"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 이벤트 클래스
   **Background Job Error** 이벤트 클래스는 백그라운드 작업이 비정상적으로 종료되었을 때 발생합니다. 이 경우 시스템 관리자의 조치가 필요할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1b401d7d-db8a-4ba1-acb1-b8dec14e3311
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd4c6f3729d4d090854a48a65ce6d6a2465a98e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d82d5f38eb460f392f1eb2ed3387ce3d97757db5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721213"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010584"
 ---
 # <a name="filter-settings"></a>필터 설정
   **필터 설정** 대화 상자를 사용하여 복제 모니터에서 표에 사용할 필터를 정의할 수 있습니다. 예를 들어 **모든 구독** 탭에서 활성 상태인 구독만 표시하려면 **열 이름** 열에서 **상태** 를, **연산자** 열에서 **같음** 을, **값1** 열에서 **활성** 을 선택합니다. 하나 이상의 열을 기준으로 필터를 정의하면 필터 조건과 일치하는 행만 표에 표시되도록 필터가 적용됩니다.  

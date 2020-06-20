@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e34985a637247a7897fedb3abde66e9d2e664bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057216"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client의 시스템 요구 사항
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 MARS와 같은 데이터 액세스 기능을 사용하려면 다음 소프트웨어가 설치되어 있어야 합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 451b7ca4cc06269f116c62be2ef7f01f0e33abd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e533edec149513e240efb938d5fb9aad634e7cf8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047710"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
   다음과 같은 방법으로 복제 에이전트를 프로그래밍 방식으로 제어할 수 있습니다.  

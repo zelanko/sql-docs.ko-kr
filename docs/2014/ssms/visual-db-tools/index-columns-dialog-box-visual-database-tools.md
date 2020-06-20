@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9b0a978d3ab5612fc92bc2e87f1477249a9875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048620"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>인덱스 열 대화 상자(Visual Database Tools)
   이 대화 상자를 사용하여 인덱스의 열을 선택하고 정렬 순서를 설정할 수 있습니다. 인덱스는 하나 이상의 열을 사용할 수 있고 각 열은 오름차순 또는 내림차순으로 정렬할 수 있습니다. **인덱스/키** 대화 상자에서 이 대화 상자에 액세스하려면 **일반** 섹션의 **열** 행에 대한 줄임표 단추를 클릭합니다.  
   
 ## <a name="options"></a>옵션  
  **열 이름**  
- 이 인덱스에 참가하는 열을 선택합니다. 인덱스에서 열을 제거 하려면 ** \<없음>** 를 선택 합니다.  
+ 이 인덱스에 참가하는 열을 선택합니다. 인덱스에서 열을 제거하려면 **\<None>** 을 선택합니다.  
   
  **정렬 순서**  
  지정한 열에 대해 정렬 순서를 선택합니다. 사용 가능한 옵션은 **오름차순** 또는 **내림차순**입니다.  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056834"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트를 만들고 실행할 수 있습니다. 또한 편집기는 **sqlcmd** 명령을 포함하는 스크립트 실행을 지원합니다.  

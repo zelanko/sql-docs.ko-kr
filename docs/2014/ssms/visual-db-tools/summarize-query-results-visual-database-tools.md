@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08713be2d4439e520df07ec5efd6cb761a78a994
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057927"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>쿼리 결과 요약(Visual Database Tools)
   집계 쿼리를 만들 때 특정 논리 원칙이 적용됩니다. 예를 들어, 요약 쿼리에서는 개별 행의 내용을 표시할 수 없습니다. 쿼리 및 뷰 디자이너를 사용하면 [다이어그램 창](visual-database-tools.md) 및 [조건 창](criteria-pane-visual-database-tools.md) 의 동작에 따라 이러한 원칙을 준수할 수 있습니다.  

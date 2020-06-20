@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9eebede28d257083b55ffd4b14943b7ebc1a95b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ea53afd1fa4d44390f5805d6b28494428608b90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184338"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058107"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visual Database Tools)
   리터럴 값에 대한 자리 표시자로 물음표(?)를 지정하면 명명되지 않은 매개 변수를 사용하여 쿼리를 만들 수 있습니다. 쿼리 및 뷰 디자이너에서 이러한 매개 변수에 임시 이름이 지정됩니다. 쿼리에서 지정할 수 있는 명명되지 않은 매개 변수의 수에는 제한이 없습니다.  

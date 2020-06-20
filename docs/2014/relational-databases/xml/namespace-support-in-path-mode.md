@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39fd399838ac2e94672f3f416a2c83e4233060d3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abd6cd1f5590bffcd841b07897c9685faed4726f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013136"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH 모드에서의 네임스페이스 지원
   WITH NAMESPACES를 사용하여 PATH 모드에 네임스페이스 지원을 제공합니다. 예를 들어 다음 쿼리에서는 후속 SELECT 문에 사용할 수 있는 네임스페이스("a:")를 선언할 WITH NAMESPACES 구문을 보여 줍니다.  

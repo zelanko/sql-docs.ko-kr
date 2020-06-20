@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047733"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   RMO(복제 관리 개체)는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 복제 기능을 캡슐화하는 관리 코드 어셈블리로, <xref:Microsoft.SqlServer.Replication> 네임스페이스를 통해 구현됩니다.  
@@ -140,7 +139,7 @@ ms.locfileid: "62721795"
     ```  
   
 ## <a name="connecting-to-a-replication-server"></a>복제 서버에 연결  
- RMO 프로그래밍 개체의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클래스의 인스턴스를 사용하여 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
+ RMO 프로그래밍 개체의 경우 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 연결해야 합니다. 이 서버 연결은 RMO 프로그래밍 개체와는 독립적으로 이루어집니다. 그런 다음에는 인스턴스 생성 중에 또는 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 할당하여 연결을 RMO 개체로 전달합니다. 이런 식으로 RMO 프로그래밍 개체와 연결 개체 인스턴스를 별도로 만들고 관리할 수 있으며 여러 RMO 프로그래밍 개체에서 단일 연결 개체를 다시 사용할 수 있습니다. 복제 서버에 대한 연결에는 다음 규칙이 적용됩니다.  
   
 -   지정된 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체에 대해 모든 연결 속성을 정의합니다.  
   

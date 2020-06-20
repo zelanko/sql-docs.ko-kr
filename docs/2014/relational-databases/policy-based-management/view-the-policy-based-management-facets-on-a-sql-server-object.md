@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb2a08d874dd022fdad3646ea263d34dd65b9739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b49882abc1e9cdd43a51cd702a33500131793000
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62677024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038386"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>SQL Server 개체의 정책 기반 관리 패싯 보기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 특정 SQL Server 개체에 적용되는 모든 정책 기반 관리 패싯을 보는 방법에 대해 설명합니다.  

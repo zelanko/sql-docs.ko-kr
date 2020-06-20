@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010908"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
@@ -55,7 +54,7 @@ ms.locfileid: "62721735"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>게시자에서 밀어넣기 구독을 만들려면  
   
-1.  에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]게시자에 연결한 다음 해당 서버 노드를 확장 합니다.  
+1.  에서 게시자에 연결한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 다음 해당 서버 노드를 확장 합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721735"
   
 3.  **로컬 구독** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 구독**을 클릭합니다.  
   
-4.  새 구독 마법사의 **게시** 페이지에 있는 **게시자** 드롭다운 목록에서 **\<SQL Server 게시자 찾기>** 또는 **\<Oracle 게시자 찾기>** 를 선택합니다.  
+4.  새 구독 마법사의 **게시** 페이지에 있는 **\<Find SQL Server Publisher>** **\<Find Oracle Publisher>** **게시자** 드롭다운 목록에서 또는을 선택 합니다.  
   
 5.  **서버에 연결** 대화 상자에서 게시자에 연결합니다.  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721735"
   
     -   **allow_push** 의 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **Allow_push** 값이 **0**이면 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)를 실행 하 **@property** 고에 `true` **@value**대해 및에 대해 **allow_push** 를 지정 합니다.  
+    -   **Allow_push** 값이 **0**이면 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)를 실행 하 고에 대해 및에 대해 **allow_push** 를 지정 **@property** `true` **@value** 합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. , **@publication**및 **@subscriber** **@destination_db**를 지정 합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독을 업데이트 하는 방법에 대 한 자세한 내용은 [트랜잭션 게시에 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md) 를 참조 하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication**, 및를 지정 **@subscriber** **@destination_db** 합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독을 업데이트 하는 방법에 대 한 자세한 내용은 [트랜잭션 게시에 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md) 를 참조 하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)를 실행합니다. 다음을 지정합니다.  
   
-    -   **@subscriber**, **@subscriber_db**및 **@publication** 매개 변수입니다.  
+    -   **@subscriber**, **@subscriber_db** 및 **@publication** 매개 변수입니다.  
   
-    -   배포자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 및 **@job_login** **@job_password**에 대 한 배포 에이전트 실행 되는 Windows 자격 증명입니다.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]배포자에서 및에 대 한 배포 에이전트 실행 되는 Windows 자격 증명입니다 **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및 **@job_login** **@job_password**로 지정 된 windows 자격 증명을 사용 합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및로 지정 된 Windows 자격 증명을 사용 합니다 **@job_login** **@job_password** . 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
     -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721735"
   
     -   **allow_push** 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **Allow_push** 값이 **1**이 아닌 경우 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)를 실행 하 여에 **allow_push** **@property** `true` **@value**대해 및에 대해 allow_push를 지정 합니다.  
+    -   **Allow_push** 값이 **1**이 아닌 경우 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)를 실행 하 여에 대해 및에 대해 **allow_push** 를 지정 **@property** `true` **@value** 합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행하고 다음 매개 변수를 지정합니다.  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721735"
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. 다음을 지정합니다.  
   
-    -   **@subscriber**, **@subscriber_db**및 **@publication** 매개 변수입니다.  
+    -   **@subscriber**, **@subscriber_db** 및 **@publication** 매개 변수입니다.  
   
-    -   배포자에서 및 **@job_login** **@job_password**에 대 한 병합 에이전트 실행 되는 Windows 자격 증명입니다.  
+    -   배포자에서 및에 대 한 병합 에이전트 실행 되는 Windows 자격 증명입니다 **@job_login** **@job_password** .  
   
         > [!NOTE]  
-        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및 **@job_login** **@job_password**로 지정 된 windows 자격 증명을 사용 합니다. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        >  Windows 통합 인증을 사용 하 여 만든 연결은 항상 및로 지정 된 Windows 자격 증명을 사용 합니다 **@job_login** **@job_password** . 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
     -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "62721735"
     > [!IMPORTANT]  
     >  게시자에서 원격 배포자를 사용하여 밀어넣기 구독을 만드는 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>예 (Transact-sql)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 밀어넣기 구독을 만드는 예입니다. 로그인 및 암호 값은 **sqlcmd** 스크립팅 변수를 사용하여 런타임 시 제공됩니다.  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpushsub.sql#sp_addtranpushsubscription_agent)]  
@@ -160,7 +159,7 @@ ms.locfileid: "62721735"
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 밀어넣기 구독을 만들 수 있습니다. _밀어넣기 구독을 만들 때 사용하는 RMO 클래스는 구독을 만드는 게시 유형에 따라 달라집니다.  
   
 > [!IMPORTANT]  
->  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 합니다.  
+>  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장 해야 하는 경우 Windows .NET Framework에서 제공 하는 [암호화 서비스](https://go.microsoft.com/fwlink/?LinkId=34733) 를 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 합니다.  
   
 #### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4f66d2ddfcb18dcdde4125e33971e6cc583dc9b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dd033d16b1e95773d2cab1c4e1fca733dc491b96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048062"
 ---
 # <a name="return-codes"></a>반환 코드
   아주 간단히 말해 멤버 함수는 성공하거나 실패하거나 둘 중 하나입니다. 그러나 좀 더 정확하게 말하면 함수가 성공하더라도 이러한 성공이 애플리케이션 개발자가 의도한 것이 아닐 수 있습니다.  

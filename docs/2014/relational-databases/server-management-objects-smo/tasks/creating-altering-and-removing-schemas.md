@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 073cdba829845c940c67d60a92b0346d4ed7541d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 335b1f398357689fcbfb9ab383c37c4d8e6df16f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782257"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003537"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>스키마 생성, 변경 및 제거
   <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체는 데이터베이스 개체에 대한 소유권 컨텍스트를 나타냅니다. <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성은 <xref:Microsoft.SqlServer.Management.Smo.Schema> 개체 모음을 나타냅니다.  

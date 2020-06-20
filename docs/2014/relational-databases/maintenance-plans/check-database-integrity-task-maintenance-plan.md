@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f786755a3b7ed5d991b4cf0e32c067e355c111ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024751"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>데이터베이스 무결성 검사 태스크(유지 관리 계획)
   **데이터베이스 무결성 검사 태스크** 대화 상자를 사용하면 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 사용자 및 시스템 테이블, 데이터베이스 인덱스의 할당 및 구조적 무결성을 검사할 수 있습니다. `DBCC` 를 실행하면 데이터베이스의 모든 무결성 문제가 보고되므로 시스템 관리자나 데이터베이스 소유자가 나중에 이 문제들을 처리할 수 있습니다.  
@@ -77,10 +76,10 @@ ms.locfileid: "63144676"
  서버에 대한 인증 방법을 지정합니다.  
   
  **Windows NT 통합 보안 사용**  
- Windows 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 사용 하 여 인스턴스에 연결 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Windows 인증을 사용 하 여 인스턴스에 연결 합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- 인증을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결 합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인증을 사용 하 여 인스턴스에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

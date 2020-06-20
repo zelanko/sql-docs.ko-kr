@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c72b8c718237582f5a40c56e40e2a51e79e177e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029912"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction 이벤트 클래스
   **DTCTransaction** 이벤트 클래스를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] DTC(Distributed Transaction Coordinator)를 통해 통합된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트랜잭션의 상태를 모니터링할 수 있습니다. 여기에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일 인스턴스에서 둘 이상의 데이터베이스와 관련된 트랜잭션 또는 둘 이상의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 관련된 분산 트랜잭션이 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "62662970"
 |**ClientProcessID**|`int`|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**DatabaseID**|`int`|USE *database* 문으로 지정한 데이터베이스 ID 이거나 지정한 인스턴스에 대해 use *database* 문을 실행 하지 않은 경우 기본 데이터베이스의 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|`nvarchar`|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|yes|  
-|**EventClass**|`int`|이벤트 유형 = 19|27|아니요|  
+|**EventClass**|`int`|이벤트 유형 = 19|27|예|  
 |**EventSequence**|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|예|  
 |**EventSubClass**|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 0=주소 얻기<br /><br /> 1=트랜잭션 전파<br /><br /> 3=연결 닫기<br /><br /> 6=새 DTC 트랜잭션 만들기<br /><br /> 7=DTC 트랜잭션 참여<br /><br /> 9=내부 커밋<br /><br /> 10=내부 중단<br /><br /> 14=트랜잭션 준비 중<br /><br /> 15=트랜잭션 준비 완료<br /><br /> 16=트랜잭션 중단 중<br /><br /> 17=트랜잭션 커밋 중<br /><br /> 22=준비된 상태에서 TM 실패<br /><br /> 23=알 수 없음|21|예|  
 |**GroupID**|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  

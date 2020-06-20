@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b70dbab14424335fe210f5a9b1ddbdbda4f90deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a785ccf8002f51b1bb2f73925d15c1866a69963
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963479"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>클러스터의 Integration Services(SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 클러스터형 또는 클러스터 인식형 서비스가 아니며 클러스터 노드 간 장애 조치(failover) 기능을 지원하지 않으므로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 클러스터링이 권장되지 않습니다. 따라서 클러스터형 환경에서는 클러스터의 노드마다 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치하고 독립 실행형 서비스로 시작해야 합니다.  

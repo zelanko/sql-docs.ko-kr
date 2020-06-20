@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b3d10ff74c78e97ea554acdbcce3a5df0d76b74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062387"
 ---
 # <a name="upgrade-advisor-overview"></a>업그레이드 관리자 개요
   업그레이드 관리자는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 및 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 구성 요소를 분석하고 분석 결과에 대한 정보가 포함된 보고서를 볼 수 있는 중앙 콘솔을 제공합니다.  

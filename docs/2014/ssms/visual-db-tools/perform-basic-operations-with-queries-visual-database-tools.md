@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88dbdbfe-bc60-4e11-b338-dbe7f26566d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c70160c1c95a0051aa9aa4ef97f5378cec26d302
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001134"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>쿼리 관련 기본 작업 수행(Visual Database Tools)
   다음 기본 작업은 거의 모든 쿼리에 적용됩니다.  

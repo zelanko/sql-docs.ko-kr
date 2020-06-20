@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e9396663ad8abab6b75cf5cb0f0f9bb7ff79d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704329"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011199"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client의 스파스 열 지원
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 스파스 열을 지원합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../tables/use-sparse-columns.md) 및 [열 집합 사용](../../tables/use-column-sets.md)을 참조하세요.  

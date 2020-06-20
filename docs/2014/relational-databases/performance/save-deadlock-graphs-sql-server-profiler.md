@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf1fc906-abd6-4a89-842e-da0d66b2defe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cff9c60e466418f7aeff19a9ee23649042d844d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047863"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>교착 상태 그래프 저장(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 교착 상태 그래프를 저장하는 방법에 대해 설명합니다. 교착 상태 그래프는 XML 파일로 저장됩니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "63150699"
   
 3.  **템플릿 사용** 목록에서 추적의 기반이 되는 추적 템플릿을 선택하거나 템플릿을 사용하지 않을 경우 **비어 있음** 을 선택합니다.  
   
-4.  다음 중 하나를 수행합니다.  
+4.  다음 작업 중 하나를 수행합니다.  
   
     -   추적을 데이터베이스 테이블에 캡처하려면**파일에 저장** 확인란을 선택하면 추적이 파일에 캡처됩니다. **최대 파일 크기 설정**에 대한 값을 지정합니다.  
   

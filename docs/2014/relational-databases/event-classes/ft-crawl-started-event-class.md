@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a3dbaa76fcc54bf35b72d0a81efce479be51974
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029653"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 이벤트 클래스
   **FT:Crawl Started** 이벤트 클래스는 전체 텍스트 탐색(채우기)을 시작했음을 나타냅니다. 이 이벤트 클래스를 사용하여 작업자 태스크에 의해 실제로 탐색 요청이 선택되는지 확인할 수 있습니다.  

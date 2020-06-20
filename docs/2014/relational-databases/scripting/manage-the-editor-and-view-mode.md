@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb1749eee9ea18049ed28b6fb66e14a98d152b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 97540979cee50c1d9b27772f994cd92e6d5de411
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009771"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>편집기 및 보기 모드 관리
   편집기에서 여러 가지 방법으로 코드 보기를 제어할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a45b8618fd275a8aca20be35083257b8f8d0707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78259489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025940"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 복원 및 복구
   메모리 최적화 테이블이 있는 데이터베이스를 복구하거나 복원하기 위한 기본 메커니즘은 디스크 기반 테이블만 있는 데이터베이스와 비슷합니다. 하지만 디스크 기반 테이블과 달리, 메모리 최적화 테이블은 먼저 메모리에 로드해야만 사용자가 데이터베이스에 액세스할 수 있습니다. 따라서 데이터베이스 복구에 새로운 단계가 추가됩니다. 수정된 데이터 복구 단계는 다음과 같이 변경됩니다.

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 55c84e62326b7b1aa8619bf57ffccf16c43aec67
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08574f42905831c4a194313b7d7d58ebeeffeee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056321"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>ITableDefinition의 데이터 형식 매핑
   **Itabledefinition:: CreateTable** 함수를 사용 하 여 테이블을 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 소비자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전달 되는 DBCOLUMNDESC 배열의 *pwszTypeName* 멤버에서 데이터 형식을 지정할 수 있습니다. 소비자가 열의 데이터 형식을 이름으로 지정하면 DBCOLUMNDESC 구조의 *wType* 멤버로 표시되는 OLE DB 데이터 형식 매핑이 무시됩니다.  

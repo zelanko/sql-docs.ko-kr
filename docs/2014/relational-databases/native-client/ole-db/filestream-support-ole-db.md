@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f50f002514977f60fb07358293ecbdd524884e58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cde3c2cd1b72773cfcf17eacedeb3276dd2f63da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011060"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM 지원(OLE DB)
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0부터 OLE DB는 향상 된 FILESTREAM 기능을 지원 합니다. 이 기능에 대 한 자세한 내용은 [FILESTREAM 지원](../features/filestream-support.md)을 참조 하세요. 샘플은 [Filestream 및 OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)를 참조하세요.  

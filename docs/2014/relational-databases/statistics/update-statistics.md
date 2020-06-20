@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7c9a628f912f382f3ee8a87276aa34d0e54e37ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28491dda23c2ba9402e91dc051249f5bdcdf28d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062827"
 ---
 # <a name="update-statistics"></a>통계 업데이트
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트할 수 있습니다. 기본적으로 쿼리 최적화 프로그램은 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 UPDATE STATISTICS 또는 `sp_updatestats` 저장 프로시저를 사용하여 기본 업데이트 주기보다 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  

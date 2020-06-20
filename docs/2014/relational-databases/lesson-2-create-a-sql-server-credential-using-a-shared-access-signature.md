@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 808438e544e3beb18b2e2afa9c399b5666277483
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025062"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
   이 단원에서는 Azure 저장소 계정에 액세스 하는 데 사용 되는 보안 정보를 저장 하는 자격 증명을 만듭니다.  

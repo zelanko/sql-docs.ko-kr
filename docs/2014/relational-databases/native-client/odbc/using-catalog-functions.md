@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cac35e658343f606c1953f265c752335c70d81f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011070"
 ---
 # <a name="using-catalog-functions"></a>카탈로그 함수 사용
   모든 데이터베이스에는 데이터베이스에 저장된 데이터를 포함하는 구조가 있습니다. 이 구조의 정의는 데이터 사전이라고도 하는 시스템 테이블의 집합으로 구현된 카탈로그에 사용 권한과 같은 다른 정보와 함께 저장됩니다.  

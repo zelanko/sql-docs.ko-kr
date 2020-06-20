@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41d2c04929e9b142ac4c1708bb4fedb21d27f8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062541"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
   이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 AlwaysOn 장애 조치(failover) 클러스터 인스턴스(FCI)에 IP 주소 리소스를 변경하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 애플리케이션입니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "63049630"
   
 4.  **일반** 탭에서 IP 주소 리소스를 변경합니다.  
   
-5.  **확인**을 클릭하여 대화 상자를 닫습니다.  
+5.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 6.  오른쪽 창에서 SQL IP Address1(장애 조치(failover) 클러스터 인스턴스 이름)을 마우스 오른쪽 단추로 클릭하고 **오프라인 상태로 만들기**를 선택합니다. SQL IP Address1(장애 조치(Failover) 클러스터 인스턴스 이름), SQL 네트워크 이름(장애 조치(Failover) 클러스터 인스턴스 이름) 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상태가 온라인에서 오프라인 보류 중으로 바뀐 다음 오프라인으로 바뀌는 것을 볼 수 있습니다.  
   

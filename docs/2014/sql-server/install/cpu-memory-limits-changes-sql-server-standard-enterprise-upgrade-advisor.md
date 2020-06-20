@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3645dea1a929295d72c01a31fdc0e1f7999e9ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012860"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard 및 Enterprise의 CPU 및 메모리 제한에 대한 변경 사항(업그레이드 관리자)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard 및 Enterprise에서는 최대 64GB의 시스템 메모리가 지원됩니다.  

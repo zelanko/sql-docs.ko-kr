@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 993cfb67d4e6b72eec7cc0537e9b47371e94af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011186"
 ---
 # <a name="updating-data-in-rowsets"></a>행 집합의 데이터 업데이트
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 소비자가 해당 데이터를 포함 하는 수정 가능한 행 집합을 업데이트할 때 Native Client OLE DB 공급자는 데이터를 업데이트 합니다. 수정할 수 있는 행 집합은 소비자가 **IRowsetChange** 또는 **IRowsetUpdate** 인터페이스에 대한 지원을 요청할 때 생성됩니다.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7243e28bf17b6c38f7274e221a1b6b5e5cf830f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2f2909747ba42aaa3ff5c07777149fbcff5500f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011184"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>고가용성 재해 복구를 위한 SQL Server Native Client 지원
   이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 지원([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 추가됨)에 대해 설명합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 애플리케이션 장애 조치(Failover)&#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 AlwaysOn 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본(AlwaysOn 가용성 그룹)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
@@ -108,7 +107,7 @@ ms.locfileid: "82707237"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 애플리케이션에서는 다음 세 가지 함수 중 하나를 사용하여 연결할 수 있습니다.  
   
-|기능|설명|  
+|함수|Description|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)|`SQLBrowseConnect`에서 반환되는 서버 목록에는 VNN이 포함되지 않습니다. 서버가 독립 실행형 서버인지, 아니면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 주 또는 보조 서버인지는 표시되지 않고 서버 목록만 표시됩니다. 서버에 연결한 후 오류가 발생할 경우에는 서버에 연결은 되었지만 `ApplicationIntent` 설정이 서버 구성과 호환되지 않기 때문일 수 있습니다.<br /><br /> `SQLBrowseConnect`는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 사용하도록 설정된 둘 이상의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스를 포함하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터의 서버를 인식하지 않으므로 `SQLBrowseConnect`는 `MultiSubnetFailover` 연결 문자열 키워드를 무시합니다.|  
 |[SQLConnect](../../native-client-odbc-api/sqlconnect.md)|`SQLConnect`는 DSN(데이터 원본 이름) 또는 연결 속성을 통해 `ApplicationIntent`와 `MultiSubnetFailover`를 모두 지원합니다.|  

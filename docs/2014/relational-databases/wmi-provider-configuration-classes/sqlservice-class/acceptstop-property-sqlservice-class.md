@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d555a3763b4e8c769cd52ce72019b66bddd594fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062640"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop 속성(SqlService 클래스)
   서비스를 중지할 수 있는지 여부를 지정하는 부울 속성 값을 가져옵니다.  

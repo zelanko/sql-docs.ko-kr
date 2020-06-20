@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055740"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
   스냅샷 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
@@ -205,19 +204,19 @@ ms.locfileid: "68210777"
   
     1.  **B** 데이터베이스에 게시를 다시 만듭니다. b 단계로 이동합니다.  
   
-    2.  **B** 데이터베이스에서 **A**데이터베이스의 게시에 대 한 구독을 다시 만들고 해당 구독이 백업으로 초기화 되도록 지정 합니다. 즉, [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) **@sync_type** 매개 변수에 대해 **initialize with backup** 값을 지정 합니다. c 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 **A**데이터베이스의 게시에 대 한 구독을 다시 만들고 해당 구독이 백업으로 초기화 되도록 지정 합니다. 즉, sp_addsubscription 매개 변수에 대해 **initialize with backup** 값을 지정 **@sync_type** 합니다 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). c 단계로 이동합니다.  
   
-    3.  구독자에 이미 데이터가 있음을 지정 하 여 a 데이터베이스의 **a** 데이터베이스에서 **B**데이터베이스의 게시에 대 한 구독을 다시 만듭니다 ( [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) **@sync_type** 매개 변수에 대 한 **복제 지원** 값). 8단계로 이동합니다.  
+    3.  구독자에 이미 데이터가 있음을 지정 하 여 a 데이터베이스의 **a** 데이터베이스에서 **B**데이터베이스의 게시에 대 한 구독을 다시 만듭니다 (sp_addsubscription 매개 변수에 대 한 **복제 지원** 값 **@sync_type** ). [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) 8단계로 이동합니다.  
   
 8.  배포 에이전트를 실행하여 **A** 및 **B** 데이터베이스의 구독을 동기화합니다. 게시된 테이블에 ID 열이 있으면 9단계로 이동합니다. 그렇지 않은 경우에는 10단계로 이동합니다.  
   
 9. 복원 후에 **A** 데이터베이스의 각 테이블에 할당한 ID 범위는 **B** 데이터베이스에서도 사용됩니다. 복원된 **B** 데이터베이스가 실패한 **B** 데이터베이스의 모든 변경 내용(**A** 데이터베이스와 **C** 데이터베이스로 전파됨)을 받았는지 확인한 다음 각 테이블의 ID 범위에 대한 초기값을 다시 설정합니다.  
   
-    1.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 를 실행 하 고 출력 매개 **@request_id**변수를 검색 합니다. b 단계로 이동합니다.  
+    1.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 를 실행 하 고 출력 매개 변수를 검색 **@request_id** 합니다. b 단계로 이동합니다.  
   
     2.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일 개념](../concepts/replication-agent-executables-concepts.md) 또는 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요. c 단계로 이동합니다.  
   
-    3.  B [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
+    3.  B 단계에서 검색 한 값을 제공 하 여 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)를 실행 **@request_id** 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
   
     4.  [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) 를 통해 **B** 데이터베이스에 있는 각 테이블의 ID 범위에 대한 초기값을 다시 설정하여 적절한 범위가 사용되도록 합니다. 10단계로 이동합니다.  
   
@@ -229,11 +228,11 @@ ms.locfileid: "68210777"
   
     1.  피어 투 피어 토폴로지의 게시된 테이블에 대한 모든 작업을 중지합니다. b 단계로 이동합니다.  
   
-    2.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 를 실행 하 고 출력 매개 **@request_id**변수를 검색 합니다. c 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) 를 실행 하 고 출력 매개 변수를 검색 **@request_id** 합니다. c 단계로 이동합니다.  
   
     3.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. d 단계로 이동합니다.  
   
-    4.  B [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)단계에서 검색 한 **@request_id** 값을 제공 하 여 sp_helppeerresponses를 실행 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
+    4.  B 단계에서 검색 한 값을 제공 하 여 [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)를 실행 **@request_id** 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
   
     5.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만듭니다. b 단계로 이동합니다.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210777"
   
     1.  **B**데이터베이스에서 [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) 테이블을 쿼리하여 **B** 데이터베이스에서 **C**데이터베이스로부터 받은 최신 트랜잭션의 LSN(로그 시퀀스 번호)을 검색합니다.  
   
-    2.  **B** 데이터베이스에서 **C**데이터베이스의 게시에 대 한 구독을 다시 만들고 LSN을 기반으로 구독이 초기화 되도록 지정 합니다. 즉, [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) **@sync_type** 매개 변수에 대해 **initialize from lsn** 값을 지정 합니다. b 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 **C**데이터베이스의 게시에 대 한 구독을 다시 만들고 LSN을 기반으로 구독이 초기화 되도록 지정 합니다. 즉, sp_addsubscription 매개 변수에 대해 **initialize from lsn** 값을 지정 **@sync_type** [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)합니다. b 단계로 이동합니다.  
   
     3.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
   
