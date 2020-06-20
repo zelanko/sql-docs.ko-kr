@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f0ba7f39d3c95fe992d6603707b2a67d6726b7e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c857b9ebbe559de34fdac925642f9270d9cbf936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059506"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
   이 항목에서는 XML 인스턴스를 생성하는 방법에 대해 설명합니다.  

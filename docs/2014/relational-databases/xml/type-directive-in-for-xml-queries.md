@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702442"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059443"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][xml &#40;transact-sql&#41;](/sql/t-sql/xml/xml-transact-sql) 를 지원 하므로 필요에 따라 type 지시어를 지정 하 여 for xml 쿼리 결과가 데이터 형식으로 반환 되도록 요청할 수 있습니다 `xml` . 그러면 서버에서 FOR XML 쿼리 결과를 처리할 수 있습니다. 예를 들어이에 대해 XQuery를 지정 하거나, 결과를 `xml` 유형 변수에 할당 하거나, [중첩 FOR XML 쿼리](use-nested-for-xml-queries.md)를 작성할 수 있습니다.  

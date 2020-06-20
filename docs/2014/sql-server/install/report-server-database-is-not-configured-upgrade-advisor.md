@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b964300c-b220-4244-9fa6-c0c6a57760f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: bb5dd5968930319532a29ff7c3909c36af99b3a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8800951a2edfa3a71643ba3af65bae2b7cfdc29f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011840"
 ---
 # <a name="report-server-database-is-not-configured-upgrade-advisor"></a>보고서 서버 데이터베이스가 올바르게 구성되지 않음(업그레이드 관리자)
   보고서 서버 구성이 완료되지 않아 업그레이드가 차단되었습니다. 보고서 서버 데이터베이스가 구성되어 있지 않습니다.  

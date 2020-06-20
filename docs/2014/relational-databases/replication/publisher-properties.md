@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261982"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005102"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>게시자 속성 SQL Server 복제
   이 섹션에서는 배포자 및 게시자에서 사용할 수 있는 게시자 속성에 대 한 정보를 제공 합니다. 
@@ -61,7 +60,7 @@ ms.locfileid: "63261982"
  **트랜잭션**  
  **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 스냅샷 게시 또는 트랜잭션 게시를 만들 수 있게 하려면 이 확인란을 선택합니다. 
   
- **결합**  
+ **병합**  
  **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 병합 게시를 만들 수 있게 하려면 이 확인란을 선택합니다.  
 
 ## <a name="subscribers"></a>게시자 속성

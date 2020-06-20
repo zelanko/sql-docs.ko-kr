@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059397"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
   [FOR XML을 사용하는 XML 생성](../xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  다음은 형식의 각 부분에 대한 설명입니다.  
   
  *ElementName*  
- 요소의 일반적인 결과 식별자입니다. 예를 들어 **Customers**가 *ElementName*으로 지정된 경우 \<Customers> 요소가 생성됩니다.  
+ 요소의 일반적인 결과 식별자입니다. 예를 들어 **고객** 을 *ElementName*으로 지정 하면 \<Customers> 요소가 생성 됩니다.  
   
  *TagNumber*  
  요소에 할당된 고유 태그 값입니다. 이 값은 두 메타데이터 열인 **Tag** 및 **Parent**를 통해 결과 XML에서의 요소 중첩을 결정합니다.  

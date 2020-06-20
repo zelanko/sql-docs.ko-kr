@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e330e0841f32cbe44b33b7fe72e46eab15c3c1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478801"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961083"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Excel에서 MDS로 데이터 게시(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  
@@ -37,9 +36,9 @@ ms.locfileid: "65478801"
   
 1.  **게시 및 유효성 검사** 그룹에서 **게시**를 클릭합니다.  
   
-2.  선택 사항입니다. **게시 및 주석** 대화 상자가 표시되면 모든 업데이트에 대해 동일한 주석(설명)을 공유하거나 각 변경 내용에 대해 개별적으로 주석을 달도록 선택합니다.  
+2.  (선택 사항) **게시 및 주석** 대화 상자가 표시되면 모든 업데이트에 대해 동일한 주석(설명)을 공유하거나 각 변경 내용에 대해 개별적으로 주석을 달도록 선택합니다.  
   
-3.  선택 사항입니다. **이 대화 상자를 다시 표시 안 함** 확인란을 선택합니다. 이후에 언제라도 **설정** 을 선택하고 **게시할 때 게시 및 주석 대화 상자 표시** 확인란을 선택하여 대화 상자를 표시할 수 있습니다.  
+3.  (선택 사항) **이 대화 상자를 다시 표시 안 함** 확인란을 선택합니다. 이후에 언제라도 **설정** 을 선택하고 **게시할 때 게시 및 주석 대화 상자 표시** 확인란을 선택하여 대화 상자를 표시할 수 있습니다.  
   
 4.  **게시**를 클릭합니다.  
   

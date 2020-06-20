@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aacaaf8fc69f4b18154e5a4df9a3662fb9ae0650
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037164"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime, xs:date 및 xs:time 형식의 스토리지 형식에 대한 변경 내용입니다.
   XMLDATETIME 규칙은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드한 후 사용할 수 없는 형식화된 XML 데이터가 데이터베이스에 포함되어 있는지 여부를 식별합니다.  

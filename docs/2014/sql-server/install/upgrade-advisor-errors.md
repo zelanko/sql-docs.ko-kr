@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a493a459-e7ea-4629-a14c-684d8c57e310
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f6c9f133af7b8054414f6867f41cee3022d68925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efd380c4db55086adaf7e7ae522b18a953471dab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011758"
 ---
 # <a name="upgrade-advisor-errors"></a>업그레이드 관리자 오류
   보고서 뷰어에 업그레이드 관리자 오류가 표시될 수 있습니다. 이러한 오류는 이 도움말 항목에 링크됩니다.  

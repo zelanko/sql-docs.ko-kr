@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 92af079a25e1ec6797f4fa49b4ce73b643e7806d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781828"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996700"
 ---
 # <a name="using-table-and-index-partitioning"></a>테이블 및 인덱스 분할 사용
   [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)에서 제공한 스토리지 알고리즘을 사용하여 데이터를 저장할 수 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
@@ -135,4 +134,4 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [분할 된 테이블 및 인덱스](../../partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  

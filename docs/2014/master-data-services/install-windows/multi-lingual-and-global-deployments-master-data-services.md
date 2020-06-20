@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d53ff45452f90c5cf29f376ba01a395d2bbccf65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f10dfa1a1bb001bd6b207064de7c1cf2dee452d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961753"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>다국어 및 글로벌 배포(Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 모든 언어 구성 요소 및 도구 배포를 지원합니다. 자세한 내용은 [Local Language Versions in SQL Server](../../sql-server/install/local-language-versions-in-sql-server.md)을 참조하세요.  
@@ -23,7 +22,7 @@ ms.locfileid: "65482960"
 ## <a name="how-languages-are-used"></a>언어 사용 방식  
  다음 표에서는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 구성 요소 및 도구의 언어 지원에 대해 설명합니다.  
   
-|구성 요소 또는 도구|설명|  
+|구성 요소 또는 도구|Description|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 설치 프로그램|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션이 설치 언어와 다른 언어로 사용 및 지원되도록 하려면 영어 설치 프로그램을 선택합니다. 자세한 내용은 아래의 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 설명을 참조하십시오.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 언어는 설치 언어에 따라 결정됩니다. 예를 들어 설치 언어로 독일어를 선택한 경우 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 해당 컴퓨터에서 독일어로 사용할 수 있습니다.|  

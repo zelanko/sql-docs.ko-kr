@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16e3af1d37f177dfe6d4e0cb090e7b8b0a4988d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003926"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
   의미 체계 인덱싱의 과정과 인덱스를 모니터링하고 관리하는 데 관련된 태스크에 대해 설명합니다.  
@@ -65,7 +64,7 @@ GO
 ```  
   
  **전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인**  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [IndexSize](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 속성을 쿼리합니다.  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 메타데이터 함수의 **IndexSize** 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
@@ -73,7 +72,7 @@ GO
 ```  
   
  **전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인**  
- **FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;** 메타데이터 함수의 [ItemCount](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 속성을 쿼리합니다.  
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 메타데이터 함수의 **ItemCount** 속성을 쿼리합니다.  
   
 ```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  

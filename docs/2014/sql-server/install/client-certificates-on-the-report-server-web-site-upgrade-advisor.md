@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5588930efbadf785e78aa115ad0021bce64bd7f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 563a64e695ef552a712a5678f56d38fdfbff619f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952598"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059355"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>보고서 서버 웹 사이트의 클라이언트 인증서(업그레이드 관리자)
   업그레이드 관리자가 보고서 서버 또는 보고서 관리자 가상 디렉터리를 호스팅하는 IIS 웹 사이트에서 하나 이상의 클라이언트 인증서를 검색했습니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "71952598"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Description  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 클라이언트 인증서를 사용 하 여 사용자를 인증할 수 없습니다. 업그레이드를 계속 진행할 수는 있지만 클라이언트 인증서는 업그레이드된 보고서 서버에서 사용되지 않습니다.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 클라이언트 인증서를 사용 하 여 사용자를 인증할 수 없습니다. 업그레이드를 계속 진행할 수는 있지만 클라이언트 인증서는 업그레이드된 보고서 서버에서 사용되지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
  ISA Server와 같은 별도의 솔루션을 사용하여 클라이언트 인증서 인증 요구 사항을 해결합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918694"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970539"
 ---
 # <a name="cursors"></a>커서
   관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. 예를 들어 SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 애플리케이션, 특히 대화형 온라인 애플리케이션에서는 전체 결과 집합을 한 단위로 사용하므로 항상 효과적으로 작업할 수는 없습니다. 이러한 애플리케이션에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  
@@ -117,7 +116,7 @@ ms.locfileid: "62918694"
   
 ## <a name="see-also"></a>참고 항목  
  [Transact-sql&#41;&#40;커서를 선언 합니다.](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [Transact-sql&#41;커서 &#40;](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [커서&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Transact-sql&#41;&#40;커서 함수](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [커서 저장 프로시저&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   

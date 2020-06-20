@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48c8eb11d62686da74643e891e854da30497366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63066261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011720"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
   키보드 또는 마우스를 사용하여 쿼리 및 뷰 디자이너에서 작업할 수 있습니다. 구체적인 방법은 다음 표를 참조하십시오.  

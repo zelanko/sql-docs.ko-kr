@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66487dd264f4733e0b8b3345aa5ebd5976165a42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934955"
 ---
 # <a name="server-properties-database-settings-page"></a>서버 속성(데이터베이스 설정 페이지)
   이 페이지를 사용하여 데이터베이스 설정을 보거나 수정할 수 있습니다.  

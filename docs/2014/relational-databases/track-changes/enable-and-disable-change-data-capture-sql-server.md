@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df0a2fd4a2c6ffb2de58d6b52360d1730d0fa7df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037284"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>변경 데이터 캡처 설정 및 해제(SQL Server)
   이 항목에서는 데이터베이스 및 테이블에서 변경 데이터 캡처를 사용하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
@@ -48,7 +47,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>데이터베이스의 변경 데이터 캡처 해제  
- `sysadmin` 고정 서버 역할의 멤버는 데이터베이스 컨텍스트에서 [transact-sql&#41;&#40;sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) 저장 프로시저를 실행 하 여 데이터베이스에 대 한 변경 데이터 캡처를 사용 하지 않도록 설정할 수 있습니다. 개별 테이블에서 먼저 이 기능을 해제한 후 데이터베이스에서 이 기능을 해제할 필요는 없습니다. 데이터베이스에서 이 기능을 해제하면 `cdc` 사용자 및 스키마와 변경 데이터 캡처 작업을 포함하는 모든 연결된 변경 데이터 캡처 메타데이터가 제거됩니다. 하지만 변경 데이터 캡처로 생성된 모든 제어 역할은 자동으로 제거되지 않으며 명시적으로 삭제해야 합니다. 데이터베이스에 이 기능이 설정되었는지 확인하려면 sys.databases 카탈로그 뷰의 `is_cdc_enabled` 열을 쿼리합니다.  
+ `sysadmin`고정 서버 역할의 멤버는 데이터베이스 컨텍스트에서 [transact-sql&#41;&#40;sp_cdc_disable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) 저장 프로시저를 실행 하 여 데이터베이스에 대 한 변경 데이터 캡처를 사용 하지 않도록 설정할 수 있습니다. 개별 테이블에서 먼저 이 기능을 해제한 후 데이터베이스에서 이 기능을 해제할 필요는 없습니다. 데이터베이스에서 이 기능을 해제하면 `cdc` 사용자 및 스키마와 변경 데이터 캡처 작업을 포함하는 모든 연결된 변경 데이터 캡처 메타데이터가 제거됩니다. 하지만 변경 데이터 캡처로 생성된 모든 제어 역할은 자동으로 제거되지 않으며 명시적으로 삭제해야 합니다. 데이터베이스에 이 기능이 설정되었는지 확인하려면 sys.databases 카탈로그 뷰의 `is_cdc_enabled` 열을 쿼리합니다.  
   
  변경 데이터 캡처가 설정된 데이터베이스를 삭제하면 변경 데이터 캡처 작업이 자동으로 제거됩니다.  
   
@@ -74,11 +73,11 @@ GO
   
  `Columns in the source table to be captured`.  
   
- 기본적으로 원본 테이블의 모든 열은 캡처된 열로 식별됩니다. 개인 정보 보호 또는 성능상의 이유로 열의 하위 집합만 추적 해야 하는 경우 *@captured_column_list* 매개 변수를 사용 하 여 열의 하위 집합을 지정 합니다.  
+ 기본적으로 원본 테이블의 모든 열은 캡처된 열로 식별됩니다. 개인 정보 보호 또는 성능상의 이유로 열의 하위 집합만 추적 해야 하는 경우 매개 변수를 사용 하 여 *@captured_column_list* 열의 하위 집합을 지정 합니다.  
   
  `A filegroup to contain the change table.`  
   
- 기본적으로 변경 테이블은 데이터베이스의 기본 파일 그룹에 있습니다. 개별 변경 테이블의 배치를 제어 하려는 데이터베이스 소유자는 *@filegroup_name* 매개 변수를 사용 하 여 캡처 인스턴스와 연결 된 변경 테이블에 대해 특정 파일 그룹을 지정할 수 있습니다. 명명된 파일 그룹은 이미 존재해야 합니다. 일반적으로 변경 테이블은 원본 테이블과 별도의 파일 그룹에 배치하는 것이 좋습니다. 매개 변수 `Enable a Table Specifying Filegroup Option` 를 사용 하는 방법을 보여 주는 예제는 템플릿을 참조 하십시오. *@filegroup_name*  
+ 기본적으로 변경 테이블은 데이터베이스의 기본 파일 그룹에 있습니다. 개별 변경 테이블의 배치를 제어 하려는 데이터베이스 소유자는 매개 변수를 사용 *@filegroup_name* 하 여 캡처 인스턴스와 연결 된 변경 테이블에 대해 특정 파일 그룹을 지정할 수 있습니다. 명명된 파일 그룹은 이미 존재해야 합니다. 일반적으로 변경 테이블은 원본 테이블과 별도의 파일 그룹에 배치하는 것이 좋습니다. `Enable a Table Specifying Filegroup Option`매개 변수를 사용 하는 방법을 보여 주는 예제는 템플릿을 참조 하십시오 *@filegroup_name* .  
   
 ```sql  
 -- =========  
@@ -100,7 +99,7 @@ GO
   
  명명된 역할의 목적은 변경 데이터에 대한 액세스를 제어하는 것입니다. 지정된 역할은 기존의 고정 서버 역할 또는 데이터베이스 역할일 수 있습니다. 지정된 역할이 아직 없는 경우 해당 이름의 데이터베이스 역할이 자동으로 생성됩니다. `sysadmin` 또는 `db_owner` 역할의 멤버는 변경 테이블의 데이터에 대한 모든 액세스 권한을 가집니다. 다른 모든 사용자에게는 원본 테이블의 모든 캡처된 열에 대한 SELECT 권한이 있어야 합니다. 또한 역할이 지정되면 `sysadmin` 또는 `db_owner` 역할의 멤버가 아닌 사용자도 지정한 역할의 멤버여야 합니다.  
   
- 제어 역할을 사용 하지 않으려면 *@role_name* 매개 변수를 명시적으로 NULL로 설정 합니다. 제어 역할이 없는 테이블을 설정하는 예는 `Enable a Table Without Using a Gating Role` 템플릿을 참조하십시오.  
+ 제어 역할을 사용 하지 않으려면 매개 변수를 명시적으로 *@role_name* NULL로 설정 합니다. 제어 역할이 없는 테이블을 설정하는 예는 `Enable a Table Without Using a Gating Role` 템플릿을 참조하십시오.  
   
 ```sql  
 -- =========  
@@ -123,7 +122,7 @@ GO
   
  매개 변수가 *@supports_net_changes* 1로 설정 된 경우 캡처 인스턴스에 대 한 순 변경 함수도 생성 됩니다. 이 함수는 호출에 지정된 간격 내에 변경된 각 개별 행에 대해 하나의 변경만 반환합니다. 자세한 내용은 [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62;&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql)를 참조하세요.  
   
- 순 변경 쿼리를 지원하기 위해 원본 테이블에는 행을 고유하게 식별하는 기본 키 또는 고유 인덱스가 있어야 합니다. 고유 인덱스를 사용 하는 경우 매개 변수를 *@index_name* 사용 하 여 인덱스 이름을 지정 해야 합니다. 기본 키 또는 고유 인덱스에 정의된 열은 캡처할 원본 열 목록에 포함되어야 합니다.  
+ 순 변경 쿼리를 지원하기 위해 원본 테이블에는 행을 고유하게 식별하는 기본 키 또는 고유 인덱스가 있어야 합니다. 고유 인덱스를 사용 하는 경우 매개 변수를 사용 하 여 인덱스 이름을 지정 해야 합니다 *@index_name* . 기본 키 또는 고유 인덱스에 정의된 열은 캡처할 원본 열 목록에 포함되어야 합니다.  
   
  두 쿼리 함수로 캡처 인스턴스를 생성하는 방법을 보여 주는 예는 `Enable a Table for All and Net Changes Queries` 템플릿을 참조하십시오.  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6d2a99894dcfd0ef78a50b2bc7af441acc76cbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961913"
 ---
 # <a name="developer39s-guide-master-data-services"></a>개발자&#39;s 가이드 (MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]와 상호 작용하는 방식을 사용자 지정하기 위해 코드를 작성하는 방법에 대한 정보를 찾아볼 수 있습니다. 방법 배우기:  
@@ -48,7 +47,7 @@ ms.locfileid: "65483031"
 ## <a name="web-server-namespaces"></a>웹 서버 네임스페이스  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]가 웹 서버 컴퓨터에 어셈블리 집합을 설치합니다. 이러한 어셈블리에는 웹 서버 컴퓨터의 동작을 사용자 지정하는 고급 시나리오에 사용할 수 있는 네임스페이스가 포함됩니다. 다음 표에서는 이러한 네임스페이스에 대해 설명합니다.  
   
-|네임스페이스|설명|  
+|네임스페이스|Description|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|모델에서 배포 패키지를 만들고 패키지를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 배포하는 데 사용할 수 있는 클래스를 포함합니다.|  
 |<xref:Microsoft.MasterDataServices.Services>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 애플리케이션을 통해 웹 서버 컴퓨터에 대해 실행되는 웹 서비스 작업을 수신하고 처리하는 클래스를 포함합니다.|  

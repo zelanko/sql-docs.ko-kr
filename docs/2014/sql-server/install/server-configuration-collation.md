@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036591"
 ---
 # <a name="server-configuration---collation"></a>서버 구성 - 데이터 정렬
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 서버 구성 - 데이터 정렬 페이지에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 정렬하기 위해 사용하는 데이터 정렬 설정을 수정할 수 있습니다. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치나 다른 컴퓨터의 데이터 정렬 설정과 일치하는 옵션을 선택하십시오.  

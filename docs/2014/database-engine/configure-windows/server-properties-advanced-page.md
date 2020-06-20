@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cc2d3c19e94802241291b4c1afc9ec007cab727
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934974"
 ---
 # <a name="server-properties-advanced-page"></a>서버 속성(고급 페이지)
   이 페이지를 사용하여 고급 서버 설정을 확인하거나 수정할 수 있습니다.  

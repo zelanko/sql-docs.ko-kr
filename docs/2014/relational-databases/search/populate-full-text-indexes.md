@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004063"
 ---
 # <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>전체 텍스트 채우기의 오류 문제 해결 (탐색)  
  탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 기본적으로 지정된 인스턴스(여기서는 첫 번째 인스턴스)의 탐색 로그는 %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG 폴더에 있습니다. 탐색 로그 파일은 다음 명명 구성표를 따릅니다.  
   
- SQLFT\<DatabaseID>\<FullTextCatalogID>입니다. 로그 [\<n>]  
+ SQLFT \<DatabaseID> \<FullTextCatalogID> . LOG [ \<n> ]  
   
  <`DatabaseID`>  
  데이터베이스의 ID입니다. <`dbid`> 앞에 오는 0을 사용 하는 5 자리 숫자입니다.  
