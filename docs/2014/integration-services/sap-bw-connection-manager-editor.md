@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056278"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964399"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
   **SAP BW 연결 관리자 편집기** 를 사용하여 SAP Netweaver BW 버전 7 시스템에 연결하는 데 사용할 속성을 지정할 수 있습니다.  
@@ -59,7 +58,7 @@ ms.locfileid: "66056278"
   
  부하 분산 서버 그룹에 연결하려면 **부하 분산 사용** 옵션을 사용합니다.  
   
- **호스트**  
+ **Host**  
  단일 애플리케이션 서버에 연결하는 경우 호스트 이름을 지정합니다.  
   
 > [!NOTE]  

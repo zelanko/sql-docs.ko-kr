@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 79e059843d14bccac6e9b9a0dd647c214fd11c06
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff3ec0a5cdc8f24f34e42849f7c8f6d1d9d41478
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019906"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE(ODBC 오류 코드)
   SQLSTATE는 경고 또는 오류의 원인에 대한 자세한 정보를 제공합니다. 에서 검색 되 고 반환 된 데이터 소스에서 발생 하는 오류의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC 드라이버는 반환 된 원시 오류 번호를 적절 한 SQLSTATE에 매핑합니다. 네이티브 오류 번호에 매핑할 ODBC 오류 코드가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버는 SQLSTATE 42000 ("구문 오류 또는 액세스 위반")을 반환 합니다. 드라이버에서 감지한 오류의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native CLIENT ODBC 드라이버에서 적절 한 SQLSTATE를 생성 합니다.  

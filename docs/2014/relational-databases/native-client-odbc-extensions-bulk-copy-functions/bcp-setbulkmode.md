@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019331"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode를 사용 하면 대량 복사 작업에서 열 형식을 지정 하 여 단일 함수 호출에 모든 열 특성을 설정할 수 있습니다.  
@@ -77,12 +76,12 @@ cbRow
   
  다음 표에서는 *property* 매개 변수에 대한 상수를 나열합니다.  
   
-|속성|설명|  
+|속성|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> 는 BCP의-c 옵션에 해당 합니다. EXE를 사용 하 고 속성을로 설정 하 여 bcp_setcolfmt `BCP_FMT_TYPE` `SQLCHARACTER` 합니다.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> 는 BCP의-w 옵션에 해당 합니다. EXE 및 속성이로 `BCP_FMT_TYPE` 설정 된 bcp_setcolfmt `SQLNCHAR`|  
-|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> 는 BCP의-N 옵션에 해당 합니다. `BCP_FMT_TYPE` `SQLNCHAR` 열 유형이 문자열인 경우 (기본값은 문자열이 아닌 경우 기본값), 속성이로 설정 된 EXE 및 bcp_setcolfmt입니다.|  
-|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> 는 BCP의-n 옵션에 해당 합니다. EXE와 bcp_setcolfmt `BCP_FMT_TYPE` 속성이 기본값으로 설정 되어 있습니다.|  
+|BCP_OUT_CHARACTER_MODE|문자 출력 모드를 지정합니다.<br /><br /> BCP.EXE의-c 옵션 및 속성이로 설정 된 bcp_setcolfmt에 해당 `BCP_FMT_TYPE` `SQLCHARACTER` 합니다.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|유니코드 출력 모드를 지정합니다.<br /><br /> BCP.EXE의-w 옵션 및 속성이로 설정 된 bcp_setcolfmt에 해당 `BCP_FMT_TYPE` `SQLNCHAR` 합니다.|  
+|BCP_OUT_NATIVE_TEXT_MODE|비문자 유형의 경우 네이티브 유형을 지정하고 문자 유형의 경우 유니코드를 지정합니다.<br /><br /> `BCP_FMT_TYPE` `SQLNCHAR` 열 유형이 문자열인 경우 (기본값은 문자열이 아닌 경우 기본값)로 설정 된 BCP.EXE의-N 옵션 및 bcp_setcolfmt에 해당 합니다.|  
+|BCP_OUT_NATIVE_MODE|네이티브 데이터베이스 유형을 지정합니다.<br /><br /> BCP.EXE의-n 옵션 및 속성이 기본값으로 설정 된 bcp_setcolfmt에 해당 `BCP_FMT_TYPE` 합니다.|  
   
  Bcp_setcolfmt, bcp_control 및 bcp_readfmt를 포함 하는 일련의 함수 호출에 bcp_setbulkmode를 사용 하면 안 됩니다. 예를 들어 bcp_control (BCPTEXTFILE) 및 bcp_setbulkmode를 호출 하면 안 됩니다.  
   

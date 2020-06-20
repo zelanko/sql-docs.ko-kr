@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22904e2e0dd7ed025dcf6ad3871969e2be6b2dfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019251"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   현재 대량 복사 데이터 파일의 서식에 대한 설명이 포함된 서식 파일을 만듭니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa9f637-3d14-4d64-be51-0e8167e21d2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22c112a31cb3e2b68e2437a2f0aba25f5aff5c8d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937284"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>편집 시 자동으로 파일 체크 아웃
   편집을 시작할 때 파일을 자동으로 체크 아웃하도록 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 구성할 수 있습니다.  

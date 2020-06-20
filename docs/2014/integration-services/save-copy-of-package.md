@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c0d7-d8fa-4491-8836-0899f621d3a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29e6b0cfe7d7646b317073298410c479c2cd5665
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056315"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964340"
 ---
 # <a name="save-copy-of-package"></a>패키지 복사본 저장
   **에서 사용할 수 있는** 패키지 복사본 저장 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]대화 상자를 통해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 패키지 복사본을 다른 위치에 저장하고 필요에 따라 패키지의 보호 수준을 수정할 수 있습니다.  

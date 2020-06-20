@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adadafc3a7dcf23de9bceefaee6f5622e0f86705
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9006d6810d03cce7cb996b500449a7a4f864bb96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019714"
 ---
 # <a name="bcp_control"></a>bcp_control
   파일과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 대량 복사에 대한 다양한 제어 매개 변수의 기본 설정을 변경합니다.  

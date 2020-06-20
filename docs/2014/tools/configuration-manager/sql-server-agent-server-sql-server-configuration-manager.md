@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93b2c40ca07f29a1751df5a79b8edd6da1b542d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ea6c3f7d02c0e359914ff6316616d1df3d21225
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137538"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040624"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>SQL Server 에이전트 &lt;server&gt;(SQL Server 구성 관리자)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 지원하는 서비스입니다. 이 서비스의 속성을 보려면 세부 정보 창에서 해당 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  

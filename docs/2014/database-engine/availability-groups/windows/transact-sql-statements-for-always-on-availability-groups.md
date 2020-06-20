@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff25fecf54cfdd1d9c03d1586f0272896542bfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936364"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>AlwaysOn 가용성 그룹에 대한 Transact-SQL 문 개요(SQL Server)
   이 항목에서는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 배포와 지정된 가용성 그룹, 가용성 복제본 및 가용성 데이터베이스의 생성 및 관리를 지원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 문을 소개합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62813826"
   
  새 가용성 그룹의 초기 주 복제본을 호스팅할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 CREATE AVAILABILITY GROUP을 실행합니다. 이 서버 인스턴스는 WSFC (Windows Server 장애 조치 (Failover) 클러스터) 노드에 있어야 합니다. 자세한 내용은 [&#41;SQL Server &#40;AlwaysOn 가용성 그룹에 대 한 필수 조건, 제한 사항 및 권장 사항 ](prereqs-restrictions-recommendations-always-on-availability.md)을 참조 하세요.  
   
-##  <a name="alter-availability-group"></a><a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
+##  <a name="alter-availability-group"></a><a name="AlterAG"></a>가용성 그룹 변경  
  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) 은 기존 가용성 그룹 또는 가용성 그룹 수신기를 변경하고 가용성 그룹의 장애 조치(Failover)를 수행할 수 있도록 지원합니다.  
   
  현재 주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에서 ALTER AVAILABILITY GROUP을 실행합니다.  

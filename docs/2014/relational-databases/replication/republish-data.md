@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 976520f5000d3a0f96ee3bdea25bcc9802939d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 816d6ad75e2c331a7269d66b0d238141557b4b88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066551"
 ---
 # <a name="republish-data"></a>데이터 다시 게시
   재게시 모델에서 게시자는 구독자로 데이터를 보내고 구독자는 다른 모든 구독자에 데이터를 다시 게시합니다. 이 방법은 게시자가 속도가 느리거나 비용이 많이 드는 통신 연결로 데이터를 구독자에 보내야 할 경우 유용합니다. 연결 끝 쪽에 다수의 구독자가 있을 경우 재게시자를 사용하면 대량의 배포 로드가 해당 연결 쪽으로 이동합니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "63250399"
 |병합 게시|병합 구독/병합 게시|병합 구독|  
 |병합 게시|병합 구독/트랜잭션 게시|트랜잭션 구독|  
   
- <sup>1</sup> 병합 게시에 속성 `@published_in_tran_pub` 을 설정 해야 합니다. 기본적으로 트랜잭션 복제에서 구독자의 테이블은 읽기 전용으로 처리됩니다. 병합 복제에서 트랜잭션 구독의 테이블 데이터를 변경하는 경우 데이터가 일치하지 않을 수 있습니다. 이렇게 되지 않도록 하려면 병합 게시에서 이러한 테이블을 다운로드 전용으로 지정하는 것이 좋습니다. 그러면 병합 구독자가 테이블에 데이터 변경을 업로드하지 않게 됩니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
+ <sup>1</sup> `@published_in_tran_pub`병합 게시에 속성을 설정 해야 합니다. 기본적으로 트랜잭션 복제에서 구독자의 테이블은 읽기 전용으로 처리됩니다. 병합 복제에서 트랜잭션 구독의 테이블 데이터를 변경하는 경우 데이터가 일치하지 않을 수 있습니다. 이렇게 되지 않도록 하려면 병합 게시에서 이러한 테이블을 다운로드 전용으로 지정하는 것이 좋습니다. 그러면 병합 구독자가 테이블에 데이터 변경을 업로드하지 않게 됩니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [배포 구성](configure-distribution.md)   

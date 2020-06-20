@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fc9ec3079847c231e331063fda6d78bb0255983
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62654883"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059957"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Enabled 속성(ServerNetworkProtocol 클래스)
   서버 네트워크 프로토콜이 설정되었는지 여부를 지정하는 부울 속성을 가져옵니다.  
@@ -38,7 +37,7 @@ object
   
 ## <a name="parts"></a>부분  
  *object*  
- 인스턴스에서 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]사용 하는 네트워크 프로토콜을 나타내는 [servernetworkprotocol 클래스](servernetworkprotocol-class.md) 개체입니다.  
+ 인스턴스에서 사용 하는 네트워크 프로토콜을 나타내는 [Servernetworkprotocol 클래스](servernetworkprotocol-class.md) 개체입니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서버 네트워크 프로토콜이 설정되었는지 여부를 지정하는 부울 값입니다. `true`는 서버 네트워크 프로토콜이 설정되었음을 나타내고 `false`는 서버 네트워크 프로토콜이 해제되었음을 나타냅니다.  

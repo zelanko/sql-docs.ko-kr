@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec121d057183bb1076a5c540976bd234bc46fecb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019546"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   긴 가변 길이 데이터 형식 값의 일부를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보냅니다.  

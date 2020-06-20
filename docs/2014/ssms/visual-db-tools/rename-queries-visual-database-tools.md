@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fa9c65d02de70b93b97d4f31901ea7615574791
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040707"
 ---
 # <a name="rename-queries-visual-database-tools"></a>쿼리 이름 바꾸기(Visual Database Tools)
   현재 편집하기 위해 열려 있지 않은 임의의 쿼리 이름을 바꿀 수 있습니다. 다음 절차에서는 이름을 바꾸려는 쿼리가 닫혀 있는 것으로 가정합니다.  

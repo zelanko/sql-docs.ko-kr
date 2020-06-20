@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebb2c9f4-2097-4688-b4fb-8f0571047317
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dc4150c79225e069ea4e340e82458b42b4be6d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937084"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>가용성 복제본에 정상 상태의 역할이 없음
     
@@ -28,11 +27,11 @@ ms.locfileid: "62815600"
 |||  
 |-|-|  
 |**정책 이름**|가용성 복제본 역할 상태|  
-|**문제**|가용성 복제본에 정상 상태의 역할이 없습니다.|  
-|**범주**|**위험**|  
+|**문제점**|가용성 복제본에 정상 상태의 역할이 없습니다.|  
+|**범주**|**심각**|  
 |**패싯에**|가용성 복제본|  
   
-## <a name="description"></a>설명  
+## <a name="description"></a>Description  
  이 정책은 가용성 복제본의 역할 상태를 확인합니다. 가용성 복제본의 역할이 주 역할이나 보조 역할이 아닌 경우 정책은 비정상 상태에 있습니다. 그렇지 않으면 정책은 정상 상태입니다.  
   
 > [!NOTE]  

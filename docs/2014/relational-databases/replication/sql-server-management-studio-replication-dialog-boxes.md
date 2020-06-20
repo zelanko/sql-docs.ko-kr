@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4806745bf735ada55bea12f16d23dfee4f3a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066562"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio 복제 대화 상자
-  이 섹션에서는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]사용할 수 있는 다양 한 복제 대화 상자에 대 한 정보를 제공 합니다.  
+  이 섹션에서는에서 사용할 수 있는 다양 한 복제 대화 상자에 대 한 정보를 제공 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   [스냅샷 에이전트 보안](snapshot-agent-security.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 797f338f-4d2d-4171-acad-6cc997a7a6c8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 09886571f98fcb36218c0dcb7a40e06b6b34b34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8383cbf5b6d0661449c2d184bcfa995b2758accc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059999"
 ---
 # <a name="name-property-securitycertificate-class"></a>Name 속성(SecurityCertificate 클래스)
   보안 인증서의 이름을 가져옵니다.  

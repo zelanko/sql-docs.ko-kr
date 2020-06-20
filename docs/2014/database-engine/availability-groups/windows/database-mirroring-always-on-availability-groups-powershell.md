@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56058ff8aa72d2471381dd87fb25a3b68356ed36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936884"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>AlwaysOn 가용성 그룹에 대한 데이터베이스 미러링 엔드포인트 만들기(SQL Server PowerShell)
   이 항목에서는 PowerShell을 사용하여 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 사용할 데이터베이스 미러링 엔드포인트를 만드는 방법에 대해 설명합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "72782985"
 2.  ph x="1" /&gt; cmdlet을 사용하여 엔드포인트를 만든 다음 `Set-SqlHadrEndpoint`를 사용하여 엔드포인트를 시작합니다.  
   
 ###  <a name="example-powershell"></a><a name="PShellExample"></a> 예제(PowerShell)  
- 다음 PowerShell 명령은 SQL Server 인스턴스 (*컴퓨터*\\*인스턴스*)에 데이터베이스 미러링 끝점을 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
+ 다음 PowerShell 명령은 SQL Server 인스턴스 (*컴퓨터* \\ *인스턴스*)에 데이터베이스 미러링 끝점을 만듭니다. 이 엔드포인트는 포트 5022를 사용합니다.  
   
 > [!IMPORTANT]  
 >  이 예는 데이터베이스 미러링 엔드포인트가 현재 없는 서버 인스턴스에서만 작동합니다.  

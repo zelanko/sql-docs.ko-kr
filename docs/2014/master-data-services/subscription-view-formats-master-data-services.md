@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e1fbe1681f394beaaf6a9036214a79cf844fa3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971053"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
   선택한 엔터티 또는 파생 계층을 기준으로, 다음 형식을 구독 뷰에 사용할 수 있습니다.  
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
   
-|속성|설명|  
+|속성|Description|  
 |----------|-----------------|  
 |**리프 멤버**|리프 멤버 및 해당 특성 값을 포함합니다.|  
 |**통합 멤버**|통합 멤버 및 해당 특성 값을 포함합니다.|  

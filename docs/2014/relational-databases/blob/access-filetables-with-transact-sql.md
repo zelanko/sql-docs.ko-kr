@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c47751ef34747e1b3742accf5040846ecde074f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955873"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66010425"
   
 -   INSERT 문이 **name**, **path_locator**, **parent_path_locator**또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
--   애플리케이션에서는 **GetPathLocator&#40;Transact-SQL&#41;** 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 [path_locator](/sql/relational-databases/system-functions/getpathlocator-transact-sql)를 가져올 수 있습니다.  
+-   애플리케이션에서는 [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수에 파일 시스템 경로를 제공하여 파일 또는 디렉터리에 대한 **path_locator**를 가져올 수 있습니다.  
   
 ##  <a name="update-operations-on-filetables"></a><a name="BasicsUpdate"></a> FileTable에 대한 UPDATE 작업  
  FileTable에 대해 **UPDATE** 작업을 수행할 때는 다음 사항을 고려해야 합니다.  

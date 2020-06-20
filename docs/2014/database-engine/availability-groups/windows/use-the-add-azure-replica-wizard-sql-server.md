@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175999"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936266"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
   Azure 복제본 추가 마법사를 사용 하 여 하이브리드 IT에서 새 Azure VM을 만들고 새로운 또는 기존 AlwaysOn 가용성 그룹에 대 한 보조 복제본으로 구성할 수 있습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "70175999"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> 시작하기 전에  
  가용성 그룹에 가용성 복제본을 추가 하지 않은 경우 [AlwaysOn 가용성 그룹 &#40;SQL Server&#41;에 대 한 필수 조건, 제한 사항 및 권장 사항 ](prereqs-restrictions-recommendations-always-on-availability.md)에서 "서버 인스턴스" 및 "가용성 그룹 및 복제본" 섹션을 참조 하세요.  
   
-###  <a name="prerequisites"></a><a name="Prerequisites"></a> 필수 조건  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> 전제 조건  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   

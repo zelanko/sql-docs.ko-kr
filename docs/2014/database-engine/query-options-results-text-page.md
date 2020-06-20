@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8b41a624335026c3c20bd0d7b1d037d1ec55d06
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: fc3737a8d992ab05fe96cf6c7d61dc1b01b3f2ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000573"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929464"
 ---
 # <a name="query-options-results-text-page"></a>쿼리 옵션 결과(텍스트 페이지)
   이 페이지를 사용하여 쿼리 결과 집합을 텍스트 형식으로 표시하는 옵션을 지정할 수 있습니다. **파일로 결과 저장** 을 선택한 경우에도 이 페이지의 설정이 적용됩니다.  

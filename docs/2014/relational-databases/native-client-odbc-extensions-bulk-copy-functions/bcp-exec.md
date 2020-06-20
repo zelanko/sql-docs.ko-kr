@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8671ab15bc913917a558c9e1f90c15c0168e6cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019522"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   데이터베이스 테이블과 사용자 파일 간에 데이터에 대한 전체 대량 복사를 실행합니다.  

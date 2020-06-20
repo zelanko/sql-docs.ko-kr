@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936554"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹(SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제, CDC(변경 데이터 캡처) 및 CT(변경 내용 추적)는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 지원됩니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하면 고가용성 및 추가 데이터베이스 복구 기능을 제공할 수 있습니다.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814059"
     ```  
   
     > [!NOTE]  
-    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용 하지 않도록 설정 하 고 *@enabled* 설정 하려면 [transact-sql&#41;&#40;sp_update_job ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)옵션을 사용 합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)에서 지원됩니다.  
+    >  장애 조치(Failover)가 발생하기 전에 모든 가능한 장애 조치(Failover) 대상에서 작업을 만든 다음 호스트의 가용성 복제본이 새로운 주 복제본이 될 때까지 해당 작업을 사용 안 함으로 표시해야 합니다. 또한 이전 주 데이터베이스에서 실행 중인 CDC 작업은 로컬 데이터베이스가 보조 데이터베이스가 되면 해제되어야 합니다. 작업을 사용 하지 않도록 설정 하 고 설정 하려면 *@enabled* [transact-sql&#41;&#40;sp_update_job ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)옵션을 사용 합니다. CDC 작업을 만드는 방법은 [sys.sp_cdc_add_job&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)에서 지원됩니다.  
   
 -   **AlwaysOn 주 데이터베이스 복제본에 CDC 역할 추가**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814059"
   
      가용성 그룹 수신기 이름 또는 명시적인 노드 이름을 사용하여 보조 복제본을 찾을 수 있습니다. 가용성 그룹 수신기 이름을 사용하는 경우 액세스가 모든 적합한 보조 복제본으로 전송됩니다.  
   
-     보조 `sp_addlinkedserver` 복제본에 액세스 하기 위해를 사용 하 여 연결 된 서버를 *@datasrc* 만들 때 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 매개 변수가 사용 되 고 읽기 *@provstr* 전용 의도를 지정 하는 데 매개 변수가 사용 됩니다.  
+     `sp_addlinkedserver`보조 복제본에 액세스 하기 위해를 사용 하 여 연결 된 서버를 만들 때 *@datasrc* 가용성 그룹 수신기 이름 또는 명시적인 서버 이름에 매개 변수가 사용 되 고 *@provstr* 읽기 전용 의도를 지정 하는 데 매개 변수가 사용 됩니다.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -204,17 +203,17 @@ ms.locfileid: "62814059"
   
 |||||  
 |-|-|-|-|  
-||**게시자**|**배포자** <sup>3</sup>|**가입자**|  
-|**트랜잭션**|예<sup>1</sup>|아니요|예<sup>2</sup>|  
-|**P2P**|아니요|아니요|아니요|  
-|**결합**|yes|아니요|예<sup>2</sup>|  
-|**스냅샷**|예|아니요|예<sup>2</sup>|  
+||**Publisher**|**배포자** <sup>3</sup>|**구독자**|  
+|**트랜잭션**|예<sup>1</sup>|예|예<sup>2</sup>|  
+|**P2P**|예|예|예|  
+|**병합**|yes|예|예<sup>2</sup>|  
+|**스냅샷**|예|예|예<sup>2</sup>|  
   
  <sup>1</sup> 양방향 및 상호 트랜잭션 복제에 대 한 지원을 포함 하지 않습니다.  
   
  <sup>2</sup> 복제본 데이터베이스에 대 한 장애 조치 (Failover)는 수동 절차입니다. 자동 장애 조치(Failover)는 제공되지 않습니다.  
   
- <sup>3</sup> 배포자 데이터베이스는 또는 데이터베이스 미러링과 함께 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용할 수 없습니다.  
+ <sup>3</sup> 배포자 데이터베이스는 또는 데이터베이스 미러링과 함께 사용할 수 없습니다 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
 ### <a name="considerations"></a>고려 사항  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814059"
   
 -   [변경 데이터 작업&#40;SQL Server&#41;](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **변경 내용 추적**  
+ **Change tracking**  
   
 -   [변경 내용 추적 설정 및 해제&#40;SQL Server&#41;](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019814"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 대량 복사를 수행하기 위해 프로그램 변수에서 테이블 열로 데이터를 바인딩합니다.  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE는 청크의 데이터를 효과적으로 서버에 보내는 데 사용할 수 있는 특수한 접두사 값입니다. 이 특수한 접두사를 사용한 데이터의 형식은 다음과 같습니다.  
   
--   <SPECIAL_PREFIX> \< 0 개 이상의 데이터 청크> <ZERO_CHUNK>.  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> 위치:  
   
 -   SPECIAL_PREFIX는 0xFFFFFFFFFFFFFFFE입니다.  
   

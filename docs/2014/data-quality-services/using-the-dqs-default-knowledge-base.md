@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d0fa10fa26f46857bd4f6848bd98bdcf1d65253a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1638720406b8cfcbdec15a5a5512e3fe138808cf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937358"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>DQS 기본 기술 자료 사용
   이 항목에서는 DQS( **)와 함께 설치되는 기본 기술 자료인**DQS 데이터 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 에 대해 설명합니다. DQS 데이터는 다음과 같은 도메인이 포함된 미리 작성된 기본 기술 자료입니다.  

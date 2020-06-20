@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ad7019b30555077d274af62156115cfb71944fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa74d8aa90b677fe7ccd5fe2619e51506a0abe17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053258"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext 이벤트 클래스
   **Audit Fulltext** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 필터 데몬 프로세스에 연결되어 통신할 때 발생합니다.  
