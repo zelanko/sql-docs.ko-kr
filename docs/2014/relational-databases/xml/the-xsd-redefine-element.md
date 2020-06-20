@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 5f3e9b65-f10e-4db2-a62c-b270ac11d04e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59eafff14c6a0cc7752817a31648b64bd5edc907
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce439e81cf87e97b4afe6e25a201e1ab0cb2a458
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059472"
 ---
 # <a name="the-ltxsdredefinegt-element"></a>&lt;xsd:redefine&gt; 요소
-  W3C XSD **redefine** 요소를 사용하면 스키마 구성 요소를 다시 정의할 수 있습니다. 그러나이 지시문에 대 한 지원은 성능이 저하 될 수 있으며 다시 정의 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 스키마와 연결 된 데이터 형식의 모든 인스턴스에 대해 유효성을 다시 검사 해야 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. **\<xsd:redefine>** 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
+  W3C XSD **redefine** 요소를 사용하면 스키마 구성 요소를 다시 정의할 수 있습니다. 그러나이 지시문에 대 한 지원은 성능이 저하 될 수 있으며 다시 정의 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` 스키마와 연결 된 데이터 형식의 모든 인스턴스에 대해 유효성을 다시 검사 해야 합니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 요소를 포함 하는 XML 스키마 **\<xsd:redefine>** 는 서버에서 거부 됩니다.  
   
  스키마나 해당 구성 요소를 업데이트하려면 대신 다음을 수행합니다.  
   

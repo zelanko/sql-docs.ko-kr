@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934524"
 ---
 # <a name="create-history-and-status-reports"></a>기록 및 상태 보고서 만들기
   현재 로드된 솔루션에서 파일의 기록 또는 현재 상태에 대한 보고서를 만들 수 있습니다. 또한 보고서를 미리 본 다음 프린터, 파일 또는 클립보드로 보고서를 보낼 수 있습니다. 이러한 보고서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 의해 생성되지 않습니다. 대신에 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe가 이 보고서를 생성합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "62807507"
   
 2.  **파일** 메뉴에서 **원본 제어**를 가리킨 다음 **기록**을 클릭 합니다.  
   
-3.  파일 또는 프로젝트> **기록** 대화 상자에서 보고서를 클릭 합니다. **Report** \<  
+3.  **기록** \<File or Project> 대화 상자에서 **보고서**를 클릭 합니다.  
   
 4.  **기록 보고서** 대화 상자에서 적절 한 옵션을 선택한 다음 **확인**을 클릭 합니다.  
   

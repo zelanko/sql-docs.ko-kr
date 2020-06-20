@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eaeb50da9e4b71a08ec78614ae62ea33e3dc0d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065999"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다. 구독을 초기화하는 데는 일반적으로 초기 스냅샷이 사용되지만 스키마 및 초기 데이터가 이미 구독자에 있는 경우에는 스냅샷을 사용하지 않고 게시에 대한 구독을 초기화할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "62721665"
   
 1.  스키마와 데이터가 구독 데이터베이스에 존재하는지 확인합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. , **@publication** **@subscriber**,에 게시 **@destination_db**된 데이터를 포함 하는 구독자의 데이터베이스 이름,에 **pull** **@subscription_type**pull 값,에 **replication support only** 값을 지정 합니다. **@sync_type** 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. **@publication**, **@subscriber** ,에 게시 된 데이터를 포함 하는 구독자의 데이터베이스 이름, **@destination_db** 에 **pull** 값,에 **@subscription_type** **replication support only** 값 **@sync_type** 을 지정 합니다. 자세한 내용은 [끌어오기 구독 만들기](create-a-pull-subscription.md)를 참조하세요.  
   
 3.  구독자에서 [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)을 실행합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62721665"
   
 1.  스키마와 데이터가 구독 데이터베이스에 존재하는지 확인합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. 에 게시 **@destination_db**된 데이터를 포함 하는 구독자의 데이터베이스 이름,에 **push** **@subscription_type**push 값,에 **replication support only** 값을 지정 **@sync_type**합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)을 실행합니다. 에 게시 된 데이터를 포함 하는 구독자의 데이터베이스 이름 **@destination_db** ,에 **push** 값 **@subscription_type** ,에 **replication support only** 값을 지정 **@sync_type** 합니다. 구독 업데이트에 대한 내용은 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)를 실행합니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62721665"
   
 1.  스키마와 데이터가 구독 데이터베이스에 존재하는지 확인합니다. 이 작업은 구독자에서 게시 데이터베이스의 백업을 복원하여 수행할 수 있습니다.  
   
-2.  게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행합니다. , **@publication**, **@subscriber**및 **@subscriber_db**의 값을 **pull** 로 지정 **@subscription_type**합니다. 끌어오기 구독이 등록됩니다.  
+2.  게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행합니다. **@publication**,, **@subscriber** 및의 **@subscriber_db** 값을 **pull** 로 지정 **@subscription_type** 합니다. 끌어오기 구독이 등록됩니다.  
   
 3.  게시된 데이터가 포함된 데이터베이스의 게시자에서 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)을 실행합니다. **@sync_type**에 **none** 값을 지정합니다.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62721665"
   
 1.  스키마와 데이터가 구독 데이터베이스에 존재하는지 확인합니다. 이 작업은 구독자에서 게시 데이터베이스의 백업을 복원하여 수행할 수 있습니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행합니다. **@subscriber_db**의 게시 된 데이터를 포함 하는 구독자의 데이터베이스 이름,에 **@subscription_type** **push** 값,에 **@sync_type** **none** 값을 지정 합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)을 실행합니다. 의 게시 된 데이터를 포함 하는 구독자의 데이터베이스 이름 **@subscriber_db** ,에 **push** 값 **@subscription_type** ,에 **none** 값을 지정 **@sync_type** 합니다.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)를 실행합니다. 자세한 내용은 [밀어넣기 구독 만들기](create-a-push-subscription.md)을 참조하세요.  
   

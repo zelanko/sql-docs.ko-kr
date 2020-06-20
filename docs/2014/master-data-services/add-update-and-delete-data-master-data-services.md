@@ -9,34 +9,33 @@ ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a12c6dd3b0691d62f5509a363311b1deb1584078
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972303"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>데이터 추가, 업데이트 및 삭제(MDS(Master Data Services))
   데이터를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 모델에 대량으로 추가하고 변경할 수 있습니다.  
   
  **필수 구성 요소**  
   
--   데이터를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 stg.\<name>_Leaf, stg.\<name>_Consolidated, stg.\<name>_Relationship 테이블에 삽입할 수 있는 권한이 있어야 합니다.  
+-   Stg에 데이터를 삽입할 수 있는 권한이 있어야 합니다. \<name> _Leaf, stg입니다. \<name> _Consolidated, stg. \<name> 데이터베이스의 _Relationship 테이블 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 입니다.  
   
--   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 stg.udp_\<name>_Leaf, stg.udp\_\<name>_Consolidated 또는 stg.udp\_\<name>_Relationship 저장 프로시저를 실행할 수 있는 권한이 있어야 합니다.  
+-   데이터베이스의 stg. udp_ \<name> _Leaf, stg. udp \_ \<name> _Consolidated 또는 stg. udp \_ \<name> _Relationship 저장 프로시저 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 를 실행할 수 있는 권한이 있어야 합니다.  
   
 -   모델이 **커밋됨**상태가 아니어야 합니다.  
   
- **[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터를 추가, 업데이트 및 삭제 하려면**  
+ **데이터베이스에서 데이터를 추가, 업데이트 및 삭제 하려면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 적절한 준비 테이블로 가져올 구성원을 준비합니다. 예를 들어 필수 필드의 값을 입력합니다. 준비 테이블에 대 한 개요는 [데이터 가져오기 &#40;MDS(Master Data Services)](overview-importing-data-from-tables-master-data-services.md) 를 참조 하세요&#41;  
   
-    -   리프 멤버의 경우 테이블은 stg.\<name>_Leaf입니다. 여기서 \<name>은 해당 엔터티를 나타냅니다. 필수 필드에 대한 자세한 내용은 [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)을 참조하세요.  
+    -   리프 멤버의 경우 테이블은 stg입니다. \<name> _Leaf는 \<name> 해당 엔터티를 참조 합니다. 필수 필드에 대한 자세한 내용은 [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)을 참조하세요.  
   
-    -   통합 멤버의 경우 테이블은 stg.\<name>_Consolidated입니다. 필수 필드에 대한 자세한 내용은 [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)을 참조하세요.  
+    -   통합 멤버의 경우 테이블은 stg입니다. \<name> _Consolidated. 필수 필드에 대한 자세한 내용은 [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)을 참조하세요.  
   
-    -   명시적 계층에서 멤버의 위치를 이동하는 경우 테이블은 stg.\<name>_Relationship입니다. 필수 필드에 대한 자세한 내용은 [관계 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)을 참조하세요.  
+    -   명시적 계층에서 멤버의 위치를 이동 하는 경우 테이블은 stg입니다. \<name> _Relationship. 필수 필드에 대한 자세한 내용은 [관계 준비 테이블&#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)을 참조하세요.  
   
          명시적 계층에서 멤버를 이동 하는 방법에 대 한 개요는 [데이터 가져오기 &#40;MDS(Master Data Services)&#41;](overview-importing-data-from-tables-master-data-services.md)를 참조 하세요.  
   

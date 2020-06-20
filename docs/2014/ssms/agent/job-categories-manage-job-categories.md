@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c08c423e7e5d3e59bfe75d388363f5d70dd885db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937020"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035766"
 ---
 # <a name="job-categories-manage-job-categories"></a>작업 범주: 작업 범주 관리
   **작업 범주** 대화 상자를 사용하여 작업 범주를 추가하거나 삭제할 수 있습니다. 기본 제공 작업 범주는 삭제할 수 없습니다.  

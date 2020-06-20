@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147f7b93-1804-4e0b-9e17-57a51d035b2a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1298f70bbc894c08585c5e5aa731f10ef45dfd15
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: eba65b6b19054414a13a46ebd2ccb92a28305dde
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065880"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>3단원: 구독 유효성 검사 및 대기 시간 측정
   이 단원에서는 추적 프로그램 토큰을 사용하여 구독자에 변경 내용이 복제되는지 확인하고 대기 시간, 즉 게시자에서 변경한 내용이 구독자에게 표시될 때까지 걸리는 시간을 확인합니다. 이 단원을 수행하려면 이전 단원인 [2단원: 트랜잭션 게시에 구독 만들기](lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 완료해야 합니다.  

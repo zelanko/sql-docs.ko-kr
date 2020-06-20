@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 693b8e82a3ca01616e85fe5e175726a687cfea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932521"
 ---
 # <a name="install-sql-server-2014"></a>SQL Server 2014 설치
 ## <a name="download-sql-server-2014-express"></a>[SQL Server 2014 Express 다운로드](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **모든 설치 관리자 패키지 링크를 한 곳에서 수집 하기 위해 [Scott Hanselman](http://www.hanselman.com/) 주셔서 감사 합니다.**
   
- 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. 설치할 수 있는 다양 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 및 설치 프로세스에 대 한 자세한 내용은 [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)를 참조 하세요.  
-> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 32 비트 및 64 비트 버전에서 사용할 수 있습니다. 64비트 및 32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 마법사나 명령 프롬프트를 통해 설치됩니다. 구성 요소에 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 한 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
+ 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]설치할 수 있는 다양 한 구성 요소 및 설치 프로세스에 대 한 자세한 내용은 [SQL Server 2014에 대 한 설치](installation-for-sql-server.md)를 참조 하세요.  
+> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 32 비트 및 64 비트 버전에서 사용할 수 있습니다. 64비트 및 32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 설치 마법사나 명령 프롬프트를 통해 설치됩니다. 구성 요소에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [SQL Server 2014의 버전 및 구성 요소](../../sql-server/editions-and-components-of-sql-server-2016.md) 및 [SQL Server 2014 버전에서 지 원하는 기능](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조 하세요.  
   
  기본적으로 예제 데이터베이스와 예제 코드는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치의 일부로 설치되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Edition 이외의 버전을 위한 샘플 데이터베이스 및 샘플 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제 데이터베이스 및 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]예제 코드에 대한 지원 정보를 확인하려면 [데이터베이스 및 예제 개요](https://go.microsoft.com/fwlink/?LinkId=110391)를 참조하십시오.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전에 설치 요구 사항, 시스템 구성 검사 및 보안 고려 사항을 검토합니다. 자세한 내용은 [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)을(를) 참조하세요. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 여러 설치 시나리오에 대한 정보는 다음 섹션의 항목을 참조하십시오.  
   
   
-## <a name="install-sscurrent-components"></a>구성 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 요소 설치  
+## <a name="install-sscurrent-components"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]구성 요소 설치  
   
 |항목|설명|  
 |-----------|-----------------|  

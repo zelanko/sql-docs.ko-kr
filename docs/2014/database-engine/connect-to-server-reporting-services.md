@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18afc2a57f4e86417f4228baa459117f1dc7f7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934594"
 ---
 # <a name="connect-to-server-reporting-services"></a>서버에 연결(Reporting Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **서버 유형**  
- **개체 탐색기**에서 서버를 등록 하는 경우 연결할 서버 유형을 [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services 또는 Integration Services 중에서 선택 합니다. 대화 상자의 나머지 부분에는 선택한 서버 유형에 적용되는 옵션만 표시됩니다. **등록 된 서버**에서 서버를 등록 하는 경우 **서버 유형** 상자는 읽기 전용 이며 **등록 된 서버** 구성 요소에 표시 된 서버 유형과 일치 합니다. 다른 유형의 서버를 등록 하려면 새 서버를 [!INCLUDE[ssDE](../includes/ssde-md.md)]등록 하기 전에 **등록 된 서버** 도구 모음에서, Analysis Services, Reporting Services 또는 Integration Services를 선택 합니다.  
+ **개체 탐색기**에서 서버를 등록 하는 경우 연결할 서버 유형을 [!INCLUDE[ssDE](../includes/ssde-md.md)] , Analysis Services, Reporting Services 또는 Integration Services 중에서 선택 합니다. 대화 상자의 나머지 부분에는 선택한 서버 유형에 적용되는 옵션만 표시됩니다. **등록 된 서버**에서 서버를 등록 하는 경우 **서버 유형** 상자는 읽기 전용 이며 **등록 된 서버** 구성 요소에 표시 된 서버 유형과 일치 합니다. 다른 유형의 서버를 등록 하려면 [!INCLUDE[ssDE](../includes/ssde-md.md)] 새 서버를 등록 하기 전에 **등록 된 서버** 도구 모음에서, Analysis Services, Reporting Services 또는 Integration Services를 선택 합니다.  
   
  **서버 이름**  
  연결하려는 보고서 서버 인스턴스의 서버 모드에 따라 입력해야 하는 값이 결정됩니다.  
   
- 기본 모드로 실행되는 보고서 서버의 경우 연결할 보고서 서버 인스턴스를 지정합니다. 기본 인스턴스를 사용하는 경우 서버 이름은 대개 컴퓨터 이름입니다. 명명 된 인스턴스를 설치한 경우 서버 이름에 \<servername>\\<InstanceName\>형식으로 인스턴스 이름을 추가 합니다. Reporting Services는 백슬래시 문자를 사용하여 인스턴스 이름을 구분합니다.  
+ 기본 모드로 실행되는 보고서 서버의 경우 연결할 보고서 서버 인스턴스를 지정합니다. 기본 인스턴스를 사용하는 경우 서버 이름은 대개 컴퓨터 이름입니다. 명명 된 인스턴스를 설치한 경우 인스턴스 이름을<InstanceName 형식으로 서버 이름에 추가 \<servername> \\ \> 합니다. Reporting Services는 백슬래시 문자를 사용하여 인스턴스 이름을 구분합니다.  
   
  SharePoint 통합 모드로 실행되는 보고서 서버의 경우 SharePoint 사이트를 지정해야 합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 사이트 컬렉션에 있는 아무 사이트나 지정할 수 있습니다. URL을 지정할 때는 HTTP 또는 HTTPS 접두사를 포함해야 합니다. Management Studio에서 보고서 서버 인스턴스에 연결하려면 SharePoint에 액세스할 수 있는 권한이 있어야 합니다. 할당 받은 권한 수준에 따라 보고 관리할 수 있는 항목이 결정됩니다. 자세한 내용은 [Management Studio에서 보고서 서버에 연결](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62808681"
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  
   
- **옵션**  
+ **Options**  
  서버 등록, 암호 저장 등의 추가 서버 연결 옵션을 표시하려면 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  

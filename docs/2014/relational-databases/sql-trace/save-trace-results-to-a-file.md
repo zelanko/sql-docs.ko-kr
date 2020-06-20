@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a55662b38fbd69dc45d8f0031856ad4da5929038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644fc812bbb4863c336ff2f53f5b2d67ee0a4d5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996426"
 ---
 # <a name="save-trace-results-to-a-file"></a>파일에 추적 결과 저장
   추적 결과를 파일에 저장할 수 있습니다. 추적 파일은 추적 결과가 기록된 파일입니다. 추적 파일은 로컬 디렉터리(예: C:\\*foldername*\\*filename.trc*) 또는 네트워크 디렉터리(예: \\\computername\sharename\filename.trc)에서 찾을 수 있습니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63136450"
   
 -   쿼리 최적화 수행  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]저장 프로시저 **@tracefile** **sp_trace_create**의 인수에 경로 및 파일 이름이 지정 되 면 추적 결과를 파일에 저장 합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**@tracefile**저장 프로시저 **sp_trace_create**의 인수에 경로 및 파일 이름이 지정 되 면 추적 결과를 파일에 저장 합니다.  
   
 > [!NOTE]  
 >  추적 파일을 저장하기 위한 경로가 **sp_trace_create** 저장 프로시저에 지정되는 경우 서버에서 해당 디렉터리에 액세스할 수 있어야 합니다. 또한 로컬 디렉터리가 **sp_trace_create**에 지정되는 경우 이는 서버 컴퓨터의 로컬 디렉터리라는 점을 유의하세요.  

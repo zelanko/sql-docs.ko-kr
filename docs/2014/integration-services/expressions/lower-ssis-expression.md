@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e3f445260e7b5c4c1ed641fdf6b9f5cb509db709
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398d666488fb3d212c78e0bb0a1778180eaec3c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969233"
 ---
 # <a name="lower-ssis-expression"></a>LOWER(SSIS 식)
   대문자를 소문자로 변환한 후에 문자 식을 반환합니다.  

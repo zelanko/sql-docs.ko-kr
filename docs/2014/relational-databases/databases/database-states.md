@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0aec4e5fb367f5fe9bf8fca5ed056269930cf2db
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871699"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970093"
 ---
 # <a name="database-states"></a>데이터베이스 상태
   데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 **sys.databases** 카탈로그 뷰의 [state_desc](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) 열이나 **DATABASEPROPERTYEX** 함수의 [Status](/sql/t-sql/functions/databasepropertyex-transact-sql) 속성을 선택합니다.  

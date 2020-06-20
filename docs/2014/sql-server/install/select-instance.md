@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcebff1c8621e2699137163e89bef87c22c67865
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092347"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036670"
 ---
 # <a name="select-instance"></a>인스턴스 선택
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 인스턴스 선택 페이지를 사용하여 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 업그레이드하려는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]인스턴스를 지정할 수 있습니다.  

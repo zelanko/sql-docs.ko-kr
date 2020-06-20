@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c407efc18790b4d8ed8912e47248f4d04de9fca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 470da3e1a9e5bcd25d80a52d026125526a781de3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926294"
 ---
 # <a name="add-an-annotation-to-a-package"></a>패키지에 주석 추가
   이 절차에서는 패키지에 주석을 추가하는 방법에 대해 설명합니다.  

@@ -11,13 +11,12 @@ api_location:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10468ccd96cd4b68d01e0ef1dae35284b388cd49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050952"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>SQL Server Express LocalDB 헤더 및 버전 정보
   SQL Server Express LocalDB 인스턴스 API에 대한 별도의 헤더 파일이 없습니다. LocalDB 함수 서명 및 오류 코드는 SQL Server Native Client 헤더 파일(sqlncli.h)에 정의됩니다. LocalDB 인스턴스 API를 사용하려면 프로젝트에 sqlncli.h 헤더 파일을 포함해야 합니다.  
@@ -44,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- 이 키 아래에는 컴퓨터에 설치된 각 LocalDB 버전별로 하나씩 키 목록이 있습니다. 이러한 각 키의 이름은 * \<주 버전>* 형식으로 LocalDB 버전 번호를 사용 하 여 지정 됩니다. 부 버전>입니다. 예를 들어의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 키에는 12.0이 지정 됩니다. * \<* 각 버전 키 아래에는 해당 버전과 함께 설치되는 SQLUserInstance.dll 파일의 전체 경로를 정의하는 `InstanceAPIPath` 이름-값 쌍이 있습니다. 다음 예에서는 LocalDB 버전 11.0 및 12.0이 설치된 컴퓨터에 대한 레지스트리 항목을 보여 줍니다.  
+ 이 키 아래에는 컴퓨터에 설치된 각 LocalDB 버전별로 하나씩 키 목록이 있습니다. 이러한 각 키는 형식의 LocalDB 버전 번호로 이름이 지정 됩니다 *\<major-version>* .*\<minor-version>* 예를 들어의 키에 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 는 12.0이 지정 됩니다. 각 버전 키 아래에는 해당 버전과 함께 설치되는 SQLUserInstance.dll 파일의 전체 경로를 정의하는 `InstanceAPIPath` 이름-값 쌍이 있습니다. 다음 예에서는 LocalDB 버전 11.0 및 12.0이 설치된 컴퓨터에 대한 레지스트리 항목을 보여 줍니다.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -53,7 +52,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 "InstanceAPIPath"="C:\\Program Files\\Microsoft SQL Server\\120\\LocalDB\\Binn\\SqlUserInstance.dll"]  
 ```  
   
- 클라이언트 공급자는 설치 된 모든 버전 중에서 최신 버전을 찾고, 연결 **SQLUserInstance** `InstanceAPIPath` 된 값에서 sqluserinstance.dll DLL 파일을 로드 해야 합니다.  
+ 클라이언트 공급자는 설치 된 모든 버전 중에서 최신 버전을 찾고, 연결 된 값에서 **Sqluserinstance.dll** DLL 파일을 로드 해야 합니다 `InstanceAPIPath` .  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64비트 Windows의 WOW64 모드  
  64비트 LocalDB 설치에는 WOW64(Windows-32-on-Windows-64) 모드에서 실행 중인 32비트 애플리케이션에서 LocalDB를 사용할 수 있도록 해주는 추가 레지스트리 키 집합이 있습니다. 특히 64비트 Windows에서 LocalDB MSI는 다음과 같은 레지스트리 키를 만듭니다.  
@@ -66,7 +65,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
 ```  
   
- 64 비트 `Installed Versions` 프로그램에서 키를 읽는 경우에는 windows 64 비트 버전의 **sqluserinstance.dll** DLL 64을 가리키는 값이 표시 되 고, 32 비트 프로그램 (WOW64 모드의 64 비트 Windows에서 실행)은 `Installed Versions` `Wow6432Node` hive 아래에 있는 키로 자동으로 리디렉션됩니다. 이 키는 32 비트 버전의 **Sqluserinstance.dll** DLL을 가리키는 값을 포함 합니다.  
+ 64 비트 프로그램에서 키를 읽는 경우에는 windows `Installed Versions` 64 비트 버전의 **sqluserinstance.dll** DLL 64을 가리키는 값이 표시 되 고, 32 비트 프로그램 (WOW64 모드의 64 비트 Windows에서 실행)은 `Installed Versions` hive 아래에 있는 키로 자동으로 리디렉션됩니다 `Wow6432Node` . 이 키는 32 비트 버전의 **Sqluserinstance.dll** DLL을 가리키는 값을 포함 합니다.  
   
 ## <a name="using-localdb_define_proxy_functions"></a>LOCALDB_DEFINE_PROXY_FUNCTIONS 사용  
  LocalDB 인스턴스 API는 **Sqluserinstance.dll** DLL의 검색 및 로드를 자동화 하는 LOCALDB_DEFINE_PROXY_FUNCTIONS 이라는 상수를 정의 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2f38e7bac91c4d65e9c6209d693a598466096069
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85b1f5eccc96e4ba1685a6e8d2ec8a5c428e2c8c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934314"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>데이터베이스 미러링: 상호 운용성 및 공존성 (SQL Server)
   데이터베이스 미러링은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "62807309"
   
 -   [변경 데이터 캡처 및 변경 내용 추적](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md)  
   
--   [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)  
+-   [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
 -   [전체 텍스트 카탈로그](database-mirroring-and-full-text-catalogs-sql-server.md)  
   

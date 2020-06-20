@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b788c94a1f27cced3e57b8f7941eb92edd61a2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9caf64a88652323e710385f177852ee8e2b25146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065522"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
   W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
   
- 이러한 문제를 해결하기 위해 \<xsd:include> 지시어를 포함하고 있는 XML 스키마는 전처리하여 포함된 모든 스키마의 내용을 하나의 스키마로 복사 및 병합해서 서버에 업로드할 수 있습니다. 다음 C# 코드는 전처리에 사용될 수 있습니다. 코드의 초기 부분에 있는 설명은 코드를 사용하는 방법에 대한 정보를 제공합니다.  
+ 솔루션으로, 지시문을 포함 하는 XML 스키마를 \<xsd:include> 전처리 하 여 포함 된 모든 스키마의 내용을 서버에 업로드할 단일 스키마에 복사 하 고 병합할 수 있습니다. 다음 C# 코드는 전처리에 사용될 수 있습니다. 코드의 초기 부분에 있는 설명은 코드를 사용하는 방법에 대한 정보를 제공합니다.  
   
 ```  
 // XSD Schema Include Normalizer  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67f0a5af7be4f41ce33692e5f28ad5adf676980c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011482"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997641"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 쿼리는 동의어 사전을 사용하여 사용자 지정 용어의 동의어를 검색할 수 있습니다. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *동의어 사전* 은 특정 언어에 대한 동의어 집합을 정의하는데, 시스템 관리자는 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다. 전체 텍스트 데이터에 맞게 동의어 사전을 개발하면 해당 데이터에 대한 전체 텍스트 쿼리의 범위를 효과적으로 넓힐 수 있습니다. 동의어 사전 검색은 모든 [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) 및 [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) 쿼리와 FORMSOF THESAURUS 절을 지정하는 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 및 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 쿼리에 대해 수행됩니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66011482"
   
 -   분음 부호 설정  
   
-     지정 된 동의어 사전에 대 한 모든 검색 패턴은 물결표 (**~**), 악센트 표시 (**??**) 또는 움라우트 (**??**)와 같은 분음 부호를 구분 하거나 구분 하지 않습니다. 즉, 악센트를 *구분* 하거나 *악센트를 구분*하지 않습니다. 예를 들어 "caf???" 패턴을 지정 한다고 가정 합니다. 전체 텍스트 쿼리에서 다른 패턴으로 바꾸도록 지정할 수 있습니다. 동의어 사전이 악센트를 구분 하지 않는 경우 전체 텍스트 검색은 "caf???" 패턴을 대체 합니다. 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분 하는 경우 전체 텍스트 검색은 "caf???" 패턴만 바꿉니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
+     지정 된 동의어 사전에 대 한 모든 검색 패턴은 물결표 ( **~** ), 악센트 표시 (**??**) 또는 움라우트 (**??**)와 같은 분음 부호를 구분 하거나 구분 하지 않습니다. 즉, 악센트를 *구분* 하거나 *악센트를 구분*하지 않습니다. 예를 들어 "caf???" 패턴을 지정 한다고 가정 합니다. 전체 텍스트 쿼리에서 다른 패턴으로 바꾸도록 지정할 수 있습니다. 동의어 사전이 악센트를 구분 하지 않는 경우 전체 텍스트 검색은 "caf???" 패턴을 대체 합니다. 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분 하는 경우 전체 텍스트 검색은 "caf???" 패턴만 바꿉니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
   
 -   확장 집합  
   
@@ -87,7 +86,7 @@ ms.locfileid: "66011482"
   
      동의어 사전 파일의 기본 파일 이름은 다음 형식을 사용합니다.  
   
-     ' ts ' + \<3 자 언어-약어> + ' .xml '  
+     ' ts ' + \<three-letter language-abbreviation> + ' .xml '  
   
      지정된 언어에 대한 동의어 사전 파일의 이름은 레지스트리의 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev> 값에 지정됩니다.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66011482"
   
  레지스트리 키를 변경하여 동의어 사전 파일의 위치와 이름을 바꿀 수 있습니다. 각 언어에 대해 동의어 사전 파일의 위치는 레지스트리의 다음 값에 지정됩니다.  
   
- HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/\<instance name>/mssearch/language/\<언어-약어>/tsaurusfile  
+ HKLM/SOFTWARE/Microsoft/Microsoft SQL Server/ \<instance name> /MSSearch/Language/ \<language-abbreviation> /TsaurusFile  
   
  전역 동의어 사전 파일은 LCID 0의 중립 언어에 해당합니다. 이 값은 관리자만 변경할 수 있습니다.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "66011482"
   
   
 ##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>동의어 사전 파일의 구조 이해  
- 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 다음과 같이 분음 부호 \<설정, 확장 집합, 교체 집합을 정의 하는 자식 요소의 샘플이 포함 된 동의어 사전> 요소에 정의 되어 있습니다.  
+ 각 동의어 사전 파일은 ID가 `Microsoft Search Thesaurus`인 XML 컨테이너와, 예제 동의어 사전을 포함하는 주석(`<!--` ... `-->`)을 정의합니다. 동의어 사전은 다음과 \<thesaurus> 같이 분음 부호 설정, 확장 집합, 교체 집합을 정의 하는 자식 요소의 샘플이 포함 된 요소에 정의 됩니다.  
   
 -   분음 부호 설정의 XML 구조  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66011482"
   
 -   확장 집합의 XML 구조  
   
-     각 확장 집합은 \<확장> 요소에 포함 됩니다. 이 요소 내에서 \<sub> 요소에 하나 이상의 대체 단어를 지정 합니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
+     각 확장 집합은 \<expansion> 요소로 묶입니다. 이 요소 내에서 \<sub> 요소에 하나 이상의 대체 단어를 지정합니다. 확장 집합에 서로의 동의어인 대체 그룹을 지정할 수 있습니다.  
   
      예를 들어 "writer", "author" 및 "journalist" 대체 단어를 동의어로 처리하도록 확장 섹션을 편집할 수 있습니다. 하나의 대체 집합에 일치하는 항목이 있는 전체 텍스트 검색 쿼리는 확장 집합에 지정된 다른 모든 대체 단어를 포함하도록 확장됩니다. 따라서 위 예에서 "author"라는 단어에 대해 FORMS OF THESAURUS 또는 FREETEXT 쿼리를 실행하면 전체 텍스트 검색에 "writer" 및 "journalist"라는 단어를 포함하는 검색 결과가 반환됩니다.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "66011482"
   
 -   교체 집합의 XML 구조  
   
-     각 교체 집합은 \<대체> 요소에 포함 됩니다. 이 요소 내에서 동의어 당 하나씩, \<pat> 요소에서 하나 이상의 패턴을 지정 하 고 하위> \<요소에서 0 개 이상의 대체를 지정할 수 있습니다. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
+     각 교체 집합은 \<replacement> 요소로 묶입니다. 이 요소 내에서 동의어당 하나씩 1개 이상의 패턴을 \<pat> 요소에 지정하고, 0개 이상의 대체 단어를 \<sub> 요소에 지정할 수 있습니다. 대체 집합으로 바꿀 패턴을 지정할 수 있습니다. 패턴 및 대체 집합에는 단어 또는 일련의 단어를 포함할 수 있습니다. 패턴에 지정된 대체 단어가 없는 경우 사용자 쿼리에서 해당 패턴이 제거됩니다.  
   
      예를 들어 'Win8' 패턴을 'Windows Server 2012' 또는 'Windows 8.0' 대체 단어로 바꾸는 쿼리를 원하는 경우 'Win8'에 대해 전체 텍스트 쿼리를 실행하면 전체 텍스트 검색에 'Server 2012' 또는 'Windows 8.0'd\을 포함하는 검색 결과만 반환됩니다. 'Win8'을 포함하는 결과는 반환되지 않습니다. 이는 'Win8' 패턴이 'Windows Server 2012' 및 'Windows 8.0' 패턴으로 '바뀌었기' 때문입니다.  
   
@@ -162,7 +161,7 @@ ms.locfileid: "66011482"
     </replacement>  
     ```  
   
-     를 갖는  
+     및  
   
     ```  
     <replacement>  
@@ -188,7 +187,7 @@ ms.locfileid: "66011482"
   
   
 ##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>동의어 사전 파일 편집  
- 지정된 언어에 대한 동의어 사전은 해당 동의어 사전 파일(XML 파일)을 편집하여 구성할 수 있습니다. 설치 하는 동안 \<xml> 컨테이너와 주석 처리 된 예제 \<동의어 사전> 요소만 포함 된 빈 동의어 사전 파일이 설치 됩니다. 동의어를 검색 하는 전체 텍스트 검색 쿼리가 제대로 작동 하려면 동의어 집합을 정의 하는 실제 \<동의어 사전> 요소를 만들어야 합니다. 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다.  
+ 지정된 언어에 대한 동의어 사전은 해당 동의어 사전 파일(XML 파일)을 편집하여 구성할 수 있습니다. 설치 하는 동안에는 컨테이너와 주석 처리 된 sample 요소만 포함 된 빈 동의어 사전 파일이 \<xml> \<thesaurus> 설치 됩니다. 동의어를 검색 하는 전체 텍스트 검색 쿼리가 제대로 작동 하려면 \<thesaurus> 동의어 집합을 정의 하는 실제 요소를 만들어야 합니다. 확장 집합과 교체 집합의 두 형식으로 정의할 수 있습니다.  
   
  **동의어 사전 파일에 대한 제한 사항**  
   
@@ -202,13 +201,13 @@ ms.locfileid: "66011482"
   
 -   문자 수가 512개보다 많은 구는 동의어 사전 파일에 사용할 수 없습니다.  
   
--   동의어 사전에는 확장 집합의 \<하위> 항목과 대체 집합의 \<pat> 요소 사이에 중복 된 항목이 없어야 합니다.  
+-   동의어 사전에는 확장 집합의 \<sub> 항목과 교체 집합의 \<pat> 요소 사이에 중복된 항목이 없어야 합니다.  
   
  **동의어 사전 파일에 대한 권장 사항**  
   
  동의어 사전 파일의 항목에는 특수 문자를 사용하지 않는 것이 좋습니다. 특수 문자와 관련하여 단어 분리기의 동작에 미묘한 부분이 있기 때문입니다. 동의어 사전 항목에 특수 문자가 포함된 경우 해당 항목과 함께 사용된 단어 분리기는 전체 텍스트 쿼리의 동작에 미묘한 영향을 미칠 수 있습니다.  
   
- 중지 단어는 전체 \<텍스트 인덱스에서 생략 되므로 하위> 항목에는 중지 단어가 포함 되지 않는 것이 좋습니다. 동의어 사전 파일의 \<하위> 항목을 포함 하도록 쿼리를 확장 하 고 하위> \<항목에 중지 단어 포함 된 경우 쿼리 크기가 불필요 하 게 늘어납니다.  
+ 중지 단어는 전체 텍스트 인덱스에서 생략되므로 \<sub> 항목에는 중지 단어를 포함하지 않는 것이 좋습니다. 쿼리는 동의어 사전 파일의 \<sub> 항목을 포함하도록 확장되므로 \<sub> 항목에 중지 단어가 포함되어 있으면 쿼리 크기가 불필요하게 커지게 됩니다.  
   
 #### <a name="to-edit-a-thesaurus-file"></a>동의어 사전 파일을 편집하려면  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8224b3d38d3a4fdcaf4eaa70e9a87a87d2e2258c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036968"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
   각 보고서 서버 인스턴스에는 보고서 서버에서 관리하는 보고서, 보고서 모델, 공유 데이터 원본, 리소스 및 메타데이터를 저장하는 보고서 서버 데이터베이스에 대한 연결이 필요합니다. 기본 구성을 설치하는 경우 보고서 서버를 설치하는 동안 초기 연결을 만들 수 있습니다. 대부분의 경우 설치를 완료한 다음에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 연결을 구성합니다. 언제라도 연결을 수정하여 계정 유형을 변경하거나 자격 증명을 다시 설정할 수 있습니다. 데이터베이스를 만들고 연결을 구성하기 위한 단계별 지침은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
@@ -42,7 +41,7 @@ ms.locfileid: "71952630"
   
  보고서 서버 데이터베이스는 보고서 서버에 의해서만 액세스되는 내부 구성 요소이므로 보고서 서버 데이터베이스에 대해 지정된 자격 증명과 연결 정보는 보고서 서버에만 사용됩니다. 따라서 보고서를 요청하는 사용자에게는 보고서 서버 데이터베이스에 대한 데이터베이스 권한이나 데이터베이스 로그인이 필요하지 않습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 `System.Data.SqlClient` 를 사용 하 여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 데이터베이스를 호스팅하는에 연결 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는를 사용 하 여 `System.Data.SqlClient` 보고서 서버 데이터베이스를 호스팅하는에 연결 합니다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 로컬 인스턴스를 사용하고 있는 경우 보고서 서버에서는 공유 메모리를 사용하여 연결을 설정합니다. 보고서 서버 데이터베이스에 원격 데이터베이스 서버를 사용하고 있는 경우 사용하고 있는 에디션에 따라 원격 연결을 설정해야 할 수도 있습니다. Enterprise Edition을 사용하고 있는 경우에는 기본적으로 TCP/IP에 대한 원격 연결이 설정되어 있습니다.  
   
  인스턴스가 원격 연결을 허용하는지 확인하려면 **시작**, **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**, **SQL Server 구성 관리자**를 차례로 클릭한 다음 각 서비스에 대해 TCP/IP 프로토콜이 설정되어 있는지 확인합니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "71952630"
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
- 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 `LogonUser` 경우), `LogonDomain` <>, <`LogonCred`> 및 <> 다음과 같이 비어 있게 됩니다.  
+ 모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. 기본값을 사용 하 여 연결을 구성 하는 경우 (즉, 서비스 계정을 사용 하 여 연결을 설정 하는 경우), <`LogonUser`>, <`LogonDomain`> 및 <`LogonCred`> 다음과 같이 비어 있게 됩니다.  
   
 ```  
 <Dsn></Dsn>  

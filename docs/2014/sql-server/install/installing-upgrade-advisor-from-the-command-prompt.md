@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 738e1ef203f4c9c83e42c7d8255f82978465eadf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065288"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>명령 프롬프트에서 업그레이드 관리자 설치
   설치 마법사를 사용하거나 명령 프롬프트에서 업그레이드 관리자를 설치할 수 있습니다. 명령 프롬프트를 사용하여 무인 및 자동 설치를 수행할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66094343"
 |인수|Description|  
 |--------------|-----------------|  
 |/q [n&#124;b&#124;r&#124;f]|다음과 같이 UI(사용자 인터페이스) 수준을 설정합니다.<br /><br /> n = UI 표시 안 함<br /><br /> b = 기본 UI(진행률만 표시하고 프롬프트는 표시 안 함)<br /><br /> r = 축소된 UI(설치가 끝날 때 대화 상자 표시)<br /><br /> f = 전체 UI|  
-|/L|로그 파일 옵션을 지정합니다. *Log_file_name*에 모든 메시지를 기록 하려면 **-\*L v**_log_file_name_를 사용 합니다. 오류 메시지만 기록 하려면 `-Le` *log_file_name*을 사용 합니다.|  
+|/L|로그 파일 옵션을 지정합니다. *Log_file_name*에 모든 메시지를 기록 하려면 **-L \* v**_log_file_name_를 사용 합니다. 오류 메시지만 기록 하려면 log_file_name을 사용 `-Le` *log_file_name*합니다.|  
 |ADDLOCAL = ALL&#124; REMOVE = ALL&#124;REINSTALL = ALL|업그레이드 관리자의 설치(ADDLOCAL), 제거(REMOVE) 또는 다시 설치(REINSTALL)를 지정합니다.|  
 |UAINSTALLDIR=path|경로를 사용하여 지정한 위치에 업그레이드 관리자를 설치합니다.|  
   

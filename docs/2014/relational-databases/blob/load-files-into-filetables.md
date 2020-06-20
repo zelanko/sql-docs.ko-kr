@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43ea31523da2dfa8b387f68ce4f7c7f07868dd6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970883"
 ---
 # <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "66010007"
 ###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> 예: 파일 시스템에서 FileTable로 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
- 이 예에서는 사진에 대 한 데이터를 포함 하는 기존 `PhotoMetadata`데이터베이스 테이블이 있다고 가정 합니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 `varchar`(512) 형식의 `UNCPath` 열이 있습니다.  
+ 이 예에서는 `PhotoMetadata` 사진에 대 한 데이터를 포함 하는 기존 데이터베이스 테이블이 있다고 가정 합니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 `varchar`(512) 형식의 `UNCPath` 열이 있습니다.  
   
  파일 시스템의 이미지 파일을 FileTable로 마이그레이션하려면 다음을 수행해야 합니다.  
   
@@ -124,7 +123,7 @@ UPDATE PhotoMetadata
  시스템 정의 제약 조건을 적용하는 오버헤드 없이 파일을 FileTable로 대량 로드하려면 제약 조건을 일시적으로 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [FileTables 관리](manage-filetables.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [Transact-sql을 사용 하 여 Filetable 액세스](access-filetables-with-transact-sql.md)   
+ [Transact-SQL을 사용하여 FileTable에 액세스](access-filetables-with-transact-sql.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](access-filetables-with-file-input-output-apis.md)  
   
   

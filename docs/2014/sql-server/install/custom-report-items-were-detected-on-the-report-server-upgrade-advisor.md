@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: aee32006-65b2-4dfe-9570-d85a249d17b2
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5788b94356ec887b8c83850a4cb2c47d34b7388f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feacf6aa6f233f85a67b43e7b72d3a50913991bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059330"
 ---
 # <a name="custom-report-items-were-detected-on-the-report-server-upgrade-advisor"></a>보고서 서버에서 사용자 지정 보고서 항목이 검색됨(업그레이드 관리자)
-  이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전의에 대해 만든 사용자 지정 보고서 항목은와 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]호환 되지 않습니다. 업그레이드는 계속할 수 있지만 사용자 지정 보고서 항목을 사용하는 보고서는 올바르게 실행되지 않습니다. 업그레이드 관리자에서 사용자 지정 보고서 항목이 검색되었습니다. 업그레이드를 계속할 수 있지만 업그레이드 완료 후 사용자 지정 보고서 항목 파일을 새 설치 폴더에 수동으로 이동해야 합니다.  
+  이전 버전의에 대해 만든 사용자 지정 보고서 항목 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 은와 호환 되지 않습니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . 업그레이드는 계속할 수 있지만 사용자 지정 보고서 항목을 사용하는 보고서는 올바르게 실행되지 않습니다. 업그레이드 관리자에서 사용자 지정 보고서 항목이 검색되었습니다. 업그레이드를 계속할 수 있지만 업그레이드 완료 후 사용자 지정 보고서 항목 파일을 새 설치 폴더에 수동으로 이동해야 합니다.  
   
 ||  
 |-|  

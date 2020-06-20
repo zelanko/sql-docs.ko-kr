@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934484"
 ---
 # <a name="cross-container-transactions"></a>크로스 컨테이너 트랜잭션
   크로스 컨테이너 트랜잭션은 메모리 최적화 테이블에서 고유하게 컴파일된 저장 프로시저 또는 작업에 대한 호출을 포함하는 암시적이거나 명시적인 사용자 트랜잭션입니다.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>개별 작업에 대한 격리 의미  
  직렬화 트랜잭션 T는 완벽한 격리 상태에서 실행됩니다. 이런 상황은 다른 모든 트랜잭션이 T가 시작되기 전에 커밋되거나 T가 커밋된 후에 시작된 것과 같습니다. 따라서 트랜잭션의 작업마다 격리 수준이 다르면 더 복잡해집니다.  
   
- 의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]트랜잭션 격리 수준에 대 한 일반적인 의미와 잠금에 대 한 의미는 [트랜잭션 격리 수준 설정 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)에 설명 되어 있습니다.  
+ 의 트랜잭션 격리 수준에 대 한 일반적인 의미 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 와 잠금에 대 한 의미는 [트랜잭션 격리 수준 설정 &#40;transact-sql&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)에 설명 되어 있습니다.  
   
  작업마다 다른 격리 수준을 가질 수 있는 크로스 컨테이너 트랜잭션의 경우 개별 읽기 작업의 격리에 대한 의미를 이해해야 합니다. 쓰기 작업은 항상 격리됩니다. 다른 트랜잭션의 쓰기는 서로 간에 영향을 미치지 않습니다.  
   
@@ -135,7 +134,7 @@ commit
   
  지정된 트랜잭션 T의 디스크 기반 측면은 다음 조건 중 하나가 충족되는 경우 특정 격리 수준에 도달합니다.  
   
--   X로 시작 합니다. 즉,를 실행 `SET TRANSACTION ISOLATION LEVEL`했기 때문에 세션 기본값은 X이 고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값입니다.  
+-   X로 시작 합니다. 즉,를 실행 했기 때문에 세션 기본값은 X이 고 `SET TRANSACTION ISOLATION LEVEL` [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기본값입니다.  
   
 -   트랜잭션 동안 `SET TRANSACTION ISOLATION LEVEL`을 사용하여 기본 격리 수준이 X로 변경되었습니다.  
   

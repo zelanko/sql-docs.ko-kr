@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1d97a3b694eebb924f9e1ff228d4d38da4f45ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932924"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Windows PowerShell의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 공급자 및 cmdlet 사용에 대한 정보를 얻을 수 있는 몇 가지 도움말이 있습니다. 여기서는 Windows PowerShell 환경에서 사용 가능한 도움말에 대해 알아봅니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "72797879"
 -   XQuery 문. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 지원하는 XQuery 언어에 대한 자세한 내용은 [XQuery 언어 참조&#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)를 참조하세요.  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>SQL Server cmdlet에 대한 도움말 보기  
- **Cmdlet에 대 한 도움말을 보려면**  
+ **cmdlet에 대한 도움말을 보려면**  
   
 -   cmdlet의 이름과 반환할 도움말의 수준을 지정하여 Get-Help를 실행합니다.  
   

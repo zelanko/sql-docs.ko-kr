@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 529d0521c320ff2e893a2269fe020d191a6ce284
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284980"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960693"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>관계 준비 테이블(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 관계 준비 테이블(stg.name_Relationship)을 사용하여 멤버 사이의 관계를 기반으로 명시적 계층의 멤버 위치를 변경할 수 있습니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "67284980"
 |**HierarchyName**<br /><br /> 필수|명시적 계층의 이름입니다. 각 통합 멤버는 하나의 계층에만 속할 수 있습니다.|  
 |**ParentCode**<br /><br /> 필수|부모-자식 관계의 경우 자식 리프 또는 통합 멤버의 부모가 될 통합 멤버의 코드입니다.<br /><br /> 형제 관계의 경우 형제 중 하나의 코드입니다.|  
 |**ChildCode**<br /><br /> 필수|부모-자식 관계의 경우 자식이 될 통합 또는 리프 멤버의 코드입니다.<br /><br /> 형제 관계의 경우 형제 중 하나의 코드입니다.|  
-|**정렬 순서**<br /><br /> Optional|부모 아래에 있는 다른 멤버와 관련하여 해당 멤버의 순서를 나타내는 정수입니다. 각 자식 멤버마다 고유한 식별자를 지정해야 합니다.|  
+|**정렬 순서**<br /><br /> 옵션|부모 아래에 있는 다른 멤버와 관련하여 해당 멤버의 순서를 나타내는 정수입니다. 각 자식 멤버마다 고유한 식별자를 지정해야 합니다.|  
 |**ErrorCode**|오류 코드를 표시합니다. **ImportStatus_ID**가 **2**인 모든 레코드의 경우 [준비 프로세스 오류&#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)를 참조하세요.|  
   
 ## <a name="see-also"></a>참고 항목  

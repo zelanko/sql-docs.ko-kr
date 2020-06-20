@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b1f5e936843ed84a5c6b88e2f3685e7a4272bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012167"
 ---
 # <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
   sp_helptrigger 시스템 저장 프로시저에서 반환한 결과 집합의 마지막 열을 trigger_schemaias 합니다.  

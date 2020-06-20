@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b894d7b554dffcb0941ddf38182519cf85a84c2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809358"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934964"
 ---
 # <a name="server-properties-connections-page"></a>서버 속성(연결 페이지)
   이 페이지를 사용하여 연결 옵션을 확인하거나 수정할 수 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924974"
 ---
 # <a name="building-packages-programmatically"></a>프로그래밍 방식으로 패키지 작성
   패키지를 동적으로 만들거나 개발 환경 외부에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 관리 및 실행해야 하는 경우 패키지를 프로그래밍 방식으로 조작할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.
@@ -63,7 +62,7 @@ ms.locfileid: "78176558"
  [프로그래밍 방식으로 패키지 저장](../building-packages-programmatically/saving-a-package-programmatically.md) 프로그래밍 방식으로 패키지를 저장 하는 방법을 설명 합니다.
 
 ## <a name="reference"></a>참조
- [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md) 미리 정의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 된 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
+ [Integration Services 오류 및 메시지 참조](../integration-services-error-and-message-reference.md) 미리 정의 된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류 코드와 해당 심볼 이름 및 설명을 나열 합니다.
 
 ## <a name="related-sections"></a>관련 단원
  [스크립팅을 사용 하 여 패키지 확장](../extending-packages-scripting/extending-packages-with-scripting.md) 스크립트 태스크를 사용 하 여 제어 흐름을 확장 하는 방법 및 스크립트 구성 요소를 사용 하 여 데이터 흐름을 확장 하는 방법을 설명 합니다.

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925274"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
@@ -48,7 +47,7 @@ ms.locfileid: "68670504"
   
 5.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스로 SSISDB 데이터베이스를 복원할 경우 다음을 수행하여 sp_ssis_startup에 대한 CREATE PROCEDURE 스크립트를 생성합니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요.  
   
-    1.  개체 탐색기에서 **데이터베이스** 노드를 확장 한 다음 **시스템 데이터베이스** > **마스터** > **프로그래밍 기능** > **저장 프로시저** 노드를 확장 합니다.  
+    1.  개체 탐색기에서 **데이터베이스** 노드를 확장 한 다음 **시스템 데이터베이스**  >  **마스터**  >  **프로그래밍 기능**  >  **저장 프로시저** 노드를 확장 합니다.  
   
     2.  **dbo.sp_ssis_startup**을 마우스 오른쪽 단추로 클릭한 후 **저장 프로시저 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68670504"
   
     1.  개체 탐색기에서 **SQL Server 에이전트** 노드를 확장한 후 **작업** 노드를 확장합니다.  
   
-    2.  SSIS 서버 유지 관리 작업을 마우스 오른쪽 단추로 클릭 한 후 **작업** > 스크립팅**CREATE** > **새 쿼리 편집기 창**을 클릭 합니다.  
+    2.  SSIS 서버 유지 관리 작업을 마우스 오른쪽 단추로 클릭 한 후 **작업 스크립팅**  >  **CREATE**  >  **새 쿼리 편집기 창**을 클릭 합니다.  
   
 ### <a name="to-restore-the-ssis-database"></a>SSIS 데이터베이스를 복원하려면  
   
@@ -109,7 +108,7 @@ ms.locfileid: "68670504"
   
 7.  다음 방법 중 하나를 사용하여 마스터 키를 복원합니다. 암호화에 대한 자세한 내용은 [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하십시오.  
   
-    -   **메서드 1**  
+    -   **방법 1**  
   
          이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호가 있는 경우 이 방법을 사용합니다.  
   

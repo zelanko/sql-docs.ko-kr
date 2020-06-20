@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2d0bcc4ffa9141e8a86a2d8d4de8dfbe05fc8dd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036910"
 ---
 # <a name="full-text-search-upgrade-options"></a>전체 텍스트 검색 업그레이드 옵션
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사의 전체 텍스트 검색 업그레이드 옵션 페이지에서 현재 업그레이드 중인 데이터베이스에 사용할 전체 텍스트 검색 업그레이드 옵션을 선택할 수 있습니다.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6575e2a8-16bb-449c-bdca-4a4202d0972f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5c8d56c1d51290c35a04c22474fcc04ddff61d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000355"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065909"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>로그 판독기 에이전트 보안(피어 투 피어 복제)
   **로그 판독기 에이전트 보안** 페이지를 사용하여 각 피어에서 로그 판독기 에이전트를 실행 및 연결하는 계정을 지정할 수 있습니다. 에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model(복제 에이전트 보안 모델)](security/replication-agent-security-model.md) 및 [Replication Security Best Practices](security/replication-security-best-practices.md)(복제 보안 모범 사례)를 참조하세요.  
@@ -37,10 +36,10 @@ ms.locfileid: "63000355"
  각 피어에서 게시 데이터베이스 및 구독 데이터베이스 역할을 하는 데이터베이스입니다.  
   
  **배포자에 대한 연결**  
- 배포자에 대한 연결이 설정되는 컨텍스트입니다. 배포자에 대한 로컬 연결은 항상 에이전트를 실행하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정되므로 이 필드는 항상 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
+ 배포자에 대한 연결이 설정되는 컨텍스트입니다. 배포자에 대 한 로컬 연결은 항상 에이전트가 실행 되는 Windows 계정의 컨텍스트를 사용 하 여 설정 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 되므로이 필드는 항상 **impersonate ' \<Domain> \\<login \> '** 또는 **impersonate ' \<Computer> \\<login \> '** 을 표시 합니다.  
   
  **게시자에 대한 연결**  
- 게시자에 대한 연결을 설정하는 컨텍스트입니다. 게시자에 대 한 연결은 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하거나 에이전트가 실행 되는 Windows 계정의 컨텍스트를 사용 하 여 설정할 수 있습니다. 이 필드는 **Use login '\<Login>'**, **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 중 하나를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
+ 게시자에 대한 연결을 설정하는 컨텍스트입니다. 게시자에 대 한 연결은 로그인을 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하거나 에이전트가 실행 되는 Windows 계정의 컨텍스트를 사용 하 여 설정할 수 있습니다. 이 필드에는 **login ' \<Login> ' 사용**, **impersonate ' \<Domain> \\<login \> '** 또는 **impersonate ' \<Computer> \\<login \> '** 중 하나가 표시 됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 Windows 계정의 컨텍스트를 사용하여 모든 연결을 설정할 것을 권장합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [피어 투 피어 토폴로지 관리 &#40;복제 Transact-sql 프로그래밍&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
