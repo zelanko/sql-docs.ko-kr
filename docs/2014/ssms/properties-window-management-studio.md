@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33a48ef65a29823abb2e9757575ed006c309969b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058465"
 ---
 # <a name="properties-window-management-studio"></a>속성 창(Management Studio)
   이 창을 사용하여 선택한 요소의 속성을 볼 수 있습니다. 또한 속성 창을 사용하여 파일, 프로젝트 및 솔루션 속성을 볼 수도 있습니다. **보기** 메뉴에서 **속성 창** 을 클릭하면 속성 창이 활성화됩니다.  

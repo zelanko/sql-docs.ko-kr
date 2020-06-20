@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 018ca302bf4d5fe8271369008ffbfec7d228cfbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc7281dab01d97df3608825a4e51c256f1b5296c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064437"
 ---
 # <a name="connect-to-server-database-engine"></a>서버에 연결(데이터베이스 엔진)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 연결할 때 이 대화 상자를 사용하여 옵션을 확인하거나 지정할 수 있습니다. 대부분의 경우 **서버 이름** 상자에서 데이터베이스 서버의 컴퓨터 이름을 입력한 다음 **연결**을 클릭하여 연결할 수 있습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 연결하는 경우 컴퓨터 이름과 그 뒤에 **\sqlexpress**를 사용합니다.  
@@ -63,7 +62,7 @@ ms.locfileid: "63245738"
  **연결**  
  위에서 선택한 서버에 연결하려면 클릭합니다.  
   
- **옵션**  
+ **Options**  
  서버 등록, 암호 저장 등의 추가 서버 연결 옵션을 표시하려면 클릭합니다.  
   
   

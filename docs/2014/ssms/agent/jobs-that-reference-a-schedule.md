@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03848f6f9cee7339f2148622a4b3b8bbd58a6351
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064451"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>일정 참조 작업
   이 대화 상자를 사용하여 특정 일정을 참조하는 작업에 대한 정보를 확인할 수 있습니다.  
@@ -29,13 +28,13 @@ ms.locfileid: "63183474"
  **일정**  
  확인 중인 일정의 이름을 표시합니다.  
   
- **선택**  
+ **Selected**  
  읽기 전용입니다.  
   
  **이름**  
  이 일정을 사용하는 작업의 이름입니다.  
   
- **사용**  
+ **Enabled**  
  읽기 전용입니다. 이 작업이 현재 사용하도록 설정되어 있는지 여부를 나타냅니다.  
   
  **범주**  

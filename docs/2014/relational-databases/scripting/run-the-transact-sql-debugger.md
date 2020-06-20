@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dd0dc621b0d799398098cea6fb614d5021e6016
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7665894e3e7ce7a152631b584c35fcacbc8de707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009560"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16e6e7f0-30d9-46f2-8e14-f4d6d3ab1a46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 636fe00c73e508363eaab385f6acd9909374166c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e4b1de28ca94e244d4a172e37672260d65b9d54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704720"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058279"
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>프로젝트의 연결 속성 보기 및 변경
   프로젝트에 저장된 연결의 속성을 볼 수 있으며 일부 속성은 수정할 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 899d7e1a00a18f320bfecd508e8d0c65be85a57c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228399"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999852"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>추적 템플릿 가져오기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 템플릿 파일(.tdf)을 가져오는 방법에 대해 설명합니다.  

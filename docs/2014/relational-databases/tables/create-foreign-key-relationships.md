@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761610"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009192"
 ---
 # <a name="create-foreign-key-relationships"></a>외래 키 관계 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 관계를 만드는 방법에 대해 설명합니다. 한 테이블의 행을 다른 테이블의 행과 연결하려면 두 테이블 사이에 관계를 만듭니다.  
@@ -79,7 +78,7 @@ ms.locfileid: "62761610"
   
 3.  **외래 키 관계** 대화 상자에서 **추가**를 클릭합니다.  
   
-     **선택한 관계** 목록에 FK_\<*tablename*>_\<*tablename*> 형식의 시스템 제공 이름과 함께 관계가 표시됩니다. 여기에서 *tablename*은 외래 키 테이블의 이름입니다.  
+     이 관계는 **선택한 관계** 목록에서 시스템에서 제공 하는 이름이 FK_ _ 형식으로 표시 \<*tablename*> 됩니다 \<*tablename*> . 여기서 *tablename* 은 외래 키 테이블의 이름입니다.  
   
 4.  **선택한 관계** 목록에서 관계를 클릭합니다.  
   

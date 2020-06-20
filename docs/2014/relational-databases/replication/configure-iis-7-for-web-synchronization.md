@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 807c3e955f4772b5263cfee95b3bc5ebbff2a146
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011016"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
   이 항목의 절차에서는 병합 복제를 위한 웹 동기화에서 사용할 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스) 버전 7 이상을 수동으로 구성하는 프로세스를 안내합니다. 
@@ -48,13 +47,13 @@ ms.locfileid: "81486997"
   
 1. IIS 컴퓨터에 SQL Server 복제를 설치합니다.
 
-2.  IIS를 실행하는 컴퓨터에 replisapi.dll에 대한 새 파일 디렉터리를 만듭니다. 원하는 위치에 이 디렉터리를 만들 수 있지만 \<*드라이브*>:\Inetpub 디렉터리 아래에 만드는 것이 좋습니다. 예를 들어 \<*드라이브*>:\Inetpub\SQLReplication\\ 디렉터리를 만듭니다.  
+2.  IIS를 실행하는 컴퓨터에 replisapi.dll에 대한 새 파일 디렉터리를 만듭니다. 원하는 위치에 디렉터리를 만들 수 있지만: \Inetpub 디렉터리 아래에 디렉터리를 만드는 것이 좋습니다 \<*drive*> . 예를 들어, \Inetpub\SQLReplication 디렉터리를 만듭니다 \<*drive*> \\ .  
   
 3.  [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]com\ 디렉터리에 있는 replisapi.dll을 1단계에서 만든 파일 디렉터리로 복사합니다.  
   
 4.  replisapi.dll을 등록합니다.  
   
-    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 `cmd`한 다음 **확인**을 클릭 합니다.  
+    1.  **시작**을 클릭한 다음 **실행**을 클릭합니다. **열기** 상자에를 입력 한 `cmd` 다음 **확인**을 클릭 합니다.  
   
     2.  1단계에서 만든 디렉터리에서 다음 명령을 실행합니다.  
   
@@ -66,9 +65,9 @@ ms.locfileid: "81486997"
   
     1.  **IIS(인터넷 정보 서비스) 관리자**의 **연결** 창에서 **기본 웹 사이트**를 마우스 오른쪽 단추로 클릭한 다음 **가상 디렉터리 추가**를 클릭합니다.  
   
-    2.  **별칭**에를 입력 `SQLReplication`합니다.  
+    2.  **별칭**에를 입력 `SQLReplication` 합니다.  
   
-    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\** 을 입력하고 **확인**을 클릭합니다.  
+    3.  **실제 경로**에 ** \<drive> : \Inetpub\SQLReplication \\ **를 입력 한 다음 **확인**을 클릭 합니다.  
   
 7.  replisapi.dll이 실행될 수 있도록 IIS를 구성합니다.  
   
@@ -78,11 +77,11 @@ ms.locfileid: "81486997"
   
     3.  **동작** 창에서 **모듈 매핑 추가**를 클릭합니다.  
   
-    4.  **요청** 경로에를 입력 `replisapi.dll`합니다.  
+    4.  **요청** 경로에를 입력 `replisapi.dll` 합니다.  
   
     5.  **모듈** 드롭다운 목록에서 **IsapiModule**을 선택합니다.  
   
-    6.  **실행 파일**에서 **\<드라이브>:\Inetpub\SQLReplication\replisapi.dll**을 입력합니다.  
+    6.  **실행 파일**에 ** \<drive>:\Inetpub\SQLReplication\replisapi.dll**을 입력 합니다.  
   
     7.  **이름**에 `Replisapi`를 입력합니다.  
   
@@ -218,7 +217,7 @@ ms.locfileid: "81486997"
   
     2.  **보안** 탭에서 **편집**을 클릭합니다.  
   
-    3.  **\<폴더 이름>에 대한 권한** 대화 상자에서 **추가**를 클릭하여 1단계에서 만든 계정을 추가합니다.  
+    3.  **에 대 한 \<foldername> 사용 권한** 대화 상자에서 **추가** 를 클릭 하 여 1 단계에서 만든 계정을 추가 합니다.  
   
     4.  **다음 위치에서** 에 도메인이 아닌 로컬 컴퓨터 이름이 표시되는지 확인합니다. 이 필드에 로컬 컴퓨터 이름이 표시되지 않는 경우 **위치**를 클릭합니다. **위치** 대화 상자에서 로컬 컴퓨터를 선택한 다음 **확인**을 클릭합니다.  
   
@@ -307,7 +306,7 @@ ms.locfileid: "81486997"
     > [!NOTE]  
     >  인증서는 사용자에 대해 설치되므로 IIS와 동기화할 각 사용자에 대해 이 프로세스를 수행해야 합니다.  
   
-4.  **\<서버 이름>에 연결** 대화 상자에서 병합 에이전트가 IIS에 연결하는 데 사용할 로그인 및 암호를 지정합니다. 이러한 자격 증명은 새 구독 마법사에서도 지정할 수 있습니다.  
+4.  **연결 대상 \<ServerName> ** 대화 상자에서 병합 에이전트 IIS에 연결 하는 데 사용할 로그인 및 암호를 지정 합니다. 이러한 자격 증명은 새 구독 마법사에서도 지정할 수 있습니다.  
   
 5.  **SQL Websync 진단 정보**라는 Internet Explorer 창에서 페이지의 각 **상태** 열 값이 **SUCCESS**인지 확인합니다.  
   

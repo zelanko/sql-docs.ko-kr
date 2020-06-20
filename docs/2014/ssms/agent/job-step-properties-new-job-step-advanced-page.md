@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064481"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>작업 단계 속성: 새 작업 단계(고급 페이지)
-  이 페이지를 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 단계의 속성을 확인 하 고 변경할 수 있습니다.  
+  이 페이지를 사용 하 여 에이전트 작업 단계의 속성을 확인 하 고 변경할 수 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있습니다.  
   
 ## <a name="options"></a>옵션  
  **성공한 경우 동작**  
@@ -43,7 +42,7 @@ ms.locfileid: "62937201"
  작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
  **보기**  
- 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+ 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
  **기존 파일에 출력 추가**  
  출력을 파일의 기존 내용에 추가합니다. 그렇지 않으면 작업 단계가 실행될 때마다 이전 파일 내용을 덮어씁니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "62937201"
  작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
  **보기**  
- 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+ 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
  **기존 파일에 출력 추가**  
  작업 단계를 실행할 때마다 이전 파일 내용에 작업 단계 출력을 추가합니다.  
@@ -96,7 +95,7 @@ ms.locfileid: "62937201"
  작업 단계의 출력에 사용할 파일을 찾아 봅니다.  
   
  **보기**  
- 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
+ 에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이 단추를 사용 하 여 출력 파일을 볼 수 없습니다. 대신 메모장을 사용하여 작업 단계 출력 파일을 검토합니다.  
   
  **기존 파일에 출력 추가**  
  작업 단계를 실행할 때마다 이전 파일 내용에 작업 단계 출력을 추가합니다.  

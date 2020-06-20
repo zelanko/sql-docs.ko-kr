@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86c4fd09033f0b50d46a09a35453ec6ef24b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058333"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
   기존 솔루션에 하나 이상의 프로젝트를 추가할 수 있습니다. 프로젝트는 둘 이상의 솔루션과 연관될 수 있습니다.  

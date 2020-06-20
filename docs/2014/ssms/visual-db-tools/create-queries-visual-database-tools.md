@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058120"
 ---
 # <a name="create-queries-visual-database-tools"></a>쿼리 만들기(Visual Database Tools)
   쿼리를 사용하면 데이터베이스에서 테이블과 뷰의 데이터를 검색할 수 있습니다. 쿼리는 **쿼리 및 뷰 디자이너**에서 만들고 사용합니다. 이 디자이너는 [다이어그램 창](visual-database-tools.md), [SQL 창](sql-pane-visual-database-tools.md), [조건 창](criteria-pane-visual-database-tools.md)및 [결과 창](results-pane-visual-database-tools.md)의 네 가지 창으로 구성됩니다.  

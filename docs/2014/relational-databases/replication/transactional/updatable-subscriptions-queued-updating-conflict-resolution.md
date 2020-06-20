@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9fb74bb999019e2e9fa6cbfd30bf29041f807ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064547"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   지연 업데이트 구독으로 여러 위치에서 같은 데이터를 수정할 수 있기 때문에 데이터를 게시자에 동기화할 때 충돌이 발생할 수 있습니다. 복제는 변경 내용이 게시자와 동기화될 때 충돌을 감지하고 게시를 만들 때 선택한 해결 정책을 사용하여 이러한 충돌을 해결합니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  

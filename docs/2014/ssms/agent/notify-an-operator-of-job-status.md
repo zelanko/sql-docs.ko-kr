@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a202327ad63cf7ef8f51d3572b257816ee6d9419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064459"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 SQL Server 관리 개체를 사용 하 여에서 알림 옵션을 설정 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 방법에 대해 설명 합니다. 그러면 에이전트에서 작업에 대해 운영자에 게 알림을 보낼 수 있습니다.  
+  이 항목에서는, 또는 SQL Server 관리 개체를 사용 하 여에서 알림 옵션을 설정 하는 방법에 대해 설명 합니다 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 그러면 에이전트에서 작업에 대해 운영자에 게 알림을 보낼 수 있습니다.  
   
  **항목 내용**  
   

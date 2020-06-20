@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76c0b882b6ff198a38c0903a51e15b4664aafc29
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 880937520385fbe6ce64be3fdfcbbf7d11c73741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009451"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>SQLXML 4.0 s p 1의 새로운&#39;기능
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1에는 다양한 업데이트와 향상된 기능이 포함되어 있습니다. 이 항목에서는 업데이트를 요약하고 사용 가능한 경우 자세한 정보 링크를 제공합니다. SQLXML 4.0 SP1에서는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 도입된 새로운 데이터 형식을 지원하기 위한 향상된 기능을 추가로 제공합니다. 이 항목은 다음과 같은 주제로 이루어져 있습니다.  
